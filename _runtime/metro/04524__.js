@@ -1,28 +1,102 @@
 // _runtime/metro/04524__.js
-import c from "../04512_c.js";
-import _mod4525 from "04525__.js";
+import c from "../04513_c.js";
 import _slicedToArray from "00032__.js";
 
-require = arg1;
-function getNumberProperty(numberProperty, arg1) {
-  return numberProperty.numberProperty(arg1);
-}
+require = fn;
+const noop = fn(19);
+({ useRef: c3, useCallback, useState: closure_4 } = noop);
 
-export const useRiveNumber = function useRiveNumber(AnimationState, instance) {
+export const useRive = function useRive() {
   const cResult = c.c(4);
-  [tmp3, tmp4, tmp5] = _mod4525.useRiveProperty(instance, AnimationState, getNumberProperty);
-  if (cResult[0] === tmp5) {
-    if (cResult[1] === tmp4) {
-      if (cResult[2] === tmp3) {
-        let tmp6 = cResult[3];
+  const tmp2 = React3(null);
+  [tmp4, dependencyMap] = React4(null);
+  React3(null);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn = function t(current) {
+      if (current.current !== current) {
+        ref.current = current;
+        if (ref2.current) {
+          let _clearTimeout = clearTimeout;
+          clearTimeout(tmp11.current);
+        }
+        const promise = new Promise((arg0, arg1) => {
+          closure_0 = arg1;
+          ref.current = setTimeout(() => {
+            const error = new Error("Rive view ready timeout");
+            closure_0(error);
+          }, 5000);
+        });
+        let awaitViewReadyResult;
+        if (current != null) {
+          awaitViewReadyResult = current.awaitViewReady();
+        }
+        const items = [awaitViewReadyResult, promise];
+        const racePromise = Promise.race(items);
+        const nextPromise = Promise.race(items).then((result) => {
+          if (true === result) {
+            dependencyMap(closure_0);
+          } else {
+            const _console = console;
+            console.warn("Rive view ready check returned false");
+            dependencyMap(null);
+          }
+        });
+        Promise.race(items)
+          .then((result) => {
+            if (true === result) {
+              dependencyMap(closure_0);
+            } else {
+              const _console = console;
+              console.warn("Rive view ready check returned false");
+              dependencyMap(null);
+            }
+          })
+          .catch((error) => {
+            console.warn("Failed to initialize Rive view:", error);
+            closure_1_1(null);
+          })
+          .finally(() => {
+            if (ref.current) {
+              const _clearTimeout = clearTimeout;
+              clearTimeout(ref.current);
+              ref.current = null;
+            }
+          });
+        const catchPromise = Promise.race(items)
+          .then((result) => {
+            if (true === result) {
+              dependencyMap(closure_0);
+            } else {
+              const _console = console;
+              console.warn("Rive view ready check returned false");
+              dependencyMap(null);
+            }
+          })
+          .catch((error) => {
+            console.warn("Failed to initialize Rive view:", error);
+            closure_1_1(null);
+          });
       }
-      return tmp6;
-    }
+    };
+    cResult[0] = fn;
+    let first = fn;
+  } else {
+    first = cResult[0];
   }
-  const obj3 = { value: tmp3, setValue: tmp4, error: tmp5 };
-  cResult[0] = tmp5;
-  cResult[1] = tmp4;
-  cResult[2] = tmp3;
-  cResult[3] = obj3;
-  tmp6 = obj3;
+  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj2 = { f: first };
+    cResult[1] = obj2;
+    let tmp6 = obj2;
+  } else {
+    tmp6 = cResult[1];
+  }
+  if (cResult[2] !== tmp4) {
+    const obj3 = { riveRef: tmp2, riveViewRef: tmp4, setHybridRef: tmp6 };
+    cResult[2] = tmp4;
+    cResult[3] = obj3;
+    let tmp7 = obj3;
+  } else {
+    tmp7 = cResult[3];
+  }
+  return tmp7;
 };

@@ -1,6 +1,6 @@
 // _runtime/metro/08801__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef8752 from "08752__.js";
+import _modDef8746 from "08746__.js";
 import _modDef8802 from "08802__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
@@ -8,7 +8,7 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const Line = fn;
+const ForeignObject = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,12 +29,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Line {
+class ForeignObject {
   constructor() {
     self = this;
-    tmp = closure_3(this, Line);
+    tmp = closure_3(this, ForeignObject);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Line);
+    obj = hasOwnProperty(ForeignObject);
     tmp3 = closure_4;
     if (closure_7()) {
       tmp7 = globalThis;
@@ -49,36 +49,33 @@ class Line {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Line, _modDef8752);
+_inherits(ForeignObject, _modDef8746);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    const obj = {};
-    ({ x1, y1, x2, y2 } = props);
-    const merged = Object.assign(Line(8743).extract(this, props));
-    obj.x1 = x1;
-    obj.y1 = y1;
-    obj.x2 = x2;
-    obj.y2 = y2;
-    const obj2 = Line(8743);
-    const obj3 = {
+    const size = { x: props.x, y: props.y, width: props.width, height: props.height };
+    const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       },
     };
-    const merged1 = Object.assign(obj);
-    return jsx(_modDef8802, {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    });
+    const merged = Object.assign(ForeignObject(8747).withoutXY(this, props));
+    const merged1 = Object.assign(size);
+    obj.children = props.children;
+    return (
+      <tmp
+        ref={function ref(arg0) {
+          return self.refMethod(arg0);
+        }}
+      />
+    );
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Line, items);
-importDefaultResultResult.displayName = "Line";
-importDefaultResultResult.defaultProps = { x1: 0, y1: 0, x2: 0, y2: 0 };
+const importDefaultResultResult = _createClass(ForeignObject, items);
+importDefaultResultResult.displayName = "ForeignObject";
+importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
 
 export default importDefaultResultResult;

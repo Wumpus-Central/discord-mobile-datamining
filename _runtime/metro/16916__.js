@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_onboarding_home/images",
-  width: 223,
-  height: 145.5,
+  httpServerLocation: "/assets/modules/guild_home/native/images",
+  width: 1100,
+  height: 275,
   scales: [2, 3],
-  hash: "fa8d8980f41bbcb7aeb9d5dc519482cb",
-  name: "mobile-empty-state",
+  hash: "2350a6e29ab96dbf4682611d6fbf7bcc",
+  name: "light_home_header_placeholder",
   type: "png",
 });

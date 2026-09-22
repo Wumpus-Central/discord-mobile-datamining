@@ -1,3 +1,6 @@
 // _runtime/metro/08602__.js
+import emptyFunction from "04586__.js";
 
-export default { SRT: "application/x-subrip", TTML: "application/ttml+xml", VTT: "text/vtt" };
+const point = { x: emptyFunction.number, y: emptyFunction.number };
+
+export default emptyFunction.shape(point);

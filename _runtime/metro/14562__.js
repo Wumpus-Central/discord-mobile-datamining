@@ -1,23 +1,8 @@
 // _runtime/metro/14562__.js
+const require = globalThis.__r;
 
-export const collations = [
-  "big5han",
-  "compat",
-  "dict",
-  "direct",
-  "ducet",
-  "emoji",
-  "eor",
-  "gb2312",
-  "phonebk",
-  "phonetic",
-  "pinyin",
-  "reformed",
-  "search",
-  "searchjl",
-  "standard",
-  "stroke",
-  "trad",
-  "unihan",
-  "zhuyin",
-];
+const require = arg1;
+const dependencyMap = arg6;
+
+export const shouldPolyfill = require("14563__.js").shouldPolyfill;
+export const supportedValuesOf = require("supportedValuesOf").supportedValuesOf;

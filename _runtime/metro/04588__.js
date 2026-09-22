@@ -1,4 +1,3 @@
 // _runtime/metro/04588__.js
-import _mod4589 from "04589__.js";
 
-export default _mod4589;
+export default "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";

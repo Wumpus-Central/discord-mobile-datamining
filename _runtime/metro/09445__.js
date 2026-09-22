@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/BrandDarkIcon",
+  httpServerLocation: "/assets/images/native/custom_app_icons/AppIcon",
   width: 60,
   height: 60,
   scales: [2, 3],
-  hash: "9104de6131b604f4e10e9192c73c75ed",
-  name: "BrandDarkIcon",
+  hash: "2a589a040df4c6bcca56de9fa304d36a",
+  name: "AppIcon",
   type: "png",
 });

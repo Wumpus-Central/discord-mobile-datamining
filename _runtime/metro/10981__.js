@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/logos",
-  width: 82,
-  height: 18,
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 87,
+  height: 100,
   scales: [2, 3],
-  hash: "45460b156c456430280e2b323f923e88",
-  name: "img_logo_boost",
+  hash: "fea63c35d752daa1f371f2069e1b5793",
+  name: "img_wumpus_lightro",
   type: "png",
 });

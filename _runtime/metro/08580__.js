@@ -1,4 +1,31 @@
 // _runtime/metro/08580__.js
-import _modDef8581 from "08581__.js";
+import get_ActivityIndicator from "00017__.js";
 
-export default _modDef8581({ contain: null, cover: null, stretch: null });
+const NativeModules = get_ActivityIndicator.NativeModules;
+const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(undefined);
+class WebViewProxy {
+  constructor(arg0) {
+    this.webViewKey = global;
+    return;
+  }
+  injectJavaScript(arg0) {
+    RNCWebView = NativeModules.RNCWebView;
+    return RNCWebView.injectJavaScriptWithWebViewKey(this.webViewKey, global);
+  }
+  addOnMessageListener(arg0) {
+    closure_0 = global;
+    self = this;
+    return closure_1.addListener("ReactNativeWebViewOnMessageWithWebViewKey", (webViewKey) => {
+      if (webViewKey.webViewKey === self.webViewKey) {
+        closure_0(webViewKey);
+      }
+    });
+  }
+  releaseWebView() {
+    RNCWebView = NativeModules.RNCWebView;
+    releaseWebViewResult = RNCWebView.releaseWebView(this.webViewKey);
+    return;
+  }
+}
+
+export default WebViewProxy;

@@ -1,16 +1,12 @@
 // _runtime/metro/07279__.js
-import GestureHandlerRefContext from "../07252_GestureHandlerRefContext.js";
-import noop from "00019__.js";
 
-require = arg1;
-
-export const useGestureHandlerRef = function useGestureHandlerRef() {
-  const context = noop.useContext(GestureHandlerRefContext.GestureHandlerRefContext);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find a ref for gesture handler. Are you inside a screen in Stack?");
-    throw error;
-  } else {
-    return context;
+export const findLastIndex = function findLastIndex(arg0, fn) {
+  let diff = arg0.length - 1;
+  if (0 <= diff) {
+    while (!fn(arg0[diff])) {
+      diff = diff - 1;
+    }
+    return diff;
   }
+  return -1;
 };

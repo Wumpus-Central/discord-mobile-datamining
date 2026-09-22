@@ -3189,7 +3189,7 @@ function initObservers(doc) {
       ({ mousemoveCb: drag, sampling, doc, mirror: fn3 } = doc);
       closure_2 = undefined;
       closure_3 = undefined;
-      let f73001;
+      let f73048;
       items = undefined;
       if (false === sampling.mousemove) {
         return () => {
@@ -3240,7 +3240,7 @@ function initObservers(doc) {
           closure_130_2 = {};
           closure_130_3 = null;
           closure_130_4 = 0;
-          f73001 = function() {
+          f73048 = function() {
             items = [...arguments];
             let self;
             const timestamp = Date.now();
@@ -4538,7 +4538,7 @@ function initObservers(doc) {
                       } catch (tmp7) {
                         if (closure_2_79) {
                           if (true === tmp8(tmp7)) {
-                            return /* F110382 */ function() { ... };
+                            return /* F110472 */ function() { ... };
                           }
                         }
                         throw tmp7;
@@ -4604,7 +4604,7 @@ function initObservers(doc) {
                       } catch (tmp7) {
                         if (closure_2_79) {
                           if (true === tmp8(tmp7)) {
-                            return /* F110382 */ function() { ... };
+                            return /* F110472 */ function() { ... };
                           }
                         }
                         throw tmp7;
@@ -5441,7 +5441,7 @@ function addBreadcrumbEvent(triggerUserActivity, category) {
       }
       obj.timestamp = 1000 * num;
       const obj2 = { tag: "breadcrumb", payload: null };
-      const normalizer = f110424(map[8]);
+      const normalizer = f110514(map[8]);
       obj2.payload = normalizer.normalize(_null, 10, 1000);
       obj.data = obj2;
       obj.throttledAddEvent(obj);
@@ -6171,7 +6171,7 @@ function mergeWarning(_meta, arg1) {
     _meta._meta = headers;
     return _meta;
   } else {
-    const obj2 = { headers, size: "Array", _meta: -1 };
+    const obj2 = { headers, size: "Array", _meta: "formatToPlainString" };
     const obj3 = { warnings: null };
     const items1 = [arg1];
     obj3.warnings = items1;
@@ -6610,7 +6610,7 @@ let closure_159 = async function _prepareFetchData2(arg0, arg1, arg2) {
                         tmp23._meta = obj11;
                         let obj14 = tmp23;
                       } else {
-                        obj14 = { headers: obj11, size: "Array", _meta: -1 };
+                        obj14 = { headers: obj11, size: "Array", _meta: "formatToPlainString" };
                         const obj16 = { warnings: null };
                         const items1 = [tmp21];
                         obj16.warnings = items1;
@@ -6718,7 +6718,7 @@ let closure_160 = async function _getResponseInfo2(arg0) {
           closure_132_10 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -7388,7 +7388,7 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                             tmp22._meta = obj9;
                             let obj10 = tmp22;
                           } else {
-                            obj10 = { headers: obj9, size: "Array", _meta: -1 };
+                            obj10 = { headers: obj9, size: "Array", _meta: "formatToPlainString" };
                             const obj11 = { warnings: null };
                             let items2 = [tmp17];
                             obj11.warnings = items2;
@@ -7406,7 +7406,7 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                           tmp18._meta = obj12;
                           let obj13 = tmp18;
                         } else {
-                          obj13 = { headers: obj12, size: "Array", _meta: -1 };
+                          obj13 = { headers: obj12, size: "Array", _meta: "formatToPlainString" };
                           const obj14 = { warnings: null };
                           let items4 = [tmp14];
                           obj14.warnings = items4;
@@ -7789,7 +7789,7 @@ let closure_170 = async function _prepareReplayEvent(arg0) {
           let settings;
           c3 = 1;
           c4 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -7928,7 +7928,7 @@ let closure_171 = async function _sendReplayRequest(arg0) {
           closure_129_20 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp10) {
         if (arg0 === 1) {
@@ -8155,7 +8155,7 @@ let closure_175 = async function _sendReplay(arg0) {
           closure_130_4 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp9) {
         if (arg0 === 1) {

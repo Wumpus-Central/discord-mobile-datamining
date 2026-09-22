@@ -1,6 +1,12 @@
 // _runtime/metro/18129__.js
-const regex = RegExp("[\\u200d\\ud800-\\udfff\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff\\ufe0e\\ufe0f]");
+import _mod18130 from "18130__.js";
+import capitalize from "../18138_capitalize.js";
 
-export default function hasUnicode(arg0) {
-  return regex.test(arg0);
-}
+export default _mod18130((arg0, str, arg2) => {
+  const formatted = str.toLowerCase();
+  let tmp2 = formatted;
+  if (arg2) {
+    tmp2 = capitalize(formatted);
+  }
+  return arg0 + tmp2;
+});

@@ -1,74 +1,81 @@
 // _runtime/metro/14326__.js
-import _mod14299 from "14299__.js";
-import _slicedToArray from "00032__.js";
+import _mod14291 from "14291__.js";
+import _mod14311 from "14311__.js";
 
-const require = globalThis.__r;
-
-export default (arr, arg1, arg2) => {
-  let tmp = arg1;
-  _require = arg2;
-  const items = [];
-  let tmp2 = null;
-  let tmp3 = null;
-  const sorted = arr.sort((arg0, arg1) => _mod14299(arg0, arg1, closure_0));
-  for (const item10017 of sorted) {
-    if (require("14316__.js")(item10017, tmp, arg2)) {
-      tmp3 = item10017;
-      if (!tmp2) {
-        tmp2 = item10017;
-      }
-    } else {
-      if (tmp3) {
-        let items1 = [tmp2];
-        items1[1] = tmp3;
-        arr = items.push(items1);
-      }
-      tmp3 = null;
-      tmp2 = null;
-    }
-    continue;
-  }
-  if (tmp2) {
-    const items2 = [tmp2, null];
-    items.push(items2);
-  }
-  const items3 = [];
-  while (tmp15 !== undefined) {
-    [first, tmp21] = tmp16;
-    let tmp20 = first;
-    let tmp22 = tmp21;
-    if (first === tmp21) {
-      let arr3 = items3.push(tmp20);
-    } else {
-      if (!tmp22) {
-        if (tmp20 === sorted[0]) {
-          let arr4 = items3.push("*");
-        }
-      }
-      if (tmp22) {
-        if (tmp20 === sorted[0]) {
-          let _HermesInternal3 = HermesInternal;
-          let arr5 = items3.push("<=" + tmp22);
-        } else {
-          let _HermesInternal2 = HermesInternal;
-          let arr6 = items3.push("" + tmp20 + " - " + tmp22);
-        }
-      } else {
-        let _HermesInternal = HermesInternal;
-        let arr13 = items3.push(">=" + tmp20);
-      }
-    }
-    continue;
-  }
-  const joined = items3.join(" || ");
-  if (typeof tmp.raw === "string") {
-    let raw = tmp.raw;
+export default (arg0, arg1) => {
+  obj = new obj(14320)(arg0, arg1);
+  const tmp3 = new obj(14291)("0.0.0");
+  if (obj.test(tmp3)) {
+    return tmp3;
   } else {
-    const _String = String;
-    raw = String(tmp);
+    const tmp6 = new tmp(14291)("0.0.0-0");
+    if (obj.test(tmp6)) {
+      return tmp6;
+    } else {
+      let num = 0;
+      let num3 = 0;
+      let tmp9 = null;
+      let tmp10 = null;
+      if (0 < obj.set.length) {
+        do {
+          let arr = obj.set[num3];
+          obj = null;
+          let item = arr.forEach((semver) => {
+            obj = new _mod14291(semver.semver.version);
+            const operator = semver.operator;
+            if (">" === operator) {
+              if (0 === obj.prerelease.length) {
+                obj.patch = obj.patch + 1;
+              } else {
+                const prerelease = obj.prerelease;
+                prerelease.push(0);
+              }
+              obj.raw = obj.format();
+            } else {
+              if ("" !== operator) {
+                if (">=" !== operator) {
+                  if ("<" !== operator) {
+                    if ("<=" !== operator) {
+                      const _Error = Error;
+                      const _HermesInternal = HermesInternal;
+                      const error = new Error("Unexpected operation: " + semver.operator);
+                      throw error;
+                    }
+                  }
+                }
+              }
+              if (obj) {
+                !_mod14311(obj, obj);
+              }
+            }
+          });
+          let tmp13 = !obj;
+          let tmp14 = tmp9;
+          if (obj) {
+            let tmp16 = tmp14;
+            if (tmp14) {
+              tmp16 = !obj(14311)(tmp14, obj);
+            }
+            tmp13 = tmp16;
+          }
+          if (!tmp13) {
+            tmp14 = obj;
+          }
+          num3 = num + 1;
+          tmp9 = tmp14;
+          tmp10 = tmp14;
+          num = num3;
+        } while (num3 < obj.set.length);
+      }
+      let tmp20 = null;
+      if (tmp10) {
+        tmp20 = null;
+        if (obj.test(tmp10)) {
+          tmp20 = tmp10;
+        }
+      }
+      return tmp20;
+    }
   }
-  if (joined.length < raw.length) {
-    tmp = joined;
-  }
-  return tmp;
+  tmp = obj;
 };

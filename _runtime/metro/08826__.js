@@ -1,103 +1,12 @@
 // _runtime/metro/08826__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import appendTransformPropsDefault from "../08736_appendTransformProps.js";
-import extractPropsDefault from "../08743_extractProps.js";
-import extractFontDefault from "../08750_extractFont.js";
-import _modDef8752 from "08752__.js";
-import _modDef8829 from "08829__.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
+import _mod26 from "00026__.js";
+import weakSet from "../00106_weakSet.js";
+import 00065__ from "00065__.js";
 
-const Text = fn;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-_possibleConstructorReturnDefault;
-_isNativeReflectConstruct = fn(8827);
-const jsx = fn(21).jsx;
-class Text {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_3(this, Text);
-    items1 = [...items];
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Text);
-    tmp3 = closure_4;
-    if (closure_7()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = (matrix) => {
-      let tmp = matrix;
-      if (matrix) {
-        tmp = !matrix.matrix;
-      }
-      if (tmp) {
-        tmp = appendTransformPropsDefault(matrix);
-      }
-      if (tmp) {
-        matrix.matrix = tmp;
-      }
-      const propsAndStylesResult = Text(8743).propsAndStyles(matrix);
-      const obj = Text(8743);
-      const merged = Object.assign(
-        propsAndStylesResult,
-        Text(8744).pickNotNil(extractFontDefault(propsAndStylesResult, true)),
-      );
-      if (closure_0.root) {
-        const root = closure_0.root;
-        root.setNativeProps(propsAndStylesResult);
-      }
-      const obj2 = Text(8744);
-    };
-    return tmp3Result;
-  }
-}
-_inherits(Text, _modDef8752);
-const entry = {
-  key: "render",
-  value: function render() {
-    const propsAndStylesResult = Text(8743).propsAndStyles(this.props);
-    const obj2 = {};
-    const obj = Text(8743);
-    const merged = Object.assign(propsAndStylesResult);
-    obj2.x = null;
-    obj2.y = null;
-    const tmp2Result = extractPropsDefault(obj2, this);
-    const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, true));
-    tmp2Result.ref = this.refMethod;
-    const obj3 = {};
-    const merged2 = Object.assign(tmp2Result);
-    return jsx(_modDef8829, {});
-  },
-};
-let items = [entry];
-const importDefaultResultResult = _createClass(Text, items);
-importDefaultResultResult.displayName = "Text";
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGRect", directEventTypes: { topSvgLayout: { registrationName: "onSvgLayout" } }, validAttributes: null };
+const size = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: _mod26.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, x: true, y: true, height: true, width: true, rx: true, ry: true };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSvgLayout: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = size;
 
-export default importDefaultResultResult;
+export default module_65.get("RNSVGRect", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

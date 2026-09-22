@@ -4,10 +4,10 @@ import registerAsset from "01121__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/icymi/native/images",
-  width: 77,
-  height: 95.5,
+  width: 24.5,
+  height: 24,
   scales: [2, 3],
-  hash: "ebbb7db0461de915440e3bdd6a8249c9",
-  name: "flash",
+  hash: "17237a5c49ea745b655cbec7c093406d",
+  name: "emoji-positive",
   type: "png",
 });

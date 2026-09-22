@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 160,
-  height: 160,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "b7eca7761481c5ff3cc170b16fbdff57",
-  name: "img_no_results",
+  hash: "45c8ad8f30ca8563a8afaab90a692e66",
+  name: "MagnifyingGlassIcon",
   type: "png",
 });

@@ -1,80 +1,50 @@
 // _runtime/metro/07053__.js
-import jsxProd from "../react/00021_jsxProd.js";
-import value2 from "../06870_value2.js";
-import _mod7054 from "07054__.js";
-import noop_mod from "00019__.js";
-import get_ActivityIndicator from "00017__.js";
+import cancelAnimation from "../01637_cancelAnimation.js";
+import value2 from "../06872_value2.js";
+import _mod6876 from "06876__.js";
+import BottomSheetContext from "../06882_BottomSheetContext.js";
+import noop from "00019__.js";
 
-let noop = noop_mod;
-({ useMemo: c2, useRef: c3 } = noop);
-let noop = noop_mod;
-({ StatusBar: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const jsx = jsxProd.jsx;
-const memoResult = noop.memo(function BottomSheetHostingContainerComponent(bottomInset) {
-  ({ containerHeight: require, containerOffset: dependencyMap, topInset } = bottomInset);
-  if (topInset === undefined) {
-    topInset = 0;
-  }
-  let num = bottomInset.bottomInset;
-  if (num === undefined) {
-    num = 0;
-  }
-  let flag = bottomInset.shouldCalculateHeight;
-  if (flag === undefined) {
-    flag = true;
-  }
-  const detached = bottomInset.detached;
-  const style = bottomInset.style;
-  const tmp = num(null);
-  const ref = tmp;
-  let items = [style, detached, topInset, num];
-  const tmp2 = topInset(() => {
-    const items = [style, _mod7054.styles.container];
-    const rect = { top: topInset, bottom: num, overflow: null };
-    let str = "hidden";
-    if (detached) {
-      str = "visible";
-    }
-    rect.overflow = str;
-    items[2] = rect;
-    return items;
-  }, items);
-  const obj2 = { ref: tmp, pointerEvents: "box-none", onLayout: null, style: null, collapsable: true, children: null };
-  let stableCallback;
-  if (flag) {
-    stableCallback = obj.useStableCallback(function handleLayoutEvent(nativeEvent) {
-      const height = nativeEvent.nativeEvent.layout.height;
-      height.value = height;
-      const current = ref.current;
-      if (current != null) {
-        current.measure((arg0, arg1, arg2, arg3, arg4, arg5) => {
-          if (value.value) {
-            num = arg5;
-            let num2 = arg5;
-            if (arg5 == null) {
-              num2 = 0;
-            }
-            const rect = { top: num2, left: 0, right: 0, bottom: null };
-            if (num == null) {
-              num = 0;
-            }
-            let num3 = currentHeight.currentHeight;
-            const sum = num + height;
-            if (num3 == null) {
-              num3 = 0;
-            }
-            rect.bottom = Math.max(0, value2.WINDOW_HEIGHT - (sum + num3));
-            tmp.value = rect;
-          }
-        });
-      }
-    });
-  }
-  obj2.onLayout = stableCallback;
-  obj2.style = tmp2;
-  obj2.children = bottomInset.children;
-  return ref(style, obj2);
-});
-memoResult.displayName = "BottomSheetHostingContainer";
+require = fn;
+const useMemo = fn(19).useMemo;
+const jsx = fn(21).jsx;
 
-export const BottomSheetHostingContainer = memoResult;
+export default function _default(children) {
+  let useGestureEventsHandlersDefault = children.gestureEventsHandlersHook;
+  if (useGestureEventsHandlersDefault === undefined) {
+    useGestureEventsHandlersDefault = _mod6876.useGestureEventsHandlersDefault;
+  }
+  const sharedValue = cancelAnimation.useSharedValue(value2.GESTURE_SOURCE.UNDETERMINED);
+  const bottomSheetInternal = _mod6876.useBottomSheetInternal();
+  ({ animatedHandleGestureState, animatedContentGestureState } = bottomSheetInternal);
+  ({ handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize } = useGestureEventsHandlersDefault());
+  const gestureEventsHandlersDefault = useGestureEventsHandlersDefault();
+  const gestureHandler = _mod6876.useGestureHandler(
+    value2.GESTURE_SOURCE.CONTENT,
+    animatedContentGestureState,
+    sharedValue,
+    handleOnStart,
+    handleOnChange,
+    handleOnEnd,
+    handleOnFinalize,
+  );
+  const gestureHandler1 = _mod6876.useGestureHandler(
+    value2.GESTURE_SOURCE.HANDLE,
+    animatedHandleGestureState,
+    sharedValue,
+    handleOnStart,
+    handleOnChange,
+    handleOnEnd,
+    handleOnFinalize,
+  );
+  const items = [gestureHandler, gestureHandler1, sharedValue];
+  value = useMemo(
+    () => ({
+      contentPanGestureHandler: gestureHandler,
+      handlePanGestureHandler: gestureHandler1,
+      animatedGestureSource: sharedValue,
+    }),
+    items,
+  );
+  return jsx(BottomSheetContext.BottomSheetGestureHandlersContext.Provider, { value, children: children.children });
+}

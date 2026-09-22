@@ -1,91 +1,135 @@
 // _runtime/metro/07045__.js
 import _mod19 from "00019__.js";
-import _modDef38 from "00038__.js";
+import value22 from "../06872_value2.js";
+import get_ActivityIndicator from "00017__.js";
 
-const useMemo = _mod19.useMemo;
+const useEffect = _mod19.useEffect;
+({ Keyboard: c3, Platform } = get_ActivityIndicator);
+const keyboardDidShow = "keyboardDidShow";
+const keyboardDidHide = "keyboardDidHide";
+let closure_6 = {
+  code: "function pnpm_useKeyboardTs1(state,height,duration,easing,bottomOffset){const{KEYBOARD_STATE,shouldHandleKeyboardEvents,temporaryCachedKeyboardEvent,keyboardHeight,includeBottomOffset,keyboardAnimationDuration,keyboardAnimationEasing,keyboardState}=this.__closure;if(state===KEYBOARD_STATE.SHOWN&&!shouldHandleKeyboardEvents.value){temporaryCachedKeyboardEvent.value=[state,height,duration,easing];return;}keyboardHeight.value=state===KEYBOARD_STATE.SHOWN?height:keyboardHeight.value;if(bottomOffset&&includeBottomOffset){keyboardHeight.value=keyboardHeight.value+bottomOffset;}keyboardAnimationDuration.value=duration;keyboardAnimationEasing.value=easing;keyboardState.value=state;temporaryCachedKeyboardEvent.value=[];}",
+};
+let closure_7 = {
+  code: "function pnpm_useKeyboardTs2(){const{shouldHandleKeyboardEvents}=this.__closure;return shouldHandleKeyboardEvents.value;}",
+};
+const __initData = {
+  code: "function pnpm_useKeyboardTs3(result){const{temporaryCachedKeyboardEvent,handleKeyboardEvent}=this.__closure;const params=temporaryCachedKeyboardEvent.value;if(result&&params.length>0){handleKeyboardEvent(params[0],params[1],params[2],params[3]);}}",
+};
 
-export const usePropsValidator = (index) => {
-  index = index.index;
-  const snapPoints = index.snapPoints;
-  const enableDynamicSizing = index.enableDynamicSizing;
-  const topInset = index.topInset;
-  const bottomInset = index.bottomInset;
-  let items = [index, snapPoints, topInset, bottomInset, enableDynamicSizing];
-  topInset(() => {
-    if (snapPoints) {
-      value = snapPoints;
-      if ("get" in snapPoints) {
-        value = snapPoints.get();
+export const useKeyboard = (includeBottomOffset) => {
+  includeBottomOffset = includeBottomOffset.includeBottomOffset;
+  let shouldHandleKeyboardEvents;
+  shouldHandleKeyboardEvents = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(false);
+  let obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const state = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(
+    includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.UNDETERMINED,
+  );
+  const obj2 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const height = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(0);
+  const obj3 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const animationEasing = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue("keyboard");
+  const obj4 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const animationDuration = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(500);
+  const obj5 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const sharedValue5 = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue([]);
+  const obj6 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const fn = function v(value, arg1, value2, value3, arg4) {
+    value = arg1;
+    if (value === value22.KEYBOARD_STATE.SHOWN) {
+      if (!shouldHandleKeyboardEvents.value) {
+        const items = [value, value, value2, value3];
+        sharedValue5.value = items;
       }
-      let items = value;
-    } else {
-      items = [];
     }
-    let tmp5 = items;
-    if (!items) {
-      tmp5 = enableDynamicSizing;
+    if (value !== value22.KEYBOARD_STATE.SHOWN) {
+      value = height.value;
     }
-    _modDef38(tmp5, "'snapPoints' was not provided! please provide at least one snap point.");
-    const mapped = items.map((item) => {
-      let parsed = item;
-      if (typeof item !== "number") {
-        const _Number = Number;
-        parsed = Number.parseInt(item.replace("%", ""), 10);
-      }
-      let tmp4 = parsed > 0;
-      if (!tmp4) {
-        tmp4 = parsed === index(enableDynamicSizing[2]).INITIAL_SNAP_POINT;
-      }
-      snapPoints(enableDynamicSizing[1])(
-        tmp4,
-        "Snap point '" +
-          item +
-          "' is invalid. if you want to allow user to close the sheet, Please use 'enablePanDownToClose' prop.",
+    height.value = value;
+    let tmp5 = arg4;
+    if (arg4) {
+      tmp5 = includeBottomOffset;
+    }
+    if (tmp5) {
+      height.value = height.value + arg4;
+    }
+    animationDuration.value = value2;
+    animationEasing.value = value3;
+    state.value = value;
+    sharedValue5.value = [];
+  };
+  const obj7 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  fn.__closure = {
+    KEYBOARD_STATE: includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE,
+    shouldHandleKeyboardEvents,
+    temporaryCachedKeyboardEvent: sharedValue5,
+    keyboardHeight: height,
+    includeBottomOffset,
+    keyboardAnimationDuration: animationDuration,
+    keyboardAnimationEasing: animationEasing,
+    keyboardState: state,
+  };
+  fn.__workletHash = 7905199978020;
+  fn.__initData = sharedValue5;
+  const workletCallback = obj7.useWorkletCallback(fn, []);
+  let items = [workletCallback];
+  state(() => {
+    closure_0 = height.addListener(animationEasing, (endCoordinates) => {
+      const obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+      ({ duration, easing } = endCoordinates);
+      includeBottomOffset(shouldHandleKeyboardEvents[2]).runOnUI(workletCallback)(
+        includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.SHOWN,
+        endCoordinates.endCoordinates.height,
+        duration,
+        easing,
+        includeBottomOffset(shouldHandleKeyboardEvents[3]).SCREEN_HEIGHT -
+          endCoordinates.endCoordinates.height -
+          endCoordinates.endCoordinates.screenY,
       );
-      const tmp3 = snapPoints(enableDynamicSizing[1]);
     });
-    let tmp9 = "value" in items;
-    if (!tmp9) {
-      tmp9 = items.length > 0;
-    }
-    if (!tmp9) {
-      tmp9 = enableDynamicSizing;
-    }
-    _modDef38(tmp9, "'snapPoints' was provided with no points! please provide at least one snap point.");
-    let tmp13 = typeof index === "number";
-    const tmp2Result = _modDef38;
-    if (typeof index !== "number") {
-      tmp13 = undefined === index;
-    }
-    _modDef38(tmp13, "'index' was provided but with wrong type ! expected type is a number.");
-    let tmp16 = enableDynamicSizing;
-    const tmp2Result5 = _modDef38;
-    if (!enableDynamicSizing) {
-      tmp16 = typeof index !== "number";
-    }
-    if (!tmp16) {
-      let tmp17 = index >= -1;
-      if (tmp17) {
-        tmp17 = index <= items.length - 1;
-      }
-      tmp16 = tmp17;
-    }
-    _modDef38(
-      tmp16,
-      `'index' was provided but out of the provided snap points range! expected value to be between -1, ${arr.length - 1}`,
-    );
-    let tmp20 = typeof topInset === "number";
-    const tmp2Result6 = _modDef38;
-    if (typeof topInset !== "number") {
-      tmp20 = undefined === topInset;
-    }
-    _modDef38(tmp20, "'topInset' was provided but with wrong type ! expected type is a number.");
-    let tmp23 = typeof bottomInset === "number";
-    const tmp2Result7 = _modDef38;
-    if (typeof bottomInset !== "number") {
-      tmp23 = undefined === bottomInset;
-    }
-    _modDef38(tmp23, "'bottomInset' was provided but with wrong type ! expected type is a number.");
-    const tmp2Result8 = _modDef38;
+    closure_1 = height.addListener(animationDuration, (endCoordinates) => {
+      const obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+      includeBottomOffset(shouldHandleKeyboardEvents[2]).runOnUI(workletCallback)(
+        includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.HIDDEN,
+        endCoordinates.endCoordinates.height,
+        endCoordinates.duration,
+        endCoordinates.easing,
+      );
+    });
+    return () => {
+      closure_0.remove();
+      closure_1.remove();
+    };
   }, items);
+  const obj8 = {
+    KEYBOARD_STATE: includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE,
+    shouldHandleKeyboardEvents,
+    temporaryCachedKeyboardEvent: sharedValue5,
+    keyboardHeight: height,
+    includeBottomOffset,
+    keyboardAnimationDuration: animationDuration,
+    keyboardAnimationEasing: animationEasing,
+    keyboardState: state,
+  };
+  const fn2 = function b() {
+    return shouldHandleKeyboardEvents.value;
+  };
+  fn2.__closure = { shouldHandleKeyboardEvents };
+  fn2.__workletHash = 11615500623565;
+  fn2.__initData = workletCallback;
+  const fn3 = function y(arg0) {
+    let tmp = arg0;
+    value = sharedValue5.value;
+    if (arg0) {
+      tmp = value.length > 0;
+    }
+    if (tmp) {
+      workletCallback(value[0], value[1], value[2], value[3]);
+    }
+  };
+  fn3.__closure = { temporaryCachedKeyboardEvent: sharedValue5, handleKeyboardEvent: workletCallback };
+  fn3.__workletHash = 16636741173520;
+  fn3.__initData = __initData;
+  const animatedReaction = includeBottomOffset(shouldHandleKeyboardEvents[2]).useAnimatedReaction(fn2, fn3, []);
+  return { state, height, animationEasing, animationDuration, shouldHandleKeyboardEvents };
 };

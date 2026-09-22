@@ -92,8 +92,8 @@ fn = function n(userConfig, fn) {
       initialVelocity: 0,
       current: "disabled",
       lastTimestamp: null,
-      startTimestamp: "ProfileBadgeRows",
-      reduceMotion: "TYPING_START_LOCAL",
+      startTimestamp: true,
+      reduceMotion: "/assets/images/native/premium/illustrations",
     };
     let num = obj.velocity;
     if (num == null) {

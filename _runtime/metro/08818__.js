@@ -1,5 +1,5 @@
 // _runtime/metro/08818__.js
-import _modDef8752 from "08752__.js";
+import _modDef8756 from "08756__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
@@ -7,7 +7,7 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const Polyline = importDefault;
+const Pattern = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,59 +27,84 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 const jsx = fn(21).jsx;
-class Polyline {
+class Pattern {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = c2(this, Polyline);
-    items1 = [...items];
+    tmp = c2(this, Pattern);
     tmp2 = closure_4;
-    obj = closure_4(Polyline);
+    obj = closure_4(Pattern);
     tmp3 = closure_3;
     if (metroRequire()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = (points) => {
-      points = points.points;
-      if (points) {
-        const _HermesInternal = HermesInternal;
-        points.d = "M" + Polyline(8817)(points);
-      }
-      if (closure_0.root) {
-        const root = closure_0.root;
-        root.setNativeProps(points);
-      }
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(Polyline, _modDef8752);
+_inherits(Pattern, _modDef8756);
 const entry = {
   key: "render",
   value: function render() {
+    const self = this;
     const props = this.props;
-    const points = props.points;
-    const obj = { ref: this.refMethod, d: null };
-    let combined = points;
-    if (points) {
-      const _HermesInternal = HermesInternal;
-      combined = "M" + Polyline(8817)(points);
+    ({ patternTransform, patternUnits, patternContentUnits } = props);
+    ({ transform, id, x, y, width, height, children, viewBox, preserveAspectRatio } = props);
+    if (!patternTransform) {
+      patternTransform = transform;
     }
-    obj.d = combined;
-    const merged = Object.assign(props);
-    return jsx(Polyline(8812), { ref: this.refMethod, d: null });
+    if (!patternTransform) {
+      patternTransform = props;
+    }
+    const tmp3Result = Pattern(8740)(patternTransform);
+    const size = {
+      x,
+      y,
+      width,
+      height,
+      name: id,
+      matrix: tmp3Result,
+      patternTransform: tmp3Result,
+      patternUnits: null,
+      patternContentUnits: null,
+    };
+    let num = patternUnits;
+    if (patternUnits) {
+      num = Pattern(8810)[patternUnits];
+    }
+    if (!num) {
+      num = 0;
+    }
+    size.patternUnits = num;
+    let num2 = 1;
+    if (patternContentUnits) {
+      num2 = Pattern(8810)[patternContentUnits];
+    }
+    size.patternContentUnits = num2;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    };
+    const tmp3 = Pattern(8740);
+    const merged = Object.assign(size);
+    const merged1 = Object.assign(Pattern(8745)({ viewBox, preserveAspectRatio }));
+    obj.children = children;
+    return jsx(Pattern(8819), {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    });
   },
 };
-let items = [entry];
-const importDefaultResultResult = _createClass(Polyline, items);
-importDefaultResultResult.displayName = "Polyline";
-importDefaultResultResult.defaultProps = { points: "" };
+const items = [entry];
+const importDefaultResultResult = _createClass(Pattern, items);
+importDefaultResultResult.displayName = "Pattern";
+importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
 
 export default importDefaultResultResult;

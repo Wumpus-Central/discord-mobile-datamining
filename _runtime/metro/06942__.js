@@ -1,51 +1,61 @@
 // _runtime/metro/06942__.js
-import _mod19 from "00019__.js";
-import _modDef6932 from "06932__.js";
-import needsToReattach from "../06943_needsToReattach.js";
-import dropHandlers from "../06944_dropHandlers.js";
-import attachHandlers from "../06945_attachHandlers.js";
-import _mod6946 from "06946__.js";
+import cancelAnimation from "../01637_cancelAnimation.js";
+import reactNativeWorkletsCompat from "../../discord_app/modules/gesture_handlers/native/reactNativeWorkletsCompat.js";
+import tagMessage from "../06904_tagMessage.js";
+import ghQueueMicrotask from "../06931_ghQueueMicrotask.js";
+import _mod6943 from "06943__.js";
 
-const require = globalThis.__r;
-
-_mod19.useCallback;
-
-export const useDetectorUpdater = function useDetectorUpdater(
-  current,
-  current2,
-  gesturesToAttach,
-  gesture,
-  webEventHandlers,
-) {
-  _require = current;
-  const preparedGesture = current2;
-  dependencyMap = gesturesToAttach;
-  const forceRender = require("convertToHandlerTag").useForceRender();
-  const items = [forceRender, gesture, gesturesToAttach, current2, current, webEventHandlers];
-  return gesture((arg0) => {
-    const tmp3 = _modDef6932(current.viewRef);
-    if (tmp3 === current.previousViewTag) {
-      if (!obj.needsToReattach(preparedGesture, gesturesToAttach)) {
-        if (!arg0) {
-          _mod6946.updateHandlers(preparedGesture, gestureConfig, gesturesToAttach);
-          const tmp5Result = _mod6946;
-        }
+try {
+  const _module = cancelAnimation;
+  try {
+    const _module1 = reactNativeWorkletsCompat;
+    if (_module1 != null) {
+      const fn = function t() {};
+      fn.__closure = {};
+      fn.__workletHash = 1792171573139;
+      fn.__initData = { code: "function pnpm_reanimatedWrapperTs1(){}" };
+      _module1.scheduleOnUI(fn);
+    }
+    const _module2 = ghQueueMicrotask;
+    _module2.ghQueueMicrotask(() => {
+      const NativeProxy = _mod6943.NativeProxy;
+      if (!NativeProxy.installUIRuntimeBindings()) {
+        const _console = console;
+        console.warn(
+          tagMessage.tagMessage(
+            "Failed to install UI runtime bindings. Please report this at https://github.com/software-mansion/react-native-gesture-handler/issues.",
+          ),
+        );
+        const tmpResult = tagMessage;
       }
-      obj = needsToReattach;
-    }
-    dropHandlers.dropHandlers(preparedGesture);
-    attachHandlers.attachHandlers({
-      preparedGesture,
-      gestureConfig,
-      gesturesToAttach,
-      webEventHandlersRef,
-      viewTag: tmp3,
     });
-    if (tmp3 !== current.previousViewTag) {
-      current.previousViewTag = tmp3;
-      current.forceRebuildReanimatedEvent = true;
-      forceRender();
+    let useSharedValue;
+    if (_module != null) {
+      useSharedValue = _module.useSharedValue;
     }
-    const obj2 = { preparedGesture, gestureConfig, gesturesToAttach, webEventHandlersRef, viewTag: tmp3 };
-  }, items);
-};
+    let setGestureState = undefined === _module;
+    if (!setGestureState) {
+      setGestureState = _module.setGestureState;
+    }
+    if (!setGestureState) {
+      const fn2 = function o() {
+        console.warn(
+          tagMessage.tagMessage(
+            "Please use newer version of react-native-reanimated in order to control state of the gestures.",
+          ),
+        );
+      };
+      const obj = { tagMessage: tagMessage.tagMessage };
+      fn2.__closure = obj;
+      fn2.__workletHash = 3596069664305;
+      fn2.__initData = {
+        code: "function pnpm_reanimatedWrapperTs2(){const{tagMessage}=this.__closure;console.warn(tagMessage('Please use newer version of react-native-reanimated in order to control state of the gestures.'));}",
+      };
+      _module.setGestureState = fn2;
+      const obj2 = {
+        code: "function pnpm_reanimatedWrapperTs2(){const{tagMessage}=this.__closure;console.warn(tagMessage('Please use newer version of react-native-reanimated in order to control state of the gestures.'));}",
+      };
+    }
+    exports.Reanimated = _module;
+  } catch (err) {}
+} catch (err) {}

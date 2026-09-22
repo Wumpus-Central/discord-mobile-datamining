@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 300,
   height: 175,
   scales: [2, 3],
-  hash: "7e68c2960201e89a20761843ca26d40b",
-  name: "super_reaction",
+  hash: "fe4737c3dd5ab570ff8c05c7dd4152ca",
+  name: "custom_icons",
   type: "png",
 });

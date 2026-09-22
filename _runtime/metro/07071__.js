@@ -1,16 +1,67 @@
 // _runtime/metro/07071__.js
-import _mod17 from "00017__.js";
-import value2 from "../06870_value2.js";
+import _mod7073 from "07073__.js";
+import noop_mod from "00019__.js";
+import get_ActivityIndicator from "00017__.js";
+import jsxProd from "../react/00021_jsxProd.js";
 
-const StyleSheet = _mod17.StyleSheet;
-const obj = { container: { padding: 10, cursor: "grab" }, indicator: null };
-const size = {
-  alignSelf: "center",
-  width: (7.5 * value2.WINDOW_WIDTH) / 100,
-  height: 4,
-  borderRadius: 4,
-  backgroundColor: "rgba(0, 0, 0, 0.75)",
-};
-obj.indicator = size;
+let noop = noop_mod;
+const useMemo = noop.useMemo;
+let noop = noop_mod;
+({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const memoResult = noop.memo(function BottomSheetHandleComponent(style) {
+  style = style.style;
+  const indicatorStyle = style.indicatorStyle;
+  let DEFAULT_ACCESSIBLE = style.accessible;
+  if (DEFAULT_ACCESSIBLE === undefined) {
+    DEFAULT_ACCESSIBLE = style(indicatorStyle[3]).DEFAULT_ACCESSIBLE;
+  }
+  let DEFAULT_ACCESSIBILITY_ROLE = style.accessibilityRole;
+  if (DEFAULT_ACCESSIBILITY_ROLE === undefined) {
+    DEFAULT_ACCESSIBILITY_ROLE = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_ROLE;
+  }
+  let DEFAULT_ACCESSIBILITY_LABEL = style.accessibilityLabel;
+  if (DEFAULT_ACCESSIBILITY_LABEL === undefined) {
+    DEFAULT_ACCESSIBILITY_LABEL = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_LABEL;
+  }
+  let DEFAULT_ACCESSIBILITY_HINT = style.accessibilityHint;
+  if (DEFAULT_ACCESSIBILITY_HINT === undefined) {
+    DEFAULT_ACCESSIBILITY_HINT = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_HINT;
+  }
+  let items = [style];
+  const items1 = [indicatorStyle];
+  const obj = {
+    style: useMemo(() => {
+      const items = [_mod7073.styles.container, React3.flatten(style)];
+      return items;
+    }, items),
+    accessible: null,
+    accessibilityRole: null,
+    accessibilityLabel: null,
+    accessibilityHint: null,
+    collapsable: true,
+    children: null,
+  };
+  const tmp9 = useMemo(() => {
+    const items = [_mod7073.styles.container, React3.flatten(style)];
+    return items;
+  }, items);
+  obj.accessible = DEFAULT_ACCESSIBLE;
+  obj.accessibilityRole = DEFAULT_ACCESSIBILITY_ROLE;
+  obj.accessibilityLabel = DEFAULT_ACCESSIBILITY_LABEL;
+  obj.accessibilityHint = DEFAULT_ACCESSIBILITY_HINT;
+  const items2 = [
+    closure_5(closure_4, {
+      style: useMemo(() => {
+        const items = [_mod7073.styles.indicator, React3.flatten(indicatorStyle)];
+        return items;
+      }, items1),
+    }),
+    style.children,
+  ];
+  obj.children = items2;
+  return closure_6(closure_4, obj);
+});
+memoResult.displayName = "BottomSheetHandle";
 
-export const styles = StyleSheet.create(obj);
+export default memoResult;

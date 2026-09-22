@@ -1,29 +1,39 @@
 // _runtime/metro/07111__.js
 import _mod7112 from "07112__.js";
 
-export default function toPrimitive(arg0, arg1) {
-  if ("object" == obj.default(arg0)) {
-    if (arg0) {
-      let str = arg1;
-      const _Symbol = Symbol;
-      if (undefined !== arg0[Symbol.toPrimitive]) {
-        const call = tmp4.call;
-        if (!str) {
-          str = "default";
-        }
-        const tmp5 = typeof call === "unknown" ? tmp4(str) : call(arg0, str);
-        if ("object" != tmpResult.default(tmp5)) {
-          return tmp5;
-        } else {
-          const _TypeError = TypeError;
-          const typeError = new TypeError("@@toPrimitive must return a primitive value.");
-          throw typeError;
-        }
-        tmpResult = _mod7112;
-      } else {
-        return "string" === str ? String : Number(arg0);
+export default function _createClass(arg0, arg1, arg2) {
+  if (arg1) {
+    for (let num = 0; num < arg1.length; num = num + 1) {
+      let tmp3 = arg1[num];
+      let flag2 = tmp3.enumerable;
+      if (!flag2) {
+        flag2 = false;
       }
+      tmp3.enumerable = flag2;
+      tmp3.configurable = true;
+      if ("value" in tmp3) {
+        tmp3.writable = true;
+      }
+      let _Object = Object;
+      let definePropertyResult = Object.defineProperty(tmp, _mod7112(tmp3.key), tmp3);
     }
   }
+  if (arg2) {
+    for (let num3 = 0; num3 < arg2.length; num3 = num3 + 1) {
+      let tmp9 = arg2[num3];
+      let flag4 = tmp9.enumerable;
+      if (!flag4) {
+        flag4 = false;
+      }
+      tmp9.enumerable = flag4;
+      tmp9.configurable = true;
+      if ("value" in tmp9) {
+        tmp9.writable = true;
+      }
+      let _Object2 = Object;
+      let definePropertyResult1 = Object.defineProperty(arg0, _mod7112(tmp9.key), tmp9);
+    }
+  }
+  Object.defineProperty(arg0, "prototype", { writable: false });
   return arg0;
 }

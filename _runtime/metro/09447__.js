@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/MatteLightIcon",
+  httpServerLocation: "/assets/images/native/custom_app_icons/MidnightPrismIcon",
   width: 60,
   height: 60,
   scales: [2, 3],
-  hash: "766fd7e004517bb3fbea8bf5121a6049",
-  name: "MatteLightIcon",
+  hash: "44efb56cf36c8202533bcbc557ebf8e5",
+  name: "MidnightPrismIcon",
   type: "png",
 });

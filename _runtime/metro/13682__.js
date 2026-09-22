@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 300,
   height: 175,
   scales: [2, 3],
-  hash: "7d09a15a2a5682035199dcfee2a26d08",
-  name: "badge",
+  hash: "67d5ffa8705bc838eb19bd17c2eff4ab",
+  name: "custom_sounds",
   type: "png",
 });

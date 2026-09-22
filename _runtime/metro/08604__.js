@@ -1,144 +1,55 @@
 // _runtime/metro/08604__.js
-import _mod17 from "00017__.js";
+import colorPropType from "../08589_colorPropType.js";
+import _mod8591 from "08591__.js";
+import _mod8605 from "08605__.js";
+import flattenStyle from "08594__.js";
+import emptyFunction_mod from "04586__.js";
 
-const Orientation = _mod17.NativeModules.Orientation;
-const Platform = _mod17.Platform;
-const DeviceEventEmitter = _mod17.DeviceEventEmitter;
-const dependencyMap = {};
-let c3 = 0;
-const __listener_id = "__listener_id";
-
-export default {
-  getOrientation(arg0) {
-    closure_0 = arg0;
-    const orientation = Orientation.getOrientation((arg0, arg1) => {
-      closure_0(arg0, arg1);
-    });
-  },
-  getSpecificOrientation(arg0) {
-    closure_0 = arg0;
-    const specificOrientation = Orientation.getSpecificOrientation((arg0, arg1) => {
-      closure_0(arg0, arg1);
-    });
-  },
-  ignoreAutoRotate(flag) {
-    Orientation.ignoreAutoRotate(flag);
-  },
-  lockToPortrait() {
-    Orientation.lockToPortrait();
-  },
-  lockToLandscape() {
-    Orientation.lockToLandscape();
-  },
-  lockToLandscapeRight() {
-    Orientation.lockToLandscapeRight();
-  },
-  lockToLandscapeLeft() {
-    Orientation.lockToLandscapeLeft();
-  },
-  unlockAllOrientations() {
-    const result = Orientation.unlockAllOrientations();
-  },
-  addOrientationListener(handleOrientationChange) {
-    if (handleOrientationChange.hasOwnProperty(__listener_id)) {
-      let str = handleOrientationChange[__listener_id];
-    } else {
-      const _Object = Object;
-      str = "F";
-      if (Object.isExtensible(handleOrientationChange)) {
-        const _Object2 = Object;
-        const obj = { value: null };
-        const sum = c3 + 1;
-        c3 = sum;
-        obj.value = `L${tmp4}`;
-        Object.defineProperty(handleOrientationChange, __listener_id, obj);
-      }
-    }
-    closure_2[str] = DeviceEventEmitter.addListener("orientationDidChange", (orientation) => {
-      handleOrientationChange(orientation.orientation);
-    });
-  },
-  addOrientationDegreesChangeListener(arg0) {
-    closure_0 = arg0;
-    if (arg0.hasOwnProperty(__listener_id)) {
-      let str = arg0[__listener_id];
-    } else {
-      const _Object = Object;
-      str = "F";
-      if (Object.isExtensible(arg0)) {
-        const _Object2 = Object;
-        const obj = { value: null };
-        const sum = c3 + 1;
-        c3 = sum;
-        obj.value = `L${tmp4}`;
-        Object.defineProperty(arg0, __listener_id, obj);
-      }
-    }
-    closure_2[str] = DeviceEventEmitter.addListener("orientationDegreesDidChange", (orientationDegrees) => {
-      closure_0(orientationDegrees.orientationDegrees);
-    });
-  },
-  removeOrientationListener(arg0) {
-    if (arg0.hasOwnProperty(__listener_id)) {
-      let str = arg0[__listener_id];
-    } else {
-      const _Object = Object;
-      str = "F";
-      if (Object.isExtensible(arg0)) {
-        const _Object2 = Object;
-        const obj = { value: null };
-        const sum = c3 + 1;
-        c3 = sum;
-        obj.value = `L${tmp4}`;
-        Object.defineProperty(arg0, __listener_id, obj);
-      }
-    }
-    if (dependencyMap[str]) {
-      dependencyMap[str].remove();
-      dependencyMap[str] = null;
-    }
-  },
-  addSpecificOrientationListener(arg0) {
-    closure_0 = arg0;
-    if (arg0.hasOwnProperty(__listener_id)) {
-      let str = arg0[__listener_id];
-    } else {
-      const _Object = Object;
-      str = "F";
-      if (Object.isExtensible(arg0)) {
-        const _Object2 = Object;
-        const obj = { value: null };
-        const sum = c3 + 1;
-        c3 = sum;
-        obj.value = `L${tmp4}`;
-        Object.defineProperty(arg0, __listener_id, obj);
-      }
-    }
-    closure_2[str] = DeviceEventEmitter.addListener("specificOrientationDidChange", (specificOrientation) => {
-      closure_0(specificOrientation.specificOrientation);
-    });
-  },
-  removeSpecificOrientationListener(arg0) {
-    if (arg0.hasOwnProperty(__listener_id)) {
-      let str = arg0[__listener_id];
-    } else {
-      const _Object = Object;
-      str = "F";
-      if (Object.isExtensible(arg0)) {
-        const _Object2 = Object;
-        const obj = { value: null };
-        const sum = c3 + 1;
-        c3 = sum;
-        obj.value = `L${tmp4}`;
-        Object.defineProperty(arg0, __listener_id, obj);
-      }
-    }
-    if (dependencyMap[str]) {
-      dependencyMap[str].remove();
-      dependencyMap[str] = null;
-    }
-  },
-  getInitialOrientation() {
-    return Orientation.initialOrientation;
-  },
+const obj = {
+  ellipsizeMode: null,
+  numberOfLines: null,
+  textBreakStrategy: null,
+  onLayout: null,
+  onPress: null,
+  onLongPress: null,
+  pressRetentionOffset: null,
+  selectable: null,
+  selectionColor: null,
+  suppressHighlighting: null,
+  style: null,
+  testID: null,
+  nativeID: null,
+  allowFontScaling: null,
+  maxFontSizeMultiplier: null,
+  accessible: null,
+  adjustsFontSizeToFit: null,
+  minimumFontScale: null,
+  disabled: null,
+  dataDetectorType: null,
 };
+const module_8605 = flattenStyle(_mod8605);
+let emptyFunction = emptyFunction_mod;
+obj.ellipsizeMode = emptyFunction.oneOf(["head", "middle", "tail", "clip"]);
+obj.numberOfLines = emptyFunction.number;
+let emptyFunction = emptyFunction_mod;
+obj.textBreakStrategy = emptyFunction.oneOf(["simple", "highQuality", "balanced"]);
+obj.onLayout = emptyFunction.func;
+obj.onPress = emptyFunction.func;
+obj.onLongPress = emptyFunction.func;
+obj.pressRetentionOffset = _mod8591;
+obj.selectable = emptyFunction.bool;
+obj.selectionColor = colorPropType;
+obj.suppressHighlighting = emptyFunction.bool;
+obj.style = module_8605;
+obj.testID = emptyFunction.string;
+obj.nativeID = emptyFunction.string;
+obj.allowFontScaling = emptyFunction.bool;
+obj.maxFontSizeMultiplier = emptyFunction.number;
+obj.accessible = emptyFunction.bool;
+obj.adjustsFontSizeToFit = emptyFunction.bool;
+obj.minimumFontScale = emptyFunction.number;
+obj.disabled = emptyFunction.bool;
+let emptyFunction = emptyFunction_mod;
+obj.dataDetectorType = emptyFunction.oneOf(["phoneNumber", "link", "email", "none", "all"]);
+
+export default obj;

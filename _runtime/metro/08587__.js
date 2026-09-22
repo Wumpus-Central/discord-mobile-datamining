@@ -1,11 +1,3 @@
 // _runtime/metro/08587__.js
-import emptyFunction from "04585__.js";
 
-const rect = {
-  top: emptyFunction.number,
-  left: emptyFunction.number,
-  bottom: emptyFunction.number,
-  right: emptyFunction.number,
-};
-
-export default emptyFunction.shape(rect);
+export default { WIDEVINE: "widevine", PLAYREADY: "playready", CLEARKEY: "clearkey", FAIRPLAY: "fairplay" };

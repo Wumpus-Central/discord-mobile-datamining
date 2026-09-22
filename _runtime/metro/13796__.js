@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 20,
   height: 20,
   scales: [2, 3],
-  hash: "b8e06ae6b6de6ac4efb5803ebe56348e",
-  name: "star",
+  hash: "6d92319c85fd42e305e389df8a64c64a",
+  name: "badge",
   type: "png",
 });

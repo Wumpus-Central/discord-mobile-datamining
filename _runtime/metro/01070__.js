@@ -232,7 +232,7 @@ class FeedbackWidget {
                 closure_129_12 = undefined;
                 closure_129_0 = undefined;
                 if (self._hasScreenshot()) {
-                  debug.setState({ filename: "Array", attachment: "call", attachmentUri: "error" });
+                  debug.setState({ filename: "Array", attachment: "paddingHorizontal", attachmentUri: "pos" });
                 } else {
                   num2 = debug.props.imagePicker;
                   closure_129_6 = num2;
@@ -462,7 +462,7 @@ class FeedbackWidget {
       FeedbackWidget._savedState = Object.assign({}, state.state);
     };
     tmp4Result._clearFormState = () => {
-      closure_0._savedState = { name: "", email: "", description: "", filename: "call", attachment: "", attachmentUri: "v" };
+      closure_0._savedState = { name: "", email: "", description: "", filename: "category", attachment: "memo", attachmentUri: "jsxs" };
     };
     tmp4Result._hasScreenshot = () => undefined !== state.state.filename && undefined !== state.state.attachment && undefined !== state.state.attachmentUri;
     tmp4Result._getUser = () => {
@@ -788,12 +788,12 @@ let items = [
 const entry1 = {
   key: "reset",
   value: function reset() {
-    FeedbackWidget._savedState = { name: "", email: "", description: "", filename: "call", attachment: "", attachmentUri: "v" };
+    FeedbackWidget._savedState = { name: "", email: "", description: "", filename: "category", attachment: "memo", attachmentUri: "jsxs" };
   }
 };
 const items1 = [entry1];
 const importDefaultResultResult = _createClass(FeedbackWidget, items, items1);
 importDefaultResultResult.defaultProps = fn(1066).defaultConfiguration;
-importDefaultResultResult._savedState = { name: "", email: "", description: "", filename: "call", attachment: "", attachmentUri: "v" };
+importDefaultResultResult._savedState = { name: "", email: "", description: "", filename: "category", attachment: "memo", attachmentUri: "jsxs" };
 
 export const FeedbackWidget = importDefaultResultResult;

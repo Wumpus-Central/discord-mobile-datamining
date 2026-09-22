@@ -1,82 +1,51 @@
 // _runtime/metro/05408__.js
-import _mod5402 from "05402__.js";
-import _mod5403 from "05403__.js";
+import _mod5404 from "05404__.js";
+import _mod5405 from "05405__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const isAVIF = function isAVIF(fileChunk) {
-  fileChunk = _mod5402.getFileChunk(fileChunk);
-  const FileTypes = _mod5403.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "avif") && _mod5402.isAvifStringIncluded(fileChunk);
+export const isAAC = function isAAC(fileChunk, excludeSimilarTypes) {
+  fileChunk = _mod5404.getFileChunk(fileChunk);
+  const FileTypes = _mod5405.FileTypes;
+  let checkByFileTypeResult1 = FileTypes.checkByFileType(fileChunk, "aac");
+  if (!checkByFileTypeResult1) {
+    excludeSimilarTypes = undefined;
+    if (null != excludeSimilarTypes) {
+      excludeSimilarTypes = excludeSimilarTypes.excludeSimilarTypes;
+    }
+    let checkByFileTypeResult = !excludeSimilarTypes;
+    if (!excludeSimilarTypes) {
+      const fileChunk1 = _mod5404.getFileChunk(fileChunk);
+      const FileTypes2 = _mod5405.FileTypes;
+      checkByFileTypeResult = FileTypes2.checkByFileType(fileChunk1, "m4a");
+    }
+    checkByFileTypeResult1 = checkByFileTypeResult;
+  }
+  return checkByFileTypeResult1;
 };
-export const isBMP = function isBMP(fileChunk) {
-  fileChunk = _mod5402.getFileChunk(fileChunk);
-  const FileTypes = _mod5403.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "bmp");
+export const isAMR = function isAMR(fileChunk) {
+  fileChunk = _mod5404.getFileChunk(fileChunk);
+  const FileTypes = _mod5405.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "amr");
 };
-export const isBPG = function isBPG(fileChunk) {
-  fileChunk = _mod5402.getFileChunk(fileChunk);
-  const FileTypes = _mod5403.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "bpg");
+export const isFLAC = function isFLAC(fileChunk) {
+  fileChunk = _mod5404.getFileChunk(fileChunk);
+  const FileTypes = _mod5405.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "flac");
 };
-export const isCR2 = function isCR2(fileChunk) {
-  fileChunk = _mod5402.getFileChunk(fileChunk);
-  const FileTypes = _mod5403.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "cr2");
+export const isM4A = function isM4A(fileChunk) {
+  fileChunk = _mod5404.getFileChunk(fileChunk);
+  const FileTypes = _mod5405.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "m4a");
 };
-export const isEXR = function isEXR(fileChunk) {
-  fileChunk = _mod5402.getFileChunk(fileChunk);
-  const FileTypes = _mod5403.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "exr");
+export const isMP3 = function isMP3(fileChunk) {
+  fileChunk = _mod5404.getFileChunk(fileChunk);
+  const FileTypes = _mod5405.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "mp3");
 };
-export const isGIF = function isGIF(fileChunk) {
-  fileChunk = _mod5402.getFileChunk(fileChunk);
-  const FileTypes = _mod5403.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "gif");
-};
-export const isHEIC = function isHEIC(fileChunk) {
-  fileChunk = _mod5402.getFileChunk(fileChunk);
-  const FileTypes = _mod5403.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "avif") && _mod5402.isHeicSignatureIncluded(fileChunk);
-};
-export const isICO = function isICO(fileChunk) {
-  fileChunk = _mod5402.getFileChunk(fileChunk);
-  const FileTypes = _mod5403.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "ico");
-};
-export const isJPEG = function isJPEG(fileChunk) {
-  fileChunk = _mod5402.getFileChunk(fileChunk);
-  const FileTypes = _mod5403.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "jpeg");
-};
-export const isPBM = function isPBM(fileChunk) {
-  fileChunk = _mod5402.getFileChunk(fileChunk);
-  const FileTypes = _mod5403.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "pbm");
-};
-export const isPGM = function isPGM(fileChunk) {
-  fileChunk = _mod5402.getFileChunk(fileChunk);
-  const FileTypes = _mod5403.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "pgm");
-};
-export const isPNG = function isPNG(fileChunk) {
-  fileChunk = _mod5402.getFileChunk(fileChunk);
-  const FileTypes = _mod5403.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "png");
-};
-export const isPPM = function isPPM(fileChunk) {
-  fileChunk = _mod5402.getFileChunk(fileChunk);
-  const FileTypes = _mod5403.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "ppm");
-};
-export const isPSD = function isPSD(fileChunk) {
-  fileChunk = _mod5402.getFileChunk(fileChunk);
-  const FileTypes = _mod5403.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "psd");
-};
-export const isWEBP = function isWEBP(fileChunk) {
-  fileChunk = _mod5402.getFileChunk(fileChunk);
-  const FileTypes = _mod5403.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "webp");
+export const isWAV = function isWAV(fileChunk) {
+  fileChunk = _mod5404.getFileChunk(fileChunk);
+  const FileTypes = _mod5405.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "wav");
 };

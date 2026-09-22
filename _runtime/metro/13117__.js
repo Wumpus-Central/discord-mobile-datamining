@@ -1,198 +1,145 @@
 // _runtime/metro/13117__.js
-import _mod13094 from "13094__.js";
-import _mod13097 from "13097__.js";
-import _mod13104 from "13104__.js";
-import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
+import _mod13054 from "13054__.js";
+import _mod13078 from "13078__.js";
+import _mod13082 from "13082__.js";
+import _mod13098 from "13098__.js";
+import _mod13111 from "13111__.js";
+import _mod13119 from "13119__.js";
 
-function eventFromEnvelope(arg0, arg1) {
-  closure_0 = arg1;
-  _mod13094.forEachEnvelopeItem(arg0, (arg0, arg1) => {
-    if (items.includes(arg1)) {
-      const _Array = Array;
-      let tmp3;
-      if (Array.isArray(arg0)) {
-        tmp3 = arg0[1];
-      }
-      closure_1 = tmp3;
-    }
-    return closure_1;
-  });
-  return dependencyMap;
-}
+const require = globalThis.__r;
 
-export { eventFromEnvelope };
-export function makeMultiplexedTransport(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  return (arg0) => {
-    let tunnel = arg0;
-    function getTransport(arg0, arg1) {
-      let combined = arg0;
-      if (arg1) {
-        const _HermesInternal = HermesInternal;
-        combined = "" + arg0 + ":" + arg1;
-      }
-      value = map.get(combined);
-      if (value) {
-        const items = [arg0, value];
-        return items;
-      } else {
-        const dsnFromStringResult = _mod13097.dsnFromString(arg0);
-        if (dsnFromStringResult) {
-          let merged = tunnel;
-          const envelopeEndpointWithUrlEncodedAuth = _mod13104.getEnvelopeEndpointWithUrlEncodedAuth(dsnFromStringResult, tunnel.tunnel);
-          let tmp9 = tunnel;
-          let obj3 = {};
-          if (arg1) {
-            merged = Object.assign(merged);
-            obj3.url = envelopeEndpointWithUrlEncodedAuth;
-            const tmp9Result = tmp9(obj3);
-            closure_1 = tmp9Result;
-            const obj4 = {};
-            const merged1 = Object.assign(tmp9Result);
-            tmp9 = asyncGeneratorStep;
-            tunnel = asyncGeneratorStep(async (release) => {
-              c1 = 0;
-              return (async (arg0) => {
-                if (c1 === 2) {
-                  c1 = 3;
-                  throw new TypeError("Generator functions may not be called on executing generators");
-                } else if (tmp3 === 3) {
-                  if (arg0 === 1) {
-                    throw value;
-                  } else if (arg0 === 2) {
-                    const obj2 = { value, done: true };
-                    return obj2;
-                  } else {
-                    return { value: "HermesInternal", done: null };
-                  }
-                } else {
-                  try {
-                    c1 = 2;
-                    if (arg0 === 1) {
-                      c1 = 3;
-                      throw value;
-                    } else if (arg0 === 2) {
-                      c1 = 3;
-                      const obj3 = { value, done: true };
-                      return obj3;
-                    } else {
-                      const tmp6 = getTransport(release, ["event", "transaction", "profile", "replay_event"]);
-                      if (tmp6) {
-                        tmp6.release = release;
-                      }
-                      c1 = 3;
-                      const obj = { value: closure_1.send(release), done: true };
-                      return obj;
-                    }
-                  } catch (tmp9) {
-                    c1 = tmp;
-                    throw tmp9;
-                  }
-                }
-              })();
-            });
-            obj4.send = function send(arg0) {
-              const self = this;
-              const apply = closure_0.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            };
-            let tmp9Result2 = obj4;
-          } else {
-            const merged2 = Object.assign(merged);
-            obj3.url = envelopeEndpointWithUrlEncodedAuth;
-            tmp9Result2 = tmp9(obj3);
-          }
-          obj3 = map.set(combined, tmp9Result2);
-          const tmp4Result = _mod13104;
-        }
-      }
+require = arg1;
+let dependencyMap = arg6;
+
+export const DEFAULT_TRANSPORT_BUFFER_SIZE = 64;
+export const createTransport = function createTransport(bufferSize, arg1) {
+  _require = bufferSize;
+  dependencyMap = arg1;
+  let promiseBuffer = arg2;
+  if (arg2 === undefined) {
+    let num = bufferSize.bufferSize;
+    if (!num) {
+      num = 64;
     }
-    closure_4 = async function _send() {
-      c2 = 0;
-      c1 = 0;
-      return (async (arg0) => {
-        const mapped = v3({
-          envelope,
-          getEvent(arg0) {
-            let items = arg0;
-            if (!arg0) {
-              items = ["event"];
-            }
-            dependencyMap(13094).forEachEnvelopeItem(dependencyMap, () => { ... });
-            return dependencyMap2;
-          }
-        }).map((dsn) => {
-          if (typeof dsn === "string") {
-            let tmp2 = closure_1_3(dsn, undefined);
-          } else {
-            tmp2 = closure_1_3(dsn.dsn, dsn.release);
-          }
-          return tmp2;
-        });
-        const found = mapped.filter((item) => item);
-        let arr3 = found;
-        if (!found.length) {
-          let items = ["", closure_2_1];
-          const items1 = [items];
-          arr3 = items1;
-        }
-        await Promise.all(arr3.map((item) => {
-          [tmp, obj] = item;
-          const first = 5;
-          if (tmp) {
-            const obj3 = {};
-            const merged = Object.assign(first);
-            obj3.dsn = tmp;
-            let tmp4 = obj3;
-          } else {
-            tmp4 = first;
-          }
-          return obj.send(dependencyMap(13094).createEnvelope(tmp4, 13094));
-        }));
-        return value[0];
-      })();
-    };
-    closure_5 = async function _flush() {
-      closure_2 = tmp2;
-      closure_130_0 = closure_0;
-      closure_1 = 0;
+    promiseBuffer = require("13118__.js").makePromiseBuffer(num);
+    let obj = require("13118__.js");
+  }
+  closure_3 = {};
+  return {
+    send(arg0) {
       const items = [];
-      const arraySpreadResult = HermesBuiltin.arraySpread(map.values(), closure_1);
-      closure_1 = arraySpreadResult;
-      items[arraySpreadResult] = closure_2_1;
-      closure_1 = closure_1 + 1;
-      await Promise.all(items.map((flush) => flush.flush(closure_1_0)));
-      return value.every((item) => item);
-    };
-    closure_1 = tunnel(arg0);
-    const map = new Map();
-    return {
-      send(arg0) {
-        const self = this;
-        const apply = closure_4.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      bufferSize(dependencyMap[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
+        const result = _mod13098.envelopeItemTypeToDataCategory(arg1);
+        if (obj2.isRateLimited(closure_3, result)) {
+          if ("event" === arg1) {
+            const _Array = Array;
+            let tmp6;
+            if (Array.isArray(arg0)) {
+              tmp6 = arg0[1];
+            }
+            const tmp4 = tmp6;
+          }
+          items.recordDroppedEvent("ratelimit_backoff", result, tmp4);
         } else {
-          applyArgumentsResult = apply(self, arguments);
+          items.push(arg0);
         }
-        return applyArgumentsResult;
-      },
-      flush(arg0) {
-        const self = this;
-        const apply = closure_5.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
+        obj2 = _mod13119;
+      });
+      if (0 === items.length) {
+        return bufferSize(tmp2[3]).resolvedSyncPromise({});
+      } else {
+        dependencyMap = bufferSize(tmp2[1]).createEnvelope(arg0[0], items);
+        function recordEnvelopeLoss(arg0) {}
+        const tmpResult2 = bufferSize(tmp2[1]);
+        return recordEnvelopeLoss
+          .add(() => {
+            const obj = { body: _mod13098.serializeEnvelope(dependencyMap) };
+            return dependencyMap(obj).then(
+              (statusCode) => {
+                let DEBUG_BUILD = undefined !== statusCode.statusCode;
+                if (DEBUG_BUILD) {
+                  let tmp = statusCode.statusCode < 200;
+                  if (!tmp) {
+                    tmp = statusCode.statusCode >= 300;
+                  }
+                  DEBUG_BUILD = tmp;
+                }
+                if (DEBUG_BUILD) {
+                  DEBUG_BUILD = items(13082).DEBUG_BUILD;
+                }
+                if (DEBUG_BUILD) {
+                  const logger = items(13054).logger;
+                  const _HermesInternal = HermesInternal;
+                  logger.warn("Sentry responded with status code " + statusCode.statusCode + " to sent event.");
+                }
+                closure_3 = items(13119).updateRateLimits(closure_3, statusCode);
+                return statusCode;
+              },
+              (arg0) => {
+                if (typeof recordEnvelopeLoss === "function") {
+                  const network_error = "network_error";
+                  closure_0(13098).forEachEnvelopeItem(dependencyMap, (arg0, arg1) => {
+                    if ("event" === arg1) {
+                      const _Array = Array;
+                      let tmp4;
+                      if (Array.isArray(arg0)) {
+                        tmp4 = arg0[1];
+                      }
+                      const tmp = tmp4;
+                    }
+                    closure_2_0.recordDroppedEvent(
+                      network_error,
+                      items(closure_1[1]).envelopeItemTypeToDataCategory(arg1),
+                      tmp,
+                    );
+                  });
+                  throw arg0;
+                } else {
+                  throw new TypeError("Trying to call a non-function");
+                }
+              },
+            );
+          })
+          .then(
+            (result) => result,
+            (arg0) => {
+              if (arg0 instanceof _mod13111.SentryError) {
+                if (_mod13082.DEBUG_BUILD) {
+                  const logger = _mod13054.logger;
+                  logger.error("Skipped sending event because buffer is full.");
+                }
+                if (typeof recordEnvelopeLoss === "function") {
+                  const queue_overflow = "queue_overflow";
+                  _mod13098.forEachEnvelopeItem(closure_1, (arg0, arg1) => {
+                    if ("event" === arg1) {
+                      const _Array = Array;
+                      let tmp4;
+                      if (Array.isArray(arg0)) {
+                        tmp4 = arg0[1];
+                      }
+                      const tmp = tmp4;
+                    }
+                    closure_2_0.recordDroppedEvent(
+                      network_error,
+                      items(closure_1[1]).envelopeItemTypeToDataCategory(arg1),
+                      tmp,
+                    );
+                  });
+                  const tmpResult = _mod13098;
+                  return _mod13078.resolvedSyncPromise({});
+                } else {
+                  throw new TypeError("Trying to call a non-function");
+                }
+              } else {
+                throw arg0;
+              }
+            },
+          );
       }
-    };
+      let obj = bufferSize(dependencyMap[1]);
+    },
+    flush(arg0) {
+      return promiseBuffer.drain(arg0);
+    },
   };
-}
+};

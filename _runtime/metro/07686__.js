@@ -1,13 +1,10 @@
 // _runtime/metro/07686__.js
-import _mod19 from "00019__.js";
+import _slicedToArray from "00032__.js";
 
-const useRef = _mod19.useRef;
-let closure_1 = {};
+const noop = fn(19);
+({ useCallback: closure_1, useState: c2 } = noop);
 
-export default function useLazyValue(fn) {
-  const tmp = useRef(closure_1);
-  if (tmp.current === closure_1) {
-    tmp.current = fn();
-  }
-  return tmp.current;
+export default function useForceUpdate() {
+  closure_0 = _slicedToArray(React2({}), 2)[1];
+  return framebus(() => closure_0({}), []);
 }

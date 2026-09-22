@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/video_calls/native/images",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "2b649615a70a14244330a855517175bb",
-  name: "report",
+  hash: "288b36dcd0b5f7e0f151e7250c6cbc9d",
+  name: "MobilePhoneDenyIcon",
   type: "png",
 });

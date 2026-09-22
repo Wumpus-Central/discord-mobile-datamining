@@ -1,16 +1,7 @@
 // _runtime/metro/14592__.js
-import _mod14593 from "14593__.js";
+import _mod14590 from "14590__.js";
 
-export default (arg0, arg1) => {
-  let tmp3 = _mod14593[arg0];
-  if (!tmp3) {
-    let obj = arg1;
-    if (!arg1) {
-      obj = {};
-    }
-    _mod14593[arg0] = obj;
-    tmp3 = obj;
-    const tmpResult = _mod14593;
-  }
-  return tmp3;
-};
+let closure_0 = _mod14590({}.toString);
+let closure_1 = _mod14590("".slice);
+
+export default (arg0) => closure_1(closure_0(arg0), 8, -1);

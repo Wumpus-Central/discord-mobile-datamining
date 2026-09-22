@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/upsell",
-  width: 240,
-  height: 152,
+  httpServerLocation: "/assets/modules/guild_identity/images",
+  width: 303,
+  height: 198,
   scales: [2, 3],
-  hash: "1c56c6a8d7541177ea8c3d88699db89c",
-  name: "img_guild_cap_upsell_light",
+  hash: "af6f5b1f2e3f6f41820436ec96e0f065",
+  name: "guild_identity_education_light",
   type: "png",
 });

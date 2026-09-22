@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "b04e363869889767a126da0fcdcaf9c8",
-  name: "AppleNeutralIcon",
+  hash: "48354bca4647923912a0392de88da6fa",
+  name: "IdCardIcon",
   type: "png",
 });

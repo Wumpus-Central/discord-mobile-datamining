@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 18,
-  height: 18,
-  scales: [2, 3],
-  hash: "8ff35f733b0827b805a729f75828334f",
-  name: "ic_flower_star_18px",
+  httpServerLocation: "/assets/images",
+  width: 54,
+  height: 54,
+  scales: [1],
+  hash: "9a03a674792f2187c83109744abce109",
+  name: "connections-profile-steam-dota2",
   type: "png",
 });

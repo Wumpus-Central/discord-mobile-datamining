@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "1fa18e452308090b708bccf68d32d023",
-  name: "QuestsIcon",
+  hash: "648b6791176add4ac6a2018a27641a15",
+  name: "SubscriptionIcon",
   type: "png",
 });

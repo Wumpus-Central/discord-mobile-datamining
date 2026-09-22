@@ -11,7 +11,7 @@ export const debug = function debug(message, attributes) {
     obj = {};
   }
   _INTERNAL_captureSerializedLog._INTERNAL_captureLog(
-    { level: "debug", message, attributes, severityNumber: "accessible" },
+    { level: "debug", message, attributes, severityNumber: "padding" },
     obj.scope,
   );
 };
@@ -41,7 +41,7 @@ export const info = function info(message, attributes) {
     obj = {};
   }
   _INTERNAL_captureSerializedLog._INTERNAL_captureLog(
-    { level: "info", message, attributes, severityNumber: "accessible" },
+    { level: "info", message, attributes, severityNumber: "padding" },
     obj.scope,
   );
 };
@@ -51,7 +51,7 @@ export const trace = function trace(message, attributes) {
     obj = {};
   }
   _INTERNAL_captureSerializedLog._INTERNAL_captureLog(
-    { level: "trace", message, attributes, severityNumber: "accessible" },
+    { level: "trace", message, attributes, severityNumber: "padding" },
     obj.scope,
   );
 };

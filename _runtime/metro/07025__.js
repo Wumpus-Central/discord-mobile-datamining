@@ -25,12 +25,12 @@ function _isNativeReflectConstruct() {
 }
 let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
-class NativeGesture {
+class LongPressGesture {
   constructor() {
     self = this;
-    tmp = closure_0(this, NativeGesture);
+    tmp = closure_0(this, LongPressGesture);
     tmp2 = c2;
-    obj = c2(NativeGesture);
+    obj = c2(LongPressGesture);
     tmp3 = closure_1;
     if (closure_3()) {
       tmp5 = globalThis;
@@ -41,28 +41,36 @@ class NativeGesture {
     }
     tmp3Result = tmp3(self, constructResult);
     tmp3Result.config = {};
-    tmp3Result.handlerName = "NativeViewGestureHandler";
+    tmp3Result.handlerName = "LongPressGestureHandler";
+    result = tmp3Result.shouldCancelWhenOutside(true);
     return tmp3Result;
   }
 }
-_classCallCheck = NativeGesture;
-_inherits(NativeGesture, fn(6918).BaseGesture);
+_classCallCheck = LongPressGesture;
+_inherits(LongPressGesture, fn(6920).BaseGesture);
 const entry = {
-  key: "shouldActivateOnStart",
-  value: function shouldActivateOnStart(shouldActivateOnStart) {
-    this.config.shouldActivateOnStart = shouldActivateOnStart;
+  key: "minDuration",
+  value: function minDuration(CONTEXT_MENU_LONG_PRESS_DURATION_MS) {
+    this.config.minDurationMs = CONTEXT_MENU_LONG_PRESS_DURATION_MS;
     return this;
   },
 };
 const items = [
   entry,
   {
-    key: "disallowInterruption",
-    value: function disallowInterruption(disallowInterruption) {
-      this.config.disallowInterruption = disallowInterruption;
+    key: "maxDistance",
+    value: function maxDistance(maxDist) {
+      this.config.maxDist = maxDist;
+      return this;
+    },
+  },
+  {
+    key: "numberOfPointers",
+    value: function numberOfPointers(numberOfPointers) {
+      this.config.numberOfPointers = numberOfPointers;
       return this;
     },
   },
 ];
 
-export const NativeGesture = _createClass(NativeGesture, items);
+export const LongPressGesture = _createClass(LongPressGesture, items);

@@ -1,71 +1,19 @@
 // _runtime/metro/14290__.js
-const re0 = /^[0-9]+$/;
+import _mod14291 from "14291__.js";
 
-export default {
-  compareIdentifiers(major, major2) {
-    const isMatch = re0.test(major);
-    const isMatch1 = re0.test(major2);
-    let tmp3 = isMatch;
-    if (isMatch) {
-      tmp3 = isMatch1;
-    }
-    let tmp4 = major2;
-    let tmp5 = major;
-    if (tmp3) {
-      tmp5 = +major;
-      tmp4 = +major2;
-    }
-    let num = 0;
-    if (tmp5 !== tmp4) {
-      if (!isMatch) {
-        if (!isMatch1) {
-          let num4 = 1;
-          if (tmp5 < tmp4) {
-            num4 = -1;
-          }
-          let num3 = num4;
-        } else {
-          num3 = 1;
-        }
-        let num2 = num3;
+export default (arg0, arg1) => {
+  if (arg0 instanceof _mod14291) {
+    return arg0;
+  } else {
+    try {
+      const tmp8 = new _mod14291(arg0, arg1);
+      return tmp8;
+    } catch (tmp10) {
+      if (tmp) {
+        throw tmp10;
       } else {
-        num2 = -1;
+        return null;
       }
-      num = num2;
     }
-    return num;
-  },
-  rcompareIdentifiers(arg0, arg1) {
-    const isMatch = re0.test(arg1);
-    const isMatch1 = re0.test(arg0);
-    let tmp3 = isMatch;
-    if (isMatch) {
-      tmp3 = isMatch1;
-    }
-    let tmp4 = arg0;
-    let tmp5 = arg1;
-    if (tmp3) {
-      tmp5 = +arg1;
-      tmp4 = +arg0;
-    }
-    let num = 0;
-    if (tmp5 !== tmp4) {
-      if (!isMatch) {
-        if (!isMatch1) {
-          let num4 = 1;
-          if (tmp5 < tmp4) {
-            num4 = -1;
-          }
-          let num3 = num4;
-        } else {
-          num3 = 1;
-        }
-        let num2 = num3;
-      } else {
-        num2 = -1;
-      }
-      num = num2;
-    }
-    return num;
-  },
+  }
 };

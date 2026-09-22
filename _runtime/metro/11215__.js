@@ -1,13 +1,5 @@
 // _runtime/metro/11215__.js
-import registerAsset from "01121__.js";
+import baseRest from "../08660_baseRest.js";
+import baseDelay from "../11216_baseDelay.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/empties",
-  width: 256,
-  height: 128,
-  scales: [2, 3],
-  hash: "fe7e2c7efcbe72663147a76476794c5c",
-  name: "img_invite_empty_dark",
-  type: "png",
-});
+export default baseRest((arg0, arg1) => baseDelay(arg0, 1, arg1));

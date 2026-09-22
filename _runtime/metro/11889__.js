@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/stream_feedback/dark-theme-desaturated",
-  width: 64,
-  height: 64,
+  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
+  width: 48,
+  height: 48,
   scales: [2, 3],
-  hash: "1d768d013d08088f2871c4fa8e2d9604",
-  name: "feedback-modal-neutral-desaturated",
+  hash: "8011f85c511bc539d06f3c7f5cbb3598",
+  name: "feedback-modal-sad-desaturated_darker",
   type: "png",
 });
