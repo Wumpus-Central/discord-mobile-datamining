@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import utils from "../utils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05198_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05199_LinearGradient.js";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import useShopProductItems from "../../hooks/useShopProductItems.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -52,8 +52,8 @@ function NameplateUser(arg0) {
       size: native.AvatarSizes.NORMAL,
       avatarDecoration,
       animate: !stateFromStores,
-      autoStatusCutout: null,
-      "aria-hidden": null,
+      autoStatusCutout: "ear_with_hearing_aid_light_skin_tone",
+      "aria-hidden": "<string:1308623994>",
     };
     return timestampProducer(native.Avatar, obj);
   }, items1);
@@ -83,7 +83,7 @@ function PlaceholderUser(end) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = {
   container: { position: "relative", flex: 1, justifyContent: "center", overflow: "hidden" },
   memberListContainer: { paddingHorizontal: nativeDefault.space.PX_16 },
@@ -105,13 +105,13 @@ let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/nameplates/native/NameplateProductPreview.tsx");
 
-export default function NameplateProductPreview(product) {
+export default function NameplateProductPreview(arg0) {
+  ({ product, avatarDecorationOverride } = arg0);
   const tmp = closure_8();
-  const shopProductItems = useShopProductItems.useShopProductItems(product.product);
-  ({ firstNameplate, firstAvatarDecoration } = shopProductItems);
-  const nameplateData = utils.getNameplateData(firstNameplate);
+  const obj = useShopProductItems;
+  const nameplateData = utils.getNameplateData(obj.useShopProductItems(product).firstNameplate);
   const nameplateSampleUsers = utils.getNameplateSampleUsers();
-  let tmp7 = null;
+  let tmp6 = null;
   if (null != nameplateData) {
     const obj4 = {
       style: tmp.container,
@@ -141,7 +141,7 @@ export default function NameplateProductPreview(product) {
     items[1] = React5(Text_Text.Text, obj8);
     const obj9 = { user: nameplateSampleUsers.phibi, start: true };
     items[2] = timestampProducer(PlaceholderUser, obj9);
-    const obj10 = { previewNameplate: nameplateData, previewAvatarDecoration: firstAvatarDecoration };
+    const obj10 = { previewNameplate: nameplateData, previewAvatarDecoration: avatarDecorationOverride };
     items[3] = timestampProducer(NameplateUser, obj10);
     const obj11 = { user: nameplateSampleUsers.locke, end: true };
     items[4] = timestampProducer(PlaceholderUser, obj11);
@@ -173,7 +173,7 @@ export default function NameplateProductPreview(product) {
     obj15.colors = items5;
     items3[2] = timestampProducer(LinearGradientDefault, obj15);
     obj4.children = items3;
-    tmp7 = React5(View, obj4);
+    tmp6 = React5(View, obj4);
   }
-  return tmp7;
+  return tmp6;
 }

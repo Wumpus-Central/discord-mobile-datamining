@@ -2,15 +2,15 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import ContactSyncModalActionCreators from "../ContactSyncModalActionCreators.tsx";
-import _modDef14127 from "../../../../../_runtime/metro/14127__.js";
+import _modDef14134 from "../../../../../_runtime/metro/14134__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const dismissUpsellCTA = fn(12932).dismissUpsellCTA;
+const dismissUpsellCTA = fn(12936).dismissUpsellCTA;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_4, AnalyticsSections: hasOwnProperty } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj = {
   container: {
     padding: 12,
@@ -54,10 +54,10 @@ export default noop.memo(function ContactSyncUpsellCTA(location) {
       };
       const items = [obj3];
       obj2.options = items;
-      const result = location(7439).showSimpleActionSheet(obj2);
+      const result = location(7441).showSimpleActionSheet(obj2);
     },
     style: null,
-    iconSource: _modDef14127,
+    iconSource: _modDef14134,
     title: null,
     subtitle: null,
   };
@@ -67,7 +67,7 @@ export default noop.memo(function ContactSyncUpsellCTA(location) {
   obj.title = intl.string(location(1115).t.T6Rfd9);
   const intl2 = location(1115).intl;
   obj.subtitle = intl2.string(location(1115).t.c6KIpg);
-  return jsx(location(8871).FormCTA, {
+  return jsx(location(8876).FormCTA, {
     onPress() {
       const obj2 = { type: constants2.CONTACT_SYNC_MODAL, location: null };
       let str = location;
@@ -92,10 +92,10 @@ export default noop.memo(function ContactSyncUpsellCTA(location) {
       };
       const items = [obj3];
       obj2.options = items;
-      const result = location(7439).showSimpleActionSheet(obj2);
+      const result = location(7441).showSimpleActionSheet(obj2);
     },
     style: null,
-    iconSource: _modDef14127,
+    iconSource: _modDef14134,
     title: null,
     subtitle: null,
   });

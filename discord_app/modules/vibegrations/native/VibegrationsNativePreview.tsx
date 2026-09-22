@@ -211,7 +211,7 @@ function PreviewBot(previewApplicationId) {
   let stateFromStores1;
   let stateFromStores2;
   let tmp = closure_26();
-  const application = id(7408).useApplication(previewApplicationId.previewApplicationId);
+  const application = id(7410).useApplication(previewApplicationId.previewApplicationId);
   const data = application.data;
   id = undefined;
   if (data != null) {
@@ -223,7 +223,7 @@ function PreviewBot(previewApplicationId) {
   if (id == null) {
     id = null;
   }
-  let obj = id(7408);
+  let obj = id(7410);
   const items = [ChannelStore];
   const items1 = [id];
   stateFromStores = id(504).useStateFromStores(
@@ -254,8 +254,8 @@ function PreviewBot(previewApplicationId) {
         if (!closure_3) {
           c0 = false;
           const obj2 = { recipientIds: tmp, navigateToChannel: false };
-          const obj = stateFromStores(4769);
-          stateFromStores(4769)
+          const obj = stateFromStores(4770);
+          stateFromStores(4770)
             .openPrivateChannel(obj2)
             .catch(() => {
               if (!c0) {
@@ -334,7 +334,7 @@ function PreviewBot(previewApplicationId) {
       const intl3 = tmp2(1115).intl;
       obj4.text = intl3.string(tmp2(1115).t["5911Lb"]);
       obj4.onPress = callback;
-      tmp19Result = closure_24(tmp2(5186).Button, obj4);
+      tmp19Result = closure_24(tmp2(5187).Button, obj4);
     }
     obj2.children = tmp19Result;
     return closure_24(StatusCard, obj2);
@@ -354,10 +354,10 @@ function PreviewBot(previewApplicationId) {
       alwaysRespectKeyboard: true,
       disableGradient: true,
     };
-    const items8 = [closure_24(stateFromStores(11603), obj7, stateFromStores.id)];
+    const items8 = [closure_24(stateFromStores(11607), obj7, stateFromStores.id)];
     let tmp29Result = null;
     if (tmp2Result6.isAndroid()) {
-      tmp29Result = closure_24(tmp2(16976).PortalKeyboardRenderer, { portal: true });
+      tmp29Result = closure_24(tmp2(16988).PortalKeyboardRenderer, { portal: true });
     }
     items8[1] = tmp29Result;
     obj6.children = items8;
@@ -368,7 +368,7 @@ function PreviewBot(previewApplicationId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const vibegrationsDesignFeedbackStore = fn(16935);
+const vibegrationsDesignFeedbackStore = fn(16947);
 ({ exitVibegrationsDesignFeedback: map1, useVibegrationsDesignFeedback: closure_14 } = vibegrationsDesignFeedbackStore);
 const Constants = fn(1074);
 ({
@@ -378,7 +378,7 @@ const Constants = fn(1074);
   AppStates: closure_18,
   ME: closure_19,
 } = Constants);
-const FramesConstants = fn(9314);
+const FramesConstants = fn(9319);
 ({
   FrameLayoutModes: closure_20,
   isLaunched: closure_21,
@@ -387,7 +387,7 @@ const FramesConstants = fn(9314);
 } = FramesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_24, jsxs: closure_25 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = {
   frame: { flex: 1 },
   centered: { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24 },

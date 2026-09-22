@@ -86,7 +86,7 @@ function useDeliveredDockCreative() {
 function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   _require = mobileQuestDock;
   const deliveredQuest = require("QuestDockCreativeContext").getDeliveredQuest(mobileQuestDock);
-  const tmp4 = deliveredAdCreativeId(7188)();
+  const tmp4 = deliveredAdCreativeId(7190)();
   const obj = require("QuestDockCreativeContext");
   const items = [QuestStore];
   let userStatus1;
@@ -102,8 +102,8 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   let isDismissedResult = null != userStatus1;
   if (isDismissedResult) {
-    isDismissedResult = tmp(7935).isDismissed(deliveredQuest.userStatus, tmp(5664).QuestContent.QUEST_BAR_MOBILE);
-    const tmpResult = tmp(7935);
+    isDismissedResult = tmp(7938).isDismissed(deliveredQuest.userStatus, tmp(5666).QuestContent.QUEST_BAR_MOBILE);
+    const tmpResult = tmp(7938);
   }
   let claimedAt;
   if (deliveredQuest != null) {
@@ -149,7 +149,7 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   );
   if (require("AdCreativeType").AdCreativeType.NO_FILL === type) {
     return false;
-  } else if (tmp(5668).AdCreativeType.BOUNTY === type) {
+  } else if (tmp(5670).AdCreativeType.BOUNTY === type) {
     if (isEligibleForQuests) {
       isEligibleForQuests = !stateFromStores1;
     }
@@ -160,7 +160,7 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       isEligibleForQuests = !tmp4;
     }
     return isEligibleForQuests;
-  } else if (tmp(5668).AdCreativeType.QUEST === type) {
+  } else if (tmp(5670).AdCreativeType.QUEST === type) {
     if (stateFromStores) {
       if (!tmp10) {
         let tmp16 = null != deliveredQuest && !tmp4;
@@ -173,10 +173,10 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   const tmpResult10 = require("initialize");
 }
-const QuestConstants = fn(5661);
+const QuestConstants = fn(5663);
 ({ QUEST_REWARD_CODE_CLAIM_BOTTOM_SHEET_KEY: closure_9, QuestVariants: c10 } = QuestConstants);
-const CAPTCHA_MODAL_KEY = fn(5090).CAPTCHA_MODAL_KEY;
-const MAIN_SURFACE = fn(9314).MAIN_SURFACE;
+const CAPTCHA_MODAL_KEY = fn(5091).CAPTCHA_MODAL_KEY;
+const MAIN_SURFACE = fn(9319).MAIN_SURFACE;
 const ThemeTypes = fn(1085).ThemeTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestHooks.native.tsx");
@@ -369,7 +369,7 @@ export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
                   obj5.analyticsContext = obj7;
                   v2 = 1;
                   v3 = 1;
-                  const obj8 = { value: v2(9571).launchFrame(obj5), done: false };
+                  const obj8 = { value: v2(9577).launchFrame(obj5), done: false };
                   return obj8;
                 } else {
                   let id;
@@ -383,7 +383,7 @@ export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
                     const obj9 = { appId: stateFromStores.id, botId: stateFromStores.bot.id, analyticsLocations: [] };
                     v2 = 2;
                     v3 = 1;
-                    const obj10 = { value: v3(11772).launchActivityInBotDM(obj9), done: false };
+                    const obj10 = { value: v3(11776).launchActivityInBotDM(obj9), done: false };
                     return obj10;
                   }
                 }

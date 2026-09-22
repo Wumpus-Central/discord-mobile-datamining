@@ -12,7 +12,7 @@ import getPostMessageJavaScriptDefault from "getPostMessageJavaScript.tsx";
 import ThermalUtilsDefault from "../../device/ThermalUtils.native.tsx";
 import WebViewPostMessageTransportDefault from "../../rpc/native/server/transports/WebViewPostMessageTransport.tsx";
 import EmbeddedActivitiesActionCreators from "../EmbeddedActivitiesActionCreators.tsx";
-import _modDef9621 from "../../../../_runtime/metro/09621__.js";
+import _modDef9627 from "../../../../_runtime/metro/09627__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";
@@ -50,8 +50,8 @@ let closure_14 = async function _postMessageToWebView(arg0) {
 let closure_7 = fn(2004).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, ComponentActions: closure_9 } = Constants);
-const TransportTypes = fn(4660).TransportTypes;
-const WebView = fn(8569);
+const TransportTypes = fn(4661).TransportTypes;
+const WebView = fn(8573);
 const webViewProxy = WebView.getWebViewProxy("EMBEDDED_ACTIVITY_WEB_VIEW_KEY");
 const PlatformUtils = fn(1364);
 let nativeEventEmitter = null;
@@ -267,7 +267,7 @@ prototype["showDevShelfOverrideEnabled"] = function showDevShelfOverrideEnabled(
   };
   const intl = util.intl;
   obj2.content = intl.string(util.t.JfA7IK);
-  obj2.icon = _modDef9621;
+  obj2.icon = _modDef9627;
   ToastActionCreatorsDefault.open(obj2);
 };
 prototype["releaseWebView"] = function releaseWebView() {

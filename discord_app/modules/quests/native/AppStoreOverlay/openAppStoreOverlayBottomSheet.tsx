@@ -10,15 +10,22 @@ const require = globalThis.__r;
 ({ AnalyticEvents: c3, ComponentActions: closure_4 } = Constants);
 let result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/openAppStoreOverlayBottomSheet.tsx");
 
-export const openAppStoreOverlayBottomSheet = function openAppStoreOverlayBottomSheet(appId, arg1, arg2) {
+export const openAppStoreOverlayBottomSheet = function openAppStoreOverlayBottomSheet(
+  appId,
+  arg1,
+  onOverlaySurfaceClick,
+  trackOverlayCarouselScroll,
+) {
   _require = arg1;
-  importDefault = arg2;
+  importDefault = onOverlaySurfaceClick;
   appId = appId.appId;
   require("ActionSheetActionCreators").openLazy(
     require("asyncRequireImpl")(appId[2], appId.paths),
     "QuestAppStoreOverlayBottomSheet",
     {
       metadata: appId,
+      trackOverlayCarouselScroll,
+      onOverlaySurfaceClick,
       onOpen() {
         closure_0(
           constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED,

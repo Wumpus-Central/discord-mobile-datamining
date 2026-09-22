@@ -64,7 +64,7 @@ function handleCacheLoaded() {
     continue;
   }
 }
-const isPrivate = fn(2045).isPrivate;
+const isPrivate = fn(2046).isPrivate;
 const constants = { DEFAULT: "DEFAULT", FAVORITE: "FAVORITE" };
 const secondaryIndexMap = new fn(4391).SecondaryIndexMap(
   function indexBy(value) {
@@ -82,7 +82,7 @@ const secondaryIndexMap = new fn(4391).SecondaryIndexMap(
 let values = [];
 let values2 = [];
 let closure_17 = [];
-const f39489 = () => {};
+const f39509 = () => {};
 const Store = initializeDefault.Store;
 class PrivateChannelSortStore extends Store {}
 const prototype = PrivateChannelSortStore.prototype;
@@ -100,7 +100,7 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, handleConnectionOpen);
 };
 prototype["getPrivateChannelIds"] = function getPrivateChannelIds() {
-  if (typeof f39489 === "function") {
+  if (typeof f39509 === "function") {
     values = secondaryIndexMap.values(constants.FAVORITE);
     values2 = secondaryIndexMap.values(constants.DEFAULT);
     let tmp4 = values === values;

@@ -41,7 +41,7 @@ export const THINKING_LABELS = { low: "Low", medium: "Medium", high: "High", xhi
 export const PROVIDER_LABELS = {
   anthropic: "Anthropic",
   openai: "OpenAI",
-  "workers-ai": "Workers AI (dev)",
-  xai: "xAI (dev)",
-  moonshotai: "Moonshot AI (dev)",
+  deepseek: "DeepSeek",
+  xai: "xAI",
+  moonshotai: "Moonshot AI",
 };

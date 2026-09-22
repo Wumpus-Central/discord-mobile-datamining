@@ -87,7 +87,7 @@ let closure_10 = async function _executeMessageComponentInteraction(arg0) {
   await "HermesInternal";
   closure_2 = tmp3;
   ({ componentType: closure_129_0, messageId: closure_129_1, messageFlags: closure_129_2, customId: closure_129_3, componentId: closure_129_4, applicationId: closure_129_5, channelId: closure_129_6, guildId: closure_129_7, localState: closure_129_8 } = closure_0);
-  return "PX_16";
+  return "flex";
 };
 function mapMessageComponentLocalStateForAPI(type) {
   if (null == type) {
@@ -347,4 +347,4 @@ export const canRetryInteractionData = function canRetryInteractionData(interact
   }
   return true;
 };
-export const interactionCallbackErrorReason = fn(4982).interactionCallbackErrorReason;
+export const interactionCallbackErrorReason = fn(4983).interactionCallbackErrorReason;

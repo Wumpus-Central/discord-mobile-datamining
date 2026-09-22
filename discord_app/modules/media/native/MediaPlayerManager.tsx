@@ -31,22 +31,21 @@ const Permissions = Constants2.Permissions;
 let closure_16 = new LoggerDefault("MediaPlayerManager");
 const useMediaPlayerManagerStore = module_560.create((arg0) => {
   closure_0 = arg0;
-  const obj = {
+  return {
     activeMediaPlayerSource: "HermesInternal",
-    mediaSourceMessage: "flex",
+    mediaSourceMessage: "flexDirection",
     canAccessMedia: "ip",
     isPlaying: false,
     wasPipClosedByUser: null,
     progress: null,
-    rate: "PX_16",
-    showPip: "billed_cap",
+    rate: "flex",
+    showPip: "simple-action",
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: "helmet_with_cross"
+    currentlyDisplayedChannelId: null
   };
-  return obj;
 });
 class MediaPlayerManager extends tmp8 {
   constructor() {

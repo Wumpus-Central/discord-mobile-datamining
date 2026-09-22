@@ -27,7 +27,11 @@ const items1 = [, , , , , , , ,];
   POLL_RESULT: arr2[8],
 } = MessageEmbedTypes);
 const set = new Set(items);
+const items2 = [,];
+({ IMAGE: arr3[0], GIFV: arr3[1] } = MessageEmbedTypes);
+const set1 = new Set(items1);
 const result = size.fileFinishedImporting("modules/messages/EmbedConstants.tsx");
 
 export const EMBED_TYPES_WITH_PARSEABLE_FIELDS = set;
-export const EMBED_TYPES_WITH_SPECIAL_RENDERER = new Set(items1);
+export const EMBED_TYPES_WITH_SPECIAL_RENDERER = set1;
+export const SIMPLE_EMBED_TYPES = new Set(items2);

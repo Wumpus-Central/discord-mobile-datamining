@@ -8,7 +8,7 @@ let closure_3 = ["title", "description", "illustration", "graphic", "gradientCol
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = {
   content: { paddingHorizontal: 20, position: "relative" },
   title: { textAlign: "center" },
@@ -31,7 +31,7 @@ export const PromoSheet = function PromoSheet(arg0) {
         ? (arg0) => {
             const obj = {};
             const merged = Object.assign(arg0);
-            obj.children = closure_2_7(gradientColor(10489).ExpressiveGradient, {
+            obj.children = closure_2_7(gradientColor(10495).ExpressiveGradient, {
               offsetBottom: 0.25,
               color,
               backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
@@ -50,7 +50,7 @@ export const PromoSheet = function PromoSheet(arg0) {
     const obj2 = {};
     const merged1 = Object.assign(graphic);
     obj2.style = tmp2.graphic;
-    let tmp4Result = closure_7(gradientColor(10490).Graphic, obj2);
+    let tmp4Result = closure_7(gradientColor(10496).Graphic, obj2);
   } else {
     tmp4Result = null;
     if (null != illustration) {
@@ -60,7 +60,7 @@ export const PromoSheet = function PromoSheet(arg0) {
   }
   const items1 = [tmp4Result, ,];
   const items2 = [
-    closure_7(gradientColor(4752).Text, {
+    closure_7(gradientColor(4753).Text, {
       variant: "heading-xl/semibold",
       color: "mobile-text-heading-primary",
       style: tmp2.title,
@@ -75,13 +75,13 @@ export const PromoSheet = function PromoSheet(arg0) {
       style: tmp2.description,
       children: description,
     };
-    tmp4Result2 = closure_7(gradientColor(4752).Text, obj5);
+    tmp4Result2 = closure_7(gradientColor(4753).Text, obj5);
   }
   const obj6 = { spacing: 24, children: null };
   items2[1] = tmp4Result2;
-  items1[1] = closure_8(gradientColor(5184).Stack, { children: items2 });
+  items1[1] = closure_8(gradientColor(5185).Stack, { children: items2 });
   items1[2] = actions;
   obj6.children = items1;
-  obj.children = closure_8(gradientColor(5184).Stack, obj6);
-  return closure_7(gradientColor(7395).BottomSheet, obj);
+  obj.children = closure_8(gradientColor(5185).Stack, obj6);
+  return closure_7(gradientColor(7397).BottomSheet, obj);
 };

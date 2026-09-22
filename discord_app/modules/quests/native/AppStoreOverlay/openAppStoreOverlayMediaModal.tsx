@@ -105,7 +105,7 @@ let closure_7 = async function _openAppStoreOverlayMediaModal() {
       onClose: 0,
     }),
   );
-  return "PX_16";
+  return "flex";
 };
 const MEDIA_MODAL_KEY = fn(1074).MEDIA_MODAL_KEY;
 let size = fn(2);

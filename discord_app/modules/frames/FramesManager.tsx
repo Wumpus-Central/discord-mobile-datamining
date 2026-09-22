@@ -1,14 +1,14 @@
 // discord_app/modules/frames/FramesManager.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import EmbeddedSurfaceType from "../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
 import FramesStore from "FramesStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
-let require = fn;
-const EmbeddedSurfaceType = fn(9314).EmbeddedSurfaceType;
+require = fn;
 const Constants = fn(1074);
-({ AnalyticEvents: hasOwnProperty, RPCCloseCodes: metroRequire } = Constants);
-const TransportTypes = fn(4660).TransportTypes;
+({ AnalyticEvents: closure_4, RPCCloseCodes: hasOwnProperty } = Constants);
+const TransportTypes = fn(4661).TransportTypes;
 class FramesManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -19,14 +19,14 @@ class FramesManager extends tmp3 {
       },
       FRAME_LAUNCH(arg0) {
         ({ applicationId, analyticsContext } = arg0);
-        const result = applyArgumentsResult(9566).trackFrameSessionStart(applicationId, analyticsContext);
+        const result = applyArgumentsResult(9572).trackFrameSessionStart(applicationId, analyticsContext);
       },
       FRAME_LAUNCH_FAIL(arg0) {
         ({ applicationId, error, analyticsContext } = arg0);
-        const result = applyArgumentsResult(9566).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
+        const result = applyArgumentsResult(9572).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
       },
       FRAME_STOP(applicationId) {
-        applyArgumentsResult(9566).trackFrameSessionEnd(applicationId.applicationId);
+        applyArgumentsResult(9572).trackFrameSessionEnd(applicationId.applicationId);
       },
       VOICE_CHANNEL_SELECT(arg0) {
         const result = applyArgumentsResult.handleVoiceChannelSelect(arg0);
@@ -55,10 +55,10 @@ class FramesManager extends tmp3 {
       currentVoiceChannelId = currentVoiceChannelId.currentVoiceChannelId;
       if (null != currentVoiceChannelId) {
         if (currentVoiceChannelId !== currentVoiceChannelId.channelId) {
-          const obj = { type: EmbeddedSurfaceType.VOICE_CHANNEL, channelId: currentVoiceChannelId };
+          const obj = { type: EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL, channelId: currentVoiceChannelId };
           const framesForSurface = FramesStore.getFramesForSurface(obj);
-          for (const item10014 of framesForSurface) {
-            let leaveFrameResult = applyArgumentsResult.leaveFrame(item10014.id);
+          for (const item10018 of framesForSurface) {
+            let leaveFrameResult = applyArgumentsResult.leaveFrame(item10018.id);
             continue;
           }
         }

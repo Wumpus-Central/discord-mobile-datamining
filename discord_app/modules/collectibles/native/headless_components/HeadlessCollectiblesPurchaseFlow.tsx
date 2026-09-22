@@ -22,7 +22,7 @@ let result = size.fileFinishedImporting(
 
 export default function HeadlessCollectiblesPurchaseFlow(arg0) {
   ({ product, analyticsLocations } = arg0);
-  ({ attempt, onBuy, onBuySettled, stageCollectibleChangeForEditProfile } = arg0);
+  ({ attempt, onBuySettled, stageCollectibleChangeForEditProfile } = arg0);
   const OTPACOMOrderExperiment = ACOMExperiments.OTPACOMOrderExperiment;
   const isPurchased = useProductPurchaseState.useProductPurchaseState(product).isPurchased;
   const tmp4 = useCollectiblesExternalGatewayFacetDefault(product);
@@ -85,7 +85,6 @@ export default function HeadlessCollectiblesPurchaseFlow(arg0) {
     product,
     attempt,
     analyticsLocations,
-    onBuy,
     onBuySettled,
     stageCollectibleChangeForEditProfile,
   });

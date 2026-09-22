@@ -1028,10 +1028,10 @@ function handleRecentMentionsSuccess(messages) {
     }
   });
 }
-const ChannelRecord = fn(2045);
+const ChannelRecord = fn(2046);
 ({ getBasicAccessPermissions: closure_7, isGuildVocalChannelType: closure_8, isThread: closure_9 } = ChannelRecord);
-const ChannelFlags = fn(2048).ChannelFlags;
-const ReadStateConstants = fn(4938);
+const ChannelFlags = fn(2049).ChannelFlags;
+const ReadStateConstants = fn(4939);
 ({ ReadStateTypes: closure_19, UnreadSetting: closure_20 } = ReadStateConstants);
 const NULL_STRING_GUILD_ID = fn(1074).NULL_STRING_GUILD_ID;
 let guilds = {};

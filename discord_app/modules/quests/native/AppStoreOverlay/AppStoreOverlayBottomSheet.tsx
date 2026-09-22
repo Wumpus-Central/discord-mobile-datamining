@@ -9,7 +9,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_7 = createStyles.createStyles({ headerBar: { zIndex: 1 }, bodyContainer: { flex: 1, minHeight: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayBottomSheet.tsx");
@@ -21,6 +21,7 @@ export default function AppStoreOverlayBottomSheet(metadata) {
   const onInstallPress = metadata.onInstallPress;
   let first;
   let ref2;
+  ({ trackOverlayCarouselScroll, onOverlaySurfaceClick } = metadata);
   const tmp = ref2();
   const tmp2 = onInstallPress(first.useState(0), 2);
   first = tmp2[0];
@@ -97,6 +98,8 @@ export default function AppStoreOverlayBottomSheet(metadata) {
       metadata,
       onOpenReviews: callback2,
       onMediaGetGamePress: callback1,
+      onCarouselScroll: trackOverlayCarouselScroll,
+      onOverlaySurfaceClick,
     }),
   });
   obj3.children = items5;

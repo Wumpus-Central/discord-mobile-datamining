@@ -89,15 +89,15 @@ export const tryTransitionToThreadMessage = function tryTransitionToThreadMessag
     }
   }
 };
-export const transitionToMessage = function transitionToMessage(channelId, id, arg2) {
+export const transitionToMessage = function transitionToMessage(channelId, messageId, arg2) {
   const channel = ChannelStore.getChannel(channelId);
   if (null != channel) {
     const guildIdForGenericRedirect = useGuildIdForChannelRoute.getGuildIdForGenericRedirect(channel);
     const obj3 = { openChannel: true };
     const obj2 = router_utils;
     const merged = Object.assign(arg2);
-    obj2.transitionTo(Routes.CHANNEL(guildIdForGenericRedirect, channel.id, id), obj3);
-    const CHANNELResult = Routes.CHANNEL(guildIdForGenericRedirect, channel.id, id);
+    obj2.transitionTo(Routes.CHANNEL(guildIdForGenericRedirect, channel.id, messageId), obj3);
+    const CHANNELResult = Routes.CHANNEL(guildIdForGenericRedirect, channel.id, messageId);
   }
 };
 export const transitionToStaticChannelRoute = function transitionToStaticChannelRoute(guildId, GUILD_HOME, arg2) {

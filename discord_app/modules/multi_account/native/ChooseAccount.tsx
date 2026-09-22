@@ -10,14 +10,14 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MultiAccountTokenStatus = fn(12667).MultiAccountTokenStatus;
-let Constants = fn(12668);
+const MultiAccountTokenStatus = fn(12671).MultiAccountTokenStatus;
+let Constants = fn(12672);
 ({ MAX_ACCOUNTS: closure_7, MultiAccountSwitchLocation: closure_8 } = Constants);
 Constants = fn(1074);
 ({ AnalyticEvents: closure_9, AuthStates: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -111,10 +111,10 @@ export default function ChooseAccount() {
             intl2 = closure_0(1115).intl;
             string = intl2.string;
             obj5.cancelText = string(closure_0(1115).t["ETE/oC"]);
-            obj5 = tmp2(5109).confirm(obj5);
+            obj5 = tmp2(5110).confirm(obj5);
             dependencyMap = 1;
             c4 = 1;
-            const obj8 = tmp2(5109);
+            const obj8 = tmp2(5110);
           }
         } else if (arg0 === 1) {
           c4 = 3;
@@ -125,10 +125,10 @@ export default function ChooseAccount() {
           return obj7;
         } else {
           if (value) {
-            tmp2(4723).hideActionSheet();
-            const obj = tmp2(4723);
-            tmp5(12671).removeAccount(closure_129_0.id);
-            const obj2 = tmp5(12671);
+            tmp2(4724).hideActionSheet();
+            const obj = tmp2(4724);
+            tmp5(12675).removeAccount(closure_129_0.id);
+            const obj2 = tmp5(12675);
           }
           c4 = 3;
           return { value: "HermesInternal", done: null };
@@ -158,7 +158,7 @@ export default function ChooseAccount() {
   let intl2 = require("util").intl;
   obj4.children = intl2.string(require("util").t["0M5fN7"]);
   obj3.subHeader = closure_11(require("Text/Text").Text, obj4);
-  obj3.backgroundImageSource = multiAccountUsers(14133);
+  obj3.backgroundImageSource = multiAccountUsers(14140);
   obj3.contentStyle = tmp.container;
   let obj5 = { style: tmp.mainCard, children: null };
   let items = [
@@ -171,8 +171,8 @@ export default function ChooseAccount() {
             multiAccountUsers(1241).track(constants3.LOGIN_VIEWED, { source: "choose_account_user_invalid" });
             const obj2 = multiAccountUsers(1241);
           } else {
-            closure_1_2(12671).switchAccount(tmp.id, undefined, constants2.CHOOSE_ACCOUNT);
-            const obj = closure_1_2(12671);
+            closure_1_2(12675).switchAccount(tmp.id, undefined, constants2.CHOOSE_ACCOUNT);
+            const obj = closure_1_2(12675);
           }
           return tmp4;
         },
@@ -181,8 +181,8 @@ export default function ChooseAccount() {
       let obj2 = {
         accessibilityRole: "button",
         onPress() {
-          multiAccountUsers(4723).hideActionSheet();
-          let obj = multiAccountUsers(4723);
+          multiAccountUsers(4724).hideActionSheet();
+          let obj = multiAccountUsers(4724);
           const obj3 = { key: "RemoveAccount", options: null, hasIcons: false };
           const obj4 = { label: null, onPress: null };
           const intl = user(1115).intl;
@@ -193,8 +193,8 @@ export default function ChooseAccount() {
               closure_1_1(1241).track(constants3.LOGIN_VIEWED, { source: "choose_account_user_invalid" });
               const obj2 = closure_1_1(1241);
             } else {
-              closure_1_2(12671).switchAccount(tmp.id, undefined, constants2.CHOOSE_ACCOUNT);
-              const obj = closure_1_2(12671);
+              closure_1_2(12675).switchAccount(tmp.id, undefined, constants2.CHOOSE_ACCOUNT);
+              const obj = closure_1_2(12675);
             }
             return tmp4;
           };
@@ -216,26 +216,26 @@ export default function ChooseAccount() {
           };
           items[1] = obj5;
           obj3.options = items;
-          const result = user(7439).showSimpleActionSheet(obj3);
+          const result = user(7441).showSimpleActionSheet(obj3);
         },
         children: null,
       };
-      const tmp = multiAccountUsers(16283);
+      const tmp = multiAccountUsers(16294);
       obj2.children = closure_1_11(user(1177).Icon, {
         size: user(1177).Icon.Sizes.SMALL_20,
-        source: multiAccountUsers(9898),
+        source: multiAccountUsers(9904),
         disableColor: true,
       });
-      obj.trailing = closure_1_11(user(5339).PressableOpacity, obj2);
+      obj.trailing = closure_1_11(user(5341).PressableOpacity, obj2);
       return closure_1_11(tmp, obj, user.id);
     }),
   ];
   let obj6 = { leading: null, label: null, labelStyle: null, onPress: null };
-  const tmp2 = multiAccountUsers(7215);
+  const tmp2 = multiAccountUsers(7217);
   obj6.leading = closure_11(require("Form").FormRow.Icon, {
     themedColor: multiAccountUsers(576).colors.TEXT_LINK,
     size: require("native").Icon.Sizes.SMALL_20,
-    source: multiAccountUsers(16284),
+    source: multiAccountUsers(16295),
   });
   let intl3 = require("util").intl;
   obj6.label = intl3.string(require("util").t.bPP34Q);

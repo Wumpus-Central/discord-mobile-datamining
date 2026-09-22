@@ -10,8 +10,8 @@ import UserGuildSettingsStore from "../stores/UserGuildSettingsStore.tsx";
 require = fn;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, UserNotificationSettings } = Constants);
-const constants2 = fn(4408).NotificationSettingsUpdateType;
-const UnreadSetting = fn(4938).UnreadSetting;
+const constants2 = fn(4409).NotificationSettingsUpdateType;
+const UnreadSetting = fn(4939).UnreadSetting;
 const UserSettingsConstants = fn(1084);
 ({ ChannelNotificationSettingsFlags: closure_11, GuildNotificationSettingsFlags: closure_12 } = UserSettingsConstants);
 const NotificationLabels = {
@@ -33,6 +33,7 @@ const NotificationLabels = {
   NotificationsNothing: "notifications set to nothing",
   NotificationsDefault: "notifications set to the default",
   PresetAll: "notification preset set to all messages",
+  PresetHybrid: "notification preset set to hybrid",
   PresetMentions: "notification preset set to mentions",
   PresetNothing: "notification preset set to nothing",
   PresetDefault: "notification preset set to the default",

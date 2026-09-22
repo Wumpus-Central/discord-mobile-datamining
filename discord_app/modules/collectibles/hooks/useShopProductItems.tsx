@@ -60,7 +60,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/hooks/useShopProductItems.tsx");
 
 export { ItemsSortingHat };
-export const getProductItems = function getProductItems(arg0) {
+export const getProductItems = function getProductItems(selectedProduct) {
   if (typeof ItemsSortingHat === "function") {
     const obj = Object.create(ItemsSortingHat.prototype);
     obj.itemsByTypes = obj.sortByTypes(tmp);

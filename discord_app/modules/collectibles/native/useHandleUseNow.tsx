@@ -2,13 +2,12 @@
 import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
-import CollectiblePreviewSession from "../CollectiblePreviewSession.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const RootNavigatorScreen = fn(11352).RootNavigatorScreen;
+const RootNavigatorScreen = fn(11358).RootNavigatorScreen;
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/collectibles/native/useHandleUseNow.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/native/useHandleUseNow.tsx");
 
 export const useHandleUseNow = function useHandleUseNow(analyticsLocations) {
   const product = analyticsLocations.product;
@@ -43,14 +42,13 @@ export const useHandleUseNow = function useHandleUseNow(analyticsLocations) {
   ({ isApplying, canUseNow } = handleUseNow1);
   const callback2 = onSuccess.useCallback(() => {
     if (null != stageCollectibleChangeForEditProfile) {
-      const result = CollectiblePreviewSession.commitCollectiblePreview();
       tmp(product);
       callback();
     } else {
       handleUseNow();
     }
   }, items1);
-  const tmp5 = onSuccess(stageCollectibleChangeForEditProfile[9])({
+  const tmp5 = onSuccess(stageCollectibleChangeForEditProfile[8])({
     analyticsLocations: analyticsLocations.analyticsLocations,
   });
   closure_5 = tmp5;

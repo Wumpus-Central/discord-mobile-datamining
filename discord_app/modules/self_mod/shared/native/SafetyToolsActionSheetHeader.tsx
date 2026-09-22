@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 const obj2 = {
   navbarContainer: { display: "flex", flexDirection: "row", justifyContent: "center" },
   navbarLeft: { position: "absolute", left: nativeDefault.space.PX_16 },

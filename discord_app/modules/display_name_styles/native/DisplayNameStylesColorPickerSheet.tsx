@@ -2,40 +2,60 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import DisplayNameStylesUtils from "../DisplayNameStylesUtils.tsx";
+import CheckmarkLargeIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import showCustomColorPickerActionSheetDefault from "../../color_picker/native/showCustomColorPickerActionSheet.tsx";
+import ColorPickerConsts from "../consts/ColorPickerConsts.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, Pressable: metroRequire, StyleSheet } = get_ActivityIndicator);
 const getColorPresetsForEffect = fn(1390).getColorPresetsForEffect;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = {
   container: { flex: 1 },
-  contentContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 },
+  contentContainer: {
+    alignSelf: "center",
+    paddingHorizontal: nativeDefault.space.PX_16,
+    paddingBottom: nativeDefault.space.PX_16,
+  },
   presetGrid: null,
   presetRow: null,
   presetColor: null,
   presetColorSelected: null,
+  checkmarkOverlay: null,
+  checkmark: null,
   buttonsContainer: null,
   button: null,
 };
-let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
+let obj3 = {
+  alignSelf: "center",
+  paddingHorizontal: nativeDefault.space.PX_16,
+  paddingBottom: nativeDefault.space.PX_16,
+};
 obj2.presetGrid = { gap: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 };
 let obj4 = { gap: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 };
 obj2.presetRow = { gap: nativeDefault.space.PX_16, flexDirection: "row", justifyContent: "center" };
-let size = { width: 40, height: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 2, borderColor: "transparent" };
+let size = { width: 42, height: 42, borderRadius: nativeDefault.radii.sm, borderWidth: 2, borderColor: "transparent" };
 obj2.presetColor = size;
 let obj5 = { gap: nativeDefault.space.PX_16, flexDirection: "row", justifyContent: "center" };
 obj2.presetColorSelected = { borderColor: nativeDefault.colors.CONTROL_BRAND_FOREGROUND };
+let obj7 = {};
+const merged = Object.assign(StyleSheet.absoluteFillObject);
+obj7.alignItems = "center";
+obj7.justifyContent = "center";
+obj2.checkmarkOverlay = obj7;
+const size1 = { width: fn(15634).CHECKMARK_SIZE, height: fn(15634).CHECKMARK_SIZE };
+obj2.checkmark = size1;
 let obj6 = { borderColor: nativeDefault.colors.CONTROL_BRAND_FOREGROUND };
-obj2.buttonsContainer = { flexDirection: "row", gap: nativeDefault.space.PX_16 };
+obj2.buttonsContainer = { alignSelf: "stretch", flexDirection: "row", gap: nativeDefault.space.PX_16 };
 obj2.button = { flex: 1 };
 let closure_11 = createStyles.createStyles(obj2);
 size = fn(2);
@@ -47,36 +67,38 @@ export default function DisplayNameStylesColorPickerSheet(selectedColor) {
   const onSelectColor = selectedColor.onSelectColor;
   color = undefined;
   closure_6 = undefined;
-  const tmp = closure_11();
+  let tmp = closure_11();
   _slicedToArray = tmp;
-  const tmp5 = selectedEffectId(onSelectColor[9])()[selectedEffectId];
-  noop = tmp5;
+  const tmp2 = selectedEffectId(onSelectColor[11])()[selectedEffectId];
+  noop = tmp2;
   let items = [selectedEffectId];
   const memo = noop.useMemo(() => getColorPresetsForEffect(selectedEffectId).map((item) => item[0]), items);
-  [color, closure_6] = noop.useState(selectedColor);
+  [color, closure_6] = noop.useState(() =>
+    DisplayNameStylesUtils.resolveSolidPresetSeed(selectedColor, selectedEffectId),
+  );
   const items1 = [color, selectedColor];
   const memo1 = noop.useMemo(() => first !== selectedColor, items1);
   closure_8 = noop.useCallback((arg0) => {
     closure_6(arg0);
   }, []);
-  const items2 = [tmp5, onSelectColor];
+  const items2 = [tmp2, onSelectColor];
   const items3 = [color, onSelectColor];
   const callback = noop.useCallback(() => {
     const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_LIGHT);
     onSelectColor(32);
     ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items2);
-  const items4 = [memo1, color, onSelectColor, tmp5];
+  const items4 = [memo1, color, onSelectColor, tmp2];
   const callback1 = noop.useCallback(() => {
     showCustomColorPickerActionSheetDefault({
       color,
       onSelect(arg0) {
-        const result = selectedColor(onSelectColor[10]).triggerHapticFeedback(
-          selectedColor(onSelectColor[10]).HapticFeedbackTypes.IMPACT_MEDIUM,
+        const result = selectedColor(onSelectColor[13]).triggerHapticFeedback(
+          selectedColor(onSelectColor[13]).HapticFeedbackTypes.IMPACT_MEDIUM,
         );
         closure_1_2(arg0);
-        const obj = selectedColor(onSelectColor[10]);
-        selectedEffectId(onSelectColor[11]).hideActionSheet();
+        const obj = selectedColor(onSelectColor[13]);
+        selectedEffectId(onSelectColor[14]).hideActionSheet();
       },
       actionButtonVariant: "primary",
     });
@@ -92,25 +114,24 @@ export default function DisplayNameStylesColorPickerSheet(selectedColor) {
     }
     ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items4);
-  let obj2 = { ref: selectedColor(onSelectColor[8]).useBottomSheetRef().bottomSheetRef, header: null, children: null };
+  let obj2 = { ref: selectedColor(onSelectColor[10]).useBottomSheetRef().bottomSheetRef, header: null, children: null };
   let obj3 = { title: null, trailing: null };
-  let obj = selectedColor(onSelectColor[8]);
-  const tmp4 = selectedEffectId;
-  const intl = selectedColor(onSelectColor[16]).intl;
-  obj3.title = intl.string(selectedEffectId(onSelectColor[17])["6OxgN7"]);
+  let obj = selectedColor(onSelectColor[10]);
+  const intl = selectedColor(onSelectColor[19]).intl;
+  obj3.title = intl.string(selectedEffectId(onSelectColor[20])["6OxgN7"]);
   let obj4 = { text: null, onPress: null, variant: "primary", size: "sm" };
-  const intl2 = selectedColor(onSelectColor[16]).intl;
-  obj4.text = intl2.string(selectedColor(onSelectColor[16]).t.XqMe3N);
+  const intl2 = selectedColor(onSelectColor[19]).intl;
+  obj4.text = intl2.string(selectedColor(onSelectColor[19]).t.XqMe3N);
   obj4.onPress = callback2;
-  obj3.trailing = closure_9(selectedColor(onSelectColor[18]).Button, obj4);
-  obj2.header = closure_9(selectedEffectId(onSelectColor[15]), obj3);
-  const obj5 = { style: tmp.container, children: null };
+  obj3.trailing = closure_9(selectedColor(onSelectColor[21]).Button, obj4);
+  obj2.header = closure_9(selectedEffectId(onSelectColor[18]), obj3);
+  let obj5 = { style: tmp.container, children: null };
   const obj6 = { style: tmp.contentContainer, children: null };
   const obj7 = { style: tmp.presetGrid, children: null };
-  const tmp13 = selectedEffectId(onSelectColor[15]);
-  const obj8 = selectedEffectId(onSelectColor[19]);
-  obj7.children = selectedEffectId(onSelectColor[19])
-    .chunk(memo.slice(0, 12), 6)
+  const tmp10 = selectedEffectId(onSelectColor[18]);
+  const obj8 = selectedEffectId(onSelectColor[22]);
+  obj7.children = selectedEffectId(onSelectColor[22])
+    .chunk(memo, 6)
     .map((arr, index) => {
       closure_0 = index;
       return closure_1_9(
@@ -119,21 +140,42 @@ export default function DisplayNameStylesColorPickerSheet(selectedColor) {
           style: presetRow.presetRow,
           children: arr.map((item, index) => {
             closure_0 = item;
+            let tmp = item === first;
             const obj = {
               onPress() {
                 return closure_2_8(closure_0);
               },
               style: null,
               accessibilityRole: "button",
+              accessibilityState: null,
               accessibilityLabel: null,
+              children: null,
             };
             const items = [presetColor.presetColor, ,];
             const obj2 = { backgroundColor: utils_ColorUtils.int2hex(item) };
             items[1] = obj2;
-            items[2] = item === first && presetColor.presetColorSelected;
+            let presetColorSelected = tmp;
+            if (tmp) {
+              presetColorSelected = presetColor.presetColorSelected;
+            }
+            items[2] = presetColorSelected;
             obj.style = items;
-            const tmp6 = item === first && presetColor.presetColorSelected;
+            obj.accessibilityState = { selected: tmp };
             obj.accessibilityLabel = utils_ColorUtils.int2hex(item);
+            if (tmp) {
+              const obj4 = { style: presetColor.checkmarkOverlay, pointerEvents: "none", children: null };
+              const obj5 = { size: "custom", style: presetColor.checkmark, color: null };
+              const darkness = utils_ColorUtils.getDarkness(item);
+              let str = "black";
+              if (darkness > ColorPickerConsts.DARK_SWATCH_THRESHOLD) {
+                str = "white";
+              }
+              obj5.color = str;
+              obj4.children = React7(CheckmarkLargeIcon.CheckmarkLargeIcon, obj5);
+              tmp = React7(hasOwnProperty, obj4);
+              const tmp5Result2 = utils_ColorUtils;
+            }
+            obj.children = tmp;
             return React7(timestampProducer, obj, 6 * closure_0 + index);
           }),
         },
@@ -142,29 +184,25 @@ export default function DisplayNameStylesColorPickerSheet(selectedColor) {
     });
   const items5 = [closure_9(color, obj7)];
   const obj9 = { style: tmp.buttonsContainer, children: null };
-  let tmp12Result = selectedEffectId === selectedColor(onSelectColor[21]).DisplayNameEffect.SOLID;
-  if (tmp12Result) {
-    const obj10 = { style: tmp.button, children: null };
-    const obj11 = { text: null, onPress: null, variant: "secondary", size: "md", grow: true };
-    const intl3 = tmp2(tmp3[16]).intl;
-    obj11.text = intl3.string(tmp4(tmp3[17]).gIeJTK);
-    obj11.onPress = callback;
-    obj10.children = closure_9(tmp2(tmp3[18]).Button, obj11);
-    tmp12Result = closure_9(tmp14, obj10);
-  }
-  const items6 = [tmp12Result];
+  const obj10 = { style: tmp.button, children: null };
+  const obj11 = { text: null, onPress: null, variant: "secondary", size: "md", grow: true };
+  const intl3 = selectedColor(onSelectColor[19]).intl;
+  obj11.text = intl3.string(selectedEffectId(onSelectColor[20]).gIeJTK);
+  obj11.onPress = callback;
+  obj10.children = closure_9(selectedColor(onSelectColor[21]).Button, obj11);
+  const items6 = [closure_9(color, obj10)];
   const obj12 = { style: tmp.button, children: null };
   const obj13 = { text: null, onPress: null, variant: "secondary", size: "md", icon: null, grow: true };
-  const intl4 = tmp2(tmp3[16]).intl;
-  obj13.text = intl4.string(selectedColor(onSelectColor[16]).t["FHBa/1"]);
+  const intl4 = selectedColor(onSelectColor[19]).intl;
+  obj13.text = intl4.string(selectedColor(onSelectColor[19]).t["FHBa/1"]);
   obj13.onPress = callback1;
-  obj13.icon = closure_9(selectedColor(onSelectColor[22]).EyeDropperIcon, { size: "sm" });
-  obj12.children = closure_9(selectedColor(onSelectColor[18]).Button, obj13);
+  obj13.icon = closure_9(selectedColor(onSelectColor[24]).EyeDropperIcon, { size: "sm" });
+  obj12.children = closure_9(selectedColor(onSelectColor[21]).Button, obj13);
   items6[1] = closure_9(color, obj12);
   obj9.children = items6;
   items5[1] = closure_10(color, obj9);
   obj6.children = items5;
   obj5.children = closure_10(color, obj6);
   obj2.children = closure_9(color, obj5);
-  return closure_9(selectedColor(onSelectColor[14]).BottomSheet, obj2);
+  return closure_9(selectedColor(onSelectColor[17]).BottomSheet, obj2);
 }

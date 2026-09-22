@@ -210,11 +210,11 @@ function EditSection(navigateToProfileCustomization) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const useIsContentShown = fn(2033).useIsContentShown;
-let UserProfileSections = fn(8452).UserProfileSections;
-const UserProfileThemeTypes = fn(7453).UserProfileThemeTypes;
-const ContentDismissActionType = fn(2038).ContentDismissActionType;
-let closure_13 = fn(11463).UserProfileEditAutoFocusElement;
+const useIsContentShown = fn(2034).useIsContentShown;
+let UserProfileSections = fn(8456).UserProfileSections;
+const UserProfileThemeTypes = fn(7455).UserProfileThemeTypes;
+const ContentDismissActionType = fn(2039).ContentDismissActionType;
+let closure_13 = fn(11467).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 const size = fn(2);
@@ -227,7 +227,7 @@ export default function YouScreenUserProfileContent(user) {
   const navigateToShop = user.navigateToShop;
   const initialTab = user.initialTab;
   let flag = user.animateAvatar;
-  ({ style, navigateToProfileCustomization } = user);
+  ({ style, scrollPosition, navigateToProfileCustomization } = user);
   if (flag === undefined) {
     flag = true;
   }
@@ -538,7 +538,7 @@ export default function YouScreenUserProfileContent(user) {
     items: memo,
     onPageChange: handleTabChange,
   };
-  const pagerFillHeight = user(navigateToPremium[49]).usePagerFillHeight();
+  const pagerFillHeight = user(navigateToPremium[49]).usePagerFillHeight(scrollPosition);
   const items9 = [segmentedControlState, restoreActiveIndex];
   ({ pagerRef, fillHeight, measureFill } = pagerFillHeight);
   const layoutEffect = obj6.useLayoutEffect(() => {
@@ -566,7 +566,7 @@ export default function YouScreenUserProfileContent(user) {
             initialTab === UserProfileSections.WISHLIST ? UserProfileSections.WISHLIST : UserProfileSections.MAIN,
           );
           ref.current(num, false, true);
-          navigation.setParams({ initialTab: "r" });
+          navigation.setParams({ initialTab: "max" });
         }, 80);
       }
       return () => {

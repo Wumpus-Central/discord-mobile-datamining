@@ -15,7 +15,6 @@ function compareOptions(status, status2) {
   }
   return localeCompareResult;
 }
-const EmbeddedSurfaceType = fn(9314).EmbeddedSurfaceType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_channels/useAppChannelApplicationOptions.tsx");
 
@@ -34,14 +33,14 @@ export const useAppChannelApplicationOptions = function useAppChannelApplication
   if (!flag) {
     tmp3 = guildId;
   }
-  const guildEmbeddedApplications = data1(data[2]).useGuildEmbeddedApplications(
-    EmbeddedSurfaceType.APP_CHANNEL,
+  const guildEmbeddedApplications = data1(data[1]).useGuildEmbeddedApplications(
+    data1(data[2]).EmbeddedSurfaceType.APP_CHANNEL,
     tmp3,
     channelId,
   );
   data1 = guildEmbeddedApplications.data;
   let isLoading = guildEmbeddedApplications.isLoading;
-  let obj = data1(data[2]);
+  let obj = data1(data[1]);
   const application = data1(data[3]).useApplication(selectedApplicationId, true);
   data = application.data;
   const obj2 = { options: null, selectedApplication: data, isLoading: null, hasNoApplications: null };

@@ -17,20 +17,17 @@ export const getOrbPriceFromPrices = function getOrbPriceFromPrices(prices, memo
     if (null != prices[React4.PREMIUM_TIER_2]) {
       let tmp2 = prices[React4.PREMIUM_TIER_2];
     }
-    let substr;
+    prices = undefined;
     if (tmp2 != null) {
       const countryPrices = tmp2.countryPrices;
       if (countryPrices != null) {
         prices = countryPrices.prices;
-        if (prices != null) {
-          substr = prices.slice(0, 2);
-        }
       }
     }
-    if (substr == null) {
-      substr = [];
+    if (prices == null) {
+      prices = [];
     }
-    let found = substr.find((currency) => currency.currency === constants.DISCORD_ORB);
+    let found = prices.find((currency) => currency.currency === constants.DISCORD_ORB);
     if (found == null) {
       found = null;
     }

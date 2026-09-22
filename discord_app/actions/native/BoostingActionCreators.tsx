@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("actions/native/BoostingActionCreators
 
 export const openApplyBoostModal = function openApplyBoostModal(guildId) {
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(5652, dependencyMap.paths),
+    asyncRequireImpl(5654, dependencyMap.paths),
     { guildId },
     PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY,
   );
@@ -16,7 +16,7 @@ export const openApplyBoostModal = function openApplyBoostModal(guildId) {
 export const openTransferModal = function openTransferModal(arg0) {
   ({ guildBoostSlots, guildId, intent, onResult } = arg0);
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(5652, dependencyMap.paths),
+    asyncRequireImpl(5654, dependencyMap.paths),
     { guildId, guildBoostSlots, intent, onResult },
     PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY,
   );

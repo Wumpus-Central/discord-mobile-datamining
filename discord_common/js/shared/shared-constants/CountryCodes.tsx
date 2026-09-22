@@ -15,6 +15,7 @@ const obj = {
   EUROZONE_COUNTRIES: null,
   EURO_CURRENCY_COUNTRIES: null,
   DSA_COUNTRIES: null,
+  INACTIVE_ACCOUNT_DELETION_COUNTRIES: null,
   FIVE_EYES_COUNTRIES: null,
   WITHOUT_POSTAL_CODES: null,
   COUNTRY_STATES: null,
@@ -1017,8 +1018,96 @@ const set12 = new Set([
   "SI",
   "SK",
 ]);
+obj.INACTIVE_ACCOUNT_DELETION_COUNTRIES = new Set([
+  "AT",
+  "AW",
+  "BE",
+  "BG",
+  "CH",
+  "CY",
+  "CZ",
+  "DE",
+  "DK",
+  "EE",
+  "ES",
+  "FI",
+  "FR",
+  "GF",
+  "GP",
+  "GR",
+  "HR",
+  "HU",
+  "IE",
+  "IS",
+  "IT",
+  "LI",
+  "LT",
+  "LU",
+  "LV",
+  "MF",
+  "MQ",
+  "MT",
+  "NC",
+  "NL",
+  "PF",
+  "PL",
+  "PM",
+  "PT",
+  "RE",
+  "RO",
+  "SE",
+  "SI",
+  "SK",
+  "TF",
+  "WF",
+  "YT",
+]);
+const set13 = new Set([
+  "AT",
+  "AW",
+  "BE",
+  "BG",
+  "CH",
+  "CY",
+  "CZ",
+  "DE",
+  "DK",
+  "EE",
+  "ES",
+  "FI",
+  "FR",
+  "GF",
+  "GP",
+  "GR",
+  "HR",
+  "HU",
+  "IE",
+  "IS",
+  "IT",
+  "LI",
+  "LT",
+  "LU",
+  "LV",
+  "MF",
+  "MQ",
+  "MT",
+  "NC",
+  "NL",
+  "PF",
+  "PL",
+  "PM",
+  "PT",
+  "RE",
+  "RO",
+  "SE",
+  "SI",
+  "SK",
+  "TF",
+  "WF",
+  "YT",
+]);
 obj.FIVE_EYES_COUNTRIES = new Set(["AU", "CA", "GB", "NZ", "US"]);
-const set13 = new Set(["AU", "CA", "GB", "NZ", "US"]);
+const set14 = new Set(["AU", "CA", "GB", "NZ", "US"]);
 obj.WITHOUT_POSTAL_CODES = new Set([
   "AE",
   "AG",
@@ -1096,7 +1185,7 @@ obj.WITHOUT_POSTAL_CODES = new Set([
   "ZW",
 ]);
 const obj2 = { US: null };
-const set14 = new Set([
+const set15 = new Set([
   "AE",
   "AG",
   "AN",
@@ -1237,7 +1326,7 @@ obj2.US = new Set([
   "WY",
 ]);
 obj.COUNTRY_STATES = obj2;
-const set15 = new Set([
+const set16 = new Set([
   "AA",
   "AE",
   "AK",
@@ -1302,7 +1391,7 @@ const set15 = new Set([
   "WY",
 ]);
 obj.EMBARGOED_BILLING_ADDRESS_COUNTRIES = new Set(["KP", "SY"]);
-const set16 = new Set(["KP", "SY"]);
+const set17 = new Set(["KP", "SY"]);
 obj.ALLOWED_BILLING_ADDRESS_COUNTRIES = new Set([
   "AC",
   "AD",
@@ -1561,7 +1650,7 @@ obj.ALLOWED_BILLING_ADDRESS_COUNTRIES = new Set([
   "ZM",
   "ZW",
 ]);
-const set17 = new Set([
+const set18 = new Set([
   "AC",
   "AD",
   "AE",
@@ -1820,21 +1909,21 @@ const set17 = new Set([
   "ZW",
 ]);
 obj.NON_AD_SERVING_COUNTRIES = new Set(["RU", "TR"]);
-const set18 = new Set(["RU", "TR"]);
+const set19 = new Set(["RU", "TR"]);
 obj.TAX_EXCLUSIVE = new Set(["CA", "KR", "US"]);
-const set19 = new Set(["CA", "KR", "US"]);
+const set20 = new Set(["CA", "KR", "US"]);
 obj.TAX_ADDRESS_REQUIRE_POSTAL_CODE = new Set(["CA", "US"]);
-const set20 = new Set(["CA", "US"]);
+const set21 = new Set(["CA", "US"]);
 obj.QUESTS_1P_DATA_OPT_OUT_U18_REGIONS = new Set(["AR", "NY"]);
-const set21 = new Set(["AR", "NY"]);
+const set22 = new Set(["AR", "NY"]);
 obj.QUESTS_1P_DATA_OPT_OUT_COUNTRIES_U18 = new Set(["BR"]);
-const set22 = new Set(["BR"]);
+const set23 = new Set(["BR"]);
 obj.QUESTS_3P_DATA_OPT_OUT_U16_REGIONS = new Set(["CA", "MN", "NH", "OR"]);
-const set23 = new Set(["CA", "MN", "NH", "OR"]);
+const set24 = new Set(["CA", "MN", "NH", "OR"]);
 obj.QUESTS_3P_DATA_OPT_OUT_U18_REGIONS = new Set(["CO", "CT", "DE", "MD", "MT", "NJ", "SC", "TX"]);
-const set24 = new Set(["CO", "CT", "DE", "MD", "MT", "NJ", "SC", "TX"]);
+const set25 = new Set(["CO", "CT", "DE", "MD", "MT", "NJ", "SC", "TX"]);
 obj.QUESTS_3P_DATA_OPT_OUT_COUNTRIES = new Set(["BR", "KR"]);
-const set25 = new Set(["BR", "KR"]);
+const set26 = new Set(["BR", "KR"]);
 obj.STRIPE_CONNECT_SUPPORTED_COUNTRIES = new Set([
   "AT",
   "BE",

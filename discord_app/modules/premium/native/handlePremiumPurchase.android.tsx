@@ -62,7 +62,7 @@ let closure_15 = async function _validatePurchase(arg0) {
           } = closure_0);
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -128,7 +128,7 @@ let closure_15 = async function _validatePurchase(arg0) {
   }
 };
 let closure_3 = ["succeededOnlyFields"];
-const setGPlayAnalytics = fn(9482).setGPlayAnalytics;
+const setGPlayAnalytics = fn(9488).setGPlayAnalytics;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, Endpoints: closure_12 } = Constants);
 const PaymentGateways = fn(1085).PaymentGateways;
@@ -219,14 +219,14 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
           }
           if (null != offerIds) {
             if (null != arg2) {
-              const tmp13 = premiumSubscription(7485).TrialIdToProductOfferId[arg2.trialId];
+              const tmp13 = premiumSubscription(7487).TrialIdToProductOfferId[arg2.trialId];
               let tmp14;
               if (tmp13 != null) {
                 tmp14 = tmp13[arg0];
               }
               return tmp14;
             } else if (null != dependencyMap) {
-              const tmp9 = premiumSubscription(7485).DiscountIdToProductOfferId[dependencyMap.discountId];
+              const tmp9 = premiumSubscription(7487).DiscountIdToProductOfferId[dependencyMap.discountId];
               let tmp10;
               if (tmp9 != null) {
                 tmp10 = tmp9[arg0];
@@ -237,8 +237,8 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
           let BOGO_OFFER_ID = null;
           if (arg1) {
             BOGO_OFFER_ID = null;
-            if (arg0 === premiumSubscription(7485).ProductIds.PREMIUM_TIER_2_MONTHLY) {
-              BOGO_OFFER_ID = premiumSubscription(7485).BOGO_OFFER_ID;
+            if (arg0 === premiumSubscription(7487).ProductIds.PREMIUM_TIER_2_MONTHLY) {
+              BOGO_OFFER_ID = premiumSubscription(7487).BOGO_OFFER_ID;
             }
           }
           return BOGO_OFFER_ID;
@@ -342,15 +342,15 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
       const result1 = premiumSubscription(premiumDiscountOffer[24]).captureBillingException(closure_130_23);
       (function showPurchaseErrorModal(combined) {
         let billingError = combined;
-        if (!(combined instanceof premiumSubscription(4656).BillingError)) {
-          billingError = new premiumSubscription(4656).BillingError(combined);
+        if (!(combined instanceof premiumSubscription(4657).BillingError)) {
+          billingError = new premiumSubscription(4657).BillingError(combined);
         }
         if (tmpResult.isSpendingLimitError(billingError)) {
-          const result = premiumSubscription(10965).showSpendingLimitReachedAlert();
-          const tmpResult2 = premiumSubscription(10965);
+          const result = premiumSubscription(10971).showSpendingLimitReachedAlert();
+          const tmpResult2 = premiumSubscription(10971);
         } else {
           const intl = premiumSubscription(1115).intl;
-          let tmp8 = billingError.code !== premiumSubscription(4436).ErrorCodes.UNKNOWN;
+          let tmp8 = billingError.code !== premiumSubscription(4437).ErrorCodes.UNKNOWN;
           if (tmp8) {
             tmp8 = -1 !== billingError.code;
           }
@@ -366,10 +366,10 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
           const intl2 = premiumSubscription(1115).intl;
           obj.title = intl2.string(premiumSubscription(1115).t["U+H+kd"]);
           obj.body = message;
-          closure_1_1(5108).show(obj);
-          const obj2 = closure_1_1(5108);
+          closure_1_1(5109).show(obj);
+          const obj2 = closure_1_1(5109);
         }
-        tmpResult = premiumSubscription(10965);
+        tmpResult = premiumSubscription(10971);
       })(closure_130_23);
       if (closure_130_23 instanceof premiumTrialOffer(premiumDiscountOffer[10])) {
         throw closure_130_23;
@@ -458,7 +458,7 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
       onPurchaseComplete: closure_130_11,
       onPurchaseError: closure_130_12,
     } = premiumSubscription);
-    return "PX_16";
+    return "flex";
   });
   const items1 = [
     null != stateFromStores,

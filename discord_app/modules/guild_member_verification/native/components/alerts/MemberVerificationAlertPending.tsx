@@ -23,7 +23,7 @@ export default function MemberVerificationAlertPending(guildId) {
   }, items);
   const obj = {};
   const merged1 = Object.assign(merged);
-  obj.icon = guildId(5755).ClipboardListIcon;
+  obj.icon = guildId(5757).ClipboardListIcon;
   const intl = guildId(1115).intl;
   obj.header = intl.string(guildId(1115).t.zhfXbs);
   const intl2 = guildId(1115).intl;
@@ -33,13 +33,13 @@ export default function MemberVerificationAlertPending(guildId) {
   const intl3 = guildId(1115).intl;
   obj3.text = intl3.string(guildId(1115).t.f293OM);
   obj3.onPress = onClose;
-  const items1 = [closure_4(guildId(5186).Button, obj3)];
+  const items1 = [closure_4(guildId(5187).Button, obj3)];
   const obj4 = { text: null, variant: "destructive", onPress: null };
   const intl4 = guildId(1115).intl;
   obj4.text = intl4.string(guildId(1115).t.mqtdmQ);
   obj4.onPress = callback;
-  items1[1] = closure_4(guildId(5186).Button, obj4);
+  items1[1] = closure_4(guildId(5187).Button, obj4);
   obj2.children = items1;
   obj.buttons = closure_6(closure_5, obj2);
-  return closure_4(onClose(5754), obj);
+  return closure_4(onClose(5756), obj);
 }

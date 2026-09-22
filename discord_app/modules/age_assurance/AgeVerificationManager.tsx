@@ -2,6 +2,7 @@
 import LoggerDefault from "../debug/Logger.tsx";
 import MessageEmbedTypes from "../../../discord_common/js/shared/shared-constants/MessageEmbedTypes.tsx";
 import Server from "../../flow/Server.tsx";
+import AgeVerificationUtils from "AgeVerificationUtils.tsx";
 import ChannelMessagesDefault from "../../lib/ChannelMessages.tsx";
 import RegionalFeatureConfigUtils from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import AgeGatedFeature from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
@@ -15,12 +16,47 @@ import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 require = fn;
 function handleMessageCreate(channelId) {
   const message = MessageStore.getMessage(channelId.channelId, channelId.message.id);
-  const AGE_VERIFICATION_SYSTEM_NOTIFICATION = MessageEmbedTypes.MessageEmbedTypes.AGE_VERIFICATION_SYSTEM_NOTIFICATION;
+  let type;
+  if (message != null) {
+    const embeds = message.embeds;
+    if (embeds != null) {
+      const first = embeds[0];
+      if (first != null) {
+        type = first.type;
+      }
+    }
+  }
+  if (type === MessageEmbedTypes.MessageEmbedTypes.AGE_VERIFICATION_SYSTEM_NOTIFICATION) {
+    let found;
+    if (message != null) {
+      const embeds2 = message.embeds;
+      if (embeds2 != null) {
+        const first1 = embeds2[0];
+        if (first1 != null) {
+          const fields = first1.fields;
+          if (fields != null) {
+            found = fields.find(
+              (rawName) =>
+                rawName.rawName === AgeVerificationUtils.AgeVerificationSystemNotificationEmbedKeys.CONTENT_TYPE,
+            );
+          }
+        }
+      }
+    }
+    let rawValue;
+    if (found != null) {
+      rawValue = found.rawValue;
+    }
+    if (rawValue === AgeVerificationUtils.AgeVerificationSystemNotificationContentType.MANUAL_REVIEW_SUBMITTED) {
+      const result = ManualReviewActionCreators.invalidateAgeVerificationCaches();
+      const tmp4Result = ManualReviewActionCreators;
+    }
+  }
 }
 const transformUser = fn(1372).transformUser;
 const Constants = fn(1074);
 ({ ChannelTypes: closure_8, MAX_MESSAGES_PER_CHANNEL: closure_9 } = Constants);
-const SafetyToastType = fn(8670).SafetyToastType;
+const SafetyToastType = fn(8674).SafetyToastType;
 let closure_10 = new LoggerDefault("AgeVerificationManager");
 const prototype = function AgeVerificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -80,7 +116,7 @@ const prototype = function AgeVerificationManager() {
         }
         if (tmp20) {
           (function handleLoadChannelMessages(channelId) {
-            const messages = _true(7698).fetchMessages({ channelId, limit });
+            const messages = _true(7701).fetchMessages({ channelId, limit });
           })(tmp16);
           (function handleLoadForumPosts(arg0) {
             channel = channel.getChannel(arg0);
@@ -97,8 +133,8 @@ const prototype = function AgeVerificationManager() {
               tmp4 = type1 !== tmp3.GUILD_MEDIA;
             }
             if (!tmp4) {
-              channelId(7546).preloadForumThreads(channel);
-              const obj = channelId(7546);
+              channelId(7548).preloadForumThreads(channel);
+              const obj = channelId(7548);
             }
           })(tmp16);
         }

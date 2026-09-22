@@ -1,5 +1,6 @@
 // discord_app/modules/rpc/helpers/validateEmbeddedAppFrame.tsx
 import ApplicationFlagUtils from "../../applications/utils/ApplicationFlagUtils.tsx";
+import EmbeddedSurfaceType from "../../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
 import RPCErrorDefault from "../RPCError.tsx";
 import RPCHelpers from "../RPCHelpers.tsx";
 import FramesStore from "../../frames/FramesStore.tsx";
@@ -15,15 +16,15 @@ function validateEmbeddedAppFrame(transport) {
       const tmp31 = new RPCErrorDefault(obj4, "command requires an embedded app frame");
       throw tmp31;
     } else {
-      const tmp35 = React6(FramesStore.getFrameByIframeId(transport.source.iframeId));
+      const tmp35 = asLaunched(FramesStore.getFrameByIframeId(transport.source.iframeId));
       let tmp13 = null;
       if (null != tmp35) {
         const type = tmp35.surface.type;
-        if (constants3.APP_CHANNEL !== type) {
-          if (constants3.VOICE_CHANNEL !== type) {
-            if (constants3.MAIN === type) {
+        if (EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL !== type) {
+          if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL !== type) {
+            if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
               if (tmp35.applicationId === VibegrationsBuilderPreviewStore.getBuilderPreviewApplicationId()) {
-                let obj5 = { channelId: "Array", guildId: "PX_16" };
+                let obj5 = { channelId: "Array", guildId: "flex" };
               } else {
                 obj5 = null;
               }
@@ -49,16 +50,15 @@ function validateEmbeddedAppFrame(transport) {
     }
   } else {
     const obj14 = { errorCode: constants2.UNAUTHORIZED_FOR_APPLICATION };
-    const tmp9 = new RPCErrorDefault(obj14, "This application cannot access this API");
-    throw tmp9;
+    const tmp10 = new RPCErrorDefault(obj14, "This application cannot access this API");
+    throw tmp10;
   }
   obj3 = ApplicationFlagUtils;
 }
-const TransportTypes = fn(4660).TransportTypes;
+const TransportTypes = fn(4661).TransportTypes;
 const Constants = fn(1074);
 ({ ApplicationFlags: metroRequire, RPCErrors: closure_7 } = Constants);
-const FramesConstants = fn(9314);
-({ asLaunched: closure_8, EmbeddedSurfaceType: closure_9 } = FramesConstants);
+const asLaunched = fn(9319).asLaunched;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/helpers/validateEmbeddedAppFrame.tsx");
 

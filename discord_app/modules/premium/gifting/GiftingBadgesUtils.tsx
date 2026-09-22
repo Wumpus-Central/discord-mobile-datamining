@@ -1,6 +1,8 @@
 // discord_app/modules/premium/gifting/GiftingBadgesUtils.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import util from "../../../intl/index.native.tsx";
 import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import _modDef2578 from "GiftingBadge.messages.js";
 import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import BadgeDirectoryStore from "../../badges/BadgeDirectoryStore.tsx";
 import GiftingBadgeExperiment2 from "experiments/GiftingBadgeExperiment.tsx";
@@ -9,16 +11,28 @@ import GiftingBadgeComplexArtExperiment2 from "experiments/GiftingBadgeComplexAr
 import UserStore from "../../../stores/UserStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let closure_2 = BadgeDirectoryStore.getSingleRequirementThreshold;
+let closure_3 = BadgeDirectoryStore.getSingleRequirementThreshold;
 let result = size.fileFinishedImporting("modules/premium/gifting/GiftingBadgesUtils.tsx");
 
+export const getGiftingBadgeAccessibilityLabel = function getGiftingBadgeAccessibilityLabel(name) {
+  let str;
+  const count = closure_3(name);
+  if (name != null) {
+    str = name.name;
+  }
+  if (str == null) {
+    str = "";
+  }
+  const intl = util.intl;
+  return "" + str + ", " + intl.formatToPlainString(_modDef2578.qvx9E4, { count });
+};
 export const getGiftingBadgeProgressPercent = function getGiftingBadgeProgressPercent(
   badgeProgress,
   currentTier,
   nextTier,
 ) {
-  const tmp = closure_2(currentTier);
-  const tmp2 = closure_2(nextTier);
+  const tmp = closure_3(currentTier);
+  const tmp2 = closure_3(nextTier);
   if (null != nextTier) {
     let num6 = 100;
     if (tmp2 > 0) {

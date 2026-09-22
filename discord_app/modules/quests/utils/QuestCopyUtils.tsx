@@ -3,9 +3,9 @@ import util from "../../../intl/index.native.tsx";
 import AdCreativeType from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import AnalyticsActions from "../lib/analytics/AnalyticsActions.tsx";
-import AdAnalyticsInterfaceExperiment from "../experiments/AdAnalyticsInterfaceExperiment.tsx";
 import captureAdUserAction from "../../ads/analytics/captureAdUserAction.tsx";
 import captureAdUserActionTypes from "../../ads/analytics/captureAdUserActionTypes.tsx";
+import AdAnalyticsInterfaceExperiment from "../experiments/AdAnalyticsInterfaceExperiment.tsx";
 import QuestConstants from "../QuestConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 

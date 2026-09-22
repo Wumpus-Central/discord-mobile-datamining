@@ -8,10 +8,10 @@ import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 
 require = fn;
-const GuildRecord = fn(2059);
+const GuildRecord = fn(2060);
 ({ getGuildIconSource: hasOwnProperty, getGuildIconURL: metroRequire } = GuildRecord);
 const jsx = fn(21).jsx;
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj = { guildIcon: null };
 let size = {
   width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,
@@ -153,14 +153,15 @@ export default noop.memo(function GuildsBarPendingGuild(guildId) {
     selected: stateFromStores,
     sharedId: sharedValue,
     circle: !stateFromStores,
-    overState: "PX_16",
+    overState: "flex",
     unread: null,
     label: null,
     config: null,
     styles: null,
     externalChildren: null,
     expandedChildren: null,
-    children: "ianuarie",
+    children:
+      'function pnpm_indexTs1(event){const{handler}=this.__closure;if(event.eventName.endsWith("onKeyboardMoveStart")){var _handler$onStart,_handler;(_handler$onStart=(_handler=handler).onStart)===null||_handler$onStart===void 0||_handler$onStart.call(_handler,event);}if(event.eventName.endsWith("onKeyboardMove")){var _handler$onMove,_handler2;(_handler$onMove=(_handler2=handler).onMove)===null||_handler$onMove===void 0||_handler$onMove.call(_handler2,event);}if(event.eventName.endsWith("onKeyboardMoveEnd")){var _handler$onEnd,_handler3;(_handler$onEnd=(_handler3=handler).onEnd)===null||_handler$onEnd===void 0||_handler$onEnd.call(_handler3,event);}if(event.eventName.endsWith("onKeyboardMoveInteractive")){var _handler$onInteractiv,_handler4;(_handler$onInteractiv=(_handler4=handler).onInteractive)===null||_handler$onInteractiv===void 0||_handler$onInteractiv.call(_handler4,event);}}',
   };
   let str = guildName;
   const tmp2Result2 = guildId(stateFromStores[19]);
@@ -199,13 +200,14 @@ export default noop.memo(function GuildsBarPendingGuild(guildId) {
     selected: stateFromStores,
     sharedId: sharedValue,
     circle: !stateFromStores,
-    overState: "PX_16",
+    overState: "flex",
     unread: null,
     label: null,
     config: null,
     styles: null,
     externalChildren: null,
     expandedChildren: null,
-    children: "ianuarie",
+    children:
+      'function pnpm_indexTs1(event){const{handler}=this.__closure;if(event.eventName.endsWith("onKeyboardMoveStart")){var _handler$onStart,_handler;(_handler$onStart=(_handler=handler).onStart)===null||_handler$onStart===void 0||_handler$onStart.call(_handler,event);}if(event.eventName.endsWith("onKeyboardMove")){var _handler$onMove,_handler2;(_handler$onMove=(_handler2=handler).onMove)===null||_handler$onMove===void 0||_handler$onMove.call(_handler2,event);}if(event.eventName.endsWith("onKeyboardMoveEnd")){var _handler$onEnd,_handler3;(_handler$onEnd=(_handler3=handler).onEnd)===null||_handler$onEnd===void 0||_handler$onEnd.call(_handler3,event);}if(event.eventName.endsWith("onKeyboardMoveInteractive")){var _handler$onInteractiv,_handler4;(_handler$onInteractiv=(_handler4=handler).onInteractive)===null||_handler$onInteractiv===void 0||_handler$onInteractiv.call(_handler4,event);}}',
   });
 });

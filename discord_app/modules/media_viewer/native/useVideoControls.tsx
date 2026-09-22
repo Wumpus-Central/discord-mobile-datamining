@@ -11,8 +11,8 @@ const require = globalThis.__r;
 require = fn;
 const jsx = fn(21).jsx;
 const module_560 = fn(560);
-let obj4 = module_560.create(() => ({ controls: "PX_16", paused: true }));
-const createStyles = fn(4756);
+let obj4 = module_560.create(() => ({ controls: "flex", paused: true }));
+const createStyles = fn(4757);
 let closure_8 = createStyles.createStyles({ slider: { marginBottom: 8 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/useVideoControls.tsx");
@@ -70,7 +70,7 @@ export default function useVideoControls(index, portal, controls) {
 export const useVideoStateStore = obj4;
 export const initVideoStateStore = function initVideoStateStore() {
   ReactBatchUpdates.batchUpdates(() => {
-    state.setState({ controls: "PX_16", paused: true });
+    state.setState({ controls: "flex", paused: true });
   });
 };
 export const setMuted = function setMuted(isMuted) {

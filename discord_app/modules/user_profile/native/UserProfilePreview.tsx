@@ -12,11 +12,11 @@ function filterLayer(responsive) {
   return true !== responsive.responsive;
 }
 const View = fn(17).View;
-const Constants = fn(7453);
+const Constants = fn(7455);
 ({ PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: closure_7, UserProfileThemeTypes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_12 = createStyles.createStyles((arg0, arg1, arg2) => {
   let num = arg2;
   if (arg2 == null) {
@@ -51,8 +51,14 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 
 export default function UserProfilePreview(hideFrame) {
   ({ user, displayName, guildId } = hideFrame);
-  ({ profileEffectOverride, profileEffectRestartKey, profileFrameOverride, displayNameStylesOverride, compact } =
-    hideFrame);
+  ({
+    avatarDecorationOverride,
+    profileEffectOverride,
+    profileEffectRestartKey,
+    profileFrameOverride,
+    displayNameStylesOverride,
+    compact,
+  } = hideFrame);
   ({ accessibilityLabel, style } = hideFrame);
   if (compact === undefined) {
     compact = false;
@@ -76,13 +82,13 @@ export default function UserProfilePreview(hideFrame) {
   ({
     pendingAccentColor,
     pendingThemeColors,
+    pendingAvatarDecoration,
     pendingProfileEffect,
     pendingProfileFrame,
     pendingDisplayNameStyles,
     pendingPronouns,
   } = stateFromStoresObject);
-  ({ pendingAvatar, pendingBanner, pendingAvatarDecoration, pendingGlobalName, pendingLegacyUsernameDisabled } =
-    stateFromStoresObject);
+  ({ pendingAvatar, pendingBanner, pendingGlobalName, pendingLegacyUsernameDisabled } = stateFromStoresObject);
   const tmp5 = require("useDisplayProfile")(user.id, guildId);
   let obj = guildId(set[8]);
   ({ theme, primaryColor, secondaryColor } = require("useProfileTheme")({
@@ -98,6 +104,9 @@ export default function UserProfilePreview(hideFrame) {
   const obj2 = guildId(set[12]);
   const userProfileColors = guildId(set[13]).useUserProfileColors({ theme, primaryColor, secondaryColor });
   ({ containerBackground, gradientFallbackBackground, avatarBackground } = userProfileColors);
+  if (undefined !== avatarDecorationOverride) {
+    pendingAvatarDecoration = avatarDecorationOverride;
+  }
   if (undefined !== profileEffectOverride) {
     pendingProfileEffect = profileEffectOverride;
   }

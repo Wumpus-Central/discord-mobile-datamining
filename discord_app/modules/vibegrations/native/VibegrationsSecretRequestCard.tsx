@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = {
   card: {
     backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
@@ -63,7 +63,7 @@ export default function VibegrationsSecretRequestCard(projectId) {
   let obj2 = { variant: "text-xs/semibold", color: "text-muted", children: null };
   const intl = projectId(1115).intl;
   obj2.children = intl.string(request(3678)["/e28TK"]);
-  const items1 = [closure_5(projectId(4752).Text, obj2), , ,];
+  const items1 = [closure_5(projectId(4753).Text, obj2), , ,];
   if (null != request.note) {
     if ("" !== request.note) {
       let note = request.note;
@@ -87,7 +87,7 @@ export default function VibegrationsSecretRequestCard(projectId) {
     const obj5 = { variant: "secondary", size: "sm", onPress: callback, text: null };
     const intl3 = tmp6(1115).intl;
     obj5.text = intl3.string(tmp8(3678)["gVV+HX"]);
-    items1[3] = closure_5(tmp6(5186).Button, obj5);
+    items1[3] = closure_5(tmp6(5187).Button, obj5);
     obj.children = items1;
     return closure_6(View, obj);
   }

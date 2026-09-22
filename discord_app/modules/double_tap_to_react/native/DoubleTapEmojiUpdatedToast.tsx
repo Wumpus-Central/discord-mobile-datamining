@@ -62,7 +62,7 @@ function ToastText(emoji) {
 }
 const EMOJI_URL_BASE_SIZE = fn(1375).EMOJI_URL_BASE_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = {
   toastEmoji: { marginLeft: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_8 },
   toastEmojiCustom: { width: 24, height: 24 },
@@ -93,7 +93,7 @@ export { ToastEmoji };
 export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdatedToast(emoji) {
   emoji = emoji.emoji;
   if (obj.getIsScreenReaderEnabled()) {
-    const AccessibilityAnnouncer = tmp(4467).AccessibilityAnnouncer;
+    const AccessibilityAnnouncer = tmp(4468).AccessibilityAnnouncer;
     const intl = tmp(1115).intl;
     const obj3 = { emojiName: emoji.name };
     AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp(1115).t.nKY0Fl, obj3));
@@ -110,5 +110,5 @@ export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdated
     };
     ToastActionCreatorsDefault.open(obj4);
   }
-  obj = emoji(5171);
+  obj = emoji(5172);
 };

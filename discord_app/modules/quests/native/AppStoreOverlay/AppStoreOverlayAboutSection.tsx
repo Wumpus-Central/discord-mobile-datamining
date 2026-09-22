@@ -16,7 +16,7 @@ const rect = {
   left: nativeDefault.space.PX_12,
   right: nativeDefault.space.PX_12,
 };
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj = {
   aboutSection: {
     borderRadius: nativeDefault.space.PX_16,
@@ -30,21 +30,30 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayAboutSection.tsx");
 
 export default function AppStoreOverlayAboutSection(children) {
-  c0 = undefined;
+  const onSeeMorePress = children.onSeeMorePress;
+  c1 = undefined;
   first = undefined;
-  closure_2 = undefined;
+  closure_3 = undefined;
   const tmp = closure_9();
-  [tmp3, c0] = noop.useState(false);
-  [first, closure_2] = noop.useState(null);
+  [tmp3, c1] = noop.useState(false);
+  [first, closure_3] = noop.useState(null);
   const items = [first];
+  const items1 = [onSeeMorePress];
   const callback = noop.useCallback((nativeEvent) => {
     if (null == first) {
-      closure_2(nativeEvent.nativeEvent.lines.length > 3);
+      closure_3(nativeEvent.nativeEvent.lines.length > 3);
     }
   }, items);
   const callback1 = noop.useCallback(() => {
-    _undefined((arg0) => !arg0);
-  }, []);
+    _undefined((arg0) => {
+      if (!arg0) {
+        if (onSeeMorePress != null) {
+          tmp();
+        }
+      }
+      return !arg0;
+    });
+  }, items1);
   const intl = util.intl;
   const t = util.t;
   const stringResult = intl.string(tmp3 ? t["6MwJo/"] : t.lBeKY2);
@@ -52,7 +61,7 @@ export default function AppStoreOverlayAboutSection(children) {
   const obj2 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = util.intl;
   obj2.children = intl2.string(util.t.CI0vSJ);
-  const items1 = [
+  const items2 = [
     timestampProducer(Text_Text.Text, obj2),
     timestampProducer(Text_Text.Text, {
       variant: "text-sm/medium",
@@ -79,7 +88,7 @@ export default function AppStoreOverlayAboutSection(children) {
     obj3.children = timestampProducer(Text_Text.Text, obj5);
     tmp13Result = timestampProducer(React4, obj3);
   }
-  items1[2] = tmp13Result;
-  obj.children = items1;
+  items2[2] = tmp13Result;
+  obj.children = items2;
   return React5(hasOwnProperty, obj);
 }

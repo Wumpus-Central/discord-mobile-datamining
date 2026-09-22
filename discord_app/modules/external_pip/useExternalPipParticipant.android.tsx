@@ -7,7 +7,7 @@ import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 
 const require = fn;
-const CallConstants = fn(4777);
+const CallConstants = fn(4778);
 ({ isStreamParticipant: closure_8, ParticipantTypes: closure_9 } = CallConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/external_pip/useExternalPipParticipant.android.tsx");
@@ -58,7 +58,7 @@ export default function useExternalPipParticipant() {
     if (ref.current !== id2) {
       const obj2 = {
         focusedParticipantStreamId: "Array",
-        focusedParticipantUserId: "PX_16",
+        focusedParticipantUserId: "flex",
         focusedParticipantType: ref2.current,
       };
       let obj = obj2;
@@ -244,11 +244,7 @@ export default function useExternalPipParticipant() {
           return obj;
         }
       }
-      return {
-        selectedParticipantSpeaking: false,
-        selectedParticipantUserId: "Boolean",
-        selectedStreamId: "accessible",
-      };
+      return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "padding" };
     },
     items4,
   );

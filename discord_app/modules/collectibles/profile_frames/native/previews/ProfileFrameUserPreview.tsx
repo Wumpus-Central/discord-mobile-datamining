@@ -12,8 +12,17 @@ const result = size.fileFinishedImporting(
 
 export default function ProfileFrameUserPreview(profileFrame) {
   profileFrame = profileFrame.profileFrame;
-  const merged = Object.assign(profileFrame, Object.assign({ profileFrame: 0 }));
-  const obj = { profileFrameOverride: profileFrame, accessibilityLabel: null };
+  ({ avatarDecorationOverride, profileEffectOverride } = profileFrame);
+  const merged = Object.assign(
+    profileFrame,
+    Object.assign({ profileFrame: 0, avatarDecorationOverride: 0, profileEffectOverride: 0 }),
+  );
+  const obj = {
+    profileFrameOverride: profileFrame,
+    avatarDecorationOverride,
+    profileEffectOverride,
+    accessibilityLabel: null,
+  };
   if (null != profileFrame) {
     const intl2 = util.intl;
     const obj2 = { a11y_text: profileFrame.label };
@@ -24,5 +33,10 @@ export default function ProfileFrameUserPreview(profileFrame) {
   }
   obj.accessibilityLabel = formatToPlainStringResult;
   const merged1 = Object.assign(merged);
-  return jsx(UserProfilePreviewDefault, { profileFrameOverride: profileFrame, accessibilityLabel: null });
+  return jsx(UserProfilePreviewDefault, {
+    profileFrameOverride: profileFrame,
+    avatarDecorationOverride,
+    profileEffectOverride,
+    accessibilityLabel: null,
+  });
 }

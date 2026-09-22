@@ -30,8 +30,8 @@ export default function handleAcceptEventInstantInvite(code) {
         }
       }
     }
-    tmpResult = tmp(7977);
+    tmpResult = tmp(7980);
   }
-  obj = guildScheduledEvent(10552);
+  obj = guildScheduledEvent(10558);
   tmp = guildScheduledEvent;
 }

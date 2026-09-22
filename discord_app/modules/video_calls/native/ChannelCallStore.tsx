@@ -13,11 +13,11 @@ import apply from "../../../../_runtime/metro/00012__.js";
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallConstants = fn(9641);
+const ChannelCallConstants = fn(9647);
 ({ VoiceCallOverlayType, VoiceChatDrawerState } = ChannelCallConstants);
 const OrientationLockState = fn(2004).OrientationLockState;
-const ParticipantTypes = fn(4777).ParticipantTypes;
-const timeout = new fn(2036).Timeout();
+const ParticipantTypes = fn(4778).ParticipantTypes;
+const timeout = new fn(2037).Timeout();
 let obj = {
   focus: true,
   pipFocus: false,
@@ -28,10 +28,10 @@ let obj = {
 let obj2 = {};
 let size = {
   x: "Array",
-  y: "flexDirection",
+  y: "PX_8",
   width: "y",
   height: "HermesInternal",
-  screenOrientation: fn(8603).OrientationType.PORTRAIT,
+  screenOrientation: fn(8607).OrientationType.PORTRAIT,
   hasUserInteractedSinceOrientationChange: true,
   isInitialized: true,
   isVisible: null,
@@ -39,10 +39,10 @@ let size = {
 obj2[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = size;
 const size1 = {
   x: "Array",
-  y: "flexDirection",
+  y: "PX_8",
   width: "y",
   height: "HermesInternal",
-  screenOrientation: fn(8603).OrientationType.PORTRAIT,
+  screenOrientation: fn(8607).OrientationType.PORTRAIT,
   hasUserInteractedSinceOrientationChange: true,
   isInitialized: true,
   isVisible: null,

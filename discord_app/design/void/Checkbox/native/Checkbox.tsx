@@ -1,6 +1,6 @@
 // discord_app/design/void/Checkbox/native/Checkbox.tsx
-import _modDef14356 from "../../../../../_runtime/metro/14356__.js";
-import _modDef14357 from "../../../../../_runtime/metro/14357__.js";
+import _modDef14362 from "../../../../../_runtime/metro/14362__.js";
+import _modDef14363 from "../../../../../_runtime/metro/14363__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const Image = fn(17).Image;
@@ -11,10 +11,10 @@ const result = size.fileFinishedImporting("design/void/Checkbox/native/Checkbox.
 export default function Checkbox(style) {
   const obj = { style: style.style, source: null };
   if (style.selected) {
-    obj.source = _modDef14356;
+    obj.source = _modDef14362;
     let tmp5 = obj;
   } else {
-    obj.source = _modDef14357;
+    obj.source = _modDef14363;
     tmp5 = obj;
   }
   return <Image {...tmp5} />;

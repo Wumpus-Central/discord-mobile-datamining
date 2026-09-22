@@ -7,7 +7,7 @@ const result = size.fileFinishedImporting("modules/threads/native/components/sho
 
 export default function showThreadLongPressActionSheet(channelId) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(16454, dependencyMap.paths),
+    asyncRequireImpl(16465, dependencyMap.paths),
     "ThreadLongPressActionSheet",
     {
       channelId,

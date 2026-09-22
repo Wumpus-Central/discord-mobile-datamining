@@ -34,13 +34,14 @@ export const usePageHeights = function usePageHeights() {
     }, items),
   };
 };
-export const usePagerFillHeight = function usePagerFillHeight() {
+export const usePagerFillHeight = function usePagerFillHeight(scrollPosition) {
+  closure_0 = scrollPosition;
   const height = useWindowDimensionsDefault().height;
   const bottom = useSafeAreaInsetsDefault().bottom;
   const tmp = _slicedToArray(noop.useState(0), 2);
-  closure_2 = tmp[1];
+  closure_3 = tmp[1];
   const ref = noop.useRef(null);
-  const items = [height, bottom];
+  const items = [height, bottom, scrollPosition];
   return {
     pagerRef: ref,
     fillHeight: tmp[0],
@@ -48,12 +49,19 @@ export const usePagerFillHeight = function usePagerFillHeight() {
       const current = ref.current;
       if (current != null) {
         current.measureInWindow((arg0, arg1) => {
-          const diff = height - arg1 - bottom;
-          let num = 0;
-          if (diff > 0) {
-            num = diff;
+          let num;
+          if (scrollPosition != null) {
+            num = scrollPosition.get();
           }
-          closure_1_2(num);
+          if (num == null) {
+            num = 0;
+          }
+          const diff = height - (arg1 + num) - bottom;
+          let num2 = 0;
+          if (diff > 0) {
+            num2 = diff;
+          }
+          closure_1_3(num2);
         });
       }
     }, items),

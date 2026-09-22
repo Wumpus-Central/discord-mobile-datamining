@@ -51,7 +51,7 @@ let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0) {
           closure_130_10 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else {
         if (1 === tmp6) {
@@ -73,8 +73,8 @@ let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0) {
                 const intl = closure_1_0(1115).intl;
                 obj2.title = intl.string(closure_1_0(1115).t["8P7MX0"]);
                 obj2.body = body;
-                closure_1_1(5109).show(obj2);
-                const obj = closure_1_1(5109);
+                closure_1_1(5110).show(obj2);
+                const obj = closure_1_1(5110);
                 closure_1_1(1241).track(constants.OPEN_MODAL, {
                   type: closure_1_6.IOS_CANNOT_MANAGE_SUBSCRIPTION,
                   source,
@@ -152,14 +152,14 @@ let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0) {
               let num3 = 0;
               const sum = interval.numPremiumGuild + num2;
               if (null != closure_1_6) {
-                const numPremiumGuildSubscriptions = closure_0(4414).getNumPremiumGuildSubscriptions(
+                const numPremiumGuildSubscriptions = closure_0(4415).getNumPremiumGuildSubscriptions(
                   closure_1_6.additionalPlans,
                 );
-                const obj = closure_0(4414);
+                const obj = closure_0(4415);
                 num3 =
                   numPremiumGuildSubscriptions +
-                  c1(4414).getNumIncludedPremiumGuildSubscriptionSlots(closure_1_6.planId);
-                const obj2 = c1(4414);
+                  c1(4415).getNumIncludedPremiumGuildSubscriptionSlots(closure_1_6.planId);
+                const obj2 = c1(4415);
               }
               tmp = sum > num3;
             }

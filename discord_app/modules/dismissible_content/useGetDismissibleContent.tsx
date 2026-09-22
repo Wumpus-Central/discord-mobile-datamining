@@ -33,8 +33,8 @@ function useGetVisibleContent(found1, stateFromStores, GUILD_HEADER_TOOLTIPS, la
   closure_6 = tmp6;
   let result = null != found1;
   if (result) {
-    result = tmp2(2029).isDismissibleContentBlockedByOverlay(found1, first, tmp6);
-    const tmp2Result = tmp2(2029);
+    result = tmp2(2030).isDismissibleContentBlockedByOverlay(found1, first, tmp6);
+    const tmp2Result = tmp2(2030);
   }
   let obj = require("OverlayTrackingUtils");
   const items = [ref];
@@ -161,7 +161,7 @@ function canShowTimeRecurringContent(arg0, lastDismissedAtMs, numTimesDismissed,
   }
   return hasLoadedResult;
 }
-const removeCandidateContent = fn(2033).removeCandidateContent;
+const removeCandidateContent = fn(2034).removeCandidateContent;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const UserSettingsTypes = fn(1084).UserSettingsTypes;
 let closure_13 = {};
@@ -331,7 +331,7 @@ export const useGetTimeRecurringDismissibleContent = function useGetTimeRecurrin
     }
     dependencyMap = tmp10;
     tmp5 = tmp10;
-    tmpResult = tmp(4598);
+    tmpResult = tmp(4599);
   }
   const items2 = [useGetVisibleContent(tmp5, stateFromStores1, groupName)];
   const items3 = [tmp5, groupName, stateFromStores1];

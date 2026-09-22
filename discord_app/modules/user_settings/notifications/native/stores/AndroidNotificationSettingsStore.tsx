@@ -126,9 +126,9 @@ let closure_5 = async function _initializeAndroidNotificationSettingsStore() {
 };
 const identity = fn(1243);
 let closure_4 = identity.createWithEqualityFn(() => ({
-  isLightsEnabled: "call",
-  isVibrationsEnabled: "delete",
-  isSoundsEnabled: "i",
+  isLightsEnabled: "category",
+  isVibrationsEnabled: "w",
+  isSoundsEnabled: "replace",
   isNotifyEveryTime: "Array",
 }));
 const size = fn(2);

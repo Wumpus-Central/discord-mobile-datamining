@@ -692,7 +692,7 @@ let closure_27 = async function _fetchCollectiblesMarketings(arg0) {
             closure_129_2 = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "PX_16", done: true };
+            return { value: "flex", done: true };
           }
         } else if (1 === tmp7) {
           if (arg0 === 1) {
@@ -979,7 +979,7 @@ let closure_30 = async function _maybeFetchCollectiblesShopTabLayout(arg0) {
           closure_129_4 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -1051,15 +1051,15 @@ let closure_30 = async function _maybeFetchCollectiblesShopTabLayout(arg0) {
     }
   }
 };
-const addDebugLog = fn(7798).addDebugLog;
-let closure_10 = fn(7801).CollectiblesCategoriesRecord;
-let closure_11 = fn(7805).CollectiblesMarketingsRecord;
-let closure_14 = fn(7812).CollectiblesShopHomeRecord;
+const addDebugLog = fn(7801).addDebugLog;
+let closure_10 = fn(7804).CollectiblesCategoriesRecord;
+let closure_11 = fn(7808).CollectiblesMarketingsRecord;
+let closure_14 = fn(7815).CollectiblesShopHomeRecord;
 const constants = fn(1076).CollectiblesMobileShopScreen;
 const Constants = fn(1074);
 ({ Endpoints: closure_16, Routes, UserSettingsSections: closure_17 } = Constants);
-const CollectiblesMarketingsStore = fn(7826);
-const CollectiblesShopHomeStore = fn(7827);
+const CollectiblesMarketingsStore = fn(7829);
+const CollectiblesShopHomeStore = fn(7830);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/CollectiblesActionCreators.tsx");
 
@@ -1067,7 +1067,7 @@ export default { openCollectiblesShop, closeCollectiblesShop, fetchCollectiblesP
 export { openCollectiblesShop };
 export { openCollectiblesShopMobile };
 export const isCollectiblesShopOpen = function isCollectiblesShopOpen() {
-  const rootNavigationRef = isCollectiblesShopRoute(4614).getRootNavigationRef();
+  const rootNavigationRef = isCollectiblesShopRoute(4615).getRootNavigationRef();
   const tmp = null == rootNavigationRef || !rootNavigationRef.isReady();
   let tmp2 = !tmp;
   if (!tmp) {

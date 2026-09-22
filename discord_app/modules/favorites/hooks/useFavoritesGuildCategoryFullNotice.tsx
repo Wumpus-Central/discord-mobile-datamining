@@ -7,7 +7,7 @@ import FavoritesHooks from "../FavoritesHooks.tsx";
 import FavoriteStore from "../FavoriteStore.tsx";
 
 require = fn;
-let closure_4 = fn(2054).FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME;
+let closure_4 = fn(2055).FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME;
 const ChannelTypes = fn(1074).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildCategoryFullNotice.tsx");

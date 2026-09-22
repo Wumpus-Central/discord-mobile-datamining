@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-let createStyles = fn(4756);
+let createStyles = fn(4757);
 const obj2 = {
   model: { color: nativeDefault.colors.TEXT_BRAND },
   subagent: null,
@@ -23,7 +23,7 @@ obj2.tool = { color: nativeDefault.colors.TEXT_MUTED };
 const obj6 = { color: nativeDefault.colors.TEXT_MUTED };
 obj2.delegated = { color: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
 const styles = createStyles.createStyles(obj2);
-createStyles = fn(4756);
+createStyles = fn(4757);
 const obj9 = { model: null, subagent: null, context: null, tool: null, delegated: null };
 const obj7 = { color: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
 obj9.model = { backgroundColor: nativeDefault.colors.TEXT_BRAND };
@@ -36,7 +36,7 @@ obj9.tool = { backgroundColor: nativeDefault.colors.TEXT_MUTED };
 const obj13 = { backgroundColor: nativeDefault.colors.TEXT_MUTED };
 obj9.delegated = { backgroundColor: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
 const styles1 = createStyles.createStyles(obj9);
-createStyles = fn(4756);
+createStyles = fn(4757);
 const obj16 = { dot: { width: 8, height: 8, borderRadius: 4 }, started: null, ok: null, error: null };
 const obj14 = { backgroundColor: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
 obj16.started = { backgroundColor: nativeDefault.colors.STATUS_WARNING };

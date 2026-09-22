@@ -8,7 +8,7 @@ import QuestCustomAppStoreOverlayUtils from "../../utils/QuestCustomAppStoreOver
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestsExperimentLocations = fn(5661).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5663).QuestsExperimentLocations;
 const ComponentActions = fn(1074).ComponentActions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountyPauseAppStoreSheet.tsx");
@@ -80,6 +80,7 @@ export const useBountyPauseAppStoreSheet = function useBountyPauseAppStoreSheet(
       allowExternalOpen: false,
       trackOverlayEvent: null,
       trackOverlaySurfaceClick: null,
+      appStoreOverlayCarouselScrollContext: null,
     };
     const obj3 = bounty(sourceQuestContent[9]);
     obj4.inlineStoreParams = bounty(sourceQuestContent[9]).getInlineStoreParamsFromCta(trackingCtx.cta);
@@ -111,6 +112,7 @@ export const useBountyPauseAppStoreSheet = function useBountyPauseAppStoreSheet(
         overlaySurface,
       });
     };
+    obj4.appStoreOverlayCarouselScrollContext = { adContentId: trackingCtx.id };
     const tmpResult = bounty(sourceQuestContent[9]);
     return obj3.openAppStoreOrUrl(obj4).then((result) => {
       if (result) {

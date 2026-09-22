@@ -4,7 +4,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const obj = {
   resetSilenceWarningOnDeviceChange: false,
-  resetSilenceWarningAfterNMinutes: "PX_16",
+  resetSilenceWarningAfterNMinutes: "flex",
   enableHardwareSilenceWarning: true,
 };
 const obj2 = { name: "2026-02-silence-warning-aggression", kind: "user", defaultConfig: obj, variations: null };

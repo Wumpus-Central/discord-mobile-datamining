@@ -147,7 +147,7 @@ function _trackOnboardingDirectJoin(guildId) {
   obj5.in_onboarding = true;
   obj4.track(constants.GUILD_ONBOARDING_STEP_COMPLETED, obj5);
 }
-let closure_8 = fn(7346).serverApiResponseToClientState;
+let closure_8 = fn(7348).serverApiResponseToClientState;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, Endpoints: c10, GuildFeatures: closure_11 } = Constants);
 const GuildMemberFlags = fn(4382).GuildMemberFlags;

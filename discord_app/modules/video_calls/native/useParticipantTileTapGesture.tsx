@@ -1,5 +1,5 @@
 // discord_app/modules/video_calls/native/useParticipantTileTapGesture.tsx
-import LegacyBaseButton from "../../../../_runtime/06897_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/06899_LegacyBaseButton.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/video_calls/native/useParticipantTileTapGesture.tsx");

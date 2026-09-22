@@ -231,11 +231,11 @@ function ScreenRecordingPip(surveyConfig) {
   const obj3 = require("ReanimatedRexport");
 }
 const View = fn(17).View;
-const useScreenRecordingStore = fn(16263).useScreenRecordingStore;
+const useScreenRecordingStore = fn(16274).useScreenRecordingStore;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let c10 = 100;
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = {
   widgetContainer: { position: "absolute" },
   widget: null,

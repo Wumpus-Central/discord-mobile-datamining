@@ -13,7 +13,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(8122);
+const SearchConstants = fn(8125);
 ({
   MEDIA_NUM_COLUMNS: hasOwnProperty,
   MEDIA_ITEM_GAP_WIDTH: metroRequire,
@@ -22,7 +22,7 @@ const SearchConstants = fn(8122);
 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = {
   container: { zIndex: 1, position: "absolute", width: "100%" },
   recentsContainer: { position: "relative", paddingHorizontal: SEARCH_LIST_HORIZONTAL_PADDING },
@@ -123,5 +123,5 @@ export const RecentsMediaGridPlaceholder = function RecentsMediaGridPlaceholder(
     }),
   ];
   obj2.children = items4;
-  return closure_8(numRows(4492).View, obj2);
+  return closure_8(numRows(4493).View, obj2);
 };

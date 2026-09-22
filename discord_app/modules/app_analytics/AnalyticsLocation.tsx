@@ -622,6 +622,7 @@ export default {
   SOCIAL_LAYER_STOREFRONT: "social layer storefront",
   GIFT_CODE_EMBED: "gift code embed",
   SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED: "slayer storefront product details embed",
+  SLAYER_STOREFRONT_EMBED: "slayer storefront embed",
   SLAYER_STOREFRONT_SHOP_TAB: "slayer storefront shop tab",
   SLAYER_STOREFRONT_VC_GIFTING_PANEL: "slayer storefront vc gifting panel",
   SLAYER_STOREFRONT_NATIVE_GIFT_MODAL: "slayer storefront native gift modal",

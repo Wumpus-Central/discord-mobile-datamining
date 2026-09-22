@@ -9,11 +9,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(5789).NO_MEMBER_VERIFICATION_FORM;
+let closure_8 = fn(5791).NO_MEMBER_VERIFICATION_FORM;
 const VerificationLevels = fn(1074).VerificationLevels;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_12 = createStyles.createStyles({
   container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 16, paddingVertical: 0 },
   submitButton: { marginTop: 12, marginBottom: 12 },
@@ -67,8 +67,8 @@ export default function MemberVerificationForm(guild) {
                   const obj2 = { key: "MEMBER_VERIFICATION_FORM_INCOMPLETE", content: null, icon: null };
                   const intl = closure_1_0(1115).intl;
                   obj2.content = intl.string(closure_1_0(1115).t.StC497);
-                  obj2.icon = closure_1_1(5814);
-                  closure_1_1(4454).open(obj2);
+                  obj2.icon = closure_1_1(5816);
+                  closure_1_1(4455).open(obj2);
                 })();
                 c6 = 3;
                 return { value: "HermesInternal", done: null };

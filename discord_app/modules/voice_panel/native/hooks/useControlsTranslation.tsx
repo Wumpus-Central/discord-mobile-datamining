@@ -5,8 +5,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const MODE_CHANGE_PHYSICS = fn(12526).MODE_CHANGE_PHYSICS;
-const CALL_TILE_GUTTER = fn(12529).CALL_TILE_GUTTER;
+const MODE_CHANGE_PHYSICS = fn(12530).MODE_CHANGE_PHYSICS;
+const CALL_TILE_GUTTER = fn(12533).CALL_TILE_GUTTER;
 const __initData = {
   code: "function useControlsTranslationTsx1(){const{withSpring,wrapperSpecs,MODE_CHANGE_PHYSICS,useReducedMotion,CALL_TILE_GUTTER,viewHeight}=this.__closure;return{transform:[{translateX:withSpring(wrapperSpecs.get().x,MODE_CHANGE_PHYSICS)},{translateY:withSpring(!useReducedMotion.get()&&wrapperSpecs.get().hidden?wrapperSpecs.get().height+CALL_TILE_GUTTER+viewHeight.get():wrapperSpecs.get().y,MODE_CHANGE_PHYSICS)}]};}",
 };

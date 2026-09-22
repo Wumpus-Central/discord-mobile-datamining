@@ -3,7 +3,7 @@ import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import common_AlertDefault from "../../common/Alert.tsx";
 import AVError from "../../../modules/errors/av_errors/AVError.tsx";
-import _modDef18314 from "../../../../_runtime/metro/18314__.js";
+import _modDef18327 from "../../../../_runtime/metro/18327__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -47,7 +47,7 @@ export default function StreamFullAlert(arg0) {
     children: formatToPlainStringResult,
   };
   const tmp6 = common_AlertDefault;
-  items[2] = React4(Image, { source: _modDef18314, style: closure_6.image });
+  items[2] = React4(Image, { source: _modDef18327, style: closure_6.image });
   obj2.children = items;
   return hasOwnProperty(tmp6, obj2);
 }

@@ -37,15 +37,15 @@ class NonGuildVersions {
                 const _isNaN = isNaN;
                 const _Number = Number;
                 if (!isNaN(Number(guildId))) {
-                  const result = closure_1_1(2070).nonGuildVersionsTransaction(database);
+                  const result = closure_1_1(2071).nonGuildVersionsTransaction(database);
                   const obj2 = { id: "initial_guild_id", versionString: guildId };
                   result.put(obj2);
-                  const obj = closure_1_1(2070);
+                  const obj = closure_1_1(2071);
                 }
               }
-              const result1 = closure_1_1(2070).nonGuildVersionsTransaction(database);
+              const result1 = closure_1_1(2071).nonGuildVersionsTransaction(database);
               result1.delete("initial_guild_id");
-              const obj4 = closure_1_1(2070);
+              const obj4 = closure_1_1(2071);
             });
           }
         }, 10 * closure_1(tmp2[6]).Millis.SECOND),
@@ -157,7 +157,7 @@ obj.actions = {
     return obj3.handleConnectionOpen(arg0, arg1);
   },
 };
-const isCacheEnabled = fn(7885);
+const isCacheEnabled = fn(7888);
 if (isCacheEnabled.isCacheEnabled()) {
   SelectedGuildStore.addChangeListener(
     _modDef12.throttle(() => {
@@ -169,15 +169,15 @@ if (isCacheEnabled.isCacheEnabled()) {
             const _isNaN = isNaN;
             const _Number = Number;
             if (!isNaN(Number(guildId))) {
-              const result = closure_1_1(2070).nonGuildVersionsTransaction(database);
+              const result = closure_1_1(2071).nonGuildVersionsTransaction(database);
               const obj2 = { id: "initial_guild_id", versionString: guildId };
               result.put(obj2);
-              const obj = closure_1_1(2070);
+              const obj = closure_1_1(2071);
             }
           }
-          const result1 = closure_1_1(2070).nonGuildVersionsTransaction(database);
+          const result1 = closure_1_1(2071).nonGuildVersionsTransaction(database);
           result1.delete("initial_guild_id");
-          const obj4 = closure_1_1(2070);
+          const obj4 = closure_1_1(2071);
         });
       }
     }, 10 * DurationsDefault.Millis.SECOND),

@@ -79,7 +79,7 @@ const prototype = function SoundboardManager() {
       soundId: closure_129_2,
       userId: closure_129_3,
     } = applyArgumentsResult);
-    return "PX_16";
+    return "flex";
   });
   applyArgumentsResult._playSoundWithListener = function () {
     const self = this;

@@ -17,18 +17,14 @@ const items1 = [
   DisplayNameFont.DisplayNameFont.KALAM,
 ];
 const items2 = [DisplayNameEffect.DisplayNameEffect.GUMMY, DisplayNameEffect.DisplayNameEffect.PRISM];
-const items3 = [
-  1628845, 2417517, 1874155, 12790527, 16521573, 13018645, 695675, 1027403, 747943, 11080677, 14287177, 16332578,
-];
+const items3 = [2417517, 1874155, 12790527, 14287177, 16332578, 13018645];
 const items4 = [
   [2797222, 16762000],
-  [2535780, 9497343],
   [14966527, 2522592],
-  [9452762, 2939534],
   [15709354, 14970082],
   [14631474, 12423167],
+  [2535780, 9497343],
   [16095292, 15031015],
-  [14963742, 6674404],
 ];
 const mapped = items4.map((colors) => ({ colors, name: "" }));
 const items5 = [

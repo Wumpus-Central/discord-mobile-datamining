@@ -106,7 +106,7 @@ let obj = {
   skuId: "123",
   skuProductLine: null,
   skuApplicationId: "r",
-  loadId: "PX_16",
+  loadId: "flex",
   analyticsLocations: null,
   analyticsSourceLocation: null,
   isRedeeming: null,

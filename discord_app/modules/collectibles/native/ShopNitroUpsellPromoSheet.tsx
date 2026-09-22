@@ -24,6 +24,7 @@ export default function ShopNitroUpsellPromoSheet(analyticsLocations) {
   if (analyticsLocations === undefined) {
     analyticsLocations = [];
   }
+  ({ title, description } = analyticsLocations);
   const obj = PremiumUpsellUtils;
   const onViewAllPerks = obj.usePremiumUpsellConfig(
     PremiumFeatureUpsellUtils.getUpsellType(EntitlementFeatureNames.EntitlementFeatureNames.SHOP_MEMBER_PRICING),
@@ -38,14 +39,10 @@ export default function ShopNitroUpsellPromoSheet(analyticsLocations) {
   ));
   const obj3 = {
     illustration: React4(native.DiscountsMegaphoneSpotIllustration, {}),
-    title: null,
-    description: null,
+    title,
+    description,
     actions: null,
   };
-  const intl = util.intl;
-  obj3.title = intl.string(util.t.GZWBoL);
-  const intl2 = util.intl;
-  obj3.description = intl2.string(util.t["2+/rrF"]);
   const obj4 = { children: null };
   const obj5 = { text: null, loading: null, onPress: null, shiny: false };
   const tmp = usePremiumFeatureUpsellGetNitroDefault(
@@ -55,14 +52,14 @@ export default function ShopNitroUpsellPromoSheet(analyticsLocations) {
     undefined,
     analyticsLocations,
   );
-  const intl3 = util.intl;
-  obj5.text = intl3.string(util.t["8x0jKT"]);
+  const intl = util.intl;
+  obj5.text = intl.string(util.t["8x0jKT"]);
   obj5.loading = loading;
   obj5.onPress = onPress;
   const items = [React4(NitroUpsellButtonDefault, obj5)];
   const obj6 = { size: "lg", variant: "secondary", text: null, onPress: null };
-  const intl4 = util.intl;
-  obj6.text = intl4.string(util.t.PcTCB7);
+  const intl2 = util.intl;
+  obj6.text = intl2.string(util.t.PcTCB7);
   obj6.onPress = onViewAllPerks;
   items[1] = React4(components_Button_Button.Button, obj6);
   obj4.children = items;

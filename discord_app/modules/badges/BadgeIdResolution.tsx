@@ -38,6 +38,6 @@ export const toProfileBadgeLegacyId = function toProfileBadgeLegacyId(badge_id) 
   }
   return value;
 };
-export const isLegacyBadgeId = function isLegacyBadgeId(arg0) {
-  return set.has(arg0);
+export const isLegacyBadgeId = function isLegacyBadgeId(badge_id) {
+  return set.has(badge_id);
 };

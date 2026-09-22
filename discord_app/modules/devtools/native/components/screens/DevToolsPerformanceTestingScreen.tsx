@@ -9,7 +9,7 @@ const require = globalThis.__r;
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16 },
 };
@@ -31,10 +31,10 @@ export default noop.memo(function DevToolsPerformanceTestingScreen() {
   obj4.children = entries.map((item) => {
     [tmp] = item;
     return jsx(
-      screenKey(5822).TableRow,
+      screenKey(5824).TableRow,
       {
         label: tmp2,
-        icon: jsx(screenKey(5822).TableRow.Icon, { IconComponent: tmp3 }),
+        icon: jsx(screenKey(5824).TableRow.Icon, { IconComponent: tmp3 }),
         arrow: true,
         onPress() {
           if (null != screenKey.push) {

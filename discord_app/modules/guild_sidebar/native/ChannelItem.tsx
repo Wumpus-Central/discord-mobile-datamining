@@ -6,7 +6,7 @@ import utils_ChannelUtils from "../../../utils/native/ChannelUtils.tsx";
 import BookCheckIcon2 from "../../../design/components/Icon/native/redesign/generated/BookCheckIcon.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import BaseChannelItem from "BaseChannelItem.tsx";
-import _modDef16456 from "../../../../_runtime/metro/16456__.js";
+import _modDef16467 from "../../../../_runtime/metro/16467__.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import PresenceStore from "../../../stores/PresenceStore.tsx";
@@ -63,7 +63,7 @@ function ChannelIcon(arg0) {
       }
     }
     if (tmp2) {
-      let tmp12 = _modDef16456;
+      let tmp12 = _modDef16467;
       let BookCheckIcon = BookCheckIcon2.BookCheckIcon;
       let tmp9 = require;
     } else {
@@ -87,7 +87,7 @@ function ChannelIcon(arg0) {
       obj19 = {};
     }
     const merged = Object.assign(obj19);
-    return map1(tmp9(12633).BaseChannelIcon, obj10);
+    return map1(tmp9(12637).BaseChannelIcon, obj10);
   }
 }
 function DMChannelIcon(userId) {
@@ -133,14 +133,14 @@ const View = fn(17).View;
 const Constants = fn(1074);
 const ChannelTypes = Constants.ChannelTypes;
 const Routes = Constants.Routes;
-const StaticChannelRoute = fn(2048).StaticChannelRoute;
-const UnreadSetting = fn(4938).UnreadSetting;
+const StaticChannelRoute = fn(2049).StaticChannelRoute;
+const UnreadSetting = fn(4939).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let items = [,];
 ({ GUILD_VOICE: arr[0], GUILD_STAGE_VOICE: arr[1] } = ChannelTypes);
 const set = new Set(items);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj = {
   channelIconLive: { tintColor: nativeDefault.unsafe_rawColors.GREEN_360 },
   dmAvatar: { marginRight: 8 },
@@ -154,9 +154,9 @@ obj.avatarStatus = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }
 obj.groupDmAvatar = { width: 20, height: 20, borderRadius: 10, marginRight: 8 };
 obj.channelInfoContainer = { paddingStart: 4 };
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj.avatarStatusSelected = { backgroundColor: fn(5658).DARK_393C42_LIGHT_DEE0E4 };
+obj.avatarStatusSelected = { backgroundColor: fn(5660).DARK_393C42_LIGHT_DEE0E4 };
 let closure_16 = createStyles.createStyles(obj);
-let obj5 = { backgroundColor: fn(5658).DARK_393C42_LIGHT_DEE0E4 };
+let obj5 = { backgroundColor: fn(5660).DARK_393C42_LIGHT_DEE0E4 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/ChannelItem.tsx");
 

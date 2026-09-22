@@ -27,7 +27,7 @@ export default function GuildSettingsModal() {
   let tmp2 = require("useInitialValue")(() => GuildSettingsStore.getGuildId());
   importDefault = tmp2;
   const items = [GuildStore];
-  stateFromStores = bottom(stateFromStores[54]).useStateFromStores(items, () => GuildStore.getGuild(closure_1));
+  stateFromStores = bottom(stateFromStores[55]).useStateFromStores(items, () => GuildStore.getGuild(closure_1));
   const items1 = [bottom, tmp2];
   const memo = noop.useMemo(() => {
     let tmp2;
@@ -419,6 +419,15 @@ export default function GuildSettingsModal() {
         return jsx(closure_1(stateFromStores[51]), { guildId });
       };
       obj3[constants.OFFICIAL_MESSAGES] = obj46;
+      const obj47 = { title: null, render: null };
+      const intl40 = util.intl;
+      obj47.title = intl40.string(util.t.OBskVU);
+      obj47.render = function render() {
+        obj = {};
+        const merged = Object.assign(obj);
+        return jsx(closure_1(stateFromStores[52]), {});
+      };
+      obj3[constants.GUILD_SPACE] = obj47;
       tmp2 = obj3;
       let obj = { contentContainerStyle: null };
     }
@@ -449,7 +458,7 @@ export default function GuildSettingsModal() {
     }
     obj2.initialRouteState = tmp13;
     obj2.screens = memo;
-    tmp10Result = jsx(bottom(stateFromStores[55]).Navigator, { onWillFocus: tmp8, initialRouteName: null, initialRouteState: null, screens: null });
+    tmp10Result = jsx(bottom(stateFromStores[56]).Navigator, { onWillFocus: tmp8, initialRouteName: null, initialRouteState: null, screens: null });
   }
   return tmp10Result;
 };

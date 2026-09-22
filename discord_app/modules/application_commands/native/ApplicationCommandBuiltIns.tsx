@@ -11,8 +11,8 @@ let obj = {
   untranslatedName: "leave",
   displayName: "leave",
   type: fn(1978).ApplicationCommandType.CHAT,
-  inputType: fn(7765).ApplicationCommandInputType.BUILT_IN,
-  applicationId: fn(5210).BuiltInSectionId.BUILT_IN,
+  inputType: fn(7768).ApplicationCommandInputType.BUILT_IN,
+  applicationId: fn(5211).BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj, "untranslatedDescription", {
   get: () => {
@@ -35,10 +35,10 @@ obj.predicate = function predicate(channel) {
 obj.execute = function execute(arg0, channel) {
   channel = channel.channel;
   if (null != channel) {
-    const channelName = channel(4909).computeChannelName(channel, UserStore, RelationshipStore);
+    const channelName = channel(4910).computeChannelName(channel, UserStore, RelationshipStore);
     const intl5 = channel(1115).intl;
     let obj2 = { name: channelName };
-    const obj5 = channel(4909);
+    const obj5 = channel(4910);
     const intl6 = channel(1115).intl;
     const obj4 = { name: channelName };
     let formatResult = intl6.format(channel(1115).t.SSIVOu, obj4);

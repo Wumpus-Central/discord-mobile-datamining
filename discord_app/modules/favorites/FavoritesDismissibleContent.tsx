@@ -12,18 +12,18 @@ import noop from "../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const ContentDismissActionType = fn(2038).ContentDismissActionType;
+const ContentDismissActionType = fn(2039).ContentDismissActionType;
 let items = [
-  fn(2027).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO,
-  fn(2027).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM,
-  fn(2027).DismissibleContent.FAVORITES_GUILD_NEW_BADGE,
-  fn(2027).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS,
+  fn(2028).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO,
+  fn(2028).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM,
+  fn(2028).DismissibleContent.FAVORITES_GUILD_NEW_BADGE,
+  fn(2028).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS,
 ];
 const items1 = [
-  fn(2027).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO,
-  fn(2027).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM,
+  fn(2028).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO,
+  fn(2028).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM,
 ];
-const items2 = [fn(2027).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
+const items2 = [fn(2028).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/FavoritesDismissibleContent.tsx");
 

@@ -362,7 +362,7 @@ let num = 170;
 if (PixelRatio.getFontScale() >= 1.78) {
   num = 302;
 }
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj = {
   card: null,
   topRowOverlay: null,

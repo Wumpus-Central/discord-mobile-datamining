@@ -53,7 +53,7 @@ let closure_11 = async function _createStageChannelForEvent(arg0) {
           closure_131_4 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -250,10 +250,10 @@ let closure_14 = async function _setEventAsActive(arg0) {
     flag = false;
   }
   closure_130_1 = flag;
-  return "PX_16";
+  return "flex";
 };
-let closure_4 = fn(2045).createChannelRecordFromServer;
-const GuildScheduledEventsConstants = fn(2047);
+let closure_4 = fn(2046).createChannelRecordFromServer;
+const GuildScheduledEventsConstants = fn(2048);
 ({ GuildScheduledEventEntityTypes: closure_7, GuildScheduledEventPrivacyLevel: closure_8 } =
   GuildScheduledEventsConstants);
 const ChannelTypes = fn(1074).ChannelTypes;

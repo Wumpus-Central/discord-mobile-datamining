@@ -4,7 +4,6 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 import DiscordNativeDefault from "../../lib/DiscordNative.tsx";
-import ClipsSession from "ClipsSession.tsx";
 import clipPOVOverlap from "clipPOVOverlap.tsx";
 import DistributedClipsExperimentDefault from "DistributedClipsExperiment.tsx";
 import AutoclippingDefaultOverrideExperiment2 from "AutoclippingDefaultOverrideExperiment.tsx";
@@ -240,7 +239,7 @@ function trackClipMessage(message) {
   }
   obj = DistributedClipsExperimentDefault;
 }
-const ClipsConstants = fn(5348);
+const ClipsConstants = fn(5350);
 ({
   CLIPS_HARDWARE_CLASSIFICATION_VERSION: metroRequire,
   ClipSaveTypes: closure_7,
@@ -254,7 +253,7 @@ const ClipsConstants = fn(5348);
 } = ClipsConstants);
 const Constants = fn(1074);
 ({ MessageAttachmentFlags: map1, MessageReferenceTypes: closure_14, VoiceFlags: closure_15 } = Constants);
-const StreamSettingsConstants = fn(4803);
+const StreamSettingsConstants = fn(4804);
 let c16 = "default";
 let c17 = "Discord Clips";
 const dependencyMap = {};
@@ -288,7 +287,7 @@ let obj = {
   maxAutoClips: 20,
   clipSignals: { enableDistributedSignals: true, enableGameSignals: true },
   debugTooltipsEnabled: false,
-  enableAutoclipping: "PX_16",
+  enableAutoclipping: "flex",
   showPovClipsInGallery: true,
 };
 obj = {
@@ -344,17 +343,6 @@ prototype["getClipCandidates"] = function getClipCandidates() {
 };
 prototype["getPendingMontageClips"] = function getPendingMontageClips() {
   return closure_20;
-};
-prototype["getClipCandidateById"] = function getClipCandidateById(arg0) {
-  const iter = getKnownSessions()[Symbol.iterator]();
-  const tmp = getKnownSessions();
-  while (iter !== undefined) {
-    let candidate = nextResult.getCandidate(arg0);
-    if (null != candidate) {
-      iter.return();
-      return candidate;
-    }
-  }
 };
 prototype["getUserAgnosticState"] = function getUserAgnosticState() {
   return obj;
@@ -762,13 +750,11 @@ const clipsStoreClass = new ClipsStoreClass(DispatcherDefault, {
       c24 = null;
     }
   },
-  CLIPS_SESSION_START: function handleClipsSessionStart(arg0) {
-    ({ sessionId, gameId } = arg0);
-    if (_null != null) {
-      _null.end();
+  CLIPS_SESSION_START: function handleClipsSessionStart(session) {
+    if (session != null) {
+      session.end();
     }
-    const clipsSession = new ClipsSession.ClipsSession(sessionId, gameId);
-    _null = clipsSession;
+    session = session.session;
   },
   CLIPS_SESSION_STOP: function handleClipsSessionStop() {
     if (null == _null) {
@@ -824,11 +810,7 @@ const clipsStoreClass = new ClipsStoreClass(DispatcherDefault, {
   CLIPS_UPDATE_METADATA: function handleClipMetadataUpdate(clip) {
     clip = clip.clip;
     if (clip.isCandidate) {
-      const tmp5 = getKnownSessions();
-      for (const item10017 of tmp5) {
-        let updateCandidateResult = item10017.updateCandidate(clip);
-        continue;
-      }
+      return false;
     } else {
       closure_18[clip.id] = clip;
       if (null != clip.remoteClipId) {

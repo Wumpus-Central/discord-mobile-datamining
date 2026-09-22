@@ -10,11 +10,11 @@ const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
+({ View: hasOwnProperty, Pressable: metroRequire, StyleSheet } = get_ActivityIndicator);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4756);
+({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
+const createStyles = fn(4757);
 let obj2 = {
   body: {
     paddingVertical: nativeDefault.space.PX_12,
@@ -31,8 +31,11 @@ let obj2 = {
   optionContainer: null,
   swatchWrapper: null,
   pressable: null,
-  selected: null,
+  selectedRing: null,
   option: null,
+  checkmarkOverlay: null,
+  checkmark: null,
+  resetButtonContainer: null,
 };
 let obj3 = {
   paddingVertical: nativeDefault.space.PX_12,
@@ -76,26 +79,38 @@ let obj5 = {
   borderRadius: nativeDefault.radii.round,
   borderWidth: 1,
 };
-obj2.optionContainer = { flexDirection: "row", flexWrap: "wrap", paddingHorizontal: nativeDefault.space.PX_4 };
-obj2.swatchWrapper = { width: "25%", padding: 2 };
-let obj6 = { flexDirection: "row", flexWrap: "wrap", paddingHorizontal: nativeDefault.space.PX_4 };
-obj2.pressable = {
-  height: 40,
-  borderRadius: nativeDefault.radii.sm,
-  overflow: "hidden",
-  borderWidth: 2,
-  borderColor: "transparent",
+obj2.optionContainer = {
+  flexDirection: "row",
+  flexWrap: "wrap",
+  paddingHorizontal: nativeDefault.space.PX_4,
+  rowGap: nativeDefault.space.PX_16,
 };
-let obj7 = {
-  height: 40,
-  borderRadius: nativeDefault.radii.sm,
-  overflow: "hidden",
-  borderWidth: 2,
-  borderColor: "transparent",
+let obj6 = {
+  flexDirection: "row",
+  flexWrap: "wrap",
+  paddingHorizontal: nativeDefault.space.PX_4,
+  rowGap: nativeDefault.space.PX_16,
 };
-obj2.selected = { borderColor: nativeDefault.colors.BACKGROUND_BRAND };
+obj2.swatchWrapper = { width: "33.333%", paddingHorizontal: nativeDefault.space.PX_4 };
+let obj7 = { width: "33.333%", paddingHorizontal: nativeDefault.space.PX_4 };
+obj2.pressable = { height: 40, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
+let obj9 = {};
+const merged = Object.assign(StyleSheet.absoluteFillObject);
+obj9.borderRadius = nativeDefault.radii.sm;
+obj9.borderWidth = 2;
+obj9.borderColor = nativeDefault.colors.BACKGROUND_BRAND;
+obj2.selectedRing = obj9;
 obj2.option = { flex: 1 };
-let closure_10 = createStyles.createStyles(obj2);
+const obj10 = {};
+const merged1 = Object.assign(StyleSheet.absoluteFillObject);
+obj10.alignItems = "center";
+obj10.justifyContent = "center";
+obj2.checkmarkOverlay = obj10;
+const size1 = { width: fn(15634).CHECKMARK_SIZE, height: fn(15634).CHECKMARK_SIZE };
+obj2.checkmark = size1;
+let obj8 = { height: 40, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
+obj2.resetButtonContainer = { alignSelf: "stretch", flexDirection: "row", marginHorizontal: nativeDefault.space.PX_8 };
+let closure_11 = createStyles.createStyles(obj2);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesGradientPickerSheet.tsx");
 
@@ -103,19 +118,19 @@ export default function DisplayNameStylesColorPickerSheet(selectedColors) {
   ({ selectedEffectId, onSelectColors } = selectedColors);
   let displayNameStylesEffectConfig;
   let colors;
-  let tmp = closure_10();
+  let tmp = closure_11();
   importDefault = tmp;
-  displayNameStylesEffectConfig = onSelectColors(displayNameStylesEffectConfig[7]).useDisplayNameStylesEffectConfig(
+  displayNameStylesEffectConfig = onSelectColors(displayNameStylesEffectConfig[8]).useDisplayNameStylesEffectConfig(
     selectedEffectId,
   );
-  let obj = onSelectColors(displayNameStylesEffectConfig[7]);
-  const effectColorCount = onSelectColors(displayNameStylesEffectConfig[8]).getEffectColorCount(selectedEffectId);
+  let obj = onSelectColors(displayNameStylesEffectConfig[8]);
+  const effectColorCount = onSelectColors(displayNameStylesEffectConfig[9]).getEffectColorCount(selectedEffectId);
   const arr = require("useColorPresetsWithA11yLabels")(selectedEffectId);
   const tmp4 = arr(colors.useState(selectedColors.selectedColors), 2);
   colors = tmp4[0];
   closure_5 = tmp4[1];
   let items = [colors, onSelectColors];
-  const items1 = [arr, displayNameStylesEffectConfig.defaultColors];
+  let items1 = [arr, displayNameStylesEffectConfig.defaultColors];
   const callback = colors.useCallback(() => {
     const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
     onSelectColors(colors);
@@ -142,13 +157,13 @@ export default function DisplayNameStylesColorPickerSheet(selectedColors) {
     if (num == null) {
       num = 0;
     }
-    closure_1(displayNameStylesEffectConfig[13])(
+    closure_1(displayNameStylesEffectConfig[14])(
       {
         color: num,
         onSelect(arg0) {
           closure_0 = arg0;
-          const result = onSelectColors(displayNameStylesEffectConfig[10]).triggerHapticFeedback(
-            onSelectColors(displayNameStylesEffectConfig[10]).HapticFeedbackTypes.IMPACT_MEDIUM,
+          const result = onSelectColors(displayNameStylesEffectConfig[11]).triggerHapticFeedback(
+            onSelectColors(displayNameStylesEffectConfig[11]).HapticFeedbackTypes.IMPACT_MEDIUM,
           );
           closure_1_5((arr) =>
             arr.map((item, index) => {
@@ -171,18 +186,18 @@ export default function DisplayNameStylesColorPickerSheet(selectedColors) {
   }, []);
   let obj3 = { header: null, children: null };
   let obj4 = { title: displayNameStylesEffectConfig.name, trailing: null };
-  let obj2 = onSelectColors(displayNameStylesEffectConfig[8]);
-  const obj5 = { variant: "primary", size: "sm", text: null, onPress: null };
-  let intl = onSelectColors(displayNameStylesEffectConfig[17]).intl;
-  obj5.text = intl.string(onSelectColors(displayNameStylesEffectConfig[17]).t.XqMe3N);
+  let obj2 = onSelectColors(displayNameStylesEffectConfig[9]);
+  let obj5 = { variant: "primary", size: "sm", text: null, onPress: null };
+  let intl = onSelectColors(displayNameStylesEffectConfig[18]).intl;
+  obj5.text = intl.string(onSelectColors(displayNameStylesEffectConfig[18]).t.XqMe3N);
   obj5.onPress = callback;
-  obj4.trailing = closure_8(onSelectColors(displayNameStylesEffectConfig[16]).Button, obj5);
+  obj4.trailing = closure_8(onSelectColors(displayNameStylesEffectConfig[17]).Button, obj5);
   obj3.header = closure_8(require("DisplayNameStylesSheetHeader"), obj4);
-  const obj6 = { style: tmp.body, children: null };
-  const obj7 = { style: tmp.gradientContainer, children: null };
-  const obj8 = { style: tmp.gradient, colors: null, start: null, end: null };
+  let obj6 = { style: tmp.body, children: null };
+  let obj7 = { style: tmp.gradientContainer, children: null };
+  let obj8 = { style: tmp.gradient, colors: null, start: null, end: null };
   const tmp7 = require("DisplayNameStylesSheetHeader");
-  obj8.colors = colors.map((item) => onSelectColors(displayNameStylesEffectConfig[19]).int2hex(item));
+  obj8.colors = colors.map((item) => onSelectColors(displayNameStylesEffectConfig[20]).int2hex(item));
   obj8.start = { x: 0, y: 0 };
   obj8.end = { x: 1, y: 0 };
   const items3 = [closure_8(require("LinearGradient"), obj8)];
@@ -199,11 +214,11 @@ export default function DisplayNameStylesColorPickerSheet(selectedColors) {
       accessibilityRole: "button",
       children: null,
     };
-    const intl = onSelectColors(displayNameStylesEffectConfig[17]).intl;
-    obj.accessibilityLabel = intl.formatToPlainString(onSelectColors(displayNameStylesEffectConfig[17]).t.n5Ve0L, {
+    const intl = onSelectColors(displayNameStylesEffectConfig[18]).intl;
+    obj.accessibilityLabel = intl.formatToPlainString(onSelectColors(displayNameStylesEffectConfig[18]).t.n5Ve0L, {
       number: index + 1,
     });
-    obj.children = closure_1_8(onSelectColors(displayNameStylesEffectConfig[20]).EyeDropperIcon, {
+    obj.children = closure_1_8(onSelectColors(displayNameStylesEffectConfig[21]).EyeDropperIcon, {
       color: "white",
       size: "sm",
     });
@@ -217,15 +232,10 @@ export default function DisplayNameStylesColorPickerSheet(selectedColors) {
     style: tmp.optionContainer,
     children: arr.map((accessibilityLabel, index) => {
       colors = accessibilityLabel.colors;
-      const isEqualResult = closure_1(displayNameStylesEffectConfig[21]).isEqual(colors, first);
+      let isEqualResult = closure_1(displayNameStylesEffectConfig[22]).isEqual(colors, first);
       const obj2 = { style: closure_1.swatchWrapper, children: null };
-      const items = [closure_1.pressable];
-      let selected = isEqualResult;
-      if (isEqualResult) {
-        selected = closure_1.selected;
-      }
       const obj3 = {
-        style: items,
+        style: closure_1.pressable,
         onPress() {
           return closure_7(colors);
         },
@@ -234,23 +244,37 @@ export default function DisplayNameStylesColorPickerSheet(selectedColors) {
         accessibilityLabel: accessibilityLabel.a11yLabel,
         children: null,
       };
-      items[1] = selected;
       const obj4 = { style: closure_1.option, colors: null, start: null, end: null };
-      const obj = closure_1(displayNameStylesEffectConfig[21]);
-      obj4.colors = colors.map((item) => colors(displayNameStylesEffectConfig[19]).int2hex(item));
+      const obj = closure_1(displayNameStylesEffectConfig[22]);
+      obj4.colors = colors.map((item) => colors(displayNameStylesEffectConfig[20]).int2hex(item));
       obj4.start = { x: 0, y: 0 };
       obj4.end = { x: 1, y: 0 };
-      obj3.children = closure_1_8(closure_1(displayNameStylesEffectConfig[18]), obj4);
-      obj2.children = closure_1_8(onSelectColors(displayNameStylesEffectConfig[22]).PressableOpacity, obj3);
+      const items = [closure_1_8(closure_1(displayNameStylesEffectConfig[19]), obj4)];
+      if (isEqualResult) {
+        const obj5 = { children: null };
+        const obj6 = { style: closure_1.selectedRing, pointerEvents: "none" };
+        const items1 = [closure_1_8(closure_5, obj6)];
+        const obj7 = { style: closure_1.checkmarkOverlay, pointerEvents: "none", children: null };
+        const obj8 = { size: "custom", style: closure_1.checkmark, color: "white" };
+        obj7.children = closure_1_8(onSelectColors(displayNameStylesEffectConfig[24]).CheckmarkLargeIcon, obj8);
+        items1[1] = closure_1_8(closure_5, obj7);
+        obj5.children = items1;
+        isEqualResult = closure_1_9(closure_1_10, obj5);
+      }
+      items[1] = isEqualResult;
+      obj3.children = items;
+      obj2.children = closure_1_9(onSelectColors(displayNameStylesEffectConfig[23]).PressableOpacity, obj3);
       return closure_1_8(closure_5, obj2, index);
     }),
   });
-  const obj11 = { text: null, onPress: null, variant: "secondary" };
-  const intl2 = onSelectColors(displayNameStylesEffectConfig[17]).intl;
-  obj11.text = intl2.string(onSelectColors(displayNameStylesEffectConfig[17]).t.yBZMsQ);
-  obj11.onPress = callback1;
-  items4[2] = closure_8(onSelectColors(displayNameStylesEffectConfig[16]).Button, obj11);
+  const obj11 = { style: tmp.resetButtonContainer, children: null };
+  const obj12 = { text: null, onPress: null, variant: "secondary", size: "md", grow: true };
+  const intl2 = onSelectColors(displayNameStylesEffectConfig[18]).intl;
+  obj12.text = intl2.string(onSelectColors(displayNameStylesEffectConfig[18]).t.yBZMsQ);
+  obj12.onPress = callback1;
+  obj11.children = closure_8(onSelectColors(displayNameStylesEffectConfig[17]).Button, obj12);
+  items4[2] = closure_8(closure_5, obj11);
   obj6.children = items4;
   obj3.children = closure_9(closure_5, obj6);
-  return closure_8(onSelectColors(displayNameStylesEffectConfig[14]).BottomSheet, obj3);
+  return closure_8(onSelectColors(displayNameStylesEffectConfig[15]).BottomSheet, obj3);
 }

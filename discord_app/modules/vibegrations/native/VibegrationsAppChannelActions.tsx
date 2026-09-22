@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_7 = createStyles.createStyles({
   actionWrapper: { flexShrink: 0, flexDirection: "row", alignItems: "center" },
 });
@@ -27,8 +27,8 @@ export default function VibegrationsAppChannelActions(channel) {
     items1,
   );
   const obj = channel(504);
-  ({ mentionCount, badge } = stateFromStores(13559)(channel.id));
-  stateFromStores(13560)(channel, stateFromStores);
+  ({ mentionCount, badge } = stateFromStores(13567)(channel.id));
+  stateFromStores(13568)(channel, stateFromStores);
   let tmp8 = null;
   if (!stateFromStores) {
     tmp8 = badge;
@@ -49,7 +49,7 @@ export default function VibegrationsAppChannelActions(channel) {
   if (!stateFromStores) {
     const obj4 = {
       source: null,
-      IconComponent: tmp2(10437).RetryIcon,
+      IconComponent: tmp2(10443).RetryIcon,
       onPress() {
         const tmp = restartVibegrationsAppFramesDefault;
         return tmp(VibegrationsUtils.vibegrationsAppIdFromTopic(channel.topic));
@@ -58,15 +58,15 @@ export default function VibegrationsAppChannelActions(channel) {
     };
     const intl3 = tmp2(1115).intl;
     obj4.accessibilityLabel = intl3.string(tmp5(3678).xKexN1);
-    tmp14 = closure_5(tmp5(13561), obj4);
-    const tmp5Result3 = tmp5(13561);
+    tmp14 = closure_5(tmp5(13569), obj4);
+    const tmp5Result3 = tmp5(13569);
   }
   const items3 = [tmp14];
-  const tmp6 = stateFromStores(13559)(channel.id);
+  const tmp6 = stateFromStores(13567)(channel.id);
   if (stateFromStores) {
-    let ChatIcon = tmp2(5278).AppsIcon;
+    let ChatIcon = tmp2(5280).AppsIcon;
   } else {
-    ChatIcon = tmp2(5289).ChatIcon;
+    ChatIcon = tmp2(5291).ChatIcon;
   }
   const obj5 = {
     noMargin: true,
@@ -86,7 +86,7 @@ export default function VibegrationsAppChannelActions(channel) {
     StringResult = String(mentionCount);
   }
   obj5.buttonText = StringResult;
-  items3[1] = closure_5(stateFromStores(13561), obj5);
+  items3[1] = closure_5(stateFromStores(13569), obj5);
   obj3.children = items3;
   return closure_6(View, obj3);
 }

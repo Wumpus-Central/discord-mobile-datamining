@@ -55,7 +55,7 @@ let closure_4 = async function _stageAttachmentFiles() {
   }
   closure_131_1 = flag;
   closure_131_2 = closure_2;
-  return "PX_16";
+  return "flex";
 };
 const AbortCodes = fn(1074).AbortCodes;
 const size = fn(2);

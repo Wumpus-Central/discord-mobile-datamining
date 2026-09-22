@@ -32,6 +32,28 @@ const items1 = [
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesUtils.tsx");
 
+export const isSolidPresetColor = function isSolidPresetColor(arg0, arg1) {
+  closure_0 = arg0;
+  return React6(arg1).some((item) => item[0] === closure_0);
+};
+export const resolveSolidColor = function resolveSolidColor(arg0, arg1, arg2) {
+  let tmp = arg1;
+  if (arg0 === arg1) {
+    tmp = arg0;
+  } else {
+    closure_0 = arg0;
+    React6(arg2);
+  }
+  return tmp;
+};
+export const resolveSolidPresetSeed = function resolveSolidPresetSeed(selectedColor, selectedEffectId) {
+  let first = selectedColor;
+  closure_0 = selectedColor;
+  if (!obj.some((item) => item[0] === closure_0)) {
+    first = React6(selectedEffectId)[0][0];
+  }
+  return first;
+};
 export const getEffectColorCount = function getEffectColorCount(effectId) {
   if (DisplayNameEffect.DisplayNameEffect.GRADIENT === effectId) {
     return 2;

@@ -1,7 +1,7 @@
 // discord_app/modules/premium/native/PremiumPlanSelectYearlyUpsellModal.tsx
 import common_AlertDefault from "../../../components_native/common/Alert.tsx";
 import TextStylesDefault from "../../rebrand/native/TextStyles.tsx";
-import _modDef13817 from "../../../../_runtime/metro/13817__.js";
+import _modDef13825 from "../../../../_runtime/metro/13825__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
@@ -10,11 +10,11 @@ import IAPStore from "../../../stores/native/IAPStore.android.tsx";
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const usePremiumPlanSelectStore = fn(13807).usePremiumPlanSelectStore;
+const usePremiumPlanSelectStore = fn(13815).usePremiumPlanSelectStore;
 let closure_10 = fn(1374).PREMIUM_YEARLY_DISCOUNT_PERCENT;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = {
   container: { marginHorizontal: 26 },
   image: { alignSelf: "center", marginVertical: 32 },
@@ -29,13 +29,13 @@ const merged = Object.assign(TextStylesDefault(fn(1085).Fonts.DISPLAY_EXTRABOLD,
 obj3.alignSelf = "center";
 obj3.textAlign = "center";
 obj3.paddingBottom = 8;
-obj3.color = fn(5658).DARK_WHITE_500_LIGHT_BLACK_500;
+obj3.color = fn(5660).DARK_WHITE_500_LIGHT_BLACK_500;
 obj2.header = obj3;
 obj2.description = {
   alignSelf: "center",
   textAlign: "center",
   paddingBottom: 32,
-  color: fn(5658).DARK_WHITE_500_LIGHT_BLACK_500,
+  color: fn(5660).DARK_WHITE_500_LIGHT_BLACK_500,
 };
 obj2.upsellButton = { marginBottom: 16 };
 obj2.continueButton = { marginBottom: 4 };
@@ -54,8 +54,8 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
   [tmp4, c3] = noop.useState(null);
   const obj = noop;
   const tmp3 = _slicedToArray(noop.useState(null), 2);
-  const premiumBundledItemsFromProductId = productId(7651).getPremiumBundledItemsFromProductId(productId);
-  const obj2 = productId(7651);
+  const premiumBundledItemsFromProductId = productId(7654).getPremiumBundledItemsFromProductId(productId);
+  const obj2 = productId(7654);
   let items = [LocaleStore];
   const stateFromStores = productId(504).useStateFromStores(items, () => locale.locale);
   const obj3 = productId(504);
@@ -94,13 +94,13 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
     const obj6 = { style: tmp.container, children: null };
     const obj7 = { style: tmp.image, source: null };
     const tmp5Result = productId(1881);
-    obj7.source = _modDef13817;
+    obj7.source = _modDef13825;
     const items2 = [closure_11(closure_5, obj7), , , , ,];
     const obj8 = { style: tmp.header, accessibilityRole: "header", children: null };
     const intl = productId(1115).intl;
     const obj9 = { discountPercentage: formatPercentResult, planName: null };
     const tmp19 = common_AlertDefault;
-    obj9.planName = productId(4414).getPremiumTypeDisplayName(premiumTier);
+    obj9.planName = productId(4415).getPremiumTypeDisplayName(premiumTier);
     obj8.children = intl.format(productId(1115).t.LQCVfK, obj9);
     items2[1] = closure_11(productId(1177).LegacyText, obj8);
     const obj10 = { style: tmp.description, children: null };
@@ -119,7 +119,7 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
     };
     obj13.disabled = tmp11;
     obj13.loading = "upsell" === tmp4 && tmp2;
-    obj12.children = closure_11(productId(5186).Button, obj13);
+    obj12.children = closure_11(productId(5187).Button, obj13);
     items2[3] = closure_11(closure_6, obj12);
     const obj15 = { style: tmp.continueButton, children: null };
     const obj16 = { variant: "secondary", text: null, onPress: null, disabled: null, loading: null };
@@ -131,14 +131,14 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
     };
     obj16.disabled = tmp11;
     obj16.loading = "default" === tmp4 && tmp2;
-    obj15.children = closure_11(productId(5186).Button, obj16);
+    obj15.children = closure_11(productId(5187).Button, obj16);
     items2[4] = closure_11(closure_6, obj15);
     const obj17 = { style: tmp.cancelButton, children: null };
     const obj18 = { variant: "tertiary", text: null, onPress: null };
     const intl5 = productId(1115).intl;
     obj18.text = intl5.string(productId(1115).t.cpT0Cq);
     obj18.onPress = onClose;
-    obj17.children = closure_11(productId(5186).Button, obj18);
+    obj17.children = closure_11(productId(5187).Button, obj18);
     items2[5] = closure_11(closure_6, obj17);
     obj6.children = items2;
     obj5.children = closure_12(closure_6, obj6);

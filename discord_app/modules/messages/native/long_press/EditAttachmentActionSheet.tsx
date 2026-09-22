@@ -16,7 +16,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import MessageStore from "../../../../stores/MessageStore.tsx";
 
 require = fn;
-let closure_7 = fn(4749).LEGACY_SPOILER_ATTACHMENT_PREFIX;
+let closure_7 = fn(4750).LEGACY_SPOILER_ATTACHMENT_PREFIX;
 const MessageAttachmentFlags = fn(1074).MessageAttachmentFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -147,7 +147,7 @@ export default function EditAttachmentActionSheet(arg0) {
   const tmp7Result3 = first1(first2.useState(false), 2);
   first2 = tmp7Result3[0];
   closure_6 = tmp7Result3[1];
-  const tmp5 = attachment(8537)(attachment);
+  const tmp5 = attachment(8541)(attachment);
   [tmp17, c7] = first1(first2.useState(), 2);
   let intl = util.intl;
   let stringResult = intl.string(util.t.Y8ujqr);

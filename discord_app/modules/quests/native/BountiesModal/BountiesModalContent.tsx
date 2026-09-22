@@ -562,8 +562,8 @@ function BountiesModalContentWithAppStore(arg0) {
   return closure_16(height(sharedValue[40]).BountyVideoEndAppStoreProvider, obj3);
 }
 const View = fn(17).View;
-const QuestsExperimentLocations = fn(5661).QuestsExperimentLocations;
-const BountiesModalConstants = fn(15284);
+const QuestsExperimentLocations = fn(5663).QuestsExperimentLocations;
+const BountiesModalConstants = fn(15291);
 ({ getBountyVideoEndAppStoreSheetHeight: closure_9, getBountyVideoEndPeekTargetScale: c10 } = BountiesModalConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, ComponentActions: closure_12 } = Constants);
@@ -572,7 +572,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
 let c17 = 0.5625;
 const initialProgress = { timestampSec: 0, maxTimestampSec: 0, duration: 0 };
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_19 = createStyles.createStyles(() => {
   const obj = {
     videoWrapper: { position: "absolute" },

@@ -15,8 +15,11 @@ const experiment = createExperiment.createExperiment(obj);
 const result = size.fileFinishedImporting("modules/guild_space/GuildSpaceExperiment.tsx");
 
 export const GuildSpaceExperiment = experiment;
-export const getGuildSpaceExperimentEnabled = function getGuildSpaceExperimentEnabled(guildId, location) {
-  return experiment.getCurrentConfig({ guildId, location }, { autoTrackExposure: false }).enabled;
+export const getGuildSpaceExperimentEnabled = function getGuildSpaceExperimentEnabled(id, GuildSettingsModalOverview) {
+  return experiment.getCurrentConfig(
+    { guildId: id, location: GuildSettingsModalOverview },
+    { autoTrackExposure: false },
+  ).enabled;
 };
 export const useGuildSpaceExperimentEnabled = function useGuildSpaceExperimentEnabled(guildId, location) {
   return experiment.useExperiment({ guildId, location }, { autoTrackExposure: false }).enabled;

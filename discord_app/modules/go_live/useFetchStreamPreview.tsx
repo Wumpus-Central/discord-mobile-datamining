@@ -79,5 +79,5 @@ export default function useFetchStreamPreview(guildId, channelId, id) {
     }
     return obj5;
   }
-  obj5 = { previewUrl: "PX_16", isLoading: true };
+  obj5 = { previewUrl: "flex", isLoading: true };
 }

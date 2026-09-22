@@ -4,31 +4,113 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 
 require = fn;
 let closure_5 = async function _requestAgeSignalChallenge() {
-  closure_0 = tmp2;
-  const HTTP = HTTPUtils.HTTP;
-  const request = {
-    url: constants.AGE_SIGNAL_CHALLENGE,
-    body: {},
-    rejectWithError: true,
-    failImmediatelyWhenRateLimited: true,
-  };
-  await HTTP.post(request);
-  closure_128_0 = value;
-  const body = closure_128_0.body;
-  if (body != null) {
-    const nonce = body.nonce;
-  }
-  closure_128_1 = nonce;
-  if (typeof closure_128_1 === "string") {
-    if (closure_128_1.length > 0) {
-      const tmp12 = closure_128_1;
+  c3 = 0;
+  c4 = 0;
+  return (async (arg0, value) => {
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            c2 = 0;
+            closure_130_0 = undefined;
+            closure_130_1 = undefined;
+            const HTTP = HTTPUtils.HTTP;
+            const request = {
+              url: constants.AGE_SIGNAL_CHALLENGE,
+              body: null,
+              rejectWithError: true,
+              failImmediatelyWhenRateLimited: true,
+            };
+            const obj4 = { platform, key_id };
+            request.body = obj4;
+            c3 = 1;
+            c4 = 1;
+            const obj5 = { value: HTTP.post(request), done: false };
+            return obj5;
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          closure_130_0 = value;
+          const body2 = closure_130_0.body;
+          let nonce;
+          if (body2 != null) {
+            nonce = body2.nonce;
+          }
+          closure_130_1 = nonce;
+          if (typeof closure_130_1 === "string") {
+            if (0 !== closure_130_1.length) {
+              const obj = { nonce: closure_130_1, attestKeyRegistered: null };
+              const body = closure_130_0.body;
+              let prop;
+              if (body != null) {
+                prop = body.attest_key_registered;
+              }
+              obj.attestKeyRegistered = true === prop;
+              c4 = 3;
+              const obj7 = { value: obj, done: true };
+              return obj7;
+            }
+          }
+          c4 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      } catch (tmp12) {
+        c4 = tmp;
+        throw tmp12;
+      }
     }
-  }
-  return tmp12;
+  })();
 };
-let closure_6 = async function _submitAgeSignal(arg0) {
-  if (c8 === 2) {
-    c8 = 3;
+let closure_6 = async function _registerAgeSignalAttestKey() {
+  c3 = 0;
+  c4 = 0;
+  return (async (arg0, value) => {
+    closure_2 = tmp4;
+    const HTTP = HTTPUtils.HTTP;
+    const request = {
+      url: constants.AGE_SIGNAL_ATTEST_KEY,
+      body: { key_id, attestation },
+      rejectWithError: true,
+      failImmediatelyWhenRateLimited: true,
+    };
+    await HTTP.post(request);
+    closure_130_0 = value;
+    const body = closure_130_0.body;
+    if (body != null) {
+      const registered = body.registered;
+    }
+    return true === registered;
+  })();
+};
+let closure_7 = async function _submitAgeSignal(arg0) {
+  if (c9 === 2) {
+    c9 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
   } else if (tmp4 === 3) {
     if (arg0 === 1) {
@@ -41,37 +123,39 @@ let closure_6 = async function _submitAgeSignal(arg0) {
     }
   } else {
     try {
-      c8 = 2;
-      if (0 === c7) {
+      c9 = 2;
+      if (0 === c8) {
         if (arg0 === 1) {
-          c8 = 3;
+          c9 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c8 = 3;
+          c9 = 3;
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          closure_6 = tmp5;
-          closure_5 = tmp2;
-          closure_133_3 = undefined;
-          closure_133_0 = closure_0;
-          closure_133_1 = closure_1;
-          closure_133_2 = closure_2;
+          closure_7 = tmp5;
+          closure_6 = tmp2;
+          closure_134_3 = undefined;
+          closure_134_4 = undefined;
+          closure_134_0 = closure_0;
+          closure_134_1 = closure_1;
+          closure_134_2 = closure_2;
           let str = closure_3;
           if (closure_3 === undefined) {
             str = "app_start";
           }
-          closure_133_3 = str;
-          c7 = 1;
+          closure_134_3 = str;
+          closure_134_4 = closure_4;
           c8 = 1;
-          return { value: "PX_16", done: true };
+          c9 = 1;
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
-          c8 = 3;
+          c9 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c8 = 3;
+          c9 = 3;
           const obj4 = { value, done: true };
           return obj4;
         } else {
@@ -82,7 +166,7 @@ let closure_6 = async function _submitAgeSignal(arg0) {
             }
             if ("accepted" !== result) {
               if ("skipped" !== result) {
-                let obj = toSubmitOutcome;
+                let obj = closure_1_4;
               }
               return obj;
             }
@@ -96,46 +180,59 @@ let closure_6 = async function _submitAgeSignal(arg0) {
             }
             obj.reason = reason;
           }
-          const HTTP = closure_134_0(closure_134_1[2]).HTTP;
+          const HTTP = closure_135_0(closure_135_1[2]).HTTP;
           const request = {
-            url: closure_134_3.AGE_SIGNAL,
+            url: closure_135_3.AGE_SIGNAL,
             body: null,
             rejectWithError: true,
             failImmediatelyWhenRateLimited: true,
           };
           const obj5 = {
-            platform: closure_133_0.platform,
-            age_lower: closure_133_0.ageLower,
-            age_upper: closure_133_0.ageUpper,
-            google_age_signals_status: closure_133_0.googleAgeSignalsStatus,
-            google_age_range_source: closure_133_0.googleAgeRangeSource,
-            google_significant_change_status: closure_133_0.googleSignificantChangeStatus,
-            apple_verified_method: closure_133_0.appleVerifiedMethod,
-            is_cold_launch: closure_133_2,
-            integrity_token: closure_133_1,
-            source: closure_133_3,
+            platform: closure_134_0.platform,
+            age_lower: closure_134_0.ageLower,
+            age_upper: closure_134_0.ageUpper,
+            google_age_signals_status: closure_134_0.googleAgeSignalsStatus,
+            google_age_range_source: closure_134_0.googleAgeRangeSource,
+            google_significant_change_status: closure_134_0.googleSignificantChangeStatus,
+            apple_verified_method: closure_134_0.appleVerifiedMethod,
+            is_cold_launch: closure_134_2,
+            integrity_token: closure_134_1,
+            attest_key_id: null,
+            attest_assertion: null,
+            source: null,
           };
+          let keyId;
+          if (closure_134_4 != null) {
+            keyId = closure_134_4.keyId;
+          }
+          obj5.attest_key_id = keyId;
+          let assertion;
+          if (closure_134_4 != null) {
+            assertion = closure_134_4.assertion;
+          }
+          obj5.attest_assertion = assertion;
+          obj5.source = closure_134_3;
           request.body = obj5;
-          c7 = 2;
-          c8 = 1;
+          c8 = 2;
+          c9 = 1;
           const obj6 = { value: HTTP.post(request), done: false };
           return obj6;
         }
       } else if (arg0 === 1) {
-        c8 = 3;
+        c9 = 3;
         throw value;
       } else if (arg0 === 2) {
-        c8 = 3;
+        c9 = 3;
         const obj7 = { value, done: true };
         return obj7;
       } else {
-        c8 = 3;
+        c9 = 3;
         let obj = { value: toSubmitOutcome(value.body), done: true };
         return obj;
       }
-    } catch (tmp10) {
-      c8 = tmp;
-      throw tmp10;
+    } catch (tmp16) {
+      c9 = tmp;
+      throw tmp16;
     }
   }
 };
@@ -154,9 +251,19 @@ export const requestAgeSignalChallenge = function requestAgeSignalChallenge() {
   }
   return applyArgumentsResult;
 };
-export const submitAgeSignal = function submitAgeSignal() {
+export const registerAgeSignalAttestKey = function registerAgeSignalAttestKey() {
   const self = this;
   const apply = closure_6.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const submitAgeSignal = function submitAgeSignal() {
+  const self = this;
+  const apply = closure_7.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

@@ -36,13 +36,13 @@ let closure_7 = async function _setUserStatus() {
     closure_130_0(closure_130_2[7]).UserSettingsDelay.INFREQUENT_USER_ACTION,
   );
   closure_129_6 = (function getStatusUpdateAnnouncement(DND, arg1) {
-    const humanizeStatusResult = value(4600).humanizeStatus(DND);
+    const humanizeStatusResult = value(4601).humanizeStatus(DND);
     if ("0" === arg1) {
       const intl3 = value(1115).intl;
       const obj2 = { statusLabel: humanizeStatusResult };
       return intl3.formatToPlainString(value(1115).t.dO2aLi, obj2);
     } else {
-      const statusExpiryParts = value(10349).getStatusExpiryParts(arg1);
+      const statusExpiryParts = value(10355).getStatusExpiryParts(arg1);
       const timeString = statusExpiryParts.timeString;
       if ("today" === statusExpiryParts.kind) {
         const intl2 = value(1115).intl;
@@ -55,7 +55,7 @@ let closure_7 = async function _setUserStatus() {
       }
       return formatToPlainStringResult;
     }
-    const obj = value(4600);
+    const obj = value(4601);
   })(closure_129_0, closure_129_5);
   const AccessibilityAnnouncer = closure_130_0(closure_130_2[9]).AccessibilityAnnouncer;
   AccessibilityAnnouncer.announce(closure_129_6);
@@ -93,7 +93,7 @@ let closure_7 = async function _setUserStatus() {
     disableTracking = false;
   }
   closure_129_4 = disableTracking;
-  return "PX_16";
+  return "flex";
 };
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const size = fn(2);

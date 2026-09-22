@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_13 = createStyles.createStyles((arg0) => {
   let BACKGROUND_BASE_LOWER = arg0;
   if (arg0 == null) {
@@ -48,7 +48,7 @@ let closure_13 = createStyles.createStyles((arg0) => {
   return obj;
 });
 let c14 = "749054660769218631";
-const END = fn(4574).GradientPercentage.END;
+const END = fn(4575).GradientPercentage.END;
 const __initData = {
   code: "function DMMessageStickerGreetingTsx1(){const{styles,isRendered,hasInputText,hasMessages,HEIGHT_COMPACT,HEIGHT_FULL,withDelay,withTiming,STANDARD_EASING}=this.__closure;const gradientOverlayOffset=styles.gradient.height;const hasHeight=isRendered&&!hasInputText;const heightExpanded=(hasMessages?HEIGHT_COMPACT:HEIGHT_FULL)-1;const targetHeight=hasHeight?heightExpanded+gradientOverlayOffset:0;const targetMargin=hasHeight?-gradientOverlayOffset:0;function generateAnimationConfig(value){return withDelay(300,withTiming(value,{easing:STANDARD_EASING,duration:250}));}return{justifyContent:'flex-end',overflow:'hidden',marginTop:generateAnimationConfig(targetMargin),height:generateAnimationConfig(targetHeight)};}",
 };
@@ -156,9 +156,9 @@ export default function DMMessageStickerGreeting(channel) {
                 if (closure_1_1 !== content) {
                   dependencyMap(content);
                 }
-                const obj = closure_1(4454);
-                obj.open({ key: "HANDLE_WAVE_PRESS_TOAST", content, icon: closure_1(12517) });
-                const obj2 = { key: "HANDLE_WAVE_PRESS_TOAST", content, icon: closure_1(12517) };
+                const obj = closure_1(4455);
+                obj.open({ key: "HANDLE_WAVE_PRESS_TOAST", content, icon: closure_1(12521) });
+                const obj2 = { key: "HANDLE_WAVE_PRESS_TOAST", content, icon: closure_1(12521) };
               }
               closure_128_0 = showErrorToast;
               tmp7 = stateFromStores;

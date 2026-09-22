@@ -3,12 +3,12 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06897_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06899_LegacyBaseButton.js";
 import useParticipantTileTapGestureDefault from "../useParticipantTileTapGesture.tsx";
 import useVideoStreamErrorDefault from "../../../errors/hooks/useVideoStreamError.tsx";
 import VideoRenderer from "VideoRenderer.tsx";
 import StreamQualityLiveIndicatorDefault from "../../../go_live/native/StreamQualityLiveIndicator.tsx";
-import _modDef9709 from "../../../../../_runtime/metro/09709__.js";
+import _modDef9715 from "../../../../../_runtime/metro/09715__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
@@ -47,10 +47,10 @@ class StreamTextOverlay {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const ApplicationStreamStates = fn(1074).ApplicationStreamStates;
-const MediaEngineContextTypes = fn(4781).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(4782).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj = {
   container: {
     flex: 1,
@@ -72,7 +72,7 @@ obj4.flex = 1;
 obj4.padding = 8;
 obj4.alignItems = "center";
 obj4.justifyContent = "center";
-let ColorUtils = fn(4605);
+let ColorUtils = fn(4606);
 obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.7);
 obj.screenMessageContainer = obj4;
 obj.screenMessageText = { lineHeight: 18 };
@@ -101,7 +101,7 @@ let size = {
   justifyContent: "center",
   alignItems: "center",
 };
-ColorUtils = fn(4605);
+ColorUtils = fn(4606);
 size.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 size.borderRadius = nativeDefault.radii.md;
 obj.statusWrapper = size;
@@ -124,19 +124,19 @@ let closure_15 = noop.memo((participant) => {
         stream: stateFromStores,
         removeCloseButton: removeEmptyStateButton,
         removeSplashImage: removeEmptyStateImage,
-        type: tmp(9687).VideoEmptyTypes.STREAM_FAILED,
+        type: tmp(9693).VideoEmptyTypes.STREAM_FAILED,
         style: StyleSheet.absoluteFill,
       };
-      return closure_10(tmp4(9687), obj2);
+      return closure_10(tmp4(9693), obj2);
     } else if (ApplicationStreamStates.ENDED === state) {
       const obj3 = {
         stream: stateFromStores,
         removeCloseButton: removeEmptyStateButton,
         removeSplashImage: removeEmptyStateImage,
-        type: tmp(9687).VideoEmptyTypes.STREAM_ENDED,
+        type: tmp(9693).VideoEmptyTypes.STREAM_ENDED,
         style: StyleSheet.absoluteFill,
       };
-      return closure_10(tmp4(9687), obj3);
+      return closure_10(tmp4(9693), obj3);
     } else {
       if (ApplicationStreamStates.RECONNECTING === state) {
         const obj4 = { title: null };
@@ -150,10 +150,10 @@ let closure_15 = noop.memo((participant) => {
           const intl2 = tmp(1115).intl;
           obj5.title = intl2.string(tmp(1115).t["5q17w5"]);
           const intl3 = tmp(1115).intl;
-          const obj6 = { username: tmp4(4908).getName(stateFromStores.guildId, stateFromStores.channelId, user) };
+          const obj6 = { username: tmp4(4909).getName(stateFromStores.guildId, stateFromStores.channelId, user) };
           obj5.subtext = intl3.formatToPlainString(tmp(1115).t.meVVlb, obj6);
           tmp9 = closure_10(StreamTextOverlay, obj5);
-          const tmp4Result6 = tmp4(4908);
+          const tmp4Result6 = tmp4(4909);
         }
       }
       if (null != tmp5) {
@@ -161,11 +161,11 @@ let closure_15 = noop.memo((participant) => {
           stream: stateFromStores,
           removeCloseButton: removeEmptyStateButton,
           removeSplashImage: removeEmptyStateImage,
-          type: tmp(9687).VideoEmptyTypes.STREAM_FAILED,
+          type: tmp(9693).VideoEmptyTypes.STREAM_FAILED,
           style: StyleSheet.absoluteFill,
           avError: tmp5,
         };
-        return closure_10(tmp4(9687), obj7);
+        return closure_10(tmp4(9693), obj7);
       } else {
         const id = AuthenticationStore.getId();
         const obj8 = {
@@ -180,15 +180,15 @@ let closure_15 = noop.memo((participant) => {
           paused: null,
         };
         if (stateFromStores.ownerId === id) {
-          let REMOTE_STREAM = tmp(9694).VideoSpinnerContext.SELF_STREAM;
+          let REMOTE_STREAM = tmp(9700).VideoSpinnerContext.SELF_STREAM;
         } else {
-          REMOTE_STREAM = tmp(9694).VideoSpinnerContext.REMOTE_STREAM;
+          REMOTE_STREAM = tmp(9700).VideoSpinnerContext.REMOTE_STREAM;
         }
         const obj9 = { children: null };
         obj8.videoSpinnerContext = REMOTE_STREAM;
         obj8.userId = user.id;
         obj8.paused = stateFromStores.state === ApplicationStreamStates.PAUSED;
-        const items1 = [closure_10(tmp4(9691), obj8), tmp9];
+        const items1 = [closure_10(tmp4(9697), obj8), tmp9];
         obj9.children = items1;
         return closure_11(closure_12, obj9);
       }
@@ -211,7 +211,7 @@ let closure_16 = noop.memo((arg0) => {
   obj.style = items;
   const tmp = closure_13();
   obj.children = closure_1_10(native.Icon, {
-    source: _modDef9709,
+    source: _modDef9715,
     size: native.Icon.Sizes.SMALL,
     color: nativeDefault.unsafe_rawColors.WHITE,
   });

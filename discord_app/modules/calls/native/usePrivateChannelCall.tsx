@@ -95,7 +95,7 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
               if (null == channel) {
                 dependencyMap = 1;
                 c3 = 1;
-                const obj7 = { value: tmp3(4769).ensurePrivateChannel(tmp32), done: false };
+                const obj7 = { value: tmp3(4770).ensurePrivateChannel(tmp32), done: false };
                 return obj7;
               }
               tmp32 = closure_0;
@@ -116,8 +116,8 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
             isPrivateResult = channel.isPrivate();
           }
           if (isPrivateResult) {
-            tmp3(11131)(channel, closure_129_1).onPress();
-            const obj3 = tmp3(11131)(channel, closure_129_1);
+            tmp3(11137)(channel, closure_129_1).onPress();
+            const obj3 = tmp3(11137)(channel, closure_129_1);
           }
           if (closure_129_2 != null) {
             closure_129_2();

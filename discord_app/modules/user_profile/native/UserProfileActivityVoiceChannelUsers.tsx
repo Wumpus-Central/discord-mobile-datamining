@@ -12,8 +12,8 @@ function UserRow(user) {
   user = user.user;
   const channel = user.channel;
   ({ onPress, start, end } = user);
-  const avatarDecoration = user(8485).useAvatarDecoration(user, channel.guild_id);
-  const obj = user(8485);
+  const avatarDecoration = user(8489).useAvatarDecoration(user, channel.guild_id);
+  const obj = user(8489);
   const items = [PresenceStore];
   const stateFromStoresObject = user(504).useStateFromStoresObject(items, () => ({
     status: PresenceStore.getStatus(user.id),
@@ -36,7 +36,7 @@ function UserRow(user) {
   });
   obj3.start = start;
   obj3.end = end;
-  return jsx(user(5822).TableRow, { onPress, label: null, icon: null, start: null, end: null });
+  return jsx(user(5824).TableRow, { onPress, label: null, icon: null, start: null, end: null });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);

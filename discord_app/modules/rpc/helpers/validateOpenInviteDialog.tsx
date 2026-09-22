@@ -1,4 +1,5 @@
 // discord_app/modules/rpc/helpers/validateOpenInviteDialog.tsx
+import EmbeddedSurfaceType from "../../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
 import RPCErrorDefault from "../RPCError.tsx";
 import canViewInviteModal from "../../instant_invite/canViewInviteModal.tsx";
 import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel.tsx";
@@ -8,10 +9,9 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 
 require = fn;
-const TransportTypes = fn(4660).TransportTypes;
+const TransportTypes = fn(4661).TransportTypes;
 const RPCErrors = fn(1074).RPCErrors;
-const FramesConstants = fn(9314);
-({ asLaunched: closure_9, EmbeddedSurfaceType: c10 } = FramesConstants);
+const asLaunched = fn(9319).asLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/validateOpenInviteDialog.tsx");
 
@@ -22,16 +22,16 @@ export const validateOpenInviteDialog = function validateOpenInviteDialog(socket
     const tmp362 = new RPCErrorDefault(obj2, 'command not available from "' + socket.source.type + '" transport');
     throw tmp362;
   } else {
-    const tmp46 = React7(FramesStore.getFrameByIframeId(socket.source.iframeId));
+    const tmp46 = asLaunched(FramesStore.getFrameByIframeId(socket.source.iframeId));
     if (null != tmp46) {
       const surface = tmp46.surface;
       const type = surface.type;
-      if (constants.MAIN === type) {
-        const obj3 = { frame: tmp46, channel: "Array", guild: "padding" };
+      if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
+        const obj3 = { frame: tmp46, channel: "Array", guild: "limit" };
         return obj3;
       } else {
-        if (constants.APP_CHANNEL !== type) {
-          if (constants.VOICE_CHANNEL !== type) {
+        if (EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL !== type) {
+          if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL !== type) {
             const obj4 = { errorCode: RPCErrors.INVALID_CHANNEL };
             const tmp30 = new RPCErrorDefault(obj4, "Invalid channel");
             throw tmp30;

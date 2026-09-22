@@ -44,13 +44,13 @@ export const presentFriendRequestAcceptedToast = function presentFriendRequestAc
   obj.open({
     key: "TOAST_FRIEND_REQUEST_ACCEPTED",
     content: stringResult,
-    IconComponent: tmp2(4692).UserPlusIcon,
+    IconComponent: tmp2(4693).UserPlusIcon,
     iconColor: "status-positive",
   });
   const obj3 = {
     key: "TOAST_FRIEND_REQUEST_ACCEPTED",
     content: stringResult,
-    IconComponent: tmp2(4692).UserPlusIcon,
+    IconComponent: tmp2(4693).UserPlusIcon,
     iconColor: "status-positive",
   };
 };
@@ -186,9 +186,9 @@ export const presentNoiseCancellation = function presentNoiseCancellation(arg0) 
   }
   const obj2 = { key: "NOISE_CANCELLATION_TOGGLE", content: stringResult, IconComponent: null, iconColor: null };
   if (arg0) {
-    let XLargeIcon = tmp4(4706).CheckmarkLargeIcon;
+    let XLargeIcon = tmp4(4707).CheckmarkLargeIcon;
   } else {
-    XLargeIcon = tmp4(4708).XLargeIcon;
+    XLargeIcon = tmp4(4709).XLargeIcon;
   }
   obj2.IconComponent = XLargeIcon;
   let str = "icon-feedback-critical";

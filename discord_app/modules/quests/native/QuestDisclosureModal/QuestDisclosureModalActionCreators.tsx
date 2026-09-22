@@ -4,9 +4,9 @@ import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.
 import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import AnalyticsActions from "../../lib/analytics/AnalyticsActions.tsx";
 import QuestTaskUtils from "../../utils/QuestTaskUtils.tsx";
-import AdAnalyticsInterfaceExperiment from "../../experiments/AdAnalyticsInterfaceExperiment.tsx";
 import captureAdUserAction from "../../../ads/analytics/captureAdUserAction.tsx";
 import captureAdUserActionTypes from "../../../ads/analytics/captureAdUserActionTypes.tsx";
+import AdAnalyticsInterfaceExperiment from "../../experiments/AdAnalyticsInterfaceExperiment.tsx";
 import QuestDockCreativeContext from "../QuestDock/QuestDockCreativeContext.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -111,8 +111,8 @@ export default {
     const obj12 = {};
     const merged1 = Object.assign(tmp11);
     obj12.isTargetedDisclosure = isTargetedDisclosure.isTargetedDisclosure;
-    obj9.pushLazy(asyncRequireImpl(15381, dependencyMap.paths), obj12, QUEST_DISCLOSURE_MODAL);
-    const tmp10 = asyncRequireImpl(15381, dependencyMap.paths);
+    obj9.pushLazy(asyncRequireImpl(15389, dependencyMap.paths), obj12, QUEST_DISCLOSURE_MODAL);
+    const tmp10 = asyncRequireImpl(15389, dependencyMap.paths);
   },
   hideModal() {
     ModalActionCreatorsDefault.popWithKey(QUEST_DISCLOSURE_MODAL);

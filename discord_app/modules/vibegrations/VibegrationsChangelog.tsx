@@ -3,6 +3,11 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const items = [
   {
+    date: "2026-09-21",
+    platforms: ["desktop", "mobile"],
+    summary: "The model picker now offers Grok 4.7 alongside Claude and GPT.",
+  },
+  {
     date: "2026-09-20",
     platforms: ["desktop", "mobile"],
     summary:

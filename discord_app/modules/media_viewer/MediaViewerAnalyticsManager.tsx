@@ -25,9 +25,9 @@ let obj2 = {
   channelId: "isArray",
   channelType: "isArray",
   numMediaItems: "Array",
-  hasMediaOptions: "call",
-  source: 858992897,
-  incrementableActions: 858993459,
+  hasMediaOptions: "category",
+  source: "HermesInternal",
+  incrementableActions: "Array",
 };
 const values = Object.values(obj);
 obj2.incrementableActions = Object.fromEntries(

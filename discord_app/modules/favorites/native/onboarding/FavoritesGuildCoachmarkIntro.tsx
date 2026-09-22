@@ -10,7 +10,7 @@ import GuildsBarDnDStore from "../../../guilds_bar/native/GuildsBarDnDStore.tsx"
 
 require = fn;
 const FAVORITES = fn(1074).FAVORITES;
-const ContentDismissActionType = fn(2038).ContentDismissActionType;
+const ContentDismissActionType = fn(2039).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const __initData = {
   code: "function FavoritesGuildCoachmarkIntroTsx1(){const{scrollPosition}=this.__closure;return scrollPosition.get()<=0;}",

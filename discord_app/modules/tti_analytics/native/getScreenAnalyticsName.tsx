@@ -4,8 +4,8 @@ import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 
 require = fn;
-const ACCEPT_INVITE_MODAL_KEY = fn(7907).ACCEPT_INVITE_MODAL_KEY;
-const isStaticChannelRoute = fn(2048).isStaticChannelRoute;
+const ACCEPT_INVITE_MODAL_KEY = fn(7910).ACCEPT_INVITE_MODAL_KEY;
+const isStaticChannelRoute = fn(2049).isStaticChannelRoute;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/tti_analytics/native/getScreenAnalyticsName.tsx");
 

@@ -178,12 +178,12 @@ function ActivityInfo(activity) {
                   analyticsLocations: num3,
                 };
                 v3 = num3;
-                const obj7 = { value: v3(9635).maybeJoinEmbeddedActivity(obj6), done: false };
+                const obj7 = { value: v3(9641).maybeJoinEmbeddedActivity(obj6), done: false };
                 return obj7;
               }
             } else {
-              const voiceChannel = analyticsLocations(5628).selectVoiceChannel(channelId);
-              const obj2 = analyticsLocations(5628);
+              const voiceChannel = analyticsLocations(5630).selectVoiceChannel(channelId);
+              const obj2 = analyticsLocations(5630);
             }
           } else {
             num3 = 1;
@@ -433,7 +433,7 @@ function PreJoinTransitioner(transitionState) {
         flag = false;
       }
       if (flag) {
-        flag = closure_1_0 === transitionState(windowDimensions[61]).TransitionStates.YEETED;
+        flag = closure_1_0 === transitionState(windowDimensions[62]).TransitionStates.YEETED;
       }
       if (flag) {
         transitionState(windowDimensions[40]).runOnJS(transitionCleanUp)();
@@ -460,9 +460,9 @@ function PreJoinTransitioner(transitionState) {
     roundToNearestPixel: transitionCleanUp(windowDimensions[53]),
     controlsSpecs,
     safeArea,
-    withSpring: transitionState(windowDimensions[60]).withSpring,
+    withSpring: transitionState(windowDimensions[61]).withSpring,
     transitionState,
-    TransitionStates: transitionState(windowDimensions[61]).TransitionStates,
+    TransitionStates: transitionState(windowDimensions[62]).TransitionStates,
     interpolate: transitionState(windowDimensions[40]).interpolate,
     useReducedMotion,
     MODE_CHANGE_PHYSICS,
@@ -482,9 +482,9 @@ function PreJoinTransitioner(transitionState) {
     roundToNearestPixel: transitionCleanUp(windowDimensions[53]),
     controlsSpecs,
     safeArea,
-    withSpring: transitionState(windowDimensions[60]).withSpring,
+    withSpring: transitionState(windowDimensions[61]).withSpring,
     transitionState,
-    TransitionStates: transitionState(windowDimensions[61]).TransitionStates,
+    TransitionStates: transitionState(windowDimensions[62]).TransitionStates,
     interpolate: transitionState(windowDimensions[40]).interpolate,
     useReducedMotion,
     MODE_CHANGE_PHYSICS,
@@ -493,7 +493,7 @@ function PreJoinTransitioner(transitionState) {
   };
   const obj4 = { onLayout: callback, collapsable: false, style: tmp2.contentWrapper, children: null };
   const obj5 = {};
-  const tmp6 = transitionCleanUp(windowDimensions[62]);
+  const tmp6 = transitionCleanUp(windowDimensions[63]);
   const merged1 = Object.assign(merged);
   obj4.children = closure_25(closure_38, obj5);
   obj3.children = closure_25(transitionCleanUp(windowDimensions[32]), obj4);
@@ -504,18 +504,18 @@ function renderItem(arg0, arg1, transitionState, transitionCleanUp) {
   return closure_1_25(PreJoinTransitioner, { transitionState, transitionCleanUp }, arg0);
 }
 const StyleSheet = fn(17).StyleSheet;
-const MODE_CHANGE_PHYSICS = fn(12526).MODE_CHANGE_PHYSICS;
-const EDGE_GUTTER = fn(12529).EDGE_GUTTER;
+const MODE_CHANGE_PHYSICS = fn(12530).MODE_CHANGE_PHYSICS;
+const EDGE_GUTTER = fn(12533).EDGE_GUTTER;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_20, AnalyticsSections: closure_21, Permissions: closure_22 } = Constants);
-const constants4 = fn(14006).VoiceChannelWarningSurfaces;
-const Features = fn(4781).Features;
+const constants4 = fn(14014).VoiceChannelWarningSurfaces;
+const Features = fn(4782).Features;
 const jsxProd = fn(21);
 ({ jsx: closure_25, jsxs: closure_26, Fragment: closure_27 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj = {
   contentWrapper: {
-    paddingTop: EDGE_GUTTER + fn(12530).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER,
+    paddingTop: EDGE_GUTTER + fn(12534).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER,
     gap: 24,
     paddingBottom: 16,
   },
@@ -531,7 +531,7 @@ let obj = {
   consolePreJoinPadding: null,
 };
 let obj3 = {
-  paddingTop: EDGE_GUTTER + fn(12530).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER,
+  paddingTop: EDGE_GUTTER + fn(12534).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER,
   gap: 24,
   paddingBottom: 16,
 };
@@ -742,31 +742,40 @@ let closure_38 = noop.memo(function VoicePanelPreJoinContentInner(members) {
       }),
     items2,
   );
-  const items3 = [closure_25(closure_30, { hasMembers: members.length > 0 }), , , , ,];
-  let tmp12Result = null;
+  const tmp10 = blockedMembers(ignoredMembers[58])();
+  closure_6 = tmp10;
+  const items3 = [tmp10];
+  const effect1 = analyticsLocations.useEffect(() => {
+    closure_6.lock();
+    return () => {
+      closure_1_6.unlock();
+    };
+  }, items3);
+  const items4 = [closure_25(closure_30, { hasMembers: members.length > 0 }), , , , ,];
+  let tmp14Result = null;
   if (tmp6) {
     const obj3 = { style: tmp.optInChannelsContainer, channel: stateFromStores, analyticsSection: constants2.CHANNEL };
-    tmp12Result = closure_25(tmp2(tmp3[58]), obj3);
+    tmp14Result = closure_25(tmp2(tmp3[59]), obj3);
   }
-  items3[1] = tmp12Result;
-  items3[2] = activities.map((activity) =>
+  items4[1] = tmp14Result;
+  items4[2] = activities.map((activity) =>
     closure_2_25(ActivityInfo, { activity, analyticsLocations }, activity.launchId),
   );
-  let tmp12Result3 = members.length > 0 || blockedMembers.size > 0 || ignoredMembers.size > 0;
-  if (tmp12Result3) {
+  let tmp14Result3 = members.length > 0 || blockedMembers.size > 0 || ignoredMembers.size > 0;
+  if (tmp14Result3) {
     const obj4 = { members, streamingMembers: members.streamingMembers, blockedMembers, ignoredMembers };
-    tmp12Result3 = closure_25(RoomMembers, obj4);
+    tmp14Result3 = closure_25(RoomMembers, obj4);
   }
-  items3[3] = tmp12Result3;
-  let tmp12Result4 = null != guildId;
-  if (tmp12Result4) {
+  items4[3] = tmp14Result3;
+  let tmp14Result4 = null != guildId;
+  if (tmp14Result4) {
     const obj5 = { members: memo, guildId };
-    tmp12Result4 = closure_25(tmp2(tmp3[59]), obj5);
+    tmp14Result4 = closure_25(tmp2(tmp3[60]), obj5);
   }
   const obj6 = { children: null };
-  items3[4] = tmp12Result4;
-  items3[5] = closure_25(closure_37, { channelId });
-  obj6.children = items3;
+  items4[4] = tmp14Result4;
+  items4[5] = closure_25(closure_37, { channelId });
+  obj6.children = items4;
   return closure_26(closure_27, obj6);
 });
 const __initData3 = {
@@ -791,10 +800,10 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/prejoin/VoicePanelPreJoinContent.tsx");
 
 export default noop.memo(function VoicePanelPreJoinWrapper() {
-  const context = noop.useContext(guildId(12525));
+  const context = noop.useContext(guildId(12529));
   const channelId = context.channelId;
   guildId = context.guildId;
-  const tmp2 = guildId(17500)(channelId);
+  const tmp2 = guildId(17512)(channelId);
   dependencyMap = tmp2;
   let items = [
     SortedVoiceStateStore,
@@ -844,7 +853,7 @@ export default noop.memo(function VoicePanelPreJoinWrapper() {
       }
     },
     items1,
-    channelId(17627).areVoicePanelPreJoinContentPropsEqual,
+    channelId(17639).areVoicePanelPreJoinContentPropsEqual,
   );
-  return closure_25(channelId(4466).TransitionItem, { item: stateFromStores, renderItem });
+  return closure_25(channelId(4467).TransitionItem, { item: stateFromStores, renderItem });
 });

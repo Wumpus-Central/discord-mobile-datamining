@@ -8,12 +8,12 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const Constants = fn(1074);
 ({ GuildFeatures: closure_4, Routes: hasOwnProperty } = Constants);
-const StaticChannelRoute = fn(2048).StaticChannelRoute;
+const StaticChannelRoute = fn(2049).StaticChannelRoute;
 const jsx = fn(21).jsx;
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = {
   container: {
-    marginVertical: fn(10374).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(10380).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -21,7 +21,7 @@ let obj2 = {
   badgeText: null,
 };
 let obj3 = {
-  marginVertical: fn(10374).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(10380).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };
@@ -39,7 +39,7 @@ export default function GuildMemberDashChannelRow(arg0) {
   let hasItem;
   const tmp = closure_8();
   const id = guild.id;
-  let num = id(16554).useSubmittedGuildJoinRequestTotal({ guildId: id });
+  let num = id(16565).useSubmittedGuildJoinRequestTotal({ guildId: id });
   if (num == null) {
     num = 0;
   }
@@ -56,7 +56,7 @@ export default function GuildMemberDashChannelRow(arg0) {
   const callback = noop.useCallback(() => {
     router_utils.transitionTo(hasOwnProperty.CHANNEL(id, StaticChannelRoute.MEMBER_SAFETY));
   }, items1);
-  const ChannelModes = tmp2(12633).ChannelModes;
+  const ChannelModes = tmp2(12637).ChannelModes;
   const tmp7 = selected ? ChannelModes.SELECTED : ChannelModes.DEFAULT;
   let obj2 = {
     onPress: callback,
@@ -69,7 +69,7 @@ export default function GuildMemberDashChannelRow(arg0) {
     icon: null,
     channelInfo: null,
   };
-  let obj = id(16554);
+  let obj = id(16565);
   const intl = tmp2(1115).intl;
   obj2.accessibilityLabel = intl.string(id(1115).t["9Oq93m"]);
   obj2.accessibilityState = { selected };
@@ -78,9 +78,9 @@ export default function GuildMemberDashChannelRow(arg0) {
   const intl2 = tmp2(1115).intl;
   obj3.name = intl2.string(id(1115).t["9Oq93m"]);
   obj3.mode = tmp7;
-  obj2.name = jsx(id(12633).BaseChannelName, { name: null, mode: null });
-  const tmp9 = hasItem(12633);
-  obj2.icon = jsx(id(12633).BaseChannelIcon, { mode: tmp7, IconComponent: id(5307).GroupIcon });
+  obj2.name = jsx(id(12637).BaseChannelName, { name: null, mode: null });
+  const tmp9 = hasItem(12637);
+  obj2.icon = jsx(id(12637).BaseChannelIcon, { mode: tmp7, IconComponent: id(5309).GroupIcon });
   let tmp8Result = null;
   if (num > 0) {
     const obj9 = { style: null, textStyle: null, value: null };

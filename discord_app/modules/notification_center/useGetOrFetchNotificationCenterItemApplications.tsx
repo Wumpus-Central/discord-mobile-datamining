@@ -3,10 +3,10 @@ import useGetOrFetchApplicationsDefault from "../applications/useGetOrFetchAppli
 import noop from "../../../_runtime/metro/00019__.js";
 
 let items = [
-  fn(7876).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS,
-  fn(7876).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED,
-  fn(7876).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS,
-  fn(7876).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED,
+  fn(7879).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS,
+  fn(7879).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED,
+  fn(7879).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS,
+  fn(7879).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED,
 ];
 let set = new Set(items);
 const size = fn(2);

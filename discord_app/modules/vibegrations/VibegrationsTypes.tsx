@@ -14,15 +14,12 @@ const items = [
   { id: "gpt-5.6-terra", label: "GPT-5.6 Terra", provider: "openai", supports_fast: true },
   { id: "gpt-5.6-luna", label: "GPT-5.6 Luna", provider: "openai", supports_fast: true },
   { id: "gpt-6-astra", label: "GPT-6 Astra", provider: "openai", supports_fast: true },
+  { id: "xai/grok-4.7", label: "Grok 4.7", provider: "xai" },
 ];
 let obj = { main: items, subagent: items, thinking: ["low", "medium", "high", "xhigh", "max"] };
 const items1 = [
-  { id: "workers-ai/@cf/moonshotai/kimi-k2.6", label: "Kimi K2.6", provider: "workers-ai" },
-  { id: "workers-ai/@cf/zai-org/glm-5.2", label: "GLM 5.2", provider: "workers-ai" },
-  { id: "workers-ai/@cf/nvidia/nemotron-3-120b-a12b", label: "Nemotron 3 Super 120B", provider: "workers-ai" },
+  { id: "deepseek/deepseek-flash", label: "DeepSeek V4.1 Flash", provider: "deepseek" },
   { id: "moonshotai/kimi-k3", label: "Kimi K3", provider: "moonshotai" },
-  { id: "xai/grok-4.6", label: "Grok 4.6", provider: "xai" },
-  { id: "workers-ai/@cf/zai-org/glm-4.7-flash", label: "GLM 4.7 Flash", provider: "workers-ai" },
 ];
 const result = size.fileFinishedImporting("modules/vibegrations/VibegrationsTypes.tsx");
 

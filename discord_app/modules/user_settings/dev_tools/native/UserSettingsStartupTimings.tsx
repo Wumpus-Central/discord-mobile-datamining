@@ -24,7 +24,7 @@ function Code(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   code: { fontFamily: fn(1074).Fonts.CODE_BOLD },
@@ -96,7 +96,7 @@ export default function UserSettingsStartupTimings() {
               closure_128_1 = undefined;
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: tmp5(4620).getAppFirstVisibleTimestamp(), done: false };
+              const obj5 = { value: tmp5(4621).getAppFirstVisibleTimestamp(), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -108,9 +108,9 @@ export default function UserSettingsStartupTimings() {
             return obj6;
           } else {
             closure_128_0 = value;
-            closure_128_1 = tmp5(10450)(closure_128_0);
+            closure_128_1 = tmp5(10456)(closure_128_0);
             const obj7 = { message: closure_128_1 };
-            tmp2(8632).showShareActionSheet(obj7, "Startup Timing");
+            tmp2(8636).showShareActionSheet(obj7, "Startup Timing");
             c3 = 3;
             return { value: "HermesInternal", done: null };
           }
@@ -278,6 +278,6 @@ export default function UserSettingsStartupTimings() {
   obj5.renderItem = function renderItem(children) {
     return closure_8(lastTrackedAppUiViewed2Properties, { children: children.item });
   };
-  obj4.children = closure_8(tmp10(8997).FlashList, obj5);
+  obj4.children = closure_8(tmp10(9002).FlashList, obj5);
   return closure_8(checked, obj4);
 }

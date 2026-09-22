@@ -65,14 +65,14 @@ function ForYouMessagePreviewV2(item) {
   ({ compactMode, roleStyle } = item);
   let messagePreviewIconV2 = closure_29();
   let SMALL = dependencyMap;
-  const notifCenterV2MessagePreviewParser = message_channel_id(5206).getNotifCenterV2MessagePreviewParser(
+  const notifCenterV2MessagePreviewParser = message_channel_id(5207).getNotifCenterV2MessagePreviewParser(
     closure_27(),
     closure_28,
     roleStyle,
   );
   const intl = item(1115).intl;
   const stringResult = intl.string(item(1115).t.BOi07B);
-  const obj = message_channel_id(5206);
+  const obj = message_channel_id(5207);
   let message = item.message;
   let num;
   if (message != null) {
@@ -124,11 +124,11 @@ function ForYouMessagePreviewV2(item) {
         first = embeds[0];
       }
     }
-    const tmp15 = guild_id(8301)(first);
+    const tmp15 = guild_id(8305)(first);
     let result = stringResult;
     if (null != tmp15) {
-      result = tmp2(8003).formatPollResultNotificationCenterText(tmp15);
-      const tmp2Result = tmp2(8003);
+      result = tmp2(8006).formatPollResultNotificationCenterText(tmp15);
+      const tmp2Result = tmp2(8006);
     }
   } else if (stickers.length > 0) {
     const intl6 = tmp2(1115).intl;
@@ -242,17 +242,17 @@ function ForYouMessagePreviewV2(item) {
   if (acked) {
     str2 = "text-muted";
   }
-  const items5 = [item(8132).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj6, { textColor: str2 })];
+  const items5 = [item(8135).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj6, { textColor: str2 })];
   if (null == ATTACHMENT) {
     items5[1] = tmp26;
     obj5.children = items5;
-    items3[1] = closure_22(tmp2(4752).Text, obj5);
+    items3[1] = closure_22(tmp2(4753).Text, obj5);
     obj3.children = items3;
     return closure_22(closure_7, obj3);
   } else {
     const obj7 = { style: messagePreviewIconV2.messagePreviewIconV2Container, children: null };
     if (constants4.ATTACHMENT === ATTACHMENT) {
-      let tmp29 = guild_id(11511);
+      let tmp29 = guild_id(11515);
       const obj8 = { source: tmp29, size: null, style: null };
       SMALL = tmp2(1177).IconSizes.SMALL;
       obj8.size = SMALL;
@@ -263,12 +263,12 @@ function ForYouMessagePreviewV2(item) {
     } else if (constants4.STICKER !== ATTACHMENT) {
       tmp29 = null;
       if (constants4.VOICE_MESSAGE === ATTACHMENT) {
-        tmp29 = guild_id(8897);
+        tmp29 = guild_id(8902);
       }
     }
-    tmp29 = guild_id(10680);
+    tmp29 = guild_id(10686);
   }
-  const tmp2Result10 = item(8132);
+  const tmp2Result10 = item(8135);
 }
 function ApplicationName(applicationId) {
   applicationId = applicationId.applicationId;
@@ -322,36 +322,36 @@ const Constants = fn(1074);
   MessageTypes: closure_18,
   EMPTY_STRING_SNOWFLAKE_ID: closure_19,
 } = Constants);
-const NotificationTypes = fn(6837).NotificationTypes;
+const NotificationTypes = fn(6839).NotificationTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
 const viewabilityConfig = { waitForInteraction: false, viewAreaCoveragePercentThreshold: 100, minimumViewTime: 1000 };
-let createStyles = fn(4756);
+let createStyles = fn(4757);
 let obj = { strong: null };
 let obj3 = {};
-const merged = Object.assign(fn(4752).TextStyleSheet["text-md/medium"]);
+const merged = Object.assign(fn(4753).TextStyleSheet["text-md/medium"]);
 obj3.color = nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
 obj.strong = obj3;
 let closure_24 = createStyles.createStyles(obj);
-createStyles = fn(4756);
+createStyles = fn(4757);
 let obj4 = { strong: null };
 let obj6 = {};
-const merged1 = Object.assign(fn(4752).TextStyleSheet["text-md/medium"]);
+const merged1 = Object.assign(fn(4753).TextStyleSheet["text-md/medium"]);
 obj6.color = nativeDefault.colors.TEXT_MUTED;
 obj4.strong = obj6;
 let closure_25 = createStyles.createStyles(obj4);
-createStyles = fn(4756);
+createStyles = fn(4757);
 let obj7 = {
   mention: { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND },
 };
 let closure_26 = createStyles.createStyles(obj7);
-createStyles = fn(4756);
+createStyles = fn(4757);
 let obj10 = { mention: null };
 let obj9 = { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND };
 obj10.mention = { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: "transparent" };
 let closure_27 = createStyles.createStyles(obj10);
 let closure_28 = { channelMentionText: "redesign/message-preview/medium" };
-createStyles = fn(4756);
+createStyles = fn(4757);
 let obj13 = {
   container: { flex: 1 },
   row: null,
@@ -604,15 +604,15 @@ let closure_35 = noop.memo((item) => {
       obj3.icon = tmp6(notificationCenterItemAcked[42]);
       obj3.IconComponent = tmp2(notificationCenterItemAcked[43]).TrashIcon;
       item = navigation(function* () {
-        yield tmp3(16753).deleteNotificationCenterItem(tmp3);
+        yield tmp3(16765).deleteNotificationCenterItem(tmp3);
         if (1 === tmp7) {
           c3 = 0;
           const obj7 = { key: "REMOVE_NOTIFICATION_ERROR", content: null };
           const intl = tmp3(1115).intl;
           obj7.content = intl.string(tmp3(1115).t.WDxhvB);
-          rowIndex(4454).open(obj7);
+          rowIndex(4455).open(obj7);
           c4 = 3;
-          rowIndex(4454);
+          rowIndex(4455);
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;

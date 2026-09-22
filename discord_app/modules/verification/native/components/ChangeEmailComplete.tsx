@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import EmailVerificationModalActionCreatorsDefault from "../../../../actions/native/EmailVerificationModalActionCreators.tsx";
-import _modDef6844 from "../../../../../_runtime/metro/06844__.js";
+import _modDef6846 from "../../../../../_runtime/metro/06846__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -14,10 +14,10 @@ function handlePress() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const resetChangeEmailStore = fn(5840).resetChangeEmailStore;
+const resetChangeEmailStore = fn(5842).resetChangeEmailStore;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 const obj2 = {
   contentContainer: {
     flexGrow: 2,
@@ -61,7 +61,7 @@ export default function ChangeEmailComplete(email) {
     contentContainerStyle: tmp.contentContainer,
     children: null,
   };
-  const items = [React5(React4, { style: tmp.image, source: _modDef6844 }), , ,];
+  const items = [React5(React4, { style: tmp.image, source: _modDef6846 }), , ,];
   const obj3 = { style: tmp.bodyInner, children: null };
   const obj4 = {
     style: tmp.title,

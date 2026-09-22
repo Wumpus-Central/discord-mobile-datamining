@@ -126,7 +126,7 @@ let closure_8 = async function _getActivityLaunchErrorInfo(arg0) {
     }
   }
 };
-const DevShelfFetchState = fn(9134).DevShelfFetchState;
+const DevShelfFetchState = fn(9139).DevShelfFetchState;
 const AbortCodes = fn(1074).AbortCodes;
 const ActivityLaunchFailErrorType = {
   ClientError: 0,

@@ -15,7 +15,7 @@ const View = fn(17).View;
 const AnalyticsSections = fn(1074).AnalyticsSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = {
   actionBarContainer: {
     overflow: "hidden",
@@ -72,8 +72,8 @@ export default function ForumPostActionBar(channel) {
   const items = [ChannelStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => ChannelStore.getChannel(channel.parent_id));
   let obj = channel(504);
-  const firstMessage = channel(7546).useFirstForumPostMessage(channel).firstMessage;
-  let obj2 = channel(7546);
+  const firstMessage = channel(7548).useFirstForumPostMessage(channel).firstMessage;
+  let obj2 = channel(7548);
   const items1 = [JoinedThreadsStore];
   const stateFromStores1 = channel(504).useStateFromStores(items1, () => JoinedThreadsStore.hasJoined(channel.id));
   dependencyMap = channel.getGuildId();
@@ -95,13 +95,13 @@ export default function ForumPostActionBar(channel) {
   }, items3);
   const obj4 = channel(504);
   const obj6 = { style: null, children: null };
-  const items4 = [tmp.actionBarContainer, channel(8116).useGradientTop()];
+  const items4 = [tmp.actionBarContainer, channel(8119).useGradientTop()];
   obj6.style = items4;
   let tmp11 = null != firstMessage;
   if (tmp11) {
     const obj7 = { style: tmp.reactionRow, children: null };
     const obj8 = { thread: channel, parentChannel: stateFromStores, firstMessage, containerWidth: tmp7[0] };
-    obj7.children = closure_10(tmp2(11677).ForumPostActionBarReactions, obj8);
+    obj7.children = closure_10(tmp2(11681).ForumPostActionBarReactions, obj8);
     tmp11 = closure_10(View, obj7);
   }
   const items5 = [tmp11];
@@ -122,8 +122,8 @@ export default function ForumPostActionBar(channel) {
         const result = messages_MessagesUtils.handleCopyLinkForumPost(guildId, channel.id, obj2);
       }
     };
-    obj10.children = closure_10(tmp2(4698).LinkIcon, { size: "xs" });
-    items7[1] = closure_10(tmp2(5339).PressableOpacity, obj10);
+    obj10.children = closure_10(tmp2(4699).LinkIcon, { size: "xs" });
+    items7[1] = closure_10(tmp2(5341).PressableOpacity, obj10);
     const obj11 = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
     const intl5 = tmp2(1115).intl;
     obj11.accessibilityLabel = intl5.string(tmp2(1115).t.nFP4oa);
@@ -137,8 +137,8 @@ export default function ForumPostActionBar(channel) {
       obj2.jumpType = Client.JumpType.ANIMATED;
       obj.jumpToMessage(obj2);
     };
-    obj11.children = closure_10(tmp2(11678).ArrowLargeUpIcon, { size: "xs" });
-    items7[2] = closure_10(tmp2(5339).PressableOpacity, obj11);
+    obj11.children = closure_10(tmp2(11682).ArrowLargeUpIcon, { size: "xs" });
+    items7[2] = closure_10(tmp2(5341).PressableOpacity, obj11);
     obj9.children = items7;
     items5[1] = closure_11(View, obj9);
     obj6.children = items5;
@@ -156,8 +156,8 @@ export default function ForumPostActionBar(channel) {
       obj12.style = tmp.actionButton;
       obj12.onPress = items9;
       intl = closure_10;
-      items9 = [closure_10(tmp2(4706).CheckmarkLargeIcon, { size: "xs", color: "text-brand" })];
-      Text = tmp2(4752).Text;
+      items9 = [closure_10(tmp2(4707).CheckmarkLargeIcon, { size: "xs", color: "text-brand" })];
+      Text = tmp2(4753).Text;
       const obj13 = { style: null, variant: "text-sm/semibold", color: "text-brand", children: null };
       const items10 = [tmp.buttonText];
       obj13.style = items10;
@@ -171,7 +171,7 @@ export default function ForumPostActionBar(channel) {
       obj12.accessibilityLabel = Text(t["DjZ+6E"]);
       obj12.style = tmp.actionButton;
       obj12.onPress = items9;
-      const items11 = [closure_10(tmp2(9874).BellIcon, { size: "xs" })];
+      const items11 = [closure_10(tmp2(9880).BellIcon, { size: "xs" })];
       const obj14 = {
         style: tmp.buttonText,
         variant: "text-sm/semibold",
@@ -180,11 +180,11 @@ export default function ForumPostActionBar(channel) {
       };
       const intl2 = tmp2(1115).intl;
       obj14.children = intl2.string(tmp2(1115).t["0rQinA"]);
-      items11[1] = closure_10(tmp2(4752).Text, obj14);
+      items11[1] = closure_10(tmp2(4753).Text, obj14);
       obj12.children = items11;
       tmp15 = obj12;
     }
-    closure_11(tmp2(5339).PressableOpacity, tmp15);
+    closure_11(tmp2(5341).PressableOpacity, tmp15);
   }
-  const obj5 = channel(8116);
+  const obj5 = channel(8119);
 }

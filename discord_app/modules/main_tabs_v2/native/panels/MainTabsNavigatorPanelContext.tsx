@@ -2,11 +2,11 @@
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const obj = { gesture: null, disallowGesture: null, translateX: null };
-const Gesture = fn(6897).Gesture;
+const Gesture = fn(6899).Gesture;
 obj.gesture = Gesture.Pan();
-let ReanimatedHelperTypes = fn(7319);
+let ReanimatedHelperTypes = fn(7321);
 obj.disallowGesture = ReanimatedHelperTypes.createFakeSharedValue(false);
-ReanimatedHelperTypes = fn(7319);
+ReanimatedHelperTypes = fn(7321);
 obj.translateX = ReanimatedHelperTypes.createFakeSharedValue(0);
 const context = noop.createContext(obj);
 const context1 = noop.createContext(undefined);

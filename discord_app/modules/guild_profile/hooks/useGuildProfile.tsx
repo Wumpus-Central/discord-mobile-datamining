@@ -57,7 +57,7 @@ export const useGuildProfile = function useGuildProfile(guildId) {
               closure_129_0 = flag;
               c3 = 1;
               c4 = 1;
-              return { value: "PX_16", done: true };
+              return { value: "flex", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {

@@ -8,7 +8,7 @@ import UserProfileStore from "../UserProfileStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const FunctionUtils = fn(2017);
+const FunctionUtils = fn(2018);
 let closure_6 = FunctionUtils.cachedFunction((arg0, arg1) => new DisplayProfileDefault(arg0, arg1));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useDisplayProfile.tsx");

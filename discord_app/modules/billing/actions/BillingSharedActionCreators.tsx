@@ -159,7 +159,7 @@ let closure_10 = async function _createPaymentSource(arg0) {
           closure_133_7 = undefined;
           c9 = 1;
           c10 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -286,7 +286,7 @@ let closure_10 = async function _createPaymentSource(arg0) {
     }
   }
 };
-const StripeErrorTypes = fn(5081).StripeErrorTypes;
+const StripeErrorTypes = fn(5082).StripeErrorTypes;
 const Constants = fn(1074);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7 } = Constants);
 const size = fn(2);
@@ -378,8 +378,8 @@ export const dispatchConfirmationError = function dispatchConfirmationError(type
     const merged2 = Object.assign(tmp12);
     const merged3 = Object.assign(obj.extra);
     obj9.extra = obj14;
-    const result = tmp15(4429).captureBillingException(error1, obj9);
-    const tmp15Result = tmp15(4429);
+    const result = tmp15(4430).captureBillingException(error1, obj9);
+    const tmp15Result = tmp15(4430);
   }
   return error1;
 };

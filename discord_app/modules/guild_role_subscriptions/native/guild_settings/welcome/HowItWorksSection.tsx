@@ -4,9 +4,9 @@ import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef18154 from "../../../../../../_runtime/metro/18154__.js";
-import _modDef18155 from "../../../../../../_runtime/metro/18155__.js";
-import _modDef18156 from "../../../../../../_runtime/metro/18156__.js";
+import _modDef18166 from "../../../../../../_runtime/metro/18166__.js";
+import _modDef18167 from "../../../../../../_runtime/metro/18167__.js";
+import _modDef18168 from "../../../../../../_runtime/metro/18168__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -49,7 +49,7 @@ function HowItWorksCard(iconSource) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = {
   container: { flex: 1 },
   horizontalContainer: { flex: 1, flexDirection: "row" },
@@ -109,19 +109,19 @@ export default function HowItWorksSection() {
   const obj3 = { cardNumber: 1, description: null, iconSource: null };
   const intl = util.intl;
   obj3.description = intl.string(util.t.lT0ZNS);
-  obj3.iconSource = _modDef18154;
+  obj3.iconSource = _modDef18166;
   const items = [React4(HowItWorksCard, obj3), React4(native.Spacer, { size: 12 })];
   const obj4 = { cardNumber: 2, description: null, iconSource: null };
   const intl2 = util.intl;
   obj4.description = intl2.string(util.t.ihN2Wb);
-  obj4.iconSource = _modDef18155;
+  obj4.iconSource = _modDef18167;
   items[2] = React4(HowItWorksCard, obj4);
   obj2.children = items;
   const items1 = [hasOwnProperty(View, obj2)];
   const obj5 = { cardNumber: 3, description: null, iconSource: null };
   const intl3 = util.intl;
   obj5.description = intl3.string(util.t.c8krDQ);
-  obj5.iconSource = _modDef18156;
+  obj5.iconSource = _modDef18168;
   items1[1] = React4(HowItWorksCard, obj5);
   obj.children = items1;
   return hasOwnProperty(View, obj);

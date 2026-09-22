@@ -109,7 +109,7 @@ const View = fn(17).View;
 const SubscriptionStatusTypes = fn(1074).SubscriptionStatusTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = {
   title: { marginBottom: 12 },
   creditList: { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
@@ -123,8 +123,8 @@ let obj2 = {
   creditDescription: null,
 };
 let size = {
-  width: fn(7417).GameIconImageSize[fn(undefined, 7417).GameIconSizes.SMALL],
-  height: fn(7417).GameIconImageSize[fn(undefined, 7417).GameIconSizes.SMALL],
+  width: fn(7419).GameIconImageSize[fn(undefined, 7419).GameIconSizes.SMALL],
+  height: fn(7419).GameIconImageSize[fn(undefined, 7419).GameIconSizes.SMALL],
   alignItems: "center",
   justifyContent: "center",
 };
@@ -177,7 +177,7 @@ export default function PremiumAccountCredit(currentSubscription) {
       };
       const intl = tmp2(1115).intl;
       obj3.children = intl.string(tmp2(1115).t.YugZY0);
-      const items1 = [closure_6(tmp2(4752).Text, obj3), , ,];
+      const items1 = [closure_6(tmp2(4753).Text, obj3), , ,];
       const obj4 = { style: null, children: null };
       const items2 = [tmp.creditList, creditListContainerStyle];
       obj4.style = items2;
@@ -202,7 +202,7 @@ export default function PremiumAccountCredit(currentSubscription) {
       const obj5 = { style: tmp.creditDescription, variant: "text-sm/medium", children: null };
       const intl2 = tmp2(1115).intl;
       obj5.children = intl2.string(tmp2(1115).t.Z5b2Gf);
-      items1[2] = closure_6(tmp2(4752).Text, obj5);
+      items1[2] = closure_6(tmp2(4753).Text, obj5);
       let tmp9Result = null;
       if (null != currentSubscription) {
         tmp9Result = null;
@@ -210,7 +210,7 @@ export default function PremiumAccountCredit(currentSubscription) {
           const obj6 = { style: tmp.creditDescription, variant: "text-sm/medium", children: null };
           const intl3 = tmp2(1115).intl;
           obj6.children = intl3.string(tmp2(1115).t.azRP0E);
-          tmp9Result = closure_6(tmp2(4752).Text, obj6);
+          tmp9Result = closure_6(tmp2(4753).Text, obj6);
         }
       }
       items1[3] = tmp9Result;

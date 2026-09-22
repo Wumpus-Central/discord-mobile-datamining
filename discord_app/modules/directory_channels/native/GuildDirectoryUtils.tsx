@@ -36,7 +36,7 @@ let closure_6 = async function _onAddDirectoryGuildEntry() {
     category: closure_129_4,
     onClose: closure_129_5,
   } = closure_0);
-  return "PX_16";
+  return "flex";
 };
 const jsx = fn(21).jsx;
 const size = fn(2);

@@ -292,7 +292,7 @@ function isValidChannelAutocomplete(token, items) {
         flag = flag2;
       }
     }
-    obj2 = replaced(12594);
+    obj2 = replaced(12598);
   }
   return flag;
 }
@@ -581,8 +581,8 @@ function getChannelAutocompletions(arg0) {
       };
       const obj12 = AutocompleteUtilsDefault;
       const tmp7 = importDefault;
-      obj.boosters = tmp(5659).getBoosterMap(tmp(10091).AutocompleterResultTypes.TEXT_CHANNEL);
-      const tmpResult = tmp(5659);
+      obj.boosters = tmp(5661).getBoosterMap(tmp(10097).AutocompleterResultTypes.TEXT_CHANNEL);
+      const tmpResult = tmp(5661);
       const queryChannelsResult = obj12.queryChannels(obj);
       obj2 = {
         query: substr1,
@@ -594,7 +594,7 @@ function getChannelAutocompletions(arg0) {
         boosters: null,
       };
       const obj16 = AutocompleteUtilsDefault;
-      obj2.boosters = tmp(5659).getBoosterMap(tmp(10091).AutocompleterResultTypes.VOICE_CHANNEL);
+      obj2.boosters = tmp(5661).getBoosterMap(tmp(10097).AutocompleterResultTypes.VOICE_CHANNEL);
       const combined = queryChannelsResult.concat(obj16.queryChannels(obj2));
       const mapped = combined.map((record) => record.record);
       if (0 === substr1.length) {
@@ -606,7 +606,7 @@ function getChannelAutocompletions(arg0) {
         }
       }
       importDefault = GuildChannelStore.getTextChannelNameDisambiguations(guildId);
-      const tmpResult4 = tmp(5659);
+      const tmpResult4 = tmp(5661);
       const obj19 = tmp7(12)(mapped);
       const takeResult = tmp7(12)(mapped).take(maxResults);
       let substr3 = tmp7(12)(mapped)
@@ -639,15 +639,15 @@ function getChannelAutocompletions(arg0) {
         if (!StreamerModeStore.hidePersonalInformation) {
           const obj5 = { query: substr1, limit: maxResults, fuzzy: true, boosters: null };
           const obj4 = AutocompleteUtilsDefault;
-          obj5.boosters = tmp(5659).getBoosterMap(tmp(10091).AutocompleterResultTypes.GROUP_DM);
-          const tmpResult5 = tmp(5659);
+          obj5.boosters = tmp(5661).getBoosterMap(tmp(10097).AutocompleterResultTypes.GROUP_DM);
+          const tmpResult5 = tmp(5661);
           const queryGroupDMsResult = obj4.queryGroupDMs(obj5);
           const obj6 = { query: substr1, limit: maxResults, boosters: null };
           const obj8 = AutocompleteUtilsDefault;
-          obj6.boosters = tmp(5659).getBoosterMap(tmp(10091).AutocompleterResultTypes.USER);
-          const tmpResult6 = tmp(5659);
+          obj6.boosters = tmp(5661).getBoosterMap(tmp(10097).AutocompleterResultTypes.USER);
+          const tmpResult6 = tmp(5661);
           const queryDMChannelsResult = obj8.queryDMChannels(obj6);
-          const sorted = _modDef12(queryGroupDMsResult.concat(queryDMChannelsResult)).sort(tmp(10091).sortByMatchScore);
+          const sorted = _modDef12(queryGroupDMsResult.concat(queryDMChannelsResult)).sort(tmp(10097).sortByMatchScore);
           const mapped1 = sorted.map((record) => {
             record = record.record;
             const obj = { text: record.comparator, channel: record, key: null };
@@ -1101,7 +1101,7 @@ function makeSearchTokenConfigs(arg0) {
   obj[SearchTokenTypes.ANSWER_AUTHOR_TYPE] = obj26;
   return obj;
 }
-let GuildChannelStore = fn(2096);
+let GuildChannelStore = fn(4394);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: hasOwnProperty, GUILD_VOCAL_CHANNELS_KEY: metroRequire } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1074);

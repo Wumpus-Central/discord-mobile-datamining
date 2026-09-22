@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = {
   card: {
     backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
@@ -117,11 +117,11 @@ export default function VibegrationsClarificationCard(clarification) {
     let intl = clarification(1115).intl;
     const obj4 = { index: bound + 1, total: length };
     obj3.children = intl.formatToPlainString(onSubmit(3678)["7bypa+"], obj4);
-    tmp14 = closure_6(clarification(4752).Text, obj3);
+    tmp14 = closure_6(clarification(4753).Text, obj3);
   }
   const items4 = [
     tmp14,
-    closure_6(clarification(4752).Text, {
+    closure_6(clarification(4753).Text, {
       variant: "text-md/semibold",
       color: "text-default",
       children: clarification.questions[bound].question,
@@ -184,7 +184,7 @@ export default function VibegrationsClarificationCard(clarification) {
       let intl2 = tmp20(1115).intl;
       obj7.text = intl2.string(onSubmit(3678).yKdgqw);
       obj7.onPress = callback1;
-      tmp19Result = tmp19(tmp20(5186).Button, obj7);
+      tmp19Result = tmp19(tmp20(5187).Button, obj7);
     }
   }
   const items5 = [tmp19Result];
@@ -215,7 +215,7 @@ export default function VibegrationsClarificationCard(clarification) {
     });
   };
   obj8.onSubmitEditing = callback2;
-  items5[1] = closure_6(clarification(6848).TextInput, obj8);
+  items5[1] = closure_6(clarification(6850).TextInput, obj8);
   obj6.children = items5;
   items4[3] = closure_7(closure_5, obj6);
   obj2.children = items4;

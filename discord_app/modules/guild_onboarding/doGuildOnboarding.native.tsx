@@ -3,7 +3,7 @@ import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
 import getDevicePixelRatioDefault from "../../utils/getDevicePixelRatio.native.tsx";
 import asyncRequireImpl from "../../../_runtime/01980_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../actions/ModalActionCreators.tsx";
-import _mod7343 from "../../../_runtime/metro/07343__.js";
+import _mod7345 from "../../../_runtime/metro/07345__.js";
 import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
@@ -11,7 +11,7 @@ import GuildOnboardingStore from "GuildOnboardingStore.tsx";
 
 require = fn;
 function getBaseAnimationData() {
-  return JSON.parse(JSON.stringify(_mod7343));
+  return JSON.parse(JSON.stringify(_mod7345));
 }
 let closure_13 = async function _doGuildOnboarding(arg0) {
   let guildId = arg0;
@@ -93,7 +93,7 @@ let closure_13 = async function _doGuildOnboarding(arg0) {
     await "HermesInternal";
     closure_3 = tmp2;
     guildId2 = guildId.guildId;
-    return "PX_16";
+    return "flex";
   })();
   iter.next();
   return iter;
@@ -216,7 +216,7 @@ function openAndWaitForOnboarding(guildId) {
       isFirstOpen: true,
     };
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(7366, dependencyMap.paths),
+      asyncRequireImpl(7368, dependencyMap.paths),
       {
         guildId,
         backShouldLeaveGuild: true,
@@ -232,7 +232,7 @@ function openAndWaitForOnboarding(guildId) {
       }
     });
     const pushLazyResult = ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(7366, dependencyMap.paths),
+      asyncRequireImpl(7368, dependencyMap.paths),
       {
         guildId,
         backShouldLeaveGuild: true,
@@ -245,7 +245,7 @@ function openAndWaitForOnboarding(guildId) {
   });
 }
 const NativeModules = fn(17).NativeModules;
-let closure_7 = fn(7342).GUILD_ONBOARDING_MODAL_KEY;
+let closure_7 = fn(7344).GUILD_ONBOARDING_MODAL_KEY;
 const Constants = fn(1074);
 ({ GuildFeatures: closure_8, Routes: closure_9 } = Constants);
 let closure_11 = {};

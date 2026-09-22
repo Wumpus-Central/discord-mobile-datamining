@@ -1,8 +1,7 @@
 // discord_app/modules/messages/MarkupPostProcessors.tsx
-import EmojiConstants from "../emojis/EmojiConstants.tsx";
-import findCodedLinks from "../coded_links/findCodedLinks.tsx";
-import EmbedUtils from "../../utils/EmbedUtils.tsx";
 import Constants from "../../Constants.tsx";
+import EmojiConstants from "../emojis/EmojiConstants.tsx";
+import RedundantLinkUtils from "RedundantLinkUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
@@ -2574,7 +2573,7 @@ function checkSpoilerEmbeds(ast1, inline) {
               if (null == someResult2) {
                 let _Array3 = Array;
                 if (content.content instanceof Array) {
-                  let someResult3 = closure_8(content.content, fn);
+                  let someResult3 = closure_7(content.content, fn);
                 } else {
                   let _Array4 = Array;
                   someResult3 = content.items instanceof Array;
@@ -19643,7 +19642,7 @@ function checkSpoilerEmbeds(ast1, inline) {
                 if (null == someResult2) {
                   let _Array3 = Array;
                   if (content.content instanceof Array) {
-                    let someResult3 = closure_8(content.content, fn);
+                    let someResult3 = closure_7(content.content, fn);
                   } else {
                     let _Array4 = Array;
                     someResult3 = content.items instanceof Array;
@@ -40962,36 +40961,30 @@ function containsMatchingNode(content, fn) {
     }
   }
 }
-({ MessageEmbedTypes, MessageTypes: c3 } = Constants);
+function isLinkNode(type) {
+  let tmp = "link" === type.type;
+  if (!tmp) {
+    tmp = "attachmentLink" === type.type;
+  }
+  return tmp;
+}
+const MessageTypes = Constants.MessageTypes;
 const MAX_EMOJI_TO_BE_JUMBO = EmojiConstants.MAX_EMOJI_TO_BE_JUMBO;
-let items = [, ];
-({ IMAGE: arr[0], GIFV: arr[1] } = MessageEmbedTypes);
-const set = new Set(items);
-const set1 = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
+const set = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
 const result = size.fileFinishedImporting("modules/messages/MarkupPostProcessors.tsx");
 
 export { checkSpoilerEmbeds };
-export const checkForSimpleEmbedMessage = function checkForSimpleEmbedMessage(arg0, first1) {
-  if (1 === arg0.length) {
-    if (1 === first1.length) {
-      const first = arg0[0];
-      first1 = first1[0];
-      if ("link" === first.type) {
-        let items = arg0;
-        if (set.has(first1.type)) {
-          items = arg0;
-          if (obj.isEmbedInline(first1)) {
-            items = [];
-          }
-          obj = EmbedUtils;
-        }
-      } else {
-        items = arg0;
-      }
-      return items;
+export const checkForSimpleEmbedMessage = function checkForSimpleEmbedMessage(found1, embeds) {
+  let items = found1;
+  if (obj.hasOnlySimpleEmbed(embeds)) {
+    const tmpResult = RedundantLinkUtils;
+    items = found1;
+    if (tmpResult.isSingleLinkContent(tmpResult2.readContentLinks(found1, isLinkNode))) {
+      items = [];
     }
+    tmpResult2 = RedundantLinkUtils;
   }
-  return arg0;
+  return items;
 };
 export const removeBuildOverrideLinks = function removeBuildOverrideLinks(arr) {
   return arr.filter((type) => {
@@ -41007,39 +41000,33 @@ export const removeExperimentLinks = function removeExperimentLinks(arr) {
   return arr.filter((type) => {
     let tmp = "link" !== type.type;
     if (!tmp) {
-      tmp = !closure_0(8134).isExperimentEmbedURL(type.target);
-      const obj = closure_0(8134);
+      tmp = !closure_0(8138).isExperimentEmbedURL(type.target);
+      const obj = closure_0(8138);
     }
     return tmp;
   });
 };
-export const removeQuestsEmbedLinks = function removeQuestsEmbedLinks(arr) {
-  closure_0 = arr.some((type) => "link" !== type.type);
-  return arr.filter((target) => {
-    let parseQuestsEmbedCodeResult = null;
-    if (null != target.target) {
-      parseQuestsEmbedCodeResult = findCodedLinks.parseQuestsEmbedCode(target.target);
+export const removeRedundantLinks = function removeRedundantLinks(arr) {
+  obj = { onlyLinkContent: obj(8137).readContentLinks(arr, isLinkNode).onlyLinks, stripGameServerShareLinks: false };
+  return arr.filter((type) => {
+    let tmp = null;
+    if ("link" === type.type) {
+      let target = type.target;
+      if (target == null) {
+        target = null;
+      }
+      tmp = target;
     }
-    let tmp4 = "link" === target.type && null != parseQuestsEmbedCodeResult;
-    if (tmp4) {
-      tmp4 = !closure_0;
+    let tmp3 = null == tmp;
+    if (!tmp3) {
+      tmp3 = !RedundantLinkUtils.isRedundantLink(tmp, closure_0);
     }
-    return !tmp4;
-  });
-};
-export const removeGameServerShareLinks = function removeGameServerShareLinks(arr) {
-  return arr.filter((target) => {
-    let tmp = null != target.target;
-    if (tmp) {
-      tmp = null != require("findCodedLinks").parseGameServerShareCode(target.target);
-      const obj = require("findCodedLinks");
-    }
-    return !("link" === target.type && tmp);
+    return tmp3;
   });
 };
 export const convertNewlinesInContent = function convertNewlinesInContent(arr) {
   const item = arr.forEach((type) => {
-    let hasItem = closure_1_6.has(type.type);
+    let hasItem = closure_1_5.has(type.type);
     if (hasItem) {
       hasItem = null != type.content;
     }
@@ -41048,7 +41035,7 @@ export const convertNewlinesInContent = function convertNewlinesInContent(arr) {
       let content = type.content;
       if (Array.isArray(type.content)) {
         let item = content.forEach((type) => {
-          let hasItem = closure_1_6.has(type.type);
+          let hasItem = closure_1_5.has(type.type);
           if (hasItem) {
             hasItem = null != type.content;
           }
@@ -41057,7 +41044,7 @@ export const convertNewlinesInContent = function convertNewlinesInContent(arr) {
             let content = type.content;
             if (Array.isArray(type.content)) {
               let item = content.forEach((type) => {
-                let hasItem = closure_1_6.has(type.type);
+                let hasItem = closure_1_5.has(type.type);
                 if (hasItem) {
                   hasItem = null != type.content;
                 }
@@ -41066,7 +41053,7 @@ export const convertNewlinesInContent = function convertNewlinesInContent(arr) {
                   let content = type.content;
                   if (Array.isArray(type.content)) {
                     let item = content.forEach((type) => {
-                      let hasItem = closure_1_6.has(type.type);
+                      let hasItem = closure_1_5.has(type.type);
                       if (hasItem) {
                         hasItem = null != type.content;
                       }
@@ -41081,8 +41068,8 @@ export const convertNewlinesInContent = function convertNewlinesInContent(arr) {
                           type = type.type;
                           let _Object = Object;
                           let _HermesInternal = HermesInternal;
-                          closure_1_1(closure_1_2[6]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
-                          let obj = closure_1_1(closure_1_2[6]);
+                          closure_1_1(closure_1_2[5]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
+                          let obj = closure_1_1(closure_1_2[5]);
                         }
                       }
                     });
@@ -41092,8 +41079,8 @@ export const convertNewlinesInContent = function convertNewlinesInContent(arr) {
                     type = type.type;
                     let _Object = Object;
                     let _HermesInternal = HermesInternal;
-                    closure_1_1(closure_1_2[6]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
-                    let obj = closure_1_1(closure_1_2[6]);
+                    closure_1_1(closure_1_2[5]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
+                    let obj = closure_1_1(closure_1_2[5]);
                   }
                 }
               });
@@ -41103,8 +41090,8 @@ export const convertNewlinesInContent = function convertNewlinesInContent(arr) {
               type = type.type;
               let _Object = Object;
               let _HermesInternal = HermesInternal;
-              closure_1_1(closure_1_2[6]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
-              let obj = closure_1_1(closure_1_2[6]);
+              closure_1_1(closure_1_2[5]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
+              let obj = closure_1_1(closure_1_2[5]);
             }
           }
         });
@@ -41114,8 +41101,8 @@ export const convertNewlinesInContent = function convertNewlinesInContent(arr) {
         type = type.type;
         let _Object = Object;
         let _HermesInternal = HermesInternal;
-        closure_1_1(closure_1_2[6]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
-        let obj = closure_1_1(closure_1_2[6]);
+        closure_1_1(closure_1_2[5]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
+        let obj = closure_1_1(closure_1_2[5]);
       }
     }
   });
@@ -41124,10 +41111,10 @@ export const convertNewlinesInContent = function convertNewlinesInContent(arr) {
 export const runMessageMarkupPostProcessors = function runMessageMarkupPostProcessors(arg0) {
   ({ ast, inline, message, contentMessage, messageContent, formatInline } = arg0);
   ({ hasBailedAst, hideSimpleEmbedContent, toAST } = arg0);
-  let arr = ast;
+  let tmp = ast;
   if (!Array.isArray(ast)) {
     const items = [ast];
-    arr = items;
+    tmp = items;
   }
   if (hasBailedAst) {
     let obj = { type: "text", content: messageContent, originalMatch: null };
@@ -41135,45 +41122,33 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
     obj2[0] = messageContent;
     obj.originalMatch = obj2;
     const items1 = [obj];
-    arr = items1;
+    tmp = items1;
   }
-  let arr4 = arr;
+  let arr3 = tmp;
   if (hideSimpleEmbedContent) {
-    let tmp2 = contentMessage;
+    let tmp3 = contentMessage;
     if (contentMessage == null) {
-      tmp2 = message;
+      tmp3 = message;
     }
-    const embeds = tmp2.embeds;
-    let tmp3 = arr;
-    if (1 === arr.length) {
-      tmp3 = arr;
-      if (1 === embeds.length) {
-        const first = arr[0];
-        const first1 = embeds[0];
-        if ("link" === first.type) {
-          let items2 = arr;
-          if (set.has(first1.type)) {
-            items2 = arr;
-            if (obj3.isEmbedInline(first1)) {
-              items2 = [];
-            }
-            obj3 = require("EmbedUtils");
-          }
-        } else {
-          items2 = arr;
-        }
-        tmp3 = items2;
+    let items2 = tmp;
+    if (obj3.hasOnlySimpleEmbed(tmp3.embeds)) {
+      const tmp4Result = tmp4(8137);
+      items2 = tmp;
+      if (tmp4Result.isSingleLinkContent(tmp4Result2.readContentLinks(tmp, isLinkNode))) {
+        items2 = [];
       }
+      tmp4Result2 = tmp4(8137);
     }
-    arr4 = tmp3;
+    arr3 = items2;
+    obj3 = require("RedundantLinkUtils");
   }
-  let tmp9 = formatInline;
+  let tmp7 = formatInline;
   if (!formatInline) {
-    tmp9 = message.type === constants.MEDIA_MENTION_MESSAGE;
+    tmp7 = message.type === MessageTypes.MEDIA_MENTION_MESSAGE;
   }
-  if (!tmp9) {
+  if (!tmp7) {
     if (inline) {
-      if (!arr4.some((type) => {
+      if (!arr3.some((type) => {
         let tmp = "emoji" !== type.type;
         if (tmp) {
           tmp = "customEmoji" !== type.type;
@@ -41189,7 +41164,7 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
         return tmp;
       })) {
         closure_129_0 = 0;
-        const item = arr4.forEach((type) => {
+        const item = arr3.forEach((type) => {
           let tmp = "emoji" !== type.type;
           if (tmp) {
             tmp = "customEmoji" !== type.type;
@@ -41202,19 +41177,19 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
           }
         });
         if (closure_129_0 <= MAX_EMOJI_TO_BE_JUMBO) {
-          const item1 = arr4.forEach((item) => {
+          const item1 = arr3.forEach((item) => {
             item.jumboable = true;
           });
         }
       }
     } else {
-      let tmp11 = "paragraph" === arr4[0].type;
-      if (tmp11) {
+      let tmp9 = "paragraph" === arr3[0].type;
+      if (tmp9) {
         const _Array = Array;
-        tmp11 = arr4[0].content instanceof Array;
+        tmp9 = arr3[0].content instanceof Array;
       }
-      if (tmp11) {
-        let content = arr4[0].content;
+      if (tmp9) {
+        let content = arr3[0].content;
         _require = undefined;
         if (!content.some((type) => {
           let tmp = "emoji" !== type.type;
@@ -41250,13 +41225,13 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
             });
           }
         }
-        arr4[0].content = content;
+        arr3[0].content = content;
       }
     }
   }
-  let found1 = arr4;
+  let found1 = arr3;
   if (toAST) {
-    const found = arr4.filter((type) => {
+    const found = arr3.filter((type) => {
       let tmp = "link" !== type.type;
       if (!tmp) {
         tmp = !closure_0(1361).isBuildOverrideLink(type.target);
@@ -41267,23 +41242,28 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
     found1 = found.filter((type) => {
       let tmp = "link" !== type.type;
       if (!tmp) {
-        tmp = !closure_0(8134).isExperimentEmbedURL(type.target);
-        const obj = closure_0(8134);
+        tmp = !closure_0(8138).isExperimentEmbedURL(type.target);
+        const obj = closure_0(8138);
       }
       return tmp;
     });
   }
-  closure_130_0 = found1.some((type) => "link" !== type.type);
-  const ast1 = found1.filter((target) => {
-    let parseQuestsEmbedCodeResult = null;
-    if (null != target.target) {
-      parseQuestsEmbedCodeResult = findCodedLinks.parseQuestsEmbedCode(target.target);
+  const obj4 = { onlyLinkContent: require("RedundantLinkUtils").readContentLinks(found1, isLinkNode).onlyLinks, stripGameServerShareLinks: false };
+  closure_130_0 = obj4;
+  const ast1 = found1.filter((type) => {
+    let tmp = null;
+    if ("link" === type.type) {
+      let target = type.target;
+      if (target == null) {
+        target = null;
+      }
+      tmp = target;
     }
-    let tmp4 = "link" === target.type && null != parseQuestsEmbedCodeResult;
-    if (tmp4) {
-      tmp4 = !closure_0;
+    let tmp3 = null == tmp;
+    if (!tmp3) {
+      tmp3 = !RedundantLinkUtils.isRedundantLink(tmp, closure_0);
     }
-    return !tmp4;
+    return tmp3;
   });
   if (contentMessage == null) {
     contentMessage = message;
@@ -41294,7 +41274,7 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
   }
   if (formatInline) {
     const item4 = ast1.forEach((type) => {
-      let hasItem = closure_1_6.has(type.type);
+      let hasItem = closure_1_5.has(type.type);
       if (hasItem) {
         hasItem = null != type.content;
       }
@@ -41303,7 +41283,7 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
         let content = type.content;
         if (Array.isArray(type.content)) {
           let item = content.forEach((type) => {
-            let hasItem = closure_1_6.has(type.type);
+            let hasItem = closure_1_5.has(type.type);
             if (hasItem) {
               hasItem = null != type.content;
             }
@@ -41312,7 +41292,7 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
               let content = type.content;
               if (Array.isArray(type.content)) {
                 let item = content.forEach((type) => {
-                  let hasItem = closure_1_6.has(type.type);
+                  let hasItem = closure_1_5.has(type.type);
                   if (hasItem) {
                     hasItem = null != type.content;
                   }
@@ -41321,7 +41301,7 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
                     let content = type.content;
                     if (Array.isArray(type.content)) {
                       let item = content.forEach((type) => {
-                        let hasItem = closure_1_6.has(type.type);
+                        let hasItem = closure_1_5.has(type.type);
                         if (hasItem) {
                           hasItem = null != type.content;
                         }
@@ -41336,8 +41316,8 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
                             type = type.type;
                             let _Object = Object;
                             let _HermesInternal = HermesInternal;
-                            closure_1_1(closure_1_2[6]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
-                            let obj = closure_1_1(closure_1_2[6]);
+                            closure_1_1(closure_1_2[5]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
+                            let obj = closure_1_1(closure_1_2[5]);
                           }
                         }
                       });
@@ -41347,8 +41327,8 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
                       type = type.type;
                       let _Object = Object;
                       let _HermesInternal = HermesInternal;
-                      closure_1_1(closure_1_2[6]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
-                      let obj = closure_1_1(closure_1_2[6]);
+                      closure_1_1(closure_1_2[5]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
+                      let obj = closure_1_1(closure_1_2[5]);
                     }
                   }
                 });
@@ -41358,8 +41338,8 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
                 type = type.type;
                 let _Object = Object;
                 let _HermesInternal = HermesInternal;
-                closure_1_1(closure_1_2[6]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
-                let obj = closure_1_1(closure_1_2[6]);
+                closure_1_1(closure_1_2[5]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
+                let obj = closure_1_1(closure_1_2[5]);
               }
             }
           });
@@ -41369,8 +41349,8 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
           type = type.type;
           let _Object = Object;
           let _HermesInternal = HermesInternal;
-          closure_1_1(closure_1_2[6]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
-          let obj = closure_1_1(closure_1_2[6]);
+          closure_1_1(closure_1_2[5]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
+          let obj = closure_1_1(closure_1_2[5]);
         }
       }
     });

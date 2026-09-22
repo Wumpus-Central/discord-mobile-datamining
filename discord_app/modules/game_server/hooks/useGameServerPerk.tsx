@@ -1,15 +1,15 @@
 // discord_app/modules/game_server/hooks/useGameServerPerk.tsx
 import util from "../../../intl/index.native.tsx";
 import _modDef2936 from "../GameServer.messages.js";
-import _modDef12832 from "../../../../discord_assets/assets/premium/game_servers/game_server_tile.png.js";
+import _modDef12836 from "../../../../discord_assets/assets/premium/game_servers/game_server_tile.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GameServerStore from "../GameServerStore.tsx";
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(4646).GAME_SERVER_POWERUP_SKU_ID;
-const GuildPowerupType = fn(4645).GuildPowerupType;
+let closure_5 = fn(4647).GAME_SERVER_POWERUP_SKU_ID;
+const GuildPowerupType = fn(4646).GuildPowerupType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_server/hooks/useGameServerPerk.tsx");
 
@@ -48,8 +48,8 @@ export default function useGameServerPerk(guildId) {
         obj.cost = tmp2;
         obj.dependencies = [];
         obj.type = GuildPowerupType.PERK;
-        obj.animatedImageUrl = _modDef12832;
-        obj.staticImageUrl = _modDef12832;
+        obj.animatedImageUrl = _modDef12836;
+        obj.staticImageUrl = _modDef12836;
         tmp = obj;
       }
     }

@@ -17,10 +17,10 @@ function AddApplicationIdentityTableRow(application) {
   _require = undefined;
   let analyticsLocations;
   ({ start, end } = application);
-  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(7410)(application));
-  const tmp2 = analyticsLocations(7410)(application);
-  analyticsLocations = analyticsLocations(7407)(analyticsLocations(7427).ACTION_SHEET).analyticsLocations;
-  const tmp3 = analyticsLocations(7407);
+  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(7412)(application));
+  const tmp2 = analyticsLocations(7412)(application);
+  analyticsLocations = analyticsLocations(7409)(analyticsLocations(7429).ACTION_SHEET).analyticsLocations;
+  const tmp3 = analyticsLocations(7409);
   const tmp4 = closure_7();
   const iconSource = application.getIconSource(require("native").getIconSize(require("native").IconSizes.LARGE));
   const obj2 = {

@@ -26,16 +26,16 @@ function LaunchpadChannelIcon(channel) {
   obj3.children = closure_8(GuildIconDefault, { guild: stateFromStores, size: tmp2.icon.guildBadgeIconSize });
   const items1 = [
     closure_8(View, obj3),
-    closure_8(channel(12444).ChannelIcon, { channel, size: "sm", wrapperSize: 32 }),
+    closure_8(channel(12448).ChannelIcon, { channel, size: "sm", wrapperSize: 32 }),
   ];
   obj2.children = items1;
   return closure_10(closure_9, obj2);
 }
 const View = fn(17).View;
-const UnreadSetting = fn(4938).UnreadSetting;
+const UnreadSetting = fn(4939).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_11 = createStyles.createStyles(() => {
   const obj = { guildBadgeIcon: null };
   const rect = {

@@ -60,7 +60,7 @@ const Constants = fn(1074);
 ({ BITRATE_DEFAULT: hasOwnProperty, ChannelTypes } = Constants);
 const BasicPermissions = Constants.BasicPermissions;
 ({ ChannelTypesSets: closure_8, Permissions } = Constants);
-const ChannelFlags = fn(2048).ChannelFlags;
+const ChannelFlags = fn(2049).ChannelFlags;
 let items = [, , , , , , , , , ,];
 ({
   GUILD_TEXT: arr[0],
@@ -907,17 +907,17 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
     safetyWarnings: "DD",
     blockedUserWarningDismissed: "validate",
     template: null,
-    themeColor: "\u{1F3B3}",
+    themeColor: "\u{1F697}",
     threadMetadata: 6,
-    topic_: 665,
+    topic_: 669,
     totalMessageSent: "parse",
     type: null,
-    userLimit_: "\u{1F3AE}",
+    userLimit_: "\u{1F695}",
     version: 6,
-    videoQualityMode: 666,
+    videoQualityMode: 670,
     linkedLobby: "run",
     hdStreamingUntil: null,
-    hdStreamingBuyerId: "\u{1F3B0}",
+    hdStreamingBuyerId: "\u{1F699}",
     voiceHangout: 6,
   };
   if (null == application_id.available_tags) {
@@ -1075,7 +1075,7 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
       hd_streaming_buyer_id: obj.hdStreamingBuyerId,
       voice_hangout: obj.voiceHangout,
     } = application_id);
-    return obj7(2053).dangerouslyCast(obj, UnknownChannelRecord);
+    return obj7(2054).dangerouslyCast(obj, UnknownChannelRecord);
   } else {
     const available_tags = application_id.available_tags;
     if (null == available_tags) {
@@ -1232,7 +1232,7 @@ GuildVocalChannelRecord["fromServer"] = function fromServer(application_id, arg1
   if (tmp7 == null) {
     tmp7 = UnknownChannelRecord;
   }
-  return obj6(2053).dangerouslyCast(obj, tmp7);
+  return obj6(2054).dangerouslyCast(obj, tmp7);
 };
 class GuildTextualChannelRecord extends ChannelRecordBase {
   constructor(arg0) {
@@ -1364,7 +1364,7 @@ GuildTextualChannelRecord["fromServer"] = function fromServer(application_id, ar
   if (tmp7 == null) {
     tmp7 = UnknownChannelRecord;
   }
-  return obj6(2053).dangerouslyCast(obj, tmp7);
+  return obj6(2054).dangerouslyCast(obj, tmp7);
 };
 class GuildAnnouncementChannelRecord extends GuildTextualChannelRecord {}
 class GuildCategoryChannelRecord extends GuildTextualChannelRecord {}
@@ -1539,7 +1539,7 @@ ForumChannelRecord["fromServer"] = function fromServer(available_tags, arg1) {
     }
     obj.type = GUILD_TEXT;
     obj.version = available_tags.version;
-    return obj8(2053).dangerouslyCast(obj, ForumChannelRecord);
+    return obj8(2054).dangerouslyCast(obj, ForumChannelRecord);
   }
 };
 class IdAsNumberCache {

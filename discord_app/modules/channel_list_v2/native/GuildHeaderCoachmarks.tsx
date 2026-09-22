@@ -6,7 +6,7 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 
 require = fn;
 const Permissions = fn(1074).Permissions;
-const constants = fn(2038).DismissibleContentGroupName;
+const constants = fn(2039).DismissibleContentGroupName;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/GuildHeaderCoachmarks.tsx");

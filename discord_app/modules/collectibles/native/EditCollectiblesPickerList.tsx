@@ -7,12 +7,12 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj = {
   list: { flex: 1, marginTop: 12 },
   listContent: { paddingBottom: 88 },
   loadingContainer: { paddingVertical: 80, alignItems: "center" },
-  header: { paddingHorizontal: fn(13474).GUTTER_SIZE, paddingTop: 10, paddingBottom: 5 },
+  header: { paddingHorizontal: fn(13482).GUTTER_SIZE, paddingTop: 10, paddingBottom: 5 },
 };
 let closure_7 = createStyles.createStyles(obj);
 let closure_8 = noop.memo((children) => (
@@ -60,7 +60,7 @@ export const EditCollectiblesPickerList = function EditCollectiblesPickerList(se
         const obj = { type: "header", key: "header-" + header.section, header: header.header };
         const obj2 = items(12);
         const item = items(12)
-          .chunk(header.items, items(13474).ROW_SIZE)
+          .chunk(header.items, items(13482).ROW_SIZE)
           .forEach((items, index) => {
             items.push({ type: "row", key: "row-" + header.section + "-" + index, items });
           });

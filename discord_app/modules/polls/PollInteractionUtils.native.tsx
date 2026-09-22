@@ -7,7 +7,7 @@ const result = size.fileFinishedImporting("modules/polls/PollInteractionUtils.na
 
 export const showVotesForAnswer = function showVotesForAnswer(initialAnswerId) {
   const message = initialAnswerId.message;
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11969, dependencyMap.paths), "PollVotesActionSheet", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11973, dependencyMap.paths), "PollVotesActionSheet", {
     channelId: message.channel_id,
     messageId: message.id,
     initialAnswerId: initialAnswerId.initialAnswerId,

@@ -334,7 +334,7 @@ let closure_22 = async function _fetchAssetIds(arg0) {
     num13 = 1;
   }
   closure_131_2 = num13;
-  return "PX_16";
+  return "flex";
 };
 const Constants = fn(1074);
 ({ Endpoints: metroRequire, PlatformTypes } = Constants);

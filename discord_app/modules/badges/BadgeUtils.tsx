@@ -1,5 +1,6 @@
 // discord_app/modules/badges/BadgeUtils.tsx
 import util from "../../intl/index.native.tsx";
+import StringUtils from "../../utils/StringUtils.tsx";
 import Constants from "../user_profile/Constants.tsx";
 import BadgeId from "../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
 import BadgeIdResolution from "BadgeIdResolution.tsx";
@@ -78,6 +79,49 @@ export const groupCustomizableBadges = function groupCustomizableBadges(memo) {
   return { fixedBadges, reorderableBadges, hiddenBadges };
 };
 export { getProfileBadgeIconUrl };
+export const getProfileBadgeLabel = function getProfileBadgeLabel(description, info_label) {
+  if (info_label != null) {
+    info_label = info_label.info_label;
+  }
+  if (null != info_label) {
+    if (!obj.isLegacyBadgeId(info_label.badge_id)) {
+      StringUtils;
+    }
+    return info_label;
+  }
+  let str = description;
+  if (description == null) {
+    let name;
+    if (info_label != null) {
+      name = info_label.name;
+    }
+    str = name;
+  }
+  if (str == null) {
+    str = "";
+  }
+  info_label = str;
+};
+export const getLegacyDescriptionByBadgeId = function getLegacyDescriptionByBadgeId(badges) {
+  const map = new Map();
+  const iter = badges[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp2 = nextResult;
+    let obj2 = BadgeIdResolution;
+    let profileBadgeId = obj2.resolveProfileBadgeId(nextResult.id);
+    let tmp6 = profileBadgeId;
+    let hasItem = null == profileBadgeId;
+    if (!hasItem) {
+      hasItem = map.has(tmp6);
+    }
+    if (!hasItem) {
+      let result = map.set(tmp6, tmp2.description);
+    }
+    continue;
+  }
+  return map;
+};
 export const getLegacyIconUrlByBadgeId = function getLegacyIconUrlByBadgeId(badges) {
   const map = new Map();
   const iter = badges[Symbol.iterator]();

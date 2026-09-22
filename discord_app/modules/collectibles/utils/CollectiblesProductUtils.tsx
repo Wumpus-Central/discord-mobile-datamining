@@ -3,7 +3,7 @@ import CollectiblesItemType from "../../../../discord_common/js/shared/shared-co
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
 require = fn;
-const isProfileEffectRecord = fn(7790).isProfileEffectRecord;
+const isProfileEffectRecord = fn(7793).isProfileEffectRecord;
 const Constants = fn(1074);
 ({ CurrencyCodes: closure_4, PriceSetAssignmentPurchaseTypes: hasOwnProperty } = Constants);
 const size = fn(2);
@@ -11,20 +11,17 @@ const result = size.fileFinishedImporting("modules/collectibles/utils/Collectibl
 
 export const getProductOrbPrice = function getProductOrbPrice(arg0) {
   const tmp2 = arg0.product.prices[arg0.hasShopDiscount ? constants.PREMIUM_TIER_2 : constants.DEFAULT];
-  let substr;
+  let prices;
   if (tmp2 != null) {
     const countryPrices = tmp2.countryPrices;
     if (countryPrices != null) {
-      const prices = countryPrices.prices;
-      if (prices != null) {
-        substr = prices.slice(0, 2);
-      }
+      prices = countryPrices.prices;
     }
   }
-  if (substr == null) {
-    substr = [];
+  if (prices == null) {
+    prices = [];
   }
-  let found = substr.find((currency) => currency.currency === constants.DISCORD_ORB);
+  let found = prices.find((currency) => currency.currency === constants.DISCORD_ORB);
   if (found == null) {
     found = null;
   }
@@ -32,60 +29,51 @@ export const getProductOrbPrice = function getProductOrbPrice(arg0) {
 };
 export const getProductFiatPrice = function getProductFiatPrice(arg0) {
   const tmp2 = arg0.product.prices[arg0.hasShopDiscount ? constants.MOBILE_PREMIUM_TIER_2 : constants.MOBILE];
-  let substr;
+  let prices;
   if (tmp2 != null) {
     const countryPrices = tmp2.countryPrices;
     if (countryPrices != null) {
-      const prices = countryPrices.prices;
-      if (prices != null) {
-        substr = prices.slice(0, 2);
-      }
+      prices = countryPrices.prices;
     }
   }
-  if (substr == null) {
-    substr = [];
+  if (prices == null) {
+    prices = [];
   }
-  let found = substr.find((currency) => currency.currency !== constants.DISCORD_ORB);
+  let found = prices.find((currency) => currency.currency !== constants.DISCORD_ORB);
   if (found == null) {
     found = null;
   }
   return found;
 };
 export const getHasOrbPrice = function getHasOrbPrice(arg0) {
-  let substr;
+  let prices;
   if (arg0.prices[constants.DEFAULT] != null) {
     const countryPrices = tmp.countryPrices;
     if (countryPrices != null) {
-      const prices = countryPrices.prices;
-      if (prices != null) {
-        substr = prices.slice(0, 2);
-      }
+      prices = countryPrices.prices;
     }
   }
-  if (substr == null) {
-    substr = [];
+  if (prices == null) {
+    prices = [];
   }
-  let found = substr.find((currency) => currency.currency === constants.DISCORD_ORB);
+  let found = prices.find((currency) => currency.currency === constants.DISCORD_ORB);
   if (found == null) {
     found = null;
   }
   return null != found;
 };
 export const getHasNonOrbPrice = function getHasNonOrbPrice(arg0) {
-  let substr;
+  let prices;
   if (arg0.prices[constants.MOBILE] != null) {
     const countryPrices = tmp.countryPrices;
     if (countryPrices != null) {
-      const prices = countryPrices.prices;
-      if (prices != null) {
-        substr = prices.slice(0, 2);
-      }
+      prices = countryPrices.prices;
     }
   }
-  if (substr == null) {
-    substr = [];
+  if (prices == null) {
+    prices = [];
   }
-  let found = substr.find((currency) => currency.currency !== constants.DISCORD_ORB);
+  let found = prices.find((currency) => currency.currency !== constants.DISCORD_ORB);
   if (found == null) {
     found = null;
   }
@@ -95,38 +83,32 @@ export const isOrbsExclusiveProduct = function isOrbsExclusiveProduct(product) {
   if (null == product) {
     return false;
   } else {
-    let substr;
+    let prices;
     if (product.prices[constants.DEFAULT] != null) {
       const countryPrices = tmp6.countryPrices;
       if (countryPrices != null) {
-        const prices = countryPrices.prices;
-        if (prices != null) {
-          substr = prices.slice(0, 2);
-        }
+        prices = countryPrices.prices;
       }
     }
-    if (substr == null) {
-      substr = [];
+    if (prices == null) {
+      prices = [];
     }
-    let found = substr.find((currency) => currency.currency === constants.DISCORD_ORB);
+    let found = prices.find((currency) => currency.currency === constants.DISCORD_ORB);
     if (found == null) {
       found = null;
     }
     let tmp2 = null != found;
-    let substr1;
+    let prices1;
     if (product.prices[constants.MOBILE] != null) {
       const countryPrices2 = tmp3.countryPrices;
       if (countryPrices2 != null) {
-        const prices1 = countryPrices2.prices;
-        if (prices1 != null) {
-          substr1 = prices1.slice(0, 2);
-        }
+        prices1 = countryPrices2.prices;
       }
     }
-    if (substr1 == null) {
-      substr1 = [];
+    if (prices1 == null) {
+      prices1 = [];
     }
-    let found1 = substr1.find((currency) => currency.currency !== constants.DISCORD_ORB);
+    let found1 = prices1.find((currency) => currency.currency !== constants.DISCORD_ORB);
     if (found1 == null) {
       found1 = null;
     }
@@ -182,38 +164,32 @@ export const isDynamicProduct = function isDynamicProduct(selectedProduct) {
 };
 export const getProductsWithOrbsPrice = function getProductsWithOrbsPrice(arr) {
   return arr.filter((item) => {
-    let substr;
+    let prices;
     if (item.prices[constants.DEFAULT] != null) {
       const countryPrices = tmp2.countryPrices;
       if (countryPrices != null) {
-        const prices = countryPrices.prices;
-        if (prices != null) {
-          substr = prices.slice(0, 2);
-        }
+        prices = countryPrices.prices;
       }
     }
-    if (substr == null) {
-      substr = [];
+    if (prices == null) {
+      prices = [];
     }
-    let found = substr.find((currency) => currency.currency === constants.DISCORD_ORB);
+    let found = prices.find((currency) => currency.currency === constants.DISCORD_ORB);
     if (found == null) {
       found = null;
     }
     let tmp4 = null != found;
-    let substr1;
+    let prices1;
     if (item.prices[constants.MOBILE] != null) {
       const countryPrices2 = tmp5.countryPrices;
       if (countryPrices2 != null) {
-        const prices1 = countryPrices2.prices;
-        if (prices1 != null) {
-          substr1 = prices1.slice(0, 2);
-        }
+        prices1 = countryPrices2.prices;
       }
     }
-    if (substr1 == null) {
-      substr1 = [];
+    if (prices1 == null) {
+      prices1 = [];
     }
-    let found1 = substr1.find((currency) => currency.currency !== constants.DISCORD_ORB);
+    let found1 = prices1.find((currency) => currency.currency !== constants.DISCORD_ORB);
     if (found1 == null) {
       found1 = null;
     }

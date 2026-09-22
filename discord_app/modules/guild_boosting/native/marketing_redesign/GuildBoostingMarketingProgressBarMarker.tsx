@@ -1,9 +1,9 @@
 // discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingProgressBarMarker.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import _modDef13847 from "../../../../../_runtime/metro/13847__.js";
-import _modDef13848 from "../../../../../_runtime/metro/13848__.js";
-import _modDef13849 from "../../../../../_runtime/metro/13849__.js";
+import _modDef13855 from "../../../../../_runtime/metro/13855__.js";
+import _modDef13856 from "../../../../../_runtime/metro/13856__.js";
+import _modDef13857 from "../../../../../_runtime/metro/13857__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -102,9 +102,9 @@ const TierMarkerPositions = {
   [BoostedGuildTiers.TIER_2]: 0.6666666666666666,
   [BoostedGuildTiers.TIER_3]: 1,
 };
-let obj2 = { [TIER_1]: _modDef13847, [TIER_2]: _modDef13848, [TIER_3]: _modDef13849 };
+let obj2 = { [TIER_1]: _modDef13855, [TIER_2]: _modDef13856, [TIER_3]: _modDef13857 };
 ({ TIER_1, TIER_2, TIER_3 } = BoostedGuildTiers);
-let createStyles = fn(4756);
+let createStyles = fn(4757);
 let obj4 = {
   progressBarMarkerInnerCircle: {
     width: 17.5,
@@ -125,7 +125,7 @@ let closure_12 = { stiffness: 50, damping: 5 };
 const __initData = {
   code: "function GuildBoostingMarketingProgressBarMarkerTsx1(){const{backgroundColor,useReducedMotion,shouldAnimate,scale}=this.__closure;return{backgroundColor:backgroundColor,transform:[{scale:useReducedMotion||!shouldAnimate?1:scale.get()}]};}",
 };
-createStyles = fn(4756);
+createStyles = fn(4757);
 let obj5 = {
   progressBarMarker: null,
   progressBarMarkerBackground: { width: "100%", height: "100%", position: "absolute", borderRadius: 28 },
@@ -180,7 +180,7 @@ export default function ProgressBarMarker(arg0) {
   let PREMIUM_PERK_PINK;
   ({ revealedTier, isDisabled } = arg0);
   let tmp = closure_15();
-  let obj = useReducedMotion(4492);
+  let obj = useReducedMotion(4493);
   const sharedValue = obj.useSharedValue(1);
   dependencyMap = tmp7;
   let tmp20Result = tmp9;
@@ -226,11 +226,11 @@ export default function ProgressBarMarker(arg0) {
     const obj4 = { left: `${100 * obj[tier]}%` };
     items1[1] = obj4;
     obj3.style = items1;
-    const animatedStyle = useReducedMotion(4492).useAnimatedStyle(P);
+    const animatedStyle = useReducedMotion(4493).useAnimatedStyle(P);
     const obj5 = { style: null };
     const items2 = [tmp.progressBarMarkerBackground, animatedStyle];
     obj5.style = items2;
-    const items3 = [closure_7(tmp2(4492).View, obj5), ,];
+    const items3 = [closure_7(tmp2(4493).View, obj5), ,];
     const obj6 = {
       tier,
       isDisabled,
@@ -260,30 +260,30 @@ export default function ProgressBarMarker(arg0) {
       tmp20Result = tier !== BoostedGuildTiers.NONE;
     }
     if (tmp20Result) {
-      const obj8 = { source: tmp2(11815), style: tmp.progressBarMarkerUnlockedIcon };
+      const obj8 = { source: tmp2(11819), style: tmp.progressBarMarkerUnlockedIcon };
       tmp20Result = closure_7(closure_5, obj8);
     }
     const items5 = [tmp20Result];
     const obj9 = { variant: "text-xs/medium", children: null };
-    const tmp5Result = useReducedMotion(4492);
-    obj9.children = useReducedMotion(4649).getTierName(tier, { useLevels: false });
-    items5[1] = closure_7(useReducedMotion(4752).Text, obj9);
+    const tmp5Result = useReducedMotion(4493);
+    obj9.children = useReducedMotion(4650).getTierName(tier, { useLevels: false });
+    items5[1] = closure_7(useReducedMotion(4753).Text, obj9);
     obj7.children = items5;
     items3[2] = closure_8(PREMIUM_PERK_PINK, obj7);
     obj3.children = items3;
     return closure_8(PREMIUM_PERK_PINK, obj3);
   }
-  const tmp4 = sharedValue(4690)();
-  const tmp5Result5 = useReducedMotion(4607);
-  const isThemeDarkResult = useReducedMotion(4607).isThemeDark(tmp4);
-  const hexWithOpacity = useReducedMotion(4605).hexWithOpacity;
+  const tmp4 = sharedValue(4691)();
+  const tmp5Result5 = useReducedMotion(4608);
+  const isThemeDarkResult = useReducedMotion(4608).isThemeDark(tmp4);
+  const hexWithOpacity = useReducedMotion(4606).hexWithOpacity;
   const unsafe_rawColors = tmp2(576).unsafe_rawColors;
   if (isThemeDarkResult) {
     PREMIUM_PERK_PINK = hexWithOpacity(unsafe_rawColors.WHITE, 0.4);
   } else {
     PREMIUM_PERK_PINK = hexWithOpacity(unsafe_rawColors.PRIMARY_200, 0.4);
   }
-  const tmp5Result6 = useReducedMotion(4605);
+  const tmp5Result6 = useReducedMotion(4606);
 }
 export const MARKER_DIMENSIONS = 28;
 export { TierMarkerPositions };

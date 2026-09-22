@@ -521,7 +521,7 @@ let closure_18 = async function _fetchSummariesBulk(arg0) {
     flag2 = true;
   }
   closure_131_2 = flag2;
-  return "PX_16";
+  return "flex";
 };
 function useChannelSummaries(channelIds) {
   channelIds = channelIds.channelIds;

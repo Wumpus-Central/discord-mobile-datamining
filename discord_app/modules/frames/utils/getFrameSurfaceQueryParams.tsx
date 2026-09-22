@@ -1,17 +1,16 @@
 // discord_app/modules/frames/utils/getFrameSurfaceQueryParams.tsx
-import FramesConstants from "../FramesConstants.tsx";
+import EmbeddedSurfaceType from "../../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const EmbeddedSurfaceType = FramesConstants.EmbeddedSurfaceType;
 const result = size.fileFinishedImporting("modules/frames/utils/getFrameSurfaceQueryParams.tsx");
 
 export default function getFrameSurfaceQueryParams(type) {
   type = type.type;
-  if (EmbeddedSurfaceType.MAIN === type) {
+  if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
     return {};
   } else {
-    if (EmbeddedSurfaceType.APP_CHANNEL !== type) {
-      if (EmbeddedSurfaceType.VOICE_CHANNEL !== type) {
+    if (EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL !== type) {
+      if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL !== type) {
         return {};
       }
     }

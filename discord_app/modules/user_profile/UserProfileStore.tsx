@@ -58,12 +58,19 @@ function createUserWidgetFromServer(data) {
                     localClipId: null,
                     videoURL: null,
                     thumbnailURL: null,
+                    spritesheetImageURL: null,
+                    spritesheetVttURL: null,
                   };
                   ({ id: obj.id, file_id: obj.fileId, game_id: obj.gameId, title } = id);
                   obj.title = title;
                   ({ tags: obj.tags, local_clip_id } = id);
                   obj.localClipId = local_clip_id;
-                  ({ video_url: obj.videoURL, thumbnail_url: obj.thumbnailURL } = id);
+                  ({
+                    video_url: obj.videoURL,
+                    thumbnail_url: obj.thumbnailURL,
+                    spritesheet_image_url: obj.spritesheetImageURL,
+                    spritesheet_vtt_url: obj.spritesheetVttURL,
+                  } = id);
                   tmp = obj;
                 }
               }

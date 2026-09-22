@@ -121,8 +121,8 @@ const Constants = fn(1074);
 const getAppIntentScheme = fn(2004).getAppIntentScheme;
 let obj2 = new LoggerDefault("VoiceEngineStreamingManager");
 obj2.enableNativeLogger(true);
-const timeout = new fn(2036).Timeout();
-const timeout1 = new fn(2036).Timeout();
+const timeout = new fn(2037).Timeout();
+const timeout1 = new fn(2037).Timeout();
 let closure_16 = [];
 const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
 class VoiceEngineStreamingManager extends tmp6 {
@@ -164,13 +164,13 @@ prototype["_initialize"] = function _initialize() {
     currentAppIntent = currentAppIntent.getCurrentAppIntent();
     if (null != channel) {
       const guildId = channel.getGuildId();
-      currentUserActiveStream(4898).startStream(guildId, channel.id, { sourceId: "screen:0" });
+      currentUserActiveStream(4899).startStream(guildId, channel.id, { sourceId: "screen:0" });
       currentUserActiveStream = obj2.getCurrentUserActiveStream();
       if (null != currentUserActiveStream) {
-        const tmp2Result = closure_1(4957);
+        const tmp2Result = closure_1(4958);
         const participant = tmp2Result.selectParticipant(
           channel.id,
-          tmp9(4808).encodeStreamKey(currentUserActiveStream),
+          tmp9(4809).encodeStreamKey(currentUserActiveStream),
         );
         if ("android" === closure_19.platform) {
           closure_15.start(15000, () => {
@@ -191,9 +191,9 @@ prototype["_initialize"] = function _initialize() {
         if (null != currentAppIntent) {
           closure_4.openURL(closure_12(currentAppIntent));
         }
-        const tmp9Result = tmp9(4808);
+        const tmp9Result = tmp9(4809);
       }
-      const obj3 = currentUserActiveStream(4898);
+      const obj3 = currentUserActiveStream(4899);
       tmp9 = currentUserActiveStream;
     } else {
       let result = closure_19.stopBroadcastWithError(-1, "Not currently in a voice channel");

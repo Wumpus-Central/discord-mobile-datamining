@@ -5,7 +5,7 @@ import getJankSurfaceName from "getJankSurfaceName.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const JankScreenConstants = fn(16345);
+const JankScreenConstants = fn(16356);
 ({ INTERACTION_NONE: closure_4, INTERACTION_TRANSITION: hasOwnProperty } = JankScreenConstants);
 let __initData = {
   code: "function JankSlidingSurfaceReporterNativeTsx1(){const{position}=this.__closure;return position.get();}",

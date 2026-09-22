@@ -8,8 +8,8 @@ import AgeVerificationActionCreatorsDefault from "../../../age_assurance/AgeVeri
 import AgeVerificationAnalyticsUtils from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import useParentalControlSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
 import DefultGuildsRestrictedSetting from "../../privacy_and_safety/DefultGuildsRestrictedSetting.tsx";
-import DefaultDMSettingsExperiment from "../../content_and_social/DefaultDMSettingsExperiment.tsx";
 import useShouldDisableMessageRequestSettings from "../../../message_request/hooks/useShouldDisableMessageRequestSettings.tsx";
+import DefaultDMSettingsExperiment from "../../content_and_social/DefaultDMSettingsExperiment.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
 require = fn;
@@ -51,11 +51,11 @@ function showMessageRequestRestrictionModal(arg0) {
   };
   AlertActionCreatorsDefault.show(obj2);
 }
-const UserSettingsSafetySelectedGuildStore = fn(16194);
+const UserSettingsSafetySelectedGuildStore = fn(16205);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } =
   UserSettingsSafetySelectedGuildStore);
-let closure_6 = fn(11726).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
-const SettingBuilders = fn(11725);
+let closure_6 = fn(11730).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
+const SettingBuilders = fn(11729);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -65,7 +65,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.o5fjz6);
   },
-  parent: fn(8233).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8237).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue() {
     const selectedGuildId = hasOwnProperty().selectedGuildId;
     const defaultGuildsRestricted = DefultGuildsRestrictedSetting.useDefaultGuildsRestricted();
@@ -74,9 +74,9 @@ const toggle = SettingBuilders.createToggle({
     const setting = RestrictedGuildIds.useSetting();
     let hasItem = setting.includes(selectedGuildId2);
     const isParentallyControlled = useParentalControlSettings.useIsParentallyControlled();
-    let shouldDisableMessageRequestSettings =
+    let shouldDisableMessageRequestSettings1 =
       useShouldDisableMessageRequestSettings.useShouldDisableMessageRequestSettings();
-    if (!shouldDisableMessageRequestSettings) {
+    if (!shouldDisableMessageRequestSettings1) {
       let tmp8 = selectedGuildId2 !== closure_6;
       if (!tmp8) {
         tmp8 = !isParentallyControlled;
@@ -88,20 +88,34 @@ const toggle = SettingBuilders.createToggle({
         }
         tmp9 = hasItem;
       }
-      shouldDisableMessageRequestSettings = tmp9;
+      shouldDisableMessageRequestSettings1 = tmp9;
     }
+    const shouldDisableMessageRequestSettings =
+      useShouldDisableMessageRequestSettings.useShouldDisableMessageRequestSettings();
+    const tmpResult = useShouldDisableMessageRequestSettings;
+    const isParentallyControlled1 = useParentalControlSettings.useIsParentallyControlled();
     const MessageRequestRestrictedDefault = UserSettings.MessageRequestRestrictedDefault;
+    const tmp12 = !MessageRequestRestrictedDefault.useSetting();
     const MessageRequestRestrictedGuildIds = UserSettings.MessageRequestRestrictedGuildIds;
     const setting1 = MessageRequestRestrictedGuildIds.useSetting();
-    let tmp11 = !setting1.includes(selectedGuildId);
-    let tmp12 = !shouldDisableMessageRequestSettings;
-    if (!shouldDisableMessageRequestSettings) {
-      if (selectedGuildId === closure_6) {
-        tmp11 = tmp10;
+    let tmp13 = !setting1.includes(selectedGuildId);
+    let tmp14 = shouldDisableMessageRequestSettings;
+    if (!tmp14) {
+      if (selectedGuildId !== closure_6) {
+        let tmp18 = !shouldDisableMessageRequestSettings1;
+        if (!shouldDisableMessageRequestSettings1) {
+          if (tmp16) {
+            tmp13 = tmp12;
+          }
+          tmp18 = tmp13;
+        }
+        let tmp17 = tmp18;
+      } else {
+        tmp17 = tmp12;
       }
-      tmp12 = tmp11;
+      tmp14 = tmp17;
     }
-    return tmp12;
+    return tmp14;
   },
   useIsDisabled() {
     const defaultGuildsRestricted = DefultGuildsRestrictedSetting.useDefaultGuildsRestricted();

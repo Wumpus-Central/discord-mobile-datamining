@@ -40,10 +40,11 @@ const regExp = new RegExp("^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|
 const re13 =
   /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/game-shop\/([0-9]+)\/([0-9]+)/;
 const re14 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/game-shop\/([0-9]+)\/([0-9]+)/;
-const re15 =
+const re15 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/game-shop\/[0-9]+\/?\?(?=.*skuIds=)/;
+const re16 =
   /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/shop\?(?=.*tab=game-shops)(?=.*applicationId=[0-9]+)(?=.*skuId=[0-9]+)/;
-const re16 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/games\/[0-9]+(?:\/[A-Za-z0-9-]*)?\/?$/;
-const re17 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/users\/[0-9]+\/?$/;
+const re17 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/games\/[0-9]+(?:\/[A-Za-z0-9-]*)?\/?$/;
+const re18 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/users\/[0-9]+\/?$/;
 let result = size.fileFinishedImporting("utils/EmbedUtils.tsx");
 
 export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
@@ -360,12 +361,12 @@ export const mergeEmbedsOnURL = function mergeEmbedsOnURL(mapped) {
   return items;
 };
 export { getEffectiveVideoProvider };
-export const isEmbedInline = function isEmbedInline(first1) {
-  const type = first1.type;
-  let tmp = null != first1.image;
-  ({ author, rawTitle } = first1);
+export const isEmbedInline = function isEmbedInline(type) {
+  type = type.type;
+  let tmp = null != type.image;
+  ({ author, rawTitle } = type);
   if (!tmp) {
-    tmp = null != first1.video;
+    tmp = null != type.video;
   }
   if (tmp) {
     let tmp2 = type === constants2.GIFV;
@@ -407,7 +408,7 @@ export const isGameProfileArticleEmbed = function isGameProfileArticleEmbed(type
     isMatch = null != type.url;
   }
   if (isMatch) {
-    isMatch = re16.test(type.url);
+    isMatch = re17.test(type.url);
   }
   return isMatch;
 };
@@ -417,7 +418,7 @@ export const isUserProfileArticleEmbed = function isUserProfileArticleEmbed(type
     isMatch = null != type.url;
   }
   if (isMatch) {
-    isMatch = re17.test(type.url);
+    isMatch = re18.test(type.url);
   }
   return isMatch;
 };
@@ -429,10 +430,13 @@ export const isSocialLayerStorefrontArticleEmbed = function isSocialLayerStorefr
   if (tmp) {
     let isMatch = re14.test(type.url);
     if (!isMatch) {
+      isMatch = re15.test(type.url);
+    }
+    if (!isMatch) {
       isMatch = re13.test(type.url);
     }
     if (!isMatch) {
-      isMatch = re15.test(type.url);
+      isMatch = re16.test(type.url);
     }
     tmp = isMatch;
   }

@@ -1,40 +1,32 @@
 // discord_app/modules/frames/FramesConstants.tsx
 import Constants from "../../Constants.tsx";
+import EmbeddedSurfaceType from "../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const ChannelTypes = Constants.ChannelTypes;
-const EmbeddedSurfaceType = {
-  MAIN: 0,
-  [0]: "MAIN",
-  APP_CHANNEL: 1,
-  [1]: "APP_CHANNEL",
-  VOICE_CHANNEL: 2,
-  [2]: "VOICE_CHANNEL",
-};
-let obj3 = { MAIN: 0, [0]: "MAIN", INLINE: 1, [1]: "INLINE" };
+const obj2 = { MAIN: 0, [0]: "MAIN", INLINE: 1, [1]: "INLINE" };
 const result = size.fileFinishedImporting("modules/frames/FramesConstants.tsx");
 
 export const FrameLayoutModes = { FOCUSED: 0, [0]: "FOCUSED", PIP: 1, [1]: "PIP" };
-export { EmbeddedSurfaceType };
-export const MAIN_SURFACE = { type: EmbeddedSurfaceType.MAIN };
-export const FrameIntent = obj3;
+export const MAIN_SURFACE = { type: EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN };
+export const FrameIntent = obj2;
 export const getFrameIntentForSurface = function getFrameIntentForSurface(type) {
   type = type.type;
-  if (obj.MAIN === type) {
-    return obj3.MAIN;
+  if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
+    return obj2.MAIN;
   } else {
-    return obj3.INLINE;
+    return obj2.INLINE;
   }
 };
 export const makeFrameId = function makeFrameId(arg0, type) {
   type = type.type;
-  if (obj.MAIN === type) {
+  if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
     const _HermesInternal3 = HermesInternal;
     return "main:" + arg0;
-  } else if (obj.APP_CHANNEL === type) {
+  } else if (EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL === type) {
     const _HermesInternal2 = HermesInternal;
     return "app-channel:" + arg0 + ":" + type.channelId;
-  } else if (obj.VOICE_CHANNEL === type) {
+  } else if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL === type) {
     const _HermesInternal = HermesInternal;
     return "voice-channel:" + arg0 + ":" + type.channelId;
   }
@@ -42,12 +34,11 @@ export const makeFrameId = function makeFrameId(arg0, type) {
 export const getFrameSurfaceForChannel = function getFrameSurfaceForChannel(type) {
   type = type.type;
   if (ChannelTypes.GUILD_APP === type) {
-    obj3 = { type: obj.APP_CHANNEL, channelId: null, guildId: null };
+    const obj3 = { type: EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL, channelId: null, guildId: null };
     ({ id: obj2.channelId, guild_id: obj2.guildId } = type);
     return obj3;
   } else if (tmp.GUILD_VOICE === type) {
-    obj = { type: null, channelId: null, guildId: null };
-    obj.type = obj.VOICE_CHANNEL;
+    const obj = { type: EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL, channelId: null, guildId: null };
     ({ id: obj.channelId, guild_id: obj.guildId } = type);
     return obj;
   } else {
@@ -57,7 +48,7 @@ export const getFrameSurfaceForChannel = function getFrameSurfaceForChannel(type
 export const getChannelIdForSurface = function getChannelIdForSurface(type) {
   if (null != type) {
     type = type.type;
-    if (obj.MAIN !== type) {
+    if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN !== type) {
       return type.channelId;
     }
   }

@@ -11,7 +11,7 @@ import MessagePreviewStore from "MessagePreviewStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const isThread = fn(2045).isThread;
+const isThread = fn(2046).isThread;
 const Endpoints = fn(1074).Endpoints;
 let closure_11 = new LoggerDefault("MessagePreviewManager");
 class MessagePreviewManager extends tmp3 {
@@ -102,7 +102,7 @@ class MessagePreviewManager extends tmp3 {
                 closure_131_4 = undefined;
                 c7 = 1;
                 c8 = 1;
-                return { value: "PX_16", done: true };
+                return { value: "flex", done: true };
               }
             } else {
               if (1 === tmp4) {

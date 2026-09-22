@@ -66,7 +66,7 @@ class VibegrationsMessageHeader {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = {
   header: { flexDirection: "row", alignItems: "baseline", gap: nativeDefault.space.PX_8 },
   name: { flexShrink: 1 },
@@ -74,8 +74,8 @@ let obj2 = {
   conjureTile: null,
 };
 let size = {
-  width: fn(17020).MESSAGE_AVATAR_SIZE,
-  height: fn(17020).MESSAGE_AVATAR_SIZE,
+  width: fn(17032).MESSAGE_AVATAR_SIZE,
+  height: fn(17032).MESSAGE_AVATAR_SIZE,
   borderRadius: nativeDefault.radii.sm,
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_MUTED,
@@ -127,7 +127,7 @@ export const VibegrationsUserHeader = function VibegrationsUserHeader(userId) {
     items2,
   );
   let obj = stateFromStores(504);
-  const name = stateFromStores(4600).useName(stateFromStores);
+  const name = stateFromStores(4601).useName(stateFromStores);
   [][0] = stateFromStores;
   let tmp5 = null;
   if (null != stateFromStores) {
@@ -187,7 +187,7 @@ export const VibegrationsUserAvatar = function VibegrationsUserAvatar(arg0) {
     obj2.accessibilityLabel = intl.string(tmp4(1115).t.iXAna6);
     const obj3 = { size, user: stateFromStores, guildId: "Array" };
     obj2.children = closure_6(tmp4(1177).Avatar, obj3);
-    tmp8 = closure_6(tmp4(5339).PressableOpacity, obj2);
+    tmp8 = closure_6(tmp4(5341).PressableOpacity, obj2);
   }
   return tmp8;
 };

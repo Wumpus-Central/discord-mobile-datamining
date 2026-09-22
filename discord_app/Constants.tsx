@@ -28,6 +28,7 @@ const frozen = Object.freeze({
   SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES: 32,
   SUPPRESS_CHANNEL_PROMPT_DEADCHAT: 128,
   SUPPRESS_VOICE_SESSION_NOTIFICATIONS: 512,
+  SUPPRESS_GUILD_SPACE_WHITEBOARD_NOTIFICATIONS: 2048,
 });
 const items = [
   MessageTypes.MessageTypes.REPLY,
@@ -732,6 +733,7 @@ const frozen2 = Object.freeze({
   GOOGLE_WALLET_VERIFY_SUSPENDED_USER: "/age-verification/google-wallet/suspended/verify",
   AGE_SIGNAL: "/users/@me/age-signal",
   AGE_SIGNAL_CHALLENGE: "/users/@me/age-signal/challenge",
+  AGE_SIGNAL_ATTEST_KEY: "/users/@me/age-signal/attest-key",
   AGE_VERIFICATION_REACTIVE_CHECK: "/users/@me/age-verification/check",
   AGE_VERIFICATION_RESET: "/users/@me/age-verification/reset",
   EXPERIMENTS: "/experiments",
@@ -2759,6 +2761,7 @@ const obj2 = {
   GOOGLE_WALLET_VERIFY_SUSPENDED_USER: "/age-verification/google-wallet/suspended/verify",
   AGE_SIGNAL: "/users/@me/age-signal",
   AGE_SIGNAL_CHALLENGE: "/users/@me/age-signal/challenge",
+  AGE_SIGNAL_ATTEST_KEY: "/users/@me/age-signal/attest-key",
   AGE_VERIFICATION_REACTIVE_CHECK: "/users/@me/age-verification/check",
   AGE_VERIFICATION_RESET: "/users/@me/age-verification/reset",
   EXPERIMENTS: "/experiments",
@@ -5804,6 +5807,7 @@ export const GuildSettingsSections = {
   GUILD_AUTOMOD_RULE: "GUILD_AUTOMOD_RULE",
   SAFETY: "SAFETY",
   OFFICIAL_MESSAGES: "OFFICIAL_MESSAGES",
+  GUILD_SPACE: "GUILD_SPACE",
   PROFILE: "PROFILE",
   TAG: "TAG",
   TAG_CUSTOMIZE: "TAG_CUSTOMIZE",
@@ -6376,7 +6380,7 @@ export const MAX_VISUAL_ROLE_LENGTH = 30;
 export const MAX_ROLE_LENGTH = 100;
 export const MAX_UPLOAD_COUNT = 10;
 export const MAX_ATTACHMENT_SIZE = 10485760;
-export const MAX_STAFF_ATTACHMENT_SIZE = 524288000;
+export const MAX_STAFF_ATTACHMENT_SIZE = 1073741824;
 export const MARKDOWN_SPOILER_WRAPPER = (arg0) => "||" + arg0 + "||";
 export const MARKDOWN_SPOILER_REGEXP = /^\|\|([\s\S]+?)\|\|/;
 export const MARKDOWN_STATIC_ROUTE_NAME_REGEXP = /^<id:(home|browse|customize|guide|linked-roles)(?::(\d+))?>/;
@@ -7433,6 +7437,7 @@ export const AnalyticEvents = {
   QUEST_APP_STORE_OVERLAY_CLOSED: "quest_app_store_overlay_closed",
   QUEST_APP_STORE_OVERLAY_RETURNED: "quest_app_store_overlay_returned",
   QUEST_APP_STORE_OVERLAY_BACKGROUNDED: "quest_app_store_overlay_backgrounded",
+  QUEST_APP_STORE_OVERLAY_CAROUSEL_SCROLL: "quest_app_store_overlay_carousel_scroll",
   LIBDISCORE_SLOW_TIMERS: "libdiscore_slow_timers",
   REGISTER_INPUT_FOCUS: "register_input_focus",
   REGISTER_INPUT_BLUR: "register_input_blur",

@@ -70,7 +70,7 @@ let items = [
     },
   },
 ];
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   reasonTextArea: null,
@@ -122,7 +122,7 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const obj4 = tmp4(12097);
+            const obj4 = tmp4(12101);
             dependencyMap = 1;
             c3 = 1;
             const obj5 = {
@@ -145,8 +145,8 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
           return obj6;
         } else {
           const intl = user(1115).intl;
-          const obj8 = tmp4(4454);
-          const name = tmp4(4908).getName(closure_129_1, null, closure_129_0);
+          const obj8 = tmp4(4455);
+          const name = tmp4(4909).getName(closure_129_1, null, closure_129_0);
           user = name;
           if (name == null) {
             user = "";
@@ -154,7 +154,7 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
           const obj = { key: "GUILD_COMMUNICATION_DISABLED_SUCCESS", content: null, icon: null };
           const obj7 = { user };
           obj.content = intl.formatToPlainString(user(1115).t.O9C3Nt, obj7);
-          obj.icon = tmp4(9621);
+          obj.icon = tmp4(9627);
           obj8.open(obj);
           closure_129_2();
           c3 = 3;

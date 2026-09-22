@@ -7,8 +7,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const items = [
   {
     model: "gpt-5.6-luna",
-    thinking: "high",
-    fast: true,
+    thinking: "xhigh",
     summary() {
       const intl = util.intl;
       return intl.string(_modDef3678.Mo0a1m);

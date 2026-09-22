@@ -8,7 +8,7 @@ import CollectiblesProductUtils from "../../collectibles/utils/CollectiblesProdu
 import CollectiblesShopCardV2 from "../../collectibles/native/CollectiblesShopCardV2.tsx";
 import useDefaultVariantIndex from "../../collectibles/hooks/useDefaultVariantIndex.tsx";
 import AvatarDecorationSampleV2 from "../../collectibles/native/AvatarDecorationSampleV2.tsx";
-import _modDef9092 from "../../../../_runtime/metro/09092__.js";
+import _modDef9097 from "../../../../_runtime/metro/09097__.js";
 import CutoutableAvatarDecorationDefault from "../../collectibles/native/components/CutoutableAvatarDecoration.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -23,9 +23,9 @@ function CompactAvatarDecorationPreview(arg0) {
   );
   const obj = { style: tmp.container, children: null };
   const items = [
-    React6(hasOwnProperty, { style: tmp.avatar, resizeMode: "contain", source: _modDef9092, accessible: false }),
+    React6(hasOwnProperty, { style: tmp.avatar, resizeMode: "contain", source: _modDef9097, accessible: false }),
   ];
-  const obj2 = { style: tmp.avatar, resizeMode: "contain", source: _modDef9092, accessible: false };
+  const obj2 = { style: tmp.avatar, resizeMode: "contain", source: _modDef9097, accessible: false };
   items[1] = React6(timestampProducer, {
     style: tmp.avatarDecoration,
     accessibilityLabel: item.label,
@@ -42,11 +42,11 @@ function ProductPreviewInner(cardHeight) {
     flag = false;
   }
   let tmp = closure_16();
-  const shopProductItems = cardWidth(8440).useShopProductItems(product);
+  const shopProductItems = cardWidth(8444).useShopProductItems(product);
   ({ firstProfileEffect, firstAvatarDecoration, firstNameplate } = shopProductItems);
   const tmp5 =
-    cardWidth < cardWidth(9044).COLLECTIBLES_SHOP_CARD_WIDTH ||
-    cardHeight < cardWidth(9044).COLLECTIBLES_SHOP_CARD_HEIGHT;
+    cardWidth < cardWidth(9049).COLLECTIBLES_SHOP_CARD_WIDTH ||
+    cardHeight < cardWidth(9049).COLLECTIBLES_SHOP_CARD_HEIGHT;
   dependencyMap = tmp5;
   const items = [cardHeight, cardWidth, tmp5];
   const memo = noop.useMemo(() => {
@@ -89,22 +89,22 @@ function ProductPreviewInner(cardHeight) {
       disableStaticBackground: true,
       targetSize: memo1,
     };
-    return closure_8(cardHeight(9078), obj2);
+    return closure_8(cardHeight(9083), obj2);
   } else if (product.skuId === EXTERNAL_PRODUCT_SKU_IDS.ORB_PROFILE_BADGE) {
     const obj3 = { source: null, style: null };
-    const obj4 = { uri: cardHeight(9124) };
+    const obj4 = { uri: cardHeight(9129) };
     obj3.source = obj4;
     obj3.style = tmp.externalProductImage;
-    return closure_8(cardHeight(5804), obj3);
+    return closure_8(cardHeight(5806), obj3);
   } else {
     const ALL = cardWidth(1077).FractionalPremiumSKUsSets.ALL;
     if (ALL.has(product.skuId)) {
       size = {
         skuId: product.skuId,
-        width: cardWidth(9125).FRACTIONAL_NITRO_COIN_SIZE.CARD,
-        height: cardWidth(9125).FRACTIONAL_NITRO_COIN_SIZE.CARD,
+        width: cardWidth(9130).FRACTIONAL_NITRO_COIN_SIZE.CARD,
+        height: cardWidth(9130).FRACTIONAL_NITRO_COIN_SIZE.CARD,
       };
-      return closure_8(cardWidth(9125).FractionalNitroCoinIllustration, size);
+      return closure_8(cardWidth(9130).FractionalNitroCoinIllustration, size);
     } else {
       const first = memo(product.items, 1)[0];
       let type;
@@ -125,13 +125,13 @@ function ProductPreviewInner(cardHeight) {
           let tmp24Result = closure_8(CompactAvatarDecorationPreview, obj5);
         } else {
           const obj6 = { item: first, size };
-          tmp24Result = closure_8(cardHeight(9091), obj6);
+          tmp24Result = closure_8(cardHeight(9096), obj6);
         }
         return tmp24Result;
       } else if (cardWidth(1973).CollectiblesItemType.PROFILE_EFFECT === type) {
         const obj7 = { style: tmp.profileEffectContainer, children: null };
         const obj8 = { item: first, hideBackground: true };
-        obj7.children = closure_8(cardHeight(9080), obj8);
+        obj7.children = closure_8(cardHeight(9085), obj8);
         return closure_8(closure_6, obj7);
       } else if (cardWidth(1973).CollectiblesItemType.PROFILE_FRAME === type) {
         if (flag) {
@@ -147,7 +147,7 @@ function ProductPreviewInner(cardHeight) {
             prop = memo.profileFramePreviewWidth;
           }
           if (prop == null) {
-            prop = cardWidth(9044).COLLECTIBLES_SHOP_CARD_WIDTH - PX_32;
+            prop = cardWidth(9049).COLLECTIBLES_SHOP_CARD_WIDTH - PX_32;
           }
           obj10.previewWidth = prop;
           let prop1;
@@ -159,19 +159,19 @@ function ProductPreviewInner(cardHeight) {
           }
           obj10.previewHeight = prop1;
           obj10.profileBackgroundColor = cardHeight(576).colors.BACKGROUND_BASE_LOW;
-          obj9.children = closure_8(cardHeight(9103), obj10);
+          obj9.children = closure_8(cardHeight(9108), obj10);
           return closure_8(tmp15, obj9);
         }
         profileFrameContainer = tmp.profileFrameContainer;
       } else if (cardWidth(1973).CollectiblesItemType.NAMEPLATE === type) {
         const obj11 = { item: first };
-        return closure_8(cardHeight(9105), obj11);
+        return closure_8(cardHeight(9110), obj11);
       } else {
         return null;
       }
     }
   }
-  const obj = cardWidth(8440);
+  const obj = cardWidth(8444);
 }
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire, StyleSheet } = get_ActivityIndicator);
@@ -179,10 +179,10 @@ const EXTERNAL_PRODUCT_SKU_IDS = fn(1076).EXTERNAL_PRODUCT_SKU_IDS;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 100;
-const diff = fn(9044).COLLECTIBLES_SHOP_CARD_HEIGHT - 2 * nativeDefault.space.PX_16;
+const diff = fn(9049).COLLECTIBLES_SHOP_CARD_HEIGHT - 2 * nativeDefault.space.PX_16;
 const PX_32 = nativeDefault.space.PX_32;
 let closure_13 = 2 * nativeDefault.space.PX_16;
-let createStyles = fn(4756);
+let createStyles = fn(4757);
 let closure_14 = createStyles.createStyles((width) => {
   const obj = {
     container: { width, height: width, justifyContent: "center", alignItems: "center" },
@@ -200,7 +200,7 @@ let closure_14 = createStyles.createStyles((width) => {
   obj.avatarDecoration = { position: "absolute", width, height: width, justifyContent: "center", alignItems: "center" };
   return obj;
 });
-createStyles = fn(4756);
+createStyles = fn(4757);
 let obj = {
   assetContainer: null,
   overlayContainer: null,

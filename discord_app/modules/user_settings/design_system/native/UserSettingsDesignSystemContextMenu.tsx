@@ -1,17 +1,17 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemContextMenu.tsx
 import _mod12 from "../../../../../_runtime/metro/00012__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4719 from "../../../../../_runtime/metro/04719__.js";
+import _modDef4720 from "../../../../../_runtime/metro/04720__.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
-import _modDef7339 from "../../../../../_runtime/metro/07339__.js";
-import _modDef8224 from "../../../../../_runtime/metro/08224__.js";
-import _modDef11519 from "../../../../../_runtime/metro/11519__.js";
-import _modDef11815 from "../../../../../_runtime/metro/11815__.js";
-import _modDef13026 from "../../../../../_runtime/metro/13026__.js";
-import _modDef16094 from "../../../../../_runtime/metro/16094__.js";
-import _modDef16095 from "../../../../../_runtime/metro/16095__.js";
+import _modDef7341 from "../../../../../_runtime/metro/07341__.js";
+import _modDef8228 from "../../../../../_runtime/metro/08228__.js";
+import _modDef11523 from "../../../../../_runtime/metro/11523__.js";
+import _modDef11819 from "../../../../../_runtime/metro/11819__.js";
+import _modDef13030 from "../../../../../_runtime/metro/13030__.js";
+import _modDef16106 from "../../../../../_runtime/metro/16106__.js";
+import _modDef16107 from "../../../../../_runtime/metro/16107__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -50,8 +50,8 @@ function DemoContextMenu(align) {
             label: length[index % length.length],
             IconComponent: "a",
             iconSource: length2[index % length2.length],
-            variant: 100663746,
-            action: 1358954929,
+            variant: "timglas",
+            action: "utrunnet timglas",
           };
           let str = "default";
           if (index === closure_0 - 1) {
@@ -74,8 +74,8 @@ function DemoContextMenu(align) {
           label: length[index % length.length],
           IconComponent: "a",
           iconSource: length2[index % length2.length],
-          variant: 100663746,
-          action: 1358954929,
+          variant: "timglas",
+          action: "utrunnet timglas",
         };
         let str = "default";
         if (index === closure_0 - 1) {
@@ -110,14 +110,14 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let items = [
-  _modDef13026,
-  _modDef7339,
-  _modDef8224,
-  _modDef11519,
-  _modDef4719,
-  _modDef16094,
-  _modDef16095,
-  _modDef11815,
+  _modDef13030,
+  _modDef7341,
+  _modDef8228,
+  _modDef11523,
+  _modDef4720,
+  _modDef16106,
+  _modDef16107,
+  _modDef11819,
 ];
 let closure_8 = [
   "Launch Probe!",
@@ -132,7 +132,7 @@ let closure_8 = [
   "Unleash Space Vortex",
   "Activate Cloaking Device",
 ];
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = {
   container: { flexDirection: "column", gap: 12, padding: 16 },
   card: { gap: 12 },

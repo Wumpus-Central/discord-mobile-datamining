@@ -88,7 +88,7 @@ function showPrompt(arg0, arg1, arg2) {
     obj3.impressionName = discord_common_AnalyticsUtils.ImpressionNames.PUSH_NOTIFICATION_REACTIVATION_PROMPT;
     obj3.impressionProperties = { action_location: location };
     obj3.location = location;
-    obj2.openLazy(asyncRequireImpl(17862, dependencyMap.paths), closure_2_11, obj3);
+    obj2.openLazy(asyncRequireImpl(17874, dependencyMap.paths), closure_2_11, obj3);
   }, arg2);
 }
 function _logNotificationPermissionStatus() {
@@ -170,13 +170,13 @@ let closure_26 = async function _logNotificationPermissionStatus2() {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const PermissionPromptType = fn(12663).PermissionPromptType;
-const NotificationPermissionConstants = fn(12664);
+const PermissionPromptType = fn(12667).PermissionPromptType;
+const NotificationPermissionConstants = fn(12668);
 ({ NOTIFICATION_REACTIVATION_ACTIONSHEET_KEY: closure_11, EventActionLocation: closure_12 } =
   NotificationPermissionConstants);
 const Constants = fn(1074);
 ({ RelationshipTypes: map1, GuildFeatures: closure_14, AnalyticEvents: closure_15 } = Constants);
-let closure_16 = fn(4965).NotificationAuthorizationStatus;
+let closure_16 = fn(4966).NotificationAuthorizationStatus;
 const items = [,];
 ({ FRIEND_REQUEST_SENT: arr[0], INVITE_ACCEPTED: arr[1] } = PermissionPromptType);
 let c23 = null;
@@ -308,7 +308,7 @@ class NotificationPermissionManager extends tmp4 {
               } = closure_0);
               c3 = 1;
               c4 = 1;
-              return { value: "PX_16", done: true };
+              return { value: "flex", done: true };
             }
           } else {
             if (1 === tmp5) {
@@ -409,7 +409,7 @@ class NotificationPermissionManager extends tmp4 {
                 invite2 = invite.invite;
                 c4 = 1;
                 c5 = 1;
-                return { value: "PX_16", done: true };
+                return { value: "flex", done: true };
               }
             } else {
               if (1 === tmp5) {
@@ -542,7 +542,7 @@ class NotificationPermissionManager extends tmp4 {
         await "HermesInternal";
         closure_1 = tmp2;
         relationship2 = relationship.relationship;
-        return "PX_16";
+        return "flex";
       })();
       iter.next();
       return iter;
@@ -592,7 +592,7 @@ class NotificationPermissionManager extends tmp4 {
               closure_129_2 = undefined;
               c3 = 1;
               c4 = 1;
-              return { value: "PX_16", done: true };
+              return { value: "flex", done: true };
             }
           } else {
             if (1 === tmp5) {

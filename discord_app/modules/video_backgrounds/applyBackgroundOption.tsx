@@ -231,7 +231,7 @@ let closure_14 = async function _applyBackgroundOptionLive(arg0, arg1) {
     }
     closure_130_1 = flag;
     _location = track.location;
-    return "PX_16";
+    return "flex";
   })();
   iter.next();
   return iter;
@@ -267,12 +267,12 @@ let closure_15 = async function _applyBackgroundOptionPreview(arg0, arg1, arg2) 
     }
     closure_131_2 = flag;
     _location = track.location;
-    return "PX_16";
+    return "flex";
   })();
   iter.next();
   return iter;
 };
-const VideoBackgroundConstants = fn(7232);
+const VideoBackgroundConstants = fn(7234);
 ({ BACKGROUND_REPLACEMENT_SIZE: metroRequire, BLUR_BACKGROUND_OPTION: closure_7 } = VideoBackgroundConstants);
 const NOOP = fn(1074).NOOP;
 const size = fn(2);

@@ -391,7 +391,7 @@ function ChannelLongPressActionSheetConnected(channel) {
       obj14.label = intl5.string(tmp5(tmp2[24]).t.OQ9MKu);
       obj14.IconComponent = tmp5(tmp2[33]).LinkIcon;
       obj14.onPress = function onPress() {
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11195, dependencyMap.paths), { channelId: channel.id });
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11201, dependencyMap.paths), { channelId: channel.id });
       };
       buttons4.push(obj14);
     }
@@ -755,7 +755,7 @@ function ChannelLongPressActionSheetConnected(channel) {
             obj42.IconComponent = tmp5(tmp2[70]).ChatIcon;
             obj42.onPress = function onPress() {
               ActionSheetActionCreatorsDefault.hideActionSheet();
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11231, dependencyMap.paths), { channel });
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11237, dependencyMap.paths), { channel });
               hideLaunchPadDefault();
             };
             buttons18.push(obj42);
@@ -968,11 +968,11 @@ function ChannelLongPressActionSheetConnected(channel) {
               str = "danger";
             }
             return closure_1_35(
-              channel(7444).ActionSheetRow,
+              channel(7446).ActionSheetRow,
               {
                 variant: str,
                 label,
-                icon: closure_1_35(channel(7444).ActionSheetRow.Icon, {
+                icon: closure_1_35(channel(7446).ActionSheetRow.Icon, {
                   IconComponent,
                   style: iconStyle,
                   disableColor,
@@ -1108,15 +1108,15 @@ function ChannelLongPressActionSheetConnected(channel) {
   tmp60 = null != id && null != guildId1;
   const tmpResult4 = onClose(tmp2[101]);
 }
-const SafetyWarningTypes = fn(11179).SafetyWarningTypes;
-const ChannelRecord = fn(2045);
+const SafetyWarningTypes = fn(11185).SafetyWarningTypes;
+const ChannelRecord = fn(2046);
 ({
   isGuildTextChannelType: closure_9,
   isGuildVocalChannelType: c10,
   isReadableType: closure_11,
   isTextChannel: closure_12,
 } = ChannelRecord);
-const StaticChannelRoute = fn(2048).StaticChannelRoute;
+const StaticChannelRoute = fn(2049).StaticChannelRoute;
 const Constants = fn(1074);
 ({
   AnalyticsObjectTypes: closure_24,
@@ -1130,7 +1130,7 @@ const Constants = fn(1074);
   Routes: closure_32,
   ZERO_STRING_GUILD_ID: closure_33,
 } = Constants);
-let closure_34 = fn(11180).ChannelDetailsNavigatorScreens;
+let closure_34 = fn(11186).ChannelDetailsNavigatorScreens;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel/native/ChannelLongPressActionSheet.tsx");

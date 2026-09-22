@@ -6,9 +6,9 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import APNGPlayer from "../../image/native/APNGPlayer.android.tsx";
 import OrbsIcon from "../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
-import _modDef12033 from "../../../../discord_assets/assets/orbs/static_idle_orb.png.js";
-import _modDef12034 from "../../../../discord_assets/assets/orbs/quest_reward_mobile_idle_dark.png.js";
-import _modDef12035 from "../../../../discord_assets/assets/orbs/quest_reward_mobile_entry_dark.png.js";
+import _modDef12037 from "../../../../discord_assets/assets/orbs/static_idle_orb.png.js";
+import _modDef12038 from "../../../../discord_assets/assets/orbs/quest_reward_mobile_idle_dark.png.js";
+import _modDef12039 from "../../../../discord_assets/assets/orbs/quest_reward_mobile_entry_dark.png.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -50,14 +50,14 @@ function CancelButton() {
   const intl = require("util").intl;
   obj.accessibilityLabel = intl.string(require("util").t.cpT0Cq);
   obj.style = tmp.closeButton;
-  return closure_13(require("../../../../_runtime/metro/05848__.js").HeaderBackButton, obj);
+  return closure_13(require("../../../../_runtime/metro/05850__.js").HeaderBackButton, obj);
 }
 function StaticOrb() {
   const obj = { style: { width: "100%", height: "100%" }, children: null };
   const obj2 = { source: null, style: null, fade: false };
   const obj3 = { uri: null };
   const tmp = closure_25();
-  obj3.uri = _modDef12033;
+  obj3.uri = _modDef12037;
   obj2.source = obj3;
   obj2.style = tmp.animatedOrb;
   obj.children = map1(FastImageDefault, obj2);
@@ -102,7 +102,7 @@ function AnimatedOrbContainer(isAppActive) {
     tmp13 = map1(React6, obj2);
   }
   const items1 = [tmp13, ,];
-  const obj3 = { uri: _modDef12034, style: null, onLoad: null, animate: null };
+  const obj3 = { uri: _modDef12038, style: null, onLoad: null, animate: null };
   const items2 = [tmp.animatedOrb];
   let obj4 = tmp15Result;
   if (!tmp15Result) {
@@ -121,7 +121,7 @@ function AnimatedOrbContainer(isAppActive) {
   obj3.animate = tmp19;
   items1[1] = map1(closure_24, obj3);
   if (tmp15Result) {
-    const obj5 = { uri: _modDef12035, style: null, onLoad: null, animate: null };
+    const obj5 = { uri: _modDef12039, style: null, onLoad: null, animate: null };
     const items3 = [tmp.animatedOrb];
     obj5.style = items3;
     obj5.onLoad = callback;
@@ -134,11 +134,11 @@ function AnimatedOrbContainer(isAppActive) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, StyleSheet: closure_7, View: closure_8 } = get_ActivityIndicator);
-const RewardFilterTypes = fn(5661).RewardFilterTypes;
+const RewardFilterTypes = fn(5663).RewardFilterTypes;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 const QuestOrbsRewardModal = "QuestOrbsRewardModal";
-let createStyles = fn(4756);
+let createStyles = fn(4757);
 let obj = {
   closeButton: { alignSelf: "flex-start", marginHorizontal: nativeDefault.space.PX_16, zIndex: 999 },
   closeButtonIcon: null,
@@ -146,7 +146,7 @@ let obj = {
 let obj3 = { alignSelf: "flex-start", marginHorizontal: nativeDefault.space.PX_16, zIndex: 999 };
 obj.closeButtonIcon = { tintColor: nativeDefault.colors.WHITE };
 let closure_17 = createStyles.createStyles(obj);
-createStyles = fn(4756);
+createStyles = fn(4757);
 let closure_18 = createStyles.createStyles(() => {
   const obj = {
     root: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -181,7 +181,7 @@ let closure_18 = createStyles.createStyles(() => {
   obj.buttonsContainer = { padding: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_16 };
   return obj;
 });
-createStyles = fn(4756);
+createStyles = fn(4757);
 let obj5 = { orbsIcon: null, spacer: { width: 2 } };
 let obj8 = { transform: null };
 let items = [{ translateY: 3 }];
@@ -243,7 +243,7 @@ let closure_24 = noop.memo((animate) => {
     children: map1(utils_PlatformUtils.isAndroid() ? closure_23 : closure_22, { uri, onLoad, animate: flag }),
   });
 });
-createStyles = fn(4756);
+createStyles = fn(4757);
 let closure_25 = createStyles.createStyles({
   animatedOrb: {
     position: "absolute",
@@ -266,8 +266,8 @@ export default function QuestOrbsRewardModal(quest) {
   const items = [AccessibilityStore];
   const stateFromStores = num(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let obj = num(504);
-  num = num(9129).useFetchVirtualCurrencyBalance().balance;
-  let obj2 = num(9129);
+  num = num(9134).useFetchVirtualCurrencyBalance().balance;
+  let obj2 = num(9134);
   [tmp6, c1] = noop.useState(false);
   const tmp5 = _slicedToArray(noop.useState(false), 2);
   const items1 = [AppStateStore];
@@ -281,11 +281,11 @@ export default function QuestOrbsRewardModal(quest) {
     num2 = userStatus.orbQuantityClaimed;
   }
   if (num2 == null) {
-    num2 = tmp2(11553).getQuestOrbRewardQuantityForUser(quest.config, stateFromStores2);
-    const tmp2Result = tmp2(11553);
+    num2 = tmp2(11557).getQuestOrbRewardQuantityForUser(quest.config, stateFromStores2);
+    const tmp2Result = tmp2(11557);
   }
   const effect = noop.useEffect(() => {
-    num(12036).applyOrientationLock("PORTRAIT");
+    num(12040).applyOrientationLock("PORTRAIT");
     return () => {
       const result = num(dependencyMap[28]).restoreDefaultOrientationLock();
     };
@@ -294,10 +294,10 @@ export default function QuestOrbsRewardModal(quest) {
     _undefined(true);
   }, []);
   let string = noop.useCallback(() => {
-    _undefined(4959).popWithKey(QuestOrbsRewardModal);
-    const obj = _undefined(4959);
-    const obj2 = num(12020);
-    obj2.openQuestHome({ filter: constants.VIRTUAL_CURRENCY, fromContent: num(5664).QuestContent.REWARD_MODAL });
+    _undefined(4960).popWithKey(QuestOrbsRewardModal);
+    const obj = _undefined(4960);
+    const obj2 = num(12024);
+    obj2.openQuestHome({ filter: constants.VIRTUAL_CURRENCY, fromContent: num(5666).QuestContent.REWARD_MODAL });
   }, []);
   const obj6 = { style: tmp.root, children: null };
   const obj7 = {
@@ -305,7 +305,7 @@ export default function QuestOrbsRewardModal(quest) {
     accessible: false,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
-    children: closure_13(num(12037).OrbsRewardBackground, { style: tmp.background, onReady: callback }),
+    children: closure_13(num(12041).OrbsRewardBackground, { style: tmp.background, onReady: callback }),
   };
   const items3 = [closure_13(closure_8, obj7), ,];
   let tmp13Result = !tmp6;
@@ -347,7 +347,7 @@ export default function QuestOrbsRewardModal(quest) {
     }
     const obj15 = { count: num2 };
     obj14.children = intl.format(tmp2(1115).t.FIilK5, obj15);
-    let items6 = [closure_13(tmp2(4752).Heading, obj14)];
+    let items6 = [closure_13(tmp2(4753).Heading, obj14)];
     let obj16 = { variant: "text-md/normal", color: "text-overlay-light", style: tmp.title, children: null };
     if (num == null) {
       num = 0;
@@ -362,7 +362,7 @@ export default function QuestOrbsRewardModal(quest) {
           const obj = { variant: "text-md/semibold", color: "text-overlay-light", children: null };
           const intl = num(1115).intl;
           obj.children = intl.string(num(1115).t.pGDUH9);
-          return closure_1_13(num(4752).Text, obj, "profileDeco");
+          return closure_1_13(num(4753).Text, obj, "profileDeco");
         },
       };
       let formatResult = intl3.format(tmp2(1115).t["2dz2AL"], obj17);
@@ -376,11 +376,11 @@ export default function QuestOrbsRewardModal(quest) {
       formatResult = intl2.format(tmp2(1115).t.rKHvlX, obj18);
     }
     obj16.children = formatResult;
-    items6[1] = closure_13(tmp2(4752).Text, obj16);
+    items6[1] = closure_13(tmp2(4753).Text, obj16);
     obj13.children = items6;
     items5[2] = closure_15(closure_8, obj13);
     const obj19 = { style: tmp.buttonsContainer, children: null };
-    items6 = tmp2(5186).Button;
+    items6 = tmp2(5187).Button;
     const obj20 = { onPress: string, variant: "primary", size: "lg", text: null };
     obj16 = tmp2(1115).intl;
     string = obj16.string;
@@ -391,7 +391,7 @@ export default function QuestOrbsRewardModal(quest) {
     obj13 = closure_13(closure_8, obj19);
     items5[3] = obj13;
     rect.children = items5;
-    closure_15(tmp2(7368).SafeAreaPaddingView, rect);
+    closure_15(tmp2(7370).SafeAreaPaddingView, rect);
   }
   const obj5 = num(504);
   const obj8 = { style: tmp.background, onReady: callback };

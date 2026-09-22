@@ -488,7 +488,7 @@ let closure_27 = async function _fetchPayments() {
           closure_130_2 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -770,7 +770,7 @@ let closure_31 = async function _createSubscription(arg0) {
           closure_135_13 = undefined;
           c10 = 1;
           c11 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else {
         if (1 === tmp6) {
@@ -1559,7 +1559,7 @@ let closure_39 = async function _fetchIpCountryCode() {
           let country_code;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -1664,7 +1664,7 @@ let closure_40 = async function _fetchIpLocation() {
           let subdivision_code;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -1914,7 +1914,7 @@ let Constants = fn(1074);
   REDIRECTED_PAYMENT_SOURCES: closure_12,
   SubscriptionStatusTypes: map1,
 } = Constants);
-const UserLazyPerkSyncLevels = fn(4425).UserLazyPerkSyncLevels;
+const UserLazyPerkSyncLevels = fn(4426).UserLazyPerkSyncLevels;
 Constants = fn(1085);
 ({
   ADYEN_PAYMENT_SOURCES: closure_15,

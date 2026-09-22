@@ -7,7 +7,7 @@ import AuthenticationStore from "../stores/AuthenticationStore.tsx";
 import BillingInfoStore from "../stores/billing/BillingInfoStore.tsx";
 import PaymentSourceStore from "../stores/billing/PaymentSourceStore.tsx";
 import SubscriptionStore from "../stores/billing/SubscriptionStore.tsx";
-import allSettled_mod from "../../_runtime/04998_allSettled.js";
+import allSettled_mod from "../../_runtime/04999_allSettled.js";
 
 require = fn;
 let closure_10 = async function _httpGetWithCountryCodeQuery(arg0) {
@@ -52,7 +52,7 @@ let closure_10 = async function _httpGetWithCountryCodeQuery(arg0) {
           closure_133_7 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -241,14 +241,14 @@ const Constants = fn(1074);
 ({ Endpoints: closure_7, OperatingSystems: closure_8 } = Constants);
 let allSettled = allSettled_mod;
 allSettled = allSettled.shim();
-const isMobile = fn(4996).isMobile;
+const isMobile = fn(4997).isMobile;
 let tmp4 = !isMobile;
 if (!isMobile) {
-  tmp4 = !fn(4996).isTablet;
+  tmp4 = !fn(4997).isTablet;
 }
 if (tmp4) {
-  tmp4 = -1 !== fn(5077).getChromeVersion();
-  let obj2 = fn(5077);
+  tmp4 = -1 !== fn(5078).getChromeVersion();
+  let obj2 = fn(5078);
 }
 let closure_9 = tmp4;
 const size = fn(2);

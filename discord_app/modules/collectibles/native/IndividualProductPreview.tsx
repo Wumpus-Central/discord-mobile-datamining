@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import FractionalPremiumSKUs from "../../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import LinearGradientDefault from "../../../../_runtime/05198_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05199_LinearGradient.js";
 import useCurrentUser from "../hooks/useCurrentUser.tsx";
 import ProfileEffectUserPreviewDefault from "../profile_effects/native/previews/ProfileEffectUserPreview.tsx";
 import ProfileFrameUserPreviewDefault from "../profile_frames/native/previews/ProfileFrameUserPreview.tsx";
@@ -39,26 +39,30 @@ function ProfilePreviewWrapper(children) {
   return closure_7(closure_3, obj);
 }
 function ProfileEffectPreview(arg0) {
-  ({ profileEffect, width, handlePreviewPress, onTrackPress } = arg0);
+  ({ profileEffect, width, avatarDecorationOverride, profileFrameOverride, handlePreviewPress, onTrackPress } = arg0);
   const tmp = closure_9();
   const obj2 = { handlePreviewPress, onTrackPress, children: null };
   const currentUser = useCurrentUser.useCurrentUser();
   obj2.children = React5(ProfileEffectUserPreviewDefault, {
     user: currentUser,
     profileEffect,
+    avatarDecorationOverride,
+    profileFrameOverride,
     maxWidth: width,
     style: tmp.profilePreview,
   });
   return React5(ProfilePreviewWrapper, obj2);
 }
 function ProfileFramePreview(arg0) {
-  ({ profileFrame, width, handlePreviewPress, onTrackPress } = arg0);
+  ({ profileFrame, width, avatarDecorationOverride, profileEffectOverride, handlePreviewPress, onTrackPress } = arg0);
   const tmp = closure_9();
   const obj2 = { handlePreviewPress, onTrackPress, children: null };
   const currentUser = useCurrentUser.useCurrentUser();
   obj2.children = React5(ProfileFrameUserPreviewDefault, {
     profileFrame,
     user: currentUser,
+    avatarDecorationOverride,
+    profileEffectOverride,
     maxWidth: width,
     style: tmp.profilePreview,
   });
@@ -79,10 +83,11 @@ function AvatarDecorationPreview(product) {
     children: closure_7(AvatarDecorationProductPreviewDefault, { product: product.product }),
   });
 }
-function NameplatePreview(product) {
+function NameplatePreview(arg0) {
+  ({ product, avatarDecorationOverride } = arg0);
   return React5(React4, {
     style: closure_9().collectiblePreview,
-    children: React5(NameplateProductPreviewDefault, { product: product.product }),
+    children: React5(NameplateProductPreviewDefault, { product, avatarDecorationOverride }),
   });
 }
 get_ActivityIndicator = fn(17);
@@ -91,7 +96,7 @@ const CollectiblesShopConstants = fn(1076);
 ({ EXTERNAL_PRODUCT_SKU_IDS: hasOwnProperty, ShopCtaEnum: metroRequire } = CollectiblesShopConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = {
   collectiblePreview: { marginTop: nativeDefault.space.PX_12, position: "relative", height: 280 },
   profilePreviewContainer: { position: "relative", flex: 1, alignItems: "center", overflow: "hidden" },
@@ -109,16 +114,31 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/IndividualProductPreview.tsx");
 
 export const IndividualProductPreview = function IndividualProductPreview(arg0) {
-  ({ product, width, handlePreviewPress, onTrackPress } = arg0);
+  ({ product, width, avatarDecorationOverride, handlePreviewPress, onTrackPress } = arg0);
   const type = product.type;
+  ({ profileFrameOverride, profileEffectOverride } = arg0);
   if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
-    const obj2 = { product };
+    const obj2 = { product, avatarDecorationOverride };
     return React5(NameplatePreview, obj2);
   } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
-    const obj3 = { profileEffect: product.items[0], width, handlePreviewPress, onTrackPress };
+    const obj3 = {
+      profileEffect: product.items[0],
+      width,
+      avatarDecorationOverride,
+      profileFrameOverride,
+      handlePreviewPress,
+      onTrackPress,
+    };
     return React5(ProfileEffectPreview, obj3);
   } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === type) {
-    const obj4 = { profileFrame: product.items[0], width, handlePreviewPress, onTrackPress };
+    const obj4 = {
+      profileFrame: product.items[0],
+      width,
+      avatarDecorationOverride,
+      profileEffectOverride,
+      handlePreviewPress,
+      onTrackPress,
+    };
     return React5(ProfileFramePreview, obj4);
   } else if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
     const obj = { product, handlePreviewPress, onTrackPress };

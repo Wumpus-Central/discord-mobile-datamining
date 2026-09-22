@@ -22,7 +22,12 @@ const View = _mod17.View;
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let obj = {
   trailing: { flexDirection: "row", alignItems: "center", flexShrink: 1 },
-  badge: { marginLeft: 0, marginRight: nativeDefault.space.PX_4 },
+  badge: {
+    marginLeft: 0,
+    backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND,
+    marginRight: nativeDefault.space.PX_4,
+    marginBottom: 0,
+  },
 };
 let closure_6 = createStyles.createStyles(obj);
 let obj3 = {

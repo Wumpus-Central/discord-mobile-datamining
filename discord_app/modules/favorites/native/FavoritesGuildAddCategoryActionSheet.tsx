@@ -11,7 +11,7 @@ require = fn;
 function FavoritesGuildAddCategoryActionSheet() {
   const tmp = closure_9();
   [value, obj4.onChange] = noop.useState("");
-  const result = value(2066).isFavoritesGuildCategoryNameValid(value);
+  const result = value(2067).isFavoritesGuildCategoryNameValid(value);
   importDefault = result;
   const items = [result, value];
   const callback = noop.useCallback(() => {
@@ -30,7 +30,7 @@ function FavoritesGuildAddCategoryActionSheet() {
   const obj3 = { title: null };
   const intl = value(1115).intl;
   obj3.title = intl.string(value(1115).t["ISN+NM"]);
-  obj2.header = closure_6(value(7394).BottomSheetTitleHeader, obj3);
+  obj2.header = closure_6(value(7396).BottomSheetTitleHeader, obj3);
   const obj4 = {
     label: null,
     placeholder: null,
@@ -49,21 +49,21 @@ function FavoritesGuildAddCategoryActionSheet() {
   obj4.value = value;
   obj4.maxLength = maxLength;
   obj4.onSubmitEditing = callback;
-  const items1 = [closure_6(value(6848).TextInput, obj4)];
+  const items1 = [closure_6(value(6850).TextInput, obj4)];
   const obj5 = { text: null, onPress: null, disabled: null };
   const intl4 = value(1115).intl;
   obj5.text = intl4.string(value(1115).t.CumH4u);
   obj5.onPress = callback;
   obj5.disabled = !result;
-  items1[1] = closure_6(value(5186).Button, obj5);
+  items1[1] = closure_6(value(5187).Button, obj5);
   obj2.children = items1;
-  return closure_7(value(7395).BottomSheet, obj2);
+  return closure_7(value(7397).BottomSheet, obj2);
 }
-const maxLength = fn(2054).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
+const maxLength = fn(2055).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 FavoritesGuildAddCategoryActionSheet = "FavoritesGuildAddCategoryActionSheet";
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, body: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.body = { gap: nativeDefault.space.PX_16 };

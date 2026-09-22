@@ -15,11 +15,11 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const ContentDismissActionType = fn(2038).ContentDismissActionType;
+const ContentDismissActionType = fn(2039).ContentDismissActionType;
 let closure_9 = fn(1374).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_13 = createStyles.createStyles((arg0, arg1, color, borderColor) => {
   const obj = {
     containerFloatingWrap: null,
@@ -297,6 +297,15 @@ export default noop.memo((navigateToPremium) => {
   obj10.children = items8;
   return closure_12(isBadged, obj10);
 });
+export const getFloatingNavBottomMargin = function getFloatingNavBottomMargin(bottom) {
+  const space = nativeDefault.space;
+  if (isIOSResult) {
+    let PX_24 = space.PX_24;
+  } else {
+    PX_24 = space.PX_4 + bottom;
+  }
+  return PX_24;
+};
 export const useHasSettingsBadge = function useHasSettingsBadge() {
   let tmp = PromotionsHooks.useUnseenOutboundPromotions().length > 0;
   const tmp2 = null != useTrialOffer.useTrialOffer(closure_9);
