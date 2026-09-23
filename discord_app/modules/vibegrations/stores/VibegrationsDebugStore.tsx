@@ -1,9 +1,9 @@
-// === Module 17075: VibegrationsDebugStore ===
+// === Module 17133: VibegrationsDebugStore ===
 
-// Module 17075 (VibegrationsDebugStore)
+// Module 17133 (VibegrationsDebugStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 5277 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 5361 */;
 
 require = fn;
 let closure_2 = [];

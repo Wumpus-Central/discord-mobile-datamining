@@ -1,14 +1,14 @@
-// === Module 16664: FavoritesGuildCoachmarkIntro ===
+// === Module 16716: FavoritesGuildCoachmarkIntro ===
 
-// Module 16664 (FavoritesGuildCoachmarkIntro)
+// Module 16716 (FavoritesGuildCoachmarkIntro)
 import util from "util" /* 1115 */;
-import _modDef3324 from "module_3324" /* 3324 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4493 */;
-import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10497 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 16659 */;
+import _modDef3358 from "module_3358" /* 3358 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4559 */;
+import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10576 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 16711 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16635 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16687 */;
 
 require = fn;
 const FAVORITES = fn(1074).FAVORITES;
@@ -58,15 +58,15 @@ export default function FavoritesGuildCoachmarkIntro(markAsDismissed) {
   const memo = onDismiss.useMemo(() => {
     const obj = { visible, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: null, buttonLabel: null, onButtonPress: null };
     const intl = util.intl;
-    obj.title = intl.string(_modDef3324["bu/mLv"]);
+    obj.title = intl.string(_modDef3358["bu/mLv"]);
     const intl2 = util.intl;
-    obj.description = intl2.string(_modDef3324.kxQJ7q);
+    obj.description = intl2.string(_modDef3358.kxQJ7q);
     obj.onDismiss = onDismiss;
     obj.renderImgComponent = function renderImgComponent() {
       return closure_1_8(scrollPosition(visible[11]), {});
     };
     const intl3 = util.intl;
-    obj.buttonLabel = intl3.string(_modDef3324["vN/KQ9"]);
+    obj.buttonLabel = intl3.string(_modDef3358["vN/KQ9"]);
     obj.onButtonPress = callback1;
     return obj;
   }, items2);

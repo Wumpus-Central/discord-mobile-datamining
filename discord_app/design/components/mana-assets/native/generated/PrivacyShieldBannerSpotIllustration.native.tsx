@@ -1,9 +1,9 @@
-// === Module 6602: PrivacyShieldBannerSpotIllustration ===
+// === Module 6686: PrivacyShieldBannerSpotIllustration ===
 
-// Module 6602 (PrivacyShieldBannerSpotIllustration)
+// Module 6686 (PrivacyShieldBannerSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5806 */;
-import _modDef6603 from "module_6603" /* 6603 */;
+import FastImageDefault from "FastImage" /* 5890 */;
+import _modDef6687 from "module_6687" /* 6687 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const PrivacyShieldBannerSpotIllustration = function PrivacyShieldBannerS
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6603 };
+  const obj2 = { uri: _modDef6687 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

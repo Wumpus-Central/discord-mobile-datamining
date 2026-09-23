@@ -1,6 +1,6 @@
-// === Module 5796: ActivityIndicator/ActivityIndicator ===
+// === Module 5880: ActivityIndicator/ActivityIndicator ===
 
-// Module 5796 (ActivityIndicator/ActivityIndicator)
+// Module 5880 (ActivityIndicator/ActivityIndicator)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;

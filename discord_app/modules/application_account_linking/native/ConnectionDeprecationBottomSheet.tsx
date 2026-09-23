@@ -1,17 +1,17 @@
-// === Module 17419: ConnectionDeprecationBottomSheet ===
+// === Module 17488: ConnectionDeprecationBottomSheet ===
 
-// Module 17419 (ConnectionDeprecationBottomSheet)
+// Module 17488 (ConnectionDeprecationBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtils from "AvatarUtils" /* 1397 */;
-import themes from "themes" /* 4465 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4724 */;
-import Icon from "Icon" /* 5189 */;
-import useStartAuthorizeDefault from "useStartAuthorize" /* 7412 */;
-import GameIcon from "GameIcon" /* 7419 */;
-import AccountLinkManager from "AccountLinkManager" /* 17420 */;
+import themes from "themes" /* 4531 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4794 */;
+import Icon from "Icon" /* 5273 */;
+import useStartAuthorizeDefault from "useStartAuthorize" /* 7496 */;
+import GameIcon from "GameIcon" /* 7503 */;
+import AccountLinkManager from "AccountLinkManager" /* 17489 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 4984 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5500 */;
+import ApplicationStore from "ApplicationStore" /* 5054 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5584 */;
 
 const require = globalThis.__r;
 const IconDefault = Icon;
@@ -47,7 +47,7 @@ const View = fn(17).View;
 const ContentDismissActionType = fn(2039).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { iconContainer: { width: 56, height: 56, alignItems: "center", justifyContent: "center" }, content: { paddingHorizontal: nativeDefault.space.PX_16 }, text: { textAlign: "center" }, connectionIcon: { height: 48, width: 48 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -197,7 +197,7 @@ export const useShouldShowConnectionDeprecationBottomSheet = function useShouldS
       replacedBy = migrationData.replacedBy;
     }
   }
-  const getOrFetchApplication = deprecatedPlatformTypes(7415).useGetOrFetchApplication(replacedBy);
+  const getOrFetchApplication = deprecatedPlatformTypes(7499).useGetOrFetchApplication(replacedBy);
   const tmp5 = useStartAuthorizeDefault(getOrFetchApplication);
   ({ hasAlreadyLinked, canStartAuthorization } = tmp5);
   if (!fetchingConnections) {

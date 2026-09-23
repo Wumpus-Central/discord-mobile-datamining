@@ -1,16 +1,16 @@
-// === Module 16381: MessagesItemChannelBase ===
+// === Module 16434: MessagesItemChannelBase ===
 
-// Module 16381 (MessagesItemChannelBase)
+// Module 16434 (MessagesItemChannelBase)
 import nativeDefault from "native" /* 576 */;
-import transitionToChannel from "transitionToChannel" /* 4768 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4770 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11183 */;
+import transitionToChannel from "transitionToChannel" /* 4838 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4840 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11259 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 4797 */;
-import ReadStateStore from "ReadStateStore" /* 4772 */;
-import RelationshipStore from "RelationshipStore" /* 4406 */;
+import PresenceStore from "PresenceStore" /* 4867 */;
+import ReadStateStore from "ReadStateStore" /* 4842 */;
+import RelationshipStore from "RelationshipStore" /* 4472 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2096 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4938 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5008 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -18,7 +18,7 @@ const View = fn(17).View;
 const ActivityTypes = fn(1074).ActivityTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_14 = createStyles.createStyles(() => {
   const obj = { pressable: { marginBottom: 1, borderRadius: nativeDefault.radii.md, marginHorizontal: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center", flex: 1 }, nameplate: null, rowActive: null, selectedBorder: null, rowSelected: null };
   const obj2 = { marginBottom: 1, borderRadius: nativeDefault.radii.md, marginHorizontal: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center", flex: 1 };

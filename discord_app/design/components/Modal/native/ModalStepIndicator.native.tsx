@@ -1,10 +1,10 @@
-// === Module 14461: ModalStepIndicator ===
+// === Module 14541: ModalStepIndicator ===
 
-// Module 14461 (ModalStepIndicator)
+// Module 14541 (ModalStepIndicator)
 import util from "util" /* 1115 */;
 import _modDef2122 from "module_2122" /* 2122 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4493 */;
-import spring from "spring" /* 5186 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4559 */;
+import spring from "spring" /* 5270 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -75,7 +75,7 @@ function StepPill(isActive) {
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 let closure_6 = { overshootClamping: true };
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_7 = createStyles.createStyles({ container: { flexDirection: "row", gap: 4 }, stepPill: { height: 4, borderRadius: 2 } });
 const __initData = { code: "function ModalStepIndicatorNativeTsx1(){const{interpolate,sharedValue,WIDTH_INACTIVE,WIDTH_ACTIVE,interpolateColor,inactiveColor,activeColor,inactiveOpacity}=this.__closure;return{width:interpolate(sharedValue.get(),[0,1],[WIDTH_INACTIVE,WIDTH_ACTIVE]),backgroundColor:interpolateColor(sharedValue.get(),[0,1],[inactiveColor,activeColor]),opacity:interpolate(sharedValue.get(),[0,1],[inactiveOpacity,1])};}" };
 const size = fn(2);

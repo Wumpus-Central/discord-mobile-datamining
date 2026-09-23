@@ -1,8 +1,8 @@
-// === Module 9795: EditGuildEventUtils ===
+// === Module 9868: EditGuildEventUtils ===
 
-// Module 9795 (EditGuildEventUtils)
-import ScheduleUtils from "ScheduleUtils" /* 9759 */;
-import EntityUtils from "EntityUtils" /* 9796 */;
+// Module 9868 (EditGuildEventUtils)
+import ScheduleUtils from "ScheduleUtils" /* 9832 */;
+import EntityUtils from "EntityUtils" /* 9869 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;

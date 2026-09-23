@@ -1,9 +1,9 @@
-// === Module 9997: XLargeBoldIcon ===
+// === Module 10070: XLargeBoldIcon ===
 
-// Module 9997 (XLargeBoldIcon)
+// Module 10070 (XLargeBoldIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4457 */;
-import _mod9998 from "module_9998" /* 9998 */;
+import BaseIconImage from "BaseIconImage" /* 4523 */;
+import _mod10071 from "module_10071" /* 10071 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const XLargeBoldIcon = function XLargeBoldIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9998, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10071, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -1,6 +1,6 @@
-// === Module 14022: GeoRestrictedGuildStore ===
+// === Module 14103: GeoRestrictedGuildStore ===
 
-// Module 14022 (GeoRestrictedGuildStore)
+// Module 14103 (GeoRestrictedGuildStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

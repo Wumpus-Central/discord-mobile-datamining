@@ -1,6 +1,6 @@
-// === Module 7411: ApplicationDirectoryApplicationsStore ===
+// === Module 7495: ApplicationDirectoryApplicationsStore ===
 
-// Module 7411 (ApplicationDirectoryApplicationsStore)
+// Module 7495 (ApplicationDirectoryApplicationsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ApplicationRecord from "ApplicationRecord" /* 2002 */;

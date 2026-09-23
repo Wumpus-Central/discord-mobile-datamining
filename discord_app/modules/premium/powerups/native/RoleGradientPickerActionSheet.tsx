@@ -1,9 +1,9 @@
-// === Module 18075: RoleGradientPickerActionSheet ===
+// === Module 18144: RoleGradientPickerActionSheet ===
 
-// Module 18075 (RoleGradientPickerActionSheet)
+// Module 18144 (RoleGradientPickerActionSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4724 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14877 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4794 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14957 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,11 +12,11 @@ const require = globalThis.__r;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const EnhancedRoleColorConstants = fn(18058);
+const EnhancedRoleColorConstants = fn(18127);
 ({ DEFAULT_GRADIENT_ROLE_COLORS: closure_7, GRADIENT_PRESETS: closure_8 } = EnhancedRoleColorConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { body: { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12, flexGrow: 1, justifyContent: "center", alignItems: "center", gap: nativeDefault.space.PX_16 }, gradientContainer: null, dropperContainer: null, dropper: null, gradient: null, optionContainer: null, pressable: null, selected: null, option: null };
 let obj3 = { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12, flexGrow: 1, justifyContent: "center", alignItems: "center", gap: nativeDefault.space.PX_16 };
 obj2.gradientContainer = { display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_8 };

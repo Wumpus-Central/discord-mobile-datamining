@@ -1,11 +1,11 @@
-// === Module 4768: transitionToChannel ===
+// === Module 4838: transitionToChannel ===
 
-// Module 4768 (transitionToChannel)
+// Module 4838 (transitionToChannel)
 import _modDef38 from "module_38" /* 38 */;
 import router_utils from "router_utils" /* 1101 */;
-import useGuildIdForChannelRoute from "useGuildIdForChannelRoute" /* 4769 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4770 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4958 */;
+import useGuildIdForChannelRoute from "useGuildIdForChannelRoute" /* 4839 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4840 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5028 */;
 import ChannelStore from "ChannelStore" /* 2042 */;
 
 require = fn;

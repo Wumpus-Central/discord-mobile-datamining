@@ -1,11 +1,11 @@
-// === Module 14958: KeyImage ===
+// === Module 15038: KeyImage ===
 
-// Module 14958 (KeyImage)
+// Module 15038 (KeyImage)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 5911 */;
-import createStyles from "createStyles" /* 4757 */;
+import native from "native" /* 5995 */;
+import createStyles from "createStyles" /* 4827 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;

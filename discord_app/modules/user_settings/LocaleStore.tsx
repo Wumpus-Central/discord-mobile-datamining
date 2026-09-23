@@ -3,7 +3,7 @@
 // Module 2109 (LocaleStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import DiscordNativeDefault from "DiscordNative" /* 4377 */;
+import DiscordNativeDefault from "DiscordNative" /* 4443 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
 

@@ -1,10 +1,10 @@
-// === Module 9924: VideoBackgroundStore ===
+// === Module 9997: VideoBackgroundStore ===
 
-// Module 9924 (VideoBackgroundStore)
+// Module 9997 (VideoBackgroundStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4812 */;
-import VideoBackgroundUtils from "VideoBackgroundUtils" /* 9925 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4882 */;
+import VideoBackgroundUtils from "VideoBackgroundUtils" /* 9998 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2096 */;

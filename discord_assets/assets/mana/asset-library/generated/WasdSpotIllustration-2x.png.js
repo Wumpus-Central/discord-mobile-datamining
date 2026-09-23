@@ -1,6 +1,6 @@
-// === Module 6807: ? ===
+// === Module 6891: ? ===
 
-// Module 6807
+// Module 6891
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WasdSpotIllustration-2x.png.js");

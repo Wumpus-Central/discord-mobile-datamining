@@ -1,16 +1,16 @@
-// === Module 9117: PremiumFeaturesBackground ===
+// === Module 9188: PremiumFeaturesBackground ===
 
-// Module 9117 (PremiumFeaturesBackground)
+// Module 9188 (PremiumFeaturesBackground)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
-import LinearGradientDefault from "LinearGradient" /* 5199 */;
+import LinearGradientDefault from "LinearGradient" /* 5283 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const Gradients = fn(7677).Gradients;
+const Gradients = fn(7760).Gradients;
 const PremiumTypes = fn(1374).PremiumTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 const obj2 = { cardContainer: { display: "flex", borderRadius: nativeDefault.radii.lg, flexDirection: "column", justifyContent: "space-between", overflow: "hidden" } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

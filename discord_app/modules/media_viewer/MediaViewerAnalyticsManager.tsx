@@ -1,6 +1,6 @@
-// === Module 8536: MediaViewerAnalyticsManager ===
+// === Module 8607: MediaViewerAnalyticsManager ===
 
-// Module 8536 (MediaViewerAnalyticsManager)
+// Module 8607 (MediaViewerAnalyticsManager)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import ChannelStore from "ChannelStore" /* 2042 */;
 

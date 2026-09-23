@@ -1,11 +1,11 @@
-// === Module 12960: AddPhoneScreens ===
+// === Module 13042: AddPhoneScreens ===
 
-// Module 12960 (AddPhoneScreens)
+// Module 13042 (AddPhoneScreens)
 import nativeDefault from "native" /* 576 */;
-import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7285 */;
-import AddPhoneDefault from "AddPhone" /* 7291 */;
-import PhoneActionCreators from "PhoneActionCreators" /* 7292 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12933 */;
+import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7369 */;
+import AddPhoneDefault from "AddPhone" /* 7375 */;
+import PhoneActionCreators from "PhoneActionCreators" /* 7376 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 13015 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -16,13 +16,13 @@ const PhoneActionCreatorsDefault = PhoneActionCreators;
 
 require = fn;
 const View = fn(17).View;
-const useContactSyncModalStore = fn(12934).useContactSyncModalStore;
+const useContactSyncModalStore = fn(13016).useContactSyncModalStore;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4757);
-let obj2 = { container: { paddingTop: fn(5901).NAV_BAR_HEIGHT + 32 }, redesignContainer: null, header: null, title: null, subtitle: null };
-let obj3 = { paddingTop: fn(5901).NAV_BAR_HEIGHT + 32 };
-obj2.redesignContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingTop: fn(5901).NAV_BAR_HEIGHT + 32 };
+const createStyles = fn(4827);
+let obj2 = { container: { paddingTop: fn(5985).NAV_BAR_HEIGHT + 32 }, redesignContainer: null, header: null, title: null, subtitle: null };
+let obj3 = { paddingTop: fn(5985).NAV_BAR_HEIGHT + 32 };
+obj2.redesignContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingTop: fn(5985).NAV_BAR_HEIGHT + 32 };
 obj2.header = { alignItems: "center" };
 obj2.title = { textAlign: "center" };
 obj2.subtitle = { marginTop: 8, lineHeight: 18, textAlign: "center" };

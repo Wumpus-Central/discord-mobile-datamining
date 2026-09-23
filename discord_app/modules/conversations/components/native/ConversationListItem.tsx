@@ -1,14 +1,14 @@
-// === Module 8188: ConversationListItem ===
+// === Module 8270: ConversationListItem ===
 
-// Module 8188 (ConversationListItem)
+// Module 8270 (ConversationListItem)
 import nativeDefault from "native" /* 576 */;
-import ConversationsActionCreators from "ConversationsActionCreators" /* 8155 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 8157 */;
-import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 8171 */;
-import ConversationPreviewBlockedMessageDefault from "ConversationPreviewBlockedMessage" /* 8190 */;
-import ConversationPreviewMessageDefault from "ConversationPreviewMessage" /* 8193 */;
+import ConversationsActionCreators from "ConversationsActionCreators" /* 8237 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 8239 */;
+import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 8253 */;
+import ConversationPreviewBlockedMessageDefault from "ConversationPreviewBlockedMessage" /* 8272 */;
+import ConversationPreviewMessageDefault from "ConversationPreviewMessage" /* 8275 */;
 import noop from "module_19" /* 19 */;
-import ConversationsStore from "ConversationsStore" /* 7843 */;
+import ConversationsStore from "ConversationsStore" /* 7926 */;
 
 require = fn;
 function ConversationListItemBase(conversation) {
@@ -87,13 +87,13 @@ function ConversationListItemBase(conversation) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(7840).MOBILE_PREVIEW_MESSAGE_COUNT;
+let closure_6 = fn(7923).MOBILE_PREVIEW_MESSAGE_COUNT;
 const VerticalGradient = fn(1074).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const colors = ["black", "black"];
 const colors2 = ["black", "transparent"];
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj = { card: { marginBottom: nativeDefault.space.PX_12, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, height: 232, overflow: "hidden", paddingBottom: 0 }, title: { flexShrink: 1, minWidth: 0 }, timestamp: { flexShrink: 0 }, headerContainer: null, previewsMask: null, previews: null, maskColumn: null, maskOpaque: null, maskFade: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_12, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, height: 232, overflow: "hidden", paddingBottom: 0 };
 obj.headerContainer = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8 };

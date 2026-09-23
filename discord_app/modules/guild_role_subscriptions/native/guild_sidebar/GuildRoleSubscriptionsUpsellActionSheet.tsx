@@ -1,13 +1,13 @@
-// === Module 16592: GuildRoleSubscriptionsUpsellActionSheet ===
+// === Module 16644: GuildRoleSubscriptionsUpsellActionSheet ===
 
-// Module 16592 (GuildRoleSubscriptionsUpsellActionSheet)
+// Module 16644 (GuildRoleSubscriptionsUpsellActionSheet)
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4753 */;
-import components_Button_Button from "components/Button/Button" /* 5187 */;
-import FastImageDefault from "FastImage" /* 5806 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7397 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9861 */;
-import _modDef16593 from "module_16593" /* 16593 */;
+import Text_Text from "Text/Text" /* 4823 */;
+import components_Button_Button from "components/Button/Button" /* 5271 */;
+import FastImageDefault from "FastImage" /* 5890 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7481 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9934 */;
+import _modDef16645 from "module_16645" /* 16645 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const GuildSettingsSections = fn(1074).GuildSettingsSections;
 const ContentDismissActionType = fn(2039).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_8 = createStyles.createStyles({ title: { marginTop: 24, textAlign: "center" }, description: { marginTop: 8, marginBottom: 24, textAlign: "center" }, dismissButton: { marginTop: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_sidebar/GuildRoleSubscriptionsUpsellActionSheet.tsx");
@@ -31,7 +31,7 @@ export default function GuildRoleSubscriptionsUpsellActionSheet(arg0) {
     },
     children: null
   };
-  const obj2 = { source: _modDef16593 };
+  const obj2 = { source: _modDef16645 };
   const items = [closure_6(FastImageDefault, obj2), , , , ];
   const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;

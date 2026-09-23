@@ -1,13 +1,13 @@
-// === Module 9686: ScreenshareTile ===
+// === Module 9759: ScreenshareTile ===
 
-// Module 9686 (ScreenshareTile)
+// Module 9759 (ScreenshareTile)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4753 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6899 */;
-import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 9687 */;
-import _modDef9688 from "module_9688" /* 9688 */;
+import Text_Text from "Text/Text" /* 4823 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6983 */;
+import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 9760 */;
+import _modDef9761 from "module_9761" /* 9761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1074).NOOP;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { container: { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BLACK, overflow: "hidden", flex: 1 }, image: { marginBottom: 8, width: 60, height: 40 }, label: { lineHeight: 18, textAlign: "center" }, liveContainer: { position: "absolute", top: 8, right: 8, zIndex: 2 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -37,7 +37,7 @@ export default function ScreenShareTile(onSingleTap) {
   const tmp2 = useParticipantTileTapGestureDefault({ onSingleTapStart: onSingleTap, onDoubleTapStart: onDoubleTap });
   const items = [timestampProducer(React3, { style: tmp.liveContainer, children: timestampProducer(native.LiveTag, {}) }), , ];
   const obj3 = { style: tmp.liveContainer, children: timestampProducer(native.LiveTag, {}) };
-  items[1] = timestampProducer(React4, { source: _modDef9688, style: tmp.image, resizeMode: "contain" });
+  items[1] = timestampProducer(React4, { source: _modDef9761, style: tmp.image, resizeMode: "contain" });
   const obj5 = { style: tmp.label, variant: "text-xs/bold", color: "text-overlay-light", children: null };
   const intl = util.intl;
   obj5.children = intl.string(util.t.G84gtR);

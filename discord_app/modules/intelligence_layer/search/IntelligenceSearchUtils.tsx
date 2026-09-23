@@ -1,11 +1,12 @@
-// === Module 13988: IntelligenceSearchUtils ===
+// === Module 12700: IntelligenceSearchUtils ===
 
-// Module 13988 (IntelligenceSearchUtils)
-import MessageRecordUtils from "MessageRecordUtils" /* 4979 */;
-import SearchUtils from "SearchUtils" /* 12598 */;
-import QueryTokenizer from "QueryTokenizer" /* 12604 */;
-import IntelligenceSearchTypes from "IntelligenceSearchTypes" /* 13987 */;
-import RelationshipStore from "RelationshipStore" /* 4406 */;
+// Module 12700 (IntelligenceSearchUtils)
+import MessageRecordUtils from "MessageRecordUtils" /* 5049 */;
+import SearchUtils from "SearchUtils" /* 12674 */;
+import QueryTokenizer from "QueryTokenizer" /* 12680 */;
+import IntelligenceSearchTypes from "IntelligenceSearchTypes" /* 12699 */;
+import RelationshipStore from "RelationshipStore" /* 4472 */;
+import IntelligenceSearchStore from "IntelligenceSearchStore" /* 12697 */;
 
 require = fn;
 function isUnsupportedFilterToken(type) {
@@ -15,8 +16,10 @@ function isUnsupportedFilterToken(type) {
   }
   return tmp;
 }
+const MAX_PRESENTED_CITATIONS = fn(12698).MAX_PRESENTED_CITATIONS;
 const Constants = fn(1074);
-({ SearchTokenTypes, SearchTypes: c3 } = Constants);
+({ SearchTokenTypes, SearchTypes: hasOwnProperty } = Constants);
+const SearchTabs = fn(8207).SearchTabs;
 const items = [, ];
 ({ FILTER_IN: arr[0], ANSWER_IN: arr[1] } = SearchTokenTypes);
 const set = new Set(items);
@@ -80,4 +83,40 @@ export const parseConversationId = function parseConversationId(sourceId) {
     tmp2 = sourceId;
   }
   return tmp2;
+};
+export const getIntelligenceSearchStatus = function getIntelligenceSearchStatus(searchContext, searchResultsQuery) {
+  const guildIdFromSearchContext = SearchUtils.getGuildIdFromSearchContext(searchContext);
+  let status = null;
+  if (null != guildIdFromSearchContext) {
+    status = IntelligenceSearchStore.getStatus(guildIdFromSearchContext, SearchUtils.getSearchTabFetchId(searchContext, SearchTabs.MESSAGES, searchResultsQuery));
+    const tmpResult = SearchUtils;
+  }
+  return status;
+};
+export const isIntelligenceSearchActive = function isIntelligenceSearchActive(intelligenceStatus) {
+  return intelligenceStatus === IntelligenceSearchTypes.IntelligenceSearchStatus.LOADING || intelligenceStatus === IntelligenceSearchTypes.IntelligenceSearchStatus.LOADED;
+};
+export const isIntelligenceSearchEmptyOrErrored = function isIntelligenceSearchEmptyOrErrored(status) {
+  return status === IntelligenceSearchTypes.IntelligenceSearchStatus.EMPTY || status === IntelligenceSearchTypes.IntelligenceSearchStatus.ERROR;
+};
+export const getIntelligenceSearchCitationsCount = function getIntelligenceSearchCitationsCount(searchContext, searchResultsQuery, arg2) {
+  const guildIdFromSearchContext = SearchUtils.getGuildIdFromSearchContext(searchContext);
+  if (null == guildIdFromSearchContext) {
+    return 0;
+  } else {
+    const answer = IntelligenceSearchStore.getAnswer(guildIdFromSearchContext, SearchUtils.getSearchTabFetchId(searchContext, SearchTabs.MESSAGES, searchResultsQuery));
+    let num;
+    if (answer != null) {
+      num = answer.citations.length;
+    }
+    if (num == null) {
+      num = 0;
+    }
+    let bound = num;
+    if (arg2) {
+      const _Math = Math;
+      bound = Math.min(num, MAX_PRESENTED_CITATIONS);
+    }
+    return bound;
+  }
 };

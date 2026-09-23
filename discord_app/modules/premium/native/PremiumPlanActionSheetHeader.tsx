@@ -1,19 +1,19 @@
-// === Module 7676: PremiumPlanActionSheetHeader ===
+// === Module 7759: PremiumPlanActionSheetHeader ===
 
-// Module 7676 (PremiumPlanActionSheetHeader)
+// Module 7759 (PremiumPlanActionSheetHeader)
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
-import PremiumUtils from "PremiumUtils" /* 4415 */;
-import LinearGradientDefault from "LinearGradient" /* 5199 */;
-import FastImageDefault from "FastImage" /* 5806 */;
-import _modDef7678 from "module_7678" /* 7678 */;
-import _modDef7679 from "module_7679" /* 7679 */;
-import _modDef7680 from "module_7680" /* 7680 */;
-import _modDef7681 from "module_7681" /* 7681 */;
-import _modDef7682 from "module_7682" /* 7682 */;
-import PremiumPill from "PremiumPill" /* 7683 */;
-import _modDef9505 from "module_9505" /* 9505 */;
-import _modDef9510 from "module_9510" /* 9510 */;
-import _modDef10981 from "module_10981" /* 10981 */;
+import PremiumUtils from "PremiumUtils" /* 4481 */;
+import LinearGradientDefault from "LinearGradient" /* 5283 */;
+import FastImageDefault from "FastImage" /* 5890 */;
+import _modDef7761 from "module_7761" /* 7761 */;
+import _modDef7762 from "module_7762" /* 7762 */;
+import _modDef7763 from "module_7763" /* 7763 */;
+import _modDef7764 from "module_7764" /* 7764 */;
+import _modDef7765 from "module_7765" /* 7765 */;
+import PremiumPill from "PremiumPill" /* 7766 */;
+import _modDef9578 from "module_9578" /* 9578 */;
+import _modDef9583 from "module_9583" /* 9583 */;
+import _modDef11057 from "module_11057" /* 11057 */;
 import noop from "module_19" /* 19 */;
 
 const PremiumUtilsDefault = PremiumUtils;
@@ -22,10 +22,10 @@ require = fn;
 const View = fn(17).View;
 const PremiumConstants = fn(1374);
 ({ PremiumTypes: closure_4, SubscriptionIntervalTypes: hasOwnProperty } = PremiumConstants);
-const getPremiumGradientColor = fn(7677).getPremiumGradientColor;
+const getPremiumGradientColor = fn(7760).getPremiumGradientColor;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { header: { height: 112, justifyContent: "center", alignItems: "center" }, logoContainer: { position: "absolute", top: 16, left: 16 }, imgWumpus: { position: "absolute", height: 90 }, imgWumpusRight: null, imgWumpusBottom: { bottom: 0 }, discountPill: { marginTop: 10 } };
 let obj3 = { transform: null };
 let items = [{ scaleX: -1 }];
@@ -62,12 +62,12 @@ export default function PremiumPlanActionSheetHeader(arg0) {
   const tmp14 = LinearGradientDefault;
   obj2.accessibilityLabel = PremiumUtils.getPremiumTypeDisplayName(premiumType);
   if (TIER_0.TIER_0 === premiumType) {
-    let tmp13Result = _modDef7678;
+    let tmp13Result = _modDef7761;
   } else {
     tmp13Result = null;
     if (TIER_0.TIER_1 !== premiumType) {
       if (TIER_0.TIER_2 === premiumType) {
-        tmp13Result = _modDef7679;
+        tmp13Result = _modDef7762;
       }
     }
   }
@@ -75,11 +75,11 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     const items = [tmp13Result, , ];
     const obj3 = { style: tmp.logoContainer, children: null };
     if (TIER_0.TIER_0 === premiumType) {
-      let tmp13Result8 = _modDef7680;
+      let tmp13Result8 = _modDef7763;
     } else if (TIER_0.TIER_1 === premiumType) {
-      tmp13Result8 = _modDef7681;
+      tmp13Result8 = _modDef7764;
     } else if (TIER_0.TIER_2 === premiumType) {
-      tmp13Result8 = _modDef7682;
+      tmp13Result8 = _modDef7765;
     }
     const obj4 = { source: tmp13Result8, resizeMode: "contain" };
     const items1 = [React5(FastImageDefault, obj4), , ];
@@ -99,11 +99,11 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     items[1] = React6(View, obj3);
     const tmp13Result7 = FastImageDefault;
     if (TIER_0.TIER_0 === premiumType) {
-      let tmp13Result10 = _modDef9505;
+      let tmp13Result10 = _modDef9578;
     } else if (TIER_0.TIER_1 === premiumType) {
-      tmp13Result10 = _modDef10981;
+      tmp13Result10 = _modDef11057;
     } else if (TIER_0.TIER_2 === premiumType) {
-      tmp13Result10 = _modDef9510;
+      tmp13Result10 = _modDef9583;
     }
     const obj7 = { source: tmp13Result10, style: null, resizeMode: "contain" };
     const items2 = [tmp.imgWumpus, ];
@@ -123,12 +123,12 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     tmp13Result9 = FastImageDefault;
   } else {
     if (TIER_0.TIER_0 === premiumType) {
-      let tmp13Result12 = _modDef7678;
+      let tmp13Result12 = _modDef7761;
     } else {
       tmp13Result12 = null;
       if (TIER_0.TIER_1 !== premiumType) {
         if (TIER_0.TIER_2 === premiumType) {
-          tmp13Result12 = _modDef7679;
+          tmp13Result12 = _modDef7762;
         }
       }
     }

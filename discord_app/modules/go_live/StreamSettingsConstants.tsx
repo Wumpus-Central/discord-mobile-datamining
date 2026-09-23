@@ -1,6 +1,6 @@
-// === Module 4804: StreamSettingsConstants ===
+// === Module 4874: StreamSettingsConstants ===
 
-// Module 4804 (StreamSettingsConstants)
+// Module 4874 (StreamSettingsConstants)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
 import PremiumConstants from "PremiumConstants" /* 1374 */;

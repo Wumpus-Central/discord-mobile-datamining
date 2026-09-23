@@ -1,8 +1,8 @@
-// === Module 17030: VibegrationsFeedbackSheet ===
+// === Module 17087: VibegrationsFeedbackSheet ===
 
-// Module 17030 (VibegrationsFeedbackSheet)
-import ToastUtils from "ToastUtils" /* 4454 */;
-import vibegrationsFeedback from "vibegrationsFeedback" /* 17011 */;
+// Module 17087 (VibegrationsFeedbackSheet)
+import ToastUtils from "ToastUtils" /* 4520 */;
+import vibegrationsFeedback from "vibegrationsFeedback" /* 17068 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,13 +27,13 @@ export default function VibegrationsFeedbackSheet(projectId) {
   }, []);
   let obj = { headerLabel: null, ratingBody: null, categoriesHeader: null, optionsTree: null, trackOpen: null, trackReport: null };
   const intl = projectId(1115).intl;
-  obj.headerLabel = intl.string(promptCount(3678).W7Sdp4);
+  obj.headerLabel = intl.string(promptCount(3712).W7Sdp4);
   const intl2 = projectId(1115).intl;
-  obj.ratingBody = intl2.string(promptCount(3678).dXJed8);
+  obj.ratingBody = intl2.string(promptCount(3712).dXJed8);
   const intl3 = projectId(1115).intl;
-  obj.categoriesHeader = intl3.string(promptCount(3678).kLHFxL);
+  obj.categoriesHeader = intl3.string(promptCount(3712).kLHFxL);
   obj.optionsTree = memo;
-  obj.trackOpen = projectId(17011).trackVibegrationsFeedbackOpened;
+  obj.trackOpen = projectId(17068).trackVibegrationsFeedbackOpened;
   obj.trackReport = callback;
-  return jsx(promptCount(17017), { headerLabel: null, ratingBody: null, categoriesHeader: null, optionsTree: null, trackOpen: null, trackReport: null });
+  return jsx(promptCount(17074), { headerLabel: null, ratingBody: null, categoriesHeader: null, optionsTree: null, trackOpen: null, trackReport: null });
 };

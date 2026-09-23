@@ -1,13 +1,13 @@
-// === Module 11357: useHandleUseNow ===
+// === Module 11433: useHandleUseNow ===
 
-// Module 11357 (useHandleUseNow)
-import RootNavigationRef from "RootNavigationRef" /* 4615 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4724 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4960 */;
+// Module 11433 (useHandleUseNow)
+import RootNavigationRef from "RootNavigationRef" /* 4685 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4794 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5030 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const RootNavigatorScreen = fn(11358).RootNavigatorScreen;
+const RootNavigatorScreen = fn(11434).RootNavigatorScreen;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/useHandleUseNow.tsx");
 

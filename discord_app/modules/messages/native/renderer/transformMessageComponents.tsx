@@ -1,21 +1,21 @@
-// === Module 8383: transformMessageComponents ===
+// === Module 8465: transformMessageComponents ===
 
-// Module 8383 (transformMessageComponents)
+// Module 8465 (transformMessageComponents)
 import DurationsDefault from "Durations" /* 1091 */;
 import URLUtilsDefault from "URLUtils" /* 1366 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 4907 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 4981 */;
-import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8381 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8399 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 4977 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 5051 */;
+import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8463 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8481 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import priv from "priv" /* 1438 */;
 
 const util = tmp4(1115);
 const FlagUtils = tmp4(1385);
-const AgeVerificationUtils = tmp4(4969);
-const MediaTypes = tmp4(4987);
-const sanitizeMediaDimension = tmp4(8380);
-const ExplicitMediaUtils = tmp4(8398);
+const AgeVerificationUtils = tmp4(5039);
+const MediaTypes = tmp4(5057);
+const sanitizeMediaDimension = tmp4(8462);
+const ExplicitMediaUtils = tmp4(8480);
 require = fn;
 function transformToRowGeneratedComponent(message, accessory) {
   _require = message;
@@ -66,15 +66,15 @@ function transformToRowGeneratedComponent(message, accessory) {
     const found1 = mapped1.filter((item) => -1 !== item);
     const obj4 = {};
     const merged2 = Object.assign(accessory);
-    const tmpResult27 = tmp(tmp2[10]);
+    const tmpResult25 = tmp(tmp2[10]);
     obj4.state = tmp(tmp2[9]).getActionComponentState(interaction, accessory, shouldDisableInteractiveComponents);
     obj4.selectedOptions = found1;
-    const tmpResult28 = tmp(tmp2[9]);
+    const tmpResult26 = tmp(tmp2[9]);
     obj4.placeholder = tmp(tmp2[7]).getSelectPlaceholder(accessory);
     closure_130_0 = accessory;
     closure_130_1 = found1;
     closure_130_2 = (arg0) => accessory.options[arg0].label;
-    const tmpResult29 = tmp(tmp2[7]);
+    const tmpResult27 = tmp(tmp2[7]);
     const obj5 = {
       expensive() {
           if (null != accessory) {
@@ -91,9 +91,9 @@ function transformToRowGeneratedComponent(message, accessory) {
         },
       cheap: null
     };
-    const tmpResult30 = tmp(tmp2[19]);
+    const tmpResult28 = tmp(tmp2[19]);
     obj5.cheap = tmp(tmp2[7]).getSelectPlaceholder(accessory);
-    obj4.accessibilityLabel = tmpResult30.getAccessibilityLabelOrCheapFallbackUnsafe(obj5);
+    obj4.accessibilityLabel = tmpResult28.getAccessibilityLabelOrCheapFallbackUnsafe(obj5);
     return obj4;
   } else {
     if (tmp(tmp2[6]).ComponentType.USER_SELECT !== type) {
@@ -101,13 +101,13 @@ function transformToRowGeneratedComponent(message, accessory) {
         if (tmp(tmp2[6]).ComponentType.MENTIONABLE_SELECT !== type) {
           if (tmp(tmp2[6]).ComponentType.CHANNEL_SELECT !== type) {
             if (tmp(tmp2[6]).ComponentType.SECTION === type) {
-              const tmp71 = transformToRowGeneratedComponent(message, accessory.accessory);
-              let tmp73 = null;
-              if (null != tmp71) {
-                tmp73 = tmp71;
+              const tmp60 = transformToRowGeneratedComponent(message, accessory.accessory);
+              let tmp62 = null;
+              if (null != tmp60) {
+                tmp62 = tmp60;
               }
-              let tmp74 = null;
-              if (null != tmp73) {
+              let tmp63 = null;
+              if (null != tmp62) {
                 let obj6 = {};
                 const merged3 = Object.assign(accessory);
                 const components1 = accessory.components;
@@ -120,14 +120,14 @@ function transformToRowGeneratedComponent(message, accessory) {
                   return tmp2;
                 });
                 obj6.components = mapped2.filter(tmp(tmp2[5]).isNotNullish);
-                obj6.accessory = tmp73;
+                obj6.accessory = tmp62;
                 obj6.errorText = tmp(tmp2[7]).getLayoutComponentErrorText(interaction, message, accessory);
-                tmp74 = obj6;
-                const tmpResult32 = tmp(tmp2[7]);
+                tmp63 = obj6;
+                const tmpResult30 = tmp(tmp2[7]);
               }
-              return tmp74;
+              return tmp63;
             } else if (tmp(tmp2[6]).ComponentType.TEXT_DISPLAY === type) {
-              const obj7 = {};
+              const obj8 = {};
               const merged4 = Object.assign(accessory);
               const textDisplayComponent = markdownConfigs.textDisplayComponent;
               const content = accessory.content;
@@ -135,73 +135,73 @@ function transformToRowGeneratedComponent(message, accessory) {
               let combined = "" + textDisplayComponent.type + "-" + message.id + "-" + content;
               value = importDefaultResult1.get(combined);
               if (null == value) {
-                const obj8 = {};
+                const obj9 = {};
                 const merged5 = Object.assign(textDisplayComponent.parserState);
-                const parseToASTResult = require("MarkupUtils").parseToAST(content, true, obj8);
+                const parseToASTResult = require("MarkupUtils").parseToAST(content, true, obj9);
                 let result = importDefaultResult1.set(combined, parseToASTResult);
                 value = parseToASTResult;
-                const obj31 = require("MarkupUtils");
+                const obj26 = require("MarkupUtils");
               }
-              obj7.content = value;
-              return obj7;
+              obj8.content = value;
+              return obj8;
             } else if (tmp(tmp2[6]).ComponentType.THUMBNAIL === type) {
               ({ width, height, contentType } = accessory.media);
               if (null != width) {
                 if (width > 0) {
                   if (null != height) {
                     if (height > 0) {
-                      if (tmpResult33.isImageContentType(contentType)) {
+                      if (tmpResult31.isImageContentType(contentType)) {
                         let VISUAL_PLACEHOLDER = tmp(tmp2[14]).MediaGalleryItemType.IMAGE;
                       } else {
-                        if (tmpResult34.isVideoContentType(contentType)) {
+                        if (tmpResult32.isVideoContentType(contentType)) {
                           VISUAL_PLACEHOLDER = tmp(tmp2[14]).MediaGalleryItemType.VIDEO;
                         }
-                        tmpResult34 = tmp(tmp2[20]);
+                        tmpResult32 = tmp(tmp2[20]);
                       }
-                      tmpResult33 = tmp(tmp2[20]);
+                      tmpResult31 = tmp(tmp2[20]);
                     }
-                    let str2 = "generic";
+                    let str = "generic";
                     if (VISUAL_PLACEHOLDER === tmp(tmp2[14]).MediaGalleryItemType.IMAGE) {
-                      str2 = "image";
+                      str = "image";
                     }
-                    const obj9 = { type: str2, mediaItem: null, isSpoilered: null, isAuthorBot: null, shouldObscureSpoiler: null, shouldAgeVerify: null, enabledContentHarmTypeFlags: null };
-                    ({ media: obj25.mediaItem, spoiler: spoiler2 } = accessory);
+                    const obj10 = { type: str, mediaItem: null, isSpoilered: null, isAuthorBot: null, shouldObscureSpoiler: null, shouldAgeVerify: null, enabledContentHarmTypeFlags: null };
+                    ({ media: obj20.mediaItem, spoiler: spoiler2 } = accessory);
                     if (spoiler2 == null) {
                       spoiler2 = false;
                     }
-                    obj9.isSpoilered = spoiler2;
-                    obj9.isAuthorBot = message.author.bot;
-                    obj9.shouldObscureSpoiler = shouldObscureSpoiler;
-                    obj9.shouldAgeVerify = shouldAgeVerify;
-                    obj9.enabledContentHarmTypeFlags = enabledContentHarmTypeFlags;
-                    let unfurledMediaItemObscurityProps = tmp(tmp2[13]).getUnfurledMediaItemObscurityProps(obj9);
+                    obj10.isSpoilered = spoiler2;
+                    obj10.isAuthorBot = message.author.bot;
+                    obj10.shouldObscureSpoiler = shouldObscureSpoiler;
+                    obj10.shouldAgeVerify = shouldAgeVerify;
+                    obj10.enabledContentHarmTypeFlags = enabledContentHarmTypeFlags;
+                    let unfurledMediaItemObscurityProps = tmp(tmp2[13]).getUnfurledMediaItemObscurityProps(obj10);
                     const isObscured2 = unfurledMediaItemObscurityProps.isObscured;
                     let isVerifiedTeenResult = isObscured2;
                     ({ isSpoiler: isSpoiler2, spoilerDescription: spoilerDescription2, obscureDescription: obscureDescription2, obscureAwaitingScan: obscureAwaitingScan2 } = unfurledMediaItemObscurityProps);
                     if (isObscured2) {
                       isVerifiedTeenResult = tmp(tmp2[15]).isVerifiedTeen();
-                      const tmpResult36 = tmp(tmp2[15]);
+                      const tmpResult34 = tmp(tmp2[15]);
                     }
-                    const obj11 = {};
+                    const obj12 = {};
                     const merged6 = Object.assign(accessory);
-                    obj11.media = transformUnfurledMediaItem(accessory.media, message);
-                    obj11.isSpoiler = isSpoiler2;
-                    obj11.spoilerDescription = spoilerDescription2;
-                    obj11.isObscure = isObscured2;
-                    obj11.isObscureAwaitingScan = obscureAwaitingScan2;
-                    obj11.obscureDescription = obscureDescription2;
-                    let tmp56 = isObscured2;
+                    obj12.media = transformUnfurledMediaItem(accessory.media, message);
+                    obj12.isSpoiler = isSpoiler2;
+                    obj12.spoilerDescription = spoilerDescription2;
+                    obj12.isObscure = isObscured2;
+                    obj12.isObscureAwaitingScan = obscureAwaitingScan2;
+                    obj12.obscureDescription = obscureDescription2;
+                    let tmp45 = isObscured2;
                     if (isObscured2) {
-                      tmp56 = shouldAgeVerify;
+                      tmp45 = shouldAgeVerify;
                     }
-                    obj11.verifyAge = tmp56;
-                    obj11.obscureHideControls = isVerifiedTeenResult;
-                    obj11.obscureIsOpaque = isObscured2;
+                    obj12.verifyAge = tmp45;
+                    obj12.obscureHideControls = isVerifiedTeenResult;
+                    obj12.obscureIsOpaque = isObscured2;
                     let intl3 = tmp(tmp2[8]).intl;
-                    obj11.descriptionHint = intl3.string(tmp(tmp2[8]).t.IPzNKE);
+                    obj12.descriptionHint = intl3.string(tmp(tmp2[8]).t.IPzNKE);
                     let intl4 = tmp(tmp2[8]).intl;
-                    obj11.accessibilityRole = intl4.string(tmp(tmp2[8]).t.fKyfca);
-                    return obj11;
+                    obj12.accessibilityRole = intl4.string(tmp(tmp2[8]).t.fKyfca);
+                    return obj12;
                   }
                 }
               }
@@ -310,75 +310,75 @@ function transformToRowGeneratedComponent(message, accessory) {
                 VISUAL_PLACEHOLDER = RowGeneratorTypes.MediaGalleryItemType.VISUAL_PLACEHOLDER;
               });
               const found2 = mapped3.filter(tmp(tmp2[5]).isNotNullish);
-              let tmp45 = null;
+              let tmp34 = null;
               if (0 !== found2.length) {
                 const obj13 = {};
                 const merged7 = Object.assign(accessory);
                 obj13.items = found2;
-                tmp45 = obj13;
+                tmp34 = obj13;
               }
-              return tmp45;
+              return tmp34;
             } else if (tmp(tmp2[6]).ComponentType.FILE === type) {
-              const obj14 = { type: "file", mediaItem: null, isSpoilered: null, isAuthorBot: null, shouldObscureSpoiler: null, shouldAgeVerify: null, enabledContentHarmTypeFlags: null };
-              ({ file: obj16.mediaItem, spoiler } = accessory);
+              const obj15 = { type: "file", mediaItem: null, isSpoilered: null, isAuthorBot: null, shouldObscureSpoiler: null, shouldAgeVerify: null, enabledContentHarmTypeFlags: null };
+              ({ file: obj11.mediaItem, spoiler } = accessory);
               if (spoiler == null) {
                 spoiler = false;
               }
-              obj14.isSpoilered = spoiler;
-              obj14.isAuthorBot = message.author.bot;
-              obj14.shouldObscureSpoiler = shouldObscureSpoiler;
-              obj14.shouldAgeVerify = shouldAgeVerify;
-              obj14.enabledContentHarmTypeFlags = enabledContentHarmTypeFlags;
-              const unfurledMediaItemObscurityProps1 = tmp(tmp2[13]).getUnfurledMediaItemObscurityProps(obj14);
+              obj15.isSpoilered = spoiler;
+              obj15.isAuthorBot = message.author.bot;
+              obj15.shouldObscureSpoiler = shouldObscureSpoiler;
+              obj15.shouldAgeVerify = shouldAgeVerify;
+              obj15.enabledContentHarmTypeFlags = enabledContentHarmTypeFlags;
+              const unfurledMediaItemObscurityProps1 = tmp(tmp2[13]).getUnfurledMediaItemObscurityProps(obj15);
               let isObscured = unfurledMediaItemObscurityProps1.isObscured;
               let isVerifiedTeenResult1 = isObscured;
               ({ isSpoiler, spoilerDescription, obscureDescription, obscureAwaitingScan } = unfurledMediaItemObscurityProps1);
               if (isObscured) {
                 isVerifiedTeenResult1 = tmp(tmp2[15]).isVerifiedTeen();
-                const tmpResult38 = tmp(tmp2[15]);
+                const tmpResult36 = tmp(tmp2[15]);
               }
-              const obj15 = {};
+              const obj16 = {};
               const merged8 = Object.assign(accessory);
-              obj15.file = transformUnfurledMediaItem(accessory.file, message);
+              obj16.file = transformUnfurledMediaItem(accessory.file, message);
               let name = accessory.name;
               if (name == null) {
                 let intl2 = tmp(tmp2[8]).intl;
                 name = intl2.string(tmp(tmp2[8]).t.GnuJ5u);
               }
-              obj15.name = name;
-              const tmpResult37 = tmp(tmp2[13]);
-              let num5 = accessory.size;
-              if (num5 == null) {
-                num5 = 0;
+              obj16.name = name;
+              const tmpResult35 = tmp(tmp2[13]);
+              let num2 = accessory.size;
+              if (num2 == null) {
+                num2 = 0;
               }
-              obj15.size = require("noConflict").filesize(num5);
-              const obj19 = require("noConflict");
-              obj15.isSuspiciousDownload = null != tmp(tmp2[17]).isSuspiciousDownload(accessory.file.url);
-              obj15.isSpoiler = isSpoiler;
-              obj15.spoilerDescription = spoilerDescription;
-              obj15.isObscure = isObscured;
-              obj15.isObscureAwaitingScan = obscureAwaitingScan;
-              obj15.obscureDescription = obscureDescription;
-              let tmp44 = isObscured;
+              obj16.size = require("noConflict").filesize(num2);
+              const obj14 = require("noConflict");
+              obj16.isSuspiciousDownload = null != tmp(tmp2[17]).isSuspiciousDownload(accessory.file.url);
+              obj16.isSpoiler = isSpoiler;
+              obj16.spoilerDescription = spoilerDescription;
+              obj16.isObscure = isObscured;
+              obj16.isObscureAwaitingScan = obscureAwaitingScan;
+              obj16.obscureDescription = obscureDescription;
+              let tmp33 = isObscured;
               if (isObscured) {
-                tmp44 = shouldAgeVerify;
+                tmp33 = shouldAgeVerify;
               }
-              obj15.verifyAge = tmp44;
-              obj15.obscureHideControls = isVerifiedTeenResult1;
-              obj15.obscureIsOpaque = isObscured;
-              return obj15;
+              obj16.verifyAge = tmp33;
+              obj16.obscureHideControls = isVerifiedTeenResult1;
+              obj16.obscureIsOpaque = isObscured;
+              return obj16;
             } else if (tmp(tmp2[6]).ComponentType.SEPARATOR === type) {
               return accessory;
             } else if (tmp(tmp2[6]).ComponentType.TEXT_INPUT === type) {
               return null;
             } else if (tmp(tmp2[6]).ComponentType.CONTENT_INVENTORY_ENTRY === type) {
               const obj17 = { type: null, id: null, contentInventoryEntry: null };
-              ({ type: obj12.type, id: obj12.id } = accessory);
+              ({ type: obj7.type, id: obj7.id } = accessory);
               const obj18 = { component: accessory, message };
               obj17.contentInventoryEntry = tmp(tmp2[18]).transformToRowGeneratedContentInventoryEntryComponent(obj18);
               return obj17;
             } else if (tmp(tmp2[6]).ComponentType.CONTAINER === type) {
-              const obj20 = {};
+              const obj19 = {};
               const merged9 = Object.assign(accessory);
               const components2 = accessory.components;
               const mapped4 = components2.map((item) => {
@@ -389,81 +389,44 @@ function transformToRowGeneratedComponent(message, accessory) {
                 }
                 return tmp2;
               });
-              obj20.components = mapped4.filter(tmp(tmp2[5]).isNotNullish);
-              let tmp31 = null;
+              obj19.components = mapped4.filter(tmp(tmp2[5]).isNotNullish);
+              let tmp20 = null;
               if (null != accessory.accentColor) {
-                tmp31 = processColor(accessory.accentColor);
+                tmp20 = processColor(accessory.accentColor);
               }
-              obj20.accentColor = tmp31;
-              obj20.isSpoiler = accessory.spoiler && shouldObscureSpoiler;
+              obj19.accentColor = tmp20;
+              obj19.isSpoiler = accessory.spoiler && shouldObscureSpoiler;
               let stringResult = null;
               if (accessory.spoiler && shouldObscureSpoiler) {
                 let intl = tmp(tmp2[8]).intl;
                 stringResult = intl.string(tmp(tmp2[8]).t.C8ci33);
               }
-              obj20.spoilerDescription = stringResult;
+              obj19.spoilerDescription = stringResult;
               let embedBackgroundColor = colors.embedBackgroundColor;
               if (embedBackgroundColor == null) {
                 embedBackgroundColor = null;
               }
-              obj20.themedBackgroundColor = embedBackgroundColor;
-              return obj20;
+              obj19.themedBackgroundColor = embedBackgroundColor;
+              return obj19;
             } else {
               if (tmp(tmp2[6]).ComponentType.LABEL !== type) {
                 if (tmp(tmp2[6]).ComponentType.FILE_UPLOAD !== type) {
                   if (tmp(tmp2[6]).ComponentType.CHECKPOINT_CARD === type) {
                     const checkpointData = accessory.checkpointData;
                     const tmp6 = enabledContentHarmTypeFlags(accessory, shouldObscureSpoiler);
-                    if (checkpointData.version === shouldAgeVerify.V2025) {
-                      const _Intl = Intl;
-                      const numberFormat = new Intl.NumberFormat(tmp(tmp2[8]).intl.currentLocale, { notation: "compact", compactDisplay: "short" });
+                    const version = checkpointData.version;
+                    if (shouldAgeVerify.V2025 === version) {
                       const obj21 = {};
                       const merged10 = Object.assign(tmp6);
-                      const obj22 = {};
-                      const merged11 = Object.assign(checkpointData);
-                      obj22.cardId = checkpointData.cardId.toString();
-                      obj22.cardAssetUrl = tmp(tmp2[29]).getCardAssetUrl(checkpointData.cardId);
-                      obj22.authorId = message.author.id;
-                      let num = checkpointData.powerLevel;
-                      if (num == null) {
-                        num = 0;
-                      }
-                      obj22.powerLevel = numberFormat.format(num);
-                      const tmpResult41 = tmp(tmp2[29]);
-                      let num2 = checkpointData.powerLevelPercentile;
-                      if (num2 == null) {
-                        num2 = 0;
-                      }
-                      const checkpointPowerBarUnits = tmp(tmp2[29]).getCheckpointPowerBarUnits(num2);
-                      const tmpResult42 = tmp(tmp2[29]);
-                      let num3 = 10;
-                      if (tmpResult43.isIOS()) {
-                        num3 = 9;
-                      }
-                      obj22.powerLevelUnits = Math.min(checkpointPowerBarUnits, num3);
-                      tmpResult43 = tmp(tmp2[30]);
-                      obj22.voiceString = tmp(tmp2[29]).getVoiceDurationString(checkpointData.totalVoiceMinutes);
-                      const numEmojisSent = checkpointData.numEmojisSent;
-                      obj22.reactionString = numEmojisSent.toLocaleString(tmp(tmp2[8]).intl.currentLocale);
-                      const numMessagesSent = checkpointData.numMessagesSent;
-                      obj22.messagesString = numMessagesSent.toLocaleString(tmp(tmp2[8]).intl.currentLocale);
-                      let tmp20;
-                      if (null != checkpointData.topEmoji) {
-                        const obj23 = {};
-                        const merged12 = Object.assign(checkpointData.topEmoji);
-                        let result1;
-                        if (null == checkpointData.topEmoji.emojiId) {
-                          result1 = require("UnicodeEmojis").convertSurrogateToName(checkpointData.topEmoji.emojiName);
-                          const obj10 = require("UnicodeEmojis");
-                        }
-                        obj23.emojiSurrogateName = result1;
-                        tmp20 = obj23;
-                      }
-                      obj22.topEmoji = tmp20;
-                      obj22.clickable = undefined;
-                      obj21.checkpointData = obj22;
+                      obj21.checkpointData = tmp(tmp2[29]).transformCheckpoint2025CardToRowGeneratedComponent(checkpointData, message);
                       let obj = obj21;
-                      const tmpResult44 = tmp(tmp2[29]);
+                      const tmpResult39 = tmp(tmp2[29]);
+                    } else if (tmp7.V2026 === version) {
+                      const obj22 = {};
+                      const merged11 = Object.assign(tmp6);
+                      obj22.checkpointData = tmp(tmp2[29]).transformCheckpoint2026CardToRowGeneratedComponent(checkpointData);
+                      obj = obj22;
+                      const tmpResult40 = tmp(tmp2[29]);
                     } else {
                       obj = { type: tmp(tmp2[6]).ComponentType.UNKNOWN, id: accessory.id };
                     }
@@ -485,19 +448,19 @@ function transformToRowGeneratedComponent(message, accessory) {
       }
     }
     const initialSnowflakeSelectOptions = tmp(tmp2[11]).getInitialSnowflakeSelectOptions(accessory, message.id, guildId);
-    const obj24 = {};
-    const merged13 = Object.assign(accessory);
-    const tmpResult45 = tmp(tmp2[11]);
-    obj24.state = tmp(tmp2[9]).getActionComponentState(interaction, accessory, shouldDisableInteractiveComponents);
-    const tmpResult46 = tmp(tmp2[9]);
-    obj24.selectedOptions = tmp(tmp2[12]).transformSearchableSelectOptions(initialSnowflakeSelectOptions, guildId);
-    const tmpResult47 = tmp(tmp2[12]);
-    obj24.placeholder = tmp(tmp2[7]).getSelectPlaceholder(accessory);
+    const obj23 = {};
+    const merged12 = Object.assign(accessory);
+    const tmpResult41 = tmp(tmp2[11]);
+    obj23.state = tmp(tmp2[9]).getActionComponentState(interaction, accessory, shouldDisableInteractiveComponents);
+    const tmpResult42 = tmp(tmp2[9]);
+    obj23.selectedOptions = tmp(tmp2[12]).transformSearchableSelectOptions(initialSnowflakeSelectOptions, guildId);
+    const tmpResult43 = tmp(tmp2[12]);
+    obj23.placeholder = tmp(tmp2[7]).getSelectPlaceholder(accessory);
     closure_129_0 = accessory;
     closure_129_1 = initialSnowflakeSelectOptions;
     closure_129_2 = (label) => label.label;
-    const tmpResult48 = tmp(tmp2[7]);
-    const obj26 = {
+    const tmpResult44 = tmp(tmp2[7]);
+    const obj25 = {
       expensive() {
           if (null != accessory) {
             if (0 !== accessory.length) {
@@ -513,10 +476,10 @@ function transformToRowGeneratedComponent(message, accessory) {
         },
       cheap: null
     };
-    const tmpResult49 = tmp(tmp2[19]);
-    obj26.cheap = tmp(tmp2[7]).getSelectPlaceholder(accessory);
-    obj24.accessibilityLabel = tmpResult49.getAccessibilityLabelOrCheapFallbackUnsafe(obj26);
-    return obj24;
+    const tmpResult45 = tmp(tmp2[19]);
+    obj25.cheap = tmp(tmp2[7]).getSelectPlaceholder(accessory);
+    obj23.accessibilityLabel = tmpResult45.getAccessibilityLabelOrCheapFallbackUnsafe(obj25);
+    return obj23;
   }
 }
 function transformUnfurledMediaItem(media, shouldShowMedia) {
@@ -566,8 +529,8 @@ function transformUnfurledMediaItem(media, shouldShowMedia) {
 }
 let closure_3 = ["checkpointData"];
 const processColor = fn(17).processColor;
-const CheckpointVersions = fn(4982).CheckpointVersions;
-let closure_7 = fn(8384).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
+const CheckpointVersions = fn(5052).CheckpointVersions;
+let closure_7 = fn(8466).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
 let obj = { max: Infinity, maxAge: null, updateAgeOnGet: true };
 obj.maxAge = 15 * DurationsDefault.Millis.MINUTE;
 const importDefaultResult1 = new priv(obj);
@@ -575,7 +538,7 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/renderer/transformMessageComponents.tsx");
 
 export default function transformMessageComponents(message, arr) {
-  const obj = { type: "textDisplayComponent", parserState: obj3(8135).getInitialParserStateFromMessage(message.message, closure_7) };
+  const obj = { type: "textDisplayComponent", parserState: obj3(8217).getInitialParserStateFromMessage(message.message, closure_7) };
   obj3 = {};
   const merged = Object.assign(message);
   obj3.markdownConfigs = { textDisplayComponent: obj };

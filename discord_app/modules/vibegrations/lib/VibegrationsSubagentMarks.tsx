@@ -1,44 +1,44 @@
-// === Module 17050: VibegrationsSubagentMarks ===
+// === Module 17107: VibegrationsSubagentMarks ===
 
-// Module 17050 (VibegrationsSubagentMarks)
+// Module 17107 (VibegrationsSubagentMarks)
 import util from "util" /* 1115 */;
-import _modDef3678 from "module_3678" /* 3678 */;
+import _modDef3712 from "module_3712" /* 3712 */;
 import size from "module_2" /* 2 */;
 
 const items = ["snail", "goat", "frog", "bunny", "cat", "caterpillar", "butterfly", "dog", "spider", "bee", "bot"];
 const dependencyMap = {
   snail() {
-    return _modDef3678["2l3AEQ"];
+    return _modDef3712["2l3AEQ"];
   },
   goat() {
-    return _modDef3678["+FPL+I"];
+    return _modDef3712["+FPL+I"];
   },
   frog() {
-    return _modDef3678.w4GOfR;
+    return _modDef3712.w4GOfR;
   },
   bunny() {
-    return _modDef3678.XmZT9M;
+    return _modDef3712.XmZT9M;
   },
   cat() {
-    return _modDef3678.NnydwQ;
+    return _modDef3712.NnydwQ;
   },
   caterpillar() {
-    return _modDef3678["4iXcNT"];
+    return _modDef3712["4iXcNT"];
   },
   butterfly() {
-    return _modDef3678.DoTGt5;
+    return _modDef3712.DoTGt5;
   },
   dog() {
-    return _modDef3678["9zxqmP"];
+    return _modDef3712["9zxqmP"];
   },
   spider() {
-    return _modDef3678.HF0T3L;
+    return _modDef3712.HF0T3L;
   },
   bee() {
-    return _modDef3678.XTzDga;
+    return _modDef3712.XTzDga;
   },
   bot() {
-    return _modDef3678.abtC2b;
+    return _modDef3712.abtC2b;
   }
 };
 let result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsSubagentMarks.tsx");

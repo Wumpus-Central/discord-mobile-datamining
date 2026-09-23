@@ -1,6 +1,6 @@
-// === Module 6829: ? ===
+// === Module 6913: ? ===
 
-// Module 6829
+// Module 6913
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WumpusGearSpotIllustration-2x.png.js");

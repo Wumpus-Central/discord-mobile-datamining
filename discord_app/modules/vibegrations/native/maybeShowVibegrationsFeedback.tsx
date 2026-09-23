@@ -1,9 +1,9 @@
-// === Module 17010: maybeShowVibegrationsFeedback ===
+// === Module 17067: maybeShowVibegrationsFeedback ===
 
-// Module 17010 (maybeShowVibegrationsFeedback)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4724 */;
-import Constants from "Constants" /* 11881 */;
-import FeedbackManagerDefault from "FeedbackManager" /* 17012 */;
+// Module 17067 (maybeShowVibegrationsFeedback)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4794 */;
+import Constants from "Constants" /* 11957 */;
+import FeedbackManagerDefault from "FeedbackManager" /* 17069 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -17,8 +17,8 @@ export default function maybeShowVibegrationsFeedback(arg0) {
   importDefault = countSettledTurnsResult;
   let result = countSettledTurnsResult < require("vibegrationsFeedback").MINIMUM_SETTLED_TURNS_FOR_FEEDBACK;
   if (!result) {
-    result = tmp(17011).hasShownFeedbackForProject(arg0);
-    const tmpResult = tmp(17011);
+    result = tmp(17068).hasShownFeedbackForProject(arg0);
+    const tmpResult = tmp(17068);
   }
   if (!result) {
     const result1 = FeedbackManagerDefault.possiblyShowFeedbackModal(FeedbackType.VIBEGRATIONS, () => {

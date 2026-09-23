@@ -1,12 +1,12 @@
-// === Module 14748: validateEmbeddedAppFrame ===
+// === Module 14828: validateEmbeddedAppFrame ===
 
-// Module 14748 (validateEmbeddedAppFrame)
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9140 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 9320 */;
-import RPCErrorDefault from "RPCError" /* 9587 */;
-import RPCHelpers from "RPCHelpers" /* 9592 */;
-import FramesStore from "FramesStore" /* 9318 */;
-import VibegrationsBuilderPreviewStore from "VibegrationsBuilderPreviewStore" /* 14749 */;
+// Module 14828 (validateEmbeddedAppFrame)
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9211 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 9391 */;
+import RPCErrorDefault from "RPCError" /* 9660 */;
+import RPCHelpers from "RPCHelpers" /* 9665 */;
+import FramesStore from "FramesStore" /* 9389 */;
+import VibegrationsBuilderPreviewStore from "VibegrationsBuilderPreviewStore" /* 14829 */;
 
 require = fn;
 function validateEmbeddedAppFrame(transport) {
@@ -57,10 +57,10 @@ function validateEmbeddedAppFrame(transport) {
   }
   obj3 = ApplicationFlagUtils;
 }
-const TransportTypes = fn(4661).TransportTypes;
+const TransportTypes = fn(4731).TransportTypes;
 const Constants = fn(1074);
 ({ ApplicationFlags: metroRequire, RPCErrors: closure_7 } = Constants);
-const asLaunched = fn(9319).asLaunched;
+const asLaunched = fn(9390).asLaunched;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/helpers/validateEmbeddedAppFrame.tsx");
 

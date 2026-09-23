@@ -1,9 +1,9 @@
-// === Module 17009: VibegrationsSelectModeIcon ===
+// === Module 17066: VibegrationsSelectModeIcon ===
 
-// Module 17009 (VibegrationsSelectModeIcon)
+// Module 17066 (VibegrationsSelectModeIcon)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4458 */;
-import inlineStyles from "inlineStyles" /* 8732 */;
+import useToken from "useToken" /* 4524 */;
+import inlineStyles from "inlineStyles" /* 8803 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,9 +1,9 @@
-// === Module 6044: BotIllocon ===
+// === Module 6128: BotIllocon ===
 
-// Module 6044 (BotIllocon)
+// Module 6128 (BotIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5806 */;
-import _modDef6045 from "module_6045" /* 6045 */;
+import FastImageDefault from "FastImage" /* 5890 */;
+import _modDef6129 from "module_6129" /* 6129 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const BotIllocon = function BotIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6045 };
+  const obj2 = { uri: _modDef6129 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

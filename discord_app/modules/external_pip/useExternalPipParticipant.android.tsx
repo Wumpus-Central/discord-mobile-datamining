@@ -1,15 +1,15 @@
-// === Module 17480: useExternalPipParticipant ===
+// === Module 17549: useExternalPipParticipant ===
 
-// Module 17480 (useExternalPipParticipant)
+// Module 17549 (useExternalPipParticipant)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4773 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4843 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4780 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4850 */;
 
 const require = fn;
-const CallConstants = fn(4778);
+const CallConstants = fn(4848);
 ({ isStreamParticipant: closure_8, ParticipantTypes: closure_9 } = CallConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/external_pip/useExternalPipParticipant.android.tsx");

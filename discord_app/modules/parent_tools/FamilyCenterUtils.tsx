@@ -1,14 +1,14 @@
-// === Module 7837: FamilyCenterUtils ===
+// === Module 7920: FamilyCenterUtils ===
 
-// Module 7837 (FamilyCenterUtils)
+// Module 7920 (FamilyCenterUtils)
 import util from "util" /* 1115 */;
-import _modDef2482 from "module_2482" /* 2482 */;
-import _modDef4348 from "module_4348" /* 4348 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7784 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7782 */;
+import _modDef2484 from "module_2484" /* 2484 */;
+import _modDef4414 from "module_4414" /* 4414 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7867 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7865 */;
 
 require = fn;
-const FamilyCenterConstants = fn(7783);
+const FamilyCenterConstants = fn(7866);
 ({ ACTION_TO_TEXT: closure_4, FAMILY_CENTER_ERROR_CODE_TO_FAILURE: hasOwnProperty, FamilyCenterFailureCode: metroRequire, TeenActionDisplayType: closure_7, UserLinkStatus: closure_8, UserLinkType: closure_9 } = FamilyCenterConstants);
 let c10 = 86400;
 let c11 = 172800;
@@ -18,37 +18,37 @@ let result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterUtils.
 export const getEmptyActivityFormatter = function getEmptyActivityFormatter() {
   const obj = { today: null, yesterday: null, days: null };
   const intl = util.intl;
-  obj.today = intl.string(_modDef2482.VjIAQQ);
+  obj.today = intl.string(_modDef2484.VjIAQQ);
   const intl2 = util.intl;
-  obj.yesterday = intl2.string(_modDef2482["2a8xHY"]);
-  obj.days = _modDef2482.Xt6oND;
+  obj.yesterday = intl2.string(_modDef2484["2a8xHY"]);
+  obj.days = _modDef2484.Xt6oND;
   return obj;
 };
 export const getActivityWindowTimestampFormatter = function getActivityWindowTimestampFormatter(arg0) {
   const obj = { today: null, yesterday: null, days: null };
   const intl = util.intl;
   const string = intl.string;
-  const tmp4 = _modDef2482;
+  const tmp4 = _modDef2484;
   if (arg0) {
     obj.today = string(tmp4["2AtcIs"]);
     const intl3 = util.intl;
-    obj.yesterday = intl3.string(_modDef2482.stOECr);
-    obj.days = _modDef2482.n8n5Ba;
+    obj.yesterday = intl3.string(_modDef2484.stOECr);
+    obj.days = _modDef2484.n8n5Ba;
     let tmp5 = obj;
   } else {
     obj.today = string(tmp4.g1ZX6m);
     const intl2 = util.intl;
-    obj.yesterday = intl2.string(_modDef2482.s3qSVt);
-    obj.days = _modDef2482.f1UJiC;
+    obj.yesterday = intl2.string(_modDef2484.s3qSVt);
+    obj.days = _modDef2484.f1UJiC;
     tmp5 = obj;
   }
   return tmp5;
 };
 export const formatUserActivityTimestamp = function formatUserActivityTimestamp(time, timestampFormatter, arg2) {
-  const diffResult = _modDef4348().diff(_modDef4348(time), "s");
+  const diffResult = _modDef4414().diff(_modDef4414(time), "s");
   const tmp3 = timestampFormatter();
-  const obj = _modDef4348();
-  _modDef4348(time).format("LL");
+  const obj = _modDef4414();
+  _modDef4414(time).format("LL");
   if (diffResult < c10) {
     let yesterday = tmp3.today;
   } else if (diffResult < c11) {
@@ -67,9 +67,9 @@ export const formatUserActivityTimestamp = function formatUserActivityTimestamp(
   return yesterday;
 };
 export const formatLinkTimestamp = function formatLinkTimestamp(arg0, SENT_TIMESTAMP_FORMATTER) {
-  const diffResult = _modDef4348().diff(_modDef4348(arg0), "s");
+  const diffResult = _modDef4414().diff(_modDef4414(arg0), "s");
   const time = SENT_TIMESTAMP_FORMATTER();
-  _modDef4348(arg0);
+  _modDef4414(arg0);
   if (diffResult < 60) {
     let yesterday = time.seconds;
   } else if (diffResult < 3600) {
@@ -185,7 +185,7 @@ export const getTopUserOrGuildDescription = function getTopUserOrGuildDescriptio
     if (0 === dms_sent) {
       const intl3 = util.intl;
       const obj2 = { callCount: call_count };
-      let formatToPlainStringResult = intl3.formatToPlainString(_modDef2482["L/Cj7S"], obj2);
+      let formatToPlainStringResult = intl3.formatToPlainString(_modDef2484["L/Cj7S"], obj2);
     }
     return formatToPlainStringResult;
   }
@@ -193,10 +193,10 @@ export const getTopUserOrGuildDescription = function getTopUserOrGuildDescriptio
     if (0 === call_count) {
       const intl2 = util.intl;
       const obj3 = { messageCount: dms_sent };
-      formatToPlainStringResult = intl2.formatToPlainString(_modDef2482["6X1F0i"], obj3);
+      formatToPlainStringResult = intl2.formatToPlainString(_modDef2484["6X1F0i"], obj3);
     }
   }
   const intl = util.intl;
-  formatToPlainStringResult = intl.formatToPlainString(_modDef2482.IYqGMG, { messageCount: dms_sent, callCount: call_count });
+  formatToPlainStringResult = intl.formatToPlainString(_modDef2484.IYqGMG, { messageCount: dms_sent, callCount: call_count });
   const obj = { messageCount: dms_sent, callCount: call_count };
 };

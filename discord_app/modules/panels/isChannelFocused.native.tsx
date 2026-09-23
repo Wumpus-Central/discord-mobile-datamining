@@ -1,18 +1,18 @@
-// === Module 10352: isChannelFocused ===
+// === Module 10431: isChannelFocused ===
 
-// Module 10352 (isChannelFocused)
-import RootNavigationRef from "RootNavigationRef" /* 4615 */;
-import getInitialNavigationStateDefault from "getInitialNavigationState" /* 4616 */;
-import useChatLayout from "useChatLayout" /* 4617 */;
+// Module 10431 (isChannelFocused)
+import RootNavigationRef from "RootNavigationRef" /* 4685 */;
+import getInitialNavigationStateDefault from "getInitialNavigationState" /* 4686 */;
+import useChatLayout from "useChatLayout" /* 4687 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4773 */;
-import NavigationHistoryStore from "NavigationHistoryStore" /* 7573 */;
-import VoicePanelStore from "VoicePanelStore" /* 4965 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4843 */;
+import NavigationHistoryStore from "NavigationHistoryStore" /* 7656 */;
+import VoicePanelStore from "VoicePanelStore" /* 5035 */;
 
 const useChatLayoutDefault = useChatLayout;
 
-const NavigationRouteUtils = params(4614);
+const NavigationRouteUtils = params(4684);
 require = fn;
 function getFocusedChannelId() {
   let params = require;
@@ -143,7 +143,7 @@ function getFocusedChannelId() {
     }
   }
 }
-const CHANNEL_PREFIX = fn(7573).CHANNEL_PREFIX;
+const CHANNEL_PREFIX = fn(7656).CHANNEL_PREFIX;
 let c9 = null;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/panels/isChannelFocused.native.tsx");

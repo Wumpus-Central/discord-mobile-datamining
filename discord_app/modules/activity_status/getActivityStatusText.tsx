@@ -1,14 +1,14 @@
-// === Module 11156: getActivityStatusText ===
+// === Module 11232: getActivityStatusText ===
 
-// Module 11156 (getActivityStatusText)
+// Module 11232 (getActivityStatusText)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7984 */;
-import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8619 */;
-import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 9634 */;
-import StatusDisplayTypes from "StatusDisplayTypes" /* 11157 */;
-import getChannelCopyForEmbeddedActivityDefault from "getChannelCopyForEmbeddedActivity" /* 11158 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 11159 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 8066 */;
+import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8690 */;
+import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 9707 */;
+import StatusDisplayTypes from "StatusDisplayTypes" /* 11233 */;
+import getChannelCopyForEmbeddedActivityDefault from "getChannelCopyForEmbeddedActivity" /* 11234 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 11235 */;
 import size from "module_2" /* 2 */;
 
 const ActivityTypes = Constants.ActivityTypes;

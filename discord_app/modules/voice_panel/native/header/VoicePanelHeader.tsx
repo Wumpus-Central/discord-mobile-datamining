@@ -1,27 +1,27 @@
-// === Module 17575: VoicePanelHeader ===
+// === Module 17645: VoicePanelHeader ===
 
-// Module 17575 (VoicePanelHeader)
+// Module 17645 (VoicePanelHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4493 */;
-import timing from "timing" /* 4758 */;
-import useChannelName from "useChannelName" /* 4910 */;
-import spring from "spring" /* 5186 */;
-import StageMusicActionCreators from "StageMusicActionCreators" /* 10175 */;
-import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 10296 */;
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 12534 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 17510 */;
-import useStableParticipant from "useStableParticipant" /* 17579 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4559 */;
+import timing from "timing" /* 4828 */;
+import useChannelName from "useChannelName" /* 4980 */;
+import spring from "spring" /* 5270 */;
+import StageMusicActionCreators from "StageMusicActionCreators" /* 10255 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 10375 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 12610 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 17579 */;
+import useStableParticipant from "useStableParticipant" /* 17649 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4773 */;
-import ExperimentStore from "ExperimentStore" /* 4672 */;
-import StageMusicStore from "StageMusicStore" /* 10161 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4843 */;
+import ExperimentStore from "ExperimentStore" /* 4742 */;
+import StageMusicStore from "StageMusicStore" /* 10241 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2042 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
-import RelationshipStore from "RelationshipStore" /* 4406 */;
-import SpeakingStore from "SpeakingStore" /* 5638 */;
+import RelationshipStore from "RelationshipStore" /* 4472 */;
+import SpeakingStore from "SpeakingStore" /* 5722 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -49,7 +49,7 @@ function MusicMuteButton(channelId) {
       }
       const obj3 = {
         accessibilityLabel: stringResult,
-        icon: importDefault(stateFromStores ? 10172 : 10174),
+        icon: importDefault(stateFromStores ? 10252 : 10254),
         onPress() {
               return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
             }
@@ -62,17 +62,17 @@ function MusicMuteButton(channelId) {
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(12530);
+const VoicePanelConstants = fn(12606);
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
 ({ UI_SHOW_HIDE_PHYSICS: closure_16, VoicePanelModes: closure_17, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_18 } = VoicePanelConstants);
-const EDGE_GUTTER = fn(12533).EDGE_GUTTER;
-const VoicePanelControlsModes = fn(12528).VoicePanelControlsModes;
-const ParticipantTypes = fn(4778).ParticipantTypes;
+const EDGE_GUTTER = fn(12609).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(12604).VoicePanelControlsModes;
+const ParticipantTypes = fn(4848).ParticipantTypes;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
 const OPACITY_TIMING = { duration: 300 };
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj = { headerWrapper: { zIndex: 1, position: "absolute", top: 0, left: 0, width: "100%", paddingBottom: EDGE_GUTTER, overflow: "hidden" }, blurStyles: null, leftWrapper: null, rightWrapper: null, headerOuter: null, headerInner: null, headerContentWrapper: null, stroke: null, strokeAlt: null, strokeContainer: null, focusedSpeakingDotWrapper: null, focusedSpeakingDot: null, shieldIconMargin: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

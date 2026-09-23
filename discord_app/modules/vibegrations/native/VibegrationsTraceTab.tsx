@@ -1,21 +1,21 @@
-// === Module 17083: VibegrationsTraceTab ===
+// === Module 17141: VibegrationsTraceTab ===
 
-// Module 17083 (VibegrationsTraceTab)
+// Module 17141 (VibegrationsTraceTab)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import _modDef3678 from "module_3678" /* 3678 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4724 */;
-import Text_Text from "Text/Text" /* 4753 */;
-import Card from "Card" /* 5826 */;
-import FileManagerUtils from "FileManagerUtils" /* 8478 */;
-import VibegrationsTraceFormat from "VibegrationsTraceFormat" /* 17084 */;
-import vibegrations_VibegrationsTraceFormat from "vibegrations/VibegrationsTraceFormat" /* 17085 */;
-import VibegrationsTraceUtils from "VibegrationsTraceUtils" /* 17086 */;
-import VibegrationsTimeFormat from "VibegrationsTimeFormat" /* 17088 */;
-import VibegrationsTraceDetailSheet from "VibegrationsTraceDetailSheet" /* 17089 */;
+import _modDef3712 from "module_3712" /* 3712 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4794 */;
+import Text_Text from "Text/Text" /* 4823 */;
+import Card from "Card" /* 5910 */;
+import FileManagerUtils from "FileManagerUtils" /* 8549 */;
+import VibegrationsTraceFormat from "VibegrationsTraceFormat" /* 17142 */;
+import vibegrations_VibegrationsTraceFormat from "vibegrations/VibegrationsTraceFormat" /* 17143 */;
+import VibegrationsTraceUtils from "VibegrationsTraceUtils" /* 17144 */;
+import VibegrationsTimeFormat from "VibegrationsTimeFormat" /* 17146 */;
+import VibegrationsTraceDetailSheet from "VibegrationsTraceDetailSheet" /* 17147 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 9314 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 9385 */;
 
 const require = globalThis.__r;
 const VibegrationsTraceDetailSheetDefault = VibegrationsTraceDetailSheet;
@@ -32,7 +32,7 @@ function TraceRow(entry) {
     if (null != entry.promptTokens) {
       const intl = util.intl;
       const obj3 = { tokens: vibegrations_VibegrationsTraceFormat.formatTokens(entry.promptTokens) };
-      let formatToPlainStringResult = intl.formatToPlainString(_modDef3678["PYO+Jv"], obj3);
+      let formatToPlainStringResult = intl.formatToPlainString(_modDef3712["PYO+Jv"], obj3);
       const tmp2Result = vibegrations_VibegrationsTraceFormat;
     }
     const items = [tmp.rowSlot, ];
@@ -101,7 +101,7 @@ function TraceOverview(arg0) {
   let reduced;
   let tmp = closure_9();
   closure_1 = tmp;
-  dependencyMap = entries(17084).useTraceCategoryFillStyles();
+  dependencyMap = entries(17142).useTraceCategoryFillStyles();
   let items = [entries];
   const memo = reduced.useMemo(() => VibegrationsTraceUtils.traceCategoryTotals(entries), items);
   reduced = memo.reduce((acc, ms) => acc + ms.ms, 0);
@@ -126,7 +126,7 @@ function TraceOverview(arg0) {
   obj3.children = mapped;
   let items1 = [closure_7(View, obj3), ];
   let obj4 = { style: tmp.legend, children: null };
-  const TRACE_CATEGORIES = entries(17086).TRACE_CATEGORIES;
+  const TRACE_CATEGORIES = entries(17144).TRACE_CATEGORIES;
   obj4.children = TRACE_CATEGORIES.map((item) => {
     closure_0 = item;
     const found = memo.find((category) => category.category === closure_0);
@@ -151,7 +151,7 @@ function TraceOverview(arg0) {
     items1[1] = React5(Text_Text.Text, obj3);
     const obj5 = { variant: "text-xs/normal", color: "text-subtle", children: null };
     const intl = util.intl;
-    obj5.children = intl.formatToPlainString(_modDef3678.UffawN, { percent: num2 });
+    obj5.children = intl.formatToPlainString(_modDef3712.UffawN, { percent: num2 });
     items1[2] = React5(Text_Text.Text, obj5);
     const intl2 = util.intl;
     let num4;
@@ -161,7 +161,7 @@ function TraceOverview(arg0) {
     if (num4 == null) {
       num4 = 0;
     }
-    items1[3] = React5(Text_Text.Text, { variant: "text-xs/normal", color: "text-subtle", children: intl2.formatToPlainString(_modDef3678.w8vPbe, { count: num4 }) });
+    items1[3] = React5(Text_Text.Text, { variant: "text-xs/normal", color: "text-subtle", children: intl2.formatToPlainString(_modDef3712.w8vPbe, { count: num4 }) });
     let tmp6Result = null;
     if (0 !== num) {
       const obj7 = { variant: "text-xs/normal", color: "text-subtle", children: vibegrations_VibegrationsTraceFormat.formatDuration(num) };
@@ -185,7 +185,7 @@ function itemType(kind) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { list: { paddingHorizontal: nativeDefault.space.PX_16 }, header: null, tools: null, search: null, placeholder: null, overview: null, overviewBar: null, legend: null, legendItem: null, swatch: null, groupHead: null, rowSlot: null, rowNested: null, rowBody: null, rowTop: null, rowTitle: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.header = { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8 };
@@ -253,7 +253,7 @@ export default function VibegrationsTraceTab(projectId) {
         obj2.key = "group-" + turnId;
         const intl = util.intl;
         const obj3 = { number: index + 1 };
-        obj2.label = intl.formatToPlainString(_modDef3678["Y/j+TD"], obj3);
+        obj2.label = intl.formatToPlainString(_modDef3712["Y/j+TD"], obj3);
         obj2.started = VibegrationsTimeFormat.formatClockTime(turnId.startedAt);
         obj2.spanMs = turnId.spanMs;
         items.push(obj2);

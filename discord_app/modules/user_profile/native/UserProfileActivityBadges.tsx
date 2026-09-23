@@ -1,19 +1,19 @@
-// === Module 13303: UserProfileActivityBadges ===
+// === Module 13385: UserProfileActivityBadges ===
 
-// Module 13303 (UserProfileActivityBadges)
+// Module 13385 (UserProfileActivityBadges)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4753 */;
-import AppsIcon from "AppsIcon" /* 5280 */;
-import GroupIcon from "GroupIcon" /* 5309 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7984 */;
-import utils from "utils" /* 8408 */;
-import GameControllerIcon2 from "GameControllerIcon" /* 9354 */;
-import MusicIcon from "MusicIcon" /* 10173 */;
-import TvIcon from "TvIcon" /* 11151 */;
-import TopicsIcon from "TopicsIcon" /* 11908 */;
-import HourglassIcon from "HourglassIcon" /* 13197 */;
-import shouldShowActivityTimeBarDefault from "shouldShowActivityTimeBar" /* 13305 */;
-import Badges from "Badges" /* 13306 */;
+import Text_Text from "Text/Text" /* 4823 */;
+import AppsIcon from "AppsIcon" /* 5364 */;
+import GroupIcon from "GroupIcon" /* 5393 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 8066 */;
+import utils from "utils" /* 8490 */;
+import GameControllerIcon2 from "GameControllerIcon" /* 9425 */;
+import MusicIcon from "MusicIcon" /* 10253 */;
+import TvIcon from "TvIcon" /* 11227 */;
+import TopicsIcon from "TopicsIcon" /* 11984 */;
+import HourglassIcon from "HourglassIcon" /* 13279 */;
+import shouldShowActivityTimeBarDefault from "shouldShowActivityTimeBar" /* 13387 */;
+import Badges from "Badges" /* 13388 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ const View = fn(17).View;
 const ActivityTypes = fn(1074).ActivityTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_7 = createStyles.createStyles({ container: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 }, bold: { fontWeight: "bold" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileActivityBadges.tsx");

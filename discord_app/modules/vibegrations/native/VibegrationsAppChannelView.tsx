@@ -1,27 +1,27 @@
-// === Module 17095: VibegrationsAppChannelView ===
+// === Module 17153: VibegrationsAppChannelView ===
 
-// Module 17095 (VibegrationsAppChannelView)
+// Module 17153 (VibegrationsAppChannelView)
 import nativeDefault from "native" /* 576 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7701 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 9320 */;
-import FramesNativeManagerDefault from "FramesNativeManager" /* 9568 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9577 */;
-import VibegrationsAppChannelActionCreators from "VibegrationsAppChannelActionCreators" /* 13570 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7784 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 9391 */;
+import FramesNativeManagerDefault from "FramesNativeManager" /* 9641 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9650 */;
+import VibegrationsAppChannelActionCreators from "VibegrationsAppChannelActionCreators" /* 13652 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 9318 */;
-import VibegrationsAppChannelsStore from "VibegrationsAppChannelsStore" /* 13566 */;
+import FramesStore from "FramesStore" /* 9389 */;
+import VibegrationsAppChannelsStore from "VibegrationsAppChannelsStore" /* 13648 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const FramesConstants = fn(9319);
+const FramesConstants = fn(9390);
 ({ FrameLayoutModes: closure_9, isLaunched: c10 } = FramesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_13 = createStyles.createStyles((paddingBottom) => {
   const obj = { container: { flex: 1, paddingBottom }, centered: { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_12 }, copy: null };
   const obj2 = { flex: 1, paddingBottom };

@@ -1,18 +1,18 @@
-// === Module 8957: GameProfileScreen ===
+// === Module 9028: GameProfileScreen ===
 
-// Module 8957 (GameProfileScreen)
+// Module 9028 (GameProfileScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4493 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4724 */;
-import timing from "timing" /* 4758 */;
-import components_Button_Button from "components/Button/Button" /* 5187 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8962 */;
-import getGameProfileStoreWebsiteDataDefault from "getGameProfileStoreWebsiteData" /* 8969 */;
-import GameProfileStoreLinksActionSheet from "GameProfileStoreLinksActionSheet" /* 8986 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4559 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4794 */;
+import timing from "timing" /* 4828 */;
+import components_Button_Button from "components/Button/Button" /* 5271 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9033 */;
+import getGameProfileStoreWebsiteDataDefault from "getGameProfileStoreWebsiteData" /* 9040 */;
+import GameProfileStoreLinksActionSheet from "GameProfileStoreLinksActionSheet" /* 9057 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameProfileStore from "GameProfileStore" /* 8958 */;
+import GameProfileStore from "GameProfileStore" /* 9029 */;
 
 const GameProfileStoreLinksActionSheetDefault = GameProfileStoreLinksActionSheet;
 
@@ -30,7 +30,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { loadingContainer: { flex: 1, justifyContent: "center", alignItems: "center", minHeight: 300, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, scrollView: null, stickyHeader: null };
 let obj3 = { flex: 1, justifyContent: "center", alignItems: "center", minHeight: 300, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.scrollView = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };

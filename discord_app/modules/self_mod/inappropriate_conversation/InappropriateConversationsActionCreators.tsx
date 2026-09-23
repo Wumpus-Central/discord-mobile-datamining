@@ -1,6 +1,6 @@
-// === Module 11228: InappropriateConversationsActionCreators ===
+// === Module 11304: InappropriateConversationsActionCreators ===
 
-// Module 11228 (InappropriateConversationsActionCreators)
+// Module 11304 (InappropriateConversationsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;

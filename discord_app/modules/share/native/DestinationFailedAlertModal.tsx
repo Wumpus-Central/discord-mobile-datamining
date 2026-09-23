@@ -1,19 +1,19 @@
-// === Module 11960: DestinationFailedAlertModal ===
+// === Module 12037: DestinationFailedAlertModal ===
 
-// Module 11960 (DestinationFailedAlertModal)
+// Module 12037 (DestinationFailedAlertModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import UserUtilsDefault from "UserUtils" /* 4601 */;
-import Text_Text from "Text/Text" /* 4753 */;
-import useChannelNameDefault from "useChannelName" /* 4910 */;
-import AlertModal from "AlertModal" /* 5115 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 11180 */;
+import UserUtilsDefault from "UserUtils" /* 4671 */;
+import Text_Text from "Text/Text" /* 4823 */;
+import useChannelNameDefault from "useChannelName" /* 4980 */;
+import AlertModal from "AlertModal" /* 5199 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 11256 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2042 */;
 import GuildStore from "GuildStore" /* 2064 */;
-import PresenceStore from "PresenceStore" /* 4797 */;
-import RelationshipStore from "RelationshipStore" /* 4406 */;
+import PresenceStore from "PresenceStore" /* 4867 */;
+import RelationshipStore from "RelationshipStore" /* 4472 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -57,7 +57,7 @@ function FailedUserRow(user) {
       stateFromStores = UserUtilsDefault.getName(user);
     }
     obj5.children = stateFromStores;
-    items2[1] = closure_10(tmp2(4753).Text, obj5);
+    items2[1] = closure_10(tmp2(4823).Text, obj5);
     obj3.children = items2;
     tmp9Result = closure_11(View, obj3);
   }
@@ -77,7 +77,7 @@ function FailedChannelRow(channel) {
   const obj2 = { style: tmp.row, children: null };
   const obj = channel(504);
   const tmp3 = useChannelNameDefault(channel);
-  const items1 = [closure_10(channel(11274).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(11274).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(4753).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
+  const items1 = [closure_10(channel(11350).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(11350).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(4823).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
   obj2.children = items1;
   return closure_11(View, obj2);
 }
@@ -121,7 +121,7 @@ const View = fn(17).View;
 const StatusTypes = fn(1085).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { container: { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG, borderRadius: nativeDefault.radii.lg, paddingVertical: nativeDefault.space.PX_8 }, row: null, label: null };
 let obj3 = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG, borderRadius: nativeDefault.radii.lg, paddingVertical: nativeDefault.space.PX_8 };
 obj2.row = { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, height: 40, marginHorizontal: nativeDefault.space.PX_16 };

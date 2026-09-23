@@ -1,14 +1,14 @@
-// === Module 18231: GuildRoleSubscriptionBenefitPreview ===
+// === Module 18300: GuildRoleSubscriptionBenefitPreview ===
 
-// Module 18231 (GuildRoleSubscriptionBenefitPreview)
+// Module 18300 (GuildRoleSubscriptionBenefitPreview)
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4410 */;
-import Text_Text from "Text/Text" /* 4753 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5241 */;
-import _modDef10203 from "module_10203" /* 10203 */;
-import GuildRoleSubscriptionTierTemplatesUtils from "GuildRoleSubscriptionTierTemplatesUtils" /* 15514 */;
-import EmojiIconDefault from "EmojiIcon" /* 15521 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4476 */;
+import Text_Text from "Text/Text" /* 4823 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5325 */;
+import _modDef10283 from "module_10283" /* 10283 */;
+import GuildRoleSubscriptionTierTemplatesUtils from "GuildRoleSubscriptionTierTemplatesUtils" /* 15568 */;
+import EmojiIconDefault from "EmojiIcon" /* 15575 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ function BaseBenefitRow(isInteractive) {
   items[1] = hasOwnProperty(View, obj3);
   let tmp4Result = true === flag;
   if (tmp4Result) {
-    const obj4 = { source: _modDef10203 };
+    const obj4 = { source: _modDef10283 };
     tmp4Result = hasOwnProperty(native.Icon, obj4);
   }
   items[2] = tmp4Result;
@@ -99,10 +99,10 @@ function EmojiBenefitRow(benefit) {
   return timestampProducer(BaseBenefitRow, obj);
 }
 const View = fn(17).View;
-const constants = fn(15486).GuildRoleSubscriptionBenefitTypes;
+const constants = fn(15540).GuildRoleSubscriptionBenefitTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_7 = createStyles.createStyles({ container: { flexDirection: "row", justifyContent: "flex-start" }, emojiContainer: { width: 24, height: 24, alignSelf: "flex-start", alignItems: "center", justifyContent: "center", marginEnd: 16 }, benefitColumn: { flexDirection: "column", flexGrow: 1, flex: 1, alignItems: "flex-start", justifyContent: "center" }, benefitDescription: { flex: 1, marginTop: 2 }, channelRow: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, channelIcon: { width: 16, height: 16, marginEnd: 8 }, emojiRow: { flexDirection: "row", justifyContent: "flex-start", alignItems: "center" }, emojiColons: { paddingHorizontal: 2 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitPreview.tsx");

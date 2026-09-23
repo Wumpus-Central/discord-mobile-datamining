@@ -1,14 +1,14 @@
-// === Module 16979: FrameView ===
+// === Module 17036: FrameView ===
 
-// Module 16979 (FrameView)
+// Module 17036 (FrameView)
 import initialize from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import FramesNativeManagerDefault from "FramesNativeManager" /* 9568 */;
-import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 16980 */;
-import useInlineFrameOAuthNavigationDefault from "useInlineFrameOAuthNavigation" /* 16985 */;
+import FramesNativeManagerDefault from "FramesNativeManager" /* 9641 */;
+import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 17037 */;
+import useInlineFrameOAuthNavigationDefault from "useInlineFrameOAuthNavigation" /* 17042 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 9318 */;
+import FramesStore from "FramesStore" /* 9389 */;
 
 require = fn;
 function FrameViewInner(frame) {
@@ -72,7 +72,7 @@ function FrameViewInner(frame) {
   }} applicationId={frame.applicationId} frameId={frame.id} activityUrl={frame.data.url} queryParams={null} onLoadError={null} allowPopups={null} referrerPolicy="origin" isPipOrGridMode={null} webViewKey={null} safeAreasConfig={null} />;
   return jsx(frame(setIsResetting[10]).BaseActivityView, { wakeLockKey: "FrameActivities", showLoadingIndicator: first, isResetting, children: null });
 }
-const FramesConstants = fn(9319);
+const FramesConstants = fn(9390);
 ({ asLaunched: metroRequire, FrameLayoutModes: closure_7 } = FramesConstants);
 const ActivityPlatform = fn(2004).ActivityPlatform;
 const jsx = fn(21).jsx;

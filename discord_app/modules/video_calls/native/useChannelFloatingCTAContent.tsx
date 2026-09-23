@@ -1,10 +1,10 @@
-// === Module 17533: useChannelFloatingCTAContent ===
+// === Module 17601: useChannelFloatingCTAContent ===
 
-// Module 17533 (useChannelFloatingCTAContent)
+// Module 17601 (useChannelFloatingCTAContent)
 import dismissible_content from "dismissible_content" /* 2028 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4780 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4850 */;
 
 const require = globalThis.__r;
 

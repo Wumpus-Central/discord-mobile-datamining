@@ -1,6 +1,6 @@
-// === Module 7462: Constants ===
+// === Module 7546: Constants ===
 
-// Module 7462 (Constants)
+// Module 7546 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/hotspot/Constants.tsx");

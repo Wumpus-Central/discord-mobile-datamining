@@ -1,9 +1,9 @@
-// === Module 6556: NitroWumpusFlightRight3dIllustration ===
+// === Module 6640: NitroWumpusFlightRight3dIllustration ===
 
-// Module 6556 (NitroWumpusFlightRight3dIllustration)
+// Module 6640 (NitroWumpusFlightRight3dIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5806 */;
-import _modDef6557 from "module_6557" /* 6557 */;
+import FastImageDefault from "FastImage" /* 5890 */;
+import _modDef6641 from "module_6641" /* 6641 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const NitroWumpusFlightRight3dIllustration = function NitroWumpusFlightRi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6557 };
+  const obj2 = { uri: _modDef6641 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

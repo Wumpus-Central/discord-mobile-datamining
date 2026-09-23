@@ -1,7 +1,7 @@
-// === Module 17300: InstantInviteSelfMeasurer ===
+// === Module 17369: InstantInviteSelfMeasurer ===
 
-// Module 17300 (InstantInviteSelfMeasurer)
-import InstantInvite from "InstantInvite" /* 11202 */;
+// Module 17369 (InstantInviteSelfMeasurer)
+import InstantInvite from "InstantInvite" /* 11278 */;
 import noop from "module_19" /* 19 */;
 
 const InstantInviteDefault = InstantInvite;
@@ -9,7 +9,7 @@ const InstantInviteDefault = InstantInvite;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_6 = createStyles.createStyles({ container: { position: "absolute", opacity: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteSelfMeasurer.tsx");

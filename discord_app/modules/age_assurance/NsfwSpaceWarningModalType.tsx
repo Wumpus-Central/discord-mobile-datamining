@@ -1,6 +1,6 @@
-// === Module 8689: NsfwSpaceWarningModalType ===
+// === Module 8760: NsfwSpaceWarningModalType ===
 
-// Module 8689 (NsfwSpaceWarningModalType)
+// Module 8760 (NsfwSpaceWarningModalType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/age_assurance/NsfwSpaceWarningModalType.tsx");

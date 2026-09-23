@@ -1,9 +1,9 @@
-// === Module 10372: VideoIcon ===
+// === Module 10451: VideoIcon ===
 
-// Module 10372 (VideoIcon)
+// Module 10451 (VideoIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4457 */;
-import _mod10373 from "module_10373" /* 10373 */;
+import BaseIconImage from "BaseIconImage" /* 4523 */;
+import _mod10452 from "module_10452" /* 10452 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const VideoIcon = function VideoIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10373, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10452, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

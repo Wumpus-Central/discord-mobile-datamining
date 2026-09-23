@@ -1,19 +1,19 @@
-// === Module 7361: NotificationSettingsUtils ===
+// === Module 7445: NotificationSettingsUtils ===
 
-// Module 7361 (NotificationSettingsUtils)
+// Module 7445 (NotificationSettingsUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import FlagUtils from "FlagUtils" /* 1385 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4937 */;
-import LastMentionTimestampStore from "LastMentionTimestampStore" /* 7362 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5007 */;
+import LastMentionTimestampStore from "LastMentionTimestampStore" /* 7446 */;
 import ChannelStore from "ChannelStore" /* 2042 */;
-import MessageStore from "MessageStore" /* 4977 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4938 */;
+import MessageStore from "MessageStore" /* 5047 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5008 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, UserNotificationSettings } = Constants);
-const constants2 = fn(4409).NotificationSettingsUpdateType;
-const UnreadSetting = fn(4939).UnreadSetting;
+const constants2 = fn(4475).NotificationSettingsUpdateType;
+const UnreadSetting = fn(5009).UnreadSetting;
 const UserSettingsConstants = fn(1084);
 ({ ChannelNotificationSettingsFlags: closure_11, GuildNotificationSettingsFlags: closure_12 } = UserSettingsConstants);
 const NotificationLabels = { ForumThreadsCreatedOn: "enabled forum thread created notifs", ForumThreadsCreatedOff: "disabled forum thread created notifs", SuppressEveryoneOn: "enabled suppress everyone", SuppressEveryoneOff: "disabled suppress everyone", SuppressRolesOn: "enabled suppress roles", SuppressRolesOff: "disabled suppress roles", HighlightsOn: "enabled highlights", HighlightsOff: "disabled highlights", MobilePushOn: "enabled mobile push notifications", MobilePushOff: "disabled mobile push notifications", UnreadsAll: "unreads set to all messages", UnreadsMentions: "unreads set to mentions", UnreadsDefault: "unreads set to the default", NotificationsAll: "notifications set to all messages", NotificationsMentions: "notifications set to mentions", NotificationsNothing: "notifications set to nothing", NotificationsDefault: "notifications set to the default", PresetAll: "notification preset set to all messages", PresetHybrid: "notification preset set to hybrid", PresetMentions: "notification preset set to mentions", PresetNothing: "notification preset set to nothing", PresetDefault: "notification preset set to the default", OptedIn: "opted in to entity", OptedOut: "opted out from entity", Favorited: "favorited", UnFavorited: "unfavorited", Muted: "muted", Unmuted: "unmuted", MutedScheduledEvents: "muted scheduled events", UnmutedScheduledEvents: "unmuted scheduled events", OverrideCreated: "channel override created", OverrideDeleted: "channel override deleted", AnnouncementAutoEnable: "announcement channels auto set to all messages" };
@@ -407,9 +407,9 @@ export const getManyCurrentGuildSettings = function getManyCurrentGuildSettings(
   });
   return map;
 };
-export const getCurrentChannelSettings = function getCurrentChannelSettings(guildId, parent_id) {
-  const channelMuteConfig = UserGuildSettingsStore.getChannelMuteConfig(guildId, parent_id);
-  const obj2 = { channel_is_muted: UserGuildSettingsStore.isChannelMuted(guildId, parent_id), channel_muted_until: null, channel_message_notification_settings: null, channel_flags: null };
+export const getCurrentChannelSettings = function getCurrentChannelSettings(guildId, channelId) {
+  const channelMuteConfig = UserGuildSettingsStore.getChannelMuteConfig(guildId, channelId);
+  const obj2 = { channel_is_muted: UserGuildSettingsStore.isChannelMuted(guildId, channelId), channel_muted_until: null, channel_message_notification_settings: null, channel_flags: null };
   let time = null;
   if (null != channelMuteConfig) {
     time = null;
@@ -420,8 +420,8 @@ export const getCurrentChannelSettings = function getCurrentChannelSettings(guil
     }
   }
   obj2.channel_muted_until = time;
-  obj2.channel_message_notification_settings = frozen[UserGuildSettingsStore.getChannelMessageNotifications(UserGuildSettingsStore, guildId, parent_id)];
-  obj2.channel_flags = UserGuildSettingsStore.getChannelIdFlags(guildId, parent_id);
+  obj2.channel_message_notification_settings = frozen[UserGuildSettingsStore.getChannelMessageNotifications(UserGuildSettingsStore, guildId, channelId)];
+  obj2.channel_flags = UserGuildSettingsStore.getChannelIdFlags(guildId, channelId);
   return obj2;
 };
 export const getManyCurrentChannelSettings = function getManyCurrentChannelSettings(guildId, keys) {

@@ -1,7 +1,7 @@
-// === Module 12602: SearchTokensUtils ===
+// === Module 12678: SearchTokensUtils ===
 
-// Module 12602 (SearchTokensUtils)
-import RegexUtilsDefault from "RegexUtils" /* 4744 */;
+// Module 12678 (SearchTokensUtils)
+import RegexUtilsDefault from "RegexUtils" /* 4814 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/search/tokens/SearchTokensUtils.tsx");

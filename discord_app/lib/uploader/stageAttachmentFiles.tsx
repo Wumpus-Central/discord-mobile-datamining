@@ -1,6 +1,6 @@
-// === Module 8088: stageAttachmentFiles ===
+// === Module 8170: stageAttachmentFiles ===
 
-// Module 8088 (stageAttachmentFiles)
+// Module 8170 (stageAttachmentFiles)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

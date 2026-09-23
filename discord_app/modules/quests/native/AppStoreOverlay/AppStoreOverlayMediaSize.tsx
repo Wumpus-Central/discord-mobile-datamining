@@ -1,6 +1,6 @@
-// === Module 11766: AppStoreOverlayMediaSize ===
+// === Module 11842: AppStoreOverlayMediaSize ===
 
-// Module 11766 (AppStoreOverlayMediaSize)
+// Module 11842 (AppStoreOverlayMediaSize)
 import AvatarUtils from "AvatarUtils" /* 1397 */;
 import ImageProxyUtils from "ImageProxyUtils" /* 2014 */;
 import _slicedToArray from "module_32" /* 32 */;

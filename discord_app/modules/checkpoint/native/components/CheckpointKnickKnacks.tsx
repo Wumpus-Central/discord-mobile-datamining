@@ -1,14 +1,14 @@
-// === Module 15990: CheckpointKnickKnacks ===
+// === Module 16043: CheckpointKnickKnacks ===
 
-// Module 15990 (CheckpointKnickKnacks)
+// Module 16043 (CheckpointKnickKnacks)
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4749 */;
+import AccessibilityStore from "AccessibilityStore" /* 4819 */;
 
 const require = fn;
 const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(4982).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(5052).CHECKPOINT_PRIMARY;
 const jsx = fn(21).jsx;
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_7 = createStyles.createStyles({ rive: { width: 143, height: 32 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointKnickKnacks.tsx");
@@ -28,7 +28,7 @@ export default function CheckpointKnickKnacks(style) {
     const items2 = [tmp4.rive, style.style];
     obj3.style = items2;
     const obj4 = { artboard: "Entry", dataBinding: memo };
-    obj3.children = jsx(tmp(4467).CheckpointKnickKnacksRive, { artboard: "Entry", dataBinding: memo });
+    obj3.children = jsx(tmp(4533).CheckpointKnickKnacksRive, { artboard: "Entry", dataBinding: memo });
     tmp6 = <View style={null}>{null}</View>;
   }
   return tmp6;

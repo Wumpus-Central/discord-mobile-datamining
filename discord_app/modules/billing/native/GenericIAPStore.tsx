@@ -1,10 +1,10 @@
-// === Module 7486: GenericIAPStore ===
+// === Module 7570: GenericIAPStore ===
 
-// Module 7486 (GenericIAPStore)
+// Module 7570 (GenericIAPStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ProductIds from "ProductIds" /* 7487 */;
+import ProductIds from "ProductIds" /* 7571 */;
 
 require = fn;
 let c3 = null;

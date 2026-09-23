@@ -1,7 +1,7 @@
-// === Module 10057: game_console/GameConsoleActionCreators ===
+// === Module 10137: game_console/GameConsoleActionCreators ===
 
-// Module 10057 (game_console/GameConsoleActionCreators)
-import GameConsoleActionCreators from "GameConsoleActionCreators" /* 10050 */;
+// Module 10137 (game_console/GameConsoleActionCreators)
+import GameConsoleActionCreators from "GameConsoleActionCreators" /* 10130 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

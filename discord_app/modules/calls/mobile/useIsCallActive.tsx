@@ -1,13 +1,13 @@
-// === Module 8243: useIsCallActive ===
+// === Module 8325: useIsCallActive ===
 
-// Module 8243 (useIsCallActive)
-import CallStore from "CallStore" /* 5497 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4773 */;
+// Module 8325 (useIsCallActive)
+import CallStore from "CallStore" /* 5581 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4843 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ParticipantTypes = fn(4778).ParticipantTypes;
+const ParticipantTypes = fn(4848).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/mobile/useIsCallActive.tsx");
 

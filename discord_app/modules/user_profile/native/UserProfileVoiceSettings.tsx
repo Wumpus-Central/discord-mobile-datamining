@@ -1,14 +1,14 @@
-// === Module 13341: UserProfileVoiceSettings ===
+// === Module 13423: UserProfileVoiceSettings ===
 
-// Module 13341 (UserProfileVoiceSettings)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4724 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9917 */;
-import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9980 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12877 */;
+// Module 13423 (UserProfileVoiceSettings)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4794 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9990 */;
+import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 10053 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12959 */;
 import noop from "module_19" /* 19 */;
-import SoundboardStore from "SoundboardStore" /* 5225 */;
+import SoundboardStore from "SoundboardStore" /* 5309 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
-import PermissionStore from "PermissionStore" /* 4396 */;
+import PermissionStore from "PermissionStore" /* 4462 */;
 
 require = fn;
 function UserVoiceSettings(user) {
@@ -178,8 +178,8 @@ function CurrentUserVoiceSettings(channel) {
   ({ user, style } = channel);
   const tmp = closure_11();
   let tmp9Result = dependencyMap;
-  const trackUserProfileAction = channel(8463).useUserProfileAnalyticsContext().trackUserProfileAction;
-  const obj = channel(8463);
+  const trackUserProfileAction = channel(8534).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const obj = channel(8534);
   const items = [MediaEngineStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => selfMute.isSelfMute());
   const obj2 = channel(504);
@@ -212,9 +212,9 @@ function CurrentUserVoiceSettings(channel) {
     }
     const obj5 = { label: stringResult, icon: null, onPress: null };
     if (stateFromStores) {
-      let MicrophoneIcon = tmp2(9953).MicrophoneSlashIcon;
+      let MicrophoneIcon = tmp2(10026).MicrophoneSlashIcon;
     } else {
-      MicrophoneIcon = tmp2(10268).MicrophoneIcon;
+      MicrophoneIcon = tmp2(10347).MicrophoneIcon;
     }
     const obj6 = { children: null };
     obj5.icon = MicrophoneIcon;
@@ -222,11 +222,11 @@ function CurrentUserVoiceSettings(channel) {
       trackUserProfileAction({ action: "MUTE" });
       AudioActionCreatorsDefault.toggleSelfMute();
     };
-    obj6.children = closure_9(tmp2(7454).UserProfileFormRow, obj5, "mute");
-    tmp9Result = closure_9(tmp2(7454).UserProfileCardRows, obj6);
+    obj6.children = closure_9(tmp2(7538).UserProfileFormRow, obj5, "mute");
+    tmp9Result = closure_9(tmp2(7538).UserProfileCardRows, obj6);
     obj4.children = tmp9Result;
-    closure_9(trackUserProfileAction(7454), obj4);
-    const tmp6Result = trackUserProfileAction(7454);
+    closure_9(trackUserProfileAction(7538), obj4);
+    const tmp6Result = trackUserProfileAction(7538);
   }
   return tmp8;
 }
@@ -235,7 +235,7 @@ const VideoToggleState = fn(1074).VideoToggleState;
 const Permissions = fn(1085).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_11 = createStyles.createStyles({ card: { paddingBottom: 0 }, cardTitle: { marginBottom: 0 }, volumeSlider: { paddingVertical: 20 }, disableVideoSublabel: { flexDirection: "row", alignItems: "center", gap: 4 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileVoiceSettings.tsx");

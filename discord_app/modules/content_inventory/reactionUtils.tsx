@@ -1,8 +1,8 @@
-// === Module 16854: reactionUtils ===
+// === Module 16906: reactionUtils ===
 
-// Module 16854 (reactionUtils)
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7701 */;
-import MessageParserDefault from "MessageParser" /* 7921 */;
+// Module 16906 (reactionUtils)
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7784 */;
+import MessageParserDefault from "MessageParser" /* 8003 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/content_inventory/reactionUtils.tsx");

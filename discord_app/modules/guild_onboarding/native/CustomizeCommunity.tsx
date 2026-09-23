@@ -1,40 +1,40 @@
-// === Module 11805: CustomizeCommunity ===
+// === Module 11881: CustomizeCommunity ===
 
-// Module 11805 (CustomizeCommunity)
+// Module 11881 (CustomizeCommunity)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4493 */;
-import useThemeDefault from "useTheme" /* 4691 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4724 */;
-import Text_Text from "Text/Text" /* 4753 */;
-import timing from "timing" /* 4758 */;
-import GuildOnboardingPromptsActionCreators from "GuildOnboardingPromptsActionCreators" /* 7346 */;
-import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7353 */;
-import EmojiDefault from "Emoji" /* 7377 */;
-import ConnectionCardDefault from "ConnectionCard" /* 7407 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7429 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4559 */;
+import useThemeDefault from "useTheme" /* 4761 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4794 */;
+import Text_Text from "Text/Text" /* 4823 */;
+import timing from "timing" /* 4828 */;
+import GuildOnboardingPromptsActionCreators from "GuildOnboardingPromptsActionCreators" /* 7430 */;
+import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7437 */;
+import EmojiDefault from "Emoji" /* 7461 */;
+import ConnectionCardDefault from "ConnectionCard" /* 7491 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7513 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5678 */;
+import EmojiStore from "EmojiStore" /* 5762 */;
 import GuildStore from "GuildStore" /* 2064 */;
-import ReadStateStore from "ReadStateStore" /* 4772 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4578 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7347 */;
-import TextStyles from "TextStyles" /* 5743 */;
+import ReadStateStore from "ReadStateStore" /* 4842 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4648 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7431 */;
+import TextStyles from "TextStyles" /* 5827 */;
 
 require = fn;
 function EmptyCustomizeCommunity(setTab) {
   setTab = setTab.setTab;
   importDefault = undefined;
   const tmp = closure_19();
-  const obj = setTab(4465);
+  const obj = setTab(4531);
   const tmp4 = importDefault;
-  const isThemeDarkResult = setTab(4465).isThemeDark(useThemeDefault());
+  const isThemeDarkResult = setTab(4531).isThemeDark(useThemeDefault());
   const items = [SelectedGuildStore];
   importDefault = setTab(504).useStateFromStores(items, () => guildId.getGuildId());
   const obj3 = { style: tmp.emptyContainer, children: null };
   const obj2 = setTab(504);
-  const items1 = [closure_16(closure_5, { style: tmp.emptyContainerImage, source: tmp4(isThemeDarkResult ? 11806 : 11807) }), , ];
+  const items1 = [closure_16(closure_5, { style: tmp.emptyContainerImage, source: tmp4(isThemeDarkResult ? 11882 : 11883) }), , ];
   const obj5 = { style: tmp.emptyContainerHeader, children: null };
   const intl = tmp2(1115).intl;
   obj5.children = intl.string(setTab(1115).t.leKHQz);
@@ -48,7 +48,7 @@ function EmptyCustomizeCommunity(setTab) {
       }
     }
   });
-  items1[2] = closure_16(setTab(4753).Text, obj6);
+  items1[2] = closure_16(setTab(4823).Text, obj6);
   obj3.children = items1;
   return closure_17(closure_4, obj3);
 }
@@ -137,11 +137,11 @@ function ConnectionsPrompt(guildId) {
     const obj3 = { style: tmp.connectionsTitle, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp2(1115).intl;
     obj3.children = intl.string(tmp2(1115).t.eDVMrA);
-    const items1 = [closure_16(tmp2(4753).Text, obj3), , ];
+    const items1 = [closure_16(tmp2(4823).Text, obj3), , ];
     const obj4 = { variant: "text-xs/medium", color: "text-muted", children: null };
     const intl2 = tmp2(1115).intl;
     obj4.children = intl2.string(tmp2(1115).t.BozOXu);
-    items1[1] = closure_16(tmp2(4753).Text, obj4);
+    items1[1] = closure_16(tmp2(4823).Text, obj4);
     const obj5 = {
       style: tmp.connectionsContainer,
       children: stateFromStores.map((connection, index) => {
@@ -216,7 +216,7 @@ function DropdownOption(option) {
     obj3.children = closure_16(EmojiDefault, obj5);
     tmp10Result = closure_16(closure_4, obj3);
   }
-  const items1 = [tmp10Result, closure_16(option(4753).Text, { variant: "text-md/semibold", children: option.title })];
+  const items1 = [tmp10Result, closure_16(option(4823).Text, { variant: "text-md/semibold", children: option.title })];
   obj2.children = items1;
   return closure_17(closure_4, obj2);
 }
@@ -267,7 +267,7 @@ function DropdownPrompt(guildId) {
   const handleSelectOption = _prompt(isNew[38])(guildId).handleSelectOption;
   const items1 = [guildId, _prompt, handleSelectOption, stateFromStoresArray.length];
   const callback = stateFromStoresArray.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7382, dependencyMap.paths), "DropdownOptions", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7466, dependencyMap.paths), "DropdownOptions", {
       guildId,
       promptId: _prompt.id,
       onSelect(arg0, arg1) {
@@ -405,13 +405,13 @@ function MultipleChoicePrompt(guildId) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildOnboardingPromptsConstants = fn(7348);
+const GuildOnboardingPromptsConstants = fn(7432);
 ({ GuildOnboardingTab: closure_12, OnboardingPromptType: map1 } = GuildOnboardingPromptsConstants);
 const EMOJI_URL_BASE_SIZE = fn(1375).EMOJI_URL_BASE_SIZE;
-const ReadStateTypes = fn(4939).ReadStateTypes;
+const ReadStateTypes = fn(5009).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17, Fragment: closure_18 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16 }, sheetTitle: null, promptContainer: null, titleContainer: null, badge: null, badgeText: null, dropdownContainer: null, emptyDropdownText: null, dropdownPill: null, emojiContainer: null, dropdownIconContainer: null, dropdownIcon: null, optionTextEmoji: null, optionImageEmoji: null, helpText: null, sectionSeparator: null, emptyContainer: null, emptyContainerImage: null, emptyContainerHeader: null, connectionsContainer: null, connectionsPromptContainer: null, connectionsTitle: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.sheetTitle = { marginTop: nativeDefault.space.PX_16 };
@@ -473,7 +473,7 @@ export default function CustomizeCommunity(guildId) {
     }
     return prop;
   });
-  const tmp7 = stateFromStores(11808)(guildId);
+  const tmp7 = stateFromStores(11884)(guildId);
   ({ newOnboardingPrompts, onboardingPromptsWithNewAnswers, onboardingPrompts } = tmp7);
   const items2 = [guildId, stateFromStores, stateFromStores1];
   ({ onboardingPromptsRaw, newAnswersCount } = tmp7);
@@ -489,9 +489,9 @@ export default function CustomizeCommunity(guildId) {
   }, items2);
   const items3 = [guildId];
   const effect1 = noop.useEffect(() => null != guildId ? (() => {
-    guildId(7357).ackGuildFeature(closure_1_0, constants.GUILD_ONBOARDING_QUESTION, GuildOnboardingPromptsStore.ackIdForGuild(closure_1_0));
-    const obj = guildId(7357);
-    const result = stateFromStores(7352).updateOnboardingResponses(closure_1_0);
+    guildId(7441).ackGuildFeature(closure_1_0, constants.GUILD_ONBOARDING_QUESTION, GuildOnboardingPromptsStore.ackIdForGuild(closure_1_0));
+    const obj = guildId(7441);
+    const result = stateFromStores(7436).updateOnboardingResponses(closure_1_0);
   }) : undefined, items3);
   const items4 = [guildId];
   const callback = noop.useCallback((type) => {
@@ -522,7 +522,7 @@ export default function CustomizeCommunity(guildId) {
       const intl = tmp4(1115).intl;
       const obj10 = { count: newOnboardingPrompts.length + newAnswersCount };
       obj9.children = intl.format(tmp4(1115).t.iB5Gqe, obj10);
-      const items5 = [closure_16(tmp4(4753).Text, obj9), newOnboardingPrompts.map(callback), onboardingPromptsWithNewAnswers.map(callback), ];
+      const items5 = [closure_16(tmp4(4823).Text, obj9), newOnboardingPrompts.map(callback), onboardingPromptsWithNewAnswers.map(callback), ];
       const obj11 = { style: tmp.sectionSeparator };
       items5[3] = closure_16(closure_4, obj11);
       obj8.children = items5;
@@ -535,11 +535,11 @@ export default function CustomizeCommunity(guildId) {
       const obj13 = { style: tmp.sheetTitle, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
       const intl2 = tmp4(1115).intl;
       obj13.children = intl2.string(tmp4(1115).t.BGkaer);
-      const items7 = [closure_16(tmp4(4753).Text, obj13), , ];
+      const items7 = [closure_16(tmp4(4823).Text, obj13), , ];
       const obj14 = { variant: "text-xs/medium", color: "text-muted", children: null };
       const intl3 = tmp4(1115).intl;
       obj14.children = intl3.string(tmp4(1115).t.r6Vm8T);
-      items7[1] = closure_16(tmp4(4753).Text, obj14);
+      items7[1] = closure_16(tmp4(4823).Text, obj14);
       items7[2] = onboardingPrompts.map(callback);
       obj12.children = items7;
       tmp24Result3 = closure_17(closure_18, obj12);

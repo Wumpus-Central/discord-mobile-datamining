@@ -1,7 +1,7 @@
-// === Module 12769: useShowGuildPowerupRollbackSheet ===
+// === Module 12851: useShowGuildPowerupRollbackSheet ===
 
-// Module 12769 (useShowGuildPowerupRollbackSheet)
-import openGuildPowerupRollbackSheetDefault from "openGuildPowerupRollbackSheet" /* 12772 */;
+// Module 12851 (useShowGuildPowerupRollbackSheet)
+import openGuildPowerupRollbackSheetDefault from "openGuildPowerupRollbackSheet" /* 12854 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ export default function useShowGuildPowerupRollbackSheet(arg0, arg1) {
   let first;
   dependencyMap = undefined;
   _slicedToArray = undefined;
-  ({ shouldShow, modalConfig } = first(12770)(arg0, arg1));
+  ({ shouldShow, modalConfig } = first(12852)(arg0, arg1));
   if (shouldShow) {
     shouldShow = null != modalConfig;
   }
@@ -30,8 +30,8 @@ export default function useShowGuildPowerupRollbackSheet(arg0, arg1) {
   if (shouldShow) {
     items.push(modalConfig.dismissibleContent);
   }
-  const tmp2 = first(12770)(arg0, arg1);
-  const tmp5 = _slicedToArray(modalConfig(7633).useSelectedDismissibleContent(items), 2);
+  const tmp2 = first(12852)(arg0, arg1);
+  const tmp5 = _slicedToArray(modalConfig(7716).useSelectedDismissibleContent(items), 2);
   first = tmp5[0];
   dependencyMap = tmp7;
   _slicedToArray = noop.useRef(false);
@@ -54,7 +54,7 @@ export default function useShowGuildPowerupRollbackSheet(arg0, arg1) {
       if (null != modalConfig.primaryButtonText) {
         fn = () => {
           dependencyMap(constants.TAKE_ACTION);
-          first(4724).hideActionSheet(modalConfig(12772).GUILD_POWERUP_ROLLBACK_SHEET_KEY);
+          first(4794).hideActionSheet(modalConfig(12854).GUILD_POWERUP_ROLLBACK_SHEET_KEY);
         };
       }
       obj.onCtaPress = fn;

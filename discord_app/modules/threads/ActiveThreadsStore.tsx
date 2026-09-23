@@ -1,6 +1,6 @@
-// === Module 5726: ActiveThreadsStore ===
+// === Module 5810: ActiveThreadsStore ===
 
-// Module 5726 (ActiveThreadsStore)
+// Module 5810 (ActiveThreadsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;

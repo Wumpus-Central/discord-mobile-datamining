@@ -1,13 +1,13 @@
-// === Module 18390: DispatcherBridge ===
+// === Module 18459: DispatcherBridge ===
 
-// Module 18390 (DispatcherBridge)
+// Module 18459 (DispatcherBridge)
 import LoggerDefault from "Logger" /* 3 */;
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
 import libdiscoreExperiments from "libdiscoreExperiments" /* 2068 */;
-import DevSettingsStore from "DevSettingsStore" /* 4756 */;
-import RawGuildEmojiStore from "RawGuildEmojiStore" /* 5680 */;
-import GuildStickersStore from "GuildStickersStore" /* 5722 */;
-import NoteStore from "NoteStore" /* 13351 */;
+import DevSettingsStore from "DevSettingsStore" /* 4826 */;
+import RawGuildEmojiStore from "RawGuildEmojiStore" /* 5764 */;
+import GuildStickersStore from "GuildStickersStore" /* 5806 */;
+import NoteStore from "NoteStore" /* 13433 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildRoleStore from "GuildRoleStore" /* 2099 */;
 import GuildStore from "GuildStore" /* 2064 */;

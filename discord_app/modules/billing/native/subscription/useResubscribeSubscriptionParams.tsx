@@ -1,8 +1,8 @@
-// === Module 11079: useResubscribeSubscriptionParams ===
+// === Module 11155: useResubscribeSubscriptionParams ===
 
-// Module 11079 (useResubscribeSubscriptionParams)
+// Module 11155 (useResubscribeSubscriptionParams)
 import v1 from "v1" /* 1255 */;
-import useToggleOnIAPSuccessDefault from "useToggleOnIAPSuccess" /* 11075 */;
+import useToggleOnIAPSuccessDefault from "useToggleOnIAPSuccess" /* 11151 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

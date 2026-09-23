@@ -1,25 +1,25 @@
-// === Module 17074: VibegrationsDebugScene ===
+// === Module 17132: VibegrationsDebugScene ===
 
-// Module 17074 (VibegrationsDebugScene)
+// Module 17132 (VibegrationsDebugScene)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import _modDef3678 from "module_3678" /* 3678 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4455 */;
-import CopyIcon from "CopyIcon" /* 4703 */;
-import ClipboardUtils from "ClipboardUtils" /* 7436 */;
-import VibegrationsDebugSnapshot from "VibegrationsDebugSnapshot" /* 17076 */;
+import _modDef3712 from "module_3712" /* 3712 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4521 */;
+import CopyIcon from "CopyIcon" /* 4773 */;
+import ClipboardUtils from "ClipboardUtils" /* 7520 */;
+import VibegrationsDebugSnapshot from "VibegrationsDebugSnapshot" /* 17134 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7959 */;
-import VibegrationsDebugStore from "VibegrationsDebugStore" /* 17075 */;
+import DeveloperExperimentStore from "DeveloperExperimentStore" /* 8041 */;
+import VibegrationsDebugStore from "VibegrationsDebugStore" /* 17133 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const requestDebugStatus = fn(13366).requestDebugStatus;
+const requestDebugStatus = fn(13448).requestDebugStatus;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { scene: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, tabs: null, content: null, report: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.tabs = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_12 };
@@ -120,7 +120,7 @@ export default function VibegrationsDebugScene(projectId) {
     obj.copy(VibegrationsDebugSnapshot.vibegrationsDebugSnapshot(projectId));
     const obj4 = { key: "VIBEGRATIONS_DEBUG_COPIED", content: null, IconComponent: null };
     const intl = util.intl;
-    obj4.content = intl.string(_modDef3678.sDSDiO);
+    obj4.content = intl.string(_modDef3712.sDSDiO);
     obj4.IconComponent = CopyIcon.CopyIcon;
     ToastActionCreatorsDefault.open(obj4);
   }, items8);

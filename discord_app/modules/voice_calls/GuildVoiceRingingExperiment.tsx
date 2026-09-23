@@ -1,8 +1,8 @@
-// === Module 10001: GuildVoiceRingingExperiment ===
+// === Module 10074: GuildVoiceRingingExperiment ===
 
-// Module 10001 (GuildVoiceRingingExperiment)
-import ExperimentConstants from "ExperimentConstants" /* 4673 */;
-import createExperiment from "module_4670" /* 4670 */;
+// Module 10074 (GuildVoiceRingingExperiment)
+import ExperimentConstants from "ExperimentConstants" /* 4743 */;
+import createExperiment from "module_4740" /* 4740 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "guild", id: "2024-12_guild_voice_channel_ringing", label: "Guild Voice Ringing", defaultConfig: { enabled: false }, commonTriggerPoint: ExperimentConstants.CommonTriggerPoints.VOICE_CALL, treatments: null };

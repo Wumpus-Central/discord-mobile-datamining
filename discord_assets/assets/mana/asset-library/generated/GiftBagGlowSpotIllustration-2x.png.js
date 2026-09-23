@@ -1,6 +1,6 @@
-// === Module 6369: ? ===
+// === Module 6453: ? ===
 
-// Module 6369
+// Module 6453
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GiftBagGlowSpotIllustration-2x.png.js");

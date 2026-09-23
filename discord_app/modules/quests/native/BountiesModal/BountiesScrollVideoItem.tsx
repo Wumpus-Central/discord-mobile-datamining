@@ -1,15 +1,15 @@
-// === Module 15298: BountiesScrollVideoItem ===
+// === Module 15350: BountiesScrollVideoItem ===
 
-// Module 15298 (BountiesScrollVideoItem)
-import QuestContent from "QuestContent" /* 5668 */;
-import AdCreativeType from "AdCreativeType" /* 5670 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 12035 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 15299 */;
+// Module 15350 (BountiesScrollVideoItem)
+import QuestContent from "QuestContent" /* 5752 */;
+import AdCreativeType from "AdCreativeType" /* 5754 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 12112 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 15351 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9136 */;
-import BountyStore from "BountyStore" /* 7941 */;
+import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9207 */;
+import BountyStore from "BountyStore" /* 8023 */;
 
 require = fn;
 function BountiesScrollVideoItemInner(bounty) {
@@ -279,7 +279,7 @@ function BountiesScrollVideoItemInner(bounty) {
   return handleVideoProgressAnalytics(closure_6, obj6);
 }
 const View = fn(17).View;
-const BOUNTY_ORB_AMOUNT = fn(5663).BOUNTY_ORB_AMOUNT;
+const BOUNTY_ORB_AMOUNT = fn(5747).BOUNTY_ORB_AMOUNT;
 const jsx = fn(21).jsx;
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollVideoItem.tsx");
@@ -311,10 +311,10 @@ export const BountiesScrollVideoItem = function BountiesScrollVideoItem(bounty) 
   if (flag3 === undefined) {
     flag3 = false;
   }
-  return jsx(bounty(12035).BillableAdPlacementImpressionTrackerNative, {
+  return jsx(bounty(12112).BillableAdPlacementImpressionTrackerNative, {
     adContentId: bounty.id,
-    adCreativeType: bounty(5670).AdCreativeType.BOUNTY,
-    questContent: bounty(5668).QuestContent.VIDEO_MODAL_MOBILE,
+    adCreativeType: bounty(5754).AdCreativeType.BOUNTY,
+    questContent: bounty(5752).QuestContent.VIDEO_MODAL_MOBILE,
     sourceQuestContent,
     overrideVisibility: isActive,
     children() {

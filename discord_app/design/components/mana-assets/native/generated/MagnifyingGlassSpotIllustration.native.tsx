@@ -1,9 +1,9 @@
-// === Module 6470: MagnifyingGlassSpotIllustration ===
+// === Module 6554: MagnifyingGlassSpotIllustration ===
 
-// Module 6470 (MagnifyingGlassSpotIllustration)
+// Module 6554 (MagnifyingGlassSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5806 */;
-import _modDef6471 from "module_6471" /* 6471 */;
+import FastImageDefault from "FastImage" /* 5890 */;
+import _modDef6555 from "module_6555" /* 6555 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const MagnifyingGlassSpotIllustration = function MagnifyingGlassSpotIllus
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6471 };
+  const obj2 = { uri: _modDef6555 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

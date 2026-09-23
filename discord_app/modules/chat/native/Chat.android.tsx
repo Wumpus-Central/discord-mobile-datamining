@@ -1,13 +1,13 @@
-// === Module 12153: Chat ===
+// === Module 12230: Chat ===
 
-// Module 12153 (Chat)
+// Module 12230 (Chat)
 import initialize from "initialize" /* 504 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6899 */;
-import ChatNativeComponentDefault from "ChatNativeComponent" /* 11542 */;
-import ChatListNativeComponentDefault from "ChatListNativeComponent" /* 12154 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 12155 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6983 */;
+import ChatNativeComponentDefault from "ChatNativeComponent" /* 11618 */;
+import ChatListNativeComponentDefault from "ChatListNativeComponent" /* 12231 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 12232 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4749 */;
+import AccessibilityStore from "AccessibilityStore" /* 4819 */;
 
 require = fn;
 function DCDChatList() {
@@ -25,7 +25,7 @@ function DCDChatList() {
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_7 = createStyles.createStyles({ chatList: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/Chat.android.tsx");

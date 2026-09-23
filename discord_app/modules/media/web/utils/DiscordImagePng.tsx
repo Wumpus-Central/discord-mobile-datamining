@@ -1,6 +1,6 @@
-// === Module 5429: DiscordImagePng ===
+// === Module 5513: DiscordImagePng ===
 
-// Module 5429 (DiscordImagePng)
+// Module 5513 (DiscordImagePng)
 import decodeImageDefault from "decodeImage" /* 1976 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

@@ -1,8 +1,8 @@
-// === Module 17654: useControlsHiddenPresentation ===
+// === Module 17723: useControlsHiddenPresentation ===
 
-// Module 17654 (useControlsHiddenPresentation)
-import spring from "spring" /* 5186 */;
-import VoicePanelConstants from "VoicePanelConstants" /* 12530 */;
+// Module 17723 (useControlsHiddenPresentation)
+import spring from "spring" /* 5270 */;
+import VoicePanelConstants from "VoicePanelConstants" /* 12606 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

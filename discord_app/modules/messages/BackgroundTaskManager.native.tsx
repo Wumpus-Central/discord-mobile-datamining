@@ -1,9 +1,9 @@
-// === Module 8000: BackgroundTaskManager ===
+// === Module 8082: BackgroundTaskManager ===
 
-// Module 8000 (BackgroundTaskManager)
+// Module 8082 (BackgroundTaskManager)
 import PlatformUtils2 from "PlatformUtils" /* 1364 */;
-import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 8001 */;
-import ForegroundServiceManagerTypes from "ForegroundServiceManagerTypes" /* 8003 */;
+import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 8083 */;
+import ForegroundServiceManagerTypes from "ForegroundServiceManagerTypes" /* 8085 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

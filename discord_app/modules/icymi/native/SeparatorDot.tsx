@@ -1,12 +1,12 @@
-// === Module 16863: SeparatorDot ===
+// === Module 16915: SeparatorDot ===
 
-// Module 16863 (SeparatorDot)
+// Module 16915 (SeparatorDot)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 const obj2 = { separatorDot: null };
 let size = { width: 4, height: 4, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
 obj2.separatorDot = size;

@@ -1,9 +1,9 @@
-// === Module 11002: ? ===
+// === Module 11078: ? ===
 
-// Module 11002
+// Module 11078
 import initialize from "initialize" /* 504 */;
-import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 11003 */;
-import DevSettingsStore from "DevSettingsStore" /* 4756 */;
+import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 11079 */;
+import DevSettingsStore from "DevSettingsStore" /* 4826 */;
 
 require = fn;
 const size = fn(2);

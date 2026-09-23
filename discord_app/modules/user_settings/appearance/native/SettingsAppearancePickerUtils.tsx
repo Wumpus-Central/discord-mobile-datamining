@@ -1,13 +1,13 @@
-// === Module 15582: SettingsAppearancePickerUtils ===
+// === Module 15636: SettingsAppearancePickerUtils ===
 
-// Module 15582 (SettingsAppearancePickerUtils)
+// Module 15636 (SettingsAppearancePickerUtils)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import getSystemThemeDefault from "getSystemTheme" /* 1219 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1230 */;
-import ColorUtils from "ColorUtils" /* 4606 */;
-import utils_ColorDefault from "utils/Color" /* 4607 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 4688 */;
+import ColorUtils from "ColorUtils" /* 4676 */;
+import utils_ColorDefault from "utils/Color" /* 4677 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 4758 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -142,8 +142,8 @@ function convertCustomBackgroundGradientToAnimatedTheme(theme, prop, prop1) {
     const obj2 = { hex: null, stop: null };
     const hexToRgbResult = ColorUtils.hexToRgb(item);
     const tmp16Result = ColorUtils;
-    const tmp18 = new tmp12(4607)(r, g, b, num8);
-    obj2.hex = tmp16Result.mixColors(tmp72, new tmp12(4607)(r, g, b, num8)).toHexString();
+    const tmp18 = new tmp12(4677)(r, g, b, num8);
+    obj2.hex = tmp16Result.mixColors(tmp72, new tmp12(4677)(r, g, b, num8)).toHexString();
     let num9 = 0;
     if (theme.customThemeSettings.colors.length > 1) {
       num9 = index * (100 / (theme.customThemeSettings.colors.length - 1));
@@ -206,7 +206,7 @@ export const convertThemesToAnimatedThemes = function convertThemesToAnimatedThe
 };
 export const useLaunchWelcomeSystemTheme = function useLaunchWelcomeSystemTheme() {
   const tmp4 = getSystemThemeDefault() === ThemeTypes.LIGHT ? ThemeTypes.LIGHT : ThemeTypes.DARK;
-  token = token(4458).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
+  token = token(4524).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
   let items = [token];
   return noop.useMemo(() => {
     const obj = { theme: "system", name: null, midpointPercentage: 50, angle: 0, colors: null };

@@ -1,6 +1,6 @@
-// === Module 9853: useAccessibilityPress ===
+// === Module 9926: useAccessibilityPress ===
 
-// Module 9853 (useAccessibilityPress)
+// Module 9926 (useAccessibilityPress)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

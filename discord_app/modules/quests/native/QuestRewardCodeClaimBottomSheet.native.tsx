@@ -1,15 +1,15 @@
-// === Module 12029: QuestRewardCodeClaimBottomSheet ===
+// === Module 12106: QuestRewardCodeClaimBottomSheet ===
 
-// Module 12029 (QuestRewardCodeClaimBottomSheet)
+// Module 12106 (QuestRewardCodeClaimBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4455 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4724 */;
-import _modDef5816 from "module_5816" /* 5816 */;
-import ClipboardUtils from "ClipboardUtils" /* 7436 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 11557 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4521 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4794 */;
+import _modDef5900 from "module_5900" /* 5900 */;
+import ClipboardUtils from "ClipboardUtils" /* 7520 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 11633 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 7942 */;
+import QuestStore from "QuestStore" /* 8024 */;
 
 const require = globalThis.__r;
 
@@ -37,7 +37,7 @@ function QuestRewardCodeClaimBottomSheet(quest) {
       const obj2 = { key: "CLAIM_QUEST_REWARD_ERROR", content: null, icon: null };
       const intl = util.intl;
       obj2.content = intl.string(util.t.CKsXk3);
-      obj2.icon = _modDef5816;
+      obj2.icon = _modDef5900;
       ToastActionCreatorsDefault.open(obj2);
       ActionSheetActionCreatorsDefault.hideActionSheet();
     }
@@ -103,7 +103,7 @@ function QuestRewardCodeClaimBottomSheet(quest) {
         obj2.icon = function icon() {
           return closure_1_8(closure_1_0(dependencyMap[16]).CopyIcon, {});
         };
-        return rewardCode(4455).open(obj2);
+        return rewardCode(4521).open(obj2);
       });
     }
   }, items4);
@@ -199,10 +199,10 @@ function QuestRewardCodeClaimBottomSheet(quest) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const REWARD_CODE_PLACEHOLDER = fn(5663).REWARD_CODE_PLACEHOLDER;
+const REWARD_CODE_PLACEHOLDER = fn(5747).REWARD_CODE_PLACEHOLDER;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_10 = createStyles.createStyles((paddingBottom) => {
   const obj = { wrapper: { display: "flex", paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 }, footer: { paddingBottom }, claimingIndicator: { position: "absolute", left: "50%", top: "50%", marginLeft: -12, marginTop: -12 }, codeCopyWrapperLoading: { opacity: 0.5 }, redemptionInstructions: { marginBottom: 24 } };
   return obj;

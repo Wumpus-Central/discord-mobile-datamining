@@ -1,6 +1,6 @@
-// === Module 13389: UserProfileDismissibleUpsells ===
+// === Module 13471: UserProfileDismissibleUpsells ===
 
-// Module 13389 (UserProfileDismissibleUpsells)
+// Module 13471 (UserProfileDismissibleUpsells)
 import nativeDefault from "native" /* 576 */;
 import dismissible_content from "dismissible_content" /* 2028 */;
 import noop from "module_19" /* 19 */;
@@ -8,21 +8,21 @@ import UserStore from "UserStore" /* 1372 */;
 
 const util = ShopIcon(1115);
 const native = ShopIcon(1177);
-const Text_Text = ShopIcon(4753);
-const components_Button_Button = ShopIcon(5187);
-const Pressables = ShopIcon(5341);
-const XSmallIcon = ShopIcon(5899);
-const NitroWheelIcon = ShopIcon(8945);
-const ShopIcon2 = ShopIcon(12395);
+const Text_Text = ShopIcon(4823);
+const components_Button_Button = ShopIcon(5271);
+const Pressables = ShopIcon(5425);
+const XSmallIcon = ShopIcon(5983);
+const NitroWheelIcon = ShopIcon(9016);
+const ShopIcon2 = ShopIcon(12471);
 require = fn;
 const View = fn(17).View;
-const TrackUserProfileActions = fn(8456).TrackUserProfileActions;
+const TrackUserProfileActions = fn(8527).TrackUserProfileActions;
 const ContentDismissActionType = fn(2039).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let items = [...fn(7677).Gradients.PREMIUM_GUILD];
+let items = [...fn(7760).Gradients.PREMIUM_GUILD];
 let closure_10 = items.reverse();
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { upsellContainer: { paddingVertical: 16, paddingHorizontal: 12, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, customProfileThemeUpsellContainer: null, header: null, upsellButtonsContainer: null, upsellButton: null };
 let obj3 = { paddingVertical: 16, paddingHorizontal: 12, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.customProfileThemeUpsellContainer = { backgroundColor: nativeDefault.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME };

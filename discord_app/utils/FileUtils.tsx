@@ -1,9 +1,9 @@
-// === Module 5352: FileUtils ===
+// === Module 5436: FileUtils ===
 
-// Module 5352 (FileUtils)
+// Module 5436 (FileUtils)
 import _modDef12 from "module_12" /* 12 */;
-import UploadUtils from "UploadUtils" /* 5347 */;
-import noConflictDefault from "noConflict" /* 5353 */;
+import UploadUtils from "UploadUtils" /* 5431 */;
+import noConflictDefault from "noConflict" /* 5437 */;
 import GuildStore from "GuildStore" /* 2064 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -120,13 +120,13 @@ export const sizeString = function sizeString(currentSize) {
 };
 export const maxFileSize = function maxFileSize(guildId) {
   const currentUser = UserStore.getCurrentUser();
-  const userMaxFileSize = enabled(4415).getUserMaxFileSize(currentUser);
+  const userMaxFileSize = enabled(4481).getUserMaxFileSize(currentUser);
   if (null == guildId) {
     return userMaxFileSize;
   } else {
     const guild = GuildStore.getGuild(guildId);
     if (null != guild) {
-      const FileUploadPowerupHoldoutExperiment = guild(4682).FileUploadPowerupHoldoutExperiment;
+      const FileUploadPowerupHoldoutExperiment = guild(4752).FileUploadPowerupHoldoutExperiment;
       enabled = FileUploadPowerupHoldoutExperiment.getConfig({ location: "getGuildMaxFileSize" }).enabled;
       let reduced = items2.reduce((acc, item) => {
         [tmp, tmp2] = item;
@@ -151,7 +151,7 @@ export const maxFileSize = function maxFileSize(guildId) {
     const _Math = Math;
     return Math.max(reduced, userMaxFileSize);
   }
-  const obj = enabled(4415);
+  const obj = enabled(4481);
 };
 export { getUploadFileSizeSum };
 export const uploadSumTooLarge = function uploadSumTooLarge(arg0) {
@@ -162,13 +162,13 @@ export const fileUploadLimitRoadblockDescription = function fileUploadLimitRoadb
   ({ guildId, maxSize } = arg0);
   if (maxSize == null) {
     const currentUser = UserStore.getCurrentUser();
-    const userMaxFileSize = enabled(4415).getUserMaxFileSize(currentUser);
+    const userMaxFileSize = enabled(4481).getUserMaxFileSize(currentUser);
     if (null == guildId) {
       maxSize = userMaxFileSize;
     } else {
       let _Math = GuildStore.getGuild(guildId);
       if (null != _Math) {
-        const FileUploadPowerupHoldoutExperiment = tmp(4682).FileUploadPowerupHoldoutExperiment;
+        const FileUploadPowerupHoldoutExperiment = tmp(4752).FileUploadPowerupHoldoutExperiment;
         enabled = FileUploadPowerupHoldoutExperiment.getConfig({ location: "getGuildMaxFileSize" }).enabled;
         let reduced = items2.reduce((acc, item) => {
           [tmp, tmp2] = item;
@@ -193,11 +193,11 @@ export const fileUploadLimitRoadblockDescription = function fileUploadLimitRoadb
       _Math = Math;
       const bound = Math.max(reduced, userMaxFileSize);
     }
-    const obj3 = enabled(4415);
+    const obj3 = enabled(4481);
   }
-  const maxSize1 = _Math(4653).formatSize(maxSize / 1024, { useKibibytes: true });
-  const obj = _Math(4653);
-  const premiumMaxSize = _Math(4415).getMaxFileSizeForPremiumType(PremiumTypes.TIER_2, { useSpace: false });
+  const maxSize1 = _Math(4723).formatSize(maxSize / 1024, { useKibibytes: true });
+  const obj = _Math(4723);
+  const premiumMaxSize = _Math(4481).getMaxFileSizeForPremiumType(PremiumTypes.TIER_2, { useSpace: false });
   const intl = tmp(1115).intl;
   return intl.format(_Math(1115).t["+R2TzS"], { maxSize: maxSize1, premiumMaxSize });
 };

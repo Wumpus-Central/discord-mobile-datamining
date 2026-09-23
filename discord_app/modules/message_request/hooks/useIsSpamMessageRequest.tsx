@@ -1,7 +1,7 @@
-// === Module 11632: useIsSpamMessageRequest ===
+// === Module 11708: useIsSpamMessageRequest ===
 
-// Module 11632 (useIsSpamMessageRequest)
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7467 */;
+// Module 11708 (useIsSpamMessageRequest)
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7551 */;
 
 const require = globalThis.__r;
 

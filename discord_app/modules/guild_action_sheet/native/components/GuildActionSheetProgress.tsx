@@ -1,18 +1,16 @@
-// === Module 14250: GuildActionSheetProgress ===
+// === Module 14332: GuildActionSheetProgress ===
 
-// Module 14250 (GuildActionSheetProgress)
+// Module 14332 (GuildActionSheetProgress)
 import nativeDefault from "native" /* 576 */;
-import Card from "Card" /* 5826 */;
-import GuildProgressUtils from "GuildProgressUtils" /* 12732 */;
-import GuildProgressOverviewDefault from "GuildProgressOverview" /* 14251 */;
+import Card from "Card" /* 5910 */;
+import GuildProgressUtils from "GuildProgressUtils" /* 12814 */;
+import GuildProgressOverviewDefault from "GuildProgressOverview" /* 14333 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4757);
-const obj2 = { title: { color: nativeDefault.colors.TEXT_DEFAULT }, cardStyle: null };
-let obj3 = { color: nativeDefault.colors.TEXT_DEFAULT };
-obj2.cardStyle = { marginHorizontal: nativeDefault.space.PX_16, padding: 0, marginBottom: nativeDefault.space.PX_24 };
+const createStyles = fn(4827);
+const obj2 = { title: { color: nativeDefault.colors.TEXT_DEFAULT }, cardStyle: { padding: 0 } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetProgress.tsx");

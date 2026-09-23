@@ -1,17 +1,17 @@
-// === Module 10095: InviteSuggestionsStore ===
+// === Module 10175: InviteSuggestionsStore ===
 
-// Module 10095 (InviteSuggestionsStore)
+// Module 10175 (InviteSuggestionsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 5737 */;
-import InstantInviteUtils from "InstantInviteUtils" /* 10084 */;
-import QuickSwitcherStore from "QuickSwitcherStore" /* 10096 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7898 */;
+import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 5821 */;
+import InstantInviteUtils from "InstantInviteUtils" /* 10164 */;
+import QuickSwitcherStore from "QuickSwitcherStore" /* 10176 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7980 */;
 import ChannelStore from "ChannelStore" /* 2042 */;
-import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 5645 */;
+import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 5729 */;
 import GuildMemberStore from "GuildMemberStore" /* 2105 */;
-import PermissionStore from "PermissionStore" /* 4396 */;
-import RelationshipStore from "RelationshipStore" /* 4406 */;
+import PermissionStore from "PermissionStore" /* 4462 */;
+import RelationshipStore from "RelationshipStore" /* 4472 */;
 
 require = fn;
 function compareRowsByMatchScore(score, score2) {
@@ -45,7 +45,7 @@ function getOmitGuildId() {
 }
 const Constants = fn(1074);
 ({ ChannelTypes: closure_16, Permissions: closure_17 } = Constants);
-const InviteTargetTypes = fn(7981).InviteTargetTypes;
+const InviteTargetTypes = fn(8063).InviteTargetTypes;
 let set = new Set();
 let rows = [];
 let map = new Map();
@@ -88,7 +88,7 @@ const inviteSuggestionsStore = new InviteSuggestionsStore(DispatcherDefault, {
     const tmp4 = (function _computeRows(query) {
       set = new Set();
       const tmp = closure_25();
-      const mostRecentDMedUser = set1(10084).getMostRecentDMedUser(omitUserIds, tmp);
+      const mostRecentDMedUser = set1(10164).getMostRecentDMedUser(omitUserIds, tmp);
       let isBlockedOrIgnoredResult = null == mostRecentDMedUser;
       if (!isBlockedOrIgnoredResult) {
         isBlockedOrIgnoredResult = blockedOrIgnored.isBlockedOrIgnored(mostRecentDMedUser.id);
@@ -111,8 +111,8 @@ const inviteSuggestionsStore = new InviteSuggestionsStore(DispatcherDefault, {
         const substr = found2.slice(0, 3);
         const item = substr.forEach((id) => set1.add(id.id));
       }
-      const obj2 = set1(10084);
-      return set1(10084).generateRowsForQuery({ query, omitUserIds, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: tmp, suggestedChannelIds: set1, inviteTargetType });
+      const obj2 = set1(10164);
+      return set1(10164).generateRowsForQuery({ query, omitUserIds, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: tmp, suggestedChannelIds: set1, inviteTargetType });
     })(query);
     rows = tmp4.rows;
     if (closure_4) {
@@ -129,9 +129,9 @@ const inviteSuggestionsStore = new InviteSuggestionsStore(DispatcherDefault, {
         const nextResult = iter.next();
         while (iter !== undefined) {
           let tmp5 = nextResult;
-          let tmp8 = nextResult.type !== id(10084).RowTypes.DM;
+          let tmp8 = nextResult.type !== id(10164).RowTypes.DM;
           if (tmp8) {
-            tmp8 = tmp5.type !== id(10084).RowTypes.FRIEND;
+            tmp8 = tmp5.type !== id(10164).RowTypes.FRIEND;
           }
           if (!tmp8) {
             let member = GuildMemberRequesterStore.requestMember(tmp, tmp5.item.id);
@@ -149,7 +149,7 @@ const inviteSuggestionsStore = new InviteSuggestionsStore(DispatcherDefault, {
     ({ rows, counts } = (function _computeRows(query) {
       set = new Set();
       const tmp = closure_25();
-      const mostRecentDMedUser = set1(10084).getMostRecentDMedUser(omitUserIds, tmp);
+      const mostRecentDMedUser = set1(10164).getMostRecentDMedUser(omitUserIds, tmp);
       let isBlockedOrIgnoredResult = null == mostRecentDMedUser;
       if (!isBlockedOrIgnoredResult) {
         isBlockedOrIgnoredResult = blockedOrIgnored.isBlockedOrIgnored(mostRecentDMedUser.id);
@@ -172,8 +172,8 @@ const inviteSuggestionsStore = new InviteSuggestionsStore(DispatcherDefault, {
         const substr = found2.slice(0, 3);
         const item = substr.forEach((id) => set1.add(id.id));
       }
-      const obj2 = set1(10084);
-      return set1(10084).generateRowsForQuery({ query, omitUserIds, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: tmp, suggestedChannelIds: set1, inviteTargetType });
+      const obj2 = set1(10164);
+      return set1(10164).generateRowsForQuery({ query, omitUserIds, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: tmp, suggestedChannelIds: set1, inviteTargetType });
     })(query));
     if (closure_4) {
       const sorted = rows.sort(compareRowsByMatchScore);
@@ -189,9 +189,9 @@ const inviteSuggestionsStore = new InviteSuggestionsStore(DispatcherDefault, {
         const nextResult = iter.next();
         while (iter !== undefined) {
           let tmp5 = nextResult;
-          let tmp8 = nextResult.type !== id(10084).RowTypes.DM;
+          let tmp8 = nextResult.type !== id(10164).RowTypes.DM;
           if (tmp8) {
-            tmp8 = tmp5.type !== id(10084).RowTypes.FRIEND;
+            tmp8 = tmp5.type !== id(10164).RowTypes.FRIEND;
           }
           if (!tmp8) {
             let member = GuildMemberRequesterStore.requestMember(tmp, tmp5.item.id);
@@ -203,7 +203,7 @@ const inviteSuggestionsStore = new InviteSuggestionsStore(DispatcherDefault, {
     const tmp = (function _computeRows(query) {
       set = new Set();
       const tmp = closure_25();
-      const mostRecentDMedUser = set1(10084).getMostRecentDMedUser(omitUserIds, tmp);
+      const mostRecentDMedUser = set1(10164).getMostRecentDMedUser(omitUserIds, tmp);
       let isBlockedOrIgnoredResult = null == mostRecentDMedUser;
       if (!isBlockedOrIgnoredResult) {
         isBlockedOrIgnoredResult = blockedOrIgnored.isBlockedOrIgnored(mostRecentDMedUser.id);
@@ -226,8 +226,8 @@ const inviteSuggestionsStore = new InviteSuggestionsStore(DispatcherDefault, {
         const substr = found2.slice(0, 3);
         const item = substr.forEach((id) => set1.add(id.id));
       }
-      const obj2 = set1(10084);
-      return set1(10084).generateRowsForQuery({ query, omitUserIds, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: tmp, suggestedChannelIds: set1, inviteTargetType });
+      const obj2 = set1(10164);
+      return set1(10164).generateRowsForQuery({ query, omitUserIds, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: tmp, suggestedChannelIds: set1, inviteTargetType });
     })(query);
   },
   GUILD_MEMBERS_CHUNK_BATCH: function handleGuildMembersChunkBatch(chunks) {
@@ -264,7 +264,7 @@ const inviteSuggestionsStore = new InviteSuggestionsStore(DispatcherDefault, {
         ({ rows, counts } = (function _computeRows(query) {
           set = new Set();
           const tmp = closure_25();
-          const mostRecentDMedUser = set1(10084).getMostRecentDMedUser(omitUserIds, tmp);
+          const mostRecentDMedUser = set1(10164).getMostRecentDMedUser(omitUserIds, tmp);
           let isBlockedOrIgnoredResult = null == mostRecentDMedUser;
           if (!isBlockedOrIgnoredResult) {
             isBlockedOrIgnoredResult = blockedOrIgnored.isBlockedOrIgnored(mostRecentDMedUser.id);
@@ -287,8 +287,8 @@ const inviteSuggestionsStore = new InviteSuggestionsStore(DispatcherDefault, {
             const substr = found2.slice(0, 3);
             const item = substr.forEach((id) => set1.add(id.id));
           }
-          const obj2 = set1(10084);
-          return set1(10084).generateRowsForQuery({ query, omitUserIds, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: tmp, suggestedChannelIds: set1, inviteTargetType });
+          const obj2 = set1(10164);
+          return set1(10164).generateRowsForQuery({ query, omitUserIds, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: tmp, suggestedChannelIds: set1, inviteTargetType });
         })(query));
         if (closure_4) {
           const sorted = rows.sort(compareRowsByMatchScore);
@@ -297,7 +297,7 @@ const inviteSuggestionsStore = new InviteSuggestionsStore(DispatcherDefault, {
         let tmp8 = (function _computeRows(query) {
           set = new Set();
           const tmp = closure_25();
-          const mostRecentDMedUser = set1(10084).getMostRecentDMedUser(omitUserIds, tmp);
+          const mostRecentDMedUser = set1(10164).getMostRecentDMedUser(omitUserIds, tmp);
           let isBlockedOrIgnoredResult = null == mostRecentDMedUser;
           if (!isBlockedOrIgnoredResult) {
             isBlockedOrIgnoredResult = blockedOrIgnored.isBlockedOrIgnored(mostRecentDMedUser.id);
@@ -320,8 +320,8 @@ const inviteSuggestionsStore = new InviteSuggestionsStore(DispatcherDefault, {
             const substr = found2.slice(0, 3);
             const item = substr.forEach((id) => set1.add(id.id));
           }
-          const obj2 = set1(10084);
-          return set1(10084).generateRowsForQuery({ query, omitUserIds, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: tmp, suggestedChannelIds: set1, inviteTargetType });
+          const obj2 = set1(10164);
+          return set1(10164).generateRowsForQuery({ query, omitUserIds, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: tmp, suggestedChannelIds: set1, inviteTargetType });
         })(query);
         let item = rows.forEach((item, index) => {
           const result = map.set(item, { index });
@@ -333,9 +333,9 @@ const inviteSuggestionsStore = new InviteSuggestionsStore(DispatcherDefault, {
             const nextResult = iter.next();
             while (iter !== undefined) {
               let tmp5 = nextResult;
-              let tmp8 = nextResult.type !== id(10084).RowTypes.DM;
+              let tmp8 = nextResult.type !== id(10164).RowTypes.DM;
               if (tmp8) {
-                tmp8 = tmp5.type !== id(10084).RowTypes.FRIEND;
+                tmp8 = tmp5.type !== id(10164).RowTypes.FRIEND;
               }
               if (!tmp8) {
                 let member = GuildMemberRequesterStore.requestMember(tmp, tmp5.item.id);

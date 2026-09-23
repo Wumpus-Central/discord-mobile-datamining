@@ -1,26 +1,26 @@
-// === Module 16952: VibegrationsEffortPresets ===
+// === Module 17004: VibegrationsEffortPresets ===
 
-// Module 16952 (VibegrationsEffortPresets)
+// Module 17004 (VibegrationsEffortPresets)
 import util from "util" /* 1115 */;
-import _modDef3678 from "module_3678" /* 3678 */;
-import VibegrationsModelLabels from "VibegrationsModelLabels" /* 16953 */;
+import _modDef3712 from "module_3712" /* 3712 */;
+import VibegrationsModelLabels from "VibegrationsModelLabels" /* 17005 */;
 import size from "module_2" /* 2 */;
 
 const items = [
   {
-    model: "gpt-5.6-luna",
+    model: "gpt-6-luna",
     thinking: "xhigh",
     summary() {
       const intl = util.intl;
-      return intl.string(_modDef3678.Mo0a1m);
+      return intl.string(_modDef3712.Mo0a1m);
     }
   },
   {
-    model: "gpt-5.6-sol",
+    model: "gpt-6-sol",
     thinking: "high",
     summary() {
       const intl = util.intl;
-      return intl.string(_modDef3678.dkt78K);
+      return intl.string(_modDef3712.dkt78K);
     }
   },
   {
@@ -28,14 +28,14 @@ const items = [
     thinking: "medium",
     summary() {
       const intl = util.intl;
-      return intl.string(_modDef3678.Ly6zYL);
+      return intl.string(_modDef3712.Ly6zYL);
     }
   }
 ];
 let tmp2 = items[1];
 if (tmp2 == null) {
   const obj2 = {
-    model: "gpt-5.6-sol",
+    model: "gpt-6-sol",
     thinking: "high",
     summary() {
         return "";
@@ -138,7 +138,7 @@ export const describeVibegrationsModelSettings = function describeVibegrationsMo
   if (true === fast) {
     const intl = util.intl;
     const _HermesInternal = HermesInternal;
-    combined1 = "" + combined + " \u00B7 " + intl.string(_modDef3678.qOoAsd);
+    combined1 = "" + combined + " \u00B7 " + intl.string(_modDef3712.qOoAsd);
   }
   return combined1;
 };

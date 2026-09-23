@@ -1,13 +1,13 @@
-// === Module 7812: CollectiblesMarketingCoachmarkRecord ===
+// === Module 7895: CollectiblesMarketingCoachmarkRecord ===
 
-// Module 7812 (CollectiblesMarketingCoachmarkRecord)
-import CollectiblesMarketingType from "CollectiblesMarketingType" /* 7810 */;
+// Module 7895 (CollectiblesMarketingCoachmarkRecord)
+import CollectiblesMarketingType from "CollectiblesMarketingType" /* 7893 */;
 import size from "module_2" /* 2 */;
 
 const prototype = function CollectiblesMarketingCoachmarkRecord(arg0) {
   const obj = Object.create(new.target.prototype);
   obj.type = CollectiblesMarketingType.CollectiblesMarketingType.COACHMARK;
-  ({ title: tmp.title, body: tmp.body, assetDark: tmp.assetDark, assetLight: tmp.assetLight, version: tmp.version, refTargetBackground: tmp.refTargetBackground, badgeIcon: tmp.badgeIcon, badgeText: tmp.badgeText, badgeCountdownEndsAt: tmp.badgeCountdownEndsAt, buttonLabel: tmp.buttonLabel } = arg0);
+  ({ title: tmp.title, body: tmp.body, assetDark: tmp.assetDark, assetLight: tmp.assetLight, version: tmp.version, refTargetBackground: tmp.refTargetBackground, badgeIcon: tmp.badgeIcon, badgeText: tmp.badgeText, badgeCountdownEndsAt: tmp.badgeCountdownEndsAt, buttonLabel: tmp.buttonLabel, showHoverGradient: tmp.showHoverGradient } = arg0);
   return obj;
 }.prototype;
 prototype["fromServer"] = function fromServer(badge_countdown_ends_at) {
@@ -20,11 +20,11 @@ prototype["fromServer"] = function fromServer(badge_countdown_ends_at) {
     date = new Date(badge_countdown_ends_at.badge_countdown_ends_at);
   }
   obj.badgeCountdownEndsAt = date;
-  obj.buttonLabel = badge_countdown_ends_at.button_label;
+  ({ button_label: obj.buttonLabel, show_hover_gradient: obj.showHoverGradient } = badge_countdown_ends_at);
   if (typeof prototype === "function") {
     const obj2 = Object.create(prototype.prototype);
     obj2.type = CollectiblesMarketingType.CollectiblesMarketingType.COACHMARK;
-    ({ title: tmp6.title, body: tmp6.body, assetDark: tmp6.assetDark, assetLight: tmp6.assetLight, version: tmp6.version, refTargetBackground: tmp6.refTargetBackground, badgeIcon: tmp6.badgeIcon, badgeText: tmp6.badgeText, badgeCountdownEndsAt: tmp6.badgeCountdownEndsAt, buttonLabel: tmp6.buttonLabel } = obj);
+    ({ title: tmp6.title, body: tmp6.body, assetDark: tmp6.assetDark, assetLight: tmp6.assetLight, version: tmp6.version, refTargetBackground: tmp6.refTargetBackground, badgeIcon: tmp6.badgeIcon, badgeText: tmp6.badgeText, badgeCountdownEndsAt: tmp6.badgeCountdownEndsAt, buttonLabel: tmp6.buttonLabel, showHoverGradient: tmp6.showHoverGradient } = obj);
     return obj2;
   } else {
     throw new TypeError("Trying to call a non-function");

@@ -1,13 +1,13 @@
-// === Module 11262: ChannelTabsStore ===
+// === Module 11338: ChannelTabsStore ===
 
-// Module 11262 (ChannelTabsStore)
+// Module 11338 (ChannelTabsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1365 */;
-import TabsExperimentDefault from "TabsExperiment" /* 11263 */;
+import TabsExperimentDefault from "TabsExperiment" /* 11339 */;
 import _slicedToArray from "module_32" /* 32 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2096 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4578 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4648 */;
 
 require = fn;
 function handleChannelDelete(channel) {

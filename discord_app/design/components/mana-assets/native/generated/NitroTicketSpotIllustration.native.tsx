@@ -1,9 +1,9 @@
-// === Module 6546: NitroTicketSpotIllustration ===
+// === Module 6630: NitroTicketSpotIllustration ===
 
-// Module 6546 (NitroTicketSpotIllustration)
+// Module 6630 (NitroTicketSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5806 */;
-import _modDef6547 from "module_6547" /* 6547 */;
+import FastImageDefault from "FastImage" /* 5890 */;
+import _modDef6631 from "module_6631" /* 6631 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const NitroTicketSpotIllustration = function NitroTicketSpotIllustration(
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6547 };
+  const obj2 = { uri: _modDef6631 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

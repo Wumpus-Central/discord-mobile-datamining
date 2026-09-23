@@ -1,13 +1,13 @@
-// === Module 5277: VibegrationsTypes ===
+// === Module 5361: VibegrationsTypes ===
 
-// Module 5277 (VibegrationsTypes)
+// Module 5361 (VibegrationsTypes)
 import size from "module_2" /* 2 */;
 
 const frozen = Object.freeze({ PUBLIC: 1, SHAREABLE: 2 });
 const set = new Set(["image/png", "image/jpeg", "image/gif", "image/webp"]);
 let c2 = 5242880;
 let c3 = 52428800;
-const items = [{ id: "claude-fable-5-1", label: "Claude Fable 5.1", provider: "anthropic" }, { id: "claude-opus-5", label: "Claude Opus 5", provider: "anthropic" }, { id: "claude-sonnet-5", label: "Claude Sonnet 5", provider: "anthropic" }, { id: "claude-haiku-4-5", label: "Claude Haiku 4.5", provider: "anthropic" }, { id: "gpt-5.6-sol", label: "GPT-5.6 Sol", provider: "openai", supports_fast: true }, { id: "gpt-5.6-terra", label: "GPT-5.6 Terra", provider: "openai", supports_fast: true }, { id: "gpt-5.6-luna", label: "GPT-5.6 Luna", provider: "openai", supports_fast: true }, { id: "gpt-6-astra", label: "GPT-6 Astra", provider: "openai", supports_fast: true }, { id: "xai/grok-4.7", label: "Grok 4.7", provider: "xai" }];
+const items = [{ id: "claude-fable-5-1", label: "Claude Fable 5.1", provider: "anthropic" }, { id: "claude-opus-5-5", label: "Claude Opus 5.5", provider: "anthropic" }, { id: "claude-sonnet-5", label: "Claude Sonnet 5", provider: "anthropic" }, { id: "claude-haiku-4-5", label: "Claude Haiku 4.5", provider: "anthropic" }, { id: "gpt-6-astra", label: "GPT-6 Astra", provider: "openai", supports_fast: true }, { id: "gpt-6-sol", label: "GPT-6 Sol", provider: "openai", supports_fast: true }, { id: "gpt-6-luna", label: "GPT-6 Luna", provider: "openai", supports_fast: true }, { id: "xai/grok-4.7", label: "Grok 4.7", provider: "xai" }];
 let obj = { main: items, subagent: items, thinking: ["low", "medium", "high", "xhigh", "max"] };
 const items1 = [{ id: "deepseek/deepseek-flash", label: "DeepSeek V4.1 Flash", provider: "deepseek" }, { id: "moonshotai/kimi-k3", label: "Kimi K3", provider: "moonshotai" }];
 const result = size.fileFinishedImporting("modules/vibegrations/VibegrationsTypes.tsx");

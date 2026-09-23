@@ -1,23 +1,23 @@
-// === Module 10487: FavoritesActionCreators ===
+// === Module 10566: FavoritesActionCreators ===
 
-// Module 10487 (FavoritesActionCreators)
+// Module 10566 (FavoritesActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1115 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
 import wrappers from "wrappers" /* 1217 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2025 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5109 */;
-import FavoritesHooks from "FavoritesHooks" /* 10488 */;
-import openFavoritesGuildLimitUpsellDefault from "openFavoritesGuildLimitUpsell" /* 10491 */;
-import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10497 */;
-import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 10501 */;
-import FavoritesGuildIntroPopover from "FavoritesGuildIntroPopover" /* 10502 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5193 */;
+import FavoritesHooks from "FavoritesHooks" /* 10567 */;
+import openFavoritesGuildLimitUpsellDefault from "openFavoritesGuildLimitUpsell" /* 10570 */;
+import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10576 */;
+import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 10580 */;
+import FavoritesGuildIntroPopover from "FavoritesGuildIntroPopover" /* 10581 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 2042 */;
-import PermissionStore from "PermissionStore" /* 4396 */;
+import PermissionStore from "PermissionStore" /* 4462 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2096 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4578 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4648 */;
 import FavoriteStore from "FavoriteStore" /* 2045 */;
 
 const require = globalThis.__r;
@@ -357,7 +357,7 @@ let closure_28 = async function _addFavoriteChannelsToParent(arg0) {
                                   let tmp43 = closure_2_18(favoriteChannels.favoriteChannels);
                                   let tmp46 = closure_2_19(favoriteChannels.favoriteChannels, tmp7);
                                   flag = true;
-                                  let obj3 = closure_0(10497);
+                                  let obj3 = closure_0(10576);
                                   let type;
                                   if (tmp31 != null) {
                                     type = tmp31.type;
@@ -377,7 +377,7 @@ let closure_28 = async function _addFavoriteChannelsToParent(arg0) {
                                 if (flag) {
                                   let BoolValue = closure_0(1217).BoolValue;
                                   favoriteChannels.guildVisible = BoolValue.create({ value: true });
-                                  let obj4 = closure_0(10497);
+                                  let obj4 = closure_0(10576);
                                   let str = "auto";
                                   let result1 = obj4.trackFavoritesGuildVisibilitySettingToggled("auto", true);
                                 }
@@ -531,7 +531,7 @@ let closure_31 = async function _addFavoriteCategory(arg0) {
                             const obj2 = { limit: tmp5, canUpsell: false };
                             let tmp6 = obj2;
                           } else {
-                            const favoritesAccess = closure_0(10488).getFavoritesAccess();
+                            const favoritesAccess = closure_0(10567).getFavoritesAccess();
                             const favoriteLimit = favoritesAccess.favoriteLimit;
                             tmp6 = null;
                             if (favoriteLimit > 0) {
@@ -545,12 +545,12 @@ let closure_31 = async function _addFavoriteCategory(arg0) {
                                 tmp4Result = closure_1(12);
                               }
                             }
-                            const tmpResult = closure_0(10488);
+                            const tmpResult = closure_0(10567);
                           }
                           if (null != tmp6) {
                             const limit = tmp6.limit;
                             if (tmp6.canUpsell) {
-                              closure_1(10491)(limit);
+                              closure_1(10570)(limit);
                             } else {
                               const obj4 = { title: null, body: null };
                               const intl = closure_0(1115).intl;
@@ -558,8 +558,8 @@ let closure_31 = async function _addFavoriteCategory(arg0) {
                               const intl2 = closure_0(1115).intl;
                               const obj5 = { count: limit };
                               obj4.body = intl2.formatToPlainString(closure_0(1115).t.JaIyFi, obj5);
-                              closure_1(5109).show(obj4);
-                              const tmp4Result2 = closure_1(5109);
+                              closure_1(5193).show(obj4);
+                              const tmp4Result2 = closure_1(5193);
                             }
                             return false;
                           } else {
@@ -821,10 +821,10 @@ export const setFavoritesAutoAddJoinedThreads = function setFavoritesAutoAddJoin
               const intl2 = util.intl;
               const obj2 = { count: tmp11.limit };
               obj.body = intl2.formatToPlainString(util.t.JaIyFi, obj2);
-              tmp7(5109).show(obj);
-              const tmp7Result2 = tmp7(5109);
+              tmp7(5193).show(obj);
+              const tmp7Result2 = tmp7(5193);
             }
-            str = tmp7(10491)(favoritesAccess);
+            str = tmp7(10570)(favoritesAccess);
             obj5 = _modDef12;
           }
         }

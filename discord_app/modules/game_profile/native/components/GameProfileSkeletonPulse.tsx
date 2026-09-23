@@ -1,15 +1,15 @@
-// === Module 9019: GameProfileSkeletonPulse ===
+// === Module 9090: GameProfileSkeletonPulse ===
 
-// Module 9019 (GameProfileSkeletonPulse)
+// Module 9090 (GameProfileSkeletonPulse)
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4749 */;
+import AccessibilityStore from "AccessibilityStore" /* 4819 */;
 
 const require = fn;
 let c4 = 1300;
-const Easing = fn(4493).Easing;
-const inOutResult = Easing.inOut(fn(4493).Easing.quad);
+const Easing = fn(4559).Easing;
+const inOutResult = Easing.inOut(fn(4559).Easing.quad);
 const hasOwnProperty = inOutResult;
-const ReanimatedRexport = fn(4493);
+const ReanimatedRexport = fn(4559);
 const pulsePhase = ReanimatedRexport.makeMutable(0);
 let c7 = 0;
 let c8 = false;
@@ -134,5 +134,5 @@ export const useSkeletonPulseStyle = function useSkeletonPulseStyle(animationDel
   P.__closure = { shouldReduceMotion: stateFromStores, MAX_OPACITY: 0.1, getPulseOpacity, pulsePhase, phaseOffset: result };
   P.__workletHash = 3992024948852;
   P.__initData = __initData;
-  return stateFromStores(4493).useAnimatedStyle(P);
+  return stateFromStores(4559).useAnimatedStyle(P);
 };

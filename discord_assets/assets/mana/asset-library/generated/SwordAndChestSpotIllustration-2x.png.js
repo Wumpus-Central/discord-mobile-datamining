@@ -1,6 +1,6 @@
-// === Module 6775: ? ===
+// === Module 6859: ? ===
 
-// Module 6775
+// Module 6859
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SwordAndChestSpotIllustration-2x.png.js");

@@ -1,14 +1,14 @@
-// === Module 12023: useCanFulfillStreamRequest ===
+// === Module 12100: useCanFulfillStreamRequest ===
 
-// Module 12023 (useCanFulfillStreamRequest)
+// Module 12100 (useCanFulfillStreamRequest)
 import RunningGameStore from "RunningGameStore" /* 1999 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4779 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4849 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2042 */;
 import GuildStore from "GuildStore" /* 2064 */;
-import PermissionStore from "PermissionStore" /* 4396 */;
-import PresenceStore from "PresenceStore" /* 4797 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4780 */;
+import PermissionStore from "PermissionStore" /* 4462 */;
+import PresenceStore from "PresenceStore" /* 4867 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4850 */;
 
 const require = globalThis.__r;
 

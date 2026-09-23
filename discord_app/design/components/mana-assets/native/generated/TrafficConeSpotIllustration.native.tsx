@@ -1,9 +1,9 @@
-// === Module 6788: TrafficConeSpotIllustration ===
+// === Module 6872: TrafficConeSpotIllustration ===
 
-// Module 6788 (TrafficConeSpotIllustration)
+// Module 6872 (TrafficConeSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5806 */;
-import _modDef6789 from "module_6789" /* 6789 */;
+import FastImageDefault from "FastImage" /* 5890 */;
+import _modDef6873 from "module_6873" /* 6873 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const TrafficConeSpotIllustration = function TrafficConeSpotIllustration(
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6789 };
+  const obj2 = { uri: _modDef6873 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,22 +1,22 @@
-// === Module 13297: ContentInventoryActivityImageUtils ===
+// === Module 13379: ContentInventoryActivityImageUtils ===
 
-// Module 13297 (ContentInventoryActivityImageUtils)
+// Module 13379 (ContentInventoryActivityImageUtils)
 import _mod19 from "module_19" /* 19 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import Constants2 from "Constants" /* 2004 */;
-import PlatformsDefault from "Platforms" /* 5502 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7415 */;
-import useGame from "useGame" /* 7553 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8412 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 8616 */;
-import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8619 */;
-import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 9634 */;
-import useEntryActivityAndApplicationDefault from "useEntryActivityAndApplication" /* 13298 */;
-import isOnXboxDefault from "isOnXbox" /* 13300 */;
-import isOnPlayStationDefault from "isOnPlayStation" /* 13301 */;
-import ApplicationStore from "ApplicationStore" /* 4984 */;
+import PlatformsDefault from "Platforms" /* 5586 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7499 */;
+import useGame from "useGame" /* 7637 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8494 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8687 */;
+import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8690 */;
+import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 9707 */;
+import useEntryActivityAndApplicationDefault from "useEntryActivityAndApplication" /* 13380 */;
+import isOnXboxDefault from "isOnXbox" /* 13382 */;
+import isOnPlayStationDefault from "isOnPlayStation" /* 13383 */;
+import ApplicationStore from "ApplicationStore" /* 5054 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

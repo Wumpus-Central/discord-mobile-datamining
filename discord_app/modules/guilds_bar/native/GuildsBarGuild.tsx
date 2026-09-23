@@ -1,28 +1,28 @@
-// === Module 16666: GuildsBarGuild ===
+// === Module 16718: GuildsBarGuild ===
 
-// Module 16666 (GuildsBarGuild)
+// Module 16718 (GuildsBarGuild)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import spring from "spring" /* 5186 */;
-import GuildIcon from "GuildIcon" /* 5803 */;
-import getGuildsBarGuildMenuItemsDefault from "getGuildsBarGuildMenuItems" /* 16636 */;
-import getGuildsBarGuildAccessibilityActionsDefault from "getGuildsBarGuildAccessibilityActions" /* 16689 */;
+import spring from "spring" /* 5270 */;
+import GuildIcon from "GuildIcon" /* 5887 */;
+import getGuildsBarGuildMenuItemsDefault from "getGuildsBarGuildMenuItems" /* 16688 */;
+import getGuildsBarGuildAccessibilityActionsDefault from "getGuildsBarGuildAccessibilityActions" /* 16741 */;
 import noop from "module_19" /* 19 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5107 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7875 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5191 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7958 */;
 import GuildStore from "GuildStore" /* 2064 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4578 */;
-import SortedGuildStore from "SortedGuildStore" /* 5657 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4648 */;
+import SortedGuildStore from "SortedGuildStore" /* 5741 */;
 
 require = fn;
 const GuildRecord = fn(2060);
 ({ getGuildIconSource: closure_4, getGuildIconURL: hasOwnProperty } = GuildRecord);
-const useItemDragState = fn(16635).useItemDragState;
-const TRANSITION_PHYSICS = fn(16632).TRANSITION_PHYSICS;
+const useItemDragState = fn(16687).useItemDragState;
+const TRANSITION_PHYSICS = fn(16684).TRANSITION_PHYSICS;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ Fragment: closure_14, jsxs: closure_15, jsx: closure_16 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj = { guildIcon: null };
 let size = { width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
 obj.guildIcon = size;

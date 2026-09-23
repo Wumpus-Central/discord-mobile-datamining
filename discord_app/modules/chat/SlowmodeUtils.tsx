@@ -1,10 +1,10 @@
-// === Module 7927: SlowmodeUtils ===
+// === Module 8009: SlowmodeUtils ===
 
-// Module 7927 (SlowmodeUtils)
+// Module 8009 (SlowmodeUtils)
 import DurationsDefault from "Durations" /* 1091 */;
 import util from "util" /* 1115 */;
-import _modDef4348 from "module_4348" /* 4348 */;
-import PermissionStore from "PermissionStore" /* 4396 */;
+import _modDef4414 from "module_4414" /* 4414 */;
+import PermissionStore from "PermissionStore" /* 4462 */;
 
 const require = globalThis.__r;
 
@@ -29,20 +29,20 @@ export const getSlowmodeIndicatorText = function getSlowmodeIndicatorText(stateF
     const intl2 = util.intl;
     return intl2.string(util.t["8+NidX"]);
   } else if (stateFromStores >= DurationsDefault.Millis.HOUR) {
-    const time2 = _modDef4348.duration(stateFromStores);
+    const time2 = _modDef4414.duration(stateFromStores);
     const _HermesInternal3 = HermesInternal;
     const combined = "" + time2.minutes();
-    const tmp2Result = _modDef4348;
+    const tmp2Result = _modDef4414;
     const _HermesInternal4 = HermesInternal;
     const combined1 = "" + time2.seconds();
     const padStartResult = combined.padStart(2, "0");
     const _HermesInternal5 = HermesInternal;
     return "" + time2.hours() + ":" + padStartResult + ":" + combined1.padStart(2, "0");
   } else if (stateFromStores > 0) {
-    const time = _modDef4348.duration(stateFromStores);
+    const time = _modDef4414.duration(stateFromStores);
     const _HermesInternal = HermesInternal;
     const combined2 = "" + time.seconds();
-    const tmp2Result2 = _modDef4348;
+    const tmp2Result2 = _modDef4414;
     const _HermesInternal2 = HermesInternal;
     return "" + time.minutes() + ":" + combined2.padStart(2, "0");
   } else {

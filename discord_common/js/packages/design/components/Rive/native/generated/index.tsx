@@ -1,6 +1,6 @@
-// === Module 4485: ? ===
+// === Module 4551: ? ===
 
-// Module 4485
+// Module 4551
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -62,11 +62,19 @@ for (const key10070 in require("OmnibuttonCoachmarkRive")) {
   arg5[key10070] = require("OmnibuttonCoachmarkRive")[key10070];
   continue;
 }
-for (const key10074 in require("TeenScreenTimeRive")) {
-  arg5[key10074] = require("TeenScreenTimeRive")[key10074];
+for (const key10074 in require("OrbsIllustration_HandsRive")) {
+  arg5[key10074] = require("OrbsIllustration_HandsRive")[key10074];
   continue;
 }
-for (const key10078 in require("ThemeAwareNitroWishlistingWumpusRive")) {
-  arg5[key10078] = require("ThemeAwareNitroWishlistingWumpusRive")[key10078];
+for (const key10078 in require("QuestBar_2DOrbsRive")) {
+  arg5[key10078] = require("QuestBar_2DOrbsRive")[key10078];
+  continue;
+}
+for (const key10082 in require("TeenScreenTimeRive")) {
+  arg5[key10082] = require("TeenScreenTimeRive")[key10082];
+  continue;
+}
+for (const key10086 in require("ThemeAwareNitroWishlistingWumpusRive")) {
+  arg5[key10086] = require("ThemeAwareNitroWishlistingWumpusRive")[key10086];
   continue;
 }

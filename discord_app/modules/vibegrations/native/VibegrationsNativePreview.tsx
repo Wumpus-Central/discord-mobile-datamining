@@ -1,24 +1,24 @@
-// === Module 16976: VibegrationsNativePreview ===
+// === Module 17033: VibegrationsNativePreview ===
 
-// Module 16976 (VibegrationsNativePreview)
+// Module 17033 (VibegrationsNativePreview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import _modDef3678 from "module_3678" /* 3678 */;
-import Text_Text from "Text/Text" /* 4753 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4770 */;
-import components_Button_Button from "components/Button/Button" /* 5187 */;
-import Card from "Card" /* 5826 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7357 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7872 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 9206 */;
-import FramesNativeManagerDefault from "FramesNativeManager" /* 9568 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9577 */;
+import _modDef3712 from "module_3712" /* 3712 */;
+import Text_Text from "Text/Text" /* 4823 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4840 */;
+import components_Button_Button from "components/Button/Button" /* 5271 */;
+import Card from "Card" /* 5910 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7441 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7955 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 9277 */;
+import FramesNativeManagerDefault from "FramesNativeManager" /* 9641 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9650 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 9318 */;
+import FramesStore from "FramesStore" /* 9389 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2042 */;
-import ReadStateStore from "ReadStateStore" /* 4772 */;
+import ReadStateStore from "ReadStateStore" /* 4842 */;
 import AppStateStore from "AppStateStore" /* 1979 */;
 
 require = fn;
@@ -178,9 +178,9 @@ function PreviewWidget(applicationId) {
   if (applicationId.revoked) {
     const obj2 = { title: null, body: null };
     const intl = tmp2(1115).intl;
-    obj2.title = intl.string(_modDef3678.SGHO9K);
+    obj2.title = intl.string(_modDef3712.SGHO9K);
     const intl2 = tmp2(1115).intl;
-    obj2.body = intl2.string(_modDef3678["pV/rS2"]);
+    obj2.body = intl2.string(_modDef3712["pV/rS2"]);
     let tmp6Result = closure_24(StatusCard, obj2);
   } else {
     const obj3 = { contentContainerStyle: tmp.widget, children: null };
@@ -200,7 +200,7 @@ function PreviewBot(previewApplicationId) {
   let stateFromStores1;
   let stateFromStores2;
   let tmp = closure_26();
-  const application = id(7410).useApplication(previewApplicationId.previewApplicationId);
+  const application = id(7494).useApplication(previewApplicationId.previewApplicationId);
   const data = application.data;
   id = undefined;
   if (data != null) {
@@ -212,7 +212,7 @@ function PreviewBot(previewApplicationId) {
   if (id == null) {
     id = null;
   }
-  let obj = id(7410);
+  let obj = id(7494);
   const items = [ChannelStore];
   const items1 = [id];
   stateFromStores = id(504).useStateFromStores(items, () => {
@@ -239,8 +239,8 @@ function PreviewBot(previewApplicationId) {
         if (!closure_3) {
           c0 = false;
           const obj2 = { recipientIds: tmp, navigateToChannel: false };
-          const obj = stateFromStores(4770);
-          stateFromStores(4770).openPrivateChannel(obj2).catch(() => {
+          const obj = stateFromStores(4840);
+          stateFromStores(4840).openPrivateChannel(obj2).catch(() => {
             if (!c0) {
               closure_2(id);
             }
@@ -300,16 +300,16 @@ function PreviewBot(previewApplicationId) {
   if (!application.isLoading) {
     let obj2 = { title: null, body: null, children: null };
     const intl = tmp2(1115).intl;
-    obj2.title = intl.string(stateFromStores(3678).bl4eBc);
+    obj2.title = intl.string(stateFromStores(3712).bl4eBc);
     const intl2 = tmp2(1115).intl;
-    obj2.body = intl2.string(stateFromStores(3678)["4iyrze"]);
+    obj2.body = intl2.string(stateFromStores(3712)["4iyrze"]);
     let tmp19Result = null;
     if (tmp9) {
       const obj4 = { variant: "secondary", size: "sm", text: null, onPress: null };
       const intl3 = tmp2(1115).intl;
       obj4.text = intl3.string(tmp2(1115).t["5911Lb"]);
       obj4.onPress = callback;
-      tmp19Result = closure_24(tmp2(5187).Button, obj4);
+      tmp19Result = closure_24(tmp2(5271).Button, obj4);
     }
     obj2.children = tmp19Result;
     return closure_24(StatusCard, obj2);
@@ -322,10 +322,10 @@ function PreviewBot(previewApplicationId) {
   } else {
     const obj6 = { style: tmp.dm, children: null };
     const obj7 = { guildId, channelId: stateFromStores.id, chatInputRef: ref, screenIndex: "vibegrations-preview", alwaysRespectKeyboard: true, disableGradient: true };
-    const items8 = [closure_24(stateFromStores(11607), obj7, stateFromStores.id), ];
+    const items8 = [closure_24(stateFromStores(11683), obj7, stateFromStores.id), ];
     let tmp29Result = null;
     if (tmp2Result6.isAndroid()) {
-      tmp29Result = closure_24(tmp2(16988).PortalKeyboardRenderer, { portal: true });
+      tmp29Result = closure_24(tmp2(17045).PortalKeyboardRenderer, { portal: true });
     }
     items8[1] = tmp29Result;
     obj6.children = items8;
@@ -336,15 +336,15 @@ function PreviewBot(previewApplicationId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const vibegrationsDesignFeedbackStore = fn(16947);
+const vibegrationsDesignFeedbackStore = fn(16999);
 ({ exitVibegrationsDesignFeedback: map1, useVibegrationsDesignFeedback: closure_14 } = vibegrationsDesignFeedbackStore);
 const Constants = fn(1074);
 ({ AnalyticsObjects: closure_15, AnalyticsObjectTypes: closure_16, AnalyticsSections: closure_17, AppStates: closure_18, ME: closure_19 } = Constants);
-const FramesConstants = fn(9319);
+const FramesConstants = fn(9390);
 ({ FrameLayoutModes: closure_20, isLaunched: closure_21, MAIN_SURFACE: closure_22, makeFrameId: closure_23 } = FramesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_24, jsxs: closure_25 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { frame: { flex: 1 }, centered: { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24 }, card: { alignSelf: "stretch" }, cardBody: null, cardCopy: null, cardText: null, widget: null, controlOverlay: null, controlText: null, dm: null };
 let obj3 = { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24 };
 obj2.cardBody = { padding: nativeDefault.space.PX_16, alignItems: "center", gap: nativeDefault.space.PX_12 };
@@ -367,12 +367,12 @@ export default function VibegrationsNativePreview(arg0) {
   if (null != permissionsGate) {
     const obj2 = { title: null, body: null, children: null };
     const intl5 = util.intl;
-    obj2.title = intl5.string(_modDef3678.DYwf2n);
+    obj2.title = intl5.string(_modDef3712.DYwf2n);
     const intl6 = util.intl;
-    obj2.body = intl6.string(_modDef3678.WWj3pN);
+    obj2.body = intl6.string(_modDef3712.WWj3pN);
     const obj3 = { variant: "primary", size: "sm", text: null, onPress: null, loading: null };
     const intl7 = util.intl;
-    obj3.text = intl7.string(_modDef3678["CRfE/E"]);
+    obj3.text = intl7.string(_modDef3712["CRfE/E"]);
     ({ onReviewPermissions: obj7.onPress, loading: obj7.loading } = permissionsGate);
     obj2.children = __initData4(components_Button_Button.Button, obj3);
     return __initData4(StatusCard, obj2);
@@ -383,9 +383,9 @@ export default function VibegrationsNativePreview(arg0) {
     } else {
       const obj5 = { title: null, body: null };
       const intl3 = util.intl;
-      obj5.title = intl3.string(_modDef3678.FHOJiH);
+      obj5.title = intl3.string(_modDef3712.FHOJiH);
       const intl4 = util.intl;
-      obj5.body = intl4.string(_modDef3678["1yLQoV"]);
+      obj5.body = intl4.string(_modDef3712["1yLQoV"]);
       tmp14Result = __initData4(StatusCard, obj5);
     }
     return tmp14Result;
@@ -402,9 +402,9 @@ export default function VibegrationsNativePreview(arg0) {
   } else if (null === mode) {
     const obj = { title: null, body: null };
     const intl = util.intl;
-    obj.title = intl.string(_modDef3678.FHOJiH);
+    obj.title = intl.string(_modDef3712.FHOJiH);
     const intl2 = util.intl;
-    obj.body = intl2.string(_modDef3678["1yLQoV"]);
+    obj.body = intl2.string(_modDef3712["1yLQoV"]);
     return __initData4(StatusCard, obj);
   }
 };

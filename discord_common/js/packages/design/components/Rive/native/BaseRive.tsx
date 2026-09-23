@@ -1,11 +1,11 @@
-// === Module 4487: BaseRive ===
+// === Module 4553: BaseRive ===
 
-// Module 4487 (BaseRive)
-import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4477 */;
-import DataBindByName from "DataBindByName" /* 4488 */;
-import ManaContext from "ManaContext" /* 4538 */;
-import useRivePlayback from "useRivePlayback" /* 4539 */;
-import RiveTypes from "RiveTypes" /* 4540 */;
+// Module 4553 (BaseRive)
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4543 */;
+import DataBindByName from "DataBindByName" /* 4554 */;
+import ManaContext from "ManaContext" /* 4604 */;
+import useRivePlayback from "useRivePlayback" /* 4605 */;
+import RiveTypes from "RiveTypes" /* 4606 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

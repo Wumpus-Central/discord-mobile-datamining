@@ -1,9 +1,9 @@
-// === Module 9528: AppLauncherStore ===
+// === Module 9601: AppLauncherStore ===
 
-// Module 9528 (AppLauncherStore)
+// Module 9601 (AppLauncherStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 9529 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9602 */;
 
 require = fn;
 function handleDismissWithDismissed() {
@@ -28,7 +28,7 @@ function handleSetActiveCommand() {
   obj.initialState = undefined;
   obj.activeChannelId = null;
 }
-const obj = { show: false, entrypoint: fn(9529).AppLauncherEntrypoint.NONE, lastShownEntrypoint: fn(9529).AppLauncherEntrypoint.NONE, activeViewType: null, activeChannelId: null, closeReason: fn(9529).AppLauncherCloseReason.DISMISSED, initialState: "padding" };
+const obj = { show: false, entrypoint: fn(9602).AppLauncherEntrypoint.NONE, lastShownEntrypoint: fn(9602).AppLauncherEntrypoint.NONE, activeViewType: null, activeChannelId: null, closeReason: fn(9602).AppLauncherCloseReason.DISMISSED, initialState: "padding" };
 const Store = initializeDefault.Store;
 class AppLauncherStore extends Store {
 }

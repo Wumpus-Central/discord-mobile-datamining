@@ -1,9 +1,9 @@
-// === Module 16668: isHomeDrawerChannelMuted ===
+// === Module 16720: isHomeDrawerChannelMuted ===
 
-// Module 16668 (isHomeDrawerChannelMuted)
+// Module 16720 (isHomeDrawerChannelMuted)
 import initialize from "initialize" /* 504 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4398 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4938 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4464 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5008 */;
 
 require = fn;
 const isThread = fn(2046).isThread;

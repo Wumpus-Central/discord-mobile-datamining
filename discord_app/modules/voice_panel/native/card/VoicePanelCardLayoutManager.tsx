@@ -1,12 +1,12 @@
-// === Module 12532: VoicePanelCardLayoutManager ===
+// === Module 12608: VoicePanelCardLayoutManager ===
 
-// Module 12532 (VoicePanelCardLayoutManager)
+// Module 12608 (VoicePanelCardLayoutManager)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11621 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11697 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4773 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4843 */;
 
 const require = globalThis.__r;
 
@@ -21,12 +21,12 @@ function getTargetCardSize(windowWidth) {
   return Math.max(React6, (windowWidth - safeAreaLeft - safeAreaRight - gutter * (num - 1)) / num);
 }
 const PixelRatio = fn(17).PixelRatio;
-const VoicePanelConstants = fn(12530);
+const VoicePanelConstants = fn(12606);
 const VoicePanelCardItemType = VoicePanelConstants.VoicePanelCardItemType;
 ({ BASE_TARGET_CARD_SIZE: closure_8, VoicePanelCTACardDimensionKeys: closure_9, VoicePanelCTACardDimensions: c10, VOICE_PANEL_CHUNK_DIVISOR: closure_11 } = VoicePanelConstants);
-const VoicePanelCardConstants = fn(12533);
+const VoicePanelCardConstants = fn(12609);
 ({ EDGE_GUTTER: closure_12, CALL_TILE_GUTTER: map1 } = VoicePanelCardConstants);
-const ParticipantTypes = fn(4778).ParticipantTypes;
+const ParticipantTypes = fn(4848).ParticipantTypes;
 let closure_15 = { id: "invalid", type: VoicePanelCardItemType.PARTICIPANT, x: 0, y: 0, width: 0, height: 0, zIndex: 0 };
 let set = new Set();
 let closure_17 = { enlargeSquare: false, fillAspectRatio: false };

@@ -1,7 +1,7 @@
-// === Module 8103: MobileEmojiPickerUpsellRestyleExperiment ===
+// === Module 8185: MobileEmojiPickerUpsellRestyleExperiment ===
 
-// Module 8103 (MobileEmojiPickerUpsellRestyleExperiment)
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 8099 */;
+// Module 8185 (MobileEmojiPickerUpsellRestyleExperiment)
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 8181 */;
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

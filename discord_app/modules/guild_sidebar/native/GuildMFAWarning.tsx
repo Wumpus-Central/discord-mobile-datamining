@@ -1,13 +1,13 @@
-// === Module 16549: GuildMFAWarning ===
+// === Module 16601: GuildMFAWarning ===
 
-// Module 16549 (GuildMFAWarning)
+// Module 16601 (GuildMFAWarning)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4753 */;
-import Pressables from "Pressables" /* 5341 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10381 */;
-import _modDef16550 from "module_16550" /* 16550 */;
+import Text_Text from "Text/Text" /* 4823 */;
+import Pressables from "Pressables" /* 5425 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10460 */;
+import _modDef16602 from "module_16602" /* 16602 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -79,7 +79,7 @@ const Constants = fn(1074);
 ({ HelpdeskArticles: hasOwnProperty, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { MFAWarning: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 10, alignItems: "center" }, MFAWarningIcon: { marginVertical: 10, width: 98, height: 53 }, MFAWarningLink: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 10, alignItems: "center" };
 obj2.MFAWarningLink = { color: nativeDefault.unsafe_rawColors.BLUE_345, fontFamily: Fonts.PRIMARY_SEMIBOLD };
@@ -90,7 +90,7 @@ const result = size.fileFinishedImporting("modules/guild_sidebar/native/GuildMFA
 export default function GuildMFAWarning() {
   const tmp = closure_8();
   const obj = { accessibilityRole: "button", style: tmp.MFAWarning, onPress: handlePress, children: null };
-  const items = [timestampProducer(Image, { style: tmp.MFAWarningIcon, source: _modDef16550 }), ];
+  const items = [timestampProducer(Image, { style: tmp.MFAWarningIcon, source: _modDef16602 }), ];
   const obj3 = { variant: "text-xs/medium", color: "text-default", children: null };
   const intl = util.intl;
   const items1 = [intl.string(util.t.ZIf8Ag), ];

@@ -1,15 +1,15 @@
-// === Module 8303: GuildReportFalseAlarmSystemMessage ===
+// === Module 8385: GuildReportFalseAlarmSystemMessage ===
 
-// Module 8303 (GuildReportFalseAlarmSystemMessage)
+// Module 8385 (GuildReportFalseAlarmSystemMessage)
 import util from "util" /* 1115 */;
 import AvatarUtils from "AvatarUtils" /* 1397 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1400 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8215 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8222 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8224 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8226 */;
-import GuildAlertModeSystemMessage from "GuildAlertModeSystemMessage" /* 8295 */;
-import getTagPropertiesDefault from "getTagProperties" /* 8296 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8297 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8304 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8306 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8308 */;
+import GuildAlertModeSystemMessage from "GuildAlertModeSystemMessage" /* 8377 */;
+import getTagPropertiesDefault from "getTagProperties" /* 8378 */;
 import ChannelStore from "ChannelStore" /* 2042 */;
 
 require = fn;

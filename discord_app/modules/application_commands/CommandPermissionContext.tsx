@@ -1,16 +1,16 @@
-// === Module 9415: CommandPermissionContext ===
+// === Module 9486: CommandPermissionContext ===
 
-// Module 9415 (CommandPermissionContext)
+// Module 9486 (CommandPermissionContext)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import Server from "Server" /* 1978 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 9416 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 9487 */;
 import noop from "module_19" /* 19 */;
 import ImpersonateStore from "ImpersonateStore" /* 2098 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2042 */;
 import GuildMemberStore from "GuildMemberStore" /* 2105 */;
 import GuildStore from "GuildStore" /* 2064 */;
-import PermissionStore from "PermissionStore" /* 4396 */;
+import PermissionStore from "PermissionStore" /* 4462 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;

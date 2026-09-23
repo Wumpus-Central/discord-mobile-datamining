@@ -1,9 +1,9 @@
-// === Module 9895: useInterestedEventUsers ===
+// === Module 9968: useInterestedEventUsers ===
 
-// Module 9895 (useInterestedEventUsers)
+// Module 9968 (useInterestedEventUsers)
 import _mod19 from "module_19" /* 19 */;
 import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2048 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7771 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7854 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

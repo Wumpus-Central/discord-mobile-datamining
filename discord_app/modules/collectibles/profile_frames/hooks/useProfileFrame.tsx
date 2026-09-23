@@ -1,13 +1,13 @@
-// === Module 8485: useProfileFrame ===
+// === Module 8556: useProfileFrame ===
 
-// Module 8485 (useProfileFrame)
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7787 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7802 */;
+// Module 8556 (useProfileFrame)
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7870 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7885 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const isProfileFrameRecord = fn(7794).isProfileFrameRecord;
+const isProfileFrameRecord = fn(7877).isProfileFrameRecord;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/profile_frames/hooks/useProfileFrame.tsx");
 

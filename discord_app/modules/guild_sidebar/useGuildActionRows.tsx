@@ -1,17 +1,17 @@
-// === Module 16607: useGuildActionRows ===
+// === Module 16659: useGuildActionRows ===
 
-// Module 16607 (useGuildActionRows)
-import useIsNewMemberDefault from "useIsNewMember" /* 7470 */;
-import useCanSeeEventsInChannelListDefault from "useCanSeeEventsInChannelList" /* 12630 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12771 */;
-import useTotalPossibleBoostCountDefault from "useTotalPossibleBoostCount" /* 16572 */;
+// Module 16659 (useGuildActionRows)
+import useIsNewMemberDefault from "useIsNewMember" /* 7554 */;
+import useCanSeeEventsInChannelListDefault from "useCanSeeEventsInChannelList" /* 12712 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12853 */;
+import useTotalPossibleBoostCountDefault from "useTotalPossibleBoostCount" /* 16624 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4944 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 5014 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelListGuildActionRow = fn(7779).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7862).ChannelListGuildActionRow;
 const GuildFeatures = fn(1074).GuildFeatures;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_sidebar/useGuildActionRows.tsx");

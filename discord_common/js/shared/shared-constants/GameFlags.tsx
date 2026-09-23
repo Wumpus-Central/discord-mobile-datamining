@@ -1,6 +1,6 @@
-// === Module 8953: GameFlags ===
+// === Module 9024: GameFlags ===
 
-// Module 8953 (GameFlags)
+// Module 9024 (GameFlags)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/GameFlags.tsx");

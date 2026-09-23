@@ -1,9 +1,9 @@
-// === Module 11962: SavedMessagesActions ===
+// === Module 12039: SavedMessagesActions ===
 
-// Module 11962 (SavedMessagesActions)
+// Module 12039 (SavedMessagesActions)
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 11915 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11991 */;
 
 require = fn;
 let closure_6 = async function _upsertSavedMessage() {
@@ -35,10 +35,10 @@ let closure_8 = async function _fetchAndUpdateSavedMessages() {
   closure_128_1 = results.map((message) => {
     let messageRecord = null;
     if (null != message.message) {
-      messageRecord = closure_1_0(4979).createMessageRecord(message.message);
-      const obj = closure_1_0(4979);
+      messageRecord = closure_1_0(5049).createMessageRecord(message.message);
+      const obj = closure_1_0(5049);
     }
-    const obj2 = { message: messageRecord, saveData: closure_1_0(8107).savedMessageDataToClient(message.save_data) };
+    const obj2 = { message: messageRecord, saveData: closure_1_0(8189).savedMessageDataToClient(message.save_data) };
     return obj2;
   });
   await closure_129_1(closure_129_2[5]).dispatch({ type: "SAVED_MESSAGES_UPDATE", savedMessages: closure_128_1 });

@@ -1,6 +1,6 @@
-// === Module 15974: CheckpointExperiment ===
+// === Module 5072: CheckpointExperiment ===
 
-// Module 15974 (CheckpointExperiment)
+// Module 5072 (CheckpointExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
@@ -9,4 +9,7 @@ const result = size.fileFinishedImporting("modules/checkpoint/CheckpointExperime
 
 export const useIsCheckpointEnabled = function useIsCheckpointEnabled(DevToolsQuickActionsScreen) {
   return closure_0.useConfig({ location: DevToolsQuickActionsScreen }).enabled;
+};
+export const getIsCheckpointEnabled = function getIsCheckpointEnabled(transformCheckpoint2026CardComponent) {
+  return closure_0.getConfig({ location: transformCheckpoint2026CardComponent }).enabled;
 };

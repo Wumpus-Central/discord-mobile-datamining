@@ -1,8 +1,8 @@
-// === Module 7318: fastest_list/FastestList ===
+// === Module 7402: fastest_list/FastestList ===
 
-// Module 7318 (fastest_list/FastestList)
-import FastestListItemTypeDefault from "FastestListItemType" /* 7311 */;
-import FastList from "FastList" /* 7319 */;
+// Module 7402 (fastest_list/FastestList)
+import FastestListItemTypeDefault from "FastestListItemType" /* 7395 */;
+import FastList from "FastList" /* 7403 */;
 import noop_mod from "module_19" /* 19 */;
 
 require = fn;

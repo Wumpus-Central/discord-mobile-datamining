@@ -1,12 +1,12 @@
-// === Module 15798: UpcomingServerEventNotificationSetting ===
+// === Module 15852: UpcomingServerEventNotificationSetting ===
 
-// Module 15798 (UpcomingServerEventNotificationSetting)
+// Module 15852 (UpcomingServerEventNotificationSetting)
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 2020 */;
-import SettingsConstants from "SettingsConstants" /* 8237 */;
-import UpcomingServerEventExperiment from "UpcomingServerEventExperiment" /* 15799 */;
-import UpcomingServerEventNotificationUtils from "UpcomingServerEventNotificationUtils" /* 15800 */;
-import SettingBuilders from "SettingBuilders" /* 11729 */;
+import SettingsConstants from "SettingsConstants" /* 8319 */;
+import UpcomingServerEventExperiment from "UpcomingServerEventExperiment" /* 15853 */;
+import UpcomingServerEventNotificationUtils from "UpcomingServerEventNotificationUtils" /* 15854 */;
+import SettingBuilders from "SettingBuilders" /* 11805 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

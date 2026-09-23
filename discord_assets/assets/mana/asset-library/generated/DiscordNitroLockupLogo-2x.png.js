@@ -1,6 +1,6 @@
-// === Module 6149: ? ===
+// === Module 6233: ? ===
 
-// Module 6149
+// Module 6233
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DiscordNitroLockupLogo-2x.png.js");

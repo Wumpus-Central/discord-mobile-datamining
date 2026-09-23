@@ -1,20 +1,20 @@
-// === Module 7366: NotificationSettingsModalActionCreators ===
+// === Module 7450: NotificationSettingsModalActionCreators ===
 
-// Module 7366 (NotificationSettingsModalActionCreators)
+// Module 7450 (NotificationSettingsModalActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1115 */;
-import shared from "shared" /* 4608 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7361 */;
-import UserGuildSettingsManagerDefault from "UserGuildSettingsManager" /* 7363 */;
+import shared from "shared" /* 4678 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7445 */;
+import UserGuildSettingsManagerDefault from "UserGuildSettingsManager" /* 7447 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4938 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5008 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const Endpoints = fn(1074).Endpoints;
-fn(4409).NotificationSettingsUpdateType;
+fn(4475).NotificationSettingsUpdateType;
 const constants = fn(1084).ChannelNotificationSettingsFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/NotificationSettingsModalActionCreators.tsx");
@@ -54,16 +54,29 @@ export default {
       const result = NotificationSettingsUtils.trackChannelNotificationSettingsUpdate({ guildId, channelId, change: channel_overrides.channel_overrides[channelId], previous: value, label, location: _location });
     });
   },
-  updateChannelOverrideSettings(guildId, id, muteSettings, NotificationLabel, location) {
-    const currentChannelSettings = NotificationSettingsUtils.getCurrentChannelSettings(guildId, id);
-    const result = UserGuildSettingsManagerDefault.saveUserGuildSettings(guildId, { channel_overrides: { [id]: muteSettings } });
-    const obj3 = { channel_overrides: { [id]: muteSettings } };
-    DispatcherDefault.dispatch({ type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE", guildId, channelId: id, settings: muteSettings });
+  updateChannelOverrideSettings(arg0) {
+    ({ guildId, channelId, settings, accessibilityAnnouncement } = arg0);
+    ({ label, location: _location } = arg0);
+    const currentChannelSettings = NotificationSettingsUtils.getCurrentChannelSettings(guildId, channelId);
+    const result = UserGuildSettingsManagerDefault.saveUserGuildSettings(guildId, { channel_overrides: { [channelId]: settings } });
+    const obj3 = { channel_overrides: { [channelId]: settings } };
+    DispatcherDefault.dispatch({ type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE", guildId, channelId, settings });
     const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
-    const intl = util.intl;
-    AccessibilityAnnouncer.announce(intl.string(util.t.MlIsJ8));
-    const obj5 = { type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE", guildId, channelId: id, settings: muteSettings };
-    const result1 = NotificationSettingsUtils.trackChannelNotificationSettingsUpdate({ guildId, channelId: id, change: muteSettings, previous: currentChannelSettings, label: NotificationLabel, location });
+    let message;
+    if (accessibilityAnnouncement != null) {
+      message = accessibilityAnnouncement.message;
+    }
+    if (message == null) {
+      const intl = util.intl;
+      message = intl.string(util.t.MlIsJ8);
+    }
+    let assertiveness;
+    if (accessibilityAnnouncement != null) {
+      assertiveness = accessibilityAnnouncement.assertiveness;
+    }
+    AccessibilityAnnouncer.announce(message, assertiveness);
+    const result1 = NotificationSettingsUtils.trackChannelNotificationSettingsUpdate({ guildId, channelId, change: settings, previous: currentChannelSettings, label, location: _location });
+    const tmpResult = NotificationSettingsUtils;
   },
   updateChannelOverrideSettingsBulk(guildId, channel_overrides, OptedOut, _location) {
     _require = guildId;
@@ -101,9 +114,11 @@ export default {
       NEW_FORUM_THREADS_OFF = constants.NEW_FORUM_THREADS_OFF;
       tmp2 = constants;
     }
+    const obj = { guildId: channel.guild_id, channelId: channel.id, settings: { flags: UserGuildSettingsStore.getChannelFlags(channel) & ~(arg1 ? tmp2.NEW_FORUM_THREADS_OFF : tmp2.NEW_FORUM_THREADS_ON) | NEW_FORUM_THREADS_OFF }, label: null };
     const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
-    const result = this.updateChannelOverrideSettings(channel.guild_id, channel.id, { flags: UserGuildSettingsStore.getChannelFlags(channel) & ~(arg1 ? tmp2.NEW_FORUM_THREADS_OFF : tmp2.NEW_FORUM_THREADS_ON) | NEW_FORUM_THREADS_OFF }, NotificationLabel.forumThreadsCreated(arg1));
-    const obj = { flags: UserGuildSettingsStore.getChannelFlags(channel) & ~(arg1 ? tmp2.NEW_FORUM_THREADS_OFF : tmp2.NEW_FORUM_THREADS_ON) | NEW_FORUM_THREADS_OFF };
+    obj.label = NotificationLabel.forumThreadsCreated(arg1);
+    const result = this.updateChannelOverrideSettings(obj);
+    const obj2 = { flags: UserGuildSettingsStore.getChannelFlags(channel) & ~(arg1 ? tmp2.NEW_FORUM_THREADS_OFF : tmp2.NEW_FORUM_THREADS_ON) | NEW_FORUM_THREADS_OFF };
     const tmp3 = arg1 ? tmp2.NEW_FORUM_THREADS_OFF : tmp2.NEW_FORUM_THREADS_ON;
   },
   setAccountFlag(arg0, arg1) {

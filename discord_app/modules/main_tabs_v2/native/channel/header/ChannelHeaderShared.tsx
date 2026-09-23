@@ -1,23 +1,23 @@
-// === Module 13586: ChannelHeaderShared ===
+// === Module 13668: ChannelHeaderShared ===
 
-// Module 13586 (ChannelHeaderShared)
+// Module 13668 (ChannelHeaderShared)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import useToken from "useToken" /* 4458 */;
-import Text_Text from "Text/Text" /* 4753 */;
-import useChannelName from "useChannelName" /* 4910 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5241 */;
-import Pressables from "Pressables" /* 5341 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7227 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11166 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 11180 */;
-import _modDef13587 from "module_13587" /* 13587 */;
-import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 13588 */;
+import useToken from "useToken" /* 4524 */;
+import Text_Text from "Text/Text" /* 4823 */;
+import useChannelName from "useChannelName" /* 4980 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5325 */;
+import Pressables from "Pressables" /* 5425 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7311 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11242 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 11256 */;
+import _modDef13669 from "module_13669" /* 13669 */;
+import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 13670 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4406 */;
+import RelationshipStore from "RelationshipStore" /* 4472 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -72,7 +72,7 @@ function ChannelTitle(guildId) {
   items[1] = tmp8;
   let tmp5Result = !disableArrow;
   if (!disableArrow) {
-    const obj6 = { source: _modDef13587, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+    const obj6 = { source: _modDef13669, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
     tmp5Result = tmp5(native.Icon, obj6);
   }
   items[2] = tmp5Result;
@@ -166,7 +166,7 @@ function EmptyIcon() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_11 = createStyles.createStyles(() => {
   const obj = { wrapper: { flex: 1, alignItems: "center", flexShrink: 1, flexDirection: "row", paddingEnd: 8 }, channelContent: { flex: 1, flexShrink: 1, justifyContent: "center", marginTop: 4 }, nameWithArrow: { flexDirection: "row", alignItems: "center", flexShrink: 1 }, channelNameContainer: { flexShrink: 1 }, channelName: { flexShrink: 1 }, arrowIcon: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, flexShrink: 0, flexGrow: 0, marginTop: 2, marginLeft: 2 }, channelIcon: { marginRight: 12, flexShrink: 0 }, channelIconWrapper: { width: 32, height: 32, justifyContent: "center", alignItems: "center" }, guildChannelIcon: null, subTitleContainer: null, parentChannelName: null };
   const obj2 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, flexShrink: 0, flexGrow: 0, marginTop: 2, marginLeft: 2 };

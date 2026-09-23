@@ -1,15 +1,15 @@
-// === Module 14010: SharedSpacesWarningManager ===
+// === Module 14091: SharedSpacesWarningManager ===
 
-// Module 14010 (SharedSpacesWarningManager)
+// Module 14091 (SharedSpacesWarningManager)
 import DurationsDefault from "Durations" /* 1091 */;
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
-import showGdmBlockedUserModal from "showGdmBlockedUserModal" /* 14012 */;
-import showVoiceChannelBlockedUserWarning from "showVoiceChannelBlockedUserWarning" /* 14016 */;
+import showGdmBlockedUserModal from "showGdmBlockedUserModal" /* 14093 */;
+import showVoiceChannelBlockedUserWarning from "showVoiceChannelBlockedUserWarning" /* 14097 */;
 import ChannelStore from "ChannelStore" /* 2042 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4780 */;
-import RelationshipStore from "RelationshipStore" /* 4406 */;
-import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore" /* 14009 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7365 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4850 */;
+import RelationshipStore from "RelationshipStore" /* 4472 */;
+import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore" /* 14090 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7449 */;
 
 require = fn;
 function handleChannelSelect(channelId) {
@@ -90,7 +90,7 @@ function handleAppStateChanged(state) {
     }
   }
 }
-const SharedSpacesWarningStore = fn(14011);
+const SharedSpacesWarningStore = fn(14092);
 ({ getChannelDismissTimestamp: hasOwnProperty, getUserDismissTimestamp: metroRequire, getGlobalDismissTimestamp: closure_7, isBlockedWarningQueued: closure_8, dequeueBlockWarning: closure_9 } = SharedSpacesWarningStore);
 let closure_11 = 3 * DurationsDefault.Millis.DAY;
 let closure_12 = 2 * DurationsDefault.Millis.DAY;

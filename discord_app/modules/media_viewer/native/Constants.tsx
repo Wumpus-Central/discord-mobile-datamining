@@ -1,6 +1,6 @@
-// === Module 8567: Constants ===
+// === Module 8638: Constants ===
 
-// Module 8567 (Constants)
+// Module 8638 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/media_viewer/native/Constants.tsx");

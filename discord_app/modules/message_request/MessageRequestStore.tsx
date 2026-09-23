@@ -1,6 +1,6 @@
-// === Module 7466: MessageRequestStore ===
+// === Module 7550: MessageRequestStore ===
 
-// Module 7466 (MessageRequestStore)
+// Module 7550 (MessageRequestStore)
 import ChannelStore from "ChannelStore" /* 2042 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1073 */;
 

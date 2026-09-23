@@ -1,9 +1,9 @@
-// === Module 11908: TopicsIcon ===
+// === Module 11984: TopicsIcon ===
 
-// Module 11908 (TopicsIcon)
+// Module 11984 (TopicsIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4457 */;
-import _mod11909 from "module_11909" /* 11909 */;
+import BaseIconImage from "BaseIconImage" /* 4523 */;
+import _mod11985 from "module_11985" /* 11985 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const TopicsIcon = function TopicsIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11909, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11985, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

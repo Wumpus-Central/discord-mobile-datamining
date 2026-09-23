@@ -1,6 +1,6 @@
-// === Module 11252: useTrackFavoritesGuildAddModalOpened ===
+// === Module 11328: useTrackFavoritesGuildAddModalOpened ===
 
-// Module 11252 (useTrackFavoritesGuildAddModalOpened)
+// Module 11328 (useTrackFavoritesGuildAddModalOpened)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import noop from "module_19" /* 19 */;
 

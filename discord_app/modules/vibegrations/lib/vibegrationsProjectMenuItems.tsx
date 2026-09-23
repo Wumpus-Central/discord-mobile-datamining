@@ -1,8 +1,8 @@
-// === Module 17008: vibegrationsProjectMenuItems ===
+// === Module 17065: vibegrationsProjectMenuItems ===
 
-// Module 17008 (vibegrationsProjectMenuItems)
+// Module 17065 (vibegrationsProjectMenuItems)
 import util from "util" /* 1115 */;
-import _modDef3678 from "module_3678" /* 3678 */;
+import _modDef3712 from "module_3712" /* 3712 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/vibegrations/lib/vibegrationsProjectMenuItems.tsx");
@@ -13,7 +13,7 @@ export const previewMenuItems = function previewMenuItems(canRefresh) {
   if (canRefresh.canRefresh) {
     const obj = { id: "preview-refresh", label: null, kind: "refresh", disabled: null };
     const intl = util.intl;
-    obj.label = intl.string(_modDef3678["8oRfMw"]);
+    obj.label = intl.string(_modDef3712["8oRfMw"]);
     obj.disabled = tmp;
     items.push(obj);
   }
@@ -27,7 +27,7 @@ export const previewMenuItems = function previewMenuItems(canRefresh) {
       obj2.id = "preview-connect-" + connection.type;
       let intl2 = util.intl;
       let obj3 = { label: connection.label };
-      obj2.label = intl2.formatToPlainString(_modDef3678.JXACNA, obj3);
+      obj2.label = intl2.formatToPlainString(_modDef3712.JXACNA, obj3);
       obj2.connectionType = connection.type;
       obj2.disabled = connectPending.has(connection.type);
       let obj4 = obj2;
@@ -37,7 +37,7 @@ export const previewMenuItems = function previewMenuItems(canRefresh) {
       obj4.id = "preview-connect-" + connection.type;
       let intl3 = util.intl;
       let obj5 = { label: connection.label };
-      obj4.label = intl3.formatToPlainString(_modDef3678.JMd7xW, obj5);
+      obj4.label = intl3.formatToPlainString(_modDef3712.JMd7xW, obj5);
       obj4.connectionType = connection.type;
     }
     let arr3 = items.push(obj4);

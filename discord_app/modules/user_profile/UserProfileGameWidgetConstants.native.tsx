@@ -1,11 +1,11 @@
-// === Module 9199: UserProfileGameWidgetConstants ===
+// === Module 9270: UserProfileGameWidgetConstants ===
 
-// Module 9199 (UserProfileGameWidgetConstants)
-import FriendsIcon from "FriendsIcon" /* 4456 */;
-import ThumbsUpIcon from "ThumbsUpIcon" /* 8174 */;
-import ThumbsDownIcon from "ThumbsDownIcon" /* 8176 */;
-import RibbonIcon from "RibbonIcon" /* 9201 */;
-import UserProfileGameWidgetTagMetadata from "UserProfileGameWidgetTagMetadata" /* 9200 */;
+// Module 9270 (UserProfileGameWidgetConstants)
+import FriendsIcon from "FriendsIcon" /* 4522 */;
+import ThumbsUpIcon from "ThumbsUpIcon" /* 8256 */;
+import ThumbsDownIcon from "ThumbsDownIcon" /* 8258 */;
+import RibbonIcon from "RibbonIcon" /* 9272 */;
+import UserProfileGameWidgetTagMetadata from "UserProfileGameWidgetTagMetadata" /* 9271 */;
 import size from "module_2" /* 2 */;
 
 const obj = {};

@@ -1,6 +1,6 @@
-// === Module 5910: ChangeEmailWarning ===
+// === Module 5994: ChangeEmailWarning ===
 
-// Module 5910 (ChangeEmailWarning)
+// Module 5994 (ChangeEmailWarning)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
@@ -10,11 +10,11 @@ import UserStore from "UserStore" /* 1372 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const hcArticle = fn(5903).COMMON_SCAMS_EDUCATION_HC_ARTICLE;
+const hcArticle = fn(5987).COMMON_SCAMS_EDUCATION_HC_ARTICLE;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 const obj2 = { container: { flex: 1, padding: nativeDefault.space.PX_16, alignItems: "center", justifyContent: "center" }, title: null, body: null, buttonContainer: null };
 let obj3 = { flex: 1, padding: nativeDefault.space.PX_16, alignItems: "center", justifyContent: "center" };
 obj2.title = { marginTop: nativeDefault.space.PX_16 };
@@ -38,11 +38,11 @@ export default function ChangeEmailWarning(changeEmailReason) {
   if (null != stateFromStores) {
     const obj3 = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
     const obj4 = { style: tmp.container, children: null };
-    const items2 = [closure_9(tmp2(5911).TrafficConeSpotIllustration, {}), , , ];
+    const items2 = [closure_9(tmp2(5995).TrafficConeSpotIllustration, {}), , , ];
     const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp2(1115).intl;
     obj5.children = intl.string(tmp2(1115).t.hhR7gX);
-    items2[1] = closure_9(tmp2(4753).Text, obj5);
+    items2[1] = closure_9(tmp2(4823).Text, obj5);
     const obj6 = { style: tmp.body, accessibilityRole: "header", variant: "text-md/normal", color: "mobile-text-heading-primary", children: null };
     const intl2 = tmp2(1115).intl;
     const obj7 = { hcArticle };
@@ -50,20 +50,20 @@ export default function ChangeEmailWarning(changeEmailReason) {
     const intl3 = tmp2(1115).intl;
     items3[2] = intl3.string(tmp2(1115).t["3LW10C"]);
     obj6.children = items3;
-    items2[2] = closure_10(tmp2(4753).Text, obj6);
+    items2[2] = closure_10(tmp2(4823).Text, obj6);
     const obj8 = { style: tmp.buttonContainer, children: null };
     const obj9 = { size: "md", variant: "tertiary", text: null, onPress: null, shrink: true };
     const intl4 = tmp2(1115).intl;
     obj9.text = intl4.string(tmp2(1115).t.rwTBFs);
     obj9.onPress = tmp6;
-    const items4 = [closure_9(tmp2(5187).Button, obj9), ];
+    const items4 = [closure_9(tmp2(5271).Button, obj9), ];
     const obj10 = { size: "md", variant: "primary", text: null, onPress: null, shrink: true };
     const intl5 = tmp2(1115).intl;
     obj10.text = intl5.string(tmp2(1115).t["ETE/oC"]);
     obj10.onPress = function onPress() {
       return navigation(dependencyMap[16]).close();
     };
-    items4[1] = closure_9(tmp2(5187).Button, obj10);
+    items4[1] = closure_9(tmp2(5271).Button, obj10);
     obj8.children = items4;
     items2[3] = closure_10(closure_4, obj8);
     obj4.children = items2;

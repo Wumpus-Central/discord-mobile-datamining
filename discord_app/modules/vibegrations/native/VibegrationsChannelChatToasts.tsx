@@ -1,13 +1,13 @@
-// === Module 17096: VibegrationsChannelChatToasts ===
+// === Module 17154: VibegrationsChannelChatToasts ===
 
-// Module 17096 (VibegrationsChannelChatToasts)
+// Module 17154 (VibegrationsChannelChatToasts)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import UserUtils from "UserUtils" /* 4601 */;
-import Text_Text from "Text/Text" /* 4753 */;
-import Card from "Card" /* 5826 */;
-import useVibegrationsChatToastMessagesDefault from "useVibegrationsChatToastMessages" /* 17097 */;
+import UserUtils from "UserUtils" /* 4671 */;
+import Text_Text from "Text/Text" /* 4823 */;
+import Card from "Card" /* 5910 */;
+import useVibegrationsChatToastMessagesDefault from "useVibegrationsChatToastMessages" /* 17155 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -46,7 +46,7 @@ function ChatToast(message) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { column: null, opaque: null, card: null, body: null };
 const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_12, left: nativeDefault.space.PX_12, alignItems: "flex-end", gap: nativeDefault.space.PX_8 };
 obj2.column = rect;

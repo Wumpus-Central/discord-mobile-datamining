@@ -1,9 +1,9 @@
-// === Module 7504: GuildRoleSubscriptionSettingUtils ===
+// === Module 7588: GuildRoleSubscriptionSettingUtils ===
 
-// Module 7504 (GuildRoleSubscriptionSettingUtils)
+// Module 7588 (GuildRoleSubscriptionSettingUtils)
 import GuildRecord from "GuildRecord" /* 2060 */;
-import CreatorMonetizationEligibilityExperimentUtils from "CreatorMonetizationEligibilityExperimentUtils" /* 7505 */;
-import PermissionStore from "PermissionStore" /* 4396 */;
+import CreatorMonetizationEligibilityExperimentUtils from "CreatorMonetizationEligibilityExperimentUtils" /* 7589 */;
+import PermissionStore from "PermissionStore" /* 4462 */;
 import UserStore from "UserStore" /* 1372 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;

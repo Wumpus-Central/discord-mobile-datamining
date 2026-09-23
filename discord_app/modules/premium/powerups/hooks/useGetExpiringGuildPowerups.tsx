@@ -1,10 +1,10 @@
-// === Module 12816: useGetExpiringGuildPowerups ===
+// === Module 12898: useGetExpiringGuildPowerups ===
 
-// Module 12816 (useGetExpiringGuildPowerups)
+// Module 12898 (useGetExpiringGuildPowerups)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 12751 */;
+import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 12833 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4645 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4715 */;
 
 const require = globalThis.__r;
 

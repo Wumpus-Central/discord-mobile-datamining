@@ -1,15 +1,15 @@
-// === Module 10999: GiftingPromotionUtils ===
+// === Module 11075: GiftingPromotionUtils ===
 
-// Module 10999 (GiftingPromotionUtils)
+// Module 11075 (GiftingPromotionUtils)
 import util from "util" /* 1115 */;
 import dismissible_content from "dismissible_content" /* 2028 */;
-import _modDef2546 from "module_2546" /* 2546 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4577 */;
-import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 11004 */;
-import MarketingComponentType from "MarketingComponentType" /* 11005 */;
+import _modDef2548 from "module_2548" /* 2548 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4647 */;
+import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 11080 */;
+import MarketingComponentType from "MarketingComponentType" /* 11081 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 10931 */;
+import PromotionsStore from "PromotionsStore" /* 11007 */;
 
 const require = globalThis.__r;
 
@@ -57,13 +57,13 @@ export const getGiftingPromotionRewardEarnedSubtitle = function getGiftingPromot
       if (0 === found.length) {
         const intl2 = util.intl;
         const obj = { count: arg0.length };
-        let formatToPlainStringResult = intl2.formatToPlainString(_modDef2546.cMHedL, obj);
+        let formatToPlainStringResult = intl2.formatToPlainString(_modDef2548.cMHedL, obj);
       }
       return formatToPlainStringResult;
     }
   }
   const intl = util.intl;
-  formatToPlainStringResult = intl.string(_modDef2546["/8znyU"]);
+  formatToPlainStringResult = intl.string(_modDef2548["/8znyU"]);
 };
 export const getRewardAssetIdMap = function getRewardAssetIdMap(arr) {
   const map = new Map();

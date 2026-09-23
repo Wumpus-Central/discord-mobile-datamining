@@ -1,6 +1,6 @@
-// === Module 13369: vibegrationsLocalDev ===
+// === Module 13451: vibegrationsLocalDev ===
 
-// Module 13369 (vibegrationsLocalDev)
+// Module 13451 (vibegrationsLocalDev)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/vibegrations/lib/vibegrationsLocalDev.tsx");

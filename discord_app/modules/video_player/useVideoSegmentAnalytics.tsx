@@ -1,7 +1,7 @@
-// === Module 15410: useVideoSegmentAnalytics ===
+// === Module 15462: useVideoSegmentAnalytics ===
 
-// Module 15410 (useVideoSegmentAnalytics)
-import DiscordVideoPlayerTypes from "DiscordVideoPlayerTypes" /* 7945 */;
+// Module 15462 (useVideoSegmentAnalytics)
+import DiscordVideoPlayerTypes from "DiscordVideoPlayerTypes" /* 8027 */;
 import _slicedToArray from "module_32" /* 32 */;
 import "module_19";
 

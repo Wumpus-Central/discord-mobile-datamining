@@ -1,8 +1,8 @@
-// === Module 8077: PoggermodeUtils ===
+// === Module 8159: PoggermodeUtils ===
 
-// Module 8077 (PoggermodeUtils)
+// Module 8159 (PoggermodeUtils)
 import shims from "shims" /* 575 */;
-import PoggermodeConstants from "PoggermodeConstants" /* 7918 */;
+import PoggermodeConstants from "PoggermodeConstants" /* 8000 */;
 import size from "module_2" /* 2 */;
 
 ({ ShakeLevel: c2, SHAKE_STEPS: c3, SHAKE_STEP_DIVIDER: closure_4 } = PoggermodeConstants);

@@ -1,19 +1,19 @@
-// === Module 12427: AppLauncherAutocompleteOption ===
+// === Module 12503: AppLauncherAutocompleteOption ===
 
-// Module 12427 (AppLauncherAutocompleteOption)
+// Module 12503 (AppLauncherAutocompleteOption)
 import nativeDefault from "native" /* 576 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1875 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4724 */;
-import Text_Text from "Text/Text" /* 4753 */;
-import Pressables from "Pressables" /* 5341 */;
-import useAnimationDelayedAutoFocus from "useAnimationDelayedAutoFocus" /* 12426 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4794 */;
+import Text_Text from "Text/Text" /* 4823 */;
+import Pressables from "Pressables" /* 5425 */;
+import useAnimationDelayedAutoFocus from "useAnimationDelayedAutoFocus" /* 12502 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { container: { width: "100%", backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.lg, padding: 12, borderWidth: 2, borderColor: "transparent", flexDirection: "row", alignItems: "center" }, hasError: null, inputText: null };
 let obj3 = { width: "100%", backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.lg, padding: 12, borderWidth: 2, borderColor: "transparent", flexDirection: "row", alignItems: "center" };
 obj2.hasError = { borderColor: nativeDefault.colors.BORDER_FEEDBACK_CRITICAL, padding: 12 };
@@ -32,7 +32,7 @@ export default function AppLauncherAutocompleteOption(arg0) {
       tmp();
     }
     const result = KeyboardManagerUtils.dismissGlobalKeyboard();
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12428, dependencyMap.paths), "AppLauncherAutocompleteActionSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12504, dependencyMap.paths), "AppLauncherAutocompleteActionSheet", {
       option,
       initChoice,
       onChoiceSelect(arg0) {

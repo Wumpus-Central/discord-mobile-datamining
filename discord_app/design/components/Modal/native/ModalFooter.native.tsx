@@ -1,11 +1,11 @@
-// === Module 12185: ModalFooter ===
+// === Module 12262: ModalFooter ===
 
-// Module 12185 (ModalFooter)
+// Module 12262 (ModalFooter)
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_2 = createStyles.createStyles({ footer: { flexDirection: "column", paddingVertical: 16, paddingHorizontal: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Modal/native/ModalFooter.native.tsx");

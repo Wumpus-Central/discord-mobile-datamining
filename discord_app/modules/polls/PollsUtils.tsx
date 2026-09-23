@@ -1,25 +1,25 @@
-// === Module 8006: PollsUtils ===
+// === Module 8088: PollsUtils ===
 
-// Module 8006 (PollsUtils)
+// Module 8088 (PollsUtils)
 import DurationsDefault from "Durations" /* 1091 */;
 import util from "util" /* 1115 */;
 import v1 from "v1" /* 1255 */;
 import utils_StringUtils from "utils/StringUtils" /* 2011 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4909 */;
-import useMessageAuthor from "useMessageAuthor" /* 4989 */;
-import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7468 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4979 */;
+import useMessageAuthor from "useMessageAuthor" /* 5073 */;
+import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7552 */;
 import ChannelStore from "ChannelStore" /* 2042 */;
-import MessageReactionsStore from "MessageReactionsStore" /* 8007 */;
-import MessageStore from "MessageStore" /* 4977 */;
-import PermissionStore from "PermissionStore" /* 4396 */;
-import RelationshipStore from "RelationshipStore" /* 4406 */;
+import MessageReactionsStore from "MessageReactionsStore" /* 8089 */;
+import MessageStore from "MessageStore" /* 5047 */;
+import PermissionStore from "PermissionStore" /* 4462 */;
+import RelationshipStore from "RelationshipStore" /* 4472 */;
 
 const require = globalThis.__r;
 
 require = fn;
 function getSampleOfVoterUsernamesForAnswer(message, id) {
   const channelId = message.getChannelId();
-  const reactions = MessageReactionsStore.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(8008).ReactionTypes.VOTE);
+  const reactions = MessageReactionsStore.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(8090).ReactionTypes.VOTE);
   channel = ChannelStore.getChannel(channelId);
   let guildId = null;
   if (null != channel) {
@@ -94,7 +94,7 @@ function formatVoterTooltipText(arr, arg1) {
     return intl.formatToPlainString(util.t.yVX6kE, obj);
   }
 }
-const PollsConstants = fn(8074);
+const PollsConstants = fn(8156);
 ({ POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS: closure_8, VOTES_TOOLTIP_MAX_USERS: closure_9 } = PollsConstants);
 const Constants = fn(1074);
 ({ ChannelTypesSets: c10, Permissions: closure_11 } = Constants);

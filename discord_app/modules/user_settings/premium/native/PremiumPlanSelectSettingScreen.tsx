@@ -1,8 +1,8 @@
-// === Module 15275: PremiumPlanSelectSettingScreen ===
+// === Module 15327: PremiumPlanSelectSettingScreen ===
 
-// Module 15275 (PremiumPlanSelectSettingScreen)
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7241 */;
-import PremiumPlanSelectDefault from "PremiumPlanSelect" /* 13814 */;
+// Module 15327 (PremiumPlanSelectSettingScreen)
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7325 */;
+import PremiumPlanSelectDefault from "PremiumPlanSelect" /* 13899 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

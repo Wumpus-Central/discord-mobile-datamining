@@ -1,14 +1,14 @@
-// === Module 8247: UserJoinSystemMessage ===
+// === Module 8329: UserJoinSystemMessage ===
 
-// Module 8247 (UserJoinSystemMessage)
+// Module 8329 (UserJoinSystemMessage)
 import util from "util" /* 1115 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8222 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8224 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8226 */;
-import SystemMessageUtilsDefault from "SystemMessageUtils" /* 8248 */;
-import useIsStickerReplyEnabled from "useIsStickerReplyEnabled" /* 8259 */;
-import transformSticker from "transformSticker" /* 8260 */;
-import WelcomeCTAUtils from "WelcomeCTAUtils" /* 8263 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8304 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8306 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8308 */;
+import SystemMessageUtilsDefault from "SystemMessageUtils" /* 8330 */;
+import useIsStickerReplyEnabled from "useIsStickerReplyEnabled" /* 8341 */;
+import transformSticker from "transformSticker" /* 8342 */;
+import WelcomeCTAUtils from "WelcomeCTAUtils" /* 8345 */;
 import ChannelStore from "ChannelStore" /* 2042 */;
 import GuildStore from "GuildStore" /* 2064 */;
 

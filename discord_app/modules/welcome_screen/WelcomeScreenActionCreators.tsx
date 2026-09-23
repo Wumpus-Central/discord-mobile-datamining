@@ -1,6 +1,6 @@
-// === Module 12913: WelcomeScreenActionCreators ===
+// === Module 12995: WelcomeScreenActionCreators ===
 
-// Module 12913 (WelcomeScreenActionCreators)
+// Module 12995 (WelcomeScreenActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

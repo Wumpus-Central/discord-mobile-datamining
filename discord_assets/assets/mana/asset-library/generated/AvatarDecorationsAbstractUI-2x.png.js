@@ -1,6 +1,6 @@
-// === Module 6001: ? ===
+// === Module 6085: ? ===
 
-// Module 6001
+// Module 6085
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarDecorationsAbstractUI-2x.png.js");

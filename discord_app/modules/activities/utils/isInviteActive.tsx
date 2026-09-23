@@ -1,6 +1,6 @@
-// === Module 12011: isInviteActive ===
+// === Module 12088: isInviteActive ===
 
-// Module 12011 (isInviteActive)
+// Module 12088 (isInviteActive)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1091 */;
 

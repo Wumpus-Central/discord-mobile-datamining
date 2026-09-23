@@ -1,13 +1,13 @@
-// === Module 16172: ShelfBlock ===
+// === Module 16225: ShelfBlock ===
 
-// Module 16172 (ShelfBlock)
+// Module 16225 (ShelfBlock)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7429 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7786 */;
-import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 9049 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9052 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7513 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7869 */;
+import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 9120 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9123 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7787 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7870 */;
 
 require = fn;
 function ListEdgeSpacer() {
@@ -22,7 +22,7 @@ let closure_7 = fn(1076).CollectiblesMobileShopScreen;
 const UserSettingsSections = fn(1074).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { container: { width: "100%", paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, containerWithBackground: null, backgroundImage: null, header: null, headingWrapper: null, listEdgeSpacer: null, listItemSeparator: null };
 let obj3 = { width: "100%", paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj2.containerWithBackground = { marginTop: nativeDefault.space.PX_24, paddingTop: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_24, overflow: "hidden" };

@@ -21,7 +21,7 @@ import "Constants";
 const ME = RouteConstants.ME;
 ({ Routes, FAVORITES, NOTIFICATIONS_INBOX, EMPTY_NUX_SERVER, MOBILE_GUILD_UPSELL_LIST } = RouteConstants);
 let Constants = Constants_mod;
-const frozen = Object.freeze({ SUPPRESS_JOIN_NOTIFICATIONS: 1, SUPPRESS_PREMIUM_SUBSCRIPTIONS: 2, SUPPRESS_GUILD_REMINDER_NOTIFICATIONS: 4, SUPPRESS_JOIN_NOTIFICATION_REPLIES: 8, SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS: 16, SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES: 32, SUPPRESS_CHANNEL_PROMPT_DEADCHAT: 128, SUPPRESS_VOICE_SESSION_NOTIFICATIONS: 512, SUPPRESS_GUILD_SPACE_WHITEBOARD_NOTIFICATIONS: 2048 });
+const frozen = Object.freeze({ SUPPRESS_JOIN_NOTIFICATIONS: 1, SUPPRESS_PREMIUM_SUBSCRIPTIONS: 2, SUPPRESS_GUILD_REMINDER_NOTIFICATIONS: 4, SUPPRESS_JOIN_NOTIFICATION_REPLIES: 8, SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS: 16, SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES: 32, SUPPRESS_CHANNEL_PROMPT_DEADCHAT: 128, SUPPRESS_VOICE_SESSION_NOTIFICATIONS: 512, SUPPRESS_GAMING_LEADERBOARD_NOTIFICATIONS: 1024, SUPPRESS_GUILD_SPACE_WHITEBOARD_NOTIFICATIONS: 2048 });
 const items = [MessageTypes.MessageTypes.REPLY, MessageTypes.MessageTypes.THREAD_STARTER_MESSAGE, MessageTypes.MessageTypes.CONTEXT_MENU_COMMAND];
 const ActivityActionTypes = { JOIN: 1, [1]: "JOIN", LISTEN: 3, [3]: "LISTEN", WATCH: 4, [4]: "WATCH", JOIN_REQUEST: 5, [5]: "JOIN_REQUEST", STREAM_REQUEST: 6, [6]: "STREAM_REQUEST" };
 const frozen1 = Object.freeze({ ACCOUNT_AGE: 5, MEMBER_AGE: 10 });
@@ -479,8 +479,8 @@ const frozen2 = Object.freeze({
     }
     return "/guilds/" + guildId + "/users/" + id + "/banners/" + banner + "." + str;
   },
-  INTELLIGENCE_LAYER_SEARCH(arg0) {
-    return "/guilds/" + arg0 + "/intelligence/search";
+  INTELLIGENCE_LAYER_SEARCH(guildIdFromSearchContext) {
+    return "/guilds/" + guildIdFromSearchContext + "/intelligence/search";
   },
   CHANNEL_CONVERSATIONS(arg0) {
     return "/channels/" + arg0 + "/conversations";
@@ -1033,6 +1033,11 @@ const frozen2 = Object.freeze({
   BILLING_GIFT_CARD_VIEW: "/billing/gift-card/view",
   BILLING_GIFT_CARD_REDEEM: "/billing/gift-card/redeem",
   BILLING_STORE_COUNTRY: "/billing/store-country",
+  BILLING_PAST_DUE_PAYMENT_INVOICE: "/billing/past-due-payment/invoice",
+  BILLING_PAST_DUE_PAYMENT_PAY: "/billing/past-due-payment/pay",
+  BILLING_PAST_DUE_PAYMENT_SETUP_INTENT: "/billing/past-due-payment/setup-intent",
+  BILLING_PAST_DUE_PAYMENT_VALIDATE_BILLING_ADDRESS: "/billing/past-due-payment/validate-billing-address",
+  BILLING_PAST_DUE_PAYMENT_PAYMENT_SOURCE: "/billing/past-due-payment/payment-source",
   PREMIUM_GROUP_MEMBERSHIP: "/users/@me/premium-group/membership",
   PREMIUM_GROUP_INVITES: "/users/@me/premium-group/invites",
   PREMIUM_GROUP_INVITE(subscriptionGroupMemberId) {
@@ -1823,9 +1828,6 @@ const frozen2 = Object.freeze({
   },
   EXPLICIT_MEDIA_REPORT_FALSE_POSITIVE: "/attachments/report-false-positive",
   EXPLICIT_MEDIA_SENDER_REPORT_FALSE_POSITIVE: "/attachments/sender-report-false-positive",
-  BULK_GUILD_BAN(arg0) {
-    return "/guilds/" + arg0 + "/bulk-ban";
-  },
   BULK_GUILD_BAN_V2(arg0) {
     return "/guilds/" + arg0 + "/bulk-ban/v2";
   },
@@ -2496,8 +2498,8 @@ const obj2 = {
     }
     return "/guilds/" + guildId + "/users/" + id + "/banners/" + banner + "." + str;
   },
-  INTELLIGENCE_LAYER_SEARCH(arg0) {
-    return "/guilds/" + arg0 + "/intelligence/search";
+  INTELLIGENCE_LAYER_SEARCH(guildIdFromSearchContext) {
+    return "/guilds/" + guildIdFromSearchContext + "/intelligence/search";
   },
   CHANNEL_CONVERSATIONS(arg0) {
     return "/channels/" + arg0 + "/conversations";
@@ -3050,6 +3052,11 @@ const obj2 = {
   BILLING_GIFT_CARD_VIEW: "/billing/gift-card/view",
   BILLING_GIFT_CARD_REDEEM: "/billing/gift-card/redeem",
   BILLING_STORE_COUNTRY: "/billing/store-country",
+  BILLING_PAST_DUE_PAYMENT_INVOICE: "/billing/past-due-payment/invoice",
+  BILLING_PAST_DUE_PAYMENT_PAY: "/billing/past-due-payment/pay",
+  BILLING_PAST_DUE_PAYMENT_SETUP_INTENT: "/billing/past-due-payment/setup-intent",
+  BILLING_PAST_DUE_PAYMENT_VALIDATE_BILLING_ADDRESS: "/billing/past-due-payment/validate-billing-address",
+  BILLING_PAST_DUE_PAYMENT_PAYMENT_SOURCE: "/billing/past-due-payment/payment-source",
   PREMIUM_GROUP_MEMBERSHIP: "/users/@me/premium-group/membership",
   PREMIUM_GROUP_INVITES: "/users/@me/premium-group/invites",
   PREMIUM_GROUP_INVITE(subscriptionGroupMemberId) {
@@ -3840,9 +3847,6 @@ const obj2 = {
   },
   EXPLICIT_MEDIA_REPORT_FALSE_POSITIVE: "/attachments/report-false-positive",
   EXPLICIT_MEDIA_SENDER_REPORT_FALSE_POSITIVE: "/attachments/sender-report-false-positive",
-  BULK_GUILD_BAN(arg0) {
-    return "/guilds/" + arg0 + "/bulk-ban";
-  },
   BULK_GUILD_BAN_V2(arg0) {
     return "/guilds/" + arg0 + "/bulk-ban/v2";
   },

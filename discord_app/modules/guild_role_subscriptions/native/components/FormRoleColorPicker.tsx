@@ -1,14 +1,14 @@
-// === Module 18239: FormRoleColorPicker ===
+// === Module 18308: FormRoleColorPicker ===
 
-// Module 18239 (FormRoleColorPicker)
+// Module 18308 (FormRoleColorPicker)
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4724 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4794 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const DEFAULT_ROLE_COLOR = fn(1074).DEFAULT_ROLE_COLOR;
 const jsx = fn(21).jsx;
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_6 = createStyles.createStyles({ rowColorBlock: { marginHorizontal: 0, marginVertical: 0, marginRight: 8, minWidth: 24, height: 24, borderRadius: 3 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormRoleColorPicker.tsx");
@@ -25,13 +25,13 @@ export default function FormRoleColorPicker(color) {
   const onChange = color.onChange;
   const items = [color, onChange];
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16641, dependencyMap.paths), "RoleColorPicker", { color, onSelect: onChange });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16693, dependencyMap.paths), "RoleColorPicker", { color, onSelect: onChange });
   }, items);
   const obj = { leading: null, label: null, disabled: null, onPress: null };
   const tmp = closure_6();
-  obj.leading = jsx(onChange(14879), { color, style: tmp.rowColorBlock, onSelect: callback });
+  obj.leading = jsx(onChange(14959), { color, style: tmp.rowColorBlock, onSelect: callback });
   const obj2 = { color, style: tmp.rowColorBlock, onSelect: callback };
-  const tmp3 = onChange(14171);
+  const tmp3 = onChange(14253);
   obj.label = color(1092).int2hex(color);
   obj.disabled = flag;
   obj.onPress = callback;

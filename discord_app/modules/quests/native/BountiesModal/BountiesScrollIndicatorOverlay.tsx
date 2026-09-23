@@ -1,10 +1,10 @@
-// === Module 15323: BountiesScrollIndicatorOverlay ===
+// === Module 15375: BountiesScrollIndicatorOverlay ===
 
-// Module 15323 (BountiesScrollIndicatorOverlay)
+// Module 15375 (BountiesScrollIndicatorOverlay)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4493 */;
-import timing from "timing" /* 4758 */;
-import timingPresets from "timingPresets" /* 4761 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4559 */;
+import timing from "timing" /* 4828 */;
+import timingPresets from "timingPresets" /* 4831 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,8 +13,8 @@ const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const colors = ["rgba(0,0,0,0)", "rgba(0,0,0,0.7)", "rgba(0,0,0,1)"];
-let closure_9 = 5000 + fn(4761).timingSlowDuration;
-const createStyles = fn(4757);
+let closure_9 = 5000 + fn(4831).timingSlowDuration;
+const createStyles = fn(4827);
 let closure_10 = createStyles.createStyles(() => {
   const obj = { scrollIndicator: null, scrollIndicatorContent: null, scrollIndicatorText: null };
   const rect = { position: "absolute", left: 0, right: 0, bottom: 0, height: "45%", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 };

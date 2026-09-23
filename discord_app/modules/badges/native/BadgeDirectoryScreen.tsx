@@ -1,8 +1,8 @@
-// === Module 11465: BadgeDirectoryScreen ===
+// === Module 11541: BadgeDirectoryScreen ===
 
-// Module 11465 (BadgeDirectoryScreen)
-import NavigatorHeader from "NavigatorHeader" /* 5843 */;
-import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 11464 */;
+// Module 11541 (BadgeDirectoryScreen)
+import NavigatorHeader from "NavigatorHeader" /* 5927 */;
+import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 11540 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -60,7 +60,7 @@ export default function BadgeDirectoryScreen(targetUserId) {
         return obj;
       }, items2);
       const obj4 = { screens: memo, initialRouteName };
-      return jsx(tmp(11469).Modal, { screens: memo, initialRouteName });
+      return jsx(tmp(11545).Modal, { screens: memo, initialRouteName });
     }
   }
   const intl = tmp(1115).intl;

@@ -1,13 +1,13 @@
-// === Module 17344: MuteSettingsScreen ===
+// === Module 17413: MuteSettingsScreen ===
 
-// Module 17344 (MuteSettingsScreen)
+// Module 17413 (MuteSettingsScreen)
 import nativeDefault from "native" /* 576 */;
-import MuteSettingsUtils from "MuteSettingsUtils" /* 10404 */;
-import threadActionSheets from "threadActionSheets" /* 11579 */;
+import MuteSettingsUtils from "MuteSettingsUtils" /* 10483 */;
+import threadActionSheets from "threadActionSheets" /* 11655 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2042 */;
 import GuildStore from "GuildStore" /* 2064 */;
-import RelationshipStore from "RelationshipStore" /* 4406 */;
+import RelationshipStore from "RelationshipStore" /* 4472 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -24,20 +24,20 @@ function UnmuteOptions(channel) {
   }, items);
   const obj2 = { icon: null, label: null, onPress: null, start: true, end: true };
   const tmp = closure_13();
-  obj2.icon = closure_10(channel(1177).Icon, { disableColor: true, source: navigation(10406) });
+  obj2.icon = closure_10(channel(1177).Icon, { disableColor: true, source: navigation(10485) });
   const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = channel(1115).intl;
   const obj5 = { name: null };
-  const obj3 = { disableColor: true, source: navigation(10406) };
-  obj5.name = channel(4910).computeChannelName(channel, UserStore, RelationshipStore, true);
+  const obj3 = { disableColor: true, source: navigation(10485) };
+  obj5.name = channel(4980).computeChannelName(channel, UserStore, RelationshipStore, true);
   obj4.children = intl.format(channel(1115).t["eC+9rj"], obj5);
-  obj2.label = closure_10(channel(4753).Text, obj4);
+  obj2.label = closure_10(channel(4823).Text, obj4);
   obj2.onPress = callback;
-  const items1 = [closure_10(channel(5824).TableRow, obj2), ];
+  const items1 = [closure_10(channel(5908).TableRow, obj2), ];
   const obj7 = { muteConfig: channel.muteConfig, type: null };
-  const obj6 = channel(4910);
-  const tmp6 = navigation(10407);
-  const MuteSettingType = channel(10407).MuteSettingType;
+  const obj6 = channel(4980);
+  const tmp6 = navigation(10486);
+  const MuteSettingType = channel(10486).MuteSettingType;
   obj7.type = channel.isPrivate() ? MuteSettingType.DM : MuteSettingType.CHANNEL;
   items1[1] = closure_10(tmp6, obj7);
   obj.children = items1;
@@ -74,25 +74,26 @@ function MuteOptions(channel) {
             const guildId = closure_1_0.getGuildId();
             const id = closure_1_0.id;
             const obj5 = { muted, mute_config: null };
-            let tmp14 = mute_config;
+            let tmp10 = mute_config;
             if (mute_config == null) {
-              tmp14 = null;
+              tmp10 = null;
             }
-            obj5.mute_config = tmp14;
+            obj5.mute_config = tmp10;
             const NotificationLabel2 = channel(navigation[12]).NotificationLabel;
             const result1 = obj2.updateAppDMOverrideSettings(guildId, id, closure_1_1, obj5, NotificationLabel2.muted(muted));
           } else {
-            const obj6 = applicationId(navigation[11]);
-            const guildId1 = closure_1_0.getGuildId();
-            const id2 = closure_1_0.id;
-            const obj7 = { muted, mute_config: null };
+            const obj7 = { guildId: closure_1_0.getGuildId(), channelId: closure_1_0.id, settings: null, label: null };
+            const obj8 = { muted, mute_config: null };
             let tmp3 = mute_config;
             if (mute_config == null) {
               tmp3 = null;
             }
-            obj7.mute_config = tmp3;
+            obj8.mute_config = tmp3;
+            obj7.settings = obj8;
             const NotificationLabel = channel(navigation[12]).NotificationLabel;
-            const result2 = obj6.updateChannelOverrideSettings(guildId1, id2, obj7, NotificationLabel.muted(muted));
+            obj7.label = NotificationLabel.muted(muted);
+            const result2 = applicationId(navigation[11]).updateChannelOverrideSettings(obj7);
+            const obj6 = applicationId(navigation[11]);
           }
         }
       },
@@ -155,7 +156,7 @@ const View = fn(17).View;
 const ChannelSettingsSections = fn(1074).ChannelSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, padding: 16 }, options: { marginBottom: 16 }, trailing: { flexDirection: "row", alignItems: "center" }, hint: { marginTop: 8, paddingHorizontal: 12 } };
 let closure_13 = createStyles.createStyles(obj);
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, padding: 16 };

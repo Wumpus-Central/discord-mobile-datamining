@@ -1,6 +1,6 @@
-// === Module 12285: useCommandContext ===
+// === Module 12361: useCommandContext ===
 
-// Module 12285 (useCommandContext)
+// Module 12361 (useCommandContext)
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2064 */;
 

@@ -1,10 +1,10 @@
-// === Module 9303: UserProfileApplicationWidgetBottomCollectionLayout ===
+// === Module 9374: UserProfileApplicationWidgetBottomCollectionLayout ===
 
-// Module 9303 (UserProfileApplicationWidgetBottomCollectionLayout)
+// Module 9374 (UserProfileApplicationWidgetBottomCollectionLayout)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4753 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 9209 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 9297 */;
+import Text_Text from "Text/Text" /* 4823 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 9280 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 9368 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -57,7 +57,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c2, View: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 const obj2 = { grid: { flexDirection: "row", flexWrap: "wrap", rowGap: nativeDefault.space.PX_16, columnGap: nativeDefault.space.PX_16 }, item: null, itemImage: null, itemContent: null };
 let obj3 = { flexDirection: "row", flexWrap: "wrap", rowGap: nativeDefault.space.PX_16, columnGap: nativeDefault.space.PX_16 };
 obj2.item = { width: "47%", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };

@@ -1,6 +1,6 @@
-// === Module 8425: ? ===
+// === Module 5070: ? ===
 
-// Module 8425
+// Module 5070
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/card-cat.png.js");

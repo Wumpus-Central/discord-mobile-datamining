@@ -1,18 +1,18 @@
-// === Module 7549: ForumActivePostStore ===
+// === Module 7633: ForumActivePostStore ===
 
-// Module 7549 (ForumActivePostStore)
+// Module 7633 (ForumActivePostStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ThreadSortOrder from "ThreadSortOrder" /* 2051 */;
 import ThreadSearchTagSetting from "ThreadSearchTagSetting" /* 2053 */;
 import SetUtils from "SetUtils" /* 2059 */;
-import ForumUtils from "ForumUtils" /* 7551 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 5726 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 7550 */;
+import ForumUtils from "ForumUtils" /* 7635 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 5810 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7634 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2042 */;
-import ReadStateStore from "ReadStateStore" /* 4772 */;
+import ReadStateStore from "ReadStateStore" /* 4842 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2096 */;
 import apply_mod from "module_12" /* 12 */;
 

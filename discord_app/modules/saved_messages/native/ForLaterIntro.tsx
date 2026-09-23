@@ -1,18 +1,18 @@
-// === Module 13607: ForLaterIntro ===
+// === Module 13689: ForLaterIntro ===
 
-// Module 13607 (ForLaterIntro)
+// Module 13689 (ForLaterIntro)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ClockIcon from "ClockIcon" /* 4719 */;
-import Text_Text from "Text/Text" /* 4753 */;
-import ActionSheetConstants from "ActionSheetConstants" /* 7398 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7456 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 8107 */;
-import BookmarkIcon from "BookmarkIcon" /* 11964 */;
-import _modDef13610 from "module_13610" /* 13610 */;
+import ClockIcon from "ClockIcon" /* 4789 */;
+import Text_Text from "Text/Text" /* 4823 */;
+import ActionSheetConstants from "ActionSheetConstants" /* 7482 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7540 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 8189 */;
+import BookmarkIcon from "BookmarkIcon" /* 12041 */;
+import _modDef13692 from "module_13692" /* 13692 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4757 */;
+import createStyles from "createStyles" /* 4827 */;
 import size_mod from "module_2" /* 2 */;
 
 function IntroDemo(isReminder) {
@@ -20,7 +20,7 @@ function IntroDemo(isReminder) {
   const tmp = closure_8();
   const obj = { style: tmp.demo, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   const obj2 = { style: tmp.messages, children: null };
-  const obj3 = { source: { uri: _modDef13610 }, style: tmp.avatar };
+  const obj3 = { source: { uri: _modDef13692 }, style: tmp.avatar };
   const items = [timestampProducer(React3, obj3), ];
   const obj5 = { style: tmp.messageLines, children: null };
   const obj6 = { variant: "text-sm/semibold", color: "text-default", children: null };
@@ -119,7 +119,7 @@ export default function ForLaterIntro(type) {
   const tmp4 = type.type === SavedMessagesTypes.SavedMessageSortTypes.REMINDER;
   const obj = { style: tmp.scrollView, contentContainerStyle: tmp.pageContainer, children: null };
   const obj2 = { style: tmp.container, children: null };
-  const items = [timestampProducer(React3, { source: importDefault(tmp4 ? 13608 : 13609), style: tmp.upsellImage }), , ];
+  const items = [timestampProducer(React3, { source: importDefault(tmp4 ? 13690 : 13691), style: tmp.upsellImage }), , ];
   const obj4 = { style: tmp.textContainer, children: null };
   const obj5 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
   const intl = util.intl;
@@ -131,7 +131,7 @@ export default function ForLaterIntro(type) {
   const t2 = util.t;
   const intl3 = util.intl;
   const t3 = util.t;
-  const obj3 = { source: importDefault(tmp4 ? 13608 : 13609), style: tmp.upsellImage };
+  const obj3 = { source: importDefault(tmp4 ? 13690 : 13691), style: tmp.upsellImage };
   const tmp10 = tmp4 ? t2.YI4UjI : t2["5TSj/g"];
   obj6.children = intl2.format(tmp10, { itemName: intl3.string(tmp4 ? t3.mJ3P0N : t3.tpxJto) });
   items1[1] = timestampProducer(Text_Text.Text, obj6);

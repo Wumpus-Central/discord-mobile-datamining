@@ -1,23 +1,23 @@
-// === Module 16244: ActivityPrivacyDefaultSharingSetting ===
+// === Module 16297: ActivityPrivacyDefaultSharingSetting ===
 
-// Module 16244 (ActivityPrivacyDefaultSharingSetting)
+// Module 16297 (ActivityPrivacyDefaultSharingSetting)
 import util from "util" /* 1115 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
 import UserSettings from "UserSettings" /* 2020 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4724 */;
-import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 15136 */;
-import ActivityPrivacyMatchingExperiment from "ActivityPrivacyMatchingExperiment" /* 16245 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4794 */;
+import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 15188 */;
+import ActivityPrivacyMatchingExperiment from "ActivityPrivacyMatchingExperiment" /* 16298 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(11729);
+const SettingBuilders = fn(11805);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.vpgck1);
   },
-  parent: fn(8237).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8319).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   usePredicate() {
     return ActivityPrivacyMatchingExperiment.useIsInActivityPrivacyCopyExperiment("ActivityPrivacyDefaultSharingSetting");
   },
@@ -60,7 +60,7 @@ const radio = SettingBuilders.createRadio({
         const obj2 = { direction: null, affectedGuildIds: null, settingName: null };
         ({ direction: obj5.direction, affectedGuildIds: obj5.affectedGuildIds } = affectedGuilds);
         obj2.settingName = activityRestrictionSettingName;
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16246, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj2);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16299, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj2);
       }
       const tmp2Result = ActivityPrivacyUpsellUtils;
     }

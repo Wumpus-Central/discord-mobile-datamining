@@ -1,8 +1,8 @@
-// === Module 11271: useFavoritesGuildCategories ===
+// === Module 11347: useFavoritesGuildCategories ===
 
-// Module 11271 (useFavoritesGuildCategories)
+// Module 11347 (useFavoritesGuildCategories)
 import initialize from "initialize" /* 504 */;
-import FavoritesHooks from "FavoritesHooks" /* 10488 */;
+import FavoritesHooks from "FavoritesHooks" /* 10567 */;
 import FavoriteStore from "FavoriteStore" /* 2045 */;
 
 require = fn;

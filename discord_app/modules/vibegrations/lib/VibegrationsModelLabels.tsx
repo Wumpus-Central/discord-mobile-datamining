@@ -1,32 +1,32 @@
-// === Module 16953: VibegrationsModelLabels ===
+// === Module 17005: VibegrationsModelLabels ===
 
-// Module 16953 (VibegrationsModelLabels)
+// Module 17005 (VibegrationsModelLabels)
 import util from "util" /* 1115 */;
-import _modDef3678 from "module_3678" /* 3678 */;
+import _modDef3712 from "module_3712" /* 3712 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsModelLabels.tsx");
 
 export const modelTierMessage = function modelTierMessage(arg0) {
   if ("simple" === arg0) {
-    return _modDef3678["5DOL2g"];
+    return _modDef3712["5DOL2g"];
   } else if ("balanced" === arg0) {
-    return _modDef3678["5I6PKl"];
+    return _modDef3712["5I6PKl"];
   } else if ("complex" === arg0) {
-    return _modDef3678.OJIfkn;
+    return _modDef3712.OJIfkn;
   } else {
     return null;
   }
 };
 export const tierTooltip = function tierTooltip(title, arg1) {
   if ("simple" === arg1) {
-    let v5DOL2g = _modDef3678["5DOL2g"];
+    let v5DOL2g = _modDef3712["5DOL2g"];
   } else if ("balanced" === arg1) {
-    v5DOL2g = _modDef3678["5I6PKl"];
+    v5DOL2g = _modDef3712["5I6PKl"];
   } else {
     v5DOL2g = null;
     if ("complex" === arg1) {
-      v5DOL2g = _modDef3678.OJIfkn;
+      v5DOL2g = _modDef3712.OJIfkn;
     }
   }
   if (null != v5DOL2g) {

@@ -1,11 +1,11 @@
-// === Module 17043: useVibegrationsRevealedText ===
+// === Module 17100: useVibegrationsRevealedText ===
 
-// Module 17043 (useVibegrationsRevealedText)
-import VibegrationsStreamReveal from "VibegrationsStreamReveal" /* 17044 */;
-import vibegrationsPageVisibility from "vibegrationsPageVisibility" /* 17045 */;
+// Module 17100 (useVibegrationsRevealedText)
+import VibegrationsStreamReveal from "VibegrationsStreamReveal" /* 17101 */;
+import vibegrationsPageVisibility from "vibegrationsPageVisibility" /* 17102 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4749 */;
+import AccessibilityStore from "AccessibilityStore" /* 4819 */;
 
 const require = globalThis.__r;
 
@@ -100,7 +100,7 @@ export const useVibegrationsRevealedText = function useVibegrationsRevealedText(
             const obj2 = { target, length: target.length };
             dependencyMap(obj2);
           }
-          obj = closure_0(17045);
+          obj = closure_0(17102);
         }
         obj = vibegrationsPageVisibility;
         return vibegrationsPageVisibility.subscribePageVisibility(flushIfHidden);
@@ -122,8 +122,8 @@ export const useVibegrationsRevealedText = function useVibegrationsRevealedText(
     obj5 = { target: source, length: null };
     if (streaming) {
       ({ target, length } = tmp2);
-      let length2 = target(17044).reconcileRevealedLength(target, source, length);
-      const targetResult = target(17044);
+      let length2 = target(17101).reconcileRevealedLength(target, source, length);
+      const targetResult = target(17101);
     } else {
       length2 = source.length;
     }

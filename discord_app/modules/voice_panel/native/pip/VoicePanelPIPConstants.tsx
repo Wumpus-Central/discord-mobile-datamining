@@ -1,6 +1,6 @@
-// === Module 17565: VoicePanelPIPConstants ===
+// === Module 17633: VoicePanelPIPConstants ===
 
-// Module 17565 (VoicePanelPIPConstants)
+// Module 17633 (VoicePanelPIPConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPConstants.tsx");

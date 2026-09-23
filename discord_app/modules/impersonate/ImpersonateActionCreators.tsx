@@ -1,18 +1,18 @@
-// === Module 5771: ImpersonateActionCreators ===
+// === Module 5855: ImpersonateActionCreators ===
 
-// Module 5771 (ImpersonateActionCreators)
+// Module 5855 (ImpersonateActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import router_utils from "router_utils" /* 1101 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import ImpersonateTypes from "ImpersonateTypes" /* 2104 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4937 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5007 */;
 import ChannelStore from "ChannelStore" /* 2042 */;
-import GuildChannelStore from "GuildChannelStore" /* 4394 */;
+import GuildChannelStore from "GuildChannelStore" /* 4460 */;
 import GuildMemberStore from "GuildMemberStore" /* 2105 */;
 import GuildRoleStore from "GuildRoleStore" /* 2099 */;
-import PermissionStore from "PermissionStore" /* 4396 */;
+import PermissionStore from "PermissionStore" /* 4462 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2096 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4938 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5008 */;
 import ImpersonateStore from "ImpersonateStore" /* 2098 */;
 
 require = fn;

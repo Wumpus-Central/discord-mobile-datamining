@@ -1,8 +1,8 @@
-// === Module 11869: MarkupReactLinkUtils ===
+// === Module 11945: MarkupReactLinkUtils ===
 
-// Module 11869 (MarkupReactLinkUtils)
-import MarkupParser from "MarkupParser" /* 8249 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8645 */;
+// Module 11945 (MarkupReactLinkUtils)
+import MarkupParser from "MarkupParser" /* 8331 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8716 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/markup/MarkupReactLinkUtils.tsx");

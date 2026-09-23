@@ -1,10 +1,10 @@
-// === Module 13831: OutboundPromotionClaimAlert ===
+// === Module 13916: OutboundPromotionClaimAlert ===
 
-// Module 13831 (OutboundPromotionClaimAlert)
+// Module 13916 (OutboundPromotionClaimAlert)
 import nativeDefault from "native" /* 576 */;
-import LinkingDefault from "Linking" /* 4452 */;
-import ClipboardUtils from "ClipboardUtils" /* 7436 */;
-import PromotionUtils from "PromotionUtils" /* 13698 */;
+import LinkingDefault from "Linking" /* 4518 */;
+import ClipboardUtils from "ClipboardUtils" /* 7520 */;
+import PromotionUtils from "PromotionUtils" /* 13783 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire, Image: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { loading: { marginVertical: 80 }, body: { alignItems: "center" }, title: { marginBottom: 8 }, errorTitle: { lineHeight: 24, marginBottom: 8 }, bodyText: { textAlign: "center", lineHeight: 20 }, copyInputContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginTop: 16, padding: 12, borderRadius: nativeDefault.radii.sm }, copyInputLabel: { lineHeight: 20, marginBottom: 8 }, copyInput: null, copyInputCopied: null, copyButton: null, promotionArt: null, errorArt: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginTop: 16, padding: 12, borderRadius: nativeDefault.radii.sm };
 obj2.copyInput = { borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, padding: 8, marginBottom: 8, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };

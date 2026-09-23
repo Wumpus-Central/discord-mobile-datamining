@@ -1,10 +1,10 @@
-// === Module 16077: DesignSystemsSetting ===
+// === Module 16130: DesignSystemsSetting ===
 
-// Module 16077 (DesignSystemsSetting)
+// Module 16130 (DesignSystemsSetting)
 import Constants from "Constants" /* 1074 */;
-import PaintPaletteIcon from "PaintPaletteIcon" /* 15543 */;
-import useDesignSystemsSettingPredicate from "useDesignSystemsSettingPredicate" /* 16078 */;
-import SettingBuilders from "SettingBuilders" /* 11729 */;
+import PaintPaletteIcon from "PaintPaletteIcon" /* 15597 */;
+import useDesignSystemsSettingPredicate from "useDesignSystemsSettingPredicate" /* 16131 */;
+import SettingBuilders from "SettingBuilders" /* 11805 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

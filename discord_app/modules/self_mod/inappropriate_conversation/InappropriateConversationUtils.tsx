@@ -1,13 +1,13 @@
-// === Module 11664: InappropriateConversationUtils ===
+// === Module 11740: InappropriateConversationUtils ===
 
-// Module 11664 (InappropriateConversationUtils)
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11637 */;
+// Module 11740 (InappropriateConversationUtils)
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11713 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
 import UserStore from "UserStore" /* 1372 */;
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 11185 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 11261 */;
 
 require = fn;
-const SafetyWarningTypes = fn(11185).SafetyWarningTypes;
+const SafetyWarningTypes = fn(11261).SafetyWarningTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationUtils.tsx");
 

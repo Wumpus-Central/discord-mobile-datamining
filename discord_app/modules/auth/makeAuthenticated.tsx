@@ -1,8 +1,8 @@
-// === Module 17231: makeAuthenticated ===
+// === Module 17300: makeAuthenticated ===
 
-// Module 17231 (makeAuthenticated)
-import AuthenticationUtils from "AuthenticationUtils" /* 7907 */;
-import RedirectUnauthenticatedDefault from "RedirectUnauthenticated" /* 17232 */;
+// Module 17300 (makeAuthenticated)
+import AuthenticationUtils from "AuthenticationUtils" /* 7989 */;
+import RedirectUnauthenticatedDefault from "RedirectUnauthenticated" /* 17301 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 

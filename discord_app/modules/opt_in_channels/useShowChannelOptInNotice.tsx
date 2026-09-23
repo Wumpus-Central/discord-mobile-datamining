@@ -1,7 +1,7 @@
-// === Module 11689: useShowChannelOptInNotice ===
+// === Module 11765: useShowChannelOptInNotice ===
 
-// Module 11689 (useShowChannelOptInNotice)
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4938 */;
+// Module 11765 (useShowChannelOptInNotice)
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5008 */;
 
 const require = globalThis.__r;
 

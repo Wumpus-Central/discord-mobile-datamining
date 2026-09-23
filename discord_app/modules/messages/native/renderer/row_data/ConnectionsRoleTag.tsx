@@ -1,6 +1,6 @@
-// === Module 13496: ConnectionsRoleTag ===
+// === Module 13578: ConnectionsRoleTag ===
 
-// Module 13496 (ConnectionsRoleTag)
+// Module 13578 (ConnectionsRoleTag)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;

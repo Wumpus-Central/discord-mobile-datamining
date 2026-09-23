@@ -1,9 +1,9 @@
-// === Module 14113: MessageRequestUtils ===
+// === Module 14195: MessageRequestUtils ===
 
-// Module 14113 (MessageRequestUtils)
+// Module 14195 (MessageRequestUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import MessageRequestStore from "MessageRequestStore" /* 7466 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7467 */;
+import MessageRequestStore from "MessageRequestStore" /* 7550 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7551 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/MessageRequestUtils.tsx");

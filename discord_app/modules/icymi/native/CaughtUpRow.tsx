@@ -1,9 +1,9 @@
-// === Module 16866: CaughtUpRow ===
+// === Module 16918: CaughtUpRow ===
 
-// Module 16866 (CaughtUpRow)
+// Module 16918 (CaughtUpRow)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4493 */;
-import timing from "timing" /* 4758 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4559 */;
+import timing from "timing" /* 4828 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -14,8 +14,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(4753).Text);
-const createICYMIStyles = fn(16803);
+let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(4823).Text);
+const createICYMIStyles = fn(16855);
 let closure_10 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = { container: { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_32 }, textContainer: null, recommendedGuildsContainer: null, iconWrapper: null, icon: null, headerText: null, subtitleText: null, buttonContainer: null, gradient: null };
   const obj2 = { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_32 };
@@ -43,7 +43,7 @@ export default function ExploreServersRow(visible) {
   visible = visible.visible;
   dependencyMap = undefined;
   const tmp = closure_10();
-  const sharedValue = visible(4493).useSharedValue(false);
+  const sharedValue = visible(4559).useSharedValue(false);
   let items = [visible, sharedValue];
   const effect = noop.useEffect(() => {
     let tmp2 = visible;
@@ -84,14 +84,14 @@ export default function ExploreServersRow(visible) {
             return obj3;
           } else {
             dependencyMap(true);
-            v1(8626).itemInteracted("caught_up", "caught_up", "press_explore");
-            const obj5 = v1(8626);
+            v1(8697).itemInteracted("caught_up", "caught_up", "press_explore");
+            const obj5 = v1(8697);
             const obj4 = { itemId: "caught_up", itemType: "caught_up", actionParameters: { actionGestureType: "press", actionTargetElement: "browse_servers_button", actionIntentType: "open", actionDestinationType: null } };
-            v1(8626).feedItemActioned(obj4);
-            const obj6 = v1(8626);
+            v1(8697).feedItemActioned(obj4);
+            const obj6 = v1(8697);
             v1 = 1;
             dependencyMap = 1;
-            const obj7 = { value: tmp4(16820).maybeFetchGuildDiscoveryCategories(), done: false };
+            const obj7 = { value: tmp4(16872).maybeFetchGuildDiscoveryCategories(), done: false };
             return obj7;
           }
         } else if (arg0 === 1) {
@@ -119,16 +119,16 @@ export default function ExploreServersRow(visible) {
     }
   }), []);
   const callback1 = noop.useCallback(() => {
-    sharedValue(8626).itemInteracted("caught_up", "caught_up", "press_home");
-    const obj = sharedValue(8626);
-    sharedValue(8626).feedItemActioned({ itemId: "caught_up", itemType: "caught_up", actionParameters: { actionGestureType: "press", actionTargetElement: "back_to_home_button", actionIntentType: "navigate", actionDestinationType: "guild_home" } });
-    const obj2 = sharedValue(8626);
-    const rootNavigationRef = visible(4615).getRootNavigationRef();
+    sharedValue(8697).itemInteracted("caught_up", "caught_up", "press_home");
+    const obj = sharedValue(8697);
+    sharedValue(8697).feedItemActioned({ itemId: "caught_up", itemType: "caught_up", actionParameters: { actionGestureType: "press", actionTargetElement: "back_to_home_button", actionIntentType: "navigate", actionDestinationType: "guild_home" } });
+    const obj2 = sharedValue(8697);
+    const rootNavigationRef = visible(4685).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("tabs", { screen: "guilds" });
     }
   }, []);
-  let obj = visible(4493);
+  let obj = visible(4559);
   class E {
     constructor() {
       obj = closure_1;
@@ -180,12 +180,12 @@ export default function ExploreServersRow(visible) {
       return obj7;
     }
   }
-  let obj2 = visible(4493);
-  E.__closure = { visibleSharedValue: sharedValue, withTiming: visible(4758).withTiming, Easing: visible(4493).Easing };
+  let obj2 = visible(4559);
+  E.__closure = { visibleSharedValue: sharedValue, withTiming: visible(4828).withTiming, Easing: visible(4559).Easing };
   E.__workletHash = 6575188656069;
   E.__initData = __initData;
   const animatedStyle = obj2.useAnimatedStyle(E);
-  let obj3 = { visibleSharedValue: sharedValue, withTiming: visible(4758).withTiming, Easing: visible(4493).Easing };
+  let obj3 = { visibleSharedValue: sharedValue, withTiming: visible(4828).withTiming, Easing: visible(4559).Easing };
   const fn = function b() {
     let num = 0;
     if (sharedValue.get()) {
@@ -205,12 +205,12 @@ export default function ExploreServersRow(visible) {
     obj7.transform = items;
     return obj7;
   };
-  let obj4 = visible(4493);
-  fn.__closure = { visibleSharedValue: sharedValue, withDelay: visible(4493).withDelay, withSequence: visible(4493).withSequence, withTiming: visible(4758).withTiming, Easing: visible(4493).Easing };
+  let obj4 = visible(4559);
+  fn.__closure = { visibleSharedValue: sharedValue, withDelay: visible(4559).withDelay, withSequence: visible(4559).withSequence, withTiming: visible(4828).withTiming, Easing: visible(4559).Easing };
   fn.__workletHash = 469742746264;
   fn.__initData = __initData2;
   const animatedStyle1 = obj4.useAnimatedStyle(fn);
-  let obj5 = { visibleSharedValue: sharedValue, withDelay: visible(4493).withDelay, withSequence: visible(4493).withSequence, withTiming: visible(4758).withTiming, Easing: visible(4493).Easing };
+  let obj5 = { visibleSharedValue: sharedValue, withDelay: visible(4559).withDelay, withSequence: visible(4559).withSequence, withTiming: visible(4828).withTiming, Easing: visible(4559).Easing };
   const fn2 = function x() {
     let num = 0;
     if (sharedValue.get()) {
@@ -230,20 +230,20 @@ export default function ExploreServersRow(visible) {
     obj7.transform = items;
     return obj7;
   };
-  let obj6 = visible(4493);
-  fn2.__closure = { visibleSharedValue: sharedValue, withDelay: visible(4493).withDelay, withSequence: visible(4493).withSequence, withTiming: visible(4758).withTiming, Easing: visible(4493).Easing };
+  let obj6 = visible(4559);
+  fn2.__closure = { visibleSharedValue: sharedValue, withDelay: visible(4559).withDelay, withSequence: visible(4559).withSequence, withTiming: visible(4828).withTiming, Easing: visible(4559).Easing };
   fn2.__workletHash = 14933607481025;
   fn2.__initData = __initData3;
   const animatedStyle2 = obj6.useAnimatedStyle(fn2);
-  let obj7 = { visibleSharedValue: sharedValue, withDelay: visible(4493).withDelay, withSequence: visible(4493).withSequence, withTiming: visible(4758).withTiming, Easing: visible(4493).Easing };
-  const token = visible(4458).useToken(sharedValue(576).colors.BACKGROUND_BRAND);
+  let obj7 = { visibleSharedValue: sharedValue, withDelay: visible(4559).withDelay, withSequence: visible(4559).withSequence, withTiming: visible(4828).withTiming, Easing: visible(4559).Easing };
+  const token = visible(4524).useToken(sharedValue(576).colors.BACKGROUND_BRAND);
   const obj9 = { children: null };
   const obj10 = { style: tmp.container, children: null };
   const obj11 = { style: tmp.textContainer, children: null };
-  const obj12 = { style: null, children: closure_7(visible(13309).FlashIcon, { size: "custom", style: tmp.icon, color: "background-brand" }) };
+  const obj12 = { style: null, children: closure_7(visible(13391).FlashIcon, { size: "custom", style: tmp.icon, color: "background-brand" }) };
   const items1 = [tmp.iconWrapper, animatedStyle];
   obj12.style = items1;
-  const items2 = [closure_7(sharedValue(4493).View, obj12), , ];
+  const items2 = [closure_7(sharedValue(4559).View, obj12), , ];
   const obj14 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: null, children: null };
   const items3 = [tmp.headerText, animatedStyle1];
   obj14.style = items3;
@@ -263,22 +263,22 @@ export default function ExploreServersRow(visible) {
   const intl3 = visible(1115).intl;
   obj17.text = intl3.string(visible(1115).t.lNJYV8);
   obj17.onPress = callback;
-  const items6 = [closure_7(visible(5187).Button, obj17), ];
+  const items6 = [closure_7(visible(5271).Button, obj17), ];
   const obj18 = { size: "md", text: null, grow: true, variant: "secondary", onPress: null };
   const intl4 = visible(1115).intl;
   obj18.text = intl4.string(visible(1115).t.AGrUbj);
   obj18.onPress = callback1;
-  items6[1] = closure_7(visible(5187).Button, obj18);
+  items6[1] = closure_7(visible(5271).Button, obj18);
   obj16.children = items6;
   items5[1] = closure_8(View, obj16);
   obj10.children = items5;
-  const items7 = [closure_8(View, obj10), closure_7(visible(16842).Separator, {}), ];
+  const items7 = [closure_8(View, obj10), closure_7(visible(16894).Separator, {}), ];
   const obj19 = { style: tmp.gradient, start: null, end: null, colors: null, pointerEvents: "none" };
   const obj13 = { size: "custom", style: tmp.icon, color: "background-brand" };
-  const obj8 = visible(4458);
+  const obj8 = visible(4524);
   obj19.start = visible(1094).VerticalGradient.START;
   obj19.end = visible(1094).VerticalGradient.END;
-  const tmp11 = sharedValue(5199);
+  const tmp11 = sharedValue(5283);
   const obj20 = sharedValue(672)(token);
   const items8 = [sharedValue(672)(token).alpha(0.2).hex(), ];
   const alphaResult = sharedValue(672)(token).alpha(0.2);

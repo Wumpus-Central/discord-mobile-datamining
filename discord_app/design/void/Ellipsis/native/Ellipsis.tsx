@@ -1,12 +1,12 @@
-// === Module 14365: Ellipsis ===
+// === Module 14445: Ellipsis ===
 
-// Module 14365 (Ellipsis)
+// Module 14445 (Ellipsis)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4493 */;
-import timing from "timing" /* 4758 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4559 */;
+import timing from "timing" /* 4828 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4749 */;
+import AccessibilityStore from "AccessibilityStore" /* 4819 */;
 
 require = fn;
 function AnimatedEllipsisDot(disableScale) {
@@ -84,7 +84,7 @@ const View = fn(17).View;
 const jsx = fn(21).jsx;
 let c7 = 233.33333333333334;
 let c8 = 116.66666666666667;
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj = { typingIndicator: { justifyContent: "center", alignItems: "center", flexDirection: "row", marginRight: 4 }, typingIndicatorDot: null };
 let size = { backgroundColor: nativeDefault.colors.TEXT_DEFAULT, borderRadius: nativeDefault.radii.round, marginRight: 2, height: 6, width: 6 };
 obj.typingIndicatorDot = size;

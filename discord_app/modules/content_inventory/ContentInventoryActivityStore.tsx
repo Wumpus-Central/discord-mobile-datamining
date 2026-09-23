@@ -1,14 +1,14 @@
-// === Module 13299: ContentInventoryActivityStore ===
+// === Module 13381: ContentInventoryActivityStore ===
 
-// Module 13299 (ContentInventoryActivityStore)
+// Module 13381 (ContentInventoryActivityStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import utils from "utils" /* 8408 */;
-import matchUtils from "matchUtils" /* 8612 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 8616 */;
-import PresenceStore from "PresenceStore" /* 4797 */;
-import ContentInventoryStore from "ContentInventoryStore" /* 8611 */;
+import utils from "utils" /* 8490 */;
+import matchUtils from "matchUtils" /* 8683 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8687 */;
+import PresenceStore from "PresenceStore" /* 4867 */;
+import ContentInventoryStore from "ContentInventoryStore" /* 8682 */;
 
 require = fn;
 function entryToKey(content) {
@@ -20,7 +20,7 @@ function getMatchingActivity(author_type) {
   if (!obj.isEntryExpired(author_type)) {
     let found;
     if (tmpResult.isEntryActive(author_type)) {
-      if (author_type.author_type === tmp(8631).ContentInventoryAuthorType.USER) {
+      if (author_type.author_type === tmp(8702).ContentInventoryAuthorType.USER) {
         const activities = PresenceStore.getActivities(author_type.author_id);
         found = activities.find((type) => {
           if (type.type === ActivityTypes.PLAYING) {
@@ -42,7 +42,7 @@ function getMatchingActivity(author_type) {
       }
     }
     tmp3 = found;
-    tmpResult = tmp(8408);
+    tmpResult = tmp(8490);
   }
   return tmp3;
 }
@@ -109,7 +109,7 @@ function handlePresenceUpdates() {
   set = new Set();
 }
 const ActivityTypes = fn(1074).ActivityTypes;
-let items = [fn(8403).ContentInventoryEntryType.LISTENED_SESSION];
+let items = [fn(8485).ContentInventoryEntryType.LISTENED_SESSION];
 let set = new Set(items);
 const map = new Map();
 const Store = initializeDefault.Store;

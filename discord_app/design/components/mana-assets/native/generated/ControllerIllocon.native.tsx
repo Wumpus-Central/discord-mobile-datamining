@@ -1,9 +1,9 @@
-// === Module 6114: ControllerIllocon ===
+// === Module 6198: ControllerIllocon ===
 
-// Module 6114 (ControllerIllocon)
+// Module 6198 (ControllerIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5806 */;
-import _modDef6115 from "module_6115" /* 6115 */;
+import FastImageDefault from "FastImage" /* 5890 */;
+import _modDef6199 from "module_6199" /* 6199 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const ControllerIllocon = function ControllerIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6115 };
+  const obj2 = { uri: _modDef6199 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

@@ -1,10 +1,10 @@
-// === Module 15276: PremiumGuildBoostingSetting ===
+// === Module 15328: PremiumGuildBoostingSetting ===
 
-// Module 15276 (PremiumGuildBoostingSetting)
+// Module 15328 (PremiumGuildBoostingSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
-import BoostGemIcon from "BoostGemIcon" /* 9495 */;
-import SettingBuilders from "SettingBuilders" /* 11729 */;
+import BoostGemIcon from "BoostGemIcon" /* 9568 */;
+import SettingBuilders from "SettingBuilders" /* 11805 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

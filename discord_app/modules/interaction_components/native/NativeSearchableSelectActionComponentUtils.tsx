@@ -1,14 +1,14 @@
-// === Module 8395: NativeSearchableSelectActionComponentUtils ===
+// === Module 8477: NativeSearchableSelectActionComponentUtils ===
 
-// Module 8395 (NativeSearchableSelectActionComponentUtils)
+// Module 8477 (NativeSearchableSelectActionComponentUtils)
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1400 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 4988 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5241 */;
-import RoleIconUtils from "RoleIconUtils" /* 7434 */;
-import _modDef8396 from "module_8396" /* 8396 */;
-import _modDef8397 from "module_8397" /* 8397 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 5058 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5325 */;
+import RoleIconUtils from "RoleIconUtils" /* 7518 */;
+import _modDef8478 from "module_8478" /* 8478 */;
+import _modDef8479 from "module_8479" /* 8479 */;
 import ChannelStore from "ChannelStore" /* 2042 */;
 import GuildRoleStore from "GuildRoleStore" /* 2099 */;
 import GuildStore from "GuildStore" /* 2064 */;
@@ -55,7 +55,7 @@ export const transformSearchableSelectOptions = function transformSearchableSele
           if (null == roleIconData) {
             const obj2 = {};
             const merged1 = Object.assign(type);
-            obj2.iconSrc = utils_AvatarUtils.ensureAvatarSource(_modDef8396).uri;
+            obj2.iconSrc = utils_AvatarUtils.ensureAvatarSource(_modDef8478).uri;
             if (null != role.colorString) {
               let hex2intResult = utils_ColorUtils.hex2int(role.colorString);
               const tmpResult10 = utils_ColorUtils;
@@ -95,7 +95,7 @@ export const transformSearchableSelectOptions = function transformSearchableSele
         let tmpResult11 = utils_AvatarUtils;
         let hex2int = tmpResult11.ensureAvatarSource;
         if (channel.type === constants.GUILD_CATEGORY) {
-          let channelIconWithGuild = _modDef8397;
+          let channelIconWithGuild = _modDef8479;
         } else {
           channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, id);
           const tmpResult12 = utils_ChannelUtils;
@@ -113,7 +113,7 @@ export const transformSearchableSelectOptions = function transformSearchableSele
 };
 export const getChannelIconData = function getChannelIconData(channel, guild) {
   if (channel.type === constants.GUILD_CATEGORY) {
-    let channelIconWithGuild = _modDef8397;
+    let channelIconWithGuild = _modDef8479;
   } else {
     channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, guild);
   }

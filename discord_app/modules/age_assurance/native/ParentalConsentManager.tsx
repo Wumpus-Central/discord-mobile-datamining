@@ -1,8 +1,8 @@
-// === Module 17876: ParentalConsentManager ===
+// === Module 17945: ParentalConsentManager ===
 
-// Module 17876 (ParentalConsentManager)
-import AppStoreAgeSignalReport from "AppStoreAgeSignalReport" /* 17877 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7365 */;
+// Module 17945 (ParentalConsentManager)
+import AppStoreAgeSignalReport from "AppStoreAgeSignalReport" /* 17946 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7449 */;
 
 require = fn;
 const prototype = function ParentalConsentManager() {

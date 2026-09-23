@@ -8,16 +8,16 @@ import DispatcherDefault from "Dispatcher" /* 573 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import router_utils from "router_utils" /* 1101 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4614 */;
-import isAccessibleNonStaticChannelPathDefault from "isAccessibleNonStaticChannelPath" /* 7559 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4684 */;
+import isAccessibleNonStaticChannelPathDefault from "isAccessibleNonStaticChannelPath" /* 7643 */;
 import GatedChannelStore from "GatedChannelStore" /* 2097 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2042 */;
-import GuildChannelStore from "GuildChannelStore" /* 4394 */;
+import GuildChannelStore from "GuildChannelStore" /* 4460 */;
 import GuildStore from "GuildStore" /* 2064 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
-import PermissionStore from "PermissionStore" /* 4396 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4578 */;
+import PermissionStore from "PermissionStore" /* 4462 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4648 */;
 
 require = fn;
 function handleConnectionOpen(sessionId) {

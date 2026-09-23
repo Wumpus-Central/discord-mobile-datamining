@@ -1,8 +1,8 @@
-// === Module 18373: reactAssetProvider ===
+// === Module 18442: reactAssetProvider ===
 
-// Module 18373 (reactAssetProvider)
-import NativeReactAssetModuleDefault from "NativeReactAssetModule" /* 18374 */;
-import native_required_assets from "native_required_assets" /* 18375 */;
+// Module 18442 (reactAssetProvider)
+import NativeReactAssetModuleDefault from "NativeReactAssetModule" /* 18443 */;
+import native_required_assets from "native_required_assets" /* 18444 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import size from "module_2" /* 2 */;

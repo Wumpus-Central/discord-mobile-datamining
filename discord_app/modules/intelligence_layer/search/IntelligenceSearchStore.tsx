@@ -1,19 +1,19 @@
-// === Module 13985: IntelligenceSearchStore ===
+// === Module 12697: IntelligenceSearchStore ===
 
-// Module 13985 (IntelligenceSearchStore)
+// Module 12697 (IntelligenceSearchStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import privDefault from "priv" /* 1438 */;
-import IntelligenceSearchTypes from "IntelligenceSearchTypes" /* 13987 */;
-import IntelligenceSearchUtils from "IntelligenceSearchUtils" /* 13988 */;
-import RelationshipStore from "RelationshipStore" /* 4406 */;
+import IntelligenceSearchTypes from "IntelligenceSearchTypes" /* 12699 */;
+import IntelligenceSearchUtils from "IntelligenceSearchUtils" /* 12700 */;
+import RelationshipStore from "RelationshipStore" /* 4472 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 function handleReset() {
   closure_6.reset();
 }
-const IntelligenceSearchConstants = fn(13986);
+const IntelligenceSearchConstants = fn(12698);
 ({ MAX_CACHED_ANSWERS_PER_GUILD: hasOwnProperty, MAX_CACHED_ANSWER_GUILDS } = IntelligenceSearchConstants);
 let closure_6 = new privDefault({ max: MAX_CACHED_ANSWER_GUILDS });
 const Store = initializeDefault.Store;
@@ -52,11 +52,11 @@ prototype["getStatus"] = function getStatus(arg0, arg1) {
   }
   return status;
 };
-prototype["hasAnswer"] = function hasAnswer(arg0, arg1) {
-  const peekResult = closure_6.peek(arg0);
+prototype["hasAnswer"] = function hasAnswer(guildIdFromSearchContext, searchTabFetchId) {
+  const peekResult = closure_6.peek(guildIdFromSearchContext);
   let peekResult1;
   if (peekResult != null) {
-    peekResult1 = peekResult.peek(arg1);
+    peekResult1 = peekResult.peek(searchTabFetchId);
   }
   if (peekResult1 == null) {
     peekResult1 = null;

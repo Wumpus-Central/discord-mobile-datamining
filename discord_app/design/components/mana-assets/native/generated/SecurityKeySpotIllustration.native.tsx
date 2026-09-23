@@ -1,9 +1,9 @@
-// === Module 6650: SecurityKeySpotIllustration ===
+// === Module 6734: SecurityKeySpotIllustration ===
 
-// Module 6650 (SecurityKeySpotIllustration)
+// Module 6734 (SecurityKeySpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5806 */;
-import _modDef6651 from "module_6651" /* 6651 */;
+import FastImageDefault from "FastImage" /* 5890 */;
+import _modDef6735 from "module_6735" /* 6735 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const SecurityKeySpotIllustration = function SecurityKeySpotIllustration(
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6651 };
+  const obj2 = { uri: _modDef6735 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

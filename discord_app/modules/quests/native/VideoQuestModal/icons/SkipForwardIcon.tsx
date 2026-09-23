@@ -1,7 +1,7 @@
-// === Module 15319: SkipForwardIcon ===
+// === Module 15371: SkipForwardIcon ===
 
-// Module 15319 (SkipForwardIcon)
-import inlineStyles from "inlineStyles" /* 8732 */;
+// Module 15371 (SkipForwardIcon)
+import inlineStyles from "inlineStyles" /* 8803 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;

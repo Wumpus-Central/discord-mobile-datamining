@@ -1,6 +1,6 @@
-// === Module 17823: IOSAppTransactionIdExperiment ===
+// === Module 17892: IOSAppTransactionIdExperiment ===
 
-// Module 17823 (IOSAppTransactionIdExperiment)
+// Module 17892 (IOSAppTransactionIdExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

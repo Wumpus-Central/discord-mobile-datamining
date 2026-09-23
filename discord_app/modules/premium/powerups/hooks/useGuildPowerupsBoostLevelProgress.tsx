@@ -1,7 +1,7 @@
-// === Module 4681: useGuildPowerupsBoostLevelProgress ===
+// === Module 4751: useGuildPowerupsBoostLevelProgress ===
 
-// Module 4681 (useGuildPowerupsBoostLevelProgress)
-import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 4665 */;
+// Module 4751 (useGuildPowerupsBoostLevelProgress)
+import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 4735 */;
 import GuildStore from "GuildStore" /* 2064 */;
 
 const require = globalThis.__r;

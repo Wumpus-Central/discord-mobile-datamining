@@ -1,25 +1,25 @@
-// === Module 15329: BountiesEndCardPressableCta ===
+// === Module 15381: BountiesEndCardPressableCta ===
 
-// Module 15329 (BountiesEndCardPressableCta)
+// Module 15381 (BountiesEndCardPressableCta)
 import nativeDefault from "native" /* 576 */;
-import QuestContent from "QuestContent" /* 5668 */;
-import AdCreativeType from "AdCreativeType" /* 5670 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7967 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 11755 */;
+import QuestContent from "QuestContent" /* 5752 */;
+import AdCreativeType from "AdCreativeType" /* 5754 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8049 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 11831 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const END_CARD_IMAGE_SIZE = fn(15330).END_CARD_IMAGE_SIZE;
+const END_CARD_IMAGE_SIZE = fn(15382).END_CARD_IMAGE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_9 = createStyles.createStyles(() => {
   const obj = { image: null, info: null, ctaContainer: null };
   const size = { width: END_CARD_IMAGE_SIZE, height: END_CARD_IMAGE_SIZE, borderRadius: nativeDefault.radii.xl, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };
   obj.image = size;
-  obj.info = { gap: nativeDefault.space.PX_4, alignItems: "center", marginTop: nativeDefault.space.PX_12 };
+  obj.info = { alignItems: "center", marginTop: nativeDefault.space.PX_12 };
   obj.ctaContainer = { position: "relative", alignItems: "center" };
   return obj;
 });
@@ -58,10 +58,8 @@ export default function BountiesEndCardPressableCta(bounty) {
   }
   const obj3 = { onPress: callback, disabled: flag, hitSlop: 16, accessibilityRole: "button", accessibilityLabel: bountyCtaInfo.label, style: tmp.ctaContainer, children: null };
   const items1 = [closure_7(sourceQuestContent(getQuestImpressionId[13]), { source: { uri: scaledImageUrl }, style: tmp.image }), ];
-  const obj5 = { style: tmp.info, children: null };
-  const items2 = [closure_7(bounty(getQuestImpressionId[14]).Text, { variant: "text-md/semibold", color: "text-strong", children: bountyCtaInfo.label }), closure_7(bounty(getQuestImpressionId[14]).Text, { variant: "text-sm/medium", color: "text-default", children: bountyCtaInfo.subtext })];
-  obj5.children = items2;
-  items1[1] = closure_8(closure_5, obj5);
+  const obj5 = { style: tmp.info, children: closure_7(bounty(getQuestImpressionId[14]).Text, { variant: "text-md/semibold", color: "text-strong", children: bountyCtaInfo.label }) };
+  items1[1] = closure_7(closure_5, obj5);
   obj3.children = items1;
   return closure_8(closure_4, obj3);
 };

@@ -1,6 +1,6 @@
-// === Module 7874: parseUserProfileCollectibles ===
+// === Module 7957: parseUserProfileCollectibles ===
 
-// Module 7874 (parseUserProfileCollectibles)
+// Module 7957 (parseUserProfileCollectibles)
 import CollectiblesItemType from "CollectiblesItemType" /* 1973 */;
 import size from "module_2" /* 2 */;
 
@@ -14,7 +14,7 @@ export default function parseUserProfileCollectibles(collectibles) {
     collectibles1 = collectibles.collectibles;
   }
   if (null == collectibles1) {
-    return { collectibles: "Array", profileEffect: "paddingHorizontal", profileFrame: "pos" };
+    return { collectibles: "Array", profileEffect: "paddingHorizontal", profileFrame: "container" };
   } else {
     const items = [];
     collectibles = collectibles.collectibles;

@@ -1,14 +1,14 @@
-// === Module 17903: StageChannelRequestToSpeakMessageManager ===
+// === Module 17972: StageChannelRequestToSpeakMessageManager ===
 
-// Module 17903 (StageChannelRequestToSpeakMessageManager)
+// Module 17972 (StageChannelRequestToSpeakMessageManager)
 import MessageTypes from "MessageTypes" /* 1090 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2042 */;
-import MessageStore from "MessageStore" /* 4977 */;
-import PermissionStore from "PermissionStore" /* 4396 */;
+import MessageStore from "MessageStore" /* 5047 */;
+import PermissionStore from "PermissionStore" /* 4462 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2096 */;
 import UserStore from "UserStore" /* 1372 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7365 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7449 */;
 
 require = fn;
 const MessageFlags = fn(1074).MessageFlags;
@@ -32,8 +32,8 @@ StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = 
               if (null != requestToSpeakTimestamp) {
                 user = user.getUser(userId);
                 if (null != user) {
-                  const result = userId(17904).sendStageRequestToSpeakEphemeralMessage(channelId, user, requestToSpeakTimestamp);
-                  const tmp11Result = userId(17904);
+                  const result = userId(17973).sendStageRequestToSpeakEphemeralMessage(channelId, user, requestToSpeakTimestamp);
+                  const tmp11Result = userId(17973);
                 }
               } else {
                 messages = messages.getMessages(channelId);
@@ -48,8 +48,8 @@ StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = 
                   return hasFlagResult;
                 });
                 if (null != findNewestResult) {
-                  closure_1(7701).deleteMessage(channelId, findNewestResult.id, true);
-                  const obj2 = closure_1(7701);
+                  closure_1(7784).deleteMessage(channelId, findNewestResult.id, true);
+                  const obj2 = closure_1(7784);
                 }
               }
             }

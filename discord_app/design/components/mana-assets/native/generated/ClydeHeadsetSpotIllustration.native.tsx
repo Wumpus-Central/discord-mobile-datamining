@@ -1,9 +1,9 @@
-// === Module 6098: ClydeHeadsetSpotIllustration ===
+// === Module 6182: ClydeHeadsetSpotIllustration ===
 
-// Module 6098 (ClydeHeadsetSpotIllustration)
+// Module 6182 (ClydeHeadsetSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5806 */;
-import _modDef6099 from "module_6099" /* 6099 */;
+import FastImageDefault from "FastImage" /* 5890 */;
+import _modDef6183 from "module_6183" /* 6183 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ClydeHeadsetSpotIllustration = function ClydeHeadsetSpotIllustratio
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6099 };
+  const obj2 = { uri: _modDef6183 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

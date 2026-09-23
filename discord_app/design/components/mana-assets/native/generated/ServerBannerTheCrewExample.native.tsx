@@ -1,9 +1,9 @@
-// === Module 6656: ServerBannerTheCrewExample ===
+// === Module 6740: ServerBannerTheCrewExample ===
 
-// Module 6656 (ServerBannerTheCrewExample)
+// Module 6740 (ServerBannerTheCrewExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5806 */;
-import _modDef6657 from "module_6657" /* 6657 */;
+import FastImageDefault from "FastImage" /* 5890 */;
+import _modDef6741 from "module_6741" /* 6741 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ServerBannerTheCrewExample = function ServerBannerTheCrewExample(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6657 };
+  const obj2 = { uri: _modDef6741 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

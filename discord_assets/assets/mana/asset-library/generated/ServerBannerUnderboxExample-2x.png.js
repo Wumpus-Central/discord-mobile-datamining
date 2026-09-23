@@ -1,6 +1,6 @@
-// === Module 6659: ? ===
+// === Module 6743: ? ===
 
-// Module 6659
+// Module 6743
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ServerBannerUnderboxExample-2x.png.js");

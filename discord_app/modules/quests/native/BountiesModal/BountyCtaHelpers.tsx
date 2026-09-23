@@ -1,15 +1,10 @@
-// === Module 15326: BountyCtaHelpers ===
+// === Module 15378: BountyCtaHelpers ===
 
-// Module 15326 (BountyCtaHelpers)
-import util from "util" /* 1115 */;
+// Module 15378 (BountyCtaHelpers)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountyCtaHelpers.tsx");
 
 export const getBountyCtaInfo = function getBountyCtaInfo(bounty) {
-  const obj = { label: bounty.productName, subtext: bounty.cta.buttonLabel, buttonLabel: null, iconImageUri: null };
-  const intl = util.intl;
-  obj.buttonLabel = intl.string(util.t.LLLLPD);
-  obj.iconImageUri = bounty.productIcon;
-  return obj;
+  return { label: bounty.productName, buttonLabel: bounty.cta.buttonLabel, iconImageUri: bounty.productIcon };
 };

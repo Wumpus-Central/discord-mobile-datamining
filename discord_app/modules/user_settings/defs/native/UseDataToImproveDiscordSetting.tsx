@@ -1,24 +1,24 @@
-// === Module 15139: UseDataToImproveDiscordSetting ===
+// === Module 15191: UseDataToImproveDiscordSetting ===
 
-// Module 15139 (UseDataToImproveDiscordSetting)
+// Module 15191 (UseDataToImproveDiscordSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5109 */;
-import common_AlertDefault from "common/Alert" /* 5206 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 15109 */;
-import ConsentActionCreators from "ConsentActionCreators" /* 15140 */;
-import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 15141 */;
-import ConsentStore from "ConsentStore" /* 6838 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5193 */;
+import common_AlertDefault from "common/Alert" /* 5290 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 15154 */;
+import ConsentActionCreators from "ConsentActionCreators" /* 15192 */;
+import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 15193 */;
+import ConsentStore from "ConsentStore" /* 6922 */;
 
 require = fn;
 const Consents = fn(1074).Consents;
-const SettingBuilders = fn(11729);
+const SettingBuilders = fn(11805);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.XuADY2);
   },
-  parent: fn(8237).MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(8319).MobileUserSettings.DATA_AND_PRIVACY,
   useValue: function useDataToImproveDiscordSettingValue() {
     const items = [ConsentStore];
     return initialize.useStateFromStores(items, () => ConsentStore.hasConsented(constants.USAGE_STATISTICS));

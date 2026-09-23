@@ -1,6 +1,6 @@
-// === Module 9926: VideoBackgroundActionCreators ===
+// === Module 9999: VideoBackgroundActionCreators ===
 
-// Module 9926 (VideoBackgroundActionCreators)
+// Module 9999 (VideoBackgroundActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2025 */;

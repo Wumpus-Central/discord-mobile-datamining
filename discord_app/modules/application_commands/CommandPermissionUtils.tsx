@@ -1,17 +1,17 @@
-// === Module 9525: CommandPermissionUtils ===
+// === Module 9598: CommandPermissionUtils ===
 
-// Module 9525 (CommandPermissionUtils)
+// Module 9598 (CommandPermissionUtils)
 import _modDef38 from "module_38" /* 38 */;
 import Constants from "Constants" /* 1074 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import Server from "Server" /* 1978 */;
 import ChannelRecord from "ChannelRecord" /* 2046 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5211 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7766 */;
-import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 7767 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7768 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9324 */;
-import CommandPermissionContext from "CommandPermissionContext" /* 9415 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5295 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7849 */;
+import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 7850 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7851 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9395 */;
+import CommandPermissionContext from "CommandPermissionContext" /* 9486 */;
 import GuildStore from "GuildStore" /* 2064 */;
 import size from "module_2" /* 2 */;
 

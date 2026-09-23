@@ -1,10 +1,10 @@
-// === Module 4725: HapticUtils ===
+// === Module 4795: HapticUtils ===
 
-// Module 4725 (HapticUtils)
+// Module 4795 (HapticUtils)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4726 */;
-import Patterns from "Patterns" /* 4727 */;
-import DeviceUtils from "DeviceUtils" /* 4736 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4796 */;
+import Patterns from "Patterns" /* 4797 */;
+import DeviceUtils from "DeviceUtils" /* 4806 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/haptics/HapticUtils.native.tsx");

@@ -1,20 +1,20 @@
-// === Module 9409: AppLauncherUtils ===
+// === Module 9480: AppLauncherUtils ===
 
-// Module 9409 (AppLauncherUtils)
+// Module 9480 (AppLauncherUtils)
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import Server from "Server" /* 1978 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7766 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9140 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 9529 */;
-import getPlatformDefault from "getPlatform" /* 9530 */;
-import ApplicationInstallUtils from "ApplicationInstallUtils" /* 9538 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7849 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9211 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9602 */;
+import getPlatformDefault from "getPlatform" /* 9603 */;
+import ApplicationInstallUtils from "ApplicationInstallUtils" /* 9611 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9410 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9481 */;
 import ApplicationRecord from "ApplicationRecord" /* 2002 */;
-import AppLauncherStore from "AppLauncherStore" /* 9528 */;
+import AppLauncherStore from "AppLauncherStore" /* 9601 */;
 
 const require = globalThis.__r;
 
@@ -65,8 +65,8 @@ function getShelfBadgeTypeIfActive(application) {
 }
 let closure_3 = ["fakeAppIconURL"];
 const ApplicationFlags = fn(1074).ApplicationFlags;
-const BuiltInSectionId = fn(5211).BuiltInSectionId;
-const MessageSendLocation = fn(4750).MessageSendLocation;
+const BuiltInSectionId = fn(5295).BuiltInSectionId;
+const MessageSendLocation = fn(4820).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherUtils.tsx");
 

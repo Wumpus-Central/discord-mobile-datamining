@@ -1,6 +1,6 @@
-// === Module 4682: FileUploadPowerupHoldoutExperiment ===
+// === Module 4752: FileUploadPowerupHoldoutExperiment ===
 
-// Module 4682 (FileUploadPowerupHoldoutExperiment)
+// Module 4752 (FileUploadPowerupHoldoutExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

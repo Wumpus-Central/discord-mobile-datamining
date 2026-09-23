@@ -1,15 +1,15 @@
-// === Module 11373: BalanceWidgetActionSheet ===
+// === Module 11449: BalanceWidgetActionSheet ===
 
-// Module 11373 (BalanceWidgetActionSheet)
+// Module 11449 (BalanceWidgetActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import dismissible_content from "dismissible_content" /* 2028 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4577 */;
-import _mod11374 from "module_11374" /* 11374 */;
-import _mod11375 from "module_11375" /* 11375 */;
-import _mod11376 from "module_11376" /* 11376 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4647 */;
+import _mod11450 from "module_11450" /* 11450 */;
+import _mod11451 from "module_11451" /* 11451 */;
+import _mod11452 from "module_11452" /* 11452 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -22,7 +22,7 @@ const Constants = fn(1074);
 const ContentDismissActionType = fn(2039).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_13 = createStyles.createStyles((color) => {
   const obj = { actions: { flex: 1, flexDirection: "column", gap: nativeDefault.space.PX_12, minWidth: "100%", paddingTop: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 }, balanceHeader: null, balanceText: null, content: null, header: null, infoIconBackground: null, infoIconContainer: null, promotionalBackground: null, promotionalBackgroundContainer: null, promotionalBannerAsset: null, promotionalBannerContainer: null, promotionalBannerText: null };
   const obj2 = { flex: 1, flexDirection: "column", gap: nativeDefault.space.PX_12, minWidth: "100%", paddingTop: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -68,7 +68,7 @@ export default function _default(balance) {
   const memo = noop.useMemo(() => {
     let tmp = null;
     if (num > 4100) {
-      const obj = { backgroundVideo: _mod11374.default, backgroundImage: _mod11375.default, bannerImage: _mod11376.default, bannerText: null };
+      const obj = { backgroundVideo: _mod11450.default, backgroundImage: _mod11451.default, bannerImage: _mod11452.default, bannerText: null };
       const intl = util.intl;
       obj.bannerText = intl.string(util.t.LaMEFL);
       tmp = obj;

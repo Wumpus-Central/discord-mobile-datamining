@@ -1,17 +1,17 @@
-// === Module 17744: AppIconPremiumManager ===
+// === Module 17813: AppIconPremiumManager ===
 
-// Module 17744 (AppIconPremiumManager)
+// Module 17813 (AppIconPremiumManager)
 import LoggerDefault from "Logger" /* 3 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1372 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7365 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7449 */;
 
 let require = fn;
-const getIconById = fn(9443).getIconById;
+const getIconById = fn(9514).getIconById;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 let closure_7 = new LoggerDefault("AppIconPremiumManager");
-const DEFAULT = fn(9444).FreemiumAppIconIds.DEFAULT;
+const DEFAULT = fn(9515).FreemiumAppIconIds.DEFAULT;
 let closure_9 = { ORPHANED: "orphaned", PREMIUM_LOST: "premium_lost" };
 class AppIconPremiumManager extends tmp3 {
   constructor() {

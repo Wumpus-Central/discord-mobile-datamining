@@ -1,6 +1,6 @@
-// === Module 12670: PushNotificationActionCreators ===
+// === Module 12752: PushNotificationActionCreators ===
 
-// Module 12670 (PushNotificationActionCreators)
+// Module 12752 (PushNotificationActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -8,9 +8,9 @@ import TokenManagerAll from "TokenManager" /* 1100 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4950 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5020 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import MultiAccountStore from "MultiAccountStore" /* 12671 */;
+import MultiAccountStore from "MultiAccountStore" /* 12753 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -116,8 +116,8 @@ let closure_17 = async function _getOrRefreshPushSyncToken(arg0) {
 };
 const Constants = fn(1074);
 ({ DEVICE_TOKEN: closure_7, DEVICE_VOIP_TOKEN: closure_8, Endpoints: closure_9 } = Constants);
-const MAX_PUSH_SYNC_ACCOUNTS = fn(12672).MAX_PUSH_SYNC_ACCOUNTS;
-const PushNotificationConstants = fn(6839);
+const MAX_PUSH_SYNC_ACCOUNTS = fn(12754).MAX_PUSH_SYNC_ACCOUNTS;
+const PushNotificationConstants = fn(6923);
 ({ BUNDLE_ID: closure_11, DEVICE_PUSH_VOIP_PROVIDER: closure_12, getDevicePushProvider: map1, IS_QUEST_RELEASE: closure_14 } = PushNotificationConstants);
 const logger = new LoggerDefault("PushNotificationActionCreators");
 const size = fn(2);
@@ -218,8 +218,8 @@ export default {
       } else if (arg0 !== 2) {
         closure_128_2 = value;
         if (closure_128_2.body.invalid_push_sync_tokens.length > 0) {
-          const result = v2(12675).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
-          v2(12675);
+          const result = v2(12757).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
+          v2(12757);
         }
       }
       return value;

@@ -1,8 +1,8 @@
-// === Module 14981: UserSettingSearchManager ===
+// === Module 15058: UserSettingSearchManager ===
 
-// Module 14981 (UserSettingSearchManager)
-import fuzzysearchDefault from "fuzzysearch" /* 5736 */;
-import StringMatchUtils from "StringMatchUtils" /* 14982 */;
+// Module 15058 (UserSettingSearchManager)
+import fuzzysearchDefault from "fuzzysearch" /* 5820 */;
+import StringMatchUtils from "StringMatchUtils" /* 15059 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/user_settings/UserSettingSearchManager.tsx");

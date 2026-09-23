@@ -1,9 +1,9 @@
-// === Module 11222: PlusLargeIcon ===
+// === Module 11298: PlusLargeIcon ===
 
-// Module 11222 (PlusLargeIcon)
+// Module 11298 (PlusLargeIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4457 */;
-import _mod11223 from "module_11223" /* 11223 */;
+import BaseIconImage from "BaseIconImage" /* 4523 */;
+import _mod11299 from "module_11299" /* 11299 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const PlusLargeIcon = function PlusLargeIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11223, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11299, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -1,6 +1,6 @@
-// === Module 18372: NativeI18nModule ===
+// === Module 18441: NativeI18nModule ===
 
-// Module 18372 (NativeI18nModule)
+// Module 18441 (NativeI18nModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

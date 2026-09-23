@@ -1,12 +1,12 @@
-// === Module 8433: UserProfileSettingsStore ===
+// === Module 8504: UserProfileSettingsStore ===
 
-// Module 8433 (UserProfileSettingsStore)
+// Module 8504 (UserProfileSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import RouteConstants from "RouteConstants" /* 1075 */;
 import FavoritesConstants from "FavoritesConstants" /* 2055 */;
-import NotificationsInboxConstants from "NotificationsInboxConstants" /* 8434 */;
-import BioMaxLengthExperiment from "BioMaxLengthExperiment" /* 8435 */;
+import NotificationsInboxConstants from "NotificationsInboxConstants" /* 8505 */;
+import BioMaxLengthExperiment from "BioMaxLengthExperiment" /* 8506 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

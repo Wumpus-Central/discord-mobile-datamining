@@ -1,6 +1,6 @@
-// === Module 13371: VibegrationsWebSocket ===
+// === Module 13453: VibegrationsWebSocket ===
 
-// Module 13371 (VibegrationsWebSocket)
+// Module 13453 (VibegrationsWebSocket)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsWebSocket.tsx");

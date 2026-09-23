@@ -1,12 +1,12 @@
-// === Module 8878: RowButton ===
+// === Module 8949: RowButton ===
 
-// Module 8878 (RowButton)
+// Module 8949 (RowButton)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4493 */;
-import TableRow from "TableRow" /* 5824 */;
-import Card from "Card" /* 5826 */;
-import TableRowIcon from "TableRowIcon" /* 5830 */;
-import BackgroundBlurView from "BackgroundBlurView" /* 8879 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4559 */;
+import TableRow from "TableRow" /* 5908 */;
+import Card from "Card" /* 5910 */;
+import TableRowIcon from "TableRowIcon" /* 5914 */;
+import BackgroundBlurView from "BackgroundBlurView" /* 8950 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -113,7 +113,7 @@ function RowButtonWrapper(experimental_withBlurBackground) {
   return jsx(Card.InternalCard, obj4);
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_5 = createStyles.createStyles(() => {
   const obj = { card: null, cardWithBlur: null };
   const obj2 = { padding: "y", borderTopStartRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderTopEndRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomStartRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomEndRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS };
@@ -121,9 +121,9 @@ let closure_5 = createStyles.createStyles(() => {
   obj.cardWithBlur = { overflow: "hidden" };
   return obj;
 });
-RowButton.Icon = fn(5830).TableRowIcon;
+RowButton.Icon = fn(5914).TableRowIcon;
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/TableRow/native/RowButton.native.tsx");
 
-export const RowButtonIconProps = fn(5830).TableRowIconProps;
+export const RowButtonIconProps = fn(5914).TableRowIconProps;
 export { RowButton };

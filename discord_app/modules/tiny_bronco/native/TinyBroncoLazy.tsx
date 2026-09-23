@@ -1,16 +1,12 @@
-// === Module 14999: TinyBroncoLazy ===
+// === Module 15076: TinyBroncoLazy ===
 
-// Module 14999 (TinyBroncoLazy)
+// Module 15076 (TinyBroncoLazy)
+import TinyBroncoNoticeVisibility from "TinyBroncoNoticeVisibility" /* 15077 */;
+import useShowTinyBroncoPromoSheet from "useShowTinyBroncoPromoSheet" /* 15078 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/tiny_bronco/native/TinyBroncoLazy.tsx");
 
-export function useShouldShowAgeNotice() {
-  return false;
-}
-export function useIsTinyBroncoEligible() {
-  return false;
-}
-export const useShowTinyBroncoPromoSheet = function useShowTinyBroncoPromoSheet(arg0) {
-  ({ visibleContent, markAsDismissed } = arg0);
-};
+export const useShouldShowAgeNotice = TinyBroncoNoticeVisibility.useShouldShowAgeNotice;
+export const useIsTinyBroncoEligible = useShowTinyBroncoPromoSheet.useIsTinyBroncoEligible;
+export const useShowTinyBroncoPromoSheet = useShowTinyBroncoPromoSheet.useShowTinyBroncoPromoSheet;

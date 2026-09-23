@@ -1,8 +1,8 @@
-// === Module 13284: useMediaViewerClosePosition ===
+// === Module 13366: useMediaViewerClosePosition ===
 
-// Module 13284 (useMediaViewerClosePosition)
-import ReanimatedRexport from "ReanimatedRexport" /* 4493 */;
-import getMediaViewerStateForScreenDefault from "getMediaViewerStateForScreen" /* 13281 */;
+// Module 13366 (useMediaViewerClosePosition)
+import ReanimatedRexport from "ReanimatedRexport" /* 4559 */;
+import getMediaViewerStateForScreenDefault from "getMediaViewerStateForScreen" /* 13363 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

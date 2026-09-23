@@ -1,10 +1,10 @@
-// === Module 9302: UserProfileApplicationWidgetBottomProgressLayout ===
+// === Module 9373: UserProfileApplicationWidgetBottomProgressLayout ===
 
-// Module 9302 (UserProfileApplicationWidgetBottomProgressLayout)
+// Module 9373 (UserProfileApplicationWidgetBottomProgressLayout)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4753 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 9209 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 9297 */;
+import Text_Text from "Text/Text" /* 4823 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 9280 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 9368 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c2, View: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { root: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 }, image: null, content: null, progressContainer: null, progress: null, textContent: null, textLeft: null, progressText: null };
 let size = { width: 48, height: 48, borderRadius: nativeDefault.radii.sm, overflow: "hidden", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
 obj2.image = size;

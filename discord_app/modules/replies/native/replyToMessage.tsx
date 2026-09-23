@@ -1,14 +1,14 @@
-// === Module 11935: replyToMessage ===
+// === Module 12011: replyToMessage ===
 
-// Module 11935 (replyToMessage)
+// Module 12011 (replyToMessage)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4937 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7701 */;
-import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 11922 */;
-import PendingReplyActionCreators from "PendingReplyActionCreators" /* 11924 */;
-import EditMessageStore from "EditMessageStore" /* 7920 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5007 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7784 */;
+import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 11998 */;
+import PendingReplyActionCreators from "PendingReplyActionCreators" /* 12000 */;
+import EditMessageStore from "EditMessageStore" /* 8002 */;
 import UserStore from "UserStore" /* 1372 */;
-import PendingReplyStore from "PendingReplyStore" /* 7919 */;
+import PendingReplyStore from "PendingReplyStore" /* 8001 */;
 
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;

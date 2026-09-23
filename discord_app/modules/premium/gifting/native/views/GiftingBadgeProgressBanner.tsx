@@ -1,21 +1,21 @@
-// === Module 11024: GiftingBadgeProgressBanner ===
+// === Module 11100: GiftingBadgeProgressBanner ===
 
-// Module 11024 (GiftingBadgeProgressBanner)
+// Module 11100 (GiftingBadgeProgressBanner)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
-import _modDef2578 from "module_2578" /* 2578 */;
-import Text_Text from "Text/Text" /* 4753 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7409 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 9053 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 11015 */;
+import _modDef2580 from "module_2580" /* 2580 */;
+import Text_Text from "Text/Text" /* 4823 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7493 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 9124 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 11091 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { container: null, iconContainer: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.container = { flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderStyle: "solid", borderColor: nativeDefault.colors.BORDER_MUTED };
@@ -51,7 +51,7 @@ export default function GiftingBadgeProgressBanner(arg0) {
   const items2 = [React4(View, obj3), ];
   const obj5 = { variant: "text-md/semibold", children: null };
   const intl = util.intl;
-  obj5.children = intl.formatToPlainString(_modDef2578["0+xfd9"], { giftsRemaining: giftsToNextTier, nextTier: nextTierName });
+  obj5.children = intl.formatToPlainString(_modDef2580["0+xfd9"], { giftsRemaining: giftsToNextTier, nextTier: nextTierName });
   items2[1] = React4(Text_Text.Text, obj5);
   obj2.children = items2;
   return hasOwnProperty(View, obj2);

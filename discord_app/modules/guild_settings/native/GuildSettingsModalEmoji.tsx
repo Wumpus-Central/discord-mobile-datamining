@@ -1,18 +1,18 @@
-// === Module 18008: GuildSettingsModalEmoji ===
+// === Module 18077: GuildSettingsModalEmoji ===
 
-// Module 18008 (GuildSettingsModalEmoji)
+// Module 18077 (GuildSettingsModalEmoji)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4753 */;
-import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5683 */;
-import GuildSettingsModalEmoji_EmojiRow from "GuildSettingsModalEmoji/EmojiRow" /* 18011 */;
-import HeaderRow from "HeaderRow" /* 18015 */;
-import EmptyServerSettingsEmoji from "EmptyServerSettingsEmoji" /* 18016 */;
+import Text_Text from "Text/Text" /* 4823 */;
+import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5767 */;
+import GuildSettingsModalEmoji_EmojiRow from "GuildSettingsModalEmoji/EmojiRow" /* 18080 */;
+import HeaderRow from "HeaderRow" /* 18084 */;
+import EmptyServerSettingsEmoji from "EmptyServerSettingsEmoji" /* 18085 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2064 */;
-import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 18009 */;
+import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 18078 */;
 import apply_mod from "module_12" /* 12 */;
 
 const require = globalThis.__r;
@@ -180,8 +180,8 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 let apply = apply_mod;
-let closure_12 = apply.throttle(fn(10601).fetchEmoji, 1000);
-const createStyles = fn(4757);
+let closure_12 = apply.throttle(fn(10677).fetchEmoji, 1000);
+const createStyles = fn(4827);
 let obj = { loadingContainer: { flex: 1, paddingTop: 40 }, emptyState: { paddingTop: 30 }, list: { paddingHorizontal: nativeDefault.space.PX_12 }, section: null, titleContainer: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12 };
 obj.section = { paddingVertical: nativeDefault.space.PX_16 };

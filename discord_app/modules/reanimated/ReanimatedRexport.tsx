@@ -1,8 +1,8 @@
-// === Module 4493: ReanimatedRexport ===
+// === Module 4559: ReanimatedRexport ===
 
-// Module 4493 (ReanimatedRexport)
+// Module 4559 (ReanimatedRexport)
 import cancelAnimationDefault from "cancelAnimation" /* 1637 */;
-import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4494 */;
+import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4560 */;
 import PlatformUtils from "utils/PlatformUtils" /* 1365 */;
 import size from "module_2" /* 2 */;
 

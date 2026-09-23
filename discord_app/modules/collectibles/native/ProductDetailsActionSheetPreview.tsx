@@ -1,10 +1,10 @@
-// === Module 13447: ProductDetailsActionSheetPreview ===
+// === Module 13529: ProductDetailsActionSheetPreview ===
 
-// Module 13447 (ProductDetailsActionSheetPreview)
+// Module 13529 (ProductDetailsActionSheetPreview)
 import nativeDefault from "native" /* 576 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1973 */;
-import BundleProductDetailsActionSheetPreviewDefault from "BundleProductDetailsActionSheetPreview" /* 13448 */;
-import IndividualProductPreview from "IndividualProductPreview" /* 13450 */;
+import BundleProductDetailsActionSheetPreviewDefault from "BundleProductDetailsActionSheetPreview" /* 13530 */;
+import IndividualProductPreview from "IndividualProductPreview" /* 13532 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const noop = fn(19);
 ({ useCallback: closure_4, useState: hasOwnProperty } = noop);
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { previewContainer: { flex: 1 }, previewDivider: { borderBottomColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderBottomWidth: 1, paddingBottom: nativeDefault.space.PX_16, flex: 1 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);

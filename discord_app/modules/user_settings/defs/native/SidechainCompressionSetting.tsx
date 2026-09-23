@@ -1,20 +1,20 @@
-// === Module 15539: SidechainCompressionSetting ===
+// === Module 15593: SidechainCompressionSetting ===
 
-// Module 15539 (SidechainCompressionSetting)
+// Module 15593 (SidechainCompressionSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9917 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9990 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
 
 require = fn;
-const Features = fn(4782).Features;
-const SettingBuilders = fn(11729);
+const Features = fn(4852).Features;
+const SettingBuilders = fn(11805);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["/jwMtn"]);
   },
-  parent: fn(8237).MobileUserSettings.VOICE,
+  parent: fn(8319).MobileUserSettings.VOICE,
   usePredicate() {
     return MediaEngineStore.supports(Features.SIDECHAIN_COMPRESSION);
   },

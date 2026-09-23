@@ -1,9 +1,9 @@
-// === Module 10183: MicrophoneArrowRightIcon ===
+// === Module 10263: MicrophoneArrowRightIcon ===
 
-// Module 10183 (MicrophoneArrowRightIcon)
+// Module 10263 (MicrophoneArrowRightIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4457 */;
-import _mod10184 from "module_10184" /* 10184 */;
+import BaseIconImage from "BaseIconImage" /* 4523 */;
+import _mod10264 from "module_10264" /* 10264 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const MicrophoneArrowRightIcon = function MicrophoneArrowRightIcon(color)
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10184, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10264, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

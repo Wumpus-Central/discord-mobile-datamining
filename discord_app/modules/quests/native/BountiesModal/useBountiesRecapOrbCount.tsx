@@ -1,8 +1,8 @@
-// === Module 15297: useBountiesRecapOrbCount ===
+// === Module 15349: useBountiesRecapOrbCount ===
 
-// Module 15297 (useBountiesRecapOrbCount)
-import ReanimatedRexport from "ReanimatedRexport" /* 4493 */;
-import useBountiesRecapScroll from "useBountiesRecapScroll" /* 15296 */;
+// Module 15349 (useBountiesRecapOrbCount)
+import ReanimatedRexport from "ReanimatedRexport" /* 4559 */;
+import useBountiesRecapScroll from "useBountiesRecapScroll" /* 15348 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 10964: selectActiveMarketingComponent ===
+// === Module 11040: selectActiveMarketingComponent ===
 
-// Module 10964 (selectActiveMarketingComponent)
+// Module 11040 (selectActiveMarketingComponent)
 import size from "module_2" /* 2 */;
 
 function comparePriorityDescending(effectiveStartDate, effectiveStartDate2) {

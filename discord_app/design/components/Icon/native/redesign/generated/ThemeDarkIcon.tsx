@@ -1,9 +1,9 @@
-// === Module 11587: ThemeDarkIcon ===
+// === Module 11663: ThemeDarkIcon ===
 
-// Module 11587 (ThemeDarkIcon)
+// Module 11663 (ThemeDarkIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4457 */;
-import _mod11588 from "module_11588" /* 11588 */;
+import BaseIconImage from "BaseIconImage" /* 4523 */;
+import _mod11664 from "module_11664" /* 11664 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const ThemeDarkIcon = function ThemeDarkIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11588, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11664, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

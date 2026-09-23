@@ -1,18 +1,18 @@
-// === Module 4396: PermissionStore ===
+// === Module 4462: PermissionStore ===
 
-// Module 4396 (PermissionStore)
+// Module 4462 (PermissionStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 2056 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4401 */;
-import ThreadActionUtils from "ThreadActionUtils" /* 4404 */;
-import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4405 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4467 */;
+import ThreadActionUtils from "ThreadActionUtils" /* 4470 */;
+import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4471 */;
 import ImpersonateStore from "ImpersonateStore" /* 2098 */;
-import LurkingStore from "LurkingStore" /* 4397 */;
+import LurkingStore from "LurkingStore" /* 4463 */;
 import StageInstanceStore from "StageInstanceStore" /* 2047 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4398 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4464 */;
 import UserRecord from "UserRecord" /* 1386 */;
 import ChannelStore from "ChannelStore" /* 2042 */;
 import GuildMemberStore from "GuildMemberStore" /* 2105 */;
@@ -247,7 +247,7 @@ const ChannelRecord = fn(2046);
 const GuildRecord = fn(2060);
 ({ isGuildOwner: c10, isGuildOwnerWithRequiredMfaLevel: closure_11 } = GuildRecord);
 const Permissions = fn(1074).Permissions;
-let closure_18 = fn(4400).MemberSafetyPagePermissions;
+let closure_18 = fn(4466).MemberSafetyPagePermissions;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};

@@ -1,28 +1,28 @@
-// === Module 9910: CallsUtils ===
+// === Module 9983: CallsUtils ===
 
-// Module 9910 (CallsUtils)
+// Module 9983 (CallsUtils)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1875 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4964 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5110 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5630 */;
-import AVError from "AVError" /* 9692 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9917 */;
-import _modDef9937 from "module_9937" /* 9937 */;
-import _modDef9938 from "module_9938" /* 9938 */;
-import _modDef9939 from "module_9939" /* 9939 */;
-import useIsVideoModeDefault from "useIsVideoMode" /* 10067 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 5034 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5194 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5714 */;
+import AVError from "AVError" /* 9765 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9990 */;
+import _modDef10010 from "module_10010" /* 10010 */;
+import _modDef10011 from "module_10011" /* 10011 */;
+import _modDef10012 from "module_10012" /* 10012 */;
+import useIsVideoModeDefault from "useIsVideoMode" /* 10147 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4779 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4849 */;
 import ChannelStore from "ChannelStore" /* 2042 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2096 */;
-import VoiceStateStore from "VoiceStateStore" /* 4776 */;
-import AudioRouteStore from "AudioRouteStore" /* 9911 */;
-import AudioManagerStore from "AudioManagerStore" /* 9914 */;
+import VoiceStateStore from "VoiceStateStore" /* 4846 */;
+import AudioRouteStore from "AudioRouteStore" /* 9984 */;
+import AudioManagerStore from "AudioManagerStore" /* 9987 */;
 import apply_mod from "module_12" /* 12 */;
 
 const require = globalThis.__r;
@@ -127,7 +127,7 @@ let closure_16 = async function _handleToggleVideo(arg0) {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const NativePermissionTypes = fn(4966).NativePermissionTypes;
+const NativePermissionTypes = fn(5036).NativePermissionTypes;
 let apply = apply_mod;
 let closure_17 = apply.debounce((arg0) => {
   const AudioRoutePicker = NativeModules.AudioRoutePicker;
@@ -139,7 +139,7 @@ let apply = apply_mod;
 let closure_18 = apply.debounce((fn) => {
   fn();
 }, 1);
-const audioDeviceToIconMap = { EARPIECE: _modDef9937, BLUETOOTH_HEADSET: _modDef9938, WIRED_HEADSET: _modDef9939, SPEAKERPHONE: _modDef9939, INVALID: _modDef9939 };
+const audioDeviceToIconMap = { EARPIECE: _modDef10010, BLUETOOTH_HEADSET: _modDef10011, WIRED_HEADSET: _modDef10012, SPEAKERPHONE: _modDef10012, INVALID: _modDef10012 };
 const constants = { TYPE_UNKNOWN: 0, [0]: "TYPE_UNKNOWN", TYPE_BUILTIN_EARPIECE: 1, [1]: "TYPE_BUILTIN_EARPIECE", TYPE_BUILTIN_SPEAKER: 2, [2]: "TYPE_BUILTIN_SPEAKER", TYPE_WIRED_HEADSET: 3, [3]: "TYPE_WIRED_HEADSET", TYPE_WIRED_HEADPHONES: 4, [4]: "TYPE_WIRED_HEADPHONES", TYPE_LINE_ANALOG: 5, [5]: "TYPE_LINE_ANALOG", TYPE_LINE_DIGITAL: 6, [6]: "TYPE_LINE_DIGITAL", TYPE_BLUETOOTH_SCO: 7, [7]: "TYPE_BLUETOOTH_SCO", TYPE_BLUETOOTH_A2DP: 8, [8]: "TYPE_BLUETOOTH_A2DP", TYPE_HDMI: 9, [9]: "TYPE_HDMI", TYPE_HDMI_ARC: 10, [10]: "TYPE_HDMI_ARC", TYPE_USB_DEVICE: 11, [11]: "TYPE_USB_DEVICE", TYPE_USB_ACCESSORY: 12, [12]: "TYPE_USB_ACCESSORY", TYPE_DOCK: 13, [13]: "TYPE_DOCK", TYPE_FM: 14, [14]: "TYPE_FM", TYPE_BUILTIN_MIC: 15, [15]: "TYPE_BUILTIN_MIC", TYPE_FM_TUNER: 16, [16]: "TYPE_FM_TUNER", TYPE_TV_TUNER: 17, [17]: "TYPE_TV_TUNER", TYPE_TELEPHONY: 18, [18]: "TYPE_TELEPHONY", TYPE_AUX_LINE: 19, [19]: "TYPE_AUX_LINE", TYPE_IP: 20, [20]: "TYPE_IP", TYPE_BUS: 21, [21]: "TYPE_BUS", TYPE_USB_HEADSET: 22, [22]: "TYPE_USB_HEADSET", TYPE_HEARING_AID: 23, [23]: "TYPE_HEARING_AID", TYPE_BUILTIN_SPEAKER_SAFE: 24, [24]: "TYPE_BUILTIN_SPEAKER_SAFE", TYPE_REMOTE_SUBMIX: 25, [25]: "TYPE_REMOTE_SUBMIX", TYPE_BLE_HEADSET: 26, [26]: "TYPE_BLE_HEADSET", TYPE_BLE_SPEAKER: 27, [27]: "TYPE_BLE_SPEAKER", TYPE_ECHO_REFERENCE: 28, [28]: "TYPE_ECHO_REFERENCE", TYPE_HDMI_EARC: 29, [29]: "TYPE_HDMI_EARC", TYPE_BLE_BROADCAST: 30, [30]: "TYPE_BLE_BROADCAST", TYPE_DOCK_ANALOG: 31, [31]: "TYPE_DOCK_ANALOG" };
 const PlatformUtils = fn(1364);
 const size = fn(2);
@@ -269,10 +269,10 @@ export const useMaskedSpeakerStates = PlatformUtils.isAndroid() ? (() => {
 }) : (() => {
   const items = [ChannelStore, SelectedChannelStore, ApplicationStreamingStore, VoiceStateStore, MediaEngineStore, AudioRouteStore];
   const stateFromStoresObject = isEnabled(504).useStateFromStoresObject(items, () => {
-    isVideoMode = isEnabled(10067).isVideoMode(ChannelStore, SelectedChannelStore, ApplicationStreamingStore, VoiceStateStore, MediaEngineStore);
+    isVideoMode = isEnabled(10147).isVideoMode(ChannelStore, SelectedChannelStore, ApplicationStreamingStore, VoiceStateStore, MediaEngineStore);
     currentRouteType = currentRouteType.getCurrentRouteType();
-    isEnabled = currentRouteType === isEnabled(9912).RouteTypes.SPEAKER;
-    const isBluetoothRoute = currentRouteType === isEnabled(9912).RouteTypes.BLUETOOTH;
+    isEnabled = currentRouteType === isEnabled(9985).RouteTypes.SPEAKER;
+    const isBluetoothRoute = currentRouteType === isEnabled(9985).RouteTypes.BLUETOOTH;
     if (!isEnabled) {
       isEnabled = isBluetoothRoute;
     }
@@ -304,7 +304,7 @@ export const useMaskedSpeakerStates = PlatformUtils.isAndroid() ? (() => {
     dependencyMap(isEnabled);
   }, items2);
   const obj = isEnabled(504);
-  return { isAudioRouteEnabled, toggleAudio: callback, routeSource: isVideoMode(stateFromStoresObject.isBluetoothRoute ? 9938 : 9939) };
+  return { isAudioRouteEnabled, toggleAudio: callback, routeSource: isVideoMode(stateFromStoresObject.isBluetoothRoute ? 10011 : 10012) };
 });
 export const useImmediateMaskedSpeakerStates = () => {
   const items = [AudioRouteStore];
@@ -336,5 +336,5 @@ export const useImmediateMaskedSpeakerStates = () => {
     closure_3(closure_1);
   }, items2);
   const obj = require("initialize");
-  return { isAudioRouteEnabled, toggleAudio: callback, routeSource: importDefault(tmp6 ? 9938 : 9939) };
+  return { isAudioRouteEnabled, toggleAudio: callback, routeSource: importDefault(tmp6 ? 10011 : 10012) };
 };

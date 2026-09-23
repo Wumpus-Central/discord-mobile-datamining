@@ -1,20 +1,20 @@
-// === Module 15978: CheckpointModal ===
+// === Module 16031: CheckpointModal ===
 
-// Module 15978 (CheckpointModal)
+// Module 16031 (CheckpointModal)
 import nativeDefault from "native" /* 576 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4960 */;
-import CheckpointFlows from "CheckpointFlows" /* 15979 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5030 */;
+import CheckpointFlows from "CheckpointFlows" /* 16032 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(4982);
+const CheckpointConstants = fn(5052);
 ({ CHECKPOINT_PRIMARY: metroRequire, CHECKPOINT_LOGO_SIZE, CHECKPOINT_NAV_HEIGHT } = CheckpointConstants);
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { container: { height: "100%" }, layer: { position: "absolute", width: "100%", height: "100%" }, coveredCharacterLayer: { opacity: 0 }, nav: null, logo: null, headerActions: null };
 let rect = { position: "absolute", top: 0, left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16, height: CHECKPOINT_NAV_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
 obj2.nav = rect;
@@ -36,9 +36,9 @@ export default function CheckpointModal(didPlayerShareDataWithDiscord) {
   noop = undefined;
   const tmp = closure_10();
   const rect = route(1612)();
-  checkpointFlow = checkpointFlow(15979).getCheckpointFlow(flag);
-  [route, dependencyMap] = noop.useState(checkpointFlow(15980).CheckpointRoute.HOME);
-  let obj = checkpointFlow(15979);
+  checkpointFlow = checkpointFlow(16032).getCheckpointFlow(flag);
+  [route, dependencyMap] = noop.useState(checkpointFlow(16033).CheckpointRoute.HOME);
+  let obj = checkpointFlow(16032);
   [tmp9, c3] = noop.useState(false);
   noop = noop.useRef(0);
   const items = [route, checkpointFlow];
@@ -59,16 +59,16 @@ export default function CheckpointModal(didPlayerShareDataWithDiscord) {
   const callback1 = noop.useCallback(() => callback(-1), items1);
   const callback2 = noop.useCallback(() => callback(1), items2);
   if (tmp9) {
-    let VoiceNormalIcon = tmp4(10250).VoiceXIcon;
+    let VoiceNormalIcon = tmp4(10329).VoiceXIcon;
   } else {
-    VoiceNormalIcon = tmp4(5321).VoiceNormalIcon;
+    VoiceNormalIcon = tmp4(5405).VoiceNormalIcon;
   }
   const tmp8 = _slicedToArray(noop.useState(false), 2);
-  const tmp4Result = checkpointFlow(15979);
-  const tmp13 = null == checkpointFlow(15979).getAdjacentCheckpointRoute(checkpointFlow, route, 1);
-  const checkpointRoutePresentation = checkpointFlow(15980).getCheckpointRoutePresentation(route);
+  const tmp4Result = checkpointFlow(16032);
+  const tmp13 = null == checkpointFlow(16032).getAdjacentCheckpointRoute(checkpointFlow, route, 1);
+  const checkpointRoutePresentation = checkpointFlow(16033).getCheckpointRoutePresentation(route);
   ({ characterStage, statsScreen } = checkpointRoutePresentation);
-  let tmp16Result2 = route === tmp4(15980).CheckpointRoute.HOME || null != statsScreen;
+  let tmp16Result2 = route === tmp4(16033).CheckpointRoute.HOME || null != statsScreen;
   const obj2 = { theme: ThemeTypes.DARK, children: null };
   const obj3 = { style: tmp.container, children: null };
   const items3 = [tmp.layer, ];
@@ -89,17 +89,17 @@ export default function CheckpointModal(didPlayerShareDataWithDiscord) {
     str = "no-hide-descendants";
   }
   obj4.importantForAccessibility = str;
-  obj4.children = closure_8(route(15983), { stage: characterStage });
+  obj4.children = closure_8(route(16036), { stage: characterStage });
   const items4 = [closure_8(callback, obj4), , , , ];
   let tmp16Result = tmp16Result2;
   if (tmp16Result2) {
-    tmp16Result = closure_8(tmp2(15984), {});
+    tmp16Result = closure_8(tmp2(16037), {});
   }
   items4[1] = tmp16Result;
   if (tmp16Result2) {
     const obj5 = { style: tmp.layer, children: null };
     const obj6 = { route };
-    obj5.children = closure_8(tmp2(15986), obj6);
+    obj5.children = closure_8(tmp2(16039), obj6);
     tmp16Result2 = closure_8(tmp18, obj5);
   }
   items4[2] = tmp16Result2;
@@ -107,10 +107,10 @@ export default function CheckpointModal(didPlayerShareDataWithDiscord) {
   const items5 = [tmp.nav, { marginTop: rect.top, marginLeft: rect.left, marginRight: rect.right }];
   obj7.style = items5;
   const obj8 = { uri: null, style: null };
-  const tmp4Result2 = checkpointFlow(15980);
-  obj8.uri = route(16002);
+  const tmp4Result2 = checkpointFlow(16033);
+  obj8.uri = route(16055);
   obj8.style = tmp.logo;
-  const items6 = [closure_8(route(16001), obj8), ];
+  const items6 = [closure_8(route(16054), obj8), ];
   const obj9 = { style: tmp.headerActions, children: null };
   const obj10 = {
     onPress() {
@@ -119,27 +119,27 @@ export default function CheckpointModal(didPlayerShareDataWithDiscord) {
     accessibilityLabel: null,
     children: null
   };
-  const tmp2Result = route(16001);
+  const tmp2Result = route(16054);
   const intl = tmp4(1115).intl;
   const t = tmp4(1115).t;
-  const tmp2Result3 = route(16003);
+  const tmp2Result3 = route(16056);
   obj10.accessibilityLabel = intl.string(tmp9 ? t.YqAjXy : t.w4m945);
   obj10.children = closure_8(VoiceNormalIcon, { color, size: "xs" });
   const items7 = [closure_8(tmp2Result3, obj10), ];
   const obj12 = { onPress: null, accessibilityLabel: null, children: null };
   const obj11 = { color, size: "xs" };
-  const tmp22 = route === checkpointFlow(15980).CheckpointRoute.HOME;
-  obj12.onPress = route(4960).pop;
+  const tmp22 = route === checkpointFlow(16033).CheckpointRoute.HOME;
+  obj12.onPress = route(5030).pop;
   const intl2 = tmp4(1115).intl;
   obj12.accessibilityLabel = intl2.string(checkpointFlow(1115).t.cpT0Cq);
-  obj12.children = closure_8(checkpointFlow(5899).XSmallIcon, { color, size: "xs" });
-  items7[1] = closure_8(route(16003), obj12);
+  obj12.children = closure_8(checkpointFlow(5983).XSmallIcon, { color, size: "xs" });
+  items7[1] = closure_8(route(16056), obj12);
   obj9.children = items7;
   items6[1] = closure_9(callback, obj9);
   obj7.children = items6;
   items4[3] = closure_9(callback, obj7);
-  items4[4] = closure_8(route(16004), { onBack: callback1, onNext: callback2, isTerminal: tmp13, isHome: tmp22 });
+  items4[4] = closure_8(route(16057), { onBack: callback1, onNext: callback2, isTerminal: tmp13, isHome: tmp22 });
   obj3.children = items4;
   obj2.children = closure_9(callback, obj3);
-  return closure_8(checkpointFlow(4467).ThemeContextProvider, obj2);
+  return closure_8(checkpointFlow(4533).ThemeContextProvider, obj2);
 };

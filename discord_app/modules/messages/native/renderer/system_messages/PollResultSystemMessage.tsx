@@ -1,14 +1,14 @@
-// === Module 8304: PollResultSystemMessage ===
+// === Module 8386: PollResultSystemMessage ===
 
-// Module 8304 (PollResultSystemMessage)
+// Module 8386 (PollResultSystemMessage)
 import util from "util" /* 1115 */;
 import EmojiConstants from "EmojiConstants" /* 1375 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4410 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8222 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8224 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8226 */;
-import parsePollResultSystemMessageEmbedDefault from "parsePollResultSystemMessageEmbed" /* 8305 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4476 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8304 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8306 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8308 */;
+import parsePollResultSystemMessageEmbedDefault from "parsePollResultSystemMessageEmbed" /* 8387 */;
 import size from "module_2" /* 2 */;
 
 const EMOJI_URL_BASE_SIZE = EmojiConstants.EMOJI_URL_BASE_SIZE;

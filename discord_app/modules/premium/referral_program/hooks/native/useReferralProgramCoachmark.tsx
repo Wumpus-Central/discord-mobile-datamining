@@ -1,10 +1,10 @@
-// === Module 17273: useReferralProgramCoachmark ===
+// === Module 17342: useReferralProgramCoachmark ===
 
-// Module 17273 (useReferralProgramCoachmark)
+// Module 17342 (useReferralProgramCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import FastImageDefault from "FastImage" /* 5806 */;
-import _modDef17274 from "module_17274" /* 17274 */;
+import FastImageDefault from "FastImage" /* 5890 */;
+import _modDef17343 from "module_17343" /* 17343 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,15 +14,15 @@ require = fn;
 function ReferralProgramCoachmarkImg() {
   const tmp = closure_9();
   const obj = { style: tmp.coachmarkImageContainer, children: null };
-  const obj2 = { source: _modDef17274, style: tmp.coachmarkImage };
-  obj.children = jsx(FastImageDefault, { source: _modDef17274, style: tmp.coachmarkImage });
+  const obj2 = { source: _modDef17343, style: tmp.coachmarkImage };
+  obj.children = jsx(FastImageDefault, { source: _modDef17343, style: tmp.coachmarkImage });
   return <View style={tmp.coachmarkImageContainer}>{null}</View>;
 }
 const View = fn(17).View;
 const UserSettingsSections = fn(1074).UserSettingsSections;
 const ContentDismissActionType = fn(2039).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_9 = createStyles.createStyles({ coachmarkImageContainer: { alignItems: "center", justifyContent: "center" }, coachmarkImage: { width: 200, height: 112 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/referral_program/hooks/native/useReferralProgramCoachmark.tsx");

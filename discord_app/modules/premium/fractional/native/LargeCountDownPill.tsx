@@ -1,12 +1,12 @@
-// === Module 13736: LargeCountDownPill ===
+// === Module 13821: LargeCountDownPill ===
 
-// Module 13736 (LargeCountDownPill)
+// Module 13821 (LargeCountDownPill)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4455 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4521 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4757 */;
+import createStyles from "createStyles" /* 4827 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -29,7 +29,7 @@ export default function LargeCountDownPill(countdownText) {
       const intl = util.intl;
       obj2.content = intl.string(util.t["Mv4E/M"]);
       obj2.icon = function icon() {
-        return closure_2_5(closure_0(4711).CircleInformationIcon, { style: closure_1_0.iconStyle, color: nativeDefault.colors.STATUS_WARNING });
+        return closure_2_5(closure_0(4781).CircleInformationIcon, { style: closure_1_0.iconStyle, color: nativeDefault.colors.STATUS_WARNING });
       };
       obj2.iconColor = nativeDefault.colors.STATUS_WARNING;
       ToastActionCreatorsDefault.open(obj2);

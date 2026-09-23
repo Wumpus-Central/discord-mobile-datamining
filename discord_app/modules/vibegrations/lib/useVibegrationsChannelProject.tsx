@@ -1,15 +1,15 @@
-// === Module 11272: useVibegrationsChannelProject ===
+// === Module 11348: useVibegrationsChannelProject ===
 
-// Module 11272 (useVibegrationsChannelProject)
-import VibegrationsActionCreators from "VibegrationsActionCreators" /* 9315 */;
+// Module 11348 (useVibegrationsChannelProject)
+import VibegrationsActionCreators from "VibegrationsActionCreators" /* 9386 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2105 */;
 import GuildStore from "GuildStore" /* 2064 */;
-import PermissionStore from "PermissionStore" /* 4396 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 9314 */;
+import PermissionStore from "PermissionStore" /* 4462 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 9385 */;
 
 require = fn;
-const isProjectOwner = fn(9314).isProjectOwner;
+const isProjectOwner = fn(9385).isProjectOwner;
 const Permissions = fn(1074).Permissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/lib/useVibegrationsChannelProject.tsx");

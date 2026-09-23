@@ -1,6 +1,6 @@
-// === Module 17072: VibegrationsComposerDraftStore ===
+// === Module 17129: VibegrationsComposerDraftStore ===
 
-// Module 17072 (VibegrationsComposerDraftStore)
+// Module 17129 (VibegrationsComposerDraftStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;

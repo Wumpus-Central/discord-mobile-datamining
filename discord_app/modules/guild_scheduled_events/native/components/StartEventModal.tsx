@@ -1,14 +1,14 @@
-// === Module 10071: StartEventModal ===
+// === Module 10151: StartEventModal ===
 
-// Module 10071 (StartEventModal)
+// Module 10151 (StartEventModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4753 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4960 */;
-import Pressables from "Pressables" /* 5341 */;
-import _modDef7336 from "module_7336" /* 7336 */;
-import GuildEventCardDefault from "GuildEventCard" /* 10070 */;
+import Text_Text from "Text/Text" /* 4823 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5030 */;
+import Pressables from "Pressables" /* 5425 */;
+import _modDef7420 from "module_7420" /* 7420 */;
+import GuildEventCardDefault from "GuildEventCard" /* 10150 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -25,7 +25,7 @@ function NavigationBar(onClose) {
   obj2.onPress = function onPress() {
     return onClose();
   };
-  obj2.children = closure_1_12(native.Icon, { source: _modDef7336 });
+  obj2.children = closure_1_12(native.Icon, { source: _modDef7420 });
   obj.children = closure_1_12(Pressables.PressableOpacity, obj2);
   return closure_1_12(View, obj);
 }
@@ -49,10 +49,10 @@ class PreviewEventCard {
 const View = fn(17).View;
 const GuildScheduledEventsConstants = fn(2048);
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: c10 } = GuildScheduledEventsConstants);
-const START_EVENT_MODAL_KEY = fn(9790).START_EVENT_MODAL_KEY;
+const START_EVENT_MODAL_KEY = fn(9863).START_EVENT_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { mainContainer: { flex: 1, padding: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { flex: 1, flexDirection: "column", justifyContent: "space-between", alignContent: "center" }, headerContainer: null, footerContainer: null, header: null, headerTitle: null, buttonContainer: null, previewCard: null, headerPrivacyLevel: null };
 let obj3 = { flex: 1, padding: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.headerContainer = { display: "flex", flexDirection: "column", gap: nativeDefault.space.PX_24 };

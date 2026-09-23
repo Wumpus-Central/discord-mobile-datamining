@@ -6,7 +6,7 @@ import DispatcherDefault from "Dispatcher" /* 573 */;
 import getSystemThemeDefault from "getSystemTheme" /* 1219 */;
 import resolveThemeDefault from "resolveTheme" /* 1226 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2025 */;
-import updateBackgroundColorDefault from "updateBackgroundColor" /* 14359 */;
+import updateBackgroundColorDefault from "updateBackgroundColor" /* 14439 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1183 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1184 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;

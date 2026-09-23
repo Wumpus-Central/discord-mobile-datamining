@@ -1,15 +1,15 @@
-// === Module 10486: buildFavoritesSectionButtons ===
+// === Module 10565: buildFavoritesSectionButtons ===
 
-// Module 10486 (buildFavoritesSectionButtons)
+// Module 10565 (buildFavoritesSectionButtons)
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
-import _modDef3324 from "module_3324" /* 3324 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4724 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8945 */;
-import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10491 */;
-import StarIcon from "StarIcon" /* 10499 */;
-import StarOutlineIcon from "StarOutlineIcon" /* 10505 */;
+import _modDef3358 from "module_3358" /* 3358 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4794 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9016 */;
+import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10570 */;
+import StarIcon from "StarIcon" /* 10578 */;
+import StarOutlineIcon from "StarOutlineIcon" /* 10584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -118,7 +118,7 @@ let closure_6 = async function _removeChannelFromFavorites(arg0) {
 };
 function openNoAccessUpsell() {
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequireImpl(10492, dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, { source: "channel_context_menu" });
+  obj.openLazy(asyncRequireImpl(10571, dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, { source: "channel_context_menu" });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -133,14 +133,14 @@ export default function buildFavoritesSectionButtons(isExperimentEnabled) {
       if (!tmp) {
         const obj = { label: null, IconComponent: null, onPress: null };
         const intl = util.intl;
-        obj.label = intl.string(_modDef3324.G9fGlP);
+        obj.label = intl.string(_modDef3358.G9fGlP);
         obj.IconComponent = NitroWheelIcon.NitroWheelIcon;
         obj.onPress = openNoAccessUpsell;
       }
       if (tmp3) {
         const obj2 = { label: null, IconComponent: null, isDestructive: true, onPress: null };
         const intl3 = util.intl;
-        obj2.label = intl3.string(_modDef3324.TN4nAX);
+        obj2.label = intl3.string(_modDef3358.TN4nAX);
         obj2.IconComponent = StarIcon.StarIcon;
         obj2.onPress = function onPress() {
           return (function removeChannelFromFavorites() {
@@ -157,7 +157,7 @@ export default function buildFavoritesSectionButtons(isExperimentEnabled) {
       } else if (!tmp4) {
         const obj3 = { label: null, IconComponent: null, trailing: null, onPress: null };
         const intl2 = util.intl;
-        obj3.label = intl2.string(_modDef3324.G9fGlP);
+        obj3.label = intl2.string(_modDef3358.G9fGlP);
         obj3.IconComponent = StarOutlineIcon.StarOutlineIcon;
         let tmp15;
         if (tmp5) {

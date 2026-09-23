@@ -13,10 +13,10 @@ import mappers from "mappers" /* 1966 */;
 import isActivityParticipantValidGuildMemberDefault from "isActivityParticipantValidGuildMember" /* 1977 */;
 import GuildRoleUtils from "GuildRoleUtils" /* 2103 */;
 import useCommunicationDisabledNoticeStore from "useCommunicationDisabledNoticeStore" /* 2106 */;
-import GuildMemberConstants from "GuildMemberConstants" /* 4382 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4383 */;
-import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4384 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4385 */;
+import GuildMemberConstants from "GuildMemberConstants" /* 4448 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4449 */;
+import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4450 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4451 */;
 import ImpersonateStore from "ImpersonateStore" /* 2098 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2042 */;
@@ -89,7 +89,7 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
   let tmp3;
   let tmp4;
   if (0 === roles.length) {
-    return { colorString: null, colorStrings: null, colorRoleId: "category", hoistRoleId: "replace", iconRoleId: "fileFinishedImporting", highestRoleId: "padding" };
+    return { colorString: null, colorStrings: null, colorRoleId: "id", hoistRoleId: "done", iconRoleId: "key", highestRoleId: "top" };
   } else {
     const iter = roles[Symbol.iterator]();
     while (iter !== undefined) {

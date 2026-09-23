@@ -1,15 +1,15 @@
-// === Module 4577: DismissibleContentUnsafeUtils ===
+// === Module 4647: DismissibleContentUnsafeUtils ===
 
-// Module 4577 (DismissibleContentUnsafeUtils)
+// Module 4647 (DismissibleContentUnsafeUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import Uint8ArrayUtils from "Uint8ArrayUtils" /* 2027 */;
 import DismissibleContentTypes from "DismissibleContentTypes" /* 2029 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 2030 */;
-import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 4599 */;
+import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 4669 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4578 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4648 */;
 
 const require = globalThis.__r;
 

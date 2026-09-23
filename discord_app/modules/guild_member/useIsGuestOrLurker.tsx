@@ -1,6 +1,6 @@
-// === Module 10312: useIsGuestOrLurker ===
+// === Module 10391: useIsGuestOrLurker ===
 
-// Module 10312 (useIsGuestOrLurker)
+// Module 10391 (useIsGuestOrLurker)
 import GuildMemberStore from "GuildMemberStore" /* 2105 */;
 import GuildStore from "GuildStore" /* 2064 */;
 

@@ -1,6 +1,6 @@
-// === Module 14935: GuildIdentitySettingsUtils ===
+// === Module 15015: GuildIdentitySettingsUtils ===
 
-// Module 14935 (GuildIdentitySettingsUtils)
+// Module 15015 (GuildIdentitySettingsUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_identity/GuildIdentitySettingsUtils.tsx");

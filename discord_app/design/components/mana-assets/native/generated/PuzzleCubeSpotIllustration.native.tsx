@@ -1,9 +1,9 @@
-// === Module 6616: PuzzleCubeSpotIllustration ===
+// === Module 6700: PuzzleCubeSpotIllustration ===
 
-// Module 6616 (PuzzleCubeSpotIllustration)
+// Module 6700 (PuzzleCubeSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5806 */;
-import _modDef6617 from "module_6617" /* 6617 */;
+import FastImageDefault from "FastImage" /* 5890 */;
+import _modDef6701 from "module_6701" /* 6701 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const PuzzleCubeSpotIllustration = function PuzzleCubeSpotIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6617 };
+  const obj2 = { uri: _modDef6701 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,7 +1,7 @@
-// === Module 9574: getShelfItemData ===
+// === Module 9647: getShelfItemData ===
 
-// Module 9574 (getShelfItemData)
-import ApplicationStore from "ApplicationStore" /* 4984 */;
+// Module 9647 (getShelfItemData)
+import ApplicationStore from "ApplicationStore" /* 5054 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/getShelfItemData.tsx");

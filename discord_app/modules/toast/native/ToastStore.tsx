@@ -1,6 +1,6 @@
-// === Module 17436: ToastStore ===
+// === Module 17505: ToastStore ===
 
-// Module 17436 (ToastStore)
+// Module 17505 (ToastStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

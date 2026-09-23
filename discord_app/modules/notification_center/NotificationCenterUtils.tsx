@@ -1,13 +1,13 @@
-// === Module 7880: NotificationCenterUtils ===
+// === Module 7963: NotificationCenterUtils ===
 
-// Module 7880 (NotificationCenterUtils)
+// Module 7963 (NotificationCenterUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import UserSettings from "UserSettings" /* 2020 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7879 */;
-import notification_center_getTimestampString from "notification_center/getTimestampString" /* 7881 */;
+import getTimestampString from "getTimestampString" /* 5061 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7962 */;
 import size from "module_2" /* 2 */;
 
-const notification_center_getTimestampStringDefault = notification_center_getTimestampString;
+const getTimestampStringDefault = getTimestampString;
 
 const result = size.fileFinishedImporting("modules/notification_center/NotificationCenterUtils.tsx");
 
@@ -16,9 +16,9 @@ export const getRelativeTimestamp = function getRelativeTimestamp(extractTimesta
     flag = true;
   }
   const obj = { since: extractTimestampResult, getFormatter: null };
-  const tmp2 = notification_center_getTimestampString;
+  const tmp2 = getTimestampString;
   obj.getFormatter = flag ? tmp2.getAbbreviatedFormatter : tmp2.getFullFormatter;
-  return notification_center_getTimestampStringDefault(obj);
+  return getTimestampStringDefault(obj);
 };
 export const isRemoteAcked = function isRemoteAcked(addResult, setting) {
   let acked = addResult.acked;

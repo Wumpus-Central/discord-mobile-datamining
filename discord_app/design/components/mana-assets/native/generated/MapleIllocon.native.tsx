@@ -1,9 +1,9 @@
-// === Module 6476: MapleIllocon ===
+// === Module 6560: MapleIllocon ===
 
-// Module 6476 (MapleIllocon)
+// Module 6560 (MapleIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5806 */;
-import _modDef6477 from "module_6477" /* 6477 */;
+import FastImageDefault from "FastImage" /* 5890 */;
+import _modDef6561 from "module_6561" /* 6561 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const MapleIllocon = function MapleIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6477 };
+  const obj2 = { uri: _modDef6561 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

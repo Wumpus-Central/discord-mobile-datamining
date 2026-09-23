@@ -1,7 +1,7 @@
-// === Module 7190: useIsWindowLarge ===
+// === Module 7274: useIsWindowLarge ===
 
-// Module 7190 (useIsWindowLarge)
-import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4618 */;
+// Module 7274 (useIsWindowLarge)
+import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4688 */;
 import size from "module_2" /* 2 */;
 
 const useWindowSizeClassifierDefault = useWindowSizeClassifier;

@@ -1,8 +1,8 @@
-// === Module 15995: CheckpointEmojiStatsScreen ===
+// === Module 16048: CheckpointEmojiStatsScreen ===
 
-// Module 15995 (CheckpointEmojiStatsScreen)
+// Module 16048 (CheckpointEmojiStatsScreen)
 import jsxProd from "jsxProd" /* 21 */;
-import CheckpointStatsScreenDefault from "CheckpointStatsScreen" /* 15992 */;
+import CheckpointStatsScreenDefault from "CheckpointStatsScreen" /* 16045 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;

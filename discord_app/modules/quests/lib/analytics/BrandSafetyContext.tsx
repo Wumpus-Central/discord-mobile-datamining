@@ -1,13 +1,13 @@
-// === Module 7970: BrandSafetyContext ===
+// === Module 8052: BrandSafetyContext ===
 
-// Module 7970 (BrandSafetyContext)
+// Module 8052 (BrandSafetyContext)
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import ContentImpressionTrackerConstants from "ContentImpressionTrackerConstants" /* 7972 */;
-import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 7971 */;
+import ContentImpressionTrackerConstants from "ContentImpressionTrackerConstants" /* 8054 */;
+import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 8053 */;
 import ChannelStore from "ChannelStore" /* 2042 */;
 import GuildStore from "GuildStore" /* 2064 */;
-import RelationshipStore from "RelationshipStore" /* 4406 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4578 */;
+import RelationshipStore from "RelationshipStore" /* 4472 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4648 */;
 import UserStore from "UserStore" /* 1372 */;
 import size from "module_2" /* 2 */;
 

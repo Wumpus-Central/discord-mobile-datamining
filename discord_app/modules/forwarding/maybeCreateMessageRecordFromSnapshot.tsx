@@ -1,7 +1,7 @@
-// === Module 9038: maybeCreateMessageRecordFromSnapshot ===
+// === Module 9109: maybeCreateMessageRecordFromSnapshot ===
 
-// Module 9038 (maybeCreateMessageRecordFromSnapshot)
-import isForwardMessageDefault from "isForwardMessage" /* 7546 */;
+// Module 9109 (maybeCreateMessageRecordFromSnapshot)
+import isForwardMessageDefault from "isForwardMessage" /* 7630 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/forwarding/maybeCreateMessageRecordFromSnapshot.tsx");

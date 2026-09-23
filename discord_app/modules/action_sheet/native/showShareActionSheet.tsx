@@ -1,10 +1,10 @@
-// === Module 8636: showShareActionSheet ===
+// === Module 8707: showShareActionSheet ===
 
-// Module 8636 (showShareActionSheet)
+// Module 8707 (showShareActionSheet)
 import _mod17 from "module_17" /* 17 */;
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
-import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8637 */;
-import ShowShareActionSheetUtils from "ShowShareActionSheetUtils" /* 8638 */;
+import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8708 */;
+import ShowShareActionSheetUtils from "ShowShareActionSheetUtils" /* 8709 */;
 import PlatformUtils from "utils/PlatformUtils" /* 1365 */;
 import size from "module_2" /* 2 */;
 

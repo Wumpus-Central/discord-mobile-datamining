@@ -1,14 +1,14 @@
-// === Module 9607: getPrimaryAppCommand ===
+// === Module 9680: getPrimaryAppCommand ===
 
-// Module 9607 (getPrimaryAppCommand)
+// Module 9680 (getPrimaryAppCommand)
 import Server from "Server" /* 1978 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9324 */;
-import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators" /* 9414 */;
-import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9418 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9395 */;
+import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators" /* 9485 */;
+import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9489 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2042 */;
-import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 9410 */;
+import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 9481 */;
 
 const require = globalThis.__r;
 
@@ -98,7 +98,7 @@ function queryForPrimaryAppCommand(withAffinitySuggestions, id) {
   obj.commandTypes = items;
   return ApplicationCommandIndexStore.query(withAffinitySuggestions, obj, { placeholderCount: 1, scoreMethod: ApplicationCommandQueryTypes.ScoreMethod.COMMAND_ONLY, applicationId: id, allowFetch: false, allowApplicationState: true }).commands[0];
 }
-let ApplicationCommandIndexStore = fn(9410);
+let ApplicationCommandIndexStore = fn(9481);
 ({ getOrFetchApplicationCommandIndexForTarget: hasOwnProperty, useQueryState: metroRequire } = ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
 let c8 = "no primary app command for application";

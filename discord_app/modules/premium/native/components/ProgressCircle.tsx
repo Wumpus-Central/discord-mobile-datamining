@@ -1,8 +1,8 @@
-// === Module 12848: ProgressCircle ===
+// === Module 12930: ProgressCircle ===
 
-// Module 12848 (ProgressCircle)
+// Module 12930 (ProgressCircle)
 import nativeDefault from "native" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8732 */;
+import inlineStyles from "inlineStyles" /* 8803 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_6 = createStyles.createLegacyClassComponentStyles({ progressCircle: { alignItems: "center", justifyContent: "center" }, circle: { position: "absolute", width: "100%", height: "100%" }, circleOverlay: { position: "relative", display: "flex", justifyContent: "center", alignItems: "center" } });
 const Component = noop.Component;
 class ProgressCircle extends Component {
@@ -48,7 +48,7 @@ prototype["render"] = function render() {
   obj.children = items1;
   return hasOwnProperty(View, obj);
 };
-ProgressCircle.contextType = fn(4467).ThemeContext;
+ProgressCircle.contextType = fn(4533).ThemeContext;
 ProgressCircle.defaultProps = { size: 20, strokeWidth: 0.9, color: nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/components/ProgressCircle.tsx");

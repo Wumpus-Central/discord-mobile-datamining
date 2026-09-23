@@ -1,8 +1,8 @@
-// === Module 7743: guild_mod_dash_member_safety/DateUtils ===
+// === Module 7826: guild_mod_dash_member_safety/DateUtils ===
 
-// Module 7743 (guild_mod_dash_member_safety/DateUtils)
+// Module 7826 (guild_mod_dash_member_safety/DateUtils)
 import util from "util" /* 1115 */;
-import getTimestampStringDefault from "getTimestampString" /* 7744 */;
+import threads_getTimestampStringDefault from "threads/getTimestampString" /* 7827 */;
 import size from "module_2" /* 2 */;
 
 function getJoinedAtDateFormatter() {
@@ -32,7 +32,7 @@ export const formatDateRelativeTime = function formatDateRelativeTime(arg0, arg1
   } else if (arg1 === tmp.ACCOUNT_AGE) {
     tmp2 = getAccountAgeDateFormatter;
   }
-  return getTimestampStringDefault(arg0, tmp2, false);
+  return threads_getTimestampStringDefault(arg0, tmp2, false);
 };
 export const getJoinedAtTimestamp = function getJoinedAtTimestamp(joinedAt) {
   if (null != joinedAt) {

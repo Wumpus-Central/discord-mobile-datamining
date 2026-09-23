@@ -1,26 +1,26 @@
-// === Module 16324: RegisterAgeGate ===
+// === Module 16377: RegisterAgeGate ===
 
-// Module 16324 (RegisterAgeGate)
+// Module 16377 (RegisterAgeGate)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
-import RegistrationStepsUtils from "RegistrationStepsUtils" /* 16287 */;
+import RegistrationStepsUtils from "RegistrationStepsUtils" /* 16340 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConsentStore from "ConsentStore" /* 6838 */;
-import hooks_mod from "module_4348" /* 4348 */;
+import ConsentStore from "ConsentStore" /* 6922 */;
+import hooks_mod from "module_4414" /* 4414 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const RegistrationUIStore = fn(16288);
+const RegistrationUIStore = fn(16341);
 ({ updateRegistrationOptions: closure_7, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
-const RegistrationConstants = fn(16289);
+const RegistrationConstants = fn(16342);
 ({ RegisterTransitionSteps: closure_9, RegistrationTransitionActionTypes: c10 } = RegistrationConstants);
 const AuthStates = fn(1074).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { inputGroup: { marginTop: 24, marginBottom: 24 }, flexGrow: { flexGrow: 1 }, button: { flexGrow: 0, marginBottom: 4, marginTop: 16, flexDirection: "column" }, datePickerButton: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }, page: { flex: 1 } };
 let closure_15 = createStyles.createStyles(obj2);
 let hooks = hooks_mod;

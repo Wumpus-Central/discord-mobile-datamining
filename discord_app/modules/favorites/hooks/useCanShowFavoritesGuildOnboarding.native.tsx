@@ -1,9 +1,9 @@
-// === Module 10503: useCanShowFavoritesGuildOnboarding ===
+// === Module 10582: useCanShowFavoritesGuildOnboarding ===
 
-// Module 10503 (useCanShowFavoritesGuildOnboarding)
+// Module 10582 (useCanShowFavoritesGuildOnboarding)
 import initialize from "initialize" /* 504 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4614 */;
-import ActionSheetStore from "ActionSheetStore" /* 4448 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4684 */;
+import ActionSheetStore from "ActionSheetStore" /* 4514 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2096 */;
 
 require = fn;

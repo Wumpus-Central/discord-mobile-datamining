@@ -1,13 +1,13 @@
-// === Module 8325: UserOfferActionCreators ===
+// === Module 8407: UserOfferActionCreators ===
 
-// Module 8325 (UserOfferActionCreators)
+// Module 8407 (UserOfferActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 8326 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7699 */;
-import UserOfferStore from "UserOfferStore" /* 7695 */;
+import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 8408 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7782 */;
+import UserOfferStore from "UserOfferStore" /* 7778 */;
 
 const require = globalThis.__r;
 

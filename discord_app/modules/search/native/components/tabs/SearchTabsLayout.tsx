@@ -1,21 +1,22 @@
-// === Module 17119: SearchTabsLayout ===
+// === Module 17177: SearchTabsLayout ===
 
-// Module 17119 (SearchTabsLayout)
+// Module 17177 (SearchTabsLayout)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6899 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12596 */;
-import SearchUtils from "SearchUtils" /* 12598 */;
-import SearchActionCreatorsDefault from "SearchActionCreators" /* 12605 */;
-import SearchTabsFetchManagerDefault from "SearchTabsFetchManager" /* 12606 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12616 */;
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 12617 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12619 */;
-import pages_ErrorScreenDefault from "pages/ErrorScreen" /* 17120 */;
-import SearchTabsPageDefault from "SearchTabsPage" /* 17121 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6983 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12672 */;
+import SearchUtils from "SearchUtils" /* 12674 */;
+import SearchActionCreatorsDefault from "SearchActionCreators" /* 12681 */;
+import SearchTabsFetchManagerDefault from "SearchTabsFetchManager" /* 12682 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12692 */;
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 12693 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12695 */;
+import IntelligenceSearchEmptyScreenDefault from "IntelligenceSearchEmptyScreen" /* 17179 */;
+import pages_ErrorScreenDefault from "pages/ErrorScreen" /* 17180 */;
+import SearchTabsPageDefault from "SearchTabsPage" /* 17181 */;
 import noop from "module_19" /* 19 */;
-import SearchMessageStore from "SearchMessageStore" /* 7525 */;
-import SearchQueryStore from "SearchQueryStore" /* 12597 */;
-import SearchTabsLayoutStore from "SearchTabsLayoutStore" /* 12620 */;
+import SearchMessageStore from "SearchMessageStore" /* 7609 */;
+import SearchQueryStore from "SearchQueryStore" /* 12673 */;
+import SearchTabsLayoutStore from "SearchTabsLayoutStore" /* 12696 */;
 
 require = fn;
 function NoSearchResultsScreen(searchContext) {
@@ -24,18 +25,25 @@ function NoSearchResultsScreen(searchContext) {
   const effect = noop.useEffect(() => {
     const result = search_tracking_TrackingDefault.trackSearchEmptyResult({ searchContext });
   }, items);
-  const obj = { text: null };
-  const intl = searchContext(1115).intl;
-  obj.text = intl.string(searchContext(1115).t.V6nAfF);
-  return closure_12(pages_ErrorScreenDefault, obj);
+  const obj = searchContext(17178);
+  if (obj2.isIntelligenceSearchEmptyOrErrored(obj.useIntelligenceSearchStatus(searchContext).status)) {
+    let tmp4Result = closure_12(IntelligenceSearchEmptyScreenDefault, {});
+  } else {
+    const obj3 = { text: null };
+    const intl = tmp(1115).intl;
+    obj3.text = intl.string(tmp(1115).t.V6nAfF);
+    tmp4Result = closure_12(pages_ErrorScreenDefault, obj3);
+    const tmp5Result = pages_ErrorScreenDefault;
+  }
+  return tmp4Result;
 }
 const View = fn(17).View;
-const SearchConstants = fn(8125);
+const SearchConstants = fn(8207);
 ({ MESSAGE_SEARCH_RESULT_TABS_SET: closure_8, SEARCH_MESSAGE_TAB_SENTINEL: closure_9, SearchTabs: c10 } = SearchConstants);
 const ComponentActions = fn(1074).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_15 = createStyles.createStyles({ controls: { flex: 0, minHeight: 32 }, pages: { flex: 1 } });
 const apply = fn(12);
 let closure_16 = apply.debounce((searchContext) => search_tracking_TrackingDefault.trackSearchTabSelected({ searchContext }), 500);
@@ -91,7 +99,7 @@ let closure_21 = noop.memo((searchContext) => {
       const tmpResult = SearchPlatformUtilsDefault;
     }
   }, items1);
-  const searchSegmentedControlState = searchContext(visibleTabCounts[17]).useSearchSegmentedControlState({ items: memo, visibleTabs, onSelectedTabChange: callback, width });
+  const searchSegmentedControlState = searchContext(visibleTabCounts[20]).useSearchSegmentedControlState({ items: memo, visibleTabs, onSelectedTabChange: callback, width });
   ({ segmentedControlState, selectedTab } = searchSegmentedControlState);
   const setActiveIndex = segmentedControlState.setActiveIndex;
   closure_129_0 = visibleTabs;
@@ -108,7 +116,7 @@ let closure_21 = noop.memo((searchContext) => {
   const callback1 = width.useCallback(() => visibleTabCounts.current(), []);
   const items3 = [callback1, selectedTab];
   const memo1 = width.useMemo(() => ({ selectedTab, selectMediaTab: callback1 }), items3);
-  const context = width.useContext(searchContext(visibleTabCounts[18]).SwipeForMemberListContext);
+  const context = width.useContext(searchContext(visibleTabCounts[21]).SwipeForMemberListContext);
   let obj3 = context;
   if (context == null) {
     obj3 = {};
@@ -124,8 +132,8 @@ let closure_21 = noop.memo((searchContext) => {
       return Gesture.Native().simultaneousWithExternalGesture(tmp);
     }
   }, items4);
-  let obj2 = searchContext(visibleTabCounts[17]);
-  sharedValue = searchContext(visibleTabCounts[20]).useSharedValue(false);
+  let obj2 = searchContext(visibleTabCounts[20]);
+  sharedValue = searchContext(visibleTabCounts[23]).useSharedValue(false);
   class D {
     constructor(arg0) {
       result = closure_12.set(true);
@@ -156,7 +164,7 @@ let closure_21 = noop.memo((searchContext) => {
   G.__initData = __initData2;
   const items6 = [disallowGesture, sharedValue];
   const callback2 = obj.useCallback(D, items5);
-  class A {
+  class I {
     constructor(arg0) {
       if (closure_12.get()) {
         obj = disallowGesture;
@@ -169,13 +177,13 @@ let closure_21 = noop.memo((searchContext) => {
       return;
     }
   }
-  A.__closure = { isDragging: sharedValue, disallowMemberListGesture: disallowGesture };
-  A.__workletHash = 229712012692;
-  A.__initData = __initData3;
+  I.__closure = { isDragging: sharedValue, disallowMemberListGesture: disallowGesture };
+  I.__workletHash = 229712012692;
+  I.__initData = __initData3;
   const items7 = [disallowGesture, sharedValue];
   const callback3 = obj.useCallback(G, items6);
   const items8 = [searchContext];
-  const callback4 = obj.useCallback(A, items7);
+  const callback4 = obj.useCallback(I, items7);
   callback5 = obj.useCallback(() => {
     SearchPlatformActionCreatorsDefault.deleteSearchQuery(searchContext);
     const result = SearchActionCreatorsDefault.clearAllSearchMesssages();
@@ -198,7 +206,7 @@ let closure_21 = noop.memo((searchContext) => {
       }
     }
     if (null != context) {
-      let ComponentDispatch = searchContext(visibleTabCounts[24]).ComponentDispatch;
+      let ComponentDispatch = searchContext(visibleTabCounts[27]).ComponentDispatch;
       const subscription = ComponentDispatch.subscribe(screenIndex.CHANNEL_DETAILS_HIDDEN, handleChannelDetailsHidden);
       return () => {
         const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
@@ -212,9 +220,9 @@ let closure_21 = noop.memo((searchContext) => {
   } else {
     const obj5 = { style: tmp.controls, children: null };
     const obj6 = { state: segmentedControlState };
-    const items11 = [sharedValue(visibleTabs(tmp5[25]), obj6), ];
+    const items11 = [sharedValue(visibleTabs(tmp5[28]), obj6), ];
     const obj7 = { state: segmentedControlState };
-    items11[1] = sharedValue(visibleTabs(tmp5[26]), obj7);
+    items11[1] = sharedValue(visibleTabs(tmp5[29]), obj7);
     obj5.children = items11;
     const items12 = [callback5(selectedTab, obj5), ];
     const obj8 = { style: tmp.pages, children: null };
@@ -236,8 +244,8 @@ let closure_21 = noop.memo((searchContext) => {
     }
     const obj11 = { children: null };
     obj10.onScrollWorklet = tmp21;
-    obj9.children = sharedValue(tmp4(tmp5[27]).SegmentedControlPages, obj10);
-    obj8.children = sharedValue(tmp4(tmp5[14]).SearchTabsPageContext.Provider, obj9);
+    obj9.children = sharedValue(tmp4(tmp5[30]).SegmentedControlPages, obj10);
+    obj8.children = sharedValue(tmp4(tmp5[17]).SearchTabsPageContext.Provider, obj9);
     items12[1] = sharedValue(selectedTab, obj8);
     obj11.children = items12;
     tmp25Result = callback5(closure_14, obj11);
@@ -257,12 +265,12 @@ export default function ConnectedSearchTabsLayout(width) {
   const items2 = [candidateTabs];
   const memo = noop.useMemo(() => new Set(candidateTabs), items2);
   const obj = searchContext(504);
-  const autoSearchGuildChannelTab = searchContext(17207).useAutoSearchGuildChannelTab(searchContext, !memo.has(constants.GUILD_CHANNELS));
-  const obj3 = searchContext(17207);
-  const autoSearchMembersTab = searchContext(17208).useAutoSearchMembersTab(searchContext, !memo.has(constants.MEMBERS));
-  const obj4 = searchContext(17208);
-  const autoSearchPeopleTab = searchContext(17209).useAutoSearchPeopleTab(searchContext, !memo.has(constants.PEOPLE));
-  const obj5 = searchContext(17209);
-  const autoTrackSearchTabCountsViewedAnalytics = searchContext(17210).useAutoTrackSearchTabCountsViewedAnalytics({ searchContext, visibleTabCounts, visibleTabs });
+  const autoSearchGuildChannelTab = searchContext(17276).useAutoSearchGuildChannelTab(searchContext, !memo.has(constants.GUILD_CHANNELS));
+  const obj3 = searchContext(17276);
+  const autoSearchMembersTab = searchContext(17277).useAutoSearchMembersTab(searchContext, !memo.has(constants.MEMBERS));
+  const obj4 = searchContext(17277);
+  const autoSearchPeopleTab = searchContext(17278).useAutoSearchPeopleTab(searchContext, !memo.has(constants.PEOPLE));
+  const obj5 = searchContext(17278);
+  const autoTrackSearchTabCountsViewedAnalytics = searchContext(17279).useAutoTrackSearchTabCountsViewedAnalytics({ searchContext, visibleTabCounts, visibleTabs });
   return closure_12(closure_21, { searchContext, visibleTabs, visibleTabCounts, width: width.width });
 };

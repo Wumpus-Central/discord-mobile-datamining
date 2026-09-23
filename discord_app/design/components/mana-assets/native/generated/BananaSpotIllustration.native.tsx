@@ -1,9 +1,9 @@
-// === Module 6030: BananaSpotIllustration ===
+// === Module 6114: BananaSpotIllustration ===
 
-// Module 6030 (BananaSpotIllustration)
+// Module 6114 (BananaSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5806 */;
-import _modDef6031 from "module_6031" /* 6031 */;
+import FastImageDefault from "FastImage" /* 5890 */;
+import _modDef6115 from "module_6115" /* 6115 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const BananaSpotIllustration = function BananaSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6031 };
+  const obj2 = { uri: _modDef6115 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

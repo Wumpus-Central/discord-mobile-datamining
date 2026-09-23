@@ -1,19 +1,19 @@
-// === Module 15265: PremiumSetting ===
+// === Module 15317: PremiumSetting ===
 
-// Module 15265 (PremiumSetting)
+// Module 15317 (PremiumSetting)
 import util from "util" /* 1115 */;
-import PremiumUtils from "PremiumUtils" /* 4415 */;
-import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7662 */;
-import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11700 */;
-import MobileNitroManageSubscriptionsSettingsExperiment from "MobileNitroManageSubscriptionsSettingsExperiment" /* 13672 */;
-import PremiumTabBadgeDefault from "PremiumTabBadge" /* 15266 */;
+import PremiumUtils from "PremiumUtils" /* 4481 */;
+import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7745 */;
+import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11776 */;
+import MobileNitroManageSubscriptionsSettingsExperiment from "MobileNitroManageSubscriptionsSettingsExperiment" /* 13757 */;
+import PremiumTabBadgeDefault from "PremiumTabBadge" /* 15318 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
-import SubscriptionStore from "SubscriptionStore" /* 4421 */;
+import SubscriptionStore from "SubscriptionStore" /* 4487 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11729);
+const SettingBuilders = fn(11805);
 const route = SettingBuilders.createRoute({
   useTitle: function getPremiumSettingTitle() {
     const mobileNitroManageSubscriptionsSettingsExperiment = MobileNitroManageSubscriptionsSettingsExperiment.getMobileNitroManageSubscriptionsSettingsExperiment({ location: "PremiumSetting" });
@@ -34,7 +34,7 @@ const route = SettingBuilders.createRoute({
     }
   },
   parent: null,
-  IconComponent: fn(8945).NitroWheelIcon,
+  IconComponent: fn(9016).NitroWheelIcon,
   usePreNavigationAction: function useCanNavigateToPaymentSetting() {
     return noop.useCallback(() => {
       const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();

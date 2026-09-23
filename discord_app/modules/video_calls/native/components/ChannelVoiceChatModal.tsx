@@ -1,14 +1,20 @@
-// === Module 11237: ChannelVoiceChatModal ===
+// === Module 11313: ChannelVoiceChatModal ===
 
-// Module 11237 (ChannelVoiceChatModal)
-import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 4640 */;
-import useChannelNameDefault from "useChannelName" /* 4910 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4958 */;
-import ChannelVoiceChatDefault from "ChannelVoiceChat" /* 10339 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 11194 */;
+// Module 11313 (ChannelVoiceChatModal)
+import native from "native" /* 4533 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4680 */;
+import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 4710 */;
+import useChannelNameDefault from "useChannelName" /* 4980 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5028 */;
+import ChannelVoiceChatDefault from "ChannelVoiceChat" /* 10418 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 11270 */;
 import noop from "module_19" /* 19 */;
 
-const require = fn;
+require = fn;
+function ThemedChannelVoiceChat(channel) {
+  const tmp = useColorThemeBackgroundDefault();
+  return jsx(native.ThemeContextProvider, { gradient: useColorThemeBackgroundDefault(), children: jsx(ChannelVoiceChatDefault, { channel: channel.channel, inModal: true }) });
+}
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/ChannelVoiceChatModal.tsx");
@@ -27,11 +33,11 @@ export default function ChannelVoiceChatModal(channel) {
   if (tmp2 == null) {
     str = "";
   }
-  return <tmp5 screenKey="StageVoiceChat" title={str} titleIcon={jsx(channel(5317).StageIcon, { size: "sm" })} render={function render() {
+  return <tmp5 screenKey="StageVoiceChat" title={str} titleIcon={jsx(channel(5401).StageIcon, { size: "sm" })} render={function render() {
     let guild_id = channel.guild_id;
     if (guild_id == null) {
       guild_id = null;
     }
-    return jsx(GuildThemeGuildIdOverrideContextDefault.Provider, { value: guild_id, children: jsx(ChannelVoiceChatDefault, { channel, inModal: true }) });
+    return jsx(GuildThemeGuildIdOverrideContextDefault.Provider, { value: guild_id, children: <ThemedChannelVoiceChat channel={channel} /> });
   }} />;
 };

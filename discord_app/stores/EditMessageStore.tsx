@@ -1,12 +1,12 @@
-// === Module 7920: EditMessageStore ===
+// === Module 8002: EditMessageStore ===
 
-// Module 7920 (EditMessageStore)
+// Module 8002 (EditMessageStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import UserSettings from "UserSettings" /* 2020 */;
-import MessageParserDefault from "MessageParser" /* 7921 */;
-import SlateUtils from "SlateUtils" /* 7925 */;
-import MessageStore from "MessageStore" /* 4977 */;
+import MessageParserDefault from "MessageParser" /* 8003 */;
+import SlateUtils from "SlateUtils" /* 8007 */;
+import MessageStore from "MessageStore" /* 5047 */;
 
 require = fn;
 const dependencyMap = {};

@@ -1,16 +1,16 @@
-// === Module 7497: CreatorMonetizationRestrictionsHooks ===
+// === Module 7581: CreatorMonetizationRestrictionsHooks ===
 
-// Module 7497 (CreatorMonetizationRestrictionsHooks)
-import useUnmountAbortSignalDefault from "useUnmountAbortSignal" /* 7498 */;
-import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 7499 */;
+// Module 7581 (CreatorMonetizationRestrictionsHooks)
+import useUnmountAbortSignalDefault from "useUnmountAbortSignal" /* 7582 */;
+import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 7583 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4389 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4455 */;
 import GuildStore from "GuildStore" /* 2064 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const FetchState = fn(4389).FetchState;
+const FetchState = fn(4455).FetchState;
 const Constants = fn(1074);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_8, GuildFeatures: closure_9 } = Constants);
 const size = fn(2);
@@ -95,8 +95,8 @@ export const useShouldHideGuildPurchaseEntryPoints = function useShouldHideGuild
     }
     let result = flag;
   } else {
-    result = tmp(4388).isRestrictedFromShowingGuildPurchaseEntryPoints(stateFromStoresArray);
-    const tmpResult4 = tmp(4388);
+    result = tmp(4454).isRestrictedFromShowingGuildPurchaseEntryPoints(stateFromStoresArray);
+    const tmpResult4 = tmp(4454);
   }
   const tmpResult3 = require("initialize");
 };
@@ -162,8 +162,8 @@ export const useShouldRestrictUpdatingCreatorMonetizationSettings = function use
     }
     let result = flag;
   } else {
-    result = tmp(4388).isRestrictedFromUpdatingCreatorMonetizationSettings(stateFromStoresArray);
-    const tmpResult4 = tmp(4388);
+    result = tmp(4454).isRestrictedFromUpdatingCreatorMonetizationSettings(stateFromStoresArray);
+    const tmpResult4 = tmp(4454);
   }
   if (stateFromStores != null) {
     const features2 = stateFromStores.features;

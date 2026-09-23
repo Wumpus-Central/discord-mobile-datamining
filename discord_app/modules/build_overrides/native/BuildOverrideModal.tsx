@@ -1,17 +1,17 @@
-// === Module 14145: BuildOverrideModal ===
+// === Module 14227: BuildOverrideModal ===
 
-// Module 14145 (BuildOverrideModal)
+// Module 14227 (BuildOverrideModal)
 import nativeDefault from "native" /* 576 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12047 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12124 */;
 import noop from "module_19" /* 19 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11692 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11768 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { container: { flex: 1, height: "100%", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16 }, content: { marginTop: 160, flex: 1, alignItems: "center" }, imageWrapper: null, text: null, buildOverrideName: null, buildOverrideExpiration: null, buildOverrideInvalid: null, buttonWrapper: null, actionButton: null };
 let size = { width: 100, height: 100, borderRadius: nativeDefault.radii.round, marginBottom: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, alignItems: "center", justifyContent: "center" };
 obj2.imageWrapper = size;
@@ -32,13 +32,13 @@ export default function BuildOverrideModal(overrideUrl) {
   }
   let stateFromStores;
   const tmp = closure_9();
-  const tmp4 = stateFromStores(4691)();
+  const tmp4 = stateFromStores(4761)();
   if (obj.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(14146);
+    let tmp2Result = tmp2(14228);
   } else {
-    tmp2Result = tmp2(14147);
+    tmp2Result = tmp2(14229);
   }
-  obj = str(4608);
+  obj = str(4678);
   const items = [BuildOverrideStore];
   const items1 = [str];
   stateFromStores = str(504).useStateFromStores(items, () => BuildOverrideStore.getBuildOverride(str), items1);
@@ -47,44 +47,44 @@ export default function BuildOverrideModal(overrideUrl) {
   if (override != null) {
     const targetBuildOverride = override.targetBuildOverride;
     if (targetBuildOverride != null) {
-      const tmp9 = targetBuildOverride[tmp5(undefined, 12047).DEVICE_FIELD];
+      const tmp9 = targetBuildOverride[tmp5(undefined, 12124).DEVICE_FIELD];
       if (tmp9 != null) {
         id = tmp9.id;
       }
     }
   }
   const tmp5Result = str(504);
-  const tmp2Result2 = stateFromStores(4348);
+  const tmp2Result2 = stateFromStores(4414);
   let expiresAt;
   if (override != null) {
     expiresAt = override.expiresAt;
   }
-  const obj4 = stateFromStores(4348)();
-  const durationResult = tmp2Result2.duration(stateFromStores(4348)().diff(expiresAt));
+  const obj4 = stateFromStores(4414)();
+  const durationResult = tmp2Result2.duration(stateFromStores(4414)().diff(expiresAt));
   const rect = { top: true, bottom: true, style: tmp.container, children: null };
   const obj2 = { style: tmp.content, children: null };
-  const humanizeResult = tmp2Result2.duration(stateFromStores(4348)().diff(expiresAt)).humanize();
+  const humanizeResult = tmp2Result2.duration(stateFromStores(4414)().diff(expiresAt)).humanize();
   const items2 = [closure_6(closure_4, { style: tmp.imageWrapper, children: closure_6(closure_3, { source: tmp2Result }) }), , ];
   const obj5 = { style: tmp.text, variant: "text-md/medium", children: null };
   const intl = tmp5(1115).intl;
   obj5.children = intl.string(str(1115).t["6ILkNN"]);
-  items2[1] = closure_6(str(4753).Text, obj5);
+  items2[1] = closure_6(str(4823).Text, obj5);
   if (null != id) {
     const obj6 = { children: null };
     const obj7 = { style: tmp.buildOverrideName, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: id };
-    const items3 = [closure_6(tmp5(4753).Text, obj7), ];
+    const items3 = [closure_6(tmp5(4823).Text, obj7), ];
     const obj8 = { style: tmp.buildOverrideExpiration, variant: "text-md/medium", color: "text-default", children: null };
     const intl3 = tmp5(1115).intl;
     const obj9 = { expirationDuration: humanizeResult };
     obj8.children = intl3.format(tmp5(1115).t.lOsPpu, obj9);
-    items3[1] = closure_6(tmp5(4753).Text, obj8);
+    items3[1] = closure_6(tmp5(4823).Text, obj8);
     obj6.children = items3;
     let tmp14Result = closure_8(closure_7, obj6);
   } else {
     const obj10 = { style: tmp.buildOverrideInvalid, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     const intl2 = tmp5(1115).intl;
     obj10.children = intl2.string(tmp5(1115).t["cz+sue"]);
-    tmp14Result = closure_6(tmp5(4753).Text, obj10);
+    tmp14Result = closure_6(tmp5(4823).Text, obj10);
   }
   items2[2] = tmp14Result;
   obj2.children = items2;
@@ -103,15 +103,15 @@ export default function BuildOverrideModal(overrideUrl) {
       }
       const result = build_overrides_BuildOverrideUtils.setBuildOverrideFromLink(str);
     };
-    obj13.children = closure_6(tmp5(5187).Button, obj14);
+    obj13.children = closure_6(tmp5(5271).Button, obj14);
     const items5 = [closure_6(closure_4, obj13), ];
     const obj15 = { text: null, variant: "secondary", grow: true, onPress: null };
     const intl6 = tmp5(1115).intl;
     obj15.text = intl6.string(tmp5(1115).t.b5KKph);
     obj15.onPress = function onPress() {
-      return stateFromStores(4960).pop();
+      return stateFromStores(5030).pop();
     };
-    items5[1] = closure_6(tmp5(5187).Button, obj15);
+    items5[1] = closure_6(tmp5(5271).Button, obj15);
     obj12.children = items5;
     let tmp12Result2 = closure_8(closure_7, obj12);
   } else {
@@ -119,12 +119,12 @@ export default function BuildOverrideModal(overrideUrl) {
     const intl4 = tmp5(1115).intl;
     obj16.text = intl4.string(tmp5(1115).t.WRkdCQ);
     obj16.onPress = function onPress() {
-      return stateFromStores(4960).pop();
+      return stateFromStores(5030).pop();
     };
-    tmp12Result2 = closure_6(tmp5(5187).Button, obj16);
+    tmp12Result2 = closure_6(tmp5(5271).Button, obj16);
   }
   obj11.children = tmp12Result2;
   items4[1] = closure_6(closure_4, obj11);
   rect.children = items4;
-  return closure_8(str(7370).SafeAreaPaddingView, rect);
+  return closure_8(str(7454).SafeAreaPaddingView, rect);
 };

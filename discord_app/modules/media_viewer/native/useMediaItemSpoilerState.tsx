@@ -1,9 +1,9 @@
-// === Module 13262: useMediaItemSpoilerState ===
+// === Module 13344: useMediaItemSpoilerState ===
 
-// Module 13262 (useMediaItemSpoilerState)
+// Module 13344 (useMediaItemSpoilerState)
 import native from "native" /* 1177 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4493 */;
-import timing from "timing" /* 4758 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4559 */;
+import timing from "timing" /* 4828 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,8 +14,8 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/useMediaItemSpoilerState.tsx");
 
 export const useMediaItemSpoilerState = function useMediaItemSpoilerState(index) {
-  mediaItemHasSpoiler = mediaItemHasSpoiler(8539).useMediaItemHasSpoiler(index);
-  let obj = mediaItemHasSpoiler(8539);
+  mediaItemHasSpoiler = mediaItemHasSpoiler(8610).useMediaItemHasSpoiler(index);
+  let obj = mediaItemHasSpoiler(8610);
   const tmp = mediaItemHasSpoiler;
   [tmp5, dependencyMap] = sharedValue(noop.useState(mediaItemHasSpoiler), 2);
   const tmp4 = sharedValue(noop.useState(mediaItemHasSpoiler), 2);
@@ -23,7 +23,7 @@ export const useMediaItemSpoilerState = function useMediaItemSpoilerState(index)
   if (mediaItemHasSpoiler) {
     num = 1;
   }
-  sharedValue = mediaItemHasSpoiler(4493).useSharedValue(num);
+  sharedValue = mediaItemHasSpoiler(4559).useSharedValue(num);
   const items = [mediaItemHasSpoiler, sharedValue];
   const effect = noop.useEffect(() => {
     let num = 0;
@@ -42,13 +42,13 @@ export const useMediaItemSpoilerState = function useMediaItemSpoilerState(index)
     const obj3 = { runOnJS: ReanimatedRexport.runOnJS, setSpoilerActive, hasSpoiler: mediaItemHasSpoiler };
   }, items);
   const items1 = [tmp5, ];
-  let obj3 = mediaItemHasSpoiler(4493);
+  let obj3 = mediaItemHasSpoiler(4559);
   let fn = function l() {
     return { opacity: sharedValue.get() };
   };
   fn.__closure = { spoilerOpacity: sharedValue };
   fn.__workletHash = 8496335051493;
   fn.__initData = __initData;
-  items1[1] = tmp(4493).useAnimatedStyle(fn);
+  items1[1] = tmp(4559).useAnimatedStyle(fn);
   return items1;
 };

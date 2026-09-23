@@ -1,14 +1,14 @@
-// === Module 5843: NavigatorHeader ===
+// === Module 5927: NavigatorHeader ===
 
-// Module 5843 (NavigatorHeader)
+// Module 5927 (NavigatorHeader)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import Text_Text from "Text/Text" /* 4753 */;
-import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 5844 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5847 */;
-import _mod5850 from "module_5850" /* 5850 */;
-import XSmallIcon from "XSmallIcon" /* 5899 */;
-import NavigatorConstants from "NavigatorConstants" /* 5901 */;
+import Text_Text from "Text/Text" /* 4823 */;
+import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 5928 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5931 */;
+import _mod5934 from "module_5934" /* 5934 */;
+import XSmallIcon from "XSmallIcon" /* 5983 */;
+import NavigatorConstants from "NavigatorConstants" /* 5985 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -50,12 +50,12 @@ function CloseButton(onPress) {
     return timestampProducer(XSmallIcon.XSmallIcon, obj);
   };
   obj2.accessibilityLabel = stringResult;
-  return closure_6(require("module_5850").HeaderBackButton, obj2);
+  return closure_6(require("module_5934").HeaderBackButton, obj2);
 }
 function CustomHeaderBackButton(onPress) {
   onPress = onPress.onPress;
   const merged = Object.assign(onPress, Object.assign({ onPress: 0 }));
-  onPress(5849).useNavigatorBackPressHandler(() => {
+  onPress(5933).useNavigatorBackPressHandler(() => {
     if (null != onPress) {
       tmp();
     }
@@ -68,7 +68,7 @@ function CustomHeaderBackButton(onPress) {
   obj2.backImage = function backImage() {
     return closure_1_6(HeaderBackImage, {});
   };
-  return closure_6(onPress(5850).HeaderBackButton, obj2);
+  return closure_6(onPress(5934).HeaderBackButton, obj2);
 }
 function HeaderTextButton(text) {
   text = text.text;
@@ -90,16 +90,16 @@ function HeaderTextButton(text) {
     tmp5 = text;
   }
   obj2.accessibilityLabel = tmp5;
-  return timestampProducer(_mod5850.HeaderBackButton, obj2);
+  return timestampProducer(_mod5934.HeaderBackButton, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { fauxHeaderWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" }, headerTitle: null, headerBackTitleStyle: null, navigatorHeaderTitleContainer: null, navigatorHeaderContainer: null, navigatorHeaderSubtitle: null, headerButtonIcon: null, submittingIndicator: null };
 let obj4 = {};
-let merged = Object.assign(fn(4753).TextStyleSheet["redesign/heading-18/bold"]);
+let merged = Object.assign(fn(4823).TextStyleSheet["redesign/heading-18/bold"]);
 obj4.color = nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
 obj2.headerTitle = obj4;
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };

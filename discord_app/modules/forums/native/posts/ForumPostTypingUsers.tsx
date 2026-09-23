@@ -1,9 +1,9 @@
-// === Module 12276: ForumPostTypingUsers ===
+// === Module 12352: ForumPostTypingUsers ===
 
-// Module 12276 (ForumPostTypingUsers)
+// Module 12352 (ForumPostTypingUsers)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4493 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4559 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { container: { display: "flex", flexDirection: "row", alignItems: "center", flex: 1 }, lastTypingUser: { marginEnd: 0 }, typingUser: { marginEnd: -8, borderWidth: 2, borderRadius: nativeDefault.radii.round }, dots: null, typingText: null, borderColor: null, borderColorPressed: null };
 let obj3 = { marginEnd: -8, borderWidth: 2, borderRadius: nativeDefault.radii.round };
 obj2.dots = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingVertical: nativeDefault.space.PX_4, paddingLeft: 4, borderRadius: nativeDefault.radii.lg, marginStart: -8, borderWidth: 4, marginEnd: 8, marginTop: -1, marginBottom: -1 };

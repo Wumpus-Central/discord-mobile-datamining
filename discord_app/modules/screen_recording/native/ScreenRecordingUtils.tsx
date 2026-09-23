@@ -1,10 +1,10 @@
-// === Module 16275: ScreenRecordingUtils ===
+// === Module 16328: ScreenRecordingUtils ===
 
-// Module 16275 (ScreenRecordingUtils)
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5109 */;
-import bug_reporter_BugReportUtils from "bug_reporter/BugReportUtils" /* 10450 */;
-import ScreenRecordingManagerDefault from "ScreenRecordingManager" /* 16276 */;
-import StudyConfig from "StudyConfig" /* 16277 */;
+// Module 16328 (ScreenRecordingUtils)
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5193 */;
+import bug_reporter_BugReportUtils from "bug_reporter/BugReportUtils" /* 10529 */;
+import ScreenRecordingManagerDefault from "ScreenRecordingManager" /* 16329 */;
+import StudyConfig from "StudyConfig" /* 16330 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -827,7 +827,7 @@ let closure_13 = async function _handleRecordingPhase(arg0) {
 };
 get_ActivityIndicator = fn(17);
 ({ NativeModules, NativeEventEmitter } = get_ActivityIndicator);
-const useScreenRecordingStore = fn(16274).useScreenRecordingStore;
+const useScreenRecordingStore = fn(16327).useScreenRecordingStore;
 const DCDPhotos = NativeModules.DCDPhotos;
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.DCDScreenRecordingManager);
 let size = fn(2);

@@ -1,13 +1,13 @@
-// === Module 7789: CollectiblesProductRecord ===
+// === Module 7872: CollectiblesProductRecord ===
 
-// Module 7789 (CollectiblesProductRecord)
-import getPricesFromServerDefault from "getPricesFromServer" /* 5732 */;
+// Module 7872 (CollectiblesProductRecord)
+import getPricesFromServerDefault from "getPricesFromServer" /* 5816 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7790 */;
-import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7796 */;
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7873 */;
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7879 */;
 
 const require = fn;
-const CollectiblesItemRecord = fn(7791);
+const CollectiblesItemRecord = fn(7874);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } = CollectiblesItemRecord);
 let closure_7 = fn(1076).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
 const Constants = fn(1074);
@@ -171,7 +171,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               }
               ({ items, item } = obj);
               first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
-              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "padding", items: "exports", categorySkuId: "r", isCategoryReward: "isArray", prices: "Array", previewAssets: "category", googleSkuIds: "duration", eligibleOffers: "value", variants: "disabled", bundledProducts: "o", isFirstParty: "isArray" };
+              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "padding", items: true, categorySkuId: true, isCategoryReward: true, prices: true, previewAssets: true, googleSkuIds: true, eligibleOffers: true, variants: true, bundledProducts: true, isFirstParty: true };
               let str;
               if (first != null) {
                 str = first.optionValue;

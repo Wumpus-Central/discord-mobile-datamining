@@ -1,20 +1,20 @@
-// === Module 15987: CheckpointWelcomeScreen ===
+// === Module 16040: CheckpointWelcomeScreen ===
 
-// Module 15987 (CheckpointWelcomeScreen)
+// Module 16040 (CheckpointWelcomeScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1478 */;
-import _modDef3000 from "module_3000" /* 3000 */;
-import _modDef3032 from "module_3032" /* 3032 */;
-import UserUtils from "UserUtils" /* 4601 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 15988 */;
-import CheckpointTextDefault from "CheckpointText" /* 15989 */;
-import CheckpointKnickKnacksDefault from "CheckpointKnickKnacks" /* 15990 */;
+import _modDef3002 from "module_3002" /* 3002 */;
+import _modDef3034 from "module_3034" /* 3034 */;
+import UserUtils from "UserUtils" /* 4671 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 16041 */;
+import CheckpointTextDefault from "CheckpointText" /* 16042 */;
+import CheckpointKnickKnacksDefault from "CheckpointKnickKnacks" /* 16043 */;
 import UserStore from "UserStore" /* 1372 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4757 */;
+import createStyles from "createStyles" /* 4827 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -44,13 +44,13 @@ export default function CheckpointWelcomeScreen() {
   const obj8 = { style: tmp.titleText, variant: "display-lg", children: null };
   const tmp5 = CheckpointScreenDefault;
   const intl = util.intl;
-  obj8.children = intl.string(_modDef3000["CdU/PF"]);
+  obj8.children = intl.string(_modDef3002["CdU/PF"]);
   obj6.children = hasOwnProperty(CheckpointTextDefault, obj8);
   const items3 = [hasOwnProperty(View, obj6), , ];
   const obj9 = { style: tmp.subtitle, children: null };
   const obj10 = { variant: "heading-xl/medium", children: null };
   const intl2 = util.intl;
-  obj10.children = intl2.format(_modDef3032.xhZ23b, { username: name });
+  obj10.children = intl2.format(_modDef3034.xhZ23b, { username: name });
   obj9.children = hasOwnProperty(CheckpointTextDefault, obj10);
   items3[1] = hasOwnProperty(View, obj9);
   items3[2] = hasOwnProperty(CheckpointKnickKnacksDefault, { style: tmp.knickKnacks });

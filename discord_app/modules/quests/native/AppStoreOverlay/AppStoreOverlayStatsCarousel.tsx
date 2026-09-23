@@ -1,15 +1,15 @@
-// === Module 11762: AppStoreOverlayStatsCarousel ===
+// === Module 11838: AppStoreOverlayStatsCarousel ===
 
-// Module 11762 (AppStoreOverlayStatsCarousel)
+// Module 11838 (AppStoreOverlayStatsCarousel)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import Text_Text from "Text/Text" /* 4753 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6899 */;
-import AnalyticsActions from "AnalyticsActions" /* 7957 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7967 */;
-import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 11763 */;
-import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 11764 */;
+import Text_Text from "Text/Text" /* 4823 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6983 */;
+import AnalyticsActions from "AnalyticsActions" /* 8039 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8049 */;
+import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 11839 */;
+import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 11840 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -118,7 +118,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let closure_10 = 130 + nativeDefault.space.PX_16;
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { carousel: { marginHorizontal: -nativeDefault.space.PX_16 }, carouselContent: null, statCard: null, statCardExpanded: null, expandedCarouselContent: null, secondaryRow: null };
 let obj3 = { marginHorizontal: -nativeDefault.space.PX_16 };
 obj2.carouselContent = { gap: nativeDefault.space.PX_16, paddingLeft: nativeDefault.space.PX_16, paddingRight: nativeDefault.space.PX_16 };

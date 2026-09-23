@@ -1,27 +1,27 @@
-// === Module 16853: ICYMIShareModal ===
+// === Module 16905: ICYMIShareModal ===
 
-// Module 16853 (ICYMIShareModal)
+// Module 16905 (ICYMIShareModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1478 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4455 */;
-import native from "native" /* 4467 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4575 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4610 */;
-import components_Button_Button from "components/Button/Button" /* 5187 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5343 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7228 */;
-import HeaderShared from "HeaderShared" /* 8110 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 8119 */;
-import ShareEventUtils from "ShareEventUtils" /* 9878 */;
-import useShareChatInputActions from "useShareChatInputActions" /* 11949 */;
-import ShareChatInputDefault from "ShareChatInput" /* 11958 */;
-import _modDef16855 from "module_16855" /* 16855 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4521 */;
+import native from "native" /* 4533 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4645 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4680 */;
+import components_Button_Button from "components/Button/Button" /* 5271 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5427 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7312 */;
+import HeaderShared from "HeaderShared" /* 8192 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 8201 */;
+import ShareEventUtils from "ShareEventUtils" /* 9951 */;
+import useShareChatInputActions from "useShareChatInputActions" /* 12025 */;
+import ShareChatInputDefault from "ShareChatInput" /* 12035 */;
+import _modDef16907 from "module_16907" /* 16907 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2042 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 5105 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 5189 */;
 
 const require = globalThis.__r;
 
@@ -57,7 +57,7 @@ function Screenshot(setUri) {
   const obj5 = { style: tmp.base, children: null };
   const obj6 = { absolute: true, wide: true, tall: true, mix: true, mixAmount: null };
   const obj7 = { dark: null, light: null };
-  const tmp6 = _modDef16855;
+  const tmp6 = _modDef16907;
   obj7.dark = client_themes_ClientThemesUtils.OverlayOpacity.LEVEL_7;
   obj7.light = client_themes_ClientThemesUtils.OverlayOpacity.LEVEL_8;
   obj6.mixAmount = obj7;
@@ -373,13 +373,13 @@ class ICYMIShareModal {
   }
 }
 const View = fn(17).View;
-const DraftType = fn(5106).DraftType;
+const DraftType = fn(5190).DraftType;
 const AbortCodes = fn(1074).AbortCodes;
-const UserRowModes = fn(11128).UserRowModes;
-const MessageSendLocation = fn(4750).MessageSendLocation;
+const UserRowModes = fn(11204).UserRowModes;
+const MessageSendLocation = fn(4820).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { headerLeftContainer: { paddingLeft: nativeDefault.space.PX_16 }, headerRightContainer: null, preview: null, base: null, contentContainer: null, footer: null };
 let obj3 = { paddingLeft: nativeDefault.space.PX_16 };
 obj2.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
@@ -447,7 +447,7 @@ export const GameShareModal = function GameShareModal(content) {
             const obj6 = { channel: entry, content: "", entry, whenReady: false, doNotNotifyOnError: true, location: constants2.ICYMI };
             c5 = 2;
             c6 = 1;
-            const obj7 = { value: entry(16854).sendMessageWithEmbed(obj6), done: false };
+            const obj7 = { value: entry(16906).sendMessageWithEmbed(obj6), done: false };
             return obj7;
           }
         } else if (1 === tmp7) {

@@ -1,13 +1,13 @@
-// === Module 9315: VibegrationsActionCreators ===
+// === Module 9386: VibegrationsActionCreators ===
 
-// Module 9315 (VibegrationsActionCreators)
+// Module 9386 (VibegrationsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 5277 */;
-import VibegrationsAnalytics from "VibegrationsAnalytics" /* 9316 */;
-import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 9317 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 5361 */;
+import VibegrationsAnalytics from "VibegrationsAnalytics" /* 9387 */;
+import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 9388 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 9314 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 9385 */;
 
 require = fn;
 function reloadVibegrationsAppFrames(application_id) {
@@ -575,8 +575,8 @@ export const setProjectIcon = function setProjectIcon() {
   }
   return applyArgumentsResult;
 };
-export const setGuildHints = function setGuildHints(id, arg1) {
-  return patchProject(id, arg1);
+export const setGuildHints = function setGuildHints(first1, arg1) {
+  return patchProject(first1, arg1);
 };
 export const deleteProject = function deleteProject() {
   const self = this;

@@ -1,9 +1,9 @@
-// === Module 6192: EmojiGGsExample ===
+// === Module 6276: EmojiGGsExample ===
 
-// Module 6192 (EmojiGGsExample)
+// Module 6276 (EmojiGGsExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5806 */;
-import _modDef6193 from "module_6193" /* 6193 */;
+import FastImageDefault from "FastImage" /* 5890 */;
+import _modDef6277 from "module_6277" /* 6277 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const EmojiGGsExample = function EmojiGGsExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6193 };
+  const obj2 = { uri: _modDef6277 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

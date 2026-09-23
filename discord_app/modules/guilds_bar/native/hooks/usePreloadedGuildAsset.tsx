@@ -1,8 +1,8 @@
-// === Module 16688: usePreloadedGuildAsset ===
+// === Module 16740: usePreloadedGuildAsset ===
 
-// Module 16688 (usePreloadedGuildAsset)
-import useRefValueDefault from "useRefValue" /* 5805 */;
-import FastImageDefault from "FastImage" /* 5806 */;
+// Module 16740 (usePreloadedGuildAsset)
+import useRefValueDefault from "useRefValue" /* 5889 */;
+import FastImageDefault from "FastImage" /* 5890 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

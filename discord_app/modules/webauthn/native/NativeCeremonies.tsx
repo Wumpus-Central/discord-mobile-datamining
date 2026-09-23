@@ -1,9 +1,9 @@
-// === Module 7194: NativeCeremonies ===
+// === Module 7278: NativeCeremonies ===
 
-// Module 7194 (NativeCeremonies)
+// Module 7278 (NativeCeremonies)
 import LoggerDefault from "Logger" /* 3 */;
 import util from "util" /* 1115 */;
-import NativeSecurityKeyManagerModuleDefault from "NativeSecurityKeyManagerModule" /* 6843 */;
+import NativeSecurityKeyManagerModuleDefault from "NativeSecurityKeyManagerModule" /* 6927 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -213,7 +213,7 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
   });
 };
 obj.registerAndroidCredentialManagerPasskey = function registerAndroidCredentialManagerPasskey(setError) {
-  setRegistering(6843).registerPasskey;
+  setRegistering(6927).registerPasskey;
   setError = undefined;
   setError = setError.setError;
   setRegistering = setError.setRegistering;
@@ -266,7 +266,7 @@ obj.registerAndroidCredentialManagerPasskey = function registerAndroidCredential
   }).finally(() => setRegistering(false));
 };
 obj.registerAndroidDevicePasskey = function registerAndroidDevicePasskey(setError) {
-  setRegistering(6843).register;
+  setRegistering(6927).register;
   setError = undefined;
   setError = setError.setError;
   setRegistering = setError.setRegistering;
@@ -320,7 +320,7 @@ obj.registerAndroidDevicePasskey = function registerAndroidDevicePasskey(setErro
 };
 obj.registerPasskey = function registerPasskey(setError) {
   const obj = setError(1364);
-  const tmp2 = setRegistering(6843);
+  const tmp2 = setRegistering(6927);
   if (isAndroidResult) {
     setError = undefined;
     const setError2 = setError.setError;
@@ -462,7 +462,7 @@ obj.registerPasskey = function registerPasskey(setError) {
 obj.registerSecurityKey = function registerSecurityKey(setError) {
   let register = fn;
   if (fn === undefined) {
-    register = setRegistering(6843).register;
+    register = setRegistering(6927).register;
   }
   setError = undefined;
   setError = setError.setError;

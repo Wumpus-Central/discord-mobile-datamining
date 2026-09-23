@@ -1,10 +1,10 @@
-// === Module 7289: PhoneVerificationModal ===
+// === Module 7373: PhoneVerificationModal ===
 
-// Module 7289 (PhoneVerificationModal)
-import UserSettingsConfirmPasswordDefault from "UserSettingsConfirmPassword" /* 7240 */;
-import AddPhoneDefault from "AddPhone" /* 7291 */;
-import PhoneActionCreatorsDefault from "PhoneActionCreators" /* 7292 */;
-import VerifyPhoneDefault from "VerifyPhone" /* 7325 */;
+// Module 7373 (PhoneVerificationModal)
+import UserSettingsConfirmPasswordDefault from "UserSettingsConfirmPassword" /* 7324 */;
+import AddPhoneDefault from "AddPhone" /* 7375 */;
+import PhoneActionCreatorsDefault from "PhoneActionCreators" /* 7376 */;
+import VerifyPhoneDefault from "VerifyPhone" /* 7409 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const VerificationModalScenes = fn(1074).VerificationModalScenes;
-let closure_5 = fn(7290).PHONE_VERIFICATION_MODAL_KEY;
+let closure_5 = fn(7374).PHONE_VERIFICATION_MODAL_KEY;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/verification/native/components/PhoneVerificationModal.tsx");
@@ -131,7 +131,7 @@ export default function PhoneVerificationModal(onClose) {
                   c4 = 1;
                   c2 = 2;
                   c1 = 1;
-                  const obj5 = { value: v3(7292).addPhone(reason, reason, reason.reason), done: false };
+                  const obj5 = { value: v3(7376).addPhone(reason, reason, reason.reason), done: false };
                   return obj5;
                 }
               } else if (1 === tmp6) {
@@ -176,7 +176,7 @@ export default function PhoneVerificationModal(onClose) {
         return applyArgumentsResult;
       };
       obj.onSuccess = function onSuccess() {
-        closure_1(4960).popWithKey(closure_1_5);
+        closure_1(5030).popWithKey(closure_1_5);
       };
       closure_0.push(VerificationModalScenes.VERIFY_PASSWORD, obj);
     };

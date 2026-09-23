@@ -1,9 +1,9 @@
-// === Module 13712: useReferralProgramBannerDetails ===
+// === Module 13797: useReferralProgramBannerDetails ===
 
-// Module 13712 (useReferralProgramBannerDetails)
+// Module 13797 (useReferralProgramBannerDetails)
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7697 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7780 */;
 
 const require = fn;
 const size = fn(2);

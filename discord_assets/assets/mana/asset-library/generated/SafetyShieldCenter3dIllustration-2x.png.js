@@ -1,6 +1,6 @@
-// === Module 6643: ? ===
+// === Module 6727: ? ===
 
-// Module 6643
+// Module 6727
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SafetyShieldCenter3dIllustration-2x.png.js");

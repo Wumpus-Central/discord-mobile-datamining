@@ -1,8 +1,8 @@
-// === Module 13424: ShopThisLookUtils ===
+// === Module 13506: ShopThisLookUtils ===
 
-// Module 13424 (ShopThisLookUtils)
+// Module 13506 (ShopThisLookUtils)
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
-import CollectiblesSKUSourceType from "CollectiblesSKUSourceType" /* 13425 */;
+import CollectiblesSKUSourceType from "CollectiblesSKUSourceType" /* 13507 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/shop_this_look/ShopThisLookUtils.tsx");

@@ -1,18 +1,18 @@
-// === Module 18154: WarningNotice ===
+// === Module 18223: WarningNotice ===
 
-// Module 18154 (WarningNotice)
+// Module 18223 (WarningNotice)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4753 */;
-import components_Button_Button from "components/Button/Button" /* 5187 */;
-import FastImageDefault from "FastImage" /* 5806 */;
-import _modDef5816 from "module_5816" /* 5816 */;
+import Text_Text from "Text/Text" /* 4823 */;
+import components_Button_Button from "components/Button/Button" /* 5271 */;
+import FastImageDefault from "FastImage" /* 5890 */;
+import _modDef5900 from "module_5900" /* 5900 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { container: { borderRadius: nativeDefault.radii.xs, borderWidth: 1, padding: 12 }, horizontalContainer: { flexDirection: "row", alignItems: "center" }, message: { flex: 1, marginStart: 10, textAlignVertical: "center" }, actionButtonWrapper: { marginTop: 24, alignSelf: "center", width: "100%" }, containerYellow: null, textYellow: null, alertIcon: null };
 let obj3 = { borderRadius: nativeDefault.radii.xs, borderWidth: 1, padding: 12 };
 obj2.containerYellow = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, borderColor: nativeDefault.colors.STATUS_WARNING };
@@ -32,7 +32,7 @@ export default function WarningNotice(arg0) {
   ({ container: arr[1], containerYellow: arr[2] } = tmp);
   obj.style = items;
   const obj2 = { style: tmp.horizontalContainer, children: null };
-  const obj3 = { style: tmp.alertIcon, source: _modDef5816 };
+  const obj3 = { style: tmp.alertIcon, source: _modDef5900 };
   const items1 = [React4(FastImageDefault, obj3), ];
   const obj4 = { style: null, variant: "text-sm/medium", color: "interactive-text-active", children: notice };
   const items2 = [, ];

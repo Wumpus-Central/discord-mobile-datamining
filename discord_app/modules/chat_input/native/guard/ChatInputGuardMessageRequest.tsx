@@ -1,7 +1,7 @@
-// === Module 12697: ChatInputGuardMessageRequest ===
+// === Module 12779: ChatInputGuardMessageRequest ===
 
-// Module 12697 (ChatInputGuardMessageRequest)
-import ChatInputGuardDefault from "ChatInputGuard" /* 12706 */;
+// Module 12779 (ChatInputGuardMessageRequest)
+import ChatInputGuardDefault from "ChatInputGuard" /* 12788 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -115,12 +115,12 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
   };
   importDefault = channel(1484).useNavigation();
   let obj = channel(1484);
-  const isMessageRequestRestrictedViewer = channel(12698).useIsMessageRequestRestrictedViewer("ChatInputGuardMessageRequest");
-  let obj2 = channel(12698);
+  const isMessageRequestRestrictedViewer = channel(12780).useIsMessageRequestRestrictedViewer("ChatInputGuardMessageRequest");
+  let obj2 = channel(12780);
   const items = [closure_4];
   const stateFromStores = channel(504).useStateFromStores(items, () => UserStore.getUser(channel.getRecipientId()));
   let obj3 = channel(504);
-  const messageRequestActions = channel(12700).useMessageRequestActions({
+  const messageRequestActions = channel(12782).useMessageRequestActions({
     user: stateFromStores,
     onError: function handleRequestError() {
       const obj2 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
@@ -148,7 +148,7 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
     tmp6 = isOptimisticRejected;
   }
   const obj6 = { type: "button-action", message: null, subtext: null, buttonPrimaryText: null, buttonPrimaryOnPress: null, buttonPrimaryDisabled: null, buttonPrimaryLoading: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryDisabled: null, buttonSecondaryLoading: null };
-  let obj4 = channel(12700);
+  let obj4 = channel(12782);
   let obj5 = {
     user: stateFromStores,
     onError: function handleRequestError() {

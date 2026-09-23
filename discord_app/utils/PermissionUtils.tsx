@@ -1,15 +1,15 @@
-// === Module 4401: PermissionUtils ===
+// === Module 4467: PermissionUtils ===
 
-// Module 4401 (PermissionUtils)
+// Module 4467 (PermissionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import Server from "Server" /* 1978 */;
 import GuildRoleUtils from "GuildRoleUtils" /* 2103 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4383 */;
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4402 */;
-import AppChannelPermissions from "AppChannelPermissions" /* 4403 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4449 */;
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4468 */;
+import AppChannelPermissions from "AppChannelPermissions" /* 4469 */;
 import ImpersonateStore from "ImpersonateStore" /* 2098 */;
-import LurkingStore from "LurkingStore" /* 4397 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4398 */;
+import LurkingStore from "LurkingStore" /* 4463 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4464 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2042 */;
 import GuildMemberStore from "GuildMemberStore" /* 2105 */;

@@ -1,9 +1,9 @@
-// === Module 16509: useIsGuildThemePerkEnabled ===
+// === Module 16561: useIsGuildThemePerkEnabled ===
 
-// Module 16509 (useIsGuildThemePerkEnabled)
-import Powerups from "Powerups" /* 4649 */;
+// Module 16561 (useIsGuildThemePerkEnabled)
+import Powerups from "Powerups" /* 4719 */;
 import GuildStore from "GuildStore" /* 2064 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4645 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4715 */;
 
 const require = globalThis.__r;
 

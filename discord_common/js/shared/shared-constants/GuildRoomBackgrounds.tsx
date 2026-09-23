@@ -1,6 +1,6 @@
-// === Module 4920: GuildRoomBackgrounds ===
+// === Module 4990: GuildRoomBackgrounds ===
 
-// Module 4920 (GuildRoomBackgrounds)
+// Module 4990 (GuildRoomBackgrounds)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/GuildRoomBackgrounds.tsx");

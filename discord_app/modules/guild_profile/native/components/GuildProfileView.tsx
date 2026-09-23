@@ -1,20 +1,20 @@
-// === Module 10023: GuildProfileView ===
+// === Module 10096: GuildProfileView ===
 
-// Module 10023 (GuildProfileView)
+// Module 10096 (GuildProfileView)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1478 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 2056 */;
-import useToken from "useToken" /* 4458 */;
-import themes from "themes" /* 4465 */;
-import native from "native" /* 4467 */;
-import useThemeDefault from "useTheme" /* 4691 */;
-import LinearGradientDefault from "LinearGradient" /* 5199 */;
-import utils_getDevicePixelRatioDefault from "utils/getDevicePixelRatio" /* 10024 */;
-import guild_profile_GuildProfileUtils from "guild_profile/GuildProfileUtils" /* 10025 */;
-import GuildProfileHeaderDefault from "GuildProfileHeader" /* 10026 */;
-import GuildProfileGamesDefault from "GuildProfileGames" /* 10028 */;
-import GuildProfileTraitsDefault from "GuildProfileTraits" /* 10035 */;
+import useToken from "useToken" /* 4524 */;
+import themes from "themes" /* 4531 */;
+import native from "native" /* 4533 */;
+import useThemeDefault from "useTheme" /* 4761 */;
+import LinearGradientDefault from "LinearGradient" /* 5283 */;
+import utils_getDevicePixelRatioDefault from "utils/getDevicePixelRatio" /* 10097 */;
+import guild_profile_GuildProfileUtils from "guild_profile/GuildProfileUtils" /* 10098 */;
+import GuildProfileHeaderDefault from "GuildProfileHeader" /* 10099 */;
+import GuildProfileGamesDefault from "GuildProfileGames" /* 10101 */;
+import GuildProfileTraitsDefault from "GuildProfileTraits" /* 10108 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2064 */;
 
@@ -64,7 +64,7 @@ get_ActivityIndicator = fn(17);
 const GuildFeatures = fn(1074).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, colorBanner: { height: 140, width: "100%" }, imageBanner: { height: 140, width: "100%", objectFit: "cover" }, body: { marginTop: 12, paddingHorizontal: 16, gap: 16 }, error: { display: "flex", flexDirection: "row", alignItems: "center", gap: 8 }, buttonContainer: { marginTop: 160 }, header: { paddingHorizontal: 16, marginTop: -32, display: "flex", flexDirection: "column", gap: 0 }, avatarBackground: null, restrictedAcronym: null };
 let size = { width: 86, height: 86, borderRadius: 28.666666666666668, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" };
 obj2.avatarBackground = size;
@@ -100,7 +100,7 @@ export default function GuildProfileView(guildProfile) {
   }
   if (tmp5Result) {
     const obj3 = { variant: "text-md/medium", color: "text-subtle", children: guildProfile.description };
-    tmp5Result = closure_8(guildProfile(4753).Text, obj3);
+    tmp5Result = closure_8(guildProfile(4823).Text, obj3);
   }
   const items2 = [tmp5Result, closure_8(GuildProfileGamesDefault, { profile: guildProfile }), closure_8(GuildProfileTraitsDefault, { profile: guildProfile })];
   obj2.children = items2;

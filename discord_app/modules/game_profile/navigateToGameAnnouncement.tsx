@@ -1,6 +1,6 @@
-// === Module 9047: navigateToGameAnnouncement ===
+// === Module 9118: navigateToGameAnnouncement ===
 
-// Module 9047 (navigateToGameAnnouncement)
+// Module 9118 (navigateToGameAnnouncement)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 2064 */;
 

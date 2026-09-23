@@ -1,10 +1,10 @@
-// === Module 17976: useGuildBotApplications ===
+// === Module 18045: useGuildBotApplications ===
 
-// Module 17976 (useGuildBotApplications)
+// Module 18045 (useGuildBotApplications)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import GuildSettingsFetchActionCreators from "GuildSettingsFetchActionCreators" /* 9868 */;
+import GuildSettingsFetchActionCreators from "GuildSettingsFetchActionCreators" /* 9941 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9862 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9935 */;
 
 const require = globalThis.__r;
 

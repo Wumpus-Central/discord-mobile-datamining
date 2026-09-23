@@ -1,9 +1,9 @@
-// === Module 4705: DownloadIcon ===
+// === Module 4775: DownloadIcon ===
 
-// Module 4705 (DownloadIcon)
+// Module 4775 (DownloadIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4457 */;
-import _mod4706 from "module_4706" /* 4706 */;
+import BaseIconImage from "BaseIconImage" /* 4523 */;
+import _mod4776 from "module_4776" /* 4776 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const DownloadIcon = function DownloadIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod4706, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod4776, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -1,6 +1,6 @@
-// === Module 13373: vibegrationsExternalConnections ===
+// === Module 13455: vibegrationsExternalConnections ===
 
-// Module 13373 (vibegrationsExternalConnections)
+// Module 13455 (vibegrationsExternalConnections)
 import size from "module_2" /* 2 */;
 
 function externalConnectionOffer(nextResult) {

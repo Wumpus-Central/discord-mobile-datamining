@@ -1,6 +1,6 @@
-// === Module 16949: VibegrationsBuilderRouteStore ===
+// === Module 17001: VibegrationsBuilderRouteStore ===
 
-// Module 16949 (VibegrationsBuilderRouteStore)
+// Module 17001 (VibegrationsBuilderRouteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ChannelConstants from "ChannelConstants" /* 2049 */;

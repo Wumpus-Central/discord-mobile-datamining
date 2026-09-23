@@ -1,18 +1,18 @@
-// === Module 7382: DropdownOptionsActionSheet ===
+// === Module 7466: DropdownOptionsActionSheet ===
 
-// Module 7382 (DropdownOptionsActionSheet)
+// Module 7466 (DropdownOptionsActionSheet)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4724 */;
-import components_Button_Button from "components/Button/Button" /* 5187 */;
-import BottomSheetModal from "BottomSheetModal" /* 6871 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7396 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7397 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4794 */;
+import components_Button_Button from "components/Button/Button" /* 5271 */;
+import BottomSheetModal from "BottomSheetModal" /* 6955 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7480 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7481 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5678 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7347 */;
+import EmojiStore from "EmojiStore" /* 5762 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7431 */;
 
 require = fn;
 function DropdownOptionRow(option) {
@@ -102,7 +102,7 @@ const View = fn(17).View;
 const EMOJI_URL_BASE_SIZE = fn(1375).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_10 = createStyles.createStyles({ optionTextEmoji: { fontSize: 24, lineHeight: 24, paddingTop: 5 }, optionImageEmoji: { height: 24, width: 24 }, newBadge: { fontWeight: "bold" }, labelRow: { display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, closeButtonWrapper: { marginTop: 16, marginHorizontal: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/native/DropdownOptionsActionSheet.tsx");

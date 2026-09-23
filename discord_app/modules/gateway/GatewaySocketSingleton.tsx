@@ -1,16 +1,16 @@
-// === Module 13901: GatewaySocketSingleton ===
+// === Module 13986: GatewaySocketSingleton ===
 
-// Module 13901 (GatewaySocketSingleton)
+// Module 13986 (GatewaySocketSingleton)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import DiscordNativeDefault from "DiscordNative" /* 4377 */;
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 8002 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 11567 */;
-import GatewaySocketDefault from "GatewaySocket" /* 13903 */;
-import LocalPresenceStateManagerDefault from "LocalPresenceStateManager" /* 13943 */;
-import LocalVoiceStateManagerDefault from "LocalVoiceStateManager" /* 13946 */;
-import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 13902 */;
+import DiscordNativeDefault from "DiscordNative" /* 4443 */;
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 8084 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 11643 */;
+import GatewaySocketDefault from "GatewaySocket" /* 13988 */;
+import LocalPresenceStateManagerDefault from "LocalPresenceStateManager" /* 14028 */;
+import LocalVoiceStateManagerDefault from "LocalVoiceStateManager" /* 14031 */;
+import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 13987 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import NetworkUtils_mod from "NetworkUtils" /* 1462 */;
 

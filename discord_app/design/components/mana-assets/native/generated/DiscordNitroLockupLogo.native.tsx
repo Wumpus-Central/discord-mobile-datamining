@@ -1,11 +1,11 @@
-// === Module 6148: DiscordNitroLockupLogo ===
+// === Module 6232: DiscordNitroLockupLogo ===
 
-// Module 6148 (DiscordNitroLockupLogo)
+// Module 6232 (DiscordNitroLockupLogo)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4458 */;
-import _modDef6149 from "module_6149" /* 6149 */;
+import useToken from "useToken" /* 4524 */;
+import _modDef6233 from "module_6233" /* 6233 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -42,7 +42,7 @@ export const DiscordNitroLockupLogo = function DiscordNitroLockupLogo(color) {
     tmp5 = null != ICON_STRONG && typeof ICON_STRONG === "string";
   }
   const obj4 = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj4.source = { uri: _modDef6149 };
+  obj4.source = { uri: _modDef6233 };
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size, tmp6];
   obj4.style = items;

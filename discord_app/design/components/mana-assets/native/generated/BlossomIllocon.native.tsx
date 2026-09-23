@@ -1,9 +1,9 @@
-// === Module 6038: BlossomIllocon ===
+// === Module 6122: BlossomIllocon ===
 
-// Module 6038 (BlossomIllocon)
+// Module 6122 (BlossomIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5806 */;
-import _modDef6039 from "module_6039" /* 6039 */;
+import FastImageDefault from "FastImage" /* 5890 */;
+import _modDef6123 from "module_6123" /* 6123 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const BlossomIllocon = function BlossomIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6039 };
+  const obj2 = { uri: _modDef6123 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

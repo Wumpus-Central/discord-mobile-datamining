@@ -1,6 +1,6 @@
-// === Module 9306: UserApplicationIdentityStore ===
+// === Module 9377: UserApplicationIdentityStore ===
 
-// Module 9306 (UserApplicationIdentityStore)
+// Module 9377 (UserApplicationIdentityStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

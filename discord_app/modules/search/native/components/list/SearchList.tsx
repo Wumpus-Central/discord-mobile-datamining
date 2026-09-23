@@ -1,37 +1,38 @@
-// === Module 17132: SearchList ===
+// === Module 17192: SearchList ===
 
-// Module 17132 (SearchList)
+// Module 17192 (SearchList)
 import util from "util" /* 1115 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import _mod9002 from "module_9002" /* 9002 */;
-import pages_ErrorScreenDefault from "pages/ErrorScreen" /* 17120 */;
-import MediaGridPlaceholderDefault from "MediaGridPlaceholder" /* 17129 */;
-import DMRowDefault from "DMRow" /* 17133 */;
-import rows_GroupDMRowDefault from "rows/GroupDMRow" /* 17135 */;
-import SearchHistoryRowDefault from "SearchHistoryRow" /* 17136 */;
-import GuildVoiceOrStageChannelRowDefault from "GuildVoiceOrStageChannelRow" /* 17137 */;
-import GuildTextChannelRowDefault from "GuildTextChannelRow" /* 17150 */;
-import MediaGridItemDefault from "MediaGridItem" /* 17151 */;
-import FileOrLinkGridPlaceholderDefault from "FileOrLinkGridPlaceholder" /* 17153 */;
-import MediaGridDefault from "MediaGrid" /* 17155 */;
-import MessageRowDefault from "MessageRow" /* 17156 */;
-import FormRowPlaceholderDefault from "FormRowPlaceholder" /* 17160 */;
-import LinkGridItemDefault from "LinkGridItem" /* 17161 */;
-import FileGridItemDefault from "FileGridItem" /* 17164 */;
-import GuildChannelMemberRowDefault from "GuildChannelMemberRow" /* 17165 */;
-import MemberRowPlaceholderDefault from "MemberRowPlaceholder" /* 17166 */;
-import GenericTextRowDefault from "GenericTextRow" /* 17167 */;
-import SearchListSectionDefault from "SearchListSection" /* 17168 */;
+import _mod9073 from "module_9073" /* 9073 */;
+import pages_ErrorScreenDefault from "pages/ErrorScreen" /* 17180 */;
+import MediaGridPlaceholderDefault from "MediaGridPlaceholder" /* 17189 */;
+import DMRowDefault from "DMRow" /* 17193 */;
+import rows_GroupDMRowDefault from "rows/GroupDMRow" /* 17195 */;
+import SearchHistoryRowDefault from "SearchHistoryRow" /* 17196 */;
+import GuildVoiceOrStageChannelRowDefault from "GuildVoiceOrStageChannelRow" /* 17197 */;
+import GuildTextChannelRowDefault from "GuildTextChannelRow" /* 17210 */;
+import MediaGridItemDefault from "MediaGridItem" /* 17211 */;
+import FileOrLinkGridPlaceholderDefault from "FileOrLinkGridPlaceholder" /* 17213 */;
+import MediaGridDefault from "MediaGrid" /* 17215 */;
+import MessageRowDefault from "MessageRow" /* 17216 */;
+import FormRowPlaceholderDefault from "FormRowPlaceholder" /* 17220 */;
+import LinkGridItemDefault from "LinkGridItem" /* 17221 */;
+import FileGridItemDefault from "FileGridItem" /* 17224 */;
+import GuildChannelMemberRowDefault from "GuildChannelMemberRow" /* 17225 */;
+import MemberRowPlaceholderDefault from "MemberRowPlaceholder" /* 17226 */;
+import GenericTextRowDefault from "GenericTextRow" /* 17227 */;
+import SearchListSectionDefault from "SearchListSection" /* 17228 */;
+import SmartSearchRowDefault from "SmartSearchRow" /* 17229 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function keyExtractor(type) {
   type = type.type;
   if (constants2.DM === type) {
-    const _HermesInternal11 = HermesInternal;
+    const _HermesInternal12 = HermesInternal;
     let key = "" + type.section + "-" + type.props.user.id + "-" + type.props.guildId;
   } else if (constants2.GUILD_CHANNEL_MEMBER === type) {
-    const _HermesInternal10 = HermesInternal;
+    const _HermesInternal11 = HermesInternal;
     key = "" + type.props.user.id + "-" + type.props.guildId;
   } else if (constants2.SEARCH_HISTORY_ITEM === type) {
     const searchHistoryItem = type.props.searchHistoryItem;
@@ -43,7 +44,7 @@ function keyExtractor(type) {
         const mapped = tags.map((text) => text.text);
         joined = mapped.join(" ");
       }
-      const _HermesInternal9 = HermesInternal;
+      const _HermesInternal10 = HermesInternal;
       let combined = "" + searchHistoryItem.text + " " + joined;
     } else {
       if (constants.GROUP_DM !== type2) {
@@ -56,7 +57,7 @@ function keyExtractor(type) {
           }
         }
       }
-      const _HermesInternal8 = HermesInternal;
+      const _HermesInternal9 = HermesInternal;
       combined = "" + searchHistoryItem.channelId;
     }
     key = combined;
@@ -65,7 +66,7 @@ function keyExtractor(type) {
     const mapped1 = media.map((messageId) => "" + messageId.messageId + "-" + messageId.mediaIndex);
     key = mapped1.join("-");
   } else if (constants2.MEDIA === type) {
-    const _HermesInternal7 = HermesInternal;
+    const _HermesInternal8 = HermesInternal;
     key = "" + type.props.media.messageId + "-" + type.props.media.mediaIndex;
   } else {
     if (constants2.MEDIA_PLACEHOLDER !== type) {
@@ -73,30 +74,32 @@ function keyExtractor(type) {
         if (constants2.MESSAGE_PLACEHOLDER !== type) {
           if (constants2.GUILD_CHANNEL_MEMBER_PLACEHOLDER !== type) {
             if (constants2.GROUP_DM === type) {
-              const _HermesInternal6 = HermesInternal;
+              const _HermesInternal7 = HermesInternal;
               key = "" + type.section + "-" + type.props.channel.id;
             } else {
               if (constants2.GUILD_TEXT_CHANNEL !== type) {
                 if (constants2.GUILD_VOICE_CHANNEL !== type) {
                   if (constants2.MESSAGE === type) {
-                    const _HermesInternal4 = HermesInternal;
+                    const _HermesInternal5 = HermesInternal;
                     key = "" + type.props.message.id;
                   } else if (constants2.LINK === type) {
-                    const _HermesInternal3 = HermesInternal;
+                    const _HermesInternal4 = HermesInternal;
                     key = "" + type.props.data.messageId + "-" + type.props.data.linkIndex;
                   } else if (constants2.FILE === type) {
-                    const _HermesInternal2 = HermesInternal;
+                    const _HermesInternal3 = HermesInternal;
                     key = "" + type.props.data.messageId + "-" + type.props.data.fileIndex;
                   } else if (constants2.GENERIC === type) {
-                    const _HermesInternal = HermesInternal;
+                    const _HermesInternal2 = HermesInternal;
                     key = "" + type.props.text;
                   } else if (constants2.SECTION === type) {
-                    const _HermesInternal12 = HermesInternal;
+                    const _HermesInternal = HermesInternal;
                     key = "" + type.props.title;
+                  } else if (constants2.INTELLIGENCE_SMART_SEARCH === type) {
+                    key = type.props.requestKey;
                   }
                 }
               }
-              const _HermesInternal5 = HermesInternal;
+              const _HermesInternal6 = HermesInternal;
               key = "" + type.props.channel.id;
             }
           }
@@ -174,20 +177,24 @@ function renderItem(item) {
     const merged13 = Object.assign(item.props);
     return React6(GenericTextRowDefault, obj15);
   } else if (constants2.SECTION === type) {
-    const obj = {};
+    const obj16 = {};
     const merged14 = Object.assign(item.props);
-    return React6(SearchListSectionDefault, obj);
+    return React6(SearchListSectionDefault, obj16);
+  } else if (constants2.INTELLIGENCE_SMART_SEARCH === type) {
+    const obj = {};
+    const merged15 = Object.assign(item.props);
+    return React6(SmartSearchRowDefault, obj);
   } else {
     return null;
   }
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const SearchConstants = fn(8125);
+const SearchConstants = fn(8207);
 ({ SearchHistoryItemTypes: metroRequire, SearchListItemTypes: closure_7 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_10 = createStyles.createStyles({ container: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/SearchList.tsx");
@@ -239,7 +246,7 @@ export default noop.memo(function SearchList(arg0) {
   obj4.ListFooterComponent = ListFooterComponent;
   obj4.ItemSeparatorComponent = ItemSeparatorComponent;
   obj4.numColumns = numColumns;
-  items[1] = React6(_mod9002.AnimatedFlashList, obj4);
+  items[1] = React6(_mod9073.AnimatedFlashList, obj4);
   obj.children = items;
   return React7(React4, obj);
 });

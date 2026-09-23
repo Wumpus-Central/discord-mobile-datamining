@@ -1,38 +1,49 @@
-// === Module 11870: handleAcceptEventInstantInvite ===
+// === Module 11946: handleAcceptEventInstantInvite ===
 
-// Module 11870 (handleAcceptEventInstantInvite)
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8653 */;
-import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9789 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7771 */;
+// Module 11946 (handleAcceptEventInstantInvite)
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8724 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7854 */;
 
-require = fn;
+const require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/handleAcceptEventInstantInvite.tsx");
 
 export default function handleAcceptEventInstantInvite(code) {
-  if (!obj.handleNSFWGuildInvite(code)) {
-    if (tmpResult.isGuildScheduledEventInviteEmbed(code)) {
-      if (null != code.code) {
-        const guild_scheduled_event = code.guild_scheduled_event;
-        let id;
-        if (guild_scheduled_event != null) {
-          id = guild_scheduled_event.id;
-        }
-        const guildScheduledEvent = GuildScheduledEventStore.getGuildScheduledEvent(id);
-        if (null != guildScheduledEvent) {
-          const obj2 = {
-            inviteKey: code.code,
+  if (obj.isGuildScheduledEventInviteEmbed(code)) {
+    code = code.code;
+    if (null != code) {
+      const guild_scheduled_event = code.guild_scheduled_event;
+      let id;
+      if (guild_scheduled_event != null) {
+        id = guild_scheduled_event.id;
+      }
+      const guildScheduledEvent = GuildScheduledEventStore.getGuildScheduledEvent(id);
+      if (null != guildScheduledEvent) {
+        function acceptInvite() {
+          return InstantInviteActionCreatorsDefault.acceptInvite({
+            inviteKey: code,
             context: { location: "Guild Scheduled Event Invite Button Embed" },
             callback() {
-                      const result = GuildScheduledEventModalActionCreators.transitionToEventDetailsFromInvite(guildScheduledEvent);
+              const result = code(dependencyMap[3]).transitionToEventDetailsFromInvite(guildScheduledEvent);
+            }
+          });
+        }
+        const obj2 = { onConfirm: acceptInvite };
+        if (!tmpResult.handleNSFWGuildInvite(code, obj2)) {
+          const obj3 = {
+            inviteKey: code,
+            context: { location: "Guild Scheduled Event Invite Button Embed" },
+            callback() {
+                      const result = code(dependencyMap[3]).transitionToEventDetailsFromInvite(guildScheduledEvent);
                     }
           };
-          InstantInviteActionCreatorsDefault.acceptInvite(obj2);
+          guildScheduledEvent(8724).acceptInvite(obj3);
+          const obj4 = guildScheduledEvent(8724);
         }
+        tmpResult = tmp(10117);
       }
     }
-    tmpResult = tmp(7980);
   }
-  obj = guildScheduledEvent(10558);
-  tmp = guildScheduledEvent;
+  obj = code(8062);
+  tmp = code;
 };

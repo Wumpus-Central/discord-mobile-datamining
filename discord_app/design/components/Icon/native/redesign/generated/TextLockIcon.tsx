@@ -1,9 +1,9 @@
-// === Module 5298: TextLockIcon ===
+// === Module 5382: TextLockIcon ===
 
-// Module 5298 (TextLockIcon)
+// Module 5382 (TextLockIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4457 */;
-import _mod5267 from "module_5267" /* 5267 */;
+import BaseIconImage from "BaseIconImage" /* 4523 */;
+import _mod5351 from "module_5351" /* 5351 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const TextLockIcon = function TextLockIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5267, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5351, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

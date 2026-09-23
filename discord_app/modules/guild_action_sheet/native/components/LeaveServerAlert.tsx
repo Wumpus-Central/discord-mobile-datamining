@@ -1,8 +1,8 @@
-// === Module 14238: LeaveServerAlert ===
+// === Module 14320: LeaveServerAlert ===
 
-// Module 14238 (LeaveServerAlert)
+// Module 14320 (LeaveServerAlert)
 import Constants from "Constants" /* 1074 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9861 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9934 */;
 import jsxProd from "jsxProd" /* 21 */;
 import size from "module_2" /* 2 */;
 
@@ -35,12 +35,12 @@ export default function LeaveServerAlert(guild) {
   };
   const intl3 = tmp2(1115).intl;
   obj4.text = intl3.string(guild(1115).t.p89ACt);
-  const items = [closure_4(guild(5115).AlertActionButton, obj4, "confirm"), ];
+  const items = [closure_4(guild(5199).AlertActionButton, obj4, "confirm"), ];
   const obj5 = { variant: "secondary", text: null };
   const intl4 = tmp2(1115).intl;
   obj5.text = intl4.string(guild(1115).t.gm1Vej);
-  items[1] = closure_4(guild(5115).AlertActionButton, obj5, "cancel");
+  items[1] = closure_4(guild(5199).AlertActionButton, obj5, "cancel");
   obj3.children = items;
-  obj.actions = closure_5(guild(5115).AlertActions, obj3);
-  return closure_4(guild(5115).AlertModal, obj);
+  obj.actions = closure_5(guild(5199).AlertActions, obj3);
+  return closure_4(guild(5199).AlertModal, obj);
 };

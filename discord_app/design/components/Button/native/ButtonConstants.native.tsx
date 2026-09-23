@@ -1,8 +1,8 @@
-// === Module 5192: ButtonConstants ===
+// === Module 5276: ButtonConstants ===
 
-// Module 5192 (ButtonConstants)
+// Module 5276 (ButtonConstants)
 import nativeDefault from "native" /* 576 */;
-import Icon_mod from "Icon" /* 5189 */;
+import Icon_mod from "Icon" /* 5273 */;
 import size from "module_2" /* 2 */;
 
 const SMALL = Icon.IconSizes.SMALL;

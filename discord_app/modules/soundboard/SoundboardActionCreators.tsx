@@ -1,13 +1,13 @@
-// === Module 7583: SoundboardActionCreators ===
+// === Module 7666: SoundboardActionCreators ===
 
-// Module 7583 (SoundboardActionCreators)
+// Module 7666 (SoundboardActionCreators)
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1115 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2025 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5109 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5193 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SoundboardStore from "SoundboardStore" /* 5225 */;
+import SoundboardStore from "SoundboardStore" /* 5309 */;
 
 const require = globalThis.__r;
 
@@ -65,7 +65,7 @@ function _maybeFetchDefaultSounds() {
   }
 }
 function _maybeFetchGuildSoundboardSounds() {
-  const guildIdsToFetchSoundsFor = SOUNDBOARD_SOUNDS_RECEIVED(7585).getGuildIdsToFetchSoundsFor();
+  const guildIdsToFetchSoundsFor = SOUNDBOARD_SOUNDS_RECEIVED(7668).getGuildIdsToFetchSoundsFor();
   if (0 === guildIdsToFetchSoundsFor.length) {
     return Promise.resolve();
   } else {
@@ -83,7 +83,7 @@ function _maybeFetchGuildSoundboardSounds() {
     DispatcherDefault.dispatch(obj4);
     return promise;
   }
-  const obj = SOUNDBOARD_SOUNDS_RECEIVED(7585);
+  const obj = SOUNDBOARD_SOUNDS_RECEIVED(7668);
 }
 let closure_14 = async function _maybeFetchSoundboardSounds(arg0) {
   let disableAnalytics = arg0;
@@ -397,7 +397,7 @@ let closure_18 = async function _fetchSoundGuildData(arg0) {
     }
   }
 };
-const DEFAULT_SOUND_GUILD_ID = fn(5227).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(5311).DEFAULT_SOUND_GUILD_ID;
 const Constants = fn(1074);
 ({ Endpoints: metroRequire, AnalyticEvents: closure_7 } = Constants);
 const UserSettingsConstants = fn(1084);

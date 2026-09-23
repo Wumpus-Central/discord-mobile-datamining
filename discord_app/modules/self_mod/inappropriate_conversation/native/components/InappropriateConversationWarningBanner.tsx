@@ -1,12 +1,12 @@
-// === Module 11654: InappropriateConversationWarningBanner ===
+// === Module 11730: InappropriateConversationWarningBanner ===
 
-// Module 11654 (InappropriateConversationWarningBanner)
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5110 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11637 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11638 */;
-import SafetyToolsActionCreators from "SafetyToolsActionCreators" /* 11658 */;
+// Module 11730 (InappropriateConversationWarningBanner)
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5194 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11713 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11714 */;
+import SafetyToolsActionCreators from "SafetyToolsActionCreators" /* 11734 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4406 */;
+import RelationshipStore from "RelationshipStore" /* 4472 */;
 
 require = fn;
 class InappropriateConversationWarningBanner {
@@ -70,9 +70,9 @@ class InappropriateConversationWarningBanner {
               obj.warningId = warningId;
               obj.warningType = closure_3_5.INAPPROPRIATE_CONVERSATION_TIER_2;
               obj.senderId = senderId;
-              obj.analyticsBlockContext = closure_3_0(11637).CtaEventTypes.USER_BANNER_BLOCK_CONFIRM;
-              obj.analyticsBlockAndReportContext = closure_3_0(11637).CtaEventTypes.USER_BANNER_BLOCK_AND_REPORT_CONFIRM;
-              obj.analyticsCancelContext = closure_3_0(11637).CtaEventTypes.USER_BANNER_BLOCK_CANCEL;
+              obj.analyticsBlockContext = closure_3_0(11713).CtaEventTypes.USER_BANNER_BLOCK_CONFIRM;
+              obj.analyticsBlockAndReportContext = closure_3_0(11713).CtaEventTypes.USER_BANNER_BLOCK_AND_REPORT_CONFIRM;
+              obj.analyticsCancelContext = closure_3_0(11713).CtaEventTypes.USER_BANNER_BLOCK_CANCEL;
               obj.onDismiss = onDismiss;
               return closure_3_6(closure_0, obj);
             };
@@ -114,7 +114,7 @@ class InappropriateConversationWarningBanner {
     return tmp9(tmp10, obj1);
   }
 }
-const SafetyWarningTypes = fn(11185).SafetyWarningTypes;
+const SafetyWarningTypes = fn(11261).SafetyWarningTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/components/InappropriateConversationWarningBanner.tsx");

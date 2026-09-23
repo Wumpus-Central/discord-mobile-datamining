@@ -1,14 +1,14 @@
-// === Module 8718: AgeVerificationExpressiveV2Modal ===
+// === Module 8789: AgeVerificationExpressiveV2Modal ===
 
-// Module 8718 (AgeVerificationExpressiveV2Modal)
+// Module 8789 (AgeVerificationExpressiveV2Modal)
 import nativeDefault from "native" /* 576 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2108 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 4969 */;
-import NavigatorHeader from "NavigatorHeader" /* 5843 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8686 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8688 */;
-import AgeVerificationCustomTab from "AgeVerificationCustomTab" /* 8700 */;
-import AgeVerificationAuthSession from "AgeVerificationAuthSession" /* 8701 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 5039 */;
+import NavigatorHeader from "NavigatorHeader" /* 5927 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8757 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8759 */;
+import AgeVerificationCustomTab from "AgeVerificationCustomTab" /* 8771 */;
+import AgeVerificationAuthSession from "AgeVerificationAuthSession" /* 8772 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -369,11 +369,11 @@ function MethodsScreen(onClose) {
   return tmp19Result;
 }
 const ActivityIndicator = fn(17).ActivityIndicator;
-const TRUSTED_PROVIDERS_URL = fn(8687).TRUSTED_PROVIDERS_URL;
+const TRUSTED_PROVIDERS_URL = fn(8758).TRUSTED_PROVIDERS_URL;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" }, container: { alignSelf: "stretch" }, header: { textAlign: "center" }, loadingContainer: null, emptyContainer: null, footer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" };
 obj2.loadingContainer = { marginTop: nativeDefault.space.PX_24 };

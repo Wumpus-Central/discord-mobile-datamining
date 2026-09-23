@@ -1,10 +1,10 @@
-// === Module 14760: guilds ===
+// === Module 14840: guilds ===
 
-// Module 14760 (guilds)
+// Module 14840 (guilds)
 import GuildRecord from "GuildRecord" /* 2060 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8614 */;
-import RPCErrorDefault from "RPCError" /* 9587 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9590 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8685 */;
+import RPCErrorDefault from "RPCError" /* 9660 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9663 */;
 import GuildStore from "GuildStore" /* 2064 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;

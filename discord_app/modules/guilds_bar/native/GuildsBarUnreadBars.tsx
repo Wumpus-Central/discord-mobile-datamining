@@ -1,15 +1,15 @@
-// === Module 16705: GuildsBarUnreadBars ===
+// === Module 16757: GuildsBarUnreadBars ===
 
-// Module 16705 (GuildsBarUnreadBars)
+// Module 16757 (GuildsBarUnreadBars)
 import initialize from "initialize" /* 504 */;
 import debounceDefault from "debounce" /* 551 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4493 */;
-import FastList from "FastList" /* 7319 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4559 */;
+import FastList from "FastList" /* 7403 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7875 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4578 */;
-import SortedGuildStore from "SortedGuildStore" /* 5657 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7958 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4648 */;
+import SortedGuildStore from "SortedGuildStore" /* 5741 */;
 
 const require = globalThis.__r;
 
@@ -217,13 +217,13 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top
   }
 }
 const View = fn(17).View;
-const GuildsNodeType = fn(5657).GuildsNodeType;
-const GuildsBarConstants = fn(16632);
+const GuildsNodeType = fn(5741).GuildsNodeType;
+const GuildsBarConstants = fn(16684);
 ({ FastListRenderSections: c10, useGuildWrapperSize: closure_11, GUILD_LIST_WIDTH } = GuildsBarConstants);
-const YouBarConstants = fn(15373);
+const YouBarConstants = fn(15425);
 ({ YOU_BAR_HEIGHT: closure_12, YOU_BAR_MARGIN: map1 } = YouBarConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_15 = createStyles.createStyles({ wrapper: { position: "absolute", top: 0, left: 0, bottom: 0, width: GUILD_LIST_WIDTH } });
 let closure_17 = { beforeItem: "Array", afterItem: "flex" };
 let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "Array" };

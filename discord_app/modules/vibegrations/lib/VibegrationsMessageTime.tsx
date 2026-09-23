@@ -1,6 +1,6 @@
-// === Module 17037: VibegrationsMessageTime ===
+// === Module 17094: VibegrationsMessageTime ===
 
-// Module 17037 (VibegrationsMessageTime)
+// Module 17094 (VibegrationsMessageTime)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsMessageTime.tsx");

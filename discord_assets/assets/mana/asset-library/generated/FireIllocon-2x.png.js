@@ -1,6 +1,6 @@
-// === Module 6239: ? ===
+// === Module 6323: ? ===
 
-// Module 6239
+// Module 6323
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/FireIllocon-2x.png.js");

@@ -1,9 +1,9 @@
-// === Module 6576: OrbNitroCardSpotIllustration ===
+// === Module 6660: OrbNitroCardSpotIllustration ===
 
-// Module 6576 (OrbNitroCardSpotIllustration)
+// Module 6660 (OrbNitroCardSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5806 */;
-import _modDef6577 from "module_6577" /* 6577 */;
+import FastImageDefault from "FastImage" /* 5890 */;
+import _modDef6661 from "module_6661" /* 6661 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const OrbNitroCardSpotIllustration = function OrbNitroCardSpotIllustratio
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6577 };
+  const obj2 = { uri: _modDef6661 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

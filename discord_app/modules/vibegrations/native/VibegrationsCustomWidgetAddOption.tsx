@@ -1,24 +1,24 @@
-// === Module 13363: VibegrationsCustomWidgetAddOption ===
+// === Module 13445: VibegrationsCustomWidgetAddOption ===
 
-// Module 13363 (VibegrationsCustomWidgetAddOption)
+// Module 13445 (VibegrationsCustomWidgetAddOption)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import _modDef3678 from "module_3678" /* 3678 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4724 */;
-import Text_Text from "Text/Text" /* 4753 */;
-import Pressables from "Pressables" /* 5341 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7456 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8514 */;
-import MagicWandIcon from "MagicWandIcon" /* 10414 */;
-import VibegrationsCustomWidget from "VibegrationsCustomWidget" /* 13364 */;
-import VibegrationsCustomWidgetSheet from "VibegrationsCustomWidgetSheet" /* 13365 */;
+import _modDef3712 from "module_3712" /* 3712 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4794 */;
+import Text_Text from "Text/Text" /* 4823 */;
+import Pressables from "Pressables" /* 5425 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7540 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8585 */;
+import MagicWandIcon from "MagicWandIcon" /* 10493 */;
+import VibegrationsCustomWidget from "VibegrationsCustomWidget" /* 13446 */;
+import VibegrationsCustomWidgetSheet from "VibegrationsCustomWidgetSheet" /* 13447 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { row: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_16 }, copy: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_16 };
 obj2.copy = { flex: 1, gap: nativeDefault.space.PX_4 };
@@ -34,7 +34,7 @@ export default function VibegrationsCustomWidgetAddOption() {
   if (canConjureVibegrationsCustomWidget) {
     const obj2 = { accessibilityRole: "button", accessibilityLabel: null, style: null, onPress: null, children: null };
     const intl = util.intl;
-    obj2.accessibilityLabel = intl.string(_modDef3678["27bu14"]);
+    obj2.accessibilityLabel = intl.string(_modDef3712["27bu14"]);
     const items = [tmp4.card, tmp.row];
     obj2.style = items;
     obj2.onPress = tmp7;
@@ -43,11 +43,11 @@ export default function VibegrationsCustomWidgetAddOption() {
     const obj4 = { style: tmp.copy, children: null };
     const obj5 = { variant: "text-sm/semibold", color: "text-strong", children: null };
     const intl2 = util.intl;
-    obj5.children = intl2.string(_modDef3678["4OR+L+"]);
+    obj5.children = intl2.string(_modDef3712["4OR+L+"]);
     const items2 = [hasOwnProperty(Text_Text.Text, obj5), ];
     const obj6 = { variant: "text-xs/normal", color: "text-muted", children: null };
     const intl3 = util.intl;
-    obj6.children = intl3.string(_modDef3678["27bu14"]);
+    obj6.children = intl3.string(_modDef3712["27bu14"]);
     items2[1] = hasOwnProperty(Text_Text.Text, obj6);
     obj4.children = items2;
     items1[1] = timestampProducer(View, obj4);

@@ -1,13 +1,13 @@
-// === Module 15181: FamilyCenterTopActivity ===
+// === Module 15233: FamilyCenterTopActivity ===
 
-// Module 15181 (FamilyCenterTopActivity)
+// Module 15233 (FamilyCenterTopActivity)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4724 */;
-import GuildIcon from "GuildIcon" /* 5803 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4794 */;
+import GuildIcon from "GuildIcon" /* 5887 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7782 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7865 */;
 
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 const obj2 = { container: { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 }, section: { flex: 1 }, avatarList: null, touchableHitBox: null, guildAvatar: null, guildAvatarText: null };
 let obj3 = { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 };
 obj2.avatarList = { display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_4, flexWrap: "wrap", paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_12 };
@@ -39,7 +39,7 @@ export default function FamilyCenterTopActivity() {
   const items2 = [stateFromStores];
   [][0] = stateFromStores1;
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15182, dependencyMap.paths), "FamilyCenterTopUsers", { topUserActivities: stateFromStores });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15234, dependencyMap.paths), "FamilyCenterTopUsers", { topUserActivities: stateFromStores });
   }, items2);
   if (0 !== stateFromStores.length) {
     const obj3 = { style: tmp.container, children: null };

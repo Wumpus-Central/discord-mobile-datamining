@@ -1,17 +1,17 @@
-// === Module 14892: ChangeAvatarActionSheet ===
+// === Module 14972: ChangeAvatarActionSheet ===
 
-// Module 14892 (ChangeAvatarActionSheet)
+// Module 14972 (ChangeAvatarActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4415 */;
-import TableRow from "TableRow" /* 5824 */;
-import TableRowGroup from "TableRowGroup" /* 5906 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7396 */;
-import ActionSheet from "ActionSheet" /* 7444 */;
-import Form from "Form" /* 8876 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8945 */;
-import UserProfileUpsellButtonDefault from "UserProfileUpsellButton" /* 14876 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4481 */;
+import TableRow from "TableRow" /* 5908 */;
+import TableRowGroup from "TableRowGroup" /* 5990 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7480 */;
+import ActionSheet from "ActionSheet" /* 7528 */;
+import Form from "Form" /* 8947 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9016 */;
+import UserProfileUpsellButtonDefault from "UserProfileUpsellButton" /* 14956 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -20,7 +20,7 @@ const View = fn(17).View;
 const AnalyticsObjects = fn(1074).AnalyticsObjects;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 const obj2 = { nitroWheel: { marginLeft: nativeDefault.space.PX_8 }, sublabel: null, label: null, remove: null, upsellButton: null, upsellTitleContainer: null, titleWrapper: null, titleContainer: null };
 const obj3 = { marginLeft: nativeDefault.space.PX_8 };
 obj2.sublabel = { color: nativeDefault.colors.TEXT_DEFAULT };

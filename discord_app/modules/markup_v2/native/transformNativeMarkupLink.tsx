@@ -1,8 +1,8 @@
-// === Module 8377: transformNativeMarkupLink ===
+// === Module 8459: transformNativeMarkupLink ===
 
-// Module 8377 (transformNativeMarkupLink)
-import MarkupTypes from "MarkupTypes" /* 5208 */;
-import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 5214 */;
+// Module 8459 (transformNativeMarkupLink)
+import MarkupTypes from "MarkupTypes" /* 5292 */;
+import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 5298 */;
 import size from "module_2" /* 2 */;
 
 function stripCredentialsForDisplay(url) {
@@ -30,7 +30,7 @@ export const transformNativeLink = function transformNativeLink(value, channelId
       }
       return obj;
     }
-    obj = { type: MarkupTypes.AST_KEY.LINK, content: null, target: null, title: "a" };
+    obj = { type: MarkupTypes.AST_KEY.LINK, content: null, target: null, title: "Array" };
     const obj3 = { type: MarkupTypes.AST_KEY.TEXT, content: stripCredentialsForDisplay(url) };
     const items = [obj3];
     obj.content = items;

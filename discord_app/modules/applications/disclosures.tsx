@@ -1,9 +1,9 @@
-// === Module 9338: disclosures ===
+// === Module 9409: disclosures ===
 
-// Module 9338 (disclosures)
+// Module 9409 (disclosures)
 import util from "util" /* 1115 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import applications from "applications" /* 9339 */;
+import applications from "applications" /* 9410 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -77,7 +77,7 @@ const Endpoints = fn(1074).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/applications/disclosures.tsx");
 
-export const ApplicationDisclosure = fn(9339).ApplicationDisclosureType;
+export const ApplicationDisclosure = fn(9410).ApplicationDisclosureType;
 export const getDisclosures = function getDisclosures() {
   const self = this;
   const apply = closure_4.apply;

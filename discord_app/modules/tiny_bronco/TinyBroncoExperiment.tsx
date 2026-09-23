@@ -1,26 +1,15 @@
-// === Module 14966: TinyBroncoExperiment ===
+// === Module 10122: TinyBroncoExperiment ===
 
-// Module 14966 (TinyBroncoExperiment)
-import TinyBroncoGate from "TinyBroncoGate" /* 14967 */;
+// Module 10122 (TinyBroncoExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
-let closure_2 = ApexExperiment.createApexExperiment({ name: "2026-08-tiny-bronco", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
+let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-08-tiny-bronco", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 const result = size.fileFinishedImporting("modules/tiny_bronco/TinyBroncoExperiment.tsx");
 
 export const useIsTinyBroncoEnabled = function useIsTinyBroncoEnabled(location) {
-  let enabled = TinyBroncoGate.TINY_BRONCO_DEV_ONLY;
-  if (enabled) {
-    const obj = { location };
-    enabled = closure_2.useConfig(obj).enabled;
-  }
-  return enabled;
+  return closure_0.useConfig({ location }).enabled;
 };
 export const isTinyBroncoEnabled = function isTinyBroncoEnabled(location) {
-  let enabled = TinyBroncoGate.TINY_BRONCO_DEV_ONLY;
-  if (enabled) {
-    const obj = { location };
-    enabled = closure_2.getConfig(obj).enabled;
-  }
-  return enabled;
+  return closure_0.getConfig({ location }).enabled;
 };

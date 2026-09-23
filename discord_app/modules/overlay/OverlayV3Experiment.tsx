@@ -1,11 +1,11 @@
-// === Module 4603: OverlayV3Experiment ===
+// === Module 4673: OverlayV3Experiment ===
 
-// Module 4603 (OverlayV3Experiment)
+// Module 4673 (OverlayV3Experiment)
 import ApexExperiment_mod from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 let ApexExperiment = ApexExperiment_mod;
-const obj = { name: "2026-03-overlay-default-keybind", kind: "user", defaultConfig: { keybindOverride: "max" }, variations: null };
+const obj = { name: "2026-03-overlay-default-keybind", kind: "user", defaultConfig: { keybindOverride: "r" }, variations: null };
 const obj2 = { 1: null, 2: { keybindOverride: "ctrl+tab" }, 3: { keybindOverride: "alt+x" } };
 obj2[3] = { keybindOverride: "ctrl+l" };
 obj.variations = obj2;

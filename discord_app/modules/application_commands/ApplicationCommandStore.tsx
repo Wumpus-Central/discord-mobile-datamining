@@ -1,11 +1,11 @@
-// === Module 8025: ApplicationCommandStore ===
+// === Module 8107: ApplicationCommandStore ===
 
-// Module 8025 (ApplicationCommandStore)
+// Module 8107 (ApplicationCommandStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7766 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7849 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 7524 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 7608 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2096 */;
 
 require = fn;

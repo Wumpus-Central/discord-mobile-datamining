@@ -1,11 +1,11 @@
-// === Module 14914: useProfileFrameSections ===
+// === Module 14994: useProfileFrameSections ===
 
-// Module 14914 (useProfileFrameSections)
+// Module 14994 (useProfileFrameSections)
 import util from "util" /* 1115 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7799 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7882 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7787 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7802 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7870 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7885 */;
 
 require = fn;
 const useMemo = fn(19).useMemo;

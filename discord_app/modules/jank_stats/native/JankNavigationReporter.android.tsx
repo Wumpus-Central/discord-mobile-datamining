@@ -1,18 +1,18 @@
-// === Module 17827: JankNavigationReporter ===
+// === Module 17896: JankNavigationReporter ===
 
-// Module 17827 (JankNavigationReporter)
-import RootNavigationRef from "RootNavigationRef" /* 4615 */;
-import useChatLayout from "useChatLayout" /* 4617 */;
-import getJankScreenName from "getJankScreenName" /* 16355 */;
-import NativeJankStatsModuleDefault from "NativeJankStatsModule" /* 16359 */;
-import getJankSurfaceName from "getJankSurfaceName" /* 16360 */;
+// Module 17896 (JankNavigationReporter)
+import RootNavigationRef from "RootNavigationRef" /* 4685 */;
+import useChatLayout from "useChatLayout" /* 4687 */;
+import getJankScreenName from "getJankScreenName" /* 16408 */;
+import NativeJankStatsModuleDefault from "NativeJankStatsModule" /* 16412 */;
+import getJankSurfaceName from "getJankSurfaceName" /* 16413 */;
 import size from "module_2" /* 2 */;
 
 const getJankScreenNameDefault = getJankScreenName;
 
 class JankNavigationReporter {
   constructor() {
-    return Object.assign({ _isAttached: false, _routeKeyAtDispatch: "flex" });
+    return Object.assign({ _isAttached: false, _routeKeyAtDispatch: "r" });
   }
 }
 const prototype = JankNavigationReporter.prototype;
@@ -94,4 +94,4 @@ prototype["shouldSettleInJS"] = function shouldSettleInJS(focusedRoute) {
 };
 let result = size.fileFinishedImporting("modules/jank_stats/native/JankNavigationReporter.android.tsx");
 
-export default Object.assign({ _isAttached: false, _routeKeyAtDispatch: "flex" });
+export default Object.assign({ _isAttached: false, _routeKeyAtDispatch: "r" });

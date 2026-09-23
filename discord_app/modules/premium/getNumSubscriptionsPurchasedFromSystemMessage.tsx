@@ -1,6 +1,6 @@
-// === Module 8266: getNumSubscriptionsPurchasedFromSystemMessage ===
+// === Module 8348: getNumSubscriptionsPurchasedFromSystemMessage ===
 
-// Module 8266 (getNumSubscriptionsPurchasedFromSystemMessage)
+// Module 8348 (getNumSubscriptionsPurchasedFromSystemMessage)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/getNumSubscriptionsPurchasedFromSystemMessage.tsx");

@@ -1,15 +1,15 @@
-// === Module 7878: NotificationCenterItemsStore ===
+// === Module 7961: NotificationCenterItemsStore ===
 
-// Module 7878 (NotificationCenterItemsStore)
+// Module 7961 (NotificationCenterItemsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 4979 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7879 */;
-import NotificationCenterUtils from "NotificationCenterUtils" /* 7880 */;
-import ExperimentStore from "ExperimentStore" /* 4672 */;
-import MessageRecord from "MessageRecord" /* 4407 */;
-import RelationshipStore from "RelationshipStore" /* 4406 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5049 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7962 */;
+import NotificationCenterUtils from "NotificationCenterUtils" /* 7963 */;
+import ExperimentStore from "ExperimentStore" /* 4742 */;
+import MessageRecord from "MessageRecord" /* 4473 */;
+import RelationshipStore from "RelationshipStore" /* 4472 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -195,9 +195,9 @@ function handleRelationshipAddOrUpdate(relationship) {
   }
   tmp14 = type === RelationshipTypes.BLOCKED || userIgnored;
 }
-const isGuildEventEnded = fn(7771).isGuildEventEnded;
+const isGuildEventEnded = fn(7854).isGuildEventEnded;
 const RelationshipTypes = fn(1074).RelationshipTypes;
-let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: [], paginationHasMore: true, paginationCursor: "flexDirection", notifCenterActive: "M21.2785 2.70712C20.888 2.31659 20.2549 2.31659 19.8643 2.70711L2.70711 19.8643C2.31658 20.2549 2.31658 20.888 2.70711 21.2785L2.72146 21.2929C3.11199 21.6834 3.74515 21.6834 4.13567 21.2929L21.2929 4.13568C21.6834 3.74515 21.6834 3.11199 21.2929 2.72147L21.2785 2.70712Z", notifCenterTabFocused: null };
+let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: [], paginationHasMore: true, paginationCursor: "flexDirection", notifCenterActive: "H", notifCenterTabFocused: "HH" };
 const PersistedStore = initializeDefault.PersistedStore;
 class NotificationCenterItemsStore extends PersistedStore {
 }
@@ -369,7 +369,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flexDirection", notifCenterActive: "M21.2785 2.70712C20.888 2.31659 20.2549 2.31659 19.8643 2.70711L2.70711 19.8643C2.31658 20.2549 2.31658 20.888 2.70711 21.2785L2.72146 21.2929C3.11199 21.6834 3.74515 21.6834 4.13567 21.2929L21.2929 4.13568C21.6834 3.74515 21.6834 3.11199 21.2929 2.72147L21.2785 2.70712Z", notifCenterTabFocused: null };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flexDirection", notifCenterActive: "H", notifCenterTabFocused: "HH" };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {
@@ -495,7 +495,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flexDirection", notifCenterActive: "M21.2785 2.70712C20.888 2.31659 20.2549 2.31659 19.8643 2.70711L2.70711 19.8643C2.31658 20.2549 2.31658 20.888 2.70711 21.2785L2.72146 21.2929C3.11199 21.6834 3.74515 21.6834 4.13567 21.2929L21.2929 4.13568C21.6834 3.74515 21.6834 3.11199 21.2929 2.72147L21.2785 2.70712Z", notifCenterTabFocused: null };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flexDirection", notifCenterActive: "H", notifCenterTabFocused: "HH" };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {
@@ -551,7 +551,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       const user = UserStore.getUser(id);
       if (tmp6) {
         const items = [];
-        obj = id(7880);
+        obj = id(7963);
         items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingGameFriendRequestLocalItem(user, since, applicationId);
         obj.notifCenterLocalItems = items;
         const arraySpreadResult = HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0);
@@ -645,7 +645,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flexDirection", notifCenterActive: "M21.2785 2.70712C20.888 2.31659 20.2549 2.31659 19.8643 2.70711L2.70711 19.8643C2.31658 20.2549 2.31658 20.888 2.70711 21.2785L2.72146 21.2929C3.11199 21.6834 3.74515 21.6834 4.13567 21.2929L21.2929 4.13568C21.6834 3.74515 21.6834 3.11199 21.2929 2.72147L21.2785 2.70712Z", notifCenterTabFocused: null };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flexDirection", notifCenterActive: "H", notifCenterTabFocused: "HH" };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {

@@ -1,16 +1,16 @@
-// === Module 16004: CheckpointNavigationControls ===
+// === Module 16057: CheckpointNavigationControls ===
 
-// Module 16004 (CheckpointNavigationControls)
+// Module 16057 (CheckpointNavigationControls)
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import _modDef3032 from "module_3032" /* 3032 */;
-import CheckpointTextDefault from "CheckpointText" /* 15989 */;
-import CheckpointButtonDefault from "CheckpointButton" /* 16005 */;
+import _modDef3034 from "module_3034" /* 3034 */;
+import CheckpointTextDefault from "CheckpointText" /* 16042 */;
+import CheckpointButtonDefault from "CheckpointButton" /* 16058 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import CheckpointConstants from "CheckpointConstants" /* 4982 */;
+import CheckpointConstants from "CheckpointConstants" /* 5052 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4757 */;
+import createStyles from "createStyles" /* 4827 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -59,7 +59,7 @@ export default function CheckpointNavigationControls(onNext) {
             variant: "text-sm/medium",
             style: link.link,
             onPress() {
-              const obj = closure_1_1(4452);
+              const obj = closure_1_1(4518);
               return obj.openURL(closure_1_1(2108).getArticleURL(constants.CHECKPOINT));
             },
             accessibilityRole: "link",
@@ -67,7 +67,7 @@ export default function CheckpointNavigationControls(onNext) {
           }, arg1);
         }
     };
-    obj3.children = intl4.format(_modDef3032.hcNhyq, obj4);
+    obj3.children = intl4.format(_modDef3034.hcNhyq, obj4);
     items2[1] = closure_7(CheckpointTextDefault, obj3);
     obj.children = items2;
     let tmp10 = obj;

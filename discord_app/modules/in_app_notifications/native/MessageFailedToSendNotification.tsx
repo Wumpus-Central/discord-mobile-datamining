@@ -1,15 +1,15 @@
-// === Module 10442: MessageFailedToSendNotification ===
+// === Module 10521: MessageFailedToSendNotification ===
 
-// Module 10442 (MessageFailedToSendNotification)
+// Module 10521 (MessageFailedToSendNotification)
 import nativeDefault from "native" /* 576 */;
-import Client from "Client" /* 4687 */;
-import transitionToChannel from "transitionToChannel" /* 4768 */;
+import Client from "Client" /* 4757 */;
+import transitionToChannel from "transitionToChannel" /* 4838 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj = { iconContainer: null };
 let size = { width: 40, height: 40, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, display: "flex", justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.md };
 obj.iconContainer = size;
@@ -33,14 +33,14 @@ export default noop.memo(function MessageFailedToSendNotification(notification) 
   const obj2 = { icon: null, children: null, header: null, onPress: null, notification: null };
   const obj3 = { style: closure_6().iconContainer, children: null };
   const tmp = closure_6();
-  obj3.children = jsx(channelId(10443).RetryIcon, { size: "md", color: messageId(576).colors.ICON_SUBTLE });
+  obj3.children = jsx(channelId(10522).RetryIcon, { size: "md", color: messageId(576).colors.ICON_SUBTLE });
   obj2.icon = <View style={closure_6().iconContainer}>{null}</View>;
   const obj5 = { text: null };
   const intl2 = channelId(1115).intl;
   obj5.text = intl2.string(channelId(1115).t.xxRPOT);
-  obj2.children = jsx(channelId(10369).SystemMessageText, { text: null });
+  obj2.children = jsx(channelId(10448).SystemMessageText, { text: null });
   obj2.header = obj;
   obj2.onPress = callback;
   obj2.notification = notification;
-  return jsx(channelId(10433).NotificationPressable, { icon: null, children: null, header: null, onPress: null, notification: null });
+  return jsx(channelId(10512).NotificationPressable, { icon: null, children: null, header: null, onPress: null, notification: null });
 });

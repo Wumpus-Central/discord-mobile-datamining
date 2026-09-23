@@ -1,19 +1,19 @@
-// === Module 16987: VibegrationsDesignRemarkSheet ===
+// === Module 17044: VibegrationsDesignRemarkSheet ===
 
-// Module 16987 (VibegrationsDesignRemarkSheet)
+// Module 17044 (VibegrationsDesignRemarkSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4724 */;
-import VibegrationsDesignFeedback from "VibegrationsDesignFeedback" /* 16948 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4794 */;
+import VibegrationsDesignFeedback from "VibegrationsDesignFeedback" /* 17000 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const sendUserMessage = fn(13366).sendUserMessage;
+const sendUserMessage = fn(13448).sendUserMessage;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const VibegrationsDesignRemarkSheet = "VibegrationsDesignRemarkSheet";
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { content: { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, actions: null };
 let obj3 = { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj2.actions = { flexDirection: "row", gap: nativeDefault.space.PX_8 };

@@ -1,6 +1,6 @@
-// === Module 18092: ChangeVanityURLActionCreators ===
+// === Module 18161: ChangeVanityURLActionCreators ===
 
-// Module 18092 (ChangeVanityURLActionCreators)
+// Module 18161 (ChangeVanityURLActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;

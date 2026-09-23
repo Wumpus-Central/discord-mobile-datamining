@@ -1,16 +1,16 @@
-// === Module 8986: GameProfileStoreLinksActionSheet ===
+// === Module 9057: GameProfileStoreLinksActionSheet ===
 
-// Module 8986 (GameProfileStoreLinksActionSheet)
+// Module 9057 (GameProfileStoreLinksActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import LinkingDefault from "Linking" /* 4452 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4724 */;
-import Text_Text from "Text/Text" /* 4753 */;
-import components_Button_Button from "components/Button/Button" /* 5187 */;
-import BottomSheetModal from "BottomSheetModal" /* 6871 */;
-import ActionSheet from "ActionSheet" /* 7444 */;
-import useOpenExternalUrlFromGameProfileDefault from "useOpenExternalUrlFromGameProfile" /* 8959 */;
+import LinkingDefault from "Linking" /* 4518 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4794 */;
+import Text_Text from "Text/Text" /* 4823 */;
+import components_Button_Button from "components/Button/Button" /* 5271 */;
+import BottomSheetModal from "BottomSheetModal" /* 6955 */;
+import ActionSheet from "ActionSheet" /* 7528 */;
+import useOpenExternalUrlFromGameProfileDefault from "useOpenExternalUrlFromGameProfile" /* 9030 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { header: { gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24 }, headerText: { textAlign: "center" }, buttons: null };
 let obj3 = { gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24 };
 obj2.buttons = { gap: nativeDefault.space.PX_12 };

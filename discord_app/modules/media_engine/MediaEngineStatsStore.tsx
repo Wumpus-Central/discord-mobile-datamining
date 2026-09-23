@@ -1,11 +1,11 @@
-// === Module 4795: MediaEngineStatsStore ===
+// === Module 4865: MediaEngineStatsStore ===
 
-// Module 4795 (MediaEngineStatsStore)
+// Module 4865 (MediaEngineStatsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4809 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4879 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4796 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4866 */;
 
 require = fn;
 function updateAveragedStatsHelper(minVersion, arr5, arg2, arr, arr2) {

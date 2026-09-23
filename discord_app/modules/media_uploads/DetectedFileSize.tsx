@@ -1,6 +1,6 @@
-// === Module 5398: DetectedFileSize ===
+// === Module 5482: DetectedFileSize ===
 
-// Module 5398 (DetectedFileSize)
+// Module 5482 (DetectedFileSize)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_1 = async function _getDetectedFileSize(arg0) {
