@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import DraftStore from "../../../stores/DraftStore.tsx";
 
 const require = fn;
-const DraftType = fn(5106).DraftType;
+const DraftType = fn(5190).DraftType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/native/ForwardMessageFooter.tsx");

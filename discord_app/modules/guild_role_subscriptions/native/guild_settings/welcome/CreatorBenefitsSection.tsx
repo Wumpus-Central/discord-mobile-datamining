@@ -5,14 +5,14 @@ import shared from "../../../../../design/shared.tsx";
 import useThemeDefault from "../../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef18170 from "../../../../../../_runtime/metro/18170__.js";
-import _modDef18171 from "../../../../../../_runtime/metro/18171__.js";
-import _modDef18172 from "../../../../../../_runtime/metro/18172__.js";
-import _modDef18173 from "../../../../../../_runtime/metro/18173__.js";
-import _modDef18174 from "../../../../../../_runtime/metro/18174__.js";
-import _modDef18175 from "../../../../../../_runtime/metro/18175__.js";
-import _modDef18176 from "../../../../../../_runtime/metro/18176__.js";
-import _modDef18177 from "../../../../../../_runtime/metro/18177__.js";
+import _modDef18239 from "../../../../../../_runtime/metro/18239__.js";
+import _modDef18240 from "../../../../../../_runtime/metro/18240__.js";
+import _modDef18241 from "../../../../../../_runtime/metro/18241__.js";
+import _modDef18242 from "../../../../../../_runtime/metro/18242__.js";
+import _modDef18243 from "../../../../../../_runtime/metro/18243__.js";
+import _modDef18244 from "../../../../../../_runtime/metro/18244__.js";
+import _modDef18245 from "../../../../../../_runtime/metro/18245__.js";
+import _modDef18246 from "../../../../../../_runtime/metro/18246__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -46,7 +46,7 @@ function EarningPreview() {
   const items3 = [timestampProducer(View, obj5)];
   const obj7 = { style: tmp4.earningMetricsAvatar, source: null };
   const tmp7Result2 = shared;
-  obj7.source = _modDef18170;
+  obj7.source = _modDef18239;
   items3[1] = hasOwnProperty(FastImageDefault, obj7);
   obj3.children = items3;
   obj2.children = timestampProducer(View, obj3);
@@ -65,15 +65,15 @@ function ConsistentEarningBenefit() {
   obj3.style = items1;
   const tmp3 = useThemeDefault();
   if (obj4.isThemeDark(tmp3)) {
-    let tmpResult = _modDef18171;
+    let tmpResult = _modDef18240;
   } else {
-    tmpResult = _modDef18172;
+    tmpResult = _modDef18241;
   }
   const items2 = [hasOwnProperty(BenefitAvatar, { avatarSource: tmpResult }), ,];
   obj4 = shared;
-  items2[1] = hasOwnProperty(BenefitAvatar, { avatarSource: _modDef18173 });
-  const obj5 = { avatarSource: _modDef18173 };
-  items2[2] = hasOwnProperty(BenefitAvatar, { avatarSource: _modDef18174 });
+  items2[1] = hasOwnProperty(BenefitAvatar, { avatarSource: _modDef18242 });
+  const obj5 = { avatarSource: _modDef18242 };
+  items2[2] = hasOwnProperty(BenefitAvatar, { avatarSource: _modDef18243 });
   obj3.children = items2;
   items[2] = timestampProducer(View, obj3);
   obj.children = items;
@@ -86,10 +86,10 @@ function FollowerAwardBenefit() {
   const intl = util.intl;
   obj2.children = intl.string(util.t.qsKRUQ);
   const items = [hasOwnProperty(Text_Text.Text, obj2), ,];
-  const obj3 = { style: tmp.socialIllo, source: _modDef18175 };
+  const obj3 = { style: tmp.socialIllo, source: _modDef18244 };
   items[1] = hasOwnProperty(FastImageDefault, obj3);
   const obj4 = { style: tmp.lanyardIllo, source: null };
-  obj4.source = _modDef18176;
+  obj4.source = _modDef18245;
   items[2] = hasOwnProperty(FastImageDefault, obj4);
   obj.children = items;
   return timestampProducer(View, obj);
@@ -117,7 +117,7 @@ function RevenueShareBenefit() {
   obj4.children = intl.string(util.t.AewsXD);
   items2[1] = hasOwnProperty(Text_Text.Text, obj4);
   const obj5 = { style: tmp4.revenueShareIllo, source: null };
-  obj5.source = _modDef18177;
+  obj5.source = _modDef18246;
   items2[2] = hasOwnProperty(FastImageDefault, obj5);
   obj.children = items2;
   return timestampProducer(View, obj);
@@ -131,10 +131,10 @@ function BenefitAvatar(avatarSource) {
   return hasOwnProperty(View, obj);
 }
 const View = fn(17).View;
-let closure_4 = fn(15486).CREATOR_REVENUE_SHARE_PERCENTAGE;
+let closure_4 = fn(15540).CREATOR_REVENUE_SHARE_PERCENTAGE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = {
   horizontalContainer: { flex: 1, flexDirection: "row" },
   benefitAvatarContainer: {

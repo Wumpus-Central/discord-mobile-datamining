@@ -63,8 +63,8 @@ function getShelfBadgeTypeIfActive(application) {
 }
 let closure_3 = ["fakeAppIconURL"];
 const ApplicationFlags = fn(1074).ApplicationFlags;
-const BuiltInSectionId = fn(5211).BuiltInSectionId;
-const MessageSendLocation = fn(4750).MessageSendLocation;
+const BuiltInSectionId = fn(5295).BuiltInSectionId;
+const MessageSendLocation = fn(4820).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherUtils.tsx");
 

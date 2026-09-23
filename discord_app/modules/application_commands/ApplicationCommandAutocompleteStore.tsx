@@ -67,7 +67,7 @@ prototype["getLastErrored"] = function getLastErrored(id) {
       optionNameToNonce: null,
       optionNameToLastQuery: null,
       lastErrored: false,
-      lastResponseNonce: "padding",
+      lastResponseNonce: "category",
     };
     const _Map = Map;
     map = new Map();
@@ -100,7 +100,7 @@ prototype["getAutocompleteChoices"] = function getAutocompleteChoices(id, name, 
       optionNameToNonce: null,
       optionNameToLastQuery: null,
       lastErrored: false,
-      lastResponseNonce: "padding",
+      lastResponseNonce: "category",
     };
     const _Map = Map;
     map = new Map();
@@ -139,7 +139,7 @@ prototype["getAutocompleteLastChoices"] = function getAutocompleteLastChoices(id
       optionNameToNonce: null,
       optionNameToLastQuery: null,
       lastErrored: false,
-      lastResponseNonce: "padding",
+      lastResponseNonce: "category",
     };
     const _Map = Map;
     map = new Map();
@@ -172,7 +172,7 @@ prototype["getLastResponseNonce"] = function getLastResponseNonce(id) {
       optionNameToNonce: null,
       optionNameToLastQuery: null,
       lastErrored: false,
-      lastResponseNonce: "padding",
+      lastResponseNonce: "category",
     };
     const _Map = Map;
     map = new Map();
@@ -211,7 +211,7 @@ const applicationCommandAutocompleteStore = new ApplicationCommandAutocompleteSt
         optionNameToNonce: null,
         optionNameToLastQuery: null,
         lastErrored: false,
-        lastResponseNonce: "padding",
+        lastResponseNonce: "category",
       };
       const _Map = Map;
       map = new Map();
@@ -289,7 +289,7 @@ const applicationCommandAutocompleteStore = new ApplicationCommandAutocompleteSt
           optionNameToNonce: null,
           optionNameToLastQuery: null,
           lastErrored: false,
-          lastResponseNonce: "padding",
+          lastResponseNonce: "category",
         };
         const _Map = Map;
         map = new Map();
@@ -412,7 +412,7 @@ const applicationCommandAutocompleteStore = new ApplicationCommandAutocompleteSt
             optionNameToNonce: null,
             optionNameToLastQuery: null,
             lastErrored: false,
-            lastResponseNonce: "padding",
+            lastResponseNonce: "category",
           };
           const _Map = Map;
           map = new Map();

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05199_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05283_LinearGradient.js";
 import SKUUtils from "../../../../utils/SKUUtils.tsx";
 import useGameProfileHeroBackgroundURLDefault from "../../hooks/useGameProfileHeroBackgroundURL.tsx";
 import GameProfileRankPillDefault from "GameProfileRankPill.tsx";
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST },
   artHero: null,
@@ -40,7 +40,7 @@ obj2.headerContent = {
   gap: nativeDefault.space.PX_12,
   flexDirection: "row",
   alignItems: "flex-end",
-  maxWidth: fn(8990).MOBILE_GAME_PROFILE_MAX_WIDTH,
+  maxWidth: fn(9061).MOBILE_GAME_PROFILE_MAX_WIDTH,
   alignSelf: "center",
   width: "100%",
 };
@@ -50,7 +50,7 @@ let obj4 = {
   gap: nativeDefault.space.PX_12,
   flexDirection: "row",
   alignItems: "flex-end",
-  maxWidth: fn(8990).MOBILE_GAME_PROFILE_MAX_WIDTH,
+  maxWidth: fn(9061).MOBILE_GAME_PROFILE_MAX_WIDTH,
   alignSelf: "center",
   width: "100%",
 };

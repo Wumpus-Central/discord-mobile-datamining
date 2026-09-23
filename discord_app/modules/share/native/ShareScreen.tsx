@@ -30,11 +30,11 @@ const ChannelRecord = fn(2046);
 ({ ChannelRecordBase: closure_7, isGuildChannelType: closure_8 } = ChannelRecord);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = Constants);
-const MAX_DESTINATION_COUNT = fn(11939).MAX_DESTINATION_COUNT;
-const UserRowModes = fn(11128).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(12015).MAX_DESTINATION_COUNT;
+const UserRowModes = fn(11204).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   headerLeftContainer: null,

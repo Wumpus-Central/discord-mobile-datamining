@@ -16,6 +16,7 @@ const prototype = function CollectiblesMarketingCoachmarkRecord(arg0) {
     badgeText: tmp.badgeText,
     badgeCountdownEndsAt: tmp.badgeCountdownEndsAt,
     buttonLabel: tmp.buttonLabel,
+    showHoverGradient: tmp.showHoverGradient,
   } = arg0);
   return obj;
 }.prototype;
@@ -35,7 +36,7 @@ prototype["fromServer"] = function fromServer(badge_countdown_ends_at) {
     date = new Date(badge_countdown_ends_at.badge_countdown_ends_at);
   }
   obj.badgeCountdownEndsAt = date;
-  obj.buttonLabel = badge_countdown_ends_at.button_label;
+  ({ button_label: obj.buttonLabel, show_hover_gradient: obj.showHoverGradient } = badge_countdown_ends_at);
   if (typeof prototype === "function") {
     const obj2 = Object.create(prototype.prototype);
     obj2.type = CollectiblesMarketingType.CollectiblesMarketingType.COACHMARK;
@@ -50,6 +51,7 @@ prototype["fromServer"] = function fromServer(badge_countdown_ends_at) {
       badgeText: tmp6.badgeText,
       badgeCountdownEndsAt: tmp6.badgeCountdownEndsAt,
       buttonLabel: tmp6.buttonLabel,
+      showHoverGradient: tmp6.showHoverGradient,
     } = obj);
     return obj2;
   } else {

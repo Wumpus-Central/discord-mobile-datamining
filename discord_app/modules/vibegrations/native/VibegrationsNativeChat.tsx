@@ -2,14 +2,14 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef672 from "../../../../_runtime/metro/00672__.js";
 import util from "../../../intl/index.native.tsx";
-import _modDef3678 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3712 from "../intl/VibegrationsUntranslated.messages.js";
 import MarkupUtilsDefault from "../../markup/MarkupUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05199_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05283_LinearGradient.js";
 import Card from "../../../design/components/Card/native/Card.native.tsx";
-import _modDef5883 from "../../../../_runtime/metro/05883__.js";
+import _modDef5967 from "../../../../_runtime/metro/05967__.js";
 import VibegrationsDesignFeedback from "../lib/VibegrationsDesignFeedback.tsx";
 import VibegrationsNativeStatusLineDefault from "VibegrationsNativeStatusLine.tsx";
 import VibegrationsMessageActionSheet from "VibegrationsMessageActionSheet.tsx";
@@ -37,10 +37,10 @@ function PlanDesign(arg0) {
     return null;
   } else {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef3678.FW8UcU);
+    const stringResult = intl.string(_modDef3712.FW8UcU);
     const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: null };
     const intl2 = util.intl;
-    obj2.children = intl2.string(_modDef3678["9W8SbY"]);
+    obj2.children = intl2.string(_modDef3712["9W8SbY"]);
     items = [closure_1_17(Text_Text.Text, obj2)];
     if (null == src) {
       const obj3 = { style: tmp.designPlaceholder, children: null };
@@ -85,11 +85,11 @@ function ProposalCard(proposal) {
   const obj = { style: closure_24().surface, children: null };
   const obj2 = { variant: "heading-md/bold", color: "text-default", children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef3678["60htw+"]);
+  obj2.children = intl.string(_modDef3712["60htw+"]);
   items = [closure_1_17(Text_Text.Text, obj2), , , , , ,];
   if ("" === trimmed) {
     const intl2 = util.intl;
-    let stringResult = intl2.string(_modDef3678.IHCafX);
+    let stringResult = intl2.string(_modDef3712.IHCafX);
   } else {
     stringResult = MarkupUtilsDefault.parse(trimmed, true, VibegrationsNativeMarkdown.VIBEGRATIONS_MARKUP_OPTIONS);
     const tmp8Result = MarkupUtilsDefault;
@@ -106,7 +106,7 @@ function ProposalCard(proposal) {
     const obj4 = { direction: "vertical", spacing: 4, children: null };
     const obj5 = { variant: "text-sm/semibold", color: "text-muted", children: null };
     const intl3 = util.intl;
-    obj5.children = intl3.string(_modDef3678.KLyB8Y);
+    obj5.children = intl3.string(_modDef3712.KLyB8Y);
     const items1 = [closure_1_17(Text_Text.Text, obj5)];
     const changes = proposal.changes;
     items1[1] = changes.map((item, index) =>
@@ -125,7 +125,7 @@ function ProposalCard(proposal) {
     const obj6 = { direction: "vertical", spacing: 4, children: null };
     const obj7 = { variant: "text-sm/semibold", color: "text-muted", children: null };
     const intl4 = util.intl;
-    obj7.children = intl4.string(_modDef3678.ieqTtP);
+    obj7.children = intl4.string(_modDef3712.ieqTtP);
     const items2 = [closure_1_17(Text_Text.Text, obj7)];
     const obj8 = { variant: "text-sm/normal", color: "text-default", children: bot_permissions.join(", ") };
     items2[1] = closure_1_17(Text_Text.Text, obj8);
@@ -138,7 +138,7 @@ function ProposalCard(proposal) {
     const obj9 = { direction: "vertical", spacing: 4, children: null };
     const obj10 = { variant: "text-sm/semibold", color: "text-muted", children: null };
     const intl5 = util.intl;
-    obj10.children = intl5.string(_modDef3678.Cn9qix);
+    obj10.children = intl5.string(_modDef3712.Cn9qix);
     const items3 = [closure_1_17(Text_Text.Text, obj10)];
     const obj11 = { variant: "text-sm/normal", color: "text-default", children: privileged_intents.join(", ") };
     items3[1] = closure_1_17(Text_Text.Text, obj11);
@@ -150,7 +150,7 @@ function ProposalCard(proposal) {
   if (actionable) {
     const obj12 = { text: null, variant: "primary", onPress: null };
     const intl6 = util.intl;
-    obj12.text = intl6.string(_modDef3678.GYoWRk);
+    obj12.text = intl6.string(_modDef3712.GYoWRk);
     obj12.onPress = onApprove;
     tmp3Result2 = closure_1_17(components_Button_Button.Button, obj12);
   }
@@ -163,7 +163,7 @@ function IdeaCards(arg0) {
   let obj = { style: closure_24().ideaCards, children: null };
   const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: null };
   let intl = util.intl;
-  obj2.children = intl.string(_modDef3678.DAvYsi);
+  obj2.children = intl.string(_modDef3712.DAvYsi);
   items = [
     closure_17(Text_Text.Text, obj2),
     ideas.map((title) => {
@@ -176,7 +176,7 @@ function IdeaCards(arg0) {
         children: null,
       };
       const intl = util.intl;
-      obj.accessibilityLabel = intl.formatToPlainString(_modDef3678.pztRGi, { title: title.title });
+      obj.accessibilityLabel = intl.formatToPlainString(_modDef3712.pztRGi, { title: title.title });
       items = [
         closure_1_17(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", children: title.title }),
       ];
@@ -219,17 +219,17 @@ function AttachmentPills(projectId) {
         };
         const intl = projectId(1115).intl;
         const obj2 = { name: id.name };
-        obj.accessibilityLabel = intl.formatToPlainString(closure_1(3678).QUFLUq, obj2);
+        obj.accessibilityLabel = intl.formatToPlainString(closure_1(3712).QUFLUq, obj2);
         const obj3 = { variant: "text-xs/medium", color: "text-default", children: id.name };
-        obj.children = closure_1_17(projectId(4753).Text, obj3);
-        let tmp12 = closure_1_17(projectId(5826).Card, obj, id.id);
+        obj.children = closure_1_17(projectId(4823).Text, obj3);
+        let tmp12 = closure_1_17(projectId(5910).Card, obj, id.id);
       } else {
         const obj4 = { style: closure_1.attachmentPill, children: null };
         const obj5 = { variant: "text-xs/medium", color: "text-muted", children: null };
         const intl2 = projectId(1115).intl;
         const obj6 = { name: id.name };
-        obj5.children = intl2.formatToPlainString(closure_1(3678).OBr7WW, obj6);
-        obj4.children = closure_1_17(projectId(4753).Text, obj5);
+        obj5.children = intl2.formatToPlainString(closure_1(3712).OBr7WW, obj6);
+        obj4.children = closure_1_17(projectId(4823).Text, obj5);
         const _HermesInternal = HermesInternal;
         tmp12 = closure_1_17(closure_1_8, obj4, "" + id.name + "-" + index);
       }
@@ -244,12 +244,12 @@ function IdeasOffer(onAsk) {
   const obj2 = { style: tmp.ideasOfferHint, children: null };
   const obj3 = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl = util.intl;
-  obj3.children = intl.string(_modDef3678.tG5PBo);
+  obj3.children = intl.string(_modDef3712.tG5PBo);
   obj2.children = closure_1_17(Text_Text.Text, obj3);
   items = [closure_1_17(React6, obj2)];
   const obj4 = { variant: "secondary", size: "sm", disabled: null == onAsk, onPress: onAsk, text: null };
   const intl2 = util.intl;
-  obj4.text = intl2.string(_modDef3678.cwTe5o);
+  obj4.text = intl2.string(_modDef3712.cwTe5o);
   items[1] = closure_1_17(components_Button_Button.Button, obj4);
   obj.children = items;
   return collapsedCategories(React6, obj);
@@ -329,7 +329,7 @@ function TurnStatusLine(epoch) {
   [tmp3, c2] = noop.useState(false);
   const callback = noop.useCallback(() => _undefined((arg0) => !arg0), []);
   const tmp2 = _slicedToArray(noop.useState(false), 2);
-  const currentStepResult = turnActive(17046).currentStep(tree.steps);
+  const currentStepResult = turnActive(17103).currentStep(tree.steps);
   _slicedToArray = currentStepResult;
   let tmp8;
   if (!turnActive) {
@@ -347,14 +347,14 @@ function TurnStatusLine(epoch) {
     groupLabel = found.task.groupLabel;
   }
   if (null != tmp8) {
-    groupLabel = turnActive(17047).describeTurnDuration(tmp8);
-    const tmp5Result = turnActive(17047);
+    groupLabel = turnActive(17104).describeTurnDuration(tmp8);
+    const tmp5Result = turnActive(17104);
   } else if (null != currentStepResult) {
-    groupLabel = turnActive(17046).describeNode(currentStepResult);
-    const tmp5Result2 = turnActive(17046);
+    groupLabel = turnActive(17103).describeNode(currentStepResult);
+    const tmp5Result2 = turnActive(17103);
   } else if (groupLabel == null) {
     const intl = turnActive(1115).intl;
-    groupLabel = intl.string(epoch(3678).nv6pUM);
+    groupLabel = intl.string(epoch(3712).nv6pUM);
   }
   let someResult = tree.steps.length > 1;
   if (!someResult) {
@@ -371,12 +371,12 @@ function TurnStatusLine(epoch) {
     onToggle: null,
   };
   let tmp19;
-  let obj = turnActive(17046);
+  let obj = turnActive(17103);
   if (someResult) {
     tmp19 = callback;
   }
   obj2.onToggle = tmp19;
-  const children = [closure_17(epoch(17032), obj2)];
+  const children = [closure_17(epoch(17089), obj2)];
   let tmp17Result = null;
   if (tmp3) {
     tmp17Result = null;
@@ -412,23 +412,23 @@ function LaneStatusLine(arg0) {
   }
   let currentStepResult;
   if (turnActive) {
-    currentStepResult = mark(17046).currentStep(lane.steps);
-    const obj = mark(17046);
+    currentStepResult = mark(17103).currentStep(lane.steps);
+    const obj = mark(17103);
   }
   _slicedToArray = currentStepResult;
   const tmp9 = lane.task.detail.length > 0 || lane.steps.length > 0;
   if ("running" === lane.task.status) {
     if (null != currentStepResult) {
-      let describeNodeResult = mark(17046).describeNode(currentStepResult);
-      const obj4 = mark(17046);
+      let describeNodeResult = mark(17103).describeNode(currentStepResult);
+      const obj4 = mark(17103);
     } else {
-      describeNodeResult = mark(17048).taskTitle(lane.task);
-      const obj3 = mark(17048);
+      describeNodeResult = mark(17105).taskTitle(lane.task);
+      const obj3 = mark(17105);
     }
   } else {
-    const obj2 = mark(17048);
+    const obj2 = mark(17105);
     const obj5 = {
-      line: mark(17048).describeTaskOutcome(lane.task),
+      line: mark(17105).describeTaskOutcome(lane.task),
       live: turnActive,
       settled: null,
       failed: null,
@@ -440,7 +440,7 @@ function LaneStatusLine(arg0) {
       onToggle: null,
     };
     let tmp26 = !turnActive;
-    const describeTaskOutcomeResult = mark(17048).describeTaskOutcome(lane.task);
+    const describeTaskOutcomeResult = mark(17105).describeTaskOutcome(lane.task);
     if (!turnActive) {
       tmp26 = "failed" !== lane.task.status;
     }
@@ -455,7 +455,7 @@ function LaneStatusLine(arg0) {
       tmp27 = callback;
     }
     obj5.onToggle = tmp27;
-    items = [closure_17(epoch(17032), obj5)];
+    items = [closure_17(epoch(17089), obj5)];
     let tmp21Result = null;
     if (tmp3) {
       tmp21Result = null;
@@ -498,7 +498,7 @@ function ActivityBox(arg0) {
   length = tree.tasks.length;
   const tmp = closure_24();
   const tasks = tree.tasks;
-  dependencyMap = turnActive(17049).subagentIllocons(tasks.map((taskId) => taskId.taskId));
+  dependencyMap = turnActive(17106).subagentIllocons(tasks.map((taskId) => taskId.taskId));
   let obj2 = { style: tmp.activityBox, children: null };
   items = [closure_17(TurnStatusLine, { tree, turnActive, epoch: length })];
   const tasks1 = tree.tasks;
@@ -540,7 +540,7 @@ function TranscriptFade(children) {
     obj3.children = items;
     obj2.maskElement = collapsedCategories(React6, obj3);
     obj2.children = children;
-    tmp3 = closure_1_17(_modDef5883, obj2);
+    tmp3 = closure_1_17(_modDef5967, obj2);
   }
   return tmp3;
 }
@@ -551,8 +551,8 @@ get_ActivityIndicator = fn(17);
   Pressable: closure_7,
   View: closure_8,
 } = get_ActivityIndicator);
-const turnSettled = fn(13367).turnSettled;
-let VibegrationsConnectionStore = fn(13366);
+const turnSettled = fn(13449).turnSettled;
+let VibegrationsConnectionStore = fn(13448);
 ({
   ensureConnection: closure_12,
   getAttachmentUrl: map1,
@@ -563,7 +563,7 @@ let VibegrationsConnectionStore = VibegrationsConnectionStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-let diff = fn(17032).MESSAGE_CONTENT_INSET - fn(17032).MESSAGE_EDGE_INSET;
+let diff = fn(17089).MESSAGE_CONTENT_INSET - fn(17089).MESSAGE_EDGE_INSET;
 const BLACK = nativeDefault.unsafe_rawColors.BLACK;
 let items = [BLACK, ,];
 let obj2 = _modDef672(BLACK);
@@ -572,10 +572,11 @@ items[2] = "transparent";
 const locations = [0, 0.4, 1];
 const start = { x: 0, y: 0 };
 const end = { x: 0, y: 1 };
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj = {
   container: { flex: 1 },
   transcript: { flex: 1 },
+  transcriptDimmed: { opacity: 0.4 },
   maskSolid: { flex: 1, backgroundColor: BLACK },
   maskFade: { height: 52 },
   transcriptArea: { flex: 1, position: "relative" },
@@ -608,27 +609,27 @@ obj.bottomStack = { position: "absolute", left: 0, right: 0, bottom: 0 };
 let obj3 = { paddingTop: nativeDefault.space.PX_8 };
 obj.row = {
   position: "relative",
-  paddingLeft: fn(17032).MESSAGE_CONTENT_INSET,
-  paddingRight: fn(17032).MESSAGE_EDGE_INSET,
+  paddingLeft: fn(17089).MESSAGE_CONTENT_INSET,
+  paddingRight: fn(17089).MESSAGE_EDGE_INSET,
   paddingVertical: 2,
   gap: PX_8,
 };
 obj.rowGroupStart = { marginTop: nativeDefault.space.PX_12 };
-const rect = { position: "absolute", left: fn(17032).MESSAGE_EDGE_INSET, top: 2 };
+const rect = { position: "absolute", left: fn(17089).MESSAGE_EDGE_INSET, top: 2 };
 obj.avatar = rect;
 obj.spoken = { position: "relative", gap: PX_8 };
 obj.spokenAfterWork = { marginTop: PX_8 };
-const rect1 = { left: fn(17032).MESSAGE_EDGE_INSET - fn(17032).MESSAGE_CONTENT_INSET, top: 0 };
+const rect1 = { left: fn(17089).MESSAGE_EDGE_INSET - fn(17089).MESSAGE_CONTENT_INSET, top: 0 };
 obj.avatarSpoken = rect1;
 let obj5 = {
   position: "relative",
-  paddingLeft: fn(17032).MESSAGE_CONTENT_INSET,
-  paddingRight: fn(17032).MESSAGE_EDGE_INSET,
+  paddingLeft: fn(17089).MESSAGE_CONTENT_INSET,
+  paddingRight: fn(17089).MESSAGE_EDGE_INSET,
   paddingVertical: 2,
   gap: PX_8,
 };
-obj.avatarSpokenReplying = { top: fn(17034).REPLY_PREVIEW_HEIGHT + PX_8 };
-let obj6 = { top: fn(17034).REPLY_PREVIEW_HEIGHT + PX_8 };
+obj.avatarSpokenReplying = { top: fn(17091).REPLY_PREVIEW_HEIGHT + PX_8 };
+let obj6 = { top: fn(17091).REPLY_PREVIEW_HEIGHT + PX_8 };
 obj.header = { marginBottom: -nativeDefault.space.PX_4 };
 let obj7 = { marginBottom: -nativeDefault.space.PX_4 };
 obj.surface = {
@@ -1158,6 +1159,7 @@ export default function VibegrationsNativeChat(projectId) {
   let callback2;
   closure_23 = undefined;
   let onJumpToReplied;
+  c25 = undefined;
   let tmp = onJumpToReplied();
   items = [state];
   const stateFromStores = projectId(stateFromStores1[39]).useStateFromStores(
@@ -1311,7 +1313,7 @@ export default function VibegrationsNativeChat(projectId) {
   const items20 = [projectId];
   onApprove = obj2.useCallback(() => {
     const intl = util.intl;
-    __initData(projectId, intl.string(_modDef3678.Jj8Ftb));
+    __initData(projectId, intl.string(_modDef3712.Jj8Ftb));
   }, items20);
   const items21 = [projectId];
   onPickIdea = obj2.useCallback((implementation_prompt) => {
@@ -1320,7 +1322,7 @@ export default function VibegrationsNativeChat(projectId) {
   const items22 = [projectId];
   closure_8 = obj2.useCallback(() => {
     const intl = util.intl;
-    __initData(projectId, intl.string(_modDef3678["3sTTBu"]));
+    __initData(projectId, intl.string(_modDef3712["3sTTBu"]));
   }, items22);
   const items23 = [projectId];
   state = obj2.useCallback((arg0) => {
@@ -1394,7 +1396,7 @@ export default function VibegrationsNativeChat(projectId) {
       return tmp;
     });
   }, []);
-  const tmp12Result3 = _slicedToArray(render_id.useState(64), 2);
+  const tmp12Result4 = _slicedToArray(render_id.useState(64), 2);
   bound = tmp34;
   if (!tmp2Result10.isIOS()) {
     let _Math = Math;
@@ -1581,7 +1583,6 @@ export default function VibegrationsNativeChat(projectId) {
     }
   }, items34);
   const items35 = [bound, memo];
-  const items36 = [projectId];
   const callback6 = obj2.useCallback(() => {
     if (null != memo) {
       const current = ref.current;
@@ -1591,24 +1592,40 @@ export default function VibegrationsNativeChat(projectId) {
       }
     }
   }, items35);
+  const tmp12Result5 = _slicedToArray(render_id.useState(false), 2);
+  [tmp57, c25] = render_id.useState(false);
+  const items36 = [projectId];
+  const effect2 = obj2.useEffect(() => {
+    if (obj.shouldShowVibegrationsConjureTip(timeout)) {
+      const _setTimeout = setTimeout;
+      timeout = setTimeout(() => {
+        const result = projectId(stateFromStores1[44]).markVibegrationsConjureTipShown();
+        _undefined4(true);
+      }, 0);
+      return () => clearTimeout(closure_0);
+    }
+    obj = projectId(stateFromStores1[44]);
+  }, items36);
   const items37 = [projectId];
-  const callback7 = obj2.useCallback((arg0, arg1) => {
+  const callback7 = obj2.useCallback(() => _undefined4(false), []);
+  const items38 = [projectId];
+  const callback8 = obj2.useCallback((arg0, arg1) => {
     closure_18.current = true;
     __initData(projectId, arg0, arg1);
-  }, items36);
-  let connectionLabelResult = null;
-  const callback8 = obj2.useCallback(() => {
-    closure_2_14(projectId);
   }, items37);
+  let connectionLabelResult = null;
+  const callback9 = obj2.useCallback(() => {
+    closure_2_14(projectId);
+  }, items38);
   if ("open" !== stateFromStores6) {
-    connectionLabelResult = tmp2(tmp3[44]).connectionLabel(stateFromStores6);
-    const tmp2Result11 = tmp2(tmp3[44]);
+    connectionLabelResult = tmp2(tmp3[45]).connectionLabel(stateFromStores6);
+    const tmp2Result11 = tmp2(tmp3[45]);
   }
-  const tmp12Result4 = _slicedToArray(render_id.useState(false), 2);
+  const tmp12Result6 = _slicedToArray(render_id.useState(false), 2);
   const obj8 = { style: tmp.container, children: null };
-  const vibegrationsControlActive = projectId(stateFromStores1[45]).useVibegrationsControlActive(projectId);
-  const items38 = [
-    ref(stateFromStores(stateFromStores1[46]), {
+  const vibegrationsControlActive = projectId(stateFromStores1[46]).useVibegrationsControlActive(projectId);
+  const items39 = [
+    ref(stateFromStores(stateFromStores1[47]), {
       thinking: stateFromStores2,
       bleedBottom: stateFromStores(stateFromStores1[40])().bottom,
     }),
@@ -1625,6 +1642,7 @@ export default function VibegrationsNativeChat(projectId) {
     onScroll: null,
     onContentSizeChange: null,
     scrollEventThrottle: 16,
+    pointerEvents: null,
     style: null,
     contentContainerStyle: null,
     data: null,
@@ -1633,27 +1651,37 @@ export default function VibegrationsNativeChat(projectId) {
     ListEmptyComponent: null,
     renderItem: null,
   };
-  const tmp2Result12 = projectId(stateFromStores1[45]);
+  const tmp2Result12 = projectId(stateFromStores1[46]);
   const tmp2Result13 = projectId(stateFromStores1[26]);
   obj12.removeClippedSubviews = projectId(stateFromStores1[26]).isIOS() && undefined;
   obj12.viewabilityConfig = memo3;
   obj12.onViewableItemsChanged = callback5;
   obj12.onScroll = callback3;
   obj12.onContentSizeChange = callback4;
-  const items39 = [tmp.transcript];
-  const tmp64 = projectId(stateFromStores1[26]).isIOS() && undefined;
+  let str2 = "auto";
+  if (tmp57) {
+    str2 = "none";
+  }
+  obj12.pointerEvents = str2;
+  const items40 = [tmp.transcript, ,];
+  let transcriptDimmed = tmp57;
+  if (tmp57) {
+    transcriptDimmed = tmp.transcriptDimmed;
+  }
+  items40[1] = transcriptDimmed;
+  const tmp68 = projectId(stateFromStores1[26]).isIOS() && undefined;
   const isIOSResult = projectId(stateFromStores1[26]).isIOS();
-  let tmp66 = !isIOSResult;
+  let tmp70 = !isIOSResult;
   if (!isIOSResult) {
     const obj13 = { marginBottom: tmp34 - bound };
-    tmp66 = obj13;
+    tmp70 = obj13;
   }
-  items39[1] = tmp66;
-  obj12.style = items39;
-  const items40 = [tmp.transcriptContent];
+  items40[2] = tmp70;
+  obj12.style = items40;
+  const items41 = [tmp.transcriptContent];
   const tmp2Result14 = projectId(stateFromStores1[26]);
-  items40[1] = { paddingBottom: bound + stateFromStores(stateFromStores1[7]).space.PX_8 };
-  obj12.contentContainerStyle = items40;
+  items41[1] = { paddingBottom: bound + stateFromStores(stateFromStores1[7]).space.PX_8 };
+  obj12.contentContainerStyle = items41;
   obj12.data = stateFromStores1;
   obj12.maintainVisibleContentPosition = { startRenderingFromBottom: true, autoscrollToBottomThreshold: 0.2 };
   obj12.keyExtractor = function keyExtractor(render_id) {
@@ -1664,14 +1692,14 @@ export default function VibegrationsNativeChat(projectId) {
     const obj16 = { variant: "text-sm/normal", color: "text-muted", children: null };
     const intl4 = tmp2(tmp3[13]).intl;
     obj16.children = intl4.string(tmp5(tmp3[14]).jTuX7C);
-    let tmp62Result = tmp62(tmp2(tmp3[16]).Text, obj16);
+    let tmp66Result = tmp66(tmp2(tmp3[16]).Text, obj16);
   } else {
     const obj17 = { size: "small", accessibilityLabel: null };
     const intl3 = tmp2(tmp3[13]).intl;
     obj17.accessibilityLabel = intl3.string(tmp2(tmp3[13]).t.ZTNur7);
-    tmp62Result = tmp62(closure_5, obj17);
+    tmp66Result = tmp66(closure_5, obj17);
   }
-  obj15.children = tmp62Result;
+  obj15.children = tmp66Result;
   obj12.ListEmptyComponent = ref(closure_8, obj15);
   obj12.renderItem = function renderItem(arg0) {
     ({ item, index } = arg0);
@@ -1711,21 +1739,21 @@ export default function VibegrationsNativeChat(projectId) {
     obj.onAnswerClarification = tmp5;
     return closure_2_17(closure_35, obj);
   };
-  obj10.children = ref(projectId(stateFromStores1[47]).FlashList, obj12);
-  const items41 = [ref(TranscriptFade, obj10), , ,];
-  let tmp70 = stateFromStores2;
+  obj10.children = ref(projectId(stateFromStores1[48]).FlashList, obj12);
+  const items42 = [ref(TranscriptFade, obj10), , ,];
+  let tmp74 = stateFromStores2;
   const obj14 = { paddingBottom: bound + stateFromStores(stateFromStores1[7]).space.PX_8 };
   if (stateFromStores2) {
-    tmp70 = !tmp20;
+    tmp74 = !tmp20;
   }
-  items41[1] = ref(stateFromStores(stateFromStores1[48]), { open: tmp70 });
-  let tmp62Result3 = null;
+  items42[1] = ref(stateFromStores(stateFromStores1[49]), { open: tmp74 });
+  let tmp66Result3 = null;
   if (tmp20) {
     const obj18 = { projectId };
-    tmp62Result3 = tmp62(tmp5(tmp3[49]), obj18);
+    tmp66Result3 = tmp66(tmp5(tmp3[50]), obj18);
   }
-  items41[2] = tmp62Result3;
-  let tmp62Result4 = null;
+  items42[2] = tmp66Result3;
+  let tmp66Result4 = null;
   if (null != tmp53) {
     const obj19 = {
       line: tmp53,
@@ -1734,15 +1762,15 @@ export default function VibegrationsNativeChat(projectId) {
       todos: memo4,
       agents: memo5,
     };
-    tmp62Result4 = tmp62(tmp5(tmp3[50]), obj19);
-    const tmp5Result3 = tmp5(tmp3[50]);
+    tmp66Result4 = tmp66(tmp5(tmp3[51]), obj19);
+    const tmp5Result3 = tmp5(tmp3[51]);
   }
-  items41[3] = tmp62Result4;
-  obj9.children = items41;
-  items38[1] = ref2(closure_8, obj9);
+  items42[3] = tmp66Result4;
+  obj9.children = items42;
+  items39[1] = ref2(closure_8, obj9);
   const obj20 = { style: tmp.bottomStack, onLayout: callback1, children: null };
-  const items42 = [
-    ref(stateFromStores(stateFromStores1[51]), {
+  const items43 = [
+    ref(stateFromStores(stateFromStores1[52]), {
       projectId,
       thinking: stateFromStores2,
       compacting: stateFromStores3,
@@ -1760,10 +1788,12 @@ export default function VibegrationsNativeChat(projectId) {
     canSend: tmp26,
     running: stateFromStores2,
     stopped: stateFromStores7,
-    onSend: callback7,
+    onSend: callback8,
     onInterrupt: null,
+    tipOpen: null,
+    onDismissTip: null,
   };
-  let tmp75;
+  let tmp79;
   const obj21 = {
     projectId,
     thinking: stateFromStores2,
@@ -1776,14 +1806,16 @@ export default function VibegrationsNativeChat(projectId) {
     thinkingOpen: tmp20,
     onToggleThinking: callback,
   };
-  const tmp5Result = stateFromStores(stateFromStores1[48]);
+  const tmp5Result = stateFromStores(stateFromStores1[49]);
   if (stateFromStores2) {
-    tmp75 = callback8;
+    tmp79 = callback9;
   }
-  obj22.onInterrupt = tmp75;
-  items42[1] = ref(stateFromStores(stateFromStores1[52]), obj22);
-  obj20.children = items42;
-  items38[2] = ref2(closure_8, obj20);
-  obj8.children = items38;
+  obj22.onInterrupt = tmp79;
+  obj22.tipOpen = tmp57;
+  obj22.onDismissTip = callback7;
+  items43[1] = ref(stateFromStores(stateFromStores1[53]), obj22);
+  obj20.children = items43;
+  items39[2] = ref2(closure_8, obj20);
+  obj8.children = items39;
   return ref2(closure_8, obj8);
 }

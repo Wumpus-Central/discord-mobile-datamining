@@ -3,6 +3,31 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const items = [
   {
+    date: "2026-09-22",
+    platforms: ["desktop"],
+    summary:
+      "When your app needs a setting before it can carry on, the form now appears right in the chat, so you fill it in without opening a dialog.",
+  },
+  {
+    date: "2026-09-22",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Paste your server rules into Moderation Bot and AI checks every message against them; your team can edit them any time in the app.",
+  },
+  {
+    date: "2026-09-22",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "The model lineup moved up: Claude Opus 5.5 replaces Opus 5 on the Balanced tier of Claude projects, and GPT-6 Sol and GPT-6 Luna replace the GPT-5.6 family in the picker, taking the Balanced and Speedrun tiers on GPT projects.",
+  },
+  { date: "2026-09-22", platforms: ["desktop"], summary: "The template and starter cards light up under your cursor." },
+  { date: "2026-09-22", platforms: ["desktop"], summary: "The create screen greets you with a little more magic." },
+  {
+    date: "2026-09-21",
+    platforms: ["desktop", "mobile"],
+    summary: "Moderation Bot now starts with a short wizard, builds straight away, then tells you how to test it.",
+  },
+  {
     date: "2026-09-21",
     platforms: ["desktop", "mobile"],
     summary: "The model picker now offers Grok 4.7 alongside Claude and GPT.",

@@ -3,7 +3,7 @@ import router_utils from "../../routing/router_utils.tsx";
 import util from "../../../intl/index.native.tsx";
 import UserSettings from "../../user_settings/UserSettings.tsx";
 import FavoritesUtils from "../FavoritesUtils.tsx";
-import _modDef3324 from "../intl/FavoritesGuild.messages.js";
+import _modDef3358 from "../intl/FavoritesGuild.messages.js";
 import FavoritesActionCreators from "../FavoritesActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
@@ -30,9 +30,9 @@ export default function useFavoritesGuildResetAction() {
   }
   const obj2 = { isAvailable: hasAccess, label: null, subLabel: null, perform: null };
   const intl = util.intl;
-  obj2.label = intl.string(_modDef3324.YkET6R);
+  obj2.label = intl.string(_modDef3358.YkET6R);
   const intl2 = util.intl;
-  obj2.subLabel = intl2.string(_modDef3324.ZzcwNk);
+  obj2.subLabel = intl2.string(_modDef3358.ZzcwNk);
   obj2.perform = callback;
   return obj2;
 }

@@ -3,8 +3,8 @@ import VoicePanelCardLayoutManagerDefault from "card/VoicePanelCardLayoutManager
 import VoicePanelPIPHandoffDefault from "pip/VoicePanelPIPHandoff.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const VoicePanelModes = fn(12530).VoicePanelModes;
-const VoicePanelControlsConstants = fn(12528);
+const VoicePanelModes = fn(12606).VoicePanelModes;
+const VoicePanelControlsConstants = fn(12604);
 ({ CONTROLS_HEIGHT, VoicePanelControlsModes } = VoicePanelControlsConstants);
 const obj = {
   channelId: "context-not-initialized",
@@ -27,27 +27,28 @@ const obj = {
   mountedCards: null,
   pipAvoidanceSpecs: null,
   preJoinContentSize: null,
+  refreshIdleTimeout: null,
   safeArea: null,
   scrollPosition: null,
   setControlsMode: null,
   setFocused: null,
   setIsFocusedVideoZoomed: null,
   setMode: null,
-  setShowFloatingCTA: "dragon_face",
-  showControls: false,
-  showFloatingCTA: false,
-  streamOutputSinkStack: false,
+  setShowFloatingCTA: 1000,
+  showControls: 1000,
+  showFloatingCTA: 20000,
+  streamOutputSinkStack: 20000,
   windowDimensions: false,
-  wrapperDimensions: false,
-  useReducedMotion: false,
-  wrapperOffset: false,
-  pipHandoff: false,
+  wrapperDimensions: true,
+  useReducedMotion: null,
+  wrapperOffset: null,
+  pipHandoff: null,
 };
-let ReanimatedHelperTypes = fn(7321);
+let ReanimatedHelperTypes = fn(7405);
 obj.connected = ReanimatedHelperTypes.createFakeSharedValue(false);
-ReanimatedHelperTypes = fn(7321);
+ReanimatedHelperTypes = fn(7405);
 obj.contentDimensions = ReanimatedHelperTypes.createFakeSharedValue({ width: 0, height: 0 });
-ReanimatedHelperTypes = fn(7321);
+ReanimatedHelperTypes = fn(7405);
 obj.controlsSpecs = ReanimatedHelperTypes.createFakeSharedValue({
   mode: VoicePanelControlsModes.FLOATING_DEFAULT,
   locked: false,
@@ -58,10 +59,10 @@ obj.dismissPanel = function dismissPanel() {
   const error = new Error("VoicePanelContextType.Provider.dismissDrawer: not called within a context provider");
   throw error;
 };
-obj.dismissToPIPGestureRef = { current: "max" };
-ReanimatedHelperTypes = fn(7321);
+obj.dismissToPIPGestureRef = { current: "r" };
+ReanimatedHelperTypes = fn(7405);
 obj.dragScrolling = ReanimatedHelperTypes.createFakeSharedValue(false);
-ReanimatedHelperTypes = fn(7321);
+ReanimatedHelperTypes = fn(7405);
 obj.focused = ReanimatedHelperTypes.createFakeSharedValue(null);
 obj.generateStateLocker = function generateStateLocker() {
   const error = new Error("VoicePanelContextType.Provider.generateStateLocker: not called within a context provider");
@@ -71,13 +72,13 @@ obj.hideControls = function hideControls() {
   const error = new Error("VoicePanelContextType.Provider.hideControls: not called within a context provider");
   throw error;
 };
-ReanimatedHelperTypes = fn(7321);
+ReanimatedHelperTypes = fn(7405);
 obj.isFocusedVideoZoomed = ReanimatedHelperTypes.createFakeSharedValue(false);
 obj.layoutManager = new VoicePanelCardLayoutManagerDefault("invalid");
-ReanimatedHelperTypes = fn(7321);
+ReanimatedHelperTypes = fn(7405);
 obj.mode = ReanimatedHelperTypes.createFakeSharedValue(VoicePanelModes.PANEL);
-ReanimatedHelperTypes = fn(7321);
-obj.morphablePanelMode = ReanimatedHelperTypes.createFakeSharedValue(fn(12531).MorphablePanelModes.PANEL);
+ReanimatedHelperTypes = fn(7405);
+obj.morphablePanelMode = ReanimatedHelperTypes.createFakeSharedValue(fn(12607).MorphablePanelModes.PANEL);
 const obj2 = {
   mode: VoicePanelControlsModes.FLOATING_DEFAULT,
   locked: false,
@@ -86,13 +87,17 @@ const obj2 = {
 };
 const tmp3 = new VoicePanelCardLayoutManagerDefault("invalid");
 obj.mountedCards = new Set();
-ReanimatedHelperTypes = fn(7321);
+ReanimatedHelperTypes = fn(7405);
 obj.pipAvoidanceSpecs = ReanimatedHelperTypes.createFakeSharedValue({ top: 0, bottom: 0 });
-ReanimatedHelperTypes = fn(7321);
+ReanimatedHelperTypes = fn(7405);
 obj.preJoinContentSize = ReanimatedHelperTypes.createFakeSharedValue(0);
-ReanimatedHelperTypes = fn(7321);
+obj.refreshIdleTimeout = function refreshIdleTimeout() {
+  const error = new Error("VoicePanelContextType.Provider.refreshIdleTimeout: not called within a context provider");
+  throw error;
+};
+ReanimatedHelperTypes = fn(7405);
 obj.safeArea = ReanimatedHelperTypes.createFakeSharedValue(fn(1614).EMPTY_SAFE_AREA_INSETS);
-ReanimatedHelperTypes = fn(7321);
+ReanimatedHelperTypes = fn(7405);
 obj.scrollPosition = ReanimatedHelperTypes.createFakeSharedValue(0);
 obj.setControlsMode = function setControlsMode() {
   const error = new Error("VoicePanelContextType.Provider.setControlsMode: not called within a context provider");
@@ -118,12 +123,12 @@ obj.showControls = function showControls() {
   const error = new Error("VoicePanelContextType.Provider.showControls: not called within a context provider");
   throw error;
 };
-ReanimatedHelperTypes = fn(7321);
+ReanimatedHelperTypes = fn(7405);
 obj.showFloatingCTA = ReanimatedHelperTypes.createFakeSharedValue(null);
 obj.streamOutputSinkStack = {};
-ReanimatedHelperTypes = fn(7321);
+ReanimatedHelperTypes = fn(7405);
 obj.windowDimensions = ReanimatedHelperTypes.createFakeSharedValue({ width: 0, height: 0, landscape: false });
-ReanimatedHelperTypes = fn(7321);
+ReanimatedHelperTypes = fn(7405);
 obj.wrapperDimensions = ReanimatedHelperTypes.createFakeSharedValue({
   drawerWidth: 0,
   drawerHeight: 0,
@@ -134,9 +139,9 @@ obj.wrapperDimensions = ReanimatedHelperTypes.createFakeSharedValue({
   animated: true,
   mode: VoicePanelModes.PANEL,
 });
-ReanimatedHelperTypes = fn(7321);
+ReanimatedHelperTypes = fn(7405);
 obj.useReducedMotion = ReanimatedHelperTypes.createFakeSharedValue(false);
-ReanimatedHelperTypes = fn(7321);
+ReanimatedHelperTypes = fn(7405);
 obj.wrapperOffset = ReanimatedHelperTypes.createFakeSharedValue({ gestureActive: false, x: 0, y: 0 });
 const obj6 = {
   drawerWidth: 0,

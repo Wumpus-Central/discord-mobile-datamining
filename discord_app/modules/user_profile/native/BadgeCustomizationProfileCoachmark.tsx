@@ -13,11 +13,13 @@ export default function BadgeCustomizationProfileCoachmark(visible) {
   visible = visible.visible;
   const markAsDismissed = visible.markAsDismissed;
   const onTryItOut = visible.onTryItOut;
-  const items = [UserStore];
+  let reducedMotion;
+  const items = [reducedMotion];
   const stateFromStores = visible(onTryItOut[3]).useStateFromStores(items, () =>
-    markAsDismissed(onTryItOut[4]).canUsePremiumProfileCustomization(currentUser.getCurrentUser()),
+    markAsDismissed(onTryItOut[4]).canUsePremiumProfileCustomization(reducedMotion.getCurrentUser()),
   );
-  const items1 = [stateFromStores, visible, markAsDismissed, onTryItOut];
+  reducedMotion = stateFromStores.useContext(visible(onTryItOut[5]).AccessibilityPreferencesContext).reducedMotion;
+  const items1 = [stateFromStores, visible, markAsDismissed, onTryItOut, reducedMotion.enabled];
   const memo = stateFromStores.useMemo(() => {
     const obj = {
       title: null,
@@ -37,12 +39,9 @@ export default function BadgeCustomizationProfileCoachmark(visible) {
     const t = util.t;
     obj.description = intl2.string(stateFromStores ? t.p82vky : t.IDh31t);
     obj.visible = visible;
-    const obj2 = {
-      type: "rive",
-      rive: native.BadgesCoachmarkRive,
-      aspectRatio: "16/9",
-      riveProps: { dataBinding: { on: visible } },
-    };
+    const obj2 = { type: "rive", rive: native.BadgesCoachmarkRive, aspectRatio: "16/9", riveProps: null };
+    const obj3 = { dataBinding: { on: visible, reducedMotion: reducedMotion.enabled } };
+    obj2.riveProps = obj3;
     obj.graphic = obj2;
     obj.onDismiss = function onDismiss() {
       return markAsDismissed(constants.USER_DISMISS);
@@ -56,6 +55,6 @@ export default function BadgeCustomizationProfileCoachmark(visible) {
     return obj;
   }, items1);
   let obj = visible(onTryItOut[3]);
-  const coachmark = visible(onTryItOut[7]).useCoachmark(visible.targetRef, memo);
+  const coachmark = visible(onTryItOut[8]).useCoachmark(visible.targetRef, memo);
   return null;
 }

@@ -12,7 +12,7 @@ const View = fn(17).View;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = {
   container: {
     borderRadius: nativeDefault.radii.lg,
@@ -80,10 +80,10 @@ export default function RecommendationsBannerCard(application) {
   }
   const tmp = closure_8();
   if (!showsPromoted) {
-    showsPromoted = application(9409).isPromotedApplication(application);
-    const obj = application(9409);
+    showsPromoted = application(9480).isPromotedApplication(application);
+    const obj = application(9480);
   }
-  const shelfBadgeTypeIfActive = application(9409).getShelfBadgeTypeIfActive(application);
+  const shelfBadgeTypeIfActive = application(9480).getShelfBadgeTypeIfActive(application);
   let bot = application.bot;
   let id;
   if (bot != null) {
@@ -101,7 +101,7 @@ export default function RecommendationsBannerCard(application) {
     }
     maybeFetchUserProfileDefault(id);
   }, items);
-  const obj2 = application(9409);
+  const obj2 = application(9480);
   const applicationIconSource = AvatarUtilsDefault.getApplicationIconSource({
     id: application.id,
     icon: application.icon,
@@ -110,7 +110,7 @@ export default function RecommendationsBannerCard(application) {
   });
   if (isLandscape) {
     const obj5 = { application, iconSource: applicationIconSource, onPress, isFirstRow: isFirst, isLastRow: isLast };
-    let tmp12Result2 = closure_6(tmp4(12340).BaseAppRow, obj5);
+    let tmp12Result2 = closure_6(tmp4(12416).BaseAppRow, obj5);
   } else {
     const items1 = [tmp.container, ,];
     let num = 8;
@@ -137,7 +137,7 @@ export default function RecommendationsBannerCard(application) {
       overrideImageUrl: null,
     };
     const tmp10Result = RecommendationsBannerDefault;
-    obj10.applicationEmbedded = tmp4(9409).isEmbeddedApp(application);
+    obj10.applicationEmbedded = tmp4(9480).isEmbeddedApp(application);
     ({ id: obj8.applicationId, icon } = application);
     obj10.applicationIcon = icon;
     obj10.overrideImageUrl = application.overrideImageUrl;
@@ -151,7 +151,7 @@ export default function RecommendationsBannerCard(application) {
         const obj14 = { variant: "text-xxs/medium", color: "mobile-text-heading-primary", children: null };
         const intl = tmp4(1115).intl;
         obj14.children = intl.string(tmp4(1115).t["/eVltv"]);
-        obj13.children = closure_6(tmp4(4753).Text, obj14);
+        obj13.children = closure_6(tmp4(4823).Text, obj14);
         showsPromoted = closure_6(View, obj13);
       }
       items3[1] = showsPromoted;
@@ -177,17 +177,17 @@ export default function RecommendationsBannerCard(application) {
       lineClamp: 1,
       children: application.name,
     };
-    const items6 = [closure_6(tmp4(4753).Text, obj18)];
+    const items6 = [closure_6(tmp4(4823).Text, obj18)];
     const obj19 = { variant: "text-sm/normal", color: "text-subtle", lineClamp: 1, children: application.description };
-    items6[1] = closure_6(tmp4(4753).Text, obj19);
+    items6[1] = closure_6(tmp4(4823).Text, obj19);
     obj17.children = items6;
     items5[1] = closure_7(View, obj17);
-    items5[2] = closure_6(tmp4(5831).TableRowArrow, {});
+    items5[2] = closure_6(tmp4(5915).TableRowArrow, {});
     obj15.children = items5;
     items4[1] = closure_7(View, obj15);
     obj7.children = items4;
-    tmp12Result2 = closure_7(tmp4(5341).PressableOpacity, obj7);
-    const tmp4Result = tmp4(9409);
+    tmp12Result2 = closure_7(tmp4(5425).PressableOpacity, obj7);
+    const tmp4Result = tmp4(9480);
   }
   return tmp12Result2;
 }

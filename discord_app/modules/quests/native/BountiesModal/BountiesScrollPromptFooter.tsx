@@ -42,7 +42,7 @@ function BountiesScrollPromptFooterContent(zIndex) {
   if (stateFromStores) {
     str = "halt";
   }
-  obj3.children = closure_7(zIndex(4467).BountiesScrollGradientRive, {
+  obj3.children = closure_7(zIndex(4533).BountiesScrollGradientRive, {
     stateMachine: "State Machine 1",
     fit: "fill",
     alignment: "bottom-center",
@@ -57,10 +57,10 @@ function BountiesScrollPromptFooterContent(zIndex) {
   return closure_8(ReanimatedRexportDefault.View, obj2);
 }
 const StyleSheet = fn(17).StyleSheet;
-const QuestsExperimentLocations = fn(5663).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5747).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_9 = createStyles.createStyles(() => {
   const obj = {
     root: { position: "absolute", bottom: 0, left: 0, right: 0 },
@@ -81,7 +81,7 @@ const entering = function t(value) {
   const obj = { opacity: timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings") };
   return obj;
 };
-entering.__closure = { withTiming: fn(4758).withTiming, timingStandard: fn(4761).timingStandard };
+entering.__closure = { withTiming: fn(4828).withTiming, timingStandard: fn(4831).timingStandard };
 entering.__workletHash = 11416950434629;
 entering.__initData = {
   code: "function BountiesScrollPromptFooterTsx1(visible){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};}",
@@ -90,8 +90,8 @@ const fn2 = function n(value, fn) {
   const obj = { opacity: timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings", fn) };
   return obj;
 };
-let obj2 = { withTiming: fn(4758).withTiming, timingStandard: fn(4761).timingStandard };
-fn2.__closure = { withTiming: fn(4758).withTiming, timingStandard: fn(4761).timingStandard };
+let obj2 = { withTiming: fn(4828).withTiming, timingStandard: fn(4831).timingStandard };
+fn2.__closure = { withTiming: fn(4828).withTiming, timingStandard: fn(4831).timingStandard };
 fn2.__workletHash = 9928471408966;
 fn2.__initData = {
   code: "function BountiesScrollPromptFooterTsx2(visible,cleanUp){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings',cleanUp)};}",

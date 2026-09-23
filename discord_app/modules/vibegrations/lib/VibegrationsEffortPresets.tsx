@@ -1,24 +1,24 @@
 // discord_app/modules/vibegrations/lib/VibegrationsEffortPresets.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3678 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3712 from "../intl/VibegrationsUntranslated.messages.js";
 import VibegrationsModelLabels from "VibegrationsModelLabels.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const items = [
   {
-    model: "gpt-5.6-luna",
+    model: "gpt-6-luna",
     thinking: "xhigh",
     summary() {
       const intl = util.intl;
-      return intl.string(_modDef3678.Mo0a1m);
+      return intl.string(_modDef3712.Mo0a1m);
     },
   },
   {
-    model: "gpt-5.6-sol",
+    model: "gpt-6-sol",
     thinking: "high",
     summary() {
       const intl = util.intl;
-      return intl.string(_modDef3678.dkt78K);
+      return intl.string(_modDef3712.dkt78K);
     },
   },
   {
@@ -26,14 +26,14 @@ const items = [
     thinking: "medium",
     summary() {
       const intl = util.intl;
-      return intl.string(_modDef3678.Ly6zYL);
+      return intl.string(_modDef3712.Ly6zYL);
     },
   },
 ];
 let tmp2 = items[1];
 if (tmp2 == null) {
   const obj2 = {
-    model: "gpt-5.6-sol",
+    model: "gpt-6-sol",
     thinking: "high",
     summary() {
       return "";
@@ -136,7 +136,7 @@ export const describeVibegrationsModelSettings = function describeVibegrationsMo
   if (true === fast) {
     const intl = util.intl;
     const _HermesInternal = HermesInternal;
-    combined1 = "" + combined + " \u00B7 " + intl.string(_modDef3678.qOoAsd);
+    combined1 = "" + combined + " \u00B7 " + intl.string(_modDef3712.qOoAsd);
   }
   return combined1;
 };

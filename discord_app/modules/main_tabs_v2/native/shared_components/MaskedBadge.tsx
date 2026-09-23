@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = {
   maskStyle: { position: "relative", right: "HermesInternal" },
   unreadDot: { width: 0, height: 0 },

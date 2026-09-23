@@ -87,7 +87,7 @@ export default {
       trackedActionData: null,
       rejectWithError: null,
     };
-    const tmpResult = permissionOverwrites(4950);
+    const tmpResult = permissionOverwrites(5020);
     request.trackedActionData = {
       event: guildId(1249).NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
@@ -111,7 +111,7 @@ export default {
         return TypeUtils.exact(obj2);
       },
     };
-    const obj3 = {
+    let obj3 = {
       event: guildId(1249).NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
         const obj2 = { is_private: permissionOverwrites.length > 0, channel_id: null, channel_type: null };
@@ -139,14 +139,11 @@ export default {
     return tmpResult.post(request).then(
       (body) => {
         if (UserGuildSettingsStore.isOptInEnabled(guildId)) {
-          const obj = NotificationSettingsModalActionCreatorsDefault;
-          const obj2 = { flags: constants.OPT_IN_ENABLED };
-          const result = obj.updateChannelOverrideSettings(
-            guildId,
-            body.body.id,
-            obj2,
-            NotificationSettingsUtils.NotificationLabels.OptedIn,
-          );
+          const obj2 = { guildId, channelId: body.body.id, settings: null, label: null };
+          const obj3 = { flags: constants.OPT_IN_ENABLED };
+          obj2.settings = obj3;
+          obj2.label = NotificationSettingsUtils.NotificationLabels.OptedIn;
+          const result = NotificationSettingsModalActionCreatorsDefault.updateChannelOverrideSettings(obj2);
         }
         const result1 = GuildTemplateTooltipActionCreatorsDefault.checkGuildTemplateDirty(guildId);
         return body;

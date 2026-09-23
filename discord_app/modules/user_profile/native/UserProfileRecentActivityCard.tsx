@@ -66,8 +66,8 @@ let obj = {
     return true;
   },
 };
-items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(8408).isEntryNew };
-let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(8408).isEntryNew };
+items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(8490).isEntryNew };
+let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(8490).isEntryNew };
 items[2] = {
   Badge: BadgesAll.StreakBadge,
   predicate(entry) {
@@ -125,7 +125,7 @@ items[5] = {
     return tmp3;
   },
 };
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj7 = {
   body: null,
   content: null,
@@ -346,7 +346,7 @@ export default function UserProfileRecentActivityCard(style) {
           const obj7 = { title: entry.extra.activity_name };
           obj8 = obj7;
         } else {
-          obj8 = { title: "max" };
+          obj8 = { title: "r" };
         }
         tmpResult6 = ContentInventoryTypes;
       }

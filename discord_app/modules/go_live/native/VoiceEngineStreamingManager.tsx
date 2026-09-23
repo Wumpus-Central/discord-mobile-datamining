@@ -164,13 +164,13 @@ prototype["_initialize"] = function _initialize() {
     currentAppIntent = currentAppIntent.getCurrentAppIntent();
     if (null != channel) {
       const guildId = channel.getGuildId();
-      currentUserActiveStream(4899).startStream(guildId, channel.id, { sourceId: "screen:0" });
+      currentUserActiveStream(4969).startStream(guildId, channel.id, { sourceId: "screen:0" });
       currentUserActiveStream = obj2.getCurrentUserActiveStream();
       if (null != currentUserActiveStream) {
-        const tmp2Result = closure_1(4958);
+        const tmp2Result = closure_1(5028);
         const participant = tmp2Result.selectParticipant(
           channel.id,
-          tmp9(4809).encodeStreamKey(currentUserActiveStream),
+          tmp9(4879).encodeStreamKey(currentUserActiveStream),
         );
         if ("android" === closure_19.platform) {
           closure_15.start(15000, () => {
@@ -191,9 +191,9 @@ prototype["_initialize"] = function _initialize() {
         if (null != currentAppIntent) {
           closure_4.openURL(closure_12(currentAppIntent));
         }
-        const tmp9Result = tmp9(4809);
+        const tmp9Result = tmp9(4879);
       }
-      const obj3 = currentUserActiveStream(4899);
+      const obj3 = currentUserActiveStream(4969);
       tmp9 = currentUserActiveStream;
     } else {
       let result = closure_19.stopBroadcastWithError(-1, "Not currently in a voice channel");

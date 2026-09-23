@@ -8,29 +8,36 @@ import SearchMessageStore from "../../../../../SearchMessageStore.tsx";
 import SearchQueryStore from "../../../../stores/SearchQueryStore.tsx";
 
 require = fn;
-const constants = fn(8124).SearchResultContentEntityTypes;
+const constants = fn(8206).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/messages/BaseMessagesScreen.tsx");
 
-export default function BaseMessagesScreen(data) {
-  data = data.data;
-  const searchContext = data.searchContext;
-  const tab = data.tab;
-  const isFocused = data.isFocused;
-  let isNextPageLoading;
+export default function BaseMessagesScreen(tab) {
+  ({ data, searchContext } = tab);
+  tab = tab.tab;
+  const isFocused = tab.isFocused;
+  ({ isFirstPageLoading, keywordResultCount, intelligenceStatus } = tab);
+  ({ isNextPageLoading, contentContainerStyle, ItemSeparatorComponent, numColumns } = tab);
+  if (intelligenceStatus === undefined) {
+    intelligenceStatus = null;
+  }
+  isFirstPageLoading = undefined;
+  keywordResultCount = undefined;
   let isHistoricalIndexing;
   let documentsIndexed;
   let hasError;
   let isErrorToast;
   let showErrorToast;
   let searchFetchPendingManager;
-  ({ contentContainerStyle, ItemSeparatorComponent, numColumns } = data);
-  if (!isNextPageLoading) {
-    isNextPageLoading = data.isNextPageLoading;
+  if (!isFirstPageLoading) {
+    isFirstPageLoading = isNextPageLoading;
   }
-  const items = [isHistoricalIndexing, isNextPageLoading];
-  const stateFromStoresObject = data(tab[6]).useStateFromStoresObject(items, () => {
+  if (keywordResultCount == null) {
+    keywordResultCount = data.length;
+  }
+  const items = [isHistoricalIndexing, keywordResultCount];
+  const stateFromStoresObject = searchContext(isFocused[6]).useStateFromStoresObject(items, () => {
     const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(searchContext);
     const searchTabFetchId = SearchUtils.getSearchTabFetchId(searchContext, tab, searchResultsQuery);
     return {
@@ -41,24 +48,33 @@ export default function BaseMessagesScreen(data) {
   });
   isHistoricalIndexing = stateFromStoresObject.isHistoricalIndexing;
   documentsIndexed = stateFromStoresObject.documentsIndexed;
-  let obj = data(tab[6]);
-  const messageSearchErrorScreen = data(tab[8]).useMessageSearchErrorScreen({
+  let obj = searchContext(isFocused[6]);
+  let tmp = searchContext;
+  const messageSearchErrorScreen = searchContext(isFocused[8]).useMessageSearchErrorScreen({
     searchContext,
     tab,
-    hasListItems: data.length > 0,
+    hasListItems: keywordResultCount > 0,
   });
   hasError = messageSearchErrorScreen.hasError;
   isErrorToast = messageSearchErrorScreen.isErrorToast;
   showErrorToast = messageSearchErrorScreen.showErrorToast;
   ({ errorText, isErrorFullscreen } = messageSearchErrorScreen);
-  const obj2 = data(tab[8]);
-  const obj3 = { searchContext, tab, hasListItems: data.length > 0 };
-  searchFetchPendingManager = data(tab[9]).useSearchFetchPendingManager(searchContext);
-  const items1 = [data.length, isNextPageLoading, isFocused, hasError, searchContext, tab, searchFetchPendingManager];
-  const items2 = [isFocused, isNextPageLoading, searchContext, searchFetchPendingManager, tab];
-  const callback = isFocused.useCallback(() => {
-    if (0 !== data.length) {
-      if (isNextPageLoading) {
+  const obj2 = searchContext(isFocused[8]);
+  const obj3 = { searchContext, tab, hasListItems: keywordResultCount > 0 };
+  searchFetchPendingManager = searchContext(isFocused[9]).useSearchFetchPendingManager(searchContext);
+  const items1 = [
+    keywordResultCount,
+    isFirstPageLoading,
+    isFocused,
+    hasError,
+    searchContext,
+    tab,
+    searchFetchPendingManager,
+  ];
+  const items2 = [isFocused, isFirstPageLoading, searchContext, searchFetchPendingManager, tab];
+  const callback = isFirstPageLoading.useCallback(() => {
+    if (0 !== keywordResultCount) {
+      if (isFirstPageLoading) {
         searchFetchPendingManager.add(tab);
       } else if (isFocused) {
         if (hasError) {
@@ -71,20 +87,20 @@ export default function BaseMessagesScreen(data) {
       }
     }
   }, items1);
-  const effect = isFocused.useEffect(() => {
+  const effect = isFirstPageLoading.useEffect(() => {
     let tmp = isFocused;
     if (isFocused) {
-      tmp = !isNextPageLoading;
+      tmp = !isFirstPageLoading;
     }
     if (tmp) {
       searchFetchPendingManager.flush(searchContext, tab);
     }
   }, items2);
-  const items3 = [isErrorToast, isNextPageLoading, isFocused, showErrorToast];
-  const effect1 = isFocused.useEffect(() => {
+  const items3 = [isErrorToast, isFirstPageLoading, isFocused, showErrorToast];
+  const effect1 = isFirstPageLoading.useEffect(() => {
     let tmp = isErrorToast;
     if (isErrorToast) {
-      tmp = !isNextPageLoading;
+      tmp = !isFirstPageLoading;
     }
     if (tmp) {
       tmp = isFocused;
@@ -96,25 +112,28 @@ export default function BaseMessagesScreen(data) {
   const items4 = [documentsIndexed, isHistoricalIndexing, searchContext, tab];
   if (stateFromStoresObject.isIndexing) {
     const obj5 = { searchContext };
-    let tmp11 = hasError(searchContext(tmp[12]), obj5);
+    return hasError(tab(tmp2[12]), obj5);
   } else {
     if (isErrorFullscreen) {
-      if (!isNextPageLoading) {
-        const obj6 = { text: errorText };
-        tmp11 = hasError(searchContext(tmp[13]), obj6);
+      if (!isFirstPageLoading) {
+        if (!tmpResult.isIntelligenceSearchActive(intelligenceStatus)) {
+          const obj6 = { text: errorText };
+          let tmp12 = hasError(tab(tmp2[14]), obj6);
+        }
+        return tmp12;
       }
     }
     const obj7 = {
       contentContainerStyle,
       data,
       onEndReached: callback,
-      ListHeaderComponent: tmp8,
+      ListHeaderComponent: tmp9,
       ItemSeparatorComponent,
       numColumns,
     };
-    tmp11 = hasError(searchContext(tmp[14]), obj7);
+    tmp12 = hasError(tab(tmp2[15]), obj7);
+    tmpResult = tmp(tmp2[13]);
   }
-  return tmp11;
 }
 export const trackMessageItemPress = function trackMessageItemPress(messageId) {
   messageId = messageId.messageId;

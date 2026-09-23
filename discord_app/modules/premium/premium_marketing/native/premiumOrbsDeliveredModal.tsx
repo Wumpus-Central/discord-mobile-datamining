@@ -8,7 +8,7 @@ function getCoinEntitlements() {
 }
 const EntitlementTypes = fn(1074).EntitlementTypes;
 const jsx = fn(21).jsx;
-const SINGLE_ORB_SKU_ID = fn(13619).SINGLE_ORB_SKU_ID;
+const SINGLE_ORB_SKU_ID = fn(13701).SINGLE_ORB_SKU_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/premium_marketing/native/premiumOrbsDeliveredModal.tsx");
 
@@ -56,12 +56,12 @@ export const openOrbsModalIfDelivered = function openOrbsModalIfDelivered() {
         importDefault = tmp4;
         const obj2 = {
           importer() {
-            return Promise.resolve((onClose) => jsx(orbsAmount(13620), { orbsAmount, onClose: onClose.onClose }));
+            return Promise.resolve((onClose) => jsx(orbsAmount(13702), { orbsAmount, onClose: onClose.onClose }));
           },
           isDismissable: false,
         };
-        tmp2(5110).openLazy(obj2);
-        const tmp2Result = tmp2(5110);
+        tmp2(5194).openLazy(obj2);
+        const tmp2Result = tmp2(5194);
       }
     }
     obj = PremiumOrbsDeliveredModalExperimentDefault;

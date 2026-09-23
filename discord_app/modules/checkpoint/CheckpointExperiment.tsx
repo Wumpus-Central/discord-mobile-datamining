@@ -13,3 +13,6 @@ const result = size.fileFinishedImporting("modules/checkpoint/CheckpointExperime
 export const useIsCheckpointEnabled = function useIsCheckpointEnabled(DevToolsQuickActionsScreen) {
   return closure_0.useConfig({ location: DevToolsQuickActionsScreen }).enabled;
 };
+export const getIsCheckpointEnabled = function getIsCheckpointEnabled(transformCheckpoint2026CardComponent) {
+  return closure_0.getConfig({ location: transformCheckpoint2026CardComponent }).enabled;
+};

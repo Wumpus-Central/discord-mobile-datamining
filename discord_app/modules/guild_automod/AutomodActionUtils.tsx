@@ -9,8 +9,8 @@ const result = size.fileFinishedImporting("modules/guild_automod/AutomodActionUt
 
 export const getRuleDefaultActionsFromConfig = function getRuleDefaultActionsFromConfig(defaultActionTypes) {
   closure_0 = {
-    [closure_1_2.BLOCK_MESSAGE]: { type: AutomodActionType.BLOCK_MESSAGE, metadata: { customMessage: "max" } },
-    [closure_1_2.FLAG_TO_CHANNEL]: { type: AutomodActionType.FLAG_TO_CHANNEL, metadata: { channelId: "max" } },
+    [closure_1_2.BLOCK_MESSAGE]: { type: AutomodActionType.BLOCK_MESSAGE, metadata: { customMessage: "r" } },
+    [closure_1_2.FLAG_TO_CHANNEL]: { type: AutomodActionType.FLAG_TO_CHANNEL, metadata: { channelId: "r" } },
     [closure_1_2.USER_COMMUNICATION_DISABLED]: {
       type: AutomodActionType.USER_COMMUNICATION_DISABLED,
       metadata: { durationSeconds: 60 },
@@ -58,8 +58,8 @@ export const isActionQuarantineUser = function isActionQuarantineUser(type) {
 };
 export const getDefaultActions = function getDefaultActions() {
   return {
-    [closure_1_2.BLOCK_MESSAGE]: { type: AutomodActionType.BLOCK_MESSAGE, metadata: { customMessage: "max" } },
-    [closure_1_2.FLAG_TO_CHANNEL]: { type: AutomodActionType.FLAG_TO_CHANNEL, metadata: { channelId: "max" } },
+    [closure_1_2.BLOCK_MESSAGE]: { type: AutomodActionType.BLOCK_MESSAGE, metadata: { customMessage: "r" } },
+    [closure_1_2.FLAG_TO_CHANNEL]: { type: AutomodActionType.FLAG_TO_CHANNEL, metadata: { channelId: "r" } },
     [closure_1_2.USER_COMMUNICATION_DISABLED]: {
       type: AutomodActionType.USER_COMMUNICATION_DISABLED,
       metadata: { durationSeconds: 60 },

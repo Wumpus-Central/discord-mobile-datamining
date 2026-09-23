@@ -1,6 +1,6 @@
 // discord_app/modules/age_assurance/native/MethodPathIcon.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import inlineStyles from "../../../../_runtime/08732_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/08803_inlineStyles.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -9,7 +9,7 @@ const inlineStylesDefault = inlineStyles;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { container: null };
 let size = {
   width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE,

@@ -13,7 +13,7 @@ function trackOpen() {
     source: "Notification End",
   });
 }
-const constants = fn(11879).NotificationUserFeedbackReasons;
+const constants = fn(11955).NotificationUserFeedbackReasons;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsx = fn(21).jsx;
 const size = fn(2);

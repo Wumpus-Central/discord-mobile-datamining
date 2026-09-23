@@ -101,7 +101,7 @@ let items = [
     return intl.string(util.t.YolGh4);
   },
 ];
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj = {
   container: { alignItems: "center", paddingVertical: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16 },
   text: null,
@@ -120,9 +120,9 @@ const memoResult = noop.memo((user) => {
   let name;
   ({ guildId, channelId } = user);
   const tmp = closure_10();
-  name = name(4909).getName(guildId, channelId, user);
+  name = name(4979).getName(guildId, channelId, user);
   const intl = user(1115).intl;
-  let obj = name(4909);
+  let obj = name(4979);
   items = [user.id];
   let obj2 = {
     heading: intl.formatToPlainString(user(1115).t.sjSitP, { name }),
@@ -148,7 +148,7 @@ const memoResult = noop.memo((user) => {
   const intl2 = user(1115).intl;
   obj4.text = intl2.string(user(1115).t["g33r/P"]);
   obj4.onPress = callback;
-  obj3.children = closure_7(user(5187).Button, obj4);
+  obj3.children = closure_7(user(5271).Button, obj4);
   obj2.children = closure_7(View, obj3);
   return closure_7(EmptyState, obj2);
 });

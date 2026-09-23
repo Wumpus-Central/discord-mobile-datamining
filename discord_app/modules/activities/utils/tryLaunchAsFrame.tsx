@@ -4,7 +4,7 @@ import canLaunchFrame from "../../frames/utils/canLaunchFrame.tsx";
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
 
 require = fn;
-const MAIN_SURFACE = fn(9319).MAIN_SURFACE;
+const MAIN_SURFACE = fn(9390).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/tryLaunchAsFrame.tsx");
 

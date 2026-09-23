@@ -77,23 +77,17 @@ function BountiesModalAdvertiserCtaContent(bounty) {
     }),
   };
   const items5 = [closure_10(closure_7, obj5), ,];
-  const obj7 = { style: tmp.ctaInfo, children: null };
-  const items6 = [
-    closure_10(bounty(getQuestImpressionId[21]).Text, {
+  const obj7 = {
+    style: tmp.ctaInfo,
+    children: closure_10(bounty(getQuestImpressionId[21]).Text, {
       lineClamp: 2,
       variant: "text-sm/semibold",
       color: "text-default",
       children: bountyCtaInfo.label,
     }),
-    closure_10(bounty(getQuestImpressionId[21]).Text, {
-      variant: "text-xs/medium",
-      color: "text-default",
-      children: bountyCtaInfo.subtext,
-    }),
-  ];
-  obj7.children = items6;
-  items5[1] = closure_11(closure_7, obj7);
-  const obj10 = {
+  };
+  items5[1] = closure_10(closure_7, obj7);
+  const obj9 = {
     accessible: false,
     importantForAccessibility: "no-hide-descendants",
     children: closure_10(bounty(getQuestImpressionId[22]).Button, {
@@ -103,7 +97,7 @@ function BountiesModalAdvertiserCtaContent(bounty) {
       onPress: callback2,
     }),
   };
-  items5[2] = closure_10(closure_7, obj10);
+  items5[2] = closure_10(closure_7, obj9);
   obj4.children = items5;
   obj3.children = closure_11(bounty(getQuestImpressionId[19]).BackgroundBlurView, obj4);
   obj2.children = closure_10(closure_12, obj3);
@@ -112,11 +106,11 @@ function BountiesModalAdvertiserCtaContent(bounty) {
 let closure_3 = ["style"];
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: metroRequire, View: closure_7, Pressable } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(5663).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5747).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let closure_12 = ReanimatedRexport.createAnimatedComponent(Pressable);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_13 = createStyles.createStyles(() => {
   const obj = {
     outerContainer: null,
@@ -162,14 +156,14 @@ let closure_13 = createStyles.createStyles(() => {
   obj.ctaLogoContainer = size;
   const merged1 = Object.assign(absoluteFillObject.absoluteFillObject);
   obj.ctaLogo = {};
-  obj.ctaInfo = { flex: 1, justifyContent: "center", gap: 2 };
+  obj.ctaInfo = { flex: 1, justifyContent: "center" };
   return obj;
 });
 let entering = function n(value) {
   const obj = { opacity: timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings") };
   return obj;
 };
-entering.__closure = { withTiming: fn(4758).withTiming, timingStandard: fn(4761).timingStandard };
+entering.__closure = { withTiming: fn(4828).withTiming, timingStandard: fn(4831).timingStandard };
 entering.__workletHash = 2981824910249;
 entering.__initData = {
   code: "function BountiesModalAdvertiserCtaTsx1(visible){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};}",
@@ -178,8 +172,8 @@ const fn2 = function s(value, fn) {
   const obj = { opacity: timing.withTiming(value, timingPresets.timingFast, "respect-motion-settings", fn) };
   return obj;
 };
-let obj = { withTiming: fn(4758).withTiming, timingStandard: fn(4761).timingStandard };
-fn2.__closure = { withTiming: fn(4758).withTiming, timingFast: fn(4761).timingFast };
+let obj = { withTiming: fn(4828).withTiming, timingStandard: fn(4831).timingStandard };
+fn2.__closure = { withTiming: fn(4828).withTiming, timingFast: fn(4831).timingFast };
 fn2.__workletHash = 15850601331978;
 fn2.__initData = {
   code: "function BountiesModalAdvertiserCtaTsx2(visible,cleanUp){const{withTiming,timingFast}=this.__closure;return{opacity:withTiming(visible,timingFast,'respect-motion-settings',cleanUp)};}",

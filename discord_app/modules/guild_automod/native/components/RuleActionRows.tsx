@@ -61,11 +61,11 @@ function RuleActionRow(onPress) {
     return timestampProducer(TableRow.TableRow, obj2);
   }
 }
-let closure_4 = fn(4394).GUILD_SELECTABLE_CHANNELS_KEY;
-const AutomodActionType = fn(12121).AutomodActionType;
+let closure_4 = fn(4460).GUILD_SELECTABLE_CHANNELS_KEY;
+const AutomodActionType = fn(12198).AutomodActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { subLabel: { marginTop: nativeDefault.space.PX_4 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -74,7 +74,7 @@ const result = size.fileFinishedImporting("modules/guild_automod/native/componen
 export default function RuleActionRows(rule) {
   rule = rule.rule;
   const onChangeRule = rule.onChangeRule;
-  const availableActionTypes = rule(17956).getAvailableActionTypes(rule.triggerType);
+  const availableActionTypes = rule(18025).getAvailableActionTypes(rule.triggerType);
   let tmp3 = null;
   if (0 !== availableActionTypes.length) {
     let obj2 = { title: null, hasIcons: true, children: null };
@@ -207,7 +207,7 @@ export default function RuleActionRows(rule) {
         actionType,
       );
     });
-    tmp3 = closure_6(tmp(5906).TableRowGroup, obj2);
+    tmp3 = closure_6(tmp(5990).TableRowGroup, obj2);
   }
   return tmp3;
 }

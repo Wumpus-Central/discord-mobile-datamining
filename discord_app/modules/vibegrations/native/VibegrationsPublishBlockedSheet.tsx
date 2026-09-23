@@ -1,7 +1,7 @@
 // discord_app/modules/vibegrations/native/VibegrationsPublishBlockedSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3678 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3712 from "../intl/VibegrationsUntranslated.messages.js";
 import ActionSheetActionCreators from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
@@ -16,7 +16,7 @@ require = fn;
 function VibegrationsPublishBlockedSheet(reason) {
   const tmp4 = reason.reason === vibegrationsPublishBlockedReason.VibegrationsPublishBlockedReason.PERMISSIONS;
   const intl = util.intl;
-  const tmp7 = _modDef3678;
+  const tmp7 = _modDef3712;
   if (tmp4) {
     let Rtlv25 = tmp7.Rtlv25;
     let tmp9 = importDefault;
@@ -29,7 +29,7 @@ function VibegrationsPublishBlockedSheet(reason) {
   obj.header = React4(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: intl.string(Rtlv25) });
   const obj3 = { style: tmp.content, children: null };
   const intl2 = util.intl;
-  const tmp9Result = tmp9(3678);
+  const tmp9Result = tmp9(3712);
   const obj2 = { title: intl.string(Rtlv25) };
   const items = [
     React4(Text_Text.Text, {
@@ -42,7 +42,7 @@ function VibegrationsPublishBlockedSheet(reason) {
   if (tmp4) {
     let BddRzS = util.t.BddRzS;
   } else {
-    BddRzS = tmp9(3678)["+Zh4FA"];
+    BddRzS = tmp9(3712)["+Zh4FA"];
   }
   const obj4 = {
     variant: "text-md/normal",
@@ -64,7 +64,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 VibegrationsPublishBlockedSheet = "VibegrationsPublishBlockedSheet";
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

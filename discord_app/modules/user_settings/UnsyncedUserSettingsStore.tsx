@@ -191,16 +191,6 @@ Object.defineProperty(prototype, "disableVoiceChannelChangeAlert", {
   },
   set: undefined,
 });
-Object.defineProperty(prototype, "disableHardwareMuteSilenceAlert", {
-  get: function disableHardwareMuteSilenceAlert() {
-    let flag = closure_12.disableHardwareMuteSilenceAlert;
-    if (flag == null) {
-      flag = false;
-    }
-    return flag;
-  },
-  set: undefined,
-});
 Object.defineProperty(prototype, "disableEmbeddedActivityPopOutAlert", {
   get: function disableEmbeddedActivityPopOutAlert() {
     let flag = closure_12.disableEmbeddedActivityPopOutAlert;
@@ -364,7 +354,6 @@ const items = [
       "useSystemTheme",
       "expressionPickerWidth",
       "disableVoiceChannelChangeAlert",
-      "disableHardwareMuteSilenceAlert",
       "disableHideSelfStreamAndVideoConfirmationAlert",
       "pushUpsellDismissed",
       "disableEmbeddedActivityPopOutAlert",

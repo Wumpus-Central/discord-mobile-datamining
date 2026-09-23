@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import router_utils from "../../routing/router_utils.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3678 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3712 from "../intl/VibegrationsUntranslated.messages.js";
 import ActionSheetActionCreators from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import VibegrationsUtils from "../lib/VibegrationsUtils.tsx";
 import ChannelPickerActionSheetDefault from "../../channel/native/ChannelPickerActionSheet.tsx";
@@ -18,13 +18,13 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-let closure_9 = fn(4394).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_9 = fn(4460).GUILD_SELECTABLE_CHANNELS_KEY;
 const Routes = fn(1074).Routes;
-const MessageSendLocation = fn(4750).MessageSendLocation;
+const MessageSendLocation = fn(4820).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const VibegrationsPublishNotesSheet = "VibegrationsPublishNotesSheet";
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_18 = createStyles.createStyles((paddingBottom) => {
   const obj = {
     container: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom },
@@ -212,7 +212,7 @@ export default function VibegrationsPublishNotesSheet(guildId) {
     const obj4 = { title: null };
     const obj = ActionSheetActionCreators;
     const intl = util.intl;
-    obj4.title = intl.string(_modDef3678.IcSdnu);
+    obj4.title = intl.string(_modDef3712.IcSdnu);
     obj3.header = obj4;
     obj3.guild = GuildStore.getGuild(guildId);
     obj3.channels = stateFromStores;
@@ -276,8 +276,8 @@ export default function VibegrationsPublishNotesSheet(guildId) {
                     const _HermesInternal = HermesInternal;
                     combined = "" + trimmed + tmp34;
                   }
-                  const parsed = tmp3(7921).parse(found, combined);
-                  const tmp31Result = tmp3(7701);
+                  const parsed = tmp3(8003).parse(found, combined);
+                  const tmp31Result = tmp3(7784);
                   const obj5 = { location: _undefined2.VIBEGRATIONS_PATCH_NOTES };
                   c3 = 2;
                   c4 = 1;
@@ -306,10 +306,10 @@ export default function VibegrationsPublishNotesSheet(guildId) {
                 ok = closure_128_0.ok;
               }
               if (false !== ok) {
-                const result = guildId(17000).rememberPatchNotesChannel(closure_129_0, closure_129_17.id);
+                const result = guildId(17057).rememberPatchNotesChannel(closure_129_0, closure_129_17.id);
                 closure_129_20();
                 dependencyMap = 0;
-                const obj = guildId(17000);
+                const obj = guildId(17057);
               }
             }
             const _Error = Error;

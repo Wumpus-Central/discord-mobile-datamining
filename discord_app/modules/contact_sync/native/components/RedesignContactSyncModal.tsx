@@ -118,7 +118,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
                 obj5.phone = tmp15;
                 dependencyMap = 2;
                 c3 = 1;
-                const obj7 = { value: tmp2(12941).updateDiscoverability(obj5), done: false };
+                const obj7 = { value: tmp2(13023).updateDiscoverability(obj5), done: false };
                 return obj7;
               }
             } else if (1 === tmp5) {
@@ -145,7 +145,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
             }
             dependencyMap = 1;
             c3 = 1;
-            const obj9 = { value: tmp2(12933).startContactSync(closure_129_3), done: false };
+            const obj9 = { value: tmp2(13015).startContactSync(closure_129_3), done: false };
             return obj9;
           } catch (tmp2) {
             c3 = tmp;
@@ -176,7 +176,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
       const obj2 = { type: "Contact Sync", location: { page: "Contact Sync" } };
       AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, obj2);
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(12944, dependencyMap.paths),
+        asyncRequireImpl(13026, dependencyMap.paths),
         "Contact Sync Info Settings",
       );
     }
@@ -210,7 +210,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
             } else {
               v1 = 1;
               dependencyMap = 1;
-              const obj5 = { value: v1(5357).requestPermission(constants.CONTACTS), done: false };
+              const obj5 = { value: v1(5441).requestPermission(constants.CONTACTS), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -225,8 +225,8 @@ function ContactSyncLandingScreen(openSettingsSheet) {
               closure_128_8();
             } else {
               const obj7 = { onComplete: closure_128_2, skip: true };
-              const result = tmp4(12933).closeContactSyncModal(obj7);
-              const obj = tmp4(12933);
+              const result = tmp4(13015).closeContactSyncModal(obj7);
+              const obj = tmp4(13015);
             }
             dependencyMap = 3;
           }
@@ -299,7 +299,7 @@ function ContactSyncNameInputScreen(navigateToLandingPage) {
   const tmp5 = closure_10();
   const name = tmp5.name;
   ({ isNameFromContactBook, error } = tmp5);
-  loading(12952)(navigation, navigateToLandingPage.navigateToLandingPage);
+  loading(13034)(navigation, navigateToLandingPage.navigateToLandingPage);
   _require = onNext(function* (arg0) {
     if (c3 === 2) {
       c3 = 3;
@@ -330,7 +330,7 @@ function ContactSyncNameInputScreen(navigateToLandingPage) {
             React7(options);
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: options(12933).startContactSync(options), done: false };
+            const obj5 = { value: options(13015).startContactSync(options), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -393,7 +393,7 @@ function ContactSyncNameInputScreen(navigateToLandingPage) {
     tmp12 = isNameFromContactBook;
   }
   obj3.prefilledFromContactBook = tmp12;
-  obj2.children = closure_16(loading(12954), obj3);
+  obj2.children = closure_16(loading(13036), obj3);
   return closure_16(View, obj2);
 }
 function ContactSyncSuggestionScreen(onComplete) {
@@ -648,21 +648,21 @@ class ContactSyncModal {
   }
 }
 const View = fn(17).View;
-const ContactSyncModalStore = fn(12934);
+const ContactSyncModalStore = fn(13016);
 ({ setName: closure_9, useContactSyncModalStore: c10, useIsOnboarding: closure_11 } = ContactSyncModalStore);
-const ContactSyncConstants = fn(12935);
+const ContactSyncConstants = fn(13017);
 ({ ContactPermissions: closure_12, ContactSyncScenes: map1 } = ContactSyncConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const NativePermissionTypes = fn(4966).NativePermissionTypes;
+const NativePermissionTypes = fn(5036).NativePermissionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = {
   container: {
     flex: 1,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
     justifyContent: "center",
-    paddingTop: fn(5901).NAV_BAR_HEIGHT + 32,
+    paddingTop: fn(5985).NAV_BAR_HEIGHT + 32,
   },
   landingTrailing: { textAlign: "center" },
 };

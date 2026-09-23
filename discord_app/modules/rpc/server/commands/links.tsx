@@ -145,7 +145,7 @@ let closure_13 = async function _openExternalLink(arg0) {
           } else {
             new Promise((arg0) => {
               closure_0 = arg0;
-              let obj = closure_1_0(8645);
+              let obj = closure_1_0(8716);
               const obj2 = {
                 href: dependencyMap,
                 shouldConfirm: true,
@@ -153,7 +153,7 @@ let closure_13 = async function _openExternalLink(arg0) {
                   return false;
                 },
                 onConfirm() {
-                  closure_1(4446)(dependencyMap);
+                  closure_1(4512)(dependencyMap);
                   application = closure_2_0.application;
                   let id;
                   if (application != null) {
@@ -185,7 +185,7 @@ let closure_13 = async function _openExternalLink(arg0) {
                 obj2,
                 undefined,
                 undefined,
-                closure_1_0(14771).getActivitiesModalContextKey({ application, channelId }),
+                closure_1_0(14851).getActivitiesModalContextKey({ application, channelId }),
               );
             });
           }
@@ -204,7 +204,7 @@ let closure_13 = async function _openExternalLink(arg0) {
     }
   })();
 };
-let Constants = fn(4661);
+let Constants = fn(4731);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
 Constants = fn(1074);
 ({
@@ -357,7 +357,7 @@ obj3 = {
 };
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
-const CONTEXT_MENU_ICON_NAMES = fn(14763);
+const CONTEXT_MENU_ICON_NAMES = fn(14843);
 let obj5 = {
   scope: null,
   handler(arg0) {

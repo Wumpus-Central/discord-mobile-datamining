@@ -1,7 +1,7 @@
 // discord_app/modules/premium/gifting/native/views/GiftingBadgeLevelUpProgress.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import _modDef2578 from "../../GiftingBadge.messages.js";
+import _modDef2580 from "../../GiftingBadge.messages.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import GiftingBadgesUtils from "../../GiftingBadgesUtils.tsx";
 import GiftingBadgeIconDefault from "GiftingBadgeIcon.tsx";
@@ -9,10 +9,10 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(8465).getSingleRequirementThreshold;
+let closure_4 = fn(8536).getSingleRequirementThreshold;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = {
   container: { gap: nativeDefault.space.PX_4, width: "100%" },
   barRow: null,
@@ -96,7 +96,7 @@ export default function GiftingBadgeLevelUpProgress(style) {
   const obj10 = { style: tmp.labels, children: null };
   const obj11 = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl = util.intl;
-  obj11.children = intl.format(_modDef2578.iIpfQe, { count: progress, threshold: tmp7 });
+  obj11.children = intl.format(_modDef2580.iIpfQe, { count: progress, threshold: tmp7 });
   obj10.children = hasOwnProperty(Text_Text.Text, obj11);
   items3[1] = hasOwnProperty(View, obj10);
   obj3.children = items3;

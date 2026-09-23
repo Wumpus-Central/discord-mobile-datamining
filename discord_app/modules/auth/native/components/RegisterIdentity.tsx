@@ -121,14 +121,14 @@ function RegisterIdentityBase(inputMode) {
     }
   };
   ({ headerText, controlComponent, subheader } = inputMode);
-  const tmp2 = closure_16(45 * Math.min(2, inputMode(5194).useFontScale()));
-  let obj = inputMode(5194);
-  const tmp4 = setInputMode(7189)();
+  const tmp2 = closure_16(45 * Math.min(2, inputMode(5278).useFontScale()));
+  let obj = inputMode(5278);
+  const tmp4 = setInputMode(7273)();
   dependencyMap = inputMode(1484).useNavigation();
   const tmp5 = closure_11((errors) => errors.errors);
   let message = tmp5;
   let obj2 = inputMode(1484);
-  const identityRegistrationStep = inputMode(16298).useIdentityRegistrationStep(
+  const identityRegistrationStep = inputMode(16351).useIdentityRegistrationStep(
     inputMode(1094).AuthStates.REGISTER_IDENTITY,
     inputMode,
   );
@@ -136,9 +136,9 @@ function RegisterIdentityBase(inputMode) {
   const identityErrorMessage = identityRegistrationStep.identityErrorMessage;
   ({ registerAndVerifyPhone: c6, validateEmail: c7 } = identityRegistrationStep);
   ({ setLoginEmail, loginPhone, updateLoginPhone, preventSubmitIdentity, identityError } = identityRegistrationStep);
-  let obj3 = inputMode(16298);
+  let obj3 = inputMode(16351);
   [tmp8, c8] = loginEmail(identityErrorMessage.useState(false), 2);
-  closure_9 = identityErrorMessage.useContext(inputMode(16285).TrackRegistrationContext);
+  closure_9 = identityErrorMessage.useContext(inputMode(16338).TrackRegistrationContext);
   let items = [tmp5.message, identityErrorMessage];
   const memo = identityErrorMessage.useMemo(() => {
     message = identityErrorMessage;
@@ -148,11 +148,11 @@ function RegisterIdentityBase(inputMode) {
     return message;
   }, items);
   const tmp7 = loginEmail(identityErrorMessage.useState(false), 2);
-  setInputMode(16303)(inputMode(1094).AuthStates.REGISTER_IDENTITY);
-  const tmp10 = setInputMode(16303);
-  const tmp12 = setInputMode(16304);
-  tmp12(inputMode(16287).getPreviousRegistrationTransitionStep(inputMode(1094).AuthStates.REGISTER_IDENTITY));
-  setInputMode(5204)(() => {
+  setInputMode(16356)(inputMode(1094).AuthStates.REGISTER_IDENTITY);
+  const tmp10 = setInputMode(16356);
+  const tmp12 = setInputMode(16357);
+  tmp12(inputMode(16340).getPreviousRegistrationTransitionStep(inputMode(1094).AuthStates.REGISTER_IDENTITY));
+  setInputMode(5288)(() => {
     closure_9({ step: constants.ACCOUNT_IDENTITY, actionType: constants2.VIEWED });
   });
   let obj5 = { headerText, subHeader: subheader, children: null };
@@ -163,8 +163,8 @@ function RegisterIdentityBase(inputMode) {
     children: null,
   };
   const items1 = [controlComponent, , ,];
-  let obj4 = inputMode(16287);
-  items1[1] = closure_14(inputMode(16305).RegisterPhoneOrEmailInput, {
+  let obj4 = inputMode(16340);
+  items1[1] = closure_14(inputMode(16358).RegisterPhoneOrEmailInput, {
     loginPhone,
     loginEmail,
     setLoginPhone: updateLoginPhone,
@@ -180,41 +180,41 @@ function RegisterIdentityBase(inputMode) {
   obj8.text = intl.string(inputMode(1115).t.PDTjLN);
   obj8.onPress = handleSubmit;
   obj8.disabled = preventSubmitIdentity;
-  obj7.children = closure_14(inputMode(5187).Button, obj8);
+  obj7.children = closure_14(inputMode(5271).Button, obj8);
   items1[2] = closure_14(c6, obj7);
   let tmp15Result = null;
   if (null != memo) {
     tmp15Result = null;
     if ("" !== memo) {
       const obj9 = { style: tmp2.errors, children: memo };
-      tmp15Result = closure_14(tmp3(7186), obj9);
+      tmp15Result = closure_14(tmp3(7270), obj9);
     }
   }
   items1[3] = tmp15Result;
   obj6.children = items1;
   obj5.children = closure_15(c7, obj6);
-  const tmp15Result3 = closure_14(setInputMode(7217), obj5);
+  const tmp15Result3 = closure_14(setInputMode(7301), obj5);
   let tmp15Result4 = tmp15Result3;
   if (!tmp4) {
     const obj10 = { style: tmp2.page, children: tmp15Result3 };
-    tmp15Result4 = closure_14(tmp3(5797), obj10);
+    tmp15Result4 = closure_14(tmp3(5881), obj10);
   }
   return tmp15Result4;
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const RegistrationUIStore = fn(16288);
+const RegistrationUIStore = fn(16341);
 ({
   clearRegistrationErrorMessage: closure_8,
   setRegistrationErrors: closure_9,
   updateRegistrationOptions: c10,
   useRegistrationUIStore: closure_11,
 } = RegistrationUIStore);
-const RegistrationConstants = fn(16289);
+const RegistrationConstants = fn(16342);
 ({ RegisterTransitionSteps: closure_12, RegistrationTransitionActionTypes: map1 } = RegistrationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_16 = createStyles.createStyles((minHeight) => {
   const obj = {
     container: { marginTop: 24, flex: 1 },
@@ -230,12 +230,12 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/auth/native/components/RegisterIdentity.tsx");
 
 export const RegisterIdentity = function RegisterIdentity() {
-  let obj = hasItem(5194);
-  const tmp3 = closure_16(45 * Math.min(2, hasItem(5194).useFontScale()));
-  const deviceCountry = hasItem(16307).getDeviceCountry();
+  let obj = hasItem(5278);
+  const tmp3 = closure_16(45 * Math.min(2, hasItem(5278).useFontScale()));
+  const deviceCountry = hasItem(16360).getDeviceCountry();
   hasItem = null != deviceCountry;
   if (hasItem) {
-    const EMAIL_FIRST_COUNTRIES = tmp(16308).EMAIL_FIRST_COUNTRIES;
+    const EMAIL_FIRST_COUNTRIES = tmp(16361).EMAIL_FIRST_COUNTRIES;
     hasItem = EMAIL_FIRST_COUNTRIES.has(deviceCountry);
   }
   let items = [hasItem];
@@ -265,8 +265,8 @@ export const RegisterIdentity = function RegisterIdentity() {
     React6();
     dependencyMap(memo[arg0].mode);
   }, items1);
-  let obj2 = hasItem(16307);
-  const tmpResult = hasItem(9896);
+  let obj2 = hasItem(16360);
+  const tmpResult = hasItem(9969);
   const segmentedControlState = tmpResult.useSegmentedControlState({
     pageWidth: 0,
     defaultIndex: 0,
@@ -310,7 +310,7 @@ export const RegisterIdentity = function RegisterIdentity() {
   };
   obj4.controlComponent = closure_14(closure_6, {
     style: tmp3.segmentedControl,
-    children: closure_14(hasItem(9897).SegmentedControl, {
+    children: closure_14(hasItem(9970).SegmentedControl, {
       state: segmentedControlState,
       keyboardShouldPersistTaps: "handled",
     }),

@@ -1,7 +1,7 @@
 // discord_app/modules/vibegrations/native/VibegrationsDebugScene.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3678 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3712 from "../intl/VibegrationsUntranslated.messages.js";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import CopyIcon from "../../../design/components/Icon/native/redesign/generated/CopyIcon.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
@@ -14,10 +14,10 @@ import VibegrationsDebugStore from "../stores/VibegrationsDebugStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const requestDebugStatus = fn(13366).requestDebugStatus;
+const requestDebugStatus = fn(13448).requestDebugStatus;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = {
   scene: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   tabs: null,
@@ -142,7 +142,7 @@ export default function VibegrationsDebugScene(projectId) {
     obj.copy(VibegrationsDebugSnapshot.vibegrationsDebugSnapshot(projectId));
     const obj4 = { key: "VIBEGRATIONS_DEBUG_COPIED", content: null, IconComponent: null };
     const intl = util.intl;
-    obj4.content = intl.string(_modDef3678.sDSDiO);
+    obj4.content = intl.string(_modDef3712.sDSDiO);
     obj4.IconComponent = CopyIcon.CopyIcon;
     ToastActionCreatorsDefault.open(obj4);
   }, items8);

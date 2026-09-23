@@ -1,17 +1,17 @@
 // discord_app/modules/checkpoint/CheckpointUtils.tsx
 import util from "../../intl/index.native.tsx";
 import TimeUtils from "../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
-import notification_center_getTimestampString from "../notification_center/getTimestampString.tsx";
-import _modDef8417 from "../../../discord_assets/assets/checkpoint/card-plant.png.js";
-import _modDef8418 from "../../../discord_assets/assets/checkpoint/card-donut.png.js";
-import _modDef8419 from "../../../discord_assets/assets/checkpoint/card-capybara.png.js";
-import _modDef8420 from "../../../discord_assets/assets/checkpoint/card-disco.png.js";
-import _modDef8421 from "../../../discord_assets/assets/checkpoint/card-origami.png.js";
-import _modDef8422 from "../../../discord_assets/assets/checkpoint/card-snail.png.js";
-import _modDef8423 from "../../../discord_assets/assets/checkpoint/card-duck.png.js";
-import _modDef8424 from "../../../discord_assets/assets/checkpoint/card-banana.png.js";
-import _modDef8425 from "../../../discord_assets/assets/checkpoint/card-cat.png.js";
-import _modDef8426 from "../../../discord_assets/assets/checkpoint/card-cassette.png.js";
+import getTimestampString from "../notification_center/getTimestampString.tsx";
+import _modDef5062 from "../../../discord_assets/assets/checkpoint/card-plant.png.js";
+import _modDef5063 from "../../../discord_assets/assets/checkpoint/card-donut.png.js";
+import _modDef5064 from "../../../discord_assets/assets/checkpoint/card-capybara.png.js";
+import _modDef5065 from "../../../discord_assets/assets/checkpoint/card-disco.png.js";
+import _modDef5066 from "../../../discord_assets/assets/checkpoint/card-origami.png.js";
+import _modDef5067 from "../../../discord_assets/assets/checkpoint/card-snail.png.js";
+import _modDef5068 from "../../../discord_assets/assets/checkpoint/card-duck.png.js";
+import _modDef5069 from "../../../discord_assets/assets/checkpoint/card-banana.png.js";
+import _modDef5070 from "../../../discord_assets/assets/checkpoint/card-cat.png.js";
+import _modDef5071 from "../../../discord_assets/assets/checkpoint/card-cassette.png.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const items = [TimeUtils.TimeUnits.HOURS, TimeUtils.TimeUnits.MINUTES];
@@ -20,7 +20,7 @@ const result = size.fileFinishedImporting("modules/checkpoint/CheckpointUtils.ts
 export const getVoiceDurationString = function getVoiceDurationString(totalVoiceMinutes) {
   const timeAndUnit = TimeUtils.getTimeAndUnit(totalVoiceMinutes, items);
   ({ time, unit } = timeAndUnit);
-  const time2 = notification_center_getTimestampString.getAbbreviatedFormatter();
+  const time2 = getTimestampString.getAbbreviatedFormatter();
   if (null == time) {
     const intl3 = util.intl;
     return intl3.formatToPlainString(time2.minutes, { minutes: 0 });
@@ -41,27 +41,27 @@ export const getVoiceDurationString = function getVoiceDurationString(totalVoice
 };
 export const getCardAssetUrl = function getCardAssetUrl(cardId) {
   if (0 === cardId) {
-    return _modDef8417;
+    return _modDef5062;
   } else if (1 === cardId) {
-    return _modDef8418;
+    return _modDef5063;
   } else if (2 === cardId) {
-    return _modDef8419;
+    return _modDef5064;
   } else if (3 === cardId) {
-    return _modDef8420;
+    return _modDef5065;
   } else if (4 === cardId) {
-    return _modDef8421;
+    return _modDef5066;
   } else if (5 === cardId) {
-    return _modDef8422;
+    return _modDef5067;
   } else if (6 === cardId) {
-    return _modDef8423;
+    return _modDef5068;
   } else if (7 === cardId) {
-    return _modDef8424;
+    return _modDef5069;
   } else if (8 === cardId) {
-    return _modDef8425;
+    return _modDef5070;
   } else {
-    return _modDef8426;
+    return _modDef5071;
   }
 };
-export const getCheckpointPowerBarUnits = function getCheckpointPowerBarUnits(arg0) {
-  return Math.min(Math.max(Math.round(arg0 / 10), 1), 9);
+export const getCheckpointPowerBarUnits = function getCheckpointPowerBarUnits(checkpointData) {
+  return Math.min(Math.max(Math.round(checkpointData / 10), 1), 9);
 };

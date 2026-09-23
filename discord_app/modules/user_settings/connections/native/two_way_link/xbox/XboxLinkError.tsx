@@ -6,7 +6,7 @@ import TwoWayLinkError from "../TwoWayLinkError.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const XboxLinkModalScenes = fn(9350).XboxLinkModalScenes;
+const XboxLinkModalScenes = fn(9421).XboxLinkModalScenes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(

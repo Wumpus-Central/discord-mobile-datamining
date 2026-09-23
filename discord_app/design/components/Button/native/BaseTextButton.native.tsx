@@ -99,7 +99,7 @@ get_ActivityIndicator = fn(17);
 ({ Text: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let createStyles = fn(4757);
+let createStyles = fn(4827);
 let closure_9 = createStyles.createStyles((arg0, sm) => {
   const obj = {
     grow: { flexGrow: 1, alignSelf: "stretch" },
@@ -131,12 +131,12 @@ let closure_9 = createStyles.createStyles((arg0, sm) => {
     throw new TypeError("Trying to call a non-function");
   }
 });
-createStyles = fn(4757);
+createStyles = fn(4827);
 let closure_10 = createStyles.createStyles({
   container: { flexDirection: "row", alignItems: "center", position: "relative" },
   textCollapsed: { position: "absolute", left: 0 },
 });
-createStyles = fn(4757);
+createStyles = fn(4827);
 let obj = {
   entityWrapper: {
     borderWidth: 1,
@@ -157,7 +157,7 @@ const __initData2 = {
 const __initData3 = {
   code: "function BaseTextButtonNativeTsx3(){const{collapsed,textCollapsed,containerWidth}=this.__closure;if(collapsed.get()===0)return{};return{...textCollapsed,width:containerWidth.get()};}",
 };
-createStyles = fn(4757);
+createStyles = fn(4827);
 let closure_18 = createStyles.createStyles((arg0, marginLeft) => {
   if (0 === marginLeft) {
     const obj2 = { offset: {} };
@@ -178,14 +178,17 @@ let closure_18 = createStyles.createStyles((arg0, marginLeft) => {
   }
 });
 let obj6 = { sm: null, md: null, lg: null };
-const LARGE_BUTTON_HEIGHT = fn(5192).LARGE_BUTTON_HEIGHT;
-const bound = Math.max((fn(5192).MINIMUM_HIT_AREA - fn(5192).SMALL_BUTTON_HEIGHT) / 2, 0);
-obj6.sm = { top: bound, left: "Array", right: "limit", bottom: bound };
-const LARGE_BUTTON_HEIGHT2 = fn(5192).LARGE_BUTTON_HEIGHT;
-const bound1 = Math.max((fn(5192).MINIMUM_HIT_AREA - fn(5192).MEDIUM_BUTTON_HEIGHT) / 2, 0);
-obj6.md = { top: bound1, left: "Array", right: "limit", bottom: bound1 };
-const bound2 = Math.max((fn(5192).MINIMUM_HIT_AREA - fn(5192).LARGE_BUTTON_HEIGHT) / 2, 0);
-obj6.lg = { top: bound2, left: "Array", right: "limit", bottom: bound2 };
+const LARGE_BUTTON_HEIGHT = fn(5276).LARGE_BUTTON_HEIGHT;
+const bound = Math.max((fn(5276).MINIMUM_HIT_AREA - fn(5276).SMALL_BUTTON_HEIGHT) / 2, 0);
+const rect = { top: bound, left: "Array", right: "isArray", bottom: bound };
+obj6.sm = rect;
+const LARGE_BUTTON_HEIGHT2 = fn(5276).LARGE_BUTTON_HEIGHT;
+const bound1 = Math.max((fn(5276).MINIMUM_HIT_AREA - fn(5276).MEDIUM_BUTTON_HEIGHT) / 2, 0);
+const rect1 = { top: bound1, left: "Array", right: "isArray", bottom: bound1 };
+obj6.md = rect1;
+const bound2 = Math.max((fn(5276).MINIMUM_HIT_AREA - fn(5276).LARGE_BUTTON_HEIGHT) / 2, 0);
+const rect2 = { top: bound2, left: "Array", right: "isArray", bottom: bound2 };
+obj6.lg = rect2;
 function getTextPlatformLineHeight(arg0, arg1) {}
 let merged = Object.assign(
   {},

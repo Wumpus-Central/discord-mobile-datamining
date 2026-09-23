@@ -4,6 +4,7 @@ import SearchUtils from "../../search/SearchUtils.tsx";
 import QueryTokenizer from "../../../lib/QueryTokenizer.tsx";
 import IntelligenceSearchTypes from "IntelligenceSearchTypes.tsx";
 import RelationshipStore from "../../../stores/RelationshipStore.tsx";
+import IntelligenceSearchStore from "IntelligenceSearchStore.tsx";
 
 require = fn;
 function isUnsupportedFilterToken(type) {
@@ -13,8 +14,10 @@ function isUnsupportedFilterToken(type) {
   }
   return tmp;
 }
+const MAX_PRESENTED_CITATIONS = fn(12698).MAX_PRESENTED_CITATIONS;
 const Constants = fn(1074);
-({ SearchTokenTypes, SearchTypes: c3 } = Constants);
+({ SearchTokenTypes, SearchTypes: hasOwnProperty } = Constants);
+const SearchTabs = fn(8207).SearchTabs;
 const items = [,];
 ({ FILTER_IN: arr[0], ANSWER_IN: arr[1] } = SearchTokenTypes);
 const set = new Set(items);
@@ -85,4 +88,56 @@ export const parseConversationId = function parseConversationId(sourceId) {
     tmp2 = sourceId;
   }
   return tmp2;
+};
+export const getIntelligenceSearchStatus = function getIntelligenceSearchStatus(searchContext, searchResultsQuery) {
+  const guildIdFromSearchContext = SearchUtils.getGuildIdFromSearchContext(searchContext);
+  let status = null;
+  if (null != guildIdFromSearchContext) {
+    status = IntelligenceSearchStore.getStatus(
+      guildIdFromSearchContext,
+      SearchUtils.getSearchTabFetchId(searchContext, SearchTabs.MESSAGES, searchResultsQuery),
+    );
+    const tmpResult = SearchUtils;
+  }
+  return status;
+};
+export const isIntelligenceSearchActive = function isIntelligenceSearchActive(intelligenceStatus) {
+  return (
+    intelligenceStatus === IntelligenceSearchTypes.IntelligenceSearchStatus.LOADING ||
+    intelligenceStatus === IntelligenceSearchTypes.IntelligenceSearchStatus.LOADED
+  );
+};
+export const isIntelligenceSearchEmptyOrErrored = function isIntelligenceSearchEmptyOrErrored(status) {
+  return (
+    status === IntelligenceSearchTypes.IntelligenceSearchStatus.EMPTY ||
+    status === IntelligenceSearchTypes.IntelligenceSearchStatus.ERROR
+  );
+};
+export const getIntelligenceSearchCitationsCount = function getIntelligenceSearchCitationsCount(
+  searchContext,
+  searchResultsQuery,
+  arg2,
+) {
+  const guildIdFromSearchContext = SearchUtils.getGuildIdFromSearchContext(searchContext);
+  if (null == guildIdFromSearchContext) {
+    return 0;
+  } else {
+    const answer = IntelligenceSearchStore.getAnswer(
+      guildIdFromSearchContext,
+      SearchUtils.getSearchTabFetchId(searchContext, SearchTabs.MESSAGES, searchResultsQuery),
+    );
+    let num;
+    if (answer != null) {
+      num = answer.citations.length;
+    }
+    if (num == null) {
+      num = 0;
+    }
+    let bound = num;
+    if (arg2) {
+      const _Math = Math;
+      bound = Math.min(num, MAX_PRESENTED_CITATIONS);
+    }
+    return bound;
+  }
 };

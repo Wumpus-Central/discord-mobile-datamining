@@ -1,7 +1,7 @@
 // discord_app/modules/search/native/components/list/SearchList.tsx
 import util from "../../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
-import _mod9002 from "../../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod9073 from "../../../../../../discord_common/js/packages/flash-list/index.js";
 import pages_ErrorScreenDefault from "../tabs/pages/ErrorScreen.tsx";
 import MediaGridPlaceholderDefault from "../tabs/pages/placeholders/MediaGridPlaceholder.tsx";
 import DMRowDefault from "rows/DMRow.tsx";
@@ -20,16 +20,17 @@ import GuildChannelMemberRowDefault from "rows/GuildChannelMemberRow.tsx";
 import MemberRowPlaceholderDefault from "../tabs/pages/placeholders/MemberRowPlaceholder.tsx";
 import GenericTextRowDefault from "rows/GenericTextRow.tsx";
 import SearchListSectionDefault from "SearchListSection.tsx";
+import SmartSearchRowDefault from "../../../../intelligence_layer/search/native/components/SmartSearchRow.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function keyExtractor(type) {
   type = type.type;
   if (constants2.DM === type) {
-    const _HermesInternal11 = HermesInternal;
+    const _HermesInternal12 = HermesInternal;
     let key = "" + type.section + "-" + type.props.user.id + "-" + type.props.guildId;
   } else if (constants2.GUILD_CHANNEL_MEMBER === type) {
-    const _HermesInternal10 = HermesInternal;
+    const _HermesInternal11 = HermesInternal;
     key = "" + type.props.user.id + "-" + type.props.guildId;
   } else if (constants2.SEARCH_HISTORY_ITEM === type) {
     const searchHistoryItem = type.props.searchHistoryItem;
@@ -41,7 +42,7 @@ function keyExtractor(type) {
         const mapped = tags.map((text) => text.text);
         joined = mapped.join(" ");
       }
-      const _HermesInternal9 = HermesInternal;
+      const _HermesInternal10 = HermesInternal;
       let combined = "" + searchHistoryItem.text + " " + joined;
     } else {
       if (constants.GROUP_DM !== type2) {
@@ -54,7 +55,7 @@ function keyExtractor(type) {
           }
         }
       }
-      const _HermesInternal8 = HermesInternal;
+      const _HermesInternal9 = HermesInternal;
       combined = "" + searchHistoryItem.channelId;
     }
     key = combined;
@@ -63,7 +64,7 @@ function keyExtractor(type) {
     const mapped1 = media.map((messageId) => "" + messageId.messageId + "-" + messageId.mediaIndex);
     key = mapped1.join("-");
   } else if (constants2.MEDIA === type) {
-    const _HermesInternal7 = HermesInternal;
+    const _HermesInternal8 = HermesInternal;
     key = "" + type.props.media.messageId + "-" + type.props.media.mediaIndex;
   } else {
     if (constants2.MEDIA_PLACEHOLDER !== type) {
@@ -71,30 +72,32 @@ function keyExtractor(type) {
         if (constants2.MESSAGE_PLACEHOLDER !== type) {
           if (constants2.GUILD_CHANNEL_MEMBER_PLACEHOLDER !== type) {
             if (constants2.GROUP_DM === type) {
-              const _HermesInternal6 = HermesInternal;
+              const _HermesInternal7 = HermesInternal;
               key = "" + type.section + "-" + type.props.channel.id;
             } else {
               if (constants2.GUILD_TEXT_CHANNEL !== type) {
                 if (constants2.GUILD_VOICE_CHANNEL !== type) {
                   if (constants2.MESSAGE === type) {
-                    const _HermesInternal4 = HermesInternal;
+                    const _HermesInternal5 = HermesInternal;
                     key = "" + type.props.message.id;
                   } else if (constants2.LINK === type) {
-                    const _HermesInternal3 = HermesInternal;
+                    const _HermesInternal4 = HermesInternal;
                     key = "" + type.props.data.messageId + "-" + type.props.data.linkIndex;
                   } else if (constants2.FILE === type) {
-                    const _HermesInternal2 = HermesInternal;
+                    const _HermesInternal3 = HermesInternal;
                     key = "" + type.props.data.messageId + "-" + type.props.data.fileIndex;
                   } else if (constants2.GENERIC === type) {
-                    const _HermesInternal = HermesInternal;
+                    const _HermesInternal2 = HermesInternal;
                     key = "" + type.props.text;
                   } else if (constants2.SECTION === type) {
-                    const _HermesInternal12 = HermesInternal;
+                    const _HermesInternal = HermesInternal;
                     key = "" + type.props.title;
+                  } else if (constants2.INTELLIGENCE_SMART_SEARCH === type) {
+                    key = type.props.requestKey;
                   }
                 }
               }
-              const _HermesInternal5 = HermesInternal;
+              const _HermesInternal6 = HermesInternal;
               key = "" + type.props.channel.id;
             }
           }
@@ -172,20 +175,24 @@ function renderItem(item) {
     const merged13 = Object.assign(item.props);
     return React6(GenericTextRowDefault, obj15);
   } else if (constants2.SECTION === type) {
-    const obj = {};
+    const obj16 = {};
     const merged14 = Object.assign(item.props);
-    return React6(SearchListSectionDefault, obj);
+    return React6(SearchListSectionDefault, obj16);
+  } else if (constants2.INTELLIGENCE_SMART_SEARCH === type) {
+    const obj = {};
+    const merged15 = Object.assign(item.props);
+    return React6(SmartSearchRowDefault, obj);
   } else {
     return null;
   }
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const SearchConstants = fn(8125);
+const SearchConstants = fn(8207);
 ({ SearchHistoryItemTypes: metroRequire, SearchListItemTypes: closure_7 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_10 = createStyles.createStyles({ container: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/SearchList.tsx");
@@ -254,7 +261,7 @@ export default noop.memo(function SearchList(arg0) {
   obj4.ListFooterComponent = ListFooterComponent;
   obj4.ItemSeparatorComponent = ItemSeparatorComponent;
   obj4.numColumns = numColumns;
-  items[1] = React6(_mod9002.AnimatedFlashList, obj4);
+  items[1] = React6(_mod9073.AnimatedFlashList, obj4);
   obj.children = items;
   return React7(React4, obj);
 });

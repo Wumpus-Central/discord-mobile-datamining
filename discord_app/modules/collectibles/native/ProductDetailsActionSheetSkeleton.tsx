@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 const obj2 = {
   container: { flex: 1 },
   scrollArea: { flex: 1 },
@@ -62,7 +62,7 @@ let obj6 = {
   paddingTop: nativeDefault.space.PX_8,
   paddingBottom: nativeDefault.space.PX_16,
 };
-obj2.purchaseButton = { height: fn(5192).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
+obj2.purchaseButton = { height: fn(5276).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
 let closure_7 = createStyles.createStyles(obj2);
 const __initData = {
   code: "function ProductDetailsActionSheetSkeletonTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}",
@@ -73,20 +73,20 @@ let result = size.fileFinishedImporting("modules/collectibles/native/ProductDeta
 export default function ProductDetailsActionSheetSkeleton() {
   const tmp = closure_7();
   let sharedValue;
-  sharedValue = sharedValue(4493).useSharedValue(0.3);
+  sharedValue = sharedValue(4559).useSharedValue(0.3);
   const items = [sharedValue];
   const effect = noop.useEffect(() => {
     const obj = ReanimatedRexport;
     const result = sharedValue.set(obj.withRepeat(timing.withTiming(1, { duration: 650 }), -1, true));
   }, items);
-  let obj = sharedValue(4493);
+  let obj = sharedValue(4559);
   const fn = function o() {
     return { opacity: sharedValue.get() };
   };
   fn.__closure = { opacity: sharedValue };
   fn.__workletHash = 4141895524740;
   fn.__initData = __initData;
-  const animatedStyle = sharedValue(4493).useAnimatedStyle(fn);
+  const animatedStyle = sharedValue(4559).useAnimatedStyle(fn);
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.scrollArea, children: null };
   const obj5 = { style: null };

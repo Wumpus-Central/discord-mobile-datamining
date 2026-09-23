@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 const obj2 = {
   chip: {
     color: nativeDefault.colors.MENTION_FOREGROUND,

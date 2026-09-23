@@ -101,7 +101,7 @@ export const useVibegrationsRevealedText = function useVibegrationsRevealedText(
             const obj2 = { target, length: target.length };
             dependencyMap(obj2);
           }
-          obj = closure_0(17045);
+          obj = closure_0(17102);
         }
         obj = vibegrationsPageVisibility;
         return vibegrationsPageVisibility.subscribePageVisibility(flushIfHidden);
@@ -123,8 +123,8 @@ export const useVibegrationsRevealedText = function useVibegrationsRevealedText(
     obj5 = { target: source, length: null };
     if (streaming) {
       ({ target, length } = tmp2);
-      let length2 = target(17044).reconcileRevealedLength(target, source, length);
-      const targetResult = target(17044);
+      let length2 = target(17101).reconcileRevealedLength(target, source, length);
+      const targetResult = target(17101);
     } else {
       length2 = source.length;
     }

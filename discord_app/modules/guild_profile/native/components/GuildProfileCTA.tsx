@@ -7,11 +7,13 @@ import MemberVerificationModalActionCreators from "../../../guild_member_verific
 import GuildDiscoveryUtils from "../../../../utils/GuildDiscoveryUtils.tsx";
 import transitionToGuild from "../../../routing/transitionToGuild.native.tsx";
 import InstantInviteActionCreatorsDefault from "../../../../actions/InstantInviteActionCreators.tsx";
+import handleNSFWGuildInvite from "../../../age_gate/native/handleNSFWGuildInvite.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
+import InviteStore from "../../../../stores/InviteStore.tsx";
 
 require = fn;
 const AnalyticsObjects = fn(1074).AnalyticsObjects;
-let constants = fn(1084).ProfileCustomizationScrollPositions;
+const constants = fn(1084).ProfileCustomizationScrollPositions;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_profile/native/components/GuildProfileCTA.tsx");
@@ -20,13 +22,12 @@ export default function GuildProfileCTA(profile) {
   profile = profile.profile;
   let guildId;
   let validInviteKey;
-  constants = undefined;
   ({ context, inviteKey } = profile);
-  const tmp2 = guildId(validInviteKey[4])(profile, context, inviteKey);
+  const tmp2 = guildId(validInviteKey[5])(profile, context, inviteKey);
   guildId = tmp2.guildId;
   validInviteKey = tmp2.validInviteKey;
   const ctaType = tmp2.ctaType;
-  noop = guildId(validInviteKey[5])({ scrollPosition: constants.GUILD_TAG });
+  noop = guildId(validInviteKey[6])({ scrollPosition: constants.GUILD_TAG });
   const items = [guildId];
   const items1 = [guildId, validInviteKey];
   const callback = noop.useCallback(() => {
@@ -35,14 +36,25 @@ export default function GuildProfileCTA(profile) {
   }, items);
   const callback1 = noop.useCallback(() => {
     if (null != validInviteKey) {
+      function join() {
+        const result = guildId(validInviteKey[9]).acceptInviteAndTransitionToInviteChannel({
+          inviteKey,
+          context: { location: "guild_profile" },
+        });
+      }
       const _HermesInternal = HermesInternal;
       ActionSheetActionCreatorsDefault.hideActionSheet("GuildProfileActionSheet:" + guildId);
-      const obj3 = { inviteKey: tmp, context: { location: "guild_profile" } };
-      const result = InstantInviteActionCreatorsDefault.acceptInviteAndTransitionToInviteChannel(obj3);
+      const inviteKey = validInviteKey;
+      const obj = { onConfirm: join };
+      if (!obj4.handleNSFWGuildInvite(InviteStore.getInvite(validInviteKey), obj)) {
+        const obj2 = { inviteKey: validInviteKey, context: { location: "guild_profile" } };
+        let result = InstantInviteActionCreatorsDefault.acceptInviteAndTransitionToInviteChannel(obj2);
+        const tmp3Result = InstantInviteActionCreatorsDefault;
+      }
+      obj4 = handleNSFWGuildInvite;
     }
   }, items1);
-  const tmp5 = guildId(validInviteKey[9])(guildId);
-  constants = tmp5;
+  const tmp5 = guildId(validInviteKey[11])(guildId);
   const items2 = [guildId];
   let applicationStatus;
   if (tmp5 != null) {
@@ -83,58 +95,58 @@ export default function GuildProfileCTA(profile) {
     GuildDiscoveryUtils.startLurking(guildId, { object: AnalyticsObjects.GUILD_PROFILE });
   }, items4);
   const memo = obj2.useMemo(() => ({ grow: true, size: "lg", variant: "active" }), []);
-  if (profile(validInviteKey[4]).CTATypes.IS_MEMBER === ctaType) {
+  if (profile(validInviteKey[5]).CTATypes.IS_MEMBER === ctaType) {
     let obj3 = {};
     const merged = Object.assign(memo);
     obj3.onPress = callback;
-    const intl7 = tmp11(tmp[16]).intl;
-    obj3.text = intl7.string(tmp11(tmp[16]).t.KLOhbO);
-    return jsx(tmp11(tmp[15]).Button, {});
-  } else if (tmp11(tmp[4]).CTATypes.ADOPT_TAG === ctaType) {
-    const obj4 = {};
+    const intl7 = tmp11(tmp[18]).intl;
+    obj3.text = intl7.string(tmp11(tmp[18]).t.KLOhbO);
+    return jsx(tmp11(tmp[17]).Button, {});
+  } else if (tmp11(tmp[5]).CTATypes.ADOPT_TAG === ctaType) {
+    let obj4 = {};
     const merged1 = Object.assign(memo);
     obj4.onPress = function handleGoToTagSettings() {
       ActionSheetActionCreatorsDefault.hideActionSheet("GuildProfileActionSheet:" + guildId);
       closure_3();
     };
-    const intl6 = tmp11(tmp[16]).intl;
-    obj4.text = intl6.string(tmp11(tmp[16]).t.cQDYRu);
-    return jsx(tmp11(tmp[15]).Button, {});
-  } else if (tmp11(tmp[4]).CTATypes.HAS_APPLICATION === ctaType) {
+    const intl6 = tmp11(tmp[18]).intl;
+    obj4.text = intl6.string(tmp11(tmp[18]).t.cQDYRu);
+    return jsx(tmp11(tmp[17]).Button, {});
+  } else if (tmp11(tmp[5]).CTATypes.HAS_APPLICATION === ctaType) {
     const obj5 = {};
     const merged2 = Object.assign(memo);
     obj5.onPress = callback2;
-    const intl5 = tmp11(tmp[16]).intl;
-    obj5.text = intl5.string(tmp11(tmp[16]).t["4yfIDk"]);
-    return jsx(tmp11(tmp[15]).Button, {});
-  } else if (tmp11(tmp[4]).CTATypes.APPLY_TO_JOIN === ctaType) {
+    const intl5 = tmp11(tmp[18]).intl;
+    obj5.text = intl5.string(tmp11(tmp[18]).t["4yfIDk"]);
+    return jsx(tmp11(tmp[17]).Button, {});
+  } else if (tmp11(tmp[5]).CTATypes.APPLY_TO_JOIN === ctaType) {
     const obj6 = {};
     const merged3 = Object.assign(memo);
     obj6.onPress = callback3;
-    const intl4 = tmp11(tmp[16]).intl;
-    obj6.text = intl4.string(tmp11(tmp[16]).t["7XdMW2"]);
-    return jsx(tmp11(tmp[15]).Button, {});
-  } else if (tmp11(tmp[4]).CTATypes.LURK_DISCOVERABLE === ctaType) {
+    const intl4 = tmp11(tmp[18]).intl;
+    obj6.text = intl4.string(tmp11(tmp[18]).t["7XdMW2"]);
+    return jsx(tmp11(tmp[17]).Button, {});
+  } else if (tmp11(tmp[5]).CTATypes.LURK_DISCOVERABLE === ctaType) {
     const obj7 = {};
     const merged4 = Object.assign(memo);
     obj7.onPress = callback4;
-    const intl3 = tmp11(tmp[16]).intl;
-    obj7.text = intl3.string(tmp11(tmp[16]).t.XpeFYr);
-    return jsx(tmp11(tmp[15]).Button, {});
-  } else if (tmp11(tmp[4]).CTATypes.JOIN_VIA_INVITE === ctaType) {
+    const intl3 = tmp11(tmp[18]).intl;
+    obj7.text = intl3.string(tmp11(tmp[18]).t.XpeFYr);
+    return jsx(tmp11(tmp[17]).Button, {});
+  } else if (tmp11(tmp[5]).CTATypes.JOIN_VIA_INVITE === ctaType) {
     const obj8 = {};
     const merged5 = Object.assign(memo);
     obj8.onPress = callback1;
-    const intl2 = tmp11(tmp[16]).intl;
-    obj8.text = intl2.string(tmp11(tmp[16]).t.XpeFYr);
-    return jsx(tmp11(tmp[15]).Button, {});
-  } else if (tmp11(tmp[4]).CTATypes.ACCEPT_ROLES === ctaType) {
+    const intl2 = tmp11(tmp[18]).intl;
+    obj8.text = intl2.string(tmp11(tmp[18]).t.XpeFYr);
+    return jsx(tmp11(tmp[17]).Button, {});
+  } else if (tmp11(tmp[5]).CTATypes.ACCEPT_ROLES === ctaType) {
     const obj9 = {};
     const merged6 = Object.assign(memo);
     obj9.onPress = callback1;
-    const intl = tmp11(tmp[16]).intl;
-    obj9.text = intl.string(tmp11(tmp[16]).t.MMlhsr);
-    return jsx(tmp11(tmp[15]).Button, {});
+    const intl = tmp11(tmp[18]).intl;
+    obj9.text = intl.string(tmp11(tmp[18]).t.MMlhsr);
+    return jsx(tmp11(tmp[17]).Button, {});
   } else {
     return null;
   }

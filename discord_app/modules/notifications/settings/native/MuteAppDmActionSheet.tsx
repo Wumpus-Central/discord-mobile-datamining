@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = {
   iconContainer: { alignItems: "center", marginBottom: 8 },
   iconBackground: null,
@@ -57,7 +57,7 @@ export default function MuteAppDMActionSheet(channel) {
   channel = channel.channel;
   let obj = { startExpanded: true, children: null };
   let obj2 = { style: tmp.content, children: null };
-  const obj3 = {
+  let obj3 = {
     style: tmp.iconContainer,
     children: closure_4(View, {
       style: tmp.iconBackground,
@@ -66,7 +66,7 @@ export default function MuteAppDMActionSheet(channel) {
     }),
   };
   const items = [closure_4(View, obj3), , , ,];
-  const obj5 = {
+  let obj5 = {
     variant: "heading-lg/bold",
     color: "mobile-text-heading-primary",
     style: tmp.headerText,
@@ -83,28 +83,35 @@ export default function MuteAppDMActionSheet(channel) {
   const intl3 = require("util").intl;
   obj7.text = intl3.string(require("util").t.uAmAiL);
   obj7.onPress = function onPress() {
-    const result = NotificationSettingsModalActionCreatorsDefault.updateChannelOverrideSettings(
-      null,
-      channel.id,
-      { muted: true },
-      NotificationSettingsUtils.NotificationLabels.Muted,
-    );
+    let obj = NotificationSettingsModalActionCreatorsDefault;
+    const result = obj.updateChannelOverrideSettings({
+      guildId: null,
+      channelId: channel.id,
+      settings: { muted: true },
+      label: NotificationSettingsUtils.NotificationLabels.Muted,
+    });
+    const obj2 = {
+      guildId: null,
+      channelId: channel.id,
+      settings: { muted: true },
+      label: NotificationSettingsUtils.NotificationLabels.Muted,
+    };
     ActionSheetActionCreatorsDefault.hideActionSheet();
-    const obj4 = { key: "NOTIFICATIONS_MUTED", content: null, icon: null };
+    const obj5 = { key: "NOTIFICATIONS_MUTED", content: null, icon: null };
     const intl = util.intl;
-    obj4.content = intl.string(util.t.EgGpkx);
-    obj4.icon = function icon() {
+    obj5.content = intl.string(util.t.EgGpkx);
+    obj5.icon = function icon() {
       const obj = {
         style: closure_1_0.mutedNotificationContainer,
         children: closure_2_4(closure_0(1177).Icon, {
-          source: channel(8211),
+          source: channel(8293),
           color: channel(576).unsafe_rawColors.WHITE,
           style: closure_1_0.mutedNotification,
         }),
       };
       return closure_2_4(View, obj);
     };
-    ToastActionCreatorsDefault.open(obj4);
+    ToastActionCreatorsDefault.open(obj5);
   };
   items[3] = closure_4(require("components/Button/Button").Button, obj7);
   const obj8 = { style: tmp.dismissButtonContainer, children: null };
@@ -112,7 +119,7 @@ export default function MuteAppDMActionSheet(channel) {
   const intl4 = require("util").intl;
   obj9.text = intl4.string(require("util").t.WAI6xu);
   obj9.onPress = function onPress() {
-    channel(4724).hideActionSheet();
+    channel(4794).hideActionSheet();
   };
   obj8.children = closure_4(require("components/Button/Button").Button, obj9);
   items[4] = closure_4(View, obj8);

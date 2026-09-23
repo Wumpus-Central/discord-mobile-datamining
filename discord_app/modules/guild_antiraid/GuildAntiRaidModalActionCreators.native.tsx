@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidM
 
 export const openReportRaidModal = function openReportRaidModal(id) {
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(14240, dependencyMap.paths),
+    asyncRequireImpl(14322, dependencyMap.paths),
     {
       onCloseModal() {
         ModalActionCreatorsDefault.popWithKey(closure_1_3);

@@ -5,14 +5,14 @@ import dismissible_content from "../../../../discord_common/js/packages/protos/d
 import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef11859 from "../../../../_runtime/metro/11859__.js";
+import _modDef11935 from "../../../../_runtime/metro/11935__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = {
   title: { marginBottom: nativeDefault.space.PX_4, textAlign: "center" },
   footer: null,
@@ -71,7 +71,7 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   }, items);
   let obj = { showGradient: true, scrollable: true, startExpanded: true, header: null, footer: null, children: null };
   const obj2 = { style: tmp.titleImage, children: null };
-  const obj3 = { source: _modDef11859, resizeMode: "contain" };
+  const obj3 = { source: _modDef11935, resizeMode: "contain" };
   obj2.children = closure_5(FastImageDefault, obj3);
   obj.header = closure_5(View, obj2);
   const obj4 = { style: null, children: null };
@@ -82,7 +82,7 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   const intl = onClick(1115).intl;
   obj6.text = intl.string(onClick(1115).t["3PatSz"]);
   obj6.onPress = callback;
-  const items2 = [closure_5(onClick(5187).Button, obj6)];
+  const items2 = [closure_5(onClick(5271).Button, obj6)];
   const obj7 = { style: tmp.button, children: null };
   const obj8 = { text: null, onPress: null, variant: "tertiary" };
   const intl2 = onClick(1115).intl;
@@ -90,7 +90,7 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   obj8.onPress = function onPress() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  obj7.children = closure_5(onClick(5187).Button, obj8);
+  obj7.children = closure_5(onClick(5271).Button, obj8);
   items2[1] = closure_5(View, obj7);
   obj4.children = items2;
   obj.footer = closure_6(View, obj4);
@@ -98,33 +98,33 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   const obj10 = { style: tmp.title, variant: "heading-lg/extrabold", accessibilityRole: "header", children: null };
   const intl3 = onClick(1115).intl;
   obj10.children = intl3.string(onClick(1115).t["bkqux/"]);
-  const items3 = [closure_5(onClick(4753).Text, obj10), ,];
+  const items3 = [closure_5(onClick(4823).Text, obj10), ,];
   const obj11 = { style: tmp.body, variant: "text-md/medium", color: "text-muted", children: null };
   const intl4 = onClick(1115).intl;
   obj11.children = intl4.string(onClick(1115).t.N6TdqN);
-  items3[1] = closure_5(onClick(4753).Text, obj11);
+  items3[1] = closure_5(onClick(4823).Text, obj11);
   const obj12 = { style: tmp.noticeContainer, children: null };
   const obj13 = { style: tmp.innerContainer, children: null };
   const obj5 = { padding: 16, paddingBottom: useSafeAreaInsetsDefault().bottom + 16 };
-  const items4 = [closure_5(View, { style: tmp.item, children: closure_5(onClick(11860).TimerIcon, { size: "sm" }) })];
+  const items4 = [closure_5(View, { style: tmp.item, children: closure_5(onClick(11936).TimerIcon, { size: "sm" }) })];
   const obj15 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
   const intl5 = onClick(1115).intl;
   obj15.children = intl5.string(onClick(1115).t.Fq3DJb);
-  items4[1] = closure_5(onClick(4753).Text, obj15);
+  items4[1] = closure_5(onClick(4823).Text, obj15);
   obj13.children = items4;
   const items5 = [closure_6(View, obj13)];
   const obj16 = { style: tmp.secondInnerContainer, children: null };
-  const obj14 = { style: tmp.item, children: closure_5(onClick(11860).TimerIcon, { size: "sm" }) };
-  const items6 = [closure_5(View, { style: tmp.item, children: closure_5(onClick(4699).LinkIcon, { size: "sm" }) })];
+  const obj14 = { style: tmp.item, children: closure_5(onClick(11936).TimerIcon, { size: "sm" }) };
+  const items6 = [closure_5(View, { style: tmp.item, children: closure_5(onClick(4769).LinkIcon, { size: "sm" }) })];
   const obj18 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
   const intl6 = onClick(1115).intl;
   obj18.children = intl6.string(onClick(1115).t.XKbf2G);
-  items6[1] = closure_5(onClick(4753).Text, obj18);
+  items6[1] = closure_5(onClick(4823).Text, obj18);
   obj16.children = items6;
   items5[1] = closure_6(View, obj16);
   obj12.children = items5;
   items3[2] = closure_6(View, obj12);
   obj9.children = items3;
-  obj.children = closure_6(onClick(6871).BottomSheetScrollView, obj9);
-  return closure_5(onClick(7397).BottomSheet, obj);
+  obj.children = closure_6(onClick(6955).BottomSheetScrollView, obj9);
+  return closure_5(onClick(7481).BottomSheet, obj);
 }

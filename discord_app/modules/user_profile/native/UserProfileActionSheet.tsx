@@ -2,7 +2,7 @@
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import isChangelogUserDefault from "../../changelog/utils/isChangelogUser.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
-import BottomSheetModal from "../../../../_runtime/06871_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/06955_BottomSheetModal.js";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet.tsx";
@@ -69,13 +69,13 @@ function ActionSheetAlignedView(animatedPosition) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const UserProfileThemeTypes = fn(7455).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7539).UserProfileThemeTypes;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, EMPTY_STRING_SNOWFLAKE_ID: map1, UserSettingsSections: closure_14 } = Constants);
-const ACTION_SHEET_MAX_WIDTH = fn(7398).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(7482).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_18 = createStyles.createStyles({
   container: { flex: 1 },
   profileContainer: { position: "relative" },
@@ -210,15 +210,15 @@ export default noop.memo(function UserProfileActionSheet(userId) {
   const memo = isPreviewingChanges.useMemo(() => {
     closure_0 = sharedValue2;
     return (animatedRef, sharedValue, lockableScrollableContentOffsetY) => {
-      const scrollEventsHandlersDefault = animatedScrollableState(6871).useScrollEventsHandlersDefault(
+      const scrollEventsHandlersDefault = animatedScrollableState(6955).useScrollEventsHandlersDefault(
         animatedRef,
         sharedValue,
         lockableScrollableContentOffsetY,
       );
-      const obj = animatedScrollableState(6871);
-      animatedScrollableState = animatedScrollableState(6871).useBottomSheetInternal().animatedScrollableState;
+      const obj = animatedScrollableState(6955);
+      animatedScrollableState = animatedScrollableState(6955).useBottomSheetInternal().animatedScrollableState;
       const handleOnScroll = scrollEventsHandlersDefault.handleOnScroll;
-      const obj2 = animatedScrollableState(6871);
+      const obj2 = animatedScrollableState(6955);
       const fn = function s(contentOffset, arg1) {
         if (handleOnScroll != null) {
           tmp(contentOffset, arg1);
@@ -230,12 +230,12 @@ export default noop.memo(function UserProfileActionSheet(userId) {
         }
         const result = animatedScrollableState.set(num);
       };
-      const obj3 = animatedScrollableState(4493);
+      const obj3 = animatedScrollableState(4559);
       fn.__closure = {
         defaultHandleOnScroll: handleOnScroll,
         scrollPosition: animatedScrollableState,
         animatedScrollableState,
-        SCROLLABLE_STATE: animatedScrollableState(6871).SCROLLABLE_STATE,
+        SCROLLABLE_STATE: animatedScrollableState(6955).SCROLLABLE_STATE,
       };
       fn.__workletHash = 13254130622789;
       fn.__initData = __initData;
@@ -245,7 +245,7 @@ export default noop.memo(function UserProfileActionSheet(userId) {
         defaultHandleOnScroll: handleOnScroll,
         scrollPosition: animatedScrollableState,
         animatedScrollableState,
-        SCROLLABLE_STATE: animatedScrollableState(6871).SCROLLABLE_STATE,
+        SCROLLABLE_STATE: animatedScrollableState(6955).SCROLLABLE_STATE,
       };
       const merged = Object.assign(scrollEventsHandlersDefault);
       obj5.handleOnScroll = obj3.useWorkletCallback(fn, items);

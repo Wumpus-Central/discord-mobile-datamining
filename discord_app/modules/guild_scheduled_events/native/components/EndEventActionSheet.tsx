@@ -10,7 +10,7 @@ const View = fn(17).View;
 let closure_4 = fn(2048).EXPLICIT_END_EVENT_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = {
   container: { paddingVertical: 24, paddingHorizontal: 16, alignItems: "center" },
   title: {
@@ -30,7 +30,7 @@ const result = size.fileFinishedImporting("modules/guild_scheduled_events/native
 export default function EndEventActionSheet(channel) {
   channel = channel.channel;
   const tmp = closure_7();
-  const activeEvent = channel(9756).useActiveEvent(channel.id);
+  const activeEvent = channel(9829).useActiveEvent(channel.id);
   if (null == activeEvent) {
     return null;
   } else {
@@ -47,13 +47,13 @@ export default function EndEventActionSheet(channel) {
     const obj5 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: null };
     const intl2 = tmp2(1115).intl;
     obj5.children = intl2.string(tmp2(1115).t["0I0B8f"]);
-    items[1] = closure_5(tmp2(4753).Text, obj5);
+    items[1] = closure_5(tmp2(4823).Text, obj5);
     const obj6 = { style: tmp.cancelButtonContainer, children: null };
     const obj7 = { text: null, grow: true, onPress: null };
     const intl3 = tmp2(1115).intl;
     obj7.text = intl3.string(tmp2(1115).t.P60OAX);
     obj7.onPress = handleClose;
-    obj6.children = closure_5(tmp2(5187).Button, obj7);
+    obj6.children = closure_5(tmp2(5271).Button, obj7);
     items[2] = closure_5(View, obj6);
     const obj8 = { style: tmp.confirmButtonContainer, children: null };
     const obj9 = { text: null, variant: "destructive", grow: true, onPress: null };
@@ -66,11 +66,11 @@ export default function EndEventActionSheet(channel) {
         CallsUtils.handleDisconnect(channel);
       }
     };
-    obj8.children = closure_5(tmp2(5187).Button, obj9);
+    obj8.children = closure_5(tmp2(5271).Button, obj9);
     items[3] = closure_5(View, obj8);
     obj3.children = items;
     obj2.children = closure_6(View, obj3);
-    return closure_5(activeEvent(8874), obj2);
+    return closure_5(activeEvent(8945), obj2);
   }
-  let obj = channel(9756);
+  let obj = channel(9829);
 }

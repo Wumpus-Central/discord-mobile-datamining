@@ -15,8 +15,8 @@ export default function maybeShowVibegrationsFeedback(arg0) {
   importDefault = countSettledTurnsResult;
   let result = countSettledTurnsResult < require("vibegrationsFeedback").MINIMUM_SETTLED_TURNS_FOR_FEEDBACK;
   if (!result) {
-    result = tmp(17011).hasShownFeedbackForProject(arg0);
-    const tmpResult = tmp(17011);
+    result = tmp(17068).hasShownFeedbackForProject(arg0);
+    const tmpResult = tmp(17068);
   }
   if (!result) {
     const result1 = FeedbackManagerDefault.possiblyShowFeedbackModal(FeedbackType.VIBEGRATIONS, () => {

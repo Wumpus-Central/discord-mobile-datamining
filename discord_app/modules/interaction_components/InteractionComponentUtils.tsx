@@ -1,6 +1,5 @@
 // discord_app/modules/interaction_components/InteractionComponentUtils.tsx
 import LoggerDefault from "../debug/Logger.tsx";
-import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import util from "../../intl/index.native.tsx";
 import v1 from "../../../_runtime/01255_v1.js";
 import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
@@ -21451,20 +21450,20 @@ function transformComponent(accessory, items) {
       const obj2 = { type: null, id: null, components: null };
       const found = mapped.filter(tmp(1370).isNotNullish);
       obj2.type = tmp(1978).ComponentType.ACTION_ROW;
-      obj2.id = tmp(4988).asComponentId(items.join(","));
+      obj2.id = tmp(5058).asComponentId(items.join(","));
       obj2.components = found;
       return obj2;
     } else if (tmp(1978).ComponentType.BUTTON === type2) {
-      let tmp45;
+      let tmp40;
       if (null != accessory.emoji) {
         let emoji = accessory.emoji;
         if (typeof getEmoji === "function") {
           const obj4 = { id: null, name: null, animated: null, src: null };
-          ({ id: obj46.id, name: obj46.name, animated: obj46.animated } = emoji);
+          ({ id: obj47.id, name: obj47.name, animated: obj47.animated } = emoji);
           let emojiURL;
           if (null != emoji.id) {
             let obj6 = { id: null, animated: null, size: 48 };
-            ({ id: obj48.id, animated } = emoji);
+            ({ id: obj49.id, animated } = emoji);
             if (!animated) {
               animated = false;
             }
@@ -21472,25 +21471,25 @@ function transformComponent(accessory, items) {
             emojiURL = AvatarUtilsDefault.getEmojiURL(obj6);
           }
           obj4.src = emojiURL;
-          tmp45 = obj4;
+          tmp40 = obj4;
         } else {
           throw new TypeError("Trying to call a non-function");
         }
       }
-      let obj7 = { type: tmp(1978).ComponentType.BUTTON, id: tmp(4988).asComponentId(items.join(",")), customId: null, style: null, disabled: null, url: null, label: null, emoji: null, skuId: null };
-      ({ custom_id: obj49.customId, style: obj49.style, disabled: obj49.disabled, url: obj49.url, label: obj49.label } = accessory);
-      obj7.emoji = tmp45;
+      let obj7 = { type: tmp(1978).ComponentType.BUTTON, id: tmp(5058).asComponentId(items.join(",")), customId: null, style: null, disabled: null, url: null, label: null, emoji: null, skuId: null };
+      ({ custom_id: obj50.customId, style: obj50.style, disabled: obj50.disabled, url: obj50.url, label: obj50.label } = accessory);
+      obj7.emoji = tmp40;
       obj7.skuId = accessory.sku_id;
       return obj7;
     } else if (tmp(1978).ComponentType.STRING_SELECT === type2) {
-      const obj9 = { type: tmp(1978).ComponentType.STRING_SELECT, id: tmp(4988).asComponentId(items.join(",")), customId: null, disabled: null, required: null, options: null, placeholder: null, minValues: null, maxValues: null };
-      ({ custom_id: obj44.customId, disabled: obj44.disabled, required: required9 } = accessory);
+      const obj8 = { type: tmp(1978).ComponentType.STRING_SELECT, id: tmp(5058).asComponentId(items.join(",")), customId: null, disabled: null, required: null, options: null, placeholder: null, minValues: null, maxValues: null };
+      ({ custom_id: obj45.customId, disabled: obj45.disabled, required: required9 } = accessory);
       if (required9 == null) {
         required9 = false;
       }
-      obj9.required = required9;
+      obj8.required = required9;
       const options = accessory.options;
-      obj9.options = options.map((label) => {
+      obj8.options = options.map((label) => {
         const obj = { type: InteractionComponentTypes.SelectOptionType.STRING, label: label.label, value: label.value, default: label.default, description: label.description, emoji: null };
         let tmp2;
         if (null != label.emoji) {
@@ -21519,53 +21518,53 @@ function transformComponent(accessory, items) {
         obj.emoji = tmp2;
         return obj;
       });
-      ({ placeholder: obj44.placeholder, min_values: obj44.minValues, max_values: obj44.maxValues } = accessory);
-      return obj9;
+      ({ placeholder: obj45.placeholder, min_values: obj45.minValues, max_values: obj45.maxValues } = accessory);
+      return obj8;
     } else if (tmp(1978).ComponentType.TEXT_INPUT === type2) {
-      const obj10 = { type: accessory.type, id: tmp(4988).asComponentId(items.join(",")), style: null, customId: null, label: null, value: null, placeholder: null, disabled: null, required: null, minLength: null, maxLength: null };
-      ({ style: obj42.style, custom_id: obj42.customId, label: obj42.label, value: obj42.value, placeholder: obj42.placeholder, disabled: obj42.disabled, required: required8 } = accessory);
+      const obj9 = { type: accessory.type, id: tmp(5058).asComponentId(items.join(",")), style: null, customId: null, label: null, value: null, placeholder: null, disabled: null, required: null, minLength: null, maxLength: null };
+      ({ style: obj43.style, custom_id: obj43.customId, label: obj43.label, value: obj43.value, placeholder: obj43.placeholder, disabled: obj43.disabled, required: required8 } = accessory);
       if (required8 == null) {
         required8 = false;
       }
-      obj10.required = required8;
-      ({ min_length: obj42.minLength, max_length: obj42.maxLength } = accessory);
-      return obj10;
+      obj9.required = required8;
+      ({ min_length: obj43.minLength, max_length: obj43.maxLength } = accessory);
+      return obj9;
     } else if (tmp(1978).ComponentType.USER_SELECT === type2) {
-      const obj12 = { type: tmp(1978).ComponentType.USER_SELECT, id: tmp(4988).asComponentId(items.join(",")), customId: null, disabled: null, required: null, placeholder: null, minValues: null, maxValues: null, defaultValues: null };
-      ({ custom_id: obj40.customId, disabled: obj40.disabled, required: required7 } = accessory);
+      const obj10 = { type: tmp(1978).ComponentType.USER_SELECT, id: tmp(5058).asComponentId(items.join(",")), customId: null, disabled: null, required: null, placeholder: null, minValues: null, maxValues: null, defaultValues: null };
+      ({ custom_id: obj41.customId, disabled: obj41.disabled, required: required7 } = accessory);
       if (required7 == null) {
         required7 = false;
       }
-      obj12.required = required7;
-      ({ placeholder: obj40.placeholder, min_values: obj40.minValues, max_values: obj40.maxValues, default_values: obj40.defaultValues } = accessory);
-      return obj12;
+      obj10.required = required7;
+      ({ placeholder: obj41.placeholder, min_values: obj41.minValues, max_values: obj41.maxValues, default_values: obj41.defaultValues } = accessory);
+      return obj10;
     } else if (tmp(1978).ComponentType.ROLE_SELECT === type2) {
-      const obj14 = { type: tmp(1978).ComponentType.ROLE_SELECT, id: tmp(4988).asComponentId(items.join(",")), customId: null, disabled: null, required: null, placeholder: null, minValues: null, maxValues: null, defaultValues: null };
-      ({ custom_id: obj38.customId, disabled: obj38.disabled, required: required6 } = accessory);
+      const obj11 = { type: tmp(1978).ComponentType.ROLE_SELECT, id: tmp(5058).asComponentId(items.join(",")), customId: null, disabled: null, required: null, placeholder: null, minValues: null, maxValues: null, defaultValues: null };
+      ({ custom_id: obj39.customId, disabled: obj39.disabled, required: required6 } = accessory);
       if (required6 == null) {
         required6 = false;
       }
-      obj14.required = required6;
-      ({ placeholder: obj38.placeholder, min_values: obj38.minValues, max_values: obj38.maxValues, default_values: obj38.defaultValues } = accessory);
-      return obj14;
+      obj11.required = required6;
+      ({ placeholder: obj39.placeholder, min_values: obj39.minValues, max_values: obj39.maxValues, default_values: obj39.defaultValues } = accessory);
+      return obj11;
     } else if (tmp(1978).ComponentType.MENTIONABLE_SELECT === type2) {
-      const obj15 = { type: tmp(1978).ComponentType.MENTIONABLE_SELECT, id: tmp(4988).asComponentId(items.join(",")), customId: null, disabled: null, required: null, placeholder: null, minValues: null, maxValues: null, defaultValues: null };
-      ({ custom_id: obj36.customId, disabled: obj36.disabled, required: required5 } = accessory);
+      const obj13 = { type: tmp(1978).ComponentType.MENTIONABLE_SELECT, id: tmp(5058).asComponentId(items.join(",")), customId: null, disabled: null, required: null, placeholder: null, minValues: null, maxValues: null, defaultValues: null };
+      ({ custom_id: obj37.customId, disabled: obj37.disabled, required: required5 } = accessory);
       if (required5 == null) {
         required5 = false;
       }
-      obj15.required = required5;
-      ({ placeholder: obj36.placeholder, min_values: obj36.minValues, max_values: obj36.maxValues, default_values: obj36.defaultValues } = accessory);
-      return obj15;
+      obj13.required = required5;
+      ({ placeholder: obj37.placeholder, min_values: obj37.minValues, max_values: obj37.maxValues, default_values: obj37.defaultValues } = accessory);
+      return obj13;
     } else if (tmp(1978).ComponentType.CHANNEL_SELECT === type2) {
-      const obj16 = { type: tmp(1978).ComponentType.CHANNEL_SELECT, id: tmp(4988).asComponentId(items.join(",")), customId: null, disabled: null, required: null, placeholder: null, minValues: null, maxValues: null, channelTypes: null, defaultValues: null };
-      ({ custom_id: obj34.customId, disabled: obj34.disabled, required: required4 } = accessory);
+      const obj15 = { type: tmp(1978).ComponentType.CHANNEL_SELECT, id: tmp(5058).asComponentId(items.join(",")), customId: null, disabled: null, required: null, placeholder: null, minValues: null, maxValues: null, channelTypes: null, defaultValues: null };
+      ({ custom_id: obj35.customId, disabled: obj35.disabled, required: required4 } = accessory);
       if (required4 == null) {
         required4 = false;
       }
-      obj16.required = required4;
-      ({ placeholder: obj34.placeholder, min_values: obj34.minValues, max_values: obj34.maxValues, channel_types: obj34.channelTypes, default_values: obj34.defaultValues } = accessory);
-      return obj16;
+      obj15.required = required4;
+      ({ placeholder: obj35.placeholder, min_values: obj35.minValues, max_values: obj35.maxValues, channel_types: obj35.channelTypes, default_values: obj35.defaultValues } = accessory);
+      return obj15;
     } else if (tmp(1978).ComponentType.SECTION === type2) {
       const components1 = accessory.components;
       const mapped1 = components1.map((item, index) => {
@@ -21581,66 +21580,66 @@ function transformComponent(accessory, items) {
       const found1 = mapped1.filter(tmp(1370).isNotNullish);
       items = [];
       items[HermesBuiltin.arraySpread(items, 0)] = found1.length;
-      const tmp34 = transformComponent(accessory.accessory, items);
-      let tmp36 = null;
-      if (null != tmp34) {
-        tmp36 = tmp34;
+      const tmp29 = transformComponent(accessory.accessory, items);
+      let tmp31 = null;
+      if (null != tmp29) {
+        tmp31 = tmp29;
       }
-      let tmp37 = null;
+      let tmp32 = null;
       if (0 !== found1.length) {
-        tmp37 = null;
-        if (null != tmp36) {
-          const obj17 = { type: tmp(1978).ComponentType.SECTION, id: tmp(4988).asComponentId(items.join(",")), components: found1, accessory: tmp36 };
-          tmp37 = obj17;
-          const tmpResult32 = tmp(4988);
+        tmp32 = null;
+        if (null != tmp31) {
+          const obj16 = { type: tmp(1978).ComponentType.SECTION, id: tmp(5058).asComponentId(items.join(",")), components: found1, accessory: tmp31 };
+          tmp32 = obj16;
+          const tmpResult35 = tmp(5058);
         }
       }
-      return tmp37;
+      return tmp32;
     } else if (tmp(1978).ComponentType.TEXT_DISPLAY === type2) {
-      const obj18 = { type: tmp(1978).ComponentType.TEXT_DISPLAY, id: tmp(4988).asComponentId(items.join(",")), content: accessory.content };
-      return obj18;
+      const obj17 = { type: tmp(1978).ComponentType.TEXT_DISPLAY, id: tmp(5058).asComponentId(items.join(",")), content: accessory.content };
+      return obj17;
     } else if (tmp(1978).ComponentType.THUMBNAIL === type2) {
-      const obj19 = { type: tmp(1978).ComponentType.THUMBNAIL, id: tmp(4988).asComponentId(items.join(",")), media: null, description: null, spoiler: null };
-      const tmpResult34 = tmp(4988);
-      obj19.media = tmp(4987).toUnfurledMediaItem(accessory.media);
-      ({ description: obj27.description, spoiler: obj27.spoiler } = accessory);
-      return obj19;
+      const obj18 = { type: tmp(1978).ComponentType.THUMBNAIL, id: tmp(5058).asComponentId(items.join(",")), media: null, description: null, spoiler: null };
+      const tmpResult37 = tmp(5058);
+      obj18.media = tmp(5057).toUnfurledMediaItem(accessory.media);
+      ({ description: obj28.description, spoiler: obj28.spoiler } = accessory);
+      return obj18;
     } else if (tmp(1978).ComponentType.MEDIA_GALLERY === type2) {
-      const obj20 = { type: tmp(1978).ComponentType.MEDIA_GALLERY, id: tmp(4988).asComponentId(items.join(",")), items: null };
+      const obj19 = { type: tmp(1978).ComponentType.MEDIA_GALLERY, id: tmp(5058).asComponentId(items.join(",")), items: null };
       const items1 = accessory.items;
-      obj20.items = items1.map((media) => {
+      obj19.items = items1.map((media) => {
         const obj = { media: items(dependencyMap[7]).toUnfurledMediaItem(media.media), description: null, spoiler: null };
         ({ description: obj.description, spoiler: obj.spoiler } = media);
         return obj;
       });
-      return obj20;
+      return obj19;
     } else if (tmp(1978).ComponentType.FILE === type2) {
-      const obj21 = { type: tmp(1978).ComponentType.FILE, id: tmp(4988).asComponentId(items.join(",")), file: null, name: null, size: null, spoiler: null };
-      const tmpResult37 = tmp(4988);
-      obj21.file = tmp(4987).toUnfurledMediaItem(accessory.file);
-      ({ name: obj22.name, size: obj22.size, spoiler: obj22.spoiler } = accessory);
-      return obj21;
+      const obj20 = { type: tmp(1978).ComponentType.FILE, id: tmp(5058).asComponentId(items.join(",")), file: null, name: null, size: null, spoiler: null };
+      const tmpResult40 = tmp(5058);
+      obj20.file = tmp(5057).toUnfurledMediaItem(accessory.file);
+      ({ name: obj23.name, size: obj23.size, spoiler: obj23.spoiler } = accessory);
+      return obj20;
     } else if (tmp(1978).ComponentType.SEPARATOR === type2) {
-      const obj23 = { type: tmp(1978).ComponentType.SEPARATOR, id: tmp(4988).asComponentId(items.join(",")), divider: null, spacing: null };
+      const obj21 = { type: tmp(1978).ComponentType.SEPARATOR, id: tmp(5058).asComponentId(items.join(",")), divider: null, spacing: null };
       let flag3 = accessory.divider;
       if (flag3 == null) {
         flag3 = true;
       }
-      obj23.divider = flag3;
+      obj21.divider = flag3;
       let SMALL = accessory.spacing;
       if (SMALL == null) {
         SMALL = tmp(1978).SeparatorSpacingSize.SMALL;
       }
-      obj23.spacing = SMALL;
-      return obj23;
+      obj21.spacing = SMALL;
+      return obj21;
     } else if (tmp(1978).ComponentType.CONTENT_INVENTORY_ENTRY === type2) {
-      let tmp29 = null;
+      let tmp24 = null;
       if (null != accessory.content_inventory_entry) {
-        const obj24 = { type: tmp(1978).ComponentType.CONTENT_INVENTORY_ENTRY, id: tmp(4988).asComponentId(items.join(",")), contentInventoryEntry: accessory.content_inventory_entry };
-        tmp29 = obj24;
-        const tmpResult40 = tmp(4988);
+        const obj22 = { type: tmp(1978).ComponentType.CONTENT_INVENTORY_ENTRY, id: tmp(5058).asComponentId(items.join(",")), contentInventoryEntry: accessory.content_inventory_entry };
+        tmp24 = obj22;
+        const tmpResult43 = tmp(5058);
       }
-      return tmp29;
+      return tmp24;
     } else if (tmp(1978).ComponentType.CONTAINER === type2) {
       const components2 = accessory.components;
       const mapped2 = components2.map((item, index) => {
@@ -21653,104 +21652,87 @@ function transformComponent(accessory, items) {
         }
         return tmp2;
       });
-      const obj25 = { type: null, id: null, accentColor: null, spoiler: null, components: null };
+      const obj24 = { type: null, id: null, accentColor: null, spoiler: null, components: null };
       const found2 = mapped2.filter(tmp(1370).isNotNullish);
-      obj25.type = tmp(1978).ComponentType.CONTAINER;
-      obj25.id = tmp(4988).asComponentId(items.join(","));
+      obj24.type = tmp(1978).ComponentType.CONTAINER;
+      obj24.id = tmp(5058).asComponentId(items.join(","));
       let int2hslResult;
       if (null != accessory.accent_color) {
         int2hslResult = tmp(1092).int2hsl(accessory.accent_color, false);
-        const tmpResult42 = tmp(1092);
+        const tmpResult45 = tmp(1092);
       }
-      obj25.accentColor = int2hslResult;
-      obj25.spoiler = accessory.spoiler;
-      obj25.components = found2;
-      return obj25;
+      obj24.accentColor = int2hslResult;
+      obj24.spoiler = accessory.spoiler;
+      obj24.components = found2;
+      return obj24;
     } else if (tmp(1978).ComponentType.LABEL === type2) {
       const items2 = [];
       items2[HermesBuiltin.arraySpread(items, 0)] = 0;
-      const tmp22 = transformComponent(accessory.component, items2);
-      let tmp24 = null;
-      if (null != tmp22) {
-        tmp24 = tmp22;
+      const tmp17 = transformComponent(accessory.component, items2);
+      let tmp19 = null;
+      if (null != tmp17) {
+        tmp19 = tmp17;
       }
-      let tmp25 = null;
-      if (null != tmp24) {
-        const obj26 = { type: tmp(1978).ComponentType.LABEL, id: tmp(4988).asComponentId(items.join(",")), label: null, description: null, component: null };
-        ({ label: obj13.label, description: obj13.description } = accessory);
-        obj26.component = tmp24;
-        tmp25 = obj26;
-        const tmpResult43 = tmp(4988);
+      let tmp20 = null;
+      if (null != tmp19) {
+        const obj25 = { type: tmp(1978).ComponentType.LABEL, id: tmp(5058).asComponentId(items.join(",")), label: null, description: null, component: null };
+        ({ label: obj14.label, description: obj14.description } = accessory);
+        obj25.component = tmp19;
+        tmp20 = obj25;
+        const tmpResult46 = tmp(5058);
       }
-      return tmp25;
+      return tmp20;
     } else if (tmp(1978).ComponentType.FILE_UPLOAD === type2) {
-      const obj28 = { type: accessory.type, id: tmp(4988).asComponentId(items.join(",")), customId: null, disabled: null, required: null, minValues: null, maxValues: null, fileTypes: null };
-      ({ custom_id: obj11.customId, disabled: obj11.disabled, required: required3 } = accessory);
+      const obj26 = { type: accessory.type, id: tmp(5058).asComponentId(items.join(",")), customId: null, disabled: null, required: null, minValues: null, maxValues: null, fileTypes: null };
+      ({ custom_id: obj12.customId, disabled: obj12.disabled, required: required3 } = accessory);
       if (required3 == null) {
         required3 = false;
       }
-      obj28.required = required3;
-      ({ min_values: obj11.minValues, max_values: obj11.maxValues, file_types: obj11.fileTypes } = accessory);
-      return obj28;
+      obj26.required = required3;
+      ({ min_values: obj12.minValues, max_values: obj12.maxValues, file_types: obj12.fileTypes } = accessory);
+      return obj26;
     } else if (tmp(1978).ComponentType.CHECKPOINT_CARD === type2) {
       const checkpoint_data = accessory.checkpoint_data;
-      let tmp11 = null;
-      if (checkpoint_data.version === CheckpointVersions.V2025) {
-        const obj29 = { type: accessory.type, id: tmp(4988).asComponentId(items.join(",")), checkpointData: null };
-        const obj30 = { version: null, cardId: null, powerLevel: null, powerLevelPercentile: null, numMessagesSent: null, totalVoiceMinutes: null, numEmojisSent: null, topGuild: null, topEmoji: null, topGame: null };
-        ({ version: obj55.version, card_id: obj55.cardId, power_level: obj55.powerLevel, power_level_percentile: obj55.powerLevelPercentile, num_messages_sent: obj55.numMessagesSent, total_voice_minutes: obj55.totalVoiceMinutes, num_emojis_sent: obj55.numEmojisSent } = checkpoint_data);
-        let tmp12;
-        if (null != checkpoint_data.top_guild) {
-          const obj31 = { guildId: checkpoint_data.top_guild.guild_id, guildName: checkpoint_data.top_guild.guild_name, guildIcon: checkpoint_data.top_guild.guild_icon };
-          tmp12 = obj31;
-        }
-        obj30.topGuild = tmp12;
-        let tmp13;
-        if (null != checkpoint_data.top_emoji) {
-          let emoji_id;
-          if (obj8.isProbablyAValidSnowflake(checkpoint_data.top_emoji.emoji_id)) {
-            emoji_id = checkpoint_data.top_emoji.emoji_id;
+      const version = checkpoint_data.version;
+      if (CheckpointVersions.V2025 === version) {
+        const obj27 = { type: accessory.type, id: tmp(5058).asComponentId(items.join(",")), checkpointData: null };
+        const tmpResult48 = tmp(5058);
+        obj27.checkpointData = tmp(5059).transformCheckpoint2025CardComponent(checkpoint_data);
+        let tmp11 = obj27;
+        const tmpResult49 = tmp(5059);
+      } else {
+        tmp11 = null;
+        if (tmp9.V2026 === version) {
+          const result = tmp(5059).transformCheckpoint2026CardComponent(checkpoint_data);
+          let tmp12 = null;
+          if (null != result) {
+            const obj29 = { type: accessory.type, id: tmp(5058).asComponentId(items.join(",")), checkpointData: result };
+            tmp12 = obj29;
+            const tmpResult51 = tmp(5058);
           }
-          const obj32 = { emojiId: emoji_id, emojiName: null };
-          const top_emoji = checkpoint_data.top_emoji;
-          let emoji_name;
-          if (top_emoji != null) {
-            emoji_name = top_emoji.emoji_name;
-          }
-          obj32.emojiName = emoji_name;
-          tmp13 = obj32;
-          obj8 = SnowflakeUtilsDefault;
+          tmp11 = tmp12;
+          const tmpResult50 = tmp(5059);
         }
-        obj30.topEmoji = tmp13;
-        let tmp17;
-        if (null != checkpoint_data.top_game) {
-          const obj33 = { applicationId: checkpoint_data.top_game.application_id, applicationName: checkpoint_data.top_game.application_name, applicationImageId: checkpoint_data.top_game.application_image_id };
-          tmp17 = obj33;
-        }
-        obj30.topGame = tmp17;
-        obj29.checkpointData = obj30;
-        tmp11 = obj29;
-        const tmpResult45 = tmp(4988);
       }
       return tmp11;
     } else if (tmp(1978).ComponentType.RADIO_GROUP === type2) {
-      const obj35 = { type: accessory.type, id: tmp(4988).asComponentId(items.join(",")), customId: null, options: null, required: null };
+      const obj30 = { type: accessory.type, id: tmp(5058).asComponentId(items.join(",")), customId: null, options: null, required: null };
       ({ custom_id: obj5.customId, options: obj5.options, required: required2 } = accessory);
       if (required2 == null) {
         required2 = false;
       }
-      obj35.required = required2;
-      return obj35;
+      obj30.required = required2;
+      return obj30;
     } else if (tmp(1978).ComponentType.CHECKBOX_GROUP === type2) {
-      const obj37 = { type: accessory.type, id: tmp(4988).asComponentId(items.join(",")), customId: null, options: null, minValues: null, maxValues: null, required: null };
+      const obj31 = { type: accessory.type, id: tmp(5058).asComponentId(items.join(",")), customId: null, options: null, minValues: null, maxValues: null, required: null };
       ({ custom_id: obj3.customId, options: obj3.options, min_values: obj3.minValues, max_values: obj3.maxValues, required } = accessory);
       if (required == null) {
         required = false;
       }
-      obj37.required = required;
-      return obj37;
+      obj31.required = required;
+      return obj31;
     } else if (tmp(1978).ComponentType.CHECKBOX === type2) {
-      let obj = { type: accessory.type, id: tmp(4988).asComponentId(items.join(",")), customId: null, default: null };
+      let obj = { type: accessory.type, id: tmp(5058).asComponentId(items.join(",")), customId: null, default: null };
       ({ custom_id: obj.customId, default: obj.default } = accessory);
       return obj;
     } else {

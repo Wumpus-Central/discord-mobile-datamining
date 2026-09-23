@@ -1,6 +1,6 @@
 // discord_app/lib/Frecency.tsx
 import _modDef12 from "../../_runtime/metro/00012__.js";
-import _modDef4348 from "../../_runtime/metro/04348__.js";
+import _modDef4414 from "../../_runtime/metro/04414__.js";
 import size from "../../_runtime/metro/00002__.js";
 
 function DEFAULT_FRECENCY(arg0, arg1, numOfRecentUses) {
@@ -185,7 +185,7 @@ prototype["getFrecency"] = function getFrecency(id) {
 };
 prototype["compute"] = function compute() {
   const self = this;
-  dependencyMap = _modDef4348();
+  dependencyMap = _modDef4414();
   let maxByResult = null;
   if (this.calculateMaxTotalUse) {
     const _Object = Object;
@@ -202,7 +202,7 @@ prototype["compute"] = function compute() {
         if (arg1 >= self.maxSamples) {
           return false;
         } else {
-          score.score = score.score + closure_1 * self.computeWeight(closure_1.diff(_modDef4348(arg0), "days"));
+          score.score = score.score + closure_1 * self.computeWeight(closure_1.diff(_modDef4414(arg0), "days"));
         }
       });
       if (recentUses.score > 0) {

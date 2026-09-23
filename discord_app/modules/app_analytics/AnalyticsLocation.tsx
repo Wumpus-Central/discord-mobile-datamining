@@ -438,6 +438,7 @@ export default {
   ORB_WALLET_OPEN_FROM_PROFILE: "orb wallet open from profile",
   ORB_WALLET_PRIMARY_CARD_NITRO_UPSELL_CTA: "orb wallet primary card nitro upsell cta",
   ORB_WALLET_NITRO_BADGE_CLICK: "orb wallet nitro badge click",
+  ORB_CHALLENGE_DISCOVERY_CLICK: "orb challenge discovery click",
   GAME_INVITE_CHANNEL_ACCOUNT_LINK_BANNER: "game invite channel account link banner",
   GAME_INVITE_CHANNEL_POST_CREATION: "game invite channel post creation",
   GAME_INVITE_CHANNEL_POST: "game invite channel post",

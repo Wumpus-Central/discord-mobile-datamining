@@ -1,39 +1,33 @@
 // discord_app/modules/go_live/utils/getStreamSettingsForPreset.tsx
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import getFrontierTuningConfigIfEligibleDefault from "getFrontierTuningConfigIfEligible.tsx";
-import GoLiveVideoPresetResolutionExperimentDefault from "../GoLiveVideoPresetResolutionExperiment.tsx";
 import canStreamWithSettingsDefault from "canStreamWithSettings.tsx";
 import StreamSettingsConstants from "../StreamSettingsConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function getApplicationStreamPresetValues() {
-  const obj2 = { [closure_1_4.PRESET_DOCUMENTS]: items };
-  items = [
+  const items = [
     { resolution: hasOwnProperty.RESOLUTION_SOURCE, fps: React3.FPS_15 },
     { resolution: hasOwnProperty.RESOLUTION_SOURCE, fps: React3.FPS_5 },
   ];
-  const obj3 = { resolution: hasOwnProperty.RESOLUTION_SOURCE, fps: React3.FPS_15 };
   const items1 = [
-    {
-      resolution: GoLiveVideoPresetResolutionExperimentDefault.getConfig({
-        location: "getApplicationStreamPresetValues",
-      }).videoPresetResolutionMax,
-      fps: React3.FPS_60,
-    },
+    { resolution: hasOwnProperty.RESOLUTION_1440, fps: React3.FPS_60 },
     { resolution: hasOwnProperty.RESOLUTION_1080, fps: React3.FPS_60 },
     { resolution: hasOwnProperty.RESOLUTION_720, fps: React3.FPS_60 },
     { resolution: hasOwnProperty.RESOLUTION_720, fps: React3.FPS_30 },
   ];
-  obj2[constants.PRESET_VIDEO] = items1;
-  obj2[constants.PRESET_AUTO] = [];
-  obj2[constants.PRESET_CUSTOM] = [];
   const items2 = [{ resolution: hasOwnProperty.RESOLUTION_720, fps: React3.FPS_30 }];
-  obj2[constants.PRESET_MOBILE_DEFAULT] = items2;
   const items3 = [{ resolution: hasOwnProperty.RESOLUTION_480, fps: React3.FPS_30 }];
-  obj2[constants.PRESET_MOBILE_PERFORMANCE] = items3;
   const items4 = [{ resolution: hasOwnProperty.RESOLUTION_1080, fps: React3.FPS_60 }];
-  obj2[constants.PRESET_MOBILE_HIGH_QUALITY] = items4;
-  return obj2;
+  return {
+    [closure_1_4.PRESET_DOCUMENTS]: items,
+    [closure_1_4.PRESET_VIDEO]: items1,
+    [closure_1_4.PRESET_AUTO]: [],
+    [closure_1_4.PRESET_CUSTOM]: [],
+    [closure_1_4.PRESET_MOBILE_DEFAULT]: items2,
+    [closure_1_4.PRESET_MOBILE_PERFORMANCE]: items3,
+    [closure_1_4.PRESET_MOBILE_HIGH_QUALITY]: items4,
+  };
 }
 function getStreamSettingsForPreset(arg0, user, guildPremiumTier, arg3) {
   const tmp = getApplicationStreamPresetValues()[arg0];

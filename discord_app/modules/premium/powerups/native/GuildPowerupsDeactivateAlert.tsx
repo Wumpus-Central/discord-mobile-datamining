@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsDeactivateAlert.tsx
 import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef2514 from "../GuildPowerups.messages.js";
+import _modDef2516 from "../GuildPowerups.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useGuildPowerupOnDeactivateDefault from "../hooks/useGuildPowerupOnDeactivate.tsx";
 import useDeactivateWarningTextDefault from "../hooks/useDeactivateWarningText.tsx";
@@ -53,9 +53,9 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
   });
   obj2.header = closure_4(View, obj3);
   const intl = require("util").intl;
-  obj2.title = intl.formatToPlainString(_modDef2514.iEBw1M, { perk: powerup.title });
+  obj2.title = intl.formatToPlainString(_modDef2516.iEBw1M, { perk: powerup.title });
   const intl2 = require("util").intl;
-  obj2.content = intl2.formatToPlainString(_modDef2514["7o0K+2"], { perk: powerup.title });
+  obj2.content = intl2.formatToPlainString(_modDef2516["7o0K+2"], { perk: powerup.title });
   let tmp7Result = null != error;
   if (tmp7Result) {
     const obj7 = {
@@ -64,7 +64,7 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
       color: "text-feedback-critical",
       children: error,
     };
-    tmp7Result = closure_4(tmp5(4753).Text, obj7);
+    tmp7Result = closure_4(tmp5(4823).Text, obj7);
   }
   const obj8 = { children: null };
   const items = [tmp7Result, ,];
@@ -77,7 +77,7 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
     text: null,
   };
   const intl3 = tmp5(1115).intl;
-  obj9.text = intl3.string(_modDef2514.PYPdl4);
+  obj9.text = intl3.string(_modDef2516.PYPdl4);
   items[1] = closure_4(require("AlertModal").AlertActionButton, obj9, "deactivate");
   const obj10 = {
     onPress() {},

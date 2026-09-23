@@ -31,7 +31,7 @@ function ChangeBannerColorRow(user) {
   ({ pendingAccentColor, pendingAvatar } = stateFromStoresObject);
   const obj = require("initialize");
   let pendingAvatarSrc = require("RecentAvatarUtils").getPendingAvatarSrc({ userId: user.id, image: pendingAvatar });
-  const tmp7 = pendingAccentColor(8459)(user.id);
+  const tmp7 = pendingAccentColor(8530)(user.id);
   if (pendingAvatarSrc == null) {
     pendingAvatarSrc = user.getAvatarURL(undefined, 80);
   }
@@ -71,7 +71,7 @@ function ChangeBannerColorRow(user) {
   obj5.text = intl.string(require("util").t.xzNfPz);
   obj4.label = closure_9(require("Form").FormLabel, obj5);
   const obj6 = { style: tmp.selectedColor, children: null };
-  const items2 = [closure_9(pendingAccentColor(14879), { style: tmp.bannerColor, color: pendingAccentColor }), ,];
+  const items2 = [closure_9(pendingAccentColor(14959), { style: tmp.bannerColor, color: pendingAccentColor }), ,];
   const obj8 = {
     style: tmp.selectedColorHex,
     variant: "text-md/medium",
@@ -86,7 +86,7 @@ function ChangeBannerColorRow(user) {
   items2[2] = closure_9(require("native").Icon, {
     style: tmp.rowArrow,
     size: require("native").Icon.Sizes.CUSTOM,
-    source: pendingAccentColor(14884),
+    source: pendingAccentColor(14964),
   });
   obj6.children = items2;
   obj4.trailing = closure_10(View, obj6);
@@ -100,7 +100,7 @@ const Constants = fn(1074);
 ({ AnalyticsObjects: closure_7, UPLOAD_BANNER_SIZE: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = {
   label: { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, alignItems: "center", flexDirection: "row" },
   sublabel: null,
@@ -182,11 +182,11 @@ export default function ChangeBannerActionSheet(isTryItOut) {
             closure_128_0 = undefined;
             let base64;
             let originalMd5;
-            tmp5(4724).hideActionSheet();
-            const obj4 = tmp5(4724);
+            tmp5(4794).hideActionSheet();
+            const obj4 = tmp5(4794);
             dependencyMap = 1;
             c3 = 1;
-            const obj6 = { value: tmp5(5356).openImagePicker(closure_1_8), done: false };
+            const obj6 = { value: tmp5(5440).openImagePicker(closure_1_8), done: false };
             return obj6;
           }
         } else if (dependencyMap === 1) {
@@ -202,14 +202,14 @@ export default function ChangeBannerActionSheet(isTryItOut) {
           originalMd5 = closure_128_0.originalMd5;
           if (null != base64) {
             const obj8 = {
-              assetOrigin: tmp2(7236).AssetOriginTypes.NEW_ASSET,
+              assetOrigin: tmp2(7320).AssetOriginTypes.NEW_ASSET,
               imageUri: base64,
               description: "",
               originalAsset: "Array",
               originalMd5,
             };
-            closure_129_0(tmp2(14875).createPendingImage(obj8));
-            const obj = tmp2(14875);
+            closure_129_0(tmp2(14955).createPendingImage(obj8));
+            const obj = tmp2(14955);
           }
           c3 = 3;
           return { value: "HermesInternal", done: null };
@@ -222,8 +222,8 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   };
   const tmp = closure_12();
   if (!flag) {
-    flag = tmp2(4415).canUsePremiumProfileCustomization(user);
-    const tmp2Result = tmp2(4415);
+    flag = tmp2(4481).canUsePremiumProfileCustomization(user);
+    const tmp2Result = tmp2(4481);
   }
   let obj = { value: useAnalyticsLocationsDefault(isTryItOut.analyticsLocations).analyticsLocations, children: null };
   let obj2 = { title: null, trailing: null, titleWrapperStyle: null, titleContainerStyle: null };
@@ -275,7 +275,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   if (!flag) {
     const obj9 = { style: tmp.upsellButton, children: null };
     const obj10 = { analyticsObject: constants.EDIT_PROFILE_BANNER };
-    obj9.children = closure_9(tmp2(14876), obj10);
+    obj9.children = closure_9(tmp2(14956), obj10);
     tmp4Result6 = closure_9(View, obj9);
   }
   items3[1] = tmp4Result6;

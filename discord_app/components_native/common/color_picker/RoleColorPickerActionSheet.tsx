@@ -19,7 +19,7 @@ let items = [
   ...ROLE_COLORS.slice(5, 10),
   ...ROLE_COLORS.slice(15, 18),
 ];
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 const obj2 = {
   body: { paddingVertical: nativeDefault.space.PX_16, flexGrow: 1, justifyContent: "center", alignItems: "center" },
   colorWrap: null,

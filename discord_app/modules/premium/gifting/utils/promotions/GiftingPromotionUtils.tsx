@@ -1,7 +1,7 @@
 // discord_app/modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx
 import util from "../../../../../intl/index.native.tsx";
 import dismissible_content from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import _modDef2546 from "../../PremiumGifting.messages.js";
+import _modDef2548 from "../../PremiumGifting.messages.js";
 import DismissibleContentUnsafeUtils from "../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import GiftPromotionReminderExperiment2 from "../../experiments/GiftPromotionReminderExperiment.tsx";
 import MarketingComponentType from "../../../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx";
@@ -61,13 +61,13 @@ export const getGiftingPromotionRewardEarnedSubtitle = function getGiftingPromot
       if (0 === found.length) {
         const intl2 = util.intl;
         const obj = { count: arg0.length };
-        let formatToPlainStringResult = intl2.formatToPlainString(_modDef2546.cMHedL, obj);
+        let formatToPlainStringResult = intl2.formatToPlainString(_modDef2548.cMHedL, obj);
       }
       return formatToPlainStringResult;
     }
   }
   const intl = util.intl;
-  formatToPlainStringResult = intl.string(_modDef2546["/8znyU"]);
+  formatToPlainStringResult = intl.string(_modDef2548["/8znyU"]);
 };
 export const getRewardAssetIdMap = function getRewardAssetIdMap(arr) {
   const map = new Map();

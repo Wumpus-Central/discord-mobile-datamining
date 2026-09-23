@@ -175,6 +175,129 @@ InvoiceRecord["createInvoiceFromServer"] = function createInvoiceFromServer(body
   }
   const date1 = new Date(body.subscription_period_end);
 };
+InvoiceRecord["createFromOrder"] = function createFromOrder(billing_facet) {
+  billing_facet = billing_facet.billing_facet;
+  let invoice_preview = null;
+  if (null != billing_facet) {
+    invoice_preview = billing_facet.invoice_preview;
+  }
+  if (null == invoice_preview) {
+    return null;
+  } else {
+    const line_items = invoice_preview.line_items;
+    const mapped = line_items.map((ref_order_line_item_id) => {
+      billing_facet = ref_order_line_item_id;
+      const order_line_items = billing_facet.order_line_items;
+      const found = order_line_items.find((id) => id.id === closure_0.ref_order_line_item_id);
+      let tmp2 = null;
+      if (null != found) {
+        let obj = {
+          id: ref_order_line_item_id.ref_order_line_item_id,
+          skuId: null,
+          subscriptionPlanId: null,
+          subscriptionPlanPrice: null,
+          amount: null,
+          quantity: null,
+          unitPrice: null,
+          discounts: null,
+        };
+        ({ sku_id: obj.skuId, subscription_plan_id } = found);
+        if (subscription_plan_id == null) {
+          subscription_plan_id = "";
+        }
+        obj.subscriptionPlanId = subscription_plan_id;
+        ({ unit_price: obj.subscriptionPlanPrice, total: obj.amount, quantity: obj.quantity } = ref_order_line_item_id);
+        const obj2 = { amount: ref_order_line_item_id.unit_price, currency: invoice_preview.currency };
+        obj.unitPrice = obj2;
+        const discounts = ref_order_line_item_id.discounts;
+        obj.discounts = discounts.map((type) => {
+          const obj = {
+            type: type.type,
+            amount: type.amount,
+            description: null,
+            percentage_amount: null,
+            discount_id: null,
+          };
+          let str = type.description;
+          if (str == null) {
+            str = "";
+          }
+          obj.description = str;
+          const percentage_amount = type.percentage_amount;
+          obj.percentage_amount = percentage_amount;
+          const discount_id = type.discount_id;
+          obj.discount_id = discount_id;
+          return obj;
+        });
+        tmp2 = obj;
+      }
+      return tmp2;
+    });
+    const line_items1 = invoice_preview.line_items;
+    let found = mapped.filter((item) => null != item);
+    const reduced = line_items1.reduce((acc, orbs_reward) => {
+      let num = orbs_reward.orbs_reward;
+      if (num == null) {
+        num = 0;
+      }
+      return acc + num;
+    }, 0);
+    let obj = {
+      id: "",
+      invoiceItems: found,
+      total: null,
+      subtotal: null,
+      currency: null,
+      tax: null,
+      taxInclusive: null,
+      subscriptionPeriodStart: null,
+      subscriptionPeriodEnd: null,
+      orbsReward: null,
+      checkoutContext: null,
+    };
+    ({
+      total: obj.total,
+      subtotal: obj.subtotal,
+      currency: obj.currency,
+      tax: obj.tax,
+      tax_inclusive: obj.taxInclusive,
+    } = invoice_preview);
+    const _Date = Date;
+    const date = new Date(0);
+    obj.subscriptionPeriodStart = date;
+    const _Date2 = Date;
+    const date1 = new Date(0);
+    obj.subscriptionPeriodEnd = date1;
+    let tmp3;
+    if (reduced > 0) {
+      tmp3 = reduced;
+    }
+    obj.orbsReward = tmp3;
+    const checkout_context = billing_facet.checkout_context;
+    obj.checkoutContext = checkout_context;
+    if (typeof InvoiceRecord === "function") {
+      const tmp9 = new InvoiceRecord(obj, tmp, tmp15, tmp19, reduced, tmp3);
+      ({ id: tmp9.id, invoiceItems } = obj);
+      if (invoiceItems == null) {
+        invoiceItems = [];
+      }
+      tmp9.invoiceItems = invoiceItems;
+      ({
+        taxInclusive: tmp9.taxInclusive,
+        subscriptionPeriodStart: tmp9.subscriptionPeriodStart,
+        subscriptionPeriodEnd: tmp9.subscriptionPeriodEnd,
+        status: tmp9.status,
+        orbsReward: tmp9.orbsReward,
+        checkoutContext: tmp9.checkoutContext,
+      } = obj);
+      return tmp9;
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+    tmp15 = new.target;
+    tmp19 = new.target;
+  }
+};
 InvoiceRecord["createFromOTPPreview"] = function createFromOTPPreview(invoice_items) {
   invoice_items = invoice_items.invoice_items;
   let mapped;

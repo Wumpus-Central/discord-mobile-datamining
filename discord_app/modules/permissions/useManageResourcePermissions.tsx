@@ -58,7 +58,7 @@ function canManageResource(arg0, stateFromStores, canResult1, c0) {
   }
   return tmp;
 }
-const PermissionsConstants = fn(9766);
+const PermissionsConstants = fn(9839);
 ({
   CREATE_GUILD_EVENT_CORE_PERMISSIONS: closure_7,
   CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: closure_8,

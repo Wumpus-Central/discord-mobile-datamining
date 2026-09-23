@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_6 = createStyles.createStyles({ questName: { textAlign: "center" } });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModalReward.tsx");
@@ -26,14 +26,14 @@ export default noop.memo(function VideoQuestModalReward(style) {
     str = size;
   }
   ({ withRewardTileAnimation, onTextBlockLayout } = style);
-  quest = quest(15401).useVideoQuestModalContext().quest;
-  const obj = quest(15401);
+  quest = quest(15453).useVideoQuestModalContext().quest;
+  const obj = quest(15453);
   const items = [quest.id];
-  const questTaskDetails = quest(11742).useQuestTaskDetails(quest);
+  const questTaskDetails = quest(11818).useQuestTaskDetails(quest);
   const callback = noop.useCallback(() => {
     const result = QuestUtils.openRewardDetailsBottomSheet({ questId: quest.id });
   }, items);
-  const obj2 = quest(11742);
+  const obj2 = quest(11818);
   const obj3 = {
     justify: "center",
     align: "center",
@@ -57,18 +57,18 @@ export default noop.memo(function VideoQuestModalReward(style) {
     const intl = tmp3(1115).intl;
     const obj7 = { questName: quest.config.messages.questName };
     obj6.children = intl.formatToPlainString(tmp3(1115).t.EAYZAr, obj7);
-    tmp = closure_4(tmp3(4753).Text, obj6);
+    tmp = closure_4(tmp3(4823).Text, obj6);
   }
   const items2 = [tmp];
   if (tmp9Result) {
     const obj8 = { variant: "heading-sm/medium", color: "text-subtle", children: null };
     const intl2 = tmp3(1115).intl;
     obj8.children = intl2.string(tmp3(1115).t["1Wvve2"]);
-    tmp9Result = closure_4(tmp3(4753).Text, obj8);
+    tmp9Result = closure_4(tmp3(4823).Text, obj8);
   }
   items2[1] = tmp9Result;
   obj5.children = items2;
-  items1[1] = closure_5(quest(5185).Stack, obj5);
+  items1[1] = closure_5(quest(5269).Stack, obj5);
   obj3.children = items1;
-  return closure_5(quest(5185).Stack, obj3);
+  return closure_5(quest(5269).Stack, obj3);
 });

@@ -596,8 +596,8 @@ export const setProjectIcon = function setProjectIcon() {
   }
   return applyArgumentsResult;
 };
-export const setGuildHints = function setGuildHints(id, arg1) {
-  return patchProject(id, arg1);
+export const setGuildHints = function setGuildHints(first1, arg1) {
+  return patchProject(first1, arg1);
 };
 export const deleteProject = function deleteProject() {
   const self = this;

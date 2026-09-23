@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 get_ActivityIndicator = fn(17);
 ({ View: c2, ActivityIndicator: c3 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_5 = createStyles.createStyles(() => {
   const obj = {
     container: {

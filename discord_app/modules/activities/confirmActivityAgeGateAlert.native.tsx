@@ -21,7 +21,7 @@ function ConfirmActivityGateContent(children) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 const obj2 = {
   alertContainer: { display: "flex", alignItems: "center", padding: 8 },
   alertBodyText: {

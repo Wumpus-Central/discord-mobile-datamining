@@ -5,7 +5,7 @@ import AssetUtils from "../../lib/AssetUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const expandedHeight = fn(15370).QUEST_DOCK_PORTRAIT_MEDIA_EXPANDED_HEIGHT;
+const expandedHeight = fn(15422).QUEST_DOCK_PORTRAIT_MEDIA_EXPANDED_HEIGHT;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBountyBackground.tsx");
@@ -13,11 +13,11 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDock/Quest
 export default noop.memo(function QuestDockBountyBackground(imageUrl) {
   let questDockBounty;
   let token;
-  questDockBounty = questDockBounty(15377).useQuestDockBounty();
+  questDockBounty = questDockBounty(15429).useQuestDockBounty();
   const items = [questDockBounty.videoPreview];
   const memo = noop.useMemo(() => AssetUtils.getMimetype(questDockBounty.videoPreview), items);
-  let obj = questDockBounty(15377);
-  token = questDockBounty(4458).useToken(token(576).colors.BACKGROUND_BRAND);
+  let obj = questDockBounty(15429);
+  token = questDockBounty(4524).useToken(token(576).colors.BACKGROUND_BRAND);
   const items1 = [token];
   const memo1 = noop.useMemo(
     () => _modDef672.mix(token, nativeDefault.unsafe_rawColors.BLACK, 0.77, "rgb").hex(),
@@ -32,12 +32,12 @@ export default noop.memo(function QuestDockBountyBackground(imageUrl) {
     backdropColor: null,
     expandedHeight: null,
   };
-  const obj2 = questDockBounty(4458);
-  obj3.collapsedMediaMode = questDockBounty(15477).QuestDockBackgroundCollapsedMediaMode.HIDDEN;
+  const obj2 = questDockBounty(4524);
+  obj3.collapsedMediaMode = questDockBounty(15529).QuestDockBackgroundCollapsedMediaMode.HIDDEN;
   obj3.gradientBaseColor = memo1;
   obj3.backdropColor = memo1;
   obj3.expandedHeight = expandedHeight;
-  return jsx(token(15477), {
+  return jsx(token(15529), {
     imageUrl: imageUrl.previewImageUrl,
     videoUrl: questDockBounty.videoPreview,
     videoMimetype: memo,

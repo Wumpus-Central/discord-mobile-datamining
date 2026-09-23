@@ -10,7 +10,7 @@ const View = fn(17).View;
 const MessageFlags = fn(1074).MessageFlags;
 const jsx = fn(21).jsx;
 const rowGenerator = new RowGeneratorDefault();
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { content: null, blockedMessage: null };
 const tmp2 = new RowGeneratorDefault();
 obj2.content = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
@@ -67,7 +67,7 @@ export default function AutomodRemovedContentSheet(action) {
     name = thread.name;
   }
   let obj2 = {
-    header: jsx(message(7396).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }),
+    header: jsx(message(7480).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }),
     children: null,
   };
   obj.subtitle = name;
@@ -79,12 +79,12 @@ export default function AutomodRemovedContentSheet(action) {
     let tmp4Result = <View style={tmp.blockedMessage}>{null}</View>;
   } else {
     const obj6 = { variant: "text-md/normal", color: "text-default", children: action.notice };
-    tmp4Result = jsx(tmp5(4753).Text, { variant: "text-md/normal", color: "text-default", children: action.notice });
+    tmp4Result = jsx(tmp5(4823).Text, { variant: "text-md/normal", color: "text-default", children: action.notice });
   }
   obj3.children = tmp4Result;
   obj2.children = <View style={tmp.content}>{null}</View>;
-  return jsx(message(7444).ActionSheet, {
-    header: jsx(message(7396).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }),
+  return jsx(message(7528).ActionSheet, {
+    header: jsx(message(7480).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }),
     children: null,
   });
 }

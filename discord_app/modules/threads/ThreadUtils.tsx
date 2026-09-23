@@ -2,10 +2,10 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import util from "../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import _modDef4348 from "../../../_runtime/metro/04348__.js";
+import _modDef4414 from "../../../_runtime/metro/04414__.js";
 import AppAnalyticsUtils from "../app_analytics/AppAnalyticsUtils.tsx";
 import NotificationSettingsUtils from "../../utils/NotificationSettingsUtils.tsx";
-import getTimestampStringDefault from "getTimestampString.tsx";
+import threads_getTimestampStringDefault from "getTimestampString.tsx";
 import ThreadAnalyticsUtils from "../app_analytics/ThreadAnalyticsUtils.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import ReadStateStore from "../../stores/ReadStateStore.tsx";
@@ -28,9 +28,9 @@ const Constants = fn(1074);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadUtils.tsx");
 
-export const getTimestampString = getTimestampStringDefault;
+export const getTimestampString = threads_getTimestampStringDefault;
 export const getTimestampAccessibilityLabel = function getTimestampAccessibilityLabel(extractTimestampResult) {
-  return getTimestampStringDefault(extractTimestampResult, getAccessibilityLabelFormatter);
+  return threads_getTimestampStringDefault(extractTimestampResult, getAccessibilityLabelFormatter);
 };
 export const trackThreadBrowserTab = function trackThreadBrowserTab() {
   AppAnalyticsUtils.trackWithMetadata(constants.THREAD_BROWSER_TAB_CHANGED);
@@ -130,8 +130,8 @@ export const useLastMessageTimestamp = function useLastMessageTimestamp(thread) 
   }
   let valueOfResult = null;
   if (null != createTimestamp) {
-    valueOfResult = _modDef4348(createTimestamp).valueOf();
-    const obj3 = _modDef4348(createTimestamp);
+    valueOfResult = _modDef4414(createTimestamp).valueOf();
+    const obj3 = _modDef4414(createTimestamp);
   }
   if (extractTimestampResult == null) {
     extractTimestampResult = valueOfResult;

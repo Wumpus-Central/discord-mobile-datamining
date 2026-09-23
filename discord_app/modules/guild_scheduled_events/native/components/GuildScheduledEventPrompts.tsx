@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { actionBarCTAContainer: { marginVertical: 4 }, iconStyle: null, iconContainerStyle: null, greenIcon: null };
 let size = { tintColor: nativeDefault.colors.WHITE, width: 20, height: 20 };
 obj2.iconStyle = size;
@@ -34,7 +34,7 @@ export const ScheduleEventPrompt = function ScheduleEventPrompt(isLive) {
       onPress() {
         const result = GuildScheduledEventModalActionCreators.openCreateOrEditGuildEventModal(closure_1_0, { channel });
       },
-      iconSource: channel(9887),
+      iconSource: channel(9960),
       iconStyle: null,
       iconContainerStyle: null,
       completed: null,
@@ -52,7 +52,7 @@ export const ScheduleEventPrompt = function ScheduleEventPrompt(isLive) {
       onPress() {
         const result = GuildScheduledEventModalActionCreators.openCreateOrEditGuildEventModal(closure_1_0, { channel });
       },
-      iconSource: channel(9887),
+      iconSource: channel(9960),
       iconStyle: null,
       iconContainerStyle: null,
       completed: null,
@@ -75,7 +75,7 @@ export const StartEventPrompt = function StartEventPrompt(event) {
       onPress() {
         const result = GuildScheduledEventModalActionCreators.openStartGuildEventModal(event, recurrenceId);
       },
-      iconSource: recurrenceId(9887),
+      iconSource: recurrenceId(9960),
       iconStyle: tmp.iconStyle,
       iconContainerStyle: null,
       completed: null,
@@ -90,21 +90,21 @@ export const StartEventPrompt = function StartEventPrompt(event) {
     const obj3 = { eventName: name };
     obj2.title = intl.formatToPlainString(tmp2(1115).t["1vGXqM"], obj3);
     const intl2 = tmp2(1115).intl;
-    const obj4 = { startTime: tmp2(4439).calendarFormat(recurrenceId(4348)(scheduled_start_time)) };
+    const obj4 = { startTime: tmp2(4505).calendarFormat(recurrenceId(4414)(scheduled_start_time)) };
     obj2.subtitle = intl2.formatToPlainString(tmp2(1115).t.PTebCR, obj4);
-    tmp4 = jsx(tmp2(8876).FormCTA, {
+    tmp4 = jsx(tmp2(8947).FormCTA, {
       style: tmp.actionBarCTAContainer,
       onPress() {
         const result = GuildScheduledEventModalActionCreators.openStartGuildEventModal(event, recurrenceId);
       },
-      iconSource: recurrenceId(9887),
+      iconSource: recurrenceId(9960),
       iconStyle: tmp.iconStyle,
       iconContainerStyle: null,
       completed: null,
       title: null,
       subtitle: null,
     });
-    const tmp2Result = tmp2(4439);
+    const tmp2Result = tmp2(4505);
   }
   return tmp4;
 };

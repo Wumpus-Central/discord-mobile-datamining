@@ -1,12 +1,12 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupLevelPerks.tsx
 import util from "../../../../intl/index.native.tsx";
 import GlobalUtils from "../../../../utils/GlobalUtils.tsx";
-import _modDef2514 from "../GuildPowerups.messages.js";
+import _modDef2516 from "../GuildPowerups.messages.js";
 import GuildBoostingUtils from "../../../../utils/GuildBoostingUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const GUILD_FEATURE_TO_PERK = fn(4646).GUILD_FEATURE_TO_PERK;
+const GUILD_FEATURE_TO_PERK = fn(4716).GUILD_FEATURE_TO_PERK;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupLevelPerks.tsx");
 
@@ -30,7 +30,7 @@ export default function useGuildPowerupLevelPerks(arg0) {
         totalEmojis: closure_0.features.total_emoji_slots,
         additionalEmojis: closure_0.features.additional_emoji_slots,
       };
-      obj.description = intl.formatToPlainString(_modDef2514["NXvV0+"], obj2);
+      obj.description = intl.formatToPlainString(_modDef2516["NXvV0+"], obj2);
       items.push(obj);
     }
     if (includeStickers) {
@@ -40,7 +40,7 @@ export default function useGuildPowerupLevelPerks(arg0) {
         totalStickers: closure_0.features.total_sticker_slots,
         additionalStickers: closure_0.features.additional_sticker_slots,
       };
-      obj3.description = intl2.formatToPlainString(_modDef2514.ZEvvPz, obj4);
+      obj3.description = intl2.formatToPlainString(_modDef2516.ZEvvPz, obj4);
       items.push(obj3);
     }
     if (includeSoundboards) {
@@ -50,7 +50,7 @@ export default function useGuildPowerupLevelPerks(arg0) {
         totalSoundboards: closure_0.features.total_sound_slots,
         additionalSoundboards: closure_0.features.additional_sound_slots,
       };
-      obj5.description = intl3.formatToPlainString(_modDef2514["s9u/E7"], obj6);
+      obj5.description = intl3.formatToPlainString(_modDef2516["s9u/E7"], obj6);
       items.push(obj5);
     }
     const features = closure_0.features.features;

@@ -6,8 +6,8 @@ import MediaEngineStore from "../../../stores/MediaEngineStore.tsx";
 
 require = fn;
 const InputModes = fn(1074).InputModes;
-let closure_5 = fn(7398).ACTION_SHEET_HANDLE_SPACING;
-let sum = 2 * fn(9672).SMALL_ACTION_BUTTON_DIMENSIONS.buttonRadius + 16 + 16;
+let closure_5 = fn(7482).ACTION_SHEET_HANDLE_SPACING;
+let sum = 2 * fn(9745).SMALL_ACTION_BUTTON_DIMENSIONS.buttonRadius + 16 + 16;
 const metroRequire = sum;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/useActionBarHeight.tsx");

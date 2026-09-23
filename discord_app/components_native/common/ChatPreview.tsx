@@ -39,11 +39,11 @@ const NativeChatUtilsDefault = NativeChatUtils;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const RowGeneratorConstants = fn(8195);
+const RowGeneratorConstants = fn(8277);
 ({ Changeset: c10, RowType: closure_11, SeparatorType: closure_12 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = {
   chat: { flex: 1, overflow: "hidden" },
   containerInner: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -284,7 +284,7 @@ class ChatPreviewBase extends PureComponent {
           jumpTargetId,
           jumpType: "flexDirection",
           shouldInitialScroll: "Array",
-          animated: "2026-04-gifting-badge",
+          animated: "2026-04-gift-promotion-reminder",
           scrollPosition: "user",
           focusTargetId: null,
         };
@@ -318,11 +318,11 @@ class ChatPreviewBase extends PureComponent {
       if (null != jumpTargetId) {
         const resolved = Promise.resolve();
         resolved.then(() => {
-          const result = applyArgumentsResult(8155).setSelectedConversation(closure_1_0, roleStyle, {
+          const result = applyArgumentsResult(8237).setSelectedConversation(closure_1_0, roleStyle, {
             shouldJump: false,
           });
-          const obj = applyArgumentsResult(8155);
-          applyArgumentsResult(4768).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
+          const obj = applyArgumentsResult(8237);
+          applyArgumentsResult(4838).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
         });
       }
     };
@@ -355,8 +355,8 @@ class ChatPreviewBase extends PureComponent {
           channel = channel.getChannel(arg1);
           if (null != channel) {
             const obj2 = { source, navigationReplace: true };
-            applyArgumentsResult(4768).transitionToThread(channel, obj2);
-            const obj = applyArgumentsResult(4768);
+            applyArgumentsResult(4838).transitionToThread(channel, obj2);
+            const obj = applyArgumentsResult(4838);
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
@@ -633,7 +633,7 @@ prototype["render"] = function render() {
   tmp14 = tmp6Result;
   tmp6Result2 = map1(common_SafeAreaView.SafeAreaPaddingView, obj9);
 };
-ChatPreviewBase.contextType = fn(4467).ThemeContext;
+ChatPreviewBase.contextType = fn(4533).ThemeContext;
 ChatPreviewBase.defaultProps = { withSafeArea: true };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/ChatPreview.tsx");
@@ -652,10 +652,10 @@ export const ChatPreview = function ChatPreview(channelId) {
   const items1 = [ChannelStore];
   const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   const obj2 = channelId(504);
-  const isChannelSpoilerGated = channelId(7574).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(7574);
-  const isChannelContentGated = channelId(4967).useIsChannelContentGated(stateFromStores1);
-  const obj4 = channelId(4967);
+  const isChannelSpoilerGated = channelId(7657).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(7657);
+  const isChannelContentGated = channelId(5037).useIsChannelContentGated(stateFromStores1);
+  const obj4 = channelId(5037);
   const items2 = [ActionSheetStore];
   const obj6 = {};
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => null != content.getContent());

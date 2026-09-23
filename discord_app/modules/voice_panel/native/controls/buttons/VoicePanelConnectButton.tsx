@@ -19,7 +19,7 @@ const VoicePanelNsfwAlertDefault = VoicePanelNsfwAlert;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = {
   connectButton: {
     backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360,

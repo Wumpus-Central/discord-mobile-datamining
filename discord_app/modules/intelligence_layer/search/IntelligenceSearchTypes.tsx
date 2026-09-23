@@ -10,9 +10,3 @@ export const IntelligenceSearchStatus = {
   NOT_QUALIFIED: "not_qualified",
   ERROR: "error",
 };
-export const IntelligenceSearchEmptyTreatment = {
-  NONE: "none",
-  DEFER: "defer",
-  EMPTY_SCREEN: "empty_screen",
-  HAS_ANSWER: "has_answer",
-};

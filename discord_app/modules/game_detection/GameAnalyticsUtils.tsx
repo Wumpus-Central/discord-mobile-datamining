@@ -22,11 +22,11 @@ export const getRunningGameAnalytics = function getRunningGameAnalytics(streamAp
     return {
       gameName: "Array",
       gameId: "category",
-      exe: "mn",
-      distributor: "",
+      exe: "toCharArray$esjava$1",
+      distributor: "user",
       sku: "HermesInternal",
       gameMetadata: "disabled",
-      rawExePath: "Error",
+      rawExePath: "TypeError",
     };
   } else {
     const str = "exePath" in streamApplication ? streamApplication.exePath : streamApplication.exe;

@@ -32,12 +32,12 @@ StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = 
               if (null != requestToSpeakTimestamp) {
                 user = user.getUser(userId);
                 if (null != user) {
-                  const result = userId(17904).sendStageRequestToSpeakEphemeralMessage(
+                  const result = userId(17973).sendStageRequestToSpeakEphemeralMessage(
                     channelId,
                     user,
                     requestToSpeakTimestamp,
                   );
-                  const tmp11Result = userId(17904);
+                  const tmp11Result = userId(17973);
                 }
               } else {
                 messages = messages.getMessages(channelId);
@@ -52,8 +52,8 @@ StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = 
                   return hasFlagResult;
                 });
                 if (null != findNewestResult) {
-                  closure_1(7701).deleteMessage(channelId, findNewestResult.id, true);
-                  const obj2 = closure_1(7701);
+                  closure_1(7784).deleteMessage(channelId, findNewestResult.id, true);
+                  const obj2 = closure_1(7784);
                 }
               }
             }

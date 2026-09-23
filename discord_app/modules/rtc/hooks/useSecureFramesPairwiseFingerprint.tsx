@@ -87,8 +87,8 @@ let closure_12 = async function _computeNativeDisplayPair(arg0) {
     }
   }
 };
-let closure_9 = fn(9978).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
-const Features = fn(4782).Features;
+let closure_9 = fn(10051).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
+const Features = fn(4852).Features;
 const SecureFramesPairwiseFingerprintMode = { FROZEN: "frozen", LIVE: "live" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/hooks/useSecureFramesPairwiseFingerprint.tsx");

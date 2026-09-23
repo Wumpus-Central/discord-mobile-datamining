@@ -72,13 +72,13 @@ export default {
     },
   },
   [RPCCommands.GET_APPLICATION_TICKET]: {
-    scope: fn(4661).RPC_LOCAL_SCOPE,
+    scope: fn(4731).RPC_LOCAL_SCOPE,
     handler(socket) {
       const id = socket.socket.application.id;
       if (null == id) {
         const obj = { errorCode: constants2.INVALID_COMMAND };
-        const tmp10 = new RPCErrorDefault(obj, "No application.");
-        throw tmp10;
+        const tmp7 = new RPCErrorDefault(obj, "No application.");
+        throw tmp7;
       } else {
         const HTTP = HTTPUtils.HTTP;
         const request = {

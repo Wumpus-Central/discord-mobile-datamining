@@ -156,7 +156,7 @@ let closure_8 = async function _getCustomActivityLinkParams(arg0) {
       } else if (1 === tmp6) {
         c6 = 0;
         c7 = 3;
-        const obj9 = { value: { customId: "max" }, done: true };
+        const obj9 = { value: { customId: "r" }, done: true };
         return obj9;
       } else if (arg0 === 1) {
         c7 = 3;

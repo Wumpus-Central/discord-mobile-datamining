@@ -9,7 +9,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const isGuildOwner = fn(2060).isGuildOwner;
-let closure_8 = fn(4400).MemberSafetyPagePermissions;
+let closure_8 = fn(4466).MemberSafetyPagePermissions;
 const Constants = fn(1074);
 ({ GuildFeatures: closure_9, Permissions: c10 } = Constants);
 const size = fn(2);

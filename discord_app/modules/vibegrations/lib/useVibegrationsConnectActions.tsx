@@ -5,7 +5,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_6 = fn(13366).requestExternalAuthorizeUrl;
+let closure_6 = fn(13448).requestExternalAuthorizeUrl;
 const set = new Set();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/lib/useVibegrationsConnectActions.tsx");
@@ -68,19 +68,19 @@ export const useVibegrationsConnectActions = function useVibegrationsConnectActi
               callback(closure_129_0.type);
               if ("url" === closure_128_0.type) {
                 const obj7 = { href: closure_128_0.url, trusted: false };
-                type(8645).handleClick(obj7);
+                type(8716).handleClick(obj7);
                 c3 = 3;
-                const obj = type(8645);
+                const obj = type(8716);
               }
               if ("setup" === obj3.externalAuthErrorCopy(closure_128_0.error)) {
                 const intl2 = type(1115).intl;
-                let stringResult = intl2.string(presentError(3678).avu1u4);
+                let stringResult = intl2.string(presentError(3712).avu1u4);
               } else {
                 const intl = type(1115).intl;
-                stringResult = intl.string(presentError(3678)["5fwOcF"]);
+                stringResult = intl.string(presentError(3712)["5fwOcF"]);
               }
               closure_1(stringResult);
-              obj3 = type(13373);
+              obj3 = type(13455);
             }
           } catch (tmp33) {
             c3 = tmp;
@@ -89,7 +89,7 @@ export const useVibegrationsConnectActions = function useVibegrationsConnectActi
         }
       };
       if (null != projectId) {
-        const result = projectId(13373).beginExternalAuthorization(ref.current, type.type);
+        const result = projectId(13455).beginExternalAuthorization(ref.current, type.type);
         if (null != result) {
           ref.current = result;
           dependencyMap(result);
@@ -114,7 +114,7 @@ export const useVibegrationsConnectActions = function useVibegrationsConnectActi
             return applyArgumentsResult;
           })();
         }
-        let obj = projectId(13373);
+        let obj = projectId(13455);
       }
     }, items),
   };

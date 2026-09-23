@@ -1,6 +1,6 @@
 // discord_app/modules/vibegrations/native/useVibegrationsPreviewMenu.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3678 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3712 from "../intl/VibegrationsUntranslated.messages.js";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import vibegrationsExternalConnections from "../vibegrationsExternalConnections.tsx";
 import vibegrationsProjectMenuItems from "../lib/vibegrationsProjectMenuItems.tsx";
@@ -54,7 +54,7 @@ export default function useVibegrationsPreviewMenu(projectId) {
           connect(found);
         } else {
           const intl = util.intl;
-          ToastUtils.presentError(intl.string(_modDef3678.avu1u4));
+          ToastUtils.presentError(intl.string(_modDef3712.avu1u4));
         }
       }
     } else {

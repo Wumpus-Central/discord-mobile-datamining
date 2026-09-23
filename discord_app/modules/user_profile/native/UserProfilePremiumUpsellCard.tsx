@@ -48,7 +48,7 @@ function PreviewNitroCard(style) {
 }
 function GetNitroCard(style) {
   let analyticsLocations;
-  let nitroTrialCtaOverride = analyticsLocations(7691).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
+  let nitroTrialCtaOverride = analyticsLocations(7774).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
   analyticsLocations = useAnalyticsLocationsDefault(items).analyticsLocations;
   items = [analyticsLocations];
   let callback = noop.useCallback(() => {
@@ -63,7 +63,7 @@ function GetNitroCard(style) {
     };
     openPremiumModalDefault(obj);
   }, items);
-  let obj = analyticsLocations(7691);
+  let obj = analyticsLocations(7774);
   ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(
     false,
     callback,
@@ -73,7 +73,7 @@ function GetNitroCard(style) {
   ));
   const tmp5 = usePremiumFeatureUpsellGetNitroDefault(false, callback, constants2.USER_SETTINGS, undefined, items);
   const mobileNitroPreviewDirectCheckoutEnabled =
-    analyticsLocations(14927).useMobileNitroPreviewDirectCheckoutEnabled();
+    analyticsLocations(15007).useMobileNitroPreviewDirectCheckoutEnabled();
   const obj3 = { style: style.style, ctaText: null, description: null, disabled: null, onPress: null };
   if (nitroTrialCtaOverride == null) {
     const intl = tmp(1115).intl;
@@ -102,7 +102,7 @@ const Constants = fn(1074);
 } = Constants);
 const jsx = fn(21).jsx;
 let items = [AnalyticsLocationDefault.USER_SETTINGS_TRY_OUT_PREMIUM];
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_10 = createStyles.createStyles((bottom) => {
   const obj = { container: { position: "absolute", bottom, start: 0, end: 0 } };
   return obj;

@@ -1,6 +1,6 @@
 // discord_app/modules/guild_mod_dash_member_safety/DateUtils.tsx
 import util from "../../intl/index.native.tsx";
-import getTimestampStringDefault from "../threads/getTimestampString.tsx";
+import threads_getTimestampStringDefault from "../threads/getTimestampString.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 function getJoinedAtDateFormatter() {
@@ -49,7 +49,7 @@ export const formatDateRelativeTime = function formatDateRelativeTime(arg0, arg1
   } else if (arg1 === tmp.ACCOUNT_AGE) {
     tmp2 = getAccountAgeDateFormatter;
   }
-  return getTimestampStringDefault(arg0, tmp2, false);
+  return threads_getTimestampStringDefault(arg0, tmp2, false);
 };
 export const getJoinedAtTimestamp = function getJoinedAtTimestamp(joinedAt) {
   if (null != joinedAt) {

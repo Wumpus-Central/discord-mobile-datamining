@@ -9,7 +9,7 @@ const require = globalThis.__r;
 
 require = fn;
 const UserNotificationSettings = fn(1074).UserNotificationSettings;
-const UnreadSetting = fn(4939).UnreadSetting;
+const UnreadSetting = fn(5009).UnreadSetting;
 let closure_6 = fn(1084).ChannelNotificationSettingsFlags;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -46,13 +46,10 @@ export default function NotificationSettingsMessageNotificationChannelActionShee
         constants.UNREADS_ALL_MESSAGES,
       );
     }
+    const obj4 = { guildId: channel.channel.guild_id, channelId: channel.channel.id, settings: obj, label: null };
     const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
-    const result = NotificationSettingsModalActionCreatorsDefault.updateChannelOverrideSettings(
-      channel.channel.guild_id,
-      channel.channel.id,
-      obj,
-      NotificationLabel.notifications(message_notifications),
-    );
+    obj4.label = NotificationLabel.notifications(message_notifications);
+    const result = NotificationSettingsModalActionCreatorsDefault.updateChannelOverrideSettings(obj4);
   };
-  return jsx(unread(10424), { context: "channel", value: notification, allMessagesSubLabel: null, onChange: null });
+  return jsx(unread(10503), { context: "channel", value: notification, allMessagesSubLabel: null, onChange: null });
 }

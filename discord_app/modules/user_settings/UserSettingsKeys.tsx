@@ -317,7 +317,6 @@ export const WebUserSettings = {
   VOICE_AUDIO_DEVICE_SUGGESTIONS_SETTING: "voice_audio_device_suggestions_setting",
   VOICE_SILENCE_WARNING_SETTING: "voice_silence_warning_setting",
   VOICE_SWITCH_CHANNEL_ALERT_SETTING: "voice_switch_channel_alert_setting",
-  VOICE_HARDWARE_MUTE_SILENCE_ALERT_SETTING: "voice_hardware_mute_silence_alert_setting",
   VOICE_GLOBAL_ATTENUATION_FIELD_SET: "voice_global_attenuation_field_set",
   VOICE_GLOBAL_ATTENUATION_SLIDER: "voice_global_attenuation_slider",
   VOICE_GLOBAL_ATTENUATION_FOR_SELF_SETTING: "voice_global_attenuation_for_self_setting",

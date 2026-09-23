@@ -12,7 +12,7 @@ export default function parseUserProfileCollectibles(collectibles) {
     collectibles1 = collectibles.collectibles;
   }
   if (null == collectibles1) {
-    return { collectibles: "Array", profileEffect: "paddingHorizontal", profileFrame: "pos" };
+    return { collectibles: "Array", profileEffect: "paddingHorizontal", profileFrame: "container" };
   } else {
     const items = [];
     collectibles = collectibles.collectibles;

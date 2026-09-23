@@ -1,46 +1,46 @@
 // discord_app/modules/premium/native/gifting/PremiumGiftBackgroundSelectTile.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2546 from "../../gifting/PremiumGifting.messages.js";
+import _modDef2548 from "../../gifting/PremiumGifting.messages.js";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef11293 from "../../../../../_runtime/metro/11293__.js";
-import _modDef11294 from "../../../../../_runtime/metro/11294__.js";
-import _modDef11295 from "../../../../../_runtime/metro/11295__.js";
-import _modDef11296 from "../../../../../_runtime/metro/11296__.js";
-import _modDef11297 from "../../../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
-import _modDef11298 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_cake.png.js";
-import _modDef11299 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_chest.png.js";
-import _modDef11300 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_coffee.png.js";
-import _modDef11301 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_box.png.js";
+import _modDef11369 from "../../../../../_runtime/metro/11369__.js";
+import _modDef11370 from "../../../../../_runtime/metro/11370__.js";
+import _modDef11371 from "../../../../../_runtime/metro/11371__.js";
+import _modDef11372 from "../../../../../_runtime/metro/11372__.js";
+import _modDef11373 from "../../../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
+import _modDef11374 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_cake.png.js";
+import _modDef11375 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_chest.png.js";
+import _modDef11376 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_coffee.png.js";
+import _modDef11377 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_box.png.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Pressable: closure_4 } = get_ActivityIndicator);
 const PremiumGiftStyles = fn(1374).PremiumGiftStyles;
-const GIFT_STYLE_DESCRIPTIONS = fn(11292).GIFT_STYLE_DESCRIPTIONS;
+const GIFT_STYLE_DESCRIPTIONS = fn(11368).GIFT_STYLE_DESCRIPTIONS;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const GIFT_STYLE_IMG = {
-  [STANDARD_BOX]: _modDef11293,
-  [CAKE]: _modDef11294,
-  [CHEST]: _modDef11295,
-  [COFFEE]: _modDef11296,
+  [STANDARD_BOX]: _modDef11369,
+  [CAKE]: _modDef11370,
+  [CHEST]: _modDef11371,
+  [COFFEE]: _modDef11372,
 };
 ({ STANDARD_BOX, CAKE, CHEST, COFFEE } = PremiumGiftStyles);
-GIFT_STYLE_IMG[PremiumGiftStyles.NITROWEEN_STANDARD] = { uri: _modDef11297 };
+GIFT_STYLE_IMG[PremiumGiftStyles.NITROWEEN_STANDARD] = { uri: _modDef11373 };
 GIFT_STYLE_IMG[PremiumGiftStyles.SNOWGLOBE] = null;
 GIFT_STYLE_IMG[PremiumGiftStyles.BOX] = null;
 GIFT_STYLE_IMG[PremiumGiftStyles.CUP] = null;
-let obj2 = { uri: _modDef11297 };
-GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CAKE] = { uri: _modDef11298 };
-let obj3 = { uri: _modDef11298 };
-GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CHEST] = { uri: _modDef11299 };
-let obj4 = { uri: _modDef11299 };
-GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_COFFEE] = { uri: _modDef11300 };
-const obj5 = { uri: _modDef11300 };
-GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_STANDARD_BOX] = { uri: _modDef11301 };
-const createStyles = fn(4757);
+let obj2 = { uri: _modDef11373 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CAKE] = { uri: _modDef11374 };
+let obj3 = { uri: _modDef11374 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CHEST] = { uri: _modDef11375 };
+let obj4 = { uri: _modDef11375 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_COFFEE] = { uri: _modDef11376 };
+const obj5 = { uri: _modDef11376 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_STANDARD_BOX] = { uri: _modDef11377 };
+const createStyles = fn(4827);
 let closure_9 = createStyles.createStyles((arg0) => {
   const size = {
     width: 78,
@@ -81,7 +81,7 @@ export default function GiftBackgroundSelectTile(index) {
     const obj2 = { giftStyle: null };
     const intl2 = util.intl;
     obj2.giftStyle = intl2.string(GIFT_STYLE_DESCRIPTIONS[giftStyle]);
-    obj["aria-label"] = intl.formatToPlainString(_modDef2546["+utqaz"], obj2);
+    obj["aria-label"] = intl.formatToPlainString(_modDef2548["+utqaz"], obj2);
     obj["aria-selected"] = selected;
     obj.style = tmp.container;
     obj.onPress = index.onPress;

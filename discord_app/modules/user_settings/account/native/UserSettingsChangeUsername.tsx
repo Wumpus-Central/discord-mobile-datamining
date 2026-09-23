@@ -10,23 +10,23 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 function UsernameStatusMessage(showHint) {
   showHint = showHint.showHint;
-  const match = showHint(4942).match(showHint.usernameStatus);
-  let obj = { type: showHint(14988).NameValidationState.ERROR, message: null };
-  const P = showHint(4942).P;
+  const match = showHint(5012).match(showHint.usernameStatus);
+  let obj = { type: showHint(15065).NameValidationState.ERROR, message: null };
+  const P = showHint(5012).P;
   obj.message = P.select();
-  const str = showHint(4942);
-  const obj2 = { type: showHint(14988).NameValidationState.AVAILABLE, message: null };
-  const P2 = showHint(4942).P;
+  const str = showHint(5012);
+  const obj2 = { type: showHint(15065).NameValidationState.AVAILABLE, message: null };
+  const P2 = showHint(5012).P;
   obj2.message = P2.select();
   const withResult = match.with(obj, (children) =>
-    closure_1_11(showHint(4753).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }),
+    closure_1_11(showHint(4823).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }),
   );
   return match
     .with(obj, (children) =>
-      closure_1_11(showHint(4753).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }),
+      closure_1_11(showHint(4823).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }),
     )
     .with(obj2, (children) =>
-      closure_1_11(showHint(4753).Text, { variant: "text-xs/medium", color: "text-feedback-positive", children }),
+      closure_1_11(showHint(4823).Text, { variant: "text-xs/medium", color: "text-feedback-positive", children }),
     )
     .otherwise(() => {
       let tmp = null;
@@ -44,7 +44,7 @@ get_ActivityIndicator = fn(17);
 const UserSettingsSections = fn(1074).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = {
   background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   container: { padding: 16 },
@@ -157,7 +157,7 @@ export default function UserSettingsChangeUsername() {
           const tmp34 = first1;
         }
         user.discriminator = tmp34;
-        yield closure_2_2(7231).saveAccountChanges(user, { close: false });
+        yield closure_2_2(7315).saveAccountChanges(user, { close: false });
         closure_129_0 = value;
         if (!closure_129_0.ok) {
           const v6OrEarlierAPIError = new closure_0(1271).V6OrEarlierAPIError(closure_129_0);

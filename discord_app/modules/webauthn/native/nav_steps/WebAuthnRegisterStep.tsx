@@ -36,10 +36,10 @@ function AndroidPasskeyRadioGroup(onChange) {
   return React5(native.RadioGroup, obj4);
 }
 const View = fn(17).View;
-const WebAuthnScreens = fn(14940).WebAuthnScreens;
+const WebAuthnScreens = fn(15020).WebAuthnScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = {
   flexContainer: {
     flex: 1,
@@ -99,10 +99,10 @@ export default function WebAuthnRegisterStep() {
   const items2 = [onRegisterSuccess, tmp11, tmp8];
   closure_6 = obj2.useMemo(() => ({ onRegisterSuccess, setError, setRegistering }), items2);
   const obj3 = navigation(1364);
-  const announceError = navigation(14957).useAnnounceError(tmp10);
+  const announceError = navigation(15037).useAnnounceError(tmp10);
   const rect = { bottom: true, left: true, right: true, style: tmp4.flexContainer, children: null };
   obj4 = { style: tmp4.centerFlex, children: null };
-  const items3 = [closure_7(navigation(14958).KeyImage, {}), ,];
+  const items3 = [closure_7(navigation(15038).KeyImage, {}), ,];
   obj5 = { style: tmp4.margin, variant: "text-md/normal", children: null };
   const intl = tmp(1115).intl;
   const string = intl.string;
@@ -113,11 +113,11 @@ export default function WebAuthnRegisterStep() {
     stringResult = string(t.Lh5vTW);
   }
   obj5.children = stringResult;
-  items3[1] = closure_7(navigation(4753).Text, obj5);
+  items3[1] = closure_7(navigation(4823).Text, obj5);
   let tmp19Result = "" !== tmp10;
   if (tmp19Result) {
     const obj6 = { variant: "text-md/normal", color: "text-feedback-critical", children: tmp10 };
-    tmp19Result = closure_7(tmp(4753).Text, obj6);
+    tmp19Result = closure_7(tmp(4823).Text, obj6);
   }
   items3[2] = tmp19Result;
   obj4.children = items3;
@@ -137,7 +137,7 @@ export default function WebAuthnRegisterStep() {
     string2Result = string2(t2.oibaQa);
   }
   const obj8 = {
-    children: closure_7(navigation(5187).Button, {
+    children: closure_7(navigation(5271).Button, {
       text: string2Result,
       disabled: tmp7,
       loading: tmp7,
@@ -147,7 +147,7 @@ export default function WebAuthnRegisterStep() {
       size: "lg",
     }),
   };
-  items4[2] = closure_7(navigation(5652).ButtonGroup, obj8);
+  items4[2] = closure_7(navigation(5736).ButtonGroup, obj8);
   rect.children = items4;
-  return closure_8(navigation(7370).SafeAreaPaddingView, rect);
+  return closure_8(navigation(7454).SafeAreaPaddingView, rect);
 }

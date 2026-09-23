@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = { screenContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 16 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -28,7 +28,7 @@ export default function NotificationSettingsChannel(channel) {
   const intl = require("util").intl;
   importDefault = intl.string(require("util").t.h850Ss);
   dependencyMap = useChannelNameDefault(channel.channel);
-  const obj = require("notficationSettingsChannelFlagUtils");
+  let obj = require("notficationSettingsChannelFlagUtils");
   noop = require("useNavigation").useNavigation();
   let obj2 = require("useNavigation");
   const layoutEffect = noop.useLayoutEffect(() => {
@@ -56,12 +56,13 @@ export default function NotificationSettingsChannel(channel) {
     items,
   );
   const callback1 = noop.useCallback(() => {
-    const result = NotificationSettingsModalActionCreatorsDefault.updateChannelOverrideSettings(
-      channel.channel.guild_id,
-      channel.channel.id,
-      { muted: false },
-      NotificationSettingsUtils.NotificationLabels.Unmuted,
-    );
+    const obj = NotificationSettingsModalActionCreatorsDefault;
+    const result = obj.updateChannelOverrideSettings({
+      guildId: channel.channel.guild_id,
+      channelId: channel.channel.id,
+      settings: { muted: false },
+      label: NotificationSettingsUtils.NotificationLabels.Unmuted,
+    });
   }, items1);
   const tmp4 = closure_8();
   const items2 = [UserGuildSettingsStore];
@@ -75,10 +76,10 @@ export default function NotificationSettingsChannel(channel) {
     const obj5 = { style: { marginBottom: 16 }, title: null, subtitle: null, onPressUnmute: null };
     const intl2 = tmp(1115).intl;
     obj5.title = intl2.string(tmp(1115).t["6MCxAy"]);
-    obj5.subtitle = tmp(10412).getMuteBannerSubtitleFromConfig(stateFromStoresObject.config);
+    obj5.subtitle = tmp(10491).getMuteBannerSubtitleFromConfig(stateFromStoresObject.config);
     obj5.onPressUnmute = callback1;
-    muted = closure_6(tmp(10412).NotificationSettingsMuteBanner, obj5);
-    const tmpResult = tmp(10412);
+    muted = closure_6(tmp(10491).NotificationSettingsMuteBanner, obj5);
+    const tmpResult = tmp(10491);
   }
   const items3 = [
     muted,
@@ -97,7 +98,7 @@ export default function NotificationSettingsChannel(channel) {
   let isForumLikeChannelResult = channel.isForumLikeChannel();
   if (isForumLikeChannelResult) {
     const obj9 = { style: { marginTop: 24 }, channel: channel.channel };
-    isForumLikeChannelResult = closure_6(tmp(10432).NotificationSettingsChannelPost, obj9);
+    isForumLikeChannelResult = closure_6(tmp(10511).NotificationSettingsChannelPost, obj9);
   }
   items3[4] = isForumLikeChannelResult;
   const inherited = channelPresetInheritance.inherited;
@@ -107,7 +108,7 @@ export default function NotificationSettingsChannel(channel) {
     const obj11 = { variant: "secondary", onPress: callback, text: null };
     const intl3 = tmp(1115).intl;
     obj11.text = intl3.string(tmp(1115).t["3PBFN6"]);
-    obj10.children = closure_6(tmp(5187).Button, obj11);
+    obj10.children = closure_6(tmp(5271).Button, obj11);
     tmp11Result = closure_6(View, obj10);
   }
   items3[5] = tmp11Result;

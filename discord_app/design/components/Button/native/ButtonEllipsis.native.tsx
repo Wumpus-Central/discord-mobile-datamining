@@ -62,9 +62,9 @@ function EllipsisCircle(offset) {
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 const ELLIPSIS_APPEAR_TIMING = { duration: 500, easing: null };
-const Easing = fn(4493).Easing;
-ELLIPSIS_APPEAR_TIMING.easing = Easing.inOut(fn(4493).Easing.quad);
-const createStyles = fn(4757);
+const Easing = fn(4559).Easing;
+ELLIPSIS_APPEAR_TIMING.easing = Easing.inOut(fn(4559).Easing.quad);
+const createStyles = fn(4827);
 let closure_6 = createStyles.createStyles((arg0, arg1, backgroundColor) => {
   if ("lg" === arg0) {
     let num = 4;
@@ -105,9 +105,9 @@ function withEllipsisAnimation(arg0, value) {
 }
 withEllipsisAnimation.__closure = {
   ELLIPSIS_APPEAR_DURATION: 500,
-  withDelay: fn(4493).withDelay,
-  withRepeat: fn(4493).withRepeat,
-  withTiming: fn(4758).withTiming,
+  withDelay: fn(4559).withDelay,
+  withRepeat: fn(4559).withRepeat,
+  withTiming: fn(4828).withTiming,
   ELLIPSIS_APPEAR_TIMING,
 };
 withEllipsisAnimation.__workletHash = 2181731162311;

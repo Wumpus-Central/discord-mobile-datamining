@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
-import _modDef15500 from "../../../../../_runtime/metro/15500__.js";
+import _modDef15554 from "../../../../../_runtime/metro/15554__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL },
   body: { alignItems: "center", textAlign: "center" },
@@ -35,7 +35,7 @@ export default function ResubscribedAlert(onClose) {
   const obj2 = { style: tmp.body, children: null };
   const tmp2 = common_AlertDefault;
   const items = [
-    hasOwnProperty(React4, { source: _modDef15500, style: tmp.headerImage }),
+    hasOwnProperty(React4, { source: _modDef15554, style: tmp.headerImage }),
     hasOwnProperty(native.Spacer, { size: 27 }),
     ,
     ,

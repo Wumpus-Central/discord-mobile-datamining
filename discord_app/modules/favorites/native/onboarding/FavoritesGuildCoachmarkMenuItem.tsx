@@ -1,6 +1,6 @@
 // discord_app/modules/favorites/native/onboarding/FavoritesGuildCoachmarkMenuItem.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef3324 from "../../intl/FavoritesGuild.messages.js";
+import _modDef3358 from "../../intl/FavoritesGuild.messages.js";
 import LayerScope from "../../../../design/components/Layers/native/LayerScope.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import FavoriteStore from "../../FavoriteStore.tsx";
@@ -39,11 +39,12 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
       description: null,
       onDismiss: null,
       renderImgComponent: "r",
-      buttonLabel: "M1 8v2h1V8H1ZM11 10h-1V9H6v1H5v2h1v1h4v-1h1v-2Z",
-      onButtonPress: null,
+      buttonLabel:
+        "M15 6H8v1h7V6ZM10 1H9v1h1V1ZM14 1h-1v1h1V1ZM13 2h-1v1h1V2ZM12 3h-1v1h1V3ZM11 4h-1v1h1V4ZM10 5H9v1h1V5ZM15 9h-2v1h2V9ZM12 11h-2v1h2v-1ZM13 10h-1v1h1v-1ZM9 13H7v1h2v-1ZM10 12H9v1h1v-1ZM6 15H3v1h3v-1ZM8 9H1v1h7V9ZM7 14H6v1h1v-1ZM3 14H2v1h1v-1ZM4 13H3v1h1v-1ZM5 12H4v1h1v-1ZM6 11H5v1h1v-1ZM7 10H6v1h1v-1Z",
+      onButtonPress: "#000",
     };
     const intl = util.intl;
-    const tmp4 = _modDef3324;
+    const tmp4 = _modDef3358;
     if (stateFromStores) {
       let TWuDTt = tmp4.TWuDTt;
       let tmp6 = importDefault;
@@ -53,10 +54,10 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
     }
     obj.title = intl.string(TWuDTt);
     const intl2 = util.intl;
-    obj.description = intl2.string(tmp6(3324).Ztl9ht);
+    obj.description = intl2.string(tmp6(3358).Ztl9ht);
     obj.onDismiss = onDismiss;
     const intl3 = util.intl;
-    obj.buttonLabel = intl3.string(tmp6(3324)["+h9aza"]);
+    obj.buttonLabel = intl3.string(tmp6(3358)["+h9aza"]);
     obj.onButtonPress = callback1;
     return obj;
   }, items3);

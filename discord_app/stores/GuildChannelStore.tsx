@@ -192,7 +192,7 @@ function hasElevatedPermissions(user, context) {
 function handleFavoritesUpdate() {
   rebuildGuildChannels(closure_1_17);
 }
-let closure_6 = fn(4395).createFavoritesGuildChannelRecord;
+let closure_6 = fn(4461).createFavoritesGuildChannelRecord;
 const ChannelRecord = fn(2046);
 ({
   isGuildSelectableChannelType: closure_7,

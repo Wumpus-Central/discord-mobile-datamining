@@ -4,8 +4,8 @@ import initialize from "../../../../../../discord_common/js/packages/flux/index.
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import useWindowDimensionsDefault from "../../../../screen/useWindowDimensions.native.tsx";
-import _modDef3000 from "../../../Checkpoint.messages.js";
-import _modDef3032 from "../../../Checkpoint2026.messages.js";
+import _modDef3002 from "../../../Checkpoint.messages.js";
+import _modDef3034 from "../../../Checkpoint2026.messages.js";
 import UserUtils from "../../../../../utils/UserUtils.tsx";
 import CheckpointScreenDefault from "../CheckpointScreen.tsx";
 import CheckpointTextDefault from "../CheckpointText.tsx";
@@ -49,13 +49,13 @@ export default function CheckpointWelcomeScreen() {
   const obj8 = { style: tmp.titleText, variant: "display-lg", children: null };
   const tmp5 = CheckpointScreenDefault;
   const intl = util.intl;
-  obj8.children = intl.string(_modDef3000["CdU/PF"]);
+  obj8.children = intl.string(_modDef3002["CdU/PF"]);
   obj6.children = hasOwnProperty(CheckpointTextDefault, obj8);
   const items3 = [hasOwnProperty(View, obj6), ,];
   const obj9 = { style: tmp.subtitle, children: null };
   const obj10 = { variant: "heading-xl/medium", children: null };
   const intl2 = util.intl;
-  obj10.children = intl2.format(_modDef3032.xhZ23b, { username: name });
+  obj10.children = intl2.format(_modDef3034.xhZ23b, { username: name });
   obj9.children = hasOwnProperty(CheckpointTextDefault, obj10);
   items3[1] = hasOwnProperty(View, obj9);
   items3[2] = hasOwnProperty(CheckpointKnickKnacksDefault, { style: tmp.knickKnacks });

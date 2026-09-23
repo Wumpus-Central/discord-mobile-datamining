@@ -10,8 +10,8 @@ import UserGuildSettingsStore from "../stores/UserGuildSettingsStore.tsx";
 require = fn;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, UserNotificationSettings } = Constants);
-const constants2 = fn(4409).NotificationSettingsUpdateType;
-const UnreadSetting = fn(4939).UnreadSetting;
+const constants2 = fn(4475).NotificationSettingsUpdateType;
+const UnreadSetting = fn(5009).UnreadSetting;
 const UserSettingsConstants = fn(1084);
 ({ ChannelNotificationSettingsFlags: closure_11, GuildNotificationSettingsFlags: closure_12 } = UserSettingsConstants);
 const NotificationLabels = {
@@ -505,10 +505,10 @@ export const getManyCurrentGuildSettings = function getManyCurrentGuildSettings(
   });
   return map;
 };
-export const getCurrentChannelSettings = function getCurrentChannelSettings(guildId, parent_id) {
-  const channelMuteConfig = UserGuildSettingsStore.getChannelMuteConfig(guildId, parent_id);
+export const getCurrentChannelSettings = function getCurrentChannelSettings(guildId, channelId) {
+  const channelMuteConfig = UserGuildSettingsStore.getChannelMuteConfig(guildId, channelId);
   const obj2 = {
-    channel_is_muted: UserGuildSettingsStore.isChannelMuted(guildId, parent_id),
+    channel_is_muted: UserGuildSettingsStore.isChannelMuted(guildId, channelId),
     channel_muted_until: null,
     channel_message_notification_settings: null,
     channel_flags: null,
@@ -524,8 +524,8 @@ export const getCurrentChannelSettings = function getCurrentChannelSettings(guil
   }
   obj2.channel_muted_until = time;
   obj2.channel_message_notification_settings =
-    frozen[UserGuildSettingsStore.getChannelMessageNotifications(UserGuildSettingsStore, guildId, parent_id)];
-  obj2.channel_flags = UserGuildSettingsStore.getChannelIdFlags(guildId, parent_id);
+    frozen[UserGuildSettingsStore.getChannelMessageNotifications(UserGuildSettingsStore, guildId, channelId)];
+  obj2.channel_flags = UserGuildSettingsStore.getChannelIdFlags(guildId, channelId);
   return obj2;
 };
 export const getManyCurrentChannelSettings = function getManyCurrentChannelSettings(guildId, keys) {

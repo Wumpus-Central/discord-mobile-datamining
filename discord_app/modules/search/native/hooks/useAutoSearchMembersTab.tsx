@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import SearchQueryStore from "../stores/SearchQueryStore.tsx";
 
 require = fn;
-let closure_5 = fn(12611).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
+let closure_5 = fn(12687).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
 const SearchTypes = fn(1074).SearchTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/hooks/useAutoSearchMembersTab.tsx");
@@ -18,7 +18,7 @@ export const useAutoSearchMembersTab = function useAutoSearchMembersTab(searchCo
     if (!closure_1) {
       const debounceResult = _mod12.debounce((searchQueryString) => {
         if (!autocompleteVisible.isAutocompleteVisible(searchContext)) {
-          const guildIdFromSearchContext = closure_0(12598).getGuildIdFromSearchContext(searchContext);
+          const guildIdFromSearchContext = closure_0(12674).getGuildIdFromSearchContext(searchContext);
           if (null != guildIdFromSearchContext) {
             const channelIds = autocompleteVisible.getChannelIds(searchContext);
             let tmp8 = null;
@@ -42,10 +42,10 @@ export const useAutoSearchMembersTab = function useAutoSearchMembersTab(searchCo
               tmp12 = tmp8;
             }
             obj4.threadId = tmp12;
-            closure_1(12619).searchGuildMemberTab(obj4);
-            const obj3 = closure_1(12619);
+            closure_1(12695).searchGuildMemberTab(obj4);
+            const obj3 = closure_1(12695);
           }
-          const obj2 = closure_0(12598);
+          const obj2 = closure_0(12674);
         }
       }, closure_5);
       return SearchPlatformUtilsDefault.subscribeTextInputValue(closure_0, debounceResult);
@@ -54,7 +54,7 @@ export const useAutoSearchMembersTab = function useAutoSearchMembersTab(searchCo
   const items1 = [searchContext];
   const effect1 = noop.useEffect(
     () => () => {
-      const result = closure_1(12619).cleanupGuildMemberTab(searchContext);
+      const result = closure_1(12695).cleanupGuildMemberTab(searchContext);
     },
     items1,
   );

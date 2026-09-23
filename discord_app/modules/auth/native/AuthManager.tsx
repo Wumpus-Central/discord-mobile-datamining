@@ -10,10 +10,10 @@ import LifecycleManager from "../../../lib/LifecycleManager.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ NativeModules: closure_4, Keyboard: hasOwnProperty } = get_ActivityIndicator);
-const PermissionStateType = fn(12667).PermissionStateType;
+const PermissionStateType = fn(12749).PermissionStateType;
 const ME = fn(1074).ME;
-let closure_8 = fn(4966).NotificationAuthorizationStatus;
-const NewUserTypes = fn(12962).NewUserTypes;
+let closure_8 = fn(5036).NotificationAuthorizationStatus;
+const NewUserTypes = fn(13044).NewUserTypes;
 let closure_10 = { REGISTER: "register", LOGIN: "login" };
 let c11 = null;
 class AuthManager extends tmp3 {
@@ -77,8 +77,8 @@ class AuthManager extends tmp3 {
             closure_129_0();
           }
           const obj6 = { onComplete: closure_129_0 };
-          const result = applyArgumentsResult(16340).showPushNotificationPromptModal(obj6);
-          const obj = applyArgumentsResult(16340);
+          const result = applyArgumentsResult(16393).showPushNotificationPromptModal(obj6);
+          const obj = applyArgumentsResult(16393);
         } catch (tmp19) {
           DCDShortcutManager = tmp;
           throw tmp19;
@@ -105,17 +105,17 @@ class AuthManager extends tmp3 {
     };
     applyArgumentsResult.handleRegisterComplete = function handleRegisterComplete() {
       if (!obj.hasDeferredInvite()) {
-        applyArgumentsResult(13003).setNewUser(constants.ORGANIC_REGISTERED);
-        const tmpResult = applyArgumentsResult(13003);
+        applyArgumentsResult(13085).setNewUser(constants.ORGANIC_REGISTERED);
+        const tmpResult = applyArgumentsResult(13085);
       }
-      obj = applyArgumentsResult(10082);
-      applyArgumentsResult(12961).startOnboarding();
-      const tmpResult2 = applyArgumentsResult(12961);
+      obj = applyArgumentsResult(10162);
+      applyArgumentsResult(13043).startOnboarding();
+      const tmpResult2 = applyArgumentsResult(13043);
     };
     applyArgumentsResult.handleLoginWithConnection = function handleLoginWithConnection() {
       const result = applyArgumentsResult.handlePushNotificationOptIn(() => {
-        closure_1_0(7587).transitionToGuild(closure_1_7);
-        const obj = closure_1_0(7587);
+        closure_1_0(7670).transitionToGuild(closure_1_7);
+        const obj = closure_1_0(7670);
         closure_1_1(573).dispatch({ type: "DEFERRED_INVITE_SHOW" });
       });
     };

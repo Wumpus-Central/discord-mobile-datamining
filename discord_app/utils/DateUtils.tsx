@@ -3,7 +3,7 @@ import LoggerDefault from "../modules/debug/Logger.tsx";
 import util from "../intl/index.native.tsx";
 import preloaded_user_settings from "../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import UserSettings from "../modules/user_settings/UserSettings.tsx";
-import _modDef4348 from "../../_runtime/metro/04348__.js";
+import _modDef4414 from "../../_runtime/metro/04414__.js";
 import onTimezoneChangeDefault from "../modules/date/onTimezoneChange.android.tsx";
 import SystemDateFormatter from "../modules/system_date_format/SystemDateFormatter.native.tsx";
 import makeDateFormatterDefault from "../lib/makeDateFormatter.tsx";
@@ -88,9 +88,9 @@ function differenceInCalendarDays(d, d2) {
 function dateFormat(date, LL, setting) {
   let obj2 = date;
   if (!obj.isMoment(date)) {
-    obj2 = _modDef4348(date);
+    obj2 = _modDef4414(date);
   }
-  obj = _modDef4348;
+  obj = _modDef4414;
   if (setting == null) {
     const TimestampHourCycle = UserSettings.TimestampHourCycle;
     setting = TimestampHourCycle.getSetting();
@@ -159,8 +159,8 @@ export const calendarFormat = function calendarFormat(timestamp, arg1) {
   if (arg1 === undefined) {
     flag = false;
   }
-  const obj3 = _modDef4348();
-  const localeDataResult = _modDef4348.localeData();
+  const obj3 = _modDef4414();
+  const localeDataResult = _modDef4414.localeData();
   let toDateResult = timestamp;
   if (obj4.isMoment(timestamp)) {
     toDateResult = timestamp.toDate();
@@ -186,15 +186,15 @@ export const calendarFormat = function calendarFormat(timestamp, arg1) {
     }
     let tmp8 = timestamp;
     if (!tmpResult.isMoment(timestamp)) {
-      tmp8 = _modDef4348(timestamp);
+      tmp8 = _modDef4414(timestamp);
     }
     return dateFormat(timestamp, localeDataResult.calendar(str2, tmp8, obj3), setting);
   }
-  obj4 = _modDef4348;
+  obj4 = _modDef4414;
 };
 export const calendarFormatCompact = function calendarFormatCompact(timestamp, arg1) {
-  const obj3 = _modDef4348();
-  const localeDataResult = _modDef4348.localeData();
+  const obj3 = _modDef4414();
+  const localeDataResult = _modDef4414.localeData();
   let toDateResult = timestamp;
   if (obj4.isMoment(timestamp)) {
     toDateResult = timestamp.toDate();
@@ -205,17 +205,17 @@ export const calendarFormatCompact = function calendarFormatCompact(timestamp, a
   } else if (-1 === tmp2Result) {
     let tmp6 = timestamp;
     if (!tmpResult.isMoment(timestamp)) {
-      tmp6 = _modDef4348(timestamp);
+      tmp6 = _modDef4414(timestamp);
     }
     let str2 = localeDataResult.calendar("lastDay", tmp6, obj3);
-    tmpResult = _modDef4348;
+    tmpResult = _modDef4414;
   } else {
     str2 = "L";
     if (tmp2Result > -7) {
       str2 = "dddd";
     }
   }
-  obj4 = _modDef4348;
+  obj4 = _modDef4414;
 };
 export const dateStringToMoment = function dateStringToMoment(arg0) {
   if (arg0.length >= 200) {
@@ -223,7 +223,7 @@ export const dateStringToMoment = function dateStringToMoment(arg0) {
     const error = new Error("Date string exceeds maximum length");
     throw error;
   } else {
-    return _modDef4348(arg0);
+    return _modDef4414(arg0);
   }
 };
 export const accessibilityLabelCalendarFormat = function accessibilityLabelCalendarFormat(timestamp) {
@@ -247,8 +247,8 @@ export const accessibilityLabelCalendarFormat = function accessibilityLabelCalen
   }
   let str5 = "LLL";
   if ("sameElse" !== str) {
-    str5 = localeDataResult.calendar(str, _modDef4348(timestamp), _modDef4348(date));
-    const tmp6 = _modDef4348(timestamp);
+    str5 = localeDataResult.calendar(str, _modDef4414(timestamp), _modDef4414(date));
+    const tmp6 = _modDef4414(timestamp);
   }
   return dateFormat(timestamp, str5);
 };
@@ -332,8 +332,8 @@ export const formatDateForDatetimeLocal = function formatDateForDatetimeLocal(ar
       const error = new Error("Date string exceeds maximum length");
       throw error;
     } else {
-      str = _modDef4348(arg0).format("YYYY-MM-DDTHH:mm");
-      const obj = _modDef4348(arg0);
+      str = _modDef4414(arg0).format("YYYY-MM-DDTHH:mm");
+      const obj = _modDef4414(arg0);
     }
   }
   return str;

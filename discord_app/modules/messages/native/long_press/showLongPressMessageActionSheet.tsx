@@ -7,7 +7,7 @@ const result = size.fileFinishedImporting("modules/messages/native/long_press/sh
 
 export const showLongPressMessageActionSheet = function showLongPressMessageActionSheet(arg0) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(11913, dependencyMap.paths),
+    asyncRequireImpl(11989, dependencyMap.paths),
     "MessageLongPressActionSheet",
     arg0,
   );

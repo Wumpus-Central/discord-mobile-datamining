@@ -1,11 +1,11 @@
 // discord_app/modules/search/native/components/tabs/pages/messages/MessagesScreen.tsx
-import BaseMessagesScreen from "BaseMessagesScreen.tsx";
 import MessageSearchResultParserDefault from "../../../../message_parsers/MessageSearchResultParser.tsx";
+import BaseMessagesScreen from "BaseMessagesScreen.tsx";
 import noop from "../../../../../../../../_runtime/metro/00019__.js";
 import SearchQueryStore from "../../../../stores/SearchQueryStore.tsx";
 
 require = fn;
-const SearchConstants = fn(8125);
+const SearchConstants = fn(8207);
 ({
   SEARCH_FILTERS_BY_TAB: hasOwnProperty,
   SearchFilter: metroRequire,
@@ -26,6 +26,7 @@ export default noop.memo(function MessagesScreen(isFocused) {
   Pins = undefined;
   let memo;
   let placeholderCount;
+  let item;
   const searchMessages = searchContext(stateFromStores[4]).useSearchMessages(searchContext, tab);
   const obj = searchContext(stateFromStores[4]);
   let items = [callback];
@@ -44,24 +45,42 @@ export default noop.memo(function MessagesScreen(isFocused) {
     onPressMessageItem(channelId, messageId);
   }, items2);
   closure_5 = onPressMessageItem.useRef({});
-  const tmp7 = closure_5[tab] === Pins.Pins ? memo : placeholderCount;
-  Pins = tmp7;
-  const items3 = [tmp7, stateFromStores];
+  const tmp6 = closure_5[tab] === Pins.Pins ? memo : placeholderCount;
+  Pins = tmp6;
+  const items3 = [tmp6, stateFromStores];
   memo = obj4.useMemo(() => new MessageSearchResultParserDefault(stateFromStores, closure_6), items3);
   let obj3 = searchContext(stateFromStores[6]);
   const searchMessagesLoadingState = searchContext(stateFromStores[9]).useSearchMessagesLoadingState({
     searchContext,
     tab,
-    placeholderHeight,
+    placeholderHeight: item,
     numColumns: 1,
   });
   placeholderCount = searchMessagesLoadingState.placeholderCount;
-  const items4 = [callback, tmp7, searchMessages, memo, placeholderCount];
-  ({ isFirstPageLoading, isNextPageLoading } = searchMessagesLoadingState);
+  const isFirstPageLoading = searchMessagesLoadingState.isFirstPageLoading;
+  let length;
+  if (searchMessages != null) {
+    length = searchMessages.length;
+  }
+  const obj5 = { searchContext, tab, placeholderHeight: item, numColumns: 1 };
+  const tmpResult = searchContext(stateFromStores[9]);
+  const obj6 = { searchContext, hasKeywordResults: null, isKeywordFirstPageLoading: null };
+  let num = length;
+  if (length == null) {
+    num = 0;
+  }
+  obj6.hasKeywordResults = num > 0;
+  obj6.isKeywordFirstPageLoading = isFirstPageLoading;
+  const intelligenceSearchMessages = searchContext(stateFromStores[10]).useIntelligenceSearchMessages(obj6);
+  item = intelligenceSearchMessages.item;
+  const items4 = [callback, item, tmp6, searchMessages, memo, placeholderCount];
   const memo1 = obj4.useMemo(() => {
     const items = [];
+    if (null != item) {
+      items.push(tmp);
+    }
     if (searchMessages != null) {
-      const item = searchMessages.forEach((item, index) => {
+      item = searchMessages.forEach((item, index) => {
         closure_0 = index;
         const element = {
           type: constants.MESSAGE,
@@ -77,7 +96,7 @@ export default noop.memo(function MessagesScreen(isFocused) {
         items.push(element);
       });
     }
-    const adjustedPlaceholderCount = searchContext(stateFromStores[10]).getAdjustedPlaceholderCount({
+    const adjustedPlaceholderCount = searchContext(stateFromStores[11]).getAdjustedPlaceholderCount({
       numColumns: 1,
       numResults: items.length,
       placeholderCount,
@@ -86,14 +105,13 @@ export default noop.memo(function MessagesScreen(isFocused) {
       let obj3 = { type: constants.MESSAGE_PLACEHOLDER, key: null };
       let _HermesInternal = HermesInternal;
       obj3.key = "message-placeholder-" + num;
-      let arr = items.push(obj3);
+      let arr4 = items.push(obj3);
     }
     return items;
   }, items4);
-  const obj5 = { searchContext, tab, placeholderHeight, numColumns: 1 };
-  const tmpResult = searchContext(stateFromStores[9]);
-  const contentContainerStyles = searchContext(stateFromStores[11]).useContentContainerStyles();
-  const obj6 = {
+  const tmpResult3 = searchContext(stateFromStores[10]);
+  const contentContainerStyles = searchContext(stateFromStores[12]).useContentContainerStyles();
+  const obj7 = {
     data: memo1,
     searchContext,
     tab,
@@ -102,11 +120,15 @@ export default noop.memo(function MessagesScreen(isFocused) {
     ItemSeparatorComponent: null,
     isFirstPageLoading: null,
     isNextPageLoading: null,
+    keywordResultCount: null,
+    intelligenceStatus: null,
   };
-  const tmpResult2 = searchContext(stateFromStores[11]);
-  obj6.ItemSeparatorComponent = searchContext(stateFromStores[12]).MessageVerticalSeparator;
-  obj6.isFirstPageLoading = isFirstPageLoading;
-  obj6.isNextPageLoading = isNextPageLoading;
+  const tmpResult4 = searchContext(stateFromStores[12]);
+  obj7.ItemSeparatorComponent = searchContext(stateFromStores[13]).MessageVerticalSeparator;
+  obj7.isFirstPageLoading = isFirstPageLoading;
+  obj7.isNextPageLoading = searchMessagesLoadingState.isNextPageLoading;
+  obj7.keywordResultCount = length;
+  obj7.intelligenceStatus = intelligenceSearchMessages.status;
   return jsx(searchMessages(stateFromStores[7]), {
     data: memo1,
     searchContext,
@@ -116,5 +138,7 @@ export default noop.memo(function MessagesScreen(isFocused) {
     ItemSeparatorComponent: null,
     isFirstPageLoading: null,
     isNextPageLoading: null,
+    keywordResultCount: null,
+    intelligenceStatus: null,
   });
 });

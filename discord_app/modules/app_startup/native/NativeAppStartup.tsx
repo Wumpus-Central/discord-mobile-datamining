@@ -611,11 +611,11 @@ let closure_38 = async function _init(_payload) {
         promise = new Promise((arg0) => {
           closure_0 = arg0;
           closure_0(paths[42])(paths[52], paths.paths).then((result) => result.default.loadCacheAsync(closure_2_4(closure_2_0(paths[53]).computeInitialNavigationState(), 1)[0], async () => {
-            closure_0(14724).updateSaturation(closure_0(4749).default.saturation);
-            obj = closure_0(14724);
-            closure_0(17439).updateVisualRefresh(true);
-            const obj2 = closure_0(17439);
-            closure_0(17440).updateTheme(closure_0(1182).default.theme);
+            closure_0(14804).updateSaturation(closure_0(4819).default.saturation);
+            obj = closure_0(14804);
+            closure_0(17508).updateVisualRefresh(true);
+            const obj2 = closure_0(17508);
+            closure_0(17509).updateTheme(closure_0(1182).default.theme);
             closure_1_0();
           }));
         });
@@ -761,14 +761,14 @@ function initializeTokenStorage() {
   global();
   const obj5 = { storageHasToken: null != Storage3.get(closure_1_17), tokenManagerHasToken: null != TokenManagerAll.getToken() };
 }
-const module_17707 = fn(17707);
-const superagentPatch = fn(17709);
+const module_17776 = fn(17776);
+const superagentPatch = fn(17778);
 get_ActivityIndicator = fn(17);
 ({ AppState: metroRequire, NativeEventEmitter: closure_7, Linking: closure_8, LogBox: closure_9, NativeModules: c10 } = get_ActivityIndicator);
-const logThirdPartyImportsDone = fn(17729);
+const logThirdPartyImportsDone = fn(17798);
 let closure_11 = fn(2110).subscribeToIntlLoadingSuccess;
-const AnalyticsTrackingStore = fn(7705);
-const ManagerRegistry = fn(17730);
+const AnalyticsTrackingStore = fn(7788);
+const ManagerRegistry = fn(17799);
 const Constants = fn(1074);
 ({ AppStates: closure_14, AnalyticEvents: closure_15, FIRST_RUN_DATE_KEY: closure_16, TOKEN_KEY: closure_17, STORAGE_SECURE_KEYS: closure_18, Platforms: closure_19 } = Constants);
 const loadImports = TTITrackerDefault.loadImports;
@@ -776,7 +776,7 @@ loadImports.recordEnd();
 let closure_20 = new LoggerDefault("index.native.tsx");
 let c21 = false;
 let c25 = null;
-const future = new fn(9413).Future();
+const future = new fn(9484).Future();
 let obj = { None: 0, [0]: "None", HeadlessRan: 1, [1]: "HeadlessRan", Full: 2, [2]: "Full" };
 const None = obj.None;
 let promise = new Promise((arg0) => {

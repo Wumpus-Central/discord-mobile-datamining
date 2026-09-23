@@ -118,6 +118,7 @@ export const LinkingTypes = {
   ROLL_DICE: "roll-dice",
   GAME_PROFILE: "game-profile",
   MESSAGE_REQUESTS: "message-requests",
+  AGE_VERIFICATION_AGEKEY_RETURN: "agekey-return",
 };
 export const ActivityPartyApplicationNames = { spotify: "Spotify" };
 export const CACHE_STORE_LAZY_KEY = "CacheStoreLazy";

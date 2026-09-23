@@ -11,7 +11,7 @@ const UpsellTypes = fn(1074).UpsellTypes;
 const PremiumUpsellTypes = fn(1374).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_10 = createStyles.createStyles({ container: { alignItems: "center", paddingBottom: 6 } });
 const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
   analyticsLocations = analyticsLocations.analyticsLocations;
@@ -23,7 +23,7 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
   );
   let obj = analyticsLocations(504);
   [tmp6, c2] = noop.useState(0);
-  const tmp7 = stateFromStores(9424)();
+  const tmp7 = stateFromStores(9495)();
   _slicedToArray = tmp7;
   const imperativeHandle = noop.useImperativeHandle(arg1, () => ({
     onMessageLengthChanged(length) {
@@ -37,9 +37,9 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
     let obj3 = { color: "text-feedback-critical", lineClamp: 1, variant: "text-xs/medium", children: null };
     const _HermesInternal = HermesInternal;
     obj3.children = "-" + tmp6;
-    const items2 = [closure_8(tmp2(4753).Text, obj3), closure_8(tmp2(8945).NitroWheelIcon, { size: "sm" })];
+    const items2 = [closure_8(tmp2(4823).Text, obj3), closure_8(tmp2(9016).NitroWheelIcon, { size: "sm" })];
     obj2.children = items2;
-    tmp10 = closure_9(tmp2(5341).PressableOpacity, obj2);
+    tmp10 = closure_9(tmp2(5425).PressableOpacity, obj2);
   }
   return tmp10;
 });

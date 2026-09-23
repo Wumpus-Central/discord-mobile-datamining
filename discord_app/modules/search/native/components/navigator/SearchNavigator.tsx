@@ -1,21 +1,23 @@
 // discord_app/modules/search/native/components/navigator/SearchNavigator.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import utils_PlatformUtils from "../../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
+import ConversationNavigatorHeader from "../../../../conversations/components/native/ConversationNavigatorHeader.tsx";
 import search_tracking_TrackingDefault from "../../tracking/Tracking.tsx";
 import SearchNavigatorPreviewHeaderDefault from "SearchNavigatorPreviewHeader.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const require = fn;
+require = fn;
 const View = fn(17).View;
-let closure_5 = fn(8124).SearchEntrypointAnalyticsLocations;
-const SearchNavigatorScreens = fn(17125).SearchNavigatorScreens;
+let closure_5 = fn(8206).SearchEntrypointAnalyticsLocations;
+const SearchNavigatorScreens = fn(17185).SearchNavigatorScreens;
 const SearchTypes = fn(1074).SearchTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
 let closure_10 = createStyles.createStyles(obj);
-const NativeStackNavigator = fn(8161);
+const NativeStackNavigator = fn(8243);
 let closure_11 = NativeStackNavigator.createNativeStackNavigator();
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 const size = fn(2);
@@ -23,7 +25,7 @@ const result = size.fileFinishedImporting("modules/search/native/components/navi
 
 export default noop.memo((route) => {
   const searchContext = route.route.params.searchContext;
-  const accessibilityNativeStackOptions = searchContext(7247).useAccessibilityNativeStackOptions();
+  const accessibilityNativeStackOptions = searchContext(7331).useAccessibilityNativeStackOptions();
   const items = [searchContext];
   const effect = noop.useEffect(() => {
     if (searchContext.type === SearchTypes.GUILD) {
@@ -36,7 +38,7 @@ export default noop.memo((route) => {
       search_tracking_TrackingDefault.trackSearchClosed({ searchContext });
     };
   }, items);
-  let obj = searchContext(7247);
+  let obj = searchContext(7331);
   const rect = useSafeAreaInsetsDefault();
   const obj2 = { style: null, children: null };
   const items1 = [closure_10().container, { paddingLeft: rect.left, paddingRight: rect.right }];
@@ -50,7 +52,7 @@ export default noop.memo((route) => {
       name: SearchNavigatorScreens.SEARCH_TABS,
       options: { headerShown: false, fullScreenGestureEnabled: true },
       getComponent() {
-        return searchContext(17346).default;
+        return searchContext(17415).default;
       },
     }),
     closure_8(closure_11.Screen, {
@@ -59,8 +61,8 @@ export default noop.memo((route) => {
         route = route.route;
         const obj = {
           headerShown: true,
-          header: route(8110).renderHeader,
-          headerLeft: route(8110).getRenderBackImage(route.navigation),
+          header: route(8192).renderHeader,
+          headerLeft: route(8192).getRenderBackImage(route.navigation),
           headerTitle() {
             return closure_2_8(SearchNavigatorPreviewHeaderDefault, { channelId: route.params.channelId });
           },
@@ -69,7 +71,7 @@ export default noop.memo((route) => {
         return obj;
       },
       getComponent() {
-        return searchContext(17341).default;
+        return searchContext(17410).default;
       },
     }),
   ];
@@ -79,7 +81,7 @@ export default noop.memo((route) => {
     name: SearchNavigatorScreens.SEARCH_TABS,
     options: { headerShown: false, fullScreenGestureEnabled: true },
     getComponent() {
-      return searchContext(17346).default;
+      return searchContext(17415).default;
     },
   };
   const obj6 = {
@@ -88,8 +90,8 @@ export default noop.memo((route) => {
       route = route.route;
       const obj = {
         headerShown: true,
-        header: route(8110).renderHeader,
-        headerLeft: route(8110).getRenderBackImage(route.navigation),
+        header: route(8192).renderHeader,
+        headerLeft: route(8192).getRenderBackImage(route.navigation),
         headerTitle() {
           return closure_2_8(SearchNavigatorPreviewHeaderDefault, { channelId: route.params.channelId });
         },
@@ -98,18 +100,23 @@ export default noop.memo((route) => {
       return obj;
     },
     getComponent() {
-      return searchContext(17341).default;
+      return searchContext(17410).default;
     },
   };
   const tmp3 = closure_10();
   items2[2] = closure_8(closure_11.Screen, {
-    name: searchContext(8171).ConversationNavigatorScreens.FOCUS,
+    name: searchContext(8253).ConversationNavigatorScreens.FOCUS,
     options(arg0) {
       ({ route, navigation } = arg0);
-      return searchContext(8172).conversationNavigatorFocusHeaderOptions(route, navigation);
+      const obj = ConversationNavigatorHeader;
+      let shouldHandleSafeArea = utils_PlatformUtils.isAndroid();
+      if (!shouldHandleSafeArea) {
+        shouldHandleSafeArea = searchContext.type === SearchTypes.GUILD;
+      }
+      return obj.conversationNavigatorFocusHeaderOptions(route, navigation, { shouldHandleSafeArea });
     },
     getComponent() {
-      return searchContext(17342).default;
+      return searchContext(17411).default;
     },
   });
   obj3.children = items2;

@@ -64,15 +64,16 @@ export const handleUnmutePress = function handleUnmutePress(channelId, guildId) 
   if (null != channel) {
     if (channel.isThread()) {
       const result = ThreadActionCreatorsDefault.setNotificationSettings(channel, { muted: false });
-      const tmp7Result = ThreadActionCreatorsDefault;
+      const tmp5Result = ThreadActionCreatorsDefault;
     } else {
-      const tmp7Result2 = NotificationSettingsModalActionCreatorsDefault;
-      const result1 = tmp7Result2.updateChannelOverrideSettings(
+      const obj = {
         guildId,
-        channel.id,
-        { muted: false, mute_config: null },
-        NotificationSettingsUtils.NotificationLabels.Unmuted,
-      );
+        channelId: channel.id,
+        settings: { muted: false, mute_config: null },
+        label: NotificationSettingsUtils.NotificationLabels.Unmuted,
+      };
+      const result1 = NotificationSettingsModalActionCreatorsDefault.updateChannelOverrideSettings(obj);
+      const tmp5Result2 = NotificationSettingsModalActionCreatorsDefault;
     }
   }
 };
@@ -89,13 +90,14 @@ export const handleMuteSettingPress = function handleMuteSettingPress(arg0) {
       const result = ThreadActionCreatorsDefault.setNotificationSettings(channel, muteSettings);
       const tmp4Result = ThreadActionCreatorsDefault;
     } else {
-      const tmp4Result2 = NotificationSettingsModalActionCreatorsDefault;
-      const result1 = tmp4Result2.updateChannelOverrideSettings(
+      const obj2 = {
         guildId,
-        channel.id,
-        muteSettings,
-        NotificationSettingsUtils.NotificationLabels.Muted,
-      );
+        channelId: channel.id,
+        settings: muteSettings,
+        label: NotificationSettingsUtils.NotificationLabels.Muted,
+      };
+      const result1 = NotificationSettingsModalActionCreatorsDefault.updateChannelOverrideSettings(obj2);
+      const tmp4Result2 = NotificationSettingsModalActionCreatorsDefault;
     }
   } else if (null != guild) {
     const result2 = NotificationSettingsModalActionCreatorsDefault.updateGuildNotificationSettings(

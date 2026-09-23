@@ -55,7 +55,7 @@ export default function LargeCountDownPill(countdownText) {
       const intl = util.intl;
       obj2.content = intl.string(util.t["Mv4E/M"]);
       obj2.icon = function icon() {
-        return closure_2_5(closure_0(4711).CircleInformationIcon, {
+        return closure_2_5(closure_0(4781).CircleInformationIcon, {
           style: closure_1_0.iconStyle,
           color: nativeDefault.colors.STATUS_WARNING,
         });

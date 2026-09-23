@@ -1,7 +1,7 @@
 // discord_app/modules/applications/message_embed/web/appMessageEmbedTrackingConfig.tsx
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 
-const LinkType = fn(7928).LinkType;
+const LinkType = fn(8010).LinkType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/message_embed/web/appMessageEmbedTrackingConfig.tsx");
 

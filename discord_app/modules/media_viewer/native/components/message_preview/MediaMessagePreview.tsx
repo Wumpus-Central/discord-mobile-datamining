@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "../../../../../utils/SnowflakeUtils.tsx";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/06899_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/06983_LegacyBaseButton.js";
 import ReactionActionCreators from "../../../../reactions/ReactionActionCreators.tsx";
 import RowGeneratorDefault from "../../../../messages/native/renderer/RowGenerator.tsx";
 import RowGeneratorTypes from "../../../../messages/native/renderer/RowGeneratorTypes.tsx";
@@ -118,11 +118,11 @@ obj.setOptions({
   forcedTheme: ThemeTypes.DARK,
   forceHideSimpleEmbedContent: true,
 });
-let createStyles = fn(4757);
+let createStyles = fn(4827);
 let closure_17 = createStyles.createStyles({
   dummyLayout: { position: "absolute", top: 0, left: -9999, width: "100%", opacity: 0 },
 });
-createStyles = fn(4757);
+createStyles = fn(4827);
 let closure_19 = createStyles.createNativeStyleProperties({
   reactionBackgroundColor: nativeDefault.colors.REACTION_BACKGROUND_DEFAULT,
   reactionBorderColor: nativeDefault.colors.REACTION_BORDER_DEFAULT,
@@ -131,7 +131,7 @@ let closure_19 = createStyles.createNativeStyleProperties({
   activeReactionBorderColor: nativeDefault.colors.REACTION_BORDER_REACTED_DEFAULT,
   activeReactionTextColor: nativeDefault.colors.REACTION_TEXT_REACTED_DEFAULT,
 });
-createStyles = fn(4757);
+createStyles = fn(4827);
 let obj2 = {
   renderCodedLinks: false,
   renderGiftCode: false,
@@ -365,22 +365,6 @@ export default function MediaMessagePreview(channelId) {
               onTapMessage();
             }
           }
-          const result = handleMessagesTapLink.handleMessagesTapLink({
-            allowWithinModal: true,
-            chatInputRef: "Boolean",
-            handleTransitionToThread(arg0, arg1, source) {
-              channel = channel.getChannel(arg1);
-              if (null != channel) {
-                const obj2 = { source, navigationReplace: false };
-                channelId(onClose[28]).transitionToThread(channel, obj2);
-                const obj = channelId(onClose[28]);
-              }
-            },
-            message: stateFromStores1,
-            messageChannel: stateFromStores,
-            selectedChannelId: channelId,
-            tapLinkData: nativeEvent.nativeEvent,
-          });
           let obj2 = {
             allowWithinModal: true,
             chatInputRef: "Boolean",
@@ -397,6 +381,7 @@ export default function MediaMessagePreview(channelId) {
             selectedChannelId: channelId,
             tapLinkData: nativeEvent.nativeEvent,
           };
+          const result = handleMessagesTapLink.handleMessagesTapLink(obj2);
         },
         inverted: false,
       };

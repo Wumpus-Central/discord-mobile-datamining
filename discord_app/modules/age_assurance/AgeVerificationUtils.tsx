@@ -3,13 +3,12 @@ import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import util from "../../intl/index.native.tsx";
 import Server from "../../flow/Server.tsx";
-import _modDef3034 from "AgeAssurance.messages.js";
+import _modDef3036 from "AgeAssurance.messages.js";
 import RegionalFeatureConfigUtils from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import AgeGatedFeature from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
 import usePreviousDefault from "../../hooks/usePrevious.tsx";
 import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators.tsx";
 import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment.tsx";
-import FamilyCenterConnectionPrereqExperiment2 from "../parent_tools/FamilyCenterConnectionPrereqExperiment.tsx";
 import ReactiveCheckActionCreators from "ReactiveCheckActionCreators.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
@@ -83,7 +82,7 @@ function useAgeVerificationRunner(onComplete) {
               closure_130_1 = undefined;
               tmp72(true);
               c5 = 2;
-              entryPoint(flag[20]).dispatch({ type: "INITIATE_AGE_VERIFICATION" });
+              entryPoint(flag[19]).dispatch({ type: "INITIATE_AGE_VERIFICATION" });
               v3 = 3;
               c7 = 1;
               const obj8 = { value: onComplete(), done: false };
@@ -107,16 +106,16 @@ function useAgeVerificationRunner(onComplete) {
                   }
                 }
                 if (code === constants.AGE_VERIFICATION_METHOD_UNAVAILABLE) {
-                  entryPoint(flag[22]).showFailedToast(constants2.AGE_VERIFICATION_METHOD_UNAVAILABLE);
+                  entryPoint(flag[21]).showFailedToast(constants2.AGE_VERIFICATION_METHOD_UNAVAILABLE);
                   tmp4();
-                  const obj5 = entryPoint(flag[22]);
+                  const obj5 = entryPoint(flag[21]);
                 }
                 c5 = 0;
                 tmp72(false);
                 c7 = 3;
               }
-              entryPoint(flag[22]).showFailedToast(constants2.TIGGER_PAWTECT_ERROR);
-              const obj4 = entryPoint(flag[22]);
+              entryPoint(flag[21]).showFailedToast(constants2.TIGGER_PAWTECT_ERROR);
+              const obj4 = entryPoint(flag[21]);
             } else if (arg0 === 1) {
               c7 = 3;
               throw value;
@@ -154,12 +153,12 @@ function useAgeVerificationRunner(onComplete) {
               obj.entryPoint = entryPoint;
               obj.shouldShowExpressiveModal = shouldShowExpressiveModal;
               if (false === obj10.showAgeVerification(obj)) {
-                entryPoint(flag[22]).showFailedToast(constants2.TIGGER_PAWTECT_ERROR);
+                entryPoint(flag[21]).showFailedToast(constants2.TIGGER_PAWTECT_ERROR);
                 v3();
-                obj2 = entryPoint(flag[22]);
+                obj2 = entryPoint(flag[21]);
               }
               c5 = 1;
-              obj10 = entryPoint(flag[21]);
+              obj10 = entryPoint(flag[20]);
             }
             c5 = 0;
             tmp72(false);
@@ -214,7 +213,7 @@ function useShouldCallReactiveCheck() {
   _require = tmp5;
   obj = require("initialize");
   const isFeatureAgeGated = require("RegionalFeatureConfigUtils").useIsFeatureAgeGated(
-    tmp(5643).AgeGatedFeature.REACTIVE_CHECK,
+    tmp(5727).AgeGatedFeature.REACTIVE_CHECK,
   );
   const tmpResult = require("RegionalFeatureConfigUtils");
   const items1 = [AgeVerificationStore];
@@ -314,16 +313,16 @@ let closure_24 = async function _maybePerformReactiveCheck() {
     }
   }
 };
-fn(8687).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
+fn(8758).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
 const Constants = fn(1074);
 ({ AbortCodes: map1, MessageEmbedTypes: closure_14 } = Constants);
 const AgeGateConstants = fn(1099);
 ({ AgeGateSource, REACTIVE_CHECK_AGE_GATE_SOURCES: closure_15 } = AgeGateConstants);
-const SafetyToastType = fn(8674).SafetyToastType;
+const SafetyToastType = fn(8745).SafetyToastType;
 let items = [
-  fn(8688).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT,
-  fn(8688).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
-  fn(8688).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
+  fn(8759).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT,
+  fn(8759).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
+  fn(8759).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
 ];
 const set = new Set(items);
 let items1 = [, , , , ,];
@@ -559,15 +558,7 @@ export const isAgeVerificationMessageWithConnectToTeenCta = function isAgeVerifi
                 const parts = found.rawValue.split(",");
                 hasItem = parts.includes(obj2.CONNECT_TO_TEEN);
               }
-              let enabled = true === hasItem;
-              if (enabled) {
-                const FamilyCenterConnectionPrereqExperiment =
-                  FamilyCenterConnectionPrereqExperiment2.FamilyCenterConnectionPrereqExperiment;
-                enabled = FamilyCenterConnectionPrereqExperiment.getConfig({
-                  location: "isAgeVerificationMessageWithConnectToTeenCta",
-                }).enabled;
-              }
-              return enabled;
+              return true === hasItem;
             }
           }
         }
@@ -645,7 +636,7 @@ export const useInitiateAgeVerificationV2 = function useInitiateAgeVerificationV
   obj2.initiateAgeVerificationV2 = noop.useCallback((arg0) => {
     closure_0 = arg0;
     return startVerification(
-      () => startVerification(dependencyMap[23]).requestAgeVerificationV2(closure_0.method, closure_0.vendor),
+      () => startVerification(dependencyMap[22]).requestAgeVerificationV2(closure_0.method, closure_0.vendor),
       arg0,
     );
   }, items);
@@ -716,7 +707,7 @@ export const getAgeVerificationGetStartedTitle = function getAgeVerificationGetS
   if (hasItem) {
     let stringResult = string(util.t.lSWVTM);
   } else if (flag) {
-    stringResult = string(_modDef3034["/kgWIg"]);
+    stringResult = string(_modDef3036["/kgWIg"]);
   } else {
     stringResult = string(util.t.xYXsr6);
   }
@@ -739,14 +730,14 @@ export const getAgeVerificationGetStartedSubtitle = function getAgeVerificationG
     let stringResult = intl6.string(util.t["S/xS/w"]);
   } else if (flag) {
     const intl5 = util.intl;
-    stringResult = intl5.string(_modDef3034.h7qzoa);
+    stringResult = intl5.string(_modDef3036.h7qzoa);
   } else {
     if (flag2) {
       if (null != handleOnHelpUrlHook) {
         if (null != fn) {
           const intl4 = util.intl;
           obj2 = { handleOnHelpUrlHook, handleOnTrustedProvidersHook: fn };
-          stringResult = intl4.format(_modDef3034["+Ft5ch"], obj2);
+          stringResult = intl4.format(_modDef3036["+Ft5ch"], obj2);
         }
       }
     }
@@ -754,13 +745,13 @@ export const getAgeVerificationGetStartedSubtitle = function getAgeVerificationG
       if (null != handleOnHelpUrlHook) {
         const intl3 = util.intl;
         const obj3 = { handleOnHelpUrlHook };
-        stringResult = intl3.format(_modDef3034["22HSSI"], obj3);
+        stringResult = intl3.format(_modDef3036["22HSSI"], obj3);
       }
     }
     if (null != handleOnHelpUrlHook) {
       const intl2 = util.intl;
       obj = { handleOnHelpUrlHook };
-      stringResult = intl2.format(_modDef3034.RpMIT0, obj);
+      stringResult = intl2.format(_modDef3036.RpMIT0, obj);
     } else {
       const intl = util.intl;
       stringResult = intl.string(util.t.HxS3oQ);

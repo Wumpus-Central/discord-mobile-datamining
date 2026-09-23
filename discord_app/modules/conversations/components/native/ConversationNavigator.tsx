@@ -11,7 +11,7 @@ const require = globalThis.__r;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const NativeStackNavigator = fn(8161);
+const NativeStackNavigator = fn(8243);
 const Screen = NativeStackNavigator.createNativeStackNavigator();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conversations/components/native/ConversationNavigator.tsx");
@@ -30,11 +30,10 @@ export default function ConversationNavigator(route) {
       name: ConversationNavigatorUtils.ConversationNavigatorScreens.LIST,
       options(arg0) {
         ({ route, navigation } = arg0);
-        return ConversationNavigatorHeader.conversationNavigatorListHeaderOptions(
-          route,
-          navigation,
-          nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
-        );
+        const obj = ConversationNavigatorHeader;
+        return obj.conversationNavigatorListHeaderOptions(route, navigation, {
+          backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+        });
       },
       getComponent() {
         return require("ConversationListScreen").default;
@@ -46,11 +45,10 @@ export default function ConversationNavigator(route) {
     name: ConversationNavigatorUtils.ConversationNavigatorScreens.LIST,
     options(arg0) {
       ({ route, navigation } = arg0);
-      return ConversationNavigatorHeader.conversationNavigatorListHeaderOptions(
-        route,
-        navigation,
-        nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
-      );
+      const obj = ConversationNavigatorHeader;
+      return obj.conversationNavigatorListHeaderOptions(route, navigation, {
+        backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+      });
     },
     getComponent() {
       return require("ConversationListScreen").default;
@@ -60,11 +58,10 @@ export default function ConversationNavigator(route) {
     name: ConversationNavigatorUtils.ConversationNavigatorScreens.FOCUS,
     options(arg0) {
       ({ route, navigation } = arg0);
-      return ConversationNavigatorHeader.conversationNavigatorFocusHeaderOptions(
-        route,
-        navigation,
-        nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
-      );
+      const obj = ConversationNavigatorHeader;
+      return obj.conversationNavigatorFocusHeaderOptions(route, navigation, {
+        backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+      });
     },
     getComponent() {
       return require("ConversationFocusScreen").default;

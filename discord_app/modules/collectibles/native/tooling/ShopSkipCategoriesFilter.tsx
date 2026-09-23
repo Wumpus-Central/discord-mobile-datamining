@@ -9,7 +9,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, Pressable: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let obj2 = {
   container: { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 },
   label: null,
@@ -43,7 +43,7 @@ export const ShopSkipCategoriesFilter = function ShopSkipCategoriesFilter() {
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => skipNumCategories.skipNumCategories);
   const obj2 = { style: tmp.container, children: null };
   const items1 = [
-    closure_5(stateFromStores(4753).Text, {
+    closure_5(stateFromStores(4823).Text, {
       variant: "text-md/normal",
       style: tmp.label,
       children: "Hide first # of categories",
@@ -67,9 +67,9 @@ export const ShopSkipCategoriesFilter = function ShopSkipCategoriesFilter() {
         }
       },
       disabled: stateFromStores <= 0,
-      children: closure_5(stateFromStores(4753).Text, { variant: "text-lg/semibold", children: "\u2212" }),
+      children: closure_5(stateFromStores(4823).Text, { variant: "text-lg/semibold", children: "\u2212" }),
     }),
-    closure_5(stateFromStores(4753).Text, {
+    closure_5(stateFromStores(4823).Text, {
       variant: "text-md/semibold",
       style: tmp.valueText,
       children: stateFromStores,
@@ -89,7 +89,7 @@ export const ShopSkipCategoriesFilter = function ShopSkipCategoriesFilter() {
       }
     },
     disabled: stateFromStores <= 0,
-    children: closure_5(stateFromStores(4753).Text, { variant: "text-lg/semibold", children: "\u2212" }),
+    children: closure_5(stateFromStores(4823).Text, { variant: "text-lg/semibold", children: "\u2212" }),
   };
   const obj6 = { variant: "text-md/semibold", style: tmp.valueText, children: stateFromStores };
   items4[1] = stepperButtonDisabled2;
@@ -101,11 +101,11 @@ export const ShopSkipCategoriesFilter = function ShopSkipCategoriesFilter() {
       }
     },
     disabled: stateFromStores >= 100,
-    children: closure_5(stateFromStores(4753).Text, { variant: "text-lg/semibold", children: "+" }),
+    children: closure_5(stateFromStores(4823).Text, { variant: "text-lg/semibold", children: "+" }),
   });
   obj4.children = items3;
   items1[1] = closure_6(closure_2, obj4);
   obj7.children = items1;
-  obj2.children = closure_6(stateFromStores(5185).Stack, obj7);
+  obj2.children = closure_6(stateFromStores(5269).Stack, obj7);
   return closure_5(closure_2, obj2);
 };

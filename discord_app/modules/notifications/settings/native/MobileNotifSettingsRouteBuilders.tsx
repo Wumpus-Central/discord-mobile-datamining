@@ -1,6 +1,6 @@
 // discord_app/modules/notifications/settings/native/MobileNotifSettingsRouteBuilders.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef2808 from "../../NotificationSettings.messages.js";
+import _modDef2810 from "../../NotificationSettings.messages.js";
 import MobileNotifSettings from "../../../user_settings/notifications/native/codegen/MobileNotifSettings.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/notifications/settings/native
 export const buildOverviewCategoriesSection = function buildOverviewCategoriesSection() {
   const obj = { label: null, settings: null };
   const intl = util.intl;
-  obj.label = intl.string(_modDef2808["/UdAvP"]);
+  obj.label = intl.string(_modDef2810["/UdAvP"]);
   const items = [
     MobileNotifSettings.MobileNotifSettings.NOTIF_REALTIME,
     MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SOCIAL,

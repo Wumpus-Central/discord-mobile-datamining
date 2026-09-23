@@ -3,11 +3,13 @@ import _modDef12 from "../../../_runtime/metro/00012__.js";
 import discord_common_shallowEqualDefault from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../_runtime/metro/00019__.js";
+import GuildMemberRequesterStore from "../../stores/GuildMemberRequesterStore.tsx";
+import UserStore from "../../stores/UserStore.tsx";
 
 const require = fn;
 let closure_3 = ["forwardedRef"];
 const jsx = fn(21).jsx;
-let c7 = false;
+let c9 = false;
 const size = fn(2);
 const result = size.fileFinishedImporting("lib/guild/subscribeGuildMembers.tsx");
 
@@ -27,9 +29,9 @@ export default function subscribeGuildMembers(arg0) {
       constructor(arg0) {
         tmp3 = new WrappedComponent(displayName, tmp2, tmp);
         tmp4 = closure_0(displayName);
-        arr = closure_1(closure_2[3]);
+        arr = closure_1(closure_2[5]);
         item = arr.forEach(tmp4, (userIds, guildId) =>
-          displayName(WrappedComponent[4]).subscribeMembers(guildId, userIds),
+          displayName(WrappedComponent[6]).subscribeMembers(guildId, userIds),
         );
         tmp3._subscriptions = tmp4;
         return tmp3;
@@ -48,12 +50,12 @@ export default function subscribeGuildMembers(arg0) {
         if (!isEqualResult) {
           if (null != self._subscriptions) {
             const item = _modDef12.forEach(self._subscriptions, (userIds, guildId) =>
-              displayName(7556).unsubscribeMembers(guildId, userIds),
+              displayName(7640).unsubscribeMembers(guildId, userIds),
             );
             const tmpResult3 = _modDef12;
           }
           const item1 = _modDef12.forEach(tmp4, (userIds, guildId) =>
-            displayName(7556).subscribeMembers(guildId, userIds),
+            displayName(7640).subscribeMembers(guildId, userIds),
           );
           self._subscriptions = tmp4;
           const tmpResult4 = _modDef12;
@@ -62,10 +64,10 @@ export default function subscribeGuildMembers(arg0) {
     };
     prototype["componentWillUnmount"] = function componentWillUnmount() {
       if (null != this._subscriptions) {
-        const item = WrappedComponent(WrappedComponent[3]).forEach(tmp._subscriptions, (userIds, guildId) =>
-          displayName(WrappedComponent[4]).unsubscribeMembers(guildId, userIds),
+        const item = WrappedComponent(WrappedComponent[5]).forEach(tmp._subscriptions, (userIds, guildId) =>
+          displayName(WrappedComponent[6]).unsubscribeMembers(guildId, userIds),
         );
-        const arr = WrappedComponent(WrappedComponent[3]);
+        const arr = WrappedComponent(WrappedComponent[5]);
       }
     };
     prototype["render"] = function render() {
@@ -91,25 +93,73 @@ export const useSubscribeGuildMembers = function useSubscribeGuildMembers(memo, 
   const items = [memo, AddMembersActionSheet];
   const effect = noop.useEffect(() => {
     let item = _modDef12.forEach(closure_0, (userIds, guildId) => {
-      let tmp = !c7;
-      if (!c7) {
+      let tmp = !c9;
+      if (!c9) {
         tmp = userIds.length > 50;
       }
       if (tmp) {
-        c7 = true;
+        c9 = true;
         const obj2 = { extra: null };
         const obj3 = { count: userIds.length, guildId, reason };
         obj2.extra = obj3;
         reason(1231).captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj2);
         const obj = reason(1231);
       }
-      closure_0(7556).subscribeMembers(guildId, userIds);
-      const obj4 = closure_0(7556);
+      closure_0(7640).subscribeMembers(guildId, userIds);
+      const obj4 = closure_0(7640);
     });
     return () => {
-      const item = reason(12).forEach(memo, (userIds, guildId) =>
-        closure_1_0(closure_1_2[4]).unsubscribeMembers(guildId, userIds),
+      const item = reason(12).forEach(guild_id, (userIds, guildId) =>
+        closure_1_0(closure_1_2[6]).unsubscribeMembers(guildId, userIds),
       );
     };
   }, items);
+};
+export const useEnsureHydratedGuildUsers = function useEnsureHydratedGuildUsers(guild_id, items1) {
+  closure_0 = guild_id;
+  const items = [guild_id, items1];
+  const memo = noop.useMemo(() => {
+    if (0 === items1.length) {
+      let obj = {};
+    } else {
+      obj = {};
+      obj[closure_0] = tmp;
+    }
+    return obj;
+  }, items);
+  items1 = [guild_id];
+  items1[1] = items1;
+  const effect = noop.useEffect(() => {
+    const item = items1.forEach((item) => {
+      if (null == user.getUser(item)) {
+        const member = GuildMemberRequesterStore.requestMember(guild_id, item);
+      }
+    });
+  }, items1);
+  closure_129_0 = memo;
+  closure_129_1 = "useEnsureHydratedGuildUsers";
+  const items2 = [memo, "useEnsureHydratedGuildUsers"];
+  const effect1 = noop.useEffect(() => {
+    let item = _modDef12.forEach(closure_0, (userIds, guildId) => {
+      let tmp = !c9;
+      if (!c9) {
+        tmp = userIds.length > 50;
+      }
+      if (tmp) {
+        c9 = true;
+        const obj2 = { extra: null };
+        const obj3 = { count: userIds.length, guildId, reason };
+        obj2.extra = obj3;
+        reason(1231).captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj2);
+        const obj = reason(1231);
+      }
+      closure_0(7640).subscribeMembers(guildId, userIds);
+      const obj4 = closure_0(7640);
+    });
+    return () => {
+      const item = reason(12).forEach(guild_id, (userIds, guildId) =>
+        closure_1_0(closure_1_2[6]).unsubscribeMembers(guildId, userIds),
+      );
+    };
+  }, items2);
 };

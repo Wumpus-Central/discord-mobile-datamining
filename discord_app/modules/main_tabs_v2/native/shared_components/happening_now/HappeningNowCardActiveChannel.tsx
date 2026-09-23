@@ -12,13 +12,13 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const MAX_STORED_MESSAGES = fn(13979).MAX_STORED_MESSAGES;
-let closure_10 = fn(15577).HappeningNowCardTrackingType;
+const MAX_STORED_MESSAGES = fn(14064).MAX_STORED_MESSAGES;
+let closure_10 = fn(15631).HappeningNowCardTrackingType;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, Routes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4757);
+const createStyles = fn(4827);
 let closure_15 = createStyles.createStyles({
   content: { flexShrink: 1, marginLeft: 4, gap: 2 },
   avatarsWrapper: { marginBottom: 2 },
@@ -61,7 +61,7 @@ export default noop.memo((index) => {
     return obj.uniq(_modDef12.map(stateFromStoresArray, "userId")).filter(GlobalUtils.isNotNullish);
   }, items3);
   const obj3 = index(channelId[10]);
-  const ensureHydratedUsers = index(channelId[14]).useEnsureHydratedUsers(guildId, memo);
+  const ensureHydratedGuildUsers = index(channelId[14]).useEnsureHydratedGuildUsers(guildId, memo);
   const obj4 = index(channelId[14]);
   const items4 = [UserStore];
   const stateFromStoresArray1 = index(channelId[10]).useStateFromStoresArray(items4, () => {
