@@ -1,8 +1,14 @@
 // === Module 7090: ? ===
 
 // Module 7090
-import _mod17 from "module_17" /* 17 */;
+import ComposedGestureName from "ComposedGestureName" /* 7042 */;
+import _mod7091 from "module_7091" /* 7091 */;
 
-const StyleSheet = _mod17.StyleSheet;
+require = arg1;
+const dependencyMap = arg6;
 
-export const styles = StyleSheet.create({ container: { flex: 1, overflow: "visible" } });
+export const useCompetingGestures = function useCompetingGestures() {
+  const items = [...arguments];
+  const items1 = [ComposedGestureName.ComposedGestureName.Race, ...items];
+  return _mod7091.useComposedGesture.apply(items1);
+};

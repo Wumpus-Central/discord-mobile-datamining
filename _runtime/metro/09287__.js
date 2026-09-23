@@ -1,7 +1,6 @@
 // === Module 9287: ? ===
 
 // Module 9287
-import _mod9218 from "module_9218" /* 9218 */;
 import _mod9288 from "module_9288" /* 9288 */;
 
 const self = this;
@@ -54,32 +53,41 @@ if (self2) {
         return obj;
       };
     }
+    let fn2 = self;
+    if (self) {
+      fn2 = self.__exportStar;
+    }
+    if (!fn2) {
+      fn2 = (obj, exports) => {
+        for (const key10007 in arg0) {
+          let tmp6 = "default" === key10007;
+          if (tmp6) {
+            if (tmp6) {
+              continue;
+            } else {
+              let tmp4 = self2(arg1, arg0, key10007);
+              continue;
+            }
+            continue;
+          } else {
+            let _Object = Object;
+            hasOwnProperty = Object.prototype.hasOwnProperty;
+            let call = hasOwnProperty.call;
+            if (typeof call === "unknown") {
+              let hasOwnPropertyResult = hasOwnProperty(key10007);
+            } else {
+              hasOwnPropertyResult = call(arg1, key10007);
+            }
+          }
+        }
+      };
+    }
     const _Object3 = Object;
-    exports.parse = undefined;
-    exports.parseAsync = undefined;
-    exports.safeParse = undefined;
-    exports.safeParseAsync = undefined;
-    exports.encode = undefined;
-    exports.decode = undefined;
-    exports.encodeAsync = undefined;
-    exports.decodeAsync = undefined;
-    exports.safeEncode = undefined;
-    exports.safeDecode = undefined;
-    exports.safeEncodeAsync = undefined;
-    exports.safeDecodeAsync = undefined;
-    const fnResult = fn(_mod9218);
-    exports.parse = fnResult._parse(_mod9288.ZodRealError);
-    exports.parseAsync = fnResult._parseAsync(_mod9288.ZodRealError);
-    exports.safeParse = fnResult._safeParse(_mod9288.ZodRealError);
-    exports.safeParseAsync = fnResult._safeParseAsync(_mod9288.ZodRealError);
-    exports.encode = fnResult._encode(_mod9288.ZodRealError);
-    exports.decode = fnResult._decode(_mod9288.ZodRealError);
-    exports.encodeAsync = fnResult._encodeAsync(_mod9288.ZodRealError);
-    exports.decodeAsync = fnResult._decodeAsync(_mod9288.ZodRealError);
-    exports.safeEncode = fnResult._safeEncode(_mod9288.ZodRealError);
-    exports.safeDecode = fnResult._safeDecode(_mod9288.ZodRealError);
-    exports.safeEncodeAsync = fnResult._safeEncodeAsync(_mod9288.ZodRealError);
-    exports.safeDecodeAsync = fnResult._safeDecodeAsync(_mod9288.ZodRealError);
+    exports.z = undefined;
+    const fnResult = fn(_mod9288);
+    exports.z = fnResult;
+    fn2(_mod9288, exports);
+    exports.default = fnResult;
   } else {
     const _Object2 = Object;
   }

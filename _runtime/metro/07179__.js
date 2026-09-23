@@ -1,13 +1,40 @@
 // === Module 7179: ? ===
 
 // Module 7179
-import _mod17 from "module_17" /* 17 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop_mod from "module_19" /* 19 */;
 
-const StyleSheet = _mod17.StyleSheet;
-const obj = { backdrop: null };
-const obj2 = {};
-const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj2.backgroundColor = "black";
-obj.backdrop = obj2;
-
-export const styles = StyleSheet.create(obj);
+let closure_2 = ["focusHook", "scrollEventsHandlersHook", "enableFooterMarginAdjustment"];
+let noop = fn(19);
+const forwardRef = noop.forwardRef;
+({ useMemo: metroRequire, memo } = noop);
+let noop = noop_mod;
+const jsx = fn(21).jsx;
+try {
+  const FlashList = fn(7180);
+  const memoResult = memo(forwardRef((focusHook, ref) => {
+    focusHook = focusHook.focusHook;
+    const scrollEventsHandlersHook = focusHook.scrollEventsHandlersHook;
+    const enableFooterMarginAdjustment = focusHook.enableFooterMarginAdjustment;
+    closure_6(() => {
+      if (!FlashList) {
+        throw "You need to install FlashList first, `yarn install @shopify/flash-list`";
+      }
+    }, []);
+    const items = [focusHook, scrollEventsHandlersHook, enableFooterMarginAdjustment];
+    const tmp = _objectWithoutProperties(focusHook, enableFooterMarginAdjustment);
+    let merged = Object.assign(tmp);
+    return <FlashList.FlashList ref={ref} renderScrollComponent={closure_6(() => forwardRef((arg0, ref) => {
+      const merged = Object.assign(arg0, Object.assign({ data: 0 }));
+      const obj = { ref };
+      const merged1 = Object.assign(merged);
+      obj.focusHook = focusHook;
+      obj.scrollEventsHandlersHook = scrollEventsHandlersHook;
+      obj.enableFooterMarginAdjustment = enableFooterMarginAdjustment;
+      return jsx(focusHook(scrollEventsHandlersHook[4]), { ref });
+    }), items)} />;
+  }));
+  exports.default = memoResult;
+  exports.BottomSheetFlashList = memoResult;
+} catch (err) {
+}

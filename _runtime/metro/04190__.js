@@ -1,17 +1,17 @@
 // === Module 4190: ? ===
 
 // Module 4190
-import startOfHour_mod from "startOfHour" /* 4191 */;
-import requiredArgs_mod from "requiredArgs" /* 3846 */;
+import _typeof_mod from "module_3911" /* 3911 */;
+import requiredArgs_mod from "requiredArgs" /* 3912 */;
 
-let startOfHour = startOfHour_mod;
-if (!startOfHour) {
-  const obj = { default: startOfHour };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfHour;
+  tmp3 = _typeof;
 }
-startOfHour = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,10 +21,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isSameHour(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfHour.default(arg0);
-  const time = defaultResult1.getTime();
-  return time === startOfHour.default(arg1).getTime();
+export default function getTime(arg0) {
+  requiredArgs.default(1, arguments);
+  return _typeof.default(arg0).getTime();
 };
 export default exports.default;

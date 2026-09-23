@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/consoles", width: 85, height: 70, scales: [2, 3], hash: "f2b2ae790fb60abfa40be44fab4eb6fc", name: "ps_relink_upsell", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/parent_tools/images", width: 244, height: 82, scales: [1, 2, 3], hash: "245663cd177e246da48f58dd5c39e32f", name: "family_center_empty", type: "png" });

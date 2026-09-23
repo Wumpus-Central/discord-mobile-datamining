@@ -1,52 +1,26 @@
 // === Module 4277: ? ===
 
 // Module 4277
-import subDays_mod from "subDays" /* 4216 */;
-import subMonths_mod from "subMonths" /* 4278 */;
-import requiredArgs_mod from "requiredArgs" /* 3846 */;
-import module_3849_mod from "module_3849" /* 3849 */;
+import module_4059_mod from "module_4059" /* 4059 */;
+import module_4092_mod from "module_4092" /* 4092 */;
+import requiredArgs_mod from "requiredArgs" /* 3912 */;
 
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
-}
-let subDays = subDays_mod;
-if (!subDays) {
-  const obj = { default: subDays };
+let module_4059 = module_4059_mod;
+if (!module_4059) {
+  const obj = { default: module_4059 };
   let tmp3 = obj;
 } else {
-  tmp3 = subDays;
+  tmp3 = module_4059;
 }
-subDays = tmp3;
-let subMonths = subMonths_mod;
-if (!subMonths) {
-  const obj2 = { default: subMonths };
+module_4059 = tmp3;
+let module_4092 = module_4092_mod;
+if (!module_4092) {
+  const obj2 = { default: module_4092 };
   let tmp5 = obj2;
 } else {
-  tmp5 = subMonths;
+  tmp5 = module_4092;
 }
-subMonths = tmp5;
+module_4092 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj3 = { default: requiredArgs };
@@ -55,53 +29,9 @@ if (!requiredArgs) {
   tmp7 = requiredArgs;
 }
 requiredArgs = tmp7;
-let module_3849 = module_3849_mod;
-if (!module_3849) {
-  const obj4 = { default: module_3849 };
-  let tmp9 = obj4;
-} else {
-  tmp9 = module_3849;
-}
-module_3849 = tmp9;
 
-export default function sub(arg0, years) {
-  requiredArgs.default(2, arguments);
-  if (years) {
-    if ("object" === _typeof(years)) {
-      let num = 0;
-      if (years.years) {
-        num = module_3849.default(years.years);
-      }
-      let num2 = 0;
-      if (years.months) {
-        num2 = module_3849.default(years.months);
-      }
-      let num3 = 0;
-      if (years.weeks) {
-        num3 = module_3849.default(years.weeks);
-      }
-      let num4 = 0;
-      if (years.days) {
-        num4 = module_3849.default(years.days);
-      }
-      let num5 = 0;
-      if (years.hours) {
-        num5 = module_3849.default(years.hours);
-      }
-      let num6 = 0;
-      if (years.minutes) {
-        num6 = module_3849.default(years.minutes);
-      }
-      let num7 = 0;
-      if (years.seconds) {
-        num7 = module_3849.default(years.seconds);
-      }
-      const _Date = Date;
-      const sum = num7 + 60 * (num6 + 60 * num5);
-      const date = new Date(subDays.default(subMonths.default(arg0, num2 + 12 * num), num4 + 7 * num3).getTime() - 1000 * sum);
-      return date;
-    }
-  }
-  return new Date(NaN);
+export default function isTomorrow(arg0) {
+  requiredArgs.default(1, arguments);
+  return module_4092.default(arg0, module_4059.default(Date.now(), 1));
 };
 export default exports.default;

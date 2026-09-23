@@ -1,49 +1,77 @@
 // === Module 4165: ? ===
 
 // Module 4165
-import module_3849_mod from "module_3849" /* 3849 */;
-import _typeof_mod from "module_3845" /* 3845 */;
-import module_4081_mod from "module_4081" /* 4081 */;
-import requiredArgs_mod from "requiredArgs" /* 3846 */;
+import _mod3916 from "module_3916" /* 3916 */;
+import code_mod from "module_4157" /* 4157 */;
 
-let module_3849 = module_3849_mod;
-if (!module_3849) {
-  const obj = { default: module_3849 };
+let code = code_mod;
+if (!code) {
+  const obj = { default: code };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3849;
+  tmp3 = code;
 }
-module_3849 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
-} else {
-  tmp5 = _typeof;
-}
-_typeof = tmp5;
-let module_4081 = module_4081_mod;
-if (!module_4081) {
-  const obj3 = { default: module_4081 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4081;
-}
-module_4081 = tmp7;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
-} else {
-  tmp9 = requiredArgs;
-}
-requiredArgs = tmp9;
+code = tmp3;
+let closure_3 = ["years", "months", "weeks", "days", "hours", "minutes", "seconds"];
 
-export default function setUTCISOWeek(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const diff = module_4081.default(defaultResult1) - module_3849.default(arg1);
-  defaultResult1.setUTCDate(defaultResult1.getUTCDate() - 7 * diff);
-  return defaultResult1;
+export default function formatDuration(arg0, locale) {
+  closure_0 = arg0;
+  if (arguments.length < 1) {
+    const _TypeError = TypeError;
+    const concat = "1 argument required, but only ".concat;
+    const typeError = new TypeError("1 argument required, but only ".concat(arguments.length, " present"));
+    throw typeError;
+  } else {
+    locale = undefined;
+    const defaultOptions = _mod3916.getDefaultOptions();
+    if (null != locale) {
+      locale = locale.locale;
+    }
+    if (null === locale) {
+      locale = defaultOptions.locale;
+    }
+    if (null === locale) {
+      locale = code.default;
+    }
+    let format;
+    if (null != locale) {
+      format = locale.format;
+    }
+    if (null === format) {
+      format = closure_3;
+    }
+    let zero;
+    if (null != locale) {
+      zero = locale.zero;
+    }
+    closure_2 = null !== zero && undefined !== zero && zero;
+    let delimiter;
+    if (null != locale) {
+      delimiter = locale.delimiter;
+    }
+    let str2 = " ";
+    if (null !== delimiter) {
+      str2 = " ";
+      if (undefined !== delimiter) {
+        str2 = delimiter;
+      }
+    }
+    if (locale.formatDistance) {
+      const reduced = format.reduce((arr, item) => {
+        let combined = arr;
+        if (typeof closure_0[item] === "number") {
+          if (closure_2) {
+            combined = arr.concat(locale.formatDistance(tmp, tmp3));
+          } else {
+            combined = arr;
+          }
+        }
+        return combined;
+      }, []);
+      return reduced.join(str2);
+    } else {
+      return "";
+    }
+  }
 };
 export default exports.default;

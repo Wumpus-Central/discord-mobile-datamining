@@ -1,44 +1,29 @@
 // === Module 3915: ? ===
 
 // Module 3915
-import module_3916 from "module_3916" /* 3916 */;
-import module_3917 from "module_3917" /* 3917 */;
-import module_3918 from "module_3918" /* 3918 */;
-import date_mod from "module_3919" /* 3919 */;
-import date_mod from "module_3920" /* 3920 */;
 
-if (!module_3916) {
-  const obj = { default: module_3916 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_3916;
-}
-if (!module_3917) {
-  const obj2 = { default: module_3917 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_3917;
-}
-if (!module_3918) {
-  const obj3 = { default: module_3918 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_3918;
-}
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
-
-export default { code: "ja", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 0, firstWeekContainsDate: 1 } };
+export default function toInteger(arg0) {
+  if (null !== arg0) {
+    if (true !== arg0) {
+      if (false !== arg0) {
+        const _Number = Number;
+        const NumberResult = Number(arg0);
+        const _isNaN = isNaN;
+        if (isNaN(NumberResult)) {
+          return NumberResult;
+        } else {
+          if (NumberResult < 0) {
+            const _Math2 = Math;
+            let rounded = Math.ceil(NumberResult);
+          } else {
+            const _Math = Math;
+            rounded = Math.floor(NumberResult);
+          }
+          return rounded;
+        }
+      }
+    }
+  }
+  return NaN;
+};
 export default exports.default;

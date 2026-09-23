@@ -2,7 +2,7 @@
 
 // Module 10872
 import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10705 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10781 */;
 import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
@@ -30,12 +30,12 @@ function _isNativeReflectConstruct() {
 let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturn;
 const regExp = new RegExp("([0-9]|0[1-9]|1[012])/([0-9]{4})", "i");
-class ENSlashMonthFormatParser {
+class NLSlashMonthFormatParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, ENSlashMonthFormatParser);
+    tmp = closure_0(this, NLSlashMonthFormatParser);
     tmp2 = c2;
-    obj = c2(ENSlashMonthFormatParser);
+    obj = c2(NLSlashMonthFormatParser);
     tmp3 = closure_1;
     if (closure_3()) {
       tmp7 = globalThis;
@@ -50,8 +50,8 @@ class ENSlashMonthFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = ENSlashMonthFormatParser;
-_inherits(ENSlashMonthFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_classCallCheck = NLSlashMonthFormatParser;
+_inherits(NLSlashMonthFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
@@ -72,4 +72,4 @@ const items = [
   }
 ];
 
-export default _createClass(ENSlashMonthFormatParser, items);
+export default _createClass(NLSlashMonthFormatParser, items);

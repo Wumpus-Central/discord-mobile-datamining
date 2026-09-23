@@ -1,17 +1,26 @@
 // === Module 4862: ? ===
 
 // Module 4862
-import identity from "identity" /* 549 */;
-import _mod669 from "module_669" /* 669 */;
-import constant from "constant" /* 4863 */;
+import _mod552 from "module_552" /* 552 */;
 
-if (_mod669) {
-  let fn = (arg0, arg1) => {
-    const obj = { configurable: true, enumerable: false, value: constant(arg1), writable: true };
-    return _mod669(arg0, "toString", obj);
-  };
-} else {
-  fn = identity;
-}
 
-export default fn;
+export default function toFinite(arg0) {
+  if (arg0) {
+    const tmp3 = _mod552(arg0);
+    if (tmp3 !== Infinity) {
+      if (tmp3 !== -Infinity) {
+      }
+    }
+    let num6 = 1;
+    if (tmp3 < 0) {
+      num6 = -1;
+    }
+    const num4 = 179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 * num6;
+  } else {
+    let num = 0;
+    if (0 === arg0) {
+      num = arg0;
+    }
+    return num;
+  }
+};

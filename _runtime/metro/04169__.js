@@ -1,10 +1,10 @@
 // === Module 4169: ? ===
 
 // Module 4169
-import _mod3850 from "module_3850" /* 3850 */;
-import _typeof_mod from "module_3845" /* 3845 */;
-import requiredArgs_mod from "requiredArgs" /* 3846 */;
-import module_3849_mod from "module_3849" /* 3849 */;
+import _typeof_mod from "module_3911" /* 3911 */;
+import module_4093_mod from "module_4093" /* 4093 */;
+import module_4154_mod from "module_4154" /* 4154 */;
+import module_3915_mod from "module_3915" /* 3915 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -14,88 +14,100 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+let module_4093 = module_4093_mod;
+if (!module_4093) {
+  const obj2 = { default: module_4093 };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = module_4093;
 }
-requiredArgs = tmp5;
-let module_3849 = module_3849_mod;
-if (!module_3849) {
-  const obj3 = { default: module_3849 };
+module_4093 = tmp5;
+let module_4154 = module_4154_mod;
+if (!module_4154) {
+  const obj3 = { default: module_4154 };
   let tmp7 = obj3;
 } else {
-  tmp7 = module_3849;
+  tmp7 = module_4154;
 }
-module_3849 = tmp7;
+module_4154 = tmp7;
+let module_3915 = module_3915_mod;
+if (!module_3915) {
+  const obj4 = { default: module_3915 };
+  let tmp9 = obj4;
+} else {
+  tmp9 = module_3915;
+}
+module_3915 = tmp9;
 
-export default function setUTCDay(arg0, arg1, weekStartsOn) {
-  requiredArgs.default(2, arguments);
-  const defaultOptions = _mod3850.getDefaultOptions();
-  weekStartsOn = undefined;
-  if (null != weekStartsOn) {
-    weekStartsOn = weekStartsOn.weekStartsOn;
-  }
-  if (null === weekStartsOn) {
-    let weekStartsOn1;
-    if (null != weekStartsOn) {
-      locale = weekStartsOn.locale;
-      if (null !== locale) {
-        if (undefined !== locale) {
-          const options = locale.options;
-          if (null !== options) {
-            if (undefined !== options) {
-              weekStartsOn1 = options.weekStartsOn;
+export default function formatRFC3339(arg0, fractionDigits) {
+  if (arguments.length < 1) {
+    const _TypeError = TypeError;
+    const concat2 = "1 arguments required, but only ".concat;
+    const typeError = new TypeError("1 arguments required, but only ".concat(arguments.length, " present"));
+    throw typeError;
+  } else {
+    const defaultResult = _typeof.default(arg0);
+    if (module_4093.default(defaultResult)) {
+      fractionDigits = undefined;
+      if (null != fractionDigits) {
+        fractionDigits = fractionDigits.fractionDigits;
+      }
+      let num2 = 0;
+      if (null !== fractionDigits) {
+        num2 = 0;
+        if (undefined !== fractionDigits) {
+          num2 = fractionDigits;
+        }
+      }
+      const NumberResult = Number(num2);
+      if (NumberResult >= 0) {
+        if (NumberResult <= 3) {
+          const defaultResult1 = module_4154.default(defaultResult.getDate(), 2);
+          const fullYear = defaultResult.getFullYear();
+          const defaultResult2 = module_4154.default(defaultResult.getMonth() + 1, 2);
+          const defaultResult3 = module_4154.default(defaultResult.getHours(), 2);
+          let str4 = "";
+          const defaultResult4 = module_4154.default(defaultResult.getMinutes(), 2);
+          if (NumberResult > 0) {
+            const _Math = Math;
+            const _Math2 = Math;
+            const milliseconds = defaultResult.getMilliseconds();
+            str4 = `.${obj.default(tmp20(tmp19 * Math.pow(10, tmp8 - 3)), tmp8)}`;
+          }
+          const timezoneOffset = defaultResult.getTimezoneOffset();
+          let str6 = "Z";
+          if (0 !== timezoneOffset) {
+            const _Math3 = Math;
+            const absolute = Math.abs(timezoneOffset);
+            let str7 = "-";
+            const defaultResult6 = module_4154.default(module_3915.default(absolute / 60), 2);
+            if (timezoneOffset < 0) {
+              str7 = "+";
             }
+            const combined = "".concat(str7);
+            const combined1 = combined.concat(defaultResult6, ":");
+            str6 = combined1.concat(module_4154.default(absolute % 60, 2));
+            const defaultResult7 = module_4154.default(absolute % 60, 2);
           }
+          const concat = "".concat;
+          const combined2 = "".concat(fullYear, "-");
+          const combined3 = combined2.concat(defaultResult2, "-");
+          const combined4 = combined3.concat(defaultResult1, "T");
+          const combined5 = combined4.concat(defaultResult3, ":");
+          const combined6 = combined5.concat(defaultResult4, ":");
+          const combined7 = combined6.concat(module_4154.default(defaultResult.getSeconds(), 2));
+          const combined8 = combined7.concat(str4);
+          return combined8.concat(str6);
         }
       }
-    }
-    weekStartsOn = weekStartsOn1;
-  }
-  if (null === weekStartsOn) {
-    weekStartsOn = defaultOptions.weekStartsOn;
-  }
-  if (null === weekStartsOn) {
-    const locale2 = defaultOptions.locale;
-    let weekStartsOn2;
-    if (null !== locale2) {
-      if (undefined !== locale2) {
-        const options2 = locale2.options;
-        if (null !== options2) {
-          if (undefined !== options2) {
-            weekStartsOn2 = options2.weekStartsOn;
-          }
-        }
-      }
-    }
-    weekStartsOn = weekStartsOn2;
-  }
-  let num = 0;
-  if (null !== weekStartsOn) {
-    num = 0;
-    if (undefined !== weekStartsOn) {
-      num = weekStartsOn;
+      const _RangeError2 = RangeError;
+      const rangeError = new RangeError("fractionDigits must be between 0 and 3 inclusively");
+      throw rangeError;
+    } else {
+      const _RangeError = RangeError;
+      const rangeError1 = new RangeError("Invalid time value");
+      throw rangeError1;
     }
   }
-  const defaultResult1 = module_3849.default(num);
-  if (defaultResult1 >= 0) {
-    if (defaultResult1 <= 6) {
-      const defaultResult2 = _typeof.default(arg0);
-      const defaultResult3 = module_3849.default(arg1);
-      let num4 = 0;
-      const uTCDay = defaultResult2.getUTCDay();
-      if ((defaultResult3 % 7 + 7) % 7 < defaultResult1) {
-        num4 = 7;
-      }
-      const diff = num4 + defaultResult3 - uTCDay;
-      defaultResult2.setUTCDate(defaultResult2.getUTCDate() + diff);
-      return defaultResult2;
-    }
-  }
-  const rangeError = new RangeError("weekStartsOn must be between 0 and 6 inclusively");
-  throw rangeError;
 };
 export default exports.default;

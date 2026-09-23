@@ -1,7 +1,12 @@
 // === Module 7185: ? ===
 
 // Module 7185
-import registerAsset from "module_1121" /* 1121 */;
+import _mod7186 from "module_7186" /* 7186 */;
+import _mod7187 from "module_7187" /* 7187 */;
+import _mod7188 from "module_7188" /* 7188 */;
+import _mod7190 from "module_7190" /* 7190 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "2f67acde4c60441cfd2d6684d11b6d76", name: "ic_close_circle_24px", type: "png" });
+export default function _slicedToArray(arg0, arg1) {
+  return _mod7186(arg0) || _mod7187(arg0, arg1) || _mod7188(arg0, arg1) || _mod7190();
+};

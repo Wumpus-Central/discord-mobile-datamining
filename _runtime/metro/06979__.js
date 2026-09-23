@@ -1,7 +1,7 @@
 // === Module 6979: ? ===
 
 // Module 6979
+import _mod17 from "module_17" /* 17 */;
 
-export function useNativeGestureRole(arg0, children) {
 
-}
+export const findNodeHandle = _mod17.findNodeHandle;

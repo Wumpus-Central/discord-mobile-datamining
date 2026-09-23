@@ -1,7 +1,14 @@
 // === Module 5285: ? ===
 
 // Module 5285
-import registerAsset from "module_1121" /* 1121 */;
+import _modDef5286 from "module_5286" /* 5286 */;
 
+const require = globalThis.__r;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "0e8c9cd01e5a3da643cc71e6763376dc", name: "ExperimentalLfgLockIcon", type: "png" });
+for (const key10016 in require("module_5286")) {
+  arg5[key10016] = require("module_5286")[key10016];
+  continue;
+}
+
+export default _modDef5286;
+export const LinearGradient = _modDef5286;

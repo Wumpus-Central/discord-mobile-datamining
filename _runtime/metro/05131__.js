@@ -1,25 +1,32 @@
 // === Module 5131: ? ===
 
 // Module 5131
-import _mod17 from "module_17" /* 17 */;
-import resolveAssetSource_mod from "resolveAssetSource" /* 81 */;
-import weakSet from "weakSet" /* 106 */;
-import module_65 from "module_65" /* 65 */;
+import _mod1282 from "module_1282" /* 1282 */;
+import _mod5132 from "module_5132" /* 5132 */;
+import _mod5133 from "module_5133" /* 5133 */;
+import _mod5134 from "module_5134" /* 5134 */;
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSTabsScreenAndroid", directEventTypes: { topWillAppear: { registrationName: "onWillAppear" }, topDidAppear: { registrationName: "onDidAppear" }, topWillDisappear: { registrationName: "onWillDisappear" }, topDidDisappear: { registrationName: "onDidDisappear" } }, validAttributes: null };
-let resolveAssetSource = resolveAssetSource_mod;
-if ("default" in resolveAssetSource) {
-  resolveAssetSource = resolveAssetSource.default;
+if (_mod5132) {
+  function setProto(arg0, arg1) {
+    if (_mod5132(arg0, arg1)) {
+      return arg0;
+    } else {
+      const tmp5 = new _mod1282("Reflect.setPrototypeOf: failed to set [[Prototype]]");
+      throw tmp5;
+    }
+  }
+} else {
+  setProto = _mod5133;
+  if (!setProto) {
+    let setProto2 = null;
+    if (_mod5134) {
+      setProto2 = function setProto(arg0, arg1) {
+        _mod5134(arg0, arg1);
+        return arg0;
+      };
+    }
+    setProto = setProto2;
+  }
 }
-const obj2 = { screenKey: true, preventNativeSelection: true, title: true, badgeValue: true, tabBarItemTestID: true, tabBarItemAccessibilityLabel: true, specialEffects: true, drawableIconResourceName: true, imageIconResource: { process: resolveAssetSource }, selectedDrawableIconResourceName: true, selectedImageIconResource: null, standardAppearance: true };
-let resolveAssetSource = resolveAssetSource_mod;
-if ("default" in resolveAssetSource) {
-  resolveAssetSource = resolveAssetSource.default;
-}
-obj2.selectedImageIconResource = { process: resolveAssetSource };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onWillAppear: true, onDidAppear: true, onWillDisappear: true, onDidDisappear: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = obj2;
 
-export default module_65.get("RNSTabsScreenAndroid", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default setProto;

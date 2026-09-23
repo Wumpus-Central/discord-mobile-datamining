@@ -1,19 +1,21 @@
 // === Module 6993: ? ===
 
 // Module 6993
-import ComposedGestureName from "ComposedGestureName" /* 6958 */;
-import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6967 */;
-import _mod6982 from "module_6982" /* 6982 */;
+import _mod6994 from "module_6994" /* 6994 */;
+import ScrollView from "ScrollView" /* 7082 */;
+import hitSlopDefault from "hitSlop" /* 7083 */;
+import Touchable from "Touchable" /* 7094 */;
 
-require = arg1;
-const dependencyMap = arg6;
-let closure_2 = {};
 
-export const useNativeGesture = function useNativeGesture() {
-  let tmp = gestureHandlerProps;
-  if (gestureHandlerProps === undefined) {
-    tmp = closure_2;
-  }
-  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp);
-  return _mod6982.useGesture(ComposedGestureName.SingleGestureName.Native, clonedAndRemappedConfig);
-};
+export const BaseButton = _mod6994.BaseButton;
+export const BorderlessButton = _mod6994.BorderlessButton;
+export const PureNativeButton = _mod6994.PureNativeButton;
+export const RawButton = _mod6994.RawButton;
+export const RectButton = _mod6994.RectButton;
+export const FlatList = ScrollView.FlatList;
+export const RefreshControl = ScrollView.RefreshControl;
+export const ScrollView = ScrollView.ScrollView;
+export const Switch = ScrollView.Switch;
+export const TextInput = ScrollView.TextInput;
+export const Pressable = hitSlopDefault;
+export const Touchable = Touchable.Touchable;

@@ -1,33 +1,73 @@
 // === Module 14717: ? ===
 
 // Module 14717
-import emptyPromise from "emptyPromise" /* 14700 */;
+import _mod14666 from "module_14666" /* 14666 */;
+import text from "text" /* 14675 */;
+import _mod14698 from "module_14698" /* 14698 */;
+import _mod14715 from "module_14715" /* 14715 */;
+import _mod14718 from "module_14718" /* 14718 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export default () => (log) => {
-  const result = emptyPromise.assertHasLoggerPlugin(log);
-  closure_0 = log;
-  return {
-    onConnect() {
-      log = console.log;
-      console.log = () => {
-        const items = [...arguments];
-        log(...items);
-        const items1 = [...items];
-        log.log.apply(items1);
-      };
-      console.warn = () => {
-        const items = [...arguments];
-        warn(...items);
-        log.warn(items[0]);
-      };
-      console.debug = () => {
-        const items = [...arguments];
-        debug(...items);
-        log.debug(items[0]);
-      };
+const enumerable = "enumerable";
+const configurable = "configurable";
+const writable = "writable";
+if (_mod14666) {
+  if (_mod14718) {
+    defineProperty = function defineProperty(fn, arg1, value) {
+      _mod14715(fn);
+      const tmp2 = text(arg1);
+      _mod14715(value);
+      let tmp4 = value;
+      if (typeof fn === "function") {
+        tmp4 = value;
+        if ("prototype" === tmp2) {
+          tmp4 = value;
+          if ("value" in value) {
+            tmp4 = value;
+            if (writable in value) {
+              tmp4 = value;
+              if (!value[writable]) {
+                const tmp7 = getOwnPropertyDescriptor(fn, tmp2);
+                let tmp8 = tmp7;
+                if (tmp7) {
+                  tmp8 = tmp7[writable];
+                }
+                tmp4 = value;
+                if (tmp8) {
+                  fn[tmp2] = value.value;
+                  const obj = { configurable: configurable in value ? value[configurable] : tmp7[configurable], enumerable: enumerable in value ? value[enumerable] : tmp7[enumerable], writable: false };
+                }
+              }
+            }
+          }
+        }
+      }
+      return defineProperty(fn, tmp2, tmp4);
+    };
+  }
+  let defineProperty2 = defineProperty;
+} else {
+  defineProperty2 = function defineProperty(arg0, arg1, value) {
+    _mod14715(arg0);
+    const tmp2 = text(arg1);
+    _mod14715(value);
+    if (!_mod14698) {
+      if (!("get" in value)) {
+        if (!("set" in value)) {
+          if ("value" in value) {
+            arg0[tmp2] = value.value;
+          }
+          return arg0;
+        }
+      }
+      const tmp8 = new TypeError("Accessors not supported");
+      throw tmp8;
+    } else {
+      try {
+        return defineProperty(arg0, tmp2, value);
+      } catch (err) {
+      }
     }
   };
-};
+}
+
+export const f = defineProperty2;

@@ -1,10 +1,9 @@
 // === Module 4379: ? ===
 
 // Module 4379
-const require = globalThis.__r;
+let closure_0 = { lastWeek: "'\u092A\u093F\u091B\u0932\u0947' eeee p", yesterday: "'\u0915\u0932' p", today: "'\u0906\u091C' p", tomorrow: "'\u0915\u0932' p", nextWeek: "eeee '\u0915\u094B' p", other: "P" };
 
-const require = arg1;
-const dependencyMap = arg6;
-
-export const shallow = require("module_4380").shallow;
-export const useShallow = require("module_4381").useShallow;
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  return closure_0[arg0];
+};
+export default exports.default;

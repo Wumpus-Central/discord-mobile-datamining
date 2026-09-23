@@ -1,34 +1,23 @@
 // === Module 14691: ? ===
 
 // Module 14691
+import _mod14663 from "module_14663" /* 14663 */;
+import _mod14689 from "module_14689" /* 14689 */;
 
-export const getReactNativeVersionWithModules = function getReactNativeVersionWithModules(constants) {
-  try {
-    if (constants) {
-      if (constants.reactNativeVersion) {
-        const major = constants.reactNativeVersion.major;
-        const minor = constants.reactNativeVersion.minor;
-        const patch = constants.reactNativeVersion.patch;
-        const prerelease = constants.reactNativeVersion.prerelease;
-        if (typeof major !== "number") {
-          return null;
-        } else {
-          const items = [];
-          const _HermesInternal2 = HermesInternal;
-          items.push("" + tmp4 + "." + minor + "." + patch);
-          if (prerelease) {
-            const _HermesInternal = HermesInternal;
-            arr2.push("-" + prerelease);
-          }
-          return items.join("");
-        }
-      } else {
-        return null;
-      }
-    } else {
-      return null;
+
+export default (arg0, arg1) => {
+  if (arguments.length < 2) {
+    const tmp7 = _mod14663[arg0];
+    let tmp8;
+    if (_mod14689(tmp7)) {
+      tmp8 = tmp7;
     }
-  } catch (err) {
-    return null;
+    let tmp3 = tmp8;
+  } else {
+    tmp3 = _mod14663[arg0];
+    if (tmp3) {
+      tmp3 = _mod14663[arg0][arg1];
+    }
   }
+  return tmp3;
 };

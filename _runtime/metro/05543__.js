@@ -1,7 +1,16 @@
 // === Module 5543: ? ===
 
 // Module 5543
-import registerAsset from "module_1121" /* 1121 */;
+import _mod5541 from "module_5541" /* 5541 */;
 
+require = arg1;
+const dependencyMap = arg6;
+const obj = { 1: "InteroperabilityIndex", 2: null, 4096: "RelatedImageFileFormat", 4097: "RelatedImageWidth", 4098: "RelatedImageHeight" };
+obj[2] = {
+  name: "InteroperabilityVersion",
+  description(value) {
+    return _mod5541.getStringValue(value);
+  }
+};
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "1c6c58beca1fec7f3c53119b27e0466a", name: "img_account_sync_facebook_light_and_dark", type: "svg" });
+export default obj;

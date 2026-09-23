@@ -1,39 +1,20 @@
 // === Module 5126: ? ===
 
 // Module 5126
-import RNSLog2 from "RNSLog" /* 5122 */;
-import noop from "module_19" /* 19 */;
+import _mod1306 from "module_1306" /* 1306 */;
+import _mod1307 from "module_1307" /* 1307 */;
+import _mod1313 from "module_1313" /* 1313 */;
+import _mod5118 from "module_5118" /* 5118 */;
 
-require = fn;
-const findNodeHandle = fn(17).findNodeHandle;
 
-export const useTabsHost = function useTabsHost(arg0) {
-  ({ componentNodeRef: require, onTabSelected } = arg0);
-  noop = undefined;
-  noop = noop.useRef(-1);
-  const effect = noop.useEffect(() => {
-    if (null != ref.current) {
-      let num2 = findNodeHandle(tmp.current);
-      if (num2 == null) {
-        num2 = -1;
+export default function isInteger(num) {
+  if (typeof num === "number") {
+    if (!_mod1313(num)) {
+      if (_mod5118(num)) {
+        const tmp = _mod1306(num);
+        return _mod1307(tmp) === tmp;
       }
-      closure_2.current = num2;
-    } else {
-      closure_2.current = -1;
     }
-  }, []);
-  const obj = { onTabSelected: null };
-  const items = [onTabSelected];
-  obj.onTabSelected = noop.useCallback((nativeEvent) => {
-    const RNSLog = RNSLog2.RNSLog;
-    let num = ref2.current;
-    if (num == null) {
-      num = -1;
-    }
-    RNSLog.log("TabsHost [" + num + "] onTabSelected: " + JSON.stringify(nativeEvent.nativeEvent));
-    if (onTabSelected != null) {
-      onTabSelected(nativeEvent);
-    }
-  }, items);
-  return obj;
+  }
+  return false;
 };

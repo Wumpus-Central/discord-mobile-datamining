@@ -87,7 +87,7 @@ function addEventListener(notifyListeners) {
   obj.add(notifyListeners);
   return () => {
     if (closure_8) {
-      closure_8.remove(f74808);
+      closure_8.remove(f75001);
     }
   };
 }
@@ -111,7 +111,7 @@ function useNetInfo(arg0) {
   const tmp15 = _slicedToArray(closure_4({ type: NetInfoStateTypeAll.NetInfoStateType.unknown, isConnected: null, isInternetReachable: null, details: null }), 2);
   importDefault = tmp15[1];
   closure_5(() => {
-    let f74808 = closure_0;
+    let f75001 = closure_0;
     obj = closure_8;
     if (!closure_8) {
       if (typeof createState === "function") {
@@ -123,13 +123,13 @@ function useNetInfo(arg0) {
       }
     }
     obj.add(closure_0);
-    f74808 = () => {
+    f75001 = () => {
       if (closure_8) {
-        closure_8.remove(f74808);
+        closure_8.remove(f75001);
       }
     };
     return () => {
-      if (typeof f74808 === "function") {
+      if (typeof f75001 === "function") {
         if (closure_1_8) {
           closure_1_8.remove(closure_128_0);
         }

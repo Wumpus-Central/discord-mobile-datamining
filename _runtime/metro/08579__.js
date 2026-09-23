@@ -1,11 +1,7 @@
 // === Module 8579: ? ===
 
 // Module 8579
-import _modDef8580 from "module_8580" /* 8580 */;
+import registerAsset from "module_1121" /* 1121 */;
 
-importDefault = arg2;
-const dependencyMap = arg6;
 
-export default function getWebViewProxy(FRAME_WEB_VIEW_KEY) {
-  return new _modDef8580(FRAME_WEB_VIEW_KEY);
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 160, height: 160, scales: [2, 3], hash: "abf5b4249ea38c96687799aa130b2321", name: "img_no_results_darker", type: "png" });

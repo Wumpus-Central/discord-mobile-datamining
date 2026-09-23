@@ -1,51 +1,11 @@
 // === Module 7175: ? ===
 
 // Module 7175
-import jsxProd from "jsxProd" /* 21 */;
-import _mod6876 from "module_6876" /* 6876 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6899 */;
-import noop_mod from "module_19" /* 19 */;
+import cancelAnimation from "cancelAnimation" /* 1637 */;
 
-let noop = noop_mod;
-({ useCallback: c2, useEffect: c3 } = noop);
-({ memo, forwardRef } = noop);
-let noop = noop_mod;
-const jsx = jsxProd.jsx;
-const memoResult = memo(forwardRef((onFocus, ref) => {
-  onFocus = onFocus.onFocus;
-  const onBlur = onFocus.onBlur;
-  const merged = Object.assign(onFocus, Object.assign({ onFocus: 0, onBlur: 0 }));
-  const shouldHandleKeyboardEvents = _mod6876.useBottomSheetInternal().shouldHandleKeyboardEvents;
-  const items = [onFocus, shouldHandleKeyboardEvents];
-  const items1 = [onBlur, shouldHandleKeyboardEvents];
-  const items2 = [shouldHandleKeyboardEvents];
-  const tmp2 = React2((arg0) => {
-    shouldHandleKeyboardEvents.value = true;
-    if (onFocus) {
-      tmp(arg0);
-    }
-  }, items);
-  React3(() => () => {
-    shouldHandleKeyboardEvents.value = false;
-  }, items2);
-  const tmp3 = React2((arg0) => {
-    shouldHandleKeyboardEvents.value = false;
-    if (onBlur) {
-      tmp(arg0);
-    }
-  }, items1);
-  const merged1 = Object.assign(merged);
-  return jsx(LegacyBaseButton.TextInput, {
-    ref,
-    onFocus: tmp2,
-    onBlur: React2((arg0) => {
-      shouldHandleKeyboardEvents.value = false;
-      if (onBlur) {
-        tmp(arg0);
-      }
-    }, items1)
-  });
-}));
-memoResult.displayName = "BottomSheetTextInput";
+const animatedComponent = cancelAnimation.createAnimatedComponent(fn(17).SectionList);
+const module_7168 = fn(7168);
+const memoResult = fn(19).memo(module_7168.createBottomSheetScrollableComponent(fn(6956).SCROLLABLE_TYPE.SECTIONLIST, animatedComponent));
+memoResult.displayName = "BottomSheetSectionList";
 
 export default memoResult;

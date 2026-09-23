@@ -1,9 +1,5 @@
 // === Module 14656: ? ===
 
 // Module 14656
-import _mod14657 from "module_14657" /* 14657 */;
-import _mod14664 from "module_14664" /* 14664 */;
 
-
-export const URL = _mod14657;
-export const URLSearchParams = _mod14664;
+export const units = ["degree", "acre", "hectare", "percent", "bit", "byte", "gigabit", "gigabyte", "kilobit", "kilobyte", "megabit", "megabyte", "petabyte", "terabit", "terabyte", "day", "hour", "millisecond", "minute", "month", "second", "week", "year", "centimeter", "foot", "inch", "kilometer", "meter", "mile-scandinavian", "mile", "millimeter", "yard", "gram", "kilogram", "ounce", "pound", "stone", "celsius", "fahrenheit", "fluid-ounce", "gallon", "liter", "milliliter"];

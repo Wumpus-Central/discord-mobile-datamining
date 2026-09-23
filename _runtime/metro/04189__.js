@@ -1,8 +1,8 @@
 // === Module 4189: ? ===
 
 // Module 4189
-import _typeof_mod from "module_3845" /* 3845 */;
-import requiredArgs_mod from "requiredArgs" /* 3846 */;
+import _typeof_mod from "module_3911" /* 3911 */;
+import requiredArgs_mod from "requiredArgs" /* 3912 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -21,9 +21,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isPast(date) {
+export default function getSeconds(arg0) {
   requiredArgs.default(1, arguments);
-  const time = _typeof.default(date).getTime();
-  return time < Date.now();
+  return _typeof.default(arg0).getSeconds();
 };
 export default exports.default;

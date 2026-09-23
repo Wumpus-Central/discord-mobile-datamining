@@ -1,21 +1,26 @@
 // === Module 7035: ? ===
 
 // Module 7035
-import _modDef7032 from "module_7032" /* 7032 */;
 import noop from "module_19" /* 19 */;
 
-const jsx = fn(21).jsx;
-
-export default function _default(delayLongPress) {
-  let num = delayLongPress.delayLongPress;
-  if (num === undefined) {
-    num = 600;
+let tmp3 = typeof window === "undefined";
+if (typeof window !== "undefined") {
+  const _window2 = window;
+  tmp3 = undefined === window.document;
+}
+if (!tmp3) {
+  const _window = window;
+  tmp3 = undefined === window.document.createElement;
+}
+let tmp4 = typeof navigator !== "undefined";
+if (typeof navigator !== "undefined") {
+  const _navigator = navigator;
+  tmp4 = "ReactNative" === navigator.product;
+}
+if (tmp3) {
+  if (!tmp4) {
+    let useLayoutEffect = noop.useEffect;
   }
-  let extraButtonProps = delayLongPress.extraButtonProps;
-  if (extraButtonProps === undefined) {
-    extraButtonProps = { rippleColor: "transparent", exclusive: true };
-  }
-  const merged = Object.assign(delayLongPress, Object.assign({ delayLongPress: 0, extraButtonProps: 0 }));
-  const merged1 = Object.assign(merged);
-  return jsx(_modDef7032, { delayLongPress: num, extraButtonProps });
-};
+  exports.useIsomorphicLayoutEffect = useLayoutEffect;
+}
+useLayoutEffect = noop.useLayoutEffect;

@@ -1,36 +1,46 @@
 // === Module 13161: ? ===
 
 // Module 13161
-import _mod13060 from "module_13060" /* 13060 */;
-import _mod13081 from "module_13081" /* 13081 */;
-
-require = arg1;
-const dependencyMap = arg6;
-
-export const captureFeedback = function captureFeedback(arg0) {
-  let obj = arg1;
-  if (arg1 === undefined) {
-    obj = {};
-  }
-  let currentScope = arg2;
+function merge(arg0, obj) {
+  let num = arg2;
   if (arg2 === undefined) {
-    currentScope = _mod13081.getCurrentScope();
+    num = 2;
   }
-  const obj2 = { contexts: null, type: "feedback", level: "info", tags: null };
-  const obj4 = { feedback: _mod13060.dropUndefinedKeys({ contact_email: email, name, message, url, source, associated_event_id: associatedEventId }) };
-  ({ message, name, email, url, source, associatedEventId, tags } = arg0);
-  obj2.contexts = obj4;
-  obj2.tags = tags;
-  let client = currentScope;
-  if (currentScope) {
-    client = currentScope.getClient();
+  if (obj) {
+    if (typeof obj === "object") {
+      if (num > 0) {
+        if (arg0) {
+          if (obj) {
+            const _Object = Object;
+            if (0 === Object.keys(obj).length) {
+              return arg0;
+            }
+          }
+        }
+        obj = {};
+        const merged = Object.assign(arg0);
+        for (const key10016 in arg1) {
+          let _Object2 = Object;
+          hasOwnProperty = Object.prototype.hasOwnProperty;
+          let call = hasOwnProperty.call;
+          if (typeof call === "unknown") {
+            let hasOwnPropertyResult = hasOwnProperty(key10016);
+          } else {
+            hasOwnPropertyResult = call(arg1, key10016);
+          }
+          if (!hasOwnPropertyResult) {
+            continue;
+          } else {
+            obj[key10016] = merge(obj[key10016], arg1[key10016], num - 1);
+            continue;
+          }
+          continue;
+        }
+        return obj;
+      }
+    }
   }
-  if (!client) {
-    client = _mod13081.getClient();
-    const tmp3Result = _mod13081;
-  }
-  if (client) {
-    client.emit("beforeSendFeedback", obj2, obj);
-  }
-  return currentScope.captureEvent(obj2, obj);
-};
+  return obj;
+}
+
+export { merge };

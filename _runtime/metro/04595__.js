@@ -1,61 +1,30 @@
 // === Module 4595: ? ===
 
 // Module 4595
-import AsyncMode from "AsyncMode" /* 4593 */;
+import c from "c" /* 4579 */;
+import _mod4592 from "module_4592" /* 4592 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-function getStatics(arg0) {
-  obj = AsyncMode;
-  if (obj.isMemo(arg0)) {
-    let tmp2 = obj;
-  } else {
-    tmp2 = obj2[arg0.$$typeof] || closure_2;
-  }
-  return tmp2;
-}
-let closure_2 = { childContextTypes: true, contextType: true, contextTypes: true, defaultProps: true, displayName: true, getDefaultProps: true, getDerivedStateFromError: true, getDerivedStateFromProps: true, mixins: true, propTypes: true, type: true };
-let closure_3 = { name: true, length: true, prototype: true, caller: true, callee: true, arguments: true, arity: true };
-let obj = { $$typeof: true, compare: true, defaultProps: true, displayName: true, propTypes: true, type: true };
-const obj2 = {};
-obj2[AsyncMode.ForwardRef] = { $$typeof: true, render: true, defaultProps: true, displayName: true, propTypes: true };
-obj2[AsyncMode.Memo] = obj;
-let closure_12 = Object.prototype;
-function hoistNonReactStatics(arg0, headers, arg2) {
-  if (typeof headers !== "string") {
-    if (closure_12) {
-      const tmp2 = getPrototypeOf(headers);
-      let tmp3 = tmp2;
-      if (tmp2) {
-        tmp3 = tmp2 !== tmp19;
-      }
-      if (tmp3) {
-        hoistNonReactStatics(arg0, tmp2, arg2);
-      }
-    }
-    obj = getOwnPropertyNames(headers);
-    let combined = obj;
-    if (getOwnPropertySymbols) {
-      combined = obj.concat(tmp7(headers));
-    }
-    let num = 0;
-    const tmp9 = getStatics(arg0);
-    if (0 < combined.length) {
-      if (!closure_3[combined[num]]) {
-        if (!arg2) {
-          if (!tmp10) {
-            if (!tmp9) {
-              try {
-                defineProperty(arg0, tmp11, tmp15);
-              } catch (err) {
-              }
-            }
-          }
-        }
-      }
-      num = num + 1;
-    }
-    tmp10 = getStatics(headers);
-  }
-  return arg0;
+require = arg1;
+function getBooleanProperty(booleanProperty, arg1) {
+  return booleanProperty.booleanProperty(arg1);
 }
 
-export default hoistNonReactStatics;
+export const useRiveBoolean = function useRiveBoolean(reducedMotion, instance) {
+  const cResult = c.c(4);
+  [tmp3, tmp4, tmp5] = _mod4592.useRiveProperty(instance, reducedMotion, getBooleanProperty);
+  if (cResult[0] === tmp5) {
+    if (cResult[1] === tmp4) {
+      if (cResult[2] === tmp3) {
+        let tmp6 = cResult[3];
+      }
+      return tmp6;
+    }
+  }
+  const obj3 = { value: tmp3, setValue: tmp4, error: tmp5 };
+  cResult[0] = tmp5;
+  cResult[1] = tmp4;
+  cResult[2] = tmp3;
+  cResult[3] = obj3;
+  tmp6 = obj3;
+};

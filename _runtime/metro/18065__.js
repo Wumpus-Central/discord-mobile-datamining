@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_settings/roles/native/images", width: 660, height: 240, scales: [2, 3], hash: "19d4157d3d8c12964b276feef3728637", name: "illustration-light-large", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "452e4649130bf55bccef66e38e059a6a", name: "ListBulletsIcon", type: "png" });
