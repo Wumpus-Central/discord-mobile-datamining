@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
-  scales: [1, 2, 3],
-  hash: "5870bc3ada01ff369d707eaeba6296c2",
-  name: "camera_upload_light",
+  httpServerLocation: "/assets/modules/polls/native/images",
+  width: 138,
+  height: 130,
+  scales: [2, 3],
+  hash: "2b9e354438218d1560976bef68047eb2",
+  name: "load-issue-dark",
   type: "png",
 });

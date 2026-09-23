@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/activated",
-  width: 213.5,
-  height: 19,
+  httpServerLocation: "/assets/images/native/premium/logos",
+  width: 45.5,
+  height: 8.5,
   scales: [2, 3],
-  hash: "5c483e491c3f377ab1cb686f9a6d4d3b",
-  name: "img_subscription_activated_light",
+  hash: "8d16389f341b45c184ca21d1deb5fd2e",
+  name: "img_logo_discord",
   type: "png",
 });

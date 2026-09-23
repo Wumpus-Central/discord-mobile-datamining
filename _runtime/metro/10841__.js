@@ -1,14 +1,12 @@
 // _runtime/metro/10841__.js
-import repeatedTimeunitPattern from "../10698_repeatedTimeunitPattern.js";
-import AbstractParserWithWordBoundaryChecking from "../10705_AbstractParserWithWordBoundaryChecking.js";
-import _mod10842 from "10842__.js";
+import AbstractParserWithWordBoundaryChecking from "../10781_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ESWeekdayParser = require;
+const FRTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,36 +25,35 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const regExp = new RegExp(
-  "(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:(este|esta|pasado|pr[o\u00F3]ximo)\\s*)?(" +
-    repeatedTimeunitPattern.matchAnyPattern(_mod10842.WEEKDAY_DICTIONARY) +
-    ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(este|esta|pasado|pr[\u00F3o]ximo)\\s*semana)?(?=\\W|\\d|$)",
-  "i",
-);
-class ESWeekdayParser {
+class FRTimeUnitAgoFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, ESWeekdayParser);
+    tmp = c2(this, FRTimeUnitAgoFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(ESWeekdayParser);
+    obj = closure_4(FRTimeUnitAgoFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
     return tmp3(self, constructResult);
   }
 }
-_inherits(ESWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(FRTimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
+    const regExp = new RegExp(
+      "(?:les?|la|l'|du|des?)\\s*(" +
+        FRTimeUnitAgoFormatParser(10836).NUMBER_PATTERN +
+        ")?(?:\\s*(prochaine?s?|derni[e\u00E8]re?s?|pass[\u00E9e]e?s?|pr[\u00E9e]c[\u00E9e]dents?|suivante?s?))?\\s*(" +
+        FRTimeUnitAgoFormatParser(10774).matchAnyPattern(FRTimeUnitAgoFormatParser(10836).TIME_UNIT_DICTIONARY) +
+        ")(?:\\s*(prochaine?s?|derni[e\u00E8]re?s?|pass[\u00E9e]e?s?|pr[\u00E9e]c[\u00E9e]dents?|suivante?s?))?",
+      "i",
+    );
     return regExp;
   },
 };
@@ -65,29 +62,33 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const formatted = arg1[2].toLowerCase();
-      const tmp4 = ESWeekdayParser(10842).WEEKDAY_DICTIONARY[formatted];
-      if (undefined === tmp4) {
-        return null;
-      } else {
-        const formatted1 = arg1[1] || arg1[3] || "".toLowerCase();
-        let str5 = "this";
-        if ("pasado" != formatted1) {
-          str5 = "next";
-          if ("pr\u00F3ximo" != formatted1) {
-            str5 = "next";
-            if ("proximo" != formatted1) {
-              str5 = null;
-              if ("este" == formatted1) {
-                str5 = "this";
-              }
-            }
-          }
-        }
-        return ESWeekdayParser(10725).createParsingComponentsAtWeekday(reference.reference, tmp4, str5);
+      let num = 1;
+      if (arg1[1]) {
+        num = FRTimeUnitAgoFormatParser(10836).parseNumberPattern(arg1[1]);
       }
+      const obj = {};
+      obj[FRTimeUnitAgoFormatParser(10836).TIME_UNIT_DICTIONARY[arg1[3].toLowerCase(arg1[3])]] = num;
+      const formatted = arg1[2] || arg1[4] || "".toLowerCase();
+      if (formatted) {
+        let isMatch = /derni[eè]re?s?/.test(formatted);
+        if (!isMatch) {
+          isMatch = /pass[ée]e?s?/.test(formatted);
+          const obj3 = /pass[ée]e?s?/;
+        }
+        if (!isMatch) {
+          isMatch = /pr[ée]c[ée]dents?/.test(formatted);
+          const obj4 = /pr[ée]c[ée]dents?/;
+        }
+        let reverseDurationResult = obj;
+        if (isMatch) {
+          reverseDurationResult = FRTimeUnitAgoFormatParser(10776).reverseDuration(obj);
+        }
+        const ParsingComponents = FRTimeUnitAgoFormatParser(10777).ParsingComponents;
+        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+      }
+      const str2 = arg1[2] || arg1[4] || "";
     },
   },
 ];
 
-export default _createClass(ESWeekdayParser, items);
+export default _createClass(FRTimeUnitAgoFormatParser, items);

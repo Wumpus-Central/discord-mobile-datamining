@@ -1,49 +1,39 @@
 // _runtime/metro/13171__.js
+import _mod13143 from "13143__.js";
 
-export function makeFifoCache(arg0) {
-  closure_0 = arg0;
-  closure_1 = [];
-  dependencyMap = {};
-  return {
-    add(arg0, arg1) {
-      if (closure_1.length >= closure_0) {
-        do {
-          if (undefined !== closure_1.shift()) {
-            delete tmp[tmp2];
-          }
-        } while (closure_1.length >= closure_0);
-      }
-      if (dependencyMap[arg0]) {
-        const self = this;
-        this.delete(arg0);
-      }
-      closure_1.push(arg0);
-      dependencyMap[arg0] = arg1;
-    },
-    clear() {
-      closure_2 = {};
-      closure_1 = [];
-    },
-    get(arg0) {
-      return dependencyMap[arg0];
-    },
-    size() {
-      return closure_1.length;
-    },
-    delete(arg0) {
-      if (dependencyMap[arg0]) {
-        delete tmp[tmp2];
-        let num = 0;
-        if (0 < closure_1.length) {
-          while (closure_1[num] !== arg0) {
-            num = num + 1;
-          }
-          closure_1.splice(num, 1);
-        }
-        return true;
+require = arg1;
+const dependencyMap = arg6;
+
+export const handleCallbackErrors = function handleCallbackErrors(fn, arg1) {
+  fn = arg2;
+  if (arg2 === undefined) {
+    fn = function t() {};
+  }
+  try {
+    return (function maybeHandlePromiseRejection(promise, arg1, fn) {
+      closure_0 = arg1;
+      closure_1 = fn;
+      if (obj.isThenable(promise)) {
+        return promise.then(
+          (result) => {
+            closure_1();
+            return result;
+          },
+          (arg0) => {
+            closure_0(arg0);
+            closure_1();
+            throw arg0;
+          },
+        );
       } else {
-        return false;
+        fn();
+        return promise;
       }
-    },
-  };
-}
+      obj = _mod13143;
+    })(fn(), arg1, fn);
+  } catch (tmp5) {
+    tmp3(tmp5);
+    tmp2();
+    throw tmp5;
+  }
+};

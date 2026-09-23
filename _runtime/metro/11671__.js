@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/self_mod/inappropriate_conversation/images",
-  width: 1125,
-  height: 1320,
+  httpServerLocation: "/assets/images/channel_following",
+  width: 400,
+  height: 96,
   scales: [1, 2, 3],
-  hash: "b033af5495ac778a49adec13082b9f99",
-  name: "vibing_wumpus_rings",
+  hash: "172381e19144655804b8a48af208d5ed",
+  name: "channel-following-backdrop-light",
   type: "png",
 });

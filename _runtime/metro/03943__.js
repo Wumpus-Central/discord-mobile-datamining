@@ -1,28 +1,42 @@
 // _runtime/metro/03943__.js
-import 02117__ from "02117__.js";
+import 02112__ from "02112__.js";
+import 02115__ from "02115__.js";
+import date_mod from "02116__.js";
+import date_mod from "02118__.js";
+import 03944__ from "03944__.js";
 
-if (!module_2117) {
-  const obj2 = { default: module_2117 };
-  let obj = obj2;
+if (!module_2112) {
+  const obj = { default: module_2112 };
+  let tmp3 = obj;
 } else {
-  obj = module_2117;
+  tmp3 = module_2112;
 }
-const date = {
-  ordinalNumber(arg0, arg1) {
-    return Number(arg0) + ".";
-  },
-  era: obj.default({ values: { narrow: ["f.Kr.", "e.Kr."], abbreviated: ["f.Kr.", "e.Kr."], wide: ["f\u00F8r Kristus", "etter Kristus"] }, defaultWidth: "wide" }),
-  quarter: obj.default({
-    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["Q1", "Q2", "Q3", "Q4"], wide: ["1. kvartal", "2. kvartal", "3. kvartal", "4. kvartal"] },
-    defaultWidth: "wide",
-    argumentCallback(arg0) {
-      return arg0 - 1;
-    }
-  }),
-  month: obj.default({ values: { narrow: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], abbreviated: ["jan.", "feb.", "mars", "apr.", "mai", "juni", "juli", "aug.", "sep.", "okt.", "nov.", "des."], wide: ["januar", "februar", "mars", "april", "mai", "juni", "juli", "august", "september", "oktober", "november", "desember"] }, defaultWidth: "wide" }),
-  day: obj.default({ values: { narrow: ["S", "M", "T", "O", "T", "F", "L"], short: ["s\u00F8", "ma", "ti", "on", "to", "fr", "l\u00F8"], abbreviated: ["s\u00F8n", "man", "tir", "ons", "tor", "fre", "l\u00F8r"], wide: ["s\u00F8ndag", "mandag", "tirsdag", "onsdag", "torsdag", "fredag", "l\u00F8rdag"] }, defaultWidth: "wide" }),
-  dayPeriod: obj.default({ values: { narrow: { am: "a", pm: "p", midnight: "midnatt", noon: "middag", morning: "p\u00E5 morg.", afternoon: "p\u00E5 etterm.", evening: "p\u00E5 kvelden", night: "p\u00E5 natten" }, abbreviated: { am: "a.m.", pm: "p.m.", midnight: "midnatt", noon: "middag", morning: "p\u00E5 morg.", afternoon: "p\u00E5 etterm.", evening: "p\u00E5 kvelden", night: "p\u00E5 natten" }, wide: { am: "a.m.", pm: "p.m.", midnight: "midnatt", noon: "middag", morning: "p\u00E5 morgenen", afternoon: "p\u00E5 ettermiddagen", evening: "p\u00E5 kvelden", night: "p\u00E5 natten" } }, defaultWidth: "wide" })
-};
+if (!module_2115) {
+  const obj2 = { default: module_2115 };
+  let tmp5 = obj2;
+} else {
+  tmp5 = module_2115;
+}
+let date = date_mod;
+if (!date) {
+  const obj3 = { default: date };
+  let tmp7 = obj3;
+} else {
+  tmp7 = date;
+}
+let date = date_mod;
+if (!date) {
+  const obj4 = { default: date };
+  let tmp9 = obj4;
+} else {
+  tmp9 = date;
+}
+if (!module_3944) {
+  const obj5 = { default: module_3944 };
+  let tmp11 = obj5;
+} else {
+  tmp11 = module_3944;
+}
 
-export default date;
+export default { code: "en-GB", formatDistance: tmp3.default, formatLong: tmp11.default, formatRelative: tmp5.default, localize: tmp7.default, match: tmp9.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
 export default exports.default;

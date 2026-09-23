@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "ef42f58d92ae3022fbec5decb610cbf2",
-  name: "ThreadMinusIcon",
+  hash: "b7967e1c069a1d25ab22d1157c869621",
+  name: "MoreVerticalIcon",
   type: "png",
 });

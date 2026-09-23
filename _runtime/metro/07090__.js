@@ -1,6 +1,12 @@
 // _runtime/metro/07090__.js
-import _mod17 from "00017__.js";
+import ComposedGestureName from "../07042_ComposedGestureName.js";
+import _mod7091 from "07091__.js";
 
-const StyleSheet = _mod17.StyleSheet;
+require = arg1;
+const dependencyMap = arg6;
 
-export const styles = StyleSheet.create({ container: { flex: 1, overflow: "visible" } });
+export const useCompetingGestures = function useCompetingGestures() {
+  const items = [...arguments];
+  const items1 = [ComposedGestureName.ComposedGestureName.Race, ...items];
+  return _mod7091.useComposedGesture.apply(items1);
+};

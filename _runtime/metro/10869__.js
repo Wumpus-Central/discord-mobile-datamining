@@ -1,14 +1,14 @@
 // _runtime/metro/10869__.js
-import repeatedTimeunitPattern from "../10698_repeatedTimeunitPattern.js";
-import AbstractParserWithWordBoundaryChecking from "../10705_AbstractParserWithWordBoundaryChecking.js";
-import _mod10867 from "10867__.js";
+import repeatedTimeunitPattern from "../10774_repeatedTimeunitPattern.js";
+import AbstractParserWithWordBoundaryChecking from "../10781_AbstractParserWithWordBoundaryChecking.js";
+import _mod10868 from "10868__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ENMonthNameMiddleEndianParser = require;
+const NLWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,23 +28,17 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 const regExp = new RegExp(
-  "(" +
-    repeatedTimeunitPattern.matchAnyPattern(_mod10867.MONTH_DICTIONARY) +
-    ")(?:-|/|\\s*,?\\s*)(" +
-    _mod10867.ORDINAL_NUMBER_PATTERN +
-    ")(?!\\s*(?:am|pm))\\s*(?:(?:al|\\-|\\alle|\\del|\\s)\\s*(" +
-    _mod10867.ORDINAL_NUMBER_PATTERN +
-    ")\\s*)?(?:(?:-|/|\\s*,?\\s*)(" +
-    _mod10867.YEAR_PATTERN +
-    "))?(?=\\W|$)(?!\\:\\d)",
+  "(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:op\\s*?)?(?:(deze|vorige|volgende)\\s*(?:week\\s*)?)?(" +
+    repeatedTimeunitPattern.matchAnyPattern(_mod10868.WEEKDAY_DICTIONARY) +
+    ")(?=\\W|$)",
   "i",
 );
-class ENMonthNameMiddleEndianParser {
+class NLWeekdayParser {
   constructor() {
     self = this;
-    tmp = c2(this, ENMonthNameMiddleEndianParser);
+    tmp = c2(this, NLWeekdayParser);
     tmp2 = closure_4;
-    obj = closure_4(ENMonthNameMiddleEndianParser);
+    obj = closure_4(NLWeekdayParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -59,7 +53,7 @@ class ENMonthNameMiddleEndianParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ENMonthNameMiddleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(NLWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
@@ -70,36 +64,33 @@ const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingComponents, index) {
-      const tmp3 = ENMonthNameMiddleEndianParser(10867).MONTH_DICTIONARY[index[1].toLowerCase(index[1])];
-      const result = ENMonthNameMiddleEndianParser(10867).parseOrdinalNumberPattern(index[2]);
-      if (result > 31) {
-        return null;
-      } else {
-        const date = { day: result, month: tmp3 };
-        const parsingComponents = createParsingComponents.createParsingComponents(date);
-        if (index[4]) {
-          parsingComponents.assign("year", ENMonthNameMiddleEndianParser(10867).parseYear(index[4]));
-        } else {
-          parsingComponents.imply(
-            "year",
-            ENMonthNameMiddleEndianParser(10699).findYearClosestToRef(createParsingComponents.refDate, result, tmp3),
-          );
-        }
-        if (index[3]) {
-          const result1 = ENMonthNameMiddleEndianParser(10867).parseOrdinalNumberPattern(index[3]);
-          const parsingResult = createParsingComponents.createParsingResult(index.index, index[0]);
-          parsingResult.start = parsingComponents;
-          parsingResult.end = parsingComponents.clone();
-          const end = parsingResult.end;
-          end.assign("day", result1);
-          return parsingResult;
-        } else {
-          return parsingComponents;
+    value: function innerExtract(reference, arg1) {
+      const formatted = arg1[2].toLowerCase();
+      let str2 = arg1[1];
+      if (!str2) {
+        str2 = arg1[3];
+      }
+      if (!str2) {
+        str2 = "";
+      }
+      const formatted1 = str2.toLowerCase();
+      let str3 = "last";
+      if ("vorige" != formatted1) {
+        str3 = "next";
+        if ("volgende" != formatted1) {
+          str3 = null;
+          if ("deze" == formatted1) {
+            str3 = "this";
+          }
         }
       }
+      return NLWeekdayParser(10801).createParsingComponentsAtWeekday(
+        reference.reference,
+        NLWeekdayParser(10868).WEEKDAY_DICTIONARY[formatted],
+        str3,
+      );
     },
   },
 ];
 
-export default _createClass(ENMonthNameMiddleEndianParser, items);
+export default _createClass(NLWeekdayParser, items);

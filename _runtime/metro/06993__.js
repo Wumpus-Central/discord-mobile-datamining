@@ -1,17 +1,18 @@
 // _runtime/metro/06993__.js
-import ComposedGestureName from "../06958_ComposedGestureName.js";
-import DEFAULT_PROPS_TRANSFORMER from "../06967_DEFAULT_PROPS_TRANSFORMER.js";
-import _mod6982 from "06982__.js";
+import _mod6994 from "06994__.js";
+import ScrollView from "../07082_ScrollView.js";
+import hitSlopDefault from "../07083_hitSlop.js";
+import Touchable from "../07094_Touchable.js";
 
-require = arg1;
-const dependencyMap = arg6;
-let closure_2 = {};
-
-export const useNativeGesture = function useNativeGesture() {
-  let tmp = gestureHandlerProps;
-  if (gestureHandlerProps === undefined) {
-    tmp = closure_2;
-  }
-  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp);
-  return _mod6982.useGesture(ComposedGestureName.SingleGestureName.Native, clonedAndRemappedConfig);
-};
+export const BaseButton = _mod6994.BaseButton;
+export const BorderlessButton = _mod6994.BorderlessButton;
+export const PureNativeButton = _mod6994.PureNativeButton;
+export const RawButton = _mod6994.RawButton;
+export const RectButton = _mod6994.RectButton;
+export const FlatList = ScrollView.FlatList;
+export const RefreshControl = ScrollView.RefreshControl;
+export const ScrollView = ScrollView.ScrollView;
+export const Switch = ScrollView.Switch;
+export const TextInput = ScrollView.TextInput;
+export const Pressable = hitSlopDefault;
+export const Touchable = Touchable.Touchable;

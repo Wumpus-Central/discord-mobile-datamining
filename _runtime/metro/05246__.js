@@ -1,13 +1,9 @@
 // _runtime/metro/05246__.js
-import registerAsset from "01121__.js";
+import _mod17 from "00017__.js";
+import 00065__ from "00065__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "5e2fd14b31cdd1bad77d12d7b0ab7334",
-  name: "AppsIcon",
-  type: "png",
-});
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSSafeAreaView", validAttributes: { edges: true, insetType: true } };
+
+export default module_65.get("RNSSafeAreaView", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

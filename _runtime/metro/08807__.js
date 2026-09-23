@@ -1,13 +1,19 @@
 // _runtime/metro/08807__.js
-import _modDef8756 from "08756__.js";
+import extractOpacityDefault from "../08809_extractOpacity.js";
+import extractResponderDefault from "../08810_extractResponder.js";
+import _modDef8815 from "08815__.js";
+import reducedDefault from "../08816_reduced.js";
+import _modDef8817 from "08817__.js";
+import _modDef8827 from "08827__.js";
+import _objectWithoutProperties from "00109__objectWithoutProperties.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
+import metroRequire from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const LinearGradient = importDefault;
+const Svg = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,45 +32,213 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
+let closure_3 = ["style", "opacity", "viewBox", "children", "onLayout", "preserveAspectRatio"];
+get_ActivityIndicator = fn(17);
+({ findNodeHandle: closure_8, Platform, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-class LinearGradient {
+const svg = StyleSheet.create({ svg: { backgroundColor: "transparent", borderWidth: 0 } }).svg;
+class Svg {
   constructor() {
     self = this;
-    tmp = c2(this, LinearGradient);
-    tmp2 = closure_4;
-    obj = closure_4(LinearGradient);
-    tmp3 = closure_3;
-    if (metroRequire()) {
-      tmp7 = globalThis;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = hasOwnProperty(this, Svg);
+    items1 = [...items];
+    tmp2 = closure_7;
+    obj = closure_7(Svg);
+    tmp3 = metroRequire;
+    if (closure_11()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.measureInWindow = (arg0) => {
+      const root = closure_0.root;
+      if (root) {
+        root.measureInWindow(arg0);
+      }
+    };
+    tmp3Result.measure = (arg0) => {
+      const root = closure_0.root;
+      if (root) {
+        root.measure(arg0);
+      }
+    };
+    tmp3Result.measureLayout = (arg0, arg1, arg2) => {
+      const root = closure_0.root;
+      if (root) {
+        root.measureLayout(arg0, arg1, arg2);
+      }
+    };
+    tmp3Result.setNativeProps = (arg0) => {
+      const root = closure_0.root;
+      if (root) {
+        root.setNativeProps(arg0);
+      }
+    };
+    tmp3Result.toDataURL = (arg0, arg1) => {
+      if (arg0) {
+        const tmp4 = React6(closure_0.root);
+        Svg(8808).default.toDataURL(tmp4, arg1, arg0);
+        const _default = Svg(8808).default;
+      }
+    };
+    return tmp3Result;
   }
 }
-_inherits(LinearGradient, _modDef8756);
+_inherits(Svg, _modDef8827);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    const merged = Object.assign({ x1: props.x1, y1: props.y1, x2: props.x2, y2: props.y2 });
-    const merged1 = Object.assign(LinearGradient(8809)(props, this));
-    return jsx(LinearGradient(8808), {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
+    ({ style, opacity } = props);
+    ({ viewBox, children, onLayout, preserveAspectRatio } = props);
+    const tmp = _objectWithoutProperties(props, closure_3);
+    let applyResult = style;
+    if (Array.isArray(style)) {
+      const _Object = Object;
+      const items = [{}];
+      HermesBuiltin.arraySpread(style, 1);
+      const _Object2 = Object;
+      applyResult = HermesBuiltin.apply(items, Object);
+    }
+    const obj = {};
+    const merged = Object.assign(applyResult);
+    const merged1 = Object.assign(tmp);
+    ({ width, height, focusable } = obj);
+    let tmp10 = undefined === width;
+    ({
+      transform,
+      font,
+      fill,
+      fillOpacity,
+      fillRule,
+      stroke,
+      strokeWidth,
+      strokeOpacity,
+      strokeDasharray,
+      strokeDashoffset,
+      strokeLinecap,
+      strokeLinejoin,
+      strokeMiterlimit,
+      position,
+    } = obj);
+    if (tmp10) {
+      tmp10 = undefined === height;
+    }
+    if (tmp10) {
+      tmp10 = "absolute" !== position;
+    }
+    if (tmp10) {
+      height = "100%";
+      width = "100%";
+    }
+    let BooleanResult = Boolean(focusable);
+    if (BooleanResult) {
+      BooleanResult = "false" !== focusable;
+    }
+    tmp.focusable = BooleanResult;
+    let items1 = [svg];
+    if (style) {
+      items1.push(style);
+    }
+    let num2 = NaN;
+    if (null != opacity) {
+      num2 = extractOpacityDefault(opacity);
+    }
+    const obj2 = {};
+    let flag = false;
+    if (!isNaN(num2)) {
+      obj2.opacity = num2;
+      flag = true;
+    }
+    let flag2 = flag;
+    if (width) {
+      flag2 = flag;
+      if (height) {
+        const _parseInt = parseInt;
+        let parsed = parseInt(width, 10);
+        const _parseInt2 = parseInt;
+        let parsed1 = parseInt(height, 10);
+        const _isNaN = isNaN;
+        let isNaNResult = isNaN(parsed);
+        if (!isNaNResult) {
+          isNaNResult = "%" === width[width.length - 1];
+        }
+        const _isNaN2 = isNaN;
+        let isNaNResult1 = isNaN(parsed1);
+        if (!isNaNResult1) {
+          isNaNResult1 = "%" === height[height.length - 1];
+        }
+        if (isNaNResult) {
+          parsed = width;
+        }
+        obj2.width = parsed;
+        if (isNaNResult1) {
+          parsed1 = height;
+        }
+        obj2.height = parsed1;
+        obj2.flex = 0;
+        flag2 = true;
+      }
+    }
+    if (flag2) {
+      items1.push(obj2);
+    }
+    if (items1.length <= 1) {
+      items1 = svg;
+    }
+    tmp.style = items1;
+    if (null != width) {
+      tmp.bbWidth = width;
+    }
+    if (null != height) {
+      tmp.bbHeight = height;
+    }
+    extractResponderDefault(tmp, tmp, this);
+    const merged2 = Object.assign({}, StyleSheet.flatten(style));
+    if (transform) {
+      if (merged2.transform) {
+        tmp.transform = merged2.transform;
+        merged2.transform = undefined;
+      }
+      tmp.transform = Svg(8811).extractTransformSvgView(tmp);
+      const obj3 = Svg(8811);
+    }
+    const obj4 = {};
+    const merged3 = Object.assign(tmp);
+    obj4.ref = function ref(arg0) {
+      return self.refMethod(arg0);
+    };
+    const merged4 = Object.assign(reducedDefault({ viewBox, preserveAspectRatio }));
+    obj4.children = jsx(_modDef8817, {
+      children,
+      style: merged2,
+      font,
+      fill,
+      fillOpacity,
+      fillRule,
+      stroke,
+      strokeWidth,
+      strokeOpacity,
+      strokeDasharray,
+      strokeDashoffset,
+      strokeLinecap,
+      strokeLinejoin,
+      strokeMiterlimit,
+      onLayout,
     });
+    return jsx(_modDef8815, {});
   },
 };
-const items = [entry];
-const importDefaultResultResult = _createClass(LinearGradient, items);
-importDefaultResultResult.displayName = "LinearGradient";
-importDefaultResultResult.defaultProps = { x1: "0%", y1: "0%", x2: "100%", y2: "0%" };
+let items = [entry];
+const importDefaultResultResult = _createClass(Svg, items);
+importDefaultResultResult.displayName = "Svg";
+importDefaultResultResult.defaultProps = { preserveAspectRatio: "xMidYMid meet" };
 
 export default importDefaultResultResult;

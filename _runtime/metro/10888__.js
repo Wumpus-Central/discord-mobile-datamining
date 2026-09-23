@@ -1,13 +1,12 @@
 // _runtime/metro/10888__.js
-import AbstractParserWithWordBoundaryChecking from "../10705_AbstractParserWithWordBoundaryChecking.js";
-import _mod10886 from "10886__.js";
+import AbstractParserWithWordBoundaryChecking from "../10781_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const SVTimeUnitCasualRelativeFormatParser = require;
+const ZHHantDateParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,72 +25,88 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const regExp = new RegExp(
-  "(denna|den h\u00E4r|f\u00F6rra|passerade|n\u00E4sta|kommande|efter|\\+|-)\\s*(" +
-    _mod10886.TIME_UNITS_PATTERN +
-    ")(?=\\W|$)",
-  "i",
-);
-const regExp1 = new RegExp(
-  "(denna|den h\u00E4r|f\u00F6rra|passerade|n\u00E4sta|kommande|efter|\\+|-)\\s*(" +
-    _mod10886.TIME_UNITS_NO_ABBR_PATTERN +
-    ")(?=\\W|$)",
-  "i",
-);
-class SVTimeUnitCasualRelativeFormatParser {
+class ZHHantDateParser {
   constructor() {
-    flag = global;
-    if (global === undefined) {
-      flag = true;
-    }
     self = this;
-    tmp = c2(this, SVTimeUnitCasualRelativeFormatParser);
+    tmp = c2(this, ZHHantDateParser);
     tmp2 = closure_4;
-    obj = closure_4(SVTimeUnitCasualRelativeFormatParser);
+    obj = closure_4(ZHHantDateParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.allowAbbreviations = flag;
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(
-  SVTimeUnitCasualRelativeFormatParser,
-  AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking,
-);
+_inherits(ZHHantDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
-    return this.allowAbbreviations ? regExp : regExp1;
+    const keys = Object.keys(ZHHantDateParser(10889).NUMBER);
+    const text = `(\\d{2,4}|[${obj.join("")}`;
+    const keys1 = Object.keys(ZHHantDateParser(10889).NUMBER);
+    const text1 = `${`(\\d{2,4}|[${obj.join("")}`}]{4}|[${obj2.join("")}`;
+    const keys2 = Object.keys(ZHHantDateParser(10889).NUMBER);
+    const text2 = `${tmp2}]{2})?(?:\\s*)(?:年)?(?:[\\s|,|，]*)(\\d{1,2}|[${obj3.join("")}`;
+    const keys3 = Object.keys(ZHHantDateParser(10889).NUMBER);
+    const regExp = new RegExp(
+      text2 + "]{1,2})(?:\\s*)(?:\u6708)(?:\\s*)(\\d{1,2}|[" + keys3.join("") + "]{1,2})?(?:\\s*)(?:\u65E5|\u865F)?",
+    );
+    return regExp;
   },
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const formatted = arg1[1].toLowerCase();
-      const parseDurationResult = SVTimeUnitCasualRelativeFormatParser(10886).parseDuration(arg1[2]);
-      if (parseDurationResult) {
-        if ("f\u00F6rra" !== formatted) {
-          if ("passerade" !== formatted) {
-            let reverseDurationResult = parseDurationResult;
-          }
-          const ParsingComponents = SVTimeUnitCasualRelativeFormatParser(10701).ParsingComponents;
-          return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
-        }
-        reverseDurationResult = SVTimeUnitCasualRelativeFormatParser(10700).reverseDuration(parseDurationResult);
-      } else {
-        return null;
+    value: function innerExtract(createParsingResult, index) {
+      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
+      const parsed = parseInt(index[2]);
+      let zhStringToNumberResult = parsed;
+      if (isNaN(parsed)) {
+        zhStringToNumberResult = ZHHantDateParser(10889).zhStringToNumber(index[2]);
       }
+      const start = parsingResult.start;
+      start.assign("month", zhStringToNumberResult);
+      if (index[3]) {
+        const _parseInt = parseInt;
+        const parsed1 = parseInt(index[3]);
+        const _isNaN = isNaN;
+        let zhStringToNumberResult1 = parsed1;
+        if (isNaN(parsed1)) {
+          zhStringToNumberResult1 = ZHHantDateParser(10889).zhStringToNumber(index[3]);
+        }
+        const start3 = parsingResult.start;
+        start3.assign("day", zhStringToNumberResult1);
+      } else {
+        const start2 = parsingResult.start;
+        const refDate = createParsingResult.refDate;
+        start2.imply("day", refDate.getDate());
+      }
+      if (index[1]) {
+        const _parseInt2 = parseInt;
+        let parsed2 = parseInt(index[1]);
+        const _isNaN2 = isNaN;
+        if (isNaN(parsed2)) {
+          parsed2 = ZHHantDateParser(10889).zhStringToYear(index[1]);
+        }
+        const start5 = parsingResult.start;
+        start5.assign("year", parsed2);
+      } else {
+        const start4 = parsingResult.start;
+        const refDate2 = createParsingResult.refDate;
+        start4.imply("year", refDate2.getFullYear());
+      }
+      return parsingResult;
     },
   },
 ];
 
-export default _createClass(SVTimeUnitCasualRelativeFormatParser, items);
+export default _createClass(ZHHantDateParser, items);

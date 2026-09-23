@@ -1,37 +1,28 @@
 // _runtime/metro/04263__.js
-import module_3849_mod from "03849__.js";
-import _typeof_mod from "03845__.js";
-import requiredArgs_mod from "../03846_requiredArgs.js";
+import startOfQuarter_mod from "../04123_startOfQuarter.js";
+import requiredArgs_mod from "../03912_requiredArgs.js";
 
-let module_3849 = module_3849_mod;
-if (!module_3849) {
-  const obj = { default: module_3849 };
+let startOfQuarter = startOfQuarter_mod;
+if (!startOfQuarter) {
+  const obj = { default: startOfQuarter };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3849;
+  tmp3 = startOfQuarter;
 }
-module_3849 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
-} else {
-  tmp5 = _typeof;
-}
-_typeof = tmp5;
+startOfQuarter = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
 
-export default function setHours(module_3849, uTCMinutes) {
+export default function isSameQuarter(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(module_3849);
-  defaultResult1.setHours(module_3849.default(uTCMinutes));
-  return defaultResult1;
+  const defaultResult1 = startOfQuarter.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfQuarter.default(arg1).getTime();
 };
 export default exports.default;

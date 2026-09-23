@@ -1,137 +1,125 @@
 // _runtime/metro/07149__.js
-import _mod7146 from "07146__.js";
-import noop from "00019__.js";
+import jsxProd from "../react/00021_jsxProd.js";
+import LegacyBaseButton from "../06983_LegacyBaseButton.js";
+import noop_mod from "00019__.js";
 
-({ useCallback: c2, useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
-
-export const useBoundDetection = function useBoundDetection(recyclerViewManager, arg1) {
-  closure_0 = recyclerViewManager;
-  closure_1 = arg1;
-  hasOwnProperty(false);
-  hasOwnProperty(false);
-  hasOwnProperty(false);
-  hasOwnProperty(Date.now());
-  const data = recyclerViewManager.props.data;
-  const _requestAnimationFrame = _mod7146.useUnmountAwareAnimationFrame().requestAnimationFrame;
-  let num = 0;
-  if (recyclerViewManager.hasLayout()) {
-    num = recyclerViewManager.getWindowSize().height;
-  }
-  let num2 = 0;
-  if (recyclerViewManager.hasLayout()) {
-    num2 = recyclerViewManager.getChildContainerDimensions().height;
-  }
-  let num3 = 0;
-  if (recyclerViewManager.hasLayout()) {
-    num3 = recyclerViewManager.getWindowSize().width;
-  }
-  let num4 = 0;
-  if (recyclerViewManager.hasLayout()) {
-    num4 = recyclerViewManager.getChildContainerDimensions().width;
-  }
-  const items = [recyclerViewManager];
-  const items1 = [_requestAnimationFrame, arg1, recyclerViewManager];
-  const checkBounds = React2(() => {
-    closure_5.current = Date.now();
-    const props = closure_0.props;
-    ({ onEndReached, onStartReached, maintainVisibleContentPosition, onEndReachedThreshold, onStartReachedThreshold } =
-      props);
-    let num;
-    if (maintainVisibleContentPosition != null) {
-      num = maintainVisibleContentPosition.autoscrollToBottomThreshold;
+let noop = noop_mod;
+({ useMemo: c3, memo } = noop);
+let noop = noop_mod;
+const jsx = jsxProd.jsx;
+const memoResult = memo((nativeGestureRef) => {
+  nativeGestureRef = nativeGestureRef.nativeGestureRef;
+  const refreshControlGestureRef = nativeGestureRef.refreshControlGestureRef;
+  ({ style, children } = nativeGestureRef);
+  const merged = Object.assign(
+    nativeGestureRef,
+    Object.assign({ nativeGestureRef: 0, refreshControlGestureRef: 0, style: 0, children: 0 }),
+  );
+  let enableContentPanningGesture;
+  const bottomSheetInternal = nativeGestureRef(enableContentPanningGesture[2]).useBottomSheetInternal();
+  enableContentPanningGesture = bottomSheetInternal.enableContentPanningGesture;
+  const simultaneousHandlers = bottomSheetInternal.simultaneousHandlers;
+  const waitFor = bottomSheetInternal.waitFor;
+  const activeOffsetX = bottomSheetInternal.activeOffsetX;
+  const activeOffsetY = bottomSheetInternal.activeOffsetY;
+  const failOffsetX = bottomSheetInternal.failOffsetX;
+  const failOffsetY = bottomSheetInternal.failOffsetY;
+  const obj = nativeGestureRef(enableContentPanningGesture[2]);
+  const contentPanGestureHandler = nativeGestureRef(enableContentPanningGesture[2]).useBottomSheetGestureHandlers()
+    .contentPanGestureHandler;
+  let items = [simultaneousHandlers, nativeGestureRef, refreshControlGestureRef];
+  const tmp3 = simultaneousHandlers(() => {
+    const items = [];
+    if (nativeGestureRef) {
+      items.push(tmp);
     }
-    if (num == null) {
-      num = -1;
+    if (refreshControlGestureRef) {
+      items.push(tmp3);
     }
-    if (closure_0.getIsFirstLayoutComplete()) {
-      const absoluteLastScrollOffset = closure_0.getAbsoluteLastScrollOffset();
-      const size = closure_0.getChildContainerDimensions();
-      const size2 = closure_0.getWindowSize();
-      const tmp3 = true === props.horizontal ? size2.width : size2.height;
-      const sum = (tmp2 ? size.width : size.height) + closure_0.firstItemOffset;
-      if (tmp3 > 0) {
-        if (onEndReached) {
-          if (onEndReachedThreshold == null) {
-            onEndReachedThreshold = 0.5;
-          }
-          const _Math = Math;
-          const result = onEndReachedThreshold * tmp3;
-          const tmp6 = Math.ceil(absoluteLastScrollOffset + tmp3) >= sum - result;
-          let tmp7 = tmp6;
-          if (tmp6) {
-            tmp7 = !ref.current;
-          }
-          if (tmp7) {
-            ref.current = true;
-            onEndReached();
-          }
-          ref.current = tmp6;
-        }
-        if (onStartReached) {
-          if (onStartReachedThreshold == null) {
-            onStartReachedThreshold = 0.2;
-          }
-          let tmp13 = tmp12;
-          if (absoluteLastScrollOffset <= onStartReachedThreshold * tmp3) {
-            tmp13 = !ref2.current;
-          }
-          if (tmp13) {
-            ref2.current = true;
-            onStartReached();
-          }
-          ref2.current = absoluteLastScrollOffset <= onStartReachedThreshold * tmp3;
-        }
-        if (!tmp2) {
-          if (num >= 0) {
-            const _Math2 = Math;
-            const result1 = num * tmp3;
-            closure_4.current = Math.ceil(absoluteLastScrollOffset + tmp3) >= sum - result1;
-          }
-        }
+    if (simultaneousHandlers) {
+      const _Array = Array;
+      const push = items.push;
+      if (Array.isArray(simultaneousHandlers)) {
+        const items1 = [];
+        HermesBuiltin.arraySpread(simultaneousHandlers, 0);
+        HermesBuiltin.apply(items1, items);
+      } else {
+        push(simultaneousHandlers);
       }
     }
+    return items;
   }, items);
-  const tmp2 = React2(() => {
-    let current = props.isOffsetProjectionEnabled;
-    if (current) {
-      current = ref3.current;
+  closure_10 = tmp3;
+  let items1 = [
+    activeOffsetX,
+    activeOffsetY,
+    enableContentPanningGesture,
+    failOffsetX,
+    failOffsetY,
+    tmp3,
+    waitFor,
+    ,
+    ,
+    ,
+  ];
+  ({
+    handleOnChange: arr2[7],
+    handleOnEnd: arr2[8],
+    handleOnFinalize: arr2[9],
+    handleOnStart: arr2[10],
+  } = contentPanGestureHandler);
+  const tmp4 = simultaneousHandlers(() => {
+    const Gesture = LegacyBaseButton.Gesture;
+    const PanResult = Gesture.Pan();
+    const result = Gesture.Pan().enabled(enableContentPanningGesture).shouldCancelWhenOutside(false);
+    const enabledResult = Gesture.Pan().enabled(enableContentPanningGesture);
+    const runOnJSResult = result.runOnJS(false);
+    const onStartResult = result.runOnJS(false).onStart(contentPanGestureHandler.handleOnStart);
+    const onChangeResult = result
+      .runOnJS(false)
+      .onStart(contentPanGestureHandler.handleOnStart)
+      .onChange(contentPanGestureHandler.handleOnChange);
+    const onFinalizeResult = result
+      .runOnJS(false)
+      .onStart(contentPanGestureHandler.handleOnStart)
+      .onChange(contentPanGestureHandler.handleOnChange)
+      .onEnd(contentPanGestureHandler.handleOnEnd)
+      .onFinalize(contentPanGestureHandler.handleOnFinalize);
+    let result1 = onFinalizeResult;
+    if (waitFor) {
+      result1 = onFinalizeResult.requireExternalGestureToFail(tmp);
     }
-    if (current) {
-      ref3.current = false;
-      _requestAnimationFrame(() => {
-        const maintainVisibleContentPosition = props.props.maintainVisibleContentPosition;
-        let flag;
-        if (maintainVisibleContentPosition != null) {
-          flag = maintainVisibleContentPosition.animateAutoScrollToBottom;
-        }
-        if (flag == null) {
-          flag = true;
-        }
-        const current = ref.current;
-        if (current != null) {
-          if (flag) {
-            flag = !props.ignoreScrollEvents;
-          }
-          const obj = { animated: flag };
-          current.scrollToEnd(obj);
-        }
-      });
+    let result2 = result1;
+    if (closure_10) {
+      result2 = result1.simultaneousWithExternalGesture(tmp2);
     }
+    let activeOffsetXResult = result2;
+    if (activeOffsetX) {
+      activeOffsetXResult = result2.activeOffsetX(tmp3);
+    }
+    let activeOffsetYResult = activeOffsetXResult;
+    if (activeOffsetY) {
+      activeOffsetYResult = activeOffsetXResult.activeOffsetY(tmp4);
+    }
+    let failOffsetXResult = activeOffsetYResult;
+    if (failOffsetX) {
+      failOffsetXResult = activeOffsetYResult.failOffsetX(tmp5);
+    }
+    let failOffsetYResult = failOffsetXResult;
+    if (failOffsetY) {
+      failOffsetYResult = failOffsetXResult.failOffsetY(tmp6);
+    }
+    return failOffsetYResult;
   }, items1);
-  closure_7 = tmp2;
-  const items2 = [data];
-  React4(() => {
-    closure_2.current = false;
-  }, items2);
-  const items3 = [data, tmp2, num, num3];
-  React3(() => {
-    closure_7();
-  }, items3);
-  const items4 = [num2, num4, recyclerViewManager.firstItemOffset, tmp2];
-  React3(() => {
-    if (Date.now() - ref4.current >= 100) {
-      closure_7();
-    }
-  }, items4);
-  return { checkBounds };
-};
+  const obj3 = { gesture: tmp4, children: null };
+  const obj4 = { value: tmp4, children: null };
+  const obj5 = { style };
+  const merged1 = Object.assign(merged);
+  obj5.children = children;
+  obj4.children = waitFor(refreshControlGestureRef(enableContentPanningGesture[5]).View, obj5);
+  obj3.children = waitFor(nativeGestureRef(enableContentPanningGesture[4]).BottomSheetDraggableContext.Provider, obj4);
+  return waitFor(nativeGestureRef(enableContentPanningGesture[3]).GestureDetector, obj3);
+});
+memoResult.displayName = "BottomSheetDraggableView";
+
+export default memoResult;

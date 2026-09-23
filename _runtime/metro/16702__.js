@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guilds_bar/native/images",
-  width: 59,
-  height: 55,
-  scales: [3],
-  hash: "31b62f25cfc0f3a2d3cb5b6aaaef4788",
-  name: "wumpus_wave",
+  httpServerLocation: "/assets/images/native/community",
+  width: 16,
+  height: 16,
+  scales: [1, 2, 3],
+  hash: "d5f86d80f0a1d11d99b6b752d01d2cf8",
+  name: "ic-application-rejected",
   type: "png",
 });

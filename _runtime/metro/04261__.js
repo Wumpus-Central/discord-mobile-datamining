@@ -1,38 +1,28 @@
 // _runtime/metro/04261__.js
-import module_3849_mod from "03849__.js";
-import _typeof_mod from "03845__.js";
-import requiredArgs_mod from "../03846_requiredArgs.js";
+import startOfMinute_mod from "../04120_startOfMinute.js";
+import requiredArgs_mod from "../03912_requiredArgs.js";
 
-let module_3849 = module_3849_mod;
-if (!module_3849) {
-  const obj = { default: module_3849 };
+let startOfMinute = startOfMinute_mod;
+if (!startOfMinute) {
+  const obj = { default: startOfMinute };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3849;
+  tmp3 = startOfMinute;
 }
-module_3849 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
-} else {
-  tmp5 = _typeof;
-}
-_typeof = tmp5;
+startOfMinute = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
 
-export default function setDayOfYear(arg0, arg1) {
+export default function isSameMinute(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  defaultResult1.setMonth(0);
-  defaultResult1.setDate(module_3849.default(arg1));
-  return defaultResult1;
+  const defaultResult1 = startOfMinute.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfMinute.default(arg1).getTime();
 };
 export default exports.default;

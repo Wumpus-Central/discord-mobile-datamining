@@ -1,11 +1,14 @@
 // _runtime/metro/10877__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import _mod10719 from "10719__.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
+import repeatedTimeunitPattern from "../10774_repeatedTimeunitPattern.js";
+import AbstractParserWithWordBoundaryChecking from "../10781_AbstractParserWithWordBoundaryChecking.js";
+import _mod10868 from "10868__.js";
+import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
+const NLRelativeDateFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,31 +27,20 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class ENMergeDateTimeRefiner {
+const regExp = new RegExp(
+  "(dit|deze|(?:aan)?komend|volgend|afgelopen|vorig)e?\\s*(" +
+    repeatedTimeunitPattern.matchAnyPattern(_mod10868.TIME_UNIT_DICTIONARY) +
+    ")(?=\\s*)(?=\\W|$)",
+  "i",
+);
+class NLRelativeDateFormatParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, ENMergeDateTimeRefiner);
-    tmp2 = c2;
-    obj = c2(ENMergeDateTimeRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
+    tmp = c2(this, NLRelativeDateFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(NLRelativeDateFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -61,15 +53,62 @@ class ENMergeDateTimeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = ENMergeDateTimeRefiner;
-_inherits(ENMergeDateTimeRefiner, fn(_mod10719).default);
+_inherits(NLRelativeDateFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    const regExp = new RegExp("^\\s*(T|alle|dopo|prima|il|di|del|delle|,|-)?\\s*$");
+  key: "innerPattern",
+  value: function innerPattern() {
     return regExp;
   },
 };
-const items = [entry];
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(createParsingComponents, arg1) {
+      const formatted = arg1[1].toLowerCase();
+      const str3 = arg1[2].toLowerCase();
+      const tmp4 = NLRelativeDateFormatParser(10868).TIME_UNIT_DICTIONARY[str3];
+      if ("volgend" != formatted) {
+        if ("komend" != formatted) {
+          if ("aankomend" != formatted) {
+            if ("afgelopen" != formatted) {
+              if ("vorig" != formatted) {
+                const parsingComponents = createParsingComponents.createParsingComponents();
+                const _Date = Date;
+                const instant = createParsingComponents.reference.instant;
+                const date = new Date(instant.getTime());
+                if (str3.match(/week/i)) {
+                  date.setDate(date.getDate() - date.getDay());
+                  parsingComponents.imply("day", date.getDate());
+                  parsingComponents.imply("month", date.getMonth() + 1);
+                  parsingComponents.imply("year", date.getFullYear());
+                  const date1 = date.getDate();
+                } else if (str3.match(/maand/i)) {
+                  date.setDate(1);
+                  parsingComponents.imply("day", date.getDate());
+                  parsingComponents.assign("year", date.getFullYear());
+                  parsingComponents.assign("month", date.getMonth() + 1);
+                } else if (str3.match(/jaar/i)) {
+                  date.setDate(1);
+                  date.setMonth(0);
+                  parsingComponents.imply("day", date.getDate());
+                  parsingComponents.imply("month", date.getMonth() + 1);
+                  parsingComponents.assign("year", date.getFullYear());
+                }
+                return parsingComponents;
+              }
+            }
+            const obj = {};
+            obj[tmp4] = -1;
+            const ParsingComponents = NLRelativeDateFormatParser(10777).ParsingComponents;
+            return ParsingComponents.createRelativeFromReference(createParsingComponents.reference, obj);
+          }
+        }
+      }
+      const ParsingComponents2 = NLRelativeDateFormatParser(10777).ParsingComponents;
+      return ParsingComponents2.createRelativeFromReference(createParsingComponents.reference, { [tmp4]: 1 });
+    },
+  },
+];
 
-export default _createClass(ENMergeDateTimeRefiner, items);
+export default _createClass(NLRelativeDateFormatParser, items);

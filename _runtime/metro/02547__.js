@@ -3,9 +3,9 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL2dpZnRpbmc=",
+  httpServerLocation: "/assets/modules/premium/powerups",
   scales: [1],
-  hash: "5230e6e9e0da1ea830c21e6a1f8ffa68",
-  name: "bg.messages.5230e6e9e0da1ea830c21e6a1f8ffa68.compiled.messages",
+  hash: "b24e9223725c6bf5ddf729ce5a676b3b",
+  name: "GuildPowerups.compiled.messages",
   type: "jsona",
 });

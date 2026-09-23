@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "928ec3b0cfa6ddcb7b852c71960488c7",
-  name: "Share",
+  httpServerLocation: "/assets/modules/nuf_channels/native/images",
+  width: 120,
+  height: 120,
+  scales: [1],
+  hash: "b269fec2e8135bbc2e2d49cb182b352b",
+  name: "amanda",
   type: "png",
 });

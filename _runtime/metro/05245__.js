@@ -1,13 +1,18 @@
 // _runtime/metro/05245__.js
-import registerAsset from "01121__.js";
+import _modDef5246 from "05246__.js";
+import noop from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "fee15a76bef55eb0f2b368d5439c39b9",
-  name: "TextIcon",
-  type: "png",
-});
+const StyleSheet = fn(17).StyleSheet;
+const jsx = fn(21).jsx;
+const styles = StyleSheet.create({ flex: { flex: 1 } });
+
+export const SafeAreaView = function SafeAreaView(style) {
+  const obj = {};
+  const merged = Object.assign(style);
+  const items = [styles.flex, style.style];
+  obj.style = items;
+  const rect = { top: false, bottom: false, left: false, right: false };
+  const merged1 = Object.assign(style.edges);
+  obj.edges = rect;
+  return jsx(_modDef5246, {});
+};

@@ -1,84 +1,13 @@
 // _runtime/metro/10756__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import AbstractTimeExpressionParser from "../10712_AbstractTimeExpressionParser.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _get from "00096__get.js";
-import _inherits from "../00098__inherits.js";
+import registerAsset from "01121__.js";
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-class FRTimeExpressionParser {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, FRTimeExpressionParser);
-    tmp2 = c2;
-    obj = c2(FRTimeExpressionParser);
-    tmp3 = closure_1;
-    if (closure_4()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-_classCallCheck = FRTimeExpressionParser;
-_inherits(FRTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
-const entry = {
-  key: "primaryPrefix",
-  value: function primaryPrefix() {
-    return "(?:(?:[\u00E0a])\\s*)?";
-  },
-};
-let items = [
-  entry,
-  {
-    key: "followingPhase",
-    value: function followingPhase() {
-      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|[\u00E0a]|\\?)\\s*";
-    },
-  },
-  {
-    key: "extractPrimaryTimeComponents",
-    value: function extractPrimaryTimeComponents(arg0, arg1) {
-      let fnResult = null;
-      if (!str.match(/^\s*\d{4}\s*$/)) {
-        const self = this;
-        let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "extractPrimaryTimeComponents", this);
-        if (typeof fn === "function") {
-          fn = (items) => fn.apply(self, items);
-        }
-        const items = [arg0, arg1];
-        fnResult = fn(items);
-      }
-      return fnResult;
-    },
-  },
-];
-
-export default _createClass(FRTimeExpressionParser, items);
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/stickers/native/images",
+  width: 16,
+  height: 16,
+  scales: [2, 3],
+  hash: "494d75fe739ed4a36d195ab8193847fa",
+  name: "alert",
+  type: "png",
+});

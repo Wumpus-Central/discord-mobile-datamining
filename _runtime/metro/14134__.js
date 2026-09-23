@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/contact_sync/native/images",
-  width: 40,
-  height: 40,
-  scales: [2, 3],
-  hash: "1d68443a64aaff8d1d20c2355b47322a",
-  name: "cta",
+  httpServerLocation: "/assets/modules/nuf_channels/native/images",
+  width: 23,
+  height: 45,
+  scales: [1],
+  hash: "997fd56d3361833ef80c750f0e0e48a8",
+  name: "star_purple",
   type: "png",
 });

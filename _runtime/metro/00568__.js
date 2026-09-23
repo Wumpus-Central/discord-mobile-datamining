@@ -365,7 +365,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: "a", type: "isArray", listener: "track" };
+          obj = { fired: false, wrapFn: "a", target: false, type: false, listener: false };
           obj.target = this;
           obj.type = global;
           obj.listener = require;
@@ -392,7 +392,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: "a", type: "isArray", listener: "track" };
+          obj = { fired: false, wrapFn: "a", target: false, type: false, listener: false };
           obj.target = this;
           obj.type = global;
           obj.listener = require;

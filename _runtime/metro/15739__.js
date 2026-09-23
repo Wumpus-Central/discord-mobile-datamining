@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
-  width: 70,
-  height: 47,
-  scales: [1],
-  hash: "b2da62f020089ccee92860e4defafdb4",
-  name: "zh-CN",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "d54bf56841039bee9b0ab658257be5d8",
+  name: "EmojiZanyFaceIcon",
   type: "png",
 });

@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/polls/native/images",
-  width: 138,
-  height: 130,
+  httpServerLocation: "/assets/images/native/badge",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "2b9e354438218d1560976bef68047eb2",
-  name: "load-issue-dark",
+  hash: "bfaa24ee9d14df63fd4c31531ca2dc70",
+  name: "ic_badge_staff",
   type: "png",
 });

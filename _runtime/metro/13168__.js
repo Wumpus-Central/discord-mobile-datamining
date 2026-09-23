@@ -1,43 +1,34 @@
 // _runtime/metro/13168__.js
-import _mod13169 from "13169__.js";
+import _mod13163 from "13163__.js";
 
 require = arg1;
-const module = arg4;
 const dependencyMap = arg6;
-function dynamicRequire(require, arg1) {
-  return require.require(arg1);
-}
 
-export { dynamicRequire };
-export const isNodeEnv = function isNodeEnv() {
-  const isBrowserBundleResult = _mod13169.isBrowserBundle();
-  if (isBrowserBundleResult) {
-    return !isBrowserBundleResult;
-  } else {
-    const _Object = Object;
-    const call = toString.call;
-    const _process = process;
-    let str = 0;
-    if (typeof process !== "undefined") {
-      str = process;
+export const hasTracingEnabled = function hasTracingEnabled(tracesSampler) {
+  if (typeof globalThis.__SENTRY_TRACING__ === "boolean") {
+    if (!globalThis.__SENTRY_TRACING__) {
+      return false;
     }
-    str = "[object process]";
-    const tmp3 = typeof call === "unknown" ? toString() : call(str);
   }
-};
-export const loadModule = function loadModule(arg0) {
-  let tmp = arg1;
-  if (arg1 === undefined) {
-    tmp = module;
-  }
-  try {
-    let tmp3 = dynamicRequire(tmp, arg0);
-    if (!tmp3) {
-      try {
-        const _HermesInternal = HermesInternal;
-        tmp3 = dynamicRequire(tmp, "" + dynamicRequire(tmp, "process").cwd() + "/node_modules/" + arg0);
-      } catch (err) {}
+  let tmp = tracesSampler;
+  const client = _mod13163.getClient();
+  if (!tracesSampler) {
+    let options = client;
+    if (client) {
+      options = client.getOptions();
     }
-    return tmp3;
-  } catch (err) {}
+    tmp = options;
+  }
+  let tmp3 = tmp;
+  if (tmp3) {
+    let enableTracing = tmp.enableTracing;
+    if (!enableTracing) {
+      enableTracing = "tracesSampleRate" in tmp;
+    }
+    if (!enableTracing) {
+      enableTracing = "tracesSampler" in tmp;
+    }
+    tmp3 = enableTracing;
+  }
+  return tmp3;
 };

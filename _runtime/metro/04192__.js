@@ -1,26 +1,48 @@
 // _runtime/metro/04192__.js
-import module_4193_mod from "04193__.js";
-import requiredArgs_mod from "../03846_requiredArgs.js";
+import startOfWeek_mod from "../04070_startOfWeek.js";
+import startOfWeekYear_mod from "../04193_startOfWeekYear.js";
+import _typeof_mod from "03911__.js";
+import requiredArgs_mod from "../03912_requiredArgs.js";
 
-let module_4193 = module_4193_mod;
-if (!module_4193) {
-  const obj = { default: module_4193 };
+let startOfWeek = startOfWeek_mod;
+if (!startOfWeek) {
+  const obj = { default: startOfWeek };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4193;
+  tmp3 = startOfWeek;
 }
-module_4193 = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+startOfWeek = tmp3;
+let startOfWeekYear = startOfWeekYear_mod;
+if (!startOfWeekYear) {
+  const obj2 = { default: startOfWeekYear };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = startOfWeekYear;
 }
-requiredArgs = tmp5;
+startOfWeekYear = tmp5;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj3 = { default: _typeof };
+  let tmp7 = obj3;
+} else {
+  tmp7 = _typeof;
+}
+_typeof = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
+let c4 = 604800000;
 
-export default function isSameISOWeek(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_4193.default(arg0, arg1, { weekStartsOn: 1 });
+export default function getWeek(arg0, arg1) {
+  requiredArgs.default(1, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const time = startOfWeek.default(defaultResult1, arg1).getTime();
+  const defaultResult2 = startOfWeek.default(defaultResult1, arg1);
+  return Math.round((time - startOfWeekYear.default(defaultResult1, arg1).getTime()) / c4) + 1;
 };
 export default exports.default;

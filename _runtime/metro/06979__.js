@@ -1,3 +1,4 @@
 // _runtime/metro/06979__.js
+import _mod17 from "00017__.js";
 
-export function useNativeGestureRole(arg0, children) {}
+export const findNodeHandle = _mod17.findNodeHandle;

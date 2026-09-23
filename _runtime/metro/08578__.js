@@ -1,4 +1,13 @@
 // _runtime/metro/08578__.js
-import _mod17 from "00017__.js";
+import registerAsset from "01121__.js";
 
-export default _mod17.requireNativeComponent("RNCWebViewContainer");
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/empties",
+  width: 150,
+  height: 150,
+  scales: [2, 3],
+  hash: "e8a1ca4b2fed2cda940e645e0f79dbd9",
+  name: "img_no_results_dark",
+  type: "png",
+});

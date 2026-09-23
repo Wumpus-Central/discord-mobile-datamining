@@ -1,13 +1,69 @@
 // _runtime/metro/08861__.js
-import registerAsset from "01121__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _modDef8842 from "08842__.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "88b9e4c8788e9863c575add881967ca5",
-  name: "LinkExternalSmallIcon",
-  type: "png",
-});
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+class FeMergeNode {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_0(this, FeMergeNode);
+    items1 = [...items];
+    tmp2 = c2;
+    obj = c2(FeMergeNode);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.setNativeProps = () => {
+      const parent = props.props.parent;
+      if (parent) {
+        parent.forceUpdate();
+      }
+    };
+    return tmp3Result;
+  }
+}
+_classCallCheck = FeMergeNode;
+_inherits(FeMergeNode, _modDef8842);
+const entry = {
+  key: "render",
+  value: function render() {
+    return null;
+  },
+};
+let items = [entry];
+const importDefaultResultResult = _createClass(FeMergeNode, items);
+importDefaultResultResult.displayName = "FeMergeNode";
+
+export default importDefaultResultResult;

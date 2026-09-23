@@ -1,18 +1,7 @@
 // _runtime/metro/13164__.js
+let __SENTRY_DEBUG__ = typeof globalThis.__SENTRY_DEBUG__ === "undefined";
+if (typeof globalThis.__SENTRY_DEBUG__ !== "undefined") {
+  __SENTRY_DEBUG__ = globalThis.__SENTRY_DEBUG__;
+}
 
-export const getBreadcrumbLogLevelFromHttpStatusCode = function getBreadcrumbLogLevelFromHttpStatusCode(arg0) {
-  let tmp;
-  if (undefined !== arg0) {
-    if (arg0 < 400) {
-      let str2;
-      if (arg0 >= 500) {
-        str2 = "error";
-      }
-      let str = str2;
-    } else {
-      str = "warning";
-    }
-    tmp = str;
-  }
-  return tmp;
-};
+export const DEBUG_BUILD = __SENTRY_DEBUG__;

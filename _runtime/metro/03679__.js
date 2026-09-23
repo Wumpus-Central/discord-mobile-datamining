@@ -3,9 +3,9 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/vibegrations/intl",
+  httpServerLocation: "/assets/modules/game_invite_channels",
   scales: [1],
-  hash: "caaaa33271109f1eaf32164652001f3b",
-  name: "VibegrationsUntranslated.compiled.messages",
+  hash: "1f9ab1ee6385662cdd6891a4feb70a40",
+  name: "GameInviteChannels.compiled.messages",
   type: "jsona",
 });

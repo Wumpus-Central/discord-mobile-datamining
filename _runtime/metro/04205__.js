@@ -1,15 +1,15 @@
 // _runtime/metro/04205__.js
-import module_4197_mod from "04197__.js";
-import requiredArgs_mod from "../03846_requiredArgs.js";
+import _typeof_mod from "03911__.js";
+import requiredArgs_mod from "../03912_requiredArgs.js";
 
-let module_4197 = module_4197_mod;
-if (!module_4197) {
-  const obj = { default: module_4197 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4197;
+  tmp3 = _typeof;
 }
-module_4197 = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -19,8 +19,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisQuarter(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_4197.default(Date.now(), arg0);
+export default function isAfter(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const time = defaultResult1.getTime();
+  return time > _typeof.default(arg1).getTime();
 };
 export default exports.default;

@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/custom_app_icons/BrandInvertedIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "9710a1ee79723d3b78a21470e6bc1f77",
-  name: "ShieldIcon",
+  hash: "d3530007d60b5d4f6a3d08cddf26f42c",
+  name: "BrandInvertedIcon",
   type: "png",
 });

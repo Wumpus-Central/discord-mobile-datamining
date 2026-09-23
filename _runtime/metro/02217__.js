@@ -5,7 +5,7 @@ export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/virtual_currency/web/orb_wallet/messages",
   scales: [1],
-  hash: "f1ae87f5c523ea832e6294ddca3c335c",
+  hash: "16cdba06d4e1236e30d27b562b33304d",
   name: "OrbWallet.compiled.messages",
   type: "jsona",
 });

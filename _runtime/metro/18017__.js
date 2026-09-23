@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/empties",
-  width: 181,
-  height: 141,
+  httpServerLocation: "/assets/images/native/guild_settings/overview",
+  width: 343,
+  height: 193,
   scales: [2, 3],
-  hash: "ed03b4a3566d0ff2258e5577eb7c05bd",
-  name: "empty_server_settings_emoji_dark",
+  hash: "14f8bd930afc02eff31d9dfb6640a712",
+  name: "asset_gradient",
   type: "png",
 });

@@ -1,33 +1,17 @@
 // _runtime/metro/06997__.js
-import _mod17 from "00017__.js";
+import _modDef6998 from "06998__.js";
+import get_ActivityIndicator from "00017__.js";
 
-const Platform = _mod17.Platform;
+({ Animated, StyleSheet } = get_ActivityIndicator);
+const animatedComponent = Animated.createAnimatedComponent(_modDef6998);
 
-export const getTVProps = function getTVProps(focusable) {
-  if (Platform.isTV) {
-    let flag = focusable.focusable;
-    if (flag == null) {
-      flag = focusable.isTVSelectable;
-    }
-    if (flag == null) {
-      flag = true;
-    }
-    const obj2 = { isTVSelectable: flag };
-    let obj = obj2;
-  } else {
-    obj = {};
-  }
-  return obj;
+export const GestureDetectorType = {
+  Native: 0,
+  [0]: "Native",
+  Virtual: 1,
+  [1]: "Virtual",
+  Intercepting: 2,
+  [2]: "Intercepting",
 };
-export const applyRelationProp = function applyRelationProp(arg0, arg1, arg2) {
-  if (arg2) {
-    const _Array = Array;
-    if (Array.isArray(arg2)) {
-      const items = [];
-      HermesBuiltin.arraySpread(arg2, 0);
-      HermesBuiltin.apply(items, arg0);
-    } else {
-      tmp4(arg2);
-    }
-  }
-};
+export const AnimatedNativeDetector = animatedComponent;
+export const nativeDetectorStyles = StyleSheet.create({ detector: { display: "contents" } });

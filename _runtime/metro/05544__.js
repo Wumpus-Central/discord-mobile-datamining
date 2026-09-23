@@ -1,13 +1,14 @@
 // _runtime/metro/05544__.js
-import registerAsset from "01121__.js";
+import _mod5541 from "05541__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
-  scales: [1],
-  hash: "b5850b914f9528f3de18a75020fab1b9",
-  name: "img_account_sync_facebook_white",
-  type: "svg",
-});
+require = arg1;
+const dependencyMap = arg6;
+const obj = { 45056: null, 45057: "NumberOfImages", 45058: "MPEntry", 45059: "ImageUIDList", 45060: "TotalFrames" };
+obj[45056] = {
+  name: "MPFVersion",
+  description(value) {
+    return _mod5541.getStringValue(value);
+  },
+};
+
+export default obj;

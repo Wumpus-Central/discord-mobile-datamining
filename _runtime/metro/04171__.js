@@ -1,300 +1,194 @@
 // _runtime/metro/04171__.js
-import Parser2 from "../04151_Parser.js";
-import module_4169_mod from "04169__.js";
+import _mod3916 from "03916__.js";
+import differenceInCalendarDays_mod from "../04073_differenceInCalendarDays.js";
+import format_mod from "04143__.js";
+import code_mod from "04157__.js";
+import subMilliseconds_mod from "../04144_subMilliseconds.js";
+import _typeof_mod from "03911__.js";
+import module_4074_mod from "04074__.js";
+import requiredArgs_mod from "../03912_requiredArgs.js";
+import module_3915_mod from "03915__.js";
 
-let _createSuperInternal = require;
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
-}
-function _setPrototypeOf(StandAloneLocalDayParser, Parser) {
-  _setPrototypeOf = Object.setPrototypeOf;
-  if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(StandAloneLocalDayParser, Parser) {
-      StandAloneLocalDayParser.__proto__ = Parser;
-      return StandAloneLocalDayParser;
-    };
-  }
-  return _setPrototypeOf(StandAloneLocalDayParser, Parser);
-}
-function _getPrototypeOf(arg0) {
-  if (Object.setPrototypeOf) {
-    let _Object = Object;
-    _getPrototypeOf = Object.getPrototypeOf;
-  } else {
-    _getPrototypeOf = function _getPrototypeOf(arg0) {
-      let __proto__ = arg0.__proto__;
-      if (!__proto__) {
-        const _Object = Object;
-        __proto__ = Object.getPrototypeOf(arg0);
-      }
-      return __proto__;
-    };
-  }
-  return _getPrototypeOf(arg0);
-}
-let module_4169 = module_4169_mod;
-if (!module_4169) {
-  let obj = { default: module_4169 };
+let differenceInCalendarDays = differenceInCalendarDays_mod;
+if (!differenceInCalendarDays) {
+  let obj = { default: differenceInCalendarDays };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4169;
+  tmp3 = differenceInCalendarDays;
 }
-module_4169 = tmp3;
-const Parser = Parser2.Parser;
-_createSuperInternal = undefined;
-class StandAloneLocalDayParser {
-  constructor() {
-    if (this instanceof closure_1) {
-      length = arguments.length;
-      _Array = Array;
-      tmp6 = new.target;
-      tmp7 = new.target;
-      tmp8 = length;
-      array = new Array(length);
-      tmp10 = array;
-      num = 0;
-      num2 = 1;
-      if (0 < length) {
-        do {
-          array[num] = arguments[num];
-          num = num + 1;
-        } while (num < length);
-      }
-      tmp11 = _createSuperInternal;
-      call = _createSuperInternal.call;
-      items = [];
-      items[0] = tmp;
-      applyResult = call.apply(_createSuperInternal, items.concat(array));
-      tmp13 = undefined === applyResult;
-      if (tmp13) {
-        _ReferenceError2 = ReferenceError;
-        tmp20 = new.target;
-        str5 = "this hasn't been initialised - super() hasn't been called";
-        tmp21 = new.target;
-        referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-        tmp23 = referenceError;
-        throw referenceError;
-      } else {
-        str2 = "priority";
-        if ("priority" in applyResult) {
-          _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", {
-            value: 90,
-            enumerable: true,
-            configurable: true,
-            writable: true,
-          });
-        } else {
-          num3 = 90;
-          applyResult.priority = 90;
-        }
-        if (tmp13) {
-          _ReferenceError = ReferenceError;
-          tmp16 = new.target;
-          str4 = "this hasn't been initialised - super() hasn't been called";
-          tmp17 = new.target;
-          referenceError1 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-          tmp19 = referenceError1;
-          throw referenceError1;
-        } else {
-          items1 = ["y", "R", "u", "q", "Q", "M", "L", "I", "d", "D", "E", "i", "e", "t", "T"];
-          str3 = "incompatibleTokens";
-          if ("incompatibleTokens" in applyResult) {
-            _Object2 = Object;
-            obj = { value: null, enumerable: true, configurable: true, writable: true };
-            obj.value = items1;
-            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", obj);
-          } else {
-            applyResult.incompatibleTokens = items1;
+differenceInCalendarDays = tmp3;
+let format = format_mod;
+if (!format) {
+  let obj2 = { default: format };
+  let tmp5 = obj2;
+} else {
+  tmp5 = format;
+}
+format = tmp5;
+let code = code_mod;
+if (!code) {
+  const obj3 = { default: code };
+  let tmp7 = obj3;
+} else {
+  tmp7 = code;
+}
+code = tmp7;
+let subMilliseconds = subMilliseconds_mod;
+if (!subMilliseconds) {
+  const obj4 = { default: subMilliseconds };
+  let tmp9 = obj4;
+} else {
+  tmp9 = subMilliseconds;
+}
+subMilliseconds = tmp9;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj5 = { default: _typeof };
+  let tmp11 = obj5;
+} else {
+  tmp11 = _typeof;
+}
+_typeof = tmp11;
+let module_4074 = module_4074_mod;
+if (!module_4074) {
+  const obj6 = { default: module_4074 };
+  let tmp13 = obj6;
+} else {
+  tmp13 = module_4074;
+}
+module_4074 = tmp13;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj7 = { default: requiredArgs };
+  let tmp15 = obj7;
+} else {
+  tmp15 = requiredArgs;
+}
+requiredArgs = tmp15;
+let module_3915 = module_3915_mod;
+if (!module_3915) {
+  const obj8 = { default: module_3915 };
+  let tmp17 = obj8;
+} else {
+  tmp17 = module_3915;
+}
+module_3915 = tmp17;
+
+export default function formatRelative(arg0, arg1, locale) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const defaultResult2 = _typeof.default(arg1);
+  const defaultOptions = _mod3916.getDefaultOptions();
+  let locale1;
+  if (null != locale) {
+    locale1 = locale.locale;
+  }
+  if (null === locale1) {
+    locale1 = defaultOptions.locale;
+  }
+  if (null === locale1) {
+    locale1 = code.default;
+  }
+  let weekStartsOn;
+  if (null != locale) {
+    weekStartsOn = locale.weekStartsOn;
+  }
+  if (null === weekStartsOn) {
+    let weekStartsOn1;
+    if (null != locale) {
+      locale = locale.locale;
+      if (null !== locale) {
+        if (undefined !== locale) {
+          const options = locale.options;
+          if (null !== options) {
+            if (undefined !== options) {
+              weekStartsOn1 = options.weekStartsOn;
+            }
           }
-          return applyResult;
         }
+      }
+    }
+    weekStartsOn = weekStartsOn1;
+  }
+  if (null === weekStartsOn) {
+    weekStartsOn = defaultOptions.weekStartsOn;
+  }
+  if (null === weekStartsOn) {
+    const locale2 = defaultOptions.locale;
+    let weekStartsOn2;
+    if (null !== locale2) {
+      if (undefined !== locale2) {
+        const options2 = locale2.options;
+        if (null !== options2) {
+          if (undefined !== options2) {
+            weekStartsOn2 = options2.weekStartsOn;
+          }
+        }
+      }
+    }
+    weekStartsOn = weekStartsOn2;
+  }
+  let num = 0;
+  if (null !== weekStartsOn) {
+    num = 0;
+    if (undefined !== weekStartsOn) {
+      num = weekStartsOn;
+    }
+  }
+  const defaultResult3 = module_3915.default(num);
+  if (locale1.localize) {
+    if (locale1.formatLong) {
+      if (locale1.formatRelative) {
+        const defaultResult4 = differenceInCalendarDays.default(defaultResult1, defaultResult2);
+        const _isNaN = isNaN;
+        if (isNaN(defaultResult4)) {
+          const _RangeError4 = RangeError;
+          const rangeError = new RangeError("Invalid time value");
+          throw rangeError;
+        } else {
+          let str4 = "other";
+          let str5 = "other";
+          if (defaultResult4 >= -6) {
+            let str6 = "lastWeek";
+            if (defaultResult4 >= -1) {
+              let str7 = "yesterday";
+              if (defaultResult4 >= 0) {
+                let str8 = "today";
+                if (defaultResult4 >= 1) {
+                  let str9 = "tomorrow";
+                  if (defaultResult4 >= 2) {
+                    if (defaultResult4 < 7) {
+                      str4 = "nextWeek";
+                    }
+                    str9 = str4;
+                  }
+                  str8 = str9;
+                }
+                str7 = str8;
+              }
+              str6 = str7;
+            }
+            str5 = str6;
+          }
+          const defaultResult5 = subMilliseconds.default(defaultResult1, module_4074.default(defaultResult1));
+          const obj = { locale: locale1, weekStartsOn: defaultResult3 };
+          const obj2 = { locale: locale1, weekStartsOn: defaultResult3 };
+          return format.default(defaultResult1, locale1.formatRelative(str5, defaultResult5, subMilliseconds.default(defaultResult2, module_4074.default(defaultResult2)), obj), obj2);
+        }
+      } else {
+        const _RangeError3 = RangeError;
+        const rangeError1 = new RangeError("locale must contain formatRelative property");
+        throw rangeError1;
       }
     } else {
-      _TypeError = TypeError;
-      tmp2 = new.target;
-      str = "Cannot call a class as a function";
-      tmp3 = new.target;
-      typeError = new TypeError("Cannot call a class as a function");
-      tmp5 = typeError;
-      throw typeError;
-    }
-  }
-}
-let dependencyMap = StandAloneLocalDayParser;
-if (typeof Parser !== "function") {
-  if (null !== Parser) {
-    let _TypeError = TypeError;
-    let typeError = new TypeError("Super expression must either be null or a function");
-    throw typeError;
-  }
-}
-let prototype = Parser;
-if (Parser) {
-  prototype = Parser.prototype;
-}
-StandAloneLocalDayParser.prototype = Object.create(prototype, {
-  constructor: { value: StandAloneLocalDayParser, writable: true, configurable: true },
-});
-if (Parser) {
-  _setPrototypeOf(StandAloneLocalDayParser, Parser);
-}
-let num = 0;
-dependencyMap = (function _isNativeReflectConstruct() {
-  if (typeof Reflect !== "undefined") {
-    const _Reflect3 = Reflect;
-    if (Reflect.construct) {
-      const _Reflect = Reflect;
-      if (Reflect.construct.sham) {
-        return false;
-      } else {
-        const _Proxy = Proxy;
-        if (typeof Proxy === "function") {
-          return true;
-        } else {
-          try {
-            const _Boolean = Boolean;
-            const call = valueOf.call;
-            const _Reflect2 = Reflect;
-            const _Boolean2 = Boolean;
-            if (typeof call === "unknown") {
-              valueOf();
-            } else {
-              call(constructResult);
-            }
-            return true;
-          } catch (err) {
-            return false;
-          }
-        }
-      }
-    }
-  }
-  return false;
-})();
-_createSuperInternal = function _createSuperInternal() {
-  const self = this;
-  const obj = hasOwnProperty(_createSuperInternal);
-  if (closure_1) {
-    const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, arguments, hasOwnProperty(self).constructor);
-  } else {
-    constructResult = obj(...arguments);
-  }
-  if (!constructResult) {
-    let tmp8 = self;
-    if (undefined === self) {
-      const _ReferenceError = ReferenceError;
-      const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-      throw referenceError;
+      const _RangeError2 = RangeError;
+      const rangeError2 = new RangeError("locale must contain formatLong property");
+      throw rangeError2;
     }
   } else {
-    tmp8 = constructResult;
-    if ("object" !== _typeof(constructResult)) {
-      tmp8 = constructResult;
-    }
+    const _RangeError = RangeError;
+    const rangeError3 = new RangeError("locale must contain localize property");
+    throw rangeError3;
   }
-  return tmp8;
 };
-const entry = {
-  key: "parse",
-  value: function parse(arg0, arg1, ordinalNumber, arg3) {
-    const weekStartsOn = arg3;
-    function valueCallback(arg0) {
-      return ((arg0 + weekStartsOn.weekStartsOn + 6) % 7) + 7 * Math.floor((arg0 - 1) / 7);
-    }
-    if ("c" !== arg1) {
-      if ("cc" !== arg1) {
-        if ("co" === arg1) {
-          return _createSuperInternal(4153).mapValue(ordinalNumber.ordinalNumber(arg0, { unit: "day" }), valueCallback);
-        } else if ("ccc" === arg1) {
-          return (
-            ordinalNumber.day(arg0, { width: "abbreviated", context: "standalone" }) ||
-            ordinalNumber.day(arg0, { width: "short", context: "standalone" }) ||
-            ordinalNumber.day(arg0, { width: "narrow", context: "standalone" })
-          );
-        } else if ("ccccc" === arg1) {
-          return ordinalNumber.day(arg0, { width: "narrow", context: "standalone" });
-        } else if ("cccccc" === arg1) {
-          return (
-            ordinalNumber.day(arg0, { width: "short", context: "standalone" }) ||
-            ordinalNumber.day(arg0, { width: "narrow", context: "standalone" })
-          );
-        } else {
-          return (
-            ordinalNumber.day(arg0, { width: "wide", context: "standalone" }) ||
-            ordinalNumber.day(arg0, { width: "abbreviated", context: "standalone" }) ||
-            ordinalNumber.day(arg0, { width: "short", context: "standalone" }) ||
-            ordinalNumber.day(arg0, { width: "narrow", context: "standalone" })
-          );
-        }
-      }
-    }
-    return _createSuperInternal(4153).mapValue(
-      _createSuperInternal(4153).parseNDigits(arg1.length, arg0),
-      valueCallback,
-    );
-  },
-};
-let items = [
-  entry,
-  {
-    key: "validate",
-    value: function validate(arg0, arg1) {
-      let tmp = arg1 >= 0;
-      if (tmp) {
-        tmp = arg1 <= 6;
-      }
-      return tmp;
-    },
-  },
-  {
-    key: "set",
-    value: function set(arg0, arg1, arg2, arg3) {
-      const defaultResult = module_4169.default(arg0, arg2, arg3);
-      defaultResult.setUTCHours(0, 0, 0, 0);
-      return defaultResult;
-    },
-  },
-];
-if (0 < items.length) {
-  do {
-    let tmp7 = items[num];
-    let flag = tmp7.enumerable;
-    if (!flag) {
-      flag = false;
-    }
-    tmp7.enumerable = flag;
-    tmp7.configurable = true;
-    if ("value" in tmp7) {
-      tmp7.writable = true;
-    }
-    let _Object = Object;
-    let definePropertyResult1 = Object.defineProperty(tmp6, tmp7.key, tmp7);
-    num = num + 1;
-  } while (num < items.length);
-}
-
-export { StandAloneLocalDayParser };
+export default exports.default;

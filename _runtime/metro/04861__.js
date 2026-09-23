@@ -1,21 +1,16 @@
 // _runtime/metro/04861__.js
+import _mod4862 from "04862__.js";
 
-export default function shortOut(arg0) {
-  closure_0 = arg0;
-  c1 = 0;
-  closure_2 = 0;
-  return () => {
-    const tmp = now();
-    closure_2 = tmp;
-    if (0 < 16 - (tmp - closure_2)) {
-      const sum = c1 + 1;
-      c1 = sum;
-      if (800 <= sum) {
-        return arguments[0];
-      }
-    } else {
-      c1 = 0;
+export default function toInteger(arg0) {
+  const tmp = _mod4862(arg0);
+  const result = tmp % 1;
+  let num = 0;
+  if (tmp == tmp) {
+    let diff = tmp;
+    if (result) {
+      diff = tmp - result;
     }
-    return closure_0(...arguments);
-  };
+    num = diff;
+  }
+  return num;
 }

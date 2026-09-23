@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "1998c882c99c2bfa1f4c01d3c0fdc31d",
-  name: "XSmallIcon",
+  hash: "f6824e7bd3f8a83813ab333cc29423f8",
+  name: "yellow-alert",
   type: "png",
 });

@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_settings/roles/native/images",
-  width: 660,
-  height: 240,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "19d4157d3d8c12964b276feef3728637",
-  name: "illustration-light-large",
+  hash: "452e4649130bf55bccef66e38e059a6a",
+  name: "ListBulletsIcon",
   type: "png",
 });

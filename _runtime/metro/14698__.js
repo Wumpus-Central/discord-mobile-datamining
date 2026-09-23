@@ -1,32 +1,19 @@
 // _runtime/metro/14698__.js
-let closure_0 = { url: "http://localhost:8081" };
+import _mod14667 from "14667__.js";
+import element from "../14699_element.js";
+import getOwnPropertyDescriptor from "14666__.js";
 
-export default () => {
-  if (arg0 === undefined) {
-    let obj = {};
-  }
-  return () => {
-    url = Object.assign({}, url, obj);
-    obj = {
-      onCommand(type) {
-        if ("editor.open" === type.type) {
-          const payload = type.payload;
-          let num = payload.lineNumber;
-          const _HermesInternal = HermesInternal;
-          obj = { file: payload.file, lineNumber: null };
-          const combined = "" + url.url + "/open-stack-frame";
-          if (!num) {
-            num = 1;
-          }
-          obj.lineNumber = num;
-          const _fetch = fetch;
-          const request = { method: "POST", body: null };
-          const _JSON = JSON;
-          request.body = JSON.stringify(obj);
-          const response = fetch(combined, request);
-        }
-      },
-    };
-    return obj;
-  };
-};
+let tmp2 = !getOwnPropertyDescriptor;
+if (!getOwnPropertyDescriptor) {
+  tmp2 = !_mod14667(
+    () =>
+      7 !==
+      Object.defineProperty(element("div"), "a", {
+        get() {
+          return 7;
+        },
+      }).a,
+  );
+}
+
+export default tmp2;

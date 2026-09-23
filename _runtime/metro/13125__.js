@@ -1,69 +1,97 @@
 // _runtime/metro/13125__.js
-import errorCallback from "../13050_errorCallback.js";
-import _mod13054 from "13054__.js";
-import spanTimeInputToSeconds from "../13059_spanTimeInputToSeconds.js";
-import _mod13066 from "13066__.js";
-import BAGGAGE_HEADER_NAME from "../13067_BAGGAGE_HEADER_NAME.js";
-import _mod13072 from "13072__.js";
-import _mod13073 from "13073__.js";
-import _mod13081 from "13081__.js";
-import _mod13090 from "13090__.js";
-import "module_13053";
-import __SENTRY_DEBUG__ from "13082__.js";
-import dateTimestampInSeconds from "13068__.js";
+import _objectWithoutProperties from "00109__objectWithoutProperties.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import hasOwnProperty from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
+import emptyFunction from "04656__.js";
 
-errorCallback;
-
-export const getTraceData = function getTraceData(arg0) {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
-  }
-  const client = _mod13081.getClient();
-  if (obj3.isEnabled()) {
-    if (client) {
-      const mainCarrier = _mod13072.getMainCarrier();
-      const tmpResult = _mod13072;
-      const asyncContextStrategy = _mod13073.getAsyncContextStrategy(mainCarrier);
-      if (asyncContextStrategy.getTraceData) {
-        return asyncContextStrategy.getTraceData(obj);
-      } else {
-        const currentScope = _mod13081.getCurrentScope();
-        let span = obj.span;
-        if (!span) {
-          span = spanTimeInputToSeconds.getActiveSpan();
-          const tmpResult10 = spanTimeInputToSeconds;
-        }
-        if (span) {
-          let spanToTraceHeaderResult = spanTimeInputToSeconds.spanToTraceHeader(span);
-          const tmpResult11 = spanTimeInputToSeconds;
-        } else {
-          const propagationContext = currentScope.getPropagationContext();
-          ({ traceId, sampled, spanId } = propagationContext);
-          spanToTraceHeaderResult = _mod13066.generateSentryTraceHeader(traceId, spanId, sampled);
-          const tmpResult12 = _mod13066;
-        }
-        const tmpResult13 = _mod13090;
-        if (span) {
-          let dynamicSamplingContextFromSpan = tmpResult13.getDynamicSamplingContextFromSpan(span);
-        } else {
-          dynamicSamplingContextFromSpan = tmpResult13.getDynamicSamplingContextFromScope(client, currentScope);
-        }
-        const tmpResult9 = _mod13081;
-        const result = BAGGAGE_HEADER_NAME.dynamicSamplingContextToSentryBaggageHeader(dynamicSamplingContextFromSpan);
-        const TRACEPARENT_REGEXP = _mod13066.TRACEPARENT_REGEXP;
-        if (TRACEPARENT_REGEXP.test(spanToTraceHeaderResult)) {
-          const obj4 = { "sentry-trace": spanToTraceHeaderResult, baggage: result };
-          let obj5 = obj4;
-        } else {
-          const logger = _mod13054.logger;
-          logger.warn("Invalid sentry-trace data. Cannot generate trace data");
-          obj5 = {};
-        }
-        return obj5;
-      }
-      const tmpResult8 = _mod13073;
+let Link = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+let closure_2 = ["component", "to", "replace"];
+const jsx = fn(21).jsx;
+class Link {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_4(this, Link);
+    items1 = [...items];
+    tmp2 = metroRequire;
+    obj = metroRequire(Link);
+    tmp3 = hasOwnProperty;
+    if (closure_8()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.handlePress = (defaultPrevented, str) => {
+      if (props.props.onPress) {
+        props = tmp.props;
+        props.onPress(defaultPrevented);
+      }
+      if (!defaultPrevented.defaultPrevented) {
+        const to = str.to;
+        if (tmp.props.replace) {
+          const replaced = str.replace(to);
+        } else {
+          str.push(to);
+        }
+      }
+    };
+    return tmp3Result;
   }
-  return {};
+}
+_inherits(Link, noop.Component);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    ({ component: dependencyMap, to, replace } = props);
+    Link = _objectWithoutProperties(props, self);
+    return jsx(Link(4659).__HistoryContext.Consumer, {
+      children(arg0) {
+        closure_0 = arg0;
+        const obj = {};
+        const merged = Object.assign(closure_0);
+        obj.onPress = function onPress(arg0) {
+          return self.handlePress(arg0, closure_0);
+        };
+        return <closure_1 />;
+      },
+    });
+  },
 };
+let items = [entry];
+const importDefaultResultResult = _createClass(Link, items);
+importDefaultResultResult.defaultProps = { component: fn(17).TouchableHighlight, replace: false };
+let obj = { onPress: emptyFunction.func, component: emptyFunction.elementType, replace: emptyFunction.bool, to: null };
+let items1 = [emptyFunction.string, emptyFunction.object];
+obj.to = emptyFunction.oneOfType(items1);
+importDefaultResultResult.propTypes = obj;
+
+export default importDefaultResultResult;

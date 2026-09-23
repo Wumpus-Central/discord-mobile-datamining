@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 16,
-  height: 16.5,
+  httpServerLocation: "/assets/images/native",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "5854380fa0e0fd8bc925e2e46e9e8246",
-  name: "ic_lock_short_16px",
+  hash: "edefaa7b105418ac79e91df5e7252965",
+  name: "ic_forward_chevron",
   type: "png",
 });

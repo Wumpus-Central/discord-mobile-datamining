@@ -1,14 +1,7 @@
 // _runtime/metro/04008__.js
+let closure_0 = { lastWeek: "'forrige' eeee 'kl.' p", yesterday: "'i g\u00E5r kl.' p", today: "'i dag kl.' p", tomorrow: "'i morgen kl.' p", nextWeek: "EEEE 'kl.' p", other: "P" };
 
-export default function getTimezoneOffsetInMilliseconds(getFullYear) {
-  const fullYear = getFullYear.getFullYear();
-  const month = getFullYear.getMonth();
-  const hours = getFullYear.getHours();
-  const minutes = getFullYear.getMinutes();
-  const seconds = getFullYear.getSeconds();
-  const date1 = new Date(Date.UTC(fullYear, month, getFullYear.getDate(), hours, minutes, seconds, getFullYear.getMilliseconds()));
-  date1.setUTCFullYear(getFullYear.getFullYear());
-  const time = getFullYear.getTime();
-  return time - date1.getTime();
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  return closure_0[arg0];
 };
 export default exports.default;

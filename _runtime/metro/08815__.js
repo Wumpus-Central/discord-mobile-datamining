@@ -1,12 +1,8 @@
 // _runtime/metro/08815__.js
 import _mod26 from "00026__.js";
-import weakSet from "../00106_weakSet.js";
 import 00065__ from "00065__.js";
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGMask", directEventTypes: { topSvgLayout: { registrationName: "onSvgLayout" } }, validAttributes: null };
-const size = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: _mod26.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, fontSize: true, fontWeight: true, font: true, x: true, y: true, height: true, width: true, maskUnits: true, maskContentUnits: true, maskType: true };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSvgLayout: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = size;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGSvgViewAndroid", validAttributes: { bbWidth: true, bbHeight: true, minX: true, minY: true, vbWidth: true, vbHeight: true, align: true, meetOrSlice: true, color: _mod26.colorAttribute, pointerEvents: true, hasTVPreferredFocus: true, borderBottomColor: _mod26.colorAttribute, nextFocusDown: true, borderRightColor: _mod26.colorAttribute, nextFocusRight: true, borderLeftColor: _mod26.colorAttribute, borderColor: _mod26.colorAttribute, removeClippedSubviews: true, nextFocusForward: true, nextFocusUp: true, accessible: true, borderStartColor: _mod26.colorAttribute, borderEndColor: _mod26.colorAttribute, focusable: true, nativeBackgroundAndroid: true, nativeForegroundAndroid: true, backfaceVisibility: true, borderStyle: true, needsOffscreenAlphaCompositing: true, hitSlop: true, borderTopColor: _mod26.colorAttribute, nextFocusLeft: true, borderBlockColor: _mod26.colorAttribute, borderBlockEndColor: _mod26.colorAttribute, borderBlockStartColor: _mod26.colorAttribute, borderRadius: true, borderTopLeftRadius: true, borderTopRightRadius: true, borderBottomRightRadius: true, borderBottomLeftRadius: true, borderTopStartRadius: true, borderTopEndRadius: true, borderBottomStartRadius: true, borderBottomEndRadius: true, borderEndEndRadius: true, borderEndStartRadius: true, borderStartEndRadius: true, borderStartStartRadius: true } };
 
-export default module_65.get("RNSVGMask", () => obj);
+export default module_65.get("RNSVGSvgViewAndroid", () => obj);
 export { __INTERNAL_VIEW_CONFIG };

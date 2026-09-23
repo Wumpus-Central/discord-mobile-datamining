@@ -1,13 +1,44 @@
 // _runtime/metro/05137__.js
-import noop from "00019__.js";
+import _mod5138 from "05138__.js";
+import DefinePropertyOrThrow from "../05139_DefinePropertyOrThrow.js";
 
-({ useEffect: closure_0, useRef: closure_1 } = noop);
+const tmp = _mod5138("%Reflect.construct%", true);
+let closure_0 = tmp;
+try {
+  const obj = {
+    () => {
 
-export const usePrevious = function usePrevious(current) {
-  const tmp = framebus(undefined);
-  closure_1 = tmp;
-  React(() => {
-    closure_1.current = current;
-  });
-  return tmp.current;
-};
+      }
+  };
+  DefinePropertyOrThrow({}, "", obj);
+  let tmp4 = DefinePropertyOrThrow;
+  if (tmp4) {
+    if (tmp) {
+      let closure_1 = {};
+      const obj3 = {
+        () => {
+                throw closure_1;
+              },
+        "[[Enumerable]]": true
+      };
+      tmp4({}, "length", obj3);
+      module.exports = function IsConstructor(arg0) {
+        try {
+          closure_0(arg0, obj2);
+        } catch (tmp5) {
+          return tmp5 === closure_1;
+        }
+      };
+      const obj2 = {};
+    }
+  }
+  module.exports = function IsConstructor(fn) {
+    let prototype = typeof fn === "function";
+    if (typeof fn === "function") {
+      prototype = fn.prototype;
+    }
+    return prototype;
+  };
+} catch (err) {
+  tmp4 = null;
+}

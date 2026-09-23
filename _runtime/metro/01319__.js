@@ -82,7 +82,7 @@ export default function getSideChannelList() {
     set(key, value) {
       let iter = obj;
       if (!obj) {
-        obj = { next: "max" };
+        obj = { next: "r" };
         iter = obj;
       }
       let iter2 = iter.next;

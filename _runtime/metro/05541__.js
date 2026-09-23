@@ -1,13 +1,28 @@
 // _runtime/metro/05541__.js
-import registerAsset from "01121__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
-  scales: [1],
-  hash: "322f5aec10ee0e2c3d6aad9844b5f00f",
-  name: "img_account_sync_facebook_light_and_dark",
-  type: "png",
-});
+export const getStringValue = function getStringValue(value) {
+  const mapped = value.map((item) => String.fromCharCode(item));
+  return mapped.join("");
+};
+export const getEncodedString = function getEncodedString(arr) {
+  if (arr.length >= 8) {
+    const substr = arr.slice(0, 8);
+    const mapped = substr.map((item) => String.fromCharCode(item));
+    const joined = mapped.join("");
+    if ("ASCII\0\0\0" === joined) {
+      const substr1 = arr.slice(8);
+      const mapped1 = substr1.map((item) => String.fromCharCode(item));
+      return mapped1.join("");
+    } else if ("JIS\0\0\0\0\0" === joined) {
+      return "[JIS encoded text]";
+    } else if ("UNICODE\0" === joined) {
+      return "[Unicode encoded text]";
+    } else if ("\0\0\0\0\0\0\0\0" === joined) {
+      return "[Undefined encoding]";
+    }
+  }
+  return "Undefined";
+};
+export const getCalculatedGpsValue = function getCalculatedGpsValue(value) {
+  return value[0][0] / value[0][1] + value[1][0] / value[1][1] / 60 + value[2][0] / value[2][1] / 3600;
+};

@@ -7,31 +7,23 @@ if (!module_2117) {
 } else {
   obj = module_2117;
 }
+const obj3 = { narrow: ["T", "H", "M", "H", "T", "K", "H", "E", "S", "L", "M", "J"], abbreviated: ["tammi", "helmi", "maalis", "huhti", "touko", "kes\u00E4", "hein\u00E4", "elo", "syys", "loka", "marras", "joulu"], wide: ["tammikuu", "helmikuu", "maaliskuu", "huhtikuu", "toukokuu", "kes\u00E4kuu", "hein\u00E4kuu", "elokuu", "syyskuu", "lokakuu", "marraskuu", "joulukuu"] };
+const obj5 = { narrow: ["S", "M", "T", "K", "T", "P", "L"], short: ["su", "ma", "ti", "ke", "to", "pe", "la"], abbreviated: ["sunn.", "maan.", "tiis.", "kesk.", "torst.", "perj.", "la"], wide: ["sunnuntai", "maanantai", "tiistai", "keskiviikko", "torstai", "perjantai", "lauantai"] };
 const date = {
-  ordinalNumber(arg0, unit) {
-    Number(arg0);
-    unit = undefined;
-    if (null != unit) {
-      unit = unit.unit;
-    }
-    if ("week" === unit) {
-      let text = `${tmp}ª`;
-    } else {
-      text = `${tmp}º`;
-    }
-    return text;
+  ordinalNumber(arg0, arg1) {
+    return Number(arg0) + ".";
   },
-  era: obj.default({ values: { narrow: ["AC", "DC"], abbreviated: ["AC", "DC"], wide: ["antes de cristo", "depois de cristo"] }, defaultWidth: "wide" }),
+  era: obj.default({ values: { narrow: ["eaa.", "jaa."], abbreviated: ["eaa.", "jaa."], wide: ["ennen ajanlaskun alkua", "j\u00E4lkeen ajanlaskun alun"] }, defaultWidth: "wide" }),
   quarter: obj.default({
-    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["T1", "T2", "T3", "T4"], wide: ["1\u00BA trimestre", "2\u00BA trimestre", "3\u00BA trimestre", "4\u00BA trimestre"] },
+    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["Q1", "Q2", "Q3", "Q4"], wide: ["1. kvartaali", "2. kvartaali", "3. kvartaali", "4. kvartaali"] },
     defaultWidth: "wide",
     argumentCallback(arg0) {
       return arg0 - 1;
     }
   }),
-  month: obj.default({ values: { narrow: ["j", "f", "m", "a", "m", "j", "j", "a", "s", "o", "n", "d"], abbreviated: ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"], wide: ["janeiro", "fevereiro", "mar\u00E7o", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"] }, defaultWidth: "wide" }),
-  day: obj.default({ values: { narrow: ["D", "S", "T", "Q", "Q", "S", "S"], short: ["dom", "seg", "ter", "qua", "qui", "sex", "sab"], abbreviated: ["domingo", "segunda", "ter\u00E7a", "quarta", "quinta", "sexta", "s\u00E1bado"], wide: ["domingo", "segunda-feira", "ter\u00E7a-feira", "quarta-feira", "quinta-feira", "sexta-feira", "s\u00E1bado"] }, defaultWidth: "wide" }),
-  dayPeriod: obj.default({ values: { narrow: { am: "a", pm: "p", midnight: "mn", noon: "md", morning: "manh\u00E3", afternoon: "tarde", evening: "tarde", night: "noite" }, abbreviated: { am: "AM", pm: "PM", midnight: "meia-noite", noon: "meio-dia", morning: "manh\u00E3", afternoon: "tarde", evening: "tarde", night: "noite" }, wide: { am: "a.m.", pm: "p.m.", midnight: "meia-noite", noon: "meio-dia", morning: "manh\u00E3", afternoon: "tarde", evening: "tarde", night: "noite" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "a", pm: "p", midnight: "mn", noon: "md", morning: "da manh\u00E3", afternoon: "da tarde", evening: "da tarde", night: "da noite" }, abbreviated: { am: "AM", pm: "PM", midnight: "meia-noite", noon: "meio-dia", morning: "da manh\u00E3", afternoon: "da tarde", evening: "da tarde", night: "da noite" }, wide: { am: "a.m.", pm: "p.m.", midnight: "meia-noite", noon: "meio-dia", morning: "da manh\u00E3", afternoon: "da tarde", evening: "da tarde", night: "da noite" } }, defaultFormattingWidth: "wide" })
+  month: obj.default({ values: obj3, defaultWidth: "wide", formattingValues: { narrow: obj3.narrow, abbreviated: obj3.abbreviated, wide: ["tammikuuta", "helmikuuta", "maaliskuuta", "huhtikuuta", "toukokuuta", "kes\u00E4kuuta", "hein\u00E4kuuta", "elokuuta", "syyskuuta", "lokakuuta", "marraskuuta", "joulukuuta"] }, defaultFormattingWidth: "wide" }),
+  day: obj.default({ values: obj5, defaultWidth: "wide", formattingValues: { narrow: obj5.narrow, short: obj5.short, abbreviated: obj5.abbreviated, wide: ["sunnuntaina", "maanantaina", "tiistaina", "keskiviikkona", "torstaina", "perjantaina", "lauantaina"] }, defaultFormattingWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "ap", pm: "ip", midnight: "keskiy\u00F6", noon: "keskip\u00E4iv\u00E4", morning: "ap", afternoon: "ip", evening: "illalla", night: "y\u00F6ll\u00E4" }, abbreviated: { am: "ap", pm: "ip", midnight: "keskiy\u00F6", noon: "keskip\u00E4iv\u00E4", morning: "ap", afternoon: "ip", evening: "illalla", night: "y\u00F6ll\u00E4" }, wide: { am: "ap", pm: "ip", midnight: "keskiy\u00F6ll\u00E4", noon: "keskip\u00E4iv\u00E4ll\u00E4", morning: "aamup\u00E4iv\u00E4ll\u00E4", afternoon: "iltap\u00E4iv\u00E4ll\u00E4", evening: "illalla", night: "y\u00F6ll\u00E4" } }, defaultWidth: "wide" })
 };
 
 export default date;

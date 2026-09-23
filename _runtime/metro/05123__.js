@@ -1,48 +1,11 @@
 // _runtime/metro/05123__.js
-import get_synchronousScreenUpdatesEnabled from "../05124_get_synchronousScreenUpdatesEnabled.js";
+import _mod1307 from "01307__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const RNSLog = {
-  log(arg0) {
-    const substr = [...arguments].slice();
-    if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
-      const _console = console;
-      const items = [arg0];
-      HermesBuiltin.arraySpread(substr, 1);
-      const _console2 = console;
-      HermesBuiltin.apply(items, console);
-    }
-  },
-  warn(arg0) {
-    const substr = [...arguments].slice();
-    if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
-      const _console = console;
-      const items = [arg0];
-      HermesBuiltin.arraySpread(substr, 1);
-      const _console2 = console;
-      HermesBuiltin.apply(items, console);
-    }
-  },
-  error(arg0) {
-    const substr = [...arguments].slice();
-    if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
-      const _console = console;
-      const items = [arg0];
-      HermesBuiltin.arraySpread(substr, 1);
-      const _console2 = console;
-      HermesBuiltin.apply(items, console);
-    }
-  },
-  info(arg0) {
-    const substr = [...arguments].slice();
-    if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
-      const _console = console;
-      const items = [arg0];
-      HermesBuiltin.arraySpread(substr, 1);
-      const _console2 = console;
-      HermesBuiltin.apply(items, console);
-    }
-  },
-};
+export default function mod(arg0, arg1) {
+  const result = arg0 % arg1;
+  let sum = result;
+  if (result < 0) {
+    sum = result + arg1;
+  }
+  return _mod1307(sum);
+}

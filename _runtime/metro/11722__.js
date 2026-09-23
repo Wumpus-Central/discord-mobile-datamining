@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 200,
-  height: 104,
+  httpServerLocation: "/assets/modules/self_mod/stranger_danger/images",
+  width: 21,
+  height: 20,
   scales: [1, 2, 3],
-  hash: "2cffa7810dfc86e71c6793911cc4d14b",
-  name: "img_invalid_link_light",
+  hash: "4ea1c192cad9acc1fe190c6de3d2e5ff",
+  name: "ic_thumbsdown",
   type: "png",
 });

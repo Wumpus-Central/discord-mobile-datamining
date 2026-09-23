@@ -1,23 +1,30 @@
 // _runtime/metro/05131__.js
-import _mod17 from "00017__.js";
-import resolveAssetSource_mod from "../00081_resolveAssetSource.js";
-import weakSet from "../00106_weakSet.js";
-import 00065__ from "00065__.js";
+import _mod1282 from "01282__.js";
+import _mod5132 from "05132__.js";
+import _mod5133 from "05133__.js";
+import _mod5134 from "05134__.js";
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSTabsScreenAndroid", directEventTypes: { topWillAppear: { registrationName: "onWillAppear" }, topDidAppear: { registrationName: "onDidAppear" }, topWillDisappear: { registrationName: "onWillDisappear" }, topDidDisappear: { registrationName: "onDidDisappear" } }, validAttributes: null };
-let resolveAssetSource = resolveAssetSource_mod;
-if ("default" in resolveAssetSource) {
-  resolveAssetSource = resolveAssetSource.default;
+if (_mod5132) {
+  function setProto(arg0, arg1) {
+    if (_mod5132(arg0, arg1)) {
+      return arg0;
+    } else {
+      const tmp5 = new _mod1282("Reflect.setPrototypeOf: failed to set [[Prototype]]");
+      throw tmp5;
+    }
+  }
+} else {
+  setProto = _mod5133;
+  if (!setProto) {
+    let setProto2 = null;
+    if (_mod5134) {
+      setProto2 = function setProto(arg0, arg1) {
+        _mod5134(arg0, arg1);
+        return arg0;
+      };
+    }
+    setProto = setProto2;
+  }
 }
-const obj2 = { screenKey: true, preventNativeSelection: true, title: true, badgeValue: true, tabBarItemTestID: true, tabBarItemAccessibilityLabel: true, specialEffects: true, drawableIconResourceName: true, imageIconResource: { process: resolveAssetSource }, selectedDrawableIconResourceName: true, selectedImageIconResource: null, standardAppearance: true };
-let resolveAssetSource = resolveAssetSource_mod;
-if ("default" in resolveAssetSource) {
-  resolveAssetSource = resolveAssetSource.default;
-}
-obj2.selectedImageIconResource = { process: resolveAssetSource };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onWillAppear: true, onDidAppear: true, onWillDisappear: true, onDidDisappear: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = obj2;
 
-export default module_65.get("RNSTabsScreenAndroid", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default setProto;

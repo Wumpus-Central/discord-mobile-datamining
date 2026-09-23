@@ -1,39 +1,68 @@
 // _runtime/metro/07111__.js
-import _mod7112 from "07112__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-export default function _createClass(arg0, arg1, arg2) {
-  if (arg1) {
-    for (let num = 0; num < arg1.length; num = num + 1) {
-      let tmp3 = arg1[num];
-      let flag2 = tmp3.enumerable;
-      if (!flag2) {
-        flag2 = false;
-      }
-      tmp3.enumerable = flag2;
-      tmp3.configurable = true;
-      if ("value" in tmp3) {
-        tmp3.writable = true;
-      }
-      let _Object = Object;
-      let definePropertyResult = Object.defineProperty(tmp, _mod7112(tmp3.key), tmp3);
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-  }
-  if (arg2) {
-    for (let num3 = 0; num3 < arg2.length; num3 = num3 + 1) {
-      let tmp9 = arg2[num3];
-      let flag4 = tmp9.enumerable;
-      if (!flag4) {
-        flag4 = false;
-      }
-      tmp9.enumerable = flag4;
-      tmp9.configurable = true;
-      if ("value" in tmp9) {
-        tmp9.writable = true;
-      }
-      let _Object2 = Object;
-      let definePropertyResult1 = Object.defineProperty(arg0, _mod7112(tmp9.key), tmp9);
-    }
-  }
-  Object.defineProperty(arg0, "prototype", { writable: false });
-  return arg0;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
 }
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+class NativeGesture {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, NativeGesture);
+    tmp2 = c2;
+    obj = c2(NativeGesture);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "NativeViewGestureHandler";
+    return tmp3Result;
+  }
+}
+_classCallCheck = NativeGesture;
+_inherits(NativeGesture, fn(7004).BaseGesture);
+const entry = {
+  key: "shouldActivateOnStart",
+  value: function shouldActivateOnStart(shouldActivateOnStart) {
+    this.config.shouldActivateOnStart = shouldActivateOnStart;
+    return this;
+  },
+};
+const items = [
+  entry,
+  {
+    key: "disallowInterruption",
+    value: function disallowInterruption(disallowInterruption) {
+      this.config.disallowInterruption = disallowInterruption;
+      return this;
+    },
+  },
+];
+
+export const NativeGesture = _createClass(NativeGesture, items);

@@ -1,13 +1,20 @@
 // _runtime/metro/05530__.js
-import registerAsset from "01121__.js";
+import _mod5516 from "05516__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
-  scales: [1],
-  hash: "25ba997e1d3e8344c193637ad6eeccd3",
-  name: "img_account_sync_league_of_legends_white",
-  type: "png",
-});
+require = arg1;
+const dependencyMap = arg6;
+let c2 = 6;
+let closure_3 = ["GIF87a", "GIF89a"];
+
+export default {
+  isGifFile(dataView) {
+    let hasItem = dataView;
+    if (hasItem) {
+      hasItem = closure_3.includes(_mod5516.getStringFromDataView(dataView, 0, c2));
+    }
+    return hasItem;
+  },
+  findOffsets() {
+    return { gifHeaderOffset: 0 };
+  },
+};

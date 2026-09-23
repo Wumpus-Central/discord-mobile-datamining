@@ -8,20 +8,53 @@ if (!module_2117) {
   obj = module_2117;
 }
 const date = {
-  ordinalNumber(arg0, arg1) {
-    return Number(arg0) + ".";
+  ordinalNumber(arg0, unit) {
+    const NumberResult = Number(arg0);
+    unit = undefined;
+    if (null != unit) {
+      unit = unit.unit;
+    }
+    const StringResult = String(unit);
+    if ("year" === StringResult) {
+      const concat9 = "".concat;
+      return "".concat(NumberResult, "\u5E74");
+    } else if ("quarter" === StringResult) {
+      const concat8 = "\u7B2C".concat;
+      return "\u7B2C".concat(NumberResult, "\u56DB\u534A\u671F");
+    } else if ("month" === StringResult) {
+      const concat7 = "".concat;
+      return "".concat(NumberResult, "\u6708");
+    } else if ("week" === StringResult) {
+      const concat6 = "\u7B2C".concat;
+      return "\u7B2C".concat(NumberResult, "\u9031");
+    } else if ("date" === StringResult) {
+      const concat5 = "".concat;
+      return "".concat(NumberResult, "\u65E5");
+    } else if ("hour" === StringResult) {
+      const concat4 = "".concat;
+      return "".concat(NumberResult, "\u6642");
+    } else if ("minute" === StringResult) {
+      const concat3 = "".concat;
+      return "".concat(NumberResult, "\u5206");
+    } else if ("second" === StringResult) {
+      const concat2 = "".concat;
+      return "".concat(NumberResult, "\u79D2");
+    } else {
+      const concat = "".concat;
+      return "".concat(NumberResult);
+    }
   },
-  era: obj.default({ values: { narrow: ["M\u00D6", "MS"], abbreviated: ["M\u00D6", "MS"], wide: ["Milattan \u00D6nce", "Milattan Sonra"] }, defaultWidth: "wide" }),
+  era: obj.default({ values: { narrow: ["BC", "AC"], abbreviated: ["\u7D00\u5143\u524D", "\u897F\u66A6"], wide: ["\u7D00\u5143\u524D", "\u897F\u66A6"] }, defaultWidth: "wide" }),
   quarter: obj.default({
-    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["1\u00C7", "2\u00C7", "3\u00C7", "4\u00C7"], wide: ["\u0130lk \u00E7eyrek", "\u0130kinci \u00C7eyrek", "\u00DC\u00E7\u00FCnc\u00FC \u00E7eyrek", "Son \u00E7eyrek"] },
+    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["Q1", "Q2", "Q3", "Q4"], wide: ["\u7B2C1\u56DB\u534A\u671F", "\u7B2C2\u56DB\u534A\u671F", "\u7B2C3\u56DB\u534A\u671F", "\u7B2C4\u56DB\u534A\u671F"] },
     defaultWidth: "wide",
     argumentCallback(arg0) {
       return Number(arg0) - 1;
     }
   }),
-  month: obj.default({ values: { narrow: ["O", "\u015E", "M", "N", "M", "H", "T", "A", "E", "E", "K", "A"], abbreviated: ["Oca", "\u015Eub", "Mar", "Nis", "May", "Haz", "Tem", "A\u011Fu", "Eyl", "Eki", "Kas", "Ara"], wide: ["Ocak", "\u015Eubat", "Mart", "Nisan", "May\u0131s", "Haziran", "Temmuz", "A\u011Fustos", "Eyl\u00FCl", "Ekim", "Kas\u0131m", "Aral\u0131k"] }, defaultWidth: "wide" }),
-  day: obj.default({ values: { narrow: ["P", "P", "S", "\u00C7", "P", "C", "C"], short: ["Pz", "Pt", "Sa", "\u00C7a", "Pe", "Cu", "Ct"], abbreviated: ["Paz", "Pzt", "Sal", "\u00C7ar", "Per", "Cum", "Cts"], wide: ["Pazar", "Pazartesi", "Sal\u0131", "\u00C7ar\u015Famba", "Per\u015Fembe", "Cuma", "Cumartesi"] }, defaultWidth: "wide" }),
-  dayPeriod: obj.default({ values: { narrow: { am: "\u00F6\u00F6", pm: "\u00F6s", midnight: "gy", noon: "\u00F6", morning: "sa", afternoon: "\u00F6s", evening: "ak", night: "ge" }, abbreviated: { am: "\u00D6\u00D6", pm: "\u00D6S", midnight: "gece yar\u0131s\u0131", noon: "\u00F6\u011Fle", morning: "sabah", afternoon: "\u00F6\u011Fleden sonra", evening: "ak\u015Fam", night: "gece" }, wide: { am: "\u00D6.\u00D6.", pm: "\u00D6.S.", midnight: "gece yar\u0131s\u0131", noon: "\u00F6\u011Fle", morning: "sabah", afternoon: "\u00F6\u011Fleden sonra", evening: "ak\u015Fam", night: "gece" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "\u00F6\u00F6", pm: "\u00F6s", midnight: "gy", noon: "\u00F6", morning: "sa", afternoon: "\u00F6s", evening: "ak", night: "ge" }, abbreviated: { am: "\u00D6\u00D6", pm: "\u00D6S", midnight: "gece yar\u0131s\u0131", noon: "\u00F6\u011Flen", morning: "sabahleyin", afternoon: "\u00F6\u011Fleden sonra", evening: "ak\u015Famleyin", night: "geceleyin" }, wide: { am: "\u00F6.\u00F6.", pm: "\u00F6.s.", midnight: "gece yar\u0131s\u0131", noon: "\u00F6\u011Flen", morning: "sabahleyin", afternoon: "\u00F6\u011Fleden sonra", evening: "ak\u015Famleyin", night: "geceleyin" } }, defaultFormattingWidth: "wide" })
+  month: obj.default({ values: { narrow: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], abbreviated: ["1\u6708", "2\u6708", "3\u6708", "4\u6708", "5\u6708", "6\u6708", "7\u6708", "8\u6708", "9\u6708", "10\u6708", "11\u6708", "12\u6708"], wide: ["1\u6708", "2\u6708", "3\u6708", "4\u6708", "5\u6708", "6\u6708", "7\u6708", "8\u6708", "9\u6708", "10\u6708", "11\u6708", "12\u6708"] }, defaultWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["\u65E5", "\u6708", "\u706B", "\u6C34", "\u6728", "\u91D1", "\u571F"], short: ["\u65E5", "\u6708", "\u706B", "\u6C34", "\u6728", "\u91D1", "\u571F"], abbreviated: ["\u65E5", "\u6708", "\u706B", "\u6C34", "\u6728", "\u91D1", "\u571F"], wide: ["\u65E5\u66DC\u65E5", "\u6708\u66DC\u65E5", "\u706B\u66DC\u65E5", "\u6C34\u66DC\u65E5", "\u6728\u66DC\u65E5", "\u91D1\u66DC\u65E5", "\u571F\u66DC\u65E5"] }, defaultWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "\u5348\u524D", pm: "\u5348\u5F8C", midnight: "\u6DF1\u591C", noon: "\u6B63\u5348", morning: "\u671D", afternoon: "\u5348\u5F8C", evening: "\u591C", night: "\u6DF1\u591C" }, abbreviated: { am: "\u5348\u524D", pm: "\u5348\u5F8C", midnight: "\u6DF1\u591C", noon: "\u6B63\u5348", morning: "\u671D", afternoon: "\u5348\u5F8C", evening: "\u591C", night: "\u6DF1\u591C" }, wide: { am: "\u5348\u524D", pm: "\u5348\u5F8C", midnight: "\u6DF1\u591C", noon: "\u6B63\u5348", morning: "\u671D", afternoon: "\u5348\u5F8C", evening: "\u591C", night: "\u6DF1\u591C" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "\u5348\u524D", pm: "\u5348\u5F8C", midnight: "\u6DF1\u591C", noon: "\u6B63\u5348", morning: "\u671D", afternoon: "\u5348\u5F8C", evening: "\u591C", night: "\u6DF1\u591C" }, abbreviated: { am: "\u5348\u524D", pm: "\u5348\u5F8C", midnight: "\u6DF1\u591C", noon: "\u6B63\u5348", morning: "\u671D", afternoon: "\u5348\u5F8C", evening: "\u591C", night: "\u6DF1\u591C" }, wide: { am: "\u5348\u524D", pm: "\u5348\u5F8C", midnight: "\u6DF1\u591C", noon: "\u6B63\u5348", morning: "\u671D", afternoon: "\u5348\u5F8C", evening: "\u591C", night: "\u6DF1\u591C" } }, defaultFormattingWidth: "wide" })
 };
 
 export default date;

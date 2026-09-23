@@ -1,18 +1,65 @@
 // _runtime/metro/08804__.js
-import _mod26 from "00026__.js";
-import resolveAssetSource_mod from "../00081_resolveAssetSource.js";
-import weakSet from "../00106_weakSet.js";
-import 00065__ from "00065__.js";
+import CircleDefault from "../08806_Circle.js";
+import _modDef8827 from "08827__.js";
+import showErrorCSS from "../08909_showErrorCSS.js";
+import _mod8910 from "08910__.js";
+import _fetchText from "../08912__fetchText.js";
+import RNSVGCircle from "../08913_RNSVGCircle.js";
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGImage", directEventTypes: { topLoad: { registrationName: "onLoad" }, topSvgLayout: { registrationName: "onSvgLayout" } }, validAttributes: null };
-const size = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: _mod26.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, x: true, y: true, width: true, height: true, src: null, align: true, meetOrSlice: true };
-let resolveAssetSource = resolveAssetSource_mod;
-if ("default" in resolveAssetSource) {
-  resolveAssetSource = resolveAssetSource.default;
+const require = globalThis.__r;
+
+for (const key10013 in require("08805__.js")) {
+  arg5[key10013] = require("08805__.js")[key10013];
+  continue;
 }
-size.src = { process: resolveAssetSource };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onLoad: true, onSvgLayout: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = size;
+for (const key10017 in require("Circle")) {
+  arg5[key10017] = require("Circle")[key10017];
+  continue;
+}
 
-export default module_65.get("RNSVGImage", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export const inlineStyles = showErrorCSS.inlineStyles;
+export const loadLocalRawResource = showErrorCSS.loadLocalRawResource;
+export const LocalSvg = showErrorCSS.LocalSvg;
+export const SvgCss = showErrorCSS.SvgCss;
+export const SvgCssUri = showErrorCSS.SvgCssUri;
+export const SvgWithCss = showErrorCSS.SvgWithCss;
+export const SvgWithCssUri = showErrorCSS.SvgWithCssUri;
+export const WithLocalSvg = showErrorCSS.WithLocalSvg;
+export const camelCase = _mod8910.camelCase;
+export const fetchText = _fetchText.fetchText;
+export const parse = _mod8910.parse;
+export const RNSVGCircle = RNSVGCircle.RNSVGCircle;
+export const RNSVGClipPath = RNSVGCircle.RNSVGClipPath;
+export const RNSVGDefs = RNSVGCircle.RNSVGDefs;
+export const RNSVGEllipse = RNSVGCircle.RNSVGEllipse;
+export const RNSVGFeColorMatrix = RNSVGCircle.RNSVGFeColorMatrix;
+export const RNSVGFeComposite = RNSVGCircle.RNSVGFeComposite;
+export const RNSVGFeGaussianBlur = RNSVGCircle.RNSVGFeGaussianBlur;
+export const RNSVGFeMerge = RNSVGCircle.RNSVGFeMerge;
+export const RNSVGFeOffset = RNSVGCircle.RNSVGFeOffset;
+export const RNSVGFilter = RNSVGCircle.RNSVGFilter;
+export const RNSVGForeignObject = RNSVGCircle.RNSVGForeignObject;
+export const RNSVGGroup = RNSVGCircle.RNSVGGroup;
+export const RNSVGImage = RNSVGCircle.RNSVGImage;
+export const RNSVGLine = RNSVGCircle.RNSVGLine;
+export const RNSVGLinearGradient = RNSVGCircle.RNSVGLinearGradient;
+export const RNSVGMarker = RNSVGCircle.RNSVGMarker;
+export const RNSVGMask = RNSVGCircle.RNSVGMask;
+export const RNSVGPath = RNSVGCircle.RNSVGPath;
+export const RNSVGPattern = RNSVGCircle.RNSVGPattern;
+export const RNSVGRadialGradient = RNSVGCircle.RNSVGRadialGradient;
+export const RNSVGRect = RNSVGCircle.RNSVGRect;
+export const RNSVGSvgAndroid = RNSVGCircle.RNSVGSvgAndroid;
+export const RNSVGSvgIOS = RNSVGCircle.RNSVGSvgIOS;
+export const RNSVGSymbol = RNSVGCircle.RNSVGSymbol;
+export const RNSVGText = RNSVGCircle.RNSVGText;
+export const RNSVGTextPath = RNSVGCircle.RNSVGTextPath;
+export const RNSVGTSpan = RNSVGCircle.RNSVGTSpan;
+export const RNSVGUse = RNSVGCircle.RNSVGUse;
+export const Shape = _modDef8827;
+export const SvgAst = _mod8910.SvgAst;
+export const SvgFromUri = _mod8910.SvgFromUri;
+export const SvgFromXml = _mod8910.SvgFromXml;
+export const SvgUri = _mod8910.SvgUri;
+export const SvgXml = _mod8910.SvgXml;
+export default CircleDefault;

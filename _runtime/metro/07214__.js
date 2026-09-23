@@ -1,13 +1,11 @@
 // _runtime/metro/07214__.js
-import registerAsset from "01121__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "14a4fdad987e2761599ba055042fdafa",
-  name: "EyeSlashIcon",
-  type: "png",
-});
+export default function _assertThisInitialized(arg0) {
+  if (undefined === arg0) {
+    const _ReferenceError = ReferenceError;
+    const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    throw referenceError;
+  } else {
+    return arg0;
+  }
+}

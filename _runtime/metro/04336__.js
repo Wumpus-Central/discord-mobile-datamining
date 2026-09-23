@@ -1,55 +1,47 @@
 // _runtime/metro/04336__.js
-if (Intl.ListFormat) {
-  const _Intl = Intl;
-  if (typeof Intl.ListFormat.__addLocaleData === "function") {
-    const _Intl2 = Intl;
-    const obj2 = { data: null, locale: "ro" };
-    const obj3 = { conjunction: null, disjunction: null, unit: null };
-    const obj4 = {
-      long: { end: "{0} \u0219i {1}", middle: "{0}, {1}", pair: "{0} \u0219i {1}", start: "{0}, {1}" },
-      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-      short: { end: "{0} \u0219i {1}", middle: "{0}, {1}", pair: "{0} \u0219i {1}", start: "{0}, {1}" },
-    };
-    obj3.conjunction = obj4;
-    const obj5 = {
-      long: { end: "{0} sau {1}", middle: "{0}, {1}", pair: "{0} sau {1}", start: "{0}, {1}" },
-      narrow: { end: "{0} sau {1}", middle: "{0}, {1}", pair: "{0} sau {1}", start: "{0}, {1}" },
-      short: { end: "{0} sau {1}", middle: "{0}, {1}", pair: "{0} sau {1}", start: "{0}, {1}" },
-    };
-    obj3.disjunction = obj5;
-    const obj6 = {
-      long: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0} \u0219i {1}", start: "{0}, {1}" },
-      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-      short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-    };
-    obj3.unit = obj6;
-    obj2.data = obj3;
-    ListFormat.__addLocaleData(obj2);
-  }
+import module_4192_mod from "04192__.js";
+import _typeof_mod from "03911__.js";
+import requiredArgs_mod from "../03912_requiredArgs.js";
+import module_3915_mod from "03915__.js";
+
+let module_4192 = module_4192_mod;
+if (!module_4192) {
+  const obj = { default: module_4192 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4192;
 }
-let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
-if (!prop) {
-  prop = [];
+module_4192 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
+  let tmp5 = obj2;
+} else {
+  tmp5 = _typeof;
 }
-globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
-const obj = {
-  data: {
-    conjunction: {
-      long: { end: "{0} \u0219i {1}", middle: "{0}, {1}", pair: "{0} \u0219i {1}", start: "{0}, {1}" },
-      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-      short: { end: "{0} \u0219i {1}", middle: "{0}, {1}", pair: "{0} \u0219i {1}", start: "{0}, {1}" },
-    },
-    disjunction: {
-      long: { end: "{0} sau {1}", middle: "{0}, {1}", pair: "{0} sau {1}", start: "{0}, {1}" },
-      narrow: { end: "{0} sau {1}", middle: "{0}, {1}", pair: "{0} sau {1}", start: "{0}, {1}" },
-      short: { end: "{0} sau {1}", middle: "{0}, {1}", pair: "{0} sau {1}", start: "{0}, {1}" },
-    },
-    unit: {
-      long: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0} \u0219i {1}", start: "{0}, {1}" },
-      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-      short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-    },
-  },
-  locale: "ro",
+_typeof = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
+let module_3915 = module_3915_mod;
+if (!module_3915) {
+  const obj4 = { default: module_3915 };
+  let tmp9 = obj4;
+} else {
+  tmp9 = module_3915;
+}
+module_3915 = tmp9;
+
+export default function setWeek(arg0, arg1, arg2) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const diff = module_4192.default(defaultResult1, arg2) - module_3915.default(arg1);
+  defaultResult1.setDate(defaultResult1.getDate() - 7 * diff);
+  return defaultResult1;
 };
-prop.push(obj);
+export default exports.default;

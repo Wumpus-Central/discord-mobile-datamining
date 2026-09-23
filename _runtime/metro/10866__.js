@@ -1,13 +1,12 @@
 // _runtime/metro/10866__.js
-import AbstractParserWithWordBoundaryChecking from "../10705_AbstractParserWithWordBoundaryChecking.js";
-import _mod10867 from "10867__.js";
+import AbstractParserWithWordBoundaryChecking from "../10781_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ENTimeUnitWithinFormatParser = require;
+const NLCasualTimeParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,24 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const regExp = new RegExp(
-  "(?:within|in|for)\\s*(?:(?:pi\u00F9 o meno|intorno|approssimativamente|verso|verso le)\\s*(?:~\\s*)?)?(" +
-    _mod10867.TIME_UNITS_PATTERN +
-    ")(?=\\W|$)",
-  "i",
-);
-const regExp1 = new RegExp(
-  "(?:(?:pi\u00F9 o meno|intorno|approssimativamente|verso|verso le)\\s*(?:~\\s*)?)?(" +
-    _mod10867.TIME_UNITS_PATTERN +
-    ")(?=\\W|$)",
-  "i",
-);
-class ENTimeUnitWithinFormatParser {
+class NLCasualTimeParser {
   constructor() {
     self = this;
-    tmp = c2(this, ENTimeUnitWithinFormatParser);
+    tmp = c2(this, NLCasualTimeParser);
     tmp2 = closure_4;
-    obj = closure_4(ENTimeUnitWithinFormatParser);
+    obj = closure_4(NLCasualTimeParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -58,25 +45,65 @@ class ENTimeUnitWithinFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ENTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(NLCasualTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
-  value: function innerPattern(option) {
-    return option.option.forwardDate ? regExp1 : regExp;
+  value: function innerPattern() {
+    return /(deze)?\s*(namiddag|avond|middernacht|ochtend|middag|'s middags|'s avonds|'s ochtends)(?=\W|$)/i;
   },
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const ParsingComponents = ENTimeUnitWithinFormatParser(10701).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(
-        reference.reference,
-        ENTimeUnitWithinFormatParser(10867).parseDuration(arg1[1]),
-      );
+    value: function innerExtract(refDate, arg1) {
+      refDate = refDate.refDate;
+      const parsingComponents = refDate.createParsingComponents();
+      if ("deze" === arg1[1]) {
+        const refDate2 = refDate.refDate;
+        parsingComponents.assign("day", refDate2.getDate());
+        const refDate3 = refDate.refDate;
+        parsingComponents.assign("month", refDate3.getMonth() + 1);
+        const refDate4 = refDate.refDate;
+        parsingComponents.assign("year", refDate4.getFullYear());
+      }
+      const formatted = arg1[2].toLowerCase();
+      if ("namiddag" !== formatted) {
+        if ("'s namiddags" !== formatted) {
+          if ("avond" !== formatted) {
+            if ("'s avonds'" !== formatted) {
+              if ("middernacht" === formatted) {
+                const _Date = Date;
+                const date = new Date(refDate.getTime());
+                date.setDate(date.getDate() + 1);
+                NLCasualTimeParser(10780).assignSimilarDate(parsingComponents, date);
+                NLCasualTimeParser(10780).implySimilarTime(parsingComponents, date);
+                parsingComponents.imply("hour", 0);
+                parsingComponents.imply("minute", 0);
+                parsingComponents.imply("second", 0);
+              } else {
+                if ("ochtend" !== formatted) {
+                  if ("'s ochtends" !== formatted) {
+                    if ("middag" === formatted) {
+                      parsingComponents.imply("meridiem", NLCasualTimeParser(10779).Meridiem.AM);
+                      parsingComponents.imply("hour", 12);
+                    }
+                  }
+                }
+                parsingComponents.imply("meridiem", NLCasualTimeParser(10779).Meridiem.AM);
+                parsingComponents.imply("hour", 6);
+              }
+            }
+          }
+          parsingComponents.imply("meridiem", NLCasualTimeParser(10779).Meridiem.PM);
+          parsingComponents.imply("hour", 20);
+        }
+        return parsingComponents;
+      }
+      parsingComponents.imply("meridiem", NLCasualTimeParser(10779).Meridiem.PM);
+      parsingComponents.imply("hour", 15);
     },
   },
 ];
 
-export default _createClass(ENTimeUnitWithinFormatParser, items);
+export default _createClass(NLCasualTimeParser, items);

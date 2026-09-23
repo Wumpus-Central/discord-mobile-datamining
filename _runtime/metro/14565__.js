@@ -1,29 +1,23 @@
 // _runtime/metro/14565__.js
-const require = globalThis.__r;
+const weakMap = new WeakMap();
 
-const require = arg1;
-const dependencyMap = arg6;
-
-export const getSupportedCalendars = function getSupportedCalendars(locale) {
-  _require = locale;
-  const calendars = require("14566__.js").calendars;
-  return calendars.filter((item) =>
-    (function isSupportedCalendar(item, arg1) {
-      let str = arg1;
-      if (undefined === arg1) {
-        str = "en";
-      }
-      try {
-        const concat = "".concat;
-        const combined = "".concat(str, "-u-ca-");
-        const memoizedDateTimeFormat = locale(closure_1_1[0]).createMemoizedDateTimeFormat(combined.concat(item));
-        if ("gregory" === item) {
-          if ("gregory" === memoizedDateTimeFormat.resolvedOptions().calendar) {
-            return false;
-          }
-        }
-        return true;
-      } catch (err) {}
-    })(item, closure_0),
-  );
-};
+export default function getInternalSlots(arg0, arg1) {
+  let items = arg1;
+  if (undefined === arg1) {
+    items = [];
+  }
+  value = weakMap.get(arg0);
+  if (!value) {
+    const _Object = Object;
+    const obj2 = Object.create(
+      null,
+      items.reduce((acc, item) => {
+        acc[item] = { enumerable: false, writable: true, configurable: true };
+        return acc;
+      }, {}),
+    );
+    const result = weakMap.set(arg0, obj2);
+    value = obj2;
+  }
+  return value;
+}

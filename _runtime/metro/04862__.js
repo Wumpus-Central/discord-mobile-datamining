@@ -1,15 +1,25 @@
 // _runtime/metro/04862__.js
-import identity from "../00549_identity.js";
-import _mod669 from "00669__.js";
-import constant from "../04863_constant.js";
+import _mod552 from "00552__.js";
 
-if (_mod669) {
-  let fn = (arg0, arg1) => {
-    const obj = { configurable: true, enumerable: false, value: constant(arg1), writable: true };
-    return _mod669(arg0, "toString", obj);
-  };
-} else {
-  fn = identity;
+export default function toFinite(arg0) {
+  if (arg0) {
+    const tmp3 = _mod552(arg0);
+    if (tmp3 !== Infinity) {
+      if (tmp3 !== -Infinity) {
+      }
+    }
+    let num6 = 1;
+    if (tmp3 < 0) {
+      num6 = -1;
+    }
+    const num4 =
+      179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 *
+      num6;
+  } else {
+    let num = 0;
+    if (0 === arg0) {
+      num = arg0;
+    }
+    return num;
+  }
 }
-
-export default fn;

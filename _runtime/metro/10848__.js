@@ -1,90 +1,61 @@
 // _runtime/metro/10848__.js
-import AbstractParserWithWordBoundaryChecking from "../10705_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
 
-const ESCasualTimeParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-class ESCasualTimeParser {
+const JPSlashDateFormatParser = require;
+const regExp = new RegExp(
+  "([0-9\uFF10-\uFF19]{4}[\\/|\\\uFF0F])?([0-1\uFF10-\uFF11]{0,1}[0-9\uFF10-\uFF19]{1})(?:[\\/|\\\uFF0F]([0-3\uFF10-\uFF13]{0,1}[0-9\uFF10-\uFF19]{1}))",
+  "i",
+);
+class JPSlashDateFormatParser {
   constructor() {
-    self = this;
-    tmp = c2(this, ESCasualTimeParser);
-    tmp2 = closure_4;
-    obj = closure_4(ESCasualTimeParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
+    tmp = c2(this, JPSlashDateFormatParser);
+    return;
   }
 }
-_inherits(ESCasualTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return /(?:esta\s*)?(mañana|tarde|medianoche|mediodia|mediodía|noche)(?=\W|$)/i;
+  key: "pattern",
+  value: function pattern() {
+    return regExp;
   },
 };
 const items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(refDate, arg1) {
-      refDate = refDate.refDate;
-      const parsingComponents = refDate.createParsingComponents();
-      const formatted = arg1[1].toLowerCase();
-      if ("tarde" === formatted) {
-        parsingComponents.imply("meridiem", ESCasualTimeParser(10703).Meridiem.PM);
-        parsingComponents.imply("hour", 15);
-      } else if ("noche" === formatted) {
-        parsingComponents.imply("meridiem", ESCasualTimeParser(10703).Meridiem.PM);
-        parsingComponents.imply("hour", 22);
-      } else if ("ma\u00F1ana" === formatted) {
-        parsingComponents.imply("meridiem", ESCasualTimeParser(10703).Meridiem.AM);
-        parsingComponents.imply("hour", 6);
-      } else if ("medianoche" === formatted) {
-        const _Date = Date;
-        const date = new Date(refDate.getTime());
-        date.setDate(date.getDate() + 1);
-        ESCasualTimeParser(10704).assignSimilarDate(parsingComponents, date);
-        ESCasualTimeParser(10704).implySimilarTime(parsingComponents, date);
-        parsingComponents.imply("hour", 0);
-        parsingComponents.imply("minute", 0);
-        parsingComponents.imply("second", 0);
-      } else if ("mediodia" === formatted) {
-        parsingComponents.imply("meridiem", ESCasualTimeParser(10703).Meridiem.AM);
-        parsingComponents.imply("hour", 12);
+    key: "extract",
+    value: function extract(createParsingComponents, arg1) {
+      const parsingComponents = createParsingComponents.createParsingComponents();
+      const parsed = parseInt(JPSlashDateFormatParser(10844).toHankaku(arg1[2]));
+      const parsed1 = parseInt(JPSlashDateFormatParser(10844).toHankaku(arg1[3]));
+      if (parsed >= 1) {
+        if (parsed <= 12) {
+          if (parsed1 >= 1) {
+            if (parsed1 <= 31) {
+              parsingComponents.assign("day", parsed1);
+              parsingComponents.assign("month", parsed);
+              if (arg1[1]) {
+                const _parseInt = parseInt;
+                const parsed2 = parseInt(JPSlashDateFormatParser(10844).toHankaku(arg1[1]));
+                parsingComponents.assign("year", JPSlashDateFormatParser(10775).findMostLikelyADYear(parsed2));
+              } else {
+                parsingComponents.imply(
+                  "year",
+                  JPSlashDateFormatParser(10775).findYearClosestToRef(
+                    createParsingComponents.reference.instant,
+                    parsed1,
+                    parsed,
+                  ),
+                );
+              }
+              return parsingComponents;
+            }
+          }
+          return null;
+        }
       }
-      return parsingComponents;
+      return null;
     },
   },
 ];
 
-export default _createClass(ESCasualTimeParser, items);
+export default _createClass(JPSlashDateFormatParser, items);

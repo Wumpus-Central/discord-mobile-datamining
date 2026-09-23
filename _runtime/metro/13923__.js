@@ -1,10 +1,13 @@
 // _runtime/metro/13923__.js
-import _mod13937 from "13937__.js";
-import assign from "13924__.js";
-import Deflate from "../13925_Deflate.js";
-import Inflate from "../13933_Inflate.js";
+import registerAsset from "01121__.js";
 
-const obj = {};
-assign.assign(obj, Deflate, Inflate, _mod13937);
-
-export default obj;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/logos",
+  width: 158,
+  height: 32,
+  scales: [1, 2, 3],
+  hash: "18951c7ea15f41ff544471dfa4f446f0",
+  name: "img_logo_premium_tier_0_full",
+  type: "png",
+});

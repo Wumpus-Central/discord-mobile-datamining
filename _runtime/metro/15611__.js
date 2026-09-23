@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 16,
+  height: 16.5,
   scales: [2, 3],
-  hash: "30252dd38aca1d861a91a71b38c8a502",
-  name: "AccessibilityIcon",
+  hash: "5854380fa0e0fd8bc925e2e46e9e8246",
+  name: "ic_lock_short_16px",
   type: "png",
 });

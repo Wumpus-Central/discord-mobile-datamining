@@ -1,59 +1,34 @@
 // _runtime/metro/04262__.js
-import _mod3850 from "03850__.js";
-import requiredArgs_mod from "../03846_requiredArgs.js";
+import _typeof_mod from "03911__.js";
+import requiredArgs_mod from "../03912_requiredArgs.js";
 
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  let obj = { default: requiredArgs };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = requiredArgs;
+  tmp3 = _typeof;
 }
-requiredArgs = tmp3;
+_typeof = tmp3;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
+} else {
+  tmp5 = requiredArgs;
+}
+requiredArgs = tmp5;
 
-export default function setDefaultOptions(obj) {
-  requiredArgs.default(1, arguments);
-  obj = {};
-  const defaultOptions = _mod3850.getDefaultOptions();
-  for (const key10017 in defaultOptions) {
-    let _Object = Object;
-    hasOwnProperty = Object.prototype.hasOwnProperty;
-    let call = hasOwnProperty.call;
-    if (typeof call === "unknown") {
-      let hasOwnPropertyResult = hasOwnProperty(key10017);
-    } else {
-      hasOwnPropertyResult = call(defaultOptions, key10017);
-    }
-    if (!hasOwnPropertyResult) {
-      continue;
-    } else {
-      obj[key10017] = defaultOptions[key10017];
-      continue;
-    }
-    continue;
+export default function isSameMonth(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const defaultResult2 = _typeof.default(arg1);
+  const fullYear = defaultResult1.getFullYear();
+  let tmp3 = fullYear === defaultResult2.getFullYear();
+  if (tmp3) {
+    const month = defaultResult1.getMonth();
+    tmp3 = month === defaultResult2.getMonth();
   }
-  for (const key10023 in arg0) {
-    let _Object2 = Object;
-    let call2 = hasOwnProperty2.call;
-    if (typeof call2 === "unknown") {
-      let hasOwnProperty2Result = hasOwnProperty2(key10023);
-    } else {
-      hasOwnProperty2Result = call2(arg0, key10023);
-    }
-    if (!hasOwnProperty2Result) {
-      continue;
-    } else {
-      if (undefined === arg0[key10023]) {
-        delete tmp[tmp2];
-        continue;
-      } else {
-        obj[key10023] = arg0[key10023];
-        continue;
-      }
-      continue;
-    }
-    continue;
-  }
-  _mod3850.setDefaultOptions(obj);
+  return tmp3;
 };
 export default exports.default;

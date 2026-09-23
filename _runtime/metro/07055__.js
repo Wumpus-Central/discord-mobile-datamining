@@ -1,80 +1,132 @@
 // _runtime/metro/07055__.js
 import jsxProd from "../react/00021_jsxProd.js";
-import value2 from "../06872_value2.js";
-import _mod7056 from "07056__.js";
 import noop_mod from "00019__.js";
 import get_ActivityIndicator from "00017__.js";
 
 let noop = noop_mod;
-({ useMemo: c2, useRef: c3 } = noop);
+({ useCallback: closure_0, useEffect: closure_1, useMemo: c2, useRef: c3 } = noop);
 let noop = noop_mod;
-({ StatusBar: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+({ Keyboard: closure_4, StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = jsxProd.jsx;
-const memoResult = noop.memo(function BottomSheetHostingContainerComponent(bottomInset) {
-  ({ containerHeight: require, containerOffset: dependencyMap, topInset } = bottomInset);
-  if (topInset === undefined) {
-    topInset = 0;
-  }
-  let num = bottomInset.bottomInset;
-  if (num === undefined) {
-    num = 0;
-  }
-  let flag = bottomInset.shouldCalculateHeight;
-  if (flag === undefined) {
-    flag = true;
-  }
-  const detached = bottomInset.detached;
-  const style = bottomInset.style;
-  const tmp = num(null);
-  const ref = tmp;
-  let items = [style, detached, topInset, num];
-  const tmp2 = topInset(() => {
-    const items = [style, _mod7056.styles.container];
-    const rect = { top: topInset, bottom: num, overflow: null };
-    let str = "hidden";
-    if (detached) {
-      str = "visible";
-    }
-    rect.overflow = str;
-    items[2] = rect;
-    return items;
-  }, items);
-  const obj2 = { ref: tmp, pointerEvents: "box-none", onLayout: null, style: null, collapsable: true, children: null };
-  let stableCallback;
-  if (flag) {
-    stableCallback = obj.useStableCallback(function handleLayoutEvent(nativeEvent) {
-      const height = nativeEvent.nativeEvent.layout.height;
-      height.value = height;
-      const current = ref.current;
-      if (current != null) {
-        current.measure((arg0, arg1, arg2, arg3, arg4, arg5) => {
-          if (value.value) {
-            num = arg5;
-            let num2 = arg5;
-            if (arg5 == null) {
-              num2 = 0;
-            }
-            const rect = { top: num2, left: 0, right: 0, bottom: null };
-            if (num == null) {
-              num = 0;
-            }
-            let num3 = currentHeight.currentHeight;
-            const sum = num + height;
-            if (num3 == null) {
-              num3 = 0;
-            }
-            rect.bottom = Math.max(0, value2.WINDOW_HEIGHT - (sum + num3));
-            tmp.value = rect;
-          }
-        });
-      }
-    });
-  }
-  obj2.onLayout = stableCallback;
-  obj2.style = tmp2;
-  obj2.children = bottomInset.children;
-  return ref(style, obj2);
-});
-memoResult.displayName = "BottomSheetHostingContainer";
+let c7 = 0;
+let closure_8 = [];
+let c9 = false;
+const context = noop.createContext(null);
+const logicalResponder = StyleSheet.create({ logicalResponder: { display: "contents" } });
 
-export const BottomSheetHostingContainer = memoResult;
+export default function _default(children) {
+  const keyboardShouldPersistTaps = children.keyboardShouldPersistTaps;
+  const tmp = closure_3(false);
+  const isRNGHResponderEvent = tmp;
+  let items = [tmp, keyboardShouldPersistTaps];
+  isRNGHResponderEvent(() => {
+    sum = sum + 1;
+    if (1 >= sum) {
+      let addListener;
+      if (closure_1_4 != null) {
+        addListener = closure_1_4.addListener;
+      }
+      if (null != addListener) {
+        const metrics = closure_1_4.metrics;
+        let height;
+        if (metrics != null) {
+          const metricsResult = metrics();
+          if (metricsResult != null) {
+            height = metricsResult.height;
+          }
+        }
+        let tmp5 = null != height;
+        if (tmp5) {
+          tmp5 = height > 0;
+        }
+        function setVisible(endCoordinates) {
+          endCoordinates = endCoordinates.endCoordinates;
+          let height;
+          if (endCoordinates != null) {
+            height = endCoordinates.height;
+          }
+          let tmp2 = null != height;
+          if (tmp2) {
+            tmp2 = height > 0;
+          }
+          c9 = tmp2;
+        }
+        closure_9 = tmp5;
+        items = [
+          closure_1_4.addListener("keyboardDidShow", setVisible),
+          closure_1_4.addListener("keyboardWillShow", setVisible),
+          closure_1_4.addListener("keyboardDidHide", () => {
+            c9 = false;
+          }),
+        ];
+      }
+    }
+    return () => {
+      (function unsubscribeFromKeyboardVisibility() {
+        diff = diff - 1;
+        if (0 >= diff) {
+          for (const item10008 of closure_8) {
+            let removeResult = item10008.remove();
+            continue;
+          }
+          closure_8 = [];
+          c9 = false;
+        }
+      })();
+    };
+  }, []);
+  const items1 = [keyboardShouldPersistTaps];
+  let tmp2 = closure_2(() => ({ isRNGHResponderEvent, keyboardShouldPersistTaps }), items);
+  const obj = { value: tmp2, children: null };
+  const tmp4 = keyboardShouldPersistTaps(() => {
+    closure_1.current = false;
+    return false;
+  }, []);
+  obj.children = (
+    <closure_5
+      collapsable={false}
+      onStartShouldSetResponderCapture={keyboardShouldPersistTaps(() => {
+        closure_1.current = false;
+        return false;
+      }, [])}
+      onStartShouldSetResponder={keyboardShouldPersistTaps(() => {
+        let current = "handled" === keyboardShouldPersistTaps;
+        if (current) {
+          current = isRNGHResponderEvent.current;
+        }
+        isRNGHResponderEvent.current = false;
+        return current;
+      }, items1)}
+      pointerEvents="box-none"
+      style={logicalResponder.logicalResponder}
+    >
+      {children.children}
+    </closure_5>
+  );
+  return <context value={tmp2}>{null}</context>;
+}
+export const JSResponderContext = context;
+export const updateResponderEventValue = function updateResponderEventValue(isRNGHResponderEvent, current) {
+  isRNGHResponderEvent = undefined;
+  if (isRNGHResponderEvent != null) {
+    isRNGHResponderEvent = isRNGHResponderEvent.isRNGHResponderEvent;
+  }
+  if (isRNGHResponderEvent) {
+    isRNGHResponderEvent.current = current;
+  }
+};
+export const isKeyboardDismissingTap = function isKeyboardDismissingTap(keyboardShouldPersistTaps) {
+  if (null == keyboardShouldPersistTaps) {
+    return false;
+  } else {
+    keyboardShouldPersistTaps = keyboardShouldPersistTaps.keyboardShouldPersistTaps;
+    let tmp = !keyboardShouldPersistTaps;
+    if (keyboardShouldPersistTaps) {
+      tmp = "never" === keyboardShouldPersistTaps;
+    }
+    if (tmp) {
+      tmp = c9;
+    }
+    return tmp;
+  }
+};

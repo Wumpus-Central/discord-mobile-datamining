@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/modules/video_calls/native/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "eaee56f86ca7905c61b8b9a3d1c990d4",
-  name: "MinecraftNeutralIcon-primary",
+  hash: "aa9c26c29990ba7a6584e51ab5c56efa",
+  name: "debug",
   type: "png",
 });

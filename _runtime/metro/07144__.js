@@ -1,36 +1,34 @@
 // _runtime/metro/07144__.js
-function asyncGeneratorStep(arg0, fn, fn2, arg3, arg4, arg5, arg6) {
-  try {
-    const iter = arg0[arg5](arg6);
-    value = iter.value;
-    if (iter.done) {
-      fn(value);
-    } else {
-      const resolved = Promise.resolve(value);
-      resolved.then(arg3, arg4);
-    }
-  } catch (tmp13) {
-    fn2(tmp13);
-  }
-}
+import _mod17 from "00017__.js";
+import jsxProd from "../react/00021_jsxProd.js";
+import _mod7145 from "07145__.js";
+import noop_mod from "00019__.js";
 
-export default function _asyncToGenerator(arg0) {
-  closure_0 = arg0;
-  return function () {
-    const self = this;
-    closure_1 = arguments;
-    return new Promise((arg0, arg1) => {
-      _self = arg0;
-      closure_1 = arg1;
-      function _next(arg0) {
-        self(applyResult, closure_0, closure_1, _next, _throw, "next", arg0);
-      }
-      function _throw(arg0) {
-        self(applyResult, closure_0, closure_1, _next, _throw, "throw", arg0);
-      }
-      const applyResult = _self.apply(self, closure_1);
-      closure_2 = applyResult;
-      asyncGeneratorStep(applyResult, arg0, arg1, _next, _throw, "next", undefined);
-    });
-  };
-}
+let noop = noop_mod;
+const useMemo = noop.useMemo;
+let noop = noop_mod;
+const StyleSheet = _mod17.StyleSheet;
+const jsx = jsxProd.jsx;
+const memoResult = noop.memo((arg0) => {
+  ({ backgroundComponent, backgroundStyle } = arg0);
+  let items = [backgroundStyle];
+  ({ animatedIndex, animatedPosition } = arg0);
+  const style = useMemo(() => {
+    const items = [_mod7145.styles.container, backgroundStyle];
+    return StyleSheet.flatten(items);
+  }, items);
+  if (backgroundComponent == null) {
+    backgroundComponent = backgroundStyle(7146).BottomSheetBackground;
+  }
+  return (
+    <backgroundComponent
+      pointerEvents="none"
+      animatedIndex={animatedIndex}
+      animatedPosition={animatedPosition}
+      style={style}
+    />
+  );
+});
+memoResult.displayName = "BottomSheetBackgroundContainer";
+
+export const BottomSheetBackgroundContainer = memoResult;

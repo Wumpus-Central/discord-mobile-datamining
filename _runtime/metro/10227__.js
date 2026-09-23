@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 16,
-  height: 16,
+  httpServerLocation: "/assets/modules/instant_invite/native/images",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "31757ea45ee4fb60779fd700caf7d93e",
-  name: "ic_nitro_wheel_gradient_purple",
+  hash: "032ba055130436392254ce3ba39e9456",
+  name: "gmail",
   type: "png",
 });

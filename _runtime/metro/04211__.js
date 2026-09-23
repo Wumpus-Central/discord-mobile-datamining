@@ -1,35 +1,27 @@
 // _runtime/metro/04211__.js
-import module_3993_mod from "03993__.js";
-import module_4026_mod from "04026__.js";
-import requiredArgs_mod from "../03846_requiredArgs.js";
+import _typeof_mod from "03911__.js";
+import requiredArgs_mod from "../03912_requiredArgs.js";
 
-let module_3993 = module_3993_mod;
-if (!module_3993) {
-  const obj = { default: module_3993 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3993;
+  tmp3 = _typeof;
 }
-module_3993 = tmp3;
-let module_4026 = module_4026_mod;
-if (!module_4026) {
-  const obj2 = { default: module_4026 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4026;
-}
-module_4026 = tmp5;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
 
-export default function isTomorrow(arg0) {
+export default function isFuture(arg0) {
   requiredArgs.default(1, arguments);
-  return module_4026.default(arg0, module_3993.default(Date.now(), 1));
+  const time = _typeof.default(arg0).getTime();
+  return time > Date.now();
 };
 export default exports.default;

@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "46bee89e41092010bef3088a4b8308ea",
-  name: "BlueskyNeutralIcon",
+  httpServerLocation: "/assets/images",
+  width: 128,
+  height: 128,
+  scales: [1],
+  hash: "d82ee9ebaba96d70f18b4f52bd66277a",
+  name: "nameplate_avatar_placeholder_light_mode",
   type: "png",
 });

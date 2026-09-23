@@ -1,4 +1,6 @@
 // _runtime/metro/07174__.js
-import _modDef7175 from "07175__.js";
+import _mod17 from "00017__.js";
 
-export default _modDef7175;
+const StyleSheet = _mod17.StyleSheet;
+
+export const styles = StyleSheet.create({ container: { flex: 1, overflow: "visible" } });

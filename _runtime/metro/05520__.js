@@ -1,13 +1,27 @@
 // _runtime/metro/05520__.js
-import registerAsset from "01121__.js";
+import _modDef5519 from "05519__.js";
+import _modDef5521 from "05521__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 256,
-  height: 256,
-  scales: [1],
-  hash: "141e24b0bc4cfc4d58d1cb3b5e32f1dc",
-  name: "img_bungie_dark",
-  type: "png",
-});
+importDefault = arg2;
+const dependencyMap = arg6;
+
+export default {
+  isTiffFile(byteLength) {
+    let tmp = byteLength;
+    if (tmp) {
+      tmp = byteLength.byteLength >= 4;
+    }
+    if (tmp) {
+      const uint16 = byteLength.getUint16(0);
+      tmp = byteLength.getUint16(2, uint16 === _modDef5521.LITTLE_ENDIAN) === 42;
+    }
+    return tmp;
+  },
+  findTiffOffsets() {
+    if (_modDef5519.USE_EXIF) {
+      return { hasAppMarkers: true, tiffHeaderOffset: 0 };
+    } else {
+      return {};
+    }
+  },
+};

@@ -1,37 +1,24 @@
 // _runtime/metro/04000__.js
-import module_3849_mod from "03849__.js";
-import _typeof_mod from "03845__.js";
-import requiredArgs_mod from "../03846_requiredArgs.js";
+let closure_0 = { lessThanXSeconds: { one: "minder dan een seconde", other: "minder dan {{count}} seconden" }, xSeconds: { one: "1 seconde", other: "{{count}} seconden" }, halfAMinute: "een halve minuut", lessThanXMinutes: { one: "minder dan een minuut", other: "minder dan {{count}} minuten" }, xMinutes: { one: "een minuut", other: "{{count}} minuten" }, aboutXHours: { one: "ongeveer 1 uur", other: "ongeveer {{count}} uur" }, xHours: { one: "1 uur", other: "{{count}} uur" }, xDays: { one: "1 dag", other: "{{count}} dagen" }, aboutXWeeks: { one: "ongeveer 1 week", other: "ongeveer {{count}} weken" }, xWeeks: { one: "1 week", other: "{{count}} weken" }, aboutXMonths: { one: "ongeveer 1 maand", other: "ongeveer {{count}} maanden" }, xMonths: { one: "1 maand", other: "{{count}} maanden" }, aboutXYears: { one: "ongeveer 1 jaar", other: "ongeveer {{count}} jaar" }, xYears: { one: "1 jaar", other: "{{count}} jaar" }, overXYears: { one: "meer dan 1 jaar", other: "meer dan {{count}} jaar" }, almostXYears: { one: "bijna 1 jaar", other: "bijna {{count}} jaar" } };
 
-let module_3849 = module_3849_mod;
-if (!module_3849) {
-  const obj = { default: module_3849 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_3849;
-}
-module_3849 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
-} else {
-  tmp5 = _typeof;
-}
-_typeof = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
-
-export default function addMilliseconds(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const time = _typeof.default(arg0).getTime();
-  const defaultResult1 = _typeof.default(arg0);
-  return new Date(time + module_3849.default(arg1));
+export default function formatDistance(arg0, arg1, addSuffix) {
+  if (typeof closure_0[arg0] === "string") {
+    let tmp6 = tmp;
+    if (null != addSuffix) {
+      tmp6 = tmp;
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          let text = `${tmp} geleden`;
+        }
+        text = `over ${tmp}`;
+      }
+    }
+    return tmp6;
+  } else if (1 === arg1) {
+    let one = tmp.one;
+  } else {
+    const _String = String;
+    one = tmp.other.replace("{{count}}", String(arg1));
+  }
 };
 export default exports.default;

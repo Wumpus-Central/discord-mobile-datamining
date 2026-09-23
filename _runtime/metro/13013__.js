@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/directory_channels/native/images",
-  width: 32,
-  height: 32,
+  httpServerLocation: "/assets/images/native/icons/empty_channel",
+  width: 48,
+  height: 48,
   scales: [2, 3],
-  hash: "b44246d7ff29916e5a982207e3d0936c",
-  name: "add_server",
+  hash: "8d7c88bf2a3c70b7581717d42e9c4ec1",
+  name: "send_message_32px",
   type: "png",
 });

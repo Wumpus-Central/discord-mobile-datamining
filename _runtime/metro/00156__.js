@@ -21,7 +21,7 @@ const NativePerformanceCxx = nullthrows(_modDef154);
   clearMeasures: closure_12,
 } = NativePerformanceCxx);
 let closure_13 = { startTime: 0, detail: "category" };
-let closure_14 = { name: "", startTime: 0, duration: 0, detail: "ip" };
+let closure_14 = { name: "", startTime: 0, duration: 0, detail: "disabled" };
 function getMarkTimeForMeasure(arg0) {}
 let closure_16 = _classPrivateFieldKey("eventCounts");
 class Performance {

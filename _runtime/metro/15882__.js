@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "3e998a340948f95ab4885c3644b255dc",
-  name: "AchievementsIcon",
+  hash: "0182b31d51043571e01025e7bba542aa",
+  name: "FileUpIcon",
   type: "png",
 });

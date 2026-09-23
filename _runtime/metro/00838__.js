@@ -549,7 +549,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                             obj5.name = "" + finalOperationName + " " + str15 + " stream-response";
                                             obj5.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
                                             obj5.attributes = obj;
-                                            closure_0 = closure_2(/* F122947 */ function() { ... });
+                                            closure_0 = closure_2(/* F123283 */ function() { ... });
                                             let startSpanManualResult = tmp4Result6.startSpanManual(obj5, () => { ... });
                                             const tmp4Result7 = tmp4(tmp5[3]);
                                           } else {
@@ -716,7 +716,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                             obj5.name = "" + finalOperationName + " " + str15 + " stream-response";
                                             obj5.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
                                             obj5.attributes = obj;
-                                            closure_0 = closure_2(/* F122947 */ function() { ... });
+                                            closure_0 = closure_2(/* F123283 */ function() { ... });
                                             let startSpanManualResult = tmp4Result6.startSpanManual(obj5, () => { ... });
                                             const tmp4Result7 = tmp4(tmp5[3]);
                                           } else {
@@ -1279,7 +1279,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                           c5 = 0;
                                           c6 = 0;
                                           c4 = 0;
-                                          return (/* F127197 */ function*() { ... })();
+                                          return (/* F127543 */ function*() { ... })();
                                         });
                                         let startSpanManualResult = tmp4Result6.startSpanManual(obj5, function(arg0) {
                                           const self = this;
@@ -1304,7 +1304,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                           if (tmp) {
                                             closure_3(_function, first);
                                           }
-                                          return str(dependencyMap[11]).handleCallbackErrors(() => { ... }, () => { ... }, /* F122951 */ function() { ... }, () => { ... });
+                                          return str(dependencyMap[11]).handleCallbackErrors(() => { ... }, () => { ... }, /* F123287 */ function() { ... }, () => { ... });
                                         });
                                         const tmp4Result8 = tmp4(tmp5[3]);
                                       }
@@ -1512,7 +1512,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                           c5 = 0;
                                           c6 = 0;
                                           c4 = 0;
-                                          return (/* F127197 */ function*() { ... })();
+                                          return (/* F127543 */ function*() { ... })();
                                         });
                                         let startSpanManualResult = tmp4Result6.startSpanManual(obj5, function(arg0) {
                                           const self = this;
@@ -1537,7 +1537,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                           if (tmp) {
                                             closure_3(_function, first);
                                           }
-                                          return str(dependencyMap[11]).handleCallbackErrors(() => { ... }, () => { ... }, /* F122951 */ function() { ... }, () => { ... });
+                                          return str(dependencyMap[11]).handleCallbackErrors(() => { ... }, () => { ... }, /* F123287 */ function() { ... }, () => { ... });
                                         });
                                         const tmp4Result8 = tmp4(tmp5[3]);
                                       }
@@ -1695,7 +1695,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                                         obj5.name = "" + finalOperationName + " " + str15 + " stream-response";
                                                         obj5.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
                                                         obj5.attributes = obj;
-                                                        closure_0 = closure_2(/* F122947 */ function() { ... });
+                                                        closure_0 = closure_2(/* F123283 */ function() { ... });
                                                         let startSpanManualResult = tmp4Result6.startSpanManual(obj5, () => { ... });
                                                         const tmp4Result7 = tmp4(tmp5[3]);
                                                       } else {
@@ -1862,7 +1862,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                                         obj5.name = "" + finalOperationName + " " + str15 + " stream-response";
                                                         obj5.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
                                                         obj5.attributes = obj;
-                                                        closure_0 = closure_2(/* F122947 */ function() { ... });
+                                                        closure_0 = closure_2(/* F123283 */ function() { ... });
                                                         let startSpanManualResult = tmp4Result6.startSpanManual(obj5, () => { ... });
                                                         const tmp4Result7 = tmp4(tmp5[3]);
                                                       } else {

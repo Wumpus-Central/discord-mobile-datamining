@@ -1,6 +1,13 @@
 // _runtime/metro/18141__.js
-const regex = RegExp("[\\u200d\\ud800-\\udfff\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff\\ufe0e\\ufe0f]");
+import registerAsset from "01121__.js";
 
-export default function hasUnicode(arg0) {
-  return regex.test(arg0);
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "cbab82e40d604a026003b3db68edd6bb",
+  name: "ic_icon_upload",
+  type: "png",
+});

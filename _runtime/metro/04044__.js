@@ -1,47 +1,7 @@
 // _runtime/metro/04044__.js
-import _typeof_mod from "03845__.js";
-import endOfDay_mod from "../04045_endOfDay.js";
-import endOfMonth_mod from "../04046_endOfMonth.js";
-import requiredArgs_mod from "../03846_requiredArgs.js";
+let closure_0 = { lastWeek: "eeee'\u0E17\u0E35\u0E48\u0E41\u0E25\u0E49\u0E27\u0E40\u0E27\u0E25\u0E32' p", yesterday: "'\u0E40\u0E21\u0E37\u0E48\u0E2D\u0E27\u0E32\u0E19\u0E19\u0E35\u0E49\u0E40\u0E27\u0E25\u0E32' p", today: "'\u0E27\u0E31\u0E19\u0E19\u0E35\u0E49\u0E40\u0E27\u0E25\u0E32' p", tomorrow: "'\u0E1E\u0E23\u0E38\u0E48\u0E07\u0E19\u0E35\u0E49\u0E40\u0E27\u0E25\u0E32' p", nextWeek: "eeee '\u0E40\u0E27\u0E25\u0E32' p", other: "P" };
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
-} else {
-  tmp3 = _typeof;
-}
-_typeof = tmp3;
-let endOfDay = endOfDay_mod;
-if (!endOfDay) {
-  const obj2 = { default: endOfDay };
-  let tmp5 = obj2;
-} else {
-  tmp5 = endOfDay;
-}
-endOfDay = tmp5;
-let endOfMonth = endOfMonth_mod;
-if (!endOfMonth) {
-  const obj3 = { default: endOfMonth };
-  let tmp7 = obj3;
-} else {
-  tmp7 = endOfMonth;
-}
-endOfMonth = tmp7;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
-} else {
-  tmp9 = requiredArgs;
-}
-requiredArgs = tmp9;
-
-export default function isLastDayOfMonth(arg0) {
-  requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const time = endOfDay.default(defaultResult1).getTime();
-  const defaultResult2 = endOfDay.default(defaultResult1);
-  return time === endOfMonth.default(defaultResult1).getTime();
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  return closure_0[arg0];
 };
 export default exports.default;

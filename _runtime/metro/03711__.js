@@ -3,9 +3,9 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/custom_typing_indicator/intl",
+  httpServerLocation: "/assets/modules/private_channels/clean_up_inactive_gdms",
   scales: [1],
-  hash: "aa1a2f6cb8e40414f994299cdc8ed2c6",
-  name: "CustomTypingIndicator.compiled.messages",
+  hash: "130e925e8a424a9b43d870d884dca58e",
+  name: "CleanUpInactiveGDMs.compiled.messages",
   type: "jsona",
 });

@@ -1,13 +1,42 @@
 // _runtime/metro/05568__.js
-import registerAsset from "01121__.js";
+const require = globalThis.__r;
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
-  scales: [1],
-  hash: "be629a43a1506b7ff0f25b34b78ebb11",
-  name: "img_account_sync_github_light",
-  type: "png",
-});
+const require = arg1;
+const dependencyMap = arg6;
+let closure_2 = [6, 7, 99];
+
+export default {
+  get(buffer, Compression, arg2) {
+    let prop = Compression;
+    if (Compression) {
+      let hasItem = undefined === Compression.Compression;
+      if (!hasItem) {
+        hasItem = closure_2.includes(Compression.Compression.value);
+      }
+      prop = hasItem;
+    }
+    if (prop) {
+      prop = Compression.JPEGInterchangeFormat;
+    }
+    if (prop) {
+      prop = Compression.JPEGInterchangeFormat.value;
+    }
+    if (prop) {
+      prop = Compression.JPEGInterchangeFormatLength;
+    }
+    if (prop) {
+      prop = Compression.JPEGInterchangeFormatLength.value;
+    }
+    if (prop) {
+      Compression.type = "image/jpeg";
+      const sum = arg2 + Compression.JPEGInterchangeFormat.value;
+      buffer = buffer.buffer;
+      Compression.image = buffer.slice(sum, sum + Compression.JPEGInterchangeFormatLength.value);
+      require("05516__.js").deferInit(Compression, "base64", function () {
+        return require("05516__.js").getBase64Image(this.image);
+      });
+      const obj = require("05516__.js");
+    }
+    return Compression;
+  },
+};

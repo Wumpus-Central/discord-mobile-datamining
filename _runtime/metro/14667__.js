@@ -1,4 +1,9 @@
 // _runtime/metro/14667__.js
-import replaceByteInByteSequence from "../14655_replaceByteInByteSequence.js";
 
-export const URLSearchParams = replaceByteInByteSequence.URLSearchParams;
+export default (fn) => {
+  try {
+    return fn();
+  } catch (err) {
+    return true;
+  }
+};

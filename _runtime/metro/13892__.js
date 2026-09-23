@@ -4,10 +4,10 @@ import registerAsset from "01121__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
-  width: 215,
-  height: 128,
+  width: 177,
+  height: 112,
   scales: [2, 3],
-  hash: "91b8f5f85a023591658822c0d3091e54",
-  name: "guild_subscription_removal_darker",
+  hash: "ca47b5bc4b94bd1dd969b5ea6e31ef36",
+  name: "guild_subscription_no_guilds_darker",
   type: "png",
 });

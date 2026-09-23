@@ -1,13 +1,29 @@
 // _runtime/metro/05286__.js
-import registerAsset from "01121__.js";
+import pointsDiffer_mod from "../00078_pointsDiffer.js";
+import processColorElement_mod from "../00080_processColorElement.js";
+import 00065__ from "00065__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "d9312bb32f25ade901c17406f7f53267",
-  name: "ImageLockIcon",
-  type: "png",
-});
+let pointsDiffer = pointsDiffer_mod;
+if ("default" in pointsDiffer) {
+  pointsDiffer = pointsDiffer.default;
+}
+const obj = { startPoint: { diff: pointsDiffer }, endPoint: null, colors: null, locations: true, useAngle: true, angleCenter: null, angle: true, borderRadii: true };
+let pointsDiffer = pointsDiffer_mod;
+if ("default" in pointsDiffer) {
+  pointsDiffer = pointsDiffer.default;
+}
+obj.endPoint = { diff: pointsDiffer };
+let processColorElement = processColorElement_mod;
+if ("default" in processColorElement) {
+  processColorElement = processColorElement.default;
+}
+obj.colors = { process: processColorElement };
+let pointsDiffer = pointsDiffer_mod;
+if ("default" in pointsDiffer) {
+  pointsDiffer = pointsDiffer.default;
+}
+const obj2 = { uiViewClassName: "RNLinearGradient", validAttributes: obj };
+obj.angleCenter = { diff: pointsDiffer };
+
+export default module_65.get("RNLinearGradient", () => obj2);
+export const __INTERNAL_VIEW_CONFIG = obj2;

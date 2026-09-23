@@ -1,74 +1,71 @@
 // _runtime/metro/14637__.js
-import _mod14586 from "14586__.js";
-import text from "../14595_text.js";
-import _mod14618 from "14618__.js";
-import _mod14635 from "14635__.js";
-import _mod14638 from "14638__.js";
+import e from "../01161_e.js";
+import calendars from "../14638_calendars.js";
+import hourCycles from "../14639_hourCycles.js";
+import timezones from "../14640_timezones.js";
+import weekData from "../14641_weekData.js";
 
-const enumerable = "enumerable";
-const configurable = "configurable";
-const writable = "writable";
-if (_mod14586) {
-  if (_mod14638) {
-    defineProperty = function defineProperty(fn, arg1, value) {
-      _mod14635(fn);
-      const tmp2 = text(arg1);
-      _mod14635(value);
-      let tmp4 = value;
-      if (typeof fn === "function") {
-        tmp4 = value;
-        if ("prototype" === tmp2) {
-          tmp4 = value;
-          if ("value" in value) {
-            tmp4 = value;
-            if (writable in value) {
-              tmp4 = value;
-              if (!value[writable]) {
-                const tmp7 = getOwnPropertyDescriptor(fn, tmp2);
-                let tmp8 = tmp7;
-                if (tmp7) {
-                  tmp8 = tmp7[writable];
-                }
-                tmp4 = value;
-                if (tmp8) {
-                  fn[tmp2] = value.value;
-                  const obj = {
-                    configurable: configurable in value ? value[configurable] : tmp7[configurable],
-                    enumerable: enumerable in value ? value[enumerable] : tmp7[enumerable],
-                    writable: false,
-                  };
-                }
-              }
-            }
-          }
-        }
-      }
-      return defineProperty(fn, tmp2, tmp4);
-    };
+require = arg1;
+const dependencyMap = arg6;
+
+export const getCalendarPreferenceDataForRegion = function getCalendarPreferenceDataForRegion(region) {
+  let str = null;
+  if (region) {
+    str = region.toUpperCase();
   }
-  let defineProperty2 = defineProperty;
-} else {
-  defineProperty2 = function defineProperty(arg0, arg1, value) {
-    _mod14635(arg0);
-    const tmp2 = text(arg1);
-    _mod14635(value);
-    if (!_mod14618) {
-      if (!("get" in value)) {
-        if (!("set" in value)) {
-          if ("value" in value) {
-            arg0[tmp2] = value.value;
-          }
-          return arg0;
+  if (!str) {
+    str = "";
+  }
+  return (
+    calendars.calendars[str] ||
+    calendars.calendars["001"].map((item) => {
+      let str = "gregory";
+      if ("gregorian" !== item) {
+        let str2 = "islamicc";
+        if ("islamic-civil" !== item) {
+          str2 = item;
         }
+        str = str2;
       }
-      const tmp8 = new TypeError("Accessors not supported");
-      throw tmp8;
-    } else {
-      try {
-        return defineProperty(arg0, tmp2, value);
-      } catch (err) {}
-    }
-  };
-}
-
-export const f = defineProperty2;
+      return str;
+    })
+  );
+};
+export const getHourCyclesPreferenceDataForLocaleOrRegion = function getHourCyclesPreferenceDataForLocaleOrRegion(
+  locale,
+  region,
+) {
+  const formatted = locale.toLowerCase();
+  let str = "";
+  if (region) {
+    str = region.toUpperCase();
+  }
+  let v001 = hourCycles.hourCycles[formatted] || hourCycles.hourCycles[str];
+  if (!v001) {
+    const concat = "".concat;
+    v001 = hourCycles.hourCycles["".concat("", formatted, "-001")];
+  }
+  if (!v001) {
+    v001 = hourCycles.hourCycles["001"];
+  }
+  return e.__spreadArray([], v001, true);
+};
+export const getTimeZonePreferenceForRegion = function getTimeZonePreferenceForRegion(region) {
+  const formatted = region.toLowerCase();
+  const items = [];
+  if (timezones.timezones[formatted]) {
+    return e.__spreadArray(items, timezones.timezones[formatted], true);
+  } else {
+    return items;
+  }
+};
+export const getWeekDataForRegion = function getWeekDataForRegion(region) {
+  let str = "";
+  if (region) {
+    str = region.toUpperCase();
+  }
+  if (!str) {
+    str = "001";
+  }
+  return weekData.weekData[str] || weekData.weekData["001"];
+};

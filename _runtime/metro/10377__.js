@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/video_calls/native/images",
+  width: 20,
+  height: 20,
   scales: [2, 3],
-  hash: "4e1581119cf1ddaae8c3aa4ebdd90f99",
-  name: "StickerIcon",
+  hash: "40d8dc40d3509844c13de0abfc4c355d",
+  name: "camera_swap",
   type: "png",
 });

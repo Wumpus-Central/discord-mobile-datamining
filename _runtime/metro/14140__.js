@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/oauth2",
-  width: 375,
-  height: 812,
+  httpServerLocation: "/assets/images/native/empties",
+  width: 230,
+  height: 110,
   scales: [2, 3],
-  hash: "9f0466452ea774e0a27ad50f4f806303",
-  name: "background",
+  hash: "13bbd5c08cf3fa23ae993ffb532d6b29",
+  name: "empty_voice_channel",
   type: "png",
 });

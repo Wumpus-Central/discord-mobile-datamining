@@ -1,13 +1,22 @@
 // _runtime/metro/05519__.js
-import registerAsset from "01121__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 256,
-  height: 256,
-  scales: [1],
-  hash: "08e89c7c23b84c36ce6ed8da12dbbbbb",
-  name: "img_bungie_light",
-  type: "png",
-});
+export default {
+  USE_FILE: true,
+  USE_JFIF: true,
+  USE_PNG_FILE: true,
+  USE_EXIF: true,
+  USE_IPTC: true,
+  USE_XMP: true,
+  USE_ICC: true,
+  USE_MPF: true,
+  USE_PHOTOSHOP: true,
+  USE_THUMBNAIL: true,
+  USE_TIFF: true,
+  USE_JPEG: true,
+  USE_PNG: true,
+  USE_HEIC: true,
+  USE_AVIF: true,
+  USE_WEBP: true,
+  USE_GIF: true,
+  USE_MAKER_NOTES: true,
+};

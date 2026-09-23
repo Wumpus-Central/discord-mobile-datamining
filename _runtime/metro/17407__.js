@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/app_icons/images",
-  width: 259,
-  height: 93,
-  scales: [2, 3],
-  hash: "b6b1b6176f7b7fe50aec94892b5609a1",
-  name: "app_icon_marketing",
+  httpServerLocation: "/assets/images/native/forum_channels",
+  width: 343,
+  height: 236,
+  scales: [1],
+  hash: "6e9bbbae1088530d5ab3c52a383f127c",
+  name: "channel_settings_list_view_example_post",
   type: "png",
 });

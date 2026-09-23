@@ -1,73 +1,13 @@
 // _runtime/metro/10752__.js
-import AbstractParserWithWordBoundaryChecking from "../10705_AbstractParserWithWordBoundaryChecking.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
+import registerAsset from "01121__.js";
 
-const DETimeUnitWithinFormatParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-class DETimeUnitWithinFormatParser {
-  constructor() {
-    self = this;
-    tmp = c2(this, DETimeUnitWithinFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(DETimeUnitWithinFormatParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-_inherits(DETimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    const regExp = new RegExp(
-      "(?:in|f\u00FCr|w\u00E4hrend)\\s*(" + DETimeUnitWithinFormatParser(10744).TIME_UNITS_PATTERN + ")(?=\\W|$)",
-      "i",
-    );
-    return regExp;
-  },
-};
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const ParsingComponents = DETimeUnitWithinFormatParser(10701).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(
-        reference.reference,
-        DETimeUnitWithinFormatParser(10744).parseDuration(arg1[1]),
-      );
-    },
-  },
-];
-
-export default _createClass(DETimeUnitWithinFormatParser, items);
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/perks",
+  width: 20,
+  height: 20,
+  scales: [2, 3],
+  hash: "e5fa0ec60fd37b3053a6ee815d7ed0e6",
+  name: "img_nitro_misc_perks_20px",
+  type: "png",
+});

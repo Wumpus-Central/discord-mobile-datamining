@@ -1,42 +1,25 @@
 // _runtime/metro/14622__.js
-import _mod14587 from "14587__.js";
-import _mod14609 from "14609__.js";
+import e from "../01161_e.js";
 
-const re2 = /#|\.prototype\./;
-function isForced(arg0, arg1) {
-  if (typeof fn === "function") {
-    const _String = String;
-    const str3 = String(arg0).replace(re2, ".");
-    const tmp5 = tmp[str3.toLowerCase(str3)];
-    let tmp7 = tmp5 === P;
-    if (!tmp7) {
-      if (tmp5 === N) {
-        tmp7 = tmp9;
-      } else {
-        let tmp11Result = dependencyMap;
-        if (_mod14609(arg1)) {
-          tmp11Result = _mod14587;
-          let tmp11ResultResult = tmp11Result(arg1);
-        } else {
-          tmp11ResultResult = arg1;
-        }
-      }
+e.__extends(function MissingLocaleDataError() {
+  const self = this;
+  let tmp2 = null !== Error;
+  if (!tmp2) {
+    if (!tmp2) {
+      tmp2 = self;
     }
-    return tmp7;
+    tmp2.type = "MISSING_LOCALE_DATA";
+    return tmp2;
   } else {
-    throw new TypeError("Trying to call a non-function");
+    const apply = Error.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
   }
-}
-const normalize = (arg0) => {
-  const str = String(arg0);
-  return String(arg0).replace(re2, ".").toLowerCase();
-};
-isForced.normalize = normalize;
-const data = {};
-isForced.data = data;
-isForced.NATIVE = "N";
-const N = "N";
-isForced.POLYFILL = "P";
-const P = "P";
+}, Error);
 
-export default isForced;
+export const isMissingLocaleDataError = function isMissingLocaleDataError(type) {
+  return "MISSING_LOCALE_DATA" === type.type;
+};

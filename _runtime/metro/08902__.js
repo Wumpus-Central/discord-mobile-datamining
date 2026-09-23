@@ -1,13 +1,102 @@
 // _runtime/metro/08902__.js
-import registerAsset from "01121__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import appendTransformPropsDefault from "../08811_appendTransformProps.js";
+import extractPropsDefault from "../08818_extractProps.js";
+import extractFontDefault from "../08825_extractFont.js";
+import _modDef8827 from "08827__.js";
+import _modDef8903 from "08903__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "0da6e85b52f6338da38daa05a2b6d1cc",
-  name: "ic_mic_24px",
-  type: "png",
-});
+const TSpan = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class TSpan {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_3(this, TSpan);
+    items1 = [...items];
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(TSpan);
+    tmp3 = closure_4;
+    if (closure_7()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.setNativeProps = (matrix) => {
+      matrix = matrix.matrix;
+      let tmp = !matrix;
+      if (!matrix) {
+        tmp = appendTransformPropsDefault(matrix);
+      }
+      if (tmp) {
+        matrix.matrix = tmp;
+      }
+      const propsAndStylesResult = TSpan(8818).propsAndStyles(matrix);
+      const obj = TSpan(8818);
+      const merged = Object.assign(
+        propsAndStylesResult,
+        TSpan(8819).pickNotNil(extractFontDefault(propsAndStylesResult, false)),
+      );
+      if (closure_0.root) {
+        const root = closure_0.root;
+        root.setNativeProps(propsAndStylesResult);
+      }
+      const obj2 = TSpan(8819);
+    };
+    return tmp3Result;
+  }
+}
+_inherits(TSpan, _modDef8827);
+const entry = {
+  key: "render",
+  value: function render() {
+    const propsAndStylesResult = TSpan(8818).propsAndStyles(this.props);
+    const obj2 = {};
+    const obj = TSpan(8818);
+    const merged = Object.assign(propsAndStylesResult);
+    obj2.x = null;
+    obj2.y = null;
+    const tmp2Result = extractPropsDefault(obj2, this);
+    const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, false));
+    tmp2Result.ref = this.refMethod;
+    const obj3 = {};
+    const merged2 = Object.assign(tmp2Result);
+    return jsx(_modDef8903, {});
+  },
+};
+let items = [entry];
+const importDefaultResultResult = _createClass(TSpan, items);
+importDefaultResultResult.displayName = "TSpan";
+const extractFont = fn(8825);
+extractFont.setTSpan(importDefaultResultResult);
+
+export default importDefaultResultResult;

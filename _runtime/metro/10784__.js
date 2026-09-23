@@ -1,13 +1,14 @@
 // _runtime/metro/10784__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import AbstractParserWithWordBoundaryChecking from "../10705_AbstractParserWithWordBoundaryChecking.js";
-import now from "../10722_now.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
+import _mod10773 from "10773__.js";
+import repeatedTimeunitPattern from "../10774_repeatedTimeunitPattern.js";
+import AbstractParserWithWordBoundaryChecking from "../10781_AbstractParserWithWordBoundaryChecking.js";
+import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-let self = this;
+const ENMonthNameParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,127 +27,77 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let __setModuleDefault = self;
-  if (self) {
-    __setModuleDefault = self.__setModuleDefault;
+const regExp = new RegExp(
+  "((?:in)\\s*)?(" +
+    repeatedTimeunitPattern.matchAnyPattern(_mod10773.MONTH_DICTIONARY) +
+    ")\\s*(?:(?:,|-|of)?\\s*(" +
+    _mod10773.YEAR_PATTERN +
+    ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)",
+  "i",
+);
+class ENMonthNameParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, ENMonthNameParser);
+    tmp2 = closure_4;
+    obj = closure_4(ENMonthNameParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
   }
-  if (__setModuleDefault) {
-    let fn = self;
-    if (self) {
-      fn = self.__importStar;
-    }
-    if (!fn) {
-      fn = function u(arg0) {
-        fn = Object.getOwnPropertyNames;
-        if (!fn) {
-          fn = (obj) => {
-            const items = [];
-            for (const key10005 in arg0) {
-              let _Object = Object;
-              hasOwnProperty = Object.prototype.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              if (typeof call === "unknown") {
-                let hasOwnPropertyResult = hasOwnProperty(key10005);
-              } else {
-                hasOwnPropertyResult = call(arg0, key10005);
-              }
-              if (!hasOwnPropertyResult) {
-                continue;
-              } else {
-                items[items.length] = key10005;
-                continue;
-              }
-              continue;
-            }
-            return items;
-          };
+}
+_inherits(ENMonthNameParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const entry = {
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
+  },
+};
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(createParsingResult, index) {
+      const formatted = index[2].toLowerCase();
+      if (index[0].length <= 3) {
+        if (!ENMonthNameParser(10773).FULL_MONTH_NAME_DICTIONARY[formatted]) {
+          return null;
         }
-        return fn(arg0);
-      };
-      fn = (__esModule) => {
-        if (__esModule) {
-          if (__esModule.__esModule) {
-            return __esModule;
-          }
-        }
-        const obj = {};
-        if (null != __esModule) {
-          const arr = fn(__esModule);
-          for (let num = 0; num < arr.length; num = num + 1) {
-            if ("default" !== arr[num]) {
-              let tmp4 = self2(obj, __esModule, arr[num]);
-            }
-          }
-        }
-        __setModuleDefault(obj, __esModule);
-        return obj;
-      };
-    }
-    const _Object3 = Object;
-    let closure_7 = fn(now);
-    class PTCasualDateParser {
-      constructor() {
-        self = this;
-        tmp = closure_0(this, PTCasualDateParser);
-        tmp2 = c2;
-        obj = c2(PTCasualDateParser);
-        tmp3 = closure_1;
-        if (closure_3()) {
-          tmp7 = globalThis;
-          _Reflect = Reflect;
-          tmp8 = arguments;
-          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-        } else {
-          tmp4 = arguments;
-          tmp5 = arguments;
-          constructResult = obj(...arguments);
-        }
-        return tmp3(self, constructResult);
       }
-    }
-    _classCallCheck = PTCasualDateParser;
-    _inherits(PTCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-    const entry = {
-      key: "innerPattern",
-      value: function innerPattern(arg0) {
-        return /(agora|hoje|amanha|amanhã|ontem)(?=\W|$)/i;
-      },
-    };
-    let items = [entry];
-    const entry1 = {
-      key: "innerExtract",
-      value: function innerExtract(reference, arg1) {
-        const formatted = arg1[0].toLowerCase();
-        if ("agora" === formatted) {
-          return closure_7.now(reference.reference);
-        } else if ("hoje" === formatted) {
-          return closure_7.today(reference.reference);
-        } else {
-          if ("amanha" !== formatted) {
-            if ("amanh\u00E3" !== formatted) {
-              if ("ontem" === formatted) {
-                return closure_7.yesterday(reference.reference);
-              } else {
-                return tmp2;
-              }
-            }
-          }
-          return closure_7.tomorrow(reference.reference);
-        }
-      },
-    };
-    items[1] = entry1;
-    exports.default = _createClass(PTCasualDateParser, items);
-  } else {
-    const _Object2 = Object;
-  }
-} else {
-  let _Object = Object;
-}
+      let str2 = index[1];
+      if (!str2) {
+        str2 = "";
+      }
+      const parsingResult = createParsingResult.createParsingResult(
+        index.index + str2.length,
+        index.index + index[0].length,
+      );
+      const start = parsingResult.start;
+      start.imply("day", 1);
+      const start2 = parsingResult.start;
+      start2.addTag("parser/ENMonthNameParser");
+      const tmp10 = ENMonthNameParser(10773).MONTH_DICTIONARY[formatted];
+      const start3 = parsingResult.start;
+      start3.assign("month", tmp10);
+      if (index[3]) {
+        const start5 = parsingResult.start;
+        start5.assign("year", ENMonthNameParser(10773).parseYear(index[3]));
+      } else {
+        const start4 = parsingResult.start;
+        start4.imply("year", ENMonthNameParser(10775).findYearClosestToRef(createParsingResult.refDate, 1, tmp10));
+      }
+      return parsingResult;
+    },
+  },
+];
+
+export default _createClass(ENMonthNameParser, items);

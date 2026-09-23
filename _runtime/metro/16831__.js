@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "2bf7738cbb1d2827663b492fedbd65fb",
-  name: "MedalIcon",
+  hash: "55929208ca176923ba23d97478360818",
+  name: "ic_guild_grid_24px",
   type: "png",
 });

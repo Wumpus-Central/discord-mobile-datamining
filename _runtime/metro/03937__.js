@@ -1,28 +1,42 @@
 // _runtime/metro/03937__.js
-import 02117__ from "02117__.js";
+import 03938__ from "03938__.js";
+import 03939__ from "03939__.js";
+import 03940__ from "03940__.js";
+import date_mod from "03941__.js";
+import date_mod from "03942__.js";
 
-if (!module_2117) {
-  const obj2 = { default: module_2117 };
-  let obj = obj2;
+if (!module_3938) {
+  const obj = { default: module_3938 };
+  let tmp3 = obj;
 } else {
-  obj = module_2117;
+  tmp3 = module_3938;
 }
-const date = {
-  ordinalNumber(arg0, arg1) {
-    return Number(arg0) + "e";
-  },
-  era: obj.default({ values: { narrow: ["v.C.", "n.C."], abbreviated: ["v.Chr.", "n.Chr."], wide: ["voor Christus", "na Christus"] }, defaultWidth: "wide" }),
-  quarter: obj.default({
-    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["K1", "K2", "K3", "K4"], wide: ["1e kwartaal", "2e kwartaal", "3e kwartaal", "4e kwartaal"] },
-    defaultWidth: "wide",
-    argumentCallback(arg0) {
-      return arg0 - 1;
-    }
-  }),
-  month: obj.default({ values: { narrow: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], abbreviated: ["jan.", "feb.", "mrt.", "apr.", "mei", "jun.", "jul.", "aug.", "sep.", "okt.", "nov.", "dec."], wide: ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"] }, defaultWidth: "wide" }),
-  day: obj.default({ values: { narrow: ["Z", "M", "D", "W", "D", "V", "Z"], short: ["zo", "ma", "di", "wo", "do", "vr", "za"], abbreviated: ["zon", "maa", "din", "woe", "don", "vri", "zat"], wide: ["zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag"] }, defaultWidth: "wide" }),
-  dayPeriod: obj.default({ values: { narrow: { am: "AM", pm: "PM", midnight: "middernacht", noon: "het middaguur", morning: "'s ochtends", afternoon: "'s middags", evening: "'s avonds", night: "'s nachts" }, abbreviated: { am: "AM", pm: "PM", midnight: "middernacht", noon: "het middaguur", morning: "'s ochtends", afternoon: "'s middags", evening: "'s avonds", night: "'s nachts" }, wide: { am: "AM", pm: "PM", midnight: "middernacht", noon: "het middaguur", morning: "'s ochtends", afternoon: "'s middags", evening: "'s avonds", night: "'s nachts" } }, defaultWidth: "wide" })
-};
+if (!module_3939) {
+  const obj2 = { default: module_3939 };
+  let tmp5 = obj2;
+} else {
+  tmp5 = module_3939;
+}
+if (!module_3940) {
+  const obj3 = { default: module_3940 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_3940;
+}
+let date = date_mod;
+if (!date) {
+  const obj4 = { default: date };
+  let tmp9 = obj4;
+} else {
+  tmp9 = date;
+}
+let date = date_mod;
+if (!date) {
+  const obj5 = { default: date };
+  let tmp11 = obj5;
+} else {
+  tmp11 = date;
+}
 
-export default date;
+export default { code: "el", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
 export default exports.default;

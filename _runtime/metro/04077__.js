@@ -1,285 +1,35 @@
 // _runtime/metro/04077__.js
-import throwProtectedError from "../04092_throwProtectedError.js";
-import module_4027_mod from "04027__.js";
-import subMilliseconds_mod from "../04078_subMilliseconds.js";
-import _typeof_mod from "03845__.js";
-import G from "../04079_G.js";
-import dateLongFormatter_mod from "../04090_dateLongFormatter.js";
-import module_4008_mod from "04008__.js";
-import module_3849_mod from "03849__.js";
-import requiredArgs_mod from "../03846_requiredArgs.js";
-import code_mod from "04091__.js";
+import module_3915_mod from "03915__.js";
+import module_4060_mod from "04060__.js";
+import requiredArgs_mod from "../03912_requiredArgs.js";
 
-const require = globalThis.__r;
-
-let module_4027 = module_4027_mod;
-if (!module_4027) {
-  const obj = { default: module_4027 };
+let module_3915 = module_3915_mod;
+if (!module_3915) {
+  const obj = { default: module_3915 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4027;
+  tmp3 = module_3915;
 }
-module_4027 = tmp3;
-let subMilliseconds = subMilliseconds_mod;
-if (!subMilliseconds) {
-  let obj2 = { default: subMilliseconds };
+module_3915 = tmp3;
+let module_4060 = module_4060_mod;
+if (!module_4060) {
+  const obj2 = { default: module_4060 };
   let tmp5 = obj2;
 } else {
-  tmp5 = subMilliseconds;
+  tmp5 = module_4060;
 }
-subMilliseconds = tmp5;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj3 = { default: _typeof };
-  let tmp7 = obj3;
-} else {
-  tmp7 = _typeof;
-}
-_typeof = tmp7;
-if (!G) {
-  const obj4 = { default: G };
-  let tmp9 = obj4;
-} else {
-  tmp9 = G;
-}
-let closure_5 = tmp9;
-let dateLongFormatter = dateLongFormatter_mod;
-if (!dateLongFormatter) {
-  const obj5 = { default: dateLongFormatter };
-  let tmp11 = obj5;
-} else {
-  tmp11 = dateLongFormatter;
-}
-dateLongFormatter = tmp11;
-let module_4008 = module_4008_mod;
-if (!module_4008) {
-  const obj6 = { default: module_4008 };
-  let tmp13 = obj6;
-} else {
-  tmp13 = module_4008;
-}
-module_4008 = tmp13;
-let module_3849 = module_3849_mod;
-if (!module_3849) {
-  const obj7 = { default: module_3849 };
-  let tmp15 = obj7;
-} else {
-  tmp15 = module_3849;
-}
-module_3849 = tmp15;
+module_4060 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj8 = { default: requiredArgs };
-  let tmp17 = obj8;
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
-  tmp17 = requiredArgs;
+  tmp7 = requiredArgs;
 }
-requiredArgs = tmp17;
-let code = code_mod;
-if (!code) {
-  const obj9 = { default: code };
-  let tmp19 = obj9;
-} else {
-  tmp19 = code;
-}
-code = tmp19;
-const re11 = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g;
-const re12 = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g;
-const re13 = /^'([^]*?)'?$/;
-const re14 = /''/g;
-const re15 = /[a-zA-Z]/;
+requiredArgs = tmp7;
 
-export default function format(arg0, arg1, locale) {
-  _require = arg0;
-  dependencyMap = arg1;
-  module_4027 = locale;
+export default function addQuarters(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultOptions = require("03850__.js").getDefaultOptions();
-  let locale1;
-  if (null != locale) {
-    locale1 = locale.locale;
-  }
-  if (null === locale1) {
-    locale1 = defaultOptions.locale;
-  }
-  if (null === locale1) {
-    locale1 = code.default;
-  }
-  let prop;
-  if (null != locale) {
-    prop = locale.firstWeekContainsDate;
-  }
-  if (null === prop) {
-    let prop1;
-    if (null != locale) {
-      locale = locale.locale;
-      if (null !== locale) {
-        if (undefined !== locale) {
-          const options = locale.options;
-          if (null !== options) {
-            if (undefined !== options) {
-              prop1 = options.firstWeekContainsDate;
-            }
-          }
-        }
-      }
-    }
-    prop = prop1;
-  }
-  if (null === prop) {
-    prop = defaultOptions.firstWeekContainsDate;
-  }
-  if (null === prop) {
-    const locale2 = defaultOptions.locale;
-    let prop2;
-    if (null !== locale2) {
-      if (undefined !== locale2) {
-        const options2 = locale2.options;
-        if (null !== options2) {
-          if (undefined !== options2) {
-            prop2 = options2.firstWeekContainsDate;
-          }
-        }
-      }
-    }
-    prop = prop2;
-  }
-  let num = 1;
-  if (null !== prop) {
-    num = 1;
-    if (undefined !== prop) {
-      num = prop;
-    }
-  }
-  const defaultResult1 = module_3849.default(num);
-  if (defaultResult1 >= 1) {
-    if (defaultResult1 <= 7) {
-      let weekStartsOn;
-      if (null != locale) {
-        weekStartsOn = locale.weekStartsOn;
-      }
-      if (null === weekStartsOn) {
-        let weekStartsOn1;
-        if (null != locale) {
-          const locale3 = locale.locale;
-          if (null !== locale3) {
-            if (undefined !== locale3) {
-              const options3 = locale3.options;
-              if (null !== options3) {
-                if (undefined !== options3) {
-                  weekStartsOn1 = options3.weekStartsOn;
-                }
-              }
-            }
-          }
-        }
-        weekStartsOn = weekStartsOn1;
-      }
-      if (null === weekStartsOn) {
-        weekStartsOn = defaultOptions.weekStartsOn;
-      }
-      if (null === weekStartsOn) {
-        const locale4 = defaultOptions.locale;
-        let weekStartsOn2;
-        if (null !== locale4) {
-          if (undefined !== locale4) {
-            const options4 = locale4.options;
-            if (null !== options4) {
-              if (undefined !== options4) {
-                weekStartsOn2 = options4.weekStartsOn;
-              }
-            }
-          }
-        }
-        weekStartsOn = weekStartsOn2;
-      }
-      let num4 = 0;
-      if (null !== weekStartsOn) {
-        num4 = 0;
-        if (undefined !== weekStartsOn) {
-          num4 = weekStartsOn;
-        }
-      }
-      const defaultResult2 = module_3849.default(num4);
-      if (defaultResult2 >= 0) {
-        if (defaultResult2 <= 6) {
-          if (locale1.localize) {
-            if (locale1.formatLong) {
-              const defaultResult3 = _typeof.default(arg0);
-              if (module_4027.default(defaultResult3)) {
-                _typeof = locale1.default(defaultResult3, module_4008.default(defaultResult3));
-                const obj2 = { firstWeekContainsDate: defaultResult1, weekStartsOn: defaultResult2, locale: locale1, _originalDate: defaultResult3 };
-                let match = str.match(closure_12);
-                const mapped = match.map((item) => {
-                  const first = item[0];
-                  if ("p" === first) {
-                    let tmp2 = dateLongFormatter.default[first](item, locale1.formatLong);
-                  } else {
-                    tmp2 = item;
-                  }
-                  return tmp2;
-                });
-                const match1 = mapped.join("").match(closure_11);
-                const mapped1 = match1.map((item) => {
-                  let str = item;
-                  if ("''" === item) {
-                    return "'";
-                  } else if ("'" === str[0]) {
-                    const match = str.match(re13);
-                    if (match) {
-                      str = match[1].replace(re14, "'");
-                    }
-                    return str;
-                  } else if (obj2.default[str6]) {
-                    let tmp9 = null != locale && locale.useAdditionalWeekYearTokens;
-                    if (!tmp9) {
-                      tmp9 = !throwProtectedError.isProtectedWeekYearToken(str);
-                    }
-                    if (!tmp9) {
-                      const _String = String;
-                      throwProtectedError.throwProtectedError(str, closure_1, String(closure_0));
-                    }
-                    let tmp18 = null != locale && locale.useAdditionalDayOfYearTokens;
-                    if (!tmp18) {
-                      tmp18 = !throwProtectedError.isProtectedDayOfYearToken(str);
-                    }
-                    if (!tmp18) {
-                      const _String2 = String;
-                      throwProtectedError.throwProtectedError(str, closure_1, String(closure_0));
-                    }
-                    return tmp35(closure_4, str, locale1.localize, obj2);
-                  } else if (str6.match(re15)) {
-                    const _RangeError = RangeError;
-                    const rangeError = new RangeError("Format string contains an unescaped latin alphabet character `" + str6 + "`");
-                    throw rangeError;
-                  } else {
-                    return str;
-                  }
-                });
-                return mapped1.join("");
-              } else {
-                const _RangeError4 = RangeError;
-                let rangeError = new RangeError("Invalid time value");
-                throw rangeError;
-              }
-            } else {
-              const _RangeError3 = RangeError;
-              const rangeError1 = new RangeError("locale must contain formatLong property");
-              throw rangeError1;
-            }
-          } else {
-            const _RangeError2 = RangeError;
-            const rangeError2 = new RangeError("locale must contain localize property");
-            throw rangeError2;
-          }
-        }
-      }
-      let _RangeError = RangeError;
-      const rangeError3 = new RangeError("weekStartsOn must be between 0 and 6 inclusively");
-      throw rangeError3;
-    }
-  }
-  const rangeError4 = new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
-  throw rangeError4;
+  return module_4060.default(arg0, 3 * module_3915.default(arg1));
 };
 export default exports.default;

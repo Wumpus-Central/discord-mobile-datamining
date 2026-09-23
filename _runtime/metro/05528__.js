@@ -1,13 +1,26 @@
 // _runtime/metro/05528__.js
-import registerAsset from "01121__.js";
+import findOffsets from "../05525_findOffsets.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
-  scales: [1],
-  hash: "e0157f8261da28670f8ce7828f01db25",
-  name: "img_account_sync_skype_white",
-  type: "svg",
-});
+require = arg1;
+const dependencyMap = arg6;
+
+export default {
+  isAvifFile(getUint32) {
+    if (getUint32) {
+      try {
+        let parseBoxResult = findOffsets.parseBox(getUint32, 0);
+        if (parseBoxResult) {
+          parseBoxResult = "avif" === parseBoxResult.majorBrand;
+        }
+        return parseBoxResult;
+      } catch (err) {
+        return false;
+      }
+    } else {
+      return false;
+    }
+  },
+  findAvifOffsets(byteLength) {
+    return findOffsets.findOffsets(byteLength);
+  },
+};

@@ -1,12 +1,13 @@
 // _runtime/metro/10883__.js
-import Filter from "../10717_Filter.js";
+import AbstractParserWithWordBoundaryChecking from "../10781_AbstractParserWithWordBoundaryChecking.js";
+import NUMBER from "../10882_NUMBER.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ENMergeRelativeDateRefiner = require;
+const ZHHansDeadlineFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +26,19 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class ENMergeRelativeDateRefiner {
+const keys = Object.keys(NUMBER.NUMBER);
+const regExp = new RegExp(
+  "(\\d+|[" +
+    keys.join("") +
+    "]+|\u534A|\u51E0)(?:\\s*)(?:\u4E2A)?(\u79D2(?:\u949F)?|\u5206\u949F|\u5C0F\u65F6|\u949F|\u65E5|\u5929|\u661F\u671F|\u793C\u62DC|\u6708|\u5E74)(?:(?:\u4E4B|\u8FC7)?\u540E|(?:\u4E4B)?\u5185)",
+  "i",
+);
+class ZHHansDeadlineFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, ENMergeRelativeDateRefiner);
+    tmp = c2(this, ZHHansDeadlineFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(ENMergeRelativeDateRefiner);
+    obj = closure_4(ZHHansDeadlineFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,67 +53,88 @@ class ENMergeRelativeDateRefiner {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ENMergeRelativeDateRefiner, Filter.MergingRefiner);
+_inherits(ZHHansDeadlineFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    return /^\s*$/i;
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   },
 };
 const items = [
   entry,
   {
-    key: "shouldMergeResults",
-    value: function shouldMergeResults(str, text, start) {
-      let match = str.match(this.patternBetween());
-      if (match) {
-        const tmp4 = null != text.text.match(/\s+(prima|dal)$/i);
-        let tmp5 = !tmp4;
-        if (!tmp4) {
-          tmp5 = null == text.text.match(/\s+(dopo|dal|fino)$/i);
-        }
-        let tmp6 = !tmp5;
-        if (!tmp5) {
-          start = start.start;
-          value = start.get("day");
-          if (value) {
-            const start2 = start.start;
-            value = start2.get("month");
-          }
-          if (value) {
-            const start3 = start.start;
-            value = start3.get("year");
-          }
-          tmp6 = value;
-        }
-        match = tmp6;
+    key: "innerExtract",
+    value: function innerExtract(createParsingResult, index) {
+      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
+      let num = parseInt(index[1]);
+      if (isNaN(num)) {
+        num = ZHHansDeadlineFormatParser(10882).zhStringToNumber(index[1]);
       }
-      return match;
-    },
-  },
-  {
-    key: "mergeResults",
-    value: function mergeResults(arg0, text, start) {
-      const parseDurationResult = ENMergeRelativeDateRefiner(10867).parseDuration(text.text);
-      let reverseDurationResult = parseDurationResult;
-      if (null != str.match(/\s+(prima|dal)$/i)) {
-        reverseDurationResult = ENMergeRelativeDateRefiner(10700).reverseDuration(parseDurationResult);
+      if (isNaN(num)) {
+        num = 3;
+        if ("\u51E0" !== index[1]) {
+          num = 0.5;
+          if ("\u534A" !== tmp4) {
+            return null;
+          }
+        }
       }
-      const ParsingComponents = ENMergeRelativeDateRefiner(10701).ParsingComponents;
-      const ReferenceWithTimezone = ENMergeRelativeDateRefiner(10701).ReferenceWithTimezone;
-      start = start.start;
-      const relativeFromReference = ParsingComponents.createRelativeFromReference(
-        ReferenceWithTimezone.fromDate(start.date()),
-        reverseDurationResult,
-      );
-      return new ENMergeRelativeDateRefiner(10701).ParsingResult(
-        start.reference,
-        text.index,
-        "" + text.text + arg0 + start.text,
-        relativeFromReference,
-      );
+      const obj = {};
+      if (index[2][0].match(/[日天星礼月年]/)) {
+        if ("\u65E5" != str3) {
+          if ("\u5929" != str3) {
+            if ("\u661F" != str3) {
+              if ("\u793C" != str3) {
+                if ("\u6708" == str3) {
+                  obj.month = num;
+                } else if ("\u5E74" == str3) {
+                  obj.year = num;
+                }
+              }
+            }
+            obj.week = num;
+          }
+          const addDurationResult = ZHHansDeadlineFormatParser(10776).addDuration(createParsingResult.refDate, obj);
+          const start7 = parsingResult.start;
+          start7.assign("year", addDurationResult.getFullYear());
+          const start8 = parsingResult.start;
+          start8.assign("month", addDurationResult.getMonth() + 1);
+          const start9 = parsingResult.start;
+          start9.assign("day", addDurationResult.getDate());
+          return parsingResult;
+        }
+        obj.day = num;
+      } else {
+        if ("\u79D2" == str3) {
+          obj.second = num;
+        } else if ("\u5206" == str3) {
+          obj.minute = num;
+        } else {
+          let tmp6 = "\u5C0F" != str3;
+          if (tmp6) {
+            tmp6 = "\u949F" != str3;
+          }
+          if (!tmp6) {
+            obj.hour = num;
+          }
+        }
+        const addDurationResult1 = ZHHansDeadlineFormatParser(10776).addDuration(createParsingResult.refDate, obj);
+        const start = parsingResult.start;
+        start.imply("year", addDurationResult1.getFullYear());
+        const start2 = parsingResult.start;
+        start2.imply("month", addDurationResult1.getMonth() + 1);
+        const start3 = parsingResult.start;
+        start3.imply("day", addDurationResult1.getDate());
+        const start4 = parsingResult.start;
+        start4.assign("hour", addDurationResult1.getHours());
+        const start5 = parsingResult.start;
+        start5.assign("minute", addDurationResult1.getMinutes());
+        const start6 = parsingResult.start;
+        start6.assign("second", addDurationResult1.getSeconds());
+        return parsingResult;
+      }
     },
   },
 ];
 
-export default _createClass(ENMergeRelativeDateRefiner, items);
+export default _createClass(ZHHansDeadlineFormatParser, items);

@@ -1,13 +1,41 @@
 // _runtime/metro/07216__.js
-import registerAsset from "01121__.js";
+import _mod7217 from "07217__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "1b06201c0ce237bba30c4db64f994263",
-  name: "EyeIcon",
-  type: "png",
-});
+function _get() {
+  if (typeof Reflect !== "undefined") {
+    const _Reflect2 = Reflect;
+    if (Reflect.get) {
+      const _Reflect = Reflect;
+      exports = get.bind();
+    }
+    module.exports = exports;
+    const apply = exports.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(null);
+    } else {
+      applyArgumentsResult = apply(null, arguments);
+    }
+    return applyArgumentsResult;
+  }
+  exports = (arg0, arg1, arg2) => {
+    const tmp = _mod7217(arg0, arg1);
+    if (tmp) {
+      const _Object = Object;
+      const iter = Object.getOwnPropertyDescriptor(tmp, arg1);
+      if (iter.get) {
+        let tmp3 = arg2;
+        const get = iter.get;
+        const call = get.call;
+        if (arguments.length < 3) {
+          tmp3 = arg0;
+        }
+        typeof call === "unknown" ? get() : call(tmp3);
+      } else {
+        return iter.value;
+      }
+    }
+  };
+}
+let exports = _get;
+
+export default _get;

@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/native/images/perks",
-  width: 300,
-  height: 175,
-  scales: [2, 3],
-  hash: "69d07b73ba14be901804955fa84a0ead",
-  name: "grey_badge",
+  httpServerLocation: "/assets/modules/saved_messages",
+  width: 297,
+  height: 238,
+  scales: [1],
+  hash: "ee27927c992063817a4891d6fea39469",
+  name: "wumpus-bookmark",
   type: "png",
 });

@@ -1,13 +1,9 @@
 // _runtime/metro/07185__.js
-import registerAsset from "01121__.js";
+import _mod7186 from "07186__.js";
+import _mod7187 from "07187__.js";
+import _mod7188 from "07188__.js";
+import _mod7190 from "07190__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "2f67acde4c60441cfd2d6684d11b6d76",
-  name: "ic_close_circle_24px",
-  type: "png",
-});
+export default function _slicedToArray(arg0, arg1) {
+  return _mod7186(arg0) || _mod7187(arg0, arg1) || _mod7188(arg0, arg1) || _mod7190();
+}

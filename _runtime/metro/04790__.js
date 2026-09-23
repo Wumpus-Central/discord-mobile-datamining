@@ -1,27 +1,13 @@
 // _runtime/metro/04790__.js
-import baseIteratee from "../00584_baseIteratee.js";
-import _mod4791 from "04791__.js";
-import baseFindIndex from "../04793_baseFindIndex.js";
+import registerAsset from "01121__.js";
 
-export default function findLastIndex(arg0, arg1, arg2) {
-  let num = 0;
-  if (null != arg0) {
-    num = arg0.length;
-  }
-  if (num) {
-    const diff = num - 1;
-    if (undefined === arg2) {
-      return baseFindIndex(arg0, baseIteratee(arg1, 3), diff, true);
-    } else {
-      let sum = _mod4791(arg2);
-      if (arg2 < 0) {
-        sum = num + sum;
-        let tmp7 = max(sum, 0);
-      } else {
-        tmp7 = min(sum, num - 1);
-      }
-    }
-  } else {
-    return -1;
-  }
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "d43523873b246ea97ff723dd8970498f",
+  name: "ClockIcon",
+  type: "png",
+});

@@ -1,9 +1,13 @@
 // _runtime/metro/08579__.js
-import _modDef8580 from "08580__.js";
+import registerAsset from "01121__.js";
 
-importDefault = arg2;
-const dependencyMap = arg6;
-
-export default function getWebViewProxy(FRAME_WEB_VIEW_KEY) {
-  return new _modDef8580(FRAME_WEB_VIEW_KEY);
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
+  width: 160,
+  height: 160,
+  scales: [2, 3],
+  hash: "abf5b4249ea38c96687799aa130b2321",
+  name: "img_no_results_darker",
+  type: "png",
+});

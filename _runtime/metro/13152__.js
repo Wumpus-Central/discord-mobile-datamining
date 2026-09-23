@@ -1,62 +1,68 @@
 // _runtime/metro/13152__.js
-import _mod13054 from "13054__.js";
-import _mod13081 from "13081__.js";
-import _mod13082 from "13082__.js";
+import _mod13142 from "13142__.js";
+import _slicedToArray from "00032__.js";
 
-require = arg1;
-const dependencyMap = arg6;
+const _sentryMetrics = "_sentryMetrics";
 
-export const profiler = {
-  startProfiler() {
-    const client = _mod13081.getClient();
-    if (client) {
-      const integrationByName = client.getIntegrationByName("ProfilingIntegration");
-      if (integrationByName) {
-        if (tmp6) {
-          const _profiler = integrationByName._profiler;
-          _profiler.start();
-        } else if (_mod13082.DEBUG_BUILD) {
-          const logger3 = _mod13054.logger;
-          logger3.warn("Profiler is not available on profiling integration.");
-        }
-        tmp6 =
-          integrationByName &&
-          undefined !== integrationByName._profiler &&
-          typeof integrationByName._profiler.start === "function" &&
-          typeof integrationByName._profiler.stop === "function";
-      } else if (_mod13082.DEBUG_BUILD) {
-        const logger2 = _mod13054.logger;
-        logger2.warn("ProfilingIntegration is not available");
+export const getMetricSummaryJsonForSpan = function getMetricSummaryJsonForSpan(self) {
+  if (self[_sentryMetrics]) {
+    const obj = {};
+    const tmp3 = tmp[Symbol.iterator]();
+    while (tmp3 !== undefined) {
+      let tmp8 = _slicedToArray(_slicedToArray(tmp5, 2)[1], 2);
+      [tmp9, tmp11] = tmp8;
+      let arr = obj[tmp9];
+      if (!arr) {
+        let items = [];
+        obj[tmp10] = items;
+        arr = items;
       }
-    } else if (_mod13082.DEBUG_BUILD) {
-      const logger = _mod13054.logger;
-      logger.warn("No Sentry client available, profiling is not started");
+      let obj2 = _mod13142;
+      let arr2 = arr.push(obj2.dropUndefinedKeys(tmp11));
+      continue;
     }
-  },
-  stopProfiler() {
-    const client = _mod13081.getClient();
-    if (client) {
-      const integrationByName = client.getIntegrationByName("ProfilingIntegration");
-      if (integrationByName) {
-        if (tmp6) {
-          const _profiler = integrationByName._profiler;
-          _profiler.stop();
-        } else if (_mod13082.DEBUG_BUILD) {
-          const logger3 = _mod13054.logger;
-          logger3.warn("Profiler is not available on profiling integration.");
-        }
-        tmp6 =
-          integrationByName &&
-          undefined !== integrationByName._profiler &&
-          typeof integrationByName._profiler.start === "function" &&
-          typeof integrationByName._profiler.stop === "function";
-      } else if (_mod13082.DEBUG_BUILD) {
-        const logger2 = _mod13054.logger;
-        logger2.warn("ProfilingIntegration is not available");
-      }
-    } else if (_mod13082.DEBUG_BUILD) {
-      const logger = _mod13054.logger;
-      logger.warn("No Sentry client available, profiling is not started");
-    }
-  },
+    return obj;
+  }
+};
+export const updateMetricSummaryOnSpan = function updateMetricSummaryOnSpan(
+  activeSpan,
+  metricType,
+  sanitizeMetricKeyResult,
+  min,
+  sanitizeUnitResult,
+  tags,
+  bucketKey,
+) {
+  let obj = activeSpan[_sentryMetrics];
+  if (!obj) {
+    const _Map = Map;
+    const map = new Map();
+    activeSpan[tmp] = map;
+    obj = map;
+  }
+  const combined = "" + metricType + ":" + sanitizeMetricKeyResult + "@" + sanitizeUnitResult;
+  value = obj.get(bucketKey);
+  if (value) {
+    const range = _slicedToArray(value, 2)[1];
+    const items = [combined];
+    const range1 = { min: null, max: null, count: null, sum: null, tags: null };
+    const _Math = Math;
+    range1.min = Math.min(range.min, min);
+    const _Math2 = Math;
+    range1.max = Math.max(range.max, min);
+    const sum = range.count + 1;
+    range.count = sum;
+    range1.count = sum;
+    const sum1 = range.sum + min;
+    range.sum = sum1;
+    range1.sum = sum1;
+    range1.tags = range.tags;
+    items[1] = range1;
+    const result = obj.set(bucketKey, items);
+  } else {
+    const items1 = [combined];
+    const range2 = { min, max: min, count: 1, sum: min, tags };
+    items1[1] = range2;
+    const result1 = obj.set(bucketKey, items1);
+  }
 };

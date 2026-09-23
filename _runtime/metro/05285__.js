@@ -1,13 +1,12 @@
 // _runtime/metro/05285__.js
-import registerAsset from "01121__.js";
+import _modDef5286 from "05286__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "0e8c9cd01e5a3da643cc71e6763376dc",
-  name: "ExperimentalLfgLockIcon",
-  type: "png",
-});
+const require = globalThis.__r;
+
+for (const key10016 in require("05286__.js")) {
+  arg5[key10016] = require("05286__.js")[key10016];
+  continue;
+}
+
+export default _modDef5286;
+export const LinearGradient = _modDef5286;
