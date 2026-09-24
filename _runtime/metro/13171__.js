@@ -1,39 +1,19 @@
 // _runtime/metro/13171__.js
-import _mod13143 from "13143__.js";
+import _mod13146 from "13146__.js";
+import ScopeClass from "../13166_ScopeClass.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const handleCallbackErrors = function handleCallbackErrors(fn, arg1) {
-  fn = arg2;
-  if (arg2 === undefined) {
-    fn = function t() {};
-  }
-  try {
-    return (function maybeHandlePromiseRejection(promise, arg1, fn) {
-      closure_0 = arg1;
-      closure_1 = fn;
-      if (obj.isThenable(promise)) {
-        return promise.then(
-          (result) => {
-            closure_1();
-            return result;
-          },
-          (arg0) => {
-            closure_0(arg0);
-            closure_1();
-            throw arg0;
-          },
-        );
-      } else {
-        fn();
-        return promise;
-      }
-      obj = _mod13143;
-    })(fn(), arg1, fn);
-  } catch (tmp5) {
-    tmp3(tmp5);
-    tmp2();
-    throw tmp5;
-  }
+export const getDefaultCurrentScope = function getDefaultCurrentScope() {
+  return _mod13146.getGlobalSingleton("defaultCurrentScope", () => {
+    const scope = new ScopeClass.Scope();
+    return scope;
+  });
+};
+export const getDefaultIsolationScope = function getDefaultIsolationScope() {
+  return _mod13146.getGlobalSingleton("defaultIsolationScope", () => {
+    const scope = new ScopeClass.Scope();
+    return scope;
+  });
 };

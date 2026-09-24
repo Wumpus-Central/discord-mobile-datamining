@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/badge",
-  width: 30,
-  height: 30,
-  scales: [2, 3],
-  hash: "394e48046e846651a339ee88e4f1b0b4",
-  name: "ic_profile_badge_active_developer",
+  httpServerLocation: "/assets/modules/voice_panel/native/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3, 4],
+  hash: "0cb7c4a68220aef405b92da8324026d2",
+  name: "camera-swap",
   type: "png",
 });

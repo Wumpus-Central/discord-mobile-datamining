@@ -16539,10 +16539,10 @@ __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.S = (arg0, obj) 
         tmp5 = tmp6;
       }
       c124 = tmp5;
-      { status: "pending", value: "Array", then: "\u{1F468}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FD}" }.then = function then(arg0) {
+      { status: "pending", value: "Array", then: "a" }.then = function then(arg0) {
         items.push(arg0);
       };
-      obj2 = { status: "pending", value: "Array", then: "\u{1F468}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FD}" };
+      obj2 = { status: "pending", value: "Array", then: "a" };
     }
     closure_123 = closure_123 + 1;
     obj.then(pingEngtangledActionScope, pingEngtangledActionScope);

@@ -1,30 +1,12 @@
 // _runtime/metro/14734__.js
-import _mod17 from "00017__.js";
-import replaceByteInByteSequence from "../14735_replaceByteInByteSequence.js";
+import _mod14672 from "14672__.js";
+import all from "14698__.js";
 
-let closure_0 = null;
-const BlobModule = _mod17.NativeModules.BlobModule;
-let tmp2 = BlobModule;
-if (BlobModule) {
-  tmp2 = typeof BlobModule.BLOB_URI_SCHEME === "string";
+let _moduleResult = all(_mod14672.WeakMap);
+if (_moduleResult) {
+  const _String = String;
+  _moduleResult = /native code/.test(String(_mod14672.WeakMap));
+  const obj = /native code/;
 }
-if (tmp2) {
-  closure_0 = `${BlobModule.BLOB_URI_SCHEME}:`;
-  if (typeof BlobModule.BLOB_URI_HOST === "string") {
-    let _HermesInternal = HermesInternal;
-    closure_0 = `${BlobModule.BLOB_URI_SCHEME}:` + "//" + BlobModule.BLOB_URI_HOST + "/";
-  }
-}
-replaceByteInByteSequence.URL.createObjectURL = function createObjectURL(data) {
-  if (null === closure_0) {
-    const _Error = Error;
-    const error = new Error("Cannot create URL for blob!");
-    throw error;
-  } else {
-    const _HermesInternal = HermesInternal;
-    return "" + closure_0 + data.data.blobId + "?offset=" + data.data.offset + "&size=" + data.size;
-  }
-};
-replaceByteInByteSequence.URL.revokeObjectURL = function revokeObjectURL(arg0) {};
 
-export const URL = replaceByteInByteSequence.URL;
+export default _moduleResult;

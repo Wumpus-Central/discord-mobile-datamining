@@ -1,33 +1,23 @@
 // _runtime/metro/05217__.js
-import get_ActivityIndicator from "00017__.js";
+import _mod17 from "00017__.js";
+import resolveAssetSource_mod from "../00081_resolveAssetSource.js";
+import weakSet from "../00106_weakSet.js";
+import 00065__ from "00065__.js";
 
-({ Platform, UIManager: closure_0 } = get_ActivityIndicator);
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSTabsScreenAndroid", directEventTypes: { topWillAppear: { registrationName: "onWillAppear" }, topDidAppear: { registrationName: "onDidAppear" }, topWillDisappear: { registrationName: "onWillDisappear" }, topDidDisappear: { registrationName: "onDidDisappear" } }, validAttributes: null };
+let resolveAssetSource = resolveAssetSource_mod;
+if ("default" in resolveAssetSource) {
+  resolveAssetSource = resolveAssetSource.default;
+}
+const obj2 = { screenKey: true, preventNativeSelection: true, title: true, badgeValue: true, tabBarItemTestID: true, tabBarItemAccessibilityLabel: true, specialEffects: true, drawableIconResourceName: true, imageIconResource: { process: resolveAssetSource }, selectedDrawableIconResourceName: true, selectedImageIconResource: null, standardAppearance: true };
+let resolveAssetSource = resolveAssetSource_mod;
+if ("default" in resolveAssetSource) {
+  resolveAssetSource = resolveAssetSource.default;
+}
+obj2.selectedImageIconResource = { process: resolveAssetSource };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onWillAppear: true, onDidAppear: true, onWillDisappear: true, onDidDisappear: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = obj2;
 
-export const isNativePlatformSupported = true;
-export const enableScreens = function enableScreens() {
-  flag = arg0;
-  if (arg0 === undefined) {
-    flag = true;
-  }
-  if (flag) {
-    flag = !viewManagerConfig.getViewManagerConfig("RNSScreen");
-  }
-  if (flag) {
-    const _console = console;
-    console.error(
-      "Screen native module hasn't been linked. Please check the react-native-screens README for more details",
-    );
-  }
-};
-export function enableFreeze() {
-  flag = arg0;
-  if (arg0 === undefined) {
-    flag = true;
-  }
-}
-export function screensEnabled() {
-  return flag;
-}
-export function freezeEnabled() {
-  return flag;
-}
+export default module_65.get("RNSTabsScreenAndroid", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

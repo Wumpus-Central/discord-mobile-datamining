@@ -1,21 +1,12 @@
 // _runtime/metro/14703__.js
-import _mod14686 from "14686__.js";
+import _mod14698 from "14698__.js";
 import _mod14704 from "14704__.js";
 
-export default (arg0, arg1, arg2) => {
-  const arr = _mod14704(arg1);
-  for (let num = 0; num < arr.length; num = num + 1) {
-    let tmp3 = arr[num];
-    let tmp6 = _mod14686(arg0, tmp3);
-    if (!tmp6) {
-      let tmp8 = arg2;
-      if (arg2) {
-        tmp8 = _mod14686(arg2, tmp3);
-      }
-      tmp6 = tmp8;
-    }
-    if (!tmp6) {
-      let tmpResult = tmp(arg0, tmp3, tmp2(arg1, tmp3));
-    }
+export default (arg0) => {
+  if (_mod14698(arg0)) {
+    return arg0;
+  } else {
+    const tmp6 = new TypeError(_mod14704(arg0) + " is not a function");
+    throw tmp6;
   }
 };

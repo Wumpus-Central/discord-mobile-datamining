@@ -1,0 +1,13 @@
+// _runtime/metro/13700__.js
+import registerAsset from "01121__.js";
+
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/saved_messages",
+  width: 297,
+  height: 238,
+  scales: [1],
+  hash: "ee27927c992063817a4891d6fea39469",
+  name: "wumpus-bookmark",
+  type: "png",
+});

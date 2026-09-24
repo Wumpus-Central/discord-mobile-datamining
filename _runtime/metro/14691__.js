@@ -1,20 +1,32 @@
 // _runtime/metro/14691__.js
-import _mod14663 from "14663__.js";
-import _mod14689 from "14689__.js";
+import _mod14672 from "14672__.js";
+import _mod14676 from "14676__.js";
+import _mod14692 from "14692__.js";
 
-export default (arg0, arg1) => {
-  if (arguments.length < 2) {
-    const tmp7 = _mod14663[arg0];
-    let tmp8;
-    if (_mod14689(tmp7)) {
-      tmp8 = tmp7;
+let prop = Object.getOwnPropertySymbols;
+if (prop) {
+  prop = !_mod14676(() => {
+    const SymbolResult = Symbol("symbol detection");
+    const StringResult = _mod14672.String(SymbolResult);
+    let tmp5 = !StringResult;
+    if (StringResult) {
+      const _Object = Object;
+      const _Symbol = Symbol;
+      tmp5 = !(Object(SymbolResult) instanceof Symbol);
     }
-    let tmp3 = tmp8;
-  } else {
-    tmp3 = _mod14663[arg0];
-    if (tmp3) {
-      tmp3 = _mod14663[arg0][arg1];
+    if (!tmp5) {
+      const _Symbol2 = Symbol;
+      let tmp2Result = !sham;
+      if (!sham) {
+        tmp2Result = _mod14692;
+      }
+      if (tmp2Result) {
+        tmp2Result = _mod14692 < 41;
+      }
+      tmp5 = tmp2Result;
     }
-  }
-  return tmp3;
-};
+    return tmp5;
+  });
+}
+
+export default prop;

@@ -1,24 +1,71 @@
 // _runtime/metro/04358__.js
-let closure_0 = { lessThanXSeconds: { one: "d\u01B0\u1EDBi 1 gi\u00E2y", other: "d\u01B0\u1EDBi {{count}} gi\u00E2y" }, xSeconds: { one: "1 gi\u00E2y", other: "{{count}} gi\u00E2y" }, halfAMinute: "n\u1EEDa ph\u00FAt", lessThanXMinutes: { one: "d\u01B0\u1EDBi 1 ph\u00FAt", other: "d\u01B0\u1EDBi {{count}} ph\u00FAt" }, xMinutes: { one: "1 ph\u00FAt", other: "{{count}} ph\u00FAt" }, aboutXHours: { one: "kho\u1EA3ng 1 gi\u1EDD", other: "kho\u1EA3ng {{count}} gi\u1EDD" }, xHours: { one: "1 gi\u1EDD", other: "{{count}} gi\u1EDD" }, xDays: { one: "1 ng\u00E0y", other: "{{count}} ng\u00E0y" }, aboutXWeeks: { one: "kho\u1EA3ng 1 tu\u1EA7n", other: "kho\u1EA3ng {{count}} tu\u1EA7n" }, xWeeks: { one: "1 tu\u1EA7n", other: "{{count}} tu\u1EA7n" }, aboutXMonths: { one: "kho\u1EA3ng 1 th\u00E1ng", other: "kho\u1EA3ng {{count}} th\u00E1ng" }, xMonths: { one: "1 th\u00E1ng", other: "{{count}} th\u00E1ng" }, aboutXYears: { one: "kho\u1EA3ng 1 n\u0103m", other: "kho\u1EA3ng {{count}} n\u0103m" }, xYears: { one: "1 n\u0103m", other: "{{count}} n\u0103m" }, overXYears: { one: "h\u01A1n 1 n\u0103m", other: "h\u01A1n {{count}} n\u0103m" }, almostXYears: { one: "g\u1EA7n 1 n\u0103m", other: "g\u1EA7n {{count}} n\u0103m" } };
+import 02121__ from "02121__.js";
+import 02122__ from "02122__.js";
 
-export default function formatDistance(arg0, arg1, addSuffix) {
-  if (typeof closure_0[arg0] === "string") {
-    let tmp6 = tmp;
-    if (null != addSuffix) {
-      tmp6 = tmp;
-      if (addSuffix.addSuffix) {
-        if (!addSuffix.comparison) {
-          let text = `${tmp} trước`;
-        }
-        text = `${tmp} nữa`;
-      }
+if (!module_2121) {
+  const obj2 = { default: module_2121 };
+  let obj = obj2;
+} else {
+  obj = module_2121;
+}
+if (!module_2122) {
+  const obj4 = { default: module_2122 };
+  let obj3 = obj4;
+} else {
+  obj3 = module_2122;
+}
+const date = {
+  ordinalNumber: obj3.default({
+    matchPattern: /^(\d+)(-?(е|й|є|а|я))?/i,
+    parsePattern: /\d+/i,
+    valueCallback(match) {
+      return parseInt(match, 10);
     }
-    return tmp6;
-  } else if (1 === arg1) {
-    let one = tmp.one;
-  } else {
-    const _String = String;
-    one = tmp.other.replace("{{count}}", String(arg1));
+  }),
+  era: null,
+  quarter: null,
+  month: null,
+  day: null,
+  dayPeriod: null
+};
+const obj6 = { matchPatterns: { narrow: /^((до )?н\.?\s?е\.?)/i, abbreviated: /^((до )?н\.?\s?е\.?)/i, wide: /^(до нашої ери|нашої ери|наша ера)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj7 = { any: null };
+const items = [/^д/i, /^н/i];
+obj7.any = items;
+obj6.parsePatterns = obj7;
+date.era = obj.default(obj6);
+const obj8 = {
+  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^[1234](-?[иі]?й?)? кв.?/i, wide: /^[1234](-?[иі]?й?)? квартал/i },
+  defaultMatchWidth: "wide",
+  parsePatterns: null,
+  defaultParseWidth: "any",
+  valueCallback(arg0) {
+    return arg0 + 1;
   }
 };
+const obj9 = { any: null };
+const items1 = [/1/i, /2/i, /3/i, /4/i];
+obj9.any = items1;
+obj8.parsePatterns = obj9;
+date.quarter = obj.default(obj8);
+const obj10 = { matchPatterns: { narrow: /^[слбктчвжг]/i, abbreviated: /^(січ|лют|бер(ез)?|квіт|трав|черв|лип|серп|вер(ес)?|жовт|лис(топ)?|груд)\.?/i, wide: /^(січень|січня|лютий|лютого|березень|березня|квітень|квітня|травень|травня|червня|червень|липень|липня|серпень|серпня|вересень|вересня|жовтень|жовтня|листопад[а]?|грудень|грудня)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj11 = { narrow: null, any: null };
+const items2 = [/^с/i, /^л/i, /^б/i, /^к/i, /^т/i, /^ч/i, /^л/i, /^с/i, /^в/i, /^ж/i, /^л/i, /^г/i];
+obj11.narrow = items2;
+const items3 = [/^сі/i, /^лю/i, /^б/i, /^к/i, /^т/i, /^ч/i, /^лип/i, /^се/i, /^в/i, /^ж/i, /^лис/i, /^г/i];
+obj11.any = items3;
+obj10.parsePatterns = obj11;
+date.month = obj.default(obj10);
+const obj12 = { matchPatterns: { narrow: /^[нпвсч]/i, short: /^(нд|пн|вт|ср|чт|пт|сб)\.?/i, abbreviated: /^(нед|пон|вів|сер|че?тв|птн?|суб)\.?/i, wide: /^(неділ[яі]|понеділ[ок][ка]|вівтор[ок][ка]|серед[аи]|четвер(га)?|п\W*?ятниц[яі]|субот[аи])/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj13 = { narrow: null, any: null };
+const items4 = [/^н/i, /^п/i, /^в/i, /^с/i, /^ч/i, /^п/i, /^с/i];
+obj13.narrow = items4;
+const items5 = [/^н/i, /^п[он]/i, /^в/i, /^с[ер]/i, /^ч/i, /^п\W*?[ят]/i, /^с[уб]/i];
+obj13.any = items5;
+obj12.parsePatterns = obj13;
+date.day = obj.default(obj12);
+const obj14 = { matchPatterns: { narrow: /^([дп]п|півн\.?|пол\.?|ранок|ранку|день|дня|веч\.?|ніч|ночі)/i, abbreviated: /^([дп]п|півн\.?|пол\.?|ранок|ранку|день|дня|веч\.?|ніч|ночі)/i, wide: /^([дп]п|північ|полудень|ранок|ранку|день|дня|вечір|вечора|ніч|ночі)/i }, defaultMatchWidth: "wide", parsePatterns: { any: { am: /^дп/i, pm: /^пп/i, midnight: /^півн/i, noon: /^пол/i, morning: /^р/i, afternoon: /^д[ен]/i, evening: /^в/i, night: /^н/i } }, defaultParseWidth: "any" };
+date.dayPeriod = obj.default(obj14);
+
+export default date;
 export default exports.default;

@@ -1,15 +1,13 @@
 // _runtime/metro/18199__.js
-import arrayReduce from "../04949_arrayReduce.js";
-import words from "../18200_words.js";
-import deburr from "../18204_deburr.js";
+import registerAsset from "01121__.js";
 
-let closure_2 = RegExp("['\u2019]", "g");
-
-export default function createCompounder(arg0) {
-  closure_0 = arg0;
-  return (arg0) => {
-    const tmp = arrayReduce;
-    const tmp2 = words;
-    return tmp(tmp2(deburr(arg0).replace(closure_2, "")), closure_0, "");
-  };
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
+  width: 375,
+  height: 180,
+  scales: [2, 3],
+  hash: "ed3a2617f9b5f5cc8eac96d446f7dd22",
+  name: "intro_header_darker",
+  type: "png",
+});

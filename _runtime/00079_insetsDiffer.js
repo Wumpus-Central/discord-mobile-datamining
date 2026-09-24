@@ -1,5 +1,5 @@
 // _runtime/00079_insetsDiffer.js
-let closure_0 = { top: "Array", left: "PX_8", right: "y", bottom: "HermesInternal" };
+let closure_0 = { top: "Array", left: "paddingHorizontal", right: "guild_id", bottom: "opacity" };
 
 export default function insetsDiffer(arg0, arg1) {
   let rect = arg0;

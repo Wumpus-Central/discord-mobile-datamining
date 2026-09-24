@@ -1,6 +1,6 @@
 // _runtime/metro/04272__.js
 import module_4264_mod from "04264__.js";
-import requiredArgs_mod from "../03912_requiredArgs.js";
+import requiredArgs_mod from "../03914_requiredArgs.js";
 
 let module_4264 = module_4264_mod;
 if (!module_4264) {
@@ -19,7 +19,7 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisSecond(arg0) {
+export default function isThisMonth(arg0) {
   requiredArgs.default(1, arguments);
   return module_4264.default(Date.now(), arg0);
 };

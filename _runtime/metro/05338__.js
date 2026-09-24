@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "55dfae0c7ba72f2b92f72dd1258be0b7",
-  name: "VoiceWarningIcon",
+  hash: "e3a50d090de2ca1d8928677d5f100909",
+  name: "HubIcon",
   type: "png",
 });

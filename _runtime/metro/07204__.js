@@ -1,13 +1,10 @@
 // _runtime/metro/07204__.js
-import noop from "00019__.js";
+import PlatformConfig2 from "../07202_PlatformConfig.js";
 
-const useContext = noop.useContext;
-const context = noop.createContext(undefined);
+require = arg1;
+const dependencyMap = arg6;
 
-export const RecyclerViewContextProvider = context.Provider;
-export const useRecyclerViewContext = function useRecyclerViewContext() {
-  return useContext(context);
-};
-export const useFlashListContext = function useFlashListContext() {
-  return useContext(context);
+export const getInvertedTransformStyle = function getInvertedTransformStyle(horizontal) {
+  const PlatformConfig = PlatformConfig2.PlatformConfig;
+  return horizontal ? PlatformConfig.invertedTransformStyleHorizontal : PlatformConfig.invertedTransformStyle;
 };

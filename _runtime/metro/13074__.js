@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/hub/native/images",
-  width: 88,
-  height: 80,
-  scales: [2, 3],
-  hash: "d719145f0510a722efd9724a4e3cf026",
-  name: "verify-email",
+  httpServerLocation: "/assets/images/native",
+  width: 192.33333333333334,
+  height: 416,
+  scales: [3],
+  hash: "313fd6dabf823cbd5c0b9608bb8b54d4",
+  name: "invite-bg",
   type: "png",
 });

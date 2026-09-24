@@ -4,10 +4,10 @@ import registerAsset from "01121__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/plan_selection",
-  width: 200,
-  height: 90,
+  width: 80,
+  height: 80,
   scales: [1],
-  hash: "d354a91b7a8b3b1cf9e4de447250911f",
-  name: "yearly_upsell_wumpus",
+  hash: "efc48aacb0f78e1462efe2b15e5ef702",
+  name: "img_boost",
   type: "png",
 });

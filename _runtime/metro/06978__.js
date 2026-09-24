@@ -1,10 +1,8 @@
 // _runtime/metro/06978__.js
-const global = arg0;
+function print() {}
+const frozen = Object.freeze(print);
 
-export const isFabricInstalled = function isFabricInstalled() {
-  let prop;
-  if (global != null) {
-    prop = global.nativeFabricUIManager;
-  }
-  return null != prop;
+export { print };
+export const enableLogging = (arg0) => {
+  console.warn("[BottomSheet] could not enable logging on production!");
 };

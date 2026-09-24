@@ -1,77 +1,25 @@
 // _runtime/metro/14662__.js
-import _mod14663 from "14663__.js";
-import _mod14664 from "14664__.js";
-import _mod14665 from "14665__.js";
-import _mod14702 from "14702__.js";
-import _mod14703 from "14703__.js";
-import _mod14719 from "14719__.js";
-import _mod14720 from "14720__.js";
+const require = globalThis.__r;
 
-export default (dontCallGetSet, obj) => {
-  ({ target, global: _global, stat } = dontCallGetSet);
-  const tmp3 = _mod14663;
-  if (_global) {
-    let prototype = tmp3;
-  } else {
-    let tmp4 = tmp3[target];
-    if (stat) {
-      if (!tmp4) {
-        tmp4 = _mod14664(target, {});
+const require = arg1;
+const dependencyMap = arg6;
+
+export const getSupportedTimeZones = function getSupportedTimeZones(locale) {
+  _require = locale;
+  const timezones = require("14663__.js").timezones;
+  return timezones.filter((item) =>
+    (function isSupported(timeZone, arg1) {
+      let str = arg1;
+      if (undefined === arg1) {
+        str = "en";
       }
-      prototype = tmp4;
-    } else {
-      prototype = tmp4;
-      if (tmp4) {
-        prototype = _mod14663[target].prototype;
+      try {
+        const obj = { timeZone };
+        const memoizedDateTimeFormat = locale(closure_1_1[0]).createMemoizedDateTimeFormat(str, obj);
+        return memoizedDateTimeFormat.resolvedOptions().timeZone === timeZone;
+      } catch (err) {
+        return false;
       }
-    }
-  }
-  if (prototype) {
-    for (const key10024 in arg1) {
-      let tmp21 = arg1[key10024];
-      if (arg0.dontCallGetSet) {
-        obj = _mod14665;
-        let iter = obj.f(prototype, key10024);
-        value = iter;
-        if (iter) {
-          value = iter.value;
-        }
-        let tmp7 = value;
-      } else {
-        tmp7 = prototype[key10024];
-      }
-      let sum = key10024;
-      let tmp12 = _mod14702;
-      if (!_global) {
-        let str4 = "#";
-        if (stat) {
-          str4 = ".";
-        }
-        sum = target + str4 + key10024;
-      }
-      if (!tmp12(sum, arg0.forced)) {
-        if (undefined !== tmp7) {
-          if (typeof tmp21 === typeof tmp7) {
-            continue;
-          } else {
-            let tmp22 = _mod14703(tmp21, tmp7);
-          }
-        }
-        continue;
-      }
-      let sham = arg0.sham;
-      if (!sham) {
-        let sham2 = tmp7;
-        if (tmp7) {
-          sham2 = tmp7.sham;
-        }
-        sham = sham2;
-      }
-      if (sham) {
-        let tmp14 = _mod14719(tmp21, "sham", true);
-      }
-      let tmp19 = _mod14720(prototype, key10024, tmp21, arg0);
-      continue;
-    }
-  }
+    })(item, closure_0),
+  );
 };

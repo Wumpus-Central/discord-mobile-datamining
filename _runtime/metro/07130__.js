@@ -1,28 +1,14 @@
 // _runtime/metro/07130__.js
-import noop from "00019__.js";
+import _mod19 from "00019__.js";
+import _mod6969 from "06969__.js";
 
-({ useCallback: closure_0, useEffect: closure_1, useLayoutEffect: c2, useRef: c3 } = noop);
+const useContext = _mod19.useContext;
 
-export const useStableCallback = function useStableCallback(current) {
-  React3(undefined);
-  React2(() => {
-    closure_1.current = current;
-  });
-  framebus(
-    () => () => {
-      ref.current = undefined;
-    },
-    [],
-  );
-  return React(() => {
-    const items = [...arguments];
-    current = ref.current;
-    let applyResult;
-    if (current != null) {
-      const items1 = [];
-      HermesBuiltin.arraySpread(items, 0);
-      applyResult = HermesBuiltin.apply(items1, ref);
-    }
-    return applyResult;
-  }, []);
+export const useBottomSheetGestureHandlers = () => {
+  const tmp = useContext(_mod6969.BottomSheetGestureHandlersContext);
+  if (null === tmp) {
+    throw "'useBottomSheetGestureHandlers' cannot be used out of the BottomSheet!";
+  } else {
+    return tmp;
+  }
 };

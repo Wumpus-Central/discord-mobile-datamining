@@ -1,29 +1,13 @@
 // _runtime/metro/07191__.js
-import _mod7192 from "07192__.js";
 
-export default function _objectWithoutProperties(arg0, arr) {
-  if (null == arg0) {
-    return {};
-  } else {
-    const tmp8 = _mod7192(arg0, arr);
-    const _Object2 = Object;
-    if (Object.getOwnPropertySymbols) {
-      const _Object = Object;
-      const ownPropertySymbols = Object.getOwnPropertySymbols(arg0);
-      let num = 0;
-      if (0 < ownPropertySymbols.length) {
-        const tmp2 = -1 === arr.indexOf(ownPropertySymbols[num]);
-        while (!tmp2) {
-          if (tmp2) {
-            tmp8[tmp] = arg0[tmp];
-          }
-          num = num + 1;
-        }
-        const propertyIsEnumerable = {}.propertyIsEnumerable;
-        const call = propertyIsEnumerable.call;
-        typeof call === "unknown" ? propertyIsEnumerable(ownPropertySymbols[num]) : call(arg0, ownPropertySymbols[num]);
-      }
-    }
-    return tmp8;
+export default function _arrayLikeToArray(arg0, arg1) {
+  let length = arg1;
+  if (tmp) {
+    length = arg0.length;
   }
+  const ArrayResult = Array(length);
+  for (let num = 0; num < length; num = num + 1) {
+    ArrayResult[num] = arg0[num];
+  }
+  return ArrayResult;
 }

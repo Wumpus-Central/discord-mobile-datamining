@@ -1,69 +1,28 @@
 // _runtime/metro/13163__.js
-import _mod13137 from "13137__.js";
-import _mod13142 from "13142__.js";
-import _mod13154 from "13154__.js";
-import _mod13155 from "13155__.js";
-import ScopeClass from "../13157_ScopeClass.js";
+import _mod13146 from "13146__.js";
+import _mod13147 from "13147__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const getClient = function getClient() {
-  const mainCarrier = _mod13154.getMainCarrier();
-  const asyncContextStrategy = _mod13155.getAsyncContextStrategy(mainCarrier);
-  const currentScope = asyncContextStrategy.getCurrentScope();
-  return currentScope.getClient();
+export const getMainCarrier = function getMainCarrier() {
+  const GLOBAL_OBJ = _mod13146.GLOBAL_OBJ;
+  const tmp3 = GLOBAL_OBJ.__SENTRY__ || {};
+  GLOBAL_OBJ.__SENTRY__ = tmp3;
+  tmp3.version = tmp3.version || _mod13147.SDK_VERSION;
+  const tmp4 = tmp3.version || _mod13147.SDK_VERSION;
+  tmp3[_mod13147.SDK_VERSION] = tmp3[_mod13147.SDK_VERSION] || {};
+  return _mod13146.GLOBAL_OBJ;
 };
-export const getCurrentScope = function getCurrentScope() {
-  const mainCarrier = _mod13154.getMainCarrier();
-  const asyncContextStrategy = _mod13155.getAsyncContextStrategy(mainCarrier);
-  return asyncContextStrategy.getCurrentScope();
-};
-export const getGlobalScope = function getGlobalScope() {
-  return _mod13137.getGlobalSingleton("globalScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
-};
-export const getIsolationScope = function getIsolationScope() {
-  const mainCarrier = _mod13154.getMainCarrier();
-  const asyncContextStrategy = _mod13155.getAsyncContextStrategy(mainCarrier);
-  return asyncContextStrategy.getIsolationScope();
-};
-export const getTraceContextFromScope = function getTraceContextFromScope(getPropagationContext) {
-  const propagationContext = getPropagationContext.getPropagationContext();
-  ({ traceId, spanId, parentSpanId } = propagationContext);
-  return _mod13142.dropUndefinedKeys({ trace_id, span_id, parent_span_id });
-};
-export const withIsolationScope = function withIsolationScope() {
-  const items = [...arguments];
-  const mainCarrier = _mod13154.getMainCarrier();
-  const asyncContextStrategy = _mod13155.getAsyncContextStrategy(mainCarrier);
-  if (2 === items.length) {
-    [tmp2, tmp3] = items;
-    if (tmp2) {
-      let result = asyncContextStrategy.withSetIsolationScope(tmp2, tmp3);
-    } else {
-      result = asyncContextStrategy.withIsolationScope(tmp3);
-    }
-    return result;
-  } else {
-    return asyncContextStrategy.withIsolationScope(items[0]);
+export const getSentryCarrier = function getSentryCarrier(__SENTRY__) {
+  const tmp = __SENTRY__.__SENTRY__ || {};
+  __SENTRY__.__SENTRY__ = tmp;
+  let SDK_VERSION = tmp.version;
+  if (!SDK_VERSION) {
+    SDK_VERSION = _mod13147.SDK_VERSION;
   }
-};
-export const withScope = function withScope() {
-  const items = [...arguments];
-  const mainCarrier = _mod13154.getMainCarrier();
-  const asyncContextStrategy = _mod13155.getAsyncContextStrategy(mainCarrier);
-  if (2 === items.length) {
-    [tmp2, tmp3] = items;
-    if (tmp2) {
-      let withSetScopeResult = asyncContextStrategy.withSetScope(tmp2, tmp3);
-    } else {
-      withSetScopeResult = asyncContextStrategy.withScope(tmp3);
-    }
-    return withSetScopeResult;
-  } else {
-    return asyncContextStrategy.withScope(items[0]);
-  }
+  tmp.version = SDK_VERSION;
+  const tmp4 = tmp[_mod13147.SDK_VERSION] || {};
+  tmp[_mod13147.SDK_VERSION] = tmp4;
+  return tmp4;
 };

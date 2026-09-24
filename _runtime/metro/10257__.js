@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "2deb3f64961131491b7db6bb10903f69",
-  name: "DoorExitIcon",
+  hash: "44d2aa5379438547523c3d419e9ade52",
+  name: "MusicSlashIcon",
   type: "png",
 });

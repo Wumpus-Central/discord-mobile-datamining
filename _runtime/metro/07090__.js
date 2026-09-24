@@ -1,12 +1,11 @@
 // _runtime/metro/07090__.js
-import ComposedGestureName from "../07042_ComposedGestureName.js";
-import _mod7091 from "07091__.js";
+const require = globalThis.__r;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const useCompetingGestures = function useCompetingGestures() {
-  const items = [...arguments];
-  const items1 = [ComposedGestureName.ComposedGestureName.Race, ...items];
-  return _mod7091.useComposedGesture.apply(items1);
-};
+for (const key10013 in require("07091__.js")) {
+  arg5[key10013] = require("07091__.js")[key10013];
+  continue;
+}
+for (const key10017 in require("transformLongPressProps")) {
+  arg5[key10017] = require("transformLongPressProps")[key10017];
+  continue;
+}

@@ -1,4 +1,11 @@
 // _runtime/metro/14387__.js
-import _mod14386 from "14386__.js";
+import _mod14380 from "14380__.js";
 
-export default (arg0, arg1, arg2) => _mod14386(arg1, arg0, arg2);
+export default (arg0, arg1) => {
+  const tmp = _mod14380(arg0, arg1);
+  let version = null;
+  if (tmp) {
+    version = tmp.version;
+  }
+  return version;
+};

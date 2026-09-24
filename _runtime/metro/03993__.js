@@ -1,42 +1,43 @@
 // _runtime/metro/03993__.js
-import translateSeconds from "../03994_translateSeconds.js";
-import 03995__ from "03995__.js";
-import 03996__ from "03996__.js";
-import date_mod from "03997__.js";
-import date_mod from "03998__.js";
+import 02119__ from "02119__.js";
 
-if (!translateSeconds) {
-  const obj = { default: translateSeconds };
-  let tmp3 = obj;
+if (!module_2119) {
+  const obj2 = { default: module_2119 };
+  let obj = obj2;
 } else {
-  tmp3 = translateSeconds;
+  obj = module_2119;
 }
-if (!module_3995) {
-  const obj2 = { default: module_3995 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_3995;
-}
-if (!module_3996) {
-  const obj3 = { default: module_3996 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_3996;
-}
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
+const date = {
+  ordinalNumber(arg0, unit) {
+    const NumberResult = Number(arg0);
+    unit = undefined;
+    if (null != unit) {
+      unit = unit.unit;
+    }
+    const StringResult = String(unit);
+    if ("minute" !== StringResult) {
+      if ("second" !== StringResult) {
+        if ("date" === StringResult) {
+          return NumberResult + "\uC77C";
+        } else {
+          return NumberResult + "\uBC88\uC9F8";
+        }
+      }
+    }
+    return String(NumberResult);
+  },
+  era: obj.default({ values: { narrow: ["BC", "AD"], abbreviated: ["BC", "AD"], wide: ["\uAE30\uC6D0\uC804", "\uC11C\uAE30"] }, defaultWidth: "wide" }),
+  quarter: obj.default({
+    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["Q1", "Q2", "Q3", "Q4"], wide: ["1\uBD84\uAE30", "2\uBD84\uAE30", "3\uBD84\uAE30", "4\uBD84\uAE30"] },
+    defaultWidth: "wide",
+    argumentCallback(arg0) {
+      return arg0 - 1;
+    }
+  }),
+  month: obj.default({ values: { narrow: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], abbreviated: ["1\uC6D4", "2\uC6D4", "3\uC6D4", "4\uC6D4", "5\uC6D4", "6\uC6D4", "7\uC6D4", "8\uC6D4", "9\uC6D4", "10\uC6D4", "11\uC6D4", "12\uC6D4"], wide: ["1\uC6D4", "2\uC6D4", "3\uC6D4", "4\uC6D4", "5\uC6D4", "6\uC6D4", "7\uC6D4", "8\uC6D4", "9\uC6D4", "10\uC6D4", "11\uC6D4", "12\uC6D4"] }, defaultWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["\uC77C", "\uC6D4", "\uD654", "\uC218", "\uBAA9", "\uAE08", "\uD1A0"], short: ["\uC77C", "\uC6D4", "\uD654", "\uC218", "\uBAA9", "\uAE08", "\uD1A0"], abbreviated: ["\uC77C", "\uC6D4", "\uD654", "\uC218", "\uBAA9", "\uAE08", "\uD1A0"], wide: ["\uC77C\uC694\uC77C", "\uC6D4\uC694\uC77C", "\uD654\uC694\uC77C", "\uC218\uC694\uC77C", "\uBAA9\uC694\uC77C", "\uAE08\uC694\uC77C", "\uD1A0\uC694\uC77C"] }, defaultWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "\uC624\uC804", pm: "\uC624\uD6C4", midnight: "\uC790\uC815", noon: "\uC815\uC624", morning: "\uC544\uCE68", afternoon: "\uC624\uD6C4", evening: "\uC800\uB141", night: "\uBC24" }, abbreviated: { am: "\uC624\uC804", pm: "\uC624\uD6C4", midnight: "\uC790\uC815", noon: "\uC815\uC624", morning: "\uC544\uCE68", afternoon: "\uC624\uD6C4", evening: "\uC800\uB141", night: "\uBC24" }, wide: { am: "\uC624\uC804", pm: "\uC624\uD6C4", midnight: "\uC790\uC815", noon: "\uC815\uC624", morning: "\uC544\uCE68", afternoon: "\uC624\uD6C4", evening: "\uC800\uB141", night: "\uBC24" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "\uC624\uC804", pm: "\uC624\uD6C4", midnight: "\uC790\uC815", noon: "\uC815\uC624", morning: "\uC544\uCE68", afternoon: "\uC624\uD6C4", evening: "\uC800\uB141", night: "\uBC24" }, abbreviated: { am: "\uC624\uC804", pm: "\uC624\uD6C4", midnight: "\uC790\uC815", noon: "\uC815\uC624", morning: "\uC544\uCE68", afternoon: "\uC624\uD6C4", evening: "\uC800\uB141", night: "\uBC24" }, wide: { am: "\uC624\uC804", pm: "\uC624\uD6C4", midnight: "\uC790\uC815", noon: "\uC815\uC624", morning: "\uC544\uCE68", afternoon: "\uC624\uD6C4", evening: "\uC800\uB141", night: "\uBC24" } }, defaultFormattingWidth: "wide" })
+};
 
-export default { code: "lt", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default date;
 export default exports.default;

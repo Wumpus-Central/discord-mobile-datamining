@@ -1,5 +1,5 @@
 // _runtime/00064_sizesDiffer.js
-let closure_0 = { width: "Array", height: "flex" };
+let closure_0 = { width: "channel", height: "channelId" };
 
 export default function sizesDiffer(arg0, arg1) {
   let size = arg0;

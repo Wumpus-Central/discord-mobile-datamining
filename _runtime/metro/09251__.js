@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "dcae1df15663c479951183ad5f2fe3dd",
-  name: "RedditNeutralIcon",
+  hash: "856ae0fb80fb3c5e7cc40888f4bebb2b",
+  name: "YoutubeNeutralIcon",
   type: "png",
 });

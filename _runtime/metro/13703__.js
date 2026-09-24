@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/virtual_currency/images/native",
-  width: 576,
-  height: 324,
-  scales: [1],
-  hash: "83d6f52e41f68a6a0f493020b6be93e9",
-  name: "hero-orbs",
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 180,
+  height: 108.5,
+  scales: [2, 3],
+  hash: "9b8bd10d33176958273580b349a5855d",
+  name: "img_what_you_lose_hd_video",
   type: "png",
 });

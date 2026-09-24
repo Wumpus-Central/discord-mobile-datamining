@@ -1,6 +1,6 @@
 // _runtime/metro/04176__.js
-import _typeof_mod from "03911__.js";
-import requiredArgs_mod from "../03912_requiredArgs.js";
+import _typeof_mod from "03913__.js";
+import requiredArgs_mod from "../03914_requiredArgs.js";
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -19,14 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function getDaysInMonth(arg0) {
+export default function getDay(arg0) {
   requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const fullYear = defaultResult1.getFullYear();
-  const month = defaultResult1.getMonth();
-  const date = new Date(0);
-  date.setFullYear(fullYear, month + 1, 0);
-  date.setHours(0, 0, 0, 0);
-  return date.getDate();
+  return _typeof.default(arg0).getDay();
 };
 export default exports.default;

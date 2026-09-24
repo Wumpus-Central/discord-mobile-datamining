@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/build_overrides/native/images",
-  width: 60,
-  height: 46,
+  httpServerLocation: "/assets/images/native",
+  width: 120,
+  height: 120,
   scales: [2, 3],
-  hash: "cca9165d24749fb9aec98d0d9c04f23f",
-  name: "code-illustration-light",
+  hash: "0242e2e3975e7ca5a2256573e276d96f",
+  name: "logo",
   type: "png",
 });

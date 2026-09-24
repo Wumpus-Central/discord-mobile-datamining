@@ -1,7 +1,21 @@
 // _runtime/metro/13164__.js
-let __SENTRY_DEBUG__ = typeof globalThis.__SENTRY_DEBUG__ === "undefined";
-if (typeof globalThis.__SENTRY_DEBUG__ !== "undefined") {
-  __SENTRY_DEBUG__ = globalThis.__SENTRY_DEBUG__;
-}
+import _mod13163 from "13163__.js";
+import _mod13165 from "13165__.js";
 
-export const DEBUG_BUILD = __SENTRY_DEBUG__;
+require = arg1;
+const dependencyMap = arg6;
+
+export const getAsyncContextStrategy = function getAsyncContextStrategy(mainCarrier) {
+  const sentryCarrier = _mod13163.getSentryCarrier(mainCarrier);
+  if (sentryCarrier.acs) {
+    let acs = sentryCarrier.acs;
+  } else {
+    acs = _mod13165.getStackAsyncContextStrategy();
+    const tmpResult = _mod13165;
+  }
+  return acs;
+};
+export const setAsyncContextStrategy = function setAsyncContextStrategy(acs) {
+  const mainCarrier = _mod13163.getMainCarrier();
+  _mod13163.getSentryCarrier(mainCarrier).acs = acs;
+};

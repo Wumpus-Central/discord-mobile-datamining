@@ -3,9 +3,9 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jaGVja3BvaW50",
+  httpServerLocation: "/assets/modules/request_to_stream",
   scales: [1],
-  hash: "13f05df677163e50e3246a501d49035e",
-  name: "bg.messages.13f05df677163e50e3246a501d49035e.compiled.messages",
+  hash: "f2d3bca3e04228cbef50a2b91296c6c5",
+  name: "RequestToStream.compiled.messages",
   type: "jsona",
 });

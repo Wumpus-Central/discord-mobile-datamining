@@ -1,13 +1,28 @@
 // _runtime/metro/18232__.js
-import registerAsset from "01121__.js";
+import _mod626 from "00626__.js";
+import _mod18233 from "18233__.js";
+import stringToArray from "../18234_stringToArray.js";
+import castSlice from "../18237_castSlice.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
-  scales: [1, 2, 3],
-  hash: "26d0550d85f689dbef34ccad40bbdeb4",
-  name: "ic_radio_circle_checked",
-  type: "png",
-});
+export default function createCaseFirst(arg0) {
+  closure_0 = arg0;
+  return (arg0) => {
+    const str = _mod626(arg0);
+    let tmp3;
+    if (_mod18233(str)) {
+      tmp3 = stringToArray(str);
+    }
+    if (tmp3) {
+      let first = tmp3[0];
+    } else {
+      first = str.charAt(0);
+    }
+    if (tmp3) {
+      let joined = castSlice(tmp3, 1).join("");
+      const obj = castSlice(tmp3, 1);
+    } else {
+      joined = str.slice(1);
+    }
+    return first[closure_0]() + joined;
+  };
+}

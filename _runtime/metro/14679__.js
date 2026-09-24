@@ -1,28 +1,25 @@
 // _runtime/metro/14679__.js
-import _mod14663 from "14663__.js";
-import _mod14664 from "14664__.js";
-import _mod14680 from "14680__.js";
+import module_14680_mod from "14680__.js";
 
-let prop = _mod14663["__core-js_shared__"];
-if (!prop) {
-  prop = _mod14664("__core-js_shared__", {});
+const call = prototype.call;
+let module_14680 = module_14680_mod;
+if (module_14680) {
+  const bind = prototype.bind;
+  module_14680 = bind.bind(call, call);
 }
-let versions = prop.versions;
-if (!versions) {
-  const items = [];
-  prop.versions = items;
-  versions = items;
+if (!module_14680) {
+  module_14680 = (arg0) => {
+    closure_0 = arg0;
+    return () => {
+      const apply = call.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(closure_0);
+      } else {
+        applyArgumentsResult = apply(closure_0, arguments);
+      }
+      return applyArgumentsResult;
+    };
+  };
 }
-let str2 = "global";
-if (_mod14680) {
-  str2 = "pure";
-}
-versions.push({
-  version: "3.41.0",
-  mode: str2,
-  copyright: "\u00A9 2014-2025 Denis Pushkarev (zloirock.ru)",
-  license: "https://github.com/zloirock/core-js/blob/v3.41.0/LICENSE",
-  source: "https://github.com/zloirock/core-js",
-});
 
-export default prop;
+export default module_14680;

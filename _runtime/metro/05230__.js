@@ -1,13 +1,63 @@
 // _runtime/metro/05230__.js
-import _mod17 from "00017__.js";
-import _mod26 from "00026__.js";
-import weakSet from "../00106_weakSet.js";
-import 00065__ from "00065__.js";
+import get_synchronousScreenUpdatesEnabled from "../05210_get_synchronousScreenUpdatesEnabled.js";
+import noop from "00019__.js";
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenStackHeaderConfig", directEventTypes: { topAttached: { registrationName: "onAttached" }, topDetached: { registrationName: "onDetached" }, topPressHeaderBarButtonItem: { registrationName: "onPressHeaderBarButtonItem" }, topPressHeaderBarButtonMenuItem: { registrationName: "onPressHeaderBarButtonMenuItem" } }, validAttributes: null };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onAttached: true, onDetached: true, onPressHeaderBarButtonItem: true, onPressHeaderBarButtonMenuItem: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = { backgroundColor: _mod26.colorAttribute, backTitle: true, backTitleFontFamily: true, backTitleFontSize: true, backTitleVisible: true, color: _mod26.colorAttribute, direction: true, hidden: true, hideShadow: true, largeTitle: true, largeTitleFontFamily: true, largeTitleFontSize: true, largeTitleFontWeight: true, largeTitleBackgroundColor: _mod26.colorAttribute, largeTitleHideShadow: true, largeTitleColor: _mod26.colorAttribute, translucent: true, title: true, titleFontFamily: true, titleFontSize: true, titleFontWeight: true, titleColor: _mod26.colorAttribute, disableBackButtonMenu: true, backButtonDisplayMode: true, hideBackButton: true, backButtonInCustomView: true, blurEffect: true, topInsetEnabled: true, headerLeftBarButtonItems: true, headerRightBarButtonItems: true, synchronousShadowStateUpdatesEnabled: true, userInterfaceStyle: true, consumeTopInset: true, consumeLeftInset: true, consumeRightInset: true, consumeBottomInset: true, legacyTopInsetBehavior: true };
+require = arg1;
+let context = noop.createContext({
+  topAlreadyApplied: false,
+  leftDisabled: false,
+  rightDisabled: false,
+  bottomDisabled: false,
+});
 
-export default module_65.get("RNSScreenStackHeaderConfig", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export const EdgeInsetApplicationContext = context;
+export const useEdgeInsetApplication = function useEdgeInsetApplication(arg0, flag, flag2, flag3, flag4) {
+  context = noop.useContext(context);
+  const topAlreadyApplied = context.topAlreadyApplied;
+  ({ leftDisabled, rightDisabled, bottomDisabled } = context);
+  const experiment = get_synchronousScreenUpdatesEnabled.featureFlags.experiment;
+  flag = undefined;
+  if (experiment != null) {
+    flag = experiment.androidLegacyTopInsetBehavior;
+  }
+  if (flag == null) {
+    flag = false;
+  }
+  let tmp2 = flag;
+  if (!flag) {
+    let tmp3 = !topAlreadyApplied;
+    if (!topAlreadyApplied) {
+      tmp3 = arg0;
+    }
+    tmp2 = tmp3;
+  }
+  closure_1 = tmp2;
+  let tmp4 = tmp2;
+  if (tmp2) {
+    tmp4 = !flag;
+  }
+  if (!leftDisabled) {
+    leftDisabled = flag2;
+  }
+  if (!rightDisabled) {
+    rightDisabled = flag3;
+  }
+  if (!bottomDisabled) {
+    bottomDisabled = flag4;
+  }
+  const items = [topAlreadyApplied, tmp2, leftDisabled, rightDisabled, bottomDisabled];
+  return {
+    appliesTopInset: tmp4,
+    consumeLeftInset: !leftDisabled,
+    consumeRightInset: !rightDisabled,
+    consumeBottomInset: !bottomDisabled,
+    useLegacyBehavior: flag,
+    nextContextValue: noop.useMemo(() => {
+      let tmp = topAlreadyApplied;
+      if (!topAlreadyApplied) {
+        tmp = closure_1;
+      }
+      return { topAlreadyApplied: tmp, leftDisabled, rightDisabled, bottomDisabled };
+    }, items),
+  };
+};

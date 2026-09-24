@@ -1,12 +1,16 @@
 // _runtime/metro/14694__.js
-import _mod14689 from "14689__.js";
-import _mod14695 from "14695__.js";
+import _mod14679 from "14679__.js";
+
+let c0 = 0;
+let closure_1 = Math.random();
+let closure_2 = _mod14679(1.toString);
 
 export default (arg0) => {
-  if (_mod14689(arg0)) {
-    return arg0;
-  } else {
-    const tmp6 = new TypeError(_mod14695(arg0) + " is not a function");
-    throw tmp6;
+  let str = "";
+  if (undefined !== arg0) {
+    str = arg0;
   }
+  const sum = c0 + 1;
+  c0 = sum;
+  return `Symbol(${str}` + ")_" + closure_2(sum + closure_1, 36);
 };

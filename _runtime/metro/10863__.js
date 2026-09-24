@@ -1,6 +1,6 @@
 // _runtime/metro/10863__.js
 import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import _mod10792 from "10792__.js";
+import _mod10801 from "10801__.js";
 import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
@@ -41,12 +41,12 @@ if (!fn) {
     return tmp;
   };
 }
-class NLMergeDateRangeRefiner {
+class PTMergeDateTimeRefiner {
   constructor() {
     self = this;
-    tmp = closure_0(this, NLMergeDateRangeRefiner);
+    tmp = closure_0(this, PTMergeDateTimeRefiner);
     tmp2 = c2;
-    obj = c2(NLMergeDateRangeRefiner);
+    obj = c2(PTMergeDateTimeRefiner);
     tmp3 = closure_1;
     if (closure_3()) {
       tmp7 = globalThis;
@@ -61,14 +61,15 @@ class NLMergeDateRangeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = NLMergeDateRangeRefiner;
-_inherits(NLMergeDateRangeRefiner, fn(_mod10792).default);
+_classCallCheck = PTMergeDateTimeRefiner;
+_inherits(PTMergeDateTimeRefiner, fn(_mod10801).default);
 const entry = {
   key: "patternBetween",
   value: function patternBetween() {
-    return /^\s*(tot|-)\s*$/i;
+    const regExp = new RegExp("^\\s*(?:,|\u00E0)?\\s*$");
+    return regExp;
   },
 };
 const items = [entry];
 
-export default _createClass(NLMergeDateRangeRefiner, items);
+export default _createClass(PTMergeDateTimeRefiner, items);

@@ -3,9 +3,9 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/intl",
+  httpServerLocation: "/assets/.cache/intl/ZGVzaWdu",
   scales: [1],
-  hash: "f509ae9aaefafe2bbe9a4b7e1dac8ae9",
-  name: "Mana.compiled.messages",
+  hash: "8368d48f4b808c5de7fc7ae05463b7de",
+  name: "zh-CN.messages.8368d48f4b808c5de7fc7ae05463b7de.compiled.messages",
   type: "jsona",
 });

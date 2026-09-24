@@ -1,6 +1,6 @@
 // _runtime/metro/08837__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef8827 from "08827__.js";
+import _modDef8831 from "08831__.js";
 import _modDef8838 from "08838__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
@@ -8,7 +8,7 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const Ellipse = fn;
+const ClipPath = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,12 +29,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Ellipse {
+class ClipPath {
   constructor() {
     self = this;
-    tmp = closure_3(this, Ellipse);
+    tmp = closure_3(this, ClipPath);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Ellipse);
+    obj = hasOwnProperty(ClipPath);
     tmp3 = closure_4;
     if (closure_7()) {
       tmp7 = globalThis;
@@ -49,36 +49,19 @@ class Ellipse {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Ellipse, _modDef8827);
+_inherits(ClipPath, _modDef8831);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
     const props = this.props;
-    const obj = {};
-    ({ cx, cy, rx, ry } = props);
-    const merged = Object.assign(Ellipse(8818).extract(this, props));
-    obj.cx = cx;
-    obj.cy = cy;
-    obj.rx = rx;
-    obj.ry = ry;
-    const obj2 = Ellipse(8818);
-    const obj3 = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    };
-    const merged1 = Object.assign(obj);
-    return jsx(_modDef8838, {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    });
+    const obj = { ref: this.refMethod };
+    const merged = Object.assign(ClipPath(8822).extract(this, props));
+    obj.children = props.children;
+    return <tmp ref={this.refMethod} />;
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Ellipse, items);
-importDefaultResultResult.displayName = "Ellipse";
-importDefaultResultResult.defaultProps = { cx: 0, cy: 0, rx: 0, ry: 0 };
+const importDefaultResultResult = _createClass(ClipPath, items);
+importDefaultResultResult.displayName = "ClipPath";
 
 export default importDefaultResultResult;

@@ -1,100 +1,128 @@
 // _runtime/metro/13201__.js
+import _mod13145 from "13145__.js";
+import _mod13172 from "13172__.js";
+import _mod13173 from "13173__.js";
 import _slicedToArray from "00032__.js";
 
-function parseRetryAfterHeader(arg0) {
-  let timestamp = arg1;
-  if (arg1 === undefined) {
-    const _Date = Date;
-    timestamp = Date.now();
-  }
-  const parsed = parseInt("" + arg0, 10);
-  if (isNaN(parsed)) {
-    const _Date2 = Date;
-    const _HermesInternal = HermesInternal;
-    const parsed1 = Date.parse("" + arg0);
-    const _isNaN = isNaN;
-    let num2 = 60000;
-    if (!isNaN(parsed1)) {
-      num2 = parsed1 - timestamp;
+function setupIntegration(on, name, arg2) {
+  closure_0 = on;
+  if (arg2[name.name]) {
+    if (_mod13173.DEBUG_BUILD) {
+      const logger2 = _mod13145.logger;
+      const _HermesInternal2 = HermesInternal;
+      logger2.log("Integration skipped because it was already installed: " + name.name);
     }
-    return num2;
   } else {
-    return 1000 * parsed;
+    arg2[name.name] = name;
+    if (tmp) {
+      name.setupOnce();
+      items.push(name.name);
+    }
+    if (tmp4) {
+      name.setup(on);
+    }
+    if (typeof name.preprocessEvent === "function") {
+      const preprocessEvent = name.preprocessEvent;
+      closure_1 = preprocessEvent.bind(name);
+      on.on("preprocessEvent", (arg0, arg1) => closure_1(arg0, arg1, closure_0));
+    }
+    if (typeof name.processEvent === "function") {
+      const processEvent = name.processEvent;
+      closure_2 = processEvent.bind(name);
+      const _Object = Object;
+      const obj = { id: name.name };
+      on.addEventProcessor(Object.assign((arg0, arg1) => closure_2(arg0, arg1, closure_0), obj));
+    }
+    if (_mod13173.DEBUG_BUILD) {
+      const logger = _mod13145.logger;
+      const _HermesInternal = HermesInternal;
+      logger.log("Integration installed: " + name.name);
+    }
+    tmp = -1 === items.indexOf(name.name) && typeof name.setupOnce === "function";
+    tmp4 = name.setup && typeof name.setup === "function";
   }
 }
+let items = [];
 
-export const DEFAULT_RETRY_AFTER = 60000;
-export const disabledUntil = function disabledUntil(all, arg1) {
-  return all[arg1] || all.all || 0;
+export const addIntegration = function addIntegration(name) {
+  const client = _mod13172.getClient();
+  if (client) {
+    client.addIntegration(name);
+  } else if (_mod13173.DEBUG_BUILD) {
+    const logger = _mod13145.logger;
+    const _HermesInternal = HermesInternal;
+    logger.warn('Cannot add integration "' + name.name + '" because no SDK Client is available.');
+  }
 };
-export const isRateLimited = function isRateLimited(all, result) {
-  let timestamp = arg2;
-  if (arg2 === undefined) {
-    const _Date = Date;
-    timestamp = Date.now();
-  }
-  return (all[result] || all.all || 0) > timestamp;
-};
-export { parseRetryAfterHeader };
-export const updateRateLimits = function updateRateLimits(arg0, headers) {
-  headers = headers.headers;
-  let timestamp = arg2;
-  if (arg2 === undefined) {
-    const _Date = Date;
-    timestamp = Date.now();
-  }
-  const obj = {};
-  const merged = Object.assign(arg0);
-  let str = headers;
-  if (headers) {
-    str = headers["x-sentry-rate-limits"];
-  }
-  let prop = headers;
-  if (headers) {
-    prop = headers["retry-after"];
-  }
-  if (str) {
-    const parts = str.trim().split(",");
-    const iter = parts[Symbol.iterator]();
-    const str2 = str.trim();
-    while (iter !== undefined) {
-      let tmp12 = _slicedToArray(str8.split(":", 5), 5);
-      let str9 = tmp12[1];
-      let str10 = tmp12[4];
-      let _parseInt = parseInt;
-      let parsed = parseInt(tmp12[0], 10);
-      let _isNaN = isNaN;
-      let num6 = 60;
-      if (!isNaN(parsed)) {
-        num6 = parsed;
-      }
-      let result = 1000 * num6;
-      if (str9) {
-        let parts1 = str9.split(";");
-        for (const item10065 of parts1) {
-          let tmp23 = "metric_bucket" === item10065;
-          if (tmp23) {
-            tmp23 = str10;
-          }
-          if (tmp23) {
-            let parts2 = str10.split(";");
-            tmp23 = !parts2.includes("custom");
-          }
-          if (!tmp23) {
-            obj[item10065] = timestamp + result;
-          }
-          continue;
-        }
-      } else {
-        obj.all = timestamp + result;
-      }
-      continue;
+export const afterSetupIntegrations = function afterSetupIntegrations(arg0, arg1) {
+  const iter = arg1[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let obj = nextResult;
+    if (nextResult) {
+      let afterAllSetup = obj.afterAllSetup;
     }
-    str8 = iter.next();
-  } else if (prop) {
-    obj.all = timestamp + parseRetryAfterHeader(prop, timestamp);
-  } else if (429 === headers.statusCode) {
-    obj.all = timestamp + 60000;
+    if (nextResult) {
+      let afterAllSetupResult = obj.afterAllSetup(arg0);
+    }
+    continue;
   }
+};
+export function defineIntegration(arg0) {
+  return arg0;
+}
+export const getIntegrationsToSetup = function getIntegrationsToSetup(defaultIntegrations) {
+  const arr = defaultIntegrations.defaultIntegrations || [];
+  const integrations = defaultIntegrations.integrations;
+  const item = arr.forEach((item) => {
+    item.isDefaultInstance = true;
+  });
+  if (Array.isArray(integrations)) {
+    items = [];
+    HermesBuiltin.arraySpread(integrations, HermesBuiltin.arraySpread(arr, 0));
+    let arr2 = items;
+  } else {
+    arr2 = arr;
+    if (typeof integrations === "function") {
+      const integrationsResult = integrations(arr);
+      const _Array = Array;
+      let tmp2 = integrationsResult;
+      if (!Array.isArray(integrationsResult)) {
+        const items1 = [integrationsResult];
+        tmp2 = items1;
+      }
+      arr2 = tmp2;
+    }
+  }
+  const item1 = arr2.forEach((name) => {
+    name = name.name;
+    let isDefaultInstance = tmp2;
+    if (obj[name]) {
+      isDefaultInstance = !tmp2.isDefaultInstance;
+    }
+    if (isDefaultInstance) {
+      isDefaultInstance = name.isDefaultInstance;
+    }
+    if (!isDefaultInstance) {
+      obj[name] = name;
+    }
+  });
+  const values = Object.values({});
+  const findIndexResult = values.findIndex((name) => "Debug" === name.name);
+  if (findIndexResult > -1) {
+    values.push(_slicedToArray(values.splice(findIndexResult, 1), 1)[0]);
+  }
+  return values;
+};
+export const installedIntegrations = items;
+export { setupIntegration };
+export const setupIntegrations = function setupIntegrations(arg0, arr) {
+  closure_0 = arg0;
+  const obj = {};
+  const item = arr.forEach((item) => {
+    if (item) {
+      setupIntegration(closure_0, item, obj);
+    }
+  });
   return obj;
 };

@@ -5,7 +5,7 @@ export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/guild_space",
   scales: [1],
-  hash: "d156d4fa904a6540d04c61da0e865aa7",
-  name: "GuildSpaceUntranslated.compiled.messages",
+  hash: "bab04a593978125786cc009d0eb42b57",
+  name: "GuildSpace.compiled.messages",
   type: "jsona",
 });

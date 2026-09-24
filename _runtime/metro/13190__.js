@@ -1,128 +1,219 @@
 // _runtime/metro/13190__.js
-import _mod13183 from "13183__.js";
+import stackParserFromStackParserOptions from "../13148_stackParserFromStackParserOptions.js";
+import _mod13151 from "13151__.js";
+import _mod13152 from "13152__.js";
+import memoBuilder from "../13191_memoBuilder.js";
+import _slicedToArray from "00032__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const getEnvelopeEndpointWithUrlEncodedAuth = function getEnvelopeEndpointWithUrlEncodedAuth(
-  protocol,
-  tunnel,
-  name,
-) {
-  let combined1 = tunnel;
-  if (!tunnel) {
-    let str2 = "";
-    if (protocol.protocol) {
-      const _HermesInternal = HermesInternal;
-      str2 = "" + protocol.protocol + ":";
-    }
-    let str4 = "";
-    if (protocol.port) {
-      const _HermesInternal2 = HermesInternal;
-      str4 = ":" + protocol.port;
-    }
-    const host = protocol.host;
-    let str6 = "";
-    if (protocol.path) {
-      const _HermesInternal3 = HermesInternal;
-      str6 = "/" + protocol.path;
-    }
-    const _HermesInternal4 = HermesInternal;
-    const _HermesInternal5 = HermesInternal;
-    const obj = { sentry_version: "7" };
-    const combined = "" + "" + str2 + "//" + host + str4 + str6 + "/api/" + protocol.projectId + "/envelope/";
-    if (protocol.publicKey) {
-      obj.sentry_key = protocol.publicKey;
-    }
-    if (name) {
-      const _HermesInternal6 = HermesInternal;
-      obj.sentry_client = "" + name.name + "/" + name.version;
-    }
-    const _URLSearchParams = URLSearchParams;
-    const str13 = new URLSearchParams(obj);
-    const _HermesInternal7 = HermesInternal;
-    combined1 = "" + combined + "?" + str13.toString();
+function normalize(arg0) {
+  let num = arg1;
+  if (arg1 === undefined) {
+    num = 100;
   }
-  return combined1;
-};
-export const getReportDialogEndpoint = function getReportDialogEndpoint(protocol, user) {
-  const url = _mod13183.makeDsn(protocol);
-  if (url) {
-    let str = "";
-    if (url.protocol) {
-      const _HermesInternal = HermesInternal;
-      str = "" + url.protocol + ":";
-    }
-    let str3 = "";
-    if (url.port) {
-      const _HermesInternal2 = HermesInternal;
-      str3 = ":" + url.port;
-    }
-    const host = url.host;
-    let str5 = "";
-    if (url.path) {
-      const _HermesInternal3 = HermesInternal;
-      str5 = "/" + url.path;
-    }
-    const _HermesInternal4 = HermesInternal;
-    const _HermesInternal5 = HermesInternal;
-    const combined = "" + "" + str + "//" + host + str3 + str5 + "/api/" + "embed/error-page/";
-    const _HermesInternal6 = HermesInternal;
-    let combined1 = "dsn=" + _mod13183.dsnToString(url);
-    let tmp16 = combined1;
-    const keys = Object.keys();
-    if (keys !== undefined) {
-      tmp16 = combined1;
-      while (keys[tmp] !== undefined) {
-        if ("dsn" === tmp19) {
-          continue;
-        } else {
-          combined1 = tmp18;
-          if ("onClose" === tmp19) {
-            continue;
-          } else {
-            if ("user" === tmp19) {
-              user = user.user;
-              combined1 = tmp18;
-              if (!user) {
-                continue;
-              } else {
-                let sum = tmp18;
-                if (user.name) {
-                  let _encodeURIComponent3 = encodeURIComponent;
-                  let _HermesInternal8 = HermesInternal;
-                  sum = tmp18 + "&name=" + encodeURIComponent(user.name);
+  let num2 = arg2;
+  if (arg2 === undefined) {
+    num2 = Infinity;
+  }
+  try {
+    return visit("", arg0, num, num2);
+  } catch (tmp5) {
+    const obj = { ERROR: null };
+    const _HermesInternal = HermesInternal;
+    obj.ERROR = "**non-serializable** (" + tmp5 + ")";
+    return obj;
+  }
+}
+function visit(arg0, __sentry_skip_normalization__) {
+  let num = arg2;
+  if (arg2 === undefined) {
+    num = Infinity;
+  }
+  let num2 = arg3;
+  if (arg3 === undefined) {
+    num2 = Infinity;
+  }
+  let memoBuilderResult = arg4;
+  if (arg4 === undefined) {
+    memoBuilderResult = memoBuilder.memoBuilder();
+  }
+  _slicedToArray(memoBuilderResult, 2);
+  if (null != __sentry_skip_normalization__) {
+    const items = ["boolean", "string"];
+    if (!items.includes(typeof __sentry_skip_normalization__)) {
+      if (typeof __sentry_skip_normalization__ === "number") {
+        let _Number = Number;
+      }
+      let str = (function stringifyValue(arg0, _events) {
+        try {
+          if ("domain" === arg0) {
+            if (_events) {
+              if (typeof _events === "object") {
+                if (_events._events) {
+                  return "[Domain]";
                 }
-                combined1 = sum;
-                if (!user.email) {
+              }
+            }
+          }
+          if ("domainEmitter" === arg0) {
+            return "[DomainEmitter]";
+          } else {
+            if (undefined !== global) {
+              if (_events === global) {
+                return "[Global]";
+              }
+            }
+            const _window = window;
+            if (typeof window !== "undefined") {
+              const _window2 = window;
+              if (_events === window) {
+                return "[Window]";
+              }
+            }
+            const _document = document;
+            if (typeof document !== "undefined") {
+              const _document2 = document;
+              if (_events === document) {
+                return "[Document]";
+              }
+            }
+            if (obj.isVueViewModel(_events)) {
+              return "[VueViewModel]";
+            } else {
+              if (tmp4Result.isSyntheticEvent(_events)) {
+                return "[SyntheticEvent]";
+              } else {
+                if (typeof _events === "number") {
+                  const _Number = Number;
+                  if (!Number.isFinite(_events)) {
+                    const _HermesInternal = HermesInternal;
+                    return "[" + _events + "]";
+                  }
+                }
+                if (typeof _events === "function") {
+                  const _HermesInternal4 = HermesInternal;
+                  return "[Function: " + stackParserFromStackParserOptions.getFunctionName(_events) + "]";
+                } else if (typeof _events === "symbol") {
+                  const _String2 = String;
+                  const _HermesInternal3 = HermesInternal;
+                  return "[" + String(_events) + "]";
+                } else if (typeof _events === "bigint") {
+                  const _String = String;
+                  const _HermesInternal2 = HermesInternal;
+                  return "[BigInt: " + String(_events) + "]";
+                } else {
+                  const tmp9 = (function getConstructorName(_events) {
+                    const prototypeOf = Object.getPrototypeOf(_events);
+                    let str = "null prototype";
+                    if (prototypeOf) {
+                      str = prototypeOf.constructor.name;
+                    }
+                    return str;
+                  })(_events);
+                  const _HermesInternal6 = HermesInternal;
+                  if (obj4.test(tmp9)) {
+                    let combined = concat(tmp10, "]");
+                  } else {
+                    combined = concat(tmp10, "]");
+                  }
+                  return combined;
+                }
+              }
+              tmp4Result = _mod13152;
+            }
+            obj = _mod13152;
+          }
+        } catch (tmp7) {
+          const _HermesInternal5 = HermesInternal;
+          return "**non-serializable** (" + tmp7 + ")";
+        }
+      })(arg0, __sentry_skip_normalization__);
+      if (str.startsWith("[object ")) {
+        if (__sentry_skip_normalization__.__sentry_skip_normalization__) {
+          return __sentry_skip_normalization__;
+        } else {
+          if (typeof __sentry_skip_normalization__.__sentry_override_normalization_depth__ === "number") {
+            num = __sentry_skip_normalization__.__sentry_override_normalization_depth__;
+          }
+          if (0 === num) {
+            return str.replace("object ", "");
+          } else if (tmp6(__sentry_skip_normalization__)) {
+            return "[Circular ~]";
+          } else {
+            if (__sentry_skip_normalization__) {
+              if (typeof __sentry_skip_normalization__.toJSON === "function") {
+                try {
+                  return visit("", __sentry_skip_normalization__.toJSON(), num - 1, num2, tmp8);
+                } catch (err) {}
+              }
+            }
+            const _Array = Array;
+            const tmp14 = Array.isArray(__sentry_skip_normalization__) ? [] : {};
+            const convertToPlainObjectResult = _mod13151.convertToPlainObject(__sentry_skip_normalization__);
+            const keys = Object.keys();
+            if (keys !== undefined) {
+              while (keys[tmp] !== undefined) {
+                let _Object = Object;
+                hasOwnProperty = Object.prototype.hasOwnProperty;
+                let call = hasOwnProperty.call;
+                let tmp28 = tmp21;
+                if (!(typeof call === "unknown" ? hasOwnProperty(tmp21) : call(convertToPlainObjectResult, tmp21))) {
                   continue;
                 } else {
-                  let _encodeURIComponent4 = encodeURIComponent;
-                  let _HermesInternal9 = HermesInternal;
-                  combined1 = sum + "&email=" + encodeURIComponent(user.email);
-                  continue;
+                  if (tmp20 >= num2) {
+                    let str4 = "[MaxProperties ~]";
+                    tmp14[tmp21] = "[MaxProperties ~]";
+                    break;
+                  } else {
+                    tmp14[tmp21] = visit(tmp28, convertToPlainObjectResult[tmp21], num - 1, num2, tmp8);
+                    let num6 = tmp20 + 1;
+                    continue;
+                  }
+                  break;
                 }
-                continue;
+                break;
               }
-              continue;
-            } else {
-              let _encodeURIComponent = encodeURIComponent;
-              let _encodeURIComponent2 = encodeURIComponent;
-              let encodeURIComponentResult = encodeURIComponent(tmp19);
-              let _HermesInternal7 = HermesInternal;
-              combined1 = tmp18 + "&" + encodeURIComponentResult + "=" + encodeURIComponent(user[tmp19]);
-              continue;
             }
-            continue;
+            tmp7(__sentry_skip_normalization__);
+            return tmp14;
           }
-          continue;
         }
-        continue;
+      } else {
+        return str;
       }
     }
-    const _HermesInternal10 = HermesInternal;
-    return "" + combined + "?" + tmp16;
-  } else {
-    return "";
   }
+  return __sentry_skip_normalization__;
+}
+function normalizeToSize(arg0) {
+  let num = arg1;
+  if (arg1 === undefined) {
+    num = 3;
+  }
+  let num2 = arg2;
+  if (arg2 === undefined) {
+    num2 = 102400;
+  }
+  let tmp = normalize(arg0, num);
+  if (~-str.split(/%..|./).length > num2) {
+    tmp = normalizeToSize(arg0, num - 1, num2);
+  }
+  return tmp;
+}
+
+export { normalize };
+export { normalizeToSize };
+export const normalizeUrlToBase = function normalizeUrlToBase(arg0, str) {
+  const replaced = str.replace(/\\/g, "/");
+  try {
+    const _decodeURI = decodeURI;
+    str = decodeURI(arg0);
+    const str2 = str.replace(/\\/g, "/");
+    const _RegExp = RegExp;
+    const _HermesInternal = HermesInternal;
+    const regExp = new RegExp("(file://)?/*" + tmp2 + "/*", "ig");
+    return str
+      .replace(/\\/g, "/")
+      .replace(/webpack:\/?/g, "")
+      .replace(regExp, "app:///");
+  } catch (err) {}
 };

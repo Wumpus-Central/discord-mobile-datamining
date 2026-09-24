@@ -1,6 +1,11 @@
 // _runtime/metro/07265__.js
-import LegacyBaseButton from "../06983_LegacyBaseButton.js";
+import _mod17 from "00017__.js";
 
-export const TouchableOpacity = LegacyBaseButton.TouchableOpacity;
-export const TouchableHighlight = LegacyBaseButton.TouchableHighlight;
-export const TouchableWithoutFeedback = LegacyBaseButton.TouchableWithoutFeedback;
+const StyleSheet = _mod17.StyleSheet;
+const obj = { backdrop: null };
+const obj2 = {};
+const merged = Object.assign(StyleSheet.absoluteFillObject);
+obj2.backgroundColor = "black";
+obj.backdrop = obj2;
+
+export const styles = StyleSheet.create(obj);

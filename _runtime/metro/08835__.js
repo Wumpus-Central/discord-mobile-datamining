@@ -1,12 +1,14 @@
 // _runtime/metro/08835__.js
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _modDef8831 from "08831__.js";
+import _modDef8836 from "08836__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const Defs = importDefault;
+const Circle = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,15 +27,16 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
+_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Defs {
+class Circle {
   constructor() {
     self = this;
-    tmp = c2(this, Defs);
-    tmp2 = closure_4;
-    obj = closure_4(Defs);
-    tmp3 = closure_3;
-    if (metroRequire()) {
+    tmp = closure_3(this, Circle);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(Circle);
+    tmp3 = closure_4;
+    if (closure_7()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -46,15 +49,35 @@ class Defs {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Defs, fn(19).Component);
+_inherits(Circle, _modDef8831);
 const entry = {
   key: "render",
   value: function render() {
-    return jsx(Defs(8836), { children: this.props.children });
+    const self = this;
+    const props = this.props;
+    const obj = {};
+    ({ cx, cy, r } = props);
+    const merged = Object.assign(Circle(8822).extract(this, props));
+    obj.cx = cx;
+    obj.cy = cy;
+    obj.r = r;
+    const obj2 = Circle(8822);
+    const obj3 = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    };
+    const merged1 = Object.assign(obj);
+    return jsx(_modDef8836, {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    });
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Defs, items);
-importDefaultResultResult.displayName = "Defs";
+const importDefaultResultResult = _createClass(Circle, items);
+importDefaultResultResult.displayName = "Circle";
+importDefaultResultResult.defaultProps = { cx: 0, cy: 0, r: 0 };
 
 export default importDefaultResultResult;

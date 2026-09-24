@@ -3,9 +3,9 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/self_remediation_feedback",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==",
   scales: [1],
-  hash: "c191c06432eabca1ed0bf003746fd75e",
-  name: "SelfRemediationFeedback.compiled.messages",
+  hash: "42f1a3473da66091749cc59929733e87",
+  name: "zh-CN.messages.42f1a3473da66091749cc59929733e87.compiled.messages",
   type: "jsona",
 });

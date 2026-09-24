@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/logos",
-  width: 605.5,
-  height: 244.5,
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 51,
+  height: 36,
   scales: [2, 3],
-  hash: "fdaf8ab7fb8f1ab3047aef93e706bcc1",
-  name: "img_discord_nitro_logo_left_light",
+  hash: "d8a20104f4217083a13e0ca284c4bad2",
+  name: "img_premium_resubscribe_mobile",
   type: "png",
 });

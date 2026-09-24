@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "74d1abdb8a51df8677242205d5859ee7",
-  name: "GridSquareIcon",
+  hash: "0d0b8d91cad785fc29460e6b86930814",
+  name: "FolderPlusIcon",
   type: "png",
 });

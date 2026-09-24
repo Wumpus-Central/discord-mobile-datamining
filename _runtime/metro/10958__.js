@@ -1,13 +1,11 @@
 // _runtime/metro/10958__.js
-import AbstractParserWithWordBoundaryChecking from "../10781_AbstractParserWithWordBoundaryChecking.js";
-import _mod10943 from "10943__.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
+import _mod10798 from "10798__.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ENTimeUnitCasualRelativeFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,20 +24,31 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const regExp = new RegExp(
-  "(questo|ultimo|passato|prossimo|dopo|questa|ultima|passata|prossima|\\+|-)\\s*(" +
-    _mod10943.TIME_UNITS_PATTERN +
-    ")(?=\\W|$)",
-  "i",
-);
-class ENTimeUnitCasualRelativeFormatParser {
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class ENMergeDateRangeRefiner {
   constructor() {
     self = this;
-    tmp = c2(this, ENTimeUnitCasualRelativeFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(ENTimeUnitCasualRelativeFormatParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_0(this, ENMergeDateRangeRefiner);
+    tmp2 = c2;
+    obj = c2(ENMergeDateRangeRefiner);
+    tmp3 = closure_1;
+    if (closure_3()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -52,33 +61,14 @@ class ENTimeUnitCasualRelativeFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(
-  ENTimeUnitCasualRelativeFormatParser,
-  AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking,
-);
+_classCallCheck = ENMergeDateRangeRefiner;
+_inherits(ENMergeDateRangeRefiner, fn(_mod10798).default);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+  key: "patternBetween",
+  value: function patternBetween() {
+    return /^\s*(to|-)\s*$/i;
   },
 };
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const formatted = arg1[1].toLowerCase();
-      const parseDurationResult = ENTimeUnitCasualRelativeFormatParser(10943).parseDuration(arg1[2]);
-      if ("last" !== formatted) {
-        if ("past" !== formatted) {
-          let reverseDurationResult = parseDurationResult;
-        }
-        const ParsingComponents = ENTimeUnitCasualRelativeFormatParser(10777).ParsingComponents;
-        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
-      }
-      reverseDurationResult = ENTimeUnitCasualRelativeFormatParser(10776).reverseDuration(parseDurationResult);
-    },
-  },
-];
+const items = [entry];
 
-export default _createClass(ENTimeUnitCasualRelativeFormatParser, items);
+export default _createClass(ENMergeDateRangeRefiner, items);

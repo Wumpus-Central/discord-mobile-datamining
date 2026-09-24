@@ -1,27 +1,28 @@
 // _runtime/metro/03915__.js
+import requiredArgs_mod from "../03914_requiredArgs.js";
+import startOfUTCWeek_mod from "../03916_startOfUTCWeek.js";
 
-export default function toInteger(arg0) {
-  if (null !== arg0) {
-    if (true !== arg0) {
-      if (false !== arg0) {
-        const _Number = Number;
-        const NumberResult = Number(arg0);
-        const _isNaN = isNaN;
-        if (isNaN(NumberResult)) {
-          return NumberResult;
-        } else {
-          if (NumberResult < 0) {
-            const _Math2 = Math;
-            let rounded = Math.ceil(NumberResult);
-          } else {
-            const _Math = Math;
-            rounded = Math.floor(NumberResult);
-          }
-          return rounded;
-        }
-      }
-    }
-  }
-  return NaN;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj = { default: requiredArgs };
+  let tmp3 = obj;
+} else {
+  tmp3 = requiredArgs;
+}
+requiredArgs = tmp3;
+let startOfUTCWeek = startOfUTCWeek_mod;
+if (!startOfUTCWeek) {
+  const obj2 = { default: startOfUTCWeek };
+  let tmp5 = obj2;
+} else {
+  tmp5 = startOfUTCWeek;
+}
+startOfUTCWeek = tmp5;
+
+export default function isSameUTCWeek(arg0, arg1, arg2) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfUTCWeek.default(arg0, arg2);
+  const time = defaultResult1.getTime();
+  return time === startOfUTCWeek.default(arg1, arg2).getTime();
 };
 export default exports.default;

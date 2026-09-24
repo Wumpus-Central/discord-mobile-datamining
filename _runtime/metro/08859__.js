@@ -1,6 +1,6 @@
 // _runtime/metro/08859__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef8842 from "08842__.js";
+import _modDef8846 from "08846__.js";
 import _modDef8860 from "08860__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
@@ -8,7 +8,7 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const FeMerge = fn;
+const FeOffset = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,12 +29,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class FeMerge {
+class FeOffset {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeMerge);
+    tmp = closure_3(this, FeOffset);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeMerge);
+    obj = hasOwnProperty(FeOffset);
     tmp3 = closure_4;
     if (closure_7()) {
       tmp7 = globalThis;
@@ -49,19 +49,20 @@ class FeMerge {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeMerge, _modDef8842);
+_inherits(FeOffset, _modDef8846);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
+    const merged = Object.assign(this.props);
     const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       },
     };
-    const merged = Object.assign(FeMerge(8841).extractFilter(this.props));
-    const obj2 = FeMerge(8841);
-    const merged1 = Object.assign(FeMerge(8841).extractFeMerge(this.props, this));
+    const merged1 = Object.assign(FeOffset(8845).extractFilter(this.props));
+    const obj2 = FeOffset(8845);
+    const merged2 = Object.assign(FeOffset(8845).extractIn(this.props));
     return (
       <tmp
         ref={function ref(arg0) {
@@ -72,9 +73,12 @@ const entry = {
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeMerge, items);
-importDefaultResultResult.displayName = "FeMerge";
+const importDefaultResultResult = _createClass(FeOffset, items);
+importDefaultResultResult.displayName = "FeOffset";
+let obj = {};
 let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+obj.dx = 0;
+obj.dy = 0;
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

@@ -1,140 +1,100 @@
 // _runtime/metro/07052__.js
-import tagMessage from "../06988_tagMessage.js";
-import _mod7026 from "07026__.js";
-import hash from "../07040_hash.js";
-import allowedNativeProps2 from "../07041_allowedNativeProps.js";
-import _mod7053 from "07053__.js";
-import _slicedToArray from "00032__.js";
 
-require = fn;
-const useMemo = fn(19).useMemo;
-const map = new Map();
-function DEFAULT_PROPS_TRANSFORMER(arg0) {
-  return arg0;
-}
-function isGestureEnabled(gestures) {
-  if (obj.isComposedGesture(gestures)) {
-    gestures = gestures.gestures;
-    let someResult = gestures.some(isGestureEnabled);
-  } else {
-    someResult = false !== hash.maybeUnpackValue(gestures.config.enabled);
-    const tmpResult = hash;
-  }
-  return someResult;
-}
-
-export { isGestureEnabled };
-export const resolveInternalConfigProps = function resolveInternalConfigProps(useAnimated) {
-  useAnimated = useAnimated.useAnimated;
-  if (!useAnimated) {
-    useAnimated = _mod7053.isNativeAnimatedEvent(useAnimated.onUpdate);
-  }
-  useAnimated.dispatchesAnimatedEvents = useAnimated;
-  if (useAnimated.dispatchesAnimatedEvents) {
-    useAnimated.disableReanimated = true;
-  }
-  const disableReanimated = useAnimated.disableReanimated;
-  let result = !disableReanimated;
-  if (!disableReanimated) {
-    result = undefined !== _mod7026.Reanimated;
-  }
-  if (result) {
-    result = hash.hasWorkletEventHandlers(useAnimated);
-  }
-  if (result) {
-    result = !useAnimated.dispatchesAnimatedEvents;
-  }
-  useAnimated.shouldUseReanimatedDetector = result;
-  useAnimated.needsPointerData = _mod7053.shouldHandleTouchEvents(useAnimated);
+export const isComposedGesture = function isComposedGesture(gesture) {
+  return "handlerTags" in gesture;
 };
-export const prepareConfigForNativeSide = function prepareConfigForNativeSide(arg0, shouldUseReanimatedDetector) {
-  shouldUseReanimatedDetector = shouldUseReanimatedDetector.shouldUseReanimatedDetector;
-  if (shouldUseReanimatedDetector) {
-    shouldUseReanimatedDetector = !hash.maybeUnpackValue(shouldUseReanimatedDetector.runOnJS);
-  }
-  const obj2 = { dispatchesReanimatedEvents: shouldUseReanimatedDetector };
-  const PropsWhiteLists = allowedNativeProps2.PropsWhiteLists;
-  let EMPTY_WHITE_LIST = PropsWhiteLists.get(arg0);
-  if (EMPTY_WHITE_LIST == null) {
-    EMPTY_WHITE_LIST = allowedNativeProps2.EMPTY_WHITE_LIST;
-  }
-  const entries = Object.entries(shouldUseReanimatedDetector);
-  while (tmp12 !== undefined) {
-    [first, iter] = tmp13;
-    let tmp17 = first;
-    let allowedNativeProps = allowedNativeProps2.allowedNativeProps;
-    if (!allowedNativeProps.has(first)) {
-      if (!EMPTY_WHITE_LIST.has(tmp17)) {
-        let PropsToFilter = allowedNativeProps2.PropsToFilter;
-        if (PropsToFilter.has(tmp17)) {
-          continue;
+export const prepareRelations = function prepareRelations(config, handlerTag) {
+  const simultaneousWith1 = config.simultaneousWith;
+  closure_0 = handlerTag;
+  if (simultaneousWith1) {
+    const _Array = Array;
+    if (Array.isArray(simultaneousWith1)) {
+      const item = simultaneousWith1.forEach(function processSingleGesture(externalSimultaneousHandlers) {
+        if ("handlerTags" in externalSimultaneousHandlers) {
+          let prop = externalSimultaneousHandlers.externalSimultaneousHandlers;
         } else {
-          let _console = console;
-          let tmp19Result = tagMessage;
-          let _HermesInternal = HermesInternal;
-          let str = "";
-          let str2 = " is not a valid property for ";
-          let str3 = " and will be ignored.";
-          let warnResult = console.warn(
-            tmp19Result.tagMessage("" + tmp17 + " is not a valid property for " + arg0 + " and will be ignored."),
-          );
-          continue;
+          prop = externalSimultaneousHandlers.gestureRelations.simultaneousHandlers;
         }
-        continue;
+        if (!prop.includes(closure_0)) {
+          prop.push(closure_0);
+        }
+      });
+    } else {
+      if ("handlerTags" in simultaneousWith1) {
+        let prop = simultaneousWith1.externalSimultaneousHandlers;
+      } else {
+        prop = simultaneousWith1.gestureRelations.simultaneousHandlers;
+      }
+      if (!prop.includes(handlerTag)) {
+        prop.push(handlerTag);
       }
     }
-    let Reanimated = _mod7026.Reanimated;
-    let isSharedValueResult;
-    if (Reanimated != null) {
-      isSharedValueResult = Reanimated.isSharedValue(iter);
-    }
-    obj2[tmp17] = isSharedValueResult ? iter.value : iter;
   }
-  return obj2;
+  const simultaneousWith = config.simultaneousWith;
+  if (simultaneousWith) {
+    const _Array2 = Array;
+    if (Array.isArray(simultaneousWith)) {
+      let flatMapResult = simultaneousWith.flatMap((handlerTags) => {
+        if ("handlerTags" in handlerTags) {
+          handlerTags = handlerTags.handlerTags;
+        } else {
+          handlerTags = [];
+          handlerTags[0] = handlerTags.handlerTag;
+        }
+        return handlerTags;
+      });
+    } else if ("handlerTags" in simultaneousWith) {
+      flatMapResult = simultaneousWith.handlerTags;
+    } else {
+      flatMapResult = [simultaneousWith.handlerTag];
+    }
+  } else {
+    const obj = { simultaneousHandlers: [], waitFor: null, blocksHandlers: null };
+    const requireToFail = config.requireToFail;
+    if (requireToFail) {
+      const _Array3 = Array;
+      if (Array.isArray(requireToFail)) {
+        let flatMapResult1 = requireToFail.flatMap((handlerTags) => {
+          if ("handlerTags" in handlerTags) {
+            handlerTags = handlerTags.handlerTags;
+          } else {
+            handlerTags = [];
+            handlerTags[0] = handlerTags.handlerTag;
+          }
+          return handlerTags;
+        });
+      } else if ("handlerTags" in requireToFail) {
+        flatMapResult1 = requireToFail.handlerTags;
+      } else {
+        flatMapResult1 = [requireToFail.handlerTag];
+      }
+    } else {
+      obj.waitFor = [];
+      const block = config.block;
+      if (block) {
+        const _Array4 = Array;
+        if (Array.isArray(block)) {
+          let flatMapResult2 = block.flatMap((handlerTags) => {
+            if ("handlerTags" in handlerTags) {
+              handlerTags = handlerTags.handlerTags;
+            } else {
+              handlerTags = [];
+              handlerTags[0] = handlerTags.handlerTag;
+            }
+            return handlerTags;
+          });
+        } else if ("handlerTags" in block) {
+          flatMapResult2 = block.handlerTags;
+        } else {
+          flatMapResult2 = [block.handlerTag];
+        }
+      } else {
+        obj.blocksHandlers = [];
+        return obj;
+      }
+    }
+  }
 };
-export const useClonedAndRemappedConfig = function useClonedAndRemappedConfig(gestureHandlerProps) {
-  closure_0 = gestureHandlerProps;
-  let tmp = map;
-  if (map === undefined) {
-    tmp = map;
-  }
-  closure_1 = tmp;
-  let tmp2 = transformHoverProps;
-  if (transformHoverProps === undefined) {
-    tmp2 = DEFAULT_PROPS_TRANSFORMER;
-  }
-  closure_2 = tmp2;
-  const items = [gestureHandlerProps, tmp, tmp2];
-  return useMemo(() => {
-    const merged = Object.assign(closure_0);
-    const item = closure_1.forEach((item, index) => {
-      if (index in obj) {
-        obj[item] = obj[index];
-        delete tmp[tmp2];
-      }
-    });
-    const tmp3 = closure_2({});
-    let useAnimated = tmp3.useAnimated;
-    if (!useAnimated) {
-      useAnimated = _mod7053.isNativeAnimatedEvent(tmp3.onUpdate);
-    }
-    tmp3.dispatchesAnimatedEvents = useAnimated;
-    if (tmp3.dispatchesAnimatedEvents) {
-      tmp3.disableReanimated = true;
-    }
-    const disableReanimated = tmp3.disableReanimated;
-    let result = !disableReanimated;
-    if (!disableReanimated) {
-      result = undefined !== _mod7026.Reanimated;
-    }
-    if (result) {
-      result = hash.hasWorkletEventHandlers(tmp3);
-    }
-    if (result) {
-      result = !tmp3.dispatchesAnimatedEvents;
-    }
-    tmp3.shouldUseReanimatedDetector = result;
-    tmp3.needsPointerData = _mod7053.shouldHandleTouchEvents(tmp3);
-    return tmp3;
-  }, items);
+export const containsDuplicates = function containsDuplicates(flatMapResult) {
+  return new Set(flatMapResult).size !== flatMapResult.length;
 };

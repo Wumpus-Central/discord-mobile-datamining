@@ -1,93 +1,61 @@
 // _runtime/metro/10854__.js
-import repeatedTimeunitPattern from "../10774_repeatedTimeunitPattern.js";
-import AbstractParserWithWordBoundaryChecking from "../10781_AbstractParserWithWordBoundaryChecking.js";
-import _mod10855 from "10855__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
 
-const PTWeekdayParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
+const JPSlashDateFormatParser = require;
 const regExp = new RegExp(
-  "(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:(este|esta|passado|pr[o\u00F3]ximo)\\s*)?(" +
-    repeatedTimeunitPattern.matchAnyPattern(_mod10855.WEEKDAY_DICTIONARY) +
-    ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(este|esta|passado|pr[\u00F3o]ximo)\\s*semana)?(?=\\W|\\d|$)",
+  "([0-9\uFF10-\uFF19]{4}[\\/|\\\uFF0F])?([0-1\uFF10-\uFF11]{0,1}[0-9\uFF10-\uFF19]{1})(?:[\\/|\\\uFF0F]([0-3\uFF10-\uFF13]{0,1}[0-9\uFF10-\uFF19]{1}))",
   "i",
 );
-class PTWeekdayParser {
+class JPSlashDateFormatParser {
   constructor() {
-    self = this;
-    tmp = c2(this, PTWeekdayParser);
-    tmp2 = closure_4;
-    obj = closure_4(PTWeekdayParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
+    tmp = c2(this, JPSlashDateFormatParser);
+    return;
   }
 }
-_inherits(PTWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
+  key: "pattern",
+  value: function pattern() {
     return regExp;
   },
 };
 const items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const formatted = arg1[2].toLowerCase();
-      const tmp4 = PTWeekdayParser(10855).WEEKDAY_DICTIONARY[formatted];
-      if (undefined === tmp4) {
-        return null;
-      } else {
-        const formatted1 = arg1[1] || arg1[3] || "".toLowerCase();
-        let str5 = "this";
-        if ("passado" != formatted1) {
-          str5 = "next";
-          if ("pr\u00F3ximo" != formatted1) {
-            str5 = "next";
-            if ("proximo" != formatted1) {
-              str5 = null;
-              if ("este" == formatted1) {
-                str5 = "this";
+    key: "extract",
+    value: function extract(createParsingComponents, arg1) {
+      const parsingComponents = createParsingComponents.createParsingComponents();
+      const parsed = parseInt(JPSlashDateFormatParser(10850).toHankaku(arg1[2]));
+      const parsed1 = parseInt(JPSlashDateFormatParser(10850).toHankaku(arg1[3]));
+      if (parsed >= 1) {
+        if (parsed <= 12) {
+          if (parsed1 >= 1) {
+            if (parsed1 <= 31) {
+              parsingComponents.assign("day", parsed1);
+              parsingComponents.assign("month", parsed);
+              if (arg1[1]) {
+                const _parseInt = parseInt;
+                const parsed2 = parseInt(JPSlashDateFormatParser(10850).toHankaku(arg1[1]));
+                parsingComponents.assign("year", JPSlashDateFormatParser(10781).findMostLikelyADYear(parsed2));
+              } else {
+                parsingComponents.imply(
+                  "year",
+                  JPSlashDateFormatParser(10781).findYearClosestToRef(
+                    createParsingComponents.reference.instant,
+                    parsed1,
+                    parsed,
+                  ),
+                );
               }
+              return parsingComponents;
             }
           }
+          return null;
         }
-        return PTWeekdayParser(10801).createParsingComponentsAtWeekday(reference.reference, tmp4, str5);
       }
+      return null;
     },
   },
 ];
 
-export default _createClass(PTWeekdayParser, items);
+export default _createClass(JPSlashDateFormatParser, items);

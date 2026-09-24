@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
-  width: 20,
-  height: 20,
+  httpServerLocation: "/assets/images/native/premium/backgrounds",
+  width: 375,
+  height: 301,
   scales: [2, 3],
-  hash: "4f7f3933dfbb31e71ae1545e9b3d82b6",
-  name: "sticker",
+  hash: "c7a19747ab5ad0f69954f725ac48a489",
+  name: "img_top_pattern_dark",
   type: "png",
 });

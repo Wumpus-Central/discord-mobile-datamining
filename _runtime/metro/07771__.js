@@ -1,22 +1,10 @@
 // _runtime/metro/07771__.js
+import _slicedToArray from "00032__.js";
 
-export default function areHookInputsEqual(arg0, arg1) {
-  if (arg0.length !== arg1.length) {
-    return false;
-  } else {
-    if (0 < arg1.length) {
-      let num3 = 0;
-      if (0 < arg0.length) {
-        const _Object = Object;
-        while (Object.is(arg0[num3], arg1[num3])) {
-          let sum = num3 + 1;
-          if (sum < arg1.length) {
-            num3 = sum;
-          }
-        }
-        return false;
-      }
-    }
-    return true;
-  }
+const noop = fn(19);
+({ useCallback: closure_1, useState: c2 } = noop);
+
+export default function useForceUpdate() {
+  closure_0 = _slicedToArray(React2({}), 2)[1];
+  return framebus(() => closure_0({}), []);
 }

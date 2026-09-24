@@ -1,54 +1,36 @@
 // _runtime/metro/07230__.js
-import _slicedToArray from "07185__.js";
+function asyncGeneratorStep(arg0, fn, fn2, arg3, arg4, arg5, arg6) {
+  try {
+    const iter = arg0[arg5](arg6);
+    value = iter.value;
+    if (iter.done) {
+      fn(value);
+    } else {
+      const resolved = Promise.resolve(value);
+      resolved.then(arg3, arg4);
+    }
+  } catch (tmp13) {
+    fn2(tmp13);
+  }
+}
 
-const noop = fn(19);
-({ useCallback: c2, useEffect: c3, useState: closure_4 } = noop);
-
-export const useUnmountAwareTimeout = function useUnmountAwareTimeout() {
-  const first = _slicedToArray(
-    closure_4(() => new Set()),
-    1,
-  )[0];
-  const items = [first];
-  closure_3(
-    () => () => {
-      const item = set.forEach((item) => closure_1_0.clearTimeout(item));
-      set.clear();
-    },
-    items,
-  );
-  const obj = { setTimeout: null };
-  const items1 = [first];
-  obj.setTimeout = closure_2((arg0, arg1) => {
-    const timerId = first.setTimeout(() => {
-      first.delete(timerId);
-      closure_0();
-    }, arg1);
-    arg0.add(timerId);
-  }, items1);
-  return obj;
-};
-export const useUnmountAwareAnimationFrame = function useUnmountAwareAnimationFrame() {
-  const first = _slicedToArray(
-    closure_4(() => new Set()),
-    1,
-  )[0];
-  const items = [first];
-  closure_3(
-    () => () => {
-      const item = set.forEach((item) => cancelAnimationFrame(item));
-      set.clear();
-    },
-    items,
-  );
-  const obj = { requestAnimationFrame: null };
-  const items1 = [first];
-  obj.requestAnimationFrame = closure_2((arg0) => {
-    const animationFrame = first.requestAnimationFrame((arg0) => {
-      first.delete(animationFrame);
-      closure_0(arg0);
+export default function _asyncToGenerator(arg0) {
+  closure_0 = arg0;
+  return function () {
+    const self = this;
+    closure_1 = arguments;
+    return new Promise((arg0, arg1) => {
+      _self = arg0;
+      closure_1 = arg1;
+      function _next(arg0) {
+        self(applyResult, closure_0, closure_1, _next, _throw, "next", arg0);
+      }
+      function _throw(arg0) {
+        self(applyResult, closure_0, closure_1, _next, _throw, "throw", arg0);
+      }
+      const applyResult = _self.apply(self, closure_1);
+      closure_2 = applyResult;
+      asyncGeneratorStep(applyResult, arg0, arg1, _next, _throw, "next", undefined);
     });
-    arg0.add(animationFrame);
-  }, items1);
-  return obj;
-};
+  };
+}

@@ -3,9 +3,9 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jbGllbnRfdGhlbWVz",
+  httpServerLocation: "/assets/modules/notifications/profile_updates/sender",
   scales: [1],
-  hash: "80eca7cf7a6775f3f1b1a3bbae762637",
-  name: "bg.messages.80eca7cf7a6775f3f1b1a3bbae762637.compiled.messages",
+  hash: "7f05ad73b5da2adbe55e7968cf15ccf8",
+  name: "NotifyFriendsOnProfileUpdate.compiled.messages",
   type: "jsona",
 });

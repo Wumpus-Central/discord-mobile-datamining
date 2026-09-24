@@ -1,84 +1,56 @@
 // _runtime/metro/10818__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import AbstractTimeExpressionParser from "../10788_AbstractTimeExpressionParser.js";
 import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _get from "00096__get.js";
-import _inherits from "../00098__inherits.js";
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
 let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-class DETimeExpressionParser {
+const regExp = new RegExp("^\\s*(?:\\(?(?:GMT|UTC)\\s?)?([+-])(\\d{1,2})(?::?(\\d{2}))?\\)?", "i");
+class ExtractTimezoneOffsetRefiner {
   constructor() {
-    self = this;
-    tmp = closure_0(this, DETimeExpressionParser);
-    tmp2 = c2;
-    obj = c2(DETimeExpressionParser);
-    tmp3 = closure_1;
-    if (closure_4()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
+    tmp = closure_0(this, ExtractTimezoneOffsetRefiner);
+    return;
   }
 }
-_classCallCheck = DETimeExpressionParser;
-_inherits(DETimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
+_classCallCheck = ExtractTimezoneOffsetRefiner;
 const entry = {
-  key: "primaryPrefix",
-  value: function primaryPrefix() {
-    return "(?:(?:um|von)\\s*)?";
+  key: "refine",
+  value: function refine(arg0, arr) {
+    let text = arg0;
+    const item = arr.forEach((start) => {
+      text = start;
+      start = start.start;
+      if (!start.isCertain("timezoneOffset")) {
+        const match = regExp.exec(text.text.substring(start.index + start.text.length));
+        if (match) {
+          obj.debug(() => {
+            console.log("Extracting timezone: '" + match[0] + "' into : " + closure_0);
+          });
+          const _parseInt = parseInt;
+          let str2 = match[3];
+          const result = 60 * parseInt(match[2]);
+          if (!str2) {
+            str2 = "0";
+          }
+          const sum = result + parseInt(str2);
+          if (sum <= 840) {
+            let tmp7 = sum;
+            if ("-" === match[1]) {
+              tmp7 = -sum;
+            }
+            if (null != start.end) {
+              const end = start.end;
+              end.assign("timezoneOffset", tmp7);
+            }
+            const start2 = start.start;
+            start2.assign("timezoneOffset", tmp7);
+            start.text = start.text + match[0];
+          }
+        }
+        obj = text;
+      }
+    });
+    return arr;
   },
 };
-let items = [
-  entry,
-  {
-    key: "followingPhase",
-    value: function followingPhase() {
-      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|bis)\\s*";
-    },
-  },
-  {
-    key: "extractPrimaryTimeComponents",
-    value: function extractPrimaryTimeComponents(arg0, arg1) {
-      let fnResult = null;
-      if (!str.match(/^\s*\d{4}\s*$/)) {
-        const self = this;
-        let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "extractPrimaryTimeComponents", this);
-        if (typeof fn === "function") {
-          fn = (items) => fn.apply(self, items);
-        }
-        const items = [arg0, arg1];
-        fnResult = fn(items);
-      }
-      return fnResult;
-    },
-  },
-];
+const items = [entry];
 
-export default _createClass(DETimeExpressionParser, items);
+export default _createClass(ExtractTimezoneOffsetRefiner, items);

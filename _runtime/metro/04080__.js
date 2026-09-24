@@ -1,24 +1,24 @@
 // _runtime/metro/04080__.js
-import module_3915_mod from "03915__.js";
-import module_4060_mod from "04060__.js";
-import requiredArgs_mod from "../03912_requiredArgs.js";
+import module_3917_mod from "03917__.js";
+import module_4068_mod from "04068__.js";
+import requiredArgs_mod from "../03914_requiredArgs.js";
 
-let module_3915 = module_3915_mod;
-if (!module_3915) {
-  const obj = { default: module_3915 };
+let module_3917 = module_3917_mod;
+if (!module_3917) {
+  const obj = { default: module_3917 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3915;
+  tmp3 = module_3917;
 }
-module_3915 = tmp3;
-let module_4060 = module_4060_mod;
-if (!module_4060) {
-  const obj2 = { default: module_4060 };
+module_3917 = tmp3;
+let module_4068 = module_4068_mod;
+if (!module_4068) {
+  const obj2 = { default: module_4068 };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4060;
+  tmp5 = module_4068;
 }
-module_4060 = tmp5;
+module_4068 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj3 = { default: requiredArgs };
@@ -28,8 +28,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function addYears(interval, arg1) {
+export default function addSeconds(interval, arg1) {
   requiredArgs.default(2, arguments);
-  return module_4060.default(interval, 12 * module_3915.default(arg1));
+  return module_4068.default(interval, 1000 * module_3917.default(arg1));
 };
 export default exports.default;

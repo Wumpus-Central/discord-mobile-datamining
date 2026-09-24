@@ -232,7 +232,7 @@ class FeedbackWidget {
                 closure_129_12 = undefined;
                 closure_129_0 = undefined;
                 if (self._hasScreenshot()) {
-                  debug.setState({ filename: "Array", attachment: "paddingHorizontal", attachmentUri: "container" });
+                  debug.setState({ filename: "isArray", attachment: "padding", attachmentUri: "op" });
                 } else {
                   num2 = debug.props.imagePicker;
                   closure_129_6 = num2;

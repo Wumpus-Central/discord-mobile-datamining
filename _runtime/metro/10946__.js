@@ -1,14 +1,12 @@
 // _runtime/metro/10946__.js
-import repeatedTimeunitPattern from "../10774_repeatedTimeunitPattern.js";
-import AbstractParserWithWordBoundaryChecking from "../10781_AbstractParserWithWordBoundaryChecking.js";
-import _mod10943 from "10943__.js";
+import _mod10936 from "10936__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ENMonthNameParser = require;
+const UKTimeUnitCasualRelativeFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,20 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const regExp = new RegExp(
-  "((?:in)\\s*)?(" +
-    repeatedTimeunitPattern.matchAnyPattern(_mod10943.MONTH_DICTIONARY) +
-    ")\\s*(?:[,-]?\\s*(" +
-    _mod10943.YEAR_PATTERN +
-    ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)",
-  "i",
-);
-class ENMonthNameParser {
+class UKTimeUnitCasualRelativeFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, ENMonthNameParser);
+    tmp = c2(this, UKTimeUnitCasualRelativeFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(ENMonthNameParser);
+    obj = closure_4(UKTimeUnitCasualRelativeFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -55,47 +45,34 @@ class ENMonthNameParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ENMonthNameParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(UKTimeUnitCasualRelativeFormatParser, _mod10936.AbstractParserWithLeftRightBoundaryChecking);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+  key: "innerPatternString",
+  value: function innerPatternString(arg0) {
+    return (
+      "(\u0446\u0456|\u043E\u0441\u0442\u0430\u043D\u043D\u0456|\u043C\u0438\u043D\u0443\u043B\u0456|\u043C\u0430\u0439\u0431\u0443\u0442\u043D\u0456|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0456|\u043F\u0456\u0441\u043B\u044F|\u0447\u0435\u0440\u0435\u0437|\\+|-)\\s*(" +
+      UKTimeUnitCasualRelativeFormatParser(10934).TIME_UNITS_PATTERN +
+      ")"
+    );
   },
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const formatted = index[2].toLowerCase();
-      if (index[0].length <= 3) {
-        if (!ENMonthNameParser(10943).FULL_MONTH_NAME_DICTIONARY[formatted]) {
-          return null;
+    value: function innerExtract(reference, arg1) {
+      const formatted = arg1[1].toLowerCase();
+      const parseDurationResult = UKTimeUnitCasualRelativeFormatParser(10934).parseDuration(arg1[3]);
+      if ("\u043E\u0441\u0442\u0430\u043D\u043D\u0456" !== formatted) {
+        if ("\u043C\u0438\u043D\u0443\u043B\u0456" !== formatted) {
+          let reverseDurationResult = parseDurationResult;
         }
+        const ParsingComponents = UKTimeUnitCasualRelativeFormatParser(10783).ParsingComponents;
+        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
       }
-      let str2 = index[1];
-      if (!str2) {
-        str2 = "";
-      }
-      const parsingResult = createParsingResult.createParsingResult(
-        index.index + str2.length,
-        index.index + index[0].length,
-      );
-      const start = parsingResult.start;
-      start.imply("day", 1);
-      const tmp9 = ENMonthNameParser(10943).MONTH_DICTIONARY[formatted];
-      const start2 = parsingResult.start;
-      start2.assign("month", tmp9);
-      if (index[3]) {
-        const start4 = parsingResult.start;
-        start4.assign("year", ENMonthNameParser(10943).parseYear(index[3]));
-      } else {
-        const start3 = parsingResult.start;
-        start3.imply("year", ENMonthNameParser(10775).findYearClosestToRef(createParsingResult.refDate, 1, tmp9));
-      }
-      return parsingResult;
+      reverseDurationResult = UKTimeUnitCasualRelativeFormatParser(10782).reverseDuration(parseDurationResult);
     },
   },
 ];
 
-export default _createClass(ENMonthNameParser, items);
+export default _createClass(UKTimeUnitCasualRelativeFormatParser, items);

@@ -4,10 +4,10 @@ import registerAsset from "01121__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/activated",
-  width: 277,
-  height: 44,
+  width: 279,
+  height: 48,
   scales: [2, 3],
-  hash: "80b2b0d70a370a3545b5c6b85cfa62d7",
-  name: "img_boost_activated_border",
+  hash: "03a20a682965583c41d600bd770a621d",
+  name: "img_nitro_tier_1_activated_dark",
   type: "png",
 });

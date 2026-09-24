@@ -1,12 +1,12 @@
 // _runtime/metro/10931__.js
-import _mod10930 from "10930__.js";
+import AbstractParserWithWordBoundaryChecking from "../10787_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const UkMonthNameParser = require;
+const ESTimeUnitWithinFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class UkMonthNameParser {
+class ESTimeUnitWithinFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, UkMonthNameParser);
+    tmp = c2(this, ESTimeUnitWithinFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(UkMonthNameParser);
+    obj = closure_4(ESTimeUnitWithinFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,49 +45,29 @@ class UkMonthNameParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(UkMonthNameParser, _mod10930.AbstractParserWithLeftBoundaryChecking);
+_inherits(ESTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return (
-      "((?:\u0432|\u0443)\\s*)?(" +
-      UkMonthNameParser(10774).matchAnyPattern(UkMonthNameParser(10928).MONTH_DICTIONARY) +
-      ")\\s*(?:[,-]?\\s*(" +
-      UkMonthNameParser(10928).YEAR_PATTERN +
-      ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)"
+  key: "innerPattern",
+  value: function innerPattern() {
+    const regExp = new RegExp(
+      "(?:en|por|durante|de|dentro de)\\s*(" + ESTimeUnitWithinFormatParser(10924).TIME_UNITS_PATTERN + ")(?=\\W|$)",
+      "i",
     );
+    return regExp;
   },
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const formatted = index[2].toLowerCase();
-      if (index[0].length <= 3) {
-        if (!UkMonthNameParser(10928).FULL_MONTH_NAME_DICTIONARY[formatted]) {
-          return null;
-        }
-      }
-      const parsingResult = createParsingResult.createParsingResult(index.index, index.index + index[0].length);
-      const start = parsingResult.start;
-      start.imply("day", 1);
-      const tmp9 = UkMonthNameParser(10928).MONTH_DICTIONARY[formatted];
-      const start2 = parsingResult.start;
-      start2.assign("month", tmp9);
-      if (index[3]) {
-        const start4 = parsingResult.start;
-        start4.assign("year", UkMonthNameParser(10928).parseYearPattern(index[3]));
-      } else {
-        const start3 = parsingResult.start;
-        start3.imply(
-          "year",
-          UkMonthNameParser(10775).findYearClosestToRef(createParsingResult.reference.instant, 1, tmp9),
-        );
-      }
-      return parsingResult;
+    value: function innerExtract(reference, arg1) {
+      const ParsingComponents = ESTimeUnitWithinFormatParser(10783).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(
+        reference.reference,
+        ESTimeUnitWithinFormatParser(10924).parseDuration(arg1[1]),
+      );
     },
   },
 ];
 
-export default _createClass(UkMonthNameParser, items);
+export default _createClass(ESTimeUnitWithinFormatParser, items);

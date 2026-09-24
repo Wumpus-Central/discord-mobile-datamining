@@ -1,4 +1,20 @@
 // _runtime/metro/14384__.js
-import _mod14372 from "14372__.js";
-
-export default (arg0, arg1) => new _mod14372(arg0, arg1).patch;
+if (typeof process === "object") {
+  const _process3 = process;
+  if (process.env) {
+    const _process = process;
+    if (process.env.NODE_DEBUG) {
+      const _process2 = process;
+      if (obj.test(process.env.NODE_DEBUG)) {
+        let fn = () => {
+          const items = ["SEMVER"];
+          HermesBuiltin.arraySpread(HermesBuiltin.copyRestArgs(), 1);
+          return console.error.apply(items);
+        };
+      }
+      module.exports = fn;
+      obj = /\bsemver\b/i;
+    }
+  }
+}
+fn = () => {};

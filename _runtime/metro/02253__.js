@@ -5,7 +5,7 @@ export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/checkout/messages",
   scales: [1],
-  hash: "6a429731d2a9e33e0bfb2eab2a72054e",
-  name: "GiftCard.compiled.messages",
+  hash: "3009b1746fe9c2e1e2935c2a9cae0bc9",
+  name: "CheckoutUntranslated.compiled.messages",
   type: "jsona",
 });

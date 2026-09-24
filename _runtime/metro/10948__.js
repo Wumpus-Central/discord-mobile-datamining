@@ -1,11 +1,13 @@
 // _runtime/metro/10948__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import AbstractParserWithWordBoundaryChecking from "../10781_AbstractParserWithWordBoundaryChecking.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
+import AbstractParserWithWordBoundaryChecking from "../10787_AbstractParserWithWordBoundaryChecking.js";
+import _mod10949 from "10949__.js";
+import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
+const ENTimeUnitWithinFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,17 +26,26 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-const regExp = new RegExp("([0-9]|0[1-9]|1[012])/([0-9]{4})", "i");
-class ENSlashMonthFormatParser {
+const regExp = new RegExp(
+  "(?:within|in|for)\\s*(?:(?:pi\u00F9 o meno|intorno|approssimativamente|verso|verso le)\\s*(?:~\\s*)?)?(" +
+    _mod10949.TIME_UNITS_PATTERN +
+    ")(?=\\W|$)",
+  "i",
+);
+const regExp1 = new RegExp(
+  "(?:(?:pi\u00F9 o meno|intorno|approssimativamente|verso|verso le)\\s*(?:~\\s*)?)?(" +
+    _mod10949.TIME_UNITS_PATTERN +
+    ")(?=\\W|$)",
+  "i",
+);
+class ENTimeUnitWithinFormatParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, ENSlashMonthFormatParser);
-    tmp2 = c2;
-    obj = c2(ENSlashMonthFormatParser);
-    tmp3 = closure_1;
-    if (closure_3()) {
+    tmp = c2(this, ENTimeUnitWithinFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(ENTimeUnitWithinFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -47,26 +58,25 @@ class ENSlashMonthFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = ENSlashMonthFormatParser;
-_inherits(ENSlashMonthFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+  value: function innerPattern(option) {
+    return option.option.forwardDate ? regExp1 : regExp;
   },
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingComponents, arg1) {
-      const parsed = parseInt(arg1[2]);
-      const parsed1 = parseInt(arg1[1]);
-      const parsingComponents = createParsingComponents.createParsingComponents();
-      const implyResult = parsingComponents.imply("day", 1);
-      return parsingComponents.imply("day", 1).assign("month", parsed1).assign("year", parsed);
+    value: function innerExtract(reference, arg1) {
+      const ParsingComponents = ENTimeUnitWithinFormatParser(10783).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(
+        reference.reference,
+        ENTimeUnitWithinFormatParser(10949).parseDuration(arg1[1]),
+      );
     },
   },
 ];
 
-export default _createClass(ENSlashMonthFormatParser, items);
+export default _createClass(ENTimeUnitWithinFormatParser, items);

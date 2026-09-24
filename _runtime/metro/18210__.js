@@ -1,6 +1,13 @@
 // _runtime/metro/18210__.js
-const regex = RegExp("[\\u200d\\ud800-\\udfff\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff\\ufe0e\\ufe0f]");
+import registerAsset from "01121__.js";
 
-export default function hasUnicode(arg0) {
-  return regex.test(arg0);
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/guild_settings/community_settings",
+  width: 88,
+  height: 80,
+  scales: [2, 3],
+  hash: "47e53f4c1a010a8a023be6a3f87eb4e2",
+  name: "channel_setup",
+  type: "png",
+});

@@ -1,6 +1,9 @@
 // _runtime/metro/04223__.js
-import Parser2 from "../04217_Parser.js";
+import Parser2 from "../04219_Parser.js";
+import module_4155_mod from "04155__.js";
+import startOfUTCWeek_mod from "../03916_startOfUTCWeek.js";
 
+let _createSuperInternal = require;
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
@@ -26,15 +29,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(ExtendedYearParser, Parser) {
+function _setPrototypeOf(LocalWeekYearParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(ExtendedYearParser, Parser) {
-      ExtendedYearParser.__proto__ = Parser;
-      return ExtendedYearParser;
+    _setPrototypeOf = function _setPrototypeOf(LocalWeekYearParser, Parser) {
+      LocalWeekYearParser.__proto__ = Parser;
+      return LocalWeekYearParser;
     };
   }
-  return _setPrototypeOf(ExtendedYearParser, Parser);
+  return _setPrototypeOf(LocalWeekYearParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -52,9 +55,25 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
+let module_4155 = module_4155_mod;
+if (!module_4155) {
+  let obj = { default: module_4155 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4155;
+}
+module_4155 = tmp3;
+let startOfUTCWeek = startOfUTCWeek_mod;
+if (!startOfUTCWeek) {
+  const obj2 = { default: startOfUTCWeek };
+  let tmp5 = obj2;
+} else {
+  tmp5 = startOfUTCWeek;
+}
+startOfUTCWeek = tmp5;
 const Parser = Parser2.Parser;
-let _createSuperInternal;
-class ExtendedYearParser {
+_createSuperInternal = undefined;
+class LocalWeekYearParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -109,7 +128,7 @@ class ExtendedYearParser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["G", "y", "Y", "R", "w", "I", "i", "e", "c", "t", "T"];
+          items1 = ["y", "R", "u", "Q", "q", "M", "L", "I", "d", "D", "i", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -133,7 +152,7 @@ class ExtendedYearParser {
     }
   }
 }
-let dependencyMap = ExtendedYearParser;
+let dependencyMap = LocalWeekYearParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -145,11 +164,11 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-ExtendedYearParser.prototype = Object.create(prototype, {
-  constructor: { value: ExtendedYearParser, writable: true, configurable: true },
+LocalWeekYearParser.prototype = Object.create(prototype, {
+  constructor: { value: LocalWeekYearParser, writable: true, configurable: true },
 });
 if (Parser) {
-  _setPrototypeOf(ExtendedYearParser, Parser);
+  _setPrototypeOf(LocalWeekYearParser, Parser);
 }
 let num = 0;
 dependencyMap = (function _isNativeReflectConstruct() {
@@ -186,10 +205,10 @@ dependencyMap = (function _isNativeReflectConstruct() {
 })();
 _createSuperInternal = function _createSuperInternal() {
   const self = this;
-  const obj = _getPrototypeOf(_createSuperInternal);
+  const obj = metroRequire(_createSuperInternal);
   if (closure_1) {
     const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
+    let constructResult = Reflect.construct(obj, arguments, metroRequire(self).constructor);
   } else {
     constructResult = obj(...arguments);
   }
@@ -210,42 +229,76 @@ _createSuperInternal = function _createSuperInternal() {
 };
 const entry = {
   key: "parse",
-  value: function parse(arg0, arg1) {
-    if ("u" === arg1) {
-      let parseNDigitsSignedResult = _createSuperInternal(4219).parseNDigitsSigned(4, arg0);
-    } else {
-      parseNDigitsSignedResult = _createSuperInternal(4219).parseNDigitsSigned(arg1.length, arg0);
+  value: function parse(arg0, arg1, ordinalNumber) {
+    closure_0 = arg1;
+    function valueCallback(year) {
+      return { year, isTwoDigitYear: "YY" === closure_0 };
     }
-    return parseNDigitsSignedResult;
+    if ("Y" === arg1) {
+      return _createSuperInternal(4221).mapValue(_createSuperInternal(4221).parseNDigits(4, arg0), valueCallback);
+    } else if ("Yo" === arg1) {
+      return _createSuperInternal(4221).mapValue(ordinalNumber.ordinalNumber(arg0, { unit: "year" }), valueCallback);
+    } else {
+      return _createSuperInternal(4221).mapValue(
+        _createSuperInternal(4221).parseNDigits(arg1.length, arg0),
+        valueCallback,
+      );
+    }
   },
 };
 let items = [
   entry,
   {
+    key: "validate",
+    value: function validate(arg0, isTwoDigitYear) {
+      isTwoDigitYear = isTwoDigitYear.isTwoDigitYear;
+      if (!isTwoDigitYear) {
+        isTwoDigitYear = isTwoDigitYear.year > 0;
+      }
+      return isTwoDigitYear;
+    },
+  },
+  {
     key: "set",
-    value: function set(setUTCFullYear, arg1, arg2) {
-      setUTCFullYear.setUTCFullYear(arg2, 0, 1);
-      setUTCFullYear.setUTCHours(0, 0, 0, 0);
-      return setUTCFullYear;
+    value: function set(setUTCFullYear, era, isTwoDigitYear, firstWeekContainsDate) {
+      if (isTwoDigitYear.isTwoDigitYear) {
+        setUTCFullYear.setUTCFullYear(
+          _createSuperInternal(4221).normalizeTwoDigitYear(isTwoDigitYear.year, tmp),
+          0,
+          firstWeekContainsDate.firstWeekContainsDate,
+        );
+        setUTCFullYear.setUTCHours(0, 0, 0, 0);
+        return startOfUTCWeek.default(setUTCFullYear, firstWeekContainsDate);
+      } else {
+        if ("era" in era) {
+          if (1 !== era.era) {
+            let year = 1 - isTwoDigitYear.year;
+          }
+          setUTCFullYear.setUTCFullYear(year, 0, firstWeekContainsDate.firstWeekContainsDate);
+          setUTCFullYear.setUTCHours(0, 0, 0, 0);
+          return startOfUTCWeek.default(setUTCFullYear, firstWeekContainsDate);
+        }
+        year = isTwoDigitYear.year;
+      }
     },
   },
 ];
 if (0 < items.length) {
   do {
-    let tmp5 = items[num];
-    let flag = tmp5.enumerable;
+    let tmp9 = items[num];
+    let flag = tmp9.enumerable;
     if (!flag) {
       flag = false;
     }
-    tmp5.enumerable = flag;
-    tmp5.configurable = true;
-    if ("value" in tmp5) {
-      tmp5.writable = true;
+    tmp9.enumerable = flag;
+    tmp9.configurable = true;
+    if ("value" in tmp9) {
+      tmp9.writable = true;
     }
     let _Object = Object;
-    let definePropertyResult1 = Object.defineProperty(tmp4, tmp5.key, tmp5);
+    let definePropertyResult1 = Object.defineProperty(tmp8, tmp9.key, tmp9);
     num = num + 1;
   } while (num < items.length);
 }
 
-export { ExtendedYearParser };
+export { LocalWeekYearParser };

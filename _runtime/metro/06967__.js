@@ -1,8 +1,14 @@
 // _runtime/metro/06967__.js
 import _mod19 from "00019__.js";
+import BottomSheetContext from "../06968_BottomSheetContext.js";
 
-const createContext = _mod19.createContext;
-const context = createContext(null);
+const useContext = _mod19.useContext;
 
-export const BottomSheetGestureHandlersContext = context;
-export const BottomSheetDraggableContext = createContext(null);
+export const useBottomSheetModal = () => {
+  const tmp = useContext(BottomSheetContext.BottomSheetModalContext);
+  if (null === tmp) {
+    throw "'BottomSheetModalContext' cannot be null!";
+  } else {
+    return tmp;
+  }
+};

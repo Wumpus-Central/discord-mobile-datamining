@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "26d707b294c340a6d911d79614dfcf77",
-  name: "UserSquareIcon",
+  hash: "45844ffe000e8da4174843bafa8614af",
+  name: "SuperReactionIcon",
   type: "png",
 });

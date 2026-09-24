@@ -1,11 +1,12 @@
 // _runtime/metro/10833__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import _mod10795 from "10795__.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
+import AbstractParserWithWordBoundaryChecking from "../10787_AbstractParserWithWordBoundaryChecking.js";
+import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
+const DETimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,52 +25,70 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class FRMergeDateTimeRefiner {
+class DETimeUnitAgoFormatParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, FRMergeDateTimeRefiner);
-    tmp2 = c2;
-    obj = c2(FRMergeDateTimeRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp7 = globalThis;
+    tmp = c2(this, DETimeUnitAgoFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(DETimeUnitAgoFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = FRMergeDateTimeRefiner;
-_inherits(FRMergeDateTimeRefiner, fn(_mod10795).default);
+_inherits(DETimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    const regExp = new RegExp("^\\s*(T|\u00E0|a|au|vers|de|,|-)?\\s*$");
+  key: "innerPattern",
+  value: function innerPattern() {
+    const regExp = new RegExp(
+      "(?:\\s*((?:n\u00E4chste|kommende|folgende|letzte|vergangene|vorige|vor(?:her|an)gegangene)(?:s|n|m|r)?|vor|in)\\s*)?(" +
+        DETimeUnitAgoFormatParser(10826).NUMBER_PATTERN +
+        ")?(?:\\s*(n\u00E4chste|kommende|folgende|letzte|vergangene|vorige|vor(?:her|an)gegangene)(?:s|n|m|r)?)?\\s*(" +
+        DETimeUnitAgoFormatParser(10780).matchAnyPattern(DETimeUnitAgoFormatParser(10826).TIME_UNIT_DICTIONARY) +
+        ")",
+      "i",
+    );
     return regExp;
   },
 };
-const items = [entry];
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      let num = 1;
+      if (arg1[2]) {
+        num = DETimeUnitAgoFormatParser(10826).parseNumberPattern(arg1[2]);
+      }
+      const obj = {};
+      obj[DETimeUnitAgoFormatParser(10826).TIME_UNIT_DICTIONARY[arg1[4].toLowerCase(arg1[4])]] = num;
+      const formatted = arg1[1] || arg1[3] || "".toLowerCase();
+      if (formatted) {
+        let isMatch = /vor/.test(formatted);
+        if (!isMatch) {
+          isMatch = /letzte/.test(formatted);
+          const obj3 = /letzte/;
+        }
+        if (!isMatch) {
+          isMatch = /vergangen/.test(formatted);
+          const obj4 = /vergangen/;
+        }
+        let reverseDurationResult = obj;
+        if (isMatch) {
+          reverseDurationResult = DETimeUnitAgoFormatParser(10782).reverseDuration(obj);
+        }
+        const ParsingComponents = DETimeUnitAgoFormatParser(10783).ParsingComponents;
+        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+      }
+      const str2 = arg1[1] || arg1[3] || "";
+    },
+  },
+];
 
-export default _createClass(FRMergeDateTimeRefiner, items);
+export default _createClass(DETimeUnitAgoFormatParser, items);

@@ -1,12 +1,13 @@
 // _runtime/metro/07363__.js
+import _mod17 from "00017__.js";
 
-export const findLastIndex = function findLastIndex(arg0, fn) {
-  let diff = arg0.length - 1;
-  if (0 <= diff) {
-    while (!fn(arg0[diff])) {
-      diff = diff - 1;
-    }
-    return diff;
+const Platform = _mod17.Platform;
+
+export const getShadowStyle = function getShadowStyle(color) {
+  let shadowColor = color.color;
+  ({ offset, radius, opacity } = color);
+  if (shadowColor === undefined) {
+    shadowColor = "#000";
   }
-  return -1;
+  return { shadowOffset, shadowRadius, shadowColor, shadowOpacity };
 };

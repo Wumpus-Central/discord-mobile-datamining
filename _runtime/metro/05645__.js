@@ -4,10 +4,10 @@ import registerAsset from "01121__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "71e7a705f0fc76c9ae279a3ce8454ef4",
+  hash: "cfcfafbb4f4daed7fd4c8d1f431ce58f",
   name: "img_account_sync_xbox_light",
-  type: "svg",
+  type: "png",
 });

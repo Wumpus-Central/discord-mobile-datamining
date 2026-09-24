@@ -1,4 +1,12 @@
 // _runtime/metro/06979__.js
-import _mod17 from "00017__.js";
+const fn = function o() {
 
-export const findNodeHandle = _mod17.findNodeHandle;
+};
+fn.__closure = {};
+fn.__workletHash = 16791771801238;
+fn.__initData = { code: "function pnpm_noopTs1(){}" };
+
+export () => {
+
+}
+export const workletNoop = fn;

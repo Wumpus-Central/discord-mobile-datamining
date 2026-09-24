@@ -1,42 +1,28 @@
 // _runtime/metro/04047__.js
-import 04048__ from "04048__.js";
-import 04049__ from "04049__.js";
-import 04050__ from "04050__.js";
-import date_mod from "04051__.js";
-import date_mod from "04052__.js";
+import 02119__ from "02119__.js";
 
-if (!module_4048) {
-  const obj = { default: module_4048 };
-  let tmp3 = obj;
+if (!module_2119) {
+  const obj2 = { default: module_2119 };
+  let obj = obj2;
 } else {
-  tmp3 = module_4048;
+  obj = module_2119;
 }
-if (!module_4049) {
-  const obj2 = { default: module_4049 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4049;
-}
-if (!module_4050) {
-  const obj3 = { default: module_4050 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4050;
-}
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
+const date = {
+  ordinalNumber(arg0, arg1) {
+    return String(arg0);
+  },
+  era: obj.default({ values: { narrow: ["B", "\u0E04\u0E28"], abbreviated: ["BC", "\u0E04.\u0E28."], wide: ["\u0E1B\u0E35\u0E01\u0E48\u0E2D\u0E19\u0E04\u0E23\u0E34\u0E2A\u0E15\u0E01\u0E32\u0E25", "\u0E04\u0E23\u0E34\u0E2A\u0E15\u0E4C\u0E28\u0E31\u0E01\u0E23\u0E32\u0E0A"] }, defaultWidth: "wide" }),
+  quarter: obj.default({
+    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["Q1", "Q2", "Q3", "Q4"], wide: ["\u0E44\u0E15\u0E23\u0E21\u0E32\u0E2A\u0E41\u0E23\u0E01", "\u0E44\u0E15\u0E23\u0E21\u0E32\u0E2A\u0E17\u0E35\u0E48\u0E2A\u0E2D\u0E07", "\u0E44\u0E15\u0E23\u0E21\u0E32\u0E2A\u0E17\u0E35\u0E48\u0E2A\u0E32\u0E21", "\u0E44\u0E15\u0E23\u0E21\u0E32\u0E2A\u0E17\u0E35\u0E48\u0E2A\u0E35\u0E48"] },
+    defaultWidth: "wide",
+    argumentCallback(arg0) {
+      return arg0 - 1;
+    }
+  }),
+  month: obj.default({ values: { narrow: ["\u0E21.\u0E04.", "\u0E01.\u0E1E.", "\u0E21\u0E35.\u0E04.", "\u0E40\u0E21.\u0E22.", "\u0E1E.\u0E04.", "\u0E21\u0E34.\u0E22.", "\u0E01.\u0E04.", "\u0E2A.\u0E04.", "\u0E01.\u0E22.", "\u0E15.\u0E04.", "\u0E1E.\u0E22.", "\u0E18.\u0E04."], abbreviated: ["\u0E21.\u0E04.", "\u0E01.\u0E1E.", "\u0E21\u0E35.\u0E04.", "\u0E40\u0E21.\u0E22.", "\u0E1E.\u0E04.", "\u0E21\u0E34.\u0E22.", "\u0E01.\u0E04.", "\u0E2A.\u0E04.", "\u0E01.\u0E22.", "\u0E15.\u0E04.", "\u0E1E.\u0E22.", "\u0E18.\u0E04."], wide: ["\u0E21\u0E01\u0E23\u0E32\u0E04\u0E21", "\u0E01\u0E38\u0E21\u0E20\u0E32\u0E1E\u0E31\u0E19\u0E18\u0E4C", "\u0E21\u0E35\u0E19\u0E32\u0E04\u0E21", "\u0E40\u0E21\u0E29\u0E32\u0E22\u0E19", "\u0E1E\u0E24\u0E29\u0E20\u0E32\u0E04\u0E21", "\u0E21\u0E34\u0E16\u0E38\u0E19\u0E32\u0E22\u0E19", "\u0E01\u0E23\u0E01\u0E0E\u0E32\u0E04\u0E21", "\u0E2A\u0E34\u0E07\u0E2B\u0E32\u0E04\u0E21", "\u0E01\u0E31\u0E19\u0E22\u0E32\u0E22\u0E19", "\u0E15\u0E38\u0E25\u0E32\u0E04\u0E21", "\u0E1E\u0E24\u0E28\u0E08\u0E34\u0E01\u0E32\u0E22\u0E19", "\u0E18\u0E31\u0E19\u0E27\u0E32\u0E04\u0E21"] }, defaultWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["\u0E2D\u0E32.", "\u0E08.", "\u0E2D.", "\u0E1E.", "\u0E1E\u0E24.", "\u0E28.", "\u0E2A."], short: ["\u0E2D\u0E32.", "\u0E08.", "\u0E2D.", "\u0E1E.", "\u0E1E\u0E24.", "\u0E28.", "\u0E2A."], abbreviated: ["\u0E2D\u0E32.", "\u0E08.", "\u0E2D.", "\u0E1E.", "\u0E1E\u0E24.", "\u0E28.", "\u0E2A."], wide: ["\u0E2D\u0E32\u0E17\u0E34\u0E15\u0E22\u0E4C", "\u0E08\u0E31\u0E19\u0E17\u0E23\u0E4C", "\u0E2D\u0E31\u0E07\u0E04\u0E32\u0E23", "\u0E1E\u0E38\u0E18", "\u0E1E\u0E24\u0E2B\u0E31\u0E2A\u0E1A\u0E14\u0E35", "\u0E28\u0E38\u0E01\u0E23\u0E4C", "\u0E40\u0E2A\u0E32\u0E23\u0E4C"] }, defaultWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "\u0E01\u0E48\u0E2D\u0E19\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", pm: "\u0E2B\u0E25\u0E31\u0E07\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", midnight: "\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07\u0E04\u0E37\u0E19", noon: "\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", morning: "\u0E40\u0E0A\u0E49\u0E32", afternoon: "\u0E1A\u0E48\u0E32\u0E22", evening: "\u0E40\u0E22\u0E47\u0E19", night: "\u0E01\u0E25\u0E32\u0E07\u0E04\u0E37\u0E19" }, abbreviated: { am: "\u0E01\u0E48\u0E2D\u0E19\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", pm: "\u0E2B\u0E25\u0E31\u0E07\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", midnight: "\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07\u0E04\u0E37\u0E19", noon: "\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", morning: "\u0E40\u0E0A\u0E49\u0E32", afternoon: "\u0E1A\u0E48\u0E32\u0E22", evening: "\u0E40\u0E22\u0E47\u0E19", night: "\u0E01\u0E25\u0E32\u0E07\u0E04\u0E37\u0E19" }, wide: { am: "\u0E01\u0E48\u0E2D\u0E19\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", pm: "\u0E2B\u0E25\u0E31\u0E07\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", midnight: "\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07\u0E04\u0E37\u0E19", noon: "\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", morning: "\u0E40\u0E0A\u0E49\u0E32", afternoon: "\u0E1A\u0E48\u0E32\u0E22", evening: "\u0E40\u0E22\u0E47\u0E19", night: "\u0E01\u0E25\u0E32\u0E07\u0E04\u0E37\u0E19" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "\u0E01\u0E48\u0E2D\u0E19\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", pm: "\u0E2B\u0E25\u0E31\u0E07\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", midnight: "\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07\u0E04\u0E37\u0E19", noon: "\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", morning: "\u0E15\u0E2D\u0E19\u0E40\u0E0A\u0E49\u0E32", afternoon: "\u0E15\u0E2D\u0E19\u0E01\u0E25\u0E32\u0E07\u0E27\u0E31\u0E19", evening: "\u0E15\u0E2D\u0E19\u0E40\u0E22\u0E47\u0E19", night: "\u0E15\u0E2D\u0E19\u0E01\u0E25\u0E32\u0E07\u0E04\u0E37\u0E19" }, abbreviated: { am: "\u0E01\u0E48\u0E2D\u0E19\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", pm: "\u0E2B\u0E25\u0E31\u0E07\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", midnight: "\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07\u0E04\u0E37\u0E19", noon: "\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", morning: "\u0E15\u0E2D\u0E19\u0E40\u0E0A\u0E49\u0E32", afternoon: "\u0E15\u0E2D\u0E19\u0E01\u0E25\u0E32\u0E07\u0E27\u0E31\u0E19", evening: "\u0E15\u0E2D\u0E19\u0E40\u0E22\u0E47\u0E19", night: "\u0E15\u0E2D\u0E19\u0E01\u0E25\u0E32\u0E07\u0E04\u0E37\u0E19" }, wide: { am: "\u0E01\u0E48\u0E2D\u0E19\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", pm: "\u0E2B\u0E25\u0E31\u0E07\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", midnight: "\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07\u0E04\u0E37\u0E19", noon: "\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", morning: "\u0E15\u0E2D\u0E19\u0E40\u0E0A\u0E49\u0E32", afternoon: "\u0E15\u0E2D\u0E19\u0E01\u0E25\u0E32\u0E07\u0E27\u0E31\u0E19", evening: "\u0E15\u0E2D\u0E19\u0E40\u0E22\u0E47\u0E19", night: "\u0E15\u0E2D\u0E19\u0E01\u0E25\u0E32\u0E07\u0E04\u0E37\u0E19" } }, defaultFormattingWidth: "wide" })
+};
 
-export default { code: "tr", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
+export default date;
 export default exports.default;

@@ -1,36 +1,26 @@
 // _runtime/metro/04065__.js
-import module_3915_mod from "03915__.js";
-import module_4066_mod from "04066__.js";
-import requiredArgs_mod from "../03912_requiredArgs.js";
+import _typeof_mod from "03913__.js";
+import requiredArgs_mod from "../03914_requiredArgs.js";
 
-let module_3915 = module_3915_mod;
-if (!module_3915) {
-  const obj = { default: module_3915 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3915;
+  tmp3 = _typeof;
 }
-module_3915 = tmp3;
-let module_4066 = module_4066_mod;
-if (!module_4066) {
-  const obj2 = { default: module_4066 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4066;
-}
-module_4066 = tmp5;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
-let c3 = 3600000;
+requiredArgs = tmp5;
 
-export default function addHours(interval, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_4066.default(interval, module_3915.default(arg1) * c3);
+export default function isSunday(arg0) {
+  requiredArgs.default(1, arguments);
+  return 0 === _typeof.default(arg0).getDay();
 };
 export default exports.default;

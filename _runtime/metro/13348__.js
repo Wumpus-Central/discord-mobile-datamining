@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "b7967e1c069a1d25ab22d1157c869621",
-  name: "MoreVerticalIcon",
+  hash: "6745fd4fca483fd68a467a63f7379a27",
+  name: "ic_volume_mute",
   type: "png",
 });

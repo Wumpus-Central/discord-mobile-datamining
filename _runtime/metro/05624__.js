@@ -4,10 +4,10 @@ import registerAsset from "01121__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "5f8b57af5ab5fdfa6cf52708c91c3adb",
+  hash: "6aac6dfb7a93b44151193b49a9d5adfb",
   name: "img_account_sync_reddit_white",
-  type: "svg",
+  type: "png",
 });

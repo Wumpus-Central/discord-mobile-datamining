@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "714bfdcefc91a8c05361da54def8f212",
-  name: "ic_voice_channel_24px",
+  httpServerLocation: "/assets/images/native/avatars",
+  width: 161,
+  height: 160,
+  scales: [1],
+  hash: "332a7ab2f8939700ebbadbbe2c81234f",
+  name: "mallow_1",
   type: "png",
 });
