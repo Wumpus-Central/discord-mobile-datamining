@@ -1,133 +1,126 @@
 // === Module 13199: ? ===
 
 // Module 13199
-import _mod13136 from "module_13136" /* 13136 */;
-import _mod13160 from "module_13160" /* 13160 */;
-import _mod13164 from "module_13164" /* 13164 */;
-import _mod13180 from "module_13180" /* 13180 */;
-import _mod13193 from "module_13193" /* 13193 */;
-import _mod13201 from "module_13201" /* 13201 */;
-
-const require = globalThis.__r;
+import _mod13192 from "module_13192" /* 13192 */;
 
 require = arg1;
-let dependencyMap = arg6;
+const dependencyMap = arg6;
 
-export const DEFAULT_TRANSPORT_BUFFER_SIZE = 64;
-export const createTransport = function createTransport(bufferSize, arg1) {
-  _require = bufferSize;
-  dependencyMap = arg1;
-  let promiseBuffer = arg2;
-  if (arg2 === undefined) {
-    let num = bufferSize.bufferSize;
-    if (!num) {
-      num = 64;
+export const getEnvelopeEndpointWithUrlEncodedAuth = function getEnvelopeEndpointWithUrlEncodedAuth(protocol, tunnel, name) {
+  let combined1 = tunnel;
+  if (!tunnel) {
+    let str2 = "";
+    if (protocol.protocol) {
+      const _HermesInternal = HermesInternal;
+      str2 = "" + protocol.protocol + ":";
     }
-    promiseBuffer = require("module_13200").makePromiseBuffer(num);
-    let obj = require("module_13200");
+    let str4 = "";
+    if (protocol.port) {
+      const _HermesInternal2 = HermesInternal;
+      str4 = ":" + protocol.port;
+    }
+    const host = protocol.host;
+    let str6 = "";
+    if (protocol.path) {
+      const _HermesInternal3 = HermesInternal;
+      str6 = "/" + protocol.path;
+    }
+    const _HermesInternal4 = HermesInternal;
+    const _HermesInternal5 = HermesInternal;
+    const obj = { sentry_version: "7" };
+    const combined = "" + "" + str2 + "//" + host + str4 + str6 + "/api/" + protocol.projectId + "/envelope/";
+    if (protocol.publicKey) {
+      obj.sentry_key = protocol.publicKey;
+    }
+    if (name) {
+      const _HermesInternal6 = HermesInternal;
+      obj.sentry_client = "" + name.name + "/" + name.version;
+    }
+    const _URLSearchParams = URLSearchParams;
+    const str13 = new URLSearchParams(obj);
+    const _HermesInternal7 = HermesInternal;
+    combined1 = "" + combined + "?" + str13.toString();
   }
-  closure_3 = {};
-  return {
-    send(arg0) {
-      const items = [];
-      bufferSize(dependencyMap[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
-        const result = _mod13180.envelopeItemTypeToDataCategory(arg1);
-        if (obj2.isRateLimited(closure_3, result)) {
-          if ("event" === arg1) {
-            const _Array = Array;
-            let tmp6;
-            if (Array.isArray(arg0)) {
-              tmp6 = arg0[1];
-            }
-            const tmp4 = tmp6;
-          }
-          items.recordDroppedEvent("ratelimit_backoff", result, tmp4);
-        } else {
-          items.push(arg0);
-        }
-        obj2 = _mod13201;
-      });
-      if (0 === items.length) {
-        return bufferSize(tmp2[3]).resolvedSyncPromise({});
-      } else {
-        dependencyMap = bufferSize(tmp2[1]).createEnvelope(arg0[0], items);
-        function recordEnvelopeLoss(arg0) {
-
-        }
-        const tmpResult2 = bufferSize(tmp2[1]);
-        return recordEnvelopeLoss.add(() => {
-          const obj = { body: _mod13180.serializeEnvelope(dependencyMap) };
-          return dependencyMap(obj).then((statusCode) => {
-            let DEBUG_BUILD = undefined !== statusCode.statusCode;
-            if (DEBUG_BUILD) {
-              let tmp = statusCode.statusCode < 200;
-              if (!tmp) {
-                tmp = statusCode.statusCode >= 300;
-              }
-              DEBUG_BUILD = tmp;
-            }
-            if (DEBUG_BUILD) {
-              DEBUG_BUILD = items(13164).DEBUG_BUILD;
-            }
-            if (DEBUG_BUILD) {
-              const logger = items(13136).logger;
-              const _HermesInternal = HermesInternal;
-              logger.warn("Sentry responded with status code " + statusCode.statusCode + " to sent event.");
-            }
-            closure_3 = items(13201).updateRateLimits(closure_3, statusCode);
-            return statusCode;
-          }, (arg0) => {
-            if (typeof recordEnvelopeLoss === "function") {
-              const network_error = "network_error";
-              closure_0(13180).forEachEnvelopeItem(dependencyMap, (arg0, arg1) => {
-                if ("event" === arg1) {
-                  const _Array = Array;
-                  let tmp4;
-                  if (Array.isArray(arg0)) {
-                    tmp4 = arg0[1];
-                  }
-                  const tmp = tmp4;
-                }
-                closure_2_0.recordDroppedEvent(network_error, items(closure_1[1]).envelopeItemTypeToDataCategory(arg1), tmp);
-              });
-              throw arg0;
-            } else {
-              throw new TypeError("Trying to call a non-function");
-            }
-          });
-        }).then((result) => result, (arg0) => {
-          if (arg0 instanceof _mod13193.SentryError) {
-            if (_mod13164.DEBUG_BUILD) {
-              const logger = _mod13136.logger;
-              logger.error("Skipped sending event because buffer is full.");
-            }
-            if (typeof recordEnvelopeLoss === "function") {
-              const queue_overflow = "queue_overflow";
-              _mod13180.forEachEnvelopeItem(closure_1, (arg0, arg1) => {
-                if ("event" === arg1) {
-                  const _Array = Array;
-                  let tmp4;
-                  if (Array.isArray(arg0)) {
-                    tmp4 = arg0[1];
-                  }
-                  const tmp = tmp4;
-                }
-                closure_2_0.recordDroppedEvent(network_error, items(closure_1[1]).envelopeItemTypeToDataCategory(arg1), tmp);
-              });
-              const tmpResult = _mod13180;
-              return _mod13160.resolvedSyncPromise({});
-            } else {
-              throw new TypeError("Trying to call a non-function");
-            }
-          } else {
-            throw arg0;
-          }
-        });
-      }
-      let obj = bufferSize(dependencyMap[1]);
-    },
-    flush(arg0) {
-      return promiseBuffer.drain(arg0);
+  return combined1;
+};
+export const getReportDialogEndpoint = function getReportDialogEndpoint(protocol, user) {
+  const url = _mod13192.makeDsn(protocol);
+  if (url) {
+    let str = "";
+    if (url.protocol) {
+      const _HermesInternal = HermesInternal;
+      str = "" + url.protocol + ":";
     }
-  };
+    let str3 = "";
+    if (url.port) {
+      const _HermesInternal2 = HermesInternal;
+      str3 = ":" + url.port;
+    }
+    const host = url.host;
+    let str5 = "";
+    if (url.path) {
+      const _HermesInternal3 = HermesInternal;
+      str5 = "/" + url.path;
+    }
+    const _HermesInternal4 = HermesInternal;
+    const _HermesInternal5 = HermesInternal;
+    const combined = "" + "" + str + "//" + host + str3 + str5 + "/api/" + "embed/error-page/";
+    const _HermesInternal6 = HermesInternal;
+    let combined1 = "dsn=" + _mod13192.dsnToString(url);
+    let tmp16 = combined1;
+    const keys = Object.keys();
+    if (keys !== undefined) {
+      tmp16 = combined1;
+      while (keys[tmp] !== undefined) {
+        if ("dsn" === tmp19) {
+          continue;
+        } else {
+          combined1 = tmp18;
+          if ("onClose" === tmp19) {
+            continue;
+          } else {
+            if ("user" === tmp19) {
+              user = user.user;
+              combined1 = tmp18;
+              if (!user) {
+                continue;
+              } else {
+                let sum = tmp18;
+                if (user.name) {
+                  let _encodeURIComponent3 = encodeURIComponent;
+                  let _HermesInternal8 = HermesInternal;
+                  sum = tmp18 + "&name=" + encodeURIComponent(user.name);
+                }
+                combined1 = sum;
+                if (!user.email) {
+                  continue;
+                } else {
+                  let _encodeURIComponent4 = encodeURIComponent;
+                  let _HermesInternal9 = HermesInternal;
+                  combined1 = sum + "&email=" + encodeURIComponent(user.email);
+                  continue;
+                }
+                continue;
+              }
+              continue;
+            } else {
+              let _encodeURIComponent = encodeURIComponent;
+              let _encodeURIComponent2 = encodeURIComponent;
+              let encodeURIComponentResult = encodeURIComponent(tmp19);
+              let _HermesInternal7 = HermesInternal;
+              combined1 = tmp18 + "&" + encodeURIComponentResult + "=" + encodeURIComponent(user[tmp19]);
+              continue;
+            }
+            continue;
+          }
+          continue;
+        }
+        continue;
+      }
+    }
+    const _HermesInternal10 = HermesInternal;
+    return "" + combined + "?" + tmp16;
+  } else {
+    return "";
+  }
 };

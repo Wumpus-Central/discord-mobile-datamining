@@ -1,176 +1,71 @@
 // === Module 13230: ? ===
 
 // Module 13230
-import _mod13143 from "module_13143" /* 13143 */;
-import _mod13145 from "module_13145" /* 13145 */;
-import setupIntegration from "module_13192" /* 13192 */;
+import _mod13172 from "module_13172" /* 13172 */;
+import _mod13232 from "module_13232" /* 13232 */;
+import setupIntegration from "module_13201" /* 13201 */;
 
-function flattenIssue(path) {
-  const obj = {};
-  const merged = Object.assign(path);
-  let joined;
-  if ("path" in path) {
-    const _Array = Array;
-    if (Array.isArray(path.path)) {
-      path = path.path;
-      joined = path.join(".");
-    }
-  }
-  obj.path = joined;
-  let json;
-  if ("keys" in path) {
-    const _JSON = JSON;
-    json = JSON.stringify(path.keys);
-  }
-  obj.keys = json;
-  let json1;
-  if ("unionErrors" in path) {
-    const _JSON2 = JSON;
-    json1 = JSON.stringify(path.unionErrors);
-  }
-  obj.unionErrors = json1;
-  return obj;
-}
-function flattenIssuePath(arr) {
-  const mapped = arr.map((item) => {
-    let str = "<array>";
-    if (typeof item !== "number") {
-      str = item;
-    }
-    return str;
-  });
-  return mapped.join(".");
-}
-function formatIssueMessage(issues) {
-  const set = new Set();
-  while (tmp !== undefined) {
-    let arr = flattenIssuePath(tmp2.path);
-    if (arr.length > 0) {
-      let addResult = set.add(tmp4);
-    }
-    continue;
-  }
-  const arr2 = Array.from(set);
-  if (0 === arr2.length) {
-    let str4 = "variable";
-    if (issues.issues.length > 0) {
-      const first = issues.issues[0];
-      let tmp10 = undefined !== first;
-      if (tmp10) {
-        tmp10 = "expected" in first;
-      }
-      if (tmp10) {
-        tmp10 = typeof first.expected === "string";
-      }
-      str4 = "variable";
-      if (tmp10) {
-        str4 = first.expected;
-      }
-    }
-    const _HermesInternal2 = HermesInternal;
-    return "Failed to validate " + str4;
-  } else {
-    const _HermesInternal = HermesInternal;
-    return "Failed to validate keys: " + _mod13145.truncate(arr2.join(", "), 100);
-  }
-  tmp = issues.issues[Symbol.iterator]();
-}
-function applyZodErrorsToEvent(arg0, arg1) {
-  let flag = arg1;
-  if (arg1 === undefined) {
-    flag = false;
-  }
-  if (exception.exception) {
-    if (exception.exception.values) {
-      if (originalException) {
-        if (originalException.originalException) {
-          if ((function originalExceptionIsZodError(originalException) {
-            let isErrorResult = _mod13143.isError(originalException);
-            if (isErrorResult) {
-              isErrorResult = "ZodError" === originalException.name;
-            }
-            if (isErrorResult) {
-              const _Array = Array;
-              isErrorResult = Array.isArray(originalException.issues);
-            }
-            return isErrorResult;
-          })(originalException.originalException)) {
-            if (0 !== originalException.originalException.issues.length) {
-              try {
-                const issues = originalException.originalException.issues;
-                if (flag) {
-                  let substr = issues;
-                } else {
-                  substr = issues.slice(0, arg0);
-                }
-                const mapped = substr.map(flattenIssue);
-                if (flag) {
-                  let _Array = Array;
-                  if (!Array.isArray(originalException.attachments)) {
-                    originalException.attachments = [];
-                  }
-                  const attachments = originalException.attachments;
-                  const obj = { filename: "zod_issues.json", data: null };
-                  const _JSON = JSON;
-                  const obj2 = { issues: mapped };
-                  obj.data = JSON.stringify(obj2);
-                  attachments.push(obj);
-                }
-                const obj3 = {};
-                const merged = Object.assign(exception);
-                const obj4 = {};
-                const merged1 = Object.assign(exception.exception);
-                const obj5 = {};
-                const merged2 = Object.assign(exception.exception.values[0]);
-                obj5.value = formatIssueMessage(originalException.originalException);
-                const items = [obj5];
-                const values = exception.exception.values;
-                HermesBuiltin.arraySpread(values.slice(1), 1);
-                obj4.values = items;
-                obj3.exception = obj4;
-                const obj6 = {};
-                const merged3 = Object.assign(exception.extra);
-                obj6["zoderror.issues"] = mapped.slice(0, arg0);
-                obj3.extra = obj6;
-                return obj3;
-              } catch (error) {
-                const obj7 = {};
-                const merged4 = Object.assign(tmp);
-                const obj8 = {};
-                const merged5 = Object.assign(tmp.extra);
-                const _Error = Error;
-                let str = "unknown";
-                if (error instanceof Error) {
-                  const _HermesInternal = HermesInternal;
-                  str = "" + error.name + ": " + error.message + "\n" + error.stack;
-                }
-                const obj9 = { message: "an exception was thrown while processing ZodError within applyZodErrorsToEvent()", error: str };
-                obj8["zoderrors sentry integration parse error"] = obj9;
-                obj7.extra = obj8;
-                return obj7;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  return exception;
-}
 
-export { applyZodErrorsToEvent };
-export { flattenIssue };
-export { flattenIssuePath };
-export { formatIssueMessage };
-export const zodErrorsIntegration = setupIntegration.defineIntegration(() => {
+export const captureConsoleIntegration = setupIntegration.defineIntegration(() => {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
   }
+  let handled;
+  let CONSOLE_LEVELS = obj.levels;
+  if (!CONSOLE_LEVELS) {
+    CONSOLE_LEVELS = CONSOLE_LEVELS(handled[0]).CONSOLE_LEVELS;
+  }
+  handled = obj.handled;
   return {
-    name: "ZodErrors",
-    processEvent(arg0, arg1) {
-      return applyZodErrorsToEvent(num, obj.saveZodIssuesAsAttachment, arg0, arg1);
+    name: "CaptureConsole",
+    setup(arg0) {
+      closure_0 = arg0;
+      if ("console" in CONSOLE_LEVELS(handled[1]).GLOBAL_OBJ) {
+        let result = CONSOLE_LEVELS(handled[2]).addConsoleInstrumentationHandler((arg0) => {
+          ({ args, level } = arg0);
+          let hasItem = _mod13172.getClient() === args;
+          if (hasItem) {
+            hasItem = CONSOLE_LEVELS.includes(level);
+          }
+          if (hasItem) {
+            closure_2 = handled;
+            let obj2 = { level: _mod13232.severityLevelFromString(level), extra: null };
+            const obj3 = { arguments: args };
+            obj2.extra = obj3;
+            const tmpResult = _mod13232;
+            _mod13172.withScope((addEventProcessor) => {
+              addEventProcessor.addEventProcessor((arg0) => {
+                arg0.logger = "console";
+                const result = args(level[6]).addExceptionMechanism(arg0, { handled, type: "console" });
+                return arg0;
+              });
+              if ("assert" !== level) {
+                const found = args.find((item) => item instanceof Error);
+                if (found) {
+                  args(13193).captureException(found, obj2);
+                  const tmp14Result = args(13193);
+                } else {
+                  const tmp14Result2 = args(13154);
+                  const safeJoinResult = args(13154).safeJoin(args, " ");
+                  args(13193).captureMessage(safeJoinResult, obj2);
+                  const obj4 = args(13193);
+                }
+              } else if (!args[0]) {
+                const obj = args(13154);
+                const _HermesInternal = HermesInternal;
+                const combined = "Assertion failed: " + args(13154).safeJoin(args.slice(1), " ") || "console.assert";
+                addEventProcessor.setExtra("arguments", args.slice(1));
+                obj2 = args(13193);
+                obj2.captureMessage(combined, obj2);
+                const tmp4 = args(13154).safeJoin(args.slice(1), " ") || "console.assert";
+              }
+            });
+            const tmpResult2 = _mod13172;
+          }
+        });
+        let tmpResult = CONSOLE_LEVELS(handled[2]);
+      }
     }
   };
 });

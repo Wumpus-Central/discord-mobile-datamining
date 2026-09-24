@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "c3befb4dec1b6486d35bd86d8fd2910e", name: "BoostGemOutlineIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/audit_logs", width: 24, height: 24, scales: [2, 3], hash: "6cae386612a05fa05fa9c172e944297a", name: "ic_audit_create_24px", type: "png" });

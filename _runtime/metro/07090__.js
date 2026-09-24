@@ -1,14 +1,13 @@
 // === Module 7090: ? ===
 
 // Module 7090
-import ComposedGestureName from "ComposedGestureName" /* 7042 */;
-import _mod7091 from "module_7091" /* 7091 */;
+const require = globalThis.__r;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const useCompetingGestures = function useCompetingGestures() {
-  const items = [...arguments];
-  const items1 = [ComposedGestureName.ComposedGestureName.Race, ...items];
-  return _mod7091.useComposedGesture.apply(items1);
-};
+for (const key10013 in require("module_7091")) {
+  arg5[key10013] = require("module_7091")[key10013];
+  continue;
+}
+for (const key10017 in require("transformLongPressProps")) {
+  arg5[key10017] = require("transformLongPressProps")[key10017];
+  continue;
+}

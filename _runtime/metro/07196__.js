@@ -1,14 +1,11 @@
 // === Module 7196: ? ===
 
 // Module 7196
-import _mod7197 from "module_7197" /* 7197 */;
 
-
-export default function toPropertyKey(arg0) {
-  const tmp = _mod7197(arg0, "string");
-  let text = tmp;
-  if ("symbol" != obj.default(tmp)) {
-    text = `${tmp}`;
+export default function _classCallCheck(arg0, arg1) {
+  if (!(arg0 instanceof arg1)) {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("Cannot call a class as a function");
+    throw typeError;
   }
-  return text;
 };

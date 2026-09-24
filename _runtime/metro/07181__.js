@@ -1,33 +1,40 @@
 // === Module 7181: ? ===
 
 // Module 7181
-import _mod17 from "module_17" /* 17 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop_mod from "module_19" /* 19 */;
 
-const Platform = _mod17.Platform;
-
-export const isNewArch = function isNewArch() {
-  if (undefined !== c1) {
-    return c1;
-  } else {
-    try {
-      let prop;
-      if (global != null) {
-        prop = global.nativeFabricUIManager;
+let closure_2 = ["focusHook", "scrollEventsHandlersHook", "enableFooterMarginAdjustment"];
+let noop = fn(19);
+const forwardRef = noop.forwardRef;
+({ useMemo: metroRequire, memo } = noop);
+let noop = noop_mod;
+const jsx = fn(21).jsx;
+try {
+  const FlashList = fn(7182);
+  const memoResult = memo(forwardRef((focusHook, ref) => {
+    focusHook = focusHook.focusHook;
+    const scrollEventsHandlersHook = focusHook.scrollEventsHandlersHook;
+    const enableFooterMarginAdjustment = focusHook.enableFooterMarginAdjustment;
+    closure_6(() => {
+      if (!FlashList) {
+        throw "You need to install FlashList first, `yarn install @shopify/flash-list`";
       }
-      let flag = Boolean(prop);
-      if (global != null) {
-        const __turboModuleProxy = global.__turboModuleProxy;
-      }
-      if (!flag) {
-        flag = Boolean(__turboModuleProxy);
-      }
-      if (!flag) {
-        flag = false;
-      }
-      c1 = flag;
-      return c1;
-    } catch (err) {
-      c1 = true;
-    }
-  }
-};
+    }, []);
+    const items = [focusHook, scrollEventsHandlersHook, enableFooterMarginAdjustment];
+    const tmp = _objectWithoutProperties(focusHook, enableFooterMarginAdjustment);
+    let merged = Object.assign(tmp);
+    return <FlashList.FlashList ref={ref} renderScrollComponent={closure_6(() => forwardRef((arg0, ref) => {
+      const merged = Object.assign(arg0, Object.assign({ data: 0 }));
+      const obj = { ref };
+      const merged1 = Object.assign(merged);
+      obj.focusHook = focusHook;
+      obj.scrollEventsHandlersHook = scrollEventsHandlersHook;
+      obj.enableFooterMarginAdjustment = enableFooterMarginAdjustment;
+      return jsx(focusHook(scrollEventsHandlersHook[4]), { ref });
+    }), items)} />;
+  }));
+  exports.default = memoResult;
+  exports.BottomSheetFlashList = memoResult;
+} catch (err) {
+}

@@ -80,8 +80,8 @@ fn = function n(userConfig, fn) {
       initialVelocity: 0,
       current: "disabled",
       lastTimestamp: null,
-      startTimestamp: -2.25,
-      reduceMotion: 150
+      startTimestamp: "etf",
+      reduceMotion: "json"
     };
     let num = obj.velocity;
     if (num == null) {

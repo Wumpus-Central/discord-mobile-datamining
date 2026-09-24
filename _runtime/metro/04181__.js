@@ -1,8 +1,8 @@
 // === Module 4181: ? ===
 
 // Module 4181
-import _typeof_mod from "module_3911" /* 3911 */;
-import requiredArgs_mod from "requiredArgs" /* 3912 */;
+import _typeof_mod from "module_3913" /* 3913 */;
+import requiredArgs_mod from "requiredArgs" /* 3914 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -21,8 +21,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function getHours(arg0) {
+export default function getDecade(arg0) {
   requiredArgs.default(1, arguments);
-  return _typeof.default(arg0).getHours();
+  return 10 * Math.floor(_typeof.default(arg0).getFullYear() / 10);
 };
 export default exports.default;

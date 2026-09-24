@@ -1,8 +1,30 @@
 // === Module 14660: ? ===
 
 // Module 14660
-import _mod14729 from "module_14729" /* 14729 */;
-import module_14661 from "module_14661" /* 14661 */;
+const require = globalThis.__r;
 
+const require = arg1;
+const dependencyMap = arg6;
 
-export default _mod14729.Object.assign;
+export const getSupportedNumberingSystems = function getSupportedNumberingSystems(locale) {
+  _require = locale;
+  const numberingSystemNames = require("numberingSystemNames").numberingSystemNames;
+  return numberingSystemNames.filter((item) => (function isSupportedNumberingSystem(item, arg1) {
+    let str = arg1;
+    if (undefined === arg1) {
+      str = "en";
+    }
+    try {
+      const concat = "".concat;
+      const combined = "".concat(str, "-u-nu-");
+      const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(combined.concat(item));
+      if (memoizedNumberFormat.resolvedOptions().numberingSystem !== item) {
+        if ("123" === memoizedNumberFormat.format(123)) {
+          return false;
+        }
+      }
+      return true;
+    } catch (err) {
+    }
+  })(item, closure_0));
+};

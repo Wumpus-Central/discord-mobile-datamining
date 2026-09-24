@@ -1,8 +1,8 @@
 // === Module 4209: ? ===
 
 // Module 4209
-import _typeof_mod from "module_3911" /* 3911 */;
-import requiredArgs_mod from "requiredArgs" /* 3912 */;
+import _typeof_mod from "module_3913" /* 3913 */;
+import requiredArgs_mod from "requiredArgs" /* 3914 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -21,8 +21,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isFirstDayOfMonth(arg0) {
-  requiredArgs.default(1, arguments);
-  return 1 === _typeof.default(arg0).getDate();
+export default function isEqual(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === _typeof.default(arg1).getTime();
 };
 export default exports.default;

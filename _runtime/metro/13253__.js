@@ -1,51 +1,73 @@
 // === Module 13253: ? ===
 
 // Module 13253
+import _mod13172 from "module_13172" /* 13172 */;
+import _flush from "_flush" /* 13193 */;
+import _mod13218 from "module_13218" /* 13218 */;
 
-export function makeFifoCache(arg0) {
-  closure_0 = arg0;
-  closure_1 = [];
-  dependencyMap = {};
+require = arg1;
+const dependencyMap = arg6;
+function getCurrentHubShim() {
   return {
-    add(arg0, arg1) {
-      if (closure_1.length >= closure_0) {
-        do {
-          if (undefined !== closure_1.shift()) {
-            delete tmp[tmp2];
-          }
-        } while (closure_1.length >= closure_0);
+    bindClient(arg0) {
+      const currentScope = _mod13172.getCurrentScope();
+      currentScope.setClient(arg0);
+    },
+    withScope: _mod13172.withScope,
+    getClient() {
+      return _mod13172.getClient();
+    },
+    getScope: _mod13172.getCurrentScope,
+    getIsolationScope: _mod13172.getIsolationScope,
+    captureException(arg0, arg1) {
+      const currentScope = _mod13172.getCurrentScope();
+      return currentScope.captureException(arg0, arg1);
+    },
+    captureMessage(arg0, arg1, arg2) {
+      const currentScope = _mod13172.getCurrentScope();
+      return currentScope.captureMessage(arg0, arg1, arg2);
+    },
+    captureEvent: _flush.captureEvent,
+    addBreadcrumb: _mod13218.addBreadcrumb,
+    setUser: _flush.setUser,
+    setTags: _flush.setTags,
+    setTag: _flush.setTag,
+    setExtra: _flush.setExtra,
+    setExtras: _flush.setExtras,
+    setContext: _flush.setContext,
+    getIntegration(id) {
+      const client = _mod13172.getClient();
+      let integrationByName = client;
+      if (client) {
+        integrationByName = client.getIntegrationByName(id.id);
       }
-      if (dependencyMap[arg0]) {
-        const self = this;
-        this.delete(arg0);
+      if (!integrationByName) {
+        integrationByName = null;
       }
-      closure_1.push(arg0);
-      dependencyMap[arg0] = arg1;
+      return integrationByName;
     },
-    clear() {
-      closure_2 = {};
-      closure_1 = [];
-    },
-    get(arg0) {
-      return dependencyMap[arg0];
-    },
-    size() {
-      return closure_1.length;
-    },
-    delete(arg0) {
-      if (dependencyMap[arg0]) {
-        delete tmp[tmp2];
-        let num = 0;
-        if (0 < closure_1.length) {
-          while (closure_1[num] !== arg0) {
-            num = num + 1;
-          }
-          closure_1.splice(num, 1);
-        }
-        return true;
+    startSession: _flush.startSession,
+    endSession: _flush.endSession,
+    captureSession(arg0) {
+      if (arg0) {
+        return _flush.endSession();
       } else {
-        return false;
+        const currentScope = _mod13172.getCurrentScope();
+        const tmpResult3 = _mod13172;
+        const client = _mod13172.getClient();
+        const session = currentScope.getSession();
+        let tmp4 = client;
+        if (client) {
+          tmp4 = session;
+        }
+        if (tmp4) {
+          client.captureSession(session);
+        }
+        const tmpResult4 = _mod13172;
       }
     }
   };
 }
+
+export const getCurrentHub = getCurrentHubShim;
+export { getCurrentHubShim };

@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 179.5, height: 70, scales: [2, 3], hash: "894749452230f66f12adff4cbc7b37d2", name: "img_logo_nitro_classic", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/backgrounds", width: 411, height: 134, scales: [2, 3], hash: "1d763efda0bb805b92a463188135a32f", name: "img_boost_subheader_mobile", type: "png" });

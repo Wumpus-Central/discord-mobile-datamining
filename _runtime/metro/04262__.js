@@ -1,17 +1,17 @@
 // === Module 4262: ? ===
 
 // Module 4262
-import _typeof_mod from "module_3911" /* 3911 */;
-import requiredArgs_mod from "requiredArgs" /* 3912 */;
+import startOfISOWeekYear_mod from "startOfISOWeekYear" /* 4074 */;
+import requiredArgs_mod from "requiredArgs" /* 3914 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let startOfISOWeekYear = startOfISOWeekYear_mod;
+if (!startOfISOWeekYear) {
+  const obj = { default: startOfISOWeekYear };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = startOfISOWeekYear;
 }
-_typeof = tmp3;
+startOfISOWeekYear = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,16 +21,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isSameMonth(arg0, arg1) {
+export default function isSameISOWeekYear(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const defaultResult2 = _typeof.default(arg1);
-  const fullYear = defaultResult1.getFullYear();
-  let tmp3 = fullYear === defaultResult2.getFullYear();
-  if (tmp3) {
-    const month = defaultResult1.getMonth();
-    tmp3 = month === defaultResult2.getMonth();
-  }
-  return tmp3;
+  const defaultResult1 = startOfISOWeekYear.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfISOWeekYear.default(arg1).getTime();
 };
 export default exports.default;

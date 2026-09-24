@@ -1,14 +1,13 @@
 // === Module 14693: ? ===
 
 // Module 14693
-import _mod14674 from "module_14674" /* 14674 */;
-import _mod14694 from "module_14694" /* 14694 */;
+import _mod14672 from "module_14672" /* 14672 */;
 
+const tmp = _mod14672.navigator && _mod14672.navigator.userAgent;
+let str = "";
+if (tmp) {
+  const _String = String;
+  str = String(tmp);
+}
 
-export default (arg0, arg1) => {
-  let tmp4;
-  if (!_mod14674(arg0[arg1])) {
-    tmp4 = _mod14694(tmp);
-  }
-  return tmp4;
-};
+export default str;

@@ -1,7 +1,48 @@
 // === Module 14692: ? ===
 
 // Module 14692
-import _mod14670 from "module_14670" /* 14670 */;
+import _mod14672 from "module_14672" /* 14672 */;
+import _mod14693 from "module_14693" /* 14693 */;
 
+let tmp = _mod14672.process && _mod14672.process.versions;
+if (!tmp) {
+  tmp = _mod14672.Deno && _mod14672.Deno.version;
+  const tmp2 = _mod14672.Deno && _mod14672.Deno.version;
+}
+let str = tmp;
+if (tmp) {
+  str = tmp.v8;
+}
+let tmp3;
+if (str) {
+  const parts = str.split(".");
+  if (parts[0] <= 0) {
+    let num3 = +parts[0] + parts[1];
+  } else {
+    num3 = 1;
+  }
+  tmp3 = num3;
+  let tmp4 = parts;
+}
+let _module = !tmp3;
+if (!tmp3) {
+  _module = _mod14693;
+}
+if (_module) {
+  const match = _mod14693.match(/Edge\/(\d+)/);
+  let tmp8 = !match;
+  if (match) {
+    tmp8 = match[1] >= 74;
+  }
+  _module = tmp8;
+  tmp4 = match;
+}
+if (_module) {
+  _module = _mod14693.match(/Chrome\/(\d+)/);
+  tmp4 = _module;
+}
+if (_module) {
+  tmp3 = +tmp4[1];
+}
 
-export default _mod14670({}.isPrototypeOf);
+export default tmp3;

@@ -2,79 +2,46 @@
 
 // Module 2119
 
-export default function buildMatchFn(arg0) {
-  closure_0 = arg0;
-  return (str) => {
-    if (arguments.length > 1) {
-      if (undefined !== arguments[1]) {
-        let obj = arguments[1];
-      }
-      const width = obj.width;
-      let tmp2 = width;
-      if (width) {
-        tmp2 = closure_0.matchPatterns[width];
-      }
-      if (!tmp2) {
-        tmp2 = closure_0.matchPatterns[closure_0.defaultMatchWidth];
-      }
-      const match = str.match(tmp2);
-      if (match) {
-        const first = match[0];
-        let arr2 = width;
-        if (width) {
-          arr2 = closure_0.parsePatterns[width];
-        }
-        if (!arr2) {
-          arr2 = closure_0.parsePatterns[closure_0.defaultParseWidth];
-        }
-        const _Array = Array;
-        if (Array.isArray(arr2)) {
-          let num = 0;
-          let tmp15;
-          if (0 < arr2.length) {
-            tmp15 = num;
-            while (!obj3.test(first)) {
-              let sum = num + 1;
-              num = sum;
-              if (sum >= arr2.length) {
-                break;
-              }
-            }
-            obj3 = arr2[num];
-          }
-          let tmp12 = tmp15;
-        } else {
-          const keys = Object.keys();
-          if (keys !== undefined) {
-            while (keys[tmp] !== undefined) {
-              if (!arr2.hasOwnProperty(tmp14)) {
-                continue;
-              } else {
-                let obj2 = arr2[tmp14];
-                tmp12 = tmp14;
-                if (obj2.test(first)) {
-                  break;
-                }
-              }
-              continue;
-            }
-          }
-        }
-        let valueCallbackResult = tmp12;
-        if (closure_0.valueCallback) {
-          valueCallbackResult = closure_0.valueCallback(tmp12);
-        }
-        let valueCallbackResult2 = valueCallbackResult;
-        if (obj.valueCallback) {
-          valueCallbackResult2 = obj.valueCallback(valueCallbackResult);
-        }
-        const obj5 = { value: valueCallbackResult2, rest: str.slice(first.length) };
-        return obj5;
-      } else {
-        return null;
+export default function buildLocalizeFn(arg0) {
+  const formattingValues = arg0;
+  return (arg0, context) => {
+    let str = "standalone";
+    if (null != context) {
+      str = "standalone";
+      if (context.context) {
+        const _String = String;
+        str = String(context.context);
       }
     }
-    obj = {};
+    if ("formatting" === str) {
+      if (formattingValues.formattingValues) {
+        let StringResult = tmp6;
+        if (null != context) {
+          StringResult = tmp6;
+          if (context.width) {
+            const _String3 = String;
+            StringResult = String(context.width);
+          }
+        }
+        let tmp5 = formattingValues.formattingValues[StringResult] || formattingValues.formattingValues[formattingValues.defaultFormattingWidth || formattingValues.defaultWidth];
+        let obj = formattingValues;
+        const tmp9 = formattingValues.formattingValues[StringResult] || formattingValues.formattingValues[formattingValues.defaultFormattingWidth || formattingValues.defaultWidth];
+      }
+      let argumentCallbackResult = arg0;
+      if (obj.argumentCallback) {
+        argumentCallbackResult = obj.argumentCallback(arg0);
+      }
+      return tmp5[argumentCallbackResult];
+    }
+    obj = formattingValues;
+    if (null != context) {
+      if (context.width) {
+        const _String2 = String;
+        let defaultWidth = String(context.width);
+      }
+      tmp5 = obj.values[defaultWidth] || obj.values[tmp3];
+    }
+    defaultWidth = obj.defaultWidth;
   };
 };
 export default exports.default;

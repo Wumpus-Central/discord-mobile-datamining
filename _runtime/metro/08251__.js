@@ -1,35 +1,18 @@
 // === Module 8251: ? ===
 
 // Module 8251
-import Link from "Link" /* 1485 */;
 import noop from "module_19" /* 19 */;
 
-require = arg1;
+let context = noop.createContext(undefined);
 
-export const useInvalidPreventRemoveError = function useInvalidPreventRemoveError(descriptors) {
-  const first = Object.keys(Link.usePreventRemoveContext().preventedRoutes)[0];
-  let prop;
-  if (descriptors[first] != null) {
-    const options = tmp2.options;
-    if (options != null) {
-      prop = options.headerBackButtonMenuEnabled;
-    }
+export const AnimatedHeaderHeightContext = context;
+export const useAnimatedHeaderHeight = function useAnimatedHeaderHeight() {
+  context = noop.useContext(context);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find the header height. Are you inside a screen in a native stack navigator?");
+    throw error;
+  } else {
+    return context;
   }
-  let name;
-  if (descriptors[first] != null) {
-    const route = tmp2.route;
-    if (route != null) {
-      name = route.name;
-    }
-  }
-  const items = [first, prop, name];
-  const effect = noop.useEffect(() => {
-    if (null != first) {
-      if (prop) {
-        const _HermesInternal = HermesInternal;
-        const _console = console;
-        console.error("The screen " + name + " uses 'usePreventRemove' hook alongside 'headerBackButtonMenuEnabled: true', which is not supported. \n\nConsider removing 'headerBackButtonMenuEnabled: true' from " + name + " screen to get rid of this error.");
-      }
-    }
-  }, items);
 };

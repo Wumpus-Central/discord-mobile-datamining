@@ -1,17 +1,17 @@
 // === Module 4268: ? ===
 
 // Module 4268
-import module_4258_mod from "module_4258" /* 4258 */;
-import requiredArgs_mod from "requiredArgs" /* 3912 */;
+import _typeof_mod from "module_3913" /* 3913 */;
+import requiredArgs_mod from "requiredArgs" /* 3914 */;
 
-let module_4258 = module_4258_mod;
-if (!module_4258) {
-  const obj = { default: module_4258 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4258;
+  tmp3 = _typeof;
 }
-module_4258 = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,8 +21,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisISOWeek(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_4258.default(arg0, Date.now());
+export default function isSameYear(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const fullYear = defaultResult1.getFullYear();
+  return fullYear === _typeof.default(arg1).getFullYear();
 };
 export default exports.default;

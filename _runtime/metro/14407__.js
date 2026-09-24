@@ -1,84 +1,60 @@
 // === Module 14407: ? ===
 
 // Module 14407
-import _mod14372 from "module_14372" /* 14372 */;
-import _mod14392 from "module_14392" /* 14392 */;
+import _mod14401 from "module_14401" /* 14401 */;
+import _mod14402 from "module_14402" /* 14402 */;
+import _mod14403 from "module_14403" /* 14403 */;
+import _mod14404 from "module_14404" /* 14404 */;
+import _mod14405 from "module_14405" /* 14405 */;
+import _mod14406 from "module_14406" /* 14406 */;
 
 
-export default (arg0, arg1) => {
-  obj = new obj(14401)(arg0, arg1);
-  const tmp3 = new obj(14372)("0.0.0");
-  if (obj.test(tmp3)) {
-    return tmp3;
-  } else {
-    const tmp6 = new tmp(14372)("0.0.0-0");
-    if (obj.test(tmp6)) {
-      return tmp6;
-    } else {
-      let num = 0;
-      let num3 = 0;
-      let tmp9 = null;
-      let tmp10 = null;
-      if (0 < obj.set.length) {
-        do {
-          let arr = obj.set[num3];
-          obj = null;
-          let item = arr.forEach((semver) => {
-            obj = new _mod14372(semver.semver.version);
-            const operator = semver.operator;
-            if (">" === operator) {
-              if (0 === obj.prerelease.length) {
-                obj.patch = obj.patch + 1;
-              } else {
-                const prerelease = obj.prerelease;
-                prerelease.push(0);
-              }
-              obj.raw = obj.format();
-            } else {
-              if ("" !== operator) {
-                if (">=" !== operator) {
-                  if ("<" !== operator) {
-                    if ("<=" !== operator) {
-                      const _Error = Error;
-                      const _HermesInternal = HermesInternal;
-                      const error = new Error("Unexpected operation: " + semver.operator);
-                      throw error;
-                    }
-                  }
-                }
-              }
-              if (obj) {
-                !_mod14392(obj, obj);
-              }
-            }
-          });
-          let tmp13 = !obj;
-          let tmp14 = tmp9;
-          if (obj) {
-            let tmp16 = tmp14;
-            if (tmp14) {
-              tmp16 = !obj(14392)(tmp14, obj);
-            }
-            tmp13 = tmp16;
-          }
-          if (!tmp13) {
-            tmp14 = obj;
-          }
-          num3 = num + 1;
-          tmp9 = tmp14;
-          tmp10 = tmp14;
-          num = num3;
-        } while (num3 < obj.set.length);
+export default (version, arg1, version2, arg3) => {
+  switch (arg1) {
+    case "===":
+      let version3 = version;
+      if (typeof version === "object") {
+        version3 = version.version;
       }
-      let tmp20 = null;
-      if (tmp10) {
-        tmp20 = null;
-        if (obj.test(tmp10)) {
-          tmp20 = tmp10;
-        }
+      let version4 = version2;
+      if (typeof version2 === "object") {
+        version4 = version2.version;
       }
-      return tmp20;
-    }
+      return version3 === version4;
+    case "!==":
+      if (typeof version === "object") {
+        version = version.version;
+      }
+      if (typeof version2 === "object") {
+        version2 = version2.version;
+      }
+      return version !== version2;
+    case "":
+      let tmp13 = _mod14403;
+      let tmp13Result = tmp13(version, version2, arg3);
+      return tmp13Result;
+    case "=":
+      tmp13 = _mod14403;
+      tmp13Result = tmp13(version, version2, arg3);
+      return tmp13Result;
+    case "==":
+      tmp13 = _mod14403;
+      tmp13Result = tmp13(version, version2, arg3);
+      return tmp13Result;
+    case "!=":
+      return _mod14404(version, version2, arg3);
+    case ">":
+      return _mod14401(version, version2, arg3);
+    case ">=":
+      return _mod14405(version, version2, arg3);
+    case "<":
+      return _mod14402(version, version2, arg3);
+    case "<=":
+      return _mod14406(version, version2, arg3);
+    default:
+      const _TypeError = TypeError;
+      const _HermesInternal = HermesInternal;
+      const typeError = new TypeError("Invalid operator: " + arg1);
+      throw typeError;
   }
-  tmp = obj;
 };

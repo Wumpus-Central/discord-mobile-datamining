@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/self_mod/stranger_danger/images", width: 21, height: 20, scales: [1, 2, 3], hash: "4ea1c192cad9acc1fe190c6de3d2e5ff", name: "ic_thumbsdown", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "dd65d7e499998d0d8096b10bdc086bb5", name: "ic_close", type: "png" });

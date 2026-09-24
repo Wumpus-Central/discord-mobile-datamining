@@ -1,130 +1,159 @@
 // === Module 13192: ? ===
 
 // Module 13192
-import _mod13136 from "module_13136" /* 13136 */;
-import _mod13163 from "module_13163" /* 13163 */;
-import _mod13164 from "module_13164" /* 13164 */;
+import _mod13145 from "module_13145" /* 13145 */;
 import _slicedToArray from "module_32" /* 32 */;
 
-function setupIntegration(on, name, arg2) {
-  closure_0 = on;
-  if (arg2[name.name]) {
-    if (_mod13164.DEBUG_BUILD) {
-      const logger2 = _mod13136.logger;
-      const _HermesInternal2 = HermesInternal;
-      logger2.log("Integration skipped because it was already installed: " + name.name);
-    }
-  } else {
-    arg2[name.name] = name;
-    if (tmp) {
-      name.setupOnce();
-      items.push(name.name);
-    }
-    if (tmp4) {
-      name.setup(on);
-    }
-    if (typeof name.preprocessEvent === "function") {
-      const preprocessEvent = name.preprocessEvent;
-      closure_1 = preprocessEvent.bind(name);
-      on.on("preprocessEvent", (arg0, arg1) => closure_1(arg0, arg1, closure_0));
-    }
-    if (typeof name.processEvent === "function") {
-      const processEvent = name.processEvent;
-      closure_2 = processEvent.bind(name);
-      const _Object = Object;
-      const obj = { id: name.name };
-      on.addEventProcessor(Object.assign((arg0, arg1) => closure_2(arg0, arg1, closure_0), obj));
-    }
-    if (_mod13164.DEBUG_BUILD) {
-      const logger = _mod13136.logger;
-      const _HermesInternal = HermesInternal;
-      logger.log("Integration installed: " + name.name);
-    }
-    tmp = -1 === items.indexOf(name.name) && typeof name.setupOnce === "function";
-    tmp4 = name.setup && typeof name.setup === "function";
-  }
-}
-let items = [];
-
-export const addIntegration = function addIntegration(name) {
-  const client = _mod13163.getClient();
-  if (client) {
-    client.addIntegration(name);
-  } else if (_mod13164.DEBUG_BUILD) {
-    const logger = _mod13136.logger;
-    const _HermesInternal = HermesInternal;
-    logger.warn("Cannot add integration \"" + name.name + "\" because no SDK Client is available.");
-  }
-};
-export const afterSetupIntegrations = function afterSetupIntegrations(arg0, arg1) {
-  const iter = arg1[Symbol.iterator]();
-  const nextResult = iter.next();
-  while (iter !== undefined) {
-    let obj = nextResult;
-    if (nextResult) {
-      let afterAllSetup = obj.afterAllSetup;
-    }
-    if (nextResult) {
-      let afterAllSetupResult = obj.afterAllSetup(arg0);
-    }
-    continue;
-  }
-};
-export function defineIntegration(arg0) {
-  return arg0;
-}
-export const getIntegrationsToSetup = function getIntegrationsToSetup(defaultIntegrations) {
-  const arr = defaultIntegrations.defaultIntegrations || [];
-  const integrations = defaultIntegrations.integrations;
-  const item = arr.forEach((item) => {
-    item.isDefaultInstance = true;
-  });
-  if (Array.isArray(integrations)) {
-    items = [];
-    HermesBuiltin.arraySpread(integrations, HermesBuiltin.arraySpread(arr, 0));
-    let arr2 = items;
-  } else {
-    arr2 = arr;
-    if (typeof integrations === "function") {
-      const integrationsResult = integrations(arr);
-      const _Array = Array;
-      let tmp2 = integrationsResult;
-      if (!Array.isArray(integrationsResult)) {
-        const items1 = [integrationsResult];
-        tmp2 = items1;
-      }
-      arr2 = tmp2;
-    }
-  }
-  const item1 = arr2.forEach((name) => {
-    name = name.name;
-    let isDefaultInstance = tmp2;
-    if (obj[name]) {
-      isDefaultInstance = !tmp2.isDefaultInstance;
-    }
-    if (isDefaultInstance) {
-      isDefaultInstance = name.isDefaultInstance;
-    }
-    if (!isDefaultInstance) {
-      obj[name] = name;
-    }
-  });
-  const values = Object.values({});
-  const findIndexResult = values.findIndex((name) => "Debug" === name.name);
-  if (findIndexResult > -1) {
-    values.push(_slicedToArray(values.splice(findIndexResult, 1), 1)[0]);
-  }
-  return values;
-};
-export const installedIntegrations = items;
-export { setupIntegration };
-export const setupIntegrations = function setupIntegrations(arg0, arr) {
+function dsnFromString(arg0) {
   closure_0 = arg0;
-  const obj = {};
-  const item = arr.forEach((item) => {
-    if (item) {
-      setupIntegration(closure_0, item, obj);
+  const match = re3.exec(arg0);
+  if (match) {
+    const tmp5 = _slicedToArray(match.slice(1), 6);
+    let str = tmp5[1];
+    let str3 = "";
+    if (undefined !== tmp5[2]) {
+      str3 = tmp6;
     }
-  });
-  return obj;
+    let str4 = "";
+    if (undefined !== tmp5[3]) {
+      str4 = tmp7;
+    }
+    let str5 = "";
+    if (undefined !== tmp5[4]) {
+      str5 = tmp8;
+    }
+    let str6 = "";
+    if (undefined !== tmp5[5]) {
+      str6 = tmp9;
+    }
+    const parts = str6.split("/");
+    let str8 = str6;
+    let str9 = "";
+    if (parts.length > 1) {
+      const substr = parts.slice(0, -1);
+      str9 = substr.join("/");
+      str8 = parts.pop();
+    }
+    let first = str8;
+    if (str8) {
+      const match1 = str8.match(/^\d+/);
+      first = str8;
+      if (match1) {
+        first = match1[0];
+      }
+    }
+    const url = { protocol: tmp5[0], publicKey: null, pass: null, host: null, port: null, path: null, projectId: null };
+    if (!str) {
+      str = "";
+    }
+    url.publicKey = str;
+    if (!str3) {
+      str3 = "";
+    }
+    url.pass = str3;
+    url.host = str4;
+    if (!str5) {
+      str5 = "";
+    }
+    url.port = str5;
+    if (!str9) {
+      str9 = "";
+    }
+    url.path = str9;
+    url.projectId = first;
+    return url;
+  } else {
+    _mod13145.consoleSandbox(() => {
+      console.error("Invalid Sentry Dsn: " + closure_0);
+    });
+  }
+}
+const re3 = /^(?:(\w+):)\/\/(?:(\w+)(?::(\w+)?)?@)([\w.-]+)(?::(\d+))?\/(.+)/;
+
+export { dsnFromString };
+export const dsnToString = function dsnToString(url) {
+  let flag = arg1;
+  if (arg1 === undefined) {
+    flag = false;
+  }
+  ({ host, path, pass, port, projectId, protocol, publicKey } = url);
+  let str = "";
+  if (flag) {
+    str = "";
+    if (pass) {
+      const _HermesInternal = HermesInternal;
+      str = ":" + pass;
+    }
+  }
+  let str3 = "";
+  if (port) {
+    const _HermesInternal2 = HermesInternal;
+    str3 = ":" + port;
+  }
+  let combined = path;
+  if (path) {
+    const _HermesInternal3 = HermesInternal;
+    combined = "" + path + "/";
+  }
+  return "" + protocol + "://" + publicKey + str + "@" + host + str3 + "/" + combined + projectId;
+};
+export const makeDsn = function makeDsn(protocol) {
+  if (typeof protocol === "string") {
+    let url = dsnFromString(protocol);
+  } else {
+    url = { protocol: protocol.protocol, publicKey: protocol.publicKey || "", pass: protocol.pass || "", host: protocol.host, port: protocol.port || "", path: protocol.path || "", projectId: protocol.projectId };
+  }
+  if (url) {
+    let error = url;
+    let flag = true;
+    if (url(13144).DEBUG_BUILD) {
+      ({ port, projectId, protocol } = url);
+      const items = ["protocol", "publicKey", "host", "projectId"];
+      const found = items.find((item) => {
+        let flag = !tmp;
+        if (!url[item]) {
+          const logger = _mod13145.logger;
+          const _HermesInternal = HermesInternal;
+          logger.error("Invalid Sentry Dsn: " + item + " missing");
+          flag = true;
+        }
+        return flag;
+      });
+      if (found) {
+        flag = !found;
+      } else {
+        if (!projectId.match(/^\d+$/)) {
+          let logger = error(13145).logger;
+          let _HermesInternal = HermesInternal;
+          logger.error("Invalid Sentry Dsn: Invalid projectId " + projectId);
+        }
+        let tmp6 = "http" === protocol;
+        if (!tmp6) {
+          tmp6 = "https" === protocol;
+        }
+        if (tmp6) {
+          let num3 = port;
+          if (port) {
+            const _isNaN = isNaN;
+            const _parseInt = parseInt;
+            num3 = isNaN(parseInt(port, 10));
+          }
+          if (num3) {
+            const logger3 = error(13145).logger;
+            error = logger3.error;
+            const _HermesInternal3 = HermesInternal;
+            error("Invalid Sentry Dsn: Invalid port " + port);
+            num3 = 1;
+          }
+        } else {
+          const logger2 = error(13145).logger;
+          const _HermesInternal2 = HermesInternal;
+          logger2.error("Invalid Sentry Dsn: Invalid protocol " + protocol);
+        }
+      }
+    }
+    if (flag) {
+      return url;
+    }
+  }
 };

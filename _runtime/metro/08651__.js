@@ -1,33 +1,14 @@
 // === Module 8651: ? ===
 
 // Module 8651
-import get_ActivityIndicator from "module_17" /* 17 */;
+const re0 = /[|\\{}()[\]^$+*?.-]/g;
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(undefined);
-class WebViewProxy {
-  constructor(arg0) {
-    this.webViewKey = global;
-    return;
+export default (str) => {
+  if (typeof str !== "string") {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("Expected a string");
+    throw typeError;
+  } else {
+    return str.replace(re0, "\\$&");
   }
-  injectJavaScript(arg0) {
-    RNCWebView = NativeModules.RNCWebView;
-    return RNCWebView.injectJavaScriptWithWebViewKey(this.webViewKey, global);
-  }
-  addOnMessageListener(arg0) {
-    closure_0 = global;
-    self = this;
-    return closure_1.addListener("ReactNativeWebViewOnMessageWithWebViewKey", (webViewKey) => {
-      if (webViewKey.webViewKey === self.webViewKey) {
-        closure_0(webViewKey);
-      }
-    });
-  }
-  releaseWebView() {
-    RNCWebView = NativeModules.RNCWebView;
-    releaseWebViewResult = RNCWebView.releaseWebView(this.webViewKey);
-    return;
-  }
-}
-
-export default WebViewProxy;
+};

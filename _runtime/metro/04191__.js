@@ -1,17 +1,17 @@
 // === Module 4191: ? ===
 
 // Module 4191
-import module_4190_mod from "module_4190" /* 4190 */;
-import requiredArgs_mod from "requiredArgs" /* 3912 */;
+import _typeof_mod from "module_3913" /* 3913 */;
+import requiredArgs_mod from "requiredArgs" /* 3914 */;
 
-let module_4190 = module_4190_mod;
-if (!module_4190) {
-  const obj = { default: module_4190 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4190;
+  tmp3 = _typeof;
 }
-module_4190 = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,8 +21,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function getUnixTime(arg0) {
+export default function getSeconds(arg0) {
   requiredArgs.default(1, arguments);
-  return Math.floor(module_4190.default(arg0) / 1000);
+  return _typeof.default(arg0).getSeconds();
 };
 export default exports.default;

@@ -1,43 +1,31 @@
 // === Module 8252: ? ===
 
 // Module 8252
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-export const getModalRouteKeys = (arr, arg1) => {
-  closure_0 = arg1;
-  return arr.reduce((arr, key) => {
-    let options;
-    if (closure_0[key.key] != null) {
-      options = tmp.options;
+
+export const useDismissedRouteError = function useDismissedRouteError(state) {
+  const setNextDismissedKey = _slicedToArray(noop.useState(null), 2);
+  const first = setNextDismissedKey[0];
+  let tmp3 = null;
+  if (first) {
+    const routes = state.routes;
+    const found = routes.find((key) => key.key === first);
+    let name;
+    if (found != null) {
+      name = found.name;
     }
-    if (options == null) {
-      options = {};
+    tmp3 = name;
+  }
+  name = tmp3;
+  const items = [tmp3];
+  const effect = noop.useEffect(() => {
+    if (name) {
+      const _HermesInternal = HermesInternal;
+      const _console = console;
+      console.error("The screen '" + tmp + "' was removed natively but didn't get removed from JS state. This can happen if the action was prevented in a 'beforeRemove' listener, which is not fully supported in native-stack.\n\nConsider using a 'usePreventRemove' hook with 'headerBackButtonMenuEnabled: false' to prevent users from natively going back multiple screens.");
     }
-    const presentation = options.presentation;
-    let tmp2 = arr.length && !presentation;
-    if (!tmp2) {
-      tmp2 = "modal" === presentation;
-    }
-    if (!tmp2) {
-      tmp2 = "transparentModal" === presentation;
-    }
-    if (!tmp2) {
-      tmp2 = "containedModal" === presentation;
-    }
-    if (!tmp2) {
-      tmp2 = "containedTransparentModal" === presentation;
-    }
-    if (!tmp2) {
-      tmp2 = "fullScreenModal" === presentation;
-    }
-    if (!tmp2) {
-      tmp2 = "formSheet" === presentation;
-    }
-    if (!tmp2) {
-      tmp2 = "pageSheet" === presentation;
-    }
-    if (tmp2) {
-      arr = arr.push(key.key);
-    }
-    return arr;
-  }, []);
+  }, items);
+  return { setNextDismissedKey: setNextDismissedKey[1] };
 };

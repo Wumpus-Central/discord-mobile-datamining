@@ -12,7 +12,7 @@ fn = function n(toValue, userConfig, callback) {
   dependencyMap = userConfig;
   __initData = callback;
   const fn = function u() {
-    let obj = { damping: 10, mass: 1, stiffness: 100, overshootClamping: false, restDisplacementThreshold: 0.01, restSpeedThreshold: 2, velocity: 0, duration: 2000, dampingRatio: 0.5, reduceMotion: "category", clamp: "replace" };
+    let obj = { damping: 10, mass: 1, stiffness: 100, overshootClamping: false, restDisplacementThreshold: 0.01, restSpeedThreshold: 2, velocity: 0, duration: 2000, dampingRatio: 0.5, reduceMotion: "children", clamp: "left" };
     const merged = Object.assign(dependencyMap);
     let duration;
     if (dependencyMap != null) {

@@ -260,7 +260,7 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
               closure_136_6 = undefined;
               closure_136_7 = undefined;
               let value4;
-              const obj5 = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "ip", cacheCreationInputTokens: "values", cacheReadInputTokens: "isArray", toolCalls: [], activeToolBlocks: {} };
+              const obj5 = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "WireType", cacheCreationInputTokens: "parent", cacheReadInputTokens: "raw", toolCalls: [], activeToolBlocks: {} };
               closure_136_2 = obj5;
               closure_136_4 = false;
               closure_136_5 = false;
@@ -1056,51 +1056,51 @@ export const instrumentAsyncIterableStream = function instrumentAsyncIterableStr
 export const instrumentMessageStream = function instrumentMessageStream(applyResult, arg1, flag) {
   closure_0 = arg1;
   closure_1 = flag;
-  closure_2 = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "ip", cacheCreationInputTokens: "values", cacheReadInputTokens: "isArray", toolCalls: [], activeToolBlocks: {} };
+  let obj = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "WireType", cacheCreationInputTokens: "parent", cacheReadInputTokens: "raw", toolCalls: [], activeToolBlocks: {} };
   applyResult.on("streamEvent", (arg0) => {
-    processEvent(arg0, closure_2, closure_1, closure_0);
+    processEvent(arg0, obj, closure_1, closure_0);
   });
   applyResult.on("message", () => {
     let tmp2 = closure_1;
     if (closure_0.isRecording()) {
-      if (closure_2.responseId) {
+      if (closure_0.responseId) {
         const obj2 = {};
-        obj2[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_2.responseId;
+        obj2[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_0.responseId;
         closure_0.setAttributes(obj2);
       }
-      if (closure_2.responseModel) {
+      if (closure_0.responseModel) {
         const obj3 = {};
-        obj3[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = closure_2.responseModel;
+        obj3[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = closure_0.responseModel;
         closure_0.setAttributes(obj3);
       }
       const obj4 = _mod825;
-      const result = obj4.setTokenUsageAttributes(closure_0, closure_2.promptTokens, closure_2.completionTokens, closure_2.cacheCreationInputTokens, closure_2.cacheReadInputTokens);
+      const result = obj4.setTokenUsageAttributes(closure_0, closure_0.promptTokens, closure_0.completionTokens, closure_0.cacheCreationInputTokens, closure_0.cacheReadInputTokens);
       const obj5 = {};
       obj5[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
       closure_0.setAttributes(obj5);
-      if (closure_2.finishReasons.length > 0) {
+      if (closure_0.finishReasons.length > 0) {
         const obj6 = {};
         const _JSON = JSON;
-        obj6[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(closure_2.finishReasons);
+        obj6[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(closure_0.finishReasons);
         closure_0.setAttributes(obj6);
       }
       let tmp21 = tmp2;
       if (tmp2) {
-        tmp21 = closure_2.responseTexts.length > 0;
+        tmp21 = closure_0.responseTexts.length > 0;
       }
       if (tmp21) {
         const obj7 = {};
-        const responseTexts = closure_2.responseTexts;
+        const responseTexts = closure_0.responseTexts;
         obj7[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts.join("");
         closure_0.setAttributes(obj7);
       }
       if (tmp2) {
-        tmp2 = closure_2.toolCalls.length > 0;
+        tmp2 = closure_0.toolCalls.length > 0;
       }
       if (tmp2) {
         const obj8 = {};
         const _JSON2 = JSON;
-        obj8[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(closure_2.toolCalls);
+        obj8[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(closure_0.toolCalls);
         closure_0.setAttributes(obj8);
       }
       closure_0.end();

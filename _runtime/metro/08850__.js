@@ -1,14 +1,16 @@
 // === Module 8850: ? ===
 
 // Module 8850
-import _modDef8842 from "module_8842" /* 8842 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef8846 from "module_8846" /* 8846 */;
+import _modDef8851 from "module_8851" /* 8851 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const FeDisplacementMap = arg1;
+const FeComposite = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,14 +30,16 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeDisplacementMap {
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class FeComposite {
   constructor() {
     self = this;
-    tmp = c2(this, FeDisplacementMap);
-    tmp2 = closure_4;
-    obj = closure_4(FeDisplacementMap);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_3(this, FeComposite);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(FeComposite);
+    tmp3 = closure_4;
+    if (closure_7()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -48,18 +52,33 @@ class FeDisplacementMap {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeDisplacementMap, _modDef8842);
+_inherits(FeComposite, _modDef8846);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeDisplacementMap(8819).warnUnimplementedFilter();
-    return null;
+    const self = this;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const merged = Object.assign(FeComposite(8845).extractFilter(this.props));
+    const obj2 = FeComposite(8845);
+    const merged1 = Object.assign(FeComposite(8845).extractFeComposite(this.props));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeDisplacementMap, items);
-importDefaultResultResult.displayName = "FeDisplacementMap";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+const importDefaultResultResult = _createClass(FeComposite, items);
+importDefaultResultResult.displayName = "FeComposite";
+let obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.k1 = 0;
+obj.k2 = 0;
+obj.k3 = 0;
+obj.k4 = 0;
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

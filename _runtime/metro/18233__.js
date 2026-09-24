@@ -1,7 +1,8 @@
 // === Module 18233: ? ===
 
 // Module 18233
-import registerAsset from "module_1121" /* 1121 */;
+const regex = RegExp("[\\u200d\\ud800-\\udfff\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff\\ufe0e\\ufe0f]");
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 16, height: 16, scales: [2, 3], hash: "0ddefd9d8828364a18e4207ffcdf1e76", name: "ic_close_circle", type: "png" });
+export default function hasUnicode(arg0) {
+  return regex.test(arg0);
+};

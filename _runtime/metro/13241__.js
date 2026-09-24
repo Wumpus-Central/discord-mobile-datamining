@@ -1,262 +1,173 @@
 // === Module 13241: ? ===
 
 // Module 13241
-import errorCallback from "errorCallback" /* 13132 */;
-import _mod13143 from "module_13143" /* 13143 */;
-import _mod13160 from "module_13160" /* 13160 */;
-import _mod13168 from "module_13168" /* 13168 */;
-import _mod13207 from "module_13207" /* 13207 */;
-import _toArray from "_toArray" /* 718 */;
-import "module_13135";
-import consoleSandbox from "module_13136" /* 13136 */;
-import dateTimestampInSeconds from "module_13150" /* 13150 */;
-import __SENTRY_DEBUG__ from "module_13164" /* 13164 */;
+import errorCallback from "errorCallback" /* 13141 */;
+import _mod13145 from "module_13145" /* 13145 */;
+import _mod13146 from "module_13146" /* 13146 */;
+import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 13150 */;
+import _mod13159 from "module_13159" /* 13159 */;
+import _mod13172 from "module_13172" /* 13172 */;
+import _mod13173 from "module_13173" /* 13173 */;
+import COUNTER_METRIC_TYPE from "COUNTER_METRIC_TYPE" /* 13242 */;
+import __SENTRY_DEBUG__ from "module_13144" /* 13144 */;
 
-function _addTracingHeadersToFetchRequest(headers, headers2, span) {
-  const traceData = _mod13207.getTraceData({ span });
-  ({ sentry-trace: tmp4, baggage } = traceData);
-  if (tmp4) {
-    headers = headers2.headers;
-    if (!headers) {
-      const _Request = Request;
-      let isInstanceOfResult = typeof Request !== "undefined";
-      if (typeof Request !== "undefined") {
-        const _Request2 = Request;
-        isInstanceOfResult = _mod13143.isInstanceOf(headers, Request);
-        const tmpResult = _mod13143;
-      }
-      let headers1;
-      if (isInstanceOfResult) {
-        headers1 = headers.headers;
-      }
-      headers = headers1;
-    }
-    if (headers) {
-      const _Headers = Headers;
-      let isInstanceOfResult1 = typeof Headers !== "undefined";
-      if (typeof Headers !== "undefined") {
-        const _Headers3 = Headers;
-        isInstanceOfResult1 = _mod13143.isInstanceOf(headers, Headers);
-        const tmpResult2 = _mod13143;
-      }
-      if (isInstanceOfResult1) {
-        const _Headers2 = Headers;
-        headers2 = new Headers(headers);
-        const result = headers2.set("sentry-trace", tmp4);
-        if (baggage) {
-          const str6 = headers2.get("baggage");
-          if (str6) {
-            let parts = str6.split(",");
-            let found = parts.filter((item) => {
-              const first = item.split("=")[0];
-              return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
-            });
-            let joined = found.join(",");
-            let combined = baggage;
-            if (joined) {
-              const _HermesInternal = HermesInternal;
-              combined = "" + joined + "," + baggage;
-            }
-            const result1 = headers2.set("baggage", combined);
-          } else {
-            const result2 = headers2.set("baggage", baggage);
-          }
-        }
-        return headers2;
-      } else {
-        const _Array = Array;
-        if (Array.isArray(headers)) {
-          const found1 = headers.filter((item) => {
-            let isArray = Array.isArray(item);
-            if (isArray) {
-              isArray = "sentry-trace" === item[0];
-            }
-            return !isArray;
-          });
-          let items = [];
-          const items1 = ["sentry-trace", tmp4];
-          items[HermesBuiltin.arraySpread(found1.map((item) => {
-            if (Array.isArray(item)) {
-              if ("baggage" === item[0]) {
-                if (typeof item[1] === "string") {
-                  const arr = _toArray(item);
-                  const items = [arr[0], ];
-                  const substr = arr.slice(2);
-                  const parts = arr[1].split(",");
-                  const found = parts.filter((item) => {
-                    const first = item.split("=")[0];
-                    return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
-                  });
-                  items[1] = found.join(",");
-                  HermesBuiltin.arraySpread(substr, 2);
-                  return items;
-                }
-              }
-            }
-            return item;
-          }), 0)] = items1;
-          if (baggage) {
-            const items2 = ["baggage", baggage];
-            items.push(items2);
-          }
-          return items;
-        } else {
-          let baggage1;
-          if ("baggage" in headers) {
-            baggage1 = headers.baggage;
-          }
-          const _Array2 = Array;
-          if (Array.isArray(baggage1)) {
-            const mapped = baggage1.map((item) => {
-              let joined = item;
-              if (typeof item === "string") {
-                const parts = item.split(",");
-                const found = parts.filter((item) => {
-                  const first = item.split("=")[0];
-                  return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
-                });
-                joined = found.join(",");
-              }
-              return joined;
-            });
-            let found2 = mapped.filter((item) => "" === item);
-          } else {
-            const items3 = [];
-            found2 = items3;
-            if (baggage1) {
-              const parts1 = baggage1.split(",");
-              const found3 = parts1.filter((item) => {
-                const first = item.split("=")[0];
-                return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
-              });
-              items3.push(found3.join(","));
-              found2 = items3;
-            }
-          }
-          if (baggage) {
-            found2.push(baggage);
-          }
-          const obj3 = {};
-          const merged = Object.assign(headers);
-          obj3["sentry-trace"] = tmp4;
-          let joined1;
-          if (found2.length > 0) {
-            joined1 = found2.join(",");
-          }
-          obj3.baggage = joined1;
-          return obj3;
-        }
-      }
-    } else {
-      const obj4 = {};
-      const merged1 = Object.assign(traceData);
-      return obj4;
-    }
+const require = globalThis.__r;
+
+function addToMetricsAggregator(arg0, SET_METRIC_TYPE, arg2, parsed, arg4) {
+  let obj = arg4;
+  if (arg4 === undefined) {
+    obj = {};
   }
-  const obj2 = { span };
+  let client = obj.client;
+  if (!client) {
+    client = _mod13172.getClient();
+  }
+  if (client) {
+    const activeSpan = spanTimeInputToSeconds.getActiveSpan();
+    let rootSpan;
+    if (activeSpan) {
+      rootSpan = spanTimeInputToSeconds.getRootSpan(activeSpan);
+      const tmp3Result = spanTimeInputToSeconds;
+    }
+    let description = rootSpan;
+    if (rootSpan) {
+      description = spanTimeInputToSeconds.spanToJSON(rootSpan).description;
+      const tmp3Result3 = spanTimeInputToSeconds;
+    }
+    ({ unit, tags, timestamp } = obj);
+    const options = client.getOptions();
+    ({ release, environment } = options);
+    const obj4 = {};
+    if (release) {
+      obj4.release = release;
+    }
+    if (environment) {
+      obj4.environment = environment;
+    }
+    if (description) {
+      obj4.transaction = description;
+    }
+    if (_mod13173.DEBUG_BUILD) {
+      const logger = _mod13145.logger;
+      const _HermesInternal = HermesInternal;
+      logger.log("Adding value of " + parsed + " to " + SET_METRIC_TYPE + " metric " + arg2);
+    }
+    const globalSingleton = _mod13146.getGlobalSingleton("globalMetricsAggregators", () => {
+      const weakMap = new WeakMap();
+      return weakMap;
+    });
+    value = globalSingleton.get(client);
+    if (!value) {
+      const tmp20 = new arg0(client);
+      closure_0 = tmp20;
+      client.on("flush", () => closure_0.flush());
+      client.on("close", () => closure_0.close());
+      const result = globalSingleton.set(client, tmp20);
+      value = tmp20;
+    }
+    const obj5 = {};
+    const merged = Object.assign(obj4);
+    const merged1 = Object.assign(tags);
+    value.add(SET_METRIC_TYPE, arg2, parsed, unit, obj5, timestamp);
+    const tmp3Result4 = _mod13146;
+  }
 }
 errorCallback;
-_mod13160;
 
-export const addTracingHeadersToFetchRequest = function addTracingHeadersToFetchRequest(arg0, arg1, arg2, arg3, arg4) {
-  return _addTracingHeadersToFetchRequest(arg0, arg3, arg4);
-};
-export const instrumentFetchRequest = function instrumentFetchRequest(fetchData, fn, fn2, arg3) {
-  let str = arg4;
-  if (arg4 === undefined) {
-    str = "auto.http.browser";
-  }
-  let endResult = fetchData;
-  if (fetchData.fetchData) {
-    let setHttpStatus = require;
-    let headers = dependencyMap;
-    let hasTracingEnabledResult = _mod13168.hasTracingEnabled();
-    if (hasTracingEnabledResult) {
-      hasTracingEnabledResult = fn(endResult.fetchData.url);
+export const metrics = {
+  increment(arg0, arg1) {
+    let num = match;
+    if (match === undefined) {
+      num = 1;
     }
-    if (endResult.endTimestamp) {
-      if (hasTracingEnabledResult) {
-        const __span = endResult.fetchData.__span;
-        if (__span) {
-          if (arg3[__span]) {
-            if (endResult.response) {
-              setHttpStatus = setHttpStatus(13153).setHttpStatus;
-              setHttpStatus(obj10, endResult.response.status);
-              headers = endResult.response;
-              if (headers) {
-                headers = endResult.response.headers;
-              }
-              if (headers) {
-                const headers2 = endResult.response.headers;
-                headers = headers2.get("content-length");
-              }
-              if (headers) {
-                const _parseInt = parseInt;
-                setHttpStatus = parseInt(headers);
-                if (setHttpStatus > 0) {
-                  const attr = obj10.setAttribute("http.response_content_length", setHttpStatus);
-                }
-              }
-              const setHttpStatusResult = setHttpStatus(13153);
-            } else if (endResult.error) {
-              const obj2 = { code: setHttpStatus(13153).SPAN_STATUS_ERROR, message: "internal_error" };
-              obj10.setStatus(obj2);
-            }
-            endResult = obj10.end();
-            delete tmp2[tmp];
+    let parsed = num;
+    if (typeof num === "string") {
+      const _parseInt = parseInt;
+      parsed = parseInt(num);
+    }
+    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.COUNTER_METRIC_TYPE, arg1, parsed, arg3);
+  },
+  distribution(arg0, arg1, match, arg3) {
+    let parsed = match;
+    if (typeof match === "string") {
+      const _parseInt = parseInt;
+      parsed = parseInt(match);
+    }
+    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.DISTRIBUTION_METRIC_TYPE, arg1, parsed, arg3);
+  },
+  set(arg0, arg1, parsed, arg3) {
+    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.SET_METRIC_TYPE, arg1, parsed, arg3);
+  },
+  gauge(arg0, arg1, match, arg3) {
+    let parsed = match;
+    if (typeof match === "string") {
+      const _parseInt = parseInt;
+      parsed = parseInt(match);
+    }
+    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.GAUGE_METRIC_TYPE, arg1, parsed, arg3);
+  },
+  timing(arg0, name, fn) {
+    _require = arg0;
+    dependencyMap = name;
+    addToMetricsAggregator = fn;
+    let str = arg3;
+    if (arg3 === undefined) {
+      str = "second";
+    }
+    closure_3 = arg4;
+    c4 = undefined;
+    if (typeof fn === "function") {
+      let timestampInSecondsResult = require("module_13159").timestampInSeconds();
+      c4 = timestampInSecondsResult;
+      let obj = require("module_13159");
+      const obj3 = { op: "metrics.timing", name, startTime: timestampInSecondsResult, onlyIfParent: true };
+      return require("module_13179").startSpanManual(obj3, (arg0) => {
+        closure_0 = arg0;
+        return closure_0(name[10]).handleCallbackErrors(() => fn(), () => {
+
+        }, () => {
+          const timestampInSecondsResult = _mod13159.timestampInSeconds();
+          const diff = timestampInSecondsResult - c4;
+          const obj2 = {};
+          const merged = Object.assign(closure_3);
+          obj2.unit = "second";
+          let parsed = diff;
+          if (typeof diff === "string") {
+            const _parseInt = parseInt;
+            parsed = parseInt(diff);
           }
-        }
+          addToMetricsAggregator(closure_0, COUNTER_METRIC_TYPE.DISTRIBUTION_METRIC_TYPE, closure_1, parsed, obj2);
+          closure_0.end(timestampInSecondsResult);
+        });
+      });
+    } else {
+      const obj4 = {};
+      let merged = Object.assign(arg4);
+      obj4.unit = str;
+      const DISTRIBUTION_METRIC_TYPE = require("COUNTER_METRIC_TYPE").DISTRIBUTION_METRIC_TYPE;
+      let parsed = fn;
+      if (typeof fn === "string") {
+        let _parseInt = parseInt;
+        parsed = parseInt(fn);
       }
+      addToMetricsAggregator(arg0, DISTRIBUTION_METRIC_TYPE, name, parsed, obj4);
     }
-    ({ method, url } = endResult.fetchData);
-    const tmp7 = (function getFullURL(url) {
-      try {
-        const _URL = URL;
-        const uRL = new URL(url);
-        return uRL.href;
-      } catch (err) {
-      }
-    })(url);
-    if (tmp7) {
-      const host = setHttpStatus(13218).parseUrl(tmp7).host;
-      const setHttpStatusResult2 = setHttpStatus(13218);
+  },
+  getMetricsAggregatorForClient(on, arg1) {
+    const globalSingleton = _mod13146.getGlobalSingleton("globalMetricsAggregators", () => {
+      const weakMap = new WeakMap();
+      return weakMap;
+    });
+    value = globalSingleton.get(on);
+    if (value) {
+      return value;
+    } else {
+      const tmp6 = new arg1(on);
+      closure_0 = tmp6;
+      on.on("flush", () => closure_0.flush());
+      on.on("close", () => closure_0.close());
+      const result = globalSingleton.set(on, tmp6);
+      return tmp6;
     }
-    const activeSpan = setHttpStatus(13141).getActiveSpan();
-    if (hasTracingEnabledResult) {
-      if (activeSpan) {
-        const obj3 = { name: null, attributes: null };
-        const _HermesInternal = HermesInternal;
-        obj3.name = "" + method + " " + url;
-        const obj4 = { url, type: "fetch", "http.method": method, "http.url": tmp7, "server.address": host };
-        obj4[setHttpStatus(13151).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = str;
-        obj4[setHttpStatus(13151).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "http.client";
-        obj3.attributes = obj4;
-        let startInactiveSpanResult = setHttpStatus(13170).startInactiveSpan(obj3);
-        const setHttpStatusResult4 = setHttpStatus(13170);
-      }
-      endResult.fetchData.__span = startInactiveSpanResult.spanContext().spanId;
-      arg3[startInactiveSpanResult.spanContext().spanId] = startInactiveSpanResult;
-      if (fn2(endResult.fetchData.url)) {
-        let obj5 = endResult.args[1];
-        if (!obj5) {
-          obj5 = {};
-        }
-        let tmp14;
-        if (setHttpStatusResult5.hasTracingEnabled()) {
-          if (activeSpan) {
-            tmp14 = startInactiveSpanResult;
-          }
-        }
-        const tmp13Result = _addTracingHeadersToFetchRequest(endResult.args[0], obj5, tmp14);
-        if (tmp13Result) {
-          endResult.args[1] = obj5;
-          obj5.headers = tmp13Result;
-        }
-        setHttpStatusResult5 = setHttpStatus(13168);
-      }
-      return startInactiveSpanResult;
-    }
-    startInactiveSpanResult = new setHttpStatus(13169).SentryNonRecordingSpan();
-    const setHttpStatusResult3 = setHttpStatus(13141);
   }
 };

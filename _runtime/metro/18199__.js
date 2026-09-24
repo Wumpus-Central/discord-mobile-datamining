@@ -1,17 +1,7 @@
 // === Module 18199: ? ===
 
 // Module 18199
-import arrayReduce from "arrayReduce" /* 4949 */;
-import words from "words" /* 18200 */;
-import deburr from "deburr" /* 18204 */;
+import registerAsset from "module_1121" /* 1121 */;
 
-let closure_2 = RegExp("['\u2019]", "g");
 
-export default function createCompounder(arg0) {
-  closure_0 = arg0;
-  return (arg0) => {
-    const tmp = arrayReduce;
-    const tmp2 = words;
-    return tmp(tmp2(deburr(arg0).replace(closure_2, "")), closure_0, "");
-  };
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 375, height: 180, scales: [2, 3], hash: "ed3a2617f9b5f5cc8eac96d446f7dd22", name: "intro_header_darker", type: "png" });

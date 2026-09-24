@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 51, height: 13, scales: [2, 3], hash: "224e933808a00a22a9d03c8af389d91f", name: "img_logo_basic_small_dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 314, height: 195, scales: [2, 3], hash: "f774e43fd38da2d8b6e5bdabed98e8b8", name: "img_tier_0_marketing_emojis", type: "png" });

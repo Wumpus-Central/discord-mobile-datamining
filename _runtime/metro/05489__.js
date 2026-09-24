@@ -1,49 +1,106 @@
 // === Module 5489: ? ===
 
 // Module 5489
-import FILE_TYPES_REQUIRED_ADDITIONAL_CHECK from "FILE_TYPES_REQUIRED_ADDITIONAL_CHECK" /* 5490 */;
-import _mod5502 from "module_5502" /* 5502 */;
-import _mod5510 from "module_5510" /* 5510 */;
+import _mod5490 from "module_5490" /* 5490 */;
 
-const self = this;
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let fn = self;
-  if (self) {
-    fn = self.__exportStar;
-  }
-  if (!fn) {
-    fn = (obj, exports) => {
-      for (const key10007 in arg0) {
-        let tmp6 = "default" === key10007;
-        if (tmp6) {
-          if (tmp6) {
-            continue;
-          } else {
-            let tmp4 = self2(arg1, arg0, key10007);
-            continue;
-          }
-          continue;
-        } else {
-          let _Object = Object;
-          hasOwnProperty = Object.prototype.hasOwnProperty;
-          let call = hasOwnProperty.call;
-          if (typeof call === "unknown") {
-            let hasOwnPropertyResult = hasOwnProperty(key10007);
-          } else {
-            hasOwnPropertyResult = call(arg1, key10007);
-          }
+const _mod5491 = tmp5(5491);
+require = arg1;
+const dependencyMap = arg6;
+
+export const detectFile = function detectFile(uint8Array, chunkSize) {
+  if (chunkSize) {
+    const _Object = Object;
+    hasOwnProperty = Object.prototype.hasOwnProperty;
+    const call = hasOwnProperty.call;
+    if (typeof call === "unknown") {
+      let hasOwnPropertyResult = hasOwnProperty("chunkSize");
+    } else {
+      hasOwnPropertyResult = call(chunkSize, "chunkSize");
+    }
+    if (hasOwnPropertyResult) {
+      chunkSize = undefined;
+      if (null != chunkSize) {
+        chunkSize = chunkSize.chunkSize;
+      }
+      let num2 = 0;
+      if (null !== chunkSize) {
+        num2 = 0;
+        if (undefined !== chunkSize) {
+          num2 = chunkSize;
         }
       }
-    };
+      if (num2 <= 0) {
+        const _RangeError = RangeError;
+        const rangeError = new RangeError("chunkSize must be bigger than zero");
+        throw rangeError;
+      }
+    }
   }
-  const _Object2 = Object;
-  fn(FILE_TYPES_REQUIRED_ADDITIONAL_CHECK, exports);
-  fn(_mod5502, exports);
-  fn(_mod5510, exports);
-} else {
-  let _Object = Object;
-}
+  let num3;
+  if (null != chunkSize) {
+    num3 = chunkSize.chunkSize;
+  }
+  if (!num3) {
+    num3 = 64;
+  }
+  const fileChunk = _mod5490.getFileChunk(uint8Array, num3);
+  if (0 !== fileChunk.length) {
+    const items = [];
+    const items1 = [];
+    for (const key10027 in _mod5491.FileTypes) {
+      let _Object4 = Object;
+      let call2 = hasOwnProperty2.call;
+      let tmp23 = require;
+      let FileTypes5 = _mod5491.FileTypes;
+      if (typeof call2 === "unknown") {
+        let hasOwnProperty2Result = hasOwnProperty2(key10027);
+      } else {
+        hasOwnProperty2Result = call2(FileTypes5, key10027);
+      }
+      if (!hasOwnProperty2Result) {
+        continue;
+      } else {
+        let FileTypes = tmp23(5491).FileTypes;
+        let signaturesByName = FileTypes.getSignaturesByName(key10027);
+        let FileTypes2 = tmp23(5491).FileTypes;
+        let detectbBySignaturesResult = FileTypes2.detectbBySignatures(fileChunk, signaturesByName);
+        if (!detectbBySignaturesResult) {
+          continue;
+        } else {
+          let FileTypes3 = tmp23(5491).FileTypes;
+          let infoByName = FileTypes3.getInfoByName(key10027);
+          let FILE_TYPES_REQUIRED_ADDITIONAL_CHECK = tmp23(5491).FILE_TYPES_REQUIRED_ADDITIONAL_CHECK;
+          if (FILE_TYPES_REQUIRED_ADDITIONAL_CHECK.includes(infoByName.extension)) {
+            let arr = items1.push(infoByName.extension);
+          }
+          let obj = { extension: null, mimeType: null, description: null, signature: null };
+          ({ extension: obj.extension, mimeType: obj.mimeType, description: obj.description } = infoByName);
+          let _Object2 = Object;
+          let _Object3 = Object;
+          let obj2 = { sequence: null };
+          let sequence = detectbBySignaturesResult.sequence;
+          let merged = Object.assign({}, detectbBySignaturesResult);
+          obj2.sequence = sequence.map((item) => item.toString(16));
+          obj.signature = Object.assign(merged, obj2);
+          let arr2 = items.push(obj);
+          continue;
+        }
+        continue;
+      }
+      continue;
+    }
+    if (0 !== items.length) {
+      if (1 === items.length) {
+        if (0 === items1.length) {
+          return items[0];
+        }
+      }
+      const FileTypes4 = _mod5491.FileTypes;
+      const result = FileTypes4.detectTypeByAdditionalCheck(fileChunk, items);
+      require = result;
+      if (result) {
+        return items.find((extension) => extension.extension === result);
+      }
+    }
+  }
+};

@@ -3,23 +3,41 @@
 // Module 7218
 import _mod7219 from "module_7219" /* 7219 */;
 
-
-export default function _inherits(value, fn) {
-  if (typeof fn !== "function") {
-    if (null !== fn) {
-      const _TypeError = TypeError;
-      const typeError = new TypeError("Super expression must either be null or a function");
-      throw typeError;
+function _get() {
+  if (typeof Reflect !== "undefined") {
+    const _Reflect2 = Reflect;
+    if (Reflect.get) {
+      const _Reflect = Reflect;
+      exports = get.bind();
     }
+    module.exports = exports;
+    const apply = exports.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(null);
+    } else {
+      applyArgumentsResult = apply(null, arguments);
+    }
+    return applyArgumentsResult;
   }
-  let prototype = fn;
-  if (fn) {
-    prototype = fn.prototype;
-  }
-  value.prototype = Object.create(prototype, { constructor: { value, writable: true, configurable: true } });
-  Object.defineProperty(value, "prototype", { writable: false });
-  if (fn) {
-    _mod7219(value, fn);
-  }
-  const obj = { constructor: { value, writable: true, configurable: true } };
-};
+  exports = (arg0, arg1, arg2) => {
+    const tmp = _mod7219(arg0, arg1);
+    if (tmp) {
+      const _Object = Object;
+      const iter = Object.getOwnPropertyDescriptor(tmp, arg1);
+      if (iter.get) {
+        let tmp3 = arg2;
+        const get = iter.get;
+        const call = get.call;
+        if (arguments.length < 3) {
+          tmp3 = arg0;
+        }
+        typeof call === "unknown" ? get() : call(tmp3);
+      } else {
+        return iter.value;
+      }
+    }
+  };
+}
+let exports = _get;
+
+export default _get;
