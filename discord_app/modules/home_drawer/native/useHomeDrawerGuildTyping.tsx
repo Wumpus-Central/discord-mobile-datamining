@@ -1,11 +1,11 @@
-// === Module 16723: useHomeDrawerGuildTyping ===
+// === Module 16747: useHomeDrawerGuildTyping ===
 
-// Module 16723 (useHomeDrawerGuildTyping)
+// Module 16747 (useHomeDrawerGuildTyping)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4464 */;
-import ChannelStore from "ChannelStore" /* 2042 */;
-import TypingStore from "TypingStore" /* 12298 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4466 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import TypingStore from "TypingStore" /* 12307 */;
 
 const require = globalThis.__r;
 
@@ -17,22 +17,23 @@ function areHomeDrawerGuildTypingStatesEqual(typingChannelId, typingChannelId2) 
   }
   return result;
 }
-const isThread = fn(2046).isThread;
-let closure_7 = { typingChannelId: "Array", typingChannelName: "flex", typingUserIds: [] };
+const isThread = fn(2048).isThread;
+let obj = { typingChannelId: "Array", typingChannelName: "paddingHorizontal", typingUserIds: [] };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/home_drawer/native/useHomeDrawerGuildTyping.tsx");
 
 export const useHomeDrawerGuildTyping = function useHomeDrawerGuildTyping(id) {
   _require = id;
   const isHomeDrawerChannelMuted = require("isHomeDrawerChannelMuted").useIsHomeDrawerChannelMuted();
-  const obj = require("isHomeDrawerChannelMuted");
+  obj = require("isHomeDrawerChannelMuted");
   isHomeDrawerChannelInChannelList = require("isHomeDrawerChannelInChannelList").useIsHomeDrawerChannelInChannelList();
   let obj2 = require("isHomeDrawerChannelInChannelList");
   const items = [TypingStore, ChannelStore, JoinedThreadsStore];
   const items1 = [id, isHomeDrawerChannelMuted, isHomeDrawerChannelInChannelList];
   return require("initialize").useStateFromStores(items, () => {
     const typingUsersByGuild = TypingStore.getTypingUsersByGuild(closure_0);
-    const keys = SnowflakeUtilsDefault.keys(typingUsersByGuild);
+    obj = SnowflakeUtilsDefault;
+    const keys = obj.keys(typingUsersByGuild);
     const found = keys.find((item) => {
       basicChannel = basicChannel.getBasicChannel(item);
       let tmp2 = null != basicChannel;
@@ -53,7 +54,7 @@ export const useHomeDrawerGuildTyping = function useHomeDrawerGuildTyping(id) {
       return tmp2;
     });
     if (null == found) {
-      let obj2 = closure_7;
+      let obj2 = obj;
     } else {
       obj2 = { typingChannelId: found, typingChannelName: null, typingUserIds: null };
       const channel = ChannelStore.getChannel(found);

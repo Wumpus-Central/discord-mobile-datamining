@@ -1,9 +1,9 @@
-// === Module 6672: PingPongPaddleIllocon ===
+// === Module 6674: PingPongPaddleIllocon ===
 
-// Module 6672 (PingPongPaddleIllocon)
+// Module 6674 (PingPongPaddleIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5890 */;
-import _modDef6673 from "module_6673" /* 6673 */;
+import FastImageDefault from "FastImage" /* 5892 */;
+import _modDef6675 from "module_6675" /* 6675 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const PingPongPaddleIllocon = function PingPongPaddleIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6673 };
+  const obj2 = { uri: _modDef6675 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

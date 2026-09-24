@@ -1,13 +1,13 @@
-// === Module 17320: AddFriendsContactSyncEmptyState ===
+// === Module 17343: AddFriendsContactSyncEmptyState ===
 
-// Module 17320 (AddFriendsContactSyncEmptyState)
+// Module 17343 (AddFriendsContactSyncEmptyState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4823 */;
-import components_Button_Button from "components/Button/Button" /* 5271 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 13015 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 13019 */;
-import _modDef13032 from "module_13032" /* 13032 */;
+import Text_Text from "Text/Text" /* 4825 */;
+import components_Button_Button from "components/Button/Button" /* 5273 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 13024 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 13028 */;
+import _modDef13041 from "module_13041" /* 13041 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = { content: { alignItems: "center", marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.lg }, headerImage: null, title: null, subtitle: null, subtitleText: null, trailing: null };
 let size = { height: 135, width: 216, marginTop: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_16 };
 obj2.headerImage = size;
@@ -33,7 +33,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/c
 export default function AddFriendsContactSyncEmptyState() {
   const tmp = closure_7();
   const obj = { style: tmp.content, children: null };
-  const items = [hasOwnProperty(React4, { resizeMode: "contain", style: tmp.headerImage, source: _modDef13032 }), , , ];
+  const items = [hasOwnProperty(React4, { resizeMode: "contain", style: tmp.headerImage, source: _modDef13041 }), , , ];
   const obj3 = { style: tmp.title, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["/G+nci"]);
@@ -41,7 +41,7 @@ export default function AddFriendsContactSyncEmptyState() {
   const obj4 = { style: tmp.subtitle, children: null };
   const obj5 = { style: tmp.subtitleText, variant: "text-sm/medium", children: null };
   const intl2 = util.intl;
-  const obj2 = { resizeMode: "contain", style: tmp.headerImage, source: _modDef13032 };
+  const obj2 = { resizeMode: "contain", style: tmp.headerImage, source: _modDef13041 };
   obj5.children = intl2.format(util.t.OXdOPf, { learnMoreHook: ContactSyncUtils.handleOpenLearnMoreLink });
   obj4.children = hasOwnProperty(Text_Text.Text, obj5);
   items[2] = hasOwnProperty(React3, obj4);

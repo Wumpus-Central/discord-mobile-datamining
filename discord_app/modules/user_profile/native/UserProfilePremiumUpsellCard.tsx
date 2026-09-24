@@ -1,15 +1,15 @@
-// === Module 15006: UserProfilePremiumUpsellCard ===
+// === Module 15015: UserProfilePremiumUpsellCard ===
 
-// Module 15006 (UserProfilePremiumUpsellCard)
+// Module 15015 (UserProfilePremiumUpsellCard)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import Text_Text from "Text/Text" /* 4823 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7321 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7493 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7513 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9553 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9585 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 10309 */;
-import UserProfileUpsellCardDefault from "UserProfileUpsellCard" /* 14984 */;
+import Text_Text from "Text/Text" /* 4825 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7323 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7495 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7515 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9557 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9589 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 10314 */;
+import UserProfileUpsellCardDefault from "UserProfileUpsellCard" /* 14993 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -36,17 +36,17 @@ function PreviewNitroCard(style) {
 }
 function GetNitroCard(style) {
   let analyticsLocations;
-  let nitroTrialCtaOverride = analyticsLocations(7774).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
+  let nitroTrialCtaOverride = analyticsLocations(7776).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
   analyticsLocations = useAnalyticsLocationsDefault(items).analyticsLocations;
   items = [analyticsLocations];
   let callback = noop.useCallback(() => {
     const obj = { analyticsLocation: { page: constants2.USER_SETTINGS, section: constants3.SETTINGS_CUSTOMIZE_PROFILE_TRY_IT_OUT, object: constants.BUTTON_CTA }, analyticsLocations, premiumFeatureCardOrder: PremiumFeaturesCards.PremiumFeatureCardOrder.TIER_2_LEADING };
     openPremiumModalDefault(obj);
   }, items);
-  let obj = analyticsLocations(7774);
+  let obj = analyticsLocations(7776);
   ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(false, callback, constants2.USER_SETTINGS, undefined, items));
   const tmp5 = usePremiumFeatureUpsellGetNitroDefault(false, callback, constants2.USER_SETTINGS, undefined, items);
-  const mobileNitroPreviewDirectCheckoutEnabled = analyticsLocations(15007).useMobileNitroPreviewDirectCheckoutEnabled();
+  const mobileNitroPreviewDirectCheckoutEnabled = analyticsLocations(15016).useMobileNitroPreviewDirectCheckoutEnabled();
   const obj3 = { style: style.style, ctaText: null, description: null, disabled: null, onPress: null };
   if (nitroTrialCtaOverride == null) {
     const intl = tmp(1115).intl;
@@ -70,7 +70,7 @@ const Constants = fn(1074);
 ({ AnalyticsObjects: closure_4, AnalyticsPages: hasOwnProperty, AnalyticsSections: metroRequire, UserSettingsSections: closure_7 } = Constants);
 const jsx = fn(21).jsx;
 let items = [AnalyticsLocationDefault.USER_SETTINGS_TRY_OUT_PREMIUM];
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let closure_10 = createStyles.createStyles((bottom) => {
   const obj = { container: { position: "absolute", bottom, start: 0, end: 0 } };
   return obj;

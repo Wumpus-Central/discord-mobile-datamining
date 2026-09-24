@@ -1,14 +1,14 @@
-// === Module 12801: ChatInputGuardGuildCommunicationDisabled ===
+// === Module 12810: ChatInputGuardGuildCommunicationDisabled ===
 
-// Module 12801 (ChatInputGuardGuildCommunicationDisabled)
+// Module 12810 (ChatInputGuardGuildCommunicationDisabled)
 import util from "util" /* 1115 */;
-import ClockWarningIcon from "ClockWarningIcon" /* 12189 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12788 */;
-import useCommunicationDisabledCountdownCleanup from "useCommunicationDisabledCountdownCleanup" /* 12802 */;
+import ClockWarningIcon from "ClockWarningIcon" /* 12196 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12797 */;
+import useCommunicationDisabledCountdownCleanup from "useCommunicationDisabledCountdownCleanup" /* 12811 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const link = fn(2107).GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK;
+const link = fn(2109).GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardGuildCommunicationDisabled.tsx");

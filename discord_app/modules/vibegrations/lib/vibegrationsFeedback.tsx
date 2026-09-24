@@ -1,18 +1,18 @@
-// === Module 17068: vibegrationsFeedback ===
+// === Module 17095: vibegrationsFeedback ===
 
-// Module 17068 (vibegrationsFeedback)
+// Module 17095 (vibegrationsFeedback)
 import Storage3 from "Storage" /* 510 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import _modDef3712 from "module_3712" /* 3712 */;
-import FeedbackUtils from "FeedbackUtils" /* 11960 */;
-import VibegrationsChatStore from "VibegrationsChatStore" /* 13449 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 9385 */;
+import _modDef3714 from "module_3714" /* 3714 */;
+import FeedbackUtils from "FeedbackUtils" /* 11967 */;
+import VibegrationsChatStore from "VibegrationsChatStore" /* 13458 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 9389 */;
 
 require = fn;
-const turnSettled = fn(13449).turnSettled;
+const turnSettled = fn(13458).turnSettled;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const Constants = fn(11957);
+const Constants = fn(11964);
 ({ FeedbackCategory: closure_7, FeedbackOptionVariant: closure_8, FeedbackType: closure_9, VibegrationsFeedbackOption: c10 } = Constants);
 const shownVibegrationsFeedbackProjectIds = "shownVibegrationsFeedbackProjectIds";
 const size = fn(2);
@@ -56,27 +56,27 @@ export const countSettledTurns = function countSettledTurns(arg0) {
 export const vibegrationsFeedbackSection = function vibegrationsFeedbackSection() {
   const obj = { value: constants.VIBEGRATIONS, label: "", problemsHeader: null, problemOptions: null, freeformConfig: null };
   const intl = util.intl;
-  obj.problemsHeader = intl.string(_modDef3712.kLHFxL);
+  obj.problemsHeader = intl.string(_modDef3714.kLHFxL);
   const obj2 = { value: constants4.NOT_WHAT_I_WANTED, variant: constants2.UNSPECIFIED, label: null };
   const intl2 = util.intl;
-  obj2.label = intl2.string(_modDef3712.UJLIUY);
+  obj2.label = intl2.string(_modDef3714.UJLIUY);
   const items = [obj2, , , ];
   const obj3 = { value: constants4.TOO_SLOW, variant: constants2.UNSPECIFIED, label: null };
   const intl3 = util.intl;
-  obj3.label = intl3.string(_modDef3712.FVQz1w);
+  obj3.label = intl3.string(_modDef3714.FVQz1w);
   items[1] = obj3;
   const obj4 = { value: constants4.APP_DIDNT_WORK, variant: constants2.UNSPECIFIED, label: null };
   const intl4 = util.intl;
-  obj4.label = intl4.string(_modDef3712["4AdY23"]);
+  obj4.label = intl4.string(_modDef3714["4AdY23"]);
   items[2] = obj4;
   const obj5 = { value: constants4.DIDNT_KNOW_WHAT_TO_ASK_FOR, variant: constants2.UNSPECIFIED, label: null };
   const intl5 = util.intl;
-  obj5.label = intl5.string(_modDef3712["u/juX1"]);
+  obj5.label = intl5.string(_modDef3714["u/juX1"]);
   items[3] = obj5;
   obj.problemOptions = items;
   const obj6 = { value: constants4.FREEFORM, label: null };
   const intl6 = util.intl;
-  obj6.label = intl6.string(_modDef3712["8Ee6yW"]);
+  obj6.label = intl6.string(_modDef3714["8Ee6yW"]);
   obj.freeformConfig = obj6;
   return obj;
 };

@@ -1,8 +1,8 @@
-// === Module 15477: QuestGameLogotype ===
+// === Module 15486: QuestGameLogotype ===
 
-// Module 15477 (QuestGameLogotype)
+// Module 15486 (QuestGameLogotype)
 import nativeDefault from "native" /* 576 */;
-import spring from "spring" /* 5270 */;
+import spring from "spring" /* 5272 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,9 +11,9 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 let SPRING_CONFIG = {};
-const merged = Object.assign(fn(5274).springSlow);
+const merged = Object.assign(fn(5276).springSlow);
 SPRING_CONFIG.overshootClamping = true;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 const obj2 = { logo: { marginBottom: nativeDefault.space.PX_4 } };
 let closure_9 = createStyles.createStyles(obj2);
 const __initData = { code: "function QuestGameLogotypeTsx1(){const{withSpring,logoDimensionStyles,SPRING_CONFIG}=this.__closure;return{opacity:withSpring(logoDimensionStyles==null?0:1,SPRING_CONFIG,'animate-always')};}" };

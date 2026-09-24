@@ -1,9 +1,9 @@
-// === Module 8699: LabFeatureStore ===
+// === Module 8703: LabFeatureStore ===
 
-// Module 8699 (LabFeatureStore)
+// Module 8703 (LabFeatureStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import LabFeaturesDefault from "LabFeatures" /* 8700 */;
+import LabFeaturesDefault from "LabFeatures" /* 8704 */;
 
 let toggleStates = {};
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;

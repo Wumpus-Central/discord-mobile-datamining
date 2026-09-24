@@ -1,10 +1,10 @@
-// === Module 17506: Toast ===
+// === Module 17529: Toast ===
 
-// Module 17506 (Toast)
+// Module 17529 (Toast)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import useToken from "useToken" /* 4524 */;
-import Text_Text from "Text/Text" /* 4823 */;
+import useToken from "useToken" /* 4526 */;
+import Text_Text from "Text/Text" /* 4825 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -52,7 +52,7 @@ function ToastContent(content) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = { container: null, multilineContainer: null, contentContainer: null };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
 obj2.container = { flexDirection: "row", alignItems: "center", borderRadius: nativeDefault.radii.xxl, padding: nativeDefault.space.PX_8, paddingRight: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.MOBILE_TOAST_BACKGROUND_DEFAULT, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1 };

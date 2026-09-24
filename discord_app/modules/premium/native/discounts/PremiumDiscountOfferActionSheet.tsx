@@ -1,10 +1,10 @@
-// === Module 17482: PremiumDiscountOfferActionSheet ===
+// === Module 17505: PremiumDiscountOfferActionSheet ===
 
-// Module 17482 (PremiumDiscountOfferActionSheet)
+// Module 17505 (PremiumDiscountOfferActionSheet)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7750 */;
-import UserOfferActionCreators from "UserOfferActionCreators" /* 8407 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9585 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7752 */;
+import UserOfferActionCreators from "UserOfferActionCreators" /* 8411 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9589 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const PremiumConstants = fn(1374);
 ({ PremiumTypes: closure_4, SubscriptionPlanInfo: hasOwnProperty } = PremiumConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: metroRequire, AnalyticsObjectTypes, AnalyticsPages, AnalyticsSections } = Constants);
-const ContentDismissActionType = fn(2039).ContentDismissActionType;
+const ContentDismissActionType = fn(2041).ContentDismissActionType;
 const jsx = fn(21).jsx;
 let closure_9 = { page: AnalyticsPages.USER_SETTINGS, section: AnalyticsSections.SETTINGS_PREMIUM, objectType: AnalyticsObjectTypes.BUY };
 const size = fn(2);

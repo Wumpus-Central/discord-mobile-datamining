@@ -1,8 +1,8 @@
-// === Module 11015: premium_tab ===
+// === Module 11021: premium_tab ===
 
-// Module 11015 (premium_tab)
+// Module 11021 (premium_tab)
 import _mod1187 from "module_1187" /* 1187 */;
-import localized_string from "localized_string" /* 11012 */;
+import localized_string from "localized_string" /* 11018 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

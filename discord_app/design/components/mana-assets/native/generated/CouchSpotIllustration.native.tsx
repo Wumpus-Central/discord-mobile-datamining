@@ -1,9 +1,9 @@
-// === Module 6202: CouchSpotIllustration ===
+// === Module 6204: CouchSpotIllustration ===
 
-// Module 6202 (CouchSpotIllustration)
+// Module 6204 (CouchSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5890 */;
-import _modDef6203 from "module_6203" /* 6203 */;
+import FastImageDefault from "FastImage" /* 5892 */;
+import _modDef6205 from "module_6205" /* 6205 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const CouchSpotIllustration = function CouchSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6203 };
+  const obj2 = { uri: _modDef6205 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,9 +1,9 @@
-// === Module 6772: ServerTagAbstractUI ===
+// === Module 6774: ServerTagAbstractUI ===
 
-// Module 6772 (ServerTagAbstractUI)
+// Module 6774 (ServerTagAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5890 */;
-import _modDef6773 from "module_6773" /* 6773 */;
+import FastImageDefault from "FastImage" /* 5892 */;
+import _modDef6775 from "module_6775" /* 6775 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ServerTagAbstractUI = function ServerTagAbstractUI(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6773 };
+  const obj2 = { uri: _modDef6775 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

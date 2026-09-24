@@ -1,10 +1,10 @@
-// === Module 17305: trackFriendListViewed ===
+// === Module 17328: trackFriendListViewed ===
 
-// Module 17305 (trackFriendListViewed)
+// Module 17328 (trackFriendListViewed)
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import Clickstream from "Clickstream" /* 7793 */;
-import getTrackFriendsListViewedDataDefault from "getTrackFriendsListViewedData" /* 17306 */;
+import Clickstream from "Clickstream" /* 7795 */;
+import getTrackFriendsListViewedDataDefault from "getTrackFriendsListViewedData" /* 17329 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

@@ -1,12 +1,12 @@
-// === Module 9690: getEmbeddedActivityLaunchability ===
+// === Module 9694: getEmbeddedActivityLaunchability ===
 
-// Module 9690 (getEmbeddedActivityLaunchability)
+// Module 9694 (getEmbeddedActivityLaunchability)
 import util from "util" /* 1115 */;
-import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 9691 */;
-import ChannelStore from "ChannelStore" /* 2042 */;
-import GuildStore from "GuildStore" /* 2064 */;
-import PermissionStore from "PermissionStore" /* 4462 */;
-import VoiceStateStore from "VoiceStateStore" /* 4846 */;
+import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 9695 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import GuildStore from "GuildStore" /* 2066 */;
+import PermissionStore from "PermissionStore" /* 4464 */;
+import VoiceStateStore from "VoiceStateStore" /* 4848 */;
 
 const require = globalThis.__r;
 

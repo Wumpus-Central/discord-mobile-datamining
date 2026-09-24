@@ -1,9 +1,9 @@
-// === Module 6164: CheersSpotIllustration ===
+// === Module 6166: CheersSpotIllustration ===
 
-// Module 6164 (CheersSpotIllustration)
+// Module 6166 (CheersSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5890 */;
-import _modDef6165 from "module_6165" /* 6165 */;
+import FastImageDefault from "FastImage" /* 5892 */;
+import _modDef6167 from "module_6167" /* 6167 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const CheersSpotIllustration = function CheersSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6165 };
+  const obj2 = { uri: _modDef6167 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

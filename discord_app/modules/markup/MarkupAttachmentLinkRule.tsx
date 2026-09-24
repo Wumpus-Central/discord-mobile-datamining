@@ -1,8 +1,8 @@
-// === Module 5306: MarkupAttachmentLinkRule ===
+// === Module 5308: MarkupAttachmentLinkRule ===
 
-// Module 5306 (MarkupAttachmentLinkRule)
+// Module 5308 (MarkupAttachmentLinkRule)
 import _modDef1929 from "module_1929" /* 1929 */;
-import AttachmentUrlConstants from "AttachmentUrlConstants" /* 5307 */;
+import AttachmentUrlConstants from "AttachmentUrlConstants" /* 5309 */;
 import size from "module_2" /* 2 */;
 
 const mapped = Array.from(AttachmentUrlConstants.ATTACHMENT_PATH_PREFIXES).map((item) => item.replaceAll("/", ""));
@@ -25,3 +25,15 @@ obj.attachmentLink = {
 const result = size.fileFinishedImporting("modules/markup/MarkupAttachmentLinkRule.tsx");
 
 export default obj;
+export const matchAttachmentUrl = function matchAttachmentUrl(url) {
+  const match = regExp.exec(url);
+  let tmp2 = null;
+  if (null != match) {
+    tmp2 = null;
+    if (match[0] === url) {
+      const obj = { name: match[1] };
+      tmp2 = obj;
+    }
+  }
+  return tmp2;
+};

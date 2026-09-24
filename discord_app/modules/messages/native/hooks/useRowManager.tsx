@@ -1,9 +1,9 @@
-// === Module 12283: useRowManager ===
+// === Module 12290: useRowManager ===
 
-// Module 12283 (useRowManager)
-import Client from "Client" /* 4757 */;
-import NativeChatUtilsDefault from "NativeChatUtils" /* 11617 */;
-import createChannelStreamDefault from "createChannelStream" /* 12284 */;
+// Module 12290 (useRowManager)
+import Client from "Client" /* 4759 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 11623 */;
+import createChannelStreamDefault from "createChannelStream" /* 12291 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ const require = globalThis.__r;
 const result = size.fileFinishedImporting("modules/messages/native/hooks/useRowManager.tsx");
 
 export default function useRowManager(arg0) {
-  ({ chatManager: require, rowGenerator: importDefault, animatingStickerMessageIdRef: dependencyMap, canAddNewReactions: closure_3, channel: closure_4, messages: closure_5, isMessagesReady: closure_6, uploads: closure_7, roleStyle: closure_8, oldestUnreadMessageId: closure_9, replyingMessageId: closure_10, inlineAttachmentMedia: closure_11, inlineEmbedMedia: closure_12, renderEmbeds: closure_13, renderReactions: closure_14, animateEmoji: closure_15, gifAutoPlay: closure_16, timestampHourCycle: closure_17, currentUserId: closure_18, renderCommunicationDisabled: closure_19, selectedSummary: closure_20, enableSwipeActions: closure_21, isResourceChannel: closure_22, shouldObscureSpoiler: closure_23, shouldDisableInteractiveComponents: closure_24, unloadableContentEntryMessageIds: closure_25, containerWidth: closure_26, chatRef: closure_27, loadedRef: closure_28, animatedRef: closure_29, hasMoreMessagesAfterForLastUpdateRef: closure_30, updateNativeRows: closure_31, isLoadingAtTop: closure_32, channelLatestMessageLoadingStatsManager: closure_33, channelId: closure_34, isMessagesCached: closure_35, chatUpdatesQueue: closure_36, shouldJumpToOriginalPost: closure_37, findMessageIndex: closure_38, scrollToTopMessage: closure_39, useReducedMotion: closure_40 } = arg0);
+  ({ chatManager: require, rowGenerator: importDefault, animatingStickerMessageIdRef: dependencyMap, canAddNewReactions: closure_3, channel: closure_4, messages: closure_5, isMessagesReady: closure_6, uploads: closure_7, roleStyle: closure_8, oldestUnreadMessageId: closure_9, replyingMessageId: closure_10, inlineAttachmentMedia: closure_11, inlineEmbedMedia: closure_12, renderEmbeds: closure_13, renderReactions: closure_14, animateEmoji: closure_15, gifAutoPlay: closure_16, timestampHourCycle: closure_17, currentUserId: closure_18, renderCommunicationDisabled: closure_19, selectedSummary: closure_20, selectedConversation: closure_21, enableSwipeActions: closure_22, isResourceChannel: closure_23, shouldObscureSpoiler: closure_24, shouldDisableInteractiveComponents: closure_25, unloadableContentEntryMessageIds: closure_26, containerWidth: closure_27, chatRef: closure_28, loadedRef: closure_29, animatedRef: closure_30, hasMoreMessagesAfterForLastUpdateRef: closure_31, updateNativeRows: closure_32, isLoadingAtTop: closure_33, channelLatestMessageLoadingStatsManager: closure_34, channelId: closure_35, isMessagesCached: closure_36, chatUpdatesQueue: closure_37, shouldJumpToOriginalPost: closure_38, findMessageIndex: closure_39, scrollToTopMessage: closure_40, useReducedMotion: closure_41 } = arg0);
   function scrollToMessageId(chatRef) {
     scrollToMessageId = chatRef.scrollToMessageId;
     let jumpTargetId = chatRef.jumpTargetId;
@@ -40,8 +40,8 @@ export default function useRowManager(arg0) {
     }
     closure_2 = undefined;
     let hasJumpedToOriginalPost;
-    let tmp6 = closure_40;
-    if (!closure_40) {
+    let tmp6 = closure_41;
+    if (!closure_41) {
       tmp6 = ANIMATED === chatManager(ref[2]).JumpType.INSTANT;
     }
     closure_2 = tmp9;
@@ -62,9 +62,9 @@ export default function useRowManager(arg0) {
         if (null != scrollToMessageId) {
           const _setTimeout2 = setTimeout;
           const timerId = setTimeout(() => {
-            const tmp2 = closure_2_38(scrollToMessageId);
+            const tmp2 = closure_2_39(scrollToMessageId);
             if (null != tmp2) {
-              if (null != closure_2_27.current) {
+              if (null != closure_2_28.current) {
                 let flag = false;
                 if (jumpTargetId) {
                   const obj = { scrollToMessageId, jumpTargetId: scrollToMessageId, jumpType, focusTargetId: scrollToMessageId, overrideScrollJumpType: Client.JumpType.INSTANT, isRescrolling: true, hasJumpedToOriginalPost };
@@ -81,17 +81,17 @@ export default function useRowManager(arg0) {
         }
       }
     }
-    const tmp15 = closure_38(scrollToMessageId);
+    const tmp15 = closure_39(scrollToMessageId);
     hasJumpedToOriginalPost = tmp15;
     if (null != tmp15) {
       if (flag) {
         const _setTimeout = setTimeout;
         const timerId1 = setTimeout(() => {
-          NativeChatUtilsDefault.scrollIntoView(closure_2_27.current, closure_3, { animated, highlight: jumpTargetId === scrollToMessageId });
+          NativeChatUtilsDefault.scrollIntoView(closure_2_28.current, closure_3, { animated, highlight: jumpTargetId === scrollToMessageId });
         }, 5);
       } else {
         let obj3 = { animated: tmp9, highlight: jumpTargetId === scrollToMessageId, position: TOP };
-        require("NativeChatUtils").scrollTo(closure_27.current, tmp15, obj3);
+        require("NativeChatUtils").scrollTo(closure_28.current, tmp15, obj3);
         let obj2 = require("NativeChatUtils");
       }
     }
@@ -155,7 +155,7 @@ export default function useRowManager(arg0) {
     if (flag7 === undefined) {
       flag7 = false;
     }
-    if (null != closure_27.current) {
+    if (null != closure_28.current) {
       let measureResult = null;
       if (null != closure_4) {
         measureResult = null;
@@ -166,10 +166,10 @@ export default function useRowManager(arg0) {
             measureResult = firstRowGenerator.measure(() => {
               chatManager.setup(messages);
               closure_2_1.setOptions({ inlineAttachmentMedia, inlineEmbedMedia, renderEmbeds, renderReactions, animateEmoji, animatingStickerMessageId: ref.current, constrainedWidth, gifAutoPlay, timestampHourCycle, renderCommunicationDisabled, ignoreEmbedDescriptionCache: flag2, enableSwipeActions, shouldObscureSpoiler, shouldDisableInteractiveComponents });
-              const obj2 = { channel, messages, uploads, oldestUnreadMessageId, replyingMessageId, currentUserId, canAddNewReactions: closure_2_3(), selectedSummary, chatManager, roleStyle, forceRender: flag, updateMessageIds, isResourceChannel, unloadableContentEntryMessageIds };
+              const obj2 = { channel, messages, uploads, oldestUnreadMessageId, replyingMessageId, currentUserId, canAddNewReactions: closure_2_3(), selectedSummary, selectedConversation, chatManager, roleStyle, forceRender: flag, updateMessageIds, isResourceChannel, unloadableContentEntryMessageIds };
               const obj = { inlineAttachmentMedia, inlineEmbedMedia, renderEmbeds, renderReactions, animateEmoji, animatingStickerMessageId: ref.current, constrainedWidth, gifAutoPlay, timestampHourCycle, renderCommunicationDisabled, ignoreEmbedDescriptionCache: flag2, enableSwipeActions, shouldObscureSpoiler, shouldDisableInteractiveComponents };
-              for (const item10046 of tmp3Result) {
-                let row = chatManager.createRow(closure_2_1.generate(item10046));
+              for (const item10047 of tmp3Result) {
+                let row = chatManager.createRow(closure_2_1.generate(item10047));
                 continue;
               }
               return chatManager.createChangeset();
@@ -202,47 +202,47 @@ export default function useRowManager(arg0) {
           ref2.current = true;
           const obj5 = { rows: measureResult, hasMoreMessagesAfter: messages.hasMoreAfter, isLoadingAtTop: null, scrollData: null, HACK_iOSForceAnimations: null, forceReload: null, isAnimated: null };
           const tmp27 = require("computeScrollData");
-          obj5.isLoadingAtTop = closure_32(measureResult, ref4.current);
+          obj5.isLoadingAtTop = closure_33(measureResult, ref4.current);
           obj5.scrollData = require("computeScrollData")(obj4);
           obj5.HACK_iOSForceAnimations = flag3;
           obj5.forceReload = forceReload;
           obj5.isAnimated = isAnimated;
-          closure_31(obj5);
+          closure_32(obj5);
           if (!current) {
             const obj6 = { channelId, areMessagesCached };
-            closure_33.finish(obj6);
+            closure_34.finish(obj6);
           }
           const tmp27Result = require("computeScrollData")(obj4);
         }
         if (tmp42) {
           const _setTimeout = setTimeout;
-          const timerId = setTimeout(() => closure_1_39(), 100);
+          const timerId = setTimeout(() => closure_1_40(), 100);
         }
-        tmp42 = ref2.current && ref2.current !== current && closure_22;
+        tmp42 = ref2.current && ref2.current !== current && closure_23;
       }
       if (ref2.current) {
-        if (closure_36.hasUpdates()) {
-          closure_36.tryFlush();
+        if (closure_37.hasUpdates()) {
+          closure_37.tryFlush();
         }
       }
       if (!ref2.current) {
         if (null != measureResult) {
           if (0 === measureResult.length) {
-            require("NativeChatUtils").fadeIn(closure_27.current);
+            require("NativeChatUtils").fadeIn(closure_28.current);
             const obj3 = require("NativeChatUtils");
           }
         }
       }
       if (null != scrollToMessageId) {
-        if (!closure_37(flag7)) {
+        if (!closure_38(flag7)) {
           const obj7 = { scrollToMessageId, jumpTargetId, jumpType: ANIMATED, scrollPosition: MIDDLE, minimizeScrolling: flag5, isRescrolling: flag6, hasJumpedToOriginalPost: flag7 };
           scrollToMessageId(obj7);
         }
       }
       if (null != focusTargetId) {
-        const tmp47 = closure_38(focusTargetId);
+        const tmp47 = closure_39(focusTargetId);
         if (null != tmp47) {
-          require("NativeChatUtils").focus(closure_27.current, tmp47);
+          require("NativeChatUtils").focus(closure_28.current, tmp47);
           const obj8 = require("NativeChatUtils");
         }
       }
@@ -261,10 +261,10 @@ export default function useRowManager(arg0) {
             measureResult = firstRowGenerator.measure(() => {
               chatManager.setup(messages);
               closure_2_1.setOptions({ inlineAttachmentMedia, inlineEmbedMedia, renderEmbeds, renderReactions, animateEmoji, animatingStickerMessageId: ref.current, constrainedWidth, gifAutoPlay, timestampHourCycle, renderCommunicationDisabled, ignoreEmbedDescriptionCache: flag2, enableSwipeActions, shouldObscureSpoiler, shouldDisableInteractiveComponents });
-              const obj2 = { channel, messages, uploads, oldestUnreadMessageId, replyingMessageId, currentUserId, canAddNewReactions: closure_2_3(), selectedSummary, chatManager, roleStyle, forceRender: flag, updateMessageIds, isResourceChannel, unloadableContentEntryMessageIds };
+              const obj2 = { channel, messages, uploads, oldestUnreadMessageId, replyingMessageId, currentUserId, canAddNewReactions: closure_2_3(), selectedSummary, selectedConversation, chatManager, roleStyle, forceRender: flag, updateMessageIds, isResourceChannel, unloadableContentEntryMessageIds };
               const obj = { inlineAttachmentMedia, inlineEmbedMedia, renderEmbeds, renderReactions, animateEmoji, animatingStickerMessageId: ref.current, constrainedWidth, gifAutoPlay, timestampHourCycle, renderCommunicationDisabled, ignoreEmbedDescriptionCache: flag2, enableSwipeActions, shouldObscureSpoiler, shouldDisableInteractiveComponents };
-              for (const item10046 of tmp3Result) {
-                let row = chatManager.createRow(closure_2_1.generate(item10046));
+              for (const item10047 of tmp3Result) {
+                let row = chatManager.createRow(closure_2_1.generate(item10047));
                 continue;
               }
               return chatManager.createChangeset();
@@ -285,9 +285,9 @@ export default function useRowManager(arg0) {
       if (null != arg0) {
         const _setTimeout = setTimeout;
         const timerId = setTimeout(() => {
-          const tmp2 = closure_2_38(scrollToMessageId);
+          const tmp2 = closure_2_39(scrollToMessageId);
           if (null != tmp2) {
-            if (null != closure_2_27.current) {
+            if (null != closure_2_28.current) {
               let flag = false;
               if (jumpTargetId) {
                 const obj = { scrollToMessageId, jumpTargetId: scrollToMessageId, jumpType, focusTargetId: scrollToMessageId, overrideScrollJumpType: Client.JumpType.INSTANT, isRescrolling: true, hasJumpedToOriginalPost };

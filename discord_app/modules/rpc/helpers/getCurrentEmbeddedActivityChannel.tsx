@@ -1,8 +1,8 @@
-// === Module 14834: getCurrentEmbeddedActivityChannel ===
+// === Module 14843: getCurrentEmbeddedActivityChannel ===
 
-// Module 14834 (getCurrentEmbeddedActivityChannel)
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2041 */;
-import ChannelStore from "ChannelStore" /* 2042 */;
+// Module 14843 (getCurrentEmbeddedActivityChannel)
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/getCurrentEmbeddedActivityChannel.tsx");

@@ -1,8 +1,8 @@
-// === Module 17103: VibegrationsTimelineTree ===
+// === Module 17130: VibegrationsTimelineTree ===
 
-// Module 17103 (VibegrationsTimelineTree)
+// Module 17130 (VibegrationsTimelineTree)
 import util from "util" /* 1115 */;
-import _modDef3712 from "module_3712" /* 3712 */;
+import _modDef3714 from "module_3714" /* 3714 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -372,7 +372,7 @@ function isTurnWorkFrame(task_id) {
   }
   return tmp;
 }
-let obj = { assembling: _modDef3712["9G3ZmA"], installing_deps: _modDef3712.VZuRug, building: _modDef3712["s+ylXP"], bundling: _modDef3712.rEQlMx, committing: _modDef3712.Yvyw1H, built: _modDef3712.hOcVAj, build_error: _modDef3712["6L9Vwt"], healthchecking: _modDef3712.sz8yAj, awaiting_auth: _modDef3712["orD+xo"], healthcheck_passed: _modDef3712["x+sqTG"], healthcheck_failed: _modDef3712.FUWbq1, deploying: _modDef3712.wcXX8Z, preview_ready: _modDef3712["78YNh7"], working: _modDef3712.nv6pUM, error: _modDef3712.j3hBoA };
+let obj = { assembling: _modDef3714["9G3ZmA"], installing_deps: _modDef3714.VZuRug, building: _modDef3714["s+ylXP"], bundling: _modDef3714.rEQlMx, committing: _modDef3714.Yvyw1H, built: _modDef3714.hOcVAj, build_error: _modDef3714["6L9Vwt"], healthchecking: _modDef3714.sz8yAj, awaiting_auth: _modDef3714["orD+xo"], healthcheck_passed: _modDef3714["x+sqTG"], healthcheck_failed: _modDef3714.FUWbq1, deploying: _modDef3714.wcXX8Z, preview_ready: _modDef3714["78YNh7"], working: _modDef3714.nv6pUM, error: _modDef3714.j3hBoA };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsTimelineTree.tsx");
 
@@ -388,26 +388,26 @@ export const describeNode = function describeNode(currentStepResult) {
   }
   const intl = util.intl;
   if (nv6pUM == null) {
-    nv6pUM = _modDef3712.nv6pUM;
+    nv6pUM = _modDef3714.nv6pUM;
   }
   return intl.string(nv6pUM);
 };
 export const describeTaskStatus = function describeTaskStatus(arg0) {
   if ("running" === arg0) {
     const intl5 = util.intl;
-    return intl5.string(_modDef3712["fW7T+d"]);
+    return intl5.string(_modDef3714["fW7T+d"]);
   } else if ("done" === arg0) {
     const intl4 = util.intl;
-    return intl4.string(_modDef3712.X3c4hc);
+    return intl4.string(_modDef3714.X3c4hc);
   } else if ("failed" === arg0) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3712.LK4Wsd);
+    return intl3.string(_modDef3714.LK4Wsd);
   } else if ("cancelled" === arg0) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3712.msWvKA);
+    return intl2.string(_modDef3714.msWvKA);
   } else if ("incomplete" === arg0) {
     const intl = util.intl;
-    return intl.string(_modDef3712.esfcU6);
+    return intl.string(_modDef3714.esfcU6);
   }
 };
 export { buildTimelineTree };

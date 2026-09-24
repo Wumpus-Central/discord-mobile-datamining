@@ -1,14 +1,14 @@
-// === Module 5059: CheckpointMessageComponentUtils ===
+// === Module 5061: CheckpointMessageComponentUtils ===
 
-// Module 5059 (CheckpointMessageComponentUtils)
+// Module 5061 (CheckpointMessageComponentUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1115 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1365 */;
 import Server from "Server" /* 1978 */;
-import _modDef3002 from "module_3002" /* 3002 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4476 */;
-import CheckpointConstants from "CheckpointConstants" /* 5052 */;
-import CheckpointUtils from "CheckpointUtils" /* 5060 */;
+import _modDef3004 from "module_3004" /* 3004 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4478 */;
+import CheckpointConstants from "CheckpointConstants" /* 5054 */;
+import CheckpointUtils from "CheckpointUtils" /* 5062 */;
 import size from "module_2" /* 2 */;
 
 const CheckpointVersions = CheckpointConstants.CheckpointVersions;
@@ -105,9 +105,18 @@ export const transformCheckpoint2026CardComponent = function transformCheckpoint
   }
   return tmp;
 };
-export function transformCheckpoint2026CardToRowGeneratedComponent(checkpointData) {
-  return checkpointData;
-}
+export const transformCheckpoint2026CardToRowGeneratedComponent = function transformCheckpoint2026CardToRowGeneratedComponent(checkpointData) {
+  const obj = {};
+  const merged = Object.assign(checkpointData);
+  if (null != checkpointData.character) {
+    const character = checkpointData.character;
+    let items = [];
+  } else {
+    items = [];
+  }
+  obj.characterLayerUrls = items;
+  return obj;
+};
 export const getCheckpointDataFromMessage = function getCheckpointDataFromMessage(contentMessage) {
   const first = contentMessage.components[0];
   let checkpointData = null;
@@ -122,7 +131,7 @@ export const getCheckpointDataFromMessage = function getCheckpointDataFromMessag
 export const getCheckpointLabel = function getCheckpointLabel(checkpointDataFromMessage) {
   if (CheckpointVersions.V2025 === checkpointDataFromMessage.version) {
     const intl = util.intl;
-    return intl.string(_modDef3002.goiR2u);
+    return intl.string(_modDef3004.goiR2u);
   } else {
     const V2026 = tmp.V2026;
     return null;

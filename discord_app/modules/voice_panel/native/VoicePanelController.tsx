@@ -1,57 +1,57 @@
-// === Module 17593: VoicePanelController ===
+// === Module 17616: VoicePanelController ===
 
-// Module 17593 (VoicePanelController)
+// Module 17616 (VoicePanelController)
 import DurationsDefault from "Durations" /* 1091 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import useWindowDimensions from "useWindowDimensions" /* 1478 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4451 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4521 */;
-import native from "native" /* 4533 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4559 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5007 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5028 */;
-import DeviceOrientation from "DeviceOrientation" /* 8678 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9672 */;
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9695 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9743 */;
-import _modDef9794 from "module_9794" /* 9794 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9990 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11697 */;
-import VoicePanelCardLayoutManagerDefault from "VoicePanelCardLayoutManager" /* 12608 */;
-import applyActivityOrientationLockDefault from "applyActivityOrientationLock" /* 17553 */;
-import _modDef17595 from "module_17595" /* 17595 */;
-import trackActivityThermalStateNoticeShown from "trackActivityThermalStateNoticeShown" /* 17596 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 17597 */;
-import useIsVoicePanelParticipantFocusable from "useIsVoicePanelParticipantFocusable" /* 17624 */;
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17636 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4453 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4523 */;
+import native from "native" /* 4535 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5009 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5030 */;
+import DeviceOrientation from "DeviceOrientation" /* 8682 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9676 */;
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9699 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9747 */;
+import _modDef9798 from "module_9798" /* 9798 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9995 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11703 */;
+import VoicePanelCardLayoutManagerDefault from "VoicePanelCardLayoutManager" /* 12617 */;
+import applyActivityOrientationLockDefault from "applyActivityOrientationLock" /* 17576 */;
+import _modDef17618 from "module_17618" /* 17618 */;
+import trackActivityThermalStateNoticeShown from "trackActivityThermalStateNoticeShown" /* 17619 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 17620 */;
+import useIsVoicePanelParticipantFocusable from "useIsVoicePanelParticipantFocusable" /* 17647 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17659 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4819 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2041 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4843 */;
-import AppFreezeStore from "AppFreezeStore" /* 8636 */;
-import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 9825 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9734 */;
-import ChannelStore from "ChannelStore" /* 2042 */;
+import AccessibilityStore from "AccessibilityStore" /* 4821 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4845 */;
+import AppFreezeStore from "AppFreezeStore" /* 8640 */;
+import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 9830 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9738 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4850 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2096 */;
-import VoicePanelStore from "VoicePanelStore" /* 5035 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4852 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
+import VoicePanelStore from "VoicePanelStore" /* 5037 */;
 
 require = fn;
 const AppState = fn(17).AppState;
-const VoicePanelConstants = fn(12606);
+const VoicePanelConstants = fn(12615);
 ({ VoicePanelModes: closure_17, getAnalyticsNameForVoicePanelMode: closure_18 } = VoicePanelConstants);
-const VoicePanelControlsConstants = fn(12604);
+const VoicePanelControlsConstants = fn(12613);
 ({ CONTROLS_HEIGHT: closure_19, CONTROLS_HEIGHT_PTT: closure_20, CONTROLS_HIDE_TIMEOUT: closure_21, VoicePanelControlsModes: closure_22 } = VoicePanelControlsConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_23, ComponentActions: closure_24, InputModes: closure_25 } = Constants);
 const OrientationLockState = fn(2004).OrientationLockState;
-const ActivityPanelModes = fn(9392).ActivityPanelModes;
-const isActivityParticipant = fn(4848).isActivityParticipant;
-const MorphablePanelModes = fn(12607).MorphablePanelModes;
+const ActivityPanelModes = fn(9396).ActivityPanelModes;
+const isActivityParticipant = fn(4850).isActivityParticipant;
+const MorphablePanelModes = fn(12616).MorphablePanelModes;
 const jsx = fn(21).jsx;
 let __initData = { code: "function VoicePanelControllerTsx1(){const{focused,mode,connected}=this.__closure;var _focused$get;return[(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id,mode.get(),connected.get()];}" };
 let closure_32 = { code: "function VoicePanelControllerTsx2(props,previous){const{cheapWorkletArrayShallowEqual,runOnJS,handleAnimatedReaction}=this.__closure;if(cheapWorkletArrayShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const[focusedParticipantId,voicePanelMode,connectedValue]=props;runOnJS(handleAnimatedReaction)({focusedParticipantId:focusedParticipantId,voicePanelMode:voicePanelMode,connectedValue:connectedValue});}" };
@@ -1075,7 +1075,7 @@ export default function VoicePanelController(channelId) {
               tmp15 = tmp11;
             }
             if (tmp15) {
-              const obj2 = { key: "EMBEDDED_ACTIVITIES_VIDEO_DISABLED_FOR_THERMAL_STATE", icon: _modDef17595, content: null, disableAnimations: true, toastDurationMs: 3000 };
+              const obj2 = { key: "EMBEDDED_ACTIVITIES_VIDEO_DISABLED_FOR_THERMAL_STATE", icon: _modDef17618, content: null, disableAnimations: true, toastDurationMs: 3000 };
               const intl = util.intl;
               obj2.content = intl.string(util.t.O2IlPT);
               ToastActionCreatorsDefault.open(obj2);
@@ -1207,7 +1207,7 @@ export default function VoicePanelController(channelId) {
           const _performance2 = performance;
           tmp2.current = performance.now();
           channelId();
-          const obj2 = { key: "SPEAKING_WHILE_MUTED", icon: _modDef9794, content: null, toastDurationMs: 3000 };
+          const obj2 = { key: "SPEAKING_WHILE_MUTED", icon: _modDef9798, content: null, toastDurationMs: 3000 };
           const intl = util.intl;
           obj2.content = intl.string(util.t["29gnR4"]);
           ToastActionCreatorsDefault.open(obj2);

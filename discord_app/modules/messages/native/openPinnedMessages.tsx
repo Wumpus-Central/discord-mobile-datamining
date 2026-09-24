@@ -1,8 +1,8 @@
-// === Module 11948: openPinnedMessages ===
+// === Module 11955: openPinnedMessages ===
 
-// Module 11948 (openPinnedMessages)
-import RootNavigationRef from "RootNavigationRef" /* 4685 */;
-import ChannelDetailsConstants from "ChannelDetailsConstants" /* 11262 */;
+// Module 11955 (openPinnedMessages)
+import RootNavigationRef from "RootNavigationRef" /* 4687 */;
+import ChannelDetailsConstants from "ChannelDetailsConstants" /* 11268 */;
 import size from "module_2" /* 2 */;
 
 const constants = ChannelDetailsConstants.ChannelDetailsNavigatorScreens;

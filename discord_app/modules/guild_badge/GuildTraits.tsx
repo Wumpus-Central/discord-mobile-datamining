@@ -1,7 +1,7 @@
-// === Module 9099: GuildTraits ===
+// === Module 9103: GuildTraits ===
 
-// Module 9099 (GuildTraits)
-import GuildRecordUtils from "GuildRecordUtils" /* 2056 */;
+// Module 9103 (GuildTraits)
+import GuildRecordUtils from "GuildRecordUtils" /* 2058 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

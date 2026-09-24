@@ -1,7 +1,7 @@
-// === Module 5032: getDeprecatedModalData ===
+// === Module 5034: getDeprecatedModalData ===
 
-// Module 5032 (getDeprecatedModalData)
-import AccessibilityStore from "AccessibilityStore" /* 4819 */;
+// Module 5034 (getDeprecatedModalData)
+import AccessibilityStore from "AccessibilityStore" /* 4821 */;
 
 const ModalAnimation = fn(1074).ModalAnimation;
 const size = fn(2);

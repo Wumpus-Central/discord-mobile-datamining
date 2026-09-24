@@ -1,8 +1,8 @@
-// === Module 10519: NativeAPNGView ===
+// === Module 10524: NativeAPNGView ===
 
-// Module 10519 (NativeAPNGView)
+// Module 10524 (NativeAPNGView)
 import _mod17 from "module_17" /* 17 */;
-import APNGStickerNativeComponent from "APNGStickerNativeComponent" /* 10520 */;
+import APNGStickerNativeComponent from "APNGStickerNativeComponent" /* 10525 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import size from "module_2" /* 2 */;
 

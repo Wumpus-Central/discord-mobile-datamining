@@ -1,19 +1,19 @@
-// === Module 15004: UserPrimaryGuildListBottomSheet ===
+// === Module 15013: UserPrimaryGuildListBottomSheet ===
 
-// Module 15004 (UserPrimaryGuildListBottomSheet)
+// Module 15013 (UserPrimaryGuildListBottomSheet)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4794 */;
-import GuildIconDefault from "GuildIcon" /* 5887 */;
-import Form from "Form" /* 8947 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
+import GuildIconDefault from "GuildIcon" /* 5889 */;
+import Form from "Form" /* 8951 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildTagBadgeSize = fn(8288).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8292).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj = { titleContainer: { paddingHorizontal: 16, flexDirection: "row", alignItems: "center", justifyContent: "center" }, guildIcon: { marginLeft: 4 }, tag: { padding: 2 }, tagStyles: null, divider: null, itemTrailingStyle: null };
 const PlatformUtils = fn(1364);
 let num = 18;
@@ -38,10 +38,10 @@ let closure_9 = noop.memo((item) => {
     if (profile != null) {
       badge = profile.badge;
     }
-    guildTagBadgeUrl = item(8509).getGuildTagBadgeUrl(item.id, badge, GuildTagBadgeSize.SIZE_24);
-    let obj = item(8509);
+    guildTagBadgeUrl = item(8513).getGuildTagBadgeUrl(item.id, badge, GuildTagBadgeSize.SIZE_24);
+    let obj = item(8513);
   }
-  const radioA11yNative = item(4541).useRadioA11yNative({ selected });
+  const radioA11yNative = item(4543).useRadioA11yNative({ selected });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   const obj3 = {
     start,
@@ -72,7 +72,7 @@ let closure_9 = noop.memo((item) => {
   obj3.label = name;
   let tmp10Result = null;
   if (null != item) {
-    const obj4 = { style: tmp.guildIcon, guild: item, size: tmp7(5887).GuildIconSizes.SMALL_32 };
+    const obj4 = { style: tmp.guildIcon, guild: item, size: tmp7(5889).GuildIconSizes.SMALL_32 };
     tmp10Result = closure_6(GuildIconDefault, obj4);
   }
   obj3.icon = tmp10Result;
@@ -90,12 +90,12 @@ let closure_9 = noop.memo((item) => {
     obj10.guildTag = tag;
     obj10.guildBadge = guildTagBadgeUrl;
     obj10.badgeSize = GuildTagBadgeSize.SIZE_16;
-    tmp10Result2 = closure_6(tmp7(10092).BaseGuildTagChiplet, obj10);
+    tmp10Result2 = closure_6(tmp7(10097).BaseGuildTagChiplet, obj10);
   }
-  const items = [tmp10Result2, closure_6(item(5992).FormRadio, { selected })];
+  const items = [tmp10Result2, closure_6(item(5994).FormRadio, { selected })];
   obj5.children = items;
   obj3.trailing = closure_7(View, obj5);
-  return closure_6(item(5908).TableRow, obj3);
+  return closure_6(item(5910).TableRow, obj3);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/profiles/native/UserPrimaryGuildListBottomSheet.tsx");
@@ -116,9 +116,9 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
   const obj3 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
   const intl = availableGuilds(1115).intl;
   obj3.children = intl.string(availableGuilds(1115).t.Fo0g9x);
-  obj2.children = closure_6(availableGuilds(4823).Text, obj3);
+  obj2.children = closure_6(availableGuilds(4825).Text, obj3);
   obj.header = closure_6(memo, obj2);
-  obj.children = closure_6(availableGuilds(9073).BottomSheetFlashList, {
+  obj.children = closure_6(availableGuilds(9077).BottomSheetFlashList, {
     ItemSeparatorComponent() {
       return timestampProducer(Form.FormDivider, { iconPush: true, style: divider.divider });
     },
@@ -150,5 +150,5 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
       return timestampProducer(closure_9, obj);
     }
   });
-  return closure_6(availableGuilds(7481).BottomSheet, obj);
+  return closure_6(availableGuilds(7483).BottomSheet, obj);
 };

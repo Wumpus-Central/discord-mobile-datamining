@@ -1,9 +1,9 @@
-// === Module 6116: BeakerIllocon ===
+// === Module 6118: BeakerIllocon ===
 
-// Module 6116 (BeakerIllocon)
+// Module 6118 (BeakerIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5890 */;
-import _modDef6117 from "module_6117" /* 6117 */;
+import FastImageDefault from "FastImage" /* 5892 */;
+import _modDef6119 from "module_6119" /* 6119 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const BeakerIllocon = function BeakerIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6117 };
+  const obj2 = { uri: _modDef6119 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

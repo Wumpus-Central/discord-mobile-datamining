@@ -1,8 +1,8 @@
-// === Module 17913: AccountSwitchingSpinnerModal ===
+// === Module 17936: AccountSwitchingSpinnerModal ===
 
-// Module 17913 (AccountSwitchingSpinnerModal)
+// Module 17936 (AccountSwitchingSpinnerModal)
 import util from "util" /* 1115 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5880 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5882 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ class AccountSwitchingSpinnerModal {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 const React4 = createStyles.createStyles({ switchingSpinnerContainer: { flex: 1, alignItems: "center", justifyContent: "center" } });
 AccountSwitchingSpinnerModal.modalConfig = { animation: fn(1094).ModalAnimation.FADE, closable: false };
 const size = fn(2);

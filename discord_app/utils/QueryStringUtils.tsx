@@ -1,6 +1,6 @@
-// === Module 4813: QueryStringUtils ===
+// === Module 4815: QueryStringUtils ===
 
-// Module 4813 (QueryStringUtils)
+// Module 4815 (QueryStringUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/QueryStringUtils.tsx");

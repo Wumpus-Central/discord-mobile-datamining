@@ -1,13 +1,13 @@
-// === Module 17063: useVibegrationsPreviewMenu ===
+// === Module 17090: useVibegrationsPreviewMenu ===
 
-// Module 17063 (useVibegrationsPreviewMenu)
+// Module 17090 (useVibegrationsPreviewMenu)
 import util from "util" /* 1115 */;
-import _modDef3712 from "module_3712" /* 3712 */;
-import ToastUtils from "ToastUtils" /* 4520 */;
-import vibegrationsExternalConnections from "vibegrationsExternalConnections" /* 13455 */;
-import vibegrationsProjectMenuItems from "vibegrationsProjectMenuItems" /* 17065 */;
+import _modDef3714 from "module_3714" /* 3714 */;
+import ToastUtils from "ToastUtils" /* 4522 */;
+import vibegrationsExternalConnections from "vibegrationsExternalConnections" /* 13464 */;
+import vibegrationsProjectMenuItems from "vibegrationsProjectMenuItems" /* 17092 */;
 import noop from "module_19" /* 19 */;
-import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 13448 */;
+import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 13457 */;
 
 require = fn;
 const size = fn(2);
@@ -40,7 +40,7 @@ export default function useVibegrationsPreviewMenu(projectId) {
           connect(found);
         } else {
           const intl = util.intl;
-          ToastUtils.presentError(intl.string(_modDef3712.avu1u4));
+          ToastUtils.presentError(intl.string(_modDef3714.avu1u4));
         }
       }
     } else {

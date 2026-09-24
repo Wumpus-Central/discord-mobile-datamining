@@ -1,22 +1,22 @@
-// === Module 16084: UserSettingsSurveyChangelogOverride ===
+// === Module 16106: UserSettingsSurveyChangelogOverride ===
 
-// Module 16084 (UserSettingsSurveyChangelogOverride)
+// Module 16106 (UserSettingsSurveyChangelogOverride)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4794 */;
-import Text_Text from "Text/Text" /* 4823 */;
-import SurveyActionCreatorsAll from "SurveyActionCreators" /* 5019 */;
-import Stack_Stack from "Stack/Stack" /* 5269 */;
-import TableRow from "TableRow" /* 5908 */;
-import TableRowGroup from "TableRowGroup" /* 5990 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7480 */;
-import ActionSheet from "ActionSheet" /* 7528 */;
-import ActionSheetRow from "ActionSheetRow" /* 7530 */;
-import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 8437 */;
-import usePreviousDefault from "usePrevious" /* 8618 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
+import Text_Text from "Text/Text" /* 4825 */;
+import SurveyActionCreatorsAll from "SurveyActionCreators" /* 5021 */;
+import Stack_Stack from "Stack/Stack" /* 5271 */;
+import TableRow from "TableRow" /* 5910 */;
+import TableRowGroup from "TableRowGroup" /* 5992 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7482 */;
+import ActionSheet from "ActionSheet" /* 7530 */;
+import ActionSheetRow from "ActionSheetRow" /* 7532 */;
+import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 8441 */;
+import usePreviousDefault from "usePrevious" /* 8622 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChangelogStore from "ChangelogStore" /* 4841 */;
-import SurveyStore from "SurveyStore" /* 5018 */;
+import ChangelogStore from "ChangelogStore" /* 4843 */;
+import SurveyStore from "SurveyStore" /* 5020 */;
 
 require = fn;
 function SurveyOverrideInfoActionSheet(survey) {
@@ -32,7 +32,7 @@ function SurveyOverrideInfoActionSheet(survey) {
       str = JSON.stringify(tmp2);
     }
     obj.subLabel = str;
-    obj.icon = closure_9(closure_0(4773).CopyIcon, {});
+    obj.icon = closure_9(closure_0(4775).CopyIcon, {});
     obj.onPress = function onPress() {
       let str = "null";
       if (null != closure_1_0) {
@@ -41,7 +41,7 @@ function SurveyOverrideInfoActionSheet(survey) {
       }
       require("ClipboardUtils").copy(str);
     };
-    return closure_9(closure_0(7530).ActionSheetRow, obj, tmp);
+    return closure_9(closure_0(7532).ActionSheetRow, obj, tmp);
   });
   obj.children = React7(ActionSheetRow.ActionSheetRow.Group, obj2);
   return React7(ActionSheet.ActionSheet, obj);
@@ -55,8 +55,8 @@ function SurveyOverrideActionSheet() {
     return surveyOverride;
   }), 2);
   const first = tmp[0];
-  let obj = { header: closure_9(first(7480).BottomSheetTitleHeader, { title: "Survey Override" }), children: null };
-  const items = [closure_9(first(6934).TextInput, { label: "Survey Override", size: "md", placeholder: "Enter the ID of the Survey you want to test", onChange: tmp[1], clearable: true }), ];
+  let obj = { header: closure_9(first(7482).BottomSheetTitleHeader, { title: "Survey Override" }), children: null };
+  const items = [closure_9(first(6936).TextInput, { label: "Survey Override", size: "md", placeholder: "Enter the ID of the Survey you want to test", onChange: tmp[1], clearable: true }), ];
   let str = "Fetch Survey";
   if ("" === first) {
     str = "Reset Survey Override";
@@ -79,9 +79,9 @@ function SurveyOverrideActionSheet() {
     }
     ActionSheetActionCreatorsDefault.hideActionSheet("SurveyOverrideActionSheet");
   };
-  items[1] = closure_9(first(5271).Button, obj2);
+  items[1] = closure_9(first(5273).Button, obj2);
   obj.children = items;
-  return closure_10(first(7528).ActionSheet, obj);
+  return closure_10(first(7530).ActionSheet, obj);
 }
 function SurveyInfo() {
   const items = [SurveyStore];
@@ -123,8 +123,8 @@ function ChangelogOverrideDebuggingActionSheet() {
 function ChangelogOverrideActionSheet() {
   const tmp = _slicedToArray(noop.useState(() => ChangelogStore.overrideId()), 2);
   const first = tmp[0];
-  let obj = { header: closure_9(first(7480).BottomSheetTitleHeader, { title: "Changelog Override" }), children: null };
-  const items = [closure_9(first(6934).TextInput, { label: "Changelog Override", size: "md", placeholder: "Enter the ID of the changelog you want to test", onChange: tmp[1], clearable: true }), ];
+  let obj = { header: closure_9(first(7482).BottomSheetTitleHeader, { title: "Changelog Override" }), children: null };
+  const items = [closure_9(first(6936).TextInput, { label: "Changelog Override", size: "md", placeholder: "Enter the ID of the changelog you want to test", onChange: tmp[1], clearable: true }), ];
   let str = "Fetch Changelog";
   if ("" === first) {
     str = "Reset Changelog Override";
@@ -147,9 +147,9 @@ function ChangelogOverrideActionSheet() {
     }
     ActionSheetActionCreatorsDefault.hideActionSheet("ChangelogOverrideActionSheet");
   };
-  items[1] = closure_9(first(5271).Button, obj2);
+  items[1] = closure_9(first(5273).Button, obj2);
   obj.children = items;
-  return closure_10(first(7528).ActionSheet, obj);
+  return closure_10(first(7530).ActionSheet, obj);
 }
 function ChangelogInfo() {
   const obj = { title: "Changelog", hasIcons: false, children: null };
@@ -176,7 +176,7 @@ function ChangelogInfo() {
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj = { scrollView: { padding: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_11 = createStyles.createStyles(obj);
 let obj3 = { padding: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };

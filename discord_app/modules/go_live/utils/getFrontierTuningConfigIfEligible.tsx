@@ -1,9 +1,9 @@
-// === Module 4965: getFrontierTuningConfigIfEligible ===
+// === Module 4967: getFrontierTuningConfigIfEligible ===
 
-// Module 4965 (getFrontierTuningConfigIfEligible)
-import PremiumUtilsDefault from "PremiumUtils" /* 4481 */;
-import FrontierTuningExperimentDefault from "FrontierTuningExperiment" /* 4966 */;
-import GuildStore from "GuildStore" /* 2064 */;
+// Module 4967 (getFrontierTuningConfigIfEligible)
+import PremiumUtilsDefault from "PremiumUtils" /* 4483 */;
+import FrontierTuningExperimentDefault from "FrontierTuningExperiment" /* 4968 */;
+import GuildStore from "GuildStore" /* 2066 */;
 
 const require = fn;
 const BoostedGuildTiers = fn(1074).BoostedGuildTiers;

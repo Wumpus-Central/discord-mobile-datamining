@@ -1,9 +1,9 @@
-// === Module 14935: RootThemeContextProvider ===
+// === Module 14944: RootThemeContextProvider ===
 
-// Module 14935 (RootThemeContextProvider)
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4680 */;
+// Module 14944 (RootThemeContextProvider)
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4682 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4819 */;
+import AccessibilityStore from "AccessibilityStore" /* 4821 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 
 const require = fn;
@@ -19,36 +19,36 @@ export const RootThemeContextProvider = function RootThemeContextProvider(childr
   ({ saturation, contrast } = stateFromStoresObject);
   const tmp4 = useColorThemeBackgroundDefault();
   const obj = manaTypeConsolidationExperiment(504);
-  manaTypeConsolidationExperiment = manaTypeConsolidationExperiment(7311).useManaTypeConsolidationExperiment("RootThemeContextProvider");
-  const obj2 = manaTypeConsolidationExperiment(7311);
+  manaTypeConsolidationExperiment = manaTypeConsolidationExperiment(7313).useManaTypeConsolidationExperiment("RootThemeContextProvider");
+  const obj2 = manaTypeConsolidationExperiment(7313);
   [][0] = manaTypeConsolidationExperiment;
-  const plainTextExperiment = manaTypeConsolidationExperiment(14936).usePlainTextExperiment("RootThemeContextProvider");
+  const plainTextExperiment = manaTypeConsolidationExperiment(14945).usePlainTextExperiment("RootThemeContextProvider");
   if (null == tmp4) {
     let num2 = 0;
     if (1 !== saturation) {
-      num2 = tmp(4533).setThemeFlag(0, tmp(4533).ThemeContextFlags.REDUCE_SATURATION_ENABLED);
-      const tmpResult = tmp(4533);
+      num2 = tmp(4535).setThemeFlag(0, tmp(4535).ThemeContextFlags.REDUCE_SATURATION_ENABLED);
+      const tmpResult = tmp(4535);
     }
     if (1 === contrast) {
       const obj4 = { theme: stateFromStoresObject.theme, flags: num2, saturation, contrast, enabledExperiments: tmp7, children: null };
       const obj5 = { enabled: plainTextExperiment, children: children.children };
-      obj4.children = jsx(tmp(4832).PlainTextExperimentProvider, { enabled: plainTextExperiment, children: children.children });
-      return jsx(tmp(10417).RootThemeContextProvider, { theme: stateFromStoresObject.theme, flags: num2, saturation, contrast, enabledExperiments: tmp7, children: null });
+      obj4.children = jsx(tmp(4834).PlainTextExperimentProvider, { enabled: plainTextExperiment, children: children.children });
+      return jsx(tmp(10422).RootThemeContextProvider, { theme: stateFromStoresObject.theme, flags: num2, saturation, contrast, enabledExperiments: tmp7, children: null });
     } else {
       if (contrast > 1) {
-        let REDUCED_CONTRAST_ENABLED = tmp(4533).ThemeContextFlags.INCREASED_CONTRAST_ENABLED;
+        let REDUCED_CONTRAST_ENABLED = tmp(4535).ThemeContextFlags.INCREASED_CONTRAST_ENABLED;
       } else {
-        REDUCED_CONTRAST_ENABLED = tmp(4533).ThemeContextFlags.REDUCED_CONTRAST_ENABLED;
+        REDUCED_CONTRAST_ENABLED = tmp(4535).ThemeContextFlags.REDUCED_CONTRAST_ENABLED;
       }
-      tmp(4533).setThemeFlag(num2, REDUCED_CONTRAST_ENABLED);
-      const tmpResult4 = tmp(4533);
+      tmp(4535).setThemeFlag(num2, REDUCED_CONTRAST_ENABLED);
+      const tmpResult4 = tmp(4535);
     }
   } else if (tmp4.theme === ThemeTypes.LIGHT) {
-    let setThemeFlagResult1 = tmp(4533).setThemeFlag(0, tmp(4533).ThemeContextFlags.MOBILE_LIGHT_GRADIENT_THEME_ENABLED);
-    const tmpResult5 = tmp(4533);
+    let setThemeFlagResult1 = tmp(4535).setThemeFlag(0, tmp(4535).ThemeContextFlags.MOBILE_LIGHT_GRADIENT_THEME_ENABLED);
+    const tmpResult5 = tmp(4535);
   } else {
-    setThemeFlagResult1 = tmp(4533).setThemeFlag(0, tmp(4533).ThemeContextFlags.MOBILE_DARK_GRADIENT_THEME_ENABLED);
-    const tmpResult6 = tmp(4533);
+    setThemeFlagResult1 = tmp(4535).setThemeFlag(0, tmp(4535).ThemeContextFlags.MOBILE_DARK_GRADIENT_THEME_ENABLED);
+    const tmpResult6 = tmp(4535);
   }
-  const obj3 = manaTypeConsolidationExperiment(14936);
+  const obj3 = manaTypeConsolidationExperiment(14945);
 };

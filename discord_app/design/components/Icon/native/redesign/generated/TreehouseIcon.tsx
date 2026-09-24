@@ -1,9 +1,9 @@
-// === Module 15937: TreehouseIcon ===
+// === Module 15951: TreehouseIcon ===
 
-// Module 15937 (TreehouseIcon)
+// Module 15951 (TreehouseIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4523 */;
-import _mod15938 from "module_15938" /* 15938 */;
+import BaseIconImage from "BaseIconImage" /* 4525 */;
+import _mod15952 from "module_15952" /* 15952 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const TreehouseIcon = function TreehouseIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15938, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15952, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

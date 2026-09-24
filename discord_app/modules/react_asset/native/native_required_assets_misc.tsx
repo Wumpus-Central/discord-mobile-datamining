@@ -1,6 +1,6 @@
-// === Module 18451: native_required_assets_misc ===
+// === Module 18474: native_required_assets_misc ===
 
-// Module 18451 (native_required_assets_misc)
+// Module 18474 (native_required_assets_misc)
 import _modDef1401 from "module_1401" /* 1401 */;
 import _modDef1402 from "module_1402" /* 1402 */;
 import _modDef1403 from "module_1403" /* 1403 */;
@@ -14,15 +14,15 @@ import _modDef1423 from "module_1423" /* 1423 */;
 import _modDef1424 from "module_1424" /* 1424 */;
 import _modDef1425 from "module_1425" /* 1425 */;
 import _modDef1426 from "module_1426" /* 1426 */;
-import _modDef18452 from "module_18452" /* 18452 */;
-import _modDef18453 from "module_18453" /* 18453 */;
-import _modDef18454 from "module_18454" /* 18454 */;
-import _modDef18455 from "module_18455" /* 18455 */;
-import _modDef18456 from "module_18456" /* 18456 */;
-import _modDef18457 from "module_18457" /* 18457 */;
-import _modDef18458 from "module_18458" /* 18458 */;
+import _modDef18475 from "module_18475" /* 18475 */;
+import _modDef18476 from "module_18476" /* 18476 */;
+import _modDef18477 from "module_18477" /* 18477 */;
+import _modDef18478 from "module_18478" /* 18478 */;
+import _modDef18479 from "module_18479" /* 18479 */;
+import _modDef18480 from "module_18480" /* 18480 */;
+import _modDef18481 from "module_18481" /* 18481 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/react_asset/native/native_required_assets_misc.tsx");
 
-export const NATIVE_REQUIRED_ASSETS_MISC = { DefaultAvatar0: _modDef1401, DefaultAvatar1: _modDef1402, DefaultAvatar2: _modDef1403, DefaultAvatar3: _modDef1404, DefaultAvatar4: _modDef1405, DefaultGroup0: _modDef1419, DefaultGroup1: _modDef1420, DefaultGroup2: _modDef1421, DefaultGroup3: _modDef1422, DefaultGroup4: _modDef1423, DefaultGroup5: _modDef1424, DefaultGroup6: _modDef1425, DefaultGroup7: _modDef1426, PoopDark: _modDef18452, PoopLight: _modDef18453, RoleSubscriptionBadge: _modDef18454, RoleSubscriptionLanyard: _modDef18455, RoleSubscriptionPurchaseCard: _modDef18456, SummaryIndicatorEnd: _modDef18457, SummaryIndicatorStart: _modDef18458 };
+export const NATIVE_REQUIRED_ASSETS_MISC = { DefaultAvatar0: _modDef1401, DefaultAvatar1: _modDef1402, DefaultAvatar2: _modDef1403, DefaultAvatar3: _modDef1404, DefaultAvatar4: _modDef1405, DefaultGroup0: _modDef1419, DefaultGroup1: _modDef1420, DefaultGroup2: _modDef1421, DefaultGroup3: _modDef1422, DefaultGroup4: _modDef1423, DefaultGroup5: _modDef1424, DefaultGroup6: _modDef1425, DefaultGroup7: _modDef1426, PoopDark: _modDef18475, PoopLight: _modDef18476, RoleSubscriptionBadge: _modDef18477, RoleSubscriptionLanyard: _modDef18478, RoleSubscriptionPurchaseCard: _modDef18479, SummaryIndicatorEnd: _modDef18480, SummaryIndicatorStart: _modDef18481 };

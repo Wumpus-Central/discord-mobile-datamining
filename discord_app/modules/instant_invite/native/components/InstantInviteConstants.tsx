@@ -1,36 +1,36 @@
-// === Module 10198: components/InstantInviteConstants ===
+// === Module 10203: components/InstantInviteConstants ===
 
-// Module 10198 (components/InstantInviteConstants)
+// Module 10203 (components/InstantInviteConstants)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
-import _modDef4770 from "module_4770" /* 4770 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4794 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5194 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7784 */;
-import getInviteURLDefault from "getInviteURL" /* 8086 */;
-import _modDef9952 from "module_9952" /* 9952 */;
-import icons_ShareDefault from "icons/Share" /* 10199 */;
-import _modDef10202 from "module_10202" /* 10202 */;
-import _modDef10203 from "module_10203" /* 10203 */;
-import _modDef10204 from "module_10204" /* 10204 */;
-import _modDef10222 from "module_10222" /* 10222 */;
-import _modDef10223 from "module_10223" /* 10223 */;
-import _modDef10224 from "module_10224" /* 10224 */;
-import _modDef10225 from "module_10225" /* 10225 */;
-import _modDef10226 from "module_10226" /* 10226 */;
+import _modDef4772 from "module_4772" /* 4772 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5196 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7786 */;
+import getInviteURLDefault from "getInviteURL" /* 8088 */;
+import _modDef9957 from "module_9957" /* 9957 */;
+import icons_ShareDefault from "icons/Share" /* 10204 */;
+import _modDef10207 from "module_10207" /* 10207 */;
+import _modDef10208 from "module_10208" /* 10208 */;
+import _modDef10209 from "module_10209" /* 10209 */;
 import _modDef10227 from "module_10227" /* 10227 */;
 import _modDef10228 from "module_10228" /* 10228 */;
 import _modDef10229 from "module_10229" /* 10229 */;
 import _modDef10230 from "module_10230" /* 10230 */;
 import _modDef10231 from "module_10231" /* 10231 */;
-import InstantInviteConstants from "InstantInviteConstants" /* 10167 */;
+import _modDef10232 from "module_10232" /* 10232 */;
+import _modDef10233 from "module_10233" /* 10233 */;
+import _modDef10234 from "module_10234" /* 10234 */;
+import _modDef10235 from "module_10235" /* 10235 */;
+import _modDef10236 from "module_10236" /* 10236 */;
+import InstantInviteConstants from "InstantInviteConstants" /* 10172 */;
 import Constants from "Constants" /* 1074 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1609 */;
 import PlatformUtils_mod from "PlatformUtils" /* 1364 */;
-import DCDSendUtils_mod from "DCDSendUtils" /* 4960 */;
-import InstantInviteUtils_mod from "instant_invite/InstantInviteUtils" /* 10162 */;
+import DCDSendUtils_mod from "DCDSendUtils" /* 4962 */;
+import InstantInviteUtils_mod from "instant_invite/InstantInviteUtils" /* 10167 */;
 import size from "module_2" /* 2 */;
 
 const Linking = _mod17.Linking;
@@ -43,7 +43,7 @@ const items = [
     type: obj.SHARE,
     icon: icons_ShareDefault,
     isAvailable: Promise.resolve(true),
-    IconComponent: _modDef9952,
+    IconComponent: _modDef9957,
     backgroundColor: nativeDefault.unsafe_rawColors.BRAND_500,
     getLabel() {
       const intl = util.intl;
@@ -69,7 +69,7 @@ let obj2 = {
   type: obj.SHARE,
   icon: icons_ShareDefault,
   isAvailable: Promise.resolve(true),
-  IconComponent: _modDef9952,
+  IconComponent: _modDef9957,
   backgroundColor: nativeDefault.unsafe_rawColors.BRAND_500,
   getLabel() {
     const intl = util.intl;
@@ -82,9 +82,9 @@ let obj2 = {
 };
 items[1] = {
   type: obj.COPY,
-  icon: _modDef10202,
+  icon: _modDef10207,
   isAvailable: Promise.resolve(true),
-  IconComponent: _modDef4770,
+  IconComponent: _modDef4772,
   getLabel() {
     const intl = util.intl;
     return intl.string(util.t.WqhZss);
@@ -94,9 +94,9 @@ items[1] = {
     return InstantInviteUtils.handleCopy(code, channel, _location);
   }
 };
-let obj4 = { type: obj.QR_CODE, icon: _modDef10203, isAvailable: null, IconComponent: null, getLabel: null, onPress: null };
+let obj4 = { type: obj.QR_CODE, icon: _modDef10208, isAvailable: null, IconComponent: null, getLabel: null, onPress: null };
 obj4.isAvailable = Promise.resolve(!MetaQuestUtils.isMetaQuest());
-obj4.IconComponent = _modDef10204;
+obj4.IconComponent = _modDef10209;
 obj4.getLabel = function getLabel() {
   const intl = util.intl;
   return intl.string(util.t.rriLm1);
@@ -110,20 +110,20 @@ obj4.onPress = function onPress(code) {
   obj2.link = getInviteURLDefault(code);
   obj2.location = _location;
   obj2.channel = channel;
-  obj.openLazy(asyncRequireImpl(10205, dependencyMap.paths), combined, obj2, "stack");
+  obj.openLazy(asyncRequireImpl(10210, dependencyMap.paths), combined, obj2, "stack");
 };
 items[2] = obj4;
 let obj5 = { type: obj.MESSAGES, fullIcon: null, icon: null, isAvailable: null, getLabel: null, onPress: null };
 let PlatformUtils = PlatformUtils_mod;
 let importDefaultResult;
 if (PlatformUtils.isIOS()) {
-  importDefaultResult = _modDef10222;
+  importDefaultResult = _modDef10227;
 }
 obj5.fullIcon = importDefaultResult;
 let PlatformUtils = PlatformUtils_mod;
 let importDefaultResult1;
 if (PlatformUtils.isAndroid()) {
-  importDefaultResult1 = _modDef10223;
+  importDefaultResult1 = _modDef10228;
 }
 obj5.icon = importDefaultResult1;
 let DCDSendUtils = DCDSendUtils_mod;
@@ -136,15 +136,15 @@ obj5.onPress = function onPress(channel) {
   channel = channel.channel;
   const code = channel.code;
   ({ message, location: _location } = channel);
-  channel(10162).trackOptionClicked(code, channel, constants.SMS, _location);
-  let obj = channel(10162);
+  channel(10167).trackOptionClicked(code, channel, constants.SMS, _location);
+  let obj = channel(10167);
   const tmp = channel;
   if (obj2.isIOS()) {
-    code(4794).hideActionSheet();
-    let obj3 = code(4794);
+    code(4796).hideActionSheet();
+    let obj3 = code(4796);
   }
   obj2 = channel(1364);
-  tmp(4960).sendSMS({ body: message }, (arg0, arg1, arg2) => {
+  tmp(4962).sendSMS({ body: message }, (arg0, arg1, arg2) => {
     if (arg0) {
       const obj2 = { inviteKey: code, channelId: null, messageId: null, location: "SMS Option", overrideProperties: null };
       let id;
@@ -166,20 +166,20 @@ obj5.onPress = function onPress(channel) {
       actions_AlertActionCreatorsDefault.show(obj5);
     }
   });
-  const tmpResult = tmp(4960);
+  const tmpResult = tmp(4962);
 };
 items[3] = obj5;
 const obj6 = { type: obj.MAIL, fullIcon: null, icon: null, isAvailable: null, getLabel: null, onPress: null };
 let PlatformUtils = PlatformUtils_mod;
 let importDefaultResult2;
 if (PlatformUtils.isIOS()) {
-  importDefaultResult2 = _modDef10224;
+  importDefaultResult2 = _modDef10229;
 }
 obj6.fullIcon = importDefaultResult2;
 let PlatformUtils = PlatformUtils_mod;
 let importDefaultResult3;
 if (PlatformUtils.isAndroid()) {
-  importDefaultResult3 = _modDef10225;
+  importDefaultResult3 = _modDef10230;
 }
 obj6.icon = importDefaultResult3;
 let DCDSendUtils = DCDSendUtils_mod;
@@ -192,15 +192,15 @@ obj6.onPress = function onPress(channel) {
   channel = channel.channel;
   const code = channel.code;
   ({ message, location: _location } = channel);
-  channel(10162).trackOptionClicked(code, channel, constants.EMAIL, _location);
-  let obj = channel(10162);
+  channel(10167).trackOptionClicked(code, channel, constants.EMAIL, _location);
+  let obj = channel(10167);
   const tmp = channel;
   if (obj2.isIOS()) {
-    code(4794).hideActionSheet();
-    let obj3 = code(4794);
+    code(4796).hideActionSheet();
+    let obj3 = code(4796);
   }
   obj2 = channel(1364);
-  tmp(4960).sendMail({ subject: "", body: message }, (arg0, arg1, arg2) => {
+  tmp(4962).sendMail({ subject: "", body: message }, (arg0, arg1, arg2) => {
     if (arg0) {
       const obj2 = { inviteKey: code, channelId: null, messageId: null, location: "Email Option", overrideProperties: null };
       let id;
@@ -222,10 +222,10 @@ obj6.onPress = function onPress(channel) {
       actions_AlertActionCreatorsDefault.show(obj5);
     }
   });
-  const tmpResult = tmp(4960);
+  const tmpResult = tmp(4962);
 };
 items[4] = obj6;
-const obj7 = { type: obj.FB_MESSENGER, fullIcon: _modDef10226, isAvailable: null, getLabel: null, onPress: null };
+const obj7 = { type: obj.FB_MESSENGER, fullIcon: _modDef10231, isAvailable: null, getLabel: null, onPress: null };
 let InstantInviteUtils = InstantInviteUtils_mod;
 obj7.isAvailable = InstantInviteUtils.isAppInstalled(SHARE_APPS_KEY.MESSENGER);
 obj7.getLabel = function getLabel() {
@@ -240,7 +240,7 @@ obj7.onPress = function onPress(code) {
   Linking.openURL(SHARE_URLS[SHARE_APPS_KEY.MESSENGER](tmp));
 };
 items[5] = obj7;
-const obj8 = { type: obj.GMAIL, fullIcon: _modDef10227, isAvailable: null, getLabel: null, onPress: null };
+const obj8 = { type: obj.GMAIL, fullIcon: _modDef10232, isAvailable: null, getLabel: null, onPress: null };
 let InstantInviteUtils = InstantInviteUtils_mod;
 obj8.isAvailable = InstantInviteUtils.isAppInstalled(SHARE_APPS_KEY.GMAIL);
 obj8.getLabel = function getLabel() {
@@ -253,7 +253,7 @@ obj8.onPress = function onPress(code) {
   Linking.openURL(SHARE_URLS[SHARE_APPS_KEY.GMAIL]("", message));
 };
 items[6] = obj8;
-const obj9 = { type: obj.TELEGRAM, fullIcon: _modDef10228, isAvailable: null, getLabel: null, onPress: null };
+const obj9 = { type: obj.TELEGRAM, fullIcon: _modDef10233, isAvailable: null, getLabel: null, onPress: null };
 let InstantInviteUtils = InstantInviteUtils_mod;
 obj9.isAvailable = InstantInviteUtils.isAppInstalled(SHARE_APPS_KEY.TELEGRAM);
 obj9.getLabel = function getLabel() {
@@ -268,7 +268,7 @@ obj9.onPress = function onPress(code) {
   Linking.openURL(SHARE_URLS[SHARE_APPS_KEY.TELEGRAM](message, tmp));
 };
 items[7] = obj9;
-const obj10 = { type: obj.TWITTER, fullIcon: _modDef10229, isAvailable: null, getLabel: null, onPress: null };
+const obj10 = { type: obj.TWITTER, fullIcon: _modDef10234, isAvailable: null, getLabel: null, onPress: null };
 let InstantInviteUtils = InstantInviteUtils_mod;
 obj10.isAvailable = InstantInviteUtils.isAppInstalled(SHARE_APPS_KEY.TWITTER);
 obj10.getLabel = function getLabel() {
@@ -281,7 +281,7 @@ obj10.onPress = function onPress(code) {
   Linking.openURL(SHARE_URLS[SHARE_APPS_KEY.TWITTER](message));
 };
 items[8] = obj10;
-const obj11 = { type: obj.WHATSAPP, fullIcon: _modDef10230, isAvailable: null, getLabel: null, onPress: null };
+const obj11 = { type: obj.WHATSAPP, fullIcon: _modDef10235, isAvailable: null, getLabel: null, onPress: null };
 let InstantInviteUtils = InstantInviteUtils_mod;
 obj11.isAvailable = InstantInviteUtils.isAppInstalled(SHARE_APPS_KEY.WHATSAPP);
 obj11.getLabel = function getLabel() {
@@ -294,7 +294,7 @@ obj11.onPress = function onPress(code) {
   Linking.openURL(SHARE_URLS[SHARE_APPS_KEY.WHATSAPP](message));
 };
 items[9] = obj11;
-const obj12 = { type: obj.LINE, fullIcon: _modDef10231, isAvailable: null, getLabel: null, onPress: null };
+const obj12 = { type: obj.LINE, fullIcon: _modDef10236, isAvailable: null, getLabel: null, onPress: null };
 let InstantInviteUtils = InstantInviteUtils_mod;
 obj12.isAvailable = InstantInviteUtils.isAppInstalled(SHARE_APPS_KEY.LINE);
 obj12.getLabel = function getLabel() {

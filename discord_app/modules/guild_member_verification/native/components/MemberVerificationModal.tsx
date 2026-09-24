@@ -1,25 +1,25 @@
-// === Module 5874: MemberVerificationModal ===
+// === Module 5876: MemberVerificationModal ===
 
-// Module 5874 (MemberVerificationModal)
+// Module 5876 (MemberVerificationModal)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4559 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4651 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5830 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4561 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4653 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5832 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 2105 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5875 */;
+import GuildMemberStore from "GuildMemberStore" /* 2107 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5877 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 const View = fn(17).View;
-const MemberVerificationFormConstants = fn(5876);
+const MemberVerificationFormConstants = fn(5878);
 ({ SCROLL_EVENT_TIMER_MS: closure_7, useBannerHeight: closure_8 } = MemberVerificationFormConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let closure_11 = ReanimatedRexport.createAnimatedComponent(fn(1177).Icon);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj = { flex: { flex: 1 }, flexLoading: { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scrollContainer: null, closeButtonContainer: null, closeIconContainer: null, closeIconOverBanner: null, closeIconAfterBanner: null, headerSeparator: null };
 let obj3 = { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.scrollContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };

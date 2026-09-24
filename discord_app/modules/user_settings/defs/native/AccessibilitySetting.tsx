@@ -1,24 +1,24 @@
-// === Module 15663: AccessibilitySetting ===
+// === Module 15677: AccessibilitySetting ===
 
-// Module 15663 (AccessibilitySetting)
+// Module 15677 (AccessibilitySetting)
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7716 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7718 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ContentDismissActionType = fn(2039).ContentDismissActionType;
+const ContentDismissActionType = fn(2041).ContentDismissActionType;
 const jsx = fn(21).jsx;
 let items = [fn(2028).DismissibleContent.MOBILE_ACCESSIBILITY_COLOR_SETTINGS];
-const SettingBuilders = fn(11805);
+const SettingBuilders = fn(11811);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.G0neg7);
   },
   parent: null,
-  IconComponent: fn(15664).AccessibilityIcon,
+  IconComponent: fn(15678).AccessibilityIcon,
   useTrailing() {
     [tmp4, r10012] = useSelectedDismissibleContent.useSelectedDismissibleContent(items);
     let tmp5 = null;
@@ -38,7 +38,7 @@ const route = SettingBuilders.createRoute({
     return tmp5;
   },
   usePreNavigationAction() {
-    const tmp = _slicedToArray(first(7716).useSelectedDismissibleContent(items), 2);
+    const tmp = _slicedToArray(first(7718).useSelectedDismissibleContent(items), 2);
     first = tmp[0];
     dependencyMap = tmp3;
     items = [tmp[1], first];

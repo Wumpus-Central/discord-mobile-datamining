@@ -1,9 +1,9 @@
-// === Module 6262: DownloadBarIllocon ===
+// === Module 6264: DownloadBarIllocon ===
 
-// Module 6262 (DownloadBarIllocon)
+// Module 6264 (DownloadBarIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5890 */;
-import _modDef6263 from "module_6263" /* 6263 */;
+import FastImageDefault from "FastImage" /* 5892 */;
+import _modDef6265 from "module_6265" /* 6265 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const DownloadBarIllocon = function DownloadBarIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6263 };
+  const obj2 = { uri: _modDef6265 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

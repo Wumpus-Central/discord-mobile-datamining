@@ -1,7 +1,7 @@
-// === Module 8453: transformNativeMarkupNode ===
+// === Module 8457: transformNativeMarkupNode ===
 
-// Module 8453 (transformNativeMarkupNode)
-import MarkupTypes from "MarkupTypes" /* 5292 */;
+// Module 8457 (transformNativeMarkupNode)
+import MarkupTypes from "MarkupTypes" /* 5294 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -11,83 +11,83 @@ function textNode(arg0) {
 function transformNode(type, channelId) {
   switch (type.type) {
     case "text":
-      const obj2 = { type: null, content: null };
+      const obj5 = { type: null, content: null };
       const result = require("MarkupInvisibleUnicode").stripLeadingInvisibleUnicode(type.value);
-      obj2.type = require("MarkupTypes").AST_KEY.TEXT;
-      obj2.content = result;
-      return obj2;
+      obj5.type = require("MarkupTypes").AST_KEY.TEXT;
+      obj5.content = result;
+      return obj5;
     case "paragraph":
       return transformNativeInline(type.value, channelId);
     case "bold":
-      const obj7 = { type: require("MarkupTypes").AST_KEY.STRONG, content: transformNativeInline(type.value, channelId) };
-      return obj7;
+      const obj6 = { type: require("MarkupTypes").AST_KEY.STRONG, content: transformNativeInline(type.value, channelId) };
+      return obj6;
     case "italic":
-      const obj8 = { type: require("MarkupTypes").AST_KEY.ITALICS, content: transformNativeInline(type.value, channelId) };
-      return obj8;
+      const obj7 = { type: require("MarkupTypes").AST_KEY.ITALICS, content: transformNativeInline(type.value, channelId) };
+      return obj7;
     case "underline":
-      const obj9 = { type: require("MarkupTypes").AST_KEY.UNDERLINE, content: transformNativeInline(type.value, channelId) };
-      return obj9;
+      const obj8 = { type: require("MarkupTypes").AST_KEY.UNDERLINE, content: transformNativeInline(type.value, channelId) };
+      return obj8;
     case "strikethrough":
       const obj10 = { type: require("MarkupTypes").AST_KEY.STRIKETHROUGH, content: transformNativeInline(type.value, channelId) };
       return obj10;
     case "spoiler":
-      const obj12 = { type: require("MarkupTypes").AST_KEY.SPOILER, content: transformNativeInline(type.value, channelId), channelId: channelId.channelId };
-      return obj12;
+      const obj11 = { type: require("MarkupTypes").AST_KEY.SPOILER, content: transformNativeInline(type.value, channelId), channelId: channelId.channelId };
+      return obj11;
     case "code":
-      const obj13 = { type: require("MarkupTypes").AST_KEY.INLINE_CODE, content: type.value };
-      return obj13;
+      const obj12 = { type: require("MarkupTypes").AST_KEY.INLINE_CODE, content: type.value };
+      return obj12;
     case "code_block":
-      let str4 = type.value.language;
-      if (str4 == null) {
-        str4 = "";
+      let str3 = type.value.language;
+      if (str3 == null) {
+        str3 = "";
       }
       const replaced = type.value.content.replace(/^\n+|\n+$/g, "");
       let replaced1 = replaced;
-      if ("ansi" === str4.toLowerCase()) {
+      if ("ansi" === str3.toLowerCase()) {
         replaced1 = replaced.replaceAll(regExp, "");
       }
       if (true === channelId.formatInline) {
-        const obj14 = { type: require("MarkupTypes").AST_KEY.INLINE_CODE, content: replaced1 };
-        let obj15 = obj14;
+        const obj13 = { type: require("MarkupTypes").AST_KEY.INLINE_CODE, content: replaced1 };
+        let obj14 = obj13;
       } else {
-        obj15 = { type: require("MarkupTypes").AST_KEY.CODE_BLOCK, content: replaced1, lang: str4, inQuote: true === channelId.inQuote };
+        obj14 = { type: require("MarkupTypes").AST_KEY.CODE_BLOCK, content: replaced1, lang: str3, inQuote: true === channelId.inQuote };
       }
-      return obj15;
+      return obj14;
     case "heading":
-      const obj16 = { type: require("MarkupTypes").AST_KEY.HEADING, level: type.value.level, content: transformNativeInline(type.value.content, channelId) };
-      return obj16;
+      const obj15 = { type: require("MarkupTypes").AST_KEY.HEADING, level: type.value.level, content: transformNativeInline(type.value.content, channelId) };
+      return obj15;
     case "list":
       value = type.value;
       _require = channelId;
-      const obj17 = { type: require("MarkupTypes").AST_KEY.LIST, ordered: "ordered" === value.type, start: null, items: null };
-      ({ value: obj11.start, items } = value);
-      obj17.items = items.map((content) => transformNativeBlocks(content.content, closure_0, "listItem"));
-      return obj17;
+      const obj16 = { type: require("MarkupTypes").AST_KEY.LIST, ordered: "ordered" === value.type, start: null, items: null };
+      ({ value: obj9.start, items } = value);
+      obj16.items = items.map((content) => transformNativeBlocks(content.content, closure_0, "listItem"));
+      return obj16;
     case "quote":
       if (true === channelId.formatInline) {
-        let obj18 = transformNativeBlocks(type.value, channelId, "quote");
+        let obj17 = transformNativeBlocks(type.value, channelId, "quote");
       } else {
-        obj18 = { type: require("MarkupTypes").AST_KEY.BLOCK_QUOTE, content: null, channelId: null };
-        const obj19 = {};
+        obj17 = { type: require("MarkupTypes").AST_KEY.BLOCK_QUOTE, content: null, channelId: null };
+        const obj18 = {};
         const merged = Object.assign(channelId);
-        obj19.inQuote = true;
-        let arr2 = transformNativeBlocks(type.value, obj19, "quote");
+        obj18.inQuote = true;
+        let arr2 = transformNativeBlocks(type.value, obj18, "quote");
         if (arr2.length <= 0) {
-          const obj20 = { type: tmp55(5292).AST_KEY.TEXT, content: " " };
-          const items1 = [obj20];
+          const obj19 = { type: tmp51(5294).AST_KEY.TEXT, content: " " };
+          const items1 = [obj19];
           arr2 = items1;
         }
-        obj18.content = arr2;
-        obj18.channelId = channelId.channelId;
-        tmp55 = _require;
+        obj17.content = arr2;
+        obj17.channelId = channelId.channelId;
+        tmp51 = _require;
       }
-      return obj18;
+      return obj17;
     case "small":
       const obj21 = { type: require("MarkupTypes").AST_KEY.SUBTEXT, content: transformNativeInline(type.value.content, channelId) };
       return obj21;
     case "empty":
-      const obj23 = { type: require("MarkupTypes").AST_KEY.TEXT, content: "\n" };
-      return obj23;
+      const obj22 = { type: require("MarkupTypes").AST_KEY.TEXT, content: "\n" };
+      return obj22;
     case "emoji":
       return require("transformNativeMarkupEmoji").transformNativeEmoji(type.value, channelId);
     case "timestamp":
@@ -95,22 +95,10 @@ function transformNode(type, channelId) {
     case "mention":
       return require("transformNativeMarkupMention").transformNativeMention(type.value, channelId);
     case "link":
-      if ("mention" === type.value.type) {
-        let result1 = require("transformNativeMarkupMentionLink").transformNativeMentionLink(type.value.value, channelId);
-        const obj3 = require("transformNativeMarkupMentionLink");
-      } else {
-        result1 = require("transformNativeMarkupLink").transformNativeLink(type.value, channelId, transformNativeInline);
-        if (result1 == null) {
-          const obj24 = { type: tmp(5292).AST_KEY.TEXT, content: "" };
-          result1 = obj24;
-        }
-        const obj = require("transformNativeMarkupLink");
-        tmp = _require;
-      }
-      return result1;
+      return require("transformNativeMarkupLink").transformNativeLink(type.value, channelId, transformNativeInline);
     default:
-      const obj25 = { type: require("MarkupTypes").AST_KEY.TEXT, content: "" };
-      return obj25;
+      const obj23 = { type: require("MarkupTypes").AST_KEY.TEXT, content: "" };
+      return obj23;
   }
 }
 function transformNativeInline(value, channelId) {
@@ -197,7 +185,7 @@ function transformNativeBlocks(value, channelId, quote) {
   return items;
 }
 const set = new Set(["paragraph", "quote"]);
-const regExp = new RegExp(fn(4822).ANSI_CONTROL_SEQUENCE_RE, "g");
+const regExp = new RegExp(fn(4824).ANSI_CONTROL_SEQUENCE_RE, "g");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/markup_v2/native/transformNativeMarkupNode.tsx");
 

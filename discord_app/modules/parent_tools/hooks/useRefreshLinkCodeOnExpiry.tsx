@@ -1,7 +1,7 @@
-// === Module 15214: useRefreshLinkCodeOnExpiry ===
+// === Module 15223: useRefreshLinkCodeOnExpiry ===
 
-// Module 15214 (useRefreshLinkCodeOnExpiry)
-import useStableCallbackDefault from "useStableCallback" /* 7293 */;
+// Module 15223 (useRefreshLinkCodeOnExpiry)
+import useStableCallbackDefault from "useStableCallback" /* 7295 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

@@ -1,17 +1,17 @@
-// === Module 12316: SlowModeIndicator ===
+// === Module 12325: SlowModeIndicator ===
 
-// Module 12316 (SlowModeIndicator)
+// Module 12325 (SlowModeIndicator)
 import nativeDefault from "native" /* 576 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4521 */;
-import SlowmodeUtils from "SlowmodeUtils" /* 8009 */;
-import TimerIcon from "TimerIcon" /* 11936 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4523 */;
+import SlowmodeUtils from "SlowmodeUtils" /* 8011 */;
+import TimerIcon from "TimerIcon" /* 11943 */;
 import noop from "module_19" /* 19 */;
-import SlowmodeStore from "SlowmodeStore" /* 8008 */;
+import SlowmodeStore from "SlowmodeStore" /* 8010 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj = { container: { alignItems: "center", flexDirection: "row" }, icon: { marginLeft: nativeDefault.space.PX_4 } };
 let closure_7 = createStyles.createStyles(obj);
 let obj3 = { marginLeft: nativeDefault.space.PX_4 };

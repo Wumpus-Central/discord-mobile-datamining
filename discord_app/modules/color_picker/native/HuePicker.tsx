@@ -1,9 +1,9 @@
-// === Module 14963: HuePicker ===
+// === Module 14972: HuePicker ===
 
-// Module 14963 (HuePicker)
+// Module 14972 (HuePicker)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4559 */;
-import ColorPickerUtils from "ColorPickerUtils" /* 14960 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
+import ColorPickerUtils from "ColorPickerUtils" /* 14969 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let closure_8 = [0, 60, 120, 180, 240, 300, 360];
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = { container: { justifyContent: "center", alignItems: "center" }, containerFullWidth: { alignSelf: "stretch", overflow: "visible" }, slider: null, colorBar: null, colorBarFullWidth: null, colorBarInner: null, colorBarInnerFullWidth: null };
 let size = { left: 0, position: "absolute", borderColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, width: 24, height: 36, borderRadius: nativeDefault.radii.sm, borderWidth: 2 };
 obj2.slider = size;

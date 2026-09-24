@@ -1,6 +1,6 @@
-// === Module 17146: VibegrationsTimeFormat ===
+// === Module 17172: VibegrationsTimeFormat ===
 
-// Module 17146 (VibegrationsTimeFormat)
+// Module 17172 (VibegrationsTimeFormat)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsTimeFormat.tsx");

@@ -1,8 +1,8 @@
-// === Module 8111: burst_reactions/BurstReactionEffectUtils ===
+// === Module 8113: burst_reactions/BurstReactionEffectUtils ===
 
-// Module 8111 (burst_reactions/BurstReactionEffectUtils)
-import EmojiUtils from "EmojiUtils" /* 4480 */;
-import getBurstAnimation from "getBurstAnimation" /* 8112 */;
+// Module 8113 (burst_reactions/BurstReactionEffectUtils)
+import EmojiUtils from "EmojiUtils" /* 4482 */;
+import getBurstAnimation from "getBurstAnimation" /* 8114 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

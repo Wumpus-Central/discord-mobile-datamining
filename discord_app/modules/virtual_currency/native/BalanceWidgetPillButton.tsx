@@ -1,9 +1,9 @@
-// === Module 11448: BalanceWidgetPillButton ===
+// === Module 11454: BalanceWidgetPillButton ===
 
-// Module 11448 (BalanceWidgetPillButton)
+// Module 11454 (BalanceWidgetPillButton)
 import util from "util" /* 1115 */;
-import components_Button_Button from "components/Button/Button" /* 5271 */;
-import _modDef9193 from "module_9193" /* 9193 */;
+import components_Button_Button from "components/Button/Button" /* 5273 */;
+import _modDef9197 from "module_9197" /* 9197 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

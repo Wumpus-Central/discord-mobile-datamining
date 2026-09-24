@@ -1,17 +1,17 @@
-// === Module 10502: NotificationSettingsMessageNotificationGuildActionSheet ===
+// === Module 10507: NotificationSettingsMessageNotificationGuildActionSheet ===
 
-// Module 10502 (NotificationSettingsMessageNotificationGuildActionSheet)
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7445 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7450 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10490 */;
+// Module 10507 (NotificationSettingsMessageNotificationGuildActionSheet)
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7447 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7452 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10495 */;
 import noop from "module_19" /* 19 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5008 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5010 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const UserNotificationSettings = fn(1074).UserNotificationSettings;
-const UnreadSetting = fn(5009).UnreadSetting;
+const UnreadSetting = fn(5011).UnreadSetting;
 let closure_6 = fn(1084).GuildNotificationSettingsFlags;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -44,5 +44,5 @@ export default function NotificationSettingsMessageNotificationGuildActionSheet(
     const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
     const result = NotificationSettingsModalActionCreatorsDefault.updateGuildNotificationSettings(guildId.guildId, obj, NotificationLabel.notifications(message_notifications));
   };
-  return jsx(unread(10503), { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null });
+  return jsx(unread(10508), { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null });
 };

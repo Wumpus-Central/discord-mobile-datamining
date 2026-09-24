@@ -1,9 +1,9 @@
-// === Module 6474: GiftCardWallet3dIllustration ===
+// === Module 6476: GiftCardWallet3dIllustration ===
 
-// Module 6474 (GiftCardWallet3dIllustration)
+// Module 6476 (GiftCardWallet3dIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5890 */;
-import _modDef6475 from "module_6475" /* 6475 */;
+import FastImageDefault from "FastImage" /* 5892 */;
+import _modDef6477 from "module_6477" /* 6477 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const GiftCardWallet3dIllustration = function GiftCardWallet3dIllustratio
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6475 };
+  const obj2 = { uri: _modDef6477 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

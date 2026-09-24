@@ -1,27 +1,27 @@
-// === Module 16651: GuildRoleSubscriptionTierTemplateUpsellActionSheet ===
+// === Module 16675: GuildRoleSubscriptionTierTemplateUpsellActionSheet ===
 
-// Module 16651 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
+// Module 16675 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4823 */;
-import components_Button_Button from "components/Button/Button" /* 5271 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 5428 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7481 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9934 */;
+import Text_Text from "Text/Text" /* 4825 */;
+import components_Button_Button from "components/Button/Button" /* 5273 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 5430 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7483 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9939 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4819 */;
+import AccessibilityStore from "AccessibilityStore" /* 4821 */;
 
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ GuildSettingsSections: closure_7, GuildSettingsSubsections: closure_8 } = Constants);
-const ContentDismissActionType = fn(2039).ContentDismissActionType;
+const ContentDismissActionType = fn(2041).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const src = { videoURI: "https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov" };
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 const obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 16, paddingTop: 24, justifyContent: "center" }, videoContainer: null, info: null, title: null, subtitle: null, footer: null, button: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 16, paddingTop: 24, justifyContent: "center" };
 obj2.videoContainer = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
@@ -63,7 +63,7 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
   const intl = util.intl;
   obj5.accessibilityLabel = intl.string(util.t.gCgirr);
   const size = { style: tmp.videoContainer, src, width: tmp3, height: tmp3 / 1.7289156626506024, muted: true, paused: stateFromStores, ariaHidden: true };
-  obj5.children = closure_10(markAsDismissed(8653), size);
+  obj5.children = closure_10(markAsDismissed(8657), size);
   const items2 = [closure_10(View, obj5), , ];
   const obj6 = { style: tmp.info, children: null };
   const obj7 = { variant: "heading-lg/semibold", style: tmp.title, color: "mobile-text-heading-primary", children: null };

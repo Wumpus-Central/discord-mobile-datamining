@@ -1,9 +1,9 @@
-// === Module 14844: definitions ===
+// === Module 14853: definitions ===
 
-// Module 14844 (definitions)
-import OAuth2Scopes from "OAuth2Scopes" /* 8685 */;
-import helpers from "helpers" /* 14845 */;
-import contextMenuIcons from "contextMenuIcons" /* 14846 */;
+// Module 14853 (definitions)
+import OAuth2Scopes from "OAuth2Scopes" /* 8689 */;
+import helpers from "helpers" /* 14854 */;
+import contextMenuIcons from "contextMenuIcons" /* 14855 */;
 import size from "module_2" /* 2 */;
 
 function VoiceCapabilities(boolean) {

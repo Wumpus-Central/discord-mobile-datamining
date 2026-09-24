@@ -1,13 +1,13 @@
-// === Module 12766: EmojiSuggestionBarUtils ===
+// === Module 12775: EmojiSuggestionBarUtils ===
 
-// Module 12766 (EmojiSuggestionBarUtils)
-import native from "native" /* 4533 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4559 */;
-import timing from "timing" /* 4828 */;
-import spring from "spring" /* 5270 */;
+// Module 12775 (EmojiSuggestionBarUtils)
+import native from "native" /* 4535 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
+import timing from "timing" /* 4830 */;
+import spring from "spring" /* 5272 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4819 */;
+import AccessibilityStore from "AccessibilityStore" /* 4821 */;
 
 const require = globalThis.__r;
 

@@ -1,15 +1,15 @@
-// === Module 17054: VibegrationsPublishBlockedSheet ===
+// === Module 17082: VibegrationsPublishBlockedSheet ===
 
-// Module 17054 (VibegrationsPublishBlockedSheet)
+// Module 17082 (VibegrationsPublishBlockedSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import _modDef3712 from "module_3712" /* 3712 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4794 */;
-import Text_Text from "Text/Text" /* 4823 */;
-import components_Button_Button from "components/Button/Button" /* 5271 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7480 */;
-import ActionSheet from "ActionSheet" /* 7528 */;
-import vibegrationsPublishBlockedReason from "vibegrationsPublishBlockedReason" /* 17055 */;
+import _modDef3714 from "module_3714" /* 3714 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4796 */;
+import Text_Text from "Text/Text" /* 4825 */;
+import components_Button_Button from "components/Button/Button" /* 5273 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7482 */;
+import ActionSheet from "ActionSheet" /* 7530 */;
+import vibegrationsPublishBlockedReason from "vibegrationsPublishBlockedReason" /* 17083 */;
 import noop from "module_19" /* 19 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
@@ -18,7 +18,7 @@ require = fn;
 function VibegrationsPublishBlockedSheet(reason) {
   const tmp4 = reason.reason === vibegrationsPublishBlockedReason.VibegrationsPublishBlockedReason.PERMISSIONS;
   const intl = util.intl;
-  const tmp7 = _modDef3712;
+  const tmp7 = _modDef3714;
   if (tmp4) {
     let Rtlv25 = tmp7.Rtlv25;
     let tmp9 = importDefault;
@@ -31,14 +31,14 @@ function VibegrationsPublishBlockedSheet(reason) {
   obj.header = React4(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: intl.string(Rtlv25) });
   const obj3 = { style: tmp.content, children: null };
   const intl2 = util.intl;
-  const tmp9Result = tmp9(3712);
+  const tmp9Result = tmp9(3714);
   const obj2 = { title: intl.string(Rtlv25) };
   const items = [React4(Text_Text.Text, { variant: "text-md/normal", color: "text-muted", children: intl2.string(tmp4 ? tmp9Result["nDQB/b"] : tmp9Result["E0QD++"]) }), ];
   const intl3 = util.intl;
   if (tmp4) {
     let BddRzS = util.t.BddRzS;
   } else {
-    BddRzS = tmp9(3712)["+Zh4FA"];
+    BddRzS = tmp9(3714)["+Zh4FA"];
   }
   const obj4 = { variant: "text-md/normal", color: "text-muted", children: intl2.string(tmp4 ? tmp9Result["nDQB/b"] : tmp9Result["E0QD++"]) };
   items[1] = React4(components_Button_Button.Button, {
@@ -56,7 +56,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 VibegrationsPublishBlockedSheet = "VibegrationsPublishBlockedSheet";
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

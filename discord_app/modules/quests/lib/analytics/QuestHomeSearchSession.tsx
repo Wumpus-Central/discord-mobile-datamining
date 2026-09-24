@@ -1,8 +1,8 @@
-// === Module 8051: QuestHomeSearchSession ===
+// === Module 8053: QuestHomeSearchSession ===
 
-// Module 8051 (QuestHomeSearchSession)
+// Module 8053 (QuestHomeSearchSession)
 import v1 from "v1" /* 1255 */;
-import SessionUtils from "SessionUtils" /* 7799 */;
+import SessionUtils from "SessionUtils" /* 7801 */;
 import size from "module_2" /* 2 */;
 
 let c2 = null;

@@ -1,24 +1,24 @@
-// === Module 8696: ICYMIUtils ===
+// === Module 8700: ICYMIUtils ===
 
-// Module 8696 (ICYMIUtils)
+// Module 8700 (ICYMIUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1115 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5049 */;
-import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8227 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8485 */;
-import ICYMITypes from "ICYMITypes" /* 8694 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8697 */;
-import ICYMIExperiment from "ICYMIExperiment" /* 8698 */;
-import ContentInventoryAuthorType from "ContentInventoryAuthorType" /* 8702 */;
-import ICYMIItemTypes from "ICYMIItemTypes" /* 8703 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5051 */;
+import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8229 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8489 */;
+import ICYMITypes from "ICYMITypes" /* 8698 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8701 */;
+import ICYMIExperiment from "ICYMIExperiment" /* 8702 */;
+import ContentInventoryAuthorType from "ContentInventoryAuthorType" /* 8706 */;
+import ICYMIItemTypes from "ICYMIItemTypes" /* 8707 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7854 */;
-import ChannelStore from "ChannelStore" /* 2042 */;
-import GuildStore from "GuildStore" /* 2064 */;
-import MessageStore from "MessageStore" /* 5047 */;
-import ReadStateStore from "ReadStateStore" /* 4842 */;
-import ICYMIStore from "ICYMIStore" /* 8681 */;
-import ICYMIUnreadStateStore from "ICYMIUnreadStateStore" /* 8695 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7856 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import GuildStore from "GuildStore" /* 2066 */;
+import MessageStore from "MessageStore" /* 5049 */;
+import ReadStateStore from "ReadStateStore" /* 4844 */;
+import ICYMIStore from "ICYMIStore" /* 8685 */;
+import ICYMIUnreadStateStore from "ICYMIUnreadStateStore" /* 8699 */;
 
 const require = globalThis.__r;
 
@@ -66,10 +66,10 @@ let closure_17 = async function _hydrateItems(arg0) {
           if (0 !== substr.length) {
             const hydratedAttempt = ICYMIActionCreatorsDefault.loadHydratedAttempt(generateHydrationId(closure_1, dependencyMap2));
             const found = substr.filter((item) => null == dependencyMap[item.id]);
-            const found1 = found.filter((type) => type.type === dependencyMap(8694).ICYMIItemTypes.MESSAGE);
+            const found1 = found.filter((type) => type.type === dependencyMap(8698).ICYMIItemTypes.MESSAGE);
             const mapped = found1.map((channel_id) => ({ channel_id: channel_id.data.channel_id, message_id: channel_id.data.message_id }));
             const mapped1 = found.map((type) => {
-              if (type.type === dependencyMap(8694).ICYMIItemTypes.MESSAGE) {
+              if (type.type === dependencyMap(8698).ICYMIItemTypes.MESSAGE) {
                 const message_context = type.data.message_context;
                 let reply_message_id;
                 if (message_context != null) {
@@ -105,7 +105,7 @@ let closure_17 = async function _hydrateItems(arg0) {
             });
             const _Boolean = Boolean;
             const found2 = mapped1.flat().filter(Boolean);
-            const found3 = found.filter((type) => type.type === dependencyMap(8694).ICYMIItemTypes.ACTIVITY);
+            const found3 = found.filter((type) => type.type === dependencyMap(8698).ICYMIItemTypes.ACTIVITY);
             const mapped2 = found3.map((data) => ({ user_id: data.data.user_id, content_id: data.data.content_id }));
             const flatResult = mapped1.flat();
             const obj6 = { messageItems: null, activityItems: null };
@@ -329,7 +329,7 @@ let closure_19 = async function _regenerateFeedAndClearReadStates(arg0) {
     }
   }
 };
-const ThreadChannelRecord = fn(2046).ThreadChannelRecord;
+const ThreadChannelRecord = fn(2048).ThreadChannelRecord;
 const Constants = fn(1074);
 ({ ChannelTypes: closure_12, GuildNSFWContentLevel: map1 } = Constants);
 const ICYMICustomScore = { UNKNOWN: 0, [0]: "UNKNOWN", DEFAULT: 1, [1]: "DEFAULT", MORE: 2, [2]: "MORE", LESS: 3, [3]: "LESS", MUTED: 4, [4]: "MUTED" };

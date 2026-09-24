@@ -1,14 +1,14 @@
-// === Module 9126: useWishlistNUXActionSheet ===
+// === Module 9130: useWishlistNUXActionSheet ===
 
-// Module 9126 (useWishlistNUXActionSheet)
+// Module 9130 (useWishlistNUXActionSheet)
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7943 */;
+import UserProfileStore from "UserProfileStore" /* 7945 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ContentDismissActionType = fn(2039).ContentDismissActionType;
+const ContentDismissActionType = fn(2041).ContentDismissActionType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/useWishlistNUXActionSheet.tsx");
 

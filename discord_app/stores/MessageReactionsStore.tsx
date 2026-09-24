@@ -1,12 +1,12 @@
-// === Module 8089: MessageReactionsStore ===
+// === Module 8091: MessageReactionsStore ===
 
-// Module 8089 (MessageReactionsStore)
+// Module 8091 (MessageReactionsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ReactionActionCreatorsAll from "ReactionActionCreators" /* 8091 */;
-import LurkingStore from "LurkingStore" /* 4463 */;
+import ReactionActionCreatorsAll from "ReactionActionCreators" /* 8093 */;
+import LurkingStore from "LurkingStore" /* 4465 */;
 import UserRecord from "UserRecord" /* 1386 */;
-import ChannelStore from "ChannelStore" /* 2042 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
 import UserStore from "UserStore" /* 1372 */;
 
 function reactionKey(arg0, arg1, item10022) {
@@ -31,7 +31,7 @@ function handleReaction(userId) {
   }
 }
 const dependencyMap = {};
-const items = [fn(8090).ReactionTypes.NORMAL, fn(8090).ReactionTypes.BURST];
+const items = [fn(8092).ReactionTypes.NORMAL, fn(8092).ReactionTypes.BURST];
 const prototype = function Reaction() {
   const obj = Object.create(new.target.prototype);
   obj.fetched = false;

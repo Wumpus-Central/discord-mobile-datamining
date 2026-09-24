@@ -1,12 +1,12 @@
-// === Module 7329: UserSettingsAccountUnverifiedHeader ===
+// === Module 7331: UserSettingsAccountUnverifiedHeader ===
 
-// Module 7329 (UserSettingsAccountUnverifiedHeader)
+// Module 7331 (UserSettingsAccountUnverifiedHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4823 */;
-import Pressables from "Pressables" /* 5425 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 5924 */;
+import Text_Text from "Text/Text" /* 4825 */;
+import Pressables from "Pressables" /* 5427 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 5926 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -33,7 +33,7 @@ function getBannerText(currentUser) {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = { accountWarning: { backgroundColor: nativeDefault.unsafe_rawColors.RED_400, height: 36, alignItems: "center", alignSelf: "stretch", flexDirection: "row", paddingHorizontal: 16 }, accountWarningText: { flex: 1, lineHeight: 16 }, accountWarningButton: null };
 let obj3 = { backgroundColor: nativeDefault.unsafe_rawColors.RED_400, height: 36, alignItems: "center", alignSelf: "stretch", flexDirection: "row", paddingHorizontal: 16 };
 obj2.accountWarningButton = { borderWidth: 1, borderColor: nativeDefault.colors.WHITE, borderRadius: nativeDefault.radii.xs, paddingHorizontal: 8, paddingVertical: 4 };

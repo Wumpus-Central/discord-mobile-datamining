@@ -1,7 +1,7 @@
-// === Module 5312: PerceptualVolumeUtils ===
+// === Module 5314: PerceptualVolumeUtils ===
 
-// Module 5312 (PerceptualVolumeUtils)
-import perceptual_volume_PerceptualVolumeUtils from "perceptual_volume/PerceptualVolumeUtils" /* 5313 */;
+// Module 5314 (PerceptualVolumeUtils)
+import perceptual_volume_PerceptualVolumeUtils from "perceptual_volume/PerceptualVolumeUtils" /* 5315 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/PerceptualVolumeUtils.tsx");

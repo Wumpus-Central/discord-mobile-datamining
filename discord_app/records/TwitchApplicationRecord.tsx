@@ -1,8 +1,8 @@
-// === Module 14107: TwitchApplicationRecord ===
+// === Module 14116: TwitchApplicationRecord ===
 
-// Module 14107 (TwitchApplicationRecord)
+// Module 14116 (TwitchApplicationRecord)
 import util from "util" /* 1115 */;
-import PlatformsDefault from "Platforms" /* 5586 */;
+import PlatformsDefault from "Platforms" /* 5588 */;
 import ApplicationRecord from "ApplicationRecord" /* 2002 */;
 
 require = fn;

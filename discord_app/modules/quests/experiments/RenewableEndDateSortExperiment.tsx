@@ -1,6 +1,6 @@
-// === Module 11820: RenewableEndDateSortExperiment ===
+// === Module 11826: RenewableEndDateSortExperiment ===
 
-// Module 11820 (RenewableEndDateSortExperiment)
+// Module 11826 (RenewableEndDateSortExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

@@ -1,9 +1,9 @@
-// === Module 10453: AttachmentIcon ===
+// === Module 10458: AttachmentIcon ===
 
-// Module 10453 (AttachmentIcon)
+// Module 10458 (AttachmentIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4523 */;
-import _mod10454 from "module_10454" /* 10454 */;
+import BaseIconImage from "BaseIconImage" /* 4525 */;
+import _mod10459 from "module_10459" /* 10459 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const AttachmentIcon = function AttachmentIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10454, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10459, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

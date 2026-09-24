@@ -1,13 +1,13 @@
-// === Module 9002: InAppReportsShieldElement ===
+// === Module 9006: InAppReportsShieldElement ===
 
-// Module 9002 (InAppReportsShieldElement)
-import native from "native" /* 5995 */;
+// Module 9006 (InAppReportsShieldElement)
+import native from "native" /* 5997 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let closure_4 = createStyles.createStyles({ container: { flex: 0, alignSelf: "center", marginBottom: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsShieldElement.tsx");

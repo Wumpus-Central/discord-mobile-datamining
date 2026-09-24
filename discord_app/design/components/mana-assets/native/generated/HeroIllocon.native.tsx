@@ -1,9 +1,9 @@
-// === Module 6526: HeroIllocon ===
+// === Module 6528: HeroIllocon ===
 
-// Module 6526 (HeroIllocon)
+// Module 6528 (HeroIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5890 */;
-import _modDef6527 from "module_6527" /* 6527 */;
+import FastImageDefault from "FastImage" /* 5892 */;
+import _modDef6529 from "module_6529" /* 6529 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const HeroIllocon = function HeroIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6527 };
+  const obj2 = { uri: _modDef6529 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

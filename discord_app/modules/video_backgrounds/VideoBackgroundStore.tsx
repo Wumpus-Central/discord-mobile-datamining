@@ -1,13 +1,13 @@
-// === Module 9997: VideoBackgroundStore ===
+// === Module 10002: VideoBackgroundStore ===
 
-// Module 9997 (VideoBackgroundStore)
+// Module 10002 (VideoBackgroundStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4882 */;
-import VideoBackgroundUtils from "VideoBackgroundUtils" /* 9998 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4884 */;
+import VideoBackgroundUtils from "VideoBackgroundUtils" /* 10003 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2096 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

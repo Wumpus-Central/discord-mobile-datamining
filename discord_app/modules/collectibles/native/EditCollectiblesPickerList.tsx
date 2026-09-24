@@ -1,7 +1,7 @@
-// === Module 13569: EditCollectiblesPickerList ===
+// === Module 13578: EditCollectiblesPickerList ===
 
-// Module 13569 (EditCollectiblesPickerList)
-import Text_Text from "Text/Text" /* 4823 */;
+// Module 13578 (EditCollectiblesPickerList)
+import Text_Text from "Text/Text" /* 4825 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -9,8 +9,8 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4827);
-let obj = { list: { flex: 1, marginTop: 12 }, listContent: { paddingBottom: 88 }, loadingContainer: { paddingVertical: 80, alignItems: "center" }, header: { paddingHorizontal: fn(13564).GUTTER_SIZE, paddingTop: 10, paddingBottom: 5 } };
+const createStyles = fn(4829);
+let obj = { list: { flex: 1, marginTop: 12 }, listContent: { paddingBottom: 88 }, loadingContainer: { paddingVertical: 80, alignItems: "center" }, header: { paddingHorizontal: fn(13573).GUTTER_SIZE, paddingTop: 10, paddingBottom: 5 } };
 let closure_7 = createStyles.createStyles(obj);
 let closure_8 = noop.memo((children) => <hasOwnProperty style={closure_7().header}>{jsx(Text_Text.Heading, { variant: "heading-sm/medium", color: "mobile-text-heading-primary", children: children.header })}</hasOwnProperty>);
 const size = fn(2);
@@ -48,7 +48,7 @@ export const EditCollectiblesPickerList = function EditCollectiblesPickerList(se
         items.push({ type: "header", key: "header-" + header.section, header: header.header });
         const obj = { type: "header", key: "header-" + header.section, header: header.header };
         const obj2 = items(12);
-        const item = items(12).chunk(header.items, items(13564).ROW_SIZE).forEach((items, index) => {
+        const item = items(12).chunk(header.items, items(13573).ROW_SIZE).forEach((items, index) => {
           items.push({ type: "row", key: "row-" + header.section + "-" + index, items });
         });
       });

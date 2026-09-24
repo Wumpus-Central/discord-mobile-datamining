@@ -1,9 +1,9 @@
-// === Module 2089: StartupData ===
+// === Module 2091: StartupData ===
 
-// Module 2089 (StartupData)
+// Module 2091 (StartupData)
 import _mod17 from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import NativeAppDatabaseModuleDefault from "NativeAppDatabaseModule" /* 2090 */;
+import NativeAppDatabaseModuleDefault from "NativeAppDatabaseModule" /* 2092 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;

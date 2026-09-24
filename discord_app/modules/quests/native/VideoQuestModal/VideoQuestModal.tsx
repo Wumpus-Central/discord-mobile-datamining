@@ -1,25 +1,25 @@
-// === Module 15452: VideoQuestModal ===
+// === Module 15461: VideoQuestModal ===
 
-// Module 15452 (VideoQuestModal)
+// Module 15461 (VideoQuestModal)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4559 */;
-import spring from "spring" /* 5270 */;
-import AnalyticsActions from "AnalyticsActions" /* 8039 */;
-import QuestUtils from "QuestUtils" /* 12101 */;
-import applyOrientationLock2 from "applyOrientationLock" /* 12117 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
+import spring from "spring" /* 5272 */;
+import AnalyticsActions from "AnalyticsActions" /* 8041 */;
+import QuestUtils from "QuestUtils" /* 12108 */;
+import applyOrientationLock2 from "applyOrientationLock" /* 12124 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(15422).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
+let closure_6 = fn(15431).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = { mass: 1.9, damping: 18, stiffness: 80, overshootClamping: true };
 const VideoQuestModalSteps = { WATCH_VIDEO: 0, [0]: "WATCH_VIDEO", POST_WATCH_VIDEO: 1, [1]: "POST_WATCH_VIDEO" };
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = { root: { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM }, pillarboxed: { alignSelf: "center" }, wrapper: { flexDirection: "column", flexGrow: 1, flexShrink: 1, zIndex: 1 }, contentWrapper: { flex: 1 }, contentBackground: null, modalContentWrapper: null, backgroundWrapper: null };
 let obj5 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

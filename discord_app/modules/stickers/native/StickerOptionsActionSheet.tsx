@@ -1,9 +1,9 @@
-// === Module 10746: StickerOptionsActionSheet ===
+// === Module 10752: StickerOptionsActionSheet ===
 
-// Module 10746 (StickerOptionsActionSheet)
-import ToastUtils from "ToastUtils" /* 4520 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4794 */;
-import ClipboardUtils from "ClipboardUtils" /* 7520 */;
+// Module 10752 (StickerOptionsActionSheet)
+import ToastUtils from "ToastUtils" /* 4522 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
+import ClipboardUtils from "ClipboardUtils" /* 7522 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,11 +21,11 @@ export default function StickerOptionsActionSheet(stickerUrl) {
   }, items);
   let obj = { children: null };
   let obj2 = { hasIcons: true, children: null };
-  const obj3 = { icon: jsx(stickerUrl(4769).LinkIcon, {}), label: null, onPress: null };
+  const obj3 = { icon: jsx(stickerUrl(4771).LinkIcon, {}), label: null, onPress: null };
   const intl = stickerUrl(1115).intl;
   obj3.label = intl.string(stickerUrl(1115).t.B1ubHx);
   obj3.onPress = callback;
-  obj2.children = jsx(stickerUrl(5908).TableRow, { icon: jsx(stickerUrl(4769).LinkIcon, {}), label: null, onPress: null });
-  obj.children = jsx(stickerUrl(5990).TableRowGroup, { hasIcons: true, children: null });
-  return jsx(stickerUrl(7528).ActionSheet, { children: null });
+  obj2.children = jsx(stickerUrl(5910).TableRow, { icon: jsx(stickerUrl(4771).LinkIcon, {}), label: null, onPress: null });
+  obj.children = jsx(stickerUrl(5992).TableRowGroup, { hasIcons: true, children: null });
+  return jsx(stickerUrl(7530).ActionSheet, { children: null });
 };

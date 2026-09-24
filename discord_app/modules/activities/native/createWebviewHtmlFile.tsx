@@ -1,6 +1,6 @@
-// === Module 9815: createWebviewHtmlFile ===
+// === Module 9820: createWebviewHtmlFile ===
 
-// Module 9815 (createWebviewHtmlFile)
+// Module 9820 (createWebviewHtmlFile)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -36,8 +36,9 @@ let closure_4 = async function _createWebviewHtmlFile(arg0) {
           closure_129_2 = undefined;
           closure_129_3 = undefined;
           closure_129_4 = undefined;
-          ({ iFrameUri: closure_129_0, iFrameSandboxAttributes: closure_129_1, referrerPolicy: closure_129_2, insets: closure_129_3, messageForDisallowedNavigationError: closure_129_4 } = closure_0);
           closure_129_5 = undefined;
+          ({ iFrameUri: closure_129_0, iFrameAllowAttributes: closure_129_1, iFrameSandboxAttributes: closure_129_2, referrerPolicy: closure_129_3, insets: closure_129_4, messageForDisallowedNavigationError: closure_129_5 } = closure_0);
+          closure_129_6 = undefined;
           c5 = 1;
           c6 = 1;
           return { value: "flex", done: true };
@@ -51,9 +52,9 @@ let closure_4 = async function _createWebviewHtmlFile(arg0) {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          const obj6 = { iFrameUri: closure_129_0, iFrameSandboxAttributes: closure_129_1, referrerPolicy: closure_129_2, insets: closure_129_3, messageForDisallowedNavigationError: closure_129_4 };
-          closure_129_5 = (function generateWebviewHtml(arg0) {
-            ({ iFrameUri, iFrameSandboxAttributes, referrerPolicy, insets, messageForDisallowedNavigationError } = arg0);
+          const obj6 = { iFrameUri: closure_129_0, iFrameAllowAttributes: closure_129_1, iFrameSandboxAttributes: closure_129_2, referrerPolicy: closure_129_3, insets: closure_129_4, messageForDisallowedNavigationError: closure_129_5 };
+          closure_129_6 = (function generateWebviewHtml(arg0) {
+            ({ iFrameUri, iFrameAllowAttributes, iFrameSandboxAttributes, referrerPolicy, insets, messageForDisallowedNavigationError } = arg0);
             let str = "";
             let str2 = "";
             if (obj.isAndroid()) {
@@ -71,19 +72,19 @@ let closure_4 = async function _createWebviewHtmlFile(arg0) {
               const _HermesInternal5 = HermesInternal;
               str = "\n      <script type=\"text/javascript\">\n        var iframe = document.getElementById(\"activityFrame\");\n        var iframeWindow = iframe.contentWindow;\n        " + "\n  " + "iframeWindow" + ".addEventListener('beforeunload', function (e) {\n    window.ReactNativeWebView.postMessage('" + messageForDisallowedNavigationError + "');\n    e.preventDefault();\n  });\n" + "\n      </script>\n      ";
             }
-            return "\n  <html>\n  <head>\n      <style>\n      body {\n          padding: 0;\n          margin: 0;\n          width: 100vw;\n          min-height: 100vh; /* This keeps a small white gap at the bottom of the screen, the options below help prevent this. */\n          min-height: -moz-available; /* See: https://ilxanlar.medium.com/you-shouldnt-rely-on-css-100vh-and-here-s-why-1b4721e74487 for more info */\n          min-height: -webkit-fill-available;\n          min-height: fill-available;\n      }\n      </style>\n      <meta\n      name=\"viewport\"\n      content=\"width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover\"\n      />\n  </head>\n  <body>\n      <script type=\"text/javascript\">\n          window.addEventListener('message', e => {\n            window.ReactNativeWebView.postMessage(JSON.stringify(e.data));\n          });\n      </script>\n      <iframe id=\"activityFrame\" width=\"100%\" height=\"100%\" src=\"" + iFrameUri + "\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen sandbox=\"" + iFrameSandboxAttributes + "\" referrerPolicy=\"" + referrerPolicy + "\">\n      </iframe>\n      " + str2 + "\n      " + str + "\n  </body>\n  </html>\n";
+            return "\n  <html>\n  <head>\n      <style>\n      body {\n          padding: 0;\n          margin: 0;\n          width: 100vw;\n          min-height: 100vh; /* This keeps a small white gap at the bottom of the screen, the options below help prevent this. */\n          min-height: -moz-available; /* See: https://ilxanlar.medium.com/you-shouldnt-rely-on-css-100vh-and-here-s-why-1b4721e74487 for more info */\n          min-height: -webkit-fill-available;\n          min-height: fill-available;\n      }\n      </style>\n      <meta\n      name=\"viewport\"\n      content=\"width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover\"\n      />\n  </head>\n  <body>\n      <script type=\"text/javascript\">\n          window.addEventListener('message', e => {\n            window.ReactNativeWebView.postMessage(JSON.stringify(e.data));\n          });\n      </script>\n      <iframe id=\"activityFrame\" width=\"100%\" height=\"100%\" src=\"" + iFrameUri + "\" frameborder=\"0\" allow=\"" + iFrameAllowAttributes + "\" allowfullscreen sandbox=\"" + iFrameSandboxAttributes + "\" referrerPolicy=\"" + referrerPolicy + "\">\n      </iframe>\n      " + str2 + "\n      " + str + "\n  </body>\n  </html>\n";
           })(obj6);
           c4 = 1;
           const obj9 = closure_130_1(closure_130_2[2]);
           c5 = 3;
           c6 = 1;
-          const obj7 = { value: obj9.writeFile("cache", "discord_activity_data/activity.html", closure_129_5, "utf8"), done: false };
+          const obj7 = { value: obj9.writeFile("cache", "discord_activity_data/activity.html", closure_129_6, "utf8"), done: false };
           return obj7;
         }
       } else if (2 === tmp7) {
         c4 = 0;
-        closure_129_6 = closure_3;
-        closure_130_1(closure_130_2[3]).captureException(closure_129_6);
+        closure_129_7 = closure_3;
+        closure_130_1(closure_130_2[3]).captureException(closure_129_7);
         c6 = 3;
         return { value: null, done: true };
       } else if (arg0 === 1) {
@@ -100,11 +101,11 @@ let closure_4 = async function _createWebviewHtmlFile(arg0) {
         const obj = { value, done: true };
         return obj;
       }
-    } catch (tmp17) {
-      closure_3 = tmp17;
+    } catch (tmp16) {
+      closure_3 = tmp16;
       if (tmp4 === c4) {
         c6 = tmp2;
-        throw tmp17;
+        throw tmp16;
       } else {
         c5 = tmp;
       }

@@ -1,14 +1,14 @@
-// === Module 13376: UserProfileTextButtonGroup ===
+// === Module 13385: UserProfileTextButtonGroup ===
 
-// Module 13376 (UserProfileTextButtonGroup)
+// Module 13385 (UserProfileTextButtonGroup)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1478 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
-const PROFILE_SIDE_PADDING = fn(7539).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7541).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let closure_6 = createStyles.createStyles({ container: { flexDirection: "row", flexWrap: "wrap", gap: 12 }, buttonArea: { flexGrow: 1 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileTextButtonGroup.tsx");

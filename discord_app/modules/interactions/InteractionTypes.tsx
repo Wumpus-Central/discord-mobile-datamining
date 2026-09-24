@@ -1,6 +1,6 @@
-// === Module 5056: InteractionTypes ===
+// === Module 5058: InteractionTypes ===
 
-// Module 5056 (InteractionTypes)
+// Module 5058 (InteractionTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/interactions/InteractionTypes.tsx");

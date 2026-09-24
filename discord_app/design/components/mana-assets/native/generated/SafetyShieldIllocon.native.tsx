@@ -1,9 +1,9 @@
-// === Module 6728: SafetyShieldIllocon ===
+// === Module 6730: SafetyShieldIllocon ===
 
-// Module 6728 (SafetyShieldIllocon)
+// Module 6730 (SafetyShieldIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5890 */;
-import _modDef6729 from "module_6729" /* 6729 */;
+import FastImageDefault from "FastImage" /* 5892 */;
+import _modDef6731 from "module_6731" /* 6731 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const SafetyShieldIllocon = function SafetyShieldIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6729 };
+  const obj2 = { uri: _modDef6731 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

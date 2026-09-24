@@ -1,22 +1,22 @@
-// === Module 7946: WidgetUtils ===
+// === Module 7948: WidgetUtils ===
 
-// Module 7946 (WidgetUtils)
+// Module 7948 (WidgetUtils)
 import util from "util" /* 1115 */;
 import dismissible_content from "dismissible_content" /* 2028 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4647 */;
-import GameWidgetLimits from "GameWidgetLimits" /* 5412 */;
-import utils from "utils" /* 5414 */;
-import useGame2 from "useGame" /* 7637 */;
-import WidgetType from "WidgetType" /* 7944 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7945 */;
-import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 7950 */;
-import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7951 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7952 */;
-import WidgetGameTag from "WidgetGameTag" /* 7954 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4649 */;
+import GameWidgetLimits from "GameWidgetLimits" /* 5414 */;
+import utils from "utils" /* 5416 */;
+import useGame2 from "useGame" /* 7639 */;
+import WidgetType from "WidgetType" /* 7946 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7947 */;
+import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 7952 */;
+import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7953 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7954 */;
+import WidgetGameTag from "WidgetGameTag" /* 7956 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1372 */;
-import UserProfileStore from "UserProfileStore" /* 7943 */;
-import WidgetStore from "WidgetStore" /* 7947 */;
+import UserProfileStore from "UserProfileStore" /* 7945 */;
+import WidgetStore from "WidgetStore" /* 7949 */;
 
 require = fn;
 function findGameWidget(widgetType) {
@@ -85,10 +85,10 @@ function replaceWidgetInList(clipsGalleryWidget) {
     return items1;
   }
 }
-const UserProfileWidgetConstants = fn(7948);
+const UserProfileWidgetConstants = fn(7950);
 ({ WIDGET_TITLES_BY_TYPE: closure_7, WIDGETS_SUPPORTING_COMMENT: closure_8, WIDGETS_SUPPORTING_TAGS: closure_9 } = UserProfileWidgetConstants);
-const ContentDismissActionType = fn(2039).ContentDismissActionType;
-let closure_11 = fn(7949).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
+const ContentDismissActionType = fn(2041).ContentDismissActionType;
+let closure_11 = fn(7951).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
 
@@ -173,12 +173,12 @@ export const addWidgetToPending = function addWidgetToPending(type) {
     return uniqueKey === type.getUniqueKey();
   })) {
     if (type.type === WidgetType.WidgetType.PERSONAL) {
+      const obj2 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
+      const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, obj2);
+      const tmp16Result = DismissibleContentUnsafeUtils;
       const obj3 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
-      const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, obj3);
-      const tmp13Result = DismissibleContentUnsafeUtils;
-      const obj4 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
-      const result1 = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE, obj4);
-      const tmp13Result2 = DismissibleContentUnsafeUtils;
+      const result1 = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE, obj3);
+      const tmp16Result2 = DismissibleContentUnsafeUtils;
     }
     const items = [type];
     HermesBuiltin.arraySpread(tmp7, 1);

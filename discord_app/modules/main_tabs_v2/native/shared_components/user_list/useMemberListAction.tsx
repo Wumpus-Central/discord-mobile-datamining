@@ -1,12 +1,12 @@
-// === Module 11920: useMemberListAction ===
+// === Module 11927: useMemberListAction ===
 
-// Module 11920 (useMemberListAction)
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11921 */;
+// Module 11927 (useMemberListAction)
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11928 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2042 */;
-import PermissionStore from "PermissionStore" /* 4462 */;
-import RelationshipStore from "RelationshipStore" /* 4472 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import PermissionStore from "PermissionStore" /* 4464 */;
+import RelationshipStore from "RelationshipStore" /* 4474 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
@@ -16,9 +16,9 @@ const View = fn(17).View;
 const Constants = fn(1074);
 ({ Permissions: c10, AnalyticsSections: closure_11, InstantInviteSources: closure_12 } = Constants);
 const jsx = fn(21).jsx;
-let closure_14 = { listActionRenderer: "Array", listActionHeight: "flex" };
-const createStyles = fn(4827);
-let closure_15 = createStyles.createStyles({ wrapper: { paddingTop: fn(10556).USERS_LIST_PADDING_BETWEEN_SECTIONS } });
+let closure_14 = { listActionRenderer: "channel", listActionHeight: "channelId" };
+const createStyles = fn(4829);
+let closure_15 = createStyles.createStyles({ wrapper: { paddingTop: fn(10561).USERS_LIST_PADDING_BETWEEN_SECTIONS } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx");
 

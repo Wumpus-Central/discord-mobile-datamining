@@ -1,8 +1,8 @@
-// === Module 14282: GuildBadgeLeaf ===
+// === Module 14291: GuildBadgeLeaf ===
 
-// Module 14282 (GuildBadgeLeaf)
-import inlineStyles from "inlineStyles" /* 8803 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14275 */;
+// Module 14291 (GuildBadgeLeaf)
+import inlineStyles from "inlineStyles" /* 8807 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 14284 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

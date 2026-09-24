@@ -1,18 +1,18 @@
-// === Module 10017: FormComponents ===
+// === Module 10022: FormComponents ===
 
-// Module 10017 (FormComponents)
+// Module 10022 (FormComponents)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4823 */;
-import NativeViewDefault from "NativeView" /* 5892 */;
-import TableRowGroup from "TableRowGroup" /* 5990 */;
-import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 8065 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8523 */;
-import VoiceStateIcons from "VoiceStateIcons" /* 10018 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 10081 */;
+import Text_Text from "Text/Text" /* 4825 */;
+import NativeViewDefault from "NativeView" /* 5894 */;
+import TableRowGroup from "TableRowGroup" /* 5992 */;
+import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 8067 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8527 */;
+import VoiceStateIcons from "VoiceStateIcons" /* 10023 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 10086 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 4867 */;
+import PresenceStore from "PresenceStore" /* 4869 */;
 
 require = fn;
 function VoiceBadges(arg0) {
@@ -42,7 +42,7 @@ function VoiceBadges(arg0) {
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = { container: { marginHorizontal: 16 }, voiceBadgesContainer: { flexDirection: "row" }, iconWrapper: { marginLeft: 8, padding: 6, backgroundColor: nativeDefault.colors.MOBILE_VOICE_PANEL_BADGE_BACKGROUND, borderRadius: nativeDefault.radii.round }, icon: null, notConnectedAvatar: null, memberRow: null, trailingContainer: null };
 let size = { width: 16, height: 16, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.icon = size;

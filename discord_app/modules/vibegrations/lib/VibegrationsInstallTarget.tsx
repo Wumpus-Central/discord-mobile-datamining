@@ -1,7 +1,7 @@
-// === Module 17032: VibegrationsInstallTarget ===
+// === Module 17060: VibegrationsInstallTarget ===
 
-// Module 17032 (VibegrationsInstallTarget)
-import VibegrationsActionCreators from "VibegrationsActionCreators" /* 9386 */;
+// Module 17060 (VibegrationsInstallTarget)
+import VibegrationsActionCreators from "VibegrationsActionCreators" /* 9390 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

@@ -1,9 +1,9 @@
-// === Module 17598: EventBannerStore ===
+// === Module 17621: EventBannerStore ===
 
-// Module 17598 (EventBannerStore)
+// Module 17621 (EventBannerStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2048 */;
+import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2050 */;
 import size from "module_2" /* 2 */;
 
 const GuildScheduledEventStatus = GuildScheduledEventsConstants.GuildScheduledEventStatus;

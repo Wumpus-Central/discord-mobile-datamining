@@ -1,18 +1,18 @@
-// === Module 17264: ThreadsScreen ===
+// === Module 17287: ThreadsScreen ===
 
-// Module 17264 (ThreadsScreen)
+// Module 17287 (ThreadsScreen)
 import nativeDefault from "native" /* 576 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7312 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 11568 */;
-import ThreadListDefault from "ThreadList" /* 17265 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7314 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 11574 */;
+import ThreadListDefault from "ThreadList" /* 17288 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2042 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
 
 require = fn;
 function ThreadsScreen(channel) {
   channel = channel.channel;
   const tmp = closure_9();
-  const canStartThread = channel(7597).useCanStartThread(channel);
+  const canStartThread = channel(7599).useCanStartThread(channel);
   const items = [channel];
   const callback = noop.useCallback(() => {
     const result = navigateToThreadCreation.navigateToThreadCreation(channel, "Thread Browser Empty State");
@@ -30,7 +30,7 @@ function ThreadsScreen(channel) {
   }, []);
   const obj3 = { channel, onCreateThreadPress: null, onThreadPress: null, contentContainerStyle: null };
   let tmp10;
-  let obj = channel(7597);
+  let obj = channel(7599);
   if (canStartThread) {
     tmp10 = callback;
   }
@@ -44,7 +44,7 @@ const View = fn(17).View;
 const SearchTypes = fn(1074).SearchTypes;
 let closure_7 = fn(1114).OpenThreadAnalyticsLocations;
 const jsx = fn(21).jsx;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj = { container: { flex: 1 }, screen: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_9 = createStyles.createStyles(obj);
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };

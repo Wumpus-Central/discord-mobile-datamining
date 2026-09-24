@@ -1,19 +1,19 @@
-// === Module 16437: MessagesItemChannelAvatar ===
+// === Module 16461: MessagesItemChannelAvatar ===
 
-// Module 16437 (MessagesItemChannelAvatar)
+// Module 16461 (MessagesItemChannelAvatar)
 import nativeDefault from "native" /* 576 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 11256 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 11262 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4819 */;
+import AccessibilityStore from "AccessibilityStore" /* 4821 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import PresenceStore from "PresenceStore" /* 4867 */;
-import TypingStore from "TypingStore" /* 12298 */;
+import PresenceStore from "PresenceStore" /* 4869 */;
+import TypingStore from "TypingStore" /* 12307 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = fn;
-const MUTED_OPACITY_CONTENT = fn(10459).MUTED_OPACITY_CONTENT;
+const MUTED_OPACITY_CONTENT = fn(10464).MUTED_OPACITY_CONTENT;
 const jsx = fn(21).jsx;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let closure_10 = createStyles.createStyles((arg0) => {
   const avatar = { borderRadius: nativeDefault.radii.round, marginRight: nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_MARGIN_END, width: nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_SIZE, height: nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_SIZE, opacity: null };
   let num = 1;

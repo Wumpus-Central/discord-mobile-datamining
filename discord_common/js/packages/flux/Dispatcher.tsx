@@ -163,7 +163,7 @@ class Dispatcher {
     if (global === undefined) {
       num = 0;
     }
-    merged = Object.assign({ _interceptors: null, _subscriptions: null, _waitQueue: null, _processingWaitQueue: false, _currentDispatchActionType: null, _actionHandlers: null, _sentryUtils: "Array", functionCache: "\u{1F468}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FE}" });
+    merged = Object.assign({ _interceptors: null, _subscriptions: null, _waitQueue: null, _processingWaitQueue: false, _currentDispatchActionType: null, _actionHandlers: null, _sentryUtils: "Array", functionCache: true });
     merged[0] = [];
     merged[1] = {};
     merged[2] = [];
@@ -303,12 +303,16 @@ prototype2["_dispatchWithDevtools"] = function _dispatchWithDevtools(type) {
 prototype2["_dispatchWithLogging"] = function _dispatchWithLogging(type) {
   const self = this;
   _modDef38(null == this._currentDispatchActionType, "Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: " + type.type + " Already dispatching: " + this._currentDispatchActionType);
-  _modDef38(type.type, "Dispatch.dispatch(...) called without an action type");
+  let tmp6 = null != type.type;
+  const tmp3 = null == this._currentDispatchActionType;
+  if (tmp6) {
+    tmp6 = "" !== type.type;
+  }
+  _modDef38(tmp6, "Dispatch.dispatch(...) called without an action type");
   if (set.has(type.type)) {
     const _HermesInternal = HermesInternal;
     logger.log("Dispatching " + type.type);
   }
-  const tmp3 = null == this._currentDispatchActionType;
   profiling.mark(type.type);
   LastFewActionsAll.add(type.type);
   const actionLogger = this.actionLogger;
@@ -329,7 +333,7 @@ prototype2["_dispatchWithLogging"] = function _dispatchWithLogging(type) {
   try {
     const _HermesInternal3 = HermesInternal;
     profiling.measure("DISPATCH[" + type.type + "]", type.type);
-    const tmp8Result = profiling;
+    const tmp10Result = profiling;
   } catch (err) {
   }
 };

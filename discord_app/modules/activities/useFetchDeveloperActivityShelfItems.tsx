@@ -1,12 +1,12 @@
-// === Module 12451: useFetchDeveloperActivityShelfItems ===
+// === Module 12460: useFetchDeveloperActivityShelfItems ===
 
-// Module 12451 (useFetchDeveloperActivityShelfItems)
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9672 */;
+// Module 12460 (useFetchDeveloperActivityShelfItems)
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9676 */;
 import noop from "module_19" /* 19 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 9210 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 9214 */;
 
 require = fn;
-const DevShelfFetchState = fn(9210).DevShelfFetchState;
+const DevShelfFetchState = fn(9214).DevShelfFetchState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useFetchDeveloperActivityShelfItems.tsx");
 

@@ -1,8 +1,8 @@
-// === Module 8607: MediaViewerAnalyticsManager ===
+// === Module 8611: MediaViewerAnalyticsManager ===
 
-// Module 8607 (MediaViewerAnalyticsManager)
+// Module 8611 (MediaViewerAnalyticsManager)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import ChannelStore from "ChannelStore" /* 2042 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
 
 const Constants = fn(1074);
 ({ AnalyticEvents: c3, AnalyticsSections: closure_4 } = Constants);

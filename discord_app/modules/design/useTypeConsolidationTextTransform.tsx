@@ -1,6 +1,6 @@
-// === Module 7310: useTypeConsolidationTextTransform ===
+// === Module 7312: useTypeConsolidationTextTransform ===
 
-// Module 7310 (useTypeConsolidationTextTransform)
+// Module 7312 (useTypeConsolidationTextTransform)
 import size from "module_2" /* 2 */;
 
 const style = { textTransform: "none" };

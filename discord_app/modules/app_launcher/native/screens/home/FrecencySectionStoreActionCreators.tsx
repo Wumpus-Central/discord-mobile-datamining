@@ -1,6 +1,6 @@
-// === Module 12388: FrecencySectionStoreActionCreators ===
+// === Module 12397: FrecencySectionStoreActionCreators ===
 
-// Module 12388 (FrecencySectionStoreActionCreators)
+// Module 12397 (FrecencySectionStoreActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import size from "module_2" /* 2 */;
 

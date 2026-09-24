@@ -1,6 +1,6 @@
-// === Module 13753: BillingInformation ===
+// === Module 13762: BillingInformation ===
 
-// Module 13753 (BillingInformation)
+// Module 13762 (BillingInformation)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -28,7 +28,7 @@ export const useBillingInformationNative = function useBillingInformationNative(
   if (null == subscriptionPeriodStart) {
     return null;
   } else {
-    const tmp2Result = tmp2(4481);
+    const tmp2Result = tmp2(4483);
     const billingInformationString = tmp2Result.getBillingInformationString(subscription, subscriptionPeriodStart, tmp, flag, fractionalPremiumInfo);
     let formatResult = billingInformationString;
     if (tmp2Result2.isIOS()) {

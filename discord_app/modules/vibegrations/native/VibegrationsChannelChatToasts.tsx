@@ -1,13 +1,13 @@
-// === Module 17154: VibegrationsChannelChatToasts ===
+// === Module 17180: VibegrationsChannelChatToasts ===
 
-// Module 17154 (VibegrationsChannelChatToasts)
+// Module 17180 (VibegrationsChannelChatToasts)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import UserUtils from "UserUtils" /* 4671 */;
-import Text_Text from "Text/Text" /* 4823 */;
-import Card from "Card" /* 5910 */;
-import useVibegrationsChatToastMessagesDefault from "useVibegrationsChatToastMessages" /* 17155 */;
+import UserUtils from "UserUtils" /* 4673 */;
+import Text_Text from "Text/Text" /* 4825 */;
+import Card from "Card" /* 5912 */;
+import useVibegrationsChatToastMessagesDefault from "useVibegrationsChatToastMessages" /* 17181 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ function ChatToast(message) {
     const obj2 = { style: tmp.opaque, children: null };
     const callback = noop.useCallback(() => onOpenChat(message), items);
     const obj3 = { variant: "primary", shadow: "high", border: "subtle", style: tmp.card, onPress: callback, children: null };
-    const obj4 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "Array" };
+    const obj4 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "r" };
     const items1 = [hasOwnProperty(native.Avatar, obj4), ];
     const obj5 = { style: tmp.body, children: null };
     const obj6 = { variant: "text-xs/semibold", color: "text-default", lineClamp: 1, children: name };
@@ -46,7 +46,7 @@ function ChatToast(message) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = { column: null, opaque: null, card: null, body: null };
 const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_12, left: nativeDefault.space.PX_12, alignItems: "flex-end", gap: nativeDefault.space.PX_8 };
 obj2.column = rect;

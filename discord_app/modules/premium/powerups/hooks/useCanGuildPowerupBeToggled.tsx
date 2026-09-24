@@ -1,14 +1,14 @@
-// === Module 12874: useCanGuildPowerupBeToggled ===
+// === Module 12883: useCanGuildPowerupBeToggled ===
 
-// Module 12874 (useCanGuildPowerupBeToggled)
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12840 */;
+// Module 12883 (useCanGuildPowerupBeToggled)
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12849 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4715 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4717 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const PowerupActiveStatusType = fn(4716).PowerupActiveStatusType;
+const PowerupActiveStatusType = fn(4718).PowerupActiveStatusType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useCanGuildPowerupBeToggled.tsx");
 
@@ -56,7 +56,7 @@ export default function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
           if (null != found1) {
             if (null != allPowerups[found1]) {
               const intl = closure_0(1115).intl;
-              const tmp11 = skuId(2516);
+              const tmp11 = skuId(2518);
               let title;
               if (allPowerups[found1] != null) {
                 title = tmp13.title;

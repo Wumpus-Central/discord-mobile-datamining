@@ -1,16 +1,16 @@
-// === Module 12840: usePowerupActiveStatus ===
+// === Module 12849: usePowerupActiveStatus ===
 
-// Module 12840 (usePowerupActiveStatus)
-import GuildStore from "GuildStore" /* 2064 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4715 */;
+// Module 12849 (usePowerupActiveStatus)
+import GuildStore from "GuildStore" /* 2066 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4717 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(4716);
+const GuildPowerupsConstants = fn(4718);
 ({ GUILD_POWERUP_TIER_3_OVERRIDDEN_SKUS: closure_4, PowerupActiveStatusType: hasOwnProperty, POWERUPS_INCLUDED_IN_LEVEL: metroRequire, BOOSTING_TIER_TO_LEVEL_SKU_ID: closure_7 } = GuildPowerupsConstants);
 const GuildFeatures = fn(1074).GuildFeatures;
-let closure_9 = fn(4717).GAME_SERVER_POWERUP_SKU_ID;
+let closure_9 = fn(4719).GAME_SERVER_POWERUP_SKU_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/usePowerupActiveStatus.tsx");
 
@@ -114,7 +114,7 @@ export default function usePowerupActiveStatus(arg0, arg1) {
     }
   });
   if (mapped.length <= 0) {
-    let obj3 = { type: constants.INACTIVE, sourceEntitlement: "Array", sourcePowerup: "isArray" };
+    let obj3 = { type: constants.INACTIVE, sourceEntitlement: "Array", sourcePowerup: "paddingHorizontal" };
     let first = obj3;
   } else {
     first = mapped[0];

@@ -1,9 +1,9 @@
-// === Module 8771: AgeVerificationCustomTab ===
+// === Module 8775: AgeVerificationCustomTab ===
 
-// Module 8771 (AgeVerificationCustomTab)
+// Module 8775 (AgeVerificationCustomTab)
 import LoggerDefault from "Logger" /* 3 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import NativeBrowserManagerModuleDefault from "NativeBrowserManagerModule" /* 4792 */;
+import NativeBrowserManagerModuleDefault from "NativeBrowserManagerModule" /* 4794 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

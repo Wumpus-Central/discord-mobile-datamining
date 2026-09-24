@@ -1,6 +1,6 @@
-// === Module 6533: ? ===
+// === Module 6535: ? ===
 
-// Module 6533
+// Module 6535
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/IceCreamIllocon-2x.png.js");

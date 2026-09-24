@@ -1,6 +1,6 @@
-// === Module 8984: MenuTypes ===
+// === Module 8988: MenuTypes ===
 
-// Module 8984 (MenuTypes)
+// Module 8988 (MenuTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/in_app_reports/MenuTypes.tsx");

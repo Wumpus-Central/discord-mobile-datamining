@@ -1,13 +1,13 @@
-// === Module 17364: ThreadAutoArchiveBottomSheet ===
+// === Module 17387: ThreadAutoArchiveBottomSheet ===
 
-// Module 17364 (ThreadAutoArchiveBottomSheet)
-import TableRadioRow from "TableRadioRow" /* 5991 */;
+// Module 17387 (ThreadAutoArchiveBottomSheet)
+import TableRadioRow from "TableRadioRow" /* 5993 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ChannelFlags = fn(2049).ChannelFlags;
+const ChannelFlags = fn(2051).ChannelFlags;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/threads/native/components/ThreadAutoArchiveBottomSheet.tsx");

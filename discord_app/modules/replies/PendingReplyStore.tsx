@@ -1,12 +1,12 @@
-// === Module 8001: PendingReplyStore ===
+// === Module 8003: PendingReplyStore ===
 
-// Module 8001 (PendingReplyStore)
+// Module 8003 (PendingReplyStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 2042 */;
-import MessageStore from "MessageStore" /* 5047 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import MessageStore from "MessageStore" /* 5049 */;
 
 const dependencyMap = {};
 const dependencyMap2 = {};

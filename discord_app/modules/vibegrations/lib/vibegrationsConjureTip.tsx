@@ -1,6 +1,6 @@
-// === Module 17014: vibegrationsConjureTip ===
+// === Module 17038: vibegrationsConjureTip ===
 
-// Module 17014 (vibegrationsConjureTip)
+// Module 17038 (vibegrationsConjureTip)
 import Storage2 from "Storage" /* 510 */;
 import size from "module_2" /* 2 */;
 

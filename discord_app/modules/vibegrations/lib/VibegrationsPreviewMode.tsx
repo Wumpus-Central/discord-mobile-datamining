@@ -1,11 +1,11 @@
-// === Module 17031: VibegrationsPreviewMode ===
+// === Module 17059: VibegrationsPreviewMode ===
 
-// Module 17031 (VibegrationsPreviewMode)
+// Module 17059 (VibegrationsPreviewMode)
 import util from "util" /* 1115 */;
-import _modDef3712 from "module_3712" /* 3712 */;
+import _modDef3714 from "module_3714" /* 3714 */;
 import size from "module_2" /* 2 */;
 
-const obj = { frame: _modDef3712.TI6dfu, widget: _modDef3712.zshJSX, bot: _modDef3712.bBkuBd };
+const obj = { frame: _modDef3714.TI6dfu, widget: _modDef3714.zshJSX, bot: _modDef3714.bBkuBd };
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsPreviewMode.tsx");
 
 export const VIBEGRATIONS_PREVIEW_MODE_ORDER = ["frame", "widget", "bot"];

@@ -1,21 +1,21 @@
-// === Module 17551: ActivityPanelController ===
+// === Module 17574: ActivityPanelController ===
 
-// Module 17551 (ActivityPanelController)
-import ReanimatedRexport from "ReanimatedRexport" /* 4559 */;
-import ChatInputUtils from "ChatInputUtils" /* 4693 */;
-import transitionToChannel from "transitionToChannel" /* 4838 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5714 */;
-import DeviceOrientation from "DeviceOrientation" /* 8678 */;
-import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 9672 */;
-import doesOrientationMatchLockStateDefault from "doesOrientationMatchLockState" /* 9803 */;
-import applyActivityOrientationLockDefault from "applyActivityOrientationLock" /* 17553 */;
+// Module 17574 (ActivityPanelController)
+import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
+import ChatInputUtils from "ChatInputUtils" /* 4695 */;
+import transitionToChannel from "transitionToChannel" /* 4840 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5716 */;
+import DeviceOrientation from "DeviceOrientation" /* 8682 */;
+import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 9676 */;
+import doesOrientationMatchLockStateDefault from "doesOrientationMatchLockState" /* 9807 */;
+import applyActivityOrientationLockDefault from "applyActivityOrientationLock" /* 17576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5054 */;
-import AppFreezeStore from "AppFreezeStore" /* 8636 */;
-import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 9825 */;
-import ChannelStore from "ChannelStore" /* 2042 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2041 */;
+import ApplicationStore from "ApplicationStore" /* 5056 */;
+import AppFreezeStore from "AppFreezeStore" /* 8640 */;
+import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 9830 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
 
 require = fn;
 class BaseActivityPanelController {
@@ -237,7 +237,7 @@ class BaseActivityPanelController {
 }
 const Constants = fn(2004);
 ({ OrientationLockState: closure_11, ACTIVITY_LOCKED_ASPECT_RATIO: closure_12 } = Constants);
-const ActivityPanelModes = fn(9392).ActivityPanelModes;
+const ActivityPanelModes = fn(9396).ActivityPanelModes;
 const jsx = fn(21).jsx;
 let closure_15 = { x: 0, y: 0, gestureActive: false };
 const FunctionUtils = fn(2018);
@@ -337,6 +337,6 @@ export default function ActivityPanelController(children) {
     }
   }, items1);
   let obj = mode(504);
-  return <BaseActivityPanelController context={connectedActivityInTextChannelId(17559)} orientationLockStateForApp={orientationLockStateForApp} mode={mode} hasConnectedActivity={hasConnectedActivity} connectedActivityAppId={connectedActivityAppId} currentApp={currentApp} updateActivityPanelMode={EmbeddedActivitiesActionCreatorsAll.updateActivityPanelMode}>{children.children}</BaseActivityPanelController>;
+  return <BaseActivityPanelController context={connectedActivityInTextChannelId(17582)} orientationLockStateForApp={orientationLockStateForApp} mode={mode} hasConnectedActivity={hasConnectedActivity} connectedActivityAppId={connectedActivityAppId} currentApp={currentApp} updateActivityPanelMode={EmbeddedActivitiesActionCreatorsAll.updateActivityPanelMode}>{children.children}</BaseActivityPanelController>;
 };
 export { BaseActivityPanelController };

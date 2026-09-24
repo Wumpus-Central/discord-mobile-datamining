@@ -1,7 +1,7 @@
-// === Module 17041: getFrameSurfaceQueryParams ===
+// === Module 17069: getFrameSurfaceQueryParams ===
 
-// Module 17041 (getFrameSurfaceQueryParams)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 9391 */;
+// Module 17069 (getFrameSurfaceQueryParams)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 9395 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/frames/utils/getFrameSurfaceQueryParams.tsx");

@@ -1,6 +1,6 @@
-// === Module 6715: ? ===
+// === Module 6717: ? ===
 
-// Module 6715
+// Module 6717
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/RocketshipSpotIllustration-2x.png.js");

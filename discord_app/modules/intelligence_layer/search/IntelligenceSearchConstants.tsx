@@ -1,6 +1,6 @@
-// === Module 12698: IntelligenceSearchConstants ===
+// === Module 12707: IntelligenceSearchConstants ===
 
-// Module 12698 (IntelligenceSearchConstants)
+// Module 12707 (IntelligenceSearchConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/intelligence_layer/search/IntelligenceSearchConstants.tsx");

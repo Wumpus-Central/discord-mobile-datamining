@@ -1,7 +1,7 @@
-// === Module 9806: WakeLock ===
+// === Module 9810: WakeLock ===
 
-// Module 9806 (WakeLock)
-import NativeScreenWakeLockModuleDefault from "NativeScreenWakeLockModule" /* 9807 */;
+// Module 9810 (WakeLock)
+import NativeScreenWakeLockModuleDefault from "NativeScreenWakeLockModule" /* 9811 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

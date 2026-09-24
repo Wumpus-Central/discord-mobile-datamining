@@ -1,14 +1,13 @@
-// === Module 17008: VibegrationsEffortPicker ===
+// === Module 17030: VibegrationsEffortPicker ===
 
-// Module 17008 (VibegrationsEffortPicker)
+// Module 17030 (VibegrationsEffortPicker)
 import util from "util" /* 1115 */;
-import _modDef3712 from "module_3712" /* 3712 */;
-import TableRadioRow from "TableRadioRow" /* 5991 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7480 */;
-import ActionSheet from "ActionSheet" /* 7528 */;
-import VibegrationsEffortPresets from "VibegrationsEffortPresets" /* 17004 */;
-import VibegrationsModelLabels from "VibegrationsModelLabels" /* 17005 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _modDef3714 from "module_3714" /* 3714 */;
+import TableRadioRow from "TableRadioRow" /* 5993 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7482 */;
+import ActionSheet from "ActionSheet" /* 7530 */;
+import VibegrationsEffortTiers from "VibegrationsEffortTiers" /* 17031 */;
+import VibegrationsModelLabels from "VibegrationsModelLabels" /* 17032 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,268 +15,164 @@ require = fn;
 class VibegrationsEffortPicker {
   constructor(arg0) {
     settings = global.settings;
-    model = settings;
+    tiers = global.tiers;
     choices = global.choices;
     disabled = global.disabled;
     ({ onChange, hideTitle } = global);
     if (hideTitle === undefined) {
       hideTitle = false;
     }
-    closure_4 = undefined;
-    tmp = closure_5(closure_6.useState(false), 2);
-    [tmp2, closure_4] = tmp;
-    tmp4 = model;
-    tmp5 = disabled;
-    callback = closure_6.useCallback(() => _undefined((arg0) => !arg0), []);
-    obj = model(disabled[5]);
-    result = obj.matchVibegrationsEffortPreset(settings, choices.main);
-    intl = model(disabled[6]).intl;
-    tmp7 = choices;
-    stringResult = intl.string(choices(disabled[7]).GDs9Vq);
-    intl2 = model(disabled[6]).intl;
-    stringResult1 = intl2.string(choices(disabled[7])["9FRudW"]);
-    intl3 = model(disabled[6]).intl;
-    stringResult2 = intl3.string(choices(disabled[7])["4AsQHS"]);
+    closure_5 = undefined;
+    tmp = disabled(onChange.useState(false), 2);
+    [tmp2, closure_5] = tmp;
+    tmp4 = settings;
+    tmp5 = choices;
+    callback = onChange.useCallback(() => _undefined((arg0) => !arg0), []);
+    intl = settings(choices[4]).intl;
+    tmp6 = tiers;
+    stringResult = intl.string(tiers(choices[5]).GDs9Vq);
+    intl2 = settings(choices[4]).intl;
+    stringResult1 = intl2.string(tiers(choices[5])["9FRudW"]);
+    intl3 = settings(choices[4]).intl;
+    stringResult2 = intl3.string(tiers(choices[5])["4AsQHS"]);
+    obj = settings(choices[6]);
+    result = obj.vibegrationsTierModel(settings, tiers, settings.tier);
     tmp11 = jsxs;
-    obj1 = { direction: "vertical", spacing: choices(disabled[9]).space.PX_16, children: null };
+    obj1 = { direction: "vertical", spacing: tiers(choices[8]).space.PX_16, children: null };
     tmp12 = jsx;
-    str = "";
-    if (result >= 0) {
-      tmp13 = globalThis;
-      _String = String;
-      str = String(result);
-    }
-    obj13 = {
+    obj12 = {
       hasIcons: false,
-      value: str,
-      onChange(arg0) {
-            const tmp3 = VibegrationsEffortPresets.VIBEGRATIONS_EFFORT_PRESETS[Number(undefined, arg0)];
-            if (null != tmp3) {
-              const result = VibegrationsEffortPresets.vibegrationsPresetTier(tmp3);
-              const tmp15 = _objectWithoutProperties(result, closure_3);
-              const tmpResult = VibegrationsEffortPresets;
-              let tmp7 = tmp15;
-              if (true === result.fast) {
-                model = result.model;
-                const main = choices.main;
-                const found = main.find((id) => id.id === model);
-                let supports_fast;
-                if (found != null) {
-                  supports_fast = found.supports_fast;
-                }
-                tmp7 = tmp15;
-                if (true === supports_fast) {
-                  const obj = {};
-                  const merged = Object.assign(tmp15);
-                  obj.fast = true;
-                  tmp7 = obj;
-                }
-              }
-              closure_1_3(VibegrationsEffortPresets.vibegrationsSettingsForTier(tmp7));
-              const tmpResult2 = VibegrationsEffortPresets;
+      value: settings.tier,
+      onChange(tier2) {
+            if (tier2 !== settings.tier) {
+              const vibegrationsWithTierResult = VibegrationsEffortTiers.vibegrationsWithTier(tmp, tier2);
+              noop(VibegrationsEffortTiers.vibegrationsNormalizeFast(vibegrationsWithTierResult, tiers, choices.main));
             }
           },
       title: null,
       accessibilityLabel: null,
       children: null
     };
-    tmp14 = undefined;
+    tmp13 = undefined;
     if (!hideTitle) {
-      tmp14 = stringResult;
+      tmp13 = stringResult;
     }
-    obj13.title = tmp14;
-    obj13.accessibilityLabel = stringResult;
-    prop = tmp4(tmp5[5]).VIBEGRATIONS_EFFORT_PRESETS;
-    obj13.children = prop.map((summary, index) => {
-      const obj = { label: summary.summary(), subLabel: null, value: null, disabled: null };
-      model = summary.model;
-      const main = choices.main;
-      const found = main.find((id) => id.id === model);
-      let label;
-      if (found != null) {
-        label = found.label;
-      }
-      if (label == null) {
-        label = model;
-      }
-      let thinking = VibegrationsModelLabels.THINKING_LABELS[summary.thinking];
-      if (thinking == null) {
-        thinking = summary.thinking;
-      }
-      obj.subLabel = "" + label + " \u00B7 " + thinking;
-      obj.value = String(index);
+    obj12.title = tmp13;
+    obj12.accessibilityLabel = stringResult;
+    prop = tmp4(tmp5[10]).VIBEGRATIONS_MODEL_TIERS;
+    obj12.children = prop.map((value) => {
+      const obj = { label: VibegrationsEffortTiers.vibegrationsTierLabel(value), subLabel: null, value: null, disabled: null };
+      obj.subLabel = VibegrationsEffortTiers.vibegrationsTierDescription(value);
+      obj.value = value;
       obj.disabled = disabled;
-      return React6(TableRadioRow.TableRadioRow, obj, index);
+      return timestampProducer(TableRadioRow.TableRadioRow, obj, value);
     });
-    items = [, , , ];
-    items[0] = tmp12(model(disabled[10]).TableRadioGroup, obj13);
-    tmp12Result = null;
-    if (result < 0) {
-      obj14 = { variant: "text-xs/normal", color: "text-muted", children: null };
-      tmp4Result = tmp4(tmp5[5]);
-      obj14.children = tmp4Result.describeVibegrationsModelSettings(settings, choices.main);
-      tmp12Result = tmp12(tmp4(tmp5[13]).Text, obj14);
-    }
-    items[1] = tmp12Result;
-    obj15 = { hasIcons: false, children: null };
-    obj16 = { label: null, arrow: null, accessibilityState: null, onPress: null };
-    intl4 = tmp4(tmp5[6]).intl;
-    obj16.label = intl4.string(tmp7(tmp5[7]).IaLFoX);
-    obj16.arrow = !tmp2;
-    obj16.accessibilityState = { expanded: tmp2 };
-    obj16.onPress = callback;
-    obj15.children = tmp12(tmp4(tmp5[15]).TableRow, obj16);
-    items[2] = tmp12(tmp4(tmp5[14]).TableRowGroup, obj15);
+    items = [, , ];
+    items[0] = tmp12(settings(choices[9]).TableRadioGroup, obj12);
+    obj13 = { hasIcons: false, children: null };
+    obj14 = { label: null, arrow: null, accessibilityState: null, onPress: null };
+    intl4 = tmp4(tmp5[4]).intl;
+    obj14.label = intl4.string(tmp6(tmp5[5]).IaLFoX);
+    obj14.arrow = !tmp2;
+    obj14.accessibilityState = { expanded: tmp2 };
+    obj14.onPress = callback;
+    obj13.children = tmp12(tmp4(tmp5[13]).TableRow, obj14);
+    items[1] = tmp12(tmp4(tmp5[12]).TableRowGroup, obj13);
     tmp11Result = null;
     if (tmp2) {
-      tmp17 = Fragment;
-      obj17 = { hasIcons: false, value: null, onChange: null, title: null, accessibilityLabel: null, children: null };
-      obj17.value = settings.main.model;
-      obj17.onChange = function onChange(model) {
-        const obj = {};
-        const merged = Object.assign(model.main);
-        obj.model = model;
-        const tmp2 = _objectWithoutProperties(obj, closure_3);
-        let tmp4 = tmp2;
-        if (true === obj.fast) {
-          model = obj.model;
-          const main = choices.main;
-          const found = main.find((id) => id.id === model);
-          let supports_fast;
-          if (found != null) {
-            supports_fast = found.supports_fast;
-          }
-          tmp4 = tmp2;
-          if (true === supports_fast) {
-            const obj3 = {};
-            const merged1 = Object.assign(tmp2);
-            obj3.fast = true;
-            tmp4 = obj3;
-          }
-        }
-        closure_1_3(VibegrationsEffortPresets.vibegrationsSettingsForTier(tmp4));
-      };
-      obj17.title = stringResult1;
-      obj17.accessibilityLabel = stringResult1;
-      main = choices.main;
-      obj17.children = main.map((label) => React6(TableRadioRow.TableRadioRow, { label: label.label, subLabel: VibegrationsModelLabels.PROVIDER_LABELS[label.provider], value: label.id, disabled }, label.id));
+      tmp12Result = null;
+      tmp15 = Fragment;
+      if (null != result) {
+        obj15 = { hasIcons: false, value: null, onChange: null, title: null, accessibilityLabel: null, children: null };
+        obj15.value = result;
+        obj15.onChange = function onChange(arg0) {
+          const result = VibegrationsEffortTiers.vibegrationsPickTierModel(settings, settings.tier, arg0);
+          noop(VibegrationsEffortTiers.vibegrationsNormalizeFast(result, tiers, choices.main));
+        };
+        obj15.title = stringResult1;
+        obj15.accessibilityLabel = stringResult1;
+        main = choices.main;
+        obj15.children = main.map((label) => timestampProducer(TableRadioRow.TableRadioRow, { label: label.label, subLabel: VibegrationsModelLabels.PROVIDER_LABELS[label.provider], value: label.id, disabled }, label.id));
+        tmp12Result = tmp12(tmp4(tmp5[9]).TableRadioGroup, obj15);
+      }
       items1 = [, , ];
-      items1[0] = tmp12(tmp4(tmp5[10]).TableRadioGroup, obj17);
-      obj18 = { hasIcons: false, value: null, onChange: null, title: null, accessibilityLabel: null, children: null };
-      obj18.value = settings.main.thinking;
-      obj18.onChange = function onChange(thinking) {
-        const obj = {};
-        const merged = Object.assign(model.main);
-        obj.thinking = thinking;
-        const tmp2 = _objectWithoutProperties(obj, closure_3);
-        let tmp4 = tmp2;
-        if (true === obj.fast) {
-          model = obj.model;
-          const main = choices.main;
-          const found = main.find((id) => id.id === model);
-          let supports_fast;
-          if (found != null) {
-            supports_fast = found.supports_fast;
-          }
-          tmp4 = tmp2;
-          if (true === supports_fast) {
-            const obj3 = {};
-            const merged1 = Object.assign(tmp2);
-            obj3.fast = true;
-            tmp4 = obj3;
+      items1[0] = tmp12Result;
+      str = settings.thinking;
+      if (str == null) {
+        thinking = undefined;
+        if (tiers != null) {
+          tmp18 = tiers[settings.tier];
+          if (tmp18 != null) {
+            thinking = tmp18.thinking;
           }
         }
-        closure_1_3(VibegrationsEffortPresets.vibegrationsSettingsForTier(tmp4));
+        str = thinking;
+      }
+      if (str == null) {
+        str = "";
+      }
+      obj16 = { hasIcons: false, value: null, onChange: null, title: null, accessibilityLabel: null, children: null };
+      obj16.value = str;
+      obj16.onChange = function onChange(thinking) {
+        const obj = {};
+        const merged = Object.assign(settings);
+        obj.thinking = thinking;
+        noop(VibegrationsEffortTiers.vibegrationsNormalizeFast(obj, tiers, choices.main));
       };
-      obj18.title = stringResult2;
-      obj18.accessibilityLabel = stringResult2;
-      thinking = choices.thinking;
-      obj18.children = thinking.map((value) => {
+      obj16.title = stringResult2;
+      obj16.accessibilityLabel = stringResult2;
+      thinking1 = choices.thinking;
+      obj16.children = thinking1.map((value) => {
         let tmp2 = VibegrationsModelLabels.THINKING_LABELS[value];
         if (tmp2 == null) {
           tmp2 = value;
         }
-        return React6(TableRadioRow.TableRadioRow, { label: tmp2, value, disabled }, value);
+        return timestampProducer(TableRadioRow.TableRadioRow, { label: tmp2, value, disabled }, value);
       });
-      items1[1] = tmp12(tmp4(tmp5[10]).TableRadioGroup, obj18);
-      model = settings.main.model;
-      main1 = choices.main;
-      found = main1.find((id) => id.id === model);
-      supports_fast = undefined;
-      if (found != null) {
-        supports_fast = found.supports_fast;
-      }
-      flag = true;
+      items1[1] = tmp12(tmp4(tmp5[9]).TableRadioGroup, obj16);
+      tmp4Result = tmp4(tmp5[6]);
       tmp12Result1 = null;
-      if (true === supports_fast) {
-        obj19 = { hasIcons: false, children: null };
-        obj20 = { label: null, subLabel: null, value: null, disabled: null, onValueChange: null };
-        intl5 = tmp4(tmp5[6]).intl;
-        obj20.label = intl5.string(tmp7(tmp5[7]).SYLSgx);
-        intl6 = tmp4(tmp5[6]).intl;
-        obj20.subLabel = intl6.string(tmp7(tmp5[7]).HITWAI);
-        obj20.value = true === settings.main.fast;
-        obj20.disabled = disabled;
-        obj20.onValueChange = function onValueChange(fast) {
+      if (tmp4Result.vibegrationsCeilingSupportsFast(settings, tiers, choices.main)) {
+        obj17 = { hasIcons: false, children: null };
+        obj18 = { label: null, subLabel: null, value: null, disabled: null, onValueChange: null };
+        intl5 = tmp4(tmp5[4]).intl;
+        obj18.label = intl5.string(tmp6(tmp5[5]).SYLSgx);
+        intl6 = tmp4(tmp5[4]).intl;
+        obj18.subLabel = intl6.string(tmp6(tmp5[5]).HITWAI);
+        flag = true;
+        obj18.value = true === settings.fast;
+        obj18.disabled = disabled;
+        obj18.onValueChange = function onValueChange(fast) {
           const obj = {};
-          const merged = Object.assign(model.main);
+          const merged = Object.assign(settings);
           obj.fast = fast;
-          const tmp2 = _objectWithoutProperties(obj, closure_3);
-          let tmp4 = tmp2;
-          if (true === obj.fast) {
-            model = obj.model;
-            const main = choices.main;
-            const found = main.find((id) => id.id === model);
-            let supports_fast;
-            if (found != null) {
-              supports_fast = found.supports_fast;
-            }
-            tmp4 = tmp2;
-            if (true === supports_fast) {
-              const obj3 = {};
-              const merged1 = Object.assign(tmp2);
-              obj3.fast = true;
-              tmp4 = obj3;
-            }
-          }
-          closure_1_3(VibegrationsEffortPresets.vibegrationsSettingsForTier(tmp4));
+          noop(VibegrationsEffortTiers.vibegrationsNormalizeFast(obj, tiers, choices.main));
         };
-        obj19.children = tmp12(tmp4(tmp5[16]).TableSwitchRow, obj20);
-        tmp12Result1 = tmp12(tmp4(tmp5[14]).TableRowGroup, obj19);
+        obj17.children = tmp12(tmp4(tmp5[15]).TableSwitchRow, obj18);
+        tmp12Result1 = tmp12(tmp4(tmp5[12]).TableRowGroup, obj17);
       }
-      obj21 = { children: null };
+      obj19 = { children: null };
       items1[2] = tmp12Result1;
-      obj21.children = items1;
-      tmp11Result = tmp11(tmp17, obj21);
+      obj19.children = items1;
+      tmp11Result = tmp11(tmp15, obj19);
     }
-    items[3] = tmp11Result;
+    items[2] = tmp11Result;
     obj1.children = items;
-    return tmp11(model(disabled[8]).Stack, obj1);
+    return tmp11(settings(choices[7]).Stack, obj1);
   }
 }
-let closure_3 = ["fast"];
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
+({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/native/VibegrationsEffortPicker.tsx");
 
 export default VibegrationsEffortPicker;
-export const describeVibegrationsEffort = function describeVibegrationsEffort(first1, landingModelChoicesResult) {
-  const result = VibegrationsEffortPresets.matchVibegrationsEffortPreset(first1, landingModelChoicesResult.main);
-  const obj2 = VibegrationsEffortPresets.VIBEGRATIONS_EFFORT_PRESETS[result];
-  if (null != obj2) {
-    let summaryResult = obj2.summary();
-  } else {
-    summaryResult = VibegrationsEffortPresets.describeVibegrationsModelSettings(first1, landingModelChoicesResult.main);
-    const tmpResult = VibegrationsEffortPresets;
-  }
-  return summaryResult;
-};
 export const VIBEGRATIONS_EFFORT_PICKER_SHEET_KEY = "VibegrationsEffortPickerSheet";
-export const VibegrationsEffortPickerSheet = function VibegrationsEffortPickerSheet(choices) {
-  const onChange = choices.onChange;
-  const tmp = _slicedToArray(noop.useState(choices.initialSettings), 2);
+export const VibegrationsEffortPickerSheet = function VibegrationsEffortPickerSheet(onChange) {
+  onChange = onChange.onChange;
+  ({ tiers, choices } = onChange);
+  const tmp = _slicedToArray(noop.useState(onChange.initialSettings), 2);
   closure_1 = tmp[1];
   const items = [onChange];
   const callback = noop.useCallback((arg0) => {
@@ -287,8 +182,8 @@ export const VibegrationsEffortPickerSheet = function VibegrationsEffortPickerSh
   const obj = { header: null, children: null };
   const obj2 = { title: null };
   const intl = util.intl;
-  obj2.title = intl.string(_modDef3712.GDs9Vq);
-  obj.header = React6(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
-  obj.children = React6(View, { children: React6(VibegrationsEffortPicker, { settings: tmp[0], choices: choices.choices, disabled: false, onChange: callback, hideTitle: true }) });
-  return React6(ActionSheet.ActionSheet, obj);
+  obj2.title = intl.string(_modDef3714.GDs9Vq);
+  obj.header = timestampProducer(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
+  obj.children = timestampProducer(View, { children: timestampProducer(VibegrationsEffortPicker, { settings: tmp[0], tiers, choices, disabled: false, onChange: callback, hideTitle: true }) });
+  return timestampProducer(ActionSheet.ActionSheet, obj);
 };

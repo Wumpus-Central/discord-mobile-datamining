@@ -1,26 +1,26 @@
-// === Module 10321: UserSettingsVoice ===
+// === Module 10326: UserSettingsVoice ===
 
-// Module 10321 (UserSettingsVoice)
+// Module 10326 (UserSettingsVoice)
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4823 */;
-import Stack_Stack from "Stack/Stack" /* 5269 */;
-import TableRowGroup from "TableRowGroup" /* 5990 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7454 */;
-import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 10324 */;
-import UserSettingsVoiceInputOptionsDefault from "UserSettingsVoiceInputOptions" /* 10325 */;
-import UserSettingsVoiceOutputOptionsDefault from "UserSettingsVoiceOutputOptions" /* 10327 */;
-import UserSettingsSoundboardVolumeDefault from "UserSettingsSoundboardVolume" /* 10331 */;
-import UserSettingsVoiceOverlayDefault from "UserSettingsVoiceOverlay" /* 10332 */;
-import UserSettingsVoiceProcessingDefault from "UserSettingsVoiceProcessing" /* 10334 */;
+import Text_Text from "Text/Text" /* 4825 */;
+import Stack_Stack from "Stack/Stack" /* 5271 */;
+import TableRowGroup from "TableRowGroup" /* 5992 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7456 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 10329 */;
+import UserSettingsVoiceInputOptionsDefault from "UserSettingsVoiceInputOptions" /* 10330 */;
+import UserSettingsVoiceOutputOptionsDefault from "UserSettingsVoiceOutputOptions" /* 10332 */;
+import UserSettingsSoundboardVolumeDefault from "UserSettingsSoundboardVolume" /* 10336 */;
+import UserSettingsVoiceOverlayDefault from "UserSettingsVoiceOverlay" /* 10337 */;
+import UserSettingsVoiceProcessingDefault from "UserSettingsVoiceProcessing" /* 10339 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const isMobileOverlaySupported = fn(10322).isMobileOverlaySupported;
-const guideURL = fn(10323).USER_SETTINGS_VOICE_GUILD_URL;
+const isMobileOverlaySupported = fn(10327).isMobileOverlaySupported;
+const guideURL = fn(10328).USER_SETTINGS_VOICE_GUILD_URL;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let closure_8 = createStyles.createStyles({ container: { paddingHorizontal: 16 }, tableRow: { marginTop: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoice.tsx");

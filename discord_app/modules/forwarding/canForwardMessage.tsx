@@ -1,11 +1,11 @@
-// === Module 11992: canForwardMessage ===
+// === Module 11999: canForwardMessage ===
 
-// Module 11992 (canForwardMessage)
+// Module 11999 (canForwardMessage)
 import FlagUtils from "FlagUtils" /* 1385 */;
-import GatedChannelStore from "GatedChannelStore" /* 2097 */;
-import ChannelStore from "ChannelStore" /* 2042 */;
-import GuildStore from "GuildStore" /* 2064 */;
-import PermissionStore from "PermissionStore" /* 4462 */;
+import GatedChannelStore from "GatedChannelStore" /* 2099 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import GuildStore from "GuildStore" /* 2066 */;
+import PermissionStore from "PermissionStore" /* 4464 */;
 
 const require = globalThis.__r;
 

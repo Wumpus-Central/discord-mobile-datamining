@@ -1,6 +1,6 @@
-// === Module 8567: useProfileFrameLayerAsset ===
+// === Module 8571: useProfileFrameLayerAsset ===
 
-// Module 8567 (useProfileFrameLayerAsset)
+// Module 8571 (useProfileFrameLayerAsset)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

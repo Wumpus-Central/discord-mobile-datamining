@@ -1,20 +1,20 @@
-// === Module 15305: PlayStationTwoWayLinkUpsell ===
+// === Module 15314: PlayStationTwoWayLinkUpsell ===
 
-// Module 15305 (PlayStationTwoWayLinkUpsell)
+// Module 15314 (PlayStationTwoWayLinkUpsell)
 import util from "util" /* 1115 */;
 import dismissible_content from "dismissible_content" /* 2028 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2108 */;
-import FastImageDefault from "FastImage" /* 5890 */;
-import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 9450 */;
-import OneWayToTwoWayLinkUpsell from "OneWayToTwoWayLinkUpsell" /* 15303 */;
-import _modDef15306 from "module_15306" /* 15306 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2110 */;
+import FastImageDefault from "FastImage" /* 5892 */;
+import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 9454 */;
+import OneWayToTwoWayLinkUpsell from "OneWayToTwoWayLinkUpsell" /* 15312 */;
+import _modDef15315 from "module_15315" /* 15315 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ HelpdeskArticles: c3, AnalyticsLocations: closure_4, PlatformTypes: hasOwnProperty } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let closure_7 = createStyles.createStyles({ upsellImage: { alignSelf: "center", width: 84, marginLeft: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationTwoWayLinkUpsell.tsx");
@@ -28,7 +28,7 @@ export const PlayStationTwoWayLinkUpsell = function PlayStationTwoWayLinkUpsell(
   const intl2 = util.intl;
   obj2.body = intl2.format(util.t.lTZBit, { help_article: articleURL });
   const obj3 = { style: tmp.upsellImage, source: null, resizeMode: "contain" };
-  obj3.source = _modDef15306;
+  obj3.source = _modDef15315;
   obj2.img = jsx(FastImageDefault, { style: tmp.upsellImage, source: null, resizeMode: "contain" });
   obj2.newIndicatorDismissibleContent = dismissible_content.DismissibleContent.PS_ONE_WAY_RECONNECT;
   obj2.onPress = function onPress() {

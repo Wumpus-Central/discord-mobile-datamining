@@ -1,6 +1,6 @@
-// === Module 6431: ? ===
+// === Module 6433: ? ===
 
-// Module 6431
+// Module 6433
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GemLeftUpwards3dIllustration-2x.png.js");

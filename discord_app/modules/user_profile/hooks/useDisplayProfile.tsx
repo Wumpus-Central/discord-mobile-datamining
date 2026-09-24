@@ -1,11 +1,11 @@
-// === Module 8530: useDisplayProfile ===
+// === Module 8534: useDisplayProfile ===
 
-// Module 8530 (useDisplayProfile)
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8531 */;
-import DisplayProfileDefault from "DisplayProfile" /* 8533 */;
+// Module 8534 (useDisplayProfile)
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8535 */;
+import DisplayProfileDefault from "DisplayProfile" /* 8537 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
-import UserProfileStore from "UserProfileStore" /* 7943 */;
+import UserProfileStore from "UserProfileStore" /* 7945 */;
 
 const require = globalThis.__r;
 

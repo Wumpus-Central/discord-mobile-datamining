@@ -1,10 +1,10 @@
-// === Module 12767: useEmojiSuggestions ===
+// === Module 12776: useEmojiSuggestions ===
 
-// Module 12767 (useEmojiSuggestions)
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5745 */;
+// Module 12776 (useEmojiSuggestions)
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5747 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5762 */;
+import EmojiStore from "EmojiStore" /* 5764 */;
 
 const require = fn;
 function findWordSpan(text, selectionStart, selectionEnd) {
@@ -45,8 +45,8 @@ function findWordSpan(text, selectionStart, selectionEnd) {
     return obj3;
   }
 }
-const LoadState = fn(5762).LoadState;
-const EMOJI_SENTINEL = fn(5296).EMOJI_SENTINEL;
+const LoadState = fn(5764).LoadState;
+const EMOJI_SENTINEL = fn(5298).EMOJI_SENTINEL;
 const EmojiIntention = fn(1375).EmojiIntention;
 const re9 = /(\S+)\s$/;
 let closure_10 = { unlockedEmojis: [], lockedEmojis: [], queryStart: 0, queryEnd: 0 };

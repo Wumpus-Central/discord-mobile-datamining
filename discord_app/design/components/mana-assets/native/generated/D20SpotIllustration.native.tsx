@@ -1,9 +1,9 @@
-// === Module 6210: D20SpotIllustration ===
+// === Module 6212: D20SpotIllustration ===
 
-// Module 6210 (D20SpotIllustration)
+// Module 6212 (D20SpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5890 */;
-import _modDef6211 from "module_6211" /* 6211 */;
+import FastImageDefault from "FastImage" /* 5892 */;
+import _modDef6213 from "module_6213" /* 6213 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const D20SpotIllustration = function D20SpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6211 };
+  const obj2 = { uri: _modDef6213 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

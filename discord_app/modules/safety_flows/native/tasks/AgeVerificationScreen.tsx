@@ -1,9 +1,9 @@
-// === Module 18417: AgeVerificationScreen ===
+// === Module 18440: AgeVerificationScreen ===
 
-// Module 18417 (AgeVerificationScreen)
+// Module 18440 (AgeVerificationScreen)
 import Server from "Server" /* 1978 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8759 */;
-import types from "types" /* 18404 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8763 */;
+import types from "types" /* 18427 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -11,7 +11,7 @@ require = fn;
 const Pressable = fn(17).Pressable;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsx = fn(21).jsx;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let closure_8 = createStyles.createStyles({ helpLink: { textAlign: "center" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/safety_flows/native/tasks/AgeVerificationScreen.tsx");

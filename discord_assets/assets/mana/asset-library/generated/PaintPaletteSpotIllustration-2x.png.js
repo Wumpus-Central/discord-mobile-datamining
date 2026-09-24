@@ -1,6 +1,6 @@
-// === Module 6667: ? ===
+// === Module 6669: ? ===
 
-// Module 6667
+// Module 6669
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PaintPaletteSpotIllustration-2x.png.js");

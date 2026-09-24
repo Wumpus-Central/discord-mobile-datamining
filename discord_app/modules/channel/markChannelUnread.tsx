@@ -1,13 +1,13 @@
-// === Module 10589: markChannelUnread ===
+// === Module 10594: markChannelUnread ===
 
-// Module 10589 (markChannelUnread)
-import markUnreadDefault from "markUnread" /* 10590 */;
-import ReadStateStore from "ReadStateStore" /* 4842 */;
+// Module 10594 (markChannelUnread)
+import markUnreadDefault from "markUnread" /* 10595 */;
+import ReadStateStore from "ReadStateStore" /* 4844 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ReadState = fn(4842).ReadState;
+const ReadState = fn(4844).ReadState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/markChannelUnread.tsx");
 

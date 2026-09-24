@@ -1,11 +1,11 @@
-// === Module 6240: DiscordWordmarkLogo ===
+// === Module 6242: DiscordWordmarkLogo ===
 
-// Module 6240 (DiscordWordmarkLogo)
+// Module 6242 (DiscordWordmarkLogo)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4524 */;
-import _modDef6241 from "module_6241" /* 6241 */;
+import useToken from "useToken" /* 4526 */;
+import _modDef6243 from "module_6243" /* 6243 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -42,7 +42,7 @@ export const DiscordWordmarkLogo = function DiscordWordmarkLogo(color) {
     tmp5 = null != ICON_STRONG && typeof ICON_STRONG === "string";
   }
   const obj4 = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj4.source = { uri: _modDef6241 };
+  obj4.source = { uri: _modDef6243 };
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size, tmp6];
   obj4.style = items;

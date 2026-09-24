@@ -1,10 +1,10 @@
-// === Module 10574: ExpressiveGradient ===
+// === Module 10579: ExpressiveGradient ===
 
-// Module 10574 (ExpressiveGradient)
+// Module 10579 (ExpressiveGradient)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
-import useToken from "useToken" /* 4524 */;
-import LinearGradientDefault from "LinearGradient" /* 5283 */;
+import useToken from "useToken" /* 4526 */;
+import LinearGradientDefault from "LinearGradient" /* 5285 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

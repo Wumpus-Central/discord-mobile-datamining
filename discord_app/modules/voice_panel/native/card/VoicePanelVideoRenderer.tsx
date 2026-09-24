@@ -1,14 +1,14 @@
-// === Module 17678: VoicePanelVideoRenderer ===
+// === Module 17701: VoicePanelVideoRenderer ===
 
-// Module 17678 (VoicePanelVideoRenderer)
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4559 */;
-import timing from "timing" /* 4828 */;
-import spring from "spring" /* 5270 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6983 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9743 */;
-import DCDVideoRendererDefault from "DCDVideoRenderer" /* 9782 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11697 */;
-import VideoActionCreators from "VideoActionCreators" /* 17548 */;
+// Module 17701 (VoicePanelVideoRenderer)
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4561 */;
+import timing from "timing" /* 4830 */;
+import spring from "spring" /* 5272 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6985 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9747 */;
+import DCDVideoRendererDefault from "DCDVideoRenderer" /* 9786 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11703 */;
+import VideoActionCreators from "VideoActionCreators" /* 17571 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,12 +16,12 @@ const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 const PixelRatio = fn(17).PixelRatio;
-const VoicePanelConstants = fn(12606);
+const VoicePanelConstants = fn(12615);
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
-const VoicePanelControlsModes = fn(12604).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17633).VoicePanelPIPModes;
-let SCALE_PHYSICS = fn(12607).SCALE_PHYSICS;
+const VoicePanelControlsModes = fn(12613).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17656).VoicePanelPIPModes;
+let SCALE_PHYSICS = fn(12616).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = 25;
@@ -41,7 +41,7 @@ function getScaleChangeWithOverscroll(arg0, arg1, arg2) {
 getScaleChangeWithOverscroll.__closure = { MIN_OVERSCROLL: 0.1, OVERSCOLL_INTENSITY_FACTOR: 5 };
 getScaleChangeWithOverscroll.__workletHash = 8727721301304;
 getScaleChangeWithOverscroll.__initData = { code: "function getScaleChangeWithOverscroll_VoicePanelVideoRendererTsx1(currentScale,scaleChange,fitScale){const{MIN_OVERSCROLL,OVERSCOLL_INTENSITY_FACTOR}=this.__closure;if(currentScale>=fitScale){return scaleChange;}const underScale=1-currentScale;const factor=Math.max(MIN_OVERSCROLL,1-underScale*underScale*OVERSCOLL_INTENSITY_FACTOR);return 1+(scaleChange-1)*factor;}" };
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let closure_18 = createStyles.createStyles({ wrapper: { position: "absolute", top: 0, left: 0, width: "100%", height: "100%", alignItems: "center", justifyContent: "center" }, animatedWrapperStyles: { position: "absolute" }, video: { width: "100%", height: "100%" }, spinner: { position: "absolute", top: "50%", left: "50%", marginTop: -16, marginLeft: -16, height: 32, width: 32 } });
 let closure_19 = { code: "function VoicePanelVideoRendererTsx2(){const{containerLayout,videoDimensions}=this.__closure;return Math.max(containerLayout.get().width/videoDimensions.get().width,containerLayout.get().height/videoDimensions.get().height);}" };
 let closure_20 = { code: "function VoicePanelVideoRendererTsx3(){const{containerLayout,videoDimensions}=this.__closure;return Math.min(containerLayout.get().width/videoDimensions.get().width,containerLayout.get().height/videoDimensions.get().height);}" };

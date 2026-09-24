@@ -1,6 +1,6 @@
-// === Module 5026: GuildRoomErrorUtils ===
+// === Module 5028: GuildRoomErrorUtils ===
 
-// Module 5026 (GuildRoomErrorUtils)
+// Module 5028 (GuildRoomErrorUtils)
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

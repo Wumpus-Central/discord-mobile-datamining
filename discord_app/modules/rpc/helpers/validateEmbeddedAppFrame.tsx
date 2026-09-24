@@ -1,12 +1,12 @@
-// === Module 14828: validateEmbeddedAppFrame ===
+// === Module 14837: validateEmbeddedAppFrame ===
 
-// Module 14828 (validateEmbeddedAppFrame)
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9211 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 9391 */;
-import RPCErrorDefault from "RPCError" /* 9660 */;
-import RPCHelpers from "RPCHelpers" /* 9665 */;
-import FramesStore from "FramesStore" /* 9389 */;
-import VibegrationsBuilderPreviewStore from "VibegrationsBuilderPreviewStore" /* 14829 */;
+// Module 14837 (validateEmbeddedAppFrame)
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9215 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 9395 */;
+import RPCErrorDefault from "RPCError" /* 9664 */;
+import RPCHelpers from "RPCHelpers" /* 9669 */;
+import FramesStore from "FramesStore" /* 9393 */;
+import VibegrationsBuilderPreviewStore from "VibegrationsBuilderPreviewStore" /* 14838 */;
 
 require = fn;
 function validateEmbeddedAppFrame(transport) {
@@ -26,7 +26,7 @@ function validateEmbeddedAppFrame(transport) {
           if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL !== type) {
             if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
               if (tmp35.applicationId === VibegrationsBuilderPreviewStore.getBuilderPreviewApplicationId()) {
-                let obj5 = { channelId: "Array", guildId: "flex" };
+                let obj5 = { channelId: "channel", guildId: "channelId" };
               } else {
                 obj5 = null;
               }
@@ -57,10 +57,10 @@ function validateEmbeddedAppFrame(transport) {
   }
   obj3 = ApplicationFlagUtils;
 }
-const TransportTypes = fn(4731).TransportTypes;
+const TransportTypes = fn(4733).TransportTypes;
 const Constants = fn(1074);
 ({ ApplicationFlags: metroRequire, RPCErrors: closure_7 } = Constants);
-const asLaunched = fn(9390).asLaunched;
+const asLaunched = fn(9394).asLaunched;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/helpers/validateEmbeddedAppFrame.tsx");
 

@@ -1,16 +1,16 @@
-// === Module 14833: application ===
+// === Module 14842: application ===
 
-// Module 14833 (application)
+// Module 14842 (application)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import TestModeUtils from "TestModeUtils" /* 9209 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9211 */;
-import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 9645 */;
-import RPCErrorDefault from "RPCError" /* 9660 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9663 */;
-import RPCHelpers from "RPCHelpers" /* 9665 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14834 */;
-import ApplicationStore from "ApplicationStore" /* 5054 */;
+import TestModeUtils from "TestModeUtils" /* 9213 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9215 */;
+import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 9649 */;
+import RPCErrorDefault from "RPCError" /* 9664 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9667 */;
+import RPCHelpers from "RPCHelpers" /* 9669 */;
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14843 */;
+import ApplicationStore from "ApplicationStore" /* 5056 */;
 
 require = fn;
 const Constants = fn(1074);
@@ -69,13 +69,13 @@ export default {
     }
   },
   [RPCCommands.GET_APPLICATION_TICKET]: {
-    scope: fn(4731).RPC_LOCAL_SCOPE,
+    scope: fn(4733).RPC_LOCAL_SCOPE,
     handler(socket) {
       const id = socket.socket.application.id;
       if (null == id) {
         const obj = { errorCode: constants2.INVALID_COMMAND };
-        const tmp7 = new RPCErrorDefault(obj, "No application.");
-        throw tmp7;
+        const tmp10 = new RPCErrorDefault(obj, "No application.");
+        throw tmp10;
       } else {
         const HTTP = HTTPUtils.HTTP;
         const request = { url: hasOwnProperty.APPLICATION_TICKET(id), body: null, retries: 3, oldFormErrors: true, rejectWithError: false };

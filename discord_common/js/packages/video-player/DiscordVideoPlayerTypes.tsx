@@ -1,6 +1,6 @@
-// === Module 8027: DiscordVideoPlayerTypes ===
+// === Module 8029: DiscordVideoPlayerTypes ===
 
-// Module 8027 (DiscordVideoPlayerTypes)
+// Module 8029 (DiscordVideoPlayerTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/video-player/DiscordVideoPlayerTypes.tsx");

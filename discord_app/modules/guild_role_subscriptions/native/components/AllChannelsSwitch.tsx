@@ -1,15 +1,15 @@
-// === Module 18301: AllChannelsSwitch ===
+// === Module 18324: AllChannelsSwitch ===
 
-// Module 18301 (AllChannelsSwitch)
+// Module 18324 (AllChannelsSwitch)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4541 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 10090 */;
-import _modDef18302 from "module_18302" /* 18302 */;
-import _modDef18303 from "module_18303" /* 18303 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4543 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 10095 */;
+import _modDef18325 from "module_18325" /* 18325 */;
+import _modDef18326 from "module_18326" /* 18326 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 5827 */;
+import TextStyles_mod from "TextStyles" /* 5829 */;
 
 const require = globalThis.__r;
 
@@ -44,11 +44,11 @@ function Row(arg0) {
   return timestampProducer(tmp6, obj2);
 }
 const View = fn(17).View;
-const AllChannelAccessOptions = fn(15563).AllChannelAccessOptions;
+const AllChannelAccessOptions = fn(15577).AllChannelAccessOptions;
 const Fonts = fn(1074).Fonts;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm }, row: { alignSelf: "stretch", alignItems: "center", flexDirection: "row", justifyContent: "flex-start", padding: 16 }, rowLabel: null, rowLabelSelected: null, rowIndicator: null, separator: null };
 let obj4 = {};
 let TextStyles = TextStyles_mod;
@@ -76,7 +76,7 @@ export default function AllChannelsSwitch(style) {
   const obj = { style: null, accessibilityRole: "radiogroup", accessibilityState: { disabled }, children: null };
   const items = [tmp.container, style.style];
   obj.style = items;
-  const obj2 = { icon: _modDef18302, label: null, selected: null, onPress: null, disabled: null };
+  const obj2 = { icon: _modDef18325, label: null, selected: null, onPress: null, disabled: null };
   const intl = util.intl;
   obj2.label = intl.string(util.t["vs2T+B"]);
   obj2.selected = channelAccessFormat === AllChannelAccessOptions.SOME_CHANNELS_ACCESS;
@@ -85,7 +85,7 @@ export default function AllChannelsSwitch(style) {
   };
   obj2.disabled = disabled;
   const items1 = [closure_5(Row, obj2), closure_5(View, { style: tmp.separator }), ];
-  const obj4 = { icon: _modDef18303, label: null, selected: null, onPress: null, disabled: null };
+  const obj4 = { icon: _modDef18326, label: null, selected: null, onPress: null, disabled: null };
   const intl2 = util.intl;
   obj4.label = intl2.string(util.t.l4Tr7X);
   obj4.selected = channelAccessFormat === AllChannelAccessOptions.ALL_CHANNELS_ACCESS;

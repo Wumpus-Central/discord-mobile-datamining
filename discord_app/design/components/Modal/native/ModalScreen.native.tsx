@@ -1,13 +1,13 @@
-// === Module 8768: ModalScreen ===
+// === Module 8772: ModalScreen ===
 
-// Module 8768 (ModalScreen)
+// Module 8772 (ModalScreen)
 import nativeDefault from "native" /* 576 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7312 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7314 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 const obj2 = { container: { flex: 1, flexDirection: "column", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);

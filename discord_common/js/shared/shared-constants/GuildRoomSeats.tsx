@@ -1,6 +1,6 @@
-// === Module 4987: GuildRoomSeats ===
+// === Module 4989: GuildRoomSeats ===
 
-// Module 4987 (GuildRoomSeats)
+// Module 4989 (GuildRoomSeats)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/GuildRoomSeats.tsx");

@@ -1,8 +1,8 @@
-// === Module 7643: isAccessibleNonStaticChannelPath ===
+// === Module 7645: isAccessibleNonStaticChannelPath ===
 
-// Module 7643 (isAccessibleNonStaticChannelPath)
-import LinkUtils from "LinkUtils" /* 4981 */;
-import GatedChannelStore from "GatedChannelStore" /* 2097 */;
+// Module 7645 (isAccessibleNonStaticChannelPath)
+import LinkUtils from "LinkUtils" /* 4983 */;
+import GatedChannelStore from "GatedChannelStore" /* 2099 */;
 
 require = fn;
 const size = fn(2);

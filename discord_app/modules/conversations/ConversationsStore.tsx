@@ -1,18 +1,18 @@
-// === Module 7926: ConversationsStore ===
+// === Module 7928: ConversationsStore ===
 
-// Module 7926 (ConversationsStore)
+// Module 7928 (ConversationsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import privDefault from "priv" /* 1438 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5049 */;
-import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 7925 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5051 */;
+import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 7927 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2042 */;
-import RelationshipStore from "RelationshipStore" /* 4472 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2096 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import RelationshipStore from "RelationshipStore" /* 4474 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
 import UserStore from "UserStore" /* 1372 */;
-import ConversationVisibilityStore from "ConversationVisibilityStore" /* 7927 */;
+import ConversationVisibilityStore from "ConversationVisibilityStore" /* 7929 */;
 
 require = fn;
 function removePendingListFetch(channelId, requestKey) {
@@ -219,7 +219,7 @@ function evictChannel(arg0) {
   }
   return hasItem;
 }
-const ConversationConstants = fn(7923);
+const ConversationConstants = fn(7925);
 ({ CONVERSATION_COLORS: closure_9, CONVERSATION_FEEDBACK_RATINGS_CACHE_MAX: c10, MAX_CONVERSATIONS_PER_CHANNEL: closure_11, MAX_CHANNELS_WITH_CONVERSATIONS } = ConversationConstants);
 const navigation = new privDefault({
   max: MAX_CHANNELS_WITH_CONVERSATIONS,
@@ -229,6 +229,8 @@ const navigation = new privDefault({
 });
 let map = new Map();
 let map1 = new Map();
+let closure_16 = 0;
+let closure_17 = 0;
 const Store = initializeDefault.Store;
 class ConversationsStore extends Store {
 }
@@ -327,6 +329,14 @@ prototype["getSelectedConversationId"] = function getSelectedConversationId(arg0
     prop = null;
   }
   return prop;
+};
+prototype["consumeFocusRequest"] = function consumeFocusRequest() {
+  let flag = closure_16 !== closure_17;
+  if (flag) {
+    closure_17 = closure_16;
+    flag = true;
+  }
+  return flag;
 };
 prototype["getSelectedConversation"] = function getSelectedConversation(arg0) {
   const peekResult = navigation.peek(arg0);
@@ -551,7 +561,7 @@ const conversationsStore = new ConversationsStore(DispatcherDefault, {
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated } = requestKey);
     let set;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
-      const mapped = rawConversations.map(set(7924).mapConversation);
+      const mapped = rawConversations.map(set(7926).mapConversation);
       const found = mapped.filter(set(1370).isNotNullish);
       const peekResult = navigation.peek(channelId);
       if (isJump) {
@@ -1037,6 +1047,10 @@ const conversationsStore = new ConversationsStore(DispatcherDefault, {
       }
       return flag;
     }
+  },
+  CONVERSATION_FOCUS_REQUEST: function handleConversationFocusRequest() {
+    closure_16 = closure_16 + 1;
+    return true;
   },
   CLEAR_CONVERSATION_SELECTION: function handleClearConversationSelection(conversationId) {
     conversationId = conversationId.conversationId;

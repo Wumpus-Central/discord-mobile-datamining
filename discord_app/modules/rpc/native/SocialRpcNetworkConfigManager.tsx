@@ -1,13 +1,13 @@
-// === Module 18361: SocialRpcNetworkConfigManager ===
+// === Module 18384: SocialRpcNetworkConfigManager ===
 
-// Module 18361 (SocialRpcNetworkConfigManager)
+// Module 18384 (SocialRpcNetworkConfigManager)
 import _mod17 from "module_17" /* 17 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import LocaleStore from "LocaleStore" /* 2109 */;
+import LocaleStore from "LocaleStore" /* 2111 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7449 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7451 */;
 import size from "module_2" /* 2 */;
 
 function updateSocialRpcNetworkConfig() {

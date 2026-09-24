@@ -1,6 +1,6 @@
-// === Module 17030: vibegrationsPreviewModes ===
+// === Module 17058: vibegrationsPreviewModes ===
 
-// Module 17030 (vibegrationsPreviewModes)
+// Module 17058 (vibegrationsPreviewModes)
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

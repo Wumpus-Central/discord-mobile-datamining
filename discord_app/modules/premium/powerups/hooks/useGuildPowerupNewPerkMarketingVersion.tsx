@@ -1,16 +1,16 @@
-// === Module 12843: useGuildPowerupNewPerkMarketingVersion ===
+// === Module 12852: useGuildPowerupNewPerkMarketingVersion ===
 
-// Module 12843 (useGuildPowerupNewPerkMarketingVersion)
-import Powerups from "Powerups" /* 4719 */;
-import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 9937 */;
+// Module 12852 (useGuildPowerupNewPerkMarketingVersion)
+import Powerups from "Powerups" /* 4721 */;
+import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 9942 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2064 */;
-import PermissionStore from "PermissionStore" /* 4462 */;
+import GuildStore from "GuildStore" /* 2066 */;
+import PermissionStore from "PermissionStore" /* 4464 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(4716);
+const GuildPowerupsConstants = fn(4718);
 ({ GuildPowerupNewPerkMarketingVersion: hasOwnProperty, NEW_PERK_MARKETING_VERSION_TO_POWERUP_SKU_ID_SET: metroRequire } = GuildPowerupsConstants);
 const Constants = fn(1074);
 ({ GuildFeatures: closure_7, Permissions: closure_8 } = Constants);

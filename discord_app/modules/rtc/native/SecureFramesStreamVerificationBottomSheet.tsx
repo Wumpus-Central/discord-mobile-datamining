@@ -1,10 +1,10 @@
-// === Module 10065: SecureFramesStreamVerificationBottomSheet ===
+// === Module 10070: SecureFramesStreamVerificationBottomSheet ===
 
-// Module 10065 (SecureFramesStreamVerificationBottomSheet)
-import showShareActionSheet from "showShareActionSheet" /* 8707 */;
-import SecureFramesTracking from "SecureFramesTracking" /* 10060 */;
+// Module 10070 (SecureFramesStreamVerificationBottomSheet)
+import showShareActionSheet from "showShareActionSheet" /* 8711 */;
+import SecureFramesTracking from "SecureFramesTracking" /* 10065 */;
 import noop from "module_19" /* 19 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4866 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4868 */;
 
 require = fn;
 const AnalyticsSections = fn(1074).AnalyticsSections;
@@ -38,8 +38,8 @@ export default function SecureFramesStreamVerificationBottomSheet(channelId) {
   obj2.subtitle = intl2.string(channelId(1115).t.qODBkW);
   const intl3 = channelId(1115).intl;
   const obj3 = { helpArticle: null };
-  const tmp3 = streamKey(10066);
-  obj3.helpArticle = channelId(10049).getSecureFramesHelpdeskArticle();
+  const tmp3 = streamKey(10071);
+  obj3.helpArticle = channelId(10054).getSecureFramesHelpdeskArticle();
   obj2.footer = intl3.format(channelId(1115).t["H3+ktv"], obj3);
   obj2.epochAuthenticator = stateFromStores;
   obj2.onShareClick = callback;

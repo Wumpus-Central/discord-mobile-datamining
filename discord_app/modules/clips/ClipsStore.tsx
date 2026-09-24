@@ -5,10 +5,10 @@ import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import FlagUtils from "FlagUtils" /* 1385 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
-import DiscordNativeDefault from "DiscordNative" /* 4443 */;
-import clipPOVOverlap from "clipPOVOverlap" /* 14350 */;
-import DistributedClipsExperimentDefault from "DistributedClipsExperiment" /* 14352 */;
-import AutoclippingDefaultOverrideExperiment2 from "AutoclippingDefaultOverrideExperiment" /* 14353 */;
+import DiscordNativeDefault from "DiscordNative" /* 4445 */;
+import clipPOVOverlap from "clipPOVOverlap" /* 14359 */;
+import DistributedClipsExperimentDefault from "DistributedClipsExperiment" /* 14361 */;
+import AutoclippingDefaultOverrideExperiment2 from "AutoclippingDefaultOverrideExperiment" /* 14362 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import RunningGameStore from "RunningGameStore" /* 1999 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -241,11 +241,11 @@ function trackClipMessage(message) {
   }
   obj = DistributedClipsExperimentDefault;
 }
-const ClipsConstants = fn(5434);
+const ClipsConstants = fn(5436);
 ({ CLIPS_HARDWARE_CLASSIFICATION_VERSION: metroRequire, ClipSaveTypes: closure_7, ClipsUserEducationType: closure_8, ClipsLogger: closure_9, MAX_SIMULTANEOUS_SAVE_CLIP_OPERATIONS: c10, ClipsHardwareClassification: closure_11, ClipsSaveNoOpReason: closure_12, ClipsLengthSettings, DEFAULT_CLIPS_BITRATE_PERCENT } = ClipsConstants);
 const Constants = fn(1074);
 ({ MessageAttachmentFlags: map1, MessageReferenceTypes: closure_14, VoiceFlags: closure_15 } = Constants);
-const StreamSettingsConstants = fn(4874);
+const StreamSettingsConstants = fn(4876);
 let c16 = "default";
 let c17 = "Discord Clips";
 const dependencyMap = {};

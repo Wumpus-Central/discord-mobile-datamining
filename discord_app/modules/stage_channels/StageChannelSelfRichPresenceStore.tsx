@@ -1,22 +1,22 @@
-// === Module 9706: StageChannelSelfRichPresenceStore ===
+// === Module 9710: StageChannelSelfRichPresenceStore ===
 
-// Module 9706 (StageChannelSelfRichPresenceStore)
+// Module 9710 (StageChannelSelfRichPresenceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import _modDef1331 from "module_1331" /* 1331 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4467 */;
-import useChannelName from "useChannelName" /* 4980 */;
-import StageMediaHooks from "StageMediaHooks" /* 5720 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 5728 */;
-import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 9707 */;
-import ChannelStore from "ChannelStore" /* 2042 */;
-import GuildStore from "GuildStore" /* 2064 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4850 */;
-import RelationshipStore from "RelationshipStore" /* 4472 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2096 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4469 */;
+import useChannelName from "useChannelName" /* 4982 */;
+import StageMediaHooks from "StageMediaHooks" /* 5722 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 5730 */;
+import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 9711 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import GuildStore from "GuildStore" /* 2066 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4852 */;
+import RelationshipStore from "RelationshipStore" /* 4474 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
 import UserStore from "UserStore" /* 1372 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5721 */;
-import StageInstanceStore from "StageInstanceStore" /* 2047 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5723 */;
+import StageInstanceStore from "StageInstanceStore" /* 2049 */;
 
 require = fn;
 function handleUpdateActivity() {
@@ -115,7 +115,7 @@ function handleUpdateActivity() {
   }
   return flag;
 }
-const STAGE_APPLICATION_ID = fn(5717).STAGE_APPLICATION_ID;
+const STAGE_APPLICATION_ID = fn(5719).STAGE_APPLICATION_ID;
 const Constants = fn(1074);
 ({ ActivityTypes: map1, GuildFeatures: closure_14, Permissions: closure_15, RTCConnectionStates: closure_16 } = Constants);
 let obj = null;

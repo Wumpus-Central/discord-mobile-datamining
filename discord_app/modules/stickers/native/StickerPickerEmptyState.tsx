@@ -1,14 +1,14 @@
-// === Module 10754: StickerPickerEmptyState ===
+// === Module 10760: StickerPickerEmptyState ===
 
-// Module 10754 (StickerPickerEmptyState)
+// Module 10760 (StickerPickerEmptyState)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import HapticUtils from "HapticUtils" /* 4795 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4796 */;
-import StickerDefault from "Sticker" /* 10518 */;
-import StickersHooks from "StickersHooks" /* 10728 */;
+import HapticUtils from "HapticUtils" /* 4797 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4798 */;
+import StickerDefault from "Sticker" /* 10523 */;
+import StickersHooks from "StickersHooks" /* 10733 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 5805 */;
+import StickersStore from "StickersStore" /* 5807 */;
 
 const require = globalThis.__r;
 
@@ -29,7 +29,7 @@ const Constants = fn(1074);
 const PremiumUpsellTypes = fn(1374).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let closure_13 = createStyles.createStyles({ header: { marginBottom: 8, textAlign: "center" }, blurb: { lineHeight: 18, textAlign: "center", marginBottom: 12 }, premiumButton: { marginTop: 20, alignSelf: "center", paddingLeft: 5, paddingRight: 10, flexGrow: 0 }, nitroWheel: { width: 32 }, stickersRow: { flexDirection: "row", alignSelf: "center" }, sticker: { paddingHorizontal: 2 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stickers/native/StickerPickerEmptyState.tsx");
@@ -39,8 +39,8 @@ export default function _default() {
   _require = tmp;
   const fetchStickerPacks = require("StickersHooks").useFetchStickerPacks();
   let obj = require("StickersHooks");
-  analyticsLocations = analyticsLocations(7493)(analyticsLocations(7513).EMPTY_STATE).analyticsLocations;
-  const tmp3 = analyticsLocations(7493);
+  analyticsLocations = analyticsLocations(7495)(analyticsLocations(7515).EMPTY_STATE).analyticsLocations;
+  const tmp3 = analyticsLocations(7495);
   const items = [StickersStore];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     const mapped = EMPTY_STATE_STICKERS.map((item) => stickerById.getStickerById(item));
@@ -79,7 +79,7 @@ export default function _default() {
       if (sticker != null) {
         id = sticker.id;
       }
-      return closure_1_11(sticker(5425).PressableOpacity, obj, id);
+      return closure_1_11(sticker(5427).PressableOpacity, obj, id);
     })
   });
   const obj7 = { style: tmp.premiumButton, children: null };
@@ -101,16 +101,16 @@ export default function _default() {
       if (sticker != null) {
         id = sticker.id;
       }
-      return closure_1_11(sticker(5425).PressableOpacity, obj, id);
+      return closure_1_11(sticker(5427).PressableOpacity, obj, id);
     })
   };
-  obj9.source = analyticsLocations(9551);
+  obj9.source = analyticsLocations(9555);
   obj9.style = tmp.nitroWheel;
-  obj8.icon = closure_11(analyticsLocations(5890), obj9);
+  obj8.icon = closure_11(analyticsLocations(5892), obj9);
   const intl3 = require("util").intl;
   obj8.text = intl3.string(require("util").t.pj0XBN);
   obj8.onPress = function onPress() {
-    return analyticsLocations(10748)({ section: constants.EXPRESSION_PICKER });
+    return analyticsLocations(10754)({ section: constants.EXPRESSION_PICKER });
   };
   obj7.children = closure_11(require("components/Button/Button").Button, obj8);
   items2[3] = closure_11(View, obj7);

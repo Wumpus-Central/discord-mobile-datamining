@@ -1,6 +1,6 @@
-// === Module 6223: ? ===
+// === Module 6225: ? ===
 
-// Module 6223
+// Module 6225
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DevQuestsWideAbstractUI-2x.png.js");

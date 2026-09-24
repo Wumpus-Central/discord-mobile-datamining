@@ -1,8 +1,8 @@
-// === Module 9000: useIsInAdultAgeGroup ===
+// === Module 9004: useIsInAdultAgeGroup ===
 
-// Module 9000 (useIsInAdultAgeGroup)
+// Module 9004 (useIsInAdultAgeGroup)
 import initialize from "initialize" /* 504 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7865 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7867 */;
 
 require = fn;
 const size = fn(2);

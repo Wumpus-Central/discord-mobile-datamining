@@ -1,19 +1,19 @@
-// === Module 17268: ThreadListEmpty ===
+// === Module 17291: ThreadListEmpty ===
 
-// Module 17268 (ThreadListEmpty)
+// Module 17291 (ThreadListEmpty)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4823 */;
-import components_Button_Button from "components/Button/Button" /* 5271 */;
-import _modDef12571 from "module_12571" /* 12571 */;
+import Text_Text from "Text/Text" /* 4825 */;
+import components_Button_Button from "components/Button/Button" /* 5273 */;
+import _modDef12580 from "module_12580" /* 12580 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj = { container: { flex: 1, justifyContent: "center", alignItems: "center" }, iconWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.round, padding: 12 }, title: { textAlign: "center", marginTop: 16, marginHorizontal: 16 }, subtext: { textAlign: "center", marginTop: 4, marginHorizontal: 16, marginBottom: 16 } };
 let closure_6 = createStyles.createStyles(obj);
 const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.round, padding: 12 };
@@ -24,7 +24,7 @@ export default noop.memo((onCreateThreadPress) => {
   onCreateThreadPress = onCreateThreadPress.onCreateThreadPress;
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
-  const obj2 = { style: tmp.iconWrapper, children: React4(native.Icon, { source: _modDef12571, size: native.Icon.Sizes.MEDIUM }) };
+  const obj2 = { style: tmp.iconWrapper, children: React4(native.Icon, { source: _modDef12580, size: native.Icon.Sizes.MEDIUM }) };
   const items = [React4(View, obj2), , , ];
   const obj4 = { style: tmp.title, accessibilityRole: "header", maxFontSizeMultiplier: 2, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;

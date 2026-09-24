@@ -1,6 +1,6 @@
-// === Module 5876: MemberVerificationFormConstants ===
+// === Module 5878: MemberVerificationFormConstants ===
 
-// Module 5876 (MemberVerificationFormConstants)
+// Module 5878 (MemberVerificationFormConstants)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1478 */;
 import size from "module_2" /* 2 */;
 

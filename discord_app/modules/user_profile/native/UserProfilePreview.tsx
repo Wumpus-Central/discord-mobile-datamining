@@ -1,11 +1,11 @@
-// === Module 11457: UserProfilePreview ===
+// === Module 11463: UserProfilePreview ===
 
-// Module 11457 (UserProfilePreview)
+// Module 11463 (UserProfilePreview)
 import nativeDefault from "native" /* 576 */;
-import scaleProfileFrameDefault from "scaleProfileFrame" /* 8568 */;
+import scaleProfileFrameDefault from "scaleProfileFrame" /* 8572 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8504 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8508 */;
 
 const require = globalThis.__r;
 
@@ -14,11 +14,11 @@ function filterLayer(responsive) {
   return true !== responsive.responsive;
 }
 const View = fn(17).View;
-const Constants = fn(7539);
+const Constants = fn(7541);
 ({ PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: closure_7, UserProfileThemeTypes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let closure_12 = createStyles.createStyles((arg0, arg1, arg2) => {
   let num = arg2;
   if (arg2 == null) {

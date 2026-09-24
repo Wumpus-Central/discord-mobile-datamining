@@ -1,11 +1,11 @@
-// === Module 8042: SessionAdGenerator ===
+// === Module 8044: SessionAdGenerator ===
 
-// Module 8042 (SessionAdGenerator)
+// Module 8044 (SessionAdGenerator)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
 import v1 from "v1" /* 1255 */;
-import SessionUtils from "SessionUtils" /* 7799 */;
+import SessionUtils from "SessionUtils" /* 7801 */;
 
 require = fn;
 let closure_3 = 12 * DurationsDefault.Millis.HOUR;

@@ -1,8 +1,8 @@
-// === Module 7815: KvMessage ===
+// === Module 7817: KvMessage ===
 
-// Module 7815 (KvMessage)
+// Module 7817 (KvMessage)
 import _slicedToArray from "module_32" /* 32 */;
-import GuildMemberStore from "GuildMemberStore" /* 2105 */;
+import GuildMemberStore from "GuildMemberStore" /* 2107 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;

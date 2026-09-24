@@ -1,11 +1,11 @@
-// === Module 9908: useGuildEmbeddedApplications ===
+// === Module 9913: useGuildEmbeddedApplications ===
 
-// Module 9908 (useGuildEmbeddedApplications)
+// Module 9913 (useGuildEmbeddedApplications)
 import DurationsDefault from "Durations" /* 1091 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7494 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7496 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5054 */;
+import ApplicationStore from "ApplicationStore" /* 5056 */;
 
 const require = fn;
 const initialize = fn(504);

@@ -1,19 +1,19 @@
-// === Module 10178: Autocompleter ===
+// === Module 10183: Autocompleter ===
 
-// Module 10178 (Autocompleter)
+// Module 10183 (Autocompleter)
 import _modDef12 from "module_12" /* 12 */;
 import URLUtilsDefault from "URLUtils" /* 1366 */;
 import _modDef1929 from "module_1929" /* 1929 */;
 import StringUtils from "StringUtils" /* 2010 */;
-import findCodedLinks from "findCodedLinks" /* 4810 */;
-import CodedLink from "CodedLink" /* 4815 */;
-import AutocompleteUtils from "AutocompleteUtils" /* 5745 */;
-import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 5821 */;
-import GuildUtilsDefault from "GuildUtils" /* 5822 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 10181 */;
-import ThreadMemberListStore from "ThreadMemberListStore" /* 10179 */;
-import LinkRecord from "LinkRecord" /* 10180 */;
-import RelationshipStore from "RelationshipStore" /* 4472 */;
+import findCodedLinks from "findCodedLinks" /* 4812 */;
+import CodedLink from "CodedLink" /* 4817 */;
+import AutocompleteUtils from "AutocompleteUtils" /* 5747 */;
+import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 5823 */;
+import GuildUtilsDefault from "GuildUtils" /* 5824 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 10186 */;
+import ThreadMemberListStore from "ThreadMemberListStore" /* 10184 */;
+import LinkRecord from "LinkRecord" /* 10185 */;
+import RelationshipStore from "RelationshipStore" /* 4474 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const AutocompleteUtilsDefault = AutocompleteUtils;
@@ -27,8 +27,8 @@ function getAutocompleterBoosterMap(USER, options) {
   }
   return boosterMap;
 }
-const GUILD_VOCAL_CHANNELS_KEY = fn(4460).GUILD_VOCAL_CHANNELS_KEY;
-fn(5818).AutocompleterResultTypes;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4462).GUILD_VOCAL_CHANNELS_KEY;
+fn(5820).AutocompleterResultTypes;
 const React7 = Object.freeze({});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/autocompleter/Autocompleter.tsx");

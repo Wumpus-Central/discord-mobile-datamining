@@ -1,6 +1,6 @@
-// === Module 6921: PromoEmailConsentStore ===
+// === Module 6923: PromoEmailConsentStore ===
 
-// Module 6921 (PromoEmailConsentStore)
+// Module 6923 (PromoEmailConsentStore)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

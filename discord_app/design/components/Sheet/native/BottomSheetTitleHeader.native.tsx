@@ -1,11 +1,11 @@
-// === Module 7480: BottomSheetTitleHeader ===
+// === Module 7482: BottomSheetTitleHeader ===
 
-// Module 7480 (BottomSheetTitleHeader)
+// Module 7482 (BottomSheetTitleHeader)
 import nativeDefault from "native" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1478 */;
-import useToken from "useToken" /* 4524 */;
-import Text_Text from "Text/Text" /* 4823 */;
-import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 5928 */;
+import useToken from "useToken" /* 4526 */;
+import Text_Text from "Text/Text" /* 4825 */;
+import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 5930 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -105,19 +105,19 @@ function Title(arg0) {
 }
 function Subtitle(children) {
   const tmp = closure_8();
-  return timestampProducer(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, style: closure_8().subtitle, children: children.children });
+  return timestampProducer(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", style: closure_8().subtitle, textBreakStrategy: "balanced", lineBreakStrategyIOS: "push-out", children: children.children });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let createStyles = fn(4827);
+let createStyles = fn(4829);
 let closure_8 = createStyles.createStyles(() => {
   const obj = { container: { paddingHorizontal: nativeDefault.modules.mobile.SHEET_HEADER_PADDING_HORIZONTAL, flexDirection: "row", gap: 4, position: "relative" }, titles: { flexGrow: 1, flexShrink: 1, gap: 2 }, subtitle: { textAlign: "center" }, title: { textAlign: "center" } };
   return obj;
 });
-createStyles = fn(4827);
+createStyles = fn(4829);
 let closure_10 = createStyles.createStyles(() => ({ container: { flexDirection: "column" }, accessories: { flexDirection: "row", justifyContent: "space-between" }, item: { flexShrink: 0 } }));
-createStyles = fn(4827);
+createStyles = fn(4829);
 let closure_12 = createStyles.createStyles(() => {
   const obj = { accessory: { position: "absolute", top: 0, bottom: 0, flexShrink: 0, flexDirection: "row", flexGrow: 1 }, leading: { left: nativeDefault.space.PX_16, justifyContent: "flex-start" }, trailing: null };
   const obj2 = { left: nativeDefault.space.PX_16, justifyContent: "flex-start" };

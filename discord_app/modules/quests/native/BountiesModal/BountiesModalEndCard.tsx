@@ -1,14 +1,14 @@
-// === Module 15393: BountiesModalEndCard ===
+// === Module 15402: BountiesModalEndCard ===
 
-// Module 15393 (BountiesModalEndCard)
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4559 */;
-import timing from "timing" /* 4828 */;
-import timingPresets from "timingPresets" /* 4831 */;
-import LinearGradientDefault from "LinearGradient" /* 5283 */;
-import BountiesEndCardPressableCtaDefault from "BountiesEndCardPressableCta" /* 15381 */;
+// Module 15402 (BountiesModalEndCard)
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4561 */;
+import timing from "timing" /* 4830 */;
+import timingPresets from "timingPresets" /* 4833 */;
+import LinearGradientDefault from "LinearGradient" /* 5285 */;
+import BountiesEndCardPressableCtaDefault from "BountiesEndCardPressableCta" /* 15390 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4827 */;
+import createStyles from "createStyles" /* 4829 */;
 import size from "module_2" /* 2 */;
 
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
@@ -30,7 +30,7 @@ export default function BountiesModalEndCard(visible) {
   visible = visible.visible;
   ({ bounty, sourceQuestContent } = visible);
   const tmp = closure_7();
-  visible(4559);
+  visible(4561);
   const fn = function y() {
     let num = 0;
     if (visible) {
@@ -38,7 +38,7 @@ export default function BountiesModalEndCard(visible) {
     }
     return { opacity: timing.withTiming(num, timingPresets.timingStandard) };
   };
-  fn.__closure = { withTiming: visible(4828).withTiming, visible, timingStandard: visible(4831).timingStandard };
+  fn.__closure = { withTiming: visible(4830).withTiming, visible, timingStandard: visible(4833).timingStandard };
   fn.__workletHash = 15062259404736;
   fn.__initData = __initData;
   if (visible) {

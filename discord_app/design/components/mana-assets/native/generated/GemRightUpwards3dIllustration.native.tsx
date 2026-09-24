@@ -1,9 +1,9 @@
-// === Module 6446: GemRightUpwards3dIllustration ===
+// === Module 6448: GemRightUpwards3dIllustration ===
 
-// Module 6446 (GemRightUpwards3dIllustration)
+// Module 6448 (GemRightUpwards3dIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5890 */;
-import _modDef6447 from "module_6447" /* 6447 */;
+import FastImageDefault from "FastImage" /* 5892 */;
+import _modDef6449 from "module_6449" /* 6449 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const GemRightUpwards3dIllustration = function GemRightUpwards3dIllustrat
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6447 };
+  const obj2 = { uri: _modDef6449 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

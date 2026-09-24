@@ -1,6 +1,6 @@
-// === Module 2095: ChangelogConstants ===
+// === Module 2097: ChangelogConstants ===
 
-// Module 2095 (ChangelogConstants)
+// Module 2097 (ChangelogConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/changelog/ChangelogConstants.tsx");

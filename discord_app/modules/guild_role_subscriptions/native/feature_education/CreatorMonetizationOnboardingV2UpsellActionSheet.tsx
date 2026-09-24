@@ -1,22 +1,22 @@
-// === Module 16649: CreatorMonetizationOnboardingV2UpsellActionSheet ===
+// === Module 16673: CreatorMonetizationOnboardingV2UpsellActionSheet ===
 
-// Module 16649 (CreatorMonetizationOnboardingV2UpsellActionSheet)
+// Module 16673 (CreatorMonetizationOnboardingV2UpsellActionSheet)
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4823 */;
-import components_Button_Button from "components/Button/Button" /* 5271 */;
-import FastImageDefault from "FastImage" /* 5890 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7481 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9934 */;
-import _modDef16650 from "module_16650" /* 16650 */;
+import Text_Text from "Text/Text" /* 4825 */;
+import components_Button_Button from "components/Button/Button" /* 5273 */;
+import FastImageDefault from "FastImage" /* 5892 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7483 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9939 */;
+import _modDef16674 from "module_16674" /* 16674 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const GuildSettingsSections = fn(1074).GuildSettingsSections;
-const ContentDismissActionType = fn(2039).ContentDismissActionType;
+const ContentDismissActionType = fn(2041).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let closure_8 = createStyles.createStyles({ container: { paddingLeft: 24, paddingRight: 24, paddingTop: 24 }, title: { marginBottom: 6 }, description: { marginBottom: 24 }, image: { marginBottom: 24, width: "100%" }, dismissButton: { marginTop: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/feature_education/CreatorMonetizationOnboardingV2UpsellActionSheet.tsx");
@@ -40,7 +40,7 @@ export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.kUUFbG);
   items[1] = closure_6(Text_Text.Text, obj4);
-  const obj5 = { style: tmp.image, resizeMode: "contain", source: _modDef16650 };
+  const obj5 = { style: tmp.image, resizeMode: "contain", source: _modDef16674 };
   items[2] = closure_6(FastImageDefault, obj5);
   const obj6 = {
     onPress() {

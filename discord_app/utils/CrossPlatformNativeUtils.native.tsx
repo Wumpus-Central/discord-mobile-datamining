@@ -1,6 +1,6 @@
-// === Module 4821: CrossPlatformNativeUtils ===
+// === Module 4823: CrossPlatformNativeUtils ===
 
-// Module 4821 (CrossPlatformNativeUtils)
+// Module 4823 (CrossPlatformNativeUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/CrossPlatformNativeUtils.native.tsx");

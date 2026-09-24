@@ -1,6 +1,6 @@
-// === Module 6895: ? ===
+// === Module 6897: ? ===
 
-// Module 6895
+// Module 6897
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WateringCanSpotIllustration-2x.png.js");

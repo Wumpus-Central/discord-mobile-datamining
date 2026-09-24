@@ -1,8 +1,8 @@
-// === Module 7865: FamilyCenterStore ===
+// === Module 7867: FamilyCenterStore ===
 
-// Module 7865 (FamilyCenterStore)
+// Module 7867 (FamilyCenterStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7867 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7869 */;
 import _slicedToArray from "module_32" /* 32 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1073 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -50,7 +50,7 @@ function handleInitialLoad(arg0) {
     const obj = {};
     const merged = Object.assign(acc);
     const obj2 = {};
-    const merged1 = Object.assign(closure_0(2056).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count));
+    const merged1 = Object.assign(closure_0(2058).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count));
     let num = approximate_member_count.approximate_member_count;
     if (num == null) {
       num = 0;
@@ -172,7 +172,7 @@ function handleTeenActivityFetch(familyCenterTeenActivity) {
       const obj = {};
       const merged = Object.assign(acc);
       const obj2 = {};
-      const merged1 = Object.assign(closure_0(2056).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count));
+      const merged1 = Object.assign(closure_0(2058).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count));
       let num = approximate_member_count.approximate_member_count;
       if (num == null) {
         num = 0;
@@ -233,7 +233,7 @@ function handleTeenActivityMoreFetch(familyCenterTeenActivity) {
     const obj = {};
     const merged = Object.assign(acc);
     const obj2 = {};
-    const merged1 = Object.assign(closure_0(2056).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count));
+    const merged1 = Object.assign(closure_0(2058).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count));
     let num = approximate_member_count.approximate_member_count;
     if (num == null) {
       num = 0;
@@ -391,8 +391,8 @@ function reset() {
   c31 = null;
   c19 = false;
 }
-const getCountryCodeByAlpha2 = fn(5042).getCountryCodeByAlpha2;
-const FamilyCenterConstants = fn(7866);
+const getCountryCodeByAlpha2 = fn(5044).getCountryCodeByAlpha2;
+const FamilyCenterConstants = fn(7868);
 ({ FAMILY_CENTER_REFETCH_COOLDOWN: metroRequire, FAMILY_CENTER_SUB_ROUTES } = FamilyCenterConstants);
 const FamilyCenterSubPages = FamilyCenterConstants.FamilyCenterSubPages;
 const TeenActionDisplayType = FamilyCenterConstants.TeenActionDisplayType;
@@ -496,7 +496,7 @@ prototype["loadCache"] = function loadCache() {
       const obj = {};
       const merged = Object.assign(acc);
       const obj2 = {};
-      const merged1 = Object.assign(closure_0(2056).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count));
+      const merged1 = Object.assign(closure_0(2058).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count));
       let num = approximate_member_count.approximate_member_count;
       if (num == null) {
         num = 0;
@@ -528,7 +528,7 @@ prototype["loadCache"] = function loadCache() {
     snapshot = teenActivityTotals.reduce((acc, item) => {
       [tmp2, tmp3] = item.split(":");
       const tmp = _slicedToArray(item.split(":"), 2);
-      const result = closure_0(7920).displayTypeFromString(tmp2);
+      const result = closure_0(7922).displayTypeFromString(tmp2);
       let tmp5 = acc;
       if (undefined !== result) {
         const obj2 = {};

@@ -1,12 +1,12 @@
-// === Module 10055: useSecureFramesPairwiseFingerprint ===
+// === Module 10060: useSecureFramesPairwiseFingerprint ===
 
-// Module 10055 (useSecureFramesPairwiseFingerprint)
+// Module 10060 (useSecureFramesPairwiseFingerprint)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4850 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4852 */;
 
 const require = fn;
 let closure_12 = async function _computeNativeDisplayPair(arg0) {
@@ -82,8 +82,8 @@ let closure_12 = async function _computeNativeDisplayPair(arg0) {
     }
   }
 };
-let closure_9 = fn(10051).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
-const Features = fn(4852).Features;
+let closure_9 = fn(10056).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
+const Features = fn(4854).Features;
 const SecureFramesPairwiseFingerprintMode = { FROZEN: "frozen", LIVE: "live" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/hooks/useSecureFramesPairwiseFingerprint.tsx");

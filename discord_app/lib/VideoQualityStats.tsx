@@ -1,9 +1,9 @@
-// === Module 8068: VideoQualityStats ===
+// === Module 8070: VideoQualityStats ===
 
-// Module 8068 (VideoQualityStats)
-import TimeUtils from "TimeUtils" /* 4856 */;
-import Histogram from "Histogram" /* 8069 */;
-import SystemResourcesDefault from "SystemResources" /* 8075 */;
+// Module 8070 (VideoQualityStats)
+import TimeUtils from "TimeUtils" /* 4858 */;
+import Histogram from "Histogram" /* 8071 */;
+import SystemResourcesDefault from "SystemResources" /* 8077 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

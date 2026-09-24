@@ -1,16 +1,16 @@
-// === Module 10567: FavoritesHooks ===
+// === Module 10572: FavoritesHooks ===
 
-// Module 10567 (FavoritesHooks)
+// Module 10572 (FavoritesHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
 import PremiumTypeUtilsDefault from "PremiumTypeUtils" /* 1969 */;
-import FavoritesUtils from "FavoritesUtils" /* 2067 */;
-import FavoritesLimits from "FavoritesLimits" /* 10568 */;
-import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10569 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4648 */;
+import FavoritesUtils from "FavoritesUtils" /* 2069 */;
+import FavoritesLimits from "FavoritesLimits" /* 10573 */;
+import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10574 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4650 */;
 import UserStore from "UserStore" /* 1372 */;
-import FavoriteStore from "FavoriteStore" /* 2045 */;
+import FavoriteStore from "FavoriteStore" /* 2047 */;
 
 const require = globalThis.__r;
 
@@ -46,7 +46,7 @@ function useFavoritesAccess() {
   } else if (isPremiumExactlyResult) {
   }
 }
-const MAX_FAVORITE_CHANNELS = fn(2055).MAX_FAVORITE_CHANNELS;
+const MAX_FAVORITE_CHANNELS = fn(2057).MAX_FAVORITE_CHANNELS;
 const PremiumTypes = fn(1374).PremiumTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/FavoritesHooks.tsx");

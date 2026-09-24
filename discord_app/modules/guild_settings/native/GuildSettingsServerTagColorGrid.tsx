@@ -1,16 +1,16 @@
-// === Module 18109: GuildSettingsServerTagColorGrid ===
+// === Module 18132: GuildSettingsServerTagColorGrid ===
 
-// Module 18109 (GuildSettingsServerTagColorGrid)
+// Module 18132 (GuildSettingsServerTagColorGrid)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const GuildTagConstants = fn(8288);
+const GuildTagConstants = fn(8292);
 ({ GUILD_TAG_BADGE_PALETTE_PRESETS: closure_4, GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: hasOwnProperty, GuildTagBadgeSize: metroRequire } = GuildTagConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = { grid: { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 }, defaultIcon: null };
 const rect = { position: "absolute", right: nativeDefault.space.PX_4, bottom: nativeDefault.space.PX_4 };
 obj2.defaultIcon = rect;

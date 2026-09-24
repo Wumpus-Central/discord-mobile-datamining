@@ -1,15 +1,15 @@
-// === Module 11086: GiftingBadgesUtils ===
+// === Module 11092: GiftingBadgesUtils ===
 
-// Module 11086 (GiftingBadgesUtils)
+// Module 11092 (GiftingBadgesUtils)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import dismissible_content from "dismissible_content" /* 2028 */;
-import _modDef2580 from "module_2580" /* 2580 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4647 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8536 */;
-import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 11082 */;
-import GiftingBadgeDesktopExperiment2 from "GiftingBadgeDesktopExperiment" /* 11087 */;
-import GiftingBadgeComplexArtExperiment2 from "GiftingBadgeComplexArtExperiment" /* 11088 */;
+import _modDef2582 from "module_2582" /* 2582 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4649 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8540 */;
+import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 11088 */;
+import GiftingBadgeDesktopExperiment2 from "GiftingBadgeDesktopExperiment" /* 11093 */;
+import GiftingBadgeComplexArtExperiment2 from "GiftingBadgeComplexArtExperiment" /* 11094 */;
 import UserStore from "UserStore" /* 1372 */;
 import size from "module_2" /* 2 */;
 
@@ -26,7 +26,7 @@ export const getGiftingBadgeAccessibilityLabel = function getGiftingBadgeAccessi
     str = "";
   }
   const intl = util.intl;
-  return "" + str + ", " + intl.formatToPlainString(_modDef2580.qvx9E4, { count });
+  return "" + str + ", " + intl.formatToPlainString(_modDef2582.qvx9E4, { count });
 };
 export const getGiftingBadgeProgressPercent = function getGiftingBadgeProgressPercent(badgeProgress, currentTier, nextTier) {
   const tmp = closure_3(currentTier);

@@ -1,6 +1,6 @@
-// === Module 15675: DisplayNameStylesEffectOrder ===
+// === Module 15689: DisplayNameStylesEffectOrder ===
 
-// Module 15675 (DisplayNameStylesEffectOrder)
+// Module 15689 (DisplayNameStylesEffectOrder)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesEffectOrder.tsx");
 
 export const useVisibleEffectOrder = function useVisibleEffectOrder() {
-  isDisplayNameStylesFlywheelSettersEnabled = isDisplayNameStylesFlywheelSettersEnabled(10076).useIsDisplayNameStylesFlywheelSettersEnabled("effect-order");
+  isDisplayNameStylesFlywheelSettersEnabled = isDisplayNameStylesFlywheelSettersEnabled(10081).useIsDisplayNameStylesFlywheelSettersEnabled("effect-order");
   items = [isDisplayNameStylesFlywheelSettersEnabled];
   return noop.useMemo(() => isDisplayNameStylesFlywheelSettersEnabled ? items : EFFECT_ORDER, items);
 };

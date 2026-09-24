@@ -1,9 +1,9 @@
-// === Module 6704: QrSuccessSpotIllustration ===
+// === Module 6706: QrSuccessSpotIllustration ===
 
-// Module 6704 (QrSuccessSpotIllustration)
+// Module 6706 (QrSuccessSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5890 */;
-import _modDef6705 from "module_6705" /* 6705 */;
+import FastImageDefault from "FastImage" /* 5892 */;
+import _modDef6707 from "module_6707" /* 6707 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const QrSuccessSpotIllustration = function QrSuccessSpotIllustration(widt
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6705 };
+  const obj2 = { uri: _modDef6707 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

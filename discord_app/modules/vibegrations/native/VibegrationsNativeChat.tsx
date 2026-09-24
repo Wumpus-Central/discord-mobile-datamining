@@ -1,33 +1,33 @@
-// === Module 17088: VibegrationsNativeChat ===
+// === Module 17115: VibegrationsNativeChat ===
 
-// Module 17088 (VibegrationsNativeChat)
+// Module 17115 (VibegrationsNativeChat)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import util from "util" /* 1115 */;
-import _modDef3712 from "module_3712" /* 3712 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 4817 */;
-import Text_Text from "Text/Text" /* 4823 */;
-import Stack_Stack from "Stack/Stack" /* 5269 */;
-import components_Button_Button from "components/Button/Button" /* 5271 */;
-import LinearGradientDefault from "LinearGradient" /* 5283 */;
-import Card from "Card" /* 5910 */;
-import _modDef5967 from "module_5967" /* 5967 */;
-import VibegrationsDesignFeedback from "VibegrationsDesignFeedback" /* 17000 */;
-import VibegrationsNativeStatusLineDefault from "VibegrationsNativeStatusLine" /* 17089 */;
-import VibegrationsMessageActionSheet from "VibegrationsMessageActionSheet" /* 17095 */;
-import useVibegrationsPlanDesign from "useVibegrationsPlanDesign" /* 17097 */;
-import VibegrationsNativeMarkdown from "VibegrationsNativeMarkdown" /* 17098 */;
-import VibegrationsTimelineTree from "VibegrationsTimelineTree" /* 17103 */;
-import VibegrationsDuration from "VibegrationsDuration" /* 17104 */;
-import VibegrationsSubagentMark from "VibegrationsSubagentMark" /* 17106 */;
-import VibegrationsTodoAgents from "VibegrationsTodoAgents" /* 17108 */;
-import VibegrationsChatGrouping from "VibegrationsChatGrouping" /* 17115 */;
-import vibegrations_VibegrationsRepliedMessage from "vibegrations/VibegrationsRepliedMessage" /* 17117 */;
+import _modDef3714 from "module_3714" /* 3714 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4819 */;
+import Text_Text from "Text/Text" /* 4825 */;
+import Stack_Stack from "Stack/Stack" /* 5271 */;
+import components_Button_Button from "components/Button/Button" /* 5273 */;
+import LinearGradientDefault from "LinearGradient" /* 5285 */;
+import Card from "Card" /* 5912 */;
+import _modDef5969 from "module_5969" /* 5969 */;
+import VibegrationsDesignFeedback from "VibegrationsDesignFeedback" /* 17024 */;
+import VibegrationsNativeStatusLineDefault from "VibegrationsNativeStatusLine" /* 17116 */;
+import VibegrationsMessageActionSheet from "VibegrationsMessageActionSheet" /* 17122 */;
+import useVibegrationsPlanDesign from "useVibegrationsPlanDesign" /* 17124 */;
+import VibegrationsNativeMarkdown from "VibegrationsNativeMarkdown" /* 17125 */;
+import VibegrationsTimelineTree from "VibegrationsTimelineTree" /* 17130 */;
+import VibegrationsDuration from "VibegrationsDuration" /* 17131 */;
+import VibegrationsSubagentMark from "VibegrationsSubagentMark" /* 17133 */;
+import VibegrationsTodoAgents from "VibegrationsTodoAgents" /* 17135 */;
+import VibegrationsChatGrouping from "VibegrationsChatGrouping" /* 17142 */;
+import vibegrations_VibegrationsRepliedMessage from "vibegrations/VibegrationsRepliedMessage" /* 17144 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 1979 */;
-import VibegrationsChatStore from "VibegrationsChatStore" /* 13449 */;
-import VibegrationsConnectionStore_mod from "VibegrationsConnectionStore" /* 13448 */;
+import VibegrationsChatStore from "VibegrationsChatStore" /* 13458 */;
+import VibegrationsConnectionStore_mod from "VibegrationsConnectionStore" /* 13457 */;
 
 require = fn;
 function PlanDesign(arg0) {
@@ -39,10 +39,10 @@ function PlanDesign(arg0) {
     return null;
   } else {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef3712.FW8UcU);
+    const stringResult = intl.string(_modDef3714.FW8UcU);
     const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: null };
     const intl2 = util.intl;
-    obj2.children = intl2.string(_modDef3712["9W8SbY"]);
+    obj2.children = intl2.string(_modDef3714["9W8SbY"]);
     items = [closure_1_17(Text_Text.Text, obj2), ];
     if (null == src) {
       const obj3 = { style: tmp.designPlaceholder, children: null };
@@ -79,11 +79,11 @@ function ProposalCard(proposal) {
   const obj = { style: closure_24().surface, children: null };
   const obj2 = { variant: "heading-md/bold", color: "text-default", children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef3712["60htw+"]);
+  obj2.children = intl.string(_modDef3714["60htw+"]);
   items = [closure_1_17(Text_Text.Text, obj2), , , , , , ];
   if ("" === trimmed) {
     const intl2 = util.intl;
-    let stringResult = intl2.string(_modDef3712.IHCafX);
+    let stringResult = intl2.string(_modDef3714.IHCafX);
   } else {
     stringResult = MarkupUtilsDefault.parse(trimmed, true, VibegrationsNativeMarkdown.VIBEGRATIONS_MARKUP_OPTIONS);
     const tmp8Result = MarkupUtilsDefault;
@@ -100,7 +100,7 @@ function ProposalCard(proposal) {
     const obj4 = { direction: "vertical", spacing: 4, children: null };
     const obj5 = { variant: "text-sm/semibold", color: "text-muted", children: null };
     const intl3 = util.intl;
-    obj5.children = intl3.string(_modDef3712.KLyB8Y);
+    obj5.children = intl3.string(_modDef3714.KLyB8Y);
     const items1 = [closure_1_17(Text_Text.Text, obj5), ];
     const changes = proposal.changes;
     items1[1] = changes.map((item, index) => closure_1_17(Text_Text.Text, { variant: "text-sm/normal", color: "text-default", children: "\u2022 " + item }, index));
@@ -113,7 +113,7 @@ function ProposalCard(proposal) {
     const obj6 = { direction: "vertical", spacing: 4, children: null };
     const obj7 = { variant: "text-sm/semibold", color: "text-muted", children: null };
     const intl4 = util.intl;
-    obj7.children = intl4.string(_modDef3712.ieqTtP);
+    obj7.children = intl4.string(_modDef3714.ieqTtP);
     const items2 = [closure_1_17(Text_Text.Text, obj7), ];
     const obj8 = { variant: "text-sm/normal", color: "text-default", children: bot_permissions.join(", ") };
     items2[1] = closure_1_17(Text_Text.Text, obj8);
@@ -126,7 +126,7 @@ function ProposalCard(proposal) {
     const obj9 = { direction: "vertical", spacing: 4, children: null };
     const obj10 = { variant: "text-sm/semibold", color: "text-muted", children: null };
     const intl5 = util.intl;
-    obj10.children = intl5.string(_modDef3712.Cn9qix);
+    obj10.children = intl5.string(_modDef3714.Cn9qix);
     const items3 = [closure_1_17(Text_Text.Text, obj10), ];
     const obj11 = { variant: "text-sm/normal", color: "text-default", children: privileged_intents.join(", ") };
     items3[1] = closure_1_17(Text_Text.Text, obj11);
@@ -138,7 +138,7 @@ function ProposalCard(proposal) {
   if (actionable) {
     const obj12 = { text: null, variant: "primary", onPress: null };
     const intl6 = util.intl;
-    obj12.text = intl6.string(_modDef3712.GYoWRk);
+    obj12.text = intl6.string(_modDef3714.GYoWRk);
     obj12.onPress = onApprove;
     tmp3Result2 = closure_1_17(components_Button_Button.Button, obj12);
   }
@@ -151,7 +151,7 @@ function IdeaCards(arg0) {
   let obj = { style: closure_24().ideaCards, children: null };
   const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: null };
   let intl = util.intl;
-  obj2.children = intl.string(_modDef3712.DAvYsi);
+  obj2.children = intl.string(_modDef3714.DAvYsi);
   items = [
     closure_17(Text_Text.Text, obj2),
     ideas.map((title) => {
@@ -164,7 +164,7 @@ function IdeaCards(arg0) {
         children: null
       };
       const intl = util.intl;
-      obj.accessibilityLabel = intl.formatToPlainString(_modDef3712.pztRGi, { title: title.title });
+      obj.accessibilityLabel = intl.formatToPlainString(_modDef3714.pztRGi, { title: title.title });
       items = [closure_1_17(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", children: title.title }), ];
       let tmpResult = null;
       if ("" !== title.value) {
@@ -205,17 +205,17 @@ function AttachmentPills(projectId) {
         };
         const intl = projectId(1115).intl;
         const obj2 = { name: id.name };
-        obj.accessibilityLabel = intl.formatToPlainString(closure_1(3712).QUFLUq, obj2);
+        obj.accessibilityLabel = intl.formatToPlainString(closure_1(3714).QUFLUq, obj2);
         const obj3 = { variant: "text-xs/medium", color: "text-default", children: id.name };
-        obj.children = closure_1_17(projectId(4823).Text, obj3);
-        let tmp12 = closure_1_17(projectId(5910).Card, obj, id.id);
+        obj.children = closure_1_17(projectId(4825).Text, obj3);
+        let tmp12 = closure_1_17(projectId(5912).Card, obj, id.id);
       } else {
         const obj4 = { style: closure_1.attachmentPill, children: null };
         const obj5 = { variant: "text-xs/medium", color: "text-muted", children: null };
         const intl2 = projectId(1115).intl;
         const obj6 = { name: id.name };
-        obj5.children = intl2.formatToPlainString(closure_1(3712).OBr7WW, obj6);
-        obj4.children = closure_1_17(projectId(4823).Text, obj5);
+        obj5.children = intl2.formatToPlainString(closure_1(3714).OBr7WW, obj6);
+        obj4.children = closure_1_17(projectId(4825).Text, obj5);
         const _HermesInternal = HermesInternal;
         tmp12 = closure_1_17(closure_1_8, obj4, "" + id.name + "-" + index);
       }
@@ -230,12 +230,12 @@ function IdeasOffer(onAsk) {
   const obj2 = { style: tmp.ideasOfferHint, children: null };
   const obj3 = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl = util.intl;
-  obj3.children = intl.string(_modDef3712.tG5PBo);
+  obj3.children = intl.string(_modDef3714.tG5PBo);
   obj2.children = closure_1_17(Text_Text.Text, obj3);
   items = [closure_1_17(React6, obj2), ];
   const obj4 = { variant: "secondary", size: "sm", disabled: null == onAsk, onPress: onAsk, text: null };
   const intl2 = util.intl;
-  obj4.text = intl2.string(_modDef3712.cwTe5o);
+  obj4.text = intl2.string(_modDef3714.cwTe5o);
   items[1] = closure_1_17(components_Button_Button.Button, obj4);
   obj.children = items;
   return collapsedCategories(React6, obj);
@@ -299,7 +299,7 @@ function TurnStatusLine(epoch) {
   [tmp3, c2] = noop.useState(false);
   const callback = noop.useCallback(() => _undefined((arg0) => !arg0), []);
   const tmp2 = _slicedToArray(noop.useState(false), 2);
-  const currentStepResult = turnActive(17103).currentStep(tree.steps);
+  const currentStepResult = turnActive(17130).currentStep(tree.steps);
   _slicedToArray = currentStepResult;
   let tmp8;
   if (!turnActive) {
@@ -317,14 +317,14 @@ function TurnStatusLine(epoch) {
     groupLabel = found.task.groupLabel;
   }
   if (null != tmp8) {
-    groupLabel = turnActive(17104).describeTurnDuration(tmp8);
-    const tmp5Result = turnActive(17104);
+    groupLabel = turnActive(17131).describeTurnDuration(tmp8);
+    const tmp5Result = turnActive(17131);
   } else if (null != currentStepResult) {
-    groupLabel = turnActive(17103).describeNode(currentStepResult);
-    const tmp5Result2 = turnActive(17103);
+    groupLabel = turnActive(17130).describeNode(currentStepResult);
+    const tmp5Result2 = turnActive(17130);
   } else if (groupLabel == null) {
     const intl = turnActive(1115).intl;
-    groupLabel = intl.string(epoch(3712).nv6pUM);
+    groupLabel = intl.string(epoch(3714).nv6pUM);
   }
   let someResult = tree.steps.length > 1;
   if (!someResult) {
@@ -333,12 +333,12 @@ function TurnStatusLine(epoch) {
   }
   const obj2 = { line: groupLabel, live: turnActive, settled: !turnActive, inGutter: true, epoch, expanded: tmp3, onToggle: null };
   let tmp19;
-  let obj = turnActive(17103);
+  let obj = turnActive(17130);
   if (someResult) {
     tmp19 = callback;
   }
   obj2.onToggle = tmp19;
-  const children = [closure_17(epoch(17089), obj2), ];
+  const children = [closure_17(epoch(17116), obj2), ];
   let tmp17Result = null;
   if (tmp3) {
     tmp17Result = null;
@@ -374,24 +374,24 @@ function LaneStatusLine(arg0) {
   }
   let currentStepResult;
   if (turnActive) {
-    currentStepResult = mark(17103).currentStep(lane.steps);
-    const obj = mark(17103);
+    currentStepResult = mark(17130).currentStep(lane.steps);
+    const obj = mark(17130);
   }
   _slicedToArray = currentStepResult;
   const tmp9 = lane.task.detail.length > 0 || lane.steps.length > 0;
   if ("running" === lane.task.status) {
     if (null != currentStepResult) {
-      let describeNodeResult = mark(17103).describeNode(currentStepResult);
-      const obj4 = mark(17103);
+      let describeNodeResult = mark(17130).describeNode(currentStepResult);
+      const obj4 = mark(17130);
     } else {
-      describeNodeResult = mark(17105).taskTitle(lane.task);
-      const obj3 = mark(17105);
+      describeNodeResult = mark(17132).taskTitle(lane.task);
+      const obj3 = mark(17132);
     }
   } else {
-    const obj2 = mark(17105);
-    const obj5 = { line: mark(17105).describeTaskOutcome(lane.task), live: turnActive, settled: null, failed: null, glyph: null, crestColor: null, inGutter: true, epoch: null, expanded: null, onToggle: null };
+    const obj2 = mark(17132);
+    const obj5 = { line: mark(17132).describeTaskOutcome(lane.task), live: turnActive, settled: null, failed: null, glyph: null, crestColor: null, inGutter: true, epoch: null, expanded: null, onToggle: null };
     let tmp26 = !turnActive;
-    const describeTaskOutcomeResult = mark(17105).describeTaskOutcome(lane.task);
+    const describeTaskOutcomeResult = mark(17132).describeTaskOutcome(lane.task);
     if (!turnActive) {
       tmp26 = "failed" !== lane.task.status;
     }
@@ -406,7 +406,7 @@ function LaneStatusLine(arg0) {
       tmp27 = callback;
     }
     obj5.onToggle = tmp27;
-    items = [closure_17(epoch(17089), obj5), ];
+    items = [closure_17(epoch(17116), obj5), ];
     let tmp21Result = null;
     if (tmp3) {
       tmp21Result = null;
@@ -439,7 +439,7 @@ function ActivityBox(arg0) {
   length = tree.tasks.length;
   const tmp = closure_24();
   const tasks = tree.tasks;
-  dependencyMap = turnActive(17106).subagentIllocons(tasks.map((taskId) => taskId.taskId));
+  dependencyMap = turnActive(17133).subagentIllocons(tasks.map((taskId) => taskId.taskId));
   let obj2 = { style: tmp.activityBox, children: null };
   items = [closure_17(TurnStatusLine, { tree, turnActive, epoch: length }), ];
   const tasks1 = tree.tasks;
@@ -481,20 +481,20 @@ function TranscriptFade(children) {
     obj3.children = items;
     obj2.maskElement = collapsedCategories(React6, obj3);
     obj2.children = children;
-    tmp3 = closure_1_17(_modDef5967, obj2);
+    tmp3 = closure_1_17(_modDef5969, obj2);
   }
   return tmp3;
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, Image: metroRequire, Pressable: closure_7, View: closure_8 } = get_ActivityIndicator);
-const turnSettled = fn(13449).turnSettled;
-let VibegrationsConnectionStore = fn(13448);
+const turnSettled = fn(13458).turnSettled;
+let VibegrationsConnectionStore = fn(13457);
 ({ ensureConnection: closure_12, getAttachmentUrl: map1, interruptTurn: closure_14, sendUserMessage: closure_15 } = VibegrationsConnectionStore);
 let VibegrationsConnectionStore = VibegrationsConnectionStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-let diff = fn(17089).MESSAGE_CONTENT_INSET - fn(17089).MESSAGE_EDGE_INSET;
+let diff = fn(17116).MESSAGE_CONTENT_INSET - fn(17116).MESSAGE_EDGE_INSET;
 const BLACK = nativeDefault.unsafe_rawColors.BLACK;
 let items = [BLACK, , ];
 let obj2 = _modDef672(BLACK);
@@ -503,23 +503,23 @@ items[2] = "transparent";
 const locations = [0, 0.4, 1];
 const start = { x: 0, y: 0 };
 const end = { x: 0, y: 1 };
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj = { container: { flex: 1 }, transcript: { flex: 1 }, transcriptDimmed: { opacity: 0.4 }, maskSolid: { flex: 1, backgroundColor: BLACK }, maskFade: { height: 52 }, transcriptArea: { flex: 1, position: "relative" }, transcriptContent: null, bottomStack: null, row: null, rowGroupStart: null, avatar: null, spoken: null, spokenAfterWork: null, avatarSpoken: null, avatarSpokenReplying: null, header: null, surface: null, designImage: null, designPlaceholder: null, ideaCards: null, activityBox: null, activityDetail: null, stepDetail: null, attachmentPills: null, attachmentPill: null, ideasOffer: null, ideasOfferHint: null, placeholder: null };
 const alphaResult = _modDef672(BLACK).alpha(0.2);
 obj.transcriptContent = { paddingTop: nativeDefault.space.PX_8 };
 obj.bottomStack = { position: "absolute", left: 0, right: 0, bottom: 0 };
 let obj3 = { paddingTop: nativeDefault.space.PX_8 };
-obj.row = { position: "relative", paddingLeft: fn(17089).MESSAGE_CONTENT_INSET, paddingRight: fn(17089).MESSAGE_EDGE_INSET, paddingVertical: 2, gap: PX_8 };
+obj.row = { position: "relative", paddingLeft: fn(17116).MESSAGE_CONTENT_INSET, paddingRight: fn(17116).MESSAGE_EDGE_INSET, paddingVertical: 2, gap: PX_8 };
 obj.rowGroupStart = { marginTop: nativeDefault.space.PX_12 };
-const rect = { position: "absolute", left: fn(17089).MESSAGE_EDGE_INSET, top: 2 };
+const rect = { position: "absolute", left: fn(17116).MESSAGE_EDGE_INSET, top: 2 };
 obj.avatar = rect;
 obj.spoken = { position: "relative", gap: PX_8 };
 obj.spokenAfterWork = { marginTop: PX_8 };
-const rect1 = { left: fn(17089).MESSAGE_EDGE_INSET - fn(17089).MESSAGE_CONTENT_INSET, top: 0 };
+const rect1 = { left: fn(17116).MESSAGE_EDGE_INSET - fn(17116).MESSAGE_CONTENT_INSET, top: 0 };
 obj.avatarSpoken = rect1;
-let obj5 = { position: "relative", paddingLeft: fn(17089).MESSAGE_CONTENT_INSET, paddingRight: fn(17089).MESSAGE_EDGE_INSET, paddingVertical: 2, gap: PX_8 };
-obj.avatarSpokenReplying = { top: fn(17091).REPLY_PREVIEW_HEIGHT + PX_8 };
-let obj6 = { top: fn(17091).REPLY_PREVIEW_HEIGHT + PX_8 };
+let obj5 = { position: "relative", paddingLeft: fn(17116).MESSAGE_CONTENT_INSET, paddingRight: fn(17116).MESSAGE_EDGE_INSET, paddingVertical: 2, gap: PX_8 };
+obj.avatarSpokenReplying = { top: fn(17118).REPLY_PREVIEW_HEIGHT + PX_8 };
+let obj6 = { top: fn(17118).REPLY_PREVIEW_HEIGHT + PX_8 };
 obj.header = { marginBottom: -nativeDefault.space.PX_4 };
 let obj7 = { marginBottom: -nativeDefault.space.PX_4 };
 obj.surface = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_12 };
@@ -1082,7 +1082,7 @@ export default function VibegrationsNativeChat(projectId) {
   const items20 = [projectId];
   onApprove = obj2.useCallback(() => {
     const intl = util.intl;
-    __initData(projectId, intl.string(_modDef3712.Jj8Ftb));
+    __initData(projectId, intl.string(_modDef3714.Jj8Ftb));
   }, items20);
   const items21 = [projectId];
   onPickIdea = obj2.useCallback((implementation_prompt) => {
@@ -1091,7 +1091,7 @@ export default function VibegrationsNativeChat(projectId) {
   const items22 = [projectId];
   closure_8 = obj2.useCallback(() => {
     const intl = util.intl;
-    __initData(projectId, intl.string(_modDef3712["3sTTBu"]));
+    __initData(projectId, intl.string(_modDef3714["3sTTBu"]));
   }, items22);
   const items23 = [projectId];
   state = obj2.useCallback((arg0) => {

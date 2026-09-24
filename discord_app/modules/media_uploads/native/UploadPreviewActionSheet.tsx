@@ -1,23 +1,23 @@
-// === Module 10976: UploadPreviewActionSheet ===
+// === Module 10982: UploadPreviewActionSheet ===
 
-// Module 10976 (UploadPreviewActionSheet)
+// Module 10982 (UploadPreviewActionSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4794 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 5440 */;
-import ImagePickerDefault from "ImagePicker" /* 5452 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9498 */;
-import AddImageDescriptionModalActionCreatorsDefault from "AddImageDescriptionModalActionCreators" /* 11585 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 5442 */;
+import ImagePickerDefault from "ImagePicker" /* 5454 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9502 */;
+import AddImageDescriptionModalActionCreatorsDefault from "AddImageDescriptionModalActionCreators" /* 11591 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const DraftType = fn(5190).DraftType;
-const ACTION_SHEET_MAX_WIDTH = fn(7482).ACTION_SHEET_MAX_WIDTH;
+const DraftType = fn(5192).DraftType;
+const ACTION_SHEET_MAX_WIDTH = fn(7484).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = { contentContainer: { padding: 16 }, imageWrap: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, width: "100%" }, imageContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, width: "100%" };
 obj2.imageContainer = { overflow: "hidden", alignSelf: "center", borderRadius: nativeDefault.radii.md - nativeDefault.space.PX_4 };
@@ -108,9 +108,9 @@ export default function UploadPreviewActionSheet(onAdd) {
       }
     }).catch((error) => {
       if ("E_PICKER_CANCELLED" !== error.code) {
-        const obj2 = { key: "CROP_ERROR", IconComponent: onAdd(6938).CircleErrorIcon, content: error.message };
-        onEdit(4521).open(obj2);
-        const obj = onEdit(4521);
+        const obj2 = { key: "CROP_ERROR", IconComponent: onAdd(6940).CircleErrorIcon, content: error.message };
+        onEdit(4523).open(obj2);
+        const obj = onEdit(4523);
       }
     });
   }, items3);

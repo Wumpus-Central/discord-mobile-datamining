@@ -1,8 +1,8 @@
-// === Module 9407: scopes ===
+// === Module 9411: scopes ===
 
-// Module 9407 (scopes)
+// Module 9411 (scopes)
 import util from "util" /* 1115 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8685 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8689 */;
 import size from "module_2" /* 2 */;
 
 let items = [

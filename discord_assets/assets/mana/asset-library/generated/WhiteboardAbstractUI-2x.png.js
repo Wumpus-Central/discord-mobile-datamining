@@ -1,6 +1,6 @@
-// === Module 6899: ? ===
+// === Module 6901: ? ===
 
-// Module 6899
+// Module 6901
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WhiteboardAbstractUI-2x.png.js");

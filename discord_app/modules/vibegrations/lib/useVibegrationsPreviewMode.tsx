@@ -1,12 +1,12 @@
-// === Module 17028: useVibegrationsPreviewMode ===
+// === Module 17056: useVibegrationsPreviewMode ===
 
-// Module 17028 (useVibegrationsPreviewMode)
+// Module 17056 (useVibegrationsPreviewMode)
 import initialize from "initialize" /* 504 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 7494 */;
-import ApplicationWidgetConfigSurface from "ApplicationWidgetConfigSurface" /* 9363 */;
-import canLaunchFrame from "canLaunchFrame" /* 9673 */;
-import useUserApplicationWidgetDataDefault from "useUserApplicationWidgetData" /* 17029 */;
-import vibegrationsPreviewModes from "vibegrationsPreviewModes" /* 17030 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 7496 */;
+import ApplicationWidgetConfigSurface from "ApplicationWidgetConfigSurface" /* 9367 */;
+import canLaunchFrame from "canLaunchFrame" /* 9677 */;
+import useUserApplicationWidgetDataDefault from "useUserApplicationWidgetData" /* 17057 */;
+import vibegrationsPreviewModes from "vibegrationsPreviewModes" /* 17058 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

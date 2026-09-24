@@ -1,16 +1,16 @@
-// === Module 14893: RPCServer ===
+// === Module 14902: RPCServer ===
 
-// Module 14893 (RPCServer)
+// Module 14902 (RPCServer)
 import _modDef12 from "module_12" /* 12 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import RPCErrorDefault from "RPCError" /* 9660 */;
-import transformUserDefault from "transformUser" /* 9666 */;
-import RpcCommandInterception from "RpcCommandInterception" /* 13271 */;
-import validateScopeDefault from "validateScope" /* 14869 */;
+import RPCErrorDefault from "RPCError" /* 9664 */;
+import transformUserDefault from "transformUser" /* 9670 */;
+import RpcCommandInterception from "RpcCommandInterception" /* 13280 */;
+import validateScopeDefault from "validateScope" /* 14878 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-const TransportTypes = fn(4731).TransportTypes;
+const TransportTypes = fn(4733).TransportTypes;
 const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, RPCCloseCodes: metroRequire, RPCCommands: closure_7, RPCErrors: closure_8, RPCEvents: closure_9 } = Constants);
 const RPC_STORE_WAIT = "RPC_STORE_WAIT";
@@ -325,7 +325,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
   }).then((handler) => {
     if (socket.source.type === TransportTypes.POST_MESSAGE) {
       const obj2 = { cmd: closure_2.cmd, iframeId: socket.source.iframeId, args: null };
-      let args = closure_2.args;
+      args = closure_2.args;
       if (args == null) {
         args = {};
       }
@@ -458,7 +458,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
   }).then((handler) => {
     if (socket.source.type === TransportTypes.POST_MESSAGE) {
       const obj2 = { cmd: closure_2.cmd, iframeId: socket.source.iframeId, args: null };
-      let args = closure_2.args;
+      args = closure_2.args;
       if (args == null) {
         args = {};
       }
@@ -571,10 +571,10 @@ prototype["isChildSubscribed"] = function isChildSubscribed(arg0, arg1) {
   }
   return tmp;
 };
-prototype["getSubscription"] = function getSubscription(socket, evt, args) {
+prototype["getSubscription"] = function getSubscription(socket, evt, c3) {
   closure_0 = socket;
   closure_1 = evt;
-  closure_2 = args;
+  closure_2 = c3;
   const subscriptions = this.subscriptions;
   return subscriptions.find((socket) => {
     let isEqualResult = socket.socket === closure_0;
@@ -587,7 +587,7 @@ prototype["getSubscription"] = function getSubscription(socket, evt, args) {
     return isEqualResult;
   });
 };
-prototype["addSubscription"] = function addSubscription(socket, evt, args, arg3) {
+prototype["addSubscription"] = function addSubscription(socket, evt, c3, arg3) {
   let tmp = arg3;
   if (arg3 === undefined) {
     tmp = null;
@@ -635,11 +635,11 @@ prototype["removeSubscriptions"] = function removeSubscriptions(abortController)
   _modDef12.remove(this.subscriptions, (socket) => socket.socket === closure_0);
   const result = this.dispatchIsSubscribedUpdate();
 };
-prototype["dispatchToSubscriptions"] = function dispatchToSubscriptions(RELATIONSHIP_UPDATE, targetsFrame, arg2, combined) {
+prototype["dispatchToSubscriptions"] = function dispatchToSubscriptions(RELATIONSHIP_UPDATE, targetsFrame, constants, combined) {
   const self = this;
   closure_1 = RELATIONSHIP_UPDATE;
   closure_2 = targetsFrame;
-  closure_0 = arg2;
+  closure_0 = constants;
   let tmp = null != combined;
   if (tmp) {
     tmp = "" !== combined;
@@ -665,7 +665,7 @@ prototype["dispatchToSubscriptions"] = function dispatchToSubscriptions(RELATION
             }
             self.dispatch(evt.socket, null, constants3.DISPATCH, evt.evt, tmp4Result);
           } else {
-            let args = evt.args;
+            args = evt.args;
             if (args == null) {
               args = {};
             }

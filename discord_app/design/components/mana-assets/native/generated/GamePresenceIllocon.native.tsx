@@ -1,9 +1,9 @@
-// === Module 6414: GamePresenceIllocon ===
+// === Module 6416: GamePresenceIllocon ===
 
-// Module 6414 (GamePresenceIllocon)
+// Module 6416 (GamePresenceIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5890 */;
-import _modDef6415 from "module_6415" /* 6415 */;
+import FastImageDefault from "FastImage" /* 5892 */;
+import _modDef6417 from "module_6417" /* 6417 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const GamePresenceIllocon = function GamePresenceIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6415 };
+  const obj2 = { uri: _modDef6417 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

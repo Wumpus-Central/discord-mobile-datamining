@@ -1,8 +1,8 @@
-// === Module 8560: useAvatarDecoration ===
+// === Module 8564: useAvatarDecoration ===
 
-// Module 8560 (useAvatarDecoration)
+// Module 8564 (useAvatarDecoration)
 import _slicedToArray from "module_32" /* 32 */;
-import GuildMemberStore from "GuildMemberStore" /* 2105 */;
+import GuildMemberStore from "GuildMemberStore" /* 2107 */;
 
 const require = globalThis.__r;
 

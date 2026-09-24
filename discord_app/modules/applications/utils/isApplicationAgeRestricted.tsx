@@ -1,9 +1,9 @@
-// === Module 9599: isApplicationAgeRestricted ===
+// === Module 9603: isApplicationAgeRestricted ===
 
-// Module 9599 (isApplicationAgeRestricted)
-import utils from "utils" /* 5414 */;
-import AgeRestrictedApplicationCommandsExperimentDefault from "AgeRestrictedApplicationCommandsExperiment" /* 9600 */;
-import ApplicationStore from "ApplicationStore" /* 5054 */;
+// Module 9603 (isApplicationAgeRestricted)
+import utils from "utils" /* 5416 */;
+import AgeRestrictedApplicationCommandsExperimentDefault from "AgeRestrictedApplicationCommandsExperiment" /* 9604 */;
+import ApplicationStore from "ApplicationStore" /* 5056 */;
 
 require = fn;
 const size = fn(2);

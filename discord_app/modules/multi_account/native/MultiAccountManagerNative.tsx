@@ -1,14 +1,14 @@
-// === Module 17912: MultiAccountManagerNative ===
+// === Module 17935: MultiAccountManagerNative ===
 
-// Module 17912 (MultiAccountManagerNative)
+// Module 17935 (MultiAccountManagerNative)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1091 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4521 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5030 */;
-import Constants2 from "Constants" /* 12754 */;
-import _modDef17915 from "module_17915" /* 17915 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4523 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5032 */;
+import Constants2 from "Constants" /* 12763 */;
+import _modDef17938 from "module_17938" /* 17938 */;
 import Constants from "Constants" /* 1074 */;
-import MultiAccountManager from "MultiAccountManager" /* 17914 */;
+import MultiAccountManager from "MultiAccountManager" /* 17937 */;
 import size from "module_2" /* 2 */;
 
 const SWITCH_ACCOUNTS_MODAL_KEY = Constants2.SWITCH_ACCOUNTS_MODAL_KEY;
@@ -22,7 +22,7 @@ let obj = Object.create(function MultiAccountModalManagerImpl() {
   obj.cancelled = false;
   obj.push = function push() {
     obj = ModalActionCreatorsDefault;
-    obj.pushLazy(obj(1980)(17913, dependencyMap.paths), {}, c7);
+    obj.pushLazy(obj(1980)(17936, dependencyMap.paths), {}, c7);
     if (obj.cancelled) {
       ModalActionCreatorsDefault.popWithKey(c7);
       const tmpResult = ModalActionCreatorsDefault;
@@ -30,7 +30,7 @@ let obj = Object.create(function MultiAccountModalManagerImpl() {
   };
   obj.enqueue = function enqueue() {
     obj.cancelled = false;
-    obj = obj(4685);
+    obj = obj(4687);
     const rootNavigationRef = obj.getRootNavigationRef();
     if (null != rootNavigationRef) {
       if (rootNavigationRef.isReady()) {
@@ -55,7 +55,7 @@ let obj = Object.create(function MultiAccountModalManagerImpl() {
 obj.cancelled = false;
 obj.push = function push() {
   obj = ModalActionCreatorsDefault;
-  obj.pushLazy(obj(1980)(17913, dependencyMap.paths), {}, c7);
+  obj.pushLazy(obj(1980)(17936, dependencyMap.paths), {}, c7);
   if (obj.cancelled) {
     ModalActionCreatorsDefault.popWithKey(c7);
     const tmpResult = ModalActionCreatorsDefault;
@@ -63,7 +63,7 @@ obj.push = function push() {
 };
 obj.enqueue = function enqueue() {
   obj.cancelled = false;
-  obj = obj(4685);
+  obj = obj(4687);
   const rootNavigationRef = obj.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
@@ -105,10 +105,10 @@ prototype["onSwitchSuccess"] = function onSwitchSuccess(currentUser, navigateHom
   const user = currentUser;
   if (navigateHome) {
     user(1101).transitionTo(constants2.ME, { navigationReplace: true });
-    const MobileHomeDrawerExperiment = user(4690).MobileHomeDrawerExperiment;
+    const MobileHomeDrawerExperiment = user(4692).MobileHomeDrawerExperiment;
     if (MobileHomeDrawerExperiment.getConfig({ location: "multi-account" }).enableHome) {
-      tmp(4684).setHomeDrawerState(false);
-      const tmpResult = tmp(4684);
+      tmp(4686).setHomeDrawerState(false);
+      const tmpResult = tmp(4686);
     }
     obj = user(1101);
     tmp = user;
@@ -118,7 +118,7 @@ prototype["onSwitchSuccess"] = function onSwitchSuccess(currentUser, navigateHom
     const obj2 = { key: "SWITCH_ACCOUNTS_TOAST_LOGIN_SUCCESS", content: null, icon: null };
     const intl = obj(1115).intl;
     obj2.content = intl.formatToPlainString(obj(1115).t.wx7O3L, { username: user.username });
-    obj2.icon = _modDef17915;
+    obj2.icon = _modDef17938;
     obj.open(obj2);
   }, 100);
 };
@@ -127,7 +127,7 @@ prototype["onSwitchError"] = function onSwitchError() {
   const obj2 = { key: "SWITCH_ACCOUNTS_TOAST_LOGIN_ERROR", content: null, icon: null };
   const intl = obj(1115).intl;
   obj2.content = intl.string(obj(1115).t.pqvKWA);
-  obj2.icon = _modDef17915;
+  obj2.icon = _modDef17938;
   obj.open(obj2);
 };
 prototype["onSwitchComplete"] = function onSwitchComplete() {

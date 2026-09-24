@@ -1,9 +1,9 @@
-// === Module 12399: useBannerBots ===
+// === Module 12408: useBannerBots ===
 
-// Module 12399 (useBannerBots)
+// Module 12408 (useBannerBots)
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2064 */;
-import AppLauncherOnboardingStore from "AppLauncherOnboardingStore" /* 12378 */;
+import GuildStore from "GuildStore" /* 2066 */;
+import AppLauncherOnboardingStore from "AppLauncherOnboardingStore" /* 12387 */;
 
 const require = fn;
 const size = fn(2);
@@ -13,7 +13,7 @@ export const useBannerBots = function useBannerBots(context) {
   context = context.context;
   let first1;
   let obj = (function useAppsMap(context) {
-    const apps = first1(12400).useApplicationsInContext({ context: context.context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
+    const apps = first1(12409).useApplicationsInContext({ context: context.context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
     const items = [apps];
     return React.useMemo(() => {
       const map = new Map();
@@ -24,11 +24,11 @@ export const useBannerBots = function useBannerBots(context) {
       return map;
     }, items);
   })({ context });
-  let apps = first1(12400).useApplicationsInContext({ context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
-  let obj2 = first1(12400);
+  let apps = first1(12409).useApplicationsInContext({ context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
+  let obj2 = first1(12409);
   const tmp2 = first1;
   const obj3 = (function useCommandsMap(context) {
-    const commands = first1(12400).useApplicationCommandsInContext({ context: context.context, includeBuiltIn: false }).commands;
+    const commands = first1(12409).useApplicationCommandsInContext({ context: context.context, includeBuiltIn: false }).commands;
     const items = [commands];
     return React.useMemo(() => {
       const map = new Map();
@@ -54,15 +54,15 @@ export const useBannerBots = function useBannerBots(context) {
         return guild.getGuild(guild_id);
       })
     };
-    return context(9490).useTopCommands(obj2);
+    return context(9494).useTopCommands(obj2);
   })({ context });
   let channel = context.channel;
   let guild_id;
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const activityApplications = first1(12371).useActivityApplications({ guildId: guild_id, fetchesShelf: true });
-  const obj4 = first1(12371);
+  const activityApplications = first1(12380).useActivityApplications({ guildId: guild_id, fetchesShelf: true });
+  const obj4 = first1(12380);
   let items = [AppLauncherOnboardingStore];
   const stateFromStores = tmp2(504).useStateFromStores(items, () => recentApplicationCommandMetadata.getRecentApplicationCommandMetadata());
   value = null;

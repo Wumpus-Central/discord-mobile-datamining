@@ -1,6 +1,6 @@
-// === Module 15410: ? ===
+// === Module 15419: ? ===
 
-// Module 15410
+// Module 15419
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/quests/bounties/bounty_banner.mp4.js");

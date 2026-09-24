@@ -1,9 +1,9 @@
-// === Module 6118: BeeIllocon ===
+// === Module 6120: BeeIllocon ===
 
-// Module 6118 (BeeIllocon)
+// Module 6120 (BeeIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5890 */;
-import _modDef6119 from "module_6119" /* 6119 */;
+import FastImageDefault from "FastImage" /* 5892 */;
+import _modDef6121 from "module_6121" /* 6121 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const BeeIllocon = function BeeIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6119 };
+  const obj2 = { uri: _modDef6121 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

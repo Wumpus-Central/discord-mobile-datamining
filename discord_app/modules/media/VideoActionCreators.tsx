@@ -1,6 +1,6 @@
-// === Module 17548: VideoActionCreators ===
+// === Module 17571: VideoActionCreators ===
 
-// Module 17548 (VideoActionCreators)
+// Module 17571 (VideoActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import size from "module_2" /* 2 */;
 

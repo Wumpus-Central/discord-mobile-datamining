@@ -1,24 +1,24 @@
-// === Module 18115: GuildSettingsModalIntegrationPlatform ===
+// === Module 18138: GuildSettingsModalIntegrationPlatform ===
 
-// Module 18115 (GuildSettingsModalIntegrationPlatform)
+// Module 18138 (GuildSettingsModalIntegrationPlatform)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AvatarUtils from "AvatarUtils" /* 1397 */;
-import shared from "shared" /* 4678 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5194 */;
-import common_AlertDefault from "common/Alert" /* 5290 */;
-import PlatformsDefault from "Platforms" /* 5586 */;
-import TableRow from "TableRow" /* 5908 */;
-import NavigatorHeader from "NavigatorHeader" /* 5927 */;
-import TableRowGroup from "TableRowGroup" /* 5990 */;
-import TableSwitchRow from "TableSwitchRow" /* 7531 */;
-import HeaderActionButton from "HeaderActionButton" /* 7705 */;
-import openUserSettings from "openUserSettings" /* 7710 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9934 */;
-import IntegrationTypes from "IntegrationTypes" /* 18046 */;
-import GuildSettingsModalIntegrations from "GuildSettingsModalIntegrations" /* 18076 */;
+import shared from "shared" /* 4680 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5196 */;
+import common_AlertDefault from "common/Alert" /* 5292 */;
+import PlatformsDefault from "Platforms" /* 5588 */;
+import TableRow from "TableRow" /* 5910 */;
+import NavigatorHeader from "NavigatorHeader" /* 5929 */;
+import TableRowGroup from "TableRowGroup" /* 5992 */;
+import TableSwitchRow from "TableSwitchRow" /* 7533 */;
+import HeaderActionButton from "HeaderActionButton" /* 7707 */;
+import openUserSettings from "openUserSettings" /* 7712 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9939 */;
+import IntegrationTypes from "IntegrationTypes" /* 18069 */;
+import GuildSettingsModalIntegrations from "GuildSettingsModalIntegrations" /* 18099 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9935 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9940 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -27,7 +27,7 @@ const Constants = fn(1074);
 ({ GuildSettingsSections: closure_7, HelpdeskArticles: closure_8, PlatformTypes: closure_9, UserSettingsSections: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = { form: { paddingTop: nativeDefault.space.PX_16 }, trailingWrapper: { flexDirection: "row", alignItems: "center" }, platformIcon: { width: 24, height: 24 } };
 let closure_14 = createStyles.createStyles(obj2);
 const Component = noop.Component;
@@ -180,17 +180,17 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
       GuildSettingsActionCreatorsDefault.saveGuild(guild.id, obj2);
     }
   }
-  const token = platformType(4524).useToken(closeGuildSettings(576).modules.mobile.TABLE_ROW_PADDING);
+  const token = platformType(4526).useToken(closeGuildSettings(576).modules.mobile.TABLE_ROW_PADDING);
   const tmp5 = closure_14();
   dependencyMap = tmp5;
-  let obj = platformType(4524);
+  let obj = platformType(4526);
   const navigation = platformType(1484).useNavigation();
   let obj2 = platformType(1484);
   const items = [guild];
   const stateFromStoresObject = platformType(504).useStateFromStoresObject(items, () => ({ guild: guild.getGuild(), submitting: guild.isSubmitting(), hasChanges: guild.hasChanges() }));
   const submitting = stateFromStoresObject.submitting;
   ({ hasChanges: c5, guild } = stateFromStoresObject);
-  const theme = closeGuildSettings(4761)();
+  const theme = closeGuildSettings(4763)();
   const obj4 = platformType(504);
   const items1 = [guild];
   const stateFromStores = platformType(504).useStateFromStores(items1, () => guild.getProps().integrations);
@@ -205,7 +205,7 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
       fn = () => null;
     }
     const obj3 = { headerLeft: fn, title: null, headerRight: null };
-    value = tmp3(5586).get(platformType);
+    value = tmp3(5588).get(platformType);
     let name;
     if (value != null) {
       name = value.name;
@@ -233,14 +233,14 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
     navigation.setOptions(obj3);
     if (constants2.YOUTUBE === platformType) {
       let intl = tmp(1115).intl;
-      const obj6 = { connectAction: onConectTap, helpdeskArticle: tmp3(2108).getArticleURL(onSave.YOUTUBE_INTEGRATION) };
+      const obj6 = { connectAction: onConectTap, helpdeskArticle: tmp3(2110).getArticleURL(onSave.YOUTUBE_INTEGRATION) };
       let formatResult = intl.format(tmp(1115).t["4OSAQ9"], obj6);
-      const tmp3Result3 = tmp3(2108);
+      const tmp3Result3 = tmp3(2110);
     } else if (tmp10.TWITCH === platformType) {
       const intl2 = tmp(1115).intl;
-      const obj7 = { connectAction: onConectTap, helpdeskArticle: tmp3(2108).getArticleURL(onSave.TWITCH_INTEGRATION) };
+      const obj7 = { connectAction: onConectTap, helpdeskArticle: tmp3(2110).getArticleURL(onSave.TWITCH_INTEGRATION) };
       formatResult = intl2.format(tmp(1115).t.ro1jEN, obj7);
-      const tmp3Result4 = tmp3(2108);
+      const tmp3Result4 = tmp3(2110);
     }
     const obj8 = { style: tmp5.form, contentContainerStyle: platformType.contentContainerStyle, children: null };
     const obj9 = { style: null, spacing: null, children: null };
@@ -265,10 +265,10 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
     const obj11 = { children: null };
     const items2 = [mapped, ];
     const obj12 = { variant: "text-sm/medium", color: "text-muted", children: formatResult };
-    items2[1] = closure_11(tmp(4823).Text, obj12);
+    items2[1] = closure_11(tmp(4825).Text, obj12);
     obj9.children = items2;
-    obj8.children = closure_12(tmp(5269).Stack, obj9);
-    const items3 = [closure_11(tmp(8947).Form, obj8), closure_11(tmp(7371).NavScrim, {})];
+    obj8.children = closure_12(tmp(5271).Stack, obj9);
+    const items3 = [closure_11(tmp(8951).Form, obj8), closure_11(tmp(7373).NavScrim, {})];
     obj11.children = items3;
     return closure_12(closure_13, obj11);
   }

@@ -1,8 +1,8 @@
-// === Module 10001: LastUsedVideoBackgroundOption ===
+// === Module 10006: LastUsedVideoBackgroundOption ===
 
-// Module 10001 (LastUsedVideoBackgroundOption)
-import PremiumUtilsDefault from "PremiumUtils" /* 4481 */;
-import VideoBackgroundUtils from "VideoBackgroundUtils" /* 9998 */;
+// Module 10006 (LastUsedVideoBackgroundOption)
+import PremiumUtilsDefault from "PremiumUtils" /* 4483 */;
+import VideoBackgroundUtils from "VideoBackgroundUtils" /* 10003 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
 import UserStore from "UserStore" /* 1372 */;

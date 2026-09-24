@@ -1,21 +1,21 @@
-// === Module 5303: MarkupChannelMentionRule ===
+// === Module 5305: MarkupChannelMentionRule ===
 
-// Module 5303 (MarkupChannelMentionRule)
+// Module 5305 (MarkupChannelMentionRule)
 import util from "util" /* 1115 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import _modDef1929 from "module_1929" /* 1929 */;
 import StringUtils from "StringUtils" /* 2010 */;
-import ChannelUtils from "ChannelUtils" /* 4972 */;
-import useChannelName from "useChannelName" /* 4980 */;
-import LinkUtils from "LinkUtils" /* 4981 */;
-import MarkupTextRuleDefault from "MarkupTextRule" /* 5302 */;
-import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 5304 */;
-import markup_ChannelUtils from "markup/ChannelUtils" /* 5305 */;
-import GatedChannelStore from "GatedChannelStore" /* 2097 */;
-import ChannelStore from "ChannelStore" /* 2042 */;
-import GuildStore from "GuildStore" /* 2064 */;
-import PermissionStore from "PermissionStore" /* 4462 */;
-import RelationshipStore from "RelationshipStore" /* 4472 */;
+import ChannelUtils from "ChannelUtils" /* 4974 */;
+import useChannelName from "useChannelName" /* 4982 */;
+import LinkUtils from "LinkUtils" /* 4983 */;
+import MarkupTextRuleDefault from "MarkupTextRule" /* 5304 */;
+import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 5306 */;
+import markup_ChannelUtils from "markup/ChannelUtils" /* 5307 */;
+import GatedChannelStore from "GatedChannelStore" /* 2099 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import GuildStore from "GuildStore" /* 2066 */;
+import PermissionStore from "PermissionStore" /* 4464 */;
+import RelationshipStore from "RelationshipStore" /* 4474 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -64,9 +64,9 @@ function getChannel(id, arr) {
   }
   return tmp4;
 }
-function handleUnknownChannel(guildId, channelId, messageId, guildIdFromChannelId, combined1) {
+function handleUnknownChannel(guildId, channelId, messageId, guildIdFromChannelId, url) {
   const guild = GuildStore.getGuild(guildId);
-  const obj = { type: "channelMention", guildId, channelId, messageId, originalLink: combined1, inContent: null, content: null };
+  const obj = { type: "channelMention", guildId, channelId, messageId, originalLink: url, inContent: null, content: null };
   let tmp2 = null;
   if (null != guild) {
     let id;
@@ -97,13 +97,13 @@ function handleUnknownChannel(guildId, channelId, messageId, guildIdFromChannelI
   obj.content = items3;
   return obj;
 }
-function parseChannel(channel, messageId, guildIdFromChannelId, combined1) {
+function parseChannel(channel, messageId, guildIdFromChannelId, url) {
   if (channel.canViewChannel) {
     if (channel.isMentionable) {
       const obj2 = { type: "channelMention", channelId: null, guildId: null, messageId: null, originalLink: null };
       ({ id: obj5.channelId, guildId: obj5.guildId } = channel);
       obj2.messageId = messageId;
-      obj2.originalLink = combined1;
+      obj2.originalLink = url;
       const guild = GuildStore.getGuild(channel.guildId);
       if (null == guild) {
         if (channel.isDm) {
@@ -124,12 +124,12 @@ function parseChannel(channel, messageId, guildIdFromChannelId, combined1) {
           const items3 = [obj8];
           obj4.content = items3;
           let obj11 = obj4;
-        } else if (null != combined1) {
+        } else if (null != url) {
           const obj9 = { type: "link", content: null, target: null, title: "category" };
-          const obj10 = { type: "text", content: combined1 };
+          const obj10 = { type: "text", content: url };
           const items4 = [obj10];
           obj9.content = items4;
-          obj9.target = combined1;
+          obj9.target = url;
           obj11 = obj9;
         } else {
           const intl2 = util.intl;

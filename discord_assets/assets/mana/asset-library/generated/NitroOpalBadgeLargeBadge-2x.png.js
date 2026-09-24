@@ -1,6 +1,6 @@
-// === Module 6605: ? ===
+// === Module 6607: ? ===
 
-// Module 6605
+// Module 6607
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroOpalBadgeLargeBadge-2x.png.js");

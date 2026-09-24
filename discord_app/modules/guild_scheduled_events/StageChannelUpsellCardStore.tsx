@@ -1,10 +1,10 @@
-// === Module 9894: StageChannelUpsellCardStore ===
+// === Module 9899: StageChannelUpsellCardStore ===
 
-// Module 9894 (StageChannelUpsellCardStore)
+// Module 9899 (StageChannelUpsellCardStore)
 import Storage2 from "Storage" /* 510 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
-import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2048 */;
-import _mod4445 from "module_4445" /* 4445 */;
+import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2050 */;
+import _mod4447 from "module_4447" /* 4447 */;
 import identity from "module_1243" /* 1243 */;
 import size from "module_2" /* 2 */;
 
@@ -30,5 +30,5 @@ export const useStageChannelUpsellCardStore = function useStageChannelUpsellCard
     const items = [, ];
     ({ hasSeenUpsellCard: arr[0], markAsSeen: arr[1] } = arg0);
     return items;
-  }, _mod4445.shallow);
+  }, _mod4447.shallow);
 };

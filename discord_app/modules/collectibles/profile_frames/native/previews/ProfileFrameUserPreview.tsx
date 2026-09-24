@@ -1,8 +1,8 @@
-// === Module 11565: ProfileFrameUserPreview ===
+// === Module 11571: ProfileFrameUserPreview ===
 
-// Module 11565 (ProfileFrameUserPreview)
+// Module 11571 (ProfileFrameUserPreview)
 import util from "util" /* 1115 */;
-import UserProfilePreviewDefault from "UserProfilePreview" /* 11457 */;
+import UserProfilePreviewDefault from "UserProfilePreview" /* 11463 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

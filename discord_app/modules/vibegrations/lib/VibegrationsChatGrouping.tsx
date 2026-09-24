@@ -1,6 +1,6 @@
-// === Module 17115: VibegrationsChatGrouping ===
+// === Module 17142: VibegrationsChatGrouping ===
 
-// Module 17115 (VibegrationsChatGrouping)
+// Module 17142 (VibegrationsChatGrouping)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsChatGrouping.tsx");

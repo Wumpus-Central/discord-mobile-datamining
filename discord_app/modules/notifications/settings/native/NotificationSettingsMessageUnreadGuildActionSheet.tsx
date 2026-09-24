@@ -1,18 +1,18 @@
-// === Module 10508: NotificationSettingsMessageUnreadGuildActionSheet ===
+// === Module 10513: NotificationSettingsMessageUnreadGuildActionSheet ===
 
-// Module 10508 (NotificationSettingsMessageUnreadGuildActionSheet)
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7445 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7450 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10490 */;
-import NotificationSettingsMessageUnreadActionSheetDefault from "NotificationSettingsMessageUnreadActionSheet" /* 10509 */;
+// Module 10513 (NotificationSettingsMessageUnreadGuildActionSheet)
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7447 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7452 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10495 */;
+import NotificationSettingsMessageUnreadActionSheetDefault from "NotificationSettingsMessageUnreadActionSheet" /* 10514 */;
 import noop from "module_19" /* 19 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5008 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5010 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const UserNotificationSettings = fn(1074).UserNotificationSettings;
-const UnreadSetting = fn(5009).UnreadSetting;
+const UnreadSetting = fn(5011).UnreadSetting;
 let closure_6 = fn(1084).GuildNotificationSettingsFlags;
 const jsx = fn(21).jsx;
 const size = fn(2);

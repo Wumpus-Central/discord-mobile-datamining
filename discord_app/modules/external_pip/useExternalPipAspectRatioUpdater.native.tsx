@@ -1,7 +1,7 @@
-// === Module 17634: useExternalPipAspectRatioUpdater ===
+// === Module 17657: useExternalPipAspectRatioUpdater ===
 
-// Module 17634 (useExternalPipAspectRatioUpdater)
-import ExternalPipDefault from "ExternalPip" /* 9776 */;
+// Module 17657 (useExternalPipAspectRatioUpdater)
+import ExternalPipDefault from "ExternalPip" /* 9780 */;
 import noop from "module_19" /* 19 */;
 
 let size = fn(2);

@@ -1,11 +1,11 @@
-// === Module 13296: InAppReportsDeleteMessageElement ===
+// === Module 13305: InAppReportsDeleteMessageElement ===
 
-// Module 13296 (InAppReportsDeleteMessageElement)
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5007 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7784 */;
+// Module 13305 (InAppReportsDeleteMessageElement)
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5009 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7786 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MessageStore from "MessageStore" /* 5047 */;
+import MessageStore from "MessageStore" /* 5049 */;
 
 const require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
@@ -43,6 +43,6 @@ export default function DeleteMessageElement(message) {
   obj2.description = intl3.string(message(1115).t.dK8S0w);
   obj2.disabled = tmp[0];
   obj2.onPress = callback;
-  obj2.icon = jsx(message(4784).TrashIcon, { color: "text-feedback-critical" });
-  return jsx(reportId(13291), { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null });
+  obj2.icon = jsx(message(4786).TrashIcon, { color: "text-feedback-critical" });
+  return jsx(reportId(13300), { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null });
 };

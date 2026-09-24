@@ -1,8 +1,8 @@
-// === Module 16762: useGuildsBarSelectedGuildScroller ===
+// === Module 16786: useGuildsBarSelectedGuildScroller ===
 
-// Module 16762 (useGuildsBarSelectedGuildScroller)
+// Module 16786 (useGuildsBarSelectedGuildScroller)
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4648 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4650 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/hooks/useGuildsBarSelectedGuildScroller.tsx");

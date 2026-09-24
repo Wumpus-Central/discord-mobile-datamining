@@ -1,20 +1,20 @@
-// === Module 17727: useControlsButtons ===
+// === Module 17750: useControlsButtons ===
 
-// Module 17727 (useControlsButtons)
-import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12613 */;
-import VoicePanelMicButton from "VoicePanelMicButton" /* 17728 */;
-import VoicePanelConnectButtonDefault from "VoicePanelConnectButton" /* 17731 */;
-import VoicePanelChatButtonDefault from "VoicePanelChatButton" /* 17737 */;
-import VoicePanelDisconnectCancelButtonDefault from "VoicePanelDisconnectCancelButton" /* 17739 */;
-import VoicePanelVideoButtonDefault from "VoicePanelVideoButton" /* 17741 */;
-import VoicePanelSoundboardButtonDefault from "VoicePanelSoundboardButton" /* 17743 */;
-import VoicePanelScreenshareButtonDefault from "VoicePanelScreenshareButton" /* 17745 */;
-import VoicePanelDrawerToggleButtonDefault from "VoicePanelDrawerToggleButton" /* 17750 */;
+// Module 17750 (useControlsButtons)
+import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12622 */;
+import VoicePanelMicButton from "VoicePanelMicButton" /* 17751 */;
+import VoicePanelConnectButtonDefault from "VoicePanelConnectButton" /* 17754 */;
+import VoicePanelChatButtonDefault from "VoicePanelChatButton" /* 17760 */;
+import VoicePanelDisconnectCancelButtonDefault from "VoicePanelDisconnectCancelButton" /* 17762 */;
+import VoicePanelVideoButtonDefault from "VoicePanelVideoButton" /* 17764 */;
+import VoicePanelSoundboardButtonDefault from "VoicePanelSoundboardButton" /* 17766 */;
+import VoicePanelScreenshareButtonDefault from "VoicePanelScreenshareButton" /* 17768 */;
+import VoicePanelDrawerToggleButtonDefault from "VoicePanelDrawerToggleButton" /* 17773 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
 
 require = fn;
-const VoicePanelControlsConstants = fn(12604);
+const VoicePanelControlsConstants = fn(12613);
 ({ CONTROLS_BUTTON_SIZE_LARGE: hasOwnProperty, CONTROLS_BUTTON_SIZE_NORMAL: metroRequire } = VoicePanelControlsConstants);
 const InputModes = fn(1074).InputModes;
 const jsx = fn(21).jsx;
@@ -65,25 +65,25 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/useControlsButtons.tsx");
 
 export default function useControlsButtons() {
-  const context = treatment.useContext(safeArea(12605));
+  const context = treatment.useContext(safeArea(12614));
   const windowDimensions = context.windowDimensions;
   safeArea = context.safeArea;
-  const tmp2 = safeArea(17581)(context.channelId);
+  const tmp2 = safeArea(17604)(context.channelId);
   dependencyMap = tmp2;
-  treatment = safeArea(17646).useConfig({ location: "VoicePanelControlButtons" }).treatment;
-  let obj = safeArea(17646);
+  treatment = safeArea(17669).useConfig({ location: "VoicePanelControlButtons" }).treatment;
+  let obj = safeArea(17669);
   let items = [stateFromStores];
   stateFromStores = windowDimensions(504).useStateFromStores(items, () => stateFromStores.getMode() === constants.PUSH_TO_TALK);
   let obj2 = windowDimensions(504);
   const fn = function o() {
     return VoicePanelControlsUtils.getControlsDefaultWidth(windowDimensions.get().width, safeArea.get().left, safeArea.get().right);
   };
-  let obj3 = windowDimensions(4559);
-  fn.__closure = { getControlsDefaultWidth: windowDimensions(12613).getControlsDefaultWidth, windowDimensions, safeArea };
+  let obj3 = windowDimensions(4561);
+  fn.__closure = { getControlsDefaultWidth: windowDimensions(12622).getControlsDefaultWidth, windowDimensions, safeArea };
   fn.__workletHash = 16456936876254;
   fn.__initData = __initData;
   const derivedValue = obj3.useDerivedValue(fn);
-  const tmp5 = safeArea(8613)(derivedValue);
+  const tmp5 = safeArea(8617)(derivedValue);
   closure_5 = tmp5;
   const items1 = [tmp2, stateFromStores, tmp5, treatment];
   return treatment.useMemo(() => {
@@ -99,7 +99,7 @@ export default function useControlsButtons() {
           const obj3 = { type: "icon-normal", key: "connected-mic", render: redux.micConnected };
           items.push(obj3);
         }
-        if (treatment === _true(17646).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT) {
+        if (treatment === _true(17669).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT) {
           const obj4 = { type: "icon-normal", key: "connected-screenshare", render: redux.screenshare };
           items.push(obj4);
         } else {
@@ -110,7 +110,7 @@ export default function useControlsButtons() {
           const obj6 = { type: "icon-large", key: "connected-ptt", render: redux.ptt };
           items.push(obj6);
         }
-        if (treatment === _true(17646).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD) {
+        if (treatment === _true(17669).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD) {
           const obj7 = { type: "icon-normal", key: "connected-screenshare", render: redux.screenshare };
           items.push(obj7);
         } else {

@@ -1,6 +1,6 @@
-// === Module 10338: WindowsEffectsExperiment ===
+// === Module 10343: WindowsEffectsExperiment ===
 
-// Module 10338 (WindowsEffectsExperiment)
+// Module 10343 (WindowsEffectsExperiment)
 import ApexExperimentStore from "ApexExperimentStore" /* 1235 */;
 
 const require = fn;

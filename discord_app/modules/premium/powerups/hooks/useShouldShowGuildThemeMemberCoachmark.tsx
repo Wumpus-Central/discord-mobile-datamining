@@ -1,12 +1,12 @@
-// === Module 16560: useShouldShowGuildThemeMemberCoachmark ===
+// === Module 16584: useShouldShowGuildThemeMemberCoachmark ===
 
-// Module 16560 (useShouldShowGuildThemeMemberCoachmark)
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4716 */;
-import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 4735 */;
-import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 4754 */;
-import ServerThemeExperiment from "ServerThemeExperiment" /* 4755 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12853 */;
-import useIsGuildThemePerkEnabledDefault from "useIsGuildThemePerkEnabled" /* 16561 */;
+// Module 16584 (useShouldShowGuildThemeMemberCoachmark)
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4718 */;
+import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 4737 */;
+import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 4756 */;
+import ServerThemeExperiment from "ServerThemeExperiment" /* 4757 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12862 */;
+import useIsGuildThemePerkEnabledDefault from "useIsGuildThemePerkEnabled" /* 16585 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = GuildPowerupsConstants.GUILD_THEME_POWERUP_BOOST_PRICE;

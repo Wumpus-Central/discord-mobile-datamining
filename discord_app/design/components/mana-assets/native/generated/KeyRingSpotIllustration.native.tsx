@@ -1,9 +1,9 @@
-// === Module 6538: KeyRingSpotIllustration ===
+// === Module 6540: KeyRingSpotIllustration ===
 
-// Module 6538 (KeyRingSpotIllustration)
+// Module 6540 (KeyRingSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5890 */;
-import _modDef6539 from "module_6539" /* 6539 */;
+import FastImageDefault from "FastImage" /* 5892 */;
+import _modDef6541 from "module_6541" /* 6541 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const KeyRingSpotIllustration = function KeyRingSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6539 };
+  const obj2 = { uri: _modDef6541 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

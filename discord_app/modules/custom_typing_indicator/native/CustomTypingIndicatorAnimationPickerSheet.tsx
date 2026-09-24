@@ -1,10 +1,10 @@
-// === Module 15698: CustomTypingIndicatorAnimationPickerSheet ===
+// === Module 15712: CustomTypingIndicatorAnimationPickerSheet ===
 
-// Module 15698 (CustomTypingIndicatorAnimationPickerSheet)
+// Module 15712 (CustomTypingIndicatorAnimationPickerSheet)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4823 */;
-import Stack_Stack from "Stack/Stack" /* 5269 */;
-import Card from "Card" /* 5910 */;
+import Text_Text from "Text/Text" /* 4825 */;
+import Stack_Stack from "Stack/Stack" /* 5271 */;
+import Card from "Card" /* 5912 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -32,7 +32,7 @@ function MotionOptionButton(isSelected) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, previewRow: null, optionCard: null, optionCardSelected: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.previewRow = { alignSelf: "center", paddingVertical: nativeDefault.space.PX_24 };
@@ -56,24 +56,24 @@ export default function CustomTypingIndicatorAnimationPickerSheet(onChange) {
   const items = [obj, , , ];
   const obj2 = { value: onChange(1380).TypingIndicatorAnimation.PULSE, label: null };
   const intl2 = onChange(1115).intl;
-  obj2.label = intl2.string(animation(3714)["gyL/ce"]);
+  obj2.label = intl2.string(animation(3716)["gyL/ce"]);
   items[1] = obj2;
   const obj3 = { value: onChange(1380).TypingIndicatorAnimation.RING, label: null };
   const intl3 = onChange(1115).intl;
-  obj3.label = intl3.string(animation(3714).EgekTm);
+  obj3.label = intl3.string(animation(3716).EgekTm);
   items[2] = obj3;
   const obj4 = { value: onChange(1380).TypingIndicatorAnimation.WAVE, label: null };
   const intl4 = onChange(1115).intl;
-  obj4.label = intl4.string(animation(3714)["8t5EiI"]);
+  obj4.label = intl4.string(animation(3716)["8t5EiI"]);
   items[3] = obj4;
   const obj5 = { contentStyles: tmp.content, dismissAccessibilityLabel: null, children: null };
   const intl5 = onChange(1115).intl;
-  obj5.dismissAccessibilityLabel = intl5.string(animation(3714)["q+qHax"]);
+  obj5.dismissAccessibilityLabel = intl5.string(animation(3716)["q+qHax"]);
   const obj6 = { style: tmp.previewRow, children: null };
   const obj7 = { config: null, size: 54 };
   const obj8 = { emojis, animation, typingSuggestion: onChange(1380).TypingSuggestion.UNSPECIFIED };
   obj7.config = obj8;
-  obj6.children = closure_6(animation(12314), obj7);
+  obj6.children = closure_6(animation(12323), obj7);
   const items1 = [closure_6(View, obj6), ];
   const obj9 = { spacing: 8, children: null };
   const items2 = [items.slice(0, 2), items.slice(2, 4)];
@@ -90,7 +90,7 @@ export default function CustomTypingIndicatorAnimationPickerSheet(onChange) {
       }
     }, label.label))
   }, index));
-  items1[1] = closure_6(onChange(5269).Stack, obj9);
+  items1[1] = closure_6(onChange(5271).Stack, obj9);
   obj5.children = items1;
-  return closure_7(onChange(7528).ActionSheet, obj5);
+  return closure_7(onChange(7530).ActionSheet, obj5);
 };

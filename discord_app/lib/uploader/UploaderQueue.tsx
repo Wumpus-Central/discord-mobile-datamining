@@ -1,6 +1,6 @@
-// === Module 8169: UploaderQueue ===
+// === Module 8171: UploaderQueue ===
 
-// Module 8169 (UploaderQueue)
+// Module 8171 (UploaderQueue)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

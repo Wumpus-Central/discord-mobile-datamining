@@ -1,20 +1,20 @@
-// === Module 8421: GiftIntentEmbed ===
+// === Module 8425: GiftIntentEmbed ===
 
-// Module 8421 (GiftIntentEmbed)
+// Module 8425 (GiftIntentEmbed)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import UserUtilsDefault from "UserUtils" /* 4671 */;
-import _modDef4762 from "module_4762" /* 4762 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8290 */;
-import PremiumGiftingUtils from "PremiumGiftingUtils" /* 8426 */;
-import _modDef8427 from "module_8427" /* 8427 */;
-import _modDef8428 from "module_8428" /* 8428 */;
-import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8422 */;
+import UserUtilsDefault from "UserUtils" /* 4673 */;
+import _modDef4764 from "module_4764" /* 4764 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8294 */;
+import PremiumGiftingUtils from "PremiumGiftingUtils" /* 8430 */;
+import _modDef8431 from "module_8431" /* 8431 */;
+import _modDef8432 from "module_8432" /* 8432 */;
+import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8426 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const GiftIntentType = fn(1374).GiftIntentType;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let closure_6 = createStyles.createNativeStyleProperties({ headerTextColor: nativeDefault.colors.TEXT_STRONG, subHeaderTextColor: nativeDefault.colors.TEXT_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: nativeDefault.colors.BORDER_MUTED });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/GiftIntentEmbed.tsx");
@@ -65,11 +65,11 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
         obj9.giftIntentType = giftIntentType;
         ({ headerTextColor: obj4.headerTextColor, subHeaderTextColor: obj4.subHeaderTextColor, backgroundColor: obj4.backgroundColor, borderColor: obj4.borderColor } = closure_6(theme));
         const tmp6 = closure_6(theme);
-        obj9.subHeaderIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef4762);
+        obj9.subHeaderIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef4764);
         const intl3 = util.intl;
         obj9.primaryCtaLabel = intl3.string(util.t.ilhtIa);
-        obj9.primaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8427);
-        obj9.secondaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8428);
+        obj9.primaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8431);
+        obj9.secondaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8432);
         const intl4 = util.intl;
         obj9.secondaryCtaAccessibilityLabel = intl4.string(util.t.I5gL2H);
         return obj9;

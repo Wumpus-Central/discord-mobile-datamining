@@ -1,17 +1,17 @@
-// === Module 9006: ChatItem ===
+// === Module 9010: ChatItem ===
 
-// Module 9006 (ChatItem)
+// Module 9010 (ChatItem)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import MessageTypes2 from "MessageTypes" /* 1090 */;
-import isSystemMessageDefault from "isSystemMessage" /* 7598 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8481 */;
-import AutoModerationSystemMessageViewNativeComponent from "AutoModerationSystemMessageViewNativeComponent" /* 9007 */;
-import MessageViewNativeComponent from "MessageViewNativeComponent" /* 9008 */;
-import SystemMessageViewNativeComponent from "SystemMessageViewNativeComponent" /* 9009 */;
+import isSystemMessageDefault from "isSystemMessage" /* 7600 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8485 */;
+import AutoModerationSystemMessageViewNativeComponent from "AutoModerationSystemMessageViewNativeComponent" /* 9011 */;
+import MessageViewNativeComponent from "MessageViewNativeComponent" /* 9012 */;
+import SystemMessageViewNativeComponent from "SystemMessageViewNativeComponent" /* 9013 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4819 */;
+import AccessibilityStore from "AccessibilityStore" /* 4821 */;
 
 require = fn;
 function DCDChatItem(message) {
@@ -41,12 +41,12 @@ function DCDChatItem(message) {
 }
 const View = fn(17).View;
 const MessageTypes = fn(1074).MessageTypes;
-const RowGeneratorConstants = fn(8277);
+const RowGeneratorConstants = fn(8281);
 ({ RowType: closure_8, Changeset: closure_9 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const PX_4 = nativeDefault.space.PX_4;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let closure_14 = createStyles.createStyles((marginLeft, marginTop, paddingTop) => {
   const obj = { container: { position: "relative", overflow: "hidden", paddingTop }, offset: { marginTop: -marginTop, marginLeft: -marginLeft }, gradient: { position: "absolute", bottom: 0, height: 24, width: "100%" }, itemRow: { backgroundColor: "transparent" } };
   return obj;
@@ -195,6 +195,6 @@ export default function _default(rowGenerator) {
   }
   const tmp3 = onLayout(messageSizeCacheRef.useState(0), 2);
 };
-export const DCDMessageView = fn(9008).default;
-export const DCDSystemMessageView = fn(9009).default;
-export const DCDAutoModerationSystemMessageView = fn(9007).default;
+export const DCDMessageView = fn(9012).default;
+export const DCDSystemMessageView = fn(9013).default;
+export const DCDAutoModerationSystemMessageView = fn(9011).default;

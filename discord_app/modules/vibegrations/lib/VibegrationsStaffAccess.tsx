@@ -1,10 +1,10 @@
-// === Module 17027: VibegrationsStaffAccess ===
+// === Module 17054: VibegrationsStaffAccess ===
 
-// Module 17027 (VibegrationsStaffAccess)
+// Module 17054 (VibegrationsStaffAccess)
 import initialize from "initialize" /* 504 */;
-import GuildChannelStore from "GuildChannelStore" /* 4460 */;
-import GuildStore from "GuildStore" /* 2064 */;
-import RelationshipStore from "RelationshipStore" /* 4472 */;
+import GuildChannelStore from "GuildChannelStore" /* 4462 */;
+import GuildStore from "GuildStore" /* 2066 */;
+import RelationshipStore from "RelationshipStore" /* 4474 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

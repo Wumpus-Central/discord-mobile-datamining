@@ -1,13 +1,13 @@
-// === Module 9062: useGameProfileInvite ===
+// === Module 9066: useGameProfileInvite ===
 
-// Module 9062 (useGameProfileInvite)
+// Module 9066 (useGameProfileInvite)
 import DurationsDefault from "Durations" /* 1091 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8724 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8728 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 2000 */;
-import GuildMembershipStore from "GuildMembershipStore" /* 2044 */;
-import InviteStore from "InviteStore" /* 4811 */;
+import GuildMembershipStore from "GuildMembershipStore" /* 2046 */;
+import InviteStore from "InviteStore" /* 4813 */;
 
 const require = globalThis.__r;
 

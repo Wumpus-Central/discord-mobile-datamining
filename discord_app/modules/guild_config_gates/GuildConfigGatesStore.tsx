@@ -1,6 +1,6 @@
-// === Module 18157: GuildConfigGatesStore ===
+// === Module 18180: GuildConfigGatesStore ===
 
-// Module 18157 (GuildConfigGatesStore)
+// Module 18180 (GuildConfigGatesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

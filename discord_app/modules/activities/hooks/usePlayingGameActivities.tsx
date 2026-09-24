@@ -1,11 +1,11 @@
-// === Module 10078: usePlayingGameActivities ===
+// === Module 10083: usePlayingGameActivities ===
 
-// Module 10078 (usePlayingGameActivities)
-import isPlayingGameActivityDefault from "isPlayingGameActivity" /* 10079 */;
+// Module 10083 (usePlayingGameActivities)
+import isPlayingGameActivityDefault from "isPlayingGameActivity" /* 10084 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import PresenceStore from "PresenceStore" /* 4867 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5582 */;
+import PresenceStore from "PresenceStore" /* 4869 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5584 */;
 
 const require = globalThis.__r;
 

@@ -1,9 +1,9 @@
-// === Module 6504: GroupGamingSpotIllustration ===
+// === Module 6506: GroupGamingSpotIllustration ===
 
-// Module 6504 (GroupGamingSpotIllustration)
+// Module 6506 (GroupGamingSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5890 */;
-import _modDef6505 from "module_6505" /* 6505 */;
+import FastImageDefault from "FastImage" /* 5892 */;
+import _modDef6507 from "module_6507" /* 6507 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const GroupGamingSpotIllustration = function GroupGamingSpotIllustration(
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6505 };
+  const obj2 = { uri: _modDef6507 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

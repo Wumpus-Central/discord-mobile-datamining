@@ -1,16 +1,16 @@
-// === Module 12318: RefreshChatInputCoachmark ===
+// === Module 12327: RefreshChatInputCoachmark ===
 
-// Module 12318 (RefreshChatInputCoachmark)
+// Module 12327 (RefreshChatInputCoachmark)
 import util from "util" /* 1115 */;
-import native from "native" /* 4533 */;
-import useCoachmark from "useCoachmark" /* 11474 */;
+import native from "native" /* 4535 */;
+import useCoachmark from "useCoachmark" /* 11480 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ContentDismissActionType = fn(2039).ContentDismissActionType;
+const ContentDismissActionType = fn(2041).ContentDismissActionType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/RefreshChatInputCoachmark.tsx");
 

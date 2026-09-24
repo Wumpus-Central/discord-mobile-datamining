@@ -1,8 +1,8 @@
-// === Module 9692: showActivitiesInvalidPermissionsAlert ===
+// === Module 9696: showActivitiesInvalidPermissionsAlert ===
 
-// Module 9692 (showActivitiesInvalidPermissionsAlert)
+// Module 9696 (showActivitiesInvalidPermissionsAlert)
 import util from "util" /* 1115 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5193 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5195 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/voice_calls/showActivitiesInvalidPermissionsAlert.tsx");

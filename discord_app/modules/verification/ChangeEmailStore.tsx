@@ -1,6 +1,6 @@
-// === Module 5926: ChangeEmailStore ===
+// === Module 5928: ChangeEmailStore ===
 
-// Module 5926 (ChangeEmailStore)
+// Module 5928 (ChangeEmailStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;

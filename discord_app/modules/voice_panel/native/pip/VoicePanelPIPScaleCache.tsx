@@ -1,6 +1,6 @@
-// === Module 17629: VoicePanelPIPScaleCache ===
+// === Module 17652: VoicePanelPIPScaleCache ===
 
-// Module 17629 (VoicePanelPIPScaleCache)
+// Module 17652 (VoicePanelPIPScaleCache)
 import Storage2 from "Storage" /* 510 */;
 import size from "module_2" /* 2 */;
 

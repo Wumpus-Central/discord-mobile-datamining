@@ -1,9 +1,9 @@
-// === Module 6866: TeaKettleSpotIllustration ===
+// === Module 6868: TeaKettleSpotIllustration ===
 
-// Module 6866 (TeaKettleSpotIllustration)
+// Module 6868 (TeaKettleSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5890 */;
-import _modDef6867 from "module_6867" /* 6867 */;
+import FastImageDefault from "FastImage" /* 5892 */;
+import _modDef6869 from "module_6869" /* 6869 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const TeaKettleSpotIllustration = function TeaKettleSpotIllustration(widt
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6867 };
+  const obj2 = { uri: _modDef6869 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,9 +1,9 @@
-// === Module 4769: LinkIcon ===
+// === Module 4771: LinkIcon ===
 
-// Module 4769 (LinkIcon)
+// Module 4771 (LinkIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4523 */;
-import _mod4770 from "module_4770" /* 4770 */;
+import BaseIconImage from "BaseIconImage" /* 4525 */;
+import _mod4772 from "module_4772" /* 4772 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const LinkIcon = function LinkIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod4770, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod4772, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

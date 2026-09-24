@@ -1,8 +1,8 @@
-// === Module 8441: XNeutralIcon ===
+// === Module 8445: XNeutralIcon ===
 
-// Module 8441 (XNeutralIcon)
-import BaseIconImage from "BaseIconImage" /* 4523 */;
-import _mod8442 from "module_8442" /* 8442 */;
+// Module 8445 (XNeutralIcon)
+import BaseIconImage from "BaseIconImage" /* 4525 */;
+import _mod8446 from "module_8446" /* 8446 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,5 +17,5 @@ export const XNeutralIcon = function XNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8442, color: str, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8446, color: str, style: color.style });
 };

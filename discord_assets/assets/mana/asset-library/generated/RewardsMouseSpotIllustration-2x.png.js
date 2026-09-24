@@ -1,6 +1,6 @@
-// === Module 6713: ? ===
+// === Module 6715: ? ===
 
-// Module 6713
+// Module 6715
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/RewardsMouseSpotIllustration-2x.png.js");

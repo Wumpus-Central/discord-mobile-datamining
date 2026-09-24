@@ -1,9 +1,9 @@
-// === Module 6432: GemLevel1Illocon ===
+// === Module 6434: GemLevel1Illocon ===
 
-// Module 6432 (GemLevel1Illocon)
+// Module 6434 (GemLevel1Illocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5890 */;
-import _modDef6433 from "module_6433" /* 6433 */;
+import FastImageDefault from "FastImage" /* 5892 */;
+import _modDef6435 from "module_6435" /* 6435 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const GemLevel1Illocon = function GemLevel1Illocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6433 };
+  const obj2 = { uri: _modDef6435 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

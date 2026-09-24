@@ -1,8 +1,8 @@
-// === Module 9390: FramesConstants ===
+// === Module 9394: FramesConstants ===
 
-// Module 9390 (FramesConstants)
+// Module 9394 (FramesConstants)
 import Constants from "Constants" /* 1074 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 9391 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 9395 */;
 import size from "module_2" /* 2 */;
 
 const ChannelTypes = Constants.ChannelTypes;

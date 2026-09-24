@@ -1,9 +1,9 @@
-// === Module 8591: profile_customization/ProfileCustomizationUtils ===
+// === Module 8595: profile_customization/ProfileCustomizationUtils ===
 
-// Module 8591 (profile_customization/ProfileCustomizationUtils)
+// Module 8595 (profile_customization/ProfileCustomizationUtils)
 import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
 import AvatarUtils from "AvatarUtils" /* 1397 */;
-import VideoBackground from "VideoBackground" /* 8592 */;
+import VideoBackground from "VideoBackground" /* 8596 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/profile_customization/native/ProfileCustomizationUtils.tsx");

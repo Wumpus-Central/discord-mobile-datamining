@@ -1,12 +1,12 @@
-// === Module 8599: GifTag ===
+// === Module 8603: GifTag ===
 
-// Module 8599 (GifTag)
+// Module 8603 (GifTag)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4823 */;
-import createStyles from "createStyles" /* 4827 */;
+import Text_Text from "Text/Text" /* 4825 */;
+import createStyles from "createStyles" /* 4829 */;
 import n from "module_672" /* 672 */;
 import size from "module_2" /* 2 */;
 

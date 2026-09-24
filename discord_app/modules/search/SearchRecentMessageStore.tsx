@@ -1,6 +1,6 @@
-// === Module 12677: SearchRecentMessageStore ===
+// === Module 12686: SearchRecentMessageStore ===
 
-// Module 12677 (SearchRecentMessageStore)
+// Module 12686 (SearchRecentMessageStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

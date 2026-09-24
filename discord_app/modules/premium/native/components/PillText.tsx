@@ -1,13 +1,13 @@
-// === Module 13778: PillText ===
+// === Module 13787: PillText ===
 
-// Module 13778 (PillText)
+// Module 13787 (PillText)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
-import Text_Text from "Text/Text" /* 4823 */;
-import LinearGradientDefault from "LinearGradient" /* 5283 */;
-import usePremiumPrimaryGradientColorsDefault from "usePremiumPrimaryGradientColors" /* 13779 */;
-import createStyles from "createStyles" /* 4827 */;
+import Text_Text from "Text/Text" /* 4825 */;
+import LinearGradientDefault from "LinearGradient" /* 5285 */;
+import usePremiumPrimaryGradientColorsDefault from "usePremiumPrimaryGradientColors" /* 13788 */;
+import createStyles from "createStyles" /* 4829 */;
 import size from "module_2" /* 2 */;
 
 const HorizontalGradient = Constants.HorizontalGradient;

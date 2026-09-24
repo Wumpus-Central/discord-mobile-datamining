@@ -1,13 +1,13 @@
-// === Module 9386: VibegrationsActionCreators ===
+// === Module 9390: VibegrationsActionCreators ===
 
-// Module 9386 (VibegrationsActionCreators)
+// Module 9390 (VibegrationsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 5361 */;
-import VibegrationsAnalytics from "VibegrationsAnalytics" /* 9387 */;
-import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 9388 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 5363 */;
+import VibegrationsAnalytics from "VibegrationsAnalytics" /* 9391 */;
+import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 9392 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 9385 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 9389 */;
 
 require = fn;
 function reloadVibegrationsAppFrames(application_id) {
@@ -562,8 +562,8 @@ export const createProject = function createProject() {
 export const renameProject = function renameProject(projectId, name) {
   return patchProject(projectId, { name });
 };
-export const updateProjectSettings = function updateProjectSettings(projectId, arg1) {
-  return patchProject(projectId, arg1);
+export const updateProjectSettings = function updateProjectSettings(first1, arg1) {
+  return patchProject(first1, arg1);
 };
 export const setProjectIcon = function setProjectIcon() {
   const self = this;

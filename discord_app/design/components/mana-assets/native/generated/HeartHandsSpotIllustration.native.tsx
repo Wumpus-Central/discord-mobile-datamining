@@ -1,9 +1,9 @@
-// === Module 6518: HeartHandsSpotIllustration ===
+// === Module 6520: HeartHandsSpotIllustration ===
 
-// Module 6518 (HeartHandsSpotIllustration)
+// Module 6520 (HeartHandsSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5890 */;
-import _modDef6519 from "module_6519" /* 6519 */;
+import FastImageDefault from "FastImage" /* 5892 */;
+import _modDef6521 from "module_6521" /* 6521 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const HeartHandsSpotIllustration = function HeartHandsSpotIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6519 };
+  const obj2 = { uri: _modDef6521 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

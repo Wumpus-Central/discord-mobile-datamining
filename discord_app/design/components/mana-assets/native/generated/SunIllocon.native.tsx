@@ -1,9 +1,9 @@
-// === Module 6856: SunIllocon ===
+// === Module 6858: SunIllocon ===
 
-// Module 6856 (SunIllocon)
+// Module 6858 (SunIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5890 */;
-import _modDef6857 from "module_6857" /* 6857 */;
+import FastImageDefault from "FastImage" /* 5892 */;
+import _modDef6859 from "module_6859" /* 6859 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const SunIllocon = function SunIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6857 };
+  const obj2 = { uri: _modDef6859 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

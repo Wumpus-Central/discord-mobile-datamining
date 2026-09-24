@@ -1,9 +1,9 @@
-// === Module 6416: GameServerAbstractUI ===
+// === Module 6418: GameServerAbstractUI ===
 
-// Module 6416 (GameServerAbstractUI)
+// Module 6418 (GameServerAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5890 */;
-import _modDef6417 from "module_6417" /* 6417 */;
+import FastImageDefault from "FastImage" /* 5892 */;
+import _modDef6419 from "module_6419" /* 6419 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const GameServerAbstractUI = function GameServerAbstractUI(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6417 };
+  const obj2 = { uri: _modDef6419 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

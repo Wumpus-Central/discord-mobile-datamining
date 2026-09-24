@@ -1,17 +1,17 @@
-// === Module 8024: QuestStore ===
+// === Module 8026: QuestStore ===
 
-// Module 8024 (QuestStore)
+// Module 8026 (QuestStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
-import QuestDataUtils from "QuestDataUtils" /* 8020 */;
-import AdDecisionUtils from "AdDecisionUtils" /* 8022 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 8029 */;
-import getQuestLogger from "getQuestLogger" /* 8030 */;
-import QuestServerUtils from "QuestServerUtils" /* 8031 */;
+import QuestDataUtils from "QuestDataUtils" /* 8022 */;
+import AdDecisionUtils from "AdDecisionUtils" /* 8024 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 8031 */;
+import getQuestLogger from "getQuestLogger" /* 8032 */;
+import QuestServerUtils from "QuestServerUtils" /* 8033 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ConsoleQuestUIStore from "ConsoleQuestUIStore" /* 8025 */;
-import VideoQuestUIStore from "VideoQuestUIStore" /* 8026 */;
+import ConsoleQuestUIStore from "ConsoleQuestUIStore" /* 8027 */;
+import VideoQuestUIStore from "VideoQuestUIStore" /* 8028 */;
 
 require = fn;
 function initializeState() {
@@ -159,7 +159,7 @@ function _runExpirationCheck() {
   }
   const obj = require("QuestDataUtils");
 }
-const QuestsExperimentLocations = fn(5747).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5749).QuestsExperimentLocations;
 new Map();
 let c33 = null;
 let c34 = null;
@@ -371,11 +371,11 @@ const questStore = new QuestStore(DispatcherDefault, {
       let tmp9 = nextResult;
       let result = map.set(nextResult.id, nextResult);
       let tmp13 = mapped;
-      let obj5 = mapped(8020);
+      let obj5 = mapped(8022);
       let result1 = map1.set(nextResult.id, obj5.isQuestExpired(nextResult));
       let targetedContent = nextResult.targetedContent;
-      if (targetedContent.includes(mapped(5750).QuestContent.QUEST_BAR)) {
-        let tmp13Result = tmp13(8030);
+      if (targetedContent.includes(mapped(5752).QuestContent.QUEST_BAR)) {
+        let tmp13Result = tmp13(8032);
         let obj4 = { location: QuestsExperimentLocations.QUESTS_STORE };
         let questLogger = tmp13Result.getQuestLogger(obj4);
         let _HermesInternal2 = HermesInternal;
@@ -397,7 +397,7 @@ const questStore = new QuestStore(DispatcherDefault, {
     for (const item10131 of values) {
       if (!map.has(item10131.id)) {
         let result3 = map.set(item10131.id, item10131);
-        let obj10 = mapped(8020);
+        let obj10 = mapped(8022);
         let result4 = map1.set(item10131.id, obj10.isQuestExpired(item10131));
       }
       continue;

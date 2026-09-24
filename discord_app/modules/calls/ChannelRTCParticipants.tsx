@@ -1,25 +1,25 @@
-// === Module 9695: ChannelRTCParticipants ===
+// === Module 9699: ChannelRTCParticipants ===
 
-// Module 9695 (ChannelRTCParticipants)
+// Module 9699 (ChannelRTCParticipants)
 import _mod12 from "module_12" /* 12 */;
-import SecondaryIndexMap from "SecondaryIndexMap" /* 4457 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4879 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4979 */;
-import getParticipantUserKeyDefault from "getParticipantUserKey" /* 5731 */;
-import useAvatarDecoration from "useAvatarDecoration" /* 8560 */;
-import useIsSpeaking from "useIsSpeaking" /* 9697 */;
-import ContentClassificationEmbeddedActivityFilterExperiment2 from "ContentClassificationEmbeddedActivityFilterExperiment" /* 9698 */;
-import ContentClassificationReference from "ContentClassificationReference" /* 9699 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2041 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4849 */;
+import SecondaryIndexMap from "SecondaryIndexMap" /* 4459 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4881 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4981 */;
+import getParticipantUserKeyDefault from "getParticipantUserKey" /* 5733 */;
+import useAvatarDecoration from "useAvatarDecoration" /* 8564 */;
+import useIsSpeaking from "useIsSpeaking" /* 9701 */;
+import ContentClassificationEmbeddedActivityFilterExperiment2 from "ContentClassificationEmbeddedActivityFilterExperiment" /* 9702 */;
+import ContentClassificationReference from "ContentClassificationReference" /* 9703 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4851 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 5581 */;
-import ChannelStore from "ChannelStore" /* 2042 */;
+import CallStore from "CallStore" /* 5583 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
-import SpeakingStore from "SpeakingStore" /* 5722 */;
+import SpeakingStore from "SpeakingStore" /* 5724 */;
 import UserStore from "UserStore" /* 1372 */;
-import VideoStreamStore from "VideoStreamStore" /* 9696 */;
-import VoiceStateStore from "VoiceStateStore" /* 4846 */;
+import VideoStreamStore from "VideoStreamStore" /* 9700 */;
+import VoiceStateStore from "VoiceStateStore" /* 4848 */;
 
 require = fn;
 function sortKey(type) {
@@ -61,11 +61,11 @@ function sortKey(type) {
     return "" + str4 + getParticipantUserKeyDefault(type.userNick, type.user) + "\u0003";
   }
 }
-const CallConstants = fn(4848);
+const CallConstants = fn(4850);
 ({ isStreamParticipant: map1, ParticipantTypes: closure_14 } = CallConstants);
 let Constants = fn(1074);
 ({ ActivityTypes: closure_15, ChannelTypes: closure_16 } = Constants);
-Constants = fn(4852);
+Constants = fn(4854);
 ({ MediaEngineContextTypes: closure_17, Features: closure_18 } = Constants);
 const __EMBEDDED_ACTIVITIES__ = "__EMBEDDED_ACTIVITIES__";
 const ChannelRTCParticipantsIndexes = { VIDEO: "VIDEO", STREAM: "STREAM", FILTERED: "FILTERED", SPEAKING: "SPEAKING", ACTIVITY: "ACTIVITY", NOT_POPPED_OUT: "NOT_POPPED_OUT" };
@@ -220,11 +220,11 @@ prototype["updateParticipant"] = function updateParticipant(arg0) {
   }
   return flag;
 };
-prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f80327) {
+prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f80397) {
   const self = this;
-  const userId = f80327;
+  const userId = f80397;
   let flag;
-  if (this.participants[f80327] != null) {
+  if (this.participants[f80397] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.USER) {
@@ -262,10 +262,10 @@ prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f803
   }
   return flag;
 };
-prototype["updateParticipantQuality"] = function updateParticipantQuality(f80334, maxResolution, maxFrameRate) {
+prototype["updateParticipantQuality"] = function updateParticipantQuality(f80404, maxResolution, maxFrameRate) {
   const self = this;
   let flag;
-  if (this.participants[f80334] != null) {
+  if (this.participants[f80404] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.STREAM) {

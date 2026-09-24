@@ -1,15 +1,15 @@
-// === Module 17180: pages/ErrorScreen ===
+// === Module 17206: pages/ErrorScreen ===
 
-// Module 17180 (pages/ErrorScreen)
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4534 */;
-import Text_Text from "Text/Text" /* 4823 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7312 */;
+// Module 17206 (pages/ErrorScreen)
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4536 */;
+import Text_Text from "Text/Text" /* 4825 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7314 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let closure_6 = createStyles.createStyles({ container: { justifyContent: "center", alignItems: "center", height: "100%", display: "flex" }, text: { textAlign: "center", width: "75%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/ErrorScreen.tsx");

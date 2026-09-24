@@ -1,18 +1,18 @@
-// === Module 7562: StorefrontUtils ===
+// === Module 7564: StorefrontUtils ===
 
-// Module 7562 (StorefrontUtils)
+// Module 7564 (StorefrontUtils)
 import _modDef12 from "module_12" /* 12 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1365 */;
 import FlagUtils from "FlagUtils" /* 1385 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4481 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7557 */;
-import StorefrontTypes from "StorefrontTypes" /* 7564 */;
-import PriceUtils from "PriceUtils" /* 7565 */;
-import OrbCheckoutUtils from "OrbCheckoutUtils" /* 7572 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4483 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7559 */;
+import StorefrontTypes from "StorefrontTypes" /* 7566 */;
+import PriceUtils from "PriceUtils" /* 7567 */;
+import OrbCheckoutUtils from "OrbCheckoutUtils" /* 7574 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2109 */;
+import LocaleStore from "LocaleStore" /* 2111 */;
 import UserStore from "UserStore" /* 1372 */;
-import SKUPricesStore from "SKUPricesStore" /* 7563 */;
+import SKUPricesStore from "SKUPricesStore" /* 7565 */;
 
 const require = globalThis.__r;
 
@@ -60,7 +60,7 @@ function useSKUPrice(sku) {
       if (null != stateFromStores1) {
         let tmp12 = stateFromStores1[SELF_PURCHASE];
         if (tmp12 == null) {
-          tmp12 = stateFromStores1[tmp4(undefined, 7564).StorefrontPurchaseType.SELF_PURCHASE];
+          tmp12 = stateFromStores1[tmp4(undefined, 7566).StorefrontPurchaseType.SELF_PURCHASE];
         }
         let found;
         if (tmp12 != null) {
@@ -77,7 +77,7 @@ function useSKUPrice(sku) {
         return obj;
       }
     }
-    const obj2 = { userPrice: "r", pricesForPurchaseType: "WireType", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores1 };
+    const obj2 = { userPrice: "r", pricesForPurchaseType: "ip", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores1 };
     return obj2;
   }, items1);
   userPrice = memo.userPrice;
@@ -339,7 +339,7 @@ export const useSKUOrbPrice = function useSKUOrbPrice(sku) {
       if (null != stateFromStores1) {
         let tmp12 = stateFromStores1[SELF_PURCHASE];
         if (tmp12 == null) {
-          tmp12 = stateFromStores1[tmp4(undefined, 7564).StorefrontPurchaseType.SELF_PURCHASE];
+          tmp12 = stateFromStores1[tmp4(undefined, 7566).StorefrontPurchaseType.SELF_PURCHASE];
         }
         let found;
         if (tmp12 != null) {
@@ -356,7 +356,7 @@ export const useSKUOrbPrice = function useSKUOrbPrice(sku) {
         return obj;
       }
     }
-    const obj2 = { userPrice: "r", pricesForPurchaseType: "WireType", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores1 };
+    const obj2 = { userPrice: "r", pricesForPurchaseType: "ip", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores1 };
     return obj2;
   }, items1);
   let userPrice = memo.userPrice;

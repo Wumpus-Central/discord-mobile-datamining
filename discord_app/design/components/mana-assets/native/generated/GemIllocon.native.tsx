@@ -1,9 +1,9 @@
-// === Module 6424: GemIllocon ===
+// === Module 6426: GemIllocon ===
 
-// Module 6424 (GemIllocon)
+// Module 6426 (GemIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5890 */;
-import _modDef6425 from "module_6425" /* 6425 */;
+import FastImageDefault from "FastImage" /* 5892 */;
+import _modDef6427 from "module_6427" /* 6427 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const GemIllocon = function GemIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6425 };
+  const obj2 = { uri: _modDef6427 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

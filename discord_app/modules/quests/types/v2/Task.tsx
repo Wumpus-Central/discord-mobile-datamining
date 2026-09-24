@@ -1,10 +1,10 @@
-// === Module 8033: Task ===
+// === Module 8035: Task ===
 
-// Module 8033 (Task)
-import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5755 */;
-import QuestTaskConfigTypes from "QuestTaskConfigTypes" /* 8034 */;
-import v2_Video from "v2/Video" /* 8035 */;
-import QuestTaskJoinOperator from "QuestTaskJoinOperator" /* 8036 */;
+// Module 8035 (Task)
+import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5757 */;
+import QuestTaskConfigTypes from "QuestTaskConfigTypes" /* 8036 */;
+import v2_Video from "v2/Video" /* 8037 */;
+import QuestTaskJoinOperator from "QuestTaskJoinOperator" /* 8038 */;
 import size from "module_2" /* 2 */;
 
 function _firstPartyTasksFromServer(tasks) {

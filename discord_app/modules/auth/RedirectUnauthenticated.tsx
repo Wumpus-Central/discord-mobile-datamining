@@ -1,8 +1,8 @@
-// === Module 17301: RedirectUnauthenticated ===
+// === Module 17324: RedirectUnauthenticated ===
 
-// Module 17301 (RedirectUnauthenticated)
+// Module 17324 (RedirectUnauthenticated)
 import utils_PathUtils from "utils/PathUtils" /* 1083 */;
-import _mod4659 from "module_4659" /* 4659 */;
+import _mod4661 from "module_4661" /* 4661 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ export default function RedirectUnauthenticated() {
     to = utils_PathUtils.getLoginPath(tmp4, false);
     const tmp2Result = utils_PathUtils;
   }
-  return jsx(_mod4659.Redirect, { to });
+  return jsx(_mod4661.Redirect, { to });
 };
 export const getRedirectPath = function getRedirectPath() {
   if (CONFERENCE_MODE_ENABLED) {

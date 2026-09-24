@@ -1,6 +1,6 @@
-// === Module 5072: CheckpointExperiment ===
+// === Module 5074: CheckpointExperiment ===
 
-// Module 5072 (CheckpointExperiment)
+// Module 5074 (CheckpointExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

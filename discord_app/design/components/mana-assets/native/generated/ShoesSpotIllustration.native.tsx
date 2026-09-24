@@ -1,9 +1,9 @@
-// === Module 6782: ShoesSpotIllustration ===
+// === Module 6784: ShoesSpotIllustration ===
 
-// Module 6782 (ShoesSpotIllustration)
+// Module 6784 (ShoesSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5890 */;
-import _modDef6783 from "module_6783" /* 6783 */;
+import FastImageDefault from "FastImage" /* 5892 */;
+import _modDef6785 from "module_6785" /* 6785 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ShoesSpotIllustration = function ShoesSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6783 };
+  const obj2 = { uri: _modDef6785 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

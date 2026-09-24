@@ -1,6 +1,6 @@
-// === Module 12624: DoubleTapToReactChatInputBanner ===
+// === Module 12633: DoubleTapToReactChatInputBanner ===
 
-// Module 12624 (DoubleTapToReactChatInputBanner)
+// Module 12633 (DoubleTapToReactChatInputBanner)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -8,18 +8,18 @@ import native from "native" /* 1177 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
 import dismissible_content from "dismissible_content" /* 2028 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4559 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4794 */;
-import Text_Text from "Text/Text" /* 4823 */;
-import timing from "timing" /* 4828 */;
-import Pressables from "Pressables" /* 5425 */;
-import XSmallIcon from "XSmallIcon" /* 5983 */;
-import EmojiDefault from "Emoji" /* 7461 */;
-import canAddNewReactionsDefault from "canAddNewReactions" /* 8315 */;
-import renderChannelBadge from "renderChannelBadge" /* 12625 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
+import Text_Text from "Text/Text" /* 4825 */;
+import timing from "timing" /* 4830 */;
+import Pressables from "Pressables" /* 5427 */;
+import XSmallIcon from "XSmallIcon" /* 5985 */;
+import EmojiDefault from "Emoji" /* 7463 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 8319 */;
+import renderChannelBadge from "renderChannelBadge" /* 12634 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4819 */;
+import AccessibilityStore from "AccessibilityStore" /* 4821 */;
 
 require = fn;
 function DoubleTapToReactChatInputBannerInner(emoji) {
@@ -142,7 +142,7 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   }, []);
   const items3 = [markAsDismissed];
   const callback1 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12721, dependencyMap.paths), "DoubleTapToReactActionSheet", { emoji });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12730, dependencyMap.paths), "DoubleTapToReactActionSheet", { emoji });
     markAsDismissed(ContentDismissActionType.TAKE_ACTION);
   }, items2);
   const callback2 = noop.useCallback(() => {
@@ -180,12 +180,12 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   return closure_10(closure_11, obj7);
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(2039).ContentDismissActionType;
+const ContentDismissActionType = fn(2041).ContentDismissActionType;
 const EMOJI_URL_BASE_SIZE = fn(1375).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 const androidRippleConfig = { cornerRadius: 0 };
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = { animatedContainer: { borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, measurement: { opacity: 0, position: "absolute" }, container: { display: "flex", flexDirection: "row", alignItems: "center", padding: 12 }, highlight: null, text: null, emojiContainer: null, emoji: null, textEmoji: null, header: null, closeButton: null };
 let obj3 = { borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.highlight = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };

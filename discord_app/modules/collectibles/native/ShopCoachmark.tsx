@@ -1,6 +1,6 @@
-// === Module 17344: ShopCoachmark ===
+// === Module 17367: ShopCoachmark ===
 
-// Module 17344 (ShopCoachmark)
+// Module 17367 (ShopCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
@@ -12,9 +12,9 @@ function CoachmarkImg(arg0) {
   const tmp = closure_6();
   return jsx(native.Avatar, { style: closure_6().image, source, avatarDecoration: { asset: decorationAsset }, size: native.AvatarSizes.XXLARGE });
 }
-const ContentDismissActionType = fn(2039).ContentDismissActionType;
+const ContentDismissActionType = fn(2041).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let closure_6 = createStyles.createStyles({ image: { marginTop: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/ShopCoachmark.tsx");

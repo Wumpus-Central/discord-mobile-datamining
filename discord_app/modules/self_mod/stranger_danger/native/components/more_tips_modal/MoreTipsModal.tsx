@@ -1,19 +1,19 @@
-// === Module 11718: MoreTipsModal ===
+// === Module 11724: MoreTipsModal ===
 
-// Module 11718 (MoreTipsModal)
+// Module 11724 (MoreTipsModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4823 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 5169 */;
-import MetricEvents from "MetricEvents" /* 5174 */;
-import _modDef7323 from "module_7323" /* 7323 */;
-import HeaderActionButton from "HeaderActionButton" /* 7705 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11713 */;
-import SafetyTipsSectionDefault from "SafetyTipsSection" /* 11719 */;
-import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 11720 */;
+import Text_Text from "Text/Text" /* 4825 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5171 */;
+import MetricEvents from "MetricEvents" /* 5176 */;
+import _modDef7325 from "module_7325" /* 7325 */;
+import HeaderActionButton from "HeaderActionButton" /* 7707 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11719 */;
+import SafetyTipsSectionDefault from "SafetyTipsSection" /* 11725 */;
+import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 11726 */;
 import noop from "module_19" /* 19 */;
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 11261 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 11267 */;
 
 require = fn;
 function MoreTipsModalScreen(learnMore) {
@@ -49,7 +49,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = { scroll: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, contentContainer: null, tipsContainer: null, learnMore: null, header: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.contentContainer = { marginHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
@@ -89,7 +89,7 @@ export default function MoreTipsModal(headerStyle) {
             onPress() {
               return warningId(senderId[12]).popWithKey(channelId);
             },
-            source: _modDef7323,
+            source: _modDef7325,
             iconSize: native.IconSizes.MEDIUM,
             accessibilityLabel: null
           };

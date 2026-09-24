@@ -1,10 +1,10 @@
-// === Module 17533: ChannelSubtitle ===
+// === Module 17556: ChannelSubtitle ===
 
-// Module 17533 (ChannelSubtitle)
-import Text_Text from "Text/Text" /* 4823 */;
-import MessagePreviewMarkup from "MessagePreviewMarkup" /* 10457 */;
-import getChannelSubtitleData from "getChannelSubtitleData" /* 16628 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 17205 */;
+// Module 17556 (ChannelSubtitle)
+import Text_Text from "Text/Text" /* 4825 */;
+import MessagePreviewMarkup from "MessagePreviewMarkup" /* 10462 */;
+import getChannelSubtitleData from "getChannelSubtitleData" /* 16652 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 17231 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,7 +35,7 @@ function ChannelSubtitle(arg0) {
     return jsx(Text_Text.Text, {});
   }
 }
-const SUBTITLE_OPACITY_NORMAL = fn(10459).SUBTITLE_OPACITY_NORMAL;
+const SUBTITLE_OPACITY_NORMAL = fn(10464).SUBTITLE_OPACITY_NORMAL;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/shared/ChannelSubtitle.tsx");

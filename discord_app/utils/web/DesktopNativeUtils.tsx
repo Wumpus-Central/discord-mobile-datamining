@@ -1,14 +1,14 @@
-// === Module 5868: DesktopNativeUtils ===
+// === Module 5870: DesktopNativeUtils ===
 
-// Module 5868 (DesktopNativeUtils)
+// Module 5870 (DesktopNativeUtils)
 import logger_Logger from "logger/Logger" /* 4 */;
 import Storage3 from "Storage" /* 510 */;
 import GameDetectionTypes from "GameDetectionTypes" /* 2019 */;
-import Client from "Client" /* 4757 */;
-import discord_common_DiscordNative from "discord_common/DiscordNative" /* 4853 */;
-import DomainMigrationUtils from "DomainMigrationUtils" /* 5869 */;
-import IPCEvents from "IPCEvents" /* 5870 */;
-import FileExtensionUtils from "FileExtensionUtils" /* 5871 */;
+import Client from "Client" /* 4759 */;
+import discord_common_DiscordNative from "discord_common/DiscordNative" /* 4855 */;
+import DomainMigrationUtils from "DomainMigrationUtils" /* 5871 */;
+import IPCEvents from "IPCEvents" /* 5872 */;
+import FileExtensionUtils from "FileExtensionUtils" /* 5873 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -771,7 +771,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
             return obj5;
           } else {
             closure_129_0 = value;
-            closure_129_1 = closure_0(5871).decideFileExtension(closure_130_0, closure_130_1);
+            closure_129_1 = closure_0(5873).decideFileExtension(closure_130_0, closure_130_1);
             if (null != closure_129_1) {
               if (set2.has(closure_129_1)) {
                 closure_0 = closure_130_1;
@@ -807,7 +807,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
             }
             const _HermesInternal = HermesInternal;
             combined = "image." + closure_129_1;
-            const obj8 = closure_0(5871);
+            const obj8 = closure_0(5873);
           }
         } else if (arg0 === 1) {
           c4 = 3;
@@ -966,7 +966,7 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
                 }
                 const str3 = str2.replace(closure_1_21, "");
               } else if (!str.includes(".")) {
-                const decideFileExtensionResult = unknown(5871).decideFileExtension(tmp54, closure_1);
+                const decideFileExtensionResult = unknown(5873).decideFileExtension(tmp54, closure_1);
                 dependencyMap = decideFileExtensionResult;
                 png = dependencyMap;
                 if (dependencyMap == null) {
@@ -974,7 +974,7 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
                 }
                 const _HermesInternal = HermesInternal;
                 closure_133_0 = "" + str + "." + png;
-                const obj9 = unknown(5871);
+                const obj9 = unknown(5873);
               }
               tmp54 = getImageData(tmp54);
               c9 = 1;

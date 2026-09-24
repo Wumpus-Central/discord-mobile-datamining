@@ -1,21 +1,21 @@
-// === Module 14825: VibegrationsVoiceSessionCoordinator ===
+// === Module 14834: VibegrationsVoiceSessionCoordinator ===
 
-// Module 14825 (VibegrationsVoiceSessionCoordinator)
-import RPCErrorDefault from "RPCError" /* 9660 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9990 */;
-import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 14184 */;
-import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 14828 */;
-import FrameVisibilityStore from "FrameVisibilityStore" /* 14826 */;
-import FramesStore from "FramesStore" /* 9389 */;
+// Module 14834 (VibegrationsVoiceSessionCoordinator)
+import RPCErrorDefault from "RPCError" /* 9664 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9995 */;
+import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 14193 */;
+import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 14837 */;
+import FrameVisibilityStore from "FrameVisibilityStore" /* 14835 */;
+import FramesStore from "FramesStore" /* 9393 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4850 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4852 */;
 import UserStore from "UserStore" /* 1372 */;
-import VoiceStateStore from "VoiceStateStore" /* 4846 */;
+import VoiceStateStore from "VoiceStateStore" /* 4848 */;
 
 let obj2 = fn;
 const RPCErrors = fn(1074).RPCErrors;
-const Constants = fn(4852);
+const Constants = fn(4854);
 ({ Features: closure_11, MediaEngineContextTypes: closure_12 } = Constants);
 let closure_13 = { x: 0, y: 0, z: -1 };
 class VibegrationsVoiceSessionCoordinator {
@@ -287,7 +287,7 @@ prototype["update"] = function update(id, id, arg2, arr) {
             if (!set.has(user_id)) {
               set.add(user_id);
               obj2 = { userId: user_id, position: null };
-              obj2.position = obj2(14827).toListenerRelativePosition(closure_0, user_id.position);
+              obj2.position = obj2(14836).toListenerRelativePosition(closure_0, user_id.position);
               return obj2;
             }
           }

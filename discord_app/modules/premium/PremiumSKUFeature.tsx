@@ -1,6 +1,6 @@
-// === Module 14340: PremiumSKUFeature ===
+// === Module 14349: PremiumSKUFeature ===
 
-// Module 14340 (PremiumSKUFeature)
+// Module 14349 (PremiumSKUFeature)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/PremiumSKUFeature.tsx");

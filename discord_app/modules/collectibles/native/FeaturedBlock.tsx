@@ -1,11 +1,11 @@
-// === Module 16216: FeaturedBlock ===
+// === Module 16238: FeaturedBlock ===
 
-// Module 16216 (FeaturedBlock)
+// Module 16238 (FeaturedBlock)
 import nativeDefault from "native" /* 576 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7493 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7513 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9123 */;
-import FeaturedCategorySubblockDefault from "FeaturedCategorySubblock" /* 16217 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7495 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7515 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9127 */;
+import FeaturedCategorySubblockDefault from "FeaturedCategorySubblock" /* 16239 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
@@ -23,7 +23,7 @@ function Subblocks(style) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let closure_5 = createStyles.createStyles({ container: { display: "flex", width: "100%", flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 }, featuredSubblock: { flex: 1, flexBasis: 400, maxWidth: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/FeaturedBlock.tsx");

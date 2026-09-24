@@ -1,13 +1,13 @@
-// === Module 13300: InAppReportsExternalLinkElement ===
+// === Module 13309: InAppReportsExternalLinkElement ===
 
-// Module 13300 (InAppReportsExternalLinkElement)
+// Module 13309 (InAppReportsExternalLinkElement)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1115 */;
-import LinkingDefault from "Linking" /* 4518 */;
-import Text_Text from "Text/Text" /* 4823 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7310 */;
+import LinkingDefault from "Linking" /* 4520 */;
+import Text_Text from "Text/Text" /* 4825 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7312 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4827 */;
+import createStyles from "createStyles" /* 4829 */;
 import size from "module_2" /* 2 */;
 
 function ExternalLinkItem(data) {
@@ -16,12 +16,12 @@ function ExternalLinkItem(data) {
   let tmp3 = null;
   if (data.is_localized) {
     const obj = { label: tmp, subLabel: tmp2, trailing: null, onPress: null, arrow: false, accessibilityRole: "link" };
-    const obj2 = { IconComponent: url(13301).LinkExternalMediumIcon };
-    obj.trailing = closure_4(url(5914).TableRowIcon, obj2);
+    const obj2 = { IconComponent: url(13310).LinkExternalMediumIcon };
+    obj.trailing = closure_4(url(5916).TableRowIcon, obj2);
     obj.onPress = function onPress() {
       LinkingDefault.openURL(url);
     };
-    tmp3 = closure_4(url(8949).RowButton, obj);
+    tmp3 = closure_4(url(8953).RowButton, obj);
   }
   return tmp3;
 }

@@ -1,8 +1,8 @@
-// === Module 14177: VoiceDuration ===
+// === Module 14186: VoiceDuration ===
 
-// Module 14177 (VoiceDuration)
-import TimeUtils from "TimeUtils" /* 4856 */;
-import discord_common_BaseConnectionEvent from "discord_common/BaseConnectionEvent" /* 4898 */;
+// Module 14186 (VoiceDuration)
+import TimeUtils from "TimeUtils" /* 4858 */;
+import discord_common_BaseConnectionEvent from "discord_common/BaseConnectionEvent" /* 4900 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = [1, 100, 1000, 10000];

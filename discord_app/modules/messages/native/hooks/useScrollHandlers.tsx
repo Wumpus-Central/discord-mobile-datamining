@@ -1,24 +1,26 @@
-// === Module 11873: useScrollHandlers ===
+// === Module 11879: useScrollHandlers ===
 
-// Module 11873 (useScrollHandlers)
+// Module 11879 (useScrollHandlers)
 import LoggerDefault from "Logger" /* 3 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5256 */;
-import QuestTypes from "QuestTypes" /* 5750 */;
-import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 11335 */;
-import NativeChatUtilsDefault from "NativeChatUtils" /* 11617 */;
-import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 11619 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5258 */;
+import QuestTypes from "QuestTypes" /* 5752 */;
+import useInitialValueDefault from "useInitialValue" /* 5903 */;
+import ConversationsActionCreators from "ConversationsActionCreators" /* 8239 */;
+import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 11341 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 11623 */;
+import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 11625 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const useChatBottomManagerUIStore = fn(9733);
+const useChatBottomManagerUIStore = fn(9737);
 ({ updateIsAtBottom: closure_4, updateShouldShowJumpToPresentButton: hasOwnProperty } = useChatBottomManagerUIStore);
 let closure_6 = new LoggerDefault("useScrollHandlers");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/hooks/useScrollHandlers.tsx");
 
 export default function useScrollHandlers(arg0) {
-  ({ chatRef: require, chatManager: importDefault, chatUpdatesQueue: dependencyMap, pendingUpdatesQueueRef: noop, animatedRef: closure_4, fetchMoreBefore: closure_5, fetchMoreAfter: closure_6, handleVisibleMessagesChange: closure_7, applyNativeRowsUpdate: closure_8, messages: closure_9, channel: closure_10, channelId: closure_11, screenIndex: closure_12, onScroll: closure_13, useReducedMotion: closure_14, isStaff: closure_15, visibleMessagesWindowHandler: closure_16 } = arg0);
+  ({ chatRef: require, chatManager: importDefault, chatUpdatesQueue: dependencyMap, pendingUpdatesQueueRef: noop, animatedRef: closure_4, fetchMoreBefore: closure_5, fetchMoreAfter: closure_6, handleVisibleMessagesChange: closure_7, applyNativeRowsUpdate: closure_8, messages: closure_9, channel: closure_10, channelId: closure_11, screenIndex: closure_12, onScroll: closure_13, useReducedMotion: closure_14, isStaff: closure_15, visibleMessagesWindowHandler: closure_16, selectedConversation: closure_17 } = arg0);
   function handleScrollCallbacks(isNearTop) {
     ({ eventTimestamp, isAtBottom, isNearBottom } = isNearTop);
     if (isNearBottom === undefined) {
@@ -139,6 +141,7 @@ export default function useScrollHandlers(arg0) {
       });
     }
   }
+  closure_18 = useInitialValueDefault(() => new previousRows(dependencyMap[4])());
   const ref = noop.useRef(undefined);
   const ref1 = noop.useRef(false);
   const ref2 = noop.useRef(false);
@@ -223,6 +226,30 @@ export default function useScrollHandlers(arg0) {
         handleScroll(obj3);
         const obj4 = { rows: previousRows._rows, firstVisibleMessageRowIndex: firstVisibleMessageIndex, lastVisibleMessageRowIndex: lastVisibleMessageIndex };
         closure_1_16.handleScrollPosition(obj4);
+        const obj5 = { rows: previousRows._rows, conversationId: null, startMessageId: null, firstVisibleMessageRowIndex: null, lastVisibleMessageRowIndex: null };
+        let id;
+        if (closure_1_17 != null) {
+          id = closure_1_17.id;
+        }
+        if (id == null) {
+          id = null;
+        }
+        obj5.conversationId = id;
+        let startMessageId;
+        if (closure_1_17 != null) {
+          startMessageId = closure_1_17.startMessageId;
+        }
+        if (startMessageId == null) {
+          startMessageId = null;
+        }
+        obj5.startMessageId = startMessageId;
+        obj5.firstVisibleMessageRowIndex = firstVisibleMessageIndex;
+        obj5.lastVisibleMessageRowIndex = lastVisibleMessageIndex;
+        const handleScrollPositionResult1 = closure_18.handleScrollPosition(obj5);
+        if (null != handleScrollPositionResult1) {
+          const result = ConversationsActionCreators.clearConversationSelection(closure_1_11, handleScrollPositionResult1);
+          const tmpResult = ConversationsActionCreators;
+        }
       }
     }
   };

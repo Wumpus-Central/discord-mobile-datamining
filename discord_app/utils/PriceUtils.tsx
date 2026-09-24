@@ -1,14 +1,14 @@
-// === Module 7565: PriceUtils ===
+// === Module 7567: PriceUtils ===
 
-// Module 7565 (PriceUtils)
+// Module 7567 (PriceUtils)
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import PremiumUtils from "PremiumUtils" /* 4481 */;
-import utils_PriceUtils from "utils/PriceUtils" /* 7566 */;
-import IAPStore from "IAPStore" /* 7568 */;
-import GenericIAPStore from "GenericIAPStore" /* 7570 */;
-import LocaleStore from "LocaleStore" /* 2109 */;
-import BillingInfoStore from "BillingInfoStore" /* 4483 */;
+import PremiumUtils from "PremiumUtils" /* 4483 */;
+import utils_PriceUtils from "utils/PriceUtils" /* 7568 */;
+import IAPStore from "IAPStore" /* 7570 */;
+import GenericIAPStore from "GenericIAPStore" /* 7572 */;
+import LocaleStore from "LocaleStore" /* 2111 */;
+import BillingInfoStore from "BillingInfoStore" /* 4485 */;
 
 require = fn;
 function formatSingleCurrencyPrice(result, BGN, localeOverride) {

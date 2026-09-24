@@ -1,9 +1,9 @@
-// === Module 17430: useMutualGuilds ===
+// === Module 17453: useMutualGuilds ===
 
-// Module 17430 (useMutualGuilds)
+// Module 17453 (useMutualGuilds)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7943 */;
+import UserProfileStore from "UserProfileStore" /* 7945 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;

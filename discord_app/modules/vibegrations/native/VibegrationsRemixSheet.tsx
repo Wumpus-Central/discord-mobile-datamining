@@ -1,20 +1,20 @@
-// === Module 17015: VibegrationsRemixSheet ===
+// === Module 17039: VibegrationsRemixSheet ===
 
-// Module 17015 (VibegrationsRemixSheet)
+// Module 17039 (VibegrationsRemixSheet)
 import nativeDefault from "native" /* 576 */;
-import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7526 */;
+import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7528 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2064 */;
-import SortedGuildStore from "SortedGuildStore" /* 5741 */;
+import GuildStore from "GuildStore" /* 2066 */;
+import SortedGuildStore from "SortedGuildStore" /* 5743 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const VibegrationsRemixSheet = "VibegrationsRemixSheet";
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 } };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -118,7 +118,7 @@ export default function VibegrationsRemixSheet(project) {
               _undefined(null);
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: tmp2(17016).remixVibegrationsProjectInto(project, first), done: false };
+              const obj5 = { value: tmp2(17040).remixVibegrationsProjectInto(project, first), done: false };
               return obj5;
             }
           }
@@ -136,7 +136,7 @@ export default function VibegrationsRemixSheet(project) {
             closure_129_5(false);
           }
         }
-        tmp5(4794).hideActionSheet(VibegrationsRemixSheet);
+        tmp5(4796).hideActionSheet(VibegrationsRemixSheet);
         closure_129_1(closure_128_0.projectId, closure_129_2);
         c3 = 3;
         const obj7 = { value: undefined, done: true };

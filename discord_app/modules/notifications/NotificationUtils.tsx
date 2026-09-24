@@ -1,12 +1,12 @@
-// === Module 10487: notifications/NotificationUtils ===
+// === Module 10492: notifications/NotificationUtils ===
 
-// Module 10487 (notifications/NotificationUtils)
+// Module 10492 (notifications/NotificationUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import FlagUtilsAll from "FlagUtils" /* 1385 */;
-import MuteTimers from "MuteTimers" /* 4465 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5008 */;
+import MuteTimers from "MuteTimers" /* 4467 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5010 */;
 
 require = fn;
 const UserNotificationSettings = fn(1074).UserNotificationSettings;

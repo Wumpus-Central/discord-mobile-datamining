@@ -1,15 +1,15 @@
-// === Module 5006: GuildRoomAnalytics ===
+// === Module 5008: GuildRoomAnalytics ===
 
-// Module 5006 (GuildRoomAnalytics)
+// Module 5008 (GuildRoomAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import GuildRoomUtils from "GuildRoomUtils" /* 4988 */;
-import GuildRoomBackgrounds from "GuildRoomBackgrounds" /* 4990 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5007 */;
+import GuildRoomUtils from "GuildRoomUtils" /* 4990 */;
+import GuildRoomBackgrounds from "GuildRoomBackgrounds" /* 4992 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5009 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2042 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4850 */;
-import VoiceStateStore from "VoiceStateStore" /* 4846 */;
-import GuildRoomStore from "GuildRoomStore" /* 4985 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4852 */;
+import VoiceStateStore from "VoiceStateStore" /* 4848 */;
+import GuildRoomStore from "GuildRoomStore" /* 4987 */;
 
 require = fn;
 function getBaseProperties(merged) {
@@ -91,8 +91,8 @@ export const trackGuildRoomObjectInteracted = function trackGuildRoomObjectInter
     let merged1 = Object.assign(getBaseProperties(merged));
     obj4.interaction_type = interactionType;
     const merged2 = Object.assign(obj2);
-    merged(5007).trackWithMetadata(AnalyticEvents.GUILD_ROOM_OBJECT_INTERACTED, obj4);
-    const obj3 = merged(5007);
+    merged(5009).trackWithMetadata(AnalyticEvents.GUILD_ROOM_OBJECT_INTERACTED, obj4);
+    const obj3 = merged(5009);
   }
 };
 export const trackGuildRoomInteracted = function trackGuildRoomInteracted(interactionType) {
@@ -140,8 +140,8 @@ export const trackGuildRoomInteracted = function trackGuildRoomInteracted(intera
     let merged1 = Object.assign(getBaseProperties(merged));
     obj4.interaction_type = interactionType;
     const merged2 = Object.assign(obj2);
-    merged(5007).trackWithMetadata(AnalyticEvents.GUILD_ROOM_INTERACTED, obj4);
-    const obj3 = merged(5007);
+    merged(5009).trackWithMetadata(AnalyticEvents.GUILD_ROOM_INTERACTED, obj4);
+    const obj3 = merged(5009);
   }
 };
 export const trackGuildRoomLayoutToggled = function trackGuildRoomLayoutToggled(location) {
@@ -241,8 +241,8 @@ export const trackGuildRoomOpened = function trackGuildRoomOpened(location) {
     let merged1 = Object.assign(getBaseProperties(merged));
     obj4.location = _location;
     const merged2 = Object.assign(obj2);
-    merged(5007).trackWithMetadata(AnalyticEvents.GUILD_ROOM_OPENED, obj4);
-    const obj3 = merged(5007);
+    merged(5009).trackWithMetadata(AnalyticEvents.GUILD_ROOM_OPENED, obj4);
+    const obj3 = merged(5009);
   }
 };
 export const trackGuildRoomSeatSelected = function trackGuildRoomSeatSelected(arg0) {
@@ -388,8 +388,8 @@ export const trackGuildRoomUserInteracted = function trackGuildRoomUserInteracte
     let merged1 = Object.assign(getBaseProperties(merged));
     obj4.interaction_type = interactionType;
     const merged2 = Object.assign(obj2);
-    merged(5007).trackWithMetadata(AnalyticEvents.GUILD_ROOM_USER_INTERACTED, obj4);
-    const obj3 = merged(5007);
+    merged(5009).trackWithMetadata(AnalyticEvents.GUILD_ROOM_USER_INTERACTED, obj4);
+    const obj3 = merged(5009);
   }
 };
 export const trackGuildRoomUserConnected = function trackGuildRoomUserConnected(channelId) {
@@ -575,7 +575,7 @@ export const trackGuildRoomUpdated = function trackGuildRoomUpdated(update) {
     }
     let merged3 = Object.assign(tmp6);
     const merged4 = Object.assign(obj2);
-    merged(5007).trackWithMetadata(AnalyticEvents.GUILD_ROOM_UPDATED, obj3);
-    let obj4 = merged(5007);
+    merged(5009).trackWithMetadata(AnalyticEvents.GUILD_ROOM_UPDATED, obj3);
+    let obj4 = merged(5009);
   }
 };

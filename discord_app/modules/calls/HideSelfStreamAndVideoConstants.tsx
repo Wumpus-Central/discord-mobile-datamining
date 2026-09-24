@@ -1,6 +1,6 @@
-// === Module 17756: HideSelfStreamAndVideoConstants ===
+// === Module 17779: HideSelfStreamAndVideoConstants ===
 
-// Module 17756 (HideSelfStreamAndVideoConstants)
+// Module 17779 (HideSelfStreamAndVideoConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/calls/HideSelfStreamAndVideoConstants.tsx");

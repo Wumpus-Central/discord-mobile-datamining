@@ -1,6 +1,6 @@
-// === Module 6621: ? ===
+// === Module 6623: ? ===
 
-// Module 6621
+// Module 6623
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroSilverBadgeLargeBadge-2x.png.js");

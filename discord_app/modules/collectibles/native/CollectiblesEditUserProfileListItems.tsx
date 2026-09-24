@@ -1,21 +1,21 @@
-// === Module 13565: CollectiblesEditUserProfileListItems ===
+// === Module 13574: CollectiblesEditUserProfileListItems ===
 
-// Module 13565 (CollectiblesEditUserProfileListItems)
+// Module 13574 (CollectiblesEditUserProfileListItems)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4481 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4794 */;
-import HapticUtils from "HapticUtils" /* 4795 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4796 */;
-import Text_Text from "Text/Text" /* 4823 */;
-import Pressables from "Pressables" /* 5425 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7869 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7882 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 8517 */;
-import CollectiblesBadges from "CollectiblesBadges" /* 9187 */;
-import _modDef13566 from "module_13566" /* 13566 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4483 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
+import HapticUtils from "HapticUtils" /* 4797 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4798 */;
+import Text_Text from "Text/Text" /* 4825 */;
+import Pressables from "Pressables" /* 5427 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7871 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7884 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 8521 */;
+import CollectiblesBadges from "CollectiblesBadges" /* 9191 */;
+import _modDef13575 from "module_13575" /* 13575 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -60,7 +60,7 @@ const View = fn(17).View;
 let closure_6 = fn(1076).CollectiblesMobileShopScreen;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = { pressable: { marginTop: 10, borderRadius: nativeDefault.radii.sm }, item: null, selected: null, optionCell: null, optionCellText: null, newIcon: null, lockIcon: null };
 let obj3 = { marginTop: 10, borderRadius: nativeDefault.radii.sm };
 obj2.item = { borderWidth: 2, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, alignItems: "center", justifyContent: "center" };
@@ -79,7 +79,7 @@ export const EditCollectiblesListItemNone = function EditCollectiblesListItemNon
   const tmp = closure_9();
   const obj = { style: tmp.optionCell };
   const merged = Object.assign(asDefault);
-  const items = [React5(native.Icon, { source: _modDef13566, size: native.IconSizes.LARGE }), ];
+  const items = [React5(native.Icon, { source: _modDef13575, size: native.IconSizes.LARGE }), ];
   const obj3 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: tmp.optionCellText, children: null };
   const intl = util.intl;
   const string = intl.string;
@@ -99,7 +99,7 @@ export const EditCollectiblesListItemShop = function EditCollectiblesListItemSho
   const merged = Object.assign(analyticsSource, Object.assign({ analyticsSource: 0 }));
   let analyticsLocations;
   const tmp2 = closure_9();
-  analyticsLocations = analyticsLocations(7493)(analyticsSource).analyticsLocations;
+  analyticsLocations = analyticsLocations(7495)(analyticsSource).analyticsLocations;
   const items = [analyticsLocations, analyticsSource];
   let obj = {
     style: tmp2.optionCell,
@@ -111,12 +111,12 @@ export const EditCollectiblesListItemShop = function EditCollectiblesListItemSho
     }, items)
   };
   const merged1 = Object.assign(merged);
-  const items1 = [closure_7(analyticsSource(1177).Icon, { source: analyticsLocations(13567), size: analyticsSource(1177).IconSizes.LARGE }), , ];
+  const items1 = [closure_7(analyticsSource(1177).Icon, { source: analyticsLocations(13576), size: analyticsSource(1177).IconSizes.LARGE }), , ];
   const obj3 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: tmp2.optionCellText, children: null };
   const intl = analyticsSource(1115).intl;
   obj3.children = intl.string(analyticsSource(1115).t.pWG4ze);
-  items1[1] = closure_7(analyticsSource(4823).Text, obj3);
-  items1[2] = closure_7(analyticsSource(9187).NewBadge, { style: tmp2.newIcon });
+  items1[1] = closure_7(analyticsSource(4825).Text, obj3);
+  items1[2] = closure_7(analyticsSource(9191).NewBadge, { style: tmp2.newIcon });
   obj.children = items1;
   return closure_8(EditCollectibleListItem, obj);
 };

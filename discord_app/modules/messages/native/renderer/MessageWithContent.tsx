@@ -1,13 +1,13 @@
-// === Module 8281: MessageWithContent ===
+// === Module 8285: MessageWithContent ===
 
-// Module 8281 (MessageWithContent)
+// Module 8285 (MessageWithContent)
 import util from "util" /* 1115 */;
-import createMessageContentDefault from "createMessageContent" /* 8284 */;
-import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8463 */;
-import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 8282 */;
+import createMessageContentDefault from "createMessageContent" /* 8288 */;
+import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8467 */;
+import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 8286 */;
 
 require = fn;
-const RowType = fn(8277).RowType;
+const RowType = fn(8281).RowType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/MessageWithContent.tsx");
 
@@ -26,7 +26,8 @@ export const generateMessageRowData = function generateMessageRowData(canShowIma
     tmp3 = alwaysShowAddReaction;
   }
   let overrideBackgroundHighlight = canShowImages.overrideBackgroundHighlight;
-  const obj = { type: RowType.MESSAGE, message: createMessageContentDefault({ options, message, roleStyle, isFirst, isEditing, canShowImages: undefined === canShowImages || canShowImages, isSystemDM: tmp, isInlineReplyPreview: false, pushFeedbackType, renderContentOnly, showContentInventoryEntryFallbackEmbed: canShowImages.showContentInventoryEntryFallbackEmbed }), canAddNewReactions, addNewReactionAccessibilityLabel: null, reactionsTheme: null, highlightLabel: null, renderContentOnly: null, separatorBefore: null, changeType: null, truncation: null, alwaysShowAddReaction: null, backgroundHighlight: null, swipeActions: null, replyAccessibilityLabel: null, forwardAccessibilityLabel: null, threadAccessibilityLabel: null, forcedTheme: null };
+  const obj = { type: RowType.MESSAGE, message: createMessageContentDefault({ options, message, roleStyle, isFirst, isEditing, canShowImages: undefined === canShowImages || canShowImages, isSystemDM: tmp, isInlineReplyPreview: false, pushFeedbackType, renderContentOnly, showContentInventoryEntryFallbackEmbed }), canAddNewReactions, addNewReactionAccessibilityLabel: null, reactionsTheme: null, highlightLabel: null, renderContentOnly: null, separatorBefore: null, changeType: null, truncation: null, alwaysShowAddReaction: null, backgroundHighlight: null, conversationHeader: null, swipeActions: null, replyAccessibilityLabel: null, forwardAccessibilityLabel: null, threadAccessibilityLabel: null, forcedTheme: null };
+  ({ showContentInventoryEntryFallbackEmbed, conversationHeader } = canShowImages);
   const intl = util.intl;
   obj.addNewReactionAccessibilityLabel = intl.string(util.t.lfIHs4);
   obj.reactionsTheme = reactionsTheme;
@@ -43,6 +44,7 @@ export const generateMessageRowData = function generateMessageRowData(canShowIma
     const tmp4Result = RowGeneratorUtilsDefault;
   }
   obj.backgroundHighlight = overrideBackgroundHighlight;
+  obj.conversationHeader = conversationHeader;
   let canReply = options.enableSwipeActions;
   if (canReply) {
     canReply = canShowImages.canReply;

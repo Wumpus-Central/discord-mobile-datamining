@@ -1,9 +1,9 @@
-// === Module 6578: MushroomSpotIllustration ===
+// === Module 6580: MushroomSpotIllustration ===
 
-// Module 6578 (MushroomSpotIllustration)
+// Module 6580 (MushroomSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5890 */;
-import _modDef6579 from "module_6579" /* 6579 */;
+import FastImageDefault from "FastImage" /* 5892 */;
+import _modDef6581 from "module_6581" /* 6581 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const MushroomSpotIllustration = function MushroomSpotIllustration(width)
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6579 };
+  const obj2 = { uri: _modDef6581 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,6 +1,6 @@
-// === Module 6815: ? ===
+// === Module 6817: ? ===
 
-// Module 6815
+// Module 6817
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/StreamSpotIllustration-2x.png.js");

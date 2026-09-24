@@ -1,19 +1,19 @@
-// === Module 17387: ChannelSettingsIntegrationsOverview ===
+// === Module 17410: ChannelSettingsIntegrationsOverview ===
 
-// Module 17387 (ChannelSettingsIntegrationsOverview)
+// Module 17410 (ChannelSettingsIntegrationsOverview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import useNavigation from "useNavigation" /* 1484 */;
-import Stack_Stack from "Stack/Stack" /* 5269 */;
-import TableRow from "TableRow" /* 5908 */;
-import TableRowGroup from "TableRowGroup" /* 5990 */;
-import Form from "Form" /* 8947 */;
-import WebhookIcon from "WebhookIcon" /* 17282 */;
-import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 17388 */;
+import Stack_Stack from "Stack/Stack" /* 5271 */;
+import TableRow from "TableRow" /* 5910 */;
+import TableRowGroup from "TableRowGroup" /* 5992 */;
+import Form from "Form" /* 8951 */;
+import WebhookIcon from "WebhookIcon" /* 17305 */;
+import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 17411 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2042 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
 
 require = fn;
 function LinkedLobbyFormSection(channel) {
@@ -25,7 +25,7 @@ function LinkedLobbyFormSection(channel) {
   if (linkedLobby != null) {
     application_id = linkedLobby.application_id;
   }
-  const getOrFetchApplication = channel(7499).useGetOrFetchApplication(application_id);
+  const getOrFetchApplication = channel(7501).useGetOrFetchApplication(application_id);
   let tmp5 = null;
   if (null != getOrFetchApplication) {
     const obj3 = { title: null, hasIcons: true, children: null };
@@ -40,17 +40,17 @@ function LinkedLobbyFormSection(channel) {
     obj4.onPress = function onPress() {
       closure_1.push(ChannelSettingsSections.EDIT_LINKED_LOBBY, { channel, numScreensToPop: 1 });
     };
-    obj3.children = closure_6(tmp(5908).TableRow, obj4);
-    tmp5 = closure_6(tmp(5990).TableRowGroup, obj3);
+    obj3.children = closure_6(tmp(5910).TableRow, obj4);
+    tmp5 = closure_6(tmp(5992).TableRowGroup, obj3);
     const obj11 = { id: null, icon: null };
   }
   return tmp5;
 }
-fn(2046).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
+fn(2048).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
 const ChannelSettingsSections = fn(1074).ChannelSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 const obj2 = { screenContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: nativeDefault.space.PX_16 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

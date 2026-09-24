@@ -1,6 +1,6 @@
-// === Module 6035: ? ===
+// === Module 6037: ? ===
 
-// Module 6035
+// Module 6037
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AccountAgeTier9SmallBadge-2x.png.js");

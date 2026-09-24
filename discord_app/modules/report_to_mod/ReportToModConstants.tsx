@@ -1,6 +1,6 @@
-// === Module 7616: ReportToModConstants ===
+// === Module 7618: ReportToModConstants ===
 
-// Module 7616 (ReportToModConstants)
+// Module 7618 (ReportToModConstants)
 import Constants from "Constants" /* 1074 */;
 import BigFlagUtils from "BigFlagUtils" /* 1086 */;
 import size from "module_2" /* 2 */;

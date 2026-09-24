@@ -1,15 +1,15 @@
-// === Module 17788: CaptchaUtils ===
+// === Module 17811: CaptchaUtils ===
 
-// Module 17788 (CaptchaUtils)
+// Module 17811 (CaptchaUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import V8APIError from "V8APIError" /* 1325 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5030 */;
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 5167 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 5169 */;
-import MetricEvents from "MetricEvents" /* 5174 */;
-import siteKeyDefault from "siteKey" /* 17789 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5032 */;
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 5169 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5171 */;
+import MetricEvents from "MetricEvents" /* 5176 */;
+import siteKeyDefault from "siteKey" /* 17812 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2109 */;
+import LocaleStore from "LocaleStore" /* 2111 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 
 require = fn;
@@ -116,7 +116,7 @@ export default {
       let obj = self(1255);
       AnalyticsUtilsDefault.track(constants2.CAPTCHA_EVENT, { captcha_event_name: "initial-load", captcha_service: HCAPTCHA, sitekey, captcha_flow_key: v4Result });
       let obj3 = { captcha_event_name: "initial-load", captcha_service: HCAPTCHA, sitekey, captcha_flow_key: v4Result };
-      const obj5 = { name: self(5174).MetricEvents.CAPTCHA_EVENT, tags: null };
+      const obj5 = { name: self(5176).MetricEvents.CAPTCHA_EVENT, tags: null };
       let items = ["event_name:" + "initial-load", "captcha_service:" + HCAPTCHA];
       obj5.tags = items;
       MonitoringAgentDefault.increment(obj5);

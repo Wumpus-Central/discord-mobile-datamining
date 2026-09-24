@@ -1,21 +1,21 @@
-// === Module 16583: ChannelsUnreadBars ===
+// === Module 16607: ChannelsUnreadBars ===
 
-// Module 16583 (ChannelsUnreadBars)
+// Module 16607 (ChannelsUnreadBars)
 import debounceDefault from "debounce" /* 551 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4559 */;
-import HapticUtils from "HapticUtils" /* 4795 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4796 */;
-import useFontScale from "useFontScale" /* 5278 */;
-import FastList from "FastList" /* 7403 */;
-import ChannelListState from "ChannelListState" /* 7856 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
+import HapticUtils from "HapticUtils" /* 4797 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4798 */;
+import useFontScale from "useFontScale" /* 5280 */;
+import FastList from "FastList" /* 7405 */;
+import ChannelListState from "ChannelListState" /* 7858 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4819 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4464 */;
-import ChannelStore from "ChannelStore" /* 2042 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7958 */;
-import ReadStateStore from "ReadStateStore" /* 4842 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5008 */;
+import AccessibilityStore from "AccessibilityStore" /* 4821 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4466 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7960 */;
+import ReadStateStore from "ReadStateStore" /* 4844 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5010 */;
 
 require = fn;
 function shouldSkipSection(diff1) {
@@ -200,11 +200,11 @@ function findNearestUnreadItem(fastList, guildChannels, headerHeight, youBarTota
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const getScaledChannelRowHeight = fn(10459).getScaledChannelRowHeight;
-const UnreadSetting = fn(5009).UnreadSetting;
+const getScaledChannelRowHeight = fn(10464).getScaledChannelRowHeight;
+const UnreadSetting = fn(5011).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let closure_16 = createStyles.createStyles({ wrapper: StyleSheet.absoluteFillObject });
 const constants = { MENTION: "mention", UNREAD: "unread" };
 let closure_18 = { beforeItem: null, afterItem: null };

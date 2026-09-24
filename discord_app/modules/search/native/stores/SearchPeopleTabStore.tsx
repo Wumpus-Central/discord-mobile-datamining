@@ -1,14 +1,14 @@
-// === Module 12703: SearchPeopleTabStore ===
+// === Module 12712: SearchPeopleTabStore ===
 
-// Module 12703 (SearchPeopleTabStore)
+// Module 12712 (SearchPeopleTabStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1115 */;
-import useUserListData from "useUserListData" /* 11206 */;
-import NewMessageUserList from "NewMessageUserList" /* 12704 */;
-import ChannelStore from "ChannelStore" /* 2042 */;
-import FrecencyStore from "FrecencyStore" /* 5812 */;
+import useUserListData from "useUserListData" /* 11212 */;
+import NewMessageUserList from "NewMessageUserList" /* 12713 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import FrecencyStore from "FrecencyStore" /* 5814 */;
 
 require = fn;
 let closure_5 = [];
@@ -50,7 +50,7 @@ prototype["search"] = function search(str) {
       let items = [];
     } else {
       const values = _modDef12.chain(ChannelStore.getMutablePrivateChannels()).values();
-      const found = values.filter(trimmed1(12704).filterGroupDMs);
+      const found = values.filter(trimmed1(12713).filterGroupDMs);
       const mapped = found.map((id) => {
         const items = [id, NewMessageUserList.matchGroupDM(id, trimmed1), FrecencyStore.getScoreWithoutFetchingLatest(id.id)];
         return items;

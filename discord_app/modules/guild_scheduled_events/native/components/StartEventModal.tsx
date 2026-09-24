@@ -1,19 +1,19 @@
-// === Module 10151: StartEventModal ===
+// === Module 10156: StartEventModal ===
 
-// Module 10151 (StartEventModal)
+// Module 10156 (StartEventModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4823 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5030 */;
-import Pressables from "Pressables" /* 5425 */;
-import _modDef7420 from "module_7420" /* 7420 */;
-import GuildEventCardDefault from "GuildEventCard" /* 10150 */;
+import Text_Text from "Text/Text" /* 4825 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5032 */;
+import Pressables from "Pressables" /* 5427 */;
+import _modDef7422 from "module_7422" /* 7422 */;
+import GuildEventCardDefault from "GuildEventCard" /* 10155 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2042 */;
-import GuildStore from "GuildStore" /* 2064 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import GuildStore from "GuildStore" /* 2066 */;
 
 require = fn;
 function NavigationBar(onClose) {
@@ -25,7 +25,7 @@ function NavigationBar(onClose) {
   obj2.onPress = function onPress() {
     return onClose();
   };
-  obj2.children = closure_1_12(native.Icon, { source: _modDef7420 });
+  obj2.children = closure_1_12(native.Icon, { source: _modDef7422 });
   obj.children = closure_1_12(Pressables.PressableOpacity, obj2);
   return closure_1_12(View, obj);
 }
@@ -47,12 +47,12 @@ class PreviewEventCard {
   }
 }
 const View = fn(17).View;
-const GuildScheduledEventsConstants = fn(2048);
+const GuildScheduledEventsConstants = fn(2050);
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: c10 } = GuildScheduledEventsConstants);
-const START_EVENT_MODAL_KEY = fn(9863).START_EVENT_MODAL_KEY;
+const START_EVENT_MODAL_KEY = fn(9868).START_EVENT_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = { mainContainer: { flex: 1, padding: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { flex: 1, flexDirection: "column", justifyContent: "space-between", alignContent: "center" }, headerContainer: null, footerContainer: null, header: null, headerTitle: null, buttonContainer: null, previewCard: null, headerPrivacyLevel: null };
 let obj3 = { flex: 1, padding: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.headerContainer = { display: "flex", flexDirection: "column", gap: nativeDefault.space.PX_24 };

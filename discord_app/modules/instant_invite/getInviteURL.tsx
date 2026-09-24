@@ -1,6 +1,6 @@
-// === Module 8086: getInviteURL ===
+// === Module 8088: getInviteURL ===
 
-// Module 8086 (getInviteURL)
+// Module 8088 (getInviteURL)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/instant_invite/getInviteURL.tsx");

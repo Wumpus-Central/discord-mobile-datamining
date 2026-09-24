@@ -1,11 +1,9 @@
-// === Module 5060: CheckpointUtils ===
+// === Module 5062: CheckpointUtils ===
 
-// Module 5060 (CheckpointUtils)
+// Module 5062 (CheckpointUtils)
 import util from "util" /* 1115 */;
-import TimeUtils from "TimeUtils" /* 4856 */;
-import getTimestampString from "getTimestampString" /* 5061 */;
-import _modDef5062 from "module_5062" /* 5062 */;
-import _modDef5063 from "module_5063" /* 5063 */;
+import TimeUtils from "TimeUtils" /* 4858 */;
+import getTimestampString from "getTimestampString" /* 5063 */;
 import _modDef5064 from "module_5064" /* 5064 */;
 import _modDef5065 from "module_5065" /* 5065 */;
 import _modDef5066 from "module_5066" /* 5066 */;
@@ -14,6 +12,8 @@ import _modDef5068 from "module_5068" /* 5068 */;
 import _modDef5069 from "module_5069" /* 5069 */;
 import _modDef5070 from "module_5070" /* 5070 */;
 import _modDef5071 from "module_5071" /* 5071 */;
+import _modDef5072 from "module_5072" /* 5072 */;
+import _modDef5073 from "module_5073" /* 5073 */;
 import size from "module_2" /* 2 */;
 
 const items = [TimeUtils.TimeUnits.HOURS, TimeUtils.TimeUnits.MINUTES];
@@ -43,25 +43,25 @@ export const getVoiceDurationString = function getVoiceDurationString(totalVoice
 };
 export const getCardAssetUrl = function getCardAssetUrl(cardId) {
   if (0 === cardId) {
-    return _modDef5062;
-  } else if (1 === cardId) {
-    return _modDef5063;
-  } else if (2 === cardId) {
     return _modDef5064;
-  } else if (3 === cardId) {
+  } else if (1 === cardId) {
     return _modDef5065;
-  } else if (4 === cardId) {
+  } else if (2 === cardId) {
     return _modDef5066;
-  } else if (5 === cardId) {
+  } else if (3 === cardId) {
     return _modDef5067;
-  } else if (6 === cardId) {
+  } else if (4 === cardId) {
     return _modDef5068;
-  } else if (7 === cardId) {
+  } else if (5 === cardId) {
     return _modDef5069;
-  } else if (8 === cardId) {
+  } else if (6 === cardId) {
     return _modDef5070;
-  } else {
+  } else if (7 === cardId) {
     return _modDef5071;
+  } else if (8 === cardId) {
+    return _modDef5072;
+  } else {
+    return _modDef5073;
   }
 };
 export const getCheckpointPowerBarUnits = function getCheckpointPowerBarUnits(checkpointData) {

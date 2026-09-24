@@ -1,6 +1,6 @@
-// === Module 13478: useVisibleUserProfileConnectionsAndAppIdentities ===
+// === Module 13487: useVisibleUserProfileConnectionsAndAppIdentities ===
 
-// Module 13478 (useVisibleUserProfileConnectionsAndAppIdentities)
+// Module 13487 (useVisibleUserProfileConnectionsAndAppIdentities)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

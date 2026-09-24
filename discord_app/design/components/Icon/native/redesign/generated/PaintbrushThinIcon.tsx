@@ -1,9 +1,9 @@
-// === Module 16884: PaintbrushThinIcon ===
+// === Module 16908: PaintbrushThinIcon ===
 
-// Module 16884 (PaintbrushThinIcon)
+// Module 16908 (PaintbrushThinIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4523 */;
-import _mod16885 from "module_16885" /* 16885 */;
+import BaseIconImage from "BaseIconImage" /* 4525 */;
+import _mod16909 from "module_16909" /* 16909 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const PaintbrushThinIcon = function PaintbrushThinIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16885, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16909, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

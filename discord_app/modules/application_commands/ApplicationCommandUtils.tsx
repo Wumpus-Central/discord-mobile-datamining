@@ -1,17 +1,17 @@
-// === Module 7849: ApplicationCommandUtils ===
+// === Module 7851: ApplicationCommandUtils ===
 
-// Module 7849 (ApplicationCommandUtils)
+// Module 7851 (ApplicationCommandUtils)
 import _modDef12 from "module_12" /* 12 */;
 import IntegerDefault from "Integer" /* 14 */;
 import _modDef38 from "module_38" /* 38 */;
 import Constants2 from "Constants" /* 1085 */;
 import Server from "Server" /* 1978 */;
-import ChannelRecord from "ChannelRecord" /* 2046 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5007 */;
-import DraftStore from "DraftStore" /* 5190 */;
-import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 7850 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7851 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5295 */;
+import ChannelRecord from "ChannelRecord" /* 2048 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5009 */;
+import DraftStore from "DraftStore" /* 5192 */;
+import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 7852 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7853 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5297 */;
 import Constants from "Constants" /* 1074 */;
 import BigFlagUtils from "BigFlagUtils" /* 1086 */;
 import size from "module_2" /* 2 */;

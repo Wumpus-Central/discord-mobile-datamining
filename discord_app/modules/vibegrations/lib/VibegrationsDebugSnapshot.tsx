@@ -1,8 +1,8 @@
-// === Module 17134: VibegrationsDebugSnapshot ===
+// === Module 17160: VibegrationsDebugSnapshot ===
 
-// Module 17134 (VibegrationsDebugSnapshot)
-import VibegrationsDebugStore from "VibegrationsDebugStore" /* 17133 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 9385 */;
+// Module 17160 (VibegrationsDebugSnapshot)
+import VibegrationsDebugStore from "VibegrationsDebugStore" /* 17159 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 9389 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsDebugSnapshot.tsx");

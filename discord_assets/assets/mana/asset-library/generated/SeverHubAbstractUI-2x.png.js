@@ -1,6 +1,6 @@
-// === Module 6775: ? ===
+// === Module 6777: ? ===
 
-// Module 6775
+// Module 6777
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SeverHubAbstractUI-2x.png.js");

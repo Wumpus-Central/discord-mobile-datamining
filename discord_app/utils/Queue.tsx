@@ -1,6 +1,6 @@
-// === Module 8162: Queue ===
+// === Module 8164: Queue ===
 
-// Module 8162 (Queue)
+// Module 8164 (Queue)
 import LoggerDefault from "Logger" /* 3 */;
 import DequeDefault from "Deque" /* 8 */;
 

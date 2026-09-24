@@ -1,16 +1,16 @@
-// === Module 9464: CrunchyrollLinkLanding ===
+// === Module 9468: CrunchyrollLinkLanding ===
 
-// Module 9464 (CrunchyrollLinkLanding)
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2108 */;
-import _modDef9465 from "module_9465" /* 9465 */;
+// Module 9468 (CrunchyrollLinkLanding)
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2110 */;
+import _modDef9469 from "module_9469" /* 9469 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_4 = fn(9463).CrunchyrollLinkModalScenes;
+let closure_4 = fn(9467).CrunchyrollLinkModalScenes;
 const Constants = fn(1074);
 ({ HelpdeskArticles: hasOwnProperty, PlatformTypes: metroRequire } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let closure_8 = createStyles.createStyles({ image: { width: 234, height: 147 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkLanding.tsx");
@@ -23,14 +23,14 @@ export default function CrunchyrollLinkLanding() {
     const obj = { label: null, icon: null };
     const intl = navigation(1115).intl;
     obj.label = intl.string(navigation(1115).t["2TXHQd"]);
-    obj.icon = navigation(8620).PlayIcon;
+    obj.icon = navigation(8624).PlayIcon;
     const items = [obj];
     return items;
   }, []);
   const callback = noop.useCallback(() => {
     navigation.push(constants.PRE_CONNECT);
   }, items);
-  const obj2 = { platformType: constants2.CRUNCHYROLL, img: _modDef9465, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null };
+  const obj2 = { platformType: constants2.CRUNCHYROLL, img: _modDef9469, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null };
   let intl = navigation(1115).intl;
   obj2.headerConnect = intl.string(navigation(1115).t["Da+3NJ"]);
   const intl2 = navigation(1115).intl;
@@ -39,5 +39,5 @@ export default function CrunchyrollLinkLanding() {
   obj2.learnMoreLink = HelpdeskUtilsDefault.getArticleURL(constants.CRUNCHYROLL_CONNECTION);
   obj2.onNext = callback;
   obj2.valueProps = memo;
-  return jsx(navigation(9427).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: _modDef9465, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null });
+  return jsx(navigation(9431).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: _modDef9469, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null });
 };

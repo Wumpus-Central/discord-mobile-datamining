@@ -1,6 +1,6 @@
-// === Module 10674: emojis/EmojiActionCreators ===
+// === Module 10679: emojis/EmojiActionCreators ===
 
-// Module 10674 (emojis/EmojiActionCreators)
+// Module 10679 (emojis/EmojiActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import size from "module_2" /* 2 */;
 

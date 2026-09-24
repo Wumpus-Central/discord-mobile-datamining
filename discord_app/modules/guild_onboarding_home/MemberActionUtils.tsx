@@ -1,15 +1,15 @@
-// === Module 12622: MemberActionUtils ===
+// === Module 12631: MemberActionUtils ===
 
-// Module 12622 (MemberActionUtils)
-import useIsNewMemberDefault from "useIsNewMember" /* 7554 */;
-import GuildMemberStore from "GuildMemberStore" /* 2105 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 5014 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 5015 */;
+// Module 12631 (MemberActionUtils)
+import useIsNewMemberDefault from "useIsNewMember" /* 7556 */;
+import GuildMemberStore from "GuildMemberStore" /* 2107 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 5016 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 5017 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildMemberFlags = fn(4448).GuildMemberFlags;
+const GuildMemberFlags = fn(4450).GuildMemberFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/MemberActionUtils.tsx");
 

@@ -1,8 +1,8 @@
-// === Module 17037: frames/getDefaultOrientationLockState ===
+// === Module 17065: frames/getDefaultOrientationLockState ===
 
-// Module 17037 (frames/getDefaultOrientationLockState)
+// Module 17065 (frames/getDefaultOrientationLockState)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import getDefaultOrientationLockState from "getDefaultOrientationLockState" /* 9801 */;
+import getDefaultOrientationLockState from "getDefaultOrientationLockState" /* 9805 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/frames/native/getDefaultOrientationLockState.tsx");

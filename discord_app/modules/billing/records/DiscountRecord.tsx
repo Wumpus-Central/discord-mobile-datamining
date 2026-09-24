@@ -1,6 +1,6 @@
-// === Module 7779: DiscountRecord ===
+// === Module 7781: DiscountRecord ===
 
-// Module 7779 (DiscountRecord)
+// Module 7781 (DiscountRecord)
 import Record from "Record" /* 1387 */;
 
 const PremiumConstants = fn(1374);

@@ -1,12 +1,12 @@
-// === Module 18025: AutomodTriggerConfigs ===
+// === Module 18048: AutomodTriggerConfigs ===
 
-// Module 18025 (AutomodTriggerConfigs)
+// Module 18048 (AutomodTriggerConfigs)
 import util from "util" /* 1115 */;
-import guild_automod_ExperimentUtils from "guild_automod/ExperimentUtils" /* 10441 */;
+import guild_automod_ExperimentUtils from "guild_automod/ExperimentUtils" /* 10446 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Constants = fn(12198);
+const Constants = fn(12205);
 ({ AutomodActionType, AutomodEventType, AutomodTriggerType } = Constants);
 const mentionTotalLimit = Constants.MENTION_SPAM_LIMIT_DEFAULT;
 let obj = { NEW: "new", RECOMMENDED: "recommended", BETA: "beta", ALPHA: "alpha" };

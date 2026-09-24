@@ -1,6 +1,6 @@
-// === Module 8085: ForegroundServiceManagerTypes ===
+// === Module 8087: ForegroundServiceManagerTypes ===
 
-// Module 8085 (ForegroundServiceManagerTypes)
+// Module 8087 (ForegroundServiceManagerTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/foreground_service/mobile/ForegroundServiceManagerTypes.tsx");

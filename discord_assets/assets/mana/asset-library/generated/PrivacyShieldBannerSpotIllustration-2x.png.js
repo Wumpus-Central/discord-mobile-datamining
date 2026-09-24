@@ -1,6 +1,6 @@
-// === Module 6687: ? ===
+// === Module 6689: ? ===
 
-// Module 6687
+// Module 6689
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PrivacyShieldBannerSpotIllustration-2x.png.js");

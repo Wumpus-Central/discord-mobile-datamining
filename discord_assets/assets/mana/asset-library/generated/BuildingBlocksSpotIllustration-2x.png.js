@@ -1,6 +1,6 @@
-// === Module 6141: ? ===
+// === Module 6143: ? ===
 
-// Module 6141
+// Module 6143
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BuildingBlocksSpotIllustration-2x.png.js");

@@ -1,10 +1,10 @@
-// === Module 17790: HcaptchaModal ===
+// === Module 17813: HcaptchaModal ===
 
-// Module 17790 (HcaptchaModal)
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 5167 */;
+// Module 17813 (HcaptchaModal)
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 5169 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2109 */;
+import LocaleStore from "LocaleStore" /* 2111 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -113,7 +113,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7, StyleSheet: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 createStyles.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" }, title: { textAlign: "center" }, closeButtonContainer: { position: "absolute", top: 0, left: 0, zIndex: 2 }, closeButtonHitArea: { minWidth: 44, minHeight: 44, justifyContent: "center", alignItems: "center" } });
 HcaptchaModal.modalConfig = { animation: fn(1074).ModalAnimation.FADE };
 const size = fn(2);

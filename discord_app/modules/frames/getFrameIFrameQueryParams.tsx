@@ -1,9 +1,9 @@
-// === Module 17039: getFrameIFrameQueryParams ===
+// === Module 17067: getFrameIFrameQueryParams ===
 
-// Module 17039 (getFrameIFrameQueryParams)
-import DiscordEnvironment from "DiscordEnvironment" /* 9804 */;
-import getFrameLaunchContextQueryParamsDefault from "getFrameLaunchContextQueryParams" /* 17040 */;
-import getFrameSurfaceQueryParamsDefault from "getFrameSurfaceQueryParams" /* 17041 */;
+// Module 17067 (getFrameIFrameQueryParams)
+import DiscordEnvironment from "DiscordEnvironment" /* 9808 */;
+import getFrameLaunchContextQueryParamsDefault from "getFrameLaunchContextQueryParams" /* 17068 */;
+import getFrameSurfaceQueryParamsDefault from "getFrameSurfaceQueryParams" /* 17069 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/frames/getFrameIFrameQueryParams.tsx");

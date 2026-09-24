@@ -1,8 +1,8 @@
-// === Module 7558: WishlistRecommendationRecord ===
+// === Module 7560: WishlistRecommendationRecord ===
 
-// Module 7558 (WishlistRecommendationRecord)
+// Module 7560 (WishlistRecommendationRecord)
 import Record from "Record" /* 1387 */;
-import SKURecord from "SKURecord" /* 5814 */;
+import SKURecord from "SKURecord" /* 5816 */;
 import ApplicationRecord from "ApplicationRecord" /* 2002 */;
 
 const prototype = function WishlistRecommendationRecord(skus) {

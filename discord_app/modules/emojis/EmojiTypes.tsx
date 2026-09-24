@@ -1,6 +1,6 @@
-// === Module 4479: EmojiTypes ===
+// === Module 4481: EmojiTypes ===
 
-// Module 4479 (EmojiTypes)
+// Module 4481 (EmojiTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/emojis/EmojiTypes.tsx");

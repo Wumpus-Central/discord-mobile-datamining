@@ -1,27 +1,27 @@
-// === Module 16256: ContentAndSocialScreen ===
+// === Module 16278: ContentAndSocialScreen ===
 
-// Module 16256 (ContentAndSocialScreen)
+// Module 16278 (ContentAndSocialScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2108 */;
-import Text_Text from "Text/Text" /* 4823 */;
-import SettingBuilders from "SettingBuilders" /* 11805 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 13019 */;
-import SettingLayoutDefault from "SettingLayout" /* 15048 */;
-import TinyBroncoSettingsNoticesLazy from "TinyBroncoSettingsNoticesLazy" /* 15152 */;
-import SafetyGuildSettingGuildSelect from "SafetyGuildSettingGuildSelect" /* 16257 */;
-import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 16263 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2110 */;
+import Text_Text from "Text/Text" /* 4825 */;
+import SettingBuilders from "SettingBuilders" /* 11811 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 13028 */;
+import SettingLayoutDefault from "SettingLayout" /* 15057 */;
+import TinyBroncoSettingsNoticesLazy from "TinyBroncoSettingsNoticesLazy" /* 15161 */;
+import SafetyGuildSettingGuildSelect from "SafetyGuildSettingGuildSelect" /* 16279 */;
+import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 16285 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const MobileUserSettings = fn(8319).MobileUserSettings;
+const MobileUserSettings = fn(8323).MobileUserSettings;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = { loadingIndicator: { marginTop: nativeDefault.space.PX_32 }, emptyContainer: null };
 let obj3 = { marginTop: nativeDefault.space.PX_32 };
 obj2.emptyContainer = { flex: 1, gap: nativeDefault.space.PX_4, marginTop: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16 };

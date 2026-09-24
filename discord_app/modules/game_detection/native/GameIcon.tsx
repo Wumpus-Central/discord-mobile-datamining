@@ -1,11 +1,11 @@
-// === Module 7503: GameIcon ===
+// === Module 7505: GameIcon ===
 
-// Module 7503 (GameIcon)
+// Module 7505 (GameIcon)
 import nativeDefault from "native" /* 576 */;
-import _modDef7504 from "module_7504" /* 7504 */;
-import _modDef7505 from "module_7505" /* 7505 */;
 import _modDef7506 from "module_7506" /* 7506 */;
 import _modDef7507 from "module_7507" /* 7507 */;
+import _modDef7508 from "module_7508" /* 7508 */;
+import _modDef7509 from "module_7509" /* 7509 */;
 import noop from "module_19" /* 19 */;
 
 class GameIcon {
@@ -82,7 +82,7 @@ const PremiumSubscriptionSKUs = fn(1374).PremiumSubscriptionSKUs;
 const jsx = fn(21).jsx;
 const GameIconSizes = { SIZE_24: "size_24", SMALL: "small", NORMAL: "normal", LARGE: "large" };
 let obj2 = { [GameIconSizes.SIZE_24]: 24, [GameIconSizes.SMALL]: 32, [GameIconSizes.NORMAL]: 48, [GameIconSizes.LARGE]: 80 };
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj4 = { gameIcon: { justifyContent: "center", alignItems: "center" }, size24: null, small: null, normal: null, large: null, placeholder: null, entityWrapper: null };
 let size = { width: obj2.size_24, height: obj2.size_24, borderRadius: nativeDefault.radii.sm };
 obj4.size24 = size;

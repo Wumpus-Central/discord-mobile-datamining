@@ -1,9 +1,9 @@
-// === Module 12708: IntelligenceSearchActionCreators ===
+// === Module 12717: IntelligenceSearchActionCreators ===
 
-// Module 12708 (IntelligenceSearchActionCreators)
+// Module 12717 (IntelligenceSearchActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1372 */;
-import IntelligenceSearchStore from "IntelligenceSearchStore" /* 12697 */;
+import IntelligenceSearchStore from "IntelligenceSearchStore" /* 12706 */;
 
 const require = fn;
 let closure_9 = async function _fetchAnswer(arg0) {
@@ -143,7 +143,7 @@ let closure_9 = async function _fetchAnswer(arg0) {
   }
 };
 const Endpoints = fn(1074).Endpoints;
-const SearchTabs = fn(8207).SearchTabs;
+const SearchTabs = fn(8209).SearchTabs;
 let closure_8 = JSON.stringify({ arbiter: { enabled: false } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/intelligence_layer/search/IntelligenceSearchActionCreators.tsx");

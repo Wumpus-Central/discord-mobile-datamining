@@ -1,12 +1,12 @@
-// === Module 17898: JSWatchdogManager ===
+// === Module 17921: JSWatchdogManager ===
 
-// Module 17898 (JSWatchdogManager)
+// Module 17921 (JSWatchdogManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7803 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7805 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7449 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7451 */;
 
 require = fn;
 const Constants = fn(1074);
@@ -224,7 +224,7 @@ prototype["startWatchdog"] = function startWatchdog() {
             closure_128_0 = undefined;
             closure_128_1 = undefined;
             if (null == self._timeoutId) {
-              if (null != tmp2(17899)) {
+              if (null != tmp2(17922)) {
                 dependencyMap = 1;
                 c3 = 1;
                 const obj4 = { value: self.getCurrentSessionId(), done: false };
@@ -244,7 +244,7 @@ prototype["startWatchdog"] = function startWatchdog() {
               closure_129_0._enabled = true;
               if (closure_129_0._pingCompleted) {
                 let checkForStallReportResult;
-                const obj = tmp2(17899);
+                const obj = tmp2(17922);
                 if (obj != null) {
                   checkForStallReportResult = obj.checkForStallReport();
                 }
@@ -323,11 +323,11 @@ prototype["getCurrentSessionId"] = function getCurrentSessionId() {
                 const uuid = closure_129_0._cachedSession.uuid;
                 c3 = 3;
               }
-              obj2 = tmp2(7799);
+              obj2 = tmp2(7801);
             }
             dependencyMap = 1;
             c3 = 1;
-            const obj6 = { value: tmp2(7789).getSession(), done: false };
+            const obj6 = { value: tmp2(7791).getSession(), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {

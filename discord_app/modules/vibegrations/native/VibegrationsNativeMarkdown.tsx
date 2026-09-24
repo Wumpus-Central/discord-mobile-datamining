@@ -1,11 +1,11 @@
-// === Module 17098: VibegrationsNativeMarkdown ===
+// === Module 17125: VibegrationsNativeMarkdown ===
 
-// Module 17098 (VibegrationsNativeMarkdown)
+// Module 17125 (VibegrationsNativeMarkdown)
 import nativeDefault from "native" /* 576 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 4817 */;
-import Text_Text from "Text/Text" /* 4823 */;
-import VibegrationsMarkdownBlocks from "VibegrationsMarkdownBlocks" /* 17099 */;
-import useVibegrationsRevealedText from "useVibegrationsRevealedText" /* 17100 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4819 */;
+import Text_Text from "Text/Text" /* 4825 */;
+import VibegrationsMarkdownBlocks from "VibegrationsMarkdownBlocks" /* 17126 */;
+import useVibegrationsRevealedText from "useVibegrationsRevealedText" /* 17127 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,11 +31,11 @@ class VibegrationsNativeMarkdown {
                 const obj = { style: null, children: null };
                 const items = [list.item, { paddingLeft: children.depth * PX_16 }];
                 obj.style = items;
-                const obj3 = { style: list.marker, children: closure_2_5(source(4823).Text, { variant: "text-md/normal", color: "text-default", children: children.marker }) };
+                const obj3 = { style: list.marker, children: closure_2_5(source(4825).Text, { variant: "text-md/normal", color: "text-default", children: children.marker }) };
                 const items1 = [closure_2_5(View, obj3), ];
                 const obj5 = { style: list.itemText, children: null };
-                const obj6 = { variant: "text-md/normal", color: "text-default", children: closure_1(4817).parse(children.text, true, obj2) };
-                obj5.children = closure_2_5(source(4823).Text, obj6);
+                const obj6 = { variant: "text-md/normal", color: "text-default", children: closure_1(4819).parse(children.text, true, obj2) };
+                obj5.children = closure_2_5(source(4825).Text, obj6);
                 items1[1] = closure_2_5(View, obj5);
                 obj.children = items1;
                 return closure_2_6(View, obj, index);
@@ -56,7 +56,7 @@ let obj2 = {};
 const merged = Object.assign(VIBEGRATIONS_MARKUP_OPTIONS);
 obj2.allowList = false;
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 const obj4 = { blocks: { gap: nativeDefault.space.PX_8 }, list: null, item: null, marker: null, itemText: null };
 let obj5 = { gap: nativeDefault.space.PX_8 };
 obj4.list = { gap: nativeDefault.space.PX_4 };

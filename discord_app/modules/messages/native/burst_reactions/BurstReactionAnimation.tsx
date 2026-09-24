@@ -1,14 +1,14 @@
-// === Module 8153: BurstReactionAnimation ===
+// === Module 8155: BurstReactionAnimation ===
 
-// Module 8153 (BurstReactionAnimation)
+// Module 8155 (BurstReactionAnimation)
 import initialize from "initialize" /* 504 */;
-import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 8111 */;
+import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 8113 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4819 */;
+import AccessibilityStore from "AccessibilityStore" /* 4821 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let closure_5 = createStyles.createStyles({ content: { width: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/burst_reactions/BurstReactionAnimation.tsx");
@@ -42,6 +42,6 @@ export default function BurstReactionAnimation(arg0) {
     const merged1 = Object.assign(merged);
     const merged2 = Object.assign(obj3);
     obj4.source = burstReactionAnimationSource;
-    return jsx(importDefault(withFadeOut ? 8154 : 5832), { style: tmp2.content, loop: false, speed: null });
+    return jsx(importDefault(withFadeOut ? 8156 : 5834), { style: tmp2.content, loop: false, speed: null });
   }
 };

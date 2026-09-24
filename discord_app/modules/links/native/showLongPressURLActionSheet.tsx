@@ -1,11 +1,11 @@
-// === Module 11915: showLongPressURLActionSheet ===
+// === Module 11922: showLongPressURLActionSheet ===
 
-// Module 11915 (showLongPressURLActionSheet)
-import LinkingDefault from "Linking" /* 4518 */;
-import ToastUtils from "ToastUtils" /* 4520 */;
-import ClipboardUtils from "ClipboardUtils" /* 7520 */;
-import showShareActionSheet from "showShareActionSheet" /* 8707 */;
-import handleContentLinkingDefault from "handleContentLinking" /* 11916 */;
+// Module 11922 (showLongPressURLActionSheet)
+import LinkingDefault from "Linking" /* 4520 */;
+import ToastUtils from "ToastUtils" /* 4522 */;
+import ClipboardUtils from "ClipboardUtils" /* 7522 */;
+import showShareActionSheet from "showShareActionSheet" /* 8711 */;
+import handleContentLinkingDefault from "handleContentLinking" /* 11923 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/links/native/showLongPressURLActionSheet.tsx");

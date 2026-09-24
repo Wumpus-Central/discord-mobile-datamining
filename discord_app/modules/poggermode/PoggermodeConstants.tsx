@@ -1,6 +1,6 @@
-// === Module 8000: PoggermodeConstants ===
+// === Module 8002: PoggermodeConstants ===
 
-// Module 8000 (PoggermodeConstants)
+// Module 8002 (PoggermodeConstants)
 import size from "module_2" /* 2 */;
 
 let obj = { LEVEL_1: 0, [0]: "LEVEL_1", LEVEL_2: 1, [1]: "LEVEL_2", LEVEL_3: 2, [2]: "LEVEL_3", LEVEL_4: 3, [3]: "LEVEL_4", LEVEL_5: 4, [4]: "LEVEL_5" };

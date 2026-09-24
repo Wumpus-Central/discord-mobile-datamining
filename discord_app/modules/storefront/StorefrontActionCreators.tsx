@@ -1,15 +1,15 @@
-// === Module 9141: StorefrontActionCreators ===
+// === Module 9145: StorefrontActionCreators ===
 
-// Module 9141 (StorefrontActionCreators)
+// Module 9145 (StorefrontActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BillingInfoStore from "BillingInfoStore" /* 4483 */;
-import SKUPricesStore from "SKUPricesStore" /* 7563 */;
-import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 9142 */;
-import StorefrontPromotionStore from "StorefrontPromotionStore" /* 9143 */;
-import StorefrontPromotionRecord from "StorefrontPromotionRecord" /* 9144 */;
+import BillingInfoStore from "BillingInfoStore" /* 4485 */;
+import SKUPricesStore from "SKUPricesStore" /* 7565 */;
+import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 9146 */;
+import StorefrontPromotionStore from "StorefrontPromotionStore" /* 9147 */;
+import StorefrontPromotionRecord from "StorefrontPromotionRecord" /* 9148 */;
 
 require = fn;
 function shouldFetchStorefrontPromotions(arg0) {
@@ -171,12 +171,107 @@ let closure_14 = async function _fetchStorefrontPromotions(arg0) {
     }
   }
 };
-let closure_15 = async function _fetchStorefrontPricesForApplicationId(arg0) {
+let closure_15 = async function _claimStorefrontPromotion() {
+  closure_1 = arg1;
+  c6 = 0;
+  c7 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_3 = tmp3;
+            closure_2 = tmp7;
+            closure_130_0 = promotionId;
+            closure_130_1 = closure_1;
+            closure_130_2 = undefined;
+            const obj4 = { type: "STOREFRONT_PROMOTION_CLAIM_START", promotionId };
+            DispatcherDefault.dispatch(obj4);
+            c5 = 1;
+            const HTTP = HTTPUtils.HTTP;
+            const request = { url: Endpoints.STOREFRONT_PROMOTION_CLAIM(promotionId), body: {}, rejectWithError: true };
+            c6 = 3;
+            c7 = 1;
+            const obj5 = { value: HTTP.post(request), done: false };
+            return obj5;
+          }
+        } else if (1 === tmp7) {
+          c5 = 0;
+          closure_130_3 = closure_4;
+          const tmp25 = new closure_131_1(closure_131_2[10])(closure_130_3);
+          closure_130_2 = tmp25;
+          const obj7 = { type: "STOREFRONT_PROMOTION_CLAIM_FAIL", promotionId: closure_130_0, apiError: closure_130_2 };
+          closure_131_1(closure_131_2[8]).dispatch(obj7);
+          throw closure_130_2;
+        } else if (2 === tmp7) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            const obj8 = { value, done: true };
+            return obj8;
+          } else {
+            c7 = 3;
+            return { value: "HermesInternal", done: null };
+          }
+        } else if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 0;
+          c7 = 3;
+          const obj9 = { value, done: true };
+          return obj9;
+        } else {
+          c5 = 0;
+          const obj10 = { type: "STOREFRONT_PROMOTION_CLAIM_SUCCESS", promotionId: closure_130_0 };
+          closure_131_1(closure_131_2[8]).dispatch(obj10);
+          const items = [closure_130_1];
+          c6 = 2;
+          c7 = 1;
+          const obj12 = { value: closure_131_13(items), done: false };
+          return obj12;
+        }
+      } catch (tmp33) {
+        closure_4 = tmp33;
+        if (tmp4 === c5) {
+          c7 = tmp2;
+          throw tmp33;
+        } else {
+          c6 = tmp;
+        }
+      }
+    }
+  })();
+};
+let closure_16 = async function _fetchStorefrontPricesForApplicationId(arg0) {
   let applicationId = arg0;
   c3 = 0;
   c4 = 0;
   let iter = (async (arg0) => {
-    await closure_130_17({ type: "application", applicationId: applicationId2 });
+    await closure_130_18({ type: "application", applicationId: applicationId2 });
     await "HermesInternal";
     closure_1 = tmp2;
     applicationId2 = applicationId.applicationId;
@@ -185,12 +280,12 @@ let closure_15 = async function _fetchStorefrontPricesForApplicationId(arg0) {
   iter.next();
   return iter;
 };
-let closure_16 = async function _fetchStorefrontPricesForSkuIds(arg0) {
+let closure_17 = async function _fetchStorefrontPricesForSkuIds(arg0) {
   let skuIds = arg0;
   c3 = 0;
   c4 = 0;
   let iter = (async (arg0) => {
-    await closure_130_17({ type: "skus", skuIds: skuIds2 });
+    await closure_130_18({ type: "skus", skuIds: skuIds2 });
     await "HermesInternal";
     closure_1 = tmp2;
     skuIds2 = skuIds.skuIds;
@@ -201,7 +296,7 @@ let closure_16 = async function _fetchStorefrontPricesForSkuIds(arg0) {
 };
 function fetchStorefrontPrices() {
   const self = this;
-  const apply = closure_18.apply;
+  const apply = closure_19.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -209,7 +304,7 @@ function fetchStorefrontPrices() {
   }
   return applyArgumentsResult;
 }
-let closure_18 = async function _fetchStorefrontPrices(arg0) {
+let closure_19 = async function _fetchStorefrontPrices(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -252,10 +347,10 @@ let closure_18 = async function _fetchStorefrontPrices(arg0) {
           body = value.body;
           const obj7 = { type: "SKUS_PRICING_FETCH_SUCCESS", priceId: closure_128_0, data: null };
           const obj = closure_129_1(closure_129_2[8]);
-          obj7.data = closure_129_0(closure_129_2[10]).transformStorefrontPricesServer(body);
+          obj7.data = closure_129_0(closure_129_2[11]).transformStorefrontPricesServer(body);
           obj.dispatch(obj7);
           c2 = 0;
-          const obj3 = closure_129_0(closure_129_2[10]);
+          const obj3 = closure_129_0(closure_129_2[11]);
         }
         c2 = 0;
         c4 = 3;
@@ -290,7 +385,7 @@ export const maybeFetchStorefrontPromotions = function maybeFetchStorefrontPromo
   return applyArgumentsResult;
 };
 export { fetchStorefrontPromotions };
-export const fetchStorefrontPricesForApplicationId = function fetchStorefrontPricesForApplicationId() {
+export const claimStorefrontPromotion = function claimStorefrontPromotion() {
   const self = this;
   const apply = closure_15.apply;
   if (typeof apply === "unknown") {
@@ -300,9 +395,19 @@ export const fetchStorefrontPricesForApplicationId = function fetchStorefrontPri
   }
   return applyArgumentsResult;
 };
-export const fetchStorefrontPricesForSkuIds = function fetchStorefrontPricesForSkuIds() {
+export const fetchStorefrontPricesForApplicationId = function fetchStorefrontPricesForApplicationId() {
   const self = this;
   const apply = closure_16.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const fetchStorefrontPricesForSkuIds = function fetchStorefrontPricesForSkuIds() {
+  const self = this;
+  const apply = closure_17.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

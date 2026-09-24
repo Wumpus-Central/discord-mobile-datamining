@@ -1,9 +1,9 @@
-// === Module 11311: showThreadBrowserModal ===
+// === Module 11317: showThreadBrowserModal ===
 
-// Module 11311 (showThreadBrowserModal)
-import RootNavigationRef from "RootNavigationRef" /* 4685 */;
-import ThreadUtils from "ThreadUtils" /* 8108 */;
-import ChannelDetailsConstants from "ChannelDetailsConstants" /* 11262 */;
+// Module 11317 (showThreadBrowserModal)
+import RootNavigationRef from "RootNavigationRef" /* 4687 */;
+import ThreadUtils from "ThreadUtils" /* 8110 */;
+import ChannelDetailsConstants from "ChannelDetailsConstants" /* 11268 */;
 import size from "module_2" /* 2 */;
 
 const constants = ChannelDetailsConstants.ChannelDetailsNavigatorScreens;

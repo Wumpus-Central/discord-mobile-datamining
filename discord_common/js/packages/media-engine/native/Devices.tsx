@@ -1,8 +1,8 @@
-// === Module 4953: Devices ===
+// === Module 4955: Devices ===
 
-// Module 4953 (Devices)
+// Module 4955 (Devices)
 import formatDefault from "format" /* 1340 */;
-import Constants from "Constants" /* 4884 */;
+import Constants from "Constants" /* 4886 */;
 import size from "module_2" /* 2 */;
 
 ({ DEFAULT_DEVICE_ID: c3, DeviceTypes: closure_4 } = Constants);
@@ -15,26 +15,26 @@ export const sanitizeDevices = function sanitizeDevices(AUDIO_INPUT, items) {
     ({ guid, name, index } = item);
     if (VIDEO_INPUT === constants.VIDEO_INPUT) {
       if (obj.test(name)) {
-        let tmp12 = id;
+        let tmp14 = id;
         let str2 = "Default";
       }
-      let tmp13 = index;
+      let tmp15 = index;
       if (null != index) {
-        tmp13 = index;
+        tmp15 = index;
       }
-      const obj3 = { id: tmp12, type: tmp10, index: tmp13, name: str2, originalName: tmp2, originalId: tmp, facing: tmp3, hardwareId: tmp4, containerId: tmp5, effects: tmp6, macosTransportType: tmp7, windowsEndpointFormFactor: tmp8, windowsDeviceService: tmp9 };
+      const obj3 = { id: tmp14, type: tmp12, index: tmp15, name: str2, originalName: tmp2, originalId: tmp, facing: tmp3, hardwareId: tmp4, containerId: tmp5, effects: tmp6, macosTransportType: tmp7, windowsEndpointFormFactor: tmp8, windowsDeviceService: tmp9, windowsDeviceDescription: tmp10, windowsDeviceInterfaceFriendlyName: tmp11 };
       return obj3;
     }
     if (obj2.test(name)) {
       c1 = true;
-      tmp12 = id;
+      tmp14 = id;
       str2 = name.replace("default", "Default");
     } else {
-      tmp12 = name;
+      tmp14 = name;
       if (null != guid) {
-        tmp12 = name;
+        tmp14 = name;
         if ("" !== guid) {
-          tmp12 = guid;
+          tmp14 = guid;
         }
       }
       str2 = name;
@@ -76,26 +76,26 @@ export const getAudioInputDevices = function getAudioInputDevices() {
         ({ guid, name, index } = item);
         if (VIDEO_INPUT === constants.VIDEO_INPUT) {
           if (obj.test(name)) {
-            let tmp12 = id;
+            let tmp14 = id;
             let str2 = "Default";
           }
-          let tmp13 = index;
+          let tmp15 = index;
           if (null != index) {
-            tmp13 = index;
+            tmp15 = index;
           }
-          const obj3 = { id: tmp12, type: tmp10, index: tmp13, name: str2, originalName: tmp2, originalId: tmp, facing: tmp3, hardwareId: tmp4, containerId: tmp5, effects: tmp6, macosTransportType: tmp7, windowsEndpointFormFactor: tmp8, windowsDeviceService: tmp9 };
+          const obj3 = { id: tmp14, type: tmp12, index: tmp15, name: str2, originalName: tmp2, originalId: tmp, facing: tmp3, hardwareId: tmp4, containerId: tmp5, effects: tmp6, macosTransportType: tmp7, windowsEndpointFormFactor: tmp8, windowsDeviceService: tmp9, windowsDeviceDescription: tmp10, windowsDeviceInterfaceFriendlyName: tmp11 };
           return obj3;
         }
         if (obj2.test(name)) {
           c1 = true;
-          tmp12 = id;
+          tmp14 = id;
           str2 = name.replace("default", "Default");
         } else {
-          tmp12 = name;
+          tmp14 = name;
           if (null != guid) {
-            tmp12 = name;
+            tmp14 = name;
             if ("" !== guid) {
-              tmp12 = guid;
+              tmp14 = guid;
             }
           }
           str2 = name;
@@ -139,26 +139,26 @@ export const getAudioOutputDevices = function getAudioOutputDevices() {
         ({ guid, name, index } = item);
         if (VIDEO_INPUT === constants.VIDEO_INPUT) {
           if (obj.test(name)) {
-            let tmp12 = id;
+            let tmp14 = id;
             let str2 = "Default";
           }
-          let tmp13 = index;
+          let tmp15 = index;
           if (null != index) {
-            tmp13 = index;
+            tmp15 = index;
           }
-          const obj3 = { id: tmp12, type: tmp10, index: tmp13, name: str2, originalName: tmp2, originalId: tmp, facing: tmp3, hardwareId: tmp4, containerId: tmp5, effects: tmp6, macosTransportType: tmp7, windowsEndpointFormFactor: tmp8, windowsDeviceService: tmp9 };
+          const obj3 = { id: tmp14, type: tmp12, index: tmp15, name: str2, originalName: tmp2, originalId: tmp, facing: tmp3, hardwareId: tmp4, containerId: tmp5, effects: tmp6, macosTransportType: tmp7, windowsEndpointFormFactor: tmp8, windowsDeviceService: tmp9, windowsDeviceDescription: tmp10, windowsDeviceInterfaceFriendlyName: tmp11 };
           return obj3;
         }
         if (obj2.test(name)) {
           c1 = true;
-          tmp12 = id;
+          tmp14 = id;
           str2 = name.replace("default", "Default");
         } else {
-          tmp12 = name;
+          tmp14 = name;
           if (null != guid) {
-            tmp12 = name;
+            tmp14 = name;
             if ("" !== guid) {
-              tmp12 = guid;
+              tmp14 = guid;
             }
           }
           str2 = name;
@@ -202,26 +202,26 @@ export const getVideoInputDevices = function getVideoInputDevices() {
         ({ guid, name, index } = item);
         if (VIDEO_INPUT === constants.VIDEO_INPUT) {
           if (obj.test(name)) {
-            let tmp12 = id;
+            let tmp14 = id;
             let str2 = "Default";
           }
-          let tmp13 = index;
+          let tmp15 = index;
           if (null != index) {
-            tmp13 = index;
+            tmp15 = index;
           }
-          const obj3 = { id: tmp12, type: tmp10, index: tmp13, name: str2, originalName: tmp2, originalId: tmp, facing: tmp3, hardwareId: tmp4, containerId: tmp5, effects: tmp6, macosTransportType: tmp7, windowsEndpointFormFactor: tmp8, windowsDeviceService: tmp9 };
+          const obj3 = { id: tmp14, type: tmp12, index: tmp15, name: str2, originalName: tmp2, originalId: tmp, facing: tmp3, hardwareId: tmp4, containerId: tmp5, effects: tmp6, macosTransportType: tmp7, windowsEndpointFormFactor: tmp8, windowsDeviceService: tmp9, windowsDeviceDescription: tmp10, windowsDeviceInterfaceFriendlyName: tmp11 };
           return obj3;
         }
         if (obj2.test(name)) {
           c1 = true;
-          tmp12 = id;
+          tmp14 = id;
           str2 = name.replace("default", "Default");
         } else {
-          tmp12 = name;
+          tmp14 = name;
           if (null != guid) {
-            tmp12 = name;
+            tmp14 = name;
             if ("" !== guid) {
-              tmp12 = guid;
+              tmp14 = guid;
             }
           }
           str2 = name;

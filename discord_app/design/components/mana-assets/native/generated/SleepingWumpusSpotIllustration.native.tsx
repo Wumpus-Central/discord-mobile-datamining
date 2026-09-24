@@ -1,9 +1,9 @@
-// === Module 6790: SleepingWumpusSpotIllustration ===
+// === Module 6792: SleepingWumpusSpotIllustration ===
 
-// Module 6790 (SleepingWumpusSpotIllustration)
+// Module 6792 (SleepingWumpusSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5890 */;
-import _modDef6791 from "module_6791" /* 6791 */;
+import FastImageDefault from "FastImage" /* 5892 */;
+import _modDef6793 from "module_6793" /* 6793 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const SleepingWumpusSpotIllustration = function SleepingWumpusSpotIllustr
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6791 };
+  const obj2 = { uri: _modDef6793 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

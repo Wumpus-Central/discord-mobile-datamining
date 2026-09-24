@@ -1,11 +1,11 @@
-// === Module 15811: InlineEmojiSuggestionsSetting ===
+// === Module 15825: InlineEmojiSuggestionsSetting ===
 
-// Module 15811 (InlineEmojiSuggestionsSetting)
+// Module 15825 (InlineEmojiSuggestionsSetting)
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 2020 */;
-import SettingsConstants from "SettingsConstants" /* 8319 */;
-import MobileEmojiSuggestionsExperiment from "MobileEmojiSuggestionsExperiment" /* 12296 */;
-import SettingBuilders from "SettingBuilders" /* 11805 */;
+import SettingsConstants from "SettingsConstants" /* 8323 */;
+import MobileEmojiSuggestionsExperiment from "MobileEmojiSuggestionsExperiment" /* 12305 */;
+import SettingBuilders from "SettingBuilders" /* 11811 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

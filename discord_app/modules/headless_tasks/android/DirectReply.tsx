@@ -1,11 +1,11 @@
-// === Module 18474: DirectReply ===
+// === Module 18497: DirectReply ===
 
-// Module 18474 (DirectReply)
+// Module 18497 (DirectReply)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const NativeModules = fn(17).NativeModules;
-const MessageSendLocation = fn(4820).MessageSendLocation;
+const MessageSendLocation = fn(4822).MessageSendLocation;
 let closure_5 = new LoggerDefault("DirectReply");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/headless_tasks/android/DirectReply.tsx");

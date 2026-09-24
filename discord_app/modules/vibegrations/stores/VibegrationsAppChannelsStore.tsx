@@ -1,6 +1,6 @@
-// === Module 13648: VibegrationsAppChannelsStore ===
+// === Module 13657: VibegrationsAppChannelsStore ===
 
-// Module 13648 (VibegrationsAppChannelsStore)
+// Module 13657 (VibegrationsAppChannelsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

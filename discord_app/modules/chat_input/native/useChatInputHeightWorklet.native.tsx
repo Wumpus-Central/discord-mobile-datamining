@@ -1,8 +1,8 @@
-// === Module 12363: useChatInputHeightWorklet ===
+// === Module 12372: useChatInputHeightWorklet ===
 
-// Module 12363 (useChatInputHeightWorklet)
+// Module 12372 (useChatInputHeightWorklet)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import useChatInputMaxHeight from "useChatInputMaxHeight" /* 12364 */;
+import useChatInputMaxHeight from "useChatInputMaxHeight" /* 12373 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

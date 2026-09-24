@@ -1,16 +1,16 @@
-// === Module 8237: ConversationsActionCreators ===
+// === Module 8239: ConversationsActionCreators ===
 
-// Module 8237 (ConversationsActionCreators)
+// Module 8239 (ConversationsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 5017 */;
-import SurveyActionTypes from "SurveyActionTypes" /* 5025 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7784 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 8239 */;
+import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 5019 */;
+import SurveyActionTypes from "SurveyActionTypes" /* 5027 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7786 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 8241 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7922 */;
-import ConversationsStore from "ConversationsStore" /* 7926 */;
-import TopicalNavigationSurveyStore from "TopicalNavigationSurveyStore" /* 8238 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7924 */;
+import ConversationsStore from "ConversationsStore" /* 7928 */;
+import TopicalNavigationSurveyStore from "TopicalNavigationSurveyStore" /* 8240 */;
 
 require = fn;
 let closure_9 = async function _fetchChannelConversations(arg0) {
@@ -319,7 +319,7 @@ let closure_12 = async function _fetchConversationMessages() {
     }
   })();
 };
-const FETCH_LIMIT = fn(7923).FETCH_LIMIT;
+const FETCH_LIMIT = fn(7925).FETCH_LIMIT;
 const Endpoints = fn(1074).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/ConversationsActionCreators.tsx");
@@ -374,8 +374,11 @@ export const setSelectedConversation = function setSelectedConversation(channelI
     }
   }
 };
-export const clearConversationSelection = function clearConversationSelection(channelId, conversationId) {
-  DispatcherDefault.dispatch({ type: "CLEAR_CONVERSATION_SELECTION", channelId, conversationId });
+export const clearConversationSelection = function clearConversationSelection(channelId, handleScrollPositionResult1) {
+  DispatcherDefault.dispatch({ type: "CLEAR_CONVERSATION_SELECTION", channelId, conversationId: handleScrollPositionResult1 });
+};
+export const requestConversationFocus = function requestConversationFocus() {
+  DispatcherDefault.dispatch({ type: "CONVERSATION_FOCUS_REQUEST" });
 };
 export const setConversationFeedbackRating = function setConversationFeedbackRating(channelId, conversationId, down) {
   DispatcherDefault.dispatch({ type: "SET_CONVERSATION_FEEDBACK_RATING", channelId, conversationId, rating: down });

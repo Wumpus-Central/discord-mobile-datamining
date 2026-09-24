@@ -1,6 +1,6 @@
-// === Module 8048: QuestType ===
+// === Module 8050: QuestType ===
 
-// Module 8048 (QuestType)
+// Module 8050 (QuestType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestType.tsx");

@@ -1,7 +1,7 @@
-// === Module 15343: BountiesModalConstants ===
+// === Module 15352: BountiesModalConstants ===
 
-// Module 15343 (BountiesModalConstants)
-import AppStoreOverlayBody from "AppStoreOverlayBody" /* 11837 */;
+// Module 15352 (BountiesModalConstants)
+import AppStoreOverlayBody from "AppStoreOverlayBody" /* 11843 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalConstants.tsx");

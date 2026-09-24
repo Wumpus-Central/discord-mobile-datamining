@@ -1,8 +1,8 @@
-// === Module 5770: EmojiTerms ===
+// === Module 5772: EmojiTerms ===
 
-// Module 5770 (EmojiTerms)
-import LazyPromiseInitializerDefault from "LazyPromiseInitializer" /* 5771 */;
-import EmojiTermsImporter from "EmojiTermsImporter" /* 5772 */;
+// Module 5772 (EmojiTerms)
+import LazyPromiseInitializerDefault from "LazyPromiseInitializer" /* 5773 */;
+import EmojiTermsImporter from "EmojiTermsImporter" /* 5774 */;
 
 require = fn;
 let closure_2 = new LazyPromiseInitializerDefault(function loadEmoji(arg0) {

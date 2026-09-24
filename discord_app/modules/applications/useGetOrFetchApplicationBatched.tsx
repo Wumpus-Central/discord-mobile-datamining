@@ -1,9 +1,9 @@
-// === Module 11894: useGetOrFetchApplicationBatched ===
+// === Module 11901: useGetOrFetchApplicationBatched ===
 
-// Module 11894 (useGetOrFetchApplicationBatched)
-import Timers from "Timers" /* 2037 */;
+// Module 11901 (useGetOrFetchApplicationBatched)
+import Timers from "Timers" /* 2039 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5054 */;
+import ApplicationStore from "ApplicationStore" /* 5056 */;
 
 const require = globalThis.__r;
 
@@ -81,7 +81,7 @@ let closure_129_0 = obj2;
 obj2._lastFetchedAttempted = new Map();
 let map = new Map();
 obj2._pending = new Set();
-let delayedCall = new fn(2037).DelayedCall(32, () => obj._flush());
+let delayedCall = new fn(2039).DelayedCall(32, () => obj._flush());
 obj2._flushHandler = delayedCall;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/applications/useGetOrFetchApplicationBatched.tsx");

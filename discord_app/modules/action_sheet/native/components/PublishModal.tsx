@@ -1,9 +1,9 @@
-// === Module 12001: PublishModal ===
+// === Module 12008: PublishModal ===
 
-// Module 12001 (PublishModal)
+// Module 12008 (PublishModal)
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import useChannelFollowerStatsDefault from "useChannelFollowerStats" /* 12002 */;
+import useChannelFollowerStatsDefault from "useChannelFollowerStats" /* 12009 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,8 +11,8 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4827);
-let obj2 = { alertContainer: { paddingTop: 16 }, alertLoading: { paddingTop: 62, paddingBottom: 46 }, alertBodyText: { marginBottom: 16, fontSize: 16, lineHeight: 24, color: fn(5744).DARK_PRIMARY_300_LIGHT_PRIMARY_400 } };
+const createStyles = fn(4829);
+let obj2 = { alertContainer: { paddingTop: 16 }, alertLoading: { paddingTop: 62, paddingBottom: 46 }, alertBodyText: { marginBottom: 16, fontSize: 16, lineHeight: 24, color: fn(5746).DARK_PRIMARY_300_LIGHT_PRIMARY_400 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/action_sheet/native/components/PublishModal.tsx");

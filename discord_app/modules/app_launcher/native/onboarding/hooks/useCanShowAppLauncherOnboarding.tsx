@@ -1,17 +1,17 @@
-// === Module 12376: useCanShowAppLauncherOnboarding ===
+// === Module 12385: useCanShowAppLauncherOnboarding ===
 
-// Module 12376 (useCanShowAppLauncherOnboarding)
+// Module 12385 (useCanShowAppLauncherOnboarding)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 2042 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4746 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4748 */;
 import UserStore from "UserStore" /* 1372 */;
-import AppLauncherOnboardingPersistedStore from "AppLauncherOnboardingPersistedStore" /* 12377 */;
-import AppLauncherOnboardingStore from "AppLauncherOnboardingStore" /* 12378 */;
+import AppLauncherOnboardingPersistedStore from "AppLauncherOnboardingPersistedStore" /* 12386 */;
+import AppLauncherOnboardingStore from "AppLauncherOnboardingStore" /* 12387 */;
 
 const require = fn;
-const BuiltInSectionId = fn(5295).BuiltInSectionId;
+const BuiltInSectionId = fn(5297).BuiltInSectionId;
 let result = 5 * DurationsDefault.Millis.SECOND;
 let c10 = result;
 let closure_11 = 5 * DurationsDefault.Millis.SECOND;
@@ -63,7 +63,7 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
     items4.push(tmp2(2028).DismissibleContent.APP_LAUNCHER_GLOBAL_SEARCH_ONBOARDING);
   }
   const tmp2Result10 = channelId(504);
-  const tmp2Result11 = channelId(7716);
+  const tmp2Result11 = channelId(7718);
   const items5 = [AppLauncherOnboardingStore];
   const stateFromStoresObject = channelId(504).useStateFromStoresObject(items5, () => ({ recentMessageMetadata: AppLauncherOnboardingStore.getRecentMessageMetadata(), recentApplicationCommandMetadata: AppLauncherOnboardingStore.getRecentApplicationCommandMetadata() }));
   ({ recentMessageMetadata, recentApplicationCommandMetadata } = stateFromStoresObject);
@@ -96,12 +96,12 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
     const applicationId = recentApplicationCommandMetadata.applicationId;
   }
   const tmp2Result13 = channelId(504);
-  result = channelId(4647).useIsDismissibleContentDismissed_UNSAFE(tmp2(2028).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER);
-  const tmp2Result14 = channelId(4647);
-  let result1 = channelId(4647).useIsDismissibleContentDismissed_UNSAFE(tmp2(2028).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER);
-  const tmp2Result15 = channelId(4647);
+  result = channelId(4649).useIsDismissibleContentDismissed_UNSAFE(tmp2(2028).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER);
+  const tmp2Result14 = channelId(4649);
+  let result1 = channelId(4649).useIsDismissibleContentDismissed_UNSAFE(tmp2(2028).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER);
+  const tmp2Result15 = channelId(4649);
   let tmp30 = null != stateFromStores4;
-  const result2 = channelId(4647).useIsDismissibleContentDismissed_UNSAFE(tmp2(2028).DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER);
+  const result2 = channelId(4649).useIsDismissibleContentDismissed_UNSAFE(tmp2(2028).DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER);
   if (tmp30) {
     tmp30 = stateFromStores4.channelId === channelId;
   }

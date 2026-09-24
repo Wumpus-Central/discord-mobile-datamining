@@ -1,6 +1,6 @@
-// === Module 12403: ArraySearch ===
+// === Module 12412: ArraySearch ===
 
-// Module 12403 (ArraySearch)
+// Module 12412 (ArraySearch)
 import size from "module_2" /* 2 */;
 
 function sortGroup(arr, arg1) {

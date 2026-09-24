@@ -1,8 +1,8 @@
-// === Module 7273: useWideAuthView ===
+// === Module 7275: useWideAuthView ===
 
-// Module 7273 (useWideAuthView)
+// Module 7275 (useWideAuthView)
 import MetaQuestUtils from "MetaQuestUtils" /* 1609 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7274 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7276 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/auth/native/useWideAuthView.tsx");

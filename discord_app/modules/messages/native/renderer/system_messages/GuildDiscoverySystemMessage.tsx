@@ -1,10 +1,10 @@
-// === Module 8352: GuildDiscoverySystemMessage ===
+// === Module 8356: GuildDiscoverySystemMessage ===
 
-// Module 8352 (GuildDiscoverySystemMessage)
+// Module 8356 (GuildDiscoverySystemMessage)
 import util from "util" /* 1115 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8308 */;
-import ChannelStore from "ChannelStore" /* 2042 */;
-import GuildStore from "GuildStore" /* 2064 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8312 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import GuildStore from "GuildStore" /* 2066 */;
 
 require = fn;
 const size = fn(2);

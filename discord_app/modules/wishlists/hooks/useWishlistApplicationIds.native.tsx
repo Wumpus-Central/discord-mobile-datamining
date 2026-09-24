@@ -1,6 +1,6 @@
-// === Module 11138: useWishlistApplicationIds ===
+// === Module 11144: useWishlistApplicationIds ===
 
-// Module 11138 (useWishlistApplicationIds)
+// Module 11144 (useWishlistApplicationIds)
 import noop from "module_19" /* 19 */;
 
 let closure_1 = fn(1074).COLLECTIBLES_APPLICATION_ID;

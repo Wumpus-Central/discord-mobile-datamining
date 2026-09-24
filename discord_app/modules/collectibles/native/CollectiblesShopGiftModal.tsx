@@ -1,14 +1,14 @@
-// === Module 11359: CollectiblesShopGiftModal ===
+// === Module 11365: CollectiblesShopGiftModal ===
 
-// Module 11359 (CollectiblesShopGiftModal)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7869 */;
-import BadgeId from "BadgeId" /* 8528 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8541 */;
-import openGiftModal from "openGiftModal" /* 11358 */;
-import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 11361 */;
-import CollectiblesShopGiftPurchaseSectionDefault from "CollectiblesShopGiftPurchaseSection" /* 11364 */;
+// Module 11365 (CollectiblesShopGiftModal)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7871 */;
+import BadgeId from "BadgeId" /* 8532 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8545 */;
+import openGiftModal from "openGiftModal" /* 11364 */;
+import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 11367 */;
+import CollectiblesShopGiftPurchaseSectionDefault from "CollectiblesShopGiftPurchaseSection" /* 11370 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7870 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7872 */;
 
 require = fn;
 function CollectiblesShopGiftModalContent(product) {

@@ -1,7 +1,7 @@
-// === Module 8202: useIsUsingClientTheme ===
+// === Module 8204: useIsUsingClientTheme ===
 
-// Module 8202 (useIsUsingClientTheme)
-import useActiveTheme from "useActiveTheme" /* 8203 */;
+// Module 8204 (useIsUsingClientTheme)
+import useActiveTheme from "useActiveTheme" /* 8205 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/client_themes/native/useIsUsingClientTheme.tsx");

@@ -1,9 +1,9 @@
-// === Module 8064: GuildProfileUtils ===
+// === Module 8066: GuildProfileUtils ===
 
-// Module 8064 (GuildProfileUtils)
+// Module 8066 (GuildProfileUtils)
 import Constants from "Constants" /* 1074 */;
-import ChannelRecord from "ChannelRecord" /* 2046 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 2056 */;
+import ChannelRecord from "ChannelRecord" /* 2048 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 2058 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = ChannelRecord.createChannelRecordFromInvite;

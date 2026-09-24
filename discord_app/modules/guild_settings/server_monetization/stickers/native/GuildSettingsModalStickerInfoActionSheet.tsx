@@ -1,11 +1,11 @@
-// === Module 18100: GuildSettingsModalStickerInfoActionSheet ===
+// === Module 18123: GuildSettingsModalStickerInfoActionSheet ===
 
-// Module 18100 (GuildSettingsModalStickerInfoActionSheet)
-import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 18093 */;
+// Module 18123 (GuildSettingsModalStickerInfoActionSheet)
+import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 18116 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 5805 */;
+import StickersStore from "StickersStore" /* 5807 */;
 
 const require = globalThis.__r;
 

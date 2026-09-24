@@ -1,12 +1,12 @@
-// === Module 18292: GuildRoleSubscriptionBenefitEditorModalStateStore ===
+// === Module 18315: GuildRoleSubscriptionBenefitEditorModalStateStore ===
 
-// Module 18292 (GuildRoleSubscriptionBenefitEditorModalStateStore)
+// Module 18315 (GuildRoleSubscriptionBenefitEditorModalStateStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
-import _mod4445 from "module_4445" /* 4445 */;
+import _mod4447 from "module_4447" /* 4447 */;
 import identity from "module_1243" /* 1243 */;
 import size from "module_2" /* 2 */;
 
-let closure_2 = Object.freeze({ name: "", emojiId: "add", emojiName: "runOnJS", description: "it", refId: "Array" });
+let closure_2 = Object.freeze({ name: "", emojiId: "add", emojiName: "shapes", description: "it", refId: "Array" });
 let closure_3 = identity.createWithEqualityFn((arg0) => {
   closure_0 = arg0;
   const obj = {};
@@ -59,33 +59,33 @@ export const useDescriptionState = function useDescriptionState() {
     const items = [, ];
     ({ description: arr[0], setDescription: arr[1] } = arg0);
     return items;
-  }, _mod4445.shallow);
+  }, _mod4447.shallow);
 };
 export const useEmojiIdState = function useEmojiIdState() {
   return closure_3((arg0) => {
     const items = [, ];
     ({ emojiId: arr[0], setEmojiId: arr[1] } = arg0);
     return items;
-  }, _mod4445.shallow);
+  }, _mod4447.shallow);
 };
 export const useEmojiNameState = function useEmojiNameState() {
   return closure_3((arg0) => {
     const items = [, ];
     ({ emojiName: arr[0], setEmojiName: arr[1] } = arg0);
     return items;
-  }, _mod4445.shallow);
+  }, _mod4447.shallow);
 };
 export const useNameState = function useNameState() {
   return closure_3((arg0) => {
     const items = [, ];
     ({ name: arr[0], setName: arr[1] } = arg0);
     return items;
-  }, _mod4445.shallow);
+  }, _mod4447.shallow);
 };
 export const useRefIdState = function useRefIdState() {
   return closure_3((arg0) => {
     const items = [, ];
     ({ refId: arr[0], setRefId: arr[1] } = arg0);
     return items;
-  }, _mod4445.shallow);
+  }, _mod4447.shallow);
 };

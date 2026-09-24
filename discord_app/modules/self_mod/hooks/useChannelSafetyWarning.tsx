@@ -1,7 +1,7 @@
-// === Module 11321: useChannelSafetyWarning ===
+// === Module 11327: useChannelSafetyWarning ===
 
-// Module 11321 (useChannelSafetyWarning)
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 11261 */;
+// Module 11327 (useChannelSafetyWarning)
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 11267 */;
 
 const require = globalThis.__r;
 

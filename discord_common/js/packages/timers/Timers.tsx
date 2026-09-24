@@ -1,6 +1,6 @@
-// === Module 2037: Timers ===
+// === Module 2039: Timers ===
 
-// Module 2037 (Timers)
+// Module 2039 (Timers)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 class Timeout {
@@ -140,11 +140,12 @@ class BatchInvocationManager {
   }
 }
 const prototype5 = BatchInvocationManager.prototype;
-prototype5["queue"] = function queue(candidates) {
+prototype5["queue"] = function queue(items) {
   const self = this;
-  let tmp = candidates;
-  if (!Array.isArray(candidates)) {
-    const items = [candidates];
+  let tmp = items;
+  if (!Array.isArray(items)) {
+    items = [];
+    items[0] = items;
     tmp = items;
   }
   const items1 = [];

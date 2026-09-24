@@ -1,9 +1,9 @@
-// === Module 15336: FiltersHorizontalIcon ===
+// === Module 15345: FiltersHorizontalIcon ===
 
-// Module 15336 (FiltersHorizontalIcon)
+// Module 15345 (FiltersHorizontalIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4523 */;
-import _mod15337 from "module_15337" /* 15337 */;
+import BaseIconImage from "BaseIconImage" /* 4525 */;
+import _mod15346 from "module_15346" /* 15346 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const FiltersHorizontalIcon = function FiltersHorizontalIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15337, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15346, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

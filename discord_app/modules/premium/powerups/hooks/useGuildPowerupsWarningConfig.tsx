@@ -1,10 +1,10 @@
-// === Module 12901: useGuildPowerupsWarningConfig ===
+// === Module 12910: useGuildPowerupsWarningConfig ===
 
-// Module 12901 (useGuildPowerupsWarningConfig)
+// Module 12910 (useGuildPowerupsWarningConfig)
 import util from "util" /* 1115 */;
-import _modDef2516 from "module_2516" /* 2516 */;
+import _modDef2518 from "module_2518" /* 2518 */;
 import noop from "module_19" /* 19 */;
-import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 12902 */;
+import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 12911 */;
 
 const require = globalThis.__r;
 
@@ -50,10 +50,10 @@ export default function useGuildPowerupsWarningConfig(arg0, arg1) {
     } else {
       obj = { shouldShow: true, title: null, description: null, requiredBoostCount: null };
       const intl = util.intl;
-      obj.title = intl.string(_modDef2516.n5hQhc);
+      obj.title = intl.string(_modDef2518.n5hQhc);
       const intl2 = util.intl;
       const obj2 = { boostCount: diff, perksString: closure_1.join(", ") };
-      obj.description = intl2.formatToPlainString(_modDef2516.iAaAiG, obj2);
+      obj.description = intl2.formatToPlainString(_modDef2518.iAaAiG, obj2);
       obj.requiredBoostCount = diff;
     }
     return obj;
