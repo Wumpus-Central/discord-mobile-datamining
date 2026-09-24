@@ -5,7 +5,7 @@ import PlatformUtils from "../../../../../utils/PlatformUtils.tsx";
 import PremiumUtils from "../../../../../utils/PremiumUtils.tsx";
 import ChatInputUtils from "../../../../../utils/native/ChatInputUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05283_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05285_LinearGradient.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import openPremiumUpsellActionSheet from "../utils/openPremiumUpsellActionSheet.tsx";
 import showForLaterModal from "../../../../saved_messages/native/showForLaterModal.tsx";
@@ -82,13 +82,13 @@ const PremiumConstants = fn(1374);
 ({ PremiumSubscriptionSKUs: c10, PremiumTypes: closure_11, PremiumUpsellTypes: closure_12 } = PremiumConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: map1, AnalyticsPages: closure_14, ThemeTypes: closure_15 } = Constants);
-const ApplicationStreamFPS = fn(4874).ApplicationStreamFPS;
-const SavedMessagesConstants = fn(8180);
+const ApplicationStreamFPS = fn(4876).ApplicationStreamFPS;
+const SavedMessagesConstants = fn(8182);
 ({ SAVED_BOOKMARKS_MAX: closure_17, SAVED_REMINDERS_MAX: closure_18 } = SavedMessagesConstants);
-const premiumMax = fn(8174).MAX_SCHEDULED_MESSAGES_PER_USER;
+const premiumMax = fn(8176).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: closure_20, Fragment: closure_21, jsxs: closure_22 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = {
   hero: { alignSelf: "center", marginTop: nativeDefault.space.PX_16 },
   image: { width: 240, height: 144 },

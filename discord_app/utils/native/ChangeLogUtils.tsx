@@ -143,7 +143,7 @@ function ChangeLogBlockQuote(state) {
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = {
   link: { color: nativeDefault.colors.TEXT_LINK },
   list: { marginBottom: 10 },
@@ -156,13 +156,13 @@ obj2.container = {
   borderLeftWidth: 2,
   paddingLeft: 8,
   marginBottom: 10,
-  borderLeftColor: fn(5744).DARK_PRIMARY_500_LIGHT_PRIMARY_300,
+  borderLeftColor: fn(5746).DARK_PRIMARY_500_LIGHT_PRIMARY_300,
 };
 const obj4 = {
   borderLeftWidth: 2,
   paddingLeft: 8,
   marginBottom: 10,
-  borderLeftColor: fn(5744).DARK_PRIMARY_500_LIGHT_PRIMARY_300,
+  borderLeftColor: fn(5746).DARK_PRIMARY_500_LIGHT_PRIMARY_300,
 };
 obj2.text = { fontSize: 14, lineHeight: 18, marginBottom: 8, color: nativeDefault.colors.TEXT_MUTED };
 let closure_6 = createStyles.createStyles(obj2);

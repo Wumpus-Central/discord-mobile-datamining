@@ -64,6 +64,11 @@ class GameRecord extends tmp2 {
       platforms = [];
     }
     tmp5.platforms = platforms;
+    prop = global.platform_availability;
+    if (prop == null) {
+      prop = [];
+    }
+    tmp5.platformAvailability = prop;
     websites = global.websites;
     if (websites == null) {
       websites = [];

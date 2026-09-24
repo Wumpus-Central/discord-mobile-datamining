@@ -174,7 +174,7 @@ let closure_9 = async function _fetchAnswer(arg0) {
   }
 };
 const Endpoints = fn(1074).Endpoints;
-const SearchTabs = fn(8207).SearchTabs;
+const SearchTabs = fn(8209).SearchTabs;
 let closure_8 = JSON.stringify({ arbiter: { enabled: false } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/intelligence_layer/search/IntelligenceSearchActionCreators.tsx");

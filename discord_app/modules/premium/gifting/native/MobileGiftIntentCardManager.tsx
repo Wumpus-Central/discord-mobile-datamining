@@ -29,9 +29,9 @@ prototype["maybeSendCard"] = function maybeSendCard(id, found) {
           if (
             self.trySendGiftingPromptSystemMessage(id, constants2.FRIEND_ANNIVERSARY, found, constants.SEND_MESSAGE)
           ) {
-            const result = tmp(11083).logMessageGiftIntentShown(found);
+            const result = tmp(11089).logMessageGiftIntentShown(found);
             const userAffinity = self.getUserAffinity(found);
-            const tmpResult = tmp(11083);
+            const tmpResult = tmp(11089);
             const obj = {
               name: tmp(1249).ImpressionNames.GIFT_INTENT_UNREAD_NOTIFICATION,
               type: tmp(1249).ImpressionTypes.VIEW,
@@ -45,8 +45,8 @@ prototype["maybeSendCard"] = function maybeSendCard(id, found) {
             obj2.dm_affinity = dmProbability;
             obj2.channel_id = id;
             obj.properties = obj2;
-            tmp(9124).trackImpression(obj);
-            const tmpResult2 = tmp(9124);
+            tmp(9128).trackImpression(obj);
+            const tmpResult2 = tmp(9128);
           }
         } else {
           MessageStore.whenReady(id, () => {

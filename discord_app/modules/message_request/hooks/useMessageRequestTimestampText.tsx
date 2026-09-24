@@ -1,6 +1,6 @@
 // discord_app/modules/message_request/hooks/useMessageRequestTimestampText.tsx
 import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
-import _modDef4414 from "../../../../_runtime/metro/04414__.js";
+import _modDef4416 from "../../../../_runtime/metro/04416__.js";
 import ReadStateStore from "../../../stores/ReadStateStore.tsx";
 
 const require = globalThis.__r;
@@ -24,8 +24,8 @@ export const useMessageRequestTimestampText = function useMessageRequestTimestam
     }
     let str = "";
     if (null != extractTimestampResult) {
-      str = _modDef4414(extractTimestampResult).calendar();
-      const obj6 = _modDef4414(extractTimestampResult);
+      str = _modDef4416(extractTimestampResult).calendar();
+      const obj6 = _modDef4416(extractTimestampResult);
     }
     return str;
   }
@@ -51,8 +51,8 @@ export const useMessageRequestRelativeTimestampText = function useMessageRequest
     }
     let str = "";
     if (null != extractTimestampResult) {
-      str = tmp(8108).getTimestampString(extractTimestampResult);
-      const tmpResult = tmp(8108);
+      str = tmp(8110).getTimestampString(extractTimestampResult);
+      const tmpResult = tmp(8110);
     }
     return str;
   }

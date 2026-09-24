@@ -13,17 +13,17 @@ export const sanitizeDevices = function sanitizeDevices(AUDIO_INPUT, items) {
     ({ guid, name, index } = item);
     if (VIDEO_INPUT === constants.VIDEO_INPUT) {
       if (obj.test(name)) {
-        let tmp12 = id;
+        let tmp14 = id;
         let str2 = "Default";
       }
-      let tmp13 = index;
+      let tmp15 = index;
       if (null != index) {
-        tmp13 = index;
+        tmp15 = index;
       }
       const obj3 = {
-        id: tmp12,
-        type: tmp10,
-        index: tmp13,
+        id: tmp14,
+        type: tmp12,
+        index: tmp15,
         name: str2,
         originalName: tmp2,
         originalId: tmp,
@@ -34,19 +34,21 @@ export const sanitizeDevices = function sanitizeDevices(AUDIO_INPUT, items) {
         macosTransportType: tmp7,
         windowsEndpointFormFactor: tmp8,
         windowsDeviceService: tmp9,
+        windowsDeviceDescription: tmp10,
+        windowsDeviceInterfaceFriendlyName: tmp11,
       };
       return obj3;
     }
     if (obj2.test(name)) {
       c1 = true;
-      tmp12 = id;
+      tmp14 = id;
       str2 = name.replace("default", "Default");
     } else {
-      tmp12 = name;
+      tmp14 = name;
       if (null != guid) {
-        tmp12 = name;
+        tmp14 = name;
         if ("" !== guid) {
-          tmp12 = guid;
+          tmp14 = guid;
         }
       }
       str2 = name;
@@ -88,17 +90,17 @@ export const getAudioInputDevices = function getAudioInputDevices() {
         ({ guid, name, index } = item);
         if (VIDEO_INPUT === constants.VIDEO_INPUT) {
           if (obj.test(name)) {
-            let tmp12 = id;
+            let tmp14 = id;
             let str2 = "Default";
           }
-          let tmp13 = index;
+          let tmp15 = index;
           if (null != index) {
-            tmp13 = index;
+            tmp15 = index;
           }
           const obj3 = {
-            id: tmp12,
-            type: tmp10,
-            index: tmp13,
+            id: tmp14,
+            type: tmp12,
+            index: tmp15,
             name: str2,
             originalName: tmp2,
             originalId: tmp,
@@ -109,19 +111,21 @@ export const getAudioInputDevices = function getAudioInputDevices() {
             macosTransportType: tmp7,
             windowsEndpointFormFactor: tmp8,
             windowsDeviceService: tmp9,
+            windowsDeviceDescription: tmp10,
+            windowsDeviceInterfaceFriendlyName: tmp11,
           };
           return obj3;
         }
         if (obj2.test(name)) {
           c1 = true;
-          tmp12 = id;
+          tmp14 = id;
           str2 = name.replace("default", "Default");
         } else {
-          tmp12 = name;
+          tmp14 = name;
           if (null != guid) {
-            tmp12 = name;
+            tmp14 = name;
             if ("" !== guid) {
-              tmp12 = guid;
+              tmp14 = guid;
             }
           }
           str2 = name;
@@ -165,17 +169,17 @@ export const getAudioOutputDevices = function getAudioOutputDevices() {
         ({ guid, name, index } = item);
         if (VIDEO_INPUT === constants.VIDEO_INPUT) {
           if (obj.test(name)) {
-            let tmp12 = id;
+            let tmp14 = id;
             let str2 = "Default";
           }
-          let tmp13 = index;
+          let tmp15 = index;
           if (null != index) {
-            tmp13 = index;
+            tmp15 = index;
           }
           const obj3 = {
-            id: tmp12,
-            type: tmp10,
-            index: tmp13,
+            id: tmp14,
+            type: tmp12,
+            index: tmp15,
             name: str2,
             originalName: tmp2,
             originalId: tmp,
@@ -186,19 +190,21 @@ export const getAudioOutputDevices = function getAudioOutputDevices() {
             macosTransportType: tmp7,
             windowsEndpointFormFactor: tmp8,
             windowsDeviceService: tmp9,
+            windowsDeviceDescription: tmp10,
+            windowsDeviceInterfaceFriendlyName: tmp11,
           };
           return obj3;
         }
         if (obj2.test(name)) {
           c1 = true;
-          tmp12 = id;
+          tmp14 = id;
           str2 = name.replace("default", "Default");
         } else {
-          tmp12 = name;
+          tmp14 = name;
           if (null != guid) {
-            tmp12 = name;
+            tmp14 = name;
             if ("" !== guid) {
-              tmp12 = guid;
+              tmp14 = guid;
             }
           }
           str2 = name;
@@ -242,17 +248,17 @@ export const getVideoInputDevices = function getVideoInputDevices() {
         ({ guid, name, index } = item);
         if (VIDEO_INPUT === constants.VIDEO_INPUT) {
           if (obj.test(name)) {
-            let tmp12 = id;
+            let tmp14 = id;
             let str2 = "Default";
           }
-          let tmp13 = index;
+          let tmp15 = index;
           if (null != index) {
-            tmp13 = index;
+            tmp15 = index;
           }
           const obj3 = {
-            id: tmp12,
-            type: tmp10,
-            index: tmp13,
+            id: tmp14,
+            type: tmp12,
+            index: tmp15,
             name: str2,
             originalName: tmp2,
             originalId: tmp,
@@ -263,19 +269,21 @@ export const getVideoInputDevices = function getVideoInputDevices() {
             macosTransportType: tmp7,
             windowsEndpointFormFactor: tmp8,
             windowsDeviceService: tmp9,
+            windowsDeviceDescription: tmp10,
+            windowsDeviceInterfaceFriendlyName: tmp11,
           };
           return obj3;
         }
         if (obj2.test(name)) {
           c1 = true;
-          tmp12 = id;
+          tmp14 = id;
           str2 = name.replace("default", "Default");
         } else {
-          tmp12 = name;
+          tmp14 = name;
           if (null != guid) {
-            tmp12 = name;
+            tmp14 = name;
             if ("" !== guid) {
-              tmp12 = guid;
+              tmp14 = guid;
             }
           }
           str2 = name;

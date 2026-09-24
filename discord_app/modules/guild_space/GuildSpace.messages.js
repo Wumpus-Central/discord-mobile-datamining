@@ -1,13 +1,13 @@
 // discord_app/modules/guild_space/GuildSpace.messages.js
 import AssetJsonUtils from "../asset_json/native/AssetJsonUtils.tsx";
-import _mod2417 from "../../../_runtime/metro/02417__.js";
+import _mod2419 from "../../../_runtime/metro/02419__.js";
 import module_1154_mod from "../../../_runtime/metro/01154__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 let module_1154 = module_1154_mod;
 const loader = module_1154.createLoader({
   () => {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2417);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2419);
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");

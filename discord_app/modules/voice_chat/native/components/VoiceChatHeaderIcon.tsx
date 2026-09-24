@@ -29,7 +29,7 @@ const View = fn(17).View;
 const ThemeTypes = fn(1074).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = { headerButton: null, disabledOpacity: null, chatIconContainer: null, chatIcon: null, badge: null };
 let size = {
   width: 32,
@@ -43,12 +43,12 @@ obj2.headerButton = size;
 obj2.disabledOpacity = { opacity: 0.6 };
 obj2.chatIconContainer = {
   marginRight: 12,
-  height: fn(5985).NAV_BAR_HEIGHT,
+  height: fn(5987).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
 };
 obj2.chatIcon = { marginHorizontal: 0, width: 32, height: 32 };
-const obj3 = { marginRight: 12, height: fn(5985).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
+const obj3 = { marginRight: 12, height: fn(5987).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
 obj2.badge = { backgroundColor: nativeDefault.colors.ICON_STRONG };
 let closure_8 = createStyles.createStyles(obj2);
 size = fn(2);

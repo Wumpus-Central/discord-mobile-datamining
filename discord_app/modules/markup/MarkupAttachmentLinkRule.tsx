@@ -36,3 +36,15 @@ obj.attachmentLink = {
 const result = size.fileFinishedImporting("modules/markup/MarkupAttachmentLinkRule.tsx");
 
 export default obj;
+export const matchAttachmentUrl = function matchAttachmentUrl(url) {
+  const match = regExp.exec(url);
+  let tmp2 = null;
+  if (null != match) {
+    tmp2 = null;
+    if (match[0] === url) {
+      const obj = { name: match[1] };
+      tmp2 = obj;
+    }
+  }
+  return tmp2;
+};

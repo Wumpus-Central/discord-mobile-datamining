@@ -17,32 +17,32 @@ function createNativePlaceholderConfig(listFooter) {
     borderRadius: "Array",
     borderTopLeftRadius: "count",
     borderTopRightRadius: "displayName",
-    borderBottomLeftRadius: "Button",
+    borderBottomLeftRadius: "y",
     borderBottomRightRadius: "e",
     divider: "isArray",
     dividerColor: "isArray",
-    dividerPaddingLeft: "t",
+    dividerPaddingLeft: "Boolean",
     dividerPaddingRight: "e",
     placeholderShape: "isArray",
     placeholderShapeColor: "isArray",
-    placeholderShapeCount: "to",
+    placeholderShapeCount: "o",
     placeholderShapeGap: "e",
     placeholderShapePaddingHorizontal: "isArray",
     placeholderShapePaddingVertical: "isArray",
-    placeholderFeedBackgroundColor: "Date",
+    placeholderFeedBackgroundColor: "l",
     placeholderFeedColor: "e",
     placeholderFeedLabelPadding: "isArray",
     placeholderFeedLabelPaddingInnerRatio: "isArray",
-    placeholderFeedLabelSize: "TypeError",
+    placeholderFeedLabelSize: "e",
     placeholderFeedLabelSecondarySize: "e",
     placeholderFeedPadding: "isArray",
     placeholderFeedShape: "isArray",
     placeholderFeedShapeSize: "category",
     placeholderType: NONE,
-    width: null,
-    height: null,
-    verticalAlignment: null,
-    horizontalAlignment: null,
+    width: false,
+    height: false,
+    verticalAlignment: false,
+    horizontalAlignment: false,
   };
   if (null == listFooter) {
     return size;
@@ -161,7 +161,7 @@ function createNativePlaceholderConfig(listFooter) {
   }
 }
 const processColor = fn(17).processColor;
-const obj = { sectionItem: { type: fn(7393).FastestListPropsPlaceholderType.NONE } };
+const obj = { sectionItem: { type: fn(7395).FastestListPropsPlaceholderType.NONE } };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
 

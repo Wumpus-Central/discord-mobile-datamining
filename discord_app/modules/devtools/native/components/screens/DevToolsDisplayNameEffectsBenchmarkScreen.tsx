@@ -1,13 +1,13 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsDisplayNameEffectsBenchmarkScreen.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import _modDef2874 from "../../../../display_name_styles/intl/DisplayNameStyles.messages.js";
+import _modDef2876 from "../../../../display_name_styles/intl/DisplayNameStyles.messages.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../../design/components/Stack/native/Stack.native.tsx";
 import UsernameWithEffectsDefault from "../../../../display_name_styles/native/UsernameWithEffects.tsx";
 import types from "../../../../display_name_styles/types.tsx";
 import useDisplayNameStylesEffectConfigs from "../../../../display_name_styles/hooks/useDisplayNameStylesEffectConfigs.tsx";
-import _mod11249 from "../../../../../utils/native/StringUtils.tsx";
+import _mod11255 from "../../../../../utils/native/StringUtils.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../../stores/UserStore.tsx";
@@ -19,7 +19,7 @@ function effectName(arg0) {
   const intl = util.intl;
   let OpWJ3f = useDisplayNameStylesEffectConfigs.DISPLAY_NAME_STYLES_EFFECT_NAMES[arg0];
   if (OpWJ3f == null) {
-    OpWJ3f = _modDef2874.OpWJ3f;
+    OpWJ3f = _modDef2876.OpWJ3f;
   }
   return intl.string(OpWJ3f);
 }
@@ -77,7 +77,7 @@ let items1 = [
   { key: "medium", label: "Medium", name: "NebulaWanderer" },
   { key: "long", label: "Long", name: "GalacticOverlord2049" },
 ];
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 },
   container: null,
@@ -131,7 +131,7 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
   }, items1);
   const memo = first1.useMemo(() => items1.find((key) => key.key === first2).name, items2);
   const items3 = [memo];
-  const memo1 = first1.useMemo(() => _mod11249.splitGraphemes(memo).length, items3);
+  const memo1 = first1.useMemo(() => _mod11255.splitGraphemes(memo).length, items3);
   const items4 = [first];
   const memo2 = first1.useMemo(() => items.filter((item) => set.has(item)), items4);
   const items5 = [memo2];
@@ -311,7 +311,7 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
         const length = String(Math.max(run.params.rowCount - 1, 0)).length;
         const padStartResult = String(arg1).padStart(length, "0");
         const StringResult = String(arg1);
-        const splitGraphemesResult = _mod11249.splitGraphemes(run.params.name);
+        const splitGraphemesResult = _mod11255.splitGraphemes(run.params.name);
         let sum = padStartResult;
         if (splitGraphemesResult.length > length) {
           const substr = splitGraphemesResult.slice(0, splitGraphemesResult.length - length);

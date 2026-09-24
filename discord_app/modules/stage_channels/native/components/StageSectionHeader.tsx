@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import _modDef7489 from "../../../../../_runtime/metro/07489__.js";
+import _modDef7491 from "../../../../../_runtime/metro/07491__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: hasOwnProperty, jsx: metroRequire } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = {
   section: { height: 48, paddingHorizontal: 4 },
   children: { marginLeft: 12 },
@@ -51,9 +51,9 @@ export default function StageSectionHeader(collapsed) {
     obj2.transform = items;
     return obj2;
   };
-  let obj = collapsed(4559);
+  let obj = collapsed(4561);
   const tmp2 = collapsed;
-  fn.__closure = { withTiming: collapsed(4828).withTiming, collapsed };
+  fn.__closure = { withTiming: collapsed(4830).withTiming, collapsed };
   fn.__workletHash = 13855092771739;
   fn.__initData = __initData;
   const obj3 = { style: tmp.section, children: null };
@@ -67,7 +67,7 @@ export default function StageSectionHeader(collapsed) {
   };
   let items = [label, " \u2014 ", count];
   obj5.children = items;
-  const items1 = [closure_5(collapsed(4823).Text, obj5), ,];
+  const items1 = [closure_5(collapsed(4825).Text, obj5), ,];
   let tmp5Result = null != children;
   if (tmp5Result) {
     const obj6 = { style: tmp.children, children };
@@ -76,8 +76,8 @@ export default function StageSectionHeader(collapsed) {
   items1[1] = tmp5Result;
   const obj7 = { style: tmp.collapseButton, children: null };
   const obj8 = { style: animatedStyle, children: null };
-  let obj2 = { withTiming: collapsed(4828).withTiming, collapsed };
-  obj8.children = closure_6(tmp2(1177).Icon, { source: _modDef7489, style: tmp.collapseIcon });
+  let obj2 = { withTiming: collapsed(4830).withTiming, collapsed };
+  obj8.children = closure_6(tmp2(1177).Icon, { source: _modDef7491, style: tmp.collapseIcon });
   obj7.children = closure_6(ReanimatedRexportDefault.View, obj8);
   items1[2] = closure_6(closure_4, obj7);
   obj4.children = items1;

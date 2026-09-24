@@ -3,12 +3,12 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import StringUtils from "../../../../utils/StringUtils.tsx";
-import _modDef2548 from "../../gifting/PremiumGifting.messages.js";
+import _modDef2550 from "../../gifting/PremiumGifting.messages.js";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import ClockIcon from "../../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05283_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05285_LinearGradient.js";
 import TextStylesDefault from "../../../rebrand/native/TextStyles.tsx";
 import PremiumFeaturesBackgroundDefault from "../../../user_settings/premium/native/PremiumFeaturesBackground.tsx";
 import usePremiumFeaturesDefault from "../../../user_settings/premium/native/utils/usePremiumFeatures.tsx";
@@ -75,7 +75,7 @@ function PremiumGiftPlanSelectPromotionDetails(config) {
   tmp2Result = StringUtils;
   if (tmp2Result2.isNullOrEmpty(config.mobileBody)) {
     const intl2 = util.intl;
-    let mobileBody = intl2.string(_modDef2548.zVGHbw);
+    let mobileBody = intl2.string(_modDef2550.zVGHbw);
   } else {
     mobileBody = config.mobileBody;
   }
@@ -123,7 +123,7 @@ const obj13 = { marginTop: nativeDefault.space.PX_24 };
 obj12.compact = { marginTop: nativeDefault.space.PX_12 };
 const obj14 = { marginTop: nativeDefault.space.PX_12 };
 obj12.smallCompact = { marginTop: nativeDefault.space.PX_8 };
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let closure_15 = createStyles.createStyles(() => {
   obj = {
     card: null,

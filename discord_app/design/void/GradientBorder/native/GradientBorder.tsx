@@ -1,7 +1,7 @@
 // discord_app/design/void/GradientBorder/native/GradientBorder.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod5012 from "module_5012" /* 5012 */;
-import LinearGradientDefault from "../../../../../_runtime/05283_LinearGradient.js";
+import _mod5014 from "module_5014" /* 5014 */;
+import LinearGradientDefault from "../../../../../_runtime/05285_LinearGradient.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;

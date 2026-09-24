@@ -17,7 +17,7 @@ class GameProfileSkeletonPlaceholder {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = {
   placeholder: { backgroundColor: nativeDefault.colors.ICON_MUTED },
   button: null,

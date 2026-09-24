@@ -97,7 +97,7 @@ function openContextMenu(stopPropagation, render, enableSpellCheck, renderLazy) 
     const _DOMRect = DOMRect;
     const dOMRect = new DOMRect(tmp3, sum1, 0, 0);
     contextMenu.rect = dOMRect;
-    let APP = contextMenu(5857).getCurrentlyInteractingAppContext();
+    let APP = contextMenu(5859).getCurrentlyInteractingAppContext();
     if (APP == null) {
       APP = AppContext.APP;
     }
@@ -115,18 +115,18 @@ function openContextMenu(stopPropagation, render, enableSpellCheck, renderLazy) 
     if (enableSpellCheck) {
       if (tmp16Result.isDesktop()) {
         if (nativeEvent.isTrusted) {
-          importDefault = tmp16(5860).addResultListener(() => {
+          importDefault = tmp16(5862).addResultListener(() => {
             closure_1();
             contextMenu = DispatcherDefault;
             contextMenu.dispatch({ type: "CONTEXT_MENU_OPEN", contextMenu });
           });
-          const tmp16Result2 = tmp16(5860);
+          const tmp16Result2 = tmp16(5862);
         }
       }
       tmp16Result = tmp16(1364);
     }
     stopPropagation.preventDefault();
-    const obj3 = contextMenu(5857);
+    const obj3 = contextMenu(5859);
     const obj4 = { type: "CONTEXT_MENU_OPEN", contextMenu };
     DispatcherDefault.dispatch(obj4);
   } else {

@@ -1,5 +1,5 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDragPreview.tsx
-import _mod4445 from "../../../../_runtime/metro/04445__.js";
+import _mod4447 from "../../../../_runtime/metro/04447__.js";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
@@ -147,9 +147,9 @@ function PreviewItem(dragRegion) {
           id: -1,
           parentId: "flex",
           name: "Array",
-          color: "category",
-          expanded: true,
-          children: true,
+          color: "channel",
+          expanded: "index",
+          children: "colors",
         };
         const items = [tmp2];
         element.children = items;
@@ -358,16 +358,16 @@ function AnimatedItemPreview(cleanUp) {
   obj5.children = tmp12Result;
   return jsx(cleanUp(sharedValue[9]), { style: items, children: null });
 }
-const GuildsNodeType = fn(5741).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(16684).GUILD_ITEM_INSET_LEFT;
+const GuildsNodeType = fn(5743).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(16708).GUILD_ITEM_INSET_LEFT;
 const jsx = fn(21).jsx;
-let createStyles = fn(4827);
+let createStyles = fn(4829);
 let closure_8 = createStyles.createStyles({
   dragPreview: { position: "absolute", left: 0 },
   animatedPreviewStyle: { position: "absolute" },
   dragPreviewHome: { right: 0 },
 });
-createStyles = fn(4827);
+createStyles = fn(4829);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { animatedPreviewStyleHome: null };
   const rect = { left: 0, right: 0, transformOrigin: null };
@@ -451,12 +451,12 @@ export default noop.memo(function GuildsBarDragPreview() {
             overState: null,
             overNode: null,
             dropPosition: "o",
-            gestureState: "reddit.com",
-            scrollPosition: "facebook.com",
-            dragRegion: "twitter.com",
-            windowSize: "x.com",
-            dropComplete: "center",
-            listInsets: "center",
+            gestureState: "film",
+            scrollPosition: "filmklapper",
+            dragRegion: "klapper",
+            windowSize: "klaptr\u00E6",
+            dropComplete: "fjernsyn",
+            listInsets: "tv",
           };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;
@@ -476,7 +476,7 @@ export default noop.memo(function GuildsBarDragPreview() {
       }
       return null;
     }
-  }, _mod4445.shallow);
+  }, _mod4447.shallow);
   let tmp2 = null;
   if (null != tmp) {
     let obj = {};

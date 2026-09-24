@@ -5,7 +5,7 @@ import UserSettingsProtoActionCreators from "../../../../user_settings/UserSetti
 import dismissible_content from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import TrashIcon from "../../../../../design/components/Icon/native/redesign/generated/TrashIcon.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import fuzzysearchDefault from "../../../../../../_runtime/05820_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../../_runtime/05822_fuzzysearch.js";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowArrow from "../../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
 import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
@@ -34,7 +34,7 @@ function DismissableContentsEmpty() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   contentContainer: null,
@@ -168,8 +168,8 @@ export default function DevToolsDismissableContentsScreen() {
   const ref = initialSearchQuery.useRef(null);
   importDefault = initialSearchQuery.useRef(0);
   const tmp2 = useSafeAreaInsetsDefault();
-  let obj = ref(10275);
-  [dependencyMap, tmp5] = ref(10275).useLocalStorageState("devtools-dc-search", "");
+  let obj = ref(10280);
+  [dependencyMap, tmp5] = ref(10280).useLocalStorageState("devtools-dc-search", "");
   _slicedToArray = tmp5;
   initialSearchQuery = _slicedToArray(
     initialSearchQuery.useState(() => {
@@ -210,7 +210,7 @@ export default function DevToolsDismissableContentsScreen() {
     const sorted = items.sort((localeCompare, arg1) => localeCompare.localeCompare(arg1));
     return items;
   });
-  let tmp4 = _slicedToArray(ref(10275).useLocalStorageState("devtools-dc-search", ""), 2);
+  let tmp4 = _slicedToArray(ref(10280).useLocalStorageState("devtools-dc-search", ""), 2);
   let items = [closure_6];
   const stateFromStoresObject = ref(504).useStateFromStoresObject(items, () => ({
     dailyCapOverridden: closure_6.dailyCapOverridden,
@@ -301,6 +301,6 @@ export default function DevToolsDismissableContentsScreen() {
   };
   obj4.renderItem = callback3;
   obj4.onScroll = callback2;
-  obj3.children = dailyCapOverridden(ref(9073).FlashList, obj4);
+  obj3.children = dailyCapOverridden(ref(9077).FlashList, obj4);
   return dailyCapOverridden(first1, obj3);
 }

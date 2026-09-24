@@ -4,7 +4,7 @@ import KeyboardManagerUtils from "../../../utils/native/KeyboardManagerUtils.tsx
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import useIsScreenReaderEnabled from "../../a11y/native/useIsScreenReaderEnabled.native.tsx";
-import BottomSheetModal from "../../../../_runtime/06955_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/06957_BottomSheetModal.js";
 import native from "../../../design/components/experimental/native.tsx";
 import isChannelFocused from "../../panels/isChannelFocused.native.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -43,7 +43,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const PlatformUtils = fn(1364);
 let closure_9 = PlatformUtils.isIOS();
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj = {
   container: { position: "absolute", top: 0, left: 0 },
   background: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, overflow: "hidden" },
@@ -55,8 +55,8 @@ let size = {
   borderTopLeftRadius: nativeDefault.radii.none,
   borderTopRightRadius: nativeDefault.radii.none,
   width: "100%",
-  height: fn(9260).ACTION_SHEET_DRAG_HANDLE_HEIGHT,
-  marginBottom: -fn(9260).ACTION_SHEET_DRAG_HANDLE_HEIGHT,
+  height: fn(9264).ACTION_SHEET_DRAG_HANDLE_HEIGHT,
+  marginBottom: -fn(9264).ACTION_SHEET_DRAG_HANDLE_HEIGHT,
 };
 obj.headerContainer = size;
 let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, overflow: "hidden" };

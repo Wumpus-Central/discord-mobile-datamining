@@ -198,6 +198,7 @@ export const ImpressionNames = {
   PREMIUM_MARKETING_COMPONENT: "impression_premium_marketing_component",
   PREMIUM_MARKETING_SURFACE: "impression_premium_marketing_surface",
   PREMIUM_MARKETING_TENURE_REWARD_CARD: "impression_premium_marketing_tenure_reward_card",
+  PREMIUM_ORBS_DELIVERED_MODAL: "impression_premium_orbs_delivered_modal",
   PUSH_NOTIFICATION_PREPROMPT: "impression_push_notification_preprompt",
   PUSH_NOTIFICATION_REACTIVATION_PROMPT: "impression_push_notification_reactivation_prompt",
   QUEST_HOME: "impression_quest_home",

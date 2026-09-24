@@ -35,8 +35,8 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
 require = fn;
 let closure_4 = ["code", "state"];
-fn(5861).addPostConnectionCallback;
-let closure_9 = fn(7749).handleMobileWebCheckoutStatus;
+fn(5863).addPostConnectionCallback;
+let closure_9 = fn(7751).handleMobileWebCheckoutStatus;
 const Constants = fn(1074);
 ({
   AnalyticEvents: closure_12,
@@ -46,14 +46,14 @@ const Constants = fn(1074);
   PlatformTypes: closure_16,
   ME: closure_17,
 } = Constants);
-const StaticChannelRoute = fn(2049).StaticChannelRoute;
-const StreamTypes = fn(4869).StreamTypes;
-const NativePermissionTypes = fn(5036).NativePermissionTypes;
-let closure_21 = fn(9397).OAUTH2_AUTHORIZE_MODAL_KEY;
-let closure_22 = fn(7866).FAMILY_CENTER_LINK_REQUEST_REGEX;
-let closure_23 = fn(4809).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(14209).SHARE_SCREEN_MODAL_KEY;
-const MobileUserSettings = fn(8319).MobileUserSettings;
+const StaticChannelRoute = fn(2051).StaticChannelRoute;
+const StreamTypes = fn(4871).StreamTypes;
+const NativePermissionTypes = fn(5038).NativePermissionTypes;
+let closure_21 = fn(9401).OAUTH2_AUTHORIZE_MODAL_KEY;
+let closure_22 = fn(7868).FAMILY_CENTER_LINK_REQUEST_REGEX;
+let closure_23 = fn(4811).MobileWebRedirectCheckoutDeepLinkActions;
+const SHARE_SCREEN_MODAL_KEY = fn(14218).SHARE_SCREEN_MODAL_KEY;
+const MobileUserSettings = fn(8323).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
 
@@ -200,7 +200,7 @@ export default function handleSupportedURL(payload) {
     }
     if (flag2) {
       payload(inviteCode[28]).startDiceRoll(channelId2, diceCount, diceSides);
-      const obj22 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: null };
+      const obj22 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: true };
       const obj23 = { safe, navigationReplace, waitForConnection, skipMessageFetch };
       obj22.navigationSettings = obj23;
       rootNavigationRef1(inviteCode[29])(obj22);
@@ -291,7 +291,7 @@ export default function handleSupportedURL(payload) {
             null != remoteAuthFingerprint
               ? () => {
                   ModalActionCreatorsDefault.pushLazy(
-                    asyncRequireImpl(14221, dependencyMap.paths),
+                    asyncRequireImpl(14230, dependencyMap.paths),
                     { remoteAuthFingerprint },
                     "REMOTE_AUTH_MODAL",
                   );
@@ -662,15 +662,15 @@ export default function handleSupportedURL(payload) {
                         if (null != tmp19) {
                           obj7.openid_params = tmp19;
                         }
-                        closure_1(5030).popAll();
-                        const obj5 = closure_1(5030);
+                        closure_1(5032).popAll();
+                        const obj5 = closure_1(5032);
                         tmp10 = tmp50;
                         const obj10 = { screen: constants.CONNECTIONS };
-                        dependencyMap(7710).openUserSettings(obj10);
-                        const obj6 = dependencyMap(7710);
+                        dependencyMap(7712).openUserSettings(obj10);
+                        const obj6 = dependencyMap(7712);
                         c7 = 1;
                         c8 = 1;
-                        const obj11 = { value: closure_1(5709).callback(payload.provider, obj7), done: false };
+                        const obj11 = { value: closure_1(5711).callback(payload.provider, obj7), done: false };
                         return obj11;
                       } else {
                         c8 = 3;
@@ -688,8 +688,8 @@ export default function handleSupportedURL(payload) {
                     }
                     closure_133_1 = closure_1(1366).toURLSafe(redirect);
                     if (null != closure_133_1) {
-                      closure_1(4518).openURL(closure_133_1.toString());
-                      const obj13 = closure_1(4518);
+                      closure_1(4520).openURL(closure_133_1.toString());
+                      const obj13 = closure_1(4520);
                     }
                     const obj12 = closure_1(1366);
                   }
@@ -882,8 +882,8 @@ export default function handleSupportedURL(payload) {
                       sourceQuestContent: QuestContent.QuestContent.QUEST_EMBED_MOBILE,
                       properties: null,
                     };
-                    const obj4 = { referrer_id: payload.referrerId };
-                    obj2.properties = obj4;
+                    const obj3 = { referrer_id: payload.referrerId };
+                    obj2.properties = obj3;
                     AnalyticsActions.trackQuestEvent(obj2);
                   }
                   let sort;
@@ -895,22 +895,22 @@ export default function handleSupportedURL(payload) {
                     filter = payload.filter;
                   }
                   const obj5 = { scrollToQuestId: payload.questId, sort: null, filter: null, fromContent: null };
-                  let tmp3 = null;
+                  let tmp9 = null;
                   if (null != sort) {
-                    tmp3 = null;
+                    tmp9 = null;
                     if ("" !== sort) {
-                      tmp3 = sort;
+                      tmp9 = sort;
                     }
                   }
-                  obj5.sort = tmp3;
-                  let tmp4 = null;
+                  obj5.sort = tmp9;
+                  let tmp10 = null;
                   if (null != filter) {
-                    tmp4 = null;
+                    tmp10 = null;
                     if ("" !== filter) {
-                      tmp4 = filter;
+                      tmp10 = filter;
                     }
                   }
-                  obj5.filter = tmp4;
+                  obj5.filter = tmp10;
                   obj5.fromContent = QuestContent.QuestContent.QUEST_SHARE_LINK;
                   QuestUtils.openQuestHome(obj5);
                 });

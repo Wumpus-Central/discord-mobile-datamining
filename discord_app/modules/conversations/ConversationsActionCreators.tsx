@@ -384,7 +384,7 @@ let closure_12 = async function _fetchConversationMessages() {
     }
   })();
 };
-const FETCH_LIMIT = fn(7923).FETCH_LIMIT;
+const FETCH_LIMIT = fn(7925).FETCH_LIMIT;
 const Endpoints = fn(1074).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/ConversationsActionCreators.tsx");
@@ -439,8 +439,15 @@ export const setSelectedConversation = function setSelectedConversation(channelI
     }
   }
 };
-export const clearConversationSelection = function clearConversationSelection(channelId, conversationId) {
-  DispatcherDefault.dispatch({ type: "CLEAR_CONVERSATION_SELECTION", channelId, conversationId });
+export const clearConversationSelection = function clearConversationSelection(channelId, handleScrollPositionResult1) {
+  DispatcherDefault.dispatch({
+    type: "CLEAR_CONVERSATION_SELECTION",
+    channelId,
+    conversationId: handleScrollPositionResult1,
+  });
+};
+export const requestConversationFocus = function requestConversationFocus() {
+  DispatcherDefault.dispatch({ type: "CONVERSATION_FOCUS_REQUEST" });
 };
 export const setConversationFeedbackRating = function setConversationFeedbackRating(channelId, conversationId, down) {
   DispatcherDefault.dispatch({ type: "SET_CONVERSATION_FEEDBACK_RATING", channelId, conversationId, rating: down });

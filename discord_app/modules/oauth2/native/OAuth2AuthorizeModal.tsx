@@ -10,7 +10,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let closure_7 = { overshootClamping: true, stiffness: 20, damping: 15, mass: 0.03 };
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   contentContainer: { flex: 1 },
@@ -44,7 +44,7 @@ let result = size.fileFinishedImporting("modules/oauth2/native/OAuth2AuthorizeMo
 
 export default function OAuth2AuthorizeModal(arg0) {
   const tmp = closure_8();
-  const tmp4 = sharedValue(9404)(arg0);
+  const tmp4 = sharedValue(9408)(arg0);
   _require = tmp4;
   sharedValue = require("ReanimatedRexport").useSharedValue(0);
   let obj = require("ReanimatedRexport");
@@ -95,10 +95,10 @@ export default function OAuth2AuthorizeModal(arg0) {
   };
   if (null != tmp4.backStep) {
     const obj7 = { color: tmp2(576).colors.INTERACTIVE_TEXT_DEFAULT };
-    let tmp11Result = closure_5(tmp5(9633).ArrowSmallLeftIcon, obj7);
+    let tmp11Result = closure_5(tmp5(9637).ArrowSmallLeftIcon, obj7);
   } else {
     const obj8 = { color: tmp2(576).colors.INTERACTIVE_TEXT_DEFAULT };
-    tmp11Result = closure_5(tmp5(5983).XSmallIcon, obj8);
+    tmp11Result = closure_5(tmp5(5985).XSmallIcon, obj8);
   }
   obj6.children = tmp11Result;
   const items2 = [closure_5(require("Pressables").PressableOpacity, obj6), ,];
@@ -111,7 +111,7 @@ export default function OAuth2AuthorizeModal(arg0) {
   const obj11 = { style: null };
   const items3 = [tmp.titleContainerBorder, animatedStyle];
   obj11.style = items3;
-  items2[2] = closure_5(sharedValue(4559).View, obj11);
+  items2[2] = closure_5(sharedValue(4561).View, obj11);
   obj4.children = items2;
   const items4 = [closure_6(View, obj4)];
   const obj12 = { bottom: true, style: tmp.contentContainer, children: null };
@@ -120,7 +120,7 @@ export default function OAuth2AuthorizeModal(arg0) {
   const merged = Object.assign(tmp4);
   obj13.onScroll = callback;
   obj13.centerContent = true;
-  obj12.children = closure_5(sharedValue(9635), obj13);
+  obj12.children = closure_5(sharedValue(9639), obj13);
   items4[1] = closure_5(require("common/SafeAreaView").SafeAreaPaddingView, obj12);
   obj3.children = items4;
   return closure_6(View, obj3);

@@ -11,7 +11,7 @@ import Pressables from "../../../../../design/void/Pressables/native/Pressables.
 import ManaTypeConsolidationExperiment from "../../../../design/ManaTypeConsolidationExperiment.tsx";
 import UsernameWithEffectsDefault from "../../../../display_name_styles/native/UsernameWithEffects.tsx";
 import GroupDMAvatarDefault from "../../../../group_dm/native/GroupDMAvatar.tsx";
-import _modDef13669 from "../../../../../../_runtime/metro/13669__.js";
+import _modDef13678 from "../../../../../../_runtime/metro/13678__.js";
 import GuildActionSheetMemberCountDefault from "../../../../guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -100,7 +100,7 @@ function ChannelTitle(guildId) {
   items[1] = tmp8;
   let tmp5Result = !disableArrow;
   if (!disableArrow) {
-    const obj6 = { source: _modDef13669, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+    const obj6 = { source: _modDef13678, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
     tmp5Result = tmp5(native.Icon, obj6);
   }
   items[2] = tmp5Result;
@@ -127,11 +127,11 @@ function UserAvatar(user) {
     avatarDecoration: user.avatarDecoration,
     guildId: "Boolean",
     size: native.AvatarSizes.REFRESH_MEDIUM_32,
-    status: null,
+    status: false,
     isMobileOnline: null,
-    isVROnline: null,
+    isVROnline: true,
     style: null,
-    autoStatusCutout: null,
+    autoStatusCutout: false,
   };
   let tmp3 = null;
   if (!user.isSystemUser()) {
@@ -216,7 +216,7 @@ function EmptyIcon() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let closure_11 = createStyles.createStyles(() => {
   const obj = {
     wrapper: { flex: 1, alignItems: "center", flexShrink: 1, flexDirection: "row", paddingEnd: 8 },

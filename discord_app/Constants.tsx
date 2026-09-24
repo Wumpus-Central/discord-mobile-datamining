@@ -1124,6 +1124,9 @@ const frozen2 = Object.freeze({
     return "/storefront/products/sku/" + skuId;
   },
   STOREFRONT_PROMOTIONS: "/storefront/promotions",
+  STOREFRONT_PROMOTION_CLAIM(promotionId) {
+    return "/storefront/promotions/" + promotionId + "/claim";
+  },
   STOREFRONT_PRICES: "/storefront/pricing",
   STORE_DIRECTORY_LAYOUT(arg0) {
     return "/store/directory-layouts/" + arg0;
@@ -1911,6 +1914,7 @@ const frozen2 = Object.freeze({
   QUESTS_DISMISS_CONTENT(questId, content) {
     return "/quests/" + questId + "/dismissible-content/" + content + "/dismiss";
   },
+  DISMISSIBLE_CONTENT_ARBITRATE: "/dismissible-content/arbitrate",
   QUESTS_PREVIEW_STATUS(arg0) {
     return "/quests/" + arg0 + "/preview/status";
   },
@@ -3154,6 +3158,9 @@ const obj2 = {
     return "/storefront/products/sku/" + skuId;
   },
   STOREFRONT_PROMOTIONS: "/storefront/promotions",
+  STOREFRONT_PROMOTION_CLAIM(promotionId) {
+    return "/storefront/promotions/" + promotionId + "/claim";
+  },
   STOREFRONT_PRICES: "/storefront/pricing",
   STORE_DIRECTORY_LAYOUT(arg0) {
     return "/store/directory-layouts/" + arg0;
@@ -3941,6 +3948,7 @@ const obj2 = {
   QUESTS_DISMISS_CONTENT(questId, content) {
     return "/quests/" + questId + "/dismissible-content/" + content + "/dismiss";
   },
+  DISMISSIBLE_CONTENT_ARBITRATE: "/dismissible-content/arbitrate",
   QUESTS_PREVIEW_STATUS(arg0) {
     return "/quests/" + arg0 + "/preview/status";
   },
@@ -7947,6 +7955,8 @@ export const AnalyticEvents = {
   PREMIUM_MARKETING_CAMPAIGN_CLAIM_MODAL_OPEN_ATTEMPTED: "premium_marketing_campaign_claim_modal_open_attempted",
   PREMIUM_MARKETING_CAMPAIGN_ENTITLEMENT_CREATED_INGESTED: "premium_marketing_campaign_entitlement_created_ingested",
   PREMIUM_MARKETING_CAMPAIGN_REDEMPTION_CARD_CLICKED: "premium_marketing_campaign_redemption_card_clicked",
+  IMPRESSION_PREMIUM_ORBS_DELIVERED_MODAL: "impression_premium_orbs_delivered_modal",
+  PREMIUM_ACTIVATED_SHEET_DISMISSED: "premium_activated_sheet_dismissed",
   STORE_DIRECTORY_VIEWED: "store_directory_viewed",
   STORE_DIRECTORY_BROWSE_VIEWED: "store_directory_browse_viewed",
   STORE_DIRECTORY_FILTER_UPDATED: "store_directory_filter_updated",

@@ -13,7 +13,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 const ChannelTypes = fn(1074).ChannelTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj = { dm: null };
 let size = {
   width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,
@@ -127,7 +127,7 @@ export default noop.memo(function GuildsBarDirectMessage(channelId) {
     config: memo1,
     cutouts,
     externalChildren: badge,
-    expandedChildren: null,
+    expandedChildren: true,
     children: null,
   };
   let tmp11Result = null;
@@ -172,7 +172,7 @@ export default noop.memo(function GuildsBarDirectMessage(channelId) {
     config: memo1,
     cutouts,
     externalChildren: badge,
-    expandedChildren: null,
+    expandedChildren: true,
     children: null,
   });
 });

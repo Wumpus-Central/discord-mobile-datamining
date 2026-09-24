@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
-import _modDef16743 from "../../../../_runtime/metro/16743__.js";
+import _modDef16767 from "../../../../_runtime/metro/16767__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildAvailabilityStore from "../../../stores/GuildAvailabilityStore.tsx";
 
@@ -10,7 +10,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: c3, Pressable: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 const obj = {
   unavailableGuilds: {
     marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING,
@@ -52,8 +52,8 @@ export default noop.memo(function GuildsBarItemUnavailableGuilds() {
       AlertActionCreatorsDefault.show(obj2);
     };
     obj2.style = tmp.unavailableGuilds;
-    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef16743 };
-    obj2.children = <closure_3 style={tmp.unavailableGuildsIcon} source={_modDef16743} />;
+    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef16767 };
+    obj2.children = <closure_3 style={tmp.unavailableGuildsIcon} source={_modDef16767} />;
     tmp5 = (
       <closure_4 accessibilityRole="button" accessibilityLabel={null} onPress={null} style={null}>
         {null}

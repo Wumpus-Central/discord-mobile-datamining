@@ -3,7 +3,7 @@ import LoggerDefault from "../debug/Logger.tsx";
 import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
-import _modDef4414 from "../../../_runtime/metro/04414__.js";
+import _modDef4416 from "../../../_runtime/metro/04416__.js";
 import DateUtils from "../../utils/DateUtils.tsx";
 import UploadActionCreatorsDefault from "../../actions/native/UploadActionCreators.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -40,8 +40,8 @@ function getAllCachedMessages() {
 }
 function messageTimestampIsInInterval(arg0, arg1) {
   if (null != arg0) {
-    const tmp4 = _modDef4414();
-    const tmp5 = _modDef4414(arg0);
+    const tmp4 = _modDef4416();
+    const tmp5 = _modDef4416(arg0);
     return DateUtils.isWithinInterval(tmp4, tmp5, arg1);
   } else {
     return false;
@@ -50,16 +50,16 @@ function messageTimestampIsInInterval(arg0, arg1) {
 function createFailedMessage(channel_id) {
   channel_id = channel_id.channel_id;
   ({ content, tts, state } = channel_id);
-  const tmp3 = file(8079)({ channelId: channel_id, content, tts, state: MessageStates.SEND_FAILED });
+  const tmp3 = file(8081)({ channelId: channel_id, content, tts, state: MessageStates.SEND_FAILED });
   const id = tmp3;
   ({ timestamp: tmp3.timestamp, file } = channel_id);
-  file(7784).receiveMessage(channel_id, tmp3, true, { isHydratingExpiredPendingMessage: state === MessageStates.SENDING });
+  file(7786).receiveMessage(channel_id, tmp3, true, { isHydratingExpiredPendingMessage: state === MessageStates.SENDING });
   if (null != file) {
     file(573).wait(() => UploadActionCreatorsDefault.restoreFailedUpload(id.id, file));
     const tmpResult = file(573);
   }
   const obj = { channelId: channel_id, content, tts, state: MessageStates.SEND_FAILED };
-  const obj2 = file(7784);
+  const obj2 = file(7786);
   const obj3 = { isHydratingExpiredPendingMessage: state === MessageStates.SENDING };
 }
 function resumeSendingMessage() {
@@ -241,7 +241,7 @@ let closure_25 = async function _rehydrateFailedMessages(arg0) {
   }
 };
 const MessageStates = fn(1074).MessageStates;
-const MutexUtils = fn(14917);
+const MutexUtils = fn(14926);
 let closure_10 = MutexUtils.createLock();
 let closure_11 = new LoggerDefault("LocalMessageCacheManager");
 const LocalMessageCacheManagerMessageCacheKey = "LocalMessageCacheManagerMessageCacheKey";
@@ -962,7 +962,7 @@ prototype["_initialize"] = function _initialize() {
                 c6 = 1;
                 closure_131_1 = tmp10;
                 channel_id = closure_131_1.channel_id;
-                let obj9 = values(5575);
+                let obj9 = values(5577);
                 value = obj9.get(channel_id);
                 dependencyMap = value;
                 if (value == null) {

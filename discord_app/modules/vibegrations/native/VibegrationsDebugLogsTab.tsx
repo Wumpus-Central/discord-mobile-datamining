@@ -1,6 +1,6 @@
 // discord_app/modules/vibegrations/native/VibegrationsDebugLogsTab.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3712 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3714 from "../intl/VibegrationsUntranslated.messages.js";
 import VibegrationsDebugJson from "../lib/VibegrationsDebugJson.tsx";
 import VibegrationsDebugFormat from "../lib/VibegrationsDebugFormat.tsx";
 import VibegrationsDebugLabels from "../lib/VibegrationsDebugLabels.tsx";
@@ -15,7 +15,7 @@ function keyOf(key) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj = {
   list: { paddingHorizontal: nativeDefault.space.PX_16 },
   header: null,
@@ -45,16 +45,16 @@ let closure_11 = noop.memo((entry) => {
     str = "text-feedback-critical";
   }
   if (expanded) {
-    let ChevronSmallRightIcon = tmp3(11500).ChevronSmallDownIcon;
+    let ChevronSmallRightIcon = tmp3(11506).ChevronSmallDownIcon;
     let tmp6 = tmp3;
   } else {
-    ChevronSmallRightIcon = tmp3(7540).ChevronSmallRightIcon;
+    ChevronSmallRightIcon = tmp3(7542).ChevronSmallRightIcon;
     tmp6 = tmp3;
   }
   const obj = { style: tmp.row, children: null };
   const obj2 = { style: tmp.rowHead, children: null };
-  const obj3 = { variant: "text-xs/normal", color: "text-subtle", children: tmp6(17137).formatClockTime(entry.ts) };
-  const items1 = [closure_7(tmp6(4823).Text, obj3), , ,];
+  const obj3 = { variant: "text-xs/normal", color: "text-subtle", children: tmp6(17163).formatClockTime(entry.ts) };
+  const items1 = [closure_7(tmp6(4825).Text, obj3), , ,];
   const level = entry.level;
   let str2 = "text-feedback-critical";
   if ("error" !== level) {
@@ -64,7 +64,7 @@ let closure_11 = noop.memo((entry) => {
     }
     str2 = str3;
   }
-  items1[1] = closure_7(tmp6(4823).Text, {
+  items1[1] = closure_7(tmp6(4825).Text, {
     variant: "text-xxs/semibold",
     color: str2,
     style: tmp.badge,
@@ -75,7 +75,7 @@ let closure_11 = noop.memo((entry) => {
     tmp9Result = null;
     if (null != entry.source) {
       const obj5 = { variant: "text-xxs/semibold", color: "text-subtle", style: tmp.badge, children: entry.source };
-      tmp9Result = closure_7(tmp6(4823).Text, obj5);
+      tmp9Result = closure_7(tmp6(4825).Text, obj5);
     }
   }
   items1[2] = tmp9Result;
@@ -83,8 +83,8 @@ let closure_11 = noop.memo((entry) => {
   if (null != entry.kind) {
     const obj6 = { variant: "text-xxs/semibold", color: "text-feedback-critical", style: tmp.badge, children: null };
     const intl = tmp6(1115).intl;
-    obj6.children = intl.string(_modDef3712.GO6JcR);
-    tmp9Result4 = closure_7(tmp6(4823).Text, obj6);
+    obj6.children = intl.string(_modDef3714.GO6JcR);
+    tmp9Result4 = closure_7(tmp6(4825).Text, obj6);
   }
   items1[3] = tmp9Result4;
   obj2.children = items1;
@@ -93,7 +93,7 @@ let closure_11 = noop.memo((entry) => {
     let tmp9Result5 = null;
     if ("" !== memo.prefix) {
       const obj7 = { variant: "text-xs/normal", color: str, selectable: true, children: memo.prefix };
-      tmp9Result5 = closure_7(tmp6(4823).Text, obj7);
+      tmp9Result5 = closure_7(tmp6(4825).Text, obj7);
     }
     const items3 = [tmp9Result5, ,];
     const obj8 = {
@@ -107,7 +107,7 @@ let closure_11 = noop.memo((entry) => {
     const obj9 = { expanded };
     obj8.accessibilityState = obj9;
     const intl2 = tmp6(1115).intl;
-    obj8.accessibilityLabel = intl2.string(_modDef3712.ehmgbH);
+    obj8.accessibilityLabel = intl2.string(_modDef3714.ehmgbH);
     obj8.onPress = function onPress() {
       return dependencyMap(importDefault);
     };
@@ -116,23 +116,23 @@ let closure_11 = noop.memo((entry) => {
     const items5 = [memo.marker, " "];
     const intl3 = tmp6(1115).intl;
     if ("[\u2026]" === memo.marker) {
-      let wkbYxG = _modDef3712.lXkB6Z;
+      let wkbYxG = _modDef3714.lXkB6Z;
     } else {
-      wkbYxG = _modDef3712.wkbYxG;
+      wkbYxG = _modDef3714.wkbYxG;
     }
     const obj11 = { variant: "text-xs/medium", color: "text-muted", children: null };
     const obj12 = { count: memo.size };
     items5[2] = intl3.formatToPlainString(wkbYxG, obj12);
     obj11.children = items5;
-    items4[1] = closure_8(tmp6(4823).Text, obj11);
+    items4[1] = closure_8(tmp6(4825).Text, obj11);
     obj8.children = items4;
-    items3[1] = closure_8(tmp6(5425).PressableOpacity, obj8);
+    items3[1] = closure_8(tmp6(5427).PressableOpacity, obj8);
     let tmp9Result6 = null;
     if (expanded) {
       const obj13 = { variant: "primary", children: null };
       const obj14 = { variant: "text-xs/normal", color: str, selectable: true, children: memo.pretty };
-      obj13.children = closure_7(tmp6(4823).Text, obj14);
-      tmp9Result6 = closure_7(tmp6(5910).Card, obj13);
+      obj13.children = closure_7(tmp6(4825).Text, obj14);
+      tmp9Result6 = closure_7(tmp6(5912).Card, obj13);
     }
     const obj15 = { children: null };
     items3[2] = tmp9Result6;
@@ -140,7 +140,7 @@ let closure_11 = noop.memo((entry) => {
     let tmp9Result7 = closure_8(closure_9, obj15);
   } else {
     const obj16 = { variant: "text-xs/normal", color: str, selectable: true, children: entry.message };
-    tmp9Result7 = closure_7(tmp6(4823).Text, obj16);
+    tmp9Result7 = closure_7(tmp6(4825).Text, obj16);
   }
   items2[1] = tmp9Result7;
   obj.children = items2;

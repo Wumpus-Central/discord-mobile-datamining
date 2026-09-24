@@ -3,7 +3,7 @@ import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import util from "../../intl/index.native.tsx";
 import utils_PlatformUtils from "../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import Server from "../../flow/Server.tsx";
-import _modDef3002 from "Checkpoint.messages.js";
+import _modDef3004 from "Checkpoint.messages.js";
 import UnicodeEmojisDefault from "../emojis/UnicodeEmojis.tsx";
 import CheckpointConstants from "CheckpointConstants.tsx";
 import CheckpointUtils from "CheckpointUtils.tsx";
@@ -134,9 +134,19 @@ export const transformCheckpoint2026CardComponent = function transformCheckpoint
   }
   return tmp;
 };
-export function transformCheckpoint2026CardToRowGeneratedComponent(checkpointData) {
-  return checkpointData;
-}
+export const transformCheckpoint2026CardToRowGeneratedComponent =
+  function transformCheckpoint2026CardToRowGeneratedComponent(checkpointData) {
+    const obj = {};
+    const merged = Object.assign(checkpointData);
+    if (null != checkpointData.character) {
+      const character = checkpointData.character;
+      let items = [];
+    } else {
+      items = [];
+    }
+    obj.characterLayerUrls = items;
+    return obj;
+  };
 export const getCheckpointDataFromMessage = function getCheckpointDataFromMessage(contentMessage) {
   const first = contentMessage.components[0];
   let checkpointData = null;
@@ -151,7 +161,7 @@ export const getCheckpointDataFromMessage = function getCheckpointDataFromMessag
 export const getCheckpointLabel = function getCheckpointLabel(checkpointDataFromMessage) {
   if (CheckpointVersions.V2025 === checkpointDataFromMessage.version) {
     const intl = util.intl;
-    return intl.string(_modDef3002.goiR2u);
+    return intl.string(_modDef3004.goiR2u);
   } else {
     const V2026 = tmp.V2026;
     return null;

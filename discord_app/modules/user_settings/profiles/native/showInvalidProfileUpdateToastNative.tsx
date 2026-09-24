@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/profiles/native/showInvalidProfileUpdateToastNative.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
-import _modDef7323 from "../../../../../_runtime/metro/07323__.js";
+import _modDef7325 from "../../../../../_runtime/metro/07325__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting(
@@ -13,7 +13,7 @@ export const showGenericProfileUpdateFailureToast = function showGenericProfileU
   obj.open({
     key: "USER_SETTINGS_UPDATE_FAILURE",
     content: avatar,
-    icon: _modDef7323,
+    icon: _modDef7325,
     iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL,
     recolorLegacyIcon: true,
   });
@@ -23,7 +23,7 @@ export const showGenericGuildProfileUpdateFailureToast = function showGenericGui
   obj.open({
     key: "USER_SETTINGS_UPDATE_FAILURE",
     content: avatar,
-    icon: _modDef7323,
+    icon: _modDef7325,
     iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL,
     recolorLegacyIcon: true,
   });

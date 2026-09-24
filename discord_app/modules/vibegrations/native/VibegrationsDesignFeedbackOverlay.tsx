@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 24;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = {
   surface: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 },
   highlight: {
@@ -90,8 +90,8 @@ export default function VibegrationsDesignFeedbackOverlay(projectId) {
     return () => {
       closure_1_9.current = false;
       if (ref.current) {
-        size(4794).hideActionSheet(projectId(17044).VIBEGRATIONS_DESIGN_REMARK_SHEET_KEY);
-        const obj = size(4794);
+        size(4796).hideActionSheet(projectId(17072).VIBEGRATIONS_DESIGN_REMARK_SHEET_KEY);
+        const obj = size(4796);
       }
     };
   }, []);
@@ -135,7 +135,7 @@ export default function VibegrationsDesignFeedbackOverlay(projectId) {
         point.y = Math.round(nativeEvent.nativeEvent.locationY);
         closure_4(point);
         closure_8(false);
-        const result = projectId(9388).inspectVibegrationsPreviewPoint(point, point);
+        const result = projectId(9392).inspectVibegrationsPreviewPoint(point, point);
         result.then((status) => {
           if (ref.current) {
             closure_4(null);
@@ -164,12 +164,12 @@ export default function VibegrationsDesignFeedbackOverlay(projectId) {
             closure_8(true);
           }
         });
-        const obj2 = projectId(9388);
+        const obj2 = projectId(9392);
       }
     }
   }, items3);
   const intl = projectId(1115).intl;
-  const tmp18 = size(3712);
+  const tmp18 = size(3714);
   if (first2) {
     let sSnnY4 = tmp18.sSnnY4;
     let tmp20 = tmp17;
@@ -194,7 +194,7 @@ export default function VibegrationsDesignFeedbackOverlay(projectId) {
     children: null,
   };
   const intl2 = tmp15(1115).intl;
-  obj.accessibilityLabel = intl2.string(tmp20(3712)["84RzOi"]);
+  obj.accessibilityLabel = intl2.string(tmp20(3714)["84RzOi"]);
   let obj2 = { style: tmp.surface, pointerEvents: "none", children: null };
   let tmp23Result = null;
   if (null != first1) {
@@ -216,7 +216,7 @@ export default function VibegrationsDesignFeedbackOverlay(projectId) {
     items5[1] = null;
     const obj5 = { style: tmp.hint, accessibilityLiveRegion: "polite", children: null };
     const obj6 = { variant: "text-sm/medium", color: "text-default", style: tmp.hintText, children: stringResult };
-    obj5.children = tmp23(tmp15(4823).Text, obj6);
+    obj5.children = tmp23(tmp15(4825).Text, obj6);
     items5[2] = tmp23(tmp26, obj5);
     obj2.children = items5;
     obj.children = closure_9(tmp26, obj2);

@@ -45,8 +45,8 @@ const obj3 = {
 };
 obj.icon = {
   avatarSize: fn(1177).AvatarSizes.NORMAL,
-  guildIconSize: fn(5887).GuildIconSizes.NORMAL,
-  guildBadgeIconSize: fn(5887).GuildIconSizes.XXSMALL,
+  guildIconSize: fn(5889).GuildIconSizes.NORMAL,
+  guildBadgeIconSize: fn(5889).GuildIconSizes.XXSMALL,
   wrapper: { size: 40 },
   channelIcon: { size: 40 },
   margin: { marginRight: 8 },
@@ -61,14 +61,14 @@ const obj5 = {
 };
 const obj4 = {
   avatarSize: fn(1177).AvatarSizes.NORMAL,
-  guildIconSize: fn(5887).GuildIconSizes.NORMAL,
-  guildBadgeIconSize: fn(5887).GuildIconSizes.XXSMALL,
+  guildIconSize: fn(5889).GuildIconSizes.NORMAL,
+  guildBadgeIconSize: fn(5889).GuildIconSizes.XXSMALL,
   wrapper: { size: 40 },
   channelIcon: { size: 40 },
   margin: { marginRight: 8 },
   emoji: { size: 24, lineHeight: 32 },
 };
-obj5.icon = { size: fn(1177).IconSizes.REFRESH_SMALL_16, gameSize: fn(7503).GameIconSizes.SMALL };
+obj5.icon = { size: fn(1177).IconSizes.REFRESH_SMALL_16, gameSize: fn(7505).GameIconSizes.SMALL };
 obj.joinVoiceButton = obj5;
 const obj7 = { left: 48, startAndEndHeight: 16, transform: null, topOffset: -6 };
 const items = [{ translateY: 0 }];
@@ -81,14 +81,14 @@ obj.typing = {
   typingIndicator: { position: { top: 25, left: 11 } },
 };
 obj.separator = { margin: { marginVertical: 20 } };
-const obj6 = { size: fn(1177).IconSizes.REFRESH_SMALL_16, gameSize: fn(7503).GameIconSizes.SMALL };
+const obj6 = { size: fn(1177).IconSizes.REFRESH_SMALL_16, gameSize: fn(7505).GameIconSizes.SMALL };
 const obj8 = {
   position: { top: 12, left: 12 },
   positionThread: { top: 3, left: -17 },
   typingIndicator: { position: { top: 25, left: 11 } },
 };
 const obj9 = { container: { paddingPanels: { paddingVertical: 8 } }, icon: null };
-const importDefaultResultResult = deepmerge(fn(10465).CHANNEL_LIST_STYLES_COMPACT, obj);
+const importDefaultResultResult = deepmerge(fn(10470).CHANNEL_LIST_STYLES_COMPACT, obj);
 obj9.icon = { avatarSize: fn(1177).AvatarSizes.REFRESH_MEDIUM_32 };
 const obj10 = { avatarSize: fn(1177).AvatarSizes.REFRESH_MEDIUM_32 };
 const size = fn(2);
@@ -97,4 +97,4 @@ const result = size.fileFinishedImporting(
 );
 
 export const CHANNEL_LIST_STYLES_COZY_DRAWER = importDefaultResultResult;
-export const CHANNEL_LIST_STYLES_COZY_DRAWER_SMOL = deepmerge(fn(10465).CHANNEL_LIST_STYLES_COMPACT, obj9);
+export const CHANNEL_LIST_STYLES_COZY_DRAWER_SMOL = deepmerge(fn(10470).CHANNEL_LIST_STYLES_COMPACT, obj9);

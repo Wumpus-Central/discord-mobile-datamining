@@ -7,7 +7,7 @@ import CollectiblesPurchaseStore from "../CollectiblesPurchaseStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const isProfileEffectRecord = fn(7876).isProfileEffectRecord;
+const isProfileEffectRecord = fn(7878).isProfileEffectRecord;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/profile_effects/useProfileEffect.tsx");
 

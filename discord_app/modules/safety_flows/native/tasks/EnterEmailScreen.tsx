@@ -1,5 +1,5 @@
 // discord_app/modules/safety_flows/native/tasks/EnterEmailScreen.tsx
-import _modDef2778 from "../../SafetyFlows.messages.js";
+import _modDef2780 from "../../SafetyFlows.messages.js";
 import types from "../../types.tsx";
 import SafetyFlowTaskScreenDefault from "../SafetyFlowTaskScreen.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -19,9 +19,9 @@ export default function EnterEmailScreen() {
   const obj2 = { title: null, action: null, onAction: null, children: null };
   const tmp = _slicedToArray(noop.useState(""), 2);
   const intl = require("util").intl;
-  obj2.title = intl.string(_modDef2778.bFbsV6);
+  obj2.title = intl.string(_modDef2780.bFbsV6);
   const intl2 = require("util").intl;
-  obj2.action = intl2.string(_modDef2778.RRBNpv);
+  obj2.action = intl2.string(_modDef2780.RRBNpv);
   obj2.onAction = function onAction() {
     closure_0.push(types.SafetyFlowScreens.VERIFY_EMAIL);
   };

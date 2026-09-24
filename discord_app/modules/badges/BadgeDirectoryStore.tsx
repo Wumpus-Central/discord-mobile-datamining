@@ -261,6 +261,49 @@ const badgeDirectoryStore = new BadgeDirectoryStore(DispatcherDefault, {
     const result = badges.set(badge.badge_id, badge);
     const result1 = closure_5.set(userId, peekResult);
   },
+  BADGE_SUMMARY_FETCH_SUCCESS: function handleBadgeSummaryFetchSuccess(arg0) {
+    ({ userId, badge } = arg0);
+    let peekResult = closure_5.peek(userId);
+    if (peekResult == null) {
+      const obj2 = {
+        badges: null,
+        catalogFetched: false,
+        fetchError: false,
+        fetchedAt: null,
+        driftBackoff: null,
+        driftFetchGateUntil: null,
+      };
+      const _Map = Map;
+      const map = new Map();
+      obj2.badges = map;
+      peekResult = obj2;
+    }
+    const badges = peekResult.badges;
+    value = badges.get(badge.badge_id);
+    const badges2 = peekResult.badges;
+    const obj3 = {};
+    const merged = Object.assign(badge);
+    let progress = badge.progress;
+    if (progress == null) {
+      let progress1;
+      if (value != null) {
+        progress1 = value.progress;
+      }
+      progress = progress1;
+    }
+    obj3.progress = progress;
+    let info_label = badge.info_label;
+    if (info_label == null) {
+      let info_label1;
+      if (value != null) {
+        info_label1 = value.info_label;
+      }
+      info_label = info_label1;
+    }
+    obj3.info_label = info_label;
+    const result = badges2.set(badge.badge_id, obj3);
+    const result1 = closure_5.set(userId, peekResult);
+  },
   USER_PROFILE_FETCH_SUCCESS: function handleUserProfileFetchSuccess(userProfile) {
     userProfile = userProfile.userProfile;
     const id = userProfile.user.id;

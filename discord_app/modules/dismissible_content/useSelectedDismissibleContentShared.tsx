@@ -5,7 +5,7 @@ import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore.t
 const require = globalThis.__r;
 
 const require = fn;
-const ContentDismissActionType = fn(2039).ContentDismissActionType;
+const ContentDismissActionType = fn(2041).ContentDismissActionType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/dismissible_content/useSelectedDismissibleContentShared.tsx");
 

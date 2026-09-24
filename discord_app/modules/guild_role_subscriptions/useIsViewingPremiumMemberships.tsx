@@ -1,7 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/useIsViewingPremiumMemberships.tsx
 import Constants from "../../Constants.tsx";
 import ChannelConstants from "../channel/ChannelConstants.tsx";
-import _mod4659 from "../../../_runtime/metro/04659__.js";
+import _mod4661 from "../../../_runtime/metro/04661__.js";
 import RouteUtils from "../routing/RouteUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -11,5 +11,5 @@ const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useI
 
 export default function useIsViewingPremiumMemberships() {
   const RouteParam = RouteUtils.RouteParam;
-  return null != _mod4659.useRouteMatch(Routes.CHANNEL(RouteParam.guildId(), StaticChannelRoute.ROLE_SUBSCRIPTIONS));
+  return null != _mod4661.useRouteMatch(Routes.CHANNEL(RouteParam.guildId(), StaticChannelRoute.ROLE_SUBSCRIPTIONS));
 }

@@ -34,8 +34,8 @@ export default function usePreviewDisabledGuild(arg0) {
   if (stateFromStores == null) {
     let result = null;
     if (null != stateFromStores1) {
-      result = tmp(2056).fromVerificationGateGuild(stateFromStores1);
-      const tmpResult = tmp(2056);
+      result = tmp(2058).fromVerificationGateGuild(stateFromStores1);
+      const tmpResult = tmp(2058);
     }
     stateFromStores = result;
   }

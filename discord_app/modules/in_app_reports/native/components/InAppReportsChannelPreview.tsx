@@ -8,7 +8,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = {
   container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 },
   borderColor: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY },
@@ -37,20 +37,20 @@ export default function ChannelPreview(stageInstance) {
   if (null != stateFromStores) {
     if (null != stageInstance) {
       const obj2 = { style: tmp.container, children: null };
-      const tmp2Result = tmp2(4676);
+      const tmp2Result = tmp2(4678);
       const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
       const intl = tmp2(1115).intl;
       obj3.children = intl.string(tmp2(1115).t.InbJ8x);
-      const items1 = [closure_5(tmp2(4823).Text, obj3)];
+      const items1 = [closure_5(tmp2(4825).Text, obj3)];
       const obj4 = { style: null, children: null };
       const items2 = [tmp.itemContainer];
-      const obj5 = { borderColor: tmp2(4676).hexWithOpacity(tmp.borderColor.color, 0.08) };
+      const obj5 = { borderColor: tmp2(4678).hexWithOpacity(tmp.borderColor.color, 0.08) };
       items2[1] = obj5;
       obj4.style = items2;
       const obj6 = { style: tmp.guildInfo, children: null };
       const obj7 = { guild: stateFromStores, size: null, selected: false };
-      const hexWithOpacityResult = tmp2(4676).hexWithOpacity(tmp.borderColor.color, 0.08);
-      obj7.size = tmp2(5887).GuildIconSizes.XXSMALL;
+      const hexWithOpacityResult = tmp2(4678).hexWithOpacity(tmp.borderColor.color, 0.08);
+      obj7.size = tmp2(5889).GuildIconSizes.XXSMALL;
       const items3 = [closure_5(GuildIconDefault, obj7)];
       const obj8 = {
         style: tmp.guildName,
@@ -58,7 +58,7 @@ export default function ChannelPreview(stageInstance) {
         color: "text-default",
         children: stateFromStores.name,
       };
-      items3[1] = closure_5(tmp2(4823).Text, obj8);
+      items3[1] = closure_5(tmp2(4825).Text, obj8);
       obj6.children = items3;
       const items4 = [closure_6(View, obj6)];
       const obj9 = {
@@ -67,7 +67,7 @@ export default function ChannelPreview(stageInstance) {
         color: "mobile-text-heading-primary",
         children: stageInstance.topic,
       };
-      items4[1] = closure_5(tmp2(4823).Text, obj9);
+      items4[1] = closure_5(tmp2(4825).Text, obj9);
       obj4.children = items4;
       items1[1] = closure_6(View, obj4);
       obj2.children = items1;

@@ -9,7 +9,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj = {
   container: { flex: 1, paddingTop: nativeDefault.space.PX_12, alignItems: "stretch" },
   scrollView: null,

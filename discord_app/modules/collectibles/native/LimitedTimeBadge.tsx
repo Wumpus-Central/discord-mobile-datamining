@@ -12,7 +12,7 @@ import ThemeStore from "../../user_settings/ThemeStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = {
   root: { borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 2 },
   backgroundDarkMode: null,

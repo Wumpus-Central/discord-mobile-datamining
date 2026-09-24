@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/FamilyCenterSetting.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2484 from "../../../parent_tools/FamilyCenter.messages.js";
+import _modDef2486 from "../../../parent_tools/FamilyCenter.messages.js";
 import WarningIcon from "../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
 import useIsParentalConsentBannerActive from "../../../parent_tools/useIsParentalConsentBannerActive.tsx";
 import useParentalConsentWarning from "../../../parent_tools/useParentalConsentWarning.tsx";
@@ -9,14 +9,14 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11805);
+const SettingBuilders = fn(11811);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2484.RZqaJn);
+    return intl.string(_modDef2486.RZqaJn);
   },
   parent: null,
-  IconComponent: fn(5393).GroupIcon,
+  IconComponent: fn(5395).GroupIcon,
   useTrailing: function useFamilyCenterTrailing() {
     const isParentalConsentBannerActive = useIsParentalConsentBannerActive.useIsParentalConsentBannerActive();
     const parentalConsentWarning = useParentalConsentWarning.useParentalConsentWarning();
@@ -40,7 +40,7 @@ const route = SettingBuilders.createRoute({
             accessibilityLabel: null,
           };
           const intl = util.intl;
-          obj3.accessibilityLabel = intl.string(_modDef2484.wucWfE);
+          obj3.accessibilityLabel = intl.string(_modDef2486.wucWfE);
           tmp6 = jsx(WarningIcon.WarningIcon, {
             size: "sm",
             color: nativeDefault.colors.ICON_FEEDBACK_WARNING,

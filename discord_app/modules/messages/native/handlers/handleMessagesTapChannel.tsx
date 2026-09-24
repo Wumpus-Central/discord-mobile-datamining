@@ -394,13 +394,13 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
     }
   }
 };
-const isGuildVocalChannelType = fn(2046).isGuildVocalChannelType;
-const isGuildLurker = fn(2060).isGuildLurker;
+const isGuildVocalChannelType = fn(2048).isGuildVocalChannelType;
+const isGuildLurker = fn(2062).isGuildLurker;
 const Constants = fn(1074);
 ({ ChannelTypes: closure_12, GuildFeatures: map1, Permissions: closure_14, Routes: closure_15 } = Constants);
-const StaticChannelRoute = fn(2049).StaticChannelRoute;
-const GuildOnboardingTab = fn(7432).GuildOnboardingTab;
-let closure_18 = fn(7428).CHANNELS_AND_ROLES_MODAL_KEY;
+const StaticChannelRoute = fn(2051).StaticChannelRoute;
+const GuildOnboardingTab = fn(7434).GuildOnboardingTab;
+let closure_18 = fn(7430).CHANNELS_AND_ROLES_MODAL_KEY;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapChannel.tsx");
 

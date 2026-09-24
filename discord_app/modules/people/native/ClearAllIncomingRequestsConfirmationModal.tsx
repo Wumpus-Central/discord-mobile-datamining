@@ -6,5 +6,5 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/people/native/ClearAllIncomingRequestsConfirmationModal.tsx");
 
 export default function openClearAllIncomingRequestsConfirmationModal(incomingPendingRequestCount) {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10089, dependencyMap.paths), { incomingPendingRequestCount });
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10094, dependencyMap.paths), { incomingPendingRequestCount });
 }

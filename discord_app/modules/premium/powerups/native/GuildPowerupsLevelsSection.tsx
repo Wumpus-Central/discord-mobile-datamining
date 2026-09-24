@@ -15,7 +15,7 @@ let num = 325;
 if (PlatformUtils.isIOS()) {
   num = 300;
 }
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 const obj3 = {
   cardContainer: { width: 250, marginEnd: PX_16, flex: 1 },
   scroller: { height: num, paddingBottom: nativeDefault.space.PX_8 },
@@ -44,11 +44,11 @@ export default function GuildPowerupsLevelsSection(arg0) {
   }, []);
   const obj2 = { title: null, description: null };
   const intl = util.intl;
-  obj2.title = intl.string(listings(2516)["TXY/b0"]);
+  obj2.title = intl.string(listings(2518)["TXY/b0"]);
   const intl2 = util.intl;
-  obj2.description = intl2.string(listings(2516).aJv4PB);
-  const items1 = [closure_5(listings(12892), obj2)];
-  const tmp3 = listings(12892);
+  obj2.description = intl2.string(listings(2518).aJv4PB);
+  const items1 = [closure_5(listings(12901), obj2)];
+  const tmp3 = listings(12901);
   items1[1] = closure_5(MarketingCardsScroller.MarketingCardsScroller, {
     cardMarginRight: PX_16,
     cardWidth: 250,

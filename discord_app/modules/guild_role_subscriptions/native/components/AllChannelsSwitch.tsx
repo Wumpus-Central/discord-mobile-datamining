@@ -4,8 +4,8 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import TouchableHitBoxDefault from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import _modDef18302 from "../../../../../_runtime/metro/18302__.js";
-import _modDef18303 from "../../../../../_runtime/metro/18303__.js";
+import _modDef18325 from "../../../../../_runtime/metro/18325__.js";
+import _modDef18326 from "../../../../../_runtime/metro/18326__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import TextStyles_mod from "../../../rebrand/native/TextStyles.tsx";
 
@@ -47,11 +47,11 @@ function Row(arg0) {
   return timestampProducer(tmp6, obj2);
 }
 const View = fn(17).View;
-const AllChannelAccessOptions = fn(15563).AllChannelAccessOptions;
+const AllChannelAccessOptions = fn(15577).AllChannelAccessOptions;
 const Fonts = fn(1074).Fonts;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm },
   row: { alignSelf: "stretch", alignItems: "center", flexDirection: "row", justifyContent: "flex-start", padding: 16 },
@@ -86,7 +86,7 @@ export default function AllChannelsSwitch(style) {
   const obj = { style: null, accessibilityRole: "radiogroup", accessibilityState: { disabled }, children: null };
   const items = [tmp.container, style.style];
   obj.style = items;
-  const obj2 = { icon: _modDef18302, label: null, selected: null, onPress: null, disabled: null };
+  const obj2 = { icon: _modDef18325, label: null, selected: null, onPress: null, disabled: null };
   const intl = util.intl;
   obj2.label = intl.string(util.t["vs2T+B"]);
   obj2.selected = channelAccessFormat === AllChannelAccessOptions.SOME_CHANNELS_ACCESS;
@@ -95,7 +95,7 @@ export default function AllChannelsSwitch(style) {
   };
   obj2.disabled = disabled;
   const items1 = [closure_5(Row, obj2), closure_5(View, { style: tmp.separator })];
-  const obj4 = { icon: _modDef18303, label: null, selected: null, onPress: null, disabled: null };
+  const obj4 = { icon: _modDef18326, label: null, selected: null, onPress: null, disabled: null };
   const intl2 = util.intl;
   obj4.label = intl2.string(util.t.l4Tr7X);
   obj4.selected = channelAccessFormat === AllChannelAccessOptions.ALL_CHANNELS_ACCESS;

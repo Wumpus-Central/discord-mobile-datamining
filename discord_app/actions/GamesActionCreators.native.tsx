@@ -43,7 +43,7 @@ const Constants = fn(1074);
   ActivityFlags: closure_7,
 } = Constants);
 const ActivityIntent = fn(2004).ActivityIntent;
-const MAIN_SURFACE = fn(9390).MAIN_SURFACE;
+const MAIN_SURFACE = fn(9394).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GamesActionCreators.native.tsx");
 
@@ -147,8 +147,8 @@ export default {
                     const join_url = body.body.join_url;
                     const secret = body.body.secret;
                     if (null != join_url) {
-                      activityChannelId(4518).openURL(join_url, constants2.SAFARI);
-                      const obj3 = activityChannelId(4518);
+                      activityChannelId(4520).openURL(join_url, constants2.SAFARI);
+                      const obj3 = activityChannelId(4520);
                       const obj2 = {
                         type: "ACTIVITY_JOIN",
                         applicationId: null,
@@ -176,8 +176,8 @@ export default {
                     } else {
                       const _HermesInternal = HermesInternal;
                       const combined = "" + deeplink_uri.replace(/\/+$/, "") + constants.GAME_INVITE_FRAGMENT + secret;
-                      activityChannelId(4518).openURL(combined, constants2.SAFARI);
-                      const obj6 = activityChannelId(4518);
+                      activityChannelId(4520).openURL(combined, constants2.SAFARI);
+                      const obj6 = activityChannelId(4520);
                       const obj12 = {
                         type: "ACTIVITY_JOIN",
                         applicationId: null,

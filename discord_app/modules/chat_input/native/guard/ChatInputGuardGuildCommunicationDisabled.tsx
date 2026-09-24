@@ -6,7 +6,7 @@ import useCommunicationDisabledCountdownCleanup from "../../../guild_communicati
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const link = fn(2107).GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK;
+const link = fn(2109).GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(

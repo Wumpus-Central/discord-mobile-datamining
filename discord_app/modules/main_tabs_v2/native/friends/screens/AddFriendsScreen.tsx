@@ -71,7 +71,7 @@ function areHydratedGameFriendRequestRowStatesEqual(arr, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const Sections = fn(13038).Sections;
+const Sections = fn(13047).Sections;
 const Constants = fn(1074);
 ({
   AnalyticEvents: closure_12,
@@ -79,7 +79,7 @@ const Constants = fn(1074);
   InstantInviteSources: closure_14,
   RelationshipTypes: closure_15,
 } = Constants);
-const ContactPermissions = fn(13017).ContactPermissions;
+const ContactPermissions = fn(13026).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = {
@@ -92,7 +92,7 @@ let closure_19 = {
   CONTACT_SUGGESTIONS: 3,
   [3]: "CONTACT_SUGGESTIONS",
 };
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = {
   container: { flex: 1 },
   inviteAppsContainerNonSticky: {
@@ -239,9 +239,9 @@ export default function AddFriendsScreen(navigation) {
     return _modDef12
       .unionBy(items1, items, (id) => id.id)
       .sort((arg0, arg1) => {
-        const name = source_page(4671).getName(arg0);
-        const obj = source_page(4671);
-        return name.localeCompare(source_page(4671).getName(arg1));
+        const name = source_page(4673).getName(arg0);
+        const obj = source_page(4673);
+        return name.localeCompare(source_page(4673).getName(arg1));
       });
   });
   let obj5 = navigation(analyticsLocations[27]);
@@ -280,9 +280,9 @@ export default function AddFriendsScreen(navigation) {
       return source_page(analyticsLocations[28])
         .unionBy(items1, items, (user) => user.user.id)
         .sort((user, user2) => {
-          const name = items1(4671).getName(user.user);
-          const obj = items1(4671);
-          return name.localeCompare(items1(4671).getName(user2.user));
+          const name = items1(4673).getName(user.user);
+          const obj = items1(4673);
+          return name.localeCompare(items1(4673).getName(user2.user));
         });
     },
     items4,

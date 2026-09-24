@@ -1,4 +1,5 @@
 // discord_app/stores/billing/UserOfferStore.tsx
+import _modDef12 from "../../../_runtime/metro/00012__.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import PremiumUtils from "../../utils/PremiumUtils.tsx";
@@ -56,22 +57,13 @@ function rehydrateDiscountOffer(discount) {
   }
 }
 function handleSubscriptionStoreUpdate() {
-  const tmp = null != SubscriptionStore.getPremiumTypeSubscription();
-  if (!tmp) {
-    return tmp;
-  } else {
-    if (null != closure_19.userDiscountOffers[closure_1_11]) {
-      const obj2 = {};
-      obj2[closure_1_11] = closure_19.userDiscountOffers[closure_1_11];
-      closure_19.userDiscountOffers = obj2;
-      closure_19.userTrialOffers = {};
-    } else if (null == closure_19.userDiscountOffers[closure_1_12]) {
-      closure_19.userDiscountOffers = {};
-    }
-    const userDiscountOffers = {};
-    userDiscountOffers[closure_1_12] = closure_19.userDiscountOffers[closure_1_12];
-    closure_19.userDiscountOffers = userDiscountOffers;
+  let flag = null != SubscriptionStore.getPremiumTypeSubscription();
+  if (flag) {
+    closure_19.userDiscountOffers = _modDef12.pick(closure_19.userDiscountOffers, closure_1_11);
+    closure_19.userTrialOffers = {};
+    flag = true;
   }
+  return flag;
 }
 function handlePaymentSourceChange() {
   const currentUser = UserStore.getCurrentUser();
@@ -81,21 +73,20 @@ function handleReferralTrialStoreUpdate() {
 }
 const PremiumConstants = fn(1374);
 ({
-  ANNUAL_DISCOUNT_IDS: closure_9,
-  DISCOUNT_OFFERS_REQUIRES_REMINDER_ROLLOUT: c10,
-  PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID: closure_11,
-  PREMIUM_TIER_2_CHURN_3_MONTH_DISCOUNT_ID: closure_12,
+  ANNUAL_DISCOUNT_IDS: c10,
+  CHURN_DISCOUNT_IDS: closure_11,
+  DISCOUNT_OFFERS_REQUIRES_REMINDER_ROLLOUT: closure_12,
   SubscriptionPlanInfo: map1,
   SubscriptionTrials: closure_14,
   TRIAL_OFFERS_REQUIRES_REMINDER_ROLLOUT: closure_15,
 } = PremiumConstants);
 const OfferTriggerTypes = fn(1085).OfferTriggerTypes;
 let closure_17 = performance.now();
-let obj = {
+let cooldownExpirationTimestamps = {
   userOffersLastFetchedAtDate: "r",
   userTrialOffers: {},
   userDiscountOffers: {},
-  userDiscounts: "\u{1F471}\u{1F3FB}\u200D\u2642\uFE0F",
+  userDiscounts: "\u{1F471}\u{1F3FE}\u200D\u2642\uFE0F",
   isFetching: true,
   lastFetchSuccessful: null,
   shouldTriggerOffer: 8,
@@ -107,13 +98,13 @@ let obj = {
     [OfferTriggerTypes.VIDEO_STREAM_ENDED]: 0,
   },
 };
-let closure_19 = obj;
+let closure_19 = cooldownExpirationTimestamps;
 const PersistedStore = initializeDefault.PersistedStore;
 class UserOfferStore extends PersistedStore {}
 const prototype = UserOfferStore.prototype;
 prototype["initialize"] = function initialize(userTrialOffers) {
   if (null != userTrialOffers) {
-    obj = {};
+    const obj = {};
     let merged = Object.assign(userTrialOffers);
     userTrialOffers = userTrialOffers.userTrialOffers;
     if (userTrialOffers == null) {
@@ -239,7 +230,6 @@ prototype["shouldShowTrialOfferReminder"] = function shouldShowTrialOfferReminde
 };
 prototype["getAlmostExpiringTrialOffersForReminder"] = function getAlmostExpiringTrialOffersForReminder(items) {
   const self = this;
-  dependencyMap = items;
   const values = Object.values(closure_14);
   _require = values.map((id) => id.id);
   const currentUser = UserStore.getCurrentUser();
@@ -275,7 +265,7 @@ prototype["getAlmostExpiringTrialOffersForReminder"] = function getAlmostExpirin
   });
 };
 prototype["shouldShowDiscountOfferReminder"] = function shouldShowDiscountOfferReminder(discountId) {
-  const hasItem = closure_1_10.includes(discountId.discountId);
+  const hasItem = closure_1_12.includes(discountId.discountId);
   let result = !hasItem;
   if (hasItem) {
     result = PremiumOfferReminderExperiment.isPremiumOfferReminderExperimentEnabled({ location: "user_offer_store" });
@@ -349,7 +339,7 @@ prototype["getUnacknowledgedDiscountOffers"] = function getUnacknowledgedDiscoun
     const hasAcknowledgedResult = hasAcknowledged.hasAcknowledged();
     let tmp2 = !hasAcknowledgedResult;
     if (!hasAcknowledgedResult) {
-      tmp2 = !closure_1_9.includes(hasAcknowledged.discountId);
+      tmp2 = !closure_1_10.includes(hasAcknowledged.discountId);
     }
     return tmp2;
   });
@@ -434,7 +424,7 @@ let items = [
       userDiscounts = userDiscounts.userDiscounts;
     }
     if (null != userDiscounts) {
-      obj = {};
+      const obj = {};
       const merged = Object.assign(userDiscounts);
       obj.userDiscountOffers = userDiscounts;
       return obj;
@@ -457,7 +447,7 @@ let items = [
       }
       let tmp2 = isFetching;
       if (null == isFetching) {
-        obj = {};
+        const obj = {};
         const merged = Object.assign(isFetching);
         obj.isFetching = false;
         tmp2 = obj;
@@ -471,7 +461,7 @@ let items = [
       userDiscountOffers = userDiscountOffers.userDiscountOffers;
     }
     if (null != userDiscountOffers) {
-      obj = {};
+      const obj = {};
       const merged = Object.assign(userDiscountOffers);
       const _Object = Object;
       const _Object2 = Object;
@@ -498,7 +488,7 @@ let items = [
           prop = shouldTriggerOffer.cooldownExpirationTimestamps;
         }
       }
-      obj = {};
+      const obj = {};
       const merged = Object.assign(shouldTriggerOffer);
       obj.shouldTriggerOffer = false;
       const obj2 = {};
@@ -535,7 +525,7 @@ const userOfferStore = new UserOfferStore(DispatcherDefault, {
       closure_19.isFetching = false;
       if (!shouldTriggerOffer) {
         closure_19.shouldTriggerOffer = false;
-        const cooldownExpirationTimestamps = {};
+        cooldownExpirationTimestamps = {};
         cooldownExpirationTimestamps[OfferTriggerTypes.CHANNEL_OPENED] = 0;
         cooldownExpirationTimestamps[OfferTriggerTypes.JOIN_VOICE_CHANNEL] = 0;
         cooldownExpirationTimestamps[OfferTriggerTypes.PREMIUM_UPSELL_VIEWED] = 0;

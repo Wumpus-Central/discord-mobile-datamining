@@ -2,7 +2,7 @@
 import useStateFromStores from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef2484 from "../FamilyCenter.messages.js";
+import _modDef2486 from "../FamilyCenter.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
@@ -14,10 +14,10 @@ import FamilyCenterStore from "../FamilyCenterStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(7866).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
+let closure_6 = fn(7868).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 const obj2 = {
   container: {
     paddingHorizontal: nativeDefault.space.PX_24,
@@ -63,14 +63,14 @@ export default function ConnectGuardianBottomSheet(arg0) {
   };
   if (title == null) {
     const intl = util.intl;
-    title = intl.string(_modDef2484.aCUVfL);
+    title = intl.string(_modDef2486.aCUVfL);
   }
   obj5.children = title;
   const items2 = [React5(Text_Text.Text, obj5)];
   const obj6 = { style: tmp.centered, variant: "text-md/medium", color: "text-default", children: null };
   if (body == null) {
     const intl2 = util.intl;
-    body = intl2.format(_modDef2484["2O6ltn"], { link: "https://support.discord.com/hc/articles/14155060633623" });
+    body = intl2.format(_modDef2486["2O6ltn"], { link: "https://support.discord.com/hc/articles/14155060633623" });
   }
   obj6.children = body;
   items2[1] = React5(Text_Text.Text, obj6);
@@ -91,7 +91,7 @@ export default function ConnectGuardianBottomSheet(arg0) {
   items3[1] = React5(View, obj7);
   const obj10 = { variant: "secondary", size: "md", text: null, onPress: null };
   const intl3 = util.intl;
-  obj10.text = intl3.string(_modDef2484.Hsm5IF);
+  obj10.text = intl3.string(_modDef2486.Hsm5IF);
   obj10.onPress = callback;
   items3[2] = React5(components_Button_Button.Button, obj10);
   obj3.children = items3;

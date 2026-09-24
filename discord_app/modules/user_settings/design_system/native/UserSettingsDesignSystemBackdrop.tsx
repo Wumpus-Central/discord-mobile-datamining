@@ -33,7 +33,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = { container: { padding: 16 }, backdropContent: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -64,11 +64,11 @@ export default function UserSettingsDesignSystemBackdrop() {
     }
     return { opacity: spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always") };
   };
-  let obj = showBackdrop(4559);
+  let obj = showBackdrop(4561);
   fn.__closure = {
-    withSpring: showBackdrop(5270).withSpring,
+    withSpring: showBackdrop(5272).withSpring,
     showBackdrop,
-    SUBTLE_SPRING: showBackdrop(5274).SUBTLE_SPRING,
+    SUBTLE_SPRING: showBackdrop(5276).SUBTLE_SPRING,
   };
   fn.__workletHash = 1929832617927;
   fn.__initData = __initData;
@@ -105,24 +105,24 @@ export default function UserSettingsDesignSystemBackdrop() {
     }),
   ];
   obj4.children = items;
-  const items1 = [closure_7(showBackdrop(5269).Stack, obj4)];
+  const items1 = [closure_7(showBackdrop(5271).Stack, obj4)];
   if (showBackdrop) {
     function handleClose() {
       closure_1(false);
     }
     const obj5 = { onDismiss: handleClose, children: null };
     const obj6 = { style: animatedStyle, blur: tmp6, onDismiss: handleClose };
-    const items2 = [closure_6(tmp8(5257).Backdrop, obj6)];
+    const items2 = [closure_6(tmp8(5259).Backdrop, obj6)];
     const obj7 = { style: tmp.backdropContent, pointerEvents: "box-none", children: null };
     const obj8 = { children: null };
     const obj9 = { variant: "text-md/normal", children: null };
     const items3 = ["blur style: ", tmp6];
     obj9.children = items3;
-    obj8.children = closure_7(tmp8(4823).Text, obj9);
-    obj7.children = closure_6(tmp8(5910).Card, obj8);
+    obj8.children = closure_7(tmp8(4825).Text, obj9);
+    obj7.children = closure_6(tmp8(5912).Card, obj8);
     items2[1] = closure_6(closure_5, obj7);
     obj5.children = items2;
-    showBackdrop = closure_7(tmp8(5252).Dialog, obj5);
+    showBackdrop = closure_7(tmp8(5254).Dialog, obj5);
   }
   items1[1] = showBackdrop;
   obj3.children = items1;

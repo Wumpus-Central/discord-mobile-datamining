@@ -1,7 +1,7 @@
 // discord_app/modules/auth/experiment/trackAgeGateSubmitted.tsx
 import Constants from "../../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import _modDef4414 from "../../../../_runtime/metro/04414__.js";
+import _modDef4416 from "../../../../_runtime/metro/04416__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -13,7 +13,7 @@ export default function trackAgeGateSubmitted(format, section) {
   if (obj2.diff(format, "years") < 18) {
     formatResult = format.format("YYYY-MM-DD");
   }
-  obj2 = _modDef4414();
+  obj2 = _modDef4416();
   obj.track(AnalyticEvents.AGE_GATE_SUBMITTED, {
     dob: formatResult,
     dob_day: format.date(),

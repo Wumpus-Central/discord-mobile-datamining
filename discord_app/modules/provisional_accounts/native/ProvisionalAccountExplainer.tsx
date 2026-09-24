@@ -8,7 +8,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let closure_7 = createStyles.createStyles(() => {
   const obj = {
     chatContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, gap: nativeDefault.space.PX_8 },
@@ -32,7 +32,7 @@ export const ChatProvisionalAccountExplainerCard = function ChatProvisionalAccou
       hasOwnProperty(ApplicationIconAndNameDefault, { application, textVariant, iconSize }, application.id),
     items,
   );
-  const provisionalAccountExplanationText = iconSize(12968).useProvisionalAccountExplanationText({
+  const provisionalAccountExplanationText = iconSize(12977).useProvisionalAccountExplanationText({
     userId,
     renderApplicationName: callback,
   });
@@ -44,20 +44,20 @@ export const ChatProvisionalAccountExplainerCard = function ChatProvisionalAccou
   const intl = iconSize(1115).intl;
   obj4.children = intl.string(iconSize(1115).t.Iyka0U);
   const items2 = [
-    closure_5(iconSize(4823).Text, obj4),
-    closure_5(iconSize(6938).CircleErrorIcon, { size: "xs", color: "text-default" }),
+    closure_5(iconSize(4825).Text, obj4),
+    closure_5(iconSize(6940).CircleErrorIcon, { size: "xs", color: "text-default" }),
   ];
   obj3.children = items2;
   const items3 = [
     closure_6(View, obj3),
-    closure_5(iconSize(4823).Text, {
+    closure_5(iconSize(4825).Text, {
       variant: "text-sm/normal",
       color: "text-default",
       children: provisionalAccountExplanationText,
     }),
   ];
   obj2.children = items3;
-  return closure_6(iconSize(5910).Card, obj2);
+  return closure_6(iconSize(5912).Card, obj2);
 };
 export const UserProfileProvisionalAccountExplainerCard = function UserProfileProvisionalAccountExplainerCard(
   iconSize,
@@ -71,16 +71,16 @@ export const UserProfileProvisionalAccountExplainerCard = function UserProfilePr
       hasOwnProperty(ApplicationIconAndNameDefault, { application, textVariant, iconSize }, application.id),
     items,
   );
-  const provisionalAccountExplanationText = iconSize(12968).useProvisionalAccountExplanationText({
+  const provisionalAccountExplanationText = iconSize(12977).useProvisionalAccountExplanationText({
     userId,
     renderApplicationName: callback,
   });
   const obj2 = { style, title: null, titleIcon: null, children: null };
-  const obj = iconSize(12968);
+  const obj = iconSize(12977);
   const intl = iconSize(1115).intl;
   obj2.title = intl.string(iconSize(1115).t.Iyka0U);
-  obj2.titleIcon = closure_5(iconSize(6938).CircleErrorIcon, { size: "xs", color: "text-default" });
-  obj2.children = closure_5(iconSize(4823).Text, {
+  obj2.titleIcon = closure_5(iconSize(6940).CircleErrorIcon, { size: "xs", color: "text-default" });
+  obj2.children = closure_5(iconSize(4825).Text, {
     variant: "text-md/normal",
     color: "text-default",
     children: provisionalAccountExplanationText,

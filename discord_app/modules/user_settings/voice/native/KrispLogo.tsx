@@ -5,8 +5,8 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
 import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef10340 from "../../../../../_runtime/metro/10340__.js";
-import _modDef10341 from "../../../../../_runtime/metro/10341__.js";
+import _modDef10345 from "../../../../../_runtime/metro/10345__.js";
+import _modDef10346 from "../../../../../_runtime/metro/10346__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../ThemeStore.tsx";
 
@@ -50,9 +50,9 @@ export default function KrispLogo() {
   const items = [ThemeStore];
   const stateFromStores = initialize.useStateFromStores(items, () => theme.theme);
   if (obj2.isThemeLight(stateFromStores)) {
-    let tmp4Result = _modDef10340;
+    let tmp4Result = _modDef10345;
   } else {
-    tmp4Result = _modDef10341;
+    tmp4Result = _modDef10346;
   }
   const obj3 = { style: closure_13.detailsView, children: null };
   const obj4 = { style: closure_13.logo, source: tmp4Result, accessibilityLabel: null };

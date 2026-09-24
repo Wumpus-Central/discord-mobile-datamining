@@ -8,7 +8,7 @@ import validateScopeDefault from "helpers/validateScope.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const TransportTypes = fn(4731).TransportTypes;
+const TransportTypes = fn(4733).TransportTypes;
 const Constants = fn(1074);
 ({
   AnalyticEvents: hasOwnProperty,
@@ -347,7 +347,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
     .then((handler) => {
       if (socket.source.type === TransportTypes.POST_MESSAGE) {
         const obj2 = { cmd: closure_2.cmd, iframeId: socket.source.iframeId, args: null };
-        let args = closure_2.args;
+        args = closure_2.args;
         if (args == null) {
           args = {};
         }
@@ -491,7 +491,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
     .then((handler) => {
       if (socket.source.type === TransportTypes.POST_MESSAGE) {
         const obj2 = { cmd: closure_2.cmd, iframeId: socket.source.iframeId, args: null };
-        let args = closure_2.args;
+        args = closure_2.args;
         if (args == null) {
           args = {};
         }
@@ -624,10 +624,10 @@ prototype["isChildSubscribed"] = function isChildSubscribed(arg0, arg1) {
   }
   return tmp;
 };
-prototype["getSubscription"] = function getSubscription(socket, evt, args) {
+prototype["getSubscription"] = function getSubscription(socket, evt, c3) {
   closure_0 = socket;
   closure_1 = evt;
-  closure_2 = args;
+  closure_2 = c3;
   const subscriptions = this.subscriptions;
   return subscriptions.find((socket) => {
     let isEqualResult = socket.socket === closure_0;
@@ -640,7 +640,7 @@ prototype["getSubscription"] = function getSubscription(socket, evt, args) {
     return isEqualResult;
   });
 };
-prototype["addSubscription"] = function addSubscription(socket, evt, args, arg3) {
+prototype["addSubscription"] = function addSubscription(socket, evt, c3, arg3) {
   let tmp = arg3;
   if (arg3 === undefined) {
     tmp = null;
@@ -691,13 +691,13 @@ prototype["removeSubscriptions"] = function removeSubscriptions(abortController)
 prototype["dispatchToSubscriptions"] = function dispatchToSubscriptions(
   RELATIONSHIP_UPDATE,
   targetsFrame,
-  arg2,
+  constants,
   combined,
 ) {
   const self = this;
   closure_1 = RELATIONSHIP_UPDATE;
   closure_2 = targetsFrame;
-  closure_0 = arg2;
+  closure_0 = constants;
   let tmp = null != combined;
   if (tmp) {
     tmp = "" !== combined;
@@ -723,7 +723,7 @@ prototype["dispatchToSubscriptions"] = function dispatchToSubscriptions(
             }
             self.dispatch(evt.socket, null, constants3.DISPATCH, evt.evt, tmp4Result);
           } else {
-            let args = evt.args;
+            args = evt.args;
             if (args == null) {
               args = {};
             }

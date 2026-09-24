@@ -7,8 +7,8 @@ import ApplicationStreamingSettingsStore from "../../../stores/ApplicationStream
 import ApplicationStreamingManager from "../ApplicationStreamingManager.tsx";
 
 const require = fn;
-const ApplicationStreamPresets = fn(4874).ApplicationStreamPresets;
-const MediaEngineContextTypes = fn(4852).MediaEngineContextTypes;
+const ApplicationStreamPresets = fn(4876).ApplicationStreamPresets;
+const MediaEngineContextTypes = fn(4854).MediaEngineContextTypes;
 const jsx = fn(21).jsx;
 let obj = new LoggerDefault("ApplicationStreamingManager");
 obj.enableNativeLogger(true);
@@ -39,7 +39,7 @@ prototype["platformHandleStreamStart"] = function platformHandleStreamStart(sour
       state = { preset: ApplicationStreamPresets.PRESET_CUSTOM, resolution: 720, fps: 30, soundshareEnabled: true };
     }
     ({ preset, resolution, fps, soundshareEnabled } = state);
-    setGoLiveSource = setGoLiveSource(9990).setGoLiveSource;
+    setGoLiveSource = setGoLiveSource(9995).setGoLiveSource;
     const obj2 = { desktopSettings: null, qualityOptions: null, context: null };
     const obj3 = { sourceId, sound: soundshareEnabled };
     obj2.desktopSettings = obj3;
@@ -47,7 +47,7 @@ prototype["platformHandleStreamStart"] = function platformHandleStreamStart(sour
     obj2.qualityOptions = obj4;
     obj2.context = MediaEngineContextTypes.STREAM;
     setGoLiveSource(obj2);
-    const setGoLiveSourceResult = setGoLiveSource(9990);
+    const setGoLiveSourceResult = setGoLiveSource(9995);
   } else {
     const _HermesInternal = HermesInternal;
     obj.warn("invalid start_stream: both application + display modes were specified (source-id: " + sourceId + ")");

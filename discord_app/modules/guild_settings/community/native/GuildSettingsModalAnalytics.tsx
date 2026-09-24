@@ -11,7 +11,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, RelativeMarketingURLs: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = { container: { flex: 1 }, content: { padding: nativeDefault.space.PX_16 } };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -23,7 +23,7 @@ export default function GuildSettingsModalAnalytics(guildId) {
   const items = [LocaleStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => locale.locale);
   let obj = guildId(504);
-  const guildAnalyticsOverview = guildId(18196).useGuildAnalyticsOverview(guildId);
+  const guildAnalyticsOverview = guildId(18219).useGuildAnalyticsOverview(guildId);
   ({ analytics, notice } = guildAnalyticsOverview);
   const items1 = [guildId];
   let obj3 = { style: tmp.container, contentContainerStyle: null, children: null };
@@ -62,9 +62,9 @@ export default function GuildSettingsModalAnalytics(guildId) {
               v1 = 1;
               v3 = 1;
               const obj6 = {
-                value: v1(7645).redirectDeveloperPortalWithHandoffToken(
+                value: v1(7647).redirectDeveloperPortalWithHandoffToken(
                   result,
-                  v3(7649).LoginHandoffSource.GUILD_ANALYTICS_SETTING,
+                  v3(7651).LoginHandoffSource.GUILD_ANALYTICS_SETTING,
                 ),
                 done: false,
               };
@@ -92,20 +92,20 @@ export default function GuildSettingsModalAnalytics(guildId) {
   let obj4 = { spacing: nativeDefault.space.PX_16, children: null };
   let obj5 = { variant: "text-sm/medium", color: "text-default", children: null };
   const intl = guildId(1115).intl;
-  let obj2 = guildId(18196);
+  let obj2 = guildId(18219);
   obj5.children = intl.string(guildId(1115).t.NIZ60a).trim();
-  const items3 = [closure_9(guildId(4823).Text, obj5), , , ,];
+  const items3 = [closure_9(guildId(4825).Text, obj5), , , ,];
   if (null == notice) {
     items3[1] = null;
     let obj6 = { variant: "text-sm/medium", color: "text-muted", children: null };
     const intl2 = tmp2(1115).intl;
     obj6.children = intl2.string(tmp2(1115).t.A5vswv);
-    items3[2] = closure_9(tmp2(4823).Text, obj6);
+    items3[2] = closure_9(tmp2(4825).Text, obj6);
     const obj7 = { text: null, onPress: null };
     const intl3 = tmp2(1115).intl;
     obj7.text = intl3.string(tmp2(1115).t.Uskgxx);
     obj7.onPress = callback;
-    items3[3] = closure_9(tmp2(5271).Button, obj7);
+    items3[3] = closure_9(tmp2(5273).Button, obj7);
     let tmp7Result = null;
     if (null != analytics) {
       const obj8 = { spacing: nativeDefault.space.PX_8, children: null };
@@ -116,36 +116,36 @@ export default function GuildSettingsModalAnalytics(guildId) {
       obj9.description = intl5.string(tmp2(1115).t.KiRbLJ);
       const tmp11Result = GuildSettingsAnalyticsCardDefault;
       const merged = Object.assign(
-        tmp2(18196).getGuildAnalyticsCardProps(analytics.visitors, analytics.visitorsChange, stateFromStores),
+        tmp2(18219).getGuildAnalyticsCardProps(analytics.visitors, analytics.visitorsChange, stateFromStores),
       );
       const items4 = [closure_9(tmp11Result, obj9), , ,];
       const obj10 = { metricKey: "communicators", title: null, description: null };
-      const tmp2Result = tmp2(18196);
+      const tmp2Result = tmp2(18219);
       const intl6 = tmp2(1115).intl;
       obj10.title = intl6.string(tmp2(1115).t.DDAHdQ);
       const intl7 = tmp2(1115).intl;
       obj10.description = intl7.string(tmp2(1115).t.HxWUkU);
       const tmp11Result4 = GuildSettingsAnalyticsCardDefault;
       const merged1 = Object.assign(
-        tmp2(18196).getGuildAnalyticsCardProps(analytics.communicators, analytics.communicatorsChange, stateFromStores),
+        tmp2(18219).getGuildAnalyticsCardProps(analytics.communicators, analytics.communicatorsChange, stateFromStores),
       );
       items4[1] = closure_9(tmp11Result4, obj10);
       const obj11 = { metricKey: "new_members", title: null };
-      const tmp2Result4 = tmp2(18196);
+      const tmp2Result4 = tmp2(18219);
       const intl8 = tmp2(1115).intl;
       obj11.title = intl8.string(tmp2(1115).t.hYeOqC);
       const tmp11Result5 = GuildSettingsAnalyticsCardDefault;
       const merged2 = Object.assign(
-        tmp2(18196).getGuildAnalyticsCardProps(analytics.newMembers, analytics.newMembersChange, stateFromStores),
+        tmp2(18219).getGuildAnalyticsCardProps(analytics.newMembers, analytics.newMembersChange, stateFromStores),
       );
       items4[2] = closure_9(tmp11Result5, obj11);
       const obj12 = { metricKey: "new_member_retention", title: null, description: null };
-      const tmp2Result5 = tmp2(18196);
+      const tmp2Result5 = tmp2(18219);
       const intl9 = tmp2(1115).intl;
       obj12.title = intl9.string(tmp2(1115).t.jj7OPw);
       const intl10 = tmp2(1115).intl;
       obj12.description = intl10.string(tmp2(1115).t.MQCslz);
-      const tmp2Result6 = tmp2(18196);
+      const tmp2Result6 = tmp2(18219);
       const merged3 = Object.assign(
         tmp2Result6.getGuildAnalyticsCardProps(
           analytics.pctRetained,
@@ -156,14 +156,14 @@ export default function GuildSettingsModalAnalytics(guildId) {
       );
       items4[3] = closure_9(GuildSettingsAnalyticsCardDefault, obj12);
       obj8.children = items4;
-      tmp7Result = closure_10(tmp2(5269).Stack, obj8);
+      tmp7Result = closure_10(tmp2(5271).Stack, obj8);
       const tmp11Result6 = GuildSettingsAnalyticsCardDefault;
     }
     const obj13 = { children: null };
     items3[4] = tmp7Result;
     obj4.children = items3;
-    obj3.children = closure_10(guildId(5269).Stack, obj4);
-    const items5 = [closure_9(ScrollView, obj3), closure_9(tmp2(7371).NavScrim, {})];
+    obj3.children = closure_10(guildId(5271).Stack, obj4);
+    const items5 = [closure_9(ScrollView, obj3), closure_9(tmp2(7373).NavScrim, {})];
     obj13.children = items5;
     return closure_10(closure_11, obj13);
   } else {

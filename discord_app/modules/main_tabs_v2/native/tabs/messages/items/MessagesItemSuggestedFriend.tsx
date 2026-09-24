@@ -4,9 +4,9 @@ import util from "../../../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../../../utils/AnalyticsUtils.tsx";
 import asyncRequireImpl from "../../../../../../../_runtime/01980_asyncRequireImpl.js";
 import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
-import _mod9073 from "../../../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod9077 from "../../../../../../../discord_common/js/packages/flash-list/index.js";
 import useScaledTextLineHeight from "../../../../../screen/native/useScaledTextLineHeight.android.tsx";
-import _mod16444 from "../../../../../../../_runtime/metro/16444__.js";
+import _mod16468 from "../../../../../../../_runtime/metro/16468__.js";
 import FriendSuggestionUtils from "../../../../../friend_suggestions/FriendSuggestionUtils.tsx";
 import AddFriendsScreenUtils from "../../../friends/components/AddFriendsScreenUtils.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
@@ -19,7 +19,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, RelationshipTypes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj = {
   container: { paddingHorizontal: nativeDefault.space.PX_8 },
   pressable: null,
@@ -33,7 +33,7 @@ obj.pressable = {
   alignItems: "center",
   padding: nativeDefault.space.PX_8,
 };
-const obj4 = {
+let obj4 = {
   borderRadius: nativeDefault.radii.md,
   flexDirection: "row",
   alignItems: "center",
@@ -73,7 +73,7 @@ let closure_12 = noop.memo(function MessagesItemSuggestedFriendView(height) {
     return items;
   }, items);
   const callback = noop.useCallback(() => {
-    asyncRequireImpl(8523, dependencyMap.paths).then((result) =>
+    asyncRequireImpl(8527, dependencyMap.paths).then((result) =>
       result.default({
         userId: suggestedFriend.user.id,
         localUser: suggestedFriend.user,
@@ -138,16 +138,13 @@ let closure_12 = noop.memo(function MessagesItemSuggestedFriendView(height) {
     setAddedPressed(true);
   }, items4);
   let obj3 = { accessibilityRole: "button", style: memo, onPress: callback, collapsable: false, children: null };
-  obj2 = height(suggestedFriend[11]);
-  const items5 = [
-    closure_9(height(suggestedFriend[18]).Avatar, {
-      style: tmp.avatar,
-      user: suggestedFriend.user,
-      guildId: "Array",
-      size: height(suggestedFriend[18]).AvatarSizes.REFRESH_MEDIUM_32,
-    }),
-    ,
-  ];
+  const obj4 = {
+    style: tmp.avatar,
+    user: suggestedFriend.user,
+    guildId: "Array",
+    size: height(suggestedFriend[18]).AvatarSizes.REFRESH_MEDIUM_32,
+  };
+  const items5 = [closure_9(height(suggestedFriend[18]).Avatar, obj4), ,];
   let obj5 = { style: tmp.textContainer, children: null };
   const items6 = [
     closure_9(height(suggestedFriend[19]).Text, {
@@ -197,7 +194,7 @@ const memoResult = noop.memo((arg0) => {
 const memoResult1 = noop.memo((suggestedFriend) => {
   const items = [suggestedFriend.suggestedFriend.user.id];
   const obj2 = {};
-  [tmp2, tmp3] = _mod9073.useRecyclingState(false, items);
+  [tmp2, tmp3] = _mod9077.useRecyclingState(false, items);
   const merged = Object.assign(suggestedFriend);
   obj2.addedPressed = tmp2;
   obj2.setAddedPressed = tmp3;
@@ -220,7 +217,7 @@ export const MessagesItemSuggestedFriendFast = memoResult;
 export const MessagesItemSuggestedFriendFlash = memoResult1;
 export const MessagesItemSuggestedFriendLegend = noop.memo((arg0) => {
   const obj2 = {};
-  [tmp2, tmp3] = _mod16444.useRecyclingState(false);
+  [tmp2, tmp3] = _mod16468.useRecyclingState(false);
   const merged = Object.assign(arg0);
   obj2.addedPressed = tmp2;
   obj2.setAddedPressed = tmp3;

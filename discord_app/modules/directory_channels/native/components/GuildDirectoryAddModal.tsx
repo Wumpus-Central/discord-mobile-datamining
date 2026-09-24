@@ -9,10 +9,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const GuildDirectoryCreate = fn(12644).GuildDirectoryCreate;
+const GuildDirectoryCreate = fn(12653).GuildDirectoryCreate;
 const jsx = fn(21).jsx;
-const createStyles = fn(4827);
-let obj2 = { safeArea: { marginTop: fn(5985).NAV_BAR_HEIGHT, flex: 1 } };
+const createStyles = fn(4829);
+let obj2 = { safeArea: { marginTop: fn(5987).NAV_BAR_HEIGHT, flex: 1 } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryAddModal.tsx");
@@ -35,7 +35,7 @@ export default function GuildDirectoryAddModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_4(closure_1_1(12645), {});
+        return closure_1_4(closure_1_1(12654), {});
       },
     };
     obj4[GuildDirectoryCreate.CREATE_OR_ADD] = obj5;
@@ -48,7 +48,7 @@ export default function GuildDirectoryAddModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_4(closure_1_1(12653), {});
+        return closure_1_4(closure_1_1(12662), {});
       },
     };
     const obj7 = {
@@ -59,7 +59,7 @@ export default function GuildDirectoryAddModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_4(closure_1_1(12653), {});
+        return closure_1_4(closure_1_1(12662), {});
       },
     };
     obj4[GuildDirectoryCreate.TEMPLATES] = {
@@ -70,7 +70,7 @@ export default function GuildDirectoryAddModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_4(closure_1_1(12657), {});
+        return closure_1_4(closure_1_1(12666), {});
       },
     };
     const obj8 = {
@@ -81,7 +81,7 @@ export default function GuildDirectoryAddModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_4(closure_1_1(12657), {});
+        return closure_1_4(closure_1_1(12666), {});
       },
     };
     obj4[GuildDirectoryCreate.CREATE] = {
@@ -92,7 +92,7 @@ export default function GuildDirectoryAddModal(arg0) {
       impressionName: discord_common_AnalyticsUtils.ImpressionNames.HUB_CREATE_GUILD_CUSTOMIZE,
       render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_4(closure_1_1(12667), {});
+        return closure_1_4(closure_1_1(12676), {});
       },
     };
     obj3.screens = obj4;

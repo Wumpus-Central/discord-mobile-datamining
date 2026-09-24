@@ -3,8 +3,8 @@ import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import shared from "../../../design/shared.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import _modDef13106 from "../../../../_runtime/metro/13106__.js";
-import _modDef13107 from "../../../../_runtime/metro/13107__.js";
+import _modDef13115 from "../../../../_runtime/metro/13115__.js";
+import _modDef13116 from "../../../../_runtime/metro/13116__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let closure_7 = createStyles.createStyles({
   container: { flex: 1, alignSelf: "stretch", justifyContent: "center", alignItems: "center" },
   image: { width: 120, height: 80 },
@@ -35,9 +35,9 @@ export default noop.memo((topViewHeight) => {
   obj2.style = items;
   const obj = shared;
   if (obj3.isThemeLight(obj.useThemeContext().theme)) {
-    let tmp4Result = _modDef13106;
+    let tmp4Result = _modDef13115;
   } else {
-    tmp4Result = _modDef13107;
+    tmp4Result = _modDef13116;
   }
   const items1 = [hasOwnProperty(React4, { source: tmp4Result, style: tmp.image }), ,];
   const obj5 = {

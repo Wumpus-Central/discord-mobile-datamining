@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/PlusMediumIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod12532 from "../../../../../../../_runtime/metro/12532__.js";
+import _mod12541 from "../../../../../../../_runtime/metro/12541__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const PlusMediumIcon = function PlusMediumIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12532, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12541, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

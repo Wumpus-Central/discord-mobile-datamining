@@ -6,7 +6,7 @@ import SoundboardStore from "SoundboardStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const SoundOutputChannel = fn(9992).SoundOutputChannel;
+const SoundOutputChannel = fn(9997).SoundOutputChannel;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/useSoundboardSoundPlayer.native.tsx");
 

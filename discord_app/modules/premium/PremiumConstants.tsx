@@ -442,9 +442,10 @@ const items9 = [
   "1271484512081285191",
   "1161363847311785984",
 ];
-const items10 = ["1223319122125783040", "1223380890109870080"];
-const items11 = ["1503844767820152833", "1503844767820152834"];
-const items12 = ["1161363847311785984"];
+const items10 = ["1204865493622587392", "1552063009336066098", "1552063020560154694", "1204867673024888832"];
+const items11 = ["1223319122125783040", "1223380890109870080"];
+const items12 = ["1503844767820152833", "1503844767820152834"];
+const items13 = ["1161363847311785984"];
 const obj29 = {
   "520373071933079552": null,
   "902329034132684800": null,
@@ -458,44 +459,44 @@ const obj29 = {
   "1161363847311785984": null,
 };
 const obj30 = { id: "520373071933079552", skus: null };
-const items13 = [obj2.TIER_2];
-obj30.skus = items13;
+const items14 = [obj2.TIER_2];
+obj30.skus = items14;
 obj29["520373071933079552"] = obj30;
 const obj31 = { id: "902329034132684800", skus: null };
-const items14 = [obj2.TIER_2];
-obj31.skus = items14;
+const items15 = [obj2.TIER_2];
+obj31.skus = items15;
 obj29["902329034132684800"] = obj31;
 const obj32 = { id: "983601860436819968", skus: null };
-const items15 = [obj2.TIER_2];
-obj32.skus = items15;
+const items16 = [obj2.TIER_2];
+obj32.skus = items16;
 obj29["983601860436819968"] = obj32;
 const obj33 = { id: "983601860436819969", skus: null };
-const items16 = [obj2.TIER_2];
-obj33.skus = items16;
+const items17 = [obj2.TIER_2];
+obj33.skus = items17;
 obj29["983601860436819969"] = obj33;
 const obj34 = { id: "984244797441048577", skus: null };
-const items17 = [obj2.TIER_2];
-obj34.skus = items17;
+const items18 = [obj2.TIER_2];
+obj34.skus = items18;
 obj29["984244797441048577"] = obj34;
 const obj35 = { id: "1004850445463584768", skus: null };
-const items18 = [obj2.TIER_2];
-obj35.skus = items18;
+const items19 = [obj2.TIER_2];
+obj35.skus = items19;
 obj29["1004850445463584768"] = obj35;
 const obj36 = { id: "1070132870233980928", skus: null };
-const items19 = [obj2.TIER_0];
-obj36.skus = items19;
+const items20 = [obj2.TIER_0];
+obj36.skus = items20;
 obj29["1070132870233980928"] = obj36;
 const obj37 = { id: "1073698058383917056", skus: null };
-const items20 = [obj2.TIER_2];
-obj37.skus = items20;
+const items21 = [obj2.TIER_2];
+obj37.skus = items21;
 obj29["1073698058383917056"] = obj37;
 const obj38 = { id: "1268347360493174784", skus: null };
-const items21 = [obj2.TIER_2];
-obj38.skus = items21;
+const items22 = [obj2.TIER_2];
+obj38.skus = items22;
 obj29["1268347360493174784"] = obj38;
 const obj39 = { id: "1161363847311785984", skus: null };
-const items22 = [obj2.TIER_2];
-obj39.skus = items22;
+const items23 = [obj2.TIER_2];
+obj39.skus = items23;
 obj29["1161363847311785984"] = obj39;
 const obj40 = {
   PREMIUM_TIER_1: 1,
@@ -551,9 +552,9 @@ const obj46 = {
     stageVideoUsers: MAX_STAGE_VIDEO_USER_LIMIT_TIER01,
   },
 };
-const items23 = [,];
-({ INVITE_SPLASH: arr24[0], ANIMATED_ICON: arr24[1] } = GuildFeatures);
-obj46.features = items23;
+const items24 = [,];
+({ INVITE_SPLASH: arr25[0], ANIMATED_ICON: arr25[1] } = GuildFeatures);
+obj46.features = items24;
 const obj47 = {
   features: null,
   limits: {
@@ -567,9 +568,9 @@ const obj47 = {
     stageVideoUsers: MAX_STAGE_VIDEO_USER_LIMIT_TIER2,
   },
 };
-const items24 = [, , ,];
-({ INVITE_SPLASH: arr25[0], ANIMATED_ICON: arr25[1], BANNER: arr25[2], ROLE_ICONS: arr25[3] } = GuildFeatures);
-obj47.features = items24;
+const items25 = [, , ,];
+({ INVITE_SPLASH: arr26[0], ANIMATED_ICON: arr26[1], BANNER: arr26[2], ROLE_ICONS: arr26[3] } = GuildFeatures);
+obj47.features = items25;
 const obj48 = {
   features: null,
   limits: {
@@ -583,35 +584,35 @@ const obj48 = {
     stageVideoUsers: MAX_STAGE_VIDEO_USER_LIMIT_TIER3,
   },
 };
-const items25 = [, , , , ,];
+const items26 = [, , , , ,];
 ({
-  INVITE_SPLASH: arr26[0],
-  ANIMATED_ICON: arr26[1],
-  BANNER: arr26[2],
-  ANIMATED_BANNER: arr26[3],
-  VANITY_URL: arr26[4],
-  ROLE_ICONS: arr26[5],
+  INVITE_SPLASH: arr27[0],
+  ANIMATED_ICON: arr27[1],
+  BANNER: arr27[2],
+  ANIMATED_BANNER: arr27[3],
+  VANITY_URL: arr27[4],
+  ROLE_ICONS: arr27[5],
 } = GuildFeatures);
-obj48.features = items25;
+obj48.features = items26;
 const frozen8 = Object.freeze(obj41);
-const items26 = [, , , , , , , ,];
+const items27 = [, , , , , , , ,];
 ({
-  PREMIUM_MONTH_TIER_0: arr27[0],
-  PREMIUM_YEAR_TIER_0: arr27[1],
-  PREMIUM_MONTH_TIER_1: arr27[2],
-  PREMIUM_YEAR_TIER_1: arr27[3],
-  PREMIUM_MONTH_TIER_2: arr27[4],
-  PREMIUM_3_MONTH_TIER_2: arr27[5],
-  PREMIUM_6_MONTH_TIER_2: arr27[6],
-  PREMIUM_YEAR_TIER_2: arr27[7],
-  PREMIUM_GROUP_MONTH: arr27[8],
+  PREMIUM_MONTH_TIER_0: arr28[0],
+  PREMIUM_YEAR_TIER_0: arr28[1],
+  PREMIUM_MONTH_TIER_1: arr28[2],
+  PREMIUM_YEAR_TIER_1: arr28[3],
+  PREMIUM_MONTH_TIER_2: arr28[4],
+  PREMIUM_3_MONTH_TIER_2: arr28[5],
+  PREMIUM_6_MONTH_TIER_2: arr28[6],
+  PREMIUM_YEAR_TIER_2: arr28[7],
+  PREMIUM_GROUP_MONTH: arr28[8],
 } = obj5);
-const items27 = [, , ,];
+const items28 = [, , ,];
 ({
-  PREMIUM_MONTH_GUILD: arr28[0],
-  PREMIUM_3_MONTH_GUILD: arr28[1],
-  PREMIUM_6_MONTH_GUILD: arr28[2],
-  PREMIUM_YEAR_GUILD: arr28[3],
+  PREMIUM_MONTH_GUILD: arr29[0],
+  PREMIUM_3_MONTH_GUILD: arr29[1],
+  PREMIUM_6_MONTH_GUILD: arr29[2],
+  PREMIUM_YEAR_GUILD: arr29[3],
 } = obj5);
 const obj49 = { HIGH_STREAMING_QUALITY: "high_streaming_quality", MID_STREAMING_QUALITY: "mid_streaming_quality" };
 const frozen9 = Object.freeze({
@@ -686,18 +687,18 @@ const obj45 = {
   },
 };
 const obj50 = { [obj49.HIGH_STREAMING_QUALITY]: obj.TIER_2, [obj49.MID_STREAMING_QUALITY]: obj.TIER_1 };
-const items28 = [, ,];
-({ SNOWGLOBE: arr29[0], BOX: arr29[1], CUP: arr29[2] } = obj51);
-const items29 = [, , ,];
-({ STANDARD_BOX: arr30[0], CAKE: arr30[1], COFFEE: arr30[2], CHEST: arr30[3] } = obj51);
+const items29 = [, ,];
+({ SNOWGLOBE: arr30[0], BOX: arr30[1], CUP: arr30[2] } = obj51);
 const items30 = [, , ,];
-({ NITROWEEN_STANDARD: arr31[0], CAKE: arr31[1], COFFEE: arr31[2], CHEST: arr31[3] } = obj51);
+({ STANDARD_BOX: arr31[0], CAKE: arr31[1], COFFEE: arr31[2], CHEST: arr31[3] } = obj51);
 const items31 = [, , ,];
+({ NITROWEEN_STANDARD: arr32[0], CAKE: arr32[1], COFFEE: arr32[2], CHEST: arr32[3] } = obj51);
+const items32 = [, , ,];
 ({
-  SEASONAL_STANDARD_BOX: arr32[0],
-  SEASONAL_CAKE: arr32[1],
-  SEASONAL_COFFEE: arr32[2],
-  SEASONAL_CHEST: arr32[3],
+  SEASONAL_STANDARD_BOX: arr33[0],
+  SEASONAL_CAKE: arr33[1],
+  SEASONAL_COFFEE: arr33[2],
+  SEASONAL_CHEST: arr33[3],
 } = obj51);
 const obj52 = {
   PREMIUM_TENURE_1_MONTH: "premium_tenure_1_month_v2",
@@ -709,16 +710,16 @@ const obj52 = {
   PREMIUM_TENURE_60_MONTH: "premium_tenure_60_month_v2",
   PREMIUM_TENURE_72_MONTH: "premium_tenure_72_month_v2",
 };
-const items32 = [, , , , , , ,];
+const items33 = [, , , , , , ,];
 ({
-  PREMIUM_TENURE_1_MONTH: arr33[0],
-  PREMIUM_TENURE_3_MONTH: arr33[1],
-  PREMIUM_TENURE_6_MONTH: arr33[2],
-  PREMIUM_TENURE_12_MONTH: arr33[3],
-  PREMIUM_TENURE_24_MONTH: arr33[4],
-  PREMIUM_TENURE_36_MONTH: arr33[5],
-  PREMIUM_TENURE_60_MONTH: arr33[6],
-  PREMIUM_TENURE_72_MONTH: arr33[7],
+  PREMIUM_TENURE_1_MONTH: arr34[0],
+  PREMIUM_TENURE_3_MONTH: arr34[1],
+  PREMIUM_TENURE_6_MONTH: arr34[2],
+  PREMIUM_TENURE_12_MONTH: arr34[3],
+  PREMIUM_TENURE_24_MONTH: arr34[4],
+  PREMIUM_TENURE_36_MONTH: arr34[5],
+  PREMIUM_TENURE_60_MONTH: arr34[6],
+  PREMIUM_TENURE_72_MONTH: arr34[7],
 } = obj52);
 const obj53 = {};
 const obj54 = {
@@ -730,7 +731,7 @@ const obj54 = {
   glowColor: "#b54913",
   rarity: null,
 };
-const combined = items31.concat(items28);
+const combined = items32.concat(items29);
 obj54.nameUnformatted = util.t.LR1C0a;
 obj54.nameUnformattedNitro = util.t.tx9Fvw;
 obj54.rarity = BadgeRarity.BadgeRarity.COMMON;
@@ -854,9 +855,9 @@ obj53[obj52.PREMIUM_TENURE_72_MONTH] = {
   rarity: BadgeRarity.BadgeRarity.MYTHIC,
 };
 const obj62 = { HOUR: 1, [1]: "HOUR", DAY: 2, [2]: "DAY" };
-const items33 = [obj62.HOUR, 1];
-const items34 = [obj62.DAY, 1];
-const items35 = [obj62.DAY, 3];
+const items34 = [obj62.HOUR, 1];
+const items35 = [obj62.DAY, 1];
+const items36 = [obj62.DAY, 3];
 const result = size.fileFinishedImporting("modules/premium/PremiumConstants.tsx");
 
 export const GiftIntentType = gift_intent_type.GiftIntentType;
@@ -936,22 +937,25 @@ export const PREMIUM_TIER_2_3P_ONE_MONTH_TRIAL_ID = "844502143447597056";
 export const PREMIUM_TIER_2_LIKELIHOOD_DISCOUNT_ID = "1150904354090532864";
 export const PREMIUM_TIER_2_REACTIVATION_DISCOUNT_ID = "1199128659810582528";
 export const PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID = "1204865493622587392";
+export const PREMIUM_TIER_2_CHURN_1_MONTH_10_PERCENT_DISCOUNT_ID = "1552063009336066098";
+export const PREMIUM_TIER_2_CHURN_1_MONTH_50_PERCENT_DISCOUNT_ID = "1552063020560154694";
 export const PREMIUM_TIER_2_CHURN_3_MONTH_DISCOUNT_ID = "1204867673024888832";
+export const CHURN_DISCOUNT_IDS = items10;
 export const PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_30_PERCENT_DISCOUNT_ID = "1215346678383509504";
 export const PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID = "1215366184820539392";
 export const PREMIUM_TIER_2_REENGAGEMENT_1_MONTH_40_PERCENT_DISCOUNT_ID = "1488790996522238054";
 export const PREMIUM_GROUP_30_PERCENT_3_MONTH_DISCOUNT_ID = "1509344915195297792";
 export const PREMIUM_TIER_2_ANNUAL_25_PERCENT_DISCOUNT_ID = "1223319122125783040";
 export const PREMIUM_TIER_2_ANNUAL_20_PERCENT_DISCOUNT_ID = "1223380890109870080";
-export const ANNUAL_DISCOUNT_IDS = items10;
+export const ANNUAL_DISCOUNT_IDS = items11;
 export const PREMIUM_TIER_2_ANNUAL_V2_20_PERCENT_DISCOUNT_ID = "1503844767820152833";
 export const PREMIUM_TIER_2_ANNUAL_V2_30_PERCENT_DISCOUNT_ID = "1503844767820152834";
-export const ANNUAL_V2_DISCOUNT_IDS = items11;
+export const ANNUAL_V2_DISCOUNT_IDS = items12;
 export const PREMIUM_TIER_2_REFERRAL_INCENTIVE_DISCOUNT_ID = "1542641936282681344";
 export const TR_OFFER_1_CAMPAIGN_KEY = "2026-07-tr-offer-1-campaign";
 export const TR_OFFER_1_ORBS_REWARD_AMOUNT = 10000;
 export const TR_OFFER_1_PAYMENT_MODAL_BANNER_KEY = "tr-offer-1-payment-modal-banner";
-export const TRIAL_OFFERS_REQUIRES_REMINDER_ROLLOUT = items12;
+export const TRIAL_OFFERS_REQUIRES_REMINDER_ROLLOUT = items13;
 export const DISCOUNT_OFFERS_REQUIRES_REMINDER_ROLLOUT = [];
 export const DEFAULT_SOUND_SLOTS = 8;
 export const MORE_SOUNDBOARD_SOUNDS = 200;
@@ -1072,8 +1076,8 @@ export const IncrementalStickerCountsByTier = obj42;
 export const TotalStickerCountsByTier = obj43;
 export const TotalSoundboardSoundCountsByTier = obj44;
 export const BoostedGuildFeatures = frozen9;
-export const ORDERED_PREMIUM_SUBSCRIPTION_PLANS = items26;
-export const ORDERED_PREMIUM_GUILD_SUBSCRIPTION_PLANS = items27;
+export const ORDERED_PREMIUM_SUBSCRIPTION_PLANS = items27;
+export const ORDERED_PREMIUM_GUILD_SUBSCRIPTION_PLANS = items28;
 export const AnalyticsPremiumFeatureNames = {
   SOUNDBOARD_PLAY: "soundboard play",
   PROFILE_THEME_COLOR: "profile_theme_color",
@@ -1146,10 +1150,10 @@ export const ReferralTrialsAnalyticSteps = {
   FLOW_COMPLETED: "share_nitro_flow_completed",
 };
 export const LegacyPricingCountries = set6;
-export const LegacySeasonalGiftStyles = items28;
-export const STANDARD_GIFT_OPTIONS = items29;
-export const NITROWEEN_GIFT_OPTIONS = items30;
-export const SEASONAL_GIFT_OPTIONS = items31;
+export const LegacySeasonalGiftStyles = items29;
+export const STANDARD_GIFT_OPTIONS = items30;
+export const NITROWEEN_GIFT_OPTIONS = items31;
+export const SEASONAL_GIFT_OPTIONS = items32;
 export const AllSeasonalGiftStyles = combined;
 export const CUSTOM_GIFT_MESSAGE_MAX_LENGTH = 190;
 export const GiftIntentSecondaryAction = { VIEW_ALL: "view_all", SEND_MESSAGE: "send_message" };
@@ -1172,7 +1176,7 @@ export const DISCOUNT_PERCENTAGE_FALLBACK = 30;
 export const ANNUAL_DISCOUNT_PERCENTAGE_FALLBACK = 20;
 export const PRICE_PLACEHOLDER = "$...";
 export const TieredTenureBadge = obj52;
-export const TIERED_TENURE_BADGE_ORDER = items32;
+export const TIERED_TENURE_BADGE_ORDER = items33;
 export const TENURE_BADGES = obj53;
 export const FractionalPremiumStates = {
   NONE: 0,
@@ -1184,9 +1188,9 @@ export const FractionalPremiumStates = {
 };
 export const FractionalPremiumIntervalTypes = obj62;
 export const FRACTIONAL_PREMIUM_SKU_INTERVAL_COUNTS = {
-  [FractionalPremiumSKUs.FractionalPremiumSKUs.PREMIUM_TIER_2_1_HOUR]: items33,
-  [FractionalPremiumSKUs.FractionalPremiumSKUs.PREMIUM_TIER_2_1_DAY]: items34,
-  [FractionalPremiumSKUs.FractionalPremiumSKUs.PREMIUM_TIER_2_3_DAY]: items35,
+  [FractionalPremiumSKUs.FractionalPremiumSKUs.PREMIUM_TIER_2_1_HOUR]: items34,
+  [FractionalPremiumSKUs.FractionalPremiumSKUs.PREMIUM_TIER_2_1_DAY]: items35,
+  [FractionalPremiumSKUs.FractionalPremiumSKUs.PREMIUM_TIER_2_3_DAY]: items36,
 };
 export const NAMESPACE_SNOWFLAKE_UUID = "8e884ace-bee4-12e4-8dfc-aa07a5b093db";
 export const PREMIUM_PLAN_SELECTION_ACTION_SHEET_KEY = "PremiumPlanSelectionActionSheetWithOrderCTX";

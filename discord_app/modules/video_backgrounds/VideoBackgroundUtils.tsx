@@ -90,7 +90,7 @@ function getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption) {
   }
   return str;
 }
-const VideoBackgroundConstants = fn(7318);
+const VideoBackgroundConstants = fn(7320);
 ({
   DefaultVideoBackground: hasOwnProperty,
   VideoFilterType: metroRequire,

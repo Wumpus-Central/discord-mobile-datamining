@@ -583,8 +583,8 @@ export const createProject = function createProject() {
 export const renameProject = function renameProject(projectId, name) {
   return patchProject(projectId, { name });
 };
-export const updateProjectSettings = function updateProjectSettings(projectId, arg1) {
-  return patchProject(projectId, arg1);
+export const updateProjectSettings = function updateProjectSettings(first1, arg1) {
+  return patchProject(first1, arg1);
 };
 export const setProjectIcon = function setProjectIcon() {
   const self = this;

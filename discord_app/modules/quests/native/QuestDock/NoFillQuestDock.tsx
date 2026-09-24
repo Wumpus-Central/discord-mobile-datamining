@@ -6,9 +6,9 @@ const require = globalThis.__r;
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let closure_4 = createStyles.createStyles({
-  placeholder: { position: "absolute", left: 0, right: 0, height: fn(15422).QUEST_DOCK_COLLAPSED_HEIGHT, opacity: 0 },
+  placeholder: { position: "absolute", left: 0, right: 0, height: fn(15431).QUEST_DOCK_COLLAPSED_HEIGHT, opacity: 0 },
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/NoFillQuestDock.tsx");

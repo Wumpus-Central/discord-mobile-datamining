@@ -3,7 +3,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let closure_2 = createStyles.createStyles({
   footer: { flexDirection: "column", paddingVertical: 16, paddingHorizontal: 24 },
 });

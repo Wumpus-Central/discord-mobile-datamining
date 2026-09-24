@@ -6,11 +6,11 @@ const require = globalThis.__r;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c2, Pressable: c3 } = get_ActivityIndicator);
-const PromoEmailConsentStore = fn(6921);
+const PromoEmailConsentStore = fn(6923);
 ({ usePromoEmailConsentStore: closure_4, setPromoEmailConsentChecked: hasOwnProperty } = PromoEmailConsentStore);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let closure_8 = createStyles.createStyles({
   checkboxRow: { flexDirection: "row", alignItems: "flex-start", gap: 8 },
   checkboxLabel: { flex: 1 },
@@ -24,33 +24,37 @@ export default function PromotionalEmailCheckBox(style) {
   _require = tmp3;
   const tmp2 = closure_4((required) => required.required);
   const checkboxA11yNative = require("useA11yRolesNative").useCheckboxA11yNative({ checked: tmp3 });
-  let tmp9 = null;
+  ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
+  const obj = require("useA11yRolesNative");
+  const promoEmailOptInLabel = require("usePromoEmailOptInLabel").usePromoEmailOptInLabel(
+    require("util").t.ylFCLt,
+    "REGISTER_PROMO_EMAIL_CHECKBOX_MOBILE",
+  );
+  let tmp8 = null;
   if (tmp2) {
-    const obj2 = { style: style.style, children: null };
-    const obj3 = {
-      accessibilityRole: tmp7,
-      accessibilityLabel: null,
-      accessibilityState: null,
-      onPress: null,
-      style: null,
+    const obj3 = { style: style.style, children: null };
+    const obj4 = {
+      accessibilityRole,
+      accessibilityLabel: promoEmailOptInLabel,
+      accessibilityState,
+      onPress() {
+        return hasOwnProperty(!closure_0);
+      },
+      style: tmp.checkboxRow,
       children: null,
     };
-    const intl = tmp4(1115).intl;
-    obj3.accessibilityLabel = intl.string(tmp4(1115).t.ylFCLt);
-    obj3.accessibilityState = tmp8;
-    obj3.onPress = function onPress() {
-      return hasOwnProperty(!closure_0);
+    const obj5 = { checked: tmp3 };
+    const items = [closure_6(tmp4(5922).FormCheckbox, obj5)];
+    const obj6 = {
+      variant: "text-xs/medium",
+      color: "text-muted",
+      style: tmp.checkboxLabel,
+      children: promoEmailOptInLabel,
     };
-    obj3.style = tmp.checkboxRow;
-    const obj4 = { checked: tmp3 };
-    const items = [closure_6(tmp4(5920).FormCheckbox, obj4)];
-    const obj5 = { variant: "text-xs/medium", color: "text-muted", style: tmp.checkboxLabel, children: null };
-    const intl2 = tmp4(1115).intl;
-    obj5.children = intl2.string(tmp4(1115).t.ylFCLt);
-    items[1] = closure_6(tmp4(4823).Text, obj5);
-    obj3.children = items;
-    obj2.children = closure_7(closure_3, obj3);
-    tmp9 = closure_6(closure_2, obj2);
+    items[1] = closure_6(tmp4(4825).Text, obj6);
+    obj4.children = items;
+    obj3.children = closure_7(closure_3, obj4);
+    tmp8 = closure_6(closure_2, obj3);
   }
-  return tmp9;
+  return tmp8;
 }

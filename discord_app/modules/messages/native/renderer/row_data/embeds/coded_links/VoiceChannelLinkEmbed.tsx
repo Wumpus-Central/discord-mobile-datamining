@@ -14,9 +14,9 @@ import UserStore from "../../../../../../../stores/UserStore.tsx";
 
 require = fn;
 const Image = fn(17).Image;
-const getGuildAcronym = fn(2060).getGuildAcronym;
+const getGuildAcronym = fn(2062).getGuildAcronym;
 const Permissions = fn(1074).Permissions;
-const InviteTypes = fn(8063).InviteTypes;
+const InviteTypes = fn(8065).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/coded_links/VoiceChannelLinkEmbed.tsx",

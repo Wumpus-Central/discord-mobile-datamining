@@ -3,6 +3,7 @@ import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
+import reanimated_AccessibilityPreferencesSharedValue from "../../../design/animation/reanimated/AccessibilityPreferencesSharedValue.native.tsx";
 import HomeDrawerAnimations from "HomeDrawerAnimations.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -10,9 +11,9 @@ import HomeDrawerStore from "HomeDrawerStore.tsx";
 import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore.tsx";
 
 require = fn;
-const computeMaxX = fn(16419).computeMaxX;
+const computeMaxX = fn(16443).computeMaxX;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const LaunchPadTypes = fn(11801).LaunchPadTypes;
+const LaunchPadTypes = fn(11807).LaunchPadTypes;
 let c10 = 144;
 let c11 = 96.00000000000001;
 let c12 = 48;
@@ -24,7 +25,7 @@ let closure_15 = {
   code: "function useHomeDrawerGestureTsx2(){const{isSnappedOpen}=this.__closure;return isSnappedOpen.get();}",
 };
 let closure_16 = {
-  code: "function useHomeDrawerGestureTsx3(isSnapped,wasSnapped){const{gestureState,didSnapThisGesture,snapX,withTiming,SNAP_OPEN_DISTANCE,HOME_DRAWER_SNAP_TIMING,runOnJS,triggerHapticFeedback,HapticFeedbackTypes,flingThrow,HOME_DRAWER_UNSNAP_TIMING,hasThrown,snappedByDrag}=this.__closure;if(!gestureState.get().active||wasSnapped===null){return;}if(isSnapped===wasSnapped){return;}if(isSnapped){didSnapThisGesture.set(true);snapX.set(withTiming(SNAP_OPEN_DISTANCE,HOME_DRAWER_SNAP_TIMING));runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.IMPACT_MEDIUM);return;}if(!didSnapThisGesture.get()){return;}flingThrow.set(withTiming(0,HOME_DRAWER_UNSNAP_TIMING));hasThrown.set(false);snappedByDrag.set(false);snapX.set(withTiming(0,HOME_DRAWER_UNSNAP_TIMING));runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.SOFT);}",
+  code: "function useHomeDrawerGestureTsx3(isSnapped,wasSnapped){const{gestureState,didSnapThisGesture,snapX,withTiming,SNAP_OPEN_DISTANCE,HOME_DRAWER_SNAP_TIMING,runOnJS,triggerHapticFeedback,HapticFeedbackTypes,flingThrow,HOME_DRAWER_UNSNAP_TIMING,hasThrown,snappedByDrag}=this.__closure;if(!gestureState.get().active||wasSnapped===null){return;}if(isSnapped===wasSnapped){return;}if(isSnapped){didSnapThisGesture.set(true);snapX.set(withTiming(SNAP_OPEN_DISTANCE,HOME_DRAWER_SNAP_TIMING,'animate-always'));runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.IMPACT_MEDIUM);return;}if(!didSnapThisGesture.get()){return;}flingThrow.set(withTiming(0,HOME_DRAWER_UNSNAP_TIMING));hasThrown.set(false);snappedByDrag.set(false);snapX.set(withTiming(0,HOME_DRAWER_UNSNAP_TIMING,'animate-always'));runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.SOFT);}",
 };
 let closure_17 = {
   code: "function useHomeDrawerGestureTsx4(){const{panelX,snapX,peekX}=this.__closure;return panelX.get()+snapX.get()+peekX.get();}",
@@ -42,7 +43,7 @@ let __initData = {
   code: "function useHomeDrawerGestureTsx8(){const{panelTranslateX,isPullActive,HOME_DRAWER_PULL_SETTLE_WIDTH,MAX_HOME_DRAWER_ANIMATING_WIDTH,SNAP_OPEN_DISTANCE}=this.__closure;const reveal=panelTranslateX.get();if(!isPullActive.get()||reveal<=0||reveal>=HOME_DRAWER_PULL_SETTLE_WIDTH){return 0;}return reveal<MAX_HOME_DRAWER_ANIMATING_WIDTH?reveal/MAX_HOME_DRAWER_ANIMATING_WIDTH:1-(reveal-MAX_HOME_DRAWER_ANIMATING_WIDTH)/SNAP_OPEN_DISTANCE;}",
 };
 let __initData2 = {
-  code: "function useHomeDrawerGestureTsx9(){const{pullFraction,HOME_DRAWER_PULL_DISTANCE,flingThrow,HOME_DRAWER_FLING_THROW_DISTANCE}=this.__closure;return Math.max(pullFraction.get()*HOME_DRAWER_PULL_DISTANCE,flingThrow.get()*HOME_DRAWER_FLING_THROW_DISTANCE);}",
+  code: "function useHomeDrawerGestureTsx9(){const{accessibilityPreferencesSharedValue,pullFraction,HOME_DRAWER_PULL_DISTANCE,flingThrow,HOME_DRAWER_FLING_THROW_DISTANCE}=this.__closure;if(accessibilityPreferencesSharedValue.get().reduceMotion){return 0;}return Math.max(pullFraction.get()*HOME_DRAWER_PULL_DISTANCE,flingThrow.get()*HOME_DRAWER_FLING_THROW_DISTANCE);}",
 };
 let closure_23 = {
   code: "function useHomeDrawerGestureTsx10(){const{guildsBarPullX}=this.__closure;return{transform:[{translateX:guildsBarPullX.get()}]};}",
@@ -51,7 +52,7 @@ let closure_24 = {
   code: "function visualPanelX_useHomeDrawerGestureTsx11(){const{panelX,isSnappedOpen,SNAP_OPEN_DISTANCE}=this.__closure;return panelX.get()+(isSnappedOpen.get()?SNAP_OPEN_DISTANCE:0);}",
 };
 let closure_25 = {
-  code: "function settleDrawer_useHomeDrawerGestureTsx12(shouldOpen){const{isOpenTarget,panelX,withTiming,maxX,HOME_DRAWER_SETTLE_TIMING,snapX,runOnJS,setHomeDrawerState}=this.__closure;isOpenTarget.set(shouldOpen);panelX.set(withTiming(shouldOpen?maxX:0,HOME_DRAWER_SETTLE_TIMING));snapX.set(withTiming(0,HOME_DRAWER_SETTLE_TIMING));runOnJS(setHomeDrawerState)(shouldOpen);}",
+  code: "function settleDrawer_useHomeDrawerGestureTsx12(shouldOpen){const{isOpenTarget,panelX,withTiming,maxX,HOME_DRAWER_SETTLE_TIMING,snapX,runOnJS,setHomeDrawerState}=this.__closure;isOpenTarget.set(shouldOpen);panelX.set(withTiming(shouldOpen?maxX:0,HOME_DRAWER_SETTLE_TIMING,'animate-always'));snapX.set(withTiming(0,HOME_DRAWER_SETTLE_TIMING,'animate-always'));runOnJS(setHomeDrawerState)(shouldOpen);}",
 };
 let closure_26 = {
   code: "function fireThrow_useHomeDrawerGestureTsx13(){const{hasThrown,isPullActive,flingThrow,clamp,pullFraction,HOME_DRAWER_PULL_DISTANCE,HOME_DRAWER_FLING_THROW_DISTANCE,withSequence,withTiming,HOME_DRAWER_FLING_THROW_TIMING,HOME_DRAWER_FLING_RETURN_TIMING}=this.__closure;if(hasThrown.get()||!isPullActive.get()){return;}hasThrown.set(true);flingThrow.set(clamp(pullFraction.get()*HOME_DRAWER_PULL_DISTANCE/HOME_DRAWER_FLING_THROW_DISTANCE,0,1));flingThrow.set(withSequence(withTiming(1,HOME_DRAWER_FLING_THROW_TIMING),withTiming(0,HOME_DRAWER_FLING_RETURN_TIMING)));}",
@@ -86,17 +87,17 @@ let obj = {
   guildsBarDrawerStyle: null,
   guildsBarPullX: null,
 };
-let Gesture = fn(6983).Gesture;
+let Gesture = fn(6985).Gesture;
 obj.gesture = Gesture.Pan();
 obj.panelStyles = {};
-let ReanimatedHelperTypes = fn(7405);
+let ReanimatedHelperTypes = fn(7407);
 obj.gestureState = ReanimatedHelperTypes.createFakeSharedValue({ active: false, initialX: 0, initialY: 0, panelX: 0 });
-ReanimatedHelperTypes = fn(7405);
+ReanimatedHelperTypes = fn(7407);
 obj.panelX = ReanimatedHelperTypes.createFakeSharedValue(0);
-ReanimatedHelperTypes = fn(7405);
+ReanimatedHelperTypes = fn(7407);
 obj.panelTranslateX = ReanimatedHelperTypes.createFakeSharedValue(0);
 obj.guildsBarDrawerStyle = {};
-ReanimatedHelperTypes = fn(7405);
+ReanimatedHelperTypes = fn(7407);
 obj.guildsBarPullX = ReanimatedHelperTypes.createFakeSharedValue(0);
 const context = noop.createContext({ homeDrawerState: obj, enableHome: false, landOnHome: false });
 const size = fn(2);
@@ -168,14 +169,18 @@ export const useHomeGesture = function useHomeGesture() {
         if (arg0 !== arg1) {
           if (arg0) {
             const result = sharedValue3.set(true);
-            const result1 = snapX.set(timing.withTiming(c11, HomeDrawerAnimations.HOME_DRAWER_SNAP_TIMING));
+            const result1 = snapX.set(
+              timing.withTiming(c11, HomeDrawerAnimations.HOME_DRAWER_SNAP_TIMING, "animate-always"),
+            );
             ReanimatedRexport.runOnJS(HapticUtils.triggerHapticFeedback)(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
             const runOnJSResult = ReanimatedRexport.runOnJS(HapticUtils.triggerHapticFeedback);
           } else if (sharedValue3.get()) {
             const result2 = sharedValue5.set(timing.withTiming(0, HomeDrawerAnimations.HOME_DRAWER_UNSNAP_TIMING));
             const result3 = sharedValue7.set(false);
             const result4 = sharedValue6.set(false);
-            const result5 = snapX.set(timing.withTiming(0, HomeDrawerAnimations.HOME_DRAWER_UNSNAP_TIMING));
+            const result5 = snapX.set(
+              timing.withTiming(0, HomeDrawerAnimations.HOME_DRAWER_UNSNAP_TIMING, "animate-always"),
+            );
             ReanimatedRexport.runOnJS(HapticUtils.triggerHapticFeedback)(HapticUtils.HapticFeedbackTypes.SOFT);
             const runOnJSResult1 = ReanimatedRexport.runOnJS(HapticUtils.triggerHapticFeedback);
           }
@@ -200,7 +205,7 @@ export const useHomeGesture = function useHomeGesture() {
     hasThrown: sharedValue7,
     snappedByDrag: sharedValue6,
   };
-  fn2.__workletHash = 15139721367747;
+  fn2.__workletHash = 7899810169347;
   fn2.__initData = sharedValue6;
   const animatedReaction = obj14.useAnimatedReaction(fn, fn2);
   let tmp17 = panelX(snapX[13])();
@@ -523,20 +528,39 @@ export const useHomeGesture = function useHomeGesture() {
   const tmpResult16 = landOnHome(snapX[7]);
   class Ce {
     constructor() {
-      result = 12 * closure_33.get();
-      return Math.max(result, 16 * closure_15.get());
+      accessibilityPreferencesSharedValue = closure_0(closure_2[20]).accessibilityPreferencesSharedValue;
+      num = 0;
+      if (!accessibilityPreferencesSharedValue.get().reduceMotion) {
+        tmp = globalThis;
+        _Math = Math;
+        tmp2 = closure_33;
+        num2 = 12;
+        tmp4 = closure_15;
+        result = 12 * closure_33.get();
+        num3 = 16;
+        num = Math.max(result, 16 * closure_15.get());
+      }
+      return num;
     }
   }
+  const tmpResult17 = landOnHome(snapX[7]);
   Ce.__closure = {
+    accessibilityPreferencesSharedValue: landOnHome(snapX[20]).accessibilityPreferencesSharedValue,
     pullFraction: derivedValue2,
     HOME_DRAWER_PULL_DISTANCE: 12,
     flingThrow: sharedValue5,
     HOME_DRAWER_FLING_THROW_DISTANCE: 16,
   };
-  Ce.__workletHash = 6546517869662;
+  Ce.__workletHash = 9960352904018;
   Ce.__initData = __initData2;
-  const derivedValue3 = landOnHome(snapX[7]).useDerivedValue(Ce);
-  const tmpResult17 = landOnHome(snapX[7]);
+  const derivedValue3 = tmpResult17.useDerivedValue(Ce);
+  const obj16 = {
+    accessibilityPreferencesSharedValue: landOnHome(snapX[20]).accessibilityPreferencesSharedValue,
+    pullFraction: derivedValue2,
+    HOME_DRAWER_PULL_DISTANCE: 12,
+    flingThrow: sharedValue5,
+    HOME_DRAWER_FLING_THROW_DISTANCE: 16,
+  };
   function be() {
     const obj = { transform: null };
     const items = [{ translateX: derivedValue3.get() }];
@@ -588,11 +612,11 @@ export const useHomeGesture = function useHomeGesture() {
         num = maxX;
       }
       const result1 = settleDrawer.set(
-        landOnHome(snapX[10]).withTiming(num, landOnHome(snapX[11]).HOME_DRAWER_SETTLE_TIMING),
+        landOnHome(snapX[10]).withTiming(num, landOnHome(snapX[11]).HOME_DRAWER_SETTLE_TIMING, "animate-always"),
       );
       const obj = landOnHome(snapX[10]);
       const result2 = fireThrow.set(
-        landOnHome(snapX[10]).withTiming(0, landOnHome(snapX[11]).HOME_DRAWER_SETTLE_TIMING),
+        landOnHome(snapX[10]).withTiming(0, landOnHome(snapX[11]).HOME_DRAWER_SETTLE_TIMING, "animate-always"),
       );
       const tmp3Result = landOnHome(snapX[10]);
       landOnHome(snapX[7]).runOnJS(landOnHome(snapX[19]).setHomeDrawerState)(flag);
@@ -608,7 +632,7 @@ export const useHomeGesture = function useHomeGesture() {
       runOnJS: landOnHome(snapX[7]).runOnJS,
       setHomeDrawerState: landOnHome(snapX[19]).setHomeDrawerState,
     };
-    settleDrawer.__workletHash = 11040545373175;
+    settleDrawer.__workletHash = 13128455922839;
     settleDrawer.__initData = __initData;
     fireThrow = function fireThrow() {
       value = sharedValue7.get();
@@ -720,7 +744,7 @@ export const useHomeGesture = function useHomeGesture() {
     };
     shouldOpenFromPosition.__workletHash = 13719937872789;
     shouldOpenFromPosition.__initData = drawerOpen;
-    const Gesture = landOnHome(snapX[20]).Gesture;
+    const Gesture = landOnHome(snapX[21]).Gesture;
     let obj3 = {
       hasThrown: sharedValue7,
       isPullActive: sharedValue4,

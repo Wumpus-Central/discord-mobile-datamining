@@ -1,10 +1,10 @@
 // discord_app/modules/safety_flows/native/tasks/PendingRequestList.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
-import _modDef2484 from "../../../parent_tools/FamilyCenter.messages.js";
-import _modDef2778 from "../../SafetyFlows.messages.js";
+import _modDef2486 from "../../../parent_tools/FamilyCenter.messages.js";
+import _modDef2780 from "../../SafetyFlows.messages.js";
 import useRefreshLinkCodeOnExpiryDefault from "../../../parent_tools/hooks/useRefreshLinkCodeOnExpiry.tsx";
-import _modDef15260 from "../../../../../_runtime/metro/15260__.js";
+import _modDef15269 from "../../../../../_runtime/metro/15269__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
@@ -176,7 +176,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = {
   card: {
     borderRadius: nativeDefault.radii.lg,
@@ -382,7 +382,7 @@ export default function PendingRequestList(arg0) {
   const items1 = [c7(c5, { style: tmp.dividerLine }), ,];
   const obj7 = { style: tmp.dividerLabel, variant: "text-sm/medium", color: "text-muted", children: null };
   let intl = tmp5(1115).intl;
-  obj7.children = intl.string(_modDef2778["/SbB94"]);
+  obj7.children = intl.string(_modDef2780["/SbB94"]);
   items1[1] = c7(require("Text/Text").Text, obj7);
   items1[2] = c7(c5, { style: tmp.dividerLine });
   obj5.children = items1;
@@ -411,11 +411,11 @@ export default function PendingRequestList(arg0) {
   const obj11 = { style: tmp.details, children: null };
   const obj12 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = tmp5(1115).intl;
-  obj12.children = intl2.string(_modDef2778.z9gkwZ);
+  obj12.children = intl2.string(_modDef2780.z9gkwZ);
   const items4 = [c7(require("Text/Text").Text, obj12)];
   const obj13 = { variant: "text-xs/medium", color: "text-default", children: null };
   const intl3 = tmp5(1115).intl;
-  obj13.children = intl3.string(_modDef2778["9t4+vC"]);
+  obj13.children = intl3.string(_modDef2780["9t4+vC"]);
   items4[1] = c7(require("Text/Text").Text, obj13);
   obj11.children = items4;
   items3[1] = closure_8(c5, obj11);
@@ -431,7 +431,7 @@ export default function PendingRequestList(arg0) {
   const items6 = [c7(require("Pressables").PressableOpacity, obj15)];
   const obj17 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
   const intl5 = tmp5(1115).intl;
-  obj17.accessibilityLabel = intl5.string(_modDef2778.z9gkwZ);
+  obj17.accessibilityLabel = intl5.string(_modDef2780.z9gkwZ);
   obj17.onPress = onInviteAnotherGuardian;
   const items7 = [,];
   ({ actionButton: arr8[0], inviteQrButton: arr8[1] } = tmp);

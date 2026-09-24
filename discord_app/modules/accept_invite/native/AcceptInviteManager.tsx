@@ -15,7 +15,7 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const ACCEPT_INVITE_MODAL_KEY = fn(7992).ACCEPT_INVITE_MODAL_KEY;
+const ACCEPT_INVITE_MODAL_KEY = fn(7994).ACCEPT_INVITE_MODAL_KEY;
 const Constants = fn(1074);
 ({ InviteStates: c10, Permissions: closure_11, Routes: closure_12 } = Constants);
 const prototype = function AcceptInviteManager() {
@@ -84,7 +84,7 @@ const prototype = function AcceptInviteManager() {
               }
               const obj = { location: str };
               FriendInviteUtils.acceptFriendInvite(invite, obj);
-              DispatcherDefault.wait(() => set(9094).clearDisplayedInvite());
+              DispatcherDefault.wait(() => set(9098).clearDisplayedInvite());
               flag = false;
             }
           }
@@ -138,7 +138,7 @@ const prototype = function AcceptInviteManager() {
           obj9 = InviteTypeUtils;
         }
         if (flag2) {
-          DispatcherDefault.wait(() => set(9094).clearDisplayedInvite());
+          DispatcherDefault.wait(() => set(9098).clearDisplayedInvite());
           flag = false;
         } else {
           ActionSheetActionCreatorsDefault.hideActionSheet();
@@ -149,7 +149,7 @@ const prototype = function AcceptInviteManager() {
             inviteInstanceId,
           };
           ModalActionCreatorsDefault.pushLazy(
-            asyncRequireImpl(17801, dependencyMap.paths),
+            asyncRequireImpl(17824, dependencyMap.paths),
             obj4,
             ACCEPT_INVITE_MODAL_KEY,
           );

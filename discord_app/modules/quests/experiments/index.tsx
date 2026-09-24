@@ -98,7 +98,14 @@ const apexExperiment7 = ApexExperiment.createApexExperiment({
   },
 });
 let ApexExperiment = ApexExperiment_mod;
-const obj18 = {
+const apexExperiment8 = ApexExperiment.createApexExperiment({
+  name: "2026-05-bounty-stale-refresh-quest-home",
+  kind: "user",
+  defaultConfig: { enabled: false },
+  variations: { 0: { enabled: false }, 1: { enabled: true } },
+});
+let ApexExperiment = ApexExperiment_mod;
+const obj19 = {
   CONTROL: 0,
   [0]: "CONTROL",
   NEW_LAYOUT_WITH_SEARCH: 1,
@@ -110,26 +117,37 @@ const obj18 = {
   REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER: 4,
   [4]: "REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER",
 };
-const apexExperiment8 = ApexExperiment.createApexExperiment({
-  name: "2026-05-bounty-stale-refresh-quest-home",
+const apexExperiment9 = ApexExperiment.createApexExperiment({
+  name: "2026-09-mobile-quest-home-sort-priority",
   kind: "user",
   defaultConfig: { enabled: false },
   variations: { 0: { enabled: false }, 1: { enabled: true } },
 });
 let ApexExperiment = ApexExperiment_mod;
-const obj19 = {
+const obj20 = {
   name: "2026-06-quest-home-layout-visual-tweaks",
   kind: "user",
-  defaultConfig: { enabled: false, variant: obj18.CONTROL },
+  defaultConfig: { enabled: false, variant: obj19.CONTROL },
   variations: {
-    0: { enabled: false, variant: obj18.CONTROL },
-    1: { enabled: true, variant: obj18.NEW_LAYOUT_WITH_SEARCH },
-    2: { enabled: true, variant: obj18.LARGE_MASK_MARGIN },
-    3: { enabled: true, variant: obj18.REMOVE_QUEST_TITLE_SUFFIX },
-    4: { enabled: true, variant: obj18.REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER },
+    0: { enabled: false, variant: obj19.CONTROL },
+    1: { enabled: true, variant: obj19.NEW_LAYOUT_WITH_SEARCH },
+    2: { enabled: true, variant: obj19.LARGE_MASK_MARGIN },
+    3: { enabled: true, variant: obj19.REMOVE_QUEST_TITLE_SUFFIX },
+    4: { enabled: true, variant: obj19.REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER },
   },
 };
-const apexExperiment9 = ApexExperiment.createApexExperiment(obj19);
+const apexExperiment10 = ApexExperiment.createApexExperiment(obj20);
+let ApexExperiment = ApexExperiment_mod;
+const obj22 = {
+  name: "2026-09-quest-mobile-bar-secondary-cta",
+  kind: "user",
+  defaultConfig: { enabled: false },
+  variations: null,
+};
+const obj23 = { 1: null };
+obj23[1] = { enabled: true };
+obj22.variations = obj23;
+const apexExperiment11 = ApexExperiment.createApexExperiment(obj22);
 const result = size.fileFinishedImporting("modules/quests/experiments/index.tsx");
 
 export const VideoEndCardV2Experiment = apexExperiment;
@@ -157,5 +175,7 @@ export const ComposedQuestPlayerExperiment = apexExperiment5;
 export const MobileQuestHomeRedDotNotificationExperiment = apexExperiment6;
 export const QuestHomeTileRedesignExperiment = apexExperiment7;
 export const BountyStaleRefreshQuestHomeExperiment = apexExperiment8;
-export const QuestHomeLayoutVisualTweakVariant = obj18;
-export const QuestHomeLayoutVisualTweaksExperiment = apexExperiment9;
+export const MobileQuestHomeSortPriorityExperiment = apexExperiment9;
+export const QuestHomeLayoutVisualTweakVariant = obj19;
+export const QuestHomeLayoutVisualTweaksExperiment = apexExperiment10;
+export const QuestMobileBarSecondaryCtaExperiment = apexExperiment11;

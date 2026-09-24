@@ -76,7 +76,22 @@ prototype["createFromServer"] = function createFromServer(display_name) {
         };
         tmp18 = obj;
       }
-      const obj2 = { discount: tmp18 };
+      const obj2 = { discount: tmp18, action: null };
+      let tmp19 = null;
+      if (tmp14 != reward_config.action) {
+        const obj3 = {
+          actionType: reward_config.action.action_type,
+          deliveryMode: reward_config.action.delivery_mode,
+          skuIds: null,
+        };
+        let sku_ids = reward_config.action.sku_ids;
+        if (sku_ids == tmp14) {
+          sku_ids = [];
+        }
+        obj3.skuIds = sku_ids;
+        tmp19 = obj3;
+      }
+      obj2.action = tmp19;
       tmp17 = obj2;
     }
     tmp16 = tmp17;
@@ -97,151 +112,151 @@ prototype["createFromServer"] = function createFromServer(display_name) {
     const _Date3 = Date;
     date2 = new Date(display_name.redemption_ends_at);
   }
-  let tmp33 = null;
+  let tmp34 = null;
   if (tmp14 != display_name.progress) {
     const progress = display_name.progress;
-    const obj4 = { current: null, target: null, label: null };
-    ({ current: obj3.current, target } = progress);
-    obj4.target = target;
-    obj4.label = progress.label;
-    tmp33 = obj4;
+    const obj5 = { current: null, target: null, label: null };
+    ({ current: obj4.current, target } = progress);
+    obj5.target = target;
+    obj5.label = progress.label;
+    tmp34 = obj5;
   }
-  let tmp34 = null;
+  let tmp35 = null;
   if (tmp14 != display_name.tenant_metadata) {
     const tenant_metadata = display_name.tenant_metadata;
     if (tmp14 == tenant_metadata.collectibles) {
-      const obj6 = { collectibles: _Date3 };
-      tmp34 = obj6;
+      const obj7 = { collectibles: _Date3 };
+      tmp35 = obj7;
     } else {
       let collectibles = tenant_metadata.collectibles;
       const type = collectibles.type;
-      let obj31 = require;
-      let tmp35 = dependencyMap;
+      let obj32 = require;
+      let tmp36 = dependencyMap;
       if (StorefrontCollectiblesTypes.StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM === type) {
-        if (collectibles.subtype === obj31(9145).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER) {
-          const obj7 = {
-            type: obj31(9145).StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM,
-            subtype: obj31(9145).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER,
+        if (collectibles.subtype === obj32(9149).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER) {
+          const obj8 = {
+            type: obj32(9149).StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM,
+            subtype: obj32(9149).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER,
             collectionId: collectibles.collection_id,
             shopHome: null,
             indexPage: null,
             shared: null,
           };
-          const obj8 = {
+          const obj9 = {
             title: collectibles.shop_home.title,
             description: collectibles.shop_home.description,
             rewardStates: null,
             style: null,
           };
           const reward_states2 = collectibles.shop_home.reward_states;
-          const obj9 = { inProgress: null, earned: null, consumed: null };
-          const obj10 = { progressSteps: null };
+          const obj10 = { inProgress: null, earned: null, consumed: null };
+          const obj11 = { progressSteps: null };
           const progress_steps = reward_states2.in_progress.progress_steps;
-          obj10.progressSteps = progress_steps.map((heroUrl) => ({ heroUrl: heroUrl.hero_url }));
-          obj9.inProgress = obj10;
-          const obj11 = { heroUrl: reward_states2.earned.hero_url };
-          obj9.earned = obj11;
-          const obj12 = { heroUrl: reward_states2.consumed.hero_url };
-          obj9.consumed = obj12;
-          obj8.rewardStates = obj9;
-          let tmp47;
-          if (tmp14 != collectibles.shop_home.style) {
-            const obj13 = { contentTheme: collectibles.shop_home.style.content_theme };
-            tmp47 = obj13;
-          }
-          obj8.style = tmp47;
-          obj7.shopHome = obj8;
-          const obj14 = { description: collectibles.index_page.description, rewardStates: null, style: null };
-          const reward_states = collectibles.index_page.reward_states;
-          const obj15 = { inProgress: null, earned: null, consumed: null };
-          const obj16 = { progressSteps: null };
-          const progress_steps1 = reward_states.in_progress.progress_steps;
-          obj16.progressSteps = progress_steps1.map((heroUrl) => ({ heroUrl: heroUrl.hero_url }));
-          obj15.inProgress = obj16;
-          const obj17 = { heroUrl: reward_states.earned.hero_url };
-          obj15.earned = obj17;
-          const obj18 = { heroUrl: reward_states.consumed.hero_url };
-          obj15.consumed = obj18;
-          obj14.rewardStates = obj15;
+          obj11.progressSteps = progress_steps.map((heroUrl) => ({ heroUrl: heroUrl.hero_url }));
+          obj10.inProgress = obj11;
+          const obj12 = { heroUrl: reward_states2.earned.hero_url };
+          obj10.earned = obj12;
+          const obj13 = { heroUrl: reward_states2.consumed.hero_url };
+          obj10.consumed = obj13;
+          obj9.rewardStates = obj10;
           let tmp48;
-          if (tmp14 != collectibles.index_page.style) {
-            const obj19 = { contentTheme: collectibles.index_page.style.content_theme };
-            tmp48 = obj19;
+          if (tmp14 != collectibles.shop_home.style) {
+            const obj14 = { contentTheme: collectibles.shop_home.style.content_theme };
+            tmp48 = obj14;
           }
-          obj14.style = tmp48;
-          obj7.indexPage = obj14;
-          ({ progress_indicator, navigation, help_center } = collectibles.shared);
-          const obj20 = { title: null, description: null, rewardStates: null, assets: null, style: null };
-          ({ title: obj22.title, description: obj22.description } = progress_indicator);
+          obj9.style = tmp48;
+          obj8.shopHome = obj9;
+          const obj15 = { description: collectibles.index_page.description, rewardStates: null, style: null };
+          const reward_states = collectibles.index_page.reward_states;
+          const obj16 = { inProgress: null, earned: null, consumed: null };
+          const obj17 = { progressSteps: null };
+          const progress_steps1 = reward_states.in_progress.progress_steps;
+          obj17.progressSteps = progress_steps1.map((heroUrl) => ({ heroUrl: heroUrl.hero_url }));
+          obj16.inProgress = obj17;
+          const obj18 = { heroUrl: reward_states.earned.hero_url };
+          obj16.earned = obj18;
+          const obj19 = { heroUrl: reward_states.consumed.hero_url };
+          obj16.consumed = obj19;
+          obj15.rewardStates = obj16;
           let tmp49;
+          if (tmp14 != collectibles.index_page.style) {
+            const obj20 = { contentTheme: collectibles.index_page.style.content_theme };
+            tmp49 = obj20;
+          }
+          obj15.style = tmp49;
+          obj8.indexPage = obj15;
+          ({ progress_indicator, navigation, help_center } = collectibles.shared);
+          const obj21 = { title: null, description: null, rewardStates: null, assets: null, style: null };
+          ({ title: obj23.title, description: obj23.description } = progress_indicator);
+          let tmp50;
           if (tmp14 != progress_indicator.indicator_reward_states) {
             const indicator_reward_states = progress_indicator.indicator_reward_states;
-            let tmp50;
+            let tmp51;
             if (tmp14 != indicator_reward_states.in_progress) {
-              const obj21 = { progressSteps: null };
+              const obj22 = { progressSteps: null };
               const progress_steps2 = indicator_reward_states.in_progress.progress_steps;
-              obj21.progressSteps = progress_steps2.map(parseCollectiblesProgressIndicatorRewardState);
-              tmp50 = obj21;
+              obj22.progressSteps = progress_steps2.map(parseCollectiblesProgressIndicatorRewardState);
+              tmp51 = obj22;
             }
-            const obj23 = { inProgress: tmp50, earned: null, consumed: null };
-            let tmp52;
-            if (tmp14 != indicator_reward_states.earned) {
-              ({ title: obj25.title, description: obj25.description } = indicator_reward_states.earned);
-              tmp52 = { title: null, description: null };
-              const obj24 = { title: null, description: null };
-            }
-            obj23.earned = tmp52;
+            const obj24 = { inProgress: tmp51, earned: null, consumed: null };
             let tmp53;
-            if (tmp14 != indicator_reward_states.consumed) {
-              ({ title: obj26.title, description: obj26.description } = indicator_reward_states.consumed);
+            if (tmp14 != indicator_reward_states.earned) {
+              ({ title: obj26.title, description: obj26.description } = indicator_reward_states.earned);
               tmp53 = { title: null, description: null };
-              const obj27 = { title: null, description: null };
+              const obj25 = { title: null, description: null };
             }
-            obj23.consumed = tmp53;
-            tmp49 = obj23;
+            obj24.earned = tmp53;
+            let tmp54;
+            if (tmp14 != indicator_reward_states.consumed) {
+              ({ title: obj27.title, description: obj27.description } = indicator_reward_states.consumed);
+              tmp54 = { title: null, description: null };
+              const obj28 = { title: null, description: null };
+            }
+            obj24.consumed = tmp54;
+            tmp50 = obj24;
           }
-          obj20.rewardStates = tmp49;
-          const obj28 = { backgroundUrl: progress_indicator.assets.background_url, rewardPreview: null };
-          const obj29 = {
+          obj21.rewardStates = tmp50;
+          const obj29 = { backgroundUrl: progress_indicator.assets.background_url, rewardPreview: null };
+          const obj30 = {
             hiddenUrl: progress_indicator.assets.reward_preview.hidden_url,
             revealedUrl: progress_indicator.assets.reward_preview.revealed_url,
           };
-          obj28.rewardPreview = obj29;
-          obj20.assets = obj28;
-          obj31 = undefined;
+          obj29.rewardPreview = obj30;
+          obj21.assets = obj29;
+          obj32 = undefined;
           if (tmp14 != progress_indicator.style) {
-            const obj30 = {
+            const obj31 = {
               contentTheme: progress_indicator.style.content_theme,
               progressColor: progress_indicator.style.progress_color,
             };
-            obj31 = obj30;
+            obj32 = obj31;
           }
           collectibles = { progressIndicator: null, navigation: null, helpCenter: null };
-          obj20.style = obj31;
-          collectibles.progressIndicator = obj20;
+          obj21.style = obj32;
+          collectibles.progressIndicator = obj21;
           let tab;
           if (navigation != tmp14) {
             tab = navigation.tab;
           }
-          let tmp55;
+          let tmp56;
           if (tmp14 != tab) {
-            obj31 = { tab: null };
-            const obj32 = { title: navigation.tab.title, icon: navigation.tab.icon };
-            obj31.tab = obj32;
-            tmp55 = obj31;
+            obj32 = { tab: null };
+            const obj33 = { title: navigation.tab.title, icon: navigation.tab.icon };
+            obj32.tab = obj33;
+            tmp56 = obj32;
           }
-          collectibles.navigation = tmp55;
+          collectibles.navigation = tmp56;
           tmp14 = tmp14 != help_center;
-          tmp35 = undefined;
+          tmp36 = undefined;
           if (tmp14) {
-            obj31 = { text: null, id: null };
-            ({ text: obj5.text, id: obj5.id } = help_center);
-            tmp35 = obj31;
+            obj32 = { text: null, id: null };
+            ({ text: obj6.text, id: obj6.id } = help_center);
+            tmp36 = obj32;
           }
-          collectibles.helpCenter = tmp35;
-          obj7.shared = collectibles;
+          collectibles.helpCenter = tmp36;
+          obj8.shared = collectibles;
         }
-      } else if (obj31(9145).StorefrontPromotionCollectiblesType.TARGETED_OFFER === type) {
+      } else if (obj32(9149).StorefrontPromotionCollectiblesType.TARGETED_OFFER === type) {
         const reward = collectibles.reward;
         let nagbar;
         if (reward != tmp14) {
@@ -264,10 +279,10 @@ prototype["createFromServer"] = function createFromServer(display_name) {
             override_title = collected.override_title;
           }
         }
-        let tmp39;
+        let tmp40;
         if (tmp14 != override_title) {
           if ("" !== override_title) {
-            tmp39 = override_title;
+            tmp40 = override_title;
           }
         }
         let flavor;
@@ -276,60 +291,60 @@ prototype["createFromServer"] = function createFromServer(display_name) {
         }
         if (tmp14 == nagbar) {
           if (tmp14 == offer_notice) {
-            if (tmp14 == tmp39) {
+            if (tmp14 == tmp40) {
               if (tmp14 == flavor) {
-                const obj33 = { type: obj31(9145).StorefrontPromotionCollectiblesType.TARGETED_OFFER };
-                let obj34 = obj33;
+                const obj34 = { type: obj32(9149).StorefrontPromotionCollectiblesType.TARGETED_OFFER };
+                let obj35 = obj34;
               }
             }
           }
         }
-        obj34 = { type: obj31(9145).StorefrontPromotionCollectiblesType.TARGETED_OFFER, reward: null };
-        let tmp41;
+        obj35 = { type: obj32(9149).StorefrontPromotionCollectiblesType.TARGETED_OFFER, reward: null };
+        let tmp42;
         if (tmp14 != nagbar) {
           const header_text = nagbar.header_text;
-          const obj35 = { headerText: header_text, cta: null, helpCenterId: null, icon: null };
-          let tmp42;
+          const obj36 = { headerText: header_text, cta: null, helpCenterId: null, icon: null };
+          let tmp43;
           if (tmp14 != nagbar.cta) {
             const text = nagbar.cta.text;
-            const obj36 = { text };
-            tmp42 = obj36;
+            const obj37 = { text };
+            tmp43 = obj37;
           }
-          obj35.cta = tmp42;
+          obj36.cta = tmp43;
           const help_center_id = nagbar.help_center_id;
-          obj35.helpCenterId = help_center_id;
+          obj36.helpCenterId = help_center_id;
           const icon = nagbar.icon;
-          const obj37 = { nagbar: null };
-          obj35.icon = icon;
-          obj37.nagbar = obj35;
-          tmp41 = obj37;
+          const obj38 = { nagbar: null };
+          obj36.icon = icon;
+          obj38.nagbar = obj36;
+          tmp42 = obj38;
         }
-        const obj72 = { storefront: tmp41, checkout: null, collected: null, flavor: null };
-        let tmp43;
+        const obj74 = { storefront: tmp42, checkout: null, collected: null, flavor: null };
+        let tmp44;
         if (tmp14 != offer_notice) {
           const icon2 = offer_notice.icon;
-          const obj73 = { icon: icon2, text: null };
+          const obj75 = { icon: icon2, text: null };
           const text2 = offer_notice.text;
-          const obj74 = { offerNotice: null };
-          obj73.text = text2;
-          obj74.offerNotice = obj73;
-          tmp43 = obj74;
+          const obj76 = { offerNotice: null };
+          obj75.text = text2;
+          obj76.offerNotice = obj75;
+          tmp44 = obj76;
         }
-        obj72.checkout = tmp43;
-        let tmp44;
-        if (tmp14 != tmp39) {
-          const obj75 = { overrideTitle: tmp39 };
-          tmp44 = obj75;
+        obj74.checkout = tmp44;
+        let tmp45;
+        if (tmp14 != tmp40) {
+          const obj77 = { overrideTitle: tmp40 };
+          tmp45 = obj77;
         }
-        obj72.collected = tmp44;
-        obj72.flavor = flavor;
-        obj34.reward = obj72;
+        obj74.collected = tmp45;
+        obj74.flavor = flavor;
+        obj35.reward = obj74;
       }
     }
   }
   if (typeof prototype === "function") {
-    const tmp60 = new prototype(
-      tmp22,
+    const tmp61 = new prototype(
+      tmp23,
       tmp12,
       tmp11,
       tmp10,
@@ -350,26 +365,26 @@ prototype["createFromServer"] = function createFromServer(display_name) {
       application_id,
       name,
     );
-    tmp60.id = id;
-    tmp60.applicationId = application_id;
-    tmp60.name = name;
-    tmp60.displayName = display_name;
-    tmp60.rewardType = reward_type;
-    tmp60.rewardStatus = reward_status;
-    tmp60.rewardConfig = tmp16;
-    tmp60.skuIds = tmp19;
-    tmp60.appliesToAllSkus = applies_to_all_skus;
-    tmp60.includeBundles = include_bundles;
-    tmp60.startsAt = date;
-    tmp60.endsAt = date1;
-    tmp60.redemptionEndsAt = date2;
-    tmp60.progress = tmp33;
-    tmp60.tenantMetadata = tmp34;
-    return tmp60;
+    tmp61.id = id;
+    tmp61.applicationId = application_id;
+    tmp61.name = name;
+    tmp61.displayName = display_name;
+    tmp61.rewardType = reward_type;
+    tmp61.rewardStatus = reward_status;
+    tmp61.rewardConfig = tmp16;
+    tmp61.skuIds = tmp20;
+    tmp61.appliesToAllSkus = applies_to_all_skus;
+    tmp61.includeBundles = include_bundles;
+    tmp61.startsAt = date;
+    tmp61.endsAt = date1;
+    tmp61.redemptionEndsAt = date2;
+    tmp61.progress = tmp34;
+    tmp61.tenantMetadata = tmp35;
+    return tmp61;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp19 = parseSkuIds(display_name.sku_ids);
+  tmp20 = parseSkuIds(display_name.sku_ids);
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/storefront/records/StorefrontPromotionRecord.tsx");

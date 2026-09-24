@@ -117,9 +117,9 @@ let closure_10 = async function _fetchAuthorizedApps() {
     }
   })();
 };
-const FetchState = fn(7438).FetchState;
+const FetchState = fn(7440).FetchState;
 const Endpoints = fn(1074).Endpoints;
-const batchInvocationManager = new fn(2037).BatchInvocationManager(fetchAuthorizedApps, {
+const batchInvocationManager = new fn(2039).BatchInvocationManager(fetchAuthorizedApps, {
   predicate(arg0) {
     return AuthorizedAppsStore.getFetchStateForApplication(arg0) !== FetchState.FETCHING;
   },
@@ -135,15 +135,15 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/oauth2/AuthorizedAppsActionCreators.tsx");
 
 export default {
-  fetch(candidates) {
+  fetch(items) {
     if (AuthorizedAppsStore.getFetchState() !== FetchState.FETCHING) {
-      if (null != candidates) {
-        batchInvocationManager.queue(candidates).catch((error) => {
+      if (null != items) {
+        batchInvocationManager.queue(items).catch((error) => {
           if (!(error instanceof Timers.BatchInvocationManagerResetError)) {
             throw error;
           }
         });
-        const queueResult = batchInvocationManager.queue(candidates);
+        const queueResult = batchInvocationManager.queue(items);
       } else {
         batchInvocationManager.reset();
         const obj2 = { type: "USER_AUTHORIZED_APPS_REQUEST", request: { type: "full" } };

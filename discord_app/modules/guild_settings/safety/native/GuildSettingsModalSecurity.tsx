@@ -9,12 +9,12 @@ import GuildSettingsStore from "../../GuildSettingsStore.tsx";
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(2060).isGuildOwnerWithRequiredMfaLevel;
+let closure_6 = fn(2062).isGuildOwnerWithRequiredMfaLevel;
 const Constants = fn(1074);
 ({ GuildFeatures: c10, MFALevels: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = {
   wrapper: { flex: 1, justifyContent: "space-between", paddingTop: 99 },
   center: {
@@ -71,7 +71,7 @@ export default function GuildSettingsModalSecurity(guildId) {
   const obj5 = { style: tmp.label, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
   const intl = tmp2(1115).intl;
   obj5.children = intl.string(guildId(1115).t.Wi9LEV);
-  const items4 = [closure_12(guildId(4823).Text, obj5), ,];
+  const items4 = [closure_12(guildId(4825).Text, obj5), ,];
   const obj6 = { style: tmp.button, children: null };
   const intl2 = tmp2(1115).intl;
   const string = intl2.string;
@@ -88,7 +88,7 @@ export default function GuildSettingsModalSecurity(guildId) {
   }
   obj7.variant = str;
   obj7.onPress = callback;
-  obj6.children = closure_12(guildId(5271).Button, obj7);
+  obj6.children = closure_12(guildId(5273).Button, obj7);
   items4[1] = closure_12(closure_4, obj6);
   let hasItem;
   if (stateFromStores != null) {
@@ -100,7 +100,7 @@ export default function GuildSettingsModalSecurity(guildId) {
     const obj8 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
     const intl3 = tmp2(1115).intl;
     obj8.children = intl3.string(tmp2(1115).t["KG1V/E"]);
-    tmp17Result = closure_12(tmp2(4823).Text, obj8);
+    tmp17Result = closure_12(tmp2(4825).Text, obj8);
   }
   const obj9 = { children: null };
   items4[2] = tmp17Result;
@@ -108,17 +108,17 @@ export default function GuildSettingsModalSecurity(guildId) {
   const items5 = [closure_13(closure_4, obj4)];
   const obj10 = { style: tmp.center, children: null };
   let obj2 = guildId(504);
-  const items6 = [closure_12(closure_5, { source: stateFromStores(15127), style: tmp.image, resizeMode: "contain" })];
+  const items6 = [closure_12(closure_5, { source: stateFromStores(15136), style: tmp.image, resizeMode: "contain" })];
   const obj12 = { style: tmp.infoWrapper, children: null };
   const obj13 = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl4 = tmp2(1115).intl;
   obj13.children = intl4.format(guildId(1115).t["FK0+iX"], {});
-  obj12.children = closure_12(guildId(4823).Text, obj13);
+  obj12.children = closure_12(guildId(4825).Text, obj13);
   items6[1] = closure_12(closure_4, obj12);
   obj10.children = items6;
   items5[1] = closure_13(closure_4, obj10);
   obj3.children = items5;
-  const items7 = [closure_13(closure_4, obj3), closure_12(guildId(7371).NavScrim, {})];
+  const items7 = [closure_13(closure_4, obj3), closure_12(guildId(7373).NavScrim, {})];
   obj9.children = items7;
   return closure_13(closure_14, obj9);
 }

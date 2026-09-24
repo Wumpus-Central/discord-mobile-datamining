@@ -58,20 +58,20 @@ export default function MemberVerificationAlertIncomplete(guildId) {
   const obj3 = {};
   const obj = guildId(563);
   const merged1 = Object.assign(merged);
-  obj3.icon = guildId(7424).ListViewIcon;
+  obj3.icon = guildId(7426).ListViewIcon;
   obj3.header = formatToPlainStringResult;
   const obj4 = { children: null };
   const obj5 = { variant: "secondary", text: null, onPress: null };
   const intl3 = tmp2(1115).intl;
   obj5.text = intl3.string(guildId(1115).t.h3aGmv);
   obj5.onPress = callback;
-  const items4 = [closure_5(guildId(5271).Button, obj5)];
+  const items4 = [closure_5(guildId(5273).Button, obj5)];
   const obj6 = { text: null, variant: "destructive", onPress: null };
   const intl4 = tmp2(1115).intl;
   obj6.text = intl4.string(guildId(1115).t.OQFlFD);
   obj6.onPress = callback1;
-  items4[1] = closure_5(guildId(5271).Button, obj6);
+  items4[1] = closure_5(guildId(5273).Button, obj6);
   obj4.children = items4;
   obj3.buttons = closure_7(closure_6, obj4);
-  return closure_5(onClose(5840), obj3);
+  return closure_5(onClose(5842), obj3);
 }

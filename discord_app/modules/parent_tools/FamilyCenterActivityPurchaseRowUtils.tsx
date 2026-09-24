@@ -2,7 +2,7 @@
 import util from "../../intl/index.native.tsx";
 import AvatarUtils from "../../utils/AvatarUtils.tsx";
 import CollectiblesItemType from "../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import _modDef2484 from "FamilyCenter.messages.js";
+import _modDef2486 from "FamilyCenter.messages.js";
 import AvatarDecorationRecord from "../collectibles/records/AvatarDecorationRecord.tsx";
 import ProfileEffectRecord from "../collectibles/records/ProfileEffectRecord.tsx";
 import PremiumConstants from "../premium/PremiumConstants.tsx";
@@ -11,19 +11,19 @@ import size from "../../../_runtime/metro/00002__.js";
 function getCollectibleTypeName(type) {
   if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
     const intl5 = util.intl;
-    return intl5.string(_modDef2484.obi47v);
+    return intl5.string(_modDef2486.obi47v);
   } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
     const intl4 = util.intl;
-    return intl4.string(_modDef2484.RX8BMR);
+    return intl4.string(_modDef2486.RX8BMR);
   } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
     const intl3 = util.intl;
-    return intl3.string(_modDef2484.nNGEHk);
+    return intl3.string(_modDef2486.nNGEHk);
   } else if (CollectiblesItemType.CollectiblesItemType.BUNDLE === type) {
     const intl2 = util.intl;
-    return intl2.string(_modDef2484.VS1fKo);
+    return intl2.string(_modDef2486.VS1fKo);
   } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === type) {
     const intl = util.intl;
-    return intl.string(_modDef2484.JiIY1l);
+    return intl.string(_modDef2486.JiIY1l);
   } else {
     return "";
   }

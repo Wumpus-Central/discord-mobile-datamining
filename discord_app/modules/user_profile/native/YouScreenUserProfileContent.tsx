@@ -211,10 +211,10 @@ function EditSection(navigateToProfileCustomization) {
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const useIsContentShown = fn(2034).useIsContentShown;
-let UserProfileSections = fn(8527).UserProfileSections;
-const UserProfileThemeTypes = fn(7539).UserProfileThemeTypes;
-const ContentDismissActionType = fn(2039).ContentDismissActionType;
-let closure_13 = fn(11543).UserProfileEditAutoFocusElement;
+let UserProfileSections = fn(8531).UserProfileSections;
+const UserProfileThemeTypes = fn(7541).UserProfileThemeTypes;
+const ContentDismissActionType = fn(2041).ContentDismissActionType;
+let closure_13 = fn(11549).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 const size = fn(2);
@@ -671,7 +671,7 @@ export default function YouScreenUserProfileContent(user) {
   if (null != primaryColor) {
     str = "overlay";
   }
-  const obj26 = { children: null };
+  const obj26 = { zIndex: 1, children: null };
   obj25.variant = str;
   obj24.children = c14(user(navigateToPremium[68]).Tabs, obj25);
   const items17 = [c14(navigation, obj24)];

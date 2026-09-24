@@ -17,14 +17,14 @@ const PremiumGiftScreens = {
   GIFTING_BADGE: "GiftingBadgePostPurchase",
 };
 let obj2 = {
-  [PLAN_SELECT]: fn(11005).PaymentFlowStep.SKU_SELECT,
-  [REWARD_SELECT]: fn(11005).PaymentFlowStep.REWARD_SKU_SELECT,
-  [CUSTOMIZATION]: fn(11005).PaymentFlowStep.PLAN_SELECT,
-  [SUCCESS]: fn(11005).PaymentFlowStep.CONFIRM,
-  [GIFTING_BADGE]: fn(11005).PaymentFlowStep.CONFIRM,
+  [PLAN_SELECT]: fn(11011).PaymentFlowStep.SKU_SELECT,
+  [REWARD_SELECT]: fn(11011).PaymentFlowStep.REWARD_SKU_SELECT,
+  [CUSTOMIZATION]: fn(11011).PaymentFlowStep.PLAN_SELECT,
+  [SUCCESS]: fn(11011).PaymentFlowStep.CONFIRM,
+  [GIFTING_BADGE]: fn(11011).PaymentFlowStep.CONFIRM,
 };
 ({ PLAN_SELECT, REWARD_SELECT, CUSTOMIZATION, SUCCESS, GIFTING_BADGE } = PremiumGiftScreens);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj4 = { header: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" } };
 let closure_9 = createStyles.createStyles(obj4);
 const size = fn(2);
@@ -118,6 +118,13 @@ export default function PremiumGiftModal(analyticsLocations) {
     }
     const obj8 = {};
     obj8[obj.PLAN_SELECT] = obj7;
+    const obj9 = {
+      title: "",
+      headerTitle() {},
+      headerLeft: null,
+      headerStyle: null,
+      render: null,
+    };
     if (initialRoute === obj.REWARD_SELECT) {
       let headerCloseButton = analyticsLocation(onDismiss[10]).getHeaderCloseButton(callback);
       const tmp11Result8 = analyticsLocation(onDismiss[10]);
@@ -125,19 +132,16 @@ export default function PremiumGiftModal(analyticsLocations) {
       headerCloseButton = analyticsLocation(onDismiss[10]).getHeaderBackButton();
       const tmp11Result9 = analyticsLocation(onDismiss[10]);
     }
-    const obj9 = {
-      title: "",
-      headerLeft: headerCloseButton,
-      headerStyle: tmp10.header,
-      render(arg0) {
-        ({ defaultHighlightedReward, allRewards, claimableRewards, onSelect } = arg0);
-        return jsx(analyticsLocations(onDismiss[12]), {
-          defaultHighlightedReward,
-          allRewards,
-          claimableRewards,
-          onSelect,
-        });
-      },
+    obj9.headerLeft = headerCloseButton;
+    obj9.headerStyle = tmp10.header;
+    obj9.render = function render(arg0) {
+      ({ defaultHighlightedReward, allRewards, claimableRewards, onSelect } = arg0);
+      return jsx(analyticsLocations(onDismiss[12]), {
+        defaultHighlightedReward,
+        allRewards,
+        claimableRewards,
+        onSelect,
+      });
     };
     obj8[obj.REWARD_SELECT] = obj9;
     if (initialRoute === obj.CUSTOMIZATION) {
@@ -175,9 +179,9 @@ export default function PremiumGiftModal(analyticsLocations) {
         currentProgress: currentProgress.currentProgress,
         onSendGift() {
           obj2 = { analyticsLocations: null };
-          const items = [analyticsLocations(7513).GIFTING_BADGE_POST_PURCHASE];
+          const items = [analyticsLocations(7515).GIFTING_BADGE_POST_PURCHASE];
           obj2.analyticsLocations = items;
-          analyticsLocation(11003).openGiftModal(obj2);
+          analyticsLocation(11009).openGiftModal(obj2);
         },
       });
     };

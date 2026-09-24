@@ -3,13 +3,15 @@ import LoggerDefault from "../../../debug/Logger.tsx";
 import ReactBatchUpdates from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 import QuestTypes from "../../../quests/QuestTypes.tsx";
+import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
+import ConversationsActionCreators from "../../../conversations/ConversationsActionCreators.tsx";
 import DimensionActionCreatorsDefault from "../../../../actions/DimensionActionCreators.tsx";
 import NativeChatUtilsDefault from "../../../chat/native/NativeChatUtils.tsx";
 import ChatChangesetUpdateTracker from "../../../chat/native/ChatChangesetUpdateTracker.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const useChatBottomManagerUIStore = fn(9733);
+const useChatBottomManagerUIStore = fn(9737);
 ({ updateIsAtBottom: closure_4, updateShouldShowJumpToPresentButton: hasOwnProperty } = useChatBottomManagerUIStore);
 let closure_6 = new LoggerDefault("useScrollHandlers");
 const size = fn(2);
@@ -34,6 +36,7 @@ export default function useScrollHandlers(arg0) {
     useReducedMotion: closure_14,
     isStaff: closure_15,
     visibleMessagesWindowHandler: closure_16,
+    selectedConversation: closure_17,
   } = arg0);
   function handleScrollCallbacks(isNearTop) {
     ({ eventTimestamp, isAtBottom, isNearBottom } = isNearTop);
@@ -166,6 +169,7 @@ export default function useScrollHandlers(arg0) {
       });
     }
   }
+  closure_18 = useInitialValueDefault(() => new previousRows(dependencyMap[4])());
   const ref = noop.useRef(undefined);
   const ref1 = noop.useRef(false);
   const ref2 = noop.useRef(false);
@@ -285,6 +289,39 @@ export default function useScrollHandlers(arg0) {
           lastVisibleMessageRowIndex: lastVisibleMessageIndex,
         };
         closure_1_16.handleScrollPosition(obj4);
+        const obj5 = {
+          rows: previousRows._rows,
+          conversationId: null,
+          startMessageId: null,
+          firstVisibleMessageRowIndex: null,
+          lastVisibleMessageRowIndex: null,
+        };
+        let id;
+        if (closure_1_17 != null) {
+          id = closure_1_17.id;
+        }
+        if (id == null) {
+          id = null;
+        }
+        obj5.conversationId = id;
+        let startMessageId;
+        if (closure_1_17 != null) {
+          startMessageId = closure_1_17.startMessageId;
+        }
+        if (startMessageId == null) {
+          startMessageId = null;
+        }
+        obj5.startMessageId = startMessageId;
+        obj5.firstVisibleMessageRowIndex = firstVisibleMessageIndex;
+        obj5.lastVisibleMessageRowIndex = lastVisibleMessageIndex;
+        const handleScrollPositionResult1 = closure_18.handleScrollPosition(obj5);
+        if (null != handleScrollPositionResult1) {
+          const result = ConversationsActionCreators.clearConversationSelection(
+            closure_1_11,
+            handleScrollPositionResult1,
+          );
+          const tmpResult = ConversationsActionCreators;
+        }
       }
     },
   };

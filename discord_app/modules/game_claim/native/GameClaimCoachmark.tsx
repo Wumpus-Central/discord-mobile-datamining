@@ -22,13 +22,13 @@ require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ GuildFeatures: hasOwnProperty, RelativeMarketingURLs: metroRequire } = Constants);
-const ContentDismissActionType = fn(2039).ContentDismissActionType;
+const ContentDismissActionType = fn(2041).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
 const PX_82 = nativeDefault.space.PX_8;
 let closure_12 = 2 * nativeDefault.space.PX_12;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj = {
   card: { padding: nativeDefault.space.PX_12 },
   closeButton: null,
@@ -136,9 +136,9 @@ export default noop.memo((arg0) => {
               v1 = 1;
               v3 = 1;
               const obj5 = {
-                value: v1(7645).redirectDeveloperPortalWithHandoffToken(
+                value: v1(7647).redirectDeveloperPortalWithHandoffToken(
                   constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY,
-                  v3(7649).LoginHandoffSource.GAME_CLAIM,
+                  v3(7651).LoginHandoffSource.GAME_CLAIM,
                 ),
                 done: false,
               };

@@ -5,7 +5,7 @@ import RowGeneratorUtilsDefault from "RowGeneratorUtils.tsx";
 import GuildAutomodMessageStore from "../../../guild_automod/GuildAutomodMessageStore.tsx";
 
 require = fn;
-const RowType = fn(8277).RowType;
+const RowType = fn(8281).RowType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/MessageWithContent.tsx");
 
@@ -37,7 +37,7 @@ export const generateMessageRowData = function generateMessageRowData(canShowIma
       isInlineReplyPreview: false,
       pushFeedbackType,
       renderContentOnly,
-      showContentInventoryEntryFallbackEmbed: canShowImages.showContentInventoryEntryFallbackEmbed,
+      showContentInventoryEntryFallbackEmbed,
     }),
     canAddNewReactions,
     addNewReactionAccessibilityLabel: null,
@@ -49,12 +49,14 @@ export const generateMessageRowData = function generateMessageRowData(canShowIma
     truncation: null,
     alwaysShowAddReaction: null,
     backgroundHighlight: null,
+    conversationHeader: null,
     swipeActions: null,
     replyAccessibilityLabel: null,
     forwardAccessibilityLabel: null,
     threadAccessibilityLabel: null,
     forcedTheme: null,
   };
+  ({ showContentInventoryEntryFallbackEmbed, conversationHeader } = canShowImages);
   const intl = util.intl;
   obj.addNewReactionAccessibilityLabel = intl.string(util.t.lfIHs4);
   obj.reactionsTheme = reactionsTheme;
@@ -76,6 +78,7 @@ export const generateMessageRowData = function generateMessageRowData(canShowIma
     const tmp4Result = RowGeneratorUtilsDefault;
   }
   obj.backgroundHighlight = overrideBackgroundHighlight;
+  obj.conversationHeader = conversationHeader;
   let canReply = options.enableSwipeActions;
   if (canReply) {
     canReply = canShowImages.canReply;

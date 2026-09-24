@@ -91,14 +91,14 @@ function getChannel(id, arr) {
   }
   return tmp4;
 }
-function handleUnknownChannel(guildId, channelId, messageId, guildIdFromChannelId, combined1) {
+function handleUnknownChannel(guildId, channelId, messageId, guildIdFromChannelId, url) {
   const guild = GuildStore.getGuild(guildId);
   const obj = {
     type: "channelMention",
     guildId,
     channelId,
     messageId,
-    originalLink: combined1,
+    originalLink: url,
     inContent: null,
     content: null,
   };
@@ -132,13 +132,13 @@ function handleUnknownChannel(guildId, channelId, messageId, guildIdFromChannelI
   obj.content = items3;
   return obj;
 }
-function parseChannel(channel, messageId, guildIdFromChannelId, combined1) {
+function parseChannel(channel, messageId, guildIdFromChannelId, url) {
   if (channel.canViewChannel) {
     if (channel.isMentionable) {
       const obj2 = { type: "channelMention", channelId: null, guildId: null, messageId: null, originalLink: null };
       ({ id: obj5.channelId, guildId: obj5.guildId } = channel);
       obj2.messageId = messageId;
-      obj2.originalLink = combined1;
+      obj2.originalLink = url;
       const guild = GuildStore.getGuild(channel.guildId);
       if (null == guild) {
         if (channel.isDm) {
@@ -159,12 +159,12 @@ function parseChannel(channel, messageId, guildIdFromChannelId, combined1) {
           const items3 = [obj8];
           obj4.content = items3;
           let obj11 = obj4;
-        } else if (null != combined1) {
+        } else if (null != url) {
           const obj9 = { type: "link", content: null, target: null, title: "category" };
-          const obj10 = { type: "text", content: combined1 };
+          const obj10 = { type: "text", content: url };
           const items4 = [obj10];
           obj9.content = items4;
-          obj9.target = combined1;
+          obj9.target = url;
           obj11 = obj9;
         } else {
           const intl2 = util.intl;

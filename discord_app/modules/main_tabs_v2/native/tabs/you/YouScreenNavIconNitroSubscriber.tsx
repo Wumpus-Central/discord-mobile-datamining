@@ -5,8 +5,8 @@ import ReferralTrialStore from "../../../../premium/ReferralTrialStore.tsx";
 import PremiumNitroNavigationStore from "../../../../user_settings/premium/native/PremiumNitroNavigationStore.tsx";
 
 const require = fn;
-const NitroHomeSectionId = fn(13756).NitroHomeSectionId;
-const ContentDismissActionType = fn(2039).ContentDismissActionType;
+const NitroHomeSectionId = fn(13765).NitroHomeSectionId;
+const ContentDismissActionType = fn(2041).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouScreenNavIconNitroSubscriber.tsx");
@@ -19,7 +19,7 @@ export default noop.memo(function SubscriberNitroIcon(onPress) {
   if (showReferralNotificationDot) {
     showReferralNotificationDot = obj.useIsEligibleSenderForReferralProgram(!showReferralNotificationDot);
   }
-  obj = onPress(8401);
+  obj = onPress(8405);
   const items = [ReferralTrialStore];
   const items1 = [showReferralNotificationDot];
   const stateFromStores = onPress(504).useStateFromStores(
@@ -38,11 +38,11 @@ export default noop.memo(function SubscriberNitroIcon(onPress) {
       }
     }
   }
-  const tmpResult2 = onPress(7716);
+  const tmpResult2 = onPress(7718);
   const tmp5 = _slicedToArray(
     tmpResult2.useSelectedTimeRecurringDismissibleContent(
       prop,
-      { cooldownDurationMs: onPress(17335).REFERRAL_NITRO_BUTTON_RED_DOT_COOLDOWN_MS },
+      { cooldownDurationMs: onPress(17358).REFERRAL_NITRO_BUTTON_RED_DOT_COOLDOWN_MS },
       undefined,
       true,
     ),
@@ -61,13 +61,13 @@ export default noop.memo(function SubscriberNitroIcon(onPress) {
     onPress();
   }, items2);
   const obj3 = { IconComponent: null, accessibilityLabel: null, onPress: null, showRedDot: null };
-  const obj2 = { cooldownDurationMs: onPress(17335).REFERRAL_NITRO_BUTTON_RED_DOT_COOLDOWN_MS };
-  obj3.IconComponent = onPress(9016).NitroWheelIcon;
+  const obj2 = { cooldownDurationMs: onPress(17358).REFERRAL_NITRO_BUTTON_RED_DOT_COOLDOWN_MS };
+  obj3.IconComponent = onPress(9020).NitroWheelIcon;
   const intl = tmp(1115).intl;
   obj3.accessibilityLabel = intl.string(onPress(1115).t.Ipxkog);
   obj3.onPress = callback;
   obj3.showRedDot = tmp7;
-  return jsx(showReferralNotificationDot(17337), {
+  return jsx(showReferralNotificationDot(17360), {
     IconComponent: null,
     accessibilityLabel: null,
     onPress: null,

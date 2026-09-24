@@ -113,7 +113,7 @@ function computeGuildMediaState(guildId) {
       continue;
     }
     obj = {
-      skipMutedVcs: guildId(14067).getIsDontBadgeMutedVcsEnabled("GuildMediaStateStore"),
+      skipMutedVcs: guildId(14076).getIsDontBadgeMutedVcsEnabled("GuildMediaStateStore"),
       currentUserId: id.getId(),
       selectedVoiceChannelId: voiceChannelId,
       selectedVoiceGuildId: null,
@@ -249,7 +249,7 @@ function computeGuildMediaState(guildId) {
           const basicChannel = ChannelStore.getBasicChannel(item);
           let tmp2 = null != basicChannel;
           if (tmp2) {
-            tmp2 = closure_1(5719)(basicChannel, PermissionStore);
+            tmp2 = closure_1(5721)(basicChannel, PermissionStore);
           }
           return tmp2;
         });
@@ -260,13 +260,13 @@ function computeGuildMediaState(guildId) {
           _location = first.location;
         }
         let embeddedActivityLocationChannelId = obj5.getEmbeddedActivityLocationChannelId(_location);
-        let tmp34Result = tmp34(9679);
+        let tmp34Result = tmp34(9683);
         if (tmp34Result.isActivitiesInTextEnabled(ChannelStore.getChannel(embeddedActivityLocationChannelId))) {
           let someResult2 = found.length > 0;
         } else {
           someResult2 = found.some((location) => {
             const channel = ChannelStore.getChannel(
-              guildId(4451).getEmbeddedActivityLocationChannelId(location.location),
+              guildId(4453).getEmbeddedActivityLocationChannelId(location.location),
             );
             let tmp2 = null != channel;
             if (tmp2) {
@@ -284,7 +284,7 @@ function computeGuildMediaState(guildId) {
           activity: null,
           isCurrentUserConnected: false,
         };
-        let tmp34Result2 = tmp34(9829);
+        let tmp34Result2 = tmp34(9834);
         obj4.activeEvent = null != tmp34Result2.getGuildActiveEvent(arg0);
         obj4.activity = someResult2;
         return obj4;
@@ -303,7 +303,7 @@ function handleGuildCreateOrDelete(guild) {
   map.delete(guild.guild.id);
   return flag;
 }
-const isVoiceChannel = fn(2046).isVoiceChannel;
+const isVoiceChannel = fn(2048).isVoiceChannel;
 const Constants = fn(1074);
 ({ BasicPermissions: closure_17, ME: closure_18 } = Constants);
 let closure_19 = Object.freeze({

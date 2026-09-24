@@ -73,9 +73,9 @@ let closure_11 = async function _handleLanguageChange(arg0) {
 };
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const setAppLocale = fn(2110).setAppLocale;
+const setAppLocale = fn(2112).setAppLocale;
 const jsx = fn(21).jsx;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj = { content: { padding: nativeDefault.space.PX_16 }, flagImage: { width: 27, height: 18 } };
 let closure_9 = createStyles.createStyles(obj);
 let obj3 = { padding: nativeDefault.space.PX_16 };

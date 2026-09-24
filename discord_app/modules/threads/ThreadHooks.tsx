@@ -140,7 +140,7 @@ function canUnarchiveThread(stateFromStores) {
   }
   return tmp10;
 }
-const THREADED_CHANNEL_TYPES = fn(2046).THREADED_CHANNEL_TYPES;
+const THREADED_CHANNEL_TYPES = fn(2048).THREADED_CHANNEL_TYPES;
 const Constants = fn(1074);
 ({ Permissions: c10, MessageFlags: closure_11, ChannelTypes: closure_12 } = Constants);
 let obj = {
@@ -582,8 +582,8 @@ export const useCanJoinThreadVoice = function useCanJoinThreadVoice(channel) {
   const tmp3Result = require("GameInvitesChannelUtils");
   let shouldAgeVerifyForAgeGate = require("AgeGateUtils").useShouldAgeVerifyForAgeGate();
   if (shouldAgeVerifyForAgeGate) {
-    shouldAgeVerifyForAgeGate = tmp3(5037).shouldShowAgeGateForChannelId(channel.id);
-    const tmp3Result4 = tmp3(5037);
+    shouldAgeVerifyForAgeGate = tmp3(5039).shouldShowAgeGateForChannelId(channel.id);
+    const tmp3Result4 = tmp3(5039);
   }
   let isVocalThreadResult = !tmp2;
   if (!tmp2) {

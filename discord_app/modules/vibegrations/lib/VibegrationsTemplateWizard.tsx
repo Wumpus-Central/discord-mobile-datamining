@@ -1,6 +1,6 @@
 // discord_app/modules/vibegrations/lib/VibegrationsTemplateWizard.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3712 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3714 from "../intl/VibegrationsUntranslated.messages.js";
 import VibegrationsUtils from "VibegrationsUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -31,7 +31,7 @@ export const canLeaveVibegrationsWizardQuestion = function canLeaveVibegrationsW
 };
 export const vibegrationsTemplateStartMessage = function vibegrationsTemplateStartMessage(name) {
   const intl = util.intl;
-  return intl.formatToPlainString(_modDef3712["4lZNuo"], { templateName: name, locale: util.intl.currentLocale });
+  return intl.formatToPlainString(_modDef3714["4lZNuo"], { templateName: name, locale: util.intl.currentLocale });
 };
 export const vibegrationsTemplateWizardGuilds = function vibegrationsTemplateWizardGuilds(
   guildsArray,
@@ -94,9 +94,9 @@ export const vibegrationsWizardServerCopy = function vibegrationsWizardServerCop
   if (server == null) {
     const obj = { title: null, hint: null };
     const intl = util.intl;
-    obj.title = intl.string(_modDef3712.WQCnSf);
+    obj.title = intl.string(_modDef3714.WQCnSf);
     const intl2 = util.intl;
-    obj.hint = intl2.string(_modDef3712.KLTQfQ);
+    obj.hint = intl2.string(_modDef3714.KLTQfQ);
     server = obj;
   }
   return server;

@@ -1,7 +1,7 @@
 // discord_app/modules/chat/SlowmodeUtils.tsx
 import DurationsDefault from "../../utils/Durations.tsx";
 import util from "../../intl/index.native.tsx";
-import _modDef4414 from "../../../_runtime/metro/04414__.js";
+import _modDef4416 from "../../../_runtime/metro/04416__.js";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
 const require = globalThis.__r;
@@ -29,20 +29,20 @@ export const getSlowmodeIndicatorText = function getSlowmodeIndicatorText(stateF
     const intl2 = util.intl;
     return intl2.string(util.t["8+NidX"]);
   } else if (stateFromStores >= DurationsDefault.Millis.HOUR) {
-    const time2 = _modDef4414.duration(stateFromStores);
+    const time2 = _modDef4416.duration(stateFromStores);
     const _HermesInternal3 = HermesInternal;
     const combined = "" + time2.minutes();
-    const tmp2Result = _modDef4414;
+    const tmp2Result = _modDef4416;
     const _HermesInternal4 = HermesInternal;
     const combined1 = "" + time2.seconds();
     const padStartResult = combined.padStart(2, "0");
     const _HermesInternal5 = HermesInternal;
     return "" + time2.hours() + ":" + padStartResult + ":" + combined1.padStart(2, "0");
   } else if (stateFromStores > 0) {
-    const time = _modDef4414.duration(stateFromStores);
+    const time = _modDef4416.duration(stateFromStores);
     const _HermesInternal = HermesInternal;
     const combined2 = "" + time.seconds();
-    const tmp2Result2 = _modDef4414;
+    const tmp2Result2 = _modDef4416;
     const _HermesInternal2 = HermesInternal;
     return "" + time.minutes() + ":" + combined2.padStart(2, "0");
   } else {

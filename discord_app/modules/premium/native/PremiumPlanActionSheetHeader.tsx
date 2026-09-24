@@ -1,17 +1,17 @@
 // discord_app/modules/premium/native/PremiumPlanActionSheetHeader.tsx
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
-import LinearGradientDefault from "../../../../_runtime/05283_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05285_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef7761 from "../../../../_runtime/metro/07761__.js";
-import _modDef7762 from "../../../../_runtime/metro/07762__.js";
 import _modDef7763 from "../../../../_runtime/metro/07763__.js";
 import _modDef7764 from "../../../../_runtime/metro/07764__.js";
 import _modDef7765 from "../../../../_runtime/metro/07765__.js";
+import _modDef7766 from "../../../../_runtime/metro/07766__.js";
+import _modDef7767 from "../../../../_runtime/metro/07767__.js";
 import PremiumPill from "../../user_settings/premium/native/PremiumPill.tsx";
-import _modDef9578 from "../../../../_runtime/metro/09578__.js";
-import _modDef9583 from "../../../../_runtime/metro/09583__.js";
-import _modDef11057 from "../../../../_runtime/metro/11057__.js";
+import _modDef9582 from "../../../../_runtime/metro/09582__.js";
+import _modDef9587 from "../../../../_runtime/metro/09587__.js";
+import _modDef11063 from "../../../../_runtime/metro/11063__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const PremiumUtilsDefault = PremiumUtils;
@@ -20,10 +20,10 @@ require = fn;
 const View = fn(17).View;
 const PremiumConstants = fn(1374);
 ({ PremiumTypes: closure_4, SubscriptionIntervalTypes: hasOwnProperty } = PremiumConstants);
-const getPremiumGradientColor = fn(7760).getPremiumGradientColor;
+const getPremiumGradientColor = fn(7762).getPremiumGradientColor;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = {
   header: { height: 112, justifyContent: "center", alignItems: "center" },
   logoContainer: { position: "absolute", top: 16, left: 16 },
@@ -76,12 +76,12 @@ export default function PremiumPlanActionSheetHeader(arg0) {
   const tmp14 = LinearGradientDefault;
   obj2.accessibilityLabel = PremiumUtils.getPremiumTypeDisplayName(premiumType);
   if (TIER_0.TIER_0 === premiumType) {
-    let tmp13Result = _modDef7761;
+    let tmp13Result = _modDef7763;
   } else {
     tmp13Result = null;
     if (TIER_0.TIER_1 !== premiumType) {
       if (TIER_0.TIER_2 === premiumType) {
-        tmp13Result = _modDef7762;
+        tmp13Result = _modDef7764;
       }
     }
   }
@@ -89,11 +89,11 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     const items = [tmp13Result, ,];
     const obj3 = { style: tmp.logoContainer, children: null };
     if (TIER_0.TIER_0 === premiumType) {
-      let tmp13Result8 = _modDef7763;
+      let tmp13Result8 = _modDef7765;
     } else if (TIER_0.TIER_1 === premiumType) {
-      tmp13Result8 = _modDef7764;
+      tmp13Result8 = _modDef7766;
     } else if (TIER_0.TIER_2 === premiumType) {
-      tmp13Result8 = _modDef7765;
+      tmp13Result8 = _modDef7767;
     }
     const obj4 = { source: tmp13Result8, resizeMode: "contain" };
     const items1 = [React5(FastImageDefault, obj4), ,];
@@ -125,11 +125,11 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     items[1] = React6(View, obj3);
     const tmp13Result7 = FastImageDefault;
     if (TIER_0.TIER_0 === premiumType) {
-      let tmp13Result10 = _modDef9578;
+      let tmp13Result10 = _modDef9582;
     } else if (TIER_0.TIER_1 === premiumType) {
-      tmp13Result10 = _modDef11057;
+      tmp13Result10 = _modDef11063;
     } else if (TIER_0.TIER_2 === premiumType) {
-      tmp13Result10 = _modDef9583;
+      tmp13Result10 = _modDef9587;
     }
     const obj7 = { source: tmp13Result10, style: null, resizeMode: "contain" };
     const items2 = [tmp.imgWumpus];
@@ -149,12 +149,12 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     tmp13Result9 = FastImageDefault;
   } else {
     if (TIER_0.TIER_0 === premiumType) {
-      let tmp13Result12 = _modDef7761;
+      let tmp13Result12 = _modDef7763;
     } else {
       tmp13Result12 = null;
       if (TIER_0.TIER_1 !== premiumType) {
         if (TIER_0.TIER_2 === premiumType) {
-          tmp13Result12 = _modDef7762;
+          tmp13Result12 = _modDef7764;
         }
       }
     }

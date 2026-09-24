@@ -8,7 +8,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const Image = fn(17).Image;
-const ContentDismissActionType = fn(2039).ContentDismissActionType;
+const ContentDismissActionType = fn(2041).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
@@ -21,11 +21,11 @@ export default function PasswordlessUpsellPromoSheet() {
     const result1 = setRegistering(onRegisterSuccess[6]).openPasskeyUpsellPromoModal(merged);
   }
   let obj = {
-    source: require("../../../../_runtime/metro/15029__.js"),
+    source: require("../../../../_runtime/metro/15038__.js"),
     style: { height: 190, width: 220, resizeMode: "contain" },
   };
   const tmp4 = closure_7(Image, {
-    source: require("../../../../_runtime/metro/15029__.js"),
+    source: require("../../../../_runtime/metro/15038__.js"),
     style: { height: 190, width: 220, resizeMode: "contain" },
   });
   [r10018, require] = noop.useState("");

@@ -1,7 +1,7 @@
 // discord_app/design/components/mana-assets/native/generated/ServerBannerUnderboxExample.native.tsx
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef6743 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ServerBannerUnderboxExample-2x.png.js";
+import _modDef6745 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ServerBannerUnderboxExample-2x.png.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
@@ -31,7 +31,7 @@ export const ServerBannerUnderboxExample = function ServerBannerUnderboxExample(
     accessibilityLabel: null,
     resizeMode: null,
   };
-  const obj2 = { uri: _modDef6743 };
+  const obj2 = { uri: _modDef6745 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

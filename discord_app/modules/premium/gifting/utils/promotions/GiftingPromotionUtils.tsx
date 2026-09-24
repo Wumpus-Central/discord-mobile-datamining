@@ -1,7 +1,5 @@
 // discord_app/modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx
-import util from "../../../../../intl/index.native.tsx";
 import dismissible_content from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import _modDef2548 from "../../PremiumGifting.messages.js";
 import DismissibleContentUnsafeUtils from "../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import GiftPromotionReminderExperiment2 from "../../experiments/GiftPromotionReminderExperiment.tsx";
 import MarketingComponentType from "../../../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx";
@@ -17,20 +15,20 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx");
 
 export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchClaimableGiftingPromotionRewardSkuIds() {
-  const tmp = hasPreviouslyFetched(fetchPurchasesError.useState(), 2);
+  const tmp = purchases(hasPreviouslyFetched.useState(), 2);
   _require = tmp[1];
-  const items = [ref];
-  const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () =>
-    ref.getGiftPromotionRewardSkuIds(),
+  const items = [fetchPurchasesError];
+  stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () =>
+    fetchPurchasesError.getGiftPromotionRewardSkuIds(),
   );
   const obj = require("initialize");
   const fetchPurchases = require("useFetchCollectiblesCategoriesAndPurchases").useFetchPurchases();
   purchases = fetchPurchases.purchases;
   hasPreviouslyFetched = fetchPurchases.hasPreviouslyFetched;
   fetchPurchasesError = fetchPurchases.fetchPurchasesError;
-  const obj2 = require("useFetchCollectiblesCategoriesAndPurchases");
+  hasPreviouslyFetched.useRef(false);
   const items1 = [stateFromStoresArray, purchases, hasPreviouslyFetched, fetchPurchasesError];
-  const effect = fetchPurchasesError.useEffect(() => {
+  const effect = hasPreviouslyFetched.useEffect(() => {
     if (hasPreviouslyFetched) {
       if (!ref.current) {
         if (stateFromStoresArray.length > 0) {
@@ -46,28 +44,6 @@ export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchCl
     }
   }, items1);
   return tmp[0];
-};
-export const getGiftingPromotionRewardEarnedSubtitle = function getGiftingPromotionRewardEarnedSubtitle(
-  arg0,
-  arr,
-  arg2,
-) {
-  closure_0 = arg2;
-  if (arr != null) {
-    const found = arr.filter((item) => !closure_0.includes(item));
-  }
-  if (arg0.length > 0) {
-    if (null != found) {
-      if (0 === found.length) {
-        const intl2 = util.intl;
-        const obj = { count: arg0.length };
-        let formatToPlainStringResult = intl2.formatToPlainString(_modDef2548.cMHedL, obj);
-      }
-      return formatToPlainStringResult;
-    }
-  }
-  const intl = util.intl;
-  formatToPlainStringResult = intl.string(_modDef2548["/8znyU"]);
 };
 export const getRewardAssetIdMap = function getRewardAssetIdMap(arr) {
   const map = new Map();

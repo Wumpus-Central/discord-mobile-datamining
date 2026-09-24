@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
-import _modDef3036 from "../../../age_assurance/AgeAssurance.messages.js";
+import _modDef3038 from "../../../age_assurance/AgeAssurance.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import AgeVerificationActionCreatorsDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
@@ -19,21 +19,21 @@ function SettingsAgeGroupHeader() {
   }, []);
   const obj2 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef3036.PY4MA0);
+  obj2.children = intl.string(_modDef3038.PY4MA0);
   const items = [React5(Text_Text.Text, obj2)];
   const obj3 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl2 = util.intl;
-  obj3.children = intl2.format(_modDef3036["1DN29p"], { handleOnHelpUrlHook: callback });
+  obj3.children = intl2.format(_modDef3038["1DN29p"], { handleOnHelpUrlHook: callback });
   items[1] = React5(Text_Text.Text, obj3);
   obj.children = items;
   return React6(View, obj);
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(8319).MobileUserSettings;
+const MobileUserSettings = fn(8323).MobileUserSettings;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = {
   headerContainer: {
     gap: nativeDefault.space.PX_4,
@@ -46,13 +46,13 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/age_group/native/SettingsAgeGroupScreen.tsx");
 
 export default function SettingsAgeGroupScreen() {
-  isTinyBroncoSettingsEnabled = isTinyBroncoSettingsEnabled(15044).useIsTinyBroncoSettingsEnabled();
+  isTinyBroncoSettingsEnabled = isTinyBroncoSettingsEnabled(15053).useIsTinyBroncoSettingsEnabled();
   let items = [isTinyBroncoSettingsEnabled];
   const node = noop.useMemo(() => {
     const obj2 = { sections: null, ListHeaderComponent: null };
     const obj3 = { label: null, settings: null };
     const intl = util.intl;
-    obj3.label = intl.string(_modDef3036["5Mi5TE"]);
+    obj3.label = intl.string(_modDef3038["5Mi5TE"]);
     const items = [, ,];
     ({
       AGE_GROUP_CONFIRM: arr[0],

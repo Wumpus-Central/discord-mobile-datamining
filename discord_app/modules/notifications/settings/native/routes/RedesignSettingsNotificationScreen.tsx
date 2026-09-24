@@ -1,6 +1,6 @@
 // discord_app/modules/notifications/settings/native/routes/RedesignSettingsNotificationScreen.tsx
 import util from "../../../../../intl/index.native.tsx";
-import _modDef2810 from "../../../NotificationSettings.messages.js";
+import _modDef2812 from "../../../NotificationSettings.messages.js";
 import useMountEffectDefault from "../../../../../hooks/useMountEffect.tsx";
 import SettingBuilders from "../../../../settings/native/renderer/SettingBuilders.tsx";
 import SettingLayoutDefault from "../../../../settings/native/renderer/SettingLayout.tsx";
@@ -10,8 +10,8 @@ import MobileNotifSettingsRouteBuilders from "../MobileNotifSettingsRouteBuilder
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_4 = fn(15822).initializeAndroidNotificationSettingsStore;
-const MobileUserSettings = fn(8319).MobileUserSettings;
+let closure_4 = fn(15836).initializeAndroidNotificationSettingsStore;
+const MobileUserSettings = fn(8323).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -29,7 +29,7 @@ export default noop.memo(() => {
     const items = [MobileNotifSettingsRouteBuilders.buildOverviewCategoriesSection()];
     const obj4 = { label: null, settings: null };
     const intl = util.intl;
-    obj4.label = intl.string(_modDef2810.nvBHcD);
+    obj4.label = intl.string(_modDef2812.nvBHcD);
     const items1 = [, , , , , ,];
     ({
       REDESIGN_IN_APP_NOTIFICATIONS: arr2[0],

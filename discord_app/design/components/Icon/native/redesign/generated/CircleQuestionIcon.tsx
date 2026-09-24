@@ -1,8 +1,8 @@
 // discord_app/design/components/Icon/native/redesign/generated/CircleQuestionIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod11454 from "../../../../../../../_runtime/metro/11454__.js";
-import _mod11455 from "../../../../../../../_runtime/metro/11455__.js";
+import _mod11460 from "../../../../../../../_runtime/metro/11460__.js";
+import _mod11461 from "../../../../../../../_runtime/metro/11461__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -24,8 +24,8 @@ export const CircleQuestionIcon = function CircleQuestionIcon(color) {
   const merged = Object.assign(color, Object.assign({ style: 0, secondaryColor: 0, color: 0 }));
   const obj = { children: null };
   const merged1 = Object.assign(merged);
-  const items = [React4(BaseIconImage.BaseIconImage, { source: _mod11454, color: secondaryColor, style })];
-  const obj3 = { source: _mod11455, color: INTERACTIVE_ICON_DEFAULT, style: null };
+  const items = [React4(BaseIconImage.BaseIconImage, { source: _mod11460, color: secondaryColor, style })];
+  const obj3 = { source: _mod11461, color: INTERACTIVE_ICON_DEFAULT, style: null };
   const items1 = [style];
   const items2 = [];
   items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };

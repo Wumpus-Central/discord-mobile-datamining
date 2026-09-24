@@ -66,8 +66,8 @@ let obj = {
     return true;
   },
 };
-items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(8490).isEntryNew };
-let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(8490).isEntryNew };
+items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(8494).isEntryNew };
+let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(8494).isEntryNew };
 items[2] = {
   Badge: BadgesAll.StreakBadge,
   predicate(entry) {
@@ -125,7 +125,7 @@ items[5] = {
     return tmp3;
   },
 };
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj7 = {
   body: null,
   content: null,

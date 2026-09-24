@@ -8,7 +8,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const FetchState = fn(4455).FetchState;
+const FetchState = fn(4457).FetchState;
 const Constants = fn(1074);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_8, GuildFeatures: closure_9 } = Constants);
 const size = fn(2);
@@ -96,8 +96,8 @@ export const useShouldHideGuildPurchaseEntryPoints = function useShouldHideGuild
     }
     let result = flag;
   } else {
-    result = tmp(4454).isRestrictedFromShowingGuildPurchaseEntryPoints(stateFromStoresArray);
-    const tmpResult4 = tmp(4454);
+    result = tmp(4456).isRestrictedFromShowingGuildPurchaseEntryPoints(stateFromStoresArray);
+    const tmpResult4 = tmp(4456);
   }
   const tmpResult3 = require("initialize");
 };
@@ -171,8 +171,8 @@ export const useShouldRestrictUpdatingCreatorMonetizationSettings =
       }
       let result = flag;
     } else {
-      result = tmp(4454).isRestrictedFromUpdatingCreatorMonetizationSettings(stateFromStoresArray);
-      const tmpResult4 = tmp(4454);
+      result = tmp(4456).isRestrictedFromUpdatingCreatorMonetizationSettings(stateFromStoresArray);
+      const tmpResult4 = tmp(4456);
     }
     if (stateFromStores != null) {
       const features2 = stateFromStores.features;

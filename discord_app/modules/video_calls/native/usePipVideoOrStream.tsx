@@ -13,7 +13,7 @@ import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const CallConstants = fn(4848);
+const CallConstants = fn(4850);
 ({ isStreamParticipant: closure_11, isUserParticipant: closure_12, ParticipantTypes: map1 } = CallConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/usePipVideoOrStream.tsx");
@@ -109,7 +109,7 @@ export default function usePipVideoOrStream(arg0) {
       if (tmp11 == null) {
         tmp12 = found;
       }
-      let isModalOpenResult = null != selectedParticipant;
+      let isModalOpenResult = null != isActivityViewFocused && null != selectedParticipant;
       if (isModalOpenResult) {
         let id;
         if (tmp11 != null) {
@@ -129,6 +129,9 @@ export default function usePipVideoOrStream(arg0) {
       }
       if (isModalOpenResult) {
         isModalOpenResult = NavigationRouteUtils.isModalOpen(ChannelCallModalDefault);
+      }
+      if (isModalOpenResult) {
+        isModalOpenResult = !ChannelRTCStore.getChatOpen(isActivityViewFocused);
       }
       if (isModalOpenResult) {
         tmp12 = found;
@@ -246,7 +249,7 @@ export const useHasPipParticipant = function useHasPipParticipant(isActivityView
       if (tmp11 == null) {
         tmp12 = found;
       }
-      let isModalOpenResult = null != selectedParticipant;
+      let isModalOpenResult = null != isActivityViewFocused && null != selectedParticipant;
       if (isModalOpenResult) {
         let id;
         if (tmp11 != null) {
@@ -266,6 +269,9 @@ export const useHasPipParticipant = function useHasPipParticipant(isActivityView
       }
       if (isModalOpenResult) {
         isModalOpenResult = NavigationRouteUtils.isModalOpen(ChannelCallModalDefault);
+      }
+      if (isModalOpenResult) {
+        isModalOpenResult = !ChannelRTCStore.getChatOpen(isActivityViewFocused);
       }
       if (isModalOpenResult) {
         tmp12 = found;

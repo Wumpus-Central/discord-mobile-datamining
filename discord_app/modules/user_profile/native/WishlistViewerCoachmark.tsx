@@ -1,21 +1,21 @@
 // discord_app/modules/user_profile/native/WishlistViewerCoachmark.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef13524 from "../../../../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js";
+import _modDef13533 from "../../../../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function CoachmarkImage() {
   const tmp = closure_8();
   const obj = { style: tmp.imageContainer, children: null };
-  const obj2 = { source: { uri: _modDef13524 }, style: tmp.image };
-  obj.children = <hasOwnProperty source={{ uri: _modDef13524 }} style={tmp.image} />;
+  const obj2 = { source: { uri: _modDef13533 }, style: tmp.image };
+  obj.children = <hasOwnProperty source={{ uri: _modDef13533 }} style={tmp.image} />;
   return <React4 style={tmp.imageContainer}>{null}</React4>;
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const ContentDismissActionType = fn(2039).ContentDismissActionType;
+const ContentDismissActionType = fn(2041).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let closure_8 = createStyles.createStyles({
   imageContainer: { alignItems: "center", justifyContent: "center" },
   image: { width: 160, height: 106 },

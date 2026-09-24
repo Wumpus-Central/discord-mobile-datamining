@@ -118,7 +118,7 @@ let closure_9 = async function _removeGameFriend() {
     userId: closure_129_0,
     applicationId: closure_129_1,
     onSuccess() {
-      const AccessibilityAnnouncer = closure_1_0(4678).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = closure_1_0(4680).AccessibilityAnnouncer;
       const intl = closure_1_0(1115).intl;
       AccessibilityAnnouncer.announce(intl.string(closure_1_0(1115).t.zRf8cO));
     },
@@ -133,7 +133,7 @@ let closure_10 = async function _cancelGameFriendRequest() {
     userId: closure_129_0,
     applicationId: closure_129_1,
     onSuccess() {
-      const AccessibilityAnnouncer = closure_1_0(4678).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = closure_1_0(4680).AccessibilityAnnouncer;
       const intl = closure_1_0(1115).intl;
       AccessibilityAnnouncer.announce(intl.string(closure_1_0(1115).t.XMf21q));
     },
@@ -177,7 +177,7 @@ export default {
         AccessibilityAnnouncer.announce(intl.string(util.t.taJiuc));
       })
       .catch((error) => {
-        const aPIError = new onSuccess(4727).APIError(error);
+        const aPIError = new onSuccess(4729).APIError(error);
         let anyErrorMessage = aPIError.getAnyErrorMessage();
         const obj = { title: null, body: null };
         const intl = onSuccess(1115).intl;

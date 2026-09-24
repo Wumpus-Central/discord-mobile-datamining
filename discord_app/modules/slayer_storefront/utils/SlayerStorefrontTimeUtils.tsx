@@ -1,8 +1,8 @@
 // discord_app/modules/slayer_storefront/utils/SlayerStorefrontTimeUtils.tsx
 import DurationsDefault from "../../../utils/Durations.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3582 from "../intl/SlayerStorefront.messages.js";
-import _modDef4414 from "../../../../_runtime/metro/04414__.js";
+import _modDef3584 from "../intl/SlayerStorefront.messages.js";
+import _modDef4416 from "../../../../_runtime/metro/04416__.js";
 import useIntervalDefault from "../../../hooks/useInterval.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -12,7 +12,7 @@ function getLimitedOfferTimeLeft(arg0) {
   if (null == arg0) {
     return null;
   } else {
-    const diffResult = _modDef4414(arg0).diff(_modDef4414(), "seconds");
+    const diffResult = _modDef4416(arg0).diff(_modDef4416(), "seconds");
     let tmp4 = null;
     if (diffResult > 0) {
       const time = { days: null, hours: null, minutes: null, seconds: null };
@@ -43,13 +43,13 @@ function formatLimitedOfferTimeLeft(arg0) {
     } else if (hours > 0) {
       const intl2 = util.intl;
       const obj3 = { hours };
-      formatToPlainStringResult = intl2.formatToPlainString(_modDef3582.PPaJSw, obj3);
+      formatToPlainStringResult = intl2.formatToPlainString(_modDef3584.PPaJSw, obj3);
     } else {
       const intl = util.intl;
       const obj = { minutes: null };
       const _Math = Math;
       obj.minutes = Math.max(tmp12, 1);
-      formatToPlainStringResult = intl.formatToPlainString(_modDef3582["7Z+aIf"], obj);
+      formatToPlainStringResult = intl.formatToPlainString(_modDef3584["7Z+aIf"], obj);
     }
     return formatToPlainStringResult;
   }

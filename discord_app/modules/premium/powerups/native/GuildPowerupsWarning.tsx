@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = {
   container: {
     flexDirection: "row",
@@ -60,15 +60,15 @@ export default function GuildPowerupsWarning(warnings) {
     const obj2 = { style: tmp.container, children: null };
     const obj3 = { style: tmp.contentContainer, children: null };
     const obj4 = { color: tmp5(576).colors.TEXT_FEEDBACK_WARNING, size: "md" };
-    let items = [closure_4(tmp2(6938).CircleErrorIcon, obj4), , ,];
+    let items = [closure_4(tmp2(6940).CircleErrorIcon, obj4), , ,];
     const obj5 = { variant: "text-md/semibold", color: "text-feedback-warning", style: tmp.text, children: tmp7 };
-    items[1] = closure_4(tmp2(4823).Text, obj5);
+    items[1] = closure_4(tmp2(4825).Text, obj5);
     let str = "text-sm/medium";
     if (manaTypeConsolidationExperiment) {
       str = "experimental/body-sm/normal";
     }
     const obj6 = { variant: str, style: tmp.text, children: tmp8 };
-    items[2] = closure_4(tmp2(4823).Text, obj6);
+    items[2] = closure_4(tmp2(4825).Text, obj6);
     let mapped;
     if (warnings != null) {
       mapped = warnings.map((children, index) => {

@@ -1,26 +1,30 @@
 // discord_app/modules/guild_space/GuildSpaceExperiment.tsx
-import createExperiment from "../experiments/index.tsx";
+import Constants from "../../Constants.tsx";
+import ApexExperiment from "../experiments/apex/index.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const obj = {
+const EMPTY_STRING_SNOWFLAKE_ID = Constants.EMPTY_STRING_SNOWFLAKE_ID;
+const apexExperiment = ApexExperiment.createApexExperiment({
   kind: "guild",
-  id: "2026-06_guild_spaces",
-  label: "Guild Space",
+  name: "2026-09-guild-spaces",
   defaultConfig: { enabled: false },
-  treatments: null,
-};
-const items = [{ id: 1, label: "Enable Guild Space", config: { enabled: true } }];
-obj.treatments = items;
-const experiment = createExperiment.createExperiment(obj);
+  variations: { 0: { enabled: false }, 1: { enabled: true } },
+});
 const result = size.fileFinishedImporting("modules/guild_space/GuildSpaceExperiment.tsx");
 
-export const GuildSpaceExperiment = experiment;
+export const GuildSpaceExperiment = apexExperiment;
 export const getGuildSpaceExperimentEnabled = function getGuildSpaceExperimentEnabled(id, GuildSettingsModalOverview) {
-  return experiment.getCurrentConfig(
-    { guildId: id, location: GuildSettingsModalOverview },
-    { autoTrackExposure: false },
-  ).enabled;
+  let enabled = null != id;
+  if (enabled) {
+    const obj = { guildId: id, location: GuildSettingsModalOverview };
+    enabled = apexExperiment.getConfig(obj).enabled;
+  }
+  return enabled;
 };
-export const useGuildSpaceExperimentEnabled = function useGuildSpaceExperimentEnabled(guildId, location) {
-  return experiment.useExperiment({ guildId, location }, { autoTrackExposure: false }).enabled;
+export const useGuildSpaceExperimentEnabled = function useGuildSpaceExperimentEnabled(id, location) {
+  let tmp = id;
+  if (id == null) {
+    tmp = EMPTY_STRING_SNOWFLAKE_ID;
+  }
+  return apexExperiment.useConfig({ guildId: tmp, location }).enabled;
 };

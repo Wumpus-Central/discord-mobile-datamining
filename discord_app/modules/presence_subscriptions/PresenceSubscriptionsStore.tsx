@@ -12,7 +12,7 @@ function handleConnectionOpenOrResumed() {
 const INVITE_EXPIRATION_MS = fn(2004).INVITE_EXPIRATION_MS;
 let closure_5 = {};
 let closure_6 = {};
-const delayedCall = new fn(2037).DelayedCall(3000, function flush() {
+const delayedCall = new fn(2039).DelayedCall(3000, function flush() {
   const items = [];
   const entries = Object.entries(closure_6);
   while (tmp4 !== undefined) {

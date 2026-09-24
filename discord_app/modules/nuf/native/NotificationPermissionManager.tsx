@@ -1,7 +1,7 @@
 // discord_app/modules/nuf/native/NotificationPermissionManager.tsx
 import discord_common_AnalyticsUtils from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import asyncRequireImpl from "../../../../_runtime/01980_asyncRequireImpl.js";
-import _modDef4414 from "../../../../_runtime/metro/04414__.js";
+import _modDef4416 from "../../../../_runtime/metro/04416__.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import PushNotificationActionCreators from "../../../actions/native/PushNotificationActionCreators.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -19,8 +19,8 @@ function haveNotSeenPromptSince(arg0, arg1) {
   if (!tmp2) {
     let tmp4;
     if (items.includes(arg0)) {
-      tmp4 = _modDef4414().diff(tmp, "days") >= 1;
-      const obj = _modDef4414();
+      tmp4 = _modDef4416().diff(tmp, "days") >= 1;
+      const obj = _modDef4416();
     }
     tmp2 = tmp4;
   }
@@ -88,7 +88,7 @@ function showPrompt(arg0, arg1, arg2) {
     obj3.impressionName = discord_common_AnalyticsUtils.ImpressionNames.PUSH_NOTIFICATION_REACTIVATION_PROMPT;
     obj3.impressionProperties = { action_location: location };
     obj3.location = location;
-    obj2.openLazy(asyncRequireImpl(17943, dependencyMap.paths), closure_2_11, obj3);
+    obj2.openLazy(asyncRequireImpl(17966, dependencyMap.paths), closure_2_11, obj3);
   }, arg2);
 }
 function _logNotificationPermissionStatus() {
@@ -170,13 +170,13 @@ let closure_26 = async function _logNotificationPermissionStatus2() {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const PermissionPromptType = fn(12749).PermissionPromptType;
-const NotificationPermissionConstants = fn(12750);
+const PermissionPromptType = fn(12758).PermissionPromptType;
+const NotificationPermissionConstants = fn(12759);
 ({ NOTIFICATION_REACTIVATION_ACTIONSHEET_KEY: closure_11, EventActionLocation: closure_12 } =
   NotificationPermissionConstants);
 const Constants = fn(1074);
 ({ RelationshipTypes: map1, GuildFeatures: closure_14, AnalyticEvents: closure_15 } = Constants);
-let closure_16 = fn(5036).NotificationAuthorizationStatus;
+let closure_16 = fn(5038).NotificationAuthorizationStatus;
 const items = [,];
 ({ FRIEND_REQUEST_SENT: arr[0], INVITE_ACCEPTED: arr[1] } = PermissionPromptType);
 let c23 = null;

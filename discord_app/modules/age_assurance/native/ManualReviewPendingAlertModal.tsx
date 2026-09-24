@@ -1,6 +1,6 @@
 // discord_app/modules/age_assurance/native/ManualReviewPendingAlertModal.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3100 from "../ManualReview.messages.js";
+import _modDef3102 from "../ManualReview.messages.js";
 import AlertModal from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -12,9 +12,9 @@ const result = size.fileFinishedImporting("modules/age_assurance/native/ManualRe
 export default function ManualReviewPendingAlertModal() {
   const obj = { title: null, content: null, actions: null };
   const intl = util.intl;
-  obj.title = intl.string(_modDef3100.CNm4w6);
+  obj.title = intl.string(_modDef3102.CNm4w6);
   const intl2 = util.intl;
-  obj.content = intl2.string(_modDef3100["14Fje3"]);
+  obj.content = intl2.string(_modDef3102["14Fje3"]);
   const obj2 = { children: null };
   const obj3 = { text: null };
   const intl3 = util.intl;

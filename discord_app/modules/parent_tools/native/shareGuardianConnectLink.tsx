@@ -1,6 +1,6 @@
 // discord_app/modules/parent_tools/native/shareGuardianConnectLink.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef2484 from "../FamilyCenter.messages.js";
+import _modDef2486 from "../FamilyCenter.messages.js";
 import FamilyCenterConstants from "../FamilyCenterConstants.tsx";
 import showShareActionSheet from "../../action_sheet/native/showShareActionSheet.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -16,6 +16,6 @@ export const shareGuardianConnectLink = function shareGuardianConnectLink(stateF
   const tmp = closure_3(stateFromStores.id, linkCode);
   const obj2 = { message: null };
   const intl = util.intl;
-  obj2.message = intl.formatToPlainString(_modDef2484.lVD5Nd, { username, url: tmp });
+  obj2.message = intl.formatToPlainString(_modDef2486.lVD5Nd, { username, url: tmp });
   showShareActionSheet.showShareActionSheet(obj2, "Family Center Connect Guardian");
 };

@@ -1,6 +1,6 @@
 // discord_app/intl/IntlLoaderStore.tsx
 import util from "index.native.tsx";
-import _modDef2111 from "../../_runtime/metro/02111__.js";
+import _modDef2113 from "../../_runtime/metro/02113__.js";
 import bg from "locale-data/date-fns.tsx";
 import formatjs from "locale-data/formatjs.tsx";
 import moment from "locale-data/moment.tsx";
@@ -71,7 +71,7 @@ let closure_6 = async function _setAppLocale(arg0) {
                     closure_0 = tmp4;
                     c1 = 1;
                     dependencyMap = 1;
-                    const obj6 = { value: closure_0(2121).preloadAllIntlMessageFiles(), done: false };
+                    const obj6 = { value: closure_0(2123).preloadAllIntlMessageFiles(), done: false };
                     return obj6;
                   }
                 } else if (1 === tmp4) {
@@ -201,7 +201,7 @@ let closure_7 = async function _loadDateFnsLocale(arg0) {
             const obj4 = { value: tmp20(), done: false };
             return obj4;
           } else {
-            state.setLocaleData(_modDef2111);
+            state.setLocaleData(_modDef2113);
             c3 = 3;
           }
         }
@@ -344,11 +344,11 @@ const identity = fn(1243);
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
-  return {
+  let obj = {
     isLoading: false,
     inProgressLocale: "Boolean",
     error: "padding",
-    localeData: _modDef2111,
+    localeData: _modDef2113,
     setLoadingStarted(inProgressLocale) {
       return closure_0({ isLoading: true, inProgressLocale });
     },
@@ -367,6 +367,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       closure_0({ localeData });
     }
   };
+  return obj;
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("intl/IntlLoaderStore.tsx");
@@ -394,7 +395,7 @@ export const setAppLocale = function setAppLocale() {
 export const useLocaleData = function useLocaleData() {
   let tmp = withEqualityFn((localeData) => localeData.localeData);
   if (tmp == null) {
-    tmp = _modDef2111;
+    tmp = _modDef2113;
   }
   return tmp;
 };

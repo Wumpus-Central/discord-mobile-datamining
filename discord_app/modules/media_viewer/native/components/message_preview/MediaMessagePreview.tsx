@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "../../../../../utils/SnowflakeUtils.tsx";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/06983_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/06985_LegacyBaseButton.js";
 import ReactionActionCreators from "../../../../reactions/ReactionActionCreators.tsx";
 import RowGeneratorDefault from "../../../../messages/native/renderer/RowGenerator.tsx";
 import RowGeneratorTypes from "../../../../messages/native/renderer/RowGeneratorTypes.tsx";
@@ -118,11 +118,11 @@ obj.setOptions({
   forcedTheme: ThemeTypes.DARK,
   forceHideSimpleEmbedContent: true,
 });
-let createStyles = fn(4827);
+let createStyles = fn(4829);
 let closure_17 = createStyles.createStyles({
   dummyLayout: { position: "absolute", top: 0, left: -9999, width: "100%", opacity: 0 },
 });
-createStyles = fn(4827);
+createStyles = fn(4829);
 let closure_19 = createStyles.createNativeStyleProperties({
   reactionBackgroundColor: nativeDefault.colors.REACTION_BACKGROUND_DEFAULT,
   reactionBorderColor: nativeDefault.colors.REACTION_BORDER_DEFAULT,
@@ -131,7 +131,7 @@ let closure_19 = createStyles.createNativeStyleProperties({
   activeReactionBorderColor: nativeDefault.colors.REACTION_BORDER_REACTED_DEFAULT,
   activeReactionTextColor: nativeDefault.colors.REACTION_TEXT_REACTED_DEFAULT,
 });
-createStyles = fn(4827);
+createStyles = fn(4829);
 let obj2 = {
   renderCodedLinks: false,
   renderGiftCode: false,

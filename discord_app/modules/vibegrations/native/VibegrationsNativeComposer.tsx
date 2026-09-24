@@ -1,7 +1,7 @@
 // discord_app/modules/vibegrations/native/VibegrationsNativeComposer.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3712 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3714 from "../intl/VibegrationsUntranslated.messages.js";
 import SendMessageIcon from "../../../design/components/Icon/native/redesign/generated/SendMessageIcon.tsx";
 import ActionSheetActionCreators from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import VibegrationsTypes from "../VibegrationsTypes.tsx";
@@ -31,17 +31,17 @@ function tooLargeText(contentType) {
   const obj = { size: null };
   const obj2 = VibegrationsTypes;
   obj.size = obj2.formatVibegrationsAttachmentLimit(VibegrationsTypes.vibegrationsAttachmentLimit(contentType));
-  return intl.formatToPlainString(_modDef3712.cI7t94, obj);
+  return intl.formatToPlainString(_modDef3714.cI7t94, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-let VibegrationsConnectionStore = fn(13448);
+let VibegrationsConnectionStore = fn(13457);
 ({ deleteStagedAttachment: c10, uploadAttachmentBytes: closure_11 } = VibegrationsConnectionStore);
 let VibegrationsConnectionStore = VibegrationsConnectionStore_mod;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = {
   container: {
     paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING,
@@ -405,7 +405,7 @@ export default function VibegrationsNativeComposer(projectId) {
         let obj = { count: null };
         VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE = VibegrationsTypes.VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE;
         obj.count = VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE;
-        _undefined4(intl.formatToPlainString(_modDef3712.DlX57a, obj));
+        _undefined4(intl.formatToPlainString(_modDef3714.DlX57a, obj));
         const _Math = Math;
         const substr = map.slice(0, Math.max(0, diff));
         let arr2 = substr;
@@ -505,12 +505,12 @@ export default function VibegrationsNativeComposer(projectId) {
               closure_128_0 = undefined;
               const obj5 = {
                 mediaType: "any",
-                selectionLimit: tmp2(5361).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE,
+                selectionLimit: tmp2(5363).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE,
                 skipProcessing: true,
               };
               dependencyMap = 1;
               c3 = 1;
-              const obj6 = { value: tmp5(5452).launchImageLibraryAsync(obj5), done: false };
+              const obj6 = { value: tmp5(5454).launchImageLibraryAsync(obj5), done: false };
               return obj6;
             }
           } else if (arg0 === 1) {
@@ -653,12 +653,12 @@ export default function VibegrationsNativeComposer(projectId) {
   const memo = obj.useMemo(() => {
     const obj = { label: null, action: null };
     const intl = util.intl;
-    obj.label = intl.string(_modDef3712.xE6M2k);
+    obj.label = intl.string(_modDef3714.xE6M2k);
     obj.action = callback6;
     const items = [obj];
     const obj2 = { label: null, action: null };
     const intl2 = util.intl;
-    obj2.label = intl2.string(_modDef3712.DN7KeU);
+    obj2.label = intl2.string(_modDef3714.DN7KeU);
     obj2.action = callback7;
     items[1] = obj2;
     return items;
@@ -703,7 +703,14 @@ export default function VibegrationsNativeComposer(projectId) {
   const items12 = [projectId];
   stateFromStores1 = require("initialize").useStateFromStores(
     items11,
-    () => null != VibegrationsConnectionStore.getModelSettings(closure_0),
+    () => {
+      const modelSettings = VibegrationsConnectionStore.getModelSettings(closure_0);
+      let tierSettings;
+      if (modelSettings != null) {
+        tierSettings = modelSettings.tierSettings;
+      }
+      return null != tierSettings;
+    },
     items12,
   );
   const items13 = [projectId];
@@ -742,7 +749,7 @@ export default function VibegrationsNativeComposer(projectId) {
         accessibilityLabel: null,
       };
       const intl2 = util.intl;
-      obj2.accessibilityLabel = intl2.string(_modDef3712.KdgI4k);
+      obj2.accessibilityLabel = intl2.string(_modDef3714.KdgI4k);
       let tmp14 = map1(ChatInputActionButtonDefault, obj2);
     } else if ("models" === key.key) {
       const obj = {
@@ -753,7 +760,7 @@ export default function VibegrationsNativeComposer(projectId) {
         accessibilityLabel: null,
       };
       const intl = util.intl;
-      obj.accessibilityLabel = intl.string(_modDef3712["2NWMqY"]);
+      obj.accessibilityLabel = intl.string(_modDef3714["2NWMqY"]);
       tmp14 = map1(ChatInputActionButtonDefault, obj);
     } else {
       const obj5 = {
@@ -882,7 +889,7 @@ export default function VibegrationsNativeComposer(projectId) {
           onAccessibilityAction: null,
         };
         const intl = util.intl;
-        obj.accessibilityLabel = intl.string(_modDef3712.gUn10I);
+        obj.accessibilityLabel = intl.string(_modDef3714.gUn10I);
         obj.accessibilityActions = accessibilityActions;
         obj.onAccessibilityAction = onAccessibilityAction;
         return map1(ChatInputActionButtonDefault, obj);
@@ -929,7 +936,7 @@ export default function VibegrationsNativeComposer(projectId) {
         onAccessibilityAction: null,
       };
       const intl = util.intl;
-      obj.accessibilityLabel = intl.string(_modDef3712.gUn10I);
+      obj.accessibilityLabel = intl.string(_modDef3714.gUn10I);
       obj.accessibilityActions = accessibilityActions;
       obj.onAccessibilityAction = onAccessibilityAction;
       return map1(ChatInputActionButtonDefault, obj);

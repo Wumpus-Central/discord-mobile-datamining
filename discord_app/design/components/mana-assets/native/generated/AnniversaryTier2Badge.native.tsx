@@ -1,7 +1,7 @@
 // discord_app/design/components/mana-assets/native/generated/AnniversaryTier2Badge.native.tsx
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef6053 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AnniversaryTier2Badge-2x.png.js";
+import _modDef6055 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AnniversaryTier2Badge-2x.png.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
@@ -31,7 +31,7 @@ export const AnniversaryTier2Badge = function AnniversaryTier2Badge(width) {
     accessibilityLabel: null,
     resizeMode: null,
   };
-  const obj2 = { uri: _modDef6053 };
+  const obj2 = { uri: _modDef6055 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

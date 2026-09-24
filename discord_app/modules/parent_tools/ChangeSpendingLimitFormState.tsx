@@ -136,7 +136,7 @@ export const useChangeSpendingLimitFormState = function useChangeSpendingLimitFo
                 closure_8(true);
                 c3 = 1;
                 if (closure_5) {
-                  const ParentalControlledSpendingLimit2 = tmp3(15155).ParentalControlledSpendingLimit;
+                  const ParentalControlledSpendingLimit2 = tmp3(15164).ParentalControlledSpendingLimit;
                   dependencyMap = 2;
                   c4 = 1;
                   const obj4 = {
@@ -145,7 +145,7 @@ export const useChangeSpendingLimitFormState = function useChangeSpendingLimitFo
                   };
                   return obj4;
                 } else if (null != rounded) {
-                  const ParentalControlledSpendingLimit = tmp3(15155).ParentalControlledSpendingLimit;
+                  const ParentalControlledSpendingLimit = tmp3(15164).ParentalControlledSpendingLimit;
                   const obj5 = { amount: tmp16, currency: formatted };
                   dependencyMap = 3;
                   c4 = 1;

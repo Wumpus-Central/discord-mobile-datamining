@@ -7,10 +7,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildMoveToCategoryAction.tsx");
 
 export default function useFavoritesGuildMoveToCategoryAction(id) {
-  const isFavoritesGuildSelected = favorite(10567).useIsFavoritesGuildSelected();
-  let obj = favorite(10567);
-  favorite = favorite(10567).useFavorite(id.id);
-  const obj2 = favorite(10567);
+  const isFavoritesGuildSelected = favorite(10572).useIsFavoritesGuildSelected();
+  let obj = favorite(10572);
+  favorite = favorite(10572).useFavorite(id.id);
+  const obj2 = favorite(10572);
   id = undefined;
   if (favorite != null) {
     id = favorite.id;

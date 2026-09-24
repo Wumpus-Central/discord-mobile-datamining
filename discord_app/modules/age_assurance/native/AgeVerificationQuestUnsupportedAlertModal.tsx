@@ -1,6 +1,6 @@
 // discord_app/modules/age_assurance/native/AgeVerificationQuestUnsupportedAlertModal.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3036 from "../AgeAssurance.messages.js";
+import _modDef3038 from "../AgeAssurance.messages.js";
 import AlertModal from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -12,9 +12,9 @@ const result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerif
 export default function AgeVerificationQuestUnsupportedAlertModal() {
   const obj = { title: null, content: null, actions: null };
   const intl = util.intl;
-  obj.title = intl.string(_modDef3036.gUqXQN);
+  obj.title = intl.string(_modDef3038.gUqXQN);
   const intl2 = util.intl;
-  obj.content = intl2.string(_modDef3036.yBHwMy);
+  obj.content = intl2.string(_modDef3038.yBHwMy);
   const obj2 = { children: null };
   const obj3 = { text: null };
   const intl3 = util.intl;

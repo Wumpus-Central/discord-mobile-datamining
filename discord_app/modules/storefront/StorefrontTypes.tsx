@@ -23,6 +23,36 @@ export const StorefrontPromotionRewardEligibilityStatus = {
   CONSUMED: 4,
   [4]: "CONSUMED",
 };
+export const StorefrontPromotionActionType = {
+  COMMERCE_ORBS_BACK: 1,
+  [1]: "COMMERCE_ORBS_BACK",
+  NON_COMMERCE_ORBS_BACK: 2,
+  [2]: "NON_COMMERCE_ORBS_BACK",
+  PROMO_CODE: 3,
+  [3]: "PROMO_CODE",
+  INTERNAL_SKU: 4,
+  [4]: "INTERNAL_SKU",
+  EXTERNAL_SKU: 5,
+  [5]: "EXTERNAL_SKU",
+};
+export const StorefrontPromotionActionDeliveryMode = { GRANT: 1, [1]: "GRANT", CLAIM: 2, [2]: "CLAIM" };
+export const StorefrontPromotionRedemptionStatus = {
+  PENDING: 0,
+  [0]: "PENDING",
+  CONSUMED: 1,
+  [1]: "CONSUMED",
+  VOIDED: 2,
+  [2]: "VOIDED",
+  COMPLETED: 3,
+  [3]: "COMPLETED",
+};
+export const StorefrontPromotionRedemptionRewardStatus = {
+  PENDING: "pending",
+  GRANTED: "granted",
+  FAILED: "failed",
+  VOIDED: "voided",
+  UNCLAIMED: "unclaimed",
+};
 export const StorefrontOfferType = {
   ORB_REDEMPTION: 1,
   [1]: "ORB_REDEMPTION",

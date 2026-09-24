@@ -4,7 +4,7 @@ import util from "../../../../../../intl/index.native.tsx";
 import RootNavigationRef from "../../../../RootNavigationRef.native.tsx";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../../design/components/Button/native/Button.native.tsx";
-import _modDef16457 from "../../../../../../../_runtime/metro/16457__.js";
+import _modDef16481 from "../../../../../../../_runtime/metro/16481__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj = {
   container: { padding: nativeDefault.space.PX_16, flex: 1, height: 325 },
   containerImage: null,
@@ -46,7 +46,7 @@ export default noop.memo(function MessagesItemEmptyState() {
       }
     }
   }, []);
-  obj3.source = _modDef16457;
+  obj3.source = _modDef16481;
   obj3.style = tmp.image;
   obj2.children = timestampProducer(React4, obj3);
   const items = [timestampProducer(hasOwnProperty, obj2), , ,];

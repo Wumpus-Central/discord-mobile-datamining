@@ -55,15 +55,15 @@ function updateFriendAnniversaries() {
               if (userAffinity.dmProbability > 0) {
                 if (null != since) {
                   let _Date = Date;
-                  let tmp25 = new.target;
                   let tmp26 = new.target;
+                  let tmp27 = new.target;
                   let date = new Date(since);
-                  let tmp29 = date;
+                  let tmp30 = date;
                   let obj = FriendAnniversaryUtils;
                   if (obj.isFriendAnniversary(date)) {
                     let arr = closure_11.push(tmp17);
                     let obj2 = { friendsSince: null };
-                    obj2.friendsSince = tmp29;
+                    obj2.friendsSince = tmp30;
                     closure_14[tmp17] = obj2;
                   }
                 }
@@ -129,7 +129,7 @@ function generateFriendAnniversaries(c15) {
             }
           });
           const sorted = closure_11.sort((arg0, arg1) => UserAffinitiesV2Store.compareByDmProbability(arg0, arg1));
-          const result = highestAffinity(8423).categorizeFriendAnniversariesByAffinity(
+          const result = highestAffinity(8427).categorizeFriendAnniversariesByAffinity(
             closure_11,
             (userId) => {
               const userAffinity = UserAffinitiesV2Store.getUserAffinity(userId);
@@ -142,14 +142,14 @@ function generateFriendAnniversaries(c15) {
             true,
           );
           ({ highestAffinity, highAffinity } = result);
-          const highestAffinityResult = highestAffinity(8423);
+          const highestAffinityResult = highestAffinity(8427);
         }
         sampleSizeResult = _null;
       }
       sampleSizeResult = _modDef12.sampleSize(found, c15);
     }
   }
-  obj2 = set2(8424);
+  obj2 = set2(8428);
 }
 const Consents = fn(1074).Consents;
 let closure_10 = {

@@ -2,8 +2,8 @@
 import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import Constants from "../../../../Constants.tsx";
 import CheckpointConstants from "../../CheckpointConstants.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05283_LinearGradient.js";
-import _modDef16038 from "../../../../../discord_assets/assets/checkpoint/mobile_background_texture.png.js";
+import LinearGradientDefault from "../../../../../_runtime/05285_LinearGradient.js";
+import _modDef16057 from "../../../../../discord_assets/assets/checkpoint/mobile_background_texture.png.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -26,7 +26,7 @@ export default function CheckpointBackground() {
       style: tmp.background,
     }),
   ];
-  const obj3 = { source: { uri: _modDef16038 }, style: tmp.background, resizeMode: "cover" };
+  const obj3 = { source: { uri: _modDef16057 }, style: tmp.background, resizeMode: "cover" };
   items[1] = hasOwnProperty(Image, obj3);
   obj.children = items;
   return React5(timestampProducer, obj);

@@ -188,7 +188,7 @@ export default function getJankScreenName() {
         obj7.rendered = items.concat(items2);
         ({ focused, rendered } = obj7);
         if (0 === focused.length) {
-          let obj9 = { screen, expectedScreenIds: "", focusedRoute: "channel" };
+          let obj9 = { screen, expectedScreenIds: "", focusedRoute: "category" };
           let obj15 = obj9;
         } else {
           obj15 = { screen: resolveScreenName(focused), expectedScreenIds: null, focusedRoute: null };

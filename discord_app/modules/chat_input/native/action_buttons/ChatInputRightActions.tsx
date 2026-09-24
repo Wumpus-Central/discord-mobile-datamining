@@ -39,15 +39,15 @@ function LeftSlot(state) {
     channel,
     onPress,
     styleButton: "flex",
-    shouldShowThread: "comic",
+    shouldShowThread: "cup_with_straw",
   });
   return React5(ReanimatedRexportDefault.View, obj2);
 }
 const View = fn(17).View;
-const enterDelayMs = fn(12295).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+const enterDelayMs = fn(12304).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let closure_9 = createStyles.createStyles(() => {
   const obj = {
     container: {
@@ -64,10 +64,10 @@ const forwardRefResult = noop.forwardRef((channel, arg1) => {
   const onPressAction = channel.onPressAction;
   noop = undefined;
   ({ keyboardType, showKeyboardIcon, shouldShowGiftButton, onPressExpression } = channel);
-  const token = channel(4524).useToken(onPressAction(576).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
-  const obj = channel(4524);
+  const token = channel(4526).useToken(onPressAction(576).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
+  const obj = channel(4526);
   const tmp3 = onPressAction;
-  const sum = token + 2 * channel(4524).useToken(onPressAction(576).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
+  const sum = token + 2 * channel(4526).useToken(onPressAction(576).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
   dependencyMap = sum;
   const tmp6 = closure_9();
   _slicedToArray = tmp6;
@@ -95,15 +95,15 @@ const forwardRefResult = noop.forwardRef((channel, arg1) => {
       tmp15 = memo;
     }
     const obj4 = { item: tmp15, renderItem: tmp10 };
-    tmp14Result = closure_7(tmp(4533).TransitionItem, obj4);
+    tmp14Result = closure_7(tmp(4535).TransitionItem, obj4);
   }
   const items1 = [tmp14Result];
   const obj5 = { active: null, showKeyboardIcon: null, onPress: null };
-  const obj2 = channel(4524);
+  const obj2 = channel(4526);
   obj5.active = keyboardType === channel(1610).KeyboardTypes.EXPRESSION;
   obj5.showKeyboardIcon = showKeyboardIcon;
   obj5.onPress = onPressExpression;
-  items1[1] = closure_7(tmp3(12507), obj5);
+  items1[1] = closure_7(tmp3(12516), obj5);
   obj3.children = items1;
   return closure_8(View, obj3);
 });

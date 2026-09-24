@@ -15,11 +15,11 @@ require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ GuildSettingsSections: closure_7, GuildSettingsSubsections: closure_8 } = Constants);
-const ContentDismissActionType = fn(2039).ContentDismissActionType;
+const ContentDismissActionType = fn(2041).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const src = { videoURI: "https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov" };
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 const obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -89,7 +89,7 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
     paused: stateFromStores,
     ariaHidden: true,
   };
-  obj5.children = closure_10(markAsDismissed(8653), size);
+  obj5.children = closure_10(markAsDismissed(8657), size);
   const items2 = [closure_10(View, obj5), ,];
   const obj6 = { style: tmp.info, children: null };
   const obj7 = {

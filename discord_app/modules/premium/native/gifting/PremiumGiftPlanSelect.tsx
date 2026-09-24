@@ -23,7 +23,7 @@ const jsxProd = fn(21);
 let items = [,];
 ({ TIER_2: arr[0], TIER_0: arr[1] } = fn(1374).PremiumTypes);
 let c16 = 16;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let closure_17 = createStyles.createStyles((width, arg1, arg2) => {
   const obj = {
     container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -600,7 +600,7 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
         const tmp4Result8 = tmp4(tmp2[31]);
       }
     } else {
-      const obj44 = { style: tmp14.avatar, guildId: "r", size: "flex", user: null };
+      const obj44 = { style: tmp14.avatar, guildId: "r", size: 7, user: 1 };
       const AvatarSizes = tmp(tmp2[27]).AvatarSizes;
       obj44.size = enabled ? AvatarSizes.LARGE_48 : AvatarSizes.XLARGE;
       obj44.user = recipientUser;

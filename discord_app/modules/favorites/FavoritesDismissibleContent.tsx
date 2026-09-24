@@ -12,7 +12,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const ContentDismissActionType = fn(2039).ContentDismissActionType;
+const ContentDismissActionType = fn(2041).ContentDismissActionType;
 let items = [
   fn(2028).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO,
   fn(2028).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM,

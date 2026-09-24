@@ -6,7 +6,7 @@ import SoundpackStore from "../soundpacks/SoundpackStore.tsx";
 import StreamerModeStore from "../../stores/StreamerModeStore.tsx";
 
 require = fn;
-const SoundOutputChannel = fn(9992).SoundOutputChannel;
+const SoundOutputChannel = fn(9997).SoundOutputChannel;
 const logger = new LoggerDefault("SoundUtils");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/sound_playback/SoundUtils.tsx");
@@ -32,7 +32,7 @@ export const createSoundForPack = function createSoundForPack(call_calling, soun
   const mobileAudioSound = new sound_playback_SoundUtils.MobileAudioSound(tmp3, call_calling, num, DEFAULT, false);
   return mobileAudioSound;
 };
-export const createSound = function createSound(stage_waiting, soundboard_sound) {
+export const createSound = function createSound(stage_waiting, vibing_wumpus) {
   let num = _volume;
   if (_volume === undefined) {
     num = 1;
@@ -45,7 +45,7 @@ export const createSound = function createSound(stage_waiting, soundboard_sound)
   }
   const mobileAudioSound = new sound_playback_SoundUtils.MobileAudioSound(
     stage_waiting,
-    soundboard_sound,
+    vibing_wumpus,
     num,
     DEFAULT,
     flag,

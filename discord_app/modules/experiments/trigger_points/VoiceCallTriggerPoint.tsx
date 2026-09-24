@@ -5,15 +5,15 @@ import VoiceCallTriggerPointExperimentDefault from "../../voice_calls/VoiceCallT
 
 const items = [
   GuildVoiceRingingExperimentDefault,
-  fn(17837).VoiceChannelHoistingExperiment,
-  fn(17381).HangoutWindowExperiment,
+  fn(17860).VoiceChannelHoistingExperiment,
+  fn(17404).HangoutWindowExperiment,
   PastVcActivityMessagesExperimentDefault,
   VoiceCallTriggerPointExperimentDefault,
-  fn(13577).VoiceChannelBadgeExperiment,
+  fn(13586).VoiceChannelBadgeExperiment,
 ];
-const commonTriggerPointConfiguration = new fn(11153).CommonTriggerPointConfiguration(
+const commonTriggerPointConfiguration = new fn(11159).CommonTriggerPointConfiguration(
   items,
-  fn(4743).CommonTriggerPoints.VOICE_CALL,
+  fn(4745).CommonTriggerPoints.VOICE_CALL,
   { location: "voice call initiated" },
 );
 const size = fn(2);

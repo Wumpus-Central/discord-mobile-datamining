@@ -20,8 +20,8 @@ import PermissionStore from "../../../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let isMessageComponentsV2 = fn(4473).isMessageComponentsV2;
-const FileUploadErrorTypes = fn(4820).FileUploadErrorTypes;
+let isMessageComponentsV2 = fn(4475).isMessageComponentsV2;
+const FileUploadErrorTypes = fn(4822).FileUploadErrorTypes;
 const Constants = fn(1074);
 ({
   AnalyticEvents: map1,

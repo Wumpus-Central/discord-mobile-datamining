@@ -217,7 +217,7 @@ function evictChannel(arg0) {
   }
   return hasItem;
 }
-const ConversationConstants = fn(7923);
+const ConversationConstants = fn(7925);
 ({
   CONVERSATION_COLORS: closure_9,
   CONVERSATION_FEEDBACK_RATINGS_CACHE_MAX: c10,
@@ -232,6 +232,8 @@ const navigation = new privDefault({
 });
 let map = new Map();
 let map1 = new Map();
+let closure_16 = 0;
+let closure_17 = 0;
 const Store = initializeDefault.Store;
 class ConversationsStore extends Store {}
 const prototype = ConversationsStore.prototype;
@@ -336,6 +338,14 @@ prototype["getSelectedConversationId"] = function getSelectedConversationId(arg0
     prop = null;
   }
   return prop;
+};
+prototype["consumeFocusRequest"] = function consumeFocusRequest() {
+  let flag = closure_16 !== closure_17;
+  if (flag) {
+    closure_17 = closure_16;
+    flag = true;
+  }
+  return flag;
 };
 prototype["getSelectedConversation"] = function getSelectedConversation(arg0) {
   const peekResult = navigation.peek(arg0);
@@ -560,7 +570,7 @@ const conversationsStore = new ConversationsStore(DispatcherDefault, {
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated } = requestKey);
     let set;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
-      const mapped = rawConversations.map(set(7924).mapConversation);
+      const mapped = rawConversations.map(set(7926).mapConversation);
       const found = mapped.filter(set(1370).isNotNullish);
       const peekResult = navigation.peek(channelId);
       if (isJump) {
@@ -1060,6 +1070,10 @@ const conversationsStore = new ConversationsStore(DispatcherDefault, {
       }
       return flag;
     }
+  },
+  CONVERSATION_FOCUS_REQUEST: function handleConversationFocusRequest() {
+    closure_16 = closure_16 + 1;
+    return true;
   },
   CLEAR_CONVERSATION_SELECTION: function handleClearConversationSelection(conversationId) {
     conversationId = conversationId.conversationId;

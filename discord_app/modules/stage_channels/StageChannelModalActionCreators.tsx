@@ -71,15 +71,15 @@ function connectAndOpen(channel) {
     const obj = require("shouldShowVoiceChannelChangeConfirmation");
   }
   if (result) {
-    result = flag2(8740).showChannelChangeConfirmationAlert(channel, () => {
+    result = flag2(8744).showChannelChangeConfirmationAlert(channel, () => {
       connectAndOpen(closure_0, flag, flag2, true);
     });
-    const obj2 = flag2(8740);
+    const obj2 = flag2(8744);
   }
   if (!result) {
     if (connectToStage(channel, flag)) {
-      flag2(8740).navigateToStage(channel, voiceChannelId);
-      const obj3 = flag2(8740);
+      flag2(8744).navigateToStage(channel, voiceChannelId);
+      const obj3 = flag2(8744);
     }
   }
 }
@@ -130,7 +130,7 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
               const items = [closure_0];
               c3 = 1;
               c4 = 1;
-              const obj7 = { value: closure_0(7650).stopLurkingAll(items), done: false };
+              const obj7 = { value: closure_0(7652).stopLurkingAll(items), done: false };
               return obj7;
             }
           }
@@ -145,7 +145,7 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
           } else {
             c3 = 2;
             c4 = 1;
-            const obj9 = { value: tmp2(5823).joinGuild(closure_0, { lurker: true }), done: false };
+            const obj9 = { value: tmp2(5825).joinGuild(closure_0, { lurker: true }), done: false };
             return obj9;
           }
         } else if (arg0 === 1) {
@@ -161,10 +161,10 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
             flag = null == channel;
             if (!flag) {
               connectToStage(channel);
-              closure_1(13305).initialize();
+              closure_1(13314).initialize();
               closure_1_0(channel);
               flag = false;
-              const obj = closure_1(13305);
+              const obj = closure_1(13314);
             }
             return flag;
           });

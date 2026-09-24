@@ -8,10 +8,10 @@ import PremiumUtilsDefault from "../../utils/PremiumUtils.tsx";
 import CheckmarkLargeIcon from "../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
 import Text_Text from "../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../design/components/Button/native/Button.native.tsx";
-import LinearGradientDefault from "../../../_runtime/05283_LinearGradient.js";
+import LinearGradientDefault from "../../../_runtime/05285_LinearGradient.js";
 import PremiumFeatureListDefault from "PremiumFeatureList.tsx";
-import _modDef13897 from "../../../_runtime/metro/13897__.js";
-import _modDef13898 from "../../../_runtime/metro/13898__.js";
+import _modDef13906 from "../../../_runtime/metro/13906__.js";
+import _modDef13907 from "../../../_runtime/metro/13907__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../modules/user_settings/LocaleStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
@@ -19,13 +19,13 @@ import UserStore from "../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4, StyleSheet } = get_ActivityIndicator);
-const Gradients = fn(7760).Gradients;
+const Gradients = fn(7762).Gradients;
 const PremiumConstants = fn(1374);
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_8, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_9 } =
   PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = {
   title: { textAlign: "center" },
   subtitle: { lineHeight: 20, marginTop: 8, textAlign: "center" },
@@ -138,9 +138,9 @@ export default function PremiumSubscriptionUpsell(arg0) {
     }
     const items3 = [tmp6Result1, ,];
     const obj10 = { style: tmp.upsellFeatures, children: null };
-    const obj11 = { style: tmp.upsellFeatureSubLogo, source: _modDef13897 };
+    const obj11 = { style: tmp.upsellFeatureSubLogo, source: _modDef13906 };
     const items4 = [closure_1_10(React4, obj11), ,];
-    const obj12 = { style: tmp.upsellFeatureLogoTier2, source: _modDef13898 };
+    const obj12 = { style: tmp.upsellFeatureLogoTier2, source: _modDef13907 };
     items4[1] = closure_1_10(React4, obj12);
     const obj13 = { style: tmp.upsellFeatureList, features: null, labelStyle: null, rowStyle: null };
     const obj15 = { IconComponent: null, label: null, color: null };

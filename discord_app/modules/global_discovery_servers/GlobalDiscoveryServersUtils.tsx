@@ -34,7 +34,7 @@ let closure_15 = async function _navigateToGuild() {
   return "flex";
 };
 GlobalDiscoveryServersSearchResultsStoreDefault;
-const GlobalDiscoveryServersConstants = fn(9936);
+const GlobalDiscoveryServersConstants = fn(9941);
 ({
   GlobalDiscoveryServerTab: closure_7,
   FEATURED_GUILDS_CACHE_DURATION: closure_8,
@@ -221,8 +221,8 @@ export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildS
     memberCount: null,
     premiumSubscriptionCount: "r",
     preferredLocale: "isArray",
-    discoverySplash: "wasSaved",
-    emojis: "decryptMissingKeyCount",
+    discoverySplash: "astronauta",
+    emojis: "astronauta maschio",
   };
   ({
     approximate_presence_count: obj.presenceCount,

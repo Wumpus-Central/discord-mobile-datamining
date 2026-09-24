@@ -69,8 +69,8 @@ function AdvancedInstantInviteScreen() {
     }
   }, items1);
   const tmp2Result = navigation(12);
-  const unmountEffect = navigation(5288).useUnmountEffect(() => {
-    channel(573).wait(channel(10168).resetSettings);
+  const unmountEffect = navigation(5290).useUnmountEffect(() => {
+    channel(573).wait(channel(10173).resetSettings);
   });
   const items2 = [channel];
   callback = noop.useCallback(() => {
@@ -97,26 +97,26 @@ function AdvancedInstantInviteScreen() {
           const obj = { onPress, text: null };
           const intl = navigation(1115).intl;
           obj.text = intl.string(navigation(1115).t["R3BPH+"]);
-          tmp = jsx(navigation(7705).HeaderActionButton, { onPress, text: null });
+          tmp = jsx(navigation(7707).HeaderActionButton, { onPress, text: null });
         }
         return tmp;
       },
     });
   }, items3);
   const callback1 = noop.useCallback((maxUses) => {
-    channel(10168).updateSettings({ maxUses });
+    channel(10173).updateSettings({ maxUses });
   }, []);
   const callback2 = noop.useCallback((maxAge) => {
-    channel(10168).updateSettings({ maxAge });
+    channel(10173).updateSettings({ maxAge });
   }, []);
   const callback3 = noop.useCallback((temporary) => {
-    channel(10168).updateSettings({ temporary });
+    channel(10173).updateSettings({ temporary });
   }, []);
   const callback4 = noop.useCallback((flags) => {
-    channel(10168).updateSettings({ flags });
+    channel(10173).updateSettings({ flags });
   }, []);
   const callback5 = noop.useCallback((roleIds) => {
-    channel(10168).updateSettings({ roleIds });
+    channel(10173).updateSettings({ roleIds });
   }, []);
   let obj4 = { contentContainerStyle: tmp.formContainer, children: null };
   let obj5 = {
@@ -135,15 +135,15 @@ function AdvancedInstantInviteScreen() {
     onChangeFlags: null,
     onChangeRoleIds: null,
   };
-  const tmp2Result2 = navigation(5288);
-  obj5.maxUsesOptions = channel(10164).getMaxUsesOptions;
+  const tmp2Result2 = navigation(5290);
+  obj5.maxUsesOptions = channel(10169).getMaxUsesOptions;
   ({ temporary: obj7.temporary, flags: obj7.flags, roleIds: obj7.roleIds } = settings);
   obj5.onChangeMaxAge = callback2;
   obj5.onChangeMaxUses = callback1;
   obj5.onChangeTemporary = callback3;
   obj5.onChangeFlags = callback4;
   obj5.onChangeRoleIds = callback5;
-  obj4.children = jsx(channel(18336), {
+  obj4.children = jsx(channel(18359), {
     style: tmp.formContent,
     channel: first,
     guild,
@@ -159,12 +159,12 @@ function AdvancedInstantInviteScreen() {
     onChangeFlags: null,
     onChangeRoleIds: null,
   });
-  return jsx(navigation(8947).Form, { contentContainerStyle: tmp.formContainer, children: null });
+  return jsx(navigation(8951).Form, { contentContainerStyle: tmp.formContainer, children: null });
 }
 const Constants = fn(1074);
 ({ InviteModalScenes: closure_9, Permissions: c10 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 let obj2 = {
   formContainer: { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 },
   formContent: null,

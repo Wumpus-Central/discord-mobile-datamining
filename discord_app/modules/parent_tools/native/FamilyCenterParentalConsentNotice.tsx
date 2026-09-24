@@ -8,7 +8,7 @@ const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4827);
+const createStyles = fn(4829);
 const obj2 = { container: { marginTop: nativeDefault.space.PX_16 }, link: { textDecorationLine: "underline" } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -51,11 +51,11 @@ export default function FamilyCenterParentalConsentNotice() {
         if (0 === daysRemaining) {
           const intl2 = tmp2(1115).intl;
           const obj4 = { learnMoreHook };
-          let formatResult = intl2.format(tmp9(2484).S5kmfO, obj4);
+          let formatResult = intl2.format(tmp9(2486).S5kmfO, obj4);
         } else {
           const intl = tmp2(1115).intl;
           const obj5 = { count: daysRemaining, learnMoreHook };
-          formatResult = intl.format(tmp9(2484)["5jm+T3"], obj5);
+          formatResult = intl.format(tmp9(2486)["5jm+T3"], obj5);
         }
         obj3.text = formatResult;
         return jsx(FamilyCenterInlineWarningNoticeDefault, { style: tmp.container, text: null });

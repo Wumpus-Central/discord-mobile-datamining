@@ -8,9 +8,9 @@ import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const SearchConstants = fn(8207);
+const SearchConstants = fn(8209);
 ({ EMPTY_SEARCH_QUERY_STRING: metroRequire, SearchQueryTagTypes: closure_7 } = SearchConstants);
-const SearchFilterAddLocations = fn(8206).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(8208).SearchFilterAddLocations;
 const Constants = fn(1074);
 ({ SearchTokenTypes: closure_9, SearchTypes: c10 } = Constants);
 const prototype = function SearchQueryStateManager(type) {
@@ -171,8 +171,8 @@ const prototype = function SearchQueryStateManager(type) {
   } else {
     let channelName;
     if (null != channel) {
-      channelName = obj(4980).computeChannelName(channel, UserStore, RelationshipStore);
-      const obj2 = obj(4980);
+      channelName = obj(4982).computeChannelName(channel, UserStore, RelationshipStore);
+      const obj2 = obj(4982);
     }
     if (null == channelName) {
       let items1 = [];
@@ -187,11 +187,11 @@ const prototype = function SearchQueryStateManager(type) {
       const intl = obj(1115).intl;
       const stringResult = intl.string(obj(1115).t.WNpFHa);
       let _HermesInternal = HermesInternal;
-      obj3.text = "" + stringResult + ": " + obj(12674).quoteChannelName(channelName);
+      obj3.text = "" + stringResult + ": " + obj(12683).quoteChannelName(channelName);
       obj3.channelId = type.channelId;
       obj3.location = SearchFilterAddLocations.CLIENT_AUTO_ADD;
       items1 = [obj3];
-      const obj4 = obj(12674);
+      const obj4 = obj(12683);
     }
     items = items1;
   }

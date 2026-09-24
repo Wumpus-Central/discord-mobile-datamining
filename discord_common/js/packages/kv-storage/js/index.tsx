@@ -1,5 +1,5 @@
 // discord_common/js/packages/kv-storage/js/index.tsx
-import "module_2073";
+import "module_2075";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;

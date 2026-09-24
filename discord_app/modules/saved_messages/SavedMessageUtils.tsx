@@ -1,6 +1,6 @@
 // discord_app/modules/saved_messages/SavedMessageUtils.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef4414 from "../../../_runtime/metro/04414__.js";
+import _modDef4416 from "../../../_runtime/metro/04416__.js";
 import ChannelActionCreatorsDefault from "../../actions/ChannelActionCreators.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -127,7 +127,7 @@ let closure_10 = async function _savedMessageJumpToMessage(arg0, arg1) {
     }
   })();
 };
-const UnknownChannelRecord = fn(2046).UnknownChannelRecord;
+const UnknownChannelRecord = fn(2048).UnknownChannelRecord;
 const Constants = fn(1074);
 ({ ChannelTypes: closure_7, Routes: closure_8 } = Constants);
 const DueInStringTypes = { LONG: 0, [0]: "LONG", SHORT: 1, [1]: "SHORT" };
@@ -160,7 +160,7 @@ export const useDueInString = function useDueInString(arg0) {
     const obj2 = { duration: null };
     const time = dueAt.getTime();
     tmp9 = obj;
-    obj2.duration = _modDef4414.duration(time - now.getTime(), "millisecond").humanize();
+    obj2.duration = _modDef4416.duration(time - now.getTime(), "millisecond").humanize();
     obj.dueInText = intl.formatToPlainString(H4gnX9, obj2);
     obj.isOverdue = now > dueAt;
     return obj;

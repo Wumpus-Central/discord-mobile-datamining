@@ -3,6 +3,28 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const items = [
   {
+    date: "2026-09-23",
+    platforms: ["mobile"],
+    summary: "Apps you build can now use the phone's tilt and motion sensors, so gyroscope-driven play works.",
+  },
+  {
+    date: "2026-09-23",
+    platforms: ["mobile"],
+    summary: "The builder chat now glides smoothly with the keyboard as it opens and closes.",
+  },
+  {
+    date: "2026-09-23",
+    platforms: ["desktop", "mobile"],
+    summary:
+      'When something breaks behind the scenes, people using your app now see a plain "Something went wrong" message instead of internal error text.',
+  },
+  {
+    date: "2026-09-23",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Project, app, secrets, and model settings now live together in one Settings dialog, one tab each; the gear beside the chat is gone.",
+  },
+  {
     date: "2026-09-22",
     platforms: ["desktop"],
     summary:
@@ -19,6 +41,11 @@ const items = [
     platforms: ["desktop", "mobile"],
     summary:
       "The model lineup moved up: Claude Opus 5.5 replaces Opus 5 on the Balanced tier of Claude projects, and GPT-6 Sol and GPT-6 Luna replace the GPT-5.6 family in the picker, taking the Balanced and Speedrun tiers on GPT projects.",
+  },
+  {
+    date: "2026-09-22",
+    platforms: ["desktop", "mobile"],
+    summary: "On bigger builds, your frame now updates at each milestone so you can watch the app take shape.",
   },
   { date: "2026-09-22", platforms: ["desktop"], summary: "The template and starter cards light up under your cursor." },
   { date: "2026-09-22", platforms: ["desktop"], summary: "The create screen greets you with a little more magic." },

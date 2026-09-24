@@ -44,10 +44,10 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: "belleza",
-    externalChildren: "corte de cabello",
-    expandedChildren: "corte de pelo",
-    children: "cosmetolog\u00EDa",
+    label: "safety-tools-button",
+    externalChildren: "cache-or-network",
+    expandedChildren: "messages_native",
+    children: null,
   };
   const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
   const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
@@ -64,9 +64,9 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: "belleza",
-    externalChildren: "corte de cabello",
-    expandedChildren: "corte de pelo",
-    children: "cosmetolog\u00EDa",
+    label: "safety-tools-button",
+    externalChildren: "cache-or-network",
+    expandedChildren: "messages_native",
+    children: null,
   });
 });

@@ -10,7 +10,7 @@ export const pushICYMIInfoModal = function pushICYMIInfoModal(arg0) {
   ({ extendedOnboarding, skipIntro } = arg0);
   const obj = ModalActionCreatorsDefault;
   obj.pushLazy(
-    asyncRequireImpl(16869, dependencyMap.paths),
+    asyncRequireImpl(16893, dependencyMap.paths),
     { extendedOnboarding, skipIntro },
     ICYMIInfoModalTypes.ICYMI_INFO_MODAL_KEY,
     { presentation: "fullScreenModal" },
