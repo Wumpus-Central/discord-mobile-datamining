@@ -1,7 +1,17 @@
 // === Module 13868: ? ===
 
 // Module 13868
-import registerAsset from "module_1121" /* 1121 */;
+import _mod13837 from "module_13837" /* 13837 */;
+import element from "element" /* 13869 */;
+import getOwnPropertyDescriptor from "module_13836" /* 13836 */;
 
+let tmp2 = !getOwnPropertyDescriptor;
+if (!getOwnPropertyDescriptor) {
+  tmp2 = !_mod13837(() => 7 !== Object.defineProperty(element("div"), "a", {
+    get() {
+      return 7;
+    }
+  }).a);
+}
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting", width: 16, height: 16, scales: [2, 3], hash: "3b34529117c1d3db6d78cba92e0c94bb", name: "member_list_badge_16px", type: "png" });
+export default tmp2;

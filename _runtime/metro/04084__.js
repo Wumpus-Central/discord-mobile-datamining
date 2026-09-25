@@ -1,22 +1,26 @@
 // === Module 4084: ? ===
 
 // Module 4084
-import _typeof_mod from "module_4085" /* 4085 */;
-import _typeof_mod from "module_4086" /* 4086 */;
-import requiredArgs_mod from "requiredArgs" /* 3914 */;
+import module_3919_mod from "module_3919" /* 3919 */;
+import module_4064_mod from "module_4064" /* 4064 */;
+import requiredArgs_mod from "requiredArgs" /* 3916 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_3919 = module_3919_mod;
+if (!module_3919) {
+  const obj = { default: module_3919 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_3919;
 }
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
+module_3919 = tmp3;
+let module_4064 = module_4064_mod;
+if (!module_4064) {
+  const obj2 = { default: module_4064 };
   let tmp5 = obj2;
 } else {
-  tmp5 = _typeof;
+  tmp5 = module_4064;
 }
-_typeof = tmp5;
+module_4064 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj3 = { default: requiredArgs };
@@ -26,11 +30,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function clamp(arg0, arg1) {
-  ({ start, end } = arg1);
+export default function addYears(interval, arg1) {
   requiredArgs.default(2, arguments);
-  const items = [arg0, start];
-  const items1 = [_typeof.default(items), end];
-  return _typeof.default(items1);
+  return module_4064.default(interval, 12 * module_3919.default(arg1));
 };
 export default exports.default;

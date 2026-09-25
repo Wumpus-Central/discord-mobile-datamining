@@ -1,33 +1,7 @@
 // === Module 11119: ? ===
 
 // Module 11119
-import Layouts5 from "Layouts" /* 11120 */;
-import noop from "module_19" /* 19 */;
+import registerAsset from "module_1121" /* 1121 */;
 
-require = arg1;
 
-export const useLayoutConfig = function useLayoutConfig(size) {
-  size = size.size;
-  const vertical = size.vertical;
-  const items = [, , , ];
-  ({ mode: arr[0], modeConfig: arr[1] } = size);
-  items[2] = size;
-  items[3] = vertical;
-  return vertical.useMemo(() => {
-    const obj = { size, vertical };
-    const mode = size.mode;
-    if ("parallax" === mode) {
-      const Layouts4 = Layouts5.Layouts;
-      return Layouts4.parallax(obj, size.modeConfig);
-    } else if ("horizontal-stack" === mode) {
-      const Layouts3 = Layouts5.Layouts;
-      return Layouts3.horizontalStack(size.modeConfig);
-    } else if ("vertical-stack" === mode) {
-      const Layouts2 = Layouts5.Layouts;
-      return Layouts2.verticalStack(size.modeConfig);
-    } else {
-      const Layouts = Layouts5.Layouts;
-      return Layouts.normal(obj);
-    }
-  }, items);
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/stream_feedback/dark-theme-desaturated", width: 64, height: 64, scales: [2, 3], hash: "1d768d013d08088f2871c4fa8e2d9604", name: "feedback-modal-neutral-desaturated", type: "png" });

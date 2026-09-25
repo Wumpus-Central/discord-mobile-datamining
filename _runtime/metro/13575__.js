@@ -1,7 +1,34 @@
 // === Module 13575: ? ===
 
 // Module 13575
-import registerAsset from "module_1121" /* 1121 */;
+import _mod13542 from "module_13542" /* 13542 */;
+
+const require = globalThis.__r;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/collectibles/native/images", width: 24, height: 24, scales: [2, 3], hash: "ac29907d56ae7a9f27a9104ef7aade6e", name: "img_none", type: "png" });
+export default (arr, arg1, arg2) => {
+  _require = arg2;
+  dependencyMap = null;
+  closure_2 = null;
+  let regex = null;
+  try {
+    let tmp9 = new require("module_13571")(arg1, arg2);
+    regex = tmp9;
+    const item = arr.forEach((item) => {
+      if (regex.test(item)) {
+        let tmp = closure_1;
+        if (closure_1) {
+          tmp = -1 !== closure_2.compare(item);
+        }
+        if (!tmp) {
+          closure_1 = item;
+          const tmp9 = new _mod13542(closure_1, closure_0);
+          closure_2 = tmp9;
+        }
+      }
+    });
+    return dependencyMap;
+  } catch (err) {
+    return tmp;
+  }
+};

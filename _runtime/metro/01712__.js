@@ -78,10 +78,10 @@ fn = function n(userConfig, fn) {
       callback,
       velocity: null,
       initialVelocity: 0,
-      current: "disabled",
+      current: "sa",
       lastTimestamp: null,
-      startTimestamp: "etf",
-      reduceMotion: "json"
+      startTimestamp: "VOICE_CHANNEL_EFFECT_CLEAR",
+      reduceMotion: null
     };
     let num = obj.velocity;
     if (num == null) {

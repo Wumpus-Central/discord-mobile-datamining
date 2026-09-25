@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/app_icons/images", width: 259, height: 93, scales: [2, 3], hash: "b6b1b6176f7b7fe50aec94892b5609a1", name: "app_icon_marketing", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/guild_settings/welcome/images", width: 159, height: 105.5, scales: [2, 3], hash: "deeeb1ec32f8166fcc70387b3490f426", name: "role_subscription_lanyard_illo", type: "png" });

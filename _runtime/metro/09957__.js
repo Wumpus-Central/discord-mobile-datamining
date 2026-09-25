@@ -1,7 +1,48 @@
 // === Module 9957: ? ===
 
 // Module 9957
-import registerAsset from "module_1121" /* 1121 */;
+import alphaNum from "alphaNum" /* 9954 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
+const JPWeekdayParser = require;
+const keys = Object.keys(alphaNum.WEEKDAY_OFFSET);
+const regExp = new RegExp("((?<prefix>\u524D\u306E|\u6B21\u306E|\u4ECA\u9031))?(?<weekday>" + keys.join("|") + ")(?:\u66DC\u65E5|\u66DC)", "i");
+class JPWeekdayParser {
+  constructor() {
+    tmp = c2(this, JPWeekdayParser);
+    return;
+  }
+}
+const entry = {
+  key: "pattern",
+  value: function pattern() {
+    return regExp;
+  }
+};
+const items = [
+  entry,
+  {
+    key: "extract",
+    value: function extract(reference, groups) {
+      const tmp3 = JPWeekdayParser(9954).WEEKDAY_OFFSET[groups.groups.weekday];
+      if (undefined === tmp3) {
+        return null;
+      } else {
+        let str2 = "last";
+        if (!groups.groups.prefix || "".match(/前の/)) {
+          str2 = "next";
+          if (!str.match(/次の/)) {
+            str2 = null;
+            if (str.match(/今週/)) {
+              str2 = "this";
+            }
+          }
+        }
+        return JPWeekdayParser(9911).createParsingComponentsAtWeekday(reference.reference, tmp3, str2);
+      }
+    }
+  }
+];
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "13168e0700737564714d8e4fc44106f6", name: "ShareIcon", type: "png" });
+export default _createClass(JPWeekdayParser, items);

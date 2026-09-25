@@ -1,7 +1,7 @@
 // === Module 14738: ? ===
 
 // Module 14738
-import _mod14672 from "module_14672" /* 14672 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default _mod14672;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images", width: 87, height: 87, scales: [2, 3], hash: "d299e9311da17e9393089ebfa8d667b1", name: "resubscribed_alert_header", type: "png" });

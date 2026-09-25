@@ -1,7 +1,7 @@
 // === Module 14402: ? ===
 
 // Module 14402
-import _mod14395 from "module_14395" /* 14395 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default (arg0, arg1, arg2) => _mod14395(arg0, arg1, arg2) < 0;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/parent_tools/images", width: 24, height: 24, scales: [2, 3], hash: "87391322b2483c883b3f5fd1ac4080a9", name: "ic_eye", type: "png" });

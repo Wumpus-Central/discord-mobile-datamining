@@ -479,7 +479,7 @@
               return nextPromise;
             }
       };
-      tmp = f71358(this, "_invoke", obj);
+      tmp = f70299(this, "_invoke", obj);
       return;
     }
   }
@@ -1163,7 +1163,7 @@
                   return nextPromise;
                 }
         };
-        tmp = f71358(this, "_invoke", obj);
+        tmp = f70299(this, "_invoke", obj);
         return;
       }
     }
@@ -1668,7 +1668,7 @@
                       return nextPromise;
                     }
           };
-          tmp = f71358(this, "_invoke", obj);
+          tmp = f70299(this, "_invoke", obj);
           return;
         }
       }

@@ -1,7 +1,10 @@
 // === Module 13888: ? ===
 
 // Module 13888
-import registerAsset from "module_1121" /* 1121 */;
+import _mod13836 from "module_13836" /* 13836 */;
+import _mod13837 from "module_13837" /* 13837 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/backgrounds", width: 375, height: 301, scales: [2, 3], hash: "66755272db25a38d2c195d1bf5a25e70", name: "img_top_pattern_light", type: "png" });
+export default _mod13836 && _mod13837(() => 42 !== Object.defineProperty(() => {
+
+}, "prototype", { value: 42, writable: false }).prototype);

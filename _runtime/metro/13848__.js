@@ -1,7 +1,19 @@
 // === Module 13848: ? ===
 
 // Module 13848
-import registerAsset from "module_1121" /* 1121 */;
+import _mod13849 from "module_13849" /* 13849 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 51, height: 13, scales: [2, 3], hash: "ee96056252cac57fcc904e8f5b1f0e16", name: "img_logo_basic_small_light", type: "png" });
+export default (arg0, arg1) => {
+  let tmp3 = _mod13849[arg0];
+  if (!tmp3) {
+    let obj = arg1;
+    if (!arg1) {
+      obj = {};
+    }
+    _mod13849[arg0] = obj;
+    tmp3 = obj;
+    const tmpResult = _mod13849;
+  }
+  return tmp3;
+};

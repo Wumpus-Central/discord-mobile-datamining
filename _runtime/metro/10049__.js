@@ -1,14 +1,14 @@
 // === Module 10049: ? ===
 
 // Module 10049
-import _asyncLoop from "_asyncLoop" /* 10045 */;
+import _mod10040 from "module_10040" /* 10040 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const HMAC = require;
+const UKRelativeDateFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,151 +28,88 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class HMAC {
-  constructor(arg0, arg1) {
+class UKRelativeDateFormatParser {
+  constructor() {
     self = this;
-    tmp = c2(this, HMAC);
+    tmp = c2(this, UKRelativeDateFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(HMAC);
+    obj = closure_4(UKRelativeDateFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.finished = false;
-    tmp3Result.destroyed = false;
-    hashResult = closure_0(closure_1[5]).hash(global);
-    toBytesResult = closure_0(closure_1[6]).toBytes(require);
-    tmp3Result.iHash = global.create();
-    if (typeof tmp3Result.iHash.update !== "function") {
-      tmp13 = globalThis;
-      _Error = Error;
-      tmp14 = new.target;
-      str = "Expected instance of class which extends utils.Hash";
-      tmp15 = new.target;
-      error = new Error("Expected instance of class which extends utils.Hash");
-      tmp17 = error;
-      throw error;
-    } else {
-      tmp3Result.blockLen = tmp3Result.iHash.blockLen;
-      tmp3Result.outputLen = tmp3Result.iHash.outputLen;
-      blockLen = tmp3Result.blockLen;
-      tmp18 = globalThis;
-      _Uint8Array = Uint8Array;
-      tmp19 = new.target;
-      tmp20 = new.target;
-      tmp21 = blockLen;
-      uint8Array = new Uint8Array(blockLen);
-      tmp22 = uint8Array;
-      digestResult = toBytesResult;
-      if (toBytesResult.length > blockLen) {
-        obj1 = global.create();
-        updateResult = obj1.update(toBytesResult);
-        digestResult = updateResult.digest();
-      }
-      result = uint8Array.set(digestResult);
-      num = 0;
-      num2 = 54;
-      num3 = 1;
-      num4 = 0;
-      if (0 < uint8Array.length) {
-        do {
-          uint8Array[num4] = uint8Array[num4] ^ 54;
-          num4 = num4 + 1;
-          length = uint8Array.length;
-        } while (num4 < length);
-      }
-      iHash = tmp3Result.iHash;
-      updateResult1 = iHash.update(uint8Array);
-      tmp3Result.oHash = global.create();
-      num5 = 106;
-      num6 = 0;
-      if (0 < uint8Array.length) {
-        do {
-          uint8Array[num6] = uint8Array[num6] ^ 106;
-          num6 = num6 + 1;
-          length2 = uint8Array.length;
-        } while (num6 < length2);
-      }
-      oHash = tmp3Result.oHash;
-      updateResult2 = oHash.update(uint8Array);
-      fillResult = uint8Array.fill(0);
-      return tmp3Result;
-    }
+    return tmp3(self, constructResult);
   }
 }
-_inherits(HMAC, _asyncLoop.Hash);
+_inherits(UKRelativeDateFormatParser, _mod10040.AbstractParserWithLeftRightBoundaryChecking);
 const entry = {
-  key: "update",
-  value: function update(arg0) {
-    HMAC(10046).exists(this);
-    const iHash = this.iHash;
-    iHash.update(arg0);
-    return this;
+  key: "innerPatternString",
+  value: function innerPatternString(arg0) {
+    return "(\u0432 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443|\u0443 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443|\u043D\u0430 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443|\u043C\u0438\u043D\u0443\u043B\u043E\u0433\u043E|\u043D\u0430 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443|\u0432 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443|\u0443 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u0433\u043E|\u043D\u0430 \u0446\u044C\u043E\u043C\u0443|\u0432 \u0446\u044C\u043E\u043C\u0443|\u0443 \u0446\u044C\u043E\u043C\u0443|\u0446\u044C\u043E\u0433\u043E)\\s*(" + UKRelativeDateFormatParser(9884).matchAnyPattern(UKRelativeDateFormatParser(10038).TIME_UNIT_DICTIONARY) + ")(?=\\s*)";
   }
 };
 const items = [
   entry,
   {
-    key: "digestInto",
-    value: function digestInto(arg0) {
-      HMAC(10046).exists(this);
-      HMAC(10046).bytes(arg0, this.outputLen);
-      this.finished = true;
-      const iHash = this.iHash;
-      iHash.digestInto(arg0);
-      const oHash = this.oHash;
-      oHash.update(arg0);
-      const oHash2 = this.oHash;
-      oHash2.digestInto(arg0);
-      this.destroy();
-    }
-  },
-  {
-    key: "digest",
-    value: function digest() {
-      const uint8Array = new Uint8Array(this.oHash.outputLen);
-      this.digestInto(uint8Array);
-      return uint8Array;
-    }
-  },
-  {
-    key: "_cloneInto",
-    value: function _cloneInto(arg0) {
-      const self = this;
-      let obj = arg0;
-      if (!arg0) {
-        const _Object = Object;
-        const _Object2 = Object;
-        obj = Object.create(Object.getPrototypeOf(self), {});
+    key: "innerExtract",
+    value: function innerExtract(createParsingComponents, arg1) {
+      const formatted = arg1[1].toLowerCase();
+      const formatted1 = arg1[2].toLowerCase();
+      const str3 = UKRelativeDateFormatParser(10038).TIME_UNIT_DICTIONARY[formatted1];
+      if ("\u043D\u0430 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443" != formatted) {
+        if ("\u0432 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443" != formatted) {
+          if ("\u0443 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443" != formatted) {
+            if ("\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u0433\u043E" != formatted) {
+              if ("\u043D\u0430 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443" != formatted) {
+                if ("\u0432 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443" != formatted) {
+                  if ("\u0443 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443" != formatted) {
+                    if ("\u043C\u0438\u043D\u0443\u043B\u043E\u0433\u043E" != formatted) {
+                      const parsingComponents = createParsingComponents.createParsingComponents();
+                      const _Date = Date;
+                      const instant = createParsingComponents.reference.instant;
+                      const date = new Date(instant.getTime());
+                      if (str3.match(/week/i)) {
+                        date.setDate(date.getDate() - date.getDay());
+                        parsingComponents.imply("day", date.getDate());
+                        parsingComponents.imply("month", date.getMonth() + 1);
+                        parsingComponents.imply("year", date.getFullYear());
+                        const date1 = date.getDate();
+                      } else if (str3.match(/month/i)) {
+                        date.setDate(1);
+                        parsingComponents.imply("day", date.getDate());
+                        parsingComponents.assign("year", date.getFullYear());
+                        parsingComponents.assign("month", date.getMonth() + 1);
+                      } else if (str3.match(/year/i)) {
+                        date.setDate(1);
+                        date.setMonth(0);
+                        parsingComponents.imply("day", date.getDate());
+                        parsingComponents.imply("month", date.getMonth() + 1);
+                        parsingComponents.assign("year", date.getFullYear());
+                      }
+                      return parsingComponents;
+                    }
+                  }
+                }
+              }
+              const obj = {};
+              obj[str3] = -1;
+              const ParsingComponents = UKRelativeDateFormatParser(9887).ParsingComponents;
+              return ParsingComponents.createRelativeFromReference(createParsingComponents.reference, obj);
+            }
+          }
+        }
       }
-      ({ oHash, iHash, finished: tmp.finished, destroyed: tmp.destroyed, blockLen: tmp.blockLen, outputLen: tmp.outputLen } = self);
-      obj.oHash = oHash._cloneInto(obj.oHash);
-      obj.iHash = iHash._cloneInto(obj.iHash);
-      return obj;
-    }
-  },
-  {
-    key: "destroy",
-    value: function destroy() {
-      this.destroyed = true;
-      const oHash = this.oHash;
-      oHash.destroy();
-      const iHash = this.iHash;
-      iHash.destroy();
+      const ParsingComponents2 = UKRelativeDateFormatParser(9887).ParsingComponents;
+      return ParsingComponents2.createRelativeFromReference(createParsingComponents.reference, { [str3]: 1 });
     }
   }
 ];
-const _moduleResult = _createClass(HMAC, items);
-const metroRequire = _moduleResult;
-exports.hmac.create = (arg0, arg1) => new _moduleResult(arg0, arg1);
 
-export const HMAC = _moduleResult;
-export const hmac = (arg0, arg1, arg2) => {
-  const obj = new _moduleResult(arg0, arg1);
-  return new _moduleResult(arg0, arg1).update(arg2).digest();
-};
+export default _createClass(UKRelativeDateFormatParser, items);

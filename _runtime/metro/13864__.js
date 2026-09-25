@@ -1,7 +1,15 @@
 // === Module 13864: ? ===
 
 // Module 13864
-import registerAsset from "module_1121" /* 1121 */;
+import _mod13859 from "module_13859" /* 13859 */;
+import _mod13865 from "module_13865" /* 13865 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/backgrounds", width: 351, height: 100, scales: [2, 3], hash: "7e6a8bbab7f30fd349a76227a78736a2", name: "img_subheader_error_mobile_v2_light", type: "png" });
+export default (arg0) => {
+  if (_mod13859(arg0)) {
+    return arg0;
+  } else {
+    const tmp6 = new TypeError(_mod13865(arg0) + " is not a function");
+    throw tmp6;
+  }
+};

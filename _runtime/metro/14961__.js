@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/user_profile/images/banner", width: 300, height: 120, scales: [2], hash: "304045e52cd925d8189a6dc7c67e76c1", name: "sample_banner", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../discord_common/js/shared/images/flags", width: 70, height: 47, scales: [1], hash: "08d0c70a708cd25acecb7a8b0cb0eb23", name: "hu", type: "png" });

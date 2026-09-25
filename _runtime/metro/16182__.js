@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "a252d183eacce43fd0ee5d8aedb6e162", name: "ic_download_24px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_home/native/images", width: 1100, height: 275, scales: [2, 3], hash: "2350a6e29ab96dbf4682611d6fbf7bcc", name: "light_home_header_placeholder", type: "png" });

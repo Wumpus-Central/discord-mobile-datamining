@@ -260,7 +260,7 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
               closure_136_6 = undefined;
               closure_136_7 = undefined;
               let value4;
-              const obj5 = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "WireType", cacheCreationInputTokens: "parent", cacheReadInputTokens: "raw", toolCalls: [], activeToolBlocks: {} };
+              const obj5 = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "WireType", cacheCreationInputTokens: "type", cacheReadInputTokens: "bm", toolCalls: [], activeToolBlocks: {} };
               closure_136_2 = obj5;
               closure_136_4 = false;
               closure_136_5 = false;
@@ -1056,7 +1056,7 @@ export const instrumentAsyncIterableStream = function instrumentAsyncIterableStr
 export const instrumentMessageStream = function instrumentMessageStream(applyResult, arg1, flag) {
   closure_0 = arg1;
   closure_1 = flag;
-  let obj = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "WireType", cacheCreationInputTokens: "parent", cacheReadInputTokens: "raw", toolCalls: [], activeToolBlocks: {} };
+  let obj = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "WireType", cacheCreationInputTokens: "type", cacheReadInputTokens: "bm", toolCalls: [], activeToolBlocks: {} };
   applyResult.on("streamEvent", (arg0) => {
     processEvent(arg0, obj, closure_1, closure_0);
   });

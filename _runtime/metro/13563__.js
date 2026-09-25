@@ -1,7 +1,7 @@
 // === Module 13563: ? ===
 
 // Module 13563
-import registerAsset from "module_1121" /* 1121 */;
+import _mod13556 from "module_13556" /* 13556 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/quests/images", width: 435, height: 218, scales: [1], hash: "92f827adadc1f86811fd4e36c86fdf27", name: "nitro_modal_header_background", type: "png" });
+export default (arg0, arg1, arg2) => _mod13556(arg0, arg1, arg2) < 0;

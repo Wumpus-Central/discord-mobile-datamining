@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/user_settings", width: 234, height: 147.5, scales: [2, 3], hash: "251353afd104effe8e007def09df8df2", name: "crunchyroll_link_intro", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons/voice_calls/light_theme", width: 24, height: 24, scales: [2, 3], hash: "b58afbfc4faaabe5f94fadb0443cc8ee", name: "voice_bar_deafen_off", type: "png" });

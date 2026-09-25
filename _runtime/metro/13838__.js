@@ -1,7 +1,8 @@
 // === Module 13838: ? ===
 
 // Module 13838
-import registerAsset from "module_1121" /* 1121 */;
+import _mod13839 from "module_13839" /* 13839 */;
+import _mod13843 from "module_13843" /* 13843 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 314, height: 195, scales: [2, 3], hash: "f774e43fd38da2d8b6e5bdabed98e8b8", name: "img_tier_0_marketing_emojis", type: "png" });
+export default (arg0) => _mod13839(_mod13843(arg0));

@@ -1,18 +1,7 @@
 // === Module 7367: ? ===
 
 // Module 7367
-import GestureHandlerRefContext from "GestureHandlerRefContext" /* 7340 */;
-import noop from "module_19" /* 19 */;
+import registerAsset from "module_1121" /* 1121 */;
 
-require = arg1;
 
-export const useGestureHandlerRef = function useGestureHandlerRef() {
-  const context = noop.useContext(GestureHandlerRefContext.GestureHandlerRefContext);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find a ref for gesture handler. Are you inside a screen in Stack?");
-    throw error;
-  } else {
-    return context;
-  }
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "be0ebbe0444cf9ea073becdc22f65ec9", name: "DenyIcon", type: "png" });

@@ -1,26 +1,26 @@
 // === Module 4082: ? ===
 
 // Module 4082
-import module_3917_mod from "module_3917" /* 3917 */;
-import module_4062_mod from "module_4062" /* 4062 */;
-import requiredArgs_mod from "requiredArgs" /* 3914 */;
+import module_3919_mod from "module_3919" /* 3919 */;
+import module_4070_mod from "module_4070" /* 4070 */;
+import requiredArgs_mod from "requiredArgs" /* 3916 */;
 
-let module_3917 = module_3917_mod;
-if (!module_3917) {
-  const obj = { default: module_3917 };
+let module_3919 = module_3919_mod;
+if (!module_3919) {
+  const obj = { default: module_3919 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3917;
+  tmp3 = module_3919;
 }
-module_3917 = tmp3;
-let module_4062 = module_4062_mod;
-if (!module_4062) {
-  const obj2 = { default: module_4062 };
+module_3919 = tmp3;
+let module_4070 = module_4070_mod;
+if (!module_4070) {
+  const obj2 = { default: module_4070 };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4062;
+  tmp5 = module_4070;
 }
-module_4062 = tmp5;
+module_4070 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj3 = { default: requiredArgs };
@@ -30,8 +30,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function addYears(interval, arg1) {
+export default function addSeconds(interval, arg1) {
   requiredArgs.default(2, arguments);
-  return module_4062.default(interval, 12 * module_3917.default(arg1));
+  return module_4070.default(interval, 1000 * module_3919.default(arg1));
 };
 export default exports.default;

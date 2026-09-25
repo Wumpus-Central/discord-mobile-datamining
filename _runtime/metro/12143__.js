@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 16, height: 16, scales: [2, 3], hash: "b62bcdbe576aad312fb756c1125d76bb", name: "ic_upload", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/age_gate/native/images", width: 274.5, height: 110, scales: [2, 3], hash: "43e5ff0d9ea5f04fe209ebfd15e2d439", name: "nsfw_gate_unavailable", type: "png" });

@@ -1,26 +1,26 @@
 // === Module 4081: ? ===
 
 // Module 4081
-import module_3917_mod from "module_3917" /* 3917 */;
-import module_4061_mod from "module_4061" /* 4061 */;
-import requiredArgs_mod from "requiredArgs" /* 3914 */;
+import module_3919_mod from "module_3919" /* 3919 */;
+import module_4064_mod from "module_4064" /* 4064 */;
+import requiredArgs_mod from "requiredArgs" /* 3916 */;
 
-let module_3917 = module_3917_mod;
-if (!module_3917) {
-  const obj = { default: module_3917 };
+let module_3919 = module_3919_mod;
+if (!module_3919) {
+  const obj = { default: module_3919 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3917;
+  tmp3 = module_3919;
 }
-module_3917 = tmp3;
-let module_4061 = module_4061_mod;
-if (!module_4061) {
-  const obj2 = { default: module_4061 };
+module_3919 = tmp3;
+let module_4064 = module_4064_mod;
+if (!module_4064) {
+  const obj2 = { default: module_4064 };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4061;
+  tmp5 = module_4064;
 }
-module_4061 = tmp5;
+module_4064 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj3 = { default: requiredArgs };
@@ -30,8 +30,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function addWeeks(arg0, arg1) {
+export default function addQuarters(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  return module_4061.default(arg0, 7 * module_3917.default(arg1));
+  return module_4064.default(arg0, 3 * module_3919.default(arg1));
 };
 export default exports.default;

@@ -1,52 +1,23 @@
 // === Module 13187: ? ===
 
 // Module 13187
-import _mod13145 from "module_13145" /* 13145 */;
-import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 13150 */;
-import _mod13160 from "module_13160" /* 13160 */;
-import _mod13173 from "module_13173" /* 13173 */;
+import _mod13179 from "module_13179" /* 13179 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const setMeasurement = function setMeasurement(arg0, arg1, arg2) {
-  if (activeSpan === undefined) {
-    activeSpan = spanTimeInputToSeconds.getActiveSpan();
+let c2 = true;
+let c3 = true;
+try {
+  const _String = String;
+  fromCharCode.apply(null, [0]);
+  try {
+    const _String2 = String;
+    const _Uint8Array = Uint8Array;
+    const uint8Array = new Uint8Array(1);
+    fromCharCode2.apply(null, uint8Array);
+    const buf8 = new _mod13179.Buf8(256);
+    require = 252;
+  } catch (err) {
+    c3 = false;
   }
-  let rootSpan = activeSpan;
-  if (activeSpan) {
-    rootSpan = spanTimeInputToSeconds.getRootSpan(activeSpan);
-  }
-  if (rootSpan) {
-    if (_mod13173.DEBUG_BUILD) {
-      const logger = _mod13145.logger;
-      const _HermesInternal = HermesInternal;
-      logger.log("[Measurement] Setting measurement on root span: " + arg0 + " = " + arg1 + " " + arg2);
-    }
-    const obj2 = {};
-    obj2[_mod13160.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = arg1;
-    obj2[_mod13160.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = arg2;
-    rootSpan.addEvent(arg0, obj2);
-  }
-};
-export const timedEventsToMeasurements = function timedEventsToMeasurements(arr) {
-  if (arr) {
-    if (0 !== arr.length) {
-      let obj = {};
-      const item = arr.forEach((attributes) => {
-        const tmp = attributes.attributes || {};
-        const tmp2 = tmp[_mod13160.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT];
-        const tmp3 = tmp[_mod13160.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE];
-        let tmp4 = typeof tmp2 === "string";
-        if (typeof tmp2 === "string") {
-          tmp4 = typeof tmp3 === "number";
-        }
-        if (tmp4) {
-          obj = { value: tmp3, unit: tmp2 };
-          obj[attributes.name] = obj;
-        }
-      });
-      return obj;
-    }
-  }
-};
+} catch (err) {
+  c2 = false;
+}

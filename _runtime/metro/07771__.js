@@ -1,12 +1,5 @@
 // === Module 7771: ? ===
 
 // Module 7771
-import _slicedToArray from "module_32" /* 32 */;
 
-const noop = fn(19);
-({ useCallback: closure_1, useState: c2 } = noop);
-
-export default function useForceUpdate() {
-  closure_0 = _slicedToArray(React2({}), 2)[1];
-  return framebus(() => closure_0({}), []);
-};
+export default { SRT: "application/x-subrip", TTML: "application/ttml+xml", VTT: "text/vtt" };

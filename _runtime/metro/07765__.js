@@ -1,7 +1,5 @@
 // === Module 7765: ? ===
 
 // Module 7765
-import registerAsset from "module_1121" /* 1121 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 77.5, height: 30, scales: [2, 3], hash: "eb98ab037be2f7c5d6e15b4152c0f9cb", name: "img_logo_nitro_basic_stacked", type: "png" });
+export default { DeprecatedAccessibilityRoles: ["none", "button", "togglebutton", "link", "search", "image", "keyboardkey", "text", "adjustable", "imagebutton", "header", "summary", "alert", "checkbox", "combobox", "menu", "menubar", "menuitem", "progressbar", "radio", "radiogroup", "scrollbar", "spinbutton", "switch", "tab", "tablist", "timer", "toolbar"] };

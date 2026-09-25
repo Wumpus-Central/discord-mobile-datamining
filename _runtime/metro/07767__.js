@@ -1,7 +1,8 @@
 // === Module 7767: ? ===
 
 // Module 7767
-import registerAsset from "module_1121" /* 1121 */;
+import emptyFunction from "module_4660" /* 4660 */;
 
+const point = { x: emptyFunction.number, y: emptyFunction.number };
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 81, height: 20, scales: [2, 3], hash: "18e5c4ae4dc618d5509942d43522b6eb", name: "img_logo_nitro_tier_2_horizontal_dark", type: "png" });
+export default emptyFunction.shape(point);

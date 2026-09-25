@@ -1,18 +1,18 @@
 // === Module 4598: ? ===
 
 // Module 4598
-import c from "c" /* 4581 */;
-import _mod4594 from "module_4594" /* 4594 */;
+import c from "c" /* 4583 */;
+import _mod4596 from "module_4596" /* 4596 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = arg1;
-function getEnumProperty(enumProperty, arg1) {
-  return enumProperty.enumProperty(arg1);
+function getStringProperty(stringProperty, arg1) {
+  return stringProperty.stringProperty(arg1);
 }
 
-export const useRiveEnum = function useRiveEnum(FillColor, instance) {
+export const useRiveString = function useRiveString(LVL, instance) {
   const cResult = c.c(4);
-  [tmp3, tmp4, tmp5] = _mod4594.useRiveProperty(instance, FillColor, getEnumProperty);
+  [tmp3, tmp4, tmp5] = _mod4596.useRiveProperty(instance, LVL, getStringProperty);
   if (cResult[0] === tmp5) {
     if (cResult[1] === tmp4) {
       if (cResult[2] === tmp3) {

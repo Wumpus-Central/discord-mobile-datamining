@@ -1,7 +1,14 @@
 // === Module 13843: ? ===
 
 // Module 13843
-import registerAsset from "module_1121" /* 1121 */;
+import _mod13844 from "module_13844" /* 13844 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 18, height: 18, scales: [2, 3], hash: "0b73baa146c1e8e06b259fb4eb1affa0", name: "ic_check_18px", type: "png" });
+export default (arg0) => {
+  if (_mod13844(arg0)) {
+    const tmp4 = new TypeError("Can't call method on " + arg0);
+    throw tmp4;
+  } else {
+    return arg0;
+  }
+};

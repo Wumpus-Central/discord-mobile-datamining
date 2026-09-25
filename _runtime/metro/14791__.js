@@ -1,44 +1,7 @@
 // === Module 14791: ? ===
 
 // Module 14791
+import registerAsset from "module_1121" /* 1121 */;
 
-export default (createSocket) => {
-  ({ host, port } = createSocket);
-  if (null != createSocket.createSocket) {
-    let tmp7 = typeof host === "string";
-    if (typeof host === "string") {
-      tmp7 = host;
-    }
-    if (tmp7) {
-      tmp7 = "" !== host;
-    }
-    if (tmp7) {
-      let tmp13 = typeof port === "number";
-      if (typeof port === "number") {
-        tmp13 = port >= 1;
-      }
-      if (tmp13) {
-        tmp13 = port <= 65535;
-      }
-      if (tmp13) {
-        if (typeof tmp !== "function") {
-          const _Error4 = Error;
-          const error = new Error("invalid onCommand handler");
-          throw error;
-        }
-      } else {
-        const _Error3 = Error;
-        const error1 = new Error("invalid port");
-        throw error1;
-      }
-    } else {
-      const _Error2 = Error;
-      const error2 = new Error("invalid host");
-      throw error2;
-    }
-  } else {
-    const _Error = Error;
-    const error3 = new Error("invalid createSocket function");
-    throw error3;
-  }
-};
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "45bf3d60b04cc6fd9a97d07a70a73cd6", name: "ThemeMidnightIcon", type: "png" });

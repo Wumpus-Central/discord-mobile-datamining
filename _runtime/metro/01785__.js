@@ -10,7 +10,7 @@ let closure_5 = { code: "function pnpm_useAnimatedKeyboardTs2(state,height){cons
 export const useAnimatedKeyboard = function useAnimatedKeyboard() {
   let obj = arg0;
   if (arg0 === undefined) {
-    obj = { isStatusBarTranslucentAndroid: "channel", isNavigationBarTranslucentAndroid: "channelId" };
+    obj = { isStatusBarTranslucentAndroid: "isArray", isNavigationBarTranslucentAndroid: "paddingHorizontal" };
   }
   let ref2;
   let obj2;
