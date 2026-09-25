@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "e535ea871b8155df08d1e92a6b532c6c",
-  name: "GroupArrowDownIcon",
+  hash: "9dd37f954b23d7c3c7ed4428be93436f",
+  name: "ClydeIcon",
   type: "png",
 });

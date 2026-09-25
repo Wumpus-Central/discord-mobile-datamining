@@ -1,26 +1,35 @@
 // _runtime/metro/04281__.js
-import _typeof_mod from "03913__.js";
-import requiredArgs_mod from "../03914_requiredArgs.js";
+import module_4063_mod from "04063__.js";
+import module_4096_mod from "04096__.js";
+import requiredArgs_mod from "../03916_requiredArgs.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_4063 = module_4063_mod;
+if (!module_4063) {
+  const obj = { default: module_4063 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_4063;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+module_4063 = tmp3;
+let module_4096 = module_4096_mod;
+if (!module_4096) {
+  const obj2 = { default: module_4096 };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = module_4096;
 }
-requiredArgs = tmp5;
+module_4096 = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
 
-export default function isWednesday(arg0) {
+export default function isTomorrow(arg0) {
   requiredArgs.default(1, arguments);
-  return 3 === _typeof.default(arg0).getDay();
+  return module_4096.default(arg0, module_4063.default(Date.now(), 1));
 };
 export default exports.default;

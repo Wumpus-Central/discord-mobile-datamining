@@ -1,4 +1,13 @@
 // _runtime/metro/14402__.js
-import _mod14395 from "14395__.js";
+import registerAsset from "01121__.js";
 
-export default (arg0, arg1, arg2) => _mod14395(arg0, arg1, arg2) < 0;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/parent_tools/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "87391322b2483c883b3f5fd1ac4080a9",
+  name: "ic_eye",
+  type: "png",
+});

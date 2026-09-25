@@ -1,31 +1,13 @@
 // _runtime/metro/13142__.js
-import _mod13143 from "13143__.js";
-import _mod13146 from "13146__.js";
+import registerAsset from "01121__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-function instrumentError() {
-  onerror = _mod13146.GLOBAL_OBJ.onerror;
-  _mod13146.GLOBAL_OBJ.onerror = function (msg, url, line, column, error) {
-    _mod13143.triggerHandlers("error", { column, error, line, msg, url });
-    if (!onerror) {
-      return onerror;
-    } else {
-      const self = this;
-      const apply = onerror.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-    }
-    const obj = { column, error, line, msg, url };
-  };
-  _mod13146.GLOBAL_OBJ.onerror.__SENTRY_INSTRUMENTED__ = true;
-}
-let onerror = null;
-
-export const addGlobalErrorInstrumentationHandler = function addGlobalErrorInstrumentationHandler(errorCallback) {
-  _mod13143.addHandler("error", errorCallback);
-  _mod13143.maybeInstrument("error", instrumentError);
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/flower_star/dark",
+  width: 24,
+  height: 23,
+  scales: [2, 3],
+  hash: "0e23713e9cb6c9f18c86b80cbd5851e5",
+  name: "tier_3_24px",
+  type: "png",
+});

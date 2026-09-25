@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "5967259ca8cb17c5090eb349838b5289",
-  name: "CheckmarkSmallBoldIcon",
+  hash: "c1eae5d24a46f9d36a9168ec38445f00",
+  name: "DragIcon",
   type: "png",
 });

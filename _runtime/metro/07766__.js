@@ -1,13 +1,30 @@
 // _runtime/metro/07766__.js
-import registerAsset from "01121__.js";
+import colorPropType from "../07754_colorPropType.js";
+import _mod7762 from "07762__.js";
+import merged12 from "../07763_merged1.js";
+import merged22 from "../07764_merged2.js";
+import emptyFunction_mod from "04660__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/logos",
-  width: 89.5,
-  height: 35.5,
-  scales: [2, 3],
-  hash: "9af123a40395902e23c1c21c516a826d",
-  name: "img_logo_nitro_classic_stacked",
-  type: "png",
-});
+const obj = {};
+const size = Object.assign(_mod7762);
+const merged1 = Object.assign(merged12);
+const merged2 = Object.assign(merged22);
+let emptyFunction = emptyFunction_mod;
+obj.resizeMode = emptyFunction.oneOf(["center", "contain", "cover", "repeat", "stretch"]);
+let emptyFunction = emptyFunction_mod;
+obj.backfaceVisibility = emptyFunction.oneOf(["visible", "hidden"]);
+obj.backgroundColor = colorPropType;
+obj.borderColor = colorPropType;
+obj.borderWidth = emptyFunction.number;
+obj.borderRadius = emptyFunction.number;
+let emptyFunction = emptyFunction_mod;
+obj.overflow = emptyFunction.oneOf(["visible", "hidden"]);
+obj.tintColor = colorPropType;
+obj.opacity = emptyFunction.number;
+obj.overlayColor = emptyFunction.string;
+obj.borderTopLeftRadius = emptyFunction.number;
+obj.borderTopRightRadius = emptyFunction.number;
+obj.borderBottomLeftRadius = emptyFunction.number;
+obj.borderBottomRightRadius = emptyFunction.number;
+
+export default obj;

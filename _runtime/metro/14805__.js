@@ -1,67 +1,13 @@
 // _runtime/metro/14805__.js
-import get_ActivityIndicator from "00017__.js";
+import registerAsset from "01121__.js";
 
-function getDevMenu() {}
-
-export default () => () => ({
-  onCommand(type) {
-    if ("devtools.open" === type.type) {
-      if ("devtools.open" === type.type) {
-        if (typeof closure_1_1 === "function") {
-          const obj = {
-            reload() {
-              console.warn("DevMenu." + "reload" + "() not available in this environment");
-            },
-            show() {
-              console.warn("DevMenu." + "show" + "() not available in this environment");
-            },
-            getConstants() {
-              return {};
-            },
-            debugRemotely() {
-              console.warn("DevMenu." + "debugRemotely" + "() not available in this environment");
-            },
-            setHotLoadingEnabled() {
-              console.warn("DevMenu." + "setHotLoadingEnabled" + "() not available in this environment");
-            },
-            setProfilingEnabled() {
-              console.warn("DevMenu." + "setProfilingEnabled" + "() not available in this environment");
-            },
-          };
-          const OS = Platform.Platform.OS;
-          obj.show();
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-      }
-      if ("devtools.reload" === type.type) {
-        if (typeof closure_1_1 === "function") {
-          const obj2 = {
-            reload() {
-              console.warn("DevMenu." + "reload" + "() not available in this environment");
-            },
-            show() {
-              console.warn("DevMenu." + "show" + "() not available in this environment");
-            },
-            getConstants() {
-              return {};
-            },
-            debugRemotely() {
-              console.warn("DevMenu." + "debugRemotely" + "() not available in this environment");
-            },
-            setHotLoadingEnabled() {
-              console.warn("DevMenu." + "setHotLoadingEnabled" + "() not available in this environment");
-            },
-            setProfilingEnabled() {
-              console.warn("DevMenu." + "setProfilingEnabled" + "() not available in this environment");
-            },
-          };
-          const OS2 = Platform.Platform.OS;
-          obj2.reload();
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-      }
-    }
-  },
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/main_tabs",
+  width: 216,
+  height: 216,
+  scales: [1],
+  hash: "e8cc96dfc04f2226c8870fdf46cc16af",
+  name: "ExampleVoiceChatActivity",
+  type: "png",
 });

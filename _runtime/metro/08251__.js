@@ -1,16 +1,13 @@
 // _runtime/metro/08251__.js
-import noop from "00019__.js";
+import registerAsset from "01121__.js";
 
-let context = noop.createContext(undefined);
-
-export const AnimatedHeaderHeightContext = context;
-export const useAnimatedHeaderHeight = function useAnimatedHeaderHeight() {
-  context = noop.useContext(context);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find the header height. Are you inside a screen in a native stack navigator?");
-    throw error;
-  } else {
-    return context;
-  }
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "6d493c91631ba30b8d8c55fe48d43780",
+  name: "CheckmarkLargeBoldIcon",
+  type: "png",
+});

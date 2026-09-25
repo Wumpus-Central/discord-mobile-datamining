@@ -1,13 +1,5 @@
 // _runtime/metro/13838__.js
-import registerAsset from "01121__.js";
+import _mod13839 from "13839__.js";
+import _mod13843 from "13843__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 314,
-  height: 195,
-  scales: [2, 3],
-  hash: "f774e43fd38da2d8b6e5bdabed98e8b8",
-  name: "img_tier_0_marketing_emojis",
-  type: "png",
-});
+export default (arg0) => _mod13839(_mod13843(arg0));

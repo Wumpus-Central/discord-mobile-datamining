@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/guild_home/native/images",
+  width: 1100,
+  height: 275,
   scales: [2, 3],
-  hash: "74d1abdb8a51df8677242205d5859ee7",
-  name: "GridSquareIcon",
+  hash: "ba87a4f1a3775c9189bf0599d24fcb24",
+  name: "dark_home_header_placeholder",
   type: "png",
 });

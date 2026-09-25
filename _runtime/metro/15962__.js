@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "ca990f51cd6cd3877a91c6ff3ddaf3f5",
-  name: "InventoryIcon",
+  httpServerLocation: "/assets/modules/guilds_bar/native/images",
+  width: 59,
+  height: 55,
+  scales: [3],
+  hash: "31b62f25cfc0f3a2d3cb5b6aaaef4788",
+  name: "wumpus_wave",
   type: "png",
 });

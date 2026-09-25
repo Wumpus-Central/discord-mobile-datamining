@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/emoji_picker/native/images",
-  width: 16,
-  height: 16,
+  httpServerLocation: "/assets/images/native/oauth2",
+  width: 158,
+  height: 130,
   scales: [2, 3],
-  hash: "494d75fe739ed4a36d195ab8193847fa",
-  name: "alert",
+  hash: "dc953fc221fa07a0f6638b7e2877ae0b",
+  name: "success-header",
   type: "png",
 });

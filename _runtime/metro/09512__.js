@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/upsell",
-  width: 120,
-  height: 80,
+  httpServerLocation: "/assets/modules/video_calls/native/images",
+  width: 18,
+  height: 18,
   scales: [2, 3],
-  hash: "17353b23aadfbe0d3f7b9982ef6491bf",
-  name: "img_nitro_file_upload",
+  hash: "ade8732f10573e5215aa029a138cb853",
+  name: "watch",
   type: "png",
 });

@@ -3,11 +3,9 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/backgrounds",
-  width: 411,
-  height: 134,
-  scales: [2, 3],
-  hash: "f6149fc51c6f815b5a58a1e50a88555c",
-  name: "img_subheader_resub_mobile",
-  type: "png",
+  httpServerLocation: "/assets/intl/messages",
+  scales: [1],
+  hash: "45c4d2696ff3834c759da911dad31476",
+  name: "untranslated.compiled.messages",
+  type: "jsona",
 });

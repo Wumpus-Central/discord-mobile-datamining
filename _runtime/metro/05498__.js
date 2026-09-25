@@ -1,67 +1,82 @@
 // _runtime/metro/05498__.js
-import _mod5490 from "05490__.js";
-import _mod5491 from "05491__.js";
+import _mod5492 from "05492__.js";
+import _mod5493 from "05493__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const isAVI = function isAVI(fileChunk) {
-  fileChunk = _mod5490.getFileChunk(fileChunk);
-  const FileTypes = _mod5491.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "avi");
+export const isAVIF = function isAVIF(fileChunk) {
+  fileChunk = _mod5492.getFileChunk(fileChunk);
+  const FileTypes = _mod5493.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "avif") && _mod5492.isAvifStringIncluded(fileChunk);
 };
-export const isFLV = function isFLV(fileChunk) {
-  fileChunk = _mod5490.getFileChunk(fileChunk);
-  const FileTypes = _mod5491.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "flv") && _mod5490.isFlvStringIncluded(fileChunk);
+export const isBMP = function isBMP(fileChunk) {
+  fileChunk = _mod5492.getFileChunk(fileChunk);
+  const FileTypes = _mod5493.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "bmp");
 };
-export const isM4V = function isM4V(fileChunk) {
-  fileChunk = _mod5490.getFileChunk(fileChunk);
-  const FileTypes = _mod5491.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "m4v") && _mod5490.isftypStringIncluded(fileChunk);
+export const isBPG = function isBPG(fileChunk) {
+  fileChunk = _mod5492.getFileChunk(fileChunk);
+  const FileTypes = _mod5493.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "bpg");
 };
-export const isMKV = function isMKV(fileChunk) {
-  fileChunk = _mod5490.getFileChunk(fileChunk, 64);
-  const FileTypes = _mod5491.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "mkv") && "mkv" === _mod5490.findMatroskaDocTypeElements(fileChunk);
+export const isCR2 = function isCR2(fileChunk) {
+  fileChunk = _mod5492.getFileChunk(fileChunk);
+  const FileTypes = _mod5493.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "cr2");
 };
-export const isMOV = function isMOV(fileChunk) {
-  fileChunk = _mod5490.getFileChunk(fileChunk);
-  const FileTypes = _mod5491.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "mov");
+export const isEXR = function isEXR(fileChunk) {
+  fileChunk = _mod5492.getFileChunk(fileChunk);
+  const FileTypes = _mod5493.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "exr");
 };
-export const isMP4 = function isMP4(fileChunk, excludeSimilarTypes) {
-  fileChunk = _mod5490.getFileChunk(fileChunk);
-  const FileTypes = _mod5491.FileTypes;
-  let checkByFileTypeResult = FileTypes.checkByFileType(fileChunk, "mp4");
-  if (!checkByFileTypeResult) {
-    excludeSimilarTypes = undefined;
-    if (null != excludeSimilarTypes) {
-      excludeSimilarTypes = excludeSimilarTypes.excludeSimilarTypes;
-    }
-    let tmp8 = !excludeSimilarTypes;
-    if (!excludeSimilarTypes) {
-      const fileChunk1 = _mod5490.getFileChunk(fileChunk);
-      const FileTypes2 = _mod5491.FileTypes;
-      tmp8 = FileTypes2.checkByFileType(fileChunk1, "m4v") && _mod5490.isftypStringIncluded(fileChunk1);
-      const tmp10 = FileTypes2.checkByFileType(fileChunk1, "m4v") && _mod5490.isftypStringIncluded(fileChunk1);
-    }
-    checkByFileTypeResult = tmp8;
-  }
-  return checkByFileTypeResult;
+export const isGIF = function isGIF(fileChunk) {
+  fileChunk = _mod5492.getFileChunk(fileChunk);
+  const FileTypes = _mod5493.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "gif");
 };
-export const isOGG = function isOGG(fileChunk) {
-  fileChunk = _mod5490.getFileChunk(fileChunk);
-  const FileTypes = _mod5491.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "ogg");
+export const isHEIC = function isHEIC(fileChunk) {
+  fileChunk = _mod5492.getFileChunk(fileChunk);
+  const FileTypes = _mod5493.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "avif") && _mod5492.isHeicSignatureIncluded(fileChunk);
 };
-export const isSWF = function isSWF(fileChunk) {
-  fileChunk = _mod5490.getFileChunk(fileChunk);
-  const FileTypes = _mod5491.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "swf");
+export const isICO = function isICO(fileChunk) {
+  fileChunk = _mod5492.getFileChunk(fileChunk);
+  const FileTypes = _mod5493.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "ico");
 };
-export const isWEBM = function isWEBM(fileChunk) {
-  fileChunk = _mod5490.getFileChunk(fileChunk, 64);
-  const FileTypes = _mod5491.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "webm") && "webm" === _mod5490.findMatroskaDocTypeElements(fileChunk);
+export const isJPEG = function isJPEG(fileChunk) {
+  fileChunk = _mod5492.getFileChunk(fileChunk);
+  const FileTypes = _mod5493.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "jpeg");
+};
+export const isPBM = function isPBM(fileChunk) {
+  fileChunk = _mod5492.getFileChunk(fileChunk);
+  const FileTypes = _mod5493.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "pbm");
+};
+export const isPGM = function isPGM(fileChunk) {
+  fileChunk = _mod5492.getFileChunk(fileChunk);
+  const FileTypes = _mod5493.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "pgm");
+};
+export const isPNG = function isPNG(fileChunk) {
+  fileChunk = _mod5492.getFileChunk(fileChunk);
+  const FileTypes = _mod5493.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "png");
+};
+export const isPPM = function isPPM(fileChunk) {
+  fileChunk = _mod5492.getFileChunk(fileChunk);
+  const FileTypes = _mod5493.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "ppm");
+};
+export const isPSD = function isPSD(fileChunk) {
+  fileChunk = _mod5492.getFileChunk(fileChunk);
+  const FileTypes = _mod5493.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "psd");
+};
+export const isWEBP = function isWEBP(fileChunk) {
+  fileChunk = _mod5492.getFileChunk(fileChunk);
+  const FileTypes = _mod5493.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "webp");
 };

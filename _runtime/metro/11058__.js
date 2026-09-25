@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/backgrounds",
-  width: 411,
-  height: 134,
-  scales: [2, 3],
-  hash: "d8c3e4c6e3c94e3724597aef8c906754",
-  name: "img_tier_0_subheader_mobile",
+  httpServerLocation: "/assets/images",
+  width: 52,
+  height: 54,
+  scales: [1],
+  hash: "952194349b0f8cbc08a58b40dbb32cb2",
+  name: "connections-profile-steam-tf2",
   type: "png",
 });

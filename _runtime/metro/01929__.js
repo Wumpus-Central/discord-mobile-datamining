@@ -862,7 +862,7 @@ let fn = function t() {
       requiredFirstCharacters: ["h"],
       match: inlineRegex(/^(https?:\/\/[^\s<]+[^<.,:;"')\]\s])/),
       parse(content, arg1, arg2) {
-          obj = { type: "link", content: null, target: content[1], title: "category" };
+          obj = { type: "link", content: null, target: content[1], title: "channel" };
           const items = [{ type: "text", content: content[1] }];
           obj.content = items;
           return obj;

@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/main_tabs_v2/native/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
   height: 24,
-  scales: [2, 3, 4],
-  hash: "abb394aed71d149627aa4dc597482f89",
-  name: "stack-nav-back",
+  scales: [2, 3],
+  hash: "ec67305879cbfc8d1c27dd7c85d614f6",
+  name: "ic_community_guild_badge_dark_24px",
   type: "png",
 });

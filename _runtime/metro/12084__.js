@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/empties",
+  width: 240,
+  height: 130,
   scales: [2, 3],
-  hash: "77e220fd6c1c82f2ff76cc9449534740",
-  name: "StampXIcon",
+  hash: "931bea5d9b6a7fc7a53130a431abe666",
+  name: "no_mutual_servers_dark",
   type: "png",
 });

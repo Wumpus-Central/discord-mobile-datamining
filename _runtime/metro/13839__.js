@@ -1,13 +1,19 @@
 // _runtime/metro/13839__.js
-import registerAsset from "01121__.js";
+import _mod13837 from "13837__.js";
+import _mod13840 from "13840__.js";
+import _mod13842 from "13842__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 250,
-  height: 175,
-  scales: [2, 3],
-  hash: "286d809a177e5dc702067fdd57e25871",
-  name: "img_marketing_uploads_light_border",
-  type: "png",
-});
+let fn = Object;
+let closure_3 = _mod13840("".split);
+if (_mod13837(() => !Object("z").propertyIsEnumerable(0))) {
+  fn = (arg0) => {
+    if ("String" === _mod13842(arg0)) {
+      let tmp2 = closure_3(arg0, "");
+    } else {
+      tmp2 = Object(arg0);
+    }
+    return tmp2;
+  };
+}
+
+export default fn;

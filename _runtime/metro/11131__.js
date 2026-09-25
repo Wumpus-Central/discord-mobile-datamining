@@ -1,15 +1,13 @@
 // _runtime/metro/11131__.js
-import _mod19 from "00019__.js";
+import registerAsset from "01121__.js";
 
-const useEffect = _mod19.useEffect;
-
-export const useUpdateGestureConfig = (arg0, options) => {
-  closure_0 = arg0;
-  const enabled = options.enabled;
-  const items = [enabled, arg0];
-  useEffect(() => {
-    if (undefined !== enabled) {
-      closure_0.enabled(tmp);
-    }
-  }, items);
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/badge",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "bfaa24ee9d14df63fd4c31531ca2dc70",
+  name: "ic_badge_staff",
+  type: "png",
+});

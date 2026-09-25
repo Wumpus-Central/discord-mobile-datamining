@@ -1,10 +1,3 @@
 // _runtime/metro/07771__.js
-import _slicedToArray from "00032__.js";
 
-const noop = fn(19);
-({ useCallback: closure_1, useState: c2 } = noop);
-
-export default function useForceUpdate() {
-  closure_0 = _slicedToArray(React2({}), 2)[1];
-  return framebus(() => closure_0({}), []);
-}
+export default { SRT: "application/x-subrip", TTML: "application/ttml+xml", VTT: "text/vtt" };

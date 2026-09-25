@@ -1,13 +1,31 @@
 // _runtime/metro/13968__.js
-import registerAsset from "01121__.js";
+import emptyPromise from "../13951_emptyPromise.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_boosting/native/images",
-  width: 424,
-  height: 254,
-  scales: [1],
-  hash: "616e0e1297b795db059112c52470eab4",
-  name: "top_perk_streaming_quality",
-  type: "png",
-});
+require = arg1;
+const dependencyMap = arg6;
+
+export default () => (log) => {
+  const result = emptyPromise.assertHasLoggerPlugin(log);
+  closure_0 = log;
+  return {
+    onConnect() {
+      log = console.log;
+      console.log = () => {
+        const items = [...arguments];
+        log(...items);
+        const items1 = [...items];
+        log.log.apply(items1);
+      };
+      console.warn = () => {
+        const items = [...arguments];
+        warn(...items);
+        log.warn(items[0]);
+      };
+      console.debug = () => {
+        const items = [...arguments];
+        debug(...items);
+        log.debug(items[0]);
+      };
+    },
+  };
+};

@@ -1,13 +1,15 @@
 // _runtime/metro/10234__.js
-import registerAsset from "01121__.js";
+import _mod19 from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/instant_invite/native/images",
-  width: 60,
-  height: 60,
-  scales: [2, 3],
-  hash: "a07985aa2246ccd4facb50f3c745ccda",
-  name: "twitter",
-  type: "png",
-});
+const useEffect = _mod19.useEffect;
+
+export const useUpdateGestureConfig = (arg0, options) => {
+  closure_0 = arg0;
+  const enabled = options.enabled;
+  const items = [enabled, arg0];
+  useEffect(() => {
+    if (undefined !== enabled) {
+      closure_0.enabled(tmp);
+    }
+  }, items);
+};

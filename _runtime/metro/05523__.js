@@ -1,19 +1,22 @@
 // _runtime/metro/05523__.js
-let c0 = 18761;
-let c1 = 19789;
 
 export default {
-  BIG_ENDIAN: 19789,
-  LITTLE_ENDIAN: 18761,
-  getByteOrder(getUint16, c5) {
-    if (getUint16.getUint16(c5) === c0) {
-      return c0;
-    } else if (getUint16.getUint16(c5) === c1) {
-      return c1;
-    } else {
-      const _Error = Error;
-      const error = new Error("Illegal byte order value. Faulty image.");
-      throw error;
-    }
-  },
+  USE_FILE: true,
+  USE_JFIF: true,
+  USE_PNG_FILE: true,
+  USE_EXIF: true,
+  USE_IPTC: true,
+  USE_XMP: true,
+  USE_ICC: true,
+  USE_MPF: true,
+  USE_PHOTOSHOP: true,
+  USE_THUMBNAIL: true,
+  USE_TIFF: true,
+  USE_JPEG: true,
+  USE_PNG: true,
+  USE_HEIC: true,
+  USE_AVIF: true,
+  USE_WEBP: true,
+  USE_GIF: true,
+  USE_MAKER_NOTES: true,
 };

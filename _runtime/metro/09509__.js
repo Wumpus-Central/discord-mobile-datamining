@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/upsell",
-  width: 120,
-  height: 80,
+  httpServerLocation: "/assets/images/native/application_streaming",
+  width: 300,
+  height: 120,
   scales: [2, 3],
-  hash: "e92f31ca34ceaeec68c2321f683014ca",
-  name: "img_nitro_global_emoji",
+  hash: "af3947e9ef22aa54f0b32942d9a564e5",
+  name: "img_preview_not_available_dark",
   type: "png",
 });

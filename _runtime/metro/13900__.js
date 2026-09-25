@@ -1,13 +1,7 @@
 // _runtime/metro/13900__.js
-import registerAsset from "01121__.js";
+import _mod17 from "00017__.js";
+import setupURLPolyfill_mod from "../13901_setupURLPolyfill.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting",
-  width: 177.5,
-  height: 112,
-  scales: [2, 3],
-  hash: "d63f711157bc9a870f14f2f22d76c3fb",
-  name: "guild_subscription_no_guilds_dark",
-  type: "png",
-});
+const Platform = _mod17.Platform;
+let setupURLPolyfill = setupURLPolyfill_mod;
+setupURLPolyfill = setupURLPolyfill.setupURLPolyfill();

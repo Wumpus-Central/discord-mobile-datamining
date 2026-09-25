@@ -1,15 +1,15 @@
 // _runtime/metro/04270__.js
-import module_4260_mod from "04260__.js";
-import requiredArgs_mod from "../03914_requiredArgs.js";
+import _typeof_mod from "03915__.js";
+import requiredArgs_mod from "../03916_requiredArgs.js";
 
-let module_4260 = module_4260_mod;
-if (!module_4260) {
-  const obj = { default: module_4260 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4260;
+  tmp3 = _typeof;
 }
-module_4260 = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -19,8 +19,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisISOWeek(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_4260.default(arg0, Date.now());
+export default function isSameYear(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const fullYear = defaultResult1.getFullYear();
+  return fullYear === _typeof.default(arg1).getFullYear();
 };
 export default exports.default;

@@ -1,13 +1,12 @@
 // _runtime/metro/13864__.js
-import registerAsset from "01121__.js";
+import _mod13859 from "13859__.js";
+import _mod13865 from "13865__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/backgrounds",
-  width: 351,
-  height: 100,
-  scales: [2, 3],
-  hash: "7e6a8bbab7f30fd349a76227a78736a2",
-  name: "img_subheader_error_mobile_v2_light",
-  type: "png",
-});
+export default (arg0) => {
+  if (_mod13859(arg0)) {
+    return arg0;
+  } else {
+    const tmp6 = new TypeError(_mod13865(arg0) + " is not a function");
+    throw tmp6;
+  }
+};

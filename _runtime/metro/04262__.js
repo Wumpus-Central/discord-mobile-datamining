@@ -1,15 +1,15 @@
 // _runtime/metro/04262__.js
-import startOfISOWeekYear_mod from "../04074_startOfISOWeekYear.js";
-import requiredArgs_mod from "../03914_requiredArgs.js";
+import module_4263_mod from "04263__.js";
+import requiredArgs_mod from "../03916_requiredArgs.js";
 
-let startOfISOWeekYear = startOfISOWeekYear_mod;
-if (!startOfISOWeekYear) {
-  const obj = { default: startOfISOWeekYear };
+let module_4263 = module_4263_mod;
+if (!module_4263) {
+  const obj = { default: module_4263 };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfISOWeekYear;
+  tmp3 = module_4263;
 }
-startOfISOWeekYear = tmp3;
+module_4263 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -19,10 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isSameISOWeekYear(arg0, arg1) {
+export default function isSameISOWeek(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfISOWeekYear.default(arg0);
-  const time = defaultResult1.getTime();
-  return time === startOfISOWeekYear.default(arg1).getTime();
+  return module_4263.default(arg0, arg1, { weekStartsOn: 1 });
 };
 export default exports.default;

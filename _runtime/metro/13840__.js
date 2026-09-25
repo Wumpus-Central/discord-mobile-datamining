@@ -1,13 +1,25 @@
 // _runtime/metro/13840__.js
-import registerAsset from "01121__.js";
+import module_13841_mod from "13841__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 285,
-  height: 177,
-  scales: [2, 3],
-  hash: "8f1d829bee3b017ccff2f53d55809f29",
-  name: "img_marketing_profiles",
-  type: "png",
-});
+const call = prototype.call;
+let module_13841 = module_13841_mod;
+if (module_13841) {
+  const bind = prototype.bind;
+  module_13841 = bind.bind(call, call);
+}
+if (!module_13841) {
+  module_13841 = (arg0) => {
+    closure_0 = arg0;
+    return () => {
+      const apply = call.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(closure_0);
+      } else {
+        applyArgumentsResult = apply(closure_0, arguments);
+      }
+      return applyArgumentsResult;
+    };
+  };
+}
+
+export default module_13841;

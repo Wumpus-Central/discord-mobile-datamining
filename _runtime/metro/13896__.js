@@ -1,13 +1,15 @@
 // _runtime/metro/13896__.js
-import registerAsset from "01121__.js";
+import _mod13848 from "13848__.js";
+import _mod13855 from "13855__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "3301eac470d1db4f813dc4b19265d85e",
-  name: "audio",
-  type: "png",
-});
+let closure_2 = _mod13848("keys");
+
+export default (arg0) => {
+  let tmp2 = closure_2[arg0];
+  if (!tmp2) {
+    const tmp5 = _mod13855(arg0);
+    tmp[arg0] = tmp5;
+    tmp2 = tmp5;
+  }
+  return tmp2;
+};

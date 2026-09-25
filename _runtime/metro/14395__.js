@@ -1,7 +1,13 @@
 // _runtime/metro/14395__.js
-import _mod14381 from "14381__.js";
+import registerAsset from "01121__.js";
 
-export default (arg0, arg1, arg2) => {
-  const obj = new _mod14381(arg0, arg2);
-  return obj.compare(new _mod14381(arg1, arg2));
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/parent_tools/images",
+  width: 185,
+  height: 125,
+  scales: [1, 2, 3],
+  hash: "fa358a5ff3d1f49a00fc1180e0e601e5",
+  name: "family_center_activity_banner_image_parent",
+  type: "png",
+});

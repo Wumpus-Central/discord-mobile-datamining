@@ -1,180 +1,103 @@
 // _runtime/metro/04602__.js
-import ArtboardByIndex from "../04591_ArtboardByIndex.js";
-import noop from "00019__.js";
+import _mod4597 from "04597__.js";
+import _slicedToArray from "00032__.js";
 
-const require = globalThis.__r;
+require = fn;
+const noop = fn(19);
+({ useCallback: c3, useEffect: closure_4, useRef: hasOwnProperty, useState: metroRequire } = noop);
 
-({ useMemo: c2, useRef: c3 } = noop);
-
-export const useViewModelInstance = function useViewModelInstance(arg0, instanceName) {
-  _require = arg0;
-  instanceName = undefined;
-  if (instanceName != null) {
-    instanceName = instanceName.instanceName;
+export const useRiveTrigger = function useRiveTrigger(startAnimation, instance, arg2) {
+  closure_0 = startAnimation;
+  let obj = arg2;
+  if (arg2 == null) {
+    obj = {};
   }
-  if (instanceName != null) {
-    const name = instanceName.name;
-  }
-  if (instanceName == null) {
-    instanceName = name;
-  }
-  let artboardName;
-  if (instanceName != null) {
-    artboardName = instanceName.artboardName;
-  }
-  let viewModelName;
-  if (instanceName != null) {
-    viewModelName = instanceName.viewModelName;
-  }
-  let flag;
-  if (instanceName != null) {
-    flag = instanceName.useNew;
-  }
-  if (flag == null) {
-    flag = false;
-  }
-  let flag2;
-  if (instanceName != null) {
-    flag2 = instanceName.required;
-  }
-  if (flag2 == null) {
-    flag2 = false;
-  }
-  let onInit;
-  if (instanceName != null) {
-    onInit = instanceName.onInit;
-  }
-  const tmp5 = viewModelName(onInit);
-  tmp5.current = onInit;
-  const items = [arg0, instanceName, artboardName, viewModelName, flag];
-  const disposableMemo = require("04595__.js").useDisposableMemo(
+  const onTrigger = obj.onTrigger;
+  let tmp = hasOwnProperty(undefined);
+  const tmp2 = hasOwnProperty(false);
+  const tmp3 = hasOwnProperty(onTrigger);
+  closure_4 = tmp3;
+  tmp3.current = onTrigger;
+  const items = [instance, startAnimation];
+  const disposableMemo = _mod4597.useDisposableMemo(
     () => {
-      if (closure_0) {
-        let tmp6 = null != closure_0;
-        if (tmp6) {
-          tmp6 = "getViewModelInstance" in closure_0;
-        }
-        if (tmp6) {
-          let viewModelInstance = closure_0.getViewModelInstance();
-          if (viewModelInstance == null) {
-            viewModelInstance = null;
-          }
-          const obj2 = { instance: viewModelInstance, needsDispose: false };
-          let obj11 = obj2;
-        } else {
-          let tmp7 = null != closure_0;
-          if (tmp7) {
-            tmp7 = "defaultArtboardViewModel" in closure_0;
-          }
-          if (tmp7) {
-            if (viewModelName) {
-              let viewModelByNameResult = closure_0.viewModelByName(viewModelName);
-              if (!viewModelByNameResult) {
-                const obj3 = { instance: null, needsDispose: false, error: null };
-                const _HermesInternal3 = HermesInternal;
-                obj3.error = "ViewModel '" + viewModelName + "' not found";
-                obj11 = obj3;
-              }
-            } else {
-              let ArtboardByNameResult;
-              if (artboardName) {
-                ArtboardByNameResult = ArtboardByIndex.ArtboardByName(artboardName);
-              }
-              viewModelByNameResult = closure_0.defaultArtboardViewModel(ArtboardByNameResult);
-              if (!viewModelByNameResult) {
-                if (artboardName) {
-                  const obj4 = { instance: null, needsDispose: false, error: null };
-                  const _HermesInternal2 = HermesInternal;
-                  obj4.error = "Artboard '" + artboardName + "' not found or has no ViewModel";
-                  let obj6 = obj4;
-                } else {
-                  obj6 = { instance: null, needsDispose: false };
-                }
-                obj11 = obj6;
-              }
-            }
-            if (instanceName) {
-              let instanceByName = viewModelByNameResult.createInstanceByName(instanceName);
-            } else {
-              instanceByName = viewModelByNameResult.createDefaultInstance();
-            }
-            if (!instanceByName) {
-              if (instanceName) {
-                let obj7 = { instance: null, needsDispose: false, error: null };
-                const _HermesInternal4 = HermesInternal;
-                obj7.error = "ViewModel instance '" + instanceName + "' not found";
-              }
-              obj11 = obj7;
-            }
-            if (instanceByName == null) {
-              instanceByName = null;
-            }
-            const obj8 = { instance: instanceByName, needsDispose: true };
-            obj7 = obj8;
-          } else {
-            if (instanceName) {
-              let instanceByName1 = closure_0.createInstanceByName(instanceName);
-              if (!instanceByName1) {
-                const obj9 = { instance: null, needsDispose: false, error: null };
-                const _HermesInternal = HermesInternal;
-                obj9.error = "ViewModel instance '" + instanceName + "' not found";
-                obj11 = obj9;
-              }
-            } else if (tmp4) {
-              instanceByName1 = closure_0.createInstance();
-            } else {
-              instanceByName1 = closure_0.createDefaultInstance();
-            }
-            if (instanceByName1 == null) {
-              instanceByName1 = null;
-            }
-            const obj10 = { instance: instanceByName1, needsDispose: true };
-            obj11 = obj10;
-          }
-        }
-      } else {
-        obj11 = { instance: "flex", needsDispose: true };
+      if (instance) {
+        return instance.triggerProperty(closure_0);
       }
-      let current = obj11.instance;
-      if (current) {
-        current = ref.current;
-      }
-      if (current) {
-        ref.current(obj11.instance);
-      }
-      return obj11;
     },
-    (needsDispose) => {
-      if (tmp) {
-        closure_0(instanceName[3]).callDispose(needsDispose.instance);
-        const obj = closure_0(instanceName[3]);
+    (dispose) => {
+      let disposeResult;
+      if (dispose != null) {
+        disposeResult = dispose.dispose();
       }
-      tmp = needsDispose.needsDispose && needsDispose.instance;
+      return disposeResult;
     },
     items,
+    tmp,
   );
-  const items1 = [disposableMemo.error];
-  let obj = require("04595__.js");
-  if (flag2) {
-    if (null === disposableMemo.instance) {
-      let str =
-        "useViewModelInstance: Failed to get ViewModelInstance. Ensure the source has a valid ViewModel and instance available.";
-      if (disposableMemo.error) {
-        let _HermesInternal = HermesInternal;
-        str = "useViewModelInstance: " + disposableMemo.error;
-      }
-      let error = new Error(str);
-      throw error;
+  if (tmp.current) {
+    tmp2.current = true;
+  }
+  const tmp5 = _slicedToArray(timestampProducer(null), 2);
+  closure_6 = tmp5[1];
+  const items1 = [startAnimation, instance];
+  React4(() => {
+    closure_6(null);
+  }, items1);
+  const items2 = [instance, disposableMemo, startAnimation];
+  React4(() => {
+    let tmp = closure_1;
+    if (closure_1) {
+      tmp = !disposableMemo;
     }
-  }
-  const instance = disposableMemo.instance;
-  if (disposableMemo.instance) {
-    let obj2 = { instance, error: null };
-    let obj3 = obj2;
-  } else if (undefined === instance) {
-    obj3 = { instance: "Array", error: 0 };
-  } else {
-    obj3 = { instance: null, error: tmp7 };
-  }
+    if (tmp) {
+      const _Error = Error;
+      const _HermesInternal = HermesInternal;
+      const error = new Error('Property "' + closure_0 + '" not found in the ViewModel instance');
+      closure_6(error);
+    }
+  }, items2);
+  const items3 = [disposableMemo];
+  React4(() => {
+    if (disposableMemo) {
+      closure_0 = disposableMemo.addListener(() => {
+        const current = ref.current;
+        if (current != null) {
+          current();
+        }
+      });
+      return () => {
+        try {
+          closure_0();
+        } catch (err) {}
+      };
+    }
+  }, items3);
+  const obj3 = { trigger: null, error: tmp5[0] };
+  const items4 = [startAnimation];
+  obj3.trigger = React3(() => {
+    if (ref.current) {
+      const current = ref.current;
+      current.trigger();
+    } else {
+      const _console = console;
+      const _HermesInternal = HermesInternal;
+      if (ref2.current) {
+        warn(
+          concat(
+            closure_0,
+            "') called after dispose. The property has been cleaned up \u2014 this is likely a stale closure from an async callback that fired after unmount.",
+          ),
+        );
+      } else {
+        warn(
+          concat(
+            closure_0,
+            "') called but the property is not available yet. The viewModelInstance may still be loading.",
+          ),
+        );
+      }
+    }
+  }, items4);
   return obj3;
 };

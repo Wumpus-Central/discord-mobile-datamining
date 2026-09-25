@@ -22,8 +22,8 @@ fn = function n(toValue, userConfig, callback) {
       velocity: 0,
       duration: 2000,
       dampingRatio: 0.5,
-      reduceMotion: "children",
-      clamp: "left",
+      reduceMotion: "cix",
+      clamp: "url",
     };
     const merged = Object.assign(dependencyMap);
     let duration;

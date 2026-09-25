@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/channel_following/dark",
-  width: 280,
-  height: 120,
-  scales: [2, 3],
-  hash: "902d26debf9cf5ba93edffb3d1cb9422",
-  name: "channel_following_success_3",
+  httpServerLocation: "/assets/modules/scheduled_messages",
+  width: 297,
+  height: 238,
+  scales: [1],
+  hash: "0ad2bf31ea242663dc2fd22966e4c43e",
+  name: "wumpus-calendar-plus",
   type: "png",
 });

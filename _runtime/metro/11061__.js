@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/backgrounds",
-  width: 375,
-  height: 152,
+  httpServerLocation: "/assets/images/native",
+  width: 18,
+  height: 18,
   scales: [2, 3],
-  hash: "bd0899bbe9025729a8e812d462104779",
-  name: "img_bundle_subheader_mobile",
+  hash: "8ff35f733b0827b805a729f75828334f",
+  name: "ic_flower_star_18px",
   type: "png",
 });

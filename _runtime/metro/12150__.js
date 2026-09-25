@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 50,
-  height: 50,
-  scales: [2, 3],
-  hash: "9fa4b907ff6d9b977fcf6802f2937622",
-  name: "img_poop_dark",
+  httpServerLocation: "/assets/modules/directory_channels/native/images",
+  width: 375,
+  height: 300,
+  scales: [2],
+  hash: "ce796d5b5dedd403e327ddf7cc5530fc",
+  name: "hub_header",
   type: "png",
 });

@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 195,
-  height: 92,
-  scales: [1, 2, 3],
-  hash: "a075205f01081abc73c7a94b31634a53",
-  name: "krisp_logo_light",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "f55d97ba12842f12a33d545b3d0fbaea",
+  name: "CrownIcon",
   type: "png",
 });

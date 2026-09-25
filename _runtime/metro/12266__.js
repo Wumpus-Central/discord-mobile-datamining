@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/forums/native/images",
+  width: 120,
+  height: 80,
   scales: [2, 3],
-  hash: "a568e12daf3f479ad26c9db6582fe1a2",
-  name: "CreditCardIcon",
+  hash: "78be237a71ac693684ba99bcd912e5ac",
+  name: "img_forum_empty_state_dark",
   type: "png",
 });

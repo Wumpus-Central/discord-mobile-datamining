@@ -1,30 +1,17 @@
 // _runtime/metro/04184__.js
-import _typeof_mod from "03913__.js";
-import requiredArgs_mod from "../03914_requiredArgs.js";
+import _mod3920 from "03920__.js";
+import assign_mod from "../04165_assign.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let assign = assign_mod;
+if (!assign) {
+  const obj = { default: assign };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = assign;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
+assign = tmp3;
 
-export default function getISODay(arg0) {
-  requiredArgs.default(1, arguments);
-  let num = _typeof.default(arg0).getDay();
-  if (0 === num) {
-    num = 7;
-  }
-  return num;
+export default function getDefaultOptions() {
+  return assign.default({}, _mod3920.getDefaultOptions());
 };
 export default exports.default;

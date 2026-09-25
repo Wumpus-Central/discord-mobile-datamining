@@ -1,11 +1,13 @@
 // _runtime/metro/14702__.js
-import _mod14683 from "14683__.js";
-import _mod14703 from "14703__.js";
+import registerAsset from "01121__.js";
 
-export default (arg0, arg1) => {
-  let tmp4;
-  if (!_mod14683(arg0[arg1])) {
-    tmp4 = _mod14703(tmp);
-  }
-  return tmp4;
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/quests/native/images",
+  width: 48,
+  height: 45,
+  scales: [1, 2, 3],
+  hash: "c5d12ec01d5a82b43884ceb5bc673c98",
+  name: "wreath_dark",
+  type: "png",
+});

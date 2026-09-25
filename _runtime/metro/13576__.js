@@ -1,13 +1,31 @@
 // _runtime/metro/13576__.js
-import registerAsset from "01121__.js";
+import _mod13542 from "13542__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/collectibles/native/images",
-  width: 20.5,
-  height: 20,
-  scales: [2, 3],
-  hash: "1852cc5a5de0318feebc04948ebfbffa",
-  name: "img_collectibles_shop",
-  type: "png",
-});
+const require = globalThis.__r;
+
+export default (arr, arg1, arg2) => {
+  _require = arg2;
+  dependencyMap = null;
+  closure_2 = null;
+  let regex = null;
+  try {
+    let tmp9 = new require("13571__.js")(arg1, arg2);
+    regex = tmp9;
+    const item = arr.forEach((item) => {
+      if (regex.test(item)) {
+        let tmp = closure_1;
+        if (closure_1) {
+          tmp = 1 !== closure_2.compare(item);
+        }
+        if (!tmp) {
+          closure_1 = item;
+          const tmp9 = new _mod13542(closure_1, closure_0);
+          closure_2 = tmp9;
+        }
+      }
+    });
+    return dependencyMap;
+  } catch (err) {
+    return tmp;
+  }
+};

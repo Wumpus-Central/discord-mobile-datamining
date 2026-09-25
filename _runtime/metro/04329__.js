@@ -1,16 +1,16 @@
 // _runtime/metro/04329__.js
-import module_3917_mod from "03917__.js";
-import _typeof_mod from "03913__.js";
-import requiredArgs_mod from "../03914_requiredArgs.js";
+import module_3919_mod from "03919__.js";
+import _typeof_mod from "03915__.js";
+import requiredArgs_mod from "../03916_requiredArgs.js";
 
-let module_3917 = module_3917_mod;
-if (!module_3917) {
-  const obj = { default: module_3917 };
+let module_3919 = module_3919_mod;
+if (!module_3919) {
+  const obj = { default: module_3919 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3917;
+  tmp3 = module_3919;
 }
-module_3917 = tmp3;
+module_3919 = tmp3;
 let _typeof = _typeof_mod;
 if (!_typeof) {
   const obj2 = { default: _typeof };
@@ -28,11 +28,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function setDayOfYear(arg0, arg1) {
+export default function setDate(module_3919, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  defaultResult1.setMonth(0);
-  defaultResult1.setDate(module_3917.default(arg1));
+  const defaultResult1 = _typeof.default(module_3919);
+  defaultResult1.setDate(module_3919.default(arg1));
   return defaultResult1;
 };
 export default exports.default;

@@ -1,36 +1,13 @@
 // _runtime/metro/14807__.js
-import get_ActivityIndicator from "00017__.js";
+import registerAsset from "01121__.js";
 
-export default function getReactNativePlatformConstants() {
-  const obj = {
-    osRelease: "",
-    model: "",
-    serverHost: "",
-    uiMode: "",
-    serial: "",
-    forceTouch: false,
-    interfaceIdiom: "",
-    systemName: "",
-  };
-  if ("android" === get_ActivityIndicator.Platform.OS) {
-    const obj5 = {};
-    const merged = Object.assign(obj);
-    ({
-      Release: obj3.osRelease,
-      Model: obj3.model,
-      ServerHost: obj3.serverHost,
-      uiMode: obj3.uiMode,
-      Serial: obj3.serial,
-    } = get_ActivityIndicator.Platform.constants);
-    return obj5;
-  } else if ("ios" === get_ActivityIndicator.Platform.OS) {
-    constants = get_ActivityIndicator.Platform.constants;
-    const obj6 = {};
-    const merged1 = Object.assign(obj);
-    obj6.forceTouch = constants.forceTouchAvailable || false;
-    ({ interfaceIdiom: obj2.interfaceIdiom, systemName: obj2.systemName } = constants);
-    return obj6;
-  } else {
-    return obj;
-  }
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/avatars",
+  width: 161,
+  height: 161,
+  scales: [1],
+  hash: "1b6a1fd726ebdfc69d47b037085b4f19",
+  name: "graggle_2",
+  type: "png",
+});

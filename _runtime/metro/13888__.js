@@ -1,13 +1,6 @@
 // _runtime/metro/13888__.js
-import registerAsset from "01121__.js";
+import _mod13836 from "13836__.js";
+import _mod13837 from "13837__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/backgrounds",
-  width: 375,
-  height: 301,
-  scales: [2, 3],
-  hash: "66755272db25a38d2c195d1bf5a25e70",
-  name: "img_top_pattern_light",
-  type: "png",
-});
+export default _mod13836 &&
+  _mod13837(() => 42 !== Object.defineProperty(() => {}, "prototype", { value: 42, writable: false }).prototype);

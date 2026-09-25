@@ -1,13 +1,19 @@
 // _runtime/metro/13868__.js
-import registerAsset from "01121__.js";
+import _mod13837 from "13837__.js";
+import element from "../13869_element.js";
+import getOwnPropertyDescriptor from "13836__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting",
-  width: 16,
-  height: 16,
-  scales: [2, 3],
-  hash: "3b34529117c1d3db6d78cba92e0c94bb",
-  name: "member_list_badge_16px",
-  type: "png",
-});
+let tmp2 = !getOwnPropertyDescriptor;
+if (!getOwnPropertyDescriptor) {
+  tmp2 = !_mod13837(
+    () =>
+      7 !==
+      Object.defineProperty(element("div"), "a", {
+        get() {
+          return 7;
+        },
+      }).a,
+  );
+}
+
+export default tmp2;

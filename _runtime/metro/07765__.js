@@ -1,13 +1,34 @@
 // _runtime/metro/07765__.js
-import registerAsset from "01121__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/logos",
-  width: 77.5,
-  height: 30,
-  scales: [2, 3],
-  hash: "eb98ab037be2f7c5d6e15b4152c0f9cb",
-  name: "img_logo_nitro_basic_stacked",
-  type: "png",
-});
+export default {
+  DeprecatedAccessibilityRoles: [
+    "none",
+    "button",
+    "togglebutton",
+    "link",
+    "search",
+    "image",
+    "keyboardkey",
+    "text",
+    "adjustable",
+    "imagebutton",
+    "header",
+    "summary",
+    "alert",
+    "checkbox",
+    "combobox",
+    "menu",
+    "menubar",
+    "menuitem",
+    "progressbar",
+    "radio",
+    "radiogroup",
+    "scrollbar",
+    "spinbutton",
+    "switch",
+    "tab",
+    "tablist",
+    "timer",
+    "toolbar",
+  ],
+};

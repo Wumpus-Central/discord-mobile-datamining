@@ -1,13 +1,4 @@
 // _runtime/metro/13563__.js
-import registerAsset from "01121__.js";
+import _mod13556 from "13556__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/quests/images",
-  width: 435,
-  height: 218,
-  scales: [1],
-  hash: "92f827adadc1f86811fd4e36c86fdf27",
-  name: "nitro_modal_header_background",
-  type: "png",
-});
+export default (arg0, arg1, arg2) => _mod13556(arg0, arg1, arg2) < 0;

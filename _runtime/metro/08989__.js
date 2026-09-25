@@ -1,0 +1,88 @@
+// _runtime/metro/08989__.js
+import _mod17 from "00017__.js";
+
+const require = globalThis.__r;
+
+const Platform = _mod17.Platform;
+const obj = { ios: null, android: null };
+const obj2 = { expo: null, nonExpo: null };
+const items = ["react-native-date-picker is not installed correctly. Make sure you: ", ""];
+const arraySpreadResult = HermesBuiltin.arraySpread(
+  [
+    "1. Have rebuilt your app (with for instance 'npx expo run:ios')",
+    "2. Are not using Expo Go (Expo Go is unsupported). See README for more info: ",
+    "https://github.com/henninghall/react-native-date-picker",
+  ],
+  2,
+);
+items[arraySpreadResult] = "";
+const sum = arraySpreadResult + 1;
+items[sum] = "Please reply in this thread if this solved your issue or not: ";
+const sum1 = sum + 1;
+items[sum1] = "https://github.com/henninghall/react-native-date-picker/issues/404";
+const sum2 = sum1 + 1;
+items[sum2] = "";
+items[sum2 + 1] = "To ignore this warning, add 'global.ignoreDatePickerWarning = true' to the top of your index file.";
+obj2.expo = items.join("\n");
+const items1 = ["react-native-date-picker is not installed correctly. Make sure you: ", ""];
+const arraySpreadResult4 = HermesBuiltin.arraySpread(
+  [
+    "1. Installed pods (by for instance running 'cd ios && pod install')",
+    "2. Rebuilt the app (by for instance 'npx react-native run-ios')",
+  ],
+  2,
+);
+items1[arraySpreadResult4] = "";
+const sum3 = arraySpreadResult4 + 1;
+items1[sum3] = "Please reply in this thread if this solved your issue or not: ";
+const sum4 = sum3 + 1;
+items1[sum4] = "https://github.com/henninghall/react-native-date-picker/issues/404";
+const sum5 = sum4 + 1;
+items1[sum5] = "";
+items1[sum5 + 1] = "To ignore this warning, add 'global.ignoreDatePickerWarning = true' to the top of your index file.";
+obj2.nonExpo = items1.join("\n");
+obj.ios = obj2;
+const obj3 = { expo: null, nonExpo: null };
+const items2 = ["react-native-date-picker is not installed correctly. Make sure you: ", ""];
+const arraySpreadResult5 = HermesBuiltin.arraySpread(
+  [
+    "1. Have rebuilt your app (with for instance 'npx expo run:android')",
+    "2. Are not using Expo Go (Expo Go is unsupported). See README for more info: ",
+    "https://github.com/henninghall/react-native-date-picker",
+  ],
+  2,
+);
+items2[arraySpreadResult5] = "";
+const sum6 = arraySpreadResult5 + 1;
+items2[sum6] = "Please reply in this thread if this solved your issue or not: ";
+const sum7 = sum6 + 1;
+items2[sum7] = "https://github.com/henninghall/react-native-date-picker/issues/404";
+const sum8 = sum7 + 1;
+items2[sum8] = "";
+items2[sum8 + 1] = "To ignore this warning, add 'global.ignoreDatePickerWarning = true' to the top of your index file.";
+obj3.expo = items2.join("\n");
+const items3 = ["react-native-date-picker is not installed correctly. Make sure you: ", ""];
+const arraySpreadResult6 = HermesBuiltin.arraySpread(
+  ["1. Rebuilt the app (by for instance 'npx react-native run-ios')"],
+  2,
+);
+items3[arraySpreadResult6] = "";
+const sum9 = arraySpreadResult6 + 1;
+items3[sum9] = "Please reply in this thread if this solved your issue or not: ";
+const sum10 = sum9 + 1;
+items3[sum10] = "https://github.com/henninghall/react-native-date-picker/issues/404";
+const sum11 = sum10 + 1;
+items3[sum11] = "";
+items3[sum11 + 1] =
+  "To ignore this warning, add 'global.ignoreDatePickerWarning = true' to the top of your index file.";
+obj3.nonExpo = items3.join("\n");
+obj.android = obj3;
+
+export const getInstallationErrorMessage = () => {
+  try {
+    require(dependencyMap[1]).default;
+    return obj.android.expo;
+  } catch (err) {
+    return obj.android.nonExpo;
+  }
+};

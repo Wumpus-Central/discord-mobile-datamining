@@ -3,9 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs",
-  scales: [1],
-  hash: "c9bfed678edd340afd56ab86412945dd",
-  name: "da.messages.c9bfed678edd340afd56ab86412945dd.compiled.messages",
-  type: "jsona",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "7be3110b214c461d7e01ca61fbcd6cc0",
+  name: "ThemeGrayIcon",
+  type: "png",
 });

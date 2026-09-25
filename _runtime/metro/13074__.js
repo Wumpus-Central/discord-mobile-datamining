@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 192.33333333333334,
-  height: 416,
-  scales: [3],
-  hash: "313fd6dabf823cbd5c0b9608bb8b54d4",
-  name: "invite-bg",
+  httpServerLocation: "/assets/images/native/premium/plan_selection",
+  width: 64,
+  height: 64,
+  scales: [1],
+  hash: "7820559d802b687a2589b1c9f32203ab",
+  name: "img_wumpus_nitro_boost",
   type: "png",
 });

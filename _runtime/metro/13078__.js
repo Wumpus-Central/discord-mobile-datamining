@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/hub/native/images",
-  width: 48,
-  height: 48,
-  scales: [1, 2, 3],
-  hash: "2d94b588ee7f10b120a153b69fc9d641",
-  name: "conversation",
+  httpServerLocation: "/assets/images/native/premium/plan_selection",
+  width: 200,
+  height: 90,
+  scales: [1],
+  hash: "d354a91b7a8b3b1cf9e4de447250911f",
+  name: "yearly_upsell_wumpus",
   type: "png",
 });
