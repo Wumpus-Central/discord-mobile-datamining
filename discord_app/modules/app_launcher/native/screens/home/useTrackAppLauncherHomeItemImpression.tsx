@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting(
 
 export const useTrackAppLauncherHomeItemImpression = function useTrackAppLauncherHomeItemImpression() {
   trackAppLauncherItemImpressionOnFirstView =
-    trackAppLauncherItemImpressionOnFirstView(12443).useTrackAppLauncherItemImpressionOnFirstView()
+    trackAppLauncherItemImpressionOnFirstView(11569).useTrackAppLauncherItemImpressionOnFirstView()
       .trackAppLauncherItemImpressionOnFirstView;
   let obj2 = { trackAppLauncherHomeItemImpression: null };
   const items = [trackAppLauncherItemImpressionOnFirstView];

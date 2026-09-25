@@ -12,7 +12,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let closure_9 = fn(16691).MAX_DISPLAYED_UPSELL_GUILDS;
+let closure_9 = fn(15871).MAX_DISPLAYED_UPSELL_GUILDS;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, Consents: closure_11 } = Constants);
 const jsxProd = fn(21);
@@ -74,7 +74,7 @@ let items = [
     id: "hangout",
     title: fn(1115).t.ScXySs,
     description: fn(1115).t.DSCqxM,
-    Icon: fn(5997).BumpingFistsSpotIllustration,
+    Icon: fn(12670).BumpingFistsSpotIllustration,
   },
   ,
 ];
@@ -82,25 +82,25 @@ const obj14 = {
   id: "hangout",
   title: fn(1115).t.ScXySs,
   description: fn(1115).t.DSCqxM,
-  Icon: fn(5997).BumpingFistsSpotIllustration,
+  Icon: fn(12670).BumpingFistsSpotIllustration,
 };
 items[1] = {
   id: "gaming",
   title: fn(1115).t["F+MTAZ"],
   description: fn(1115).t.srNlJw,
-  Icon: fn(5997).ChatControllersSpotIllustration,
+  Icon: fn(15872).ChatControllersSpotIllustration,
 };
 const obj15 = {
   id: "gaming",
   title: fn(1115).t["F+MTAZ"],
   description: fn(1115).t.srNlJw,
-  Icon: fn(5997).ChatControllersSpotIllustration,
+  Icon: fn(15872).ChatControllersSpotIllustration,
 };
 items[2] = {
   id: "hobbies",
   title: fn(1115).t["0Ka6B5"],
   description: fn(1115).t["5oGAp/"],
-  Icon: fn(5997).MiniaturesSpotIllustration,
+  Icon: fn(15874).MiniaturesSpotIllustration,
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_community_upsell/native/GuildUpsellChannelList.tsx");
@@ -140,15 +140,15 @@ export default function GuildUpsellChannelList(style) {
     return items.slice(0, closure_9);
   }, items1);
   const callback = callback2.useCallback((guild_id, game_id) => {
-    memo(callback1[13]).dismissGuild(guild_id);
-    const obj = memo(callback1[13]);
-    data(callback1[14]).track(constants.GAME_COMMUNITY_MULTI_GUILD_UPSELL_CARD_DISMISSED, { game_id, guild_id });
+    memo(callback1[15]).dismissGuild(guild_id);
+    const obj = memo(callback1[15]);
+    data(callback1[16]).track(constants.GAME_COMMUNITY_MULTI_GUILD_UPSELL_CARD_DISMISSED, { game_id, guild_id });
   }, []);
   callback1 = callback2.useCallback(() => {
-    data(callback1[15]).openCreateGuildModal();
+    data(callback1[17]).openCreateGuildModal();
   }, []);
   callback2 = callback2.useCallback(() => {
-    const result = data(callback1[15]).openGuildJoinServerScreen();
+    const result = data(callback1[17]).openGuildJoinServerScreen();
   }, []);
   let items2 = [callback1, callback2, memo.length, tmp];
   const memo1 = callback2.useMemo(() => {
@@ -183,15 +183,15 @@ export default function GuildUpsellChannelList(style) {
         };
         const intl = closure_0(callback1[9]).intl;
         obj4.children = intl.string(Icon.title);
-        const items1 = [closure_2_12(closure_0(callback1[16]).Text, obj4)];
+        const items1 = [closure_2_12(closure_0(callback1[18]).Text, obj4)];
         const obj5 = { variant: "text-sm/medium", color: "text-subtle", children: null };
         const intl2 = closure_0(callback1[9]).intl;
         obj5.children = intl2.string(Icon.description);
-        items1[1] = closure_2_12(closure_0(callback1[16]).Text, obj5);
+        items1[1] = closure_2_12(closure_0(callback1[18]).Text, obj5);
         obj3.children = items1;
         items[1] = closure_2_13(closure_2_6, obj3);
         obj.children = items;
-        return closure_2_13(closure_0(callback1[17]).Card, obj, Icon.id);
+        return closure_2_13(closure_0(callback1[19]).Card, obj, Icon.id);
       }),
     });
     let obj5 = { style: closure_0.buttonGroup, children: null };

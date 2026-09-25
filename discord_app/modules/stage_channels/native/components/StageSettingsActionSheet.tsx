@@ -13,7 +13,7 @@ import StageInstanceStore from "../../StageInstanceStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const STAGE_SETTINGS_SHEET_KEY = fn(5719).STAGE_SETTINGS_SHEET_KEY;
+const STAGE_SETTINGS_SHEET_KEY = fn(5721).STAGE_SETTINGS_SHEET_KEY;
 const Constants = fn(1074);
 ({ ChannelSettingsSections: c10, UserSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
@@ -97,7 +97,7 @@ export default function StageSettingsActionSheet(channelId) {
     const items6 = [tmp14, , , ,];
     const obj9 = { label: null, leading: null, onPress: null };
     const intl3 = tmp2(tmp3[17]).intl;
-    obj9.label = intl3.string(tmp2(tmp3[17]).t.NiTd0e);
+    obj9.label = intl3.string(tmp2(tmp3[17]).t.dsXapM);
     const obj10 = { source: onOpenRTCDebugOverlay(tmp3[21]), color: tmp.icon.color };
     obj9.leading = closure_12(tmp2(tmp3[18]).Icon, obj10);
     obj9.onPress = function onPress() {

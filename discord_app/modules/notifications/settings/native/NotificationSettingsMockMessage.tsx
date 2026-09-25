@@ -45,12 +45,12 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
   const items = [UserStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = require("initialize");
-  let str = sharedValue(4673).getName(stateFromStores);
+  let str = sharedValue(4675).getName(stateFromStores);
   if (str == null) {
     str = "Roka";
   }
   _require = tmp7;
-  const obj2 = sharedValue(4673);
+  const obj2 = sharedValue(4675);
   let num = 0;
   if (notificationSetting.notificationSetting === UserNotificationSettings.NO_MESSAGES) {
     num = 0.8;
@@ -109,7 +109,7 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
     timingStandard: require("timingPresets").timingStandard,
   };
   obj10.children = tmp12(require("native").Avatar, {
-    source: sharedValue(10506),
+    source: sharedValue(9608),
     size: require("native").AvatarSizes.LARGE_48,
   });
   const items4 = [tmp12(View, obj10)];
@@ -125,7 +125,7 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
   const obj14 = { style: null };
   const items7 = [animatedStyle, tmp.overlay];
   obj14.style = items7;
-  items6[1] = tmp12(sharedValue(4561).View, obj14);
+  items6[1] = tmp12(sharedValue(4563).View, obj14);
   obj8.children = items6;
   return closure_8(View, obj8);
 }

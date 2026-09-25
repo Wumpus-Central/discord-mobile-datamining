@@ -13,7 +13,7 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 require = fn;
 let useState = fn(19).useState;
 const View = fn(17).View;
-const Constants = fn(11712);
+const Constants = fn(10892);
 ({
   MODAL_LOCATION_CONTEXT_MOBILE: c10,
   NOFILTR_URL: closure_11,
@@ -113,7 +113,7 @@ export default function TakeActionButtons(senderId) {
               v1 = 1;
               dependencyMap = 1;
               const obj5 = {
-                value: tmp4(8987).submitReportForInappropriateConversationSafetyAlert(
+                value: tmp4(8081).submitReportForInappropriateConversationSafetyAlert(
                   lastChannelMessage,
                   () => {
                     dependencyMap(true);
@@ -123,11 +123,11 @@ export default function TakeActionButtons(senderId) {
                     obj2.IconComponent = closure_0(4788).CircleCheckIcon;
                     obj2.iconColor = iconColor;
                     obj2.containerStyle = toastContainer.toastContainer;
-                    c1(4523).open(obj2);
+                    c1(4525).open(obj2);
                   },
                   () => {
                     const intl = closure_1_0(1115).intl;
-                    closure_1_0(4522).presentFailedToast(intl.string(closure_1_0(1115).t["0YV04/"]));
+                    closure_1_0(4524).presentFailedToast(intl.string(closure_1_0(1115).t["0YV04/"]));
                   },
                 ),
                 done: false,
@@ -141,9 +141,9 @@ export default function TakeActionButtons(senderId) {
             throw value;
           } else if (arg0 !== 2) {
             closure_128_6(false);
-            const result = v1(8754).showReportSuccessToast(closure_128_0, closure_128_1);
-            closure_128_3(tmp4(11719).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
-            const obj = v1(8754);
+            const result = v1(7844).showReportSuccessToast(closure_128_0, closure_128_1);
+            closure_128_3(tmp4(10899).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
+            const obj = v1(7844);
           }
           dependencyMap = 3;
           const obj6 = { value, done: true };

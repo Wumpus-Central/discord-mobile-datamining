@@ -8,10 +8,10 @@ import PremiumUtilsDefault from "../../utils/PremiumUtils.tsx";
 import CheckmarkLargeIcon from "../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
 import Text_Text from "../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../design/components/Button/native/Button.native.tsx";
-import LinearGradientDefault from "../../../_runtime/05285_LinearGradient.js";
+import LinearGradientDefault from "../../../_runtime/05286_LinearGradient.js";
 import PremiumFeatureListDefault from "PremiumFeatureList.tsx";
-import _modDef13906 from "../../../_runtime/metro/13906__.js";
-import _modDef13907 from "../../../_runtime/metro/13907__.js";
+import _modDef13063 from "../../../_runtime/metro/13063__.js";
+import _modDef13064 from "../../../_runtime/metro/13064__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../modules/user_settings/LocaleStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
@@ -19,7 +19,7 @@ import UserStore from "../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4, StyleSheet } = get_ActivityIndicator);
-const Gradients = fn(7762).Gradients;
+const Gradients = fn(6847).Gradients;
 const PremiumConstants = fn(1374);
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_8, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_9 } =
   PremiumConstants);
@@ -138,9 +138,9 @@ export default function PremiumSubscriptionUpsell(arg0) {
     }
     const items3 = [tmp6Result1, ,];
     const obj10 = { style: tmp.upsellFeatures, children: null };
-    const obj11 = { style: tmp.upsellFeatureSubLogo, source: _modDef13906 };
+    const obj11 = { style: tmp.upsellFeatureSubLogo, source: _modDef13063 };
     const items4 = [closure_1_10(React4, obj11), ,];
-    const obj12 = { style: tmp.upsellFeatureLogoTier2, source: _modDef13907 };
+    const obj12 = { style: tmp.upsellFeatureLogoTier2, source: _modDef13064 };
     items4[1] = closure_1_10(React4, obj12);
     const obj13 = { style: tmp.upsellFeatureList, features: null, labelStyle: null, rowStyle: null };
     const obj15 = { IconComponent: null, label: null, color: null };

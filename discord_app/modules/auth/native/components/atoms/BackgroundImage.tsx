@@ -1,6 +1,6 @@
 // discord_app/modules/auth/native/components/atoms/BackgroundImage.tsx
 import shared from "../../../../../design/shared.tsx";
-import _modDef7308 from "../../../../../../_runtime/metro/07308__.js";
+import _modDef6391 from "../../../../../../_runtime/metro/06391__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -31,10 +31,10 @@ export default function BackgroundImage(backgroundImageSource) {
       } else {
         let tmp2 = dependencyMap;
         if (obj2.isThemeDark(closure_2)) {
-          tmp2 = 7307;
+          tmp2 = 6390;
           let tmp4Result = importDefault(tmp2);
         } else {
-          tmp4Result = _modDef7308;
+          tmp4Result = _modDef6391;
         }
         obj2 = shared;
       }

@@ -5,7 +5,7 @@ import native from "../../../../../design/void/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import TwoFASetupModal from "TwoFASetupModal.tsx";
-import _mod15136 from "../../../../../../_runtime/metro/15136__.js";
+import _mod14302 from "../../../../../../_runtime/metro/14302__.js";
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -127,7 +127,7 @@ export default function TwoFASetupSuccess() {
               c5 = 3;
               c6 = 1;
               const obj5 = {
-                value: setRegistering(6926).finishRegisterWebAuthnCredential(
+                value: setRegistering(6009).finishRegisterWebAuthnCredential(
                   intl.string(setRegistering(1115).t["8H5RmH"]),
                   closure_129_0,
                   closure_129_1,
@@ -145,9 +145,9 @@ export default function TwoFASetupSuccess() {
               c6 = 3;
               throw value;
             } else if (arg0 !== 2) {
-              setError(15125).close();
+              setError(14291).close();
               c4 = 0;
-              const obj = setError(15125);
+              const obj = setError(14291);
             }
             c4 = 0;
             c6 = 3;
@@ -184,7 +184,7 @@ export default function TwoFASetupSuccess() {
   const items = [closure_8(closure_6, { style: tmp.flex }), , , , , , ,];
   let obj2 = { style: tmp.flex };
   const tmp4 = _slicedToArray(noop.useState(""), 2);
-  items[1] = closure_8(closure_7, { source: _mod15136, style: tmp.image });
+  items[1] = closure_8(closure_7, { source: _mod14302, style: tmp.image });
   let obj4 = { style: tmp.success, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = util.intl;
   obj4.children = intl.string(util.t.Awk3Gw);

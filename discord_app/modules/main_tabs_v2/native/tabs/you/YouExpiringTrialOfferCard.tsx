@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import DurationsDefault from "../../../../../utils/Durations.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
-import _modDef4416 from "../../../../../../_runtime/metro/04416__.js";
-import LinearGradientDefault from "../../../../../../_runtime/05285_LinearGradient.js";
+import _modDef4418 from "../../../../../../_runtime/metro/04418__.js";
+import LinearGradientDefault from "../../../../../../_runtime/05286_LinearGradient.js";
 import useCountdownDefault from "../../../../../hooks/useCountdown.tsx";
 import NoticeActionCreatorsDefault from "../../../../../actions/NoticeActionCreators.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -18,7 +18,7 @@ const Constants = fn(1074);
   HorizontalGradient: closure_8,
   NoticeTypes: closure_9,
 } = Constants);
-const Gradients = fn(7762).Gradients;
+const Gradients = fn(6847).Gradients;
 let closure_11 = fn(1374).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
@@ -40,18 +40,18 @@ let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/Yo
 export default function YouExpiringTrialOfferCard(navigateToPremium) {
   navigateToPremium = navigateToPremium.navigateToPremium;
   let shouldShowExpiringTrialOfferCard;
-  importDefault = _modDef4416().add(5, "days");
+  importDefault = _modDef4418().add(5, "days");
   const tmp3 = closure_16();
   dependencyMap = tmp3;
-  let obj = _modDef4416();
+  let obj = _modDef4418();
   let items = [shouldShowExpiringTrialOfferCard];
   const stateFromStores = navigateToPremium(563).useStateFromStores(items, () =>
     shouldShowExpiringTrialOfferCard.getNoticeType(),
   );
   let obj2 = navigateToPremium(563);
-  const premiumTrialOffer = navigateToPremium(7777).usePremiumTrialOffer();
+  const premiumTrialOffer = navigateToPremium(6862).usePremiumTrialOffer();
   let num = 0;
-  let obj3 = navigateToPremium(7777);
+  let obj3 = navigateToPremium(6862);
   if (null != premiumTrialOffer) {
     num = 0;
     if (null != premiumTrialOffer.expiresAt) {
@@ -60,7 +60,7 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
     }
   }
   const time = useCountdownDefault(num, closure_15);
-  shouldShowExpiringTrialOfferCard = navigateToPremium(17375).useShouldShowExpiringTrialOfferCard();
+  shouldShowExpiringTrialOfferCard = navigateToPremium(16592).useShouldShowExpiringTrialOfferCard();
   const items1 = [stateFromStores, shouldShowExpiringTrialOfferCard, premiumTrialOffer];
   const effect = stateFromStores.useEffect(() => {
     let tmp = shouldShowExpiringTrialOfferCard;
@@ -99,7 +99,7 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
           intervalCount = subscriptionTrial2.intervalCount;
         }
         obj5.intervalCount = intervalCount;
-        const result = tmp4(4483).formatIntervalDuration(obj5);
+        const result = tmp4(4485).formatIntervalDuration(obj5);
         if (time.days > 0) {
           const intl3 = tmp4(1115).intl;
           const obj6 = { days: time.days, trialPeriod: result, termsUrl: articleURL };
@@ -142,7 +142,7 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
         };
         const size = { width: 16, height: 16, color: tmp3.closeIcon.color };
         obj11.children = closure_12(tmp4(1177).CloseIcon, size);
-        items2[1] = closure_12(tmp4(5427).PressableOpacity, obj11);
+        items2[1] = closure_12(tmp4(5428).PressableOpacity, obj11);
         const obj12 = {
           style: tmp3.primaryCTA,
           text: null,
@@ -181,14 +181,14 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
         };
         items2[2] = closure_12(tmp4(1177).ShinyButton, obj12);
         obj9.children = items2;
-        const tmp4Result2 = tmp4(4483);
+        const tmp4Result2 = tmp4(4485);
         const obj13 = { style: navigateToPremium.style, children: closure_14(closure_13, obj9) };
-        return closure_12(tmp(7540), obj13);
+        return closure_12(tmp(6623), obj13);
       }
     }
     return null;
   } else {
     return null;
   }
-  const tmp4Result = navigateToPremium(17375);
+  const tmp4Result = navigateToPremium(16592);
 }

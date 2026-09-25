@@ -5,10 +5,10 @@ import native2 from "../../../../../discord_common/js/packages/design/native.tsx
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const native = TextArea(1177);
-const shared = TextArea(4680);
-const RedesignCompat = TextArea(5991);
-const TextInput = TextArea(6936);
-const TextArea2 = TextArea(7418);
+const shared = TextArea(4682);
+const RedesignCompat = TextArea(5993);
+const TextInput = TextArea(6019);
+const TextArea2 = TextArea(6501);
 require = fn;
 const KeyboardThemes = fn(1074).KeyboardThemes;
 const jsx = fn(21).jsx;

@@ -385,13 +385,14 @@ export const getChannelOpenedMetadata = function getChannelOpenedMetadata(select
           selectedChannelId,
         );
         obj6.can_send_message = PermissionStore.can(constants4.SEND_MESSAGES, channel);
-        let tmp3 = null;
         if (channel.type === constants3.GUILD_APP) {
-          tmp3 = null;
+          let tmp3 = null;
           if (null != channel.application_id) {
             const obj16 = { application_id: channel.application_id };
             tmp3 = obj16;
           }
+        } else {
+          tmp3 = null;
         }
         const merged1 = Object.assign(tmp3);
         return obj6;

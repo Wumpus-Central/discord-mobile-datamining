@@ -1,5 +1,5 @@
 // discord_common/js/shared/utils/PriceUtils.tsx
-import addDefault from "../../../../_runtime/07569_add.js";
+import addDefault from "../../../../_runtime/06652_add.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 

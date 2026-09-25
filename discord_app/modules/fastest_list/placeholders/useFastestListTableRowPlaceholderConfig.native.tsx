@@ -29,7 +29,7 @@ const obj4 = {
   borderRadius: nativeDefault.radii.md,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
 };
-obj2.placeholderDivider = { backgroundColor: fn(5746).DIVIDER_BACKGROUND };
+obj2.placeholderDivider = { backgroundColor: fn(5748).DIVIDER_BACKGROUND };
 const styles = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting(

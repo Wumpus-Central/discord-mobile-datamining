@@ -4,8 +4,8 @@ import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUt
 import native from "../../../design/void/native.tsx";
 import useRoleIconProps from "../../roles/useRoleIconProps.tsx";
 import RoleIconDefault from "../../roles/native/RoleIcon.tsx";
-import _modDef11905 from "../../../../_runtime/metro/11905__.js";
-import _modDef11906 from "../../../../_runtime/metro/11906__.js";
+import _modDef11048 from "../../../../_runtime/metro/11048__.js";
+import _modDef11049 from "../../../../_runtime/metro/11049__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -68,11 +68,11 @@ export default function OfficialConnectionIcon(arg0) {
   const obj5 = { style: null, children: null };
   const items1 = [style, size1];
   obj5.style = items1;
-  const obj6 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11905, color: roleColor };
+  const obj6 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11048, color: roleColor };
   const items2 = [tmp.verifiedCheck, size1];
   obj6.style = items2;
   const items3 = [timestampProducer(native.Icon, obj6)];
-  const obj7 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11906, color: PRIMARY_630 };
+  const obj7 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11049, color: PRIMARY_630 };
   const items4 = [tmp.verifiedCheck, size1];
   obj7.style = items4;
   items3[1] = timestampProducer(native.Icon, obj7);

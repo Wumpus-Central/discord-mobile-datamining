@@ -64,7 +64,7 @@ export default function UserProfileBadgesEditButton(arg0) {
   closure_5 = tmp8;
   const items2 = [analyticsLocations, tmp8, tmp6[1]];
   onPress = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14991, dependencyMap.paths), "Customize Badges", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14153, dependencyMap.paths), "Customize Badges", {
       analyticsLocations,
     });
     if (closure_5) {

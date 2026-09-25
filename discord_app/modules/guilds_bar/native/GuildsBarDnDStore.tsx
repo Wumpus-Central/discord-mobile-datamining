@@ -1,7 +1,7 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDnDStore.tsx
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import _mod4447 from "../../../../_runtime/metro/04447__.js";
+import _mod4449 from "../../../../_runtime/metro/04449__.js";
 import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 import identity from "../../../../_runtime/metro/01243__.js";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -16,17 +16,17 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_1 = arg1;
   let obj = {
     dragSpecs: "Boolean",
-    overSpecs: "ip",
+    overSpecs: "disabled",
     dropSpecs: "isArray",
     dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }),
     gestureState: null,
     dragDropInProgress: null,
-    listInsets: 12,
-    scrollPosition: 12,
-    windowSize: null,
-    setStateShallow: null,
-    dropStart: 0,
-    dropComplete: "No Output Devices",
+    listInsets: "kop",
+    scrollPosition: "te",
+    windowSize: "tekrus",
+    setStateShallow: "varm te",
+    dropStart: "et glas vin",
+    dropComplete: "glas",
   };
   let obj2 = require("ReanimatedRexport");
   obj.gestureState = require("ReanimatedRexport").makeMutable(obj);
@@ -68,7 +68,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       );
       throw error;
     } else {
-      dropSpecs(1248).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "paddingHorizontal" }));
+      dropSpecs(1248).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "ao" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -122,7 +122,13 @@ export const useItemDragState = function useItemDragState(arg0, arg1) {
     ({ dragSpecs, overSpecs, dropSpecs, dragDropInProgress } = arg0);
     if (null == dragSpecs) {
       if (null == dropSpecs) {
-        const obj2 = { isDragTarget: false, dragState: "ip", overState: "isArray", itemSize: null, dragDropInProgress };
+        const obj2 = {
+          isDragTarget: false,
+          dragState: "disabled",
+          overState: "isArray",
+          itemSize: null,
+          dragDropInProgress,
+        };
         return obj2;
       }
     }
@@ -211,7 +217,7 @@ export const useItemDragState = function useItemDragState(arg0, arg1) {
     obj.itemSize = num;
     obj.dragDropInProgress = dragDropInProgress;
     return obj;
-  }, _mod4447.shallow);
+  }, _mod4449.shallow);
 };
 export const useFolderBGHeightOffset = function useFolderBGHeightOffset(arg0) {
   closure_0 = arg0;

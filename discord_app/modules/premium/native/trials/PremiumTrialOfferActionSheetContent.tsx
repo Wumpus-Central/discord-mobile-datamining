@@ -6,10 +6,10 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import FolderIcon from "../../../../design/components/Icon/native/redesign/generated/FolderIcon.tsx";
 import NitroFileUploadExperiments from "../../experiments/NitroFileUploadExperiments.tsx";
-import native from "../../../../design/assets/native.tsx";
 import NitroWheelIcon from "../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import ChatSmileIcon from "../../../../design/components/Icon/native/redesign/generated/ChatSmileIcon.tsx";
 import UserIcon from "../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx";
+import NitroWumpusFlightRight3dIllustration from "../../../../design/components/mana-assets/native/generated/NitroWumpusFlightRight3dIllustration.native.tsx";
 import PremiumPerksListDefault from "../../../../components_native/premium/PremiumPerksList.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -86,7 +86,10 @@ export default noop.memo(function PremiumTrialOfferActionSheetContent(onConfirm)
   const items1 = [
     hasOwnProperty(View, {
       style: tmp.heroIllustrationContainer,
-      children: hasOwnProperty(native.NitroWumpusFlightRight3dIllustration, { width: 180, height: 180 }),
+      children: hasOwnProperty(NitroWumpusFlightRight3dIllustration.NitroWumpusFlightRight3dIllustration, {
+        width: 180,
+        height: 180,
+      }),
     }),
     ,
     ,
@@ -119,7 +122,10 @@ export default noop.memo(function PremiumTrialOfferActionSheetContent(onConfirm)
   obj12.onPress = onConfirm.onConfirm;
   const obj9 = {
     style: tmp.heroIllustrationContainer,
-    children: hasOwnProperty(native.NitroWumpusFlightRight3dIllustration, { width: 180, height: 180 }),
+    children: hasOwnProperty(NitroWumpusFlightRight3dIllustration.NitroWumpusFlightRight3dIllustration, {
+      width: 180,
+      height: 180,
+    }),
   };
   obj12.icon = hasOwnProperty(NitroWheelIcon.NitroWheelIcon, {
     size: "md",

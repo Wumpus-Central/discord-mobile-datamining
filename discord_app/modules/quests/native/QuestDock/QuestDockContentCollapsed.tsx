@@ -3,8 +3,8 @@ import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestDockMode = fn(5749).QuestDockMode;
-const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(15431).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QuestDockMode = fn(5751).QuestDockMode;
+const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(14599).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
 const createStyles = fn(4829);
 let obj = { questDockContentCollapsed: null };
@@ -30,7 +30,7 @@ export default noop.memo(function QuestDockContentCollapsed(children) {
     tmp = hideOnExpand;
   }
   hideOnExpand = tmp;
-  const activeQuestDockMode = noop.useContext(hideOnExpand(15432).QuestDockGestureContext).activeQuestDockMode;
+  const activeQuestDockMode = noop.useContext(hideOnExpand(14600).QuestDockGestureContext).activeQuestDockMode;
   const tmp2 = closure_7();
   const fn = function l() {
     let num = 1;
@@ -42,9 +42,9 @@ export default noop.memo(function QuestDockContentCollapsed(children) {
     }
     return { opacity: spring.withSpring(num, closure_5) };
   };
-  let obj = hideOnExpand(4561);
+  let obj = hideOnExpand(4563);
   fn.__closure = {
-    withSpring: hideOnExpand(5272).withSpring,
+    withSpring: hideOnExpand(5273).withSpring,
     activeQuestDockMode,
     QuestDockMode,
     hideOnExpand: tmp,
@@ -54,7 +54,7 @@ export default noop.memo(function QuestDockContentCollapsed(children) {
   fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
   const obj2 = {
-    withSpring: hideOnExpand(5272).withSpring,
+    withSpring: hideOnExpand(5273).withSpring,
     activeQuestDockMode,
     QuestDockMode,
     hideOnExpand: tmp,
@@ -76,9 +76,9 @@ export default noop.memo(function QuestDockContentCollapsed(children) {
   C.__closure = { activeQuestDockMode, QuestDockMode, hideOnExpand: tmp };
   C.__workletHash = 14339269503421;
   C.__initData = __initData2;
-  const animatedProps = hideOnExpand(4561).useAnimatedProps(C);
+  const animatedProps = hideOnExpand(4563).useAnimatedProps(C);
   const obj4 = { style: null, animatedProps, children: children.children };
   const items = [tmp2.questDockContentCollapsed, animatedStyle];
   obj4.style = items;
-  return jsx(activeQuestDockMode(7406), { style: null, animatedProps, children: children.children });
+  return jsx(activeQuestDockMode(6489), { style: null, animatedProps, children: children.children });
 });

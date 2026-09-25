@@ -31,7 +31,7 @@ export const PromoSheet = function PromoSheet(arg0) {
         ? (arg0) => {
             const obj = {};
             const merged = Object.assign(arg0);
-            obj.children = closure_2_7(gradientColor(10579).ExpressiveGradient, {
+            obj.children = closure_2_7(gradientColor(9681).ExpressiveGradient, {
               offsetBottom: 0.25,
               color,
               backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
@@ -50,7 +50,7 @@ export const PromoSheet = function PromoSheet(arg0) {
     const obj2 = {};
     const merged1 = Object.assign(graphic);
     obj2.style = tmp2.graphic;
-    let tmp4Result = closure_7(gradientColor(10580).Graphic, obj2);
+    let tmp4Result = closure_7(gradientColor(9682).Graphic, obj2);
   } else {
     tmp4Result = null;
     if (null != illustration) {
@@ -79,9 +79,9 @@ export const PromoSheet = function PromoSheet(arg0) {
   }
   const obj6 = { spacing: 24, children: null };
   items2[1] = tmp4Result2;
-  items1[1] = closure_8(gradientColor(5271).Stack, { children: items2 });
+  items1[1] = closure_8(gradientColor(5272).Stack, { children: items2 });
   items1[2] = actions;
   obj6.children = items1;
-  obj.children = closure_8(gradientColor(5271).Stack, obj6);
-  return closure_7(gradientColor(7483).BottomSheet, obj);
+  obj.children = closure_8(gradientColor(5272).Stack, obj6);
+  return closure_7(gradientColor(6566).BottomSheet, obj);
 };

@@ -5,7 +5,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
-import _modDef9404 from "../../../../_runtime/metro/09404__.js";
+import _modDef8502 from "../../../../_runtime/metro/08502__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -45,7 +45,7 @@ export default function ErrorResult(error) {
   const tmp = closure_7();
   const obj = { bottom: true, style: tmp.container, children: null };
   const obj2 = { style: tmp.inner, children: null };
-  const items = [hasOwnProperty(React3, { source: _modDef9404, style: tmp.image })];
+  const items = [hasOwnProperty(React3, { source: _modDef8502, style: tmp.image })];
   const obj4 = { style: tmp.text, variant: "text-md/medium", children: null };
   if (error == null) {
     const intl = util.intl;

@@ -1,5 +1,5 @@
 // discord_app/modules/freeze/native/NativeFreezeScreens.tsx
-import enableScreens from "../../../../_runtime/05203_enableScreens.js";
+import enableScreens from "../../../../_runtime/05204_enableScreens.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 

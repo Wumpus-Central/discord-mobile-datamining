@@ -68,10 +68,10 @@ export default function ActivitiesPrivateChannelCallTooltip(onClosePress) {
       return obj;
     }
   }
-  const tmp2Result = num(4561);
+  const tmp2Result = num(4563);
   T.__closure = {
-    withRepeat: num(4561).withRepeat,
-    withSequence: num(4561).withSequence,
+    withRepeat: num(4563).withRepeat,
+    withSequence: num(4563).withSequence,
     withTiming: num(4830).withTiming,
     OFFSET: 40,
     translateBounceOffset: num,
@@ -102,7 +102,7 @@ export default function ActivitiesPrivateChannelCallTooltip(onClosePress) {
   const intl3 = tmp2(1115).intl;
   obj7.text = intl3.string(num(1115).t["NX+WJN"]);
   obj7.onPress = onClosePress.onClosePress;
-  obj6.children = jsx(num(5273).Button, { text: null, onPress: null, variant: "secondary", size: "sm", grow: true });
+  obj6.children = jsx(num(5274).Button, { text: null, onPress: null, variant: "secondary", size: "sm", grow: true });
   obj4.children = <View style={tmp.closeButtonWrapper}>{null}</View>;
   obj3.children = jsx(num(1177).Tooltip, {
     containerStyle: tmp.tooltip,

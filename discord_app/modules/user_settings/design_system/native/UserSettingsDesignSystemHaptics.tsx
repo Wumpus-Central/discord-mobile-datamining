@@ -10,7 +10,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 function HapticButton(text) {
   const type = text.type;
-  return closure_3(type(5273).Button, {
+  return closure_3(type(5274).Button, {
     variant: "secondary",
     onPress() {
       return HapticUtils.triggerHapticFeedback(type);
@@ -185,7 +185,7 @@ export default function UserSettingsDesignSystemHaptics() {
     items4.map((description) => {
       ({ label, pattern: closure_0 } = description);
       return closure_3(
-        closure_0(5273).Button,
+        closure_0(5274).Button,
         {
           variant: "secondary",
           onPress() {

@@ -11,8 +11,8 @@ import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import PollsUtils from "../PollsUtils.tsx";
 import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
 import formatPollMessageChatData from "../chat/formatPollMessageChatData.tsx";
-import _modDef12065 from "../../../../_runtime/metro/12065__.js";
-import _modDef12066 from "../../../../_runtime/metro/12066__.js";
+import _modDef11210 from "../../../../_runtime/metro/11210__.js";
+import _modDef11211 from "../../../../_runtime/metro/11211__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -378,9 +378,9 @@ function NoResults() {
   const obj2 = { style: tmp.noResultsImage, source: null };
   const tmp4 = useThemeDefault();
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef12065;
+    let tmp2Result = _modDef11210;
   } else {
-    tmp2Result = _modDef12066;
+    tmp2Result = _modDef11211;
   }
   obj2.source = tmp2Result;
   const items = [closure_1_14(timestampProducer, obj2), ,];

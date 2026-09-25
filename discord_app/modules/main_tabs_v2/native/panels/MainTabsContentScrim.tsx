@@ -30,12 +30,12 @@ export const MainTabsContentScrim = function MainTabsContentScrim(translateX) {
     obj.opacity = ReanimatedRexport.interpolate(value, items, [0, 0.5], ReanimatedRexport.Extrapolation.CLAMP);
     return obj;
   };
-  let obj = translateX(4561);
+  let obj = translateX(4563);
   fn.__closure = {
-    interpolate: translateX(4561).interpolate,
+    interpolate: translateX(4563).interpolate,
     translateX,
     maxWidth,
-    Extrapolation: translateX(4561).Extrapolation,
+    Extrapolation: translateX(4563).Extrapolation,
   };
   fn.__workletHash = 7933670426250;
   fn.__initData = __initData;
@@ -43,5 +43,5 @@ export const MainTabsContentScrim = function MainTabsContentScrim(translateX) {
   const obj3 = { style: null, pointerEvents: "none" };
   let items = [tmp.scrim, animatedStyle];
   obj3.style = items;
-  return jsx(maxWidth(4561).View, { style: null, pointerEvents: "none" });
+  return jsx(maxWidth(4563).View, { style: null, pointerEvents: "none" });
 };

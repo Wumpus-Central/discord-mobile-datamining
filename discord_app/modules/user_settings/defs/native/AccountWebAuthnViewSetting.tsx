@@ -8,13 +8,13 @@ import WebAuthnStore from "../../../webauthn/WebAuthnStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11811);
+const SettingBuilders = fn(10993);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.y7SXYX);
   },
-  parent: fn(8323).MobileUserSettings.ACCOUNT,
+  parent: fn(7412).MobileUserSettings.ACCOUNT,
   usePreNavigationAction: function useAccountCanUseWebAuthnView() {
     return noop.useCallback(() => {
       currentUser = currentUser.getCurrentUser();

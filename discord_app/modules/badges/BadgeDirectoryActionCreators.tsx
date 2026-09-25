@@ -338,7 +338,7 @@ export const fetchBadge = function fetchBadge() {
   }
   return applyArgumentsResult;
 };
-export const fetchBadgeSummary = function fetchBadgeSummary(arg0, id) {
+export const fetchBadgeSummary = function fetchBadgeSummary(GIFTING, id) {
   let tmp = id;
   if (id == null) {
     const currentUser = UserStore.getCurrentUser();
@@ -352,7 +352,7 @@ export const fetchBadgeSummary = function fetchBadgeSummary(arg0, id) {
     return Promise.resolve();
   } else {
     const _HermesInternal = HermesInternal;
-    const combined = "" + tmp + "#" + arg0;
+    const combined = "" + tmp + "#" + GIFTING;
     value = map.get(combined);
     if (null != value) {
       return value;
@@ -378,7 +378,7 @@ export const fetchBadgeSummary = function fetchBadgeSummary(arg0, id) {
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        })(combined, arg0, tmp).finally(() => {
+        })(combined, GIFTING, tmp).finally(() => {
           if (map.get(combined) === cleanupPromise) {
             map.delete(combined);
           }

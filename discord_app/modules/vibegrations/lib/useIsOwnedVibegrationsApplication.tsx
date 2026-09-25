@@ -9,7 +9,7 @@ import VibegrationsProjectStore from "../stores/VibegrationsProjectStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const isProjectOwner = fn(9389).isProjectOwner;
+const isProjectOwner = fn(8487).isProjectOwner;
 let closure_6 = new BackoffDefault(30000, 300000);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/lib/useIsOwnedVibegrationsApplication.tsx");

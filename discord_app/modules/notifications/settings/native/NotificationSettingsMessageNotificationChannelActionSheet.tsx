@@ -51,5 +51,5 @@ export default function NotificationSettingsMessageNotificationChannelActionShee
     obj4.label = NotificationLabel.notifications(message_notifications);
     const result = NotificationSettingsModalActionCreatorsDefault.updateChannelOverrideSettings(obj4);
   };
-  return jsx(unread(10508), { context: "channel", value: notification, allMessagesSubLabel: null, onChange: null });
+  return jsx(unread(9610), { context: "channel", value: notification, allMessagesSubLabel: null, onChange: null });
 }

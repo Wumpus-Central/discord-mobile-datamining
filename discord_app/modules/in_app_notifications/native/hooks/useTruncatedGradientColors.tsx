@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/in_app_notifications/native/h
 
 export default function useTruncatedGradientColors() {
   const tmp = closure_4();
-  token = token(4526).useToken(nativeDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT);
+  token = token(4528).useToken(nativeDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT);
   const obj2 = { gradientColors: null, gradientStyles: tmp.gradient };
   let items = [token];
   obj2.gradientColors = useMemo(() => {

@@ -4,7 +4,7 @@ import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
 import _modDef2486 from "../../../parent_tools/FamilyCenter.messages.js";
 import _modDef2780 from "../../SafetyFlows.messages.js";
 import useRefreshLinkCodeOnExpiryDefault from "../../../parent_tools/hooks/useRefreshLinkCodeOnExpiry.tsx";
-import _modDef15269 from "../../../../../_runtime/metro/15269__.js";
+import _modDef14435 from "../../../../../_runtime/metro/14435__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
@@ -405,7 +405,7 @@ export default function PendingRequestList(arg0) {
   const obj6 = { style: tmp.dividerLine };
   const obj8 = { style: tmp.dividerLine };
   const items3 = [
-    c7(c5, { style: tmp.inviteIconContainer, children: c7(require("native").PlaneIllocon, { size: 32 }) }),
+    c7(c5, { style: tmp.inviteIconContainer, children: c7(require("PlaneIllocon").PlaneIllocon, { size: 32 }) }),
     ,
   ];
   const obj11 = { style: tmp.details, children: null };

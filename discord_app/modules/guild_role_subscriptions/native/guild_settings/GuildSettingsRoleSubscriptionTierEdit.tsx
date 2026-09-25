@@ -18,7 +18,7 @@ import EditStateContextProvider from "../../edit_state/EditStateContextProvider.
 import GuildRoleSubscriptionTierBenefitsModal from "../components/GuildRoleSubscriptionTierBenefitsModal.tsx";
 import GuildRoleSubscriptionTierDesignModal from "../components/GuildRoleSubscriptionTierDesignModal.tsx";
 import GuildRoleSubscriptionTierDetailsModal from "../components/GuildRoleSubscriptionTierDetailsModal.tsx";
-import _modDef18338 from "../../../../../_runtime/metro/18338__.js";
+import _modDef17569 from "../../../../../_runtime/metro/17569__.js";
 import ActionableNoticeDefault from "../components/ActionableNotice.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -41,7 +41,7 @@ function ArchiveOrDeleteTierSection() {
   const obj7 = { variant: "destructive", grow: true, icon: null, onPress: null, disabled: null, text: null };
   const obj4 = { style: tmp.actionHeader, children: buttonText };
   const obj5 = { style: tmp.actionDescription, variant: "text-sm/medium", color: "text-default", children: descriptionText };
-  obj7.icon = closure_1_14(native.Icon, { size: native.Icon.Sizes.SMALL, disableColor: true, source: _modDef18338 });
+  obj7.icon = closure_1_14(native.Icon, { size: native.Icon.Sizes.SMALL, disableColor: true, source: _modDef17569 });
   obj7.onPress = handleArchiveOrDelete;
   let tmp9 = !allowSelfRemoveMonetization;
   if (allowSelfRemoveMonetization) {
@@ -84,8 +84,8 @@ function TabContent(selectedTab) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const FetchState = fn(4457).FetchState;
-const GuildRoleSubscriptionsTierScenes = fn(15554).GuildRoleSubscriptionsTierScenes;
+const FetchState = fn(4459).FetchState;
+const GuildRoleSubscriptionsTierScenes = fn(14724).GuildRoleSubscriptionsTierScenes;
 const GuildSettingsSections = fn(1074).GuildSettingsSections;
 const ContentDismissActionType = fn(2041).ContentDismissActionType;
 const jsxProd = fn(21);

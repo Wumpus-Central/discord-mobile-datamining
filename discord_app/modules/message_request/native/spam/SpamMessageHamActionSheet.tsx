@@ -5,7 +5,7 @@ import util from "../../../../intl/index.native.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import _modDef5902 from "../../../../../_runtime/metro/05902__.js";
+import _modDef5904 from "../../../../../_runtime/metro/05904__.js";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import ActionSheetCloseButton from "../../../../design/components/Sheet/native/ActionSheetCloseButton.native.tsx";
@@ -52,7 +52,7 @@ export default function SpamMessageRequestHamActionSheet(arg0) {
       const obj2 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
       const intl = recipientId(1115).intl;
       obj2.content = intl.string(recipientId(1115).t["EDYbS+"]);
-      obj2.icon = _modDef5902;
+      obj2.icon = _modDef5904;
       ToastActionCreatorsDefault.open(obj2);
     },
     onAcceptSuccess() {

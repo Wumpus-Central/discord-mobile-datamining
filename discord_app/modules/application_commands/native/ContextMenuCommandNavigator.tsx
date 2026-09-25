@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const NativeStackNavigator = fn(8245);
+const NativeStackNavigator = fn(7334);
 const Screen = NativeStackNavigator.createNativeStackNavigator();
 const createStyles = fn(4829);
 let obj3 = { container: { flex: 1 }, content: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND } };
@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting("modules/application_commands/native/C
 export default function ContextMenuCommandNavigator() {
   const tmp = closure_8();
   _require = tmp;
-  const layoutEffect = noop.useLayoutEffect(() => closure_0(7805).trackAppUIViewed(), []);
+  const layoutEffect = noop.useLayoutEffect(() => closure_0(6890).trackAppUIViewed(), []);
   importDefault = require("Navigator").useAccessibilityNativeStackOptions();
   const rect = useSafeAreaInsetsDefault();
   let obj2 = { style: null, children: null };
@@ -59,7 +59,7 @@ export default function ContextMenuCommandNavigator() {
   obj5.title = intl.string(require("util").t.PHjkRE);
   obj4.options = obj5;
   obj4.getComponent = function getComponent() {
-    return closure_0(17441).default;
+    return closure_0(16658).default;
   };
   const items1 = [
     closure_5(Screen, obj4),
@@ -74,7 +74,7 @@ export default function ContextMenuCommandNavigator() {
         return { title };
       },
       getComponent() {
-        return closure_0(17443).default;
+        return closure_0(16660).default;
       },
     }),
   ];

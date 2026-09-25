@@ -95,11 +95,11 @@ let closure_6 = async function _unfurlEmbedUrl() {
           const obj = { value: value.body, done: true };
           return obj;
         }
-      } catch (tmp23) {
-        closure_3 = tmp23;
+      } catch (tmp19) {
+        closure_3 = tmp19;
         if (tmp4 === c4) {
           c6 = tmp2;
-          throw tmp23;
+          throw tmp19;
         } else {
           c5 = tmp;
         }

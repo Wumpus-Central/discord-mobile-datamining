@@ -37,23 +37,23 @@ let result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumG
 export default function PremiumGiftSuccessBody(giftCodeRecord) {
   giftCodeRecord = giftCodeRecord.giftCodeRecord;
   const tmp = closure_11();
-  const nativeGiftContext = giftCodeRecord(11047).useNativeGiftContext();
+  const nativeGiftContext = giftCodeRecord(10151).useNativeGiftContext();
   ({ giftStyle, premiumType, planInterval } = nativeGiftContext);
-  let obj = giftCodeRecord(11047);
-  const giftCodeURL = giftCodeRecord(5081).getGiftCodeURL(giftCodeRecord.code);
+  let obj = giftCodeRecord(10151);
+  const giftCodeURL = giftCodeRecord(5082).getGiftCodeURL(giftCodeRecord.code);
   if (null != giftCodeRecord.giftStyle) {
     giftStyle = giftCodeRecord.giftStyle;
   }
   if (null != giftCodeRecord.subscriptionPlanId) {
     let subscriptionPlanId = giftCodeRecord.subscriptionPlanId;
   } else {
-    subscriptionPlanId = tmp2(4483).getPlanIdForPremiumType(premiumType, planInterval);
-    const tmp2Result = tmp2(4483);
+    subscriptionPlanId = tmp2(4485).getPlanIdForPremiumType(premiumType, planInterval);
+    const tmp2Result = tmp2(4485);
   }
-  let obj2 = giftCodeRecord(5081);
+  let obj2 = giftCodeRecord(5082);
   const tmp6 = giftCodeURL;
-  const tierDisplayNameByPlanId = giftCodeURL(4483).getTierDisplayNameByPlanId(subscriptionPlanId);
-  const obj4 = giftCodeURL(4483);
+  const tierDisplayNameByPlanId = giftCodeURL(4485).getTierDisplayNameByPlanId(subscriptionPlanId);
+  const obj4 = giftCodeURL(4485);
   const items = [giftCodeRecord, giftCodeURL];
   let obj3 = { children: null };
   const callback = noop.useCallback(() => {
@@ -64,7 +64,7 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
     ClipboardUtils.copy(giftCodeURL);
     const result = ToastUtils.presentCopiedToClipboard();
   }, items);
-  obj3.children = closure_8(giftCodeURL(11180), { giftStyle });
+  obj3.children = closure_8(giftCodeURL(10278), { giftStyle });
   const items1 = [closure_8(View, obj3), , , ,];
   const obj6 = { style: tmp.title, variant: "heading-lg/bold", children: null };
   const intl = tmp2(1115).intl;
@@ -85,8 +85,8 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
   const intl3 = tmp2(1115).intl;
   obj10.children = intl3.string(giftCodeRecord(1115).t["qS+yMo"]);
   const items2 = [closure_8(giftCodeRecord(4825).Text, obj10)];
-  obj5 = giftCodeURL(4483);
-  items2[1] = closure_8(giftCodeRecord(9264).InputButton, {
+  obj5 = giftCodeURL(4485);
+  items2[1] = closure_8(giftCodeRecord(8362).InputButton, {
     text: giftCodeURL,
     icon: tmp6(4776),
     iconPosition: "end",

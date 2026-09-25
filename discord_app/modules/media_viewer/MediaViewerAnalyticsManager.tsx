@@ -21,13 +21,13 @@ let obj = {
   CONTEXT_MENU_OPENED: "number_context_menu_opened",
 };
 let obj2 = {
-  guildId: "ip",
+  guildId: "disabled",
   channelId: "isArray",
   channelType: "isArray",
   numMediaItems: "Array",
-  hasMediaOptions: "category",
-  source: "HermesInternal",
-  incrementableActions: "Array",
+  hasMediaOptions: "flex",
+  source: null,
+  incrementableActions: null,
 };
 const values = Object.values(obj);
 obj2.incrementableActions = Object.fromEntries(

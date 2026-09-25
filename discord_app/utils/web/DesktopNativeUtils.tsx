@@ -253,9 +253,13 @@ function normalizeRunningGame(id, arg1) {
   return obj;
 }
 function backwardCompatSend(APP_ASYNC_INDEX_TSX_LOADED) {
+  const substr = [...arguments].slice();
   if (obj.isDesktop()) {
     try {
-      obj2.sendIPC(APP_ASYNC_INDEX_TSX_LOADED);
+      const sendIPC = obj2.sendIPC;
+      const items = [APP_ASYNC_INDEX_TSX_LOADED];
+      HermesBuiltin.arraySpread(substr, 1);
+      HermesBuiltin.apply(items, obj2);
     } catch (err) {}
   }
   obj = require("PlatformUtils");
@@ -651,6 +655,18 @@ obj2.setSystemTrayIcon = function setSystemTrayIcon(arg0) {
     this.sendIPC(IPCEvents.IPCEvents.SYSTEM_TRAY_SET_ICON, arg0);
   }
 };
+obj2.setSystemTrayApplications = function setSystemTrayApplications(arg0) {
+  if (require("PlatformUtils").isPlatformEmbedded) {
+    const self = this;
+    this.sendIPC(IPCEvents.IPCEvents.SYSTEM_TRAY_SET_APPLICATIONS, arg0);
+  }
+};
+obj2.setSystemTrayStates = function setSystemTrayStates(arg0) {
+  backwardCompatSend(IPCEvents.IPCEvents.SYSTEM_TRAY_SET_STATES, arg0);
+};
+obj2.setSystemTrayStrings = function setSystemTrayStrings(arg0) {
+  backwardCompatSend(IPCEvents.IPCEvents.SYSTEM_TRAY_SET_STRINGS, arg0);
+};
 obj2.setThumbarButtons = function setThumbarButtons(arg0) {
   if (require("PlatformUtils").isPlatformEmbedded) {
     const thumbar = DiscordNative.thumbar;
@@ -725,12 +741,6 @@ obj2.bounceDock = function bounceDock(arg0) {
     }
   }
 };
-obj2.setSystemTrayApplications = function setSystemTrayApplications(arg0) {
-  if (require("PlatformUtils").isPlatformEmbedded) {
-    const self = this;
-    this.sendIPC(IPCEvents.IPCEvents.SYSTEM_TRAY_SET_APPLICATIONS, arg0);
-  }
-};
 Object.defineProperty(obj2, "architecture", {
   get: () => {
     let str = "";
@@ -749,6 +759,21 @@ Object.defineProperty(obj2, "releaseChannel", {
       str = app.getReleaseChannel();
     }
     return str;
+  },
+  set: undefined,
+});
+Object.defineProperty(obj2, "friendlyReleaseName", {
+  get: function () {
+    const releaseChannel = this.releaseChannel;
+    if ("development" === releaseChannel) {
+      return "Discord Development";
+    } else if ("canary" === releaseChannel) {
+      return "Discord Canary";
+    } else if ("ptb" === releaseChannel) {
+      return "Discord PTB";
+    } else {
+      return "Discord";
+    }
   },
   set: undefined,
 });
@@ -822,7 +847,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
             return obj5;
           } else {
             closure_129_0 = value;
-            closure_129_1 = closure_0(5873).decideFileExtension(closure_130_0, closure_130_1);
+            closure_129_1 = closure_0(5875).decideFileExtension(closure_130_0, closure_130_1);
             if (null != closure_129_1) {
               if (set2.has(closure_129_1)) {
                 closure_0 = closure_130_1;
@@ -858,7 +883,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
             }
             const _HermesInternal = HermesInternal;
             combined = "image." + closure_129_1;
-            const obj8 = closure_0(5873);
+            const obj8 = closure_0(5875);
           }
         } else if (arg0 === 1) {
           c4 = 3;
@@ -1017,7 +1042,7 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
                 }
                 const str3 = str2.replace(closure_1_21, "");
               } else if (!str.includes(".")) {
-                const decideFileExtensionResult = unknown(5873).decideFileExtension(tmp54, closure_1);
+                const decideFileExtensionResult = unknown(5875).decideFileExtension(tmp54, closure_1);
                 dependencyMap = decideFileExtensionResult;
                 png = dependencyMap;
                 if (dependencyMap == null) {
@@ -1025,7 +1050,7 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
                 }
                 const _HermesInternal = HermesInternal;
                 closure_133_0 = "" + str + "." + png;
-                const obj9 = unknown(5873);
+                const obj9 = unknown(5875);
               }
               tmp54 = getImageData(tmp54);
               c9 = 1;
@@ -2635,6 +2660,70 @@ obj2.debugLogCs2GsiPayload = function debugLogCs2GsiPayload(arg0) {
     let result;
     if (cs2Gsi != null) {
       result = cs2Gsi.debugLogCs2GsiPayload(arg0);
+    }
+    if (result == null) {
+      result = Promise.resolve();
+    }
+    let resolved = result;
+  } else {
+    resolved = Promise.resolve();
+  }
+  return resolved;
+};
+obj2.readDotaGsiToken = function readDotaGsiToken(arg0) {
+  if (obj.isWindows()) {
+    const dotaGsi = DiscordNative.dotaGsi;
+    let dotaGsiToken;
+    if (dotaGsi != null) {
+      dotaGsiToken = dotaGsi.readDotaGsiToken(arg0);
+    }
+    if (dotaGsiToken == null) {
+      dotaGsiToken = Promise.resolve(null);
+    }
+    let resolved = dotaGsiToken;
+  } else {
+    resolved = Promise.resolve(null);
+  }
+  return resolved;
+};
+obj2.writeDotaGsiConfig = function writeDotaGsiConfig(arg0, arg1, arg2) {
+  if (obj.isWindows()) {
+    const dotaGsi = DiscordNative.dotaGsi;
+    let writeDotaGsiConfigResult;
+    if (dotaGsi != null) {
+      writeDotaGsiConfigResult = dotaGsi.writeDotaGsiConfig(arg0, arg1, arg2);
+    }
+    if (writeDotaGsiConfigResult == null) {
+      writeDotaGsiConfigResult = Promise.resolve(false);
+    }
+    let resolved = writeDotaGsiConfigResult;
+  } else {
+    resolved = Promise.resolve(false);
+  }
+  return resolved;
+};
+obj2.deleteDotaGsiConfig = function deleteDotaGsiConfig(arg0) {
+  if (obj.isWindows()) {
+    const dotaGsi = DiscordNative.dotaGsi;
+    let deleteDotaGsiConfigResult;
+    if (dotaGsi != null) {
+      deleteDotaGsiConfigResult = dotaGsi.deleteDotaGsiConfig(arg0);
+    }
+    if (deleteDotaGsiConfigResult == null) {
+      deleteDotaGsiConfigResult = Promise.resolve(false);
+    }
+    let resolved = deleteDotaGsiConfigResult;
+  } else {
+    resolved = Promise.resolve(false);
+  }
+  return resolved;
+};
+obj2.debugLogDotaGsiPayload = function debugLogDotaGsiPayload(arg0) {
+  if (obj.isWindows()) {
+    const dotaGsi = DiscordNative.dotaGsi;
+    let result;
+    if (dotaGsi != null) {
+      result = dotaGsi.debugLogDotaGsiPayload(arg0);
     }
     if (result == null) {
       result = Promise.resolve();

@@ -1,7 +1,7 @@
 // discord_app/modules/guilds_bar/native/GuildsBarGeoRestrictedBadge.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef12606 from "../../../../_runtime/metro/12606__.js";
+import _modDef11732 from "../../../../_runtime/metro/11732__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const View = fn(17).View;
@@ -23,7 +23,7 @@ let size = {
   overflow: "hidden",
 };
 obj.badgeImageContainer = size;
-const size1 = { height: 16, width: 16, opacity: fn(5746).DARK_1_LIGHT_08, tintColor: nativeDefault.colors.BLACK };
+const size1 = { height: 16, width: 16, opacity: fn(5748).DARK_1_LIGHT_08, tintColor: nativeDefault.colors.BLACK };
 obj.badgeImage = size1;
 let closure_4 = createStyles.createStyles(obj);
 size = fn(2);
@@ -34,8 +34,8 @@ export default noop.memo(function GuildsBarGeoRestrictedBadge(style) {
   const obj = { style: null, pointerEvents: "none", children: null };
   const items = [tmp.badgeImageContainer, style.style];
   obj.style = items;
-  const obj2 = { source: _modDef12606, style: tmp.badgeImage };
-  obj.children = jsx(FastImageDefault, { source: _modDef12606, style: tmp.badgeImage });
+  const obj2 = { source: _modDef11732, style: tmp.badgeImage };
+  obj.children = jsx(FastImageDefault, { source: _modDef11732, style: tmp.badgeImage });
   return (
     <View style={null} pointerEvents="none">
       {null}

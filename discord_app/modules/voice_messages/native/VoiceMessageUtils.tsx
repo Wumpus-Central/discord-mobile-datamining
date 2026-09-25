@@ -267,7 +267,7 @@ let closure_28 = async function _stopAndCacheAudioRecording() {
     }
   }
 };
-const VoiceMessagesUIStore = fn(12302);
+const VoiceMessagesUIStore = fn(11428);
 ({
   addVoiceMessageWave: hasOwnProperty,
   resetVoiceMessageState: metroRequire,
@@ -278,7 +278,7 @@ const VoiceMessagesUIStore = fn(12302);
   useVoiceMessagesUIStore: closure_11,
   VoiceMessageRecordingStatus: closure_12,
 } = VoiceMessagesUIStore);
-const VoiceMessageConstants = fn(12303);
+const VoiceMessageConstants = fn(11429);
 ({
   WAVEFORM_WAVE_MAX_VALUE: map1,
   VOICE_RECORDING_MIN_DB: closure_14,

@@ -19,8 +19,7 @@ function buildQosTokenFromDerivedData(derivedQosData, isActive) {
   }
   const obj = { isActive };
   const obj2 = ClientProvidedQosData.create({ isActive });
-  const QosToken = qos_token.QosToken;
-  return ProtoUtils.protoToB64(qos_token.QosToken, QosToken.create({ clientProvided: obj2, derived }));
+  return ProtoUtils.protoToB64(qos_token.QosToken, { clientProvided: obj2, derived });
 }
 const logger = new LoggerDefault("QOS");
 const size = fn(2);

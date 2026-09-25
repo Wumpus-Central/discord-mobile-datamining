@@ -3,9 +3,9 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06985_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06068_LegacyBaseButton.js";
 import useParticipantTileTapGestureDefault from "../useParticipantTileTapGesture.tsx";
-import _modDef9765 from "../../../../../_runtime/metro/09765__.js";
+import _modDef8863 from "../../../../../_runtime/metro/08863__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -52,7 +52,7 @@ export default function ScreenShareTile(onSingleTap) {
     ,
   ];
   const obj3 = { style: tmp.liveContainer, children: timestampProducer(native.LiveTag, {}) };
-  items[1] = timestampProducer(React4, { source: _modDef9765, style: tmp.image, resizeMode: "contain" });
+  items[1] = timestampProducer(React4, { source: _modDef8863, style: tmp.image, resizeMode: "contain" });
   const obj5 = { style: tmp.label, variant: "text-xs/bold", color: "text-overlay-light", children: null };
   const intl = util.intl;
   obj5.children = intl.string(util.t.G84gtR);

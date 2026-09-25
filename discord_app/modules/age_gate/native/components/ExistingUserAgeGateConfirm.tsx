@@ -77,8 +77,8 @@ export default function ExistingUserAgeGateConfirm(age) {
     }
     return applyArgumentsResult;
   };
-  obj7.children = closure_8(onConfirm(5273).Button, obj8);
+  obj7.children = closure_8(onConfirm(5274).Button, obj8);
   items[2] = closure_8(View, obj7);
   obj2.children = items;
-  return closure_9(onConfirm(7456).SafeAreaPaddingView, obj2);
+  return closure_9(onConfirm(6539).SafeAreaPaddingView, obj2);
 }

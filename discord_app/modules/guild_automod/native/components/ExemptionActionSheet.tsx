@@ -1,7 +1,7 @@
 // discord_app/modules/guild_automod/native/components/ExemptionActionSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import fuzzysearchDefault from "../../../../../_runtime/05822_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../_runtime/05824_fuzzysearch.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 

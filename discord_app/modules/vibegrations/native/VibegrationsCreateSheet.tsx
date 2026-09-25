@@ -16,7 +16,7 @@ const VibegrationsTemplateWizardSheetDefault = VibegrationsTemplateWizardSheet;
 
 require = fn;
 const View = fn(17).View;
-const VibegrationsConnectionStore = fn(13457);
+const VibegrationsConnectionStore = fn(12607);
 ({
   ensureConnection: closure_7,
   sendUserMessage: closure_8,

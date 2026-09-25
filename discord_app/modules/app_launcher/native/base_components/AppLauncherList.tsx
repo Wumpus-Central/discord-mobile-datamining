@@ -3,7 +3,7 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import mergeProps from "../../../../design/utils/native/mergeProps.native.tsx";
 import SearchField from "../../../../design/components/TextField/native/SearchField.native.tsx";
-import _modDef12510 from "../../../../../_runtime/metro/12510__.js";
+import _modDef11636 from "../../../../../_runtime/metro/11636__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -36,7 +36,7 @@ export const AppLauncherList = noop.forwardRef((contentContainerStyle, arg1) => 
     gestureRef: obj2.simultaneousHandlers,
     animatedProps: obj2.animatedProps,
   } = appLauncherFlashListProps);
-  return jsx(appLauncherFlashListProps(12444), {
+  return jsx(appLauncherFlashListProps(11570), {
     contentContainerStyle: null,
     scrollIndicatorInsets: { bottom },
     ref: memo,
@@ -47,8 +47,8 @@ export const AppLauncherListEmptyState = function AppLauncherListEmptyState() {
   const obj = {
     style: tmp.emptyState,
     imageStyle: tmp.emptyStateImage,
-    lightSource: _modDef12510,
-    darkSource: _modDef12510,
+    lightSource: _modDef11636,
+    darkSource: _modDef11636,
     title: null,
     body: null,
   };
@@ -59,8 +59,8 @@ export const AppLauncherListEmptyState = function AppLauncherListEmptyState() {
   return jsx(native.EmptyState, {
     style: tmp.emptyState,
     imageStyle: tmp.emptyStateImage,
-    lightSource: _modDef12510,
-    darkSource: _modDef12510,
+    lightSource: _modDef11636,
+    darkSource: _modDef11636,
     title: null,
     body: null,
   });

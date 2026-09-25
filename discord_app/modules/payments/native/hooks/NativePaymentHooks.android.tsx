@@ -17,8 +17,8 @@ function notSupportedReturnVoid() {
 function useNativeIAPPayments() {
   return closure_8;
 }
-function useGoogleSkuIds(arg0, arg1) {
-  _require = arg0;
+function useGoogleSkuIds(memo1, arg1) {
+  _require = memo1;
   closure_1 = arg1;
   const items = [IAPStore];
   isFetchingGoogleSkus = require("initialize").useStateFromStores(items, () =>
@@ -27,7 +27,7 @@ function useGoogleSkuIds(arg0, arg1) {
   closure_3 = noop.useRef([]);
   const fetchError = _slicedToArray(noop.useState(null), 2);
   _slicedToArray = fetchError[1];
-  const items1 = [arg1, isFetchingGoogleSkus, arg0];
+  const items1 = [arg1, isFetchingGoogleSkus, memo1];
   const effect = noop.useEffect(() => {
     closure_0 = async function _fetch() {
       if (c5 === 2) {
@@ -69,7 +69,7 @@ function useGoogleSkuIds(arg0, arg1) {
                       ref = 1;
                       v2 = 2;
                       c5 = 1;
-                      const obj7 = { value: closure_2_0(9562).loadInAppSkus(differenceResult), done: false };
+                      const obj7 = { value: memo1(8660).loadInAppSkus(differenceResult), done: false };
                       return obj7;
                     }
                   }
@@ -85,8 +85,8 @@ function useGoogleSkuIds(arg0, arg1) {
               closure_128_1 = closure_2;
               logger.error("Unable to fetch product IDs from google play store: ", closure_128_1);
               v2("Unable to fetch");
-              const result = closure_2_0(4498).captureBillingException(closure_128_1);
-              const obj3 = closure_2_0(4498);
+              const result = memo1(4500).captureBillingException(closure_128_1);
+              const obj3 = memo1(4500);
             } else if (arg0 === 1) {
               c5 = 3;
               throw value;
@@ -126,10 +126,10 @@ function useGoogleSkuIds(arg0, arg1) {
   }, items1);
   return { isFetchingGoogleSkus, fetchError: fetchError[0] };
 }
-function useResubscribeSubscription(arg0) {
+function useResubscribeSubscription(id) {
   return { resubscribeSubscription: notSupported, nativePaymentsConnected: closure_8.nativePaymentsConnected };
 }
-function useCancelSubscription(arg0, arg1) {
+function useCancelSubscription(id, isACOM) {
   return { cancelSubscription: notSupported, nativePaymentsConnected: closure_8.nativePaymentsConnected };
 }
 function useCreateSubscription(arg0) {
@@ -144,7 +144,37 @@ function useCreateSubscription(arg0) {
   }
 }
 function useMobileStoreFront() {
-  return null;
+  let items = [IAPStore];
+  const tmp = _slicedToArray(
+    first(504).useStateFromStoresArray(items, () => {
+      const items = [authStore.getUserCountry()];
+      const products = authStore.getProducts();
+      let currencyCode;
+      if (products != null) {
+        first = products[0];
+        if (first != null) {
+          currencyCode = first.currencyCode;
+        }
+      }
+      items[1] = currencyCode;
+      return items;
+    }),
+    2,
+  );
+  first = tmp[0];
+  closure_1 = tmp3;
+  const items1 = [first, tmp[1]];
+  return noop.useMemo(() => {
+    let tmp2 = null;
+    if (null != first) {
+      tmp2 = null;
+      if (null != closure_1) {
+        const obj = { country: tmp, currency: tmp3 };
+        tmp2 = obj;
+      }
+    }
+    return tmp2;
+  }, items1);
 }
 let closure_7 = new LoggerDefault("NativePaymentHooks.android.tsx");
 let closure_8 = { nativePaymentsConnected: true, storeFront: null, canMakePayments: true };

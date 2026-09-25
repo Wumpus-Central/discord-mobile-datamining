@@ -10,7 +10,7 @@ import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/05285_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05286_LinearGradient.js";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import ChevronSmallRightIcon from "../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
 import CollectiblesProductUtils from "../utils/CollectiblesProductUtils.tsx";
@@ -156,7 +156,7 @@ function ExpressiveNitroUpsell(arg0) {
       }
       if (closure_1_2) {
         const obj = ActionSheetActionCreatorsDefault;
-        const tmp9 = asyncRequireImpl(13551, dependencyMap.paths);
+        const tmp9 = asyncRequireImpl(12703, dependencyMap.paths);
         const obj2 = { analyticsLocations: null, title: null, description: null };
         const items = [AnalyticsLocationDefault.COLLECTIBLES_SHOP_DETAILS_MODAL];
         obj2.analyticsLocations = items;

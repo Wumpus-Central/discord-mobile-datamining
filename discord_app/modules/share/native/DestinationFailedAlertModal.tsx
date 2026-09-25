@@ -98,11 +98,11 @@ function FailedChannelRow(channel) {
   const obj = channel(504);
   const tmp3 = useChannelNameDefault(channel);
   const items1 = [
-    closure_10(channel(11356).GuildIconWithChannelType, {
+    closure_10(channel(10454).GuildIconWithChannelType, {
       "aria-label": "",
       guild: stateFromStores,
       channel,
-      size: channel(11356).GuildIconWithChannelTypeSizes.SMALL_32,
+      size: channel(10454).GuildIconWithChannelTypeSizes.SMALL_32,
     }),
     closure_10(channel(4825).Text, {
       style: tmp.label,

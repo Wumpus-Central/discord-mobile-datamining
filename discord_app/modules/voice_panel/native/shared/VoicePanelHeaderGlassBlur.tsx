@@ -53,8 +53,8 @@ export default noop.memo(function HeaderGlassBlur(shown) {
   fn.__closure = { shown, IS_ANDROID };
   fn.__workletHash = 3451055086565;
   fn.__initData = __initData;
-  const animatedStyle = shown(4561).useAnimatedStyle(fn);
-  let obj = shown(4561);
+  const animatedStyle = shown(4563).useAnimatedStyle(fn);
+  let obj = shown(4563);
   const obj2 = { shown, IS_ANDROID };
   const tmp2 = shown;
   const fn2 = function p() {
@@ -64,8 +64,8 @@ export default noop.memo(function HeaderGlassBlur(shown) {
     }
     return { blurAmount: spring.withSpring(num) };
   };
-  const obj3 = shown(4561);
-  fn2.__closure = { withSpring: shown(5272).withSpring, shown };
+  const obj3 = shown(4563);
+  fn2.__closure = { withSpring: shown(5273).withSpring, shown };
   fn2.__workletHash = 5642055202507;
   fn2.__initData = __initData2;
   const animatedProps = obj3.useAnimatedProps(fn2);
@@ -73,7 +73,7 @@ export default noop.memo(function HeaderGlassBlur(shown) {
   const obj5 = { style: null, children: null };
   const items = [tmp.blur, style, animatedStyle];
   obj5.style = items;
-  const obj4 = { withSpring: shown(5272).withSpring, shown };
+  const obj4 = { withSpring: shown(5273).withSpring, shown };
   const tmp9 = ReanimatedNativeViewDefault;
   const tmp11 = VisualEffectViewAnimatedDefault;
   let str = "light";
@@ -85,13 +85,13 @@ export default noop.memo(function HeaderGlassBlur(shown) {
   obj7.style = items1;
   const items2 = [closure_4(tmp11, obj7)];
   const obj8 = { style: tmp.strokeContainer, children: null };
-  obj6 = shown(4680);
+  obj6 = shown(4682);
   const items3 = [closure_4(NativeViewDefault, { style: tmp.stroke })];
   const obj9 = { style: tmp.stroke };
   const tmp6Result = NativeViewDefault;
   const tmp6Result2 = NativeViewDefault;
-  const tmp2Result = tmp2(4680);
-  items3[1] = closure_4(tmp6Result2, { style: tmp2(4680).isThemeDark(tmp7) ? tmp.strokeAlt : tmp.strokeAltLight });
+  const tmp2Result = tmp2(4682);
+  items3[1] = closure_4(tmp6Result2, { style: tmp2(4682).isThemeDark(tmp7) ? tmp.strokeAlt : tmp.strokeAltLight });
   obj8.children = items3;
   items2[1] = closure_5(tmp6Result, obj8);
   obj5.children = items2;

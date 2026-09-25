@@ -1,22 +1,23 @@
 // discord_app/modules/premium/gifting/GiftingBadgesUtils.tsx
-import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import util from "../../../intl/index.native.tsx";
-import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import _modDef2582 from "GiftingBadge.messages.js";
-import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-import BadgeDirectoryStore from "../../badges/BadgeDirectoryStore.tsx";
+import BadgeId from "../../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
+import BadgeDirectoryActionCreators from "../../badges/BadgeDirectoryActionCreators.tsx";
 import GiftingBadgeExperiment2 from "experiments/GiftingBadgeExperiment.tsx";
 import GiftingBadgeDesktopExperiment2 from "experiments/GiftingBadgeDesktopExperiment.tsx";
 import GiftingBadgeComplexArtExperiment2 from "experiments/GiftingBadgeComplexArtExperiment.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import BadgeDirectoryStore from "../../badges/BadgeDirectoryStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-let closure_3 = BadgeDirectoryStore.getSingleRequirementThreshold;
+require = fn;
+let closure_5 = fn(7630).getSingleRequirementThreshold;
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/gifting/GiftingBadgesUtils.tsx");
 
 export const getGiftingBadgeAccessibilityLabel = function getGiftingBadgeAccessibilityLabel(name) {
   let str;
-  const count = closure_3(name);
+  const count = closure_5(name);
   if (name != null) {
     str = name.name;
   }
@@ -31,8 +32,8 @@ export const getGiftingBadgeProgressPercent = function getGiftingBadgeProgressPe
   currentTier,
   nextTier,
 ) {
-  const tmp = closure_3(currentTier);
-  const tmp2 = closure_3(nextTier);
+  const tmp = closure_5(currentTier);
+  const tmp2 = closure_5(nextTier);
   if (null != nextTier) {
     let num6 = 100;
     if (tmp2 > 0) {
@@ -98,26 +99,38 @@ export const getGiftingBadgeTierIconUrl = function getGiftingBadgeTierIconUrl(
   }
   return simple_icon_url;
 };
-export const useIsEligibleToShowGiftingBadgeCoachmark = function useIsEligibleToShowGiftingBadgeCoachmark(location) {
-  const _location = location.location;
-  const GiftingBadgeExperiment = GiftingBadgeExperiment2.GiftingBadgeExperiment;
-  const enabled = GiftingBadgeExperiment.useConfig({ location: _location }).enabled;
-  const GiftingBadgeDesktopExperiment = GiftingBadgeDesktopExperiment2.GiftingBadgeDesktopExperiment;
+export const useGiftingBadgeCoachmarkVariant = function useGiftingBadgeCoachmarkVariant(platform) {
+  ({ location: _location, enabled } = platform);
+  if (enabled === undefined) {
+    enabled = true;
+  }
+  let stateFromStores;
+  closure_1 = undefined;
+  const GiftingBadgeExperiment = stateFromStores(10192).GiftingBadgeExperiment;
+  const enabled2 = GiftingBadgeExperiment.useConfig({ location: _location }).enabled;
+  const GiftingBadgeDesktopExperiment = stateFromStores(10197).GiftingBadgeDesktopExperiment;
   let str = "-DISABLED";
-  if ("web" === location.platform) {
+  let str2 = "-DISABLED";
+  if ("web" === platform.platform) {
+    str2 = "";
+  }
+  let enabled3 = GiftingBadgeDesktopExperiment.useConfig({ location: "" + _location + str2 }).enabled;
+  let tmp4 = enabled2;
+  if ("web" === platform.platform) {
+    if (enabled3) {
+      enabled3 = enabled2;
+    }
+    tmp4 = enabled3;
+  }
+  const GiftingBadgeCoachmarkAudienceExperiment = tmp(10199).GiftingBadgeCoachmarkAudienceExperiment;
+  if (tmp4) {
     str = "";
   }
-  let enabled2 = GiftingBadgeDesktopExperiment.useConfig({ location: "" + _location + str }).enabled;
-  let tmp4 = enabled;
-  if ("web" === location.platform) {
-    if (enabled2) {
-      enabled2 = enabled;
-    }
-    tmp4 = enabled2;
-  }
-  const obj = { location: "" + _location + str };
+  let obj = { location: "" + _location + str2 };
+  const enabled4 = GiftingBadgeCoachmarkAudienceExperiment.useConfig({ location: "" + _location + str }).enabled;
+  let obj2 = { location: "" + _location + str };
   const items = [UserStore];
-  const stateFromStores = initialize.useStateFromStores(items, () => {
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;
     if (currentUser != null) {
@@ -128,15 +141,72 @@ export const useIsEligibleToShowGiftingBadgeCoachmark = function useIsEligibleTo
     }
     return flag;
   });
-  const tmpResult = initialize;
-  const result = DismissibleContentUnsafeUtils.useIsDismissibleContentDismissed_UNSAFE(
-    dismissible_content.DismissibleContent.NEW_GIFTING_BADGES_COACHMARK,
+  const tmpResult = stateFromStores(504);
+  const result = stateFromStores(4651).useIsDismissibleContentDismissed_UNSAFE(
+    tmp(2028).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK,
   );
-  if (tmp4) {
-    tmp4 = stateFromStores;
-  }
+  const tmpResult3 = stateFromStores(4651);
+  const items1 = [BadgeDirectoryStore];
+  const stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () =>
+    badgeById.getBadgeById(stateFromStores(dependencyMap[12]).BadgeId.GIFTING),
+  );
   if (tmp4) {
     tmp4 = !result;
   }
-  return tmp4;
+  if (tmp4) {
+    tmp4 = enabled;
+  }
+  let tmp8 = tmp4;
+  if (tmp4) {
+    tmp8 = !enabled4;
+  }
+  if (tmp8) {
+    tmp8 = stateFromStores;
+  }
+  stateFromStores = tmp8;
+  let tmp9 = tmp4;
+  if (tmp4) {
+    tmp9 = enabled4;
+  }
+  if (tmp9) {
+    tmp9 = null == stateFromStores1;
+  }
+  closure_1 = tmp9;
+  const items2 = [tmp8, tmp9];
+  const effect = noop.useEffect(() => {
+    if (closure_1) {
+      const badgeSummary = BadgeDirectoryActionCreators.fetchBadgeSummary(BadgeId.BadgeId.GIFTING);
+    } else if (stateFromStores) {
+      const badge = BadgeDirectoryActionCreators.fetchBadge(BadgeId.BadgeId.GIFTING);
+    }
+  }, items2);
+  if (enabled4) {
+    let tmp12 = null;
+    if (tmp4) {
+      tmp12 = null;
+      if (null != stateFromStores1) {
+        tmp12 = null;
+        if (!stateFromStores1.hidden) {
+          if (stateFromStores) {
+            tmp12 = "noCount";
+          } else {
+            tmp12 = null;
+          }
+        }
+      }
+    }
+    let str3 = tmp12;
+  } else {
+    str3 = null;
+    if (tmp4) {
+      str3 = null;
+      if (stateFromStores) {
+        str3 = null;
+        if (null != stateFromStores1) {
+          str3 = "count";
+        }
+      }
+    }
+  }
+  return str3;
 };

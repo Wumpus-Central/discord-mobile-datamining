@@ -343,9 +343,9 @@ let closure_10 = createStyles.createStyles((arg0, arg1, arg2) => {
   obj2.dragHandle = { marginEnd: 8 };
   return obj2;
 });
-TableRow.Icon = fn(5916).TableRowIcon;
-TableRow.Arrow = fn(5917).TableRowArrow;
-TableRow.TrailingText = fn(5919).TableRowTrailingText;
+TableRow.Icon = fn(5918).TableRowIcon;
+TableRow.Arrow = fn(5919).TableRowArrow;
+TableRow.TrailingText = fn(5921).TableRowTrailingText;
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TableRow/native/TableRow.native.tsx");
 

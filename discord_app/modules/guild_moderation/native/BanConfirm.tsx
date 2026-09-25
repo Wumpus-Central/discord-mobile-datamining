@@ -194,7 +194,7 @@ export default noop.memo(function BanConfirm(arg0) {
       const obj6 = { style: tmp.iconLabelBlock, children: null };
       const obj7 = {
         style: tmp.iconStyles,
-        source: require("../../../../_runtime/metro/12195__.js"),
+        source: require("../../../../_runtime/metro/11317__.js"),
         resizeMode: "contain",
       };
       const items4 = [closure_10(ref, obj7), ,];

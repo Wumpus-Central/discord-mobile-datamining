@@ -1,6 +1,6 @@
 // discord_app/modules/guild_role_subscriptions/native/premium_channel/GuildRoleSubscriptionGatedChannelIcon.tsx
 import native from "../../../../design/void/native.tsx";
-import _modDef10647 from "../../../../../_runtime/metro/10647__.js";
+import _modDef9751 from "../../../../../_runtime/metro/09751__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -12,9 +12,9 @@ const result = size.fileFinishedImporting(
 
 export default function SubscriptionGatedChannelIcon(arg0) {
   ({ locked, isInMainTabsExperiment } = arg0);
-  const obj = { source: _modDef10647, size: null, disableColor: null };
+  const obj = { source: _modDef9751, size: null, disableColor: null };
   const Sizes = native.Icon.Sizes;
   obj.size = isInMainTabsExperiment ? Sizes.EXTRA_SMALL_10 : Sizes.SMALL;
   obj.disableColor = false !== locked;
-  return jsx(native.Icon, { source: _modDef10647, size: null, disableColor: null });
+  return jsx(native.Icon, { source: _modDef9751, size: null, disableColor: null });
 }

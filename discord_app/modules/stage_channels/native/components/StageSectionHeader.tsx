@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import _modDef7491 from "../../../../../_runtime/metro/07491__.js";
+import _modDef6574 from "../../../../../_runtime/metro/06574__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -51,7 +51,7 @@ export default function StageSectionHeader(collapsed) {
     obj2.transform = items;
     return obj2;
   };
-  let obj = collapsed(4561);
+  let obj = collapsed(4563);
   const tmp2 = collapsed;
   fn.__closure = { withTiming: collapsed(4830).withTiming, collapsed };
   fn.__workletHash = 13855092771739;
@@ -77,7 +77,7 @@ export default function StageSectionHeader(collapsed) {
   const obj7 = { style: tmp.collapseButton, children: null };
   const obj8 = { style: animatedStyle, children: null };
   let obj2 = { withTiming: collapsed(4830).withTiming, collapsed };
-  obj8.children = closure_6(tmp2(1177).Icon, { source: _modDef7491, style: tmp.collapseIcon });
+  obj8.children = closure_6(tmp2(1177).Icon, { source: _modDef6574, style: tmp.collapseIcon });
   obj7.children = closure_6(ReanimatedRexportDefault.View, obj8);
   items1[2] = closure_6(closure_4, obj7);
   obj4.children = items1;

@@ -2,7 +2,6 @@
 import FavoritesUtils from "../../favorites/FavoritesUtils.tsx";
 import BoostingActionCreators from "../../../actions/BoostingActionCreators.tsx";
 import GameServerExperiment2 from "../../game_server/GameServerExperiment.tsx";
-import FileUpload250MbPowerupExperiment2 from "experiments/FileUpload250MbPowerupExperiment.tsx";
 import ServerThemeUserExperiment from "experiments/ServerThemeUserExperiment.tsx";
 import ServerThemeExperiment2 from "experiments/ServerThemeExperiment.tsx";
 import ServerThemeApexShadowExperiment2 from "experiments/ServerThemeApexShadowExperiment.tsx";
@@ -48,15 +47,12 @@ prototype["handleSelectedGuildChange"] = function handleSelectedGuildChange() {
         const GameServerExperiment = GameServerExperiment2.GameServerExperiment;
         const obj2 = { guildId: guild.id, location: "GuildPowerupsManager" };
         GameServerExperiment.trackExposure(obj2);
-        const FileUpload250MbPowerupExperiment = FileUpload250MbPowerupExperiment2.FileUpload250MbPowerupExperiment;
-        const obj3 = { guildId: guild.id, location: "GuildPowerupsManager" };
-        FileUpload250MbPowerupExperiment.trackExposure(obj3);
         const ServerThemeExperiment = ServerThemeExperiment2.ServerThemeExperiment;
-        const obj4 = { guildId: guild.id, location: "GuildPowerupsManager" };
-        ServerThemeExperiment.trackExposure(obj4);
+        const obj3 = { guildId: guild.id, location: "GuildPowerupsManager" };
+        ServerThemeExperiment.trackExposure(obj3);
         const ServerThemeApexShadowExperiment = ServerThemeApexShadowExperiment2.ServerThemeApexShadowExperiment;
-        const obj5 = { guildId: guild.id, location: "GuildPowerupsManager" };
-        const config = ServerThemeApexShadowExperiment.getConfig(obj5);
+        const obj4 = { guildId: guild.id, location: "GuildPowerupsManager" };
+        const config = ServerThemeApexShadowExperiment.getConfig(obj4);
         if (tmp9Result.getGameServerEnabled(guild.id, "GuildPowerupsManager")) {
           const GameServerPricingExperiment = GameServerPricingExperiment2.GameServerPricingExperiment;
           const obj = { guildId: guild.id, location: "GuildPowerupsManager" };

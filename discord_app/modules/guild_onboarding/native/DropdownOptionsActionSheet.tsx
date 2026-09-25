@@ -5,7 +5,7 @@ import native from "../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import BottomSheetModal from "../../../../_runtime/06957_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/06040_BottomSheetModal.js";
 import BottomSheetTitleHeader from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";

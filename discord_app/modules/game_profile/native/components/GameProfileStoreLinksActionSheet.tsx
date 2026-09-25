@@ -6,7 +6,7 @@ import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/06957_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/06040_BottomSheetModal.js";
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import useOpenExternalUrlFromGameProfileDefault from "../../hooks/useOpenExternalUrlFromGameProfile.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";

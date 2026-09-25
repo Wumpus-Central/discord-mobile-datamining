@@ -132,8 +132,7 @@ export const useRoleIconPropsForPreview = function useRoleIconPropsForPreview(gu
           name: null,
           roleId: null,
           size: "Array",
-          unicodeEmoji:
-            -9129477745926550000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+          unicodeEmoji: 1358955203,
         };
         ({ name: obj2.name, id: obj2.roleId } = stateFromStores);
         obj3.unicodeEmoji = roleIconData.unicodeEmoji;

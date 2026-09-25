@@ -59,8 +59,8 @@ let obj4 = {
 };
 obj2.list = { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingBottom: nativeDefault.space.PX_4 };
 let size = {
-  width: fn(12473).BACK_BUTTON_SIZE,
-  height: fn(12473).BACK_BUTTON_SIZE,
+  width: fn(11599).BACK_BUTTON_SIZE,
+  height: fn(11599).BACK_BUTTON_SIZE,
   alignItems: "center",
   justifyContent: "center",
 };

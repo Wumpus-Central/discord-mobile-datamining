@@ -148,7 +148,7 @@ const memoResult = noop.memo((user) => {
   const intl2 = user(1115).intl;
   obj4.text = intl2.string(user(1115).t["g33r/P"]);
   obj4.onPress = callback;
-  obj3.children = closure_7(user(5273).Button, obj4);
+  obj3.children = closure_7(user(5274).Button, obj4);
   obj2.children = closure_7(View, obj3);
   return closure_7(EmptyState, obj2);
 });

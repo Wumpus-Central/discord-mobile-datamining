@@ -65,7 +65,7 @@ function renderCategoryItem(muted) {
     Icon = trailingAction.Icon;
   }
   if (Icon == null) {
-    Icon = trailingAction(13101).PlusMediumIcon;
+    Icon = trailingAction(12251).PlusMediumIcon;
   }
   if (null == trailingAction) {
     const items1 = [tmp34Result, , ,];
@@ -121,7 +121,7 @@ function renderCategoryItem(muted) {
         obj7.onLongPress = onLongPress;
         obj7.style = items;
         obj7.children = tmp18Result;
-        let tmp28Result = closure_11(trailingAction(5427).PressableHighlight, obj7);
+        let tmp28Result = closure_11(trailingAction(5428).PressableHighlight, obj7);
       } else {
         const obj8 = { accessibilityRole: "header", style: items, children: tmp18Result };
         tmp28Result = closure_11(View, obj8);
@@ -157,14 +157,14 @@ function renderCategoryItem(muted) {
     const obj11 = { size: "xxs", color: flag ? colors.ICON_MUTED : colors.TEXT_SUBTLE };
     colors = closure_11(Icon, obj11);
     obj10.children = colors;
-    obj10 = closure_11(trailingAction(5427).PressableOpacity, obj10);
+    obj10 = closure_11(trailingAction(5428).PressableOpacity, obj10);
     obj9.children = obj10;
     closure_11(View, obj9);
   }
   const obj = { paddingLeft: 16, marginTop: num, marginBottom };
 }
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(10464);
+const RedesignChannelListConstants = fn(9566);
 ({
   CATEGORY_MARGIN_BOTTOM: closure_8,
   CATEGORY_MARGIN_TOP: closure_9,
@@ -295,7 +295,7 @@ export const CategoryChannel = function CategoryChannel(channel) {
   const colors = nativeDefault.colors;
   const obj7 = {};
   const merged1 = Object.assign(merged);
-  obj7.icon = closure_11(channel(11506).ChevronSmallDownIcon, {
+  obj7.icon = closure_11(channel(10604).ChevronSmallDownIcon, {
     size: "xxs",
     color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE,
     style: collapsed2 ? obj3 : obj4,
@@ -328,7 +328,7 @@ export const RecentlyActiveCategory = function RecentlyActiveCategory(guildId) {
   const colors = stateFromStores(576).colors;
   obj3 = {};
   const merged1 = Object.assign(merged);
-  obj3.icon = closure_11(tmp2(11506).ChevronSmallDownIcon, {
+  obj3.icon = closure_11(tmp2(10604).ChevronSmallDownIcon, {
     size: "xxs",
     color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE,
     style: collapsed ? obj3 : obj4,

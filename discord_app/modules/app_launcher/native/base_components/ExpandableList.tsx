@@ -5,7 +5,7 @@ import usePreviousDefault from "../../../../hooks/usePrevious.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const ReanimatedRexportDefault = tmp4(4561);
+const ReanimatedRexportDefault = tmp4(4563);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -69,10 +69,10 @@ export default function ExpandableList(onExpand) {
   if (null == showsExpandCTAOverride) {
     showsExpandCTAOverride = items.length > bound;
   }
-  sharedValue = memo1(4561).useSharedValue(0);
-  let obj3 = memo1(4561);
-  sharedValue1 = memo1(4561).useSharedValue(0);
-  const obj4 = memo1(4561);
+  sharedValue = memo1(4563).useSharedValue(0);
+  let obj3 = memo1(4563);
+  sharedValue1 = memo1(4563).useSharedValue(0);
+  const obj4 = memo1(4563);
   class C {
     constructor() {
       if (closure_5) {
@@ -94,12 +94,12 @@ export default function ExpandableList(onExpand) {
   C.__closure = { expanded: first, collapsedListHeight: sharedValue, remainingListHeight: sharedValue1 };
   C.__workletHash = 17033418452229;
   C.__initData = sharedValue1;
-  derivedValue = memo1(4561).useDerivedValue(C);
+  derivedValue = memo1(4563).useDerivedValue(C);
   const items3 = [items, bound];
   const memo = noop.useMemo(() => memo1.slice(0, bound), items3);
   const items4 = [items, bound];
   memo1 = noop.useMemo(() => memo1.slice(bound, memo1.length), items4);
-  const obj5 = memo1(4561);
+  const obj5 = memo1(4563);
   class A {
     constructor() {
       if (0 !== closure_9.get()) {
@@ -117,7 +117,7 @@ export default function ExpandableList(onExpand) {
       return obj;
     }
   }
-  const obj6 = memo1(4561);
+  const obj6 = memo1(4563);
   A.__closure = {
     collapsedListHeight: sharedValue,
     withTiming: memo1(4830).withTiming,
@@ -211,7 +211,7 @@ export default function ExpandableList(onExpand) {
         tmp4(obj);
       }
     };
-    obj12 = tmp16(tmp9(5910).TableRow, obj12);
+    obj12 = tmp16(tmp9(5912).TableRow, obj12);
     obj14.children = obj12;
     tmp16(tmp17, obj14);
   }

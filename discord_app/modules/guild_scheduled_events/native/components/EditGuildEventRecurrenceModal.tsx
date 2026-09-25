@@ -106,13 +106,13 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
   const tmp3 = useEventExceptionDefault(recurrenceId, guildEvent.id);
   dependencyMap = tmp3;
   const tmp2 = useSafeAreaInsetsDefault();
-  const baseScheduleForRecurrence = guildEvent(9837).getBaseScheduleForRecurrence(recurrenceId, guildEvent);
-  let obj = guildEvent(9837);
-  const scheduleForRecurrenceWithException = guildEvent(9837).getScheduleForRecurrenceWithException(
+  const baseScheduleForRecurrence = guildEvent(8935).getBaseScheduleForRecurrence(recurrenceId, guildEvent);
+  let obj = guildEvent(8935);
+  const scheduleForRecurrenceWithException = guildEvent(8935).getScheduleForRecurrenceWithException(
     baseScheduleForRecurrence,
     tmp3,
   );
-  let obj2 = guildEvent(9837);
+  let obj2 = guildEvent(8935);
   [c5, c6] = noop.useState(scheduleForRecurrenceWithException);
   [first, closure_8] = noop.useState(null);
   const tmp9 = _slicedToArray(
@@ -149,10 +149,10 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
     return applyArgumentsResult;
   };
   obj3.disabled = null != first;
-  const action = closure_8(guildEvent(5273).Button, obj3);
+  const action = closure_8(guildEvent(5274).Button, obj3);
   let obj5 = {
     style: null,
-    children: closure_8(guildEvent(7333).Navigator, {
+    children: closure_8(guildEvent(6416).Navigator, {
       screens: {
         [closure_11.TIME]: {
           title: "",

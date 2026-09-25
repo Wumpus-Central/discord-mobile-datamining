@@ -4,14 +4,14 @@ import LinkingDefault from "../../lib/native/Linking.tsx";
 import Text_Text from "../../design/components/Text/native/Text.tsx";
 import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
 import components_Button_Button from "../../design/components/Button/native/Button.native.tsx";
-import _modDef9693 from "../../../_runtime/metro/09693__.js";
+import _modDef8791 from "../../../_runtime/metro/08791__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
 function ConfirmActivityGateContent(activityName) {
   const tmp = closure_8();
   const obj = { style: tmp.alertContainer, children: null };
-  const items = [timestampProducer(React3, { source: _modDef9693, style: tmp.announcementBirb }), , ,];
+  const items = [timestampProducer(React3, { source: _modDef8791, style: tmp.announcementBirb }), , ,];
   const obj3 = { style: tmp.alertEyebrowText, variant: "eyebrow", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["06YebE"]);

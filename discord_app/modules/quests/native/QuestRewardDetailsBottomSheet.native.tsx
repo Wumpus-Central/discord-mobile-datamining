@@ -3,9 +3,9 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import QuestRewardTypes from "../../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx";
-import QuestRewardUtils from "../utils/QuestRewardUtils.tsx";
-import hooks_QuestHooks from "../hooks/QuestHooks.tsx";
 import QuestUtils from "QuestUtils.native.tsx";
+import hooks_QuestHooks from "../hooks/QuestHooks.tsx";
+import QuestRewardUtils from "../utils/QuestRewardUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -33,10 +33,10 @@ function QuestRewardDetailsBottomSheet(quest) {
   const stateFromStores = quest(504).useStateFromStores(items2, () => currentUser.getCurrentUser());
   let obj = quest(504);
   const tmp4 = quest;
-  const defaultRewardName = quest(11639).getDefaultRewardName(quest.config, stateFromStores);
+  const defaultRewardName = quest(10681).getDefaultRewardName(quest.config, stateFromStores);
   const obj3 = { direction: "vertical", spacing: memo(576).space.PX_16, style: tmp.wrapper, children: null };
   const obj4 = { align: "center", direction: "horizontal", spacing: memo(576).space.PX_16, children: null };
-  const items3 = [closure_6(memo(12111), { quest, height: 56, width: 56, withAnimation: true })];
+  const items3 = [closure_6(memo(10732), { quest, height: 56, width: 56, withAnimation: true })];
   const obj5 = { direction: "vertical", spacing: memo(576).space.PX_4, style: tmp.rewardDetailsCopy, children: null };
   const obj6 = { variant: "eyebrow", color: "text-subtle", children: null };
   let intl = quest(1115).intl;
@@ -46,9 +46,9 @@ function QuestRewardDetailsBottomSheet(quest) {
     closure_6(quest(4825).Text, { variant: "heading-lg/semibold", color: "text-strong", children: defaultRewardName }),
   ];
   obj5.children = items4;
-  items3[1] = closure_7(quest(5271).Stack, obj5);
+  items3[1] = closure_7(quest(5272).Stack, obj5);
   obj4.children = items3;
-  const items5 = [closure_7(quest(5271).Stack, obj4)];
+  const items5 = [closure_7(quest(5272).Stack, obj4)];
   let tmp9Result = null != memo1;
   if (tmp9Result) {
     const obj7 = { children: null };
@@ -59,10 +59,10 @@ function QuestRewardDetailsBottomSheet(quest) {
     obj7.children = items6;
     tmp9Result = closure_7(closure_8, obj7);
   }
-  const obj2 = quest(11639);
+  const obj2 = quest(10681);
   items5[1] = tmp9Result;
   obj3.children = items5;
-  return closure_6(quest(7483).BottomSheet, { startExpanded: true, children: closure_7(quest(5271).Stack, obj3) });
+  return closure_6(quest(6566).BottomSheet, { startExpanded: true, children: closure_7(quest(5272).Stack, obj3) });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);

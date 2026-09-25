@@ -2,9 +2,9 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import router_utils from "../routing/router_utils.tsx";
 import util from "../../intl/index.native.tsx";
-import _modDef4416 from "../../../_runtime/metro/04416__.js";
+import _modDef4418 from "../../../_runtime/metro/04418__.js";
 import useChannelName from "../channel/useChannelName.tsx";
-import fuzzysearchDefault from "../../../_runtime/05822_fuzzysearch.js";
+import fuzzysearchDefault from "../../../_runtime/05824_fuzzysearch.js";
 import ReadStateActionCreators from "../../actions/ReadStateActionCreators.tsx";
 import ChannelListState from "../guild_sidebar/ChannelListState.tsx";
 import RecentChannelsActionCreators from "../recent_channels/RecentChannelsActionCreators.tsx";
@@ -25,7 +25,7 @@ const Constants = fn(1074);
 ({ Routes: closure_9, ChannelTypes: c10 } = Constants);
 const ChannelConstants = fn(2051);
 ({ ChannelFlags: closure_11, StaticChannelRoute: closure_12 } = ChannelConstants);
-const ChannelListGuildActionRow = fn(7864).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(6949).ChannelListGuildActionRow;
 const ReadStateTypes = fn(5011).ReadStateTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/opt_in_channels/OptInChannelsUtils.tsx");
@@ -238,7 +238,7 @@ export const useChannelBrowserChannelCount = function useChannelBrowserChannelCo
 };
 export const getActiveAgoTimestamp = function getActiveAgoTimestamp(id) {
   const intl = util.intl;
-  const tmp = _modDef4416;
+  const tmp = _modDef4418;
   let lastMessageIdResult = ReadStateStore.lastMessageId(id);
   if (lastMessageIdResult == null) {
     lastMessageIdResult = id;

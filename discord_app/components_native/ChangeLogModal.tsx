@@ -9,8 +9,8 @@ import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate.tsx";
 import openMediaModal from "../modules/media_viewer/native/components/openMediaModal.tsx";
 import common_VideoDefault from "common/Video.tsx";
 import TouchableHitBoxDefault from "../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import _modDef10744 from "../../_runtime/metro/10744__.js";
-import _modDef15900 from "../../_runtime/metro/15900__.js";
+import _modDef9848 from "../../_runtime/metro/09848__.js";
+import _modDef15070 from "../../_runtime/metro/15070__.js";
 import noop from "../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -194,7 +194,7 @@ ListItem.prototype["render"] = function render() {
   obj.children = items;
   return React6(View, obj);
 };
-ListItem.contextType = fn(4535).ThemeContext;
+ListItem.contextType = fn(4537).ThemeContext;
 const PureComponent2 = noop.PureComponent;
 class ChangeLog extends PureComponent2 {
   constructor() {
@@ -308,7 +308,7 @@ prototype["renderVideo"] = function renderVideo() {
         },
         useLocalHTML: true,
       };
-      const items = [closure_7(_modDef15900, obj4)];
+      const items = [closure_7(_modDef15070, obj4)];
       let tmp6Result = null;
       if (!tmp2) {
         const obj5 = { style: tmp.videoOverlay, source: null };
@@ -358,14 +358,14 @@ prototype["renderVideo"] = function renderVideo() {
     const obj10 = {
       accessibilityLabel: "Play Video",
       accessibilityRole: "button",
-      source: _modDef10744,
+      source: _modDef9848,
       onPress: self.playVideo,
       style: tmp.playButton,
       iconSize: tmp18(1177).IconSizes.CUSTOM,
       iconStyle: tmp.playIcon,
     };
     obj9.children = closure_7(TouchableHitBoxDefault, obj10);
-    tmp12Result = closure_7(tmp18(5427).PressableOpacity, obj9);
+    tmp12Result = closure_7(tmp18(5428).PressableOpacity, obj9);
     const tmp15Result = TouchableHitBoxDefault;
   }
   items1[1] = tmp12Result;
@@ -380,7 +380,7 @@ prototype["render"] = function render() {
   obj.onScroll = this.handleScroll;
   return React5(ChangeLogStandardTemplateDefault, obj);
 };
-ChangeLog.contextType = fn(4535).ThemeContext;
+ChangeLog.contextType = fn(4537).ThemeContext;
 size = fn(2);
 let result = size.fileFinishedImporting("components_native/ChangeLogModal.tsx");
 

@@ -30,7 +30,7 @@ function ConversationNavigatorHeader(channelId) {
     variant: "heading-lg/semibold",
     subtitleColor: "text-muted",
   };
-  obj2.children = jsx(channelId(8194).GenericHeaderTitle, {
+  obj2.children = jsx(channelId(7283).GenericHeaderTitle, {
     title: channelId.title,
     subtitle: useChannelNameDefault(stateFromStores, true),
     variant: "heading-lg/semibold",

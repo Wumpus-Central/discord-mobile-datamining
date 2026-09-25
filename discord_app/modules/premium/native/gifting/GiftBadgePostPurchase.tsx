@@ -29,26 +29,26 @@ function PostPurchaseFooter(onSendGift) {
   const obj = { style: closure_12(useSafeAreaInsetsDefault().bottom).footer, children: null };
   const callback1 = noop.useCallback(() => {
     ModalActionCreatorsDefault.pop();
-    const rootNavigationRef = onSendGift(4687).getRootNavigationRef();
+    const rootNavigationRef = onSendGift(4689).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("you");
     }
   }, []);
   const obj2 = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
   const tmp = closure_12(useSafeAreaInsetsDefault().bottom);
-  obj2.icon = closure_10(onSendGift(11387).GiftIcon, {
+  obj2.icon = closure_10(onSendGift(10485).GiftIcon, {
     size: "sm",
     color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT,
   });
   const intl = onSendGift(1115).intl;
   obj2.text = intl.string(_modDef2582.g86YiI);
   obj2.onPress = callback;
-  const items1 = [closure_10(onSendGift(5273).Button, obj2)];
+  const items1 = [closure_10(onSendGift(5274).Button, obj2)];
   const obj4 = { grow: true, variant: "secondary", text: null, onPress: null };
   const intl2 = onSendGift(1115).intl;
   obj4.text = intl2.string(_modDef2582["sa/cfM"]);
   obj4.onPress = callback1;
-  items1[1] = closure_10(onSendGift(5273).Button, obj4);
+  items1[1] = closure_10(onSendGift(5274).Button, obj4);
   obj.children = items1;
   return closure_11(View, obj);
 }
@@ -154,7 +154,7 @@ function LevelUpScreen(arg0) {
   return closure_1_11(View, obj3);
 }
 const View = fn(17).View;
-const GiftingBadgeConstants = fn(11386);
+const GiftingBadgeConstants = fn(10484);
 ({
   getRemainingGiftsToNextTier: metroRequire,
   getTierForProgress: closure_7,

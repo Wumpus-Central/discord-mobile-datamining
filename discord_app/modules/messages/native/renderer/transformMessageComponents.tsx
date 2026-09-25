@@ -12,8 +12,8 @@ const util = tmp4(1115);
 const FlagUtils = tmp4(1385);
 const AgeVerificationUtils = tmp4(5041);
 const MediaTypes = tmp4(5059);
-const sanitizeMediaDimension = tmp4(8466);
-const ExplicitMediaUtils = tmp4(8484);
+const sanitizeMediaDimension = tmp4(7556);
+const ExplicitMediaUtils = tmp4(7574);
 require = fn;
 function transformToRowGeneratedComponent(message, accessory) {
   _require = message;
@@ -457,11 +457,11 @@ function transformToRowGeneratedComponent(message, accessory) {
                     } else if (tmp7.V2026 === version) {
                       const obj22 = {};
                       const merged11 = Object.assign(tmp6);
-                      obj22.checkpointData = tmp(tmp2[29]).transformCheckpoint2026CardToRowGeneratedComponent(
+                      obj22.checkpointData = tmp(tmp2[30]).transformCheckpoint2026CardToRowGeneratedComponent(
                         checkpointData,
                       );
                       obj = obj22;
-                      const tmpResult40 = tmp(tmp2[29]);
+                      const tmpResult40 = tmp(tmp2[30]);
                     } else {
                       obj = { type: tmp(tmp2[6]).ComponentType.UNKNOWN, id: accessory.id };
                     }
@@ -569,7 +569,7 @@ function transformUnfurledMediaItem(media, shouldShowMedia) {
 let closure_3 = ["checkpointData"];
 const processColor = fn(17).processColor;
 const CheckpointVersions = fn(5054).CheckpointVersions;
-let closure_7 = fn(8470).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
+let closure_7 = fn(7560).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
 let obj = { max: Infinity, maxAge: null, updateAgeOnGet: true };
 obj.maxAge = 15 * DurationsDefault.Millis.MINUTE;
 const importDefaultResult1 = new priv(obj);
@@ -579,7 +579,7 @@ let result = size.fileFinishedImporting("modules/messages/native/renderer/transf
 export default function transformMessageComponents(message, arr) {
   const obj = {
     type: "textDisplayComponent",
-    parserState: obj3(8219).getInitialParserStateFromMessage(message.message, closure_7),
+    parserState: obj3(7308).getInitialParserStateFromMessage(message.message, closure_7),
   };
   obj3 = {};
   const merged = Object.assign(message);

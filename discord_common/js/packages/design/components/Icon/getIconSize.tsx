@@ -1,7 +1,7 @@
 // discord_common/js/packages/design/components/Icon/getIconSize.tsx
 import size from "../../../../../../_runtime/metro/00002__.js";
 
-const ICON_SIZE = { xxs: 12, xs: 16, sm: 18, md: 24, lg: 32, custom: "ip", refresh_sm: true };
+const ICON_SIZE = { xxs: 12, xs: 16, sm: 18, md: 24, lg: 32, custom: "disabled", refresh_sm: true };
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Icon/getIconSize.tsx");
 
 export const getIconSize = function getIconSize(arg0) {

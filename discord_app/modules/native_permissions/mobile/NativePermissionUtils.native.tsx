@@ -139,7 +139,7 @@ if (MetaQuestUtils) {
 }
 HermesBuiltin.arraySpread(items9, tmp8);
 let NativePermissionIOSUtils;
-const NativePermissionBaseUtils = fn(5447).NativePermissionBaseUtils;
+const NativePermissionBaseUtils = fn(5448).NativePermissionBaseUtils;
 class NativePermissionIOSUtils extends NativePermissionBaseUtils {}
 const prototype = NativePermissionIOSUtils.prototype;
 prototype["requestPermissionCore"] = function requestPermissionCore(arg0, arg1) {

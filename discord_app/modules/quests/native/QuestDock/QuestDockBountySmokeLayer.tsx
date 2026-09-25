@@ -2,8 +2,8 @@
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import QuestDockUtils from "QuestDockUtils.tsx";
 import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible.tsx";
-import _modDef15542 from "../../../../../discord_assets/assets/quests/bounties/BG_Smoke_Full_FigmaMatched.mov.js";
-import _modDef15543 from "../../../../../discord_assets/assets/quests/bounties/BG_Smoke_Full_FigmaMatched_Frame0.png.js";
+import _modDef14712 from "../../../../../discord_assets/assets/quests/bounties/BG_Smoke_Full_FigmaMatched.mov.js";
+import _modDef14713 from "../../../../../discord_assets/assets/quests/bounties/BG_Smoke_Full_FigmaMatched_Frame0.png.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -67,7 +67,7 @@ export default noop.memo(function QuestDockBountySmokeLayer(paused) {
       onLoad: null,
       onError: null,
     };
-    const obj4 = { uri: _modDef15542 };
+    const obj4 = { uri: _modDef14712 };
     obj3.source = obj4;
     if (!flag) {
       flag = !tmp5;
@@ -75,7 +75,7 @@ export default noop.memo(function QuestDockBountySmokeLayer(paused) {
     obj3.paused = flag;
     obj3.onLoad = callback;
     obj3.onError = callback1;
-    tmp18Result = closure_7(tmp(8657).VideoComponent, obj3);
+    tmp18Result = closure_7(tmp(7747).VideoComponent, obj3);
   }
   const children = [tmp18Result];
   let tmp20 = !tmp7;
@@ -87,7 +87,7 @@ export default noop.memo(function QuestDockBountySmokeLayer(paused) {
       accessible: false,
       importantForAccessibility: "no-hide-descendants",
     };
-    const obj6 = { uri: _modDef15543 };
+    const obj6 = { uri: _modDef14713 };
     obj5.source = obj6;
     obj5.style = StyleSheet.absoluteFillObject;
     tmp20 = closure_7(FastImageDefault, obj5);
@@ -96,7 +96,7 @@ export default noop.memo(function QuestDockBountySmokeLayer(paused) {
   children[1] = tmp20;
   return closure_9(closure_8, { children });
 });
-export const QUEST_DOCK_BOUNTY_SMOKE_STILL_ART_URL = _modDef15543;
+export const QUEST_DOCK_BOUNTY_SMOKE_STILL_ART_URL = _modDef14713;
 export const QUEST_DOCK_BOUNTY_SMOKE_ART_ASPECT_RATIO = 3.75;
 export const useSmokeArtSize = function useSmokeArtSize() {
   const width = left(right[5])().width;

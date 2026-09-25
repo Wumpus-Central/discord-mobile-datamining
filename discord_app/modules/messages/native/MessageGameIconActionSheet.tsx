@@ -75,7 +75,7 @@ export default function MessageGameIconActionSheet(applicationId) {
     obj3.children = items1;
     obj2.children = closure_7(View, obj3);
     obj5.children = closure_6(View, obj2);
-    tmp5Result = closure_6(tmp2(7483).BottomSheet, obj5);
+    tmp5Result = closure_6(tmp2(6566).BottomSheet, obj5);
   }
   return tmp5Result;
 }

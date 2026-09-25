@@ -7,7 +7,7 @@ import DevSettingsStore from "../../devtools/dev_settings/DevSettingsStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4, TouchableOpacity: hasOwnProperty } = get_ActivityIndicator);
-const CollectiblesDebugStore = fn(7886);
+const CollectiblesDebugStore = fn(6971);
 ({ useCollectiblesDebugStore: closure_7, addDebugLog: closure_8 } = CollectiblesDebugStore);
 const jsxProd = fn(21);
 ({ jsxs: closure_9, jsx: c10 } = jsxProd);

@@ -2,10 +2,10 @@
 import util from "../../../../intl/index.native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06985_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06068_LegacyBaseButton.js";
 import KrispLogo2 from "KrispLogo.tsx";
-import _modDef10345 from "../../../../../_runtime/metro/10345__.js";
-import _modDef10346 from "../../../../../_runtime/metro/10346__.js";
+import _modDef9443 from "../../../../../_runtime/metro/09443__.js";
+import _modDef9444 from "../../../../../_runtime/metro/09444__.js";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -17,9 +17,9 @@ function KrispLogo() {
   const tmp = closure_13();
   const tmp4 = useThemeDefault();
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = _modDef10345;
+    let tmp2Result = _modDef9443;
   } else {
-    tmp2Result = _modDef10346;
+    tmp2Result = _modDef9444;
   }
   const obj2 = { style: tmp.krisp, children: null };
   const obj3 = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
@@ -56,7 +56,7 @@ function SystemProcessingSubLabel() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const MobileUserSettings = fn(8323).MobileUserSettings;
+const MobileUserSettings = fn(7412).MobileUserSettings;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
@@ -81,7 +81,7 @@ export default function SettingsVoiceScreen() {
     const items = [, ,];
     ({ INPUT_MODE: arr[0], AUTO_VOICE_SENSITIVITY: arr[1], VOICE_SENSITIVITY: arr[2] } = constants);
     obj3.settings = items;
-    const items1 = [obj3, , , , , , ,];
+    const items1 = [obj3, , , , , , , ,];
     const obj4 = { label: null, settings: null, subLabel: null };
     const intl2 = util.intl;
     obj4.label = intl2.string(util.t.UXxPGB);
@@ -141,6 +141,10 @@ export default function SettingsVoiceScreen() {
     const items9 = [constants.DISABLE_STREAM_PREVIEWS];
     obj14.settings = items9;
     items1[7] = obj14;
+    const obj15 = { settings: null };
+    const items10 = [constants.VIDEO_BACKGROUND];
+    obj15.settings = items10;
+    items1[8] = obj15;
     obj2.sections = items1;
     return obj.createList(obj2);
   }, []);

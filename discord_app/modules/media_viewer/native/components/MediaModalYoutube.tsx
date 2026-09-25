@@ -19,16 +19,16 @@ export default noop.memo((visible) => {
   dependencyMap = undefined;
   _slicedToArray = undefined;
   noop = undefined;
-  [playerState, dependencyMap] = noop.useState(visible(8647).PlayerState.UNREADY);
+  [playerState, dependencyMap] = noop.useState(visible(7737).PlayerState.UNREADY);
   const tmp6 = _slicedToArray(noop.useState(undefined), 2);
   _slicedToArray = tmp6[1];
-  const tmp8 = playerState(8622)(playerState);
+  const tmp8 = playerState(7712)(playerState);
   noop = tmp8;
-  const tmp9 = playerState(8622)(visible);
+  const tmp9 = playerState(7712)(visible);
   closure_5 = tmp9;
   const ref = noop.useRef(null);
   const effect = noop.useEffect(() => {
-    const MediaViewerAnalytics = visible(8611).MediaViewerAnalytics;
+    const MediaViewerAnalytics = visible(7701).MediaViewerAnalytics;
     const result = MediaViewerAnalytics.trackMessageEmbedsActionCompleted({ platform: "youtube", action: "attempted" });
   }, []);
   const items = [ref, visible, tmp9, tmp8, playerState];
@@ -119,18 +119,18 @@ export default noop.memo((visible) => {
       }
     }
   }, items);
-  let youtubeVideoIdFromURI = visible(8615).getYoutubeVideoIdFromURI(source.uri);
+  let youtubeVideoIdFromURI = visible(7705).getYoutubeVideoIdFromURI(source.uri);
   if (youtubeVideoIdFromURI == null) {
-    youtubeVideoIdFromURI = tmp2(8615).getYoutubeClipVideoIdFromURI(source.uri);
-    const tmp2Result = tmp2(8615);
+    youtubeVideoIdFromURI = tmp2(7705).getYoutubeClipVideoIdFromURI(source.uri);
+    const tmp2Result = tmp2(7705);
   }
   if (null == youtubeVideoIdFromURI) {
     return null;
   } else {
-    if (playerState === tmp2(8647).PlayerState.ERRORED) {
+    if (playerState === tmp2(7737).PlayerState.ERRORED) {
       if ("embed_not_allowed" === tmp6[0]) {
         let obj2 = { videoId: youtubeVideoIdFromURI.videoId };
-        return ref(tmp7(13366), obj2);
+        return ref(tmp7(12516), obj2);
       }
     }
     let tmp15 = tmp2(1364).isAndroid()
@@ -192,7 +192,7 @@ export default noop.memo((visible) => {
     obj3.onDataReceived = callback;
     const merged1 = Object.assign(tmp15);
     const merged2 = Object.assign(merged);
-    return tmp16(tmp7(8647), obj3, youtubeVideoIdFromURI.videoId);
+    return tmp16(tmp7(7737), obj3, youtubeVideoIdFromURI.videoId);
   }
-  let obj = visible(8615);
+  let obj = visible(7705);
 });

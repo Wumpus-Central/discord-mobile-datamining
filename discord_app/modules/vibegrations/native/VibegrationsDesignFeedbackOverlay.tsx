@@ -90,7 +90,7 @@ export default function VibegrationsDesignFeedbackOverlay(projectId) {
     return () => {
       closure_1_9.current = false;
       if (ref.current) {
-        size(4796).hideActionSheet(projectId(17072).VIBEGRATIONS_DESIGN_REMARK_SHEET_KEY);
+        size(4796).hideActionSheet(projectId(16263).VIBEGRATIONS_DESIGN_REMARK_SHEET_KEY);
         const obj = size(4796);
       }
     };
@@ -135,7 +135,7 @@ export default function VibegrationsDesignFeedbackOverlay(projectId) {
         point.y = Math.round(nativeEvent.nativeEvent.locationY);
         closure_4(point);
         closure_8(false);
-        const result = projectId(9392).inspectVibegrationsPreviewPoint(point, point);
+        const result = projectId(8490).inspectVibegrationsPreviewPoint(point, point);
         result.then((status) => {
           if (ref.current) {
             closure_4(null);
@@ -164,7 +164,7 @@ export default function VibegrationsDesignFeedbackOverlay(projectId) {
             closure_8(true);
           }
         });
-        const obj2 = projectId(9392);
+        const obj2 = projectId(8490);
       }
     }
   }, items3);

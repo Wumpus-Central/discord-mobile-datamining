@@ -87,7 +87,7 @@ export default function VibegrationsSecretRequestCard(projectId) {
     const obj5 = { variant: "secondary", size: "sm", onPress: callback, text: null };
     const intl3 = tmp6(1115).intl;
     obj5.text = intl3.string(tmp8(3714)["gVV+HX"]);
-    items1[3] = closure_5(tmp6(5273).Button, obj5);
+    items1[3] = closure_5(tmp6(5274).Button, obj5);
     obj.children = items1;
     return closure_6(View, obj);
   }

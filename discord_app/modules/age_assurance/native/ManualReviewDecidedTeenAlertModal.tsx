@@ -6,7 +6,7 @@ import AlertModal from "../../../design/components/AlertModal/native/AlertModal.
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const FALLBACK_TEEN_AGE_RANGE = fn(8762).FALLBACK_TEEN_AGE_RANGE;
+const FALLBACK_TEEN_AGE_RANGE = fn(7852).FALLBACK_TEEN_AGE_RANGE;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/ManualReviewDecidedTeenAlertModal.tsx");
@@ -29,7 +29,7 @@ export default function ManualReviewDecidedTeenAlertModal(teenAgeRange) {
           variant: "text-md/normal",
           color: "text-link",
           onPress() {
-            const obj = closure_1_1(8761);
+            const obj = closure_1_1(7851);
             const intl = closure_1_0(1115).intl;
             return obj.openUrl(closure_1_1(2110).getArticleURL(intl.string(closure_1_1(3102).agiNYw)));
           },

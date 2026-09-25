@@ -15,7 +15,7 @@ function SharedUser(user) {
   user = user.user;
   const tmp = closure_8();
   const name = UserUtilsDefault.getName(user);
-  const tmp6 = user.trialCreationResult === user(7783).CreateReferralStatus.FAIL;
+  const tmp6 = user.trialCreationResult === user(6868).CreateReferralStatus.FAIL;
   const obj2 = { style: tmp.recipientRow, children: null };
   const items = [tmp.avatarContainer];
   let erroredAvatar = tmp6;
@@ -28,7 +28,7 @@ function SharedUser(user) {
       style: items,
       size: user(1177).AvatarSizes.REFRESH_MEDIUM_32,
       user,
-      guildId: "Array",
+      guildId: "flex",
     }),
     ,
   ];
@@ -51,8 +51,8 @@ function SharedUser(user) {
   const obj9 = { variant: "secondary", size: "sm", text: null, icon: null, onPress: null };
   const intl2 = tmp5(1115).intl;
   obj9.text = intl2.string(user(1115).t["g33r/P"]);
-  const obj3 = { style: items, size: user(1177).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "Array" };
-  obj9.icon = closure_5(user(5377).ChatIcon, {
+  const obj3 = { style: items, size: user(1177).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "flex" };
+  obj9.icon = closure_5(user(5378).ChatIcon, {
     size: "xs",
     color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT,
   });
@@ -60,7 +60,7 @@ function SharedUser(user) {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     ChannelActionCreatorsDefault.openPrivateChannel({ recipientIds: user.id });
   };
-  items1[2] = closure_5(user(5273).Button, obj9);
+  items1[2] = closure_5(user(5274).Button, obj9);
   obj2.children = items1;
   return closure_7(View, obj2);
 }
@@ -135,13 +135,13 @@ export default function ReferralProgramShareConfirmationActionSheet(trialCreatio
   const obj3 = {
     startExpanded: true,
     contentStyles: tmp.content,
-    header: closure_5(tmp5(7482).BottomSheetTitleHeader, { title: null }),
+    header: closure_5(tmp5(6565).BottomSheetTitleHeader, { title: null }),
     children: null,
   };
   const obj4 = { children: null };
   const formatResult = intl3.format(tmp5(1115).t.AwGSWl, obj);
   const items = [
-    closure_5(View, { style: tmp.headerAsset, children: closure_5(tmp5(5997).FistBumpSpotIllustration, {}) }),
+    closure_5(View, { style: tmp.headerAsset, children: closure_5(tmp5(12969).FistBumpSpotIllustration, {}) }),
     closure_5(tmp5(4825).Text, {
       variant: "heading-lg/bold",
       color: "mobile-text-heading-primary",
@@ -156,7 +156,7 @@ export default function ReferralProgramShareConfirmationActionSheet(trialCreatio
     }),
   ];
   const obj8 = { style: tmp.recipientContainer, children: null };
-  const obj5 = { style: tmp.headerAsset, children: closure_5(tmp5(5997).FistBumpSpotIllustration, {}) };
+  const obj5 = { style: tmp.headerAsset, children: closure_5(tmp5(12969).FistBumpSpotIllustration, {}) };
   const obj6 = {
     variant: "heading-lg/bold",
     color: "mobile-text-heading-primary",
@@ -169,6 +169,6 @@ export default function ReferralProgramShareConfirmationActionSheet(trialCreatio
   );
   items[3] = closure_5(View, obj8);
   obj4.children = items;
-  obj3.children = closure_7(tmp5(5271).Stack, obj4);
-  return closure_5(tmp5(7483).BottomSheet, obj3);
+  obj3.children = closure_7(tmp5(5272).Stack, obj4);
+  return closure_5(tmp5(6566).BottomSheet, obj3);
 }

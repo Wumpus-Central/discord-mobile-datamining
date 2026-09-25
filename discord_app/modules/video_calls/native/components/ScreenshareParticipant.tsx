@@ -3,9 +3,9 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06985_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06068_LegacyBaseButton.js";
 import useParticipantTileTapGestureDefault from "../useParticipantTileTapGesture.tsx";
-import _modDef9765 from "../../../../../_runtime/metro/09765__.js";
+import _modDef8863 from "../../../../../_runtime/metro/08863__.js";
 import useScreenshareUtils from "../useScreenshareUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -59,7 +59,7 @@ export default function ScreenshareParticipant(participant) {
   const items2 = [tmp4.container, participant.containerStyle];
   obj2.style = items2;
   const tmp3 = useParticipantTileTapGestureDefault({ onSingleTapStart: callback, onDoubleTapStart: callback1 });
-  const items3 = [timestampProducer(hasOwnProperty, { source: _modDef9765, style: tmp4.image }), , ,];
+  const items3 = [timestampProducer(hasOwnProperty, { source: _modDef8863, style: tmp4.image }), , ,];
   const obj4 = {
     style: tmp4.title,
     accessibilityRole: "header",

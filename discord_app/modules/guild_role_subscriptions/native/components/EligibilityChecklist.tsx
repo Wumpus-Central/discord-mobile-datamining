@@ -4,8 +4,8 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import FormSeparatorDefault from "FormSeparator.tsx";
-import _modDef18255 from "../../../../../_runtime/metro/18255__.js";
-import _modDef18256 from "../../../../../_runtime/metro/18256__.js";
+import _modDef17486 from "../../../../../_runtime/metro/17486__.js";
+import _modDef17487 from "../../../../../_runtime/metro/17487__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -21,9 +21,9 @@ function EligibilityChecklistRow(item) {
   items[1] = eligibleRow;
   const obj2 = { style: tmp.rowStatusIcon, source: null };
   if (item.checked) {
-    let tmp6Result = _modDef18255;
+    let tmp6Result = _modDef17486;
   } else {
-    tmp6Result = _modDef18256;
+    tmp6Result = _modDef17487;
   }
   obj2.source = tmp6Result;
   const items1 = [React4(FastImageDefault, obj2)];

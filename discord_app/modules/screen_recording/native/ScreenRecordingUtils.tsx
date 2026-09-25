@@ -632,7 +632,7 @@ let closure_11 = async function _submitBugReportWithScreenRecording(arg0) {
                   obj24 = {
                     name: closure_133_2.uploadConfig.featureName,
                     squad: closure_133_2.uploadConfig.squadName,
-                    asana_inbox_id: "r",
+                    asana_inbox_id: "Array",
                   };
                 }
                 obj22.feature = obj24;
@@ -906,7 +906,7 @@ let closure_13 = async function _handleRecordingPhase(arg0) {
 };
 get_ActivityIndicator = fn(17);
 ({ NativeModules, NativeEventEmitter } = get_ActivityIndicator);
-const useScreenRecordingStore = fn(16349).useScreenRecordingStore;
+const useScreenRecordingStore = fn(15529).useScreenRecordingStore;
 const DCDPhotos = NativeModules.DCDPhotos;
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.DCDScreenRecordingManager);
 let size = fn(2);

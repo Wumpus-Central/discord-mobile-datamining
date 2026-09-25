@@ -72,8 +72,8 @@ export default function ForumPostActionBar(channel) {
   const items = [ChannelStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => ChannelStore.getChannel(channel.parent_id));
   let obj = channel(504);
-  const firstMessage = channel(7634).useFirstForumPostMessage(channel).firstMessage;
-  let obj2 = channel(7634);
+  const firstMessage = channel(6717).useFirstForumPostMessage(channel).firstMessage;
+  let obj2 = channel(6717);
   const items1 = [JoinedThreadsStore];
   const stateFromStores1 = channel(504).useStateFromStores(items1, () => JoinedThreadsStore.hasJoined(channel.id));
   dependencyMap = channel.getGuildId();
@@ -95,13 +95,13 @@ export default function ForumPostActionBar(channel) {
   }, items3);
   const obj4 = channel(504);
   const obj6 = { style: null, children: null };
-  const items4 = [tmp.actionBarContainer, channel(8203).useGradientTop()];
+  const items4 = [tmp.actionBarContainer, channel(7292).useGradientTop()];
   obj6.style = items4;
   let tmp11 = null != firstMessage;
   if (tmp11) {
     const obj7 = { style: tmp.reactionRow, children: null };
     const obj8 = { thread: channel, parentChannel: stateFromStores, firstMessage, containerWidth: tmp7[0] };
-    obj7.children = closure_10(tmp2(11763).ForumPostActionBarReactions, obj8);
+    obj7.children = closure_10(tmp2(10945).ForumPostActionBarReactions, obj8);
     tmp11 = closure_10(View, obj7);
   }
   const items5 = [tmp11];
@@ -123,7 +123,7 @@ export default function ForumPostActionBar(channel) {
       }
     };
     obj10.children = closure_10(tmp2(4771).LinkIcon, { size: "xs" });
-    items7[1] = closure_10(tmp2(5427).PressableOpacity, obj10);
+    items7[1] = closure_10(tmp2(5428).PressableOpacity, obj10);
     const obj11 = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
     const intl5 = tmp2(1115).intl;
     obj11.accessibilityLabel = intl5.string(tmp2(1115).t.nFP4oa);
@@ -137,8 +137,8 @@ export default function ForumPostActionBar(channel) {
       obj2.jumpType = Client.JumpType.ANIMATED;
       obj.jumpToMessage(obj2);
     };
-    obj11.children = closure_10(tmp2(11764).ArrowLargeUpIcon, { size: "xs" });
-    items7[2] = closure_10(tmp2(5427).PressableOpacity, obj11);
+    obj11.children = closure_10(tmp2(10946).ArrowLargeUpIcon, { size: "xs" });
+    items7[2] = closure_10(tmp2(5428).PressableOpacity, obj11);
     obj9.children = items7;
     items5[1] = closure_11(View, obj9);
     obj6.children = items5;
@@ -171,7 +171,7 @@ export default function ForumPostActionBar(channel) {
       obj12.accessibilityLabel = Text(t["DjZ+6E"]);
       obj12.style = tmp.actionButton;
       obj12.onPress = items9;
-      const items11 = [closure_10(tmp2(9958).BellIcon, { size: "xs" })];
+      const items11 = [closure_10(tmp2(9056).BellIcon, { size: "xs" })];
       const obj14 = {
         style: tmp.buttonText,
         variant: "text-sm/semibold",
@@ -184,7 +184,7 @@ export default function ForumPostActionBar(channel) {
       obj12.children = items11;
       tmp15 = obj12;
     }
-    closure_11(tmp2(5427).PressableOpacity, tmp15);
+    closure_11(tmp2(5428).PressableOpacity, tmp15);
   }
-  const obj5 = channel(8203);
+  const obj5 = channel(7292);
 }

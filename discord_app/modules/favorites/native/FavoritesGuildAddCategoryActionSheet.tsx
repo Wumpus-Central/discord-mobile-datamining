@@ -30,7 +30,7 @@ function FavoritesGuildAddCategoryActionSheet() {
   const obj3 = { title: null };
   const intl = value(1115).intl;
   obj3.title = intl.string(value(1115).t["ISN+NM"]);
-  obj2.header = closure_6(value(7482).BottomSheetTitleHeader, obj3);
+  obj2.header = closure_6(value(6565).BottomSheetTitleHeader, obj3);
   const obj4 = {
     label: null,
     placeholder: null,
@@ -49,15 +49,15 @@ function FavoritesGuildAddCategoryActionSheet() {
   obj4.value = value;
   obj4.maxLength = maxLength;
   obj4.onSubmitEditing = callback;
-  const items1 = [closure_6(value(6936).TextInput, obj4)];
+  const items1 = [closure_6(value(6019).TextInput, obj4)];
   const obj5 = { text: null, onPress: null, disabled: null };
   const intl4 = value(1115).intl;
   obj5.text = intl4.string(value(1115).t.CumH4u);
   obj5.onPress = callback;
   obj5.disabled = !result;
-  items1[1] = closure_6(value(5273).Button, obj5);
+  items1[1] = closure_6(value(5274).Button, obj5);
   obj2.children = items1;
-  return closure_7(value(7483).BottomSheet, obj2);
+  return closure_7(value(6566).BottomSheet, obj2);
 }
 const maxLength = fn(2057).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
 const jsxProd = fn(21);

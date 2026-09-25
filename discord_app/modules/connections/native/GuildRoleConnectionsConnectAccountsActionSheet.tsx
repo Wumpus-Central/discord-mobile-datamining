@@ -24,9 +24,9 @@ import getConnectionsRolesDefault from "../../channel/getConnectionsRoles.tsx";
 import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import BotTagDefault from "../../applications/native/BotTag.tsx";
-import _modDef11605 from "../../../../_runtime/metro/11605__.js";
-import _modDef11902 from "../../../../_runtime/metro/11902__.js";
-import _modDef11903 from "../../../../_runtime/metro/11903__.js";
+import _modDef10810 from "../../../../_runtime/metro/10810__.js";
+import _modDef11045 from "../../../../_runtime/metro/11045__.js";
+import _modDef11046 from "../../../../_runtime/metro/11046__.js";
 import OfficialConnectionIconDefault from "OfficialConnectionIcon.tsx";
 import ConnectionsRoleActionCreators from "../ConnectionsRoleActionCreators.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -277,7 +277,7 @@ function IdentityConnectionsCheckGroup(eligibilityState) {
     obj7.onPress = callback;
     let tmp15Result = null;
     if (null != memo) {
-      const obj8 = { style: tmp.appIcon, user: memo, size: tmp2(tmp3[21]).AvatarSizes.XSMALL, guildId: "Array" };
+      const obj8 = { style: tmp.appIcon, user: memo, size: tmp2(tmp3[21]).AvatarSizes.XSMALL, guildId: "flex" };
       tmp15Result = tmp15(tmp2(tmp3[21]).Avatar, obj8);
     }
     const items3 = [tmp15Result, ,];
@@ -396,7 +396,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
     }
   }, items3);
   let tmp3 = _slicedToArray(noop.useState(0), 2);
-  roleColor = eligibilityStatesGroups(4526).useToken(nativeDefault.unsafe_rawColors.GREEN_330);
+  roleColor = eligibilityStatesGroups(4528).useToken(nativeDefault.unsafe_rawColors.GREEN_330);
   let obj3 = { children: null };
   const keys = Object.keys(memo1);
   const sorted = keys.sort((arg0, arg1) => {
@@ -451,7 +451,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
     if (null != bot) {
       tmp11 = new closure_11(application.bot);
     }
-    const officialApplicationIds = eligibilityStatesGroups(5712).officialApplicationIds;
+    const officialApplicationIds = eligibilityStatesGroups(5714).officialApplicationIds;
     let str;
     if (application != null) {
       str = application.id;
@@ -475,7 +475,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
       tmp20 = tmp19 <= c8;
     }
     if (tmp3) {
-      const obj3 = { source: _modDef11902, style: closure_5.connectionsChecksGroupCheckmark };
+      const obj3 = { source: _modDef11045, style: closure_5.connectionsChecksGroupCheckmark };
       let tmp22Result = closure_1_29(tmp15(1177).Icon, obj3);
       let tmp24 = closure_1_29;
     } else if (tmp20) {
@@ -485,7 +485,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
       tmp22Result = closure_1_29(tmp15(4825).Text, obj4);
       tmp24 = closure_1_29;
     } else if (tmp8) {
-      const obj5 = { source: _modDef11903, style: closure_5.connectionsChecksGroupCaret };
+      const obj5 = { source: _modDef11046, style: closure_5.connectionsChecksGroupCaret };
       tmp22Result = closure_1_29(tmp15(1177).Icon, obj5);
       tmp24 = closure_1_29;
     } else {
@@ -580,7 +580,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
     items1[1] = tmp24Result6;
     let tmp24Result7 = null;
     if (null != tmp11) {
-      const obj13 = { style: closure_5.appIcon, user: tmp11, size: tmp15(1177).AvatarSizes.XSMALL, guildId: "Array" };
+      const obj13 = { style: closure_5.appIcon, user: tmp11, size: tmp15(1177).AvatarSizes.XSMALL, guildId: "flex" };
       tmp24Result7 = tmp24(tmp15(1177).Avatar, obj13);
     }
     items1[2] = tmp24Result7;
@@ -611,12 +611,12 @@ function ConnectionsChecks(eligibilityStatesGroups) {
         onPress() {
           _modDef38(null != stringResult, "tooltip is null");
           const obj = ToastActionCreatorsDefault;
-          obj.open({ key: "CONNECTIONS_STEAM_TOOLTIP", icon: _modDef11605, content: stringResult });
+          obj.open({ key: "CONNECTIONS_STEAM_TOOLTIP", icon: _modDef10810, content: stringResult });
         },
         children: null,
       };
       const obj17 = {
-        source: _modDef11605,
+        source: _modDef10810,
         size: tmp15(1177).Icon.Sizes.SMALL_20,
         style: closure_5.connectionsChecksGroupTextNameInfoIcon,
       };
@@ -679,7 +679,7 @@ function ConnectedUserAccountOptions(account) {
       _undefined(enabled);
       ConnectedAccountsActionCreatorsDefault.setFriendSync(account.type, account.id, enabled);
     };
-    tmp12 = closure_29(account(8951).FormSwitchRow, obj2);
+    tmp12 = closure_29(account(8045).FormSwitchRow, obj2);
   }
   let tmp15;
   if (set2.has(account.type)) {
@@ -692,7 +692,7 @@ function ConnectedUserAccountOptions(account) {
       closure_4(show_activity);
       ConnectedAccountsActionCreatorsDefault.setShowActivity(account.type, account.id, show_activity);
     };
-    tmp15 = closure_29(account(8951).FormSwitchRow, obj3);
+    tmp15 = closure_29(account(8045).FormSwitchRow, obj3);
   }
   let tmp18;
   if (true === value.hasMetadata) {
@@ -711,7 +711,7 @@ function ConnectedUserAccountOptions(account) {
       }
       const result = ConnectedAccountsActionCreatorsDefault.setMetadataVisibility(type, id, num);
     };
-    tmp18 = closure_29(account(8951).FormSwitchRow, obj5);
+    tmp18 = closure_29(account(8045).FormSwitchRow, obj5);
   }
   const obj6 = { style: tmp.accountConnectedPrivacyOptionsContainer, children: null };
   const obj7 = { label: null, value: null, onValueChange: null };
@@ -728,13 +728,13 @@ function ConnectedUserAccountOptions(account) {
     }
     ConnectedAccountsActionCreatorsDefault.setVisibility(type, id, num);
   };
-  const items = [closure_29(account(8951).FormSwitchRow, obj7), tmp18, tmp15, tmp12];
+  const items = [closure_29(account(8045).FormSwitchRow, obj7), tmp18, tmp15, tmp12];
   obj6.children = items;
   return closure_30(closure_8, obj6);
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, Pressable: closure_7, View: closure_8 } = get_ActivityIndicator);
-let Constants = fn(5713);
+let Constants = fn(5715);
 ({
   MetadataFields: closure_17,
   OperatorTypes: closure_18,
@@ -1268,7 +1268,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                 };
                 let tmp7 = null;
                 const guildRoleConnectionsConnectAccountsActionSheetKey = platformType(
-                  11907,
+                  11050,
                 ).makeGuildRoleConnectionsConnectAccountsActionSheetKey(role.id);
                 if (null != platformType) {
                   tmp7 = id;
@@ -1277,7 +1277,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                 obj4.overrideUrl = { overrideUrl: prop }.overrideUrl;
                 obj4.onCloseModal = onCloseModal;
                 obj.openLazy(resolved, guildRoleConnectionsConnectAccountsActionSheetKey, obj4);
-                const obj3 = platformType(11907);
+                const obj3 = platformType(11050);
               },
               overrideUrl: null,
             };

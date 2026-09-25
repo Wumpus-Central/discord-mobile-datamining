@@ -3,8 +3,8 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const Pressables = FireIcon(5427);
-const FireIcon2 = FireIcon(10109);
+const Pressables = FireIcon(5428);
+const FireIcon2 = FireIcon(9206);
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);

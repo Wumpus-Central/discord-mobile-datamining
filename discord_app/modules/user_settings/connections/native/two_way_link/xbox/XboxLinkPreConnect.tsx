@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/xbox/XboxLinkPreConnect.tsx
-import _modDef9435 from "../../../../../../../discord_assets/assets/connections/xbox_discord_link.png.js";
+import _modDef8533 from "../../../../../../../discord_assets/assets/connections/xbox_discord_link.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const XboxLinkModalScenes = fn(9425).XboxLinkModalScenes;
+const XboxLinkModalScenes = fn(8523).XboxLinkModalScenes;
 const PlatformTypes = fn(1074).PlatformTypes;
 const jsx = fn(21).jsx;
 const createStyles = fn(4829);
@@ -24,7 +24,7 @@ export default function XboxLinkPreConnect() {
   const callback1 = noop.useCallback(() => {
     navigation.push(XboxLinkModalScenes.ERROR);
   }, items1);
-  const memo = noop.useMemo(() => ({ uri: _modDef9435 }), []);
+  const memo = noop.useMemo(() => ({ uri: _modDef8533 }), []);
   const obj2 = {
     platformType: PlatformTypes.XBOX,
     onError: callback1,
@@ -38,7 +38,7 @@ export default function XboxLinkPreConnect() {
   obj2.title = intl.string(navigation(1115).t["e/z3na"]);
   const intl2 = navigation(1115).intl;
   obj2.body = intl2.string(navigation(1115).t["7tXu0i"]);
-  return jsx(navigation(9436).TwoWayLinkPreConnect, {
+  return jsx(navigation(8534).TwoWayLinkPreConnect, {
     platformType: PlatformTypes.XBOX,
     onError: callback1,
     onNext: callback,

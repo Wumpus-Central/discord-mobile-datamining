@@ -1,8 +1,8 @@
 // discord_app/modules/stage_channels/native/components/SpeakerTileStatuses.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
-import _modDef7300 from "../../../../../_runtime/metro/07300__.js";
-import _modDef10399 from "../../../../../_runtime/metro/10399__.js";
+import _modDef6383 from "../../../../../_runtime/metro/06383__.js";
+import _modDef9501 from "../../../../../_runtime/metro/09501__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 import VoiceStateStore from "../../../../stores/VoiceStateStore.tsx";
@@ -70,15 +70,15 @@ const memoResult = noop.memo((userId) => {
     flag2 = false;
   }
   if (stateFromStores) {
-    let tmp5 = channelId(10354);
+    let tmp5 = channelId(9456);
     let flag3 = true;
   } else if (flag2) {
-    tmp5 = channelId(9797);
+    tmp5 = channelId(8895);
     flag3 = false;
   } else {
     flag3 = false;
     if (flag) {
-      tmp5 = channelId(9798);
+      tmp5 = channelId(8896);
       flag3 = false;
     }
   }
@@ -115,7 +115,7 @@ export const ModeratorStatus = noop.memo((userId) => {
   const items1 = [channelId, userId];
   let tmp4;
   if (obj.useStateFromStores(items, () => StageChannelRoleStore.isModerator(userId, channelId), items1)) {
-    tmp4 = channelId(10398);
+    tmp4 = channelId(9500);
   }
   let tmp6 = null;
   if (null != tmp4) {
@@ -136,12 +136,12 @@ export const BlockedStatus = function BlockedStatus() {
   const tmp = closure_8();
   return jsx(native.Icon, {
     style: closure_8().restricted,
-    source: _modDef10399,
+    source: _modDef9501,
     size: native.Icon.Sizes.EXTRA_SMALL,
     color: nativeDefault.unsafe_rawColors.RED_400,
   });
 };
 export const IgnoredStatus = function IgnoredStatus() {
   const tmp = closure_8();
-  return jsx(native.Icon, { style: closure_8().restricted, source: _modDef7300, size: native.Icon.Sizes.EXTRA_SMALL });
+  return jsx(native.Icon, { style: closure_8().restricted, source: _modDef6383, size: native.Icon.Sizes.EXTRA_SMALL });
 };

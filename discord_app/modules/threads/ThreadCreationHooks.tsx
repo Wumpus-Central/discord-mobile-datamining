@@ -408,8 +408,8 @@ let closure_27 = async function _createThread_(arg0, arg1, arg2, arg3) {
     return value;
   })();
 };
-const DraftType = fn(5192).DraftType;
-const SlowmodeType = fn(8010).SlowmodeType;
+const DraftType = fn(5193).DraftType;
+const SlowmodeType = fn(7095).SlowmodeType;
 const ThreadConstants = fn(1114);
 ({ FORUM_POST_CREATION_AUTOMOD_ERRORS: map1, FORUM_POST_CREATION_UPLOAD_ERRORS: closure_14 } = ThreadConstants);
 const Constants = fn(1074);
@@ -567,17 +567,17 @@ export const useCreateThreadCommon = function useCreateThreadCommon(parentChanne
                 }
                 if (null != items1) {
                   if (items1.length > 0) {
-                    const obj4 = closure_1_1(7786);
+                    const obj4 = closure_1_1(6871);
                     id = id.id;
                     const obj3 = { location: constants.THREAD_CREATION };
-                    let sendStickersResult = obj4.sendStickers(id, items1, closure_1_1(8005).parse(id, arg1), obj3);
-                    const obj5 = closure_1_1(8005);
+                    let sendStickersResult = obj4.sendStickers(id, items1, closure_1_1(7090).parse(id, arg1), obj3);
+                    const obj5 = closure_1_1(7090);
                   }
                   return sendStickersResult;
                 }
-                obj = closure_1_1(7786);
-                sendStickersResult = obj.sendMessage(id.id, closure_1_1(8005).parse(id, arg1), undefined, { location: constants.THREAD_CREATION });
-                const obj2 = closure_1_1(8005);
+                obj = closure_1_1(6871);
+                sendStickersResult = obj.sendMessage(id.id, closure_1_1(7090).parse(id, arg1), undefined, { location: constants.THREAD_CREATION });
+                const obj2 = closure_1_1(7090);
                 const obj6 = { location: constants.THREAD_CREATION };
               })(closure_132_8, closure_132_0, closure_132_1, closure_132_2, c7);
               const obj10 = parentMessageId(threadSettings[19]);

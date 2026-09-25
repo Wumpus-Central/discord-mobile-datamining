@@ -30,12 +30,12 @@ import MessageReactionsTypes from "../MessageReactionsTypes.tsx";
 import ReactionActionCreators from "../../reactions/ReactionActionCreators.tsx";
 import ThreadActionCreatorsDefault from "../../threads/ThreadActionCreators.tsx";
 import tracking_Tracking from "../../forums/tracking/Tracking.tsx";
-import _modDef11605 from "../../../../_runtime/metro/11605__.js";
+import QuestActionCreators from "../../quests/QuestActionCreators.tsx";
+import _modDef10810 from "../../../../_runtime/metro/10810__.js";
 import reactions_ReactionUtils from "../../reactions/native/ReactionUtils.tsx";
 import computeScrollData from "../../chat/native/computeScrollData.tsx";
 import NativeChatUtilsDefault from "../../chat/native/NativeChatUtils.tsx";
 import MediaPlaybackFacts from "../MediaPlaybackFacts.tsx";
-import QuestActionCreators from "../../quests/QuestActionCreators.tsx";
 import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -214,8 +214,8 @@ function parseVoiceStateChannelIdSummary(prop) {
   }
   return map;
 }
-let closure_5 = fn(9737).updateShouldShowJumpToPresentButton;
-const RowGeneratorConstants = fn(8281);
+let closure_5 = fn(8835).updateShouldShowJumpToPresentButton;
+const RowGeneratorConstants = fn(7370);
 ({ RowType: closure_15, Changeset: closure_16 } = RowGeneratorConstants);
 const Constants = fn(1074);
 ({
@@ -434,7 +434,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       stringResult = string(t.X2L3Oa);
     }
     const obj3 = { key: "ARCHIVED_POST_REACTIONS_DISABLED_TOAST", content: stringResult, icon: null };
-    tmp36Result = _modDef11605;
+    tmp36Result = _modDef10810;
     obj3.icon = tmp36Result;
     t = obj15.open(obj3);
     isForumPostResult = channel.isForumPost();

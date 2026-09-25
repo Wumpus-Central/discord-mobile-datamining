@@ -7,7 +7,7 @@ import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep
 require = fn;
 const NativePermissionTypes = fn(5038).NativePermissionTypes;
 const apply = fn(12);
-const SettingBuilders = fn(11811);
+const SettingBuilders = fn(10993);
 const debounceResult = apply.debounce(
   asyncGeneratorStep(async () => {
     if (c3 === 2) {
@@ -88,7 +88,7 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t.RC0kJz);
   },
   parent: null,
-  IconComponent: fn(15228).QrCodeIcon,
+  IconComponent: fn(14394).QrCodeIcon,
   onPress: apply.debounce(
     asyncGeneratorStep(async () => {
       if (c3 === 2) {

@@ -36,10 +36,10 @@ function HomeDrawerDMExpandedChildren(channel) {
   });
   let obj2 = channel(504);
   const tmp3 = useMessagePreviewsDefault(channel, {
-    unread: channel(16770).useBaseChannelUnreadBadgeState(channel, false).unread,
+    unread: channel(15954).useBaseChannelUnreadBadgeState(channel, false).unread,
   });
   closure_4 = tmp3;
-  const obj3 = channel(16770);
+  const obj3 = channel(15954);
   const items2 = [UserGuildSettingsStore];
   const stateFromStores1 = channel(504).useStateFromStores(items2, () =>
     UserGuildSettingsStore.getChannelMuteConfig(channel.guild_id, channel.id),
@@ -110,7 +110,7 @@ function HomeDrawerDMExpandedChildren(channel) {
     }
     return tmp2;
   }, items5);
-  return closure_10(channel(16732).HomeDrawerSharedItem, { title, subtitle });
+  return closure_10(channel(15916).HomeDrawerSharedItem, { title, subtitle });
 }
 const View = fn(17).View;
 const isMultiUserDM = fn(2048).isMultiUserDM;

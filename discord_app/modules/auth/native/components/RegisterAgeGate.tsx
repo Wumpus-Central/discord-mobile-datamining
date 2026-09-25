@@ -5,15 +5,15 @@ import RegistrationStepsUtils from "../RegistrationStepsUtils.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ConsentStore from "../../../../stores/ConsentStore.tsx";
-import hooks_mod from "../../../../../_runtime/metro/04416__.js";
+import hooks_mod from "../../../../../_runtime/metro/04418__.js";
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const RegistrationUIStore = fn(16363);
+const RegistrationUIStore = fn(15543);
 ({ updateRegistrationOptions: closure_7, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
-const RegistrationConstants = fn(16364);
+const RegistrationConstants = fn(15544);
 ({ RegisterTransitionSteps: closure_9, RegistrationTransitionActionTypes: c10 } = RegistrationConstants);
 const AuthStates = fn(1074).AuthStates;
 const jsxProd = fn(21);

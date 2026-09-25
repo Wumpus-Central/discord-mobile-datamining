@@ -34,14 +34,14 @@ export const getDeliveredQuestId = function getDeliveredQuestId(creative) {
   }
   return questId;
 };
-export const getDeliveredBounty = function getDeliveredBounty(creative1) {
+export const getDeliveredBounty = function getDeliveredBounty(creative) {
   let type;
-  if (creative1 != null) {
-    type = creative1.type;
+  if (creative != null) {
+    type = creative.type;
   }
   let bounty = null;
   if (type === AdCreativeType.AdCreativeType.BOUNTY) {
-    bounty = creative1.bounty;
+    bounty = creative.bounty;
   }
   return bounty;
 };

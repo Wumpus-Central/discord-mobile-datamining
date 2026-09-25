@@ -176,8 +176,8 @@ export default noop.memo(() => {
             const intl2 = closure_1_0(1115).intl;
             obj2.title = intl2.string(closure_1_0(1115).t.OjbtDm);
             obj2.body = message;
-            closure_1_1(5195).show(obj2);
-            const obj = closure_1_1(5195);
+            closure_1_1(5196).show(obj2);
+            const obj = closure_1_1(5196);
           },
         )
         .finally(() => closure_1_1(false));
@@ -226,8 +226,8 @@ export default noop.memo(() => {
           const intl2 = closure_1_0(1115).intl;
           obj2.title = intl2.string(closure_1_0(1115).t.OjbtDm);
           obj2.body = message;
-          closure_1_1(5195).show(obj2);
-          const obj = closure_1_1(5195);
+          closure_1_1(5196).show(obj2);
+          const obj = closure_1_1(5196);
         },
       );
     } else {

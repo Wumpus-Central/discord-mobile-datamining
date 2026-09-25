@@ -1,7 +1,7 @@
 // discord_app/modules/guild_action_sheet/native/components/GuildActionSheetDirectory.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/06957_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/06040_BottomSheetModal.js";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import GuildActionSheetActions from "GuildActionSheetActions.tsx";
 import GuildActionSheetHeaderDefault from "GuildActionSheetHeader.tsx";

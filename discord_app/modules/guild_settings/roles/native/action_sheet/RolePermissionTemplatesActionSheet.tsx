@@ -67,7 +67,7 @@ export default function RolePermissionTemplatesActionSheet(guildId) {
             importDefault(closure_0);
             closure_1_1(4796).hideActionSheet();
             const obj = closure_1_1(4796);
-            const result = closure_0(4522).roleTemplateAppliedToast();
+            const result = closure_0(4524).roleTemplateAppliedToast();
           };
           obj4.onCancel = function onCancel() {
             closure_1_1(4796).hideActionSheet();
@@ -111,7 +111,7 @@ export default function RolePermissionTemplatesActionSheet(guildId) {
               importDefault(closure_0);
               closure_1_1(4796).hideActionSheet();
               const obj = closure_1_1(4796);
-              const result = closure_0(4522).roleTemplateAppliedToast();
+              const result = closure_0(4524).roleTemplateAppliedToast();
             };
             obj4.onCancel = function onCancel() {
               closure_1_1(4796).hideActionSheet();

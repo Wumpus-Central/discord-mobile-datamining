@@ -36,6 +36,7 @@ import ReferralSystemMessage from "ReferralSystemMessage.tsx";
 import VoiceSessionSystemMessage from "VoiceSessionSystemMessage.tsx";
 import FriendRequestAcceptedSystemMessage from "FriendRequestAcceptedSystemMessage.tsx";
 import GiftIntentSystemMessage from "GiftIntentSystemMessage.tsx";
+import GuildSpaceSystemMessage from "GuildSpaceSystemMessage.tsx";
 import Constants from "../../../../../Constants.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
@@ -147,6 +148,8 @@ export const createSystemMessageContent = function createSystemMessageContent(me
                         return FriendRequestAcceptedSystemMessage.createFriendRequestAcceptedSystemMessage(message);
                       } else if (constants.GIFTING_PROMPT === type) {
                         return GiftIntentSystemMessage.createGiftIntentSystemMessage(message);
+                      } else if (constants.GUILD_SPACE_MESSAGE === type) {
+                        return GuildSpaceSystemMessage.createGuildSpaceSystemMessage(message);
                       } else {
                         return null;
                       }

@@ -47,15 +47,15 @@ export default function GuildProfileGamesActionSheet(profile) {
   const id = profile.id;
   const gameActivity = profile.gameActivity;
   const tmp = closure_7();
-  const allGuildProfileGames = id(10111).useAllGuildProfileGames(profile);
-  let obj = id(10111);
+  const allGuildProfileGames = id(9208).useAllGuildProfileGames(profile);
+  let obj = id(9208);
   const intl = id(1115).intl;
-  const obj2 = id(8518);
+  const obj2 = id(7608);
   const items = [id];
   const str = intl.format(id(1115).t.vuAVo7, { serverName: profile.name });
   const callback = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(10098, dependencyMap.paths), "GuildProfileActionSheet:" + id, { guildId: id });
+    obj.openLazy(asyncRequireImpl(9195, dependencyMap.paths), "GuildProfileActionSheet:" + id, { guildId: id });
   }, items);
   const obj3 = {
     ref: obj2.useBottomSheetRef().bottomSheetRef,
@@ -67,7 +67,7 @@ export default function GuildProfileGamesActionSheet(profile) {
   const obj4 = { children: null };
   const obj5 = { style: tmp.container, children: null };
   const str1 = intl.format(id(1115).t.vuAVo7, { serverName: profile.name }).toString();
-  obj5.children = jsx(id(5992).TableRowGroup, {
+  obj5.children = jsx(id(5994).TableRowGroup, {
     title: intl.format(id(1115).t.vuAVo7, { serverName: profile.name }).toString(),
     hasIcons: true,
     children: allGuildProfileGames.map((game) => (
@@ -75,8 +75,8 @@ export default function GuildProfileGamesActionSheet(profile) {
     )),
   });
   obj4.children = <View style={tmp.container}>{null}</View>;
-  obj3.children = jsx(id(6957).BottomSheetScrollView, { children: null });
-  return jsx(id(7483).BottomSheet, {
+  obj3.children = jsx(id(6040).BottomSheetScrollView, { children: null });
+  return jsx(id(6566).BottomSheet, {
     ref: obj2.useBottomSheetRef().bottomSheetRef,
     scrollable: true,
     onDismiss: callback,

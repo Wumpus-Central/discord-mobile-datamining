@@ -8,15 +8,15 @@ function useEnableSwitchIconsSettingValue() {
   const items = [AccessibilityStore];
   return initialize.useStateFromStores(items, () => isSwitchIconsEnabled.isSwitchIconsEnabled);
 }
-const SettingBuilders = fn(11811);
+const SettingBuilders = fn(10993);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["S3z+pV"]);
   },
-  parent: fn(8323).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7412).MobileUserSettings.ACCESSIBILITY,
   useValue: useEnableSwitchIconsSettingValue,
-  onValueChange: fn(14812).setSwitchIconsEnabled,
+  onValueChange: fn(13974).setSwitchIconsEnabled,
   hasIcon: true,
 });
 const size = fn(2);

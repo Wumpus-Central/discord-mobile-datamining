@@ -64,7 +64,7 @@ let closure_12 = noop.memo((joinRequest) => {
       obj2.onPress = tmp;
       obj2.start = start;
       obj2.end = end;
-      return closure_7(joinRequest(5910).TableRow, obj2);
+      return closure_7(joinRequest(5912).TableRow, obj2);
     }
   }
 });

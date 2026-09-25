@@ -5,7 +5,7 @@ import util from "../../../intl/index.native.tsx";
 import utils_ImageUtilsDefault from "../../../utils/native/ImageUtils.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import CheckpointMessageComponentUtils from "../../checkpoint/CheckpointMessageComponentUtils.tsx";
+import checkpoint_CheckpointMessageComponentUtils from "../../checkpoint/CheckpointMessageComponentUtils.tsx";
 import ImageIcon from "../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import RowGeneratorTypes from "../../messages/native/renderer/RowGeneratorTypes.tsx";
@@ -141,7 +141,8 @@ export const ForwardPreview = function ForwardPreview(message) {
   const tmp = closure_8();
   const forwardPreviewContent = ForwardPreviewUtils.useForwardPreviewContent({ message, channel, forwardOptions });
   ({ attachments, embeds, hasContent, contentMessage } = forwardPreviewContent);
-  const checkpointDataFromMessage = CheckpointMessageComponentUtils.getCheckpointDataFromMessage(contentMessage);
+  const checkpointDataFromMessage =
+    checkpoint_CheckpointMessageComponentUtils.getCheckpointDataFromMessage(contentMessage);
   if (attachments.length > 0) {
     const countByResult = _mod12.countBy(attachments, (proxy_url) =>
       MosaicMediaType.getMosaicMediaTypeForAttachment(proxy_url, true),
@@ -278,10 +279,10 @@ export const ForwardPreview = function ForwardPreview(message) {
   if (tmp36Result) {
     const obj23 = {
       variant: "text-md/medium",
-      children: CheckpointMessageComponentUtils.getCheckpointLabel(checkpointDataFromMessage),
+      children: checkpoint_CheckpointMessageComponentUtils.getCheckpointLabel(checkpointDataFromMessage),
     };
     tmp36Result = hasOwnProperty(Text_Text.Text, obj23);
-    const tmp2Result2 = CheckpointMessageComponentUtils;
+    const tmp2Result2 = checkpoint_CheckpointMessageComponentUtils;
   }
   const items6 = [tmp36Result, ,];
   let tmp36Result5 = hasContent;

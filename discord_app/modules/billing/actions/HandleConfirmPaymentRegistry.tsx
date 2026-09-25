@@ -104,7 +104,7 @@ prototype["getStripe"] = function getStripe() {
             _self = self;
             dependencyMap = 1;
             c3 = 1;
-            const obj6 = { value: tmp4(5181).getStripe(), done: false };
+            const obj6 = { value: tmp4(5182).getStripe(), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {
@@ -118,7 +118,7 @@ prototype["getStripe"] = function getStripe() {
           _self.stripe = value;
         }
         if (null == closure_129_0.stripe) {
-          throw _self(5167).dispatchConfirmationError("Stripe cannot be null on a redirect.");
+          throw _self(5168).dispatchConfirmationError("Stripe cannot be null on a redirect.");
         } else {
           c3 = 3;
           const obj7 = { value: closure_129_0.stripe, done: true };
@@ -176,10 +176,10 @@ prototype["getStripeRedirect"] = function getStripeRedirect(arg0) {
     const paymentIntent = closure_129_4.paymentIntent;
     const error = closure_129_4.error;
     if (null != error) {
-      throw _var(5167).dispatchConfirmationError(error);
+      throw _var(5168).dispatchConfirmationError(error);
     }
     if (null == paymentIntent) {
-      throw _var(5167).dispatchConfirmationError("paymentIntent not available with successful api call");
+      throw _var(5168).dispatchConfirmationError("paymentIntent not available with successful api call");
     }
     const next_action = paymentIntent.next_action;
     if (next_action != null) {
@@ -189,7 +189,7 @@ prototype["getStripeRedirect"] = function getStripeRedirect(arg0) {
       }
     }
     if (null == url) {
-      throw _var(5167).dispatchConfirmationError("confirm payment did not return a redirect url");
+      throw _var(5168).dispatchConfirmationError("confirm payment did not return a redirect url");
     }
     return paymentIntent.next_action.redirect_to_url.url;
   })();
@@ -286,10 +286,10 @@ prototype["confirmDirectPaymentSource"] = function confirmDirectPaymentSource(ar
     const paymentIntent = closure_128_5.paymentIntent;
     const error = closure_128_5.error;
     if (null != error) {
-      throw tmp2(5167).dispatchConfirmationError(error);
+      throw tmp2(5168).dispatchConfirmationError(error);
     }
     if (null == paymentIntent) {
-      throw tmp2(5167).dispatchConfirmationError("paymentIntent not available with successful stripe call");
+      throw tmp2(5168).dispatchConfirmationError("paymentIntent not available with successful stripe call");
     }
     value = {
       pendingCustomerAction: closure_128_4,

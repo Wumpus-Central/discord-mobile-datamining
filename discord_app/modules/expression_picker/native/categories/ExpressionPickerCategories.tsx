@@ -1,6 +1,6 @@
 // discord_app/modules/expression_picker/native/categories/ExpressionPickerCategories.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Portal from "../../../../../_runtime/04702_Portal.js";
+import Portal from "../../../../../_runtime/04704_Portal.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;

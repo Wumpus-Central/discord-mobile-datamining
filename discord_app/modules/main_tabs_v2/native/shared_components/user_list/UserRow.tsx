@@ -74,7 +74,7 @@ function UserRowSubLabel(arg0) {
   }
 }
 const View = fn(17).View;
-const UserRowModes = fn(11210).UserRowModes;
+const UserRowModes = fn(10308).UserRowModes;
 const Constants = fn(1074);
 ({ RelationshipTypes: closure_12, StatusTypes: map1 } = Constants);
 const jsxProd = fn(21);
@@ -241,7 +241,7 @@ export default noop.memo(function UserRow(type) {
   const memo = flag2.useMemo(() => {
     const items = [];
     if (NONE !== UserRowModes.ACTIONS) {
-      let obj2 = { accessibilityActions: items, actions: "Array" };
+      let obj2 = { accessibilityActions: items, actions: "a" };
       return obj2;
     } else {
       if (constants.PENDING_INCOMING === type) {
@@ -302,11 +302,11 @@ export default noop.memo(function UserRow(type) {
             location: roleStyle,
             onConfirm() {
               if (null != closure_0) {
-                const result = type(4522).presentGameFriendRequestAcceptedToast();
-                const obj2 = type(4522);
+                const result = type(4524).presentGameFriendRequestAcceptedToast();
+                const obj2 = type(4524);
               } else {
-                const result1 = type(4522).presentFriendRequestAcceptedToast();
-                const obj = type(4522);
+                const result1 = type(4524).presentFriendRequestAcceptedToast();
+                const obj = type(4524);
               }
             },
           });
@@ -415,14 +415,14 @@ export default noop.memo(function UserRow(type) {
               channel = channel.getChannel(result);
               if (null != channel) {
                 user(38)(channel.isPrivate(), "must be a DM");
-                const obj2 = user(11219)(channel, false);
-                if (!obj2.inCall) {
-                  obj2.onPress();
+                const obj4 = user(10317)(channel, false);
+                if (!obj4.inCall) {
+                  obj4.onPress();
                 }
-                const tmp3 = user(38);
+                const tmp6 = user(38);
                 const obj = { recipientIds: current.id };
                 user(4842).openPrivateChannel(obj);
-                const tmpResult = user(4842);
+                const tmp4Result = user(4842);
               }
             });
         };
@@ -471,14 +471,14 @@ export default noop.memo(function UserRow(type) {
         channel = channel.getChannel(result);
         if (null != channel) {
           user(38)(channel.isPrivate(), "must be a DM");
-          const obj2 = user(11219)(channel, false);
-          if (!obj2.inCall) {
-            obj2.onPress();
+          const obj4 = user(10317)(channel, false);
+          if (!obj4.inCall) {
+            obj4.onPress();
           }
-          const tmp3 = user(38);
+          const tmp6 = user(38);
           const obj = { recipientIds: current.id };
           user(4842).openPrivateChannel(obj);
-          const tmpResult = user(4842);
+          const tmp4Result = user(4842);
         }
       });
       const ensurePrivateChannelResult = ChannelActionCreatorsDefault.ensurePrivateChannel(user.id);
@@ -496,11 +496,11 @@ export default noop.memo(function UserRow(type) {
         location: Friends_v2,
         onConfirm() {
           if (null != closure_0) {
-            const result = type(4522).presentGameFriendRequestAcceptedToast();
-            const obj2 = type(4522);
+            const result = type(4524).presentGameFriendRequestAcceptedToast();
+            const obj2 = type(4524);
           } else {
-            const result1 = type(4522).presentFriendRequestAcceptedToast();
-            const obj = type(4522);
+            const result1 = type(4524).presentFriendRequestAcceptedToast();
+            const obj = type(4524);
           }
         },
       };
@@ -532,10 +532,10 @@ export default noop.memo(function UserRow(type) {
   }, items7);
   const callback2 = flag2.useCallback(() => {
     if (null == onLongPress) {
-      asyncRequireImpl(8527, dependencyMap.paths).then((result) =>
+      asyncRequireImpl(7617, dependencyMap.paths).then((result) =>
         result.default({ userId: localUser.id, localUser, sourceAnalyticsLocations }),
       );
-      const promise = asyncRequireImpl(8527, dependencyMap.paths);
+      const promise = asyncRequireImpl(7617, dependencyMap.paths);
     } else {
       tmp(user);
     }
@@ -691,7 +691,7 @@ export default noop.memo(function UserRow(type) {
         const merged1 = Object.assign(obj10);
         let tmp32Result6 = label(tmp4(tmp5[45]), obj12);
         let tmp32 = label;
-        const tmp4Result = tmp4(tmp5[45]);
+        let tmp4Result = tmp4(tmp5[45]);
       }
       const items16 = [tmp32Result6, memo4, ,];
       if (user.bot) {

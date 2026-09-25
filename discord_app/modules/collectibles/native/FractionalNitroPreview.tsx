@@ -1,10 +1,10 @@
 // discord_app/modules/collectibles/native/FractionalNitroPreview.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/05285_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05286_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import CheckmarkSmallIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkSmallIcon.tsx";
-import _modDef13545 from "../../../../discord_assets/assets/orbs/fn_pdp_preview_header.png.js";
+import _modDef12697 from "../../../../discord_assets/assets/orbs/fn_pdp_preview_header.png.js";
 import NitroIconDefault from "NitroIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -91,7 +91,7 @@ export const FractionalNitroPreview = function FractionalNitroPreview() {
     end: VerticalGradient.END,
     style: tmp.gradient,
   };
-  obj8.uri = _modDef13545;
+  obj8.uri = _modDef12697;
   obj7.source = obj8;
   obj7.style = tmp.headerImage;
   items1[1] = closure_6(FastImageDefault, obj7);

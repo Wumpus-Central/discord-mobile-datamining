@@ -11,7 +11,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const Image = fn(17).Image;
-const TINY_BRONCO_BLOG_URL = fn(10123).TINY_BRONCO_BLOG_URL;
+const TINY_BRONCO_BLOG_URL = fn(9220).TINY_BRONCO_BLOG_URL;
 const Constants = fn(1074);
 ({ HelpdeskArticles: metroRequire, UserSettingsSections: closure_7 } = Constants);
 const ContentDismissActionType = fn(2041).ContentDismissActionType;
@@ -31,7 +31,7 @@ export default function TinyBroncoPromoSheet(markAsDismissed) {
   const tmp = closure_11();
   const isVerifiedTeen = dismissOnce(5041).useIsVerifiedTeen();
   let obj = dismissOnce(5041);
-  dismissOnce = dismissOnce(15090).useDismissOnce(markAsDismissed.markAsDismissed);
+  dismissOnce = dismissOnce(14256).useDismissOnce(markAsDismissed.markAsDismissed);
   const items = [dismissOnce];
   const items1 = [dismissOnce];
   const callback = noop.useCallback(() => {
@@ -82,8 +82,8 @@ export default function TinyBroncoPromoSheet(markAsDismissed) {
     tmp15 = obj3;
   }
   const obj4 = { illustration: null, title: null, description: null, onDismiss: null, actions: null };
-  let obj2 = dismissOnce(15090);
-  obj4.illustration = closure_9(Image, { source: tmp14(15091), style: tmp.illustration, resizeMode: "contain" });
+  let obj2 = dismissOnce(14256);
+  obj4.illustration = closure_9(Image, { source: tmp14(14257), style: tmp.illustration, resizeMode: "contain" });
   const intl2 = tmp2(1115).intl;
   obj4.title = intl2.string(tmp14(3070).GdTVPF);
   const intl3 = tmp2(1115).intl;
@@ -99,13 +99,13 @@ export default function TinyBroncoPromoSheet(markAsDismissed) {
   obj4.description = formatResult;
   obj4.onDismiss = callback;
   const obj8 = { size: "lg", style: tmp.actions, children: null };
-  const items5 = [closure_9(dismissOnce(5273).Button, { size: "lg", text: tmp15.text, onPress: tmp15.onPress })];
+  const items5 = [closure_9(dismissOnce(5274).Button, { size: "lg", text: tmp15.text, onPress: tmp15.onPress })];
   const obj10 = { size: "lg", variant: "secondary", text: null, onPress: null };
   const intl4 = tmp2(1115).intl;
   obj10.text = intl4.string(dismissOnce(1115).t["NX+WJN"]);
   obj10.onPress = callback1;
-  items5[1] = closure_9(dismissOnce(5273).Button, obj10);
+  items5[1] = closure_9(dismissOnce(5274).Button, obj10);
   obj8.children = items5;
-  obj4.actions = closure_10(dismissOnce(5738).ButtonGroup, obj8);
-  return closure_9(dismissOnce(10578).PromoSheet, obj4);
+  obj4.actions = closure_10(dismissOnce(5740).ButtonGroup, obj8);
+  return closure_9(dismissOnce(9680).PromoSheet, obj4);
 }

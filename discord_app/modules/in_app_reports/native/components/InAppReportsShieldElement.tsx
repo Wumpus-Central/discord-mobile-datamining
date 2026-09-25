@@ -1,5 +1,5 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsShieldElement.tsx
-import native from "../../../../design/assets/native.tsx";
+import ShieldSpotIllustration from "../../../../design/components/mana-assets/native/generated/ShieldSpotIllustration.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,8 +16,15 @@ export default function ShieldElement(element) {
   if (null != element) {
     tmp2 = null;
     if ("success" === element.type) {
-      const obj = { style: tmp.container, children: jsx(native.ShieldSpotIllustration, { width: 100, height: 100 }) };
-      tmp2 = <View style={tmp.container}>{jsx(native.ShieldSpotIllustration, { width: 100, height: 100 })}</View>;
+      const obj = {
+        style: tmp.container,
+        children: jsx(ShieldSpotIllustration.ShieldSpotIllustration, { width: 100, height: 100 }),
+      };
+      tmp2 = (
+        <View style={tmp.container}>
+          {jsx(ShieldSpotIllustration.ShieldSpotIllustration, { width: 100, height: 100 })}
+        </View>
+      );
     }
   }
   return tmp2;

@@ -85,7 +85,7 @@ class UploaderBase extends EventEmitter {
       hasImage: false,
       hasVideo: false,
       attachmentsCount: 0,
-      items: "category",
+      items: "channel",
     };
     return tmp3;
   }

@@ -50,8 +50,8 @@ export default function useStableParticipant(id, arg1, arg2) {
               userAvatarDecoration: null,
               streamId: "flexDirection",
               ringing: null,
-              hasVideo: "4.8.0",
-              isSelf: null,
+              hasVideo: 465.988,
+              isSelf: -136,
             };
             id = AuthenticationStore.getId();
             obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);

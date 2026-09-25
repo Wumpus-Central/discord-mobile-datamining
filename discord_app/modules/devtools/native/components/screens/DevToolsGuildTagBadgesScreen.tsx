@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildTagConstants = fn(8292);
+const GuildTagConstants = fn(7381);
 ({
   GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: metroRequire,
   GUILD_TAG_BADGE_PALETTE_PRESETS,
@@ -28,7 +28,7 @@ let closure_9 = found.map((item) => {
   return { name, value };
 });
 let items = [
-  { label: "Untinted", primary: "sa", secondary: "i" },
+  { label: "Untinted", primary: "dispatch", secondary: "i" },
   ...GUILD_TAG_BADGE_PALETTE_PRESETS.map((primary, index) => ({
     label: "P" + index + 1,
     primary: primary.primary,

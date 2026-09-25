@@ -31,7 +31,7 @@ let size = {
   width: 44,
   zIndex: 1,
 };
-const ColorUtils = fn(4678);
+const ColorUtils = fn(4680);
 size.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.56);
 size.borderRadius = nativeDefault.radii.round;
 let items = [{ translateY: -22 }];

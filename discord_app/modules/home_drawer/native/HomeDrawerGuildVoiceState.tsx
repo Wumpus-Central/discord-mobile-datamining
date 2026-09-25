@@ -4,7 +4,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/05285_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05286_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import useFetchStreamPreviewDefault from "../../go_live/useFetchStreamPreview.tsx";
 import AvatarPile from "../../../design/components/Pile/native/AvatarPile.native.tsx";
@@ -54,7 +54,7 @@ function LiveTag() {
   return closure_1_11(View, obj);
 }
 const View = fn(17).View;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4462).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4464).GUILD_VOCAL_CHANNELS_KEY;
 const ChannelTypes = fn(1074).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);

@@ -47,14 +47,14 @@ export default function GooglePlayPriceChangeActionSheet(markAsDismissed) {
     str = "";
   }
   const obj2 = markAsDismissed(504);
-  const tierDisplayNameByPlanId = markAsDismissed(4483).getTierDisplayNameByPlanId(str);
-  const tmp2Result = markAsDismissed(4483);
-  const tmp2Result5 = markAsDismissed(4483);
-  const intervalStringAsNoun = markAsDismissed(4483).getIntervalStringAsNoun(tmp2Result5.getInterval(str).intervalType);
-  const tmp2Result6 = markAsDismissed(4483);
-  const tmp2Result7 = markAsDismissed(7567);
-  const formatPriceResult = markAsDismissed(7567).formatPrice(stateFromStores.oldPrice, stateFromStores.oldCurrency);
-  const tmp2Result8 = markAsDismissed(7567);
+  const tierDisplayNameByPlanId = markAsDismissed(4485).getTierDisplayNameByPlanId(str);
+  const tmp2Result = markAsDismissed(4485);
+  const tmp2Result5 = markAsDismissed(4485);
+  const intervalStringAsNoun = markAsDismissed(4485).getIntervalStringAsNoun(tmp2Result5.getInterval(str).intervalType);
+  const tmp2Result6 = markAsDismissed(4485);
+  const tmp2Result7 = markAsDismissed(6650);
+  const formatPriceResult = markAsDismissed(6650).formatPrice(stateFromStores.oldPrice, stateFromStores.oldCurrency);
+  const tmp2Result8 = markAsDismissed(6650);
   const obj3 = { children: null };
   const obj4 = { style: tmp.container, children: null };
   const obj5 = { style: tmp.textContainer, children: null };
@@ -72,7 +72,7 @@ export default function GooglePlayPriceChangeActionSheet(markAsDismissed) {
     oldPrice: null,
     hc_article_url: null,
   };
-  const formatPriceResult1 = markAsDismissed(7567).formatPrice(stateFromStores.newPrice, stateFromStores.newCurrency);
+  const formatPriceResult1 = markAsDismissed(6650).formatPrice(stateFromStores.newPrice, stateFromStores.newCurrency);
   obj8.changeDate = new Date(stateFromStores.expectedChargeTime);
   obj8.interval = intervalStringAsNoun;
   obj8.newPrice = formatPriceResult1;
@@ -89,8 +89,8 @@ export default function GooglePlayPriceChangeActionSheet(markAsDismissed) {
   obj9.onPress = function onPress() {
     markAsDismissed(ContentDismissActionType.USER_DISMISS);
   };
-  items3[1] = closure_8(markAsDismissed(5273).Button, obj9);
+  items3[1] = closure_8(markAsDismissed(5274).Button, obj9);
   obj4.children = items3;
   obj3.children = closure_9(View, obj4);
-  return closure_8(markAsDismissed(7483).BottomSheet, obj3);
+  return closure_8(markAsDismissed(6566).BottomSheet, obj3);
 }

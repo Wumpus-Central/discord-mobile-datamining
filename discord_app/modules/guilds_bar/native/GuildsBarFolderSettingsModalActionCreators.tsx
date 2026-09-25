@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarFo
 
 export const showGuildsBarFolderModal = function showGuildsBarFolderModal(folderId) {
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(16715, dependencyMap.paths),
+    asyncRequireImpl(15899, dependencyMap.paths),
     { folderId },
     GUILD_FOLDER_SETTINGS_MODAL_KEY,
   );

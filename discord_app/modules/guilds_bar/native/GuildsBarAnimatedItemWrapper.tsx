@@ -151,8 +151,8 @@ function renderUnreadIndicator(arg0, sharedId, transitionState, cleanUp) {
     arg0,
   );
 }
-const IOS_POINTER_STYLE = fn(5282).IOS_POINTER_STYLE;
-const GuildsBarConstants = fn(16708);
+const IOS_POINTER_STYLE = fn(5283).IOS_POINTER_STYLE;
+const GuildsBarConstants = fn(15892);
 ({
   GUILD_ITEM_HIT_SLOP: hasOwnProperty,
   GUILD_ITEM_INSET_LEFT: metroRequire,
@@ -407,7 +407,7 @@ export default function GuildsBarAnimatedItemWrapper(id) {
         let AccessibilityAnnouncer = require;
         const intl = util.intl;
         const t = util.t;
-        AccessibilityAnnouncer = AccessibilityAnnouncer(4536).AccessibilityAnnouncer;
+        AccessibilityAnnouncer = AccessibilityAnnouncer(4538).AccessibilityAnnouncer;
         AccessibilityAnnouncer.announce(intl.string(expanded ? t.CUnsOR : t.jsudFd));
         ref.current = expanded;
         const stringResult = intl.string(expanded ? t.CUnsOR : t.jsudFd);

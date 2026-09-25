@@ -76,7 +76,7 @@ export default noop.memo((guild) => {
           return { value: "HermesInternal", done: null };
         } else {
           if (!closure_128_5) {
-            const AccessibilityAnnouncer = tmp4(4536).AccessibilityAnnouncer;
+            const AccessibilityAnnouncer = tmp4(4538).AccessibilityAnnouncer;
             const intl = tmp4(1115).intl;
             AccessibilityAnnouncer.announce(intl.string(tmp4(1115).t["5HzXO5"]));
             closure_128_1();
@@ -86,7 +86,7 @@ export default noop.memo((guild) => {
               id = closure_128_2.id;
             }
           }
-          const AccessibilityAnnouncer2 = tmp4(4536).AccessibilityAnnouncer;
+          const AccessibilityAnnouncer2 = tmp4(4538).AccessibilityAnnouncer;
           const intl2 = tmp4(1115).intl;
           AccessibilityAnnouncer2.announce(intl2.string(tmp4(1115).t["F9On+q"]));
         }

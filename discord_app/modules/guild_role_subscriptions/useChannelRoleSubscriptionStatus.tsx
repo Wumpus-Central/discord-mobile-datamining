@@ -48,10 +48,10 @@ let closure_6 = { needSubscriptionToAccess: false, isSubscriptionGated: false };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx");
 
-export default function useChannelRoleSubscriptionStatus(id) {
-  _require = id;
+export default function useChannelRoleSubscriptionStatus(arg0) {
+  _require = arg0;
   const items = [ChannelStore, GatedChannelStore, PermissionStore];
-  const items1 = [id];
+  const items1 = [arg0];
   return require("initialize").useStateFromStoresObject(
     items,
     () => getChannelRoleSubscriptionStatus(closure_0, ChannelStore, GatedChannelStore, PermissionStore),

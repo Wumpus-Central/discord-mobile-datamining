@@ -17,7 +17,7 @@ const require = globalThis.__r;
 
 require = fn;
 const PaymentGateways = fn(1074).PaymentGateways;
-const InviteTypes = fn(8065).InviteTypes;
+const InviteTypes = fn(7150).InviteTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx",

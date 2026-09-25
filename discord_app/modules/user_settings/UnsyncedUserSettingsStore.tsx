@@ -338,6 +338,16 @@ Object.defineProperty(prototype, "pauseSelfStreamPreviewWhenUnfocused", {
   },
   set: undefined,
 });
+Object.defineProperty(prototype, "videoBackground", {
+  get: function videoBackground() {
+    let videoBackground = closure_12.videoBackground;
+    if (videoBackground == null) {
+      videoBackground = null;
+    }
+    return videoBackground;
+  },
+  set: undefined,
+});
 UnsyncedUserSettingsStore.displayName = "UnsyncedUserSettingsStore";
 UnsyncedUserSettingsStore.persistKey = "UnsyncedUserSettingsStore";
 const items = [

@@ -10,7 +10,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const Constants = fn(7541);
+const Constants = fn(6624);
 ({ AVATAR_CONTAINER_SIZE, AVATAR_CUSTOM_STATUS_GAP } = Constants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);

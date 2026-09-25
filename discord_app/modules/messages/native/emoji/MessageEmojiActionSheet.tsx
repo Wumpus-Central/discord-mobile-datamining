@@ -68,7 +68,7 @@ function MessageCustomEmojiActionSheet(emojiNode) {
       nonce: v4Result,
     });
     obj3.children = <View style={tmp.contentWrapper}>{null}</View>;
-    return jsx(tmp2(7483).BottomSheet, {
+    return jsx(tmp2(6566).BottomSheet, {
       startExpanded: true,
       onDismiss() {
         AnalyticsUtilsDefault.track(AnalyticEvents.CLOSE_POPOUT, { nonce });

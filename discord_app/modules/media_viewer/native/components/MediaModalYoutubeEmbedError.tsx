@@ -45,7 +45,7 @@ export default noop.memo(function MediaModalYoutubeEmbedError(videoId) {
   obj3.onPress = function onPress() {
     LinkingDefault.openURL("https://youtube.com/watch?v=" + videoId);
   };
-  items[1] = closure_4(videoId(5273).Button, obj3);
+  items[1] = closure_4(videoId(5274).Button, obj3);
   obj.children = items;
   return closure_5(View, obj);
 });

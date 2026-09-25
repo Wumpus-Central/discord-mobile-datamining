@@ -12,7 +12,7 @@ function Slot(index) {
   const stagger = index.stagger;
   const tmp = closure_16(size);
   const glyph = tmp;
-  const sharedValue = index(4561).useSharedValue(0);
+  const sharedValue = index(4563).useSharedValue(0);
   let items = [cycle, index, sharedValue, stagger];
   const effect = cycle.useEffect(() => {
     const result = sharedValue.set(0);
@@ -31,7 +31,7 @@ function Slot(index) {
     );
     return () => index(color[5]).cancelAnimation(sharedValue);
   }, items);
-  let obj = index(4561);
+  let obj = index(4563);
   class T {
     constructor() {
       value = closure_6.get();
@@ -73,10 +73,10 @@ function Slot(index) {
   T.__workletHash = 16632594382704;
   T.__initData = __initData;
   const obj4 = { style: tmp.slot, children: null };
-  const animatedStyle = index(4561).useAnimatedStyle(T);
-  let obj2 = index(4561);
+  const animatedStyle = index(4563).useAnimatedStyle(T);
+  let obj2 = index(4563);
   let obj3 = { trackStepAt, progress: sharedValue, size };
-  obj4.children = jsx(size(4561).View, {
+  obj4.children = jsx(size(4563).View, {
     style: animatedStyle,
     children: closure_7.map((children) =>
       jsx(AIGlyphText.AIGlyphText, { size, color, allowFontScaling: false, style: glyph.glyph, children }, children),
@@ -85,7 +85,7 @@ function Slot(index) {
   return <stagger style={tmp.slot}>{null}</stagger>;
 }
 const View = fn(17).View;
-const AILoaderConstants = fn(14499);
+const AILoaderConstants = fn(13660);
 ({
   AI_LOADER_CYCLE_MS: hasOwnProperty,
   AI_LOADER_GAP_EM: metroRequire,
@@ -138,7 +138,7 @@ export const AILoader = noop.memo((size) => {
   }
   const accessibilityLabel = size.accessibilityLabel;
   let num2;
-  const reducedMotion = num2.useContext(num(4535).AccessibilityPreferencesContext).reducedMotion;
+  const reducedMotion = num2.useContext(num(4537).AccessibilityPreferencesContext).reducedMotion;
   dependencyMap = reducedMotion.enabled ? closure_8 : closure_5;
   num2 = 0;
   if (!reducedMotion.enabled) {

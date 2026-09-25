@@ -7,7 +7,7 @@ import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.nativ
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/06957_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/06040_BottomSheetModal.js";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import useArchiveOrDeleteDefault from "useArchiveOrDelete.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";

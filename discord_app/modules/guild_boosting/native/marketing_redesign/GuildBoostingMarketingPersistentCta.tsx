@@ -85,11 +85,11 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
     obj2.opacity = spring.withSpring(num3, closure_8);
     return obj2;
   };
-  let obj2 = isVisible(4561);
+  let obj2 = isVisible(4563);
   fn.__closure = {
     useReducedMotion: stateFromStores,
     VISIBILITY_OFFSET: 120,
-    withSpring: isVisible(5272).withSpring,
+    withSpring: isVisible(5273).withSpring,
     isVisible,
     SPRING_CONFIG,
   };
@@ -111,7 +111,7 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
   const obj3 = {
     useReducedMotion: stateFromStores,
     VISIBILITY_OFFSET: 120,
-    withSpring: isVisible(5272).withSpring,
+    withSpring: isVisible(5273).withSpring,
     isVisible,
     SPRING_CONFIG,
   };
@@ -125,10 +125,10 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
   const obj6 = { style: tmp.innerWraper, children: null };
   const obj7 = { style: tmp.guildInfoContainer, children: null };
   const obj8 = { style: tmp.guildIcon, textStyle: tmp.guildIconText, guild, size: null };
-  const tmp4 = stateFromStores(5285);
-  obj8.size = isVisible(5889).GuildIconSizes.LARGE;
+  const tmp4 = stateFromStores(5286);
+  obj8.size = isVisible(5891).GuildIconSizes.LARGE;
   const items3 = [
-    closure_6(stateFromStores(5889), obj8),
+    closure_6(stateFromStores(5891), obj8),
     closure_6(isVisible(4825).Text, {
       style: tmp.guildName,
       variant: "text-md/bold",
@@ -140,7 +140,7 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
   const items4 = [closure_7(View, obj7)];
   const obj10 = {
     style: tmp.buttonContainer,
-    children: closure_6(stateFromStores(7732), {
+    children: closure_6(stateFromStores(6817), {
       guild,
       previousGuildSubscriptionSlot,
       useShortenedCTA: true,
@@ -154,6 +154,6 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
   obj6.children = items4;
   obj5.children = closure_7(View, obj6);
   obj4.children = closure_6(tmp4, obj5);
-  return closure_6(stateFromStores(4561).View, obj4);
+  return closure_6(stateFromStores(4563).View, obj4);
 }
 export const VISIBILITY_OFFSET = 120;

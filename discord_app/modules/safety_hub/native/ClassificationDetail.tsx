@@ -222,7 +222,7 @@ function ClassificationPolicyCard(classificationDescription) {
   obj2.style = items;
   const obj3 = { style: tmp.classificationPolicyCardIcon, children: null };
   const tmp2 = TouchableHitBoxDefault;
-  obj3.children = closure_13(policyExplainerLink(9599).ShieldIcon, {
+  obj3.children = closure_13(policyExplainerLink(8697).ShieldIcon, {
     size: "sm",
     color: nativeDefault.colors.TEXT_LINK,
   });
@@ -322,7 +322,7 @@ function ClassificationDetailFooter(onClose) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const SafetyHubConstants = fn(8770);
+const SafetyHubConstants = fn(7860);
 ({
   SafetyHubAnalyticsActionSource: closure_9,
   SafetyHubAnalyticsActions: c10,

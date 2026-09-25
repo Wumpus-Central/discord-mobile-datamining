@@ -1,8 +1,8 @@
 // discord_app/modules/quests/useQuestForPlacement.tsx
 import DurationsDefault from "../../utils/Durations.tsx";
+import QuestsEligibility from "lib/QuestsEligibility.tsx";
 import QuestActionCreators from "QuestActionCreators.tsx";
 import DiscordAppStateDefault from "../app_state/DiscordAppState.native.tsx";
-import QuestsEligibility from "lib/QuestsEligibility.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import AdDeliveryStore from "../ads/AdDeliveryStore.tsx";
 import QuestStore from "QuestStore.tsx";

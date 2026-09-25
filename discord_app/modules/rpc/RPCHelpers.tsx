@@ -319,7 +319,7 @@ let closure_32 = async function _processSocketThrottlers(arg0) {
   }
 };
 const GUILD_VOCAL_CHANNEL_TYPES = fn(2048).GUILD_VOCAL_CHANNEL_TYPES;
-let Constants = fn(4733);
+let Constants = fn(4735);
 ({ RPC_LOCAL_SCOPE: closure_15, TransportTypes: closure_16 } = Constants);
 Constants = fn(1074);
 ({
@@ -472,7 +472,7 @@ export const transformChannel = function transformChannel(channel, arg1) {
           };
           const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
           obj.voice_state = obj3;
-          obj.user = closure_1(9670)(user);
+          obj.user = closure_1(8768)(user);
           return obj;
         }
       });

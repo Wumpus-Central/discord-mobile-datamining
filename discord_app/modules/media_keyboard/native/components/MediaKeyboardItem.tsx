@@ -8,7 +8,7 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
 import AttachmentIcon from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
-import _modDef10744 from "../../../../../_runtime/metro/10744__.js";
+import _modDef9848 from "../../../../../_runtime/metro/09848__.js";
 import CameraIcon from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UploadAttachmentStore from "../../../../stores/UploadAttachmentStore.tsx";
@@ -23,7 +23,7 @@ function NewCaption(arg0) {
   const items = [tmp.labelContainer, style];
   obj.style = items;
   const items1 = [
-    React7(native.Icon, { source: _modDef10744, style: tmp.icon }),
+    React7(native.Icon, { source: _modDef9848, style: tmp.icon }),
     React7(Text_Text.Text, { style: textStyle, color: "text-overlay-light", variant: "text-xs/bold", children: label }),
   ];
   obj.children = items1;
@@ -370,7 +370,7 @@ function MediaKeyboardSpecialButton(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable } = get_ActivityIndicator);
-const DeviceConstants = fn(10997);
+const DeviceConstants = fn(10101);
 ({ ALAssetsType: closure_7, DeviceMediaType: closure_8 } = DeviceConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -403,7 +403,7 @@ const rect = {
   left: 8,
   bottom: 8,
 };
-let ColorUtils = fn(4678);
+let ColorUtils = fn(4680);
 rect.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.6);
 rect.borderRadius = nativeDefault.radii.xs;
 obj.labelContainer = rect;
@@ -425,13 +425,13 @@ let size2 = {
   borderWidth: 1,
   borderColor: null,
 };
-ColorUtils = fn(4678);
+ColorUtils = fn(4680);
 size2.borderColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.1);
 obj.checkIconContainer = size2;
 let obj5 = {};
 const merged = Object.assign(get_ActivityIndicator.StyleSheet.absoluteFillObject);
 obj5.borderRadius = nativeDefault.radii.xs;
-ColorUtils = fn(4678);
+ColorUtils = fn(4680);
 obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.3);
 obj.selectedOverlay = obj5;
 obj.specialButton = { flexDirection: "column", justifyContent: "center", alignItems: "center", gap: 8 };

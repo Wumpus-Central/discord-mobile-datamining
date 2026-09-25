@@ -1,6 +1,6 @@
 // discord_app/modules/checkout/native/NativeCheckoutStore.tsx
 import _mod1243 from "../../../../_runtime/metro/01243__.js";
-import _mod4447 from "../../../../_runtime/metro/04447__.js";
+import _mod4449 from "../../../../_runtime/metro/04449__.js";
 import OrderActionCreators from "../../payments/OrderActionCreators.tsx";
 import ContextUtilsDefault from "../../../utils/ContextUtils.tsx";
 import payments_OrderActionCreators from "../../payments/native/OrderActionCreators.tsx";
@@ -19,14 +19,14 @@ let result = size.fileFinishedImporting("modules/checkout/native/NativeCheckoutS
 export const NativeCheckoutStoreContextOrNull = context;
 export const useNativeCheckoutStore = function useNativeCheckoutStore(arg0) {
   if (shallow === undefined) {
-    shallow = _mod4447.shallow;
+    shallow = _mod4449.shallow;
   }
   const tmp3 = closure_7();
   return _mod1243.useStoreWithEqualityFn(tmp3, arg0, shallow);
 };
 export const useNativeCheckoutStoreOrNull = function useNativeCheckoutStoreOrNull(arg0) {
   if (shallow === undefined) {
-    shallow = _mod4447.shallow;
+    shallow = _mod4449.shallow;
   }
   context = noop.useContext(context);
   let storeWithEqualityFn = null;
@@ -711,5 +711,5 @@ export const createNativeStore = function createNativeStore(arg0) {
     };
     obj.onOrderRetryCancellation = runRevertOrderToDraft;
     return obj;
-  }, _mod4447.shallow);
+  }, _mod4449.shallow);
 };

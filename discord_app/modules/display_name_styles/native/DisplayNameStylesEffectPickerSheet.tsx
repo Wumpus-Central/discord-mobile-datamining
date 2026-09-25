@@ -115,10 +115,10 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
   first = undefined;
   closure_5 = undefined;
   const tmp = closure_9();
-  let obj = userId(8518);
-  const visibleEffectOrder = userId(15689).useVisibleEffectOrder();
-  let obj2 = userId(15689);
-  const displayNameStylesNewEffects = userId(15690).useDisplayNameStylesNewEffects(visibleEffectOrder);
+  let obj = userId(7608);
+  const visibleEffectOrder = userId(14859).useVisibleEffectOrder();
+  let obj2 = userId(14859);
+  const displayNameStylesNewEffects = userId(14860).useDisplayNameStylesNewEffects(visibleEffectOrder);
   ({ dotEffectIds: c2, dismissEffectDot: c3 } = displayNameStylesNewEffects);
   [first, closure_5] = first.useState(selectedEffectId);
   closure_6 = tmp7;
@@ -136,8 +136,8 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
     const intl2 = tmp2(1115).intl;
     obj6.text = intl2.string(tmp2(1115).t.XqMe3N);
     obj6.onPress = tmp8;
-    obj5.trailing = closure_7(tmp2(5273).Button, obj6);
-    obj4.header = closure_7(onSelectEffect(15694), obj5);
+    obj5.trailing = closure_7(tmp2(5274).Button, obj6);
+    obj4.header = closure_7(onSelectEffect(14864), obj5);
     const obj7 = { style: tmp.container, children: null };
     const obj8 = { style: tmp.contentContainer, children: null };
     const obj9 = {
@@ -164,11 +164,11 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
         );
       }),
     };
-    obj8.children = closure_7(tmp2(5271).Stack, obj9);
+    obj8.children = closure_7(tmp2(5272).Stack, obj9);
     obj7.children = closure_7(closure_5, obj8);
     obj4.children = closure_7(closure_5, obj7);
-    tmp9 = closure_7(tmp2(7483).BottomSheet, obj4);
-    const tmp12 = onSelectEffect(15694);
+    tmp9 = closure_7(tmp2(6566).BottomSheet, obj4);
+    const tmp12 = onSelectEffect(14864);
   }
   return tmp9;
 }

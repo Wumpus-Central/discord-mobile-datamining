@@ -10,11 +10,11 @@ import CodedLink from "../../coded_links/CodedLink.tsx";
 import QuestTypes from "../../quests/QuestTypes.tsx";
 import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
 import InviteTypeUtils from "../../instant_invite/InviteTypeUtils.tsx";
+import QuestActionCreators from "../../quests/QuestActionCreators.tsx";
 import messages_MessagesUtils from "MessagesUtils.tsx";
 import computeScrollData from "../../chat/native/computeScrollData.tsx";
 import NativeChatUtilsDefault from "../../chat/native/NativeChatUtils.tsx";
 import ChatChangesetUpdateTracker from "../../chat/native/ChatChangesetUpdateTracker.tsx";
-import QuestActionCreators from "../../quests/QuestActionCreators.tsx";
 import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers.tsx";
 import openMediaModalOverlayAltTextSheetDefault from "../../media_viewer/native/components/overlay/openMediaModalOverlayAltTextSheet.tsx";
 import MessagesHandlers from "MessagesHandlers.tsx";
@@ -50,9 +50,9 @@ function isLoadingAtTop(arg0, arg1) {
     return false;
   }
 }
-let closure_6 = fn(9737).updateShouldShowJumpToPresentButton;
+let closure_6 = fn(8835).updateShouldShowJumpToPresentButton;
 let closure_7 = fn(2107).getUserCommunicationDisabledVersion;
-const Changeset = fn(8281).Changeset;
+const Changeset = fn(7370).Changeset;
 const Constants = fn(1074);
 ({
   ActivityActionTypes: closure_12,
@@ -360,7 +360,7 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
     oldestUnreadMessageId: messages.oldestUnreadMessageId,
     shouldJumpToOriginalPost: callback3,
   };
-  ({ startOrCancelLatestMessagesLoad: closure_15, channelLatestMessageLoadingStatsManager } = first(11877)({
+  ({ startOrCancelLatestMessagesLoad: closure_15, channelLatestMessageLoadingStatsManager } = first(11020)({
     channelId: messages.channelId,
     jumpTargetId: messages.messages.jumpTargetId,
     oldestUnreadMessageId: messages.oldestUnreadMessageId,
@@ -420,7 +420,7 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
     visibleMessagesWindowHandler: messages.visibleMessagesWindowHandler,
     selectedConversation: messages.selectedConversation,
   };
-  const tmp16 = first(11877)({
+  const tmp16 = first(11020)({
     channelId: messages.channelId,
     jumpTargetId: messages.messages.jumpTargetId,
     oldestUnreadMessageId: messages.oldestUnreadMessageId,
@@ -441,7 +441,7 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
     scrollToTopMessage,
     updateNativeRows,
     handleScrollPosition,
-  } = first(11879)({
+  } = first(11022)({
     chatRef: ref5,
     chatManager: first,
     chatUpdatesQueue,
@@ -516,7 +516,7 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
     scrollToNewMessages,
     getChatRef,
   }));
-  let tmp17 = first(11879)({
+  let tmp17 = first(11022)({
     chatRef: ref5,
     chatManager: first,
     chatUpdatesQueue,
@@ -617,7 +617,7 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
     scrollToTopMessage,
     useReducedMotion: messages.useReducedMotion,
   };
-  ({ updateRows: closure_33, scrollToMessageId: closure_34 } = first(12290)({
+  ({ updateRows: closure_33, scrollToMessageId: closure_34 } = first(11416)({
     chatManager: first,
     rowGenerator: first1(
       noop.useState(() => new first(hasJumpedToOriginalPost[16])()),
@@ -1512,7 +1512,7 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
   });
   let obj6 = { children: null };
   const items4 = [
-    findMessageIndex(first(12237), {
+    findMessageIndex(first(11359), {
       ref: ref5,
       style: messages.style,
       inverted: true,

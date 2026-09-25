@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/create_guild/native/CreateGui
 
 export default {
   openCreateGuildModal(onSuccess) {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13057, dependencyMap.paths), { onSuccess }, React4);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12188, dependencyMap.paths), { onSuccess }, React4);
   },
   closeCreateGuildModal() {
     ModalActionCreatorsDefault.popWithKey(React4);
@@ -20,11 +20,11 @@ export default {
     NUFActionCreators.nextOnboardingStep({});
   },
   openGuildInviteScreen(channel) {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13057, dependencyMap.paths), { channel }, React4);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12188, dependencyMap.paths), { channel }, React4);
   },
   openGuildJoinServerScreen() {
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(13057, dependencyMap.paths),
+      asyncRequireImpl(12188, dependencyMap.paths),
       { initialState: constants.JOIN_SERVER },
       React4,
     );

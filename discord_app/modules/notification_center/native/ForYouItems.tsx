@@ -65,14 +65,14 @@ function ForYouMessagePreviewV2(item) {
   ({ compactMode, roleStyle } = item);
   let messagePreviewIconV2 = closure_29();
   let SMALL = dependencyMap;
-  const notifCenterV2MessagePreviewParser = message_channel_id(5293).getNotifCenterV2MessagePreviewParser(
+  const notifCenterV2MessagePreviewParser = message_channel_id(5294).getNotifCenterV2MessagePreviewParser(
     closure_27(),
     closure_28,
     roleStyle,
   );
   const intl = item(1115).intl;
   const stringResult = intl.string(item(1115).t.BOi07B);
-  const obj = message_channel_id(5293);
+  const obj = message_channel_id(5294);
   let message = item.message;
   let num;
   if (message != null) {
@@ -124,11 +124,11 @@ function ForYouMessagePreviewV2(item) {
         first = embeds[0];
       }
     }
-    const tmp15 = guild_id(8391)(first);
+    const tmp15 = guild_id(7480)(first);
     let result = stringResult;
     if (null != tmp15) {
-      result = tmp2(8090).formatPollResultNotificationCenterText(tmp15);
-      const tmp2Result = tmp2(8090);
+      result = tmp2(7175).formatPollResultNotificationCenterText(tmp15);
+      const tmp2Result = tmp2(7175);
     }
   } else if (stickers.length > 0) {
     const intl6 = tmp2(1115).intl;
@@ -242,7 +242,7 @@ function ForYouMessagePreviewV2(item) {
   if (acked) {
     str2 = "text-muted";
   }
-  const items5 = [item(8219).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj6, { textColor: str2 })];
+  const items5 = [item(7308).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj6, { textColor: str2 })];
   if (null == ATTACHMENT) {
     items5[1] = tmp26;
     obj5.children = items5;
@@ -252,7 +252,7 @@ function ForYouMessagePreviewV2(item) {
   } else {
     const obj7 = { style: messagePreviewIconV2.messagePreviewIconV2Container, children: null };
     if (constants4.ATTACHMENT === ATTACHMENT) {
-      let tmp29 = guild_id(11597);
+      let tmp29 = guild_id(10802);
       const obj8 = { source: tmp29, size: null, style: null };
       SMALL = tmp2(1177).IconSizes.SMALL;
       obj8.size = SMALL;
@@ -263,12 +263,12 @@ function ForYouMessagePreviewV2(item) {
     } else if (constants4.STICKER !== ATTACHMENT) {
       tmp29 = null;
       if (constants4.VOICE_MESSAGE === ATTACHMENT) {
-        tmp29 = guild_id(8977);
+        tmp29 = guild_id(8071);
       }
     }
-    tmp29 = guild_id(10768);
+    tmp29 = guild_id(9872);
   }
-  const tmp2Result10 = item(8219);
+  const tmp2Result10 = item(7308);
 }
 function ApplicationName(applicationId) {
   applicationId = applicationId.applicationId;
@@ -322,7 +322,7 @@ const Constants = fn(1074);
   MessageTypes: closure_18,
   EMPTY_STRING_SNOWFLAKE_ID: closure_19,
 } = Constants);
-const NotificationTypes = fn(6925).NotificationTypes;
+const NotificationTypes = fn(6008).NotificationTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
 const viewabilityConfig = { waitForInteraction: false, viewAreaCoveragePercentThreshold: 100, minimumViewTime: 1000 };
@@ -604,15 +604,15 @@ let closure_35 = noop.memo((item) => {
       obj3.icon = tmp6(notificationCenterItemAcked[42]);
       obj3.IconComponent = tmp2(notificationCenterItemAcked[43]).TrashIcon;
       item = navigation(function* () {
-        yield tmp3(16841).deleteNotificationCenterItem(tmp3);
+        yield tmp3(16027).deleteNotificationCenterItem(tmp3);
         if (1 === tmp7) {
           c3 = 0;
           const obj7 = { key: "REMOVE_NOTIFICATION_ERROR", content: null };
           const intl = tmp3(1115).intl;
           obj7.content = intl.string(tmp3(1115).t.WDxhvB);
-          rowIndex(4523).open(obj7);
+          rowIndex(4525).open(obj7);
           c4 = 3;
-          rowIndex(4523);
+          rowIndex(4525);
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;

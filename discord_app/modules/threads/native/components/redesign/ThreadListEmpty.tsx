@@ -4,7 +4,7 @@ import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
-import _modDef12580 from "../../../../../../_runtime/metro/12580__.js";
+import _modDef11706 from "../../../../../../_runtime/metro/11706__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -37,7 +37,7 @@ export default noop.memo((onCreateThreadPress) => {
   const obj = { style: tmp.container, children: null };
   const obj2 = {
     style: tmp.iconWrapper,
-    children: React4(native.Icon, { source: _modDef12580, size: native.Icon.Sizes.MEDIUM }),
+    children: React4(native.Icon, { source: _modDef11706, size: native.Icon.Sizes.MEDIUM }),
   };
   const items = [React4(View, obj2), , ,];
   const obj4 = {

@@ -49,21 +49,21 @@ export default function NewMemberActionsCompleted(arg0) {
   let sharedValue;
   ({ initialPercent, numActions } = arg0);
   const tmp = closure_7();
-  sharedValue = sharedValue(4561).useSharedValue(initialPercent);
+  sharedValue = sharedValue(4563).useSharedValue(initialPercent);
   const items = [sharedValue];
   const effect = noop.useEffect(() => {
     const result = sharedValue.set(1);
   }, items);
-  let obj = sharedValue(4561);
+  let obj = sharedValue(4563);
   const fn = function b() {
     const obj = { width: null };
     const obj2 = ReanimatedRexport;
     obj.width = obj2.withDelay(500, timing.withTiming(`${100 * sharedValue.get()}%`, { duration: 700 }));
     return obj;
   };
-  let obj2 = sharedValue(4561);
+  let obj2 = sharedValue(4563);
   fn.__closure = {
-    withDelay: sharedValue(4561).withDelay,
+    withDelay: sharedValue(4563).withDelay,
     withTiming: sharedValue(4830).withTiming,
     barWidth: sharedValue,
   };
@@ -72,7 +72,7 @@ export default function NewMemberActionsCompleted(arg0) {
   const animatedStyle = obj2.useAnimatedStyle(fn);
   const effect1 = noop.useEffect(() => {
     const timerId = setTimeout(
-      () => closure_1_1(5032).popWithKey(sharedValue(12628).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
+      () => closure_1_1(5032).popWithKey(sharedValue(11754).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
       2500,
     );
   }, []);

@@ -3,7 +3,7 @@ import util from "../../../intl/index.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import PromoSheet from "../../../design/components/Sheet/native/PromoSheet.native.tsx";
-import openAccountStanding from "../../user_settings/core/native/openAccountStanding.tsx";
+import openAccountStanding from "../../user_settings/privacy_and_safety/native/openAccountStanding.tsx";
 import openQuestAccessSuspendedBottomSheet from "openQuestAccessSuspendedBottomSheet.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 

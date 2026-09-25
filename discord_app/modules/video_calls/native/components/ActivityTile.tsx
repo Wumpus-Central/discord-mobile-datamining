@@ -67,7 +67,7 @@ function ActivityTileInner(participant) {
               };
               v1 = 1;
               dependencyMap = 1;
-              const obj5 = { value: v1(9720)(obj4), done: false };
+              const obj5 = { value: v1(8818)(obj4), done: false };
               return obj5;
             } else {
               dependencyMap = 3;
@@ -77,8 +77,8 @@ function ActivityTileInner(participant) {
           dependencyMap = 3;
           throw value;
         } else if (arg0 !== 2) {
-          const result = tmp2(9805).setOrientationLockState(closure_128_3);
-          const obj = tmp2(9805);
+          const result = tmp2(8903).setOrientationLockState(closure_128_3);
+          const obj = tmp2(8903);
         }
         dependencyMap = 3;
         const obj6 = { value, done: true };

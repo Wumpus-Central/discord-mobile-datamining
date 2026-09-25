@@ -3,13 +3,13 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import spring from "../../../animation/reanimated/spring/spring.tsx";
 import Status_StatusUtils from "StatusUtils.tsx";
 import getStatusContainerStyleDefault from "getStatusContainerStyle.tsx";
-import _modDef14470 from "../../../../../_runtime/metro/14470__.js";
-import _modDef14471 from "../../../../../_runtime/metro/14471__.js";
-import _modDef14472 from "../../../../../_runtime/metro/14472__.js";
-import _modDef14473 from "../../../../../_runtime/metro/14473__.js";
-import _modDef14474 from "../../../../../_runtime/metro/14474__.js";
-import _modDef14475 from "../../../../../_runtime/metro/14475__.js";
-import _modDef14476 from "../../../../../_runtime/metro/14476__.js";
+import _modDef13631 from "../../../../../_runtime/metro/13631__.js";
+import _modDef13632 from "../../../../../_runtime/metro/13632__.js";
+import _modDef13633 from "../../../../../_runtime/metro/13633__.js";
+import _modDef13634 from "../../../../../_runtime/metro/13634__.js";
+import _modDef13635 from "../../../../../_runtime/metro/13635__.js";
+import _modDef13636 from "../../../../../_runtime/metro/13636__.js";
+import _modDef13637 from "../../../../../_runtime/metro/13637__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const STATUS_PADDING = fn(1178).STATUS_PADDING;
 const StatusTypes = fn(1074).StatusTypes;
-const ChannelAnimationConstants = fn(13418);
+const ChannelAnimationConstants = fn(12568);
 ({ TYPING_ENTERING: closure_8, TYPING_EXITING: closure_9, CHANNEL_SPRING_CONFIG: c10 } = ChannelAnimationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -94,23 +94,23 @@ export default function Status(isMobileOnline) {
   obj.style = items;
   const obj2 = { style: closure_13().statusIcon, source: null, resizeMode: "stretch" };
   if (streaming) {
-    let tmp4Result = _modDef14470;
+    let tmp4Result = _modDef13631;
   } else if (flag2) {
-    tmp4Result = _modDef14471;
+    tmp4Result = _modDef13632;
   } else if (flag) {
-    tmp4Result = _modDef14472;
+    tmp4Result = _modDef13633;
   } else if (StatusTypes.IDLE === status) {
-    tmp4Result = _modDef14473;
+    tmp4Result = _modDef13634;
   } else if (StatusTypes.DND === status) {
-    tmp4Result = _modDef14474;
+    tmp4Result = _modDef13635;
   } else {
     if (StatusTypes.OFFLINE !== status) {
       if (StatusTypes.INVISIBLE !== status) {
         const ONLINE = StatusTypes.ONLINE;
-        tmp4Result = _modDef14476;
+        tmp4Result = _modDef13637;
       }
     }
-    tmp4Result = _modDef14475;
+    tmp4Result = _modDef13636;
   }
   obj2.source = tmp4Result;
   obj.children = closure_1_11(React4, obj2);

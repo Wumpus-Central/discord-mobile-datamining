@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/MoreVerticalIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod13357 from "../../../../../../../_runtime/metro/13357__.js";
+import _mod12507 from "../../../../../../../_runtime/metro/12507__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const MoreVerticalIcon = function MoreVerticalIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13357, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12507, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

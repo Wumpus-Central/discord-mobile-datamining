@@ -1,7 +1,7 @@
 // discord_app/modules/premium/PremiumSubscriptionOfferUtil.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import Server from "../../flow/Server.tsx";
-import _modDef4416 from "../../../_runtime/metro/04416__.js";
+import _modDef4418 from "../../../_runtime/metro/04418__.js";
 import usePremiumTrialOffer from "hooks/usePremiumTrialOffer.android.tsx";
 import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil.tsx";
 import usePremiumDiscountOffer from "hooks/usePremiumDiscountOffer.android.tsx";
@@ -95,8 +95,8 @@ function useHasDiscountApplied() {
   let tmp4 = null != prop;
   if (tmp4) {
     const _Date = Date;
-    tmp4 = _modDef4416(Date.now()) <= _modDef4416(prop);
-    const tmp6Result = _modDef4416(Date.now());
+    tmp4 = _modDef4418(Date.now()) <= _modDef4418(prop);
+    const tmp6Result = _modDef4418(Date.now());
   }
   return tmp4;
 }
@@ -121,8 +121,8 @@ export const useIsInPremiumOfferExperience = function useIsInPremiumOfferExperie
     let tmp12 = null != prop;
     if (tmp12) {
       const _Date = Date;
-      tmp12 = _modDef4416(Date.now()) <= _modDef4416(prop);
-      const tmp14Result = _modDef4416(Date.now());
+      tmp12 = _modDef4418(Date.now()) <= _modDef4418(prop);
+      const tmp14Result = _modDef4418(Date.now());
     }
     return null != premiumTrialOffer || hasActiveTrial || null != premiumDiscountOffer || null != tmp7 || tmp12;
   } else {
@@ -221,8 +221,8 @@ export const useShouldFetchChurnOffer = function useShouldFetchChurnOffer() {
     let tmp8 = null != prop;
     if (tmp8) {
       const _Date = Date;
-      tmp8 = _modDef4416(Date.now()) <= _modDef4416(prop);
-      const tmp10Result = _modDef4416(Date.now());
+      tmp8 = _modDef4418(Date.now()) <= _modDef4418(prop);
+      const tmp10Result = _modDef4418(Date.now());
     }
     let tmp13 = null !== stateFromStores && stateFromStores.hasPremiumNitroMonthly && !tmp8;
     if (tmp13) {

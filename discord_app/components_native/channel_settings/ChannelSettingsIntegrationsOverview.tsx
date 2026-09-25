@@ -23,7 +23,7 @@ function LinkedLobbyFormSection(channel) {
   if (linkedLobby != null) {
     application_id = linkedLobby.application_id;
   }
-  const getOrFetchApplication = channel(7501).useGetOrFetchApplication(application_id);
+  const getOrFetchApplication = channel(6584).useGetOrFetchApplication(application_id);
   let tmp5 = null;
   if (null != getOrFetchApplication) {
     const obj3 = { title: null, hasIcons: true, children: null };
@@ -38,8 +38,8 @@ function LinkedLobbyFormSection(channel) {
     obj4.onPress = function onPress() {
       closure_1.push(ChannelSettingsSections.EDIT_LINKED_LOBBY, { channel, numScreensToPop: 1 });
     };
-    obj3.children = closure_6(tmp(5910).TableRow, obj4);
-    tmp5 = closure_6(tmp(5992).TableRowGroup, obj3);
+    obj3.children = closure_6(tmp(5912).TableRow, obj4);
+    tmp5 = closure_6(tmp(5994).TableRowGroup, obj3);
     const obj11 = { id: null, icon: null };
   }
   return tmp5;

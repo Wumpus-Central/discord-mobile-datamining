@@ -48,7 +48,7 @@ function PreviewNitroCard(style) {
 }
 function GetNitroCard(style) {
   let analyticsLocations;
-  let nitroTrialCtaOverride = analyticsLocations(7776).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
+  let nitroTrialCtaOverride = analyticsLocations(6861).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
   analyticsLocations = useAnalyticsLocationsDefault(items).analyticsLocations;
   items = [analyticsLocations];
   let callback = noop.useCallback(() => {
@@ -63,7 +63,7 @@ function GetNitroCard(style) {
     };
     openPremiumModalDefault(obj);
   }, items);
-  let obj = analyticsLocations(7776);
+  let obj = analyticsLocations(6861);
   ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(
     false,
     callback,
@@ -73,7 +73,7 @@ function GetNitroCard(style) {
   ));
   const tmp5 = usePremiumFeatureUpsellGetNitroDefault(false, callback, constants2.USER_SETTINGS, undefined, items);
   const mobileNitroPreviewDirectCheckoutEnabled =
-    analyticsLocations(15016).useMobileNitroPreviewDirectCheckoutEnabled();
+    analyticsLocations(14178).useMobileNitroPreviewDirectCheckoutEnabled();
   const obj3 = { style: style.style, ctaText: null, description: null, disabled: null, onPress: null };
   if (nitroTrialCtaOverride == null) {
     const intl = tmp(1115).intl;

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import GuildThemePresets from "../GuildThemePresets.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05285_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05286_LinearGradient.js";
 import GuildThemePreviewOverlayDefault from "GuildThemePreviewOverlay.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 

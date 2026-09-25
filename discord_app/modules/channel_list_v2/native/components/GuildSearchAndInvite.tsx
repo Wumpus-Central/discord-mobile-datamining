@@ -4,10 +4,10 @@ import util from "../../../../intl/index.native.tsx";
 import useAlertStore from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import useStableCallbackDefault from "../../../../hooks/useStableCallback.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef9968 from "../../../../../_runtime/metro/09968__.js";
+import _modDef9066 from "../../../../../_runtime/metro/09066__.js";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import utils_InstantInviteUtils from "../../../../utils/native/InstantInviteUtils.tsx";
-import _modDef10378 from "../../../../../_runtime/metro/10378__.js";
+import _modDef9480 from "../../../../../_runtime/metro/09480__.js";
 import GuildDirectorySearchModalActionCreatorsDefault from "../../../directory_channels/native/components/GuildDirectorySearchModalActionCreators.tsx";
 import SearchPlatformUtilsDefault from "../../../search/native/SearchPlatformUtils.tsx";
 import useEventsButtonPropsDefault from "../../../guild_scheduled_events/native/hooks/useEventsButtonProps.tsx";
@@ -70,7 +70,7 @@ function GuildSearchAndInvite(guildId) {
       const obj = {
         variant: "secondary",
         size: "sm",
-        icon: _modDef10378,
+        icon: _modDef9480,
         onPress: onInvitePress,
         onPressDisabled: handleInviteDisabledPress,
         accessibilityLabel: null,
@@ -130,7 +130,7 @@ function GuildSearchAndInvite(guildId) {
   return closure_13(onEventsPress, tmp14);
 }
 const View = fn(17).View;
-const SEARCH_BAR_MARGIN_BOTTOM = fn(10464).SEARCH_BAR_MARGIN_BOTTOM;
+const SEARCH_BAR_MARGIN_BOTTOM = fn(9566).SEARCH_BAR_MARGIN_BOTTOM;
 const Constants = fn(1074);
 ({ GuildFeatures: c10, InstantInviteSources: closure_11 } = Constants);
 const jsxProd = fn(21);
@@ -195,8 +195,8 @@ export default noop.memo(function ConnectedGuildSearchAndInviteInner(guild) {
       constants2.GUILD_HEADER,
     );
   });
-  const shouldShowInvitesDisabledNotif = guild(12720).useShouldShowInvitesDisabledNotif(guild);
-  const obj2 = guild(12720);
+  const shouldShowInvitesDisabledNotif = guild(11846).useShouldShowInvitesDisabledNotif(guild);
+  const obj2 = guild(11846);
   const tmp5 = useEventsButtonPropsDefault(guild);
   const obj3 = {
     guildId: guild.id,

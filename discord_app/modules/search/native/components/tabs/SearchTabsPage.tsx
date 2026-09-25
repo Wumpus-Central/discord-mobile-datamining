@@ -36,7 +36,7 @@ function SearchTabsPage(selectMediaTab) {
     return ChannelStore.getChannel(channelId);
   });
   const obj = searchContext(504);
-  const isChannelSpoilerGated = searchContext(7659).useIsChannelSpoilerGated(stateFromStores);
+  const isChannelSpoilerGated = searchContext(6742).useIsChannelSpoilerGated(stateFromStores);
   searchContext(5039);
   if (tmp2) {
     if (tab !== SearchTabs.MEMBERS) {
@@ -73,7 +73,7 @@ function SearchTabsPage(selectMediaTab) {
       return jsx(LinksScreenDefault, { tab, searchContext, isFocused, width });
     } else if (SearchTabs.THREADS === tab) {
       const obj12 = { searchContext };
-      return jsx(searchContext(17287).SearchTabsThreadScreen, { searchContext });
+      return jsx(searchContext(16502).SearchTabsThreadScreen, { searchContext });
     } else if (SearchTabs.MESSAGES === tab) {
       const obj26 = { tab, searchContext, isFocused };
       return jsx(MessagesScreenDefault, { tab, searchContext, isFocused });
@@ -86,10 +86,10 @@ function SearchTabsPage(selectMediaTab) {
   } else {
     return null;
   }
-  const obj2 = searchContext(7659);
+  const obj2 = searchContext(6742);
 }
 const View = fn(17).View;
-const SearchTabs = fn(8209).SearchTabs;
+const SearchTabs = fn(7298).SearchTabs;
 const SearchTypes = fn(1074).SearchTypes;
 const jsx = fn(21).jsx;
 const createStyles = fn(4829);

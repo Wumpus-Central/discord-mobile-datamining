@@ -24,7 +24,7 @@ export const showSharePreparingModal = function showSharePreparingModal(onCancel
       },
     };
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(8717, dependencyMap.paths),
+      asyncRequireImpl(7807, dependencyMap.paths),
       {
         onCancel() {
           if (!_true) {

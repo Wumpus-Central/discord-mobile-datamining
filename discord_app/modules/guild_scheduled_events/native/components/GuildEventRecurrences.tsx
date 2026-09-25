@@ -66,7 +66,7 @@ export default function GuildEventRecurrences(guildEventId) {
         current.scrollToEnd();
       }
     };
-    canViewMoreRecurrences = closure_6(tmp8(5273).Button, obj4);
+    canViewMoreRecurrences = closure_6(tmp8(5274).Button, obj4);
   }
   items[2] = canViewMoreRecurrences;
   obj.children = items;

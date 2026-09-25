@@ -42,7 +42,7 @@ function SurveyOverrideInfoActionSheet(survey) {
       }
       require("ClipboardUtils").copy(str);
     };
-    return closure_9(closure_0(7532).ActionSheetRow, obj, tmp);
+    return closure_9(closure_0(6615).ActionSheetRow, obj, tmp);
   });
   obj.children = React7(ActionSheetRow.ActionSheetRow.Group, obj2);
   return React7(ActionSheet.ActionSheet, obj);
@@ -59,9 +59,9 @@ function SurveyOverrideActionSheet() {
     2,
   );
   const first = tmp[0];
-  let obj = { header: closure_9(first(7482).BottomSheetTitleHeader, { title: "Survey Override" }), children: null };
+  let obj = { header: closure_9(first(6565).BottomSheetTitleHeader, { title: "Survey Override" }), children: null };
   const items = [
-    closure_9(first(6936).TextInput, {
+    closure_9(first(6019).TextInput, {
       label: "Survey Override",
       size: "md",
       placeholder: "Enter the ID of the Survey you want to test",
@@ -91,9 +91,9 @@ function SurveyOverrideActionSheet() {
     }
     ActionSheetActionCreatorsDefault.hideActionSheet("SurveyOverrideActionSheet");
   };
-  items[1] = closure_9(first(5273).Button, obj2);
+  items[1] = closure_9(first(5274).Button, obj2);
   obj.children = items;
-  return closure_10(first(7530).ActionSheet, obj);
+  return closure_10(first(6613).ActionSheet, obj);
 }
 function SurveyInfo() {
   const items = [SurveyStore];
@@ -150,9 +150,9 @@ function ChangelogOverrideActionSheet() {
     2,
   );
   const first = tmp[0];
-  let obj = { header: closure_9(first(7482).BottomSheetTitleHeader, { title: "Changelog Override" }), children: null };
+  let obj = { header: closure_9(first(6565).BottomSheetTitleHeader, { title: "Changelog Override" }), children: null };
   const items = [
-    closure_9(first(6936).TextInput, {
+    closure_9(first(6019).TextInput, {
       label: "Changelog Override",
       size: "md",
       placeholder: "Enter the ID of the changelog you want to test",
@@ -182,9 +182,9 @@ function ChangelogOverrideActionSheet() {
     }
     ActionSheetActionCreatorsDefault.hideActionSheet("ChangelogOverrideActionSheet");
   };
-  items[1] = closure_9(first(5273).Button, obj2);
+  items[1] = closure_9(first(5274).Button, obj2);
   obj.children = items;
-  return closure_10(first(7530).ActionSheet, obj);
+  return closure_10(first(6613).ActionSheet, obj);
 }
 function ChangelogInfo() {
   const obj = { title: "Changelog", hasIcons: false, children: null };

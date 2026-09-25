@@ -110,7 +110,7 @@ let closure_12 = noop.memo((voiceState) => {
   const channel = voiceState.channel;
   const collapsed = voiceState.collapsed;
   const tmp = channel;
-  const tmp3 = closure_11(channel(8204)());
+  const tmp3 = closure_11(channel(7293)());
   const items = [GuildMemberStore];
   const items1 = [channel.guild_id, user.id];
   const stateFromStoresObject = user(504).useStateFromStoresObject(
@@ -161,7 +161,7 @@ let closure_12 = noop.memo((voiceState) => {
   obj5.sessionId = voiceState2.sessionId;
   obj5.channel = channel;
   obj5.isGuest = isGuest;
-  obj2.children = closure_6(tmp(16548), obj5, user.id);
+  obj2.children = closure_6(tmp(15728), obj5, user.id);
   return closure_6(View, obj2);
 });
 const size = fn(2);

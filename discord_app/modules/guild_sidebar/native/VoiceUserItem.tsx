@@ -3,11 +3,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import native from "../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
-import timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import useScaledTextLineHeight from "../../screen/native/useScaledTextLineHeight.android.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
-import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 const require = globalThis.__r;
 
@@ -15,9 +12,9 @@ require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let c9 = "text-sm/medium";
-let c10 = "redesign-channel-name-muted-text";
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+let c8 = "text-sm/medium";
+let c9 = "redesign-channel-name-muted-text";
 const XSMALL_20 = fn(1177).AvatarSizes.XSMALL_20;
 const createStyles = fn(4829);
 let obj = {
@@ -40,15 +37,12 @@ let size = {
   overflow: "hidden",
 };
 obj.voiceStateCollapsed = size;
-const ChannelListLayout = fn(10467);
+const ChannelListLayout = fn(9569);
 let merged = Object.assign(ChannelListLayout.makeSizeStyle(14));
 obj.voiceStateIcon = { marginLeft: 6 };
 obj.legacyVoiceStateIcon = { tintColor: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, marginLeft: 6 };
 obj.gameIcon = { marginLeft: 6 };
-let closure_12 = createStyles.createStyles(obj);
-const __initData = {
-  code: "function VoiceUserItemTsx1(){const{ringing,shouldAnimate,PULSE_ENDING_OPACITY,withRepeat,withSequence,withDelay,INNER_PULSE_DELAY,withTiming,PULSE_DURATION,Easing,PULSE_STARTING_OPACITY,FADE_DURATION}=this.__closure;if(!ringing){return{opacity:1.0};}else if(!shouldAnimate){return{opacity:PULSE_ENDING_OPACITY};}return{opacity:withRepeat(withSequence(withDelay(INNER_PULSE_DELAY,withTiming(PULSE_ENDING_OPACITY,{duration:PULSE_DURATION,easing:Easing.bezier(0.4,0.0,1,1)})),withDelay(PULSE_DURATION,withTiming(PULSE_STARTING_OPACITY,{duration:FADE_DURATION}))),-1)};}",
-};
+let closure_11 = createStyles.createStyles(obj);
 let obj3 = { marginLeft: 6 };
 let obj4 = { tintColor: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, marginLeft: 6 };
 size = fn(2);
@@ -58,206 +52,134 @@ export default noop.memo(function VoiceUserItem(guildId) {
   ({ member: require, user } = guildId);
   guildId = guildId.guildId;
   const channelId = guildId.channelId;
-  ({ disabled, platform, isInEmbeddedActivity, ringing } = guildId);
+  ({ disabled, platform, isInEmbeddedActivity } = guildId);
   ({ collapsed, stream, serverMute, serverDeaf, mute, deaf, localMute, video, voicePlatform } = guildId);
-  const tmp = closure_12();
-  const items = [stateFromStores];
-  stateFromStores = require("initialize").useStateFromStores(items, () => !stateFromStores.useReducedMotion);
-  let obj = require("initialize");
-  const first = user(guildId[12])(user.id, guildId, user(guildId[11])("channel_list"))[0];
+  const tmp = closure_11();
+  const first = user(guildId[10])(user.id, guildId, user(guildId[9])("channel_list"))[0];
   let application_id;
   if (first != null) {
     application_id = first.application_id;
   }
   function getSource() {
-    if (null != _require) {
-      if (null != _require.avatar) {
-        let guildMemberAvatarSource = AvatarUtilsDefault.getGuildMemberAvatarSource(_require, user);
+    if (null != require) {
+      if (null != require.avatar) {
+        let guildMemberAvatarSource = AvatarUtilsDefault.getGuildMemberAvatarSource(require, user);
       }
       return guildMemberAvatarSource;
     }
     guildMemberAvatarSource = user.getAvatarSource(guildId);
   }
-  const gameRecord = user(tmp3[13])(application_id).gameRecord;
-  const items1 = [guildId, channelId, application_id];
-  const callback = channelId.useCallback(() => {
-    AnalyticsUtilsDefault.track(AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_SHOWN, {
-      guild_id: guildId,
-      channel_id: channelId,
-      application_id,
-    });
-  }, items1);
-  require("ReanimatedRexport");
-  class A {
-    constructor() {
-      if (ringing) {
-        tmp = closure_5;
-        if (closure_5) {
-          obj1 = { opacity: null };
-          tmp2 = closure_0;
-          tmp3 = closure_2;
-          obj3 = closure_0(closure_2[15]);
-          obj4 = closure_0(closure_2[15]);
-          obj5 = closure_0(closure_2[15]);
-          obj6 = closure_0(closure_2[16]);
-          obj10 = { duration: 250, easing: null };
-          Easing = closure_0(closure_2[15]).Easing;
-          num = 1;
-          num2 = 0;
-          num3 = 0.4;
-          tmp4 = Easing;
-          num4 = 0.4;
-          num5 = 1;
-          num6 = 1;
-          obj10.easing = Easing.bezier(0.4, 0, 1, 1);
-          num7 = 100;
-          withDelayResult = obj5.withDelay(100, obj6.withTiming(0.4, obj10));
-          obj8 = closure_0(closure_2[15]);
-          obj9 = closure_0(closure_2[16]);
-          num8 = 0.1;
-          num9 = 250;
-          num10 = -1;
-          obj1.opacity = obj3.withRepeat(
-            obj4.withSequence(withDelayResult, obj8.withDelay(250, obj9.withTiming(0.1, { duration: 500 }))),
-            -1,
-          );
-          obj = obj1;
-        } else {
-          obj = { opacity: 0.4 };
-        }
-        tmp6 = obj;
-      } else {
-        return { opacity: 1 };
-      }
-      return;
-    }
-  }
-  const tmp6 = user(guildId[11])("channel_list");
-  A.__closure = {
-    ringing,
-    shouldAnimate: stateFromStores,
-    PULSE_ENDING_OPACITY: 0.4,
-    withRepeat: require("ReanimatedRexport").withRepeat,
-    withSequence: require("ReanimatedRexport").withSequence,
-    withDelay: require("ReanimatedRexport").withDelay,
-    INNER_PULSE_DELAY: 100,
-    withTiming: require("timing").withTiming,
-    PULSE_DURATION: 250,
-    Easing: require("ReanimatedRexport").Easing,
-    PULSE_STARTING_OPACITY: 0.1,
-    FADE_DURATION: 500,
-  };
-  A.__workletHash = 9430639809025;
-  A.__initData = __initData;
+  const gameRecord = user(tmp3[11])(application_id).gameRecord;
+  const items = [guildId, channelId, application_id];
   if (collapsed) {
-    let obj3 = { style: tmp.voiceStateCollapsed, children: null };
-    let obj4 = { source: getSource, size: XSMALL_20 };
-    obj3.children = closure_7(require("native").Avatar, obj4);
-    let tmp12Result = closure_7(ringing, obj3);
+    const obj2 = { style: tmp.voiceStateCollapsed, children: null };
+    const obj3 = { source: getSource, size: XSMALL_20 };
+    obj2.children = closure_6(require("native").Avatar, obj3);
+    let tmp8Result = closure_6(application_id, obj2);
   } else {
-    const items2 = [tmp.voiceState, ,];
+    const items1 = [tmp.voiceState];
     let disabled2 = disabled;
     if (disabled) {
       disabled2 = tmp.disabled;
     }
-    let obj5 = { style: null, children: null };
-    items2[1] = disabled2;
-    items2[2] = tmp11;
-    obj5.style = items2;
-    let obj6 = { source: getSource, size: XSMALL_20 };
-    const items3 = [closure_7(require("native").Avatar, obj6), , , , , , , ,];
-    let obj7 = { variant, color };
+    let obj = { style: null, children: null };
+    items1[1] = disabled2;
+    obj.style = items1;
+    const obj4 = { source: getSource, size: XSMALL_20 };
+    const items2 = [closure_6(require("native").Avatar, obj4), , , , , , , ,];
+    const obj5 = { variant, color };
     const merged = Object.assign(guildId);
-    items3[1] = closure_7(user(tmp3[18]), obj7);
+    items2[1] = closure_6(user(tmp3[14]), obj5);
     if (disabled) {
-      items3[2] = null;
+      items2[2] = null;
       if (disabled) {
-        items3[3] = null;
-        let tmp13Result = null;
+        items2[3] = null;
+        let tmp10Result = null;
         if (video) {
-          tmp13Result = null;
+          tmp10Result = null;
           if (!disabled) {
-            let obj8 = { size: "custom", color, style: tmp.voiceStateIcon };
-            tmp13Result = closure_7(require("VideoIcon").VideoIcon, obj8);
+            const obj6 = { size: "custom", color, style: tmp.voiceStateIcon };
+            tmp10Result = closure_6(require("VideoIcon").VideoIcon, obj6);
           }
         }
-        items3[4] = tmp13Result;
-        let tmp13Result7 = null;
+        items2[4] = tmp10Result;
+        let tmp10Result7 = null;
         if (isInEmbeddedActivity) {
-          let obj9 = {
-            source: user(tmp3[24]),
+          const obj7 = {
+            source: user(tmp3[20]),
             size: require("native").Icon.Sizes.REFRESH_SMALL_16,
             style: tmp.legacyVoiceStateIcon,
           };
-          tmp13Result7 = closure_7(require("native").Icon, obj9);
+          tmp10Result7 = closure_6(require("native").Icon, obj7);
         }
-        items3[5] = tmp13Result7;
+        items2[5] = tmp10Result7;
         if (platform == null) {
           platform = "";
         }
-        let tmp5Result1Result = user(tmp3[25])(platform);
-        if (tmp5Result1Result == null) {
-          tmp5Result1Result = require("getConsoleIcon").getConsoleIconForVoicePlatform(voicePlatform);
-          const tmp2Result2 = require("getConsoleIcon");
+        let tmp2Result1Result = user(tmp3[21])(platform);
+        if (tmp2Result1Result == null) {
+          tmp2Result1Result = require("getConsoleIcon").getConsoleIconForVoicePlatform(voicePlatform);
+          const tmp11Result = require("getConsoleIcon");
         }
-        let tmp13Result8 = null;
-        if (null != tmp5Result1Result) {
-          const obj10 = {
-            source: tmp5Result1Result,
+        let tmp10Result8 = null;
+        if (null != tmp2Result1Result) {
+          const obj8 = {
+            source: tmp2Result1Result,
             size: require("native").Icon.Sizes.REFRESH_SMALL_16,
             style: tmp.legacyVoiceStateIcon,
           };
-          tmp13Result8 = closure_7(require("native").Icon, obj10);
+          tmp10Result8 = closure_6(require("native").Icon, obj8);
         }
-        items3[6] = tmp13Result8;
-        let tmp13Result9 = null;
+        items2[6] = tmp10Result8;
+        let tmp10Result9 = null;
         if (stream) {
-          const obj11 = { style: tmp.legacyVoiceStateIcon };
-          tmp13Result9 = closure_7(require("native").LiveTag, obj11);
+          const obj9 = { style: tmp.legacyVoiceStateIcon };
+          tmp10Result9 = closure_6(require("native").LiveTag, obj9);
         }
-        items3[7] = tmp13Result9;
-        let tmp13Result10 = null;
+        items2[7] = tmp10Result9;
+        let tmp10Result10 = null;
         if (!disabled) {
-          tmp13Result10 = null;
+          tmp10Result10 = null;
           if (!isInEmbeddedActivity) {
-            tmp13Result10 = null;
+            tmp10Result10 = null;
             if (null != gameRecord) {
-              const obj12 = { game: gameRecord, size: 16, fallback: "none", style: tmp.gameIcon, onShown: callback };
-              tmp13Result10 = closure_7(user(tmp3[26]), obj12);
+              const obj10 = { game: gameRecord, size: 16, fallback: "none", style: tmp.gameIcon, onShown: tmp7 };
+              tmp10Result10 = closure_6(user(tmp3[22]), obj10);
             }
           }
         }
-        items3[8] = tmp13Result10;
-        obj5.children = items3;
-        tmp12Result = closure_8(user(tmp3[15]).View, obj5);
-        const tmp5Result2 = user(tmp3[25]);
+        items2[8] = tmp10Result10;
+        obj.children = items2;
+        tmp8Result = closure_7(tmp9, obj);
+        const tmp2Result2 = user(tmp3[21]);
       } else if (serverDeaf) {
-        const obj13 = { style: tmp.voiceStateIcon, color: "text-feedback-critical", size: "custom" };
-        let tmp13Result11 = closure_7(require("HeadphonesDenyIcon").HeadphonesDenyIcon, obj13);
+        const obj11 = { style: tmp.voiceStateIcon, color: "text-feedback-critical", size: "custom" };
+        let tmp10Result11 = closure_6(require("HeadphonesDenyIcon").HeadphonesDenyIcon, obj11);
       } else {
-        tmp13Result11 = null;
+        tmp10Result11 = null;
         if (deaf) {
-          const obj14 = { style: tmp.voiceStateIcon, size: "custom", color };
-          tmp13Result11 = closure_7(require("HeadphonesSlashIcon").HeadphonesSlashIcon, obj14);
+          const obj12 = { style: tmp.voiceStateIcon, size: "custom", color };
+          tmp10Result11 = closure_6(require("HeadphonesSlashIcon").HeadphonesSlashIcon, obj12);
         }
       }
     } else if (serverMute) {
-      const obj15 = { style: tmp.voiceStateIcon, color: "text-feedback-critical", size: "custom" };
-      let tmp13Result12 = closure_7(require("MicrophoneDenyIcon").MicrophoneDenyIcon, obj15);
+      const obj13 = { style: tmp.voiceStateIcon, color: "text-feedback-critical", size: "custom" };
+      let tmp10Result12 = closure_6(require("MicrophoneDenyIcon").MicrophoneDenyIcon, obj13);
     } else if (localMute) {
-      const obj16 = { style: tmp.voiceStateIcon, size: "custom", color };
-      tmp13Result12 = closure_7(require("MicrophoneDenyIcon").MicrophoneDenyIcon, obj16);
+      const obj14 = { style: tmp.voiceStateIcon, size: "custom", color };
+      tmp10Result12 = closure_6(require("MicrophoneDenyIcon").MicrophoneDenyIcon, obj14);
     } else {
-      tmp13Result12 = null;
+      tmp10Result12 = null;
       if (mute) {
-        const obj17 = { style: tmp.voiceStateIcon, size: "custom", color };
-        tmp13Result12 = closure_7(require("MicrophoneSlashIcon").MicrophoneSlashIcon, obj17);
+        const obj15 = { style: tmp.voiceStateIcon, size: "custom", color };
+        tmp10Result12 = closure_6(require("MicrophoneSlashIcon").MicrophoneSlashIcon, obj15);
       }
     }
-    const tmp5Result = user(tmp3[18]);
+    const tmp2Result = user(tmp3[14]);
+    tmp9 = application_id;
   }
-  return tmp12Result;
+  return tmp8Result;
 });
 export const getVoiceUserHeight = function getVoiceUserHeight(fontScale) {
-  return Math.max(useScaledTextLineHeight.scaleTextLineHeight(c9, fontScale), native.AVATAR_SIZE_MAP[XSMALL_20]) + 10;
+  return Math.max(useScaledTextLineHeight.scaleTextLineHeight(c8, fontScale), native.AVATAR_SIZE_MAP[XSMALL_20]) + 10;
 };

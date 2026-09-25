@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/color_picker/native/showCusto
 
 export default function showCustomColorPickerActionSheet(arg0, stack) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(14967, dependencyMap.paths),
+    asyncRequireImpl(14129, dependencyMap.paths),
     CustomColorPicker,
     arg0,
     stack,

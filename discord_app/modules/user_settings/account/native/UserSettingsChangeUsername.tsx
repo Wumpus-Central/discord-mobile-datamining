@@ -11,11 +11,11 @@ require = fn;
 function UsernameStatusMessage(showHint) {
   showHint = showHint.showHint;
   const match = showHint(5014).match(showHint.usernameStatus);
-  let obj = { type: showHint(15074).NameValidationState.ERROR, message: null };
+  let obj = { type: showHint(14240).NameValidationState.ERROR, message: null };
   const P = showHint(5014).P;
   obj.message = P.select();
   const str = showHint(5014);
-  const obj2 = { type: showHint(15074).NameValidationState.AVAILABLE, message: null };
+  const obj2 = { type: showHint(14240).NameValidationState.AVAILABLE, message: null };
   const P2 = showHint(5014).P;
   obj2.message = P2.select();
   const withResult = match.with(obj, (children) =>
@@ -157,7 +157,7 @@ export default function UserSettingsChangeUsername() {
           const tmp34 = first1;
         }
         user.discriminator = tmp34;
-        yield closure_2_2(7317).saveAccountChanges(user, { close: false });
+        yield closure_2_2(6400).saveAccountChanges(user, { close: false });
         closure_129_0 = value;
         if (!closure_129_0.ok) {
           const v6OrEarlierAPIError = new closure_0(1271).V6OrEarlierAPIError(closure_129_0);

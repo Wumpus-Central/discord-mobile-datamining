@@ -51,7 +51,7 @@ function handleLogout(source) {
   }
   const dispatchResult = DispatcherDefault.dispatch(obj2);
 }
-const setPromoEmailConsentState = fn(6923).setPromoEmailConsentState;
+const setPromoEmailConsentState = fn(6006).setPromoEmailConsentState;
 const Constants = fn(1074);
 ({
   Endpoints: closure_9,
@@ -60,7 +60,7 @@ const Constants = fn(1074);
   AbortCodes: closure_12,
   Routes: map1,
 } = Constants);
-const PushNotificationConstants = fn(6925);
+const PushNotificationConstants = fn(6008);
 ({ DEVICE_PUSH_VOIP_PROVIDER: closure_14, getDevicePushProvider: closure_15 } = PushNotificationConstants);
 const logger = new LoggerDefault("AuthenticationActionCreators");
 const PasswordResetResult = { MFA: "MFA", SUCCESS: "SUCCESS" };
@@ -305,7 +305,7 @@ export default {
               const obj12 = tmp3(573);
               c4 = 2;
               c5 = 1;
-              const obj5 = { value: closure_0(6926).fetchWebAuthnPasswordlessChallenge(), done: false };
+              const obj5 = { value: closure_0(6009).fetchWebAuthnPasswordlessChallenge(), done: false };
               return obj5;
             }
           } else if (1 === tmp8) {
@@ -360,7 +360,7 @@ export default {
             if (4 === tmp8) {
               dependencyMap = 1;
               closure_128_4 = closure_2;
-              let tmp16 = closure_128_4 instanceof closure_0(4729).APIError;
+              let tmp16 = closure_128_4 instanceof closure_0(4731).APIError;
               if (tmp16) {
                 tmp16 = null != closure_128_4.status;
               }
@@ -373,7 +373,7 @@ export default {
               if (tmp16) {
                 c4 = 6;
                 c5 = 1;
-                const obj15 = { value: tmp3(6927).signalUnknownCredential(closure_128_3), done: false };
+                const obj15 = { value: tmp3(6010).signalUnknownCredential(closure_128_3), done: false };
                 return obj15;
               }
             } else if (5 === tmp8) {
@@ -532,7 +532,7 @@ export default {
             dependencyMap = 0;
             closure_128_1 = closure_2;
             const obj8 = { type: "LOGIN_FAILURE", error: null };
-            const v6OrEarlierAPIError = new ticket(4729).V6OrEarlierAPIError(closure_128_1);
+            const v6OrEarlierAPIError = new ticket(4731).V6OrEarlierAPIError(closure_128_1);
             obj8.error = v6OrEarlierAPIError;
             tmp3(573).dispatch(obj8);
             throw closure_128_1;
@@ -691,9 +691,21 @@ export default {
     }
     const HTTP = require("HTTPUtils").HTTP;
     value = HTTP.get({ url: closure_9.ME, oldFormErrors: true, rejectWithError: true });
-    return value.catch(() => {
-      handleLogout(closure_0, DEFAULT_LOGGED_OUT);
-    });
+    return value.then(
+      () => true,
+      (status) => {
+        status = undefined;
+        if (status != null) {
+          status = status.status;
+        }
+        if (401 !== status) {
+          throw status;
+        } else {
+          handleLogout(closure_0, DEFAULT_LOGGED_OUT);
+          return false;
+        }
+      },
+    );
   },
   verify(arg0) {
     closure_0 = arg0;
@@ -821,7 +833,7 @@ export default {
           } else if (1 === tmp7) {
             dependencyMap = 0;
             closure_128_9 = source;
-            const v6OrEarlierAPIError = new token(4729).V6OrEarlierAPIError(closure_128_9);
+            const v6OrEarlierAPIError = new token(4731).V6OrEarlierAPIError(closure_128_9);
             closure_128_8 = v6OrEarlierAPIError;
             const obj10 = { type: "LOGIN_FAILURE", error: closure_128_8 };
             password(573).dispatch(obj10);
@@ -943,7 +955,7 @@ export default {
           } else if (1 === tmp7) {
             dependencyMap = 0;
             closure_128_2 = closure_2;
-            const v6OrEarlierAPIError = new login(4729).V6OrEarlierAPIError(closure_128_2);
+            const v6OrEarlierAPIError = new login(4731).V6OrEarlierAPIError(closure_128_2);
             closure_128_1 = v6OrEarlierAPIError;
             if (closure_128_1.code === constants2.PHONE_VERIFICATION_REQUIRED) {
               const obj9 = { type: "LOGIN_PASSWORD_RECOVERY_PHONE_VERIFICATION", credentials: null };

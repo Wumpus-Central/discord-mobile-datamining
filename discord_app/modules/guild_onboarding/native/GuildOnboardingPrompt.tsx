@@ -261,7 +261,7 @@ function DropdownOption(option) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire, ScrollView: closure_7, FlatList: closure_8 } = get_ActivityIndicator);
-let closure_13 = fn(7430).GuildOnboardingModalStates;
+let closure_13 = fn(6513).GuildOnboardingModalStates;
 const EMOJI_URL_BASE_SIZE = fn(1375).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
@@ -272,7 +272,7 @@ let obj2 = {
     display: "flex",
     flex: 1,
     flexGrow: 1,
-    marginTop: fn(5987).NAV_BAR_HEIGHT,
+    marginTop: fn(5989).NAV_BAR_HEIGHT,
     marginBottom: 16,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   },
@@ -299,7 +299,7 @@ let obj3 = {
   display: "flex",
   flex: 1,
   flexGrow: 1,
-  marginTop: fn(5987).NAV_BAR_HEIGHT,
+  marginTop: fn(5989).NAV_BAR_HEIGHT,
   marginBottom: 16,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
 };
@@ -631,7 +631,7 @@ export const DropdownPrompt = function DropdownPrompt(guildId) {
   items3[1] = { paddingBottom: 64 + currentPrompt(selectOption[15])().bottom + 48 + 48, position: "relative" };
   obj2.contentContainerStyle = items3;
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7468, dependencyMap.paths), "DropdownOptions", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(6551, dependencyMap.paths), "DropdownOptions", {
       guildId,
       promptId: currentPrompt.id,
       onSelect(id, flag) {

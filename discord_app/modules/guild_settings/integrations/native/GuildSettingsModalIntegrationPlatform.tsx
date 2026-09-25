@@ -207,10 +207,10 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
       GuildSettingsActionCreatorsDefault.saveGuild(guild.id, obj2);
     }
   }
-  const token = platformType(4526).useToken(closeGuildSettings(576).modules.mobile.TABLE_ROW_PADDING);
+  const token = platformType(4528).useToken(closeGuildSettings(576).modules.mobile.TABLE_ROW_PADDING);
   const tmp5 = closure_14();
   dependencyMap = tmp5;
-  let obj = platformType(4526);
+  let obj = platformType(4528);
   const navigation = platformType(1484).useNavigation();
   let obj2 = platformType(1484);
   const items = [guild];
@@ -236,7 +236,7 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
       fn = () => null;
     }
     const obj3 = { headerLeft: fn, title: null, headerRight: null };
-    value = tmp3(5588).get(platformType);
+    value = tmp3(5590).get(platformType);
     let name;
     if (value != null) {
       name = value.name;
@@ -305,8 +305,8 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
     const obj12 = { variant: "text-sm/medium", color: "text-muted", children: formatResult };
     items2[1] = closure_11(tmp(4825).Text, obj12);
     obj9.children = items2;
-    obj8.children = closure_12(tmp(5271).Stack, obj9);
-    const items3 = [closure_11(tmp(8951).Form, obj8), closure_11(tmp(7373).NavScrim, {})];
+    obj8.children = closure_12(tmp(5272).Stack, obj9);
+    const items3 = [closure_11(tmp(8045).Form, obj8), closure_11(tmp(6456).NavScrim, {})];
     obj11.children = items3;
     return closure_12(closure_13, obj11);
   }

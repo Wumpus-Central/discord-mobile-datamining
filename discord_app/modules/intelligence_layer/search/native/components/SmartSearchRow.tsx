@@ -9,9 +9,9 @@ import IntelligenceSearchStore from "../../IntelligenceSearchStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const IntelligenceSearchConstants = fn(12707);
+const IntelligenceSearchConstants = fn(11833);
 ({ MAX_PRESENTED_CITATIONS: closure_9, COLLAPSED_FRAME_HEIGHT } = IntelligenceSearchConstants);
-let closure_10 = fn(8209).SEARCH_MESSAGES_DEFAULT_LINE_CLAMP;
+let closure_10 = fn(7298).SEARCH_MESSAGES_DEFAULT_LINE_CLAMP;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(4829);

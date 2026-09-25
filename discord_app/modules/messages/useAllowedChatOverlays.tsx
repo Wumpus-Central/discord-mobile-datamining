@@ -6,8 +6,8 @@ import EmbeddedActivitiesStore from "../activities/EmbeddedActivitiesStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
 require = fn;
-const ChatOverlays = fn(11770).ChatOverlays;
-const ActivityPanelModes = fn(9396).ActivityPanelModes;
+const ChatOverlays = fn(10952).ChatOverlays;
+const ActivityPanelModes = fn(8494).ActivityPanelModes;
 const no_text_activity = "no_text_activity";
 let obj = { no_text_activity: null };
 let items = [, ,];

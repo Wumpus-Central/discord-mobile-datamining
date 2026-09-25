@@ -96,7 +96,7 @@ export default function UserSettingsStartupTimings() {
               closure_128_1 = undefined;
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: tmp5(4693).getAppFirstVisibleTimestamp(), done: false };
+              const obj5 = { value: tmp5(4695).getAppFirstVisibleTimestamp(), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -108,9 +108,9 @@ export default function UserSettingsStartupTimings() {
             return obj6;
           } else {
             closure_128_0 = value;
-            closure_128_1 = tmp5(10540)(closure_128_0);
+            closure_128_1 = tmp5(9642)(closure_128_0);
             const obj7 = { message: closure_128_1 };
-            tmp2(8711).showShareActionSheet(obj7, "Startup Timing");
+            tmp2(7801).showShareActionSheet(obj7, "Startup Timing");
             c3 = 3;
             return { value: "HermesInternal", done: null };
           }
@@ -278,6 +278,6 @@ export default function UserSettingsStartupTimings() {
   obj5.renderItem = function renderItem(children) {
     return closure_8(lastTrackedAppUiViewed2Properties, { children: children.item });
   };
-  obj4.children = closure_8(tmp10(9077).FlashList, obj5);
+  obj4.children = closure_8(tmp10(8171).FlashList, obj5);
   return closure_8(checked, obj4);
 }

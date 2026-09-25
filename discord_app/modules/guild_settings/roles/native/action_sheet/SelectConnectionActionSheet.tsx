@@ -5,7 +5,7 @@ import useThemeDefault from "../../../../../hooks/useTheme.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import BottomSheetModal from "../../../../../../_runtime/06957_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../../_runtime/06040_BottomSheetModal.js";
 import common_SafeAreaView from "../../../../../components_native/common/SafeAreaView.tsx";
 import BottomSheetTitleHeader from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import ActionSheet from "../../../../../design/components/Sheet/native/ActionSheet.native.tsx";
@@ -28,7 +28,7 @@ function IdentityApplicationRow(arg0) {
     const bot = getOrFetchApplicationBatched.bot;
     let tmp6Result = null;
     if (null != bot) {
-      const obj2 = { user: bot, size: native.AvatarSizes.XSMALL, guildId: "r" };
+      const obj2 = { user: bot, size: native.AvatarSizes.XSMALL, guildId: "Array" };
       tmp6Result = timestampProducer(native.Avatar, obj2);
     }
     const obj3 = { icon: tmp6Result, label: getOrFetchApplicationBatched.name, subLabel: null, onPress: null };
@@ -113,7 +113,7 @@ export default function SelectConnectionActionSheet(arg0) {
       let tmp = null;
       if (null != application) {
         const obj = { icon: null, label: null, subLabel: null, onPress: null };
-        const obj2 = { user: application.bot, size: require("native").AvatarSizes.XSMALL, guildId: "r" };
+        const obj2 = { user: application.bot, size: require("native").AvatarSizes.XSMALL, guildId: "Array" };
         obj.icon = closure_1_6(require("native").Avatar, obj2);
         obj.label = application.name;
         let description;

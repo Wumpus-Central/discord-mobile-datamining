@@ -33,108 +33,124 @@ function setSecondaryToken(token, __analytics__) {
   }
 }
 function removeToken(__analytics__) {
-  let tmp3 = global;
-  if (null != __analytics__) {
-    tmp3 = dependencyMap[__analytics__];
-    delete tmp[tmp2];
-    delete tmp[tmp2];
-  }
-  if (tmp3 === global) {
-    global = null;
-    closure_8 = null;
-  }
-  if (c12) {
-    const Storage4 = Storage6.Storage;
-    Storage4.remove(React3);
-    const Storage5 = Storage6.Storage;
-    Storage5.remove(React2);
-  } else {
-    if (null != closure_8) {
-      const Storage2 = Storage6.Storage;
-      const result = Storage2.set(React3, closure_8);
-      let tmp8 = require;
-    } else {
-      tmp8 = require;
-      const Storage = Storage6.Storage;
-      Storage.remove(React3);
+  if (c13) {
+    let tmp9 = global;
+    if (null != __analytics__) {
+      tmp9 = dependencyMap[__analytics__];
+      delete tmp[tmp2];
+      delete tmp[tmp2];
     }
-    const Storage3 = tmp8(510).Storage;
-    const result1 = Storage3.set(React2, closure_11);
+    let tmp14 = null != tmp9;
+    if (tmp14) {
+      tmp14 = tmp9 === global;
+    }
+    if (tmp14) {
+      global = null;
+      closure_8 = null;
+    }
+    if (c12) {
+      const Storage4 = Storage6.Storage;
+      Storage4.remove(React3);
+      const Storage5 = Storage6.Storage;
+      Storage5.remove(React2);
+    } else {
+      if (null != closure_8) {
+        const Storage2 = Storage6.Storage;
+        const result = Storage2.set(React3, closure_8);
+        let tmp18 = require;
+      } else {
+        tmp18 = require;
+        const Storage = Storage6.Storage;
+        Storage.remove(React3);
+      }
+      const Storage3 = tmp18(510).Storage;
+      const result1 = Storage3.set(React2, closure_11);
+    }
+    return null != tmp9;
+  } else {
+    const _Error = Error;
+    const error = new Error("TokenManager must be initialized before mutation");
+    throw error;
   }
-  return null != tmp3;
 }
 function encryptAndStoreTokens() {
-  let result;
-  if (safeStorage != null) {
-    result = safeStorage.isEncryptionAvailable();
-  }
-  if (result) {
-    if (null != global) {
-      let result1;
-      if (safeStorage != null) {
-        result1 = safeStorage.isEncryptionAvailable();
-      }
-      let combined = global;
-      if (result1) {
-        combined = global;
-        if (!global.startsWith(c4)) {
-          let _HermesInternal = HermesInternal;
-          combined = "" + c4 + safeStorage.encryptString(global);
-        }
-      }
-      closure_8 = combined;
+  if (c13) {
+    let result;
+    if (safeStorage != null) {
+      result = safeStorage.isEncryptionAvailable();
     }
-    const _Object = Object;
-    const entries = Object.entries(closure_10);
-    let items = [];
-    HermesBuiltin.arraySpread(
-      entries.map((item) => {
-        [tmp, obj] = item;
-        const items = [tmp];
-        let result;
+    if (result) {
+      if (null != global) {
+        let result1;
         if (safeStorage != null) {
-          result = safeStorage.isEncryptionAvailable();
+          result1 = safeStorage.isEncryptionAvailable();
         }
-        let combined = obj;
-        if (result) {
-          combined = obj;
-          if (!obj.startsWith(closure_1_4)) {
-            const _HermesInternal = HermesInternal;
-            combined = "" + closure_1_4 + safeStorage.encryptString(obj);
+        let combined = global;
+        if (result1) {
+          combined = global;
+          if (!global.startsWith(c4)) {
+            let _HermesInternal = HermesInternal;
+            combined = "" + c4 + safeStorage.encryptString(global);
           }
         }
-        items[1] = combined;
-        return items;
-      }),
-      0,
-    );
-    closure_11 = items.reduce((acc, item) => {
-      [tmp, tmp2] = item;
-      acc[tmp] = tmp2;
-      return acc;
-    }, {});
-    c9 = true;
-  } else {
-    closure_8 = global;
-    closure_11 = closure_10;
-  }
-  if (c12) {
-    const Storage4 = Storage6.Storage;
-    Storage4.remove(React3);
-    const Storage5 = Storage6.Storage;
-    Storage5.remove(React2);
-  } else {
-    if (null != closure_8) {
-      const Storage2 = Storage6.Storage;
-      const result2 = Storage2.set(React3, closure_8);
-      let tmp13 = require;
+        closure_8 = combined;
+      }
+      const _Object = Object;
+      const entries = Object.entries(closure_10);
+      let items = [];
+      HermesBuiltin.arraySpread(
+        entries.map((item) => {
+          [tmp, obj] = item;
+          const items = [tmp];
+          let result;
+          if (safeStorage != null) {
+            result = safeStorage.isEncryptionAvailable();
+          }
+          let combined = obj;
+          if (result) {
+            combined = obj;
+            if (!obj.startsWith(closure_1_4)) {
+              const _HermesInternal = HermesInternal;
+              combined = "" + closure_1_4 + safeStorage.encryptString(obj);
+            }
+          }
+          items[1] = combined;
+          return items;
+        }),
+        0,
+      );
+      closure_11 = items.reduce((acc, item) => {
+        [tmp, tmp2] = item;
+        acc[tmp] = tmp2;
+        return acc;
+      }, {});
+      c9 = true;
     } else {
-      tmp13 = require;
-      const Storage = Storage6.Storage;
-      Storage.remove(React3);
+      closure_8 = global;
+      closure_11 = closure_10;
     }
-    const Storage3 = tmp13(510).Storage;
-    const result3 = Storage3.set(React2, closure_11);
+    if (c12) {
+      const Storage4 = Storage6.Storage;
+      Storage4.remove(React3);
+      const Storage5 = Storage6.Storage;
+      Storage5.remove(React2);
+    } else {
+      if (null != closure_8) {
+        const Storage2 = Storage6.Storage;
+        const result2 = Storage2.set(React3, closure_8);
+        let tmp20 = require;
+      } else {
+        tmp20 = require;
+        const Storage = Storage6.Storage;
+        Storage.remove(React3);
+      }
+      const Storage3 = tmp20(510).Storage;
+      const result3 = Storage3.set(React2, closure_11);
+    }
+  } else {
+    const _Error = Error;
+    const error = new Error("TokenManager must be initialized before mutation");
+    throw error;
   }
 }
 ({ TOKENS_KEY: c2, TOKEN_KEY: c3 } = Constants);
@@ -234,42 +250,66 @@ export const getAnalyticsToken = function getAnalyticsToken() {
 export { getToken };
 export const setAnalyticsToken = function setAnalyticsToken(analyticsToken) {
   if (null != analyticsToken) {
-    setSecondaryToken(analyticsToken, __analytics__);
+    if (c13) {
+      setSecondaryToken(analyticsToken, __analytics__);
+    } else {
+      const _Error = Error;
+      const error = new Error("TokenManager must be initialized before mutation");
+      throw error;
+    }
   } else {
     removeToken(__analytics__);
   }
 };
 export const setToken = function setToken(token, id) {
   if (null != token) {
-    global = token;
-    setSecondaryToken(token, id);
+    if (c13) {
+      global = token;
+      setSecondaryToken(token, id);
+    } else {
+      const _Error = Error;
+      const error = new Error("TokenManager must be initialized before mutation");
+      throw error;
+    }
   } else {
     removeToken(id);
   }
 };
 export const hideToken = function hideToken() {
   if (!c12) {
-    c12 = true;
-    const Storage = Storage6.Storage;
-    Storage.remove(React3);
-    const Storage2 = Storage6.Storage;
-    Storage2.remove(React2);
+    if (c13) {
+      c12 = true;
+      const Storage = Storage6.Storage;
+      Storage.remove(React3);
+      const Storage2 = Storage6.Storage;
+      Storage2.remove(React2);
+    } else {
+      const _Error = Error;
+      const error = new Error("TokenManager must be initialized before mutation");
+      throw error;
+    }
   }
 };
 export const showToken = function showToken() {
   if (c12) {
-    c12 = false;
-    if (null != closure_8) {
-      const Storage2 = Storage6.Storage;
-      const result = Storage2.set(React3, closure_8);
-      let tmp3 = require;
+    if (c13) {
+      c12 = false;
+      if (null != closure_8) {
+        const Storage2 = Storage6.Storage;
+        const result = Storage2.set(React3, closure_8);
+        let tmp9 = require;
+      } else {
+        tmp9 = require;
+        const Storage = Storage6.Storage;
+        Storage.remove(React3);
+      }
+      const Storage3 = tmp9(510).Storage;
+      const result1 = Storage3.set(React2, closure_11);
     } else {
-      tmp3 = require;
-      const Storage = Storage6.Storage;
-      Storage.remove(React3);
+      const _Error = Error;
+      const error = new Error("TokenManager must be initialized before mutation");
+      throw error;
     }
-    const Storage3 = tmp3(510).Storage;
-    const result1 = Storage3.set(React2, closure_11);
   }
 };
 export { removeToken };

@@ -6,8 +6,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import QuestDockStore from "QuestDockStore.tsx";
 
 require = fn;
-let QuestDockMode = fn(5749).QuestDockMode;
-let closure_5 = fn(15431).QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD;
+let QuestDockMode = fn(5751).QuestDockMode;
+let closure_5 = fn(14599).QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD;
 const jsx = fn(21).jsx;
 const SECOND = DurationsDefault.Millis.SECOND;
 let obj = {
@@ -16,12 +16,12 @@ let obj = {
   lastScrollEventSourceId: null,
   questDockOffset: null,
 };
-let ReanimatedHelperTypes = fn(7407);
+let ReanimatedHelperTypes = fn(6490);
 obj.restingQuestDockMode = ReanimatedHelperTypes.createFakeSharedValue(QuestDockMode.COLLAPSED);
 obj.setRestingQuestDockMode = function setRestingQuestDockMode() {};
-ReanimatedHelperTypes = fn(7407);
+ReanimatedHelperTypes = fn(6490);
 obj.lastScrollEventSourceId = ReanimatedHelperTypes.createFakeSharedValue(null);
-ReanimatedHelperTypes = fn(7407);
+ReanimatedHelperTypes = fn(6490);
 obj.questDockOffset = ReanimatedHelperTypes.createFakeSharedValue(0);
 let context = noop.createContext(obj);
 const PlatformUtils = fn(1364);

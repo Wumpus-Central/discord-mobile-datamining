@@ -3,8 +3,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import design_shared from "../../../../discord_common/js/packages/design/shared.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05285_LinearGradient.js";
-import _modDef5969 from "../../../../_runtime/metro/05969__.js";
+import LinearGradientDefault from "../../../../_runtime/05286_LinearGradient.js";
+import _modDef5971 from "../../../../_runtime/metro/05971__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -84,7 +84,7 @@ function PremiumRewardGlowGradient(arg0) {
     children: timestampProducer(LinearGradientDefault, { style: React4.absoluteFill, colors: memo, start, end }),
   };
   items2[1] = glowLight;
-  const items3 = [timestampProducer(_modDef5969, obj5), children];
+  const items3 = [timestampProducer(_modDef5971, obj5), children];
   obj4.children = items3;
   return React5(hasOwnProperty, obj4);
 }
@@ -103,8 +103,8 @@ const start = { x: 0, y: 0.5 };
 const end = { x: 1, y: 0.5 };
 const start2 = { x: 0.5, y: 0 };
 const end2 = { x: 0.5, y: 1 };
-fn(4678);
-const ColorUtils = fn(4678);
+fn(4680);
+const ColorUtils = fn(4680);
 const hexOpacityToRgbaResult = ColorUtils.hexOpacityToRgba("#000000", 0);
 createStyles = fn(4829);
 let closure_13 = createStyles.createStyleProperties({

@@ -12,7 +12,7 @@ import BadgeDirectoryStore from "../../badges/BadgeDirectoryStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const useNativeCheckoutStore = fn(7754).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(6839).useNativeCheckoutStore;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, MarketingURLs: c10 } = Constants);
 const PremiumConstants = fn(1374);

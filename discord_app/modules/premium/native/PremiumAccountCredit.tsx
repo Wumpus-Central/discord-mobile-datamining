@@ -123,8 +123,8 @@ let obj2 = {
   creditDescription: null,
 };
 let size = {
-  width: fn(7505).GameIconImageSize[fn(undefined, 7505).GameIconSizes.SMALL],
-  height: fn(7505).GameIconImageSize[fn(undefined, 7505).GameIconSizes.SMALL],
+  width: fn(6588).GameIconImageSize[fn(undefined, 6588).GameIconSizes.SMALL],
+  height: fn(6588).GameIconImageSize[fn(undefined, 6588).GameIconSizes.SMALL],
   alignItems: "center",
   justifyContent: "center",
 };

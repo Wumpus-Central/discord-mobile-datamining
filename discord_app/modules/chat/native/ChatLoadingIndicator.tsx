@@ -270,13 +270,13 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
     }
     return tmp7;
   };
-  let obj3 = stateFromStores(4561);
+  let obj3 = stateFromStores(4563);
   fn.__closure = {
     useReducedMotion: stateFromStores,
-    withRepeat: stateFromStores(4561).withRepeat,
-    withSequence: stateFromStores(4561).withSequence,
+    withRepeat: stateFromStores(4563).withRepeat,
+    withSequence: stateFromStores(4563).withSequence,
     withTiming: stateFromStores(4830).withTiming,
-    Easing: stateFromStores(4561).Easing,
+    Easing: stateFromStores(4563).Easing,
   };
   fn.__workletHash = 17454673879926;
   fn.__initData = __initData;
@@ -295,7 +295,7 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
   let tmp7Result = tmp8;
   if (stateFromStores1) {
     let obj8 = { onPress: openLoadingIndicatorDebugBody, children: tmp8 };
-    tmp7Result = closure_13(tmp2(5427).PressableOpacity, obj8);
+    tmp7Result = closure_13(tmp2(5428).PressableOpacity, obj8);
   }
   return tmp7Result;
 };

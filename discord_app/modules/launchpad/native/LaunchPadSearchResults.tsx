@@ -95,8 +95,8 @@ let closure_14 = noop.memo((guild) => {
   }));
   ({ unread, mentionCount, isMentionLowImportance } = stateFromStoresObject);
   const obj = guild(504);
-  const fontScale = guild(5280).useFontScale();
-  const obj2 = guild(5280);
+  const fontScale = guild(5281).useFontScale();
+  const obj2 = guild(5281);
   const items2 = [LocaleStore];
   const stateFromStores = guild(504).useStateFromStores(items2, () => locale.locale);
   const obj3 = guild(504);
@@ -126,7 +126,7 @@ let closure_14 = noop.memo((guild) => {
   items4[2] = renderChannelContentDefault(obj8);
   obj5.children = items4;
   obj4.children = tmp8(closure_11(closure_10, obj5), { fontScale });
-  return tmp7(closure_9(guild(5427).PressableHighlight, obj4));
+  return tmp7(closure_9(guild(5428).PressableHighlight, obj4));
 });
 let closure_16 = noop.memo((arg0) => {
   ({ name, onPress, note } = arg0);

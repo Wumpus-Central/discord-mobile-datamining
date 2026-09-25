@@ -86,7 +86,7 @@ function WordTopic(categoryid) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
-const GuildPrimaryCategory = fn(16904).GuildPrimaryCategory;
+const GuildPrimaryCategory = fn(16092).GuildPrimaryCategory;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(4829);
@@ -297,7 +297,7 @@ export default function ICYMITopicsScreen() {
     const intl3 = tmp7(1115).intl;
     obj11.text = intl3.string(tmp7(1115).t.PDTjLN);
     obj11.onPress = callback;
-    obj9.children = closure_10(tmp7(5273).Button, obj11);
+    obj9.children = closure_10(tmp7(5274).Button, obj11);
     tmp12Result = closure_10(closure_6, obj9);
   }
   children[4] = tmp12Result;

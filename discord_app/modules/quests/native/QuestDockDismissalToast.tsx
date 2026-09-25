@@ -1,8 +1,8 @@
 // discord_app/modules/quests/native/QuestDockDismissalToast.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import _modDef12629 from "../../../../_runtime/metro/12629__.js";
-import _modDef13117 from "../../../../_runtime/metro/13117__.js";
+import _modDef11755 from "../../../../_runtime/metro/11755__.js";
+import _modDef12267 from "../../../../_runtime/metro/12267__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
@@ -14,11 +14,11 @@ function QuestDockDismissalNotification() {
     arrowHook() {
       const obj = {
         style: closure_0.toastArrowForwardIconContainer,
-        children: <React3 resizeMode="contain" source={_modDef12629} style={closure_0.toastArrowForwardIcon} />,
+        children: <React3 resizeMode="contain" source={_modDef11755} style={closure_0.toastArrowForwardIcon} />,
       };
       return (
         <React4 style={closure_0.toastArrowForwardIconContainer}>
-          <React3 resizeMode="contain" source={_modDef12629} style={closure_0.toastArrowForwardIcon} />
+          <React3 resizeMode="contain" source={_modDef11755} style={closure_0.toastArrowForwardIcon} />
         </React4>
       );
     },
@@ -58,7 +58,7 @@ export const displayQuestDismissalToast = function displayQuestDismissalToast() 
   obj.open({
     key: "QUEST_BAR_DISMISS_TOAST",
     content: QuestDockDismissalNotification,
-    icon: _modDef13117,
+    icon: _modDef12267,
     position: "bottom",
   });
 };

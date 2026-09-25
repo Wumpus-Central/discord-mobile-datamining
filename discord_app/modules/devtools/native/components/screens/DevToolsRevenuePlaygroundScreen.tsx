@@ -732,7 +732,7 @@ function FriendAnniversary() {
   return closure_18(closure_19, obj16);
 }
 function TrialOfferSheetExample() {
-  premiumTrialOffer = premiumTrialOffer(7777).usePremiumTrialOffer();
+  premiumTrialOffer = premiumTrialOffer(6862).usePremiumTrialOffer();
   let obj2 = {
     label: "Trial Offer Nitro Basic",
     subLabel: "No trial offer in store",
@@ -745,16 +745,16 @@ function TrialOfferSheetExample() {
           markAsDismissed() {},
         };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(16088, dependencyMap.paths),
+          asyncRequireImpl(15261, dependencyMap.paths),
           "PremiumTrialOfferActionSheet",
           obj2,
         );
       }
     },
   };
-  items = [closure_17(premiumTrialOffer(5910).TableRow, obj2)];
+  items = [closure_17(premiumTrialOffer(5912).TableRow, obj2)];
   const obj3 = { title: "Trial Offers", hasIcons: false, children: null };
-  items[1] = closure_17(premiumTrialOffer(5910).TableRow, {
+  items[1] = closure_17(premiumTrialOffer(5912).TableRow, {
     label: "Trial Offer Nitro",
     subLabel: "No trial offer in store",
     disabled: null == premiumTrialOffer,
@@ -766,7 +766,7 @@ function TrialOfferSheetExample() {
           markAsDismissed() {},
         };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(16088, dependencyMap.paths),
+          asyncRequireImpl(15261, dependencyMap.paths),
           "PremiumTrialOfferActionSheet",
           obj2,
         );
@@ -774,7 +774,7 @@ function TrialOfferSheetExample() {
     },
   });
   obj3.children = items;
-  return closure_18(premiumTrialOffer(5992).TableRowGroup, obj3);
+  return closure_18(premiumTrialOffer(5994).TableRowGroup, obj3);
 }
 function PremiumToggles() {
   items = [DevSettingsStore];
@@ -794,7 +794,7 @@ function PremiumToggles() {
     children: stateFromStores.map((item) => {
       [tmp, tmp2] = item;
       return closure_17(
-        closure_0(7533).TableSwitchRow,
+        closure_0(6616).TableSwitchRow,
         {
           label: tmp3,
           subLabel: tmp,

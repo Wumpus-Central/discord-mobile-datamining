@@ -2,7 +2,7 @@
 import DurationsDefault from "../../../utils/Durations.tsx";
 import util from "../../../intl/index.native.tsx";
 import _modDef3584 from "../intl/SlayerStorefront.messages.js";
-import _modDef4416 from "../../../../_runtime/metro/04416__.js";
+import _modDef4418 from "../../../../_runtime/metro/04418__.js";
 import useIntervalDefault from "../../../hooks/useInterval.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -12,7 +12,7 @@ function getLimitedOfferTimeLeft(arg0) {
   if (null == arg0) {
     return null;
   } else {
-    const diffResult = _modDef4416(arg0).diff(_modDef4416(), "seconds");
+    const diffResult = _modDef4418(arg0).diff(_modDef4418(), "seconds");
     let tmp4 = null;
     if (diffResult > 0) {
       const time = { days: null, hours: null, minutes: null, seconds: null };

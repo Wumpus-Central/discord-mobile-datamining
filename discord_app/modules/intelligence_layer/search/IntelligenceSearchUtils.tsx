@@ -14,10 +14,10 @@ function isUnsupportedFilterToken(type) {
   }
   return tmp;
 }
-const MAX_PRESENTED_CITATIONS = fn(12707).MAX_PRESENTED_CITATIONS;
+const MAX_PRESENTED_CITATIONS = fn(11833).MAX_PRESENTED_CITATIONS;
 const Constants = fn(1074);
 ({ SearchTokenTypes, SearchTypes: hasOwnProperty } = Constants);
-const SearchTabs = fn(8209).SearchTabs;
+const SearchTabs = fn(7298).SearchTabs;
 const items = [,];
 ({ FILTER_IN: arr[0], ANSWER_IN: arr[1] } = SearchTokenTypes);
 const set = new Set(items);

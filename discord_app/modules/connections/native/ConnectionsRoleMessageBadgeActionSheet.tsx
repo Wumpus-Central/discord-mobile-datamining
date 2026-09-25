@@ -139,7 +139,7 @@ class PopoutChecks {
               style: closure_1.popoutCheckGroupPlatformIcon,
               user: tmp7,
               size: native.AvatarSizes.XSMALL,
-              guildId: "Array",
+              guildId: "flex",
             };
             tmp26 = value2(native.Avatar, obj6);
           }
@@ -191,7 +191,7 @@ class PopoutChecks {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const OperatorTypes = fn(5713).OperatorTypes;
+const OperatorTypes = fn(5715).OperatorTypes;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_14, EMPTY_STRING_SNOWFLAKE_ID: closure_15 } = Constants);
 const jsxProd = fn(21);

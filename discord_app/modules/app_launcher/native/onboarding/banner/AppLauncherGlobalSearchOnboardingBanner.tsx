@@ -81,7 +81,7 @@ export default function GlobalSearchCoachmark(markAsDismissed) {
     obj.targetMeasurements = size;
     const size1 = { x: -140, y: -40, width: diff, height: windowDimensions.height };
     obj.surfaceMeasurements = size1;
-    tmp3 = jsx(markAsDismissed(11488).Coachmark, {
+    tmp3 = jsx(markAsDismissed(10586).Coachmark, {
       renderImgComponent: function appsIcon() {
         const obj = {
           style: closure_2.appsIcon,

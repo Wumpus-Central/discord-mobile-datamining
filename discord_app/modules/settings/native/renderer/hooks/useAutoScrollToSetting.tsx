@@ -5,7 +5,7 @@ import UserSettingSearchStore from "../../../../user_settings/UserSettingSearchS
 const require = globalThis.__r;
 
 const require = fn;
-const NodeType = fn(11812).NodeType;
+const NodeType = fn(10994).NodeType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/settings/native/renderer/hooks/useAutoScrollToSetting.tsx");
 
@@ -21,14 +21,14 @@ export const useAutoScrollToSearchResultSetting = function useAutoScrollToSearch
   let flag = false;
   if (null != current) {
     flag = false;
-    if (tmp(14956).SETTING_RENDERER_CONFIG[current].type !== current.ROUTE) {
-      let initialScrollIndex = tmp(15061).getInitialScrollIndex(current, memo);
+    if (tmp(14118).SETTING_RENDERER_CONFIG[current].type !== current.ROUTE) {
+      let initialScrollIndex = tmp(14227).getInitialScrollIndex(current, memo);
       let tmp7 = 0 !== initialScrollIndex;
       if (tmp7) {
         tmp7 = 1 !== initialScrollIndex;
       }
       flag = tmp7;
-      const tmpResult = tmp(15061);
+      const tmpResult = tmp(14227);
     }
   }
   const items = [memo, flag, ref, navigation, current];

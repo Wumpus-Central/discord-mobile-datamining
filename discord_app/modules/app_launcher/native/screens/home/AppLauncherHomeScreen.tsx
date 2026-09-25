@@ -194,7 +194,7 @@ function ActivityRow(section) {
   let tmp5 = null != applicationIconSource;
   if (tmp5) {
     const obj3 = { iconSource: applicationIconSource };
-    tmp5 = closure_19(onPress(12398), obj3);
+    tmp5 = closure_19(onPress(11524), obj3);
   }
   const items = [section];
   const items1 = [section, onPress];
@@ -218,7 +218,7 @@ function ActivityRow(section) {
   const callback = noop.useCallback(() => {
     onPress(section);
   }, items1);
-  return closure_19(section(5910).TableRow, {
+  return closure_19(section(5912).TableRow, {
     icon: tmp5,
     label: section.application.name,
     subLabel: memo,
@@ -245,7 +245,7 @@ function ActivityItemTuple(arg0) {
   const items = [containerWidth];
   let size = noop.useMemo(() => {
     if (null == containerWidth) {
-      return { width: "channel", height: "channelId" };
+      return { width: "isArray", height: "paddingHorizontal" };
     } else {
       const tmp5 = roundToNearestPixelDefault(tmp / 2 - DEFAULT_CONTENT_PADDING - 6);
       const size = { width: tmp5, height: roundToNearestPixelDefault(tmp5 / c22) };
@@ -433,7 +433,7 @@ function RecommendationItemTuple(isLastTuple) {
   const items1 = [containerWidth, num];
   styles = noop.useMemo(() => {
     if (null == containerWidth) {
-      return { width: "channel", height: "channelId" };
+      return { width: "isArray", height: "paddingHorizontal" };
     } else {
       const tmp6 = roundToNearestPixelDefault((tmp - 2 * DEFAULT_CONTENT_PADDING - 12 * (2 - 1)) / 2);
       const size = { width: tmp6, height: roundToNearestPixelDefault(tmp6 / c22) };
@@ -645,7 +645,7 @@ function getRecommendationItemsWithViewAll(found1, in_this_server, stringResult)
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, StyleSheet } = get_ActivityIndicator);
-const ApplicationCommandIndexStore = fn(9485);
+const ApplicationCommandIndexStore = fn(8583);
 ({ useContextIndexState: closure_8, useUserIndexState: closure_9 } = ApplicationCommandIndexStore);
 const AppLauncherNativeConstants = fn(1483);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
@@ -657,7 +657,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20, Fragment: closure_21 } = jsxProd);
 let c22 = 1.7777777777777777;
 let closure_23 = [];
-const APP_LAUNCHER_IN_TEXT = fn(12419).ApplicationCollectionSurface.APP_LAUNCHER_IN_TEXT;
+const APP_LAUNCHER_IN_TEXT = fn(11545).ApplicationCollectionSurface.APP_LAUNCHER_IN_TEXT;
 const createStyles = fn(4829);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, flex: 1 },
@@ -1046,7 +1046,7 @@ export default function AppLauncherHomeScreen(route) {
             isLastTuple: false,
           };
           const diff1 = arr.length - 1;
-          obj2.type = tmp8(12430).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE;
+          obj2.type = tmp8(11556).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE;
           obj2.shelfItem1 = arr[arr.length - 1];
           obj2.shelfItem2 = undefined;
           obj2.shelfItem1SectionPosition = diff1;
@@ -1055,7 +1055,7 @@ export default function AppLauncherHomeScreen(route) {
         }
         items[items.length - 1].isLastTuple = true;
         const obj5 = {
-          type: tmp8(12430).AppLauncherHomeListItemType.SECTION_HEADER,
+          type: tmp8(11556).AppLauncherHomeListItemType.SECTION_HEADER,
           section: null,
           sectionName: "activities",
           numItems: null,
@@ -1214,17 +1214,17 @@ export default function AppLauncherHomeScreen(route) {
           obj.numVisibleItems = bound;
           items.push(obj);
           const mapped = application_directory_collection_items.map((type, sectionPosition) => {
-            if (type.type === found1(9614).ApplicationDirectoryCollectionItemType.APPLICATION) {
+            if (type.type === found1(8712).ApplicationDirectoryCollectionItemType.APPLICATION) {
               let collectionItemAssetUrl;
               if (tmp4) {
                 ({ id: obj2.itemId, image_hash: obj2.hash } = type);
-                collectionItemAssetUrl = found1(12466).getCollectionItemAssetUrl({ itemId: null, hash: null });
+                collectionItemAssetUrl = found1(11592).getCollectionItemAssetUrl({ itemId: null, hash: null });
                 const obj = { itemId: null, hash: null };
-                const tmpResult = found1(12466);
+                const tmpResult = found1(11592);
               }
               const obj3 = {
                 application: type.application,
-                showsPromoted: found1(1385).hasFlag(type.flags, found1(12467).ApplicationCollectionItemFlags.PROMOTED),
+                showsPromoted: found1(1385).hasFlag(type.flags, found1(11593).ApplicationCollectionItemFlags.PROMOTED),
                 overrideImageUrl: collectionItemAssetUrl,
                 sectionPosition,
               };
@@ -1253,10 +1253,10 @@ export default function AppLauncherHomeScreen(route) {
         } else if (type === ApplicationDirectoryCollectionType.ApplicationDirectoryCollectionType.EXPANDABLE_LIST) {
           const prop = title.application_directory_collection_items;
           const mapped1 = prop.map((type) => {
-            if (type.type === found1(9614).ApplicationDirectoryCollectionItemType.APPLICATION) {
+            if (type.type === found1(8712).ApplicationDirectoryCollectionItemType.APPLICATION) {
               const obj = {
                 application: type.application,
-                showsPromoted: found1(1385).hasFlag(type.flags, found1(12467).ApplicationCollectionItemFlags.PROMOTED),
+                showsPromoted: found1(1385).hasFlag(type.flags, found1(11593).ApplicationCollectionItemFlags.PROMOTED),
               };
               return obj;
             }
@@ -1762,7 +1762,7 @@ export default function AppLauncherHomeScreen(route) {
       items: memo,
       onAppSelected: callback3,
       onViewAllSelected() {
-        const found = memo.find((type) => type.type === context(12430).AppLauncherHomeListItemType.VIEW_ALL);
+        const found = memo.find((type) => type.type === context(11556).AppLauncherHomeListItemType.VIEW_ALL);
         let mapped;
         if (found != null) {
           const applications = found.applications;
@@ -1779,7 +1779,7 @@ export default function AppLauncherHomeScreen(route) {
             applications: mapped,
             sectionItemType: FrecencySection.SectionItemType.APPS,
             commands: [],
-            sectionDescriptors: mapped.map((item) => context(7851).getApplicationCommandSection(item)),
+            sectionDescriptors: mapped.map((item) => context(6936).getApplicationCommandSection(item)),
             title: null,
           };
           const intl = util.intl;

@@ -27,7 +27,7 @@ function ChatToast(message) {
       onPress: callback,
       children: null,
     };
-    const obj4 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "r" };
+    const obj4 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "Array" };
     const items1 = [hasOwnProperty(native.Avatar, obj4)];
     const obj5 = { style: tmp.body, children: null };
     const obj6 = { variant: "text-xs/semibold", color: "text-default", lineClamp: 1, children: name };

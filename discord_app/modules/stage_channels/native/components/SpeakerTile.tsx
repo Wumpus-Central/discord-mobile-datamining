@@ -45,7 +45,7 @@ let obj5 = {
   backgroundColor: null,
   borderRadius: 6,
 };
-const ColorUtils = fn(4678);
+const ColorUtils = fn(4680);
 obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.3);
 obj2.nameplateContainer = obj5;
 let obj4 = {

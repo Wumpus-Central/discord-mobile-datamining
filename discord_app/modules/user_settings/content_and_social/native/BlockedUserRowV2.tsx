@@ -8,7 +8,7 @@ const require = fn;
 function BlockedUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7495)().analyticsLocations;
+  analyticsLocations = analyticsLocations(6578)().analyticsLocations;
   let obj = {
     icon: null,
     label: null,
@@ -68,8 +68,8 @@ function BlockedUserRow(userRecord) {
   obj4.onPress = function onPress() {
     RelationshipActionCreatorsDefault.unblockUser(userRecord.id, { location: "blocked-users-list-mobile-v2" });
   };
-  obj.trailing = jsx(userRecord(5273).Button, { size: "sm", variant: "secondary", text: null, onPress: null });
-  return jsx(userRecord(5910).TableRow, {
+  obj.trailing = jsx(userRecord(5274).Button, { size: "sm", variant: "secondary", text: null, onPress: null });
+  return jsx(userRecord(5912).TableRow, {
     icon: null,
     label: null,
     subLabel: null,

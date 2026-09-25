@@ -13,7 +13,7 @@ import BountiesModalTypes from "../BountiesModal/BountiesModalTypes.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestDockMode = fn(5749).QuestDockMode;
+const QuestDockMode = fn(5751).QuestDockMode;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBountyBody.tsx");
@@ -133,7 +133,7 @@ export default noop.memo(function QuestDockBountyBody() {
   obj5.onCtaPress = callback;
   const tmp11 = setRestingQuestDockMode(getQuestImpressionId[19]);
   obj5.secondaryCta = jsx(questDockBounty(getQuestImpressionId[22]).IconButton, {
-    variant: "secondary",
+    variant: "secondary-overlay",
     size: "md",
     icon: setRestingQuestDockMode(getQuestImpressionId[23]),
     accessibilityLabel: questDockBounty.cta.buttonLabel,

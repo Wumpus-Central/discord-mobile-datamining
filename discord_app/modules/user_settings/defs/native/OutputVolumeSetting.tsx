@@ -6,13 +6,13 @@ import MobileAudioOutputExperimentDefault from "../../../media_engine/MobileAudi
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11811);
+const SettingBuilders = fn(10993);
 const volumeSlider = SettingBuilders.createVolumeSlider({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.xPHVBs);
   },
-  parent: fn(8323).MobileUserSettings.VOICE,
+  parent: fn(7412).MobileUserSettings.VOICE,
   maximum: 200,
   useValue: function useOutputVolumeSettingValue() {
     const items = [MediaEngineStore];

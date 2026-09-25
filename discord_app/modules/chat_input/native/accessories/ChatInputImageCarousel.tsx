@@ -4,8 +4,8 @@ import ApplicationCommandStore from "../../../application_commands/ApplicationCo
 import UploadAttachmentStore from "../../../../stores/UploadAttachmentStore.tsx";
 
 const require = fn;
-const DraftType = fn(5192).DraftType;
-let closure_6 = fn(9737).useChatShowingAutoComplete;
+const DraftType = fn(5193).DraftType;
+let closure_6 = fn(8835).useChatShowingAutoComplete;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/accessories/ChatInputImageCarousel.tsx");
@@ -38,7 +38,7 @@ export default noop.memo(function ChatInputImageCarousel(canUpload) {
   let tmp4 = null;
   if (null != stateFromStores) {
     const obj2 = { attachments: stateFromStores, channelId };
-    tmp4 = jsx(channelId(10979), { attachments: stateFromStores, channelId });
+    tmp4 = jsx(channelId(10083), { attachments: stateFromStores, channelId });
   }
   return tmp4;
 });

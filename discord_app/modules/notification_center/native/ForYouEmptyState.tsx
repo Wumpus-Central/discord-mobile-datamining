@@ -1,7 +1,7 @@
 // discord_app/modules/notification_center/native/ForYouEmptyState.tsx
 import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import native from "../../../design/assets/native.tsx";
+import MailboxSpotIllustration from "../../../design/components/mana-assets/native/generated/MailboxSpotIllustration.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -24,7 +24,10 @@ export const ForYouEmptyState = function ForYouEmptyState(height) {
   const items = [tmp.container, { height: height.height }];
   obj.style = items;
   const items1 = [
-    React3(View, { style: tmp.image, children: React3(native.MailboxSpotIllustration, { scale: 0.75 }) }),
+    React3(View, {
+      style: tmp.image,
+      children: React3(MailboxSpotIllustration.MailboxSpotIllustration, { scale: 0.75 }),
+    }),
     ,
   ];
   const obj3 = {

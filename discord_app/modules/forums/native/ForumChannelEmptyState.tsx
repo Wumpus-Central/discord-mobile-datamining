@@ -3,8 +3,8 @@ import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import shared from "../../../design/shared.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import _modDef13115 from "../../../../_runtime/metro/13115__.js";
-import _modDef13116 from "../../../../_runtime/metro/13116__.js";
+import _modDef12265 from "../../../../_runtime/metro/12265__.js";
+import _modDef12266 from "../../../../_runtime/metro/12266__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -35,9 +35,9 @@ export default noop.memo((topViewHeight) => {
   obj2.style = items;
   const obj = shared;
   if (obj3.isThemeLight(obj.useThemeContext().theme)) {
-    let tmp4Result = _modDef13115;
+    let tmp4Result = _modDef12265;
   } else {
-    tmp4Result = _modDef13116;
+    tmp4Result = _modDef12266;
   }
   const items1 = [hasOwnProperty(React4, { source: tmp4Result, style: tmp.image }), ,];
   const obj5 = {

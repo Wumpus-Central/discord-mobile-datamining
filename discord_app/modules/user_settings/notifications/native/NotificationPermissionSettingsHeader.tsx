@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, NOOP: metroRequire } = Constants);
-const NotificationPermissionConstants = fn(12759);
+const NotificationPermissionConstants = fn(11885);
 ({
   EventActionLocation: closure_7,
   EventActionType: closure_8,
@@ -43,7 +43,7 @@ const result = size.fileFinishedImporting(
 
 export default function NotificationPermissionSettingsHeader() {
   const tmp = closure_13();
-  canSeePushNotificationNudge = canSeePushNotificationNudge(12760).useCanSeePushNotificationNudge();
+  canSeePushNotificationNudge = canSeePushNotificationNudge(11886).useCanSeePushNotificationNudge();
   const items = [canSeePushNotificationNudge];
   const effect = noop.useEffect(() => {
     if (canSeePushNotificationNudge) {
@@ -58,7 +58,7 @@ export default function NotificationPermissionSettingsHeader() {
     const obj4 = { style: tmp.cardContent, children: null };
     const obj5 = { style: tmp.iconCircle, children: null };
     const obj6 = { size: "md", color: nativeDefault.colors.ICON_STRONG };
-    obj5.children = closure_11(tmp2(10500).BellSlashIcon, obj6);
+    obj5.children = closure_11(tmp2(9602).BellSlashIcon, obj6);
     const items1 = [closure_11(View, obj5), , ,];
     const obj7 = { variant: "heading-lg/bold", color: "text-default", children: null };
     const intl = tmp2(1115).intl;
@@ -73,11 +73,11 @@ export default function NotificationPermissionSettingsHeader() {
     const intl3 = tmp2(1115).intl;
     obj10.text = intl3.string(tmp2(1115).t["5xWOXv"]);
     obj10.onPress = tmp6;
-    obj9.children = closure_11(tmp2(5273).Button, obj10);
+    obj9.children = closure_11(tmp2(5274).Button, obj10);
     items1[3] = closure_11(View, obj9);
     obj4.children = items1;
     obj3.children = closure_12(View, obj4);
-    obj2.children = closure_11(tmp2(5912).Card, obj3);
+    obj2.children = closure_11(tmp2(5914).Card, obj3);
     tmp7 = closure_11(View, obj2);
   }
   return tmp7;

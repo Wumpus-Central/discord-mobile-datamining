@@ -211,10 +211,10 @@ function EditSection(navigateToProfileCustomization) {
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const useIsContentShown = fn(2034).useIsContentShown;
-let UserProfileSections = fn(8531).UserProfileSections;
-const UserProfileThemeTypes = fn(7541).UserProfileThemeTypes;
+let UserProfileSections = fn(7621).UserProfileSections;
+const UserProfileThemeTypes = fn(6624).UserProfileThemeTypes;
 const ContentDismissActionType = fn(2041).ContentDismissActionType;
-let closure_13 = fn(11549).UserProfileEditAutoFocusElement;
+let closure_13 = fn(10647).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 const size = fn(2);

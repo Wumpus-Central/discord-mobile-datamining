@@ -337,10 +337,10 @@ export const stopOwnStream = function stopOwnStream(arg0) {
     if (flag === undefined) {
       flag = true;
     }
-    const obj2 = { type: "STREAM_CLOSE", streamKey: encodeStreamKeyResult, canShowFeedback: flag };
-    DispatcherDefault.dispatch(obj2);
-    const obj4 = { type: "STREAM_STOP", streamKey: encodeStreamKeyResult, appContext: constants.APP };
-    DispatcherDefault.dispatch(obj4);
+    const obj3 = { type: "STREAM_CLOSE", streamKey: encodeStreamKeyResult, canShowFeedback: flag };
+    DispatcherDefault.dispatch(obj3);
+    const obj5 = { type: "STREAM_STOP", streamKey: encodeStreamKeyResult, appContext: constants.APP };
+    DispatcherDefault.dispatch(obj5);
   }
 };
 export const joinPrivateChannelAndWatchStream = function joinPrivateChannelAndWatchStream(arg0, streamKey) {

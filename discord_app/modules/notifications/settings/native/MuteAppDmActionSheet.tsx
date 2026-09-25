@@ -104,7 +104,7 @@ export default function MuteAppDMActionSheet(channel) {
       const obj = {
         style: closure_1_0.mutedNotificationContainer,
         children: closure_2_4(closure_0(1177).Icon, {
-          source: channel(8297),
+          source: channel(7386),
           color: channel(576).unsafe_rawColors.WHITE,
           style: closure_1_0.mutedNotification,
         }),

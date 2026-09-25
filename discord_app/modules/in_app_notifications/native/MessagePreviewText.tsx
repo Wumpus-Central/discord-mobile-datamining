@@ -148,7 +148,7 @@ function EmbedCard(embed) {
   return React7(View, obj);
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(10442);
+const InAppNotificationConstants = fn(9544);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } =
   InAppNotificationConstants);
 const Fonts = fn(1085).Fonts;
@@ -211,7 +211,7 @@ obj6.embedTextContainer = {
   paddingVertical: nativeDefault.space.PX_4,
   paddingHorizontal: nativeDefault.space.PX_8,
 };
-let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "__closure" };
+let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "channel" };
 obj6.embedMediaContainer = size;
 obj6.embedMedia = { width: "100%", height: "100%" };
 let closure_11 = createStyles.createStyles(obj6);

@@ -2,7 +2,7 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import SafetyHubModels from "SafetyHubModels.tsx";
-import _modDef8782 from "../../../_runtime/metro/08782__.js";
+import _modDef7874 from "../../../_runtime/metro/07874__.js";
 import SafetyHubConstants from "SafetyHubConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -161,7 +161,7 @@ const safetyHubStore = new SafetyHubStore(DispatcherDefault, {
       manualReviewFallbackEnabled,
       manualReviewDecidedUnderage,
     } = arg0);
-    closure_6 = _modDef8782(classifications, "id");
+    closure_6 = _modDef7874(classifications, "id");
     c9 = false;
     c10 = true;
     error = null;
@@ -250,12 +250,12 @@ const safetyHubStore = new SafetyHubStore(DispatcherDefault, {
         throw new TypeError("Cannot destructure 'undefined' or 'null'.");
       } else {
         NONE = AgeCheckStatus.LOADING;
-        for (const key10007 in closure_6) {
-          if (!dependencyMap[key10007].is_coppa) {
+        for (const key10002 in closure_6) {
+          if (!dependencyMap[key10002].is_coppa) {
             continue;
           } else {
             let obj = { status: SafetyHubModels.AppealStatusType.REVIEW_PENDING };
-            dependencyMap[key10007].appeal_status = obj;
+            dependencyMap[key10002].appeal_status = obj;
             continue;
           }
           continue;

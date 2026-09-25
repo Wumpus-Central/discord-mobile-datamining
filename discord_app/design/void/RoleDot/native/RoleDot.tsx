@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import GlobalUtils from "../../../../utils/GlobalUtils.tsx";
 import useFontScale from "../../../../modules/screen/native/useFontScale.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05285_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05286_LinearGradient.js";
 import useHasEnhancedRoleColorsDefault from "../../../../modules/premium/powerups/hooks/useHasEnhancedRoleColors.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 

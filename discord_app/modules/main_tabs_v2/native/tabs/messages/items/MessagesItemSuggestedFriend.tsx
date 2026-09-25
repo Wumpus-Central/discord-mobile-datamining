@@ -4,9 +4,9 @@ import util from "../../../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../../../utils/AnalyticsUtils.tsx";
 import asyncRequireImpl from "../../../../../../../_runtime/01980_asyncRequireImpl.js";
 import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
-import _mod9077 from "../../../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod8171 from "../../../../../../../discord_common/js/packages/flash-list/index.js";
 import useScaledTextLineHeight from "../../../../../screen/native/useScaledTextLineHeight.android.tsx";
-import _mod16468 from "../../../../../../../_runtime/metro/16468__.js";
+import _mod15648 from "../../../../../../../_runtime/metro/15648__.js";
 import FriendSuggestionUtils from "../../../../../friend_suggestions/FriendSuggestionUtils.tsx";
 import AddFriendsScreenUtils from "../../../friends/components/AddFriendsScreenUtils.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
@@ -73,7 +73,7 @@ let closure_12 = noop.memo(function MessagesItemSuggestedFriendView(height) {
     return items;
   }, items);
   const callback = noop.useCallback(() => {
-    asyncRequireImpl(8527, dependencyMap.paths).then((result) =>
+    asyncRequireImpl(7617, dependencyMap.paths).then((result) =>
       result.default({
         userId: suggestedFriend.user.id,
         localUser: suggestedFriend.user,
@@ -194,7 +194,7 @@ const memoResult = noop.memo((arg0) => {
 const memoResult1 = noop.memo((suggestedFriend) => {
   const items = [suggestedFriend.suggestedFriend.user.id];
   const obj2 = {};
-  [tmp2, tmp3] = _mod9077.useRecyclingState(false, items);
+  [tmp2, tmp3] = _mod8171.useRecyclingState(false, items);
   const merged = Object.assign(suggestedFriend);
   obj2.addedPressed = tmp2;
   obj2.setAddedPressed = tmp3;
@@ -217,7 +217,7 @@ export const MessagesItemSuggestedFriendFast = memoResult;
 export const MessagesItemSuggestedFriendFlash = memoResult1;
 export const MessagesItemSuggestedFriendLegend = noop.memo((arg0) => {
   const obj2 = {};
-  [tmp2, tmp3] = _mod16468.useRecyclingState(false);
+  [tmp2, tmp3] = _mod15648.useRecyclingState(false);
   const merged = Object.assign(arg0);
   obj2.addedPressed = tmp2;
   obj2.setAddedPressed = tmp3;

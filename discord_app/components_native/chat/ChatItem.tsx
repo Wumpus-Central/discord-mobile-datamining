@@ -39,7 +39,7 @@ function DCDChatItem(message) {
 }
 const View = fn(17).View;
 const MessageTypes = fn(1074).MessageTypes;
-const RowGeneratorConstants = fn(8281);
+const RowGeneratorConstants = fn(7370);
 ({ RowType: closure_8, Changeset: closure_9 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
@@ -206,6 +206,6 @@ export default function _default(rowGenerator) {
   }
   const tmp3 = onLayout(messageSizeCacheRef.useState(0), 2);
 }
-export const DCDMessageView = fn(9012).default;
-export const DCDSystemMessageView = fn(9013).default;
-export const DCDAutoModerationSystemMessageView = fn(9011).default;
+export const DCDMessageView = fn(8106).default;
+export const DCDSystemMessageView = fn(8107).default;
+export const DCDAutoModerationSystemMessageView = fn(8105).default;

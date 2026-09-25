@@ -2,7 +2,7 @@
 import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
-import native2 from "../../../../design/assets/native.tsx";
+import FavoritesSpotIllustration from "../../../../design/components/mana-assets/native/generated/FavoritesSpotIllustration.native.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -20,7 +20,7 @@ export default function FavoritesGuildCoachmarkGraphic() {
   const tmp = closure_5();
   const obj = { style: tmp.container, children: null };
   const items = [
-    React3(native2.FavoritesSpotIllustration, { width: 160, height: 90 }),
+    React3(FavoritesSpotIllustration.FavoritesSpotIllustration, { width: 160, height: 90 }),
     React3(native.BetaTag, { style: tmp.betaTag }),
   ];
   obj.children = items;

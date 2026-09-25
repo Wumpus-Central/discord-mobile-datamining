@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import FreeFormTextInputDefault from "../../../../design/void/Form/native/FreeFormTextInput.tsx";
 import InstantInviteUtilsDefault from "../../../../utils/InstantInviteUtils.tsx";
-import _modDef10201 from "../../../../../_runtime/metro/10201__.js";
+import _modDef9298 from "../../../../../_runtime/metro/09298__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import CreateInviteModalStore from "../../../../stores/CreateInviteModalStore.tsx";
 
@@ -46,7 +46,7 @@ export default function _default(link) {
     containerStyle: tmp.emptyStateContainer,
     imageStyle: tmp.emptyStateArt,
     titleStyle: tmp.emptyStateTitle,
-    source: _modDef10201,
+    source: _modDef9298,
     title: null,
     body: null,
   };
@@ -78,8 +78,8 @@ export default function _default(link) {
   obj6.accessibilityLabel = intl3.string(stateFromStores(1115).t["3D5yo/"]);
   obj6.onPress = onPressSettings;
   obj6.style = tmp.settingsButton;
-  obj6.children = closure_5(stateFromStores(7710).SettingsIcon, {});
-  items2[1] = closure_5(stateFromStores(5427).PressableOpacity, obj6);
+  obj6.children = closure_5(stateFromStores(6793).SettingsIcon, {});
+  items2[1] = closure_5(stateFromStores(5428).PressableOpacity, obj6);
   obj4.children = items2;
   items1[1] = closure_6(View, obj4);
   const obj7 = { style: tmp.expireCaption, variant: "text-xs/medium", color: "text-muted", children: null };
@@ -90,7 +90,7 @@ export default function _default(link) {
     const intl5 = tmp2(1115).intl;
     obj8.text = intl5.string(tmp2(1115).t.Ej3B3Y);
     obj8.onPress = onShare;
-    items1[3] = closure_5(tmp2(5273).Button, obj8);
+    items1[3] = closure_5(tmp2(5274).Button, obj8);
     obj2.children = items1;
     return closure_6(View, obj2);
   } else {

@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemCoachmark.tsx
-import _modDef6081 from "../../../../../discord_assets/assets/mana/asset-library/generated/AvatarCapExample-2x.png.js";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
 import LayerScope from "../../../../design/components/Layers/native/LayerScope.native.tsx";
+import _modDef15368 from "../../../../../discord_assets/assets/mana/asset-library/generated/AvatarCapExample-2x.png.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -51,7 +51,7 @@ function Content() {
       buttonVariant: null,
       gradientColor: null,
     };
-    const obj2 = { type: "image", src: { uri: _modDef6081 }, aspectRatio: first5 };
+    const obj2 = { type: "image", src: { uri: _modDef15368 }, aspectRatio: first5 };
     obj.graphic = obj2;
     obj.experimental_withBlurBackground = first1;
     let str2;

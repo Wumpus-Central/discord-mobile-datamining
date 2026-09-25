@@ -9,8 +9,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function useKeyboardOpenPaddingStyle() {
-  token = token(4526).useToken(nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL);
-  let obj = token(4526);
+  token = token(4528).useToken(nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL);
+  let obj = token(4528);
   [tmp5, importDefault] = sharedValue(
     noop.useState(() => {
       const KeyboardController = token(1626).KeyboardController;
@@ -51,7 +51,7 @@ function useKeyboardOpenPaddingStyle() {
     }),
     2,
   );
-  const obj3 = token(4697);
+  const obj3 = token(4699);
   if (!tmp5) {
     tmp5 = true === obj3.useKeyboardContextForType(token(1610).KeyboardTypes.SYSTEM).keyboardWillOpen;
   }
@@ -64,7 +64,7 @@ function useKeyboardOpenPaddingStyle() {
   if (tmp5) {
     num = token;
   }
-  sharedValue = token(4561).useSharedValue(num);
+  sharedValue = token(4563).useSharedValue(num);
   const items = [tmp5, token, sharedValue];
   const effect1 = noop.useEffect(() => {
     let num = 0;
@@ -75,17 +75,17 @@ function useKeyboardOpenPaddingStyle() {
     const result = sharedValue.set(obj.withTiming(num, { duration: timingPresets.timingStandardDuration, easing }));
     const obj2 = { duration: timingPresets.timingStandardDuration, easing };
   }, items);
-  const tmpResult = token(4561);
+  const tmpResult = token(4563);
   const fn = function b() {
     return { paddingBottom: sharedValue.get() };
   };
   fn.__closure = { paddingSV: sharedValue };
   fn.__workletHash = 5673482424037;
   fn.__initData = __initData;
-  return token(4561).useAnimatedStyle(fn);
+  return token(4563).useAnimatedStyle(fn);
 }
 const jsx = fn(21).jsx;
-const Easing = fn(4561).Easing;
+const Easing = fn(4563).Easing;
 let closure_6 = Easing.bezier(0.2, 0, 0, 1);
 const __initData = {
   code: "function FloatingChatInputContainerTsx1(){const{paddingSV}=this.__closure;return{paddingBottom:paddingSV.get()};}",

@@ -1,9 +1,0 @@
-// discord_assets/assets/mana/asset-library/generated/DiscordQuestsLockupLogo-2x.png.js
-import size from "../../../../../_runtime/metro/00002__.js";
-
-const result = size.fileFinishedImporting(
-  "../discord_assets/assets/mana/asset-library/generated/DiscordQuestsLockupLogo-2x.png.js",
-);
-
-export default "https://cdn.discordapp.com/assets/content/58d326095900d94b9324b8e77ccb5552b3aa290e445589eba06cdc1ebda869a2.png";
-export const metadata = { fileBytes: 4458 };

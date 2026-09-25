@@ -2,7 +2,7 @@
 import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import _modDef9452 from "../../../../_runtime/metro/09452__.js";
+import _modDef8550 from "../../../../_runtime/metro/08550__.js";
 import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/activate_device/native/Activa
 
 export const ActivateDeviceError = function ActivateDeviceError(onRetry) {
   const obj = { children: null };
-  const obj2 = { source: _modDef9452, style: closure_8().image };
+  const obj2 = { source: _modDef8550, style: closure_8().image };
   const items = [hasOwnProperty(React3, obj2), ,];
   const obj3 = { style: ActivateDeviceSharedStylesDefault.innerContent, children: null };
   const obj4 = {

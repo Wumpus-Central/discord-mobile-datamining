@@ -7,7 +7,7 @@ import FastestListPropsPlaceholder from "../../fastest_list/props/FastestListPro
 import PremiumUpsellSectionDividerDefault from "../../premium/roadblocks/native/views/PremiumUpsellSectionDivider.tsx";
 import PremiumUpsellGradientBackground from "../../premium/roadblocks/native/views/PremiumUpsellGradientBackground.tsx";
 import StickerPickerListRowDefault from "StickerPickerListRow.tsx";
-import _modDef10762 from "../../../../_runtime/metro/10762__.js";
+import _modDef9866 from "../../../../_runtime/metro/09866__.js";
 import useStickerPickerListData from "useStickerPickerListData.tsx";
 import StickerPickerPremiumSearchUpsellDefault from "StickerPickerPremiumSearchUpsell.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -16,8 +16,8 @@ import StickersStore from "../StickersStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const useStickerPickerStore = fn(10736).useStickerPickerStore;
-const StickerPickerConstants = fn(10621);
+const useStickerPickerStore = fn(9840).useStickerPickerStore;
+const StickerPickerConstants = fn(9725);
 ({
   STICKER_SCROLL_LOAD_DELAY_MS: closure_8,
   STICKER_SCROLL_LOAD_DELAY_AFTER_HEIGHT_CHANGE_MS: closure_9,
@@ -62,7 +62,7 @@ let closure_15 = noop.memo((height) => {
   const obj = { style: null, children: null };
   const items = [tmp.nsfwContainer, { height: height.height }];
   obj.style = items;
-  const items1 = [closure_1_11(native.Icon, { source: _modDef10762, size: native.Icon.Sizes.SMALL })];
+  const items1 = [closure_1_11(native.Icon, { source: _modDef9866, size: native.Icon.Sizes.SMALL })];
   const obj3 = { style: tmp.nsfwText, variant: "text-sm/normal", color: "interactive-text-active", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.uy25Qz);

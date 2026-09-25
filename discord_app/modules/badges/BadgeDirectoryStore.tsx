@@ -41,8 +41,8 @@ prototype["getBadges"] = function getBadges(arg0) {
     return items;
   }
 };
-prototype["hasCatalogFor"] = function hasCatalogFor(id) {
-  const peekResult = closure_5.peek(id);
+prototype["hasCatalogFor"] = function hasCatalogFor(stateFromStores) {
+  const peekResult = closure_5.peek(stateFromStores);
   let flag;
   if (peekResult != null) {
     flag = peekResult.catalogFetched;
@@ -89,9 +89,9 @@ prototype["hasCatalogFetchErrorFor"] = function hasCatalogFetchErrorFor(stateFro
   }
   return tmp5;
 };
-prototype["getBadgeById"] = function getBadgeById(GIFTING, userId) {
-  let tmp = userId;
-  if (userId == null) {
+prototype["getBadgeById"] = function getBadgeById(GIFTING, displayedUserId) {
+  let tmp = displayedUserId;
+  if (displayedUserId == null) {
     const currentUser = UserStore.getCurrentUser();
     let id;
     if (currentUser != null) {
@@ -111,8 +111,8 @@ prototype["getBadgeById"] = function getBadgeById(GIFTING, userId) {
   }
   return tmp5;
 };
-prototype["getSingleRequirementProgress"] = function getSingleRequirementProgress(GIFTING, userId) {
-  const badgeById = this.getBadgeById(GIFTING, userId);
+prototype["getSingleRequirementProgress"] = function getSingleRequirementProgress(GIFTING, id) {
+  const badgeById = this.getBadgeById(GIFTING, id);
   let progress;
   if (badgeById != null) {
     progress = badgeById.progress;
@@ -123,8 +123,8 @@ prototype["getSingleRequirementProgress"] = function getSingleRequirementProgres
     }
   }
 };
-prototype["getCurrentTier"] = function getCurrentTier(GIFTING, userId) {
-  const badgeById = this.getBadgeById(GIFTING, userId);
+prototype["getCurrentTier"] = function getCurrentTier(GIFTING, displayedUserId) {
+  const badgeById = this.getBadgeById(GIFTING, displayedUserId);
   let current_tier;
   if (badgeById != null) {
     current_tier = badgeById.current_tier;
@@ -134,8 +134,8 @@ prototype["getCurrentTier"] = function getCurrentTier(GIFTING, userId) {
     return tiers.find((key) => key.key === badgeById.current_tier);
   }
 };
-prototype["getObtainedAt"] = function getObtainedAt(GIFTING, userId) {
-  const badgeById = this.getBadgeById(GIFTING, userId);
+prototype["getObtainedAt"] = function getObtainedAt(GIFTING, displayedUserId) {
+  const badgeById = this.getBadgeById(GIFTING, displayedUserId);
   let tmp2;
   if (null != badgeById) {
     let obtained_at;
@@ -154,8 +154,8 @@ prototype["getObtainedAt"] = function getObtainedAt(GIFTING, userId) {
   }
   return tmp2;
 };
-prototype["getNextTier"] = function getNextTier(GIFTING, userId) {
-  const badgeById = this.getBadgeById(GIFTING, userId);
+prototype["getNextTier"] = function getNextTier(GIFTING, displayedUserId) {
+  const badgeById = this.getBadgeById(GIFTING, displayedUserId);
   let next_tier;
   if (badgeById != null) {
     next_tier = badgeById.next_tier;
@@ -165,8 +165,8 @@ prototype["getNextTier"] = function getNextTier(GIFTING, userId) {
     return tiers.find((key) => key.key === badgeById.next_tier);
   }
 };
-prototype["getRemainingToNextTier"] = function getRemainingToNextTier(GIFTING, userId) {
-  const singleRequirementProgress = this.getSingleRequirementProgress(GIFTING, userId);
+prototype["getRemainingToNextTier"] = function getRemainingToNextTier(GIFTING, id) {
+  const singleRequirementProgress = this.getSingleRequirementProgress(GIFTING, id);
   let threshold;
   if (singleRequirementProgress != null) {
     threshold = singleRequirementProgress.threshold;

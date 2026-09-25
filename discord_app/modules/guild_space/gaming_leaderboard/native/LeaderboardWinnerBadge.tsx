@@ -33,21 +33,21 @@ export default function LeaderboardWinnerBadge(guildId) {
     const obj2 = {
       style: tmp.container,
       accessible: true,
-      accessibilityLabel: tmp2(11258).getLeaderboardWinnerBadgeText(stateFromStores),
+      accessibilityLabel: tmp2(10356).getLeaderboardWinnerBadgeText(stateFromStores),
       children: null,
     };
     const obj3 = { size: "xs", color: userId(576).colors.TEXT_FEEDBACK_WARNING };
-    obj2.children = jsx(tmp2(9071).TrophyIcon, { size: "xs", color: userId(576).colors.TEXT_FEEDBACK_WARNING });
+    obj2.children = jsx(tmp2(8165).TrophyIcon, { size: "xs", color: userId(576).colors.TEXT_FEEDBACK_WARNING });
     tmp5 = (
       <View
         style={tmp.container}
         accessible
-        accessibilityLabel={tmp2(11258).getLeaderboardWinnerBadgeText(stateFromStores)}
+        accessibilityLabel={tmp2(10356).getLeaderboardWinnerBadgeText(stateFromStores)}
       >
         {null}
       </View>
     );
-    const tmp2Result = tmp2(11258);
+    const tmp2Result = tmp2(10356);
   }
   return tmp5;
 }

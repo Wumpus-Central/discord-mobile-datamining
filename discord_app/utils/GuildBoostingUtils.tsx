@@ -4,7 +4,7 @@ import SentryUtilsDefault from "SentryUtils.native.tsx";
 import GlobalUtils from "GlobalUtils.tsx";
 import HelpdeskUtilsDefault from "HelpdeskUtils.tsx";
 import _modDef3198 from "../modules/premium/premium_group/PremiumGroup.messages.js";
-import _modDef4416 from "../../_runtime/metro/04416__.js";
+import _modDef4418 from "../../_runtime/metro/04418__.js";
 import PremiumUtilsAll from "PremiumUtils.tsx";
 import PremiumGuildOverrides from "../../discord_common/js/shared/shared-constants/PremiumGuildOverrides.tsx";
 import FileSizeUtils from "FileSizeUtils.tsx";
@@ -50,7 +50,7 @@ const PremiumConstants = fn(1374);
   TotalSoundboardSoundCountsByTier: closure_23,
   TotalStickerCountsByTier: closure_24,
 } = PremiumConstants);
-let closure_25 = fn(4497).getPremiumGroupProductName;
+let closure_25 = fn(4499).getPremiumGroupProductName;
 let obj = {
   LEVEL_1: 1,
   [1]: "LEVEL_1",
@@ -569,7 +569,7 @@ export const getNextGuildTierFromGuild = function getNextGuildTierFromGuild(id) 
   return BoostedGuildTiers.TIER_1;
 };
 export const getAppliedGuildBoostMonths = function getAppliedGuildBoostMonths(arg0) {
-  let num = _modDef4416().diff(_modDef4416(arg0), "months");
+  let num = _modDef4418().diff(_modDef4418(arg0), "months");
   if (num == null) {
     num = 1;
   }
@@ -577,7 +577,7 @@ export const getAppliedGuildBoostMonths = function getAppliedGuildBoostMonths(ar
 };
 export const getUserLevel = function getUserLevel(arg0) {
   let num = 1;
-  const obj = _modDef4416();
+  const obj = _modDef4418();
   const keys = Object.keys(closure_26);
   for (const item10021 of keys) {
     if (diffResult >= closure_26[item10021]) {
@@ -927,7 +927,7 @@ export const getNextPremiumTierForSubscriberCount = function getNextPremiumTierF
 };
 export const TierMarkerPositions = obj4;
 export const getGuildBoostingProgressBarFillFactor = function getGuildBoostingProgressBarFillFactor(guild) {
-  totalAvailableBoostsCount = totalAvailableBoostsCount(4753).getGuildPowerupBoostLevelProgress(guild.id);
+  totalAvailableBoostsCount = totalAvailableBoostsCount(4755).getGuildPowerupBoostLevelProgress(guild.id);
   let NONE = reversed.find((item) => totalAvailableBoostsCount >= AppliedGuildBoostsRequiredForBoostedGuildTier[item]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;

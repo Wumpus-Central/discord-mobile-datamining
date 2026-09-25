@@ -14,13 +14,13 @@ import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const ChannelDetailsStore = fn(8207);
+const ChannelDetailsStore = fn(7296);
 ({
   deleteChannelDetailsSearchState: closure_7,
   useChannelDetailsSearchActiveSource: closure_8,
   useIsChannelDetailsSearchActive: closure_9,
 } = ChannelDetailsStore);
-const ChannelDetailsConstants = fn(11268);
+const ChannelDetailsConstants = fn(10366);
 ({ SPRING_CHANNEL_HEADER: c10, CHANNEL_DETAILS_TOP_MARGIN } = ChannelDetailsConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);

@@ -23,11 +23,11 @@ export default function StickerOptionsActionSheet(stickerUrl) {
   const intl = stickerUrl(1115).intl;
   obj3.label = intl.string(stickerUrl(1115).t.B1ubHx);
   obj3.onPress = callback;
-  obj2.children = jsx(stickerUrl(5910).TableRow, {
+  obj2.children = jsx(stickerUrl(5912).TableRow, {
     icon: jsx(stickerUrl(4771).LinkIcon, {}),
     label: null,
     onPress: null,
   });
-  obj.children = jsx(stickerUrl(5992).TableRowGroup, { hasIcons: true, children: null });
-  return jsx(stickerUrl(7530).ActionSheet, { children: null });
+  obj.children = jsx(stickerUrl(5994).TableRowGroup, { hasIcons: true, children: null });
+  return jsx(stickerUrl(6613).ActionSheet, { children: null });
 }

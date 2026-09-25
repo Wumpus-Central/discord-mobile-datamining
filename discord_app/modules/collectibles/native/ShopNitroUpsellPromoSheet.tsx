@@ -2,7 +2,6 @@
 import util from "../../../intl/index.native.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import ButtonGroup from "../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
-import native from "../../../design/assets/native.tsx";
 import useAnalyticsLocationsDefault from "../../app_analytics/useAnalyticsLocations.tsx";
 import EntitlementFeatureNames from "../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
 import PremiumUpsellUtils from "../../../utils/native/PremiumUpsellUtils.tsx";
@@ -10,6 +9,7 @@ import PremiumFeatureUpsellUtils from "../../premium/roadblocks/native/utils/Pre
 import usePremiumFeatureUpsellGetNitroDefault from "../../premium/roadblocks/native/hooks/usePremiumFeatureUpsellGetNitro.tsx";
 import NitroUpsellButtonDefault from "../../premium/components/native/NitroUpsellButton.tsx";
 import PromoSheet from "../../../design/components/Sheet/native/PromoSheet.native.tsx";
+import DiscountsMegaphoneSpotIllustration from "../../../design/components/mana-assets/native/generated/DiscountsMegaphoneSpotIllustration.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -38,7 +38,7 @@ export default function ShopNitroUpsellPromoSheet(analyticsLocations) {
     analyticsLocations,
   ));
   const obj3 = {
-    illustration: React4(native.DiscountsMegaphoneSpotIllustration, {}),
+    illustration: React4(DiscountsMegaphoneSpotIllustration.DiscountsMegaphoneSpotIllustration, {}),
     title,
     description,
     actions: null,

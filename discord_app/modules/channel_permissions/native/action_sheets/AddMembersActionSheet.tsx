@@ -371,7 +371,7 @@ class AddMembersBody {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_8, ScrollView: closure_9 } = get_ActivityIndicator);
-const ChannelPermissionsConstants = fn(8751);
+const ChannelPermissionsConstants = fn(7841);
 ({ RowType: closure_14, MEMBER_REQUEST_COUNT: closure_15 } = ChannelPermissionsConstants);
 const Permissions = fn(1085).Permissions;
 const jsxProd = fn(21);
@@ -435,7 +435,7 @@ export default function AddMembersActionSheet(channel) {
         }
       }
     });
-    await closure_0(9908).savePermissionUpdates(channel.id, items);
+    await closure_0(9006).savePermissionUpdates(channel.id, items);
     if (1 === tmp7) {
       dependencyMap = 0;
       c5 = 3;
@@ -443,8 +443,8 @@ export default function AddMembersActionSheet(channel) {
       c5 = 3;
       throw value;
     } else if (arg0 !== 2) {
-      const result = channel(4522).memberOrRoleAddedToast(closure_128_2, closure_128_1);
-      channel(4522);
+      const result = channel(4524).memberOrRoleAddedToast(closure_128_2, closure_128_1);
+      channel(4524);
       tmp3(4796).hideActionSheet();
       dependencyMap = 0;
       tmp3(4796);
@@ -487,7 +487,7 @@ export default function AddMembersActionSheet(channel) {
       }
       const obj4 = { scrollable: true, header: null, startExpanded: true, children: null };
       obj2.trailing = closure_17(tmp12, obj7);
-      obj4.header = closure_17(tmp4(7482).BottomSheetTitleHeader, obj2);
+      obj4.header = closure_17(tmp4(6565).BottomSheetTitleHeader, obj2);
       const obj5 = { style: tmp.container, children: null };
       const obj6 = {
         channel,
@@ -499,7 +499,7 @@ export default function AddMembersActionSheet(channel) {
       };
       obj5.children = closure_17(AddMembersBody, obj6);
       obj4.children = closure_17(closure_8, obj5);
-      return closure_17(tmp4(7483).BottomSheet, obj4);
+      return closure_17(tmp4(6566).BottomSheet, obj4);
     }
     obj7 = { size: "sm", text: null, onPress: null, variant: null, disabled: null };
     const intl = tmp4(1115).intl;

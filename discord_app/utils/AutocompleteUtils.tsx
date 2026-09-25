@@ -12,7 +12,7 @@ import RegexUtilsDefault from "RegexUtils.tsx";
 import useChannelName from "../modules/channel/useChannelName.tsx";
 import isSoundValidDefault from "../modules/premium/sounds/soundmoji/utils/isSoundValid.tsx";
 import StickersTypes from "../modules/stickers/StickersTypes.tsx";
-import fuzzysearchDefault from "../../_runtime/05822_fuzzysearch.js";
+import fuzzysearchDefault from "../../_runtime/05824_fuzzysearch.js";
 import autocompleter_sortByMatchScoreDefault from "../modules/autocompleter/sortByMatchScore.tsx";
 import GuildUtilsDefault from "GuildUtils.tsx";
 import OnboardingHomeUtils from "../modules/guild_onboarding_home/OnboardingHomeUtils.tsx";
@@ -436,7 +436,7 @@ function getCategoryName(parent_id, arg1) {
     return tmp2;
   }
 }
-const InAppNavigationRecord = fn(5748);
+const InAppNavigationRecord = fn(5750);
 ({ InAppNavigationRecord: hasOwnProperty, InAppNavigationType: metroRequire } = InAppNavigationRecord);
 const ChannelRecord = fn(2048);
 ({
@@ -449,25 +449,25 @@ const ChannelRecord = fn(2048);
   UnknownChannelRecord: closure_19,
 } = ChannelRecord);
 const isEveryoneRole = fn(2102).isEveryoneRole;
-let GuildChannelStore = fn(4462);
+let GuildChannelStore = fn(4464);
 const GUILD_SELECTABLE_CHANNELS_KEY = GuildChannelStore.GUILD_SELECTABLE_CHANNELS_KEY;
 const GUILD_VOCAL_CHANNELS_KEY = GuildChannelStore.GUILD_VOCAL_CHANNELS_KEY;
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1074);
 ({ Permissions: closure_38, GuildFeatures: closure_39, ChannelTypes } = Constants);
 ({ SKUTypes: closure_41, MAX_AUTOCOMPLETE_RESULTS: closure_42 } = Constants);
-fn(5820).AutocompleterResultTypes;
+fn(5822).AutocompleterResultTypes;
 const StaticChannelId = fn(2051).StaticChannelId;
 const logger = new LoggerDefault("AutocompleteUtils");
 let c46 = 10;
 let tmp7 = /(\t|\s)/;
 const re48 = tmp7;
 let closure_49 = [];
-const MENTION_EVERYONE = fn(5821).default.MENTION_EVERYONE;
-const MENTION_HERE = fn(5821).default.MENTION_HERE;
-const MENTION_GAME = fn(5821).default.MENTION_GAME;
-const MENTION_TIMESTAMP = fn(5821).default.MENTION_TIMESTAMP;
-const LAUNCHABLE_APPLICATIONS = fn(5821).default.LAUNCHABLE_APPLICATIONS;
+const MENTION_EVERYONE = fn(5823).default.MENTION_EVERYONE;
+const MENTION_HERE = fn(5823).default.MENTION_HERE;
+const MENTION_GAME = fn(5823).default.MENTION_GAME;
+const MENTION_TIMESTAMP = fn(5823).default.MENTION_TIMESTAMP;
+const LAUNCHABLE_APPLICATIONS = fn(5823).default.LAUNCHABLE_APPLICATIONS;
 class AutocompleteBoostersCache {
   constructor() {
     merged = Object.assign({
@@ -2002,12 +2002,12 @@ export default {
                     } else if (regex.test(value)) {
                       num4 = 7 * tmp9;
                     } else {
-                      let tmp18 = tmp7 !== flag(5573).StickerMetadataTypes.GUILD_NAME;
+                      let tmp18 = tmp7 !== flag(5575).StickerMetadataTypes.GUILD_NAME;
                       if (tmp18) {
-                        tmp18 = tmp7 !== flag(5573).StickerMetadataTypes.PACK_NAME;
+                        tmp18 = tmp7 !== flag(5575).StickerMetadataTypes.PACK_NAME;
                       }
                       if (tmp18) {
-                        tmp18 = tmp7 !== flag(5573).StickerMetadataTypes.STICKER_NAME;
+                        tmp18 = tmp7 !== flag(5575).StickerMetadataTypes.STICKER_NAME;
                       }
                       if (!tmp18) {
                         tmp18 = !regex2.test(value);
@@ -2045,7 +2045,7 @@ export default {
                   closure_2_5.push(obj);
                 }
               }
-              obj2 = flag(7667);
+              obj2 = flag(6750);
             }
           });
         });

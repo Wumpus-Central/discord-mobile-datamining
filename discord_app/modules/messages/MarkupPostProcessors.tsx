@@ -41000,14 +41000,14 @@ export const removeExperimentLinks = function removeExperimentLinks(arr) {
   return arr.filter((type) => {
     let tmp = "link" !== type.type;
     if (!tmp) {
-      tmp = !closure_0(8222).isExperimentEmbedURL(type.target);
-      const obj = closure_0(8222);
+      tmp = !closure_0(7311).isExperimentEmbedURL(type.target);
+      const obj = closure_0(7311);
     }
     return tmp;
   });
 };
 export const removeRedundantLinks = function removeRedundantLinks(arr) {
-  obj = { onlyLinkContent: obj(8221).readContentLinks(arr, isLinkNode).onlyLinks, stripGameServerShareLinks: false };
+  obj = { onlyLinkContent: obj(7310).readContentLinks(arr, isLinkNode).onlyLinks, stripGameServerShareLinks: false };
   return arr.filter((type) => {
     let tmp = null;
     if ("link" === type.type) {
@@ -41132,12 +41132,12 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
     }
     let items2 = tmp;
     if (obj3.hasOnlySimpleEmbed(tmp3.embeds)) {
-      const tmp4Result = tmp4(8221);
+      const tmp4Result = tmp4(7310);
       items2 = tmp;
       if (tmp4Result.isSingleLinkContent(tmp4Result2.readContentLinks(tmp, isLinkNode))) {
         items2 = [];
       }
-      tmp4Result2 = tmp4(8221);
+      tmp4Result2 = tmp4(7310);
     }
     arr3 = items2;
     obj3 = require("RedundantLinkUtils");
@@ -41242,8 +41242,8 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
     found1 = found.filter((type) => {
       let tmp = "link" !== type.type;
       if (!tmp) {
-        tmp = !closure_0(8222).isExperimentEmbedURL(type.target);
-        const obj = closure_0(8222);
+        tmp = !closure_0(7311).isExperimentEmbedURL(type.target);
+        const obj = closure_0(7311);
       }
       return tmp;
     });

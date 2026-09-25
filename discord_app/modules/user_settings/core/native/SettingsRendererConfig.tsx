@@ -259,6 +259,7 @@ import ActivityPrivacyDefaultSharingSettingDefault from "../../defs/native/Activ
 import FriendRequestsNotesSettingDefault from "../../defs/native/FriendRequestsNotesSetting.tsx";
 import NotifyFriendsOnComeOnlineSettingDefault from "../../defs/native/NotifyFriendsOnComeOnlineSetting.tsx";
 import NotifyFriendsOnProfileUpdateSettingDefault from "../../defs/native/NotifyFriendsOnProfileUpdateSetting.tsx";
+import VideoBackgroundSettingDefault from "../../defs/native/VideoBackgroundSetting.tsx";
 import MobileNotifSettingsRendererConfig from "../../notifications/native/codegen/MobileNotifSettingsRendererConfig.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -814,6 +815,7 @@ const frozen = Object.freeze({
   [MobileUserSettings.FRIEND_REQUEST_NOTES]: FriendRequestsNotesSettingDefault,
   [MobileUserSettings.NOTIFY_FRIENDS_ON_COME_ONLINE]: NotifyFriendsOnComeOnlineSettingDefault,
   [MobileUserSettings.NOTIFY_FRIENDS_ON_PROFILE_UPDATE]: NotifyFriendsOnProfileUpdateSettingDefault,
+  [MobileUserSettings.VIDEO_BACKGROUND]: VideoBackgroundSettingDefault,
 });
 const result = size.fileFinishedImporting("modules/user_settings/core/native/SettingsRendererConfig.tsx");
 

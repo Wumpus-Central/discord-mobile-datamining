@@ -22,7 +22,7 @@ function SourceIcon(toastText) {
     accessible: false,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
-    children: closure_5(toastText(9134).HeartIcon, {
+    children: closure_5(toastText(8228).HeartIcon, {
       color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT,
       size: "md",
     }),

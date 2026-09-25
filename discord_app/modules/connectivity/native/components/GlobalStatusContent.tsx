@@ -18,7 +18,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const RTC_PANEL_HEIGHT = fn(9852).RTC_PANEL_HEIGHT;
+const RTC_PANEL_HEIGHT = fn(8950).RTC_PANEL_HEIGHT;
 const RTCConnectionStates = fn(1074).RTCConnectionStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
@@ -107,8 +107,8 @@ export default function ConnectivityGlobalStatusContent() {
   const isThemeDarkResult = require("shared").isThemeDark(useThemeDefault());
   let isScreenLandscape = require("useIsScreenLandscape").useIsScreenLandscape();
   if (isScreenLandscape) {
-    isScreenLandscape = tmp5(4686).isModalOpen(ChannelCallModalDefault);
-    const tmp5Result5 = tmp5(4686);
+    isScreenLandscape = tmp5(4688).isModalOpen(ChannelCallModalDefault);
+    const tmp5Result5 = tmp5(4688);
   }
   if (isScreenLandscape) {
     isScreenLandscape = tmp5(1364).isAndroid();

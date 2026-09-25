@@ -8,8 +8,8 @@ import AutomodActionUtils from "AutomodActionUtils.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
 require = fn;
-const getRuleCountByTriggerType = fn(18044).getRuleCountByTriggerType;
-const Constants = fn(12205);
+const getRuleCountByTriggerType = fn(17272).getRuleCountByTriggerType;
+const Constants = fn(11327);
 ({
   AutomodTriggerType: closure_4,
   MAX_KEYWORDS_PER_KEYWORD_FILTER: hasOwnProperty,
@@ -20,6 +20,8 @@ const Constants = fn(12205);
   MAX_REGEX_PATTERN_LENGTH: c10,
   AutomodActionType: closure_11,
   AutomodEventType: closure_12,
+  MAX_MENTION_SPAM_LIMIT: map1,
+  MIN_MENTION_SPAM_LIMIT: closure_14,
 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/AutomodRuleUtils.tsx");
@@ -179,12 +181,44 @@ export const validateRegexPatternsOrThrow = function validateRegexPatternsOrThro
     });
   }
 };
+export const isValidMentionSpamLimit = function isValidMentionSpamLimit(NumberResult) {
+  let isIntegerResult = Number.isInteger(NumberResult);
+  if (isIntegerResult) {
+    isIntegerResult = NumberResult >= minimum;
+  }
+  if (isIntegerResult) {
+    isIntegerResult = NumberResult <= maximum;
+  }
+  return isIntegerResult;
+};
 export const validateRuleBeforeSaveOrThrow = function validateRuleBeforeSaveOrThrow(triggerType) {
   triggerType = undefined;
   if (triggerType != null) {
     triggerType = triggerType.triggerType;
   }
-  if (triggerType === constants.KEYWORD) {
+  if (triggerType === constants.MENTION_SPAM) {
+    const mentionTotalLimit = triggerType.triggerMetadata.mentionTotalLimit;
+    const _Number = Number;
+    let isIntegerResult = Number.isInteger(mentionTotalLimit);
+    if (isIntegerResult) {
+      isIntegerResult = mentionTotalLimit >= minimum;
+    }
+    if (isIntegerResult) {
+      isIntegerResult = mentionTotalLimit <= maximum;
+    }
+    if (!isIntegerResult) {
+      const _Error = Error;
+      let intl = util.intl;
+      const obj = { minimum, maximum };
+      const error = new Error(intl.formatToPlainString(util.t["8Y5zsp"], obj));
+      throw error;
+    }
+  }
+  let triggerType1;
+  if (triggerType != null) {
+    triggerType1 = triggerType.triggerType;
+  }
+  if (triggerType1 === constants.KEYWORD) {
     let keywordFilter = triggerType.triggerMetadata.keywordFilter;
     if (keywordFilter == null) {
       keywordFilter = [];
@@ -195,18 +229,18 @@ export const validateRuleBeforeSaveOrThrow = function validateRuleBeforeSaveOrTh
     }
     if (0 === keywordFilter.length) {
       if (0 === regexPatterns.length) {
-        const _Error5 = Error;
-        const intl5 = util.intl;
-        const error = new Error(intl5.string(util.t.kz2Av3));
-        throw error;
+        const _Error6 = Error;
+        const intl6 = util.intl;
+        const error1 = new Error(intl6.string(util.t.kz2Av3));
+        throw error1;
       }
     }
     if (keywordFilter.length > hasOwnProperty) {
-      const _Error4 = Error;
-      const intl4 = util.intl;
-      const obj2 = { limit: tmp3 };
-      const error1 = new Error(intl4.formatToPlainString(util.t.mee4qd, obj2));
-      throw error1;
+      const _Error5 = Error;
+      const intl5 = util.intl;
+      const obj2 = { limit: tmp15 };
+      const error2 = new Error(intl5.formatToPlainString(util.t.mee4qd, obj2));
+      throw error2;
     } else {
       const item = keywordFilter.forEach((keyword) => {
         const intl = util.intl;
@@ -217,11 +251,11 @@ export const validateRuleBeforeSaveOrThrow = function validateRuleBeforeSaveOrTh
         throw invalidKeywordError;
       });
       if (regexPatterns.length > timestampProducer) {
-        const _Error3 = Error;
-        const intl3 = util.intl;
-        const obj = { limit: tmp41 };
-        const error2 = new Error(intl3.formatToPlainString(util.t.tDjhF1, obj));
-        throw error2;
+        const _Error4 = Error;
+        const intl4 = util.intl;
+        const obj3 = { limit: tmp54 };
+        const error3 = new Error(intl4.formatToPlainString(util.t.tDjhF1, obj3));
+        throw error3;
       } else {
         const item1 = regexPatterns.forEach((regex) => {
           const intl = util.intl;
@@ -234,22 +268,22 @@ export const validateRuleBeforeSaveOrThrow = function validateRuleBeforeSaveOrTh
       }
     }
   }
-  let triggerType1;
+  let triggerType2;
   if (triggerType != null) {
-    triggerType1 = triggerType.triggerType;
+    triggerType2 = triggerType.triggerType;
   }
-  if (triggerType1 === constants.APPLICATION) {
+  if (triggerType2 === constants.APPLICATION) {
     if (null == triggerType.triggerMetadata.applicationId) {
-      const _Error2 = Error;
-      const intl2 = util.intl;
-      const error3 = new Error(intl2.string(util.t["6NbEkN"]));
-      throw error3;
+      const _Error3 = Error;
+      const intl3 = util.intl;
+      const error4 = new Error(intl3.string(util.t["6NbEkN"]));
+      throw error4;
     }
   } else if (0 === triggerType.actions.length) {
-    const _Error = Error;
-    let intl = util.intl;
-    const error4 = new Error(intl.string(util.t["t+gj5V"]));
-    throw error4;
+    const _Error2 = Error;
+    const intl2 = util.intl;
+    const error5 = new Error(intl2.string(util.t["t+gj5V"]));
+    throw error5;
   }
 };
 export const isBackendPersistedRule = function isBackendPersistedRule(editingRule) {

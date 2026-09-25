@@ -170,7 +170,7 @@ function GuildRowWrapper(guild) {
       const tmp = unreadChannel.getMutableGuildStates()[guild.id];
       guild = tmp;
       if (null == tmp) {
-        return { mentionChannel: "ip", mentionChannelName: "isArray", mentionChannelCount: null };
+        return { mentionChannel: "disabled", mentionChannelName: "isArray", mentionChannelCount: null };
       } else {
         const keys = disableSubtitle(onActiveHookChange[25]).keys(tmp.mentionCounts);
         const found = keys.filter((item) => {
@@ -388,7 +388,7 @@ export default function HomeDrawerGuildRow(guildId) {
   ({ disableSubtitle, onActiveHookChange } = guildId);
   const items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
-  const MobileHomeDrawerExperiment = guildId(4692).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = guildId(4694).MobileHomeDrawerExperiment;
   let tmp3 = null;
   if (null != stateFromStores) {
     tmp3 = null;

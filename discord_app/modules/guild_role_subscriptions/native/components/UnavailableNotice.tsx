@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef16669 from "../../../../../_runtime/metro/16669__.js";
+import _modDef15849 from "../../../../../_runtime/metro/15849__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -37,7 +37,7 @@ export default function UnavailableNotice(brightTitle) {
   ({ container: arr[0], unavailableContainer: arr[1] } = tmp);
   obj.style = items;
   const obj2 = { style: tmp.unavailableInfo, children: null };
-  const obj3 = { source: _modDef16669 };
+  const obj3 = { source: _modDef15849 };
   const items1 = [React4(FastImageDefault, obj3), ,];
   const items2 = [tmp.joinCtaTitle];
   if (brightTitle) {

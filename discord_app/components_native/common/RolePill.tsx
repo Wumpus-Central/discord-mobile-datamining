@@ -47,7 +47,7 @@ export default function RolePill(role) {
   ({ guildId, color } = role);
   const DeveloperMode = role(2020).DeveloperMode;
   const setting = DeveloperMode.useSetting();
-  const roleIconProps = role(7519).useRoleIconProps({ guildId, roleId: role.id, size: 12 });
+  const roleIconProps = role(6602).useRoleIconProps({ guildId, roleId: role.id, size: 12 });
   let name = role.name;
   let combined = name;
   if (role.name.length > closure_5) {
@@ -94,8 +94,8 @@ export default function RolePill(role) {
     }
     obj5.guildId = guildId;
     obj5.roleColor = color;
-    let tmp10Result = closure_6(combined(7536), obj5);
-    const tmp15 = combined(7536);
+    let tmp10Result = closure_6(combined(6619), obj5);
+    const tmp15 = combined(6619);
   } else {
     const items = [tmp9.bubble];
     if (null != color) {
@@ -115,9 +115,9 @@ export default function RolePill(role) {
     const obj9 = { style: tmp9.roleIcon, children: null };
     const obj10 = {};
     const merged = Object.assign(roleIconProps);
-    obj9.children = closure_6(combined(7538), obj10);
+    obj9.children = closure_6(combined(6621), obj10);
     tmp10Result2 = closure_6(View, obj9);
-    const tmp18 = combined(7538);
+    const tmp18 = combined(6621);
   }
   items1[1] = tmp10Result2;
   items1[2] = closure_6(role(4825).Text, {
@@ -127,5 +127,5 @@ export default function RolePill(role) {
   });
   obj4.children = items1;
   obj3.children = closure_7(View, obj4);
-  return closure_6(role(5427).PressableHighlight, obj3);
+  return closure_6(role(5428).PressableHighlight, obj3);
 }

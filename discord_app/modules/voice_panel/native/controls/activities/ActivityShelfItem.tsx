@@ -16,11 +16,11 @@ import useActivityShelfItem from "../../../../activities/utils/useActivityShelfI
 import ActivityShelfBadgeDefault from "../../../../activities/native/ActivityShelfBadge.tsx";
 import useLaunchingActivityButtonStateDefault from "../../../../app_launcher/utils/useLaunchingActivityButtonState.tsx";
 import getItemSubtitleForMaxPlayers from "../../../../activities/utils/getItemSubtitleForMaxPlayers.tsx";
-import _modDef13126 from "../../../../../../_runtime/metro/13126__.js";
+import _modDef12276 from "../../../../../../_runtime/metro/12276__.js";
 import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground.tsx";
 import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary.tsx";
 import useActivityUsersDefault from "../../../../activities/useActivityUsers.tsx";
-import _modDef17719 from "../../../../../../_runtime/metro/17719__.js";
+import _modDef16943 from "../../../../../../_runtime/metro/16943__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const useActivityShelfItemDefault = useActivityShelfItem;
@@ -72,7 +72,7 @@ function ParticipantsText(arg0) {
   obj2.style = items;
   const tmp2Result = NativeViewDefault;
   const items1 = [
-    timestampProducer(native.Icon, { source: _modDef13126, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" }),
+    timestampProducer(native.Icon, { source: _modDef12276, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" }),
   ];
   const obj4 = {
     lineClamp: 1,
@@ -130,7 +130,7 @@ let obj2 = {
   developerIconColor: null,
 };
 let obj4 = { backgroundColor: null, borderRadius: null };
-const ColorUtils = fn(4678);
+const ColorUtils = fn(4680);
 obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.5);
 obj4.borderRadius = nativeDefault.radii.round;
 obj2.overlayBubble = obj4;
@@ -261,7 +261,7 @@ export default function ActivityShelfItem(arg0) {
       const obj9 = { style: tmp.developerIconContainer, children: null };
       const obj10 = {
         size: native.Icon.Sizes.REFRESH_SMALL_16,
-        source: _modDef17719,
+        source: _modDef16943,
         color: tmp.developerIconColor.color,
       };
       obj9.children = timestampProducer(native.Icon, obj10);

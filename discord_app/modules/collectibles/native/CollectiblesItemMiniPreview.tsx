@@ -6,16 +6,16 @@ import ProfileEffectDefault from "../profile_effects/native/ProfileEffect.tsx";
 import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2.tsx";
 import NameplateDefault from "../nameplates/native/Nameplate.tsx";
 import ProfileFrameSamplePreviewDefault from "../profile_frames/native/previews/ProfileFrameSamplePreview.tsx";
-import _modDef9184 from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
+import _modDef8278 from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const isAvatarDecorationRecord = fn(7877).isAvatarDecorationRecord;
+const isAvatarDecorationRecord = fn(6962).isAvatarDecorationRecord;
 const isNameplateRecord = fn(1971).isNameplateRecord;
-const isProfileEffectRecord = fn(7878).isProfileEffectRecord;
-const isProfileFrameRecord = fn(7879).isProfileFrameRecord;
-let closure_8 = fn(8570).PROFILE_FRAME_ASPECT_RATIO;
+const isProfileEffectRecord = fn(6963).isProfileEffectRecord;
+const isProfileFrameRecord = fn(6964).isProfileFrameRecord;
+let closure_8 = fn(7660).PROFILE_FRAME_ASPECT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
@@ -38,7 +38,7 @@ const obj = {
 };
 let size = { overflow: "hidden", width: "100%", height: "100%", borderRadius: nativeDefault.radii.sm };
 obj.profileEffect = size;
-obj.sampleProfile = { aspectRatio: fn(9159).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
+obj.sampleProfile = { aspectRatio: fn(8253).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 obj.nameplate = {
   overflow: "hidden",
   borderTopRightRadius: nativeDefault.radii.xs,
@@ -80,7 +80,7 @@ export default noop.memo(function CollectiblesItemMiniPreview(arg0) {
     const obj7 = { style: items, children: null };
     const obj8 = { style: tmp.profileEffect, accessible: false, importantForAccessibility: "no", children: null };
     const obj9 = { source: null, style: null, resizeMode: "cover" };
-    const obj10 = { uri: _modDef9184 };
+    const obj10 = { uri: _modDef8278 };
     obj9.source = obj10;
     obj9.style = tmp.sampleProfile;
     const items1 = [React7(FastImageDefault, obj9)];

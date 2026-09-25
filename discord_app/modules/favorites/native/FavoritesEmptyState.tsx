@@ -5,7 +5,7 @@ import _modDef3360 from "../intl/FavoritesGuild.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import native from "../../../design/assets/native.tsx";
+import FavoritesSpotIllustration from "../../../design/components/mana-assets/native/generated/FavoritesSpotIllustration.native.tsx";
 import PlusMediumIcon from "../../../design/components/Icon/native/redesign/generated/PlusMediumIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -44,7 +44,7 @@ export default function FavoritesEmptyState() {
       { source: "favorites_empty_sidebar" },
     );
   }, []);
-  const items = [hasOwnProperty(native.FavoritesSpotIllustration, { width: 192, height: 108 }), ,];
+  const items = [hasOwnProperty(FavoritesSpotIllustration.FavoritesSpotIllustration, { width: 192, height: 108 }), ,];
   const obj3 = { spacing: nativeDefault.space.PX_8, align: "center", children: null };
   const obj4 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
   const intl = util.intl;

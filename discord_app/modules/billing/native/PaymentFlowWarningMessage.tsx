@@ -17,7 +17,7 @@ const obj2 = {
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: fn(5746).DARK_PRIMARY_630_LIGHT_PRIMARY_230,
+    backgroundColor: fn(5748).DARK_PRIMARY_630_LIGHT_PRIMARY_230,
   },
   icon: { marginRight: 10 },
   text: { flexShrink: 1 },

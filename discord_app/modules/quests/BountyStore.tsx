@@ -19,10 +19,10 @@ function resetStateForDeliveredBounties(items) {
 }
 let c2 = false;
 let closure_3 = [];
+new Set();
 let set = new Set();
-let set1 = new Set();
-set = set1;
 new Map();
+let set1 = new Set();
 let map = new Map();
 const Store = initializeDefault.Store;
 class BountyStore extends Store {}
@@ -40,12 +40,12 @@ Object.defineProperty(prototype, "questHomeBounties", {
   set: undefined,
 });
 prototype["isBountyCompleted"] = function isBountyCompleted(id) {
-  return set1.has(id);
+  return set.has(id);
 };
 prototype["getCompletedBountyCount"] = function getCompletedBountyCount(arg0) {
   let num = 0;
   while (tmp !== undefined) {
-    if (set1.has(tmp2.id)) {
+    if (set.has(tmp2.id)) {
       num = num + 1;
     }
     continue;
@@ -84,10 +84,10 @@ const bountyStore = new BountyStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
     c2 = false;
     closure_3 = [];
+    new Set();
     set = new Set();
-    set1 = new Set();
-    set = set1;
     new Map();
+    const set1 = new Set();
     map = new Map();
   },
   BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_BEGIN: function handleFetchQuestHomeBountiesBegin() {
@@ -129,8 +129,9 @@ const bountyStore = new BountyStore(DispatcherDefault, {
     bountyId = bountyId.bountyId;
     set = new Set(set);
     set.delete(bountyId);
-    set1 = new Set(set1);
+    const set1 = new Set(set);
     set1.add(bountyId);
+    set = set1;
   },
   BOUNTIES_CLAIM_REWARD_FAILURE: function handleClaimBountyRewardFailure(bountyId) {
     set = new Set(set);
@@ -142,6 +143,35 @@ const bountyStore = new BountyStore(DispatcherDefault, {
     const result = map.set(bountyId, { timestampSec, maxTimestampSec, duration });
   },
   AD_SESSION_RESET: function handleAdSessionReset() {
+    map = new Map();
+  },
+  ADS_CREATIVE_PREVIEW_DELIVERY_STATE_RESET: function handleAdsCreativePreviewDeliveryStateReset(adCreativeId) {
+    adCreativeId = adCreativeId.adCreativeId;
+    const hasItem = set.has(adCreativeId);
+    const hasItem1 = map.has(adCreativeId);
+    if (!hasItem) {
+      if (!hasItem1) {
+        return false;
+      }
+    }
+    if (hasItem) {
+      const _Set = Set;
+      set = new Set(set);
+      set.delete(adCreativeId);
+    }
+    if (hasItem1) {
+      const _Map = Map;
+      map = new Map(map);
+      map.delete(adCreativeId);
+    }
+  },
+  ADS_PREVIEW_DELIVERY_STATE_LOOKBACK_RESET: function handleAdsPreviewDeliveryStateLookbackReset() {
+    if (0 === set.size) {
+      if (0 === map.size) {
+        return false;
+      }
+    }
+    set = new Set();
     map = new Map();
   },
 });

@@ -2,7 +2,6 @@
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef2550 from "../../../PremiumGifting.messages.js";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../../design/components/Button/native/Button.native.tsx";
 import GiftingSKUCardsGridDefault from "GiftingSKUCardsGrid.tsx";
@@ -101,7 +100,7 @@ export default function GiftingSKUSelectScreen(rewardsToDisplay) {
   const items3 = [React5(Text_Text.Text, obj4)];
   const obj5 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: null };
   const intl2 = util.intl;
-  obj5.children = intl2.string(_modDef2550.zprqn1);
+  obj5.children = intl2.string(util.t.vPeaOS);
   items3[1] = React5(Text_Text.Text, obj5);
   obj3.children = items3;
   const items4 = [

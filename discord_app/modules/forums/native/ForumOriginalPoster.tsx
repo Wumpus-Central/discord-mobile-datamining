@@ -37,7 +37,7 @@ let obj2 = {
   opIconBackground: null,
 };
 let obj3 = { borderRadius: nativeDefault.radii.sm, marginEnd: 8, paddingHorizontal: 4 };
-obj2.opIconBackground = { backgroundColor: fn(5746).DARK_BRAND_260_LIGHT_BRAND_200 };
+obj2.opIconBackground = { backgroundColor: fn(5748).DARK_BRAND_260_LIGHT_BRAND_200 };
 const hasOwnProperty = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/ForumOriginalPoster.tsx");

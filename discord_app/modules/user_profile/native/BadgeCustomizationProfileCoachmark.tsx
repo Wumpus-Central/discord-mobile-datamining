@@ -24,7 +24,7 @@ export default function BadgeCustomizationProfileCoachmark(markAsDismissed) {
   const stateFromStores = targetRef(504).useStateFromStores(items, () =>
     visible(_undefined[9]).canUsePremiumProfileCustomization(str2.getCurrentUser()),
   );
-  reducedMotion = reducedMotion.useContext(targetRef(4545).AccessibilityPreferencesContext).reducedMotion;
+  reducedMotion = reducedMotion.useContext(targetRef(4547).AccessibilityPreferencesContext).reducedMotion;
   dependencyMap = undefined;
   const height = visible(1478)().height;
   let rect = visible(1612)();
@@ -52,7 +52,7 @@ export default function BadgeCustomizationProfileCoachmark(markAsDismissed) {
       str = "top";
     }
     str2 = str;
-    tmpResult = tmp(17356);
+    tmpResult = tmp(16571);
   }
   const items2 = [stateFromStores, visible, str2, markAsDismissed, onTryItOut, reducedMotion.enabled];
   const memo = obj2.useMemo(() => {
@@ -91,6 +91,6 @@ export default function BadgeCustomizationProfileCoachmark(markAsDismissed) {
     return obj;
   }, items2);
   const tmp4 = stateFromStores(reducedMotion.useState(null), 2);
-  const coachmark = targetRef(11480).useCoachmark(targetRef, memo);
+  const coachmark = targetRef(10578).useCoachmark(targetRef, memo);
   return null;
 }

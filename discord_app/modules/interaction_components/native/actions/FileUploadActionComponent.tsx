@@ -99,7 +99,7 @@ function File(upload) {
   return React7(TableRow.TableRow, obj);
 }
 const View = fn(17).View;
-const DraftType = fn(5192).DraftType;
+const DraftType = fn(5193).DraftType;
 const NOOP = fn(1074).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -313,7 +313,7 @@ export default function FileUploadActionComponent(maxValues) {
       extensions: allowedExtensions,
       uploadLimit: InteractionModal,
       onDismissKeyboard() {
-        return InteractionModal(10984).hideMediaKeyboardActionSheet();
+        return InteractionModal(10088).hideMediaKeyboardActionSheet();
       },
       onRestoreKeyboard: effectiveUploadLimit,
       onSelectFiles(arg0) {
@@ -346,7 +346,7 @@ export default function FileUploadActionComponent(maxValues) {
           const result = InteractionModal(customId[29]).hideMediaKeyboardActionSheet();
           if (item.isIncluded) {
             const found = currentUploads.find((item) =>
-              InteractionModal(5440).doesImageMatchUpload(item.node.image, item),
+              InteractionModal(5441).doesImageMatchUpload(item.node.image, item),
             );
             if (null != found) {
               callback1(found.id);
@@ -367,9 +367,9 @@ export default function FileUploadActionComponent(maxValues) {
           obj.handleViewAllDialog(obj2);
         },
         onManageLimited() {
-          obj = InteractionModal(10983);
+          obj = InteractionModal(10087);
           const result = obj.handleLimitedPickerDialog({
-            onDismissKeyboard: InteractionModal(10984).hideMediaKeyboardActionSheet,
+            onDismissKeyboard: InteractionModal(10088).hideMediaKeyboardActionSheet,
             onRestoreKeyboard,
           });
         },

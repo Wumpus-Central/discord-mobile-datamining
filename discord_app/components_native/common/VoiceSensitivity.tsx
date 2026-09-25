@@ -43,7 +43,7 @@ obj2.sensitivityMin = { backgroundColor: nativeDefault.unsafe_rawColors.YELLOW_3
 let obj3 = { backgroundColor: nativeDefault.unsafe_rawColors.YELLOW_300 };
 obj2.sensitivityMax = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
 let obj5 = { flex: 1, backgroundColor: null };
-const ColorUtils = fn(4678);
+const ColorUtils = fn(4680);
 obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_400, 0.6);
 obj2.sensitivityDefault = obj5;
 let obj4 = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
@@ -134,7 +134,7 @@ export default function VoiceSensitivity(auto) {
               c1 = 1;
               c2 = 1;
               const obj4 = {
-                value: onThresholdChange(5443).hasPermission(constants.AUDIO, { showAuthorizationError: false }),
+                value: onThresholdChange(5444).hasPermission(constants.AUDIO, { showAuthorizationError: false }),
                 done: false,
               };
               return obj4;

@@ -7,9 +7,9 @@ import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertAct
 import SelectedChannelActionCreatorsDefault from "../../../actions/SelectedChannelActionCreators.tsx";
 import AVError from "../../errors/av_errors/AVError.tsx";
 import AudioActionCreatorsDefault from "../../../actions/AudioActionCreators.tsx";
-import _modDef10015 from "../../../../_runtime/metro/10015__.js";
-import _modDef10016 from "../../../../_runtime/metro/10016__.js";
-import _modDef10017 from "../../../../_runtime/metro/10017__.js";
+import _modDef9113 from "../../../../_runtime/metro/09113__.js";
+import _modDef9114 from "../../../../_runtime/metro/09114__.js";
+import _modDef9115 from "../../../../_runtime/metro/09115__.js";
 import useIsVideoModeDefault from "../../video_calls/native/useIsVideoMode.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -141,11 +141,11 @@ let closure_18 = apply.debounce((fn) => {
   fn();
 }, 1);
 const audioDeviceToIconMap = {
-  EARPIECE: _modDef10015,
-  BLUETOOTH_HEADSET: _modDef10016,
-  WIRED_HEADSET: _modDef10017,
-  SPEAKERPHONE: _modDef10017,
-  INVALID: _modDef10017,
+  EARPIECE: _modDef9113,
+  BLUETOOTH_HEADSET: _modDef9114,
+  WIRED_HEADSET: _modDef9115,
+  SPEAKERPHONE: _modDef9115,
+  INVALID: _modDef9115,
 };
 const constants = {
   TYPE_UNKNOWN: 0,
@@ -354,7 +354,7 @@ export const useMaskedSpeakerStates = PlatformUtils.isAndroid()
         AudioRouteStore,
       ];
       const stateFromStoresObject = isEnabled(504).useStateFromStoresObject(items, () => {
-        isVideoMode = isEnabled(10152).isVideoMode(
+        isVideoMode = isEnabled(9249).isVideoMode(
           ChannelStore,
           SelectedChannelStore,
           ApplicationStreamingStore,
@@ -362,8 +362,8 @@ export const useMaskedSpeakerStates = PlatformUtils.isAndroid()
           MediaEngineStore,
         );
         currentRouteType = currentRouteType.getCurrentRouteType();
-        isEnabled = currentRouteType === isEnabled(9990).RouteTypes.SPEAKER;
-        const isBluetoothRoute = currentRouteType === isEnabled(9990).RouteTypes.BLUETOOTH;
+        isEnabled = currentRouteType === isEnabled(9088).RouteTypes.SPEAKER;
+        const isBluetoothRoute = currentRouteType === isEnabled(9088).RouteTypes.BLUETOOTH;
         if (!isEnabled) {
           isEnabled = isBluetoothRoute;
         }
@@ -398,7 +398,7 @@ export const useMaskedSpeakerStates = PlatformUtils.isAndroid()
       return {
         isAudioRouteEnabled,
         toggleAudio: callback,
-        routeSource: isVideoMode(stateFromStoresObject.isBluetoothRoute ? 10016 : 10017),
+        routeSource: isVideoMode(stateFromStoresObject.isBluetoothRoute ? 9114 : 9115),
       };
     };
 export const useImmediateMaskedSpeakerStates = () => {
@@ -431,5 +431,5 @@ export const useImmediateMaskedSpeakerStates = () => {
     closure_3(closure_1);
   }, items2);
   const obj = require("initialize");
-  return { isAudioRouteEnabled, toggleAudio: callback, routeSource: importDefault(tmp6 ? 10016 : 10017) };
+  return { isAudioRouteEnabled, toggleAudio: callback, routeSource: importDefault(tmp6 ? 9114 : 9115) };
 };

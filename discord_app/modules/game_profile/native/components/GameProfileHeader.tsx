@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05285_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05286_LinearGradient.js";
 import SKUUtils from "../../../../utils/SKUUtils.tsx";
 import useGameProfileHeroBackgroundURLDefault from "../../hooks/useGameProfileHeroBackgroundURL.tsx";
 import GameProfileRankPillDefault from "GameProfileRankPill.tsx";
@@ -40,7 +40,7 @@ obj2.headerContent = {
   gap: nativeDefault.space.PX_12,
   flexDirection: "row",
   alignItems: "flex-end",
-  maxWidth: fn(9065).MOBILE_GAME_PROFILE_MAX_WIDTH,
+  maxWidth: fn(8159).MOBILE_GAME_PROFILE_MAX_WIDTH,
   alignSelf: "center",
   width: "100%",
 };
@@ -50,7 +50,7 @@ let obj4 = {
   gap: nativeDefault.space.PX_12,
   flexDirection: "row",
   alignItems: "flex-end",
-  maxWidth: fn(9065).MOBILE_GAME_PROFILE_MAX_WIDTH,
+  maxWidth: fn(8159).MOBILE_GAME_PROFILE_MAX_WIDTH,
   alignSelf: "center",
   width: "100%",
 };

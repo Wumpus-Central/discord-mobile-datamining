@@ -13,7 +13,7 @@ import apply from "../../../../_runtime/metro/00012__.js";
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallConstants = fn(9724);
+const ChannelCallConstants = fn(8822);
 ({ VoiceCallOverlayType, VoiceChatDrawerState } = ChannelCallConstants);
 const OrientationLockState = fn(2004).OrientationLockState;
 const ParticipantTypes = fn(4850).ParticipantTypes;
@@ -31,7 +31,7 @@ let size = {
   y: "PX_8",
   width: "y",
   height: "HermesInternal",
-  screenOrientation: fn(8682).OrientationType.PORTRAIT,
+  screenOrientation: fn(7772).OrientationType.PORTRAIT,
   hasUserInteractedSinceOrientationChange: true,
   isInitialized: true,
   isVisible: null,
@@ -42,7 +42,7 @@ const size1 = {
   y: "PX_8",
   width: "y",
   height: "HermesInternal",
-  screenOrientation: fn(8682).OrientationType.PORTRAIT,
+  screenOrientation: fn(7772).OrientationType.PORTRAIT,
   hasUserInteractedSinceOrientationChange: true,
   isInitialized: true,
   isVisible: null,

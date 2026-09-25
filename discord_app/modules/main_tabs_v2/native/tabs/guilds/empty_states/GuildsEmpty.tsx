@@ -7,7 +7,7 @@ import Text_Text from "../../../../../../design/components/Text/native/Text.tsx"
 import Stack_Stack from "../../../../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../../../../design/components/Button/native/Button.native.tsx";
 import CreateGuildModalActionCreatorsDefault from "../../../../../create_guild/native/CreateGuildModalActionCreators.tsx";
-import _modDef16696 from "../../../../../../../_runtime/metro/16696__.js";
+import _modDef15880 from "../../../../../../../_runtime/metro/15880__.js";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../../../../../stores/AuthenticationStore.tsx";
@@ -166,7 +166,7 @@ export default noop.memo(function GuildsEmpty(arg0) {
   const obj2 = navigation(563);
   obj3.type = navigation(1249).ImpressionTypes.VIEW;
   obj3.name = navigation(1249).ImpressionNames.GUILDS_EMPTY_NUX;
-  selectedGuildId(9128)(obj3);
+  selectedGuildId(8222)(obj3);
   const items1 = [tmp6, navigation];
   const effect = noop.useEffect(() => {
     if (null != selectedGuildId) {
@@ -203,9 +203,9 @@ export default noop.memo(function GuildsEmpty(arg0) {
       }
     }
   }, items1);
-  const tmp7 = selectedGuildId(9128);
-  const isScreenLandscape = navigation(5430).useIsScreenLandscape();
-  navigation(15436);
+  const tmp7 = selectedGuildId(8222);
+  const isScreenLandscape = navigation(5431).useIsScreenLandscape();
+  navigation(14604);
   let tmp14Result = null;
   if (stateFromStores) {
     const obj4 = { style: null, children: null };

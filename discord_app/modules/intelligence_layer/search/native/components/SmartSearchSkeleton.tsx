@@ -7,9 +7,9 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const IntelligenceSearchConstants = fn(12707);
+const IntelligenceSearchConstants = fn(11833);
 ({ LOADING_BLOCK_HEIGHT: hasOwnProperty, LOADING_BOTTOM_GAP: metroRequire } = IntelligenceSearchConstants);
-const AILoaderConstants = fn(14499);
+const AILoaderConstants = fn(13660);
 ({
   AI_LOADER_CYCLE_MS: closure_7,
   AI_LOADER_REDUCED_MOTION_CYCLE_MS: closure_8,
@@ -68,7 +68,7 @@ export default noop.memo((isCollapsed) => {
   isCollapsed = isCollapsed.isCollapsed;
   let reducedMotion;
   let tmp = closure_13(isCollapsed);
-  reducedMotion = noop.useContext(reducedMotion(4545).AccessibilityPreferencesContext).reducedMotion;
+  reducedMotion = noop.useContext(reducedMotion(4547).AccessibilityPreferencesContext).reducedMotion;
   items = [reducedMotion.enabled];
   const memo = noop.useMemo(() => {
     items = [_modDef3876.CM07jO, ...closure_1_12.sort(() => Math.random() - 0.5)];
@@ -91,8 +91,8 @@ export default noop.memo((isCollapsed) => {
   const obj2 = { style: tmp.header, children: null };
   ({ shimmerDurationMs, shimmerDelayMs, shimmerInitialDelayMs } = memo1);
   const items1 = [
-    closure_9(reducedMotion(14498).AILoader, { size: 12, color: "interactive-text-default" }),
-    closure_9(reducedMotion(14502).AIShimmer, {
+    closure_9(reducedMotion(13659).AILoader, { size: 12, color: "interactive-text-default" }),
+    closure_9(reducedMotion(13663).AIShimmer, {
       text: memo,
       variant: "text-sm/semibold",
       color: "interactive-text-default",

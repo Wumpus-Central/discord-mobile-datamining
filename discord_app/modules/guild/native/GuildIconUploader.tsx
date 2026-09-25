@@ -4,10 +4,10 @@ import util from "../../../intl/index.native.tsx";
 import shared from "../../../design/shared.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef12141 from "../../../../_runtime/metro/12141__.js";
-import _modDef12142 from "../../../../_runtime/metro/12142__.js";
-import _modDef12143 from "../../../../_runtime/metro/12143__.js";
-import _modDef12144 from "../../../../_runtime/metro/12144__.js";
+import _modDef11263 from "../../../../_runtime/metro/11263__.js";
+import _modDef11264 from "../../../../_runtime/metro/11264__.js";
+import _modDef11265 from "../../../../_runtime/metro/11265__.js";
+import _modDef11266 from "../../../../_runtime/metro/11266__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 
@@ -89,9 +89,9 @@ prototype["renderIcon"] = function renderIcon() {
     ({ guildIcon: arr3[0], emptyGuildIcon: arr3[1] } = tmp);
     obj4.style = items1;
     if (obj6.isThemeDark(ThemeStore.theme)) {
-      let tmp13Result = _modDef12141;
+      let tmp13Result = _modDef11263;
     } else {
-      tmp13Result = _modDef12142;
+      tmp13Result = _modDef11264;
     }
     const obj = { source: tmp13Result };
     const items2 = [timestampProducer(React4, obj)];
@@ -122,13 +122,13 @@ prototype["renderUpload"] = function renderUpload() {
     const obj6 = { tintColor: iconBackgroundColor };
     items1[1] = obj6;
     obj5.style = items1;
-    obj5.source = _modDef12143;
+    obj5.source = _modDef11265;
     obj4.children = timestampProducer(React4, obj5);
     obj2.children = timestampProducer(React3, obj4);
     let obj = obj2;
   } else {
     obj = { style: tmp.emptyIconWrapper, children: null };
-    const obj7 = { source: _modDef12144 };
+    const obj7 = { source: _modDef11266 };
     obj.children = timestampProducer(React4, obj7);
   }
   return timestampProducer(React3, obj);
@@ -156,7 +156,7 @@ prototype["render"] = function render() {
   obj.children = React5(React3, obj2);
   return timestampProducer(Pressables.PressableOpacity, obj);
 };
-GuildIconUploader.contextType = fn(4535).ThemeContext;
+GuildIconUploader.contextType = fn(4537).ThemeContext;
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/native/GuildIconUploader.tsx");
 

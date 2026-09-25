@@ -8,8 +8,8 @@ import useTheme from "../../../hooks/useTheme.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
-import QuestOrbMultiplierUtils from "../utils/QuestOrbMultiplierUtils.tsx";
 import hooks_QuestHooks from "../hooks/QuestHooks.tsx";
+import QuestOrbMultiplierUtils from "../utils/QuestOrbMultiplierUtils.tsx";
 import openQuestOrbMultiplierPerkInfoActionSheetDefault from "openQuestOrbMultiplierPerkInfoActionSheet.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -127,7 +127,7 @@ export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(qu
     obj16.style = items3;
     if (!tmp13) {
       const obj18 = { style: tmp.fullGradient, colors: items, start, end };
-      tmp21Result = tmp21(orbMultiplierEligibility(5285), obj18);
+      tmp21Result = tmp21(orbMultiplierEligibility(5286), obj18);
     }
     const items4 = [tmp21Result];
     const obj19 = { style: tmp.fullGradientContent, children: closure_8(closure_7, obj13) };

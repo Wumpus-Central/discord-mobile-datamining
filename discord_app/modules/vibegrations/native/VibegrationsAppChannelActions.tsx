@@ -27,8 +27,8 @@ export default function VibegrationsAppChannelActions(channel) {
     items1,
   );
   const obj = channel(504);
-  ({ mentionCount, badge } = stateFromStores(13658)(channel.id));
-  stateFromStores(13659)(channel, stateFromStores);
+  ({ mentionCount, badge } = stateFromStores(12812)(channel.id));
+  stateFromStores(12813)(channel, stateFromStores);
   let tmp8 = null;
   if (!stateFromStores) {
     tmp8 = badge;
@@ -49,7 +49,7 @@ export default function VibegrationsAppChannelActions(channel) {
   if (!stateFromStores) {
     const obj4 = {
       source: null,
-      IconComponent: tmp2(10527).RetryIcon,
+      IconComponent: tmp2(9629).RetryIcon,
       onPress() {
         const tmp = restartVibegrationsAppFramesDefault;
         return tmp(VibegrationsUtils.vibegrationsAppIdFromTopic(channel.topic));
@@ -58,15 +58,15 @@ export default function VibegrationsAppChannelActions(channel) {
     };
     const intl3 = tmp2(1115).intl;
     obj4.accessibilityLabel = intl3.string(tmp5(3714).xKexN1);
-    tmp14 = closure_5(tmp5(13660), obj4);
-    const tmp5Result3 = tmp5(13660);
+    tmp14 = closure_5(tmp5(12814), obj4);
+    const tmp5Result3 = tmp5(12814);
   }
   const items3 = [tmp14];
-  const tmp6 = stateFromStores(13658)(channel.id);
+  const tmp6 = stateFromStores(12812)(channel.id);
   if (stateFromStores) {
-    let ChatIcon = tmp2(5366).AppsIcon;
+    let ChatIcon = tmp2(5367).AppsIcon;
   } else {
-    ChatIcon = tmp2(5377).ChatIcon;
+    ChatIcon = tmp2(5378).ChatIcon;
   }
   const obj5 = {
     noMargin: true,
@@ -86,7 +86,7 @@ export default function VibegrationsAppChannelActions(channel) {
     StringResult = String(mentionCount);
   }
   obj5.buttonText = StringResult;
-  items3[1] = closure_5(stateFromStores(13660), obj5);
+  items3[1] = closure_5(stateFromStores(12814), obj5);
   obj3.children = items3;
   return closure_6(View, obj3);
 }

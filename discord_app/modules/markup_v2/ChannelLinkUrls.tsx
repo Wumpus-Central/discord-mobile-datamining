@@ -25,7 +25,7 @@ export const parseChannelLinkUrl = function parseChannelLinkUrl(url) {
         tmp4 = null;
         if (!obj.test(tmp11)) {
           if (null == tmp12) {
-            const obj4 = { guildId: tmp10, channelId: tmp11, messageId: tmp12, parentChannelId: "Array" };
+            const obj4 = { guildId: tmp10, channelId: tmp11, messageId: tmp12, parentChannelId: "flex" };
             tmp4 = obj4;
           } else {
             tmp4 = null;

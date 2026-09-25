@@ -149,11 +149,11 @@ function RuntimeEnvBlock(env) {
   let obj = { children: null };
   const obj2 = { label: null, value: null };
   let intl = env(1115).intl;
-  let obj3 = { env: env(17164).debugEnvLabel(env) };
+  let obj3 = { env: env(16379).debugEnvLabel(env) };
   obj2.label = intl.formatToPlainString(_modDef3714.BVORfc, obj3);
-  let obj4 = env(17164);
-  obj2.value = env(17163).formatCount(runtime.connections);
-  const items = [closure_5(env(17166).DebugStatRow, obj2)];
+  let obj4 = env(16379);
+  obj2.value = env(16378).formatCount(runtime.connections);
+  const items = [closure_5(env(16381).DebugStatRow, obj2)];
   const schedules = runtime.schedules;
   items[1] = schedules.map((id) => {
     const obj = { label: null, value: null, hint: null };
@@ -317,15 +317,15 @@ function StorageSection(status) {
     let tmp4 = limits;
     let items1 = items;
   } else {
-    let obj = { key: "preview", label: limits(17164).debugEnvLabel("preview"), metrics: tmp };
+    let obj = { key: "preview", label: limits(16379).debugEnvLabel("preview"), metrics: tmp };
     items1 = [obj];
     let obj5 = { key: "stable", label: null, metrics: null };
-    let obj2 = limits(17164);
-    obj5.label = limits(17164).debugEnvLabel("stable");
+    let obj2 = limits(16379);
+    obj5.label = limits(16379).debugEnvLabel("stable");
     obj5.metrics = stable;
     items1[1] = obj5;
     tmp4 = limits;
-    let obj4 = limits(17164);
+    let obj4 = limits(16379);
   }
   let obj6 = { title: null, children: null };
   let intl2 = tmp4(1115).intl;
@@ -366,7 +366,7 @@ function StorageSection(status) {
     }
     return tmp18Result;
   });
-  return closure_5(tmp4(17166).DebugSection, obj6);
+  return closure_5(tmp4(16381).DebugSection, obj6);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);

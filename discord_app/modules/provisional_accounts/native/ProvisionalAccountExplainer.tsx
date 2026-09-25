@@ -32,7 +32,7 @@ export const ChatProvisionalAccountExplainerCard = function ChatProvisionalAccou
       hasOwnProperty(ApplicationIconAndNameDefault, { application, textVariant, iconSize }, application.id),
     items,
   );
-  const provisionalAccountExplanationText = iconSize(12977).useProvisionalAccountExplanationText({
+  const provisionalAccountExplanationText = iconSize(12108).useProvisionalAccountExplanationText({
     userId,
     renderApplicationName: callback,
   });
@@ -45,7 +45,7 @@ export const ChatProvisionalAccountExplainerCard = function ChatProvisionalAccou
   obj4.children = intl.string(iconSize(1115).t.Iyka0U);
   const items2 = [
     closure_5(iconSize(4825).Text, obj4),
-    closure_5(iconSize(6940).CircleErrorIcon, { size: "xs", color: "text-default" }),
+    closure_5(iconSize(6023).CircleErrorIcon, { size: "xs", color: "text-default" }),
   ];
   obj3.children = items2;
   const items3 = [
@@ -57,7 +57,7 @@ export const ChatProvisionalAccountExplainerCard = function ChatProvisionalAccou
     }),
   ];
   obj2.children = items3;
-  return closure_6(iconSize(5912).Card, obj2);
+  return closure_6(iconSize(5914).Card, obj2);
 };
 export const UserProfileProvisionalAccountExplainerCard = function UserProfileProvisionalAccountExplainerCard(
   iconSize,
@@ -71,15 +71,15 @@ export const UserProfileProvisionalAccountExplainerCard = function UserProfilePr
       hasOwnProperty(ApplicationIconAndNameDefault, { application, textVariant, iconSize }, application.id),
     items,
   );
-  const provisionalAccountExplanationText = iconSize(12977).useProvisionalAccountExplanationText({
+  const provisionalAccountExplanationText = iconSize(12108).useProvisionalAccountExplanationText({
     userId,
     renderApplicationName: callback,
   });
   const obj2 = { style, title: null, titleIcon: null, children: null };
-  const obj = iconSize(12977);
+  const obj = iconSize(12108);
   const intl = iconSize(1115).intl;
   obj2.title = intl.string(iconSize(1115).t.Iyka0U);
-  obj2.titleIcon = closure_5(iconSize(6940).CircleErrorIcon, { size: "xs", color: "text-default" });
+  obj2.titleIcon = closure_5(iconSize(6023).CircleErrorIcon, { size: "xs", color: "text-default" });
   obj2.children = closure_5(iconSize(4825).Text, {
     variant: "text-md/normal",
     color: "text-default",

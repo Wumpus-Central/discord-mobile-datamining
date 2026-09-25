@@ -127,7 +127,7 @@ export default noop.memo(function GuildsBarDirectMessage(channelId) {
     config: memo1,
     cutouts,
     externalChildren: badge,
-    expandedChildren: true,
+    expandedChildren: null,
     children: null,
   };
   let tmp11Result = null;
@@ -172,7 +172,7 @@ export default noop.memo(function GuildsBarDirectMessage(channelId) {
     config: memo1,
     cutouts,
     externalChildren: badge,
-    expandedChildren: true,
+    expandedChildren: null,
     children: null,
   });
 });

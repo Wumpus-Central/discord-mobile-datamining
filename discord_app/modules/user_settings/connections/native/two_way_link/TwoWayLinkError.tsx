@@ -5,7 +5,7 @@ import Stack_Stack from "../../../../../design/components/Stack/native/Stack.nat
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import common_SafeAreaView from "../../../../../components_native/common/SafeAreaView.tsx";
 import TwoWayLinkStyles from "TwoWayLinkStyles.tsx";
-import _modDef9452 from "../../../../../../_runtime/metro/09452__.js";
+import _modDef8550 from "../../../../../../_runtime/metro/08550__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -25,7 +25,7 @@ export const TwoWayLinkError = function TwoWayLinkError(arg0) {
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
   const items = [
-    hasOwnProperty(React3, { source: _modDef9452, style: tmp.image }),
+    hasOwnProperty(React3, { source: _modDef8550, style: tmp.image }),
     hasOwnProperty(Text_Text.Text, {
       variant: "heading-xl/extrabold",
       color: "mobile-text-heading-primary",

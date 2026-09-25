@@ -91,7 +91,6 @@ const items4 = [
   dismissible_content.DismissibleContent.GAME_CLAIM_COACHMARK,
   dismissible_content.DismissibleContent.FIRST_BOOSTER_UPSELL,
   dismissible_content.DismissibleContent.MOBILE_ACCOUNT_LINKING_BANNER,
-  dismissible_content.DismissibleContent.FILE_UPLOAD_POWERUP_ROLLBACK_NOTIFICATION,
   dismissible_content.DismissibleContent.GUILD_THEME_POWERUP_ROLLBACK_NOTIFICATION,
 ];
 const items5 = [

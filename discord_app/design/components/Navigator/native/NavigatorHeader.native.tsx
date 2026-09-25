@@ -4,7 +4,7 @@ import useSafeAreaInsetsDefault from "../../../../modules/safe_area/useSafeAreaI
 import Text_Text from "../../Text/native/Text.tsx";
 import HeaderDebugOverlayDefault from "../../../../modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx";
 import ArrowLargeLeftIcon from "../../Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx";
-import _mod5936 from "../../../../../_runtime/metro/05936__.js";
+import _mod5938 from "../../../../../_runtime/metro/05938__.js";
 import XSmallIcon from "../../Icon/native/redesign/generated/XSmallIcon.tsx";
 import NavigatorConstants from "NavigatorConstants.native.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -48,12 +48,12 @@ function CloseButton(onPress) {
     return timestampProducer(XSmallIcon.XSmallIcon, obj);
   };
   obj2.accessibilityLabel = stringResult;
-  return closure_6(require("../../../../../_runtime/metro/05936__.js").HeaderBackButton, obj2);
+  return closure_6(require("../../../../../_runtime/metro/05938__.js").HeaderBackButton, obj2);
 }
 function CustomHeaderBackButton(onPress) {
   onPress = onPress.onPress;
   const merged = Object.assign(onPress, Object.assign({ onPress: 0 }));
-  onPress(5935).useNavigatorBackPressHandler(() => {
+  onPress(5937).useNavigatorBackPressHandler(() => {
     if (null != onPress) {
       tmp();
     }
@@ -66,7 +66,7 @@ function CustomHeaderBackButton(onPress) {
   obj2.backImage = function backImage() {
     return closure_1_6(HeaderBackImage, {});
   };
-  return closure_6(onPress(5936).HeaderBackButton, obj2);
+  return closure_6(onPress(5938).HeaderBackButton, obj2);
 }
 function HeaderTextButton(text) {
   text = text.text;
@@ -88,7 +88,7 @@ function HeaderTextButton(text) {
     tmp5 = text;
   }
   obj2.accessibilityLabel = tmp5;
-  return timestampProducer(_mod5936.HeaderBackButton, obj2);
+  return timestampProducer(_mod5938.HeaderBackButton, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);

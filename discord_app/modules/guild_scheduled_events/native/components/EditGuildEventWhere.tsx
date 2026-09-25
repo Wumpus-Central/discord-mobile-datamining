@@ -1,6 +1,6 @@
 // discord_app/modules/guild_scheduled_events/native/components/EditGuildEventWhere.tsx
 import KeyboardManagerUtilsAll from "../../../../utils/native/KeyboardManagerUtils.tsx";
-import _modDef4416 from "../../../../../_runtime/metro/04416__.js";
+import _modDef4418 from "../../../../../_runtime/metro/04418__.js";
 import EditGuildEventUtils from "../../utils/EditGuildEventUtils.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../guild_settings/GuildSettingsActionCreators.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -11,7 +11,7 @@ import PermissionStore from "../../../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_8 = fn(7856).isGuildScheduledEventActive;
+let closure_8 = fn(6941).isGuildScheduledEventActive;
 const GuildScheduledEventsConstants = fn(2050);
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: c10 } =
   GuildScheduledEventsConstants);
@@ -124,7 +124,7 @@ export default function EditGuildEventWhere(guild) {
               const error1 = new Error(intl2.string(guild(1115).t.q91szp));
               throw error1;
             }
-            obj = guild(9874);
+            obj = guild(8972);
           }
           if (null == tmp) {
             if (entityType !== constants.EXTERNAL) {
@@ -162,11 +162,11 @@ export default function EditGuildEventWhere(guild) {
       entityType: guildEvent.entityType,
       onChange(entityType) {
         _undefined(null);
-        const obj = { entityType, scheduledEndTime: "Array" };
+        const obj = { entityType, scheduledEndTime: "a" };
         if (entityType === constants.EXTERNAL) {
-          let obj2 = _modDef4416(guildEvent.scheduledStartTime);
+          let obj2 = _modDef4418(guildEvent.scheduledStartTime);
           if (obj2 == null) {
-            obj2 = _modDef4416();
+            obj2 = _modDef4418();
           }
           obj.scheduledEndTime = obj2.add(1, "hour").toISOString();
           const addResult = obj2.add(1, "hour");
@@ -183,11 +183,11 @@ export default function EditGuildEventWhere(guild) {
     entityType: guildEvent.entityType,
     onChange(entityType) {
       _undefined(null);
-      const obj = { entityType, scheduledEndTime: "Array" };
+      const obj = { entityType, scheduledEndTime: "a" };
       if (entityType === constants.EXTERNAL) {
-        let obj2 = _modDef4416(guildEvent.scheduledStartTime);
+        let obj2 = _modDef4418(guildEvent.scheduledStartTime);
         if (obj2 == null) {
-          obj2 = _modDef4416();
+          obj2 = _modDef4418();
         }
         obj.scheduledEndTime = obj2.add(1, "hour").toISOString();
         const addResult = obj2.add(1, "hour");

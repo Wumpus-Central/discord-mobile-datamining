@@ -3,9 +3,9 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import BountiesPosterSpotIllustration from "../../../design/components/mana-assets/native/generated/BountiesPosterSpotIllustration.native.tsx";
 import PromoSheet from "../../../design/components/Sheet/native/PromoSheet.native.tsx";
 import openBountiesNuxPromoSheet from "openBountiesNuxPromoSheet.tsx";
+import BountiesPosterSpotIllustration from "../../../design/components/mana-assets/native/generated/BountiesPosterSpotIllustration.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;

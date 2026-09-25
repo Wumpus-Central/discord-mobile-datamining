@@ -123,12 +123,12 @@ export default noop.memo((guildId) => {
       items: membersManagementActions,
       children(ref) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-        const obj = { source: closure_1_1(9982), accessibilityLabel: null, ref: null };
+        const obj = { source: closure_1_1(9080), accessibilityLabel: null, ref: null };
         const intl = guildId(1115).intl;
         obj.accessibilityLabel = intl.string(guildId(1115).t.ogxXGq);
         obj.ref = ref.ref;
         const merged1 = Object.assign(merged);
-        return closure_1_9(guildId(7707).HeaderActionButton, obj);
+        return closure_1_9(guildId(6790).HeaderActionButton, obj);
       },
     });
   }, items5);

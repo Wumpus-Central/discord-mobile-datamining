@@ -32,7 +32,7 @@ export const useBillingInformationNative = function useBillingInformationNative(
   if (null == subscriptionPeriodStart) {
     return null;
   } else {
-    const tmp2Result = tmp2(4483);
+    const tmp2Result = tmp2(4485);
     const billingInformationString = tmp2Result.getBillingInformationString(
       subscription,
       subscriptionPeriodStart,

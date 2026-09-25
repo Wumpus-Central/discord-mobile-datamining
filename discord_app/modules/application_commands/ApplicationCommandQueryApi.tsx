@@ -52,7 +52,7 @@ function findCommandInSection(found, commandId) {
     }
   }
 }
-let ApplicationCommandIndexStore = fn(9485);
+let ApplicationCommandIndexStore = fn(8583);
 ({
   useContextIndexState: metroRequire,
   useDiscoveryState: closure_7,
@@ -60,17 +60,17 @@ let ApplicationCommandIndexStore = fn(9485);
   useUserIndexState: closure_9,
 } = ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
-const BuiltInSectionId = fn(5297).BuiltInSectionId;
+const BuiltInSectionId = fn(5298).BuiltInSectionId;
 const NOOP = fn(1074).NOOP;
 let items = [fn(1978).ApplicationCommandType.CHAT];
-let section = { id: "placeholder-section", type: fn(7853).ApplicationCommandSectionType.APPLICATION, name: "" };
+let section = { id: "placeholder-section", type: fn(6938).ApplicationCommandSectionType.APPLICATION, name: "" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandQueryApi.tsx");
 
 export const getCachedCommand = function getCachedCommand(type, commandId, applicationId) {
   closure_0 = applicationId;
   if (null == commandId) {
-    return { application: "isArray", command: "padding", section: "op" };
+    return { application: "Array", command: "channel", section: "unicodeVersion" };
   } else {
     const userState = ApplicationCommandIndexStore.getUserState();
     const result2 = userState.result;
@@ -121,7 +121,7 @@ export const getCachedCommand = function getCachedCommand(type, commandId, appli
         }
       }
     }
-    return { application: "isArray", command: "padding", section: "op" };
+    return { application: "Array", command: "channel", section: "unicodeVersion" };
   }
 };
 export const getCachedApplicationSection = function getCachedApplicationSection(type, CHAT, applicationId) {
@@ -462,7 +462,7 @@ export const useCommand = function useCommand(arg0, commandId) {
         }
       }
     }
-    return { command: "channel", application: "channelId" };
+    return { command: "isArray", application: "paddingHorizontal" };
   }, items);
 };
 export const useCommandsForApplication = function useCommandsForApplication(arg0, arg1, arg2) {

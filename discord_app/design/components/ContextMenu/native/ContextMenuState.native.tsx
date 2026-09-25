@@ -44,7 +44,7 @@ updateContextMenuState.__closure = {
   INDEX_BOUNDS_PAGE_Y_OFFSET: 1,
   INDEX_BOUNDS_PAGE_X_OFFSET: 0,
   INDEX_BOUNDS_OFFSET: 4,
-  runOnJS: fn(4561).runOnJS,
+  runOnJS: fn(4563).runOnJS,
   triggerHapticFeedback: fn(4797).triggerHapticFeedback,
   HapticFeedbackTypes: fn(4797).HapticFeedbackTypes,
 };

@@ -75,15 +75,15 @@ export default {
     const tmp3 = closure_11(stateFromStores, arg2, obj);
     const tmp4 = set;
     let channelEventsSection = dependencyMap;
-    const VoiceInThreadsExperiment = set(7599).VoiceInThreadsExperiment;
+    const VoiceInThreadsExperiment = set(6682).VoiceInThreadsExperiment;
     let enabled = VoiceInThreadsExperiment.getCurrentConfig({ guildId: guild_id, location: "3ad37d_1" }).enabled;
     if (enabled) {
       enabled = set.has(stateFromStores.type);
     }
     let obj2 = { guildId: guild_id, location: "3ad37d_1" };
-    const tmp4Result = tmp4(5722);
-    const isStageVideoEnabledResult = tmp4(5722).isStageVideoEnabled(guild_id);
-    let result = tmp4(17405).canCurrentUserManageMessageFilters(guild_id);
+    const tmp4Result = tmp4(5724);
+    const isStageVideoEnabledResult = tmp4(5724).isStageVideoEnabled(guild_id);
+    let result = tmp4(16622).canCurrentUserManageMessageFilters(guild_id);
     const isMediaChannelResult = stateFromStores.isMediaChannel();
     importDefault = isMediaChannelResult;
     set = new Set();
@@ -133,13 +133,13 @@ export default {
       items[4] = permissions_PermissionUtilsAll.generateChannelAppsSection(tmp3, intl27.string(tmp4(1115).t["rrh/W6"]));
       if (tmp.showStageChannelPermissions) {
         const intl28 = tmp4(1115).intl;
-        const items1 = [obj33(17406).generateChannelStageSection(tmp3, intl28.string(tmp4(1115).t.yniauk))];
+        const items1 = [obj33(16623).generateChannelStageSection(tmp3, intl28.string(tmp4(1115).t.yniauk))];
         let items2 = items1;
-        const obj33Result = obj33(17406);
+        const obj33Result = obj33(16623);
       } else {
         items2 = [];
       }
-      obj33 = obj33(17406);
+      obj33 = obj33(16623);
       const intl29 = tmp4(1115).intl;
       channelEventsSection = obj33.generateChannelEventsSection(tmp3, intl29.string(tmp4(1115).t.b8lplT));
       items[HermesBuiltin.arraySpread(items2, 5)] = channelEventsSection;
@@ -365,7 +365,7 @@ export default {
       }
       return mapped;
     }
-    const tmp4Result2 = tmp4(17405);
+    const tmp4Result2 = tmp4(16622);
   },
   generateGuildPermissionSpec(features) {
     set = new Set();

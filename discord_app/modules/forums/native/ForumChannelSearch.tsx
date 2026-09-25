@@ -56,8 +56,8 @@ export const ForumChannelSearchInput = noop.memo((channelId) => {
   channelId = channelId.channelId;
   ({ guildId: importDefault, placeholder } = channelId);
   const tmp = closure_8();
-  const canSearchForumPostsByChannelId = channelId(13665).useCanSearchForumPostsByChannelId(channelId);
-  let obj = channelId(13665);
+  const canSearchForumPostsByChannelId = channelId(12819).useCanSearchForumPostsByChannelId(channelId);
+  let obj = channelId(12819);
   const items = [ForumSearchStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(

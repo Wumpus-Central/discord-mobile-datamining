@@ -1,7 +1,8 @@
 // discord_app/modules/video_backgrounds/VideoBackgroundActionCreators.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import UserSettingsProtoActionCreators from "../user_settings/UserSettingsProtoActionCreators.tsx";
+import UserSettingsActionCreatorsDefault from "../../actions/UserSettingsActionCreators.tsx";
+import VideoBackgroundUtils from "VideoBackgroundUtils.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
@@ -207,7 +208,9 @@ let closure_9 = async function _deleteVideoFilterAsset(arg0) {
           const obj6 = { value, done: true };
           return obj6;
         } else {
-          lastUsedVideoBackgroundOption = closure_130_0(closure_130_2[7]).getLastUsedVideoBackgroundOption(closure_130_5.getCurrentUser());
+          lastUsedVideoBackgroundOption = closure_130_0(closure_130_2[7]).getLastUsedVideoBackgroundOption(
+            closure_130_5.getCurrentUser(),
+          );
           const obj7 = closure_130_0(closure_130_2[7]);
           let result = closure_130_0(closure_130_2[8]).isCustomBackgroundOption(lastUsedVideoBackgroundOption);
           if (result) {
@@ -239,43 +242,71 @@ function saveLastUsedBackgroundOption() {
   }
   return applyArgumentsResult;
 }
-let closure_11 = async function _saveLastUsedBackgroundOption(arg0) {
-  closure_2 = tmp2;
-  closure_129_0 = closure_0;
-  const PreloadedUserSettingsActionCreators = UserSettingsProtoActionCreators.PreloadedUserSettingsActionCreators;
-  await PreloadedUserSettingsActionCreators.updateAsync("voiceAndVideo", async (arg0) => {
-    arg0.videoBackgroundFilterDesktop = closure_0(closure_2[8]).getVideoBackgroundProtoFromOption(closure_1_0);
-  }, UserSettingsProtoActionCreators.UserSettingsDelay.FREQUENT_USER_ACTION);
-  if (1 === tmp5) {
-    if (arg0 === 1) {
+let closure_11 = async function _saveLastUsedBackgroundOption() {
+  c3 = 0;
+  c4 = 0;
+  return (async (arg0) => {
+    if (c4 === 2) {
       c4 = 3;
-      throw value;
-    } else if (arg0 === 2) {
-      c4 = 3;
-      return { value, done: true };
-    } else {
-      if (obj12.isCustomBackgroundOption(closure_129_0)) {
-        const HTTP = closure_130_0(closure_130_2[4]).HTTP;
-        c3 = 2;
-        c4 = 1;
-        { url: closure_130_6.VIDEO_FILTER_ASSET_LAST_USED(closure_129_0.id), rejectWithError: false };
-        return { value: HTTP.post({ url: closure_130_6.VIDEO_FILTER_ASSET_LAST_USED(closure_129_0.id), rejectWithError: false }), done: false };
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        closure_130_1(closure_130_2[5]).dispatch({ type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION", backgroundOption: closure_129_0 });
-        c4 = 3;
-        closure_130_1(closure_130_2[5]);
+        return { value: "HermesInternal", done: null };
       }
-      obj12 = closure_130_0(closure_130_2[8]);
+    } else {
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_2 = tmp2;
+            closure_1 = tmp5;
+            closure_129_0 = undefined;
+            const obj5 = { videoBackground };
+            const result = UserSettingsActionCreatorsDefault.updatedUnsyncedSettings(obj5);
+            if (obj12.isCustomBackgroundOption(videoBackground)) {
+              const HTTP = HTTPUtils.HTTP;
+              const obj6 = { url: Endpoints.VIDEO_FILTER_ASSET_LAST_USED(videoBackground.id), rejectWithError: false };
+              c3 = 1;
+              c4 = 1;
+              const obj7 = { value: HTTP.post(obj6), done: false };
+              return obj7;
+            } else {
+              const obj8 = { type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION", backgroundOption: videoBackground };
+              DispatcherDefault.dispatch(obj8);
+              c4 = 3;
+            }
+            obj12 = VideoBackgroundUtils;
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          closure_129_0 = value;
+          const obj9 = { type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION", backgroundOption: closure_129_0.body };
+          closure_130_1(closure_130_2[5]).dispatch(obj9);
+          const obj = closure_130_1(closure_130_2[5]);
+        }
+        c4 = 3;
+        const obj11 = { value, done: true };
+        return obj11;
+      } catch (tmp17) {
+        c4 = tmp;
+        throw tmp17;
+      }
     }
-  } else if (arg0 === 1) {
-    c4 = 3;
-    throw value;
-  } else if (arg0 !== 2) {
-    closure_129_1 = value;
-    closure_130_1(closure_130_2[5]).dispatch({ type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION", backgroundOption: closure_129_1.body });
-    closure_130_1(closure_130_2[5]);
-  }
-  return value;
+  })();
 };
 const Endpoints = fn(1074).Endpoints;
 const size = fn(2);

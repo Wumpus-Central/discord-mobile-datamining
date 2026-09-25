@@ -7,7 +7,7 @@ import useToken from "../../../../design/tokens/native/useToken.tsx";
 import themes from "../../../../design/utils/shared/themes.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05285_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05286_LinearGradient.js";
 import utils_getDevicePixelRatioDefault from "../../../../utils/getDevicePixelRatio.web.tsx";
 import guild_profile_GuildProfileUtils from "../GuildProfileUtils.tsx";
 import GuildProfileHeaderDefault from "GuildProfileHeader.tsx";

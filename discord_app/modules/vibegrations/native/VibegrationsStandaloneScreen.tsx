@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import _modDef3714 from "../intl/VibegrationsUntranslated.messages.js";
-import _modDef4416 from "../../../../_runtime/metro/04416__.js";
+import _modDef4418 from "../../../../_runtime/metro/04418__.js";
 import DateUtils from "../../../utils/DateUtils.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import ActionSheetActionCreators from "../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -168,9 +168,9 @@ function ProjectList(guildId) {
     closure_1 = callback;
     return (arg0, arg1) => {
       if (arg1 === closure_0) {
-        f120563(arg0);
+        f119549(arg0);
       } else {
-        guildId(navigation[18]).transitionTo(setActiveIndex.CHANNEL(arg1, first1.VIBEGRATIONS, arg0));
+        guildId(navigation[18]).transitionTo(num2.CHANNEL(arg1, activeIndex.VIBEGRATIONS, arg0));
         const obj = guildId(navigation[18]);
       }
     };
@@ -309,7 +309,7 @@ function ProjectList(guildId) {
         style: tmp3.changelogEntries,
         children: result.map((children) => {
           const obj = { style: closure_1.changelogItem, children: null };
-          const items = [DateUtils.dateFormat(_modDef4416(children.date, "YYYY-MM-DD"), "LL")];
+          const items = [DateUtils.dateFormat(_modDef4418(children.date, "YYYY-MM-DD"), "LL")];
           let combined = null;
           if (obj3.isVibegrationsChangelogEntryExclusive(children)) {
             const intl = util.intl;
@@ -478,17 +478,19 @@ function ChatScene(guildId) {
   closure_19 = undefined;
   let active;
   let vibegrationsControlActive;
-  c22 = undefined;
+  let guild_id;
+  closure_23 = undefined;
+  c24 = undefined;
   let callback1;
   let num2;
   let activeIndex;
   let setActiveIndex;
   let first1;
-  closure_28 = undefined;
+  closure_30 = undefined;
   let callback3;
   projectGuildId = undefined;
   let callback4;
-  let memo1;
+  let memo2;
   let callback5;
   let callback6;
   let callback7;
@@ -496,27 +498,27 @@ function ChatScene(guildId) {
   let setting;
   let callback9;
   let callback10;
-  closure_41 = undefined;
+  closure_43 = undefined;
   let callback11;
   let callback12;
   let preview;
-  let memo2;
+  let memo3;
   navigation = guildId(navigation[28]).useNavigation();
   const bottom = projectId(navigation[27])().bottom;
-  let tmp5 = callback5(bottom);
+  let tmp5 = callback4(bottom);
   asyncGeneratorStep = tmp5;
   const tmp6 = projectId(navigation[47])();
   noop = tmp6;
   let obj = guildId(navigation[28]);
-  const fn = function u() {
+  let fn = function u() {
     return { paddingBottom: Math.max(closure_5.get(), bottom) };
   };
   fn.__closure = { keyboardHeight: tmp6, safeAreaBottom: bottom };
   fn.__workletHash = 2974418984539;
-  fn.__initData = setting;
+  fn.__initData = callback7;
   const animatedStyle = guildId(navigation[48]).useAnimatedStyle(fn);
   let obj2 = guildId(navigation[48]);
-  let items = [callback1];
+  let items = [closure_23];
   const items1 = [projectId];
   const stateFromStores = guildId(navigation[29]).useStateFromStores(
     items,
@@ -530,7 +532,7 @@ function ChatScene(guildId) {
     items1,
   );
   let obj3 = guildId(navigation[29]);
-  const items2 = [callback1];
+  const items2 = [closure_23];
   const items3 = [projectId];
   const stateFromStoresObject = guildId(navigation[29]).useStateFromStoresObject(
     items2,
@@ -551,7 +553,7 @@ function ChatScene(guildId) {
         name = null;
       }
       obj.projectName = name;
-      let guild_id;
+      guild_id = undefined;
       if (project != null) {
         guild_id = project.guild_id;
       }
@@ -581,7 +583,7 @@ function ChatScene(guildId) {
   ({ projectGuildId, previewAppId } = stateFromStoresObject);
   const canPublish = stateFromStoresObject.canPublish;
   let obj4 = guildId(navigation[29]);
-  const items4 = [callback1];
+  const items4 = [closure_23];
   const items5 = [guildId];
   const stateFromStores1 = guildId(navigation[29]).useStateFromStores(
     items4,
@@ -596,7 +598,7 @@ function ChatScene(guildId) {
     items5,
   );
   let obj5 = guildId(navigation[29]);
-  const items6 = [callback1];
+  const items6 = [closure_23];
   const items7 = [projectId];
   const stateFromStores2 = guildId(navigation[29]).useStateFromStores(
     items6,
@@ -744,9 +746,9 @@ function ChatScene(guildId) {
           obj7.application = application;
           obj7.guildId = closure_131_16;
           obj7.onClose = function onClose() {
-            const result = c0(17060).repairVibegrationsGuildHints(closure_1_6, closure_1_16);
-            const obj = c0(17060);
-            result.finally(() => application(9390).getProject(closure_1_1)).catch(() => {});
+            const result = c0(16250).repairVibegrationsGuildHints(closure_1_6, closure_1_16);
+            const obj = c0(16250);
+            result.finally(() => application(8488).getProject(closure_1_1)).catch(() => {});
           };
           let result = application3(tmp2[53]).openVibegrationsAppInstallModal(obj7);
           const obj2 = application3(tmp2[53]);
@@ -810,64 +812,89 @@ function ChatScene(guildId) {
   active = onReviewPermissions(projectId).active;
   const tmp27Result = bottom(noop.useState(tmp31), 2);
   vibegrationsControlActive = guildId(navigation[54]).useVibegrationsControlActive(projectId);
+  guild_id = undefined;
+  if (stateFromStores != null) {
+    guild_id = stateFromStores.guild_id;
+  }
+  if (guild_id == null) {
+    guild_id = guildId;
+  }
+  let application_id;
+  const tmpResult9 = guildId(navigation[54]);
+  if (stateFromStores != null) {
+    application_id = stateFromStores.application_id;
+  }
+  if (application_id == null) {
+    application_id = null;
+  }
+  const tmp4ResultResult = projectId(navigation[55])(guild_id, application_id);
+  closure_23 = tmp4ResultResult;
+  const items10 = [tmp4ResultResult, guild_id];
+  const memo = obj12.useMemo(() => {
+    let fn = null;
+    if (null != closure_23) {
+      fn = () => guildId(navigation[18]).transitionTo(num2.CHANNEL(guild_id, closure_1_23));
+    }
+    return fn;
+  }, items10);
   let intl = tmp(tmp2[20]).intl;
-  const tmp4Result = projectId(navigation[21]);
+  const tmp4Result4 = projectId(navigation[21]);
   if (vibegrationsControlActive) {
-    let bfQ4Ki = tmp4Result.bfQ4Ki;
+    let bfQ4Ki = tmp4Result4.bfQ4Ki;
   } else {
-    bfQ4Ki = active ? tmp4Result.rfNEHn : tmp4Result.lXcEa2;
+    bfQ4Ki = active ? tmp4Result4.rfNEHn : tmp4Result4.lXcEa2;
   }
   const stringResult = intl.string(bfQ4Ki);
-  c22 = stringResult;
-  const items10 = [active, projectId];
+  c24 = stringResult;
+  const items11 = [active, projectId];
   callback1 = obj12.useCallback(() => {
     if (active) {
       value2(projectId);
     } else {
       __initData(projectId);
     }
-  }, items10);
-  const items11 = [availability.modes];
-  const items12 = [availability.modes, setMode];
-  const memo = obj12.useMemo(() => {
+  }, items11);
+  const items12 = [availability.modes];
+  const items13 = [availability.modes, setMode];
+  const memo1 = obj12.useMemo(() => {
     let obj = { id: "chat", label: null, page: null };
     const intl = util.intl;
     obj.label = intl.string(_modDef3714.kWtsyP);
     const items = [
       obj,
       ...modes.map((id) => {
-        const obj = { id, label: guildId(navigation[55]).getPreviewModeLabel(id), page: null };
+        const obj = { id, label: guildId(navigation[56]).getPreviewModeLabel(id), page: null };
         return obj;
       }),
     ];
     modes = availability.modes;
     return items;
-  }, items11);
+  }, items12);
   const first = availability.modes[0];
-  let tmp50 = null != stateFromStores2;
+  let tmp55 = null != stateFromStores2;
   const callback2 = obj12.useCallback((arg0) => {
     React6.dismiss();
     _undefined(null == availability.modes[arg0 - 1]);
     if (null != availability.modes[arg0 - 1]) {
       setMode(tmp2);
     }
-  }, items12);
-  if (tmp50) {
-    tmp50 = tmp18 !== tmp33;
+  }, items13);
+  if (tmp55) {
+    tmp55 = tmp18 !== tmp33;
   }
-  if (tmp50) {
-    if (tmp51) {
+  if (tmp55) {
+    if (tmp56) {
       setMode(first);
       tmp30(false);
     }
     tmp34(tmp18);
-    tmp51 = false === tmp33 && tmp18 && null != first && !result;
+    tmp56 = false === tmp33 && tmp18 && null != first && !result;
   }
-  const tmpResult9 = guildId(navigation[54]);
-  const tmpResult10 = guildId(navigation[57]);
+  const tmp4Result = projectId(navigation[55]);
+  const tmpResult10 = guildId(navigation[58]);
   const segmentedControlState = tmpResult10.useSegmentedControlState({
-    items: memo,
-    pageWidth: projectId(navigation[56])().width - 2 * callback6,
+    items: memo1,
+    pageWidth: projectId(navigation[57])().width - 2 * memo2,
     onSetActiveIndex: callback2,
   });
   num2 = 0;
@@ -880,22 +907,22 @@ function ChatScene(guildId) {
   }
   activeIndex = segmentedControlState.activeIndex;
   setActiveIndex = segmentedControlState.setActiveIndex;
-  const items13 = [num2, activeIndex, setActiveIndex];
+  const items14 = [num2, activeIndex, setActiveIndex];
   const effect1 = obj12.useEffect(() => {
     if (activeIndex.get() !== num2) {
       setActiveIndex(tmp, false);
     }
-  }, items13);
-  const items14 = [previewAppId];
+  }, items14);
+  const items15 = [previewAppId];
   const effect2 = obj12.useEffect(
     () =>
-      null != previewAppId ? () => guildId(navigation[58]).leaveVibegrationsPreviewFrame(previewAppId) : undefined,
-    items14,
+      null != previewAppId ? () => guildId(navigation[59]).leaveVibegrationsPreviewFrame(previewAppId) : undefined,
+    items15,
   );
   const tmp27Result4 = bottom(noop.useState(false), 2);
   first1 = tmp27Result4[0];
-  closure_28 = tmp27Result4[1];
-  const items15 = [guildId, onReviewPermissions, result, projectId, first1];
+  closure_30 = tmp27Result4[1];
+  const items16 = [guildId, onReviewPermissions, result, projectId, first1];
   callback3 = obj12.useCallback(() => {
     if (!first1) {
       const project = VibegrationsProjectStore.getProject(projectId);
@@ -910,7 +937,7 @@ function ChatScene(guildId) {
             callback().catch(() => {});
             const promise9 = callback();
           } else {
-            closure_28(true);
+            closure_30(true);
             if ("user" !== project.install_scope) {
               const promise5 = closure_2_20(projectId);
               promise5.catch(() => {});
@@ -927,9 +954,9 @@ function ChatScene(guildId) {
                 }
               });
               const promise6 = __initData(projectId);
-              nextPromise.catch(() => {}).finally(() => closure_1_28(false));
+              nextPromise.catch(() => {}).finally(() => closure_1_30(false));
               const catchPromise2 = nextPromise.catch(() => {});
-              let guild_id = project.guild_id;
+              guild_id = project.guild_id;
               let obj2 = ActionSheetActionCreators;
               if (guild_id == null) {
                 guild_id = guildId;
@@ -962,14 +989,14 @@ function ChatScene(guildId) {
                 }
               });
               const promise = __initData(projectId);
-              nextPromise1.catch(() => {}).finally(() => closure_1_28(false));
+              nextPromise1.catch(() => {}).finally(() => closure_1_30(false));
               const catchPromise3 = nextPromise1.catch(() => {});
               nextPromise1
                 .then(() => {
                   const obj2 = { key: "VIBEGRATIONS_PUBLISH_SUCCESS", content: null };
                   const intl = guildId(1115).intl;
                   obj2.content = intl.string(projectId(3714).wA0o0L);
-                  projectId(4523).open(obj2);
+                  projectId(4525).open(obj2);
                 })
                 .catch((error) => {
                   if (error instanceof Error) {
@@ -978,14 +1005,14 @@ function ChatScene(guildId) {
                     const intl = guildId(1115).intl;
                     message = intl.string(projectId(3714).fNP6Cd);
                   }
-                  projectId(4523).open({ key: "VIBEGRATIONS_PUBLISH_FAILED", content: message });
-                  const obj = projectId(4523);
+                  projectId(4525).open({ key: "VIBEGRATIONS_PUBLISH_FAILED", content: message });
+                  const obj = projectId(4525);
                 });
               const nextPromise2 = nextPromise1.then(() => {
                 const obj2 = { key: "VIBEGRATIONS_PUBLISH_SUCCESS", content: null };
                 const intl = guildId(1115).intl;
                 obj2.content = intl.string(projectId(3714).wA0o0L);
-                projectId(4523).open(obj2);
+                projectId(4525).open(obj2);
               });
             }
           }
@@ -996,50 +1023,50 @@ function ChatScene(guildId) {
         }
       }
     }
-  }, items15);
+  }, items16);
   if (projectGuildId == null) {
     projectGuildId = guildId;
   }
-  const items16 = [projectId, projectGuildId];
+  const items17 = [projectId, projectGuildId];
   callback4 = obj12.useCallback(() => {
     const obj2 = {
       content: __initData8(VibegrationsSettingsSheetDefault, { projectId, guildId: projectGuildId, isPreview: true }),
       key: VibegrationsSettingsSheet.VIBEGRATIONS_SETTINGS_SHEET_KEY,
     };
     ActionSheetActionCreators.showActionSheet(obj2);
-  }, items16);
-  const items17 = [guildId, navigation];
-  memo1 = obj12.useMemo(() => {
+  }, items17);
+  const items18 = [guildId, navigation];
+  memo2 = obj12.useMemo(() => {
     closure_0 = guildId;
-    const f120563 = (projectId) => navigation.push(constants.CHAT, { projectId });
+    const f119549 = (projectId) => navigation.push(callback5.CHAT, { projectId });
     return (arg0, arg1) => {
       if (arg1 === closure_0) {
-        f120563(arg0);
+        f119549(arg0);
       } else {
-        guildId(navigation[18]).transitionTo(setActiveIndex.CHANNEL(arg1, first1.VIBEGRATIONS, arg0));
+        guildId(navigation[18]).transitionTo(num2.CHANNEL(arg1, activeIndex.VIBEGRATIONS, arg0));
         const obj = guildId(navigation[18]);
       }
     };
-  }, items17);
-  const items18 = [guildId, memo1, stateFromStores];
+  }, items18);
+  const items19 = [guildId, memo2, stateFromStores];
   callback5 = obj12.useCallback(() => {
     if (null != stateFromStores) {
       const obj2 = { key: VibegrationsRemixSheet.VIBEGRATIONS_REMIX_SHEET_KEY, content: null };
-      const obj3 = { project: tmp, currentGuildId: guildId, onRemixed: memo1 };
+      const obj3 = { project: tmp, currentGuildId: guildId, onRemixed: memo2 };
       obj2.content = __initData8(VibegrationsRemixSheetDefault, obj3);
       ActionSheetActionCreators.showActionSheet(obj2);
     }
-  }, items18);
-  const items19 = [projectId];
+  }, items19);
+  const items20 = [projectId];
   callback6 = obj12.useCallback(() => {
     const obj2 = {
       key: VibegrationsConnectToolSheet.VIBEGRATIONS_CONNECT_TOOL_SHEET_KEY,
       content: __initData8(VibegrationsConnectToolSheetDefault, { projectId }),
     };
     ActionSheetActionCreators.showActionSheet(obj2);
-  }, items19);
+  }, items20);
   noop.useRef(false);
-  const items20 = [projectId];
+  const items21 = [projectId];
   callback7 = obj12.useCallback((sha) => {
     if (!ref.current) {
       tmp.current = true;
@@ -1055,12 +1082,12 @@ function ChatScene(guildId) {
             const obj2 = { key: "VIBEGRATIONS_VERSION_RESTORED", content: null, IconComponent: null };
             const intl = guildId(1115).intl;
             obj2.content = intl.string(projectId(3714).u8g2Od);
-            obj2.IconComponent = guildId(15445).UndoIcon;
-            projectId(4523).open(obj2);
+            obj2.IconComponent = guildId(14613).UndoIcon;
+            projectId(4525).open(obj2);
           },
           () => {
             const intl = guildId(1115).intl;
-            guildId(4522).presentError(intl.string(projectId(3714).q6iZ84));
+            guildId(4524).presentError(intl.string(projectId(3714).q6iZ84));
           },
         )
         .finally(() => {
@@ -1071,33 +1098,33 @@ function ChatScene(guildId) {
           const obj2 = { key: "VIBEGRATIONS_VERSION_RESTORED", content: null, IconComponent: null };
           const intl = guildId(1115).intl;
           obj2.content = intl.string(projectId(3714).u8g2Od);
-          obj2.IconComponent = guildId(15445).UndoIcon;
-          projectId(4523).open(obj2);
+          obj2.IconComponent = guildId(14613).UndoIcon;
+          projectId(4525).open(obj2);
         },
         () => {
           const intl = guildId(1115).intl;
-          guildId(4522).presentError(intl.string(projectId(3714).q6iZ84));
+          guildId(4524).presentError(intl.string(projectId(3714).q6iZ84));
         },
       );
     }
-  }, items20);
-  const items21 = [callback7, projectId];
+  }, items21);
+  const items22 = [callback7, projectId];
   callback8 = obj12.useCallback(() => {
     const obj2 = {
       key: VibegrationsVersionHistorySheet.VIBEGRATIONS_VERSION_HISTORY_SHEET_KEY,
       content: __initData8(VibegrationsVersionHistorySheetDefault, { projectId, onRestore: callback7 }),
     };
     ActionSheetActionCreators.showActionSheet(obj2);
-  }, items21);
-  const DeveloperMode = tmp(tmp2[67]).DeveloperMode;
+  }, items22);
+  const DeveloperMode = tmp(tmp2[68]).DeveloperMode;
   setting = DeveloperMode.useSetting();
-  const items22 = [navigation, projectId];
-  callback9 = obj12.useCallback(() => navigation.push(ref.DEBUG, { projectId }), items22);
+  const items23 = [navigation, projectId];
+  callback9 = obj12.useCallback(() => navigation.push(constants.DEBUG, { projectId }), items23);
   let install_scope1;
   if (stateFromStores != null) {
     install_scope1 = stateFromStores.install_scope;
   }
-  const items23 = [install_scope1, projectId];
+  const items24 = [install_scope1, projectId];
   callback10 = obj12.useCallback(() => {
     const obj2 = { key: VibegrationsRestorePointsSheet.VIBEGRATIONS_RESTORE_POINTS_SHEET_KEY, content: null };
     const obj3 = { projectId, installScope: null };
@@ -1112,38 +1139,34 @@ function ChatScene(guildId) {
     obj3.installScope = install_scope;
     obj2.content = __initData8(VibegrationsRestorePointsSheetDefault, obj3);
     obj.showActionSheet(obj2);
-  }, items23);
-  const tmp71 = closure_28(projectId(navigation[69])(previewAppId, callback3));
-  closure_41 = tmp71;
-  const items24 = [previewAppId];
+  }, items24);
+  const tmp76 = setActiveIndex(projectId(navigation[70])(previewAppId, first1));
+  closure_43 = tmp76;
+  const items25 = [previewAppId];
   callback11 = obj12.useCallback(() => {
     if (null != previewAppId) {
       restartVibegrationsAppFramesDefault(tmp);
     }
-  }, items24);
-  const items25 = [navigation, projectId];
+  }, items25);
+  const items26 = [navigation, projectId];
   callback12 = obj12.useCallback(() => {
     closure_2_19(projectId);
     navigation.goBack();
-  }, items25);
+  }, items26);
   let obj10 = { projectId, refreshApplicationId: null };
   const modes2 = availability.modes;
-  const obj9 = {
-    items: memo,
-    pageWidth: projectId(navigation[56])().width - 2 * callback6,
-    onSetActiveIndex: callback2,
-  };
-  let tmp75 = null;
+  const obj9 = { items: memo1, pageWidth: projectId(navigation[57])().width - 2 * memo2, onSetActiveIndex: callback2 };
+  let tmp80 = null;
   if (modes2.includes("widget")) {
-    tmp75 = null;
+    tmp80 = null;
     if ("unavailable-authorization-revoked" !== availability.profileState) {
-      tmp75 = widgetApplicationId;
+      tmp80 = widgetApplicationId;
     }
   }
-  obj10.refreshApplicationId = tmp75;
-  const tmp4Result1Result = projectId(navigation[71])(obj10);
-  preview = tmp4Result1Result;
-  const items26 = [
+  obj10.refreshApplicationId = tmp80;
+  const tmp4Result2Result = projectId(navigation[72])(obj10);
+  preview = tmp4Result2Result;
+  const items27 = [
     canPublish,
     setting,
     guildId,
@@ -1156,11 +1179,11 @@ function ChatScene(guildId) {
     callback8,
     callback3,
     callback11,
-    tmp71,
-    tmp4Result1Result,
+    tmp76,
+    tmp4Result2Result,
     stateFromStores,
   ];
-  memo2 = obj12.useMemo(() => {
+  memo3 = obj12.useMemo(() => {
     const items = [];
     if (canPublish) {
       const obj = { label: null, IconComponent: null, action: null };
@@ -1197,7 +1220,7 @@ function ChatScene(guildId) {
         preview: null,
       };
       let tmp19;
-      if (closure_41) {
+      if (closure_43) {
         tmp19 = callback11;
       }
       obj6.onRefresh = tmp19;
@@ -1221,15 +1244,15 @@ function ChatScene(guildId) {
       }
     }
     return items;
-  }, items26);
-  const items27 = [
+  }, items27);
+  const items28 = [
     vibegrationsControlActive,
     active,
     stringResult,
     tmp42,
     callback1,
     navigation,
-    memo2,
+    memo3,
     projectExists,
     projectName,
     stateFromStores1,
@@ -1255,7 +1278,7 @@ function ChatScene(guildId) {
                   ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
                   const obj = {
                     ref,
-                    IconComponent: title(8271).MoreHorizontalIcon,
+                    IconComponent: title(7360).MoreHorizontalIcon,
                     onPress,
                     accessibilityLabel: null,
                     accessibilityActions: null,
@@ -1265,18 +1288,18 @@ function ChatScene(guildId) {
                   obj.accessibilityLabel = intl.string(title(1115).t["UKOtz+"]);
                   obj.accessibilityActions = accessibilityActions;
                   obj.onAccessibilityAction = onAccessibilityAction;
-                  return closure_1_30(closure_1_1(17026), obj);
+                  return closure_1_30(closure_1_1(16216), obj);
                 },
               };
-              items[1] = projectGuildId(guildId(navigation[77]).ContextMenu, obj2);
+              items[1] = closure_30(guildId(navigation[78]).ContextMenu, obj2);
               obj.children = items;
               tmp = tmp2(tmp3, obj);
             } else {
               let obj3 = navigation;
               if (active) {
-                let VibegrationsSelectModeActiveIcon = guildId(obj3[76]).VibegrationsSelectModeActiveIcon;
+                let VibegrationsSelectModeActiveIcon = guildId(obj3[77]).VibegrationsSelectModeActiveIcon;
               } else {
-                VibegrationsSelectModeActiveIcon = projectId(obj3[76]);
+                VibegrationsSelectModeActiveIcon = projectId(obj3[77]);
               }
               obj3 = {
                 IconComponent: VibegrationsSelectModeActiveIcon,
@@ -1288,7 +1311,7 @@ function ChatScene(guildId) {
               const obj4 = { selected: active };
               obj3.accessibilityState = obj4;
               obj3.disabled = disabled;
-              projectGuildId(projectId(navigation[25]), obj3);
+              closure_30(projectId(navigation[25]), obj3);
               const tmp9 = projectId(navigation[25]);
             }
           }
@@ -1307,32 +1330,32 @@ function ChatScene(guildId) {
       tmp2 = projectId(tmp2[21]);
       Xmvb23 = tmp2.Xmvb23;
     }
-  }, items27);
-  const items28 = [guildId, projectId];
+  }, items28);
+  const items29 = [guildId, projectId];
   const effect4 = obj12.useEffect(() => {
     const result = VibegrationsActionCreators.setSelectedProjectForGuild(guildId, projectId);
     return () => guildId(navigation[42]).setSelectedProjectForGuild(closure_1_0, null);
-  }, items28);
-  const items29 = [projectId];
-  const effect5 = obj12.useEffect(() => () => projectId(navigation[78])(closure_1_1), items29);
+  }, items29);
+  const items30 = [projectId];
+  const effect5 = obj12.useEffect(() => () => projectId(navigation[79])(closure_1_1), items30);
   if (projectExists) {
     if (paneHidden) {
       if ("bot" === activeMode) {
         let contentBare = tmp5.contentBare;
       }
       const obj11 = { style: contentBare, children: null };
-      let tmp89 = null;
+      let tmp94 = null;
       if (tmp39) {
         const obj13 = { style: tmp5.segments, children: null };
         const obj14 = { state: segmentedControlState, variant: "experimental_Small" };
-        obj13.children = projectGuildId(tmp(tmp2[79]).SegmentedControl, obj14);
-        tmp89 = projectGuildId(canPublish, obj13);
+        obj13.children = closure_30(tmp(tmp2[80]).SegmentedControl, obj14);
+        tmp94 = closure_30(canPublish, obj13);
       }
-      const items30 = [tmp89];
+      const items31 = [tmp94];
       const obj15 = { style: tmp5.panes, children: null };
-      let tmp94Result = null;
+      let tmp99Result = null;
       if (hasItem) {
-        tmp94Result = null;
+        tmp99Result = null;
         if (null != previewAppId) {
           const obj16 = {
             style: tmp42 ? tmp5.pane : tmp5.paneBackstage,
@@ -1352,17 +1375,17 @@ function ChatScene(guildId) {
             str6 = "auto";
           }
           obj16.importantForAccessibility = str6;
-          const obj17 = { applicationId: previewAppId, projectId, visible: tmp42 };
-          obj16.children = projectGuildId(tmp(tmp2[58]).PreviewFrame, obj17);
-          tmp94Result = tmp94(tmp92, obj16);
+          const obj17 = { applicationId: previewAppId, projectId, visible: tmp42, onOpenPublishedApp: memo };
+          obj16.children = closure_30(tmp(tmp2[59]).PreviewFrame, obj17);
+          tmp99Result = tmp99(tmp97, obj16);
         }
       }
-      const items31 = [tmp94Result, ,];
-      let tmp96Result = null;
+      const items32 = [tmp99Result, ,];
+      let tmp101Result = null;
       if (paneHidden) {
-        tmp96Result = null;
+        tmp101Result = null;
         if (null != previewAppId) {
-          tmp96Result = null;
+          tmp101Result = null;
           if (!tmp42) {
             const obj18 = { style: tmp5.pane, children: null };
             const obj19 = {
@@ -1374,66 +1397,66 @@ function ChatScene(guildId) {
               frameHostAvailable: tmp24,
               permissionsGate: null,
             };
-            let tmp98 = null;
+            let tmp103 = null;
             if (result) {
               const obj20 = { onReviewPermissions, loading: application.isLoading };
-              tmp98 = obj20;
+              tmp103 = obj20;
             }
-            obj19.permissionsGate = tmp98;
-            obj18.children = projectGuildId(tmp4(tmp2[58]), obj19);
-            tmp96Result = tmp96(tmp92, obj18);
-            const tmp4Result4 = tmp4(tmp2[58]);
+            obj19.permissionsGate = tmp103;
+            obj18.children = closure_30(tmp4(tmp2[59]), obj19);
+            tmp101Result = tmp101(tmp97, obj18);
+            const tmp4Result6 = tmp4(tmp2[59]);
           }
         }
       }
-      items31[1] = tmp96Result;
-      const items32 = [tmp5.pane];
+      items32[1] = tmp101Result;
+      const items33 = [tmp5.pane];
       if (paneHidden) {
         paneHidden = tmp5.paneHidden;
       }
       const obj21 = { style: null, children: null };
-      items32[1] = paneHidden;
-      obj21.style = items32;
+      items33[1] = paneHidden;
+      obj21.style = items33;
       const obj22 = { projectId };
-      obj21.children = projectGuildId(tmp4(tmp2[80]), obj22);
-      items31[2] = projectGuildId(canPublish, obj21);
-      obj15.children = items31;
-      items30[1] = tmp87(canPublish, obj15);
-      obj11.children = items30;
-      let tmp81Result1 = tmp87(tmp88, obj11);
+      obj21.children = closure_30(tmp4(tmp2[81]), obj22);
+      items32[2] = closure_30(canPublish, obj21);
+      obj15.children = items32;
+      items31[1] = tmp92(canPublish, obj15);
+      obj11.children = items31;
+      let tmp86Result1 = tmp92(tmp93, obj11);
     }
     contentBare = [tmp5.contentBare, animatedStyle];
   } else {
     const obj23 = { style: null, children: null };
-    const items33 = [,];
-    ({ content: arr32[0], centered: arr32[1] } = tmp5);
-    obj23.style = items33;
+    const items34 = [,];
+    ({ content: arr33[0], centered: arr33[1] } = tmp5);
+    obj23.style = items34;
     if (stateFromStores1) {
-      let tmp81Result = tmp81(stateFromStores, {});
+      let tmp86Result = tmp86(stateFromStores, {});
     } else {
       const obj24 = { style: tmp5.listError, children: null };
       const obj25 = { variant: "heading-lg/semibold", color: "text-default", children: null };
       let intl2 = tmp(tmp2[20]).intl;
       obj25.children = intl2.string(tmp4(tmp2[21]).F2dRba);
-      const items34 = [tmp81(tmp(tmp2[40]).Text, obj25), ,];
+      const items35 = [tmp86(tmp(tmp2[40]).Text, obj25), ,];
       const obj26 = { variant: "text-md/normal", color: "text-muted", children: null };
       let intl3 = tmp(tmp2[20]).intl;
       obj26.children = intl3.string(tmp4(tmp2[21]).GnEJ3o);
-      items34[1] = tmp81(tmp(tmp2[40]).Text, obj26);
+      items35[1] = tmp86(tmp(tmp2[40]).Text, obj26);
       const obj27 = { variant: "secondary", size: "sm", text: null, onPress: null };
       const intl4 = tmp(tmp2[20]).intl;
       obj27.text = intl4.string(tmp4(tmp2[21])["42EdIV"]);
       obj27.onPress = function onPress() {
         return VibegrationsActionCreators.listProjects(guildId);
       };
-      items34[2] = tmp81(tmp(tmp2[41]).Button, obj27);
-      obj24.children = items34;
-      tmp81Result = callback4(tmp82, obj24);
+      items35[2] = tmp86(tmp(tmp2[41]).Button, obj27);
+      obj24.children = items35;
+      tmp86Result = callback3(tmp87, obj24);
     }
-    obj23.children = tmp81Result;
-    tmp81Result1 = tmp81(tmp82, obj23);
+    obj23.children = tmp86Result;
+    tmp86Result1 = tmp86(tmp87, obj23);
   }
-  return tmp81Result1;
+  return tmp86Result1;
 }
 function RoutedProjectOpener(projectId) {
   projectId = projectId.projectId;
@@ -1464,24 +1487,24 @@ get_ActivityIndicator = fn(17);
   ScrollView: closure_9,
   View: c10,
 } = get_ActivityIndicator);
-const vibegrationsDesignFeedbackStore = fn(17023);
+const vibegrationsDesignFeedbackStore = fn(16213);
 ({
   enterVibegrationsDesignFeedback: closure_15,
   exitVibegrationsDesignFeedback: closure_16,
   useVibegrationsDesignFeedback: closure_17,
 } = vibegrationsDesignFeedbackStore);
-const VibegrationsConnectionStore = fn(13457);
+const VibegrationsConnectionStore = fn(12607);
 ({
   closeConnection: closure_19,
   draftPatchNotes: closure_20,
   publishProject: closure_21,
   restoreSourceHistoryEntry: closure_22,
 } = VibegrationsConnectionStore);
-const canPublishProject = fn(9389).canPublishProject;
+const canPublishProject = fn(8487).canPublishProject;
 const Constants = fn(1074);
 ({ Permissions: closure_25, Routes: closure_26 } = Constants);
 const StaticChannelRoute = fn(2051).StaticChannelRoute;
-const FramesConstants = fn(9394);
+const FramesConstants = fn(8492);
 ({ isLaunched: closure_28, MAIN_SURFACE: closure_29 } = FramesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_30, jsxs: items, Fragment: closure_32 } = jsxProd);
@@ -1581,11 +1604,11 @@ export default function VibegrationsStandaloneScreen(guildId) {
     items3,
   );
   let obj3 = guildId(stateFromStores[29]);
-  const isVibegrationsGuildEnabled = guildId(stateFromStores[81]).useIsVibegrationsGuildEnabled({
+  const isVibegrationsGuildEnabled = guildId(stateFromStores[82]).useIsVibegrationsGuildEnabled({
     guildId,
     location: "VibegrationsStandaloneScreen",
   });
-  const obj4 = guildId(stateFromStores[81]);
+  const obj4 = guildId(stateFromStores[82]);
   const items4 = [GuildMemberStore];
   const items5 = [guildId];
   const stateFromStoresArray = guildId(stateFromStores[29]).useStateFromStoresArray(
@@ -1639,12 +1662,12 @@ export default function VibegrationsStandaloneScreen(guildId) {
   const obj7 = {};
   const obj8 = { headerLeft: null, headerTitle: null, render: null };
   const obj6 = guildId(stateFromStores[29]);
-  obj8.headerLeft = guildId(stateFromStores[75]).getHeaderCloseButton(() => navigation.goBack());
+  obj8.headerLeft = guildId(stateFromStores[76]).getHeaderCloseButton(() => navigation.goBack());
   obj8.headerTitle = function headerTitle() {
     const obj = { title: null };
     const intl = guildId(stateFromStores[20]).intl;
     obj.title = intl.string(navigation(stateFromStores[21]).Xmvb23);
-    return closure_1_30(guildId(stateFromStores[75]).NavigatorHeader, obj);
+    return closure_1_30(guildId(stateFromStores[76]).NavigatorHeader, obj);
   };
   obj8.render = function render() {
     const obj = { children: null };
@@ -1672,7 +1695,7 @@ export default function VibegrationsStandaloneScreen(guildId) {
       const obj = { title: null };
       const intl = guildId(stateFromStores[20]).intl;
       obj.title = intl.string(navigation(stateFromStores[21]).KampIf);
-      return closure_1_30(guildId(stateFromStores[75]).NavigatorHeader, obj);
+      return closure_1_30(guildId(stateFromStores[76]).NavigatorHeader, obj);
     },
     render(projectId) {
       projectId = projectId.projectId;
@@ -1704,5 +1727,5 @@ export default function VibegrationsStandaloneScreen(guildId) {
   };
   let intl = guildId(stateFromStores[20]).intl;
   obj10.headerBackTitle = intl.string(navigation(stateFromStores[21]).Xmvb23);
-  return closure_30(guildId(stateFromStores[83]).Navigator, obj10);
+  return closure_30(guildId(stateFromStores[84]).Navigator, obj10);
 }

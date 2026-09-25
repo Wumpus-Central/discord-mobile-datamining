@@ -207,8 +207,8 @@ prototype["handleSend"] = function handleSend(nonce, fn) {
     const tmp4 = obj;
   }
   const tmp = _objectWithoutProperties(nonce, closure_3);
-  const signalStrength = handleCommand1(7789).getSignalStrength();
-  const obj2 = handleCommand1(7789);
+  const signalStrength = handleCommand1(6874).getSignalStrength();
+  const obj2 = handleCommand1(6874);
   const merged = Object.assign(tmp);
   let tmp8 = null != signalStrength;
   if (tmp8) {
@@ -251,8 +251,8 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, f
     const tmp4 = obj;
   }
   const tmp = _objectWithoutProperties(message, closure_4);
-  const signalStrength = handleCommand1(7789).getSignalStrength();
-  const obj2 = handleCommand1(7789);
+  const signalStrength = handleCommand1(6874).getSignalStrength();
+  const obj2 = handleCommand1(6874);
   const merged = Object.assign(tmp);
   let tmp8 = null != signalStrength;
   if (tmp8) {

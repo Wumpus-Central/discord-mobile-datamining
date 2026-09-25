@@ -51,7 +51,7 @@ export const ForumPostAppliedTagPills = function ForumPostAppliedTagPills(additi
     obj2.tag = obj3;
     obj2.containerStyle = tmp.tag;
     obj2.hasUnreads = hasUnreads;
-    tmp4 = closure_3(hasUnreads(10975).AppliedForumTagPill, obj2);
+    tmp4 = closure_3(hasUnreads(10079).AppliedForumTagPill, obj2);
   }
   items1[1] = tmp4;
   obj.children = items1;

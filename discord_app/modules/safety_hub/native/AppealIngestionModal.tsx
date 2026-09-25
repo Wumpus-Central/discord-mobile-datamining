@@ -13,7 +13,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(8770);
+const SafetyHubConstants = fn(7860);
 ({ APPEAL_INGESTION_IMPRESSION_PROPERTIES: closure_9, AppealIngestionSections: c10 } = SafetyHubConstants);
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
@@ -83,7 +83,7 @@ export default function AppealIngestionModal(classificationId) {
         headerTitle() {
           return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, {
             variant: "text-md/normal",
-            children: "padding",
+            children: "paddingHorizontal",
           });
         },
         render() {
@@ -104,7 +104,7 @@ export default function AppealIngestionModal(classificationId) {
       obj4.headerTitle = function headerTitle() {
         return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, {
           variant: "text-md/normal",
-          children: "padding",
+          children: "paddingHorizontal",
         });
       };
       obj4.render = function render() {
@@ -124,7 +124,7 @@ export default function AppealIngestionModal(classificationId) {
       obj6.headerTitle = function headerTitle() {
         return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, {
           variant: "text-md/normal",
-          children: "padding",
+          children: "paddingHorizontal",
         });
       };
       obj6.render = function render() {
@@ -144,7 +144,7 @@ export default function AppealIngestionModal(classificationId) {
       obj8.headerTitle = function headerTitle() {
         return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, {
           variant: "text-md/normal",
-          children: "padding",
+          children: "paddingHorizontal",
         });
       };
       obj8.render = function render() {
@@ -164,7 +164,7 @@ export default function AppealIngestionModal(classificationId) {
       obj10.headerTitle = function headerTitle() {
         return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, {
           variant: "text-md/normal",
-          children: "padding",
+          children: "paddingHorizontal",
         });
       };
       obj10.render = function render() {
@@ -184,7 +184,7 @@ export default function AppealIngestionModal(classificationId) {
       obj12.headerTitle = function headerTitle() {
         return closure_1_12(isDsaEligible(isDeveloperClassification[10]).Text, {
           variant: "text-md/normal",
-          children: "padding",
+          children: "paddingHorizontal",
         });
       };
       obj12.render = function render() {
@@ -352,7 +352,7 @@ export const AppealIngestionModalScreen = function AppealIngestionModalScreen(ch
                 v2 = 2;
                 c5 = 1;
                 const obj6 = {
-                  value: tmp27(12224).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1),
+                  value: tmp27(11346).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1),
                   done: false,
                 };
                 return obj6;
@@ -367,8 +367,8 @@ export const AppealIngestionModalScreen = function AppealIngestionModalScreen(ch
               if (body != null) {
                 code = body.code;
               }
-              closure_129_4(safetyHubAppealSignal(8769).getRequestReviewErrorFromCode(code));
-              const obj2 = safetyHubAppealSignal(8769);
+              closure_129_4(safetyHubAppealSignal(7859).getRequestReviewErrorFromCode(code));
+              const obj2 = safetyHubAppealSignal(7859);
             } else if (arg0 === 1) {
               c5 = 3;
               throw value;

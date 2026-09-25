@@ -70,7 +70,7 @@ export default function InteractionIframeModal(children) {
       referrerPolicy: "origin",
       isPipOrGridMode: false,
       webViewKey: "flex",
-      ignoreSilentHardwareSwitch: "breast_feeding_tone3",
+      ignoreSilentHardwareSwitch: "en-CH",
     };
     ({ channel_id: obj2.channelId, guild_id: obj2.guildId } = queryParams);
     obj3.activityUrl = iframeModalState.iframeUrl;

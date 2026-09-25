@@ -93,7 +93,7 @@ export { ToastEmoji };
 export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdatedToast(emoji) {
   emoji = emoji.emoji;
   if (obj.getIsScreenReaderEnabled()) {
-    const AccessibilityAnnouncer = tmp(4536).AccessibilityAnnouncer;
+    const AccessibilityAnnouncer = tmp(4538).AccessibilityAnnouncer;
     const intl = tmp(1115).intl;
     const obj3 = { emojiName: emoji.name };
     AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp(1115).t.nKY0Fl, obj3));
@@ -110,5 +110,5 @@ export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdated
     };
     ToastActionCreatorsDefault.open(obj4);
   }
-  obj = emoji(5258);
+  obj = emoji(5259);
 };

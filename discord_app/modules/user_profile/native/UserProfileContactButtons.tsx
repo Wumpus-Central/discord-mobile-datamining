@@ -43,19 +43,19 @@ function FriendRequestButton(user) {
   let stateFromStores;
   let userDisplayName;
   ({ hasCustomProfileTheme, ButtonComponent } = user);
-  const trackUserProfileAction = user(8538).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const trackUserProfileAction = user(7628).useUserProfileAnalyticsContext().trackUserProfileAction;
   if (newestAnalyticsLocation == null) {
-    newestAnalyticsLocation = trackUserProfileAction(7495)().newestAnalyticsLocation;
+    newestAnalyticsLocation = trackUserProfileAction(6578)().newestAnalyticsLocation;
   }
   dependencyMap = { location: newestAnalyticsLocation };
-  let obj = user(8538);
+  let obj = user(7628);
   const tmp = trackUserProfileAction;
-  const gameFriendsForUser = user(13452).useGameFriendsForUser(user.id);
-  const tmp3Result = user(13452);
+  const gameFriendsForUser = user(12602).useGameFriendsForUser(user.id);
+  const tmp3Result = user(12602);
   const items = [userDisplayName];
   stateFromStores = user(504).useStateFromStores(items, () => RelationshipStore.getRelationshipType(user.id));
   const tmp3Result2 = user(504);
-  userDisplayName = tmp(4673).useName(user);
+  userDisplayName = tmp(4675).useName(user);
   if (stateFromStores !== RelationshipTypes.FRIEND) {
     if (stateFromStores !== RelationshipTypes.BLOCKED) {
       if (gameFriendsForUser.length > 0) {
@@ -64,7 +64,7 @@ function FriendRequestButton(user) {
         return null;
       } else {
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(13528).UserClockIcon;
+          let UserPlusIcon = tmp3(12680).UserClockIcon;
         } else {
           UserPlusIcon = tmp3(4765).UserPlusIcon;
         }

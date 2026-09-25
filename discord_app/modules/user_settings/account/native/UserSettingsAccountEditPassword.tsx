@@ -12,7 +12,7 @@ import UserSettingsAccountActionCreatorsAll from "../../../../actions/UserSettin
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
 import showInvalidUsernameToastNative from "showInvalidUsernameToastNative.tsx";
 import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader.tsx";
-import _modDef15122 from "../../../../../_runtime/metro/15122__.js";
+import _modDef14288 from "../../../../../_runtime/metro/14288__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import LoginRequiredActionStore from "../../../auth/LoginRequiredActionStore.tsx";
 import UserSettingsAccountStore from "../../../../stores/UserSettingsAccountStore.tsx";
@@ -27,7 +27,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: c10, LoginRequiredActions: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const state = { newPassword: "category", password: 17080897 };
+const state = { newPassword: "channel", password: 17062721 };
 const createStyles = fn(4829);
 let obj2 = {
   onePass: { width: 20, height: 20 },
@@ -158,7 +158,7 @@ prototype["render"] = function render() {
   let tmp4Result = showForcedPasswordUpdate;
   if (showForcedPasswordUpdate) {
     const obj3 = { style: tmp.header, children: null };
-    const obj4 = { source: _modDef15122, style: tmp.image };
+    const obj4 = { source: _modDef14288, style: tmp.image };
     const items1 = [closure_1_12(React4, obj4), ,];
     const obj5 = {
       style: tmp.requiredActionsTitle,
@@ -260,12 +260,12 @@ prototype["render"] = function render() {
   obj13.children = map1(hasOwnProperty, obj);
   return closure_1_12(timestampProducer, obj13);
 };
-EditPassword.contextType = fn(4535).ThemeContext;
+EditPassword.contextType = fn(4537).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/account/native/UserSettingsAccountEditPassword.tsx");
 
 export default function EditPasswordWrapper() {
-  const params = flag(7327).useSettingNavigationRoute().params;
+  const params = flag(6410).useSettingNavigationRoute().params;
   flag = undefined;
   if (params != null) {
     flag = params.isLoginRequiredAction;
@@ -273,7 +273,7 @@ export default function EditPasswordWrapper() {
   if (flag == null) {
     flag = false;
   }
-  let obj = flag(7327);
+  let obj = flag(6410);
   let items = [UserStore, UserSettingsAccountStore, LoginRequiredActionStore];
   const stateFromStoresObject = flag(504).useStateFromStoresObject(items, () => {
     const currentUser = UserStore.getCurrentUser();

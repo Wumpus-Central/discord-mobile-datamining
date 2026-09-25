@@ -158,7 +158,7 @@ obj2.applicationCommandOption = {
   fontSize: 12,
   alignItems: "center",
   borderRadius: nativeDefault.radii.xs,
-  backgroundColor: fn(5746).DARK_PRIMARY_800_LIGHT_PRIMARY_300,
+  backgroundColor: fn(5748).DARK_PRIMARY_800_LIGHT_PRIMARY_300,
 };
 let obj5 = {
   marginHorizontal: 4,
@@ -166,7 +166,7 @@ let obj5 = {
   fontSize: 12,
   alignItems: "center",
   borderRadius: nativeDefault.radii.xs,
-  backgroundColor: fn(5746).DARK_PRIMARY_800_LIGHT_PRIMARY_300,
+  backgroundColor: fn(5748).DARK_PRIMARY_800_LIGHT_PRIMARY_300,
 };
 obj2.applicationCommandOptionText = { color: nativeDefault.colors.TEXT_DEFAULT };
 let obj6 = { color: nativeDefault.colors.TEXT_DEFAULT };
@@ -190,7 +190,7 @@ obj2.descriptionEllipsis = {
 const obj10 = { marginLeft: 10, backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
 obj2.descriptionEllipsisDots = { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 let obj11 = { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-obj2.completeCommandOption = { backgroundColor: fn(5746).DARK_PRIMARY_660_LIGHT_PRIMARY_300 };
+obj2.completeCommandOption = { backgroundColor: fn(5748).DARK_PRIMARY_660_LIGHT_PRIMARY_300 };
 let closure_11 = createStyles.createStyles(obj2);
 function ApplicationCommandOptionDescription(option) {
   option = option.option;
@@ -396,7 +396,7 @@ export default function _default(command) {
   let tmp22 = null != memo;
   if (tmp22) {
     const obj4 = { style: tmp.applicationIcon, source: memo };
-    tmp22 = ref(section(5892), obj4);
+    tmp22 = ref(section(5894), obj4);
   }
   const items5 = [
     tmp22,
@@ -488,9 +488,9 @@ export default function _default(command) {
   obj3.children = items5;
   const items8 = [
     c10(closure_6, obj3),
-    ref(command(8951).FormDivider, { style: tmp.applicationDescriptionDivider }),
+    ref(command(8045).FormDivider, { style: tmp.applicationDescriptionDivider }),
     ref(stateFromStores, { command, option: currentOption, optionState: tmp17 }),
-    ref(command(8951).FormDivider, { style: tmp.applicationDescriptionDivider }),
+    ref(command(8045).FormDivider, { style: tmp.applicationDescriptionDivider }),
   ];
   obj2.children = items8;
   return c10(onPressOption, obj2);

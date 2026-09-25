@@ -39,7 +39,7 @@ const NativeChatUtilsDefault = NativeChatUtils;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const RowGeneratorConstants = fn(8281);
+const RowGeneratorConstants = fn(7370);
 ({ Changeset: c10, RowType: closure_11, SeparatorType: closure_12 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
@@ -284,9 +284,9 @@ class ChatPreviewBase extends PureComponent {
           jumpTargetId,
           jumpType: "flexDirection",
           shouldInitialScroll: "Array",
-          animated: 819.482,
-          scrollPosition: 1038.814,
-          focusTargetId: "INTERACTION_FAILURE",
+          animated: "flag_bi",
+          scrollPosition: false,
+          focusTargetId: false,
         };
         applyArgumentsResult.scrollData = computeScrollDataDefault(obj3);
         if (!tmp7) {
@@ -318,10 +318,10 @@ class ChatPreviewBase extends PureComponent {
       if (null != jumpTargetId) {
         const resolved = Promise.resolve();
         resolved.then(() => {
-          const result = applyArgumentsResult(8239).setSelectedConversation(closure_1_0, roleStyle, {
+          const result = applyArgumentsResult(7328).setSelectedConversation(closure_1_0, roleStyle, {
             shouldJump: false,
           });
-          const obj = applyArgumentsResult(8239);
+          const obj = applyArgumentsResult(7328);
           applyArgumentsResult(4840).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
         });
       }
@@ -633,7 +633,7 @@ prototype["render"] = function render() {
   tmp14 = tmp6Result;
   tmp6Result2 = map1(common_SafeAreaView.SafeAreaPaddingView, obj9);
 };
-ChatPreviewBase.contextType = fn(4535).ThemeContext;
+ChatPreviewBase.contextType = fn(4537).ThemeContext;
 ChatPreviewBase.defaultProps = { withSafeArea: true };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/ChatPreview.tsx");
@@ -652,8 +652,8 @@ export const ChatPreview = function ChatPreview(channelId) {
   const items1 = [ChannelStore];
   const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   const obj2 = channelId(504);
-  const isChannelSpoilerGated = channelId(7659).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(7659);
+  const isChannelSpoilerGated = channelId(6742).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(6742);
   const isChannelContentGated = channelId(5039).useIsChannelContentGated(stateFromStores1);
   const obj4 = channelId(5039);
   const items2 = [ActionSheetStore];

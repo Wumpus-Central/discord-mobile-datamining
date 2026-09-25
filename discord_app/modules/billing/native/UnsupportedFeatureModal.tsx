@@ -14,7 +14,7 @@ export default function UnsupportedFeatureModal(onDismiss) {
   let obj2 = { Unsupported: null };
   const obj3 = {
     title: onDismiss.title,
-    headerLeft: onDismiss(5929).getHeaderCloseButton(() => {
+    headerLeft: onDismiss(5931).getHeaderCloseButton(() => {
       ModalActionCreatorsDefault.pop();
       if (onDismiss != null) {
         onDismiss();
@@ -31,5 +31,5 @@ export default function UnsupportedFeatureModal(onDismiss) {
   };
   obj2.Unsupported = obj3;
   obj.screens = obj2;
-  return jsx(onDismiss(7333).Navigator, { initialRouteName: "Unsupported", screens: null });
+  return jsx(onDismiss(6416).Navigator, { initialRouteName: "Unsupported", screens: null });
 }

@@ -5,7 +5,7 @@ import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/Actio
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import native from "../../../../design/assets/native.tsx";
+import TrafficConeSpotIllustration from "../../../../design/components/mana-assets/native/generated/TrafficConeSpotIllustration.native.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import URLCallout from "../../../safety_common/native/URLCallout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -28,7 +28,7 @@ export default function BlockedDomainActionSheet(url) {
   const obj = { startExpanded: true, children: null };
   const obj2 = { spacing: 16, justify: "center", align: "center", style: tmp.container, children: null };
   const obj3 = { spacing: 8, justify: "center", align: "center", children: null };
-  const items = [React3(native.TrafficConeSpotIllustration, {}), ,];
+  const items = [React3(TrafficConeSpotIllustration.TrafficConeSpotIllustration, {}), ,];
   const obj4 = {
     style: tmp.title,
     accessibilityRole: "header",

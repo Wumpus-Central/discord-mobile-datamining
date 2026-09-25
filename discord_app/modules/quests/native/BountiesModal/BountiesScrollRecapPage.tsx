@@ -9,9 +9,9 @@ import useTypeConsolidationTextTransform from "../../../design/useTypeConsolidat
 import common_Video from "../../../../components_native/common/Video.tsx";
 import APNGPlayer from "../../../image/native/APNGPlayer.android.tsx";
 import OrbsIcon from "../../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
-import _modDef15395 from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.png.js";
-import _modDef15396 from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.mov.js";
-import _modDef15397 from "../../../../../discord_assets/assets/quests/bounties/starfield_bg.mp4.js";
+import _modDef14561 from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.png.js";
+import _modDef14562 from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.mov.js";
+import _modDef14563 from "../../../../../discord_assets/assets/quests/bounties/starfield_bg.mp4.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -26,7 +26,7 @@ function BountiesRecapOrbsBackground(arg0) {
       pointerEvents: "none",
       children: null,
     };
-    const obj3 = { url: _modDef15395, style: React3.absoluteFillObject, autoplay: !reducedMotion };
+    const obj3 = { url: _modDef14561, style: React3.absoluteFillObject, autoplay: !reducedMotion };
     obj2.children = timestampProducer(APNGPlayer.APNGPlayer, obj3);
     let tmp3Result = timestampProducer(React4, obj2);
   } else {
@@ -39,7 +39,7 @@ function BountiesRecapOrbsBackground(arg0) {
       preventsDisplaySleepDuringVideoPlayback: false,
       importantForAccessibility: "no-hide-descendants",
     };
-    const obj5 = { uri: _modDef15396 };
+    const obj5 = { uri: _modDef14562 };
     obj4.source = obj5;
     obj4.style = style;
     obj4.paused = reducedMotion;
@@ -140,7 +140,7 @@ export const BountiesScrollRecapPage = function BountiesScrollRecapPage(orbAmoun
     preventsDisplaySleepDuringVideoPlayback: false,
     importantForAccessibility: "no-hide-descendants",
   };
-  obj5.source = { uri: _modDef15397 };
+  obj5.source = { uri: _modDef14563 };
   obj5.style = React3.absoluteFillObject;
   obj5.paused = stateFromStores;
   const items2 = [
@@ -160,7 +160,7 @@ export const BountiesScrollRecapPage = function BountiesScrollRecapPage(orbAmoun
   const obj11 = { accessible: true, accessibilityRole: "text", accessibilityLabel: "+" + orbAmount, children: null };
   const obj12 = { style: tmp.titleRow, children: null };
   const items6 = [timestampProducer(OrbsIcon.OrbsIcon, { size: "lg", color: "icon-strong", accessible: false })];
-  const obj6 = { uri: _modDef15397 };
+  const obj6 = { uri: _modDef14563 };
   const obj7 = { style: tmp.orbsBackground, reducedMotion: stateFromStores };
   items6[1] = timestampProducer(Text_Text.Text, {
     variant: "display-lg",

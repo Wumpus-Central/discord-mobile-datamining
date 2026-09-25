@@ -253,7 +253,7 @@ export default function FormImagePicker(children) {
       color: "text-default",
       children: children.description,
     }),
-    closure_6(tmp6(5273).Button, {
+    closure_6(tmp6(5274).Button, {
       text: stringResult,
       variant: "secondary",
       onPress() {

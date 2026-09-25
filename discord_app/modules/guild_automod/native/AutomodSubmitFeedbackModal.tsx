@@ -4,7 +4,7 @@ import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import _modDef7325 from "../../../../_runtime/metro/07325__.js";
+import _modDef6408 from "../../../../_runtime/metro/06408__.js";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
 import HeaderActionButton from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import AutomodFeedback from "../AutomodFeedback.tsx";
@@ -20,7 +20,7 @@ function Navbar(onClose) {
   const intl = util.intl;
   obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
   obj2.onPress = onClose.onClose;
-  obj2.source = _modDef7325;
+  obj2.source = _modDef6408;
   obj.children = React5(HeaderActionButton.HeaderActionButton, obj2);
   rect.children = React5(View, obj);
   return React5(common_SafeAreaView.SafeAreaPaddingView, rect);

@@ -57,28 +57,30 @@ export default function GatedContent(onAgree) {
       onDisagree();
     }
   }, items1);
-  const callback1 = modalType.useCallback(() => {
-    const result = AgeVerificationAnalyticsUtils.trackNsfwSpaceWarningModalClicked(
-      AgeVerificationAnalyticsUtils.NsfwSpaceWarningModalCta.NSFW_CHANNEL_AGREE_CTA,
-      modalType,
-      channelId,
-      guildId,
-    );
-    if (onAgree != null) {
-      onAgree();
+  let tmp5 = null;
+  if (null != agreement) {
+    tmp5 = null;
+    if (null != onAgree) {
+      const obj = { variant: agreementButtonVariant, onPress: tmp4, text: agreement };
+      tmp5 = channelId(onAgree(onDisagree[5]).Button, obj, "agree");
     }
-  }, items2);
-  const obj = { spacing: 16, style: tmp.container, children: null };
-  const obj2 = { align: "center", children: null };
+  }
+  const tmp10 = channelId(
+    onAgree(onDisagree[5]).Button,
+    { variant: disagreementButtonVariant, text: disagreement, onPress: callback },
+    "disagree",
+  );
+  const obj2 = { spacing: 16, style: tmp.container, children: null };
+  const obj3 = { align: "center", children: null };
   const items3 = [
-    channelId(onAgree(onDisagree[6]).Text, {
+    channelId(onAgree(onDisagree[7]).Text, {
       variant: "heading-xxl/bold",
       maxFontSizeMultiplier: 2,
       style: tmp.title,
       children: title,
     }),
     subtitle,
-    channelId(onAgree(onDisagree[6]).Text, {
+    channelId(onAgree(onDisagree[7]).Text, {
       color: "text-muted",
       variant: "text-md/medium",
       style: tmp.description,
@@ -86,27 +88,18 @@ export default function GatedContent(onAgree) {
       children: description,
     }),
   ];
-  obj2.children = items3;
-  const items4 = [guildId(onAgree(onDisagree[5]).Stack, obj2)];
-  const obj5 = { style: tmp.buttonGroup, children: null };
-  let tmp8Result = null != agreement;
-  if (tmp8Result) {
-    tmp8Result = null != onAgree;
+  obj3.children = items3;
+  const items4 = [guildId(onAgree(onDisagree[6]).Stack, obj3)];
+  const obj6 = { style: tmp.buttonGroup, children: null };
+  if ("primary" === disagreementButtonVariant) {
+    if ("primary" !== agreementButtonVariant) {
+      const items5 = [tmp10, tmp5];
+      let items6 = items5;
+    }
+    obj6.children = items6;
+    items4[1] = channelId(tmp12, obj6);
+    obj2.children = items4;
+    return guildId(onAgree(onDisagree[6]).Stack, obj2);
   }
-  if (tmp8Result) {
-    const obj6 = { variant: agreementButtonVariant, onPress: callback1, text: agreement };
-    tmp8Result = tmp8(tmp6(tmp7[8]).Button, obj6);
-  }
-  const items5 = [
-    tmp8Result,
-    channelId(onAgree(onDisagree[8]).Button, {
-      variant: disagreementButtonVariant,
-      text: disagreement,
-      onPress: callback,
-    }),
-  ];
-  obj5.children = items5;
-  items4[1] = guildId(onAgree(onDisagree[7]).ButtonGroup, obj5);
-  obj.children = items4;
-  return guildId(onAgree(onDisagree[5]).Stack, obj);
+  items6 = [tmp5, tmp10];
 }

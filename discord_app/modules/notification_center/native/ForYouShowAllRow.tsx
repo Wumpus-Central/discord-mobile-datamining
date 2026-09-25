@@ -7,7 +7,7 @@ import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useFontScale from "../../screen/native/useFontScale.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef7475 from "../../../../_runtime/metro/07475__.js";
+import _modDef6558 from "../../../../_runtime/metro/06558__.js";
 import ChannelListLayout from "../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx";
 import AvatarDuoPile from "../../../design/components/Pile/native/AvatarDuoPile.native.tsx";
 import ChannelPressableWrapper from "../../main_tabs_v2/native/shared_components/guild_channels/ChannelPressableWrapper.tsx";
@@ -66,7 +66,7 @@ function ForYouShowAllRow(panelVariant) {
   items1[2] = React5(native.Icon, {
     style: tmp4.icon,
     color: tmp4.iconColor.color,
-    source: _modDef7475,
+    source: _modDef6558,
     size: native.IconSizes.CUSTOM,
   });
   obj9.children = items1;
@@ -75,7 +75,7 @@ function ForYouShowAllRow(panelVariant) {
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const Sections = fn(13047).Sections;
+const Sections = fn(12178).Sections;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4829);
@@ -163,7 +163,7 @@ export const ForYouSuggestedFriendShowAllRow = function ForYouSuggestedFriendSho
     children: noop.useMemo(() => {
       const substr = suggestedFriends.slice(2, 4);
       return substr.map((user) => {
-        const obj = { user: user.user, guildId: "Array", size: "minor" };
+        const obj = { user: user.user, guildId: "Array", size: -1 };
         const obj2 = suggestedFriends(messagesTabLayout[6]);
         const AvatarSizes = suggestedFriends(messagesTabLayout[11]).AvatarSizes;
         obj.size = suggestedFriends(messagesTabLayout[6]).isLayoutCompact(closure_1_2)

@@ -16,10 +16,10 @@ require = fn;
 function DevToolsPersistedStoresActionSheet(store) {
   store = store.store;
   const close = store.close;
-  const obj = { header: jsx(store(7482).BottomSheetTitleHeader, { title: store.getName() }), children: null };
+  const obj = { header: jsx(store(6565).BottomSheetTitleHeader, { title: store.getName() }), children: null };
   const obj3 = {
     hasIcons: false,
-    children: jsx(store(7532).ActionSheetRow, {
+    children: jsx(store(6615).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -33,9 +33,9 @@ function DevToolsPersistedStoresActionSheet(store) {
       },
     }),
   };
-  obj.children = jsx(store(7532).ActionSheetRow.Group, {
+  obj.children = jsx(store(6615).ActionSheetRow.Group, {
     hasIcons: false,
-    children: jsx(store(7532).ActionSheetRow, {
+    children: jsx(store(6615).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -49,8 +49,8 @@ function DevToolsPersistedStoresActionSheet(store) {
       },
     }),
   });
-  return jsx(store(7530).ActionSheet, {
-    header: jsx(store(7482).BottomSheetTitleHeader, { title: store.getName() }),
+  return jsx(store(6613).ActionSheet, {
+    header: jsx(store(6565).BottomSheetTitleHeader, { title: store.getName() }),
     children: null,
   });
 }

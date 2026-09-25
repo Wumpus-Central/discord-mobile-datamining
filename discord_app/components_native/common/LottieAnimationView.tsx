@@ -1,5 +1,5 @@
 // discord_app/components_native/common/LottieAnimationView.tsx
-import _modDef5835 from "../../../_runtime/metro/05835__.js";
+import _modDef5837 from "../../../_runtime/metro/05837__.js";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -66,7 +66,7 @@ prototype["render"] = function render() {
   obj3.style = items1;
   const tmp = _objectWithoutProperties(props, closure_2);
   const merged = Object.assign(tmp);
-  obj2.children = jsx(_modDef5835, { ref: this.setRef, source, style: null });
+  obj2.children = jsx(_modDef5837, { ref: this.setRef, source, style: null });
   return (
     <View style={null} collapsable={props.collapsable}>
       {null}

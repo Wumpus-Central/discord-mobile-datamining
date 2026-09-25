@@ -129,7 +129,7 @@ export default function ContactSyncNameInput(prefilledFromContactBook) {
   if (null != onRemoveName) {
     str = "md";
   }
-  items2[1] = timestampProducer(tmp9(5273).Button, {
+  items2[1] = timestampProducer(tmp9(5274).Button, {
     variant: "primary",
     size: str,
     text: stringResult,
@@ -152,7 +152,7 @@ export default function ContactSyncNameInput(prefilledFromContactBook) {
       }
       return tmp;
     };
-    obj9.children = timestampProducer(tmp9(5273).Button, obj10);
+    obj9.children = timestampProducer(tmp9(5274).Button, obj10);
     tmp12Result2 = timestampProducer(View, obj9);
   }
   items2[2] = tmp12Result2;

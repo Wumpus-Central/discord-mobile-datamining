@@ -7,7 +7,7 @@ import useTrackImpressionDefault from "../../../app_analytics/useTrackImpression
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef13712 = tmp2(13712);
+const _modDef12866 = tmp2(12866);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, Image: metroRequire, StyleSheet } = get_ActivityIndicator);
@@ -95,7 +95,7 @@ export default function NitroOrbsDeliveredModal(arg0) {
     children: null,
   };
   const callback2 = noop.useCallback(() => _undefined(true), []);
-  obj3.children = closure_11(onClose(12125).OrbsRewardBackground, { style: tmp.background, onReady: callback2 });
+  obj3.children = closure_11(onClose(10746).OrbsRewardBackground, { style: tmp.background, onReady: callback2 });
   const items2 = [closure_11(View, obj3), ,];
   let tmp14Result = !tmp12Result;
   if (!tmp12Result) {
@@ -107,10 +107,10 @@ export default function NitroOrbsDeliveredModal(arg0) {
     const rect = { style: tmp.main, top: true, bottom: true, left: true, right: true, children: null };
     const obj6 = { style: tmp.header, children: null };
     const obj7 = { onPress: onClose, variant: "overlay" };
-    obj6.children = closure_11(onClose(7531).ActionSheetCloseButton, obj7);
+    obj6.children = closure_11(onClose(6614).ActionSheetCloseButton, obj7);
     const items3 = [closure_11(View, obj6), ,];
     const obj8 = { style: tmp.body, children: null };
-    const obj9 = { source: _modDef13712, style: tmp.orbGraphic, resizeMode: "contain" };
+    const obj9 = { source: _modDef12866, style: tmp.orbGraphic, resizeMode: "contain" };
     const items4 = [closure_11(closure_6, obj9)];
     const obj10 = { children: null };
     const obj11 = { variant: "heading-lg/bold", color: "text-overlay-light", style: tmp.title, children: null };
@@ -132,16 +132,16 @@ export default function NitroOrbsDeliveredModal(arg0) {
     const intl3 = onClose(1115).intl;
     obj16.text = intl3.string(onClose(1115).t.OhOWfI);
     obj16.onPress = callback;
-    const items6 = [closure_11(onClose(5273).Button, obj16)];
+    const items6 = [closure_11(onClose(5274).Button, obj16)];
     const obj17 = { text: null, variant: "secondary-overlay", size: "lg", onPress: null };
     const intl4 = onClose(1115).intl;
     obj17.text = intl4.string(onClose(1115).t.CvXwDY);
     obj17.onPress = callback1;
-    items6[1] = closure_11(onClose(5273).Button, obj17);
+    items6[1] = closure_11(onClose(5274).Button, obj17);
     obj15.children = items6;
     items3[2] = closure_12(View, obj15);
     rect.children = items3;
-    tmp12Result = closure_12(onClose(7456).SafeAreaPaddingView, rect);
+    tmp12Result = closure_12(onClose(6539).SafeAreaPaddingView, rect);
   }
   items2[2] = tmp12Result;
   obj2.children = items2;

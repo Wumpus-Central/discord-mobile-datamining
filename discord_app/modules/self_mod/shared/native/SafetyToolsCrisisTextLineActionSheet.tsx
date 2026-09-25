@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(11712);
+const Constants = fn(10892);
 ({ CRISIS_TEXT_LINE_SMS_URI: closure_4, CRISIS_TEXT_LINE_URL: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
@@ -64,7 +64,7 @@ export default function SafetyToolsCrisisTextLineActionSheet(trackAnalyticsEvent
     LinkingDefault.openURL(React4);
     trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_SAFETY_TOOLS_CTL_SMS);
   };
-  items[1] = closure_6(trackAnalyticsEvent(5273).Button, obj4);
+  items[1] = closure_6(trackAnalyticsEvent(5274).Button, obj4);
   const obj5 = { variant: "secondary", size: "lg", text: null, grow: true, onPress: null };
   const intl4 = trackAnalyticsEvent(1115).intl;
   obj5.text = intl4.string(trackAnalyticsEvent(1115).t.ogLlvy);
@@ -72,7 +72,7 @@ export default function SafetyToolsCrisisTextLineActionSheet(trackAnalyticsEvent
     LinkingDefault.openURL(hasOwnProperty);
     trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_SAFETY_TOOLS_CTL_WEB);
   };
-  items[2] = closure_6(trackAnalyticsEvent(5273).Button, obj5);
+  items[2] = closure_6(trackAnalyticsEvent(5274).Button, obj5);
   obj2.children = items;
   obj.children = closure_7(View, obj2);
   return closure_6(SafetyToolsActionSheetWrapperDefault, obj);

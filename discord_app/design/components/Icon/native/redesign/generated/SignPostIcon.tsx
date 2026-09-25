@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/SignPostIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod14209 from "../../../../../../../_runtime/metro/14209__.js";
+import _mod13370 from "../../../../../../../_runtime/metro/13370__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const SignPostIcon = function SignPostIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod14209, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod13370, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

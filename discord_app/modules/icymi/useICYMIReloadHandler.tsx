@@ -35,7 +35,7 @@ export const useICYMIReloadHandler = function useICYMIReloadHandler(showDot) {
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              const ICYMIAnalytics = tmp2(8709).ICYMIAnalytics;
+              const ICYMIAnalytics = tmp2(7799).ICYMIAnalytics;
               let str = "NoDotShown";
               if (tmp2) {
                 str = "DotShown";
@@ -44,7 +44,7 @@ export const useICYMIReloadHandler = function useICYMIReloadHandler(showDot) {
               ICYMIAnalytics.trackFeedShown(obj5);
               v3 = 1;
               dependencyMap = 1;
-              const obj7 = { value: v3(8701).fetchDehydrated({ isReloading: true }), done: false };
+              const obj7 = { value: v3(7791).fetchDehydrated({ isReloading: true }), done: false };
               return obj7;
             }
           } else if (1 === tmp5) {
@@ -58,7 +58,7 @@ export const useICYMIReloadHandler = function useICYMIReloadHandler(showDot) {
             } else {
               v3 = 2;
               dependencyMap = 1;
-              const obj9 = { value: v3(8701).reloadICYMITab(), done: false };
+              const obj9 = { value: v3(7791).reloadICYMITab(), done: false };
               return obj9;
             }
           } else if (2 === tmp5) {
@@ -72,7 +72,7 @@ export const useICYMIReloadHandler = function useICYMIReloadHandler(showDot) {
             } else {
               v3 = 3;
               dependencyMap = 1;
-              const obj12 = { value: v3(8701).getGuildChannelScores(), done: false };
+              const obj12 = { value: v3(7791).getGuildChannelScores(), done: false };
               return obj12;
             }
           } else if (arg0 === 1) {
@@ -83,7 +83,7 @@ export const useICYMIReloadHandler = function useICYMIReloadHandler(showDot) {
             const obj13 = { value, done: true };
             return obj13;
           } else {
-            const recommendedGuilds = v3(8701).getRecommendedGuilds();
+            const recommendedGuilds = v3(7791).getRecommendedGuilds();
             dependencyMap = 3;
             return { value: "HermesInternal", done: null };
           }

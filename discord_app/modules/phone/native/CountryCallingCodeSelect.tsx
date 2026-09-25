@@ -1,6 +1,6 @@
 // discord_app/modules/phone/native/CountryCallingCodeSelect.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import fuzzysearchDefault from "../../../../_runtime/05822_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../_runtime/05824_fuzzysearch.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 

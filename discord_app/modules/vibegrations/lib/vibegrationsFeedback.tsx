@@ -8,9 +8,9 @@ import VibegrationsChatStore from "../stores/VibegrationsChatStore.tsx";
 import VibegrationsProjectStore from "../stores/VibegrationsProjectStore.tsx";
 
 require = fn;
-const turnSettled = fn(13458).turnSettled;
+const turnSettled = fn(12608).turnSettled;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const Constants = fn(11964);
+const Constants = fn(11107);
 ({
   FeedbackCategory: closure_7,
   FeedbackOptionVariant: closure_8,

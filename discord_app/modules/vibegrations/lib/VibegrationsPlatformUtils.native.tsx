@@ -611,12 +611,12 @@ let closure_21 = async function _relayPreviewControl(arg0) {
     }
   }
 };
-const FramesConstants = fn(9394);
+const FramesConstants = fn(8492);
 ({ isLaunched: closure_8, MAIN_SURFACE: closure_9, makeFrameId: c10 } = FramesConstants);
-const LocalNotificationTypes = fn(9398).LocalNotificationTypes;
-let items = [fn(8689).OAuth2Scopes.BOT, fn(8689).OAuth2Scopes.APPLICATIONS_COMMANDS];
+const LocalNotificationTypes = fn(8496).LocalNotificationTypes;
+let items = [fn(7779).OAuth2Scopes.BOT, fn(7779).OAuth2Scopes.APPLICATIONS_COMMANDS];
 let c19 = 0;
-const vibegrationsPreviewOperationSurfaces = fn(13281);
+const vibegrationsPreviewOperationSurfaces = fn(12431);
 let closure_22 = vibegrationsPreviewOperationSurfaces.createPreviewOperationSurfaces((arg0) => {
   const project = VibegrationsProjectStore.getProject(arg0);
   let prop;

@@ -65,13 +65,13 @@ function ChannelPermissionSettingsBasicView(channel) {
             closure_1 = tmp5;
             closure_128_0 = undefined;
             accessPermissions = accessPermissions.accessPermissions;
-            const result = v2(9907).isPrivateGuildChannel(accessPermissions);
-            const obj9 = v2(9907);
+            const result = v2(9005).isPrivateGuildChannel(accessPermissions);
+            const obj9 = v2(9005);
             const tmp21 = v2;
-            closure_128_0 = v2(9907).flipEveryonePermission(accessPermissions, accessPermissions, result);
+            closure_128_0 = v2(9005).flipEveryonePermission(accessPermissions, accessPermissions, result);
             currentUser = currentUser.getCurrentUser();
             let tmp7 = ChannelSettingsPermissionsStore;
-            const obj10 = v2(9907);
+            const obj10 = v2(9005);
             if (!ChannelSettingsPermissionsStore) {
               tmp7 = null == currentUser;
             }
@@ -82,7 +82,7 @@ function ChannelPermissionSettingsBasicView(channel) {
               v2 = 1;
               dependencyMap = 1;
               const obj4 = {
-                value: tmp21(9907).grantUserChannelAccess(accessPermissions, accessPermissions),
+                value: tmp21(9005).grantUserChannelAccess(accessPermissions, accessPermissions),
                 done: false,
               };
               return obj4;
@@ -112,7 +112,7 @@ function ChannelPermissionSettingsBasicView(channel) {
         const items = [closure_128_0];
         v2 = 2;
         dependencyMap = 1;
-        const obj7 = { value: tmp2(9908).savePermissionUpdates(closure_129_0.id, items), done: false };
+        const obj7 = { value: tmp2(9006).savePermissionUpdates(closure_129_0.id, items), done: false };
         return obj7;
       } catch (tmp16) {
         dependencyMap = tmp;
@@ -153,7 +153,7 @@ function ChannelPermissionSettingsBasicView(channel) {
                 c2 = 1;
                 dependencyMap = 1;
                 const obj6 = {
-                  value: tmp5(9909).checkChattableChannelThresholdMetAfterChannelPermissionDeny(
+                  value: tmp5(9007).checkChattableChannelThresholdMetAfterChannelPermissionDeny(
                     guild_id,
                     constants.VIEW_CHANNEL,
                   ),
@@ -197,7 +197,7 @@ function ChannelPermissionSettingsBasicView(channel) {
         closure_128_2 = onCancelResult;
         closure_129_2(!closure_129_1);
         const obj4 = tmp5(4982);
-        show = tmp2(5195).show;
+        show = tmp2(5196).show;
         const obj9 = {
           title: closure_128_0,
           body: closure_128_2,
@@ -220,7 +220,7 @@ function ChannelPermissionSettingsBasicView(channel) {
         obj9.onCancel = onCancel;
         show(obj9);
         dependencyMap = 3;
-        const tmp42 = tmp2(5195);
+        const tmp42 = tmp2(5196);
       } catch (tmp54) {
         dependencyMap = tmp;
         throw tmp54;
@@ -394,7 +394,7 @@ function onBack() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const SettingMode = fn(8751).SettingMode;
+const SettingMode = fn(7841).SettingMode;
 const Constants = fn(1074);
 ({
   ChannelTypes: closure_18,

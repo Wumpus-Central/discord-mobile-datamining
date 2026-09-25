@@ -19,7 +19,7 @@ function GroupDMInviteManagement(channelId) {
   [first, dependencyMap] = noop.useState([]);
   const tmp3 = _slicedToArray(noop.useState(true), 2);
   closure_3 = tmp3[1];
-  first(5290)(() => {
+  first(5291)(() => {
     closure_0 = async function _fetchInvites() {
       if (v3 === 2) {
         v3 = 3;
@@ -125,16 +125,16 @@ function GroupDMInviteManagement(channelId) {
   [][0] = first;
   const callback = noop.useCallback((code) => code.code, []);
   if (tmp3[0]) {
-    let tmp14 = jsx(channelId(7372).SceneLoadingIndicator, {});
+    let tmp14 = jsx(channelId(6455).SceneLoadingIndicator, {});
   } else if (0 === first.length) {
-    let obj2 = { lightSource: tmp4(11302), darkSource: tmp4(11303), title: null, body: null };
+    let obj2 = { lightSource: tmp4(10400), darkSource: tmp4(10401), title: null, body: null };
     const intl = channelId(1115).intl;
     obj2.title = intl.string(channelId(1115).t["+nLJkZ"]);
     const intl2 = channelId(1115).intl;
     obj2.body = intl2.string(channelId(1115).t.F53CAc);
     tmp14 = jsx(channelId(1177).EmptyState, {
-      lightSource: tmp4(11302),
-      darkSource: tmp4(11303),
+      lightSource: tmp4(10400),
+      darkSource: tmp4(10401),
       title: null,
       body: null,
     });
@@ -162,7 +162,7 @@ function GroupDMInviteManagement(channelId) {
 }
 get_ActivityIndicator = fn(17);
 ({ Platform, View: metroRequire, FlatList: closure_7 } = get_ActivityIndicator);
-const ChannelSettingsStore = fn(8984);
+const ChannelSettingsStore = fn(8078);
 const Constants = fn(1074);
 ({ ChannelSettingsSections: closure_9, Endpoints: c10 } = Constants);
 const jsx = fn(21).jsx;
@@ -188,5 +188,5 @@ export default noop.memo(function GroupDMInviteManagementScreen(channelId) {
     obj[constants.INSTANT_INVITES_MANAGEMENT] = obj2;
     return obj;
   }, items);
-  return jsx(channelId(7333).Navigator, { screens: memo, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
+  return jsx(channelId(6416).Navigator, { screens: memo, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
 });

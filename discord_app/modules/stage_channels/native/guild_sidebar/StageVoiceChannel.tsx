@@ -29,14 +29,14 @@ const createStyles = fn(4829);
 let obj = {
   voiceStates: { marginLeft: 36, marginBottom: 8 },
   container: {
-    marginVertical: fn(10464).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(9566).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
 };
 let closure_16 = createStyles.createStyles(obj);
 let obj3 = {
-  marginVertical: fn(10464).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(9566).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };
@@ -79,9 +79,9 @@ export default noop.memo((channel) => {
     arr3 = NO_VOICE_STATES;
   }
   let obj = channel(504);
-  const stageParticipantsCount = channel(5736).useStageParticipantsCount(
+  const stageParticipantsCount = channel(5738).useStageParticipantsCount(
     channel.id,
-    tmp2(5730).StageChannelParticipantNamedIndex.AUDIENCE,
+    tmp2(5732).StageChannelParticipantNamedIndex.AUDIENCE,
   );
   const sum = stageParticipantsCount + arr3.length;
   const items2 = [channel];
@@ -101,12 +101,12 @@ export default noop.memo((channel) => {
     const result = openChannelLongPressActionSheet.openChannelLongPressActionSheet(channel.id);
   }, items3);
   const tmp10 = useChannelNameDefault(channel, false);
-  const tmp2Result = channel(5736);
-  const isConnectedToVoiceChannel = channel(9727).useIsConnectedToVoiceChannel(channel);
+  const tmp2Result = channel(5738);
+  const isConnectedToVoiceChannel = channel(8825).useIsConnectedToVoiceChannel(channel);
   if (stageInstance != null) {
     const topic = stageInstance.topic;
   }
-  const tmp2Result2 = channel(9727);
+  const tmp2Result2 = channel(8825);
   const intl = tmp2(1115).intl;
   const tmp5Result = ChannelItemDefault;
   if (null != channel.userLimit) {

@@ -1,5 +1,5 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDragPreview.tsx
-import _mod4447 from "../../../../_runtime/metro/04447__.js";
+import _mod4449 from "../../../../_runtime/metro/04449__.js";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
@@ -147,9 +147,9 @@ function PreviewItem(dragRegion) {
           id: -1,
           parentId: "flex",
           name: "Array",
-          color: "channel",
-          expanded: "index",
-          children: "colors",
+          color: "diversity",
+          expanded: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004994993931151547,
+          children: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005411243414434442,
         };
         const items = [tmp2];
         element.children = items;
@@ -358,8 +358,8 @@ function AnimatedItemPreview(cleanUp) {
   obj5.children = tmp12Result;
   return jsx(cleanUp(sharedValue[9]), { style: items, children: null });
 }
-const GuildsNodeType = fn(5743).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(16708).GUILD_ITEM_INSET_LEFT;
+const GuildsNodeType = fn(5745).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(15892).GUILD_ITEM_INSET_LEFT;
 const jsx = fn(21).jsx;
 let createStyles = fn(4829);
 let closure_8 = createStyles.createStyles({
@@ -451,12 +451,12 @@ export default noop.memo(function GuildsBarDragPreview() {
             overState: null,
             overNode: null,
             dropPosition: "o",
-            gestureState: "film",
-            scrollPosition: "filmklapper",
-            dragRegion: "klapper",
-            windowSize: "klaptr\u00E6",
-            dropComplete: "fjernsyn",
-            listInsets: "tv",
+            gestureState: "function SkeletonCardTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}",
+            scrollPosition: true,
+            dragRegion: "/assets/design/components/Icon/native/redesign/generated/images",
+            windowSize: 24,
+            dropComplete: 24,
+            listInsets: null,
           };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;
@@ -476,7 +476,7 @@ export default noop.memo(function GuildsBarDragPreview() {
       }
       return null;
     }
-  }, _mod4447.shallow);
+  }, _mod4449.shallow);
   let tmp2 = null;
   if (null != tmp) {
     let obj = {};

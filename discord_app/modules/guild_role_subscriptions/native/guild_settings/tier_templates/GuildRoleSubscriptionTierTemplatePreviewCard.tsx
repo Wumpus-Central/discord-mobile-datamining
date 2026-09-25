@@ -8,7 +8,7 @@ import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/Ac
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import AppAnalyticsUtils from "../../../../app_analytics/AppAnalyticsUtils.tsx";
 import useTypeConsolidationTextTransform from "../../../../design/useTypeConsolidationTextTransform.tsx";
-import _modDef7491 from "../../../../../../_runtime/metro/07491__.js";
+import _modDef6574 from "../../../../../../_runtime/metro/06574__.js";
 import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils.tsx";
 import GuildRoleSubscriptionTierTemplateActionCreators from "../../../tier_templates/GuildRoleSubscriptionTierTemplateActionCreators.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -91,7 +91,7 @@ function ViewEntireTemplateFooter() {
   obj2.children = items;
   const items1 = [closure_1_10(timestampProducer, obj2)];
   const obj5 = { children: null };
-  const obj6 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef7491, style: null };
+  const obj6 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef6574, style: null };
   const obj7 = { transform: null };
   const items2 = [{ rotate: "180deg" }];
   obj7.transform = items2;
@@ -236,7 +236,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
     if (closure_7) {
       const obj2 = { selectedTemplate, handleCreateFromTemplate, newPricesToPick: suggestedUnusedPrices };
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(18351, dependencyMap.paths),
+        asyncRequireImpl(17582, dependencyMap.paths),
         "TierTemplatePriceReselectionCard",
         obj2,
       );
@@ -258,7 +258,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   const obj7 = {
     style: tmp.contentContainer,
     onPress() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18347, dependencyMap.paths), "TierTemplateCard", {
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17578, dependencyMap.paths), "TierTemplateCard", {
         template,
         guildId,
         handleSelectTemplateInPreview: callback1,

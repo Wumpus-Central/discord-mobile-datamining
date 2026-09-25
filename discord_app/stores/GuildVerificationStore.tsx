@@ -242,14 +242,14 @@ const prototype = GuildVerificationStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(GuildMemberStore, GuildRoleStore, GuildStore, UserStore);
 };
-prototype["getCheck"] = function getCheck(guild_id) {
-  if (null == guild_id) {
+prototype["getCheck"] = function getCheck(guildId) {
+  if (null == guildId) {
     let tmp5 = closure_12;
   } else {
-    if (!set.has(guild_id)) {
-      recomputeGuild(guild_id);
+    if (!set.has(guildId)) {
+      recomputeGuild(guildId);
     }
-    tmp5 = dependencyMap[guild_id];
+    tmp5 = dependencyMap[guildId];
     if (tmp5 == null) {
       tmp5 = closure_12;
     }

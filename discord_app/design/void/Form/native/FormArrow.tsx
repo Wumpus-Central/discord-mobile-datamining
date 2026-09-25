@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../native.tsx";
 import Text_Text from "../../../components/Text/native/Text.tsx";
-import _modDef7475 from "../../../../../_runtime/metro/07475__.js";
+import _modDef6558 from "../../../../../_runtime/metro/06558__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -28,7 +28,7 @@ export default function FormArrow(arg0) {
     const obj4 = { style: null, source: null, size: null };
     const items1 = [tmp.icon, style];
     obj4.style = items1;
-    obj4.source = _modDef7475;
+    obj4.source = _modDef6558;
     obj4.size = native.Icon.Sizes.MEDIUM;
     items[1] = React4(native.Icon, obj4);
     obj2.children = items;
@@ -37,7 +37,7 @@ export default function FormArrow(arg0) {
     const obj = { style: null, source: null, size: null };
     const items2 = [tmp.icon, style];
     obj.style = items2;
-    obj.source = _modDef7475;
+    obj.source = _modDef6558;
     obj.size = native.Icon.Sizes.MEDIUM;
     tmp6 = React4(native.Icon, obj);
   }

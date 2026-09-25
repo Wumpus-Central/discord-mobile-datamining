@@ -8,7 +8,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const useScreenRecordingStore = fn(16349).useScreenRecordingStore;
+const useScreenRecordingStore = fn(15529).useScreenRecordingStore;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4829);
@@ -154,5 +154,5 @@ export default function ScreenRecordingActionSheet() {
   if (tmp3) {
     children = tmp11;
   }
-  return closure_5(tmp9(7530).ActionSheet, { children });
+  return closure_5(tmp9(6613).ActionSheet, { children });
 }

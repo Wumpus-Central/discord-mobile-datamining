@@ -73,8 +73,8 @@ function JoinStageOverlay(channel) {
     }
     return { opacity: spring.withSpring(num, closure_11) };
   };
-  let obj = showOverlay(4561);
-  fn.__closure = { withSpring: showOverlay(5272).withSpring, showOverlay, viewAnimationConfig };
+  let obj = showOverlay(4563);
+  fn.__closure = { withSpring: showOverlay(5273).withSpring, showOverlay, viewAnimationConfig };
   fn.__workletHash = 1929951426580;
   fn.__initData = __initData2;
   const animatedStyle = obj.useAnimatedStyle(fn);
@@ -88,7 +88,7 @@ function JoinStageOverlay(channel) {
   }, []);
   const obj3 = { style: null, children: null };
   const items = [closure_5.absoluteFill, ,];
-  const obj2 = { withSpring: showOverlay(5272).withSpring, showOverlay, viewAnimationConfig };
+  const obj2 = { withSpring: showOverlay(5273).withSpring, showOverlay, viewAnimationConfig };
   items[1] = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_800 };
   items[2] = animatedStyle;
   obj3.style = items;

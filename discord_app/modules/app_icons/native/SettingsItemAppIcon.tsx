@@ -7,7 +7,7 @@ import AppIconDefault from "AppIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const getIconById = fn(9518).getIconById;
+const getIconById = fn(8616).getIconById;
 const jsx = fn(21).jsx;
 const createStyles = fn(4829);
 let obj2 = { icon: { borderRadius: nativeDefault.radii.round } };

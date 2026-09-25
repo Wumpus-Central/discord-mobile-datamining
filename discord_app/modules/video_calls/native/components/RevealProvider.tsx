@@ -46,7 +46,7 @@ function useRevealProviderValue(arg0, channel) {
   const items2 = [tmp, tmp10];
   return noop.useMemo(() => ({ reveal: stateFromStores1, prefersDeferringSystemGestures }), items2);
 }
-const ChannelCallStore = fn(9723);
+const ChannelCallStore = fn(8821);
 ({
   useChannelCallStore: metroRequire,
   focusTimeout: closure_7,

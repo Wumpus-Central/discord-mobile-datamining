@@ -1,5 +1,6 @@
 // discord_app/modules/collectibles/native/FractionalNitroCoinIllustration.tsx
-import native from "../../../design/assets/native.tsx";
+import NitroCoinSpotIllustration from "../../../design/components/mana-assets/native/generated/NitroCoinSpotIllustration.native.tsx";
+import NitroCoinStackSpotIllustration2 from "../../../design/components/mana-assets/native/generated/NitroCoinStackSpotIllustration.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,9 +17,9 @@ export const FractionalNitroCoinIllustration = function FractionalNitroCoinIllus
     resizeMode = "contain";
   }
   if (skuId === EXTERNAL_PRODUCT_SKU_IDS.FRACTIONAL_PREMIUM_1_DAY) {
-    let NitroCoinStackSpotIllustration = native.NitroCoinSpotIllustration;
+    let NitroCoinStackSpotIllustration = NitroCoinSpotIllustration.NitroCoinSpotIllustration;
   } else {
-    NitroCoinStackSpotIllustration = native.NitroCoinStackSpotIllustration;
+    NitroCoinStackSpotIllustration = NitroCoinStackSpotIllustration2.NitroCoinStackSpotIllustration;
   }
   return <NitroCoinStackSpotIllustration width={width} height={height} resizeMode={resizeMode} />;
 };

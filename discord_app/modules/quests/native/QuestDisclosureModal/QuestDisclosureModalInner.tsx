@@ -66,22 +66,22 @@ export default function QuestDisclosureModalInner(isTargetedDisclosure) {
   const setting = DropsOptedOut.useSetting();
   let obj = { icon: null, text: null };
   if (setting) {
-    obj.icon = closure_6(tmp2(9481).ServerIcon, { size: "xs" });
+    obj.icon = closure_6(tmp2(8579).ServerIcon, { size: "xs" });
     const intl4 = tmp2(1115).intl;
     obj.text = intl4.string(tmp2(1115).t["2bL0wT"]);
     let items = [obj];
     let tmp6 = closure_6;
     items1 = items;
   } else {
-    obj.icon = closure_6(tmp2(9248).GlobeEarthIcon, { size: "xs" });
+    obj.icon = closure_6(tmp2(8346).GlobeEarthIcon, { size: "xs" });
     const intl = tmp2(1115).intl;
     obj.text = intl.string(tmp2(1115).t.xQSdPv);
     items1 = [obj, ,];
-    const obj2 = { icon: closure_6(tmp2(12167).UserIcon, { size: "xs" }), text: null };
+    const obj2 = { icon: closure_6(tmp2(11289).UserIcon, { size: "xs" }), text: null };
     const intl2 = tmp2(1115).intl;
     obj2.text = intl2.string(tmp2(1115).t.mYt7hQ);
     items1[1] = obj2;
-    const obj3 = { icon: closure_6(tmp2(9429).GameControllerIcon, { size: "xs" }), text: null };
+    const obj3 = { icon: closure_6(tmp2(8527).GameControllerIcon, { size: "xs" }), text: null };
     const intl3 = tmp2(1115).intl;
     obj3.text = intl3.string(tmp2(1115).t.XAsWxQ);
     items1[2] = obj3;
@@ -89,13 +89,19 @@ export default function QuestDisclosureModalInner(isTargetedDisclosure) {
   }
   const obj4 = { style: tmp.container, contentContainerStyle: tmp.contentContainer, children: null };
   const items2 = [
-    tmp6(closure_4, { style: tmp.illustration, children: tmp6(require("native").WumpusCouchSpotIllustration, {}) }),
+    tmp6(closure_4, {
+      style: tmp.illustration,
+      children: tmp6(require("WumpusCouchSpotIllustration").WumpusCouchSpotIllustration, {}),
+    }),
     ,
     ,
     ,
   ];
   const obj6 = { variant: "text-md/normal", color: "mobile-text-heading-primary", children: null };
-  const obj5 = { style: tmp.illustration, children: tmp6(require("native").WumpusCouchSpotIllustration, {}) };
+  const obj5 = {
+    style: tmp.illustration,
+    children: tmp6(require("WumpusCouchSpotIllustration").WumpusCouchSpotIllustration, {}),
+  };
   obj6.children = require("QuestCopyUtils").getDisclosureText({
     adCreativeType,
     gamePublisher,
@@ -127,7 +133,7 @@ export default function QuestDisclosureModalInner(isTargetedDisclosure) {
         return React5(React4, obj, index);
       }),
     };
-    isTargetedDisclosure = tmp6(tmp2(5912).Card, obj7);
+    isTargetedDisclosure = tmp6(tmp2(5914).Card, obj7);
   }
   items2[2] = isTargetedDisclosure;
   const obj8 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };

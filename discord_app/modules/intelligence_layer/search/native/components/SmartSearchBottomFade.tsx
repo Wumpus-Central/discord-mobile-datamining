@@ -1,6 +1,6 @@
 // discord_app/modules/intelligence_layer/search/native/components/SmartSearchBottomFade.tsx
 import _modDef672 from "../../../../../../_runtime/metro/00672__.js";
-import LinearGradientDefault from "../../../../../../_runtime/05285_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05286_LinearGradient.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting(
 export default noop.memo((height) => {
   let searchHostSurfaceColor;
   const tmp = closure_7(height.height);
-  searchHostSurfaceColor = searchHostSurfaceColor(17265).useSearchHostSurfaceColor();
+  searchHostSurfaceColor = searchHostSurfaceColor(16480).useSearchHostSurfaceColor();
   let items = [searchHostSurfaceColor];
   const memo = noop.useMemo(() => {
     const obj = _modDef672(searchHostSurfaceColor);

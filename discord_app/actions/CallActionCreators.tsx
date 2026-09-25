@@ -14,12 +14,7 @@ const require = globalThis.__r;
 
 require = fn;
 const Constants = fn(1074);
-({
-  Endpoints: metroRequire,
-  AnalyticEvents: closure_7,
-  ChannelTypesSets: closure_8,
-  ChannelTypes: closure_9,
-} = Constants);
+({ Endpoints: metroRequire, AnalyticEvents: closure_7, ChannelTypesSets: closure_8 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/CallActionCreators.tsx");
 
@@ -96,17 +91,12 @@ export default {
           oldFormErrors: true,
           rejectWithError: true,
         };
-        const obj3 = { recipients: items, analytics_location: gdm_invite };
-        request.body = obj3;
+        const obj2 = { recipients: items, analytics_location: gdm_invite };
+        request.body = obj2;
         HTTP.post(request);
-        if (tmp14) {
-          const obj4 = { type: "GUILD_LOCAL_RING_START", ringing: items, guildId: channel.guild_id };
-          DispatcherDefault.dispatch(obj4);
-        }
-        tmp14 = channel.type === constants3.GUILD_VOICE && null != items;
-      } else if (tmp7) {
-        const obj5 = { type: "CALL_ENQUEUE_RING", channelId, recipients: items };
-        DispatcherDefault.dispatch(obj5);
+      } else if (tmp12) {
+        const obj3 = { type: "CALL_ENQUEUE_RING", channelId, recipients: items };
+        DispatcherDefault.dispatch(obj3);
       }
     }
   },

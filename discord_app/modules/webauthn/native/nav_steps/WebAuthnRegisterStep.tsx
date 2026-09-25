@@ -36,7 +36,7 @@ function AndroidPasskeyRadioGroup(onChange) {
   return React5(native.RadioGroup, obj4);
 }
 const View = fn(17).View;
-const WebAuthnScreens = fn(15029).WebAuthnScreens;
+const WebAuthnScreens = fn(14191).WebAuthnScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4829);
@@ -99,10 +99,10 @@ export default function WebAuthnRegisterStep() {
   const items2 = [onRegisterSuccess, tmp11, tmp8];
   closure_6 = obj2.useMemo(() => ({ onRegisterSuccess, setError, setRegistering }), items2);
   const obj3 = navigation(1364);
-  const announceError = navigation(15046).useAnnounceError(tmp10);
+  const announceError = navigation(14210).useAnnounceError(tmp10);
   const rect = { bottom: true, left: true, right: true, style: tmp4.flexContainer, children: null };
   obj4 = { style: tmp4.centerFlex, children: null };
-  const items3 = [closure_7(navigation(15047).KeyImage, {}), ,];
+  const items3 = [closure_7(navigation(14211).KeyImage, {}), ,];
   obj5 = { style: tmp4.margin, variant: "text-md/normal", children: null };
   const intl = tmp(1115).intl;
   const string = intl.string;
@@ -137,7 +137,7 @@ export default function WebAuthnRegisterStep() {
     string2Result = string2(t2.oibaQa);
   }
   const obj8 = {
-    children: closure_7(navigation(5273).Button, {
+    children: closure_7(navigation(5274).Button, {
       text: string2Result,
       disabled: tmp7,
       loading: tmp7,
@@ -147,7 +147,7 @@ export default function WebAuthnRegisterStep() {
       size: "lg",
     }),
   };
-  items4[2] = closure_7(navigation(5738).ButtonGroup, obj8);
+  items4[2] = closure_7(navigation(5740).ButtonGroup, obj8);
   rect.children = items4;
-  return closure_8(navigation(7456).SafeAreaPaddingView, rect);
+  return closure_8(navigation(6539).SafeAreaPaddingView, rect);
 }

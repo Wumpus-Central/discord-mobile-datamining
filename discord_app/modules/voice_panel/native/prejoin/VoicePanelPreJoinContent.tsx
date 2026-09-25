@@ -178,12 +178,12 @@ function ActivityInfo(activity) {
                   analyticsLocations: num3,
                 };
                 v3 = num3;
-                const obj7 = { value: v3(9718).maybeJoinEmbeddedActivity(obj6), done: false };
+                const obj7 = { value: v3(8816).maybeJoinEmbeddedActivity(obj6), done: false };
                 return obj7;
               }
             } else {
-              const voiceChannel = analyticsLocations(5716).selectVoiceChannel(channelId);
-              const obj2 = analyticsLocations(5716);
+              const voiceChannel = analyticsLocations(5718).selectVoiceChannel(channelId);
+              const obj2 = analyticsLocations(5718);
             }
           } else {
             num3 = 1;
@@ -504,18 +504,18 @@ function renderItem(arg0, arg1, transitionState, transitionCleanUp) {
   return closure_1_25(PreJoinTransitioner, { transitionState, transitionCleanUp }, arg0);
 }
 const StyleSheet = fn(17).StyleSheet;
-const MODE_CHANGE_PHYSICS = fn(12615).MODE_CHANGE_PHYSICS;
-const EDGE_GUTTER = fn(12618).EDGE_GUTTER;
+const MODE_CHANGE_PHYSICS = fn(11741).MODE_CHANGE_PHYSICS;
+const EDGE_GUTTER = fn(11744).EDGE_GUTTER;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_20, AnalyticsSections: closure_21, Permissions: closure_22 } = Constants);
-const constants4 = fn(14104).VoiceChannelWarningSurfaces;
+const constants4 = fn(13265).VoiceChannelWarningSurfaces;
 const Features = fn(4854).Features;
 const jsxProd = fn(21);
 ({ jsx: closure_25, jsxs: closure_26, Fragment: closure_27 } = jsxProd);
 const createStyles = fn(4829);
 let obj = {
   contentWrapper: {
-    paddingTop: EDGE_GUTTER + fn(12619).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER,
+    paddingTop: EDGE_GUTTER + fn(11745).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER,
     gap: 24,
     paddingBottom: 16,
   },
@@ -531,7 +531,7 @@ let obj = {
   consolePreJoinPadding: null,
 };
 let obj3 = {
-  paddingTop: EDGE_GUTTER + fn(12619).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER,
+  paddingTop: EDGE_GUTTER + fn(11745).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER,
   gap: 24,
   paddingBottom: 16,
 };
@@ -800,10 +800,10 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/prejoin/VoicePanelPreJoinContent.tsx");
 
 export default noop.memo(function VoicePanelPreJoinWrapper() {
-  const context = noop.useContext(guildId(12614));
+  const context = noop.useContext(guildId(11740));
   const channelId = context.channelId;
   guildId = context.guildId;
-  const tmp2 = guildId(17604)(channelId);
+  const tmp2 = guildId(16828)(channelId);
   dependencyMap = tmp2;
   let items = [
     SortedVoiceStateStore,
@@ -853,7 +853,7 @@ export default noop.memo(function VoicePanelPreJoinWrapper() {
       }
     },
     items1,
-    channelId(17731).areVoicePanelPreJoinContentPropsEqual,
+    channelId(16955).areVoicePanelPreJoinContentPropsEqual,
   );
-  return closure_25(channelId(4535).TransitionItem, { item: stateFromStores, renderItem });
+  return closure_25(channelId(4537).TransitionItem, { item: stateFromStores, renderItem });
 });

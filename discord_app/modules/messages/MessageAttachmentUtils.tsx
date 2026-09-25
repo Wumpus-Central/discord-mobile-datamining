@@ -150,7 +150,7 @@ export const useShouldObscure = function useShouldObscure(channel) {
   const RenderSpoilers = channel(2020).RenderSpoilers;
   const setting = RenderSpoilers.useSetting();
   const obj = channel(563);
-  const enabledHarmTypesBitmaskForChannelType = channel(7622).getEnabledHarmTypesBitmaskForChannelType(channel(7627).ContentHarmTypeChannel.GUILD);
+  const enabledHarmTypesBitmaskForChannelType = channel(6705).getEnabledHarmTypesBitmaskForChannelType(channel(6710).ContentHarmTypeChannel.GUILD);
   return getForumPostShouldObscure(channel.media, !computeGlobalSpoilerDisplayDefault(setting, stateFromStores), enabledHarmTypesBitmaskForChannelType);
 };
 export const getObscuredAlt = function getObscuredAlt(arg0) {

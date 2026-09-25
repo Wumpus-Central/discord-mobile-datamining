@@ -56,9 +56,9 @@ export const FloatingActionButton = function FloatingActionButton(positionRight)
       return rect;
     }
   }
-  let obj = positionBottom(4561);
+  let obj = positionBottom(4563);
   F.__closure = {
-    withSpring: positionBottom(5272).withSpring,
+    withSpring: positionBottom(5273).withSpring,
     positionBottom,
     DEFAULT_POSITION_OFFSET: 16,
     SPRING_CONFIG,
@@ -80,6 +80,6 @@ export const FloatingActionButton = function FloatingActionButton(positionRight)
   }
   obj6.icon = cloneElementResult;
   ({ button: obj4.style, iconButtonPill: obj4.pillStyle } = tmp2);
-  obj3.children = jsx(positionBottom(8270).BaseIconButton, {});
-  return jsx(positionRight(4561).View, { style: animatedStyle, children: null });
+  obj3.children = jsx(positionBottom(7359).BaseIconButton, {});
+  return jsx(positionRight(4563).View, { style: animatedStyle, children: null });
 };

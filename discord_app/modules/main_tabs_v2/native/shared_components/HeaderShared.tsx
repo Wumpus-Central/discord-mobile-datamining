@@ -5,7 +5,7 @@ import native from "../../../../design/void/native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import _mod5936 from "../../../../../_runtime/metro/05936__.js";
+import _mod5938 from "../../../../../_runtime/metro/05938__.js";
 import PressableNavigatorBackIcon from "navigator/PressableNavigatorBackIcon.tsx";
 import PressableNavigatorModalIconDefault from "navigator/PressableNavigatorModalIcon.tsx";
 import ChannelActionsDefault from "../channel/ChannelActions.tsx";
@@ -141,7 +141,7 @@ function HeaderChannelActions(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Platform } = get_ActivityIndicator);
-const MIN_HEADER_HEIGHT = fn(8195).MIN_HEADER_HEIGHT;
+const MIN_HEADER_HEIGHT = fn(7284).MIN_HEADER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4829);

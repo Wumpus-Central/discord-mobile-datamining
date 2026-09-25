@@ -6,13 +6,21 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsTemplateWizard.tsx");
 
-export const vibegrationsTemplateWizardSteps = function vibegrationsTemplateWizardSteps(result2) {
-  const items = ["about", "server"];
-  HermesBuiltin.arraySpread(
-    Array.from({ length: Math.max(1, result2.length) }, (arg0, index) => ({ kind: "question", index })),
-    2,
-  );
-  return items;
+export const vibegrationsWizardNeedsServerStep = function vibegrationsWizardNeedsServerStep(guildId, stateFromStores) {
+  closure_0 = guildId;
+  return !stateFromStores.some((id) => id.id === closure_0);
+};
+export const vibegrationsTemplateWizardSteps = function vibegrationsTemplateWizardSteps(result2, arg1) {
+  const arr = Array.from({ length: Math.max(1, result2.length) }, (arg0, index) => ({ kind: "question", index }));
+  if (arg1) {
+    const items = ["about", "server"];
+    HermesBuiltin.arraySpread(arr, 2);
+    let items1 = items;
+  } else {
+    items1 = ["about"];
+    HermesBuiltin.arraySpread(arr, 1);
+  }
+  return items1;
 };
 export const canLeaveVibegrationsWizardQuestion = function canLeaveVibegrationsWizardQuestion(result2, arg1) {
   let tmp = null != result2;

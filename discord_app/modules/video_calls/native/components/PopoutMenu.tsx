@@ -5,7 +5,7 @@ import native from "../../../../design/void/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import Patterns from "../../../../../_runtime/04799_Patterns.js";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06985_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06068_LegacyBaseButton.js";
 import FormRowDefault from "../../../../design/void/Form/native/FormRow.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";

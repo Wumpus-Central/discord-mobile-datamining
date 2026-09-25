@@ -4,7 +4,7 @@ import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import WarningIcon from "../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
-import _modDef10311 from "../../../../_runtime/metro/10311__.js";
+import _modDef9408 from "../../../../_runtime/metro/09408__.js";
 import NitroUpsellButtonDefault from "../../premium/components/native/NitroUpsellButton.tsx";
 import get_ActivityIndicator from "../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -40,7 +40,7 @@ export default function NitroLimitUpsellBar(isAtLimit) {
     let tmp4Result = hasOwnProperty(WarningIcon.WarningIcon, obj2);
     let tmp9 = hasOwnProperty;
   } else {
-    const obj3 = { source: _modDef10311, style: tmp.icon };
+    const obj3 = { source: _modDef9408, style: tmp.icon };
     tmp4Result = hasOwnProperty(React3, obj3);
     tmp9 = hasOwnProperty;
   }

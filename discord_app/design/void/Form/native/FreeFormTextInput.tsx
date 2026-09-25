@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../native.tsx";
 import Pressables from "../../Pressables/native/Pressables.tsx";
-import _modDef7271 from "../../../../../_runtime/metro/07271__.js";
+import _modDef6354 from "../../../../../_runtime/metro/06354__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -23,7 +23,7 @@ function ClearButton(onPress) {
   obj.hitSlop = { top: 8, bottom: 8, right: 8 };
   const tmp = closure_9();
   obj.children = React5(native.Icon, {
-    source: _modDef7271,
+    source: _modDef6354,
     style: closure_9().closeIcon,
     size: native.Icon.Sizes.MEDIUM,
   });

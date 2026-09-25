@@ -34,7 +34,7 @@ const createStyles = fn(4829);
 let obj2 = {
   upsellSection: { position: "relative" },
   background: { position: "absolute", width: "100%" },
-  scroller: { flex: 1, backgroundColor: fn(5746).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 },
+  scroller: { flex: 1, backgroundColor: fn(5748).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 },
   subscriptionHeader: { paddingHorizontal: 16, paddingBottom: 32 },
   blurb: { lineHeight: 18 },
   blurbNotLast: { marginBottom: 8 },
@@ -152,7 +152,7 @@ prototype["render"] = function render() {
   obj3.children = items;
   return __initData(hasOwnProperty, obj3);
 };
-UserSettingsPremiumGuildSubscriptions.contextType = fn(4535).ThemeContext;
+UserSettingsPremiumGuildSubscriptions.contextType = fn(4537).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/user_settings/premium/native/UserSettingsPremiumGuildSubscriptions.tsx",
@@ -176,12 +176,12 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
     flag = true;
   }
   let obj = require("useSubscriptionPlansLoaded");
-  ({ fractionalState: c2, endsAt } = flag(7723)({ forceFetch: true }));
-  const tmp3 = flag(7723)({ forceFetch: true });
+  ({ fractionalState: c2, endsAt } = flag(6808)({ forceFetch: true }));
+  const tmp3 = flag(6808)({ forceFetch: true });
   isInReverseTrial = require("ReverseTrialUtils").useIsInReverseTrial();
   const tmpResult = require("ReverseTrialUtils");
-  fpDurationText = flag(13828)(endsAt, tmp(13828).CountDownMessageTypes.LONG_TIME_LEFT);
-  const tmp4 = flag(13828);
+  fpDurationText = flag(12985)(endsAt, tmp(12985).CountDownMessageTypes.LONG_TIME_LEFT);
+  const tmp4 = flag(12985);
   const items = [GuildBoostSlotStore, BillingInfoStore, SubscriptionPlanStore, UserStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     const obj = {

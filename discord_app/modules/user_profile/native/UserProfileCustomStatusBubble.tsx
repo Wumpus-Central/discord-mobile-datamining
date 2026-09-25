@@ -8,7 +8,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
-import inlineStyles from "../../../../_runtime/08807_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/07901_inlineStyles.js";
 import CustomStatusUtils from "../../custom_status/native/CustomStatusUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -204,7 +204,7 @@ let closure_14 = {
   statusBubblePaddingVertical: 7,
 };
 let closure_15 = {
-  [fn(7541).UserProfileThemeTypes.PREVIEW]: {
+  [fn(6624).UserProfileThemeTypes.PREVIEW]: {
     textVariant: "text-sm/normal",
     emojiOnlyEmojiSize: 26,
     textMinWidth: 53,

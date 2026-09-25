@@ -206,8 +206,8 @@ export default function UserProfileRolesCard(userId) {
     obj2.style = userId.style;
     const obj3 = { guildId, guildMemberRoleIds: roles };
     obj2.children = closure_9(RolesList, obj3);
-    tmp4 = closure_9(guildId(7540), obj2);
-    const tmp7 = guildId(7540);
+    tmp4 = closure_9(guildId(6623), obj2);
+    const tmp7 = guildId(6623);
   }
   return tmp4;
 }

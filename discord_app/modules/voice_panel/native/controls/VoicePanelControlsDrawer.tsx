@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelControlsDrawer.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import Suspender from "../../../../../_runtime/05226_Suspender.js";
+import Suspender from "../../../../../_runtime/05227_Suspender.js";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import useRefValueDefault from "../../../../hooks/useRefValue.tsx";
 import cheapWorkletShallowEqual from "../../../reanimated/native/cheapWorkletShallowEqual.tsx";
@@ -23,7 +23,7 @@ function renderChat(shown) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VoicePanelConstants = fn(12615);
+const VoicePanelConstants = fn(11741);
 ({ MODE_CHANGE_PHYSICS: closure_7, VoicePanelModes: closure_8 } = VoicePanelConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);

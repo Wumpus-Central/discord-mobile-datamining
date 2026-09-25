@@ -58,7 +58,7 @@ export default function useExternalPipParticipant() {
     if (ref.current !== id2) {
       const obj2 = {
         focusedParticipantStreamId: "Array",
-        focusedParticipantUserId: "paddingHorizontal",
+        focusedParticipantUserId: "ao",
         focusedParticipantType: ref2.current,
       };
       let obj = obj2;
@@ -244,7 +244,11 @@ export default function useExternalPipParticipant() {
           return obj;
         }
       }
-      return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "padding" };
+      return {
+        selectedParticipantSpeaking: false,
+        selectedParticipantUserId: "Boolean",
+        selectedStreamId: "paddingHorizontal",
+      };
     },
     items4,
   );

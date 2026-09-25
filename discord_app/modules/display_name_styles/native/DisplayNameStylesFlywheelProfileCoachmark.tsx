@@ -1,5 +1,5 @@
 // discord_app/modules/display_name_styles/native/DisplayNameStylesFlywheelProfileCoachmark.tsx
-import native from "../../../design/assets/native.tsx";
+import DisplayNameLockeAbstractUI from "../../../design/components/mana-assets/native/generated/DisplayNameLockeAbstractUI.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -7,7 +7,7 @@ require = fn;
 function CoachmarkImage() {
   return (
     <View style={closure_8().coachmarkImageContainer}>
-      {jsx(native.DisplayNameLockeAbstractUI, { width: 160, height: 68, resizeMode: "contain" })}
+      {jsx(DisplayNameLockeAbstractUI.DisplayNameLockeAbstractUI, { width: 160, height: 68, resizeMode: "contain" })}
     </View>
   );
 }
@@ -33,7 +33,7 @@ export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
   const stateFromStores = visible(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = visible(504);
   const tmp4 = markAsDismissed;
-  const result = markAsDismissed(4483).canUsePremiumProfileCustomization(stateFromStores);
+  const result = markAsDismissed(4485).canUsePremiumProfileCustomization(stateFromStores);
   const intl = visible(1115).intl;
   const string = intl.string;
   const tmp6 = markAsDismissed(2876);
@@ -70,7 +70,7 @@ export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
     }),
     items2,
   );
-  const obj2 = markAsDismissed(4483);
-  const coachmark = visible(11480).useCoachmark(visible.targetRef, memo);
+  const obj2 = markAsDismissed(4485);
+  const coachmark = visible(10578).useCoachmark(visible.targetRef, memo);
   return null;
 }

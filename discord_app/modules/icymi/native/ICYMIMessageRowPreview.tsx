@@ -48,7 +48,7 @@ function ICYMIMessageRowPreview(pointerEvents) {
     });
     return obj;
   }, items);
-  return setting2(messageOptions(9010), {
+  return setting2(messageOptions(8104), {
     pointerEvents: str,
     horizontalOffset: 0,
     modifyRow(arg0) {
@@ -202,11 +202,11 @@ export const MessageRowPreview = noop.memo((message) => {
     obj.pointerEvents = merged.pointerEvents;
     return obj;
   }, items);
-  const tmp3 = merged(7632)(message);
+  const tmp3 = merged(6715)(message);
   let obj = {};
   const merged1 = Object.assign(memo);
   const obj2 = {};
-  const merged2 = Object.assign(message(8282).DEFAULT_OPTIONS);
+  const merged2 = Object.assign(message(7371).DEFAULT_OPTIONS);
   obj2.ignoreMentioned = true;
   obj2.renderReplies = false;
   obj2.renderThreadEmbeds = false;

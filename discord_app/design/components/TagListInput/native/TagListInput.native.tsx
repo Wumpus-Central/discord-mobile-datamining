@@ -6,8 +6,8 @@ import ReanimatedRexportDefault from "../../../../modules/reanimated/ReanimatedR
 import Text_Text from "../../Text/native/Text.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../animation/reanimated/spring/springPresets.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05285_LinearGradient.js";
-import _modDef5969 from "../../../../../_runtime/metro/05969__.js";
+import LinearGradientDefault from "../../../../../_runtime/05286_LinearGradient.js";
+import _modDef5971 from "../../../../../_runtime/metro/05971__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -392,7 +392,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
       obj2.children = items2;
       obj.maskElement = React7(hasOwnProperty, obj2);
       obj.children = children;
-      tmp = React6(_modDef5969, obj);
+      tmp = React6(_modDef5971, obj);
     }
     return tmp;
   }, items5);

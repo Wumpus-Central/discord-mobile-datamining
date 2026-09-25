@@ -106,6 +106,6 @@ export const ShopSkipCategoriesFilter = function ShopSkipCategoriesFilter() {
   obj4.children = items3;
   items1[1] = closure_6(closure_2, obj4);
   obj7.children = items1;
-  obj2.children = closure_6(stateFromStores(5271).Stack, obj7);
+  obj2.children = closure_6(stateFromStores(5272).Stack, obj7);
   return closure_5(closure_2, obj2);
 };

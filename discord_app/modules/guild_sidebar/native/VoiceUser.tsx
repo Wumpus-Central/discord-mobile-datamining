@@ -1,7 +1,6 @@
 // discord_app/modules/guild_sidebar/native/VoiceUser.tsx
 import noop from "../../../../_runtime/metro/00019__.js";
 import EmbeddedActivitiesStore from "../../activities/EmbeddedActivitiesStore.tsx";
-import ChannelRTCStore from "../../calls/ChannelRTCStore.tsx";
 import ApplicationStreamingStore from "../../../stores/ApplicationStreamingStore.tsx";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import MediaEngineStore from "../../../stores/MediaEngineStore.tsx";
@@ -22,7 +21,7 @@ export default function VoiceUserConnected(channel) {
   const tmp = AuthenticationStore.getId() === user.id;
   closure_3 = tmp;
   const items = [MediaEngineStore];
-  const stateFromStoresObject = channel(sessionId[9]).useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = channel(sessionId[8]).useStateFromStoresObject(items, () => {
     if (closure_3) {
       const obj2 = { localMute: false, localDeaf: false, localVideo: MediaEngineStore.isVideoEnabled() };
       let obj = obj2;
@@ -32,14 +31,15 @@ export default function VoiceUserConnected(channel) {
     return obj;
   });
   ({ localMute, localVideo } = stateFromStoresObject);
-  let obj2 = channel(sessionId[9]);
+  let obj2 = channel(sessionId[8]);
+  let tmp2 = channel;
   const items1 = [ApplicationStreamingStore];
-  const stateFromStores = channel(sessionId[9]).useStateFromStores(items1, () =>
+  const stateFromStores = channel(sessionId[8]).useStateFromStores(items1, () =>
     ApplicationStreamingStore.getStreamForUser(user.id, channel.getGuildId()),
   );
-  const obj3 = channel(sessionId[9]);
+  const obj3 = channel(sessionId[8]);
   const items2 = [SessionsStore];
-  const stateFromStores1 = channel(sessionId[9]).useStateFromStores(items2, () => {
+  const stateFromStores1 = channel(sessionId[8]).useStateFromStores(items2, () => {
     let tmp2;
     if (null != sessionId) {
       const sessionById = SessionsStore.getSessionById(tmp);
@@ -51,11 +51,11 @@ export default function VoiceUserConnected(channel) {
     }
     return tmp2;
   });
-  const obj4 = channel(sessionId[9]);
+  const obj4 = channel(sessionId[8]);
   const items3 = [VoiceStateStore];
   const items4 = [channel.id, user.id];
   let tmp8 = null != sessionId;
-  const stateFromStores2 = channel(sessionId[9]).useStateFromStores(
+  const stateFromStores2 = channel(sessionId[8]).useStateFromStores(
     items3,
     () => VoiceStateStore.getVoicePlatformForChannel(channel.id, user.id),
     items4,
@@ -66,10 +66,10 @@ export default function VoiceUserConnected(channel) {
   if (tmp8) {
     tmp8 = sessionId !== AuthenticationStore.getSessionId();
   }
-  const obj5 = channel(sessionId[9]);
+  const obj5 = channel(sessionId[8]);
   const items5 = [closure_3];
   const items6 = [user.id, channel.id];
-  const stateFromStores3 = channel(sessionId[9]).useStateFromStores(
+  const stateFromStores3 = tmp2(sessionId[8]).useStateFromStores(
     items5,
     () => {
       const embeddedActivitiesForChannel = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(channel.id);
@@ -80,12 +80,6 @@ export default function VoiceUserConnected(channel) {
     },
     items6,
   );
-  const tmp2Result = channel(sessionId[9]);
-  const items7 = [ChannelRTCStore];
-  const stateFromStores4 = channel(sessionId[9]).useStateFromStores(items7, () => {
-    const guildRingingUsers = ChannelRTCStore.getGuildRingingUsers(channel.id);
-    return guildRingingUsers.has(user.id);
-  });
   const obj6 = {
     guildId: channel.guild_id,
     channelId: channel.id,
@@ -104,9 +98,8 @@ export default function VoiceUserConnected(channel) {
     isInEmbeddedActivity: null,
     isGuest: null,
     voicePlatform: null,
-    ringing: null,
   };
-  const tmp2Result2 = channel(sessionId[9]);
+  const tmp2Result = tmp2(sessionId[8]);
   if (!mute) {
     mute = suppress;
   }
@@ -129,8 +122,7 @@ export default function VoiceUserConnected(channel) {
   obj6.isInEmbeddedActivity = null != stateFromStores3;
   obj6.isGuest = isGuest;
   obj6.voicePlatform = stateFromStores2;
-  obj6.ringing = stateFromStores4;
-  return jsx(user(sessionId[10]), {
+  return jsx(user(sessionId[9]), {
     guildId: channel.guild_id,
     channelId: channel.id,
     member,
@@ -148,6 +140,5 @@ export default function VoiceUserConnected(channel) {
     isInEmbeddedActivity: null,
     isGuest: null,
     voicePlatform: null,
-    ringing: null,
   });
 }

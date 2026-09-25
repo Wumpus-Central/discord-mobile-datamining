@@ -46,7 +46,7 @@ function BackwardsCompatibleAppIconRows(arg0) {
       obj.onLongPress = onLongPress;
       return createElement(AppIconRowDefault, {});
     });
-    obj.children = closure_8(merged(5992).TableRowGroup, obj2);
+    obj.children = closure_8(merged(5994).TableRowGroup, obj2);
     return closure_8(View, obj);
   }
 }

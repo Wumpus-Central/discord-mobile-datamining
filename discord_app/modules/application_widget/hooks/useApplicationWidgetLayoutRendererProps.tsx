@@ -11,7 +11,7 @@ import LocaleStore from "../../user_settings/LocaleStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const FetchState = fn(9381).FetchState;
+const FetchState = fn(8479).FetchState;
 const localizedStrings = [];
 const size = fn(2);
 const result = size.fileFinishedImporting(

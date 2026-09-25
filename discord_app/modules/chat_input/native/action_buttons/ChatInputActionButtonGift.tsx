@@ -11,7 +11,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ChatInputActionType = fn(12304).ChatInputActionType;
+const ChatInputActionType = fn(11430).ChatInputActionType;
 const ContentDismissActionType = fn(2041).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);

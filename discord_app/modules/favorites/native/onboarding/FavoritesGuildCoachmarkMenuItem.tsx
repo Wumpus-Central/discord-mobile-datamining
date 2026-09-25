@@ -39,7 +39,7 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
       description: null,
       onDismiss: null,
       renderImgComponent: "r",
-      buttonLabel: "M11 3h-1v1h1V3ZM10 4H9v1h1V4ZM9 5H8v1h1V5ZM8 6H7v1h1V6Z",
+      buttonLabel: "M10 2H9v1h1V2Z",
       onButtonPress: null,
     };
     const intl = util.intl;

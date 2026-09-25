@@ -44,12 +44,12 @@ export const IntlLink = function IntlLink(children) {
     }
   }
   const tmp = target;
-  const tmp3 = closure_5(noop.useContext(target(4545).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
+  const tmp3 = closure_5(noop.useContext(target(4547).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
   return jsx(tmp(1177).LegacyText, {
     accessible: true,
     accessibilityRole: str,
     onPress: fn,
-    style: closure_5(noop.useContext(target(4545).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link,
+    style: closure_5(noop.useContext(target(4547).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link,
     children: children.children,
   });
 };

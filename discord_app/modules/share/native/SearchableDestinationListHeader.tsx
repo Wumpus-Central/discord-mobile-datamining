@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import _mod5936 from "../../../../_runtime/metro/05936__.js";
+import _mod5938 from "../../../../_runtime/metro/05938__.js";
 import useIsWindowLarge from "../../screen/native/useIsWindowLarge.tsx";
 import HeaderShared from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -57,7 +57,7 @@ export default function SearchableDestinationListHeader(arg0) {
     num = 0;
   }
   obj.headerStatusBarHeight = num + nativeDefault.space.PX_8;
-  return jsx(_mod5936.Header, {
+  return jsx(_mod5938.Header, {
     headerStyle: tmp.header,
     title,
     headerTitle(children) {

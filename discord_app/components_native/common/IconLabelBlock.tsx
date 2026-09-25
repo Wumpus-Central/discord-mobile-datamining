@@ -114,7 +114,7 @@ prototype["render"] = function render() {
   obj.children = items1;
   return React6(hasOwnProperty, obj);
 };
-IconLabelBlock.contextType = fn(4535).ThemeContext;
+IconLabelBlock.contextType = fn(4537).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/IconLabelBlock.tsx");
 

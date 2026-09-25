@@ -5,30 +5,30 @@ import PremiumUtils from "../../utils/PremiumUtils.tsx";
 import shared from "../../design/shared.tsx";
 import useThemeDefault from "../../hooks/useTheme.tsx";
 import common_AlertDefault from "../common/Alert.tsx";
-import _modDef8416 from "../../../_runtime/metro/08416__.js";
-import _modDef9582 from "../../../_runtime/metro/09582__.js";
-import _modDef11058 from "../../../_runtime/metro/11058__.js";
-import _modDef11059 from "../../../_runtime/metro/11059__.js";
-import _modDef11060 from "../../../_runtime/metro/11060__.js";
-import _modDef11061 from "../../../_runtime/metro/11061__.js";
-import _modDef11062 from "../../../_runtime/metro/11062__.js";
-import _modDef11063 from "../../../_runtime/metro/11063__.js";
-import _modDef11064 from "../../../_runtime/metro/11064__.js";
-import _modDef11065 from "../../../_runtime/metro/11065__.js";
-import _modDef11066 from "../../../_runtime/metro/11066__.js";
-import _modDef11067 from "../../../_runtime/metro/11067__.js";
-import _modDef11068 from "../../../_runtime/metro/11068__.js";
-import _modDef11069 from "../../../_runtime/metro/11069__.js";
-import _modDef11070 from "../../../_runtime/metro/11070__.js";
-import _modDef11071 from "../../../_runtime/metro/11071__.js";
-import _modDef11072 from "../../../_runtime/metro/11072__.js";
-import _modDef11073 from "../../../_runtime/metro/11073__.js";
-import _modDef11074 from "../../../_runtime/metro/11074__.js";
-import _modDef11075 from "../../../_runtime/metro/11075__.js";
-import _modDef11076 from "../../../_runtime/metro/11076__.js";
-import _modDef11077 from "../../../_runtime/metro/11077__.js";
-import _modDef11078 from "../../../_runtime/metro/11078__.js";
-import _modDef11079 from "../../../_runtime/metro/11079__.js";
+import _modDef7505 from "../../../_runtime/metro/07505__.js";
+import _modDef8680 from "../../../_runtime/metro/08680__.js";
+import _modDef10162 from "../../../_runtime/metro/10162__.js";
+import _modDef10163 from "../../../_runtime/metro/10163__.js";
+import _modDef10164 from "../../../_runtime/metro/10164__.js";
+import _modDef10165 from "../../../_runtime/metro/10165__.js";
+import _modDef10166 from "../../../_runtime/metro/10166__.js";
+import _modDef10167 from "../../../_runtime/metro/10167__.js";
+import _modDef10168 from "../../../_runtime/metro/10168__.js";
+import _modDef10169 from "../../../_runtime/metro/10169__.js";
+import _modDef10170 from "../../../_runtime/metro/10170__.js";
+import _modDef10171 from "../../../_runtime/metro/10171__.js";
+import _modDef10172 from "../../../_runtime/metro/10172__.js";
+import _modDef10173 from "../../../_runtime/metro/10173__.js";
+import _modDef10174 from "../../../_runtime/metro/10174__.js";
+import _modDef10175 from "../../../_runtime/metro/10175__.js";
+import _modDef10176 from "../../../_runtime/metro/10176__.js";
+import _modDef10177 from "../../../_runtime/metro/10177__.js";
+import _modDef10178 from "../../../_runtime/metro/10178__.js";
+import _modDef10179 from "../../../_runtime/metro/10179__.js";
+import _modDef10180 from "../../../_runtime/metro/10180__.js";
+import _modDef10181 from "../../../_runtime/metro/10181__.js";
+import _modDef10182 from "../../../_runtime/metro/10182__.js";
+import _modDef10183 from "../../../_runtime/metro/10183__.js";
 import ShineAnimationDefault from "ShineAnimation.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -50,7 +50,7 @@ let obj2 = {
     lineHeight: 16,
     textAlign: "center",
     marginTop: 20,
-    color: fn(5746).DARK_PRIMARY_300_LIGHT_PRIMARY_400,
+    color: fn(5748).DARK_PRIMARY_300_LIGHT_PRIMARY_400,
   },
 };
 let closure_9 = createStyles.createStyles(obj2);
@@ -141,48 +141,48 @@ export default function PremiumActivatedAlert(onClose) {
   obj6.style = tmp.alert;
   const obj7 = { style: tmp.header, source: null, children: null };
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-    let tmp4Result10 = _modDef11058;
+    let tmp4Result10 = _modDef10162;
   } else if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
-    tmp4Result10 = _modDef11059;
+    tmp4Result10 = _modDef10163;
   } else if (PremiumUtils.Branding.TIER_2 === premiumBranding) {
-    tmp4Result10 = _modDef11060;
+    tmp4Result10 = _modDef10164;
   } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
-    tmp4Result10 = _modDef11061;
+    tmp4Result10 = _modDef10165;
   } else if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
-    tmp4Result10 = _modDef11062;
+    tmp4Result10 = _modDef10166;
   }
   obj7.source = tmp4Result10;
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-    let tmp4Result11 = _modDef11067;
+    let tmp4Result11 = _modDef10171;
   } else if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
-    tmp4Result11 = _modDef11068;
+    tmp4Result11 = _modDef10172;
   } else {
     if (PremiumUtils.Branding.BUNDLE !== premiumBranding) {
       if (PremiumUtils.Branding.TIER_2 !== premiumBranding) {
         if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
-          tmp4Result11 = _modDef11069;
+          tmp4Result11 = _modDef10173;
         }
       }
     }
-    tmp4Result11 = _modDef8416;
+    tmp4Result11 = _modDef7505;
   }
   const items = [React5(React3, { source: tmp4Result11, style: tmp9.logo }), ,];
   let tmp16Result = null;
   if (premiumBranding === PremiumUtils.Branding.BUNDLE) {
-    const obj9 = { source: _modDef11079, style: tmp.logoPlusPremiumGuild };
+    const obj9 = { source: _modDef10183, style: tmp.logoPlusPremiumGuild };
     tmp16Result = React5(React3, obj9);
   }
   items[1] = tmp16Result;
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-    let tmp4Result12 = _modDef9582;
+    let tmp4Result12 = _modDef8680;
   } else if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
-    tmp4Result12 = _modDef11063;
+    tmp4Result12 = _modDef10167;
   } else if (PremiumUtils.Branding.TIER_2 === premiumBranding) {
-    tmp4Result12 = _modDef11064;
+    tmp4Result12 = _modDef10168;
   } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
-    tmp4Result12 = _modDef11065;
+    tmp4Result12 = _modDef10169;
   } else if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
-    tmp4Result12 = _modDef11066;
+    tmp4Result12 = _modDef10170;
   }
   const obj10 = { source: tmp4Result12, style: null };
   const items1 = [tmp10.headerImage, tmp.headerImage];
@@ -195,38 +195,38 @@ export default function PremiumActivatedAlert(onClose) {
   const tmp4Result = common_AlertDefault;
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
     if (tmp7Result.isThemeDark(tmp6)) {
-      let tmp4Result14 = _modDef11070;
+      let tmp4Result14 = _modDef10174;
     } else {
-      tmp4Result14 = _modDef11071;
+      tmp4Result14 = _modDef10175;
     }
     tmp7Result = shared;
   } else {
     if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
       if (tmp7Result5.isThemeDark(tmp6)) {
-        let tmp4Result15 = _modDef11072;
+        let tmp4Result15 = _modDef10176;
       } else {
-        tmp4Result15 = _modDef11073;
+        tmp4Result15 = _modDef10177;
       }
       let tmp4Result18 = tmp4Result15;
       tmp7Result5 = shared;
     } else if (PremiumUtils.Branding.TIER_2 === premiumBranding) {
       if (tmp7Result6.isThemeDark(tmp6)) {
-        let tmp4Result16 = _modDef11074;
+        let tmp4Result16 = _modDef10178;
       } else {
-        tmp4Result16 = _modDef11075;
+        tmp4Result16 = _modDef10179;
       }
       tmp4Result18 = tmp4Result16;
       tmp7Result6 = shared;
     } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
       if (tmp7Result7.isThemeDark(tmp6)) {
-        let tmp4Result17 = _modDef11076;
+        let tmp4Result17 = _modDef10180;
       } else {
-        tmp4Result17 = _modDef11077;
+        tmp4Result17 = _modDef10181;
       }
       tmp4Result18 = tmp4Result17;
       tmp7Result7 = shared;
     } else if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
-      tmp4Result18 = _modDef11078;
+      tmp4Result18 = _modDef10182;
     }
     const obj12 = { source: tmp4Result18, style: tmp11.animation };
     const items3 = [React5(tmp4Result13, obj12)];

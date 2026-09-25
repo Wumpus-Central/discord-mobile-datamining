@@ -11,11 +11,11 @@ const jsx = fn(21).jsx;
 let items = [
   {
     input: "o",
-    modifierFlags: fn(5269).KeyModifierFlags.keyModifierControl,
+    modifierFlags: fn(5270).KeyModifierFlags.keyModifierControl,
     eventName: "keyCommandShowDevTools",
     discoverabilityTitle: "Open DevTools Panel",
     onKeyCommand() {
-      asyncRequireImpl(14953, dependencyMap.paths).then((navigateToDevTools) => {
+      asyncRequireImpl(14115, dependencyMap.paths).then((navigateToDevTools) => {
         navigateToDevTools.navigateToDevTools();
       });
       return true;
@@ -44,10 +44,10 @@ export default function DevToolsLazy() {
     obj = PlatformUtils;
   });
   const obj2 = stateFromStores(504);
-  const keyCommands = stateFromStores(5269).useKeyCommands(stateFromStores ? items : []);
+  const keyCommands = stateFromStores(5270).useKeyCommands(stateFromStores ? items : []);
   if (stateFromStores) {
     if (stateFromStores1) {
-      return jsx(tmp(16342).default, {});
+      return jsx(tmp(15522).default, {});
     }
   }
   return null;

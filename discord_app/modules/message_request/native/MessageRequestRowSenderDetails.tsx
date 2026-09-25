@@ -57,7 +57,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     return tmp2;
   });
   let obj = otherUser(504);
-  const messageRequestRelativeTimestampText = otherUser(17450).useMessageRequestRelativeTimestampText(channel);
+  const messageRequestRelativeTimestampText = otherUser(16667).useMessageRequestRelativeTimestampText(channel);
   const random = Math.random();
   const rounded = Math.floor(random * utils_AvatarUtilsDefault.DEFAULT_AVATARS.length);
   const obj3 = { style: tmp.avatarContainer, children: null };
@@ -112,10 +112,10 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
   let tmp9Result = null != stateFromStores;
   if (tmp9Result) {
     const obj10 = { variant: "text-md/medium", color: "text-muted", children: null };
-    const items3 = [" ", otherUser(4673).getUserTag(otherUser)];
+    const items3 = [" ", otherUser(4675).getUserTag(otherUser)];
     obj10.children = items3;
     tmp9Result = closure_6(otherUser(4825).Text, obj10);
-    const tmp2Result = otherUser(4673);
+    const tmp2Result = otherUser(4675);
   }
   items2[1] = tmp9Result;
   obj8.children = items2;

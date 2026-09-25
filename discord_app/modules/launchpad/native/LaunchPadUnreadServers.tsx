@@ -59,7 +59,7 @@ let closure_13 = noop.memo(function GuildItemInner(guildId) {
   const callback1 = noop.useCallback(() => {
     transitionToGuild.transitionToGuild(guildId);
   }, items1);
-  obj.children = closure_10(onGuildSelect(17543), {
+  obj.children = closure_10(onGuildSelect(16767), {
     size: 48,
     borderRadius: 16,
     guildId,

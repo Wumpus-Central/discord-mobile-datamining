@@ -8,8 +8,8 @@ import ButtonConstants from "../../../../design/components/Button/native/ButtonC
 import LottieAnimationViewDefault from "../../../../components_native/common/LottieAnimationView.tsx";
 import ClientThemesOverrides from "../../../client_themes/native/ClientThemesOverrides.tsx";
 import useAppLauncherOnboardingContentDefault from "hooks/useAppLauncherOnboardingContent.tsx";
-import _mod12404 from "../../../../../_runtime/metro/12404__.js";
-import _mod12585 from "../../../../../_runtime/metro/12585__.js";
+import _mod11530 from "../../../../../_runtime/metro/11530__.js";
+import _mod11711 from "../../../../../_runtime/metro/11711__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -123,7 +123,7 @@ export const AppLauncherOnboardingChatInputButtonAnimation = function AppLaunche
   const items1 = [absoluteFill.absoluteFill, tmp.glowAnimation];
   obj4.style = items1;
   const obj5 = { collapsable: false, style: tmp.glowLottie, source: null, autoPlay: null };
-  obj5.source = _mod12585;
+  obj5.source = _mod11711;
   obj5.autoPlay = !stateFromStores;
   const items2 = [timestampProducer(LottieAnimationViewDefault, obj5), ,];
   const obj6 = { collapsable: false, style: null };
@@ -135,7 +135,7 @@ export const AppLauncherOnboardingChatInputButtonAnimation = function AppLaunche
   const items4 = [React5(ReanimatedRexportDefault.View, obj4)];
   const obj8 = { collapsable: false, style: tmp.trinketsLottie, source: null, autoPlay: null };
   const obj7 = { collapsable: false, style: tmp.fakeButton };
-  obj8.source = _mod12404;
+  obj8.source = _mod11530;
   obj8.autoPlay = !stateFromStores;
   items4[1] = timestampProducer(LottieAnimationViewDefault, obj8);
   obj3.children = items4;

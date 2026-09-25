@@ -10,13 +10,13 @@ import ConsentStore from "../../../../stores/ConsentStore.tsx";
 
 require = fn;
 const Consents = fn(1074).Consents;
-const SettingBuilders = fn(11811);
+const SettingBuilders = fn(10993);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.MNKzyg);
   },
-  parent: fn(8323).MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(7412).MobileUserSettings.DATA_AND_PRIVACY,
   useValue: function useDataToCustomizeDiscordSettingValue() {
     const items = [ConsentStore];
     return initialize.useStateFromStores(items, () => ConsentStore.hasConsented(constants.PERSONALIZATION));

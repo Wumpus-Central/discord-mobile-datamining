@@ -77,30 +77,30 @@ const __initData = {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/native/VibegrationsFloatingActivity.tsx");
 
-export default function VibegrationsFloatingActivity(arg0) {
-  ({ line, todos } = arg0);
+export default function VibegrationsFloatingActivity(agents) {
+  ({ line, todos, todosLive } = agents);
+  ({ onJumpToActivity, bottom } = agents);
+  if (todosLive === undefined) {
+    todosLive = true;
+  }
   let sharedValue;
   importDefault = undefined;
-  ({ onJumpToActivity, bottom, agents } = arg0);
   const tmp = closure_8();
-  sharedValue = sharedValue(4561).useSharedValue(0);
+  sharedValue = sharedValue(4563).useSharedValue(0);
   const items = [sharedValue];
   const effect = noop.useEffect(() => {
     const result = sharedValue.set(timing.withTiming(1, { duration: 150 }));
     return () => sharedValue(dependencyMap[6]).cancelAnimation(closure_1_0);
   }, items);
-  const obj = sharedValue(4561);
-  class S {
-    constructor() {
-      obj = { opacity: closure_0.get() };
-      return obj;
-    }
-  }
-  S.__closure = { opacity: sharedValue };
-  S.__workletHash = 13383549561987;
-  S.__initData = __initData;
-  const animatedStyle = sharedValue(4561).useAnimatedStyle(S);
-  const obj2 = sharedValue(4561);
+  const obj = sharedValue(4563);
+  const fn = function x() {
+    return { opacity: sharedValue.get() };
+  };
+  fn.__closure = { opacity: sharedValue };
+  fn.__workletHash = 13383549561987;
+  fn.__initData = __initData;
+  const animatedStyle = sharedValue(4563).useAnimatedStyle(fn);
+  const obj2 = sharedValue(4563);
   [tmp8, c1] = noop.useState(false);
   const callback = noop.useCallback(() => _undefined((arg0) => !arg0), []);
   const obj3 = { style: null, pointerEvents: "box-none", children: null };
@@ -111,8 +111,8 @@ export default function VibegrationsFloatingActivity(arg0) {
     tmp12 = null;
     if (null != todos) {
       const obj4 = { style: tmp.panel, children: null };
-      const obj5 = { todos, agents, announceProgress: false };
-      obj4.children = closure_6(tmp11(17136), obj5);
+      const obj5 = { todos, agents: agents.agents, live: todosLive, announceProgress: false };
+      obj4.children = closure_6(tmp11(16349), obj5);
       tmp12 = closure_6(View, obj4);
     }
   }
@@ -130,7 +130,7 @@ export default function VibegrationsFloatingActivity(arg0) {
   obj7.accessibilityLabel = intl.formatToPlainString(_modDef3714.Sk4CzQ, { activity: line });
   obj7.onPress = onJumpToActivity;
   const tmp7 = _slicedToArray(noop.useState(false), 2);
-  const items3 = [closure_6(sharedValue(10498).MagicWandIcon, { size: "xs", color: nativeDefault.colors.TEXT_BRAND })];
+  const items3 = [closure_6(sharedValue(9600).MagicWandIcon, { size: "xs", color: nativeDefault.colors.TEXT_BRAND })];
   const obj8 = { size: "xs", color: nativeDefault.colors.TEXT_BRAND };
   items3[1] = closure_6(View, {
     style: tmp.label,
@@ -142,7 +142,7 @@ export default function VibegrationsFloatingActivity(arg0) {
     }),
   });
   obj7.children = items3;
-  const items4 = [closure_7(sharedValue(5427).PressableOpacity, obj7)];
+  const items4 = [closure_7(sharedValue(5428).PressableOpacity, obj7)];
   if (null == todos) {
     items4[1] = null;
     obj6.children = items4;
@@ -166,9 +166,9 @@ export default function VibegrationsFloatingActivity(arg0) {
     obj10.onPress = callback;
     let colors = tmp11(576).colors;
     const obj12 = { size: "xs", color: tmp8 ? colors.TEXT_BRAND : colors.TEXT_MUTED };
-    colors = closure_6(tmp2(5843).ClipboardListIcon, obj12);
+    colors = closure_6(tmp2(5845).ClipboardListIcon, obj12);
     obj10.children = colors;
-    closure_6(tmp2(5427).PressableOpacity, obj10);
+    closure_6(tmp2(5428).PressableOpacity, obj10);
   }
   const obj9 = {
     style: tmp.label,

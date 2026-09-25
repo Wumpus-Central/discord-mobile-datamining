@@ -51,5 +51,5 @@ export default function NotificationSettingsMessageNotificationGuildActionSheet(
       NotificationLabel.notifications(message_notifications),
     );
   };
-  return jsx(unread(10508), { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null });
+  return jsx(unread(9610), { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null });
 }

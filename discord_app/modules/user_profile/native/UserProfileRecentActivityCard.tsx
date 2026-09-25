@@ -66,8 +66,8 @@ let obj = {
     return true;
   },
 };
-items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(8494).isEntryNew };
-let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(8494).isEntryNew };
+items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(7584).isEntryNew };
+let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(7584).isEntryNew };
 items[2] = {
   Badge: BadgesAll.StreakBadge,
   predicate(entry) {

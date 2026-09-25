@@ -18,7 +18,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-let closure_9 = fn(4462).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_9 = fn(4464).GUILD_SELECTABLE_CHANNELS_KEY;
 const Routes = fn(1074).Routes;
 const MessageSendLocation = fn(4822).MessageSendLocation;
 const jsxProd = fn(21);
@@ -276,8 +276,8 @@ export default function VibegrationsPublishNotesSheet(guildId) {
                     const _HermesInternal = HermesInternal;
                     combined = "" + trimmed + tmp34;
                   }
-                  const parsed = tmp3(8005).parse(found, combined);
-                  const tmp31Result = tmp3(7786);
+                  const parsed = tmp3(7090).parse(found, combined);
+                  const tmp31Result = tmp3(6871);
                   const obj5 = { location: _undefined2.VIBEGRATIONS_PATCH_NOTES };
                   c3 = 2;
                   c4 = 1;
@@ -306,10 +306,10 @@ export default function VibegrationsPublishNotesSheet(guildId) {
                 ok = closure_128_0.ok;
               }
               if (false !== ok) {
-                const result = guildId(17085).rememberPatchNotesChannel(closure_129_1, closure_129_17.id);
+                const result = guildId(16276).rememberPatchNotesChannel(closure_129_1, closure_129_17.id);
                 closure_129_20();
                 dependencyMap = 0;
-                const obj = guildId(17085);
+                const obj = guildId(16276);
               }
             }
             const _Error = Error;

@@ -40,7 +40,7 @@ function useHandleBuyNow(product) {
           } else {
             v1 = 1;
             dependencyMap = 1;
-            const obj6 = { value: tmp4(7871).fetchCollectiblesPurchases(), done: false };
+            const obj6 = { value: tmp4(6956).fetchCollectiblesPurchases(), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {
@@ -59,7 +59,7 @@ function useHandleBuyNow(product) {
             useCategoryImage: true,
             stageCollectibleChangeForEditProfile: closure_128_2,
           };
-          v1(11433).open(obj8);
+          v1(10531).open(obj8);
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -71,7 +71,7 @@ function useHandleBuyNow(product) {
   };
   ({ analyticsLocations, orderId } = product);
   [isBuying, _slicedToArray] = noop.useState(false);
-  const tmp3 = onBuySettled(11371)({
+  const tmp3 = onBuySettled(10469)({
     product,
     analyticsLocations,
     onPurchaseComplete() {

@@ -547,6 +547,30 @@ function replayTimeline(steps) {
   }
   return tmp.steps;
 }
+function stoppable(role) {
+  let tmp = "assistant" === role.role;
+  if (tmp) {
+    tmp = "side_reply" !== role.kind;
+  }
+  if (tmp) {
+    let someResult = true === role.finished || true === role.continued;
+    if (!someResult) {
+      someResult = "" !== role.content;
+    }
+    if (!someResult) {
+      someResult = null != role.proposal;
+    }
+    if (!someResult) {
+      const steps = role.steps;
+      someResult = steps.some((kind) => set.has(kind.kind));
+    }
+    tmp = !someResult;
+  }
+  if (tmp) {
+    tmp = true !== role.stopRequested;
+  }
+  return tmp;
+}
 let closure_3 = ["disposition"];
 let closure_4 = ["disposition"];
 let closure_5 = ["disposition"];
@@ -950,6 +974,52 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
       items[HermesBuiltin.arraySpread(value, 0)] = tmp3;
       const result = map.set(projectId, items);
     }
+  },
+  VIBEGRATIONS_CHAT_STOP_REQUESTED: function handleChatStopRequested(projectId) {
+    projectId = projectId.projectId;
+    value = map.get(projectId);
+    let tmp = null != value;
+    if (tmp) {
+      let someResult = value.some(stoppable);
+      if (someResult) {
+        const result = map.set(
+          projectId,
+          value.map((role) => {
+            let tmp = "assistant" === role.role;
+            if (tmp) {
+              tmp = "side_reply" !== role.kind;
+            }
+            if (tmp) {
+              let someResult = true === role.finished || true === role.continued;
+              if (!someResult) {
+                someResult = "" !== role.content;
+              }
+              if (!someResult) {
+                someResult = null != role.proposal;
+              }
+              if (!someResult) {
+                const steps = role.steps;
+                someResult = steps.some((kind) => set.has(kind.kind));
+              }
+              tmp = !someResult;
+            }
+            if (tmp) {
+              tmp = true !== role.stopRequested;
+            }
+            let tmp4 = role;
+            if (tmp) {
+              const obj = {};
+              const merged = Object.assign(role);
+              obj.stopRequested = true;
+              tmp4 = obj;
+            }
+            return tmp4;
+          }),
+        );
+      }
+      tmp = someResult;
+    }
+    return tmp;
   },
   VIBEGRATIONS_CHAT_PROVISIONAL_TODO: function handleChatProvisionalTodo(text) {
     ({ projectId, turnId } = text);

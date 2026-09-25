@@ -571,37 +571,37 @@ export const fromClientDiscoverableGuild = function fromClientDiscoverableGuild(
   const merged1 = Object.assign(obj);
   return React3(React6, {});
 };
-export const fromGuildBasic = function fromGuildBasic(id) {
+export const fromGuildBasic = function fromGuildBasic(guild) {
   const obj = {
-    id: id.id,
-    name: id.name,
+    id: guild.id,
+    name: guild.name,
     icon: null,
     description: null,
     splash: null,
     discoverySplash: null,
     features: null,
   };
-  let icon = id.icon;
+  let icon = guild.icon;
   if (icon == null) {
     icon = null;
   }
   obj.icon = icon;
-  let description = id.description;
+  let description = guild.description;
   if (description == null) {
     description = null;
   }
   obj.description = description;
-  let splash = id.splash;
+  let splash = guild.splash;
   if (splash == null) {
     splash = null;
   }
   obj.splash = splash;
-  let discovery_splash = id.discovery_splash;
+  let discovery_splash = guild.discovery_splash;
   if (discovery_splash == null) {
     discovery_splash = null;
   }
   obj.discoverySplash = discovery_splash;
-  obj.features = SetUtils.toSetInplace(id.features);
+  obj.features = SetUtils.toSetInplace(guild.features);
   const merged = Object.assign(React5);
   const merged1 = Object.assign(obj);
   return React3(React6, {});

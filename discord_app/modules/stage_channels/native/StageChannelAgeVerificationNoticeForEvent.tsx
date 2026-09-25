@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const native = Text(1177);
 const CircleInformationIcon = Text(4783);
 const Text_Text = Text(4825);
-const WarningIcon2 = Text(8946);
+const WarningIcon2 = Text(8040);
 require = fn;
 function StageChannelAgeVerificationNoticeContent(onConfirmPress) {
   onConfirmPress = onConfirmPress.onConfirmPress;
@@ -24,7 +24,7 @@ function StageChannelAgeVerificationNoticeContent(onConfirmPress) {
           color: "text-default",
           style: closure_1.linkText,
           onPress() {
-            const tmp = closure_1(4514);
+            const tmp = closure_1(4516);
             tmp(closure_1(2110).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
             if (onConfirmPress != null) {
               onConfirmPress();
@@ -43,9 +43,9 @@ function StageChannelAgeVerificationNoticeContent(onConfirmPress) {
           color: "text-default",
           style: closure_1.linkText,
           onPress() {
-            const obj = closure_1(8761);
+            const obj = closure_1(7851);
             const result = obj.showAgeVerificationGetStartedModal({
-              entryPoint: onConfirmPress(8763).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
+              entryPoint: onConfirmPress(7853).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
             });
             if (closure_1_0 != null) {
               closure_1_0();

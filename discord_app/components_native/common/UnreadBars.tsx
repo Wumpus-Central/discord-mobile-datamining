@@ -31,11 +31,11 @@ let obj4 = {
   borderRadius: nativeDefault.radii.md,
   backgroundColor: null,
 };
-let ColorUtils = fn(4678);
+let ColorUtils = fn(4680);
 obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_400, 0.9);
 obj2.unread = obj4;
 const obj6 = { backgroundColor: null };
-ColorUtils = fn(4678);
+ColorUtils = fn(4680);
 obj6.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.RED_400, 0.9);
 obj2.mention = obj6;
 let closure_10 = createStyles.createLegacyClassComponentStyles(obj2);
@@ -175,7 +175,7 @@ prototype["render"] = function render() {
   return React6(timestampProducer, obj);
 };
 UnreadBar.defaultProps = { bottom: false };
-UnreadBar.contextType = fn(4535).ThemeContext;
+UnreadBar.contextType = fn(4537).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/UnreadBars.tsx");
 

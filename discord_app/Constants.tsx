@@ -775,8 +775,8 @@ const frozen2 = Object.freeze({
   UNRESOLVED_GUILD_TEMPLATE(code) {
     return "/guilds/templates/" + code;
   },
-  GUILD_TEMPLATES(arg0) {
-    return "/guilds/" + arg0 + "/templates";
+  GUILD_TEMPLATES(guildId) {
+    return "/guilds/" + guildId + "/templates";
   },
   GUILD_TEMPLATE(arg0, arg1) {
     return "/guilds/" + arg0 + "/templates/" + arg1;
@@ -2038,6 +2038,10 @@ const frozen2 = Object.freeze({
   QUESTS_CREATIVES_DISMISS(adCreativeId) {
     return "/quests/creatives/" + adCreativeId + "/dismiss";
   },
+  ADS_CREATIVES_PREVIEW_DELIVERY_STATE(arg0) {
+    return "/ads/creatives/" + arg0 + "/preview/delivery-state";
+  },
+  ADS_CREATIVES_PREVIEW_DELIVERY_STATE_LOOKBACK: "/ads/creatives/preview/delivery-state",
   QUESTS_APP_STORE_METADATA: "/quests/appstore-metadata",
   GAME_ANNOUNCEMENTS(gameId) {
     return "/games/" + gameId + "/announcements";
@@ -2809,8 +2813,8 @@ const obj2 = {
   UNRESOLVED_GUILD_TEMPLATE(code) {
     return "/guilds/templates/" + code;
   },
-  GUILD_TEMPLATES(arg0) {
-    return "/guilds/" + arg0 + "/templates";
+  GUILD_TEMPLATES(guildId) {
+    return "/guilds/" + guildId + "/templates";
   },
   GUILD_TEMPLATE(arg0, arg1) {
     return "/guilds/" + arg0 + "/templates/" + arg1;
@@ -4072,6 +4076,10 @@ const obj2 = {
   QUESTS_CREATIVES_DISMISS(adCreativeId) {
     return "/quests/creatives/" + adCreativeId + "/dismiss";
   },
+  ADS_CREATIVES_PREVIEW_DELIVERY_STATE(arg0) {
+    return "/ads/creatives/" + arg0 + "/preview/delivery-state";
+  },
+  ADS_CREATIVES_PREVIEW_DELIVERY_STATE_LOOKBACK: "/ads/creatives/preview/delivery-state",
   QUESTS_APP_STORE_METADATA: "/quests/appstore-metadata",
   GAME_ANNOUNCEMENTS(gameId) {
     return "/games/" + gameId + "/announcements";
@@ -7551,6 +7559,7 @@ export const AnalyticEvents = {
   VOICE_CHANNEL_TOPIC_SET: "voice_channel_topic_set",
   VOICE_CHANNEL_TOPIC_VIEWED: "voice_channel_topic_viewed",
   VOICE_QUALITY_PERIODIC_STATS: "voice_quality_periodic_stats",
+  VOICE_STREAM_ENDED: "voice_stream_ended",
   AUDIO_DEVICE_MODULE_ERROR: "audio_device_module_error",
   SDP_ERROR: "sdp_error",
   VOICE_QUEUE_METRICS: "voice_queue_metrics",
@@ -9691,6 +9700,7 @@ export const HelpdeskArticles = {
   WINDOWS_MEDIA_PACK: "37976093740695",
   FAVORITES_GUILD: "38810584460439",
   NITRO_2_POINT_0: "39188406147479",
+  RIOT_CREDIT_CAMPAIGN: "39188406147479",
   ANDROID_SCREENSHARE_AUDIO_BUG: "40397083647511",
   XBOX_GAME_PASS_PERKS: "40387273783831",
   SHOP_FRAMES_EARLY_ACCESS: "40775065582615",

@@ -25,15 +25,15 @@ function EmptyCustomizeCommunity(setTab) {
   setTab = setTab.setTab;
   importDefault = undefined;
   const tmp = closure_19();
-  const obj = setTab(4533);
+  const obj = setTab(4535);
   const tmp4 = importDefault;
-  const isThemeDarkResult = setTab(4533).isThemeDark(useThemeDefault());
+  const isThemeDarkResult = setTab(4535).isThemeDark(useThemeDefault());
   const items = [SelectedGuildStore];
   importDefault = setTab(504).useStateFromStores(items, () => guildId.getGuildId());
   const obj3 = { style: tmp.emptyContainer, children: null };
   const obj2 = setTab(504);
   const items1 = [
-    closure_16(closure_5, { style: tmp.emptyContainerImage, source: tmp4(isThemeDarkResult ? 11889 : 11890) }),
+    closure_16(closure_5, { style: tmp.emptyContainerImage, source: tmp4(isThemeDarkResult ? 11032 : 11033) }),
     ,
   ];
   const obj5 = { style: tmp.emptyContainerHeader, children: null };
@@ -296,7 +296,7 @@ function DropdownPrompt(guildId) {
   const handleSelectOption = _prompt(isNew[38])(guildId).handleSelectOption;
   const items1 = [guildId, _prompt, handleSelectOption, stateFromStoresArray.length];
   const callback = stateFromStoresArray.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7468, dependencyMap.paths), "DropdownOptions", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(6551, dependencyMap.paths), "DropdownOptions", {
       guildId,
       promptId: _prompt.id,
       onSelect(arg0, arg1) {
@@ -450,7 +450,7 @@ function MultipleChoicePrompt(guildId) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildOnboardingPromptsConstants = fn(7434);
+const GuildOnboardingPromptsConstants = fn(6517);
 ({ GuildOnboardingTab: closure_12, OnboardingPromptType: map1 } = GuildOnboardingPromptsConstants);
 const EMOJI_URL_BASE_SIZE = fn(1375).EMOJI_URL_BASE_SIZE;
 const ReadStateTypes = fn(5011).ReadStateTypes;
@@ -617,7 +617,7 @@ export default function CustomizeCommunity(guildId) {
     }
     return prop;
   });
-  const tmp7 = stateFromStores(11891)(guildId);
+  const tmp7 = stateFromStores(11034)(guildId);
   ({ newOnboardingPrompts, onboardingPromptsWithNewAnswers, onboardingPrompts } = tmp7);
   const items2 = [guildId, stateFromStores, stateFromStores1];
   ({ onboardingPromptsRaw, newAnswersCount } = tmp7);
@@ -636,13 +636,13 @@ export default function CustomizeCommunity(guildId) {
     () =>
       null != guildId
         ? () => {
-            guildId(7443).ackGuildFeature(
+            guildId(6526).ackGuildFeature(
               closure_1_0,
               constants.GUILD_ONBOARDING_QUESTION,
               GuildOnboardingPromptsStore.ackIdForGuild(closure_1_0),
             );
-            const obj = guildId(7443);
-            const result = stateFromStores(7438).updateOnboardingResponses(closure_1_0);
+            const obj = guildId(6526);
+            const result = stateFromStores(6521).updateOnboardingResponses(closure_1_0);
           }
         : undefined,
     items3,

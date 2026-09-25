@@ -14,7 +14,7 @@ let closure_5 = createStyles.createStyles({
     flexDirection: "row",
     alignItems: "center",
     paddingStart: 4,
-    height: fn(8195).MIN_HEADER_HEIGHT,
+    height: fn(7284).MIN_HEADER_HEIGHT,
   },
 });
 const obj = {
@@ -24,7 +24,7 @@ const obj = {
     flexDirection: "row",
     alignItems: "center",
     paddingStart: 4,
-    height: fn(8195).MIN_HEADER_HEIGHT,
+    height: fn(7284).MIN_HEADER_HEIGHT,
   },
 };
 const size = fn(2);

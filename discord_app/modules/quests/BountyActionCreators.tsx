@@ -110,9 +110,9 @@ let closure_12 = async function _fetchQuestHomeBounties(arg0) {
             value: fetchBountiesAndDispatch(
               tmp5,
               asyncGeneratorStep(async () => {
-                await tmp2(7791).getSession();
+                await tmp2(6876).getSession();
                 closure_128_0 = value;
-                const orRefreshAdSession = tmp2(8044).getOrRefreshAdSession();
+                const orRefreshAdSession = tmp2(7129).getOrRefreshAdSession();
                 const HTTP = tmp2(1271).HTTP;
                 const request = {
                   url: constants.QUESTS_GET_DECISIONS,
@@ -727,6 +727,136 @@ let closure_16 = async function _dismissAdContent(arg0) {
     }
   }
 };
+let closure_17 = async function _resetCreativePreviewDeliveryState(arg0) {
+  closure_0 = arg0;
+  c4 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_3 = tmp2;
+            closure_2 = tmp5;
+            closure_130_0 = closure_0;
+            let tmp12;
+            const HTTP = HTTPUtils.HTTP;
+            const request = {
+              url: Endpoints.ADS_CREATIVES_PREVIEW_DELIVERY_STATE(closure_0),
+              query: null,
+              rejectWithError: false,
+            };
+            if (null != placement) {
+              const obj4 = { placement };
+              tmp12 = obj4;
+            }
+            request.query = tmp12;
+            c4 = 1;
+            c5 = 1;
+            const obj5 = { value: HTTP.del(request), done: false };
+            return obj5;
+          }
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          const obj7 = { type: "ADS_CREATIVE_PREVIEW_DELIVERY_STATE_RESET", adCreativeId: closure_130_0 };
+          closure_131_1(closure_131_2[7]).dispatch(obj7);
+          c5 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      } catch (tmp13) {
+        c5 = tmp;
+        throw tmp13;
+      }
+    }
+  })();
+};
+let closure_18 = async function _resetPreviewDeliveryStateLookback() {
+  c2 = 0;
+  c3 = 0;
+  return (async (arg0) => {
+    if (c3 === 2) {
+      c3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c3 = 2;
+        if (0 === c2) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_1 = tmp2;
+            const HTTP = HTTPUtils.HTTP;
+            const request = {
+              url: constants.ADS_CREATIVES_PREVIEW_DELIVERY_STATE_LOOKBACK,
+              query: null,
+              rejectWithError: false,
+            };
+            const obj4 = { lookback_minutes };
+            request.query = obj4;
+            c2 = 1;
+            c3 = 1;
+            const obj5 = { value: HTTP.del(request), done: false };
+            return obj5;
+          }
+        } else if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          closure_129_1(closure_129_2[7]).dispatch({ type: "ADS_PREVIEW_DELIVERY_STATE_LOOKBACK_RESET" });
+          c3 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      } catch (tmp14) {
+        c3 = tmp;
+        throw tmp14;
+      }
+    }
+  })();
+};
 const Endpoints = fn(1074).Endpoints;
 let closure_9 = new LoggerDefault("BountyActionCreators");
 const size = fn(2);
@@ -791,6 +921,26 @@ export const claimBountyReward = function claimBountyReward() {
 export const dismissAdContent = function dismissAdContent() {
   const self = this;
   const apply = closure_16.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const resetCreativePreviewDeliveryState = function resetCreativePreviewDeliveryState() {
+  const self = this;
+  const apply = closure_17.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const resetPreviewDeliveryStateLookback = function resetPreviewDeliveryStateLookback() {
+  const self = this;
+  const apply = closure_18.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

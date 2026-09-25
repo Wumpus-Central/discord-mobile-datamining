@@ -64,7 +64,7 @@ export default function FamilyCenterTopActivity() {
   const items2 = [stateFromStores];
   [][0] = stateFromStores1;
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15243, dependencyMap.paths), "FamilyCenterTopUsers", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14409, dependencyMap.paths), "FamilyCenterTopUsers", {
       topUserActivities: stateFromStores,
     });
   }, items2);
@@ -92,7 +92,7 @@ export default function FamilyCenterTopActivity() {
           user = user.getUser(user_id.user_id);
           let tmp2 = null;
           if (null != user) {
-            const obj = { user, size: closure_0(stateFromStores1[16]).AvatarSizes.SMALL, guildId: "r" };
+            const obj = { user, size: closure_0(stateFromStores1[16]).AvatarSizes.SMALL, guildId: "Array" };
             tmp2 = closure_1_7(closure_0(stateFromStores1[16]).Avatar, obj, user.id);
           }
           return tmp2;

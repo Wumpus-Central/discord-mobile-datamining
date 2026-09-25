@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesBackground.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef672 from "../../../../../_runtime/metro/00672__.js";
-import LinearGradientDefault from "../../../../../_runtime/05285_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05286_LinearGradient.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const Gradients = fn(7762).Gradients;
+const Gradients = fn(6847).Gradients;
 const PremiumTypes = fn(1374).PremiumTypes;
 const jsx = fn(21).jsx;
 const createStyles = fn(4829);

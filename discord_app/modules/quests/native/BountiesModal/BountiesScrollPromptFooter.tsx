@@ -42,7 +42,7 @@ function BountiesScrollPromptFooterContent(zIndex) {
   if (stateFromStores) {
     str = "halt";
   }
-  obj3.children = closure_7(zIndex(4535).BountiesScrollGradientRive, {
+  obj3.children = closure_7(zIndex(4537).BountiesScrollGradientRive, {
     stateMachine: "State Machine 1",
     fit: "fill",
     alignment: "bottom-center",
@@ -57,7 +57,7 @@ function BountiesScrollPromptFooterContent(zIndex) {
   return closure_8(ReanimatedRexportDefault.View, obj2);
 }
 const StyleSheet = fn(17).StyleSheet;
-const QuestsExperimentLocations = fn(5749).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5751).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4829);

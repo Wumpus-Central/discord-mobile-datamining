@@ -9,6 +9,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormRadio.tsx");
 
 export default function FormRadio(selected) {
-  const obj = { style: closure_4().radio, source: importDefault(selected.selected ? 7477 : 7478) };
-  return <Image style={closure_4().radio} source={importDefault(selected.selected ? 7477 : 7478)} />;
+  const obj = { style: closure_4().radio, source: importDefault(selected.selected ? 6560 : 6561) };
+  return <Image style={closure_4().radio} source={importDefault(selected.selected ? 6560 : 6561)} />;
 }

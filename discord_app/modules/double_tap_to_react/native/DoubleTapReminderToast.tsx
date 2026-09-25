@@ -45,14 +45,14 @@ export const maybeShowDoubleTapReminderToast = function maybeShowDoubleTapRemind
     if (flag == null) {
       flag = false;
     }
-    const result = tmp(8316).disambiguatedEmojiFromSettingsValue(setting);
+    const result = tmp(7405).disambiguatedEmojiFromSettingsValue(setting);
     let areEmojisEqualResult = !flag;
     if (!flag) {
       areEmojisEqualResult = null != result;
     }
     if (areEmojisEqualResult) {
-      areEmojisEqualResult = tmp(8316).areEmojisEqual(result, emoji);
-      const tmpResult3 = tmp(8316);
+      areEmojisEqualResult = tmp(7405).areEmojisEqual(result, emoji);
+      const tmpResult3 = tmp(7405);
     }
     if (areEmojisEqualResult) {
       const obj2 = {
@@ -67,13 +67,13 @@ export const maybeShowDoubleTapReminderToast = function maybeShowDoubleTapRemind
       };
       ToastActionCreatorsDefault.open(obj2);
       const obj3 = { dismissAction: ContentDismissActionType.AUTO_DISMISS, forceTrack: true };
-      const result1 = tmp(4649).UNSAFE_markDismissibleContentAsDismissed(
+      const result1 = tmp(4651).UNSAFE_markDismissibleContentAsDismissed(
         tmp(2028).DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER,
         obj3,
       );
-      const tmpResult4 = tmp(4649);
+      const tmpResult4 = tmp(4651);
     }
-    const tmpResult = tmp(8316);
+    const tmpResult = tmp(7405);
   }
   obj = require("DismissibleContentUnsafeUtils");
 };

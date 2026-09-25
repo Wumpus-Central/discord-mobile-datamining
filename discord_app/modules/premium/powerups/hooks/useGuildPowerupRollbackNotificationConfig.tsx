@@ -20,7 +20,7 @@ export default function useGuildPowerupRollbackNotificationConfig(guildId, useGu
     GuildPowerupsStore.getStateForGuild(closure_0),
   );
   if (stateFromStores != null) {
-    const tmp4 = stateFromStores.allPowerups[tmp(undefined, 4721).GUILD_POWERUP_GUILD_THEME_SKU_ID];
+    const tmp4 = stateFromStores.allPowerups[tmp(undefined, 4723).GUILD_POWERUP_GUILD_THEME_SKU_ID];
   }
   const obj = require("initialize");
   let tmp5 = null;

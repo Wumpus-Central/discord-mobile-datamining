@@ -1,8 +1,8 @@
 // discord_app/modules/voice_calls/collectCallFeedback.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
 import AppAnalyticsUtils from "../app_analytics/AppAnalyticsUtils.tsx";
-import VideoBackgroundUtils from "../video_backgrounds/VideoBackgroundUtils.tsx";
 import LastUsedVideoBackgroundOption from "../video_backgrounds/LastUsedVideoBackgroundOption.tsx";
+import VideoBackgroundUtils from "../video_backgrounds/VideoBackgroundUtils.tsx";
 import VideoBackgroundStore from "../video_backgrounds/VideoBackgroundStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";

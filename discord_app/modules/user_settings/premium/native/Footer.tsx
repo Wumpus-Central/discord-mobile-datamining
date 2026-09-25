@@ -5,7 +5,7 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment.tsx";
-import _modDef13861 from "../../../../../_runtime/metro/13861__.js";
+import _modDef13018 from "../../../../../_runtime/metro/13018__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -54,7 +54,7 @@ export default function Footer(showSubscribeButton) {
     easterEggSpacing = tmp.easterEggSpacing;
   }
   const tmp2Result = FastImageDefault;
-  items2[1] = React4(tmp2Result, { style: easterEggSpacing, source: _modDef13861 });
+  items2[1] = React4(tmp2Result, { style: easterEggSpacing, source: _modDef13018 });
   obj.children = items2;
   return timestampProducer(View, obj);
 }

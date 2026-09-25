@@ -59,6 +59,8 @@ let obj2 = {
   [15]: "NEW_ROCKER",
   KALAM: 16,
   [16]: "KALAM",
+  HEXAGON: 17,
+  [17]: "HEXAGON",
 };
 let obj3 = {
   UNSPECIFIED: 0,
@@ -518,6 +520,7 @@ let tmp8 = new "SUBSCRIPTION_GROUP"(
   obj10,
   obj11,
   obj12,
+  obj13,
 );
 let closure_18 = tmp8;
 const MessageType2 = fn(1187).MessageType;
@@ -851,6 +854,7 @@ const items38 = new items(
   obj9,
   obj10,
   obj11,
+  obj12,
 );
 const MessageType3 = fn(1187).MessageType;
 class MediumUser$Type extends MessageType3 {
@@ -1087,6 +1091,7 @@ const items39 = new items(
   obj9,
   obj10,
   obj11,
+  obj12,
 );
 const MessageType4 = fn(1187).MessageType;
 class UserAvatarDecoration$Type extends MessageType4 {
@@ -1257,6 +1262,7 @@ const mediumUserType = new MediumUser$Type(
   obj10,
   obj11,
   obj12,
+  obj13,
 );
 const MessageType5 = fn(1187).MessageType;
 class UserNameplate$Type extends MessageType5 {
@@ -1443,6 +1449,7 @@ const mediumUserType1 = new MediumUser$Type(
   obj10,
   obj11,
   obj12,
+  obj13,
 );
 const MessageType6 = fn(1187).MessageType;
 class DisplayNameStyles$Type extends MessageType6 {
@@ -1653,6 +1660,7 @@ const mediumUserType2 = new MediumUser$Type(
   obj10,
   obj11,
   obj12,
+  obj13,
 );
 const MessageType7 = fn(1187).MessageType;
 class UserTypingIndicatorStyle$Type extends MessageType7 {
@@ -1836,6 +1844,7 @@ const mediumUserType3 = new MediumUser$Type(
   obj10,
   obj11,
   obj12,
+  obj13,
 );
 const MessageType8 = fn(1187).MessageType;
 class TypingIndicatorEmoji$Type extends MessageType8 {
@@ -1960,6 +1969,7 @@ const mediumUserType4 = new MediumUser$Type(
   obj10,
   obj11,
   obj12,
+  obj13,
 );
 const MessageType9 = fn(1187).MessageType;
 class UserCollectibles$Type extends MessageType9 {
@@ -2090,6 +2100,7 @@ const mediumUserType5 = new MediumUser$Type(
   obj10,
   obj11,
   obj12,
+  obj13,
 );
 const MessageType10 = fn(1187).MessageType;
 class UserPrimaryGuild$Type extends MessageType10 {
@@ -2319,6 +2330,7 @@ const mediumUserType6 = new MediumUser$Type(
   obj10,
   obj11,
   obj12,
+  obj13,
 );
 const MessageType11 = fn(1187).MessageType;
 class ScheduleRule$Type extends MessageType11 {
@@ -2545,6 +2557,7 @@ const mediumUserType7 = new MediumUser$Type(
   obj10,
   obj11,
   obj12,
+  obj13,
 );
 const MessageType12 = fn(1187).MessageType;
 class RestrictedSchedule$Type extends MessageType12 {
@@ -2678,6 +2691,7 @@ const mediumUserType8 = new MediumUser$Type(
   obj10,
   obj11,
   obj12,
+  obj13,
 );
 const MessageType13 = fn(1187).MessageType;
 class CrossPlatformRestriction$Type extends MessageType13 {
@@ -2822,6 +2836,7 @@ const mediumUserType9 = new MediumUser$Type(
   obj10,
   obj11,
   obj12,
+  obj13,
 );
 const MessageType14 = fn(1187).MessageType;
 class BadgeCommon$Type extends MessageType14 {
@@ -2952,6 +2967,7 @@ const mediumUserType10 = new MediumUser$Type(
   obj10,
   obj11,
   obj12,
+  obj13,
 );
 const MessageType15 = fn(1187).MessageType;
 class AprilFools2026Badge$Type extends MessageType15 {
@@ -3094,6 +3110,7 @@ const mediumUserType11 = new MediumUser$Type(
   obj10,
   obj11,
   obj12,
+  obj13,
 );
 const MessageType16 = fn(1187).MessageType;
 class Badge$Type extends MessageType16 {
@@ -3233,6 +3250,7 @@ const mediumUserType12 = new MediumUser$Type(
   obj10,
   obj11,
   obj12,
+  obj13,
 );
 const MessageType17 = fn(1187).MessageType;
 class UserBadges$Type extends MessageType17 {
@@ -3366,6 +3384,7 @@ const mediumUserType13 = new MediumUser$Type(
   obj10,
   obj11,
   obj12,
+  obj13,
 );
 const MessageType18 = fn(1187).MessageType;
 class AnonymizationInfo$Type extends MessageType18 {
@@ -3520,6 +3539,7 @@ const mediumUserType14 = new MediumUser$Type(
   obj10,
   obj11,
   obj12,
+  obj13,
 );
 const MessageType19 = fn(1187).MessageType;
 class UserData$Type extends MessageType19 {
@@ -4459,6 +4479,7 @@ let tmp27 = new "binaryReadMap3"(
   obj12,
   obj13,
   obj14,
+  obj15,
 );
 let closure_34 = tmp27;
 const MessageType21 = fn(1187).MessageType;
@@ -4690,6 +4711,7 @@ let tmp28 = new "binaryReadMap3"(
   obj12,
   obj13,
   obj14,
+  obj15,
 );
 let closure_35 = tmp28;
 const MessageType22 = fn(1187).MessageType;
@@ -4823,6 +4845,7 @@ let tmp29 = new "binaryReadMap3"(
   obj12,
   obj13,
   obj14,
+  obj15,
 );
 let closure_36 = tmp29;
 const MessageType23 = fn(1187).MessageType;
@@ -4998,6 +5021,7 @@ const items201 = new items20(
   obj11,
   obj12,
   obj13,
+  obj14,
 );
 const MessageType24 = fn(1187).MessageType;
 class SafetyFlag$Type extends MessageType24 {
@@ -5129,6 +5153,7 @@ const items202 = new items20(
   obj11,
   obj12,
   obj13,
+  obj14,
 );
 const MessageType25 = fn(1187).MessageType;
 class GuildShardingConfig$Type extends MessageType25 {
@@ -5253,6 +5278,7 @@ const items221 = new items22(
   obj10,
   obj11,
   obj12,
+  obj13,
 );
 const MessageType26 = fn(1187).MessageType;
 class QuestMetadata$Type extends MessageType26 {
@@ -5356,6 +5382,7 @@ const guildShardingConfigType = new GuildShardingConfig$Type(
   obj11,
   obj12,
   obj13,
+  obj14,
 );
 const MessageType27 = fn(1187).MessageType;
 class PremiumState$Type extends MessageType27 {
@@ -5532,6 +5559,7 @@ const guildShardingConfigType1 = new GuildShardingConfig$Type(
   obj11,
   obj12,
   obj13,
+  obj14,
 );
 const MessageType28 = fn(1187).MessageType;
 class StoreCountry$Type extends MessageType28 {
@@ -5670,6 +5698,7 @@ const guildShardingConfigType2 = new GuildShardingConfig$Type(
   obj11,
   obj12,
   obj13,
+  obj14,
 );
 const MessageType29 = fn(1187).MessageType;
 class PerkConfig$Type extends MessageType29 {
@@ -6025,6 +6054,7 @@ const guildShardingConfigType3 = new GuildShardingConfig$Type(
   obj11,
   obj12,
   obj13,
+  obj14,
 );
 const MessageType30 = fn(1187).MessageType;
 class PerkConfigIncreasedFileUploadSize$Type extends MessageType30 {
@@ -6129,6 +6159,7 @@ const guildShardingConfigType4 = new GuildShardingConfig$Type(
   obj11,
   obj12,
   obj13,
+  obj14,
 );
 const MessageType31 = fn(1187).MessageType;
 class PerkConfigIncreasedGuildLimit$Type extends MessageType31 {
@@ -6232,6 +6263,7 @@ const guildShardingConfigType5 = new GuildShardingConfig$Type(
   obj11,
   obj12,
   obj13,
+  obj14,
 );
 const MessageType32 = fn(1187).MessageType;
 class PerkConfigDisplayNameStyles$Type extends MessageType32 {
@@ -6377,6 +6409,7 @@ const guildShardingConfigType6 = new GuildShardingConfig$Type(
   obj11,
   obj12,
   obj13,
+  obj14,
 );
 const MessageType33 = fn(1187).MessageType;
 class PerkConfigClientThemes$Type extends MessageType33 {
@@ -6516,6 +6549,7 @@ const guildShardingConfigType7 = new GuildShardingConfig$Type(
   obj11,
   obj12,
   obj13,
+  obj14,
 );
 const MessageType34 = fn(1187).MessageType;
 class PerkConfigAppIcons$Type extends MessageType34 {
@@ -6640,6 +6674,7 @@ const guildShardingConfigType8 = new GuildShardingConfig$Type(
   obj11,
   obj12,
   obj13,
+  obj14,
 );
 const MessageType35 = fn(1187).MessageType;
 class Perks$Type extends MessageType35 {
@@ -6883,6 +6918,7 @@ const items321 = new items32(
   obj10,
   obj11,
   obj12,
+  obj13,
 );
 const MessageType36 = fn(1187).MessageType;
 class UserCountryData$Type extends MessageType36 {
@@ -7197,6 +7233,7 @@ const items322 = new items32(
   2,
   1,
   0,
+  16,
   15,
   14,
   13,
@@ -7385,6 +7422,7 @@ const userCountryDataType = new UserCountryData$Type(
   2,
   1,
   0,
+  16,
   15,
   14,
   13,
@@ -7613,6 +7651,7 @@ const vadColorsType = new VadColors$Type(
   2,
   1,
   0,
+  16,
   15,
   14,
   13,
@@ -7912,6 +7951,7 @@ export const AgreementsHistory = new "internalBinaryWrite"(
   2,
   1,
   0,
+  16,
   15,
   14,
   13,

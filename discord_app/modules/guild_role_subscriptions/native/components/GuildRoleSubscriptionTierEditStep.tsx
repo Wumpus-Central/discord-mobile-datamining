@@ -48,7 +48,7 @@ function Footer(arg0) {
   const tmp = closure_8();
   items[1] = { paddingBottom: useSafeAreaInsetsDefault().bottom };
   obj.style = items;
-  obj.children = timestampProducer(tmp5(5273).Button, {
+  obj.children = timestampProducer(tmp5(5274).Button, {
     loading: submitting,
     disabled: !canProceedToNextStep,
     text: stringResult,

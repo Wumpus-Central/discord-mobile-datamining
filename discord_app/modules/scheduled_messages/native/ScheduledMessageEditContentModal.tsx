@@ -82,7 +82,7 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const obj5 = v1(8005);
+              const obj5 = v1(7090);
               const obj4 = {
                 content: obj5.parse(stateFromStores, first).content,
                 flags: scheduledMessage.createArgs.flags,
@@ -90,7 +90,7 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
               v1 = 1;
               dependencyMap = 1;
               const obj7 = {
-                value: tmp4(12553).editScheduledMessage(scheduledMessage.scheduledMessageId, obj4),
+                value: tmp4(11679).editScheduledMessage(scheduledMessage.scheduledMessageId, obj4),
                 done: false,
               };
               return obj7;

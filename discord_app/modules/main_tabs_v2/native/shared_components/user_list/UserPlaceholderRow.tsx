@@ -58,8 +58,8 @@ export default noop.memo(function UserPlaceholderRow(animate) {
   let sharedValue;
   flag = undefined;
   const tmp3 = closure_8(height);
-  sharedValue = sharedValue(4561).useSharedValue(1);
-  let obj = sharedValue(4561);
+  sharedValue = sharedValue(4563).useSharedValue(1);
+  let obj = sharedValue(4563);
   const tmp4 = sharedValue;
   const items = [AccessibilityStore];
   if (flag) {
@@ -85,7 +85,7 @@ export default noop.memo(function UserPlaceholderRow(animate) {
   fn.__closure = { opacity: sharedValue };
   fn.__workletHash = 10137317865125;
   fn.__initData = __initData;
-  const animatedStyle = tmp4(4561).useAnimatedStyle(fn);
+  const animatedStyle = tmp4(4563).useAnimatedStyle(fn);
   let obj3 = { style: null, collapsable: false, children: null };
   const items2 = [tmp3.row, animatedStyle];
   obj3.style = items2;
@@ -103,5 +103,5 @@ export default noop.memo(function UserPlaceholderRow(animate) {
   obj5.children = closure_6(View, obj6);
   items3[1] = closure_6(View, obj5);
   obj3.children = items3;
-  return closure_7(flag(4561).View, obj3);
+  return closure_7(flag(4563).View, obj3);
 });

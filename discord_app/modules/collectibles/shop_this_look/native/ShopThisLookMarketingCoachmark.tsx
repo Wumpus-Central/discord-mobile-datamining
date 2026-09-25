@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/shop_this_look/native/ShopThisLookMarketingCoachmark.tsx
 import util from "../../../../intl/index.native.tsx";
-import BumpingFistsSpotIllustration from "../../../../design/components/mana-assets/native/generated/BumpingFistsSpotIllustration.native.tsx";
 import ShopThisLookAnalyticsUtils from "../ShopThisLookAnalyticsUtils.tsx";
+import BumpingFistsSpotIllustration from "../../../../design/components/mana-assets/native/generated/BumpingFistsSpotIllustration.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -18,7 +18,7 @@ function ShopThisLookMarketingCoachmarkImage() {
 }
 const View = fn(17).View;
 const ContentDismissActionType = fn(2041).ContentDismissActionType;
-const UserProfileThemeTypes = fn(7541).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(6624).UserProfileThemeTypes;
 const jsx = fn(21).jsx;
 const createStyles = fn(4829);
 let closure_7 = createStyles.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" } });

@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import _modDef3714 from "../intl/VibegrationsUntranslated.messages.js";
-import _modDef4416 from "../../../../_runtime/metro/04416__.js";
+import _modDef4418 from "../../../../_runtime/metro/04418__.js";
 import DateUtils from "../../../utils/DateUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -40,7 +40,7 @@ export default function VibegrationsChangelogSheet() {
   obj4.scrollIndicatorInsets = { bottom };
   obj4.children = result.map((children) => {
     const obj = { style: entry.entry, children: null };
-    const items = [DateUtils.dateFormat(_modDef4416(children.date, "YYYY-MM-DD"), "LL")];
+    const items = [DateUtils.dateFormat(_modDef4418(children.date, "YYYY-MM-DD"), "LL")];
     let combined = null;
     if (obj3.isVibegrationsChangelogEntryExclusive(children)) {
       const intl = util.intl;

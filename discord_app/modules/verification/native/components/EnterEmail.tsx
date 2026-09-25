@@ -8,7 +8,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const ChangeEmailStore = fn(5928);
+const ChangeEmailStore = fn(5930);
 ({ useChangeEmailError: c10, useChangeEmailStore: closure_11, ChangeEmailFields: closure_12 } = ChangeEmailStore);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);

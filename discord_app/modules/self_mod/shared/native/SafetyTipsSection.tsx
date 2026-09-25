@@ -26,7 +26,7 @@ export default function SafetyTipsContainer(children) {
   let showHeader = children.showHeader;
   const tmp = closure_6();
   const items = [
-    closure_4(View, { style: tmp.image, children: closure_4(safetyTips(5997).SafetyBookletSpotIllustration, {}) }),
+    closure_4(View, { style: tmp.image, children: closure_4(safetyTips(10906).SafetyBookletSpotIllustration, {}) }),
     ,
   ];
   if (showHeader) {
@@ -48,8 +48,8 @@ export default function SafetyTipsContainer(children) {
     }),
   ];
   obj4.children = items1;
-  items[1] = closure_5(safetyTips(5271).Stack, obj4);
-  const obj = { style: tmp.image, children: closure_4(safetyTips(5997).SafetyBookletSpotIllustration, {}) };
+  items[1] = closure_5(safetyTips(5272).Stack, obj4);
+  const obj = { style: tmp.image, children: closure_4(safetyTips(10906).SafetyBookletSpotIllustration, {}) };
   const obj5 = {
     style: tmp.text,
     accessibilityRole: "header",
@@ -64,5 +64,5 @@ export default function SafetyTipsContainer(children) {
     ),
   });
   obj3.children = items;
-  return closure_5(safetyTips(5271).Stack, obj3);
+  return closure_5(safetyTips(5272).Stack, obj3);
 }

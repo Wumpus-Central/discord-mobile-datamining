@@ -36,4 +36,6 @@ export const DisplayNameFont = {
   [15]: "NEW_ROCKER",
   KALAM: 16,
   [16]: "KALAM",
+  HEXAGON: 17,
+  [17]: "HEXAGON",
 };

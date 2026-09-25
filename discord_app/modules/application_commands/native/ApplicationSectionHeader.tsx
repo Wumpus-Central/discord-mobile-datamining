@@ -41,7 +41,7 @@ export default function ApplicationSectionHeader(section) {
     }
   });
   const obj = section(504);
-  const applicationCommandsIconSource = section(12573).getApplicationCommandsIconSource(section, stateFromStores);
+  const applicationCommandsIconSource = section(11699).getApplicationCommandsIconSource(section, stateFromStores);
   let nick;
   if (stateFromStores != null) {
     nick = stateFromStores.nick;
@@ -57,7 +57,7 @@ export default function ApplicationSectionHeader(section) {
   let tmp9 = null != applicationCommandsIconSource;
   if (tmp9) {
     const obj4 = { style: tmp.applicationIcon, source: applicationCommandsIconSource };
-    tmp9 = closure_5(guildId(5892), obj4);
+    tmp9 = closure_5(guildId(5894), obj4);
   }
   const items1 = [
     tmp9,

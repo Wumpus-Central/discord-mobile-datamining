@@ -5,17 +5,19 @@ import Stack_Stack from "../../../../design/components/Stack/native/Stack.native
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
 import MobileAudioOutputExperimentDefault from "../../../media_engine/MobileAudioOutputExperiment.tsx";
+import useIsVideoBackgroundSupportedDefault from "../../../video_backgrounds/useIsVideoBackgroundSupported.tsx";
 import UserSettingsVoiceInputOptionsDefault from "UserSettingsVoiceInputOptions.tsx";
 import UserSettingsVoiceOutputOptionsDefault from "UserSettingsVoiceOutputOptions.tsx";
 import UserSettingsSoundboardVolumeDefault from "UserSettingsSoundboardVolume.tsx";
 import UserSettingsVoiceOverlayDefault from "UserSettingsVoiceOverlay.tsx";
 import UserSettingsVoiceProcessingDefault from "UserSettingsVoiceProcessing.tsx";
+import VideoBackgroundOptionsRadioGroupDefault from "../../../video_backgrounds/native/VideoBackgroundOptionsRadioGroup.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const isMobileOverlaySupported = fn(10327).isMobileOverlaySupported;
-const guideURL = fn(10328).USER_SETTINGS_VOICE_GUILD_URL;
+const isMobileOverlaySupported = fn(9424).isMobileOverlaySupported;
+const guideURL = fn(9425).USER_SETTINGS_VOICE_GUILD_URL;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4829);
@@ -28,8 +30,9 @@ export default function UserSettingsVoice() {
   let nonContextualStreamOutputPresent = MobileAudioOutputExperimentDefault.useConfig({
     location: "NewUserSettingsVoice",
   }).nonContextualStreamOutputPresent;
+  const tmp4 = useIsVideoBackgroundSupportedDefault();
   const obj2 = { style: tmp.container, children: null };
-  const items = [timestampProducer(UserSettingsVoiceInputOptionsDefault, {}), , , , , ,];
+  const items = [timestampProducer(UserSettingsVoiceInputOptionsDefault, {}), , , , , , ,];
   if (nonContextualStreamOutputPresent) {
     nonContextualStreamOutputPresent = timestampProducer(UserSettingsVoiceOutputOptionsDefault, {});
   }
@@ -40,12 +43,21 @@ export default function UserSettingsVoice() {
   items[2] = timestampProducer(Text_Text.Text, obj3);
   items[3] = timestampProducer(UserSettingsSoundboardVolumeDefault, {});
   const obj4 = { guideURL };
-  const obj5 = { spacing: 24, children: null };
   items[4] = isMobileOverlaySupported() && timestampProducer(UserSettingsVoiceOverlayDefault, {});
   items[5] = timestampProducer(UserSettingsVoiceProcessingDefault, {});
-  items[6] = timestampProducer(common_SafeAreaView.SafeAreaPaddingView, { bottom: true });
-  obj5.children = items;
-  obj2.children = React5(Stack_Stack.Stack, obj5);
+  let tmp5Result = tmp4;
+  if (tmp4) {
+    const obj5 = { title: null };
+    const intl2 = util.intl;
+    obj5.title = intl2.string(util.t.lZTUPs);
+    tmp5Result = timestampProducer(VideoBackgroundOptionsRadioGroupDefault, obj5);
+    const tmp2Result = VideoBackgroundOptionsRadioGroupDefault;
+  }
+  const obj6 = { spacing: 24, children: null };
+  items[6] = tmp5Result;
+  items[7] = timestampProducer(common_SafeAreaView.SafeAreaPaddingView, { bottom: true });
+  obj6.children = items;
+  obj2.children = React5(Stack_Stack.Stack, obj6);
   return timestampProducer(View, obj2);
 }
 export const UserSettingsTableRowGroup = function UserSettingsTableRowGroup(arg0) {

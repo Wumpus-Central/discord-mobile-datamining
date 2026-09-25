@@ -114,7 +114,6 @@ const obj = {
     neverLoadBeforeConnectionOpen: true,
   },
   ChannelCallManager: {
-    actions: ["GUILD_LOCAL_RING_START", "GUILD_RING_STOP"],
     inlineRequire() {
       return require("ChannelCallManager").default;
     },

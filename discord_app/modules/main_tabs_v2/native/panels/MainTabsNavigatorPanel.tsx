@@ -49,11 +49,11 @@ export default noop.memo(function MainTabsNavigatorPanel() {
       let obj = require;
       let result = dependencyMap;
       if (isChatLockedOpen) {
-        obj = obj(16423);
+        obj = obj(15603);
         result = obj.convertPortraitToLandscapeScreens();
       } else {
-        obj(4695).dismissKeyboard();
-        const objResult = obj(4695);
+        obj(4697).dismissKeyboard();
+        const objResult = obj(4697);
         const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
       }
       closure_4.current = true;

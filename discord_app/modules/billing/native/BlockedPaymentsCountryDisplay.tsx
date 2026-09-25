@@ -4,8 +4,8 @@ import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import _modDef11785 from "../../../../_runtime/metro/11785__.js";
-import _modDef11786 from "../../../../_runtime/metro/11786__.js";
+import _modDef10967 from "../../../../_runtime/metro/10967__.js";
+import _modDef10968 from "../../../../_runtime/metro/10968__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -40,9 +40,9 @@ export default function BlockedPaymentsCountryDisplay() {
   items[1] = timestampProducer(native.LegacyText, obj3);
   const obj6 = { style: tmp.image, source: null };
   if (obj7.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef11785;
+    let tmp2Result = _modDef10967;
   } else {
-    tmp2Result = _modDef11786;
+    tmp2Result = _modDef10968;
   }
   obj6.source = tmp2Result;
   items[2] = timestampProducer(React4, obj6);

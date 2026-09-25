@@ -34,7 +34,7 @@ let closure_15 = async function _navigateToGuild() {
   return "flex";
 };
 GlobalDiscoveryServersSearchResultsStoreDefault;
-const GlobalDiscoveryServersConstants = fn(9941);
+const GlobalDiscoveryServersConstants = fn(9039);
 ({
   GlobalDiscoveryServerTab: closure_7,
   FEATURED_GUILDS_CACHE_DURATION: closure_8,
@@ -220,16 +220,15 @@ export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildS
     presenceCount: null,
     memberCount: null,
     premiumSubscriptionCount: "r",
-    preferredLocale: "isArray",
-    discoverySplash: "astronauta",
-    emojis: "astronauta maschio",
+    preferredLocale: "channel",
+    discoverySplash: null,
+    emojis: [],
   };
   ({
     approximate_presence_count: obj.presenceCount,
     approximate_member_count: obj.memberCount,
     discovery_splash: obj.discoverySplash,
   } = id);
-  obj.emojis = [];
   return obj;
 };
 export const getLanguageCodeFallback = function getLanguageCodeFallback() {

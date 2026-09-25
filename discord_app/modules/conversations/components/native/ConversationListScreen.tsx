@@ -21,7 +21,7 @@ function keyExtractor(conversationId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const ConversationConstants = fn(7925);
+const ConversationConstants = fn(7010);
 ({
   MAX_CONVERSATIONS_PER_CHANNEL: closure_9,
   MOBILE_FETCH_LIMIT: c10,
@@ -280,7 +280,7 @@ export default function ConversationListScreen() {
   obj8.ListFooterComponent = memo1;
   obj8.onViewableItemsChanged = callback1;
   obj8.viewabilityConfig = viewabilityConfig;
-  obj7.children = jsx(tmp(9077).FlashList, {
+  obj7.children = jsx(tmp(8171).FlashList, {
     data: memo,
     renderItem,
     keyExtractor,

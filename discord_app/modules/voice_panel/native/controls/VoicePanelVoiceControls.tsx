@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import MetaQuestUtils from "../../../device/MetaQuestUtils.android.tsx";
 import UserSettings from "../../../user_settings/UserSettings.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06985_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06068_LegacyBaseButton.js";
 import getEmbeddedActivityLaunchability from "../../../activities/utils/getEmbeddedActivityLaunchability.tsx";
 import MobileAudioOutputExperimentDefault from "../../../media_engine/MobileAudioOutputExperiment.tsx";
 import UserSettingsVoiceProcessing from "../../../user_settings/voice/native/UserSettingsVoiceProcessing.tsx";
@@ -21,7 +21,7 @@ const MobileGoLiveEntrypointExperimentDefault = MobileGoLiveEntrypointExperiment
 
 require = fn;
 function NOOP() {}
-const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(12613).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
+const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(11739).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
 const createStyles = fn(4829);
@@ -63,7 +63,7 @@ let closure_10 = noop.memo((arg0) => {
     items[2] = nonContextualStreamOutputPresent;
     const obj5 = { title: null, hasIcons: true, children: null };
     const intl = util.intl;
-    obj5.title = intl.string(util.t.NiTd0e);
+    obj5.title = intl.string(util.t.dsXapM);
     const items1 = [hasOwnProperty(VoicePanelVoiceControlsButtons.DeafenSwitch, {}), , , ,];
     const obj6 = { channel, connected: tmp2 };
     items1[1] = hasOwnProperty(VoicePanelVoiceControlsButtons.AudioRouteButton, obj6);

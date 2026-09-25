@@ -78,17 +78,17 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = {
-  [USER_INTERACTION]: fn(5377).ChatIcon,
-  [USER_CALLED]: fn(12263).PhoneIcon,
-  [USER_ADD]: fn(4524).FriendsIcon,
-  [GUILD_ADD]: fn(13953).ServerGridIcon,
-  [GUILD_INTERACTION]: fn(5379).ThreadIcon,
-  [PURCHASES]: fn(12265).CreditCardIcon,
+  [USER_INTERACTION]: fn(5378).ChatIcon,
+  [USER_CALLED]: fn(11385).PhoneIcon,
+  [USER_ADD]: fn(4526).FriendsIcon,
+  [GUILD_ADD]: fn(13112).ServerGridIcon,
+  [GUILD_INTERACTION]: fn(5380).ThreadIcon,
+  [PURCHASES]: fn(11387).CreditCardIcon,
   [TOTAL_VOICE_MINUTES]: fn(4791).ClockIcon,
-  [GIFTS]: fn(11387).GiftIcon,
+  [GIFTS]: fn(10485).GiftIcon,
 };
 ({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } =
-  fn(7868).TeenActionDisplayType);
+  fn(6953).TeenActionDisplayType);
 let createStyles = fn(4829);
 let obj3 = {
   row: {

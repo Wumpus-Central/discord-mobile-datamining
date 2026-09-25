@@ -172,6 +172,14 @@ class MessageRecord extends MinimalMessageRecord {
       additional_name = null;
     }
     tmp2.additionalName = additional_name;
+    guild_space_data = global.guild_space_data;
+    if (guild_space_data == null) {
+      guild_space_data = global.guildSpaceData;
+    }
+    if (guild_space_data == null) {
+      guild_space_data = null;
+    }
+    tmp2.guildSpaceData = guild_space_data;
     return tmp2;
   }
 }

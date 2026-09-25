@@ -51,7 +51,7 @@ export default noop.memo(function GIFPickerSearchSuggestions(onClickSuggestion) 
       children: stateFromStoresArray.map((text) => {
         closure_0 = text;
         return closure_1_5(
-          onClickSuggestion(5273).Button,
+          onClickSuggestion(5274).Button,
           {
             size: "sm",
             variant: "secondary",

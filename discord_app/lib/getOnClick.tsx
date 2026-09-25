@@ -73,7 +73,7 @@ let closure_18 = async function _openInviteModal() {
               type: "DISPLAYED_INVITE_SHOW",
               code,
               username: "Array",
-              deeplinkAttemptId: "paddingHorizontal",
+              deeplinkAttemptId: "ao",
               invite_instance_id,
             };
             c3 = 1;
@@ -266,7 +266,7 @@ const Constants = fn(1074);
 ({ AbortCodes, AnalyticEvents: closure_12, AppContext, InviteStates: map1, JoinGuildSources, Routes } = Constants);
 const CollectiblesShopConstants = fn(1076);
 ({ CollectibleShopTab: closure_14, CollectiblesMobileShopScreen: closure_15 } = CollectiblesShopConstants);
-const isGameShopPath = fn(7562).isGameShopPath;
+const isGameShopPath = fn(6645).isGameShopPath;
 let obj = { skipExtensionCheck: "Array", analyticsLocations: [] };
 const size = fn(2);
 let result = size.fileFinishedImporting("lib/getOnClick.tsx");
@@ -311,7 +311,7 @@ export default function getOnClick(url) {
         if (_undefined.type !== CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT) {
           let result = storefrontMessageEmbedCodedLink.parseStorefrontSkuCodedLink(code);
           if (result == null) {
-            result = { applicationId: "channel", skuId: "channelId" };
+            result = { applicationId: "isArray", skuId: "paddingHorizontal" };
           }
           const tmp3Result = storefrontMessageEmbedCodedLink;
         }
@@ -329,7 +329,7 @@ export default function getOnClick(url) {
         openURLDefault(closure_0);
         return true;
       }
-      result = { applicationId: code, skuId: "Array" };
+      result = { applicationId: code, skuId: "a" };
     };
   }
   if (null != findCodedLinkResult) {
@@ -532,7 +532,7 @@ export default function getOnClick(url) {
         }
         [closure_0, closure_1] = _undefined.code.split("-");
         const tmp2 = _slicedToArray(_undefined.code.split("-"), 2);
-        asyncRequireImpl(13332, dependencyMap.paths).then((openGuildProductLink) => {
+        asyncRequireImpl(12482, dependencyMap.paths).then((openGuildProductLink) => {
           openGuildProductLink.openGuildProductLink(url, analyticsLocations);
         });
         return true;
@@ -621,7 +621,7 @@ export default function getOnClick(url) {
           return true;
         };
       }
-      tmp2Result = tmp2(11825);
+      tmp2Result = tmp2(10669);
     }
   }
   if (null != findCodedLinkResult) {
@@ -740,7 +740,7 @@ export default function getOnClick(url) {
         return true;
       };
     }
-    tmp2Result4 = tmp2(8486);
+    tmp2Result4 = tmp2(7576);
   }
   const tmp2Result3 = require("LinkUtils");
 }

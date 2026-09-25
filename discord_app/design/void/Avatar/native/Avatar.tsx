@@ -366,5 +366,5 @@ export default noop.memo((isMobileOnline) => {
     }
   }
 });
-export const AvatarSizes = fn(13417).AvatarSizes;
+export const AvatarSizes = fn(12567).AvatarSizes;
 export { getStatusSize };

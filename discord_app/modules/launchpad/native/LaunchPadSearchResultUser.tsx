@@ -48,8 +48,8 @@ function UserResult(user) {
     obj2.recipientIds = items;
     ChannelActionCreatorsDefault.openPrivateChannel(obj2);
   }, items);
-  const fontScale = user(5280).useFontScale();
-  const obj = user(5280);
+  const fontScale = user(5281).useFontScale();
+  const obj = user(5281);
   const items1 = [LocaleStore];
   const stateFromStores = user(504).useStateFromStores(items1, () => locale.locale);
   let obj2 = user(504);
@@ -72,8 +72,8 @@ function UserResult(user) {
   }
   let relativeTimestamp = null;
   if (null != extractTimestampResult) {
-    relativeTimestamp = tmp6(7965).getRelativeTimestamp(extractTimestampResult);
-    const tmp6Result = tmp6(7965);
+    relativeTimestamp = tmp6(7050).getRelativeTimestamp(extractTimestampResult);
+    const tmp6Result = tmp6(7050);
   }
   let str = "text-muted";
   if (unread) {
@@ -99,12 +99,12 @@ function UserResult(user) {
     isMobileOnline,
     isVROnline,
     status: null,
-    streaming: "bf68e4a330c83d57a9631582cd3cd92c",
-    style: "it.messages.bf68e4a330c83d57a9631582cd3cd92c.compiled.messages",
+    streaming: "6c2cd6dea1431a86f1a7fbd7f37f16cc",
+    style: "pt-BR.messages.6c2cd6dea1431a86f1a7fbd7f37f16cc.compiled.messages",
     size: "jsona",
-    animate: "gds",
-    typing: "sgn",
-    autoStatusCutout: "gom",
+    animate: "relative",
+    typing: null,
+    autoStatusCutout: null,
   };
   let tmp19 = null;
   if (!user.isSystemUser()) {
@@ -152,9 +152,9 @@ function UserResult(user) {
         message: lastMessage,
         color: str,
         muted: flag,
-        layout: tmp6(8210).ChannelListLayoutTypes.COMPACT,
+        layout: tmp6(7299).ChannelListLayoutTypes.COMPACT,
       };
-      tmp14Result = closure_12(tmp6(10455).ChannelRowPreview, obj9);
+      tmp14Result = closure_12(tmp6(9557).ChannelRowPreview, obj9);
     }
   }
   const obj10 = { children: null };
@@ -168,7 +168,7 @@ function UserResult(user) {
   items5[2] = renderChannelContentDefault(obj8);
   obj10.children = items5;
   obj5.children = tmp2Result6(closure_14(closure_13, obj10), { fontScale });
-  return tmp2Result5(closure_12(user(5427).PressableHighlight, obj5));
+  return tmp2Result5(closure_12(user(5428).PressableHighlight, obj5));
 }
 function UserResultWithChannel(arg0) {
   ({ user: require, channel } = arg0);
@@ -186,7 +186,7 @@ function UserResultWithChannel(arg0) {
   const obj4 = {};
   const merged = Object.assign(arg0);
   obj4.channel = channel;
-  obj4.lastMessage = channel(15668)(channel, { unread });
+  obj4.lastMessage = channel(14838)(channel, { unread });
   obj4.unread = unread;
   obj4.mentionCount = mentionCount;
   obj4.muted = stateFromStores;

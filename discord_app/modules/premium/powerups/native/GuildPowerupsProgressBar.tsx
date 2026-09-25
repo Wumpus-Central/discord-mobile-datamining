@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsProgressBar.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05285_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05286_LinearGradient.js";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import openGuildPowerupsModalDefault from "utils/openGuildPowerupsModal.tsx";
 import GuildBoostingProgressBarActionCreators from "../../../guild_boosting/GuildBoostingProgressBarActionCreators.tsx";

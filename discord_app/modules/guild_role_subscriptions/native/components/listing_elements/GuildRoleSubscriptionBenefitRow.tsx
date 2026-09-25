@@ -66,14 +66,14 @@ export const ChannelBenefitRow = function ChannelBenefitRow(benefit) {
     const obj4 = {
       style: tmp.channelIcon,
       size: tmp2(1177).Icon.Sizes.CUSTOM,
-      source: tmp2(5327).getChannelIcon(stateFromStores),
+      source: tmp2(5328).getChannelIcon(stateFromStores),
     };
     const items2 = [closure_5(tmp2(1177).Icon, obj4)];
     const obj5 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: tmp6 };
     items2[1] = closure_5(tmp2(4825).Text, obj5);
     obj3.children = items2;
     tmp8 = closure_6(View, obj3);
-    const tmp2Result = tmp2(5327);
+    const tmp2Result = tmp2(5328);
   }
   if (null != benefit.emoji_id) {
     let str = benefit.emoji_id;

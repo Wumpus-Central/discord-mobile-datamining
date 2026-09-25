@@ -185,7 +185,7 @@ export default noop.forwardRef((arg0, ref) => {
         substr = trimmed.substring(1);
         tmp2 = substr;
       }
-      const validateDiscordTagResult = sourcePage(10091).validateDiscordTag(tmp2);
+      const validateDiscordTagResult = sourcePage(9188).validateDiscordTag(tmp2);
       if (null != validateDiscordTagResult) {
         let obj3 = { status: constants.ERROR, field: constants2.DISCORD_TAG, message: validateDiscordTagResult };
         closure_6(obj3);
@@ -195,7 +195,7 @@ export default noop.forwardRef((arg0, ref) => {
         const obj6 = {
           discordTag: tmp2,
           context: { location: "Search - Add Friend Search" },
-          errorUxConfig: sourcePage(10087).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED,
+          errorUxConfig: sourcePage(9184).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED,
           note: null,
         };
         let tmp9;
@@ -203,8 +203,8 @@ export default noop.forwardRef((arg0, ref) => {
           tmp9 = trimmed1;
         }
         obj6.note = tmp9;
-        const obj5 = ref(10087);
-        ref(10087)
+        const obj5 = ref(9184);
+        ref(9184)
           .sendRequest(obj6)
           .then(
             () => {
@@ -263,9 +263,9 @@ export default noop.forwardRef((arg0, ref) => {
               closure_6(obj3);
             },
           );
-        const sendRequestResult = ref(10087).sendRequest(obj6);
+        const sendRequestResult = ref(9184).sendRequest(obj6);
       }
-      let obj = sourcePage(10091);
+      let obj = sourcePage(9188);
     }
   }
   ({ style, onFocus, autoFocusInput, headerText } = arg0);
@@ -384,7 +384,7 @@ export default noop.forwardRef((arg0, ref) => {
     obj7.disabled = str.trim().length <= 0;
     obj7.onPress = handleSubmitEditing;
     obj7.loading = first1.status === constants2.LOADING;
-    items6[2] = closure_9(sourcePage(5273).Button, obj7);
+    items6[2] = closure_9(sourcePage(5274).Button, obj7);
     obj5.children = items6;
     return closure_10(closure_11, obj5);
   } else {
@@ -413,7 +413,7 @@ export default noop.forwardRef((arg0, ref) => {
       }
     }
     obj10.status = str2;
-    items8[1] = closure_9(sourcePage(7418).TextArea, obj10);
+    items8[1] = closure_9(sourcePage(6501).TextArea, obj10);
     if (first1.status !== constants2.ERROR) {
       const obj11 = { style: tmp.messageFooterText, variant: "text-xs/medium", color: "text-muted", children: null };
       let intl2 = sourcePage(1115).intl;

@@ -34,7 +34,7 @@ class OrSeparator {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const CreateGuildConstants = fn(7311);
+const CreateGuildConstants = fn(6394);
 ({ CREATE_GUILD_SMALL_SCREEN_MAX_HEIGHT: metroRequire, CreateGuildModalStates: closure_7 } = CreateGuildConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
@@ -163,7 +163,7 @@ export default function JoinServer(arg0) {
   obj13.loading = submitting;
   obj13.disabled = submitting;
   obj13.onPress = onDone;
-  items5[1] = closure_8(navigation(5273).Button, obj13);
+  items5[1] = closure_8(navigation(5274).Button, obj13);
   items5[2] = closure_8(OrSeparator, {});
   const obj14 = { size: "lg", variant: "secondary", text: null, accessibilityLabel: null, onPress: null };
   const intl8 = tmp4(1115).intl;
@@ -171,7 +171,7 @@ export default function JoinServer(arg0) {
   const intl9 = tmp4(1115).intl;
   obj14.accessibilityLabel = intl9.string(navigation(1115).t["MOqX/G"]);
   obj14.onPress = callback;
-  items5[3] = closure_8(navigation(5273).Button, obj14);
+  items5[3] = closure_8(navigation(5274).Button, obj14);
   obj11.children = items5;
   items4[1] = closure_9(closure_10, obj11);
   obj2.children = items4;

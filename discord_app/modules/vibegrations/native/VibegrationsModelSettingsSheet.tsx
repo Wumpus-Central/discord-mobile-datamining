@@ -87,7 +87,7 @@ class VibegrationsModelSettingsContent {
   }
 }
 const View = fn(17).View;
-const sendModelSettings = fn(13457).sendModelSettings;
+const sendModelSettings = fn(12607).sendModelSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const size = fn(2);

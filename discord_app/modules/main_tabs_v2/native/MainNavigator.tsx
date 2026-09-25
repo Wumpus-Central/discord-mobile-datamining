@@ -64,7 +64,7 @@ function getAccountStanding() {
   return require("SuspendedUserPage").default;
 }
 const View = fn(17).View;
-let animation = fn(16358).StackNavigationAnimationSettings;
+let animation = fn(15538).StackNavigationAnimationSettings;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, DrawerSourceTypes: closure_9 } = Constants);
 const jsxProd = fn(21);
@@ -103,7 +103,7 @@ function getChannelScreen() {
             type = action.type;
           }
         }
-        obj = animation(4695);
+        obj = animation(4697);
         if ("GO_BACK" === type) {
           let SWIPE = constants2.BACK_BUTTON;
         } else {
@@ -114,9 +114,9 @@ function getChannelScreen() {
       },
     },
     options(arg0) {
-      const obj = { headerShown: true, header: styles(8194).renderHeader };
+      const obj = { headerShown: true, header: styles(7283).renderHeader };
       ({ navigation, route } = arg0);
-      const merged = Object.assign(styles(8194).getDefaultChannelStackHeaderProps(navigation, route));
+      const merged = Object.assign(styles(7283).getDefaultChannelStackHeaderProps(navigation, route));
       const merged1 = Object.assign(animation2);
       obj.animation = animation;
       return obj;
@@ -197,7 +197,7 @@ export default noop.memo(function StackNavigator() {
               if (closure_1_15) {
                 str = "default";
               }
-              const merged = Object.assign(animation(8194).getDefaultStackHeaderProps(navigation.navigation));
+              const merged = Object.assign(animation(7283).getDefaultStackHeaderProps(navigation.navigation));
               const merged1 = Object.assign(animation2);
               return { orientation: str, headerShown: false };
             },
@@ -248,7 +248,7 @@ export default noop.memo(function StackNavigator() {
                     type = action.type;
                   }
                 }
-                obj = animation(4695);
+                obj = animation(4697);
                 if ("GO_BACK" === type) {
                   let SWIPE = constants2.BACK_BUTTON;
                 } else {
@@ -259,9 +259,9 @@ export default noop.memo(function StackNavigator() {
               },
             },
             options(arg0) {
-              const obj = { headerShown: true, header: styles(8194).renderHeader };
+              const obj = { headerShown: true, header: styles(7283).renderHeader };
               ({ navigation, route } = arg0);
-              const merged = Object.assign(styles(8194).getDefaultChannelStackHeaderProps(navigation, route));
+              const merged = Object.assign(styles(7283).getDefaultChannelStackHeaderProps(navigation, route));
               const merged1 = Object.assign(animation2);
               obj.animation = animation;
               return obj;
@@ -282,7 +282,7 @@ export default noop.memo(function StackNavigator() {
         name: "conversations",
         getComponent: getConversationsComponent,
         options() {
-          return stateFromStores(11277)();
+          return stateFromStores(10375)();
         },
       }),
       closure_2_10(closure_16.Screen, { name: "auth", getComponent: getAuthComponent, options }),
@@ -343,7 +343,7 @@ export default noop.memo(function StackNavigator() {
           str = "modal";
         }
         const obj = {};
-        const merged = Object.assign(stateFromStores(11277)({ presentation: str }));
+        const merged = Object.assign(stateFromStores(10375)({ presentation: str }));
         const params3 = route.params;
         let presentation;
         if (params3 != null) {
@@ -399,7 +399,7 @@ export default noop.memo(function StackNavigator() {
             if (closure_1_15) {
               str = "default";
             }
-            const merged = Object.assign(animation(8194).getDefaultStackHeaderProps(navigation.navigation));
+            const merged = Object.assign(animation(7283).getDefaultStackHeaderProps(navigation.navigation));
             const merged1 = Object.assign(animation2);
             return { orientation: str, headerShown: false };
           },
@@ -450,7 +450,7 @@ export default noop.memo(function StackNavigator() {
                   type = action.type;
                 }
               }
-              obj = animation(4695);
+              obj = animation(4697);
               if ("GO_BACK" === type) {
                 let SWIPE = constants2.BACK_BUTTON;
               } else {
@@ -461,9 +461,9 @@ export default noop.memo(function StackNavigator() {
             },
           },
           options(arg0) {
-            const obj = { headerShown: true, header: styles(8194).renderHeader };
+            const obj = { headerShown: true, header: styles(7283).renderHeader };
             ({ navigation, route } = arg0);
-            const merged = Object.assign(styles(8194).getDefaultChannelStackHeaderProps(navigation, route));
+            const merged = Object.assign(styles(7283).getDefaultChannelStackHeaderProps(navigation, route));
             const merged1 = Object.assign(animation2);
             obj.animation = animation;
             return obj;
@@ -481,7 +481,7 @@ export default noop.memo(function StackNavigator() {
       name: "conversations",
       getComponent: getConversationsComponent,
       options() {
-        return stateFromStores(11277)();
+        return stateFromStores(10375)();
       },
     };
     const obj8 = { name: "auth", getComponent: getAuthComponent, options };
@@ -505,7 +505,7 @@ export default noop.memo(function StackNavigator() {
     items1[7] = closure_2_10(closure_16.Screen, {
       name: "settings",
       options() {
-        const tmp = stateFromStores(11277);
+        const tmp = stateFromStores(10375);
         let obj2;
         if (obj.isIpadOS()) {
           obj2 = { presentation: "modal" };
@@ -522,13 +522,13 @@ export default noop.memo(function StackNavigator() {
       name: "sidebar",
       getComponent: getChannelDetailsComponent,
       options() {
-        return stateFromStores(11277)({ lockOrientation: false });
+        return stateFromStores(10375)({ lockOrientation: false });
       },
     });
     const obj16 = {
       name: "settings",
       options() {
-        const tmp = stateFromStores(11277);
+        const tmp = stateFromStores(10375);
         let obj2;
         if (obj.isIpadOS()) {
           obj2 = { presentation: "modal" };
@@ -545,7 +545,7 @@ export default noop.memo(function StackNavigator() {
       name: "sidebar",
       getComponent: getChannelDetailsComponent,
       options() {
-        return stateFromStores(11277)({ lockOrientation: false });
+        return stateFromStores(10375)({ lockOrientation: false });
       },
     };
     tmp5Result = PlatformUtils2;
@@ -585,7 +585,7 @@ export default noop.memo(function StackNavigator() {
           }
           str2 = str3;
         }
-        const merged = Object.assign(stateFromStores(11277)({ presentation: str2 }));
+        const merged = Object.assign(stateFromStores(10375)({ presentation: str2 }));
         return obj;
       },
       getComponent: getModalComponent,

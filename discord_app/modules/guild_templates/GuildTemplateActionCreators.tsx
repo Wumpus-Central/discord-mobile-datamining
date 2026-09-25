@@ -231,18 +231,18 @@ export default {
     }
     obj = DispatcherDefault;
   },
-  loadTemplatesForGuild(arg0) {
+  loadTemplatesForGuild(guildId) {
     const HTTP = HTTPUtils.HTTP;
-    const obj = { url: React3.GUILD_TEMPLATES(arg0), oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const obj = { url: React3.GUILD_TEMPLATES(guildId), oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     value = HTTP.get(obj);
     return value.then((body) => {
       DispatcherDefault.dispatch({ type: "GUILD_TEMPLATE_LOAD_FOR_GUILD_SUCCESS", guildTemplates: body.body });
       return body;
     });
   },
-  createGuildTemplate(arg0, name, description) {
+  createGuildTemplate(guildId, name, description) {
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: React3.GUILD_TEMPLATES(arg0), body: { name, description }, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = { url: React3.GUILD_TEMPLATES(guildId), body: { name, description }, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     const obj = { name, description };
     return HTTP.post(request).then((body) => {
       DispatcherDefault.dispatch({ type: "GUILD_TEMPLATE_CREATE_SUCCESS", guildTemplate: body.body, code: body.body.code });

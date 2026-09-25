@@ -238,12 +238,12 @@ export default function OneTimeLoginModal(token) {
     angleOverride: 0,
     mixAmount: null,
   };
-  let obj3 = { dark: token(4647).OverlayOpacity.LEVEL_1 };
+  let obj3 = { dark: token(4649).OverlayOpacity.LEVEL_1 };
   obj2.mixAmount = obj3;
   const items6 = [closure_13(ThemedGradientDefault, obj2)];
   let obj4 = { style: tmp.container, children: null };
   let obj5 = { style: tmp.centerContent, children: null };
-  const items7 = [closure_13(callback3, { source: token(14229), style: tmp.logo })];
+  const items7 = [closure_13(callback3, { source: token(13390), style: tmp.logo })];
   const obj7 = { style: tmp.loadingContainer, children: null };
   const items8 = [closure_13(callback2, {})];
   const obj8 = { variant: "text-lg/semibold", children: null };
@@ -264,7 +264,7 @@ export default function OneTimeLoginModal(token) {
   obj11.text = intl3.string(token(1115).t.FIEwfG);
   obj11.onPress = onPress;
   obj11.textStyle = tmp.link;
-  items10[1] = closure_13(token(7273).LinkButton, obj11);
+  items10[1] = closure_13(token(6356).LinkButton, obj11);
   obj9.children = items10;
   items9[1] = closure_14(callback1, obj9);
   obj4.children = items9;

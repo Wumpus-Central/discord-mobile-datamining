@@ -12,7 +12,7 @@ export default {
     DispatcherDefault.dispatch({ type: "SAFETY_HUB_APPEAL_OPEN", classificationId: classificationId.classificationId });
     const obj2 = { type: "SAFETY_HUB_APPEAL_OPEN", classificationId: classificationId.classificationId };
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(12229, dependencyMap.paths),
+      asyncRequireImpl(11351, dependencyMap.paths),
       classificationId,
       APPEAL_INGESTION_MODAL_KEY,
     );

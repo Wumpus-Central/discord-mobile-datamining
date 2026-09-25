@@ -93,8 +93,8 @@ function ImageInput(openImageInputActionSheet) {
 }
 get_ActivityIndicator = fn(17);
 ({ Keyboard: closure_4, TouchableOpacity: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const DraftType = fn(5192).DraftType;
-const PollsConstants = fn(8158);
+const DraftType = fn(5193).DraftType;
+const PollsConstants = fn(7243);
 ({ MAX_POLL_ANSWER_LENGTH: closure_9, POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY: c10 } = PollsConstants);
 const EmojiIntention = fn(1375).EmojiIntention;
 const jsxProd = fn(21);
@@ -197,7 +197,7 @@ export default function PollAnswerInput(answer) {
       image: answer.image,
       openExpressionPicker,
       openImageInputActionSheet() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12569, dependencyMap.paths), closure_2_10, {
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11695, dependencyMap.paths), closure_2_10, {
           channelId,
           index,
           answer,

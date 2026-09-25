@@ -207,6 +207,8 @@ const obj19 = {
   [21]: "AURORA",
   BLURPLE_TWILIGHT: 22,
   [22]: "BLURPLE_TWILIGHT",
+  HEXAGON: 23,
+  [23]: "HEXAGON",
 };
 const obj20 = { AUTO: 0, [0]: "AUTO", H12: 1, [1]: "H12", H23: 2, [2]: "H23" };
 const obj21 = {

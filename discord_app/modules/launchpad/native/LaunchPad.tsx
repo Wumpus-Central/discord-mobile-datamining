@@ -76,7 +76,7 @@ function createAndAppendChannel(item10022, set, items) {
   }
 }
 const View = fn(17).View;
-let NavigationHistoryStore = fn(7658);
+let NavigationHistoryStore = fn(6741);
 ({ CHANNEL_PREFIX: closure_8, getIdFromHistoryItem: closure_9, GUILD_PREFIX: c10 } = NavigationHistoryStore);
 let NavigationHistoryStore = NavigationHistoryStore_mod;
 const ChannelRecord = fn(2048);
@@ -370,11 +370,11 @@ let closure_35 = noop.memo((tab) => {
 });
 const results = [];
 let items = [
-  fn(10182).AutocompleterResultTypes.GUILD,
-  fn(10182).AutocompleterResultTypes.TEXT_CHANNEL,
-  fn(10182).AutocompleterResultTypes.GROUP_DM,
-  fn(10182).AutocompleterResultTypes.VOICE_CHANNEL,
-  fn(10182).AutocompleterResultTypes.USER,
+  fn(9279).AutocompleterResultTypes.GUILD,
+  fn(9279).AutocompleterResultTypes.TEXT_CHANNEL,
+  fn(9279).AutocompleterResultTypes.GROUP_DM,
+  fn(9279).AutocompleterResultTypes.VOICE_CHANNEL,
+  fn(9279).AutocompleterResultTypes.USER,
 ];
 const __initData3 = {
   code: "function LaunchPadTsx3(){const{sharedState}=this.__closure;return sharedState.get()===0;}",

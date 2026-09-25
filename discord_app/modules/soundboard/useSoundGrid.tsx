@@ -49,7 +49,7 @@ function addTopSoundsSection(items, stateFromStores3, arg2) {
     items.push(obj2);
   }
 }
-const SoundboardConstants = fn(5313);
+const SoundboardConstants = fn(5314);
 ({ DEFAULT_SOUND_GUILD_ID: closure_11, EMPTY_SOUND_LIST: closure_12 } = SoundboardConstants);
 const PremiumTypes = fn(1374).PremiumTypes;
 const size = fn(2);
@@ -267,7 +267,7 @@ export default function useSoundGrid(guild_id) {
       };
       const _Array = Array;
       obj6.potentialSoundIdsForSection = Array.from(size);
-      obj6.sectionType = tmp13(5320).SoundboardSoundGridSectionType.FAVORITES;
+      obj6.sectionType = tmp13(5321).SoundboardSoundGridSectionType.FAVORITES;
       obj6.sortSoundsFn = sortSoundsOldestToNewestCreationDate;
       (function _addSectionForPotentialSoundIds(sectionType) {
         ({ sections, allSounds, potentialSoundIdsForSection } = sectionType);
@@ -333,7 +333,7 @@ export default function useSoundGrid(guild_id) {
           sound,
           index,
         }));
-        const tmp29 = value6.length < tmp13(4722).getMaxSoundboardSlots(stateFromStores1) && stateFromStores2;
+        const tmp29 = value6.length < tmp13(4724).getMaxSoundboardSlots(stateFromStores1) && stateFromStores2;
         let tmp31 = !tmp29;
         if (!tmp29) {
           tmp31 = !tmp30;
@@ -342,7 +342,7 @@ export default function useSoundGrid(guild_id) {
           tmp31 = tmp33;
         }
         if (!tmp31) {
-          const obj8 = { type: tmp13(5320).SoundboardSoundItemType.ADD_SOUND, guild: stateFromStores1 };
+          const obj8 = { type: tmp13(5321).SoundboardSoundItemType.ADD_SOUND, guild: stateFromStores1 };
           mapped.push(obj8);
         }
         if (tmp33) {
@@ -351,7 +351,7 @@ export default function useSoundGrid(guild_id) {
         if (!tmp33) {
           const obj9 = { categoryInfo: null, key: null, items: null };
           const obj10 = {
-            type: tmp13(5320).SoundboardSoundGridSectionType.GUILD,
+            type: tmp13(5321).SoundboardSoundGridSectionType.GUILD,
             guild: stateFromStores1,
             isNitroLocked: false,
           };
@@ -360,17 +360,17 @@ export default function useSoundGrid(guild_id) {
           obj9.items = mapped;
           items.push(obj9);
         }
-        const tmp13Result = tmp13(4722);
+        const tmp13Result = tmp13(4724);
       }
       if (!c12) {
         let value7 = allSounds.get(closure_2_11);
         if (value7 == null) {
           value7 = closure_2_12;
         }
-        const obj11 = { key: tmp13(5320).SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
-        const obj12 = { type: tmp13(5320).SoundboardSoundGridSectionType.DEFAULTS };
+        const obj11 = { key: tmp13(5321).SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
+        const obj12 = { type: tmp13(5321).SoundboardSoundGridSectionType.DEFAULTS };
         obj11.categoryInfo = obj12;
-        const sortSoundsOldestToNewestCreationDate2 = tmp13(17630).sortSoundsOldestToNewestCreationDate;
+        const sortSoundsOldestToNewestCreationDate2 = tmp13(16854).sortSoundsOldestToNewestCreationDate;
         let result1 = value7;
         if (null != sortSoundsOldestToNewestCreationDate2) {
           result1 = sortSoundsOldestToNewestCreationDate2(value7);
@@ -434,10 +434,10 @@ export default function useSoundGrid(guild_id) {
         if (value8 == null) {
           value8 = closure_2_12;
         }
-        const obj14 = { key: tmp13(5320).SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
-        const obj15 = { type: tmp13(5320).SoundboardSoundGridSectionType.DEFAULTS };
+        const obj14 = { key: tmp13(5321).SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
+        const obj15 = { type: tmp13(5321).SoundboardSoundGridSectionType.DEFAULTS };
         obj14.categoryInfo = obj15;
-        const sortSoundsOldestToNewestCreationDate3 = tmp13(17630).sortSoundsOldestToNewestCreationDate;
+        const sortSoundsOldestToNewestCreationDate3 = tmp13(16854).sortSoundsOldestToNewestCreationDate;
         let result2 = value8;
         if (null != sortSoundsOldestToNewestCreationDate3) {
           result2 = sortSoundsOldestToNewestCreationDate3(value8);

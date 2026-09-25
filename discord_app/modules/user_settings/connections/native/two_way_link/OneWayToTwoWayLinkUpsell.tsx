@@ -90,7 +90,7 @@ export const OneWayToTwoWayLinkUpsell = function OneWayToTwoWayLinkUpsell(newInd
   const intl = newIndicatorDismissibleContent(1115).intl;
   obj8.text = intl.string(newIndicatorDismissibleContent(1115).t.vD60Pv);
   obj8.onPress = onPress;
-  obj7.children = closure_6(newIndicatorDismissibleContent(5273).Button, obj8);
+  obj7.children = closure_6(newIndicatorDismissibleContent(5274).Button, obj8);
   items3[2] = closure_6(View, obj7);
   obj.children = items3;
   return closure_7(View, obj);

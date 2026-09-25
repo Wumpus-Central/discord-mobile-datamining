@@ -32,8 +32,8 @@ export default function BountiesModalEndedCtaButtons(bounty) {
     flag = false;
   }
   const tmp = closure_5();
-  closure_3 = bounty(11829).useGetQuestImpressionId();
-  let obj = bounty(11829);
+  closure_3 = bounty(10698).useGetQuestImpressionId();
+  let obj = bounty(10698);
   const fn = function y() {
     let num = 0;
     if (visible) {
@@ -41,12 +41,12 @@ export default function BountiesModalEndedCtaButtons(bounty) {
     }
     return { opacity: timing.withTiming(num, timingPresets.timingStandard) };
   };
-  let obj2 = bounty(4561);
+  let obj2 = bounty(4563);
   fn.__closure = { withTiming: bounty(4830).withTiming, visible, timingStandard: bounty(4833).timingStandard };
   fn.__workletHash = 11417131685254;
   fn.__initData = __initData;
   const animatedStyle = obj2.useAnimatedStyle(fn);
-  bounty(15387);
+  bounty(14553);
   if (visible) {
     const obj4 = { style: null, children: null };
     const items = [tmp.container, animatedStyle];
@@ -67,7 +67,7 @@ export default function BountiesModalEndedCtaButtons(bounty) {
         });
       },
     };
-    const items1 = [closure_3(tmp2(5273).Button, obj5)];
+    const items1 = [closure_3(tmp2(5274).Button, obj5)];
     let tmp9Result = null;
     if (showCloseButton) {
       const obj6 = { variant: "secondary-overlay", text: null, size: "lg", disabled: null, onPress: null };
@@ -75,11 +75,11 @@ export default function BountiesModalEndedCtaButtons(bounty) {
       obj6.text = intl.string(tmp2(1115).t.cpT0Cq);
       obj6.disabled = flag;
       obj6.onPress = bounty.onClose;
-      tmp9Result = tmp9(tmp2(5273).Button, obj6);
+      tmp9Result = tmp9(tmp2(5274).Button, obj6);
     }
     items1[1] = tmp9Result;
     obj4.children = items1;
-    visible = closure_4(visible(4561).View, obj4);
+    visible = closure_4(visible(4563).View, obj4);
     tmp9 = closure_3;
   }
   return visible;

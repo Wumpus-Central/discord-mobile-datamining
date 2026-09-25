@@ -68,7 +68,7 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
   let isScreenLandscape;
   closure_18 = undefined;
   let tmp = ref();
-  let obj = sharedValue(9484);
+  let obj = sharedValue(8582);
   ref = noop.useRef(null);
   const tmp7 = first1(noop.useState(false), 2);
   const first = tmp7[0];
@@ -78,20 +78,20 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
   noop = tmp9[1];
   closure_5 = noop.useRef(true);
   sharedValue = undefined;
-  const isPartnerApplicationResult = sharedValue(9484).isPartnerApplication(application);
-  sharedValue = sharedValue(4561).useSharedValue(null);
-  let obj3 = sharedValue(4561);
+  const isPartnerApplicationResult = sharedValue(8582).isPartnerApplication(application);
+  sharedValue = sharedValue(4563).useSharedValue(null);
+  let obj3 = sharedValue(4563);
   let fn = function t() {
     return { height: sharedValue.get() };
   };
   fn.__closure = { height: sharedValue };
   fn.__workletHash = 23826674246;
   fn.__initData = __initData;
-  const animatedStyle = sharedValue(4561).useAnimatedStyle(fn);
-  const obj4 = sharedValue(4561);
-  const sectionName = sharedValue(9484).getSectionName(application);
-  const obj5 = sharedValue(9484);
-  const str = sharedValue(9484).getSectionDescription(application);
+  const animatedStyle = sharedValue(4563).useAnimatedStyle(fn);
+  const obj4 = sharedValue(4563);
+  const sectionName = sharedValue(8582).getSectionName(application);
+  const obj5 = sharedValue(8582);
+  const str = sharedValue(8582).getSectionDescription(application);
   let tmp28Result5 = null != str;
   if (tmp28Result5) {
     tmp28Result5 = str.trim().length > 0;
@@ -104,7 +104,7 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
   colors = tmp6Result4[1];
   ref = obj2.useRef(0);
   __initData = obj2.useRef(0);
-  const obj6 = sharedValue(9484);
+  const obj6 = sharedValue(8582);
   [tmp18, c14] = first1(noop.useState(false), 2);
   const tmp6Result6 = first1(noop.useState(false), 2);
   first2 = tmp6Result6[0];
@@ -118,8 +118,8 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
     return result;
   }, items);
   const tmp6Result5 = first1(noop.useState(false), 2);
-  isScreenLandscape = sharedValue(5430).useIsScreenLandscape();
-  const tmp24 = first(8622)(isScreenLandscape);
+  isScreenLandscape = sharedValue(5431).useIsScreenLandscape();
+  const tmp24 = first(7712)(isScreenLandscape);
   closure_18 = tmp24;
   const items1 = [isScreenLandscape, tmp24];
   const effect = obj2.useEffect(() => {
@@ -130,7 +130,7 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
     }
   }, items1);
   let tmp27 = first;
-  const tmp2Result = sharedValue(5430);
+  const tmp2Result = sharedValue(5431);
   if (first) {
     tmp27 = !first1;
   }
@@ -234,7 +234,7 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
         colors,
         style: tmp.maskFade,
       };
-      items8[1] = tmp30(tmp23(5285), obj19);
+      items8[1] = tmp30(tmp23(5286), obj19);
       if (num2 == null) {
         num2 = 0;
       }
@@ -246,7 +246,7 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
       items6[1] = tmp28(tmp31, obj16);
       obj15.children = items6;
       let tmp30Result6 = tmp28(tmp31, obj15);
-      const tmp23Result2 = tmp23(5285);
+      const tmp23Result2 = tmp23(5286);
     } else {
       const items9 = [absoluteFill, tmp.maskFill];
       obj14.style = items9;
@@ -255,7 +255,7 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
     const obj22 = { maskElement: tmp30Result6, children: null };
     const obj23 = { variant: "text-sm/medium", color: "text-default", lineClamp: num4, children: memo };
     obj22.children = tmp30(tmp2(4825).Text, obj23);
-    const items10 = [tmp30(tmp23(5969), obj22), ,];
+    const items10 = [tmp30(tmp23(5971), obj22), ,];
     let tmp30Result7 = null;
     if (tmp27) {
       const obj24 = { style: tmp.viewMoreCTA, children: null };
@@ -294,12 +294,12 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
     items10[2] = tmp30Result8;
     obj13.children = items10;
     tmp28Result4 = tmp28(sharedValue, obj13);
-    const tmp23Result = tmp23(5969);
+    const tmp23Result = tmp23(5971);
   }
   items5[1] = tmp28Result4;
   obj8.children = items5;
   obj7.children = closure_9(closure_5, obj8);
-  const children = [num2(first(4561).View, obj7)];
+  const children = [num2(first(4563).View, obj7)];
   let tmp28Result6 = !first2;
   if (!first2) {
     const obj27 = { style: null, onLayout: null, children: null };

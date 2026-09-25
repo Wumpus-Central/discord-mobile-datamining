@@ -57,11 +57,11 @@ function FocusedControlsExpanded(availableHeight) {
 function FocusedControlsBottomDrawerTooltip(positionY) {
   positionY = positionY.positionY;
   const tmp = closure_18();
-  const canShowTooltip = positionY(9861).useCanShowTooltip(
+  const canShowTooltip = positionY(8959).useCanShowTooltip(
     positionY(1094).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS,
     true,
   );
-  positionY(4561);
+  positionY(4563);
   const fn = function o() {
     return { opacity: 1 - Math.min((-1 * positionY.get()) / c15, 1) };
   };
@@ -111,10 +111,10 @@ function FocusedControlsAboveActionBarView(positionY) {
     children: null,
   };
   const obj4 = { style: tmp.aboveActionBarContainer, children: null };
-  const animatedStyle = positionY(4561).useAnimatedStyle(fn);
+  const animatedStyle = positionY(4563).useAnimatedStyle(fn);
   const items = [
     closure_13(FocusedControlsBottomDrawerTooltip, { positionY }),
-    closure_13(positionY(7487).ActionSheetHeaderBar, {}),
+    closure_13(positionY(6570).ActionSheetHeaderBar, {}),
   ];
   let tmp4Result = null != aboveActionBar;
   if (tmp4Result) {
@@ -122,7 +122,7 @@ function FocusedControlsAboveActionBarView(positionY) {
     const items1 = [tmp.aboveActionBarChildrenContainer, animatedStyle];
     obj5.style = items1;
     obj5.children = aboveActionBar;
-    tmp4Result = closure_13(offsetY(4561).View, obj5);
+    tmp4Result = closure_13(offsetY(4563).View, obj5);
   }
   items[2] = tmp4Result;
   obj4.children = items;
@@ -702,9 +702,9 @@ get_ActivityIndicator = fn(17);
   ScrollView: closure_7,
   StyleSheet,
 } = get_ActivityIndicator);
-const ChannelCallStore = fn(9723);
+const ChannelCallStore = fn(8821);
 ({ clearFocusTimer: closure_8, resetFocusTimer: closure_9 } = ChannelCallStore);
-const ChannelCallConstants = fn(9724);
+const ChannelCallConstants = fn(8822);
 ({ BOX_MODE_THRESHOLD_WIDTH: c10, BOX_MODE_ACTIONSHEET_HEIGHT: closure_11 } = ChannelCallConstants);
 const Constants = fn(1074);
 ({ ComponentActions: closure_12, Fonts } = Constants);

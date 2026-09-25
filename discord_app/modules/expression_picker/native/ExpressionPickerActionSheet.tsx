@@ -16,8 +16,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 
 require = fn;
-let closure_5 = fn(7484).ACTION_SHEET_START_HEIGHT_RATIO;
-const STICKER_FORMATS = fn(10621).STICKER_FORMATS;
+let closure_5 = fn(6567).ACTION_SHEET_START_HEIGHT_RATIO;
+const STICKER_FORMATS = fn(9725).STICKER_FORMATS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const size = fn(2);

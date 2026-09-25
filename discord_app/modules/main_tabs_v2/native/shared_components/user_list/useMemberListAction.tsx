@@ -14,9 +14,9 @@ const View = fn(17).View;
 const Constants = fn(1074);
 ({ Permissions: c10, AnalyticsSections: closure_11, InstantInviteSources: closure_12 } = Constants);
 const jsx = fn(21).jsx;
-let closure_14 = { listActionRenderer: "channel", listActionHeight: "channelId" };
+let closure_14 = { listActionRenderer: "isArray", listActionHeight: "paddingHorizontal" };
 const createStyles = fn(4829);
-let closure_15 = createStyles.createStyles({ wrapper: { paddingTop: fn(10561).USERS_LIST_PADDING_BETWEEN_SECTIONS } });
+let closure_15 = createStyles.createStyles({ wrapper: { paddingTop: fn(9663).USERS_LIST_PADDING_BETWEEN_SECTIONS } });
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx",

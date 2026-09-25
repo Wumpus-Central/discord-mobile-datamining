@@ -367,8 +367,8 @@ let closure_13 = async function _updateGuildJoinRequest() {
       obj2.title = intl.string(closure_1_0(1115).t.DxJj4e);
       const intl2 = closure_1_0(1115).intl;
       obj2.body = intl2.string(closure_1_0(1115).t.rSAOk9);
-      closure_1_1(5195).show(obj2);
-      const obj = closure_1_1(5195);
+      closure_1_1(5196).show(obj2);
+      const obj = closure_1_1(5196);
     }
     return Promise.reject(error);
   });
@@ -621,7 +621,7 @@ let closure_17 = async function _createOrEnterJoinRequestInterview(arg0) {
   }
 };
 let closure_4 = fn(2048).createChannelRecordFromServer;
-const joinRequestFromServer = fn(4651).joinRequestFromServer;
+const joinRequestFromServer = fn(4653).joinRequestFromServer;
 const Constants = fn(1074);
 ({ AbortCodes: closure_7, Endpoints: closure_8 } = Constants);
 const size = fn(2);

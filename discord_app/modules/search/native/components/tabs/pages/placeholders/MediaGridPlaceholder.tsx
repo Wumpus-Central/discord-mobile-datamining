@@ -13,7 +13,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(8209);
+const SearchConstants = fn(7298);
 ({
   MEDIA_NUM_COLUMNS: hasOwnProperty,
   MEDIA_ITEM_GAP_WIDTH: metroRequire,
@@ -123,5 +123,5 @@ export const RecentsMediaGridPlaceholder = function RecentsMediaGridPlaceholder(
     }),
   ];
   obj2.children = items4;
-  return closure_8(numRows(4561).View, obj2);
+  return closure_8(numRows(4563).View, obj2);
 };

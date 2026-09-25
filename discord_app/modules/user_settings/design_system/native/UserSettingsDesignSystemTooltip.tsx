@@ -48,11 +48,11 @@ function Content() {
     };
   }, items1);
   const tmp8 = first2(items, 2);
-  const tooltip = first1(11481).useTooltip(ref, memo);
+  const tooltip = first1(10579).useTooltip(ref, memo);
   const obj3 = { children: null };
   const obj4 = {
     style: tmp.container,
-    children: closure_5(first1(5273).Button, {
+    children: closure_5(first1(5274).Button, {
       ref,
       onPress() {
         closure_1(!first1);
@@ -64,8 +64,8 @@ function Content() {
   };
   const items2 = [
     closure_5(View, obj4),
-    closure_5(first1(7533).TableSwitchRow, { label: "Unlock Orientation", value: tmp9, onValueChange: tmp10 }),
-    closure_5(first1(7533).TableSwitchRow, { label: "Enable Bottom Position", value: first2, onValueChange: tmp11[1] }),
+    closure_5(first1(6616).TableSwitchRow, { label: "Unlock Orientation", value: tmp9, onValueChange: tmp10 }),
+    closure_5(first1(6616).TableSwitchRow, { label: "Enable Bottom Position", value: first2, onValueChange: tmp11[1] }),
     closure_5(TooltipNote, {}),
   ];
   obj3.children = items2;
