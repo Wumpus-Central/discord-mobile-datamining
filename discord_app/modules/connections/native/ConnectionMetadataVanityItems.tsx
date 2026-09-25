@@ -1,15 +1,15 @@
-// === Module 11913: ConnectionMetadataVanityItems ===
+// === Module 11056: ConnectionMetadataVanityItems ===
 
-// Module 11913 (ConnectionMetadataVanityItems)
+// Module 11056 (ConnectionMetadataVanityItems)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import NumberUtils from "NumberUtils" /* 1881 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import ConnectionsUtils from "ConnectionsUtils" /* 5712 */;
-import _modDef11914 from "module_11914" /* 11914 */;
-import _modDef11915 from "module_11915" /* 11915 */;
+import ConnectionsUtils from "ConnectionsUtils" /* 5714 */;
+import _modDef11057 from "module_11057" /* 11057 */;
+import _modDef11058 from "module_11058" /* 11058 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -83,7 +83,7 @@ function VanityDate(arg0) {
   return timestampProducer(Text_Text.Text, obj);
 }
 const View = fn(17).View;
-const Constants = fn(5713);
+const Constants = fn(5715);
 ({ MetadataFields: closure_4, MetadataItemTypes: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
@@ -192,7 +192,7 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     const intl = util.intl;
     const obj3 = { count: NumberResult1 };
     obj2.label = intl.format(util.t.Y88M5x, obj3);
-    obj2.imageSrc = _modDef11914;
+    obj2.imageSrc = _modDef11057;
     const intl2 = util.intl;
     obj2.imageAlt = intl2.string(util.t.HKUEZo);
     items.push(timestampProducer(VanityItem, obj2, constants.STEAM_ITEM_COUNT_DOTA2));
@@ -202,7 +202,7 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     const intl3 = util.intl;
     const obj5 = { count: NumberResult2 };
     obj4.label = intl3.format(util.t.Y88M5x, obj5);
-    obj4.imageSrc = _modDef11915;
+    obj4.imageSrc = _modDef11058;
     const intl4 = util.intl;
     obj4.imageAlt = intl4.string(util.t.C8p1Sh);
     items.push(timestampProducer(VanityItem, obj4, constants.STEAM_ITEM_COUNT_TF2));

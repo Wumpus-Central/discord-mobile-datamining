@@ -1,14 +1,14 @@
-// === Module 10510: NotificationSettingsMessageUnread ===
+// === Module 9612: NotificationSettingsMessageUnread ===
 
-// Module 10510 (NotificationSettingsMessageUnread)
+// Module 9612 (NotificationSettingsMessageUnread)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import Pressables from "Pressables" /* 5427 */;
-import notificationSettingsPresetOptionUtils from "notificationSettingsPresetOptionUtils" /* 10504 */;
-import NotificationSettingsMockChannelsDefault from "NotificationSettingsMockChannels" /* 10511 */;
+import Pressables from "Pressables" /* 5428 */;
+import notificationSettingsPresetOptionUtils from "notificationSettingsPresetOptionUtils" /* 9606 */;
+import NotificationSettingsMockChannelsDefault from "NotificationSettingsMockChannels" /* 9613 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -71,7 +71,7 @@ export const NotificationSettingsGuildMessageUnread = function NotificationSetti
     style: style.style,
     setting: require("notificationSettingsGuildFlagUtils").useGuildPresetSettings(style.guildId).unread,
     onCustomize() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10513, dependencyMap.paths), "MessageUnreadActionSheet", { guildId: style.guildId });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9615, dependencyMap.paths), "MessageUnreadActionSheet", { guildId: style.guildId });
     }
   };
   return closure_4(NotificationSettingsMessageUnread, obj);
@@ -82,7 +82,7 @@ export const NotificationSettingsChannelMessageUnread = function NotificationSet
     style: style.style,
     setting: require("notficationSettingsChannelFlagUtils").useChannelPresetSettings(style.channel).unread,
     onCustomize() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10515, dependencyMap.paths), "MessageUnreadActionSheet", { channel: style.channel });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9617, dependencyMap.paths), "MessageUnreadActionSheet", { channel: style.channel });
     }
   };
   return closure_4(NotificationSettingsMessageUnread, obj);

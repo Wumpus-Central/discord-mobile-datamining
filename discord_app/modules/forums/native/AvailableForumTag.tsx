@@ -1,13 +1,13 @@
-// === Module 11601: AvailableForumTag ===
+// === Module 10806: AvailableForumTag ===
 
-// Module 11601 (AvailableForumTag)
+// Module 10806 (AvailableForumTag)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import EmojiDefault from "Emoji" /* 7463 */;
-import native from "native" /* 9264 */;
+import EmojiDefault from "Emoji" /* 6546 */;
+import native from "native" /* 8362 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5764 */;
+import EmojiStore from "EmojiStore" /* 5766 */;
 
 const require = globalThis.__r;
 

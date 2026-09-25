@@ -1,9 +1,9 @@
-// === Module 9051: BattlenetNeutralIcon ===
+// === Module 8145: BattlenetNeutralIcon ===
 
-// Module 9051 (BattlenetNeutralIcon)
+// Module 8145 (BattlenetNeutralIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4525 */;
-import _mod9052 from "module_9052" /* 9052 */;
+import BaseIconImage from "BaseIconImage" /* 4527 */;
+import _mod8146 from "module_8146" /* 8146 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const BattlenetNeutralIcon = function BattlenetNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9052, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8146, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

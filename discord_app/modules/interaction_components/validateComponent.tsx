@@ -1,6 +1,6 @@
-// === Module 8474: validateComponent ===
+// === Module 7564: validateComponent ===
 
-// Module 8474 (validateComponent)
+// Module 7564 (validateComponent)
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1115 */;
 import Server from "Server" /* 1978 */;

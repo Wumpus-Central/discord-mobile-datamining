@@ -1,11 +1,11 @@
-// === Module 12945: UserSettingsAuthedAppDeleteWarningModal ===
+// === Module 12076: UserSettingsAuthedAppDeleteWarningModal ===
 
-// Module 12945 (UserSettingsAuthedAppDeleteWarningModal)
+// Module 12076 (UserSettingsAuthedAppDeleteWarningModal)
 import util from "util" /* 1115 */;
-import AlertModal from "AlertModal" /* 5201 */;
-import InfoBox from "InfoBox" /* 10146 */;
-import isSocialLayerApplication from "isSocialLayerApplication" /* 11869 */;
-import shouldWarnAuthorizedAppTwoWayDefault from "shouldWarnAuthorizedAppTwoWay" /* 12946 */;
+import AlertModal from "AlertModal" /* 5202 */;
+import InfoBox from "InfoBox" /* 9243 */;
+import isSocialLayerApplication from "isSocialLayerApplication" /* 11012 */;
+import shouldWarnAuthorizedAppTwoWayDefault from "shouldWarnAuthorizedAppTwoWay" /* 12077 */;
 import jsxProd from "jsxProd" /* 21 */;
 import size from "module_2" /* 2 */;
 

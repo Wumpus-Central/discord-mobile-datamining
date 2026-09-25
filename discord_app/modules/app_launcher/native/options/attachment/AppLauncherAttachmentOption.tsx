@@ -1,11 +1,11 @@
-// === Module 12517: AppLauncherAttachmentOption ===
+// === Module 11643: AppLauncherAttachmentOption ===
 
-// Module 12517 (AppLauncherAttachmentOption)
+// Module 11643 (AppLauncherAttachmentOption)
 import nativeDefault from "native" /* 576 */;
-import FileIcon from "FileIcon" /* 10480 */;
-import AttachmentPreviewDefault from "AttachmentPreview" /* 10544 */;
+import FileIcon from "FileIcon" /* 9582 */;
+import AttachmentPreviewDefault from "AttachmentPreview" /* 9646 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 5191 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 5192 */;
 
 require = fn;
 function AttachmentPreviewAppLauncher(arg0) {
@@ -16,7 +16,7 @@ function AttachmentPreviewAppLauncher(arg0) {
   return jsx(AttachmentPreviewDefault, { uri, isImage, isVideo, width, height, style: tmp.selectedImage, defaultPreview: jsx(FileIcon.FileIcon, { size: "sm" }) });
 }
 const View = fn(17).View;
-const DraftType = fn(5192).DraftType;
+const DraftType = fn(5193).DraftType;
 const jsx = fn(21).jsx;
 const createStyles = fn(4829);
 let obj2 = { imageIconWrapper: null, selectedImage: null };

@@ -1,7 +1,7 @@
-// === Module 17563: LaunchPadNotificationCenter ===
+// === Module 16787: LaunchPadNotificationCenter ===
 
-// Module 17563 (LaunchPadNotificationCenter)
-import notifications_NotificationsDefault from "notifications/Notifications" /* 16828 */;
+// Module 16787 (LaunchPadNotificationCenter)
+import notifications_NotificationsDefault from "notifications/Notifications" /* 16014 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

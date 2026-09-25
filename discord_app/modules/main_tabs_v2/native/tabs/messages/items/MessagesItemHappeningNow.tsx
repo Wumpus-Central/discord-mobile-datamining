@@ -1,16 +1,16 @@
-// === Module 16484: MessagesItemHappeningNow ===
+// === Module 15664: MessagesItemHappeningNow ===
 
-// Module 16484 (MessagesItemHappeningNow)
+// Module 15664 (MessagesItemHappeningNow)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4526 */;
-import CutoutBackgroundContext from "CutoutBackgroundContext" /* 9175 */;
-import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12529 */;
-import HappeningNowDefault from "HappeningNow" /* 16485 */;
+import useToken from "useToken" /* 4528 */;
+import CutoutBackgroundContext from "CutoutBackgroundContext" /* 8269 */;
+import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 11655 */;
+import HappeningNowDefault from "HappeningNow" /* 15665 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(15645);
+const HappeningNowConstants = fn(14815);
 ({ HAPPENING_NOW_CARD_HEIGHT: closure_4, HappeningNowItem } = HappeningNowConstants);
 const jsx = fn(21).jsx;
 const items = [, , , , , , ];

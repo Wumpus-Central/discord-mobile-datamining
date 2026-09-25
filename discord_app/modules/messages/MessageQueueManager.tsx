@@ -1,8 +1,8 @@
-// === Module 17933: MessageQueueManager ===
+// === Module 17159: MessageQueueManager ===
 
-// Module 17933 (MessageQueueManager)
-import MessageQueueDefault from "MessageQueue" /* 8163 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7451 */;
+// Module 17159 (MessageQueueManager)
+import MessageQueueDefault from "MessageQueue" /* 7248 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6534 */;
 
 class MessageQueueManager extends tmp2 {
   constructor() {

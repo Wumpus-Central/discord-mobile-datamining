@@ -1,8 +1,8 @@
-// === Module 4623: CheckpointIntroRive ===
+// === Module 4625: CheckpointIntroRive ===
 
-// Module 4623 (CheckpointIntroRive)
-import BaseRive from "BaseRive" /* 4555 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 4610 */;
+// Module 4625 (CheckpointIntroRive)
+import BaseRive from "BaseRive" /* 4557 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 4612 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

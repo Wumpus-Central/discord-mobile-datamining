@@ -1,19 +1,19 @@
-// === Module 17326: FriendsScreen ===
+// === Module 16541: FriendsScreen ===
 
-// Module 17326 (FriendsScreen)
+// Module 16541 (FriendsScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1875 */;
 import SendMessageIcon from "SendMessageIcon" /* 4773 */;
-import components_Button_Button from "components/Button/Button" /* 5273 */;
-import TableRow from "TableRow" /* 5910 */;
-import native from "native" /* 5997 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8527 */;
-import NoResultsDefault from "NoResults" /* 11348 */;
-import _modDef16871 from "module_16871" /* 16871 */;
+import components_Button_Button from "components/Button/Button" /* 5274 */;
+import TableRow from "TableRow" /* 5912 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7617 */;
+import NoResultsDefault from "NoResults" /* 10446 */;
+import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 14620 */;
+import _modDef16057 from "module_16057" /* 16057 */;
 import noop from "module_19" /* 19 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7981 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7066 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 
 const require = globalThis.__r;
 
@@ -80,7 +80,7 @@ export default function FriendsScreen() {
     }
     const items = [];
     if (tmp2) {
-      const obj = { icon: _modDef16871, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
+      const obj = { icon: _modDef16057, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
       const intl = util.intl;
       obj.label = intl.string(util.t.fyA115);
       const intl2 = util.intl;
@@ -101,7 +101,7 @@ export default function FriendsScreen() {
       const intl3 = util.intl;
       obj2.title = intl3.string(util.t["oi+B4p"]);
       obj2.containerStyle = closure_1.emptyContainer;
-      obj2.illustration = native.WumpusCouchSpotIllustration;
+      obj2.illustration = WumpusCouchSpotIllustration.WumpusCouchSpotIllustration;
       const obj3 = { style: null, children: null };
       const items1 = [closure_1.buttonContainer, ];
       const obj4 = { paddingBottom: bottom };
@@ -123,7 +123,7 @@ export default function FriendsScreen() {
       let v1IEawz = require;
       let obj9 = dependencyMap;
       let obj7 = { start: true, end: true, icon: null, trailing: null, label: null, subLabel: null, onPress: null };
-      const obj8 = { source: _modDef16871 };
+      const obj8 = { source: _modDef16057 };
       obj7.icon = React5(TableRow.TableRow.Icon, obj8);
       obj7.trailing = React5(TableRow.TableRow.Arrow, {});
       const intl5 = util.intl;

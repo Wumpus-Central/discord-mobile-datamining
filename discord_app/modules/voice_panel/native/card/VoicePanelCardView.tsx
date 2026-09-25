@@ -1,18 +1,18 @@
-// === Module 17699: VoicePanelCardView ===
+// === Module 16923: VoicePanelCardView ===
 
-// Module 17699 (VoicePanelCardView)
+// Module 16923 (VoicePanelCardView)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1115 */;
-import native from "native" /* 4535 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4536 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
-import Suspender from "Suspender" /* 5226 */;
-import spring from "spring" /* 5272 */;
-import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7406 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9747 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11347 */;
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 12619 */;
-import VoicePanelCardDefault from "VoicePanelCard" /* 17700 */;
+import native from "native" /* 4537 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4538 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
+import Suspender from "Suspender" /* 5227 */;
+import spring from "spring" /* 5273 */;
+import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 6489 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 8845 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 10445 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11745 */;
+import VoicePanelCardDefault from "VoicePanelCard" /* 16924 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4845 */;
@@ -160,11 +160,11 @@ function CardContentFreezer(children) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VoicePanelConstants = fn(12615);
+const VoicePanelConstants = fn(11741);
 ({ LAYOUT_PHYSICS: closure_8, VoicePanelModes: closure_9, UI_SHOW_HIDE_PHYSICS, VOICE_PANEL_CHUNK_DIVISOR } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(12613).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17656).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(12618).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(11739).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(16880).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(11744).EDGE_GUTTER;
 const isUserParticipant = fn(4850).isUserParticipant;
 const jsx = fn(21).jsx;
 let SCALE_PHYSICS = {};

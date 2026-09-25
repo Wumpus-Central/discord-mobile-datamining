@@ -1,9 +1,9 @@
-// === Module 16432: getJankScreenName ===
+// === Module 15612: getJankScreenName ===
 
-// Module 16432 (getJankScreenName)
-import RootNavigationRef from "RootNavigationRef" /* 4687 */;
-import getScreenAnalyticsName from "getScreenAnalyticsName" /* 16434 */;
-import JankScreenConstants from "JankScreenConstants" /* 16433 */;
+// Module 15612 (getJankScreenName)
+import RootNavigationRef from "RootNavigationRef" /* 4689 */;
+import getScreenAnalyticsName from "getScreenAnalyticsName" /* 15614 */;
+import JankScreenConstants from "JankScreenConstants" /* 15613 */;
 import size from "module_2" /* 2 */;
 
 function resolveScreenName(items) {
@@ -184,7 +184,7 @@ export default function getJankScreenName() {
         obj7.rendered = items.concat(items2);
         ({ focused, rendered } = obj7);
         if (0 === focused.length) {
-          let obj9 = { screen, expectedScreenIds: "", focusedRoute: "category" };
+          let obj9 = { screen, expectedScreenIds: "", focusedRoute: "paddingHorizontal" };
           let obj15 = obj9;
         } else {
           obj15 = { screen: resolveScreenName(focused), expectedScreenIds: null, focusedRoute: null };

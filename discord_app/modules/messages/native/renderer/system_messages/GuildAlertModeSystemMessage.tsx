@@ -1,15 +1,15 @@
-// === Module 8381: GuildAlertModeSystemMessage ===
+// === Module 7470: GuildAlertModeSystemMessage ===
 
-// Module 8381 (GuildAlertModeSystemMessage)
+// Module 7470 (GuildAlertModeSystemMessage)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AvatarUtils from "AvatarUtils" /* 1397 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1400 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8301 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8308 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8310 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8312 */;
-import getTagPropertiesDefault from "getTagProperties" /* 8382 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 7390 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7397 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7399 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7401 */;
+import getTagPropertiesDefault from "getTagProperties" /* 7471 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 
 require = fn;

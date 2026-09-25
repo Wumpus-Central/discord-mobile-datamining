@@ -1,6 +1,6 @@
-// === Module 7820: ReadStates ===
+// === Module 6905: ReadStates ===
 
-// Module 7820 (ReadStates)
+// Module 6905 (ReadStates)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;

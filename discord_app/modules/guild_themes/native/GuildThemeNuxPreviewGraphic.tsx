@@ -1,8 +1,8 @@
-// === Module 16589: GuildThemeNuxPreviewGraphic ===
+// === Module 15769: GuildThemeNuxPreviewGraphic ===
 
-// Module 16589 (GuildThemeNuxPreviewGraphic)
+// Module 15769 (GuildThemeNuxPreviewGraphic)
 import nativeDefault from "native" /* 576 */;
-import GuildThemePreviewArtDefault from "GuildThemePreviewArt" /* 16590 */;
+import GuildThemePreviewArtDefault from "GuildThemePreviewArt" /* 15770 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

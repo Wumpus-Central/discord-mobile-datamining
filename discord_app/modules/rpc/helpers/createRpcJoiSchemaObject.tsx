@@ -1,6 +1,6 @@
-// === Module 9667: createRpcJoiSchemaObject ===
+// === Module 8765: createRpcJoiSchemaObject ===
 
-// Module 9667 (createRpcJoiSchemaObject)
+// Module 8765 (createRpcJoiSchemaObject)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/rpc/helpers/createRpcJoiSchemaObject.tsx");

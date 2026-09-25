@@ -1,9 +1,9 @@
-// === Module 12014: retrySendMessage ===
+// === Module 11157: retrySendMessage ===
 
-// Module 12014 (retrySendMessage)
+// Module 11157 (retrySendMessage)
 import MessageConstants from "MessageConstants" /* 4822 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7786 */;
-import handleUploadAttachmentErrors from "handleUploadAttachmentErrors" /* 9504 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 6871 */;
+import handleUploadAttachmentErrors from "handleUploadAttachmentErrors" /* 8602 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

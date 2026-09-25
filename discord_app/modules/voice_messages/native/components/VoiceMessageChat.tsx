@@ -1,11 +1,11 @@
-// === Module 12995: VoiceMessageChat ===
+// === Module 12126: VoiceMessageChat ===
 
-// Module 12995 (VoiceMessageChat)
+// Module 12126 (VoiceMessageChat)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4561 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4563 */;
 import timing from "timing" /* 4830 */;
-import spring from "spring" /* 5272 */;
-import utils_TimeUtils from "utils/TimeUtils" /* 5473 */;
+import spring from "spring" /* 5273 */;
+import utils_TimeUtils from "utils/TimeUtils" /* 5475 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4821 */;
@@ -184,8 +184,8 @@ function Duration(animationValue) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator } = get_ActivityIndicator);
-let useVoiceMessagesUIStore = fn(12302).useVoiceMessagesUIStore;
-const VoiceMessageConstants = fn(12303);
+let useVoiceMessagesUIStore = fn(11428).useVoiceMessagesUIStore;
+const VoiceMessageConstants = fn(11429);
 ({ VOICE_RECORDING_MAX_DURATION_MILLIS: closure_8, VOICE_RECORDING_MAX_DURATION_OFFSET: closure_9, VOICE_RECORDING_REALLY_WARN_DURATION_MILLIS: c10, VOICE_RECORDING_WARN_DURATION_MILLIS: closure_11, WAVEFORM_WAVE_MAX_VALUE: closure_12 } = VoiceMessageConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);

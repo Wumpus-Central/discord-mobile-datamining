@@ -1,6 +1,6 @@
-// === Module 10526: MessageFailedToSendNotification ===
+// === Module 9628: MessageFailedToSendNotification ===
 
-// Module 10526 (MessageFailedToSendNotification)
+// Module 9628 (MessageFailedToSendNotification)
 import nativeDefault from "native" /* 576 */;
 import Client from "Client" /* 4759 */;
 import transitionToChannel from "transitionToChannel" /* 4840 */;
@@ -33,14 +33,14 @@ export default noop.memo(function MessageFailedToSendNotification(notification) 
   const obj2 = { icon: null, children: null, header: null, onPress: null, notification: null };
   const obj3 = { style: closure_6().iconContainer, children: null };
   const tmp = closure_6();
-  obj3.children = jsx(channelId(10527).RetryIcon, { size: "md", color: messageId(576).colors.ICON_SUBTLE });
+  obj3.children = jsx(channelId(9629).RetryIcon, { size: "md", color: messageId(576).colors.ICON_SUBTLE });
   obj2.icon = <View style={closure_6().iconContainer}>{null}</View>;
   const obj5 = { text: null };
   const intl2 = channelId(1115).intl;
   obj5.text = intl2.string(channelId(1115).t.xxRPOT);
-  obj2.children = jsx(channelId(10453).SystemMessageText, { text: null });
+  obj2.children = jsx(channelId(9555).SystemMessageText, { text: null });
   obj2.header = obj;
   obj2.onPress = callback;
   obj2.notification = notification;
-  return jsx(channelId(10517).NotificationPressable, { icon: null, children: null, header: null, onPress: null, notification: null });
+  return jsx(channelId(9619).NotificationPressable, { icon: null, children: null, header: null, onPress: null, notification: null });
 });

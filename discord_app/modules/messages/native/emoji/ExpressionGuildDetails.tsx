@@ -1,17 +1,17 @@
-// === Module 10688: ExpressionGuildDetails ===
+// === Module 9792: ExpressionGuildDetails ===
 
-// Module 10688 (ExpressionGuildDetails)
+// Module 9792 (ExpressionGuildDetails)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import GuildIconDefault from "GuildIcon" /* 5889 */;
-import FastImageDefault from "FastImage" /* 5892 */;
-import guild_GuildUtils from "guild/GuildUtils" /* 10687 */;
+import GuildIconDefault from "GuildIcon" /* 5891 */;
+import FastImageDefault from "FastImage" /* 5894 */;
+import guild_GuildUtils from "guild/GuildUtils" /* 9791 */;
 import noop from "module_19" /* 19 */;
 
-const GuildBadgeDefault = tmp8(5895);
+const GuildBadgeDefault = tmp8(5897);
 require = fn;
 const View = fn(17).View;
-const React4 = fn(5890).ExpressionSourceGuildRecord;
+const React4 = fn(5892).ExpressionSourceGuildRecord;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4829);

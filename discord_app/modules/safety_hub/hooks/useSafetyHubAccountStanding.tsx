@@ -1,8 +1,8 @@
-// === Module 12225: useSafetyHubAccountStanding ===
+// === Module 11347: useSafetyHubAccountStanding ===
 
-// Module 12225 (useSafetyHubAccountStanding)
+// Module 11347 (useSafetyHubAccountStanding)
 import initialize from "initialize" /* 504 */;
-import SafetyHubStore from "SafetyHubStore" /* 8781 */;
+import SafetyHubStore from "SafetyHubStore" /* 7873 */;
 
 require = fn;
 const size = fn(2);

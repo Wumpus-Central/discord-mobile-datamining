@@ -1,6 +1,6 @@
-// === Module 8766: AgeVerificationIncodeModal ===
+// === Module 7856: AgeVerificationIncodeModal ===
 
-// Module 8766 (AgeVerificationIncodeModal)
+// Module 7856 (AgeVerificationIncodeModal)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 

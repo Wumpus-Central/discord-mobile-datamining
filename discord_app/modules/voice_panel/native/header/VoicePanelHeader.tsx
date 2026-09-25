@@ -1,27 +1,27 @@
-// === Module 17668: VoicePanelHeader ===
+// === Module 16892: VoicePanelHeader ===
 
-// Module 17668 (VoicePanelHeader)
+// Module 16892 (VoicePanelHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
 import timing from "timing" /* 4830 */;
 import useChannelName from "useChannelName" /* 4982 */;
-import spring from "spring" /* 5272 */;
-import StageMusicActionCreators from "StageMusicActionCreators" /* 10260 */;
-import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 10380 */;
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 12619 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 17602 */;
-import useStableParticipant from "useStableParticipant" /* 17672 */;
+import spring from "spring" /* 5273 */;
+import StageMusicActionCreators from "StageMusicActionCreators" /* 9357 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 9482 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11745 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 16826 */;
+import useStableParticipant from "useStableParticipant" /* 16896 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4845 */;
-import ExperimentStore from "ExperimentStore" /* 4744 */;
-import StageMusicStore from "StageMusicStore" /* 10246 */;
+import ExperimentStore from "ExperimentStore" /* 4746 */;
+import StageMusicStore from "StageMusicStore" /* 9343 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
-import SpeakingStore from "SpeakingStore" /* 5724 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
+import SpeakingStore from "SpeakingStore" /* 5726 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -49,7 +49,7 @@ function MusicMuteButton(channelId) {
       }
       const obj3 = {
         accessibilityLabel: stringResult,
-        icon: importDefault(stateFromStores ? 10257 : 10259),
+        icon: importDefault(stateFromStores ? 9354 : 9356),
         onPress() {
               return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
             }
@@ -62,11 +62,11 @@ function MusicMuteButton(channelId) {
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(12615);
+const VoicePanelConstants = fn(11741);
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
 ({ UI_SHOW_HIDE_PHYSICS: closure_16, VoicePanelModes: closure_17, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_18 } = VoicePanelConstants);
-const EDGE_GUTTER = fn(12618).EDGE_GUTTER;
-const VoicePanelControlsModes = fn(12613).VoicePanelControlsModes;
+const EDGE_GUTTER = fn(11744).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(11739).VoicePanelControlsModes;
 const ParticipantTypes = fn(4850).ParticipantTypes;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);

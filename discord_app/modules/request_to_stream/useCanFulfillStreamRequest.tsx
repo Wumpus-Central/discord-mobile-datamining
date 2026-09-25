@@ -1,12 +1,12 @@
-// === Module 12107: useCanFulfillStreamRequest ===
+// === Module 11252: useCanFulfillStreamRequest ===
 
-// Module 12107 (useCanFulfillStreamRequest)
+// Module 11252 (useCanFulfillStreamRequest)
 import RunningGameStore from "RunningGameStore" /* 1999 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4851 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
 import PresenceStore from "PresenceStore" /* 4869 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4852 */;
 

@@ -1,13 +1,13 @@
-// === Module 16247: ShelfBlock ===
+// === Module 15426: ShelfBlock ===
 
-// Module 16247 (ShelfBlock)
+// Module 15426 (ShelfBlock)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7515 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7871 */;
-import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 9124 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9127 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6598 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 6956 */;
+import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 8218 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8221 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7872 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 6957 */;
 
 require = fn;
 function ListEdgeSpacer() {

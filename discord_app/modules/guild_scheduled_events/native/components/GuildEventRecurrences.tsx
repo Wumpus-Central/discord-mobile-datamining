@@ -1,10 +1,10 @@
-// === Module 9978: GuildEventRecurrences ===
+// === Module 9076: GuildEventRecurrences ===
 
-// Module 9978 (GuildEventRecurrences)
+// Module 9076 (GuildEventRecurrences)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
-import useGuildEventRecurrencesDefault from "useGuildEventRecurrences" /* 9979 */;
-import GuildEventRecurrenceDefault from "GuildEventRecurrence" /* 9981 */;
+import useGuildEventRecurrencesDefault from "useGuildEventRecurrences" /* 9077 */;
+import GuildEventRecurrenceDefault from "GuildEventRecurrence" /* 9079 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -57,7 +57,7 @@ export default function GuildEventRecurrences(guildEventId) {
         current.scrollToEnd();
       }
     };
-    canViewMoreRecurrences = closure_6(tmp8(5273).Button, obj4);
+    canViewMoreRecurrences = closure_6(tmp8(5274).Button, obj4);
   }
   items[2] = canViewMoreRecurrences;
   obj.children = items;

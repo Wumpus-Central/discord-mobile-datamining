@@ -1,6 +1,6 @@
-// === Module 13463: databaseRestoreResultFromStatus ===
+// === Module 12613: databaseRestoreResultFromStatus ===
 
-// Module 13463 (databaseRestoreResultFromStatus)
+// Module 12613 (databaseRestoreResultFromStatus)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsDatabaseRestoreResult.tsx");

@@ -1,6 +1,6 @@
-// === Module 10505: NotificationSettingsMockMessage ===
+// === Module 9607: NotificationSettingsMockMessage ===
 
-// Module 10505 (NotificationSettingsMockMessage)
+// Module 9607 (NotificationSettingsMockMessage)
 import nativeDefault from "native" /* 576 */;
 import timing from "timing" /* 4830 */;
 import timingPresets from "timingPresets" /* 4833 */;
@@ -28,12 +28,12 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
   const items = [UserStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = require("initialize");
-  let str = sharedValue(4673).getName(stateFromStores);
+  let str = sharedValue(4675).getName(stateFromStores);
   if (str == null) {
     str = "Roka";
   }
   _require = tmp7;
-  const obj2 = sharedValue(4673);
+  const obj2 = sharedValue(4675);
   let num = 0;
   if (notificationSetting.notificationSetting === UserNotificationSettings.NO_MESSAGES) {
     num = 0.8;
@@ -83,7 +83,7 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
   const obj9 = { style: tmp.cardContent, children: null };
   const obj10 = { children: null };
   const obj3 = { withTiming: require("timing").withTiming, opacity: sharedValue, timingStandard: require("timingPresets").timingStandard };
-  obj10.children = tmp12(require("native").Avatar, { source: sharedValue(10506), size: require("native").AvatarSizes.LARGE_48 });
+  obj10.children = tmp12(require("native").Avatar, { source: sharedValue(9608), size: require("native").AvatarSizes.LARGE_48 });
   const items4 = [tmp12(View, obj10), ];
   const obj12 = { style: tmp.cardMessage, children: null };
   const obj13 = { variant: "text-sm/semibold", children: null };
@@ -97,7 +97,7 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
   const obj14 = { style: null };
   const items7 = [animatedStyle, tmp.overlay];
   obj14.style = items7;
-  items6[1] = tmp12(sharedValue(4561).View, obj14);
+  items6[1] = tmp12(sharedValue(4563).View, obj14);
   obj8.children = items6;
   return closure_8(View, obj8);
 };

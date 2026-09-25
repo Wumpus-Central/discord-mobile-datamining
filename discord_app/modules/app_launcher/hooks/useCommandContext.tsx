@@ -1,6 +1,6 @@
-// === Module 12370: useCommandContext ===
+// === Module 11496: useCommandContext ===
 
-// Module 12370 (useCommandContext)
+// Module 11496 (useCommandContext)
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2066 */;
 
@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/app_launcher/hooks/useCommand
 
 export const getCommandContext = function getCommandContext(type) {
   if ("contextless" === type.type) {
-    let obj = { channel: "channel", guild: "channelId" };
+    let obj = { channel: "isArray", guild: "paddingHorizontal" };
   } else {
     obj = { channel: type.channel, guild: GuildStore.getGuild(type.channel.guild_id) };
   }
@@ -20,7 +20,7 @@ export const useCommandContext = function useCommandContext(context) {
   const items = [context];
   return noop.useMemo(() => {
     if ("contextless" === type.type) {
-      let obj = { channel: "channel", guild: "channelId" };
+      let obj = { channel: "isArray", guild: "paddingHorizontal" };
     } else {
       obj = { channel: type.channel, guild: GuildStore.getGuild(type.channel.guild_id) };
     }

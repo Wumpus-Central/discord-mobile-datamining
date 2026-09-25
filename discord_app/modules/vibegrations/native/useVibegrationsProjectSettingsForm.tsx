@@ -1,14 +1,14 @@
-// === Module 17047: useVibegrationsProjectSettingsForm ===
+// === Module 16237: useVibegrationsProjectSettingsForm ===
 
-// Module 17047 (useVibegrationsProjectSettingsForm)
+// Module 16237 (useVibegrationsProjectSettingsForm)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4796 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 5363 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 5364 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2101 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 9389 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8487 */;
 
 const require = globalThis.__r;
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;

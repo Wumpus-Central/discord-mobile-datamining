@@ -1,6 +1,6 @@
-// === Module 11484: useTooltipPosition ===
+// === Module 10582: useTooltipPosition ===
 
-// Module 11484 (useTooltipPosition)
+// Module 10582 (useTooltipPosition)
 import noop from "module_19" /* 19 */;
 
 let size = fn(2);

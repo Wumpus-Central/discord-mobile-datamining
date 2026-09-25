@@ -1,12 +1,12 @@
-// === Module 18434: LogOutDisclaimer ===
+// === Module 17665: LogOutDisclaimer ===
 
-// Module 18434 (LogOutDisclaimer)
+// Module 17665 (LogOutDisclaimer)
 import jsxProd from "jsxProd" /* 21 */;
 import util from "util" /* 1115 */;
 import _modDef2780 from "module_2780" /* 2780 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6922 */;
-import ModalDisclaimer from "ModalDisclaimer" /* 14551 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6005 */;
+import ModalDisclaimer from "ModalDisclaimer" /* 13712 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;

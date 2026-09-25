@@ -1,15 +1,15 @@
-// === Module 9016: UserProfilePersonalWidgetCard ===
+// === Module 8110: UserProfilePersonalWidgetCard ===
 
-// Module 9016 (UserProfilePersonalWidgetCard)
+// Module 8110 (UserProfilePersonalWidgetCard)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import native from "native" /* 4535 */;
+import native from "native" /* 4537 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import FastImageDefault from "FastImage" /* 5892 */;
-import GifTagDefault from "GifTag" /* 8603 */;
-import PersonalWidgetExpandCollapseContext from "PersonalWidgetExpandCollapseContext" /* 9017 */;
-import PersonalWidgetMarkupUtils from "PersonalWidgetMarkupUtils" /* 9018 */;
-import WidgetAssetUtils from "WidgetAssetUtils" /* 9019 */;
+import FastImageDefault from "FastImage" /* 5894 */;
+import GifTagDefault from "GifTag" /* 7693 */;
+import PersonalWidgetExpandCollapseContext from "PersonalWidgetExpandCollapseContext" /* 8111 */;
+import PersonalWidgetMarkupUtils from "PersonalWidgetMarkupUtils" /* 8112 */;
+import WidgetAssetUtils from "WidgetAssetUtils" /* 8113 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -152,7 +152,7 @@ function CoverSection(section) {
     if (null != source) {
       if ("" !== section.title) {
         const obj9 = { colors, locations, style: tmp15.absoluteFill, pointerEvents: "none" };
-        tmp24Result4 = closure_1_10(tmp14(5285), obj9);
+        tmp24Result4 = closure_1_10(tmp14(5286), obj9);
       } else {
         tmp24Result4 = null;
       }
@@ -162,7 +162,7 @@ function CoverSection(section) {
     let tmp24Result5 = null;
     if (showGifTag) {
       const obj10 = { style: tmp.gifTag };
-      tmp24Result5 = closure_1_10(tmp14(8603), obj10);
+      tmp24Result5 = closure_1_10(tmp14(7693), obj10);
     }
     items2[3] = tmp24Result5;
     obj5.children = items2;
@@ -244,7 +244,7 @@ function UserProfilePersonalWidgetCardContent(style) {
   let obj2 = { style: style.cardStyle, titleLeadingIcon: null, title: null, trailingAction: null, children: null };
   let obj = userId(504);
   const tmp5 = disableInteraction;
-  obj2.titleLeadingIcon = closure_10(userId(9020).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
+  obj2.titleLeadingIcon = closure_10(userId(8114).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
   obj2.title = widget.header;
   let tmp4Result = !stateFromStores;
   if (!stateFromStores) {
@@ -252,7 +252,7 @@ function UserProfilePersonalWidgetCardContent(style) {
   }
   if (tmp4Result) {
     const obj3 = { userId, widget };
-    tmp4Result = closure_10(tmp5(9021), obj3);
+    tmp4Result = closure_10(tmp5(8115), obj3);
   }
   obj2.trailingAction = tmp4Result;
   const obj4 = { style: tmp.sectionsContainer, children: null };
@@ -279,7 +279,7 @@ function UserProfilePersonalWidgetCardContent(style) {
   items1[1] = tmp4Result2;
   obj4.children = items1;
   obj2.children = closure_11(closure_7, obj4);
-  return closure_10(disableInteraction(7540), obj2);
+  return closure_10(disableInteraction(6623), obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);

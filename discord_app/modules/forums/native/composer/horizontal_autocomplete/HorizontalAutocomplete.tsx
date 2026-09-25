@@ -1,36 +1,36 @@
-// === Module 10972: HorizontalAutocomplete ===
+// === Module 10076: HorizontalAutocomplete ===
 
-// Module 10972 (HorizontalAutocomplete)
+// Module 10076 (HorizontalAutocomplete)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4561 */;
-import UserUtilsDefault from "UserUtils" /* 4673 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4563 */;
+import UserUtilsDefault from "UserUtils" /* 4675 */;
 import Text_Text from "Text/Text" /* 4825 */;
 import timing from "timing" /* 4830 */;
-import useMountEffectDefault from "useMountEffect" /* 5290 */;
-import FastImageDefault from "FastImage" /* 5892 */;
-import RoleIconUtils from "RoleIconUtils" /* 7520 */;
-import RoleIconDefault from "RoleIcon" /* 7538 */;
-import _modDef8483 from "module_8483" /* 8483 */;
+import useMountEffectDefault from "useMountEffect" /* 5291 */;
+import FastImageDefault from "FastImage" /* 5894 */;
+import RoleIconUtils from "RoleIconUtils" /* 6603 */;
+import RoleIconDefault from "RoleIcon" /* 6621 */;
+import _modDef7573 from "module_7573" /* 7573 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4821 */;
 import GuildRoleStore from "GuildRoleStore" /* 2101 */;
 import GuildStore from "GuildStore" /* 2066 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 import UserStore from "UserStore" /* 1372 */;
-import TextStyles from "TextStyles" /* 5829 */;
+import TextStyles from "TextStyles" /* 5831 */;
 
 require = fn;
 function HorizontalAutocompleteOption(arg0) {
   let sharedValue;
   ({ children, onPress } = arg0);
   const tmp = closure_13();
-  sharedValue = sharedValue(4561).useSharedValue(0);
+  sharedValue = sharedValue(4563).useSharedValue(0);
   useMountEffectDefault(() => {
     const result = sharedValue.set(timing.withTiming(1));
   });
-  const obj = sharedValue(4561);
+  const obj = sharedValue(4563);
   const fn = function c() {
     return { opacity: sharedValue.get() };
   };
@@ -38,7 +38,7 @@ function HorizontalAutocompleteOption(arg0) {
   fn.__workletHash = 14159604656069;
   fn.__initData = __initData;
   const obj3 = { onPress, children: null };
-  const animatedStyle = sharedValue(4561).useAnimatedStyle(fn);
+  const animatedStyle = sharedValue(4563).useAnimatedStyle(fn);
   const obj4 = { style: null, children };
   const items = [tmp.horizontalAutocompleteOption, animatedStyle];
   obj4.style = items;
@@ -130,10 +130,10 @@ export default {
     channel(504);
     [][0] = channel;
     if (channel.type === constants.GUILD_CATEGORY) {
-      let channelIconWithGuild = _modDef8483;
+      let channelIconWithGuild = _modDef7573;
     } else {
-      channelIconWithGuild = tmp2(5327).getChannelIconWithGuild(channel, tmp5);
-      const tmp2Result = tmp2(5327);
+      channelIconWithGuild = tmp2(5328).getChannelIconWithGuild(channel, tmp5);
+      const tmp2Result = tmp2(5328);
     }
     const tmp = closure_13();
     const tmp8 = closure_11(channel(1177).Icon, { source: channelIconWithGuild });

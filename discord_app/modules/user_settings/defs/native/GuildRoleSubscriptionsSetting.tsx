@@ -1,13 +1,13 @@
-// === Module 15553: GuildRoleSubscriptionsSetting ===
+// === Module 14723: GuildRoleSubscriptionsSetting ===
 
-// Module 15553 (GuildRoleSubscriptionsSetting)
+// Module 14723 (GuildRoleSubscriptionsSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
-import SettingsConstants from "SettingsConstants" /* 8323 */;
-import GuildRoleSubscriptionsConstants from "GuildRoleSubscriptionsConstants" /* 15554 */;
-import useUserRoleSubscriptionRelationshipDefault from "useUserRoleSubscriptionRelationship" /* 15555 */;
-import TicketIcon from "TicketIcon" /* 15556 */;
-import SettingBuilders from "SettingBuilders" /* 11811 */;
+import SettingsConstants from "SettingsConstants" /* 7412 */;
+import GuildRoleSubscriptionsConstants from "GuildRoleSubscriptionsConstants" /* 14724 */;
+import useUserRoleSubscriptionRelationshipDefault from "useUserRoleSubscriptionRelationship" /* 14725 */;
+import TicketIcon from "TicketIcon" /* 14726 */;
+import SettingBuilders from "SettingBuilders" /* 10993 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

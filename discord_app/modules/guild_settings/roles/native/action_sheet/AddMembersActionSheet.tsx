@@ -1,18 +1,18 @@
-// === Module 18153: action_sheet/AddMembersActionSheet ===
+// === Module 17381: action_sheet/AddMembersActionSheet ===
 
-// Module 18153 (action_sheet/AddMembersActionSheet)
+// Module 17381 (action_sheet/AddMembersActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4536 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4543 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4538 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4545 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
 import RegexUtilsDefault from "RegexUtils" /* 4816 */;
-import GuildUtilsDefault from "GuildUtils" /* 5824 */;
-import FormCheckbox from "FormCheckbox" /* 5922 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9939 */;
-import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 11295 */;
-import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 18152 */;
+import GuildUtilsDefault from "GuildUtils" /* 5826 */;
+import FormCheckbox from "FormCheckbox" /* 5924 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9037 */;
+import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10393 */;
+import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 17380 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -214,7 +214,7 @@ class AddMembersBody {
   }
 }
 const View = fn(17).View;
-const MAX_BULK_ROLE_MEMBERS_ADD = fn(18147).MAX_BULK_ROLE_MEMBERS_ADD;
+const MAX_BULK_ROLE_MEMBERS_ADD = fn(17375).MAX_BULK_ROLE_MEMBERS_ADD;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4829);

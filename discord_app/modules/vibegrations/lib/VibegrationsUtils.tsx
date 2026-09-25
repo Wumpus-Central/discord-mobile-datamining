@@ -1,12 +1,12 @@
-// === Module 5362: VibegrationsUtils ===
+// === Module 5363: VibegrationsUtils ===
 
-// Module 5362 (VibegrationsUtils)
-import VibegrationsTypes from "VibegrationsTypes" /* 5363 */;
-import VibegrationsGuildExperiment from "VibegrationsGuildExperiment" /* 5364 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4462 */;
+// Module 5363 (VibegrationsUtils)
+import VibegrationsTypes from "VibegrationsTypes" /* 5364 */;
+import VibegrationsGuildExperiment from "VibegrationsGuildExperiment" /* 5365 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 4464 */;
 import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4650 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4652 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

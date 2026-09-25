@@ -1,8 +1,8 @@
-// === Module 17137: VibegrationsClarificationCard ===
+// === Module 16351: VibegrationsClarificationCard ===
 
-// Module 17137 (VibegrationsClarificationCard)
+// Module 16351 (VibegrationsClarificationCard)
 import nativeDefault from "native" /* 576 */;
-import VibegrationsClarification from "VibegrationsClarification" /* 17138 */;
+import VibegrationsClarification from "VibegrationsClarification" /* 16352 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -151,7 +151,7 @@ export default function VibegrationsClarificationCard(clarification) {
       let intl2 = tmp20(1115).intl;
       obj7.text = intl2.string(onSubmit(3714).yKdgqw);
       obj7.onPress = callback1;
-      tmp19Result = tmp19(tmp20(5273).Button, obj7);
+      tmp19Result = tmp19(tmp20(5274).Button, obj7);
     }
   }
   const items5 = [tmp19Result, ];
@@ -171,7 +171,7 @@ export default function VibegrationsClarificationCard(clarification) {
     });
   };
   obj8.onSubmitEditing = callback2;
-  items5[1] = closure_6(clarification(6936).TextInput, obj8);
+  items5[1] = closure_6(clarification(6019).TextInput, obj8);
   obj6.children = items5;
   items4[3] = closure_7(closure_5, obj6);
   obj2.children = items4;

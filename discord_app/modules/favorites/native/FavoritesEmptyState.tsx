@@ -1,14 +1,14 @@
-// === Module 17314: FavoritesEmptyState ===
+// === Module 16529: FavoritesEmptyState ===
 
-// Module 17314 (FavoritesEmptyState)
+// Module 16529 (FavoritesEmptyState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3360 from "module_3360" /* 3360 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import Stack_Stack from "Stack/Stack" /* 5271 */;
-import components_Button_Button from "components/Button/Button" /* 5273 */;
-import native from "native" /* 5997 */;
-import PlusMediumIcon from "PlusMediumIcon" /* 13101 */;
+import Stack_Stack from "Stack/Stack" /* 5272 */;
+import components_Button_Button from "components/Button/Button" /* 5274 */;
+import FavoritesSpotIllustration from "FavoritesSpotIllustration" /* 9683 */;
+import PlusMediumIcon from "PlusMediumIcon" /* 12251 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -33,7 +33,7 @@ export default function FavoritesEmptyState() {
     const obj = require("ActionSheetActionCreators");
     obj.openLazy(require("asyncRequireImpl")(paths[8], paths.paths), require("openFavoritesGuildLimitUpsell").FAVORITES_UPSELL_SHEET_KEY, { source: "favorites_empty_sidebar" });
   }, []);
-  const items = [hasOwnProperty(native.FavoritesSpotIllustration, { width: 192, height: 108 }), , ];
+  const items = [hasOwnProperty(FavoritesSpotIllustration.FavoritesSpotIllustration, { width: 192, height: 108 }), , ];
   const obj3 = { spacing: nativeDefault.space.PX_8, align: "center", children: null };
   const obj4 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
   const intl = util.intl;

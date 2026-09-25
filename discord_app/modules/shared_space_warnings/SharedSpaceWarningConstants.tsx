@@ -1,6 +1,6 @@
-// === Module 14104: SharedSpaceWarningConstants ===
+// === Module 13265: SharedSpaceWarningConstants ===
 
-// Module 14104 (SharedSpaceWarningConstants)
+// Module 13265 (SharedSpaceWarningConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/shared_space_warnings/SharedSpaceWarningConstants.tsx");

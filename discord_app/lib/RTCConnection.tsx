@@ -15,46 +15,46 @@ import URLUtilsDefault from "URLUtils" /* 1366 */;
 import FlagUtils from "FlagUtils" /* 1385 */;
 import NetworkUtilsDefault from "NetworkUtils" /* 1462 */;
 import RTCControlSocket from "RTCControlSocket" /* 1991 */;
-import DiscordNativeDefault from "DiscordNative" /* 4445 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4483 */;
+import DiscordNativeDefault from "DiscordNative" /* 4447 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4485 */;
 import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4823 */;
 import TimeUtils from "TimeUtils" /* 4858 */;
 import RTCConnectionEvent from "RTCConnectionEvent" /* 4883 */;
 import getFrontierTuningConfigIfEligibleDefault from "getFrontierTuningConfigIfEligible" /* 4967 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5195 */;
-import ProportionalVadIndicatorExperimentDefault from "ProportionalVadIndicatorExperiment" /* 5725 */;
-import RTCBandwidthMonitorDefault from "RTCBandwidthMonitor" /* 7804 */;
-import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 7995 */;
-import SystemResourcesDefault from "SystemResources" /* 8077 */;
-import ThermalUtilsDefault from "ThermalUtils" /* 9652 */;
-import AVError from "AVError" /* 9769 */;
-import SurfaceDirectRendererExperiment from "SurfaceDirectRendererExperiment" /* 9775 */;
-import WindowVisibilityVideoManager3 from "WindowVisibilityVideoManager" /* 9779 */;
-import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 10386 */;
-import RTCMediaSinkWantsManagerDefault from "RTCMediaSinkWantsManager" /* 14172 */;
-import GoLiveQualityManagerDefault from "GoLiveQualityManager" /* 14173 */;
-import BrowserTransceiverPaddingRemovalExperiment2 from "BrowserTransceiverPaddingRemovalExperiment" /* 14174 */;
-import VideoStabilizationExperimentDefault from "VideoStabilizationExperiment" /* 14175 */;
-import ServerLadderExperiment2 from "ServerLadderExperiment" /* 14179 */;
-import AV1BitrateTuningExperiment from "AV1BitrateTuningExperiment" /* 14180 */;
-import NativeMuteManagerDefault from "NativeMuteManager" /* 14182 */;
-import VoiceQuality from "VoiceQuality" /* 14183 */;
-import SystemResponsivenessDefault from "SystemResponsiveness" /* 14185 */;
-import VoiceDurationDefault from "VoiceDuration" /* 14186 */;
-import VideoQuality from "VideoQuality" /* 14187 */;
-import VideoHealthManager from "VideoHealthManager" /* 14188 */;
-import BandwidthEstimationExperimentDefault from "BandwidthEstimationExperiment" /* 14190 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5196 */;
+import ProportionalVadIndicatorExperimentDefault from "ProportionalVadIndicatorExperiment" /* 5727 */;
+import RTCBandwidthMonitorDefault from "RTCBandwidthMonitor" /* 6889 */;
+import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 7080 */;
+import SystemResourcesDefault from "SystemResources" /* 7162 */;
+import ThermalUtilsDefault from "ThermalUtils" /* 8750 */;
+import AVError from "AVError" /* 8867 */;
+import SurfaceDirectRendererExperiment from "SurfaceDirectRendererExperiment" /* 8873 */;
+import WindowVisibilityVideoManager3 from "WindowVisibilityVideoManager" /* 8877 */;
+import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 9488 */;
+import RTCMediaSinkWantsManagerDefault from "RTCMediaSinkWantsManager" /* 13333 */;
+import GoLiveQualityManagerDefault from "GoLiveQualityManager" /* 13334 */;
+import BrowserTransceiverPaddingRemovalExperiment2 from "BrowserTransceiverPaddingRemovalExperiment" /* 13335 */;
+import VideoStabilizationExperimentDefault from "VideoStabilizationExperiment" /* 13336 */;
+import ServerLadderExperiment2 from "ServerLadderExperiment" /* 13340 */;
+import AV1BitrateTuningExperiment from "AV1BitrateTuningExperiment" /* 13341 */;
+import NativeMuteManagerDefault from "NativeMuteManager" /* 13343 */;
+import VoiceQuality from "VoiceQuality" /* 13344 */;
+import SystemResponsivenessDefault from "SystemResponsiveness" /* 13346 */;
+import VoiceDurationDefault from "VoiceDuration" /* 13347 */;
+import VideoQuality from "VideoQuality" /* 13348 */;
+import VideoHealthManager from "VideoHealthManager" /* 13349 */;
+import BandwidthEstimationExperimentDefault from "BandwidthEstimationExperiment" /* 13351 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DeviceFrecencyStore from "DeviceFrecencyStore" /* 4857 */;
 import MediaEngineStatsStore from "MediaEngineStatsStore" /* 4867 */;
-import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 10055 */;
-import AudioRouteStore from "AudioRouteStore" /* 9989 */;
+import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 9153 */;
+import AudioRouteStore from "AudioRouteStore" /* 9087 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import GuildStore from "GuildStore" /* 2066 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4852 */;
-import RTCDebugStore from "RTCDebugStore" /* 10385 */;
+import RTCDebugStore from "RTCDebugStore" /* 9487 */;
 import RTCRegionStore from "RTCRegionStore" /* 4879 */;
 import UserStore from "UserStore" /* 1372 */;
 import TypedEventEmitter from "TypedEventEmitter" /* 4887 */;
@@ -79,7 +79,7 @@ let Constants = fn(1074);
 ({ AnalyticEvents: closure_17, ChannelTypes: closure_18, RTCConnectionStates: closure_19, RTCConnectionQuality: closure_20, BoostedGuildTiers: closure_21 } = Constants);
 const StreamSettingsConstants = fn(4876);
 ({ ApplicationStreamFPS: closure_22, ApplicationStreamResolutions: closure_23 } = StreamSettingsConstants);
-let closure_24 = fn(14169).BROWSER_SUPPORTS_UNIFIED_PLAN;
+let closure_24 = fn(13330).BROWSER_SUPPORTS_UNIFIED_PLAN;
 Constants = fn(4854);
 ({ Features: closure_25, MediaEngineContextTypes: closure_26, ConnectionStates: closure_27, Codecs: closure_28, MediaTypes: closure_29, SpeakingFlags: closure_30, DISABLED_DEVICE_ID: items } = Constants);
 let str = "ws:";
@@ -1187,9 +1187,9 @@ prototype["_handleDisconnect"] = function _handleDisconnect(arg0, arg1, code, re
       self._pingBadCount = 0;
       self._inputDetected = false;
       self._mediaSessionId = null;
-      const _voiceQuality13 = self._voiceQuality;
-      if (_voiceQuality13 != null) {
-        _voiceQuality13.stop();
+      const _voiceQuality12 = self._voiceQuality;
+      if (_voiceQuality12 != null) {
+        _voiceQuality12.stop();
       }
       self._voiceQuality = null;
       const _clearInterval = clearInterval;
@@ -1198,9 +1198,9 @@ prototype["_handleDisconnect"] = function _handleDisconnect(arg0, arg1, code, re
       self._voiceQualityPeriodicStatsSequenceId = 0;
       self._noiseCancellationError = 0;
       self._numNoiseCancellationChanges = 0;
-      const _voiceDuration2 = self._voiceDuration;
-      if (_voiceDuration2 != null) {
-        _voiceDuration2.stop();
+      const _voiceDuration4 = self._voiceDuration;
+      if (_voiceDuration4 != null) {
+        _voiceDuration4.stop();
       }
       self._voiceDuration = null;
       const _videoQuality = self._videoQuality;
@@ -1316,7 +1316,65 @@ prototype["_handleDisconnect"] = function _handleDisconnect(arg0, arg1, code, re
           });
         }
       }
-      asyncGeneratorStep = self.getMediaSessionId();
+      const _voiceQuality = self._voiceQuality;
+      if (null != _voiceQuality) {
+        if (self.shouldReport()) {
+          const outboundPacketsStats = _voiceQuality.getOutboundPacketsStats();
+          const outboundBytesStats = _voiceQuality.getOutboundBytesStats();
+          const _voiceDuration = self._voiceDuration;
+          let durationStats;
+          if (_voiceDuration != null) {
+            durationStats = _voiceDuration.getDurationStats();
+          }
+          if (durationStats == null) {
+            durationStats = {};
+          }
+          let num4 = outboundPacketsStats.num_packets;
+          ({ duration_connected_ms, duration_speaking_ms } = durationStats);
+          if (num4 == null) {
+            num4 = 0;
+          }
+          if (num4 > 0) {
+            const obj8 = {};
+            let merged2 = Object.assign(self._getAnalyticsProperties());
+            obj8.media_session_id = self.getMediaSessionId();
+            ({ parentMediaSessionId: obj17.parent_media_session_id, userId: obj17.sender_user_id } = self);
+            let str4 = "streamer";
+            if (self.context === constants6.DEFAULT) {
+              str4 = "sender";
+            }
+            obj8.participant_type = str4;
+            let merged3 = Object.assign(outboundPacketsStats);
+            let merged4 = Object.assign(outboundBytesStats);
+            obj8.duration_connected_ms = duration_connected_ms;
+            obj8.duration_speaking_ms = duration_speaking_ms;
+            require("AnalyticsUtils").track(constants.VOICE_STREAM_ENDED, obj8);
+            const obj16 = require("AnalyticsUtils");
+          }
+          const inboundParticipants1 = _voiceQuality.getInboundParticipants();
+          const item2 = inboundParticipants1.forEach((sender_user_id) => {
+            const inboundPacketsStats = _voiceQuality.getInboundPacketsStats(sender_user_id);
+            let num = inboundPacketsStats.num_packets;
+            if (num == null) {
+              num = 0;
+            }
+            if (num > 0) {
+              const obj3 = {};
+              const merged = Object.assign(self._getAnalyticsProperties());
+              obj3.media_session_id = self.getMediaSessionId();
+              obj3.parent_media_session_id = self.parentMediaSessionId;
+              obj3.sender_user_id = sender_user_id;
+              obj3.participant_type = "receiver";
+              const merged1 = Object.assign(inboundPacketsStats);
+              const merged2 = Object.assign(_voiceQuality.getInboundBytesStats(sender_user_id));
+              const merged3 = Object.assign(_voiceQuality.getInboundDurationStats(sender_user_id));
+              const merged4 = Object.assign(_voiceQuality.getInboundJitterStats(sender_user_id));
+              AnalyticsUtilsDefault.track(constants.VOICE_STREAM_ENDED, obj3);
+            }
+          });
+        }
+      }
+      DeviceFrecencyStore = self.getMediaSessionId();
       let mediaEngine3 = MediaEngineStore;
       const mediaEngine = MediaEngineStore.getMediaEngine();
       const codecSurvey = mediaEngine.getCodecSurvey();
@@ -1346,7 +1404,7 @@ prototype["_handleDisconnect"] = function _handleDisconnect(arg0, arg1, code, re
       }
       const settings = mediaEngine3.getSettings();
       const channel = ChannelStore.getChannel(self.channelId);
-      const connectionStats = MediaEngineStatsStore.getConnectionStats(self.getMediaEngineConnectionId());
+      const connectionStats = self.getConnectionStats(self.getMediaEngineConnectionId());
       let prop;
       if (connectionStats != null) {
         const outbound = connectionStats.stats.rtp.outbound;
@@ -1355,154 +1413,148 @@ prototype["_handleDisconnect"] = function _handleDisconnect(arg0, arg1, code, re
           prop = found.sampleRateMismatchPercent;
         }
       }
-      const obj8 = {};
-      let merged2 = Object.assign(self._getAnalyticsProperties());
-      ({ hostname: obj10.hostname, port: obj10.port, protocol: obj10.protocol } = self);
-      obj8.reconnect = tmp10;
-      obj8.reason = reason;
-      obj8.duration = self.getDuration();
-      let merged3 = Object.assign(RTCConnectionStore.getUserVoiceSettingsStats(self.context));
-      const _voiceQuality = self._voiceQuality;
-      let mosStats;
-      if (_voiceQuality != null) {
-        mosStats = _voiceQuality.getMosStats();
-      }
-      const merged4 = Object.assign(mosStats);
+      const obj9 = {};
+      const merged5 = Object.assign(self._getAnalyticsProperties());
+      ({ hostname: obj11.hostname, port: obj11.port, protocol: obj11.protocol } = self);
+      obj9.reconnect = tmp10;
+      obj9.reason = reason;
+      obj9.duration = self.getDuration();
+      const merged6 = Object.assign(RTCConnectionStore.getUserVoiceSettingsStats(self.context));
       const _voiceQuality2 = self._voiceQuality;
       let packetStats;
       if (_voiceQuality2 != null) {
         packetStats = _voiceQuality2.getPacketStats();
       }
-      const merged5 = Object.assign(packetStats);
+      const merged7 = Object.assign(packetStats);
       const _voiceQuality3 = self._voiceQuality;
       let bytesStats;
       if (_voiceQuality3 != null) {
         bytesStats = _voiceQuality3.getBytesStats();
       }
-      const merged6 = Object.assign(bytesStats);
+      const merged8 = Object.assign(bytesStats);
       const _voiceQuality4 = self._voiceQuality;
       let bufferStats;
       if (_voiceQuality4 != null) {
         bufferStats = _voiceQuality4.getBufferStats();
       }
-      const merged7 = Object.assign(bufferStats);
+      const merged9 = Object.assign(bufferStats);
       const _voiceQuality5 = self._voiceQuality;
       let networkStats;
       if (_voiceQuality5 != null) {
         networkStats = _voiceQuality5.getNetworkStats();
       }
-      const merged8 = Object.assign(networkStats);
+      const merged10 = Object.assign(networkStats);
       const _voiceQuality6 = self._voiceQuality;
       let systemResourceStats;
       if (_voiceQuality6 != null) {
         systemResourceStats = _voiceQuality6.getSystemResourceStats();
       }
-      const merged9 = Object.assign(systemResourceStats);
+      const merged11 = Object.assign(systemResourceStats);
       const _voiceQuality7 = self._voiceQuality;
       let frameOpStats;
       if (_voiceQuality7 != null) {
         frameOpStats = _voiceQuality7.getFrameOpStats();
       }
-      const merged10 = Object.assign(frameOpStats);
+      const merged12 = Object.assign(frameOpStats);
       const _voiceQuality8 = self._voiceQuality;
-      let durationStats;
-      if (_voiceQuality8 != null) {
-        durationStats = _voiceQuality8.getDurationStats();
-      }
-      const merged11 = Object.assign(durationStats);
-      const _voiceQuality9 = self._voiceQuality;
       let transportStats;
-      if (_voiceQuality9 != null) {
-        transportStats = _voiceQuality9.getTransportStats();
+      if (_voiceQuality8 != null) {
+        transportStats = _voiceQuality8.getTransportStats();
       }
-      const merged12 = Object.assign(transportStats);
-      const _voiceQuality10 = self._voiceQuality;
+      const merged13 = Object.assign(transportStats);
+      const _voiceQuality9 = self._voiceQuality;
       let e2EEStats;
-      if (_voiceQuality10 != null) {
-        e2EEStats = _voiceQuality10.getE2EEStats();
+      if (_voiceQuality9 != null) {
+        e2EEStats = _voiceQuality9.getE2EEStats();
       }
-      const merged13 = Object.assign(e2EEStats);
-      const _voiceQuality11 = self._voiceQuality;
+      const merged14 = Object.assign(e2EEStats);
+      const _voiceQuality10 = self._voiceQuality;
       let audioDeviceStats;
-      if (_voiceQuality11 != null) {
-        audioDeviceStats = _voiceQuality11.getAudioDeviceStats();
+      if (_voiceQuality10 != null) {
+        audioDeviceStats = _voiceQuality10.getAudioDeviceStats();
       }
-      const merged14 = Object.assign(audioDeviceStats);
-      const _voiceQuality12 = self._voiceQuality;
+      const merged15 = Object.assign(audioDeviceStats);
+      const _voiceQuality11 = self._voiceQuality;
       let audioLevelStats;
-      if (_voiceQuality12 != null) {
-        audioLevelStats = _voiceQuality12.getAudioLevelStats();
+      if (_voiceQuality11 != null) {
+        audioLevelStats = _voiceQuality11.getAudioLevelStats();
       }
-      const merged15 = Object.assign(audioLevelStats);
-      const _voiceDuration = self._voiceDuration;
+      const merged16 = Object.assign(audioLevelStats);
+      const _voiceDuration2 = self._voiceDuration;
       let durationStats1;
-      if (_voiceDuration != null) {
-        durationStats1 = _voiceDuration.getDurationStats();
+      if (_voiceDuration2 != null) {
+        durationStats1 = _voiceDuration2.getDurationStats();
       }
-      const merged16 = Object.assign(durationStats1);
-      const merged17 = Object.assign(self.getUsageStats());
-      const merged18 = Object.assign(self.getAudioDeviceStates());
+      const merged17 = Object.assign(durationStats1);
+      const _voiceDuration3 = self._voiceDuration;
+      let deprecatedDurationStats;
+      if (_voiceDuration3 != null) {
+        deprecatedDurationStats = _voiceDuration3.getDeprecatedDurationStats();
+      }
+      const merged18 = Object.assign(deprecatedDurationStats);
+      const merged19 = Object.assign(DeviceFrecencyStore.getUsageStats());
+      const merged20 = Object.assign(self.getAudioDeviceStates());
       const _systemResponsiveness = self._systemResponsiveness;
       let pttQueueLatencyStats;
       if (_systemResponsiveness != null) {
         pttQueueLatencyStats = _systemResponsiveness.getPttQueueLatencyStats();
       }
-      const merged19 = Object.assign(pttQueueLatencyStats);
-      obj8.num_noise_cancellation_changes = self._numNoiseCancellationChanges;
-      obj8.media_session_id = self.getMediaSessionId();
+      const merged21 = Object.assign(pttQueueLatencyStats);
+      obj9.num_noise_cancellation_changes = self._numNoiseCancellationChanges;
+      obj9.media_session_id = self.getMediaSessionId();
       let bitrate = null;
       if (null != channel) {
         bitrate = channel.bitrate;
       }
-      obj8.channel_bitrate = bitrate;
-      obj8.cloudflare_best_region = preferredRegion;
-      obj8.connect_count = self._connectCount;
+      obj9.channel_bitrate = bitrate;
+      obj9.cloudflare_best_region = preferredRegion;
+      obj9.connect_count = self._connectCount;
       const _Math = Math;
-      obj8.ping_average = Math.round(self.getAveragePing());
-      obj8.ping_bad_count = self._pingBadCount;
-      obj8.ping_timeout = self._pingTimeouts.length;
-      obj8.input_detected = self._inputDetected;
-      obj8.no_input_detected_notice = mediaEngine3.getNoInputDetectedNotice();
-      obj8.audio_input_mode = settings.mode;
-      obj8.automatic_audio_input_sensitivity_enabled = settings.modeOptions.autoThreshold;
-      obj8.audio_input_sensitivity = settings.modeOptions.threshold;
-      ({ echoCancellation: obj10.echo_cancellation_enabled, sidechainCompression: obj10.sidechain_compression_enabled, noiseSuppression: obj10.noise_suppression_enabled, noiseCancellation: obj10.noise_cancellation_enabled } = settings);
-      obj8.noise_canceller_error = self._noiseCancellationError;
-      ({ automaticGainControl: obj10.automatic_gain_control_enabled, outputVolume: obj10.voice_output_volume, inputVolume: obj10.voice_input_volume } = settings);
-      obj8.encryption_mode = self._encryptionMode;
-      obj8.channel_count = self.channelIds.size;
-      obj8.device_performance_class = require("getMediaPerformanceClass")();
-      let tmp106 = null;
+      obj9.ping_average = Math.round(self.getAveragePing());
+      obj9.ping_bad_count = self._pingBadCount;
+      obj9.ping_timeout = self._pingTimeouts.length;
+      obj9.input_detected = self._inputDetected;
+      obj9.no_input_detected_notice = mediaEngine3.getNoInputDetectedNotice();
+      obj9.audio_input_mode = settings.mode;
+      obj9.automatic_audio_input_sensitivity_enabled = settings.modeOptions.autoThreshold;
+      obj9.audio_input_sensitivity = settings.modeOptions.threshold;
+      ({ echoCancellation: obj11.echo_cancellation_enabled, sidechainCompression: obj11.sidechain_compression_enabled, noiseSuppression: obj11.noise_suppression_enabled, noiseCancellation: obj11.noise_cancellation_enabled } = settings);
+      obj9.noise_canceller_error = self._noiseCancellationError;
+      ({ automaticGainControl: obj11.automatic_gain_control_enabled, outputVolume: obj11.voice_output_volume, inputVolume: obj11.voice_input_volume } = settings);
+      obj9.encryption_mode = self._encryptionMode;
+      obj9.channel_count = self.channelIds.size;
+      obj9.device_performance_class = require("getMediaPerformanceClass")();
+      let tmp112 = null;
       if (null != self._connection) {
         const _connection2 = self._connection;
         let numFastUdpReconnects;
         if (_connection2 != null) {
           numFastUdpReconnects = _connection2.getNumFastUdpReconnects();
         }
-        tmp106 = numFastUdpReconnects;
+        tmp112 = numFastUdpReconnects;
       }
-      obj8.num_fast_udp_reconnects = tmp106;
-      obj8.parent_media_session_id = self.parentMediaSessionId;
+      obj9.num_fast_udp_reconnects = tmp112;
+      obj9.parent_media_session_id = self.parentMediaSessionId;
       const mediaEngine1 = mediaEngine3.getMediaEngine();
-      obj8.audio_subsystem = mediaEngine1.getAudioSubsystem();
+      obj9.audio_subsystem = mediaEngine1.getAudioSubsystem();
       const mediaEngine2 = mediaEngine3.getMediaEngine();
-      obj8.audio_layer = mediaEngine2.getAudioLayer();
-      obj8.automatic_audio_subsystem = settings.automaticAudioSubsystem;
-      obj8.participant_type = self.getVoiceParticipantType();
-      obj8.audio_capture_sample_rate_mismatch_percent = prop;
-      obj8.krisp_sdk_version = mediaEngine3.getState().krispVersion;
-      ({ _secureFramesMaxConcurrentTransitions: obj10.secure_frames_max_concurrent_transitions, _secureFramesTransitionPrepareCount: obj10.secure_frames_transition_prepare_count, _secureFramesTransitionExecuteCount: obj10.secure_frames_transition_execute_count } = self);
-      obj8.vad_use_advanced_voice_activity = settings.modeOptions.vadUseKrisp;
-      obj8.soundshare_experimental = mediaEngine3.getExperimentalSoundshare();
-      obj8.join_voice_id = self.joinVoiceId;
-      obj8.bypass_system_input_processing = settings.bypassSystemInputProcessing;
-      obj8.system_microphone_mode = mediaEngine3.getSystemMicrophoneMode();
-      obj8.output_audio_route_type = AudioRouteStore.getCurrentRouteType();
-      _require = asyncGeneratorStep(async () => {
+      obj9.audio_layer = mediaEngine2.getAudioLayer();
+      obj9.automatic_audio_subsystem = settings.automaticAudioSubsystem;
+      obj9.participant_type = self.getVoiceParticipantType();
+      obj9.audio_capture_sample_rate_mismatch_percent = prop;
+      obj9.krisp_sdk_version = mediaEngine3.getState().krispVersion;
+      ({ _secureFramesMaxConcurrentTransitions: obj11.secure_frames_max_concurrent_transitions, _secureFramesTransitionPrepareCount: obj11.secure_frames_transition_prepare_count, _secureFramesTransitionExecuteCount: obj11.secure_frames_transition_execute_count } = self);
+      obj9.vad_use_advanced_voice_activity = settings.modeOptions.vadUseKrisp;
+      obj9.soundshare_experimental = mediaEngine3.getExperimentalSoundshare();
+      obj9.join_voice_id = self.joinVoiceId;
+      obj9.bypass_system_input_processing = settings.bypassSystemInputProcessing;
+      obj9.system_microphone_mode = mediaEngine3.getSystemMicrophoneMode();
+      obj9.output_audio_route_type = AudioRouteStore.getCurrentRouteType();
+      _require = _voiceQuality(function*() {
         if (_systemResources != null) {
           const batteryLevelStats = _systemResources.getBatteryLevelStats();
         }
-        await batteryLevelStats;
+        yield batteryLevelStats;
         if (value == null) {
           value = { batteryUsageRounded: null };
         }
@@ -1583,7 +1635,7 @@ prototype["_handleDisconnect"] = function _handleDisconnect(arg0, arg1, code, re
         AnalyticsUtilsDefault.track(constants.VOICE_DISCONNECT, obj2);
       });
       const result1 = self._trackRemainingSecureFrameTransitions();
-      const tmp104Result = require("KrispUtils");
+      const tmp110Result = require("KrispUtils");
     }
   } else {
     if (code !== require("RTCControlSocket").RTCSocketCloseCode.REPEATED_MLS_INVALID_MESSAGES) {
@@ -1760,7 +1812,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
     }
   }
   if (MediaEngineStore.supports(constants5.IMAGE_QUALITY_MEASUREMENT)) {
-    const SingleCpuCopyExperiment = tmp2(14181).SingleCpuCopyExperiment;
+    const SingleCpuCopyExperiment = tmp2(13342).SingleCpuCopyExperiment;
     const enabled = SingleCpuCopyExperiment.getConfig({ location: "RTCConnection" }).enabled;
     let str4 = "imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec";
     if (enabled) {
@@ -1928,16 +1980,16 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
     }
     if (type === constants2.GUILD_STAGE_VOICE) {
       if (!self._videoDecoderFallbackSuppressed) {
-        const logger2 = self.logger;
-        logger2.info("Suppressing video decoder fallback: stage channel");
+        const logger = self.logger;
+        logger.info("Suppressing video decoder fallback: stage channel");
         self._videoDecoderFallbackSuppressed = true;
       }
     } else {
       const found = codecs.filter((type) => "video" === type.type);
       const mapped = found.map((name) => name.name);
-      const logger = self.logger;
+      const logger2 = self.logger;
       const _HermesInternal = HermesInternal;
-      logger.info("The originally selected video decoder is not working, fallback to the other available decoders: " + mapped.join(","));
+      logger2.info("The originally selected video decoder is not working, fallback to the other available decoders: " + mapped.join(","));
       const obj = { codecs };
       socket.updateSession(obj);
     }
@@ -2452,6 +2504,29 @@ prototype["_handleClientDisconnect"] = function _handleClientDisconnect(sender_u
       }
     }
   }
+  const _voiceQuality = self._voiceQuality;
+  if (null != _voiceQuality) {
+    const inboundPacketsStats = _voiceQuality.getInboundPacketsStats(sender_user_id);
+    let num3 = inboundPacketsStats.num_packets;
+    if (num3 == null) {
+      num3 = 0;
+    }
+    if (tmp19) {
+      const obj5 = {};
+      const merged4 = Object.assign(self._getAnalyticsProperties());
+      obj5.media_session_id = self.getMediaSessionId();
+      obj5.parent_media_session_id = self.parentMediaSessionId;
+      obj5.sender_user_id = sender_user_id;
+      obj5.participant_type = "receiver";
+      const merged5 = Object.assign(inboundPacketsStats);
+      const merged6 = Object.assign(_voiceQuality.getInboundBytesStats(sender_user_id));
+      const merged7 = Object.assign(_voiceQuality.getInboundDurationStats(sender_user_id));
+      const merged8 = Object.assign(_voiceQuality.getInboundJitterStats(sender_user_id));
+      AnalyticsUtilsDefault.track(constants.VOICE_STREAM_ENDED, obj5);
+    }
+    _voiceQuality.destroyUser(sender_user_id);
+    tmp19 = num3 > 0 && self.shouldReport();
+  }
   const _connection = self._connection;
   if (null != _connection) {
     _connection.destroyUser(sender_user_id);
@@ -2473,7 +2548,7 @@ prototype["_handleClientDisconnect"] = function _handleClientDisconnect(sender_u
   }
   if (1 === self._userIds.size) {
     self._secureFramesLastBecameAloneTime = TimeUtils.now();
-    const tmp22Result = TimeUtils;
+    const tmp39Result = TimeUtils;
   }
 };
 prototype["_handleCodecs"] = function _handleCodecs(OPUS, H264) {
@@ -3285,18 +3360,36 @@ prototype["getExtraConnectionOptions"] = function getExtraConnectionOptions() {
 prototype["getMediaStreamKey"] = function getMediaStreamKey() {
 
 };
-prototype["shouldReportPeriodicStats"] = function shouldReportPeriodicStats(periodicStats) {
-  if (periodicStats.length > 10) {
-    return false;
-  } else {
-    const self = this;
-    const mediaSessionId = this.getMediaSessionId();
-    let tmp3 = null != mediaSessionId;
-    if (tmp3) {
-      tmp3 = MurmurHashV3Default.v3(mediaSessionId) % 100 <= 5;
-    }
-    return tmp3;
+prototype["shouldReport"] = function shouldReport() {
+  const currentUser = UserStore.getCurrentUser();
+  let isStaffResult;
+  if (currentUser != null) {
+    isStaffResult = currentUser.isStaff();
   }
+  if (!isStaffResult) {
+    let isStaffPersonalResult;
+    if (currentUser != null) {
+      isStaffPersonalResult = currentUser.isStaffPersonal();
+    }
+    if (!isStaffPersonalResult) {
+      const self = this;
+      const mediaSessionId = this.getMediaSessionId();
+      let tmp4 = null != mediaSessionId;
+      if (tmp4) {
+        tmp4 = MurmurHashV3Default.v3(mediaSessionId) % 100 < 5;
+      }
+      return tmp4;
+    }
+  }
+  return true;
+};
+prototype["shouldReportPeriodicStats"] = function shouldReportPeriodicStats(periodicStats) {
+  let shouldReportResult = periodicStats.length <= 10;
+  if (shouldReportResult) {
+    const self = this;
+    shouldReportResult = this.shouldReport();
+  }
+  return shouldReportResult;
 };
 prototype["getInputDeviceName"] = function getInputDeviceName() {
   const inputDeviceId = MediaEngineStore.getInputDeviceId();

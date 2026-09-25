@@ -1,9 +1,9 @@
-// === Module 9914: AppChannelApplicationIcon ===
+// === Module 9012: AppChannelApplicationIcon ===
 
-// Module 9914 (AppChannelApplicationIcon)
+// Module 9012 (AppChannelApplicationIcon)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import FastImageDefault from "FastImage" /* 5892 */;
+import FastImageDefault from "FastImage" /* 5894 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

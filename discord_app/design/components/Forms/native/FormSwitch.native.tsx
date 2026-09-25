@@ -1,13 +1,13 @@
-// === Module 7534: FormSwitch ===
+// === Module 6617: FormSwitch ===
 
-// Module 7534 (FormSwitch)
+// Module 6617 (FormSwitch)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4561 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4563 */;
 import HapticUtils from "HapticUtils" /* 4797 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4798 */;
-import spring from "spring" /* 5272 */;
-import IconDefault from "Icon" /* 5275 */;
-import springPresets from "springPresets" /* 5276 */;
+import spring from "spring" /* 5273 */;
+import IconDefault from "Icon" /* 5276 */;
+import springPresets from "springPresets" /* 5277 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

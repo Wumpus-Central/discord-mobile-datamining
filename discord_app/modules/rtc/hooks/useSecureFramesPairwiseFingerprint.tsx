@@ -1,6 +1,6 @@
-// === Module 10060: useSecureFramesPairwiseFingerprint ===
+// === Module 9158: useSecureFramesPairwiseFingerprint ===
 
-// Module 10060 (useSecureFramesPairwiseFingerprint)
+// Module 9158 (useSecureFramesPairwiseFingerprint)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -82,7 +82,7 @@ let closure_12 = async function _computeNativeDisplayPair(arg0) {
     }
   }
 };
-let closure_9 = fn(10056).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
+let closure_9 = fn(9154).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
 const Features = fn(4854).Features;
 const SecureFramesPairwiseFingerprintMode = { FROZEN: "frozen", LIVE: "live" };
 const size = fn(2);

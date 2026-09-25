@@ -1,10 +1,10 @@
-// === Module 5450: mobile/NativePermissionUtils ===
+// === Module 5451: mobile/NativePermissionUtils ===
 
-// Module 5450 (mobile/NativePermissionUtils)
+// Module 5451 (mobile/NativePermissionUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import util from "util" /* 1115 */;
-import useAlertStore from "useAlertStore" /* 5197 */;
-import openPrivacySettingsDefault from "openPrivacySettings" /* 5451 */;
+import useAlertStore from "useAlertStore" /* 5198 */;
+import openPrivacySettingsDefault from "openPrivacySettings" /* 5452 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -141,7 +141,7 @@ if (MetaQuestUtils) {
 }
 HermesBuiltin.arraySpread(items9, tmp8);
 let NativePermissionIOSUtils;
-const NativePermissionBaseUtils = fn(5447).NativePermissionBaseUtils;
+const NativePermissionBaseUtils = fn(5448).NativePermissionBaseUtils;
 class NativePermissionIOSUtils extends NativePermissionBaseUtils {
 }
 const prototype = NativePermissionIOSUtils.prototype;

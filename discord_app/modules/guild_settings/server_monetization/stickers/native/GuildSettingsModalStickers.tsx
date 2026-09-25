@@ -1,16 +1,16 @@
-// === Module 18112: GuildSettingsModalStickers ===
+// === Module 17340: GuildSettingsModalStickers ===
 
-// Module 18112 (GuildSettingsModalStickers)
+// Module 17340 (GuildSettingsModalStickers)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 4722 */;
-import LockIcon from "LockIcon" /* 5401 */;
-import TableRow from "TableRow" /* 5910 */;
-import TableRowGroup from "TableRowGroup" /* 5992 */;
-import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 18116 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 4724 */;
+import LockIcon from "LockIcon" /* 5402 */;
+import TableRow from "TableRow" /* 5912 */;
+import TableRowGroup from "TableRowGroup" /* 5994 */;
+import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 17344 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
@@ -24,24 +24,24 @@ const GuildFeatures = Constants.GuildFeatures;
 const MAX_STICKER_FILE_SIZE = fn(2023).MAX_STICKER_FILE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let obj = { tier: BoostedGuildTiers.NONE, title: null, IconComponent: "r" };
+let obj = { tier: BoostedGuildTiers.NONE, title: null, IconComponent: "Array" };
 let intl = fn(1115).intl;
 obj.title = intl.string(fn(1115).t.tfVXhP);
 let items = [obj, , , ];
 let obj2 = { tier: BoostedGuildTiers.TIER_1, title: null, IconComponent: null };
 let intl2 = fn(1115).intl;
 obj2.title = intl2.string(fn(1115).t.nzXtaS);
-obj2.IconComponent = fn(18113).BoostGemOutlineIcon;
+obj2.IconComponent = fn(17341).BoostGemOutlineIcon;
 items[1] = obj2;
 let obj3 = { tier: BoostedGuildTiers.TIER_2, title: null, IconComponent: null };
 let intl3 = fn(1115).intl;
 obj3.title = intl3.string(fn(1115).t["h33/uW"]);
-obj3.IconComponent = fn(9572).BoostGemIcon;
+obj3.IconComponent = fn(8670).BoostGemIcon;
 items[2] = obj3;
 let obj4 = { tier: BoostedGuildTiers.TIER_3, title: null, IconComponent: null };
 const intl4 = fn(1115).intl;
 obj4.title = intl4.string(fn(1115).t.BfF6ED);
-obj4.IconComponent = fn(13891).BoostTier3Icon;
+obj4.IconComponent = fn(13048).BoostTier3Icon;
 items[3] = obj4;
 const createStyles = fn(4829);
 let closure_15 = createStyles.createStyles((arg0) => {
@@ -179,7 +179,7 @@ export default noop.memo(function GuildSettingsModalStickers(guildId) {
               const obj2 = { icon: null, label: null, trailing: null, onPress: null };
               const obj3 = { style: closure_1.stickerSlot, children: null };
               const obj4 = { sticker: tmp2, size: closure_1_1(576).space.PX_48, animated: true };
-              obj3.children = closure_1_12(closure_1_1(10523), obj4);
+              obj3.children = closure_1_12(closure_1_1(9625), obj4);
               obj2.icon = closure_1_12(closure_1_4, obj3);
               const obj5 = { variant: "heading-sm/semibold", color: "text-strong", style: closure_1.label, children: tmp2.name };
               items = [closure_1_12(guildId(4825).Text, obj5), ];
@@ -200,7 +200,7 @@ export default noop.memo(function GuildSettingsModalStickers(guildId) {
               obj2.label = closure_1_13(closure_1_4, obj8);
               let tmp9Result;
               if (tmp8) {
-                tmp9Result = closure_1_12(tmp10(5917).TableRowArrow, {});
+                tmp9Result = closure_1_12(tmp10(5919).TableRowArrow, {});
               }
               obj2.trailing = tmp9Result;
               let fn;
@@ -210,7 +210,7 @@ export default noop.memo(function GuildSettingsModalStickers(guildId) {
                 };
               }
               obj2.onPress = fn;
-              return closure_1_12(guildId(5910).TableRow, obj2, index);
+              return closure_1_12(guildId(5912).TableRow, obj2, index);
             }
           });
           obj7.children = items;

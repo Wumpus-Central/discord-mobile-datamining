@@ -1,12 +1,12 @@
-// === Module 13299: InAppReportsIgnoreUserElement ===
+// === Module 12449: InAppReportsIgnoreUserElement ===
 
-// Module 13299 (InAppReportsIgnoreUserElement)
+// Module 12449 (InAppReportsIgnoreUserElement)
 import NicknameUtilsDefault from "NicknameUtils" /* 4981 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5009 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 10087 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9184 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 
 const require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;

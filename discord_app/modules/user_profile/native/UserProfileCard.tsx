@@ -1,15 +1,15 @@
-// === Module 7540: UserProfileCard ===
+// === Module 6623: UserProfileCard ===
 
-// Module 7540 (UserProfileCard)
+// Module 6623 (UserProfileCard)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import Pressables from "Pressables" /* 5427 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7542 */;
+import Pressables from "Pressables" /* 5428 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 6625 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(7541);
+const Constants = fn(6624);
 ({ CARD_ROWS_COLUMN_GAP, CARD_ROWS_ICON_SIZE, CARD_ROWS_ICON_SIZE_VARIANT: closure_4 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);

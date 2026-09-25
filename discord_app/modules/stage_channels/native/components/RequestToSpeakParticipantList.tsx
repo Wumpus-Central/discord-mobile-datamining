@@ -1,9 +1,9 @@
-// === Module 10271: RequestToSpeakParticipantList ===
+// === Module 9368: RequestToSpeakParticipantList ===
 
-// Module 10271 (RequestToSpeakParticipantList)
+// Module 9368 (RequestToSpeakParticipantList)
 import nativeDefault from "native" /* 576 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8527 */;
-import StageChannelActionCreators from "StageChannelActionCreators" /* 8748 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7617 */;
+import StageChannelActionCreators from "StageChannelActionCreators" /* 7838 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -101,7 +101,7 @@ export default function RequestToSpeakParticipantList(channel) {
   if (0 === sortedRequestToSpeakParticipants.length) {
     let obj2 = { style: tmp.container, children: null };
     const obj3 = { style: tmp.emptyContainer, children: null };
-    const obj4 = { source: require("module_10275") };
+    const obj4 = { source: require("module_9372") };
     const items = [closure_4(require("FastImage"), obj4), , ];
     const obj5 = { style: tmp.emptyTitle, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp2(tmp3[13]).intl;

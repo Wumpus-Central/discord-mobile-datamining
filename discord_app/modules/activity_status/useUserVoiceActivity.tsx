@@ -1,8 +1,8 @@
-// === Module 11229: useUserVoiceActivity ===
+// === Module 10327: useUserVoiceActivity ===
 
-// Module 11229 (useUserVoiceActivity)
+// Module 10327 (useUserVoiceActivity)
 import ChannelStore from "ChannelStore" /* 2044 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
 import VoiceStateStore from "VoiceStateStore" /* 4848 */;
 
 const require = fn;
@@ -75,7 +75,7 @@ function getVisibleUserVoiceActivity(arg0, arg1) {
 }
 const Permissions = fn(1085).Permissions;
 let closure_6 = { ChannelStore, PermissionStore, VoiceStateStore };
-let closure_7 = Object.freeze({ voiceState: "channel", voiceChannel: "channelId" });
+let closure_7 = Object.freeze({ voiceState: "isArray", voiceChannel: "paddingHorizontal" });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/useUserVoiceActivity.tsx");
 

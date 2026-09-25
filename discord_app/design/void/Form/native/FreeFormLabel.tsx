@@ -1,6 +1,6 @@
-// === Module 7269: FreeFormLabel ===
+// === Module 6352: FreeFormLabel ===
 
-// Module 7269 (FreeFormLabel)
+// Module 6352 (FreeFormLabel)
 import Text_Text from "Text/Text" /* 4825 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 11956: GuildAutomodMessageActionCreators ===
+// === Module 11099: GuildAutomodMessageActionCreators ===
 
-// Module 11956 (GuildAutomodMessageActionCreators)
+// Module 11099 (GuildAutomodMessageActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import size from "module_2" /* 2 */;
 

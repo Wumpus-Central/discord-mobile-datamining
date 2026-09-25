@@ -1,13 +1,13 @@
-// === Module 17825: FriendInviteUtils ===
+// === Module 17051: FriendInviteUtils ===
 
-// Module 17825 (FriendInviteUtils)
+// Module 17051 (FriendInviteUtils)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1115 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4523 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8728 */;
-import _modDef9704 from "module_9704" /* 9704 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4525 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7818 */;
+import _modDef8802 from "module_8802" /* 8802 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 
 require = fn;
 const size = fn(2);
@@ -20,7 +20,7 @@ export const revokeAllFriendInvites = function revokeAllFriendInvites() {
     const obj2 = { key: "TOAST_FRIEND_INVITES_REVOKED", content: null, icon: null };
     const intl = util.intl;
     obj2.content = intl.string(util.t.jSHEOQ);
-    obj2.icon = _modDef9704;
+    obj2.icon = _modDef8802;
     ToastActionCreatorsDefault.open(obj2);
   });
 };
@@ -45,8 +45,8 @@ export const acceptFriendInvite = function acceptFriendInvite(invite, context) {
                 username = inviter.username;
               }
               const obj = ToastActionCreatorsDefault;
-              obj.open({ key: "FRIEND_INVITE_ACCEPT_CONFIRMATION", content: intl.formatToPlainString(util.t.st2dcs, { username }), icon: _modDef9704 });
-              const obj2 = { key: "FRIEND_INVITE_ACCEPT_CONFIRMATION", content: intl.formatToPlainString(util.t.st2dcs, { username }), icon: _modDef9704 };
+              obj.open({ key: "FRIEND_INVITE_ACCEPT_CONFIRMATION", content: intl.formatToPlainString(util.t.st2dcs, { username }), icon: _modDef8802 });
+              const obj2 = { key: "FRIEND_INVITE_ACCEPT_CONFIRMATION", content: intl.formatToPlainString(util.t.st2dcs, { username }), icon: _modDef8802 };
               DispatcherDefault.wait(() => closure_1_1(closure_1_2[7])());
               const tmpResult = DispatcherDefault;
             }

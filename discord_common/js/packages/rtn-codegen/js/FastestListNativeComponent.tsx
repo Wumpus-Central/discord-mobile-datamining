@@ -1,6 +1,6 @@
-// === Module 7389: FastestListNativeComponent ===
+// === Module 6472: FastestListNativeComponent ===
 
-// Module 7389 (FastestListNativeComponent)
+// Module 6472 (FastestListNativeComponent)
 import renderElement from "renderElement" /* 114 */;
 import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;

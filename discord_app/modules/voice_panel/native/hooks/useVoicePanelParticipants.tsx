@@ -1,6 +1,6 @@
-// === Module 17649: useVoicePanelParticipants ===
+// === Module 16873: useVoicePanelParticipants ===
 
-// Module 17649 (useVoicePanelParticipants)
+// Module 16873 (useVoicePanelParticipants)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4845 */;
@@ -22,7 +22,7 @@ function getMemoizedParticipant(item10013, get) {
   }
   return value;
 }
-const VoicePanelConstants = fn(12615);
+const VoicePanelConstants = fn(11741);
 ({ VoicePanelCardItemType: closure_11, VoicePanelCTACard: closure_12 } = VoicePanelConstants);
 const RTCConnectionStates = fn(1074).RTCConnectionStates;
 let closure_14 = [];

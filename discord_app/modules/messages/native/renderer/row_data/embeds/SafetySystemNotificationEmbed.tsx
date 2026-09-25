@@ -1,12 +1,12 @@
-// === Module 13649: SafetySystemNotificationEmbed ===
+// === Module 12803: SafetySystemNotificationEmbed ===
 
-// Module 13649 (SafetySystemNotificationEmbed)
+// Module 12803 (SafetySystemNotificationEmbed)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
-import _modDef4416 from "module_4416" /* 4416 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8294 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 8769 */;
+import _modDef4418 from "module_4418" /* 4418 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7383 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 7859 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -50,7 +50,7 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
             if (str == null) {
               str = "";
             }
-            const obj2 = { titleText: str, titleIcon: renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 8947 : 5335))), subtitleText: null, descriptionText: null, primaryCtaText: null, primaryCtaType: null, primaryCtaKey: null, secondaryCtaText: null, secondaryCtaType: null, secondaryCtaKey: null, footerTheme: null };
+            const obj2 = { titleText: str, titleIcon: renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 8041 : 5336))), subtitleText: null, descriptionText: null, primaryCtaText: null, primaryCtaType: null, primaryCtaKey: null, secondaryCtaText: null, secondaryCtaType: null, secondaryCtaKey: null, footerTheme: null };
             const intl = util.intl;
             let num = parseMessageForPropsResult.timestamp;
             if (num == null) {
@@ -58,8 +58,8 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
             }
             const obj3 = { daysAgo: null };
             const tmp6Result4 = renderer_EmbedUtils;
-            const obj7 = _modDef4416();
-            obj3.daysAgo = obj7.diff(_modDef4416.unix(num), "days");
+            const obj7 = _modDef4418();
+            obj3.daysAgo = obj7.diff(_modDef4418.unix(num), "days");
             obj2.subtitleText = intl.formatToPlainString(util.t.eevFb6, obj3);
             let str4 = parseMessageForPropsResult.body;
             if (str4 == null) {

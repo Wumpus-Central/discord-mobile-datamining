@@ -1,13 +1,13 @@
-// === Module 10406: StreamPreview ===
+// === Module 9508: StreamPreview ===
 
-// Module 10406 (StreamPreview)
+// Module 9508 (StreamPreview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Pressables from "Pressables" /* 5427 */;
-import _modDef10407 from "module_10407" /* 10407 */;
-import _modDef10408 from "module_10408" /* 10408 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10409 */;
+import Pressables from "Pressables" /* 5428 */;
+import _modDef9509 from "module_9509" /* 9509 */;
+import _modDef9510 from "module_9510" /* 9510 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 9511 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 
@@ -36,15 +36,15 @@ DefaultFallback.prototype["render"] = function render() {
   const obj = { style: tmp.wrapper, children: null };
   const obj2 = { resizeMode: "contain", style: tmp.fallbackImage, source: null };
   if (obj3.isThemeDark(this.props.theme)) {
-    let tmp6Result = _modDef10407;
+    let tmp6Result = _modDef9509;
   } else {
-    tmp6Result = _modDef10408;
+    tmp6Result = _modDef9510;
   }
   obj2.source = tmp6Result;
   obj.children = timestampProducer(React3, obj2);
   return timestampProducer(React4, obj);
 };
-DefaultFallback.contextType = fn(4535).ThemeContext;
+DefaultFallback.contextType = fn(4537).ThemeContext;
 createStyles = fn(4829);
 const obj6 = { touchable: null, imageContainer: null, image: null };
 let size = { flex: 1, width: "100%", height: "WireType", aspectRatio: true, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -109,7 +109,7 @@ StreamPreview.prototype["render"] = function render() {
   }
   tmp8 = renderFallbackResult1;
 };
-StreamPreview.contextType = fn(4535).ThemeContext;
+StreamPreview.contextType = fn(4537).ThemeContext;
 StreamPreview.defaultProps = {
   renderFallback: function defaultRenderFallback(arg0, theme) {
     const obj = { theme, caption: null };

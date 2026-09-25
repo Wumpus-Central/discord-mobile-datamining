@@ -1,14 +1,14 @@
-// === Module 5929: NavigatorHeader ===
+// === Module 5931: NavigatorHeader ===
 
-// Module 5929 (NavigatorHeader)
+// Module 5931 (NavigatorHeader)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 5930 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5933 */;
-import _mod5936 from "module_5936" /* 5936 */;
-import XSmallIcon from "XSmallIcon" /* 5985 */;
-import NavigatorConstants from "NavigatorConstants" /* 5987 */;
+import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 5932 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5935 */;
+import _mod5938 from "module_5938" /* 5938 */;
+import XSmallIcon from "XSmallIcon" /* 5987 */;
+import NavigatorConstants from "NavigatorConstants" /* 5989 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -50,12 +50,12 @@ function CloseButton(onPress) {
     return timestampProducer(XSmallIcon.XSmallIcon, obj);
   };
   obj2.accessibilityLabel = stringResult;
-  return closure_6(require("module_5936").HeaderBackButton, obj2);
+  return closure_6(require("module_5938").HeaderBackButton, obj2);
 }
 function CustomHeaderBackButton(onPress) {
   onPress = onPress.onPress;
   const merged = Object.assign(onPress, Object.assign({ onPress: 0 }));
-  onPress(5935).useNavigatorBackPressHandler(() => {
+  onPress(5937).useNavigatorBackPressHandler(() => {
     if (null != onPress) {
       tmp();
     }
@@ -68,7 +68,7 @@ function CustomHeaderBackButton(onPress) {
   obj2.backImage = function backImage() {
     return closure_1_6(HeaderBackImage, {});
   };
-  return closure_6(onPress(5936).HeaderBackButton, obj2);
+  return closure_6(onPress(5938).HeaderBackButton, obj2);
 }
 function HeaderTextButton(text) {
   text = text.text;
@@ -90,7 +90,7 @@ function HeaderTextButton(text) {
     tmp5 = text;
   }
   obj2.accessibilityLabel = tmp5;
-  return timestampProducer(_mod5936.HeaderBackButton, obj2);
+  return timestampProducer(_mod5938.HeaderBackButton, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);

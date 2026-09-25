@@ -1,8 +1,8 @@
-// === Module 15262: FamilyCenterEmpty ===
+// === Module 14428: FamilyCenterEmpty ===
 
-// Module 15262 (FamilyCenterEmpty)
+// Module 14428 (FamilyCenterEmpty)
 import Text_Text from "Text/Text" /* 4825 */;
-import _modDef15263 from "module_15263" /* 15263 */;
+import _modDef14429 from "module_14429" /* 14429 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCen
 export default function FamilyCenterEmpty(children) {
   const tmp = closure_7();
   const obj = { style: tmp.empty, children: null };
-  const items = [hasOwnProperty(React4, { source: _modDef15263, style: tmp.art, resizeMethod: "scale" }), hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: children.text })];
+  const items = [hasOwnProperty(React4, { source: _modDef14429, style: tmp.art, resizeMethod: "scale" }), hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: children.text })];
   obj.children = items;
   return timestampProducer(React3, obj);
 };

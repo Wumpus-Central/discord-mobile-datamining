@@ -1,7 +1,7 @@
-// === Module 10389: StageChannelAnimationUtils ===
+// === Module 9491: StageChannelAnimationUtils ===
 
-// Module 10389 (StageChannelAnimationUtils)
-import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
+// Module 9491 (StageChannelAnimationUtils)
+import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
 import timing from "timing" /* 4830 */;
 import size from "module_2" /* 2 */;
 

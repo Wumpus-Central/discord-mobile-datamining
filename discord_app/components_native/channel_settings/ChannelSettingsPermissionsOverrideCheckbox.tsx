@@ -1,8 +1,8 @@
-// === Module 17407: ChannelSettingsPermissionsOverrideCheckbox ===
+// === Module 16624: ChannelSettingsPermissionsOverrideCheckbox ===
 
-// Module 17407 (ChannelSettingsPermissionsOverrideCheckbox)
+// Module 16624 (ChannelSettingsPermissionsOverrideCheckbox)
 import nativeDefault from "native" /* 576 */;
-import PermissionUtils from "PermissionUtils" /* 4469 */;
+import PermissionUtils from "PermissionUtils" /* 4471 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -96,7 +96,7 @@ const obj9 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_SELE
 obj.passthroughActive = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
 obj.disabled = { opacity: 0.3 };
 let closure_6 = createStyles.createStyles(obj);
-let items = [fn(4469).DENY, fn(4469).PASSTHROUGH, fn(4469).ALLOW];
+let items = [fn(4471).DENY, fn(4471).PASSTHROUGH, fn(4471).ALLOW];
 const obj10 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsPermissionsOverrideCheckbox.tsx");

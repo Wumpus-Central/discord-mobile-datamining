@@ -1,12 +1,12 @@
-// === Module 7452: NotificationSettingsModalActionCreators ===
+// === Module 6535: NotificationSettingsModalActionCreators ===
 
-// Module 7452 (NotificationSettingsModalActionCreators)
+// Module 6535 (NotificationSettingsModalActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1115 */;
-import shared from "shared" /* 4680 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7447 */;
-import UserGuildSettingsManagerDefault from "UserGuildSettingsManager" /* 7449 */;
+import shared from "shared" /* 4682 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6530 */;
+import UserGuildSettingsManagerDefault from "UserGuildSettingsManager" /* 6532 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5010 */;
 
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 
 require = fn;
 const Endpoints = fn(1074).Endpoints;
-fn(4477).NotificationSettingsUpdateType;
+fn(4479).NotificationSettingsUpdateType;
 const constants = fn(1084).ChannelNotificationSettingsFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/NotificationSettingsModalActionCreators.tsx");

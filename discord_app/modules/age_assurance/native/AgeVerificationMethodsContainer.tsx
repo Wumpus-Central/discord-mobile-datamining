@@ -1,14 +1,14 @@
-// === Module 8941: AgeVerificationMethodsContainer ===
+// === Module 8035: AgeVerificationMethodsContainer ===
 
-// Module 8941 (AgeVerificationMethodsContainer)
+// Module 8035 (AgeVerificationMethodsContainer)
 import nativeDefault from "native" /* 576 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 5171 */;
-import MetricEvents from "MetricEvents" /* 5176 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5172 */;
+import MetricEvents from "MetricEvents" /* 5177 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const VerificationMethod = fn(8762).VerificationMethod;
-const SafetyHubLinks = fn(8770).SafetyHubLinks;
+const VerificationMethod = fn(7852).VerificationMethod;
+const SafetyHubLinks = fn(7860).SafetyHubLinks;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4829);
@@ -26,7 +26,7 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
   const prop = ageVerificationMethods.ageVerificationMethods;
   const modalSessionId = ageVerificationMethods.modalSessionId;
   const tmp = closure_8();
-  const isSuspendedUser = prop(8769).useIsSuspendedUser();
+  const isSuspendedUser = prop(7859).useIsSuspendedUser();
   const items = [prop];
   const effect = noop.useEffect(() => {
     let someResult;
@@ -45,7 +45,7 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
   const items1 = [closure_6(prop(1177).HelpMessage, obj3), ];
   if (null != prop) {
     if (0 !== prop.length) {
-      let mapped = prop.map((label) => closure_1_6(prop(5910).TableRow, {
+      let mapped = prop.map((label) => closure_1_6(prop(5912).TableRow, {
         label: label.title,
         subLabel: label.description,
         onPress() {
@@ -57,14 +57,14 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
     const obj4 = { hasIcons: false, children: mapped };
     items1[1] = closure_6(tmp8, obj4);
     obj2.children = items1;
-    const items2 = [closure_7(prop(5271).Stack, obj2), ];
+    const items2 = [closure_7(prop(5272).Stack, obj2), ];
     let tmp7Result = isSuspendedUser;
     if (isSuspendedUser) {
       const obj5 = { variant: "text-xs/medium", children: null };
       const intl4 = tmp2(1115).intl;
       const obj6 = {
         handleOnHelpUrlHook() {
-              modalSessionId(8761).openUrl(constants.LEARN_MORE_UU_APPEAL_LINK);
+              modalSessionId(7851).openUrl(constants.LEARN_MORE_UU_APPEAL_LINK);
             }
       };
       obj5.children = intl4.format(modalSessionId(3038).htWh1G, obj6);
@@ -73,7 +73,7 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
     const obj7 = { spacing: 8, align: "center", children: null };
     items2[1] = tmp7Result;
     obj7.children = items2;
-    return closure_7(prop(5271).Stack, obj7);
+    return closure_7(prop(5272).Stack, obj7);
   }
   const obj8 = { direction: "vertical", align: "center", spacing: 16, style: tmp.errorContainer, children: null };
   const obj9 = { variant: "text-sm/medium", color: "text-subtle", style: tmp.noMethodsText, children: null };
@@ -84,10 +84,10 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
   const obj11 = { variant: "primary", size: "lg", text: null, onPress: null };
   const intl3 = tmp2(1115).intl;
   obj11.text = intl3.string(modalSessionId(3038).hDvmYP);
-  obj11.onPress = prop(8768).getAgeVerificationMethods;
-  obj10.children = closure_6(prop(5273).Button, obj11);
-  items3[1] = closure_6(prop(5738).ButtonGroup, obj10);
+  obj11.onPress = prop(7858).getAgeVerificationMethods;
+  obj10.children = closure_6(prop(5274).Button, obj11);
+  items3[1] = closure_6(prop(5740).ButtonGroup, obj10);
   obj8.children = items3;
-  mapped = closure_7(tmp2(5271).Stack, obj8);
-  const obj = prop(8769);
+  mapped = closure_7(tmp2(5272).Stack, obj8);
+  const obj = prop(7859);
 };

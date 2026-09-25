@@ -1,9 +1,9 @@
-// === Module 9007: InAppReportsTextLineElement ===
+// === Module 8101: InAppReportsTextLineElement ===
 
-// Module 9007 (InAppReportsTextLineElement)
+// Module 8101 (InAppReportsTextLineElement)
 import nativeDefault from "native" /* 576 */;
-import ToastUtils from "ToastUtils" /* 4522 */;
-import ClipboardUtils from "ClipboardUtils" /* 7522 */;
+import ToastUtils from "ToastUtils" /* 4524 */;
+import ClipboardUtils from "ClipboardUtils" /* 6605 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

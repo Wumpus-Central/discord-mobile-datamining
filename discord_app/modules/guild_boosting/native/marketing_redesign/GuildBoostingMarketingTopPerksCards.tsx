@@ -1,13 +1,13 @@
-// === Module 13967: GuildBoostingMarketingTopPerksCards ===
+// === Module 13126: GuildBoostingMarketingTopPerksCards ===
 
-// Module 13967 (GuildBoostingMarketingTopPerksCards)
+// Module 13126 (GuildBoostingMarketingTopPerksCards)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import LottieAnimationViewDefault from "LottieAnimationView" /* 5834 */;
-import _modDef13968 from "module_13968" /* 13968 */;
-import _mod13969 from "module_13969" /* 13969 */;
-import _modDef13970 from "module_13970" /* 13970 */;
+import LottieAnimationViewDefault from "LottieAnimationView" /* 5836 */;
+import _modDef13127 from "module_13127" /* 13127 */;
+import _mod13128 from "module_13128" /* 13128 */;
+import _modDef13129 from "module_13129" /* 13129 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4821 */;
 
@@ -37,7 +37,7 @@ let items = [
       return intl.string(util.t.HTvLGu);
     },
     getGraphic(style) {
-      return timestampProducer(React3, { style, source: _modDef13968 });
+      return timestampProducer(React3, { style, source: _modDef13127 });
     }
   },
   {
@@ -50,7 +50,7 @@ let items = [
       return intl.string(util.t.wOYbTv);
     },
     getGraphic(style) {
-      const obj = { source: _mod13969, autoPlay: !AccessibilityStore.useReducedMotion, style };
+      const obj = { source: _mod13128, autoPlay: !AccessibilityStore.useReducedMotion, style };
       return timestampProducer(LottieAnimationViewDefault, obj);
     }
   },
@@ -64,7 +64,7 @@ let items = [
       return intl.string(util.t.yCjoUC);
     },
     getGraphic(style) {
-      return timestampProducer(React3, { style, source: _modDef13970 });
+      return timestampProducer(React3, { style, source: _modDef13129 });
     }
   }
 ];

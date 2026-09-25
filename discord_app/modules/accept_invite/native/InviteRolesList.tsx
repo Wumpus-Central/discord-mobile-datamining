@@ -1,8 +1,8 @@
-// === Module 13068: InviteRolesList ===
+// === Module 12216: InviteRolesList ===
 
-// Module 13068 (InviteRolesList)
+// Module 12216 (InviteRolesList)
 import GuildRoleUtils from "GuildRoleUtils" /* 2105 */;
-import RolePillDefault from "RolePill" /* 11300 */;
+import RolePillDefault from "RolePill" /* 10398 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -44,7 +44,7 @@ export default function InviteRolesList(invite) {
       const obj3 = { style: tmp.rolesRow, children: memo.map((role) => hasOwnProperty(RolePillDefault, { role, guildId: guild.id }, role.id)) };
       items1[1] = closure_5(View, obj3);
       obj.children = items1;
-      tmp2 = closure_6(guild(5271).Stack, obj);
+      tmp2 = closure_6(guild(5272).Stack, obj);
     }
   }
   return tmp2;

@@ -1,11 +1,11 @@
-// === Module 8467: RowGeneratorUtils ===
+// === Module 7557: RowGeneratorUtils ===
 
-// Module 8467 (RowGeneratorUtils)
+// Module 7557 (RowGeneratorUtils)
 import nativeDefault from "native" /* 576 */;
 import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1477 */;
-import ColorUtils from "ColorUtils" /* 4678 */;
+import ColorUtils from "ColorUtils" /* 4680 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 5051 */;
-import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 7597 */;
+import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 6680 */;
 import AccessibilityStore from "AccessibilityStore" /* 4821 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import GuildStore from "GuildStore" /* 2066 */;
@@ -13,7 +13,7 @@ import GuildStore from "GuildStore" /* 2066 */;
 require = fn;
 const MessageConstants = fn(4822);
 ({ DEFAULT_GUILD_OFFICIAL_COLOR: metroRequire, GUILD_OFFICIAL_HIGHLIGHT_ALPHA_COLOR: closure_7 } = MessageConstants);
-const SwipeActionsType = fn(8281).SwipeActionsType;
+const SwipeActionsType = fn(7370).SwipeActionsType;
 const Constants = fn(1074);
 ({ MessageFlags: closure_9, MessageTypes: c10 } = Constants);
 let createStyles = fn(4829);

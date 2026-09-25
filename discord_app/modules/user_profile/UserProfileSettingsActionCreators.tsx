@@ -1,12 +1,12 @@
-// === Module 8512: UserProfileSettingsActionCreators ===
+// === Module 7602: UserProfileSettingsActionCreators ===
 
-// Module 8512 (UserProfileSettingsActionCreators)
+// Module 7602 (UserProfileSettingsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import _modDef4948 from "module_4948" /* 4948 */;
-import GuildTagUtils from "GuildTagUtils" /* 8513 */;
+import GuildTagUtils from "GuildTagUtils" /* 7603 */;
 import GuildMemberStore from "GuildMemberStore" /* 2107 */;
 import UserStore from "UserStore" /* 1372 */;
-import UserProfileStore from "UserProfileStore" /* 7945 */;
+import UserProfileStore from "UserProfileStore" /* 7030 */;
 
 require = fn;
 const size = fn(2);

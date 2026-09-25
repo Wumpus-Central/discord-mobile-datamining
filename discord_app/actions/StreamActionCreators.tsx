@@ -11,9 +11,9 @@ import GuildRoomActionCreators from "GuildRoomActionCreators" /* 4985 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5022 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5030 */;
 import transitionToStreamDefault from "transitionToStream" /* 5031 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5716 */;
-import StreamQualityUtils from "StreamQualityUtils" /* 9790 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 10086 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5718 */;
+import StreamQualityUtils from "StreamQualityUtils" /* 8888 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 9183 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GameConsoleStore from "GameConsoleStore" /* 4846 */;
 import PopoutWindowStore from "PopoutWindowStore" /* 4972 */;
@@ -314,10 +314,10 @@ export const stopOwnStream = function stopOwnStream(arg0) {
     if (flag === undefined) {
       flag = true;
     }
-    const obj2 = { type: "STREAM_CLOSE", streamKey: encodeStreamKeyResult, canShowFeedback: flag };
-    DispatcherDefault.dispatch(obj2);
-    const obj4 = { type: "STREAM_STOP", streamKey: encodeStreamKeyResult, appContext: constants.APP };
-    DispatcherDefault.dispatch(obj4);
+    const obj3 = { type: "STREAM_CLOSE", streamKey: encodeStreamKeyResult, canShowFeedback: flag };
+    DispatcherDefault.dispatch(obj3);
+    const obj5 = { type: "STREAM_STOP", streamKey: encodeStreamKeyResult, appContext: constants.APP };
+    DispatcherDefault.dispatch(obj5);
   }
 };
 export const joinPrivateChannelAndWatchStream = function joinPrivateChannelAndWatchStream(arg0, streamKey) {

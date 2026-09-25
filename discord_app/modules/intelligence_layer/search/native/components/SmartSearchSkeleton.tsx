@@ -1,17 +1,17 @@
-// === Module 17262: SmartSearchSkeleton ===
+// === Module 16477: SmartSearchSkeleton ===
 
-// Module 17262 (SmartSearchSkeleton)
+// Module 16477 (SmartSearchSkeleton)
 import nativeDefault from "native" /* 576 */;
 import _modDef3876 from "module_3876" /* 3876 */;
-import waveTransition from "waveTransition" /* 14504 */;
-import FormRowPlaceholderDefault from "FormRowPlaceholder" /* 17246 */;
+import waveTransition from "waveTransition" /* 13665 */;
+import FormRowPlaceholderDefault from "FormRowPlaceholder" /* 16461 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const IntelligenceSearchConstants = fn(12707);
+const IntelligenceSearchConstants = fn(11833);
 ({ LOADING_BLOCK_HEIGHT: hasOwnProperty, LOADING_BOTTOM_GAP: metroRequire } = IntelligenceSearchConstants);
-const AILoaderConstants = fn(14499);
+const AILoaderConstants = fn(13660);
 ({ AI_LOADER_CYCLE_MS: closure_7, AI_LOADER_REDUCED_MOTION_CYCLE_MS: closure_8, AI_LOADER_REST_FRACTION, AI_LOADER_STEP_FRACTION } = AILoaderConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -44,7 +44,7 @@ export default noop.memo((isCollapsed) => {
   isCollapsed = isCollapsed.isCollapsed;
   let reducedMotion;
   let tmp = closure_13(isCollapsed);
-  reducedMotion = noop.useContext(reducedMotion(4545).AccessibilityPreferencesContext).reducedMotion;
+  reducedMotion = noop.useContext(reducedMotion(4547).AccessibilityPreferencesContext).reducedMotion;
   items = [reducedMotion.enabled];
   const memo = noop.useMemo(() => {
     items = [_modDef3876.CM07jO, ...closure_1_12.sort(() => Math.random() - 0.5)];
@@ -66,7 +66,7 @@ export default noop.memo((isCollapsed) => {
   const obj = { style: tmp.block, children: null };
   const obj2 = { style: tmp.header, children: null };
   ({ shimmerDurationMs, shimmerDelayMs, shimmerInitialDelayMs } = memo1);
-  const items1 = [closure_9(reducedMotion(14498).AILoader, { size: 12, color: "interactive-text-default" }), closure_9(reducedMotion(14502).AIShimmer, { text: memo, variant: "text-sm/semibold", color: "interactive-text-default", delay: shimmerDelayMs, initialDelay: shimmerInitialDelayMs, duration: shimmerDurationMs, style: tmp.label })];
+  const items1 = [closure_9(reducedMotion(13659).AILoader, { size: 12, color: "interactive-text-default" }), closure_9(reducedMotion(13663).AIShimmer, { text: memo, variant: "text-sm/semibold", color: "interactive-text-default", delay: shimmerDelayMs, initialDelay: shimmerInitialDelayMs, duration: shimmerDurationMs, style: tmp.label })];
   obj2.children = items1;
   const items2 = [closure_10(View, obj2), ];
   const obj4 = { style: tmp.skeletons, children: null };

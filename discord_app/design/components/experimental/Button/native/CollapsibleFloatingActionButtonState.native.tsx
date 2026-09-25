@@ -1,7 +1,7 @@
-// === Module 9272: CollapsibleFloatingActionButtonState ===
+// === Module 8370: CollapsibleFloatingActionButtonState ===
 
-// Module 9272 (CollapsibleFloatingActionButtonState)
-import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
+// Module 8370 (CollapsibleFloatingActionButtonState)
+import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,12 +1,12 @@
-// === Module 16934: ReactActionSheet ===
+// === Module 16122: ReactActionSheet ===
 
-// Module 16934 (ReactActionSheet)
+// Module 16122 (ReactActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 8092 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8701 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11474 */;
-import ICYMIContext from "ICYMIContext" /* 16880 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7177 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 7791 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10572 */;
+import ICYMIContext from "ICYMIContext" /* 16068 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -110,10 +110,10 @@ function ReactActionSheetBase(content) {
               return obj3;
             } else {
               closure_5(true);
-              v1(8701).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
-              const obj5 = v1(8701);
+              v1(7791).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
+              const obj5 = v1(7791);
               const obj4 = { itemId: tmp4.id, itemType: hotwheels_gaming_activity, actionParameters: { actionGestureType: "press", actionTargetElement: "reply_button", actionIntentType: "reply", actionDestinationType: null } };
-              v1(8701).feedItemActioned(obj4);
+              v1(7791).feedItemActioned(obj4);
               v1 = 1;
               dependencyMap = 1;
               const obj7 = { value: sendMessage(first1), done: false };
@@ -358,7 +358,7 @@ function ReactActionSheetBase(content) {
   stringResult = intl.string(require("util").t["5IEsGx"]);
 }
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(7484).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(6567).ACTION_SHEET_MAX_WIDTH;
 const EmojiIntention = fn(1375).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);

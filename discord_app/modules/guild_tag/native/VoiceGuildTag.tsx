@@ -1,13 +1,13 @@
-// === Module 16551: VoiceGuildTag ===
+// === Module 15731: VoiceGuildTag ===
 
-// Module 16551 (VoiceGuildTag)
+// Module 15731 (VoiceGuildTag)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = fn;
 const View = fn(17).View;
-const GuildTagBadgeSize = fn(8292).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(7381).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let PlatformUtils = fn(1364);
@@ -38,18 +38,18 @@ export default function VoiceGuildTagChiplet(userId) {
   if (stateFromStores != null) {
     primaryGuild = stateFromStores.primaryGuild;
   }
-  const userPrimaryGuild = userId(8513).getUserPrimaryGuild(primaryGuild);
+  const userPrimaryGuild = userId(7603).getUserPrimaryGuild(primaryGuild);
   ({ tag, guildId } = userPrimaryGuild);
   if (null != guildId) {
     if (null != tag) {
       const obj3 = { style: tmp.gapContainer, children: null };
       const obj4 = { style: tmp.tagContainer, children: null };
-      const guildTagBadgeUrl = tmp2(8513).getGuildTagBadgeUrl(guildId, tmp7, GuildTagBadgeSize.SIZE_12);
+      const guildTagBadgeUrl = tmp2(7603).getGuildTagBadgeUrl(guildId, tmp7, GuildTagBadgeSize.SIZE_12);
       const obj5 = { source: null, size: null };
       const obj6 = { uri: guildTagBadgeUrl };
       obj5.source = obj6;
       obj5.size = GuildTagBadgeSize.SIZE_12;
-      const items2 = [closure_5(tmp2(10097).GuildTagBadge, obj5), ];
+      const items2 = [closure_5(tmp2(9194).GuildTagBadge, obj5), ];
       const obj7 = { variant: "text-xs/semibold", color: "text-default", style: tmp.tag, children: tag };
       items2[1] = closure_5(tmp2(4825).Text, obj7);
       obj4.children = items2;

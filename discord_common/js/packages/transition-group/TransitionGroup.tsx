@@ -1,7 +1,7 @@
-// === Module 12772: TransitionGroup ===
+// === Module 11898: TransitionGroup ===
 
-// Module 12772 (TransitionGroup)
-import TransitionChildMapping from "TransitionChildMapping" /* 12773 */;
+// Module 11898 (TransitionGroup)
+import TransitionChildMapping from "TransitionChildMapping" /* 11899 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

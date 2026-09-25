@@ -1,13 +1,13 @@
-// === Module 18061: TriggerFields ===
+// === Module 17289: TriggerFields ===
 
-// Module 18061 (TriggerFields)
+// Module 17289 (TriggerFields)
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import AutomodRuleUtils from "AutomodRuleUtils" /* 18047 */;
-import MentionSpamTriggerFieldsDefault from "MentionSpamTriggerFields" /* 18062 */;
-import DefaultKeywordListTriggerFieldsDefault from "DefaultKeywordListTriggerFields" /* 18063 */;
-import ApplicationTriggerFieldsDefault from "ApplicationTriggerFields" /* 18067 */;
-import KeywordFilterTriggerFieldsDefault from "KeywordFilterTriggerFields" /* 18071 */;
+import AutomodRuleUtils from "AutomodRuleUtils" /* 17275 */;
+import MentionSpamTriggerFieldsDefault from "MentionSpamTriggerFields" /* 17290 */;
+import DefaultKeywordListTriggerFieldsDefault from "DefaultKeywordListTriggerFields" /* 17291 */;
+import ApplicationTriggerFieldsDefault from "ApplicationTriggerFields" /* 17295 */;
+import KeywordFilterTriggerFieldsDefault from "KeywordFilterTriggerFields" /* 17299 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,8 +15,8 @@ const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/native/components/TriggerFields.tsx");
 
-export default function TriggerFields(arg0) {
-  ({ rule, onChangeRule } = arg0);
+export default function TriggerFields(onValidityChange) {
+  ({ rule, onChangeRule } = onValidityChange);
   if (obj.isRuleMLSpamFilter(rule)) {
     const obj2 = { variant: "text-md/normal", color: "text-default", children: null };
     const intl = util.intl;
@@ -24,8 +24,8 @@ export default function TriggerFields(arg0) {
     let tmp3 = jsx(Text_Text.Text, { variant: "text-md/normal", color: "text-default", children: null });
   } else {
     if (tmpResult.isRuleMentionSpamFilter(rule)) {
-      const obj3 = { rule, onChangeRule };
-      tmp3 = jsx(MentionSpamTriggerFieldsDefault, { rule, onChangeRule });
+      const obj3 = { rule, onChangeRule, onValidityChange: onValidityChange.onValidityChange };
+      tmp3 = jsx(MentionSpamTriggerFieldsDefault, { rule, onChangeRule, onValidityChange: onValidityChange.onValidityChange });
     } else {
       if (tmpResult5.isRuleDefaultKeywordListFilter(rule)) {
         const obj4 = { rule, onChangeRule };

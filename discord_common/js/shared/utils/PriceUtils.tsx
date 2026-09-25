@@ -1,7 +1,7 @@
-// === Module 7568: utils/PriceUtils ===
+// === Module 6651: utils/PriceUtils ===
 
-// Module 7568 (utils/PriceUtils)
-import addDefault from "add" /* 7569 */;
+// Module 6651 (utils/PriceUtils)
+import addDefault from "add" /* 6652 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 

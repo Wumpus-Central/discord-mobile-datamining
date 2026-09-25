@@ -1,11 +1,11 @@
-// === Module 12723: useEventsButtonProps ===
+// === Module 11849: useEventsButtonProps ===
 
-// Module 12723 (useEventsButtonProps)
+// Module 11849 (useEventsButtonProps)
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5874 */;
-import useGuildScheduledEventsDefault from "useGuildScheduledEvents" /* 9834 */;
-import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9867 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5876 */;
+import useGuildScheduledEventsDefault from "useGuildScheduledEvents" /* 8932 */;
+import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 8965 */;
 import noop from "module_19" /* 19 */;
 import ReadStateStore from "ReadStateStore" /* 4844 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5010 */;
@@ -41,7 +41,7 @@ export default function useEventsButtonProps(id) {
   }, items3);
   const handleLongPress = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(12724, dependencyMap.paths), "UpcomingEventsLongPress-" + user.id, { guildId: user.id });
+    obj.openLazy(asyncRequireImpl(11850, dependencyMap.paths), "UpcomingEventsLongPress-" + user.id, { guildId: user.id });
   }, items4);
   if (arr4.length > 0) {
     const intl2 = tmp(1115).intl;
@@ -51,13 +51,13 @@ export default function useEventsButtonProps(id) {
     const intl = tmp(1115).intl;
     name = intl.string(tmp(1115).t.tlopTM);
   }
-  let mode = tmp(12728).ChannelModes.DEFAULT;
+  let mode = tmp(11854).ChannelModes.DEFAULT;
   let tmp8 = hasUnread;
   if (hasUnread) {
     tmp8 = !eventsMuted;
   }
   if (tmp8) {
-    mode = tmp(12728).ChannelModes.UNREAD_IMPORTANT;
+    mode = tmp(11854).ChannelModes.UNREAD_IMPORTANT;
   }
   return { hasUnread, mentionCount, mode, name, eventsMuted, handlePress, handleLongPress };
 };

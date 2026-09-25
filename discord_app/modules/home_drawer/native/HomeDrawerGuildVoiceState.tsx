@@ -1,18 +1,18 @@
-// === Module 16746: HomeDrawerGuildVoiceState ===
+// === Module 15930: HomeDrawerGuildVoiceState ===
 
-// Module 16746 (HomeDrawerGuildVoiceState)
+// Module 15930 (HomeDrawerGuildVoiceState)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import LinearGradientDefault from "LinearGradient" /* 5285 */;
-import FastImageDefault from "FastImage" /* 5892 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10409 */;
-import AvatarPile from "AvatarPile" /* 13416 */;
+import LinearGradientDefault from "LinearGradient" /* 5286 */;
+import FastImageDefault from "FastImage" /* 5894 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 9511 */;
+import AvatarPile from "AvatarPile" /* 12566 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4462 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import GuildChannelStore from "GuildChannelStore" /* 4464 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5010 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4853 */;
 
@@ -44,7 +44,7 @@ function LiveTag() {
   return closure_1_11(View, obj);
 }
 const View = fn(17).View;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4462).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4464).GUILD_VOCAL_CHANNELS_KEY;
 const ChannelTypes = fn(1074).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);

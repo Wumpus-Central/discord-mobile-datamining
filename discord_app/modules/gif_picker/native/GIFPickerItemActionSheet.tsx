@@ -1,14 +1,14 @@
-// === Module 10726: GIFPickerItemActionSheet ===
+// === Module 9830: GIFPickerItemActionSheet ===
 
-// Module 10726 (GIFPickerItemActionSheet)
+// Module 9830 (GIFPickerItemActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ToastUtils from "ToastUtils" /* 4522 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4523 */;
-import components_Button_Button from "components/Button/Button" /* 5273 */;
-import ClipboardUtils from "ClipboardUtils" /* 7522 */;
-import GIFPickerActionCreators from "GIFPickerActionCreators" /* 10712 */;
-import GifIcon from "GifIcon" /* 10727 */;
+import ToastUtils from "ToastUtils" /* 4524 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4525 */;
+import components_Button_Button from "components/Button/Button" /* 5274 */;
+import ClipboardUtils from "ClipboardUtils" /* 6605 */;
+import GIFPickerActionCreators from "GIFPickerActionCreators" /* 9816 */;
+import GifIcon from "GifIcon" /* 9831 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

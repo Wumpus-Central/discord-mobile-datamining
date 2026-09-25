@@ -1,10 +1,10 @@
-// === Module 16348: ScreenRecordingPip ===
+// === Module 15528: ScreenRecordingPip ===
 
-// Module 16348 (ScreenRecordingPip)
+// Module 15528 (ScreenRecordingPip)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
-import spring from "spring" /* 5272 */;
-import springPresets from "springPresets" /* 5276 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
+import spring from "spring" /* 5273 */;
+import springPresets from "springPresets" /* 5277 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -202,7 +202,7 @@ function ScreenRecordingPip(surveyConfig) {
   const obj3 = require("ReanimatedRexport");
 }
 const View = fn(17).View;
-const useScreenRecordingStore = fn(16349).useScreenRecordingStore;
+const useScreenRecordingStore = fn(15529).useScreenRecordingStore;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let c10 = 100;

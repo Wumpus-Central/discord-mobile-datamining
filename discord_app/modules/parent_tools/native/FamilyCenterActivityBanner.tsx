@@ -1,14 +1,14 @@
-// === Module 15221: FamilyCenterActivityBanner ===
+// === Module 14387: FamilyCenterActivityBanner ===
 
-// Module 15221 (FamilyCenterActivityBanner)
+// Module 14387 (FamilyCenterActivityBanner)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef2486 from "module_2486" /* 2486 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import useUserLinks from "useUserLinks" /* 9003 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 9004 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 12262 */;
-import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 15222 */;
+import useUserLinks from "useUserLinks" /* 8097 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8098 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 11384 */;
+import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 14388 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -61,7 +61,7 @@ export default function FamilyCenterActivityBanner() {
   const obj4 = { style: tmp4.container, children: null };
   const obj5 = { source: null, style: null };
   const ageSpecificText1 = obj3.useAgeSpecificText(intl3.format(_modDef2486.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" }), intl4.format(_modDef2486.EMCf6j, { articleLink: "https://support.discord.com/hc/articles/14155043715735" }));
-  obj5.source = importDefault(tmp3 ? 15229 : 15230);
+  obj5.source = importDefault(tmp3 ? 14395 : 14396);
   obj5.style = tmp4.art;
   const items = [hasOwnProperty(React4, obj5), hasOwnProperty(Text_Text.Text, { style: tmp4.header, variant: "heading-lg/semibold", children: ageSpecificText }), hasOwnProperty(Text_Text.Text, { style: tmp4.description, variant: "text-sm/medium", color: "text-muted", children: ageSpecificText1 }), ];
   let tmp13Result = null;

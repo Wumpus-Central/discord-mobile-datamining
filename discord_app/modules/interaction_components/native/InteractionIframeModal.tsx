@@ -1,10 +1,10 @@
-// === Module 17912: InteractionIframeModal ===
+// === Module 17138: InteractionIframeModal ===
 
-// Module 17912 (InteractionIframeModal)
+// Module 17138 (InteractionIframeModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4523 */;
-import closeIFrameModalDefault from "closeIFrameModal" /* 17913 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4525 */;
+import closeIFrameModalDefault from "closeIFrameModal" /* 17139 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -64,7 +64,7 @@ export default function InteractionIframeModal(children) {
       referrerPolicy: "origin",
       isPipOrGridMode: false,
       webViewKey: "flex",
-      ignoreSilentHardwareSwitch: "breast_feeding_tone3"
+      ignoreSilentHardwareSwitch: "en-CH"
     };
     ({ channel_id: obj2.channelId, guild_id: obj2.guildId } = queryParams);
     obj3.activityUrl = iframeModalState.iframeUrl;

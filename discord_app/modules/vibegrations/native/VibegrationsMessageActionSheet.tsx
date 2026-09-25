@@ -1,12 +1,12 @@
-// === Module 17122: VibegrationsMessageActionSheet ===
+// === Module 16313: VibegrationsMessageActionSheet ===
 
-// Module 17122 (VibegrationsMessageActionSheet)
+// Module 16313 (VibegrationsMessageActionSheet)
 import util from "util" /* 1115 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4523 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4525 */;
 import CopyIcon from "CopyIcon" /* 4775 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4796 */;
-import ClipboardUtils from "ClipboardUtils" /* 7522 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8527 */;
+import ClipboardUtils from "ClipboardUtils" /* 6605 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7617 */;
 import noop from "module_19" /* 19 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
@@ -38,9 +38,9 @@ function VibegrationsMessageActionSheet(content) {
     const intl2 = tmp4(1115).intl;
     obj2.label = intl2.string(tmp4(1115).t.JrGD7E);
     const obj3 = { IconComponent: tmp4(4775).CopyIcon };
-    obj2.icon = closure_4(tmp4(7532).ActionSheetRow.Icon, obj3);
+    obj2.icon = closure_4(tmp4(6615).ActionSheetRow.Icon, obj3);
     obj2.onPress = callback;
-    tmp3Result = closure_4(tmp4(7532).ActionSheetRow, obj2);
+    tmp3Result = closure_4(tmp4(6615).ActionSheetRow, obj2);
   }
   const items2 = [tmp3Result, ];
   let tmp3Result2 = null;
@@ -48,13 +48,13 @@ function VibegrationsMessageActionSheet(content) {
     let obj = { label: null, icon: null, onPress: null };
     let intl = tmp4(1115).intl;
     obj.label = intl.string(tmp4(1115).t.iXAna6);
-    let obj4 = { IconComponent: tmp4(12167).UserIcon };
-    obj.icon = closure_4(tmp4(7532).ActionSheetRow.Icon, obj4);
+    let obj4 = { IconComponent: tmp4(11289).UserIcon };
+    obj.icon = closure_4(tmp4(6615).ActionSheetRow.Icon, obj4);
     obj.onPress = callback1;
-    tmp3Result2 = closure_4(tmp4(7532).ActionSheetRow, obj);
+    tmp3Result2 = closure_4(tmp4(6615).ActionSheetRow, obj);
   }
   items2[1] = tmp3Result2;
-  return closure_4(content(7530).ActionSheet, { children: closure_5(content(7532).ActionSheetRow.Group, { hasIcons: true, children: items2 }) });
+  return closure_4(content(6613).ActionSheet, { children: closure_5(content(6615).ActionSheetRow.Group, { hasIcons: true, children: items2 }) });
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);

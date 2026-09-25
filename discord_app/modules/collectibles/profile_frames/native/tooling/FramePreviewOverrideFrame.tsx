@@ -1,7 +1,7 @@
-// === Module 8573: FramePreviewOverrideFrame ===
+// === Module 7663: FramePreviewOverrideFrame ===
 
-// Module 8573 (FramePreviewOverrideFrame)
-import FastImageDefault from "FastImage" /* 5892 */;
+// Module 7663 (FramePreviewOverrideFrame)
+import FastImageDefault from "FastImage" /* 5894 */;
 import noop from "module_19" /* 19 */;
 
 function OverrideProfileFrameLayer(layer) {
@@ -107,9 +107,9 @@ function OverrideProfileFrameLayer(layer) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const ProfileFrameConstants = fn(8570);
+const ProfileFrameConstants = fn(7660);
 ({ PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO: closure_4, PROFILE_FRAME_Z_INDEX: hasOwnProperty } = ProfileFrameConstants);
-const UserProfileThemeTypes = fn(7541).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(6624).UserProfileThemeTypes;
 let jsx = fn(21).jsx;
 const createStyles = fn(4829);
 let obj2 = { container: null, layer: null };

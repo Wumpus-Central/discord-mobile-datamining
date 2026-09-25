@@ -1,32 +1,32 @@
-// === Module 17371: YouScreenUserProfileContent ===
+// === Module 16586: YouScreenUserProfileContent ===
 
-// Module 17371 (YouScreenUserProfileContent)
+// Module 16586 (YouScreenUserProfileContent)
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8589 */;
-import UserProfileAvatarDefault from "UserProfileAvatar" /* 8604 */;
-import FormDividerDefault from "FormDivider" /* 8957 */;
-import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 9025 */;
-import getRandomCustomStatusPromptDefault from "getRandomCustomStatusPrompt" /* 11469 */;
-import UserProfileAboutMeCardDefault from "UserProfileAboutMeCard" /* 11559 */;
-import UserProfileActivityDefault from "UserProfileActivity" /* 13387 */;
-import UserProfileNoteDefault from "UserProfileNote" /* 13440 */;
-import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 13453 */;
-import VibegrationsCustomWidgetAddOptionDefault from "VibegrationsCustomWidgetAddOption" /* 13454 */;
-import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 13465 */;
-import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells" /* 13480 */;
-import UserProfileConnections from "UserProfileConnections" /* 13486 */;
-import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 13491 */;
-import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 13497 */;
-import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 16096 */;
-import showYouAccountActionSheet from "showYouAccountActionSheet" /* 16796 */;
-import you_tracking_Tracking from "you/tracking/Tracking" /* 17359 */;
-import YouExpiringTrialOfferCardDefault from "YouExpiringTrialOfferCard" /* 17376 */;
-import UserProfileYourFriendsCardDefault from "UserProfileYourFriendsCard" /* 17378 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 7679 */;
+import UserProfileAvatarDefault from "UserProfileAvatar" /* 7694 */;
+import FormDividerDefault from "FormDivider" /* 8051 */;
+import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 8119 */;
+import getRandomCustomStatusPromptDefault from "getRandomCustomStatusPrompt" /* 10567 */;
+import UserProfileAboutMeCardDefault from "UserProfileAboutMeCard" /* 10764 */;
+import UserProfileActivityDefault from "UserProfileActivity" /* 12537 */;
+import UserProfileNoteDefault from "UserProfileNote" /* 12590 */;
+import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 12603 */;
+import VibegrationsCustomWidgetAddOptionDefault from "VibegrationsCustomWidgetAddOption" /* 12604 */;
+import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 12615 */;
+import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells" /* 12630 */;
+import UserProfileConnections from "UserProfileConnections" /* 12636 */;
+import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 12641 */;
+import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 12647 */;
+import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 15271 */;
+import showYouAccountActionSheet from "showYouAccountActionSheet" /* 15982 */;
+import you_tracking_Tracking from "you/tracking/Tracking" /* 16574 */;
+import YouExpiringTrialOfferCardDefault from "YouExpiringTrialOfferCard" /* 16593 */;
+import UserProfileYourFriendsCardDefault from "UserProfileYourFriendsCard" /* 16595 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5584 */;
-import UserProfileStore from "UserProfileStore" /* 7945 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5586 */;
+import UserProfileStore from "UserProfileStore" /* 7030 */;
 
 const UserProfileWishlistGridDefault = UserProfileWishlistGrid;
 
@@ -154,10 +154,10 @@ function EditSection(navigateToProfileCustomization) {
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const useIsContentShown = fn(2034).useIsContentShown;
-let UserProfileSections = fn(8531).UserProfileSections;
-const UserProfileThemeTypes = fn(7541).UserProfileThemeTypes;
+let UserProfileSections = fn(7621).UserProfileSections;
+const UserProfileThemeTypes = fn(6624).UserProfileThemeTypes;
 const ContentDismissActionType = fn(2041).ContentDismissActionType;
-let closure_13 = fn(11549).UserProfileEditAutoFocusElement;
+let closure_13 = fn(10647).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 const size = fn(2);

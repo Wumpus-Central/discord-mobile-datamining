@@ -1,6 +1,6 @@
-// === Module 13091: HubEmailConnectionModalActionCreators ===
+// === Module 12241: HubEmailConnectionModalActionCreators ===
 
-// Module 13091 (HubEmailConnectionModalActionCreators)
+// Module 12241 (HubEmailConnectionModalActionCreators)
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5032 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

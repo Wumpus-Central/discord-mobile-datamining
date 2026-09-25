@@ -1,12 +1,12 @@
-// === Module 15144: AccountBlockedUsersSetting ===
+// === Module 14310: AccountBlockedUsersSetting ===
 
-// Module 15144 (AccountBlockedUsersSetting)
+// Module 14310 (AccountBlockedUsersSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 
 require = fn;
-const SettingBuilders = fn(11811);
+const SettingBuilders = fn(10993);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
@@ -18,8 +18,8 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.format(util.t["r91W/h"], { numberOfBlockedUsers });
   },
-  IconComponent: fn(8277).DenyIcon,
-  parent: fn(8323).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  IconComponent: fn(7366).DenyIcon,
+  parent: fn(7412).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   screen: {
     route: fn(1074).UserSettingsSections.BLOCKED_USERS_V2,
     getComponent() {

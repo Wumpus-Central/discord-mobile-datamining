@@ -1,6 +1,6 @@
-// === Module 10304: GoLiveAutoQualityExperiment ===
+// === Module 9401: GoLiveAutoQualityExperiment ===
 
-// Module 10304 (GoLiveAutoQualityExperiment)
+// Module 9401 (GoLiveAutoQualityExperiment)
 import Storage3 from "Storage" /* 510 */;
 import StreamActionCreators from "StreamActionCreators" /* 4971 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1235 */;

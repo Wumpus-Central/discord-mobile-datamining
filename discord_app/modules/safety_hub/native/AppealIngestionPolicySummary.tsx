@@ -1,11 +1,11 @@
-// === Module 12242: AppealIngestionPolicySummary ===
+// === Module 11364: AppealIngestionPolicySummary ===
 
-// Module 12242 (AppealIngestionPolicySummary)
+// Module 11364 (AppealIngestionPolicySummary)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ColorUtils from "ColorUtils" /* 4678 */;
+import ColorUtils from "ColorUtils" /* 4680 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 8769 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 7859 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

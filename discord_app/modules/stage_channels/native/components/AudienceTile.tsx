@@ -1,10 +1,10 @@
-// === Module 10416: AudienceTile ===
+// === Module 9518: AudienceTile ===
 
-// Module 10416 (AudienceTile)
+// Module 9518 (AudienceTile)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4976 */;
-import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8743 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7833 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2107 */;
 
@@ -24,7 +24,7 @@ function RaisedHandIcon(rtsState) {
   if (activeBackground) {
     activeBackground = tmp.activeBackground;
   }
-  const obj = { style: items, children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(8974), color: PRIMARY_800 }) };
+  const obj = { style: items, children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(8068), color: PRIMARY_800 }) };
   items[1] = activeBackground;
   return hasOwnProperty(View, obj);
 }

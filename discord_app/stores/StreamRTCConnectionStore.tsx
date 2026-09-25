@@ -8,8 +8,8 @@ import PlatformUtils from "PlatformUtils" /* 1364 */;
 import StreamRTCConnection from "StreamRTCConnection" /* 4873 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 4881 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4884 */;
-import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 8067 */;
-import canSpectateDefault from "canSpectate" /* 14168 */;
+import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7152 */;
+import canSpectateDefault from "canSpectate" /* 13329 */;
 import RunningGameStore from "RunningGameStore" /* 1999 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
@@ -293,7 +293,7 @@ if (MediaEngineStore.isSupported()) {
     STREAM_STOP: function handleStreamStop(appContext) {
         appContext = appContext.appContext;
         const streamKey = appContext.streamKey;
-        closure_11[streamKey] = { appContext, analyticsLocations: "Array" };
+        closure_11[streamKey] = { appContext, analyticsLocations: "a" };
         const item = _modDef12.forEach(closure_18, (analyticsContext) => {
           analyticsContext = analyticsContext.analyticsContext;
           analyticsContext.setActionContext(appContext);

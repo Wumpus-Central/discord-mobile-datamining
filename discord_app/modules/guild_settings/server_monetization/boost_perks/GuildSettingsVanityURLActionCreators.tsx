@@ -1,6 +1,6 @@
-// === Module 9944: GuildSettingsVanityURLActionCreators ===
+// === Module 9042: GuildSettingsVanityURLActionCreators ===
 
-// Module 9944 (GuildSettingsVanityURLActionCreators)
+// Module 9042 (GuildSettingsVanityURLActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;

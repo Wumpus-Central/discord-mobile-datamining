@@ -1,11 +1,11 @@
-// === Module 8460: transformNativeMarkupMention ===
+// === Module 7550: transformNativeMarkupMention ===
 
-// Module 8460 (transformNativeMarkupMention)
-import MarkupTypes from "MarkupTypes" /* 5294 */;
-import MarkupRules from "MarkupRules" /* 5296 */;
-import MarkupChannelMentionRule from "MarkupChannelMentionRule" /* 5305 */;
-import PlatformMarkupRules from "PlatformMarkupRules" /* 5326 */;
-import StaticMentionRoutes from "StaticMentionRoutes" /* 8461 */;
+// Module 7550 (transformNativeMarkupMention)
+import MarkupTypes from "MarkupTypes" /* 5295 */;
+import MarkupRules from "MarkupRules" /* 5297 */;
+import MarkupChannelMentionRule from "MarkupChannelMentionRule" /* 5306 */;
+import PlatformMarkupRules from "PlatformMarkupRules" /* 5327 */;
+import StaticMentionRoutes from "StaticMentionRoutes" /* 7551 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/markup_v2/native/transformNativeMarkupMention.tsx");
@@ -21,15 +21,15 @@ export const transformNativeMention = function transformNativeMention(value, all
   const type = value.type;
   if ("user" === type) {
     const str1 = value.value.toString();
-    const obj5 = { fullMatch: null, id: null, everyoneOrHere: "r" };
+    const obj5 = { fullMatch: null, id: null, everyoneOrHere: "Array" };
     const _HermesInternal2 = HermesInternal;
     obj5.fullMatch = "<@" + str1 + ">";
     obj5.id = str1;
     return MarkupRules.hydrateUserMention(obj5, allowGameMentions);
   } else if ("everyone" === type) {
-    return MarkupRules.hydrateUserMention({ fullMatch: "@everyone", id: "padding", everyoneOrHere: "<string:1090519487>" }, allowGameMentions);
+    return MarkupRules.hydrateUserMention({ fullMatch: "@everyone", id: "paddingHorizontal", everyoneOrHere: 1090519482 }, allowGameMentions);
   } else if ("here" === type) {
-    return MarkupRules.hydrateUserMention({ fullMatch: "@here", id: "padding", everyoneOrHere: "<string:1090519487>" }, allowGameMentions);
+    return MarkupRules.hydrateUserMention({ fullMatch: "@here", id: "paddingHorizontal", everyoneOrHere: 1090519482 }, allowGameMentions);
   } else if ("role" === type) {
     return MarkupRules.hydrateRoleMention(value.value.toString(), allowGameMentions);
   } else if ("game" === type) {

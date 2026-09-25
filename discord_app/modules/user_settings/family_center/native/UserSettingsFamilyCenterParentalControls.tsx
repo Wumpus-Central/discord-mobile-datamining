@@ -1,10 +1,10 @@
-// === Module 15275: UserSettingsFamilyCenterParentalControls ===
+// === Module 14441: UserSettingsFamilyCenterParentalControls ===
 
-// Module 15275 (UserSettingsFamilyCenterParentalControls)
+// Module 14441 (UserSettingsFamilyCenterParentalControls)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef2486 from "module_2486" /* 2486 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7869 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 6954 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const UserSettingsSections = fn(1074).UserSettingsSections;
-const FamilyCenterSubPages = fn(7868).FamilyCenterSubPages;
+const FamilyCenterSubPages = fn(6953).FamilyCenterSubPages;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4829);
@@ -100,7 +100,7 @@ export default function FamilyCenterParentalControlsSettings() {
         stackNavigation.setOptions(obj);
       }
     }
-    stackNavigation.setOptions({ title: "channel", headerRight: "channelId" });
+    stackNavigation.setOptions({ title: "isArray", headerRight: "paddingHorizontal" });
   }, items1);
   const obj4 = { label: null, id: null, page: null };
   let intl = tmp2(tmp3[14]).intl;

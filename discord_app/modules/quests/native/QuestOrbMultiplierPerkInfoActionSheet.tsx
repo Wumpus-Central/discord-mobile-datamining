@@ -1,21 +1,21 @@
-// === Module 15503: QuestOrbMultiplierPerkInfoActionSheet ===
+// === Module 14673: QuestOrbMultiplierPerkInfoActionSheet ===
 
-// Module 15503 (QuestOrbMultiplierPerkInfoActionSheet)
+// Module 14673 (QuestOrbMultiplierPerkInfoActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2110 */;
 import _modDef3520 from "module_3520" /* 3520 */;
-import LinkingDefault from "Linking" /* 4520 */;
-import native from "native" /* 4535 */;
+import LinkingDefault from "Linking" /* 4522 */;
+import native from "native" /* 4537 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import components_Button_Button from "components/Button/Button" /* 5273 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7312 */;
-import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 7487 */;
-import openUserSettings from "openUserSettings" /* 7712 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 10314 */;
-import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 11642 */;
+import components_Button_Button from "components/Button/Button" /* 5274 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6395 */;
+import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 6570 */;
+import openUserSettings from "openUserSettings" /* 6795 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9411 */;
+import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 10684 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -114,9 +114,9 @@ let result = size.fileFinishedImporting("modules/quests/native/QuestOrbMultiplie
 export default function QuestOrbMultiplierPerkInfoActionSheet(multiplier) {
   multiplier = multiplier.multiplier;
   const orbMultiplierEligibility = multiplier.orbMultiplierEligibility;
-  const result = multiplier(11642).shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
+  const result = multiplier(10684).shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
   dependencyMap = result;
-  let obj = multiplier(11642);
+  let obj = multiplier(10684);
   const items = [orbMultiplierEligibility];
   const items1 = [result, orbMultiplierEligibility, multiplier];
   const memo = noop.useMemo(() => {
@@ -149,9 +149,9 @@ export default function QuestOrbMultiplierPerkInfoActionSheet(multiplier) {
     return formatResult;
   }, items1);
   let obj2 = { scrollable: false, handleDisabled: true, startExpanded: true, contentStyles, children: null };
-  let obj3 = { visible: orbMultiplierEligibility === multiplier(11642).QuestOrbMultiplierEligibilityType.NITRO || orbMultiplierEligibility === multiplier(11642).QuestOrbMultiplierEligibilityType.UPSELL, children: null };
-  const tmp4 = orbMultiplierEligibility === multiplier(11642).QuestOrbMultiplierEligibilityType.NITRO || orbMultiplierEligibility === multiplier(11642).QuestOrbMultiplierEligibilityType.UPSELL;
+  let obj3 = { visible: orbMultiplierEligibility === multiplier(10684).QuestOrbMultiplierEligibilityType.NITRO || orbMultiplierEligibility === multiplier(10684).QuestOrbMultiplierEligibilityType.UPSELL, children: null };
+  const tmp4 = orbMultiplierEligibility === multiplier(10684).QuestOrbMultiplierEligibilityType.NITRO || orbMultiplierEligibility === multiplier(10684).QuestOrbMultiplierEligibilityType.UPSELL;
   obj3.children = closure_8(SheetContent, { title: memo, body: memo1, eligibleToReceivePremiumRewards: result });
-  obj2.children = closure_8(orbMultiplierEligibility(15500), obj3);
-  return closure_8(multiplier(7483).BottomSheet, obj2);
+  obj2.children = closure_8(orbMultiplierEligibility(14670), obj3);
+  return closure_8(multiplier(6566).BottomSheet, obj2);
 };

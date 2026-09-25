@@ -4,7 +4,7 @@
 import RegexUtilsDefault from "RegexUtils" /* 4816 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
 
 const Constants = fn(1074);
 const ME = Constants.ME;

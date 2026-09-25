@@ -1,25 +1,25 @@
-// === Module 15004: EditProfileFrameSection ===
+// === Module 14166: EditProfileFrameSection ===
 
-// Module 15004 (EditProfileFrameSection)
+// Module 14166 (EditProfileFrameSection)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7515 */;
-import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 9183 */;
-import useCollectibleListLayout from "useCollectibleListLayout" /* 13573 */;
-import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 13574 */;
-import useProfileFrameSections from "useProfileFrameSections" /* 15003 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6598 */;
+import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8277 */;
+import useCollectibleListLayout from "useCollectibleListLayout" /* 12727 */;
+import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 12728 */;
+import useProfileFrameSections from "useProfileFrameSections" /* 14165 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const isProfileFrameRecord = fn(7879).isProfileFrameRecord;
-let closure_6 = fn(8570).PROFILE_FRAME_ASPECT_RATIO;
+const isProfileFrameRecord = fn(6964).isProfileFrameRecord;
+let closure_6 = fn(7660).PROFILE_FRAME_ASPECT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
 const createStyles = fn(4829);
-let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13573).GUTTER_SIZE }, rowSpacer: null, previewContainer: null };
-let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13573).GUTTER_SIZE };
-obj.rowSpacer = { height: fn(13573).GUTTER_SIZE };
+let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(12727).GUTTER_SIZE }, rowSpacer: null, previewContainer: null };
+let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(12727).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(12727).GUTTER_SIZE };
 obj.previewContainer = { width: "100%", height: "100%", paddingVertical: PX_8, overflow: "hidden", alignItems: "center", justifyContent: "center" };
 let closure_11 = createStyles.createStyles(obj);
 const memoResult = noop.memo((arg0) => {

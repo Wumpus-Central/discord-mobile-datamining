@@ -1,9 +1,9 @@
-// === Module 9193: DiceIcon ===
+// === Module 8287: DiceIcon ===
 
-// Module 9193 (DiceIcon)
+// Module 8287 (DiceIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4525 */;
-import _mod9194 from "module_9194" /* 9194 */;
+import BaseIconImage from "BaseIconImage" /* 4527 */;
+import _mod8288 from "module_8288" /* 8288 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const DiceIcon = function DiceIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9194, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8288, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

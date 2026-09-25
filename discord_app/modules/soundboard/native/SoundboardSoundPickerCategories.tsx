@@ -1,20 +1,20 @@
-// === Module 17645: SoundboardSoundPickerCategories ===
+// === Module 16869: SoundboardSoundPickerCategories ===
 
-// Module 17645 (SoundboardSoundPickerCategories)
+// Module 16869 (SoundboardSoundPickerCategories)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import ClockIcon from "ClockIcon" /* 4791 */;
 import HapticUtils from "HapticUtils" /* 4797 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4798 */;
-import SoundboardTypes from "SoundboardTypes" /* 5320 */;
-import LockIcon from "LockIcon" /* 5401 */;
-import Pressables from "Pressables" /* 5427 */;
-import GuildIconDefault from "GuildIcon" /* 5889 */;
-import TrophyIcon from "TrophyIcon" /* 9071 */;
-import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 10313 */;
-import _modDef10738 from "module_10738" /* 10738 */;
-import _modDef17643 from "module_17643" /* 17643 */;
+import SoundboardTypes from "SoundboardTypes" /* 5321 */;
+import LockIcon from "LockIcon" /* 5402 */;
+import Pressables from "Pressables" /* 5428 */;
+import GuildIconDefault from "GuildIcon" /* 5891 */;
+import TrophyIcon from "TrophyIcon" /* 8165 */;
+import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 9410 */;
+import _modDef9842 from "module_9842" /* 9842 */;
+import _modDef16867 from "module_16867" /* 16867 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -36,7 +36,7 @@ function SoundCategoryItem(style) {
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
     const intl4 = util.intl;
     name = intl4.string(util.t.y3LQCG);
-    tmp6 = _modDef10738;
+    tmp6 = _modDef9842;
     tmp7 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
@@ -49,13 +49,13 @@ function SoundCategoryItem(style) {
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
     const intl2 = util.intl;
     name = intl2.string(util.t.Rtvk9X);
-    tmp6 = _modDef17643;
+    tmp6 = _modDef16867;
     tmp7 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.SEARCH === type) {
     const intl = util.intl;
     name = intl.string(util.t.sKt3xS);
-    tmp6 = _modDef17643;
+    tmp6 = _modDef16867;
     tmp7 = null;
     tmp14Result = null;
   } else {
@@ -109,7 +109,7 @@ function getItemLayout(arg0, index) {
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 ({ View: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);
-const setSearchQuery = fn(17627).setSearchQuery;
+const setSearchQuery = fn(16851).setSearchQuery;
 const Constants = fn(1074);
 ({ CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT: closure_9, NODE_SIZE, NODE_MARGIN } = Constants);
 const jsxProd = fn(21);

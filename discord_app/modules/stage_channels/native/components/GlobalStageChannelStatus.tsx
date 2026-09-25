@@ -1,19 +1,19 @@
-// === Module 9859: GlobalStageChannelStatus ===
+// === Module 8957: GlobalStageChannelStatus ===
 
-// Module 9859 (GlobalStageChannelStatus)
+// Module 8957 (GlobalStageChannelStatus)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useChannelNameDefault from "useChannelName" /* 4982 */;
-import useMountEffectDefault from "useMountEffect" /* 5290 */;
-import StageChannelActionCreators from "StageChannelActionCreators" /* 8748 */;
-import PushNotificationDefault from "PushNotification" /* 9640 */;
-import StatusBarDefault from "StatusBar" /* 9733 */;
-import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 9755 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 9850 */;
+import useMountEffectDefault from "useMountEffect" /* 5291 */;
+import StageChannelActionCreators from "StageChannelActionCreators" /* 7838 */;
+import PushNotificationDefault from "PushNotification" /* 8738 */;
+import StatusBarDefault from "StatusBar" /* 8831 */;
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 8853 */;
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 8948 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 4516 */;
+import ActionSheetStore from "ActionSheetStore" /* 4518 */;
 import StageInstanceStore from "StageInstanceStore" /* 2049 */;
 
 require = fn;
@@ -51,18 +51,18 @@ class StageChannelRaiseHandAck {
               channel = tmp7;
               if (null != id) {
                 if (obj9.shouldAgeVerifyToSpeakForCurrentUser(id.id)) {
-                  const obj5 = { entryPoint: tmp41(8763).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
-                  const result = tmp3(8761).showAgeVerificationGetStartedModal(obj5);
-                  const obj4 = tmp3(8761);
+                  const obj5 = { entryPoint: tmp41(7853).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
+                  const result = tmp3(7851).showAgeVerificationGetStartedModal(obj5);
+                  const obj4 = tmp3(7851);
                 } else {
                   dependencyMap(true);
                   dependencyMap = 1;
                   c4 = 2;
                   c5 = 1;
-                  const obj6 = { value: tmp41(8748).audienceAckRequestToSpeak(id, false), done: false };
+                  const obj6 = { value: tmp41(7838).audienceAckRequestToSpeak(id, false), done: false };
                   return obj6;
                 }
-                obj9 = channel(5727);
+                obj9 = channel(5729);
               }
               c5 = 3;
             }
@@ -78,8 +78,8 @@ class StageChannelRaiseHandAck {
             dependencyMap = 0;
             closure_129_3(false);
             if (null == key.getKey()) {
-              tmp27(8744).openStageChannel(closure_129_0);
-              const obj8 = tmp27(8744);
+              tmp27(7834).openStageChannel(closure_129_0);
+              const obj8 = tmp27(7834);
             }
           }
           dependencyMap = 0;
@@ -292,7 +292,7 @@ export default function GlobalStageChannelStatus(arg0) {
   }
   if (!invitedHeaderText) {
     if (!tmp7) {
-      tmp8(4533);
+      tmp8(4535);
       let str = "dark-content";
     }
     if (null != channel) {
@@ -314,7 +314,7 @@ export default function GlobalStageChannelStatus(arg0) {
           const obj3 = { style: tmp.noticeContainer, children: null };
           const obj4 = { animated: true, barStyle: str };
           const items2 = [closure_10(StatusBarDefault, obj4), , ];
-          const obj5 = { style: activeSpeakerIcon, size: tmp8(1177).Icon.Sizes.REFRESH_SMALL_16, source: tmp8(5327).getChannelIconWithGuild(channel, guild) };
+          const obj5 = { style: activeSpeakerIcon, size: tmp8(1177).Icon.Sizes.REFRESH_SMALL_16, source: tmp8(5328).getChannelIconWithGuild(channel, guild) };
           items2[1] = closure_10(tmp8(1177).Icon, obj5);
           let tmp13Result = "" !== str2;
           if (tmp13Result) {
@@ -353,7 +353,7 @@ export default function GlobalStageChannelStatus(arg0) {
           items2[2] = closure_11(tmp8(1177).LegacyText, obj8);
           obj3.children = items2;
           tmp13Result2 = closure_11(View, obj3);
-          const tmp8Result2 = tmp8(5327);
+          const tmp8Result2 = tmp8(5328);
         }
         return tmp13Result2;
       }

@@ -1,8 +1,8 @@
-// === Module 5289: ButtonEllipsis ===
+// === Module 5290: ButtonEllipsis ===
 
-// Module 5289 (ButtonEllipsis)
+// Module 5290 (ButtonEllipsis)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
 import timing from "timing" /* 4830 */;
 import noop from "module_19" /* 19 */;
 
@@ -62,8 +62,8 @@ function EllipsisCircle(offset) {
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 const ELLIPSIS_APPEAR_TIMING = { duration: 500, easing: null };
-const Easing = fn(4561).Easing;
-ELLIPSIS_APPEAR_TIMING.easing = Easing.inOut(fn(4561).Easing.quad);
+const Easing = fn(4563).Easing;
+ELLIPSIS_APPEAR_TIMING.easing = Easing.inOut(fn(4563).Easing.quad);
 const createStyles = fn(4829);
 let closure_6 = createStyles.createStyles((arg0, arg1, backgroundColor) => {
   if ("lg" === arg0) {
@@ -97,7 +97,7 @@ function withEllipsisAnimation(arg0, value) {
   const obj2 = ReanimatedRexport;
   return obj.withDelay(result, obj2.withRepeat(timing.withTiming(value, obj, "animate-always"), -1, true));
 }
-withEllipsisAnimation.__closure = { ELLIPSIS_APPEAR_DURATION: 500, withDelay: fn(4561).withDelay, withRepeat: fn(4561).withRepeat, withTiming: fn(4830).withTiming, ELLIPSIS_APPEAR_TIMING };
+withEllipsisAnimation.__closure = { ELLIPSIS_APPEAR_DURATION: 500, withDelay: fn(4563).withDelay, withRepeat: fn(4563).withRepeat, withTiming: fn(4830).withTiming, ELLIPSIS_APPEAR_TIMING };
 withEllipsisAnimation.__workletHash = 2181731162311;
 withEllipsisAnimation.__initData = { code: "function withEllipsisAnimation_ButtonEllipsisNativeTsx1(offset,value){const{ELLIPSIS_APPEAR_DURATION,withDelay,withRepeat,withTiming,ELLIPSIS_APPEAR_TIMING}=this.__closure;const animationTimeMs=ELLIPSIS_APPEAR_DURATION;const animationStaggerTimeMs=animationTimeMs/3;return withDelay(offset*animationStaggerTimeMs,withRepeat(withTiming(value,ELLIPSIS_APPEAR_TIMING,'animate-always'),-1,true));}" };
 const __initData = { code: "function ButtonEllipsisNativeTsx2(){const{opacity,scale}=this.__closure;return{opacity:opacity.get(),transform:[{scale:scale.get()}]};}" };

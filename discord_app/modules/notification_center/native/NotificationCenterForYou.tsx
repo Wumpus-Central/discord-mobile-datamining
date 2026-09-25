@@ -1,26 +1,26 @@
-// === Module 16838: NotificationCenterForYou ===
+// === Module 16024: NotificationCenterForYou ===
 
-// Module 16838 (NotificationCenterForYou)
+// Module 16024 (NotificationCenterForYou)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import parseURLDefault from "parseURL" /* 4809 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7964 */;
-import NotificationCenterUtils from "NotificationCenterUtils" /* 7965 */;
-import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 16841 */;
-import NotificationCenterStoreActions from "NotificationCenterStoreActions" /* 16843 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7049 */;
+import NotificationCenterUtils from "NotificationCenterUtils" /* 7050 */;
+import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 16027 */;
+import NotificationCenterStoreActions from "NotificationCenterStoreActions" /* 16029 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7960 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7045 */;
 import ReadStateStore from "ReadStateStore" /* 4844 */;
 import UserStore from "UserStore" /* 1372 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 7963 */;
-import NotificationCenterStore from "NotificationCenterStore" /* 16839 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 7048 */;
+import NotificationCenterStore from "NotificationCenterStore" /* 16025 */;
 
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const MainTabsConstants = fn(11440);
+const MainTabsConstants = fn(10538);
 ({ RootNavigatorScreen, YouBarNavigatorScreens } = MainTabsConstants);
 const ReadStateTypes = fn(5011).ReadStateTypes;
 const jsx = fn(21).jsx;

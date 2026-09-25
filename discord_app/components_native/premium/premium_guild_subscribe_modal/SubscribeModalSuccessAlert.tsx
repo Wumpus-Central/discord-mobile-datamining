@@ -1,17 +1,17 @@
-// === Module 13988: SubscribeModalSuccessAlert ===
+// === Module 13147: SubscribeModalSuccessAlert ===
 
-// Module 13988 (SubscribeModalSuccessAlert)
+// Module 13147 (SubscribeModalSuccessAlert)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
 import util from "util" /* 1115 */;
 import useThemeDefault from "useTheme" /* 4763 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import LinearGradientDefault from "LinearGradient" /* 5285 */;
-import common_AlertDefault from "common/Alert" /* 5292 */;
-import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 5739 */;
-import SequencedLottieAnimationViewDefault from "SequencedLottieAnimationView" /* 13989 */;
-import _mod13990 from "module_13990" /* 13990 */;
+import LinearGradientDefault from "LinearGradient" /* 5286 */;
+import common_AlertDefault from "common/Alert" /* 5293 */;
+import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 5741 */;
+import SequencedLottieAnimationViewDefault from "SequencedLottieAnimationView" /* 13148 */;
+import _mod13149 from "module_13149" /* 13149 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2066 */;
@@ -29,7 +29,7 @@ class PremiumPaymentGuildAnimation {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
-const Gradients = fn(7762).Gradients;
+const Gradients = fn(6847).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4829);
@@ -72,8 +72,8 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const intl = util.intl;
   obj2.confirmText = intl.string(util.t.YKxJCI);
   obj2.onConfirm = function onConfirm() {
-    closure_1(5196).close();
-    const obj = closure_1(5196);
+    closure_1(5197).close();
+    const obj = closure_1(5197);
     actions_BoostingActionCreators.closeApplyBoostModal();
   };
   const items1 = [
@@ -110,9 +110,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const obj6 = { style: tmp.activatedImage, source: null };
   const tmp14 = LinearGradientDefault;
   if (tmp2Result.isThemeLight(tmp9)) {
-    let tmp8Result = tmp8(13991);
+    let tmp8Result = tmp8(13150);
   } else {
-    tmp8Result = tmp8(13992);
+    tmp8Result = tmp8(13151);
   }
   obj6.source = tmp8Result;
   obj5.children = closure_9(closure_6, obj6);

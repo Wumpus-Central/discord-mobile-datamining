@@ -1,18 +1,18 @@
-// === Module 16978: Elements ===
+// === Module 16168: Elements ===
 
-// Module 16978 (Elements)
+// Module 16168 (Elements)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import Pressables from "Pressables" /* 5427 */;
-import NativePaymentHooksDefault from "NativePaymentHooks" /* 9561 */;
-import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 9564 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15576 */;
-import _modDef16979 from "module_16979" /* 16979 */;
+import Pressables from "Pressables" /* 5428 */;
+import NativePaymentHooksDefault from "NativePaymentHooks" /* 8659 */;
+import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 8662 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 14746 */;
+import _modDef16169 from "module_16169" /* 16169 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4488 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4490 */;
 
 const require = globalThis.__r;
 
@@ -102,7 +102,7 @@ export const ArrowButton = function ArrowButton(arg0) {
   ({ text, onPress } = arg0);
   const tmp = closure_11();
   const obj = { accessibilityRole: "button", style: tmp.arrowButton, onPress, children: null };
-  const items = [React7(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", style: tmp.arrowButtonText, children: text }), React7(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef16979, style: tmp.arrowButtonIcon })];
+  const items = [React7(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", style: tmp.arrowButtonText, children: text }), React7(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef16169, style: tmp.arrowButtonIcon })];
   obj.children = items;
   return closure_1_10(Pressables.PressableOpacity, obj);
 };
@@ -116,8 +116,8 @@ export const useFormattedSubscriptionPlan = function useFormattedSubscriptionPla
   let str = "No Price Available";
   if (null != price) {
     const _HermesInternal = HermesInternal;
-    str = "" + tmp3(7567).formatPrice(price.amount, price.currency) + "/mo.";
-    const tmp3Result = tmp3(7567);
+    str = "" + tmp3(6650).formatPrice(price.amount, price.currency) + "/mo.";
+    const tmp3Result = tmp3(6650);
   }
   return str;
 };

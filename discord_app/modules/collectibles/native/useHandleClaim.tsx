@@ -1,6 +1,6 @@
-// === Module 13564: useHandleClaim ===
+// === Module 12718: useHandleClaim ===
 
-// Module 13564 (useHandleClaim)
+// Module 12718 (useHandleClaim)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,9 +1,9 @@
-// === Module 16139: BugIcon ===
+// === Module 15316: BugIcon ===
 
-// Module 16139 (BugIcon)
+// Module 15316 (BugIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4525 */;
-import _mod16140 from "module_16140" /* 16140 */;
+import BaseIconImage from "BaseIconImage" /* 4527 */;
+import _mod15317 from "module_15317" /* 15317 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const BugIcon = function BugIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16140, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15317, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

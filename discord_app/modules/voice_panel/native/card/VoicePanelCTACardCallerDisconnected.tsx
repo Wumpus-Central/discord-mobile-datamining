@@ -1,6 +1,6 @@
-// === Module 17708: VoicePanelCTACardCallerDisconnected ===
+// === Module 16932: VoicePanelCTACardCallerDisconnected ===
 
-// Module 17708 (VoicePanelCTACardCallerDisconnected)
+// Module 16932 (VoicePanelCTACardCallerDisconnected)
 import nativeDefault from "native" /* 576 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4981 */;
 import _slicedToArray from "module_32" /* 32 */;

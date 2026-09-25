@@ -1,10 +1,10 @@
-// === Module 11459: CircleQuestionIcon ===
+// === Module 10557: CircleQuestionIcon ===
 
-// Module 11459 (CircleQuestionIcon)
+// Module 10557 (CircleQuestionIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4525 */;
-import _mod11460 from "module_11460" /* 11460 */;
-import _mod11461 from "module_11461" /* 11461 */;
+import BaseIconImage from "BaseIconImage" /* 4527 */;
+import _mod10558 from "module_10558" /* 10558 */;
+import _mod10559 from "module_10559" /* 10559 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,8 +26,8 @@ export const CircleQuestionIcon = function CircleQuestionIcon(color) {
   const merged = Object.assign(color, Object.assign({ style: 0, secondaryColor: 0, color: 0 }));
   const obj = { children: null };
   const merged1 = Object.assign(merged);
-  const items = [React4(BaseIconImage.BaseIconImage, { source: _mod11460, color: secondaryColor, style }), ];
-  const obj3 = { source: _mod11461, color: INTERACTIVE_ICON_DEFAULT, style: null };
+  const items = [React4(BaseIconImage.BaseIconImage, { source: _mod10558, color: secondaryColor, style }), ];
+  const obj3 = { source: _mod10559, color: INTERACTIVE_ICON_DEFAULT, style: null };
   const items1 = [style];
   const items2 = [];
   items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };

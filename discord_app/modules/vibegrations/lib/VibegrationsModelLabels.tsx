@@ -1,6 +1,6 @@
-// === Module 17032: VibegrationsModelLabels ===
+// === Module 16222: VibegrationsModelLabels ===
 
-// Module 17032 (VibegrationsModelLabels)
+// Module 16222 (VibegrationsModelLabels)
 import util from "util" /* 1115 */;
 import _modDef3714 from "module_3714" /* 3714 */;
 import size from "module_2" /* 2 */;

@@ -1,11 +1,11 @@
-// === Module 10113: GuildProfileTraits ===
+// === Module 9210: GuildProfileTraits ===
 
-// Module 10113 (GuildProfileTraits)
+// Module 9210 (GuildProfileTraits)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4482 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4484 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import EmojiDefault from "Emoji" /* 7463 */;
+import EmojiDefault from "Emoji" /* 6546 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

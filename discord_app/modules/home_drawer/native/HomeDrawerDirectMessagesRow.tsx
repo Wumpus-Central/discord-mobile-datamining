@@ -1,15 +1,15 @@
-// === Module 16736: HomeDrawerDirectMessagesRow ===
+// === Module 15920: HomeDrawerDirectMessagesRow ===
 
-// Module 16736 (HomeDrawerDirectMessagesRow)
+// Module 15920 (HomeDrawerDirectMessagesRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4692 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4694 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import HomeDrawerShared from "HomeDrawerShared" /* 16732 */;
+import HomeDrawerShared from "HomeDrawerShared" /* 15916 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 4869 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 
 require = fn;
 function HomeDrawerDMsRow() {

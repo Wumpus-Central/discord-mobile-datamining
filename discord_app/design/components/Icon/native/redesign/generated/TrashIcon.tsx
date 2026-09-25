@@ -2,7 +2,7 @@
 
 // Module 4786 (TrashIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4525 */;
+import BaseIconImage from "BaseIconImage" /* 4527 */;
 import _mod4787 from "module_4787" /* 4787 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,7 +1,7 @@
-// === Module 11386: GiftingBadgeConstants ===
+// === Module 10484: GiftingBadgeConstants ===
 
-// Module 11386 (GiftingBadgeConstants)
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8540 */;
+// Module 10484 (GiftingBadgeConstants)
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7630 */;
 import size from "module_2" /* 2 */;
 
 let closure_0 = BadgeDirectoryStore.getSingleRequirementThreshold;

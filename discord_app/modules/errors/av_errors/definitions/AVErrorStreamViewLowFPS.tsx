@@ -1,11 +1,11 @@
-// === Module 18399: AVErrorStreamViewLowFPS ===
+// === Module 17630: AVErrorStreamViewLowFPS ===
 
-// Module 18399 (AVErrorStreamViewLowFPS)
+// Module 17630 (AVErrorStreamViewLowFPS)
 import StreamKeyUtils from "StreamKeyUtils" /* 4881 */;
-import AVError from "AVError" /* 9769 */;
-import StreamQualityUtils from "StreamQualityUtils" /* 9790 */;
-import AVErrorContext from "AVErrorContext" /* 18397 */;
-import AVErrorUtils from "AVErrorUtils" /* 18400 */;
+import AVError from "AVError" /* 8867 */;
+import StreamQualityUtils from "StreamQualityUtils" /* 8888 */;
+import AVErrorContext from "AVErrorContext" /* 17628 */;
+import AVErrorUtils from "AVErrorUtils" /* 17631 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4845 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4851 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

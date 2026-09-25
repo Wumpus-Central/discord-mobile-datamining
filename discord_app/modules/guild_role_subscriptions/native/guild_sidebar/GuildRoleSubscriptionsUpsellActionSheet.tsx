@@ -1,13 +1,13 @@
-// === Module 16668: GuildRoleSubscriptionsUpsellActionSheet ===
+// === Module 15848: GuildRoleSubscriptionsUpsellActionSheet ===
 
-// Module 16668 (GuildRoleSubscriptionsUpsellActionSheet)
+// Module 15848 (GuildRoleSubscriptionsUpsellActionSheet)
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import components_Button_Button from "components/Button/Button" /* 5273 */;
-import FastImageDefault from "FastImage" /* 5892 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7483 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9939 */;
-import _modDef16669 from "module_16669" /* 16669 */;
+import components_Button_Button from "components/Button/Button" /* 5274 */;
+import FastImageDefault from "FastImage" /* 5894 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6566 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9037 */;
+import _modDef15849 from "module_15849" /* 15849 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,7 +31,7 @@ export default function GuildRoleSubscriptionsUpsellActionSheet(arg0) {
     },
     children: null
   };
-  const obj2 = { source: _modDef16669 };
+  const obj2 = { source: _modDef15849 };
   const items = [closure_6(FastImageDefault, obj2), , , , ];
   const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;

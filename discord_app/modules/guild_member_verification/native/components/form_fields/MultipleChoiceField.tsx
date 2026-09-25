@@ -1,9 +1,9 @@
-// === Module 7421: MultipleChoiceField ===
+// === Module 6504: MultipleChoiceField ===
 
-// Module 7421 (MultipleChoiceField)
+// Module 6504 (MultipleChoiceField)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 5829 */;
+import TextStyles from "TextStyles" /* 5831 */;
 
 const require = globalThis.__r;
 

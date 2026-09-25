@@ -1,8 +1,8 @@
-// === Module 17715: ActivityShelfItemBackground ===
+// === Module 16939: ActivityShelfItemBackground ===
 
-// Module 17715 (ActivityShelfItemBackground)
-import NativeViewDefault from "NativeView" /* 5894 */;
-import BrokenImageDefault from "BrokenImage" /* 12427 */;
+// Module 16939 (ActivityShelfItemBackground)
+import NativeViewDefault from "NativeView" /* 5896 */;
+import BrokenImageDefault from "BrokenImage" /* 11553 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

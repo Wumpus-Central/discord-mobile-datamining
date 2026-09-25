@@ -1,24 +1,24 @@
-// === Module 7606: ReportToModUtils ===
+// === Module 6689: ReportToModUtils ===
 
-// Module 7606 (ReportToModUtils)
+// Module 6689 (ReportToModUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4469 */;
-import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7595 */;
-import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 7596 */;
-import ReportUtils from "ReportUtils" /* 7619 */;
-import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 7620 */;
-import SelfModUtils from "SelfModUtils" /* 7621 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7622 */;
-import HarmTypeConfiguration from "HarmTypeConfiguration" /* 7625 */;
-import ForumChannelTypes from "ForumChannelTypes" /* 7633 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7607 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4471 */;
+import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 6678 */;
+import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 6679 */;
+import ReportUtils from "ReportUtils" /* 6702 */;
+import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 6703 */;
+import SelfModUtils from "SelfModUtils" /* 6704 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 6705 */;
+import HarmTypeConfiguration from "HarmTypeConfiguration" /* 6708 */;
+import ForumChannelTypes from "ForumChannelTypes" /* 6716 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 6690 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import GuildStore from "GuildStore" /* 2066 */;
 import MessageStore from "MessageStore" /* 5049 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
-const ReportToModPermissions = fn(7618).ReportToModPermissions;
+const ReportToModPermissions = fn(6701).ReportToModPermissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/report_to_mod/ReportToModUtils.tsx");
 

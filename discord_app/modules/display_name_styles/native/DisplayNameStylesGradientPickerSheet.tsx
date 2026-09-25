@@ -1,6 +1,6 @@
-// === Module 15701: DisplayNameStylesGradientPickerSheet ===
+// === Module 14871: DisplayNameStylesGradientPickerSheet ===
 
-// Module 15701 (DisplayNameStylesGradientPickerSheet)
+// Module 14871 (DisplayNameStylesGradientPickerSheet)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
@@ -44,7 +44,7 @@ const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 obj10.alignItems = "center";
 obj10.justifyContent = "center";
 obj2.checkmarkOverlay = obj10;
-const size1 = { width: fn(15702).CHECKMARK_SIZE, height: fn(15702).CHECKMARK_SIZE };
+const size1 = { width: fn(14872).CHECKMARK_SIZE, height: fn(14872).CHECKMARK_SIZE };
 obj2.checkmark = size1;
 let obj8 = { height: 40, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj2.resetButtonContainer = { alignSelf: "stretch", flexDirection: "row", marginHorizontal: nativeDefault.space.PX_8 };

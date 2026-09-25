@@ -1,6 +1,6 @@
-// === Module 15564: LoadingIndicator ===
+// === Module 14734: LoadingIndicator ===
 
-// Module 15564 (LoadingIndicator)
+// Module 14734 (LoadingIndicator)
 import noop from "module_19" /* 19 */;
 
 const ActivityIndicator = fn(17).ActivityIndicator;

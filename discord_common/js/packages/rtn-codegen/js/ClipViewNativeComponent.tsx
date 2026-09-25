@@ -1,6 +1,6 @@
-// === Module 9177: ClipViewNativeComponent ===
+// === Module 8271: ClipViewNativeComponent ===
 
-// Module 9177 (ClipViewNativeComponent)
+// Module 8271 (ClipViewNativeComponent)
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;
 

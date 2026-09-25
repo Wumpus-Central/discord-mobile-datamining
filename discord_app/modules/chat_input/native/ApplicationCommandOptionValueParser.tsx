@@ -1,18 +1,18 @@
-// === Module 12335: ApplicationCommandOptionValueParser ===
+// === Module 11461: ApplicationCommandOptionValueParser ===
 
-// Module 12335 (ApplicationCommandOptionValueParser)
+// Module 11461 (ApplicationCommandOptionValueParser)
 import _modDef12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import Server from "Server" /* 1978 */;
 import useChannelName from "useChannelName" /* 4982 */;
-import MessageParser from "MessageParser" /* 8005 */;
+import MessageParser from "MessageParser" /* 7090 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5811 */;
-import GuildChannelStore from "GuildChannelStore" /* 4462 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5813 */;
+import GuildChannelStore from "GuildChannelStore" /* 4464 */;
 import GuildMemberStore from "GuildMemberStore" /* 2107 */;
 import GuildRoleStore from "GuildRoleStore" /* 2101 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const MessageParserDefault = MessageParser;
@@ -78,7 +78,7 @@ function getChannels(getGuildId, arr) {
   }
 }
 let closure_6 = fn(2048).isGuildSelectableChannelType;
-const ChannelAutocompleteConstants = fn(5298);
+const ChannelAutocompleteConstants = fn(5299);
 ({ MENTION_SENTINEL: closure_12, CHANNEL_SENTINEL: map1 } = ChannelAutocompleteConstants);
 function matchPrefix(arg0, arg1, arg2) {
 

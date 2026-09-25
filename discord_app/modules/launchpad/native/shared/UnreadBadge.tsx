@@ -1,16 +1,16 @@
-// === Module 17551: UnreadBadge ===
+// === Module 16775: UnreadBadge ===
 
-// Module 17551 (UnreadBadge)
-import useFontScale from "useFontScale" /* 5280 */;
-import Badge from "Badge" /* 8200 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 17231 */;
+// Module 16775 (UnreadBadge)
+import useFontScale from "useFontScale" /* 5281 */;
+import Badge from "Badge" /* 7289 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 16446 */;
 import noop from "module_19" /* 19 */;
 
 const BadgeDefault = Badge;
 
 require = fn;
 const View = fn(17).View;
-const MUTED_OPACITY_CONTENT = fn(10464).MUTED_OPACITY_CONTENT;
+const MUTED_OPACITY_CONTENT = fn(9566).MUTED_OPACITY_CONTENT;
 const UnreadSetting = fn(5011).UnreadSetting;
 const jsx = fn(21).jsx;
 const createStyles = fn(4829);

@@ -1,9 +1,9 @@
-// === Module 8293: getEmbedThemeColors ===
+// === Module 7382: getEmbedThemeColors ===
 
-// Module 8293 (getEmbedThemeColors)
+// Module 7382 (getEmbedThemeColors)
 import nativeDefault from "native" /* 576 */;
-import ColorUtils from "ColorUtils" /* 4678 */;
-import shared from "shared" /* 4680 */;
+import ColorUtils from "ColorUtils" /* 4680 */;
+import shared from "shared" /* 4682 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

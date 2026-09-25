@@ -1,10 +1,10 @@
-// === Module 7386: ViewEmptyState ===
+// === Module 6469: ViewEmptyState ===
 
-// Module 7386 (ViewEmptyState)
+// Module 6469 (ViewEmptyState)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 5829 */;
+import TextStyles from "TextStyles" /* 5831 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);

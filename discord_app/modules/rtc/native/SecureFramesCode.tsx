@@ -1,6 +1,6 @@
-// === Module 10069: SecureFramesCode ===
+// === Module 9167: SecureFramesCode ===
 
-// Module 10069 (SecureFramesCode)
+// Module 9167 (SecureFramesCode)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4825 */;
 import noop from "module_19" /* 19 */;

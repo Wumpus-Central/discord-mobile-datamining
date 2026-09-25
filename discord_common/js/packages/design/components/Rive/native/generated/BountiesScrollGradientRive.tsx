@@ -1,9 +1,9 @@
-// === Module 4613: BountiesScrollGradientRive ===
+// === Module 4615: BountiesScrollGradientRive ===
 
-// Module 4613 (BountiesScrollGradientRive)
-import BaseRive from "BaseRive" /* 4555 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 4610 */;
-import _modDef4614 from "module_4614" /* 4614 */;
+// Module 4615 (BountiesScrollGradientRive)
+import BaseRive from "BaseRive" /* 4557 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 4612 */;
+import _modDef4616 from "module_4616" /* 4616 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,7 +25,7 @@ let closure_8 = noop.forwardRef(function BountiesScrollGradientRiveInner(default
   }
   const tmp2 = _objectWithoutProperties(defaultViewModelInstance, closure_3);
   const merged = Object.assign(tmp2);
-  return jsx(BaseRive.BaseRive, { ref, src: _modDef4614, artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: tmp, stateMachine: defaultViewModelInstance.stateMachine });
+  return jsx(BaseRive.BaseRive, { ref, src: _modDef4616, artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: tmp, stateMachine: defaultViewModelInstance.stateMachine });
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/BountiesScrollGradientRive.tsx");

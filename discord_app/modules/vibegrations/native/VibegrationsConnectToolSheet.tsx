@@ -1,12 +1,12 @@
-// === Module 17086: VibegrationsConnectToolSheet ===
+// === Module 16277: VibegrationsConnectToolSheet ===
 
-// Module 17086 (VibegrationsConnectToolSheet)
+// Module 16277 (VibegrationsConnectToolSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3714 from "module_3714" /* 3714 */;
-import ToastUtils from "ToastUtils" /* 4522 */;
-import AlertModal from "AlertModal" /* 5201 */;
-import ClipboardUtils from "ClipboardUtils" /* 7522 */;
+import ToastUtils from "ToastUtils" /* 4524 */;
+import AlertModal from "AlertModal" /* 5202 */;
+import ClipboardUtils from "ClipboardUtils" /* 6605 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -15,7 +15,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const fetchProjectMcpConnection = fn(13457).fetchProjectMcpConnection;
+const fetchProjectMcpConnection = fn(12607).fetchProjectMcpConnection;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4829);
@@ -185,14 +185,14 @@ export default function VibegrationsConnectToolSheet(projectId) {
     const obj7 = { variant: "primary", children: null };
     const obj8 = { variant: "text-sm/normal", color: "text-default", selectable: true, children: first.url };
     obj7.children = closure_8(tmp12(4825).Text, obj8);
-    items5[1] = closure_8(tmp12(5912).Card, obj7);
+    items5[1] = closure_8(tmp12(5914).Card, obj7);
     const obj9 = { style: tmp.actions, children: null };
     const obj10 = { style: tmp.action, children: null };
     const obj11 = { variant: "primary", size: "md", text: null, onPress: null };
     const intl5 = tmp12(1115).intl;
     obj11.text = intl5.string(tmp12(1115).t.OpuAlK);
     obj11.onPress = callback1;
-    obj10.children = closure_8(tmp12(5273).Button, obj11);
+    obj10.children = closure_8(tmp12(5274).Button, obj11);
     const items6 = [closure_8(View, obj10), ];
     const obj12 = { style: tmp.action, children: null };
     const obj13 = { variant: "secondary", size: "md", text: null, loading: null, onPress: null };
@@ -200,7 +200,7 @@ export default function VibegrationsConnectToolSheet(projectId) {
     obj13.text = intl6.string(tmp14(3714).bsDgiq);
     obj13.loading = tmp5;
     obj13.onPress = callback2;
-    obj12.children = closure_8(tmp12(5273).Button, obj13);
+    obj12.children = closure_8(tmp12(5274).Button, obj13);
     items6[1] = closure_8(View, obj12);
     obj9.children = items6;
     items5[2] = closure_9(View, obj9);
@@ -238,7 +238,7 @@ export default function VibegrationsConnectToolSheet(projectId) {
 
       });
     };
-    items7[1] = closure_8(tmp12(5273).Button, obj19);
+    items7[1] = closure_8(tmp12(5274).Button, obj19);
     obj16.children = items7;
     tmp15Result2 = closure_9(View, obj16);
   }

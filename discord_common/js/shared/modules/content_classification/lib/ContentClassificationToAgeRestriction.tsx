@@ -1,15 +1,15 @@
-// === Module 5417: ContentClassificationToAgeRestriction ===
+// === Module 5418: ContentClassificationToAgeRestriction ===
 
-// Module 5417 (ContentClassificationToAgeRestriction)
+// Module 5418 (ContentClassificationToAgeRestriction)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import AgeRestrictionSource from "AgeRestrictionSource" /* 5418 */;
-import AgeRestrictionStatus8 from "AgeRestrictionStatus" /* 5419 */;
-import DiscordContentClassificationFlags from "DiscordContentClassificationFlags" /* 5420 */;
-import ContentRatingESRBRating from "ContentRatingESRBRating" /* 5421 */;
-import ContentRatingPEGIRating from "ContentRatingPEGIRating" /* 5422 */;
-import ContentRatingGOPClassification from "ContentRatingGOPClassification" /* 5423 */;
-import ContentRatingIGDBTheme from "ContentRatingIGDBTheme" /* 5424 */;
-import AgeRestrictionUtilsAll from "AgeRestrictionUtils" /* 5425 */;
+import AgeRestrictionSource from "AgeRestrictionSource" /* 5419 */;
+import AgeRestrictionStatus8 from "AgeRestrictionStatus" /* 5420 */;
+import DiscordContentClassificationFlags from "DiscordContentClassificationFlags" /* 5421 */;
+import ContentRatingESRBRating from "ContentRatingESRBRating" /* 5422 */;
+import ContentRatingPEGIRating from "ContentRatingPEGIRating" /* 5423 */;
+import ContentRatingGOPClassification from "ContentRatingGOPClassification" /* 5424 */;
+import ContentRatingIGDBTheme from "ContentRatingIGDBTheme" /* 5425 */;
+import AgeRestrictionUtilsAll from "AgeRestrictionUtils" /* 5426 */;
 import size from "module_2" /* 2 */;
 
 function contentClassificationToAgeRestrictionConclusion(data) {
@@ -88,7 +88,7 @@ function contentClassificationToAgeRestrictionConclusion(data) {
                 EVERYONE = AgeRestrictionStatus7.EVERYONE;
                 tmp21 = require;
               }
-              const obj5 = { source: tmp21(5418).AgeRestrictionSource.AGENCY_CLASSIFICATION_IGDB, status: EVERYONE };
+              const obj5 = { source: tmp21(5419).AgeRestrictionSource.AGENCY_CLASSIFICATION_IGDB, status: EVERYONE };
               AgeRestrictionStatus7 = items.push(obj5);
               someResult = themes.some((item) => {
                 const ADULT_THEMES = ContentRatingIGDBTheme.ContentRatingIGDBThemeSets.ADULT_THEMES;

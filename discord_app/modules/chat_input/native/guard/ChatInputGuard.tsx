@@ -1,25 +1,25 @@
-// === Module 12797: ChatInputGuard ===
+// === Module 11923: ChatInputGuard ===
 
-// Module 12797 (ChatInputGuard)
+// Module 11923 (ChatInputGuard)
 import nativeDefault from "native" /* 576 */;
 import Radius from "Radius" /* 670 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import components_Button_Button from "components/Button/Button" /* 5273 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5429 */;
-import ButtonGroup from "ButtonGroup" /* 5738 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8204 */;
-import IconButton from "IconButton" /* 8269 */;
-import native from "native" /* 9264 */;
-import CountDownDefault from "CountDown" /* 11282 */;
-import ArrowSmallRightIcon from "ArrowSmallRightIcon" /* 11287 */;
-import getChatInputPositionStyleDefault from "getChatInputPositionStyle" /* 12602 */;
-import JumpToPresentButtonDefault from "JumpToPresentButton" /* 12609 */;
+import components_Button_Button from "components/Button/Button" /* 5274 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5430 */;
+import ButtonGroup from "ButtonGroup" /* 5740 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7293 */;
+import IconButton from "IconButton" /* 7358 */;
+import native from "native" /* 8362 */;
+import CountDownDefault from "CountDown" /* 10380 */;
+import ArrowSmallRightIcon from "ArrowSmallRightIcon" /* 10385 */;
+import getChatInputPositionStyleDefault from "getChatInputPositionStyle" /* 11728 */;
+import JumpToPresentButtonDefault from "JumpToPresentButton" /* 11735 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(9737).updateChatInputContainerHeight;
+let closure_6 = fn(8835).updateChatInputContainerHeight;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4829);
@@ -141,7 +141,7 @@ export const ChatInputGuardContainer = function ChatInputGuardContainer(screenIn
   const channelId = screenIndex.channelId;
   ({ onJumpToPresent, children } = screenIndex);
   const tmp3 = useIsUsingClientThemeDefault();
-  const chatInputFloatingOverlayStyle = screenIndex(12603).useChatInputFloatingOverlayStyle();
+  const chatInputFloatingOverlayStyle = screenIndex(11729).useChatInputFloatingOverlayStyle();
   const tmp6 = closure_9(tmp3);
   const items = [screenIndex];
   const obj2 = { style: null, onLayout: null, collapsable: false, children: null };
@@ -151,7 +151,7 @@ export const ChatInputGuardContainer = function ChatInputGuardContainer(screenIn
   const items1 = [getChatInputPositionStyleDefault({ isCreatingThread: false }), chatInputFloatingOverlayStyle];
   obj2.style = items1;
   obj2.onLayout = callback;
-  const items2 = [closure_7(screenIndex(12603).ChatInputScrimGradient, {}), ];
+  const items2 = [closure_7(screenIndex(11729).ChatInputScrimGradient, {}), ];
   const obj3 = { style: tmp6.container, children: null };
   let tmp10Result = null;
   if (!tmp3) {
@@ -167,7 +167,7 @@ export const ChatInputGuardContainer = function ChatInputGuardContainer(screenIn
   const items4 = [tmp10Result3, children];
   obj5.children = items4;
   items3[1] = closure_8(closure_5, obj5);
-  const obj = screenIndex(12603);
+  const obj = screenIndex(11729);
   let tmp10Result4 = null;
   if (tmp4Result.isIOS()) {
     tmp10Result4 = null;

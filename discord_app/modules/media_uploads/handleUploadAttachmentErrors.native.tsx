@@ -1,12 +1,12 @@
-// === Module 9504: handleUploadAttachmentErrors ===
+// === Module 8602: handleUploadAttachmentErrors ===
 
-// Module 9504 (handleUploadAttachmentErrors)
+// Module 8602 (handleUploadAttachmentErrors)
 import util from "util" /* 1115 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5195 */;
-import FileUtils from "FileUtils" /* 5438 */;
-import UploadLimits from "UploadLimits" /* 5466 */;
-import showUploadFileSizeErrorDefault from "showUploadFileSizeError" /* 9505 */;
-import getAttachmentUploadAbortAlert from "getAttachmentUploadAbortAlert" /* 9590 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5196 */;
+import FileUtils from "FileUtils" /* 5439 */;
+import UploadLimits from "UploadLimits" /* 5467 */;
+import showUploadFileSizeErrorDefault from "showUploadFileSizeError" /* 8603 */;
+import getAttachmentUploadAbortAlert from "getAttachmentUploadAbortAlert" /* 8688 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

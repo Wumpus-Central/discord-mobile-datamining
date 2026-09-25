@@ -1,19 +1,19 @@
-// === Module 12568: useRenderPollAnswerImage ===
+// === Module 11694: useRenderPollAnswerImage ===
 
-// Module 12568 (useRenderPollAnswerImage)
+// Module 11694 (useRenderPollAnswerImage)
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import EmojiTypes from "EmojiTypes" /* 4481 */;
-import FastImageDefault from "FastImage" /* 5892 */;
-import EmojiDefault from "Emoji" /* 7463 */;
+import EmojiTypes from "EmojiTypes" /* 4483 */;
+import FastImageDefault from "FastImage" /* 5894 */;
+import EmojiDefault from "Emoji" /* 6546 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 5191 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 5192 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-const DraftType = fn(5192).DraftType;
+const DraftType = fn(5193).DraftType;
 const EMOJI_URL_BASE_SIZE = fn(1375).EMOJI_URL_BASE_SIZE;
 const jsx = fn(21).jsx;
 let size = fn(2);

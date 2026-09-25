@@ -1,18 +1,18 @@
-// === Module 9466: CrunchyrollLinkModal ===
+// === Module 8564: CrunchyrollLinkModal ===
 
-// Module 9466 (CrunchyrollLinkModal)
+// Module 8564 (CrunchyrollLinkModal)
 import util from "util" /* 1115 */;
-import _modDef7325 from "module_7325" /* 7325 */;
-import HeaderActionButton from "HeaderActionButton" /* 7707 */;
-import CrunchyrollLinkModalActionCreatorsDefault from "CrunchyrollLinkModalActionCreators" /* 9465 */;
-import CrunchyrollLinkSuccessDefault from "CrunchyrollLinkSuccess" /* 9473 */;
-import CrunchyrollLinkErrorDefault from "CrunchyrollLinkError" /* 9475 */;
+import _modDef6408 from "module_6408" /* 6408 */;
+import HeaderActionButton from "HeaderActionButton" /* 6790 */;
+import CrunchyrollLinkModalActionCreatorsDefault from "CrunchyrollLinkModalActionCreators" /* 8563 */;
+import CrunchyrollLinkSuccessDefault from "CrunchyrollLinkSuccess" /* 8571 */;
+import CrunchyrollLinkErrorDefault from "CrunchyrollLinkError" /* 8573 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function CloseButton() {
   const obj = {
-    source: _modDef7325,
+    source: _modDef6408,
     onPress() {
       return CrunchyrollLinkModalActionCreatorsDefault.hideModal();
     },
@@ -21,14 +21,14 @@ function CloseButton() {
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
   return jsx(HeaderActionButton.HeaderActionButton, {
-    source: _modDef7325,
+    source: _modDef6408,
     onPress() {
       return CrunchyrollLinkModalActionCreatorsDefault.hideModal();
     },
     accessibilityLabel: null
   });
 }
-const constants = fn(9467).CrunchyrollLinkModalScenes;
+const constants = fn(8565).CrunchyrollLinkModalScenes;
 const PlatformTypes = fn(1074).PlatformTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -36,11 +36,11 @@ const result = size.fileFinishedImporting("modules/user_settings/connections/nat
 
 export default function CrunchyrollLinkModal(locationStack) {
   let twoWayLinkStyles;
-  twoWayLinkStyles = twoWayLinkStyles(9432).useTwoWayLinkStyles();
+  twoWayLinkStyles = twoWayLinkStyles(8530).useTwoWayLinkStyles();
   const items = [twoWayLinkStyles];
   const memo = noop.useMemo(() => {
     function onClose() {
-      return closure_1_1(9465).hideModal();
+      return closure_1_1(8563).hideModal();
     }
     function blank() {
       return null;
@@ -52,7 +52,7 @@ export default function CrunchyrollLinkModal(locationStack) {
         headerTitle: blank,
         headerStyle: twoWayLinkStyles.navHeader,
         render() {
-          return closure_1_6(closure_1_1(9468), {});
+          return closure_1_6(closure_1_1(8566), {});
         }
       },
       [closure_2_4.PRE_CONNECT]: {
@@ -60,10 +60,10 @@ export default function CrunchyrollLinkModal(locationStack) {
         headerRight: CloseButton,
         headerStyle: twoWayLinkStyles.navHeader,
         headerTitle() {
-          return closure_1_6(onClose(9433).TwoWayLinkStepHeader, { idx: 1, total: 2 });
+          return closure_1_6(onClose(8531).TwoWayLinkStepHeader, { idx: 1, total: 2 });
         },
         render() {
-          return closure_1_6(closure_1_1(9470), {});
+          return closure_1_6(closure_1_1(8568), {});
         }
       },
       [closure_2_4.DISCORD_CONSENT]: {
@@ -71,11 +71,11 @@ export default function CrunchyrollLinkModal(locationStack) {
         headerRight: CloseButton,
         headerStyle: twoWayLinkStyles.navHeader,
         headerTitle() {
-          return closure_1_6(onClose(9433).TwoWayLinkStepHeader, { idx: 2, total: 2 });
+          return closure_1_6(onClose(8531).TwoWayLinkStepHeader, { idx: 2, total: 2 });
         },
         render(arg0) {
           ({ callbackCode, callbackState } = arg0);
-          return closure_1_6(closure_1_1(9472), { callbackCode, callbackState });
+          return closure_1_6(closure_1_1(8570), { callbackCode, callbackState });
         }
       },
       [closure_2_4.SUCCESS]: {
@@ -98,10 +98,10 @@ export default function CrunchyrollLinkModal(locationStack) {
       }
     };
   }, items);
-  const obj = twoWayLinkStyles(9432);
-  const accountLinkStepTracking = twoWayLinkStyles(9453).useAccountLinkStepTracking(PlatformTypes.CRUNCHYROLL, locationStack.locationStack);
+  const obj = twoWayLinkStyles(8530);
+  const accountLinkStepTracking = twoWayLinkStyles(8551).useAccountLinkStepTracking(PlatformTypes.CRUNCHYROLL, locationStack.locationStack);
   const obj3 = { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: constants.LANDING, headerBackTitle: null };
   const intl = twoWayLinkStyles(1115).intl;
   obj3.headerBackTitle = intl.string(twoWayLinkStyles(1115).t["13/7kX"]);
-  return jsx(twoWayLinkStyles(7333).Navigator, { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: constants.LANDING, headerBackTitle: null });
+  return jsx(twoWayLinkStyles(6416).Navigator, { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: constants.LANDING, headerBackTitle: null });
 };

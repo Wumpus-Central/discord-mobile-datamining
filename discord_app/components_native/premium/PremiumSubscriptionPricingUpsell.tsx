@@ -1,16 +1,16 @@
-// === Module 13903: PremiumSubscriptionPricingUpsell ===
+// === Module 13060: PremiumSubscriptionPricingUpsell ===
 
-// Module 13903 (PremiumSubscriptionPricingUpsell)
+// Module 13060 (PremiumSubscriptionPricingUpsell)
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 13769 */;
+import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 12923 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2111 */;
 import UserStore from "UserStore" /* 1372 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4488 */;
-import SubscriptionStore from "SubscriptionStore" /* 4489 */;
-import IAPStore from "IAPStore" /* 7570 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4490 */;
+import SubscriptionStore from "SubscriptionStore" /* 4491 */;
+import IAPStore from "IAPStore" /* 6653 */;
 
 require = fn;
 function PricingSubheadingCopy() {

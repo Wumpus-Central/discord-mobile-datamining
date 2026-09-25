@@ -1,6 +1,6 @@
-// === Module 15278: FamilyCenterParentalControlsScreenTime ===
+// === Module 14444: FamilyCenterParentalControlsScreenTime ===
 
-// Module 15278 (FamilyCenterParentalControlsScreenTime)
+// Module 14444 (FamilyCenterParentalControlsScreenTime)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
@@ -17,10 +17,10 @@ function ScheduleRuleRow(rule) {
   if (readOnly === undefined) {
     readOnly = false;
   }
-  const scheduleRuleDateRange = rule(10430).getScheduleRuleDateRange(rule);
-  let obj = rule(10430);
-  const obj2 = rule(10430);
-  const obj3 = { label: scheduleRuleDateRange, subLabel: rule(10430).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
+  const scheduleRuleDateRange = rule(9532).getScheduleRuleDateRange(rule);
+  let obj = rule(9532);
+  const obj2 = rule(9532);
+  const obj3 = { label: scheduleRuleDateRange, subLabel: rule(9532).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
   const intl = rule(1115).intl;
   const string = intl.string;
   const tmp4 = _modDef2486;
@@ -41,7 +41,7 @@ function ScheduleRuleRow(rule) {
     };
   }
   obj3.onPress = fn;
-  return closure_5(rule(5910).TableRow, obj3);
+  return closure_5(rule(5912).TableRow, obj3);
 }
 const View = _mod17.View;
 const UserSettingsSections = Constants.UserSettingsSections;

@@ -1,10 +1,10 @@
-// === Module 10116: useGuildProfileCTA ===
+// === Module 9213: useGuildProfileCTA ===
 
-// Module 10116 (useGuildProfileCTA)
+// Module 9213 (useGuildProfileCTA)
 import FlagUtils from "FlagUtils" /* 1385 */;
-import GuildTagUtils from "GuildTagUtils" /* 8513 */;
-import GuildInviteFlags from "GuildInviteFlags" /* 8742 */;
-import usePendingFolderGuildIds from "usePendingFolderGuildIds" /* 10117 */;
+import GuildTagUtils from "GuildTagUtils" /* 7603 */;
+import GuildInviteFlags from "GuildInviteFlags" /* 7832 */;
+import usePendingFolderGuildIds from "usePendingFolderGuildIds" /* 9214 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2107 */;

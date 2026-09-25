@@ -1,9 +1,9 @@
-// === Module 17132: VibegrationsTaskOutcome ===
+// === Module 16323: VibegrationsTaskOutcome ===
 
-// Module 17132 (VibegrationsTaskOutcome)
+// Module 16323 (VibegrationsTaskOutcome)
 import util from "util" /* 1115 */;
 import _modDef3714 from "module_3714" /* 3714 */;
-import VibegrationsDuration from "VibegrationsDuration" /* 17131 */;
+import VibegrationsDuration from "VibegrationsDuration" /* 16322 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsTaskOutcome.tsx");

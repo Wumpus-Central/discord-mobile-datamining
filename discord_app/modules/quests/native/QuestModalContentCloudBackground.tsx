@@ -1,10 +1,10 @@
-// === Module 15463: QuestModalContentCloudBackground ===
+// === Module 14633: QuestModalContentCloudBackground ===
 
-// Module 15463 (QuestModalContentCloudBackground)
-import themes from "themes" /* 4533 */;
+// Module 14633 (QuestModalContentCloudBackground)
+import themes from "themes" /* 4535 */;
 import useTheme from "useTheme" /* 4763 */;
-import LinearGradientDefault from "LinearGradient" /* 5285 */;
-import FastImageDefault from "FastImage" /* 5892 */;
+import LinearGradientDefault from "LinearGradient" /* 5286 */;
+import FastImageDefault from "FastImage" /* 5894 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -80,7 +80,7 @@ export default function QuestModalContentCloudBackground(align) {
     const obj6 = { style: null, source: null, resizeMode: null };
     const items2 = [isThemeDarkResult ? tmp.cloudsImage : tmp.cloudsImageLight, imgStyle];
     obj6.style = items2;
-    obj6.source = importDefault(isThemeDarkResult ? 15464 : 15465);
+    obj6.source = importDefault(isThemeDarkResult ? 14634 : 14635);
     obj6.resizeMode = str2;
     items1[1] = hasOwnProperty(FastImageDefault, obj6);
     obj3.children = items1;

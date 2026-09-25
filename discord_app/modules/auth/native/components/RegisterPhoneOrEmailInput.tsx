@@ -1,13 +1,13 @@
-// === Module 16380: RegisterPhoneOrEmailInput ===
+// === Module 15560: RegisterPhoneOrEmailInput ===
 
-// Module 16380 (RegisterPhoneOrEmailInput)
+// Module 15560 (RegisterPhoneOrEmailInput)
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
-import PhoneOrEmailUtils from "PhoneOrEmailUtils" /* 7294 */;
+import PhoneOrEmailUtils from "PhoneOrEmailUtils" /* 6377 */;
 import noop from "module_19" /* 19 */;
-import PhoneStore from "PhoneStore" /* 7274 */;
+import PhoneStore from "PhoneStore" /* 6357 */;
 
 require = fn;
-const RegistrationUIStore = fn(16363);
+const RegistrationUIStore = fn(15543);
 ({ setRegistrationErrors: hasOwnProperty, useRegistrationUIStore: metroRequire } = RegistrationUIStore);
 const jsx = fn(21).jsx;
 const size = fn(2);

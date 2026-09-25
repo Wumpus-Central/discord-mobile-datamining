@@ -1,10 +1,10 @@
-// === Module 12912: GuildPowerupsLevelsSection ===
+// === Module 12041: GuildPowerupsLevelsSection ===
 
-// Module 12912 (GuildPowerupsLevelsSection)
+// Module 12041 (GuildPowerupsLevelsSection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import MarketingCardsScroller from "MarketingCardsScroller" /* 12913 */;
-import GuildPowerupsLevelCardDefault from "GuildPowerupsLevelCard" /* 12914 */;
+import MarketingCardsScroller from "MarketingCardsScroller" /* 12042 */;
+import GuildPowerupsLevelCardDefault from "GuildPowerupsLevelCard" /* 12043 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -45,8 +45,8 @@ export default function GuildPowerupsLevelsSection(arg0) {
   obj2.title = intl.string(listings(2518)["TXY/b0"]);
   const intl2 = util.intl;
   obj2.description = intl2.string(listings(2518).aJv4PB);
-  const items1 = [closure_5(listings(12901), obj2), ];
-  const tmp3 = listings(12901);
+  const items1 = [closure_5(listings(12030), obj2), ];
+  const tmp3 = listings(12030);
   items1[1] = closure_5(MarketingCardsScroller.MarketingCardsScroller, {
     cardMarginRight: PX_16,
     cardWidth: 250,

@@ -10,7 +10,7 @@ import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" 
 import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 5017 */;
 
 const GuildFeatures = fn(1074).GuildFeatures;
-const GuildMemberFlags = fn(4450).GuildMemberFlags;
+const GuildMemberFlags = fn(4452).GuildMemberFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/hasPendingMemberAction.tsx");
 

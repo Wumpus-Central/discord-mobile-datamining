@@ -1,12 +1,12 @@
-// === Module 10347: VoiceChatHeaderIcon ===
+// === Module 9449: VoiceChatHeaderIcon ===
 
-// Module 10347 (VoiceChatHeaderIcon)
+// Module 9449 (VoiceChatHeaderIcon)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import native2 from "native" /* 4535 */;
-import Pressables from "Pressables" /* 5427 */;
-import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 10273 */;
+import native2 from "native" /* 4537 */;
+import Pressables from "Pressables" /* 5428 */;
+import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 9370 */;
 import noop from "module_19" /* 19 */;
 import ReadStateStore from "ReadStateStore" /* 4844 */;
 
@@ -36,9 +36,9 @@ let obj2 = { headerButton: null, disabledOpacity: null, chatIconContainer: null,
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg, alignSelf: "center", padding: 6, backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND };
 obj2.headerButton = size;
 obj2.disabledOpacity = { opacity: 0.6 };
-obj2.chatIconContainer = { marginRight: 12, height: fn(5987).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
+obj2.chatIconContainer = { marginRight: 12, height: fn(5989).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
 obj2.chatIcon = { marginHorizontal: 0, width: 32, height: 32 };
-const obj3 = { marginRight: 12, height: fn(5987).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
+const obj3 = { marginRight: 12, height: fn(5989).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
 obj2.badge = { backgroundColor: nativeDefault.colors.ICON_STRONG };
 let closure_8 = createStyles.createStyles(obj2);
 size = fn(2);

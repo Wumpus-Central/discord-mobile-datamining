@@ -1,18 +1,18 @@
-// === Module 17464: SpamMessageList ===
+// === Module 16681: SpamMessageList ===
 
-// Module 17464 (SpamMessageList)
+// Module 16681 (SpamMessageList)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
 import transitionToChannel from "transitionToChannel" /* 4840 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5032 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 5171 */;
-import MetricEvents from "MetricEvents" /* 5176 */;
-import useMountEffectDefault from "useMountEffect" /* 5290 */;
-import useSortedSpamMessageRequestsDefault from "useSortedSpamMessageRequests" /* 17465 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5172 */;
+import MetricEvents from "MetricEvents" /* 5177 */;
+import useMountEffectDefault from "useMountEffect" /* 5291 */;
+import useSortedSpamMessageRequestsDefault from "useSortedSpamMessageRequests" /* 16682 */;
 import noop from "module_19" /* 19 */;
 
-const MessageRequestEmptyDefault = tmp2(17459);
+const MessageRequestEmptyDefault = tmp2(16676);
 require = fn;
 function PendingSpamMessageRequestRow(isLastRow) {
   ({ messageRequest, goToMessageRequestPreview: require, hasSingleMessageRequest } = isLastRow);
@@ -175,10 +175,10 @@ export default function SpamMessageList(goToMessageRequestPreview) {
   const tmp = closure_10();
   importDefault = tmp;
   const bottom = useSafeAreaInsetsDefault().bottom;
-  dependencyMap = goToMessageRequestPreview(17458).useSpamMessageRequestCount();
+  dependencyMap = goToMessageRequestPreview(16675).useSpamMessageRequestCount();
   const arr = useSortedSpamMessageRequestsDefault();
-  let obj = goToMessageRequestPreview(17458);
-  const hasSingleMessageRequest = goToMessageRequestPreview(17456).useListHasSingleSpamMessageRequest();
+  let obj = goToMessageRequestPreview(16675);
+  const hasSingleMessageRequest = goToMessageRequestPreview(16673).useListHasSingleSpamMessageRequest();
   useMountEffectDefault(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests });
     const obj2 = { num_spam_message_requests };
@@ -237,5 +237,5 @@ export default function SpamMessageList(goToMessageRequestPreview) {
     obj4.data = items;
     return closure_8(closure_6, obj4);
   }
-  let obj2 = goToMessageRequestPreview(17456);
+  let obj2 = goToMessageRequestPreview(16673);
 };

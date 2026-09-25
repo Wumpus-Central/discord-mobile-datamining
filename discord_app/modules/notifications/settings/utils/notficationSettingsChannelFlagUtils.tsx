@@ -1,11 +1,11 @@
-// === Module 10494: notficationSettingsChannelFlagUtils ===
+// === Module 9596: notficationSettingsChannelFlagUtils ===
 
-// Module 10494 (notficationSettingsChannelFlagUtils)
+// Module 9596 (notficationSettingsChannelFlagUtils)
 import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 5013 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7447 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7452 */;
-import notifications_NotificationUtils from "notifications/NotificationUtils" /* 10492 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10495 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6530 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6535 */;
+import notifications_NotificationUtils from "notifications/NotificationUtils" /* 9594 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 9597 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5010 */;

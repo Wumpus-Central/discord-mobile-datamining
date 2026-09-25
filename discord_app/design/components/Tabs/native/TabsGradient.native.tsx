@@ -1,10 +1,10 @@
-// === Module 13107: TabsGradient ===
+// === Module 12257: TabsGradient ===
 
-// Module 13107 (TabsGradient)
-import spring from "spring" /* 5272 */;
-import LinearGradientDefault from "LinearGradient" /* 5285 */;
+// Module 12257 (TabsGradient)
+import spring from "spring" /* 5273 */;
+import LinearGradientDefault from "LinearGradient" /* 5286 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
 
 require = fn;
 const HorizontalGradient = fn(1074).HorizontalGradient;

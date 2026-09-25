@@ -1,7 +1,7 @@
-// === Module 16770: useChannelUnreadBadgeState ===
+// === Module 15954: useChannelUnreadBadgeState ===
 
-// Module 16770 (useChannelUnreadBadgeState)
-import NewChannelsStore from "NewChannelsStore" /* 7862 */;
+// Module 15954 (useChannelUnreadBadgeState)
+import NewChannelsStore from "NewChannelsStore" /* 6947 */;
 import ReadStateStore from "ReadStateStore" /* 4844 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5010 */;
 

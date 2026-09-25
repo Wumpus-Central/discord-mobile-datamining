@@ -1,27 +1,27 @@
-// === Module 17155: VibegrationsNativeComposer ===
+// === Module 16369: VibegrationsNativeComposer ===
 
-// Module 17155 (VibegrationsNativeComposer)
+// Module 16369 (VibegrationsNativeComposer)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3714 from "module_3714" /* 3714 */;
 import SendMessageIcon from "SendMessageIcon" /* 4773 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4796 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 5363 */;
-import VibegrationsActionCreators from "VibegrationsActionCreators" /* 9390 */;
-import PlusLargeIcon from "PlusLargeIcon" /* 11304 */;
-import ChatInputActionButtonDefault from "ChatInputActionButton" /* 12581 */;
-import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 12588 */;
-import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 15345 */;
-import StopIcon from "StopIcon" /* 16354 */;
-import VibegrationsModelSettingsSheet from "VibegrationsModelSettingsSheet" /* 17050 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 5364 */;
+import VibegrationsActionCreators from "VibegrationsActionCreators" /* 8488 */;
+import PlusLargeIcon from "PlusLargeIcon" /* 10402 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 11707 */;
+import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 11714 */;
+import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 14511 */;
+import StopIcon from "StopIcon" /* 15534 */;
+import VibegrationsModelSettingsSheet from "VibegrationsModelSettingsSheet" /* 16240 */;
+import vibegrationsAttachmentDrafts from "vibegrationsAttachmentDrafts" /* 16371 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4821 */;
-import VibegrationsComposerDraftStore from "VibegrationsComposerDraftStore" /* 17156 */;
-import VibegrationsConnectionStore_mod from "VibegrationsConnectionStore" /* 13457 */;
+import VibegrationsComposerDraftStore from "VibegrationsComposerDraftStore" /* 16370 */;
+import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 12607 */;
 
-const require = globalThis.__r;
 const VibegrationsModelSettingsSheetDefault = VibegrationsModelSettingsSheet;
 
 require = fn;
@@ -37,11 +37,9 @@ function tooLargeText(contentType) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-let VibegrationsConnectionStore = fn(13457);
-({ deleteStagedAttachment: c10, uploadAttachmentBytes: closure_11 } = VibegrationsConnectionStore);
-let VibegrationsConnectionStore = VibegrationsConnectionStore_mod;
+const uploadAttachmentBytes = fn(12607).uploadAttachmentBytes;
 const jsxProd = fn(21);
-({ jsx: map1, jsxs: closure_14 } = jsxProd);
+({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
 const createStyles = fn(4829);
 let obj2 = { container: { paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingVertical: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, box: null, boxFocused: null, boxContents: null, input: null, inputText: null, inputPlaceholder: null, draftRow: null, draftPill: null, draftName: null, trailingButton: null, trailingSlot: null, sendButtonActive: null, sendIconActive: null };
@@ -69,13 +67,12 @@ let obj11 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.spa
 obj2.sendButtonActive = { backgroundColor: nativeDefault.colors.CHAT_INPUT_SEND_BUTTON_ACTIVE_BACKGROUND };
 let obj12 = { backgroundColor: nativeDefault.colors.CHAT_INPUT_SEND_BUTTON_ACTIVE_BACKGROUND };
 obj2.sendIconActive = { tintColor: nativeDefault.colors.CHAT_INPUT_SEND_BUTTON_ICON_ACTIVE_TINT };
-let closure_16 = createStyles.createStyles(obj2);
+let closure_15 = createStyles.createStyles(obj2);
 size = fn(2);
-const result = size.fileFinishedImporting("modules/vibegrations/native/VibegrationsNativeComposer.tsx");
+let result = size.fileFinishedImporting("modules/vibegrations/native/VibegrationsNativeComposer.tsx");
 
 export default function VibegrationsNativeComposer(projectId) {
   projectId = projectId.projectId;
-  _require = projectId;
   const canSend = projectId.canSend;
   const running = projectId.running;
   let flag = projectId.stopped;
@@ -91,31 +88,24 @@ export default function VibegrationsNativeComposer(projectId) {
   const onDismissTip = projectId.onDismissTip;
   c11 = undefined;
   c12 = undefined;
-  c13 = undefined;
-  closure_14 = undefined;
-  closure_15 = undefined;
-  closure_16 = undefined;
-  getItemKey = undefined;
+  closure_13 = undefined;
   let callback2;
+  closure_15 = undefined;
   let callback3;
   let callback4;
+  closure_18 = undefined;
+  c19 = undefined;
   let callback5;
-  closure_22 = undefined;
+  let stateFromStores1;
   let callback6;
   let callback7;
-  closure_25 = undefined;
-  c26 = undefined;
-  let callback8;
-  let stateFromStores1;
-  let callback9;
-  let callback10;
-  let ref = onDismissTip.useRef(null);
-  const tmp3 = onInterrupt(onDismissTip.useState(() => VibegrationsComposerDraftStore.getDraft(closure_0)), 2);
+  const ref = onDismissTip.useRef(null);
+  const tmp3 = onInterrupt(onDismissTip.useState(() => VibegrationsComposerDraftStore.getDraft(projectId)), 2);
   let str = tmp3[0];
   closure_7 = tmp4;
   let items = [projectId];
   const onChange = onDismissTip.useCallback((draft) => {
-    VibegrationsActionCreators.setComposerDraft(closure_0, draft);
+    VibegrationsActionCreators.setComposerDraft(projectId, draft);
     closure_7(draft);
   }, items);
   [tmp7, tmp8] = onInterrupt(onDismissTip.useState(null), 2);
@@ -131,248 +121,181 @@ export default function VibegrationsNativeComposer(projectId) {
   const effect = obj.useEffect(() => {
     const current = ref1.current;
     if (current != null) {
-      current.setText(VibegrationsComposerDraftStore.getDraft(closure_0));
+      current.setText(VibegrationsComposerDraftStore.getDraft(projectId));
     }
   }, items1);
-  let tmp6 = onInterrupt(onDismissTip.useState(null), 2);
-  [arr3, c11] = onInterrupt(onDismissTip.useState([]), 2);
-  const tmp2Result = onInterrupt(onDismissTip.useState([]), 2);
-  [boxFocused, c12] = onInterrupt(onDismissTip.useState(false), 2);
-  const tmp2Result3 = onInterrupt(onDismissTip.useState(false), 2);
-  [tmp19, c13] = onInterrupt(onDismissTip.useState(null), 2);
+  const tmp6 = onInterrupt(onDismissTip.useState(null), 2);
+  const vibegrationsAttachmentDraftList = projectId(running[15]).useVibegrationsAttachmentDraftList(projectId, "chat");
+  let obj2 = projectId(running[15]);
+  [boxFocused, c11] = onInterrupt(onDismissTip.useState(false), 2);
+  const tmp2Result = onInterrupt(onDismissTip.useState(false), 2);
+  [tmp20, c12] = onInterrupt(onDismissTip.useState(null), 2);
   const callback1 = obj.useCallback((nativeEvent) => {
     _undefined(nativeEvent.nativeEvent.contentSize.height);
   }, []);
-  const tmp2Result4 = onInterrupt(onDismissTip.useState(null), 2);
-  const token = require("useToken").useToken(canSend(running[9]).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
-  let obj2 = require("useToken");
-  const token1 = require("useToken").useToken(canSend(running[9]).modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT);
-  let obj3 = require("useToken");
-  const token2 = require("useToken").useToken(canSend(running[9]).modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH);
-  let obj4 = require("useToken");
-  const token3 = require("useToken").useToken(canSend(running[9]).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
-  let obj5 = require("useToken");
+  const tmp2Result2 = onInterrupt(onDismissTip.useState(null), 2);
+  const token = projectId(running[16]).useToken(canSend(running[9]).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
+  let obj3 = projectId(running[16]);
+  const token1 = projectId(running[16]).useToken(canSend(running[9]).modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT);
+  let obj4 = projectId(running[16]);
+  const token2 = projectId(running[16]).useToken(canSend(running[9]).modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH);
+  let obj5 = projectId(running[16]);
+  const token3 = projectId(running[16]).useToken(canSend(running[9]).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
+  let obj6 = projectId(running[16]);
   const items2 = [onChange];
-  const stateFromStores = require("initialize").useStateFromStores(items2, () => callback.useReducedMotion);
+  const stateFromStores = projectId(running[17]).useStateFromStores(items2, () => callback.useReducedMotion);
   const bound = Math.max(0, (token1 - token) / 2);
-  const bound1 = Math.min(closure_15, Math.max(0, (token - 20) / 2));
-  let tmp31 = null != tmp7;
-  if (tmp31) {
+  const bound1 = Math.min(callback2, Math.max(0, (token - 20) / 2));
+  let tmp30 = null != tmp7;
+  if (tmp30) {
     let _Math = Math;
-    tmp31 = Math.ceil(tmp7) + 2 * bound1 > 120;
+    tmp30 = Math.ceil(tmp7) + 2 * bound1 > 120;
   }
-  const tmp32 = closure_16();
-  closure_14 = tmp32;
-  closure_15 = obj.useRef(arr3);
-  closure_16 = obj.useRef(1);
-  let obj6 = require("initialize");
-  getItemKey = obj.useRef(new Set());
-  callback2 = obj.useCallback((current) => {
-    closure_15.current = current;
-    _undefined2(current);
-  }, []);
-  callback3 = obj.useCallback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    const current = closure_15.current;
-    closure_15.current = current.map((localId) => {
-      let tmp = localId;
-      if (localId.localId === closure_0) {
-        const obj = {};
-        const merged = Object.assign(localId);
-        const merged1 = Object.assign(closure_1);
-        tmp = obj;
-      }
-      return tmp;
-    });
-    _undefined2(closure_15.current);
-  }, []);
+  let tmp31 = closure_15();
+  closure_13 = tmp31;
   const items3 = [projectId];
-  const effect1 = obj.useEffect(() => {
-    const current = ref.current;
-    return () => {
-      const iter = ref.current[Symbol.iterator]();
-      const nextResult = iter.next();
-      while (iter !== undefined) {
-        let tmp2 = nextResult;
-        let addResult = current.add(nextResult.localId);
-        if (null != nextResult.ref) {
-          let promise = closure_3_10(closure_0, tmp2.ref.id);
-          let catchPromise = promise.catch(() => {
-
-          });
-        }
-        continue;
-      }
-    };
-  }, items3);
-  _require = onSend(function*(arg0, arg1, arg2, arg3) {
-    closure_5 = tmp3;
-    closure_132_0 = projectId;
-    closure_132_1 = closure_2;
-    closure_132_2 = closure_3;
-    const _fetch = fetch;
-    yield fetch(closure_1);
-    if (1 === tmp7) {
-      c6 = 0;
-      const current = ref.current;
-      if (current.has(closure_132_0)) {
-        c8 = 3;
-        return { value: "HermesInternal", done: null };
-      } else {
-        const obj6 = { status: "error", errorText: null };
-        const intl = projectId(running[11]).intl;
-        obj6.errorText = intl.string(canSend(running[12]).GwEHvn);
-        callback3(closure_132_0, obj6);
-        c8 = 3;
-      }
-    } else if (2 === tmp7) {
-      if (arg0 === 1) {
-        c8 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c6 = 0;
-        c8 = 3;
-        return { value, done: true };
-      } else {
-        c7 = 3;
-        c8 = 1;
-        return { value: value.blob(), done: false };
-      }
-    } else if (3 === tmp7) {
-      if (arg0 === 1) {
-        c8 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c6 = 0;
-        c8 = 3;
-        return { value, done: true };
-      } else {
-        closure_132_3 = value;
-        const current3 = ref.current;
-        if (current3.has(closure_132_0)) {
-          c6 = 0;
-          c8 = 3;
-          return { value: "HermesInternal", done: null };
-        } else {
-          if (obj4.isVibegrationsAttachmentWithinLimit(closure_132_3.size, closure_132_2)) {
-            c7 = 4;
-            c8 = 1;
-            return { value: _undefined2(projectId, closure_132_3, closure_132_1, closure_132_2), done: false };
-          } else {
-            callback3(closure_132_0, { status: "error", errorText: callback2(closure_132_2) });
-            c6 = 0;
-            c8 = 3;
-            return { value: undefined, done: true };
-          }
-          obj4 = projectId(running[13]);
-        }
-      }
-    } else if (arg0 === 1) {
-      c8 = 3;
-      throw value;
-    } else if (arg0 === 2) {
-      c6 = 0;
-      c8 = 3;
-      return { value, done: true };
-    } else {
-      closure_132_4 = value;
-      const current2 = ref.current;
-      if (!current2.has(closure_132_0)) {
-        callback3(closure_132_0, { status: "ready", ref: closure_132_4 });
-        c6 = 0;
-      }
-    }
-    ref1(projectId, closure_132_4.id).catch(() => {
-
-    });
-  });
-  const items4 = [callback3, projectId];
-  callback4 = obj.useCallback(function() {
-    const self = this;
-    const apply = closure_0.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
-  }, items4);
-  const items5 = [callback2, callback4];
-  callback5 = obj.useCallback((arg0) => {
-    let map = arg0;
-    if (0 !== arg0.length) {
-      let VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE = dependencyMap;
-      let tmp15 = closure_15;
-      const diff = VibegrationsTypes.VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE - closure_15.current.length;
-      if (map.length > diff) {
-        let intl = util.intl;
-        let obj = { count: null };
-        VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE = VibegrationsTypes.VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE;
-        obj.count = VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE;
-        _undefined4(intl.formatToPlainString(_modDef3714.DlX57a, obj));
+  callback2 = obj.useCallback((arr) => {
+    if (0 !== arr.length) {
+      let obj2 = require;
+      let result = dependencyMap;
+      const diff = VibegrationsTypes.VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE - vibegrationsAttachmentDrafts.getVibegrationsAttachmentDrafts(projectId, "chat").length;
+      if (arr.length > diff) {
+        let intl = obj2(1115).intl;
+        let obj = { count: obj2(5364).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE };
+        _undefined3(intl.formatToPlainString(_modDef3714.DlX57a, obj));
         const _Math = Math;
-        const substr = map.slice(0, Math.max(0, diff));
-        let arr2 = substr;
+        const substr = arr.slice(0, Math.max(0, diff));
+        arr = substr;
       } else {
-        _undefined4(null);
-        arr2 = map;
+        _undefined3(null);
       }
-      const mapped = arr2.map((name) => {
-        let tmp = null != name.size;
-        if (tmp) {
-          tmp = !closure_0(running[13]).isVibegrationsAttachmentWithinLimit(name.size, name.contentType);
-          const obj = closure_0(running[13]);
+      const mapped = arr.map((name) => {
+        closure_0 = name;
+        closure_1 = function _upload() {
+          const self = this;
+          const tmp = onSend(function*() {
+            if (c3 === 2) {
+              c3 = 3;
+              throw new TypeError("Generator functions may not be called on executing generators");
+            } else if (tmp4 === 3) {
+              if (arg0 === 1) {
+                throw value;
+              } else if (arg0 === 2) {
+                const obj2 = { value, done: true };
+                return obj2;
+              } else {
+                return { value: "HermesInternal", done: null };
+              }
+            } else {
+              try {
+                c3 = 2;
+                if (0 === c2) {
+                  if (arg0 === 1) {
+                    c3 = 3;
+                    throw value;
+                  } else if (arg0 === 2) {
+                    c3 = 3;
+                    const obj3 = { value, done: true };
+                    return obj3;
+                  } else {
+                    closure_1 = tmp5;
+                    closure_0 = tmp2;
+                    closure_128_0 = undefined;
+                    const _fetch = fetch;
+                    c2 = 1;
+                    c3 = 1;
+                    const obj4 = { value: fetch(name.uri), done: false };
+                    return obj4;
+                  }
+                } else if (1 === tmp5) {
+                  if (arg0 === 1) {
+                    c3 = 3;
+                    throw value;
+                  } else if (arg0 === 2) {
+                    c3 = 3;
+                    const obj5 = { value, done: true };
+                    return obj5;
+                  } else {
+                    c2 = 2;
+                    c3 = 1;
+                    const obj6 = { value: value.blob(), done: false };
+                    return obj6;
+                  }
+                } else if (arg0 === 1) {
+                  c3 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c3 = 3;
+                  const obj7 = { value, done: true };
+                  return obj7;
+                } else {
+                  closure_128_0 = value;
+                  if (obj8.isVibegrationsAttachmentWithinLimit(closure_128_0.size, closure_129_0.contentType)) {
+                    closure_2_11(closure_0, closure_128_0, closure_129_0.name, closure_129_0.contentType);
+                  } else {
+                    { errorText: null }.errorText = closure_2_17(closure_129_0.contentType);
+                    const obj = { errorText: null };
+                  }
+                  c3 = 3;
+                  obj8 = name(closure_2_2[13]);
+                }
+              } catch (tmp19) {
+                c3 = tmp;
+                throw tmp19;
+              }
+            }
+          });
+          closure_1 = tmp;
+          const apply = tmp.apply;
+          if (typeof apply === "unknown") {
+            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+          } else {
+            applyArgumentsResult = apply(self, arguments);
+          }
+          return applyArgumentsResult;
+        };
+        let obj = { name: name.name, contentType: name.contentType };
+        if (null != name.size) {
+          if (!obj9.isVibegrationsAttachmentWithinLimit(name.size, name.contentType)) {
+            let obj2 = { draft: null };
+            let obj3 = {};
+            const merged = Object.assign(obj);
+            obj3.status = "error";
+            const intl = projectId(running[11]).intl;
+            let obj4 = { size: null };
+            const tmp6Result = projectId(running[13]);
+            obj4.size = tmp6Result.formatVibegrationsAttachmentLimit(projectId(running[13]).vibegrationsAttachmentLimit(name.contentType));
+            obj3.errorText = intl.formatToPlainString(canSend(running[12]).cI7t94, obj4);
+            obj2.draft = obj3;
+            return obj2;
+          }
+          obj9 = projectId(running[13]);
         }
-        const obj2 = { localId: +ref.current, name: name.name, contentType: name.contentType, status: null, errorText: null };
-        ref.current = +ref.current + 1;
-        str = "uploading";
-        if (tmp) {
-          str = "error";
-        }
-        obj2.status = str;
-        let formatToPlainStringResult;
-        if (tmp) {
-          const intl = closure_0(running[11]).intl;
-          const obj3 = { size: null };
-          const obj4 = closure_0(running[13]);
-          obj3.size = obj4.formatVibegrationsAttachmentLimit(closure_0(running[13]).vibegrationsAttachmentLimit(name.contentType));
-          formatToPlainStringResult = intl.formatToPlainString(canSend(running[12]).cI7t94, obj3);
-          const obj5 = closure_0(running[13]);
-        }
-        obj2.errorText = formatToPlainStringResult;
-        return { draft: obj2, uri: name.uri };
+        let obj5 = { draft: null, upload: null };
+        let obj6 = {};
+        const merged1 = Object.assign(obj);
+        obj6.status = "uploading";
+        obj5.draft = obj6;
+        obj5.upload = function upload() {
+          const self = this;
+          const apply = closure_1.apply;
+          if (typeof apply === "unknown") {
+            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+          } else {
+            applyArgumentsResult = apply(self, arguments);
+          }
+          return applyArgumentsResult;
+        };
+        return obj5;
       });
-      const items = [];
-      map = mapped.map;
-      HermesBuiltin.arraySpread(map((draft) => draft.draft), HermesBuiltin.arraySpread(tmp15.current, 0));
-      callback2(items);
-      tmp15 = mapped[Symbol.iterator]();
-      const arraySpreadResult = HermesBuiltin.arraySpread(tmp15.current, 0);
+      obj2 = obj2(16371);
+      result = obj2.addVibegrationsAttachmentDrafts(projectId, "chat", mapped);
     }
-  }, items5);
-  const items6 = [projectId, callback2];
-  closure_22 = obj.useCallback((arg0) => {
-    closure_0 = arg0;
-    const current = ref.current;
-    current.add(arg0);
-    const current1 = closure_15.current;
-    const found = current1.find((localId) => localId.localId === closure_0);
-    ref = undefined;
-    if (found != null) {
-      ref = found.ref;
-    }
-    if (null != ref) {
-      closure_2_10(closure_0, found.ref.id).catch(() => {
-
-      });
-      const promise = closure_2_10(closure_0, found.ref.id);
-    }
-    const current2 = closure_15.current;
-    callback2(current2.filter((localId) => localId.localId !== closure_0));
-  }, items6);
-  const items7 = [callback5];
-  callback6 = obj.useCallback(onSend(function*() {
+  }, items3);
+  const items4 = [projectId];
+  closure_15 = obj.useCallback((arg0) => vibegrationsAttachmentDrafts.removeVibegrationsAttachmentDraft(projectId, "chat", arg0), items4);
+  const items5 = [callback2];
+  callback3 = obj.useCallback(onSend(function*() {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -398,10 +321,10 @@ export default function VibegrationsNativeComposer(projectId) {
             return obj4;
           } else {
             closure_128_0 = undefined;
-            const obj5 = { mediaType: "any", selectionLimit: tmp2(5363).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE, skipProcessing: true };
+            const obj5 = { mediaType: "any", selectionLimit: tmp2(5364).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE, skipProcessing: true };
             dependencyMap = 1;
             c3 = 1;
-            const obj6 = { value: tmp5(5454).launchImageLibraryAsync(obj5), done: false };
+            const obj6 = { value: tmp5(5455).launchImageLibraryAsync(obj5), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {
@@ -419,7 +342,7 @@ export default function VibegrationsNativeComposer(projectId) {
           }
           if (!didCancel) {
             const assets = closure_128_0.assets;
-            closure_129_21(assets.map((uri) => {
+            closure_129_14(assets.map((uri) => {
               const obj = { uri: uri.uri, name: null, contentType: null, size: null };
               ({ uri, fileName } = uri);
               if (null == fileName) {
@@ -453,9 +376,9 @@ export default function VibegrationsNativeComposer(projectId) {
         throw tmp19;
       }
     }
-  }), items7);
-  const items8 = [callback5];
-  callback7 = obj.useCallback(onSend(function*() {
+  }), items5);
+  const items6 = [callback2];
+  callback4 = obj.useCallback(onSend(function*() {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -484,7 +407,7 @@ export default function VibegrationsNativeComposer(projectId) {
             closure_128_0 = undefined;
             c2 = 1;
             c3 = 1;
-            const obj5 = { value: tmp2(c2[18]).handleDocumentSelection({ pickMultiple: true }), done: false };
+            const obj5 = { value: tmp2(c2[19]).handleDocumentSelection({ pickMultiple: true }), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -497,7 +420,7 @@ export default function VibegrationsNativeComposer(projectId) {
         } else {
           closure_128_0 = value;
           if (null != closure_128_0) {
-            closure_129_21(closure_128_0.map((uri) => {
+            closure_129_14(closure_128_0.map((uri) => {
               const obj = { uri: uri.uri, name: null, contentType: null, size: null };
               ({ uri, name } = uri);
               if (null == name) {
@@ -530,77 +453,74 @@ export default function VibegrationsNativeComposer(projectId) {
         throw tmp16;
       }
     }
-  }), items8);
-  const items9 = [callback7, callback6];
+  }), items6);
+  const items7 = [callback4, callback3];
   const memo = obj.useMemo(() => {
     const obj = { label: null, action: null };
     const intl = util.intl;
     obj.label = intl.string(_modDef3714.xE6M2k);
-    obj.action = callback6;
+    obj.action = callback3;
     const items = [obj, ];
     const obj2 = { label: null, action: null };
     const intl2 = util.intl;
     obj2.label = intl2.string(_modDef3714.DN7KeU);
-    obj2.action = callback7;
+    obj2.action = callback4;
     items[1] = obj2;
     return items;
-  }, items9);
-  const set = new Set();
-  const tmp43 = "" !== str.trim() || arr3.length > 0;
-  closure_25 = tmp43;
-  let tmp44 = canSend;
+  }, items7);
+  let obj7 = projectId(running[17]);
+  const tmp37 = "" !== str.trim() || vibegrationsAttachmentDraftList.length > 0;
+  closure_18 = tmp37;
+  let tmp38 = canSend;
   if (canSend) {
-    tmp44 = tmp43;
+    tmp38 = tmp37;
   }
-  if (tmp44) {
-    tmp44 = everyResult;
+  if (tmp38) {
+    tmp38 = everyResult;
   }
-  c26 = tmp44;
-  const items10 = [onDismissTip, onSend, callback2, tmp44, onChange, str];
-  callback8 = obj.useCallback(() => {
-    if (c26) {
+  c19 = tmp38;
+  const items8 = [onDismissTip, onSend, projectId, tmp38, onChange, str];
+  callback5 = obj.useCallback(() => {
+    if (c19) {
       if (onDismissTip != null) {
         tmp();
       }
-      const current1 = closure_15.current;
-      const found = current1.filter((ref) => null != ref.ref);
-      const mapped = found.map((ref) => ref.ref);
-      let tmp7;
-      if (mapped.length > 0) {
-        tmp7 = mapped;
+      const result = vibegrationsAttachmentDrafts.takeVibegrationsAttachmentRefs(projectId, "chat");
+      let tmp9;
+      if (result.length > 0) {
+        tmp9 = result;
       }
-      onSend(str, tmp7);
+      onSend("chat", tmp9);
       callback("");
       const current = ref1.current;
       if (current != null) {
         current.setText("");
       }
-      _undefined4(null);
+      _undefined3(null);
       _undefined(null);
-      callback2([]);
     }
-  }, items10);
-  everyResult = arr3.every((status) => "ready" === status.status);
-  const items11 = [c12];
-  const items12 = [projectId];
-  stateFromStores1 = require("initialize").useStateFromStores(items11, () => {
-    const modelSettings = VibegrationsConnectionStore.getModelSettings(closure_0);
+  }, items8);
+  everyResult = vibegrationsAttachmentDraftList.every((status) => "ready" === status.status);
+  const items9 = [ref1];
+  const items10 = [projectId];
+  stateFromStores1 = projectId(running[17]).useStateFromStores(items9, () => {
+    const modelSettings = VibegrationsConnectionStore.getModelSettings(projectId);
     let tierSettings;
     if (modelSettings != null) {
       tierSettings = modelSettings.tierSettings;
     }
     return null != tierSettings;
-  }, items12);
-  const items13 = [projectId];
-  callback9 = obj.useCallback(() => {
-    const obj2 = { content: map1(VibegrationsModelSettingsSheetDefault, { projectId }), key: VibegrationsModelSettingsSheet.VIBEGRATIONS_MODEL_SETTINGS_SHEET_KEY };
+  }, items10);
+  const items11 = [projectId];
+  callback6 = obj.useCallback(() => {
+    const obj2 = { content: closure_2_12(VibegrationsModelSettingsSheetDefault, { projectId }), key: VibegrationsModelSettingsSheet.VIBEGRATIONS_MODEL_SETTINGS_SHEET_KEY };
     ActionSheetActionCreators.showActionSheet(obj2);
-  }, items13);
-  const items14 = [tmp43, running, stateFromStores1, tmp44];
+  }, items11);
+  const items12 = [tmp37, running, stateFromStores1, tmp38];
   const memo1 = obj.useMemo(() => {
     str = "send";
     let str2 = "send";
-    if (!closure_25) {
+    if (!closure_18) {
       let str3 = "stop";
       if (!running) {
         if (stateFromStores1) {
@@ -612,106 +532,106 @@ export default function VibegrationsNativeComposer(projectId) {
     }
     const items = [{ key: str2, sendable }];
     return items;
-  }, items14);
-  const items15 = [tmp32, canSend, onInterrupt, callback9, callback8];
-  callback10 = obj.useCallback((key) => {
+  }, items12);
+  const items13 = [tmp31, canSend, onInterrupt, callback6, callback5];
+  callback7 = obj.useCallback((key) => {
     if ("stop" === key.key) {
-      const obj2 = { style: closure_14.trailingButton, IconComponent: StopIcon.StopIcon, onPress: onInterrupt, disabled: null == onInterrupt, accessibilityLabel: null };
+      const obj2 = { style: closure_13.trailingButton, IconComponent: StopIcon.StopIcon, onPress: onInterrupt, disabled: null == onInterrupt, accessibilityLabel: null };
       const intl2 = util.intl;
       obj2.accessibilityLabel = intl2.string(_modDef3714.KdgI4k);
-      let tmp14 = map1(ChatInputActionButtonDefault, obj2);
+      let tmp14 = closure_2_12(ChatInputActionButtonDefault, obj2);
     } else if ("models" === key.key) {
-      const obj = { style: closure_14.trailingButton, IconComponent: FiltersHorizontalIcon.FiltersHorizontalIcon, onPress: callback9, disabled: !canSend, accessibilityLabel: null };
+      const obj = { style: closure_13.trailingButton, IconComponent: FiltersHorizontalIcon.FiltersHorizontalIcon, onPress: callback6, disabled: !canSend, accessibilityLabel: null };
       const intl = util.intl;
       obj.accessibilityLabel = intl.string(_modDef3714["2NWMqY"]);
-      tmp14 = map1(ChatInputActionButtonDefault, obj);
+      tmp14 = closure_2_12(ChatInputActionButtonDefault, obj);
     } else {
       const obj5 = { active: true, style: null, activeStyle: null, activeIconStyle: null, IconComponent: null, accessibilityLabel: null, onPress: null, disabled: null };
-      ({ trailingButton: obj3.style, sendButtonActive: obj3.activeStyle, sendIconActive: obj3.activeIconStyle } = closure_14);
+      ({ trailingButton: obj3.style, sendButtonActive: obj3.activeStyle, sendIconActive: obj3.activeIconStyle } = closure_13);
       obj5.IconComponent = SendMessageIcon.SendMessageIcon;
       const intl3 = util.intl;
       obj5.accessibilityLabel = intl3.string(util.t.TXNS7S);
-      obj5.onPress = callback8;
+      obj5.onPress = callback5;
       obj5.disabled = !key.sendable;
-      tmp14 = map1(ChatInputActionButtonDefault, obj5);
+      tmp14 = closure_2_12(ChatInputActionButtonDefault, obj5);
     }
     return tmp14;
-  }, items15);
-  const items16 = [callback10];
-  const callback11 = obj.useCallback((arg0, arg1, state, cleanup) => {
-    const obj = { state, cleanup, withBounce: true, children: callback10(arg1) };
-    return map1(ChatInputActionButtonTransitionItemDefault, obj, arg0);
-  }, items16);
-  const callback12 = obj.useCallback(() => _undefined3(true), []);
-  let obj7 = { ref, style: tmp32.container, children: null };
-  let tmp55 = null;
-  const callback13 = obj.useCallback(() => _undefined3(false), []);
+  }, items13);
+  const items14 = [callback7];
+  const callback8 = obj.useCallback((arg0, arg1, state, cleanup) => {
+    const obj = { state, cleanup, withBounce: true, children: callback7(arg1) };
+    return closure_2_12(ChatInputActionButtonTransitionItemDefault, obj, arg0);
+  }, items14);
+  const callback9 = obj.useCallback(() => _undefined2(true), []);
+  let obj8 = { ref, style: tmp31.container, children: null };
+  let tmp49 = null;
+  const callback10 = obj.useCallback(() => _undefined2(false), []);
   if (null != onDismissTip) {
-    const obj8 = { targetRef: ref, visible: flag2, onDismiss: onDismissTip };
-    tmp55 = c13(tmp23(tmp22[26]), obj8);
+    let obj9 = { targetRef: ref, visible: flag2, onDismiss: onDismissTip };
+    tmp49 = c12(tmp22(tmp17[27]), obj9);
   }
-  const items17 = [tmp55, , , ];
-  let tmp57 = null;
-  if (null != tmp19) {
-    const obj9 = { variant: "text-xs/normal", color: "text-feedback-critical", children: tmp19 };
-    tmp57 = c13(tmp21(tmp22[27]).Text, obj9);
+  const items15 = [tmp49, , , ];
+  let tmp51 = null;
+  if (null != tmp20) {
+    const obj10 = { variant: "text-xs/normal", color: "text-feedback-critical", children: tmp20 };
+    tmp51 = c12(tmp16(tmp17[28]).Text, obj10);
   }
-  items17[1] = tmp57;
-  let tmp59 = null;
-  if (arr3.length > 0) {
-    const obj10 = {
-      style: tmp32.draftRow,
-      children: arr3.map((children) => {
-          projectId = children;
-          const obj = { style: closure_14.draftPill, children: null };
+  items15[1] = tmp51;
+  let tmp53 = null;
+  if (vibegrationsAttachmentDraftList.length > 0) {
+    const obj11 = {
+      style: tmp31.draftRow,
+      children: vibegrationsAttachmentDraftList.map((children) => {
+          const localId = children;
+          const obj = { style: closure_13.draftPill, children: null };
           let tmp4 = null;
           if ("uploading" === children.status) {
             const obj2 = { size: "small", accessibilityLabel: null };
             const intl = projectId(running[11]).intl;
             const obj3 = { name: children.name };
             obj2.accessibilityLabel = intl.formatToPlainString(canSend(running[12]).sFX7H4, obj3);
-            tmp4 = _undefined4(str, obj2);
+            tmp4 = _undefined3(str, obj2);
           }
           const items = [tmp4, , ];
-          const obj4 = { style: closure_14.draftName, children: null };
+          const obj4 = { style: closure_13.draftName, children: null };
           str = "text-default";
           if ("error" === children.status) {
             str = "text-feedback-critical";
           }
-          const items1 = [_undefined4(projectId(running[27]).Text, { variant: "text-xs/medium", color: str, lineClamp: 1, children: children.name }), ];
+          const items1 = [_undefined3(projectId(running[28]).Text, { variant: "text-xs/medium", color: str, lineClamp: 1, children: children.name }), ];
           let tmp10Result = null;
           if (null != children.errorText) {
             const obj6 = { variant: "text-xs/normal", color: "text-feedback-critical", children: children.errorText };
-            tmp10Result = _undefined4(tmp11(running[27]).Text, obj6);
+            tmp10Result = _undefined3(projectId(running[28]).Text, obj6);
           }
           items1[1] = tmp10Result;
           obj4.children = items1;
-          items[1] = closure_14(closure_7, obj4);
+          items[1] = closure_13(closure_7, obj4);
           const obj7 = { accessibilityRole: "button", accessibilityLabel: null, hitSlop: 12, onPress: null, children: null };
-          const intl2 = tmp11(running[11]).intl;
+          const intl2 = projectId(running[11]).intl;
           obj7.accessibilityLabel = intl2.string(canSend(running[12])["3HWvgk"]);
           obj7.onPress = function onPress() {
-            return closure_22(localId.localId);
+            return closure_15(localId.localId);
           };
-          obj7.children = _undefined4(projectId(running[29]).CircleXIcon, { size: "xs" });
-          items[2] = _undefined4(projectId(running[28]).PressableOpacity, obj7);
+          obj7.children = _undefined3(projectId(running[30]).CircleXIcon, { size: "xs" });
+          items[2] = _undefined3(projectId(running[29]).PressableOpacity, obj7);
           obj.children = items;
-          return closure_14(closure_7, obj, children.localId);
+          return closure_13(closure_7, obj, children.localId);
         })
     };
-    tmp59 = c13(tmp54, obj10);
+    tmp53 = c12(tmp48, obj11);
   }
-  items17[2] = tmp59;
-  const items18 = [tmp32.box, ];
+  items15[2] = tmp53;
+  const items16 = [tmp31.box, ];
   if (boxFocused) {
-    boxFocused = tmp32.boxFocused;
+    boxFocused = tmp31.boxFocused;
   }
-  const obj11 = { style: items18, children: null };
-  items18[1] = boxFocused;
-  const obj12 = { style: tmp32.boxContents, children: null };
-  const obj13 = {
+  const obj12 = { style: items16, children: null };
+  items16[1] = boxFocused;
+  const obj13 = { style: tmp31.boxContents, children: null };
+  const obj14 = {
     style: { paddingBottom: bound },
-    children: c13(require("ContextMenu").ContextMenu, {
+    children: c12(projectId(running[31]).ContextMenu, {
       items: memo,
       align: "above",
       children(arg0) {
@@ -721,17 +641,17 @@ export default function VibegrationsNativeComposer(projectId) {
         obj.accessibilityLabel = intl.string(_modDef3714.gUn10I);
         obj.accessibilityActions = accessibilityActions;
         obj.onAccessibilityAction = onAccessibilityAction;
-        return map1(ChatInputActionButtonDefault, obj);
+        return closure_2_12(ChatInputActionButtonDefault, obj);
       }
     })
   };
-  const items19 = [c13(closure_7, obj13), , ];
-  const obj15 = { multiline: true, allowRedesignTextInput: false, showBorder: false, showTopContainer: false, ref: ref1, style: null, inputTextStyle: null, textAlignVertical: "center", editable: canSend, placeholder: null, placeholderTextColor: null, accessibilityLabel: null, value: null, onChange: null, onFocus: null, onBlur: null, onContentSizeChange: null, scrollEnabled: null };
-  const items20 = [tmp32.input, { marginBottom: bound, minHeight: token }];
-  obj15.style = items20;
-  const items21 = [tmp32.inputText, { paddingTop: bound1, paddingBottom: bound1 }];
-  obj15.inputTextStyle = items21;
-  const obj14 = {
+  const items17 = [c12(closure_7, obj14), , ];
+  const obj16 = { multiline: true, allowRedesignTextInput: false, showBorder: false, showTopContainer: false, ref: ref1, style: null, inputTextStyle: null, textAlignVertical: "center", editable: canSend, placeholder: null, placeholderTextColor: null, accessibilityLabel: null, value: null, onChange: null, onFocus: null, onBlur: null, onContentSizeChange: null, scrollEnabled: null };
+  const items18 = [tmp31.input, { marginBottom: bound, minHeight: token }];
+  obj16.style = items18;
+  const items19 = [tmp31.inputText, { paddingTop: bound1, paddingBottom: bound1 }];
+  obj16.inputTextStyle = items19;
+  const obj15 = {
     items: memo,
     align: "above",
     children(arg0) {
@@ -741,42 +661,42 @@ export default function VibegrationsNativeComposer(projectId) {
       obj.accessibilityLabel = intl.string(_modDef3714.gUn10I);
       obj.accessibilityActions = accessibilityActions;
       obj.onAccessibilityAction = onAccessibilityAction;
-      return map1(ChatInputActionButtonDefault, obj);
+      return closure_2_12(ChatInputActionButtonDefault, obj);
     }
   };
-  const tmp21Result = require("initialize");
-  let intl = tmp21(tmp22[11]).intl;
-  const tmp23Result2 = canSend(running[12]);
+  const tmp16Result = projectId(running[17]);
+  let intl = tmp16(tmp17[11]).intl;
+  const tmp22Result2 = canSend(running[12]);
   if (flag) {
-    let nm4w9P = tmp23Result2.JeM47J;
+    let nm4w9P = tmp22Result2.JeM47J;
   } else if (!canSend) {
-    nm4w9P = tmp23Result2.nm4w9P;
+    nm4w9P = tmp22Result2.nm4w9P;
   }
-  obj15.placeholder = intl.string(nm4w9P);
-  obj15.placeholderTextColor = tmp32.inputPlaceholder.color;
-  let intl2 = tmp21(tmp22[11]).intl;
-  obj15.accessibilityLabel = intl2.string(canSend(running[12]).OPr66w);
-  obj15.value = str;
-  obj15.onChange = onChange;
-  obj15.onFocus = callback12;
-  obj15.onBlur = callback13;
-  obj15.onContentSizeChange = callback1;
-  obj15.scrollEnabled = tmp31;
-  items19[1] = c13(canSend(running[32]), obj15);
-  const obj16 = { style: null, children: null };
-  const items22 = [tmp32.trailingSlot, { width: token2 + 2 * token3, height: token1 }];
-  obj16.style = items22;
+  obj16.placeholder = intl.string(nm4w9P);
+  obj16.placeholderTextColor = tmp31.inputPlaceholder.color;
+  let intl2 = tmp16(tmp17[11]).intl;
+  obj16.accessibilityLabel = intl2.string(canSend(running[12]).OPr66w);
+  obj16.value = str;
+  obj16.onChange = onChange;
+  obj16.onFocus = callback9;
+  obj16.onBlur = callback10;
+  obj16.onContentSizeChange = callback1;
+  obj16.scrollEnabled = tmp30;
+  items17[1] = c12(canSend(running[33]), obj16);
+  const obj17 = { style: null, children: null };
+  const items20 = [tmp31.trailingSlot, { width: token2 + 2 * token3, height: token1 }];
+  obj17.style = items20;
   if (stateFromStores) {
-    let callback10Result = callback10(memo1[0]);
+    let callback7Result = callback7(memo1[0]);
   } else {
-    const obj17 = { items: memo1, renderItem: callback11, getItemKey };
-    callback10Result = tmp61(tmp21(tmp22[33]).TransitionGroup, obj17);
+    const obj18 = { items: memo1, renderItem: callback8, getItemKey: callback3 };
+    callback7Result = tmp55(tmp16(tmp17[34]).TransitionGroup, obj18);
   }
-  obj16.children = callback10Result;
-  items19[2] = c13(closure_7, obj16);
-  obj12.children = items19;
-  obj11.children = closure_14(closure_7, obj12);
-  items17[3] = c13(closure_7, obj11);
-  obj7.children = items17;
-  return closure_14(closure_7, obj7);
+  obj17.children = callback7Result;
+  items17[2] = c12(closure_7, obj17);
+  obj13.children = items17;
+  obj12.children = closure_13(closure_7, obj13);
+  items15[3] = c12(closure_7, obj12);
+  obj8.children = items15;
+  return closure_13(closure_7, obj8);
 };

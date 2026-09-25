@@ -1,6 +1,6 @@
-// === Module 9477: DomainVerifyUtils ===
+// === Module 8575: DomainVerifyUtils ===
 
-// Module 9477 (DomainVerifyUtils)
+// Module 8575 (DomainVerifyUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/connections/DomainVerifyUtils.tsx");

@@ -1,17 +1,17 @@
-// === Module 11909: GuildRoleConnectionsScreen ===
+// === Module 11052: GuildRoleConnectionsScreen ===
 
-// Module 11909 (GuildRoleConnectionsScreen)
+// Module 11052 (GuildRoleConnectionsScreen)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
-import shared from "shared" /* 4680 */;
+import shared from "shared" /* 4682 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5009 */;
-import PlatformsDefault from "Platforms" /* 5588 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5825 */;
-import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11907 */;
+import PlatformsDefault from "Platforms" /* 5590 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5827 */;
+import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11050 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1386 */;
@@ -185,11 +185,11 @@ export default function GuildRoleConnectionsScreen(guildId) {
                       const result = hasItem(closure_2_2[16]).unassignGuildRoleConnection(closure_1, id.id);
                     }
                 };
-                obj4.openLazy(asyncRequireImpl(11910, dependencyMap.paths), "LeaveConnectionRoleActionSheet-" + tmp.id, obj3);
-                const tmp20 = asyncRequireImpl(11910, dependencyMap.paths);
+                obj4.openLazy(asyncRequireImpl(11053, dependencyMap.paths), "LeaveConnectionRoleActionSheet-" + tmp.id, obj3);
+                const tmp20 = asyncRequireImpl(11053, dependencyMap.paths);
               } else {
                 let obj = ActionSheetActionCreatorsDefault;
-                const tmp9 = asyncRequireImpl(11900, dependencyMap.paths);
+                const tmp9 = asyncRequireImpl(11043, dependencyMap.paths);
                 const obj5 = { role: tmp, guildId, onCloseModal };
                 obj.openLazy(tmp9, GuildRoleConnectionsModalActionCreators.makeGuildRoleConnectionsConnectAccountsActionSheetKey(tmp.id), obj5);
               }

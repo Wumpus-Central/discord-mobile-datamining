@@ -1,15 +1,15 @@
-// === Module 9894: EditGuildEventModal ===
+// === Module 8992: EditGuildEventModal ===
 
-// Module 9894 (EditGuildEventModal)
+// Module 8992 (EditGuildEventModal)
 import nativeDefault from "native" /* 576 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1875 */;
-import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 9872 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 9873 */;
-import EntityUtils from "EntityUtils" /* 9874 */;
-import useGetEventChannelsByType from "useGetEventChannelsByType" /* 9895 */;
-import EditGuildEventWhereDefault from "EditGuildEventWhere" /* 9896 */;
-import EditGuildEventDetailsDefault from "EditGuildEventDetails" /* 9948 */;
-import EditGuildEventPreviewDefault from "EditGuildEventPreview" /* 9949 */;
+import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 8970 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8971 */;
+import EntityUtils from "EntityUtils" /* 8972 */;
+import useGetEventChannelsByType from "useGetEventChannelsByType" /* 8993 */;
+import EditGuildEventWhereDefault from "EditGuildEventWhere" /* 8994 */;
+import EditGuildEventDetailsDefault from "EditGuildEventDetails" /* 9046 */;
+import EditGuildEventPreviewDefault from "EditGuildEventPreview" /* 9047 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -78,7 +78,7 @@ export default noop.memo((guild) => {
           return { value: "HermesInternal", done: null };
         } else {
           if (!closure_128_5) {
-            const AccessibilityAnnouncer = tmp4(4536).AccessibilityAnnouncer;
+            const AccessibilityAnnouncer = tmp4(4538).AccessibilityAnnouncer;
             const intl = tmp4(1115).intl;
             AccessibilityAnnouncer.announce(intl.string(tmp4(1115).t["5HzXO5"]));
             closure_128_1();
@@ -88,7 +88,7 @@ export default noop.memo((guild) => {
               id = closure_128_2.id;
             }
           }
-          const AccessibilityAnnouncer2 = tmp4(4536).AccessibilityAnnouncer;
+          const AccessibilityAnnouncer2 = tmp4(4538).AccessibilityAnnouncer;
           const intl2 = tmp4(1115).intl;
           AccessibilityAnnouncer2.announce(intl2.string(tmp4(1115).t["F9On+q"]));
         }

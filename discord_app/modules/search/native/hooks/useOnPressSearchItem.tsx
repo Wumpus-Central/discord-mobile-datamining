@@ -1,20 +1,20 @@
-// === Module 17210: useOnPressSearchItem ===
+// === Module 16425: useOnPressSearchItem ===
 
-// Module 17210 (useOnPressSearchItem)
+// Module 16425 (useOnPressSearchItem)
 import util from "util" /* 1115 */;
 import URLUtilsDefault from "URLUtils" /* 1366 */;
-import LinkingDefault from "Linking" /* 4520 */;
-import ToastUtils from "ToastUtils" /* 4522 */;
+import LinkingDefault from "Linking" /* 4522 */;
+import ToastUtils from "ToastUtils" /* 4524 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4842 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8720 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 12681 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12701 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12704 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 7810 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 11807 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 11827 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 11830 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7924 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7009 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import SearchQueryStore from "SearchQueryStore" /* 12682 */;
+import SearchQueryStore from "SearchQueryStore" /* 11808 */;
 
 const require = globalThis.__r;
 const SearchPlatformUtilsDefault = SearchPlatformUtils;
@@ -93,10 +93,10 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
     }
   }
 };
-const SearchConstants = fn(8209);
+const SearchConstants = fn(7298);
 ({ SearchMediaTypes: closure_8, SearchHistoryItemTypes: closure_9, SearchQueryTagTypes: c10 } = SearchConstants);
-const SearchNavigatorScreens = fn(17211).SearchNavigatorScreens;
-const SearchFilterAddLocations = fn(8208).SearchFilterAddLocations;
+const SearchNavigatorScreens = fn(16426).SearchNavigatorScreens;
+const SearchFilterAddLocations = fn(7297).SearchFilterAddLocations;
 const Constants = fn(1074);
 ({ Routes: map1, ComponentActions: closure_14, ME: closure_15, SearchTypes: closure_16 } = Constants);
 const StaticChannelRoute = fn(2051).StaticChannelRoute;
@@ -554,11 +554,11 @@ export const useOnPressSearchHistoryText = function useOnPressSearchHistoryText(
     searchContext = text;
     const type = searchContext.type;
     if (constants4.DMS === type) {
-      const result = searchContext(12681).delayUntilNavigationComplete(() => {
+      const result = searchContext(11807).delayUntilNavigationComplete(() => {
         obj = SearchPlatformActionCreatorsDefault;
         return obj.addSearchHistoryItem(closure_0, obj);
       });
-      let obj2 = searchContext(12681);
+      let obj2 = searchContext(11807);
     }
     SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
       if (null != obj) {

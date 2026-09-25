@@ -1,9 +1,9 @@
-// === Module 6310: FamilyKeysSpotIllustration ===
+// === Module 17199: FamilyKeysSpotIllustration ===
 
-// Module 6310 (FamilyKeysSpotIllustration)
+// Module 17199 (FamilyKeysSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5892 */;
-import _modDef6311 from "module_6311" /* 6311 */;
+import FastImageDefault from "FastImage" /* 5894 */;
+import _modDef17200 from "module_17200" /* 17200 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const FamilyKeysSpotIllustration = function FamilyKeysSpotIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6311 };
+  const obj2 = { uri: _modDef17200 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

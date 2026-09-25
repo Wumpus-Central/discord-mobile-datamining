@@ -1,20 +1,20 @@
-// === Module 16820: YouBarNotificationsButton ===
+// === Module 16006: YouBarNotificationsButton ===
 
-// Module 16820 (YouBarNotificationsButton)
+// Module 16006 (YouBarNotificationsButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import HapticUtils from "HapticUtils" /* 4797 */;
-import spring from "spring" /* 5272 */;
-import showForLaterModal from "showForLaterModal" /* 8190 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 8191 */;
+import spring from "spring" /* 5273 */;
+import showForLaterModal from "showForLaterModal" /* 7279 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 7280 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 11998 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11141 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(15434);
+const YouBarConstants = fn(14602);
 ({ YOU_BAR_SPRING_CONFIG: metroRequire, YOU_BAR_BUTTON_HIT_SLOP: closure_7, YOU_BAR_BUTTON_ICON_SIZE } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

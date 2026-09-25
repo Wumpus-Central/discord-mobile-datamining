@@ -1,14 +1,14 @@
-// === Module 18356: NotificationSettingChannelOverrides ===
+// === Module 17587: NotificationSettingChannelOverrides ===
 
-// Module 18356 (NotificationSettingChannelOverrides)
+// Module 17587 (NotificationSettingChannelOverrides)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4536 */;
-import getFlattedChannelListDefault from "getFlattedChannelList" /* 7445 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4538 */;
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 6528 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7444 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 6527 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;

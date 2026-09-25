@@ -1,16 +1,16 @@
-// === Module 12023: ForwardDestinationUtils ===
+// === Module 11166: ForwardDestinationUtils ===
 
-// Module 12023 (ForwardDestinationUtils)
+// Module 11166 (ForwardDestinationUtils)
 import ChannelTypes from "ChannelTypes" /* 1095 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import StickersUtils from "StickersUtils" /* 5190 */;
-import SlowmodeUtils from "SlowmodeUtils" /* 8011 */;
-import ForwardAgeRestrictedDestinationsExperimentDefault from "ForwardAgeRestrictedDestinationsExperiment" /* 12024 */;
+import StickersUtils from "StickersUtils" /* 5191 */;
+import SlowmodeUtils from "SlowmodeUtils" /* 7096 */;
+import ForwardAgeRestrictedDestinationsExperimentDefault from "ForwardAgeRestrictedDestinationsExperiment" /* 11167 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 5807 */;
+import StickersStore from "StickersStore" /* 5809 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
@@ -24,7 +24,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/forwarding/ForwardDestinationUtils.tsx");
 
 export const useSelectedDestinationChannel = function useSelectedDestinationChannel(selectedDestinations) {
-  const mapped = selectedDestinations.map(found(11335).getChannelIdFromDestinationId);
+  const mapped = selectedDestinations.map(found(10433).getChannelIdFromDestinationId);
   found = mapped.find(found(1370).isNotNullish);
   const items = [ChannelStore];
   const items1 = [found];
@@ -82,8 +82,8 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
           }
           let result = tmp12(5041).shouldShowTiggerPawtect();
           if (result) {
-            result = tmp12(5728).isFeatureAgeGated(tmp12(5729).AgeGatedFeature.AGE_GATED_SPACES);
-            const tmp12Result10 = tmp12(5728);
+            result = tmp12(5730).isFeatureAgeGated(tmp12(5731).AgeGatedFeature.AGE_GATED_SPACES);
+            const tmp12Result10 = tmp12(5730);
           }
           let tmp19 = !tmp18;
           if (false !== nsfwAllowed) {
@@ -123,9 +123,9 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
                 obj5.label = intl3.string(tmp12(1115).t.Wr4RIX);
                 return obj5;
               }
-              tmp12Result12 = tmp12(5188);
+              tmp12Result12 = tmp12(5189);
             }
-            tmp12Result11 = tmp12(5188);
+            tmp12Result11 = tmp12(5189);
           } else {
             const messageSnapshots2 = components.messageSnapshots;
           }
@@ -136,12 +136,12 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
               obj6.label = intl4.string(tmp12(1115).t.Wr4RIX);
               return obj6;
             }
-            tmp12Result13 = tmp12(5188);
+            tmp12Result13 = tmp12(5189);
           }
           const items = [];
           const messageSnapshots3 = components.messageSnapshots;
-          const tmp12Result14 = tmp12(5190);
-          HermesBuiltin.arraySpread(messageSnapshots3.flatMap((message) => type(dependencyMap[12]).getMessageStickers(message.message)), HermesBuiltin.arraySpread(tmp12(5190).getMessageStickers(components), 0));
+          const tmp12Result14 = tmp12(5191);
+          HermesBuiltin.arraySpread(messageSnapshots3.flatMap((message) => type(dependencyMap[12]).getMessageStickers(message.message)), HermesBuiltin.arraySpread(tmp12(5191).getMessageStickers(components), 0));
           if (items.length > 0) {
             if (!PermissionStore.can(constants2.USE_EXTERNAL_STICKERS, type)) {
               if (items.some((id) => {
@@ -173,7 +173,7 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
           } else {
             const messageSnapshots4 = components.messageSnapshots;
           }
-          const arraySpreadResult = HermesBuiltin.arraySpread(tmp12(5190).getMessageStickers(components), 0);
+          const arraySpreadResult = HermesBuiltin.arraySpread(tmp12(5191).getMessageStickers(components), 0);
         }
       }
       obj = require("AgeGateUtils");
@@ -203,8 +203,8 @@ export const useSelectedDestinationNames = function useSelectedDestinationNames(
         if (null != user) {
           nickname = nickname.getNickname(user.id);
           if (nickname == null) {
-            nickname = closure_1_1(4673).getName(user);
-            const obj2 = closure_1_1(4673);
+            nickname = closure_1_1(4675).getName(user);
+            const obj2 = closure_1_1(4675);
           }
           tmp13 = nickname;
         }

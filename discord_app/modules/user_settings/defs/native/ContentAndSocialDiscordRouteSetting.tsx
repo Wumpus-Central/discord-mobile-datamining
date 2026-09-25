@@ -1,12 +1,12 @@
-// === Module 16296: ContentAndSocialDiscordRouteSetting ===
+// === Module 15475: ContentAndSocialDiscordRouteSetting ===
 
-// Module 16296 (ContentAndSocialDiscordRouteSetting)
+// Module 15475 (ContentAndSocialDiscordRouteSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
-import FriendsIcon from "FriendsIcon" /* 4524 */;
-import SettingsConstants from "SettingsConstants" /* 8323 */;
-import ContentAndSocialScreen from "ContentAndSocialScreen" /* 16278 */;
-import SettingBuilders from "SettingBuilders" /* 11811 */;
+import FriendsIcon from "FriendsIcon" /* 4526 */;
+import SettingsConstants from "SettingsConstants" /* 7412 */;
+import ContentAndSocialScreen from "ContentAndSocialScreen" /* 15457 */;
+import SettingBuilders from "SettingBuilders" /* 10993 */;
 import size from "module_2" /* 2 */;
 
 const route = SettingBuilders.createRoute({

@@ -1,6 +1,6 @@
-// === Module 12718: IntelligenceSearchExperiments ===
+// === Module 11844: IntelligenceSearchExperiments ===
 
-// Module 12718 (IntelligenceSearchExperiments)
+// Module 11844 (IntelligenceSearchExperiments)
 import GuildStore from "GuildStore" /* 2066 */;
 
 const require = globalThis.__r;

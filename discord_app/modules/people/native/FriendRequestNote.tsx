@@ -1,11 +1,11 @@
-// === Module 13523: FriendRequestNote ===
+// === Module 12675: FriendRequestNote ===
 
-// Module 13523 (FriendRequestNote)
+// Module 12675 (FriendRequestNote)
 import nativeDefault from "native" /* 576 */;
-import PeopleListTracking from "PeopleListTracking" /* 13525 */;
+import PeopleListTracking from "PeopleListTracking" /* 12677 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 
 const require = globalThis.__r;
 

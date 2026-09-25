@@ -1,6 +1,6 @@
-// === Module 9714: PresenceActivityFiltering ===
+// === Module 8812: PresenceActivityFiltering ===
 
-// Module 9714 (PresenceActivityFiltering)
+// Module 8812 (PresenceActivityFiltering)
 import Server from "Server" /* 1978 */;
 import ApplicationStore from "ApplicationStore" /* 5056 */;
 

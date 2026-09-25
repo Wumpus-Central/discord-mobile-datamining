@@ -1,8 +1,8 @@
-// === Module 17168: VibegrationsTraceFormat ===
+// === Module 16383: VibegrationsTraceFormat ===
 
-// Module 17168 (VibegrationsTraceFormat)
+// Module 16383 (VibegrationsTraceFormat)
 import nativeDefault from "native" /* 576 */;
-import vibegrations_VibegrationsTraceFormat from "vibegrations/VibegrationsTraceFormat" /* 17169 */;
+import vibegrations_VibegrationsTraceFormat from "vibegrations/VibegrationsTraceFormat" /* 16384 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

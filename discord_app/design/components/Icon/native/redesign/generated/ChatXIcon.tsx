@@ -1,9 +1,9 @@
-// === Module 12814: ChatXIcon ===
+// === Module 11940: ChatXIcon ===
 
-// Module 12814 (ChatXIcon)
+// Module 11940 (ChatXIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4525 */;
-import _mod12815 from "module_12815" /* 12815 */;
+import BaseIconImage from "BaseIconImage" /* 4527 */;
+import _mod11941 from "module_11941" /* 11941 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const ChatXIcon = function ChatXIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12815, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11941, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

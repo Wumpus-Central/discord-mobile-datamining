@@ -2,7 +2,7 @@
 
 // Module 4788 (CircleCheckIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4525 */;
+import BaseIconImage from "BaseIconImage" /* 4527 */;
 import _mod4789 from "module_4789" /* 4789 */;
 import _mod4790 from "module_4790" /* 4790 */;
 import noop from "module_19" /* 19 */;

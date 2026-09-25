@@ -1,12 +1,12 @@
-// === Module 13881: BoostingUnavailablePill ===
+// === Module 13038: BoostingUnavailablePill ===
 
-// Module 13881 (BoostingUnavailablePill)
+// Module 13038 (BoostingUnavailablePill)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
 import _modDef3198 from "module_3198" /* 3198 */;
-import PremiumGroupConstants from "PremiumGroupConstants" /* 4497 */;
+import PremiumGroupConstants from "PremiumGroupConstants" /* 4499 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
 import Text_Text from "Text/Text" /* 4825 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
@@ -17,7 +17,7 @@ function handlePress() {
   const obj2 = { aboutText: null };
   const obj = ActionSheetActionCreatorsDefault;
   const intl = util.intl;
-  const tmp = asyncRequireImpl(13882, dependencyMap.paths);
+  const tmp = asyncRequireImpl(13039, dependencyMap.paths);
   obj2.aboutText = intl.formatToPlainString(_modDef3198["5xN/C1"], { premiumGroupProductName: closure_5() });
   obj.openLazy(tmp, "PremiumGroupEducationActionSheet", obj2);
 }

@@ -1,6 +1,6 @@
-// === Module 9263: GameProfileNavigationHeader ===
+// === Module 8361: GameProfileNavigationHeader ===
 
-// Module 9263 (GameProfileNavigationHeader)
+// Module 8361 (GameProfileNavigationHeader)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtils from "AvatarUtils" /* 1397 */;
 import timing from "timing" /* 4830 */;
@@ -33,12 +33,14 @@ export default function GameProfileNavigationHeader(game) {
   const headerRight = game.headerRight;
   let sharedValue;
   const tmp = closure_9();
-  dependencyMap = tmp2;
+  dependencyMap = tmp6;
+  const token = game(4528).useToken(application(576).colors.LEGACY_BLUR_FALLBACK_ULTRA_THIN);
+  let obj = game(4528);
   let num = 0;
   if (null != headerRight) {
     num = 1;
   }
-  sharedValue = game(4561).useSharedValue(num);
+  sharedValue = game(4563).useSharedValue(num);
   const items = [null != headerRight, sharedValue];
   const effect = sharedValue.useEffect(() => {
     let num = 0;
@@ -47,23 +49,23 @@ export default function GameProfileNavigationHeader(game) {
     }
     const result = sharedValue.set(timing.withTiming(num, { duration: 200 }));
   }, items);
-  let obj = game(4561);
-  const fn = function x() {
+  const obj2 = game(4563);
+  const fn = function b() {
     return { opacity: sharedValue.get() };
   };
   fn.__closure = { headerRightProgress: sharedValue };
   fn.__workletHash = 16001524280109;
   fn.__initData = __initData;
-  const animatedStyle = game(4561).useAnimatedStyle(fn);
-  const tmp3Result = game(4561);
-  const fn2 = function b() {
+  const animatedStyle = game(4563).useAnimatedStyle(fn);
+  const tmp2Result = game(4563);
+  const fn2 = function k() {
     return { opacity: 1 - sharedValue.get() };
   };
   fn2.__closure = { headerRightProgress: sharedValue };
   fn2.__workletHash = 5182160908530;
   fn2.__initData = __initData2;
   const items1 = [game, application];
-  const animatedStyle1 = game(4561).useAnimatedStyle(fn2);
+  const animatedStyle1 = game(4563).useAnimatedStyle(fn2);
   const memo = sharedValue.useMemo(() => {
     let iconURL;
     if (game != null) {
@@ -100,57 +102,58 @@ export default function GameProfileNavigationHeader(game) {
     }
     name = name1;
   }
-  let tmp13Result2 = null;
+  let tmp15Result2 = null;
   if (null != name) {
-    const obj2 = { style: tmp.headerContainer, children: null };
-    const items2 = [closure_7(tmp3(9264).BackgroundBlurFill, {}), ];
-    const obj3 = { style: tmp.headerRow, children: null };
-    let tmp15Result = null != memo;
-    if (tmp15Result) {
-      const obj4 = { source: null, style: null };
-      const obj5 = { uri: memo };
-      obj4.source = obj5;
-      obj4.style = tmp.icon;
-      tmp15Result = closure_7(closure_4, obj4);
+    const obj3 = { style: tmp.headerContainer, children: null };
+    const obj4 = { android_fallbackColor: token };
+    const items2 = [closure_7(tmp2(8362).BackgroundBlurFill, obj4), ];
+    const obj5 = { style: tmp.headerRow, children: null };
+    let tmp17Result = null != memo;
+    if (tmp17Result) {
+      const obj6 = { source: null, style: null };
+      const obj7 = { uri: memo };
+      obj6.source = obj7;
+      obj6.style = tmp.icon;
+      tmp17Result = closure_7(closure_4, obj6);
     }
-    const items3 = [tmp15Result, , ];
-    const obj6 = { style: tmp.titleContainer, children: null };
-    const obj7 = { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", lineClamp: 1, children: name };
-    const items4 = [closure_7(tmp3(4825).Heading, obj7), ];
+    const items3 = [tmp17Result, , ];
+    const obj8 = { style: tmp.titleContainer, children: null };
+    const obj9 = { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", lineClamp: 1, children: name };
+    const items4 = [closure_7(tmp2(4825).Heading, obj9), ];
     let l30Rank;
     if (game != null) {
       l30Rank = game.l30Rank;
     }
-    let tmp13Result = null != l30Rank;
-    if (tmp13Result) {
-      const obj8 = { style: tmp.rankPillContainer, children: null };
-      const obj9 = { rank: game.l30Rank, compact: true };
-      const items5 = [closure_7(application(9070), obj9), ];
-      const obj10 = { style: null, children: null };
-      const items6 = [StyleSheet.absoluteFill, animatedStyle1];
-      obj10.style = items6;
-      const obj11 = { rank: game.l30Rank };
-      obj10.children = closure_7(application(9070), obj11);
-      items5[1] = closure_7(application(4561).View, obj10);
-      obj8.children = items5;
-      tmp13Result = closure_8(closure_5, obj8);
-    }
-    items4[1] = tmp13Result;
-    obj6.children = items4;
-    items3[1] = closure_8(closure_5, obj6);
-    let tmp15Result2 = null != headerRight;
-    if (tmp15Result2) {
+    let tmp15Result = null != l30Rank;
+    if (tmp15Result) {
+      const obj10 = { style: tmp.rankPillContainer, children: null };
+      const obj11 = { rank: game.l30Rank, compact: true };
+      const items5 = [closure_7(tmp4(8164), obj11), ];
       const obj12 = { style: null, children: null };
-      const items7 = [tmp.headerRight, animatedStyle];
-      obj12.style = items7;
-      obj12.children = headerRight();
-      tmp15Result2 = closure_7(application(4561).View, obj12);
+      const items6 = [StyleSheet.absoluteFill, animatedStyle1];
+      obj12.style = items6;
+      const obj13 = { rank: game.l30Rank };
+      obj12.children = closure_7(tmp4(8164), obj13);
+      items5[1] = closure_7(tmp4(4563).View, obj12);
+      obj10.children = items5;
+      tmp15Result = closure_8(closure_5, obj10);
     }
-    items3[2] = tmp15Result2;
-    obj3.children = items3;
-    items2[1] = closure_8(closure_5, obj3);
-    obj2.children = items2;
-    tmp13Result2 = closure_8(closure_5, obj2);
+    items4[1] = tmp15Result;
+    obj8.children = items4;
+    items3[1] = closure_8(closure_5, obj8);
+    let tmp17Result2 = null != headerRight;
+    if (tmp17Result2) {
+      const obj14 = { style: null, children: null };
+      const items7 = [tmp.headerRight, animatedStyle];
+      obj14.style = items7;
+      obj14.children = headerRight();
+      tmp17Result2 = closure_7(tmp4(4563).View, obj14);
+    }
+    items3[2] = tmp17Result2;
+    obj5.children = items3;
+    items2[1] = closure_8(closure_5, obj5);
+    obj3.children = items2;
+    tmp15Result2 = closure_8(closure_5, obj3);
   }
-  return tmp13Result2;
+  return tmp15Result2;
 };

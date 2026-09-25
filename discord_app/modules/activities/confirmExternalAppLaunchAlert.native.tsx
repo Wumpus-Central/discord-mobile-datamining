@@ -1,19 +1,19 @@
-// === Module 9692: confirmExternalAppLaunchAlert ===
+// === Module 8790: confirmExternalAppLaunchAlert ===
 
-// Module 9692 (confirmExternalAppLaunchAlert)
+// Module 8790 (confirmExternalAppLaunchAlert)
 import util from "util" /* 1115 */;
-import LinkingDefault from "Linking" /* 4520 */;
+import LinkingDefault from "Linking" /* 4522 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5195 */;
-import components_Button_Button from "components/Button/Button" /* 5273 */;
-import _modDef9693 from "module_9693" /* 9693 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5196 */;
+import components_Button_Button from "components/Button/Button" /* 5274 */;
+import _modDef8791 from "module_8791" /* 8791 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function ConfirmActivityGateContent(activityName) {
   const tmp = closure_8();
   const obj = { style: tmp.alertContainer, children: null };
-  const items = [timestampProducer(React3, { source: _modDef9693, style: tmp.announcementBirb }), , , ];
+  const items = [timestampProducer(React3, { source: _modDef8791, style: tmp.announcementBirb }), , , ];
   const obj3 = { style: tmp.alertEyebrowText, variant: "eyebrow", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["06YebE"]);

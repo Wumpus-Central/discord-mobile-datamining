@@ -1,6 +1,6 @@
-// === Module 5833: MemberVerificationAlertSuccess ===
+// === Module 5835: MemberVerificationAlertSuccess ===
 
-// Module 5833 (MemberVerificationAlertSuccess)
+// Module 5835 (MemberVerificationAlertSuccess)
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4821 */;
 import GuildStore from "GuildStore" /* 2066 */;

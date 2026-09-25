@@ -1,11 +1,11 @@
-// === Module 10409: useFetchStreamPreview ===
+// === Module 9511: useFetchStreamPreview ===
 
-// Module 10409 (useFetchStreamPreview)
+// Module 9511 (useFetchStreamPreview)
 import StreamActionCreators from "StreamActionCreators" /* 4971 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 4973 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
 
 const require = globalThis.__r;

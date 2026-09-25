@@ -1,9 +1,9 @@
-// === Module 13760: SubscriptionAccountHoldNotice ===
+// === Module 12914: SubscriptionAccountHoldNotice ===
 
-// Module 13760 (SubscriptionAccountHoldNotice)
+// Module 12914 (SubscriptionAccountHoldNotice)
 import nativeDefault from "native" /* 576 */;
-import PremiumUtils from "PremiumUtils" /* 4483 */;
-import _modDef13117 from "module_13117" /* 13117 */;
+import PremiumUtils from "PremiumUtils" /* 4485 */;
+import _modDef12267 from "module_12267" /* 12267 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,11 +25,11 @@ export default function SubscriptionAccountHoldNotice(subscription) {
   if (subscription.status === SubscriptionStatusTypes.ACCOUNT_HOLD) {
     const obj = { style: tmp.container, children: null };
     const obj2 = { style: tmp.textContainer, children: null };
-    const obj3 = { size: subscription(1177).IconSizes.MEDIUM, style: tmp.icon, source: _modDef13117 };
+    const obj3 = { size: subscription(1177).IconSizes.MEDIUM, style: tmp.icon, source: _modDef12267 };
     const items = [closure_6(subscription(1177).Icon, obj3), ];
     const obj4 = { style: tmp.text, variant: "text-sm/medium", children: null };
     const intl = subscription(1115).intl;
-    const obj5 = { endDate: subscription.currentPeriodEnd, planDescription: subscription(4483).getDisplayName(subscription.planId) };
+    const obj5 = { endDate: subscription.currentPeriodEnd, planDescription: subscription(4485).getDisplayName(subscription.planId) };
     obj4.children = intl.format(subscription(1115).t["7I21Iz"], obj5);
     items[1] = closure_6(subscription(4825).Text, obj4);
     obj2.children = items;
@@ -40,10 +40,10 @@ export default function SubscriptionAccountHoldNotice(subscription) {
     obj7.onPress = function onPress() {
       return React3.openURL(PremiumUtils.getExternalSubscriptionMethodUrl(subscription.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT"));
     };
-    items1[1] = closure_6(subscription(5273).Button, obj7);
+    items1[1] = closure_6(subscription(5274).Button, obj7);
     obj.children = items1;
     tmp2 = closure_7(closure_4, obj);
-    const obj6 = subscription(4483);
+    const obj6 = subscription(4485);
   }
   return tmp2;
 };

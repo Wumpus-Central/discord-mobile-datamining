@@ -1,18 +1,18 @@
-// === Module 12682: SearchQueryStore ===
+// === Module 11808: SearchQueryStore ===
 
-// Module 12682 (SearchQueryStore)
+// Module 11808 (SearchQueryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import SearchUtils from "SearchUtils" /* 12683 */;
-import SearchQueryTagManagerDefault from "SearchQueryTagManager" /* 12695 */;
+import SearchUtils from "SearchUtils" /* 11809 */;
+import SearchQueryTagManagerDefault from "SearchQueryTagManager" /* 11821 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
-const SearchConstants = fn(8209);
+const SearchConstants = fn(7298);
 ({ EMPTY_SEARCH_QUERY_STRING: metroRequire, SearchQueryTagTypes: closure_7 } = SearchConstants);
-const SearchFilterAddLocations = fn(8208).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(7297).SearchFilterAddLocations;
 const Constants = fn(1074);
 ({ SearchTokenTypes: closure_9, SearchTypes: c10 } = Constants);
 const prototype = function SearchQueryStateManager(type) {
@@ -183,11 +183,11 @@ const prototype = function SearchQueryStateManager(type) {
       const intl = obj(1115).intl;
       const stringResult = intl.string(obj(1115).t.WNpFHa);
       let _HermesInternal = HermesInternal;
-      obj3.text = "" + stringResult + ": " + obj(12683).quoteChannelName(channelName);
+      obj3.text = "" + stringResult + ": " + obj(11809).quoteChannelName(channelName);
       obj3.channelId = type.channelId;
       obj3.location = SearchFilterAddLocations.CLIENT_AUTO_ADD;
       items1 = [obj3];
-      const obj4 = obj(12683);
+      const obj4 = obj(11809);
     }
     items = items1;
   }

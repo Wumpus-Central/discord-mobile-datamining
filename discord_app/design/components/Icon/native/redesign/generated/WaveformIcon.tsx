@@ -1,9 +1,9 @@
-// === Module 10478: WaveformIcon ===
+// === Module 9580: WaveformIcon ===
 
-// Module 10478 (WaveformIcon)
+// Module 9580 (WaveformIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4525 */;
-import _mod10479 from "module_10479" /* 10479 */;
+import BaseIconImage from "BaseIconImage" /* 4527 */;
+import _mod9581 from "module_9581" /* 9581 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const WaveformIcon = function WaveformIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10479, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9581, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

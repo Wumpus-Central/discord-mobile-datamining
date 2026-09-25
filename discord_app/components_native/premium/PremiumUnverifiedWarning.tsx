@@ -1,6 +1,6 @@
-// === Module 13936: PremiumUnverifiedWarning ===
+// === Module 13095: PremiumUnverifiedWarning ===
 
-// Module 13936 (PremiumUnverifiedWarning)
+// Module 13095 (PremiumUnverifiedWarning)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
@@ -28,7 +28,7 @@ PremiumUnverifiedWarning.prototype["render"] = function render() {
   }
   return tmp3;
 };
-PremiumUnverifiedWarning.contextType = fn(4535).ThemeContext;
+PremiumUnverifiedWarning.contextType = fn(4537).ThemeContext;
 let items = [UserStore];
 const obj3 = { color: nativeDefault.unsafe_rawColors.RED_400, fontSize: 12, marginTop: 10 };
 const size = fn(2);

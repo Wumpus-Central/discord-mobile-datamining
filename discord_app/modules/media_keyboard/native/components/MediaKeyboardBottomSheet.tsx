@@ -1,11 +1,11 @@
-// === Module 17080: MediaKeyboardBottomSheet ===
+// === Module 16271: MediaKeyboardBottomSheet ===
 
-// Module 17080 (MediaKeyboardBottomSheet)
+// Module 16271 (MediaKeyboardBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
-import ChatInputUtils from "ChatInputUtils" /* 4695 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
+import ChatInputUtils from "ChatInputUtils" /* 4697 */;
 import HapticUtils from "HapticUtils" /* 4797 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4798 */;
 import _slicedToArray from "module_32" /* 32 */;

@@ -1,6 +1,6 @@
-// === Module 9828: ChannelCallModalManager ===
+// === Module 8926: ChannelCallModalManager ===
 
-// Module 9828 (ChannelCallModalManager)
+// Module 8926 (ChannelCallModalManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import UserStore from "UserStore" /* 1372 */;
 import VoiceStateStore from "VoiceStateStore" /* 4848 */;

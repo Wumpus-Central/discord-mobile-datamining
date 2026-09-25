@@ -1,14 +1,14 @@
-// === Module 16972: GuildRoleSubscriptionPurchasePage ===
+// === Module 16162: GuildRoleSubscriptionPurchasePage ===
 
-// Module 16972 (GuildRoleSubscriptionPurchasePage)
+// Module 16162 (GuildRoleSubscriptionPurchasePage)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import LinkingDefault from "Linking" /* 4520 */;
+import LinkingDefault from "Linking" /* 4522 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5327 */;
-import _modDef10288 from "module_10288" /* 10288 */;
-import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard" /* 16982 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5328 */;
+import _modDef9385 from "module_9385" /* 9385 */;
+import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard" /* 16172 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
@@ -40,7 +40,7 @@ function SocialBadge(onPress) {
   obj.onPress = onPress;
   const items = [closure_1_14(native.Icon, { source: iconSource, style: tmp.socialBadgeIcon, resizeMode: "contain", disableColor: true }), closure_1_14(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: text }), ];
   if (tmp5Result) {
-    const obj3 = { source: _modDef10288, style: tmp.socialBadgeArrow };
+    const obj3 = { source: _modDef9385, style: tmp.socialBadgeArrow };
     tmp5Result = closure_1_14(native.Icon, obj3);
   }
   items[2] = tmp5Result;

@@ -1,6 +1,6 @@
-// === Module 10535: DebugUploadManager ===
+// === Module 9637: DebugUploadManager ===
 
-// Module 10535 (DebugUploadManager)
+// Module 9637 (DebugUploadManager)
 import LoggerDefault from "Logger" /* 3 */;
 import LogAggregatorAll from "LogAggregator" /* 7 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

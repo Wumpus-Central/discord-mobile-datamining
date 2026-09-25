@@ -1,10 +1,10 @@
-// === Module 16350: ScreenRecordingUtils ===
+// === Module 15530: ScreenRecordingUtils ===
 
-// Module 16350 (ScreenRecordingUtils)
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5195 */;
-import bug_reporter_BugReportUtils from "bug_reporter/BugReportUtils" /* 10534 */;
-import ScreenRecordingManagerDefault from "ScreenRecordingManager" /* 16351 */;
-import StudyConfig from "StudyConfig" /* 16352 */;
+// Module 15530 (ScreenRecordingUtils)
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5196 */;
+import bug_reporter_BugReportUtils from "bug_reporter/BugReportUtils" /* 9636 */;
+import ScreenRecordingManagerDefault from "ScreenRecordingManager" /* 15531 */;
+import StudyConfig from "StudyConfig" /* 15532 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -570,7 +570,7 @@ let closure_11 = async function _submitBugReportWithScreenRecording(arg0) {
                 const obj22 = { name: closure_133_2.uploadConfig.reportTitle, description: closure_133_2.uploadConfig.reportDescription, priority: closure_133_2.uploadConfig.priority, feature: null, url: "" };
                 let obj24 = closure_133_3;
                 if (closure_133_3 == null) {
-                  obj24 = { name: closure_133_2.uploadConfig.featureName, squad: closure_133_2.uploadConfig.squadName, asana_inbox_id: "r" };
+                  obj24 = { name: closure_133_2.uploadConfig.featureName, squad: closure_133_2.uploadConfig.squadName, asana_inbox_id: "Array" };
                 }
                 obj22.feature = obj24;
                 closure_133_14 = obj22;
@@ -827,7 +827,7 @@ let closure_13 = async function _handleRecordingPhase(arg0) {
 };
 get_ActivityIndicator = fn(17);
 ({ NativeModules, NativeEventEmitter } = get_ActivityIndicator);
-const useScreenRecordingStore = fn(16349).useScreenRecordingStore;
+const useScreenRecordingStore = fn(15529).useScreenRecordingStore;
 const DCDPhotos = NativeModules.DCDPhotos;
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.DCDScreenRecordingManager);
 let size = fn(2);

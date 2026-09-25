@@ -1,15 +1,13 @@
-// === Module 4718: GuildPowerupsConstants ===
+// === Module 4720: GuildPowerupsConstants ===
 
-// Module 4718 (GuildPowerupsConstants)
+// Module 4720 (GuildPowerupsConstants)
 import util from "util" /* 1115 */;
 import PremiumConstants from "PremiumConstants" /* 1374 */;
 import dismissible_content from "dismissible_content" /* 2028 */;
-import GameServerConstants from "GameServerConstants" /* 4719 */;
-import Powerups from "Powerups" /* 4721 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 4722 */;
-import GameServerExperiment from "GameServerExperiment" /* 4741 */;
-import FileUploadPowerupHoldoutExperiment2 from "FileUploadPowerupHoldoutExperiment" /* 4754 */;
-import FileUpload250MbPowerupExperiment from "FileUpload250MbPowerupExperiment" /* 4755 */;
+import GameServerConstants from "GameServerConstants" /* 4721 */;
+import Powerups from "Powerups" /* 4723 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 4724 */;
+import GameServerExperiment from "GameServerExperiment" /* 4743 */;
 import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 4756 */;
 import ServerThemeExperiment from "ServerThemeExperiment" /* 4757 */;
 import Constants from "Constants" /* 1074 */;
@@ -47,19 +45,6 @@ const items11 = [Powerups.GUILD_POWERUP_ROLE_COLOR_SKU_ID, Powerups.GUILD_POWERU
 const set2 = new Set(items10);
 const obj4 = { boostPrice: 5, includedInLevel: BoostedGuildTiers.TIER_3 };
 let obj5 = {
-  boostPrice: 4,
-  isEnabled(guildId) {
-    const FileUploadPowerupHoldoutExperiment = FileUploadPowerupHoldoutExperiment2.FileUploadPowerupHoldoutExperiment;
-    const enabled = FileUploadPowerupHoldoutExperiment.getConfig({ location: "GuildPowerupsConstants" }).enabled;
-    let fileUpload250MbPowerupEnabled = !enabled;
-    if (!enabled) {
-      fileUpload250MbPowerupEnabled = FileUpload250MbPowerupExperiment.getFileUpload250MbPowerupEnabled(guildId, "GuildPowerupsConstants");
-      const tmpResult = FileUpload250MbPowerupExperiment;
-    }
-    return fileUpload250MbPowerupEnabled;
-  }
-};
-let obj6 = {
   boostPrice: 3,
   isEnabled(guildId) {
     let serverThemeUserEnabled = ServerThemeUserExperiment.getServerThemeUserEnabled("GuildPowerupsConstants");
@@ -70,35 +55,35 @@ let obj6 = {
     return serverThemeUserEnabled;
   }
 };
-let obj7 = {
+let obj6 = {
   boostPrice: 3,
   isEnabled(id) {
     return GameServerExperiment.getGameServerEnabled(id, "GuildPowerupsConstants");
   }
 };
 const set3 = new Set(items11);
-let obj9 = { VANITY_URL: 1, [1]: "VANITY_URL", GUILD_TAG_BADGE_PACKS_WAVE_ONE: 2, [2]: "GUILD_TAG_BADGE_PACKS_WAVE_ONE", GAME_SERVER_HOSTING: 3, [3]: "GAME_SERVER_HOSTING", GUILD_TAG_BADGE_PACKS_WAVE_TWO: 4, [4]: "GUILD_TAG_BADGE_PACKS_WAVE_TWO", FILE_UPLOAD_250_MB: 5, [5]: "FILE_UPLOAD_250_MB", GUILD_THEME: 6, [6]: "GUILD_THEME", GUILD_TAG: 7, [7]: "GUILD_TAG" };
+const obj8 = { VANITY_URL: 1, [1]: "VANITY_URL", GUILD_TAG_BADGE_PACKS_WAVE_ONE: 2, [2]: "GUILD_TAG_BADGE_PACKS_WAVE_ONE", GAME_SERVER_HOSTING: 3, [3]: "GAME_SERVER_HOSTING", GUILD_TAG_BADGE_PACKS_WAVE_TWO: 4, [4]: "GUILD_TAG_BADGE_PACKS_WAVE_TWO", FILE_UPLOAD_250_MB: 5, [5]: "FILE_UPLOAD_250_MB", GUILD_THEME: 6, [6]: "GUILD_THEME", GUILD_TAG: 7, [7]: "GUILD_TAG" };
 const items12 = [Powerups.GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, Powerups.GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID];
 const set4 = new Set(items12);
 const items13 = [Powerups.GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID, Powerups.GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID];
 const set5 = new Set(items13);
-let obj10 = {};
+let obj9 = {};
 const items14 = [Powerups.VANITY_URL_POWERUP_SKU_ID];
-const obj8 = { [Powerups.VANITY_URL_POWERUP_SKU_ID]: BoostedGuildTiers.TIER_3 };
-obj10[obj9.VANITY_URL] = new Set(items14);
-obj10[obj9.GUILD_TAG_BADGE_PACKS_WAVE_ONE] = set4;
+let obj7 = { [Powerups.VANITY_URL_POWERUP_SKU_ID]: BoostedGuildTiers.TIER_3 };
+obj9[obj8.VANITY_URL] = new Set(items14);
+obj9[obj8.GUILD_TAG_BADGE_PACKS_WAVE_ONE] = set4;
 const set6 = new Set(items14);
-obj10[obj9.GAME_SERVER_HOSTING] = new Set();
-obj10[obj9.GUILD_TAG_BADGE_PACKS_WAVE_TWO] = set5;
+obj9[obj8.GAME_SERVER_HOSTING] = new Set();
+obj9[obj8.GUILD_TAG_BADGE_PACKS_WAVE_TWO] = set5;
 const items15 = [Powerups.GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
 const set7 = new Set();
-obj10[obj9.FILE_UPLOAD_250_MB] = new Set(items15);
+obj9[obj8.FILE_UPLOAD_250_MB] = new Set(items15);
 const items16 = [Powerups.GUILD_POWERUP_GUILD_THEME_SKU_ID];
 const set8 = new Set(items15);
-obj10[obj9.GUILD_THEME] = new Set(items16);
+obj9[obj8.GUILD_THEME] = new Set(items16);
 const items17 = [Powerups.GUILD_POWERUP_TAG_SKU_ID];
 const set9 = new Set(items16);
-obj10[obj9.GUILD_TAG] = new Set(items17);
+obj9[obj8.GUILD_TAG] = new Set(items17);
 const result = size.fileFinishedImporting("modules/premium/powerups/constants/GuildPowerupsConstants.tsx");
 
 export const GuildPowerupType = { PERK: "perk", LEVEL: "level" };
@@ -173,14 +158,14 @@ export const GUILD_FEATURE_TO_PERK = () => {
   return obj;
 };
 export const GUILD_THEME_POWERUP_BOOST_PRICE = 3;
-export const PURCHASABLE_PREMIUM_FEATURES_BOOST_INFO = { [GuildFeatures.VANITY_URL]: obj4, [GuildFeatures.GUILD_TAGS]: { boostPrice: 3 }, [GuildFeatures.ENHANCED_ROLE_COLORS]: { boostPrice: 3 }, [GuildFeatures.GUILD_TAGS_BADGE_PACK_PETS]: { boostPrice: 3 }, [GuildFeatures.GUILD_TAGS_BADGE_PACK_FLEX]: { boostPrice: 5 }, [GuildFeatures.GUILD_TAGS_BADGE_PACK_PLANT]: { boostPrice: 3 }, [GuildFeatures.GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES]: { boostPrice: 2 }, [GuildFeatures.MAX_FILE_SIZE_250_MB]: obj5, [GuildFeatures.GUILD_THEME]: obj6 };
-export const MULTIPLE_PURCHASEABLE_PREMIUM_FEATURES_BOOST_INFO = { [GuildFeatures.GAME_SERVERS]: obj7 };
-export const POWERUPS_INCLUDED_IN_LEVEL = obj8;
+export const PURCHASABLE_PREMIUM_FEATURES_BOOST_INFO = { [GuildFeatures.VANITY_URL]: obj4, [GuildFeatures.GUILD_TAGS]: { boostPrice: 3 }, [GuildFeatures.ENHANCED_ROLE_COLORS]: { boostPrice: 3 }, [GuildFeatures.GUILD_TAGS_BADGE_PACK_PETS]: { boostPrice: 3 }, [GuildFeatures.GUILD_TAGS_BADGE_PACK_FLEX]: { boostPrice: 5 }, [GuildFeatures.GUILD_TAGS_BADGE_PACK_PLANT]: { boostPrice: 3 }, [GuildFeatures.GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES]: { boostPrice: 2 }, [GuildFeatures.GUILD_THEME]: obj5 };
+export const MULTIPLE_PURCHASEABLE_PREMIUM_FEATURES_BOOST_INFO = { [GuildFeatures.GAME_SERVERS]: obj6 };
+export const POWERUPS_INCLUDED_IN_LEVEL = obj7;
 export const PowerupActiveStatusType = { INACTIVE: "inactive", POWERUP_ACTIVATED: "powerup_activated", LEVEL_ACTIVATED: "level_activated", TIER_OVERRIDE_ACTIVATED: "tier_override_activated" };
-export const GuildPowerupNewPerkMarketingVersion = obj9;
+export const GuildPowerupNewPerkMarketingVersion = obj8;
 export const GUILD_TAG_BADGE_PACKS_WAVE_ONE_SKU_ID_SET = set4;
 export const GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET = set5;
-export const NEW_PERK_MARKETING_VERSION_TO_POWERUP_SKU_ID_SET = obj10;
+export const NEW_PERK_MARKETING_VERSION_TO_POWERUP_SKU_ID_SET = obj9;
 export const POWERUP_ID_QUERY_PARAM = "powerupId";
 export const BoostInfoType = { AVAILABLE: 0, [0]: "AVAILABLE", SPENT: 1, [1]: "SPENT", TOTAL: 2, [2]: "TOTAL" };
 export const BoostPurchaseIntent = { LEVEL: 0, [0]: "LEVEL", PERK: 1, [1]: "PERK" };

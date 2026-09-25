@@ -1,25 +1,25 @@
-// === Module 13626: QuestEmbed ===
+// === Module 12780: QuestEmbed ===
 
-// Module 13626 (QuestEmbed)
+// Module 12780 (QuestEmbed)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1609 */;
-import shared from "shared" /* 4680 */;
-import QuestTypes from "QuestTypes" /* 5752 */;
-import QuestDataUtils from "QuestDataUtils" /* 8022 */;
-import AnalyticsActions from "AnalyticsActions" /* 8041 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 8045 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 8047 */;
-import Constants2 from "Constants" /* 8065 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8293 */;
-import AssetUtils from "AssetUtils" /* 11634 */;
-import QuestCopyHooks from "QuestCopyHooks" /* 12116 */;
-import _modDef13627 from "module_13627" /* 13627 */;
+import shared from "shared" /* 4682 */;
+import QuestTypes from "QuestTypes" /* 5754 */;
+import QuestDataUtils from "QuestDataUtils" /* 7107 */;
+import AnalyticsActions from "AnalyticsActions" /* 7126 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 7130 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7132 */;
+import Constants2 from "Constants" /* 7150 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7382 */;
+import AssetUtils from "AssetUtils" /* 10676 */;
+import QuestCopyHooks from "QuestCopyHooks" /* 10737 */;
+import _modDef12781 from "module_12781" /* 12781 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
-import QuestStore from "QuestStore" /* 8026 */;
-import QuestConstants from "QuestConstants" /* 5749 */;
+import QuestStore from "QuestStore" /* 7111 */;
+import QuestConstants from "QuestConstants" /* 5751 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -43,7 +43,7 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
     obj2.headerColor = colors5.headerColor;
     obj2.titleText = intl9.string(util.t["6LxbQM"]);
     ({ titleColor: obj25.titleColor, bodyTextColor: obj25.subtitleColor, bodyTextColor: obj25.bodyTextColor } = colors5);
-    obj2.thumbnailUrl = Image.resolveAssetSource(_modDef13627).uri;
+    obj2.thumbnailUrl = Image.resolveAssetSource(_modDef12781).uri;
     obj2.embedCanBeTapped = true;
     obj2.canBeAccepted = true;
     obj2.type = InviteTypes.GUILD;
@@ -114,7 +114,7 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
         obj8.headerColor = colors6.headerColor;
         obj8.titleText = intl12.string(util.t["rxf+nx"]);
         ({ titleColor: obj34.titleColor, bodyTextColor: obj34.subtitleColor, bodyTextColor: obj34.bodyTextColor } = colors6);
-        obj8.thumbnailUrl = Image.resolveAssetSource(_modDef13627).uri;
+        obj8.thumbnailUrl = Image.resolveAssetSource(_modDef12781).uri;
         obj8.embedCanBeTapped = true;
         obj8.canBeAccepted = true;
         obj8.type = InviteTypes.GUILD;
@@ -142,7 +142,7 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
       obj10.headerColor = colors3.headerColor;
       obj10.titleText = intl7.string(util.t.Dd6Daw);
       ({ titleColor: obj18.titleColor, bodyTextColor: obj18.subtitleColor, bodyTextColor: obj18.bodyTextColor } = colors3);
-      obj10.thumbnailUrl = Image.resolveAssetSource(_modDef13627).uri;
+      obj10.thumbnailUrl = Image.resolveAssetSource(_modDef12781).uri;
       obj10.embedCanBeTapped = true;
       obj10.canBeAccepted = true;
       obj10.type = InviteTypes.GUILD;
@@ -254,7 +254,7 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
         obj20.headerColor = colors.headerColor;
         obj20.titleText = intl.string(util.t.Dd6Daw);
         ({ titleColor: obj4.titleColor, bodyTextColor: obj4.subtitleColor, bodyTextColor: obj4.bodyTextColor } = colors);
-        obj20.thumbnailUrl = Image.resolveAssetSource(_modDef13627).uri;
+        obj20.thumbnailUrl = Image.resolveAssetSource(_modDef12781).uri;
         obj20.embedCanBeTapped = true;
         obj20.canBeAccepted = true;
         obj20.type = InviteTypes.GUILD;

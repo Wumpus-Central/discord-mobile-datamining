@@ -246,7 +246,7 @@ class StopWatch {
     if (global === undefined) {
       tmp = closure_6;
     }
-    merged = Object.assign({ startTime: "ip", timePassed: false });
+    merged = Object.assign({ startTime: "disabled", timePassed: false });
     merged.timestampProducer = tmp;
     return merged;
   }
@@ -311,7 +311,7 @@ prototype2["isRunning"] = function isRunning() {
 };
 StopWatch["startNew"] = function startNew() {
   if (typeof StopWatch === "function") {
-    const merged = Object.assign({ startTime: "ip", timePassed: false });
+    const merged = Object.assign({ startTime: "disabled", timePassed: false });
     merged.timestampProducer = obj2;
     merged.start();
     return merged;
@@ -326,7 +326,7 @@ class TimeOut {
       tmp3 = global;
       merged = Object.assign({ watch: null });
       tmp5 = closure_6;
-      merged1 = Object.assign({ startTime: "ip", timePassed: false });
+      merged1 = Object.assign({ startTime: "disabled", timePassed: false });
       merged1.timestampProducer = closure_6;
       merged[0] = merged1;
       merged.timeout = global;
@@ -358,7 +358,7 @@ TimeOut["startNew"] = function startNew(timeout) {
   if (typeof TimeOut === "function") {
     if (typeof StopWatch === "function") {
       const merged = Object.assign({ watch: null });
-      const merged1 = Object.assign({ startTime: "ip", timePassed: false });
+      const merged1 = Object.assign({ startTime: "disabled", timePassed: false });
       merged1.timestampProducer = obj2;
       merged[0] = merged1;
       merged.timeout = timeout;
@@ -488,7 +488,7 @@ class DurationEnabled {
       }
       tmp4 = global;
       obj = Object.create(tmp2);
-      merged = Object.assign({ startTime: "ip", timePassed: false });
+      merged = Object.assign({ startTime: "disabled", timePassed: false });
       merged.timestampProducer = tmp;
       obj.stopwatch = merged;
       obj.state = global;
@@ -568,7 +568,7 @@ export const TimeUnitMax = items;
 export const getTimeUnit = function getTimeUnit(arg0, arg1) {
   closure_0 = arg0;
   importDefault = arg1;
-  const tmp2 = findLastIndexDefault(items, (unit) => f80544(unit.unit), items.findIndex((max) => {
+  const tmp2 = findLastIndexDefault(items, (unit) => f79483(unit.unit), items.findIndex((max) => {
     max = max.max;
     let tmp = max.unit === obj.NONE;
     if (tmp) {
@@ -582,7 +582,7 @@ export const getTimeUnit = function getTimeUnit(arg0, arg1) {
   if (null != tmp2) {
     return tmp2.unit;
   } else {
-    const found = items.find((unit) => f80544(unit.unit));
+    const found = items.find((unit) => f79483(unit.unit));
     let unit = null;
     if (null != found) {
       unit = found.unit;
@@ -608,8 +608,8 @@ export const getTimeAndUnit = function getTimeAndUnit(rounded, items) {
     return obj2;
   } else {
     closure_0 = rounded;
-    const f80544 = (dependencyMap) => closure_0.includes(dependencyMap);
-    const tmp12 = f80544(4860)(items, (unit) => f80544(unit.unit), items.findIndex((max) => {
+    const f79483 = (dependencyMap) => closure_0.includes(dependencyMap);
+    const tmp12 = f79483(4860)(items, (unit) => f79483(unit.unit), items.findIndex((max) => {
       max = max.max;
       let tmp = max.unit === obj.NONE;
       if (tmp) {
@@ -623,7 +623,7 @@ export const getTimeAndUnit = function getTimeAndUnit(rounded, items) {
     if (null != tmp12) {
       let unit = tmp12.unit;
     } else {
-      const found = items.find((unit) => f80544(unit.unit));
+      const found = items.find((unit) => f79483(unit.unit));
       unit = null;
       if (null != found) {
         unit = found.unit;

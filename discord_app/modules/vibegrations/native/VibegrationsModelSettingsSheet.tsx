@@ -1,14 +1,14 @@
-// === Module 17050: VibegrationsModelSettingsSheet ===
+// === Module 16240: VibegrationsModelSettingsSheet ===
 
-// Module 17050 (VibegrationsModelSettingsSheet)
+// Module 16240 (VibegrationsModelSettingsSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3714 from "module_3714" /* 3714 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7482 */;
-import ActionSheet from "ActionSheet" /* 7530 */;
-import VibegrationsEffortPickerDefault from "VibegrationsEffortPicker" /* 17030 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6565 */;
+import ActionSheet from "ActionSheet" /* 6613 */;
+import VibegrationsEffortPickerDefault from "VibegrationsEffortPicker" /* 16220 */;
 import noop from "module_19" /* 19 */;
-import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 13457 */;
+import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 12607 */;
 
 require = fn;
 class VibegrationsModelSettingsContent {
@@ -80,7 +80,7 @@ class VibegrationsModelSettingsContent {
   }
 }
 const View = fn(17).View;
-const sendModelSettings = fn(13457).sendModelSettings;
+const sendModelSettings = fn(12607).sendModelSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const size = fn(2);

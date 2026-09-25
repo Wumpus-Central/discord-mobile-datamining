@@ -1,9 +1,9 @@
-// === Module 15292: LaptopPhoneIcon ===
+// === Module 14458: LaptopPhoneIcon ===
 
-// Module 15292 (LaptopPhoneIcon)
+// Module 14458 (LaptopPhoneIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4525 */;
-import _mod15293 from "module_15293" /* 15293 */;
+import BaseIconImage from "BaseIconImage" /* 4527 */;
+import _mod14459 from "module_14459" /* 14459 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const LaptopPhoneIcon = function LaptopPhoneIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15293, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod14459, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -1,8 +1,8 @@
-// === Module 15153: IgnoredUserRow ===
+// === Module 14319: IgnoredUserRow ===
 
-// Module 15153 (IgnoredUserRow)
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8527 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 10087 */;
+// Module 14319 (IgnoredUserRow)
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7617 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9184 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -10,7 +10,7 @@ const require = fn;
 function IgnoredUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7495)().analyticsLocations;
+  analyticsLocations = analyticsLocations(6578)().analyticsLocations;
   let obj = { icon: jsx(userRecord(1177).Avatar, { source: userRecord.getAvatarSource(undefined), size: userRecord(1177).AvatarSizes.REFRESH_MEDIUM_32 }), label: null, subLabel: null, labelLineClamp: 1, subLabelLineClamp: 1, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null, onPress: null, trailing: null };
   let tmp4 = null != userRecord;
   if (tmp4) {
@@ -53,8 +53,8 @@ function IgnoredUserRow(userRecord) {
   obj4.onPress = function onPress() {
     RelationshipActionCreatorsDefault.unignoreUser(userRecord.id, "ignored-users-list-mobile");
   };
-  obj.trailing = jsx(userRecord(5273).Button, { size: "sm", variant: "secondary", text: null, onPress: null });
-  return jsx(userRecord(5910).TableRow, { icon: jsx(userRecord(1177).Avatar, { source: userRecord.getAvatarSource(undefined), size: userRecord(1177).AvatarSizes.REFRESH_MEDIUM_32 }), label: null, subLabel: null, labelLineClamp: 1, subLabelLineClamp: 1, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null, onPress: null, trailing: null });
+  obj.trailing = jsx(userRecord(5274).Button, { size: "sm", variant: "secondary", text: null, onPress: null });
+  return jsx(userRecord(5912).TableRow, { icon: jsx(userRecord(1177).Avatar, { source: userRecord.getAvatarSource(undefined), size: userRecord(1177).AvatarSizes.REFRESH_MEDIUM_32 }), label: null, subLabel: null, labelLineClamp: 1, subLabelLineClamp: 1, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null, onPress: null, trailing: null });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);

@@ -1,10 +1,10 @@
-// === Module 13040: ContactSyncLandingOnboardingRedesign ===
+// === Module 12171: ContactSyncLandingOnboardingRedesign ===
 
-// Module 13040 (ContactSyncLandingOnboardingRedesign)
+// Module 12171 (ContactSyncLandingOnboardingRedesign)
 import nativeDefault from "native" /* 576 */;
-import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 13034 */;
-import _modDef13041 from "module_13041" /* 13041 */;
-import ContactSyncErrorDefault from "ContactSyncError" /* 13042 */;
+import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 12165 */;
+import _modDef12172 from "module_12172" /* 12172 */;
+import ContactSyncErrorDefault from "ContactSyncError" /* 12173 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
 const createStyles = fn(4829);
 let obj2 = { content: null, headerImage: null, title: null, subtitle: null, buttonContainer: null, trailing: null };
-let obj3 = { flex: 1, justifyContent: "center", alignItems: "center", textAlign: "center", marginTop: -nativeDefault.space.PX_32 - fn(5987).NAV_BAR_HEIGHT };
+let obj3 = { flex: 1, justifyContent: "center", alignItems: "center", textAlign: "center", marginTop: -nativeDefault.space.PX_32 - fn(5989).NAV_BAR_HEIGHT };
 obj2.content = obj3;
 let size = { height: 135, width: 216, marginBottom: nativeDefault.space.PX_24 };
 obj2.headerImage = size;
@@ -91,7 +91,7 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
       }
     }
   }), items);
-  obj3.source = _modDef13041;
+  obj3.source = _modDef12172;
   const items1 = [closure_8(closure_6, obj3), , , , ];
   let obj4 = { style: tmp.title, variant: "heading-xl/bold", children: null };
   const intl = onNext(1115).intl;
@@ -107,7 +107,7 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
   obj7.text = intl3.string(onNext(1115).t.LhlgY9);
   obj7.onPress = callback;
   obj7.loading = loading;
-  obj6.children = closure_8(onNext(5273).Button, obj7);
+  obj6.children = closure_8(onNext(5274).Button, obj7);
   items1[3] = closure_8(closure_5, obj6);
   items1[4] = closure_8(ContactSyncErrorDefault, { error });
   obj2.children = items1;

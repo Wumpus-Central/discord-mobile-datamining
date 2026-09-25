@@ -1,12 +1,12 @@
-// === Module 13813: ReferralProgramShareConfirmationActionSheet ===
+// === Module 12968: ReferralProgramShareConfirmationActionSheet ===
 
-// Module 13813 (ReferralProgramShareConfirmationActionSheet)
+// Module 12968 (ReferralProgramShareConfirmationActionSheet)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2110 */;
-import UserUtilsDefault from "UserUtils" /* 4673 */;
+import UserUtilsDefault from "UserUtils" /* 4675 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4842 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -17,7 +17,7 @@ function SharedUser(user) {
   user = user.user;
   const tmp = closure_8();
   const name = UserUtilsDefault.getName(user);
-  const tmp6 = user.trialCreationResult === user(7783).CreateReferralStatus.FAIL;
+  const tmp6 = user.trialCreationResult === user(6868).CreateReferralStatus.FAIL;
   const obj2 = { style: tmp.recipientRow, children: null };
   const items = [tmp.avatarContainer, ];
   let erroredAvatar = tmp6;
@@ -25,7 +25,7 @@ function SharedUser(user) {
     erroredAvatar = tmp.erroredAvatar;
   }
   items[1] = erroredAvatar;
-  const items1 = [closure_5(user(1177).Avatar, { style: items, size: user(1177).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "Array" }), , ];
+  const items1 = [closure_5(user(1177).Avatar, { style: items, size: user(1177).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "flex" }), , ];
   if (tmp6) {
     const obj4 = { children: null };
     const obj5 = { variant: "text-md/medium", color: "text-muted", style: tmp.recipientDisplayName, children: name };
@@ -45,13 +45,13 @@ function SharedUser(user) {
   const obj9 = { variant: "secondary", size: "sm", text: null, icon: null, onPress: null };
   const intl2 = tmp5(1115).intl;
   obj9.text = intl2.string(user(1115).t["g33r/P"]);
-  const obj3 = { style: items, size: user(1177).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "Array" };
-  obj9.icon = closure_5(user(5377).ChatIcon, { size: "xs", color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT });
+  const obj3 = { style: items, size: user(1177).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "flex" };
+  obj9.icon = closure_5(user(5378).ChatIcon, { size: "xs", color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT });
   obj9.onPress = function onPress() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     ChannelActionCreatorsDefault.openPrivateChannel({ recipientIds: user.id });
   };
-  items1[2] = closure_5(user(5273).Button, obj9);
+  items1[2] = closure_5(user(5274).Button, obj9);
   obj2.children = items1;
   return closure_7(View, obj2);
 }
@@ -89,17 +89,17 @@ export default function ReferralProgramShareConfirmationActionSheet(trialCreatio
   const obj = { helpdeskArticle: null };
   arr = Array.from(trialCreationResult.trialCreationResult.values());
   obj.helpdeskArticle = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.REFERRAL_PROGRAM);
-  const obj3 = { startExpanded: true, contentStyles: tmp.content, header: closure_5(tmp5(7482).BottomSheetTitleHeader, { title: null }), children: null };
+  const obj3 = { startExpanded: true, contentStyles: tmp.content, header: closure_5(tmp5(6565).BottomSheetTitleHeader, { title: null }), children: null };
   const obj4 = { children: null };
   const formatResult = intl3.format(tmp5(1115).t.AwGSWl, obj);
-  const items = [closure_5(View, { style: tmp.headerAsset, children: closure_5(tmp5(5997).FistBumpSpotIllustration, {}) }), closure_5(tmp5(4825).Text, { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.header, children: stringResult }), closure_5(tmp5(4825).Text, { variant: "text-md/medium", color: "text-default", style: tmp.subheader, children: formatResult }), ];
+  const items = [closure_5(View, { style: tmp.headerAsset, children: closure_5(tmp5(12969).FistBumpSpotIllustration, {}) }), closure_5(tmp5(4825).Text, { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.header, children: stringResult }), closure_5(tmp5(4825).Text, { variant: "text-md/medium", color: "text-default", style: tmp.subheader, children: formatResult }), ];
   const obj8 = { style: tmp.recipientContainer, children: null };
-  const obj5 = { style: tmp.headerAsset, children: closure_5(tmp5(5997).FistBumpSpotIllustration, {}) };
+  const obj5 = { style: tmp.headerAsset, children: closure_5(tmp5(12969).FistBumpSpotIllustration, {}) };
   const obj6 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.header, children: stringResult };
   const obj7 = { variant: "text-md/medium", color: "text-default", style: tmp.subheader, children: formatResult };
   obj8.children = Array.from(trialCreationResult.trialCreationResult.trialCreationResult.selectedUsers).map((user) => hasOwnProperty(SharedUser, { user, trialCreationResult: trialCreationResult.get(user.id) }, user.id));
   items[3] = closure_5(View, obj8);
   obj4.children = items;
-  obj3.children = closure_7(tmp5(5271).Stack, obj4);
-  return closure_5(tmp5(7483).BottomSheet, obj3);
+  obj3.children = closure_7(tmp5(5272).Stack, obj4);
+  return closure_5(tmp5(6566).BottomSheet, obj3);
 };

@@ -1,8 +1,8 @@
-// === Module 7373: NavScrim ===
+// === Module 6456: NavScrim ===
 
-// Module 7373 (NavScrim)
+// Module 6456 (NavScrim)
 import nativeDefault from "native" /* 576 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7314 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6397 */;
 import noop from "module_19" /* 19 */;
 
 get_ActivityIndicator = fn(17);

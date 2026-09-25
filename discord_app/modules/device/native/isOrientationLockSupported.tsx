@@ -1,6 +1,6 @@
-// === Module 9728: isOrientationLockSupported ===
+// === Module 8826: isOrientationLockSupported ===
 
-// Module 9728 (isOrientationLockSupported)
+// Module 8826 (isOrientationLockSupported)
 import MetaQuestUtils from "MetaQuestUtils" /* 1609 */;
 import DeviceUtils from "DeviceUtils" /* 4808 */;
 import size from "module_2" /* 2 */;

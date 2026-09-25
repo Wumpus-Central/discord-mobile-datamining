@@ -1,15 +1,15 @@
-// === Module 16422: MainTabsNavigatorPanel ===
+// === Module 15602: MainTabsNavigatorPanel ===
 
-// Module 16422 (MainTabsNavigatorPanel)
+// Module 15602 (MainTabsNavigatorPanel)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 576 */;
-import RootNavigationRef from "RootNavigationRef" /* 4687 */;
-import ChatInputUtils from "ChatInputUtils" /* 4695 */;
+import RootNavigationRef from "RootNavigationRef" /* 4689 */;
+import ChatInputUtils from "ChatInputUtils" /* 4697 */;
 import transitionToChannel from "transitionToChannel" /* 4840 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4842 */;
-import PanelsNavigationUtils from "PanelsNavigationUtils" /* 16423 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 16424 */;
-import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 16428 */;
+import PanelsNavigationUtils from "PanelsNavigationUtils" /* 15603 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 15604 */;
+import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 15608 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -49,11 +49,11 @@ export default noop.memo(function MainTabsNavigatorPanel() {
       let obj = require;
       let result = dependencyMap;
       if (isChatLockedOpen) {
-        obj = obj(16423);
+        obj = obj(15603);
         result = obj.convertPortraitToLandscapeScreens();
       } else {
-        obj(4695).dismissKeyboard();
-        const objResult = obj(4695);
+        obj(4697).dismissKeyboard();
+        const objResult = obj(4697);
         const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
       }
       closure_4.current = true;

@@ -1,6 +1,6 @@
-// === Module 10532: BugReporterModal ===
+// === Module 9634: BugReporterModal ===
 
-// Module 10532 (BugReporterModal)
+// Module 9634 (BugReporterModal)
 import nativeDefault from "native" /* 576 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import util from "util" /* 1115 */;
@@ -8,16 +8,16 @@ import AvatarUtils from "AvatarUtils" /* 1397 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5032 */;
-import Upload from "Upload" /* 5432 */;
-import FastImageDefault from "FastImage" /* 5892 */;
-import NavigatorHeader from "NavigatorHeader" /* 5929 */;
-import TableRadioRow from "TableRadioRow" /* 5993 */;
-import HeaderActionButton from "HeaderActionButton" /* 7707 */;
+import Upload from "Upload" /* 5433 */;
+import FastImageDefault from "FastImage" /* 5894 */;
+import NavigatorHeader from "NavigatorHeader" /* 5931 */;
+import TableRadioRow from "TableRadioRow" /* 5995 */;
+import HeaderActionButton from "HeaderActionButton" /* 6790 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
-import BugReportStore from "BugReportStore" /* 10531 */;
+import BugReportStore from "BugReportStore" /* 9633 */;
 import n from "module_672" /* 672 */;
 
 const UploadDefault = Upload;
@@ -85,7 +85,7 @@ class BugCreateScreen {
               closure_128_3 = undefined;
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: tmp5(5454).launchImageLibraryAsync({ mediaType: "any", includeBase64: false, selectionLimit: 1 }), done: false };
+              const obj5 = { value: tmp5(5455).launchImageLibraryAsync({ mediaType: "any", includeBase64: false, selectionLimit: 1 }), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -104,10 +104,10 @@ class BugCreateScreen {
               const merged = Object.assign(closure_128_1);
               obj6.uri = closure_128_1.uri;
               obj6.originalUri = closure_128_1.uri;
-              obj6.platform = tmp2(5432).UploadPlatform.REACT_NATIVE;
+              obj6.platform = tmp2(5433).UploadPlatform.REACT_NATIVE;
               obj6.filename = closure_128_1.fileName;
               closure_128_2 = obj6;
-              const tmp34 = new tmp5(5432)(closure_128_2);
+              const tmp34 = new tmp5(5433)(closure_128_2);
               closure_128_3 = tmp34;
               closure_129_23.current = closure_129_7.length;
               closure_129_8((arg0) => {
@@ -320,18 +320,18 @@ class BugCreateScreen {
                             if (closure_131_5 >= 20) {
                               if (closure_131_4) {
                                 closure_131_3.succeed();
-                                const obj5 = { key: "BUG_REPORT_BUG_SUBMITTED", icon: closure_2_1(9704), content: null, toastDurationMs: null };
+                                const obj5 = { key: "BUG_REPORT_BUG_SUBMITTED", icon: closure_2_1(8802), content: null, toastDurationMs: null };
                                 const intl2 = closure_2_0(1115).intl;
                                 obj5.content = intl2.string(closure_2_0(1115).t.jB8yOL);
                                 obj5.toastDurationMs = toastDurationMs;
-                                closure_2_1(4523).open(obj5);
-                                const obj6 = closure_2_1(4523);
+                                closure_2_1(4525).open(obj5);
+                                const obj6 = closure_2_1(4525);
                               } else {
-                                const obj7 = { key: "BUG_REPORT_FAILED_TO_SUBMIT", icon: closure_2_1(7325), content: null };
+                                const obj7 = { key: "BUG_REPORT_FAILED_TO_SUBMIT", icon: closure_2_1(6408), content: null };
                                 const intl = closure_2_0(1115).intl;
                                 obj7.content = intl.string(closure_2_0(1115).t["4t1o0u"]);
-                                closure_2_1(4523).open(obj7);
-                                const obj4 = closure_2_1(4523);
+                                closure_2_1(4525).open(obj7);
+                                const obj4 = closure_2_1(4525);
                               }
                               c6 = 3;
                             }
@@ -376,7 +376,7 @@ class BugCreateScreen {
                         }
                         c5 = 1;
                         c6 = 1;
-                        const obj11 = { value: closure_2_0(10534).submitReport(closure_131_0, closure_131_1, closure_131_2), done: false };
+                        const obj11 = { value: closure_2_0(9636).submitReport(closure_131_0, closure_131_1, closure_131_2), done: false };
                         return obj11;
                       } catch (tmp50) {
                         c6 = tmp;
@@ -395,23 +395,23 @@ class BugCreateScreen {
                 };
                 if (ref.current) {
                   if (first5) {
-                    let obj5 = { key: "BUG_REPORT_SUBMITTING_BUG", icon: screenshot(7325), content: null, toastDurationMs: null };
+                    let obj5 = { key: "BUG_REPORT_SUBMITTING_BUG", icon: screenshot(6408), content: null, toastDurationMs: null };
                     let intl2 = handleSubmit(1115).intl;
                     obj5.content = intl2.string(handleSubmit(1115).t.Uuqbcm);
                     obj5.toastDurationMs = toastDurationMs;
-                    screenshot(4523).open(obj5);
+                    screenshot(4525).open(obj5);
                     closure_1_16(true);
                     first8();
-                    let obj9 = screenshot(4523);
+                    let obj9 = screenshot(4525);
                   }
                   priority = 3;
                 } else {
                   callback(true);
                   if (null == priority) {
-                    let obj7 = { key: "BUG_REPORT_FAILED_TO_SUBMIT", icon: screenshot(7325), content: null };
+                    let obj7 = { key: "BUG_REPORT_FAILED_TO_SUBMIT", icon: screenshot(6408), content: null };
                     let intl = handleSubmit(1115).intl;
                     obj7.content = intl.string(handleSubmit(1115).t["4t1o0u"]);
-                    screenshot(4523).open(obj7);
+                    screenshot(4525).open(obj7);
                     callback(false);
                     priority = 3;
                     const obj8 = { value: undefined, done: true };
@@ -419,7 +419,7 @@ class BugCreateScreen {
                   } else {
                     description = 1;
                     priority = 1;
-                    let obj10 = { value: handleSubmit(10533).getAttachments(first3), done: false };
+                    let obj10 = { value: handleSubmit(9635).getAttachments(first3), done: false };
                     return obj10;
                   }
                 }
@@ -769,7 +769,7 @@ class BugCreateScreen {
       obj34 = { disabled: null, onPress: null, label: null, arrow: true };
       obj34.disabled = null == first7;
       obj34.onPress = function onPress() {
-        return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10559, dependencyMap.paths), "BugReporterFeatureActionSheet", { features: null != first7 ? first7.features : [], feature: first8, setFeature });
+        return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9661, dependencyMap.paths), "BugReporterFeatureActionSheet", { features: null != first7 ? first7.features : [], feature: first8, setFeature });
       };
       if (null != first8) {
         name = first8.name;
@@ -826,6 +826,6 @@ export default function BugReportModal(screenshotUri) {
     obj2.BUG_REPORT_CREATE = obj3;
     return obj2;
   }, items);
-  return closure_10(screenshotUri(7333).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
+  return closure_10(screenshotUri(6416).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
 };
 export { BugCreateScreen };

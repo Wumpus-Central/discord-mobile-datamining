@@ -1,6 +1,6 @@
-// === Module 12913: MarketingCardsScroller ===
+// === Module 12042: MarketingCardsScroller ===
 
-// Module 12913 (MarketingCardsScroller)
+// Module 12042 (MarketingCardsScroller)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -17,7 +17,7 @@ const next = "next";
 const createStyles = fn(4829);
 let obj = { wrapper: { position: "relative" }, navigationButton: null, navigationButtonPrevious: null, navigationButtonNext: null };
 let size = { alignItems: "center", backgroundColor: null, borderRadius: null, height: 44, justifyContent: "center", position: "absolute", top: "50%", transform: null, width: 44, zIndex: 1 };
-const ColorUtils = fn(4678);
+const ColorUtils = fn(4680);
 size.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.56);
 size.borderRadius = nativeDefault.radii.round;
 let items = [{ translateY: -22 }];

@@ -1,10 +1,10 @@
-// === Module 13669: VoicePanelVideoGuardErrorAlert ===
+// === Module 12823: VoicePanelVideoGuardErrorAlert ===
 
-// Module 13669 (VoicePanelVideoGuardErrorAlert)
+// Module 12823 (VoicePanelVideoGuardErrorAlert)
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import AlertModal from "AlertModal" /* 5201 */;
-import VideoGuardExperiment from "VideoGuardExperiment" /* 13667 */;
+import AlertModal from "AlertModal" /* 5202 */;
+import VideoGuardExperiment from "VideoGuardExperiment" /* 12821 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

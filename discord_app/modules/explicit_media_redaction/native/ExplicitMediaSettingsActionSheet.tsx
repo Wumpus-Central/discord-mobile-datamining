@@ -1,6 +1,6 @@
-// === Module 15173: ExplicitMediaSettingsActionSheet ===
+// === Module 14339: ExplicitMediaSettingsActionSheet ===
 
-// Module 15173 (ExplicitMediaSettingsActionSheet)
+// Module 14339 (ExplicitMediaSettingsActionSheet)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
 import noop from "module_19" /* 19 */;
@@ -28,7 +28,7 @@ export default function ExplicitMediaSettingsActionSheet(options) {
       ActionSheetActionCreatorsDefault.hideActionSheet();
     }
   }, items);
-  const items1 = [closure_5(options(7482).BottomSheetTitleHeader, { title, subtitle }), ];
+  const items1 = [closure_5(options(6565).BottomSheetTitleHeader, { title, subtitle }), ];
   const obj = { style: closure_7().content, children: null };
   if (SHOW == null) {
     SHOW = tmp4(1186).ExplicitContentRedaction.SHOW;
@@ -36,8 +36,8 @@ export default function ExplicitMediaSettingsActionSheet(options) {
   let obj2 = { startExpanded: true, children: null };
   const tmp = closure_7();
   tmp4 = options;
-  obj.children = closure_5(options(5990).TableRadioGroup, { defaultValue: SHOW, onChange: callback, hasIcons: false, children: options.map((label) => closure_1_5(options(dependencyMap[10]).TableRadioRow, { label: label.label, value: label.value }, label.value)) });
+  obj.children = closure_5(options(5992).TableRadioGroup, { defaultValue: SHOW, onChange: callback, hasIcons: false, children: options.map((label) => closure_1_5(options(dependencyMap[10]).TableRadioRow, { label: label.label, value: label.value }, label.value)) });
   items1[1] = closure_5(View, obj);
   obj2.children = items1;
-  return closure_6(options(7483).BottomSheet, obj2);
+  return closure_6(options(6566).BottomSheet, obj2);
 };

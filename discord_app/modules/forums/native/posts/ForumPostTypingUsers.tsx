@@ -1,9 +1,9 @@
-// === Module 12361: ForumPostTypingUsers ===
+// === Module 11487: ForumPostTypingUsers ===
 
-// Module 12361 (ForumPostTypingUsers)
+// Module 11487 (ForumPostTypingUsers)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4561 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4563 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

@@ -1,10 +1,10 @@
-// === Module 16741: FavoritesGuildCoachmarkGraphic ===
+// === Module 15925: FavoritesGuildCoachmarkGraphic ===
 
-// Module 16741 (FavoritesGuildCoachmarkGraphic)
+// Module 15925 (FavoritesGuildCoachmarkGraphic)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import native2 from "native" /* 5997 */;
+import FavoritesSpotIllustration from "FavoritesSpotIllustration" /* 9683 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4829 */;
 import size from "module_2" /* 2 */;
@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/favorites/native/onboarding/F
 export default function FavoritesGuildCoachmarkGraphic() {
   const tmp = closure_5();
   const obj = { style: tmp.container, children: null };
-  const items = [React3(native2.FavoritesSpotIllustration, { width: 160, height: 90 }), React3(native.BetaTag, { style: tmp.betaTag })];
+  const items = [React3(FavoritesSpotIllustration.FavoritesSpotIllustration, { width: 160, height: 90 }), React3(native.BetaTag, { style: tmp.betaTag })];
   obj.children = items;
   return React4(View, obj);
 };

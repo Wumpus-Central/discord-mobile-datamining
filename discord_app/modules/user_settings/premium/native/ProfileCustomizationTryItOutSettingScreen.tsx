@@ -1,12 +1,12 @@
-// === Module 16210: ProfileCustomizationTryItOutSettingScreen ===
+// === Module 15389: ProfileCustomizationTryItOutSettingScreen ===
 
-// Module 16210 (ProfileCustomizationTryItOutSettingScreen)
+// Module 15389 (ProfileCustomizationTryItOutSettingScreen)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1389 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7884 */;
-import UserProfileActionCreators from "UserProfileActionCreators" /* 8515 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8535 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 6969 */;
+import UserProfileActionCreators from "UserProfileActionCreators" /* 7605 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7625 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 

@@ -1,14 +1,14 @@
-// === Module 10159: StartEventPlatformUtils ===
+// === Module 9256: StartEventPlatformUtils ===
 
-// Module 10159 (StartEventPlatformUtils)
+// Module 9256 (StartEventPlatformUtils)
 import _modDef38 from "module_38" /* 38 */;
 import router_utils from "router_utils" /* 1101 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5716 */;
-import StageChannelModalActionCreatorsAll from "StageChannelModalActionCreators" /* 8743 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5718 */;
+import StageChannelModalActionCreatorsAll from "StageChannelModalActionCreators" /* 7833 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4852 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4650 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4652 */;
 
 require = fn;
 let closure_10 = async function _navigateToEvent(arg0) {

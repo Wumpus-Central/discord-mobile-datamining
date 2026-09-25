@@ -1,11 +1,11 @@
-// === Module 9224: CollectiblesShopCardVariants ===
+// === Module 8322: CollectiblesShopCardVariants ===
 
-// Module 9224 (CollectiblesShopCardVariants)
+// Module 8322 (CollectiblesShopCardVariants)
 import nativeDefault from "native" /* 576 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7466 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 9201 */;
-import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 9225 */;
-import PlusSmallIcon from "PlusSmallIcon" /* 9226 */;
+import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 6549 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 8295 */;
+import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 8323 */;
+import PlusSmallIcon from "PlusSmallIcon" /* 8324 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -74,8 +74,8 @@ export default noop.memo(function CardProductVariants(product) {
   product = product.product;
   let defaultVariantIndex;
   const tmp = closure_6();
-  defaultVariantIndex = defaultVariantIndex(9125).useDefaultVariantIndex(product);
-  const obj = defaultVariantIndex(9125);
+  defaultVariantIndex = defaultVariantIndex(8219).useDefaultVariantIndex(product);
+  const obj = defaultVariantIndex(8219);
   if (obj2.getIsVariantProduct(product)) {
     let num3 = 3;
     if (product.variants.length <= 4) {
@@ -101,5 +101,5 @@ export default noop.memo(function CardProductVariants(product) {
   } else {
     return null;
   }
-  obj2 = defaultVariantIndex(7883);
+  obj2 = defaultVariantIndex(6968);
 });

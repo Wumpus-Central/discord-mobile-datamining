@@ -1,24 +1,24 @@
-// === Module 12034: ForwardPreview ===
+// === Module 11177: ForwardPreview ===
 
-// Module 12034 (ForwardPreview)
+// Module 11177 (ForwardPreview)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1477 */;
 import useThemeDefault from "useTheme" /* 4763 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import CheckpointMessageComponentUtils from "CheckpointMessageComponentUtils" /* 5061 */;
-import ImageIcon from "ImageIcon" /* 5393 */;
-import FastImageDefault from "FastImage" /* 5892 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8485 */;
-import ChatItemDefault from "ChatItem" /* 9010 */;
-import CirclePlayIcon from "CirclePlayIcon" /* 9074 */;
-import ClipView from "ClipView" /* 9174 */;
-import AttachmentIcon2 from "AttachmentIcon" /* 10458 */;
-import ForwardPreviewUtils from "ForwardPreviewUtils" /* 12035 */;
-import MosaicMediaType from "MosaicMediaType" /* 12036 */;
-import ImagesIcon2 from "ImagesIcon" /* 12038 */;
-import CheckpointForwardPreviewDefault from "CheckpointForwardPreview" /* 12040 */;
+import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 5074 */;
+import ImageIcon from "ImageIcon" /* 5394 */;
+import FastImageDefault from "FastImage" /* 5894 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 7575 */;
+import ChatItemDefault from "ChatItem" /* 8104 */;
+import CirclePlayIcon from "CirclePlayIcon" /* 8168 */;
+import ClipView from "ClipView" /* 8268 */;
+import AttachmentIcon2 from "AttachmentIcon" /* 9560 */;
+import ForwardPreviewUtils from "ForwardPreviewUtils" /* 11178 */;
+import MosaicMediaType from "MosaicMediaType" /* 11179 */;
+import ImagesIcon2 from "ImagesIcon" /* 11181 */;
+import CheckpointForwardPreviewDefault from "CheckpointForwardPreview" /* 11183 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
@@ -87,7 +87,7 @@ export const ForwardPreview = function ForwardPreview(message) {
   const tmp = closure_8();
   const forwardPreviewContent = ForwardPreviewUtils.useForwardPreviewContent({ message, channel, forwardOptions });
   ({ attachments, embeds, hasContent, contentMessage } = forwardPreviewContent);
-  const checkpointDataFromMessage = CheckpointMessageComponentUtils.getCheckpointDataFromMessage(contentMessage);
+  const checkpointDataFromMessage = checkpoint_CheckpointMessageComponentUtils.getCheckpointDataFromMessage(contentMessage);
   if (attachments.length > 0) {
     const countByResult = _mod12.countBy(attachments, (proxy_url) => MosaicMediaType.getMosaicMediaTypeForAttachment(proxy_url, true));
     let num = countByResult.IMAGE;
@@ -220,9 +220,9 @@ export const ForwardPreview = function ForwardPreview(message) {
   const obj22 = { style: tmp.contentWrapper, children: null };
   let tmp36Result = null != checkpointDataFromMessage;
   if (tmp36Result) {
-    const obj23 = { variant: "text-md/medium", children: CheckpointMessageComponentUtils.getCheckpointLabel(checkpointDataFromMessage) };
+    const obj23 = { variant: "text-md/medium", children: checkpoint_CheckpointMessageComponentUtils.getCheckpointLabel(checkpointDataFromMessage) };
     tmp36Result = hasOwnProperty(Text_Text.Text, obj23);
-    const tmp2Result2 = CheckpointMessageComponentUtils;
+    const tmp2Result2 = checkpoint_CheckpointMessageComponentUtils;
   }
   const items6 = [tmp36Result, , ];
   let tmp36Result5 = hasContent;

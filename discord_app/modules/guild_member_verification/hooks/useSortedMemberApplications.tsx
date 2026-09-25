@@ -1,9 +1,9 @@
-// === Module 17020: useSortedMemberApplications ===
+// === Module 16210: useSortedMemberApplications ===
 
-// Module 17020 (useSortedMemberApplications)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4653 */;
+// Module 16210 (useSortedMemberApplications)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4655 */;
 import noop from "module_19" /* 19 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5847 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5849 */;
 
 require = fn;
 const size = fn(2);

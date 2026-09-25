@@ -1,24 +1,24 @@
-// === Module 11362: SocialLayerStorefrontPoductPurchaseSuccessModal ===
+// === Module 10460: SocialLayerStorefrontPoductPurchaseSuccessModal ===
 
-// Module 11362 (SocialLayerStorefrontPoductPurchaseSuccessModal)
+// Module 10460 (SocialLayerStorefrontPoductPurchaseSuccessModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import _modDef3584 from "module_3584" /* 3584 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
-import UserUtilsDefault from "UserUtils" /* 4673 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
+import UserUtilsDefault from "UserUtils" /* 4675 */;
 import HapticUtils from "HapticUtils" /* 4797 */;
 import timing from "timing" /* 4830 */;
-import spring from "spring" /* 5272 */;
-import XSmallIcon from "XSmallIcon" /* 5985 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7515 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7559 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 11147 */;
+import spring from "spring" /* 5273 */;
+import XSmallIcon from "XSmallIcon" /* 5987 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6598 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6642 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10250 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 718 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4821 */;
-import SKUStore from "SKUStore" /* 5815 */;
+import SKUStore from "SKUStore" /* 5817 */;
 
 const require = globalThis.__r;
 
@@ -307,7 +307,7 @@ function PurchaseSuccessModalBase(sku) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, ScrollView: closure_7, View: closure_8 } = get_ActivityIndicator);
-const numDays = fn(7562).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
+const numDays = fn(6645).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, HorizontalGradient: map1, VerticalGradient: closure_14 } = Constants);
 const jsxProd = fn(21);

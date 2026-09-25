@@ -1,13 +1,13 @@
-// === Module 18170: InRolePromptNotice ===
+// === Module 17398: InRolePromptNotice ===
 
-// Module 18170 (InRolePromptNotice)
+// Module 17398 (InRolePromptNotice)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import FlagUtils from "FlagUtils" /* 1385 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import _modDef9796 from "module_9796" /* 9796 */;
-import GuildSettingsUtils from "GuildSettingsUtils" /* 18171 */;
+import _modDef8894 from "module_8894" /* 8894 */;
+import GuildSettingsUtils from "GuildSettingsUtils" /* 17399 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,7 +35,7 @@ export default function InRolePromptNotice(role) {
     const tmpResult = GuildSettingsUtils;
     let Icon = native.Icon;
     if (isRolePowerfulResult) {
-      const obj3 = { style: string.icon, source: _modDef9796, color: nativeDefault.unsafe_rawColors.YELLOW_300 };
+      const obj3 = { style: string.icon, source: _modDef8894, color: nativeDefault.unsafe_rawColors.YELLOW_300 };
       const items = [hasOwnProperty(Icon, obj3), ];
       const obj4 = { style: string.promptText, variant: "text-sm/medium", children: null };
       const intl2 = util.intl;
@@ -47,7 +47,7 @@ export default function InRolePromptNotice(role) {
       obj2.children = items;
       let tmp4Result = timestampProducer(View, obj2);
     } else {
-      const obj5 = { style: string.icon, source: _modDef9796 };
+      const obj5 = { style: string.icon, source: _modDef8894 };
       const items1 = [hasOwnProperty(Icon, obj5), ];
       const obj6 = { style: string.promptText, variant: "text-sm/medium", children: null };
       const intl = util.intl;

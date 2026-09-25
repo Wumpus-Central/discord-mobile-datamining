@@ -1,6 +1,6 @@
-// === Module 5996: ChangeEmailWarning ===
+// === Module 5998: ChangeEmailWarning ===
 
-// Module 5996 (ChangeEmailWarning)
+// Module 5998 (ChangeEmailWarning)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
@@ -10,7 +10,7 @@ import UserStore from "UserStore" /* 1372 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const hcArticle = fn(5989).COMMON_SCAMS_EDUCATION_HC_ARTICLE;
+const hcArticle = fn(5991).COMMON_SCAMS_EDUCATION_HC_ARTICLE;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -38,7 +38,7 @@ export default function ChangeEmailWarning(changeEmailReason) {
   if (null != stateFromStores) {
     const obj3 = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
     const obj4 = { style: tmp.container, children: null };
-    const items2 = [closure_9(tmp2(5997).TrafficConeSpotIllustration, {}), , , ];
+    const items2 = [closure_9(tmp2(5999).TrafficConeSpotIllustration, {}), , , ];
     const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp2(1115).intl;
     obj5.children = intl.string(tmp2(1115).t.hhR7gX);
@@ -56,14 +56,14 @@ export default function ChangeEmailWarning(changeEmailReason) {
     const intl4 = tmp2(1115).intl;
     obj9.text = intl4.string(tmp2(1115).t.rwTBFs);
     obj9.onPress = tmp6;
-    const items4 = [closure_9(tmp2(5273).Button, obj9), ];
+    const items4 = [closure_9(tmp2(5274).Button, obj9), ];
     const obj10 = { size: "md", variant: "primary", text: null, onPress: null, shrink: true };
     const intl5 = tmp2(1115).intl;
     obj10.text = intl5.string(tmp2(1115).t["ETE/oC"]);
     obj10.onPress = function onPress() {
       return navigation(dependencyMap[16]).close();
     };
-    items4[1] = closure_9(tmp2(5273).Button, obj10);
+    items4[1] = closure_9(tmp2(5274).Button, obj10);
     obj8.children = items4;
     items2[3] = closure_10(closure_4, obj8);
     obj4.children = items2;

@@ -1,10 +1,10 @@
-// === Module 11154: NativeCheckoutStoreProvider ===
+// === Module 10257: NativeCheckoutStoreProvider ===
 
-// Module 11154 (NativeCheckoutStoreProvider)
+// Module 10257 (NativeCheckoutStoreProvider)
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import v1 from "v1" /* 1255 */;
-import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 11158 */;
+import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10258 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -15,7 +15,7 @@ require = fn;
 function NativeCheckoutStoreProvider(children) {
   ({ checkoutInitParameters: require, order } = children);
   ({ paymentGateway: dependencyMap, orderRequired: asyncGeneratorStep, onOrderRetryCancellation: _slicedToArray, initialSubscriptionFacet: noop, checkoutAnalyticsFields: View, analyticsInitialStep: closure_7 } = children);
-  const contextMetadata = order(5903)(() => {
+  const contextMetadata = order(5905)(() => {
     let id;
     if (order != null) {
       id = order.id;
@@ -28,7 +28,7 @@ function NativeCheckoutStoreProvider(children) {
     const obj3 = { message: "Checkout session ID: " + id };
     return { loadId: id, startTime: Date.now() };
   });
-  redux = order(5903)(() => {
+  redux = order(5905)(() => {
     const obj = {};
     const merged = Object.assign(View);
     obj.load_id = contextMetadata.loadId;
@@ -36,7 +36,7 @@ function NativeCheckoutStoreProvider(children) {
     return obj;
   });
   value = _slicedToArray(noop.useState(() => React5({ order, checkoutInitParameters, contextMetadata, analyticsFields, paymentGateway: dependencyMap, orderRequired, onOrderRetryCancellation, initialSubscriptionFacet })), 1)[0];
-  order(5290)(() => {
+  order(5291)(() => {
     if (null != View) {
       const result = PaymentFlowStartedTriggerPoint.trackPaymentFlowStartedAnalyticsAndCTP(closure_9);
       const obj3 = {};
@@ -80,21 +80,22 @@ function NativeCheckoutStoreProvider(children) {
       const obj2 = { checkoutSucceeded: tmp2, order: null };
       ({ id: obj3.id, status: obj3.status } = orderRecord);
       obj2.order = { id: null, status: null };
-      checkoutInitParameters(11162).discardDraftOrder(obj2);
-      const obj = checkoutInitParameters(11162);
+      checkoutInitParameters(10260).discardDraftOrder(obj2);
+      const obj = checkoutInitParameters(10260);
       const obj5 = { id: null, status: null };
     }
   }, items1);
   return <contextMetadata value={value}><redux.Provider value={value}>{children.children}</redux.Provider></contextMetadata>;
 }
 const View = fn(17).View;
-const NativeCheckoutStore = fn(7754);
+const NativeCheckoutStore = fn(6839);
 ({ createNativeStore: closure_7, NativeCheckoutStoreContext: closure_8, NativeCheckoutStoreContextOrNull: closure_9 } = NativeCheckoutStore);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const ItemPurchaseType = fn(4811).ItemPurchaseType;
-let jsx = fn(21).jsx;
+const PaymentGateways = fn(1085).PaymentGateways;
+const jsx = fn(21).jsx;
 const createStyles = fn(4829);
-let closure_13 = createStyles.createStyles({ loadingSpinnerContainer: { display: "flex", alignItems: "center", justifyContent: "center", height: "100%" } });
+let closure_14 = createStyles.createStyles({ loadingSpinnerContainer: { display: "flex", alignItems: "center", justifyContent: "center", height: "100%" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkout/native/stores/NativeCheckoutStoreProvider.tsx");
 
@@ -114,24 +115,25 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
     flag = false;
   }
   c9 = undefined;
-  jsx = undefined;
+  let sku_id;
   let mobileStoreFront;
   let callback;
   let callback1;
   ({ checkoutAnalyticsFields, analyticsInitialStep } = orderRequired);
-  let tmp = mobileStoreFront();
+  const tmp = callback();
   [tmp3, c9] = activeSubscription(defaultPlans.useState(null), 2);
   const tmp4 = activeSubscription(defaultPlans.useState(orderRequired), 2);
   closure_10 = tmp4[1];
   defaultPlans.useRef(false);
   let first = null;
   const tmp2 = activeSubscription(defaultPlans.useState(null), 2);
+  const tmp5 = paymentGateway;
   if (skuIds.length > 0) {
     first = skuIds[0];
   }
-  const tmp6Result = paymentGateway(isGift[9])(first);
-  jsx = tmp6Result;
-  if (null == tmp6Result) {
+  const tmp7Result = paymentGateway(isGift[10])(first);
+  sku_id = tmp7Result;
+  if (null == tmp7Result) {
     if (null == defaultPlans) {
       if (orderRequired) {
         const _Error = Error;
@@ -139,13 +141,12 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
       }
     }
   }
-  const tmp6 = paymentGateway(isGift[9]);
-  const tmp9 = _require;
-  mobileStoreFront = require("hooks/NativePaymentHooks").useMobileStoreFront();
+  const tmp7 = paymentGateway(isGift[10]);
+  mobileStoreFront = tmp5(isGift[11]).useMobileStoreFront();
   const effect = obj.useEffect(() => {
-    paymentGateway(isGift[11]).dispatch({ type: "IAP_CHECKOUT_START" });
+    paymentGateway(isGift[12]).dispatch({ type: "IAP_CHECKOUT_START" });
     return () => {
-      paymentGateway(isGift[11]).dispatch({ type: "IAP_CHECKOUT_END" });
+      paymentGateway(isGift[12]).dispatch({ type: "IAP_CHECKOUT_END" });
     };
   }, []);
   onOrderCreated(function*(arg0) {
@@ -154,7 +155,7 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
       country = country.country;
     }
     obj5.countryCode = country;
-    yield closure_0(isGift[12]).createOrder(obj5);
+    yield closure_0(isGift[13]).createOrder(obj5);
     closure_129_2 = value;
     _undefined(closure_129_2);
     if (null != v2) {
@@ -183,12 +184,12 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
     yield callback(closure_0);
     if (1 === tmp7) {
       c3 = 0;
-      const result = closure_0(isGift[13]).showCheckoutOrderErrorModal(() => callback(closure_1_0), () => {
+      const result = closure_0(isGift[14]).showCheckoutOrderErrorModal(() => callback(closure_1_0), () => {
         closure_1_10(false);
         closure_1_6();
       });
       c5 = 3;
-      closure_0(isGift[13]);
+      closure_0(isGift[14]);
     } else if (arg0 === 1) {
       c5 = 3;
       throw value;
@@ -208,44 +209,41 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
     }
     return applyArgumentsResult;
   }, items1);
-  const items2 = [tmp6Result, orderRequired, callback1, defaultPlans, mobileStoreFront, activeSubscription, initialSubscriptionFacet];
+  const items2 = [tmp7Result, orderRequired, callback1, defaultPlans, mobileStoreFront, paymentGateway, activeSubscription, initialSubscriptionFacet];
   const effect1 = obj.useEffect(() => {
-    let tmp = ref;
     if (!ref.current) {
-      country = mobileStoreFront;
       if (null != mobileStoreFront) {
         if (closure_0) {
-          const items = [];
-          if (null != defaultPlans) {
-            const push = items.push;
-            const items1 = [];
-            HermesBuiltin.arraySpread(defaultPlans.map((skuId) => ({ sku_id: skuId.skuId, subscription_plan_id: skuId.subscriptionPlanId, quantity: skuId.quantity, purchase_type: constants.SUBSCRIPTION })), 0);
-            HermesBuiltin.apply(items1, items);
-            const obj2 = { subscription_preview: null };
-            const obj4 = { currency: null, country_code: null };
-            ({ currency: obj3.currency, country } = country);
-            obj4.country_code = country;
-            obj2.subscription_preview = obj4;
-            if (null != activeSubscription) {
-              obj2.subscription_id = activeSubscription.id;
+          if (null != sku_id) {
+            const items = [];
+            if (null != defaultPlans) {
+              if (null != mobileStoreFront) {
+                const push = items.push;
+                const items1 = [];
+                HermesBuiltin.arraySpread(defaultPlans.map((skuId) => ({ sku_id: skuId.skuId, subscription_plan_id: skuId.subscriptionPlanId, quantity: skuId.quantity, purchase_type: constants.SUBSCRIPTION })), 0);
+                HermesBuiltin.apply(items1, items);
+                const obj2 = { subscription_preview: null };
+                ({ currency: obj4.currency, country: obj4.country_code } = mobileStoreFront);
+                obj2.subscription_preview = { currency: null, country_code: null };
+                if (null != activeSubscription) {
+                  obj2.subscription_id = activeSubscription.id;
+                }
+                let tmp9 = obj2;
+                if (tmp13) {
+                  obj2.subscription_preview.subscription_trial_id = initialSubscriptionFacet.subscription_preview.subscription_trial_id;
+                  tmp9 = obj2;
+                }
+                const obj3 = { currency: null, country_code: null };
+                tmp13 = null != initialSubscriptionFacet && null != initialSubscriptionFacet.subscription_preview.subscription_trial_id;
+              }
+            } else if (null != sku_id) {
+              const obj = { sku_id, quantity: 1, purchase_type: ItemPurchaseType.ONE_TIME };
+              items.push(obj);
             }
-            let tmp15 = null != initialSubscriptionFacet;
-            if (tmp15) {
-              tmp15 = null != initialSubscriptionFacet.subscription_preview.subscription_trial_id;
-            }
-            let tmp5 = obj2;
-            if (tmp15) {
-              obj2.subscription_preview.subscription_trial_id = initialSubscriptionFacet.subscription_preview.subscription_trial_id;
-              tmp5 = obj2;
-            }
-          } else if (null != sku_id) {
-            const obj = { sku_id, quantity: 1, purchase_type: ItemPurchaseType.ONE_TIME };
-            items.push(obj);
+            tmp.current = true;
+            const obj7 = { orderLineItems: items, subscriptionFacet: tmp9 };
+            callback1(obj7);
           }
-          tmp.current = true;
-          tmp = callback1;
-          const obj7 = { orderLineItems: items, subscriptionFacet: tmp5 };
-          callback1(obj7);
         }
       }
     }
@@ -253,23 +251,23 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
   if (tmp4[0]) {
     let tmp18 = null;
     if (!flag) {
-      const obj3 = { style: tmp.loadingSpinnerContainer, children: jsx(tmp9(tmp5[14]).ActivityIndicator, { animating: true, size: "large" }) };
-      tmp18 = <onOrderRetryCancellation style={tmp.loadingSpinnerContainer}>{jsx(tmp9(tmp5[14]).ActivityIndicator, { animating: true, size: "large" })}</onOrderRetryCancellation>;
+      let obj2 = { style: tmp.loadingSpinnerContainer, children: mobileStoreFront(require("ActivityIndicator/ActivityIndicator").ActivityIndicator, { animating: true, size: "large" }) };
+      tmp18 = mobileStoreFront(onOrderRetryCancellation, obj2);
     }
     let tmp17 = tmp18;
   } else {
-    let obj4 = { checkoutInitParameters: null, order: null, paymentGateway: null, onOrderRetryCancellation: null, orderRequired: null, initialSubscriptionFacet: null, checkoutAnalyticsFields: null, analyticsInitialStep: null, children: null };
-    let obj5 = { skuIds, isGift, activeSubscription, referralTrialOfferId: null };
-    obj4.checkoutInitParameters = obj5;
-    obj4.order = tmp3;
-    obj4.paymentGateway = paymentGateway;
-    obj4.onOrderRetryCancellation = onOrderRetryCancellation;
-    obj4.orderRequired = orderRequired;
-    obj4.initialSubscriptionFacet = initialSubscriptionFacet;
-    obj4.checkoutAnalyticsFields = checkoutAnalyticsFields;
-    obj4.analyticsInitialStep = analyticsInitialStep;
-    obj4.children = orderRequired.children;
-    tmp17 = <callback checkoutInitParameters={null} order={null} paymentGateway={null} onOrderRetryCancellation={null} orderRequired={null} initialSubscriptionFacet={null} checkoutAnalyticsFields={null} analyticsInitialStep={null}>{null}</callback>;
+    let obj3 = { checkoutInitParameters: null, order: null, paymentGateway: null, onOrderRetryCancellation: null, orderRequired: null, initialSubscriptionFacet: null, checkoutAnalyticsFields: null, analyticsInitialStep: null, children: null };
+    const obj4 = { skuIds, isGift, activeSubscription, referralTrialOfferId: null };
+    obj3.checkoutInitParameters = obj4;
+    obj3.order = tmp3;
+    obj3.paymentGateway = paymentGateway;
+    obj3.onOrderRetryCancellation = onOrderRetryCancellation;
+    obj3.orderRequired = orderRequired;
+    obj3.initialSubscriptionFacet = initialSubscriptionFacet;
+    obj3.checkoutAnalyticsFields = checkoutAnalyticsFields;
+    obj3.analyticsInitialStep = analyticsInitialStep;
+    obj3.children = orderRequired.children;
+    tmp17 = mobileStoreFront(callback1, obj3);
   }
   return tmp17;
 };

@@ -1,14 +1,14 @@
-// === Module 16276: DataAndPrivacyScreen ===
+// === Module 15455: DataAndPrivacyScreen ===
 
-// Module 16276 (DataAndPrivacyScreen)
+// Module 15455 (DataAndPrivacyScreen)
 import util from "util" /* 1115 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 10054 */;
-import SettingBuilders from "SettingBuilders" /* 11811 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9152 */;
+import SettingBuilders from "SettingBuilders" /* 10993 */;
 import noop from "module_19" /* 19 */;
-import ConsentStore from "ConsentStore" /* 6924 */;
+import ConsentStore from "ConsentStore" /* 6007 */;
 
 require = fn;
-const MobileUserSettings = fn(8323).MobileUserSettings;
+const MobileUserSettings = fn(7412).MobileUserSettings;
 const Constants = fn(1074);
 ({ HelpdeskArticles: metroRequire, UserSettingsSections: closure_7 } = Constants);
 const jsxProd = fn(21);
@@ -82,11 +82,11 @@ export default function DataAndPrivacySettings() {
   items1.push(obj19);
   const effect = noop.useEffect(() => {
     if (!fetchedConsents.fetchedConsents) {
-      const consents = stackNavigation(15201).fetchConsents();
-      const obj = stackNavigation(15201);
+      const consents = stackNavigation(14367).fetchConsents();
+      const obj = stackNavigation(14367);
     }
-    const harvestStatus = stackNavigation(15204).fetchHarvestStatus();
-    const obj2 = stackNavigation(15204);
+    const harvestStatus = stackNavigation(14370).fetchHarvestStatus();
+    const obj2 = stackNavigation(14370);
   }, []);
   const items8 = [stackNavigation, items1];
   const obj20 = { children: null };
@@ -130,8 +130,8 @@ export default function DataAndPrivacySettings() {
       return stackNavigation.navigate(constants2.CONTENT_AND_SOCIAL);
     }
   };
-  obj21.screen = stackNavigation(15159).SettingsScreen.DATA_AND_PRIVACY;
-  const items9 = [closure_8(items1(15159), obj21), closure_8(items1(15057), { node: memo })];
+  obj21.screen = stackNavigation(14325).SettingsScreen.DATA_AND_PRIVACY;
+  const items9 = [closure_8(items1(14325), obj21), closure_8(items1(14223), { node: memo })];
   obj20.children = items9;
   return closure_10(closure_9, obj20);
 };

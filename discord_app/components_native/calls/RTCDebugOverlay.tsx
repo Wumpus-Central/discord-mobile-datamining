@@ -1,19 +1,19 @@
-// === Module 10384: RTCDebugOverlay ===
+// === Module 9486: RTCDebugOverlay ===
 
-// Module 10384 (RTCDebugOverlay)
+// Module 9486 (RTCDebugOverlay)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import components_Button_Button from "components/Button/Button" /* 5273 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7456 */;
-import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 10386 */;
-import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 10387 */;
+import components_Button_Button from "components/Button/Button" /* 5274 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6539 */;
+import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 9488 */;
+import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 9489 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import GuildStore from "GuildStore" /* 2066 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4852 */;
-import RTCDebugStore from "RTCDebugStore" /* 10385 */;
+import RTCDebugStore from "RTCDebugStore" /* 9487 */;
 import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4868 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -149,7 +149,7 @@ const createStyles = fn(4829);
 let obj = { container: null, scroller: null, indent: null, row: null, text: null, buttonClose: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-const ColorUtils = fn(4678);
+const ColorUtils = fn(4680);
 obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.7);
 obj.container = obj3;
 obj.scroller = { flex: 1, margin: 8 };
@@ -209,7 +209,7 @@ export default function RTCDebugOverlay(arg0) {
   const tmp = closure_18();
   const effect = noop.useEffect(() => {
     RTCDebugActionCreatorsAll.open();
-    return () => closure_1_1(573).wait(closure_1_2(10386).close);
+    return () => closure_1_1(573).wait(closure_1_2(9488).close);
   }, []);
   const rect = { top: true, left: true, right: true, bottom: true, style: null, children: null };
   const items = [tmp.container, style];

@@ -1,12 +1,12 @@
-// === Module 12774: EmojiSuggestionBarLarge ===
+// === Module 11900: EmojiSuggestionBarLarge ===
 
-// Module 12774 (EmojiSuggestionBarLarge)
+// Module 11900 (EmojiSuggestionBarLarge)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 4535 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
-import EmojiPickerListRow from "EmojiPickerListRow" /* 10655 */;
-import openEmojiActionSheet2 from "openEmojiActionSheet" /* 10674 */;
-import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 12775 */;
+import native from "native" /* 4537 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
+import EmojiPickerListRow from "EmojiPickerListRow" /* 9759 */;
+import openEmojiActionSheet2 from "openEmojiActionSheet" /* 9778 */;
+import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 11901 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -76,7 +76,7 @@ function renderEmojiSuggestionBarLargeItem(key, arg1, transitionState, cleanUp) 
   return <EmojiSuggestionBarLargeAnimated key={key} />;
 }
 const View = fn(17).View;
-const IMAGE_SIZE = fn(10638).IMAGE_SIZE;
+const IMAGE_SIZE = fn(9742).IMAGE_SIZE;
 const jsx = fn(21).jsx;
 const createStyles = fn(4829);
 let closure_8 = createStyles.createStyles((arg0) => {

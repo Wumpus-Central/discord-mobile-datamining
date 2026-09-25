@@ -1,6 +1,6 @@
-// === Module 8191: SavedMessagesTypes ===
+// === Module 7280: SavedMessagesTypes ===
 
-// Module 8191 (SavedMessagesTypes)
+// Module 7280 (SavedMessagesTypes)
 import MessageRecordUtils from "MessageRecordUtils" /* 5051 */;
 import size from "module_2" /* 2 */;
 

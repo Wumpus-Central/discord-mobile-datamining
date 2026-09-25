@@ -1,14 +1,14 @@
-// === Module 10397: SpeakerTileStatuses ===
+// === Module 9499: SpeakerTileStatuses ===
 
-// Module 10397 (SpeakerTileStatuses)
+// Module 9499 (SpeakerTileStatuses)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import _modDef7300 from "module_7300" /* 7300 */;
-import _modDef10399 from "module_10399" /* 10399 */;
+import _modDef6383 from "module_6383" /* 6383 */;
+import _modDef9501 from "module_9501" /* 9501 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
 import VoiceStateStore from "VoiceStateStore" /* 4848 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 5726 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5728 */;
 
 require = fn;
 const View = fn(17).View;
@@ -48,15 +48,15 @@ const memoResult = noop.memo((userId) => {
     flag2 = false;
   }
   if (stateFromStores) {
-    let tmp5 = channelId(10354);
+    let tmp5 = channelId(9456);
     let flag3 = true;
   } else if (flag2) {
-    tmp5 = channelId(9797);
+    tmp5 = channelId(8895);
     flag3 = false;
   } else {
     flag3 = false;
     if (flag) {
-      tmp5 = channelId(9798);
+      tmp5 = channelId(8896);
       flag3 = false;
     }
   }
@@ -83,7 +83,7 @@ export const ModeratorStatus = noop.memo((userId) => {
   const items1 = [channelId, userId];
   let tmp4;
   if (obj.useStateFromStores(items, () => StageChannelRoleStore.isModerator(userId, channelId), items1)) {
-    tmp4 = channelId(10398);
+    tmp4 = channelId(9500);
   }
   let tmp6 = null;
   if (null != tmp4) {
@@ -98,9 +98,9 @@ export const ModeratorStatus = noop.memo((userId) => {
 });
 export const BlockedStatus = function BlockedStatus() {
   const tmp = closure_8();
-  return jsx(native.Icon, { style: closure_8().restricted, source: _modDef10399, size: native.Icon.Sizes.EXTRA_SMALL, color: nativeDefault.unsafe_rawColors.RED_400 });
+  return jsx(native.Icon, { style: closure_8().restricted, source: _modDef9501, size: native.Icon.Sizes.EXTRA_SMALL, color: nativeDefault.unsafe_rawColors.RED_400 });
 };
 export const IgnoredStatus = function IgnoredStatus() {
   const tmp = closure_8();
-  return jsx(native.Icon, { style: closure_8().restricted, source: _modDef7300, size: native.Icon.Sizes.EXTRA_SMALL });
+  return jsx(native.Icon, { style: closure_8().restricted, source: _modDef6383, size: native.Icon.Sizes.EXTRA_SMALL });
 };

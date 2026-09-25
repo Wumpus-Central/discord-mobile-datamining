@@ -1,14 +1,14 @@
-// === Module 16078: CheckpointNavigationControls ===
+// === Module 15251: CheckpointNavigationControls ===
 
-// Module 16078 (CheckpointNavigationControls)
+// Module 15251 (CheckpointNavigationControls)
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
 import _modDef3036 from "module_3036" /* 3036 */;
 import CheckpointConstants from "CheckpointConstants" /* 5054 */;
-import CheckpointTextDefault from "CheckpointText" /* 16062 */;
-import CheckpointButtonDefault from "CheckpointButton" /* 16079 */;
-import CheckpointPressableDefault from "CheckpointPressable" /* 16080 */;
+import CheckpointTextDefault from "CheckpointText" /* 15236 */;
+import CheckpointButtonDefault from "CheckpointButton" /* 15252 */;
+import CheckpointPressableDefault from "CheckpointPressable" /* 15253 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4829 */;
@@ -58,7 +58,7 @@ export default function CheckpointNavigationControls(onNext) {
             variant: "text-sm/medium",
             style: link.link,
             onPress() {
-              const obj = closure_1_1(4520);
+              const obj = closure_1_1(4522);
               return obj.openURL(closure_1_1(2110).getArticleURL(constants.CHECKPOINT));
             },
             accessibilityRole: "link",

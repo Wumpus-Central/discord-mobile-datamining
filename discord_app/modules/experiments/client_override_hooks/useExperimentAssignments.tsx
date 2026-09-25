@@ -1,9 +1,9 @@
-// === Module 12152: useExperimentAssignments ===
+// === Module 11274: useExperimentAssignments ===
 
-// Module 12152 (useExperimentAssignments)
-import ExperimentManager from "ExperimentManager" /* 4749 */;
+// Module 11274 (useExperimentAssignments)
+import ExperimentManager from "ExperimentManager" /* 4751 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 4744 */;
+import ExperimentStore from "ExperimentStore" /* 4746 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1235 */;
 
 const require = globalThis.__r;

@@ -1,8 +1,8 @@
-// === Module 8024: AdDecisionUtils ===
+// === Module 7109: AdDecisionUtils ===
 
-// Module 8024 (AdDecisionUtils)
+// Module 7109 (AdDecisionUtils)
 import DurationsDefault from "Durations" /* 1091 */;
-import AdCreativeType from "AdCreativeType" /* 5756 */;
+import AdCreativeType from "AdCreativeType" /* 5758 */;
 
 require = fn;
 let result = 6 * DurationsDefault.Millis.HOUR;
@@ -36,14 +36,14 @@ export const getDeliveredQuestId = function getDeliveredQuestId(creative) {
   }
   return questId;
 };
-export const getDeliveredBounty = function getDeliveredBounty(creative1) {
+export const getDeliveredBounty = function getDeliveredBounty(creative) {
   let type;
-  if (creative1 != null) {
-    type = creative1.type;
+  if (creative != null) {
+    type = creative.type;
   }
   let bounty = null;
   if (type === AdCreativeType.AdCreativeType.BOUNTY) {
-    bounty = creative1.bounty;
+    bounty = creative.bounty;
   }
   return bounty;
 };

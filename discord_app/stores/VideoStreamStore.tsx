@@ -1,6 +1,6 @@
-// === Module 9700: VideoStreamStore ===
+// === Module 8798: VideoStreamStore ===
 
-// Module 9700 (VideoStreamStore)
+// Module 8798 (VideoStreamStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;

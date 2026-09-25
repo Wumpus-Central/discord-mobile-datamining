@@ -1,8 +1,8 @@
-// === Module 12052: SavedMessageUtils ===
+// === Module 11197: SavedMessageUtils ===
 
-// Module 12052 (SavedMessageUtils)
+// Module 11197 (SavedMessageUtils)
 import util from "util" /* 1115 */;
-import _modDef4416 from "module_4416" /* 4416 */;
+import _modDef4418 from "module_4418" /* 4418 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4842 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -153,7 +153,7 @@ export const useDueInString = function useDueInString(arg0) {
     const obj2 = { duration: null };
     const time = dueAt.getTime();
     tmp9 = obj;
-    obj2.duration = _modDef4416.duration(time - now.getTime(), "millisecond").humanize();
+    obj2.duration = _modDef4418.duration(time - now.getTime(), "millisecond").humanize();
     obj.dueInText = intl.formatToPlainString(H4gnX9, obj2);
     obj.isOverdue = now > dueAt;
     return obj;

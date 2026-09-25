@@ -1,7 +1,7 @@
-// === Module 14192: useSpatialAudioControlState ===
+// === Module 13353: useSpatialAudioControlState ===
 
-// Module 14192 (useSpatialAudioControlState)
-import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 14193 */;
+// Module 13353 (useSpatialAudioControlState)
+import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 13354 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
 

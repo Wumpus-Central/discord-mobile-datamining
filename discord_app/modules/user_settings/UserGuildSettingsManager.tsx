@@ -1,12 +1,12 @@
-// === Module 7449: UserGuildSettingsManager ===
+// === Module 6532: UserGuildSettingsManager ===
 
-// Module 7449 (UserGuildSettingsManager)
+// Module 6532 (UserGuildSettingsManager)
 import DurationsDefault from "Durations" /* 1091 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CategoryCollapseStore from "CategoryCollapseStore" /* 7450 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 6533 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7451 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6534 */;
 
 require = fn;
 function handleConnectionOpen() {

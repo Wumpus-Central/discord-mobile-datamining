@@ -1,6 +1,6 @@
-// === Module 12423: useAndroidOrientationSheetResync ===
+// === Module 11549: useAndroidOrientationSheetResync ===
 
-// Module 12423 (useAndroidOrientationSheetResync)
+// Module 11549 (useAndroidOrientationSheetResync)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

@@ -2,7 +2,7 @@
 
 // Module 4765 (UserPlusIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4525 */;
+import BaseIconImage from "BaseIconImage" /* 4527 */;
 import _mod4766 from "module_4766" /* 4766 */;
 import noop from "module_19" /* 19 */;
 

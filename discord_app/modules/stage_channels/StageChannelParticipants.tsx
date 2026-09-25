@@ -1,20 +1,20 @@
-// === Module 5730: StageChannelParticipants ===
+// === Module 5732: StageChannelParticipants ===
 
-// Module 5730 (StageChannelParticipants)
-import SecondaryIndexMap from "SecondaryIndexMap" /* 4459 */;
+// Module 5732 (StageChannelParticipants)
+import SecondaryIndexMap from "SecondaryIndexMap" /* 4461 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 4881 */;
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4976 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4981 */;
-import getParticipantUserKeyDefault from "getParticipantUserKey" /* 5733 */;
-import useGuildMemberDisplayRole from "useGuildMemberDisplayRole" /* 5734 */;
+import getParticipantUserKeyDefault from "getParticipantUserKey" /* 5735 */;
+import useGuildMemberDisplayRole from "useGuildMemberDisplayRole" /* 5736 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4851 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 5731 */;
+import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 5733 */;
 import GuildMemberStore from "GuildMemberStore" /* 2107 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 import UserStore from "UserStore" /* 1372 */;
 import VoiceStateStore from "VoiceStateStore" /* 4848 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 5726 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5728 */;
 import StageInstanceStore from "StageInstanceStore" /* 2049 */;
 
 require = fn;

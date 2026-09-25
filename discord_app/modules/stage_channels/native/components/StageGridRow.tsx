@@ -1,11 +1,11 @@
-// === Module 10402: StageGridRow ===
+// === Module 9504: StageGridRow ===
 
-// Module 10402 (StageGridRow)
-import useIsScreenLandscape from "useIsScreenLandscape" /* 5430 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 5730 */;
-import SpeakerTileDefault from "SpeakerTile" /* 10393 */;
-import StageTileTypes from "StageTileTypes" /* 10394 */;
-import MediaTileDefault from "MediaTile" /* 10403 */;
+// Module 9504 (StageGridRow)
+import useIsScreenLandscape from "useIsScreenLandscape" /* 5431 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 5732 */;
+import SpeakerTileDefault from "SpeakerTile" /* 9495 */;
+import StageTileTypes from "StageTileTypes" /* 9496 */;
+import MediaTileDefault from "MediaTile" /* 9505 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

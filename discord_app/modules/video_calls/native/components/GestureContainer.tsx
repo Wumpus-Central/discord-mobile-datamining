@@ -1,17 +1,17 @@
-// === Module 10368: GestureContainer ===
+// === Module 9470: GestureContainer ===
 
-// Module 10368 (GestureContainer)
+// Module 9470 (GestureContainer)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
 import timing from "timing" /* 4830 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5032 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const useChannelCallStore = fn(9723).useChannelCallStore;
-const Constants = fn(9730);
+const useChannelCallStore = fn(8821).useChannelCallStore;
+const Constants = fn(8828);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: hasOwnProperty, SWIPE_TO_CHAT_ACTIVE_OFFSET: metroRequire } = Constants);
 const jsx = fn(21).jsx;
 const createStyles = fn(4829);
@@ -28,9 +28,9 @@ export default function GestureContainer(children) {
   const tmp = closure_8();
   const height = sharedValue(1478)().height;
   const tmp2 = useChannelCallStore((isGestureEnabled) => isGestureEnabled.isGestureEnabled);
-  sharedValue = height(4561).useSharedValue(0);
-  const Gesture = height(6985).Gesture;
-  let obj = height(4561);
+  sharedValue = height(4563).useSharedValue(0);
+  const Gesture = height(6068).Gesture;
+  let obj = height(4563);
   const PanResult = Gesture.Pan();
   class S {
     constructor(arg0) {
@@ -52,10 +52,10 @@ export default function GestureContainer(children) {
     ReanimatedRexport.runOnJS(ModalActionCreatorsDefault.pop)();
   };
   const onUpdateResult = Gesture.Pan().enabled(tmp2).onUpdate(S);
-  fn.__closure = { position: sharedValue, THRESHOLD_VELOCITY: 500, runOnJS: height(4561).runOnJS, ModalActionCreators: sharedValue(5032), withTiming: height(4830).withTiming, DECELERATED_EASING: height(1177).DECELERATED_EASING };
+  fn.__closure = { position: sharedValue, THRESHOLD_VELOCITY: 500, runOnJS: height(4563).runOnJS, ModalActionCreators: sharedValue(5032), withTiming: height(4830).withTiming, DECELERATED_EASING: height(1177).DECELERATED_EASING };
   fn.__workletHash = 10736744030668;
   fn.__initData = __initData;
-  let obj2 = { position: sharedValue, THRESHOLD_VELOCITY: 500, runOnJS: height(4561).runOnJS, ModalActionCreators: sharedValue(5032), withTiming: height(4830).withTiming, DECELERATED_EASING: height(1177).DECELERATED_EASING };
+  let obj2 = { position: sharedValue, THRESHOLD_VELOCITY: 500, runOnJS: height(4563).runOnJS, ModalActionCreators: sharedValue(5032), withTiming: height(4830).withTiming, DECELERATED_EASING: height(1177).DECELERATED_EASING };
   let items = [-closure_5, closure_5];
   const onEndResult = onUpdateResult.onEnd(fn);
   let items1 = [-closure_6, closure_6];
@@ -73,13 +73,13 @@ export default function GestureContainer(children) {
     obj.transform = items1;
     return obj;
   };
-  const obj8 = height(4561);
-  fn2.__closure = { interpolate: height(4561).interpolate, position: sharedValue, height };
+  const obj8 = height(4563);
+  fn2.__closure = { interpolate: height(4563).interpolate, position: sharedValue, height };
   fn2.__workletHash = 16049033434372;
   fn2.__initData = __initData3;
   let obj4 = { style: tmp.background, children: null };
   const animatedStyle = obj8.useAnimatedStyle(fn2);
-  let obj3 = { interpolate: height(4561).interpolate, position: sharedValue, height };
-  obj4.children = jsx(height(6985).GestureDetector, { gesture: failOffsetXResult, children: jsx(sharedValue(4561).View, { style: animatedStyle, children: children.children }) });
+  let obj3 = { interpolate: height(4563).interpolate, position: sharedValue, height };
+  obj4.children = jsx(height(6068).GestureDetector, { gesture: failOffsetXResult, children: jsx(sharedValue(4563).View, { style: animatedStyle, children: children.children }) });
   return <View style={tmp.background}>{null}</View>;
 };

@@ -1,9 +1,9 @@
-// === Module 11593: generated/SpoilerIcon ===
+// === Module 10798: generated/SpoilerIcon ===
 
-// Module 11593 (generated/SpoilerIcon)
+// Module 10798 (generated/SpoilerIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4525 */;
-import _mod11594 from "module_11594" /* 11594 */;
+import BaseIconImage from "BaseIconImage" /* 4527 */;
+import _mod10799 from "module_10799" /* 10799 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const SpoilerIcon = function SpoilerIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11594, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10799, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

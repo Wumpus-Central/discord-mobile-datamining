@@ -2,7 +2,7 @@
 
 // Module 4810 (MobileNativeUpdateConstants)
 import URLUtilsDefault from "URLUtils" /* 1366 */;
-import hooks from "module_4416" /* 4416 */;
+import hooks from "module_4418" /* 4418 */;
 
 let tmp3 = null;
 if (undefined !== process.env.INTERNAL_UPDATE_URL) {

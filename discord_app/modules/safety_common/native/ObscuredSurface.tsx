@@ -1,11 +1,11 @@
-// === Module 9062: ObscuredSurface ===
+// === Module 8156: ObscuredSurface ===
 
-// Module 9062 (ObscuredSurface)
+// Module 8156 (ObscuredSurface)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 5387 */;
-import ObscuredSurfaceContext from "ObscuredSurfaceContext" /* 9063 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 5388 */;
+import ObscuredSurfaceContext from "ObscuredSurfaceContext" /* 8157 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

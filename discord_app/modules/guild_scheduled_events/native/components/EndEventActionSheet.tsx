@@ -1,10 +1,10 @@
-// === Module 9987: EndEventActionSheet ===
+// === Module 9085: EndEventActionSheet ===
 
-// Module 9987 (EndEventActionSheet)
+// Module 9085 (EndEventActionSheet)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
-import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 9872 */;
-import CallsUtils from "CallsUtils" /* 9988 */;
+import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 8970 */;
+import CallsUtils from "CallsUtils" /* 9086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting("modules/guild_scheduled_events/native
 export default function EndEventActionSheet(channel) {
   channel = channel.channel;
   const tmp = closure_7();
-  const activeEvent = channel(9834).useActiveEvent(channel.id);
+  const activeEvent = channel(8932).useActiveEvent(channel.id);
   if (null == activeEvent) {
     return null;
   } else {
@@ -44,7 +44,7 @@ export default function EndEventActionSheet(channel) {
     const intl3 = tmp2(1115).intl;
     obj7.text = intl3.string(tmp2(1115).t.P60OAX);
     obj7.onPress = handleClose;
-    obj6.children = closure_5(tmp2(5273).Button, obj7);
+    obj6.children = closure_5(tmp2(5274).Button, obj7);
     items[2] = closure_5(View, obj6);
     const obj8 = { style: tmp.confirmButtonContainer, children: null };
     const obj9 = { text: null, variant: "destructive", grow: true, onPress: null };
@@ -57,11 +57,11 @@ export default function EndEventActionSheet(channel) {
         CallsUtils.handleDisconnect(channel);
       }
     };
-    obj8.children = closure_5(tmp2(5273).Button, obj9);
+    obj8.children = closure_5(tmp2(5274).Button, obj9);
     items[3] = closure_5(View, obj8);
     obj3.children = items;
     obj2.children = closure_6(View, obj3);
-    return closure_5(activeEvent(8949), obj2);
+    return closure_5(activeEvent(8043), obj2);
   }
-  let obj = channel(9834);
+  let obj = channel(8932);
 };

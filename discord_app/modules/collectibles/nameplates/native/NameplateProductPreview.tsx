@@ -1,14 +1,14 @@
-// === Module 13543: NameplateProductPreview ===
+// === Module 12695: NameplateProductPreview ===
 
-// Module 13543 (NameplateProductPreview)
+// Module 12695 (NameplateProductPreview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import utils from "utils" /* 1970 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import LinearGradientDefault from "LinearGradient" /* 5285 */;
-import TableRow from "TableRow" /* 5910 */;
-import useShopProductItems from "useShopProductItems" /* 8519 */;
+import LinearGradientDefault from "LinearGradient" /* 5286 */;
+import TableRow from "TableRow" /* 5912 */;
+import useShopProductItems from "useShopProductItems" /* 7609 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4821 */;
 
@@ -42,7 +42,7 @@ function NameplateUser(arg0) {
   }
   const items1 = [currentUser, tmp5Result, stateFromStores];
   const icon = noop.useMemo(() => {
-    const obj = { user: currentUser, guildId: "a", size: native.AvatarSizes.NORMAL, avatarDecoration, animate: !stateFromStores, autoStatusCutout: null, "aria-hidden": null };
+    const obj = { user: currentUser, guildId: "a", size: native.AvatarSizes.NORMAL, avatarDecoration, animate: !stateFromStores, autoStatusCutout: 152, "aria-hidden": 122 };
     return timestampProducer(native.Avatar, obj);
   }, items1);
   return closure_6(currentUser(stateFromStores[20]).UserNameplateRow, { nameplate, icon, label, isPreviewRow: true });

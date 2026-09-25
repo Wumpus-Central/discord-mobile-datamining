@@ -1,6 +1,6 @@
-// === Module 10003: VideoBackgroundUtils ===
+// === Module 9104: VideoBackgroundUtils ===
 
-// Module 10003 (VideoBackgroundUtils)
+// Module 9104 (VideoBackgroundUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import AvatarUtils from "AvatarUtils" /* 1397 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5009 */;
@@ -92,31 +92,31 @@ function getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption) {
   }
   return str;
 }
-const VideoBackgroundConstants = fn(7320);
+const VideoBackgroundConstants = fn(6403);
 ({ DefaultVideoBackground: hasOwnProperty, VideoFilterType: metroRequire, ANIMATED_DEFAULT_VIDEO_BACKGROUNDS: closure_7 } = VideoBackgroundConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_backgrounds/VideoBackgroundUtils.tsx");
 
-export const isCustomBackgroundOption = function isCustomBackgroundOption(videoBackgroundOptionFromProto) {
-  let tmp = null != videoBackgroundOptionFromProto && typeof videoBackgroundOptionFromProto === "object";
+export const isCustomBackgroundOption = function isCustomBackgroundOption(stateFromStores) {
+  let tmp = null != stateFromStores && typeof stateFromStores === "object";
   if (tmp) {
-    tmp = "id" in videoBackgroundOptionFromProto;
+    tmp = "id" in stateFromStores;
   }
   if (tmp) {
-    let flag = videoBackgroundOptionFromProto.type === constants.BACKGROUND;
+    let flag = stateFromStores.type === constants.BACKGROUND;
     if (!flag) {
-      const type = videoBackgroundOptionFromProto.type;
+      const type = stateFromStores.type;
       flag = false;
     }
     tmp = flag;
   }
   return tmp;
 };
-export const isDefaultBackgroundOption = function isDefaultBackgroundOption(videoBackgroundOptionFromProto) {
-  let tmp = typeof videoBackgroundOptionFromProto === "number";
-  if (typeof videoBackgroundOptionFromProto === "number") {
-    tmp = videoBackgroundOptionFromProto in OPTION_1;
+export const isDefaultBackgroundOption = function isDefaultBackgroundOption(stateFromStores) {
+  let tmp = typeof stateFromStores === "number";
+  if (typeof stateFromStores === "number") {
+    tmp = stateFromStores in OPTION_1;
   }
   return tmp;
 };
@@ -194,21 +194,21 @@ export const getVideoBackgroundProtoFromOption = function getVideoBackgroundProt
   }
   return obj;
 };
-export const getVideoBackgroundOptionFromProto = function getVideoBackgroundOptionFromProto(prop, id) {
-  if (null != prop) {
-    if (undefined !== prop.oneofKind) {
-      const oneofKind = prop.oneofKind;
+export const getVideoBackgroundOptionFromProto = function getVideoBackgroundOptionFromProto(oneofKind, user_id) {
+  if (null != oneofKind) {
+    if (undefined !== oneofKind.oneofKind) {
+      oneofKind = oneofKind.oneofKind;
       if ("customAsset" === oneofKind) {
-        const obj = { type: constants.BACKGROUND, id: prop.customAsset.id, user_id: id, asset: prop.customAsset.assetHash };
+        const obj = { type: constants.BACKGROUND, id: oneofKind.customAsset.id, user_id, asset: oneofKind.customAsset.assetHash };
         return obj;
       } else if ("blur" === oneofKind) {
         let str3 = null;
-        if (prop.blur.useBlur) {
+        if (oneofKind.blur.useBlur) {
           str3 = "blur";
         }
         return str3;
       } else {
-        return "presetOption" === oneofKind ? prop.presetOption : undefined;
+        return "presetOption" === oneofKind ? oneofKind.presetOption : undefined;
       }
     }
   }

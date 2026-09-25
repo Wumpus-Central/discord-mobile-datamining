@@ -1,6 +1,6 @@
-// === Module 14230: RemoteAuthModal ===
+// === Module 13391: RemoteAuthModal ===
 
-// Module 14230 (RemoteAuthModal)
+// Module 13391 (RemoteAuthModal)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -9,14 +9,14 @@ import HTTPUtils from "HTTPUtils" /* 1271 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
 import Text_Text from "Text/Text" /* 4825 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5032 */;
-import components_Button_Button from "components/Button/Button" /* 5273 */;
-import ButtonGroup from "ButtonGroup" /* 5738 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5882 */;
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5886 */;
-import _modDef14229 from "module_14229" /* 14229 */;
-import _modDef14231 from "module_14231" /* 14231 */;
-import _modDef14232 from "module_14232" /* 14232 */;
-import _modDef14233 from "module_14233" /* 14233 */;
+import components_Button_Button from "components/Button/Button" /* 5274 */;
+import ButtonGroup from "ButtonGroup" /* 5740 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5884 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5888 */;
+import _modDef13390 from "module_13390" /* 13390 */;
+import _modDef13392 from "module_13392" /* 13392 */;
+import _modDef13393 from "module_13393" /* 13393 */;
+import _modDef13394 from "module_13394" /* 13394 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -35,10 +35,10 @@ function RemoteAuthBody(remoteAuthFingerprint) {
     HTTP.post(request).then((body) => {
       dependencyMap(body.body.handshake_token);
       closure_1_1(constants.LOADED);
-      const result = remoteAuthFingerprint(5886).DeprecatedLayoutAnimation();
+      const result = remoteAuthFingerprint(5888).DeprecatedLayoutAnimation();
     }).catch(() => {
       closure_1_1(constants.NOT_FOUND);
-      const result = remoteAuthFingerprint(5886).DeprecatedLayoutAnimation();
+      const result = remoteAuthFingerprint(5888).DeprecatedLayoutAnimation();
     });
   }, items);
   if (constants.LOADING === tmp3) {
@@ -97,7 +97,7 @@ function RemoteAuthLogin(arg0) {
       closure_1_1(constants.NOT_FOUND);
     });
   }, 1000, { leading: true, trailing: false });
-  const items = [closure_9(closure_6, { source: _modDef14232, style: tmp.mainImage }), , , ];
+  const items = [closure_9(closure_6, { source: _modDef13393, style: tmp.mainImage }), , , ];
   const obj4 = { variant: "heading-md/extrabold", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t.jD2pqF);
@@ -131,7 +131,7 @@ function RemoteAuthLogin(arg0) {
 function RemoteAuthLoginSucceeded() {
   const tmp = closure_12();
   const obj = { children: null };
-  const items = [React7(timestampProducer, { source: _modDef14233, style: tmp.mainImage }), , , ];
+  const items = [React7(timestampProducer, { source: _modDef13394, style: tmp.mainImage }), , , ];
   const obj3 = { variant: "heading-xl/extrabold", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.HbwTOZ);
@@ -192,9 +192,9 @@ let result = size.fileFinishedImporting("modules/remote_auth/components/native/R
 
 export default function RemoteAuth(arg0) {
   const tmp = closure_12();
-  const obj = { source: _modDef14231, imageStyle: null, style: null, children: null };
+  const obj = { source: _modDef13392, imageStyle: null, style: null, children: null };
   ({ imageStyle: obj.imageStyle, background: obj.style } = tmp);
-  const obj2 = { style: null, source: _modDef14229 };
+  const obj2 = { style: null, source: _modDef13390 };
   const items = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
   obj2.style = items;
   const items1 = [React7(timestampProducer, obj2), ];

@@ -1,6 +1,6 @@
-// === Module 7473: FormSubLabel ===
+// === Module 6556: FormSubLabel ===
 
-// Module 7473 (FormSubLabel)
+// Module 6556 (FormSubLabel)
 import Text_Text from "Text/Text" /* 4825 */;
 import noop from "module_19" /* 19 */;
 

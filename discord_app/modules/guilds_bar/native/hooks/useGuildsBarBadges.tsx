@@ -1,17 +1,17 @@
-// === Module 16755: useGuildsBarBadges ===
+// === Module 15939: useGuildsBarBadges ===
 
-// Module 16755 (useGuildsBarBadges)
+// Module 15939 (useGuildsBarBadges)
 import native from "native" /* 1177 */;
-import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 4652 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 16724 */;
-import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 16760 */;
+import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 4654 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 15908 */;
+import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 15944 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 10427 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4651 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 9529 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4653 */;
 import GuildMemberStore from "GuildMemberStore" /* 2107 */;
 import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;

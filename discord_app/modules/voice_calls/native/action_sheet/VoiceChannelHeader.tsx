@@ -1,24 +1,24 @@
-// === Module 14161: VoiceChannelHeader ===
+// === Module 13322: VoiceChannelHeader ===
 
-// Module 14161 (VoiceChannelHeader)
+// Module 13322 (VoiceChannelHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import Text_Text from "Text/Text" /* 4825 */;
 import useChannelNameDefault from "useChannelName" /* 4982 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 5365 */;
-import Pressables from "Pressables" /* 5427 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 10167 */;
-import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 10286 */;
-import _modDef10378 from "module_10378" /* 10378 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11928 */;
-import CallStateHooks from "CallStateHooks" /* 14162 */;
-import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 14163 */;
-import OngoingCallTimerDefault from "OngoingCallTimer" /* 14164 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 5366 */;
+import Pressables from "Pressables" /* 5428 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9264 */;
+import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 9383 */;
+import _modDef9480 from "module_9480" /* 9480 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11071 */;
+import CallStateHooks from "CallStateHooks" /* 13323 */;
+import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 13324 */;
+import OngoingCallTimerDefault from "OngoingCallTimer" /* 13325 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
 import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
 
 const CallStateHooksDefault = CallStateHooks;
 
@@ -148,7 +148,7 @@ class VoiceChannelHeader {
   }
 }
 function AddMemberButton(onPress) {
-  const obj = { onPress: onPress.onPress, iconSource: _modDef10378, iconStyle: closure_12().icons, accessibilityLabel: null };
+  const obj = { onPress: onPress.onPress, iconSource: _modDef9480, iconStyle: closure_12().icons, accessibilityLabel: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["6Qgrev"]);
   return closure_1_10(IconButton, obj);

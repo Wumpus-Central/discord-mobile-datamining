@@ -1,17 +1,17 @@
-// === Module 14198: GuildLimitedAccessInfoAlert ===
+// === Module 13359: GuildLimitedAccessInfoAlert ===
 
-// Module 14198 (GuildLimitedAccessInfoAlert)
+// Module 13359 (GuildLimitedAccessInfoAlert)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import common_AlertDefault from "common/Alert" /* 5292 */;
+import common_AlertDefault from "common/Alert" /* 5293 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2066 */;
-import TextStyles from "TextStyles" /* 5829 */;
+import TextStyles from "TextStyles" /* 5831 */;
 
 require = fn;
-const helpdeskArticle = fn(14199).GUILD_LIMITED_ACCESS_HC_LINK;
+const helpdeskArticle = fn(13360).GUILD_LIMITED_ACCESS_HC_LINK;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4829);

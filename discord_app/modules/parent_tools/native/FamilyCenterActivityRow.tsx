@@ -1,24 +1,24 @@
-// === Module 15246: FamilyCenterActivityRow ===
+// === Module 14412: FamilyCenterActivityRow ===
 
-// Module 15246 (FamilyCenterActivityRow)
+// Module 14412 (FamilyCenterActivityRow)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import _modDef2486 from "module_2486" /* 2486 */;
-import UserUtilsDefault from "UserUtils" /* 4673 */;
-import GuildIconDefault from "GuildIcon" /* 5889 */;
-import GuildBadgeDefault from "GuildBadge" /* 5895 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 7922 */;
-import FamilyCenterActivityPurchaseRowDefault from "FamilyCenterActivityPurchaseRow" /* 15247 */;
-import FamilyCenterActivityGiftRowUtils from "FamilyCenterActivityGiftRowUtils" /* 15250 */;
-import FamilyCenterActivityGiftRowDefault from "FamilyCenterActivityGiftRow" /* 15251 */;
+import UserUtilsDefault from "UserUtils" /* 4675 */;
+import GuildIconDefault from "GuildIcon" /* 5891 */;
+import GuildBadgeDefault from "GuildBadge" /* 5897 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 7007 */;
+import FamilyCenterActivityPurchaseRowDefault from "FamilyCenterActivityPurchaseRow" /* 14413 */;
+import FamilyCenterActivityGiftRowUtils from "FamilyCenterActivityGiftRowUtils" /* 14416 */;
+import FamilyCenterActivityGiftRowDefault from "FamilyCenterActivityGiftRow" /* 14417 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7867 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 6952 */;
 
 require = fn;
 const View = fn(17).View;
-const ACTION_TO_TEXT = fn(7868).ACTION_TO_TEXT;
+const ACTION_TO_TEXT = fn(6953).ACTION_TO_TEXT;
 const GuildFeatures = fn(1074).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -55,7 +55,7 @@ const memoResult = noop.memo((action) => {
     const tmp3Result2 = UserUtilsDefault;
     const _Date = Date;
     const date = new Date(extractTimestampResult);
-    obj7.children = tmp6(7922).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
+    obj7.children = tmp6(7007).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
     items2[1] = closure_8(tmp6(4825).Text, obj7);
     obj5.children = items2;
     items1[1] = closure_9(View, obj5);
@@ -99,7 +99,7 @@ const memoResult1 = noop.memo((action) => {
     const obj4 = { style: null, textStyle: null, guild: null, size: null, animate: true };
     ({ avatar: obj3.style, avatarText: obj3.textStyle } = tmp);
     obj4.guild = stateFromStores;
-    obj4.size = tmp2(5889).GuildIconSizes.NORMAL;
+    obj4.size = tmp2(5891).GuildIconSizes.NORMAL;
     const items1 = [closure_8(GuildIconDefault, obj4), ];
     const obj5 = { style: tmp.text, children: null };
     const obj6 = { style: tmp.headerContainer, children: null };

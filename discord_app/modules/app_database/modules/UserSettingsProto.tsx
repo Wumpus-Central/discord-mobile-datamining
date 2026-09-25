@@ -1,6 +1,6 @@
-// === Module 7819: UserSettingsProto ===
+// === Module 6904: UserSettingsProto ===
 
-// Module 7819 (UserSettingsProto)
+// Module 6904 (UserSettingsProto)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;

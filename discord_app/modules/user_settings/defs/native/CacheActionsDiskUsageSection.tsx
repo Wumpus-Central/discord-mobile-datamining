@@ -1,14 +1,14 @@
-// === Module 15927: CacheActionsDiskUsageSection ===
+// === Module 15097: CacheActionsDiskUsageSection ===
 
-// Module 15927 (CacheActionsDiskUsageSection)
+// Module 15097 (CacheActionsDiskUsageSection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import FileSizeUtils from "FileSizeUtils" /* 4725 */;
+import FileSizeUtils from "FileSizeUtils" /* 4727 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import Stack_Stack from "Stack/Stack" /* 5271 */;
-import Card from "Card" /* 5912 */;
-import DiskUsageManagerDefault from "DiskUsageManager" /* 15928 */;
-import CacheActionsStorageDiagnosticsDefault from "CacheActionsStorageDiagnostics" /* 15929 */;
+import Stack_Stack from "Stack/Stack" /* 5272 */;
+import Card from "Card" /* 5914 */;
+import DiskUsageManagerDefault from "DiskUsageManager" /* 15098 */;
+import CacheActionsStorageDiagnosticsDefault from "CacheActionsStorageDiagnostics" /* 15099 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -100,9 +100,9 @@ function DiskUsageResults(report) {
     const obj13 = { errors: null, unavailable: null };
   }
   items1[2] = tmp4Result;
-  items[2] = closure_7(obj(5271).Stack, { children: items1 });
+  items[2] = closure_7(obj(5272).Stack, { children: items1 });
   obj2.children = items;
-  return closure_7(obj(5271).Stack, obj2);
+  return closure_7(obj(5272).Stack, obj2);
 }
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);

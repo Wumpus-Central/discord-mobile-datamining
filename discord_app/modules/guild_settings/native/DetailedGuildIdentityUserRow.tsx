@@ -1,14 +1,14 @@
-// === Module 11295: DetailedGuildIdentityUserRow ===
+// === Module 10393: DetailedGuildIdentityUserRow ===
 
-// Module 11295 (DetailedGuildIdentityUserRow)
+// Module 10393 (DetailedGuildIdentityUserRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import UserUtilsDefault from "UserUtils" /* 4673 */;
+import UserUtilsDefault from "UserUtils" /* 4675 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4981 */;
-import TableRow from "TableRow" /* 5910 */;
-import Form from "Form" /* 8951 */;
-import DiscordTagDefault from "DiscordTag" /* 9985 */;
+import TableRow from "TableRow" /* 5912 */;
+import Form from "Form" /* 8045 */;
+import DiscordTagDefault from "DiscordTag" /* 9083 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -36,7 +36,7 @@ const memoResult = noop.memo((height) => {
     const obj3 = { style: tmp.mainIdentity, children: null };
     let tmp8Result = null;
     if (hasAvatarForGuildResult) {
-      const obj4 = { size: native.AvatarSizes.SIZE_16, style: tmp.primaryAvatar, user, guildId: "Array" };
+      const obj4 = { size: native.AvatarSizes.SIZE_16, style: tmp.primaryAvatar, user, guildId: "flex" };
       tmp8Result = hasOwnProperty(native.Avatar, obj4);
     }
     const items1 = [tmp8Result, ];

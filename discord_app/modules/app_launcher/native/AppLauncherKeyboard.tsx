@@ -1,25 +1,25 @@
-// === Module 12377: AppLauncherKeyboard ===
+// === Module 11503: AppLauncherKeyboard ===
 
-// Module 12377 (AppLauncherKeyboard)
+// Module 11503 (AppLauncherKeyboard)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import KeyboardUIStore from "KeyboardUIStore" /* 1482 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1609 */;
 import KeyboardTypes from "KeyboardTypes" /* 1610 */;
-import native from "native" /* 4535 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
+import native from "native" /* 4537 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5009 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5267 */;
-import BottomSheetModal from "BottomSheetModal" /* 6957 */;
-import completeAppLauncherOnboardingDefault from "completeAppLauncherOnboarding" /* 12388 */;
-import AppLauncherOnboardingLayerDefault from "AppLauncherOnboardingLayer" /* 12389 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5268 */;
+import BottomSheetModal from "BottomSheetModal" /* 6040 */;
+import completeAppLauncherOnboardingDefault from "completeAppLauncherOnboarding" /* 11514 */;
+import AppLauncherOnboardingLayerDefault from "AppLauncherOnboardingLayer" /* 11515 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const ContentDismissActionType = fn(2041).ContentDismissActionType;
-const KEYBOARD_ANIMATION_CONFIG = fn(12378).KEYBOARD_ANIMATION_CONFIG;
+const KEYBOARD_ANIMATION_CONFIG = fn(11504).KEYBOARD_ANIMATION_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4829);
@@ -138,11 +138,11 @@ export default noop.memo(function AppLauncherKeyboard(context) {
         let trackWithMetadata = require;
         let APP_LAUNCHER_EXPANDED = dependencyMap;
         if (arg2 === BottomSheetModal.ANIMATION_SOURCE.KEYBOARD) {
-          let current = trackWithMetadata(11567).AppLauncherBottomSheetExpandReason.KEYBOARD;
-        } else if (arg2 === trackWithMetadata(6957).ANIMATION_SOURCE.GESTURE) {
-          current = trackWithMetadata(11567).AppLauncherBottomSheetExpandReason.GESTURE;
-        } else if (arg2 !== trackWithMetadata(6957).ANIMATION_SOURCE.USER) {
-          current = trackWithMetadata(11567).AppLauncherBottomSheetExpandReason.OTHER;
+          let current = trackWithMetadata(10772).AppLauncherBottomSheetExpandReason.KEYBOARD;
+        } else if (arg2 === trackWithMetadata(6040).ANIMATION_SOURCE.GESTURE) {
+          current = trackWithMetadata(10772).AppLauncherBottomSheetExpandReason.GESTURE;
+        } else if (arg2 !== trackWithMetadata(6040).ANIMATION_SOURCE.USER) {
+          current = trackWithMetadata(10772).AppLauncherBottomSheetExpandReason.OTHER;
         } else {
           current = ref1.current;
         }

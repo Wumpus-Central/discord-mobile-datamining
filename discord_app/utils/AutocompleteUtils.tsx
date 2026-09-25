@@ -1,6 +1,6 @@
-// === Module 5747: AutocompleteUtils ===
+// === Module 5749: AutocompleteUtils ===
 
-// Module 5747 (AutocompleteUtils)
+// Module 5749 (AutocompleteUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
@@ -8,40 +8,40 @@ import util from "util" /* 1115 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import StringUtils from "StringUtils" /* 2010 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2025 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4469 */;
-import UserUtilsDefault from "UserUtils" /* 4673 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4471 */;
+import UserUtilsDefault from "UserUtils" /* 4675 */;
 import RegexUtilsDefault from "RegexUtils" /* 4816 */;
 import useChannelName from "useChannelName" /* 4982 */;
-import isSoundValidDefault from "isSoundValid" /* 5318 */;
-import StickersTypes from "StickersTypes" /* 5573 */;
-import fuzzysearchDefault from "fuzzysearch" /* 5822 */;
-import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 5823 */;
-import GuildUtilsDefault from "GuildUtils" /* 5824 */;
-import OnboardingHomeUtils from "OnboardingHomeUtils" /* 7555 */;
-import useGuildOnboardingAvailable from "useGuildOnboardingAvailable" /* 7665 */;
-import compareChannelsByScoreAndPositionDefault from "compareChannelsByScoreAndPosition" /* 7666 */;
+import isSoundValidDefault from "isSoundValid" /* 5319 */;
+import StickersTypes from "StickersTypes" /* 5575 */;
+import fuzzysearchDefault from "fuzzysearch" /* 5824 */;
+import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 5825 */;
+import GuildUtilsDefault from "GuildUtils" /* 5826 */;
+import OnboardingHomeUtils from "OnboardingHomeUtils" /* 6638 */;
+import useGuildOnboardingAvailable from "useGuildOnboardingAvailable" /* 6748 */;
+import compareChannelsByScoreAndPositionDefault from "compareChannelsByScoreAndPosition" /* 6749 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmojiStore from "EmojiStore" /* 5764 */;
-import SoundboardStore from "SoundboardStore" /* 5311 */;
-import StickersPersistedStore from "StickersPersistedStore" /* 5806 */;
-import StickersStore from "StickersStore" /* 5807 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5811 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4466 */;
+import EmojiStore from "EmojiStore" /* 5766 */;
+import SoundboardStore from "SoundboardStore" /* 5312 */;
+import StickersPersistedStore from "StickersPersistedStore" /* 5808 */;
+import StickersStore from "StickersStore" /* 5809 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5813 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4468 */;
 import UserRecord from "UserRecord" /* 1386 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import FrecencyStore from "FrecencyStore" /* 5814 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4462 */;
+import FrecencyStore from "FrecencyStore" /* 5816 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 4464 */;
 import GuildMemberStore from "GuildMemberStore" /* 2107 */;
 import GuildRoleStore from "GuildRoleStore" /* 2101 */;
 import GuildStore from "GuildStore" /* 2066 */;
 import MessageStore from "MessageStore" /* 5049 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
 import PresenceStore from "PresenceStore" /* 4869 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4650 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4652 */;
 import UserStore from "UserStore" /* 1372 */;
-import SKUStore from "SKUStore" /* 5815 */;
+import SKUStore from "SKUStore" /* 5817 */;
 
 const require = globalThis.__r;
 
@@ -416,30 +416,30 @@ function getCategoryName(parent_id, arg1) {
     return tmp2;
   }
 }
-const InAppNavigationRecord = fn(5748);
+const InAppNavigationRecord = fn(5750);
 ({ InAppNavigationRecord: hasOwnProperty, InAppNavigationType: metroRequire } = InAppNavigationRecord);
 const ChannelRecord = fn(2048);
 ({ ChannelRecordBase: map1, isGuildChannelType: closure_14, isGuildSelectableChannelType: closure_15, isGuildVocalChannelType: closure_16, isThread: closure_17, PrivateChannelRecord: closure_18, UnknownChannelRecord: closure_19 } = ChannelRecord);
 const isEveryoneRole = fn(2102).isEveryoneRole;
-let GuildChannelStore = fn(4462);
+let GuildChannelStore = fn(4464);
 const GUILD_SELECTABLE_CHANNELS_KEY = GuildChannelStore.GUILD_SELECTABLE_CHANNELS_KEY;
 const GUILD_VOCAL_CHANNELS_KEY = GuildChannelStore.GUILD_VOCAL_CHANNELS_KEY;
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1074);
 ({ Permissions: closure_38, GuildFeatures: closure_39, ChannelTypes } = Constants);
 ({ SKUTypes: closure_41, MAX_AUTOCOMPLETE_RESULTS: closure_42 } = Constants);
-fn(5820).AutocompleterResultTypes;
+fn(5822).AutocompleterResultTypes;
 const StaticChannelId = fn(2051).StaticChannelId;
 const logger = new LoggerDefault("AutocompleteUtils");
 let c46 = 10;
 let tmp7 = /(\t|\s)/;
 const re48 = tmp7;
 let closure_49 = [];
-const MENTION_EVERYONE = fn(5821).default.MENTION_EVERYONE;
-const MENTION_HERE = fn(5821).default.MENTION_HERE;
-const MENTION_GAME = fn(5821).default.MENTION_GAME;
-const MENTION_TIMESTAMP = fn(5821).default.MENTION_TIMESTAMP;
-const LAUNCHABLE_APPLICATIONS = fn(5821).default.LAUNCHABLE_APPLICATIONS;
+const MENTION_EVERYONE = fn(5823).default.MENTION_EVERYONE;
+const MENTION_HERE = fn(5823).default.MENTION_HERE;
+const MENTION_GAME = fn(5823).default.MENTION_GAME;
+const MENTION_TIMESTAMP = fn(5823).default.MENTION_TIMESTAMP;
+const LAUNCHABLE_APPLICATIONS = fn(5823).default.LAUNCHABLE_APPLICATIONS;
 class AutocompleteBoostersCache {
   constructor() {
     merged = Object.assign({ lastFrecencyVersion: null, lastRelationshipVersion: null, lastPrivateChannelsVersion: null, cache: null });
@@ -1862,12 +1862,12 @@ export default {
                     } else if (regex.test(value)) {
                       num4 = 7 * tmp9;
                     } else {
-                      let tmp18 = tmp7 !== flag(5573).StickerMetadataTypes.GUILD_NAME;
+                      let tmp18 = tmp7 !== flag(5575).StickerMetadataTypes.GUILD_NAME;
                       if (tmp18) {
-                        tmp18 = tmp7 !== flag(5573).StickerMetadataTypes.PACK_NAME;
+                        tmp18 = tmp7 !== flag(5575).StickerMetadataTypes.PACK_NAME;
                       }
                       if (tmp18) {
-                        tmp18 = tmp7 !== flag(5573).StickerMetadataTypes.STICKER_NAME;
+                        tmp18 = tmp7 !== flag(5575).StickerMetadataTypes.STICKER_NAME;
                       }
                       if (!tmp18) {
                         tmp18 = !regex2.test(value);
@@ -1904,7 +1904,7 @@ export default {
                   closure_2_5.push(obj);
                 }
               }
-              obj2 = flag(7667);
+              obj2 = flag(6750);
             }
           });
         });

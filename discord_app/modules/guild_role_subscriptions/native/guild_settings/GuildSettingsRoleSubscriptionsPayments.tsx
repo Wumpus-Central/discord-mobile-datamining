@@ -1,8 +1,8 @@
-// === Module 18341: GuildSettingsRoleSubscriptionsPayments ===
+// === Module 17572: GuildSettingsRoleSubscriptionsPayments ===
 
-// Module 18341 (GuildSettingsRoleSubscriptionsPayments)
+// Module 17572 (GuildSettingsRoleSubscriptionsPayments)
 import util from "util" /* 1115 */;
-import UnavailableNoticeDefault from "UnavailableNotice" /* 16971 */;
+import UnavailableNoticeDefault from "UnavailableNotice" /* 16161 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

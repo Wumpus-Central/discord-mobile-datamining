@@ -1,6 +1,6 @@
-// === Module 8436: MarkupEligibilityUtils ===
+// === Module 7526: MarkupEligibilityUtils ===
 
-// Module 8436 (MarkupEligibilityUtils)
+// Module 7526 (MarkupEligibilityUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import size from "module_2" /* 2 */;
 

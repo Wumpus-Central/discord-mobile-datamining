@@ -1,6 +1,6 @@
-// === Module 13082: HubEmailConnectionWaitlist ===
+// === Module 12232: HubEmailConnectionWaitlist ===
 
-// Module 13082 (HubEmailConnectionWaitlist)
+// Module 12232 (HubEmailConnectionWaitlist)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -27,13 +27,13 @@ export default function HubEmailConnectionWaitlist(school) {
         const intl = onClose(1115).intl;
         obj.text = intl.string(onClose(1115).t.cpT0Cq);
         obj.onPress = onPress;
-        return closure_2_6(onClose(7707).HeaderActionButton, obj);
+        return closure_2_6(onClose(6790).HeaderActionButton, obj);
       }
     });
   }, items);
   const obj2 = { style: tmp.container, children: null };
   let obj = onClose(1484);
-  const items1 = [closure_6(closure_5, { source: navigation(13083), style: tmp.header }), , , ];
+  const items1 = [closure_6(closure_5, { source: navigation(12233), style: tmp.header }), , , ];
   const obj4 = { style: tmp.title, accessibilityRole: "header", children: null };
   let intl = onClose(1115).intl;
   obj4.children = intl.string(onClose(1115).t.OaloU5);
@@ -47,7 +47,7 @@ export default function HubEmailConnectionWaitlist(school) {
   const intl3 = onClose(1115).intl;
   obj7.text = intl3.string(onClose(1115).t.i4jeWR);
   obj7.onPress = onClose;
-  obj6.children = closure_6(onClose(5273).Button, obj7);
+  obj6.children = closure_6(onClose(5274).Button, obj7);
   items1[3] = closure_6(closure_4, obj6);
   obj2.children = items1;
   return closure_7(closure_4, obj2);

@@ -1,21 +1,21 @@
-// === Module 11726: WasThisHelpfulSection ===
+// === Module 10908: WasThisHelpfulSection ===
 
-// Module 11726 (WasThisHelpfulSection)
+// Module 10908 (WasThisHelpfulSection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4523 */;
-import _modDef9598 from "module_9598" /* 9598 */;
-import ShieldIcon from "ShieldIcon" /* 9599 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11719 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11720 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4525 */;
+import _modDef8696 from "module_8696" /* 8696 */;
+import ShieldIcon from "ShieldIcon" /* 8697 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 10899 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 10900 */;
 import noop from "module_19" /* 19 */;
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 11267 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10365 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_7 = fn(11267).SafetyWarningFeedbackTypes;
-const Constants = fn(11712);
+let closure_7 = fn(10365).SafetyWarningFeedbackTypes;
+const Constants = fn(10892);
 ({ DOWNVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: closure_8, TOAST_SHIELD_ICON_COLOR: closure_9, UPVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: c10, FEEDBACK_BUTTON_ACTIVE_BACKGROUND_COLOR } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -66,7 +66,7 @@ export default function WasThisHelpfulSection(channelId) {
     const obj3 = { key: feedbackType === constants.UPVOTE ? closure_2_10 : React6, content: null, icon: null, IconComponent: null, iconColor: null, containerStyle: null, recolorLegacyIcon: true };
     const intl = util.intl;
     obj3.content = intl.string(util.t["gd/Yqs"]);
-    obj3.icon = _modDef9598;
+    obj3.icon = _modDef8696;
     obj3.IconComponent = ShieldIcon.ShieldIcon;
     obj3.iconColor = iconColor;
     obj3.containerStyle = toastContainer.toastContainer;

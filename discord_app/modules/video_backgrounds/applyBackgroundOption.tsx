@@ -1,16 +1,16 @@
-// === Module 10001: applyBackgroundOption ===
+// === Module 9099: applyBackgroundOption ===
 
-// Module 10001 (applyBackgroundOption)
+// Module 9099 (applyBackgroundOption)
 import AvatarUtils from "AvatarUtils" /* 1397 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4884 */;
-import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 10004 */;
-import LastUsedVideoBackgroundOption from "LastUsedVideoBackgroundOption" /* 10006 */;
-import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 10007 */;
-import getFilterImageDefault from "getFilterImage" /* 10012 */;
-import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 10013 */;
+import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 9101 */;
+import LastUsedVideoBackgroundOption from "LastUsedVideoBackgroundOption" /* 9103 */;
+import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 9105 */;
+import getFilterImageDefault from "getFilterImage" /* 9110 */;
+import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 9111 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1372 */;
-import VideoBackgroundStore from "VideoBackgroundStore" /* 10002 */;
+import VideoBackgroundStore from "VideoBackgroundStore" /* 9100 */;
 
 require = fn;
 let closure_9 = async function _getFilterBlob() {
@@ -252,7 +252,7 @@ let closure_15 = async function _applyBackgroundOptionPreview(arg0, arg1, arg2) 
   iter.next();
   return iter;
 };
-const VideoBackgroundConstants = fn(7320);
+const VideoBackgroundConstants = fn(6403);
 ({ BACKGROUND_REPLACEMENT_SIZE: metroRequire, BLUR_BACKGROUND_OPTION: closure_7 } = VideoBackgroundConstants);
 const NOOP = fn(1074).NOOP;
 const size = fn(2);

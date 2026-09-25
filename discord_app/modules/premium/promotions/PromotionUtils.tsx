@@ -1,16 +1,16 @@
-// === Module 13792: PromotionUtils ===
+// === Module 12946: PromotionUtils ===
 
-// Module 13792 (PromotionUtils)
+// Module 12946 (PromotionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import FlagUtils from "FlagUtils" /* 1385 */;
 import dismissible_content from "dismissible_content" /* 2028 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 2030 */;
-import constants from "constants" /* 11045 */;
+import constants from "constants" /* 10149 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
-import PromotionRecord from "PromotionRecord" /* 11014 */;
-import PromotionsStore from "PromotionsStore" /* 11013 */;
+import PromotionRecord from "PromotionRecord" /* 10118 */;
+import PromotionsStore from "PromotionsStore" /* 10117 */;
 
 require = fn;
 function claimedOutboundPromotionCodeFromServer(code) {

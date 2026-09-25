@@ -1,6 +1,6 @@
-// === Module 13679: GuildActionSheetMemberCount ===
+// === Module 12833: GuildActionSheetMemberCount ===
 
-// Module 13679 (GuildActionSheetMemberCount)
+// Module 12833 (GuildActionSheetMemberCount)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4825 */;

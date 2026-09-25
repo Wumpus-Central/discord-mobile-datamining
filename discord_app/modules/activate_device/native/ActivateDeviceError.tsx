@@ -1,11 +1,11 @@
-// === Module 14252: ActivateDeviceError ===
+// === Module 13413: ActivateDeviceError ===
 
-// Module 14252 (ActivateDeviceError)
+// Module 13413 (ActivateDeviceError)
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import components_Button_Button from "components/Button/Button" /* 5273 */;
-import _modDef9452 from "module_9452" /* 9452 */;
-import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles" /* 14250 */;
+import components_Button_Button from "components/Button/Button" /* 5274 */;
+import _modDef8550 from "module_8550" /* 8550 */;
+import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles" /* 13411 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ const result = size.fileFinishedImporting("modules/activate_device/native/Activa
 
 export const ActivateDeviceError = function ActivateDeviceError(onRetry) {
   const obj = { children: null };
-  const obj2 = { source: _modDef9452, style: closure_8().image };
+  const obj2 = { source: _modDef8550, style: closure_8().image };
   const items = [hasOwnProperty(React3, obj2), , ];
   const obj3 = { style: ActivateDeviceSharedStylesDefault.innerContent, children: null };
   const obj4 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: ActivateDeviceSharedStylesDefault.centerText, children: null };

@@ -1,12 +1,12 @@
-// === Module 7270: FreeFormTextInput ===
+// === Module 6353: FreeFormTextInput ===
 
-// Module 7270 (FreeFormTextInput)
+// Module 6353 (FreeFormTextInput)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Pressables from "Pressables" /* 5427 */;
-import _modDef7271 from "module_7271" /* 7271 */;
+import Pressables from "Pressables" /* 5428 */;
+import _modDef6354 from "module_6354" /* 6354 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ function ClearButton(onPress) {
   obj.onPress = onPress.onPress;
   obj.hitSlop = { top: 8, bottom: 8, right: 8 };
   const tmp = closure_9();
-  obj.children = React5(native.Icon, { source: _modDef7271, style: closure_9().closeIcon, size: native.Icon.Sizes.MEDIUM });
+  obj.children = React5(native.Icon, { source: _modDef6354, style: closure_9().closeIcon, size: native.Icon.Sizes.MEDIUM });
   return React5(Pressables.PressableOpacity, obj);
 }
 get_ActivityIndicator = fn(17);

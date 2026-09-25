@@ -1,23 +1,23 @@
-// === Module 16651: TextChannel ===
+// === Module 15831: TextChannel ===
 
-// Module 16651 (TextChannel)
+// Module 15831 (TextChannel)
 import nativeDefault from "native" /* 576 */;
 import RoutingSourcesDefault from "RoutingSources" /* 1113 */;
 import transitionToChannel from "transitionToChannel" /* 4840 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4842 */;
-import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 5306 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11265 */;
+import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 5307 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10363 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
 import GatedChannelStore from "GatedChannelStore" /* 2099 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
 import ReadStateStore from "ReadStateStore" /* 4844 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5010 */;
 
 require = fn;
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(10464);
+const RedesignChannelListConstants = fn(9566);
 ({ CHANNEL_MARGIN_VERTICAL: closure_11, CHANNEL_TITLE_LINE_HEIGHT: closure_12 } = RedesignChannelListConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);

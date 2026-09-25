@@ -1,9 +1,9 @@
-// === Module 17904: LabelLayoutComponent ===
+// === Module 17130: LabelLayoutComponent ===
 
-// Module 17904 (LabelLayoutComponent)
+// Module 17130 (LabelLayoutComponent)
 import Server from "Server" /* 1978 */;
-import Input from "Input" /* 6937 */;
-import ComponentStateContext from "ComponentStateContext" /* 8471 */;
+import Input from "Input" /* 6020 */;
+import ComponentStateContext from "ComponentStateContext" /* 7561 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

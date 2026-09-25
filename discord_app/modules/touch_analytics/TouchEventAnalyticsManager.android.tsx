@@ -1,8 +1,8 @@
-// === Module 14923: TouchEventAnalyticsManager ===
+// === Module 14085: TouchEventAnalyticsManager ===
 
-// Module 14923 (TouchEventAnalyticsManager)
+// Module 14085 (TouchEventAnalyticsManager)
 import ZoomedInAnalyticsExperiment from "ZoomedInAnalyticsExperiment" /* 1984 */;
-import NativeTouchEventAnalyticsModuleDefault from "NativeTouchEventAnalyticsModule" /* 14924 */;
+import NativeTouchEventAnalyticsModuleDefault from "NativeTouchEventAnalyticsModule" /* 14086 */;
 import UserStore from "UserStore" /* 1372 */;
 import LifecycleManager from "LifecycleManager" /* 1982 */;
 

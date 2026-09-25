@@ -1,6 +1,6 @@
-// === Module 8287: AutomodErrorUtils ===
+// === Module 7376: AutomodErrorUtils ===
 
-// Module 8287 (AutomodErrorUtils)
+// Module 7376 (AutomodErrorUtils)
 import util from "util" /* 1115 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 

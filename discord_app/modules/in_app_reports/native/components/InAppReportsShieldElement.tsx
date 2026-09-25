@@ -1,7 +1,7 @@
-// === Module 9006: InAppReportsShieldElement ===
+// === Module 8100: InAppReportsShieldElement ===
 
-// Module 9006 (InAppReportsShieldElement)
-import native from "native" /* 5997 */;
+// Module 8100 (InAppReportsShieldElement)
+import ShieldSpotIllustration from "ShieldSpotIllustration" /* 7864 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,8 +18,8 @@ export default function ShieldElement(element) {
   if (null != element) {
     tmp2 = null;
     if ("success" === element.type) {
-      const obj = { style: tmp.container, children: jsx(native.ShieldSpotIllustration, { width: 100, height: 100 }) };
-      tmp2 = <View style={tmp.container}>{jsx(native.ShieldSpotIllustration, { width: 100, height: 100 })}</View>;
+      const obj = { style: tmp.container, children: jsx(ShieldSpotIllustration.ShieldSpotIllustration, { width: 100, height: 100 }) };
+      tmp2 = <View style={tmp.container}>{jsx(ShieldSpotIllustration.ShieldSpotIllustration, { width: 100, height: 100 })}</View>;
     }
   }
   return tmp2;

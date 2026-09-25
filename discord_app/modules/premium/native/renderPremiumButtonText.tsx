@@ -1,10 +1,10 @@
-// === Module 13935: renderPremiumButtonText ===
+// === Module 13094: renderPremiumButtonText ===
 
-// Module 13935 (renderPremiumButtonText)
+// Module 13094 (renderPremiumButtonText)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4483 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4485 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -82,7 +82,7 @@ const jsxProd = fn(21);
 const createStyles = fn(4829);
 let obj2 = { discount: null, premiumText: null };
 let obj3 = { borderWidth: 1, borderColor: null, borderRadius: 2, marginLeft: 4, paddingHorizontal: 2 };
-const ColorUtils = fn(4678);
+const ColorUtils = fn(4680);
 obj3.borderColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.3);
 obj2.discount = obj3;
 obj2.premiumText = { flexDirection: "row" };

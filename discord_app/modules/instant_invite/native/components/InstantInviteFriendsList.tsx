@@ -1,16 +1,16 @@
-// === Module 10239: InstantInviteFriendsList ===
+// === Module 9336: InstantInviteFriendsList ===
 
-// Module 10239 (InstantInviteFriendsList)
+// Module 9336 (InstantInviteFriendsList)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import RootNavigationRef from "RootNavigationRef" /* 4687 */;
+import RootNavigationRef from "RootNavigationRef" /* 4689 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import Pressables from "Pressables" /* 5427 */;
-import InstantInviteRowDefault from "InstantInviteRow" /* 10240 */;
+import Pressables from "Pressables" /* 5428 */;
+import InstantInviteRowDefault from "InstantInviteRow" /* 9337 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 5829 */;
+import TextStyles_mod from "TextStyles" /* 5831 */;
 
 require = fn;
 function keyExtractor(item) {

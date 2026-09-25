@@ -1,6 +1,6 @@
-// === Module 18448: ErrorScreen ===
+// === Module 17680: ErrorScreen ===
 
-// Module 18448 (ErrorScreen)
+// Module 17680 (ErrorScreen)
 import nativeDefault from "native" /* 576 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;

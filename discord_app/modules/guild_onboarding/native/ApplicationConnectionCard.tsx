@@ -1,9 +1,9 @@
-// === Module 7494: ApplicationConnectionCard ===
+// === Module 6577: ApplicationConnectionCard ===
 
-// Module 7494 (ApplicationConnectionCard)
+// Module 6577 (ApplicationConnectionCard)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5009 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 7496 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6579 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 5056 */;
 

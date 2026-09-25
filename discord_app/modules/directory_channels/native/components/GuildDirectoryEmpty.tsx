@@ -1,11 +1,11 @@
-// === Module 13102: GuildDirectoryEmpty ===
+// === Module 12252: GuildDirectoryEmpty ===
 
-// Module 13102 (GuildDirectoryEmpty)
+// Module 12252 (GuildDirectoryEmpty)
 import nativeDefault from "native" /* 576 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 10167 */;
-import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 12651 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9264 */;
+import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 11777 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4462 */;
+import GuildChannelStore from "GuildChannelStore" /* 4464 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -33,12 +33,12 @@ export default function GuildDirectoryEmpty(guild) {
   const obj = guild(504);
   const obj3 = { contentContainerStyle: null, children: null };
   const items1 = [tmp.container, ];
-  const obj2 = guild(12650);
+  const obj2 = guild(11776);
   items1[1] = { paddingBottom: channel(1612)().bottom + 16 };
   obj3.contentContainerStyle = items1;
   const obj5 = { source: null, style: null };
   const canCreateOrAddGuildInDirectory = obj2.useCanCreateOrAddGuildInDirectory(channel);
-  obj5.source = channel(13103);
+  obj5.source = channel(12253);
   obj5.style = tmp.header;
   const items2 = [closure_7(closure_3, obj5), , , , ];
   const obj6 = { style: tmp.title, accessibilityRole: "header", children: null };
@@ -56,12 +56,12 @@ export default function GuildDirectoryEmpty(guild) {
       onPress() {
           return GuildDirectoryAddModalActionCreatorsDefault.open({ directoryGuildName: guild.name, directoryGuildId: guild.id, directoryChannelId: channel.id });
         },
-      iconSource: tmp2(13104),
+      iconSource: tmp2(12254),
       title: null
     };
     const intl3 = tmp4(1115).intl;
     obj9.title = intl3.string(tmp4(1115).t.hyK15i);
-    tmp8Result = closure_7(tmp4(8951).FormCTA, obj9);
+    tmp8Result = closure_7(tmp4(8045).FormCTA, obj9);
   }
   items2[3] = tmp8Result;
   const obj10 = {
@@ -69,12 +69,12 @@ export default function GuildDirectoryEmpty(guild) {
     onPress() {
       return instant_invite_InstantInviteUtils.handleOpenInviteActionsheet(guild, channel.id, closure_2, constants.HUB_EMPTY_STATE);
     },
-    iconSource: channel(13105),
+    iconSource: channel(12255),
     title: null
   };
   const intl4 = tmp4(1115).intl;
   obj10.title = intl4.string(guild(1115).t.L4bwJ9);
-  items2[4] = closure_7(guild(8951).FormCTA, obj10);
+  items2[4] = closure_7(guild(8045).FormCTA, obj10);
   obj3.children = items2;
   return closure_8(closure_4, obj3);
 };

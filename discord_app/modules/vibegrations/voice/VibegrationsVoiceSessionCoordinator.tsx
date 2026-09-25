@@ -1,12 +1,12 @@
-// === Module 14834: VibegrationsVoiceSessionCoordinator ===
+// === Module 13996: VibegrationsVoiceSessionCoordinator ===
 
-// Module 14834 (VibegrationsVoiceSessionCoordinator)
-import RPCErrorDefault from "RPCError" /* 9664 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9995 */;
-import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 14193 */;
-import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 14837 */;
-import FrameVisibilityStore from "FrameVisibilityStore" /* 14835 */;
-import FramesStore from "FramesStore" /* 9393 */;
+// Module 13996 (VibegrationsVoiceSessionCoordinator)
+import RPCErrorDefault from "RPCError" /* 8762 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9093 */;
+import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 13354 */;
+import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 13999 */;
+import FrameVisibilityStore from "FrameVisibilityStore" /* 13997 */;
+import FramesStore from "FramesStore" /* 8491 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4852 */;
@@ -287,7 +287,7 @@ prototype["update"] = function update(id, id, arg2, arr) {
             if (!set.has(user_id)) {
               set.add(user_id);
               obj2 = { userId: user_id, position: null };
-              obj2.position = obj2(14836).toListenerRelativePosition(closure_0, user_id.position);
+              obj2.position = obj2(13998).toListenerRelativePosition(closure_0, user_id.position);
               return obj2;
             }
           }

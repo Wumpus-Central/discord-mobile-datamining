@@ -1,12 +1,12 @@
-// === Module 17564: ParentalConsentWarningBanner ===
+// === Module 16788: ParentalConsentWarningBanner ===
 
-// Module 17564 (ParentalConsentWarningBanner)
+// Module 16788 (ParentalConsentWarningBanner)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import openUserSettings from "openUserSettings" /* 7712 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7869 */;
-import tinycolorDefault from "tinycolor" /* 7882 */;
+import openUserSettings from "openUserSettings" /* 6795 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 6954 */;
+import tinycolorDefault from "tinycolor" /* 6967 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
-const FamilyCenterSubPages = fn(7868).FamilyCenterSubPages;
+const FamilyCenterSubPages = fn(6953).FamilyCenterSubPages;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, UserSettingsSections: closure_9, VerticalGradient: c10 } = Constants);
 const jsxProd = fn(21);

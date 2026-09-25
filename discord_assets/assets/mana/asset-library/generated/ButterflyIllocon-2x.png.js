@@ -1,6 +1,6 @@
-// === Module 6149: ? ===
+// === Module 16338: ? ===
 
-// Module 6149
+// Module 16338
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ButterflyIllocon-2x.png.js");

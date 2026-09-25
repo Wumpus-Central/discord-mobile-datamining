@@ -1,9 +1,9 @@
-// === Module 12963: TabItem ===
+// === Module 12094: TabItem ===
 
-// Module 12963 (TabItem)
+// Module 12094 (TabItem)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4561 */;
-import spring from "spring" /* 5272 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4563 */;
+import spring from "spring" /* 5273 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
@@ -14,12 +14,12 @@ function TabItemCount(arg0) {
   let sharedValue;
   ({ count, variant } = arg0);
   const tmp = closure_9();
-  sharedValue = sharedValue(4561).useSharedValue(0);
+  sharedValue = sharedValue(4563).useSharedValue(0);
   let items = [sharedValue];
   const layoutEffect = noop.useLayoutEffect(() => {
     const result = sharedValue.set(1);
   }, items);
-  let obj = sharedValue(4561);
+  let obj = sharedValue(4563);
   class T {
     constructor() {
       obj = { opacity: null, transform: null };
@@ -35,8 +35,8 @@ function TabItemCount(arg0) {
       return obj;
     }
   }
-  let obj2 = sharedValue(4561);
-  T.__closure = { withSpring: sharedValue(5272).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(4561).interpolate };
+  let obj2 = sharedValue(4563);
+  T.__closure = { withSpring: sharedValue(5273).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(4563).interpolate };
   T.__workletHash = 16666672974627;
   T.__initData = __initData2;
   closure_129_0 = index;
@@ -49,7 +49,7 @@ function TabItemCount(arg0) {
     tmp7 = closure_11();
   }
   closure_129_3 = tmp7;
-  let obj3 = { withSpring: sharedValue(5272).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(4561).interpolate };
+  let obj3 = { withSpring: sharedValue(5273).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(4563).interpolate };
   const fn = function c() {
     let active = inactive.inactive;
     value = setItemDimensions.get();
@@ -65,8 +65,8 @@ function TabItemCount(arg0) {
     obj.color = spring.withSpring(active, closure_7, "animate-always");
     return obj;
   };
-  const tmp2Result = sharedValue(4561);
-  fn.__closure = { colors: tmp7, pressed, index, activeIndex, withSpring: sharedValue(5272).withSpring, TEXT_SPRING_CONFIG };
+  const tmp2Result = sharedValue(4563);
+  fn.__closure = { colors: tmp7, pressed, index, activeIndex, withSpring: sharedValue(5273).withSpring, TEXT_SPRING_CONFIG };
   fn.__workletHash = 11643476765161;
   fn.__initData = __initData;
   const animatedStyle1 = tmp2Result.useAnimatedStyle(fn);

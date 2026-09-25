@@ -1,9 +1,9 @@
-// === Module 14454: Ellipsis ===
+// === Module 13615: Ellipsis ===
 
-// Module 14454 (Ellipsis)
+// Module 13615 (Ellipsis)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
 import timing from "timing" /* 4830 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4821 */;

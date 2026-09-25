@@ -1,8 +1,8 @@
-// === Module 9976: SegmentedControlItem ===
+// === Module 9074: SegmentedControlItem ===
 
-// Module 9976 (SegmentedControlItem)
+// Module 9074 (SegmentedControlItem)
 import nativeDefault from "native" /* 576 */;
-import spring from "spring" /* 5272 */;
+import spring from "spring" /* 5273 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

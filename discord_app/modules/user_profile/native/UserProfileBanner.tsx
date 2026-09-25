@@ -1,7 +1,7 @@
-// === Module 8594: UserProfileBanner ===
+// === Module 7684: UserProfileBanner ===
 
-// Module 8594 (UserProfileBanner)
-import BannerDefault from "Banner" /* 8602 */;
+// Module 7684 (UserProfileBanner)
+import BannerDefault from "Banner" /* 7692 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,22 +1,22 @@
-// === Module 18417: go_live/ApplicationStreamingManager ===
+// === Module 17648: go_live/ApplicationStreamingManager ===
 
-// Module 18417 (go_live/ApplicationStreamingManager)
+// Module 17648 (go_live/ApplicationStreamingManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import Timers from "Timers" /* 2039 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 4881 */;
 import StreamActionCreators from "StreamActionCreators" /* 4971 */;
-import AVError from "AVError" /* 9769 */;
-import AVErrorContext from "AVErrorContext" /* 18397 */;
+import AVError from "AVError" /* 8867 */;
+import AVErrorContext from "AVErrorContext" /* 17628 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4851 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4748 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4750 */;
 import RTCRegionStore from "RTCRegionStore" /* 4879 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
 import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4868 */;
 import UserStore from "UserStore" /* 1372 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7451 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6534 */;
 
 require = fn;
 function updateRegion(encodeStreamKeyResult, preferredRegion) {

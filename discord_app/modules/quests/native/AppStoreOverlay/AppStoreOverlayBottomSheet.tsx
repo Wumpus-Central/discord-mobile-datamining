@@ -1,10 +1,10 @@
-// === Module 11842: AppStoreOverlayBottomSheet ===
+// === Module 10711: AppStoreOverlayBottomSheet ===
 
-// Module 11842 (AppStoreOverlayBottomSheet)
-import openURLDefault from "openURL" /* 4514 */;
-import AnalyticsActions from "AnalyticsActions" /* 8041 */;
-import AppStoreOverlayContent from "AppStoreOverlayContent" /* 11839 */;
-import AppStoreOverlayBody from "AppStoreOverlayBody" /* 11843 */;
+// Module 10711 (AppStoreOverlayBottomSheet)
+import openURLDefault from "openURL" /* 4516 */;
+import AnalyticsActions from "AnalyticsActions" /* 7126 */;
+import AppStoreOverlayContent from "AppStoreOverlayContent" /* 10708 */;
+import AppStoreOverlayBody from "AppStoreOverlayBody" /* 10712 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

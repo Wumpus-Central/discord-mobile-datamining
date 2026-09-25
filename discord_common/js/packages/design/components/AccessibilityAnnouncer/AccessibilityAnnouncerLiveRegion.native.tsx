@@ -1,13 +1,13 @@
-// === Module 4537: AccessibilityAnnouncerLiveRegion ===
+// === Module 4539: AccessibilityAnnouncerLiveRegion ===
 
-// Module 4537 (AccessibilityAnnouncerLiveRegion)
+// Module 4539 (AccessibilityAnnouncerLiveRegion)
 import noop from "module_19" /* 19 */;
 
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, Text: closure_0 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const module_4538 = fn(4538);
-const state = module_4538.create(() => ({ message: "ip", version: false }));
+const module_4540 = fn(4540);
+const state = module_4540.create(() => ({ message: "disabled", version: false }));
 const liveRegion = StyleSheet.create({ liveRegion: { position: "absolute", top: 0, left: 0, width: 1, height: 1, opacity: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncerLiveRegion.native.tsx");

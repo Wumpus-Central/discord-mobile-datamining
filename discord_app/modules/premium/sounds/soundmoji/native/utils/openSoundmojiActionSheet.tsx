@@ -1,16 +1,16 @@
-// === Module 12273: openSoundmojiActionSheet ===
+// === Module 11399: openSoundmojiActionSheet ===
 
-// Module 12273 (openSoundmojiActionSheet)
+// Module 11399 (openSoundmojiActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
-import SoundmojiRenderingExperiment from "SoundmojiRenderingExperiment" /* 5317 */;
+import SoundmojiRenderingExperiment from "SoundmojiRenderingExperiment" /* 5318 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/native/utils/openSoundmojiActionSheet.tsx");
 
 export default function openSoundmojiActionSheet(arg0) {
   if (obj.getSoundmojiRenderingExperiment({ location: "openSoundmojiActionSheet" })) {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12274, dependencyMap.paths), "soundmoji_actionsheet_key", arg0);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11400, dependencyMap.paths), "soundmoji_actionsheet_key", arg0);
   }
   obj = SoundmojiRenderingExperiment;
 };

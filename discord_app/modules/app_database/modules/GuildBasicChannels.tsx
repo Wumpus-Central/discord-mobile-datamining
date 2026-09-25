@@ -1,18 +1,18 @@
-// === Module 7971: GuildBasicChannels ===
+// === Module 7056: GuildBasicChannels ===
 
-// Module 7971 (GuildBasicChannels)
+// Module 7056 (GuildBasicChannels)
 import LoggerDefault from "Logger" /* 3 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 2073 */;
-import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4473 */;
+import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4475 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5582 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5584 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import GuildRoleStore from "GuildRoleStore" /* 2101 */;
 import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
 import BasicChannelCacheStore from "BasicChannelCacheStore" /* 2045 */;
 
 const require = fn;

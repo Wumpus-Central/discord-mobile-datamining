@@ -1,11 +1,11 @@
-// === Module 14979: EditUserProfileAvatar ===
+// === Module 14141: EditUserProfileAvatar ===
 
-// Module 14979 (EditUserProfileAvatar)
+// Module 14141 (EditUserProfileAvatar)
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
 import timing from "timing" /* 4830 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8514 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 7604 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4821 */;
 
@@ -86,7 +86,7 @@ export default function EditUserProfileAvatar(user) {
       showRemoveAvatar: null
     };
     let obj = ActionSheetActionCreatorsDefault;
-    const tmp = asyncRequireImpl(14981, dependencyMap.paths);
+    const tmp = asyncRequireImpl(14143, dependencyMap.paths);
     obj2.showRemoveAvatar = ProfileCustomizationUtils.showRemoveAvatar(pendingAvatar, user.avatar);
     obj.openLazy(tmp, "Change Avatar", obj2);
   }, items);

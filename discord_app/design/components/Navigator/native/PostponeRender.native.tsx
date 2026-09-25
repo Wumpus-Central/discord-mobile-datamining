@@ -1,10 +1,10 @@
-// === Module 7370: PostponeRender ===
+// === Module 6453: PostponeRender ===
 
-// Module 7370 (PostponeRender)
+// Module 6453 (PostponeRender)
 import nativeDefault from "native" /* 576 */;
-import useMountEffectDefault from "useMountEffect" /* 5290 */;
-import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5883 */;
-import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7371 */;
+import useMountEffectDefault from "useMountEffect" /* 5291 */;
+import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5885 */;
+import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 6454 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -43,7 +43,7 @@ export const PostponeRender = function PostponeRender(children) {
     }
   });
   if (first) {
-    children = jsx(first(7372).SceneLoadingIndicator, {});
+    children = jsx(first(6455).SceneLoadingIndicator, {});
   }
   if (ignoreKeyboard) {
     let tmp4Result = closure_5;

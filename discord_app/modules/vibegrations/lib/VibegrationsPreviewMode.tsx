@@ -1,6 +1,6 @@
-// === Module 17059: VibegrationsPreviewMode ===
+// === Module 16249: VibegrationsPreviewMode ===
 
-// Module 17059 (VibegrationsPreviewMode)
+// Module 16249 (VibegrationsPreviewMode)
 import util from "util" /* 1115 */;
 import _modDef3714 from "module_3714" /* 3714 */;
 import size from "module_2" /* 2 */;

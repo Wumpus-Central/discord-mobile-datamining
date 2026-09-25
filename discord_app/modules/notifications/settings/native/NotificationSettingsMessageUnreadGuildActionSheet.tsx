@@ -1,10 +1,10 @@
-// === Module 10513: NotificationSettingsMessageUnreadGuildActionSheet ===
+// === Module 9615: NotificationSettingsMessageUnreadGuildActionSheet ===
 
-// Module 10513 (NotificationSettingsMessageUnreadGuildActionSheet)
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7447 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7452 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10495 */;
-import NotificationSettingsMessageUnreadActionSheetDefault from "NotificationSettingsMessageUnreadActionSheet" /* 10514 */;
+// Module 9615 (NotificationSettingsMessageUnreadGuildActionSheet)
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6530 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6535 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 9597 */;
+import NotificationSettingsMessageUnreadActionSheetDefault from "NotificationSettingsMessageUnreadActionSheet" /* 9616 */;
 import noop from "module_19" /* 19 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5010 */;
 

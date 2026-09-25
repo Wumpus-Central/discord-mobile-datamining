@@ -2,7 +2,7 @@
 
 // Module 4775 (CopyIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4525 */;
+import BaseIconImage from "BaseIconImage" /* 4527 */;
 import _mod4776 from "module_4776" /* 4776 */;
 import noop from "module_19" /* 19 */;
 

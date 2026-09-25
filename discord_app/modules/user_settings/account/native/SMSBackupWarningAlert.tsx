@@ -1,8 +1,8 @@
-// === Module 7410: SMSBackupWarningAlert ===
+// === Module 6493: SMSBackupWarningAlert ===
 
-// Module 7410 (SMSBackupWarningAlert)
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5196 */;
-import common_AlertDefault from "common/Alert" /* 5292 */;
+// Module 6493 (SMSBackupWarningAlert)
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5197 */;
+import common_AlertDefault from "common/Alert" /* 5293 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

@@ -1,11 +1,11 @@
-// === Module 12979: ChatBeginningRowJoinApplication ===
+// === Module 12110: ChatBeginningRowJoinApplication ===
 
-// Module 12979 (ChatBeginningRowJoinApplication)
+// Module 12110 (ChatBeginningRowJoinApplication)
 import nativeDefault from "native" /* 576 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4653 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4655 */;
 import Text_Text from "Text/Text" /* 4825 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;

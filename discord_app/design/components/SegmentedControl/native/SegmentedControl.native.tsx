@@ -1,9 +1,9 @@
-// === Module 9975: SegmentedControl ===
+// === Module 9073: SegmentedControl ===
 
-// Module 9975 (SegmentedControl)
+// Module 9073 (SegmentedControl)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
-import spring from "spring" /* 5272 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
+import spring from "spring" /* 5273 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

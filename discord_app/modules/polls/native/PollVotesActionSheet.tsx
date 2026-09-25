@@ -1,6 +1,6 @@
-// === Module 12057: PollVotesActionSheet ===
+// === Module 11202: PollVotesActionSheet ===
 
-// Module 12057 (PollVotesActionSheet)
+// Module 11202 (PollVotesActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
@@ -8,18 +8,18 @@ import useThemeDefault from "useTheme" /* 4763 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
 import Text_Text from "Text/Text" /* 4825 */;
 import timing from "timing" /* 4830 */;
-import Pressables from "Pressables" /* 5427 */;
-import EmojiDefault from "Emoji" /* 7463 */;
-import PollsUtils from "PollsUtils" /* 8090 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8527 */;
-import formatPollMessageChatData from "formatPollMessageChatData" /* 12058 */;
-import _modDef12065 from "module_12065" /* 12065 */;
-import _modDef12066 from "module_12066" /* 12066 */;
+import Pressables from "Pressables" /* 5428 */;
+import EmojiDefault from "Emoji" /* 6546 */;
+import PollsUtils from "PollsUtils" /* 7175 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7617 */;
+import formatPollMessageChatData from "formatPollMessageChatData" /* 11203 */;
+import _modDef11210 from "module_11210" /* 11210 */;
+import _modDef11211 from "module_11211" /* 11211 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4821 */;
-import EmojiStore from "EmojiStore" /* 5764 */;
+import EmojiStore from "EmojiStore" /* 5766 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import MessageStore from "MessageStore" /* 5049 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -311,9 +311,9 @@ function NoResults() {
   const obj2 = { style: tmp.noResultsImage, source: null };
   const tmp4 = useThemeDefault();
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef12065;
+    let tmp2Result = _modDef11210;
   } else {
-    tmp2Result = _modDef12066;
+    tmp2Result = _modDef11211;
   }
   obj2.source = tmp2Result;
   const items = [closure_1_14(timestampProducer, obj2), , ];

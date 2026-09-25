@@ -1,9 +1,9 @@
-// === Module 13044: SkipHeaderButton ===
+// === Module 12175: SkipHeaderButton ===
 
-// Module 13044 (SkipHeaderButton)
+// Module 12175 (SkipHeaderButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import HeaderShared from "HeaderShared" /* 8194 */;
+import HeaderShared from "HeaderShared" /* 7283 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

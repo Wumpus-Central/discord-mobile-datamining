@@ -1,11 +1,11 @@
-// === Module 18246: WarningNotice ===
+// === Module 17477: WarningNotice ===
 
-// Module 18246 (WarningNotice)
+// Module 17477 (WarningNotice)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import components_Button_Button from "components/Button/Button" /* 5273 */;
-import FastImageDefault from "FastImage" /* 5892 */;
-import _modDef5902 from "module_5902" /* 5902 */;
+import components_Button_Button from "components/Button/Button" /* 5274 */;
+import FastImageDefault from "FastImage" /* 5894 */;
+import _modDef5904 from "module_5904" /* 5904 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,7 +32,7 @@ export default function WarningNotice(arg0) {
   ({ container: arr[1], containerYellow: arr[2] } = tmp);
   obj.style = items;
   const obj2 = { style: tmp.horizontalContainer, children: null };
-  const obj3 = { style: tmp.alertIcon, source: _modDef5902 };
+  const obj3 = { style: tmp.alertIcon, source: _modDef5904 };
   const items1 = [React4(FastImageDefault, obj3), ];
   const obj4 = { style: null, variant: "text-sm/medium", color: "interactive-text-active", children: notice };
   const items2 = [, ];

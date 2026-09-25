@@ -1,8 +1,8 @@
-// === Module 8806: MethodPathIcon ===
+// === Module 7900: MethodPathIcon ===
 
-// Module 8806 (MethodPathIcon)
+// Module 7900 (MethodPathIcon)
 import nativeDefault from "native" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8807 */;
+import inlineStyles from "inlineStyles" /* 7901 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

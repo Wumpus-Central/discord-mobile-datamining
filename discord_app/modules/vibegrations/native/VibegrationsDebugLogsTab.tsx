@@ -1,14 +1,14 @@
-// === Module 17161: VibegrationsDebugLogsTab ===
+// === Module 16376: VibegrationsDebugLogsTab ===
 
-// Module 17161 (VibegrationsDebugLogsTab)
+// Module 16376 (VibegrationsDebugLogsTab)
 import nativeDefault from "native" /* 576 */;
 import _modDef3714 from "module_3714" /* 3714 */;
-import VibegrationsDebugJson from "VibegrationsDebugJson" /* 17162 */;
-import VibegrationsDebugFormat from "VibegrationsDebugFormat" /* 17163 */;
-import VibegrationsDebugLabels from "VibegrationsDebugLabels" /* 17164 */;
+import VibegrationsDebugJson from "VibegrationsDebugJson" /* 16377 */;
+import VibegrationsDebugFormat from "VibegrationsDebugFormat" /* 16378 */;
+import VibegrationsDebugLabels from "VibegrationsDebugLabels" /* 16379 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 9389 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8487 */;
 
 require = fn;
 function keyOf(key) {
@@ -40,15 +40,15 @@ let closure_11 = noop.memo((entry) => {
     str = "text-feedback-critical";
   }
   if (expanded) {
-    let ChevronSmallRightIcon = tmp3(11506).ChevronSmallDownIcon;
+    let ChevronSmallRightIcon = tmp3(10604).ChevronSmallDownIcon;
     let tmp6 = tmp3;
   } else {
-    ChevronSmallRightIcon = tmp3(7542).ChevronSmallRightIcon;
+    ChevronSmallRightIcon = tmp3(6625).ChevronSmallRightIcon;
     tmp6 = tmp3;
   }
   const obj = { style: tmp.row, children: null };
   const obj2 = { style: tmp.rowHead, children: null };
-  const obj3 = { variant: "text-xs/normal", color: "text-subtle", children: tmp6(17163).formatClockTime(entry.ts) };
+  const obj3 = { variant: "text-xs/normal", color: "text-subtle", children: tmp6(16378).formatClockTime(entry.ts) };
   const items1 = [closure_7(tmp6(4825).Text, obj3), , , ];
   const level = entry.level;
   let str2 = "text-feedback-critical";
@@ -109,13 +109,13 @@ let closure_11 = noop.memo((entry) => {
     obj11.children = items5;
     items4[1] = closure_8(tmp6(4825).Text, obj11);
     obj8.children = items4;
-    items3[1] = closure_8(tmp6(5427).PressableOpacity, obj8);
+    items3[1] = closure_8(tmp6(5428).PressableOpacity, obj8);
     let tmp9Result6 = null;
     if (expanded) {
       const obj13 = { variant: "primary", children: null };
       const obj14 = { variant: "text-xs/normal", color: str, selectable: true, children: memo.pretty };
       obj13.children = closure_7(tmp6(4825).Text, obj14);
-      tmp9Result6 = closure_7(tmp6(5912).Card, obj13);
+      tmp9Result6 = closure_7(tmp6(5914).Card, obj13);
     }
     const obj15 = { children: null };
     items3[2] = tmp9Result6;

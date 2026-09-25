@@ -1,16 +1,16 @@
-// === Module 16956: MainTabsChannelScreenStack ===
+// === Module 16146: MainTabsChannelScreenStack ===
 
-// Module 16956 (MainTabsChannelScreenStack)
+// Module 16146 (MainTabsChannelScreenStack)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import native from "native" /* 4535 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
-import useChatLayout from "useChatLayout" /* 4689 */;
-import FramesNativeManagerDefault from "FramesNativeManager" /* 9645 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 16424 */;
-import StandaloneChannelScreenDefault from "StandaloneChannelScreen" /* 16960 */;
+import native from "native" /* 4537 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
+import useChatLayout from "useChatLayout" /* 4691 */;
+import FramesNativeManagerDefault from "FramesNativeManager" /* 8743 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 15604 */;
+import StandaloneChannelScreenDefault from "StandaloneChannelScreen" /* 16150 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 9393 */;
+import FramesStore from "FramesStore" /* 8491 */;
 
 require = fn;
 function EnabledChannelScreenNavigationTTIVisibility(children) {
@@ -88,10 +88,10 @@ function getKey(index) {
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const ONYX_BORDER_WIDTH = fn(8195).ONYX_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(7284).ONYX_BORDER_WIDTH;
 const Constants = fn(1074);
 ({ AnalyticsObjectTypes: closure_9, AnalyticsObjects: c10, AnalyticsSections: closure_11 } = Constants);
-const FramesConstants = fn(9394);
+const FramesConstants = fn(8492);
 ({ FrameIntent: closure_12, getChannelIdForSurface: map1 } = FramesConstants);
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);

@@ -1,13 +1,13 @@
-// === Module 9451: TwoWayLinkError ===
+// === Module 8549: TwoWayLinkError ===
 
-// Module 9451 (TwoWayLinkError)
+// Module 8549 (TwoWayLinkError)
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import Stack_Stack from "Stack/Stack" /* 5271 */;
-import components_Button_Button from "components/Button/Button" /* 5273 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7456 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9432 */;
-import _modDef9452 from "module_9452" /* 9452 */;
+import Stack_Stack from "Stack/Stack" /* 5272 */;
+import components_Button_Button from "components/Button/Button" /* 5274 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6539 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 8530 */;
+import _modDef8550 from "module_8550" /* 8550 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,7 +26,7 @@ export const TwoWayLinkError = function TwoWayLinkError(arg0) {
   const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
-  const items = [hasOwnProperty(React3, { source: _modDef9452, style: tmp.image }), hasOwnProperty(Text_Text.Text, { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: title }), hasOwnProperty(Text_Text.Text, { variant: "text-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: body })];
+  const items = [hasOwnProperty(React3, { source: _modDef8550, style: tmp.image }), hasOwnProperty(Text_Text.Text, { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: title }), hasOwnProperty(Text_Text.Text, { variant: "text-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: body })];
   obj3.children = items;
   const items1 = [timestampProducer(React4, obj3), ];
   const obj7 = { bottom: true, style: twoWayLinkStyles.footerContainer, children: null };

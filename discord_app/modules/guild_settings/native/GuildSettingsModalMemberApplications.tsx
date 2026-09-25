@@ -1,14 +1,14 @@
-// === Module 17014: GuildSettingsModalMemberApplications ===
+// === Module 16204: GuildSettingsModalMemberApplications ===
 
-// Module 17014 (GuildSettingsModalMemberApplications)
+// Module 16204 (GuildSettingsModalMemberApplications)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4653 */;
-import UserUtilsDefault from "UserUtils" /* 4673 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4655 */;
+import UserUtilsDefault from "UserUtils" /* 4675 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 17015 */;
+import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 16205 */;
 import noop from "module_19" /* 19 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5847 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5849 */;
 
 const require = globalThis.__r;
 
@@ -61,7 +61,7 @@ let closure_12 = noop.memo((joinRequest) => {
       obj2.onPress = tmp;
       obj2.start = start;
       obj2.end = end;
-      return closure_7(joinRequest(5910).TableRow, obj2);
+      return closure_7(joinRequest(5912).TableRow, obj2);
     }
   }
 });

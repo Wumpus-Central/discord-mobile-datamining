@@ -1,8 +1,8 @@
-// === Module 13570: ProductDetailsActionSheetSkeleton ===
+// === Module 12724: ProductDetailsActionSheetSkeleton ===
 
-// Module 13570 (ProductDetailsActionSheetSkeleton)
+// Module 12724 (ProductDetailsActionSheetSkeleton)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
 import timing from "timing" /* 4830 */;
 import noop from "module_19" /* 19 */;
 
@@ -27,7 +27,7 @@ obj2.price = size2;
 let obj5 = { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
 obj2.purchaseSection = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16 };
 let obj6 = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16 };
-obj2.purchaseButton = { height: fn(5278).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
+obj2.purchaseButton = { height: fn(5279).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
 let closure_7 = createStyles.createStyles(obj2);
 const __initData = { code: "function ProductDetailsActionSheetSkeletonTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
 size = fn(2);
@@ -36,20 +36,20 @@ let result = size.fileFinishedImporting("modules/collectibles/native/ProductDeta
 export default function ProductDetailsActionSheetSkeleton() {
   const tmp = closure_7();
   let sharedValue;
-  sharedValue = sharedValue(4561).useSharedValue(0.3);
+  sharedValue = sharedValue(4563).useSharedValue(0.3);
   const items = [sharedValue];
   const effect = noop.useEffect(() => {
     const obj = ReanimatedRexport;
     const result = sharedValue.set(obj.withRepeat(timing.withTiming(1, { duration: 650 }), -1, true));
   }, items);
-  let obj = sharedValue(4561);
+  let obj = sharedValue(4563);
   const fn = function o() {
     return { opacity: sharedValue.get() };
   };
   fn.__closure = { opacity: sharedValue };
   fn.__workletHash = 4141895524740;
   fn.__initData = __initData;
-  const animatedStyle = sharedValue(4561).useAnimatedStyle(fn);
+  const animatedStyle = sharedValue(4563).useAnimatedStyle(fn);
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.scrollArea, children: null };
   const obj5 = { style: null };

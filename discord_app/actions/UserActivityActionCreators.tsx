@@ -1,6 +1,6 @@
-// === Module 12093: UserActivityActionCreators ===
+// === Module 11238: UserActivityActionCreators ===
 
-// Module 12093 (UserActivityActionCreators)
+// Module 11238 (UserActivityActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import PresenceStore from "PresenceStore" /* 4869 */;

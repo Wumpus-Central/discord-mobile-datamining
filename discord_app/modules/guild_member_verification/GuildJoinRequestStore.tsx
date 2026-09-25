@@ -1,12 +1,12 @@
-// === Module 5847: GuildJoinRequestStore ===
+// === Module 5849: GuildJoinRequestStore ===
 
-// Module 5847 (GuildJoinRequestStore)
+// Module 5849 (GuildJoinRequestStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
-import _modDef4416 from "module_4416" /* 4416 */;
-import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 4652 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4653 */;
+import _modDef4418 from "module_4418" /* 4418 */;
+import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 4654 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4655 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -15,12 +15,12 @@ function updateSubmittedGuildJoinRequestTotal(guildId, DELETED, applicationStatu
     if (null != DELETED) {
       if (DELETED === MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED) {
         dependencyMap[guildId] = dependencyMap[guildId] + 1;
-        const result = map.set(guildId, _modDef4416());
+        const result = map.set(guildId, _modDef4418());
       }
       if (applicationStatus === MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED) {
         const _Math = Math;
         dependencyMap[guildId] = Math.max(0, dependencyMap[guildId] - 1);
-        const result1 = map.set(guildId, _modDef4416());
+        const result1 = map.set(guildId, _modDef4418());
       }
     }
   }
@@ -82,7 +82,7 @@ function handleGuildJoinRequestCreateOrUpdate(request) {
   }
   return false;
 }
-const joinRequestFromServer = fn(4651).joinRequestFromServer;
+const joinRequestFromServer = fn(4653).joinRequestFromServer;
 const map = new Map();
 const dependencyMap = {};
 let closure_8 = {};
@@ -93,9 +93,9 @@ function StaticGuildJoinRequestIndexes_GUILD_JOIN_REQUESTS_BY_ID(arg0) {
 function StaticGuildJoinRequestIndexes_GUILD_JOIN_REQUESTS_BY_STATUS(arg0, arg1) {
 
 }
-const secondaryIndexMap = new fn(4459).SecondaryIndexMap(guildJoinRequestsIndex, (joinRequestId) => "" + joinRequestId.joinRequestId);
-const secondaryIndexMap1 = new fn(4459).SecondaryIndexMap(guildJoinRequestsIndex, (joinRequestId) => "" + joinRequestId.joinRequestId);
-const secondaryIndexMap2 = new fn(4459).SecondaryIndexMap(guildJoinRequestsIndex, (actionedAt) => "" + actionedAt.actionedAt);
+const secondaryIndexMap = new fn(4461).SecondaryIndexMap(guildJoinRequestsIndex, (joinRequestId) => "" + joinRequestId.joinRequestId);
+const secondaryIndexMap1 = new fn(4461).SecondaryIndexMap(guildJoinRequestsIndex, (joinRequestId) => "" + joinRequestId.joinRequestId);
+const secondaryIndexMap2 = new fn(4461).SecondaryIndexMap(guildJoinRequestsIndex, (actionedAt) => "" + actionedAt.actionedAt);
 const dependencyMap2 = {};
 const dependencyMap3 = {};
 let closure_18 = {};
@@ -141,8 +141,8 @@ prototype["hasFetched"] = function hasFetched(arg0) {
     value = map.get(arg0);
     let tmp3 = null != value;
     if (tmp3) {
-      tmp3 = _modDef4416().diff(value, "seconds") < closure_20;
-      const obj2 = _modDef4416();
+      tmp3 = _modDef4418().diff(value, "seconds") < closure_20;
+      const obj2 = _modDef4418();
     }
     return tmp3;
   } else {
@@ -209,7 +209,7 @@ const guildJoinRequestStoreV2 = new GuildJoinRequestStoreV2(DispatcherDefault, {
     ({ status, total } = arg0);
     if (status === MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED) {
       closure_6[guildId] = total;
-      let result = map.set(guildId, _modDef4416());
+      let result = map.set(guildId, _modDef4418());
     }
     const item = requests.forEach((joinRequestId) => {
       closure_1_19[joinRequestId.joinRequestId] = joinRequestId;

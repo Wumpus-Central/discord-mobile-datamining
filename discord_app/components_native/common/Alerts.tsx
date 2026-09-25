@@ -1,18 +1,18 @@
-// === Module 17488: Alerts ===
+// === Module 16705: Alerts ===
 
-// Module 17488 (Alerts)
+// Module 16705 (Alerts)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import nativeDefault from "native" /* 576 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5196 */;
-import Dialog from "Dialog" /* 5254 */;
-import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5883 */;
-import ModalRegistryDefault from "ModalRegistry" /* 17489 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5197 */;
+import Dialog from "Dialog" /* 5255 */;
+import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5885 */;
+import ModalRegistryDefault from "ModalRegistry" /* 16706 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4821 */;
-import PermissionSpeakStore from "PermissionSpeakStore" /* 14118 */;
-import PermissionVADStore from "PermissionVADStore" /* 14771 */;
+import PermissionSpeakStore from "PermissionSpeakStore" /* 13279 */;
+import PermissionVADStore from "PermissionVADStore" /* 13933 */;
 import SurveyStore from "SurveyStore" /* 5020 */;
-import AlertStore from "AlertStore" /* 11883 */;
+import AlertStore from "AlertStore" /* 11026 */;
 
 const require = globalThis.__r;
 
@@ -151,8 +151,8 @@ AlertWrapper.prototype["render"] = function render() {
   obj2.children = closure_1_14(KeyboardAwareViewDefault, obj3);
   return map1(Dialog.Dialog, obj2);
 };
-AlertWrapper.contextType = fn(4535).ThemeContext;
-let closure_18 = Object.freeze({ renderAlert: "isArray", renderKey: "padding", props: "op" });
+AlertWrapper.contextType = fn(4537).ThemeContext;
+let closure_18 = Object.freeze({ renderAlert: "Array", renderKey: "channel", props: "unicodeVersion" });
 const tmp7 = new ModalRegistryDefault(items1);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/Alerts.tsx");
@@ -184,7 +184,7 @@ export default noop.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "isArray", renderKey: "padding", props: "op" };
+        return { renderAlert: "Array", renderKey: "channel", props: "unicodeVersion" };
       }
     }
   });

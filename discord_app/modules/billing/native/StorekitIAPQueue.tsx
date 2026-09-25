@@ -1,7 +1,7 @@
-// === Module 11424: StorekitIAPQueue ===
+// === Module 10522: StorekitIAPQueue ===
 
-// Module 11424 (StorekitIAPQueue)
-import utils_PriceUtils from "utils/PriceUtils" /* 7568 */;
+// Module 10522 (StorekitIAPQueue)
+import utils_PriceUtils from "utils/PriceUtils" /* 6651 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

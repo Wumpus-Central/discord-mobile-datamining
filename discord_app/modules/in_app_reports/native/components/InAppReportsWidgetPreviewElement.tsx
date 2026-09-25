@@ -1,15 +1,15 @@
-// === Module 9015: InAppReportsWidgetPreviewElement ===
+// === Module 8109: InAppReportsWidgetPreviewElement ===
 
-// Module 9015 (InAppReportsWidgetPreviewElement)
+// Module 8109 (InAppReportsWidgetPreviewElement)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7312 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7947 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7954 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8589 */;
-import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 9016 */;
-import UserProfileWidgetsBoard from "UserProfileWidgetsBoard" /* 9025 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6395 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7032 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7039 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 7679 */;
+import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 8110 */;
+import UserProfileWidgetsBoard from "UserProfileWidgetsBoard" /* 8119 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

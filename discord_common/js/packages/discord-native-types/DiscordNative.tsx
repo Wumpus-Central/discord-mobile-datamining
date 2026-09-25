@@ -17,3 +17,4 @@ export const StoredCrashInformation = { HasRTCConnection: 0, [0]: "HasRTCConnect
 export const JSExceptionLocation = { RendererProcessDelayed: 0, [0]: "RendererProcessDelayed", RendererProcess: 1, [1]: "RendererProcess", MainProcess: 2, [2]: "MainProcess" };
 export const DesktopSources = { WINDOW: "window", SCREEN: "screen", CAMERA: "camera" };
 export const ThumbarButtonName = { VIDEO: "VIDEO", MUTE: "MUTE", DEAFEN: "DEAFEN", DISCONNECT: "DISCONNECT" };
+export const TrayIcon = { DEFAULT: "DEFAULT", UNREAD: "UNREAD", CONNECTED: "CONNECTED", SPEAKING: "SPEAKING", MUTED: "MUTED", DEAFENED: "DEAFENED" };

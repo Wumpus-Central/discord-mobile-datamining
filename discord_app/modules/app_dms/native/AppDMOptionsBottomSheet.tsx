@@ -1,12 +1,12 @@
-// === Module 13685: AppDMOptionsBottomSheet ===
+// === Module 12839: AppDMOptionsBottomSheet ===
 
-// Module 13685 (AppDMOptionsBottomSheet)
+// Module 12839 (AppDMOptionsBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
-import openUserSettings from "openUserSettings" /* 7712 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8527 */;
+import openUserSettings from "openUserSettings" /* 6795 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7617 */;
 import noop from "module_19" /* 19 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7440 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6523 */;
 
 require = fn;
 const View = fn(17).View;

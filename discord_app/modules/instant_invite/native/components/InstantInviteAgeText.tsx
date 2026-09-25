@@ -1,15 +1,15 @@
-// === Module 10238: InstantInviteAgeText ===
+// === Module 9335: InstantInviteAgeText ===
 
-// Module 10238 (InstantInviteAgeText)
+// Module 9335 (InstantInviteAgeText)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import Pressables from "Pressables" /* 5427 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7313 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 10167 */;
-import InstantInviteUtils from "InstantInviteUtils" /* 10169 */;
+import Pressables from "Pressables" /* 5428 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6396 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9264 */;
+import InstantInviteUtils from "InstantInviteUtils" /* 9266 */;
 import noop from "module_19" /* 19 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 10168 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 9265 */;
 
 require = fn;
 const View = fn(17).View;

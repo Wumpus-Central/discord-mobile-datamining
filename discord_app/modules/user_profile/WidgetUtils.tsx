@@ -1,22 +1,22 @@
-// === Module 7948: WidgetUtils ===
+// === Module 7033: WidgetUtils ===
 
-// Module 7948 (WidgetUtils)
+// Module 7033 (WidgetUtils)
 import util from "util" /* 1115 */;
 import dismissible_content from "dismissible_content" /* 2028 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4649 */;
-import GameWidgetLimits from "GameWidgetLimits" /* 5414 */;
-import utils from "utils" /* 5416 */;
-import useGame2 from "useGame" /* 7639 */;
-import WidgetType from "WidgetType" /* 7946 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7947 */;
-import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 7952 */;
-import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7953 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7954 */;
-import WidgetGameTag from "WidgetGameTag" /* 7956 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4651 */;
+import GameWidgetLimits from "GameWidgetLimits" /* 5415 */;
+import utils from "utils" /* 5417 */;
+import useGame2 from "useGame" /* 6722 */;
+import WidgetType from "WidgetType" /* 7031 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7032 */;
+import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 7037 */;
+import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7038 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7039 */;
+import WidgetGameTag from "WidgetGameTag" /* 7041 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1372 */;
-import UserProfileStore from "UserProfileStore" /* 7945 */;
-import WidgetStore from "WidgetStore" /* 7949 */;
+import UserProfileStore from "UserProfileStore" /* 7030 */;
+import WidgetStore from "WidgetStore" /* 7034 */;
 
 require = fn;
 function findGameWidget(widgetType) {
@@ -85,10 +85,10 @@ function replaceWidgetInList(clipsGalleryWidget) {
     return items1;
   }
 }
-const UserProfileWidgetConstants = fn(7950);
+const UserProfileWidgetConstants = fn(7035);
 ({ WIDGET_TITLES_BY_TYPE: closure_7, WIDGETS_SUPPORTING_COMMENT: closure_8, WIDGETS_SUPPORTING_TAGS: closure_9 } = UserProfileWidgetConstants);
 const ContentDismissActionType = fn(2041).ContentDismissActionType;
-let closure_11 = fn(7951).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
+let closure_11 = fn(7036).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
 
@@ -173,12 +173,12 @@ export const addWidgetToPending = function addWidgetToPending(type) {
     return uniqueKey === type.getUniqueKey();
   })) {
     if (type.type === WidgetType.WidgetType.PERSONAL) {
-      const obj2 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
-      const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, obj2);
-      const tmp16Result = DismissibleContentUnsafeUtils;
       const obj3 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
-      const result1 = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE, obj3);
-      const tmp16Result2 = DismissibleContentUnsafeUtils;
+      const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, obj3);
+      const tmp13Result = DismissibleContentUnsafeUtils;
+      const obj4 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
+      const result1 = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE, obj4);
+      const tmp13Result2 = DismissibleContentUnsafeUtils;
     }
     const items = [type];
     HermesBuiltin.arraySpread(tmp7, 1);
@@ -311,6 +311,58 @@ export const hasUploadingClipInClipsGalleryWidget = function hasUploadingClipInC
     flag = false;
   }
   return flag;
+};
+export const updateUnsavedClipThumbnailInClipsGalleryWidget = function updateUnsavedClipThumbnailInClipsGalleryWidget(arg0, thumbnail) {
+  closure_0 = arg0;
+  if (WidgetStore.hasPendingChanges()) {
+    let pendingWidgets = WidgetStore.getPendingWidgets();
+    if (pendingWidgets == null) {
+      pendingWidgets = [];
+    }
+    let widgets = pendingWidgets;
+  } else {
+    const currentUser = UserStore.getCurrentUser();
+    let userProfile = null;
+    if (null != currentUser) {
+      userProfile = UserProfileStore.getUserProfile(currentUser.id);
+    }
+    widgets = undefined;
+    if (userProfile != null) {
+      widgets = userProfile.widgets;
+    }
+    if (widgets == null) {
+      widgets = [];
+    }
+  }
+  let found = widgets.find((item) => item instanceof closure_0(dependencyMap[14]).ClipsGalleryWidget);
+  if (found == null) {
+    found = null;
+  }
+  let found1;
+  if (found != null) {
+    const clips1 = found.clips;
+    found1 = clips1.find((id) => id.id === closure_0);
+  }
+  if (null != found) {
+    if (null != found1) {
+      if ("saved" !== found1.status) {
+        const obj4 = { id: null, clips: null };
+        ({ id: obj2.id, clips } = found);
+        obj4.clips = clips.map((item) => {
+          let tmp = item;
+          if (item === found1) {
+            const obj = {};
+            const merged = Object.assign(found1);
+            obj.thumbnail = thumbnail;
+            tmp = obj;
+          }
+          return tmp;
+        });
+        const clipsGalleryWidget = new UserProfileClipsGalleryWidgetTypes.ClipsGalleryWidget(obj4);
+        WidgetActionCreatorsDefault.setPendingWidgets(replaceWidgetInList(clipsGalleryWidget));
+      }
+    }
+  }
 };
 export const commitUploadedClipInClipsGalleryWidget = function commitUploadedClipInClipsGalleryWidget(arg0, uploadFilename) {
   closure_0 = arg0;

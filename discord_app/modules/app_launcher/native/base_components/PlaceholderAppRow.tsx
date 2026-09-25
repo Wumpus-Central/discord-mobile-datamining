@@ -1,9 +1,9 @@
-// === Module 12432: PlaceholderAppRow ===
+// === Module 11558: PlaceholderAppRow ===
 
-// Module 12432 (PlaceholderAppRow)
+// Module 11558 (PlaceholderAppRow)
 import nativeDefault from "native" /* 576 */;
-import TableRow from "TableRow" /* 5910 */;
-import usePlaceholderSize from "usePlaceholderSize" /* 12396 */;
+import TableRow from "TableRow" /* 5912 */;
+import usePlaceholderSize from "usePlaceholderSize" /* 11522 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

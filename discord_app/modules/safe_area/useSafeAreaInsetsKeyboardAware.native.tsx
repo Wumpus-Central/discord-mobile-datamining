@@ -1,13 +1,13 @@
-// === Module 7314: useSafeAreaInsetsKeyboardAware ===
+// === Module 6397: useSafeAreaInsetsKeyboardAware ===
 
-// Module 7314 (useSafeAreaInsetsKeyboardAware)
+// Module 6397 (useSafeAreaInsetsKeyboardAware)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import KeyboardTypes from "KeyboardTypes" /* 1610 */;
 import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 1878 */;
-import useKeyboardType from "useKeyboardType" /* 4697 */;
-import useCustomKeyboardHeight from "useCustomKeyboardHeight" /* 5884 */;
-import useKeyboardDuration from "useKeyboardDuration" /* 5885 */;
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5886 */;
+import useKeyboardType from "useKeyboardType" /* 4699 */;
+import useCustomKeyboardHeight from "useCustomKeyboardHeight" /* 5886 */;
+import useKeyboardDuration from "useKeyboardDuration" /* 5887 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5888 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1480 */;

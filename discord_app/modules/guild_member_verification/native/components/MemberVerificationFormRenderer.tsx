@@ -1,6 +1,6 @@
-// === Module 5904: MemberVerificationFormRenderer ===
+// === Module 5906: MemberVerificationFormRenderer ===
 
-// Module 5904 (MemberVerificationFormRenderer)
+// Module 5906 (MemberVerificationFormRenderer)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

@@ -1,13 +1,13 @@
-// === Module 16625: GuildMFAWarning ===
+// === Module 15805: GuildMFAWarning ===
 
-// Module 16625 (GuildMFAWarning)
+// Module 15805 (GuildMFAWarning)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import Pressables from "Pressables" /* 5427 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10465 */;
-import _modDef16626 from "module_16626" /* 16626 */;
+import Pressables from "Pressables" /* 5428 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 9567 */;
+import _modDef15806 from "module_15806" /* 15806 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -90,7 +90,7 @@ const result = size.fileFinishedImporting("modules/guild_sidebar/native/GuildMFA
 export default function GuildMFAWarning() {
   const tmp = closure_8();
   const obj = { accessibilityRole: "button", style: tmp.MFAWarning, onPress: handlePress, children: null };
-  const items = [timestampProducer(Image, { style: tmp.MFAWarningIcon, source: _modDef16626 }), ];
+  const items = [timestampProducer(Image, { style: tmp.MFAWarningIcon, source: _modDef15806 }), ];
   const obj3 = { variant: "text-xs/medium", color: "text-default", children: null };
   const intl = util.intl;
   const items1 = [intl.string(util.t.ZIf8Ag), ];

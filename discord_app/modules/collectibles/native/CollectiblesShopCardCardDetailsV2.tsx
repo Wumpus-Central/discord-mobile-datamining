@@ -1,20 +1,20 @@
-// === Module 9206: CollectiblesShopCardCardDetailsV2 ===
+// === Module 8304: CollectiblesShopCardCardDetailsV2 ===
 
-// Module 9206 (CollectiblesShopCardCardDetailsV2)
+// Module 8304 (CollectiblesShopCardCardDetailsV2)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4483 */;
-import useToken from "useToken" /* 4526 */;
-import ColorUtils from "ColorUtils" /* 4678 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4485 */;
+import useToken from "useToken" /* 4528 */;
+import ColorUtils from "ColorUtils" /* 4680 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import LinearGradientDefault from "LinearGradient" /* 5285 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7883 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7884 */;
-import useCurrentUser from "useCurrentUser" /* 8526 */;
-import getProductName from "getProductName" /* 9223 */;
-import CollectiblesShopCardVariantsDefault from "CollectiblesShopCardVariants" /* 9224 */;
+import LinearGradientDefault from "LinearGradient" /* 5286 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 6968 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 6969 */;
+import useCurrentUser from "useCurrentUser" /* 7616 */;
+import getProductName from "getProductName" /* 8321 */;
+import CollectiblesShopCardVariantsDefault from "CollectiblesShopCardVariants" /* 8322 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 7570 */;
+import IAPStore from "IAPStore" /* 6653 */;
 
 require = fn;
 const View = fn(17).View;

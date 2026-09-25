@@ -1,15 +1,15 @@
-// === Module 7597: GuildOfficialMessageUtils ===
+// === Module 6680: GuildOfficialMessageUtils ===
 
-// Module 7597 (GuildOfficialMessageUtils)
+// Module 6680 (GuildOfficialMessageUtils)
 import _modDef672 from "module_672" /* 672 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
-import ColorUtils from "ColorUtils" /* 4678 */;
-import shared from "shared" /* 4680 */;
-import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 7598 */;
-import ThreadHooks from "ThreadHooks" /* 7599 */;
-import isSystemMessageDefault from "isSystemMessage" /* 7600 */;
+import ColorUtils from "ColorUtils" /* 4680 */;
+import shared from "shared" /* 4682 */;
+import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 6681 */;
+import ThreadHooks from "ThreadHooks" /* 6682 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6683 */;
 import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
 
 const require = globalThis.__r;
 

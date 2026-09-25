@@ -1,8 +1,8 @@
-// === Module 16556: VoiceUserSummary ===
+// === Module 15736: VoiceUserSummary ===
 
-// Module 16556 (VoiceUserSummary)
+// Module 15736 (VoiceUserSummary)
 import native from "native" /* 1177 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8204 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7293 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,11 +25,11 @@ export default noop.memo((guildId) => {
     transparentBorder = tmp.transparentBorder;
   }
   const obj2 = { style: null, children: null };
-  const items = [noPadding ? tmp.containerNoPadding : tmp.container, guildId(8203).useClientThemesOverride()];
+  const items = [noPadding ? tmp.containerNoPadding : tmp.container, guildId(7292).useClientThemesOverride()];
   obj2.style = items;
   if (renderIcon) {
     if (stageIcon) {
-      let VoiceNormalIcon = tmp4(5403).StageIcon;
+      let VoiceNormalIcon = tmp4(5404).StageIcon;
     }
     const obj3 = { size: "sm", color: "channel-icon", style: tmp.redesignChannelIcon };
     const items1 = [closure_4(VoiceNormalIcon, obj3), ];
@@ -52,7 +52,7 @@ export default noop.memo((guildId) => {
     obj2.children = items1;
     return tmp5(tmp6, obj2);
   }
-  VoiceNormalIcon = tmp4(5407).VoiceNormalIcon;
-  let obj = guildId(8203);
+  VoiceNormalIcon = tmp4(5408).VoiceNormalIcon;
+  let obj = guildId(7292);
 });
 export const VOICE_USER_SUMMARY_HEIGHT = 40;

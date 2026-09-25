@@ -1,10 +1,10 @@
-// === Module 8269: IconButton ===
+// === Module 7358: IconButton ===
 
-// Module 8269 (IconButton)
+// Module 7358 (IconButton)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import Button_BaseButton from "Button/BaseButton" /* 5281 */;
-import BaseIconButton from "BaseIconButton" /* 8270 */;
+import Button_BaseButton from "Button/BaseButton" /* 5282 */;
+import BaseIconButton from "BaseIconButton" /* 7359 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

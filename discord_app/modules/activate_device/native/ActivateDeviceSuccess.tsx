@@ -1,13 +1,13 @@
-// === Module 14251: ActivateDeviceSuccess ===
+// === Module 13412: ActivateDeviceSuccess ===
 
-// Module 14251 (ActivateDeviceSuccess)
+// Module 13412 (ActivateDeviceSuccess)
 import util from "util" /* 1115 */;
 import AvatarUtils from "AvatarUtils" /* 1397 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import components_Button_Button from "components/Button/Button" /* 5273 */;
-import FastImageDefault from "FastImage" /* 5892 */;
-import scopes2 from "scopes" /* 9411 */;
-import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles" /* 14250 */;
+import components_Button_Button from "components/Button/Button" /* 5274 */;
+import FastImageDefault from "FastImage" /* 5894 */;
+import scopes2 from "scopes" /* 8509 */;
+import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles" /* 13411 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

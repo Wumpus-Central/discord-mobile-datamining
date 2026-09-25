@@ -1,8 +1,8 @@
-// === Module 13645: PostPreviewEmbeds ===
+// === Module 12799: PostPreviewEmbeds ===
 
-// Module 13645 (PostPreviewEmbeds)
+// Module 12799 (PostPreviewEmbeds)
 import Constants from "Constants" /* 1074 */;
-import createMediaPostPreviewEmbedContentDefault from "createMediaPostPreviewEmbedContent" /* 13646 */;
+import createMediaPostPreviewEmbedContentDefault from "createMediaPostPreviewEmbedContent" /* 12800 */;
 import size from "module_2" /* 2 */;
 
 const MessageEmbedTypes = Constants.MessageEmbedTypes;

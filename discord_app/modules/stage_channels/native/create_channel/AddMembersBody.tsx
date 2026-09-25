@@ -1,14 +1,14 @@
-// === Module 9936: AddMembersBody ===
+// === Module 9034: AddMembersBody ===
 
-// Module 9936 (AddMembersBody)
+// Module 9034 (AddMembersBody)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4469 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4536 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4471 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4538 */;
 import RegexUtilsDefault from "RegexUtils" /* 4816 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import GuildUtilsDefault from "GuildUtils" /* 5824 */;
-import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 9907 */;
+import GuildUtilsDefault from "GuildUtils" /* 5826 */;
+import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 9005 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -50,7 +50,7 @@ function _toPropertyKey(obj) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8, SectionList: closure_9 } = get_ActivityIndicator);
-const ChannelPermissionsConstants = fn(8751);
+const ChannelPermissionsConstants = fn(7841);
 ({ RowType: map1, MEMBER_REQUEST_COUNT: closure_14 } = ChannelPermissionsConstants);
 const Permissions = fn(1085).Permissions;
 const jsxProd = fn(21);
@@ -155,12 +155,12 @@ export default function AddMembersBody(pendingAdditions) {
     }
   }, items4);
   if (inActionSheet) {
-    let BottomSheetScrollView = guild(6957).BottomSheetScrollView;
+    let BottomSheetScrollView = guild(6040).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = c8;
   }
   if (inActionSheet) {
-    let BottomSheetSectionList = guild(6957).BottomSheetSectionList;
+    let BottomSheetSectionList = guild(6040).BottomSheetSectionList;
   } else {
     BottomSheetSectionList = closure_9;
   }
@@ -189,7 +189,7 @@ export default function AddMembersBody(pendingAdditions) {
       return first(dependencyMap, items.map(_toPropertyKey));
     });
   };
-  obj9.children = closure_16(pendingAdditions(9927), obj10);
+  obj9.children = closure_16(pendingAdditions(9025), obj10);
   const items5 = [closure_16(closure_7, obj9), , , ];
   let tmp27Result = null;
   if (null != inputDesc) {
@@ -212,7 +212,7 @@ export default function AddMembersBody(pendingAdditions) {
     if (0 === items2.length) {
       if (0 === membersRows.length) {
         const obj15 = { children: null };
-        const obj16 = { Illustration: guild(9932).NoResultsAlt, style: null, bodyStyle: null, body: null };
+        const obj16 = { Illustration: guild(9030).NoResultsAlt, style: null, bodyStyle: null, body: null };
         ({ emptyState: obj21.style, emptyStateText: obj21.bodyStyle } = tmp3);
         const intl5 = guild(1115).intl;
         const obj17 = { query: str };
@@ -227,8 +227,8 @@ export default function AddMembersBody(pendingAdditions) {
     }
   }
   const obj19 = { contentContainerStyle: null, renderItem: null, renderSectionHeader: null, sections: null, keyboardShouldPersistTaps: "always" };
-  const tmp4Result = pendingAdditions(9927);
-  obj19.contentContainerStyle = { paddingHorizontal: pendingAdditions(576).space.PX_16, paddingBottom: pendingAdditions(576).space.PX_16 + pendingAdditions(7314)(obj).insets.bottom };
+  const tmp4Result = pendingAdditions(9025);
+  obj19.contentContainerStyle = { paddingHorizontal: pendingAdditions(576).space.PX_16, paddingBottom: pendingAdditions(576).space.PX_16 + pendingAdditions(6397)(obj).insets.bottom };
   obj19.renderItem = function renderItem(item) {
     item = item.item;
     ({ index, section } = item);
@@ -308,5 +308,5 @@ export default function AddMembersBody(pendingAdditions) {
   };
   obj19.sections = items3;
   tmp27Result2 = closure_16(BottomSheetSectionList, obj19);
-  const obj20 = { paddingHorizontal: pendingAdditions(576).space.PX_16, paddingBottom: pendingAdditions(576).space.PX_16 + pendingAdditions(7314)(obj).insets.bottom };
+  const obj20 = { paddingHorizontal: pendingAdditions(576).space.PX_16, paddingBottom: pendingAdditions(576).space.PX_16 + pendingAdditions(6397)(obj).insets.bottom };
 };

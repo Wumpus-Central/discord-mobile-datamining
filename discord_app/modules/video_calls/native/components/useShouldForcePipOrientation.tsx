@@ -1,8 +1,8 @@
-// === Module 9741: useShouldForcePipOrientation ===
+// === Module 8839: useShouldForcePipOrientation ===
 
-// Module 9741 (useShouldForcePipOrientation)
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9699 */;
-import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 9742 */;
+// Module 8839 (useShouldForcePipOrientation)
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 8797 */;
+import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 8840 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4845 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -78,17 +78,17 @@ export const useShouldForcePipOrientation = function useShouldForcePipOrientatio
   if (null != focusedEmbeddedActivityParticipant) {
     if (closure_7(focusedEmbeddedActivityParticipant)) {
       if (null == stateFromStores) {
-        return tmp2(8682).OrientationType.LANDSCAPE;
+        return tmp2(7772).OrientationType.LANDSCAPE;
       }
     }
   }
   if (activityLockOrientation === OrientationLockState.LANDSCAPE) {
-    OrientationType = tmp2(8682).OrientationType;
+    OrientationType = tmp2(7772).OrientationType;
     let LANDSCAPE = OrientationType.LANDSCAPE;
   } else {
     LANDSCAPE = null;
     if (activityLockOrientation === tmp8.PORTRAIT) {
-      LANDSCAPE = tmp2(8682).OrientationType.PORTRAIT;
+      LANDSCAPE = tmp2(7772).OrientationType.PORTRAIT;
     }
   }
   const obj3 = channel(504);

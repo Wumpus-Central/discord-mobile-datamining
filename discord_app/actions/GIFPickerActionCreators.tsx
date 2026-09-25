@@ -1,6 +1,6 @@
-// === Module 10712: GIFPickerActionCreators ===
+// === Module 9816: GIFPickerActionCreators ===
 
-// Module 10712 (GIFPickerActionCreators)
+// Module 9816 (GIFPickerActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1115 */;
 import frecency_user_settings from "frecency_user_settings" /* 1221 */;
@@ -8,12 +8,12 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import URLUtilsDefault from "URLUtils" /* 1366 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5009 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5195 */;
-import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 10291 */;
-import GifProvider from "GifProvider" /* 10713 */;
-import GIFPickerUtils from "GIFPickerUtils" /* 10714 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5196 */;
+import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 9388 */;
+import GifProvider from "GifProvider" /* 9817 */;
+import GIFPickerUtils from "GIFPickerUtils" /* 9818 */;
 import LocaleStore from "LocaleStore" /* 2111 */;
-import GIFPickerViewStore from "GIFPickerViewStore" /* 10711 */;
+import GIFPickerViewStore from "GIFPickerViewStore" /* 9815 */;
 import apply from "module_12" /* 12 */;
 
 const require = globalThis.__r;

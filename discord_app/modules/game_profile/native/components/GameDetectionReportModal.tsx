@@ -1,11 +1,11 @@
-// === Module 9260: GameDetectionReportModal ===
+// === Module 8358: GameDetectionReportModal ===
 
-// Module 9260 (GameDetectionReportModal)
+// Module 8358 (GameDetectionReportModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import NavigatorHeader from "NavigatorHeader" /* 5929 */;
-import Navigator from "Navigator" /* 7333 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9037 */;
+import NavigatorHeader from "NavigatorHeader" /* 5931 */;
+import Navigator from "Navigator" /* 6416 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8131 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

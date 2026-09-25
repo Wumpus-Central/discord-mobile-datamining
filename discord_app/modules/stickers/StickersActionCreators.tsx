@@ -1,16 +1,16 @@
-// === Module 10734: StickersActionCreators ===
+// === Module 9838: StickersActionCreators ===
 
-// Module 10734 (StickersActionCreators)
+// Module 9838 (StickersActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1115 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5195 */;
-import InlineUploaderDefault from "InlineUploader" /* 5474 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5196 */;
+import InlineUploaderDefault from "InlineUploader" /* 5476 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5582 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5584 */;
 import LocaleStore from "LocaleStore" /* 2111 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5193 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5194 */;
 import UserStore from "UserStore" /* 1372 */;
-import StickersStore from "StickersStore" /* 5807 */;
+import StickersStore from "StickersStore" /* 5809 */;
 
 const require = globalThis.__r;
 

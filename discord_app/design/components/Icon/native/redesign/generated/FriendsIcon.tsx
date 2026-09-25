@@ -1,8 +1,8 @@
-// === Module 4524: FriendsIcon ===
+// === Module 4526: FriendsIcon ===
 
-// Module 4524 (FriendsIcon)
+// Module 4526 (FriendsIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4525 */;
+import BaseIconImage from "BaseIconImage" /* 4527 */;
 import _mod4764 from "module_4764" /* 4764 */;
 import noop from "module_19" /* 19 */;
 

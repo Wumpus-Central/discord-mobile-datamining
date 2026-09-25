@@ -1,6 +1,6 @@
-// === Module 9947: GuildTagTypes ===
+// === Module 9045: GuildTagTypes ===
 
-// Module 9947 (GuildTagTypes)
+// Module 9045 (GuildTagTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_tag/GuildTagTypes.tsx");

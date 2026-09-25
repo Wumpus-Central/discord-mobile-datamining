@@ -1,10 +1,10 @@
-// === Module 14114: NowPlayingStore ===
+// === Module 13275: NowPlayingStore ===
 
-// Module 14114 (NowPlayingStore)
+// Module 13275 (NowPlayingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import getApplicationIdForActivityDefault from "getApplicationIdForActivity" /* 14115 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7982 */;
+import getApplicationIdForActivityDefault from "getApplicationIdForActivity" /* 13276 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7067 */;
 import PresenceStore from "PresenceStore" /* 4869 */;
 import UserStore from "UserStore" /* 1372 */;
 

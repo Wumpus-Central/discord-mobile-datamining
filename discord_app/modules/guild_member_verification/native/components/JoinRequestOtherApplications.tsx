@@ -1,13 +1,13 @@
-// === Module 17018: JoinRequestOtherApplications ===
+// === Module 16208: JoinRequestOtherApplications ===
 
-// Module 17018 (JoinRequestOtherApplications)
+// Module 16208 (JoinRequestOtherApplications)
 import nativeDefault from "native" /* 576 */;
-import DateUtils from "DateUtils" /* 4507 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4653 */;
+import DateUtils from "DateUtils" /* 4509 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4655 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 4788 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import CircleXIcon from "CircleXIcon" /* 6946 */;
-import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 17015 */;
+import CircleXIcon from "CircleXIcon" /* 6029 */;
+import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 16205 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

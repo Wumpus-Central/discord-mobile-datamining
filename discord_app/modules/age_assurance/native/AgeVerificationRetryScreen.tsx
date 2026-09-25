@@ -1,10 +1,10 @@
-// === Module 8937: AgeVerificationRetryScreen ===
+// === Module 8031: AgeVerificationRetryScreen ===
 
-// Module 8937 (AgeVerificationRetryScreen)
+// Module 8031 (AgeVerificationRetryScreen)
 import nativeDefault from "native" /* 576 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2110 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8761 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8763 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7851 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 7853 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
-const SafetyHubLinks = fn(8770).SafetyHubLinks;
+const SafetyHubLinks = fn(7860).SafetyHubLinks;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const createStyles = fn(4829);
@@ -72,7 +72,7 @@ export default function GetStartedScreen(modalSessionId) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const result = v3(8763).trackAgeVerificationModalClicked(c0, v3(8763).AgeVerificationModalVersion.RETRY, v3(8763).AgeVerificationModalCta.GET_STARTED);
+              const result = v3(7853).trackAgeVerificationModalClicked(c0, v3(7853).AgeVerificationModalVersion.RETRY, v3(7853).AgeVerificationModalCta.GET_STARTED);
               v1 = 1;
               c0 = 1;
               const obj4 = { value: v1(), done: false };

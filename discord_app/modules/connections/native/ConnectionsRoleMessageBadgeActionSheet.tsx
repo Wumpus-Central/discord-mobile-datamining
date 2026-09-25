@@ -1,25 +1,25 @@
-// === Module 12161: ConnectionsRoleMessageBadgeActionSheet ===
+// === Module 11283: ConnectionsRoleMessageBadgeActionSheet ===
 
-// Module 12161 (ConnectionsRoleMessageBadgeActionSheet)
+// Module 11283 (ConnectionsRoleMessageBadgeActionSheet)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import AvatarUtils from "AvatarUtils" /* 1397 */;
-import shared from "shared" /* 4680 */;
+import shared from "shared" /* 4682 */;
 import useThemeDefault from "useTheme" /* 4763 */;
 import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4779 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
 import Text_Text from "Text/Text" /* 4825 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5009 */;
-import PlatformsDefault from "Platforms" /* 5588 */;
-import ConnectionsUtils from "ConnectionsUtils" /* 5712 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5825 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8527 */;
-import BotTagDefault from "BotTag" /* 9635 */;
-import OfficialConnectionIconDefault from "OfficialConnectionIcon" /* 11904 */;
-import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11907 */;
+import PlatformsDefault from "Platforms" /* 5590 */;
+import ConnectionsUtils from "ConnectionsUtils" /* 5714 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5827 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7617 */;
+import BotTagDefault from "BotTag" /* 8733 */;
+import OfficialConnectionIconDefault from "OfficialConnectionIcon" /* 11047 */;
+import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11050 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1386 */;
@@ -27,7 +27,7 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2107 */;
 import GuildRoleStore from "GuildRoleStore" /* 2101 */;
 import GuildStore from "GuildStore" /* 2066 */;
-import GuildRoleConnectionEligibilityStore from "GuildRoleConnectionEligibilityStore" /* 12162 */;
+import GuildRoleConnectionEligibilityStore from "GuildRoleConnectionEligibilityStore" /* 11284 */;
 
 require = fn;
 function PopoutCheck(arg0) {
@@ -137,7 +137,7 @@ class PopoutChecks {
               const items1 = [null, , , ];
               let tmp26 = null;
               if (null != tmp7) {
-                const obj6 = { style: closure_1.popoutCheckGroupPlatformIcon, user: tmp7, size: native.AvatarSizes.XSMALL, guildId: "Array" };
+                const obj6 = { style: closure_1.popoutCheckGroupPlatformIcon, user: tmp7, size: native.AvatarSizes.XSMALL, guildId: "flex" };
                 tmp26 = value2(native.Avatar, obj6);
               }
               items1[1] = tmp26;
@@ -184,7 +184,7 @@ class PopoutChecks {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const OperatorTypes = fn(5713).OperatorTypes;
+const OperatorTypes = fn(5715).OperatorTypes;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_14, EMPTY_STRING_SNOWFLAKE_ID: closure_15 } = Constants);
 const jsxProd = fn(21);

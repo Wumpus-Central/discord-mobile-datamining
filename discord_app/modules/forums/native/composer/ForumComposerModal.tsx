@@ -1,26 +1,26 @@
-// === Module 10600: ForumComposerModal ===
+// === Module 9704: ForumComposerModal ===
 
-// Module 10600 (ForumComposerModal)
+// Module 9704 (ForumComposerModal)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import KeyboardUIStore from "KeyboardUIStore" /* 1482 */;
 import KeyboardTypes from "KeyboardTypes" /* 1610 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1875 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5196 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 8106 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9502 */;
-import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10599 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5197 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 7191 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 8600 */;
+import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 9703 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 9857 */;
+import NativeMenuStore from "NativeMenuStore" /* 8955 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import DraftStore from "DraftStore" /* 5192 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 5191 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7607 */;
+import DraftStore from "DraftStore" /* 5193 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 5192 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 6690 */;
 
 require = fn;
 const View = fn(17).View;
-const DraftType = fn(5192).DraftType;
+const DraftType = fn(5193).DraftType;
 const jsx = fn(21).jsx;
 const createStyles = fn(4829);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };

@@ -1,19 +1,19 @@
-// === Module 17230: renderChannelItem ===
+// === Module 16445: renderChannelItem ===
 
-// Module 17230 (renderChannelItem)
+// Module 16445 (renderChannelItem)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useChannelName from "useChannelName" /* 4982 */;
-import GuildIconDefault from "GuildIcon" /* 5889 */;
-import NotificationCenterUtils from "NotificationCenterUtils" /* 7965 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9951 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 11262 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 17231 */;
-import renderChannelWrapperDefault from "renderChannelWrapper" /* 17232 */;
-import renderChannelContentDefault from "renderChannelContent" /* 17234 */;
+import GuildIconDefault from "GuildIcon" /* 5891 */;
+import NotificationCenterUtils from "NotificationCenterUtils" /* 7050 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9049 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10360 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 16446 */;
+import renderChannelWrapperDefault from "renderChannelWrapper" /* 16447 */;
+import renderChannelContentDefault from "renderChannelContent" /* 16449 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2066 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -26,7 +26,7 @@ function LaunchpadChannelIcon(channel) {
   const obj3 = { style: tmp.guildBadgeIcon, children: null };
   const stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   obj3.children = closure_8(GuildIconDefault, { guild: stateFromStores, size: tmp2.icon.guildBadgeIconSize });
-  const items1 = [closure_8(View, obj3), closure_8(channel(12533).ChannelIcon, { channel, size: "sm", wrapperSize: 32 })];
+  const items1 = [closure_8(View, obj3), closure_8(channel(11659).ChannelIcon, { channel, size: "sm", wrapperSize: 32 })];
   obj2.children = items1;
   return closure_10(closure_9, obj2);
 }

@@ -1,11 +1,11 @@
-// === Module 18293: FormImagePicker ===
+// === Module 17524: FormImagePicker ===
 
-// Module 18293 (FormImagePicker)
+// Module 17524 (FormImagePicker)
 import nativeDefault from "native" /* 576 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1431 */;
-import utils_UploadUtilsDefault from "utils/UploadUtils" /* 5442 */;
-import FastImageDefault from "FastImage" /* 5892 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 10095 */;
+import utils_UploadUtilsDefault from "utils/UploadUtils" /* 5443 */;
+import FastImageDefault from "FastImage" /* 5894 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9192 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -216,7 +216,7 @@ export default function FormImagePicker(children) {
   const obj2 = { style: tmp2.buttonColumn, children: null };
   const items = [
     closure_6(tmp6(4825).Text, { style: tmp2.imageDescription, variant: "text-sm/medium", color: "text-default", children: children.description }),
-    closure_6(tmp6(5273).Button, {
+    closure_6(tmp6(5274).Button, {
       text: stringResult,
       variant: "secondary",
       onPress() {

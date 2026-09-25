@@ -1,11 +1,11 @@
-// === Module 14150: JoinVoiceChannelButton ===
+// === Module 13311: JoinVoiceChannelButton ===
 
-// Module 14150 (JoinVoiceChannelButton)
+// Module 13311 (JoinVoiceChannelButton)
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1875 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5716 */;
-import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 10286 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5718 */;
+import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 9383 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -44,6 +44,6 @@ export default function JoinVoiceChannelButton(channel) {
     const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
     const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(channel.id);
   }, items1);
-  obj2.children = jsx(channel(5273).Button, { disabled: flag, text: stringResult, onPress: callback });
+  obj2.children = jsx(channel(5274).Button, { disabled: flag, text: stringResult, onPress: callback });
   return <View style={null}>{null}</View>;
 };

@@ -1,10 +1,10 @@
-// === Module 11682: ChannelFollowSuccessAlert ===
+// === Module 10862: ChannelFollowSuccessAlert ===
 
-// Module 11682 (ChannelFollowSuccessAlert)
+// Module 10862 (ChannelFollowSuccessAlert)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1115 */;
 import useThemeDefault from "useTheme" /* 4763 */;
-import common_AlertDefault from "common/Alert" /* 5292 */;
+import common_AlertDefault from "common/Alert" /* 5293 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,8 +13,8 @@ require = fn;
 const Image = fn(17).Image;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let items = [fn(11683), fn(11684), fn(11685)];
-let items1 = [fn(11686), fn(11687), fn(11688)];
+let items = [fn(10863), fn(10864), fn(10865)];
+let items1 = [fn(10866), fn(10867), fn(10868)];
 const items2 = [
   () => {
     const intl = util.intl;

@@ -1,13 +1,13 @@
-// === Module 11784: BlockedPaymentsCountryDisplay ===
+// === Module 10966: BlockedPaymentsCountryDisplay ===
 
-// Module 11784 (BlockedPaymentsCountryDisplay)
+// Module 10966 (BlockedPaymentsCountryDisplay)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2110 */;
 import useThemeDefault from "useTheme" /* 4763 */;
-import _modDef11785 from "module_11785" /* 11785 */;
-import _modDef11786 from "module_11786" /* 11786 */;
+import _modDef10967 from "module_10967" /* 10967 */;
+import _modDef10968 from "module_10968" /* 10968 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -38,9 +38,9 @@ export default function BlockedPaymentsCountryDisplay() {
   items[1] = timestampProducer(native.LegacyText, obj3);
   const obj6 = { style: tmp.image, source: null };
   if (obj7.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef11785;
+    let tmp2Result = _modDef10967;
   } else {
-    tmp2Result = _modDef11786;
+    tmp2Result = _modDef10968;
   }
   obj6.source = tmp2Result;
   items[2] = timestampProducer(React4, obj6);

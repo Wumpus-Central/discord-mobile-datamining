@@ -1,9 +1,9 @@
-// === Module 13013: GuildNSFW ===
+// === Module 12144: GuildNSFW ===
 
-// Module 13013 (GuildNSFW)
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5825 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8761 */;
-import GatedContentDefault from "GatedContent" /* 13014 */;
+// Module 12144 (GuildNSFW)
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5827 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7851 */;
+import GatedContentDefault from "GatedContent" /* 12145 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2066 */;
@@ -27,7 +27,7 @@ export default function GuildNSFW(channelId) {
   const obj3 = {};
   const callback = noop.useCallback(() => {
     const obj = AgeVerificationActionCreatorsDefault;
-    const result = obj.showAgeVerificationGetStartedModal({ entryPoint: channelId(8763).AgeVerificationModalEntryPoint.NSFW_GUILD });
+    const result = obj.showAgeVerificationGetStartedModal({ entryPoint: channelId(7853).AgeVerificationModalEntryPoint.NSFW_GUILD });
   }, []);
   const merged = Object.assign(_objectWithoutProperties(ageGateVerifyContentForGuild, closure_3));
   let id;
@@ -45,8 +45,8 @@ export default function GuildNSFW(channelId) {
   const intl = tmp(1115).intl;
   obj3.disagreement = intl.string(require("util").t["/g10LC"]);
   if (require("AgeVerificationAnalyticsUtils").NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY !== modalType) {
-    if (tmp(8763).NsfwSpaceWarningModalType.GUILD_LARGE_SERVER !== modalType) {
-      if (tmp(8763).NsfwSpaceWarningModalType.NSFW_CHANNEL_UNDERAGE === modalType) {
+    if (tmp(7853).NsfwSpaceWarningModalType.GUILD_LARGE_SERVER !== modalType) {
+      if (tmp(7853).NsfwSpaceWarningModalType.NSFW_CHANNEL_UNDERAGE === modalType) {
         const obj4 = { modalType, disagreementButtonVariant: "primary", onDisagree: handleDisagree };
         const merged1 = Object.assign(obj3);
         return jsx(GatedContentDefault, { modalType, disagreementButtonVariant: "primary", onDisagree: handleDisagree });

@@ -1,6 +1,6 @@
-// === Module 8350: WelcomeCTAConstants ===
+// === Module 7439: WelcomeCTAConstants ===
 
-// Module 8350 (WelcomeCTAConstants)
+// Module 7439 (WelcomeCTAConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/welcome_cta/WelcomeCTAConstants.tsx");

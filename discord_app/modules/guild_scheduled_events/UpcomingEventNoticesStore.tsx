@@ -1,11 +1,11 @@
-// === Module 9835: UpcomingEventNoticesStore ===
+// === Module 8933: UpcomingEventNoticesStore ===
 
-// Module 9835 (UpcomingEventNoticesStore)
+// Module 8933 (UpcomingEventNoticesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildScheduledEventUtils from "GuildScheduledEventUtils" /* 9836 */;
+import GuildScheduledEventUtils from "GuildScheduledEventUtils" /* 8934 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7856 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6941 */;
 
 require = fn;
 const GuildScheduledEventsConstants = fn(2050);

@@ -1,10 +1,10 @@
-// === Module 16120: ShopSkipCategoriesFilter ===
+// === Module 15295: ShopSkipCategoriesFilter ===
 
-// Module 16120 (ShopSkipCategoriesFilter)
+// Module 15295 (ShopSkipCategoriesFilter)
 import nativeDefault from "native" /* 576 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7871 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 6956 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7872 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 6957 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -85,6 +85,6 @@ export const ShopSkipCategoriesFilter = function ShopSkipCategoriesFilter() {
   obj4.children = items3;
   items1[1] = closure_6(closure_2, obj4);
   obj7.children = items1;
-  obj2.children = closure_6(stateFromStores(5271).Stack, obj7);
+  obj2.children = closure_6(stateFromStores(5272).Stack, obj7);
   return closure_5(closure_2, obj2);
 };

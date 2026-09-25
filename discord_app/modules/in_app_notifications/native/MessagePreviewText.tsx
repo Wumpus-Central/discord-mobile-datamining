@@ -1,20 +1,20 @@
-// === Module 10453: MessagePreviewText ===
+// === Module 9555: MessagePreviewText ===
 
-// Module 10453 (MessagePreviewText)
+// Module 9555 (MessagePreviewText)
 import nativeDefault from "native" /* 576 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1096 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import useMessageAuthor from "useMessageAuthor" /* 5075 */;
-import FastImageDefault from "FastImage" /* 5892 */;
-import isForwardMessageDefault from "isForwardMessage" /* 7632 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 8210 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 10441 */;
-import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 10454 */;
-import ChannelRowPreview from "ChannelRowPreview" /* 10455 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 10477 */;
-import usePreviewableMediaText from "usePreviewableMediaText" /* 10482 */;
-import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 10483 */;
+import useMessageAuthor from "useMessageAuthor" /* 5076 */;
+import FastImageDefault from "FastImage" /* 5894 */;
+import isForwardMessageDefault from "isForwardMessage" /* 6715 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7299 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 9543 */;
+import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 9556 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 9557 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 9579 */;
+import usePreviewableMediaText from "usePreviewableMediaText" /* 9584 */;
+import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 9585 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 
@@ -133,7 +133,7 @@ function EmbedCard(embed) {
   return React7(View, obj);
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(10442);
+const InAppNotificationConstants = fn(9544);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } = InAppNotificationConstants);
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
@@ -150,7 +150,7 @@ let obj7 = { borderRadius: nativeDefault.radii.sm, paddingTop: nativeDefault.spa
 obj6.embedAccentBar = { width: 4, marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_8, alignSelf: "stretch" };
 let obj8 = { width: 4, marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_8, alignSelf: "stretch" };
 obj6.embedTextContainer = { flex: 1, gap: nativeDefault.space.PX_4, paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_8 };
-let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "__closure" };
+let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "channel" };
 obj6.embedMediaContainer = size;
 obj6.embedMedia = { width: "100%", height: "100%" };
 let closure_11 = createStyles.createStyles(obj6);

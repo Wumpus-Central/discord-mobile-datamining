@@ -1,10 +1,10 @@
-// === Module 7447: NotificationSettingsUtils ===
+// === Module 6530: NotificationSettingsUtils ===
 
-// Module 7447 (NotificationSettingsUtils)
+// Module 6530 (NotificationSettingsUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import FlagUtils from "FlagUtils" /* 1385 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5009 */;
-import LastMentionTimestampStore from "LastMentionTimestampStore" /* 7448 */;
+import LastMentionTimestampStore from "LastMentionTimestampStore" /* 6531 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import MessageStore from "MessageStore" /* 5049 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5010 */;
@@ -12,7 +12,7 @@ import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5010 */;
 require = fn;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, UserNotificationSettings } = Constants);
-const constants2 = fn(4477).NotificationSettingsUpdateType;
+const constants2 = fn(4479).NotificationSettingsUpdateType;
 const UnreadSetting = fn(5011).UnreadSetting;
 const UserSettingsConstants = fn(1084);
 ({ ChannelNotificationSettingsFlags: closure_11, GuildNotificationSettingsFlags: closure_12 } = UserSettingsConstants);

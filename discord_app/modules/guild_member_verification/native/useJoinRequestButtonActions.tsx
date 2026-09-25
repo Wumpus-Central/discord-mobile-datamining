@@ -1,6 +1,6 @@
-// === Module 12981: useJoinRequestButtonActions ===
+// === Module 12112: useJoinRequestButtonActions ===
 
-// Module 12981 (useJoinRequestButtonActions)
+// Module 12112 (useJoinRequestButtonActions)
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -265,8 +265,8 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
       const _HermesInternal = HermesInternal;
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { joinRequest, onError, onDismiss };
-      obj.openLazy(asyncRequireImpl(12982, dependencyMap.paths), "RejectionReason-" + joinRequestId, obj2);
-      const tmp9 = asyncRequireImpl(12982, dependencyMap.paths);
+      obj.openLazy(asyncRequireImpl(12113, dependencyMap.paths), "RejectionReason-" + joinRequestId, obj2);
+      const tmp9 = asyncRequireImpl(12113, dependencyMap.paths);
     }
   }, items2);
   obj2.submitting = submitting;

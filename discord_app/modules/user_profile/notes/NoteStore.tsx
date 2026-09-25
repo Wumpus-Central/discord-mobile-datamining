@@ -1,6 +1,6 @@
-// === Module 13442: NoteStore ===
+// === Module 12592: NoteStore ===
 
-// Module 13442 (NoteStore)
+// Module 12592 (NoteStore)
 import LibdiscoreStore2 from "LibdiscoreStore" /* 2067 */;
 import libdiscoreExperiments from "libdiscoreExperiments" /* 2070 */;
 import PlainRecord from "PlainRecord" /* 2059 */;

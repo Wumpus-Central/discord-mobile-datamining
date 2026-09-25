@@ -1,33 +1,34 @@
-// === Module 17115: VibegrationsNativeChat ===
+// === Module 16306: VibegrationsNativeChat ===
 
-// Module 17115 (VibegrationsNativeChat)
+// Module 16306 (VibegrationsNativeChat)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import util from "util" /* 1115 */;
 import _modDef3714 from "module_3714" /* 3714 */;
 import MarkupUtilsDefault from "MarkupUtils" /* 4819 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import Stack_Stack from "Stack/Stack" /* 5271 */;
-import components_Button_Button from "components/Button/Button" /* 5273 */;
-import LinearGradientDefault from "LinearGradient" /* 5285 */;
-import Card from "Card" /* 5912 */;
-import _modDef5969 from "module_5969" /* 5969 */;
-import VibegrationsDesignFeedback from "VibegrationsDesignFeedback" /* 17024 */;
-import VibegrationsNativeStatusLineDefault from "VibegrationsNativeStatusLine" /* 17116 */;
-import VibegrationsMessageActionSheet from "VibegrationsMessageActionSheet" /* 17122 */;
-import useVibegrationsPlanDesign from "useVibegrationsPlanDesign" /* 17124 */;
-import VibegrationsNativeMarkdown from "VibegrationsNativeMarkdown" /* 17125 */;
-import VibegrationsTimelineTree from "VibegrationsTimelineTree" /* 17130 */;
-import VibegrationsDuration from "VibegrationsDuration" /* 17131 */;
-import VibegrationsSubagentMark from "VibegrationsSubagentMark" /* 17133 */;
-import VibegrationsTodoAgents from "VibegrationsTodoAgents" /* 17135 */;
-import VibegrationsChatGrouping from "VibegrationsChatGrouping" /* 17142 */;
-import vibegrations_VibegrationsRepliedMessage from "vibegrations/VibegrationsRepliedMessage" /* 17144 */;
+import Stack_Stack from "Stack/Stack" /* 5272 */;
+import components_Button_Button from "components/Button/Button" /* 5274 */;
+import LinearGradientDefault from "LinearGradient" /* 5286 */;
+import Card from "Card" /* 5914 */;
+import _modDef5971 from "module_5971" /* 5971 */;
+import VibegrationsDesignFeedback from "VibegrationsDesignFeedback" /* 16214 */;
+import VibegrationsNativeStatusLineDefault from "VibegrationsNativeStatusLine" /* 16307 */;
+import VibegrationsMessageActionSheet from "VibegrationsMessageActionSheet" /* 16313 */;
+import useVibegrationsPlanDesign from "useVibegrationsPlanDesign" /* 16315 */;
+import VibegrationsNativeMarkdown from "VibegrationsNativeMarkdown" /* 16316 */;
+import VibegrationsTimelineTree from "VibegrationsTimelineTree" /* 16321 */;
+import VibegrationsDuration from "VibegrationsDuration" /* 16322 */;
+import VibegrationsSubagentMark from "VibegrationsSubagentMark" /* 16324 */;
+import VibegrationsTodoAgents from "VibegrationsTodoAgents" /* 16348 */;
+import VibegrationsTodoState from "VibegrationsTodoState" /* 16350 */;
+import VibegrationsChatGrouping from "VibegrationsChatGrouping" /* 16356 */;
+import vibegrations_VibegrationsRepliedMessage from "vibegrations/VibegrationsRepliedMessage" /* 16358 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 1979 */;
-import VibegrationsChatStore from "VibegrationsChatStore" /* 13458 */;
-import VibegrationsConnectionStore_mod from "VibegrationsConnectionStore" /* 13457 */;
+import VibegrationsChatStore from "VibegrationsChatStore" /* 12608 */;
+import VibegrationsConnectionStore_mod from "VibegrationsConnectionStore" /* 12607 */;
 
 require = fn;
 function PlanDesign(arg0) {
@@ -208,7 +209,7 @@ function AttachmentPills(projectId) {
         obj.accessibilityLabel = intl.formatToPlainString(closure_1(3714).QUFLUq, obj2);
         const obj3 = { variant: "text-xs/medium", color: "text-default", children: id.name };
         obj.children = closure_1_17(projectId(4825).Text, obj3);
-        let tmp12 = closure_1_17(projectId(5912).Card, obj, id.id);
+        let tmp12 = closure_1_17(projectId(5914).Card, obj, id.id);
       } else {
         const obj4 = { style: closure_1.attachmentPill, children: null };
         const obj5 = { variant: "text-xs/medium", color: "text-muted", children: null };
@@ -299,7 +300,7 @@ function TurnStatusLine(epoch) {
   [tmp3, c2] = noop.useState(false);
   const callback = noop.useCallback(() => _undefined((arg0) => !arg0), []);
   const tmp2 = _slicedToArray(noop.useState(false), 2);
-  const currentStepResult = turnActive(17130).currentStep(tree.steps);
+  const currentStepResult = turnActive(16321).currentStep(tree.steps);
   _slicedToArray = currentStepResult;
   let tmp8;
   if (!turnActive) {
@@ -317,11 +318,11 @@ function TurnStatusLine(epoch) {
     groupLabel = found.task.groupLabel;
   }
   if (null != tmp8) {
-    groupLabel = turnActive(17131).describeTurnDuration(tmp8);
-    const tmp5Result = turnActive(17131);
+    groupLabel = turnActive(16322).describeTurnDuration(tmp8);
+    const tmp5Result = turnActive(16322);
   } else if (null != currentStepResult) {
-    groupLabel = turnActive(17130).describeNode(currentStepResult);
-    const tmp5Result2 = turnActive(17130);
+    groupLabel = turnActive(16321).describeNode(currentStepResult);
+    const tmp5Result2 = turnActive(16321);
   } else if (groupLabel == null) {
     const intl = turnActive(1115).intl;
     groupLabel = intl.string(epoch(3714).nv6pUM);
@@ -333,12 +334,12 @@ function TurnStatusLine(epoch) {
   }
   const obj2 = { line: groupLabel, live: turnActive, settled: !turnActive, inGutter: true, epoch, expanded: tmp3, onToggle: null };
   let tmp19;
-  let obj = turnActive(17130);
+  let obj = turnActive(16321);
   if (someResult) {
     tmp19 = callback;
   }
   obj2.onToggle = tmp19;
-  const children = [closure_17(epoch(17116), obj2), ];
+  const children = [closure_17(epoch(16307), obj2), ];
   let tmp17Result = null;
   if (tmp3) {
     tmp17Result = null;
@@ -374,24 +375,24 @@ function LaneStatusLine(arg0) {
   }
   let currentStepResult;
   if (turnActive) {
-    currentStepResult = mark(17130).currentStep(lane.steps);
-    const obj = mark(17130);
+    currentStepResult = mark(16321).currentStep(lane.steps);
+    const obj = mark(16321);
   }
   _slicedToArray = currentStepResult;
   const tmp9 = lane.task.detail.length > 0 || lane.steps.length > 0;
   if ("running" === lane.task.status) {
     if (null != currentStepResult) {
-      let describeNodeResult = mark(17130).describeNode(currentStepResult);
-      const obj4 = mark(17130);
+      let describeNodeResult = mark(16321).describeNode(currentStepResult);
+      const obj4 = mark(16321);
     } else {
-      describeNodeResult = mark(17132).taskTitle(lane.task);
-      const obj3 = mark(17132);
+      describeNodeResult = mark(16323).taskTitle(lane.task);
+      const obj3 = mark(16323);
     }
   } else {
-    const obj2 = mark(17132);
-    const obj5 = { line: mark(17132).describeTaskOutcome(lane.task), live: turnActive, settled: null, failed: null, glyph: null, crestColor: null, inGutter: true, epoch: null, expanded: null, onToggle: null };
+    const obj2 = mark(16323);
+    const obj5 = { line: mark(16323).describeTaskOutcome(lane.task), live: turnActive, settled: null, failed: null, glyph: null, crestColor: null, inGutter: true, epoch: null, expanded: null, onToggle: null };
     let tmp26 = !turnActive;
-    const describeTaskOutcomeResult = mark(17132).describeTaskOutcome(lane.task);
+    const describeTaskOutcomeResult = mark(16323).describeTaskOutcome(lane.task);
     if (!turnActive) {
       tmp26 = "failed" !== lane.task.status;
     }
@@ -406,7 +407,7 @@ function LaneStatusLine(arg0) {
       tmp27 = callback;
     }
     obj5.onToggle = tmp27;
-    items = [closure_17(epoch(17116), obj5), ];
+    items = [closure_17(epoch(16307), obj5), ];
     let tmp21Result = null;
     if (tmp3) {
       tmp21Result = null;
@@ -439,7 +440,7 @@ function ActivityBox(arg0) {
   length = tree.tasks.length;
   const tmp = closure_24();
   const tasks = tree.tasks;
-  dependencyMap = turnActive(17133).subagentIllocons(tasks.map((taskId) => taskId.taskId));
+  dependencyMap = turnActive(16324).subagentIllocons(tasks.map((taskId) => taskId.taskId));
   let obj2 = { style: tmp.activityBox, children: null };
   items = [closure_17(TurnStatusLine, { tree, turnActive, epoch: length }), ];
   const tasks1 = tree.tasks;
@@ -481,20 +482,20 @@ function TranscriptFade(children) {
     obj3.children = items;
     obj2.maskElement = collapsedCategories(React6, obj3);
     obj2.children = children;
-    tmp3 = closure_1_17(_modDef5969, obj2);
+    tmp3 = closure_1_17(_modDef5971, obj2);
   }
   return tmp3;
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, Image: metroRequire, Pressable: closure_7, View: closure_8 } = get_ActivityIndicator);
-const turnSettled = fn(13458).turnSettled;
-let VibegrationsConnectionStore = fn(13457);
+const turnSettled = fn(12608).turnSettled;
+let VibegrationsConnectionStore = fn(12607);
 ({ ensureConnection: closure_12, getAttachmentUrl: map1, interruptTurn: closure_14, sendUserMessage: closure_15 } = VibegrationsConnectionStore);
 let VibegrationsConnectionStore = VibegrationsConnectionStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-let diff = fn(17116).MESSAGE_CONTENT_INSET - fn(17116).MESSAGE_EDGE_INSET;
+let diff = fn(16307).MESSAGE_CONTENT_INSET - fn(16307).MESSAGE_EDGE_INSET;
 const BLACK = nativeDefault.unsafe_rawColors.BLACK;
 let items = [BLACK, , ];
 let obj2 = _modDef672(BLACK);
@@ -509,17 +510,17 @@ const alphaResult = _modDef672(BLACK).alpha(0.2);
 obj.transcriptContent = { paddingTop: nativeDefault.space.PX_8 };
 obj.bottomStack = { position: "absolute", left: 0, right: 0, bottom: 0 };
 let obj3 = { paddingTop: nativeDefault.space.PX_8 };
-obj.row = { position: "relative", paddingLeft: fn(17116).MESSAGE_CONTENT_INSET, paddingRight: fn(17116).MESSAGE_EDGE_INSET, paddingVertical: 2, gap: PX_8 };
+obj.row = { position: "relative", paddingLeft: fn(16307).MESSAGE_CONTENT_INSET, paddingRight: fn(16307).MESSAGE_EDGE_INSET, paddingVertical: 2, gap: PX_8 };
 obj.rowGroupStart = { marginTop: nativeDefault.space.PX_12 };
-const rect = { position: "absolute", left: fn(17116).MESSAGE_EDGE_INSET, top: 2 };
+const rect = { position: "absolute", left: fn(16307).MESSAGE_EDGE_INSET, top: 2 };
 obj.avatar = rect;
 obj.spoken = { position: "relative", gap: PX_8 };
 obj.spokenAfterWork = { marginTop: PX_8 };
-const rect1 = { left: fn(17116).MESSAGE_EDGE_INSET - fn(17116).MESSAGE_CONTENT_INSET, top: 0 };
+const rect1 = { left: fn(16307).MESSAGE_EDGE_INSET - fn(16307).MESSAGE_CONTENT_INSET, top: 0 };
 obj.avatarSpoken = rect1;
-let obj5 = { position: "relative", paddingLeft: fn(17116).MESSAGE_CONTENT_INSET, paddingRight: fn(17116).MESSAGE_EDGE_INSET, paddingVertical: 2, gap: PX_8 };
-obj.avatarSpokenReplying = { top: fn(17118).REPLY_PREVIEW_HEIGHT + PX_8 };
-let obj6 = { top: fn(17118).REPLY_PREVIEW_HEIGHT + PX_8 };
+let obj5 = { position: "relative", paddingLeft: fn(16307).MESSAGE_CONTENT_INSET, paddingRight: fn(16307).MESSAGE_EDGE_INSET, paddingVertical: 2, gap: PX_8 };
+obj.avatarSpokenReplying = { top: fn(16309).REPLY_PREVIEW_HEIGHT + PX_8 };
+let obj6 = { top: fn(16309).REPLY_PREVIEW_HEIGHT + PX_8 };
 obj.header = { marginBottom: -nativeDefault.space.PX_4 };
 let obj7 = { marginBottom: -nativeDefault.space.PX_4 };
 obj.surface = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_12 };
@@ -541,38 +542,41 @@ obj.ideasOfferHint = { flexShrink: 1 };
 let obj13 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.round, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4 };
 obj.placeholder = { alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_24 };
 let closure_24 = createStyles.createStyles(obj);
-let closure_35 = noop.memo((onJumpToReplied) => {
-  ({ projectId, message } = onJumpToReplied);
-  ({ groupStart, isNewest, replied } = onJumpToReplied);
-  onJumpToReplied = onJumpToReplied.onJumpToReplied;
-  let memo2;
+let closure_35 = noop.memo((onToggleChecklist) => {
+  ({ projectId, message } = onToggleChecklist);
+  ({ groupStart, isNewest, checklistSuperseded } = onToggleChecklist);
+  onToggleChecklist = onToggleChecklist.onToggleChecklist;
+  const replied = onToggleChecklist.replied;
+  const onJumpToReplied = onToggleChecklist.onJumpToReplied;
   let trimmed;
   let user_id;
-  ({ first, onApprove, onPickIdea, onAskForIdeas, onAnswerClarification } = onJumpToReplied);
+  ({ first, checklistExpanded, onApprove, onPickIdea, onAskForIdeas, onAnswerClarification } = onToggleChecklist);
   let tmp = closure_24();
   items = [message];
-  const memo = memo2.useMemo(() => {
+  const memo = onJumpToReplied.useMemo(() => {
     const obj = VibegrationsTimelineTree;
     return obj.buildTimelineTree(message.steps, { turnActive: !turnSettled(message) });
   }, items);
   const items1 = [message];
-  const memo1 = memo2.useMemo(() => VibegrationsTimelineTree.announcementNotes(message.steps), items1);
+  const memo1 = onJumpToReplied.useMemo(() => VibegrationsTimelineTree.announcementNotes(message.steps), items1);
   const items2 = [message];
-  memo2 = memo2.useMemo(() => VibegrationsTimelineTree.streamedMessages(message.steps), items2);
+  const memo2 = onJumpToReplied.useMemo(() => VibegrationsTimelineTree.streamedMessages(message.steps), items2);
   const items3 = [message];
-  const memo3 = memo2.useMemo(() => VibegrationsTimelineTree.latestTodos(message.steps), items3);
+  const memo3 = onJumpToReplied.useMemo(() => VibegrationsTimelineTree.latestTodos(message.steps), items3);
   const items4 = [memo];
-  const items5 = [onJumpToReplied, replied];
-  const memo4 = memo2.useMemo(() => VibegrationsTodoAgents.runningTodoAgents(memo.tasks), items4);
-  const items6 = [message.content];
-  const callback = memo2.useCallback(() => {
+  const items5 = [onToggleChecklist, message.render_id, checklistSuperseded];
+  const memo4 = onJumpToReplied.useMemo(() => VibegrationsTodoAgents.runningTodoAgents(memo.tasks), items4);
+  const items6 = [onJumpToReplied, replied];
+  const callback = onJumpToReplied.useCallback(() => onToggleChecklist(message.render_id, checklistSuperseded), items5);
+  const items7 = [message.content];
+  const callback1 = onJumpToReplied.useCallback(() => {
     if (null != replied) {
       if (onJumpToReplied != null) {
         tmp2(tmp.id);
       }
     }
-  }, items5);
-  const memo5 = memo2.useMemo(() => VibegrationsDesignFeedback.parseVibegrationsDesignRemark(message.content), items6);
+  }, items6);
+  const memo5 = onJumpToReplied.useMemo(() => VibegrationsDesignFeedback.parseVibegrationsDesignRemark(message.content), items7);
   let body;
   if (memo5 != null) {
     body = memo5.body;
@@ -588,7 +592,7 @@ let closure_35 = noop.memo((onJumpToReplied) => {
       attachments = message.attachments;
     }
   }
-  const items7 = [tmp.row, ];
+  const items8 = [tmp.row, ];
   let rowGroupStart = groupStart;
   if (groupStart) {
     rowGroupStart = !first;
@@ -596,88 +600,88 @@ let closure_35 = noop.memo((onJumpToReplied) => {
   if (rowGroupStart) {
     rowGroupStart = tmp.rowGroupStart;
   }
-  items7[1] = rowGroupStart;
+  items8[1] = rowGroupStart;
   user_id = undefined;
   if ("user" === message.role) {
     user_id = message.user_id;
   }
-  const items8 = [trimmed, user_id];
+  const items9 = [trimmed, user_id];
   if ("" !== trimmed) {
-    const callback1 = obj.useCallback(() => VibegrationsMessageActionSheet.showVibegrationsMessageActions({ content: trimmed, userId: user_id }), items8);
+    const callback2 = obj.useCallback(() => VibegrationsMessageActionSheet.showVibegrationsMessageActions({ content: trimmed, userId: user_id }), items9);
   }
   if ("user" === message.role) {
     if ("" === trimmed) {
       if (null == memo5) {
-        let tmp75Result2 = null;
+        let tmp76Result2 = null;
       }
-      return tmp75Result2;
+      return tmp76Result2;
     }
-    const obj2 = { style: items7, onLongPress: callback1, accessible: false, children: null };
-    let tmp77 = null;
+    const obj2 = { style: items8, onLongPress: callback2, accessible: false, children: null };
+    let tmp78 = null;
     if (groupStart) {
       const obj3 = { style: tmp.avatar, children: null };
       const obj4 = { userId: message.user_id };
-      obj3.children = closure_17(message(onJumpToReplied[32]).VibegrationsUserAvatar, obj4);
-      tmp77 = closure_17(closure_8, obj3);
+      obj3.children = closure_17(message(onToggleChecklist[32]).VibegrationsUserAvatar, obj4);
+      tmp78 = closure_17(user_id, obj3);
     }
-    const items9 = [tmp77, , , ];
-    let tmp82 = null;
+    const items10 = [tmp78, , , ];
+    let tmp83 = null;
     if (groupStart) {
       const obj5 = { style: tmp.header, children: null };
-      ({ user_id: obj31.userId, created_at: obj31.at } = message);
-      obj5.children = closure_17(message(onJumpToReplied[32]).VibegrationsUserHeader, { userId: null, at: null });
-      tmp82 = closure_17(closure_8, obj5);
+      ({ user_id: obj32.userId, created_at: obj32.at } = message);
+      obj5.children = closure_17(message(onToggleChecklist[32]).VibegrationsUserHeader, { userId: null, at: null });
+      tmp83 = closure_17(user_id, obj5);
       const obj6 = { userId: null, at: null };
     }
-    items9[1] = tmp82;
-    if (tmp11) {
+    items10[1] = tmp83;
+    if (tmp12) {
       let combined;
       if (!groupStart) {
-        const intl3 = message(tmp89[13]).intl;
+        const intl3 = message(tmp90[13]).intl;
         const _HermesInternal = HermesInternal;
-        combined = "" + intl3.string(message(tmp89[13]).t.KD6OJJ) + ": " + trimmed;
+        combined = "" + intl3.string(message(tmp90[13]).t.KD6OJJ) + ": " + trimmed;
       }
       const obj7 = { variant: "text-md/normal", color: "text-default", accessibilityLabel: combined, children: null };
-      let tmp92 = null;
+      let tmp93 = null;
       if (null != memo5) {
         const obj8 = { label: memo5.label, variant: "text-md/medium" };
-        tmp92 = closure_17(replied(tmp89[33]), obj8);
+        tmp93 = closure_17(checklistSuperseded(tmp90[33]), obj8);
       }
-      const items10 = [tmp92, , ];
+      const items11 = [tmp93, , ];
       let str6 = null;
       if (null != memo5) {
         str6 = null;
-        if (tmp11) {
+        if (tmp12) {
           str6 = " ";
         }
       }
-      items10[1] = str6;
-      items10[2] = trimmed;
-      obj7.children = items10;
-      let tmp75Result = closure_18(message(onJumpToReplied[16]).Text, obj7);
+      items11[1] = str6;
+      items11[2] = trimmed;
+      obj7.children = items11;
+      let tmp76Result = closure_18(message(onToggleChecklist[16]).Text, obj7);
     } else {
-      tmp75Result = null;
+      tmp76Result = null;
     }
-    items9[2] = tmp75Result;
-    let tmp95 = null;
+    items10[2] = tmp76Result;
+    let tmp96 = null;
     if (null != attachments) {
       const obj9 = { projectId, attachments };
-      tmp95 = closure_17(AttachmentPills, obj9);
+      tmp96 = closure_17(AttachmentPills, obj9);
     }
-    items9[3] = tmp95;
-    obj2.children = items9;
-    tmp75Result2 = closure_18(closure_7, obj2);
+    items10[3] = tmp96;
+    obj2.children = items10;
+    tmp76Result2 = closure_18(trimmed, obj2);
   } else if (true === message.interrupted) {
-    const obj10 = { style: items7, children: null };
+    const obj10 = { style: items8, children: null };
     const obj11 = { style: tmp.activityBox, children: null };
     const obj12 = { line: null, live: false, settled: true, inGutter: true, glyph: null };
-    const intl2 = message(onJumpToReplied[13]).intl;
-    obj12.line = intl2.string(replied(onJumpToReplied[14])["5T7DSm"]);
-    const obj13 = { size: "refresh_sm", color: replied(onJumpToReplied[7]).colors.TEXT_MUTED };
-    obj12.glyph = closure_17(message(onJumpToReplied[34]).StopIcon, obj13);
-    obj11.children = closure_17(replied(onJumpToReplied[8]), obj12);
-    obj10.children = closure_17(closure_8, obj11);
-    return closure_17(closure_8, obj10);
+    const intl2 = message(onToggleChecklist[13]).intl;
+    obj12.line = intl2.string(checklistSuperseded(onToggleChecklist[14])["5T7DSm"]);
+    const obj13 = { size: "refresh_sm", color: checklistSuperseded(onToggleChecklist[7]).colors.TEXT_MUTED };
+    obj12.glyph = closure_17(message(onToggleChecklist[34]).StopIcon, obj13);
+    obj11.children = closure_17(checklistSuperseded(onToggleChecklist[8]), obj12);
+    obj10.children = closure_17(user_id, obj11);
+    return closure_17(user_id, obj10);
   } else {
     const steps = message.steps;
     const found = steps.find((kind) => {
@@ -716,7 +720,7 @@ let closure_35 = noop.memo((onJumpToReplied) => {
         }
       }
     }
-    let items17 = memo3;
+    let items18 = memo3;
     if (memo3 == null) {
       let todos = null;
       if (null != message.todos) {
@@ -725,19 +729,19 @@ let closure_35 = noop.memo((onJumpToReplied) => {
           todos = message.todos;
         }
       }
-      items17 = todos;
+      items18 = todos;
     }
     let provisionalTodo;
-    if (null == items17) {
+    if (null == items18) {
       if (null != message.provisionalTodo) {
         if ("" !== message.provisionalTodo) {
           provisionalTodo = message.provisionalTodo;
         }
       }
     }
-    let tmp21 = null != tmp20;
-    if (tmp21) {
-      tmp21 = tmp20.content.trim() === trimmed;
+    let tmp22 = null != tmp21;
+    if (tmp22) {
+      tmp22 = tmp21.content.trim() === trimmed;
     }
     let spokenAfterWork = memo.steps.length > 0 || memo.tasks.length > 0;
     if (!spokenAfterWork) {
@@ -747,13 +751,13 @@ let closure_35 = noop.memo((onJumpToReplied) => {
             if (null == proposal) {
               if (null == found) {
                 if (null == ideas) {
-                  if (null == items17) {
+                  if (null == items18) {
                     if (null == provisionalTodo) {
                       if (null == secretRequest) {
                         if (null == settingsRequest) {
                           if (null == attachments) {
                             if (null == clarification) {
-                              if (!tmp23) {
+                              if (!tmp24) {
                                 return null;
                               }
                             }
@@ -773,74 +777,74 @@ let closure_35 = noop.memo((onJumpToReplied) => {
     if (groupStart) {
       avatarSpokenReplying = null != replied;
     }
-    let tmp29Result = null;
+    let tmp30Result = null;
     if (avatarSpokenReplying) {
       const obj14 = { replied, onJump: null };
-      let tmp33;
+      let tmp34;
       if (null != onJumpToReplied) {
-        tmp33 = callback;
+        tmp34 = callback1;
       }
-      obj14.onJump = tmp33;
-      tmp29Result = closure_17(replied(onJumpToReplied[11]), obj14);
-      const tmp32 = replied(onJumpToReplied[11]);
+      obj14.onJump = tmp34;
+      tmp30Result = closure_17(checklistSuperseded(onToggleChecklist[11]), obj14);
+      const tmp33 = checklistSuperseded(onToggleChecklist[11]);
     }
-    const items11 = [tmp29Result, , ];
-    const items12 = [, , ];
-    ({ avatar: arr14[0], avatarSpoken: arr14[1] } = tmp);
+    const items12 = [tmp30Result, , ];
+    const items13 = [, , ];
+    ({ avatar: arr15[0], avatarSpoken: arr15[1] } = tmp);
     if (avatarSpokenReplying) {
       avatarSpokenReplying = tmp.avatarSpokenReplying;
     }
     const obj15 = { children: null };
     const obj16 = { style: null, children: null };
-    items12[2] = avatarSpokenReplying;
-    obj16.style = items12;
-    obj16.children = closure_17(message(onJumpToReplied[32]).VibegrationsConjureAvatar, {});
-    items11[1] = closure_17(closure_8, obj16);
+    items13[2] = avatarSpokenReplying;
+    obj16.style = items13;
+    obj16.children = closure_17(message(onToggleChecklist[32]).VibegrationsConjureAvatar, {});
+    items12[1] = closure_17(user_id, obj16);
     const obj17 = { style: tmp.header, children: null };
     const obj18 = { at: message.created_at };
-    obj17.children = closure_17(message(onJumpToReplied[32]).VibegrationsConjureHeader, obj18);
-    items11[2] = closure_17(closure_8, obj17);
-    obj15.children = items11;
-    const tmp26Result = closure_18(closure_19, obj15);
-    const obj19 = { style: items7, onLongPress: callback1, accessible: false, children: null };
-    let tmp26Result3 = null;
+    obj17.children = closure_17(message(onToggleChecklist[32]).VibegrationsConjureHeader, obj18);
+    items12[2] = closure_17(user_id, obj17);
+    obj15.children = items12;
+    const tmp27Result = closure_18(closure_19, obj15);
+    const obj19 = { style: items8, onLongPress: callback2, accessible: false, children: null };
+    let tmp27Result3 = null;
     if (memo1.length > 0) {
       const obj20 = { style: tmp.spoken, children: null };
-      let tmp41 = null;
+      let tmp42 = null;
       if (groupStart) {
-        tmp41 = tmp26Result;
+        tmp42 = tmp27Result;
       }
-      const items13 = [tmp41, memo1.map((children) => closure_1_17(message(onJumpToReplied[16]).Text, { variant: "text-md/normal", color: "text-default", children: children.content }, children.key))];
-      obj20.children = items13;
-      tmp26Result3 = closure_18(closure_8, obj20);
+      const items14 = [tmp42, memo1.map((children) => closure_1_17(message(onToggleChecklist[16]).Text, { variant: "text-md/normal", color: "text-default", children: children.content }, children.key))];
+      obj20.children = items14;
+      tmp27Result3 = closure_18(tmp36, obj20);
     }
-    const items14 = [tmp26Result3, , ];
+    const items15 = [tmp27Result3, , ];
     const obj21 = { tree: memo, turnActive: !turnSettled(message) };
-    items14[1] = closure_17(ActivityBox, obj21);
-    let tmp26Result4 = null;
-    if (tmp25) {
-      const items15 = [tmp.spoken, ];
+    items15[1] = closure_17(ActivityBox, obj21);
+    let tmp27Result4 = null;
+    if (tmp26) {
+      const items16 = [tmp.spoken, ];
       if (spokenAfterWork) {
         spokenAfterWork = groupStart;
       }
       if (spokenAfterWork) {
-        spokenAfterWork = !tmp24;
+        spokenAfterWork = !tmp25;
       }
       if (spokenAfterWork) {
         spokenAfterWork = tmp.spokenAfterWork;
       }
       const obj22 = { style: null, children: null };
-      items15[1] = spokenAfterWork;
-      obj22.style = items15;
-      let tmp45 = null;
+      items16[1] = spokenAfterWork;
+      obj22.style = items16;
+      let tmp46 = null;
       if (groupStart) {
-        tmp45 = null;
-        if (!tmp24) {
-          tmp45 = tmp26Result;
+        tmp46 = null;
+        if (!tmp25) {
+          tmp46 = tmp27Result;
         }
       }
-      const items16 = [
-        tmp45,
+      const items17 = [
+        tmp46,
         memo2.map((content, index) => {
               const obj = { source: content.content, streaming: null };
               const tmp2 = turnSettled(message);
@@ -863,92 +867,97 @@ let closure_35 = noop.memo((onJumpToReplied) => {
   ,
 
       ];
-      let tmp34Result = null;
-      if (tmp22) {
+      let tmp35Result = null;
+      if (tmp23) {
         const obj23 = { source: trimmed };
-        tmp34Result = closure_17(replied(tmp37[18]), obj23);
+        tmp35Result = closure_17(checklistSuperseded(tmp38[18]), obj23);
       }
-      items16[2] = tmp34Result;
-      let tmp34Result11 = null;
+      items17[2] = tmp35Result;
+      let tmp35Result11 = null;
       if ("side_reply" === message.kind) {
         const obj24 = { variant: "text-xs/normal", color: "text-muted", children: null };
-        const intl = message(tmp37[13]).intl;
-        obj24.children = intl.string(replied(tmp37[14]).OAjkIT);
-        tmp34Result11 = closure_17(message(tmp37[16]).Text, obj24);
+        const intl = message(tmp38[13]).intl;
+        obj24.children = intl.string(checklistSuperseded(tmp38[14]).OAjkIT);
+        tmp35Result11 = closure_17(message(tmp38[16]).Text, obj24);
       }
-      items16[3] = tmp34Result11;
-      let tmp34Result12 = null;
+      items17[3] = tmp35Result11;
+      let tmp35Result12 = null;
       if (null != attachments) {
         const obj25 = { projectId, attachments };
-        tmp34Result12 = closure_17(AttachmentPills, obj25);
+        tmp35Result12 = closure_17(AttachmentPills, obj25);
       }
-      items16[4] = tmp34Result12;
-      if (null != items17) {
+      items17[4] = tmp35Result12;
+      if (null != items18) {
         const obj26 = { style: tmp.surface, children: null };
-        if (items17 == null) {
-          items17 = [];
+        if (items18 == null) {
+          items18 = [];
         }
-        const obj27 = { todos: items17, provisional: provisionalTodo, agents: memo4 };
-        obj26.children = closure_17(replied(tmp37[35]), obj27);
-        let tmp34Result13 = closure_17(closure_8, obj26);
-        const tmp54 = replied(tmp37[35]);
+        const obj27 = { todos: items18, provisional: provisionalTodo, agents: memo4, live: null, superseded: null, expanded: null, onToggleExpanded: null };
+        const tmp55 = checklistSuperseded(tmp38[35]);
+        obj27.live = message(tmp38[36]).checklistLive(message);
+        obj27.superseded = checklistSuperseded;
+        obj27.expanded = checklistExpanded;
+        obj27.onToggleExpanded = callback;
+        obj26.children = closure_17(tmp55, obj27);
+        let tmp35Result13 = closure_17(tmp36, obj26);
+        const tmp37Result = message(tmp38[36]);
       } else {
-        tmp34Result13 = null;
+        tmp35Result13 = null;
       }
-      items16[5] = tmp34Result13;
-      let tmp34Result14 = null;
+      items17[5] = tmp35Result13;
+      let tmp35Result14 = null;
       if (null != proposal) {
         const obj28 = { projectId, proposal, actionable: isNewest, onApprove };
-        tmp34Result14 = closure_17(ProposalCard, obj28);
+        tmp35Result14 = closure_17(ProposalCard, obj28);
       }
-      items16[6] = tmp34Result14;
-      let tmp34Result15 = null;
+      items17[6] = tmp35Result14;
+      let tmp35Result15 = null;
       if (null != clarification) {
         const obj29 = { clarification, onSubmit: onAnswerClarification };
-        tmp34Result15 = closure_17(replied(tmp37[36]), obj29);
+        tmp35Result15 = closure_17(checklistSuperseded(tmp38[37]), obj29);
       }
-      items16[7] = tmp34Result15;
-      let tmp34Result16 = null;
+      items17[7] = tmp35Result15;
+      let tmp35Result16 = null;
       if (null != secretRequest) {
         const obj30 = { projectId, request: secretRequest };
-        tmp34Result16 = closure_17(replied(tmp37[37]), obj30);
+        tmp35Result16 = closure_17(checklistSuperseded(tmp38[38]), obj30);
       }
-      items16[8] = tmp34Result16;
-      let tmp34Result17 = null;
+      items17[8] = tmp35Result16;
+      let tmp35Result17 = null;
       if (null != settingsRequest) {
-        const obj32 = { projectId, request: settingsRequest };
-        tmp34Result17 = closure_17(replied(tmp37[38]), obj32);
+        const obj31 = { projectId, request: settingsRequest };
+        tmp35Result17 = closure_17(checklistSuperseded(tmp38[39]), obj31);
       }
-      items16[9] = tmp34Result17;
-      let tmp34Result18 = null;
+      items17[9] = tmp35Result17;
+      let tmp35Result18 = null;
       if (null != ideas) {
         const obj33 = { ideas, onPick: onPickIdea };
-        tmp34Result18 = closure_17(IdeaCards, obj33);
+        tmp35Result18 = closure_17(IdeaCards, obj33);
       }
-      items16[10] = tmp34Result18;
-      let tmp34Result19 = null;
-      if (tmp23) {
+      items17[10] = tmp35Result18;
+      let tmp35Result19 = null;
+      if (tmp24) {
         const obj34 = { onAsk: onAskForIdeas };
-        tmp34Result19 = closure_17(IdeasOffer, obj34);
+        tmp35Result19 = closure_17(IdeasOffer, obj34);
       }
-      items16[11] = tmp34Result19;
-      let tmp34Result20 = null;
+      items17[11] = tmp35Result19;
+      let tmp35Result20 = null;
       if (null != found) {
-        tmp34Result20 = null;
+        tmp35Result20 = null;
         if ("message" in found) {
-          const obj67 = { variant: "text-sm/normal", color: "text-feedback-critical", children: found.message };
-          tmp34Result20 = closure_17(message(tmp37[16]).Text, obj67);
+          const obj35 = { variant: "text-sm/normal", color: "text-feedback-critical", children: found.message };
+          tmp35Result20 = closure_17(message(tmp38[16]).Text, obj35);
         }
       }
-      items16[12] = tmp34Result20;
-      obj22.children = items16;
-      tmp26Result4 = closure_18(closure_8, obj22);
+      items17[12] = tmp35Result20;
+      obj22.children = items17;
+      tmp27Result4 = closure_18(tmp36, obj22);
     }
-    items14[2] = tmp26Result4;
-    obj19.children = items14;
-    return closure_18(closure_7, obj19);
+    items15[2] = tmp27Result4;
+    obj19.children = items15;
+    return closure_18(trimmed, obj19);
   }
-  obj = memo2;
+  obj = onJumpToReplied;
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/native/VibegrationsNativeChat.tsx");
@@ -957,55 +966,59 @@ export default function VibegrationsNativeChat(projectId) {
   projectId = projectId.projectId;
   let stateFromStores1;
   let render_id;
-  closure_5 = undefined;
+  let set;
+  c6 = undefined;
+  c7 = undefined;
+  let onToggleChecklist;
+  let state;
   let onApprove;
   let onPickIdea;
-  closure_8 = undefined;
-  let state;
-  closure_10 = undefined;
+  closure_12 = undefined;
+  closure_13 = undefined;
+  closure_14 = undefined;
   let memo;
   let memo1;
-  c13 = undefined;
-  c14 = undefined;
+  c17 = undefined;
+  c18 = undefined;
   let bound;
   let ref;
-  let ref2;
-  c19 = undefined;
+  c23 = undefined;
+  let ref3;
   let callback2;
-  closure_23 = undefined;
+  closure_27 = undefined;
   let onJumpToReplied;
-  c25 = undefined;
-  let tmp = onJumpToReplied();
+  c29 = undefined;
+  let tmp = ref3();
   items = [state];
-  const stateFromStores = projectId(stateFromStores1[39]).useStateFromStores(items, () => "active" === state.getState(), []);
+  const stateFromStores = projectId(stateFromStores1[40]).useStateFromStores(items, () => "active" === state.getState(), []);
   const items1 = [stateFromStores, projectId];
   const effect = render_id.useEffect(() => {
     if (stateFromStores) {
       closure_2_12(projectId);
     }
   }, items1);
-  let obj = projectId(stateFromStores1[39]);
-  const items2 = [closure_10];
+  let obj = projectId(stateFromStores1[40]);
+  const items2 = [onApprove];
   const items3 = [projectId];
-  stateFromStores1 = projectId(stateFromStores1[39]).useStateFromStores(items2, () => VibegrationsChatStore.getMessages(projectId), items3);
-  const obj3 = projectId(stateFromStores1[39]);
-  const tmp7 = closure_10;
-  const items4 = [closure_10];
+  stateFromStores1 = projectId(stateFromStores1[40]).useStateFromStores(items2, () => VibegrationsChatStore.getMessages(projectId), items3);
+  const obj3 = projectId(stateFromStores1[40]);
+  const tmp7 = onApprove;
+  const items4 = [onApprove];
   const items5 = [projectId];
-  const stateFromStores2 = projectId(stateFromStores1[39]).useStateFromStores(items4, () => VibegrationsChatStore.isThinking(projectId), items5);
-  const obj4 = projectId(stateFromStores1[39]);
-  const items6 = [closure_10];
+  const stateFromStores2 = projectId(stateFromStores1[40]).useStateFromStores(items4, () => VibegrationsChatStore.isThinking(projectId), items5);
+  const obj4 = projectId(stateFromStores1[40]);
+  const items6 = [onApprove];
   const items7 = [projectId];
-  const stateFromStores3 = projectId(stateFromStores1[39]).useStateFromStores(items6, () => VibegrationsChatStore.isCompacting(projectId), items7);
-  const obj5 = projectId(stateFromStores1[39]);
-  const items8 = [closure_10];
+  const stateFromStores3 = projectId(stateFromStores1[40]).useStateFromStores(items6, () => VibegrationsChatStore.isCompacting(projectId), items7);
+  const obj5 = projectId(stateFromStores1[40]);
+  const items8 = [onApprove];
   const items9 = [projectId];
-  const stateFromStores4 = projectId(stateFromStores1[39]).useStateFromStores(items8, () => VibegrationsChatStore.getThinkingActivity(projectId), items9);
-  const obj6 = projectId(stateFromStores1[39]);
-  const items10 = [closure_10];
+  const stateFromStores4 = projectId(stateFromStores1[40]).useStateFromStores(items8, () => VibegrationsChatStore.getThinkingActivity(projectId), items9);
+  const obj6 = projectId(stateFromStores1[40]);
+  const items10 = [onApprove];
   const items11 = [projectId];
-  const stateFromStores5 = projectId(stateFromStores1[39]).useStateFromStores(items10, () => VibegrationsChatStore.getProjectUsage(projectId), items11);
-  const obj7 = projectId(stateFromStores1[39]);
+  const stateFromStores5 = projectId(stateFromStores1[40]).useStateFromStores(items10, () => VibegrationsChatStore.getProjectUsage(projectId), items11);
+  const obj7 = projectId(stateFromStores1[40]);
   [tmp14, tmp15] = render_id.useState(null);
   _slicedToArray = tmp15;
   let tmp16 = null == tmp14;
@@ -1032,23 +1045,32 @@ export default function VibegrationsNativeChat(projectId) {
     tmp20 = tmp14 === projectId;
   }
   const tmp13 = _slicedToArray(render_id.useState(null), 2);
-  const items13 = [ref];
+  const items13 = [memo1];
   const items14 = [projectId];
-  const stateFromStores6 = projectId(stateFromStores1[39]).useStateFromStores(items13, () => VibegrationsConnectionStore.getConnState(projectId), items14);
-  const tmp2Result = projectId(stateFromStores1[39]);
-  const items15 = [ref];
+  const stateFromStores6 = projectId(stateFromStores1[40]).useStateFromStores(items13, () => VibegrationsConnectionStore.getConnState(projectId), items14);
+  const tmp2Result = projectId(stateFromStores1[40]);
+  const items15 = [memo1];
   const items16 = [projectId];
-  const stateFromStores7 = projectId(stateFromStores1[39]).useStateFromStores(items15, () => VibegrationsConnectionStore.isChatStopped(projectId), items16);
-  const tmp2Result8 = projectId(stateFromStores1[39]);
+  const stateFromStores7 = projectId(stateFromStores1[40]).useStateFromStores(items15, () => VibegrationsConnectionStore.isChatStopped(projectId), items16);
+  const tmp2Result9 = projectId(stateFromStores1[40]);
   const items17 = [tmp7];
   const items18 = [projectId];
   render_id = null;
-  const stateFromStores8 = projectId(stateFromStores1[39]).useStateFromStores(items17, () => VibegrationsChatStore.hasLoadedHistory(projectId), items18);
+  const stateFromStores8 = projectId(stateFromStores1[40]).useStateFromStores(items17, () => VibegrationsChatStore.hasLoadedHistory(projectId), items18);
   if (stateFromStores1.length > 0) {
     render_id = stateFromStores1[stateFromStores1.length - 1].render_id;
   }
   const items19 = [stateFromStores1];
-  closure_5 = obj2.useMemo(() => VibegrationsChatGrouping.groupChatRows(stateFromStores1.map((key) => {
+  set = obj2.useMemo(() => VibegrationsTodoState.supersededChecklists(stateFromStores1), items19);
+  const tmp2Result10 = projectId(stateFromStores1[40]);
+  [c6, c7] = render_id.useState(() => new Map());
+  onToggleChecklist = obj2.useCallback((arg0, arg1) => {
+    closure_0 = arg0;
+    closure_1 = arg1;
+    _undefined2((get) => projectId(stateFromStores1[36]).toggleChecklist(get, closure_0, closure_1));
+  }, []);
+  const items20 = [stateFromStores1];
+  state = obj2.useMemo(() => VibegrationsChatGrouping.groupChatRows(stateFromStores1.map((key) => {
     const obj = { key: key.render_id, actor: null, authorId: null, boundary: null, separate: null };
     let str = "assistant";
     if ("user" === key.role) {
@@ -1078,34 +1100,34 @@ export default function VibegrationsNativeChat(projectId) {
     }
     obj.separate = tmp3;
     return obj;
-  })), items19);
-  const items20 = [projectId];
+  })), items20);
+  const items21 = [projectId];
   onApprove = obj2.useCallback(() => {
     const intl = util.intl;
     __initData(projectId, intl.string(_modDef3714.Jj8Ftb));
-  }, items20);
-  const items21 = [projectId];
-  onPickIdea = obj2.useCallback((implementation_prompt) => {
-    __initData(projectId, implementation_prompt.implementation_prompt);
   }, items21);
   const items22 = [projectId];
-  closure_8 = obj2.useCallback(() => {
-    const intl = util.intl;
-    __initData(projectId, intl.string(_modDef3714["3sTTBu"]));
+  onPickIdea = obj2.useCallback((implementation_prompt) => {
+    __initData(projectId, implementation_prompt.implementation_prompt);
   }, items22);
   const items23 = [projectId];
-  state = obj2.useCallback((arg0) => {
-    __initData(projectId, arg0);
+  closure_12 = obj2.useCallback(() => {
+    const intl = util.intl;
+    __initData(projectId, intl.string(_modDef3714["3sTTBu"]));
   }, items23);
-  let tmp26 = tmp25;
+  const items24 = [projectId];
+  closure_13 = obj2.useCallback((arg0) => {
+    __initData(projectId, arg0);
+  }, items24);
+  let tmp27 = tmp26;
   if ("open" !== stateFromStores6) {
-    tmp26 = "connecting" === stateFromStores6;
+    tmp27 = "connecting" === stateFromStores6;
   }
-  if (tmp26) {
-    tmp26 = !stateFromStores7;
+  if (tmp27) {
+    tmp27 = !stateFromStores7;
   }
-  closure_10 = tmp26;
-  const items24 = [stateFromStores1];
+  closure_14 = tmp27;
+  const items25 = [stateFromStores1];
   memo = obj2.useMemo(() => {
     let diff = stateFromStores1.length - 1;
     if (0 <= diff) {
@@ -1121,8 +1143,8 @@ export default function VibegrationsNativeChat(projectId) {
       return diff;
     }
     return null;
-  }, items24);
-  const items25 = [stateFromStores1, memo];
+  }, items25);
+  const items26 = [stateFromStores1, memo];
   memo1 = obj2.useMemo(() => {
     let tmp2;
     if (null != memo) {
@@ -1133,13 +1155,13 @@ export default function VibegrationsNativeChat(projectId) {
       timelineTree = VibegrationsTimelineTree.buildTimelineTree(tmp2.steps, { turnActive: true });
     }
     return timelineTree;
-  }, items25);
-  let tmp29 = null != memo1;
-  if (tmp29) {
-    tmp29 = memo1.steps.length > 0 || memo1.tasks.length > 0;
-    const tmp30 = memo1.steps.length > 0 || memo1.tasks.length > 0;
+  }, items26);
+  let tmp30 = null != memo1;
+  if (tmp30) {
+    tmp30 = memo1.steps.length > 0 || memo1.tasks.length > 0;
+    const tmp31 = memo1.steps.length > 0 || memo1.tasks.length > 0;
   }
-  const items26 = [memo1];
+  const items27 = [memo1];
   let memo2 = obj2.useMemo(() => {
     let currentStepResult;
     if (null != memo1) {
@@ -1150,14 +1172,14 @@ export default function VibegrationsNativeChat(projectId) {
       describeNodeResult = VibegrationsTimelineTree.describeNode(currentStepResult);
     }
     return describeNodeResult;
-  }, items26);
-  const tmp2Result9 = projectId(stateFromStores1[39]);
-  [obj11, c13] = render_id.useState(null);
-  const tmp12Result = _slicedToArray(render_id.useState(null), 2);
-  [tmp34, c14] = render_id.useState(64);
+  }, items27);
+  const tmp12Result = _slicedToArray(render_id.useState(() => new Map()), 2);
+  [obj11, c17] = render_id.useState(null);
+  const tmp12Result5 = _slicedToArray(render_id.useState(null), 2);
+  [tmp35, c18] = render_id.useState(64);
   const callback1 = obj2.useCallback((nativeEvent) => {
     closure_0 = Math.round(nativeEvent.nativeEvent.layout.height);
-    _undefined3((arg0) => {
+    _undefined4((arg0) => {
       let tmp = closure_0;
       if (arg0 === closure_0) {
         tmp = arg0;
@@ -1165,18 +1187,18 @@ export default function VibegrationsNativeChat(projectId) {
       return tmp;
     });
   }, []);
-  const tmp12Result4 = _slicedToArray(render_id.useState(64), 2);
-  bound = tmp34;
-  if (!tmp2Result10.isIOS()) {
+  const tmp12Result6 = _slicedToArray(render_id.useState(64), 2);
+  bound = tmp35;
+  if (!tmp2Result11.isIOS()) {
     let _Math = Math;
-    bound = Math.min(tmp34, 52);
+    bound = Math.min(tmp35, 52);
   }
   obj2.useRef(null);
   ref = obj2.useRef(null);
-  ref2 = obj2.useRef(false);
-  tmp2Result10 = projectId(stateFromStores1[26]);
-  [tmp40, c19] = render_id.useState(false);
-  render_id.useRef(null);
+  render_id.useRef(false);
+  tmp2Result11 = projectId(stateFromStores1[26]);
+  [tmp41, c23] = render_id.useState(false);
+  ref3 = obj2.useRef(null);
   render_id.useRef(0);
   callback2 = obj2.useCallback(() => {
     const current = ref3.current;
@@ -1197,13 +1219,13 @@ export default function VibegrationsNativeChat(projectId) {
     }
     _undefined(tmp5);
   }, []);
-  const items27 = [callback2];
   const items28 = [callback2];
+  const items29 = [callback2];
   const callback3 = obj2.useCallback((nativeEvent) => {
     nativeEvent = nativeEvent.nativeEvent;
-    closure_17.current = { offsetY: nativeEvent.contentOffset.y, viewportHeight: nativeEvent.layoutMeasurement.height, contentHeight: nativeEvent.contentSize.height };
+    closure_21.current = { offsetY: nativeEvent.contentOffset.y, viewportHeight: nativeEvent.layoutMeasurement.height, contentHeight: nativeEvent.contentSize.height };
     callback2();
-  }, items27);
+  }, items28);
   const callback4 = obj2.useCallback((arg0, contentHeight) => {
     const current = ref.current;
     if (null != current) {
@@ -1229,11 +1251,11 @@ export default function VibegrationsNativeChat(projectId) {
       }
       callback2();
     }
-  }, items28);
-  const items29 = [callback2];
-  const memo3 = obj2.useMemo(() => ({ itemVisiblePercentThreshold: projectId(stateFromStores1[42]).MIN_VISIBLE_PERCENT }), []);
+  }, items29);
+  const items30 = [callback2];
+  const memo3 = obj2.useMemo(() => ({ itemVisiblePercentThreshold: projectId(stateFromStores1[43]).MIN_VISIBLE_PERCENT }), []);
   const callback5 = obj2.useCallback((arg0) => {
-    const set = new Set();
+    set = new Set();
     const iter = arg0.viewableItems[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
@@ -1242,9 +1264,9 @@ export default function VibegrationsNativeChat(projectId) {
       }
       continue;
     }
-    _undefined2(set);
+    _undefined3(set);
     callback2();
-  }, items29);
+  }, items30);
   if (stateFromStores3) {
     const intl2 = tmp2(tmp3[13]).intl;
     memo2 = intl2.string(tmp5(tmp3[14])["0vH/5G"]);
@@ -1252,8 +1274,8 @@ export default function VibegrationsNativeChat(projectId) {
     let intl = tmp2(tmp3[13]).intl;
     memo2 = intl.string(tmp5(tmp3[14]).QDGuNS);
   }
-  const items30 = [stateFromStores1, memo];
-  const items31 = [memo1];
+  const items31 = [stateFromStores1, memo];
+  let tmp48;
   const memo4 = obj2.useMemo(() => {
     if (null == memo) {
       return null;
@@ -1273,8 +1295,17 @@ export default function VibegrationsNativeChat(projectId) {
       }
       return latestTodosResult;
     }
-  }, items30);
-  let tmp48;
+  }, items31);
+  if (null != memo) {
+    tmp48 = stateFromStores1[memo];
+  }
+  let checklistLiveResult = null == tmp48;
+  if (!checklistLiveResult) {
+    checklistLiveResult = tmp2(tmp3[36]).checklistLive(tmp48);
+    const tmp2Result12 = tmp2(tmp3[36]);
+  }
+  const items32 = [memo1];
+  let tmp51;
   const memo5 = obj2.useMemo(() => {
     if (null != memo1) {
       let runningTodoAgentsResult = VibegrationsTodoAgents.runningTodoAgents(tmp.tasks);
@@ -1282,38 +1313,38 @@ export default function VibegrationsNativeChat(projectId) {
       runningTodoAgentsResult = [];
     }
     return runningTodoAgentsResult;
-  }, items31);
+  }, items32);
   if (null != memo) {
     let render_id1;
     if (stateFromStores1[memo] != null) {
-      render_id1 = tmp49.render_id;
+      render_id1 = tmp52.render_id;
     }
-    tmp48 = render_id1;
+    tmp51 = render_id1;
   }
-  let tmp51 = null != tmp48;
-  if (tmp51) {
-    tmp51 = null != obj11 && !obj11.has(tmp48) || tmp40;
-    const tmp52 = null != obj11 && !obj11.has(tmp48) || tmp40;
+  let tmp54 = null != tmp51;
+  if (tmp54) {
+    tmp54 = null != obj11 && !obj11.has(tmp51) || tmp41;
+    const tmp55 = null != obj11 && !obj11.has(tmp51) || tmp41;
   }
-  let tmp53 = null;
+  let tmp56 = null;
   if (stateFromStores2) {
-    tmp53 = null;
-    if (tmp29) {
-      tmp53 = null;
-      if (tmp51) {
-        tmp53 = memo2;
+    tmp56 = null;
+    if (tmp30) {
+      tmp56 = null;
+      if (tmp54) {
+        tmp56 = memo2;
       }
     }
   }
-  const items32 = [bound, memo, callback2];
+  const items33 = [bound, memo, callback2];
   const effect1 = obj2.useEffect(() => {
-    closure_20.current = memo;
-    closure_21.current = bound;
+    closure_24.current = memo;
+    closure_25.current = bound;
     closure_0 = requestAnimationFrame(callback2);
     return () => cancelAnimationFrame(closure_0);
-  }, items32);
-  const items33 = [stateFromStores1];
-  closure_23 = obj2.useMemo(() => {
+  }, items33);
+  const items34 = [stateFromStores1];
+  closure_27 = obj2.useMemo(() => {
     const map = new Map();
     const iter = stateFromStores1[Symbol.iterator]();
     const nextResult = iter.next();
@@ -1331,8 +1362,8 @@ export default function VibegrationsNativeChat(projectId) {
       continue;
     }
     return map;
-  }, items33);
-  const items34 = [stateFromStores1];
+  }, items34);
+  const items35 = [stateFromStores1];
   onJumpToReplied = obj2.useCallback((arg0) => {
     closure_0 = arg0;
     const findIndexResult = stateFromStores1.findIndex((id) => id.id === closure_0);
@@ -1343,8 +1374,8 @@ export default function VibegrationsNativeChat(projectId) {
         current.scrollToIndex(obj);
       }
     }
-  }, items34);
-  const items35 = [bound, memo];
+  }, items35);
+  const items36 = [bound, memo];
   const callback6 = obj2.useCallback(() => {
     if (null != memo) {
       const current = ref.current;
@@ -1353,74 +1384,74 @@ export default function VibegrationsNativeChat(projectId) {
         current.scrollToIndex(obj);
       }
     }
-  }, items35);
-  const tmp12Result5 = _slicedToArray(render_id.useState(false), 2);
-  [tmp57, c25] = render_id.useState(false);
-  const items36 = [projectId];
+  }, items36);
+  const tmp12Result7 = _slicedToArray(render_id.useState(false), 2);
+  [tmp60, c29] = render_id.useState(false);
+  const items37 = [projectId];
   const effect2 = obj2.useEffect(() => {
     if (obj.shouldShowVibegrationsConjureTip(timeout)) {
       const _setTimeout = setTimeout;
       timeout = setTimeout(() => {
-        const result = projectId(stateFromStores1[44]).markVibegrationsConjureTipShown();
-        _undefined4(true);
+        const result = projectId(stateFromStores1[45]).markVibegrationsConjureTipShown();
+        _undefined5(true);
       }, 0);
       return () => clearTimeout(closure_0);
     }
-    obj = projectId(stateFromStores1[44]);
-  }, items36);
-  const items37 = [projectId];
-  const callback7 = obj2.useCallback(() => _undefined4(false), []);
-  const items38 = [projectId];
-  const callback8 = obj2.useCallback((arg0, arg1) => {
-    closure_18.current = true;
-    __initData(projectId, arg0, arg1);
+    obj = projectId(stateFromStores1[45]);
   }, items37);
+  const items38 = [projectId];
+  const callback7 = obj2.useCallback(() => _undefined5(false), []);
+  const items39 = [projectId];
+  const callback8 = obj2.useCallback((arg0, arg1) => {
+    closure_22.current = true;
+    __initData(projectId, arg0, arg1);
+  }, items38);
   let connectionLabelResult = null;
   const callback9 = obj2.useCallback(() => {
     closure_2_14(projectId);
-  }, items38);
+  }, items39);
   if ("open" !== stateFromStores6) {
-    connectionLabelResult = tmp2(tmp3[45]).connectionLabel(stateFromStores6);
-    const tmp2Result11 = tmp2(tmp3[45]);
+    connectionLabelResult = tmp2(tmp3[46]).connectionLabel(stateFromStores6);
+    const tmp2Result13 = tmp2(tmp3[46]);
   }
-  const tmp12Result6 = _slicedToArray(render_id.useState(false), 2);
+  const tmp12Result8 = _slicedToArray(render_id.useState(false), 2);
   const obj8 = { style: tmp.container, children: null };
-  const vibegrationsControlActive = projectId(stateFromStores1[46]).useVibegrationsControlActive(projectId);
-  const items39 = [ref(stateFromStores(stateFromStores1[47]), { thinking: stateFromStores2, bleedBottom: stateFromStores(stateFromStores1[40])().bottom }), , ];
+  const vibegrationsControlActive = projectId(stateFromStores1[47]).useVibegrationsControlActive(projectId);
+  const items40 = [c17(stateFromStores(stateFromStores1[48]), { thinking: stateFromStores2, bleedBottom: stateFromStores(stateFromStores1[41])().bottom }), , ];
   const obj9 = { style: tmp.transcriptArea, children: null };
-  const obj10 = { clearance: tmp34, children: null };
+  const obj10 = { clearance: tmp35, children: null };
   const obj12 = { ref, fadingEdgeLength: 52, removeClippedSubviews: null, viewabilityConfig: null, onViewableItemsChanged: null, onScroll: null, onContentSizeChange: null, scrollEventThrottle: 16, pointerEvents: null, style: null, contentContainerStyle: null, data: null, maintainVisibleContentPosition: null, keyExtractor: null, ListEmptyComponent: null, renderItem: null };
-  const tmp2Result12 = projectId(stateFromStores1[46]);
-  const tmp2Result13 = projectId(stateFromStores1[26]);
+  const tmp2Result14 = projectId(stateFromStores1[47]);
+  const tmp2Result15 = projectId(stateFromStores1[26]);
   obj12.removeClippedSubviews = projectId(stateFromStores1[26]).isIOS() && undefined;
   obj12.viewabilityConfig = memo3;
   obj12.onViewableItemsChanged = callback5;
   obj12.onScroll = callback3;
   obj12.onContentSizeChange = callback4;
   let str2 = "auto";
-  if (tmp57) {
+  if (tmp60) {
     str2 = "none";
   }
   obj12.pointerEvents = str2;
-  const items40 = [tmp.transcript, , ];
-  let transcriptDimmed = tmp57;
-  if (tmp57) {
+  const items41 = [tmp.transcript, , ];
+  let transcriptDimmed = tmp60;
+  if (tmp60) {
     transcriptDimmed = tmp.transcriptDimmed;
   }
-  items40[1] = transcriptDimmed;
-  const tmp68 = projectId(stateFromStores1[26]).isIOS() && undefined;
+  items41[1] = transcriptDimmed;
+  const tmp71 = projectId(stateFromStores1[26]).isIOS() && undefined;
   const isIOSResult = projectId(stateFromStores1[26]).isIOS();
-  let tmp70 = !isIOSResult;
+  let tmp73 = !isIOSResult;
   if (!isIOSResult) {
-    const obj13 = { marginBottom: tmp34 - bound };
-    tmp70 = obj13;
+    const obj13 = { marginBottom: tmp35 - bound };
+    tmp73 = obj13;
   }
-  items40[2] = tmp70;
-  obj12.style = items40;
-  const items41 = [tmp.transcriptContent, ];
-  const tmp2Result14 = projectId(stateFromStores1[26]);
-  items41[1] = { paddingBottom: bound + stateFromStores(stateFromStores1[7]).space.PX_8 };
-  obj12.contentContainerStyle = items41;
+  items41[2] = tmp73;
+  obj12.style = items41;
+  const items42 = [tmp.transcriptContent, ];
+  const tmp2Result16 = projectId(stateFromStores1[26]);
+  items42[1] = { paddingBottom: bound + stateFromStores(stateFromStores1[7]).space.PX_8 };
+  obj12.contentContainerStyle = items42;
   obj12.data = stateFromStores1;
   obj12.maintainVisibleContentPosition = { startRenderingFromBottom: true, autoscrollToBottomThreshold: 0.2 };
   obj12.keyExtractor = function keyExtractor(render_id) {
@@ -1431,79 +1462,82 @@ export default function VibegrationsNativeChat(projectId) {
     const obj16 = { variant: "text-sm/normal", color: "text-muted", children: null };
     const intl4 = tmp2(tmp3[13]).intl;
     obj16.children = intl4.string(tmp5(tmp3[14]).jTuX7C);
-    let tmp66Result = tmp66(tmp2(tmp3[16]).Text, obj16);
+    let tmp69Result = tmp69(tmp2(tmp3[16]).Text, obj16);
   } else {
     const obj17 = { size: "small", accessibilityLabel: null };
     const intl3 = tmp2(tmp3[13]).intl;
     obj17.accessibilityLabel = intl3.string(tmp2(tmp3[13]).t.ZTNur7);
-    tmp66Result = tmp66(closure_5, obj17);
+    tmp69Result = tmp69(set, obj17);
   }
-  obj15.children = tmp66Result;
-  obj12.ListEmptyComponent = ref(closure_8, obj15);
+  obj15.children = tmp69Result;
+  obj12.ListEmptyComponent = c17(onToggleChecklist, obj15);
   obj12.renderItem = function renderItem(arg0) {
     ({ item, index } = arg0);
-    const obj = { projectId, message: item, groupStart: null, first: null, isNewest: null, replied: null, onJumpToReplied: null, onApprove: null, onPickIdea: null, onAskForIdeas: null, onAnswerClarification: null };
-    let flag = closure_5[index];
+    const obj = { projectId, message: item, groupStart: null, first: null, isNewest: null, checklistSuperseded: null, checklistExpanded: null, onToggleChecklist: null, replied: null, onJumpToReplied: null, onApprove: null, onPickIdea: null, onAskForIdeas: null, onAnswerClarification: null };
+    let flag = state[index];
     if (flag == null) {
       flag = true;
     }
     obj.groupStart = flag;
     obj.first = 0 === index;
     obj.isNewest = item.render_id === render_id;
-    obj.replied = closure_23.get(item.render_id);
+    obj.checklistSuperseded = set.has(item.render_id);
+    obj.checklistExpanded = VibegrationsTodoState.checklistExpanded(c6, item.render_id, set.has(item.render_id));
+    obj.onToggleChecklist = onToggleChecklist;
+    obj.replied = closure_27.get(item.render_id);
     obj.onJumpToReplied = onJumpToReplied;
     obj.onApprove = onApprove;
     obj.onPickIdea = onPickIdea;
     let tmp4;
-    if (closure_10) {
-      tmp4 = closure_8;
+    if (closure_14) {
+      tmp4 = closure_12;
     }
     obj.onAskForIdeas = tmp4;
     let tmp5;
-    if (closure_10) {
-      tmp5 = closure_9;
+    if (closure_14) {
+      tmp5 = closure_13;
     }
     obj.onAnswerClarification = tmp5;
     return closure_2_17(closure_35, obj);
   };
-  obj10.children = ref(projectId(stateFromStores1[48]).FlashList, obj12);
-  const items42 = [ref(TranscriptFade, obj10), , , ];
-  let tmp74 = stateFromStores2;
+  obj10.children = c17(projectId(stateFromStores1[49]).FlashList, obj12);
+  const items43 = [c17(TranscriptFade, obj10), , , ];
+  let tmp77 = stateFromStores2;
   const obj14 = { paddingBottom: bound + stateFromStores(stateFromStores1[7]).space.PX_8 };
   if (stateFromStores2) {
-    tmp74 = !tmp20;
+    tmp77 = !tmp20;
   }
-  items42[1] = ref(stateFromStores(stateFromStores1[49]), { open: tmp74 });
-  let tmp66Result3 = null;
+  items43[1] = c17(stateFromStores(stateFromStores1[50]), { open: tmp77 });
+  let tmp69Result3 = null;
   if (tmp20) {
     const obj18 = { projectId };
-    tmp66Result3 = tmp66(tmp5(tmp3[50]), obj18);
+    tmp69Result3 = tmp69(tmp5(tmp3[51]), obj18);
   }
-  items42[2] = tmp66Result3;
-  let tmp66Result4 = null;
-  if (null != tmp53) {
-    const obj19 = { line: tmp53, onJumpToActivity: callback6, bottom: tmp5(tmp3[7]).space.PX_12 + tmp34, todos: memo4, agents: memo5 };
-    tmp66Result4 = tmp66(tmp5(tmp3[51]), obj19);
-    const tmp5Result3 = tmp5(tmp3[51]);
+  items43[2] = tmp69Result3;
+  let tmp69Result4 = null;
+  if (null != tmp56) {
+    const obj19 = { line: tmp56, onJumpToActivity: callback6, bottom: tmp5(tmp3[7]).space.PX_12 + tmp35, todos: memo4, todosLive: checklistLiveResult, agents: memo5 };
+    tmp69Result4 = tmp69(tmp5(tmp3[52]), obj19);
+    const tmp5Result3 = tmp5(tmp3[52]);
   }
-  items42[3] = tmp66Result4;
-  obj9.children = items42;
-  items39[1] = ref2(closure_8, obj9);
+  items43[3] = tmp69Result4;
+  obj9.children = items43;
+  items40[1] = c18(onToggleChecklist, obj9);
   const obj20 = { style: tmp.bottomStack, onLayout: callback1, children: null };
-  const items43 = [ref(stateFromStores(stateFromStores1[52]), { projectId, thinking: stateFromStores2, compacting: stateFromStores3, activity: stateFromStores4, projectUsage: stateFromStores5, connLabel: connectionLabelResult, controlling: vibegrationsControlActive, connFailed: "failed" === stateFromStores6, thinkingOpen: tmp20, onToggleThinking: callback }), ];
-  const obj22 = { projectId, canSend: tmp26, running: stateFromStores2, stopped: stateFromStores7, onSend: callback8, onInterrupt: null, tipOpen: null, onDismissTip: null };
-  let tmp79;
+  const items44 = [c17(stateFromStores(stateFromStores1[53]), { projectId, thinking: stateFromStores2, compacting: stateFromStores3, activity: stateFromStores4, projectUsage: stateFromStores5, connLabel: connectionLabelResult, controlling: vibegrationsControlActive, connFailed: "failed" === stateFromStores6, thinkingOpen: tmp20, onToggleThinking: callback }), ];
+  const obj22 = { projectId, canSend: tmp27, running: stateFromStores2, stopped: stateFromStores7, onSend: callback8, onInterrupt: null, tipOpen: null, onDismissTip: null };
+  let tmp82;
   const obj21 = { projectId, thinking: stateFromStores2, compacting: stateFromStores3, activity: stateFromStores4, projectUsage: stateFromStores5, connLabel: connectionLabelResult, controlling: vibegrationsControlActive, connFailed: "failed" === stateFromStores6, thinkingOpen: tmp20, onToggleThinking: callback };
-  const tmp5Result = stateFromStores(stateFromStores1[49]);
+  const tmp5Result = stateFromStores(stateFromStores1[50]);
   if (stateFromStores2) {
-    tmp79 = callback9;
+    tmp82 = callback9;
   }
-  obj22.onInterrupt = tmp79;
-  obj22.tipOpen = tmp57;
+  obj22.onInterrupt = tmp82;
+  obj22.tipOpen = tmp60;
   obj22.onDismissTip = callback7;
-  items43[1] = ref(stateFromStores(stateFromStores1[53]), obj22);
-  obj20.children = items43;
-  items39[2] = ref2(closure_8, obj20);
-  obj8.children = items39;
-  return ref2(closure_8, obj8);
+  items44[1] = c17(stateFromStores(stateFromStores1[54]), obj22);
+  obj20.children = items44;
+  items40[2] = c18(onToggleChecklist, obj20);
+  obj8.children = items40;
+  return c18(onToggleChecklist, obj8);
 };

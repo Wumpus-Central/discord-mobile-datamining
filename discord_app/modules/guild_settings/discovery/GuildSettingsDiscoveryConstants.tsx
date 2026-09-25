@@ -1,6 +1,6 @@
-// === Module 16904: GuildSettingsDiscoveryConstants ===
+// === Module 16092: GuildSettingsDiscoveryConstants ===
 
-// Module 16904 (GuildSettingsDiscoveryConstants)
+// Module 16092 (GuildSettingsDiscoveryConstants)
 import util from "util" /* 1115 */;
 import size from "module_2" /* 2 */;
 
@@ -619,12 +619,12 @@ export const calculateLocaleOptions = function calculateLocaleOptions() {
   const mapped = availableLocales.map((value) => {
     value = value.value;
     if ("en-US" === value) {
-      const obj2 = { id: value, value, label: null, image: "Array" };
+      const obj2 = { id: value, value, label: null, image: "flex" };
       const intl = util.intl;
       obj2.label = intl.string(util.t.WKEPHR);
       let obj = obj2;
     } else {
-      obj = { id: value, value, label: tmp, image: "Array" };
+      obj = { id: value, value, label: tmp, image: "flex" };
     }
     return obj;
   });

@@ -1,6 +1,6 @@
-// === Module 17087: VibegrationsVersionHistorySheet ===
+// === Module 16278: VibegrationsVersionHistorySheet ===
 
-// Module 17087 (VibegrationsVersionHistorySheet)
+// Module 16278 (VibegrationsVersionHistorySheet)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -9,7 +9,7 @@ import noop from "module_19" /* 19 */;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const fetchSourceHistory = fn(13457).fetchSourceHistory;
+const fetchSourceHistory = fn(12607).fetchSourceHistory;
 const jsx = fn(21).jsx;
 const VibegrationsVersionHistorySheet = "VibegrationsVersionHistorySheet";
 const createStyles = fn(4829);
@@ -97,15 +97,15 @@ export default function VibegrationsVersionHistorySheet(projectId) {
       };
       return jsx(projectId(_undefined[15]).TableRow, { label: subject.subject.replace(/^Build: /, ""), subLabel: null, arrow: true, onPress: null }, subject.sha);
     });
-    tmp9 = jsx(projectId(5992).TableRowGroup, { hasIcons: false, children: null });
+    tmp9 = jsx(projectId(5994).TableRowGroup, { hasIcons: false, children: null });
   }
   const obj7 = { scrollable: true, header: null, children: null };
   const obj8 = { title: null };
   let intl3 = projectId(1115).intl;
   obj8.title = intl3.string(onRestore(3714).jAWwzi);
-  obj7.header = tmp7(projectId(7482).BottomSheetTitleHeader, obj8);
+  obj7.header = tmp7(projectId(6565).BottomSheetTitleHeader, obj8);
   const tmp4 = _slicedToArray(noop.useState({ status: "loading" }), 2);
-  obj7.children = tmp7(projectId(6957).BottomSheetScrollView, { contentContainerStyle: { paddingBottom: onRestore(1612)().bottom }, children: tmp9 });
-  return tmp7(projectId(7530).ActionSheet, obj7);
+  obj7.children = tmp7(projectId(6040).BottomSheetScrollView, { contentContainerStyle: { paddingBottom: onRestore(1612)().bottom }, children: tmp9 });
+  return tmp7(projectId(6613).ActionSheet, obj7);
 };
 export const VIBEGRATIONS_VERSION_HISTORY_SHEET_KEY = "VibegrationsVersionHistorySheet";

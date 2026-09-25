@@ -1,25 +1,25 @@
-// === Module 11264: ChannelRow ===
+// === Module 10362: ChannelRow ===
 
-// Module 11264 (ChannelRow)
+// Module 10362 (ChannelRow)
 import nativeDefault from "native" /* 576 */;
-import _modDef4416 from "module_4416" /* 4416 */;
-import DateUtils from "DateUtils" /* 4507 */;
+import _modDef4418 from "module_4418" /* 4418 */;
+import DateUtils from "DateUtils" /* 4509 */;
 import Text_Text from "Text/Text" /* 4825 */;
 import useChannelName from "useChannelName" /* 4982 */;
-import TextIcon2 from "TextIcon" /* 5386 */;
-import ForumIcon from "ForumIcon" /* 5394 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11265 */;
-import GuildIconWithChannelType from "GuildIconWithChannelType" /* 11356 */;
+import TextIcon2 from "TextIcon" /* 5387 */;
+import ForumIcon from "ForumIcon" /* 5395 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10363 */;
+import GuildIconWithChannelType from "GuildIconWithChannelType" /* 10454 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import GuildStore from "GuildStore" /* 2066 */;
 import ReadStateStore from "ReadStateStore" /* 4844 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(11210).UserRowModes;
+const UserRowModes = fn(10308).UserRowModes;
 const ReadStateTypes = fn(5011).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
@@ -140,7 +140,7 @@ export default noop.memo(function ChannelRow(channel) {
         const obj4 = { children: null };
         const obj5 = { style: closure_7.subLabelSeparator, variant: "text-xs/medium", color: "text-subtle", children: "\u2022" };
         const items1 = [closure_2_12(Text_Text.Text, obj5), ];
-        const obj6 = { variant: "text-xs/medium", color: "text-subtle", children: DateUtils.calendarFormatCompact(_modDef4416(tmp14)) };
+        const obj6 = { variant: "text-xs/medium", color: "text-subtle", children: DateUtils.calendarFormatCompact(_modDef4418(tmp14)) };
         items1[1] = closure_2_12(Text_Text.Text, obj6);
         obj4.children = items1;
         tmp5Result = closure_2_14(map1, obj4);

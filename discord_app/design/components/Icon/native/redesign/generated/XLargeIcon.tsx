@@ -2,7 +2,7 @@
 
 // Module 4781 (XLargeIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4525 */;
+import BaseIconImage from "BaseIconImage" /* 4527 */;
 import _mod4782 from "module_4782" /* 4782 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,13 +1,13 @@
-// === Module 18354: GuildSettingsModalGuildSpace ===
+// === Module 17585: GuildSettingsModalGuildSpace ===
 
-// Module 18354 (GuildSettingsModalGuildSpace)
+// Module 17585 (GuildSettingsModalGuildSpace)
 import nativeDefault from "native" /* 576 */;
 import FlagUtils from "FlagUtils" /* 1385 */;
 import _modDef2418 from "module_2418" /* 2418 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9939 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9037 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9940 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9038 */;
 
 require = fn;
 const Constants = fn(1074);
@@ -58,7 +58,7 @@ export default function GuildSettingsModalGuildSpace(contentContainerStyle) {
     obj7.disabled = !stateFromStores1;
     obj7.value = !tmp2(1385).hasFlag(stateFromStores.systemChannelFlags, constants2.SUPPRESS_GAMING_LEADERBOARD_NOTIFICATIONS);
     obj7.onValueChange = tmp7;
-    const items5 = [closure_8(tmp2(7533).TableSwitchRow, obj7), ];
+    const items5 = [closure_8(tmp2(6616).TableSwitchRow, obj7), ];
     const obj8 = { label: null, disabled: null, value: null, onValueChange: null };
     const intl4 = tmp2(1115).intl;
     obj8.label = intl4.string(tmp2(1115).t.YZqqTX);
@@ -66,11 +66,11 @@ export default function GuildSettingsModalGuildSpace(contentContainerStyle) {
     const tmp2Result = tmp2(1385);
     obj8.value = !tmp2(1385).hasFlag(stateFromStores.systemChannelFlags, constants2.SUPPRESS_GUILD_SPACE_WHITEBOARD_NOTIFICATIONS);
     obj8.onValueChange = callback;
-    items5[1] = closure_8(tmp2(7533).TableSwitchRow, obj8);
+    items5[1] = closure_8(tmp2(6616).TableSwitchRow, obj8);
     obj6.children = items5;
-    obj5.children = closure_9(tmp2(5992).TableRowGroup, obj6);
-    obj4.children = closure_8(tmp2(5271).Stack, obj5);
-    const items6 = [closure_8(tmp2(8951).Form, obj4), closure_8(tmp2(7373).NavScrim, {})];
+    obj5.children = closure_9(tmp2(5994).TableRowGroup, obj6);
+    obj4.children = closure_8(tmp2(5272).Stack, obj5);
+    const items6 = [closure_8(tmp2(8045).Form, obj4), closure_8(tmp2(6456).NavScrim, {})];
     obj3.children = items6;
     tmp8 = closure_9(closure_10, obj3);
     const tmp2Result2 = tmp2(1385);

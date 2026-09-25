@@ -1,12 +1,12 @@
-// === Module 8289: InteractionStore ===
+// === Module 7378: InteractionStore ===
 
-// Module 8289 (InteractionStore)
+// Module 7378 (InteractionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import Server from "Server" /* 1978 */;
 import InteractionTypes from "InteractionTypes" /* 5058 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7786 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 6871 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2044 */;

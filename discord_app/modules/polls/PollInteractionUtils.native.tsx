@@ -1,6 +1,6 @@
-// === Module 12056: PollInteractionUtils ===
+// === Module 11201: PollInteractionUtils ===
 
-// Module 12056 (PollInteractionUtils)
+// Module 11201 (PollInteractionUtils)
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
 import size from "module_2" /* 2 */;
@@ -9,5 +9,5 @@ const result = size.fileFinishedImporting("modules/polls/PollInteractionUtils.na
 
 export const showVotesForAnswer = function showVotesForAnswer(initialAnswerId) {
   const message = initialAnswerId.message;
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12057, dependencyMap.paths), "PollVotesActionSheet", { channelId: message.channel_id, messageId: message.id, initialAnswerId: initialAnswerId.initialAnswerId });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11202, dependencyMap.paths), "PollVotesActionSheet", { channelId: message.channel_id, messageId: message.id, initialAnswerId: initialAnswerId.initialAnswerId });
 };

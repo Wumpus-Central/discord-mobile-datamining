@@ -1,27 +1,27 @@
-// === Module 13486: UserProfileConnections ===
+// === Module 12636: UserProfileConnections ===
 
-// Module 13486 (UserProfileConnections)
+// Module 12636 (UserProfileConnections)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native2 from "native" /* 1177 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import ToastUtils from "ToastUtils" /* 4522 */;
-import useToken from "useToken" /* 4526 */;
-import shared from "shared" /* 4680 */;
+import ToastUtils from "ToastUtils" /* 4524 */;
+import useToken from "useToken" /* 4528 */;
+import shared from "shared" /* 4682 */;
 import HapticUtils from "HapticUtils" /* 4797 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import TableRow from "TableRow" /* 5910 */;
-import TableRowGroup from "TableRowGroup" /* 5992 */;
-import ClipboardUtils from "ClipboardUtils" /* 7522 */;
-import UserProfileCardDefault from "UserProfileCard" /* 7540 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8720 */;
-import ConnectionMetadataVanityItems from "ConnectionMetadataVanityItems" /* 11913 */;
-import _modDef11918 from "module_11918" /* 11918 */;
-import _modDef11919 from "module_11919" /* 11919 */;
-import useUserProfileApplicationRoleConnectionsDefault from "useUserProfileApplicationRoleConnections" /* 13490 */;
+import TableRow from "TableRow" /* 5912 */;
+import TableRowGroup from "TableRowGroup" /* 5994 */;
+import ClipboardUtils from "ClipboardUtils" /* 6605 */;
+import UserProfileCardDefault from "UserProfileCard" /* 6623 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 7810 */;
+import ConnectionMetadataVanityItems from "ConnectionMetadataVanityItems" /* 11056 */;
+import _modDef11061 from "module_11061" /* 11061 */;
+import _modDef11062 from "module_11062" /* 11062 */;
+import useUserProfileApplicationRoleConnectionsDefault from "useUserProfileApplicationRoleConnections" /* 12640 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2111 */;
-import StreamerModeStore from "StreamerModeStore" /* 4674 */;
+import StreamerModeStore from "StreamerModeStore" /* 4676 */;
 
 require = fn;
 function VerifiedIcon(arg0) {
@@ -40,10 +40,10 @@ function VerifiedIcon(arg0) {
       let WHITE = nativeDefault.unsafe_rawColors.BLACK;
     }
     const obj3 = { style: tmp.verifiedIconContainer, children: null };
-    const obj4 = { source: _modDef11918, color: PLATFORM_TWITTER };
+    const obj4 = { source: _modDef11061, color: PLATFORM_TWITTER };
     const merged = Object.assign(obj);
     const items = [closure_1_12(native2.Icon, obj4), ];
-    const obj5 = { source: _modDef11919, color: WHITE };
+    const obj5 = { source: _modDef11062, color: WHITE };
     const merged1 = Object.assign(obj);
     items[1] = closure_1_12(native2.Icon, obj5);
     obj3.children = items;
@@ -53,11 +53,11 @@ function VerifiedIcon(arg0) {
   tmp2Result = shared;
 }
 const View = fn(17).View;
-let Constants = fn(7541);
+let Constants = fn(6624);
 ({ CARD_ROWS_ICON_SIZE: closure_7, CARD_ROWS_ICON_SIZE_VARIANT: closure_8, CARD_PADDING } = Constants);
 Constants = fn(1074);
 ({ AnalyticEvents: closure_9, PlatformTypes: c10 } = Constants);
-const MetadataFields = fn(5713).MetadataFields;
+const MetadataFields = fn(5715).MetadataFields;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 const REFRESH_SMALL_16 = fn(1177).Icon.Sizes.REFRESH_SMALL_16;
@@ -391,8 +391,8 @@ export const ApplicationRoleConnection = memoResult;
 export const UserProfileAccountConnectionsCard = function UserProfileAccountConnectionsCard(userId) {
   userId = userId.userId;
   const tmp = closure_16();
-  const theme = userId(4535).useThemeContext().theme;
-  const obj = userId(4535);
+  const theme = userId(4537).useThemeContext().theme;
+  const obj = userId(4537);
   const items = [LocaleStore];
   dependencyMap = userId(504).useStateFromStores(items, () => locale2.locale);
   const obj2 = userId(504);
@@ -400,7 +400,7 @@ export const UserProfileAccountConnectionsCard = function UserProfileAccountConn
   const stateFromStores = userId(504).useStateFromStores(items1, () => StreamerModeStore.hidePersonalInformation);
   const obj3 = userId(504);
   const tmp5 = theme;
-  ({ connections, appIdentities } = theme(13487)(userId));
+  ({ connections, appIdentities } = theme(12637)(userId));
   if (!stateFromStores) {
     const items2 = [];
     HermesBuiltin.arraySpread(appIdentities.map((application) => {
@@ -415,8 +415,8 @@ export const UserProfileAccountConnectionsCard = function UserProfileAccountConn
     obj4.title = intl.string(tmp2(1115).t["3fe7U5"]);
     obj4.titleStyle = tmp.refreshCardTitle;
     const obj5 = { hasIcons: true, children: items2 };
-    obj4.children = closure_12(tmp2(5992).TableRowGroup, obj5);
-    return closure_12(tmp5(7540), obj4);
+    obj4.children = closure_12(tmp2(5994).TableRowGroup, obj5);
+    return closure_12(tmp5(6623), obj4);
   }
   return null;
 };

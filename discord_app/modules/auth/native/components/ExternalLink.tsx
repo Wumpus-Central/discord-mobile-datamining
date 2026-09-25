@@ -1,6 +1,6 @@
-// === Module 16398: ExternalLink ===
+// === Module 15578: ExternalLink ===
 
-// Module 16398 (ExternalLink)
+// Module 15578 (ExternalLink)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 

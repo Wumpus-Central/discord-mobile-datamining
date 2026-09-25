@@ -1,8 +1,8 @@
-// === Module 11258: GuildLeaderboardUtils ===
+// === Module 10356: GuildLeaderboardUtils ===
 
-// Module 11258 (GuildLeaderboardUtils)
+// Module 10356 (GuildLeaderboardUtils)
 import util from "util" /* 1115 */;
-import GuildLeaderboardStatCopy from "GuildLeaderboardStatCopy" /* 11259 */;
+import GuildLeaderboardStatCopy from "GuildLeaderboardStatCopy" /* 10357 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

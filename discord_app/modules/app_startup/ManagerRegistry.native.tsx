@@ -1,7 +1,7 @@
-// === Module 17822: ManagerRegistry ===
+// === Module 17048: ManagerRegistry ===
 
-// Module 17822 (ManagerRegistry)
-import ManagerRegistryShared from "ManagerRegistryShared" /* 18454 */;
+// Module 17048 (ManagerRegistry)
+import ManagerRegistryShared from "ManagerRegistryShared" /* 17686 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -110,7 +110,6 @@ const obj = {
     neverLoadBeforeConnectionOpen: true
   },
   ChannelCallManager: {
-    actions: ["GUILD_LOCAL_RING_START", "GUILD_RING_STOP"],
     inlineRequire() {
       return require("ChannelCallManager").default;
     },

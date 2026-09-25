@@ -1,11 +1,11 @@
-// === Module 12665: GuildDirectoryAddAlert ===
+// === Module 11791: GuildDirectoryAddAlert ===
 
-// Module 12665 (GuildDirectoryAddAlert)
+// Module 11791 (GuildDirectoryAddAlert)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import common_AlertDefault from "common/Alert" /* 5292 */;
-import GuildIcon from "GuildIcon" /* 5889 */;
+import common_AlertDefault from "common/Alert" /* 5293 */;
+import GuildIcon from "GuildIcon" /* 5891 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;

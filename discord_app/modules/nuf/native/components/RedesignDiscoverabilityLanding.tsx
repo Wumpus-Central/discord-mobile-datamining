@@ -1,15 +1,15 @@
-// === Module 17962: RedesignDiscoverabilityLanding ===
+// === Module 17188: RedesignDiscoverabilityLanding ===
 
-// Module 17962 (RedesignDiscoverabilityLanding)
+// Module 17188 (RedesignDiscoverabilityLanding)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import components_Button_Button from "components/Button/Button" /* 5273 */;
-import FastImageDefault from "FastImage" /* 5892 */;
-import NavigatorConstants from "NavigatorConstants" /* 5987 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 13028 */;
-import _modDef13098 from "module_13098" /* 13098 */;
+import components_Button_Button from "components/Button/Button" /* 5274 */;
+import FastImageDefault from "FastImage" /* 5894 */;
+import NavigatorConstants from "NavigatorConstants" /* 5989 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12159 */;
+import _modDef12248 from "module_12248" /* 12248 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,7 +48,7 @@ export default function RedesignDiscoverabilityLanding(onNext) {
   const obj6 = { resizeMode: "contain", style: tmp.image, source: null };
   const obj2 = { flexGrow: 2, paddingTop: NavigatorConstants.NAV_BAR_HEIGHT + 32, paddingBottom: useSafeAreaInsetsDefault().bottom + 16, paddingHorizontal: nativeDefault.space.PX_16 };
   const obj3 = { style: tmp.topContainer };
-  obj6.source = _modDef13098;
+  obj6.source = _modDef12248;
   items[3] = hasOwnProperty(FastImageDefault, obj6);
   const obj7 = { style: tmp.info, variant: "text-sm/medium", color: "text-default", children: null };
   const intl3 = util.intl;

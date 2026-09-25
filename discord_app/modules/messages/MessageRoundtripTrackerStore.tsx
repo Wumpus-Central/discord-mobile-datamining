@@ -1,14 +1,14 @@
-// === Module 7788: MessageRoundtripTrackerStore ===
+// === Module 6873: MessageRoundtripTrackerStore ===
 
-// Module 7788 (MessageRoundtripTrackerStore)
+// Module 6873 (MessageRoundtripTrackerStore)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import NetStats from "NetStats" /* 7789 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 8000 */;
+import NetStats from "NetStats" /* 6874 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7085 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4748 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4750 */;
 import NetworkStore from "NetworkStore" /* 4878 */;
 
 require = fn;

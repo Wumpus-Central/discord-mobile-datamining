@@ -1,10 +1,10 @@
-// === Module 16852: ForYouItemImage ===
+// === Module 16038: ForYouItemImage ===
 
-// Module 16852 (ForYouItemImage)
+// Module 16038 (ForYouItemImage)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import Pressables from "Pressables" /* 5427 */;
-import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8595 */;
+import Pressables from "Pressables" /* 5428 */;
+import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 7685 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2066 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -12,7 +12,7 @@ import UserStore from "UserStore" /* 1372 */;
 require = fn;
 const View = fn(17).View;
 const getGuildAcronym = fn(2062).getGuildAcronym;
-const Constants = fn(16853);
+const Constants = fn(16039);
 ({ FRIEND_BACKGROUND, MESSAGE_BACKGROUND, PROFILE_BACKGROUND } = Constants);
 const jsx = fn(21).jsx;
 let createStyles = fn(4829);

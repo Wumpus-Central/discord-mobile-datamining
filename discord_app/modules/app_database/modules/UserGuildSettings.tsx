@@ -1,6 +1,6 @@
-// === Module 7821: UserGuildSettings ===
+// === Module 6906: UserGuildSettings ===
 
-// Module 7821 (UserGuildSettings)
+// Module 6906 (UserGuildSettings)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 2073 */;

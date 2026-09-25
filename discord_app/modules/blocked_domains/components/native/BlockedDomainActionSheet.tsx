@@ -1,15 +1,15 @@
-// === Module 13338: BlockedDomainActionSheet ===
+// === Module 12488: BlockedDomainActionSheet ===
 
-// Module 13338 (BlockedDomainActionSheet)
+// Module 12488 (BlockedDomainActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import Stack_Stack from "Stack/Stack" /* 5271 */;
-import components_Button_Button from "components/Button/Button" /* 5273 */;
-import native from "native" /* 5997 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7483 */;
-import URLCallout from "URLCallout" /* 13339 */;
+import Stack_Stack from "Stack/Stack" /* 5272 */;
+import components_Button_Button from "components/Button/Button" /* 5274 */;
+import TrafficConeSpotIllustration from "TrafficConeSpotIllustration" /* 5999 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6566 */;
+import URLCallout from "URLCallout" /* 12489 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,7 +26,7 @@ export default function BlockedDomainActionSheet(url) {
   const obj = { startExpanded: true, children: null };
   const obj2 = { spacing: 16, justify: "center", align: "center", style: tmp.container, children: null };
   const obj3 = { spacing: 8, justify: "center", align: "center", children: null };
-  const items = [React3(native.TrafficConeSpotIllustration, {}), , ];
+  const items = [React3(TrafficConeSpotIllustration.TrafficConeSpotIllustration, {}), , ];
   const obj4 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t["2B3wj8"]);

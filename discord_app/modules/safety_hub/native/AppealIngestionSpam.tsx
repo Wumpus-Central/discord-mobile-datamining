@@ -1,9 +1,9 @@
-// === Module 12251: AppealIngestionSpam ===
+// === Module 11373: AppealIngestionSpam ===
 
-// Module 12251 (AppealIngestionSpam)
+// Module 11373 (AppealIngestionSpam)
 import native from "native" /* 1177 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7456 */;
-import AppealIngestionModal from "AppealIngestionModal" /* 12229 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6539 */;
+import AppealIngestionModal from "AppealIngestionModal" /* 11351 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

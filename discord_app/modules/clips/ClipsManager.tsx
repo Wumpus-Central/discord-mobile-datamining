@@ -1,29 +1,29 @@
-// === Module 18367: clips/ClipsManager ===
+// === Module 17598: clips/ClipsManager ===
 
-// Module 18367 (clips/ClipsManager)
+// Module 17598 (clips/ClipsManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import UserSettings from "UserSettings" /* 2020 */;
-import DiscordNativeDefault from "DiscordNative" /* 4445 */;
+import DiscordNativeDefault from "DiscordNative" /* 4447 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 4881 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4884 */;
-import isClipsEnabled from "isClipsEnabled" /* 14041 */;
-import ClipsExperiment from "ClipsExperiment" /* 14042 */;
-import isClientClipsCapableDefault from "isClientClipsCapable" /* 14043 */;
+import isClipsEnabled from "isClipsEnabled" /* 13202 */;
+import ClipsExperiment from "ClipsExperiment" /* 13203 */;
+import isClientClipsCapableDefault from "isClientClipsCapable" /* 13204 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4852 */;
 import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4868 */;
 import ClipsStore from "ClipsStore" /* 1998 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7451 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6534 */;
 
 const StreamKeyUtilsAll = StreamKeyUtils;
 
 require = fn;
 const getSystemAnalyticsInfo = fn(4874).getSystemAnalyticsInfo;
-const ClipsConstants = fn(5436);
+const ClipsConstants = fn(5437);
 ({ WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX: closure_11, WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: closure_12, CLIPS_HARDWARE_CLASSIFICATION_VERSION: map1, ClipsHardwareClassification: closure_14, CLIP_RUNTIME: closure_15 } = ClipsConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_16, RTCConnectionStates: closure_17 } = Constants);

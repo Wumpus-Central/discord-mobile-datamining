@@ -1,11 +1,11 @@
-// === Module 11550: BadgeUtils ===
+// === Module 10648: BadgeUtils ===
 
-// Module 11550 (BadgeUtils)
+// Module 10648 (BadgeUtils)
 import util from "util" /* 1115 */;
 import StringUtils from "StringUtils" /* 2010 */;
-import Constants from "Constants" /* 8531 */;
-import BadgeId from "BadgeId" /* 8532 */;
-import BadgeIdResolution from "BadgeIdResolution" /* 8541 */;
+import Constants from "Constants" /* 7621 */;
+import BadgeId from "BadgeId" /* 7622 */;
+import BadgeIdResolution from "BadgeIdResolution" /* 7631 */;
 import size from "module_2" /* 2 */;
 
 function isPinnedBadge(badge_id) {
@@ -19,10 +19,38 @@ function getProfileBadgeIconUrl(iconSrc) {
   return iconSrc;
 }
 const getBadgeAssetFromCDN = Constants.getBadgeAssetFromCDN;
+let items = [BadgeId.BadgeId.GAME_VARIETY, BadgeId.BadgeId.GAME_TIME, BadgeId.BadgeId.STREAMING];
+const set = new Set(items);
+let items1 = [BadgeId.BadgeId.ACCOUNT_AGE, BadgeId.BadgeId.STREAMING, BadgeId.BadgeId.GAME_TIME, BadgeId.BadgeId.GAME_VARIETY];
+const set1 = new Set(items1);
 let result = size.fileFinishedImporting("modules/badges/BadgeUtils.tsx");
 
 export const MAX_DISPLAYED_PROFILE_BADGES = 6;
 export { isPinnedBadge };
+export const isPersonalizationGatedBadge = function isPersonalizationGatedBadge(badge_id) {
+  return set.has(badge_id);
+};
+export const BETA_BADGE_IDS = set1;
+export const isBetaBadgeId = function isBetaBadgeId(badge_id) {
+  return set1.has(badge_id);
+};
+export const getDisplayTier = function getDisplayTier(badge) {
+  const tiers = badge.tiers;
+  if (null != tiers) {
+    if (0 !== tiers.length) {
+      const tmp = badge.owned ? badge.current_tier : badge.next_tier;
+      closure_0 = tmp;
+      let found;
+      if (null != tmp) {
+        found = tiers.find((key) => key.key === closure_0);
+      }
+      if (found == null) {
+        found = tiers[0];
+      }
+      return found;
+    }
+  }
+};
 export const getAlwaysVisibleCopy = function getAlwaysVisibleCopy(badge_id) {
   if (badge_id === BadgeId.BadgeId.STAFF) {
     let nPQVxb = util.t.t3udZb;
@@ -143,4 +171,29 @@ export const getLegacyIconUrlByBadgeId = function getLegacyIconUrlByBadgeId(badg
     continue;
   }
   return map;
+};
+export const findTier = function findTier(viewerBadge, next_tier) {
+  closure_0 = next_tier;
+  let found;
+  if (null != next_tier) {
+    const tiers = viewerBadge.tiers;
+    found = tiers.find((key) => key.key === closure_0);
+  }
+  return found;
+};
+export const getTierRowSubtitle = function getTierRowSubtitle(isUnlocked) {
+  if (!isUnlocked.isUnlocked) {
+    if (isUnlocked.isViewerOnUpgradeableNitro) {
+      if (!isUnlocked.isViewingOtherUser) {
+        const intl = util.intl;
+        let stringResult = intl.string(util.t.VPu695);
+      }
+      return stringResult;
+    }
+  }
+  let str = isUnlocked.tier.milestone_text;
+  if (str == null) {
+    str = "";
+  }
+  stringResult = str;
 };

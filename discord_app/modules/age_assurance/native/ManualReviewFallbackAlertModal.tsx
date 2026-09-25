@@ -1,10 +1,10 @@
-// === Module 8944: ManualReviewFallbackAlertModal ===
+// === Module 8038: ManualReviewFallbackAlertModal ===
 
-// Module 8944 (ManualReviewFallbackAlertModal)
+// Module 8038 (ManualReviewFallbackAlertModal)
 import util from "util" /* 1115 */;
 import _modDef3102 from "module_3102" /* 3102 */;
-import AlertModal from "AlertModal" /* 5201 */;
-import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8945 */;
+import AlertModal from "AlertModal" /* 5202 */;
+import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8039 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

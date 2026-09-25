@@ -1,21 +1,21 @@
-// === Module 8979: StageSettingsActionSheet ===
+// === Module 8073: StageSettingsActionSheet ===
 
-// Module 8979 (StageSettingsActionSheet)
+// Module 8073 (StageSettingsActionSheet)
 import nativeDefault from "native" /* 576 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 2052 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
-import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 8744 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8983 */;
-import ReportModals from "ReportModals" /* 8987 */;
+import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 7834 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8077 */;
+import ReportModals from "ReportModals" /* 8081 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4845 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
 import StageInstanceStore from "StageInstanceStore" /* 2049 */;
 
 require = fn;
 const View = fn(17).View;
-const STAGE_SETTINGS_SHEET_KEY = fn(5719).STAGE_SETTINGS_SHEET_KEY;
+const STAGE_SETTINGS_SHEET_KEY = fn(5721).STAGE_SETTINGS_SHEET_KEY;
 const Constants = fn(1074);
 ({ ChannelSettingsSections: c10, UserSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
@@ -85,7 +85,7 @@ export default function StageSettingsActionSheet(channelId) {
     const items6 = [tmp14, , , , ];
     const obj9 = { label: null, leading: null, onPress: null };
     const intl3 = tmp2(tmp3[17]).intl;
-    obj9.label = intl3.string(tmp2(tmp3[17]).t.NiTd0e);
+    obj9.label = intl3.string(tmp2(tmp3[17]).t.dsXapM);
     const obj10 = { source: onOpenRTCDebugOverlay(tmp3[21]), color: tmp.icon.color };
     obj9.leading = closure_12(tmp2(tmp3[18]).Icon, obj10);
     obj9.onPress = function onPress() {

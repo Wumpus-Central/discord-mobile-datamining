@@ -1,17 +1,17 @@
-// === Module 11540: OrbsBadgeCoachmark ===
+// === Module 10638: OrbsBadgeCoachmark ===
 
-// Module 11540 (OrbsBadgeCoachmark)
+// Module 10638 (OrbsBadgeCoachmark)
 import util from "util" /* 1115 */;
-import useCoachmark from "useCoachmark" /* 11480 */;
-import _modDef11541 from "module_11541" /* 11541 */;
+import useCoachmark from "useCoachmark" /* 10578 */;
+import _modDef10639 from "module_10639" /* 10639 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function OrbsBadgeCoachmarkImg() {
   const tmp = closure_7();
   const obj = { style: tmp.coachmarkImageContainer, children: null };
-  const obj2 = { source: { uri: _modDef11541 }, style: tmp.coachmarkImage };
-  obj.children = <hasOwnProperty source={{ uri: _modDef11541 }} style={tmp.coachmarkImage} />;
+  const obj2 = { source: { uri: _modDef10639 }, style: tmp.coachmarkImage };
+  obj.children = <hasOwnProperty source={{ uri: _modDef10639 }} style={tmp.coachmarkImage} />;
   return <React4 style={tmp.coachmarkImageContainer}>{null}</React4>;
 }
 get_ActivityIndicator = fn(17);

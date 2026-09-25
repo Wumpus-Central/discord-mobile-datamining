@@ -1,18 +1,18 @@
-// === Module 16440: guilds/Guilds ===
+// === Module 15620: guilds/Guilds ===
 
-// Module 16440 (guilds/Guilds)
-import native from "native" /* 4535 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4682 */;
-import QuestsEligibility from "QuestsEligibility" /* 11825 */;
-import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext" /* 15435 */;
-import QuestDockDefault from "QuestDock" /* 15519 */;
-import TabsPerformanceTracker from "TabsPerformanceTracker" /* 16441 */;
-import MainChannelsDefault from "MainChannels" /* 16442 */;
-import YouBarDefault from "YouBar" /* 16790 */;
+// Module 15620 (guilds/Guilds)
+import native from "native" /* 4537 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4684 */;
+import QuestsEligibility from "QuestsEligibility" /* 10669 */;
+import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext" /* 14603 */;
+import QuestDockDefault from "QuestDock" /* 14689 */;
+import TabsPerformanceTracker from "TabsPerformanceTracker" /* 15621 */;
+import MainChannelsDefault from "MainChannels" /* 15622 */;
+import YouBarDefault from "YouBar" /* 15974 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const YouBarNavigatorScreens = fn(11440).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(10538).YouBarNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const size = fn(2);

@@ -1,6 +1,6 @@
-// === Module 9556: Carousel ===
+// === Module 8654: Carousel ===
 
-// Module 9556 (Carousel)
+// Module 8654 (Carousel)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import noop from "module_19" /* 19 */;
@@ -41,7 +41,7 @@ PageIndicator.prototype["render"] = function render() {
   obj3.style = items2;
   return React4(React2, obj3);
 };
-PageIndicator.contextType = fn(4535).ThemeContext;
+PageIndicator.contextType = fn(4537).ThemeContext;
 PageIndicator.defaultProps = { indicatorSpace: 10, indicatorSize: 20 };
 const Component2 = noop.Component;
 class Carousel extends Component2 {
@@ -93,7 +93,7 @@ Carousel.prototype["render"] = function render() {
   obj2.children = items1;
   return hasOwnProperty(React2, obj2);
 };
-Carousel.contextType = fn(4535).ThemeContext;
+Carousel.contextType = fn(4537).ThemeContext;
 Carousel.defaultProps = { pageIndictor: true, width: 375 };
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/Carousel.tsx");

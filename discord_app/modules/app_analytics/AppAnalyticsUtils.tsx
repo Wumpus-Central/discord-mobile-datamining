@@ -5,24 +5,24 @@ import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import ChannelRecord from "ChannelRecord" /* 2048 */;
 import ChannelConstants from "ChannelConstants" /* 2051 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4469 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4471 */;
 import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 5013 */;
 import hasPendingMemberAction from "hasPendingMemberAction" /* 5015 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4462 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4748 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 4464 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4750 */;
 import GuildMemberStore from "GuildMemberStore" /* 2107 */;
 import GuildRoleStore from "GuildRoleStore" /* 2101 */;
 import GuildStore from "GuildStore" /* 2066 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
 import PresenceStore from "PresenceStore" /* 4869 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4852 */;
 import ReadStateStore from "ReadStateStore" /* 4844 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4650 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4652 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5010 */;
 import UserStore from "UserStore" /* 1372 */;
 import VoiceStateStore from "VoiceStateStore" /* 4848 */;
@@ -334,13 +334,14 @@ export const getChannelOpenedMetadata = function getChannelOpenedMetadata(select
         ({ parent_id: obj7.parent_id, parentChannelThreadType: obj7.parent_channel_type } = channel);
         obj6.has_pending_member_action = hasPendingMemberAction.hasPendingMemberAction(channel.guild_id, selectedChannelId);
         obj6.can_send_message = PermissionStore.can(constants4.SEND_MESSAGES, channel);
-        let tmp3 = null;
         if (channel.type === constants3.GUILD_APP) {
-          tmp3 = null;
+          let tmp3 = null;
           if (null != channel.application_id) {
             const obj16 = { application_id: channel.application_id };
             tmp3 = obj16;
           }
+        } else {
+          tmp3 = null;
         }
         const merged1 = Object.assign(tmp3);
         return obj6;

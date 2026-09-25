@@ -1,12 +1,12 @@
-// === Module 15129: TwoFASetupLanding ===
+// === Module 14295: TwoFASetupLanding ===
 
-// Module 15129 (TwoFASetupLanding)
+// Module 14295 (TwoFASetupLanding)
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7456 */;
-import TwoFASetupModal from "TwoFASetupModal" /* 15126 */;
-import TwoFASetupStyles from "TwoFASetupStyles" /* 15130 */;
-import _modDef15131 from "module_15131" /* 15131 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6539 */;
+import TwoFASetupModal from "TwoFASetupModal" /* 14292 */;
+import TwoFASetupStyles from "TwoFASetupStyles" /* 14296 */;
+import _modDef14297 from "module_14297" /* 14297 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ export default function TwoFASetupLanding() {
   const obj2 = { children: null };
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { bottom: true, style: tmp.container, children: null };
-  const items = [hasOwnProperty(React3, { source: _modDef15131, style: tmp.authIcon }), , ];
+  const items = [hasOwnProperty(React3, { source: _modDef14297, style: tmp.authIcon }), , ];
   const obj6 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj6.children = intl.string(util.t["9E74Dx"]);

@@ -1,11 +1,11 @@
-// === Module 4475: MessageRecord ===
+// === Module 4477: MessageRecord ===
 
-// Module 4475 (MessageRecord)
+// Module 4477 (MessageRecord)
 import FlagUtils from "FlagUtils" /* 1385 */;
-import ReactionUtils from "ReactionUtils" /* 4476 */;
-import isForwardMessageDefault from "isForwardMessage" /* 7632 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 8092 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9399 */;
+import ReactionUtils from "ReactionUtils" /* 4478 */;
+import isForwardMessageDefault from "isForwardMessage" /* 6715 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7177 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8497 */;
 import Record from "Record" /* 1387 */;
 
 require = fn;
@@ -165,6 +165,14 @@ class MessageRecord extends MinimalMessageRecord {
       additional_name = null;
     }
     tmp2.additionalName = additional_name;
+    guild_space_data = global.guild_space_data;
+    if (guild_space_data == null) {
+      guild_space_data = global.guildSpaceData;
+    }
+    if (guild_space_data == null) {
+      guild_space_data = null;
+    }
+    tmp2.guildSpaceData = guild_space_data;
     return tmp2;
   }
 }

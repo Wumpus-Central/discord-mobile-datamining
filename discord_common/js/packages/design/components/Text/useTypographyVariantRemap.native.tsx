@@ -1,7 +1,7 @@
 // === Module 4835: useTypographyVariantRemap ===
 
 // Module 4835 (useTypographyVariantRemap)
-import ThemeContext from "ThemeContext" /* 4542 */;
+import ThemeContext from "ThemeContext" /* 4544 */;
 import typographyVariantRemap from "typographyVariantRemap" /* 4836 */;
 import size from "module_2" /* 2 */;
 

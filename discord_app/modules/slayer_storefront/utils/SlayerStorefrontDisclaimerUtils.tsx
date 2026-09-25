@@ -1,15 +1,15 @@
-// === Module 11170: SlayerStorefrontDisclaimerUtils ===
+// === Module 10268: SlayerStorefrontDisclaimerUtils ===
 
-// Module 11170 (SlayerStorefrontDisclaimerUtils)
+// Module 10268 (SlayerStorefrontDisclaimerUtils)
 import util from "util" /* 1115 */;
 import _modDef3584 from "module_3584" /* 3584 */;
 import LocaleStore from "LocaleStore" /* 2111 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7561 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 6644 */;
 
 require = fn;
 const MarketingURLs = fn(1074).MarketingURLs;
-let closure_6 = { [fn(11171).StorefrontPlatform.DESKTOP]: "PC", [fn(11171).StorefrontPlatform.XBOX]: "Xbox", [fn(11171).StorefrontPlatform.PLAYSTATION]: "PlayStation", [fn(11171).StorefrontPlatform.SWITCH]: "Switch", [fn(11171).StorefrontPlatform.APPLE_ARCADE]: "Apple Arcade", [fn(11171).StorefrontPlatform.NETFLIX]: "Netflix", [fn(11171).StorefrontPlatform.AMAZON_KIDS_PLUS]: "Amazon Kids+" };
-let items = [fn(11171).StorefrontPlatform.PLAYSTATION];
+let closure_6 = { [fn(10269).StorefrontPlatform.DESKTOP]: "PC", [fn(10269).StorefrontPlatform.XBOX]: "Xbox", [fn(10269).StorefrontPlatform.PLAYSTATION]: "PlayStation", [fn(10269).StorefrontPlatform.SWITCH]: "Switch", [fn(10269).StorefrontPlatform.APPLE_ARCADE]: "Apple Arcade", [fn(10269).StorefrontPlatform.NETFLIX]: "Netflix", [fn(10269).StorefrontPlatform.AMAZON_KIDS_PLUS]: "Amazon Kids+" };
+let items = [fn(10269).StorefrontPlatform.PLAYSTATION];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/utils/SlayerStorefrontDisclaimerUtils.tsx");
 

@@ -1,20 +1,20 @@
-// === Module 10982: UploadPreviewActionSheet ===
+// === Module 10086: UploadPreviewActionSheet ===
 
-// Module 10982 (UploadPreviewActionSheet)
+// Module 10086 (UploadPreviewActionSheet)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 5442 */;
-import ImagePickerDefault from "ImagePicker" /* 5454 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9502 */;
-import AddImageDescriptionModalActionCreatorsDefault from "AddImageDescriptionModalActionCreators" /* 11591 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 5443 */;
+import ImagePickerDefault from "ImagePicker" /* 5455 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 8600 */;
+import AddImageDescriptionModalActionCreatorsDefault from "AddImageDescriptionModalActionCreators" /* 10796 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const DraftType = fn(5192).DraftType;
-const ACTION_SHEET_MAX_WIDTH = fn(7484).ACTION_SHEET_MAX_WIDTH;
+const DraftType = fn(5193).DraftType;
+const ACTION_SHEET_MAX_WIDTH = fn(6567).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4829);
@@ -108,9 +108,9 @@ export default function UploadPreviewActionSheet(onAdd) {
       }
     }).catch((error) => {
       if ("E_PICKER_CANCELLED" !== error.code) {
-        const obj2 = { key: "CROP_ERROR", IconComponent: onAdd(6940).CircleErrorIcon, content: error.message };
-        onEdit(4523).open(obj2);
-        const obj = onEdit(4523);
+        const obj2 = { key: "CROP_ERROR", IconComponent: onAdd(6023).CircleErrorIcon, content: error.message };
+        onEdit(4525).open(obj2);
+        const obj = onEdit(4525);
       }
     });
   }, items3);

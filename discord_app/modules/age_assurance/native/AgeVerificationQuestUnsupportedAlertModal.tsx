@@ -1,9 +1,9 @@
-// === Module 8777: AgeVerificationQuestUnsupportedAlertModal ===
+// === Module 7869: AgeVerificationQuestUnsupportedAlertModal ===
 
-// Module 8777 (AgeVerificationQuestUnsupportedAlertModal)
+// Module 7869 (AgeVerificationQuestUnsupportedAlertModal)
 import util from "util" /* 1115 */;
 import _modDef3038 from "module_3038" /* 3038 */;
-import AlertModal from "AlertModal" /* 5201 */;
+import AlertModal from "AlertModal" /* 5202 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

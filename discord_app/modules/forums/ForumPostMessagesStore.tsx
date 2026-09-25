@@ -1,11 +1,11 @@
-// === Module 7607: ForumPostMessagesStore ===
+// === Module 6690: ForumPostMessagesStore ===
 
-// Module 7607 (ForumPostMessagesStore)
+// Module 6690 (ForumPostMessagesStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 5051 */;
-import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 7608 */;
+import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 6691 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

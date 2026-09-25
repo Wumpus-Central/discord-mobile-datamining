@@ -1,13 +1,13 @@
-// === Module 16731: HomeDrawerFolderRow ===
+// === Module 15915: HomeDrawerFolderRow ===
 
-// Module 16731 (HomeDrawerFolderRow)
+// Module 15915 (HomeDrawerFolderRow)
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import BellSlashIcon2 from "BellSlashIcon" /* 10500 */;
+import BellSlashIcon2 from "BellSlashIcon" /* 9602 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7960 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7045 */;
 import GuildStore from "GuildStore" /* 2066 */;
-import SortedGuildStore from "SortedGuildStore" /* 5743 */;
+import SortedGuildStore from "SortedGuildStore" /* 5745 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5010 */;
 import VoiceStateStore from "VoiceStateStore" /* 4848 */;
 
@@ -221,7 +221,7 @@ export default function HomeDrawerFolderExpandedChildren(folderId) {
     }
     return guildFolderById;
   });
-  const MobileHomeDrawerExperiment = folderId(4692).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = folderId(4694).MobileHomeDrawerExperiment;
   let tmp3 = null;
   if (null != stateFromStores) {
     tmp3 = null;

@@ -1,20 +1,19 @@
-// === Module 8994: NodeView ===
+// === Module 8088: NodeView ===
 
-// Module 8994 (NodeView)
+// Module 8088 (NodeView)
 import nativeDefault from "native" /* 576 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4536 */;
-import ColorUtils from "ColorUtils" /* 4678 */;
+import ColorUtils from "ColorUtils" /* 4680 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 4783 */;
 import Text_Text from "Text/Text" /* 4825 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5009 */;
-import CustomMarkupAll from "CustomMarkup" /* 5293 */;
-import MenuTypes from "MenuTypes" /* 8988 */;
-import ArrowDefault from "Arrow" /* 8996 */;
+import CustomMarkupAll from "CustomMarkup" /* 5294 */;
+import MenuTypes from "MenuTypes" /* 8082 */;
+import ArrowDefault from "Arrow" /* 8090 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 4828 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
 
 require = fn;
 function HeaderView(node) {
@@ -99,7 +98,7 @@ function ChildItem(child) {
   const items2 = [closure_17(closure_6, obj4), closure_16(ArrowDefault, {})];
   obj3.children = items2;
   obj2.children = closure_17(closure_6, obj3);
-  return closure_16(child(5427).PressableHighlight, obj2);
+  return closure_16(child(5428).PressableHighlight, obj2);
 }
 function ChildrenView(node) {
   const children = node.node.children;
@@ -125,8 +124,8 @@ function NullComponent() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const REMEDIATION_ELEMENT_TYPES = fn(8995).REMEDIATION_ELEMENT_TYPES;
-const IN_APP_REPORTS_NODE = fn(8993).IN_APP_REPORTS_NODE;
+const REMEDIATION_ELEMENT_TYPES = fn(8089).REMEDIATION_ELEMENT_TYPES;
+const IN_APP_REPORTS_NODE = fn(8087).IN_APP_REPORTS_NODE;
 const Constants = fn(1074);
 ({ AnalyticEvents: map1, ChannelTypes: closure_14 } = Constants);
 const Permissions = fn(1085).Permissions;
@@ -351,7 +350,7 @@ export default function NodeView(node) {
     return tmp2;
   }, []);
   const tmp13 = _slicedToArray(node.useState(false), 2);
-  const iarReportSettingsUpsells = external_link(ref[28]).useIarReportSettingsUpsells(reportSubType);
+  const iarReportSettingsUpsells = external_link(ref[27]).useIarReportSettingsUpsells(reportSubType);
   const elements4 = node.elements;
   external_link = "ignore_users";
   let tmp28 = null != elements4.find((type) => type.type === skip);
@@ -368,10 +367,10 @@ export default function NodeView(node) {
     }
     tmp28 = tmp29;
   }
-  let obj3 = external_link(ref[28]);
-  let userIsTeen = external_link(ref[29]).useUserIsTeen();
-  const tmp2Result = external_link(ref[29]);
-  const activeLinkUsers = external_link(ref[30]).useActiveLinkUsers();
+  let obj3 = external_link(ref[27]);
+  let userIsTeen = external_link(ref[28]).useUserIsTeen();
+  const tmp2Result = external_link(ref[28]);
+  const activeLinkUsers = external_link(ref[29]).useActiveLinkUsers();
   if (userIsTeen) {
     userIsTeen = activeLinkUsers.length > 0;
   }
@@ -385,20 +384,20 @@ export default function NodeView(node) {
   const obj5 = { element: null };
   const elements6 = node.elements;
   external_link = "success";
-  const tmp2Result2 = external_link(ref[30]);
+  const tmp2Result2 = external_link(ref[29]);
   const tmp32 = history;
   obj5.element = elements6.find((type) => type.type === skip);
-  const items8 = [first1(navigation(ref[32]), obj5), first1(callback, { node, headerRef: ref }), first1(callback1, { node }), , , , , , , , , , , , , , , ];
+  const items8 = [first1(navigation(ref[31]), obj5), first1(callback, { node, headerRef: ref }), first1(callback1, { node }), , , , , , , , , , , , , , , ];
   let tmp33Result = null;
   if (null != found1) {
     const obj6 = { element: found1 };
-    tmp33Result = tmp33(tmp34(tmp3[33]), obj6);
+    tmp33Result = tmp33(tmp34(tmp3[32]), obj6);
   }
   items8[3] = tmp33Result;
   let tmp33Result15 = null != found2;
   if (tmp33Result15) {
     const obj7 = { element: found2 };
-    tmp33Result15 = tmp33(tmp34(tmp3[34]), obj7);
+    tmp33Result15 = tmp33(tmp34(tmp3[33]), obj7);
   }
   items8[4] = tmp33Result15;
   const elements7 = node.elements;
@@ -411,7 +410,7 @@ export default function NodeView(node) {
       }
     }
     const obj8 = { message: reportType.record };
-    tmp33Result16 = tmp33(tmp34(tmp3[35]), obj8);
+    tmp33Result16 = tmp33(tmp34(tmp3[34]), obj8);
   }
   items8[5] = tmp33Result16;
   const elements8 = node.elements;
@@ -421,7 +420,7 @@ export default function NodeView(node) {
     tmp33Result17 = null;
     if ("user" === reportType.name) {
       const obj9 = { user: reportType.record };
-      tmp33Result17 = tmp33(tmp34(tmp3[36]), obj9);
+      tmp33Result17 = tmp33(tmp34(tmp3[35]), obj9);
     }
   }
   items8[6] = tmp33Result17;
@@ -432,7 +431,7 @@ export default function NodeView(node) {
     tmp33Result18 = null;
     if ("widget" === reportType.name) {
       ({ widget: obj13.widget, user_id: obj13.userId } = reportType);
-      tmp33Result18 = tmp33(tmp34(tmp3[37]), { widget: null, userId: null });
+      tmp33Result18 = tmp33(tmp34(tmp3[36]), { widget: null, userId: null });
       const obj10 = { widget: null, userId: null };
     }
   }
@@ -444,7 +443,7 @@ export default function NodeView(node) {
     tmp33Result19 = null;
     if ("stage_channel" === reportType.name) {
       const obj11 = { stageInstance: reportType.record };
-      tmp33Result19 = tmp33(tmp34(tmp3[38]), obj11);
+      tmp33Result19 = tmp33(tmp34(tmp3[37]), obj11);
     }
   }
   items8[8] = tmp33Result19;
@@ -455,7 +454,7 @@ export default function NodeView(node) {
     tmp33Result20 = null;
     if ("guild" === reportType.name) {
       const obj12 = { guild: reportType.record };
-      tmp33Result20 = tmp33(tmp34(tmp3[39]), obj12);
+      tmp33Result20 = tmp33(tmp34(tmp3[38]), obj12);
     }
   }
   items8[9] = tmp33Result20;
@@ -466,7 +465,7 @@ export default function NodeView(node) {
     tmp33Result21 = null;
     if ("guild_scheduled_event" === reportType.name) {
       const obj14 = { event: reportType.record };
-      tmp33Result21 = tmp33(tmp34(tmp3[40]), obj14);
+      tmp33Result21 = tmp33(tmp34(tmp3[39]), obj14);
     }
   }
   items8[10] = tmp33Result21;
@@ -477,18 +476,18 @@ export default function NodeView(node) {
     tmp33Result22 = null;
     if ("guild_discovery" === reportType.name) {
       const obj15 = { guild: reportType.record };
-      tmp33Result22 = tmp33(tmp34(tmp3[41]), obj15);
+      tmp33Result22 = tmp33(tmp34(tmp3[40]), obj15);
     }
   }
   items8[11] = tmp33Result22;
   const obj16 = { element: null, menuName: null, history: null };
   const elements14 = node.elements;
   external_link = "breadcrumbs";
-  const tmp35 = navigation(ref[32]);
+  const tmp35 = navigation(ref[31]);
   obj16.element = elements14.find((type) => type.type === skip);
   obj16.menuName = reportType.name;
   obj16.history = history;
-  items8[12] = first1(navigation(ref[42]), obj16);
+  items8[12] = first1(navigation(ref[41]), obj16);
   let elements = node.elements;
   let someResult = elements.some((type) => onNavigate.includes(type.type));
   if (someResult) {
@@ -496,7 +495,7 @@ export default function NodeView(node) {
       const items9 = [tmp28, , , , , ];
       if (userIsTeen) {
         const obj17 = { parents: activeLinkUsers };
-        userIsTeen = tmp33(tmp34(tmp3[45]), obj17);
+        userIsTeen = tmp33(tmp34(tmp3[44]), obj17);
       }
       items9[1] = userIsTeen;
       const elements15 = node.elements;
@@ -553,7 +552,7 @@ export default function NodeView(node) {
           }
           if (callback2Result) {
             const obj18 = { message: reportType.record, reportId };
-            callback2Result = tmp33(tmp34(tmp3[48]), obj18);
+            callback2Result = tmp33(tmp34(tmp3[47]), obj18);
           }
           items9[4] = callback2Result;
           const elements18 = node.elements;
@@ -564,7 +563,7 @@ export default function NodeView(node) {
           }
           if (tmp33Result23) {
             const obj19 = { guild: reportType.record, reportId, addCallback: node.addOnCloseCallback };
-            tmp33Result23 = tmp33(tmp34(tmp3[49]), obj19);
+            tmp33Result23 = tmp33(tmp34(tmp3[48]), obj19);
           }
           const obj20 = { children: null };
           items9[5] = tmp33Result23;
@@ -577,8 +576,8 @@ export default function NodeView(node) {
             author3 = reportType.record.author;
           }
           const obj21 = { user: author3, channelId: memo, reportId };
-          tmp33(tmp34(tmp3[47]), obj21);
-          const tmp34Result6 = tmp34(tmp3[47]);
+          tmp33(tmp34(tmp3[46]), obj21);
+          const tmp34Result6 = tmp34(tmp3[46]);
         }
       } else {
         if ("user" === reportType.name) {
@@ -587,8 +586,8 @@ export default function NodeView(node) {
           author2 = reportType.record.author;
         }
         const obj22 = { user: author2, channelId: memo, reportId };
-        tmp33(tmp34(tmp3[46]), obj22);
-        const tmp34Result7 = tmp34(tmp3[46]);
+        tmp33(tmp34(tmp3[45]), obj22);
+        const tmp34Result7 = tmp34(tmp3[45]);
       }
     } else {
       if ("user" === reportType.name) {
@@ -597,8 +596,8 @@ export default function NodeView(node) {
         author = reportType.record.author;
       }
       const obj23 = { user: author, channelId: memo, reportId };
-      tmp33(tmp34(tmp3[44]), obj23);
-      const tmp34Result8 = tmp34(tmp3[44]);
+      tmp33(tmp34(tmp3[43]), obj23);
+      const tmp34Result8 = tmp34(tmp3[43]);
     }
   }
   items8[13] = someResult;
@@ -617,10 +616,10 @@ export default function NodeView(node) {
   }
   if (tmp33Result27) {
     const obj24 = { settingsUpsells: iarReportSettingsUpsells, channelId: reportType.record.channel_id, reportId, reportType, reportSubType };
-    tmp33Result27 = tmp33(tmp34(tmp3[50]), obj24);
+    tmp33Result27 = tmp33(tmp34(tmp3[49]), obj24);
   }
   items8[14] = tmp33Result27;
-  items8[15] = first1(navigation(ref[51]), {
+  items8[15] = first1(navigation(ref[50]), {
     element: found,
     state: first1,
     onPress(arg0, arg1) {
@@ -643,8 +642,8 @@ export default function NodeView(node) {
     const elements21 = node.elements;
     external_link = "external_link";
     obj26.elements = elements21.filter((type) => type.type === external_link);
-    tmp33Result28 = tmp33(tmp34(tmp3[52]), obj26);
-    const tmp34Result9 = tmp34(tmp3[52]);
+    tmp33Result28 = tmp33(tmp34(tmp3[51]), obj26);
+    const tmp34Result9 = tmp34(tmp3[51]);
   }
   items8[17] = tmp33Result28;
   obj4.children = items8;
@@ -664,7 +663,7 @@ export default function NodeView(node) {
       closure_17(obj);
     }
   };
-  const tmp34Result = navigation(ref[42]);
+  const tmp34Result = navigation(ref[41]);
   if (!tmp14) {
     let should_submit_data;
     if (found != null) {
@@ -692,26 +691,10 @@ export default function NodeView(node) {
           const promise = onSubmit(callback(items1));
           const nextPromise = onSubmit(callback(items1)).then(() => {
             closure_18(false);
-            let header;
-            if (nodeMap[external_link.successNodeId] != null) {
-              header = tmp2.header;
-            }
-            if (null != header) {
-              const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
-              AccessibilityAnnouncer.announce(tmp2.header);
-            }
             callback1(items1);
           });
           onSubmit(callback(items1)).then(() => {
             closure_18(false);
-            let header;
-            if (nodeMap[external_link.successNodeId] != null) {
-              header = tmp2.header;
-            }
-            if (null != header) {
-              const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
-              AccessibilityAnnouncer.announce(tmp2.header);
-            }
             callback1(items1);
           }).catch(() => {
             closure_1_18(true);
@@ -720,14 +703,6 @@ export default function NodeView(node) {
           });
           const catchPromise = onSubmit(callback(items1)).then(() => {
             closure_18(false);
-            let header;
-            if (nodeMap[external_link.successNodeId] != null) {
-              header = tmp2.header;
-            }
-            if (null != header) {
-              const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
-              AccessibilityAnnouncer.announce(tmp2.header);
-            }
             callback1(items1);
           }).catch(() => {
             closure_1_18(true);
@@ -737,7 +712,7 @@ export default function NodeView(node) {
     }
     callback1(["", -1]);
   };
-  items10[1] = first1(navigation(ref[53]), obj27);
+  items10[1] = first1(navigation(ref[52]), obj27);
   rect.children = items10;
-  return closure_17(external_link(ref[31]).SafeAreaPaddingView, rect);
+  return closure_17(external_link(ref[30]).SafeAreaPaddingView, rect);
 };

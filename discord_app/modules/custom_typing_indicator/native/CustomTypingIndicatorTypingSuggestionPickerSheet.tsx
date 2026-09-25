@@ -1,6 +1,6 @@
-// === Module 15711: CustomTypingIndicatorTypingSuggestionPickerSheet ===
+// === Module 14881: CustomTypingIndicatorTypingSuggestionPickerSheet ===
 
-// Module 15711 (CustomTypingIndicatorTypingSuggestionPickerSheet)
+// Module 14881 (CustomTypingIndicatorTypingSuggestionPickerSheet)
 import nativeDefault from "native" /* 576 */;
 import _modDef3716 from "module_3716" /* 3716 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -22,7 +22,7 @@ export default function CustomTypingIndicatorTypingSuggestionPickerSheet(onChang
   const obj2 = { title: null };
   let intl = onChange(1115).intl;
   obj2.title = intl.string(_modDef3716["X+ijyw"]);
-  obj.header = jsx(onChange(7482).BottomSheetTitleHeader, { title: null });
+  obj.header = jsx(onChange(6565).BottomSheetTitleHeader, { title: null });
   const intl2 = onChange(1115).intl;
   obj.dismissAccessibilityLabel = intl2.string(_modDef3716.hrl2cG);
   const obj3 = {
@@ -35,14 +35,14 @@ export default function CustomTypingIndicatorTypingSuggestionPickerSheet(onChang
     children: null
   };
   const tmp = closure_6();
-  const customTypingIndicatorSuggestionPresets = onChange(12313).getCustomTypingIndicatorSuggestionPresets();
+  const customTypingIndicatorSuggestionPresets = onChange(11439).getCustomTypingIndicatorSuggestionPresets();
   obj3.children = customTypingIndicatorSuggestionPresets.map((value) => {
     const obj = { value, label: null };
     const intl = onChange(1115).intl;
-    obj.label = intl.string(onChange(12313).getCustomTypingIndicatorSuggestionMessage(value));
-    return jsx(onChange(5993).TableRadioRow, { value, label: null }, value);
+    obj.label = intl.string(onChange(11439).getCustomTypingIndicatorSuggestionMessage(value));
+    return jsx(onChange(5995).TableRadioRow, { value, label: null }, value);
   });
-  obj.children = jsx(onChange(5990).TableRadioGroup, {
+  obj.children = jsx(onChange(5992).TableRadioGroup, {
     value: tmp2[0],
     onChange(arg0) {
       closure_1(arg0);
@@ -51,5 +51,5 @@ export default function CustomTypingIndicatorTypingSuggestionPickerSheet(onChang
     hasIcons: false,
     children: null
   });
-  return jsx(onChange(7530).ActionSheet, { contentStyles: closure_6().content, header: null, dismissAccessibilityLabel: null, children: null });
+  return jsx(onChange(6613).ActionSheet, { contentStyles: closure_6().content, header: null, dismissAccessibilityLabel: null, children: null });
 };

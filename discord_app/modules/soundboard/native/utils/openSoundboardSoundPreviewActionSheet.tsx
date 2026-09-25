@@ -1,6 +1,6 @@
-// === Module 17641: openSoundboardSoundPreviewActionSheet ===
+// === Module 16865: openSoundboardSoundPreviewActionSheet ===
 
-// Module 17641 (openSoundboardSoundPreviewActionSheet)
+// Module 16865 (openSoundboardSoundPreviewActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
 import size from "module_2" /* 2 */;
@@ -8,5 +8,5 @@ import size from "module_2" /* 2 */;
 const result = size.fileFinishedImporting("modules/soundboard/native/utils/openSoundboardSoundPreviewActionSheet.tsx");
 
 export default function openSoundboardSoundPreviewActionSheet(channel, sound, analyticsSource, soundGridLocation) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17642, dependencyMap.paths), "SoundboardSoundPreviewActionSheet", { channel, sound, soundGridLocation, analyticsSource });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16866, dependencyMap.paths), "SoundboardSoundPreviewActionSheet", { channel, sound, soundGridLocation, analyticsSource });
 };

@@ -1,6 +1,6 @@
-// === Module 14827: DeclarativeNotificationSettingsRedesignExperiment ===
+// === Module 13989: DeclarativeNotificationSettingsRedesignExperiment ===
 
-// Module 14827 (DeclarativeNotificationSettingsRedesignExperiment)
+// Module 13989 (DeclarativeNotificationSettingsRedesignExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

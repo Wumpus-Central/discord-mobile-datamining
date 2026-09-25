@@ -1,24 +1,24 @@
-// === Module 11689: ChatView ===
+// === Module 10869: ChatView ===
 
-// Module 11689 (ChatView)
+// Module 10869 (ChatView)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import ChatInputUtils from "ChatInputUtils" /* 4695 */;
-import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7644 */;
-import SummaryActionCreators from "SummaryActionCreators" /* 11693 */;
-import ChatViewWrapperDefault from "ChatViewWrapper" /* 11698 */;
-import ChatViewStickyHeaderDefault from "ChatViewStickyHeader" /* 11711 */;
-import MessagesDefault from "Messages" /* 11773 */;
-import ChatInputDefault from "ChatInput" /* 12300 */;
-import JumpToPresentButtonDefault from "JumpToPresentButton" /* 12609 */;
-import ChatBeginningRowDefault from "ChatBeginningRow" /* 12817 */;
-import PortalKeyboardInlineComponentDefault from "PortalKeyboardInlineComponent" /* 12985 */;
-import ChatPlaceholderDefault from "ChatPlaceholder" /* 12986 */;
-import ChannelSafeAreaBottomDefault from "ChannelSafeAreaBottom" /* 12990 */;
-import VoiceMessageOverlayDefault from "VoiceMessageOverlay" /* 12993 */;
+import ChatInputUtils from "ChatInputUtils" /* 4697 */;
+import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 6727 */;
+import SummaryActionCreators from "SummaryActionCreators" /* 10873 */;
+import ChatViewWrapperDefault from "ChatViewWrapper" /* 10878 */;
+import ChatViewStickyHeaderDefault from "ChatViewStickyHeader" /* 10891 */;
+import MessagesDefault from "Messages" /* 10955 */;
+import ChatInputDefault from "ChatInput" /* 11426 */;
+import JumpToPresentButtonDefault from "JumpToPresentButton" /* 11735 */;
+import ChatBeginningRowDefault from "ChatBeginningRow" /* 11943 */;
+import PortalKeyboardInlineComponentDefault from "PortalKeyboardInlineComponent" /* 12116 */;
+import ChatPlaceholderDefault from "ChatPlaceholder" /* 12117 */;
+import ChannelSafeAreaBottomDefault from "ChannelSafeAreaBottom" /* 12121 */;
+import VoiceMessageOverlayDefault from "VoiceMessageOverlay" /* 12124 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5582 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5584 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import MessageStore from "MessageStore" /* 5049 */;
 

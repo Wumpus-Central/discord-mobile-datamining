@@ -1,15 +1,15 @@
-// === Module 11844: AppStoreOverlayStatsCarousel ===
+// === Module 10713: AppStoreOverlayStatsCarousel ===
 
-// Module 11844 (AppStoreOverlayStatsCarousel)
+// Module 10713 (AppStoreOverlayStatsCarousel)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6985 */;
-import AnalyticsActions from "AnalyticsActions" /* 8041 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8051 */;
-import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 11845 */;
-import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 11846 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6068 */;
+import AnalyticsActions from "AnalyticsActions" /* 7126 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7136 */;
+import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 10714 */;
+import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 10715 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

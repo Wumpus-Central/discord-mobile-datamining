@@ -1,13 +1,13 @@
-// === Module 16497: HappeningNowCardLiveStage ===
+// === Module 15677: HappeningNowCardLiveStage ===
 
-// Module 16497 (HappeningNowCardLiveStage)
+// Module 15677 (HappeningNowCardLiveStage)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4981 */;
-import HappeningNowCard from "HappeningNowCard" /* 15646 */;
-import useLiveStageData from "useLiveStageData" /* 16498 */;
+import HappeningNowCard from "HappeningNowCard" /* 14816 */;
+import useLiveStageData from "useLiveStageData" /* 15678 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -176,7 +176,7 @@ function getUsersSubtitle(arg0) {
   }
 }
 const View = fn(17).View;
-const HappeningNowConstants = fn(15645);
+const HappeningNowConstants = fn(14815);
 ({ HappeningNowCardTrackingType: hasOwnProperty, HAPPENING_NOW_CONTENT_HEIGHT, HAPPENING_NOW_STAGE_PREVIEW_HEIGHT, HAPPENING_NOW_STAGE_PREVIEW_WIDTH } = HappeningNowConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
@@ -206,7 +206,7 @@ export default noop.memo((arg0) => {
   const callback = noop.useCallback(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, { order: index, guild_id, type: constants.GUILD_LIVE_STAGE_CARD, destination_channel_id: channel_id });
     const obj2 = { order: index, guild_id, type: constants.GUILD_LIVE_STAGE_CARD, destination_channel_id: channel_id };
-    asyncRequireImpl(13275, dependencyMap.paths).then((result) => {
+    asyncRequireImpl(12425, dependencyMap.paths).then((result) => {
       result.default(channel_id, true);
     });
   }, items);

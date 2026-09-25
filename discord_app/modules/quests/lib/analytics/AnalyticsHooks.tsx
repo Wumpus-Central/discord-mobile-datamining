@@ -1,15 +1,15 @@
-// === Module 12115: AnalyticsHooks ===
+// === Module 10736: AnalyticsHooks ===
 
-// Module 12115 (AnalyticsHooks)
+// Module 10736 (AnalyticsHooks)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import v1 from "v1" /* 1255 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import AdCreativeType from "AdCreativeType" /* 5756 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 8000 */;
-import QuestDataUtils from "QuestDataUtils" /* 8022 */;
-import AnalyticsActions from "AnalyticsActions" /* 8041 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8051 */;
-import QuestHomeSearchSession from "QuestHomeSearchSession" /* 8053 */;
+import AdCreativeType from "AdCreativeType" /* 5758 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7085 */;
+import QuestDataUtils from "QuestDataUtils" /* 7107 */;
+import AnalyticsActions from "AnalyticsActions" /* 7126 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7136 */;
+import QuestHomeSearchSession from "QuestHomeSearchSession" /* 7138 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/lib/analytics/AnalyticsHooks.tsx");
 
 export const useTrackQuestEventWithImpression = function useTrackQuestEventWithImpression() {
-  getQuestImpressionId = getQuestImpressionId(11829).useGetQuestImpressionId();
+  getQuestImpressionId = getQuestImpressionId(10698).useGetQuestImpressionId();
   const items = [getQuestImpressionId];
   return noop.useCallback((properties) => {
     const obj2 = {};
@@ -31,7 +31,7 @@ export const useTrackQuestEventWithImpression = function useTrackQuestEventWithI
   }, items);
 };
 export const useTrackQuestContentClickedWithImpression = function useTrackQuestContentClickedWithImpression() {
-  const getQuestImpressionId = callback(11829).useGetQuestImpressionId();
+  const getQuestImpressionId = callback(10698).useGetQuestImpressionId();
   closure_129_0 = getQuestImpressionId;
   const items = [getQuestImpressionId];
   callback = noop.useCallback((properties) => {
@@ -48,12 +48,12 @@ export const useTrackQuestContentClickedWithImpression = function useTrackQuestC
     questId = questId.questId;
     const questContent = questId.questContent;
     ({ questContentCTA: closure_2, questContentPosition: closure_3, questContentRowIndex: closure_4, trackGuildAndChannelMetadata: closure_5, sourceQuestContent } = questId);
-    const adMetadataSealed = callback(8022).getAdMetadataSealed(sourceQuestContent);
-    let obj = callback(8022);
-    const adTrafficMetadataSealed = callback(8022).getAdTrafficMetadataSealed(sourceQuestContent, questId);
-    let obj2 = callback(8022);
-    let obj3 = callback(8057);
-    const adUser = obj3.getAdUser(callback(8051).getQuestContentName(questContent));
+    const adMetadataSealed = callback(7107).getAdMetadataSealed(sourceQuestContent);
+    let obj = callback(7107);
+    const adTrafficMetadataSealed = callback(7107).getAdTrafficMetadataSealed(sourceQuestContent, questId);
+    let obj2 = callback(7107);
+    let obj3 = callback(7142);
+    const adUser = obj3.getAdUser(callback(7136).getQuestContentName(questContent));
     adUser.then((advertisingId) => {
       const obj = { questId, event: AnalyticEvents.QUEST_CONTENT_CLICKED, properties: null, trackGuildAndChannelMetadata: null, shouldExtendSession: null, sourceQuestContent: null };
       const obj2 = {};
@@ -109,7 +109,7 @@ export const useTrackQuestContentClickedWithImpression = function useTrackQuestC
   }, items1);
 };
 export const useTrackAdContentEventWithImpression = function useTrackAdContentEventWithImpression() {
-  getQuestImpressionId = getQuestImpressionId(11829).useGetQuestImpressionId();
+  getQuestImpressionId = getQuestImpressionId(10698).useGetQuestImpressionId();
   const items = [getQuestImpressionId];
   return noop.useCallback((properties) => {
     const obj2 = {};
@@ -122,7 +122,7 @@ export const useTrackAdContentEventWithImpression = function useTrackAdContentEv
   }, items);
 };
 export const useTrackAdContentClickedWithImpression = function useTrackAdContentClickedWithImpression() {
-  const getQuestImpressionId = callback(11829).useGetQuestImpressionId();
+  const getQuestImpressionId = callback(10698).useGetQuestImpressionId();
   closure_129_0 = getQuestImpressionId;
   const items = [getQuestImpressionId];
   callback = noop.useCallback((properties) => {
@@ -138,8 +138,8 @@ export const useTrackAdContentClickedWithImpression = function useTrackAdContent
   return noop.useCallback((arg0) => {
     ({ adContentId: callback, relatedQuestId: closure_1, adCreativeType: closure_2, questContent } = arg0);
     ({ questContentCTA: closure_4, questContentPosition: closure_5, questContentRowIndex: closure_6, trackGuildAndChannelMetadata: closure_7, sourceQuestContent: closure_8 } = arg0);
-    let obj = callback(8057);
-    const adUser = obj.getAdUser(callback(8051).getQuestContentName(questContent));
+    let obj = callback(7142);
+    const adUser = obj.getAdUser(callback(7136).getQuestContentName(questContent));
     adUser.then((advertisingId) => {
       const obj = { adContentId, relatedQuestId, adCreativeType, event: AnalyticEvents.QUEST_CONTENT_CLICKED, properties: null, trackGuildAndChannelMetadata: null, shouldExtendSession: null, sourceQuestContent: null };
       const obj2 = {};
@@ -205,7 +205,7 @@ export const useQuestHomeEntrypointAnalyticsEvents = function useQuestHomeEntryp
   questHomeHero = questHomeHero.questHomeHero;
   const shouldShowQuestHomeHeroContent = questHomeHero.shouldShowQuestHomeHeroContent;
   let memo;
-  const QuestContent = questHomeHero(5752).QuestContent;
+  const QuestContent = questHomeHero(5754).QuestContent;
   const tmp = shouldShowQuestHomeHeroContent ? QuestContent.QUEST_HOME_ENTRYPOINT_THEMED : QuestContent.QUEST_HOME_ENTRYPOINT;
   dependencyMap = tmp;
   const items = [tmp];

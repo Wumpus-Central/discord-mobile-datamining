@@ -1,18 +1,18 @@
-// === Module 11613: ReactionEmojiOptionsActionSheet ===
+// === Module 10818: ReactionEmojiOptionsActionSheet ===
 
-// Module 11613 (ReactionEmojiOptionsActionSheet)
+// Module 10818 (ReactionEmojiOptionsActionSheet)
 import nativeDefault from "native" /* 576 */;
-import ToastUtils from "ToastUtils" /* 4522 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4523 */;
-import ClipboardUtils from "ClipboardUtils" /* 7522 */;
-import ReactionActionCreatorsAll from "ReactionActionCreators" /* 8093 */;
-import StarIcon from "StarIcon" /* 10583 */;
-import StarOutlineIcon2 from "StarOutlineIcon" /* 10589 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 10682 */;
+import ToastUtils from "ToastUtils" /* 4524 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4525 */;
+import ClipboardUtils from "ClipboardUtils" /* 6605 */;
+import ReactionActionCreatorsAll from "ReactionActionCreators" /* 7178 */;
+import StarIcon from "StarIcon" /* 9687 */;
+import StarOutlineIcon2 from "StarOutlineIcon" /* 9693 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 9786 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4821 */;
-import EmojiStore from "EmojiStore" /* 5764 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4650 */;
+import EmojiStore from "EmojiStore" /* 5766 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4652 */;
 
 require = fn;
 const View = fn(17).View;

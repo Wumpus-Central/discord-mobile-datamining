@@ -1,10 +1,10 @@
-// === Module 17365: useReferralProgramCoachmark ===
+// === Module 16580: useReferralProgramCoachmark ===
 
-// Module 17365 (useReferralProgramCoachmark)
+// Module 16580 (useReferralProgramCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import FastImageDefault from "FastImage" /* 5892 */;
-import _modDef17366 from "module_17366" /* 17366 */;
+import FastImageDefault from "FastImage" /* 5894 */;
+import _modDef16581 from "module_16581" /* 16581 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,8 +14,8 @@ require = fn;
 function ReferralProgramCoachmarkImg() {
   const tmp = closure_9();
   const obj = { style: tmp.coachmarkImageContainer, children: null };
-  const obj2 = { source: _modDef17366, style: tmp.coachmarkImage };
-  obj.children = jsx(FastImageDefault, { source: _modDef17366, style: tmp.coachmarkImage });
+  const obj2 = { source: _modDef16581, style: tmp.coachmarkImage };
+  obj.children = jsx(FastImageDefault, { source: _modDef16581, style: tmp.coachmarkImage });
   return <View style={tmp.coachmarkImageContainer}>{null}</View>;
 }
 const View = fn(17).View;

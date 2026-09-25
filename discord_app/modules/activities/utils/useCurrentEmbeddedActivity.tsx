@@ -1,6 +1,6 @@
-// === Module 9804: useCurrentEmbeddedActivity ===
+// === Module 8902: useCurrentEmbeddedActivity ===
 
-// Module 9804 (useCurrentEmbeddedActivity)
+// Module 8902 (useCurrentEmbeddedActivity)
 import initialize from "initialize" /* 504 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
 

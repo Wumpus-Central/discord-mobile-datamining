@@ -1,8 +1,8 @@
-// === Module 14316: GuildBadgeClover ===
+// === Module 13477: GuildBadgeClover ===
 
-// Module 14316 (GuildBadgeClover)
-import inlineStyles from "inlineStyles" /* 8807 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14284 */;
+// Module 13477 (GuildBadgeClover)
+import inlineStyles from "inlineStyles" /* 7901 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 13445 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

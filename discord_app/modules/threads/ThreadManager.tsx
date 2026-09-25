@@ -1,11 +1,11 @@
-// === Module 18003: ThreadManager ===
+// === Module 17231: ThreadManager ===
 
-// Module 18003 (ThreadManager)
+// Module 17231 (ThreadManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ForumActionCreatorsDefault from "ForumActionCreators" /* 8230 */;
+import ForumActionCreatorsDefault from "ForumActionCreators" /* 7319 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7451 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6534 */;
 
 class ThreadManager extends tmp2 {
   constructor() {

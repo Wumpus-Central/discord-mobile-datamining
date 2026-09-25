@@ -1,6 +1,6 @@
-// === Module 14977: BadgeSettingsActionCreators ===
+// === Module 14139: BadgeSettingsActionCreators ===
 
-// Module 14977 (BadgeSettingsActionCreators)
+// Module 14139 (BadgeSettingsActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

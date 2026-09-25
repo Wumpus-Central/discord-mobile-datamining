@@ -1,33 +1,34 @@
-// === Module 15938: DevToolsScreens ===
+// === Module 15108: DevToolsScreens ===
 
-// Module 15938 (DevToolsScreens)
-import DevToolsExperimentsScreen from "DevToolsExperimentsScreen" /* 12154 */;
-import DevToolsAnalyticsScreen from "DevToolsAnalyticsScreen" /* 15939 */;
-import DevToolsBuildOverrideScreen from "DevToolsBuildOverrideScreen" /* 15940 */;
-import DevToolsLoggingFlagsScreen from "DevToolsLoggingFlagsScreen" /* 15945 */;
-import DevToolsLocalMessageCache from "DevToolsLocalMessageCache" /* 15946 */;
-import DevToolsGeneratedTestUsersScreen from "DevToolsGeneratedTestUsersScreen" /* 15947 */;
-import DevToolsDataStorageScreen from "DevToolsDataStorageScreen" /* 15973 */;
-import UserSettingsDesignSystemsScreen from "UserSettingsDesignSystemsScreen" /* 15974 */;
-import DevToolsDismissableContentsScreen from "DevToolsDismissableContentsScreen" /* 15975 */;
-import GameCommunityUpsellDevTools from "GameCommunityUpsellDevTools" /* 15979 */;
-import IntlTestingSettingsPage from "IntlTestingSettingsPage" /* 15982 */;
-import DevToolsOTATestScreen from "DevToolsOTATestScreen" /* 16017 */;
-import DevToolsProfilingScreen from "DevToolsProfilingScreen" /* 16020 */;
-import DevToolsQuickActionsScreen from "DevToolsQuickActionsScreen" /* 16025 */;
-import DevToolsRevenuePlaygroundScreen from "DevToolsRevenuePlaygroundScreen" /* 16087 */;
-import UserSettingsSurveyChangelogOverride from "UserSettingsSurveyChangelogOverride" /* 16106 */;
-import DevToolsTogglesScreen from "DevToolsTogglesScreen" /* 16107 */;
-import DevToolsAgeVerificationScreen from "DevToolsAgeVerificationScreen" /* 16110 */;
-import DevToolsComponentsTestingScreen from "DevToolsComponentsTestingScreen" /* 16111 */;
-import DevToolsShopScreen from "DevToolsShopScreen" /* 16118 */;
-import CollectiblesTool from "CollectiblesTool" /* 16119 */;
-import SlayerStorefrontDevTools from "SlayerStorefrontDevTools" /* 16121 */;
-import DevToolsActionSheetsScreen from "DevToolsActionSheetsScreen" /* 16122 */;
-import DevToolsAccountLinkingScreen from "DevToolsAccountLinkingScreen" /* 16125 */;
-import DevToolsPerformanceTestingScreen from "DevToolsPerformanceTestingScreen" /* 16126 */;
-import DevToolsInAppNotificationTestingScreen from "DevToolsInAppNotificationTestingScreen" /* 16127 */;
-import DevToolsDisplayNameEffectsBenchmarkScreen from "DevToolsDisplayNameEffectsBenchmarkScreen" /* 16128 */;
+// Module 15108 (DevToolsScreens)
+import DevToolsExperimentsScreen from "DevToolsExperimentsScreen" /* 11276 */;
+import DevToolsAnalyticsScreen from "DevToolsAnalyticsScreen" /* 15109 */;
+import DevToolsBuildOverrideScreen from "DevToolsBuildOverrideScreen" /* 15110 */;
+import DevToolsLoggingFlagsScreen from "DevToolsLoggingFlagsScreen" /* 15115 */;
+import DevToolsLocalMessageCache from "DevToolsLocalMessageCache" /* 15116 */;
+import DevToolsGeneratedTestUsersScreen from "DevToolsGeneratedTestUsersScreen" /* 15117 */;
+import DevToolsDataStorageScreen from "DevToolsDataStorageScreen" /* 15143 */;
+import UserSettingsDesignSystemsScreen from "UserSettingsDesignSystemsScreen" /* 15144 */;
+import DevToolsDismissableContentsScreen from "DevToolsDismissableContentsScreen" /* 15145 */;
+import GameCommunityUpsellDevTools from "GameCommunityUpsellDevTools" /* 15149 */;
+import IntlTestingSettingsPage from "IntlTestingSettingsPage" /* 15152 */;
+import DevToolsOTATestScreen from "DevToolsOTATestScreen" /* 15187 */;
+import DevToolsProfilingScreen from "DevToolsProfilingScreen" /* 15190 */;
+import DevToolsBountyQaScreen from "DevToolsBountyQaScreen" /* 15195 */;
+import DevToolsQuickActionsScreen from "DevToolsQuickActionsScreen" /* 15196 */;
+import DevToolsRevenuePlaygroundScreen from "DevToolsRevenuePlaygroundScreen" /* 15260 */;
+import UserSettingsSurveyChangelogOverride from "UserSettingsSurveyChangelogOverride" /* 15281 */;
+import DevToolsTogglesScreen from "DevToolsTogglesScreen" /* 15282 */;
+import DevToolsAgeVerificationScreen from "DevToolsAgeVerificationScreen" /* 15285 */;
+import DevToolsComponentsTestingScreen from "DevToolsComponentsTestingScreen" /* 15286 */;
+import DevToolsShopScreen from "DevToolsShopScreen" /* 15293 */;
+import CollectiblesTool from "CollectiblesTool" /* 15294 */;
+import SlayerStorefrontDevTools from "SlayerStorefrontDevTools" /* 15296 */;
+import DevToolsActionSheetsScreen from "DevToolsActionSheetsScreen" /* 15297 */;
+import DevToolsAccountLinkingScreen from "DevToolsAccountLinkingScreen" /* 15302 */;
+import DevToolsPerformanceTestingScreen from "DevToolsPerformanceTestingScreen" /* 15303 */;
+import DevToolsInAppNotificationTestingScreen from "DevToolsInAppNotificationTestingScreen" /* 15304 */;
+import DevToolsDisplayNameEffectsBenchmarkScreen from "DevToolsDisplayNameEffectsBenchmarkScreen" /* 15305 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,7 +36,7 @@ const jsx = fn(21).jsx;
 const obj = {
   analytics: {
     headerTitle: "Analytics",
-    Icon: fn(5843).ClipboardListIcon,
+    Icon: fn(5845).ClipboardListIcon,
     render() {
       return jsx(DevToolsAnalyticsScreen.default, {});
     }
@@ -52,6 +53,7 @@ const obj = {
   i18n: null,
   otatest: null,
   profiling: null,
+  bountyQa: null,
   quickActions: null,
   revenuePlayground: null,
   surveyOverride: null,
@@ -68,56 +70,56 @@ const obj = {
 };
 const obj2 = {
   headerTitle: "Analytics",
-  Icon: fn(5843).ClipboardListIcon,
+  Icon: fn(5845).ClipboardListIcon,
   render() {
     return jsx(DevToolsAnalyticsScreen.default, {});
   }
 };
 obj.buildOverride = {
   headerTitle: "Build Override",
-  Icon: fn(15494).RefreshIcon,
+  Icon: fn(14664).RefreshIcon,
   render() {
     return jsx(DevToolsBuildOverrideScreen.default, {});
   }
 };
 const obj3 = {
   headerTitle: "Build Override",
-  Icon: fn(15494).RefreshIcon,
+  Icon: fn(14664).RefreshIcon,
   render() {
     return jsx(DevToolsBuildOverrideScreen.default, {});
   }
 };
 obj.experiments = {
   headerTitle: "Experiment Overrides",
-  Icon: fn(15943).BeakerIcon,
+  Icon: fn(15113).BeakerIcon,
   render() {
     return jsx(DevToolsExperimentsScreen.default, {});
   }
 };
 const obj4 = {
   headerTitle: "Experiment Overrides",
-  Icon: fn(15943).BeakerIcon,
+  Icon: fn(15113).BeakerIcon,
   render() {
     return jsx(DevToolsExperimentsScreen.default, {});
   }
 };
 obj.loggingFlags = {
   headerTitle: "Logging Flags",
-  Icon: fn(8242).PaperIcon,
+  Icon: fn(7331).PaperIcon,
   render() {
     return jsx(DevToolsLoggingFlagsScreen.default, {});
   }
 };
 const obj5 = {
   headerTitle: "Logging Flags",
-  Icon: fn(8242).PaperIcon,
+  Icon: fn(7331).PaperIcon,
   render() {
     return jsx(DevToolsLoggingFlagsScreen.default, {});
   }
 };
 obj.cacheStats = {
   headerTitle: "Cache Stats",
-  Icon: fn(8242).PaperIcon,
+  Icon: fn(7331).PaperIcon,
   predicate() {
     return false;
   },
@@ -127,7 +129,7 @@ obj.cacheStats = {
 };
 const obj6 = {
   headerTitle: "Cache Stats",
-  Icon: fn(8242).PaperIcon,
+  Icon: fn(7331).PaperIcon,
   predicate() {
     return false;
   },
@@ -137,84 +139,84 @@ const obj6 = {
 };
 obj.generatedTestUsers = {
   headerTitle: "Generated Test Users",
-  Icon: fn(12167).UserIcon,
+  Icon: fn(11289).UserIcon,
   render() {
     return jsx(DevToolsGeneratedTestUsersScreen.default, {});
   }
 };
 const obj7 = {
   headerTitle: "Generated Test Users",
-  Icon: fn(12167).UserIcon,
+  Icon: fn(11289).UserIcon,
   render() {
     return jsx(DevToolsGeneratedTestUsersScreen.default, {});
   }
 };
 obj.dataStorage = {
   headerTitle: "Data Storage",
-  Icon: fn(15895).FileUpIcon,
+  Icon: fn(15065).FileUpIcon,
   render() {
     return jsx(DevToolsDataStorageScreen.default, {});
   }
 };
 const obj8 = {
   headerTitle: "Data Storage",
-  Icon: fn(15895).FileUpIcon,
+  Icon: fn(15065).FileUpIcon,
   render() {
     return jsx(DevToolsDataStorageScreen.default, {});
   }
 };
 obj.designSystems = {
   headerTitle: "Design Systems",
-  Icon: fn(15611).PaintPaletteIcon,
+  Icon: fn(14781).PaintPaletteIcon,
   render() {
     return jsx(UserSettingsDesignSystemsScreen.default, {});
   }
 };
 const obj9 = {
   headerTitle: "Design Systems",
-  Icon: fn(15611).PaintPaletteIcon,
+  Icon: fn(14781).PaintPaletteIcon,
   render() {
     return jsx(UserSettingsDesignSystemsScreen.default, {});
   }
 };
 obj.dismissibleContent = {
   headerTitle: "Dismissible Contents",
-  Icon: fn(8242).PaperIcon,
+  Icon: fn(7331).PaperIcon,
   render() {
     return jsx(DevToolsDismissableContentsScreen.default, {});
   }
 };
 const obj10 = {
   headerTitle: "Dismissible Contents",
-  Icon: fn(8242).PaperIcon,
+  Icon: fn(7331).PaperIcon,
   render() {
     return jsx(DevToolsDismissableContentsScreen.default, {});
   }
 };
 obj.gameCommunityUpsell = {
   headerTitle: "Game Community Upsell",
-  Icon: fn(8242).PaperIcon,
+  Icon: fn(7331).PaperIcon,
   render() {
     return jsx(GameCommunityUpsellDevTools.default, {});
   }
 };
 const obj11 = {
   headerTitle: "Game Community Upsell",
-  Icon: fn(8242).PaperIcon,
+  Icon: fn(7331).PaperIcon,
   render() {
     return jsx(GameCommunityUpsellDevTools.default, {});
   }
 };
 obj.i18n = {
   headerTitle: "Intl Testing",
-  Icon: fn(15774).LanguageIcon,
+  Icon: fn(14944).LanguageIcon,
   render() {
     return jsx(IntlTestingSettingsPage.default, {});
   }
 };
 const obj12 = {
   headerTitle: "Intl Testing",
-  Icon: fn(15774).LanguageIcon,
+  Icon: fn(14944).LanguageIcon,
   render() {
     return jsx(IntlTestingSettingsPage.default, {});
   }
@@ -235,154 +237,168 @@ const obj13 = {
 };
 obj.profiling = {
   headerTitle: "Profiling",
-  Icon: fn(11943).TimerIcon,
+  Icon: fn(11086).TimerIcon,
   render() {
     return jsx(DevToolsProfilingScreen.default, {});
   }
 };
 const obj14 = {
   headerTitle: "Profiling",
-  Icon: fn(11943).TimerIcon,
+  Icon: fn(11086).TimerIcon,
   render() {
     return jsx(DevToolsProfilingScreen.default, {});
   }
 };
+obj.bountyQa = {
+  headerTitle: "Bounty QA",
+  Icon: fn(8165).TrophyIcon,
+  render() {
+    return jsx(DevToolsBountyQaScreen.default, {});
+  }
+};
+const obj15 = {
+  headerTitle: "Bounty QA",
+  Icon: fn(8165).TrophyIcon,
+  render() {
+    return jsx(DevToolsBountyQaScreen.default, {});
+  }
+};
 obj.quickActions = {
   headerTitle: "Quick Actions",
-  Icon: fn(10498).MagicWandIcon,
+  Icon: fn(9600).MagicWandIcon,
   render() {
     return jsx(DevToolsQuickActionsScreen.default, {});
   }
 };
-const obj15 = {
+const obj16 = {
   headerTitle: "Quick Actions",
-  Icon: fn(10498).MagicWandIcon,
+  Icon: fn(9600).MagicWandIcon,
   render() {
     return jsx(DevToolsQuickActionsScreen.default, {});
   }
 };
 obj.revenuePlayground = {
   headerTitle: "Revenue Playground",
-  Icon: fn(12267).PiggyBankIcon,
+  Icon: fn(11389).PiggyBankIcon,
   render() {
     return jsx(DevToolsRevenuePlaygroundScreen.default, {});
   }
 };
-const obj16 = {
+const obj17 = {
   headerTitle: "Revenue Playground",
-  Icon: fn(12267).PiggyBankIcon,
+  Icon: fn(11389).PiggyBankIcon,
   render() {
     return jsx(DevToolsRevenuePlaygroundScreen.default, {});
   }
 };
 obj.surveyOverride = {
   headerTitle: "Survey & Changelog Override",
-  Icon: fn(10598).PencilIcon,
+  Icon: fn(9702).PencilIcon,
   render() {
     return jsx(UserSettingsSurveyChangelogOverride.default, {});
   }
 };
-const obj17 = {
+const obj18 = {
   headerTitle: "Survey & Changelog Override",
-  Icon: fn(10598).PencilIcon,
+  Icon: fn(9702).PencilIcon,
   render() {
     return jsx(UserSettingsSurveyChangelogOverride.default, {});
   }
 };
 obj.toggles = {
   headerTitle: "Toggles (Design, Reporting, etc)",
-  Icon: fn(15703).EyeDropperIcon,
+  Icon: fn(14873).EyeDropperIcon,
   render() {
     return jsx(DevToolsTogglesScreen.default, {});
   }
 };
-const obj18 = {
+const obj19 = {
   headerTitle: "Toggles (Design, Reporting, etc)",
-  Icon: fn(15703).EyeDropperIcon,
+  Icon: fn(14873).EyeDropperIcon,
   render() {
     return jsx(DevToolsTogglesScreen.default, {});
   }
 };
 obj.ageVerification = {
   headerTitle: "Age Verification",
-  Icon: fn(9599).ShieldIcon,
+  Icon: fn(8697).ShieldIcon,
   render() {
     return jsx(DevToolsAgeVerificationScreen.default, {});
   }
 };
-const obj19 = {
+const obj20 = {
   headerTitle: "Age Verification",
-  Icon: fn(9599).ShieldIcon,
+  Icon: fn(8697).ShieldIcon,
   render() {
     return jsx(DevToolsAgeVerificationScreen.default, {});
   }
 };
 obj.components = {
   headerTitle: "Bot Components Testing",
-  Icon: fn(9632).RobotIcon,
+  Icon: fn(8730).RobotIcon,
   render() {
     return jsx(DevToolsComponentsTestingScreen.default, {});
   }
 };
-const obj20 = {
+const obj21 = {
   headerTitle: "Bot Components Testing",
-  Icon: fn(9632).RobotIcon,
+  Icon: fn(8730).RobotIcon,
   render() {
     return jsx(DevToolsComponentsTestingScreen.default, {});
   }
 };
 obj.shop = {
   headerTitle: "Shop",
-  Icon: fn(12480).ShopIcon,
+  Icon: fn(11606).ShopIcon,
   render() {
     return jsx(DevToolsShopScreen.default, {});
   }
 };
-const obj21 = {
+const obj22 = {
   headerTitle: "Shop",
-  Icon: fn(12480).ShopIcon,
+  Icon: fn(11606).ShopIcon,
   render() {
     return jsx(DevToolsShopScreen.default, {});
   }
 };
 obj.shopProductPreview = {
   headerTitle: "Collectibles Tool",
-  Icon: fn(12480).ShopIcon,
+  Icon: fn(11606).ShopIcon,
   render() {
     return jsx(CollectiblesTool.default, {});
   }
 };
-const obj22 = {
+const obj23 = {
   headerTitle: "Collectibles Tool",
-  Icon: fn(12480).ShopIcon,
+  Icon: fn(11606).ShopIcon,
   render() {
     return jsx(CollectiblesTool.default, {});
   }
 };
 obj.slayerStorefront = {
   headerTitle: "Slayer Storefront",
-  Icon: fn(12480).ShopIcon,
+  Icon: fn(11606).ShopIcon,
   render() {
     return jsx(SlayerStorefrontDevTools.default, {});
   }
 };
-const obj23 = {
+const obj24 = {
   headerTitle: "Slayer Storefront",
-  Icon: fn(12480).ShopIcon,
+  Icon: fn(11606).ShopIcon,
   render() {
     return jsx(SlayerStorefrontDevTools.default, {});
   }
 };
 obj.actionSheets = {
   headerTitle: "Action Sheets",
-  Icon: fn(15953).CompassIcon,
+  Icon: fn(15123).CompassIcon,
   render() {
     return jsx(DevToolsActionSheetsScreen.default, {});
   }
 };
-const obj24 = {
+const obj25 = {
   headerTitle: "Action Sheets",
-  Icon: fn(15953).CompassIcon,
+  Icon: fn(15123).CompassIcon,
   render() {
     return jsx(DevToolsActionSheetsScreen.default, {});
   }
@@ -394,7 +410,7 @@ obj.accountLinking = {
     return jsx(DevToolsAccountLinkingScreen.default, {});
   }
 };
-const obj25 = {
+const obj26 = {
   headerTitle: "Account Linking",
   Icon: fn(4771).LinkIcon,
   render() {
@@ -403,36 +419,36 @@ const obj25 = {
 };
 obj.performanceTesting = {
   headerTitle: "Performance Testing",
-  Icon: fn(10307).SpeedometerIcon,
+  Icon: fn(9404).SpeedometerIcon,
   render() {
     return jsx(DevToolsPerformanceTestingScreen.default, {});
   }
 };
-const obj26 = {
+const obj27 = {
   headerTitle: "Performance Testing",
-  Icon: fn(10307).SpeedometerIcon,
+  Icon: fn(9404).SpeedometerIcon,
   render() {
     return jsx(DevToolsPerformanceTestingScreen.default, {});
   }
 };
 obj.inAppNotificationTesting = {
   headerTitle: "In App Notification Testing",
-  Icon: fn(10498).MagicWandIcon,
+  Icon: fn(9600).MagicWandIcon,
   render() {
     return jsx(DevToolsInAppNotificationTestingScreen.default, {});
   }
 };
-const obj28 = { displayNameEffectsBenchmark: null };
-const obj27 = {
+const obj29 = { displayNameEffectsBenchmark: null };
+const obj28 = {
   headerTitle: "In App Notification Testing",
-  Icon: fn(10498).MagicWandIcon,
+  Icon: fn(9600).MagicWandIcon,
   render() {
     return jsx(DevToolsInAppNotificationTestingScreen.default, {});
   }
 };
-obj28.displayNameEffectsBenchmark = {
+obj29.displayNameEffectsBenchmark = {
   headerTitle: "Display Name Effects Benchmark",
-  Icon: fn(15611).PaintPaletteIcon,
+  Icon: fn(14781).PaintPaletteIcon,
   render() {
     return jsx(DevToolsDisplayNameEffectsBenchmarkScreen.default, {});
   }
@@ -441,4 +457,4 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/native/components/DevToolsScreens.tsx");
 
 export const DevToolsScreens = obj;
-export const PerformanceTestingScreens = obj28;
+export const PerformanceTestingScreens = obj29;

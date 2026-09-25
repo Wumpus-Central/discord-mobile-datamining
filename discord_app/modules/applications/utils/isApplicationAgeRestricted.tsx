@@ -1,8 +1,8 @@
-// === Module 9603: isApplicationAgeRestricted ===
+// === Module 8701: isApplicationAgeRestricted ===
 
-// Module 9603 (isApplicationAgeRestricted)
-import utils from "utils" /* 5416 */;
-import AgeRestrictedApplicationCommandsExperimentDefault from "AgeRestrictedApplicationCommandsExperiment" /* 9604 */;
+// Module 8701 (isApplicationAgeRestricted)
+import utils from "utils" /* 5417 */;
+import AgeRestrictedApplicationCommandsExperimentDefault from "AgeRestrictedApplicationCommandsExperiment" /* 8702 */;
 import ApplicationStore from "ApplicationStore" /* 5056 */;
 
 require = fn;

@@ -1,10 +1,10 @@
-// === Module 14458: NewTag ===
+// === Module 13619: NewTag ===
 
-// Module 14458 (NewTag)
+// Module 13619 (NewTag)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import LinearGradientDefault from "LinearGradient" /* 5285 */;
+import LinearGradientDefault from "LinearGradient" /* 5286 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

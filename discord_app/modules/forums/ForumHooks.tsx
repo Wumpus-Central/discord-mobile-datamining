@@ -1,37 +1,37 @@
-// === Module 8216: ForumHooks ===
+// === Module 7305: ForumHooks ===
 
-// Module 8216 (ForumHooks)
+// Module 7305 (ForumHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import ThreadSortOrder from "ThreadSortOrder" /* 2053 */;
-import useMessageAuthor from "useMessageAuthor" /* 5075 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7443 */;
-import ForumUtils from "ForumUtils" /* 7637 */;
-import ThreadUtils from "ThreadUtils" /* 8110 */;
-import renderMessageMarkupDefault from "renderMessageMarkup" /* 8219 */;
+import useMessageAuthor from "useMessageAuthor" /* 5076 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 6526 */;
+import ForumUtils from "ForumUtils" /* 6720 */;
+import ThreadUtils from "ThreadUtils" /* 7195 */;
+import renderMessageMarkupDefault from "renderMessageMarkup" /* 7308 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5764 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5811 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 5812 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 7636 */;
+import EmojiStore from "EmojiStore" /* 5766 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5813 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 5814 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 6719 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 5731 */;
+import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 5733 */;
 import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
 import ReadStateStore from "ReadStateStore" /* 4844 */;
 import UserStore from "UserStore" /* 1372 */;
-import ForumActivePostStore from "ForumActivePostStore" /* 7635 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7607 */;
-import ForumPostUnreadCountStore from "ForumPostUnreadCountStore" /* 8217 */;
-import ForumSearchStore from "ForumSearchStore" /* 8097 */;
+import ForumActivePostStore from "ForumActivePostStore" /* 6718 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 6690 */;
+import ForumPostUnreadCountStore from "ForumPostUnreadCountStore" /* 7306 */;
+import ForumSearchStore from "ForumSearchStore" /* 7182 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ForumTimestampFormats = fn(7603).ForumTimestampFormats;
+const ForumTimestampFormats = fn(6686).ForumTimestampFormats;
 const Constants = fn(1074);
 ({ AnalyticsObjectTypes: closure_20, AnalyticsObjects: closure_21, EMPTY_STRING_SNOWFLAKE_ID: closure_22, Permissions: closure_23 } = Constants);
 const ChannelFlags = fn(2051).ChannelFlags;
@@ -418,7 +418,7 @@ export const useForumPostMessageAuthor = function useForumPostMessageAuthor(mess
   const items = [UserStore];
   const stateFromStores = id(504).useStateFromStores(items, () => UserStore.getUser(id));
   const obj = id(504);
-  const nullableMessageAuthor = id(5075).useNullableMessageAuthor(message);
+  const nullableMessageAuthor = id(5076).useNullableMessageAuthor(message);
   const items1 = [guildId, id];
   const effect = noop.useEffect(() => {
     let tmp2 = null != id;

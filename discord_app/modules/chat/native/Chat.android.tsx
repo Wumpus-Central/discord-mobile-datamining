@@ -1,11 +1,11 @@
-// === Module 12237: Chat ===
+// === Module 11359: Chat ===
 
-// Module 12237 (Chat)
+// Module 11359 (Chat)
 import initialize from "initialize" /* 504 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6985 */;
-import ChatNativeComponentDefault from "ChatNativeComponent" /* 11624 */;
-import ChatListNativeComponentDefault from "ChatListNativeComponent" /* 12238 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 12239 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6068 */;
+import ChatNativeComponentDefault from "ChatNativeComponent" /* 10829 */;
+import ChatListNativeComponentDefault from "ChatListNativeComponent" /* 11360 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11361 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4821 */;
 

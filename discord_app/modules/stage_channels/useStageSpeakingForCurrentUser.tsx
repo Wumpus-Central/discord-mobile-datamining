@@ -1,11 +1,11 @@
-// === Module 5727: useStageSpeakingForCurrentUser ===
+// === Module 5729: useStageSpeakingForCurrentUser ===
 
-// Module 5727 (useStageSpeakingForCurrentUser)
+// Module 5729 (useStageSpeakingForCurrentUser)
 import AgeVerificationUtils from "AgeVerificationUtils" /* 5041 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5728 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 5729 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5730 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 5731 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
 
 require = fn;
@@ -59,8 +59,8 @@ export const useShouldAgeVerifyToSpeakForCurrentUser = function useShouldAgeVeri
   const obj = channelId(504);
   const isVerifiedAdult = channelId(5041).useIsVerifiedAdult();
   const obj2 = channelId(5041);
-  const obj3 = channelId(5728);
-  return channelId(5728).useIsFeatureAgeGated(channelId(5729).AgeGatedFeature.STAGE_SPEAKING) && !isVerifiedAdult && stateFromStores;
+  const obj3 = channelId(5730);
+  return channelId(5730).useIsFeatureAgeGated(channelId(5731).AgeGatedFeature.STAGE_SPEAKING) && !isVerifiedAdult && stateFromStores;
 };
 export const useShouldShowAgeVerificationPopover = function useShouldShowAgeVerificationPopover(id) {
   let channelId = id;
@@ -83,8 +83,8 @@ export const useShouldShowAgeVerificationPopover = function useShouldShowAgeVeri
   const obj = channelId(504);
   const isAgeVerified = channelId(5041).useIsAgeVerified();
   const obj2 = channelId(5041);
-  const obj3 = channelId(5728);
-  return channelId(5728).useIsFeatureAgeGated(channelId(5729).AgeGatedFeature.STAGE_SPEAKING) && !isAgeVerified && stateFromStores;
+  const obj3 = channelId(5730);
+  return channelId(5730).useIsFeatureAgeGated(channelId(5731).AgeGatedFeature.STAGE_SPEAKING) && !isAgeVerified && stateFromStores;
 };
 export const useShouldShowAgeVerificationForEvent = function useShouldShowAgeVerificationForEvent() {
   const isVerifiedAdult = AgeVerificationUtils.useIsVerifiedAdult();

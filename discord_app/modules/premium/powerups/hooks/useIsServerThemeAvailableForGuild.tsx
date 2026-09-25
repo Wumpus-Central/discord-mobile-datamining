@@ -1,7 +1,7 @@
-// === Module 14278: useIsServerThemeAvailableForGuild ===
+// === Module 13439: useIsServerThemeAvailableForGuild ===
 
-// Module 14278 (useIsServerThemeAvailableForGuild)
-import GuildThemeResolver from "GuildThemeResolver" /* 4713 */;
+// Module 13439 (useIsServerThemeAvailableForGuild)
+import GuildThemeResolver from "GuildThemeResolver" /* 4715 */;
 import ServerThemeExperiment from "ServerThemeExperiment" /* 4757 */;
 import size from "module_2" /* 2 */;
 

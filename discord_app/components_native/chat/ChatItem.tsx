@@ -1,14 +1,14 @@
-// === Module 9010: ChatItem ===
+// === Module 8104: ChatItem ===
 
-// Module 9010 (ChatItem)
+// Module 8104 (ChatItem)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import MessageTypes2 from "MessageTypes" /* 1090 */;
-import isSystemMessageDefault from "isSystemMessage" /* 7600 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8485 */;
-import AutoModerationSystemMessageViewNativeComponent from "AutoModerationSystemMessageViewNativeComponent" /* 9011 */;
-import MessageViewNativeComponent from "MessageViewNativeComponent" /* 9012 */;
-import SystemMessageViewNativeComponent from "SystemMessageViewNativeComponent" /* 9013 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6683 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 7575 */;
+import AutoModerationSystemMessageViewNativeComponent from "AutoModerationSystemMessageViewNativeComponent" /* 8105 */;
+import MessageViewNativeComponent from "MessageViewNativeComponent" /* 8106 */;
+import SystemMessageViewNativeComponent from "SystemMessageViewNativeComponent" /* 8107 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4821 */;
@@ -41,7 +41,7 @@ function DCDChatItem(message) {
 }
 const View = fn(17).View;
 const MessageTypes = fn(1074).MessageTypes;
-const RowGeneratorConstants = fn(8281);
+const RowGeneratorConstants = fn(7370);
 ({ RowType: closure_8, Changeset: closure_9 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
@@ -195,6 +195,6 @@ export default function _default(rowGenerator) {
   }
   const tmp3 = onLayout(messageSizeCacheRef.useState(0), 2);
 };
-export const DCDMessageView = fn(9012).default;
-export const DCDSystemMessageView = fn(9013).default;
-export const DCDAutoModerationSystemMessageView = fn(9011).default;
+export const DCDMessageView = fn(8106).default;
+export const DCDSystemMessageView = fn(8107).default;
+export const DCDAutoModerationSystemMessageView = fn(8105).default;

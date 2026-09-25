@@ -1,19 +1,19 @@
-// === Module 12044: DestinationFailedAlertModal ===
+// === Module 11189: DestinationFailedAlertModal ===
 
-// Module 12044 (DestinationFailedAlertModal)
+// Module 11189 (DestinationFailedAlertModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import UserUtilsDefault from "UserUtils" /* 4673 */;
+import UserUtilsDefault from "UserUtils" /* 4675 */;
 import Text_Text from "Text/Text" /* 4825 */;
 import useChannelNameDefault from "useChannelName" /* 4982 */;
-import AlertModal from "AlertModal" /* 5201 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 11262 */;
+import AlertModal from "AlertModal" /* 5202 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10360 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import GuildStore from "GuildStore" /* 2066 */;
 import PresenceStore from "PresenceStore" /* 4869 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -77,7 +77,7 @@ function FailedChannelRow(channel) {
   const obj2 = { style: tmp.row, children: null };
   const obj = channel(504);
   const tmp3 = useChannelNameDefault(channel);
-  const items1 = [closure_10(channel(11356).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(11356).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(4825).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
+  const items1 = [closure_10(channel(10454).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(10454).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(4825).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
   obj2.children = items1;
   return closure_11(View, obj2);
 }

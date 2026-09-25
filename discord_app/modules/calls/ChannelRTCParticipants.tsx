@@ -1,24 +1,24 @@
-// === Module 9699: ChannelRTCParticipants ===
+// === Module 8797: ChannelRTCParticipants ===
 
-// Module 9699 (ChannelRTCParticipants)
+// Module 8797 (ChannelRTCParticipants)
 import _mod12 from "module_12" /* 12 */;
-import SecondaryIndexMap from "SecondaryIndexMap" /* 4459 */;
+import SecondaryIndexMap from "SecondaryIndexMap" /* 4461 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 4881 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4981 */;
-import getParticipantUserKeyDefault from "getParticipantUserKey" /* 5733 */;
-import useAvatarDecoration from "useAvatarDecoration" /* 8564 */;
-import useIsSpeaking from "useIsSpeaking" /* 9701 */;
-import ContentClassificationEmbeddedActivityFilterExperiment2 from "ContentClassificationEmbeddedActivityFilterExperiment" /* 9702 */;
-import ContentClassificationReference from "ContentClassificationReference" /* 9703 */;
+import getParticipantUserKeyDefault from "getParticipantUserKey" /* 5735 */;
+import useAvatarDecoration from "useAvatarDecoration" /* 7654 */;
+import useIsSpeaking from "useIsSpeaking" /* 8799 */;
+import ContentClassificationEmbeddedActivityFilterExperiment2 from "ContentClassificationEmbeddedActivityFilterExperiment" /* 8800 */;
+import ContentClassificationReference from "ContentClassificationReference" /* 8801 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4851 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 5583 */;
+import CallStore from "CallStore" /* 5585 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
-import SpeakingStore from "SpeakingStore" /* 5724 */;
+import SpeakingStore from "SpeakingStore" /* 5726 */;
 import UserStore from "UserStore" /* 1372 */;
-import VideoStreamStore from "VideoStreamStore" /* 9700 */;
+import VideoStreamStore from "VideoStreamStore" /* 8798 */;
 import VoiceStateStore from "VoiceStateStore" /* 4848 */;
 
 require = fn;
@@ -73,13 +73,11 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/calls/ChannelRTCParticipants.tsx");
 class ChannelRTCParticipants {
   constructor(arg0) {
-    merged = Object.assign({ participants: null, lastSpoke: null, guildRingingUsers: null, poppedOutParticipants: null, participantByIndex: null });
+    merged = Object.assign({ participants: null, lastSpoke: null, poppedOutParticipants: null, participantByIndex: null });
     merged[0] = {};
     merged[1] = {};
     set = new Set();
     merged[2] = set;
-    set1 = new Set();
-    merged[3] = set1;
     secondaryIndexMap = new closure_0(closure_2[14]).SecondaryIndexMap((type) => {
       const items = [];
       if (tmp2) {
@@ -121,7 +119,7 @@ class ChannelRTCParticipants {
       }
       tmp2 = type.type === constants.USER && type.speaking;
     }, sortKey);
-    merged[4] = secondaryIndexMap;
+    merged[3] = secondaryIndexMap;
     merged.channelId = global;
     return merged;
   }
@@ -157,22 +155,13 @@ prototype["rebuild"] = function rebuild() {
         recipients = channel.recipients;
       }
       const set = new Set(recipients);
-      let set1 = set;
       set.add(AuthenticationStore.getId());
-      let arr = set;
-      if (self.guildRingingUsers.size > 0) {
-        const _Set = Set;
-        const items = [];
-        HermesBuiltin.arraySpread(self.guildRingingUsers, HermesBuiltin.arraySpread(set, 0));
-        set1 = new Set(items);
-        arr = set1;
-      }
       const allActiveStreamsForChannel = ApplicationStreamingStore.getAllActiveStreamsForChannel(self.channelId);
-      const item = allActiveStreamsForChannel.forEach((ownerId) => set1.add(ownerId.ownerId));
+      const item = allActiveStreamsForChannel.forEach((ownerId) => set.add(ownerId.ownerId));
       const participantByIndex = self.participantByIndex;
       participantByIndex.clear();
       self.participants = {};
-      const item1 = arr.forEach((item) => self.updateParticipant(item));
+      const item1 = set.forEach((item) => self.updateParticipant(item));
       const result = self.updateEmbeddedActivities();
       return true;
     }
@@ -220,11 +209,11 @@ prototype["updateParticipant"] = function updateParticipant(arg0) {
   }
   return flag;
 };
-prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f80397) {
+prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f79340) {
   const self = this;
-  const userId = f80397;
+  const userId = f79340;
   let flag;
-  if (this.participants[f80397] != null) {
+  if (this.participants[f79340] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.USER) {
@@ -262,10 +251,10 @@ prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f803
   }
   return flag;
 };
-prototype["updateParticipantQuality"] = function updateParticipantQuality(f80404, maxResolution, maxFrameRate) {
+prototype["updateParticipantQuality"] = function updateParticipantQuality(f79346, maxResolution, maxFrameRate) {
   const self = this;
   let flag;
-  if (this.participants[f80404] != null) {
+  if (this.participants[f79346] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.STREAM) {
@@ -284,14 +273,6 @@ prototype["updateParticipantQuality"] = function updateParticipantQuality(f80404
     flag = false;
   }
   return flag;
-};
-prototype["updateGuildRingingUsers"] = function updateGuildRingingUsers(userId, arg1) {
-  const guildRingingUsers = this.guildRingingUsers;
-  if (arg1) {
-    guildRingingUsers.add(userId);
-  } else {
-    guildRingingUsers.delete(userId);
-  }
 };
 prototype["updateParticipantPoppedOut"] = function updateParticipantPoppedOut(participantId, arg1) {
   const poppedOutParticipants = this.poppedOutParticipants;
@@ -381,10 +362,6 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
       if (ringing != null) {
         flag = ringing.includes(userId);
       }
-    }
-    if (!flag) {
-      const guildRingingUsers = self.guildRingingUsers;
-      flag = guildRingingUsers.has(userId);
     }
     if (flag == null) {
       flag = false;

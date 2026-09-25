@@ -21705,7 +21705,7 @@ function transformComponent(accessory, items) {
       } else {
         tmp11 = null;
         if (tmp9.V2026 === version) {
-          const result = tmp(5061).transformCheckpoint2026CardComponent(checkpoint_data);
+          const result = tmp(5074).transformCheckpoint2026CardComponent(checkpoint_data);
           let tmp12 = null;
           if (null != result) {
             const obj29 = { type: accessory.type, id: tmp(5060).asComponentId(items.join(",")), checkpointData: result };
@@ -21713,7 +21713,7 @@ function transformComponent(accessory, items) {
             const tmpResult51 = tmp(5060);
           }
           tmp11 = tmp12;
-          const tmpResult50 = tmp(5061);
+          const tmpResult50 = tmp(5074);
         }
       }
       return tmp11;

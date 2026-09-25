@@ -1,13 +1,13 @@
-// === Module 17449: MessageRequestRowSenderDetails ===
+// === Module 16666: MessageRequestRowSenderDetails ===
 
-// Module 17449 (MessageRequestRowSenderDetails)
+// Module 16666 (MessageRequestRowSenderDetails)
 import nativeDefault from "native" /* 576 */;
 import utils_AvatarUtilsDefault from "utils/AvatarUtils" /* 1400 */;
-import UserUtilsDefault from "UserUtils" /* 4673 */;
-import MessageRequestPreviewDefault from "MessageRequestPreview" /* 17451 */;
-import MessageRequestMutualServersDefault from "MessageRequestMutualServers" /* 17452 */;
+import UserUtilsDefault from "UserUtils" /* 4675 */;
+import MessageRequestPreviewDefault from "MessageRequestPreview" /* 16668 */;
+import MessageRequestMutualServersDefault from "MessageRequestMutualServers" /* 16669 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -44,7 +44,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     return tmp2;
   });
   let obj = otherUser(504);
-  const messageRequestRelativeTimestampText = otherUser(17450).useMessageRequestRelativeTimestampText(channel);
+  const messageRequestRelativeTimestampText = otherUser(16667).useMessageRequestRelativeTimestampText(channel);
   const random = Math.random();
   const rounded = Math.floor(random * utils_AvatarUtilsDefault.DEFAULT_AVATARS.length);
   const obj3 = { style: tmp.avatarContainer, children: null };
@@ -82,10 +82,10 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
   let tmp9Result = null != stateFromStores;
   if (tmp9Result) {
     const obj10 = { variant: "text-md/medium", color: "text-muted", children: null };
-    const items3 = [" ", otherUser(4673).getUserTag(otherUser)];
+    const items3 = [" ", otherUser(4675).getUserTag(otherUser)];
     obj10.children = items3;
     tmp9Result = closure_6(otherUser(4825).Text, obj10);
-    const tmp2Result = otherUser(4673);
+    const tmp2Result = otherUser(4675);
   }
   items2[1] = tmp9Result;
   obj8.children = items2;

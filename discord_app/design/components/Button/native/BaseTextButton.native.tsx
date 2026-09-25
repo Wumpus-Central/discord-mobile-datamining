@@ -1,15 +1,15 @@
-// === Module 5274: BaseTextButton ===
+// === Module 5275: BaseTextButton ===
 
-// Module 5274 (BaseTextButton)
+// Module 5275 (BaseTextButton)
 import nativeDefault from "native" /* 576 */;
 import HapticUtils from "HapticUtils" /* 4797 */;
-import spring from "spring" /* 5272 */;
-import IconDefault from "Icon" /* 5275 */;
-import springPresets from "springPresets" /* 5276 */;
-import ButtonHooks from "ButtonHooks" /* 5279 */;
+import spring from "spring" /* 5273 */;
+import IconDefault from "Icon" /* 5276 */;
+import springPresets from "springPresets" /* 5277 */;
+import ButtonHooks from "ButtonHooks" /* 5280 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
 
 require = fn;
 function CollapsingText(children) {
@@ -141,16 +141,16 @@ let closure_18 = createStyles.createStyles((arg0, marginLeft) => {
   }
 });
 let obj6 = { sm: null, md: null, lg: null };
-const LARGE_BUTTON_HEIGHT = fn(5278).LARGE_BUTTON_HEIGHT;
-const bound = Math.max((fn(5278).MINIMUM_HIT_AREA - fn(5278).SMALL_BUTTON_HEIGHT) / 2, 0);
-const rect = { top: bound, left: "Array", right: "paddingHorizontal", bottom: bound };
+const LARGE_BUTTON_HEIGHT = fn(5279).LARGE_BUTTON_HEIGHT;
+const bound = Math.max((fn(5279).MINIMUM_HIT_AREA - fn(5279).SMALL_BUTTON_HEIGHT) / 2, 0);
+const rect = { top: bound, left: "Array", right: "ao", bottom: bound };
 obj6.sm = rect;
-const LARGE_BUTTON_HEIGHT2 = fn(5278).LARGE_BUTTON_HEIGHT;
-const bound1 = Math.max((fn(5278).MINIMUM_HIT_AREA - fn(5278).MEDIUM_BUTTON_HEIGHT) / 2, 0);
-const rect1 = { top: bound1, left: "Array", right: "paddingHorizontal", bottom: bound1 };
+const LARGE_BUTTON_HEIGHT2 = fn(5279).LARGE_BUTTON_HEIGHT;
+const bound1 = Math.max((fn(5279).MINIMUM_HIT_AREA - fn(5279).MEDIUM_BUTTON_HEIGHT) / 2, 0);
+const rect1 = { top: bound1, left: "Array", right: "ao", bottom: bound1 };
 obj6.md = rect1;
-const bound2 = Math.max((fn(5278).MINIMUM_HIT_AREA - fn(5278).LARGE_BUTTON_HEIGHT) / 2, 0);
-const rect2 = { top: bound2, left: "Array", right: "paddingHorizontal", bottom: bound2 };
+const bound2 = Math.max((fn(5279).MINIMUM_HIT_AREA - fn(5279).LARGE_BUTTON_HEIGHT) / 2, 0);
+const rect2 = { top: bound2, left: "Array", right: "ao", bottom: bound2 };
 obj6.lg = rect2;
 function getTextPlatformLineHeight(arg0, arg1) {
 

@@ -1,6 +1,6 @@
-// === Module 7857: CollapsedVoiceChannelStore ===
+// === Module 6942: CollapsedVoiceChannelStore ===
 
-// Module 7857 (CollapsedVoiceChannelStore)
+// Module 6942 (CollapsedVoiceChannelStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;

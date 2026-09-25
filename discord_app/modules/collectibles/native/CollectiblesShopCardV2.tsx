@@ -1,16 +1,16 @@
-// === Module 9124: CollectiblesShopCardV2 ===
+// === Module 8218: CollectiblesShopCardV2 ===
 
-// Module 9124 (CollectiblesShopCardV2)
+// Module 8218 (CollectiblesShopCardV2)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import v1 from "v1" /* 1255 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4523 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4525 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8524 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9127 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 7614 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8221 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7872 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 6957 */;
 
 require = fn;
 function CollectiblesShopCardInternalV2(product) {

@@ -1,6 +1,6 @@
-// === Module 12358: ForumPostTitle ===
+// === Module 11484: ForumPostTitle ===
 
-// Module 12358 (ForumPostTitle)
+// Module 11484 (ForumPostTitle)
 import Text_Text from "Text/Text" /* 4825 */;
 import noop from "module_19" /* 19 */;
 

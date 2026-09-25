@@ -1,17 +1,17 @@
-// === Module 15054: SettingsAccountHeader ===
+// === Module 14220: SettingsAccountHeader ===
 
-// Module 15054 (SettingsAccountHeader)
+// Module 14220 (SettingsAccountHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import components_Button_Button from "components/Button/Button" /* 5273 */;
-import TableRow from "TableRow" /* 5910 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 5926 */;
-import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 7331 */;
-import openUserSettings from "openUserSettings" /* 7712 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 15055 */;
+import components_Button_Button from "components/Button/Button" /* 5274 */;
+import TableRow from "TableRow" /* 5912 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 5928 */;
+import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 6414 */;
+import openUserSettings from "openUserSettings" /* 6795 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14221 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -27,7 +27,7 @@ function RestrictedAccountRedirect() {
 }
 const View = fn(17).View;
 const AnalyticsSections = fn(1074).AnalyticsSections;
-const SafetySettingsNoticeType = fn(8749).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(7839).SafetySettingsNoticeType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4829);

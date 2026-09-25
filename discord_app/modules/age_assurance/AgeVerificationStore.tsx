@@ -1,6 +1,6 @@
-// === Module 8804: AgeVerificationStore ===
+// === Module 7896: AgeVerificationStore ===
 
-// Module 8804 (AgeVerificationStore)
+// Module 7896 (AgeVerificationStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;

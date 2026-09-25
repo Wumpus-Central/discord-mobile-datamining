@@ -1,11 +1,11 @@
-// === Module 9719: getEmbeddedActivityJoinability ===
+// === Module 8817: getEmbeddedActivityJoinability ===
 
-// Module 9719 (getEmbeddedActivityJoinability)
+// Module 8817 (getEmbeddedActivityJoinability)
 import ChannelUtils from "ChannelUtils" /* 4974 */;
-import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 9717 */;
+import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 8815 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
 import UserStore from "UserStore" /* 1372 */;
 import VoiceStateStore from "VoiceStateStore" /* 4848 */;
 

@@ -1,11 +1,11 @@
-// === Module 9371: UserProfileApplicationWidgetFieldUtils ===
+// === Module 8469: UserProfileApplicationWidgetFieldUtils ===
 
-// Module 9371 (UserProfileApplicationWidgetFieldUtils)
+// Module 8469 (UserProfileApplicationWidgetFieldUtils)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 9372 */;
-import ApplicationWidgetMarkupUtils from "ApplicationWidgetMarkupUtils" /* 9373 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 8470 */;
+import ApplicationWidgetMarkupUtils from "ApplicationWidgetMarkupUtils" /* 8471 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

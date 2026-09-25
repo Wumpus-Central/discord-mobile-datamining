@@ -1,9 +1,9 @@
-// === Module 12250: AppealIngestionThanks ===
+// === Module 11372: AppealIngestionThanks ===
 
-// Module 12250 (AppealIngestionThanks)
+// Module 11372 (AppealIngestionThanks)
 import native from "native" /* 1177 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7456 */;
-import AppealIngestionModal from "AppealIngestionModal" /* 12229 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6539 */;
+import AppealIngestionModal from "AppealIngestionModal" /* 11351 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

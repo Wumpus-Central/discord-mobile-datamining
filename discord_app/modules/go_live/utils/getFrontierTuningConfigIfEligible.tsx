@@ -1,7 +1,7 @@
 // === Module 4967: getFrontierTuningConfigIfEligible ===
 
 // Module 4967 (getFrontierTuningConfigIfEligible)
-import PremiumUtilsDefault from "PremiumUtils" /* 4483 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4485 */;
 import FrontierTuningExperimentDefault from "FrontierTuningExperiment" /* 4968 */;
 import GuildStore from "GuildStore" /* 2066 */;
 

@@ -1,22 +1,22 @@
-// === Module 11475: EmojiPickerActionSheet ===
+// === Module 10573: EmojiPickerActionSheet ===
 
-// Module 11475 (EmojiPickerActionSheet)
+// Module 10573 (EmojiPickerActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import SearchField from "SearchField" /* 7383 */;
-import EmojiPickerUtils from "EmojiPickerUtils" /* 10633 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11474 */;
-import DoubleTapReminderToast from "DoubleTapReminderToast" /* 11476 */;
-import BurstReactionToggleDefault from "BurstReactionToggle" /* 11478 */;
+import SearchField from "SearchField" /* 6466 */;
+import EmojiPickerUtils from "EmojiPickerUtils" /* 9737 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10572 */;
+import DoubleTapReminderToast from "DoubleTapReminderToast" /* 10574 */;
+import BurstReactionToggleDefault from "BurstReactionToggle" /* 10576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const View = fn(17).View;
-const EmojiPickerSource = fn(10638).EmojiPickerSource;
+const EmojiPickerSource = fn(9742).EmojiPickerSource;
 const EXPRESSION_FOOTER_HEIGHT = fn(1074).EXPRESSION_FOOTER_HEIGHT;
 let EmojiIntention = fn(1375).EmojiIntention;
 const jsxProd = fn(21);

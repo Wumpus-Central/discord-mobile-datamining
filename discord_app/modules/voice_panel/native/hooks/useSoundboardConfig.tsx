@@ -1,9 +1,9 @@
-// === Module 17767: useSoundboardConfig ===
+// === Module 16991: useSoundboardConfig ===
 
-// Module 17767 (useSoundboardConfig)
-import canChannelUseSoundboardDefault from "canChannelUseSoundboard" /* 7705 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17604 */;
-import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 17625 */;
+// Module 16991 (useSoundboardConfig)
+import canChannelUseSoundboardDefault from "canChannelUseSoundboard" /* 6788 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 16828 */;
+import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 16849 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;

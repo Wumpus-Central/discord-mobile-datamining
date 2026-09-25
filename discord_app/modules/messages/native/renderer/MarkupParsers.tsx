@@ -1,15 +1,15 @@
-// === Module 8437: MarkupParsers ===
+// === Module 7527: MarkupParsers ===
 
-// Module 8437 (MarkupParsers)
+// Module 7527 (MarkupParsers)
 import Constants from "Constants" /* 1074 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
 import MarkupUtilsDefault from "MarkupUtils" /* 4819 */;
-import renderMessageMarkup from "renderMessageMarkup" /* 8219 */;
-import NativeMarkdownExperiment2 from "NativeMarkdownExperiment" /* 8438 */;
-import ChangeLogStandardTemplate from "ChangeLogStandardTemplate" /* 8439 */;
-import trackMarkdownParse from "trackMarkdownParse" /* 8451 */;
-import parseNativeMarkupDefault from "parseNativeMarkup" /* 8453 */;
+import renderMessageMarkup from "renderMessageMarkup" /* 7308 */;
+import NativeMarkdownExperiment2 from "NativeMarkdownExperiment" /* 7528 */;
+import ChangeLogStandardTemplate from "ChangeLogStandardTemplate" /* 7529 */;
+import trackMarkdownParse from "trackMarkdownParse" /* 7541 */;
+import parseNativeMarkupDefault from "parseNativeMarkup" /* 7543 */;
 import priv from "priv" /* 1438 */;
 import size from "module_2" /* 2 */;
 

@@ -1,14 +1,14 @@
-// === Module 13296: InAppReportsGuildDiscoveryPreviewElement ===
+// === Module 12446: InAppReportsGuildDiscoveryPreviewElement ===
 
-// Module 13296 (InAppReportsGuildDiscoveryPreviewElement)
+// Module 12446 (InAppReportsGuildDiscoveryPreviewElement)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 2058 */;
-import ColorUtils from "ColorUtils" /* 4678 */;
+import ColorUtils from "ColorUtils" /* 4680 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import GuildIconDefault from "GuildIcon" /* 5889 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7312 */;
+import GuildIconDefault from "GuildIcon" /* 5891 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6395 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4821 */;
 

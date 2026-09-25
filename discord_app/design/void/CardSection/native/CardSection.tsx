@@ -1,10 +1,10 @@
-// === Module 8969: CardSection ===
+// === Module 8063: CardSection ===
 
-// Module 8969 (CardSection)
+// Module 8063 (CardSection)
 import nativeDefault from "native" /* 576 */;
-import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8970 */;
+import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8064 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 5829 */;
+import TextStyles from "TextStyles" /* 5831 */;
 
 const View = fn(17).View;
 const jsxProd = fn(21);

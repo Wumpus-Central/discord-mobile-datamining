@@ -1,11 +1,11 @@
-// === Module 11089: PremiumGiftingIntentActionCreators ===
+// === Module 10193: PremiumGiftingIntentActionCreators ===
 
-// Module 11089 (PremiumGiftingIntentActionCreators)
+// Module 10193 (PremiumGiftingIntentActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7982 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7067 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MessageStore from "MessageStore" /* 5049 */;
 

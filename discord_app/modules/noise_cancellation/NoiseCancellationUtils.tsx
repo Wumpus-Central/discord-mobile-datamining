@@ -1,8 +1,8 @@
-// === Module 10341: NoiseCancellationUtils ===
+// === Module 9439: NoiseCancellationUtils ===
 
-// Module 10341 (NoiseCancellationUtils)
+// Module 9439 (NoiseCancellationUtils)
 import initialize from "initialize" /* 504 */;
-import getEffectiveNoiseCancellationDefault from "getEffectiveNoiseCancellation" /* 10342 */;
+import getEffectiveNoiseCancellationDefault from "getEffectiveNoiseCancellation" /* 9440 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
 
 require = fn;

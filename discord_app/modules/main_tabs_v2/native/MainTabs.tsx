@@ -1,12 +1,12 @@
-// === Module 16421: MainTabs ===
+// === Module 15601: MainTabs ===
 
-// Module 16421 (MainTabs)
+// Module 15601 (MainTabs)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import native from "native" /* 4535 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4682 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5429 */;
-import useActiveTheme from "useActiveTheme" /* 8205 */;
-import MainTabsNavigatorPanelDefault from "MainTabsNavigatorPanel" /* 16422 */;
+import native from "native" /* 4537 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4684 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5430 */;
+import useActiveTheme from "useActiveTheme" /* 7294 */;
+import MainTabsNavigatorPanelDefault from "MainTabsNavigatorPanel" /* 15602 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,26 +1,26 @@
-// === Module 15287: UserSettingsAuthedApp ===
+// === Module 14453: UserSettingsAuthedApp ===
 
-// Module 15287 (UserSettingsAuthedApp)
+// Module 14453 (UserSettingsAuthedApp)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Link from "Link" /* 1485 */;
-import RootNavigationRef from "RootNavigationRef" /* 4687 */;
+import RootNavigationRef from "RootNavigationRef" /* 4689 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 4783 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import useAlertStore from "useAlertStore" /* 5197 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7323 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7328 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7447 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7452 */;
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7503 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8720 */;
-import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9659 */;
-import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 12945 */;
+import useAlertStore from "useAlertStore" /* 5198 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6406 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6411 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6530 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6535 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 6586 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 7810 */;
+import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 8757 */;
+import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 12076 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7440 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6523 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5010 */;
 import LocaleStore from "LocaleStore" /* 2111 */;
 
@@ -55,8 +55,8 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1074);
 ({ UserSettingsSections: closure_12, AnalyticsSections: map1, AnalyticsPages: closure_14 } = Constants);
-let closure_15 = fn(11268).ChannelDetailsNavigatorScreens;
-let closure_16 = fn(11731).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_15 = fn(10366).ChannelDetailsNavigatorScreens;
+let closure_16 = fn(10913).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 const createStyles = fn(4829);

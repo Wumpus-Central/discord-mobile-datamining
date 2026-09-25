@@ -1,22 +1,22 @@
-// === Module 16822: YouBarFloatingShade ===
+// === Module 16008: YouBarFloatingShade ===
 
-// Module 16822 (YouBarFloatingShade)
+// Module 16008 (YouBarFloatingShade)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1478 */;
-import useToken from "useToken" /* 4526 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4647 */;
-import useChatLayoutDefault from "useChatLayout" /* 4689 */;
-import LinearGradientDefault from "LinearGradient" /* 5285 */;
-import useYouBarTotalHeight from "useYouBarTotalHeight" /* 15436 */;
+import useToken from "useToken" /* 4528 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4649 */;
+import useChatLayoutDefault from "useChatLayout" /* 4691 */;
+import LinearGradientDefault from "LinearGradient" /* 5286 */;
+import useYouBarTotalHeight from "useYouBarTotalHeight" /* 14604 */;
 import noop from "module_19" /* 19 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4648 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4650 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(15434).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
-const GUILD_LIST_WIDTH = fn(16708).GUILD_LIST_WIDTH;
+let closure_5 = fn(14602).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
+const GUILD_LIST_WIDTH = fn(15892).GUILD_LIST_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4829);

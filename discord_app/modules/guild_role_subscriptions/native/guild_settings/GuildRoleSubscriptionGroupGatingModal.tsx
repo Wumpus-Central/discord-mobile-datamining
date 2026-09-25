@@ -1,15 +1,15 @@
-// === Module 18306: GuildRoleSubscriptionGroupGatingModal ===
+// === Module 17537: GuildRoleSubscriptionGroupGatingModal ===
 
-// Module 18306 (GuildRoleSubscriptionGroupGatingModal)
+// Module 17537 (GuildRoleSubscriptionGroupGatingModal)
 import util from "util" /* 1115 */;
-import FormGuildGatingModeSelectorDefault from "FormGuildGatingModeSelector" /* 18286 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 18296 */;
+import FormGuildGatingModeSelectorDefault from "FormGuildGatingModeSelector" /* 17517 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 17527 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 18292 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 17523 */;
 
 require = fn;
-const constants = fn(15554).GuildRoleSubscriptionsTierScenes;
+const constants = fn(14724).GuildRoleSubscriptionsTierScenes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildRoleSubscriptionGroupGatingModal.tsx");

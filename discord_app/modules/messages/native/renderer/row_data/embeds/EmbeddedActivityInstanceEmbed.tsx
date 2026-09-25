@@ -1,15 +1,15 @@
-// === Module 13628: EmbeddedActivityInstanceEmbed ===
+// === Module 12782: EmbeddedActivityInstanceEmbed ===
 
-// Module 13628 (EmbeddedActivityInstanceEmbed)
+// Module 12782 (EmbeddedActivityInstanceEmbed)
 import util from "util" /* 1115 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 7496 */;
-import ContentClassificationVisibility from "ContentClassificationVisibility" /* 12281 */;
-import CodedLinksTypes from "CodedLinksTypes" /* 12282 */;
-import getPlayInContext from "getPlayInContext" /* 12283 */;
-import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 12284 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 12474 */;
-import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 13619 */;
-import EmbeddedApplicationInstanceUtils from "EmbeddedApplicationInstanceUtils" /* 13629 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6579 */;
+import ContentClassificationVisibility from "ContentClassificationVisibility" /* 11407 */;
+import CodedLinksTypes from "CodedLinksTypes" /* 11408 */;
+import getPlayInContext from "getPlayInContext" /* 11409 */;
+import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 11410 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 11600 */;
+import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 12773 */;
+import EmbeddedApplicationInstanceUtils from "EmbeddedApplicationInstanceUtils" /* 12783 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
 import ApplicationStore from "ApplicationStore" /* 5056 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -18,7 +18,7 @@ import PresenceStore from "PresenceStore" /* 4869 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
-const CodedLinkExtendedType = fn(11658).CodedLinkExtendedType;
+const CodedLinkExtendedType = fn(10838).CodedLinkExtendedType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/EmbeddedActivityInstanceEmbed.tsx");
 

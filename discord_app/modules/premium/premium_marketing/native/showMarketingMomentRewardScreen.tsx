@@ -1,9 +1,9 @@
-// === Module 13798: showMarketingMomentRewardScreen ===
+// === Module 12952: showMarketingMomentRewardScreen ===
 
-// Module 13798 (showMarketingMomentRewardScreen)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7871 */;
+// Module 12952 (showMarketingMomentRewardScreen)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 6956 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7872 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 6957 */;
 
 require = fn;
 let closure_5 = async function _showMarketingMomentRewardScreen(arg0) {

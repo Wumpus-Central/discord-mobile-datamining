@@ -1,6 +1,6 @@
-// === Module 17126: VibegrationsMarkdownBlocks ===
+// === Module 16317: VibegrationsMarkdownBlocks ===
 
-// Module 17126 (VibegrationsMarkdownBlocks)
+// Module 16317 (VibegrationsMarkdownBlocks)
 import size from "module_2" /* 2 */;
 
 const re0 = /^( *)([-*]|\d+\.) +(.*)$/;

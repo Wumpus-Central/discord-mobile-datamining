@@ -1,12 +1,12 @@
-// === Module 16664: useStageChannelSpeakerVoiceStates ===
+// === Module 15844: useStageChannelSpeakerVoiceStates ===
 
-// Module 16664 (useStageChannelSpeakerVoiceStates)
+// Module 15844 (useStageChannelSpeakerVoiceStates)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import _slicedToArray from "module_32" /* 32 */;
 import FavoriteStore from "FavoriteStore" /* 2047 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5723 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5725 */;
 
 const require = globalThis.__r;
 

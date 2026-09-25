@@ -2,7 +2,7 @@
 
 // Module 4769 (UserMinusIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4525 */;
+import BaseIconImage from "BaseIconImage" /* 4527 */;
 import _mod4770 from "module_4770" /* 4770 */;
 import noop from "module_19" /* 19 */;
 

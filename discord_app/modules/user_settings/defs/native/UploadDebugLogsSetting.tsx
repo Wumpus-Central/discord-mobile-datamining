@@ -1,9 +1,9 @@
-// === Module 15893: UploadDebugLogsSetting ===
+// === Module 15063: UploadDebugLogsSetting ===
 
-// Module 15893 (UploadDebugLogsSetting)
+// Module 15063 (UploadDebugLogsSetting)
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import DebugUploadManager from "DebugUploadManager" /* 10535 */;
+import DebugUploadManager from "DebugUploadManager" /* 9637 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -109,7 +109,7 @@ const DebugLogCategory = fn(1074).DebugLogCategory;
 const jsx = fn(21).jsx;
 const module_560 = fn(560);
 let closure_7 = module_560.create(() => ({ isDisabled: false, isUploading: false }));
-const SettingBuilders = fn(11811);
+const SettingBuilders = fn(10993);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;

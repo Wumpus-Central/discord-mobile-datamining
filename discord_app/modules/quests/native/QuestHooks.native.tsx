@@ -1,18 +1,18 @@
-// === Module 15427: QuestHooks ===
+// === Module 14595: QuestHooks ===
 
-// Module 15427 (QuestHooks)
-import QuestTypes from "QuestTypes" /* 5752 */;
-import AdCreativeType from "AdCreativeType" /* 5756 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7496 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 8047 */;
-import AssetUtils from "AssetUtils" /* 11634 */;
-import useQuestForPlacement from "useQuestForPlacement" /* 15452 */;
+// Module 14595 (QuestHooks)
+import QuestTypes from "QuestTypes" /* 5754 */;
+import AdCreativeType from "AdCreativeType" /* 5758 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6579 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7132 */;
+import AssetUtils from "AssetUtils" /* 10676 */;
+import useQuestForPlacement from "useQuestForPlacement" /* 14622 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 4516 */;
+import ActionSheetStore from "ActionSheetStore" /* 4518 */;
 import ApplicationStore from "ApplicationStore" /* 5056 */;
-import BountyStore from "BountyStore" /* 8025 */;
-import QuestStore from "QuestStore" /* 8026 */;
+import BountyStore from "BountyStore" /* 7110 */;
+import QuestStore from "QuestStore" /* 7111 */;
 
 const require = globalThis.__r;
 
@@ -77,7 +77,7 @@ function useDeliveredDockCreative() {
 function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   _require = mobileQuestDock;
   const deliveredQuest = require("QuestDockCreativeContext").getDeliveredQuest(mobileQuestDock);
-  const tmp4 = deliveredAdCreativeId(7276)();
+  const tmp4 = deliveredAdCreativeId(6359)();
   const obj = require("QuestDockCreativeContext");
   const items = [QuestStore];
   let userStatus1;
@@ -87,8 +87,8 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   let isDismissedResult = null != userStatus1;
   if (isDismissedResult) {
-    isDismissedResult = tmp(8022).isDismissed(deliveredQuest.userStatus, tmp(5752).QuestContent.QUEST_BAR_MOBILE);
-    const tmpResult = tmp(8022);
+    isDismissedResult = tmp(7107).isDismissed(deliveredQuest.userStatus, tmp(5754).QuestContent.QUEST_BAR_MOBILE);
+    const tmpResult = tmp(7107);
   }
   let claimedAt;
   if (deliveredQuest != null) {
@@ -126,7 +126,7 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }, items4);
   if (require("AdCreativeType").AdCreativeType.NO_FILL === type) {
     return false;
-  } else if (tmp(5756).AdCreativeType.BOUNTY === type) {
+  } else if (tmp(5758).AdCreativeType.BOUNTY === type) {
     if (isEligibleForQuests) {
       isEligibleForQuests = !stateFromStores1;
     }
@@ -137,7 +137,7 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       isEligibleForQuests = !tmp4;
     }
     return isEligibleForQuests;
-  } else if (tmp(5756).AdCreativeType.QUEST === type) {
+  } else if (tmp(5758).AdCreativeType.QUEST === type) {
     if (stateFromStores) {
       if (!tmp10) {
         let tmp16 = null != deliveredQuest && !tmp4;
@@ -149,10 +149,10 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   const tmpResult10 = require("initialize");
 }
-const QuestConstants = fn(5749);
+const QuestConstants = fn(5751);
 ({ QUEST_REWARD_CODE_CLAIM_BOTTOM_SHEET_KEY: closure_9, QuestVariants: c10 } = QuestConstants);
-const CAPTCHA_MODAL_KEY = fn(5177).CAPTCHA_MODAL_KEY;
-const MAIN_SURFACE = fn(9394).MAIN_SURFACE;
+const CAPTCHA_MODAL_KEY = fn(5178).CAPTCHA_MODAL_KEY;
+const MAIN_SURFACE = fn(8492).MAIN_SURFACE;
 const ThemeTypes = fn(1085).ThemeTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestHooks.native.tsx");
@@ -336,7 +336,7 @@ export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
                 obj5.analyticsContext = obj7;
                 v2 = 1;
                 v3 = 1;
-                const obj8 = { value: v2(9654).launchFrame(obj5), done: false };
+                const obj8 = { value: v2(8752).launchFrame(obj5), done: false };
                 return obj8;
               } else {
                 let id;
@@ -350,7 +350,7 @@ export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
                   const obj9 = { appId: stateFromStores.id, botId: stateFromStores.bot.id, analyticsLocations: [] };
                   v2 = 2;
                   v3 = 1;
-                  const obj10 = { value: v3(11858).launchActivityInBotDM(obj9), done: false };
+                  const obj10 = { value: v3(10727).launchActivityInBotDM(obj9), done: false };
                   return obj10;
                 }
               }

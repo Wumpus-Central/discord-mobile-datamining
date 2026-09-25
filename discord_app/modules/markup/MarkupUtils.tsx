@@ -2,9 +2,9 @@
 
 // Module 4819 (MarkupUtils)
 import MarkupReactRules from "MarkupReactRules" /* 4820 */;
-import combineMarkupRulesDefault from "combineMarkupRules" /* 5295 */;
-import MarkupRulesDefault from "MarkupRules" /* 5296 */;
-import MarkupParserAll from "MarkupParser" /* 8335 */;
+import combineMarkupRulesDefault from "combineMarkupRules" /* 5296 */;
+import MarkupRulesDefault from "MarkupRules" /* 5297 */;
+import MarkupParserAll from "MarkupParser" /* 7424 */;
 import apply_mod from "module_12" /* 12 */;
 
 const MarkupReactRulesDefault = MarkupReactRules;

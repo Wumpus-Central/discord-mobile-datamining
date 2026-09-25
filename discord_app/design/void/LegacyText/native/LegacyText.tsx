@@ -1,7 +1,7 @@
-// === Module 8970: LegacyText/LegacyText ===
+// === Module 8064: LegacyText/LegacyText ===
 
-// Module 8970 (LegacyText/LegacyText)
-import useLegacyTextMigrationHighlight from "useLegacyTextMigrationHighlight" /* 8971 */;
+// Module 8064 (LegacyText/LegacyText)
+import useLegacyTextMigrationHighlight from "useLegacyTextMigrationHighlight" /* 8065 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

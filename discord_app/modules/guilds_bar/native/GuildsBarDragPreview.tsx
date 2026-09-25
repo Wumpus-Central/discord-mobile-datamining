@@ -1,12 +1,12 @@
-// === Module 16787: GuildsBarDragPreview ===
+// === Module 15971: GuildsBarDragPreview ===
 
-// Module 16787 (GuildsBarDragPreview)
-import _mod4447 from "module_4447" /* 4447 */;
-import native from "native" /* 4535 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
-import spring from "spring" /* 5272 */;
+// Module 15971 (GuildsBarDragPreview)
+import _mod4449 from "module_4449" /* 4449 */;
+import native from "native" /* 4537 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
+import spring from "spring" /* 5273 */;
 import noop from "module_19" /* 19 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16711 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 15895 */;
 
 require = fn;
 function PreviewItem(dragRegion) {
@@ -132,7 +132,7 @@ function PreviewItem(dragRegion) {
   const memo = gestureState.useMemo(() => {
     if ("convert-after" === overState) {
       if (null != overNode) {
-        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "flex", name: "Array", color: "channel", expanded: "index", children: "colors" };
+        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "flex", name: "Array", color: "diversity", expanded: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004994993931151547, children: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005411243414434442 };
         const items = [tmp2];
         element.children = items;
         return element;
@@ -285,8 +285,8 @@ function AnimatedItemPreview(cleanUp) {
   obj5.children = tmp12Result;
   return jsx(cleanUp(sharedValue[9]), { style: items, children: null });
 }
-const GuildsNodeType = fn(5743).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(16708).GUILD_ITEM_INSET_LEFT;
+const GuildsNodeType = fn(5745).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(15892).GUILD_ITEM_INSET_LEFT;
 const jsx = fn(21).jsx;
 let createStyles = fn(4829);
 let closure_8 = createStyles.createStyles({ dragPreview: { position: "absolute", left: 0 }, animatedPreviewStyle: { position: "absolute" }, dragPreviewHome: { right: 0 } });
@@ -334,7 +334,7 @@ export default noop.memo(function GuildsBarDragPreview() {
       if (null != dragSpecs) {
         if (null != overSpecs) {
           const state = overSpecs.state;
-          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "film", scrollPosition: "filmklapper", dragRegion: "klapper", windowSize: "klaptr\u00E6", dropComplete: "fjernsyn", listInsets: "tv" };
+          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "function SkeletonCardTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}", scrollPosition: true, dragRegion: "/assets/design/components/Icon/native/redesign/generated/images", windowSize: 24, dropComplete: 24, listInsets: null };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;
           let node;
@@ -353,7 +353,7 @@ export default noop.memo(function GuildsBarDragPreview() {
       }
       return null;
     }
-  }, _mod4447.shallow);
+  }, _mod4449.shallow);
   let tmp2 = null;
   if (null != tmp) {
     let obj = {};

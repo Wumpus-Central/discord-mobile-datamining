@@ -1,6 +1,6 @@
-// === Module 10365: useDeafStates ===
+// === Module 9467: useDeafStates ===
 
-// Module 10365 (useDeafStates)
+// Module 9467 (useDeafStates)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
 import VoiceStateStore from "VoiceStateStore" /* 4848 */;

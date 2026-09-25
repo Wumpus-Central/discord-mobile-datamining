@@ -1,18 +1,18 @@
-// === Module 15162: TinyBroncoSettingsNotices ===
+// === Module 14328: TinyBroncoSettingsNotices ===
 
-// Module 15162 (TinyBroncoSettingsNotices)
+// Module 14328 (TinyBroncoSettingsNotices)
 import nativeDefault from "native" /* 576 */;
 import _modDef3070 from "module_3070" /* 3070 */;
 import AgeVerificationUtils from "AgeVerificationUtils" /* 5041 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5728 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8761 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8763 */;
-import useUserIsTeen from "useUserIsTeen" /* 9002 */;
-import TinyBroncoExperiment from "TinyBroncoExperiment" /* 10127 */;
-import SafetySettingsUtils from "SafetySettingsUtils" /* 15056 */;
-import useAgeGroupPresentation from "useAgeGroupPresentation" /* 15084 */;
-import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 15096 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 15163 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5730 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7851 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 7853 */;
+import useUserIsTeen from "useUserIsTeen" /* 8096 */;
+import TinyBroncoExperiment from "TinyBroncoExperiment" /* 9224 */;
+import SafetySettingsUtils from "SafetySettingsUtils" /* 14222 */;
+import useAgeGroupPresentation from "useAgeGroupPresentation" /* 14250 */;
+import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 14262 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14329 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -41,7 +41,7 @@ function TeenNotice(noticeType) {
   const intl = noticeType(1115).intl;
   obj3.text = intl.string(noticeType(1115).t.hvVgAZ);
   obj3.onPress = callback;
-  obj2.button = jsx(noticeType(5273).Button, { variant: "secondary", size: "sm", text: null, onPress: null });
+  obj2.button = jsx(noticeType(5274).Button, { variant: "secondary", size: "sm", text: null, onPress: null });
   const intl2 = noticeType(1115).intl;
   obj2.children = intl2.format(noticeType.message, { handleOnConfirmAgeHook: callback1 });
   obj.children = jsx(noticeType(1177).HelpMessage, { messageType: noticeType(1177).HelpMessageTypes.INFO, borderRadius: nativeDefault.radii.lg, button: null, children: null });
@@ -77,7 +77,7 @@ function UnconfirmedNotice(message) {
   const intl = AGE_CONFIRMATION_NOTICE(1115).intl;
   obj3.text = intl.string(AGE_CONFIRMATION_NOTICE(1115).t.FDSSia);
   obj3.onPress = callback1;
-  obj2.button = jsx(AGE_CONFIRMATION_NOTICE(5273).Button, { variant: "secondary", size: "sm", text: null, onPress: null });
+  obj2.button = jsx(AGE_CONFIRMATION_NOTICE(5274).Button, { variant: "secondary", size: "sm", text: null, onPress: null });
   const intl2 = AGE_CONFIRMATION_NOTICE(1115).intl;
   obj2.children = intl2.format(message.message, { handleOnAgeGatedContentHook: callback });
   obj.children = jsx(AGE_CONFIRMATION_NOTICE(1177).HelpMessage, { messageType: AGE_CONFIRMATION_NOTICE(1177).HelpMessageTypes.INFO, borderRadius: nativeDefault.radii.lg, button: null, children: null });
@@ -90,8 +90,8 @@ class MessageRequestsUnconfirmedNotice {
   }
 }
 const View = fn(17).View;
-let closure_6 = fn(10123).TINY_BRONCO_SETTINGS_LOCATION;
-const Constants = fn(8749);
+let closure_6 = fn(9220).TINY_BRONCO_SETTINGS_LOCATION;
+const Constants = fn(7839);
 ({ SafetySettingsNoticeAction: closure_7, SafetySettingsNoticeType: closure_8 } = Constants);
 const jsx = fn(21).jsx;
 const createStyles = fn(4829);

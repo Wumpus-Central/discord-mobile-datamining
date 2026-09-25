@@ -1,15 +1,15 @@
-// === Module 9858: GlobalStatusContent ===
+// === Module 8956: GlobalStatusContent ===
 
-// Module 9858 (GlobalStatusContent)
+// Module 8956 (GlobalStatusContent)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
 import useThemeDefault from "useTheme" /* 4763 */;
-import ChannelCallModalDefault from "ChannelCallModal" /* 9729 */;
-import StatusBarDefault from "StatusBar" /* 9733 */;
-import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 9755 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 9850 */;
-import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 9853 */;
-import GlobalStageChannelStatusDefault from "GlobalStageChannelStatus" /* 9859 */;
+import ChannelCallModalDefault from "ChannelCallModal" /* 8827 */;
+import StatusBarDefault from "StatusBar" /* 8831 */;
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 8853 */;
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 8948 */;
+import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 8951 */;
+import GlobalStageChannelStatusDefault from "GlobalStageChannelStatus" /* 8957 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import GuildStore from "GuildStore" /* 2066 */;
@@ -20,7 +20,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const RTC_PANEL_HEIGHT = fn(9852).RTC_PANEL_HEIGHT;
+const RTC_PANEL_HEIGHT = fn(8950).RTC_PANEL_HEIGHT;
 const RTCConnectionStates = fn(1074).RTCConnectionStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
@@ -105,8 +105,8 @@ export default function ConnectivityGlobalStatusContent() {
   const isThemeDarkResult = require("shared").isThemeDark(useThemeDefault());
   let isScreenLandscape = require("useIsScreenLandscape").useIsScreenLandscape();
   if (isScreenLandscape) {
-    isScreenLandscape = tmp5(4686).isModalOpen(ChannelCallModalDefault);
-    const tmp5Result5 = tmp5(4686);
+    isScreenLandscape = tmp5(4688).isModalOpen(ChannelCallModalDefault);
+    const tmp5Result5 = tmp5(4688);
   }
   if (isScreenLandscape) {
     isScreenLandscape = tmp5(1364).isAndroid();

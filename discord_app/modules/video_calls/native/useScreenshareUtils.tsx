@@ -1,17 +1,17 @@
-// === Module 10300: useScreenshareUtils ===
+// === Module 9397: useScreenshareUtils ===
 
-// Module 10300 (useScreenshareUtils)
+// Module 9397 (useScreenshareUtils)
 import util from "util" /* 1115 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1609 */;
 import inject from "inject" /* 1994 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 4881 */;
 import StreamActionCreators from "StreamActionCreators" /* 4971 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7495 */;
-import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 8085 */;
-import CallsUtils from "CallsUtils" /* 9988 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9995 */;
-import useHasVideoPermission from "useHasVideoPermission" /* 10295 */;
-import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 10306 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6578 */;
+import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 7170 */;
+import CallsUtils from "CallsUtils" /* 9086 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9093 */;
+import useHasVideoPermission from "useHasVideoPermission" /* 9392 */;
+import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 9403 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4851 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
@@ -97,7 +97,7 @@ export default function useScreenshareUtils(arg0) {
         if (tmp11) {
           if (flag) {
             let fn = function l() {
-              return closure_0(10301).showMobileGoLiveActionSheet(closure_1);
+              return closure_0(9398).showMobileGoLiveActionSheet(closure_1);
             };
           } else {
             fn = tmp14;
@@ -110,20 +110,20 @@ export default function useScreenshareUtils(arg0) {
         }
       } else {
         fn = function l() {
-          const obj = closure_0(9769);
-          obj.reportAVError({ type: closure_0(9769).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id });
-          const obj2 = { type: closure_0(9769).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id };
-          const result = closure_0(9988).showMinOSScreenshareRequirementAlert();
+          const obj = closure_0(8867);
+          obj.reportAVError({ type: closure_0(8867).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id });
+          const obj2 = { type: closure_0(8867).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id };
+          const result = closure_0(9086).showMinOSScreenshareRequirementAlert();
         };
       }
       obj.onPress = fn;
       if (obj2.isMetaQuest()) {
-        importDefault(tmp ? 10318 : 10319);
+        importDefault(tmp ? 9415 : 9416);
       } else {
         if (showMobileGoLiveUpsell) {
-          let tmp20 = 10320;
+          let tmp20 = 9417;
         } else {
-          tmp20 = tmp ? 10321 : 10320;
+          tmp20 = tmp ? 9418 : 9417;
         }
         obj.imgSource = importDefault(tmp20);
         return obj;
@@ -159,7 +159,7 @@ export const getStreamPressHandler = function getStreamPressHandler(analyticsLoc
     if (hasPermission) {
       if (showMobileGoLiveUpsell) {
         let fn = function l() {
-          return closure_0(10301).showMobileGoLiveActionSheet(closure_1);
+          return closure_0(9398).showMobileGoLiveActionSheet(closure_1);
         };
       } else {
         fn = tmp;
@@ -172,10 +172,10 @@ export const getStreamPressHandler = function getStreamPressHandler(analyticsLoc
     }
   } else {
     fn = function l() {
-      const obj = closure_0(9769);
-      obj.reportAVError({ type: closure_0(9769).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id });
-      const obj2 = { type: closure_0(9769).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id };
-      const result = closure_0(9988).showMinOSScreenshareRequirementAlert();
+      const obj = closure_0(8867);
+      obj.reportAVError({ type: closure_0(8867).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id });
+      const obj2 = { type: closure_0(8867).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id };
+      const result = closure_0(9086).showMinOSScreenshareRequirementAlert();
     };
   }
   return fn;

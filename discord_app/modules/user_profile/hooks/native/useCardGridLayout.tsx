@@ -1,8 +1,8 @@
-// === Module 13493: useCardGridLayout ===
+// === Module 12643: useCardGridLayout ===
 
-// Module 13493 (useCardGridLayout)
+// Module 12643 (useCardGridLayout)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1478 */;
-import Constants from "Constants" /* 7541 */;
+import Constants from "Constants" /* 6624 */;
 import size from "module_2" /* 2 */;
 
 const PROFILE_SIDE_PADDING = Constants.PROFILE_SIDE_PADDING;
@@ -62,7 +62,7 @@ export default function useCardGridLayout() {
   const bound1 = Math.min(Math.max(tmp4, num), num2);
   const diff2 = num4 - 1;
   if (diff < bound1 * num4 + num3 * diff2) {
-    const obj2 = { columns: 1, cardWidth: "Array", rowWidth: "category", gap: num3 };
+    const obj2 = { columns: 1, cardWidth: "Array", rowWidth: "channel", gap: num3 };
     let obj3 = obj2;
   } else {
     obj3 = { columns: num4, cardWidth: bound1, rowWidth: bound1 * num4 + num3 * diff2, gap: num3 };

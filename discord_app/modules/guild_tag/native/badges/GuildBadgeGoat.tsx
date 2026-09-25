@@ -1,8 +1,8 @@
-// === Module 14309: GuildBadgeGoat ===
+// === Module 13470: GuildBadgeGoat ===
 
-// Module 14309 (GuildBadgeGoat)
-import inlineStyles from "inlineStyles" /* 8807 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14284 */;
+// Module 13470 (GuildBadgeGoat)
+import inlineStyles from "inlineStyles" /* 7901 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 13445 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

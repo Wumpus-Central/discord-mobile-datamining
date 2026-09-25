@@ -1,13 +1,13 @@
-// === Module 9634: oauth2/Header ===
+// === Module 8732: oauth2/Header ===
 
-// Module 9634 (oauth2/Header)
+// Module 8732 (oauth2/Header)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import FlagUtils from "FlagUtils" /* 1385 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import BotTagDefault from "BotTag" /* 9635 */;
+import BotTagDefault from "BotTag" /* 8733 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

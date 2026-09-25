@@ -1,9 +1,9 @@
-// === Module 14457: IconPill ===
+// === Module 13618: IconPill ===
 
-// Module 14457 (IconPill)
+// Module 13618 (IconPill)
 import nativeDefault from "native" /* 576 */;
-import IconDefault from "Icon" /* 5275 */;
-import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8970 */;
+import IconDefault from "Icon" /* 5276 */;
+import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8064 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

@@ -1,12 +1,12 @@
-// === Module 9875: GuildEventRsvpUtils ===
+// === Module 8973: GuildEventRsvpUtils ===
 
-// Module 9875 (GuildEventRsvpUtils)
+// Module 8973 (GuildEventRsvpUtils)
 import util from "util" /* 1115 */;
-import ScheduleUtils from "ScheduleUtils" /* 9837 */;
-import useEventSchedule from "useEventSchedule" /* 9840 */;
-import useEventException from "useEventException" /* 9841 */;
+import ScheduleUtils from "ScheduleUtils" /* 8935 */;
+import useEventSchedule from "useEventSchedule" /* 8938 */;
+import useEventException from "useEventException" /* 8939 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7856 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6941 */;
 
 require = fn;
 const GuildScheduledEventsConstants = fn(2050);

@@ -1,13 +1,13 @@
-// === Module 13058: GuildTemplates ===
+// === Module 12189: GuildTemplates ===
 
-// Module 13058 (GuildTemplates)
+// Module 12189 (GuildTemplates)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import ListSelectionItemDefault from "ListSelectionItem" /* 12667 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 13031 */;
-import CreateGuildIcons from "CreateGuildIcons" /* 13059 */;
+import ListSelectionItemDefault from "ListSelectionItem" /* 11793 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12162 */;
+import CreateGuildIcons from "CreateGuildIcons" /* 12190 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -54,7 +54,7 @@ function GuildTemplatesJoinFooter(trigger) {
   obj4.children = intl3.string(trigger(1115).t["N+Mi/U"]);
   const items2 = [
     closure_14(trigger(4825).Text, obj4),
-    closure_14(trigger(5273).Button, {
+    closure_14(trigger(5274).Button, {
       variant: "primary",
       grow: true,
       text: stringResult,
@@ -88,17 +88,17 @@ function GuildTemplatesItem(guildTemplate) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-let CreateGuildConstants = fn(13055);
+let CreateGuildConstants = fn(12186);
 ({ getGuildTemplatesMap: closure_7, GuildTemplateId: closure_8 } = CreateGuildConstants);
-CreateGuildConstants = fn(7311);
+CreateGuildConstants = fn(6394);
 ({ CreateGuildModalStates: closure_9, GuildTemplateTriggers: c10, NUXGuildTemplatesAnalytics: closure_11 } = CreateGuildConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, AnalyticsLocations: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const createStyles = fn(4829);
-let obj2 = { flex: { flex: 1 }, contentContainer: { marginTop: fn(5987).NAV_BAR_HEIGHT }, scrollContainer: null, sections: null, headerContainer: null, headerTitle: null, headerDescription: null, footerSafeAreaContainer: null, footerContainer: null, footerTitle: null };
-let obj3 = { marginTop: fn(5987).NAV_BAR_HEIGHT };
+let obj2 = { flex: { flex: 1 }, contentContainer: { marginTop: fn(5989).NAV_BAR_HEIGHT }, scrollContainer: null, sections: null, headerContainer: null, headerTitle: null, headerDescription: null, footerSafeAreaContainer: null, footerContainer: null, footerTitle: null };
+let obj3 = { marginTop: fn(5989).NAV_BAR_HEIGHT };
 obj2.scrollContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.sections = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING, gap: 24 };

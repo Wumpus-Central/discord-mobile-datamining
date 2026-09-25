@@ -1,6 +1,6 @@
-// === Module 11708: useChatViewPointerEvents ===
+// === Module 10888: useChatViewPointerEvents ===
 
-// Module 11708 (useChatViewPointerEvents)
+// Module 10888 (useChatViewPointerEvents)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/chat/native/useChatViewPointerEvents.android.tsx");

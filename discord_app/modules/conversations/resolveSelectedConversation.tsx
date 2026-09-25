@@ -1,6 +1,6 @@
-// === Module 8256: resolveSelectedConversation ===
+// === Module 7345: resolveSelectedConversation ===
 
-// Module 8256 (resolveSelectedConversation)
+// Module 7345 (resolveSelectedConversation)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conversations/resolveSelectedConversation.tsx");

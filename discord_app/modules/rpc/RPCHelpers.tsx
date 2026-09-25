@@ -1,19 +1,19 @@
-// === Module 9669: RPCHelpers ===
+// === Module 8767: RPCHelpers ===
 
-// Module 9669 (RPCHelpers)
+// Module 8767 (RPCHelpers)
 import _modDef12 from "module_12" /* 12 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import UrlDefault from "Url" /* 1368 */;
 import MarkupUtilsDefault from "MarkupUtils" /* 4819 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4981 */;
-import useMessageAuthor from "useMessageAuthor" /* 5075 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7786 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8689 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 9397 */;
-import RPCErrorDefault from "RPCError" /* 9664 */;
-import transformUserDefault from "transformUser" /* 9670 */;
-import LeakyBucketDefault from "LeakyBucket" /* 9671 */;
+import useMessageAuthor from "useMessageAuthor" /* 5076 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 6871 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 7779 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 8495 */;
+import RPCErrorDefault from "RPCError" /* 8762 */;
+import transformUserDefault from "transformUser" /* 8768 */;
+import LeakyBucketDefault from "LeakyBucket" /* 8769 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 5056 */;
 import ApplicationRecord from "ApplicationRecord" /* 2002 */;
@@ -297,7 +297,7 @@ let closure_32 = async function _processSocketThrottlers(arg0) {
   }
 };
 const GUILD_VOCAL_CHANNEL_TYPES = fn(2048).GUILD_VOCAL_CHANNEL_TYPES;
-let Constants = fn(4733);
+let Constants = fn(4735);
 ({ RPC_LOCAL_SCOPE: closure_15, TransportTypes: closure_16 } = Constants);
 Constants = fn(1074);
 ({ ActivityActionTypes: closure_17, ChannelTypes: closure_18, Endpoints: closure_19, MAX_MESSAGES_PER_CHANNEL: closure_20, RPCCloseCodes: closure_21, RPCErrors: closure_22, RTCConnectionStates: closure_23 } = Constants);
@@ -408,7 +408,7 @@ export const transformChannel = function transformChannel(channel, arg1) {
           const obj = { nick: closure_1(4981).getName(dependencyMap, id.id, user), mute: MediaEngineStore.isLocalMute(user.id), volume: MediaEngineStore.getLocalVolume(user.id), pan: MediaEngineStore.getLocalPan(user.id), voice_state: null, user: null };
           const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
           obj.voice_state = obj3;
-          obj.user = closure_1(9670)(user);
+          obj.user = closure_1(8768)(user);
           return obj;
         }
       });

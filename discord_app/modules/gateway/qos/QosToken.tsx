@@ -3,7 +3,7 @@
 // Module 500 (QosToken)
 import LoggerDefault from "Logger" /* 3 */;
 import ProtoUtils from "ProtoUtils" /* 1223 */;
-import qos_token from "qos_token" /* 14570 */;
+import qos_token from "qos_token" /* 13731 */;
 import DerivedQosDataStore from "DerivedQosDataStore" /* 501 */;
 
 require = fn;
@@ -21,8 +21,7 @@ function buildQosTokenFromDerivedData(derivedQosData, isActive) {
   }
   const obj = { isActive };
   const obj2 = ClientProvidedQosData.create({ isActive });
-  const QosToken = qos_token.QosToken;
-  return ProtoUtils.protoToB64(qos_token.QosToken, QosToken.create({ clientProvided: obj2, derived }));
+  return ProtoUtils.protoToB64(qos_token.QosToken, { clientProvided: obj2, derived });
 }
 const logger = new LoggerDefault("QOS");
 const size = fn(2);

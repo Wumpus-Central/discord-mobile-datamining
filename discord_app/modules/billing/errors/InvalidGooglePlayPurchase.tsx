@@ -1,7 +1,7 @@
-// === Module 11052: InvalidGooglePlayPurchase ===
+// === Module 10156: InvalidGooglePlayPurchase ===
 
-// Module 11052 (InvalidGooglePlayPurchase)
-import BillingError from "BillingError" /* 4505 */;
+// Module 10156 (InvalidGooglePlayPurchase)
+import BillingError from "BillingError" /* 4507 */;
 
 const prototype = function InvalidGooglePlayPurchase() {
   return HermesBuiltin.applyArguments(new.target, new.target);

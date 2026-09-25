@@ -1,10 +1,10 @@
-// === Module 10153: GuildEventsListView ===
+// === Module 9250: GuildEventsListView ===
 
-// Module 10153 (GuildEventsListView)
+// Module 9250 (GuildEventsListView)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
-import GuildEventsNoContentDefault from "GuildEventsNoContent" /* 10154 */;
-import GuildEventCardDefault from "GuildEventCard" /* 10155 */;
+import GuildEventsNoContentDefault from "GuildEventsNoContent" /* 9251 */;
+import GuildEventCardDefault from "GuildEventCard" /* 9252 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

@@ -1,9 +1,9 @@
-// === Module 15079: UniqueUsernamesUtils ===
+// === Module 14245: UniqueUsernamesUtils ===
 
-// Module 15079 (UniqueUsernamesUtils)
+// Module 14245 (UniqueUsernamesUtils)
 import util from "util" /* 1115 */;
 import _mod5014 from "module_5014" /* 5014 */;
-import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 15074 */;
+import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 14240 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/unique_usernames/UniqueUsernamesUtils.tsx");

@@ -1,6 +1,6 @@
-// === Module 18243: Placeholder ===
+// === Module 17474: Placeholder ===
 
-// Module 18243 (Placeholder)
+// Module 17474 (Placeholder)
 import noop from "module_19" /* 19 */;
 
 const ActivityIndicator = fn(17).ActivityIndicator;

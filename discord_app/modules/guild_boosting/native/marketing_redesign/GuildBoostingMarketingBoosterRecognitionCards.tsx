@@ -1,17 +1,17 @@
-// === Module 13962: GuildBoostingMarketingBoosterRecognitionCards ===
+// === Module 13121: GuildBoostingMarketingBoosterRecognitionCards ===
 
-// Module 13962 (GuildBoostingMarketingBoosterRecognitionCards)
+// Module 13121 (GuildBoostingMarketingBoosterRecognitionCards)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import HeartIcon from "HeartIcon" /* 9134 */;
-import BoostGemIcon from "BoostGemIcon" /* 9572 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 9924 */;
-import BoostTier3Icon from "BoostTier3Icon" /* 13891 */;
-import _modDef13963 from "module_13963" /* 13963 */;
-import _modDef13964 from "module_13964" /* 13964 */;
-import _modDef13965 from "module_13965" /* 13965 */;
-import _modDef13966 from "module_13966" /* 13966 */;
+import HeartIcon from "HeartIcon" /* 8228 */;
+import BoostGemIcon from "BoostGemIcon" /* 8670 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 9022 */;
+import BoostTier3Icon from "BoostTier3Icon" /* 13048 */;
+import _modDef13122 from "module_13122" /* 13122 */;
+import _modDef13123 from "module_13123" /* 13123 */;
+import _modDef13124 from "module_13124" /* 13124 */;
+import _modDef13125 from "module_13125" /* 13125 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -43,19 +43,19 @@ export default function GuildBoostingMarketingBoosterRecognitionCards() {
   obj2.children = intl.string(util.t.IzKs3o);
   const items = [React4(Text_Text.Heading, obj2), ];
   const obj3 = { style: tmp.recognitionCardsContainer, children: null };
-  const obj4 = { icon: _modDef13963, IconComponent: BoostGemIcon.BoostGemIcon, children: null };
+  const obj4 = { icon: _modDef13122, IconComponent: BoostGemIcon.BoostGemIcon, children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.TZigSO);
   const items1 = [React4(Card, obj4), , , ];
-  const obj5 = { icon: _modDef13964, IconComponent: BoostTier3Icon.BoostTier3Icon, children: null };
+  const obj5 = { icon: _modDef13123, IconComponent: BoostTier3Icon.BoostTier3Icon, children: null };
   const intl3 = util.intl;
   obj5.children = intl3.string(util.t.hjQuV2);
   items1[1] = React4(Card, obj5);
-  const obj6 = { icon: _modDef13965, IconComponent: ShieldUserIcon.ShieldUserIcon, children: null };
+  const obj6 = { icon: _modDef13124, IconComponent: ShieldUserIcon.ShieldUserIcon, children: null };
   const intl4 = util.intl;
   obj6.children = intl4.string(util.t["2RUcaM"]);
   items1[2] = React4(Card, obj6);
-  const obj7 = { icon: _modDef13966, IconComponent: HeartIcon.HeartIcon, children: null };
+  const obj7 = { icon: _modDef13125, IconComponent: HeartIcon.HeartIcon, children: null };
   const intl5 = util.intl;
   obj7.children = intl5.string(util.t.bJoZKV);
   items1[3] = React4(Card, obj7);

@@ -1,7 +1,7 @@
-// === Module 7488: Sheet/BottomSheetBackdrop ===
+// === Module 6571: Sheet/BottomSheetBackdrop ===
 
-// Module 7488 (Sheet/BottomSheetBackdrop)
-import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
+// Module 6571 (Sheet/BottomSheetBackdrop)
+import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

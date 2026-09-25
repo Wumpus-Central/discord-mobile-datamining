@@ -1,8 +1,8 @@
-// === Module 17150: VibegrationsQuestPrompt ===
+// === Module 16364: VibegrationsQuestPrompt ===
 
-// Module 17150 (VibegrationsQuestPrompt)
-import QuestDataUtils from "QuestDataUtils" /* 8022 */;
-import QuestsEligibility from "QuestsEligibility" /* 11825 */;
+// Module 16364 (VibegrationsQuestPrompt)
+import QuestDataUtils from "QuestDataUtils" /* 7107 */;
+import QuestsEligibility from "QuestsEligibility" /* 10669 */;
 import size from "module_2" /* 2 */;
 
 let c2 = false;

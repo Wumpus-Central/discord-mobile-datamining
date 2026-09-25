@@ -1,16 +1,16 @@
-// === Module 12993: VoiceMessageOverlay ===
+// === Module 12124: VoiceMessageOverlay ===
 
-// Module 12993 (VoiceMessageOverlay)
+// Module 12124 (VoiceMessageOverlay)
 import nativeDefault from "native" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
 import util from "util" /* 1115 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4561 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4563 */;
 import timing from "timing" /* 4830 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5258 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5267 */;
-import LegacyTokens from "LegacyTokens" /* 5746 */;
-import useRefValueDefault from "useRefValue" /* 5891 */;
-import inlineStyles from "inlineStyles" /* 8807 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5259 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5268 */;
+import LegacyTokens from "LegacyTokens" /* 5748 */;
+import useRefValueDefault from "useRefValue" /* 5893 */;
+import inlineStyles from "inlineStyles" /* 7901 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4821 */;
@@ -233,10 +233,10 @@ function LockPill(safeAreaBottom) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, AppState: metroRequire } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(12302).useVoiceMessagesUIStore;
-const VoiceMessageAnimationState = fn(12303).VoiceMessageAnimationState;
+const useVoiceMessagesUIStore = fn(11428).useVoiceMessagesUIStore;
+const VoiceMessageAnimationState = fn(11429).VoiceMessageAnimationState;
 const ComponentActionsKeyed = fn(1074).ComponentActionsKeyed;
-const CHAT_INPUT_HEIGHT = fn(12304).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(11430).CHAT_INPUT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 let ReanimatedRexport = ReanimatedRexport_mod;

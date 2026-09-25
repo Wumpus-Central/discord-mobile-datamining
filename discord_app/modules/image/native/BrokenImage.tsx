@@ -1,7 +1,7 @@
-// === Module 12427: BrokenImage ===
+// === Module 11553: BrokenImage ===
 
-// Module 12427 (BrokenImage)
-import inlineStyles from "inlineStyles" /* 8807 */;
+// Module 11553 (BrokenImage)
+import inlineStyles from "inlineStyles" /* 7901 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;

@@ -1,8 +1,8 @@
-// === Module 10445: GuildAntiRaidPermissionsUtils ===
+// === Module 9547: GuildAntiRaidPermissionsUtils ===
 
-// Module 10445 (GuildAntiRaidPermissionsUtils)
-import PermissionStore from "PermissionStore" /* 4464 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 10427 */;
+// Module 9547 (GuildAntiRaidPermissionsUtils)
+import PermissionStore from "PermissionStore" /* 4466 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 9529 */;
 
 const require = globalThis.__r;
 
@@ -51,8 +51,8 @@ export const useCanReportRaid = function useCanReportRaid(guild) {
   }, items3);
   let hasDetectedActivityResult = null != stateFromStores1;
   if (hasDetectedActivityResult) {
-    hasDetectedActivityResult = tmp(8363).hasDetectedActivity(stateFromStores1);
-    const tmpResult = tmp(8363);
+    hasDetectedActivityResult = tmp(7452).hasDetectedActivity(stateFromStores1);
+    const tmpResult = tmp(7452);
   }
   let tmp6 = !hasDetectedActivityResult;
   if (!hasDetectedActivityResult) {

@@ -1,8 +1,8 @@
-// === Module 9266: TwinButtons ===
+// === Module 8364: TwinButtons ===
 
-// Module 9266 (TwinButtons)
+// Module 8364 (TwinButtons)
 import nativeDefault from "native" /* 576 */;
-import components_Button_Button from "components/Button/Button" /* 5273 */;
+import components_Button_Button from "components/Button/Button" /* 5274 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

@@ -1,27 +1,27 @@
-// === Module 17686: VoicePanelHeaderSpeaker ===
+// === Module 16910: VoicePanelHeaderSpeaker ===
 
-// Module 17686 (VoicePanelHeaderSpeaker)
+// Module 16910 (VoicePanelHeaderSpeaker)
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import dismissible_content from "dismissible_content" /* 2028 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4649 */;
-import NativeViewDefault from "NativeView" /* 5894 */;
-import showAudioOutputSelector from "showAudioOutputSelector" /* 10018 */;
-import getConsoleIconDefault from "getConsoleIcon" /* 10150 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 17602 */;
-import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 17690 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4651 */;
+import NativeViewDefault from "NativeView" /* 5896 */;
+import showAudioOutputSelector from "showAudioOutputSelector" /* 9116 */;
+import getConsoleIconDefault from "getConsoleIcon" /* 9247 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 16826 */;
+import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 16914 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import GameConsoleStore from "GameConsoleStore" /* 4846 */;
-import StageChannelAudioStore from "StageChannelAudioStore" /* 17688 */;
-import AudioRouteStore from "AudioRouteStore" /* 9989 */;
+import StageChannelAudioStore from "StageChannelAudioStore" /* 16912 */;
+import AudioRouteStore from "AudioRouteStore" /* 9087 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import SessionsStore from "SessionsStore" /* 4847 */;
 
 require = fn;
 let closure_3 = ["ref"];
 const NativeModules = fn(17).NativeModules;
-const setVoiceUpsellDismissed = fn(17687).setVoiceUpsellDismissed;
+const setVoiceUpsellDismissed = fn(16911).setVoiceUpsellDismissed;
 const PlatformTypes = fn(1074).PlatformTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
@@ -218,7 +218,7 @@ export default noop.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChan
     function renderButton(arg0) {
       let tmp = arg0;
       if (arg0 == null) {
-        const obj = { onPress, ref: "Array" };
+        const obj = { onPress, ref: "a" };
         tmp = obj;
       }
       const obj2 = { targetRef: ref, canShowTooltip: null };

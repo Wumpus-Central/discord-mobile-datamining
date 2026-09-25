@@ -1,25 +1,25 @@
-// === Module 16214: CollectiblesShopV2 ===
+// === Module 15393: CollectiblesShopV2 ===
 
-// Module 16214 (CollectiblesShopV2)
+// Module 15393 (CollectiblesShopV2)
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import dismissible_content from "dismissible_content" /* 2028 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4649 */;
-import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7919 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8535 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9207 */;
-import NativePaymentHooksDefault from "NativePaymentHooks" /* 9561 */;
-import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment" /* 16219 */;
-import ShopNitroUpsellBanner from "ShopNitroUpsellBanner" /* 16220 */;
-import ShopCategory from "ShopCategory" /* 16221 */;
-import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 16223 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4651 */;
+import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7004 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7625 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8305 */;
+import NativePaymentHooksDefault from "NativePaymentHooks" /* 8659 */;
+import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment" /* 15398 */;
+import ShopNitroUpsellBanner from "ShopNitroUpsellBanner" /* 15399 */;
+import ShopCategory from "ShopCategory" /* 15400 */;
+import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 15402 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 4828 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 import UserStore from "UserStore" /* 1372 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7872 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 6957 */;
 
 const MobileNitroUpsellInShopFeedExperimentDefault = MobileNitroUpsellInShopFeedExperiment;
 

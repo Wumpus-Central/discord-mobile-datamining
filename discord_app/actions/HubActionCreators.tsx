@@ -1,6 +1,6 @@
-// === Module 13080: HubActionCreators ===
+// === Module 12228: HubActionCreators ===
 
-// Module 13080 (HubActionCreators)
+// Module 12228 (HubActionCreators)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import TypeUtils from "TypeUtils" /* 2056 */;

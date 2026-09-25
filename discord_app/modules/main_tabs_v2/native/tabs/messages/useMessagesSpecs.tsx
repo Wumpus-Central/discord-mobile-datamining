@@ -1,10 +1,10 @@
-// === Module 16453: useMessagesSpecs ===
+// === Module 15633: useMessagesSpecs ===
 
-// Module 16453 (useMessagesSpecs)
+// Module 15633 (useMessagesSpecs)
 import nativeDefault from "native" /* 576 */;
-import MessagesHeader from "MessagesHeader" /* 16454 */;
-import MessagesItemChannel from "MessagesItemChannel" /* 16457 */;
-import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 16469 */;
+import MessagesHeader from "MessagesHeader" /* 15634 */;
+import MessagesItemChannel from "MessagesItemChannel" /* 15637 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 15649 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesSpecs.tsx");
 
 export default function useMessagesSpecs() {
-  fontScale = fontScale(5280).useFontScale();
+  fontScale = fontScale(5281).useFontScale();
   top = top(1612)().top;
   const items = [fontScale, top];
   return noop.useMemo(() => {

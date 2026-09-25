@@ -1,8 +1,8 @@
-// === Module 12926: useGameServerFeaturedGameNames ===
+// === Module 12055: useGameServerFeaturedGameNames ===
 
-// Module 12926 (useGameServerFeaturedGameNames)
-import useGame from "useGame" /* 7639 */;
-import GameServerConstants from "GameServerConstants" /* 4719 */;
+// Module 12055 (useGameServerFeaturedGameNames)
+import useGame from "useGame" /* 6722 */;
+import GameServerConstants from "GameServerConstants" /* 4721 */;
 import size from "module_2" /* 2 */;
 
 ({ MINECRAFT_GAME_ID: c2, HYTALE_GAME_ID: c3 } = GameServerConstants);

@@ -1,6 +1,6 @@
-// === Module 5267: setAccessibilityFocus ===
+// === Module 5268: setAccessibilityFocus ===
 
-// Module 5267 (setAccessibilityFocus)
+// Module 5268 (setAccessibilityFocus)
 import get_ActivityIndicator from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

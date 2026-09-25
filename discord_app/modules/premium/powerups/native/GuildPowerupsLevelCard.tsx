@@ -1,16 +1,16 @@
-// === Module 12914: GuildPowerupsLevelCard ===
+// === Module 12043: GuildPowerupsLevelCard ===
 
-// Module 12914 (GuildPowerupsLevelCard)
+// Module 12043 (GuildPowerupsLevelCard)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import LinearGradientDefault from "LinearGradient" /* 5285 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7313 */;
-import BoostGemIcon from "BoostGemIcon" /* 9572 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12849 */;
-import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 12868 */;
-import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 12873 */;
-import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 12916 */;
-import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 12917 */;
+import LinearGradientDefault from "LinearGradient" /* 5286 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6396 */;
+import BoostGemIcon from "BoostGemIcon" /* 8670 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 11978 */;
+import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 11997 */;
+import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 12002 */;
+import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 12045 */;
+import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 12046 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -138,11 +138,11 @@ class GuildPowerupLevelBody {
   }
 }
 const View = fn(17).View;
-const GuildPowerupsConstants = fn(4718);
+const GuildPowerupsConstants = fn(4720);
 ({ LevelCardPosition: hasOwnProperty, PowerupActiveStatusType: metroRequire } = GuildPowerupsConstants);
 const Constants = fn(1074);
 ({ BoostedGuildTiers: closure_7, HorizontalGradient: closure_8 } = Constants);
-const TIER_CARDS = fn(12915).TIER_CARDS;
+const TIER_CARDS = fn(12044).TIER_CARDS;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(4829);

@@ -1,11 +1,11 @@
-// === Module 14273: MobileNativeUpdateUtils ===
+// === Module 13434: MobileNativeUpdateUtils ===
 
-// Module 14273 (MobileNativeUpdateUtils)
+// Module 13434 (MobileNativeUpdateUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import Linking from "Linking" /* 4520 */;
+import Linking from "Linking" /* 4522 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

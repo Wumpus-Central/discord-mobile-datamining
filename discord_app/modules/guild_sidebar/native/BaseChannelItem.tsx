@@ -1,6 +1,6 @@
-// === Module 12728: BaseChannelItem ===
+// === Module 11854: BaseChannelItem ===
 
-// Module 12728 (BaseChannelItem)
+// Module 11854 (BaseChannelItem)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1365 */;
@@ -48,7 +48,7 @@ class BaseChannelSubtitle {
   }
 }
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(10464);
+const RedesignChannelListConstants = fn(9566);
 ({ CHANNEL_SUBTITLE_TEXT_VARIANT: hasOwnProperty, CHANNEL_TITLE_LINE_HEIGHT: metroRequire } = RedesignChannelListConstants);
 const UnreadSetting = fn(5011).UnreadSetting;
 const jsxProd = fn(21);
@@ -130,9 +130,9 @@ export default function BaseChannelItem(mode) {
     items1[3] = channelInfo;
     obj.children = items1;
     if (flag) {
-      let AnimatedPressableHighlight = hideIcon(12729);
+      let AnimatedPressableHighlight = hideIcon(11855);
     } else {
-      AnimatedPressableHighlight = mode(9264).AnimatedPressableHighlight;
+      AnimatedPressableHighlight = mode(8362).AnimatedPressableHighlight;
     }
     obj2 = {};
     const merged1 = Object.assign(merged);
@@ -147,8 +147,8 @@ export default function BaseChannelItem(mode) {
       ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
     }
     obj3.resolvedUnreadSetting = ALL_MESSAGES;
-    closure_8(hideIcon(10512), obj3);
-    const tmp9 = hideIcon(10512);
+    closure_8(hideIcon(9614), obj3);
+    const tmp9 = hideIcon(9614);
   }
 };
 export const ChannelModes = obj2;

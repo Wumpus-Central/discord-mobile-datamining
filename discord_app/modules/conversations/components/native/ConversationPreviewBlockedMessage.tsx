@@ -1,12 +1,12 @@
-// === Module 8276: ConversationPreviewBlockedMessage ===
+// === Module 7365: ConversationPreviewBlockedMessage ===
 
-// Module 8276 (ConversationPreviewBlockedMessage)
+// Module 7365 (ConversationPreviewBlockedMessage)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import Stack_Stack from "Stack/Stack" /* 5271 */;
-import EyeSlashIcon2 from "EyeSlashIcon" /* 7299 */;
-import DenyIcon from "DenyIcon" /* 8277 */;
+import Stack_Stack from "Stack/Stack" /* 5272 */;
+import EyeSlashIcon2 from "EyeSlashIcon" /* 6382 */;
+import DenyIcon from "DenyIcon" /* 7366 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

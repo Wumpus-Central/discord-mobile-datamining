@@ -1,6 +1,6 @@
-// === Module 12524: UsernameText ===
+// === Module 11650: UsernameText ===
 
-// Module 12524 (UsernameText)
+// Module 11650 (UsernameText)
 import Text_Text from "Text/Text" /* 4825 */;
 import NicknameUtils from "NicknameUtils" /* 4981 */;
 import noop from "module_19" /* 19 */;

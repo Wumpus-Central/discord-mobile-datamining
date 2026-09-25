@@ -1,22 +1,22 @@
-// === Module 5429: ThemedGradient ===
+// === Module 5430: ThemedGradient ===
 
-// Module 5429 (ThemedGradient)
+// Module 5430 (ThemedGradient)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1230 */;
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1478 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4647 */;
-import ColorUtils from "ColorUtils" /* 4678 */;
-import utils_ColorDefault from "utils/Color" /* 4679 */;
-import shared from "shared" /* 4680 */;
-import GuildThemePresets from "GuildThemePresets" /* 4683 */;
-import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 4685 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4649 */;
+import ColorUtils from "ColorUtils" /* 4680 */;
+import utils_ColorDefault from "utils/Color" /* 4681 */;
+import shared from "shared" /* 4682 */;
+import GuildThemePresets from "GuildThemePresets" /* 4685 */;
+import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 4687 */;
 import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 4762 */;
 import useThemeDefault from "useTheme" /* 4763 */;
-import LinearGradientDefault from "LinearGradient" /* 5285 */;
+import LinearGradientDefault from "LinearGradient" /* 5286 */;
 import noop from "module_19" /* 19 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4648 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4650 */;
 
 require = fn;
 function getMixedGradientColor(mixColorOverride) {
@@ -342,8 +342,8 @@ function CustomThemesGradient(arg0) {
     items2[3] = absolute;
     items2[4] = componentStyles;
     obj.style = items2;
-    tmp10Result = closure_6(reduced(5285), obj);
-    const tmp2Result = reduced(5285);
+    tmp10Result = closure_6(reduced(5286), obj);
+    const tmp2Result = reduced(5286);
   }
   return tmp10Result;
 }

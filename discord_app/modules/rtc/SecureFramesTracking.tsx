@@ -1,9 +1,9 @@
-// === Module 10065: SecureFramesTracking ===
+// === Module 9163: SecureFramesTracking ===
 
-// Module 10065 (SecureFramesTracking)
+// Module 9163 (SecureFramesTracking)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5009 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8539 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 7629 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 
 require = fn;

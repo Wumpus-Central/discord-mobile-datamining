@@ -1,6 +1,6 @@
-// === Module 12098: isPartyFull ===
+// === Module 11243: isPartyFull ===
 
-// Module 12098 (isPartyFull)
+// Module 11243 (isPartyFull)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/utils/isPartyFull.tsx");

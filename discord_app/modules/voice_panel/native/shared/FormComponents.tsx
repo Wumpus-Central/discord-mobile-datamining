@@ -1,16 +1,16 @@
-// === Module 10022: FormComponents ===
+// === Module 9120: FormComponents ===
 
-// Module 10022 (FormComponents)
+// Module 9120 (FormComponents)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import NativeViewDefault from "NativeView" /* 5894 */;
-import TableRowGroup from "TableRowGroup" /* 5992 */;
-import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 8067 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8527 */;
-import VoiceStateIcons from "VoiceStateIcons" /* 10023 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 10086 */;
+import NativeViewDefault from "NativeView" /* 5896 */;
+import TableRowGroup from "TableRowGroup" /* 5994 */;
+import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7152 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7617 */;
+import VoiceStateIcons from "VoiceStateIcons" /* 9121 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 9183 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 4869 */;
 
@@ -91,7 +91,7 @@ export const MemberRowItem = function MemberRowItem(user) {
   let obj2 = user(flag[10]);
   const isUserSecureFramesVerified = user(flag[11]).useIsUserSecureFramesVerified({ userId: id, channelId });
   const obj3 = user(flag[11]);
-  const canRing = user(flag[12]).useCanRing(user, "MemberRowItem");
+  const canRing = user(flag[12]).useCanRing(user);
   const obj4 = user(flag[12]);
   const obj5 = { userId: user.id, guildId };
   const tmp9 = channelId(flag[13])({ userId: user.id, guildId });

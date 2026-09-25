@@ -1,15 +1,15 @@
-// === Module 14817: AccessibilityCallManager ===
+// === Module 13979: AccessibilityCallManager ===
 
-// Module 14817 (AccessibilityCallManager)
+// Module 13979 (AccessibilityCallManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import UserSettings from "UserSettings" /* 2020 */;
-import shared from "shared" /* 4680 */;
+import shared from "shared" /* 4682 */;
 import useChannelName from "useChannelName" /* 4982 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 import UserStore from "UserStore" /* 1372 */;
 import LifecycleManager from "LifecycleManager" /* 1982 */;
 

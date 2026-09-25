@@ -1,17 +1,17 @@
-// === Module 7550: getChannelIdForGuildTransition ===
+// === Module 6633: getChannelIdForGuildTransition ===
 
-// Module 7550 (getChannelIdForGuildTransition)
+// Module 6633 (getChannelIdForGuildTransition)
 import FavoritesUtils from "FavoritesUtils" /* 2069 */;
-import VibegrationsUtils from "VibegrationsUtils" /* 5362 */;
-import OnboardingHomeUtils from "OnboardingHomeUtils" /* 7555 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7559 */;
+import VibegrationsUtils from "VibegrationsUtils" /* 5363 */;
+import OnboardingHomeUtils from "OnboardingHomeUtils" /* 6638 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6642 */;
 import FavoriteStore from "FavoriteStore" /* 2047 */;
-import GuildOnboardingStore from "GuildOnboardingStore" /* 7429 */;
+import GuildOnboardingStore from "GuildOnboardingStore" /* 6512 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildChannelStore from "GuildChannelStore" /* 4462 */;
+import GuildChannelStore from "GuildChannelStore" /* 4464 */;
 import GuildStore from "GuildStore" /* 2066 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7551 */;
+import PrivateChannelSortStore from "PrivateChannelSortStore" /* 6634 */;
 
 require = fn;
 const ME = fn(1074).ME;

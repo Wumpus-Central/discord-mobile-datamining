@@ -1,6 +1,6 @@
-// === Module 12633: DoubleTapToReactChatInputBanner ===
+// === Module 11759: DoubleTapToReactChatInputBanner ===
 
-// Module 12633 (DoubleTapToReactChatInputBanner)
+// Module 11759 (DoubleTapToReactChatInputBanner)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -8,15 +8,15 @@ import native from "native" /* 1177 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
 import dismissible_content from "dismissible_content" /* 2028 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
 import Text_Text from "Text/Text" /* 4825 */;
 import timing from "timing" /* 4830 */;
-import Pressables from "Pressables" /* 5427 */;
-import XSmallIcon from "XSmallIcon" /* 5985 */;
-import EmojiDefault from "Emoji" /* 7463 */;
-import canAddNewReactionsDefault from "canAddNewReactions" /* 8319 */;
-import renderChannelBadge from "renderChannelBadge" /* 12634 */;
+import Pressables from "Pressables" /* 5428 */;
+import XSmallIcon from "XSmallIcon" /* 5987 */;
+import EmojiDefault from "Emoji" /* 6546 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 7408 */;
+import renderChannelBadge from "renderChannelBadge" /* 11760 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4821 */;
@@ -142,7 +142,7 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   }, []);
   const items3 = [markAsDismissed];
   const callback1 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12730, dependencyMap.paths), "DoubleTapToReactActionSheet", { emoji });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11856, dependencyMap.paths), "DoubleTapToReactActionSheet", { emoji });
     markAsDismissed(ContentDismissActionType.TAKE_ACTION);
   }, items2);
   const callback2 = noop.useCallback(() => {

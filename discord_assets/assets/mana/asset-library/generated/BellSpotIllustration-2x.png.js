@@ -1,6 +1,6 @@
-// === Module 6123: ? ===
+// === Module 16142: ? ===
 
-// Module 6123
+// Module 16142
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BellSpotIllustration-2x.png.js");

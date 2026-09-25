@@ -1,6 +1,6 @@
-// === Module 9708: LocalActivityStore ===
+// === Module 8806: LocalActivityStore ===
 
-// Module 9708 (LocalActivityStore)
+// Module 8806 (LocalActivityStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -8,20 +8,20 @@ import _modDef1331 from "module_1331" /* 1331 */;
 import FlagUtils from "FlagUtils" /* 1385 */;
 import UserSettings from "UserSettings" /* 2020 */;
 import RobloxSubgameUtils from "RobloxSubgameUtils" /* 4959 */;
-import userSettingToActivity from "userSettingToActivity" /* 9713 */;
-import PresenceActivityFiltering from "PresenceActivityFiltering" /* 9714 */;
-import ActivityFlagUtils from "ActivityFlagUtils" /* 9715 */;
+import userSettingToActivity from "userSettingToActivity" /* 8811 */;
+import PresenceActivityFiltering from "PresenceActivityFiltering" /* 8812 */;
+import ActivityFlagUtils from "ActivityFlagUtils" /* 8813 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
 import ApplicationStore from "ApplicationStore" /* 5056 */;
 import RunningGameStore from "RunningGameStore" /* 1999 */;
-import FirstPartyRichPresenceStore from "FirstPartyRichPresenceStore" /* 9709 */;
-import SpotifyStore from "SpotifyStore" /* 5585 */;
+import FirstPartyRichPresenceStore from "FirstPartyRichPresenceStore" /* 8807 */;
+import SpotifyStore from "SpotifyStore" /* 5587 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4851 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import DetectableGameStore from "DetectableGameStore" /* 2016 */;
-import ExternalStreamingStore from "ExternalStreamingStore" /* 9712 */;
+import ExternalStreamingStore from "ExternalStreamingStore" /* 8810 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
 import SessionsStore from "SessionsStore" /* 4847 */;
 

@@ -1,17 +1,17 @@
-// === Module 13454: VibegrationsCustomWidgetAddOption ===
+// === Module 12604: VibegrationsCustomWidgetAddOption ===
 
-// Module 13454 (VibegrationsCustomWidgetAddOption)
+// Module 12604 (VibegrationsCustomWidgetAddOption)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3714 from "module_3714" /* 3714 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4796 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import Pressables from "Pressables" /* 5427 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7542 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8589 */;
-import MagicWandIcon from "MagicWandIcon" /* 10498 */;
-import VibegrationsCustomWidget from "VibegrationsCustomWidget" /* 13455 */;
-import VibegrationsCustomWidgetSheet from "VibegrationsCustomWidgetSheet" /* 13456 */;
+import Pressables from "Pressables" /* 5428 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 6625 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 7679 */;
+import MagicWandIcon from "MagicWandIcon" /* 9600 */;
+import VibegrationsCustomWidget from "VibegrationsCustomWidget" /* 12605 */;
+import VibegrationsCustomWidgetSheet from "VibegrationsCustomWidgetSheet" /* 12606 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

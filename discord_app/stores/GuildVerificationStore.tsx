@@ -1,11 +1,11 @@
-// === Module 5718: GuildVerificationStore ===
+// === Module 5720: GuildVerificationStore ===
 
-// Module 5718 (GuildVerificationStore)
+// Module 5720 (GuildVerificationStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import GuildRecord from "GuildRecord" /* 2062 */;
-import GuildMemberConstants from "GuildMemberConstants" /* 4450 */;
+import GuildMemberConstants from "GuildMemberConstants" /* 4452 */;
 import GuildMemberStore from "GuildMemberStore" /* 2107 */;
 import GuildRoleStore from "GuildRoleStore" /* 2101 */;
 import GuildStore from "GuildStore" /* 2066 */;
@@ -222,14 +222,14 @@ const prototype = GuildVerificationStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(GuildMemberStore, GuildRoleStore, GuildStore, UserStore);
 };
-prototype["getCheck"] = function getCheck(guild_id) {
-  if (null == guild_id) {
+prototype["getCheck"] = function getCheck(guildId) {
+  if (null == guildId) {
     let tmp5 = closure_12;
   } else {
-    if (!set.has(guild_id)) {
-      recomputeGuild(guild_id);
+    if (!set.has(guildId)) {
+      recomputeGuild(guildId);
     }
-    tmp5 = dependencyMap[guild_id];
+    tmp5 = dependencyMap[guildId];
     if (tmp5 == null) {
       tmp5 = closure_12;
     }

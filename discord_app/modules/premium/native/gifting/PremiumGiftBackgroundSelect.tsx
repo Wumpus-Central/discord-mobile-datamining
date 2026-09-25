@@ -1,13 +1,13 @@
-// === Module 11179: PremiumGiftBackgroundSelect ===
+// === Module 10277: PremiumGiftBackgroundSelect ===
 
-// Module 11179 (PremiumGiftBackgroundSelect)
+// Module 10277 (PremiumGiftBackgroundSelect)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import timing from "timing" /* 4830 */;
-import NativeGiftContext from "NativeGiftContext" /* 11047 */;
+import NativeGiftContext from "NativeGiftContext" /* 10151 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
 
 require = fn;
 class GiftBackgroundSelect {

@@ -1,6 +1,6 @@
-// === Module 13659: useAckVibegrationsAppChannelChat ===
+// === Module 12813: useAckVibegrationsAppChannelChat ===
 
-// Module 13659 (useAckVibegrationsAppChannelChat)
+// Module 12813 (useAckVibegrationsAppChannelChat)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import noop from "module_19" /* 19 */;
 import MessageStore from "MessageStore" /* 5049 */;

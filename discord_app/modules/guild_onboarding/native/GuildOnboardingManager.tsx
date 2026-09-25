@@ -1,15 +1,15 @@
-// === Module 17881: GuildOnboardingManager ===
+// === Module 17107: GuildOnboardingManager ===
 
-// Module 17881 (GuildOnboardingManager)
-import doGuildOnboardingDefault from "doGuildOnboarding" /* 7428 */;
+// Module 17107 (GuildOnboardingManager)
+import doGuildOnboardingDefault from "doGuildOnboarding" /* 6511 */;
 import GuildMemberStore from "GuildMemberStore" /* 2107 */;
 import GuildStore from "GuildStore" /* 2066 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4650 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7451 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4652 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6534 */;
 
 let require = fn;
 const GuildFeatures = fn(1074).GuildFeatures;
-const GuildMemberFlags = fn(4450).GuildMemberFlags;
+const GuildMemberFlags = fn(4452).GuildMemberFlags;
 let guildId = null;
 const channelId = null;
 const prototype = function GuildOnboardingManager() {
@@ -56,7 +56,7 @@ const prototype = function GuildOnboardingManager() {
     }
   };
   applyArgumentsResult.handleGuildDelete = function handleGuildDelete(guild) {
-    const result = applyArgumentsResult(7428).discardOnboardingPromise(guild.guild.id);
+    const result = applyArgumentsResult(6511).discardOnboardingPromise(guild.guild.id);
   };
   applyArgumentsResult._openOnboardingIfIncomplete = function _openOnboardingIfIncomplete(guildId) {
     guild = guild.getGuild(guildId);

@@ -1,22 +1,22 @@
-// === Module 15160: FamilyCenterSettingsNotice ===
+// === Module 14326: FamilyCenterSettingsNotice ===
 
-// Module 15160 (FamilyCenterSettingsNotice)
+// Module 14326 (FamilyCenterSettingsNotice)
 import _modDef2486 from "module_2486" /* 2486 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4842 */;
-import LayerActionCreators from "LayerActionCreators" /* 7916 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 15055 */;
+import LayerActionCreators from "LayerActionCreators" /* 7001 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14221 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SafetySettingsNoticeType = fn(8749).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(7839).SafetySettingsNoticeType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx");
 
 export default function FamilyCenterSettingsParentalControlsNotice() {
-  activeLinkUserIds = activeLinkUserIds(9003).useActiveLinkUserIds();
+  activeLinkUserIds = activeLinkUserIds(8097).useActiveLinkUserIds();
   const obj2 = { label: null, noticeType: null, labelHook: null, count: null };
-  let obj = activeLinkUserIds(9003);
+  let obj = activeLinkUserIds(8097);
   obj2.label = _modDef2486.i284fU;
   obj2.noticeType = SafetySettingsNoticeType.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE;
   obj2.labelHook = function labelHook() {

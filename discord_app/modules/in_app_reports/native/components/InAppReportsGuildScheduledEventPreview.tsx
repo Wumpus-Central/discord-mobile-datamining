@@ -1,8 +1,8 @@
-// === Module 13295: InAppReportsGuildScheduledEventPreview ===
+// === Module 12445: InAppReportsGuildScheduledEventPreview ===
 
-// Module 13295 (InAppReportsGuildScheduledEventPreview)
+// Module 12445 (InAppReportsGuildScheduledEventPreview)
 import nativeDefault from "native" /* 576 */;
-import GuildIconDefault from "GuildIcon" /* 5889 */;
+import GuildIconDefault from "GuildIcon" /* 5891 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2066 */;
 
@@ -30,20 +30,20 @@ export default function GuildScheduledEventPreview(event) {
     return null;
   } else {
     const obj2 = { style: tmp.container, children: null };
-    const tmp2Result = tmp2(4678);
+    const tmp2Result = tmp2(4680);
     const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
     const intl = tmp2(1115).intl;
     obj3.children = intl.string(tmp2(1115).t.SDTOL7);
     const items1 = [closure_5(tmp2(4825).Text, obj3), ];
     const obj4 = { style: null, children: null };
     const items2 = [tmp.itemContainer, ];
-    const obj5 = { borderColor: tmp2(4678).hexWithOpacity(tmp.borderColor.color, 0.08) };
+    const obj5 = { borderColor: tmp2(4680).hexWithOpacity(tmp.borderColor.color, 0.08) };
     items2[1] = obj5;
     obj4.style = items2;
     const obj6 = { style: tmp.guildInfo, children: null };
     const obj7 = { guild: stateFromStores, size: null, selected: false };
-    const hexWithOpacityResult = tmp2(4678).hexWithOpacity(tmp.borderColor.color, 0.08);
-    obj7.size = tmp2(5889).GuildIconSizes.XXSMALL;
+    const hexWithOpacityResult = tmp2(4680).hexWithOpacity(tmp.borderColor.color, 0.08);
+    obj7.size = tmp2(5891).GuildIconSizes.XXSMALL;
     const items3 = [closure_5(GuildIconDefault, obj7), ];
     const obj8 = { style: tmp.guildName, variant: "text-sm/medium", color: "text-default", children: stateFromStores.name };
     items3[1] = closure_5(tmp2(4825).Text, obj8);

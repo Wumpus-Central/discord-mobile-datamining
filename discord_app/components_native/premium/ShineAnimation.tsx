@@ -1,8 +1,8 @@
-// === Module 11080: ShineAnimation ===
+// === Module 10184: ShineAnimation ===
 
-// Module 11080 (ShineAnimation)
+// Module 10184 (ShineAnimation)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
 import timing from "timing" /* 4830 */;
 import noop from "module_19" /* 19 */;
 

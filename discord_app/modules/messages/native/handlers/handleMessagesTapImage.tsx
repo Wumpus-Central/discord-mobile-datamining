@@ -1,10 +1,10 @@
-// === Module 11884: handleMessagesTapImage ===
+// === Module 11027: handleMessagesTapImage ===
 
-// Module 11884 (handleMessagesTapImage)
-import LinkingDefault from "Linking" /* 4520 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 8615 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 7923 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+// Module 11027 (handleMessagesTapImage)
+import LinkingDefault from "Linking" /* 4522 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 7705 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 7008 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -20,8 +20,8 @@ export const handleMessagesTapImage = function handleMessagesTapImage(tapImageDa
   importDefault = undefined;
   ({ allowWithinModal, selectedChannelId } = tapImageData);
   if (null != portal) {
-    embedId(8618).markPortalAlive(portal);
-    const obj = embedId(8618);
+    embedId(7708).markPortalAlive(portal);
+    const obj = embedId(7708);
   }
   if (true === allowWithinModal) {
     if ("attachment" !== type) {
@@ -55,10 +55,10 @@ export const handleMessagesTapImage = function handleMessagesTapImage(tapImageDa
     let tmp12 = tmp7;
     if (type1 !== embedId(1097).MessageReferenceTypes.FORWARD) {
       const attachments = tmp7.attachments;
-      const found = attachments.filter((item) => !embedId(8615).isThumbnailAttachment(item));
+      const found = attachments.filter((item) => !embedId(7705).isThumbnailAttachment(item));
       if ("attachment" === type) {
         if (index < found.length) {
-          const tmp10Result = embedId(8615);
+          const tmp10Result = embedId(7705);
           if (null == tmp10Result.extractMediaFromAttachment(found[index], tmp7, index, messageChannel.guild_id)) {
             if (null != tmp15.url) {
               if ("" !== tmp15.url) {
@@ -72,15 +72,15 @@ export const handleMessagesTapImage = function handleMessagesTapImage(tapImageDa
       if ("embed" === type) {
         if (null != embedIndex) {
           importDefault = embedIndex;
-          const tmp10Result7 = embedId(8615);
+          const tmp10Result7 = embedId(7705);
           const result = tmp10Result7.extractMediaSourcesFromEmbed(tmp7, tmp12, tmp12.embeds[index], index, messageChannel.guild_id);
           let found2 = result;
           let tmp25 = embedId;
           if (importDefault < result.length) {
-            embedId(8615).setMediaSourcePortal(result[importDefault], portal);
+            embedId(7705).setMediaSourcePortal(result[importDefault], portal);
             found2 = result;
             tmp25 = embedId;
-            const tmp10Result8 = embedId(8615);
+            const tmp10Result8 = embedId(7705);
           }
         }
         if (-1 !== importDefault) {
@@ -93,12 +93,12 @@ export const handleMessagesTapImage = function handleMessagesTapImage(tapImageDa
           obj3.contextName = channelName;
           let channelIcon;
           if (showContextName) {
-            channelIcon = tmp25(5327).getChannelIcon(messageChannel);
-            const tmp25Result4 = tmp25(5327);
+            channelIcon = tmp25(5328).getChannelIcon(messageChannel);
+            const tmp25Result4 = tmp25(5328);
           }
           obj3.contextIcon = channelIcon;
-          tmp25(8609).openMediaModal(obj3);
-          const tmp25Result = tmp25(8609);
+          tmp25(7699).openMediaModal(obj3);
+          const tmp25Result = tmp25(7699);
         }
       }
       if ("component" === type) {
@@ -115,14 +115,14 @@ export const handleMessagesTapImage = function handleMessagesTapImage(tapImageDa
             }
             if (null != components) {
               if (0 !== components.length) {
-                const tmp10Result9 = embedId(8615);
+                const tmp10Result9 = embedId(7705);
                 const result1 = tmp10Result9.extractMediaSourcesFromComponent(tmp7, components, messageChannel.guild_id, embedId(5060).asComponentId(componentId), componentMediaIndex);
                 if (null != result1) {
                   ({ sources, initialIndex: closure_1 } = result1);
-                  embedId(8615).setMediaSourcePortal(sources[importDefault], portal);
+                  embedId(7705).setMediaSourcePortal(sources[importDefault], portal);
                   found2 = sources;
                   tmp25 = embedId;
-                  const tmp10Result11 = embedId(8615);
+                  const tmp10Result11 = embedId(7705);
                 }
                 const tmp10Result10 = embedId(5060);
               }
@@ -131,13 +131,13 @@ export const handleMessagesTapImage = function handleMessagesTapImage(tapImageDa
           components = tmp12.components;
         }
       } else {
-        const result2 = embedId(8615).extractMediaSourcesFromMessage(tmp7, tmp12, messageChannel.guild_id);
+        const result2 = embedId(7705).extractMediaSourcesFromMessage(tmp7, tmp12, messageChannel.guild_id);
         let num2 = 0;
         found2 = result2;
         tmp25 = embedId;
         if (0 < result2.length) {
           while (true) {
-            let obj4 = embedId(8615);
+            let obj4 = embedId(7705);
             flattenSourceResult = obj4.flattenSource(result2[num2]);
             if (null != flattenSourceResult) {
               if (flattenSourceResult.accessoryType === type) {
@@ -157,13 +157,13 @@ export const handleMessagesTapImage = function handleMessagesTapImage(tapImageDa
           if (flattenSourceResult.noCarousel) {
             const items = [result2[num2]];
             importDefault = 0;
-            embedId(8615).setMediaSourcePortal(items[0], portal);
+            embedId(7705).setMediaSourcePortal(items[0], portal);
             found2 = items;
             tmp25 = embedId;
-            const tmp20Result = embedId(8615);
+            const tmp20Result = embedId(7705);
           } else {
             importDefault = num2;
-            embedId(8615).setMediaSourcePortal(result2[num2], portal);
+            embedId(7705).setMediaSourcePortal(result2[num2], portal);
             found2 = result2.filter((item, index) => {
               const flattenSourceResult = MediaSourceUtil.flattenSource(item);
               let tmp3 = !tmp2;
@@ -176,10 +176,10 @@ export const handleMessagesTapImage = function handleMessagesTapImage(tapImageDa
               return null != flattenSourceResult && !flattenSourceResult.noCarousel;
             });
             tmp25 = embedId;
-            const tmp20Result2 = embedId(8615);
+            const tmp20Result2 = embedId(7705);
           }
         }
-        const tmp10Result12 = embedId(8615);
+        const tmp10Result12 = embedId(7705);
       }
     } else {
       const first = tmp7.messageSnapshots[0];
@@ -190,6 +190,6 @@ export const handleMessagesTapImage = function handleMessagesTapImage(tapImageDa
       tmp12 = message1;
     }
   } else {
-    embedId(11882);
+    embedId(11025);
   }
 };

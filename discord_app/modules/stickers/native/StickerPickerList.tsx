@@ -1,25 +1,25 @@
-// === Module 10761: StickerPickerList ===
+// === Module 9865: StickerPickerList ===
 
-// Module 10761 (StickerPickerList)
+// Module 9865 (StickerPickerList)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7395 */;
-import PremiumUpsellSectionDividerDefault from "PremiumUpsellSectionDivider" /* 10651 */;
-import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10652 */;
-import StickerPickerListRowDefault from "StickerPickerListRow" /* 10748 */;
-import _modDef10762 from "module_10762" /* 10762 */;
-import useStickerPickerListData from "useStickerPickerListData" /* 10763 */;
-import StickerPickerPremiumSearchUpsellDefault from "StickerPickerPremiumSearchUpsell" /* 10764 */;
+import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 6478 */;
+import PremiumUpsellSectionDividerDefault from "PremiumUpsellSectionDivider" /* 9755 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 9756 */;
+import StickerPickerListRowDefault from "StickerPickerListRow" /* 9852 */;
+import _modDef9866 from "module_9866" /* 9866 */;
+import useStickerPickerListData from "useStickerPickerListData" /* 9867 */;
+import StickerPickerPremiumSearchUpsellDefault from "StickerPickerPremiumSearchUpsell" /* 9868 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 5807 */;
+import StickersStore from "StickersStore" /* 5809 */;
 
 require = fn;
 const View = fn(17).View;
-const useStickerPickerStore = fn(10736).useStickerPickerStore;
-const StickerPickerConstants = fn(10621);
+const useStickerPickerStore = fn(9840).useStickerPickerStore;
+const StickerPickerConstants = fn(9725);
 ({ STICKER_SCROLL_LOAD_DELAY_MS: closure_8, STICKER_SCROLL_LOAD_DELAY_AFTER_HEIGHT_CHANGE_MS: closure_9, STICKER_SIZE: c10 } = StickerPickerConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
@@ -38,7 +38,7 @@ let closure_15 = noop.memo((height) => {
   const obj = { style: null, children: null };
   const items = [tmp.nsfwContainer, { height: height.height }];
   obj.style = items;
-  const items1 = [closure_1_11(native.Icon, { source: _modDef10762, size: native.Icon.Sizes.SMALL }), ];
+  const items1 = [closure_1_11(native.Icon, { source: _modDef9866, size: native.Icon.Sizes.SMALL }), ];
   const obj3 = { style: tmp.nsfwText, variant: "text-sm/normal", color: "interactive-text-active", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.uy25Qz);

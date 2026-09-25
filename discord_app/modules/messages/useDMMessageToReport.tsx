@@ -1,9 +1,9 @@
-// === Module 12940: useDMMessageToReport ===
+// === Module 12071: useDMMessageToReport ===
 
-// Module 12940 (useDMMessageToReport)
-import useLongestChannelMessageBeforeReply from "useLongestChannelMessageBeforeReply" /* 12799 */;
-import useIsRelationshipTypeSpamReportable from "useIsRelationshipTypeSpamReportable" /* 12941 */;
-import useMessageRequestPreview from "useMessageRequestPreview" /* 12942 */;
+// Module 12071 (useDMMessageToReport)
+import useLongestChannelMessageBeforeReply from "useLongestChannelMessageBeforeReply" /* 11925 */;
+import useIsRelationshipTypeSpamReportable from "useIsRelationshipTypeSpamReportable" /* 12072 */;
+import useMessageRequestPreview from "useMessageRequestPreview" /* 12073 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/useDMMessageToReport.tsx");

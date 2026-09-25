@@ -1,6 +1,6 @@
-// === Module 17518: NitroFileUploadAnnouncementPromoSheet ===
+// === Module 16740: NitroFileUploadAnnouncementPromoSheet ===
 
-// Module 17518 (NitroFileUploadAnnouncementPromoSheet)
+// Module 16740 (NitroFileUploadAnnouncementPromoSheet)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 

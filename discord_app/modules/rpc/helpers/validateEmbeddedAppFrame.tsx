@@ -1,12 +1,12 @@
-// === Module 14837: validateEmbeddedAppFrame ===
+// === Module 13999: validateEmbeddedAppFrame ===
 
-// Module 14837 (validateEmbeddedAppFrame)
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9215 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 9395 */;
-import RPCErrorDefault from "RPCError" /* 9664 */;
-import RPCHelpers from "RPCHelpers" /* 9669 */;
-import FramesStore from "FramesStore" /* 9393 */;
-import VibegrationsBuilderPreviewStore from "VibegrationsBuilderPreviewStore" /* 14838 */;
+// Module 13999 (validateEmbeddedAppFrame)
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8313 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8493 */;
+import RPCErrorDefault from "RPCError" /* 8762 */;
+import RPCHelpers from "RPCHelpers" /* 8767 */;
+import FramesStore from "FramesStore" /* 8491 */;
+import VibegrationsBuilderPreviewStore from "VibegrationsBuilderPreviewStore" /* 14000 */;
 
 require = fn;
 function validateEmbeddedAppFrame(transport) {
@@ -26,7 +26,7 @@ function validateEmbeddedAppFrame(transport) {
           if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL !== type) {
             if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
               if (tmp35.applicationId === VibegrationsBuilderPreviewStore.getBuilderPreviewApplicationId()) {
-                let obj5 = { channelId: "channel", guildId: "channelId" };
+                let obj5 = { channelId: "isArray", guildId: "paddingHorizontal" };
               } else {
                 obj5 = null;
               }
@@ -57,10 +57,10 @@ function validateEmbeddedAppFrame(transport) {
   }
   obj3 = ApplicationFlagUtils;
 }
-const TransportTypes = fn(4733).TransportTypes;
+const TransportTypes = fn(4735).TransportTypes;
 const Constants = fn(1074);
 ({ ApplicationFlags: metroRequire, RPCErrors: closure_7 } = Constants);
-const asLaunched = fn(9394).asLaunched;
+const asLaunched = fn(8492).asLaunched;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/helpers/validateEmbeddedAppFrame.tsx");
 

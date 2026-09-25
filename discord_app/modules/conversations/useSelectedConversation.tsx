@@ -1,9 +1,9 @@
-// === Module 8255: useSelectedConversation ===
+// === Module 7344: useSelectedConversation ===
 
-// Module 8255 (useSelectedConversation)
-import resolveSelectedConversationDefault from "resolveSelectedConversation" /* 8256 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7924 */;
-import ConversationsStore from "ConversationsStore" /* 7928 */;
+// Module 7344 (useSelectedConversation)
+import resolveSelectedConversationDefault from "resolveSelectedConversation" /* 7345 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7009 */;
+import ConversationsStore from "ConversationsStore" /* 7013 */;
 
 const require = globalThis.__r;
 

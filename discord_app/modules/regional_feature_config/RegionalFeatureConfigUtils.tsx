@@ -1,6 +1,6 @@
-// === Module 5728: RegionalFeatureConfigUtils ===
+// === Module 5730: RegionalFeatureConfigUtils ===
 
-// Module 5728 (RegionalFeatureConfigUtils)
+// Module 5730 (RegionalFeatureConfigUtils)
 import initialize from "initialize" /* 504 */;
 import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 5043 */;
 

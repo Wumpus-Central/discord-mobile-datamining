@@ -1,19 +1,19 @@
-// === Module 17309: ChannelNameHeader ===
+// === Module 16524: ChannelNameHeader ===
 
-// Module 17309 (ChannelNameHeader)
+// Module 16524 (ChannelNameHeader)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import _modDef3650 from "module_3650" /* 3650 */;
 import Text_Text from "Text/Text" /* 4825 */;
 import transitionToChannel from "transitionToChannel" /* 4840 */;
 import ChannelUtils from "ChannelUtils" /* 4974 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5327 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8527 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 11262 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5328 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7617 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10360 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
 import PresenceStore from "PresenceStore" /* 4869 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -47,7 +47,7 @@ function DirectMessageIcon(channel) {
   }, items2);
   let tmp9Result = null;
   if (null != stateFromStores) {
-    const obj2 = { avatarDecoration: stateFromStores.avatarDecoration, user: stateFromStores, guildId: "Boolean", size: tmp2(1177).AvatarSizes.NORMAL, status: false, isMobileOnline: null, isVROnline: true, statusStyle: null };
+    const obj2 = { avatarDecoration: stateFromStores.avatarDecoration, user: stateFromStores, guildId: "Boolean", size: tmp2(1177).AvatarSizes.NORMAL, status: null, isMobileOnline: null, isVROnline: null, statusStyle: null };
     let isSystemUserResult;
     if (stateFromStores != null) {
       isSystemUserResult = stateFromStores.isSystemUser();
@@ -218,7 +218,7 @@ function ChannelNameHeaderContent(channel) {
 function DMChannelNameHeader(channel) {
   channel = channel.channel;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7495)().analyticsLocations;
+  analyticsLocations = analyticsLocations(6578)().analyticsLocations;
   const items = [channel, analyticsLocations];
   const callback = noop.useCallback(() => {
     const recipientId = channel.getRecipientId();
@@ -230,7 +230,7 @@ function DMChannelNameHeader(channel) {
   let obj = { style: null, onPress: callback, children: closure_12(ChannelNameHeaderContent, { channel }) };
   const items1 = [closure_15().container, channel.containerStyle];
   obj.style = items1;
-  return closure_12(channel(5427).PressableOpacity, obj);
+  return closure_12(channel(5428).PressableOpacity, obj);
 }
 function DefaultChannelNameHeader(arg0) {
   ({ channel, containerStyle } = arg0);

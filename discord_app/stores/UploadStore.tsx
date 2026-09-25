@@ -1,6 +1,6 @@
-// === Module 8167: UploadStore ===
+// === Module 7252: UploadStore ===
 
-// Module 8167 (UploadStore)
+// Module 7252 (UploadStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import MessageStore from "MessageStore" /* 5049 */;

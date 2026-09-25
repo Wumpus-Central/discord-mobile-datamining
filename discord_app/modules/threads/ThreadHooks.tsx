@@ -1,17 +1,17 @@
-// === Module 7599: ThreadHooks ===
+// === Module 6682: ThreadHooks ===
 
-// Module 7599 (ThreadHooks)
+// Module 6682 (ThreadHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import isSystemMessageDefault from "isSystemMessage" /* 7600 */;
-import useIsRemoteDefault from "useIsRemote" /* 7601 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6683 */;
+import useIsRemoteDefault from "useIsRemote" /* 6684 */;
 import _slicedToArray from "module_32" /* 32 */;
-import createExperiment from "createExperiment" /* 4743 */;
+import createExperiment from "createExperiment" /* 4745 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5811 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5813 */;
 
 const require = globalThis.__r;
 

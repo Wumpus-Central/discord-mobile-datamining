@@ -1,6 +1,6 @@
-// === Module 12642: useSearchContext ===
+// === Module 11768: useSearchContext ===
 
-// Module 12642 (useSearchContext)
+// Module 11768 (useSearchContext)
 import _modDef38 from "module_38" /* 38 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2044 */;

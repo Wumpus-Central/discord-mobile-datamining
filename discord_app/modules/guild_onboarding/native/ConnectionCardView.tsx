@@ -1,11 +1,11 @@
-// === Module 7510: ConnectionCardView ===
+// === Module 6593: ConnectionCardView ===
 
-// Module 7510 (ConnectionCardView)
+// Module 6593 (ConnectionCardView)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 4788 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import components_Button_Button from "components/Button/Button" /* 5273 */;
+import components_Button_Button from "components/Button/Button" /* 5274 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

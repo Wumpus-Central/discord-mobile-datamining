@@ -1,12 +1,12 @@
-// === Module 9195: LimitedTimeBadge ===
+// === Module 8289: LimitedTimeBadge ===
 
-// Module 9195 (LimitedTimeBadge)
+// Module 8289 (LimitedTimeBadge)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import shared from "shared" /* 4680 */;
+import shared from "shared" /* 4682 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import useCountdownDefault from "useCountdown" /* 7769 */;
+import useCountdownDefault from "useCountdown" /* 6854 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2111 */;
 import ThemeStore from "ThemeStore" /* 1182 */;

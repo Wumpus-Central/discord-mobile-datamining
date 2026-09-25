@@ -1,16 +1,16 @@
-// === Module 16694: GameCommunityMultiGuildUpsellCard ===
+// === Module 15878: GameCommunityMultiGuildUpsellCard ===
 
-// Module 16694 (GameCommunityMultiGuildUpsellCard)
+// Module 15878 (GameCommunityMultiGuildUpsellCard)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1431 */;
-import transitionToGuild from "transitionToGuild" /* 7672 */;
+import transitionToGuild from "transitionToGuild" /* 6755 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4821 */;
-import LurkingStore from "LurkingStore" /* 4465 */;
+import LurkingStore from "LurkingStore" /* 4467 */;
 import GuildStore from "GuildStore" /* 2066 */;
 
 require = fn;

@@ -10,7 +10,7 @@ import NicknameUtilsDefault from "NicknameUtils" /* 4981 */;
 import useChannelName from "useChannelName" /* 4982 */;
 import LinkUtils from "LinkUtils" /* 4983 */;
 import GuildStore from "GuildStore" /* 2066 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

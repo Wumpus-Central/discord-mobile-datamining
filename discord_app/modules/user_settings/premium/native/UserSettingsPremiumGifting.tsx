@@ -1,22 +1,22 @@
-// === Module 13920: UserSettingsPremiumGifting ===
+// === Module 13079: UserSettingsPremiumGifting ===
 
-// Module 13920 (UserSettingsPremiumGifting)
+// Module 13079 (UserSettingsPremiumGifting)
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 5081 */;
-import TableRowGroup from "TableRowGroup" /* 5992 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7323 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7328 */;
-import BadgeId from "BadgeId" /* 8532 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8545 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9557 */;
-import OutboundPromotionCardDefault from "OutboundPromotionCard" /* 13923 */;
-import EntitlementGiftGroupCardDefault from "EntitlementGiftGroupCard" /* 13929 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 5082 */;
+import TableRowGroup from "TableRowGroup" /* 5994 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6406 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6411 */;
+import BadgeId from "BadgeId" /* 7622 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7635 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 8655 */;
+import OutboundPromotionCardDefault from "OutboundPromotionCard" /* 13082 */;
+import EntitlementGiftGroupCardDefault from "EntitlementGiftGroupCard" /* 13088 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8540 */;
-import EntitlementStore from "EntitlementStore" /* 7724 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7630 */;
+import EntitlementStore from "EntitlementStore" /* 6809 */;
 
 const require = globalThis.__r;
 

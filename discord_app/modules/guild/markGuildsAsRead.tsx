@@ -1,13 +1,13 @@
-// === Module 14327: markGuildsAsRead ===
+// === Module 13488: markGuildsAsRead ===
 
-// Module 14327 (markGuildsAsRead)
+// Module 13488 (markGuildsAsRead)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7433 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5811 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6516 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5813 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildChannelStore from "GuildChannelStore" /* 4462 */;
+import GuildChannelStore from "GuildChannelStore" /* 4464 */;
 import ReadStateStore from "ReadStateStore" /* 4844 */;
 
 const require = fn;
@@ -81,5 +81,5 @@ export default function markGuildsAsRead(arr, source, onFinished) {
   });
   AnalyticsUtilsDefault.track(AnalyticEvents.MARK_AS_READ, { source, type: "guild" });
   let obj3 = { source, type: "guild" };
-  return mapped(7443).bulkAck(mapped, onFinished);
+  return mapped(6526).bulkAck(mapped, onFinished);
 };

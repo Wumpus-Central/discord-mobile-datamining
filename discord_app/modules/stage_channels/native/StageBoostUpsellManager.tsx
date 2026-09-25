@@ -1,19 +1,19 @@
-// === Module 17994: StageBoostUpsellManager ===
+// === Module 17222: StageBoostUpsellManager ===
 
-// Module 17994 (StageBoostUpsellManager)
+// Module 17222 (StageBoostUpsellManager)
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 2052 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
-import StageMediaHooks from "StageMediaHooks" /* 5722 */;
-import useChannelVideoLimit from "useChannelVideoLimit" /* 9994 */;
-import ActionSheetStore from "ActionSheetStore" /* 4516 */;
+import StageMediaHooks from "StageMediaHooks" /* 5724 */;
+import useChannelVideoLimit from "useChannelVideoLimit" /* 9092 */;
+import ActionSheetStore from "ActionSheetStore" /* 4518 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7451 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6534 */;
 
 require = fn;
-const STAGE_BOOSTING_SHEET_KEY = fn(5719).STAGE_BOOSTING_SHEET_KEY;
+const STAGE_BOOSTING_SHEET_KEY = fn(5721).STAGE_BOOSTING_SHEET_KEY;
 let c8 = false;
 class StageBoostUpsellManager extends tmp2 {
   constructor() {
@@ -47,7 +47,7 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates() {
             if (tmp5Result.getChannelVideoLimit(channel).reachedLimit) {
               if (PermissionStore.can(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, channel)) {
                 const obj2 = { channel };
-                ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(5735, dependencyMap.paths), STAGE_BOOSTING_SHEET_KEY, obj2);
+                ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(5737, dependencyMap.paths), STAGE_BOOSTING_SHEET_KEY, obj2);
                 c8 = true;
               }
             }

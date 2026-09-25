@@ -1,6 +1,6 @@
-// === Module 11881: MessagesHandlers ===
+// === Module 11024: MessagesHandlers ===
 
-// Module 11881 (MessagesHandlers)
+// Module 11024 (MessagesHandlers)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import router_utils from "router_utils" /* 1101 */;
 import util from "util" /* 1115 */;
@@ -8,8 +8,8 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import Server from "Server" /* 1978 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
-import LinkingDefault from "Linking" /* 4520 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4523 */;
+import LinkingDefault from "Linking" /* 4522 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4525 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
 import HapticUtils from "HapticUtils" /* 4797 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4798 */;
@@ -20,140 +20,140 @@ import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 5036 */;
 import AgeGateUtils from "AgeGateUtils" /* 5039 */;
 import InteractionComponentUtils from "InteractionComponentUtils" /* 5053 */;
 import InteractionComponentTypes from "InteractionComponentTypes" /* 5060 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5195 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5716 */;
-import actions_BoostingActionCreatorsAll from "actions/BoostingActionCreators" /* 5739 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 5926 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7515 */;
-import GuildCapUpsellHooks from "GuildCapUpsellHooks" /* 7545 */;
-import ThreadHooks from "ThreadHooks" /* 7599 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 7659 */;
-import transitionToGuild from "transitionToGuild" /* 7672 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7752 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7786 */;
-import AutomodMessageUtils from "AutomodMessageUtils" /* 7838 */;
-import getInviteURLDefault from "getInviteURL" /* 8088 */;
-import ExperimentEmbedUtils from "ExperimentEmbedUtils" /* 8222 */;
-import ConversationsActionCreators from "ConversationsActionCreators" /* 8239 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 8241 */;
-import ConversationNavigator from "ConversationNavigator" /* 8244 */;
-import resolveSelectedConversationDefault from "resolveSelectedConversation" /* 8256 */;
-import MessageAccessibilityActions from "MessageAccessibilityActions" /* 8315 */;
-import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8316 */;
-import canAddNewReactionsDefault from "canAddNewReactions" /* 8319 */;
-import WelcomeCTAUtils from "WelcomeCTAUtils" /* 8349 */;
-import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8363 */;
-import GuildAntiRaidTypes from "GuildAntiRaidTypes" /* 8365 */;
-import PublicGuildsUtils from "PublicGuildsUtils" /* 8383 */;
-import isCrosspostDefault from "isCrosspost" /* 8385 */;
-import InteractionUtils from "InteractionUtils" /* 8475 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8527 */;
-import openMediaModal from "openMediaModal" /* 8609 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 8615 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8728 */;
-import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8743 */;
-import StageChannelActionCreators from "StageChannelActionCreators" /* 8748 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8761 */;
-import ApplicationUtils from "ApplicationUtils" /* 9400 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9508 */;
-import trackApplicationOpenDefault from "trackApplicationOpen" /* 9681 */;
-import useGuildProfileCTA from "useGuildProfileCTA" /* 10116 */;
-import autocompleter_AutocompleteUtils from "autocompleter/AutocompleteUtils" /* 10610 */;
-import showStickerDetailActionSheet from "showStickerDetailActionSheet" /* 10750 */;
-import utils_openGiftModal from "utils/openGiftModal" /* 11009 */;
-import showChatGDMCustomizeActionSheetDefault from "showChatGDMCustomizeActionSheet" /* 11271 */;
-import MarkupReactCommandRule from "MarkupReactCommandRule" /* 11564 */;
-import navigateToLastChannelDefault from "navigateToLastChannel" /* 11569 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 11604 */;
-import _modDef11605 from "module_11605" /* 11605 */;
-import reactions_ReactionUtils from "reactions/ReactionUtils" /* 11606 */;
-import SummaryActionCreatorsDefault from "SummaryActionCreators" /* 11693 */;
-import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11782 */;
-import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11815 */;
-import isAlertOrActionSheetOpen from "isAlertOrActionSheetOpen" /* 11882 */;
-import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 11885 */;
-import contentHandlers2 from "contentHandlers" /* 11924 */;
-import handleAcceptEventInstantInviteDefault from "handleAcceptEventInstantInvite" /* 11953 */;
-import openPinnedMessagesDefault from "openPinnedMessages" /* 11955 */;
-import trackRepliedMessageClickedDefault from "trackRepliedMessageClicked" /* 11989 */;
-import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 11995 */;
-import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 12005 */;
-import replyToMessageDefault from "replyToMessage" /* 12018 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 12019 */;
-import PollsActionCreatorsDefault from "PollsActionCreators" /* 12055 */;
-import canEditMessageDefault from "canEditMessage" /* 12087 */;
-import UploadActionCreatorsDefault from "UploadActionCreators" /* 12088 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 12102 */;
-import GamesActionCreatorsDefault from "GamesActionCreators" /* 12106 */;
-import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 12134 */;
-import ExperimentEmbedPlatformUtils from "ExperimentEmbedPlatformUtils" /* 12148 */;
-import PremiumGiftingIntentUtils from "PremiumGiftingIntentUtils" /* 12157 */;
-import system_message_GuildRoleSubscriptionSystemMessageUtils from "system_message/GuildRoleSubscriptionSystemMessageUtils" /* 12170 */;
-import showModerateUserActionSheetDefault from "showModerateUserActionSheet" /* 12175 */;
-import GuildAutomodActionActionCreators from "GuildAutomodActionActionCreators" /* 12204 */;
-import ForumOriginalPoster from "ForumOriginalPoster" /* 12215 */;
-import VoiceMessageAnalytics from "VoiceMessageAnalytics" /* 12216 */;
-import MediaAnalytics from "MediaAnalytics" /* 12217 */;
-import MediaChannelActionCreatorsAll from "MediaChannelActionCreators" /* 12218 */;
-import jumpToReferencedMessageDefault from "jumpToReferencedMessage" /* 12270 */;
-import handleForwardBreadcrumbDefault from "handleForwardBreadcrumb" /* 12271 */;
-import getInlineForwardOptions from "getInlineForwardOptions" /* 12272 */;
-import openSoundmojiActionSheetDefault from "openSoundmojiActionSheet" /* 12273 */;
-import ContentInventoryActionCreators from "ContentInventoryActionCreators" /* 12276 */;
-import onTapCheckpointCard from "onTapCheckpointCard" /* 12279 */;
-import createAppMessageEmbed from "createAppMessageEmbed" /* 12280 */;
-import previewSharedClientTheme from "previewSharedClientTheme" /* 12286 */;
-import sharedClientThemeViewed from "sharedClientThemeViewed" /* 12289 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5196 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5718 */;
+import actions_BoostingActionCreatorsAll from "actions/BoostingActionCreators" /* 5741 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 5928 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6598 */;
+import GuildCapUpsellHooks from "GuildCapUpsellHooks" /* 6628 */;
+import ThreadHooks from "ThreadHooks" /* 6682 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6742 */;
+import transitionToGuild from "transitionToGuild" /* 6755 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 6837 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 6871 */;
+import AutomodMessageUtils from "AutomodMessageUtils" /* 6923 */;
+import getInviteURLDefault from "getInviteURL" /* 7173 */;
+import ExperimentEmbedUtils from "ExperimentEmbedUtils" /* 7311 */;
+import ConversationsActionCreators from "ConversationsActionCreators" /* 7328 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7330 */;
+import ConversationNavigator from "ConversationNavigator" /* 7333 */;
+import resolveSelectedConversationDefault from "resolveSelectedConversation" /* 7345 */;
+import MessageAccessibilityActions from "MessageAccessibilityActions" /* 7404 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 7405 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 7408 */;
+import WelcomeCTAUtils from "WelcomeCTAUtils" /* 7438 */;
+import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 7452 */;
+import GuildAntiRaidTypes from "GuildAntiRaidTypes" /* 7454 */;
+import PublicGuildsUtils from "PublicGuildsUtils" /* 7472 */;
+import isCrosspostDefault from "isCrosspost" /* 7474 */;
+import InteractionUtils from "InteractionUtils" /* 7565 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7617 */;
+import openMediaModal from "openMediaModal" /* 7699 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 7705 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7818 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7833 */;
+import StageChannelActionCreators from "StageChannelActionCreators" /* 7838 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7851 */;
+import ApplicationUtils from "ApplicationUtils" /* 8498 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 8606 */;
+import trackApplicationOpenDefault from "trackApplicationOpen" /* 8779 */;
+import useGuildProfileCTA from "useGuildProfileCTA" /* 9213 */;
+import autocompleter_AutocompleteUtils from "autocompleter/AutocompleteUtils" /* 9714 */;
+import showStickerDetailActionSheet from "showStickerDetailActionSheet" /* 9854 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 10113 */;
+import showChatGDMCustomizeActionSheetDefault from "showChatGDMCustomizeActionSheet" /* 10369 */;
+import MarkupReactCommandRule from "MarkupReactCommandRule" /* 10769 */;
+import navigateToLastChannelDefault from "navigateToLastChannel" /* 10774 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 10809 */;
+import _modDef10810 from "module_10810" /* 10810 */;
+import reactions_ReactionUtils from "reactions/ReactionUtils" /* 10811 */;
+import SummaryActionCreatorsDefault from "SummaryActionCreators" /* 10873 */;
+import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 10964 */;
+import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 10997 */;
+import isAlertOrActionSheetOpen from "isAlertOrActionSheetOpen" /* 11025 */;
+import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 11028 */;
+import contentHandlers2 from "contentHandlers" /* 11067 */;
+import handleAcceptEventInstantInviteDefault from "handleAcceptEventInstantInvite" /* 11096 */;
+import openPinnedMessagesDefault from "openPinnedMessages" /* 11098 */;
+import trackRepliedMessageClickedDefault from "trackRepliedMessageClicked" /* 11132 */;
+import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 11138 */;
+import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 11148 */;
+import replyToMessageDefault from "replyToMessage" /* 11161 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 11162 */;
+import PollsActionCreatorsDefault from "PollsActionCreators" /* 11200 */;
+import canEditMessageDefault from "canEditMessage" /* 11232 */;
+import UploadActionCreatorsDefault from "UploadActionCreators" /* 11233 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11247 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 11251 */;
+import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 11256 */;
+import ExperimentEmbedPlatformUtils from "ExperimentEmbedPlatformUtils" /* 11270 */;
+import PremiumGiftingIntentUtils from "PremiumGiftingIntentUtils" /* 11279 */;
+import system_message_GuildRoleSubscriptionSystemMessageUtils from "system_message/GuildRoleSubscriptionSystemMessageUtils" /* 11292 */;
+import showModerateUserActionSheetDefault from "showModerateUserActionSheet" /* 11297 */;
+import GuildAutomodActionActionCreators from "GuildAutomodActionActionCreators" /* 11326 */;
+import ForumOriginalPoster from "ForumOriginalPoster" /* 11337 */;
+import VoiceMessageAnalytics from "VoiceMessageAnalytics" /* 11338 */;
+import MediaAnalytics from "MediaAnalytics" /* 11339 */;
+import MediaChannelActionCreatorsAll from "MediaChannelActionCreators" /* 11340 */;
+import jumpToReferencedMessageDefault from "jumpToReferencedMessage" /* 11396 */;
+import handleForwardBreadcrumbDefault from "handleForwardBreadcrumb" /* 11397 */;
+import getInlineForwardOptions from "getInlineForwardOptions" /* 11398 */;
+import openSoundmojiActionSheetDefault from "openSoundmojiActionSheet" /* 11399 */;
+import ContentInventoryActionCreators from "ContentInventoryActionCreators" /* 11402 */;
+import onTapCheckpointCard from "onTapCheckpointCard" /* 11405 */;
+import createAppMessageEmbed from "createAppMessageEmbed" /* 11406 */;
+import previewSharedClientTheme from "previewSharedClientTheme" /* 11412 */;
+import sharedClientThemeViewed from "sharedClientThemeViewed" /* 11415 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ApplicationStore from "ApplicationStore" /* 5056 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7924 */;
-import ConversationsStore from "ConversationsStore" /* 7928 */;
-import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 7497 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 10427 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7856 */;
-import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8426 */;
-import QuestStore from "QuestStore" /* 8026 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 7923 */;
-import SummaryStore from "SummaryStore" /* 11694 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4466 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7982 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7009 */;
+import ConversationsStore from "ConversationsStore" /* 7013 */;
+import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 6580 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 9529 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6941 */;
+import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 7515 */;
+import QuestStore from "QuestStore" /* 7111 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 7008 */;
+import SummaryStore from "SummaryStore" /* 10874 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4468 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7067 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import GiftCodeStore from "GiftCodeStore" /* 11778 */;
+import GiftCodeStore from "GiftCodeStore" /* 10960 */;
 import GuildMemberStore from "GuildMemberStore" /* 2107 */;
 import GuildStore from "GuildStore" /* 2066 */;
 import InviteStore from "InviteStore" /* 4813 */;
-import LocalActivityStore from "LocalActivityStore" /* 9708 */;
+import LocalActivityStore from "LocalActivityStore" /* 8806 */;
 import MessageStore from "MessageStore" /* 5049 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
 import PresenceStore from "PresenceStore" /* 4869 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4650 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5584 */;
-import UploadStore from "UploadStore" /* 8167 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4652 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5586 */;
+import UploadStore from "UploadStore" /* 7252 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const InviteCodeUtils = trackInviteEmbedActioned(4814);
 const CodedLink = trackInviteEmbedActioned(4817);
-const InviteTypeUtils = trackInviteEmbedActioned(8064);
-const InstantInviteActionCreators = trackInviteEmbedActioned(8728);
-const SocialLayerStorefrontNativeActionCreators = trackInviteEmbedActioned(11147);
-const VoiceChannelListInviteExperiment = trackInviteEmbedActioned(11655);
-const VoiceChannelListInviteEmbed = trackInviteEmbedActioned(11656);
-const build_overrides_BuildOverrideUtils = trackInviteEmbedActioned(12131);
+const InviteTypeUtils = trackInviteEmbedActioned(7149);
+const InstantInviteActionCreators = trackInviteEmbedActioned(7818);
+const SocialLayerStorefrontNativeActionCreators = trackInviteEmbedActioned(10250);
+const VoiceChannelListInviteExperiment = trackInviteEmbedActioned(10835);
+const VoiceChannelListInviteEmbed = trackInviteEmbedActioned(10836);
+const build_overrides_BuildOverrideUtils = trackInviteEmbedActioned(11253);
 require = fn;
 let closure_4 = ["messageId"];
 let closure_5 = ["messageId"];
-let closure_15 = fn(7856).isGuildScheduledEventActive;
-const SeparatorAction = fn(8281).SeparatorAction;
+let closure_15 = fn(6941).isGuildScheduledEventActive;
+const SeparatorAction = fn(7370).SeparatorAction;
 const Constants = fn(1074);
 ({ ActivityActionTypes: closure_38, ActivityFlags: closure_39, ActivityGamePlatforms: closure_40, ActivityTypes: closure_41, AnalyticEvents: closure_42, AnalyticsGameOpenTypes: closure_43, AnalyticsLocations: closure_44, AnalyticsObjects: closure_45, AnalyticsObjectTypes: closure_46, AnalyticsPages: closure_47, AnalyticsSections: closure_48, LinkingTypes: closure_49, ME: closure_50, MessageFlags: closure_51, MessageStates: closure_52, MessageTypes: closure_53, Permissions: closure_54, Routes: closure_55, UpsellTypes: closure_56, UserSettingsSections: closure_57, WebBrowserType: closure_58 } = Constants);
-const InviteTypes = fn(8065).InviteTypes;
+const InviteTypes = fn(7150).InviteTypes;
 const PremiumConstants = fn(1374);
 ({ PremiumTypes: closure_60, PremiumUpsellTypes: closure_61 } = PremiumConstants);
-let closure_62 = fn(8770).SafetySystemNotificationCtaType;
+let closure_62 = fn(7860).SafetySystemNotificationCtaType;
 let closure_63 = fn(1114).OpenThreadAnalyticsLocations;
 const jsx = fn(21).jsx;
 let items = [AnalyticsLocationDefault.PREMIUM_GIFT_INTENT_CARD];
@@ -220,10 +220,10 @@ class MessagesHandlers {
       if (!obj.isModalOrActionsheetObstructing()) {
         obj = MessageDataSnowflakeUtils;
         const data = obj.getNativeSyntheticEventData(nativeEvent).data;
-        asyncRequireImpl(11921, dependencyMap.paths).then((handleMessagesLongPressChannel) => {
+        asyncRequireImpl(11064, dependencyMap.paths).then((handleMessagesLongPressChannel) => {
           const result = handleMessagesLongPressChannel.handleMessagesLongPressChannel({ data });
         });
-        const promise = asyncRequireImpl(11921, dependencyMap.paths);
+        const promise = asyncRequireImpl(11064, dependencyMap.paths);
       }
     };
     obj.handleTapAttachmentLink = function handleTapAttachmentLink(arg0) {
@@ -334,10 +334,10 @@ class MessagesHandlers {
       if (!obj.isModalOrActionsheetObstructing()) {
         obj = MessageDataSnowflakeUtils;
         const gameId = obj.getNativeSyntheticEventData(nativeEvent);
-        asyncRequireImpl(11951, dependencyMap.paths).then((handleMessagesTapGameMention) => {
+        asyncRequireImpl(11094, dependencyMap.paths).then((handleMessagesTapGameMention) => {
           const result = handleMessagesTapGameMention.handleMessagesTapGameMention({ gameId: gameId.gameId });
         });
-        const promise = asyncRequireImpl(11951, dependencyMap.paths);
+        const promise = asyncRequireImpl(11094, dependencyMap.paths);
       }
     };
     obj.handleTapGuildEventLink = function handleTapGuildEventLink(node) {
@@ -527,7 +527,7 @@ class MessagesHandlers {
         let tmp7 = user;
         if (null != messageId) {
           if (tmpResult.isPublicSystemMessage(message)) {
-            ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11987, dependencyMap.paths), "PublicGuildAnnouncementProfile");
+            ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11130, dependencyMap.paths), "PublicGuildAnnouncementProfile");
           } else {
             let user1 = user;
             if (null == user) {
@@ -539,8 +539,8 @@ class MessagesHandlers {
                 const _HermesInternal2 = HermesInternal;
                 const tmp10Result = ActionSheetActionCreatorsDefault;
                 const obj2 = { guildId: guild_id };
-                tmp10Result.openLazy(asyncRequireImpl(10098, dependencyMap.paths), "GuildProfileActionSheet:" + guild_id, obj2);
-                const tmp20 = asyncRequireImpl(10098, dependencyMap.paths);
+                tmp10Result.openLazy(asyncRequireImpl(9195, dependencyMap.paths), "GuildProfileActionSheet:" + guild_id, obj2);
+                const tmp20 = asyncRequireImpl(9195, dependencyMap.paths);
               }
             }
             tmp7 = user1;
@@ -562,8 +562,8 @@ class MessagesHandlers {
                           const _HermesInternal = HermesInternal;
                           const tmp10Result2 = ActionSheetActionCreatorsDefault;
                           const obj3 = { guildId: guild_id2 };
-                          tmp10Result2.openLazy(asyncRequireImpl(10098, dependencyMap.paths), "GuildProfileActionSheet:" + guild_id2, obj3);
-                          const tmp17 = asyncRequireImpl(10098, dependencyMap.paths);
+                          tmp10Result2.openLazy(asyncRequireImpl(9195, dependencyMap.paths), "GuildProfileActionSheet:" + guild_id2, obj3);
+                          const tmp17 = asyncRequireImpl(9195, dependencyMap.paths);
                         }
                       }
                     }
@@ -625,7 +625,7 @@ class MessagesHandlers {
         const findSummaryResult = SummaryStore.findSummary(channelId, summaryId);
         if (null != findSummaryResult) {
           const obj3 = { summary: findSummaryResult };
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11990, dependencyMap.paths), "SummaryActionSheet", obj3);
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11133, dependencyMap.paths), "SummaryActionSheet", obj3);
         }
       }
     };
@@ -1398,9 +1398,9 @@ class MessagesHandlers {
                   const combined = "GuildProfileActionSheet:" + invite.guild.id;
                   obj14.context = useGuildProfileCTA.GuildProfileCTAContext.INVITE;
                   obj14.inviteKey = tmp8.code;
-                  obj20.openLazy(asyncRequireImpl(10098, dependencyMap.paths), combined, obj14);
+                  obj20.openLazy(asyncRequireImpl(9195, dependencyMap.paths), combined, obj14);
                   str8 = "show profile";
-                  const tmp42 = asyncRequireImpl(10098, dependencyMap.paths);
+                  const tmp42 = asyncRequireImpl(9195, dependencyMap.paths);
                 } else if (isMemberResult) {
                   const result5 = obj2.handleTransitionToInviteChannel(invite);
                   str8 = "transition";
@@ -1602,8 +1602,8 @@ class MessagesHandlers {
                 }
               }
               obj3.emojiName = name;
-              tmp12Result2.pushLazy(asyncRequireImpl(11787, dependencyMap.paths), obj3);
-              const tmp15 = asyncRequireImpl(11787, dependencyMap.paths);
+              tmp12Result2.pushLazy(asyncRequireImpl(10969, dependencyMap.paths), obj3);
+              const tmp15 = asyncRequireImpl(10969, dependencyMap.paths);
             }
           }
         } else {
@@ -1688,7 +1688,7 @@ class MessagesHandlers {
         const obj2 = { gift_intent_type: giftIntentCtaContext.giftIntentType, cta_type: "send_message", location_stack: items };
         obj.track(closure_2_42.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, obj2);
         const obj4 = { channelId: giftIntentCtaContext.channel.id, giftIntentType: giftIntentCtaContext.giftIntentType };
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12158, dependencyMap.paths), obj4);
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11280, dependencyMap.paths), obj4);
       }
       tmp2 = null != giftIntentCtaContext && null != giftIntentCtaContext.channel;
     };
@@ -1781,7 +1781,7 @@ class MessagesHandlers {
       if (!obj.isModalOrActionsheetObstructing()) {
         obj = ActionSheetActionCreatorsDefault;
         const obj2 = { applicationId: gameApplicationId, messageTimestamp: timestamp };
-        obj.openLazy(asyncRequireImpl(12160, dependencyMap.paths), "MessageGameIconActionSheet", obj2);
+        obj.openLazy(asyncRequireImpl(11282, dependencyMap.paths), "MessageGameIconActionSheet", obj2);
       }
     };
     obj.handleTapSuppressNotificationsIcon = function handleTapSuppressNotificationsIcon() {
@@ -1789,7 +1789,7 @@ class MessagesHandlers {
       const obj2 = { key: "SUPPRESS_NOTIFICATIONS_TOOLTIP", content: null, icon: null };
       const intl = obj(dependencyMap[48]).intl;
       obj2.content = intl.string(obj(dependencyMap[48]).t["RO/KYj"]);
-      obj2.icon = _modDef11605;
+      obj2.icon = _modDef10810;
       obj.open(obj2);
     };
     obj.handleTapConnectionsRoleTag = function handleTapConnectionsRoleTag(nativeEvent) {
@@ -1803,7 +1803,7 @@ class MessagesHandlers {
       const obj2 = { key: "GUILD_COMMUNICATION_DISABLED_ICON_TOOLTIP_BODY", content: null, icon: null };
       const intl = obj(dependencyMap[48]).intl;
       obj2.content = intl.string(obj(dependencyMap[48]).t["AeYyL+"]);
-      obj2.icon = _modDef11605;
+      obj2.icon = _modDef10810;
       obj.open(obj2);
     };
     obj.handleReveal = function handleReveal(context) {
@@ -1908,8 +1908,8 @@ class MessagesHandlers {
             const obj3 = { selectionActionComponent: value };
             const combined = "StringSelectComponentActionSheet:" + messageId;
             const merged = Object.assign(obj2);
-            obj9.openLazy(asyncRequireImpl(12163, dependencyMap.paths), combined, obj3);
-            const tmp19 = asyncRequireImpl(12163, dependencyMap.paths);
+            obj9.openLazy(asyncRequireImpl(11285, dependencyMap.paths), combined, obj3);
+            const tmp19 = asyncRequireImpl(11285, dependencyMap.paths);
           } else {
             if (Server.ComponentType.USER_SELECT !== type) {
               if (Server.ComponentType.ROLE_SELECT !== type) {
@@ -1920,8 +1920,8 @@ class MessagesHandlers {
                     const obj4 = { selectionActionComponent: value };
                     const combined1 = "ChannelSelectComponentActionSheet:" + messageId;
                     const merged1 = Object.assign(obj2);
-                    obj12.openLazy(asyncRequireImpl(12169, dependencyMap.paths), combined1, obj4);
-                    const tmp28 = asyncRequireImpl(12169, dependencyMap.paths);
+                    obj12.openLazy(asyncRequireImpl(11291, dependencyMap.paths), combined1, obj4);
+                    const tmp28 = asyncRequireImpl(11291, dependencyMap.paths);
                   }
                 }
               }
@@ -1931,8 +1931,8 @@ class MessagesHandlers {
             const obj5 = { selectionActionComponent: value };
             const combined2 = "MentionableSelectComponentActionSheet:" + messageId;
             const merged2 = Object.assign(obj2);
-            obj7.openLazy(asyncRequireImpl(12165, dependencyMap.paths), combined2, obj5);
-            const tmp11 = asyncRequireImpl(12165, dependencyMap.paths);
+            obj7.openLazy(asyncRequireImpl(11287, dependencyMap.paths), combined2, obj5);
+            const tmp11 = asyncRequireImpl(11287, dependencyMap.paths);
           }
           const tmpResult6 = InteractionComponentUtils;
         }
@@ -1993,7 +1993,7 @@ class MessagesHandlers {
                     obj3.messageId = message.id;
                     const tmpResult6 = GuildAntiRaidUtils;
                     const obj4 = { guild, analyticsData: obj3 };
-                    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12171, dependencyMap.paths), "GuildIncidentActionsActionSheet", obj4);
+                    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11293, dependencyMap.paths), "GuildIncidentActionsActionSheet", obj4);
                   }
                   tmpResult5 = AutomodMessageUtils;
                 }
@@ -2004,7 +2004,7 @@ class MessagesHandlers {
                   const obj6 = { key: "GUILD_AUTOMOD_ERROR_MESSAGE_NOT_MEMBER", content: null, icon: null };
                   const intl = util.intl;
                   obj6.content = intl.string(util.t.UsD2YP);
-                  obj6.icon = _modDef11605;
+                  obj6.icon = _modDef10810;
                   ToastActionCreatorsDefault.open(obj6);
                   const tmp9Result = ToastActionCreatorsDefault;
                 }
@@ -2031,7 +2031,7 @@ class MessagesHandlers {
               if (tmpResult5.isAutomodMessageRecord(message)) {
                 if (tmpResult6.isAutomodNotification(message)) {
                   const obj2 = { guildId: channel.guild_id, messageId };
-                  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12203, dependencyMap.paths), "GuildRaidResolveActionSheet", obj2);
+                  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11325, dependencyMap.paths), "GuildRaidResolveActionSheet", obj2);
                 }
                 tmpResult6 = AutomodMessageUtils;
               }
@@ -2152,7 +2152,7 @@ class MessagesHandlers {
       const obj4 = { key: "AUDIO_PLAYBACK_FAILED-" + messageId, content: null, icon: null };
       const intl = tmp(dependencyMap[48]).intl;
       obj4.content = intl.string(obj(dependencyMap[48]).t.gRHMh8);
-      obj4.icon = _modDef11605;
+      obj4.icon = _modDef10810;
       ToastActionCreatorsDefault.open(obj4);
     };
     closure_129_0 = undefined;

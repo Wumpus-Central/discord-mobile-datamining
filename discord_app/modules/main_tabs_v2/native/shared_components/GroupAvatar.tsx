@@ -1,12 +1,12 @@
-// === Module 13428: GroupAvatar ===
+// === Module 12578: GroupAvatar ===
 
-// Module 13428 (GroupAvatar)
+// Module 12578 (GroupAvatar)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4825 */;
 import timing from "timing" /* 4830 */;
-import spring from "spring" /* 5272 */;
-import FastImageDefault from "FastImage" /* 5892 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7313 */;
+import spring from "spring" /* 5273 */;
+import FastImageDefault from "FastImage" /* 5894 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6396 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4821 */;
 

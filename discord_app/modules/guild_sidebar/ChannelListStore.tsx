@@ -1,23 +1,23 @@
-// === Module 7855: ChannelListStore ===
+// === Module 6940: ChannelListStore ===
 
-// Module 7855 (ChannelListStore)
+// Module 6940 (ChannelListStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4453 */;
-import ChannelListStateDefault from "ChannelListState" /* 7858 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4455 */;
+import ChannelListStateDefault from "ChannelListState" /* 6943 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
 import GatedChannelStore from "GatedChannelStore" /* 2099 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7856 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5811 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4466 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6941 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5813 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4468 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CategoryCollapseStore from "CategoryCollapseStore" /* 7450 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 6533 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7857 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
+import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 6942 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
 import ReadStateStore from "ReadStateStore" /* 4844 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5010 */;

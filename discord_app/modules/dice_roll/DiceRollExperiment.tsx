@@ -1,6 +1,6 @@
-// === Module 9601: DiceRollExperiment ===
+// === Module 8699: DiceRollExperiment ===
 
-// Module 9601 (DiceRollExperiment)
+// Module 8699 (DiceRollExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

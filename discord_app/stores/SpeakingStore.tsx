@@ -1,10 +1,10 @@
-// === Module 5724: SpeakingStore ===
+// === Module 5726: SpeakingStore ===
 
-// Module 5724 (SpeakingStore)
+// Module 5726 (SpeakingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4469 */;
-import ProportionalVadIndicatorExperimentDefault from "ProportionalVadIndicatorExperiment" /* 5725 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4471 */;
+import ProportionalVadIndicatorExperimentDefault from "ProportionalVadIndicatorExperiment" /* 5727 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;

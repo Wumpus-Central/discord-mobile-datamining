@@ -1,8 +1,8 @@
-// === Module 15107: useSafetyHubFetchError ===
+// === Module 14273: useSafetyHubFetchError ===
 
-// Module 15107 (useSafetyHubFetchError)
+// Module 14273 (useSafetyHubFetchError)
 import initialize from "initialize" /* 504 */;
-import SafetyHubStore from "SafetyHubStore" /* 8781 */;
+import SafetyHubStore from "SafetyHubStore" /* 7873 */;
 
 require = fn;
 const size = fn(2);

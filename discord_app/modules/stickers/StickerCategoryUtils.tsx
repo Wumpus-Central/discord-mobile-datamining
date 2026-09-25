@@ -1,7 +1,7 @@
-// === Module 10737: StickerCategoryUtils ===
+// === Module 9841: StickerCategoryUtils ===
 
-// Module 10737 (StickerCategoryUtils)
-import StickerSendability from "StickerSendability" /* 7667 */;
+// Module 9841 (StickerCategoryUtils)
+import StickerSendability from "StickerSendability" /* 6750 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

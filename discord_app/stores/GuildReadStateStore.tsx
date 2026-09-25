@@ -1,20 +1,20 @@
-// === Module 7960: GuildReadStateStore ===
+// === Module 7045: GuildReadStateStore ===
 
-// Module 7960 (GuildReadStateStore)
+// Module 7045 (GuildReadStateStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import FavoritesUtils from "FavoritesUtils" /* 2069 */;
-import ThreadActionUtils from "ThreadActionUtils" /* 4472 */;
-import isOptInEnabled from "isOptInEnabled" /* 7865 */;
-import RecentMentionsStore from "RecentMentionsStore" /* 7961 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 7963 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5811 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4466 */;
+import ThreadActionUtils from "ThreadActionUtils" /* 4474 */;
+import isOptInEnabled from "isOptInEnabled" /* 6950 */;
+import RecentMentionsStore from "RecentMentionsStore" /* 7046 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 7048 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5813 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4468 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import GuildStore from "GuildStore" /* 2066 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1073 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
 import ReadStateStore from "ReadStateStore" /* 4844 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5010 */;

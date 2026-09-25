@@ -1,12 +1,12 @@
-// === Module 14771: PermissionVADStore ===
+// === Module 13933: PermissionVADStore ===
 
-// Module 14771 (PermissionVADStore)
+// Module 13933 (PermissionVADStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4852 */;
 import VoiceStateStore from "VoiceStateStore" /* 4848 */;
 

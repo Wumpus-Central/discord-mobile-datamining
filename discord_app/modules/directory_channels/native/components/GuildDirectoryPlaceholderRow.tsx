@@ -1,8 +1,8 @@
-// === Module 12679: GuildDirectoryPlaceholderRow ===
+// === Module 11805: GuildDirectoryPlaceholderRow ===
 
-// Module 12679 (GuildDirectoryPlaceholderRow)
+// Module 11805 (GuildDirectoryPlaceholderRow)
 import nativeDefault from "native" /* 576 */;
-import getChatPlaceholderRowWidthDefault from "getChatPlaceholderRowWidth" /* 12680 */;
+import getChatPlaceholderRowWidthDefault from "getChatPlaceholderRowWidth" /* 11806 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
@@ -10,12 +10,12 @@ const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 const createStyles = fn(4829);
 let obj = { row: { flexDirection: "row", padding: 16 }, rowInner: { flex: 1 }, placeholderAvatar: null, placeholderText: null, placeholderBody: null };
-let size = { width: 40, height: 40, borderRadius: nativeDefault.radii.sm, overflow: "hidden", marginRight: 16, backgroundColor: fn(5746).DARK_PRIMARY_500_LIGHT_PRIMARY_230 };
+let size = { width: 40, height: 40, borderRadius: nativeDefault.radii.sm, overflow: "hidden", marginRight: 16, backgroundColor: fn(5748).DARK_PRIMARY_500_LIGHT_PRIMARY_230 };
 obj.placeholderAvatar = size;
-obj.placeholderText = { height: 15, borderRadius: 5, backgroundColor: fn(5746).DARK_PRIMARY_500_LIGHT_PRIMARY_230 };
+obj.placeholderText = { height: 15, borderRadius: 5, backgroundColor: fn(5748).DARK_PRIMARY_500_LIGHT_PRIMARY_230 };
 obj.placeholderBody = { width: "100%", marginTop: 10 };
 let closure_5 = createStyles.createStyles(obj);
-let obj3 = { height: 15, borderRadius: 5, backgroundColor: fn(5746).DARK_PRIMARY_500_LIGHT_PRIMARY_230 };
+let obj3 = { height: 15, borderRadius: 5, backgroundColor: fn(5748).DARK_PRIMARY_500_LIGHT_PRIMARY_230 };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryPlaceholderRow.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 13459: VibegrationsWorkerTickets ===
+// === Module 12609: VibegrationsWorkerTickets ===
 
-// Module 13459 (VibegrationsWorkerTickets)
+// Module 12609 (VibegrationsWorkerTickets)
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

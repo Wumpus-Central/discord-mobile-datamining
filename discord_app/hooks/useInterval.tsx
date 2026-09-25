@@ -1,6 +1,6 @@
-// === Module 7775: useInterval ===
+// === Module 6860: useInterval ===
 
-// Module 7775 (useInterval)
+// Module 6860 (useInterval)
 import noop from "module_19" /* 19 */;
 import size from "module_2" /* 2 */;
 

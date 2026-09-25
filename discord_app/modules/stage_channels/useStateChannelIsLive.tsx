@@ -1,6 +1,6 @@
-// === Module 8746: useStateChannelIsLive ===
+// === Module 7836: useStateChannelIsLive ===
 
-// Module 8746 (useStateChannelIsLive)
+// Module 7836 (useStateChannelIsLive)
 import StageInstanceStore from "StageInstanceStore" /* 2049 */;
 
 const require = globalThis.__r;

@@ -1,9 +1,9 @@
-// === Module 17116: VibegrationsNativeStatusLine ===
+// === Module 16307: VibegrationsNativeStatusLine ===
 
-// Module 17116 (VibegrationsNativeStatusLine)
+// Module 16307 (VibegrationsNativeStatusLine)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import MagicWandIcon from "MagicWandIcon" /* 10498 */;
+import MagicWandIcon from "MagicWandIcon" /* 9600 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,12 +1,12 @@
-// === Module 9788: StreamQualityLiveIndicator ===
+// === Module 8886: StreamQualityLiveIndicator ===
 
-// Module 9788 (StreamQualityLiveIndicator)
+// Module 8886 (StreamQualityLiveIndicator)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import timing from "timing" /* 4830 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9557 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9589 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 8655 */;
+import openPremiumModalDefault from "openPremiumModal" /* 8687 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

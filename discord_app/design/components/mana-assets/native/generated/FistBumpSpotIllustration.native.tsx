@@ -1,9 +1,9 @@
-// === Module 6326: FistBumpSpotIllustration ===
+// === Module 12969: FistBumpSpotIllustration ===
 
-// Module 6326 (FistBumpSpotIllustration)
+// Module 12969 (FistBumpSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5892 */;
-import _modDef6327 from "module_6327" /* 6327 */;
+import FastImageDefault from "FastImage" /* 5894 */;
+import _modDef12970 from "module_12970" /* 12970 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const FistBumpSpotIllustration = function FistBumpSpotIllustration(width)
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6327 };
+  const obj2 = { uri: _modDef12970 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

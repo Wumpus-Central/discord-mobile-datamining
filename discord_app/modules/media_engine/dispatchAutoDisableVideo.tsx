@@ -1,6 +1,6 @@
-// === Module 14189: dispatchAutoDisableVideo ===
+// === Module 13350: dispatchAutoDisableVideo ===
 
-// Module 14189 (dispatchAutoDisableVideo)
+// Module 13350 (dispatchAutoDisableVideo)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 4854 */;
 import size from "module_2" /* 2 */;

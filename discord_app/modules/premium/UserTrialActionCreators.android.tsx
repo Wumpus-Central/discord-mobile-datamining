@@ -1,8 +1,8 @@
-// === Module 13720: UserTrialActionCreators ===
+// === Module 12874: UserTrialActionCreators ===
 
-// Module 13720 (UserTrialActionCreators)
+// Module 12874 (UserTrialActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7784 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 6869 */;
 
 const require = fn;
 const Constants = fn(1074);

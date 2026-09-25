@@ -1,12 +1,12 @@
-// === Module 13526: UserProfileRemediatedNotice ===
+// === Module 12678: UserProfileRemediatedNotice ===
 
-// Module 13526 (UserProfileRemediatedNotice)
+// Module 12678 (UserProfileRemediatedNotice)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8589 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 10087 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 7679 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9184 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 
 require = fn;
 const View = fn(17).View;

@@ -1,12 +1,12 @@
-// === Module 13693: validateJumpWithAlert ===
+// === Module 12847: validateJumpWithAlert ===
 
-// Module 13693 (validateJumpWithAlert)
+// Module 12847 (validateJumpWithAlert)
 import util from "util" /* 1115 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5195 */;
-import isSpam from "isSpam" /* 7837 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5196 */;
+import isSpam from "isSpam" /* 6922 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 
 require = fn;
 const Permissions = fn(1074).Permissions;

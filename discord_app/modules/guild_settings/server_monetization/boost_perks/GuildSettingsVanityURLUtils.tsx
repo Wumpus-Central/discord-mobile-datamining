@@ -1,6 +1,6 @@
-// === Module 18029: GuildSettingsVanityURLUtils ===
+// === Module 17257: GuildSettingsVanityURLUtils ===
 
-// Module 18029 (GuildSettingsVanityURLUtils)
+// Module 17257 (GuildSettingsVanityURLUtils)
 import util from "util" /* 1115 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;

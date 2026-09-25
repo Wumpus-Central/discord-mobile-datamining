@@ -1,9 +1,9 @@
-// === Module 17141: VibegrationsSettingsRequestCard ===
+// === Module 16355: VibegrationsSettingsRequestCard ===
 
-// Module 17141 (VibegrationsSettingsRequestCard)
+// Module 16355 (VibegrationsSettingsRequestCard)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4796 */;
-import VibegrationsSettingsSheet from "VibegrationsSettingsSheet" /* 17046 */;
+import VibegrationsSettingsSheet from "VibegrationsSettingsSheet" /* 16236 */;
 import noop from "module_19" /* 19 */;
 
 const VibegrationsSettingsSheetDefault = VibegrationsSettingsSheet;
@@ -40,7 +40,7 @@ export default function VibegrationsSettingsRequestCard(projectId) {
     const obj4 = { variant: "secondary", size: "sm", onPress: callback, text: null };
     const intl3 = tmp6(1115).intl;
     obj4.text = intl3.string(tmp8(3714)["KO2xN+"]);
-    items1[2] = closure_5(tmp6(5273).Button, obj4);
+    items1[2] = closure_5(tmp6(5274).Button, obj4);
     obj.children = items1;
     return closure_6(View, obj);
   }

@@ -1,15 +1,15 @@
-// === Module 10676: StandardEmojiContent ===
+// === Module 9780: StandardEmojiContent ===
 
-// Module 10676 (StandardEmojiContent)
+// Module 9780 (StandardEmojiContent)
 import nativeDefault from "native" /* 576 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4478 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4482 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4480 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4484 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import FastImageDefault from "FastImage" /* 5892 */;
-import useSharedMessageEmojiStyles from "useSharedMessageEmojiStyles" /* 10677 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 10682 */;
+import FastImageDefault from "FastImage" /* 5894 */;
+import useSharedMessageEmojiStyles from "useSharedMessageEmojiStyles" /* 9781 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 9786 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4650 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4652 */;
 
 require = fn;
 function Emoji(surrogate) {

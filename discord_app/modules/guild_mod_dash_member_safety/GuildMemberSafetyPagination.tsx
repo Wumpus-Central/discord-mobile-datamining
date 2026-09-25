@@ -1,7 +1,7 @@
-// === Module 7854: GuildMemberSafetyPagination ===
+// === Module 6939: GuildMemberSafetyPagination ===
 
-// Module 7854 (GuildMemberSafetyPagination)
-import MemberSafetyElasticSearchQueryTypes from "MemberSafetyElasticSearchQueryTypes" /* 7827 */;
+// Module 6939 (GuildMemberSafetyPagination)
+import MemberSafetyElasticSearchQueryTypes from "MemberSafetyElasticSearchQueryTypes" /* 6912 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GuildMemberStore from "GuildMemberStore" /* 2107 */;
 

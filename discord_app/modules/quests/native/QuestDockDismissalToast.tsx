@@ -1,10 +1,10 @@
-// === Module 15442: QuestDockDismissalToast ===
+// === Module 14610: QuestDockDismissalToast ===
 
-// Module 15442 (QuestDockDismissalToast)
+// Module 14610 (QuestDockDismissalToast)
 import nativeDefault from "native" /* 576 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4523 */;
-import _modDef12629 from "module_12629" /* 12629 */;
-import _modDef13117 from "module_13117" /* 13117 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4525 */;
+import _modDef11755 from "module_11755" /* 11755 */;
+import _modDef12267 from "module_12267" /* 12267 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -14,8 +14,8 @@ function QuestDockDismissalNotification() {
   const intl = require("util").intl;
   obj.children = intl.format(require("util").t.dYE1px, {
     arrowHook() {
-      const obj = { style: closure_0.toastArrowForwardIconContainer, children: <React3 resizeMode="contain" source={_modDef12629} style={closure_0.toastArrowForwardIcon} /> };
-      return <React4 style={closure_0.toastArrowForwardIconContainer}><React3 resizeMode="contain" source={_modDef12629} style={closure_0.toastArrowForwardIcon} /></React4>;
+      const obj = { style: closure_0.toastArrowForwardIconContainer, children: <React3 resizeMode="contain" source={_modDef11755} style={closure_0.toastArrowForwardIcon} /> };
+      return <React4 style={closure_0.toastArrowForwardIconContainer}><React3 resizeMode="contain" source={_modDef11755} style={closure_0.toastArrowForwardIcon} /></React4>;
     }
   });
   return jsx(require("Text/Text").Text, { color: "mobile-text-heading-primary", variant: "text-sm/semibold", children: null });
@@ -37,5 +37,5 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDockDismis
 
 export const displayQuestDismissalToast = function displayQuestDismissalToast() {
   const obj = ToastActionCreatorsDefault;
-  obj.open({ key: "QUEST_BAR_DISMISS_TOAST", content: QuestDockDismissalNotification, icon: _modDef13117, position: "bottom" });
+  obj.open({ key: "QUEST_BAR_DISMISS_TOAST", content: QuestDockDismissalNotification, icon: _modDef12267, position: "bottom" });
 };

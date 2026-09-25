@@ -1,7 +1,7 @@
-// === Module 12232: AppealIngestionActivitySummary ===
+// === Module 11354: AppealIngestionActivitySummary ===
 
-// Module 12232 (AppealIngestionActivitySummary)
-import ClassificationEvidenceDefault from "ClassificationEvidence" /* 12233 */;
+// Module 11354 (AppealIngestionActivitySummary)
+import ClassificationEvidenceDefault from "ClassificationEvidence" /* 11355 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

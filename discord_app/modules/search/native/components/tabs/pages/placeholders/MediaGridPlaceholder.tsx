@@ -1,21 +1,21 @@
-// === Module 17215: MediaGridPlaceholder ===
+// === Module 16430: MediaGridPlaceholder ===
 
-// Module 17215 (MediaGridPlaceholder)
+// Module 16430 (MediaGridPlaceholder)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4561 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4563 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 12681 */;
-import usePlaceholderStyles from "usePlaceholderStyles" /* 17214 */;
-import GridItemPlaceholderDefault from "GridItemPlaceholder" /* 17216 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 11807 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 16429 */;
+import GridItemPlaceholderDefault from "GridItemPlaceholder" /* 16431 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(8209);
+const SearchConstants = fn(7298);
 ({ MEDIA_NUM_COLUMNS: hasOwnProperty, MEDIA_ITEM_GAP_WIDTH: metroRequire, SEARCH_LIST_SECTION_TOP_PADDING, SEARCH_LIST_HORIZONTAL_PADDING } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -87,5 +87,5 @@ export const RecentsMediaGridPlaceholder = function RecentsMediaGridPlaceholder(
     })
   ];
   obj2.children = items4;
-  return closure_8(numRows(4561).View, obj2);
+  return closure_8(numRows(4563).View, obj2);
 };

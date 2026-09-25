@@ -1,12 +1,12 @@
-// === Module 9191: CollectiblesBadges ===
+// === Module 8285: CollectiblesBadges ===
 
-// Module 9191 (CollectiblesBadges)
+// Module 8285 (CollectiblesBadges)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import LockIcon from "LockIcon" /* 5401 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9020 */;
-import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 9192 */;
+import LockIcon from "LockIcon" /* 5402 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8114 */;
+import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 8286 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

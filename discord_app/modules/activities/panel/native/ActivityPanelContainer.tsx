@@ -1,10 +1,10 @@
-// === Module 17573: ActivityPanelContainer ===
+// === Module 16797: ActivityPanelContainer ===
 
-// Module 17573 (ActivityPanelContainer)
+// Module 16797 (ActivityPanelContainer)
 import ChannelTypes from "ChannelTypes" /* 1095 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4453 */;
-import ActivityPanelControllerDefault from "ActivityPanelController" /* 17574 */;
-import ActivityPanelUIDefault from "ActivityPanelUI" /* 17583 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4455 */;
+import ActivityPanelControllerDefault from "ActivityPanelController" /* 16798 */;
+import ActivityPanelUIDefault from "ActivityPanelUI" /* 16807 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;

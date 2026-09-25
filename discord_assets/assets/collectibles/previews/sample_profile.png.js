@@ -1,6 +1,6 @@
-// === Module 9161: ? ===
+// === Module 8255: ? ===
 
-// Module 9161
+// Module 8255
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/collectibles/previews/sample_profile.png.js");

@@ -1,9 +1,9 @@
-// === Module 10095: TouchableHitBox ===
+// === Module 9192: TouchableHitBox ===
 
-// Module 10095 (TouchableHitBox)
+// Module 9192 (TouchableHitBox)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import Pressables from "Pressables" /* 5427 */;
+import Pressables from "Pressables" /* 5428 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -90,7 +90,7 @@ TouchableHitBox.prototype["render"] = function render() {
   obj6.children = tmp8Result;
   return jsx(Pressables.PressableOpacity, { accessibilityRole, accessibilityLabel, accessibilityState, onPress, onLongPress, activeOpacity, style: null, disabled: null, children: null });
 };
-TouchableHitBox.contextType = fn(4535).ThemeContext;
+TouchableHitBox.contextType = fn(4537).ThemeContext;
 TouchableHitBox.defaultProps = {
   onPress() {
 

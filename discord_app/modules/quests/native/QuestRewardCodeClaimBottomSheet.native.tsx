@@ -1,15 +1,15 @@
-// === Module 12113: QuestRewardCodeClaimBottomSheet ===
+// === Module 10734: QuestRewardCodeClaimBottomSheet ===
 
-// Module 12113 (QuestRewardCodeClaimBottomSheet)
+// Module 10734 (QuestRewardCodeClaimBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4523 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4525 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
-import _modDef5902 from "module_5902" /* 5902 */;
-import ClipboardUtils from "ClipboardUtils" /* 7522 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 11639 */;
+import _modDef5904 from "module_5904" /* 5904 */;
+import ClipboardUtils from "ClipboardUtils" /* 6605 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 10681 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 8026 */;
+import QuestStore from "QuestStore" /* 7111 */;
 
 const require = globalThis.__r;
 
@@ -37,7 +37,7 @@ function QuestRewardCodeClaimBottomSheet(quest) {
       const obj2 = { key: "CLAIM_QUEST_REWARD_ERROR", content: null, icon: null };
       const intl = util.intl;
       obj2.content = intl.string(util.t.CKsXk3);
-      obj2.icon = _modDef5902;
+      obj2.icon = _modDef5904;
       ToastActionCreatorsDefault.open(obj2);
       ActionSheetActionCreatorsDefault.hideActionSheet();
     }
@@ -103,7 +103,7 @@ function QuestRewardCodeClaimBottomSheet(quest) {
         obj2.icon = function icon() {
           return closure_1_8(closure_1_0(dependencyMap[16]).CopyIcon, {});
         };
-        return rewardCode(4523).open(obj2);
+        return rewardCode(4525).open(obj2);
       });
     }
   }, items4);
@@ -199,7 +199,7 @@ function QuestRewardCodeClaimBottomSheet(quest) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const REWARD_CODE_PLACEHOLDER = fn(5749).REWARD_CODE_PLACEHOLDER;
+const REWARD_CODE_PLACEHOLDER = fn(5751).REWARD_CODE_PLACEHOLDER;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4829);

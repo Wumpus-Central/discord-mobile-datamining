@@ -1,26 +1,26 @@
-// === Module 17084: VibegrationsPublishNotesSheet ===
+// === Module 16275: VibegrationsPublishNotesSheet ===
 
-// Module 17084 (VibegrationsPublishNotesSheet)
+// Module 16275 (VibegrationsPublishNotesSheet)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1101 */;
 import util from "util" /* 1115 */;
 import _modDef3714 from "module_3714" /* 3714 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4796 */;
-import VibegrationsUtils from "VibegrationsUtils" /* 5362 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11679 */;
-import VibegrationsPatchNotesChannel from "VibegrationsPatchNotesChannel" /* 17085 */;
+import VibegrationsUtils from "VibegrationsUtils" /* 5363 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 10859 */;
+import VibegrationsPatchNotesChannel from "VibegrationsPatchNotesChannel" /* 16276 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4462 */;
+import GuildChannelStore from "GuildChannelStore" /* 4464 */;
 import GuildStore from "GuildStore" /* 2066 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-let closure_9 = fn(4462).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_9 = fn(4464).GUILD_SELECTABLE_CHANNELS_KEY;
 const Routes = fn(1074).Routes;
 const MessageSendLocation = fn(4822).MessageSendLocation;
 const jsxProd = fn(21);
@@ -258,8 +258,8 @@ export default function VibegrationsPublishNotesSheet(guildId) {
                   const _HermesInternal = HermesInternal;
                   combined = "" + trimmed + tmp34;
                 }
-                const parsed = tmp3(8005).parse(found, combined);
-                const tmp31Result = tmp3(7786);
+                const parsed = tmp3(7090).parse(found, combined);
+                const tmp31Result = tmp3(6871);
                 const obj5 = { location: _undefined2.VIBEGRATIONS_PATCH_NOTES };
                 c3 = 2;
                 c4 = 1;
@@ -288,10 +288,10 @@ export default function VibegrationsPublishNotesSheet(guildId) {
               ok = closure_128_0.ok;
             }
             if (false !== ok) {
-              const result = guildId(17085).rememberPatchNotesChannel(closure_129_1, closure_129_17.id);
+              const result = guildId(16276).rememberPatchNotesChannel(closure_129_1, closure_129_17.id);
               closure_129_20();
               dependencyMap = 0;
-              const obj = guildId(17085);
+              const obj = guildId(16276);
             }
           }
           const _Error = Error;

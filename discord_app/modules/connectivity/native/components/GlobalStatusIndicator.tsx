@@ -1,12 +1,12 @@
-// === Module 9856: GlobalStatusIndicator ===
+// === Module 8954: GlobalStatusIndicator ===
 
-// Module 9856 (GlobalStatusIndicator)
-import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
+// Module 8954 (GlobalStatusIndicator)
+import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 5036 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 4516 */;
+import ActionSheetStore from "ActionSheetStore" /* 4518 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4845 */;
-import NativeMenuStore from "NativeMenuStore" /* 9857 */;
+import NativeMenuStore from "NativeMenuStore" /* 8955 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4852 */;
 

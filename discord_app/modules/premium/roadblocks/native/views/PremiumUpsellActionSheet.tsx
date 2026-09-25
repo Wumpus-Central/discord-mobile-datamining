@@ -1,23 +1,23 @@
-// === Module 8181: PremiumUpsellActionSheet ===
+// === Module 7266: PremiumUpsellActionSheet ===
 
-// Module 8181 (PremiumUpsellActionSheet)
+// Module 7266 (PremiumUpsellActionSheet)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import PremiumUtils from "PremiumUtils" /* 4483 */;
-import ChatInputUtils from "ChatInputUtils" /* 4695 */;
+import PremiumUtils from "PremiumUtils" /* 4485 */;
+import ChatInputUtils from "ChatInputUtils" /* 4697 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
-import LinearGradientDefault from "LinearGradient" /* 5285 */;
-import FastImageDefault from "FastImage" /* 5892 */;
-import openPremiumUpsellActionSheet from "openPremiumUpsellActionSheet" /* 8180 */;
-import showForLaterModal from "showForLaterModal" /* 8190 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 8191 */;
-import APNGPlayer from "APNGPlayer" /* 9169 */;
+import LinearGradientDefault from "LinearGradient" /* 5286 */;
+import FastImageDefault from "FastImage" /* 5894 */;
+import openPremiumUpsellActionSheet from "openPremiumUpsellActionSheet" /* 7265 */;
+import showForLaterModal from "showForLaterModal" /* 7279 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 7280 */;
+import APNGPlayer from "APNGPlayer" /* 8263 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4821 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4852 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4650 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4652 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -73,9 +73,9 @@ const PremiumConstants = fn(1374);
 const Constants = fn(1074);
 ({ AnalyticEvents: map1, AnalyticsPages: closure_14, ThemeTypes: closure_15 } = Constants);
 const ApplicationStreamFPS = fn(4876).ApplicationStreamFPS;
-const SavedMessagesConstants = fn(8182);
+const SavedMessagesConstants = fn(7267);
 ({ SAVED_BOOKMARKS_MAX: closure_17, SAVED_REMINDERS_MAX: closure_18 } = SavedMessagesConstants);
-const premiumMax = fn(8176).MAX_SCHEDULED_MESSAGES_PER_USER;
+const premiumMax = fn(7261).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: closure_20, Fragment: closure_21, jsxs: closure_22 } = jsxProd);
 const createStyles = fn(4829);
@@ -108,35 +108,35 @@ export default function PremiumUpsellActionSheet(onDismiss) {
   const tmp = closure_23();
   const tmp3 = useTier0UpsellContent;
   const items = [UserStore];
-  const stateFromStores = legacyProps(useTier0UpsellContent[41]).useStateFromStores(items, () => currentUser.getCurrentUser());
-  analyticsLocations2 = analyticsLocations2(useTier0UpsellContent[42])(analyticsLocations).analyticsLocations;
-  let obj = legacyProps(useTier0UpsellContent[41]);
+  const stateFromStores = legacyProps(useTier0UpsellContent[42]).useStateFromStores(items, () => currentUser.getCurrentUser());
+  analyticsLocations2 = analyticsLocations2(useTier0UpsellContent[43])(analyticsLocations).analyticsLocations;
+  let obj = legacyProps(useTier0UpsellContent[42]);
   let initialUpsellKey;
   if (legacyProps != null) {
     initialUpsellKey = legacyProps.initialUpsellKey;
   }
   if (initialUpsellKey == null) {
-    initialUpsellKey = legacyProps(tmp3[44]).getUpsellType(featureName);
-    const tmp2Result = legacyProps(tmp3[44]);
+    initialUpsellKey = legacyProps(tmp3[45]).getUpsellType(featureName);
+    const tmp2Result = legacyProps(tmp3[45]);
   }
-  const premiumUpsellConfig = legacyProps(useTier0UpsellContent[43]).usePremiumUpsellConfig(initialUpsellKey, analyticsLocations2);
+  const premiumUpsellConfig = legacyProps(useTier0UpsellContent[44]).usePremiumUpsellConfig(initialUpsellKey, analyticsLocations2);
   useTier0UpsellContent = premiumUpsellConfig.useTier0UpsellContent;
   onViewAllPerks = premiumUpsellConfig.onViewAllPerks;
-  legacyProps(tmp3[45]);
+  legacyProps(tmp3[46]);
   let trialCtaOverride = null;
   if (!useTier0UpsellContent) {
-    trialCtaOverride = legacyProps(tmp3[46]).getTrialCtaOverride(tmp10, TIER_2.TIER_2);
-    const tmp2Result17 = legacyProps(tmp3[46]);
+    trialCtaOverride = legacyProps(tmp3[47]).getTrialCtaOverride(tmp10, TIER_2.TIER_2);
+    const tmp2Result17 = legacyProps(tmp3[47]);
   }
-  let obj2 = legacyProps(useTier0UpsellContent[43]);
+  let obj2 = legacyProps(useTier0UpsellContent[44]);
   const tmp6 = analyticsLocations;
   const items1 = [ThemeStore];
-  const stateFromStores1 = legacyProps(tmp3[41]).useStateFromStores(items1, () => theme.theme);
-  const tmp2Result18 = legacyProps(tmp3[41]);
+  const stateFromStores1 = legacyProps(tmp3[42]).useStateFromStores(items1, () => theme.theme);
+  const tmp2Result18 = legacyProps(tmp3[42]);
   const items2 = [SelectedGuildStore];
-  const stateFromStores2 = legacyProps(tmp3[41]).useStateFromStores(items2, () => guildId.getGuildId());
+  const stateFromStores2 = legacyProps(tmp3[42]).useStateFromStores(items2, () => guildId.getGuildId());
   const tmp16 = useTier0UpsellContent ? closure_11.TIER_0 : closure_11.TIER_2;
-  const tmp2Result19 = legacyProps(tmp3[41]);
+  const tmp2Result19 = legacyProps(tmp3[42]);
   const token = legacyProps(tmp3[15]).useToken(tmp5(tmp3[14]).colors.EXPRESSIVE_GRADIENT_NITRO_GREEN_START);
   const tmp2Result20 = legacyProps(tmp3[15]);
   let str = "dark";
@@ -193,7 +193,7 @@ export default function PremiumUpsellActionSheet(onDismiss) {
   obj8.description = intl6.string(legacyProps(tmp3[24]).t.sMmd7s);
   obj8.analyticsPage = constants3.PREMIUM_UPSELL_STICKERS_EVERYWHERE;
   obj8.upsellType = constants.STICKERS_EVERYWHERE_UPSELL;
-  obj8.illustration = closure_20(legacyProps(tmp3[23]).StickersSpotIllustration, { width: 235, height: 132, accessible: false });
+  obj8.illustration = closure_20(legacyProps(tmp3[25]).StickersSpotIllustration, { width: 235, height: 132, accessible: false });
   obj3[legacyProps(tmp3[17]).EntitlementFeatureNames.STICKERS_EVERYWHERE] = obj8;
   const obj9 = { title: null, description: null, analyticsPage: null, upsellType: null, image: null };
   const intl7 = legacyProps(tmp3[24]).intl;
@@ -225,7 +225,7 @@ export default function PremiumUpsellActionSheet(onDismiss) {
   obj14.description = intl11.string(legacyProps(tmp3[24]).t.jBqF2k);
   obj14.analyticsPage = constants3.PREMIUM_UPSELL_CLIENT_THEMES;
   obj14.upsellType = constants.CLIENT_THEMES_UPSELL;
-  obj14.image = analyticsLocations2(tmp3[25]);
+  obj14.image = analyticsLocations2(tmp3[26]);
   obj3[legacyProps(tmp3[17]).EntitlementFeatureNames.CLIENT_THEMES] = obj14;
   const obj15 = { title: null, description: null, analyticsPage: null, upsellType: null, image: null };
   const intl12 = legacyProps(tmp3[24]).intl;
@@ -234,7 +234,7 @@ export default function PremiumUpsellActionSheet(onDismiss) {
   obj15.description = intl13.string(legacyProps(tmp3[24]).t.HDt8ip);
   obj15.analyticsPage = constants3.PREMIUM_UPSELL_APP_ICONS;
   obj15.upsellType = constants.APP_ICON_UPSELL;
-  obj15.image = analyticsLocations2(tmp3[26]);
+  obj15.image = analyticsLocations2(tmp3[27]);
   obj3[legacyProps(tmp3[17]).EntitlementFeatureNames.APP_ICONS] = obj15;
   if (null == forLaterLimit) {
     const intl15 = legacyProps(tmp3[24]).intl;
@@ -268,7 +268,7 @@ export default function PremiumUpsellActionSheet(onDismiss) {
   obj17.description = stringResult1;
   obj17.analyticsPage = constants3.PREMIUM_UPSELL_FOR_LATER;
   obj17.upsellType = constants.FOR_LATER_MODAL_UPSELL;
-  obj17.image = analyticsLocations2(tmp21 ? tmp3[31] : tmp3[32]);
+  obj17.image = analyticsLocations2(tmp21 ? tmp3[32] : tmp3[33]);
   obj3[legacyProps(tmp3[17]).EntitlementFeatureNames.SAVED_MESSAGES] = obj17;
   const obj20 = { title: null, showBetaBadge: true, description: null, analyticsPage: null, upsellType: null, image: null };
   const intl18 = legacyProps(tmp3[24]).intl;
@@ -278,15 +278,15 @@ export default function PremiumUpsellActionSheet(onDismiss) {
   obj22.children = intl19.format(legacyProps(tmp3[24]).t["1kFyto"], {
     premiumMax,
     onClick() {
-      analyticsLocations2(useTier0UpsellContent[27]).hideActionSheet(legacyProps(useTier0UpsellContent[28]).PREMIUM_UPSELL_ACTION_SHEET_KEY);
-      const obj = analyticsLocations2(useTier0UpsellContent[27]);
-      const result = legacyProps(useTier0UpsellContent[33]).showScheduledMessagesModal();
+      analyticsLocations2(useTier0UpsellContent[28]).hideActionSheet(legacyProps(useTier0UpsellContent[29]).PREMIUM_UPSELL_ACTION_SHEET_KEY);
+      const obj = analyticsLocations2(useTier0UpsellContent[28]);
+      const result = legacyProps(useTier0UpsellContent[34]).showScheduledMessagesModal();
     }
   });
   obj20.description = closure_20(closure_21, obj22);
   obj20.analyticsPage = constants3.PREMIUM_UPSELL_SCHEDULED_MESSAGES;
   obj20.upsellType = constants.SCHEDULED_MESSAGES_MODAL_UPSELL;
-  obj20.image = analyticsLocations2(tmp3[34]);
+  obj20.image = analyticsLocations2(tmp3[35]);
   obj3[legacyProps(tmp3[17]).EntitlementFeatureNames.SCHEDULED_MESSAGES] = obj20;
   const obj24 = { title: null, description: null, analyticsPage: null, upsellType: null, image: null, imageGradientBackground: null };
   const intl20 = legacyProps(tmp3[24]).intl;
@@ -295,8 +295,8 @@ export default function PremiumUpsellActionSheet(onDismiss) {
   obj24.description = intl21.formatToPlainString(legacyProps(tmp3[24]).t["4nlpei"], { fps: ApplicationStreamFPS.FPS_60 });
   obj24.analyticsPage = constants3.PREMIUM_UPSELL_STREAM_HIGH_QUALITY;
   obj24.upsellType = constants.STREAM_QUALITY_UPSELL;
-  obj24.image = analyticsLocations2(tmp3[35]);
-  const obj26 = { colors: null, start: legacyProps(tmp3[36]).HorizontalGradient.START, end: legacyProps(tmp3[36]).HorizontalGradient.END };
+  obj24.image = analyticsLocations2(tmp3[36]);
+  const obj26 = { colors: null, start: legacyProps(tmp3[37]).HorizontalGradient.START, end: legacyProps(tmp3[37]).HorizontalGradient.END };
   const items3 = [token, token1];
   obj26.colors = items3;
   obj24.imageGradientBackground = obj26;
@@ -307,19 +307,19 @@ export default function PremiumUpsellActionSheet(onDismiss) {
   const obj23 = {
     premiumMax,
     onClick() {
-      analyticsLocations2(useTier0UpsellContent[27]).hideActionSheet(legacyProps(useTier0UpsellContent[28]).PREMIUM_UPSELL_ACTION_SHEET_KEY);
-      const obj = analyticsLocations2(useTier0UpsellContent[27]);
-      const result = legacyProps(useTier0UpsellContent[33]).showScheduledMessagesModal();
+      analyticsLocations2(useTier0UpsellContent[28]).hideActionSheet(legacyProps(useTier0UpsellContent[29]).PREMIUM_UPSELL_ACTION_SHEET_KEY);
+      const obj = analyticsLocations2(useTier0UpsellContent[28]);
+      const result = legacyProps(useTier0UpsellContent[34]).showScheduledMessagesModal();
     }
   };
   const obj25 = { fps: ApplicationStreamFPS.FPS_60 };
   const items4 = [AccessibilityStore];
-  const stateFromStores3 = legacyProps(tmp3[41]).useStateFromStores(items4, () => useReducedMotion.useReducedMotion);
-  const tmp2Result28 = legacyProps(tmp3[41]);
+  const stateFromStores3 = legacyProps(tmp3[42]).useStateFromStores(items4, () => useReducedMotion.useReducedMotion);
+  const tmp2Result28 = legacyProps(tmp3[42]);
   let mobileEmojiPickerUpsellRestyleEnabledForFeature = legacyProps(tmp3[22]).getMobileEmojiPickerUpsellRestyleEnabledForFeature(featureName, "native.PremiumUpsellActionSheet");
   if (!mobileEmojiPickerUpsellRestyleEnabledForFeature) {
-    mobileEmojiPickerUpsellRestyleEnabledForFeature = legacyProps(tmp3[47]).getMobileStickerPickerUpsellRestyleEnabledForFeature(featureName, "native.PremiumUpsellActionSheet");
-    const tmp2Result30 = legacyProps(tmp3[47]);
+    mobileEmojiPickerUpsellRestyleEnabledForFeature = legacyProps(tmp3[48]).getMobileStickerPickerUpsellRestyleEnabledForFeature(featureName, "native.PremiumUpsellActionSheet");
+    const tmp2Result30 = legacyProps(tmp3[48]);
   }
   const items5 = [obj3[featureName], analyticsLocations2, useTier0UpsellContent, legacyProps];
   const effect = onViewAllPerks.useEffect(() => {
@@ -345,7 +345,7 @@ export default function PremiumUpsellActionSheet(onDismiss) {
     obj2.voice_guild_id = guildId;
     obj.track(constants2.PREMIUM_UPSELL_VIEWED, obj2);
   }, items5);
-  const tmp36 = analyticsLocations2(tmp3[49])(useTier0UpsellContent, onViewAllPerks, obj3[featureName].analyticsPage, undefined, tmp6);
+  const tmp36 = analyticsLocations2(tmp3[50])(useTier0UpsellContent, onViewAllPerks, obj3[featureName].analyticsPage, undefined, tmp6);
   const loading = tmp36.loading;
   [][0] = onViewAllPerks;
   let tmp28Result2 = null;
@@ -356,19 +356,19 @@ export default function PremiumUpsellActionSheet(onDismiss) {
     const obj29 = { style: tmp.textContainer, children: null };
     let tmp28Result = null;
     if (true === tmp32.showBetaBadge) {
-      const obj30 = { size: legacyProps(tmp3[52]).BetaSizes.SMALL, gradient: true, style: tmp.betaTag };
-      tmp28Result = closure_20(tmp5(tmp3[52]), obj30);
-      const tmp5Result = tmp5(tmp3[52]);
+      const obj30 = { size: legacyProps(tmp3[53]).BetaSizes.SMALL, gradient: true, style: tmp.betaTag };
+      tmp28Result = closure_20(tmp5(tmp3[53]), obj30);
+      const tmp5Result = tmp5(tmp3[53]);
     }
     const items7 = [tmp28Result, , ];
     const obj31 = { style: tmp.text, variant: "heading-lg/extrabold", accessibilityRole: "header", children: tmp32.title };
-    items7[1] = closure_20(legacyProps(tmp3[53]).Text, obj31);
+    items7[1] = closure_20(legacyProps(tmp3[54]).Text, obj31);
     const obj32 = { style: null, variant: "text-sm/normal", children: null };
     const items8 = [, ];
     ({ text: arr9[0], description: arr9[1] } = tmp);
     obj32.style = items8;
     obj32.children = tmp32.description;
-    items7[2] = closure_20(legacyProps(tmp3[53]).Text, obj32);
+    items7[2] = closure_20(legacyProps(tmp3[54]).Text, obj32);
     obj29.children = items7;
     items6[1] = closure_22(upsellType, obj29);
     const obj33 = { style: tmp.buttonContainer, children: null };
@@ -386,7 +386,7 @@ export default function PremiumUpsellActionSheet(onDismiss) {
       trialCtaOverride = intl22.string(legacyProps(tmp3[24]).t["8x0jKT"]);
     }
     obj34.text = trialCtaOverride;
-    obj34.icon = tmp5(tmp3[55]);
+    obj34.icon = tmp5(tmp3[56]);
     let str3 = "primary";
     if (mobileEmojiPickerUpsellRestyleEnabledForFeature) {
       let str4 = "experimental_premium-primary";
@@ -397,17 +397,17 @@ export default function PremiumUpsellActionSheet(onDismiss) {
     }
     const obj35 = { children: null };
     obj34.variant = str3;
-    const items9 = [closure_20(legacyProps(tmp3[54]).Button, obj34), ];
+    const items9 = [closure_20(legacyProps(tmp3[55]).Button, obj34), ];
     const obj36 = { variant: "secondary", text: null, onPress: null };
     const intl24 = legacyProps(tmp3[24]).intl;
     obj36.text = intl24.string(legacyProps(tmp3[24]).t.PcTCB7);
     obj36.onPress = tmp37;
-    items9[1] = closure_20(legacyProps(tmp3[54]).Button, obj36);
+    items9[1] = closure_20(legacyProps(tmp3[55]).Button, obj36);
     obj33.children = items9;
     items6[2] = closure_22(upsellType, obj33);
     obj35.children = items6;
     obj27.children = closure_22(upsellType, obj35);
-    tmp28Result2 = closure_20(legacyProps(tmp3[51]).ActionSheet, obj27);
+    tmp28Result2 = closure_20(legacyProps(tmp3[52]).ActionSheet, obj27);
   }
   return tmp28Result2;
 };

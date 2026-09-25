@@ -1,12 +1,12 @@
-// === Module 13673: PrivateChannelHeader ===
+// === Module 12827: PrivateChannelHeader ===
 
-// Module 13673 (PrivateChannelHeader)
+// Module 12827 (PrivateChannelHeader)
 import nativeDefault from "native" /* 576 */;
-import ChannelHeader from "ChannelHeader" /* 13670 */;
+import ChannelHeader from "ChannelHeader" /* 12824 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import PresenceStore from "PresenceStore" /* 4869 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

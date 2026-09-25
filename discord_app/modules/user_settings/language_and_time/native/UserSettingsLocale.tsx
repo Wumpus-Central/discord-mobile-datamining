@@ -1,10 +1,10 @@
-// === Module 15776: UserSettingsLocale ===
+// === Module 14946: UserSettingsLocale ===
 
-// Module 15776 (UserSettingsLocale)
+// Module 14946 (UserSettingsLocale)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import TableRadioRow from "TableRadioRow" /* 5993 */;
-import flags from "flags" /* 15777 */;
+import TableRadioRow from "TableRadioRow" /* 5995 */;
+import flags from "flags" /* 14947 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2111 */;

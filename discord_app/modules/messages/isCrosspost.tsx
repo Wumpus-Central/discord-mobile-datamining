@@ -1,6 +1,6 @@
-// === Module 8385: isCrosspost ===
+// === Module 7474: isCrosspost ===
 
-// Module 8385 (isCrosspost)
+// Module 7474 (isCrosspost)
 import FlagUtils from "FlagUtils" /* 1385 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;

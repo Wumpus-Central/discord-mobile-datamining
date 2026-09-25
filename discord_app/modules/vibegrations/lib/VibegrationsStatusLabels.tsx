@@ -1,9 +1,9 @@
-// === Module 17145: VibegrationsStatusLabels ===
+// === Module 16359: VibegrationsStatusLabels ===
 
-// Module 17145 (VibegrationsStatusLabels)
+// Module 16359 (VibegrationsStatusLabels)
 import util from "util" /* 1115 */;
 import _modDef3714 from "module_3714" /* 3714 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 5363 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 5364 */;
 import size from "module_2" /* 2 */;
 
 function thinkingLabel(restoring) {

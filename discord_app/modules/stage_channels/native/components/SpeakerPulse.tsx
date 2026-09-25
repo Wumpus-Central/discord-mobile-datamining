@@ -1,8 +1,8 @@
-// === Module 14479: SpeakerPulse ===
+// === Module 13640: SpeakerPulse ===
 
-// Module 14479 (SpeakerPulse)
+// Module 13640 (SpeakerPulse)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
 import timing from "timing" /* 4830 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4821 */;

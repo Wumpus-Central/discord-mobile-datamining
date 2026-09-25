@@ -1,22 +1,22 @@
-// === Module 14867: relationships ===
+// === Module 14029: relationships ===
 
-// Module 14867 (relationships)
+// Module 14029 (relationships)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import RPCErrorDefault from "RPCError" /* 9664 */;
-import RPCHelpers from "RPCHelpers" /* 9669 */;
+import RPCErrorDefault from "RPCError" /* 8762 */;
+import RPCHelpers from "RPCHelpers" /* 8767 */;
 import _slicedToArray from "module_32" /* 32 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ ApplicationFlags: closure_7, RelationshipTypes: closure_8, RPCCommands, RPCErrors: closure_9 } = Constants);
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(14852);
+const CONTEXT_MENU_ICON_NAMES = fn(14014);
 let obj3 = { scope: null, handler: null };
 let obj4 = {};
-let items = [fn(8689).OAuth2Scopes.RELATIONSHIPS_READ];
-obj4[fn(4733).RPC_SCOPE_CONFIG.ANY] = items;
+let items = [fn(7779).OAuth2Scopes.RELATIONSHIPS_READ];
+obj4[fn(4735).RPC_SCOPE_CONFIG.ANY] = items;
 obj3.scope = obj4;
 obj3.handler = function handler(socket) {
   const deserializer = BigFlagUtilsAll;

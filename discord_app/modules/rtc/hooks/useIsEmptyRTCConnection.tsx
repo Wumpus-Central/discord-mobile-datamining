@@ -1,6 +1,6 @@
-// === Module 10077: useIsEmptyRTCConnection ===
+// === Module 9175: useIsEmptyRTCConnection ===
 
-// Module 10077 (useIsEmptyRTCConnection)
+// Module 9175 (useIsEmptyRTCConnection)
 import initialize from "initialize" /* 504 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4852 */;

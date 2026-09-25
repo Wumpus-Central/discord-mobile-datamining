@@ -1,12 +1,12 @@
-// === Module 12434: RecommendationsBanner ===
+// === Module 11560: RecommendationsBanner ===
 
-// Module 12434 (RecommendationsBanner)
+// Module 11560 (RecommendationsBanner)
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import FastImageDefault from "FastImage" /* 5892 */;
-import useAvatarColorDefault from "useAvatarColor" /* 8491 */;
-import useDisplayProfileDefault from "useDisplayProfile" /* 8534 */;
-import UserProfileBannerDefault from "UserProfileBanner" /* 8594 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9824 */;
+import FastImageDefault from "FastImage" /* 5894 */;
+import useAvatarColorDefault from "useAvatarColor" /* 7581 */;
+import useDisplayProfileDefault from "useDisplayProfile" /* 7624 */;
+import UserProfileBannerDefault from "UserProfileBanner" /* 7684 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 8922 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1386 */;
 
@@ -19,8 +19,8 @@ const createStyles = fn(4829);
 let closure_9 = createStyles.createStyles({ imageContainer: { width: "100%", height: "100%" }, image: { width: "100%", height: "100%" } });
 let closure_10 = noop.memo((applicationId) => {
   let heroMediaDimensions;
-  let obj = heroMediaDimensions(11567);
-  heroMediaDimensions = heroMediaDimensions(12426).useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
+  let obj = heroMediaDimensions(10772);
+  heroMediaDimensions = heroMediaDimensions(11552).useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
   const tmp4 = useEmbeddedActivityBackgroundDefault({ applicationId: applicationId.applicationId, size: heroMediaDimensions.width, names: ["embedded_cover"] });
   importDefault = tmp4;
   let items = [heroMediaDimensions, tmp4];

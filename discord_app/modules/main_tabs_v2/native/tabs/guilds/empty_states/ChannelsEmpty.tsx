@@ -1,13 +1,13 @@
-// === Module 16680: ChannelsEmpty ===
+// === Module 15860: ChannelsEmpty ===
 
-// Module 16680 (ChannelsEmpty)
+// Module 15860 (ChannelsEmpty)
 import nativeDefault from "native" /* 576 */;
-import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 9906 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9939 */;
-import _modDef16681 from "module_16681" /* 16681 */;
-import _modDef16682 from "module_16682" /* 16682 */;
+import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 9004 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9037 */;
+import _modDef15861 from "module_15861" /* 15861 */;
+import _modDef15862 from "module_15862" /* 15862 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
@@ -50,24 +50,24 @@ export default noop.memo(function ChannelsEmpty(guild) {
   const obj = guild(563);
   const obj3 = { style: null, children: null };
   const items4 = [tmp.wrapper, ];
-  const obj2 = guild(15436);
-  items4[1] = { paddingBottom: guild(15436).useYouBarTotalHeight(16) };
+  const obj2 = guild(14604);
+  items4[1] = { paddingBottom: guild(14604).useYouBarTotalHeight(16) };
   obj3.style = items4;
   if (canCustomizeGuild) {
     const obj5 = { style: tmp.personalizeButtonWrapper, children: null };
     const obj6 = { icon: null, label: null, onPress: null };
-    const obj7 = { source: _modDef16681, disableColor: true };
+    const obj7 = { source: _modDef15861, disableColor: true };
     obj6.icon = closure_8(tmp2(1177).Icon, obj7);
     const intl = tmp2(1115).intl;
     obj6.label = intl.string(tmp2(1115).t["Yhi9/N"]);
     obj6.onPress = callback;
-    obj5.children = closure_8(tmp2(8953).RowButton, obj6);
+    obj5.children = closure_8(tmp2(8047).RowButton, obj6);
     canCustomizeGuild = closure_8(closure_4, obj5);
   }
   const items5 = [canCustomizeGuild, ];
   const obj8 = { style: tmp.content, children: null };
-  const obj4 = { paddingBottom: guild(15436).useYouBarTotalHeight(16) };
-  const items6 = [closure_8(closure_5, { source: _modDef16682 }), , , ];
+  const obj4 = { paddingBottom: guild(14604).useYouBarTotalHeight(16) };
+  const items6 = [closure_8(closure_5, { source: _modDef15862 }), , , ];
   const obj10 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: null, children: null };
   const items7 = [, ];
   ({ text: arr8[0], headerText: arr8[1] } = tmp);
@@ -85,7 +85,7 @@ export default noop.memo(function ChannelsEmpty(guild) {
     const intl4 = tmp2(1115).intl;
     obj13.text = intl4.string(tmp2(1115).t["63PyJQ"]);
     obj13.onPress = callback1;
-    obj12.children = closure_8(tmp2(5274).BaseTextButton, obj13);
+    obj12.children = closure_8(tmp2(5275).BaseTextButton, obj13);
     canCreateChannel = closure_8(closure_4, obj12);
   }
   items6[3] = canCreateChannel;

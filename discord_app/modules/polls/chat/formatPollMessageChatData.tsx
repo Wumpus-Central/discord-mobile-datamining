@@ -1,17 +1,17 @@
-// === Module 12058: formatPollMessageChatData ===
+// === Module 11203: formatPollMessageChatData ===
 
-// Module 12058 (formatPollMessageChatData)
+// Module 11203 (formatPollMessageChatData)
 import util from "util" /* 1115 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4451 */;
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4470 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4478 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4482 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4453 */;
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4472 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4480 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4484 */;
 import _mod5014 from "module_5014" /* 5014 */;
-import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 9114 */;
-import PollLayoutTypes from "PollLayoutTypes" /* 12061 */;
+import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 8208 */;
+import PollLayoutTypes from "PollLayoutTypes" /* 11206 */;
 import AccessibilityStore from "AccessibilityStore" /* 4821 */;
-import EmojiStore from "EmojiStore" /* 5764 */;
+import EmojiStore from "EmojiStore" /* 5766 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import GuildMemberStore from "GuildMemberStore" /* 2107 */;
 import MessageStore from "MessageStore" /* 5049 */;
@@ -165,7 +165,7 @@ function computeBasicPollChatData(message, arg1, arg2) {
     return obj6;
   }
 }
-const getPollState = fn(11776).getPollState;
+const getPollState = fn(10958).getPollState;
 const Constants = fn(1074);
 ({ MessageStates: c10, EMPTY_STRING_SNOWFLAKE_ID } = Constants);
 const ThemeTypes = fn(1085).ThemeTypes;

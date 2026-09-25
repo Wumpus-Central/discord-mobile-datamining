@@ -1,10 +1,10 @@
-// === Module 11208: PremiumGiftCustomMessage ===
+// === Module 10306: PremiumGiftCustomMessage ===
 
-// Module 11208 (PremiumGiftCustomMessage)
+// Module 10306 (PremiumGiftCustomMessage)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import TextArea from "TextArea" /* 7418 */;
-import NativeGiftContext from "NativeGiftContext" /* 11047 */;
+import TextArea from "TextArea" /* 6501 */;
+import NativeGiftContext from "NativeGiftContext" /* 10151 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,9 +1,9 @@
-// === Module 8001: PoggermodeSettingsStore ===
+// === Module 7086: PoggermodeSettingsStore ===
 
-// Module 8001 (PoggermodeSettingsStore)
+// Module 7086 (PoggermodeSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import PoggermodeConstants from "PoggermodeConstants" /* 8002 */;
+import PoggermodeConstants from "PoggermodeConstants" /* 7087 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 

@@ -1,21 +1,21 @@
-// === Module 13075: HubEmailConnectionModal ===
+// === Module 12223: HubEmailConnectionModal ===
 
-// Module 13075 (HubEmailConnectionModal)
+// Module 12223 (HubEmailConnectionModal)
 import util from "util" /* 1115 */;
 import useNavigation from "useNavigation" /* 1484 */;
-import useInitialValueDefault from "useInitialValue" /* 5903 */;
-import NavigatorHeader from "NavigatorHeader" /* 5929 */;
-import Navigator from "Navigator" /* 7333 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7456 */;
+import useInitialValueDefault from "useInitialValue" /* 5905 */;
+import NavigatorHeader from "NavigatorHeader" /* 5931 */;
+import Navigator from "Navigator" /* 6416 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6539 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const HubEmailConnectionSteps = fn(13067).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(12215).HubEmailConnectionSteps;
 let jsx = fn(21).jsx;
 const createStyles = fn(4829);
-let obj2 = { safeArea: { marginTop: fn(5987).NAV_BAR_HEIGHT, flex: 1 } };
+let obj2 = { safeArea: { marginTop: fn(5989).NAV_BAR_HEIGHT, flex: 1 } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/native/components/HubEmailConnectionModal.tsx");
@@ -75,7 +75,7 @@ export default function HubEmailConnectionModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return navigation(closure_1_1(13079), {});
+        return navigation(closure_1_1(12227), {});
       }
     };
     obj6[HubEmailConnectionSteps.EMAIL_WAITLIST] = {
@@ -85,7 +85,7 @@ export default function HubEmailConnectionModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return navigation(closure_1_1(13082), {});
+        return navigation(closure_1_1(12232), {});
       }
     };
     obj6[HubEmailConnectionSteps.SUBMIT_SCHOOL] = {
@@ -95,7 +95,7 @@ export default function HubEmailConnectionModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return navigation(closure_1_1(13084), {});
+        return navigation(closure_1_1(12234), {});
       }
     };
     obj6[HubEmailConnectionSteps.SELECT_SCHOOL] = {
@@ -105,7 +105,7 @@ export default function HubEmailConnectionModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return navigation(closure_1_1(13085), {});
+        return navigation(closure_1_1(12235), {});
       }
     };
     obj6[HubEmailConnectionSteps.VERIFY_PIN] = {
@@ -115,7 +115,7 @@ export default function HubEmailConnectionModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return navigation(closure_1_1(13086), {});
+        return navigation(closure_1_1(12236), {});
       }
     };
     obj6[HubEmailConnectionSteps.SELECT_SCHOOL_SEARCH] = {
@@ -123,7 +123,7 @@ export default function HubEmailConnectionModal(arg0) {
       headerShown: false,
       render(arg0) {
         const merged = Object.assign(arg0);
-        return navigation(closure_1_1(13089), {});
+        return navigation(closure_1_1(12239), {});
       }
     };
     obj5.screens = obj6;

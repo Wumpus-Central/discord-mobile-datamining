@@ -1,10 +1,10 @@
-// === Module 11619: MessagePreviewReactions ===
+// === Module 10824: MessagePreviewReactions ===
 
-// Module 11619 (MessagePreviewReactions)
+// Module 10824 (MessagePreviewReactions)
 import noop from "module_19" /* 19 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7924 */;
-import ConversationsStore from "ConversationsStore" /* 7928 */;
-import MessagePreviewStore from "MessagePreviewStore" /* 8710 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7009 */;
+import ConversationsStore from "ConversationsStore" /* 7013 */;
+import MessagePreviewStore from "MessagePreviewStore" /* 7800 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -27,13 +27,13 @@ export default function MessagePreviewReactions(emoji) {
     return null != message ? message.reactions : closure_7;
   }, items1);
   const obj = channelId(504);
-  const obj2 = { value: messageId(7495)(messageId(7515).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null };
+  const obj2 = { value: messageId(6578)(messageId(6598).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null };
   if (stateFromStores.length > 0) {
     const obj3 = { channelId, messageId, emoji: emoji.emoji, reactions: stateFromStores };
-    let tmp4Result = jsx(channelId(11608).MessageReactionsContent, { channelId, messageId, emoji: emoji.emoji, reactions: stateFromStores });
+    let tmp4Result = jsx(channelId(10813).MessageReactionsContent, { channelId, messageId, emoji: emoji.emoji, reactions: stateFromStores });
   } else {
-    tmp4Result = jsx(channelId(11608).MessageReactionsEmpty, {});
+    tmp4Result = jsx(channelId(10813).MessageReactionsEmpty, {});
   }
   obj2.children = tmp4Result;
-  return jsx(channelId(7495).AnalyticsLocationProvider, { value: messageId(7495)(messageId(7515).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null });
+  return jsx(channelId(6578).AnalyticsLocationProvider, { value: messageId(6578)(messageId(6598).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null });
 };

@@ -1,9 +1,9 @@
-// === Module 17444: modal/ModalScreen ===
+// === Module 16661: modal/ModalScreen ===
 
-// Module 17444 (modal/ModalScreen)
+// Module 16661 (modal/ModalScreen)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 9128 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8222 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -60,7 +60,7 @@ export default function Modal(route) {
     }
     return currentResult;
   }, []);
-  const layoutEffect = noop.useLayoutEffect(() => modal(7805).trackAppUIViewed("ModalScreen"), []);
+  const layoutEffect = noop.useLayoutEffect(() => modal(6890).trackAppUIViewed("ModalScreen"), []);
   ({ left, right } = useSafeAreaInsetsDefault());
   const tmp13 = useSafeAreaInsetsDefault();
   const items = [absoluteFillObject.absoluteFillObject, ];
@@ -85,10 +85,10 @@ export default function Modal(route) {
   obj5.transitionState = null;
   obj5.onClose = callback;
   const items2 = [<modal.modal />, ];
-  tmp7Result = modal(17445);
+  tmp7Result = modal(16662);
   let isIOSResult = modal(1364).isIOS();
   if (isIOSResult) {
-    isIOSResult = closure_9(tmp7(17073).PortalKeyboardRenderer, { portal: false });
+    isIOSResult = closure_9(tmp7(16264).PortalKeyboardRenderer, { portal: false });
   }
   items2[1] = isIOSResult;
   obj4.children = items2;

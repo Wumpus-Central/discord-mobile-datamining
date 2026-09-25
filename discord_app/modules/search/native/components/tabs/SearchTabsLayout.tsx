@@ -1,22 +1,22 @@
-// === Module 17203: SearchTabsLayout ===
+// === Module 16418: SearchTabsLayout ===
 
-// Module 17203 (SearchTabsLayout)
+// Module 16418 (SearchTabsLayout)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6985 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12681 */;
-import SearchUtils from "SearchUtils" /* 12683 */;
-import SearchActionCreatorsDefault from "SearchActionCreators" /* 12690 */;
-import SearchTabsFetchManagerDefault from "SearchTabsFetchManager" /* 12691 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12701 */;
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 12702 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12704 */;
-import IntelligenceSearchEmptyScreenDefault from "IntelligenceSearchEmptyScreen" /* 17205 */;
-import pages_ErrorScreenDefault from "pages/ErrorScreen" /* 17206 */;
-import SearchTabsPageDefault from "SearchTabsPage" /* 17207 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6068 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11807 */;
+import SearchUtils from "SearchUtils" /* 11809 */;
+import SearchActionCreatorsDefault from "SearchActionCreators" /* 11816 */;
+import SearchTabsFetchManagerDefault from "SearchTabsFetchManager" /* 11817 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 11827 */;
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 11828 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 11830 */;
+import IntelligenceSearchEmptyScreenDefault from "IntelligenceSearchEmptyScreen" /* 16420 */;
+import pages_ErrorScreenDefault from "pages/ErrorScreen" /* 16421 */;
+import SearchTabsPageDefault from "SearchTabsPage" /* 16422 */;
 import noop from "module_19" /* 19 */;
-import SearchMessageStore from "SearchMessageStore" /* 7611 */;
-import SearchQueryStore from "SearchQueryStore" /* 12682 */;
-import SearchTabsLayoutStore from "SearchTabsLayoutStore" /* 12705 */;
+import SearchMessageStore from "SearchMessageStore" /* 6694 */;
+import SearchQueryStore from "SearchQueryStore" /* 11808 */;
+import SearchTabsLayoutStore from "SearchTabsLayoutStore" /* 11831 */;
 
 require = fn;
 function NoSearchResultsScreen(searchContext) {
@@ -25,7 +25,7 @@ function NoSearchResultsScreen(searchContext) {
   const effect = noop.useEffect(() => {
     const result = search_tracking_TrackingDefault.trackSearchEmptyResult({ searchContext });
   }, items);
-  const obj = searchContext(17204);
+  const obj = searchContext(16419);
   if (obj2.isIntelligenceSearchEmptyOrErrored(obj.useIntelligenceSearchStatus(searchContext).status)) {
     let tmp4Result = closure_12(IntelligenceSearchEmptyScreenDefault, {});
   } else {
@@ -38,7 +38,7 @@ function NoSearchResultsScreen(searchContext) {
   return tmp4Result;
 }
 const View = fn(17).View;
-const SearchConstants = fn(8209);
+const SearchConstants = fn(7298);
 ({ MESSAGE_SEARCH_RESULT_TABS_SET: closure_8, SEARCH_MESSAGE_TAB_SENTINEL: closure_9, SearchTabs: c10 } = SearchConstants);
 const ComponentActions = fn(1074).ComponentActions;
 const jsxProd = fn(21);
@@ -265,12 +265,12 @@ export default function ConnectedSearchTabsLayout(width) {
   const items2 = [candidateTabs];
   const memo = noop.useMemo(() => new Set(candidateTabs), items2);
   const obj = searchContext(504);
-  const autoSearchGuildChannelTab = searchContext(17299).useAutoSearchGuildChannelTab(searchContext, !memo.has(constants.GUILD_CHANNELS));
-  const obj3 = searchContext(17299);
-  const autoSearchMembersTab = searchContext(17300).useAutoSearchMembersTab(searchContext, !memo.has(constants.MEMBERS));
-  const obj4 = searchContext(17300);
-  const autoSearchPeopleTab = searchContext(17301).useAutoSearchPeopleTab(searchContext, !memo.has(constants.PEOPLE));
-  const obj5 = searchContext(17301);
-  const autoTrackSearchTabCountsViewedAnalytics = searchContext(17302).useAutoTrackSearchTabCountsViewedAnalytics({ searchContext, visibleTabCounts, visibleTabs });
+  const autoSearchGuildChannelTab = searchContext(16514).useAutoSearchGuildChannelTab(searchContext, !memo.has(constants.GUILD_CHANNELS));
+  const obj3 = searchContext(16514);
+  const autoSearchMembersTab = searchContext(16515).useAutoSearchMembersTab(searchContext, !memo.has(constants.MEMBERS));
+  const obj4 = searchContext(16515);
+  const autoSearchPeopleTab = searchContext(16516).useAutoSearchPeopleTab(searchContext, !memo.has(constants.PEOPLE));
+  const obj5 = searchContext(16516);
+  const autoTrackSearchTabCountsViewedAnalytics = searchContext(16517).useAutoTrackSearchTabCountsViewedAnalytics({ searchContext, visibleTabCounts, visibleTabs });
   return closure_12(closure_21, { searchContext, visibleTabs, visibleTabCounts, width: width.width });
 };

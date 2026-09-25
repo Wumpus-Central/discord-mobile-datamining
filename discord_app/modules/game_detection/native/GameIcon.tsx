@@ -1,11 +1,11 @@
-// === Module 7505: GameIcon ===
+// === Module 6588: GameIcon ===
 
-// Module 7505 (GameIcon)
+// Module 6588 (GameIcon)
 import nativeDefault from "native" /* 576 */;
-import _modDef7506 from "module_7506" /* 7506 */;
-import _modDef7507 from "module_7507" /* 7507 */;
-import _modDef7508 from "module_7508" /* 7508 */;
-import _modDef7509 from "module_7509" /* 7509 */;
+import _modDef6589 from "module_6589" /* 6589 */;
+import _modDef6590 from "module_6590" /* 6590 */;
+import _modDef6591 from "module_6591" /* 6591 */;
+import _modDef6592 from "module_6592" /* 6592 */;
 import noop from "module_19" /* 19 */;
 
 class GameIcon {

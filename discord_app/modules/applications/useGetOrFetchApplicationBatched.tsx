@@ -1,6 +1,6 @@
-// === Module 11901: useGetOrFetchApplicationBatched ===
+// === Module 11044: useGetOrFetchApplicationBatched ===
 
-// Module 11901 (useGetOrFetchApplicationBatched)
+// Module 11044 (useGetOrFetchApplicationBatched)
 import Timers from "Timers" /* 2039 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 5056 */;

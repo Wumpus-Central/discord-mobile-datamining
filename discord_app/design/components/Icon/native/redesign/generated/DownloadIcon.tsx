@@ -2,7 +2,7 @@
 
 // Module 4777 (DownloadIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4525 */;
+import BaseIconImage from "BaseIconImage" /* 4527 */;
 import _mod4778 from "module_4778" /* 4778 */;
 import noop from "module_19" /* 19 */;
 

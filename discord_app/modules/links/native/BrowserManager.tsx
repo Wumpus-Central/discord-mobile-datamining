@@ -4,7 +4,7 @@
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
 import PlatformUtils2 from "PlatformUtils" /* 1364 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import LinkingDefault from "Linking" /* 4520 */;
+import LinkingDefault from "Linking" /* 4522 */;
 import NativeBrowserManagerModule from "NativeBrowserManagerModule" /* 4794 */;
 import NativeBrowserManagerModuleIOSDefault from "NativeBrowserManagerModuleIOS" /* 4795 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

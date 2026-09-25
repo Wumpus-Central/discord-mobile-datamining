@@ -1,17 +1,17 @@
-// === Module 12246: AppealIngestionConfirmSubmission ===
+// === Module 11368: AppealIngestionConfirmSubmission ===
 
-// Module 12246 (AppealIngestionConfirmSubmission)
+// Module 11368 (AppealIngestionConfirmSubmission)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 8769 */;
-import useSafetyHubClassifications from "useSafetyHubClassifications" /* 12223 */;
-import AppealIngestionModal from "AppealIngestionModal" /* 12229 */;
-import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 12232 */;
-import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 12242 */;
-import AppealIngestionBreadcrumbsDefault from "AppealIngestionBreadcrumbs" /* 12247 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 7859 */;
+import useSafetyHubClassifications from "useSafetyHubClassifications" /* 11345 */;
+import AppealIngestionModal from "AppealIngestionModal" /* 11351 */;
+import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 11354 */;
+import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 11364 */;
+import AppealIngestionBreadcrumbsDefault from "AppealIngestionBreadcrumbs" /* 11369 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 8781 */;
+import SafetyHubStore from "SafetyHubStore" /* 7873 */;
 
 const require = globalThis.__r;
 

@@ -1,7 +1,7 @@
-// === Module 14117: XboxApplicationRecord ===
+// === Module 13278: XboxApplicationRecord ===
 
-// Module 14117 (XboxApplicationRecord)
-import PlatformsDefault from "Platforms" /* 5588 */;
+// Module 13278 (XboxApplicationRecord)
+import PlatformsDefault from "Platforms" /* 5590 */;
 import ApplicationRecord from "ApplicationRecord" /* 2002 */;
 
 let c2 = "xbox:";

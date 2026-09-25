@@ -1,6 +1,6 @@
-// === Module 15699: DisplayNameStylesGummyCustomColorSheet ===
+// === Module 14869: DisplayNameStylesGummyCustomColorSheet ===
 
-// Module 15699 (DisplayNameStylesGummyCustomColorSheet)
+// Module 14869 (DisplayNameStylesGummyCustomColorSheet)
 import nativeDefault from "native" /* 576 */;
 import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1389 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
@@ -27,7 +27,7 @@ let result = size.fileFinishedImporting("modules/display_name_styles/native/Disp
 export default function DisplayNameStylesGummyCustomColorSheet(onSelect) {
   onSelect = onSelect.onSelect;
   const tmp = closure_9();
-  let obj = onSelect(4561);
+  let obj = onSelect(4563);
   let obj2 = onSelect(1389);
   const sharedValue = obj.useSharedValue(obj2.wrapHue(onSelect(1092).int2hslRaw(onSelect.initialColor).h));
   const items = [sharedValue, onSelect];
@@ -48,16 +48,16 @@ export default function DisplayNameStylesGummyCustomColorSheet(onSelect) {
   const intl2 = onSelect(1115).intl;
   obj6.text = intl2.string(onSelect(1115).t.XqMe3N);
   obj6.onPress = callback1;
-  obj5.trailing = closure_7(onSelect(5273).Button, obj6);
-  obj4.header = closure_7(sharedValue(15694), obj5);
+  obj5.trailing = closure_7(onSelect(5274).Button, obj6);
+  obj4.header = closure_7(sharedValue(14864), obj5);
   const obj7 = { style: tmp.body, children: null };
   const obj8 = { style: tmp.previewWrapper, children: null };
-  const tmp5 = sharedValue(15694);
-  obj8.children = closure_7(View, { style: tmp.preview, children: closure_7(sharedValue(15700), { hue: sharedValue }) });
+  const tmp5 = sharedValue(14864);
+  obj8.children = closure_7(View, { style: tmp.preview, children: closure_7(sharedValue(14870), { hue: sharedValue }) });
   const items1 = [closure_7(View, obj8), ];
-  const obj10 = { style: tmp.huePickerInset, children: closure_7(sharedValue(14972), { hue: sharedValue, onPanFinalize: callback, saturation, lightness, fullWidth: true }) };
+  const obj10 = { style: tmp.huePickerInset, children: closure_7(sharedValue(14134), { hue: sharedValue, onPanFinalize: callback, saturation, lightness, fullWidth: true }) };
   items1[1] = closure_7(View, obj10);
   obj7.children = items1;
   obj4.children = closure_8(View, obj7);
-  return closure_7(onSelect(7483).BottomSheet, obj4);
+  return closure_7(onSelect(6566).BottomSheet, obj4);
 };

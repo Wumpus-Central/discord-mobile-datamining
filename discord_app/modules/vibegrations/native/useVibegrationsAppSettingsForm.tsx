@@ -1,22 +1,22 @@
-// === Module 17049: useVibegrationsAppSettingsForm ===
+// === Module 16239: useVibegrationsAppSettingsForm ===
 
-// Module 17049 (useVibegrationsAppSettingsForm)
+// Module 16239 (useVibegrationsAppSettingsForm)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3714 from "module_3714" /* 3714 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4796 */;
-import VibegrationsUtils from "VibegrationsUtils" /* 5362 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11679 */;
+import VibegrationsUtils from "VibegrationsUtils" /* 5363 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 10859 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4462 */;
+import GuildChannelStore from "GuildChannelStore" /* 4464 */;
 import GuildStore from "GuildStore" /* 2066 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 import UserStore from "UserStore" /* 1372 */;
-import VibegrationsChatStore from "VibegrationsChatStore" /* 13458 */;
-import VibegrationsConnectionStore_mod from "VibegrationsConnectionStore" /* 13457 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 9389 */;
+import VibegrationsChatStore from "VibegrationsChatStore" /* 12608 */;
+import VibegrationsConnectionStore_mod from "VibegrationsConnectionStore" /* 12607 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8487 */;
 
 require = fn;
 function VibegrationsChannelSettingRow(projectId) {
@@ -89,7 +89,7 @@ function VibegrationsChannelSettingRow(projectId) {
   return fallback;
 }
 const View = fn(17).View;
-let VibegrationsConnectionStore = fn(13457);
+let VibegrationsConnectionStore = fn(12607);
 ({ requestProjectRebuild: closure_12, sendUserMessage: map1, submitProjectSettings: closure_14 } = VibegrationsConnectionStore);
 let VibegrationsConnectionStore = VibegrationsConnectionStore_mod;
 const jsxProd = fn(21);
@@ -580,9 +580,9 @@ export default function useVibegrationsAppSettingsForm(projectId) {
                 if (application_id == null) {
                   _null = null;
                 }
-                _null2(13282)(_null);
+                _null2(12432)(_null);
                 let prop;
-                const tmp19 = _null2(13282);
+                const tmp19 = _null2(12432);
                 if (project2 != null) {
                   prop = project2.preview_application_id;
                 }
@@ -590,8 +590,8 @@ export default function useVibegrationsAppSettingsForm(projectId) {
                 if (prop == null) {
                   _null2 = null;
                 }
-                _null2(13282)(_null2);
-                const tmp27 = _null2(13282);
+                _null2(12432)(_null2);
+                const tmp27 = _null2(12432);
               }
               c5 = 0;
               closure_131_12(false);

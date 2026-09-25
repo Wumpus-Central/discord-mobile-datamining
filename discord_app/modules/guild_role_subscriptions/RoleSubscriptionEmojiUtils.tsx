@@ -1,7 +1,7 @@
-// === Module 5769: RoleSubscriptionEmojiUtils ===
+// === Module 5771: RoleSubscriptionEmojiUtils ===
 
-// Module 5769 (RoleSubscriptionEmojiUtils)
-import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5765 */;
+// Module 5771 (RoleSubscriptionEmojiUtils)
+import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5767 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/RoleSubscriptionEmojiUtils.tsx");

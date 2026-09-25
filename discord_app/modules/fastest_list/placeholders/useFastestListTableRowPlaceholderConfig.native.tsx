@@ -1,8 +1,8 @@
-// === Module 11217: useFastestListTableRowPlaceholderConfig ===
+// === Module 10315: useFastestListTableRowPlaceholderConfig ===
 
-// Module 11217 (useFastestListTableRowPlaceholderConfig)
+// Module 10315 (useFastestListTableRowPlaceholderConfig)
 import nativeDefault from "native" /* 576 */;
-import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7395 */;
+import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 6478 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ obj2.placeholderAvatar = size;
 let obj3 = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT };
 obj2.placeholderUsername = { height: 20, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 const obj4 = { height: 20, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
-obj2.placeholderDivider = { backgroundColor: fn(5746).DIVIDER_BACKGROUND };
+obj2.placeholderDivider = { backgroundColor: fn(5748).DIVIDER_BACKGROUND };
 const styles = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/placeholders/useFastestListTableRowPlaceholderConfig.native.tsx");

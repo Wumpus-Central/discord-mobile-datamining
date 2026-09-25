@@ -1,10 +1,10 @@
-// === Module 18414: AVErrorCameraSendLowFPS ===
+// === Module 17645: AVErrorCameraSendLowFPS ===
 
-// Module 18414 (AVErrorCameraSendLowFPS)
+// Module 17645 (AVErrorCameraSendLowFPS)
 import DurationsDefault from "Durations" /* 1091 */;
-import AVError from "AVError" /* 9769 */;
-import AVErrorContext from "AVErrorContext" /* 18397 */;
-import AVErrorUtils from "AVErrorUtils" /* 18400 */;
+import AVError from "AVError" /* 8867 */;
+import AVErrorContext from "AVErrorContext" /* 17628 */;
+import AVErrorUtils from "AVErrorUtils" /* 17631 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4852 */;

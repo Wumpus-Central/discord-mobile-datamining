@@ -1,6 +1,6 @@
-// === Module 8438: NativeMarkdownExperiment ===
+// === Module 7528: NativeMarkdownExperiment ===
 
-// Module 8438 (NativeMarkdownExperiment)
+// Module 7528 (NativeMarkdownExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

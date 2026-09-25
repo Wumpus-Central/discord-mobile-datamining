@@ -1,6 +1,6 @@
-// === Module 10369: ChannelCallSingleController ===
+// === Module 9471: ChannelCallSingleController ===
 
-// Module 10369 (ChannelCallSingleController)
+// Module 9471 (ChannelCallSingleController)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5009 */;
 import noop from "module_19" /* 19 */;
@@ -32,13 +32,13 @@ export const ChannelCallSingleController = function ChannelCallSingleController(
       return null;
     } else {
       let tmp18 = channel;
-      tmp18 = tmp18(selectedParticipant.user.id === tmp15 ? 10370 : 10372);
+      tmp18 = tmp18(selectedParticipant.user.id === tmp15 ? 9472 : 9474);
       let obj2 = { participant: selectedParticipant, channel };
       <tmp18 participant={selectedParticipant} channel={channel} />;
     }
   } else if (ParticipantTypes.USER === type) {
     let obj = { participant: selectedParticipant, channel };
-    return jsx(channel(10373), { participant: selectedParticipant, channel });
+    return jsx(channel(9475), { participant: selectedParticipant, channel });
   } else if (ParticipantTypes.HIDDEN_STREAM === type) {
     return null;
   } else if (ParticipantTypes.ACTIVITY === type) {

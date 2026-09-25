@@ -1,9 +1,9 @@
-// === Module 14261: useFilteredGuilds ===
+// === Module 13422: useFilteredGuilds ===
 
-// Module 14261 (useFilteredGuilds)
+// Module 13422 (useFilteredGuilds)
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2066 */;
-import SortedGuildStore from "SortedGuildStore" /* 5743 */;
+import SortedGuildStore from "SortedGuildStore" /* 5745 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = fn;

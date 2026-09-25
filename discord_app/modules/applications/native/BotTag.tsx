@@ -1,9 +1,9 @@
-// === Module 9635: BotTag ===
+// === Module 8733: BotTag ===
 
-// Module 9635 (BotTag)
+// Module 8733 (BotTag)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 9636 */;
+import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 8734 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

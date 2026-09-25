@@ -1,9 +1,9 @@
-// === Module 6122: BellSpotIllustration ===
+// === Module 16141: BellSpotIllustration ===
 
-// Module 6122 (BellSpotIllustration)
+// Module 16141 (BellSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5892 */;
-import _modDef6123 from "module_6123" /* 6123 */;
+import FastImageDefault from "FastImage" /* 5894 */;
+import _modDef16142 from "module_16142" /* 16142 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const BellSpotIllustration = function BellSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6123 };
+  const obj2 = { uri: _modDef16142 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

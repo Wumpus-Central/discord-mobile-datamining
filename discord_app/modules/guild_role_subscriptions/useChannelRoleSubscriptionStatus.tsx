@@ -1,9 +1,9 @@
-// === Module 5306: useChannelRoleSubscriptionStatus ===
+// === Module 5307: useChannelRoleSubscriptionStatus ===
 
-// Module 5306 (useChannelRoleSubscriptionStatus)
+// Module 5307 (useChannelRoleSubscriptionStatus)
 import GatedChannelStore from "GatedChannelStore" /* 2099 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
 
 const require = globalThis.__r;
 
@@ -50,10 +50,10 @@ let closure_6 = { needSubscriptionToAccess: false, isSubscriptionGated: false };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx");
 
-export default function useChannelRoleSubscriptionStatus(id) {
-  _require = id;
+export default function useChannelRoleSubscriptionStatus(arg0) {
+  _require = arg0;
   const items = [ChannelStore, GatedChannelStore, PermissionStore];
-  const items1 = [id];
+  const items1 = [arg0];
   return require("initialize").useStateFromStoresObject(items, () => getChannelRoleSubscriptionStatus(closure_0, ChannelStore, GatedChannelStore, PermissionStore), items1);
 };
 export { getChannelRoleSubscriptionStatus };

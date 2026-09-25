@@ -1,18 +1,18 @@
-// === Module 13918: PremiumPlanSelectYearlyUpsellModal ===
+// === Module 13077: PremiumPlanSelectYearlyUpsellModal ===
 
-// Module 13918 (PremiumPlanSelectYearlyUpsellModal)
-import common_AlertDefault from "common/Alert" /* 5292 */;
-import TextStylesDefault from "TextStyles" /* 5829 */;
-import _modDef13919 from "module_13919" /* 13919 */;
+// Module 13077 (PremiumPlanSelectYearlyUpsellModal)
+import common_AlertDefault from "common/Alert" /* 5293 */;
+import TextStylesDefault from "TextStyles" /* 5831 */;
+import _modDef13078 from "module_13078" /* 13078 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2111 */;
-import IAPStore from "IAPStore" /* 7570 */;
+import IAPStore from "IAPStore" /* 6653 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const usePremiumPlanSelectStore = fn(13909).usePremiumPlanSelectStore;
+const usePremiumPlanSelectStore = fn(13066).usePremiumPlanSelectStore;
 let closure_10 = fn(1374).PREMIUM_YEARLY_DISCOUNT_PERCENT;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -23,9 +23,9 @@ const merged = Object.assign(TextStylesDefault(fn(1085).Fonts.DISPLAY_EXTRABOLD,
 obj3.alignSelf = "center";
 obj3.textAlign = "center";
 obj3.paddingBottom = 8;
-obj3.color = fn(5746).DARK_WHITE_500_LIGHT_BLACK_500;
+obj3.color = fn(5748).DARK_WHITE_500_LIGHT_BLACK_500;
 obj2.header = obj3;
-obj2.description = { alignSelf: "center", textAlign: "center", paddingBottom: 32, color: fn(5746).DARK_WHITE_500_LIGHT_BLACK_500 };
+obj2.description = { alignSelf: "center", textAlign: "center", paddingBottom: 32, color: fn(5748).DARK_WHITE_500_LIGHT_BLACK_500 };
 obj2.upsellButton = { marginBottom: 16 };
 obj2.continueButton = { marginBottom: 4 };
 obj2.cancelButton = { marginTop: 8, marginBottom: 4 };
@@ -43,8 +43,8 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
   [tmp4, c3] = noop.useState(null);
   const obj = noop;
   const tmp3 = _slicedToArray(noop.useState(null), 2);
-  const premiumBundledItemsFromProductId = productId(7739).getPremiumBundledItemsFromProductId(productId);
-  const obj2 = productId(7739);
+  const premiumBundledItemsFromProductId = productId(6824).getPremiumBundledItemsFromProductId(productId);
+  const obj2 = productId(6824);
   let items = [LocaleStore];
   const stateFromStores = productId(504).useStateFromStores(items, () => locale.locale);
   const obj3 = productId(504);
@@ -80,13 +80,13 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
     const obj6 = { style: tmp.container, children: null };
     const obj7 = { style: tmp.image, source: null };
     const tmp5Result = productId(1881);
-    obj7.source = _modDef13919;
+    obj7.source = _modDef13078;
     const items2 = [closure_11(closure_5, obj7), , , , , ];
     const obj8 = { style: tmp.header, accessibilityRole: "header", children: null };
     const intl = productId(1115).intl;
     const obj9 = { discountPercentage: formatPercentResult, planName: null };
     const tmp19 = common_AlertDefault;
-    obj9.planName = productId(4483).getPremiumTypeDisplayName(premiumTier);
+    obj9.planName = productId(4485).getPremiumTypeDisplayName(premiumTier);
     obj8.children = intl.format(productId(1115).t.LQCVfK, obj9);
     items2[1] = closure_11(productId(1177).LegacyText, obj8);
     const obj10 = { style: tmp.description, children: null };
@@ -105,7 +105,7 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
     };
     obj13.disabled = tmp11;
     obj13.loading = "upsell" === tmp4 && tmp2;
-    obj12.children = closure_11(productId(5273).Button, obj13);
+    obj12.children = closure_11(productId(5274).Button, obj13);
     items2[3] = closure_11(closure_6, obj12);
     const obj15 = { style: tmp.continueButton, children: null };
     const obj16 = { variant: "secondary", text: null, onPress: null, disabled: null, loading: null };
@@ -117,14 +117,14 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
     };
     obj16.disabled = tmp11;
     obj16.loading = "default" === tmp4 && tmp2;
-    obj15.children = closure_11(productId(5273).Button, obj16);
+    obj15.children = closure_11(productId(5274).Button, obj16);
     items2[4] = closure_11(closure_6, obj15);
     const obj17 = { style: tmp.cancelButton, children: null };
     const obj18 = { variant: "tertiary", text: null, onPress: null };
     const intl5 = productId(1115).intl;
     obj18.text = intl5.string(productId(1115).t.cpT0Cq);
     obj18.onPress = onClose;
-    obj17.children = closure_11(productId(5273).Button, obj18);
+    obj17.children = closure_11(productId(5274).Button, obj18);
     items2[5] = closure_11(closure_6, obj17);
     obj6.children = items2;
     obj5.children = closure_12(closure_6, obj6);

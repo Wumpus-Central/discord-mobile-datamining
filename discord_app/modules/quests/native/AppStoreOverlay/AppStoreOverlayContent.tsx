@@ -1,8 +1,8 @@
-// === Module 11839: AppStoreOverlayContent ===
+// === Module 10708: AppStoreOverlayContent ===
 
-// Module 11839 (AppStoreOverlayContent)
-import openURL from "openURL" /* 4514 */;
-import LinkingDefault from "Linking" /* 4520 */;
+// Module 10708 (AppStoreOverlayContent)
+import openURL from "openURL" /* 4516 */;
+import LinkingDefault from "Linking" /* 4522 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

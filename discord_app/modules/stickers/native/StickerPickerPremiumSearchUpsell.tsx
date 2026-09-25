@@ -1,9 +1,9 @@
-// === Module 10764: StickerPickerPremiumSearchUpsell ===
+// === Module 9868: StickerPickerPremiumSearchUpsell ===
 
-// Module 10764 (StickerPickerPremiumSearchUpsell)
+// Module 9868 (StickerPickerPremiumSearchUpsell)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import PremiumUtils from "PremiumUtils" /* 4483 */;
+import PremiumUtils from "PremiumUtils" /* 4485 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

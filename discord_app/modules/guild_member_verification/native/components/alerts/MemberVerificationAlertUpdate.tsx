@@ -1,11 +1,11 @@
-// === Module 7423: MemberVerificationAlertUpdate ===
+// === Module 6506: MemberVerificationAlertUpdate ===
 
-// Module 7423 (MemberVerificationAlertUpdate)
+// Module 6506 (MemberVerificationAlertUpdate)
 import util from "util" /* 1115 */;
-import LinkingDefault from "Linking" /* 4520 */;
+import LinkingDefault from "Linking" /* 4522 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import common_AlertDefault from "common/Alert" /* 5292 */;
-import _modDef7424 from "module_7424" /* 7424 */;
+import common_AlertDefault from "common/Alert" /* 5293 */;
+import _modDef6507 from "module_6507" /* 6507 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,7 +31,7 @@ export default function MemberVerificationAlertUpdate(onClose) {
   };
   obj.onCancel = onClose.onClose;
   const tmp2 = common_AlertDefault;
-  const items = [hasOwnProperty(Image, { source: _modDef7424, style: tmp.headerImage }), , ];
+  const items = [hasOwnProperty(Image, { source: _modDef6507, style: tmp.headerImage }), , ];
   const obj3 = { style: tmp.header, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl3 = util.intl;
   obj3.children = intl3.string(util.t.kkjNHU);

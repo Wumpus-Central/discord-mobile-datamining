@@ -1,15 +1,15 @@
-// === Module 15596: SettingsVoiceScreen ===
+// === Module 14766: SettingsVoiceScreen ===
 
-// Module 15596 (SettingsVoiceScreen)
+// Module 14766 (SettingsVoiceScreen)
 import util from "util" /* 1115 */;
 import useThemeDefault from "useTheme" /* 4763 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6985 */;
-import KrispLogo2 from "KrispLogo" /* 10344 */;
-import _modDef10345 from "module_10345" /* 10345 */;
-import _modDef10346 from "module_10346" /* 10346 */;
-import SettingBuilders from "SettingBuilders" /* 11811 */;
-import SettingLayoutDefault from "SettingLayout" /* 15057 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6068 */;
+import KrispLogo2 from "KrispLogo" /* 9442 */;
+import _modDef9443 from "module_9443" /* 9443 */;
+import _modDef9444 from "module_9444" /* 9444 */;
+import SettingBuilders from "SettingBuilders" /* 10993 */;
+import SettingLayoutDefault from "SettingLayout" /* 14223 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
 import HelpdeskUtils from "HelpdeskUtils" /* 2110 */;
@@ -19,9 +19,9 @@ function KrispLogo() {
   const tmp = closure_13();
   const tmp4 = useThemeDefault();
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = _modDef10345;
+    let tmp2Result = _modDef9443;
   } else {
-    tmp2Result = _modDef10346;
+    tmp2Result = _modDef9444;
   }
   const obj2 = { style: tmp.krisp, children: null };
   const obj3 = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
@@ -58,7 +58,7 @@ function SystemProcessingSubLabel() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const MobileUserSettings = fn(8323).MobileUserSettings;
+const MobileUserSettings = fn(7412).MobileUserSettings;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
@@ -77,7 +77,7 @@ export default function SettingsVoiceScreen() {
     const items = [, , ];
     ({ INPUT_MODE: arr[0], AUTO_VOICE_SENSITIVITY: arr[1], VOICE_SENSITIVITY: arr[2] } = constants);
     obj3.settings = items;
-    const items1 = [obj3, , , , , , , ];
+    const items1 = [obj3, , , , , , , , ];
     const obj4 = { label: null, settings: null, subLabel: null };
     const intl2 = util.intl;
     obj4.label = intl2.string(util.t.UXxPGB);
@@ -132,6 +132,10 @@ export default function SettingsVoiceScreen() {
     const items9 = [constants.DISABLE_STREAM_PREVIEWS];
     obj14.settings = items9;
     items1[7] = obj14;
+    const obj15 = { settings: null };
+    const items10 = [constants.VIDEO_BACKGROUND];
+    obj15.settings = items10;
+    items1[8] = obj15;
     obj2.sections = items1;
     return obj.createList(obj2);
   }, []);

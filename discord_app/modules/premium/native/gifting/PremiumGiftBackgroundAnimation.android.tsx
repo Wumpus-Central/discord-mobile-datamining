@@ -1,8 +1,8 @@
-// === Module 11180: PremiumGiftBackgroundAnimation ===
+// === Module 10278: PremiumGiftBackgroundAnimation ===
 
-// Module 11180 (PremiumGiftBackgroundAnimation)
-import PremiumGiftingUtils from "PremiumGiftingUtils" /* 8430 */;
-import GiftAnimationData from "GiftAnimationData" /* 11181 */;
+// Module 10278 (PremiumGiftBackgroundAnimation)
+import PremiumGiftingUtils from "PremiumGiftingUtils" /* 7519 */;
+import GiftAnimationData from "GiftAnimationData" /* 10279 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4821 */;

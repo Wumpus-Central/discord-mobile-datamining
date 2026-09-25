@@ -1,17 +1,17 @@
-// === Module 13541: IndividualProductPreview ===
+// === Module 12693: IndividualProductPreview ===
 
-// Module 13541 (IndividualProductPreview)
+// Module 12693 (IndividualProductPreview)
 import nativeDefault from "native" /* 576 */;
 import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1077 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1973 */;
-import LinearGradientDefault from "LinearGradient" /* 5285 */;
-import useCurrentUser from "useCurrentUser" /* 8526 */;
-import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11462 */;
-import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11571 */;
-import AvatarDecorationProductPreviewDefault from "AvatarDecorationProductPreview" /* 13542 */;
-import NameplateProductPreviewDefault from "NameplateProductPreview" /* 13543 */;
-import FractionalNitroPreview from "FractionalNitroPreview" /* 13544 */;
-import OrbBadgePreview from "OrbBadgePreview" /* 13547 */;
+import LinearGradientDefault from "LinearGradient" /* 5286 */;
+import useCurrentUser from "useCurrentUser" /* 7616 */;
+import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 10560 */;
+import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 10776 */;
+import AvatarDecorationProductPreviewDefault from "AvatarDecorationProductPreview" /* 12694 */;
+import NameplateProductPreviewDefault from "NameplateProductPreview" /* 12695 */;
+import FractionalNitroPreview from "FractionalNitroPreview" /* 12696 */;
+import OrbBadgePreview from "OrbBadgePreview" /* 12699 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

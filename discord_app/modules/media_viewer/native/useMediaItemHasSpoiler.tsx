@@ -1,7 +1,7 @@
-// === Module 8614: useMediaItemHasSpoiler ===
+// === Module 7704: useMediaItemHasSpoiler ===
 
-// Module 8614 (useMediaItemHasSpoiler)
-import MediaSourceUtil from "MediaSourceUtil" /* 8615 */;
+// Module 7704 (useMediaItemHasSpoiler)
+import MediaSourceUtil from "MediaSourceUtil" /* 7705 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 

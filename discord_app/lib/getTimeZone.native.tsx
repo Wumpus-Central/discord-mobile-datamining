@@ -1,6 +1,6 @@
-// === Module 17804: getTimeZone ===
+// === Module 17028: getTimeZone ===
 
-// Module 17804 (getTimeZone)
+// Module 17028 (getTimeZone)
 import DeviceUtils from "DeviceUtils" /* 4808 */;
 import size from "module_2" /* 2 */;
 

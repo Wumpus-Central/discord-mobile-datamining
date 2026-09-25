@@ -1,9 +1,9 @@
-// === Module 7947: UserProfileGameWidgetTypes ===
+// === Module 7032: UserProfileGameWidgetTypes ===
 
-// Module 7947 (UserProfileGameWidgetTypes)
-import GameWidgetLimits from "GameWidgetLimits" /* 5414 */;
-import WidgetType from "WidgetType" /* 7946 */;
-import WidgetUtils from "WidgetUtils" /* 7948 */;
+// Module 7032 (UserProfileGameWidgetTypes)
+import GameWidgetLimits from "GameWidgetLimits" /* 5415 */;
+import WidgetType from "WidgetType" /* 7031 */;
+import WidgetUtils from "WidgetUtils" /* 7033 */;
 import size from "module_2" /* 2 */;
 
 const items = [WidgetType.WidgetType.CURRENT_GAMES, WidgetType.WidgetType.FAVORITE_GAMES, WidgetType.WidgetType.WANT_TO_PLAY_GAMES, WidgetType.WidgetType.PLAYED_GAMES];

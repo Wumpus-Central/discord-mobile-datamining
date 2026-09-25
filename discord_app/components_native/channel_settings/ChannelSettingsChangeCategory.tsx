@@ -1,25 +1,25 @@
-// === Module 17425: ChannelSettingsChangeCategory ===
+// === Module 16642: ChannelSettingsChangeCategory ===
 
-// Module 17425 (ChannelSettingsChangeCategory)
+// Module 16642 (ChannelSettingsChangeCategory)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4825 */;
 import useChannelName from "useChannelName" /* 4982 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5195 */;
-import Stack_Stack from "Stack/Stack" /* 5271 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5825 */;
-import TableRow from "TableRow" /* 5910 */;
-import TableRowGroup from "TableRowGroup" /* 5992 */;
-import Form from "Form" /* 8951 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5196 */;
+import Stack_Stack from "Stack/Stack" /* 5272 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5827 */;
+import TableRow from "TableRow" /* 5912 */;
+import TableRowGroup from "TableRowGroup" /* 5994 */;
+import Form from "Form" /* 8045 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 718 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7444 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 6527 */;
 import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4464 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import PermissionStore from "PermissionStore" /* 4466 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -275,7 +275,7 @@ prototype["render"] = function render() {
   obj.children = closure_1_14(Stack_Stack.Stack, obj2);
   return map1(Form.Form, obj);
 };
-ChannelSettingsChangeCategory.contextType = fn(4535).ThemeContext;
+ChannelSettingsChangeCategory.contextType = fn(4537).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeCategory.tsx");
 
@@ -286,7 +286,7 @@ export default function ConnectedChannelSettingsChangeCategory(channelId) {
   const obj = channelId(504);
   const navigation = channelId(1484).useNavigation();
   const obj2 = channelId(1484);
-  const appChannelBotUserId = channelId(11948).useAppChannelBotUserId(channel);
+  const appChannelBotUserId = channelId(11091).useAppChannelBotUserId(channel);
   _modDef38(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
   return closure_13(ChannelSettingsChangeCategory, { channel, navigation, appChannelBotUserId });
 };

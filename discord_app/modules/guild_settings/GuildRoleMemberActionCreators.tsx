@@ -1,11 +1,11 @@
-// === Module 7462: GuildRoleMemberActionCreators ===
+// === Module 6545: GuildRoleMemberActionCreators ===
 
-// Module 7462 (GuildRoleMemberActionCreators)
+// Module 6545 (GuildRoleMemberActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import privDefault from "priv" /* 1438 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5825 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5827 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7461 */;
+import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 6544 */;
 
 const require = globalThis.__r;
 

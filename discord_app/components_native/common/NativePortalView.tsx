@@ -1,7 +1,7 @@
-// === Module 8618: NativePortalView ===
+// === Module 7708: NativePortalView ===
 
-// Module 8618 (NativePortalView)
-import PortalViewNativeComponentDefault from "PortalViewNativeComponent" /* 8619 */;
+// Module 7708 (NativePortalView)
+import PortalViewNativeComponentDefault from "PortalViewNativeComponent" /* 7709 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

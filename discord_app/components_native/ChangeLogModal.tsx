@@ -1,18 +1,18 @@
-// === Module 15899: ChangeLogModal ===
+// === Module 15069: ChangeLogModal ===
 
-// Module 15899 (ChangeLogModal)
+// Module 15069 (ChangeLogModal)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5032 */;
-import FastImageDefault from "FastImage" /* 5892 */;
-import NavigatorHeader from "NavigatorHeader" /* 5929 */;
-import Navigator from "Navigator" /* 7333 */;
-import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate" /* 8439 */;
-import openMediaModal from "openMediaModal" /* 8609 */;
-import common_VideoDefault from "common/Video" /* 8657 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 10095 */;
-import _modDef10744 from "module_10744" /* 10744 */;
-import _modDef15900 from "module_15900" /* 15900 */;
+import FastImageDefault from "FastImage" /* 5894 */;
+import NavigatorHeader from "NavigatorHeader" /* 5931 */;
+import Navigator from "Navigator" /* 6416 */;
+import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate" /* 7529 */;
+import openMediaModal from "openMediaModal" /* 7699 */;
+import common_VideoDefault from "common/Video" /* 7747 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9192 */;
+import _modDef9848 from "module_9848" /* 9848 */;
+import _modDef15070 from "module_15070" /* 15070 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -172,7 +172,7 @@ ListItem.prototype["render"] = function render() {
   obj.children = items;
   return React6(View, obj);
 };
-ListItem.contextType = fn(4535).ThemeContext;
+ListItem.contextType = fn(4537).ThemeContext;
 const PureComponent2 = noop.PureComponent;
 class ChangeLog extends PureComponent2 {
   constructor() {
@@ -274,7 +274,7 @@ prototype["renderVideo"] = function renderVideo() {
             },
         useLocalHTML: true
       };
-      const items = [closure_7(_modDef15900, obj4), ];
+      const items = [closure_7(_modDef15070, obj4), ];
       let tmp6Result = null;
       if (!tmp2) {
         const obj5 = { style: tmp.videoOverlay, source: null };
@@ -305,9 +305,9 @@ prototype["renderVideo"] = function renderVideo() {
   let tmp12Result = null;
   if (null != video) {
     const obj9 = { accessibilityLabel: "Play Video", accessibilityRole: "button", style: tmp.videoOverlay, onPress: self.playVideo, children: null };
-    const obj10 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: _modDef10744, onPress: self.playVideo, style: tmp.playButton, iconSize: tmp18(1177).IconSizes.CUSTOM, iconStyle: tmp.playIcon };
+    const obj10 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: _modDef9848, onPress: self.playVideo, style: tmp.playButton, iconSize: tmp18(1177).IconSizes.CUSTOM, iconStyle: tmp.playIcon };
     obj9.children = closure_7(TouchableHitBoxDefault, obj10);
-    tmp12Result = closure_7(tmp18(5427).PressableOpacity, obj9);
+    tmp12Result = closure_7(tmp18(5428).PressableOpacity, obj9);
     const tmp15Result = TouchableHitBoxDefault;
   }
   items1[1] = tmp12Result;
@@ -322,7 +322,7 @@ prototype["render"] = function render() {
   obj.onScroll = this.handleScroll;
   return React5(ChangeLogStandardTemplateDefault, obj);
 };
-ChangeLog.contextType = fn(4535).ThemeContext;
+ChangeLog.contextType = fn(4537).ThemeContext;
 size = fn(2);
 let result = size.fileFinishedImporting("components_native/ChangeLogModal.tsx");
 

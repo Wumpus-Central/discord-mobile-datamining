@@ -1,16 +1,16 @@
-// === Module 9061: GameProfileStoreLinksActionSheet ===
+// === Module 8155: GameProfileStoreLinksActionSheet ===
 
-// Module 9061 (GameProfileStoreLinksActionSheet)
+// Module 8155 (GameProfileStoreLinksActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import LinkingDefault from "Linking" /* 4520 */;
+import LinkingDefault from "Linking" /* 4522 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import components_Button_Button from "components/Button/Button" /* 5273 */;
-import BottomSheetModal from "BottomSheetModal" /* 6957 */;
-import ActionSheet from "ActionSheet" /* 7530 */;
-import useOpenExternalUrlFromGameProfileDefault from "useOpenExternalUrlFromGameProfile" /* 9034 */;
+import components_Button_Button from "components/Button/Button" /* 5274 */;
+import BottomSheetModal from "BottomSheetModal" /* 6040 */;
+import ActionSheet from "ActionSheet" /* 6613 */;
+import useOpenExternalUrlFromGameProfileDefault from "useOpenExternalUrlFromGameProfile" /* 8128 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

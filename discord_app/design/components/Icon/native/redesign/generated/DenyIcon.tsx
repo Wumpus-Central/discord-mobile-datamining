@@ -1,9 +1,9 @@
-// === Module 8277: DenyIcon ===
+// === Module 7366: DenyIcon ===
 
-// Module 8277 (DenyIcon)
+// Module 7366 (DenyIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4525 */;
-import _mod8278 from "module_8278" /* 8278 */;
+import BaseIconImage from "BaseIconImage" /* 4527 */;
+import _mod7367 from "module_7367" /* 7367 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const DenyIcon = function DenyIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8278, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7367, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

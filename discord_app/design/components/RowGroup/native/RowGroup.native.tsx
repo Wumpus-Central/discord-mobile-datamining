@@ -1,9 +1,9 @@
-// === Module 14345: RowGroup ===
+// === Module 13506: RowGroup ===
 
-// Module 14345 (RowGroup)
+// Module 13506 (RowGroup)
 import nativeDefault from "native" /* 576 */;
-import Stack_Stack from "Stack/Stack" /* 5271 */;
-import TableRowGroup from "TableRowGroup" /* 5992 */;
+import Stack_Stack from "Stack/Stack" /* 5272 */;
+import TableRowGroup from "TableRowGroup" /* 5994 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 10613: MediaPostMultipleThumbnailActionSheet ===
+// === Module 9717: MediaPostMultipleThumbnailActionSheet ===
 
-// Module 10613 (MediaPostMultipleThumbnailActionSheet)
+// Module 9717 (MediaPostMultipleThumbnailActionSheet)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
 import noop from "module_19" /* 19 */;
@@ -62,9 +62,9 @@ export default function MediaPostThumbnailActionSheet(markAsDismissed) {
   obj9.onPress = function onPress() {
     return markAsDismissed(ContentDismissActionType.UNKNOWN);
   };
-  items2[5] = closure_5(markAsDismissed(5273).Button, obj9);
+  items2[5] = closure_5(markAsDismissed(5274).Button, obj9);
   obj3.children = items2;
-  obj2.children = closure_6(markAsDismissed(6957).BottomSheetScrollView, obj3);
+  obj2.children = closure_6(markAsDismissed(6040).BottomSheetScrollView, obj3);
   obj.children = closure_5(View, obj2);
-  return closure_5(markAsDismissed(7483).BottomSheet, obj);
+  return closure_5(markAsDismissed(6566).BottomSheet, obj);
 };

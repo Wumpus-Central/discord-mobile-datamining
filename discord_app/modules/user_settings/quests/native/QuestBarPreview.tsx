@@ -1,10 +1,10 @@
-// === Module 15517: QuestBarPreview ===
+// === Module 14687: QuestBarPreview ===
 
-// Module 15517 (QuestBarPreview)
+// Module 14687 (QuestBarPreview)
 import nativeDefault from "native" /* 576 */;
-import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext" /* 15435 */;
-import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 15518 */;
-import QuestDock from "QuestDock" /* 15519 */;
+import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext" /* 14603 */;
+import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 14688 */;
+import QuestDock from "QuestDock" /* 14689 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

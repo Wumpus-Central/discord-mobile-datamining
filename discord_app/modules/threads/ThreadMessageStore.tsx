@@ -1,6 +1,6 @@
-// === Module 7636: ThreadMessageStore ===
+// === Module 6719: ThreadMessageStore ===
 
-// Module 7636 (ThreadMessageStore)
+// Module 6719 (ThreadMessageStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
@@ -9,7 +9,7 @@ import Constants from "Constants" /* 1074 */;
 import ThreadConstants from "ThreadConstants" /* 1114 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 5051 */;
 import ChannelRecord from "ChannelRecord" /* 2048 */;
-import MessageRecord from "MessageRecord" /* 4475 */;
+import MessageRecord from "MessageRecord" /* 4477 */;
 import UserRecord from "UserRecord" /* 1386 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import MessageStore from "MessageStore" /* 5049 */;

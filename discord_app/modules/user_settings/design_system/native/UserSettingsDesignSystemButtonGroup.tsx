@@ -1,12 +1,12 @@
-// === Module 16164: UserSettingsDesignSystemButtonGroup ===
+// === Module 15341: UserSettingsDesignSystemButtonGroup ===
 
-// Module 16164 (UserSettingsDesignSystemButtonGroup)
+// Module 15341 (UserSettingsDesignSystemButtonGroup)
 import Text_Text from "Text/Text" /* 4825 */;
-import Stack_Stack from "Stack/Stack" /* 5271 */;
-import components_Button_Button from "components/Button/Button" /* 5273 */;
-import ButtonGroup from "ButtonGroup" /* 5738 */;
-import _modDef7711 from "module_7711" /* 7711 */;
-import IconButton from "IconButton" /* 8269 */;
+import Stack_Stack from "Stack/Stack" /* 5272 */;
+import components_Button_Button from "components/Button/Button" /* 5274 */;
+import ButtonGroup from "ButtonGroup" /* 5740 */;
+import _modDef6794 from "module_6794" /* 6794 */;
+import IconButton from "IconButton" /* 7358 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -56,7 +56,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
     hasOwnProperty(IconButton.IconButton, {
       accessibilityLabel: "Settings",
       variant: "secondary",
-      icon: _modDef7711,
+      icon: _modDef6794,
       onPress() {
 
       }
@@ -66,7 +66,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
   const obj12 = {
     accessibilityLabel: "Settings",
     variant: "secondary",
-    icon: _modDef7711,
+    icon: _modDef6794,
     onPress() {
 
     }
@@ -88,7 +88,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
   items4[1] = hasOwnProperty(IconButton.IconButton, {
     accessibilityLabel: "Settings",
     variant: "secondary",
-    icon: _modDef7711,
+    icon: _modDef6794,
     onPress() {
 
     }
@@ -116,7 +116,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
   const obj13 = {
     accessibilityLabel: "Settings",
     variant: "secondary",
-    icon: _modDef7711,
+    icon: _modDef6794,
     onPress() {
 
     }
@@ -132,7 +132,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
   items6[1] = hasOwnProperty(IconButton.IconButton, {
     accessibilityLabel: "Cancel",
     variant: "secondary",
-    icon: _modDef7711,
+    icon: _modDef6794,
     onPress() {
 
     }

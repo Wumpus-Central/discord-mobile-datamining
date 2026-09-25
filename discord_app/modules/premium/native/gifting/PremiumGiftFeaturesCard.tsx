@@ -1,85 +1,65 @@
-// === Module 11098: PremiumGiftFeaturesCard ===
+// === Module 10203: PremiumGiftFeaturesCard ===
 
-// Module 11098 (PremiumGiftFeaturesCard)
+// Module 10203 (PremiumGiftFeaturesCard)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import StringUtils from "StringUtils" /* 2010 */;
-import _modDef2550 from "module_2550" /* 2550 */;
-import native from "native" /* 4535 */;
-import ClockIcon from "ClockIcon" /* 4791 */;
+import native from "native" /* 4537 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import components_Button_Button from "components/Button/Button" /* 5273 */;
-import LinearGradientDefault from "LinearGradient" /* 5285 */;
-import TextStylesDefault from "TextStyles" /* 5829 */;
-import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 9192 */;
-import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9567 */;
-import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 9579 */;
-import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9581 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 9588 */;
-import MarketingComponentType from "MarketingComponentType" /* 11087 */;
-import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 11099 */;
-import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 11100 */;
-import MarketingComponentHooks from "MarketingComponentHooks" /* 11101 */;
-import SlayerStorefrontTimeUtils from "SlayerStorefrontTimeUtils" /* 11102 */;
-import PremiumGiftPromotionDetailsDefault from "PremiumGiftPromotionDetails" /* 11103 */;
-import PremiumGiftCountdownBadgeDefault from "PremiumGiftCountdownBadge" /* 11105 */;
+import components_Button_Button from "components/Button/Button" /* 5274 */;
+import LinearGradientDefault from "LinearGradient" /* 5286 */;
+import TextStylesDefault from "TextStyles" /* 5831 */;
+import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 8286 */;
+import usePremiumFeaturesDefault from "usePremiumFeatures" /* 8665 */;
+import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 8677 */;
+import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 8679 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 8686 */;
+import MarketingComponentType from "MarketingComponentType" /* 10191 */;
+import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10204 */;
+import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 10205 */;
+import MarketingComponentHooks from "MarketingComponentHooks" /* 10206 */;
+import PremiumGiftPromotionDetailsDefault from "PremiumGiftPromotionDetails" /* 10207 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 11013 */;
+import PromotionsStore from "PromotionsStore" /* 10117 */;
 
 require = fn;
 function PremiumGiftPlanSelectPromotionDetails(config) {
   config = config.config;
-  ({ isSelected, onPress } = config);
+  ({ numClaimableRewards, isSelected, onPress } = config);
   const tmp = closure_15(config.isLargeSize);
   const themeAndReducedMotionAwareAssetUrl = MarketingComponentHooks.useThemeAndReducedMotionAwareAssetUrl(config.avatarAsset, true);
-  const items = [PromotionsStore];
-  const stateFromStores = initialize.useStateFromStores(items, () => giftPromotion.getGiftPromotion());
-  let endDate;
-  if (stateFromStores != null) {
-    endDate = stateFromStores.endDate;
-  }
-  const tickingFormattedLimitedOfferTimeLeft = SlayerStorefrontTimeUtils.useTickingFormattedLimitedOfferTimeLeft(endDate);
-  obj4 = { theme: constants3.DARK, children: null };
-  const obj5 = { style: tmp.promotionDetailsContainer, colors: [4294967102, 4294967053], children: null };
-  const obj6 = { imageUrl: themeAndReducedMotionAwareAssetUrl, topContent: null, title: null, titleColor: "control-primary-text-default", subtitle: null, subtitleColor: "control-primary-text-default", shouldAnimate: null };
-  let tmp8Result = null != tickingFormattedLimitedOfferTimeLeft;
-  const tmp11 = LinearGradientDefault;
-  if (tmp8Result) {
-    const obj7 = { text: tickingFormattedLimitedOfferTimeLeft, icon: null, style: null };
-    obj8 = { size: "xxs", color: nativeDefault.colors.ICON_OVERLAY_LIGHT };
-    obj7.icon = React7(ClockIcon.ClockIcon, obj8);
-    obj7.style = tmp.countdownBadge;
-    tmp8Result = React7(PremiumGiftCountdownBadgeDefault, obj7);
-    const tmp10Result = PremiumGiftCountdownBadgeDefault;
-  }
-  obj6.topContent = tmp8Result;
-  const tmp12 = PremiumGiftPromotionDetailsDefault;
-  if (tmp2Result.isNullOrEmpty(config.header)) {
+  const obj2 = { theme: constants3.DARK, children: null };
+  const obj3 = { style: tmp.promotionDetailsContainer, colors: [4294967102, 4294967053], children: null };
+  obj4 = { imageUrl: themeAndReducedMotionAwareAssetUrl, title: null, subtitle: null, subtitleColor: "text-default", shouldAnimate: null };
+  const tmp7 = LinearGradientDefault;
+  const tmp8 = PremiumGiftPromotionDetailsDefault;
+  if (obj5.isNullOrEmpty(config.header)) {
     const intl = util.intl;
-    let header = intl.string(util.t.Ve9Ge6);
+    let header = intl.string(util.t.OEtqpm);
   } else {
     header = config.header;
   }
-  obj6.title = header;
-  tmp2Result = StringUtils;
-  if (tmp2Result2.isNullOrEmpty(config.mobileBody)) {
+  obj4.title = header;
+  obj5 = StringUtils;
+  if (tmp2Result.isNullOrEmpty(config.mobileBody)) {
     const intl2 = util.intl;
-    let mobileBody = intl2.string(_modDef2550.zVGHbw);
+    const obj6 = { availableCount: numClaimableRewards };
+    let mobileBody = intl2.formatToPlainString(util.t["2h5M+X"], obj6);
   } else {
     mobileBody = config.mobileBody;
   }
-  obj6.subtitle = mobileBody;
-  obj6.shouldAnimate = isSelected;
-  const items1 = [React7(tmp12, obj6), ];
-  const obj9 = { variant: "primary-overlay", text: null, onPress: null };
+  obj4.subtitle = mobileBody;
+  obj4.shouldAnimate = isSelected;
+  const items = [React7(tmp8, obj4), ];
+  const obj7 = { variant: "primary-overlay", text: null, onPress: null };
   const intl3 = util.intl;
-  obj9.text = intl3.string(util.t.Ve9Ge6);
-  obj9.onPress = onPress;
-  items1[1] = React7(components_Button_Button.Button, obj9);
-  obj5.children = items1;
-  obj4.children = closure_1_10(tmp11, obj5);
-  return React7(native.ThemeContextProvider, obj4);
+  obj7.text = intl3.string(util.t.Ve9Ge6);
+  obj7.onPress = onPress;
+  items[1] = React7(components_Button_Button.Button, obj7);
+  obj3.children = items;
+  obj2.children = closure_1_10(tmp7, obj3);
+  return React7(native.ThemeContextProvider, obj2);
 }
 const View = fn(17).View;
 const PremiumConstants = fn(1374);
@@ -115,7 +95,7 @@ const obj14 = { marginTop: nativeDefault.space.PX_12 };
 obj12.smallCompact = { marginTop: nativeDefault.space.PX_8 };
 const createStyles = fn(4829);
 let closure_15 = createStyles.createStyles(() => {
-  obj = { card: null, logo: null, pricing: null, featureTitle: null, features: null, button: null, featureIcon: null, featureText: null, promotionDetailsContainer: null, countdownBadge: null };
+  obj = { card: null, logo: null, pricing: null, featureTitle: null, features: null, button: null, featureIcon: null, featureText: null, promotionDetailsContainer: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
   obj.card = { justifyContent: "flex-start", borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BG_SURFACE_RAISED };
   const obj2 = { justifyContent: "flex-start", borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BG_SURFACE_RAISED };
@@ -135,8 +115,6 @@ let closure_15 = createStyles.createStyles(() => {
   obj8.marginStart = -8;
   obj.featureText = obj8;
   obj.promotionDetailsContainer = { marginHorizontal: nativeDefault.space.PX_24, marginTop: nativeDefault.space.PX_20, marginBottom: nativeDefault.space.PX_32, padding: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm };
-  const obj9 = { marginHorizontal: nativeDefault.space.PX_24, marginTop: nativeDefault.space.PX_20, marginBottom: nativeDefault.space.PX_32, padding: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm };
-  obj.countdownBadge = { alignSelf: "flex-start", marginBottom: nativeDefault.space.PX_4 };
   return obj;
 });
 const obj15 = { marginTop: nativeDefault.space.PX_8 };
@@ -205,7 +183,7 @@ export default noop.memo(function PremiumGiftFeaturesCard(variant) {
   if (tmp11) {
     if (null != stateFromStores) {
       if (premiumType === hasOwnProperty.TIER_2) {
-        obj8 = { config: stateFromStores, isLargeSize: tmp5, isSelected, onPress };
+        obj8 = { config: stateFromStores, numClaimableRewards: claimableRewards.length, isLargeSize: tmp5, isSelected, onPress };
         let tmp12Result = React7(PremiumGiftPlanSelectPromotionDetails, obj8);
       }
       items3[6] = tmp12Result;

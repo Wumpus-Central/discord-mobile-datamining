@@ -1,10 +1,10 @@
-// === Module 8279: ConversationPreviewMessage ===
+// === Module 7368: ConversationPreviewMessage ===
 
-// Module 8279 (ConversationPreviewMessage)
+// Module 7368 (ConversationPreviewMessage)
 import nativeDefault from "native" /* 576 */;
-import DateUtils from "DateUtils" /* 4507 */;
-import RowGeneratorDefault from "RowGenerator" /* 8280 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8485 */;
+import DateUtils from "DateUtils" /* 4509 */;
+import RowGeneratorDefault from "RowGenerator" /* 7369 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 7575 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4821 */;
 import GuildMemberStore from "GuildMemberStore" /* 2107 */;

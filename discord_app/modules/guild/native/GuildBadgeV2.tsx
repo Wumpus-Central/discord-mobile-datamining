@@ -1,11 +1,11 @@
-// === Module 9100: GuildBadgeV2 ===
+// === Module 8194: GuildBadgeV2 ===
 
-// Module 9100 (GuildBadgeV2)
+// Module 8194 (GuildBadgeV2)
 import native from "native" /* 1177 */;
-import shared from "shared" /* 4680 */;
-import GuildBadgeImageSource from "GuildBadgeImageSource" /* 9101 */;
-import BadgeCategory from "BadgeCategory" /* 9102 */;
-import GuildTraits from "GuildTraits" /* 9103 */;
+import shared from "shared" /* 4682 */;
+import GuildBadgeImageSource from "GuildBadgeImageSource" /* 8195 */;
+import BadgeCategory from "BadgeCategory" /* 8196 */;
+import GuildTraits from "GuildTraits" /* 8197 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

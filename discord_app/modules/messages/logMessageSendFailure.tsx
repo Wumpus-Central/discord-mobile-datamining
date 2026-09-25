@@ -1,6 +1,6 @@
-// === Module 8173: logMessageSendFailure ===
+// === Module 7258: logMessageSendFailure ===
 
-// Module 8173 (logMessageSendFailure)
+// Module 7258 (logMessageSendFailure)
 import Constants from "Constants" /* 1074 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5009 */;
 import size from "module_2" /* 2 */;

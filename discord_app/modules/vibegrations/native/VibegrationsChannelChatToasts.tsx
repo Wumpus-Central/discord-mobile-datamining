@@ -1,13 +1,13 @@
-// === Module 17180: VibegrationsChannelChatToasts ===
+// === Module 16395: VibegrationsChannelChatToasts ===
 
-// Module 17180 (VibegrationsChannelChatToasts)
+// Module 16395 (VibegrationsChannelChatToasts)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import UserUtils from "UserUtils" /* 4673 */;
+import UserUtils from "UserUtils" /* 4675 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import Card from "Card" /* 5912 */;
-import useVibegrationsChatToastMessagesDefault from "useVibegrationsChatToastMessages" /* 17181 */;
+import Card from "Card" /* 5914 */;
+import useVibegrationsChatToastMessagesDefault from "useVibegrationsChatToastMessages" /* 16396 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ function ChatToast(message) {
     const obj2 = { style: tmp.opaque, children: null };
     const callback = noop.useCallback(() => onOpenChat(message), items);
     const obj3 = { variant: "primary", shadow: "high", border: "subtle", style: tmp.card, onPress: callback, children: null };
-    const obj4 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "r" };
+    const obj4 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "Array" };
     const items1 = [hasOwnProperty(native.Avatar, obj4), ];
     const obj5 = { style: tmp.body, children: null };
     const obj6 = { variant: "text-xs/semibold", color: "text-default", lineClamp: 1, children: name };

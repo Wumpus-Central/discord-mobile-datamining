@@ -1,11 +1,11 @@
-// === Module 15402: BountiesModalEndCard ===
+// === Module 14568: BountiesModalEndCard ===
 
-// Module 15402 (BountiesModalEndCard)
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4561 */;
+// Module 14568 (BountiesModalEndCard)
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4563 */;
 import timing from "timing" /* 4830 */;
 import timingPresets from "timingPresets" /* 4833 */;
-import LinearGradientDefault from "LinearGradient" /* 5285 */;
-import BountiesEndCardPressableCtaDefault from "BountiesEndCardPressableCta" /* 15390 */;
+import LinearGradientDefault from "LinearGradient" /* 5286 */;
+import BountiesEndCardPressableCtaDefault from "BountiesEndCardPressableCta" /* 14556 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4829 */;
@@ -30,7 +30,7 @@ export default function BountiesModalEndCard(visible) {
   visible = visible.visible;
   ({ bounty, sourceQuestContent } = visible);
   const tmp = closure_7();
-  visible(4561);
+  visible(4563);
   const fn = function y() {
     let num = 0;
     if (visible) {

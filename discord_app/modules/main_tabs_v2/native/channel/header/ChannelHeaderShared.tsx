@@ -1,23 +1,23 @@
-// === Module 13677: ChannelHeaderShared ===
+// === Module 12831: ChannelHeaderShared ===
 
-// Module 13677 (ChannelHeaderShared)
+// Module 12831 (ChannelHeaderShared)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import useToken from "useToken" /* 4526 */;
+import useToken from "useToken" /* 4528 */;
 import Text_Text from "Text/Text" /* 4825 */;
 import useChannelName from "useChannelName" /* 4982 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5327 */;
-import Pressables from "Pressables" /* 5427 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7313 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11248 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 11262 */;
-import _modDef13678 from "module_13678" /* 13678 */;
-import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 13679 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5328 */;
+import Pressables from "Pressables" /* 5428 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6396 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10346 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10360 */;
+import _modDef12832 from "module_12832" /* 12832 */;
+import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 12833 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -72,7 +72,7 @@ function ChannelTitle(guildId) {
   items[1] = tmp8;
   let tmp5Result = !disableArrow;
   if (!disableArrow) {
-    const obj6 = { source: _modDef13678, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+    const obj6 = { source: _modDef12832, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
     tmp5Result = tmp5(native.Icon, obj6);
   }
   items[2] = tmp5Result;
@@ -94,7 +94,7 @@ function GroupDMIcon(channel) {
 function UserAvatar(user) {
   user = user.user;
   ({ status, isMobileOnline, isVROnline } = user);
-  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status: false, isMobileOnline: null, isVROnline: true, style: null, autoStatusCutout: false };
+  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status: null, isMobileOnline: null, isVROnline: null, style: null, autoStatusCutout: null };
   let tmp3 = null;
   if (!user.isSystemUser()) {
     tmp3 = status;

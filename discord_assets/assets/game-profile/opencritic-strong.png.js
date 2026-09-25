@@ -1,6 +1,6 @@
-// === Module 9086: ? ===
+// === Module 8180: ? ===
 
-// Module 9086
+// Module 8180
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/game-profile/opencritic-strong.png.js");

@@ -1,9 +1,0 @@
-// === Module 6275: ? ===
-
-// Module 6275
-import size from "module_2" /* 2 */;
-
-const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/EmojiDuckSweatExample-2x.png.js");
-
-export default "https://cdn.discordapp.com/assets/content/4ca9eb32edd9326c55a64ab8e28e7ce0bd5e6d123ada84d91286bf661b56fd87.png";
-export const metadata = { fileBytes: 4173 };

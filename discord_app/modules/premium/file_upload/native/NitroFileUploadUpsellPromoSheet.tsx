@@ -1,8 +1,8 @@
-// === Module 17519: NitroFileUploadUpsellPromoSheet ===
+// === Module 16743: NitroFileUploadUpsellPromoSheet ===
 
-// Module 17519 (NitroFileUploadUpsellPromoSheet)
+// Module 16743 (NitroFileUploadUpsellPromoSheet)
 import nativeDefault from "native" /* 576 */;
-import openUserSettings from "openUserSettings" /* 7712 */;
+import openUserSettings from "openUserSettings" /* 6795 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

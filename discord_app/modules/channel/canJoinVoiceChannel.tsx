@@ -1,6 +1,6 @@
-// === Module 5721: canJoinVoiceChannel ===
+// === Module 5723: canJoinVoiceChannel ===
 
-// Module 5721 (canJoinVoiceChannel)
+// Module 5723 (canJoinVoiceChannel)
 import Constants from "Constants" /* 1074 */;
 import ChannelRecord from "ChannelRecord" /* 2048 */;
 import size from "module_2" /* 2 */;

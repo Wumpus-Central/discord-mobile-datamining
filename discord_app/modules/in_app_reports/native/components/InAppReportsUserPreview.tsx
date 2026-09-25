@@ -1,12 +1,12 @@
-// === Module 9014: InAppReportsUserPreview ===
+// === Module 8108: InAppReportsUserPreview ===
 
-// Module 9014 (InAppReportsUserPreview)
+// Module 8108 (InAppReportsUserPreview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import ColorUtils from "ColorUtils" /* 4678 */;
+import ColorUtils from "ColorUtils" /* 4680 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7312 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6395 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,7 +48,7 @@ export default function UserPreview(user) {
   const items2 = [tmp.userContainer, { borderColor: ColorUtils.hexWithOpacity(tmp.borderColor.color, 0.08) }];
   obj5.style = items2;
   const hexWithOpacityResult = ColorUtils.hexWithOpacity(tmp.borderColor.color, 0.08);
-  const items3 = [React3(native.Avatar, { size: native.AvatarSizes.LARGE_48, user, guildId: "r" }), ];
+  const items3 = [React3(native.Avatar, { size: native.AvatarSizes.LARGE_48, user, guildId: "Array" }), ];
   const obj7 = { style: tmp.userProfileInfo, children: null };
   let tmp8Result = null != user.globalName;
   if (tmp8Result) {

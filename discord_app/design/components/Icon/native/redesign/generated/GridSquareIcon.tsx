@@ -1,9 +1,9 @@
-// === Module 17389: GridSquareIcon ===
+// === Module 16606: GridSquareIcon ===
 
-// Module 17389 (GridSquareIcon)
+// Module 16606 (GridSquareIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4525 */;
-import _mod16181 from "module_16181" /* 16181 */;
+import BaseIconImage from "BaseIconImage" /* 4527 */;
+import _mod15358 from "module_15358" /* 15358 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const GridSquareIcon = function GridSquareIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16181, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15358, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

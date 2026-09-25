@@ -1,12 +1,12 @@
-// === Module 18445: PendingRequestList ===
+// === Module 17676: PendingRequestList ===
 
-// Module 18445 (PendingRequestList)
+// Module 17676 (PendingRequestList)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import _modDef2486 from "module_2486" /* 2486 */;
 import _modDef2780 from "module_2780" /* 2780 */;
-import useRefreshLinkCodeOnExpiryDefault from "useRefreshLinkCodeOnExpiry" /* 15223 */;
-import _modDef15269 from "module_15269" /* 15269 */;
+import useRefreshLinkCodeOnExpiryDefault from "useRefreshLinkCodeOnExpiry" /* 14389 */;
+import _modDef14435 from "module_14435" /* 14435 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -281,7 +281,7 @@ export default function PendingRequestList(arg0) {
   };
   const obj6 = { style: tmp.dividerLine };
   const obj8 = { style: tmp.dividerLine };
-  const items3 = [c7(c5, { style: tmp.inviteIconContainer, children: c7(require("native").PlaneIllocon, { size: 32 }) }), , ];
+  const items3 = [c7(c5, { style: tmp.inviteIconContainer, children: c7(require("PlaneIllocon").PlaneIllocon, { size: 32 }) }), , ];
   const obj11 = { style: tmp.details, children: null };
   const obj12 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = tmp5(1115).intl;

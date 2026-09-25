@@ -1,8 +1,8 @@
-// === Module 12248: AppealIngestionRequestSent ===
+// === Module 11370: AppealIngestionRequestSent ===
 
-// Module 12248 (AppealIngestionRequestSent)
-import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 12243 */;
-import _modDef12249 from "module_12249" /* 12249 */;
+// Module 11370 (AppealIngestionRequestSent)
+import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 11365 */;
+import _modDef11371 from "module_11371" /* 11371 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -10,7 +10,7 @@ const require = globalThis.__r;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
-const SafetyHubConstants = fn(8770);
+const SafetyHubConstants = fn(7860);
 ({ SafetyHubAnalyticsActions: hasOwnProperty, SafetyHubLinks: metroRequire } = SafetyHubConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -29,13 +29,13 @@ export default function AppealIngestionRequestSent() {
   const obj2 = { children: null };
   const obj3 = { style: tmp.container, children: null };
   const stringResult1 = intl2.string(require("util").t.Qdx8AP);
-  const items = [closure_7(closure_4, { source: _modDef12249, style: tmp.checkboxPng }), closure_7(require("AppealIngestionModal").AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: stringResult1 }), , , ];
+  const items = [closure_7(closure_4, { source: _modDef11371, style: tmp.checkboxPng }), closure_7(require("AppealIngestionModal").AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: stringResult1 }), , , ];
   const obj5 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", style: tmp.actionsHeader, children: null };
   const intl3 = require("util").intl;
   obj5.children = intl3.string(require("util").t["9BRc1N"]);
   items[2] = closure_7(require("Text/Text").Text, obj5);
   const obj6 = { text: null, url: null, onPress: null };
-  const obj4 = { source: _modDef12249, style: tmp.checkboxPng };
+  const obj4 = { source: _modDef11371, style: tmp.checkboxPng };
   const intl4 = require("util").intl;
   obj6.text = intl4.string(require("util").t.PxL38B);
   obj6.url = constants.COMMUNITY_GUIDELINES;

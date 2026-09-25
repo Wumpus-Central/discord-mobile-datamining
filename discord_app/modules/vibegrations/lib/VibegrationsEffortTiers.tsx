@@ -1,9 +1,9 @@
-// === Module 17031: VibegrationsEffortTiers ===
+// === Module 16221: VibegrationsEffortTiers ===
 
-// Module 17031 (VibegrationsEffortTiers)
+// Module 16221 (VibegrationsEffortTiers)
 import util from "util" /* 1115 */;
 import _modDef3714 from "module_3714" /* 3714 */;
-import VibegrationsModelLabels from "VibegrationsModelLabels" /* 17032 */;
+import VibegrationsModelLabels from "VibegrationsModelLabels" /* 16222 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;

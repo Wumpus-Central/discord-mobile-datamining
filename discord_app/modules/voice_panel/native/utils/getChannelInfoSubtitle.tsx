@@ -1,6 +1,6 @@
-// === Module 17680: getChannelInfoSubtitle ===
+// === Module 16904: getChannelInfoSubtitle ===
 
-// Module 17680 (getChannelInfoSubtitle)
+// Module 16904 (getChannelInfoSubtitle)
 import util from "util" /* 1115 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4981 */;
 import size from "module_2" /* 2 */;

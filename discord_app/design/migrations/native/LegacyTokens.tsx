@@ -1,10 +1,10 @@
-// === Module 5746: LegacyTokens ===
+// === Module 5748: LegacyTokens ===
 
-// Module 5746 (LegacyTokens)
+// Module 5748 (LegacyTokens)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
-import ColorUtils from "ColorUtils" /* 4678 */;
-import shared from "shared" /* 4680 */;
+import ColorUtils from "ColorUtils" /* 4680 */;
+import shared from "shared" /* 4682 */;
 import createStyles_mod from "createStyles" /* 4829 */;
 import size from "module_2" /* 2 */;
 

@@ -1,14 +1,14 @@
-// === Module 8520: EditCollectiblesCTAButton ===
+// === Module 7610: EditCollectiblesCTAButton ===
 
-// Module 8520 (EditCollectiblesCTAButton)
+// Module 7610 (EditCollectiblesCTAButton)
 import util from "util" /* 1115 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4483 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4485 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
 import HapticUtils from "HapticUtils" /* 4797 */;
-import spring from "spring" /* 5272 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7871 */;
-import EditCollectiblesActionCreators from "EditCollectiblesActionCreators" /* 8523 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8524 */;
+import spring from "spring" /* 5273 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 6956 */;
+import EditCollectiblesActionCreators from "EditCollectiblesActionCreators" /* 7613 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 7614 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4821 */;
 

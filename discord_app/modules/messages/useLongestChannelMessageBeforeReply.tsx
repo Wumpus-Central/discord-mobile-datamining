@@ -1,6 +1,6 @@
-// === Module 12799: useLongestChannelMessageBeforeReply ===
+// === Module 11925: useLongestChannelMessageBeforeReply ===
 
-// Module 12799 (useLongestChannelMessageBeforeReply)
+// Module 11925 (useLongestChannelMessageBeforeReply)
 import MessageStore from "MessageStore" /* 5049 */;
 
 const require = globalThis.__r;

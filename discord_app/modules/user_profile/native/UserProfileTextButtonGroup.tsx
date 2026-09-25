@@ -1,11 +1,11 @@
-// === Module 13385: UserProfileTextButtonGroup ===
+// === Module 12535: UserProfileTextButtonGroup ===
 
-// Module 13385 (UserProfileTextButtonGroup)
+// Module 12535 (UserProfileTextButtonGroup)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1478 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
-const PROFILE_SIDE_PADDING = fn(7541).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(6624).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const createStyles = fn(4829);

@@ -1,12 +1,12 @@
-// === Module 15875: UserSettingsCommunityNotifications ===
+// === Module 15045: UserSettingsCommunityNotifications ===
 
-// Module 15875 (UserSettingsCommunityNotifications)
+// Module 15045 (UserSettingsCommunityNotifications)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1115 */;
-import TableRowGroup from "TableRowGroup" /* 5992 */;
-import TableSwitchRow from "TableSwitchRow" /* 7533 */;
+import TableRowGroup from "TableRowGroup" /* 5994 */;
+import TableSwitchRow from "TableSwitchRow" /* 6616 */;
 import noop from "module_19" /* 19 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 10427 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 9529 */;
 
 require = fn;
 const jsxProd = fn(21);
@@ -55,8 +55,8 @@ export default function UserSettingsCommunityNotifications() {
           return hasOwnProperty(TableRowGroup.TableRowGroup, obj, item);
         })
     };
-    obj3.children = closure_4(tmp2(5271).Stack, obj4);
-    tmp5 = closure_4(tmp2(8951).Form, obj3);
+    obj3.children = closure_4(tmp2(5272).Stack, obj4);
+    tmp5 = closure_4(tmp2(8045).Form, obj3);
   }
   return tmp5;
 };

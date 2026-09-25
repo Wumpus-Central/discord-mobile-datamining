@@ -1,15 +1,15 @@
-// === Module 10421: ActiveSpeakerTooltip ===
+// === Module 9523: ActiveSpeakerTooltip ===
 
-// Module 10421 (ActiveSpeakerTooltip)
+// Module 9523 (ActiveSpeakerTooltip)
 import nativeDefault from "native" /* 576 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 10401 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 9503 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4845 */;
 
 const require = fn;
 const View = fn(17).View;
-const StageChannelListStore = fn(10392);
+const StageChannelListStore = fn(9494);
 ({ useActiveSpeakerPillScrollHandler: metroRequire, useActiveSpeakerPillState: closure_7 } = StageChannelListStore);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -34,7 +34,7 @@ export default noop.memo((channel) => {
     const speakingParticipants = ChannelRTCStore.getSpeakingParticipants(channel.id);
     const items = [speakingParticipants.map((user) => user.user), ChannelRTCStore.getParticipantsVersion(channel.id)];
     return items;
-  }, items1, channel(5737).isVersionEqual), 1)[0];
+  }, items1, channel(5739).isVersionEqual), 1)[0];
   let tmp5 = null;
   if (0 !== first.length) {
     tmp5 = null;
@@ -54,7 +54,7 @@ export default noop.memo((channel) => {
       items2[1] = closure_8(View, obj6);
       obj3.children = items2;
       obj2.children = closure_9(View, obj3);
-      tmp5 = closure_8(tmp2(5427).PressableOpacity, obj2);
+      tmp5 = closure_8(tmp2(5428).PressableOpacity, obj2);
     }
   }
   return tmp5;

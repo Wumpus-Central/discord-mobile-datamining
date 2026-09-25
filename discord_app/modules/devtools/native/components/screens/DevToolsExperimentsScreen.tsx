@@ -1,21 +1,21 @@
-// === Module 12154: DevToolsExperimentsScreen ===
+// === Module 11276: DevToolsExperimentsScreen ===
 
-// Module 12154 (DevToolsExperimentsScreen)
+// Module 11276 (DevToolsExperimentsScreen)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import FingerprintUtils from "FingerprintUtils" /* 1254 */;
-import ExperimentManager from "ExperimentManager" /* 4749 */;
-import TableRow from "TableRow" /* 5910 */;
-import TableRowGroup from "TableRowGroup" /* 5992 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7482 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7483 */;
-import ClipboardUtils from "ClipboardUtils" /* 7522 */;
-import ExperimentDevToolsUtils from "ExperimentDevToolsUtils" /* 8224 */;
-import useExperimentAssignments from "useExperimentAssignments" /* 12152 */;
+import ExperimentManager from "ExperimentManager" /* 4751 */;
+import TableRow from "TableRow" /* 5912 */;
+import TableRowGroup from "TableRowGroup" /* 5994 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6565 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6566 */;
+import ClipboardUtils from "ClipboardUtils" /* 6605 */;
+import ExperimentDevToolsUtils from "ExperimentDevToolsUtils" /* 7313 */;
+import useExperimentAssignments from "useExperimentAssignments" /* 11274 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ExperimentStore from "ExperimentStore" /* 4744 */;
+import ExperimentStore from "ExperimentStore" /* 4746 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 2066 */;
 
@@ -148,11 +148,11 @@ function GuildExperimentDebugView(arg0) {
   }
   const obj4 = _modDef12(obj3);
   obj6.subLabel = str;
-  const items1 = [closure_11(obj3(5992).TableRowGroup, { title: "Overview", hasIcons: false, children: closure_11(obj3(5910).TableRow, obj6) }), closure_11(obj3(1177).Spacer, { size: 16 }), , , , , , , ];
+  const items1 = [closure_11(obj3(5994).TableRowGroup, { title: "Overview", hasIcons: false, children: closure_11(obj3(5912).TableRow, obj6) }), closure_11(obj3(1177).Spacer, { size: 16 }), , , , , , , ];
   const obj8 = { title: "Guild Assignments", hasIcons: false, children: null };
-  const obj7 = { title: "Overview", hasIcons: false, children: closure_11(obj3(5910).TableRow, obj6) };
-  obj8.children = closure_11(obj3(5910).TableRow, { label: items.join("\n") });
-  items1[2] = closure_11(obj3(5992).TableRowGroup, obj8);
+  const obj7 = { title: "Overview", hasIcons: false, children: closure_11(obj3(5912).TableRow, obj6) };
+  obj8.children = closure_11(obj3(5912).TableRow, { label: items.join("\n") });
+  items1[2] = closure_11(obj3(5994).TableRowGroup, obj8);
   items1[3] = closure_11(obj3(1177).Spacer, { size: 16 });
   let str2 = "None";
   let str3 = "None";
@@ -161,21 +161,21 @@ function GuildExperimentDebugView(arg0) {
     str3 = JSON.stringify(loadedGuildExperiment, undefined, 2);
   }
   const obj9 = { label: items.join("\n") };
-  items1[4] = closure_11(obj3(5992).TableRowGroup, { title: "Server Descriptor", hasIcons: false, children: closure_11(obj3(5910).TableRow, { label: str3 }) });
+  items1[4] = closure_11(obj3(5994).TableRowGroup, { title: "Server Descriptor", hasIcons: false, children: closure_11(obj3(5912).TableRow, { label: str3 }) });
   items1[5] = closure_11(obj3(1177).Spacer, { size: 16 });
   if (null != override) {
     const _JSON2 = JSON;
     str2 = JSON.stringify(override, undefined, 2);
   }
-  const obj10 = { title: "Server Descriptor", hasIcons: false, children: closure_11(obj3(5910).TableRow, { label: str3 }) };
-  items1[6] = closure_11(obj3(5992).TableRowGroup, { title: "Override Descriptor", hasIcons: false, children: closure_11(obj3(5910).TableRow, { label: str2 }) });
+  const obj10 = { title: "Server Descriptor", hasIcons: false, children: closure_11(obj3(5912).TableRow, { label: str3 }) };
+  items1[6] = closure_11(obj3(5994).TableRowGroup, { title: "Override Descriptor", hasIcons: false, children: closure_11(obj3(5912).TableRow, { label: str2 }) });
   items1[7] = closure_11(obj3(1177).Spacer, { size: 16 });
   if (0 === mapped.length) {
-    let mapped3 = closure_11(tmp20(5910).TableRow, { label: "none" });
+    let mapped3 = closure_11(tmp20(5912).TableRow, { label: "none" });
   } else {
     mapped3 = mapped.map((label) => closure_1_11(obj3(dependencyMap[23]).TableRow, { label, labelLineClamp: 1 }, label));
   }
-  items1[8] = closure_11(obj3(5992).TableRowGroup, { title: "Recent Exposures", hasIcons: false, children: mapped3 });
+  items1[8] = closure_11(obj3(5994).TableRowGroup, { title: "Recent Exposures", hasIcons: false, children: mapped3 });
   obj5.children = items1;
   return closure_12(View, obj5);
 }
@@ -194,7 +194,7 @@ class ExperimentDetails {
     obj9 = { paddingHorizontal: null };
     callback = closure_4.useCallback(() => {
       ClipboardUtils.copy(uRLForExperiment, () => {
-        const obj = uRLForExperiment(4523);
+        const obj = uRLForExperiment(4525);
         obj.open({ key: "experiment-link-copied", content: "Copied experiment link", IconComponent: onCopyLink(4788).CircleCheckIcon, iconColor: "status-positive" });
         if (closure_1_0 != null) {
           closure_1_0();
@@ -215,7 +215,7 @@ class ExperimentDetails {
             if (isDestructive) {
               variant = "danger";
             }
-            return closure_1_11(onCopyLink(5910).TableRow, { variant, label, onPress }, index);
+            return closure_1_11(onCopyLink(5912).TableRow, { variant, label, onPress }, index);
           })
     };
     items1 = [, , ];
@@ -250,7 +250,7 @@ function ExperimentActionSheet(arg0) {
   return closure_1_11(Sheet_BottomSheet.BottomSheet, obj);
 }
 const View = fn(17).View;
-const ExperimentConstants = fn(4745);
+const ExperimentConstants = fn(4747);
 ({ ExperimentBuckets: closure_9, ExperimentTypes: c10 } = ExperimentConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);

@@ -1,11 +1,11 @@
-// === Module 17423: IconLabelBlock ===
+// === Module 16640: IconLabelBlock ===
 
-// Module 17423 (IconLabelBlock)
+// Module 16640 (IconLabelBlock)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import shared from "shared" /* 4680 */;
+import shared from "shared" /* 4682 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import IconUploaderDefault from "IconUploader" /* 11280 */;
+import IconUploaderDefault from "IconUploader" /* 10378 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -93,7 +93,7 @@ prototype["render"] = function render() {
   obj.children = items1;
   return React6(hasOwnProperty, obj);
 };
-IconLabelBlock.contextType = fn(4535).ThemeContext;
+IconLabelBlock.contextType = fn(4537).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/IconLabelBlock.tsx");
 

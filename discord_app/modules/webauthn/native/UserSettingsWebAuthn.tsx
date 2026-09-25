@@ -1,12 +1,12 @@
-// === Module 15031: UserSettingsWebAuthn ===
+// === Module 14193: UserSettingsWebAuthn ===
 
-// Module 15031 (UserSettingsWebAuthn)
-import Navigator from "Navigator" /* 7333 */;
-import WebAuthnScreens2 from "WebAuthnScreens" /* 15032 */;
+// Module 14193 (UserSettingsWebAuthn)
+import Navigator from "Navigator" /* 6416 */;
+import WebAuthnScreens2 from "WebAuthnScreens" /* 14194 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const WebAuthnScreens = fn(15029).WebAuthnScreens;
+const WebAuthnScreens = fn(14191).WebAuthnScreens;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/webauthn/native/UserSettingsWebAuthn.tsx");

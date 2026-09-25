@@ -1,6 +1,6 @@
-// === Module 9432: TwoWayLinkStyles ===
+// === Module 8530: TwoWayLinkStyles ===
 
-// Module 9432 (TwoWayLinkStyles)
+// Module 8530 (TwoWayLinkStyles)
 import nativeDefault from "native" /* 576 */;
 import createStyles from "createStyles" /* 4829 */;
 import size from "module_2" /* 2 */;

@@ -5,7 +5,7 @@ import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1228 */;
-import isPerModeThemingActive from "isPerModeThemingActive" /* 4676 */;
+import isPerModeThemingActive from "isPerModeThemingActive" /* 4678 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1183 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1184 */;
@@ -96,7 +96,7 @@ prototype["getState"] = function getState() {
     const obj2 = { theme, customTheme: prop };
     let obj = obj2;
   } else {
-    obj = { theme: "channel", customTheme: "channelId" };
+    obj = { theme: "isArray", customTheme: "paddingHorizontal" };
   }
   return obj;
 };

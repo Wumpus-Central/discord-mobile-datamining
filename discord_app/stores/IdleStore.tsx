@@ -1,14 +1,14 @@
-// === Module 5715: IdleStore ===
+// === Module 5717: IdleStore ===
 
-// Module 5715 (IdleStore)
+// Module 5717 (IdleStore)
 import initializeDefault from "initialize" /* 504 */;
 import debounceDefault from "debounce" /* 551 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import UserSettings from "UserSettings" /* 2020 */;
-import DiscordNativeDefault from "DiscordNative" /* 4445 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5716 */;
+import DiscordNativeDefault from "DiscordNative" /* 4447 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5718 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;

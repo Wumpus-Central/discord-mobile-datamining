@@ -1,11 +1,11 @@
-// === Module 8193: ForLaterModal ===
+// === Module 7282: ForLaterModal ===
 
-// Module 8193 (ForLaterModal)
+// Module 7282 (ForLaterModal)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5032 */;
-import HeaderShared from "HeaderShared" /* 8194 */;
-import ForLaterScreenDefault from "ForLaterScreen" /* 13689 */;
+import HeaderShared from "HeaderShared" /* 7283 */;
+import ForLaterScreenDefault from "ForLaterScreen" /* 12843 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -56,7 +56,7 @@ export default function ForLaterModal(type) {
   tmp4Result = require("PlatformUtils");
   obj3.headerLeft = require("NavigatorHeader").getHeaderCloseButton(ModalActionCreatorsDefault.pop);
   ({ headerLeftContainer: obj2.headerLeftContainerStyle, headerRightContainer: obj2.headerRightContainerStyle } = tmp);
-  const items = [closure_4(require("module_5936").Header, obj3), ];
+  const items = [closure_4(require("module_5938").Header, obj3), ];
   const obj4 = { type, onClose: null };
   const tmp4Result2 = require("NavigatorHeader");
   obj4.onClose = ModalActionCreatorsDefault.pop;

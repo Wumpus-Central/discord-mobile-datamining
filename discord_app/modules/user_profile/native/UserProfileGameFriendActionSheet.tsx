@@ -1,13 +1,13 @@
-// === Module 13451: UserProfileGameFriendActionSheet ===
+// === Module 12601: UserProfileGameFriendActionSheet ===
 
-// Module 13451 (UserProfileGameFriendActionSheet)
+// Module 12601 (UserProfileGameFriendActionSheet)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12968 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12099 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 
 require = fn;
 function GameFriendApplicationRow(application) {

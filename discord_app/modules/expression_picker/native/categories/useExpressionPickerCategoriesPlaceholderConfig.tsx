@@ -1,8 +1,8 @@
-// === Module 10704: useExpressionPickerCategoriesPlaceholderConfig ===
+// === Module 9808: useExpressionPickerCategoriesPlaceholderConfig ===
 
-// Module 10704 (useExpressionPickerCategoriesPlaceholderConfig)
+// Module 9808 (useExpressionPickerCategoriesPlaceholderConfig)
 import nativeDefault from "native" /* 576 */;
-import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7395 */;
+import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 6478 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

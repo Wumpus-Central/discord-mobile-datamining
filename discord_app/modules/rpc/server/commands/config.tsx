@@ -1,10 +1,10 @@
-// === Module 14848: commands/config ===
+// === Module 14010: commands/config ===
 
-// Module 14848 (commands/config)
+// Module 14010 (commands/config)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import RPCErrorDefault from "RPCError" /* 9664 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9667 */;
-import Constants_mod from "Constants" /* 4733 */;
+import RPCErrorDefault from "RPCError" /* 8762 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8765 */;
+import Constants_mod from "Constants" /* 4735 */;
 import Constants_mod from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

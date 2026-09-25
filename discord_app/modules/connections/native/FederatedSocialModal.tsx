@@ -1,14 +1,14 @@
-// === Module 9478: FederatedSocialModal ===
+// === Module 8576: FederatedSocialModal ===
 
-// Module 9478 (FederatedSocialModal)
+// Module 8576 (FederatedSocialModal)
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import components_Button_Button from "components/Button/Button" /* 5273 */;
-import PlatformsDefault from "Platforms" /* 5588 */;
-import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6935 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7456 */;
-import FederatedSocialUtils from "FederatedSocialUtils" /* 9479 */;
+import components_Button_Button from "components/Button/Button" /* 5274 */;
+import PlatformsDefault from "Platforms" /* 5590 */;
+import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6018 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6539 */;
+import FederatedSocialUtils from "FederatedSocialUtils" /* 8577 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

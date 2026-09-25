@@ -1,11 +1,11 @@
-// === Module 16256: CollectiblesShopViewAllCategoryItems ===
+// === Module 15435: CollectiblesShopViewAllCategoryItems ===
 
-// Module 16256 (CollectiblesShopViewAllCategoryItems)
+// Module 15435 (CollectiblesShopViewAllCategoryItems)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import spring from "spring" /* 5272 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7515 */;
-import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7919 */;
+import spring from "spring" /* 5273 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6598 */;
+import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7004 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

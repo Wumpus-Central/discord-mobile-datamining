@@ -1,10 +1,10 @@
-// === Module 8217: ForumPostUnreadCountStore ===
+// === Module 7306: ForumPostUnreadCountStore ===
 
-// Module 8217 (ForumPostUnreadCountStore)
+// Module 7306 (ForumPostUnreadCountStore)
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 5812 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 5814 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 import ReadStateStore from "ReadStateStore" /* 4844 */;
 

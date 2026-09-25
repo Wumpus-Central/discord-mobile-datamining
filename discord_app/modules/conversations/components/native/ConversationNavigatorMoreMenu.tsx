@@ -1,12 +1,12 @@
-// === Module 8259: ConversationNavigatorMoreMenu ===
+// === Module 7348: ConversationNavigatorMoreMenu ===
 
-// Module 8259 (ConversationNavigatorMoreMenu)
+// Module 7348 (ConversationNavigatorMoreMenu)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ThumbsUpIcon from "ThumbsUpIcon" /* 8260 */;
-import ThumbsDownIcon from "ThumbsDownIcon" /* 8262 */;
-import IconButton from "IconButton" /* 8269 */;
-import MoreHorizontalIcon from "MoreHorizontalIcon" /* 8271 */;
+import ThumbsUpIcon from "ThumbsUpIcon" /* 7349 */;
+import ThumbsDownIcon from "ThumbsDownIcon" /* 7351 */;
+import IconButton from "IconButton" /* 7358 */;
+import MoreHorizontalIcon from "MoreHorizontalIcon" /* 7360 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

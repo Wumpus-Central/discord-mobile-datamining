@@ -1,6 +1,6 @@
-// === Module 17830: ExistingUserAgeGate ===
+// === Module 17056: ExistingUserAgeGate ===
 
-// Module 17830 (ExistingUserAgeGate)
+// Module 17056 (ExistingUserAgeGate)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -12,7 +12,7 @@ const require = fn;
 const View = fn(17).View;
 const AgeGateConstants = fn(1099);
 ({ AgeGateAnalyticAction: closure_9, AgeGateSource: c10 } = AgeGateConstants);
-let closure_11 = fn(17828).ExistingUserAgeGateScreens;
+let closure_11 = fn(17054).ExistingUserAgeGateScreens;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, HelpdeskArticles: map1 } = Constants);
 const jsxProd = fn(21);
@@ -155,7 +155,7 @@ export default function ExistingUserAgeGate(onSuccess) {
             return obj3;
           } else {
             v1(38)(null != date, "Cannot submit null birthday.");
-            const diffResult = v1(4416)().diff(date, "years");
+            const diffResult = v1(4418)().diff(date, "years");
             if (diffResult < 18) {
               const obj4 = {
                 source,
@@ -171,7 +171,7 @@ export default function ExistingUserAgeGate(onSuccess) {
               const obj5 = { value: submitBirthday(date), done: false };
               return obj5;
             }
-            const obj6 = v1(4416)();
+            const obj6 = v1(4418)();
           }
         } else if (arg0 === 1) {
           c0 = 3;

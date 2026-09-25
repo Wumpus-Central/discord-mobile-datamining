@@ -1,13 +1,13 @@
-// === Module 12748: ApplicationCommandLoadingItem ===
+// === Module 11874: ApplicationCommandLoadingItem ===
 
-// Module 12748 (ApplicationCommandLoadingItem)
+// Module 11874 (ApplicationCommandLoadingItem)
 import nativeDefault from "native" /* 576 */;
-import useFontScale from "useFontScale" /* 5280 */;
+import useFontScale from "useFontScale" /* 5281 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const AUTOCOMPLETE_ROW_HEIGHT = fn(10611).AUTOCOMPLETE_ROW_HEIGHT;
+const AUTOCOMPLETE_ROW_HEIGHT = fn(9715).AUTOCOMPLETE_ROW_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = 16;

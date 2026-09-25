@@ -1,6 +1,6 @@
-// === Module 14185: SystemResponsiveness ===
+// === Module 13346: SystemResponsiveness ===
 
-// Module 14185 (SystemResponsiveness)
+// Module 13346 (SystemResponsiveness)
 import _modDef12 from "module_12" /* 12 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4884 */;
 import size from "module_2" /* 2 */;

@@ -1,11 +1,11 @@
-// === Module 5360: getVibegrationsChannelIcon ===
+// === Module 5361: getVibegrationsChannelIcon ===
 
-// Module 5360 (getVibegrationsChannelIcon)
-import _modDef5332 from "module_5332" /* 5332 */;
-import vibegrationsChannelIconKind from "vibegrationsChannelIconKind" /* 5361 */;
-import AppsIcon from "AppsIcon" /* 5366 */;
-import AppsLockIcon from "AppsLockIcon" /* 5367 */;
-import _modDef5368 from "module_5368" /* 5368 */;
+// Module 5361 (getVibegrationsChannelIcon)
+import _modDef5333 from "module_5333" /* 5333 */;
+import vibegrationsChannelIconKind from "vibegrationsChannelIconKind" /* 5362 */;
+import AppsIcon from "AppsIcon" /* 5367 */;
+import AppsLockIcon from "AppsLockIcon" /* 5368 */;
+import _modDef5369 from "module_5369" /* 5369 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/vibegrations/native/getVibegrationsChannelIcon.tsx");
@@ -23,9 +23,9 @@ export const getVibegrationsChannelIconComponent = function getVibegrationsChann
 export const getVibegrationsChannelIconSource = function getVibegrationsChannelIconSource(channel, getChannelIcon) {
   const result = vibegrationsChannelIconKind.vibegrationsChannelIconKind(channel, getChannelIcon);
   if ("apps" === result) {
-    return _modDef5332;
+    return _modDef5333;
   } else if ("apps-lock" === result) {
-    return _modDef5368;
+    return _modDef5369;
   } else {
     return null;
   }

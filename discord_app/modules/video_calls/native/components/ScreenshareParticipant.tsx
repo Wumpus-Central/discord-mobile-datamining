@@ -1,14 +1,14 @@
-// === Module 10371: ScreenshareParticipant ===
+// === Module 9473: ScreenshareParticipant ===
 
-// Module 10371 (ScreenshareParticipant)
+// Module 9473 (ScreenshareParticipant)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import components_Button_Button from "components/Button/Button" /* 5273 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6985 */;
-import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 9764 */;
-import _modDef9765 from "module_9765" /* 9765 */;
-import useScreenshareUtils from "useScreenshareUtils" /* 10300 */;
+import components_Button_Button from "components/Button/Button" /* 5274 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6068 */;
+import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 8862 */;
+import _modDef8863 from "module_8863" /* 8863 */;
+import useScreenshareUtils from "useScreenshareUtils" /* 9397 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,7 +48,7 @@ export default function ScreenshareParticipant(participant) {
   const items2 = [tmp4.container, participant.containerStyle];
   obj2.style = items2;
   const tmp3 = useParticipantTileTapGestureDefault({ onSingleTapStart: callback, onDoubleTapStart: callback1 });
-  const items3 = [timestampProducer(hasOwnProperty, { source: _modDef9765, style: tmp4.image }), , , ];
+  const items3 = [timestampProducer(hasOwnProperty, { source: _modDef8863, style: tmp4.image }), , , ];
   const obj4 = { style: tmp4.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t.gMOwov);

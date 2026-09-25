@@ -1,7 +1,7 @@
-// === Module 18492: MarkAsRead ===
+// === Module 17724: MarkAsRead ===
 
-// Module 18492 (MarkAsRead)
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7443 */;
+// Module 17724 (MarkAsRead)
+import ReadStateActionCreators from "ReadStateActionCreators" /* 6526 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

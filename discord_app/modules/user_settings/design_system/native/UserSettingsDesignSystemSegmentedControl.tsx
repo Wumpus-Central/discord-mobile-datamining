@@ -1,8 +1,8 @@
-// === Module 16176: UserSettingsDesignSystemSegmentedControl ===
+// === Module 15353: UserSettingsDesignSystemSegmentedControl ===
 
-// Module 16176 (UserSettingsDesignSystemSegmentedControl)
+// Module 15353 (UserSettingsDesignSystemSegmentedControl)
 import nativeDefault from "native" /* 576 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4536 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4538 */;
 import Text_Text from "Text/Text" /* 4825 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

@@ -1,11 +1,11 @@
-// === Module 12780: EmojiSuggestionBarSmall ===
+// === Module 11906: EmojiSuggestionBarSmall ===
 
-// Module 12780 (EmojiSuggestionBarSmall)
+// Module 11906 (EmojiSuggestionBarSmall)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
-import EmojiPickerListRow from "EmojiPickerListRow" /* 10655 */;
-import openEmojiActionSheet2 from "openEmojiActionSheet" /* 10674 */;
-import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 12775 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
+import EmojiPickerListRow from "EmojiPickerListRow" /* 9759 */;
+import openEmojiActionSheet2 from "openEmojiActionSheet" /* 9778 */;
+import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 11901 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -16,8 +16,8 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
   ({ reducedMotion: importDefault, handlePress: dependencyMap, handlePressEmojiUnavailable: noop, transitionState } = displayEmojis);
   ({ onOccupiedHeightChange, cleanUp } = displayEmojis);
   const tmp = closure_7(displayEmojis.anchorTop);
-  const suggestionBarHeight = displayEmojis(12775).useSuggestionBarHeight(transitionState, cleanUp, CONTAINER_SMALL_WRAPPER_HEIGHT, onOccupiedHeightChange);
-  let obj = displayEmojis(12775);
+  const suggestionBarHeight = displayEmojis(11901).useSuggestionBarHeight(transitionState, cleanUp, CONTAINER_SMALL_WRAPPER_HEIGHT, onOccupiedHeightChange);
+  let obj = displayEmojis(11901);
   class A {
     constructor() {
       obj = { opacity: null };
@@ -28,8 +28,8 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
       return obj;
     }
   }
-  let obj2 = displayEmojis(4561);
-  A.__closure = { interpolate: displayEmojis(4561).interpolate, heightSv: suggestionBarHeight, CONTAINER_SMALL_WRAPPER_HEIGHT };
+  let obj2 = displayEmojis(4563);
+  A.__closure = { interpolate: displayEmojis(4563).interpolate, heightSv: suggestionBarHeight, CONTAINER_SMALL_WRAPPER_HEIGHT };
   A.__workletHash = 1856279964267;
   A.__initData = __initData;
   const animatedStyle = obj2.useAnimatedStyle(A);
@@ -55,7 +55,7 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
   return suggestionBarHeight(ReanimatedRexportDefault.View, obj4);
 }
 const jsx = fn(21).jsx;
-const sum = fn(10638).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
+const sum = fn(9742).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
 const hasOwnProperty = sum;
 const CONTAINER_SMALL_WRAPPER_HEIGHT = sum + nativeDefault.space.PX_8;
 const createStyles = fn(4829);

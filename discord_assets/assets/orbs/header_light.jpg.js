@@ -1,6 +1,6 @@
-// === Module 16233: ? ===
+// === Module 15412: ? ===
 
-// Module 16233
+// Module 15412
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/orbs/header_light.jpg.js");

@@ -1,10 +1,10 @@
-// === Module 5924: UserVerification ===
+// === Module 5926: UserVerification ===
 
-// Module 5924 (UserVerification)
+// Module 5926 (UserVerification)
 import util from "util" /* 1115 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4653 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4655 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import IdentityVerificationFieldDefault from "IdentityVerificationField" /* 5925 */;
+import IdentityVerificationFieldDefault from "IdentityVerificationField" /* 5927 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

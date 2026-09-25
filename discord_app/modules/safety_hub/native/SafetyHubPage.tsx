@@ -1,6 +1,6 @@
-// === Module 15110: SafetyHubPage ===
+// === Module 14276: SafetyHubPage ===
 
-// Module 15110 (SafetyHubPage)
+// Module 14276 (SafetyHubPage)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -10,17 +10,17 @@ import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
 import _modDef3102 from "module_3102" /* 3102 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 5171 */;
-import MetricEvents from "MetricEvents" /* 5176 */;
-import components_Button_Button from "components/Button/Button" /* 5273 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6922 */;
-import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8945 */;
-import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 12224 */;
-import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 12226 */;
-import useAvailableAgeVerificationMethods from "useAvailableAgeVerificationMethods" /* 15111 */;
-import useShouldShowInitialGoogleWalletBanner from "useShouldShowInitialGoogleWalletBanner" /* 15112 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5172 */;
+import MetricEvents from "MetricEvents" /* 5177 */;
+import components_Button_Button from "components/Button/Button" /* 5274 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6005 */;
+import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8039 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 11346 */;
+import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 11348 */;
+import useAvailableAgeVerificationMethods from "useAvailableAgeVerificationMethods" /* 14277 */;
+import useShouldShowInitialGoogleWalletBanner from "useShouldShowInitialGoogleWalletBanner" /* 14278 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 8781 */;
+import SafetyHubStore from "SafetyHubStore" /* 7873 */;
 
 const require = globalThis.__r;
 
@@ -160,7 +160,7 @@ function AutomatedUnderageAppealStatus() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const AgeCheckStatus = fn(8770).AgeCheckStatus;
+const AgeCheckStatus = fn(7860).AgeCheckStatus;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);
@@ -200,7 +200,7 @@ export default function SafetyHubPage(visible) {
   const effect = noop.useEffect(() => {
     if (visible) {
       if (null != safetyHubFetchError) {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15114, dependencyMap.paths), "SafetyHubErrorActionSheet", {});
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14280, dependencyMap.paths), "SafetyHubErrorActionSheet", {});
       }
     }
     ActionSheetActionCreatorsDefault.hideActionSheet("SafetyHubErrorActionSheet");

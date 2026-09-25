@@ -1,13 +1,13 @@
-// === Module 15135: TwoFASetupSuccess ===
+// === Module 14301: TwoFASetupSuccess ===
 
-// Module 15135 (TwoFASetupSuccess)
+// Module 14301 (TwoFASetupSuccess)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import components_Button_Button from "components/Button/Button" /* 5273 */;
-import TwoFASetupModal from "TwoFASetupModal" /* 15126 */;
-import _mod15136 from "module_15136" /* 15136 */;
+import components_Button_Button from "components/Button/Button" /* 5274 */;
+import TwoFASetupModal from "TwoFASetupModal" /* 14292 */;
+import _mod14302 from "module_14302" /* 14302 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -82,7 +82,7 @@ export default function TwoFASetupSuccess() {
               const intl = setRegistering(1115).intl;
               c5 = 3;
               c6 = 1;
-              const obj5 = { value: setRegistering(6926).finishRegisterWebAuthnCredential(intl.string(setRegistering(1115).t["8H5RmH"]), closure_129_0, closure_129_1), done: false };
+              const obj5 = { value: setRegistering(6009).finishRegisterWebAuthnCredential(intl.string(setRegistering(1115).t["8H5RmH"]), closure_129_0, closure_129_1), done: false };
               return obj5;
             }
           } else {
@@ -94,9 +94,9 @@ export default function TwoFASetupSuccess() {
               c6 = 3;
               throw value;
             } else if (arg0 !== 2) {
-              setError(15125).close();
+              setError(14291).close();
               c4 = 0;
-              const obj = setError(15125);
+              const obj = setError(14291);
             }
             c4 = 0;
             c6 = 3;
@@ -133,7 +133,7 @@ export default function TwoFASetupSuccess() {
   const items = [closure_8(closure_6, { style: tmp.flex }), , , , , , , ];
   let obj2 = { style: tmp.flex };
   const tmp4 = _slicedToArray(noop.useState(""), 2);
-  items[1] = closure_8(closure_7, { source: _mod15136, style: tmp.image });
+  items[1] = closure_8(closure_7, { source: _mod14302, style: tmp.image });
   let obj4 = { style: tmp.success, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = util.intl;
   obj4.children = intl.string(util.t.Awk3Gw);

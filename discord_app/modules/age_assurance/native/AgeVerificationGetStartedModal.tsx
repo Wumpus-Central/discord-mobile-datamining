@@ -1,9 +1,9 @@
-// === Module 8931: AgeVerificationGetStartedModal ===
+// === Module 8025: AgeVerificationGetStartedModal ===
 
-// Module 8931 (AgeVerificationGetStartedModal)
+// Module 8025 (AgeVerificationGetStartedModal)
 import nativeDefault from "native" /* 576 */;
-import NavigatorHeader from "NavigatorHeader" /* 5929 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8763 */;
+import NavigatorHeader from "NavigatorHeader" /* 5931 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 7853 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

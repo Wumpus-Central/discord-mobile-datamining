@@ -1,7 +1,7 @@
-// === Module 7799: SkippedClientHeartbeatUtil ===
+// === Module 6884: SkippedClientHeartbeatUtil ===
 
-// Module 7799 (SkippedClientHeartbeatUtil)
-import sampleWithUserId from "sampleWithUserId" /* 7800 */;
+// Module 6884 (SkippedClientHeartbeatUtil)
+import sampleWithUserId from "sampleWithUserId" /* 6885 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

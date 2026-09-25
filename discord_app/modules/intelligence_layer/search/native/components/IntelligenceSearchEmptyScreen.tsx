@@ -1,12 +1,12 @@
-// === Module 17205: IntelligenceSearchEmptyScreen ===
+// === Module 16420: IntelligenceSearchEmptyScreen ===
 
-// Module 17205 (IntelligenceSearchEmptyScreen)
+// Module 16420 (IntelligenceSearchEmptyScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3876 from "module_3876" /* 3876 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4536 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4538 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7314 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6397 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

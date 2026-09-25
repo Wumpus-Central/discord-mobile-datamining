@@ -1,6 +1,6 @@
-// === Module 9697: isVoiceEmbeddedActivity ===
+// === Module 8795: isVoiceEmbeddedActivity ===
 
-// Module 9697 (isVoiceEmbeddedActivity)
+// Module 8795 (isVoiceEmbeddedActivity)
 import ChannelTypes from "ChannelTypes" /* 1095 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2044 */;

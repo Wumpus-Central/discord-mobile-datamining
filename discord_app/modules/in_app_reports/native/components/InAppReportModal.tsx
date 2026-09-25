@@ -1,18 +1,18 @@
-// === Module 8992: InAppReportModal ===
+// === Module 8086: InAppReportModal ===
 
-// Module 8992 (InAppReportModal)
+// Module 8086 (InAppReportModal)
 import util from "util" /* 1115 */;
-import Navigator from "Navigator" /* 7333 */;
-import HeaderActionButton2 from "HeaderActionButton" /* 7707 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 7922 */;
-import showReportModal from "showReportModal" /* 8989 */;
-import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8991 */;
+import Navigator from "Navigator" /* 6416 */;
+import HeaderActionButton2 from "HeaderActionButton" /* 6790 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 7007 */;
+import showReportModal from "showReportModal" /* 8083 */;
+import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8085 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const IN_APP_REPORTS_NODE = fn(8993).IN_APP_REPORTS_NODE;
+const IN_APP_REPORTS_NODE = fn(8087).IN_APP_REPORTS_NODE;
 let jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportModal.tsx");
@@ -56,7 +56,7 @@ export default function InAppReportModal(arg0) {
   [c12, c13] = noop.useState([]);
   const tmp4 = _slicedToArray(noop.useState([]), 2);
   [c14, c15] = noop.useState([]);
-  menu(5290)(() => {
+  menu(5291)(() => {
     const orFetchLinkedUsers = FamilyCenterUtils.getOrFetchLinkedUsers();
   });
   let items = [closeModal, first];
@@ -86,6 +86,7 @@ export default function InAppReportModal(arg0) {
               const obj4 = { value, done: true };
               return obj4;
             } else {
+              closure_2 = tmp5;
               closure_1 = tmp2;
               closure_129_0 = closure_0;
               closure_129_1 = undefined;
@@ -118,15 +119,15 @@ export default function InAppReportModal(arg0) {
             }
             closure_129_3 = closure_129_0[closure_129_0.length - 1];
             closure_1_11(c4[closure_129_3.nodeRef].report_type);
-            if (tmp5 != null) {
-              tmp5();
+            if (null != closure_2) {
+              addOnCloseCallback(closure_2);
             }
             c4 = 3;
             return { value: "HermesInternal", done: null };
           }
-        } catch (tmp28) {
+        } catch (tmp32) {
           c4 = tmp;
-          throw tmp28;
+          throw tmp32;
         }
       }
     };
@@ -176,7 +177,7 @@ export default function InAppReportModal(arg0) {
       const obj6 = {};
       const obj7 = {
         headerRight() {
-            const obj = { source: menu(7325), onPress, accessibilityLabel: null };
+            const obj = { source: menu(6408), onPress, accessibilityLabel: null };
             const intl = util.intl;
             obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
             return addOnCloseCallback(HeaderActionButton2.HeaderActionButton, obj);

@@ -1,10 +1,10 @@
-// === Module 7533: TableSwitchRow ===
+// === Module 6616: TableSwitchRow ===
 
-// Module 7533 (TableSwitchRow)
+// Module 6616 (TableSwitchRow)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import native from "native" /* 4528 */;
-import TableRow from "TableRow" /* 5910 */;
-import FormSwitch from "FormSwitch" /* 7534 */;
+import native from "native" /* 4530 */;
+import TableRow from "TableRow" /* 5912 */;
+import FormSwitch from "FormSwitch" /* 6617 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

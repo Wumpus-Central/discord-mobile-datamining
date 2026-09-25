@@ -1,6 +1,6 @@
-// === Module 10192: ReadStateUtils ===
+// === Module 9289: ReadStateUtils ===
 
-// Module 10192 (ReadStateUtils)
+// Module 9289 (ReadStateUtils)
 import ReadStateStore from "ReadStateStore" /* 4844 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5010 */;
 

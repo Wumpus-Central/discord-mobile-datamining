@@ -1,17 +1,17 @@
-// === Module 10023: VoiceStateIcons ===
+// === Module 9121: VoiceStateIcons ===
 
-// Module 10023 (VoiceStateIcons)
+// Module 9121 (VoiceStateIcons)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import inlineStyles from "inlineStyles" /* 8807 */;
-import VoiceStateIconUtils from "VoiceStateIconUtils" /* 10024 */;
-import HeadphonesDenyIcon from "HeadphonesDenyIcon" /* 10025 */;
-import HeadphonesSlashIcon from "HeadphonesSlashIcon" /* 10027 */;
-import MicrophoneDenyIcon from "MicrophoneDenyIcon" /* 10029 */;
-import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 10031 */;
-import _modDef10033 from "module_10033" /* 10033 */;
-import _modDef10034 from "module_10034" /* 10034 */;
+import inlineStyles from "inlineStyles" /* 7901 */;
+import VoiceStateIconUtils from "VoiceStateIconUtils" /* 9122 */;
+import HeadphonesDenyIcon from "HeadphonesDenyIcon" /* 9123 */;
+import HeadphonesSlashIcon from "HeadphonesSlashIcon" /* 9125 */;
+import MicrophoneDenyIcon from "MicrophoneDenyIcon" /* 9127 */;
+import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 9129 */;
+import _modDef9131 from "module_9131" /* 9131 */;
+import _modDef9132 from "module_9132" /* 9132 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -108,7 +108,7 @@ export const VideoIcon = noop.memo((state) => {
   if (VoiceStateIconUtils.VideoIconState.VIDEO_DISABLED_LOCAL_AUTO === state) {
     const obj = {};
     const merged1 = Object.assign(merged);
-    obj.source = _modDef10033;
+    obj.source = _modDef9131;
     const items = [merged.style, tmp2.noTint];
     obj.style = items;
     return React4(native.Icon, obj);
@@ -119,7 +119,7 @@ export const VideoIcon = noop.memo((state) => {
   } else if (VoiceStateIconUtils.VideoIconState.VIDEO_ACTIVE === state) {
     const obj3 = {};
     const merged3 = Object.assign(merged);
-    obj3.source = _modDef10034;
+    obj3.source = _modDef9132;
     return React4(native.Icon, obj3);
   } else {
     GlobalUtils.assertNever(state);

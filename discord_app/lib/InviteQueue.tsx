@@ -1,11 +1,11 @@
-// === Module 10242: InviteQueue ===
+// === Module 9339: InviteQueue ===
 
-// Module 10242 (InviteQueue)
+// Module 9339 (InviteQueue)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1091 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7786 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 6871 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
-import Queue from "Queue" /* 8164 */;
+import Queue from "Queue" /* 7249 */;
 
 const sum = DurationsDefault.Millis.SECOND + 10;
 let c3 = sum;

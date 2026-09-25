@@ -1,14 +1,14 @@
-// === Module 16458: MessagesItemChannelBase ===
+// === Module 15638: MessagesItemChannelBase ===
 
-// Module 16458 (MessagesItemChannelBase)
+// Module 15638 (MessagesItemChannelBase)
 import nativeDefault from "native" /* 576 */;
 import transitionToChannel from "transitionToChannel" /* 4840 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4842 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11265 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10363 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 4869 */;
 import ReadStateStore from "ReadStateStore" /* 4844 */;
-import RelationshipStore from "RelationshipStore" /* 4474 */;
+import RelationshipStore from "RelationshipStore" /* 4476 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5010 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -72,7 +72,7 @@ export default noop.memo(function MessagesItemChannelBase(channel) {
       const obj2 = { status: PresenceStore.getStatus(channel.getRecipientId()), activities };
       let obj3 = obj2;
     } else {
-      obj3 = { status: "channel", activities: "channelId" };
+      obj3 = { status: "isArray", activities: "paddingHorizontal" };
     }
     return obj3;
   });

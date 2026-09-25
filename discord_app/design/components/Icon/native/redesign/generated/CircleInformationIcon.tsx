@@ -2,7 +2,7 @@
 
 // Module 4783 (CircleInformationIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4525 */;
+import BaseIconImage from "BaseIconImage" /* 4527 */;
 import _mod4784 from "module_4784" /* 4784 */;
 import _mod4785 from "module_4785" /* 4785 */;
 import noop from "module_19" /* 19 */;

@@ -1,16 +1,16 @@
-// === Module 16455: MessageRequestsButton ===
+// === Module 15635: MessageRequestsButton ===
 
-// Module 16455 (MessageRequestsButton)
+// Module 15635 (MessageRequestsButton)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
-import components_Button_Button from "components/Button/Button" /* 5273 */;
-import IconButton from "IconButton" /* 8269 */;
-import _modDef10230 from "module_10230" /* 10230 */;
-import IconActionButton from "IconActionButton" /* 13660 */;
-import _mod16456 from "module_16456" /* 16456 */;
+import components_Button_Button from "components/Button/Button" /* 5274 */;
+import IconButton from "IconButton" /* 7358 */;
+import _modDef9327 from "module_9327" /* 9327 */;
+import IconActionButton from "IconActionButton" /* 12814 */;
+import _mod15636 from "module_15636" /* 15636 */;
 import noop from "module_19" /* 19 */;
-import MessageRequestStore from "MessageRequestStore" /* 7552 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7553 */;
+import MessageRequestStore from "MessageRequestStore" /* 6635 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6636 */;
 
 const IconActionButtonDefault = IconActionButton;
 
@@ -32,7 +32,7 @@ function MessageRequestAnimation(color) {
       }
     }
   }, items2);
-  return React5(_mod16456.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
+  return React5(_mod15636.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -82,7 +82,7 @@ export default function MessageRequestsButton(alternateVariant) {
     obj3.children = items2;
     return React6(View, obj3);
   } else {
-    const obj6 = { source: _modDef10230, IconComponent: MessageRequestAnimation, accessibilityLabel: null, buttonText: null, badge: null, badgePosition: "right" };
+    const obj6 = { source: _modDef9327, IconComponent: MessageRequestAnimation, accessibilityLabel: null, buttonText: null, badge: null, badgePosition: "right" };
     const intl = util.intl;
     obj6.accessibilityLabel = intl.string(util.t.e7GWjQ);
     let str2;

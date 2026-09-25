@@ -1,9 +1,9 @@
-// === Module 12074: DoubleTapEmojiEditNudge ===
+// === Module 11219: DoubleTapEmojiEditNudge ===
 
-// Module 12074 (DoubleTapEmojiEditNudge)
+// Module 11219 (DoubleTapEmojiEditNudge)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8316 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 7405 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4821 */;
@@ -89,7 +89,7 @@ function DoubleTapEmojiEditNudgeInner(location) {
               return obj16;
             } else {
               const obj17 = { emoji: closure_129_0 };
-              const result = _location(11477).showDoubleTapEmojiUpdatedToast(obj17);
+              const result = _location(10575).showDoubleTapEmojiUpdatedToast(obj17);
               c4 = 3;
               return { value: "HermesInternal", done: null };
             }
@@ -110,7 +110,7 @@ function DoubleTapEmojiEditNudgeInner(location) {
       }
       return applyArgumentsResult;
     };
-    let result = _location(11474).openEmojiPickerActionSheet(obj2, "stack");
+    let result = _location(10572).openEmojiPickerActionSheet(obj2, "stack");
   }, items2);
   let obj4 = { color: "text-subtle", variant: "text-sm/normal", children: null };
   const intl = _location(1115).intl;
@@ -123,13 +123,13 @@ function DoubleTapEmojiEditNudgeInner(location) {
     str = emoji.surrogates;
   }
   obj5.name = str;
-  items3[1] = closure_11(emoji(7463), obj5);
+  items3[1] = closure_11(emoji(6546), obj5);
   let obj6 = { accessibilityRole: "button", onPress: callback, hitSlop, style: tmp5.editButton, children: null };
   const obj7 = { color: "text-brand", variant: "text-sm/normal", children: null };
   const intl2 = tmp(1115).intl;
   obj7.children = intl2.string(_location(1115).t.bt75uw);
   obj6.children = closure_11(_location(4825).Text, obj7);
-  items3[2] = closure_11(_location(5427).PressableOpacity, obj6);
+  items3[2] = closure_11(_location(5428).PressableOpacity, obj6);
   obj3.children = items3;
   return closure_12(View, obj3);
 }

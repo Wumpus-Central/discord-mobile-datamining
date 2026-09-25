@@ -1,15 +1,15 @@
-// === Module 14543: ContextMenuPopout ===
+// === Module 13704: ContextMenuPopout ===
 
-// Module 14543 (ContextMenuPopout)
+// Module 13704 (ContextMenuPopout)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import native from "native" /* 4535 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4561 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5258 */;
-import spring from "spring" /* 5272 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6985 */;
-import ContextMenuState from "ContextMenuState" /* 8265 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 8266 */;
+import native from "native" /* 4537 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5259 */;
+import spring from "spring" /* 5273 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6068 */;
+import ContextMenuState from "ContextMenuState" /* 7354 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 7355 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,13 +26,13 @@ function ContextMenuBackdrop(onDismiss) {
     obj.opacity = spring.withSpring(value, ContextMenuConstants.CONTEXT_MENU_SPRING);
     return obj;
   };
-  let obj = visible(4561);
-  fn.__closure = { withSpring: visible(5272).withSpring, visible, CONTEXT_MENU_SPRING: visible(8266).CONTEXT_MENU_SPRING };
+  let obj = visible(4563);
+  fn.__closure = { withSpring: visible(5273).withSpring, visible, CONTEXT_MENU_SPRING: visible(7355).CONTEXT_MENU_SPRING };
   fn.__workletHash = 6862317967896;
   fn.__initData = __initData2;
   const animatedStyle = obj.useAnimatedStyle(fn);
   const obj3 = { blur: "none", style: animatedStyle, accessibleDismissStyle: tmp.accessibleDismiss, onDismiss: onDismiss.onPress, accessibilityLabel: null };
-  const obj2 = { withSpring: visible(5272).withSpring, visible, CONTEXT_MENU_SPRING: visible(8266).CONTEXT_MENU_SPRING };
+  const obj2 = { withSpring: visible(5273).withSpring, visible, CONTEXT_MENU_SPRING: visible(7355).CONTEXT_MENU_SPRING };
   const obj4 = visible(1364);
   const intl = visible(1115).intl;
   const string = intl.string;
@@ -43,7 +43,7 @@ function ContextMenuBackdrop(onDismiss) {
     stringResult = string(t.xs0juG);
   }
   obj3.accessibilityLabel = stringResult;
-  return closure_6(visible(5259).Backdrop, obj3);
+  return closure_6(visible(5260).Backdrop, obj3);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
@@ -52,11 +52,11 @@ const jsxProd = fn(21);
 let createStyles = fn(4829);
 let obj2 = { container: null, titleContainer: null, divider: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
-obj2.container = { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.lg, minWidth: fn(8266).CONTEXT_MENU_MIN_WIDTH };
-let obj3 = { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.lg, minWidth: fn(8266).CONTEXT_MENU_MIN_WIDTH };
-obj2.titleContainer = { padding: fn(8266).CONTEXT_MENU_ITEM_PADDING };
-let obj4 = { padding: fn(8266).CONTEXT_MENU_ITEM_PADDING };
-obj2.divider = { borderBottomWidth: fn(8266).CONTEXT_MENU_DIVIDER_HEIGHT, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
+obj2.container = { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.lg, minWidth: fn(7355).CONTEXT_MENU_MIN_WIDTH };
+let obj3 = { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.lg, minWidth: fn(7355).CONTEXT_MENU_MIN_WIDTH };
+obj2.titleContainer = { padding: fn(7355).CONTEXT_MENU_ITEM_PADDING };
+let obj4 = { padding: fn(7355).CONTEXT_MENU_ITEM_PADDING };
+obj2.divider = { borderBottomWidth: fn(7355).CONTEXT_MENU_DIVIDER_HEIGHT, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
 let closure_9 = createStyles.createStyles(obj2);
 let closure_10 = { code: "function ContextMenuPopoutNativeTsx1(){const{maxHeight,height,CONTEXT_MENU_MIN_WIDTH,positionY,positionX,CONTEXT_MENU_MIN_SCALE,withSpring,interpolate,visible,CONTEXT_MENU_SPRING,transitionState,TransitionStates,runOnJS,cleanUp,onClose}=this.__closure;const visibleHeight=Math.min(maxHeight,height);const halfHeight=visibleHeight/2;const halfWidth=CONTEXT_MENU_MIN_WIDTH/2;const translateYDirection=positionY==='below'?-1:1;const translateXDirection=positionX==='left'?-1:1;const translateY=translateYDirection*halfHeight+CONTEXT_MENU_MIN_SCALE*-translateYDirection*halfHeight;const translateX=translateXDirection*halfWidth+CONTEXT_MENU_MIN_SCALE*-translateXDirection*halfWidth;return{opacity:withSpring(interpolate(visible.get(),[0,1],[0,1]),CONTEXT_MENU_SPRING,'respect-motion-settings',function(finished){if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanUp)();runOnJS(onClose)();}}),transform:[{translateX:withSpring(interpolate(visible.get(),[0,1],[translateX,0]),CONTEXT_MENU_SPRING)},{translateY:withSpring(interpolate(visible.get(),[0,1],[translateY,0]),CONTEXT_MENU_SPRING)},{scale:withSpring(interpolate(visible.get(),[0,1],[CONTEXT_MENU_MIN_SCALE,1]),CONTEXT_MENU_SPRING)}]};}" };
 let __initData = { code: "function ContextMenuPopoutNativeTsx2(finished){const{transitionState,TransitionStates,runOnJS,cleanUp,onClose}=this.__closure;if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanUp)();runOnJS(onClose)();}}" };

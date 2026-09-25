@@ -1,10 +1,10 @@
-// === Module 11477: DoubleTapEmojiUpdatedToast ===
+// === Module 10575: DoubleTapEmojiUpdatedToast ===
 
-// Module 11477 (DoubleTapEmojiUpdatedToast)
+// Module 10575 (DoubleTapEmojiUpdatedToast)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4523 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4525 */;
 import Text_Text from "Text/Text" /* 4825 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4821 */;
@@ -84,7 +84,7 @@ export { ToastEmoji };
 export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdatedToast(emoji) {
   emoji = emoji.emoji;
   if (obj.getIsScreenReaderEnabled()) {
-    const AccessibilityAnnouncer = tmp(4536).AccessibilityAnnouncer;
+    const AccessibilityAnnouncer = tmp(4538).AccessibilityAnnouncer;
     const intl = tmp(1115).intl;
     const obj3 = { emojiName: emoji.name };
     AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp(1115).t.nKY0Fl, obj3));
@@ -101,5 +101,5 @@ export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdated
     };
     ToastActionCreatorsDefault.open(obj4);
   }
-  obj = emoji(5258);
+  obj = emoji(5259);
 };

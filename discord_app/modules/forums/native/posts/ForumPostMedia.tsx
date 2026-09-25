@@ -1,13 +1,13 @@
-// === Module 12351: ForumPostMedia ===
+// === Module 11477: ForumPostMedia ===
 
-// Module 12351 (ForumPostMedia)
+// Module 11477 (ForumPostMedia)
 import nativeDefault from "native" /* 576 */;
 import utils_ImageUtils from "utils/ImageUtils" /* 1477 */;
 import UserSettings from "UserSettings" /* 2020 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5261 */;
-import FastImageDefault from "FastImage" /* 5892 */;
-import SpoilerIconDefault from "SpoilerIcon" /* 12352 */;
-import MessageAttachmentUtils from "MessageAttachmentUtils" /* 12354 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5262 */;
+import FastImageDefault from "FastImage" /* 5894 */;
+import SpoilerIconDefault from "SpoilerIcon" /* 11478 */;
+import MessageAttachmentUtils from "MessageAttachmentUtils" /* 11480 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
@@ -70,9 +70,9 @@ function ForumPostMedia(obscureReason) {
   if (obscureReason.isMediaPost) {
     const obj2 = {};
     const merged = Object.assign(obscureReason);
-    let tmp6Result = closure_10(ref(12353), obj2);
+    let tmp6Result = closure_10(ref(11479), obj2);
     let tmp12 = closure_10;
-    const tmp19 = ref(12353);
+    const tmp19 = ref(11479);
   } else {
     if (tmp3Result.isAndroid()) {
       const obj3 = {};
@@ -88,7 +88,7 @@ function ForumPostMedia(obscureReason) {
     tmp3Result = tmp3(1364);
   }
   if (null != obscureReason.obscureReason) {
-    const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(7626).AGE_VERIFICATION_OBSCURABLE_REASONS;
+    const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(6709).AGE_VERIFICATION_OBSCURABLE_REASONS;
     if (AGE_VERIFICATION_OBSCURABLE_REASONS.has(obscureReason.obscureReason)) {
       if (shouldAgeVerifyForReason) {
         const obj5 = { style: null, ref: null, children: null };
@@ -99,12 +99,12 @@ function ForumPostMedia(obscureReason) {
           androidRippleConfig: ANDROID_FOREGROUND_RIPPLE,
           activeOpacity: 0,
           onPress() {
-                  const obj = ref(8761);
-                  const result = obj.showAgeVerificationGetStartedModal({ entryPoint: obscureReason(8763).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW });
+                  const obj = ref(7851);
+                  const result = obj.showAgeVerificationGetStartedModal({ entryPoint: obscureReason(7853).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW });
                 },
           children: tmp6Result
         };
-        obj5.children = tmp12(tmp3(5427).PressableOpacity, obj6);
+        obj5.children = tmp12(tmp3(5428).PressableOpacity, obj6);
         let tmp12Result = tmp12(closure_5, obj5);
       }
       return tmp12Result;
@@ -128,7 +128,7 @@ function ForumPostMedia(obscureReason) {
         },
       children: tmp6Result
     };
-    obj7.children = tmp12(tmp3(5427).PressableOpacity, obj8);
+    obj7.children = tmp12(tmp3(5428).PressableOpacity, obj8);
     tmp12Result = tmp12(closure_5, obj7);
   } else {
     const obj9 = { style: null, ref: null, children: null };

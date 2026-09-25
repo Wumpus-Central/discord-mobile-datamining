@@ -1,17 +1,17 @@
-// === Module 17410: ChannelSettingsIntegrationsOverview ===
+// === Module 16627: ChannelSettingsIntegrationsOverview ===
 
-// Module 17410 (ChannelSettingsIntegrationsOverview)
+// Module 16627 (ChannelSettingsIntegrationsOverview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import useNavigation from "useNavigation" /* 1484 */;
-import Stack_Stack from "Stack/Stack" /* 5271 */;
-import TableRow from "TableRow" /* 5910 */;
-import TableRowGroup from "TableRowGroup" /* 5992 */;
-import Form from "Form" /* 8951 */;
-import WebhookIcon from "WebhookIcon" /* 17305 */;
-import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 17411 */;
+import Stack_Stack from "Stack/Stack" /* 5272 */;
+import TableRow from "TableRow" /* 5912 */;
+import TableRowGroup from "TableRowGroup" /* 5994 */;
+import Form from "Form" /* 8045 */;
+import WebhookIcon from "WebhookIcon" /* 16520 */;
+import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 16628 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2044 */;
 
@@ -25,7 +25,7 @@ function LinkedLobbyFormSection(channel) {
   if (linkedLobby != null) {
     application_id = linkedLobby.application_id;
   }
-  const getOrFetchApplication = channel(7501).useGetOrFetchApplication(application_id);
+  const getOrFetchApplication = channel(6584).useGetOrFetchApplication(application_id);
   let tmp5 = null;
   if (null != getOrFetchApplication) {
     const obj3 = { title: null, hasIcons: true, children: null };
@@ -40,8 +40,8 @@ function LinkedLobbyFormSection(channel) {
     obj4.onPress = function onPress() {
       closure_1.push(ChannelSettingsSections.EDIT_LINKED_LOBBY, { channel, numScreensToPop: 1 });
     };
-    obj3.children = closure_6(tmp(5910).TableRow, obj4);
-    tmp5 = closure_6(tmp(5992).TableRowGroup, obj3);
+    obj3.children = closure_6(tmp(5912).TableRow, obj4);
+    tmp5 = closure_6(tmp(5994).TableRowGroup, obj3);
     const obj11 = { id: null, icon: null };
   }
   return tmp5;

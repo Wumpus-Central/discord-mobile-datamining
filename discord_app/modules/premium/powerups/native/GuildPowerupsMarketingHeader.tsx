@@ -1,16 +1,16 @@
-// === Module 13941: GuildPowerupsMarketingHeader ===
+// === Module 13100: GuildPowerupsMarketingHeader ===
 
-// Module 13941 (GuildPowerupsMarketingHeader)
+// Module 13100 (GuildPowerupsMarketingHeader)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import _modDef2518 from "module_2518" /* 2518 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12837 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12862 */;
-import useMarketablePowerupPerksDefault from "useMarketablePowerupPerks" /* 13942 */;
-import orderMarketablePerksForDisplayDefault from "orderMarketablePerksForDisplay" /* 13943 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 11966 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 11991 */;
+import useMarketablePowerupPerksDefault from "useMarketablePowerupPerks" /* 13101 */;
+import orderMarketablePerksForDisplayDefault from "orderMarketablePerksForDisplay" /* 13102 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4717 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4719 */;
 
 require = fn;
 function PerkText(children) {

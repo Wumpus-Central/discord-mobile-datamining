@@ -1,9 +1,9 @@
-// === Module 17346: FriendRequestsSettingsScreen ===
+// === Module 16561: FriendRequestsSettingsScreen ===
 
-// Module 17346 (FriendRequestsSettingsScreen)
+// Module 16561 (FriendRequestsSettingsScreen)
 import nativeDefault from "native" /* 576 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5429 */;
-import UserSettingsFriendRequestsDefault from "UserSettingsFriendRequests" /* 17347 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5430 */;
+import UserSettingsFriendRequestsDefault from "UserSettingsFriendRequests" /* 16562 */;
 import noop from "module_19" /* 19 */;
 
 const ScrollView = fn(17).ScrollView;

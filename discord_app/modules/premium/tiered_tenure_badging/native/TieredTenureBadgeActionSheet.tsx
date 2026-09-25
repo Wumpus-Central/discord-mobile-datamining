@@ -1,16 +1,16 @@
-// === Module 11510: TieredTenureBadgeActionSheet ===
+// === Module 10608: TieredTenureBadgeActionSheet ===
 
-// Module 11510 (TieredTenureBadgeActionSheet)
+// Module 10608 (TieredTenureBadgeActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
 import Text_Text from "Text/Text" /* 4825 */;
-import FastImageDefault from "FastImage" /* 5892 */;
-import openUserSettings from "openUserSettings" /* 7712 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7958 */;
-import showUserProfileActionSheet from "showUserProfileActionSheet" /* 8527 */;
-import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 11511 */;
-import useTenureBadgeRequirementString from "useTenureBadgeRequirementString" /* 11536 */;
+import FastImageDefault from "FastImage" /* 5894 */;
+import openUserSettings from "openUserSettings" /* 6795 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7043 */;
+import showUserProfileActionSheet from "showUserProfileActionSheet" /* 7617 */;
+import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 10609 */;
+import useTenureBadgeRequirementString from "useTenureBadgeRequirementString" /* 10634 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 

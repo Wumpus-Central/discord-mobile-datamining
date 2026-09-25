@@ -1,27 +1,27 @@
-// === Module 17509: GiftingBadgesCoachmarkActionSheet ===
+// === Module 16729: GiftingBadgesCoachmarkActionSheet ===
 
-// Module 17509 (GiftingBadgesCoachmarkActionSheet)
+// Module 16729 (GiftingBadgesCoachmarkActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import _modDef2582 from "module_2582" /* 2582 */;
-import RootNavigationRef from "RootNavigationRef" /* 4687 */;
+import RootNavigationRef from "RootNavigationRef" /* 4689 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7515 */;
-import BadgeId from "BadgeId" /* 8532 */;
-import utils_openGiftModal from "utils/openGiftModal" /* 11009 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 11097 */;
-import _modDef17510 from "module_17510" /* 17510 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6598 */;
+import BadgeId from "BadgeId" /* 7622 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 10113 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10202 */;
+import _modDef16730 from "module_16730" /* 16730 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8540 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7630 */;
 
 require = fn;
 function HasBadgeCoachmark(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   ({ currentTier, giftCount } = markAsDismissed);
   const tmp = closure_10();
-  const isGiftingBadgeComplexArtEnabled = markAsDismissed(11092).useIsGiftingBadgeComplexArtEnabled("GiftingBadgesCoachmarkActionSheet");
-  let obj = markAsDismissed(11092);
-  const giftingBadgeTierIconUrl = markAsDismissed(11092).getGiftingBadgeTierIconUrl(currentTier, isGiftingBadgeComplexArtEnabled);
+  const isGiftingBadgeComplexArtEnabled = markAsDismissed(10196).useIsGiftingBadgeComplexArtEnabled("GiftingBadgesCoachmarkActionSheet");
+  let obj = markAsDismissed(10196);
+  const giftingBadgeTierIconUrl = markAsDismissed(10196).getGiftingBadgeTierIconUrl(currentTier, isGiftingBadgeComplexArtEnabled);
   const items = [markAsDismissed];
   const items1 = [markAsDismissed];
   const callback = noop.useCallback(() => {
@@ -55,24 +55,31 @@ function HasBadgeCoachmark(markAsDismissed) {
   obj8.children = intl.format(_modDef2582["a+jfuy"], { tierName: str });
   const items3 = [closure_8(markAsDismissed(4825).Text, obj8), ];
   const obj9 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = tmp2(1115).intl;
-  if (giftCount == null) {
-    giftCount = 0;
+  if ("noCount" === markAsDismissed.variant) {
+    const intl3 = tmp2(1115).intl;
+    let stringResult = intl3.string(_modDef2582["0N8fCf"]);
+  } else {
+    const intl2 = tmp2(1115).intl;
+    if (giftCount == null) {
+      giftCount = 0;
+    }
+    const obj10 = { giftCount };
+    stringResult = intl2.formatToPlainString(_modDef2582.QxRA6w, obj10);
   }
-  obj9.children = intl2.formatToPlainString(_modDef2582.QxRA6w, { giftCount });
+  obj9.children = stringResult;
   items3[1] = closure_8(markAsDismissed(4825).Text, obj9);
   obj7.children = items3;
   items2[1] = closure_9(closure_5, obj7);
-  const obj10 = { style: tmp.footer, children: null };
-  const obj11 = { grow: true, text: null, onPress: null };
-  const intl3 = tmp2(1115).intl;
-  obj11.text = intl3.string(markAsDismissed(1115).t.RzWDqY);
-  obj11.onPress = callback;
-  obj10.children = closure_8(markAsDismissed(5273).Button, obj11);
-  items2[2] = closure_8(closure_5, obj10);
+  const obj11 = { style: tmp.footer, children: null };
+  const obj12 = { grow: true, text: null, onPress: null };
+  const intl4 = tmp2(1115).intl;
+  obj12.text = intl4.string(markAsDismissed(1115).t.RzWDqY);
+  obj12.onPress = callback;
+  obj11.children = closure_8(markAsDismissed(5274).Button, obj12);
+  items2[2] = closure_8(closure_5, obj11);
   obj4.children = items2;
   obj3.children = closure_9(closure_5, obj4);
-  return closure_8(markAsDismissed(7483).BottomSheet, obj3);
+  return closure_8(markAsDismissed(6566).BottomSheet, obj3);
 }
 function NewBadgeCoachmark(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
@@ -93,7 +100,7 @@ function NewBadgeCoachmark(markAsDismissed) {
   let obj = { startExpanded: true, onDismiss: callback1, children: null };
   const obj2 = { style: tmp.container, children: null };
   let obj3 = { style: tmp.graphicContainer, children: null };
-  const obj4 = { source: { uri: _modDef17510 }, style: tmp.newBadgeImage };
+  const obj4 = { source: { uri: _modDef16730 }, style: tmp.newBadgeImage };
   obj3.children = closure_8(closure_4, obj4);
   const items2 = [closure_8(closure_5, obj3), , ];
   const obj6 = { style: tmp.textContainer, children: null };
@@ -111,14 +118,14 @@ function NewBadgeCoachmark(markAsDismissed) {
   const obj10 = { grow: true, text: null, icon: null, onPress: null };
   const intl3 = markAsDismissed(1115).intl;
   obj10.text = intl3.string(_modDef2582.DZnomS);
-  const obj5 = { uri: _modDef17510 };
-  obj10.icon = closure_8(markAsDismissed(11387).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
+  const obj5 = { uri: _modDef16730 };
+  obj10.icon = closure_8(markAsDismissed(10485).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
   obj10.onPress = callback;
-  obj9.children = closure_8(markAsDismissed(5273).Button, obj10);
+  obj9.children = closure_8(markAsDismissed(5274).Button, obj10);
   items2[2] = closure_8(closure_5, obj9);
   obj2.children = items2;
   obj.children = closure_9(closure_5, obj2);
-  return closure_8(markAsDismissed(7483).BottomSheet, obj);
+  return closure_8(markAsDismissed(6566).BottomSheet, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
@@ -153,7 +160,7 @@ export default function GiftingBadgesCoachmarkActionSheet(markAsDismissed) {
   });
   const currentTier = stateFromStoresObject.currentTier;
   if (null != currentTier) {
-    const obj2 = { markAsDismissed, currentTier, giftCount: tmp2 };
+    const obj2 = { markAsDismissed, currentTier, giftCount: tmp2, variant: markAsDismissed.variant };
     let tmp5 = React6(HasBadgeCoachmark, obj2);
   } else {
     const obj3 = { markAsDismissed };

@@ -1,6 +1,6 @@
-// === Module 5271: Stack/Stack ===
+// === Module 5272: Stack/Stack ===
 
-// Module 5271 (Stack/Stack)
+// Module 5272 (Stack/Stack)
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

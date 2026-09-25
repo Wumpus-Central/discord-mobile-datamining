@@ -1,15 +1,15 @@
-// === Module 9831: StageChannelCallNavigator ===
+// === Module 8929: StageChannelCallNavigator ===
 
-// Module 9831 (StageChannelCallNavigator)
+// Module 8929 (StageChannelCallNavigator)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4561 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4563 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5030 */;
-import spring from "spring" /* 5272 */;
-import participantHasVideoDefault from "participantHasVideo" /* 9793 */;
-import StageActionBarButtons from "StageActionBarButtons" /* 10245 */;
-import JoinStageViewDefault from "JoinStageView" /* 10289 */;
-import MessageManagerDefault from "MessageManager" /* 10290 */;
-import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 10422 */;
+import spring from "spring" /* 5273 */;
+import participantHasVideoDefault from "participantHasVideo" /* 8891 */;
+import StageActionBarButtons from "StageActionBarButtons" /* 9342 */;
+import JoinStageViewDefault from "JoinStageView" /* 9386 */;
+import MessageManagerDefault from "MessageManager" /* 9387 */;
+import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 9524 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -75,8 +75,8 @@ function JoinStageOverlay(channel) {
     }
     return { opacity: spring.withSpring(num, closure_11) };
   };
-  let obj = showOverlay(4561);
-  fn.__closure = { withSpring: showOverlay(5272).withSpring, showOverlay, viewAnimationConfig };
+  let obj = showOverlay(4563);
+  fn.__closure = { withSpring: showOverlay(5273).withSpring, showOverlay, viewAnimationConfig };
   fn.__workletHash = 1929951426580;
   fn.__initData = __initData2;
   const animatedStyle = obj.useAnimatedStyle(fn);
@@ -90,7 +90,7 @@ function JoinStageOverlay(channel) {
   }, []);
   const obj3 = { style: null, children: null };
   const items = [closure_5.absoluteFill, , ];
-  const obj2 = { withSpring: showOverlay(5272).withSpring, showOverlay, viewAnimationConfig };
+  const obj2 = { withSpring: showOverlay(5273).withSpring, showOverlay, viewAnimationConfig };
   items[1] = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_800 };
   items[2] = animatedStyle;
   obj3.style = items;
