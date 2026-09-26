@@ -1,67 +1,22 @@
 // === Module 1846: ? ===
 
 // Module 1846
-import jsxProd from "jsxProd" /* 21 */;
-import cancelAnimation from "cancelAnimation" /* 1637 */;
-import noop_mod from "module_19" /* 19 */;
+import _mod19 from "module_19" /* 19 */;
 
-let noop = noop_mod;
-({ useMemo: c3, forwardRef } = noop);
-let noop = noop_mod;
-const jsx = jsxProd.jsx;
-let closure_5 = { code: "function pnpm_indexTsx1(){const{interpolate,progress,closed,opened,enabled,height}=this.__closure;const offset=interpolate(progress.value,[0,1],[closed,opened]);return{transform:[{translateY:enabled?height.value+offset:closed}]};}" };
+_mod19.useCallback;
 
-export default forwardRef((offset, ref) => {
-  offset = offset.offset;
-  if (offset === undefined) {
-    offset = {};
-  }
-  let num = offset.closed;
-  if (num === undefined) {
-    num = 0;
-  }
-  let num2 = offset.opened;
-  if (num2 === undefined) {
-    num2 = 0;
-  }
-  const style = offset.style;
-  let flag = offset.enabled;
-  if (flag === undefined) {
-    flag = true;
-  }
-  const merged = Object.assign(offset, Object.assign({ children: 0, offset: 0, style: 0, enabled: 0 }));
-  const reanimatedKeyboardAnimation = num(style[2]).useReanimatedKeyboardAnimation();
-  const height = reanimatedKeyboardAnimation.height;
-  const progress = reanimatedKeyboardAnimation.progress;
-  const obj2 = num(style[2]);
-  const fn = function h() {
-    cancelAnimation;
-    let sum = num;
-    const items = [num, num2];
-    if (flag) {
-      sum = height.value + tmp3;
+export default function _default() {
+  const items = [...arguments];
+  return useCallback((current) => {
+    for (const item10007 of items) {
+      if (item10007) {
+        if (typeof item10007 === "function") {
+          let tmpResult = item10007(arg0);
+        } else {
+          item10007.current = arg0;
+        }
+      }
+      continue;
     }
-    const obj = { transform: null };
-    const items1 = [{ translateY: sum }];
-    obj.transform = items1;
-    return obj;
-  };
-  const obj3 = num(style[3]);
-  fn.__closure = { interpolate: num(style[3]).interpolate, progress, closed: num, opened: num2, enabled: flag, height };
-  fn.__workletHash = 13627085806149;
-  fn.__initData = progress;
-  let items = [num, num2, flag];
-  const animatedStyle = obj3.useAnimatedStyle(fn, items);
-  let items1 = [style, animatedStyle];
-  let obj = { interpolate: num(style[3]).interpolate, progress, closed: num, opened: num2, enabled: flag, height };
-  const obj4 = {
-    ref,
-    style: flag(() => {
-      const items = [style, animatedStyle];
-      return items;
-    }, items1)
-  };
-  const merged1 = Object.assign(merged);
-  obj4.children = offset.children;
-  return height(num2(style[3]).View, obj4);
-});
+  }, items);
+};

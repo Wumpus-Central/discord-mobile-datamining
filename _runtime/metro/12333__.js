@@ -1,95 +1,234 @@
 // === Module 12333: ? ===
 
 // Module 12333
-import _mod12295 from "module_12295" /* 12295 */;
-import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 12300 */;
-import _mod12323 from "module_12323" /* 12323 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const logSpanEnd = function logSpanEnd(spanContext) {
-  if (_mod12323.DEBUG_BUILD) {
-    const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(spanContext);
-    const description = spanToJSONResult.description;
-    let str = "< unknown name >";
-    if (undefined !== description) {
-      str = description;
+let AsyncContextStack = require;
+function withScope(arg0) {
+  const mainCarrier = AsyncContextStack(12331).getMainCarrier();
+  const obj = AsyncContextStack(12331);
+  const sentryCarrier = AsyncContextStack(12331).getSentryCarrier(mainCarrier);
+  let stack = sentryCarrier.stack;
+  if (!stack) {
+    const defaultCurrentScope = AsyncContextStack(12339).getDefaultCurrentScope();
+    const tmpResult = AsyncContextStack(12339);
+    stack = new _moduleResult(defaultCurrentScope, AsyncContextStack(12339).getDefaultIsolationScope());
+    const tmpResult2 = AsyncContextStack(12339);
+  }
+  sentryCarrier.stack = stack;
+  return stack.withScope(arg0);
+}
+function withSetScope(scope, arg1) {
+  closure_1 = arg1;
+  const mainCarrier = AsyncContextStack(12331).getMainCarrier();
+  const obj = AsyncContextStack(12331);
+  const sentryCarrier = AsyncContextStack(12331).getSentryCarrier(mainCarrier);
+  let stack = sentryCarrier.stack;
+  if (!stack) {
+    const defaultCurrentScope = AsyncContextStack(12339).getDefaultCurrentScope();
+    const tmpResult = AsyncContextStack(12339);
+    stack = new _moduleResult(defaultCurrentScope, AsyncContextStack(12339).getDefaultIsolationScope());
+    const tmpResult2 = AsyncContextStack(12339);
+  }
+  sentryCarrier.stack = stack;
+  return stack.withScope(() => {
+    stack.getStackTop().scope = scope;
+    return closure_1(scope);
+  });
+}
+function withIsolationScope(arg0) {
+  AsyncContextStack = arg0;
+  const mainCarrier = AsyncContextStack(12331).getMainCarrier();
+  const obj = AsyncContextStack(12331);
+  const sentryCarrier = AsyncContextStack(12331).getSentryCarrier(mainCarrier);
+  let stack = sentryCarrier.stack;
+  if (!stack) {
+    const defaultCurrentScope = tmp(12339).getDefaultCurrentScope();
+    const tmpResult = tmp(12339);
+    stack = new closure_3(defaultCurrentScope, tmp(12339).getDefaultIsolationScope());
+    const tmpResult2 = tmp(12339);
+  }
+  sentryCarrier.stack = stack;
+  return stack.withScope(() => {
+    const mainCarrier = AsyncContextStack(12331).getMainCarrier();
+    const obj = AsyncContextStack(12331);
+    const sentryCarrier = AsyncContextStack(12331).getSentryCarrier(mainCarrier);
+    let stack = sentryCarrier.stack;
+    if (!stack) {
+      const defaultCurrentScope = AsyncContextStack(12339).getDefaultCurrentScope();
+      const tmp2Result = AsyncContextStack(12339);
+      stack = new closure_2_3(defaultCurrentScope, AsyncContextStack(12339).getDefaultIsolationScope());
+      const tmp2Result2 = AsyncContextStack(12339);
     }
-    const op = spanToJSONResult.op;
-    let str2 = "< unknown op >";
-    if (undefined !== op) {
-      str2 = op;
+    sentryCarrier.stack = stack;
+    return closure_0(stack.getIsolationScope());
+  });
+}
+class AsyncContextStack {
+  constructor(arg0, arg1) {
+    self = this;
+    scope = global;
+    tmp2 = c2(this, AsyncContextStack);
+    if (!global) {
+      tmp3 = closure_0;
+      tmp4 = closure_1;
+      tmp5 = new.target;
+      tmp6 = new.target;
+      scope = new closure_0(closure_1[2]).Scope();
     }
-    const spanId = spanContext.spanContext().spanId;
-    const tmpResult = spanTimeInputToSeconds;
-    let str3 = "";
-    if (tmpResult2.getRootSpan(spanContext) === spanContext) {
-      str3 = "root ";
+    scope1 = require;
+    if (!require) {
+      tmp8 = closure_0;
+      tmp9 = closure_1;
+      tmp10 = new.target;
+      tmp11 = new.target;
+      scope1 = new closure_0(closure_1[2]).Scope();
     }
-    const _HermesInternal = HermesInternal;
-    const combined = "[Tracing] Finishing \"" + str2 + "\" " + str3 + "span \"" + str + "\" with ID " + spanId;
-    const logger = _mod12295.logger;
-    logger.log(combined);
-    tmpResult2 = spanTimeInputToSeconds;
+    items = [];
+    items[0] = { scope };
+    self._stack = items;
+    self._isolationScope = scope1;
+    return;
+  }
+}
+const entry = {
+  key: "withScope",
+  value: function withScope(fn) {
+    const self = this;
+    try {
+      const promise = fn(tmp);
+      if (obj2.isThenable(promise)) {
+        let nextPromise = promise.then((result) => {
+          self._popScope();
+          return result;
+        }, (arg0) => {
+          self._popScope();
+          throw arg0;
+        });
+      } else {
+        self._popScope();
+        nextPromise = promise;
+      }
+      return nextPromise;
+    } catch (tmp9) {
+      obj._popScope();
+      throw tmp9;
+    }
   }
 };
-export const logSpanStart = function logSpanStart(spanContext) {
-  if (_mod12323.DEBUG_BUILD) {
-    const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(spanContext);
-    const description = spanToJSONResult.description;
-    let str = "< unknown name >";
-    if (undefined !== description) {
-      str = description;
+let items = [
+  entry,
+  {
+    key: "getClient",
+    value: function getClient() {
+      return this.getStackTop().client;
     }
-    const op = spanToJSONResult.op;
-    let str2 = "< unknown op >";
-    if (undefined !== op) {
-      str2 = op;
+  },
+  {
+    key: "getScope",
+    value: function getScope() {
+      return this.getStackTop().scope;
     }
-    const parent_span_id = spanToJSONResult.parent_span_id;
-    const tmpResult = spanTimeInputToSeconds;
-    const tmpResult4 = spanTimeInputToSeconds;
-    const spanIsSampledResult = spanTimeInputToSeconds.spanIsSampled(spanContext);
-    const rootSpan = spanTimeInputToSeconds.getRootSpan(spanContext);
-    let str3 = "unsampled";
-    if (spanIsSampledResult) {
-      str3 = "sampled";
+  },
+  {
+    key: "getIsolationScope",
+    value: function getIsolationScope() {
+      return this._isolationScope;
     }
-    let str5 = "";
-    if (rootSpan === spanContext) {
-      str5 = "root ";
+  },
+  {
+    key: "getStackTop",
+    value: function getStackTop() {
+      return this._stack[this._stack.length - 1];
     }
-    const _HermesInternal = HermesInternal;
-    const _HermesInternal2 = HermesInternal;
-    const combined = "[Tracing] Starting " + str3 + " " + str5 + "span";
-    const items = ["op: " + str2, , ];
-    const _HermesInternal3 = HermesInternal;
-    items[1] = "name: " + str;
-    const _HermesInternal4 = HermesInternal;
-    items[2] = "ID: " + spanContext.spanContext().spanId;
-    if (parent_span_id) {
-      const _HermesInternal5 = HermesInternal;
-      items.push("parent ID: " + parent_span_id);
+  },
+  {
+    key: "_pushScope",
+    value: function _pushScope() {
+      const scope = this.getScope();
+      const cloneResult = scope.clone();
+      const _stack = this._stack;
+      _stack.push({ client: this.getClient(), scope: cloneResult });
+      return cloneResult;
     }
-    if (rootSpan !== spanContext) {
-      const tmpResult6 = spanTimeInputToSeconds;
-      ({ op: op2, description: description2 } = spanTimeInputToSeconds.spanToJSON(rootSpan));
-      const _HermesInternal6 = HermesInternal;
-      items.push("root ID: " + rootSpan.spanContext().spanId);
-      if (op2) {
-        const _HermesInternal7 = HermesInternal;
-        items.push("root op: " + op2);
+  },
+  {
+    key: "_popScope",
+    value: function _popScope() {
+      let arr = this._stack.length > 1;
+      if (arr) {
+        const _stack = this._stack;
+        arr = _stack.pop();
       }
-      if (description2) {
-        const _HermesInternal8 = HermesInternal;
-        items.push("root description: " + description2);
-      }
-      const spanToJSONResult1 = spanTimeInputToSeconds.spanToJSON(rootSpan);
+      return arr;
     }
-    const logger = _mod12295.logger;
-    const _HermesInternal9 = HermesInternal;
-    logger.log("" + combined + "\n  " + items.join("\n  "));
-    const tmpResult5 = spanTimeInputToSeconds;
   }
-};
+];
+const _moduleResult = _createClass(AsyncContextStack, items);
+let c3 = _moduleResult;
+
+export const AsyncContextStack = _moduleResult;
+export function getStackAsyncContextStrategy() {
+  return {
+    withIsolationScope,
+    withScope,
+    withSetScope,
+    withSetIsolationScope(arg0, arg1) {
+      closure_0 = arg1;
+      let mainCarrier = closure_0(12331).getMainCarrier();
+      let obj = closure_0(12331);
+      let sentryCarrier = closure_0(12331).getSentryCarrier(mainCarrier);
+      let stack = sentryCarrier.stack;
+      if (!stack) {
+        let defaultCurrentScope = tmp(12339).getDefaultCurrentScope();
+        const tmpResult = tmp(12339);
+        stack = new closure_3(defaultCurrentScope, tmp(12339).getDefaultIsolationScope());
+        const tmpResult2 = tmp(12339);
+      }
+      sentryCarrier.stack = stack;
+      return stack.withScope(() => {
+        const mainCarrier = AsyncContextStack(12331).getMainCarrier();
+        const obj = AsyncContextStack(12331);
+        const sentryCarrier = AsyncContextStack(12331).getSentryCarrier(mainCarrier);
+        let stack = sentryCarrier.stack;
+        if (!stack) {
+          const defaultCurrentScope = AsyncContextStack(12339).getDefaultCurrentScope();
+          const tmp2Result = AsyncContextStack(12339);
+          stack = new closure_2_3(defaultCurrentScope, AsyncContextStack(12339).getDefaultIsolationScope());
+          const tmp2Result2 = AsyncContextStack(12339);
+        }
+        sentryCarrier.stack = stack;
+        return closure_0(stack.getIsolationScope());
+      });
+    },
+    getCurrentScope() {
+      const mainCarrier = AsyncContextStack(12331).getMainCarrier();
+      const obj = AsyncContextStack(12331);
+      const sentryCarrier = AsyncContextStack(12331).getSentryCarrier(mainCarrier);
+      let stack = sentryCarrier.stack;
+      if (!stack) {
+        const defaultCurrentScope = AsyncContextStack(12339).getDefaultCurrentScope();
+        const tmpResult = AsyncContextStack(12339);
+        stack = new closure_1_3(defaultCurrentScope, AsyncContextStack(12339).getDefaultIsolationScope());
+        const tmpResult2 = AsyncContextStack(12339);
+      }
+      sentryCarrier.stack = stack;
+      return stack.getScope();
+    },
+    getIsolationScope() {
+      const mainCarrier = AsyncContextStack(12331).getMainCarrier();
+      const obj = AsyncContextStack(12331);
+      const sentryCarrier = AsyncContextStack(12331).getSentryCarrier(mainCarrier);
+      let stack = sentryCarrier.stack;
+      if (!stack) {
+        const defaultCurrentScope = AsyncContextStack(12339).getDefaultCurrentScope();
+        const tmpResult = AsyncContextStack(12339);
+        stack = new closure_1_3(defaultCurrentScope, AsyncContextStack(12339).getDefaultIsolationScope());
+        const tmpResult2 = AsyncContextStack(12339);
+      }
+      sentryCarrier.stack = stack;
+      return stack.getIsolationScope();
+    }
+  };
+}

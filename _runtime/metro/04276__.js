@@ -2,7 +2,7 @@
 
 // Module 4276
 import module_4268_mod from "module_4268" /* 4268 */;
-import requiredArgs_mod from "requiredArgs" /* 3916 */;
+import requiredArgs_mod from "requiredArgs" /* 3919 */;
 
 let module_4268 = module_4268_mod;
 if (!module_4268) {
@@ -21,7 +21,7 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisSecond(arg0) {
+export default function isThisMinute(arg0) {
   requiredArgs.default(1, arguments);
   return module_4268.default(Date.now(), arg0);
 };

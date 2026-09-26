@@ -1,16 +1,13 @@
 // === Module 6200: ? ===
 
 // Module 6200
-import _modDef6201 from "module_6201" /* 6201 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import metroRequire from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
 
-const TouchableHighlight = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,109 +27,80 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let closure_3 = ["style"];
-get_ActivityIndicator = fn(17);
-({ StyleSheet: closure_9, View: c10 } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-class TouchableHighlight {
-  constructor(arg0) {
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+function changeEventCalculator(force, force2) {
+  if (undefined === force2) {
+    const obj2 = { forceChange: force.force };
+    let obj = obj2;
+  } else {
+    obj = { forceChange: force.force - force2.force };
+  }
+  const merged = Object.assign(force);
+  const merged1 = Object.assign(obj);
+  return {};
+}
+changeEventCalculator.__closure = {};
+changeEventCalculator.__workletHash = 11365193947542;
+changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_forceTouchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={forceChange:current.force};}else{changePayload={forceChange:current.force-previous.force};}return{...current,...changePayload};}" };
+class ForceTouchGesture {
+  constructor() {
     self = this;
-    tmp = hasOwnProperty(this, TouchableHighlight);
-    items = [];
-    items[0] = global;
-    tmp2 = closure_7;
-    obj = closure_7(TouchableHighlight);
-    tmp3 = metroRequire;
-    if (closure_12()) {
+    tmp = closure_0(this, ForceTouchGesture);
+    tmp2 = c2;
+    obj = c2(ForceTouchGesture);
+    tmp3 = closure_1;
+    if (closure_4()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items);
+      constructResult = obj.apply(self, undefined);
     }
     tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.showUnderlay = () => {
-      if (closure_0.hasPressHandler()) {
-        const obj2 = { extraChildStyle: null, extraUnderlayStyle: null };
-        const obj3 = { opacity: closure_0.props.activeOpacity };
-        obj2.extraChildStyle = obj3;
-        const obj4 = { backgroundColor: closure_0.props.underlayColor };
-        obj2.extraUnderlayStyle = obj4;
-        closure_0.setState(obj2);
-        const props = closure_0.props;
-        const onShowUnderlay = props.onShowUnderlay;
-        if (onShowUnderlay != null) {
-          onShowUnderlay();
-        }
-      }
-    };
-    tmp3Result.hasPressHandler = () => closure_0.props.onPress || closure_0.props.onPressIn || closure_0.props.onPressOut || closure_0.props.onLongPress;
-    tmp3Result.hideUnderlay = () => {
-      closure_0.setState({ extraChildStyle: null, extraUnderlayStyle: null });
-      const props = closure_0.props;
-      const onHideUnderlay = props.onHideUnderlay;
-      if (onHideUnderlay != null) {
-        onHideUnderlay();
-      }
-    };
-    tmp3Result.onStateChange = (arg0, arg1) => {
-      if (arg1 === TouchableHighlight(6201).TOUCHABLE_STATE.BEGAN) {
-        closure_0.showUnderlay();
-      } else {
-        if (!tmp3) {
-          closure_0.hideUnderlay();
-        }
-        tmp3 = arg1 !== TouchableHighlight(6201).TOUCHABLE_STATE.UNDETERMINED && arg1 !== TouchableHighlight(6201).TOUCHABLE_STATE.MOVED_OUTSIDE;
-      }
-    };
-    tmp3Result.state = { extraChildStyle: null, extraUnderlayStyle: null };
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "ForceTouchGestureHandler";
     return tmp3Result;
   }
 }
-_inherits(TouchableHighlight, fn(19).Component);
+_classCallCheck = ForceTouchGesture;
+_inherits(ForceTouchGesture, fn(6094).ContinousBaseGesture);
 const entry = {
-  key: "renderChildren",
-  value: function renderChildren() {
-    const self = this;
-    if (this.props.children) {
-      const Children = noop.Children;
-      const onlyResult = Children.only(self.props.children);
-      const obj = { style: React7.compose(onlyResult.props.style, self.state.extraChildStyle) };
-      return noop.cloneElement(onlyResult, obj);
-    } else {
-      return <closure_1_10 />;
-    }
+  key: "minForce",
+  value: function minForce(minForce) {
+    this.config.minForce = minForce;
+    return this;
   }
 };
 let items = [
   entry,
   {
-    key: "render",
-    value: function render() {
+    key: "maxForce",
+    value: function maxForce(maxForce) {
+      this.config.maxForce = maxForce;
+      return this;
+    }
+  },
+  {
+    key: "feedbackOnActivation",
+    value: function feedbackOnActivation(feedbackOnActivation) {
+      this.config.feedbackOnActivation = feedbackOnActivation;
+      return this;
+    }
+  },
+  {
+    key: "onChange",
+    value: function onChange(arg0) {
+      this.handlers.changeEventCalculator = hasOwnProperty;
       const self = this;
-      const props = this.props;
-      let style = props.style;
-      if (undefined === style) {
-        style = {};
+      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
       }
-      const obj = {};
-      const tmp = _objectWithoutProperties(props, closure_3);
-      const merged = Object.assign(tmp);
-      const items = [style, self.state.extraUnderlayStyle];
-      obj.style = items;
-      obj.onStateChange = self.onStateChange;
-      obj.children = self.renderChildren();
-      return jsx(_modDef6201, {});
+      const items = [arg0];
+      return fn(items);
     }
   }
 ];
-const importDefaultResultResult = _createClass(TouchableHighlight, items);
-let obj = {};
-let merged = Object.assign(_modDef6201.defaultProps);
-obj.activeOpacity = 0.85;
-obj.delayPressOut = 100;
-obj.underlayColor = "black";
-importDefaultResultResult.defaultProps = obj;
 
-export default importDefaultResultResult;
+export const ForceTouchGesture = _createClass(ForceTouchGesture, items);

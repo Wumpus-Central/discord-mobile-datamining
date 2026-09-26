@@ -1,7 +1,14 @@
 // === Module 17490: ? ===
 
 // Module 17490
-import registerAsset from "module_1121" /* 1121 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/guild_settings/welcome/images", width: 71, height: 54, scales: [2, 3], hash: "9e37ee2a11d88922a3b56da1b883c062", name: "asset_role_subscription_megaphone", type: "png" });
+export default function basePropertyOf(arg0) {
+  closure_0 = arg0;
+  return (arg0) => {
+    let tmp2;
+    if (null != closure_0) {
+      tmp2 = tmp[arg0];
+    }
+    return tmp2;
+  };
+};

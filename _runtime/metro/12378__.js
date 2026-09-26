@@ -1,56 +1,102 @@
 // === Module 12378: ? ===
 
 // Module 12378
-const items = ["X-Client-IP", "X-Forwarded-For", "Fly-Client-IP", "CF-Connecting-IP", "Fastly-Client-Ip", "True-Client-Ip", "X-Real-IP", "X-Cluster-Client-IP", "X-Forwarded", "Forwarded-For", "Forwarded", "X-Vercel-Forwarded-For"];
+import _slicedToArray from "module_32" /* 32 */;
 
-export const getClientIPAddress = function getClientIPAddress(headers) {
-  let mapped = items.map((item) => {
-    let str = obj;
-    if (Array.isArray(headers[item])) {
-      str = obj.join(";");
+function parseRetryAfterHeader(arg0) {
+  let timestamp = arg1;
+  if (arg1 === undefined) {
+    const _Date = Date;
+    timestamp = Date.now();
+  }
+  const parsed = parseInt("" + arg0, 10);
+  if (isNaN(parsed)) {
+    const _Date2 = Date;
+    const _HermesInternal = HermesInternal;
+    const parsed1 = Date.parse("" + arg0);
+    const _isNaN = isNaN;
+    let num2 = 60000;
+    if (!isNaN(parsed1)) {
+      num2 = parsed1 - timestamp;
     }
-    if ("Forwarded" === item) {
-      let mapped = (function parseForwardedHeader(str) {
-        if (str) {
-          const parts = str.split(";");
-          const iter = parts[Symbol.iterator]();
-          const nextResult = iter.next();
-          while (iter !== undefined) {
-            let arr = nextResult;
-            if (nextResult.startsWith("for=")) {
-              let substr = arr.slice(4);
-              iter.return();
-              return substr;
-            }
-          }
-          return null;
-        } else {
-          return null;
-        }
-      })(str);
-    } else {
-      mapped = str;
-      if (str) {
-        let parts = str.split(",");
-        mapped = parts.map((item) => item.trim());
-      }
-    }
-    return mapped;
-  });
-  const reduced = mapped.reduce((arr, item) => {
-    let combined = arr;
-    if (item) {
-      combined = arr.concat(item);
-    }
-    return combined;
-  }, []);
-  return reduced.find((item) => {
-    let isMatch = null !== item;
-    if (isMatch) {
-      isMatch = /(?:^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$)|(?:^(?:(?:[a-fA-F\d]{1,4}:){7}(?:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){6}(?:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){5}(?::(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,2}|:)|(?:[a-fA-F\d]{1,4}:){4}(?:(?::[a-fA-F\d]{1,4}){0,1}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,3}|:)|(?:[a-fA-F\d]{1,4}:){3}(?:(?::[a-fA-F\d]{1,4}){0,2}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,4}|:)|(?:[a-fA-F\d]{1,4}:){2}(?:(?::[a-fA-F\d]{1,4}){0,3}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,5}|:)|(?:[a-fA-F\d]{1,4}:){1}(?:(?::[a-fA-F\d]{1,4}){0,4}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,6}|:)|(?::(?:(?::[a-fA-F\d]{1,4}){0,5}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,7}|:)))(?:%[0-9a-zA-Z]{1,})?$)/.test(item);
-      const obj = /(?:^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$)|(?:^(?:(?:[a-fA-F\d]{1,4}:){7}(?:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){6}(?:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){5}(?::(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,2}|:)|(?:[a-fA-F\d]{1,4}:){4}(?:(?::[a-fA-F\d]{1,4}){0,1}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,3}|:)|(?:[a-fA-F\d]{1,4}:){3}(?:(?::[a-fA-F\d]{1,4}){0,2}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,4}|:)|(?:[a-fA-F\d]{1,4}:){2}(?:(?::[a-fA-F\d]{1,4}){0,3}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,5}|:)|(?:[a-fA-F\d]{1,4}:){1}(?:(?::[a-fA-F\d]{1,4}){0,4}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,6}|:)|(?::(?:(?::[a-fA-F\d]{1,4}){0,5}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,7}|:)))(?:%[0-9a-zA-Z]{1,})?$)/;
-    }
-    return isMatch;
-  }) || null;
+    return num2;
+  } else {
+    return 1000 * parsed;
+  }
+}
+
+export const DEFAULT_RETRY_AFTER = 60000;
+export const disabledUntil = function disabledUntil(all, arg1) {
+  return all[arg1] || all.all || 0;
 };
-export const ipHeaderNames = items;
+export const isRateLimited = function isRateLimited(all, result) {
+  let timestamp = arg2;
+  if (arg2 === undefined) {
+    const _Date = Date;
+    timestamp = Date.now();
+  }
+  return (all[result] || all.all || 0) > timestamp;
+};
+export { parseRetryAfterHeader };
+export const updateRateLimits = function updateRateLimits(arg0, headers) {
+  headers = headers.headers;
+  let timestamp = arg2;
+  if (arg2 === undefined) {
+    const _Date = Date;
+    timestamp = Date.now();
+  }
+  const obj = {};
+  const merged = Object.assign(arg0);
+  let str = headers;
+  if (headers) {
+    str = headers["x-sentry-rate-limits"];
+  }
+  let prop = headers;
+  if (headers) {
+    prop = headers["retry-after"];
+  }
+  if (str) {
+    const parts = str.trim().split(",");
+    const iter = parts[Symbol.iterator]();
+    const str2 = str.trim();
+    while (iter !== undefined) {
+      let tmp12 = _slicedToArray(str8.split(":", 5), 5);
+      let str9 = tmp12[1];
+      let str10 = tmp12[4];
+      let _parseInt = parseInt;
+      let parsed = parseInt(tmp12[0], 10);
+      let _isNaN = isNaN;
+      let num6 = 60;
+      if (!isNaN(parsed)) {
+        num6 = parsed;
+      }
+      let result = 1000 * num6;
+      if (str9) {
+        let parts1 = str9.split(";");
+        for (const item10065 of parts1) {
+          let tmp23 = "metric_bucket" === item10065;
+          if (tmp23) {
+            tmp23 = str10;
+          }
+          if (tmp23) {
+            let parts2 = str10.split(";");
+            tmp23 = !parts2.includes("custom");
+          }
+          if (!tmp23) {
+            obj[item10065] = timestamp + result;
+          }
+          continue;
+        }
+      } else {
+        obj.all = timestamp + result;
+      }
+      continue;
+    }
+    str8 = iter.next();
+  } else if (prop) {
+    obj.all = timestamp + parseRetryAfterHeader(prop, timestamp);
+  } else if (429 === headers.statusCode) {
+    obj.all = timestamp + 60000;
+  }
+  return obj;
+};

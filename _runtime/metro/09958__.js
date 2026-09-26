@@ -4,17 +4,18 @@
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
-const JPSlashDateFormatParser = require;
-const regExp = new RegExp("([0-9\uFF10-\uFF19]{4}[\\/|\\\uFF0F])?([0-1\uFF10-\uFF11]{0,1}[0-9\uFF10-\uFF19]{1})(?:[\\/|\\\uFF0F]([0-3\uFF10-\uFF13]{0,1}[0-9\uFF10-\uFF19]{1}))", "i");
-class JPSlashDateFormatParser {
+const FRSpecificTimeExpressionParser = require;
+const regExp = new RegExp("(^|\\s|T)(?:(?:[\u00E0a])\\s*)?(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s|:)?)?(?:\\s*(A\\.M\\.|P\\.M\\.|AM?|PM?))?(?=\\W|$)", "i");
+const regExp1 = new RegExp("^\\s*(\\-|\\\u2013|\\~|\\\u301C|[\u00E0a]|\\?)\\s*(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s|:)?)?(?:\\s*(A\\.M\\.|P\\.M\\.|AM?|PM?))?(?=\\W|$)", "i");
+class FRSpecificTimeExpressionParser {
   constructor() {
-    tmp = c2(this, JPSlashDateFormatParser);
+    tmp = c2(this, FRSpecificTimeExpressionParser);
     return;
   }
 }
 const entry = {
   key: "pattern",
-  value: function pattern() {
+  value: function pattern(arg0) {
     return regExp;
   }
 };
@@ -22,32 +23,101 @@ const items = [
   entry,
   {
     key: "extract",
-    value: function extract(createParsingComponents, arg1) {
-      const parsingComponents = createParsingComponents.createParsingComponents();
-      const parsed = parseInt(JPSlashDateFormatParser(9954).toHankaku(arg1[2]));
-      const parsed1 = parseInt(JPSlashDateFormatParser(9954).toHankaku(arg1[3]));
-      if (parsed >= 1) {
-        if (parsed <= 12) {
-          if (parsed1 >= 1) {
-            if (parsed1 <= 31) {
-              parsingComponents.assign("day", parsed1);
-              parsingComponents.assign("month", parsed);
-              if (arg1[1]) {
-                const _parseInt = parseInt;
-                const parsed2 = parseInt(JPSlashDateFormatParser(9954).toHankaku(arg1[1]));
-                parsingComponents.assign("year", JPSlashDateFormatParser(9885).findMostLikelyADYear(parsed2));
-              } else {
-                parsingComponents.imply("year", JPSlashDateFormatParser(9885).findYearClosestToRef(createParsingComponents.reference.instant, parsed1, parsed));
-              }
-              return parsingComponents;
+    value: function extract(createParsingResult, index) {
+      const sum = index.index + index[1].length;
+      const parsingResult = createParsingResult.createParsingResult(sum, index[0].substring(index[1].length));
+      if (str2.match(/^\d{4}$/)) {
+        index.index = index.index + index[0].length;
+        return null;
+      } else {
+        const start = parsingResult.start;
+        parsingResult.start = FRSpecificTimeExpressionParser.extractTimeComponent(start.clone(), index);
+        if (parsingResult.start) {
+          const match = regex.exec(createParsingResult.text.substring(index.index + index[0].length));
+          if (match) {
+            const start2 = parsingResult.start;
+            parsingResult.end = FRSpecificTimeExpressionParser.extractTimeComponent(start2.clone(), match);
+            if (parsingResult.end) {
+              parsingResult.text = parsingResult.text + match[0];
             }
           }
+          return parsingResult;
+        } else {
+          index.index = index.index + index[0].length;
           return null;
         }
       }
-      return null;
+      str2 = parsingResult.text;
     }
   }
 ];
+const entry1 = {
+  key: "extractTimeComponent",
+  value: function extractTimeComponent(assign, arg1) {
+    const parsed = parseInt(arg1[2]);
+    let num = 0;
+    if (null != arg1[3]) {
+      const _parseInt = parseInt;
+      num = parseInt(arg1[3]);
+    }
+    if (num < 60) {
+      if (parsed <= 24) {
+        let PM1 = null;
+        if (parsed >= 12) {
+          PM1 = FRSpecificTimeExpressionParser(9900).Meridiem.PM;
+        }
+        let PM = PM1;
+        let tmp5 = parsed;
+        if (null != arg1[5]) {
+          if (parsed > 12) {
+            return null;
+          } else {
+            const formatted = arg1[5][0].toLowerCase();
+            let tmp8 = parsed;
+            if ("a" == formatted) {
+              let num2 = parsed;
+              if (12 == parsed) {
+                num2 = 0;
+              }
+              tmp8 = num2;
+              PM1 = FRSpecificTimeExpressionParser(9900).Meridiem.AM;
+            }
+            PM = PM1;
+            tmp5 = tmp8;
+            if ("p" == formatted) {
+              let sum = tmp8;
+              if (12 != tmp8) {
+                sum = tmp8 + 12;
+              }
+              tmp5 = sum;
+              PM = FRSpecificTimeExpressionParser(9900).Meridiem.PM;
+            }
+          }
+        }
+        assign.assign("hour", tmp5);
+        assign.assign("minute", num);
+        if (null !== PM) {
+          assign.assign("meridiem", PM);
+        } else if (tmp5 < 12) {
+          assign.imply("meridiem", FRSpecificTimeExpressionParser(9900).Meridiem.AM);
+        } else {
+          assign.imply("meridiem", FRSpecificTimeExpressionParser(9900).Meridiem.PM);
+        }
+        if (null != arg1[4]) {
+          const _parseInt2 = parseInt;
+          const parsed1 = parseInt(arg1[4]);
+          if (parsed1 >= 60) {
+            return null;
+          } else {
+            assign.assign("second", parsed1);
+          }
+        }
+        return assign;
+      }
+    }
+    return null;
+  }
+};
+const items1 = [entry1];
 
-export default _createClass(JPSlashDateFormatParser, items);
+export default _createClass(FRSpecificTimeExpressionParser, items, items1);

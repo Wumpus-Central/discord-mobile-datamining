@@ -1,71 +1,12 @@
 // === Module 7996: ? ===
 
 // Module 7996
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import _mod26 from "module_26" /* 26 */;
+import module_65 from "module_65" /* 65 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-class Stop {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_0(this, Stop);
-    items1 = [...items];
-    tmp2 = c2;
-    obj = c2(Stop);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = () => {
-      const parent = props.props.parent;
-      if (parent) {
-        parent.forceUpdate();
-      }
-    };
-    return tmp3Result;
-  }
-}
-_classCallCheck = Stop;
-_inherits(Stop, fn(19).Component);
-const entry = {
-  key: "render",
-  value: function render() {
-    return null;
-  }
-};
-let items = [entry];
-const importDefaultResultResult = _createClass(Stop, items);
-importDefaultResultResult.displayName = "Stop";
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGPattern", validAttributes: null };
+const size = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: _mod26.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, fontSize: true, fontWeight: true, font: true, x: true, y: true, height: true, width: true, patternUnits: true, patternContentUnits: true, patternTransform: true, minX: true, minY: true, vbWidth: true, vbHeight: true, align: true, meetOrSlice: true };
+__INTERNAL_VIEW_CONFIG.validAttributes = size;
 
-export default importDefaultResultResult;
+export default module_65.get("RNSVGPattern", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

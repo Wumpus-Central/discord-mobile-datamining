@@ -1,7 +1,7 @@
 // === Module 64: sizesDiffer ===
 
 // Module 64 (sizesDiffer)
-let closure_0 = { width: "isArray", height: "paddingHorizontal" };
+let closure_0 = { width: "Array", height: "paddingHorizontal" };
 
 export default function sizesDiffer(arg0, arg1) {
   let size = arg0;

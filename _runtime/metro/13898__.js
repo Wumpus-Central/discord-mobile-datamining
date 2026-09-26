@@ -1,10 +1,34 @@
 // === Module 13898: ? ===
 
 // Module 13898
-import _mod13876 from "module_13876" /* 13876 */;
-import _mod13877 from "module_13877" /* 13877 */;
 
-
-export default Object.keys || (function keys(arg0) {
-  return _mod13877(arg0, _mod13876);
-});
+export const getReactNativeVersionWithModules = function getReactNativeVersionWithModules(constants) {
+  try {
+    if (constants) {
+      if (constants.reactNativeVersion) {
+        const major = constants.reactNativeVersion.major;
+        const minor = constants.reactNativeVersion.minor;
+        const patch = constants.reactNativeVersion.patch;
+        const prerelease = constants.reactNativeVersion.prerelease;
+        if (typeof major !== "number") {
+          return null;
+        } else {
+          const items = [];
+          const _HermesInternal2 = HermesInternal;
+          items.push("" + tmp4 + "." + minor + "." + patch);
+          if (prerelease) {
+            const _HermesInternal = HermesInternal;
+            arr2.push("-" + prerelease);
+          }
+          return items.join("");
+        }
+      } else {
+        return null;
+      }
+    } else {
+      return null;
+    }
+  } catch (err) {
+    return null;
+  }
+};

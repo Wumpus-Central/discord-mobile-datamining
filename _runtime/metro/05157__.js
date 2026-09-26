@@ -1,18 +1,30 @@
 // === Module 5157: ? ===
 
 // Module 5157
-import _mod1281 from "module_1281" /* 1281 */;
-import _mod5105 from "module_5105" /* 5105 */;
 
-let closure_2 = _mod1281("%Object.isExtensible%", true);
-
-export default _mod1281("%Object.preventExtensions%", true) ? (function IsExtensible(arg0) {
-  const tmp = _mod5105(arg0);
-  let tmp2 = !tmp;
-  if (!tmp) {
-    tmp2 = closure_2(arg0);
+export default function fromPropertyDescriptor(__Value__) {
+  if (undefined === __Value__) {
+    return __Value__;
+  } else {
+    const obj = {};
+    if ("[[Value]]" in __Value__) {
+      obj.value = __Value__["[[Value]]"];
+    }
+    if ("[[Writable]]" in __Value__) {
+      obj.writable = __Value__["[[Writable]]"];
+    }
+    if ("[[Get]]" in __Value__) {
+      obj.get = __Value__["[[Get]]"];
+    }
+    if ("[[Set]]" in __Value__) {
+      obj.set = __Value__["[[Set]]"];
+    }
+    if ("[[Enumerable]]" in __Value__) {
+      obj.enumerable = __Value__["[[Enumerable]]"];
+    }
+    if ("[[Configurable]]" in __Value__) {
+      obj.configurable = __Value__["[[Configurable]]"];
+    }
+    return obj;
   }
-  return tmp2;
-}) : (function IsExtensible(arg0) {
-  return !_mod5105(arg0);
-});
+};

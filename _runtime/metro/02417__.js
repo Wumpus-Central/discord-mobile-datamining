@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_rooms", scales: [1], hash: "ba2c65822693400e26b3312ce422a7e4", name: "GuildRooms.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9ndWlsZF9yb29tcw==", scales: [1], hash: "d8aa979bfc52c8a8292a2b0bcdcb04b2", name: "zh-TW.messages.d8aa979bfc52c8a8292a2b0bcdcb04b2.compiled.messages", type: "jsona" });

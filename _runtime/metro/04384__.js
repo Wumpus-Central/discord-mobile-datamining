@@ -1,61 +1,37 @@
 // === Module 4384: ? ===
 
 // Module 4384
-import _mod4381 from "module_4381" /* 4381 */;
-import module_2121 from "module_2121" /* 2121 */;
-import module_2122 from "module_2122" /* 2122 */;
+import module_2120 from "module_2120" /* 2120 */;
 
-if (!module_2121) {
-  const obj2 = { default: module_2121 };
+if (!module_2120) {
+  const obj2 = { default: module_2120 };
   let obj = obj2;
 } else {
-  obj = module_2121;
+  obj = module_2120;
 }
-if (!module_2122) {
-  const obj4 = { default: module_2122 };
-  let obj3 = obj4;
-} else {
-  obj3 = module_2122;
-}
-const date = { ordinalNumber: obj3.default({ matchPattern: /^[०१२३४५६७८९]+/i, parsePattern: /^[०१२३४५६७८९]+/i, valueCallback: _mod4381.localeToNumber }), era: null, quarter: null, month: null, day: null, dayPeriod: null };
-const obj6 = { matchPatterns: { narrow: /^(ईसा-पूर्व|ईस्वी)/i, abbreviated: /^(ईसा\.?\s?पूर्व\.?|ईसा\.?)/i, wide: /^(ईसा-पूर्व|ईसवी पूर्व|ईसवी सन|ईसवी)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj7 = { any: null };
-const items = [/^b/i, /^(a|c)/i];
-obj7.any = items;
-obj6.parsePatterns = obj7;
-date.era = obj.default(obj6);
-const obj8 = {
-  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^ति[1234]/i, wide: /^[1234](पहली|दूसरी|तीसरी|चौथी)? तिमाही/i },
-  defaultMatchWidth: "wide",
-  parsePatterns: null,
-  defaultParseWidth: "any",
-  valueCallback(arg0) {
-    return arg0 + 1;
-  }
+let closure_0 = { locale: { 1: "\u0967", 2: "\u0968", 3: "\u0969", 4: "\u096A", 5: "\u096B", 6: "\u096C", 7: "\u096D", 8: "\u096E", 9: "\u096F", 0: "\u0966" }, number: { "१": "1", "२": "2", "३": "3", "४": "4", "५": "5", "६": "6", "७": "7", "८": "8", "९": "9", "०": "0" } };
+const date = {
+  ordinalNumber(arg0, arg1) {
+    const str = Number(arg0);
+    return Number(arg0).toString().replace(/\d/g, (arg0) => locale.locale[arg0]);
+  },
+  era: obj.default({ values: { narrow: ["\u0908\u0938\u093E-\u092A\u0942\u0930\u094D\u0935", "\u0908\u0938\u094D\u0935\u0940"], abbreviated: ["\u0908\u0938\u093E-\u092A\u0942\u0930\u094D\u0935", "\u0908\u0938\u094D\u0935\u0940"], wide: ["\u0908\u0938\u093E-\u092A\u0942\u0930\u094D\u0935", "\u0908\u0938\u0935\u0940 \u0938\u0928"] }, defaultWidth: "wide" }),
+  quarter: obj.default({
+    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["\u0924\u093F1", "\u0924\u093F2", "\u0924\u093F3", "\u0924\u093F4"], wide: ["\u092A\u0939\u0932\u0940 \u0924\u093F\u092E\u093E\u0939\u0940", "\u0926\u0942\u0938\u0930\u0940 \u0924\u093F\u092E\u093E\u0939\u0940", "\u0924\u0940\u0938\u0930\u0940 \u0924\u093F\u092E\u093E\u0939\u0940", "\u091A\u094C\u0925\u0940 \u0924\u093F\u092E\u093E\u0939\u0940"] },
+    defaultWidth: "wide",
+    argumentCallback(arg0) {
+      return arg0 - 1;
+    }
+  }),
+  month: obj.default({ values: { narrow: ["\u091C", "\u092B\u093C", "\u092E\u093E", "\u0905", "\u092E\u0908", "\u091C\u0942", "\u091C\u0941", "\u0905\u0917", "\u0938\u093F", "\u0905\u0915\u094D\u091F\u0942", "\u0928", "\u0926\u093F"], abbreviated: ["\u091C\u0928", "\u092B\u093C\u0930", "\u092E\u093E\u0930\u094D\u091A", "\u0905\u092A\u094D\u0930\u0948\u0932", "\u092E\u0908", "\u091C\u0942\u0928", "\u091C\u0941\u0932", "\u0905\u0917", "\u0938\u093F\u0924", "\u0905\u0915\u094D\u091F\u0942", "\u0928\u0935", "\u0926\u093F\u0938"], wide: ["\u091C\u0928\u0935\u0930\u0940", "\u092B\u093C\u0930\u0935\u0930\u0940", "\u092E\u093E\u0930\u094D\u091A", "\u0905\u092A\u094D\u0930\u0948\u0932", "\u092E\u0908", "\u091C\u0942\u0928", "\u091C\u0941\u0932\u093E\u0908", "\u0905\u0917\u0938\u094D\u0924", "\u0938\u093F\u0924\u0902\u092C\u0930", "\u0905\u0915\u094D\u091F\u0942\u092C\u0930", "\u0928\u0935\u0902\u092C\u0930", "\u0926\u093F\u0938\u0902\u092C\u0930"] }, defaultWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["\u0930", "\u0938\u094B", "\u092E\u0902", "\u092C\u0941", "\u0917\u0941", "\u0936\u0941", "\u0936"], short: ["\u0930", "\u0938\u094B", "\u092E\u0902", "\u092C\u0941", "\u0917\u0941", "\u0936\u0941", "\u0936"], abbreviated: ["\u0930\u0935\u093F", "\u0938\u094B\u092E", "\u092E\u0902\u0917\u0932", "\u092C\u0941\u0927", "\u0917\u0941\u0930\u0941", "\u0936\u0941\u0915\u094D\u0930", "\u0936\u0928\u093F"], wide: ["\u0930\u0935\u093F\u0935\u093E\u0930", "\u0938\u094B\u092E\u0935\u093E\u0930", "\u092E\u0902\u0917\u0932\u0935\u093E\u0930", "\u092C\u0941\u0927\u0935\u093E\u0930", "\u0917\u0941\u0930\u0941\u0935\u093E\u0930", "\u0936\u0941\u0915\u094D\u0930\u0935\u093E\u0930", "\u0936\u0928\u093F\u0935\u093E\u0930"] }, defaultWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "\u092A\u0942\u0930\u094D\u0935\u093E\u0939\u094D\u0928", pm: "\u0905\u092A\u0930\u093E\u0939\u094D\u0928", midnight: "\u092E\u0927\u094D\u092F\u0930\u093E\u0924\u094D\u0930\u093F", noon: "\u0926\u094B\u092A\u0939\u0930", morning: "\u0938\u0941\u092C\u0939", afternoon: "\u0926\u094B\u092A\u0939\u0930", evening: "\u0936\u093E\u092E", night: "\u0930\u093E\u0924" }, abbreviated: { am: "\u092A\u0942\u0930\u094D\u0935\u093E\u0939\u094D\u0928", pm: "\u0905\u092A\u0930\u093E\u0939\u094D\u0928", midnight: "\u092E\u0927\u094D\u092F\u0930\u093E\u0924\u094D\u0930\u093F", noon: "\u0926\u094B\u092A\u0939\u0930", morning: "\u0938\u0941\u092C\u0939", afternoon: "\u0926\u094B\u092A\u0939\u0930", evening: "\u0936\u093E\u092E", night: "\u0930\u093E\u0924" }, wide: { am: "\u092A\u0942\u0930\u094D\u0935\u093E\u0939\u094D\u0928", pm: "\u0905\u092A\u0930\u093E\u0939\u094D\u0928", midnight: "\u092E\u0927\u094D\u092F\u0930\u093E\u0924\u094D\u0930\u093F", noon: "\u0926\u094B\u092A\u0939\u0930", morning: "\u0938\u0941\u092C\u0939", afternoon: "\u0926\u094B\u092A\u0939\u0930", evening: "\u0936\u093E\u092E", night: "\u0930\u093E\u0924" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "\u092A\u0942\u0930\u094D\u0935\u093E\u0939\u094D\u0928", pm: "\u0905\u092A\u0930\u093E\u0939\u094D\u0928", midnight: "\u092E\u0927\u094D\u092F\u0930\u093E\u0924\u094D\u0930\u093F", noon: "\u0926\u094B\u092A\u0939\u0930", morning: "\u0938\u0941\u092C\u0939", afternoon: "\u0926\u094B\u092A\u0939\u0930", evening: "\u0936\u093E\u092E", night: "\u0930\u093E\u0924" }, abbreviated: { am: "\u092A\u0942\u0930\u094D\u0935\u093E\u0939\u094D\u0928", pm: "\u0905\u092A\u0930\u093E\u0939\u094D\u0928", midnight: "\u092E\u0927\u094D\u092F\u0930\u093E\u0924\u094D\u0930\u093F", noon: "\u0926\u094B\u092A\u0939\u0930", morning: "\u0938\u0941\u092C\u0939", afternoon: "\u0926\u094B\u092A\u0939\u0930", evening: "\u0936\u093E\u092E", night: "\u0930\u093E\u0924" }, wide: { am: "\u092A\u0942\u0930\u094D\u0935\u093E\u0939\u094D\u0928", pm: "\u0905\u092A\u0930\u093E\u0939\u094D\u0928", midnight: "\u092E\u0927\u094D\u092F\u0930\u093E\u0924\u094D\u0930\u093F", noon: "\u0926\u094B\u092A\u0939\u0930", morning: "\u0938\u0941\u092C\u0939", afternoon: "\u0926\u094B\u092A\u0939\u0930", evening: "\u0936\u093E\u092E", night: "\u0930\u093E\u0924" } }, defaultFormattingWidth: "wide" })
 };
-const obj9 = { any: null };
-const items1 = [/1/i, /2/i, /3/i, /4/i];
-obj9.any = items1;
-obj8.parsePatterns = obj9;
-date.quarter = obj.default(obj8);
-const obj10 = { matchPatterns: { narrow: /^[जफ़माअप्मईजूनजुअगसिअक्तनदि]/i, abbreviated: /^(जन|फ़र|मार्च|अप्|मई|जून|जुल|अग|सित|अक्तू|नव|दिस)/i, wide: /^(जनवरी|फ़रवरी|मार्च|अप्रैल|मई|जून|जुलाई|अगस्त|सितंबर|अक्तूबर|नवंबर|दिसंबर)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj11 = { narrow: null, any: null };
-const items2 = [/^ज/i, /^फ़/i, /^मा/i, /^अप्/i, /^मई/i, /^जू/i, /^जु/i, /^अग/i, /^सि/i, /^अक्तू/i, /^न/i, /^दि/i];
-obj11.narrow = items2;
-const items3 = [/^जन/i, /^फ़/i, /^मा/i, /^अप्/i, /^मई/i, /^जू/i, /^जु/i, /^अग/i, /^सि/i, /^अक्तू/i, /^नव/i, /^दिस/i];
-obj11.any = items3;
-obj10.parsePatterns = obj11;
-date.month = obj.default(obj10);
-const obj12 = { matchPatterns: { narrow: /^[रविसोममंगलबुधगुरुशुक्रशनि]/i, short: /^(रवि|सोम|मंगल|बुध|गुरु|शुक्र|शनि)/i, abbreviated: /^(रवि|सोम|मंगल|बुध|गुरु|शुक्र|शनि)/i, wide: /^(रविवार|सोमवार|मंगलवार|बुधवार|गुरुवार|शुक्रवार|शनिवार)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj13 = { narrow: null, any: null };
-const items4 = [/^रवि/i, /^सोम/i, /^मंगल/i, /^बुध/i, /^गुरु/i, /^शुक्र/i, /^शनि/i];
-obj13.narrow = items4;
-const items5 = [/^रवि/i, /^सोम/i, /^मंगल/i, /^बुध/i, /^गुरु/i, /^शुक्र/i, /^शनि/i];
-obj13.any = items5;
-obj12.parsePatterns = obj13;
-date.day = obj.default(obj12);
-const obj14 = { matchPatterns: { narrow: /^(पू|अ|म|द.\?|सु|दो|शा|रा)/i, any: /^(पूर्वाह्न|अपराह्न|म|द.\?|सु|दो|शा|रा)/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^पूर्वाह्न/i, pm: /^अपराह्न/i, midnight: /^मध्य/i, noon: /^दो/i, morning: /सु/i, afternoon: /दो/i, evening: /शा/i, night: /रा/i } }, defaultParseWidth: "any" };
-date.dayPeriod = obj.default(obj14);
 
+export const localeToNumber = function localeToNumber(arg0) {
+  return Number(arg0.toString().replace(/[१२३४५६७८९०]/g, (arg0) => number.number[arg0]));
+};
+export const numberToLocale = function numberToLocale(arg0) {
+  return arg0.toString().replace(/\d/g, (arg0) => locale.locale[arg0]);
+};
 export default date;
-export default exports.default;

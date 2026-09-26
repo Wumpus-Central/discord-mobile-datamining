@@ -1,7 +1,15 @@
 // === Module 13567: ? ===
 
 // Module 13567
-import _mod13556 from "module_13556" /* 13556 */;
+import _mod13559 from "module_13559" /* 13559 */;
 
 
-export default (arg0, arg1, arg2) => _mod13556(arg0, arg1, arg2) <= 0;
+export default (str, arg1) => {
+  str = str.trim();
+  const tmpResult = _mod13559(str.replace(/^[=v]+/, ""), arg1);
+  let version = null;
+  if (tmpResult) {
+    version = tmpResult.version;
+  }
+  return version;
+};

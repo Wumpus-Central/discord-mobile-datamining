@@ -2,29 +2,21 @@
 
 // Module 1905
 globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "it",
+  locale: "hu",
   pluralRuleFunction(arg0, arg1) {
     if (arg1) {
-      if (11 != arg0) {
-        if (8 != arg0) {
-          if (80 != arg0) {
-            let str4 = "other";
-          }
-          let str3 = str4;
-        }
-      }
-      str4 = "many";
-    } else {
-      str3 = "other";
       if (1 == arg0) {
-        str3 = "other";
-        if (!str.split(".")[1]) {
-          str3 = "one";
-        }
+        let str2 = "one";
+      } else {
+        str2 = "other";
+      }
+      let str = str2;
+    } else {
+      str = "other";
+      if (1 == arg0) {
+        str = "one";
       }
     }
-    return str3;
+    return str;
   }
 });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "it-CH", parentLocale: "it" });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "it-SM", parentLocale: "it" });

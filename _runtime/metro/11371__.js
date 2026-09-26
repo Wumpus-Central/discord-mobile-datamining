@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/safety_hub/images", width: 258, height: 235, scales: [1], hash: "67aa3a4595e9ab08ffca5da7eba4c713", name: "check-with-stars", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/safety_hub/images", width: 350, height: 350, scales: [1], hash: "ebaa362a049339e084011170417c750e", name: "video_light", type: "png" });

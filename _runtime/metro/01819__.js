@@ -1,18 +1,7 @@
 // === Module 1819: ? ===
 
 // Module 1819
-import configureProps from "configureProps" /* 1736 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const createAnimatedPropAdapter = function createAnimatedPropAdapter(arg0, arr) {
-  const obj = {};
-  if (arr != null) {
-    const item = arr.forEach((item) => {
-      obj[item] = true;
-    });
-  }
-  const result = configureProps.addWhitelistedNativeProps(obj);
-  return arg0;
-};
+export function getUseOfValueInStyleWarning() {
+  return "It looks like you might be using shared value's .value inside reanimated inline style. If you want a component to update when shared value changes you should use the shared value directly instead of its current state represented by `.value`. See documentation here: https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/glossary/#animations-in-inline-styling";
+}

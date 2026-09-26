@@ -1,30 +1,44 @@
 // === Module 3971: ? ===
 
 // Module 3971
-import module_2119 from "module_2119" /* 2119 */;
+const obj = { lessThanXSeconds: { one: { standalone: "manje od 1 sekunde", withPrepositionAgo: "manje od 1 sekunde", withPrepositionIn: "manje od 1 sekundu" }, dual: "manje od {{count}} sekunde", other: "manje od {{count}} sekundi" }, xSeconds: { one: { standalone: "1 sekunda", withPrepositionAgo: "1 sekunde", withPrepositionIn: "1 sekundu" }, dual: "{{count}} sekunde", other: "{{count}} sekundi" }, halfAMinute: "pola minute", lessThanXMinutes: { one: { standalone: "manje od 1 minute", withPrepositionAgo: "manje od 1 minute", withPrepositionIn: "manje od 1 minutu" }, dual: "manje od {{count}} minute", other: "manje od {{count}} minuta" }, xMinutes: { one: { standalone: "1 minuta", withPrepositionAgo: "1 minute", withPrepositionIn: "1 minutu" }, dual: "{{count}} minute", other: "{{count}} minuta" }, aboutXHours: { one: { standalone: "oko 1 sat", withPrepositionAgo: "oko 1 sat", withPrepositionIn: "oko 1 sat" }, dual: "oko {{count}} sata", other: "oko {{count}} sati" }, xHours: { one: { standalone: "1 sat", withPrepositionAgo: "1 sat", withPrepositionIn: "1 sat" }, dual: "{{count}} sata", other: "{{count}} sati" }, xDays: { one: { standalone: "1 dan", withPrepositionAgo: "1 dan", withPrepositionIn: "1 dan" }, dual: "{{count}} dana", other: "{{count}} dana" }, aboutXWeeks: { one: { standalone: "oko 1 tjedan", withPrepositionAgo: "oko 1 tjedan", withPrepositionIn: "oko 1 tjedan" }, dual: "oko {{count}} tjedna", other: "oko {{count}} tjedana" }, xWeeks: { one: { standalone: "1 tjedan", withPrepositionAgo: "1 tjedan", withPrepositionIn: "1 tjedan" }, dual: "{{count}} tjedna", other: "{{count}} tjedana" }, aboutXMonths: { one: { standalone: "oko 1 mjesec", withPrepositionAgo: "oko 1 mjesec", withPrepositionIn: "oko 1 mjesec" }, dual: "oko {{count}} mjeseca", other: "oko {{count}} mjeseci" }, xMonths: { one: { standalone: "1 mjesec", withPrepositionAgo: "1 mjesec", withPrepositionIn: "1 mjesec" }, dual: "{{count}} mjeseca", other: "{{count}} mjeseci" }, aboutXYears: { one: { standalone: "oko 1 godinu", withPrepositionAgo: "oko 1 godinu", withPrepositionIn: "oko 1 godinu" }, dual: "oko {{count}} godine", other: "oko {{count}} godina" }, xYears: { one: { standalone: "1 godina", withPrepositionAgo: "1 godine", withPrepositionIn: "1 godinu" }, dual: "{{count}} godine", other: "{{count}} godina" }, overXYears: { one: { standalone: "preko 1 godinu", withPrepositionAgo: "preko 1 godinu", withPrepositionIn: "preko 1 godinu" }, dual: "preko {{count}} godine", other: "preko {{count}} godina" }, almostXYears: { one: { standalone: "gotovo 1 godinu", withPrepositionAgo: "gotovo 1 godinu", withPrepositionIn: "gotovo 1 godinu" }, dual: "gotovo {{count}} godine", other: "gotovo {{count}} godina" } };
 
-if (!module_2119) {
-  const obj2 = { default: module_2119 };
-  let obj = obj2;
-} else {
-  obj = module_2119;
-}
-const date = {
-  ordinalNumber(arg0, arg1) {
-    return Number(arg0) + ".";
-  },
-  era: obj.default({ values: { narrow: ["pr.n.e.", "AD"], abbreviated: ["pr. Kr.", "po. Kr."], wide: ["Prije Krista", "Poslije Krista"] }, defaultWidth: "wide" }),
-  quarter: obj.default({
-    values: { narrow: ["1.", "2.", "3.", "4."], abbreviated: ["1. kv.", "2. kv.", "3. kv.", "4. kv."], wide: ["1. kvartal", "2. kvartal", "3. kvartal", "4. kvartal"] },
-    defaultWidth: "wide",
-    argumentCallback(arg0) {
-      return arg0 - 1;
+export default function formatDistance(arg0, arg1, addSuffix) {
+  one = obj[arg0];
+  if (typeof one === "string") {
+    let tmp7 = one;
+    if (null != addSuffix) {
+      tmp7 = one;
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          let text = `prije ${one}`;
+        }
+        text = `za ${one}`;
+      }
     }
-  }),
-  month: obj.default({ values: { narrow: ["1.", "2.", "3.", "4.", "5.", "6.", "7.", "8.", "9.", "10.", "11.", "12."], abbreviated: ["sij", "velj", "o\u017Eu", "tra", "svi", "lip", "srp", "kol", "ruj", "lis", "stu", "pro"], wide: ["sije\u010Danj", "velja\u010Da", "o\u017Eujak", "travanj", "svibanj", "lipanj", "srpanj", "kolovoz", "rujan", "listopad", "studeni", "prosinac"] }, defaultWidth: "wide", formattingValues: { narrow: ["1.", "2.", "3.", "4.", "5.", "6.", "7.", "8.", "9.", "10.", "11.", "12."], abbreviated: ["sij", "velj", "o\u017Eu", "tra", "svi", "lip", "srp", "kol", "ruj", "lis", "stu", "pro"], wide: ["sije\u010Dnja", "velja\u010De", "o\u017Eujka", "travnja", "svibnja", "lipnja", "srpnja", "kolovoza", "rujna", "listopada", "studenog", "prosinca"] }, defaultFormattingWidth: "wide" }),
-  day: obj.default({ values: { narrow: ["N", "P", "U", "S", "\u010C", "P", "S"], short: ["ned", "pon", "uto", "sri", "\u010Det", "pet", "sub"], abbreviated: ["ned", "pon", "uto", "sri", "\u010Det", "pet", "sub"], wide: ["nedjelja", "ponedjeljak", "utorak", "srijeda", "\u010Detvrtak", "petak", "subota"] }, defaultWidth: "wide" }),
-  dayPeriod: obj.default({ values: { narrow: { am: "AM", pm: "PM", midnight: "pono\u0107", noon: "podne", morning: "ujutro", afternoon: "popodne", evening: "nave\u010Der", night: "no\u0107u" }, abbreviated: { am: "AM", pm: "PM", midnight: "pono\u0107", noon: "podne", morning: "ujutro", afternoon: "popodne", evening: "nave\u010Der", night: "no\u0107u" }, wide: { am: "AM", pm: "PM", midnight: "pono\u0107", noon: "podne", morning: "ujutro", afternoon: "poslije podne", evening: "nave\u010Der", night: "no\u0107u" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "AM", pm: "PM", midnight: "pono\u0107", noon: "podne", morning: "ujutro", afternoon: "popodne", evening: "nave\u010Der", night: "no\u0107u" }, abbreviated: { am: "AM", pm: "PM", midnight: "pono\u0107", noon: "podne", morning: "ujutro", afternoon: "popodne", evening: "nave\u010Der", night: "no\u0107u" }, wide: { am: "AM", pm: "PM", midnight: "pono\u0107", noon: "podne", morning: "ujutro", afternoon: "poslije podne", evening: "nave\u010Der", night: "no\u0107u" } }, defaultFormattingWidth: "wide" })
+    return tmp7;
+  } else {
+    if (1 !== arg1) {
+      if (1 < arg1 % 10) {
+        if (arg1 % 10 < 5) {
+          const _String = String;
+          if ("1" !== str.substr(-2, 1)) {
+            const _String3 = String;
+            let replaced = one.dual.replace("{{count}}", String(arg1));
+          }
+          str = String(arg1);
+        }
+      }
+      const _String2 = String;
+      replaced = one.other.replace("{{count}}", String(arg1));
+    }
+    if (null == addSuffix) {
+      const standalone = one.one.standalone;
+    }
+    if (!addSuffix.comparison) {
+      const withPrepositionAgo = one.one.withPrepositionAgo;
+    }
+    ({ one, withPrepositionIn } = one);
+  }
 };
-
-export default date;
 export default exports.default;

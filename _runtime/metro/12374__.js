@@ -1,77 +1,34 @@
 // === Module 12374: ? ===
 
 // Module 12374
-import _mod12296 from "module_12296" /* 12296 */;
+import _mod12319 from "module_12319" /* 12319 */;
+import _mod12357 from "module_12357" /* 12357 */;
+import _mod12360 from "module_12360" /* 12360 */;
 
 require = arg1;
 const dependencyMap = arg6;
-function getMetadataForUrl(fn, arg1) {
-  (function ensureMetadataStacksAreParsed(fn) {
-    if (_mod12296.GLOBAL_OBJ._sentryModuleMetadata) {
-      const _Object = Object;
-      const keys = Object.keys(_mod12296.GLOBAL_OBJ._sentryModuleMetadata);
-      for (const item10026 of keys) {
-        let tmp16 = _mod12296.GLOBAL_OBJ._sentryModuleMetadata[item10026];
-        if (!set.has(item10026)) {
-          let addResult = set.add(item10026);
-          let obj2 = arg0(item10026);
-          let reversed = obj2.reverse();
-          for (const item10050 of reversed) {
-            if (item10050.filename) {
-              let result = map.set(tmp22.filename, tmp16);
-              obj3.return();
-              break;
-            }
-            continue;
-          }
-        }
-        continue;
-      }
-    }
-  })(fn);
-  return map.get(arg1);
-}
-const map = new Map();
-const set = new Set();
 
-export const addMetadataToStackFrames = function addMetadataToStackFrames(arg0, exception) {
-  closure_0 = arg0;
-  try {
-    const values = exception.exception.values;
-    const item = values.forEach((stacktrace) => {
-      if (stacktrace.stacktrace) {
-        const tmp = stacktrace.stacktrace.frames || [];
-        for (const item10010 of tmp) {
-          if (item10010.filename) {
-            if (!item10010.module_metadata) {
-              let tmp9 = getMetadataForUrl(closure_0, item10010.filename);
-              if (tmp9) {
-                item10010.module_metadata = tmp10;
-              }
-            }
-          }
-          continue;
-        }
-      }
-    });
-  } catch (err) {
+export const createCheckInEnvelope = function createCheckInEnvelope(arg0, contexts, sdk, arg3, url) {
+  const obj = { sent_at: new Date().toISOString() };
+  if (sdk) {
+    sdk = sdk.sdk;
   }
-};
-export { getMetadataForUrl };
-export const stripMetadataFromStackFrames = function stripMetadataFromStackFrames(exception) {
-  try {
-    const values = exception.exception.values;
-    const item = values.forEach((stacktrace) => {
-      if (stacktrace.stacktrace) {
-        const tmp3 = stacktrace.stacktrace.frames || [];
-        const iter = tmp3[Symbol.iterator]();
-        iter.next();
-        while (iter !== undefined) {
-          delete tmp2[tmp];
-          continue;
-        }
-      }
-    });
-  } catch (err) {
+  if (sdk) {
+    const obj2 = { name: sdk.sdk.name, version: sdk.sdk.version };
+    obj.sdk = obj2;
   }
+  let tmp = arg3;
+  if (arg3) {
+    tmp = url;
+  }
+  if (tmp) {
+    obj.dsn = _mod12360.dsnToString(url);
+  }
+  if (contexts) {
+    obj.trace = _mod12319.dropUndefinedKeys(contexts);
+  }
+  const items = [{ type: "check_in" }, arg0];
+  const date = new Date();
+  const items1 = [items];
+  return _mod12357.createEnvelope(obj, items1);
 };

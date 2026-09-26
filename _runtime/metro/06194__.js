@@ -28,12 +28,12 @@ function _isNativeReflectConstruct() {
 }
 let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
-class LongPressGesture {
+class TapGesture {
   constructor() {
     self = this;
-    tmp = closure_0(this, LongPressGesture);
+    tmp = closure_0(this, TapGesture);
     tmp2 = c2;
-    obj = c2(LongPressGesture);
+    obj = c2(TapGesture);
     tmp3 = closure_1;
     if (closure_3()) {
       tmp5 = globalThis;
@@ -44,22 +44,29 @@ class LongPressGesture {
     }
     tmp3Result = tmp3(self, constructResult);
     tmp3Result.config = {};
-    tmp3Result.handlerName = "LongPressGestureHandler";
+    tmp3Result.handlerName = "TapGestureHandler";
     result = tmp3Result.shouldCancelWhenOutside(true);
     return tmp3Result;
   }
 }
-_classCallCheck = LongPressGesture;
-_inherits(LongPressGesture, fn(6089).BaseGesture);
+_classCallCheck = TapGesture;
+_inherits(TapGesture, fn(6094).BaseGesture);
 const entry = {
-  key: "minDuration",
-  value: function minDuration(CONTEXT_MENU_LONG_PRESS_DURATION_MS) {
-    this.config.minDurationMs = CONTEXT_MENU_LONG_PRESS_DURATION_MS;
+  key: "minPointers",
+  value: function minPointers(minPointers) {
+    this.config.minPointers = minPointers;
     return this;
   }
 };
 const items = [
   entry,
+  {
+    key: "numberOfTaps",
+    value: function numberOfTaps(numberOfTaps) {
+      this.config.numberOfTaps = numberOfTaps;
+      return this;
+    }
+  },
   {
     key: "maxDistance",
     value: function maxDistance(maxDist) {
@@ -68,12 +75,33 @@ const items = [
     }
   },
   {
-    key: "numberOfPointers",
-    value: function numberOfPointers(numberOfPointers) {
-      this.config.numberOfPointers = numberOfPointers;
+    key: "maxDuration",
+    value: function maxDuration(maxDurationMs) {
+      this.config.maxDurationMs = maxDurationMs;
+      return this;
+    }
+  },
+  {
+    key: "maxDelay",
+    value: function maxDelay(maxDelayMs) {
+      this.config.maxDelayMs = maxDelayMs;
+      return this;
+    }
+  },
+  {
+    key: "maxDeltaX",
+    value: function maxDeltaX(maxDeltaX) {
+      this.config.maxDeltaX = maxDeltaX;
+      return this;
+    }
+  },
+  {
+    key: "maxDeltaY",
+    value: function maxDeltaY(maxDeltaY) {
+      this.config.maxDeltaY = maxDeltaY;
       return this;
     }
   }
 ];
 
-export const LongPressGesture = _createClass(LongPressGesture, items);
+export const TapGesture = _createClass(TapGesture, items);

@@ -1,87 +1,50 @@
 // === Module 1606: ? ===
 
 // Module 1606
-import BaseNavigationContainer from "BaseNavigationContainer" /* 1487 */;
+import BaseNavigationContainer from "BaseNavigationContainer" /* 1488 */;
+import get_options from "get options" /* 1585 */;
 import noop from "module_19" /* 19 */;
 
 require = arg1;
 
-export const useScrollToTop = function useScrollToTop(ref) {
-  closure_0 = ref;
-  const context = noop.useContext(BaseNavigationContainer.NavigationContext);
-  const route = BaseNavigationContainer.useRoute();
-  if (undefined === context) {
+export const useRoutePath = function useRoutePath() {
+  const options = noop.useContext(get_options.LinkingContext).options;
+  const stateForPath = BaseNavigationContainer.useStateForPath();
+  if (undefined === stateForPath) {
     const _Error = Error;
-    const error = new Error("Couldn't find a navigation object. Is your component inside NavigationContainer?");
+    const error = new Error("Couldn't find a state for the route object. Is your component inside a screen in a navigator?");
     throw error;
   } else {
-    let items = [context, ref, route.key];
-    const effect = noop.useEffect(() => {
-      const items = [];
-      for (let parent = closure_1; parent; parent = parent.getParent()) {
-        if ("tab" === parent.getState().type) {
-          let arr = items.push(parent);
-        }
+    let getPathFromState;
+    if (options != null) {
+      getPathFromState = options.getPathFromState;
+    }
+    if (getPathFromState == null) {
+      getPathFromState = BaseNavigationContainer.getPathFromState;
+    }
+    let enabled;
+    if (options != null) {
+      enabled = options.enabled;
+    }
+    const items = [enabled, , , ];
+    let config;
+    if (options != null) {
+      config = options.config;
+    }
+    items[1] = config;
+    items[2] = stateForPath;
+    items[3] = getPathFromState;
+    return noop.useMemo(() => {
+      let enabled;
+      if (options != null) {
+        enabled = options.enabled;
       }
-      if (0 !== items.length) {
-        closure_1 = items.map((addListener) => addListener.addListener("tabPress", (arg0) => {
-          const defaultPrevented = arg0;
-          focused = focused.isFocused();
-          let hasItem = ref.includes(focused);
-          if (!hasItem) {
-            hasItem = obj.getState().routes[0].key === key.key;
-          }
-          const animationFrame = requestAnimationFrame(() => {
-            if (null == ref.current) {
-              let tmp3 = closure_1;
-              if (closure_1) {
-                tmp3 = hasItem;
-              }
-              if (tmp3) {
-                tmp3 = null;
-              }
-              if (tmp3) {
-                tmp3 = !defaultPrevented.defaultPrevented;
-              }
-              if (tmp3) {
-                if ("scrollToTop" in null) {
-                  null.scrollToTop();
-                } else if ("scrollTo" in null) {
-                  null.scrollTo({ y: 0, animated: true });
-                } else if ("scrollToOffset" in null) {
-                  null.scrollToOffset({ offset: 0, animated: true });
-                } else if ("scrollResponderScrollTo" in null) {
-                  const result = null.scrollResponderScrollTo({ y: 0, animated: true });
-                }
-              }
-            } else {
-              if (!("scrollToTop" in ref.current)) {
-                if (!("scrollTo" in ref.current)) {
-                  if (!("scrollToOffset" in ref.current)) {
-                    if (!("scrollResponderScrollTo" in ref.current)) {
-                      const current = ref.current;
-                      if ("getScrollResponder" in ref.current) {
-                        let current3 = current.getScrollResponder();
-                      } else {
-                        const current2 = ref.current;
-                        if ("getNode" in current) {
-                          current3 = current2.getNode();
-                        } else {
-                          current3 = current2;
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-              current3 = ref.current;
-            }
-          });
-          obj = focused;
-        }));
-        return () => {
-          const item = closure_1.forEach((fn) => fn());
-        };
+      if (false !== enabled) {
+        let config;
+        if (options != null) {
+          config = options.config;
+        }
+        return getPathFromState(stateForPath, config);
       }
     }, items);
   }

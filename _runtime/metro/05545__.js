@@ -1,30 +1,41 @@
 // === Module 5545: ? ===
 
 // Module 5545
+import _mod5526 from "module_5526" /* 5526 */;
+import _modDef5531 from "module_5531" /* 5531 */;
+import get0thIfdOffset from "get0thIfdOffset" /* 5546 */;
+import IFD_TYPE_0TH from "IFD_TYPE_0TH" /* 5547 */;
 
-export const getStringValue = function getStringValue(value) {
-  const mapped = value.map((item) => String.fromCharCode(item));
-  return mapped.join("");
-};
-export const getEncodedString = function getEncodedString(arr) {
-  if (arr.length >= 8) {
-    const substr = arr.slice(0, 8);
-    const mapped = substr.map((item) => String.fromCharCode(item));
-    const joined = mapped.join("");
-    if ("ASCII\0\0\0" === joined) {
-      const substr1 = arr.slice(8);
-      const mapped1 = substr1.map((item) => String.fromCharCode(item));
-      return mapped1.join("");
-    } else if ("JIS\0\0\0\0\0" === joined) {
-      return "[JIS encoded text]";
-    } else if ("UNICODE\0" === joined) {
-      return "[Unicode encoded text]";
-    } else if ("\0\0\0\0\0\0\0\0" === joined) {
-      return "[Undefined encoding]";
+require = arg1;
+importDefault = arg2;
+const dependencyMap = arg6;
+let c3 = "Exif IFD Pointer";
+let c4 = "GPS Info IFD Pointer";
+let c5 = "Interoperability IFD Pointer";
+
+export default {
+  read(getUint16, c5, arg2) {
+    const byteOrder = _modDef5531.getByteOrder(getUint16, c5);
+    const obj2 = get0thIfdOffset;
+    const ifd = obj2.readIfd(getUint16, IFD_TYPE_0TH.IFD_TYPE_0TH, c5, get0thIfdOffset.get0thIfdOffset(getUint16, c5, byteOrder), byteOrder, arg2);
+    let objectAssignResult = ifd;
+    if (undefined !== ifd[c3]) {
+      const tmp3Result6 = get0thIfdOffset;
+      objectAssignResult = _mod5526.objectAssign(ifd, tmp3Result6.readIfd(getUint16, IFD_TYPE_0TH.IFD_TYPE_EXIF, c5, c5 + ifd[tmp5].value, byteOrder, arg2));
+      const tmp3Result = _mod5526;
     }
+    let objectAssignResult3 = objectAssignResult;
+    if (undefined !== objectAssignResult[c4]) {
+      const tmp3Result8 = get0thIfdOffset;
+      objectAssignResult3 = _mod5526.objectAssign(objectAssignResult, tmp3Result8.readIfd(getUint16, IFD_TYPE_0TH.IFD_TYPE_GPS, c5, c5 + objectAssignResult[tmp12].value, byteOrder, arg2));
+      const tmp3Result7 = _mod5526;
+    }
+    let objectAssignResult4 = objectAssignResult3;
+    if (undefined !== objectAssignResult3[c5]) {
+      const tmp3Result10 = get0thIfdOffset;
+      objectAssignResult4 = _mod5526.objectAssign(objectAssignResult3, tmp3Result10.readIfd(getUint16, IFD_TYPE_0TH.IFD_TYPE_INTEROPERABILITY, c5, c5 + objectAssignResult3[tmp19].value, byteOrder, arg2));
+      const tmp3Result9 = _mod5526;
+    }
+    return { tags: objectAssignResult4, byteOrder };
   }
-  return "Undefined";
-};
-export const getCalculatedGpsValue = function getCalculatedGpsValue(value) {
-  return value[0][0] / value[0][1] + value[1][0] / value[1][1] / 60 + value[2][0] / value[2][1] / 3600;
 };

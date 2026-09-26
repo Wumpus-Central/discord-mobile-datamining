@@ -1,12 +1,7 @@
 // === Module 4666: ? ===
 
 // Module 4666
-let fn = Array.isArray;
-if (!fn) {
-  fn = (arg0) => {
-    const call = toString.call;
-    return "[object Array]" == (typeof call === "unknown" ? toString() : call(arg0));
-  };
-}
+import _mod4667 from "module_4667" /* 4667 */;
 
-export default fn;
+
+export default _mod4667;

@@ -1,221 +1,243 @@
 // === Module 1680: ? ===
 
 // Module 1680
-import runOnRuntime_mod from "runOnRuntime" /* 1681 */;
-import module_1640_mod from "module_1640" /* 1640 */;
+import _mod1649 from "module_1649" /* 1649 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-function call() {
-  const items = [...arguments];
-  return "\\(\\s*(" + items.join(")\\s*,?\\s*(") + ")\\s*\\)";
-}
-function callWithSlashSeparator() {
-  const items = [...arguments];
-  const substr = items.slice(0, items.length - 1);
-  return "\\(\\s*(" + substr.join(")\\s*,?\\s*(") + ")\\s*/\\s*(" + items[items.length - 1] + ")\\s*\\)";
-}
-function commaSeparatedCall() {
-  const items = [...arguments];
-  return "\\(\\s*(" + items.join(")\\s*,\\s*(") + ")\\s*\\)";
-}
-const MATCHERS = { rgb: null, rgba: null, hsl: null, hsla: null, hwb: null, hex3: null, hex4: null, hex6: null, hex8: null };
-const regExp = new RegExp("rgb" + call("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+"));
-MATCHERS.rgb = regExp;
-const regExp1 = new RegExp("rgba(" + commaSeparatedCall("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+") + "|" + callWithSlashSeparator("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+") + ")");
-MATCHERS.rgba = regExp1;
-const regExp2 = new RegExp("hsl" + call("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%"));
-MATCHERS.hsl = regExp2;
-const commaSeparatedCallResult = commaSeparatedCall("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+");
-const regExp3 = new RegExp("hsla(" + commaSeparatedCall("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+") + "|" + callWithSlashSeparator("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+") + ")");
-MATCHERS.hsla = regExp3;
-const regExp4 = new RegExp("hwb" + call("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%"));
-MATCHERS.hwb = regExp4;
-MATCHERS.hex3 = /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/;
-MATCHERS.hex4 = /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/;
-MATCHERS.hex6 = /^#([0-9a-fA-F]{6})$/;
-MATCHERS.hex8 = /^#([0-9a-fA-F]{8})$/;
-function hue2rgb(arg0, arg1, arg2) {
-  let sum = arg2;
-  if (arg2 < 0) {
-    sum = arg2 + 1;
+require = arg1;
+function isAffineMatrixFlat(arr) {
+  let isArray = Array.isArray(arr);
+  if (isArray) {
+    isArray = 16 === arr.length;
   }
-  let diff = sum;
-  if (sum > 1) {
-    diff = sum - 1;
-  }
-  if (diff < 0.16666666666666666) {
-    let sum1 = arg0 + 6 * (arg1 - arg0) * diff;
-  } else {
-    sum1 = arg1;
-    if (diff >= 0.5) {
-      let sum2 = arg0;
-      if (diff < 0.6666666666666666) {
-        sum2 = arg0 + (arg1 - arg0) * (0.6666666666666666 - diff) * 6;
+  if (isArray) {
+    isArray = arr.every((item) => {
+      let tmp = typeof item === "number";
+      if (typeof item === "number") {
+        const _isNaN = isNaN;
+        tmp = !isNaN(item);
       }
-      sum1 = sum2;
-    }
+      return tmp;
+    });
   }
-  return sum1;
+  return isArray;
 }
-hue2rgb.__closure = {};
-hue2rgb.__workletHash = 13577481829661;
-hue2rgb.__initData = { code: "function hue2rgb_Pnpm_ColorsTs1(p,q,t){if(t<0){t+=1;}if(t>1){t-=1;}if(t<1/6){return p+(q-p)*6*t;}if(t<1/2){return q;}if(t<2/3){return p+(q-p)*(2/3-t)*6;}return p;}" };
-function hslToRgb(arg0, arg1, arg2) {
-  if (arg2 < 0.5) {
-    let result = arg2 * (1 + arg1);
-  } else {
-    result = arg2 + arg1 - arg2 * arg1;
+isAffineMatrixFlat.__closure = {};
+isAffineMatrixFlat.__workletHash = 7766400476414;
+isAffineMatrixFlat.__initData = { code: "function isAffineMatrixFlat_Pnpm_matrixUtilsTsx1(x){return Array.isArray(x)&&x.length===16&&x.every(function(element){return typeof element==='number'&&!isNaN(element);});}" };
+function isAffineMatrix(arr) {
+  let isArray = Array.isArray(arr);
+  if (isArray) {
+    isArray = 4 === arr.length;
   }
-  const diff = 2 * arg2 - result;
-  const sum = arg0 + 0.3333333333333333;
-  if (typeof hue2rgb === "function") {
-    let sum1 = sum;
-    if (sum < 0) {
-      sum1 = sum + 1;
-    }
-    let diff1 = sum1;
-    if (sum1 > 1) {
-      diff1 = sum1 - 1;
-    }
-    if (diff1 < 0.16666666666666666) {
-      let sum2 = diff + 6 * (result - diff) * diff1;
-    } else {
-      sum2 = result;
-      if (diff1 >= 0.5) {
-        let sum3 = diff;
-        if (diff1 < 0.6666666666666666) {
-          sum3 = diff + (result - diff) * (0.6666666666666666 - diff1) * 6;
-        }
-        sum2 = sum3;
+  if (isArray) {
+    isArray = arr.every((arr) => {
+      let isArray = Array.isArray(arr);
+      if (isArray) {
+        isArray = 4 === arr.length;
       }
-    }
-    if (typeof hue2rgb === "function") {
-      let sum4 = arg0;
-      if (arg0 < 0) {
-        sum4 = arg0 + 1;
-      }
-      let diff2 = sum4;
-      if (sum4 > 1) {
-        diff2 = sum4 - 1;
-      }
-      if (diff2 < 0.16666666666666666) {
-        let sum5 = diff + 6 * (result - diff) * diff2;
-      } else {
-        sum5 = result;
-        if (diff2 >= 0.5) {
-          let sum6 = diff;
-          if (diff2 < 0.6666666666666666) {
-            sum6 = diff + (result - diff) * (0.6666666666666666 - diff2) * 6;
+      if (isArray) {
+        isArray = arr.every((item) => {
+          let tmp = typeof item === "number";
+          if (typeof item === "number") {
+            const _isNaN = isNaN;
+            tmp = !isNaN(item);
           }
-          sum5 = sum6;
-        }
+          return tmp;
+        });
       }
-      const diff3 = arg0 - 0.3333333333333333;
-      if (typeof hue2rgb === "function") {
-        let sum7 = diff3;
-        if (diff3 < 0) {
-          sum7 = diff3 + 1;
+      return isArray;
+    });
+  }
+  return isArray;
+}
+isAffineMatrix.__closure = {};
+isAffineMatrix.__workletHash = 3452211777657;
+isAffineMatrix.__initData = { code: "function isAffineMatrix_Pnpm_matrixUtilsTsx2(x){return Array.isArray(x)&&x.length===4&&x.every(function(row){return Array.isArray(row)&&row.length===4&&row.every(function(element){return typeof element==='number'&&!isNaN(element);});});}" };
+function flatten(arr) {
+  return arr.flat();
+}
+flatten.__closure = {};
+flatten.__workletHash = 9900628528512;
+flatten.__initData = { code: "function flatten_Pnpm_matrixUtilsTsx3(matrix){return matrix.flat();}" };
+function unflatten(arg0) {
+  const items = [, , , ];
+  [arr[0], arr[1], arr[2], arr[3]] = arg0;
+  const items1 = [items, , , ];
+  const items2 = [arg0[4], arg0[5], arg0[6], arg0[7]];
+  items1[1] = items2;
+  const items3 = [arg0[8], arg0[9], arg0[10], arg0[11]];
+  items1[2] = items3;
+  const items4 = [arg0[12], arg0[13], arg0[14], arg0[15]];
+  items1[3] = items4;
+  return items1;
+}
+unflatten.__closure = {};
+unflatten.__workletHash = 17503333305803;
+unflatten.__initData = { code: "function unflatten_Pnpm_matrixUtilsTsx4(m){return[[m[0],m[1],m[2],m[3]],[m[4],m[5],m[6],m[7]],[m[8],m[9],m[10],m[11]],[m[12],m[13],m[14],m[15]]];}" };
+function maybeFlattenMatrix(arr) {
+  if (typeof isAffineMatrix === "function") {
+    const _Array = Array;
+    let isArray = Array.isArray(arr);
+    if (isArray) {
+      isArray = 4 === arr.length;
+    }
+    if (isArray) {
+      isArray = arr.every((arr) => {
+        let isArray = Array.isArray(arr);
+        if (isArray) {
+          isArray = 4 === arr.length;
         }
-        let diff4 = sum7;
-        if (1 < sum7) {
-          diff4 = sum7 - 1;
-        }
-        if (diff4 < 0.16666666666666666) {
-          let sum8 = diff + 6 * (result - diff) * diff4;
-        } else {
-          sum8 = result;
-          if (diff4 >= 0.5) {
-            let sum9 = diff;
-            if (diff4 < 0.6666666666666666) {
-              sum9 = diff + (result - diff) * (0.6666666666666666 - diff4) * 6;
+        if (isArray) {
+          isArray = arr.every((item) => {
+            let tmp = typeof item === "number";
+            if (typeof item === "number") {
+              const _isNaN = isNaN;
+              tmp = !isNaN(item);
             }
-            sum8 = sum9;
-          }
+            return tmp;
+          });
         }
-        const _Math = Math;
-        const _Math2 = Math;
-        const _Math3 = Math;
-        const tmp19 = Math.round(255 * sum2) << 24;
-        return tmp19 | Math.round(255 * sum5) << 16 | Math.round(255 * sum8) << 8;
+        return isArray;
+      });
+    }
+    let flatResult = arr;
+    if (isArray) {
+      if (typeof flatten === "function") {
+        flatResult = arr.flat();
       } else {
         throw new TypeError("Trying to call a non-function");
       }
-    } else {
-      throw new TypeError("Trying to call a non-function");
     }
+    return flatResult;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
 }
-hslToRgb.__closure = { hue2rgb };
-hslToRgb.__workletHash = 1406907784351;
-hslToRgb.__initData = { code: "function hslToRgb_Pnpm_ColorsTs2(h,s,l){const{hue2rgb}=this.__closure;const q=l<0.5?l*(1+s):l+s-l*s;const p=2*l-q;const r=hue2rgb(p,q,h+1/3);const g=hue2rgb(p,q,h);const b=hue2rgb(p,q,h-1/3);return Math.round(r*255)<<24|Math.round(g*255)<<16|Math.round(b*255)<<8;}" };
-function hwbToRgb(arg0, arg1, arg2) {
-  if (arg1 + arg2 >= 1) {
-    const _Math4 = Math;
-    const rounded = Math.round(255 * arg1 / (arg1 + arg2));
-    return rounded << 24 | rounded << 16 | rounded << 8;
-  } else {
-    const sum = arg0 + 0.3333333333333333;
-    if (typeof hue2rgb === "function") {
-      let sum1 = sum;
-      if (sum < 0) {
-        sum1 = sum + 1;
-      }
-      let diff = sum1;
-      if (sum1 > 1) {
-        diff = sum1 - 1;
-      }
-      if (diff >= 0.16666666666666666) {
-        if (diff >= 0.5) {
-          if (diff < 0.6666666666666666) {
-            const num6 = (0.6666666666666666 - diff) * 6;
-          }
+maybeFlattenMatrix.__closure = { isAffineMatrix, flatten };
+maybeFlattenMatrix.__workletHash = 13544286880330;
+maybeFlattenMatrix.__initData = { code: "function maybeFlattenMatrix_Pnpm_matrixUtilsTsx5(matrix){const{isAffineMatrix,flatten}=this.__closure;return isAffineMatrix(matrix)?flatten(matrix):matrix;}" };
+function multiplyMatrices(arg0, arg1) {
+  const items = [arg0[0][0] * arg1[0][0] + arg0[0][1] * arg1[1][0] + arg0[0][2] * arg1[2][0] + arg0[0][3] * arg1[3][0], arg0[0][0] * arg1[0][1] + arg0[0][1] * arg1[1][1] + arg0[0][2] * arg1[2][1] + arg0[0][3] * arg1[3][1], arg0[0][0] * arg1[0][2] + arg0[0][1] * arg1[1][2] + arg0[0][2] * arg1[2][2] + arg0[0][3] * arg1[3][2], arg0[0][0] * arg1[0][3] + arg0[0][1] * arg1[1][3] + arg0[0][2] * arg1[2][3] + arg0[0][3] * arg1[3][3]];
+  const items1 = [items, , , ];
+  const items2 = [arg0[1][0] * arg1[0][0] + arg0[1][1] * arg1[1][0] + arg0[1][2] * arg1[2][0] + arg0[1][3] * arg1[3][0], arg0[1][0] * arg1[0][1] + arg0[1][1] * arg1[1][1] + arg0[1][2] * arg1[2][1] + arg0[1][3] * arg1[3][1], arg0[1][0] * arg1[0][2] + arg0[1][1] * arg1[1][2] + arg0[1][2] * arg1[2][2] + arg0[1][3] * arg1[3][2], arg0[1][0] * arg1[0][3] + arg0[1][1] * arg1[1][3] + arg0[1][2] * arg1[2][3] + arg0[1][3] * arg1[3][3]];
+  items1[1] = items2;
+  const items3 = [arg0[2][0] * arg1[0][0] + arg0[2][1] * arg1[1][0] + arg0[2][2] * arg1[2][0] + arg0[2][3] * arg1[3][0], arg0[2][0] * arg1[0][1] + arg0[2][1] * arg1[1][1] + arg0[2][2] * arg1[2][1] + arg0[2][3] * arg1[3][1], arg0[2][0] * arg1[0][2] + arg0[2][1] * arg1[1][2] + arg0[2][2] * arg1[2][2] + arg0[2][3] * arg1[3][2], arg0[2][0] * arg1[0][3] + arg0[2][1] * arg1[1][3] + arg0[2][2] * arg1[2][3] + arg0[2][3] * arg1[3][3]];
+  items1[2] = items3;
+  const items4 = [arg0[3][0] * arg1[0][0] + arg0[3][1] * arg1[1][0] + arg0[3][2] * arg1[2][0] + arg0[3][3] * arg1[3][0], arg0[3][0] * arg1[0][1] + arg0[3][1] * arg1[1][1] + arg0[3][2] * arg1[2][1] + arg0[3][3] * arg1[3][1], arg0[3][0] * arg1[0][2] + arg0[3][1] * arg1[1][2] + arg0[3][2] * arg1[2][2] + arg0[3][3] * arg1[3][2], arg0[3][0] * arg1[0][3] + arg0[3][1] * arg1[1][3] + arg0[3][2] * arg1[2][3] + arg0[3][3] * arg1[3][3]];
+  items1[3] = items4;
+  return items1;
+}
+multiplyMatrices.__closure = {};
+multiplyMatrices.__workletHash = 4575994159882;
+multiplyMatrices.__initData = { code: "function multiplyMatrices_Pnpm_matrixUtilsTsx6(a,b){return[[a[0][0]*b[0][0]+a[0][1]*b[1][0]+a[0][2]*b[2][0]+a[0][3]*b[3][0],a[0][0]*b[0][1]+a[0][1]*b[1][1]+a[0][2]*b[2][1]+a[0][3]*b[3][1],a[0][0]*b[0][2]+a[0][1]*b[1][2]+a[0][2]*b[2][2]+a[0][3]*b[3][2],a[0][0]*b[0][3]+a[0][1]*b[1][3]+a[0][2]*b[2][3]+a[0][3]*b[3][3]],[a[1][0]*b[0][0]+a[1][1]*b[1][0]+a[1][2]*b[2][0]+a[1][3]*b[3][0],a[1][0]*b[0][1]+a[1][1]*b[1][1]+a[1][2]*b[2][1]+a[1][3]*b[3][1],a[1][0]*b[0][2]+a[1][1]*b[1][2]+a[1][2]*b[2][2]+a[1][3]*b[3][2],a[1][0]*b[0][3]+a[1][1]*b[1][3]+a[1][2]*b[2][3]+a[1][3]*b[3][3]],[a[2][0]*b[0][0]+a[2][1]*b[1][0]+a[2][2]*b[2][0]+a[2][3]*b[3][0],a[2][0]*b[0][1]+a[2][1]*b[1][1]+a[2][2]*b[2][1]+a[2][3]*b[3][1],a[2][0]*b[0][2]+a[2][1]*b[1][2]+a[2][2]*b[2][2]+a[2][3]*b[3][2],a[2][0]*b[0][3]+a[2][1]*b[1][3]+a[2][2]*b[2][3]+a[2][3]*b[3][3]],[a[3][0]*b[0][0]+a[3][1]*b[1][0]+a[3][2]*b[2][0]+a[3][3]*b[3][0],a[3][0]*b[0][1]+a[3][1]*b[1][1]+a[3][2]*b[2][1]+a[3][3]*b[3][1],a[3][0]*b[0][2]+a[3][1]*b[1][2]+a[3][2]*b[2][2]+a[3][3]*b[3][2],a[3][0]*b[0][3]+a[3][1]*b[1][3]+a[3][2]*b[2][3]+a[3][3]*b[3][3]]];}" };
+function subtractMatrices(arr, arr2) {
+  if (typeof isAffineMatrixFlat === "function") {
+    const _Array = Array;
+    let isArray = Array.isArray(arr);
+    if (isArray) {
+      isArray = 16 === arr.length;
+    }
+    if (isArray) {
+      isArray = arr.every((item) => {
+        let tmp = typeof item === "number";
+        if (typeof item === "number") {
+          const _isNaN = isNaN;
+          tmp = !isNaN(item);
         }
-      }
-      if (typeof hue2rgb === "function") {
-        let sum2 = arg0;
-        if (arg0 < 0) {
-          sum2 = arg0 + 1;
+        return tmp;
+      });
+    }
+    if (typeof maybeFlattenMatrix === "function") {
+      if (typeof isAffineMatrix === "function") {
+        const _Array2 = Array;
+        let isArray1 = Array.isArray(arr);
+        if (isArray1) {
+          isArray1 = 4 === arr.length;
         }
-        let diff1 = sum2;
-        if (sum2 > 1) {
-          diff1 = sum2 - 1;
-        }
-        if (diff1 >= 0.16666666666666666) {
-          if (diff1 >= 0.5) {
-            if (diff1 < 0.6666666666666666) {
-              const num12 = (0.6666666666666666 - diff1) * 6;
+        if (isArray1) {
+          isArray1 = arr.every((arr) => {
+            let isArray = Array.isArray(arr);
+            if (isArray) {
+              isArray = 4 === arr.length;
             }
-          }
+            if (isArray) {
+              isArray = arr.every((item) => {
+                let tmp = typeof item === "number";
+                if (typeof item === "number") {
+                  const _isNaN = isNaN;
+                  tmp = !isNaN(item);
+                }
+                return tmp;
+              });
+            }
+            return isArray;
+          });
         }
-        const diff2 = arg0 - 0.3333333333333333;
-        if (typeof hue2rgb === "function") {
-          let sum3 = diff2;
-          if (diff2 < 0) {
-            sum3 = diff2 + 1;
-          }
-          let diff3 = sum3;
-          if (1 < sum3) {
-            diff3 = sum3 - 1;
-          }
-          if (diff3 < 0.16666666666666666) {
-            let num16 = 6 * diff3;
+        let flatResult = arr;
+        if (isArray1) {
+          if (typeof flatten === "function") {
+            flatResult = arr.flat();
           } else {
-            num16 = 1;
-            if (diff3 >= 0.5) {
-              let num18 = 0;
-              if (diff3 < 0.6666666666666666) {
-                num18 = (0.6666666666666666 - diff3) * 6;
-              }
-              num16 = num18;
-            }
+            throw new TypeError("Trying to call a non-function");
           }
-          const _Math = Math;
-          const sum4 = num16 * (1 - arg1 - arg2) + arg1;
-          const _Math2 = Math;
-          const _Math3 = Math;
-          const tmp12 = Math.round(255 * tmp3) << 24;
-          return tmp12 | Math.round(255 * tmp6) << 16 | Math.round(255 * sum4) << 8;
+        }
+        require = flatResult;
+        if (typeof tmp4 === "function") {
+          if (typeof tmp5 === "function") {
+            const _Array3 = Array;
+            let isArray2 = Array.isArray(arr2);
+            if (isArray2) {
+              isArray2 = 4 === arr2.length;
+            }
+            if (isArray2) {
+              isArray2 = arr2.every((arr) => {
+                let isArray = Array.isArray(arr);
+                if (isArray) {
+                  isArray = 4 === arr.length;
+                }
+                if (isArray) {
+                  isArray = arr.every((item) => {
+                    let tmp = typeof item === "number";
+                    if (typeof item === "number") {
+                      const _isNaN = isNaN;
+                      tmp = !isNaN(item);
+                    }
+                    return tmp;
+                  });
+                }
+                return isArray;
+              });
+            }
+            if (isArray2) {
+              if (typeof flatten === "function") {
+                arr2.flat();
+              } else {
+                throw new TypeError("Trying to call a non-function");
+              }
+            }
+            const mapped = flatResult.map((item, index) => flatResult[index] - flatResult1[index]);
+            let tmp13 = mapped;
+            if (!isArray) {
+              if (typeof unflatten === "function") {
+                const items = [, , , ];
+                [arr2[0], arr2[1], arr2[2], arr2[3]] = mapped;
+                const items1 = [items, , , ];
+                const items2 = [mapped[4], mapped[5], mapped[6], mapped[7]];
+                items1[1] = items2;
+                const items3 = [mapped[8], mapped[9], mapped[10], mapped[11]];
+                items1[2] = items3;
+                const items4 = [mapped[12], mapped[13], mapped[14], mapped[15]];
+                items1[3] = items4;
+                tmp13 = items1;
+              } else {
+                throw new TypeError("Trying to call a non-function");
+              }
+            }
+            return tmp13;
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
         } else {
           throw new TypeError("Trying to call a non-function");
         }
@@ -225,316 +247,545 @@ function hwbToRgb(arg0, arg1, arg2) {
     } else {
       throw new TypeError("Trying to call a non-function");
     }
-  }
-}
-hwbToRgb.__closure = { hue2rgb };
-hwbToRgb.__workletHash = 16684751503669;
-hwbToRgb.__initData = { code: "function hwbToRgb_Pnpm_ColorsTs3(h,w,b){const{hue2rgb}=this.__closure;if(w+b>=1){const gray=Math.round(w*255/(w+b));return gray<<24|gray<<16|gray<<8;}const red=hue2rgb(0,1,h+1/3)*(1-w-b)+w;const green=hue2rgb(0,1,h)*(1-w-b)+w;const blue=hue2rgb(0,1,h-1/3)*(1-w-b)+w;return Math.round(red*255)<<24|Math.round(green*255)<<16|Math.round(blue*255)<<8;}" };
-function parse255(match) {
-  const parsed = Number.parseInt(match, 10);
-  let num = 0;
-  if (parsed >= 0) {
-    let num2 = 255;
-    if (parsed <= 255) {
-      num2 = parsed;
-    }
-    num = num2;
-  }
-  return num;
-}
-parse255.__closure = {};
-parse255.__workletHash = 1908258547020;
-parse255.__initData = { code: "function parse255_Pnpm_ColorsTs4(str){const int=Number.parseInt(str,10);if(int<0){return 0;}if(int>255){return 255;}return int;}" };
-function parse360(arg0) {
-  return (Number.parseFloat(arg0) % 360 + 360) % 360 / 360;
-}
-parse360.__closure = {};
-parse360.__workletHash = 15674458953827;
-parse360.__initData = { code: "function parse360_Pnpm_ColorsTs5(str){const int=Number.parseFloat(str);return(int%360+360)%360/360;}" };
-function parse1(arg0) {
-  const parsed = Number.parseFloat(arg0);
-  let num = 0;
-  if (parsed >= 0) {
-    let num4 = 255;
-    if (parsed <= 1) {
-      const _Math = Math;
-      num4 = Math.round(255 * parsed);
-    }
-    num = num4;
-  }
-  return num;
-}
-parse1.__closure = {};
-parse1.__workletHash = 1305446443589;
-parse1.__initData = { code: "function parse1_Pnpm_ColorsTs6(str){const num=Number.parseFloat(str);if(num<0){return 0;}if(num>1){return 255;}return Math.round(num*255);}" };
-function parsePercentage(arg0) {
-  const parsed = Number.parseFloat(arg0);
-  let num = 0;
-  if (parsed >= 0) {
-    let num3 = 1;
-    if (parsed <= 100) {
-      num3 = parsed / 100;
-    }
-    num = num3;
-  }
-  return num;
-}
-parsePercentage.__closure = {};
-parsePercentage.__workletHash = 3056354218613;
-parsePercentage.__initData = { code: "function parsePercentage_Pnpm_ColorsTs7(str){const int=Number.parseFloat(str);if(int<0){return 0;}if(int>100){return 1;}return int/100;}" };
-function clampRGBA(items) {
-  let num = 0;
-  do {
-    let _Math = Math;
-    let _Math2 = Math;
-    items[num] = Math.max(0, Math.min(items[num], 1));
-    num = num + 1;
-  } while (num < 4);
-}
-clampRGBA.__closure = {};
-clampRGBA.__workletHash = 13575809516663;
-clampRGBA.__initData = { code: "function clampRGBA_Pnpm_ColorsTs8(RGBA){for(let i=0;i<4;i++){RGBA[i]=Math.max(0,Math.min(RGBA[i],1));}}" };
-let runOnRuntime = runOnRuntime_mod;
-const shareable = runOnRuntime.makeShareable({ transparent: 0, aliceblue: 4042850303, antiquewhite: 4209760255, aqua: 16777215, aquamarine: 2147472639, azure: 4043309055, beige: 4126530815, bisque: 4293182719, black: 255, blanchedalmond: 4293643775, blue: 65535, blueviolet: 2318131967, brown: 2771004159, burlywood: 3736635391, burntsienna: 3934150143, cadetblue: 1604231423, chartreuse: 2147418367, chocolate: 3530104575, coral: 4286533887, cornflowerblue: 1687547391, cornsilk: 4294499583, crimson: 3692313855, cyan: 16777215, darkblue: 35839, darkcyan: 9145343, darkgoldenrod: 3095792639, darkgray: 2846468607, darkgreen: 6553855, darkgrey: 2846468607, darkkhaki: 3182914559, darkmagenta: 2332068863, darkolivegreen: 1433087999, darkorange: 4287365375, darkorchid: 2570243327, darkred: 2332033279, darksalmon: 3918953215, darkseagreen: 2411499519, darkslateblue: 1211993087, darkslategray: 793726975, darkslategrey: 793726975, darkturquoise: 13554175, darkviolet: 2483082239, deeppink: 4279538687, deepskyblue: 12582911, dimgray: 1768516095, dimgrey: 1768516095, dodgerblue: 512819199, firebrick: 2988581631, floralwhite: 4294635775, forestgreen: 579543807, fuchsia: 4278255615, gainsboro: 3705462015, ghostwhite: 4177068031, gold: 4292280575, goldenrod: 3668254975, gray: 2155905279, green: 8388863, greenyellow: 2919182335, grey: 2155905279, honeydew: 4043305215, hotpink: 4285117695, indianred: 3445382399, indigo: 1258324735, ivory: 4294963455, khaki: 4041641215, lavender: 3873897215, lavenderblush: 4293981695, lawngreen: 2096890111, lemonchiffon: 4294626815, lightblue: 2916673279, lightcoral: 4034953471, lightcyan: 3774873599, lightgoldenrodyellow: 4210742015, lightgray: 3553874943, lightgreen: 2431553791, lightgrey: 3553874943, lightpink: 4290167295, lightsalmon: 4288707327, lightseagreen: 548580095, lightskyblue: 2278488831, lightslategray: 2005441023, lightslategrey: 2005441023, lightsteelblue: 2965692159, lightyellow: 4294959359, lime: 16711935, limegreen: 852308735, linen: 4210091775, magenta: 4278255615, maroon: 2147483903, mediumaquamarine: 1724754687, mediumblue: 52735, mediumorchid: 3126187007, mediumpurple: 2473647103, mediumseagreen: 1018393087, mediumslateblue: 2070474495, mediumspringgreen: 16423679, mediumturquoise: 1221709055, mediumvioletred: 3340076543, midnightblue: 421097727, mintcream: 4127193855, mistyrose: 4293190143, moccasin: 4293178879, navajowhite: 4292783615, navy: 33023, oldlace: 4260751103, olive: 2155872511, olivedrab: 1804477439, orange: 4289003775, orangered: 4282712319, orchid: 3664828159, palegoldenrod: 4008225535, palegreen: 2566625535, paleturquoise: 2951671551, palevioletred: 3681588223, papayawhip: 4293907967, peachpuff: 4292524543, peru: 3448061951, pink: 4290825215, plum: 3718307327, powderblue: 2967529215, purple: 2147516671, rebeccapurple: 1714657791, red: 4278190335, rosybrown: 3163525119, royalblue: 1097458175, saddlebrown: 2336560127, salmon: 4202722047, sandybrown: 4104413439, seagreen: 780883967, seashell: 4294307583, sienna: 2689740287, silver: 3233857791, skyblue: 2278484991, slateblue: 1784335871, slategray: 1887473919, slategrey: 1887473919, snow: 4294638335, springgreen: 16744447, steelblue: 1182971135, tan: 3535047935, teal: 8421631, thistle: 3636451583, tomato: 4284696575, turquoise: 1088475391, violet: 4001558271, wheat: 4125012991, white: 4294967295, whitesmoke: 4126537215, yellow: 4294902015, yellowgreen: 2597139199 });
-let runOnRuntime = runOnRuntime_mod;
-const shareable1 = runOnRuntime.makeShareable(["backgroundColor", "borderBottomColor", "borderColor", "borderLeftColor", "borderRightColor", "borderTopColor", "borderStartColor", "borderEndColor", "borderBlockColor", "borderBlockEndColor", "borderBlockStartColor", "color", "outlineColor", "shadowColor", "textDecorationColor", "tintColor", "textShadowColor", "overlayColor", "fill", "floodColor", "lightingColor", "stopColor", "stroke"]);
-let runOnRuntime = runOnRuntime_mod;
-const shareable2 = runOnRuntime.makeShareable({ boxShadow: "color" });
-function normalizeColor(num) {
-  if (typeof num === "number") {
-    let tmp92 = null;
-    if (num >>> 0 === num) {
-      tmp92 = null;
-      if (num >= 0) {
-        tmp92 = null;
-        if (num <= 4294967295) {
-          tmp92 = num;
-        }
-      }
-    }
-    let tmp93 = tmp92;
   } else {
-    tmp93 = null;
-    if (typeof num === "string") {
-      const hex6 = obj.hex6;
-      let match = hex6.exec(num);
-      if (match) {
-        const _Number27 = Number;
-        match = Number.parseInt(`${tmp90[1]}ff`, 16);
-        let tmp6 = match >>> 0;
-      } else if (undefined !== shareable[num]) {
-      } else {
-        const rgb = obj.rgb;
-        const match1 = rgb.exec(num);
-        if (match1) {
-          if (typeof parse255 === "function") {
-            const _Number24 = Number;
-            const parsed = Number.parseInt(tmp80, 10);
-            if (parsed >= 0) {
+    throw new TypeError("Trying to call a non-function");
+  }
+}
+subtractMatrices.__closure = { isAffineMatrixFlat, maybeFlattenMatrix, unflatten };
+subtractMatrices.__workletHash = 12538691088788;
+subtractMatrices.__initData = { code: "function subtractMatrices_Pnpm_matrixUtilsTsx7(maybeFlatA,maybeFlatB){const{isAffineMatrixFlat,maybeFlattenMatrix,unflatten}=this.__closure;const isFlatOnStart=isAffineMatrixFlat(maybeFlatA);const a=maybeFlattenMatrix(maybeFlatA);const b=maybeFlattenMatrix(maybeFlatB);const c=a.map(function(_,i){return a[i]-b[i];});return isFlatOnStart?c:unflatten(c);}" };
+function addMatrices(arr, arr2) {
+  if (typeof isAffineMatrixFlat === "function") {
+    const _Array = Array;
+    let isArray = Array.isArray(arr);
+    if (isArray) {
+      isArray = 16 === arr.length;
+    }
+    if (isArray) {
+      isArray = arr.every((item) => {
+        let tmp = typeof item === "number";
+        if (typeof item === "number") {
+          const _isNaN = isNaN;
+          tmp = !isNaN(item);
+        }
+        return tmp;
+      });
+    }
+    if (typeof maybeFlattenMatrix === "function") {
+      if (typeof isAffineMatrix === "function") {
+        const _Array2 = Array;
+        let isArray1 = Array.isArray(arr);
+        if (isArray1) {
+          isArray1 = 4 === arr.length;
+        }
+        if (isArray1) {
+          isArray1 = arr.every((arr) => {
+            let isArray = Array.isArray(arr);
+            if (isArray) {
+              isArray = 4 === arr.length;
             }
-            if (typeof parse255 === "function") {
-              const _Number25 = Number;
-              const parsed1 = Number.parseInt(tmp84, 10);
-              if (parsed1 >= 0) {
-              }
-              if (typeof parse255 === "function") {
-                const _Number26 = Number;
-                const parsed2 = Number.parseInt(tmp87, 10);
-                let num87 = 0;
-                if (parsed2 >= 0) {
-                  let num88 = 255;
-                  if (parsed2 <= 255) {
-                    num88 = parsed2;
-                  }
-                  num87 = num88;
+            if (isArray) {
+              isArray = arr.every((item) => {
+                let tmp = typeof item === "number";
+                if (typeof item === "number") {
+                  const _isNaN = isNaN;
+                  tmp = !isNaN(item);
                 }
-                tmp6 = (tmp83 | tmp86 | num87 << 8 | 255) >>> 0;
+                return tmp;
+              });
+            }
+            return isArray;
+          });
+        }
+        let flatResult = arr;
+        if (isArray1) {
+          if (typeof flatten === "function") {
+            flatResult = arr.flat();
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        }
+        require = flatResult;
+        if (typeof tmp4 === "function") {
+          if (typeof tmp5 === "function") {
+            const _Array3 = Array;
+            let isArray2 = Array.isArray(arr2);
+            if (isArray2) {
+              isArray2 = 4 === arr2.length;
+            }
+            if (isArray2) {
+              isArray2 = arr2.every((arr) => {
+                let isArray = Array.isArray(arr);
+                if (isArray) {
+                  isArray = 4 === arr.length;
+                }
+                if (isArray) {
+                  isArray = arr.every((item) => {
+                    let tmp = typeof item === "number";
+                    if (typeof item === "number") {
+                      const _isNaN = isNaN;
+                      tmp = !isNaN(item);
+                    }
+                    return tmp;
+                  });
+                }
+                return isArray;
+              });
+            }
+            if (isArray2) {
+              if (typeof flatten === "function") {
+                arr2.flat();
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
-            } else {
-              throw new TypeError("Trying to call a non-function");
             }
+            const mapped = flatResult.map((item, index) => flatResult[index] + flatResult1[index]);
+            let tmp13 = mapped;
+            if (!isArray) {
+              if (typeof unflatten === "function") {
+                const items = [, , , ];
+                [arr2[0], arr2[1], arr2[2], arr2[3]] = mapped;
+                const items1 = [items, , , ];
+                const items2 = [mapped[4], mapped[5], mapped[6], mapped[7]];
+                items1[1] = items2;
+                const items3 = [mapped[8], mapped[9], mapped[10], mapped[11]];
+                items1[2] = items3;
+                const items4 = [mapped[12], mapped[13], mapped[14], mapped[15]];
+                items1[3] = items4;
+                tmp13 = items1;
+              } else {
+                throw new TypeError("Trying to call a non-function");
+              }
+            }
+            return tmp13;
           } else {
             throw new TypeError("Trying to call a non-function");
           }
         } else {
-          const rgba = obj.rgba;
-          num = rgba.exec(num);
-          if (num) {
-            if (undefined !== num[6]) {
-              if (typeof parse255 === "function") {
-                const _Number21 = Number;
-                const parsed3 = Number.parseInt(tmp65, 10);
-                if (parsed3 >= 0) {
-                }
-                if (typeof parse255 === "function") {
-                  const _Number22 = Number;
-                  const parsed4 = Number.parseInt(tmp69, 10);
-                  if (parsed4 >= 0) {
-                  }
-                  if (typeof parse255 === "function") {
-                    const _Number23 = Number;
-                    const parsed5 = Number.parseInt(tmp72, 10);
-                    if (parsed5 >= 0) {
-                    }
-                    if (typeof parse1 === "function") {
-                      num = Number;
-                      const parsed6 = Number.parseFloat(tmp76);
-                      let num76 = 0;
-                      if (parsed6 >= 0) {
-                        num = 255;
-                        if (parsed6 <= 1) {
-                          const _Math4 = Math;
-                          num = Math.round(255 * parsed6);
-                        }
-                        num76 = num;
-                      }
-                      let tmp63 = (tmp68 | tmp71 | tmp74 | num76) >>> 0;
-                    } else {
-                      throw new TypeError("Trying to call a non-function");
-                    }
-                  } else {
-                    throw new TypeError("Trying to call a non-function");
-                  }
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              } else {
-                throw new TypeError("Trying to call a non-function");
-              }
-            } else if (typeof parse255 === "function") {
-              const _Number17 = Number;
-              const parsed7 = Number.parseInt(tmp98, 10);
-              if (parsed7 >= 0) {
-              }
-              if (typeof parse255 === "function") {
-                const _Number18 = Number;
-                const parsed8 = Number.parseInt(tmp54, 10);
-                if (parsed8 >= 0) {
-                }
-                if (typeof parse255 === "function") {
-                  const _Number19 = Number;
-                  const parsed9 = Number.parseInt(tmp57, 10);
-                  if (parsed9 >= 0) {
-                  }
-                  if (typeof parse1 === "function") {
-                    const _Number20 = Number;
-                    const parsed10 = Number.parseFloat(tmp61);
-                    let num61 = 0;
-                    if (parsed10 >= 0) {
-                      let num64 = 255;
-                      if (parsed10 <= 1) {
-                        const _Math3 = Math;
-                        num64 = Math.round(255 * parsed10);
-                      }
-                      num61 = num64;
-                    }
-                    tmp63 = (tmp53 | tmp56 | tmp59 | num61) >>> 0;
-                  } else {
-                    throw new TypeError("Trying to call a non-function");
-                  }
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              } else {
-                throw new TypeError("Trying to call a non-function");
-              }
-            } else {
-              throw new TypeError("Trying to call a non-function");
+          throw new TypeError("Trying to call a non-function");
+        }
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+}
+addMatrices.__closure = { isAffineMatrixFlat, maybeFlattenMatrix, unflatten };
+addMatrices.__workletHash = 17429737879880;
+addMatrices.__initData = { code: "function addMatrices_Pnpm_matrixUtilsTsx8(maybeFlatA,maybeFlatB){const{isAffineMatrixFlat,maybeFlattenMatrix,unflatten}=this.__closure;const isFlatOnStart=isAffineMatrixFlat(maybeFlatA);const a=maybeFlattenMatrix(maybeFlatA);const b=maybeFlattenMatrix(maybeFlatB);const c=a.map(function(_,i){return a[i]+b[i];});return isFlatOnStart?c:unflatten(c);}" };
+function scaleMatrix(arr, arg1) {
+  closure_0 = arg1;
+  if (typeof isAffineMatrixFlat === "function") {
+    const _Array = Array;
+    let isArray = Array.isArray(arr);
+    if (isArray) {
+      isArray = 16 === arr.length;
+    }
+    if (isArray) {
+      isArray = arr.every((item) => {
+        let tmp = typeof item === "number";
+        if (typeof item === "number") {
+          const _isNaN = isNaN;
+          tmp = !isNaN(item);
+        }
+        return tmp;
+      });
+    }
+    if (typeof maybeFlattenMatrix === "function") {
+      if (typeof isAffineMatrix === "function") {
+        const _Array2 = Array;
+        let isArray1 = Array.isArray(arr);
+        if (isArray1) {
+          isArray1 = 4 === arr.length;
+        }
+        if (isArray1) {
+          isArray1 = arr.every((arr) => {
+            let isArray = Array.isArray(arr);
+            if (isArray) {
+              isArray = 4 === arr.length;
             }
+            if (isArray) {
+              isArray = arr.every((item) => {
+                let tmp = typeof item === "number";
+                if (typeof item === "number") {
+                  const _isNaN = isNaN;
+                  tmp = !isNaN(item);
+                }
+                return tmp;
+              });
+            }
+            return isArray;
+          });
+        }
+        let flatResult = arr;
+        if (isArray1) {
+          if (typeof flatten === "function") {
+            flatResult = arr.flat();
           } else {
-            const hex3 = obj.hex3;
-            const match2 = hex3.exec(num);
-            if (match2) {
-              const _Number16 = Number;
-              tmp6 = Number.parseInt(`${tmp[1]}${tmp[1]}${tmp[2]}${tmp[2]}${tmp[3]}${tmp[3]}ff`, 16) >>> 0;
-            } else {
-              const hex8 = obj.hex8;
-              const match3 = hex8.exec(num);
-              if (match3) {
-                const _Number15 = Number;
-                tmp6 = Number.parseInt(match3[1], 16) >>> 0;
-              } else {
-                const hex4 = obj.hex4;
-                const match4 = hex4.exec(num);
-                if (match4) {
-                  const _Number14 = Number;
-                  tmp6 = Number.parseInt(match4[1] + match4[1] + match4[2] + match4[2] + match4[3] + match4[3] + match4[4] + match4[4], 16) >>> 0;
-                } else {
-                  const hsl = obj.hsl;
-                  const match5 = hsl.exec(num);
-                  if (match5) {
-                    if (typeof parse360 === "function") {
-                      const _Number11 = Number;
-                      if (typeof parsePercentage === "function") {
-                        const _Number12 = Number;
-                        const parsed11 = Number.parseFloat(tmp44);
-                        let num37 = 0;
-                        if (parsed11 >= 0) {
-                          let num39 = 1;
-                          if (parsed11 <= 100) {
-                            num39 = parsed11 / 100;
-                          }
-                          num37 = num39;
-                        }
-                        if (typeof tmp43 === "function") {
-                          const _Number13 = Number;
-                          const parsed12 = Number.parseFloat(tmp46);
-                          let num40 = 0;
-                          if (parsed12 >= 0) {
-                            let num42 = 1;
-                            if (parsed12 <= 100) {
-                              num42 = parsed12 / 100;
-                            }
-                            num40 = num42;
-                          }
-                          tmp6 = (255 | tmp39((tmp42 + 360) % 360 / 360, num37, num40)) >>> 0;
-                        } else {
-                          throw new TypeError("Trying to call a non-function");
-                        }
-                      } else {
-                        throw new TypeError("Trying to call a non-function");
-                      }
-                    } else {
-                      throw new TypeError("Trying to call a non-function");
-                    }
-                  } else {
-                    const hsla = obj.hsla;
-                    let num2 = hsla.exec(num);
-                    if (num2) {
-                      if (undefined !== num2[6]) {
-                        if (typeof parse360 === "function") {
-                          const _Number8 = Number;
-                          if (typeof parsePercentage === "function") {
-                            const _Number9 = Number;
-                            const parsed13 = Number.parseFloat(tmp30);
-                            if (parsed13 >= 0) {
-                              if (parsed13 <= 100) {
-                                const num28 = parsed13 / 100;
-                              }
-                            }
-                            if (typeof tmp29 === "function") {
-                              const _Number10 = Number;
-                              const parsed14 = Number.parseFloat(tmp32);
-                              if (parsed14 >= 0) {
-                                if (parsed14 <= 100) {
-                                  const num31 = parsed14 / 100;
+            throw new TypeError("Trying to call a non-function");
+          }
+        }
+        const mapped = flatResult.map((item) => item * closure_0);
+        let tmp9 = mapped;
+        if (!isArray) {
+          if (typeof unflatten === "function") {
+            const items = [, , , ];
+            [arr2[0], arr2[1], arr2[2], arr2[3]] = mapped;
+            const items1 = [items, , , ];
+            const items2 = [mapped[4], mapped[5], mapped[6], mapped[7]];
+            items1[1] = items2;
+            const items3 = [mapped[8], mapped[9], mapped[10], mapped[11]];
+            items1[2] = items3;
+            const items4 = [mapped[12], mapped[13], mapped[14], mapped[15]];
+            items1[3] = items4;
+            tmp9 = items1;
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        }
+        return tmp9;
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+}
+scaleMatrix.__closure = { isAffineMatrixFlat, maybeFlattenMatrix, unflatten };
+scaleMatrix.__workletHash = 11907224908685;
+scaleMatrix.__initData = { code: "function scaleMatrix_Pnpm_matrixUtilsTsx9(maybeFlatA,scalar){const{isAffineMatrixFlat,maybeFlattenMatrix,unflatten}=this.__closure;const isFlatOnStart=isAffineMatrixFlat(maybeFlatA);const a=maybeFlattenMatrix(maybeFlatA);const b=a.map(function(x){return x*scalar;});return isFlatOnStart?b:unflatten(b);}" };
+function getRotationMatrix(sum) {
+  let str = item;
+  if (item === undefined) {
+    str = "z";
+  }
+  const cosResult = Math.cos(sum);
+  const sinResult = Math.sin(sum);
+  if ("z" === str) {
+    const items = [cosResult, sinResult, 0, 0];
+    const items1 = [items, , , ];
+    const items2 = [-sinResult, cosResult, 0, 0];
+    items1[1] = items2;
+    items1[2] = [0, 0, 1, 0];
+    items1[3] = [0, 0, 0, 1];
+    return items1;
+  } else if ("y" === str) {
+    const items3 = [cosResult, 0, -sinResult, 0];
+    const items4 = [items3, [0, 1, 0, 0], , ];
+    const items5 = [sinResult, 0, cosResult, 0];
+    items4[2] = items5;
+    items4[3] = [0, 0, 0, 1];
+    return items4;
+  } else if ("x" === str) {
+    const items6 = [[1, 0, 0, 0], , , ];
+    const items7 = [0, cosResult, sinResult, 0];
+    items6[1] = items7;
+    const items8 = [0, -sinResult, cosResult, 0];
+    items6[2] = items8;
+    items6[3] = [0, 0, 0, 1];
+    return items6;
+  }
+}
+getRotationMatrix.__closure = {};
+getRotationMatrix.__workletHash = 14367317296086;
+getRotationMatrix.__initData = { code: "function getRotationMatrix_Pnpm_matrixUtilsTsx10(angle,axis='z'){const cos=Math.cos(angle);const sin=Math.sin(angle);switch(axis){case'z':return[[cos,sin,0,0],[-sin,cos,0,0],[0,0,1,0],[0,0,0,1]];case'y':return[[cos,0,-sin,0],[0,1,0,0],[sin,0,cos,0],[0,0,0,1]];case'x':return[[1,0,0,0],[0,cos,sin,0],[0,-sin,cos,0],[0,0,0,1]];}}" };
+function norm3d(arg0, arg1, arg2) {
+  return Math.sqrt(arg0 * arg0 + arg1 * arg1 + arg2 * arg2);
+}
+norm3d.__closure = {};
+norm3d.__workletHash = 3613705554848;
+norm3d.__initData = { code: "function norm3d_Pnpm_matrixUtilsTsx11(x,y,z){return Math.sqrt(x*x+y*y+z*z);}" };
+function transposeMatrix(arr) {
+  if (typeof flatten === "function") {
+    const flatResult = arr.flat();
+    const items = [flatResult[0], flatResult[4], flatResult[8], flatResult[12]];
+    const items1 = [items, , , ];
+    const items2 = [flatResult[1], flatResult[5], flatResult[9], flatResult[13]];
+    items1[1] = items2;
+    const items3 = [flatResult[2], flatResult[6], flatResult[10], flatResult[14]];
+    items1[2] = items3;
+    const items4 = [flatResult[3], flatResult[7], flatResult[11], flatResult[15]];
+    items1[3] = items4;
+    return items1;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+}
+transposeMatrix.__closure = { flatten };
+transposeMatrix.__workletHash = 17306716053169;
+transposeMatrix.__initData = { code: "function transposeMatrix_Pnpm_matrixUtilsTsx12(matrix){const{flatten}=this.__closure;const m=flatten(matrix);return[[m[0],m[4],m[8],m[12]],[m[1],m[5],m[9],m[13]],[m[2],m[6],m[10],m[14]],[m[3],m[7],m[11],m[15]]];}" };
+function assertVectorsHaveEqualLengths(arg0, arg1) {
+
+}
+assertVectorsHaveEqualLengths.__closure = { __DEV__: false };
+assertVectorsHaveEqualLengths.__workletHash = 14349158134583;
+assertVectorsHaveEqualLengths.__initData = { code: "function assertVectorsHaveEqualLengths_Pnpm_matrixUtilsTsx13(a,b){const{__DEV__}=this.__closure;if(__DEV__&&a.length!==b.length){throw new ReanimatedError(\"Cannot calculate inner product of two vectors of different lengths. Length of \"+a.toString()+\" is \"+a.length+\" and length of \"+b.toString()+\" is \"+b.length+\".\");}}" };
+function innerProduct(arr, arg1) {
+  closure_0 = arr;
+  closure_1 = arg1;
+  if (typeof assertVectorsHaveEqualLengths === "function") {
+    return arr.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0);
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+}
+innerProduct.__closure = { assertVectorsHaveEqualLengths };
+innerProduct.__workletHash = 6022428100775;
+innerProduct.__initData = { code: "function innerProduct_Pnpm_matrixUtilsTsx14(a,b){const{assertVectorsHaveEqualLengths}=this.__closure;assertVectorsHaveEqualLengths(a,b);return a.reduce(function(acc,_,i){return acc+a[i]*b[i];},0);}" };
+function projection(arr, arg1) {
+  if (typeof assertVectorsHaveEqualLengths === "function") {
+    if (typeof innerProduct === "function") {
+      closure_0 = arr;
+      closure_1 = arg1;
+      if (typeof assertVectorsHaveEqualLengths === "function") {
+        if (typeof tmp2 === "function") {
+          closure_0 = arr;
+          closure_1 = arr;
+          if (typeof assertVectorsHaveEqualLengths === "function") {
+            closure_0 = tmp5 / arr.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0);
+            return arr.map((item) => item * closure_0);
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+}
+projection.__closure = { assertVectorsHaveEqualLengths, innerProduct };
+projection.__workletHash = 12191208971941;
+projection.__initData = { code: "function projection_Pnpm_matrixUtilsTsx15(u,a){const{assertVectorsHaveEqualLengths,innerProduct}=this.__closure;assertVectorsHaveEqualLengths(u,a);const s=innerProduct(u,a)/innerProduct(u,u);return u.map(function(e){return e*s;});}" };
+function subtractVectors(arr, arg1) {
+  closure_0 = arr;
+  closure_1 = arg1;
+  if (typeof assertVectorsHaveEqualLengths === "function") {
+    return arr.map((item, index) => arr11[index] - arr3[index]);
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+}
+subtractVectors.__closure = { assertVectorsHaveEqualLengths };
+subtractVectors.__workletHash = 9047017498478;
+subtractVectors.__initData = { code: "function subtractVectors_Pnpm_matrixUtilsTsx16(a,b){const{assertVectorsHaveEqualLengths}=this.__closure;assertVectorsHaveEqualLengths(a,b);return a.map(function(_,i){return a[i]-b[i];});}" };
+function scaleVector(arr, arg1) {
+  closure_0 = arg1;
+  return arr.map((item) => item * closure_0);
+}
+scaleVector.__closure = {};
+scaleVector.__workletHash = 11236256734309;
+scaleVector.__initData = { code: "function scaleVector_Pnpm_matrixUtilsTsx17(u,a){return u.map(function(e){return e*a;});}" };
+function gramSchmidtAlgorithm(items7) {
+  [tmp3, arr, arr2, arr3] = items7;
+  if (typeof subtractVectors === "function") {
+    arr11 = arr;
+    arr3 = tmp5;
+    if (typeof assertVectorsHaveEqualLengths === "function") {
+      const mapped = arr.map((item, index) => arr11[index] - arr3[index]);
+      if (typeof subtractVectors === "function") {
+        arr11 = arr2;
+        arr3 = tmp8;
+        if (typeof assertVectorsHaveEqualLengths === "function") {
+          const mapped1 = arr2.map((item, index) => arr11[index] - arr3[index]);
+          if (typeof subtractVectors === "function") {
+            arr11 = mapped1;
+            arr3 = tmp9;
+            if (typeof assertVectorsHaveEqualLengths === "function") {
+              const mapped2 = mapped1.map((item, index) => arr11[index] - arr3[index]);
+              const items = [tmp3, mapped, mapped2, ];
+              if (typeof subtractVectors === "function") {
+                arr11 = arr3;
+                arr3 = tmp11;
+                if (typeof assertVectorsHaveEqualLengths === "function") {
+                  const mapped3 = arr3.map((item, index) => arr11[index] - arr3[index]);
+                  if (typeof subtractVectors === "function") {
+                    arr11 = mapped3;
+                    arr3 = tmp12;
+                    if (typeof assertVectorsHaveEqualLengths === "function") {
+                      const mapped4 = mapped3.map((item, index) => arr11[index] - arr3[index]);
+                      if (typeof subtractVectors === "function") {
+                        arr11 = mapped4;
+                        arr3 = tmp13;
+                        if (typeof assertVectorsHaveEqualLengths === "function") {
+                          items[3] = mapped4.map((item, index) => arr11[index] - arr3[index]);
+                          [arr8, arr9, arr10, arr11] = items.map((arr) => {
+                            if (typeof innerProduct === "function") {
+                              closure_0 = arr;
+                              closure_1 = arr;
+                              if (typeof assertVectorsHaveEqualLengths === "function") {
+                                if (typeof tmp === "function") {
+                                  closure_0 = 1 / tmp3(arr.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0));
+                                  return arr.map((item) => item * closure_0);
+                                } else {
+                                  throw new TypeError("Trying to call a non-function");
                                 }
+                              } else {
+                                throw new TypeError("Trying to call a non-function");
                               }
-                              if (typeof parse1 === "function") {
-                                num2 = Number;
-                                const parsed15 = Number.parseFloat(tmp36);
-                                let num32 = 0;
-                                if (parsed15 >= 0) {
-                                  num2 = 255;
-                                  if (parsed15 <= 1) {
-                                    const _Math2 = Math;
-                                    num2 = Math.round(255 * parsed15);
+                            } else {
+                              throw new TypeError("Trying to call a non-function");
+                            }
+                          });
+                          const items1 = [arr8[0], arr9[0], arr10[0], arr11[0]];
+                          const items2 = [items1, , , ];
+                          const items3 = [arr8[1], arr9[1], arr10[1], arr11[1]];
+                          items2[1] = items3;
+                          const items4 = [arr8[2], arr9[2], arr10[2], arr11[2]];
+                          items2[2] = items4;
+                          const items5 = [arr8[3], arr9[3], arr10[3], arr11[3]];
+                          items2[3] = items5;
+                          if (typeof innerProduct === "function") {
+                            arr11 = arr8;
+                            arr3 = tmp3;
+                            if (typeof assertVectorsHaveEqualLengths === "function") {
+                              const items6 = [arr8.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0), , , ];
+                              if (typeof innerProduct === "function") {
+                                arr11 = arr8;
+                                arr3 = arr;
+                                if (typeof assertVectorsHaveEqualLengths === "function") {
+                                  items6[1] = arr8.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0);
+                                  if (typeof innerProduct === "function") {
+                                    arr11 = arr8;
+                                    arr3 = arr2;
+                                    if (typeof assertVectorsHaveEqualLengths === "function") {
+                                      items6[2] = arr8.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0);
+                                      if (typeof innerProduct === "function") {
+                                        arr11 = arr8;
+                                        if (typeof assertVectorsHaveEqualLengths === "function") {
+                                          items6[3] = arr8.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0);
+                                          items7 = [items6, , , ];
+                                          if (typeof innerProduct === "function") {
+                                            arr11 = arr9;
+                                            arr3 = arr;
+                                            if (typeof assertVectorsHaveEqualLengths === "function") {
+                                              const items8 = [0, arr9.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0)];
+                                              if (typeof innerProduct === "function") {
+                                                arr11 = arr9;
+                                                arr3 = arr2;
+                                                if (typeof assertVectorsHaveEqualLengths === "function") {
+                                                  items8[2] = arr9.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0);
+                                                  if (typeof innerProduct === "function") {
+                                                    arr11 = arr9;
+                                                    if (typeof assertVectorsHaveEqualLengths === "function") {
+                                                      items8[3] = arr9.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0);
+                                                      items7[1] = items8;
+                                                      if (typeof innerProduct === "function") {
+                                                        arr11 = arr10;
+                                                        arr3 = arr2;
+                                                        if (typeof assertVectorsHaveEqualLengths === "function") {
+                                                          const items9 = [0, 0, arr10.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0)];
+                                                          if (typeof innerProduct === "function") {
+                                                            arr11 = arr10;
+                                                            if (typeof assertVectorsHaveEqualLengths === "function") {
+                                                              items9[3] = arr10.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0);
+                                                              items7[2] = items9;
+                                                              if (typeof innerProduct === "function") {
+                                                                if (typeof assertVectorsHaveEqualLengths === "function") {
+                                                                  const items10 = [0, 0, 0, arr11.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0)];
+                                                                  items7[3] = items10;
+                                                                  if (typeof transposeMatrix === "function") {
+                                                                    if (typeof flatten === "function") {
+                                                                      const obj = { rotationMatrix: null, skewMatrix: null };
+                                                                      const flatResult = items2.flat();
+                                                                      const items11 = [flatResult[0], flatResult[4], flatResult[8], flatResult[12]];
+                                                                      const items12 = [items11, , , ];
+                                                                      const items13 = [flatResult[1], flatResult[5], flatResult[9], flatResult[13]];
+                                                                      items12[1] = items13;
+                                                                      const items14 = [flatResult[2], flatResult[6], flatResult[10], flatResult[14]];
+                                                                      items12[2] = items14;
+                                                                      const items15 = [flatResult[3], flatResult[7], flatResult[11], flatResult[15]];
+                                                                      items12[3] = items15;
+                                                                      obj.rotationMatrix = items12;
+                                                                      if (typeof tmp16 === "function") {
+                                                                        if (typeof tmp17 === "function") {
+                                                                          const flatResult1 = items7.flat();
+                                                                          const items16 = [flatResult1[0], flatResult1[4], flatResult1[8], flatResult1[12]];
+                                                                          const items17 = [items16, , , ];
+                                                                          const items18 = [flatResult1[1], flatResult1[5], flatResult1[9], flatResult1[13]];
+                                                                          items17[1] = items18;
+                                                                          const items19 = [flatResult1[2], flatResult1[6], flatResult1[10], flatResult1[14]];
+                                                                          items17[2] = items19;
+                                                                          const items20 = [flatResult1[3], flatResult1[7], flatResult1[11], flatResult1[15]];
+                                                                          items17[3] = items20;
+                                                                          obj.skewMatrix = items17;
+                                                                          return obj;
+                                                                        } else {
+                                                                          throw new TypeError("Trying to call a non-function");
+                                                                        }
+                                                                      } else {
+                                                                        throw new TypeError("Trying to call a non-function");
+                                                                      }
+                                                                    } else {
+                                                                      throw new TypeError("Trying to call a non-function");
+                                                                    }
+                                                                  } else {
+                                                                    throw new TypeError("Trying to call a non-function");
+                                                                  }
+                                                                } else {
+                                                                  throw new TypeError("Trying to call a non-function");
+                                                                }
+                                                              } else {
+                                                                throw new TypeError("Trying to call a non-function");
+                                                              }
+                                                            } else {
+                                                              throw new TypeError("Trying to call a non-function");
+                                                            }
+                                                          } else {
+                                                            throw new TypeError("Trying to call a non-function");
+                                                          }
+                                                        } else {
+                                                          throw new TypeError("Trying to call a non-function");
+                                                        }
+                                                      } else {
+                                                        throw new TypeError("Trying to call a non-function");
+                                                      }
+                                                    } else {
+                                                      throw new TypeError("Trying to call a non-function");
+                                                    }
+                                                  } else {
+                                                    throw new TypeError("Trying to call a non-function");
+                                                  }
+                                                } else {
+                                                  throw new TypeError("Trying to call a non-function");
+                                                }
+                                              } else {
+                                                throw new TypeError("Trying to call a non-function");
+                                              }
+                                            } else {
+                                              throw new TypeError("Trying to call a non-function");
+                                            }
+                                          } else {
+                                            throw new TypeError("Trying to call a non-function");
+                                          }
+                                        } else {
+                                          throw new TypeError("Trying to call a non-function");
+                                        }
+                                      } else {
+                                        throw new TypeError("Trying to call a non-function");
+                                      }
+                                    } else {
+                                      throw new TypeError("Trying to call a non-function");
+                                    }
+                                  } else {
+                                    throw new TypeError("Trying to call a non-function");
                                   }
-                                  num32 = num2;
+                                } else {
+                                  throw new TypeError("Trying to call a non-function");
                                 }
-                                let tmp26 = (tmp34 | num32) >>> 0;
                               } else {
                                 throw new TypeError("Trying to call a non-function");
                               }
@@ -544,46 +795,24 @@ function normalizeColor(num) {
                           } else {
                             throw new TypeError("Trying to call a non-function");
                           }
-                        } else {
-                          throw new TypeError("Trying to call a non-function");
-                        }
-                      } else if (typeof parse360 === "function") {
-                        const _Number4 = Number;
-                        if (typeof parsePercentage === "function") {
-                          const _Number5 = Number;
-                          const parsed16 = Number.parseFloat(tmp18);
-                          if (parsed16 >= 0) {
-                            if (parsed16 <= 100) {
-                              const num16 = parsed16 / 100;
-                            }
-                          }
-                          if (typeof tmp17 === "function") {
-                            const _Number6 = Number;
-                            const parsed17 = Number.parseFloat(tmp20);
-                            if (parsed17 >= 0) {
-                              if (parsed17 <= 100) {
-                                const num19 = parsed17 / 100;
-                              }
-                            }
-                            if (typeof parse1 === "function") {
-                              const _Number7 = Number;
-                              const parsed18 = Number.parseFloat(tmp24);
-                              let num20 = 0;
-                              if (parsed18 >= 0) {
-                                let num23 = 255;
-                                if (parsed18 <= 1) {
-                                  const _Math = Math;
-                                  num23 = Math.round(255 * parsed18);
+                          const tmpResult = _slicedToArray(items.map((arr) => {
+                            if (typeof innerProduct === "function") {
+                              closure_0 = arr;
+                              closure_1 = arr;
+                              if (typeof assertVectorsHaveEqualLengths === "function") {
+                                if (typeof tmp === "function") {
+                                  closure_0 = 1 / tmp3(arr.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0));
+                                  return arr.map((item) => item * closure_0);
+                                } else {
+                                  throw new TypeError("Trying to call a non-function");
                                 }
-                                num20 = num23;
+                              } else {
+                                throw new TypeError("Trying to call a non-function");
                               }
-                              tmp26 = (tmp22 | num20) >>> 0;
                             } else {
                               throw new TypeError("Trying to call a non-function");
                             }
-                          } else {
-                            throw new TypeError("Trying to call a non-function");
-                          }
+                          }), 4);
                         } else {
                           throw new TypeError("Trying to call a non-function");
                         }
@@ -591,489 +820,177 @@ function normalizeColor(num) {
                         throw new TypeError("Trying to call a non-function");
                       }
                     } else {
-                      const hwb = obj.hwb;
-                      const match6 = hwb.exec(num);
-                      if (match6) {
-                        if (typeof parse360 === "function") {
-                          const _Number = Number;
-                          if (typeof parsePercentage === "function") {
-                            const _Number2 = Number;
-                            const parsed19 = Number.parseFloat(tmp12);
-                            let num5 = 0;
-                            if (parsed19 >= 0) {
-                              let num7 = 1;
-                              if (parsed19 <= 100) {
-                                num7 = parsed19 / 100;
-                              }
-                              num5 = num7;
-                            }
-                            if (typeof tmp11 === "function") {
-                              const _Number3 = Number;
-                              const parsed20 = Number.parseFloat(tmp14);
-                              let num8 = 0;
-                              if (parsed20 >= 0) {
-                                let num10 = 1;
-                                if (parsed20 <= 100) {
-                                  num10 = parsed20 / 100;
-                                }
-                                num8 = num10;
-                              }
-                              tmp6 = (255 | tmp7((tmp10 + 360) % 360 / 360, num5, num8)) >>> 0;
-                            } else {
-                              throw new TypeError("Trying to call a non-function");
-                            }
-                          } else {
-                            throw new TypeError("Trying to call a non-function");
-                          }
-                        } else {
-                          throw new TypeError("Trying to call a non-function");
-                        }
-                      }
+                      throw new TypeError("Trying to call a non-function");
                     }
+                  } else {
+                    throw new TypeError("Trying to call a non-function");
                   }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  return tmp93;
-}
-normalizeColor.__closure = { MATCHERS, names: shareable, parse255, parse1, hslToRgb, parse360, parsePercentage, hwbToRgb };
-normalizeColor.__workletHash = 13656798455904;
-normalizeColor.__initData = { code: "function normalizeColor_Pnpm_ColorsTs9(color){const{MATCHERS,names,parse255,parse1,hslToRgb,parse360,parsePercentage,hwbToRgb}=this.__closure;if(typeof color==='number'){if(color>>>0===color&&color>=0&&color<=0xffffffff){return color;}return null;}if(typeof color!=='string'){return null;}let match;if(match=MATCHERS.hex6.exec(color)){return Number.parseInt(match[1]+'ff',16)>>>0;}if(names[color]!==undefined){return names[color];}if(match=MATCHERS.rgb.exec(color)){return((parse255(match[1])<<24|parse255(match[2])<<16|parse255(match[3])<<8|0x000000ff)>>>0);}if(match=MATCHERS.rgba.exec(color)){if(match[6]!==undefined){return(parse255(match[6])<<24|parse255(match[7])<<16|parse255(match[8])<<8|parse1(match[9]))>>>0;}return(parse255(match[2])<<24|parse255(match[3])<<16|parse255(match[4])<<8|parse1(match[5]))>>>0;}if(match=MATCHERS.hex3.exec(color)){return Number.parseInt(match[1]+match[1]+match[2]+match[2]+match[3]+match[3]+'ff',16)>>>0;}if(match=MATCHERS.hex8.exec(color)){return Number.parseInt(match[1],16)>>>0;}if(match=MATCHERS.hex4.exec(color)){return Number.parseInt(match[1]+match[1]+match[2]+match[2]+match[3]+match[3]+match[4]+match[4],16)>>>0;}if(match=MATCHERS.hsl.exec(color)){return(hslToRgb(parse360(match[1]),parsePercentage(match[2]),parsePercentage(match[3]))|0x000000ff)>>>0;}if(match=MATCHERS.hsla.exec(color)){if(match[6]!==undefined){return(hslToRgb(parse360(match[6]),parsePercentage(match[7]),parsePercentage(match[8]))|parse1(match[9]))>>>0;}return(hslToRgb(parse360(match[2]),parsePercentage(match[3]),parsePercentage(match[4]))|parse1(match[5]))>>>0;}if(match=MATCHERS.hwb.exec(color)){return(hwbToRgb(parse360(match[1]),parsePercentage(match[2]),parsePercentage(match[3]))|0x000000ff)>>>0;}return null;}" };
-const fn = function t(dependencyMap) {
-  return (dependencyMap >> 24 & 255) / 255;
-};
-fn.__closure = {};
-fn.__workletHash = 5651263271273;
-fn.__initData = { code: "function pnpm_ColorsTs10(c){return(c>>24&255)/255;}" };
-const fn2 = function n(processColorResult) {
-  return processColorResult >> 16 & 255;
-};
-fn2.__closure = {};
-fn2.__workletHash = 10831766115157;
-fn2.__initData = { code: "function pnpm_ColorsTs11(c){return c>>16&255;}" };
-const fn3 = function a(processColorResult) {
-  return processColorResult >> 8 & 255;
-};
-fn3.__closure = {};
-fn3.__workletHash = 3551227549865;
-fn3.__initData = { code: "function pnpm_ColorsTs12(c){return c>>8&255;}" };
-const fn4 = function l(processColorResult) {
-  return 255 & processColorResult;
-};
-fn4.__closure = {};
-fn4.__workletHash = 8634480727248;
-fn4.__initData = { code: "function pnpm_ColorsTs13(c){return c&255;}" };
-const fn5 = function s(arg0, arg1, arg2) {
-  let num = arg3;
-  if (arg3 === undefined) {
-    num = 1;
-  }
-  let num2 = 0;
-  if (num >= 0.001) {
-    num2 = num;
-  }
-  return "rgba(" + arg0 + ", " + arg1 + ", " + arg2 + ", " + num2 + ")";
-};
-fn5.__closure = {};
-fn5.__workletHash = 14577013878569;
-fn5.__initData = { code: "function pnpm_ColorsTs14(r,g,b,alpha=1){const safeAlpha=alpha<0.001?0:alpha;return\"rgba(\"+r+\", \"+g+\", \"+b+\", \"+safeAlpha+\")\";}" };
-class RGBtoHSV {
-  constructor(arg0, arg1, arg2) {
-    bound = Math.max(global, require, importDefault);
-    bound1 = Math.min(global, require, importDefault);
-    diff = bound - bound1;
-    s = 0;
-    if (0 !== bound) {
-      s = diff / bound;
-    }
-    h = 0;
-    result = bound / 255;
-    if (bound1 !== bound) {
-      if (global === bound) {
-        num7 = 0;
-        diff1 = require - importDefault;
-        if (require < importDefault) {
-          num7 = 6;
-        }
-        num8 = 6;
-        h = (diff1 + diff * num7) / (6 * diff);
-      } else if (require === bound) {
-        num5 = 2;
-        num6 = 6;
-        h = (importDefault - global + 2 * diff) / (6 * diff);
-      } else {
-        h = 0;
-        if (importDefault === bound) {
-          num3 = 4;
-          num4 = 6;
-          h = (global - require + 4 * diff) / (6 * diff);
-        }
-      }
-    }
-    return { h, s, v: result };
-  }
-}
-RGBtoHSV.__closure = {};
-RGBtoHSV.__workletHash = 13961093508129;
-RGBtoHSV.__initData = { code: "function RGBtoHSV_Pnpm_ColorsTs15(r,g,b){const max=Math.max(r,g,b);const min=Math.min(r,g,b);const d=max-min;const s=max===0?0:d/max;const v=max/255;let h=0;switch(max){case min:break;case r:h=g-b+d*(g<b?6:0);h/=6*d;break;case g:h=b-r+d*2;h/=6*d;break;case b:h=r-g+d*4;h/=6*d;break;}return{h:h,s:s,v:v};}" };
-class HSVtoRGB {
-  constructor(arg0, arg1, arg2) {
-    rounded = Math.floor(6 * global);
-    diff = 6 * global - rounded;
-    result = importDefault * (1 - require);
-    result1 = importDefault * (1 - diff * require);
-    result2 = importDefault * (1 - (1 - diff) * require);
-    result3 = rounded % 6;
-    if (0 === result3) {
-      tmp7 = result;
-      tmp8 = result2;
-      tmp9 = importDefault;
-    } else if (1 === result3) {
-      tmp7 = result;
-      tmp8 = importDefault;
-      tmp9 = result1;
-    } else {
-      num = 2;
-      if (2 === result3) {
-        tmp7 = result2;
-        tmp8 = importDefault;
-        tmp9 = result;
-      } else {
-        num2 = 3;
-        if (3 === result3) {
-          tmp7 = importDefault;
-          tmp8 = result1;
-          tmp9 = result;
-        } else {
-          num3 = 4;
-          if (4 === result3) {
-            tmp7 = importDefault;
-            tmp8 = result;
-            tmp9 = result2;
-          } else {
-            num4 = 5;
-            if (5 === result3) {
-              tmp7 = result1;
-              tmp8 = result;
-              tmp9 = importDefault;
-            }
-          }
-        }
-      }
-    }
-    obj = { r: Math.round(255 * tmp9), g: Math.round(255 * tmp8), b: Math.round(255 * tmp7) };
-    return obj;
-  }
-}
-HSVtoRGB.__closure = {};
-HSVtoRGB.__workletHash = 5232397720804;
-HSVtoRGB.__initData = { code: "function HSVtoRGB_Pnpm_ColorsTs16(h,s,v){let r,g,b;const i=Math.floor(h*6);const f=h*6-i;const p=v*(1-s);const q=v*(1-f*s);const t=v*(1-(1-f)*s);switch(i%6){case 0:[r,g,b]=[v,t,p];break;case 1:[r,g,b]=[q,v,p];break;case 2:[r,g,b]=[p,v,t];break;case 3:[r,g,b]=[p,q,v];break;case 4:[r,g,b]=[t,p,v];break;case 5:[r,g,b]=[v,p,q];break;}return{r:Math.round(r*255),g:Math.round(g*255),b:Math.round(b*255)};}" };
-const fn6 = function c(interpolateResult, interpolateResult1, interpolateResult2, interpolateResult3) {
-  if (typeof HSVtoRGB === "function") {
-    const _Math = Math;
-    const rounded = Math.floor(6 * interpolateResult);
-    const diff = 6 * interpolateResult - rounded;
-    const result = interpolateResult2 * (1 - interpolateResult1);
-    const result1 = interpolateResult2 * (1 - diff * interpolateResult1);
-    const result2 = interpolateResult2 * (1 - (1 - diff) * interpolateResult1);
-    const result3 = rounded % 6;
-    if (0 === result3) {
-      let tmp11 = result;
-      let tmp12 = result2;
-      let tmp13 = interpolateResult2;
-    } else if (1 === result3) {
-      tmp11 = result;
-      tmp12 = interpolateResult2;
-      tmp13 = result1;
-    } else if (2 === result3) {
-      tmp11 = result2;
-      tmp12 = interpolateResult2;
-      tmp13 = result;
-    } else if (3 === result3) {
-      tmp11 = interpolateResult2;
-      tmp12 = result1;
-      tmp13 = result;
-    } else if (4 === result3) {
-      tmp11 = interpolateResult2;
-      tmp12 = result;
-      tmp13 = result2;
-    } else if (5 === result3) {
-      tmp11 = result1;
-      tmp12 = result;
-      tmp13 = interpolateResult2;
-    }
-    const _Math2 = Math;
-    const rounded1 = Math.round(255 * tmp13);
-    const _Math3 = Math;
-    const rounded2 = Math.round(255 * tmp12);
-    const _Math4 = Math;
-    const rounded3 = Math.round(255 * tmp11);
-    if (typeof fn5 === "function") {
-      let num9 = interpolateResult3;
-      if (interpolateResult3 === undefined) {
-        num9 = 1;
-      }
-      let num11 = 0;
-      if (num9 >= 0.001) {
-        num11 = num9;
-      }
-      const _HermesInternal = HermesInternal;
-      return "rgba(" + rounded1 + ", " + rounded2 + ", " + rounded3 + ", " + num11 + ")";
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-};
-fn6.__closure = { HSVtoRGB, rgbaColor: fn5 };
-fn6.__workletHash = 16564231422584;
-fn6.__initData = { code: "function pnpm_ColorsTs17(h,s,v,a){const{HSVtoRGB,rgbaColor}=this.__closure;const{r:r,g:g,b:b}=HSVtoRGB(h,s,v);return rgbaColor(r,g,b,a);}" };
-function processColorInitially(semantic) {
-  if (null == semantic) {
-    return semantic;
-  } else {
-    let tmp = semantic;
-    if (typeof semantic !== "number") {
-      const tmp3 = normalizeColor(semantic);
-      if (null != tmp3) {
-        tmp = tmp3;
-        if (typeof tmp3 !== "number") {
-          return null;
-        }
-      }
-    }
-    return (tmp << 24 | tmp >>> 8) >>> 0;
-  }
-}
-processColorInitially.__closure = { normalizeColor };
-processColorInitially.__workletHash = 7970244905356;
-processColorInitially.__initData = { code: "function processColorInitially_Pnpm_ColorsTs18(color){const{normalizeColor}=this.__closure;if(color===null||color===undefined){return color;}let colorNumber;if(typeof color==='number'){colorNumber=color;}else{const normalizedColor=normalizeColor(color);if(normalizedColor===null||normalizedColor===undefined){return undefined;}if(typeof normalizedColor!=='number'){return null;}colorNumber=normalizedColor;}return(colorNumber<<24|colorNumber>>>8)>>>0;}" };
-function isColor(current) {
-  let tmp = typeof current === "string";
-  if (typeof current === "string") {
-    if (typeof processColorInitially === "function") {
-      let tmp3 = current;
-      if (null != current) {
-        let tmp4 = current;
-        if (typeof current === "number") {
-          tmp3 = (tmp4 << 24 | tmp4 >>> 8) >>> 0;
-        } else {
-          const tmp7 = normalizeColor(current);
-          if (null != tmp7) {
-            tmp3 = null;
-            tmp4 = tmp7;
-          }
-        }
-      }
-      tmp = null != tmp3;
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  }
-  return tmp;
-}
-isColor.__closure = { processColorInitially };
-isColor.__workletHash = 13504829084422;
-isColor.__initData = { code: "function isColor_Pnpm_ColorsTs19(value){const{processColorInitially}=this.__closure;if(typeof value!=='string'){return false;}return processColorInitially(value)!=null;}" };
-let module_1640 = module_1640_mod;
-module_1640 = module_1640.isAndroid();
-function processColor(num) {
-  if (typeof processColorInitially === "function") {
-    let tmp3 = num;
-    if (null != num) {
-      let tmp4 = num;
-      if (typeof num === "number") {
-        tmp3 = (tmp4 << 24 | tmp4 >>> 8) >>> 0;
-      } else {
-        const tmp8 = normalizeColor(num);
-        if (null != tmp8) {
-          tmp3 = null;
-          tmp4 = tmp8;
-        }
-      }
-    }
-    if (null != tmp3) {
-      let tmp5 = null;
-      if (typeof tmp3 === "number") {
-        let tmp6 = tmp3;
-        if (module_1640) {
-          tmp6 = tmp3 | 0;
-        }
-        tmp5 = tmp6;
-      }
-      return tmp5;
-    }
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-}
-processColor.__closure = { processColorInitially, IS_ANDROID: module_1640 };
-processColor.__workletHash = 850613387330;
-processColor.__initData = { code: "function processColor_Pnpm_ColorsTs20(color){const{processColorInitially,IS_ANDROID}=this.__closure;let normalizedColor=processColorInitially(color);if(normalizedColor===null||normalizedColor===undefined){return undefined;}if(typeof normalizedColor!=='number'){return null;}if(IS_ANDROID){normalizedColor=normalizedColor|0x0;}return normalizedColor;}" };
-function processColorsInProps(obj) {
-  for (const key10007 in arg0) {
-    if (shareable1.includes(key10007)) {
-      let _Array = Array;
-      if (Array.isArray(arg0[key10007])) {
-        let arr = arg0[key10007];
-        arg0[key10007] = arr.map((item) => {
-          if (typeof processColor === "function") {
-            if (typeof processColorInitially === "function") {
-              let tmp4 = item;
-              if (null != item) {
-                let tmp5 = item;
-                if (typeof item === "number") {
-                  tmp4 = (tmp5 << 24 | tmp5 >>> 8) >>> 0;
                 } else {
-                  const tmp10 = normalizeColor(item);
-                  if (null != tmp10) {
-                    tmp4 = null;
-                    tmp5 = tmp10;
-                  }
+                  throw new TypeError("Trying to call a non-function");
                 }
+              } else {
+                throw new TypeError("Trying to call a non-function");
               }
-              let tmp6;
-              if (null != tmp4) {
-                let tmp7 = null;
-                if (typeof tmp4 === "number") {
-                  let tmp8 = tmp4;
-                  if (module_1640) {
-                    tmp8 = tmp4 | 0;
-                  }
-                  tmp7 = tmp8;
-                }
-                tmp6 = tmp7;
-              }
-              return tmp6;
             } else {
               throw new TypeError("Trying to call a non-function");
             }
           } else {
             throw new TypeError("Trying to call a non-function");
           }
-        });
-        continue;
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
       } else {
-        arg0[key10007] = processColor(arg0[key10007]);
-        continue;
+        throw new TypeError("Trying to call a non-function");
       }
-      continue;
     } else {
-      if (!shareable2[key10007]) {
-        continue;
-      } else {
-        let tmp2 = arg0[key10007];
-        for (const item10014 of tmp2) {
-          let tmp7 = shareable2[key10007];
-          let tmp8 = tmp7;
-          if (undefined !== item10014[tmp7]) {
-            item10014[tmp8] = processColor(item10014[tmp8]);
-          }
-          continue;
-        }
-      }
-      continue;
+      throw new TypeError("Trying to call a non-function");
     }
-    continue;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
+  const tmp2 = _slicedToArray(items7, 4);
 }
-processColorsInProps.__closure = { ColorProperties: shareable1, processColor, NestedColorProperties: shareable2 };
-processColorsInProps.__workletHash = 978448002474;
-processColorsInProps.__initData = { code: "function processColorsInProps_Pnpm_ColorsTs21(props){const{ColorProperties,processColor,NestedColorProperties}=this.__closure;for(const key in props){if(ColorProperties.includes(key)){if(Array.isArray(props[key])){props[key]=props[key].map(function(color){return processColor(color);});}else{props[key]=processColor(props[key]);}}else if(NestedColorProperties[key]){const propGroupList=props[key];for(const propGroup of propGroupList){const nestedPropertyName=NestedColorProperties[key];if(propGroup[nestedPropertyName]!==undefined){propGroup[nestedPropertyName]=processColor(propGroup[nestedPropertyName]);}}}}}" };
-function convertToRGBA(current) {
-  if (typeof processColorInitially === "function") {
-    let tmp3 = current;
-    if (null != current) {
-      let tmp4 = current;
-      if (typeof current === "number") {
-        tmp3 = (tmp4 << 24 | tmp4 >>> 8) >>> 0;
-      } else {
-        const tmp6 = normalizeColor(current);
-        if (null != tmp6) {
-          tmp3 = null;
-          tmp4 = tmp6;
+gramSchmidtAlgorithm.__closure = { subtractVectors, projection, scaleVector, innerProduct, transposeMatrix };
+gramSchmidtAlgorithm.__workletHash = 1839555089531;
+gramSchmidtAlgorithm.__initData = { code: "function gramSchmidtAlgorithm_Pnpm_matrixUtilsTsx18(matrix){const{subtractVectors,projection,scaleVector,innerProduct,transposeMatrix}=this.__closure;const[a0,a1,a2,a3]=matrix;const u0=a0;const u1=subtractVectors(a1,projection(u0,a1));const u2=subtractVectors(subtractVectors(a2,projection(u0,a2)),projection(u1,a2));const u3=subtractVectors(subtractVectors(subtractVectors(a3,projection(u0,a3)),projection(u1,a3)),projection(u2,a3));const[e0,e1,e2,e3]=[u0,u1,u2,u3].map(function(u){return scaleVector(u,1/Math.sqrt(innerProduct(u,u)));});const rotationMatrix=[[e0[0],e1[0],e2[0],e3[0]],[e0[1],e1[1],e2[1],e3[1]],[e0[2],e1[2],e2[2],e3[2]],[e0[3],e1[3],e2[3],e3[3]]];const skewMatrix=[[innerProduct(e0,a0),innerProduct(e0,a1),innerProduct(e0,a2),innerProduct(e0,a3)],[0,innerProduct(e1,a1),innerProduct(e1,a2),innerProduct(e1,a3)],[0,0,innerProduct(e2,a2),innerProduct(e2,a3)],[0,0,0,innerProduct(e3,a3)]];return{rotationMatrix:transposeMatrix(rotationMatrix),skewMatrix:transposeMatrix(skewMatrix)};}" };
+function decomposeMatrix(arr) {
+  if (typeof maybeFlattenMatrix === "function") {
+    if (typeof isAffineMatrix === "function") {
+      const _Array = Array;
+      let isArray = Array.isArray(arr);
+      if (isArray) {
+        isArray = 4 === arr.length;
+      }
+      if (isArray) {
+        isArray = arr.every((arr) => {
+          let isArray = Array.isArray(arr);
+          if (isArray) {
+            isArray = 4 === arr.length;
+          }
+          if (isArray) {
+            isArray = arr.every((item) => {
+              let tmp = typeof item === "number";
+              if (typeof item === "number") {
+                const _isNaN = isNaN;
+                tmp = !isNaN(item);
+              }
+              return tmp;
+            });
+          }
+          return isArray;
+        });
+      }
+      let flatResult = arr;
+      if (isArray) {
+        if (typeof flatten === "function") {
+          flatResult = arr.flat();
+        } else {
+          throw new TypeError("Trying to call a non-function");
         }
       }
+      require = flatResult;
+      if (0 === flatResult[15]) {
+        const reanimatedError = new _mod1649.ReanimatedError("Invalid transform matrix.");
+        throw reanimatedError;
+      } else {
+        const item = flatResult.forEach((item, index) => {
+          const result = flatResult[index] / flatResult[15];
+          flatResult[index] = result;
+          return result;
+        });
+        const items = [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], ];
+        const items1 = [flatResult[12], flatResult[13], flatResult[14], 1];
+        items[3] = items1;
+        const first = flatResult[0];
+        if (typeof norm3d === "function") {
+          const _Math = Math;
+          let result = tmp26 * Math.sqrt(first * first + tmp29 * tmp29 + tmp30 * tmp30);
+          if (typeof norm3d === "function") {
+            const _Math2 = Math;
+            const result1 = tmp7 * Math.sqrt(tmp8 * tmp8 + tmp9 * tmp9 + tmp10 * tmp10);
+            if (typeof norm3d === "function") {
+              const _Math3 = Math;
+              const result2 = tmp12 * Math.sqrt(tmp13 * tmp13 + tmp14 * tmp14 + tmp15 * tmp15);
+              const items2 = [result, 0, 0, 0];
+              const items3 = [items2, , , ];
+              const items4 = [0, result1, 0, 0];
+              items3[1] = items4;
+              const items5 = [0, 0, result2, 0];
+              items3[2] = items5;
+              items3[3] = [0, 0, 0, 1];
+              const items6 = [flatResult[0] / result, flatResult[1] / result, flatResult[2] / result, 0];
+              const items7 = [items6, , , ];
+              const items8 = [flatResult[4] / result1, flatResult[5] / result1, flatResult[6] / result1, 0];
+              items7[1] = items8;
+              const items9 = [flatResult[8] / result2, flatResult[9] / result2, flatResult[10] / result2, 0];
+              items7[2] = items9;
+              items7[3] = [0, 0, 0, 1];
+              const obj = { translationMatrix: items, scaleMatrix: items3, rotationMatrix: null, skewMatrix: null };
+              ({ rotationMatrix: obj.rotationMatrix, skewMatrix: obj.skewMatrix } = gramSchmidtAlgorithm(items7));
+              return obj;
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    const items = [(tmp3 << 8 >>> 24) / 255, (tmp3 << 16 >>> 24) / 255, (tmp3 << 24 >>> 24) / 255, (tmp3 >>> 24) / 255];
-    return items;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
 }
-convertToRGBA.__closure = { processColorInitially };
-convertToRGBA.__workletHash = 15503083969849;
-convertToRGBA.__initData = { code: "function convertToRGBA_Pnpm_ColorsTs22(color){const{processColorInitially}=this.__closure;const processedColor=processColorInitially(color);const a=(processedColor>>>24)/255;const r=(processedColor<<8>>>24)/255;const g=(processedColor<<16>>>24)/255;const b=(processedColor<<24>>>24)/255;return[r,g,b,a];}" };
-function rgbaArrayToRGBAColor(tmp3Result21) {
-  let num = 0;
-  if (tmp3Result21[3] >= 0.001) {
-    num = tmp3Result21[3];
+decomposeMatrix.__closure = { maybeFlattenMatrix, norm3d, gramSchmidtAlgorithm };
+decomposeMatrix.__workletHash = 244684068165;
+decomposeMatrix.__initData = { code: "function decomposeMatrix_Pnpm_matrixUtilsTsx19(unknownTypeMatrix){const{maybeFlattenMatrix,norm3d,gramSchmidtAlgorithm}=this.__closure;const matrix=maybeFlattenMatrix(unknownTypeMatrix);if(matrix[15]===0){throw new ReanimatedError('Invalid transform matrix.');}matrix.forEach(function(_,i){return matrix[i]/=matrix[15];});const translationMatrix=[[1,0,0,0],[0,1,0,0],[0,0,1,0],[matrix[12],matrix[13],matrix[14],1]];const sx=matrix[15]*norm3d(matrix[0],matrix[4],matrix[8]);const sy=matrix[15]*norm3d(matrix[1],matrix[5],matrix[9]);const sz=matrix[15]*norm3d(matrix[2],matrix[6],matrix[10]);const scaleMatrix=[[sx,0,0,0],[0,sy,0,0],[0,0,sz,0],[0,0,0,1]];const rotationAndSkewMatrix=[[matrix[0]/sx,matrix[1]/sx,matrix[2]/sx,0],[matrix[4]/sy,matrix[5]/sy,matrix[6]/sy,0],[matrix[8]/sz,matrix[9]/sz,matrix[10]/sz,0],[0,0,0,1]];const{rotationMatrix:rotationMatrix,skewMatrix:skewMatrix}=gramSchmidtAlgorithm(rotationAndSkewMatrix);return{translationMatrix:translationMatrix,scaleMatrix:scaleMatrix,rotationMatrix:rotationMatrix,skewMatrix:skewMatrix};}" };
+function decomposeMatrixIntoMatricesAndAngles(toValue) {
+  const tmp = decomposeMatrix(toValue);
+  const rotationMatrix = tmp.rotationMatrix;
+  ({ scaleMatrix, translationMatrix, skewMatrix } = tmp);
+  let num = Math.asin(tmp2);
+  if (1 !== -rotationMatrix[0][2]) {
+    if (-1 !== tmp2) {
+      const _Math = Math;
+      let num3 = Math.atan2(rotationMatrix[0][1], rotationMatrix[0][0]);
+      const _Math2 = Math;
+      let num4 = Math.atan2(rotationMatrix[1][2], rotationMatrix[2][2]);
+    }
+    const obj = { scaleMatrix, rotationMatrix, translationMatrix, skewMatrix, rx: null, ry: null, rz: null };
+    if (!num4) {
+      num4 = 0;
+    }
+    obj.rx = num4;
+    if (!num) {
+      num = 0;
+    }
+    obj.ry = num;
+    if (!num3) {
+      num3 = 0;
+    }
+    obj.rz = num3;
+    return obj;
   }
-  const rounded = Math.round(255 * tmp3Result21[0]);
-  const rounded1 = Math.round(255 * tmp3Result21[1]);
-  return "rgba(" + rounded + ", " + rounded1 + ", " + Math.round(255 * tmp3Result21[2]) + ", " + num + ")";
+  num4 = Math.atan2(tmp2 * rotationMatrix[0][1], tmp2 * rotationMatrix[0][2]);
+  num3 = 0;
 }
-rgbaArrayToRGBAColor.__closure = {};
-rgbaArrayToRGBAColor.__workletHash = 9717764015913;
-rgbaArrayToRGBAColor.__initData = { code: "function rgbaArrayToRGBAColor_Pnpm_ColorsTs23(RGBA){const alpha=RGBA[3]<0.001?0:RGBA[3];return\"rgba(\"+Math.round(RGBA[0]*255)+\", \"+Math.round(RGBA[1]*255)+\", \"+Math.round(RGBA[2]*255)+\", \"+alpha+\")\";}" };
-function toLinearSpace(tmp3Result14) {
-  let num = exponent;
-  if (exponent === undefined) {
-    num = 2.2;
-  }
-  const items = [];
-  let num2 = 0;
-  do {
-    let _Math = Math;
-    let arr = items.push(Math.pow(tmp3Result14[num2], num));
-    num2 = num2 + 1;
-  } while (num2 < 3);
-  items.push(tmp3Result14[3]);
-  return items;
-}
-toLinearSpace.__closure = {};
-toLinearSpace.__workletHash = 2672100143834;
-toLinearSpace.__initData = { code: "function toLinearSpace_Pnpm_ColorsTs24(RGBA,gamma=2.2){const res=[];for(let i=0;i<3;++i){res.push(Math.pow(RGBA[i],gamma));}res.push(RGBA[3]);return res;}" };
-function toGammaSpace(items) {
-  let num = arg1;
-  if (arg1 === undefined) {
-    num = 2.2;
-  }
-  items = [];
-  let num2 = 0;
-  do {
-    let _Math = Math;
-    let arr = items.push(Math.pow(items[num2], 1 / num));
-    num2 = num2 + 1;
-  } while (num2 < 3);
-  items.push(items[3]);
-  return items;
-}
-toGammaSpace.__closure = {};
-toGammaSpace.__workletHash = 1726439203743;
-toGammaSpace.__initData = { code: "function toGammaSpace_Pnpm_ColorsTs25(RGBA,gamma=2.2){const res=[];for(let i=0;i<3;++i){res.push(Math.pow(RGBA[i],1/gamma));}res.push(RGBA[3]);return res;}" };
+decomposeMatrixIntoMatricesAndAngles.__closure = { decomposeMatrix };
+decomposeMatrixIntoMatricesAndAngles.__workletHash = 633682731757;
+decomposeMatrixIntoMatricesAndAngles.__initData = { code: "function decomposeMatrixIntoMatricesAndAngles_Pnpm_matrixUtilsTsx20(matrix){const{decomposeMatrix}=this.__closure;const{scaleMatrix:scaleMatrix,rotationMatrix:rotationMatrix,translationMatrix:translationMatrix,skewMatrix:skewMatrix}=decomposeMatrix(matrix);const sinRy=-rotationMatrix[0][2];const ry=Math.asin(sinRy);let rx;let rz;if(sinRy===1||sinRy===-1){rz=0;rx=Math.atan2(sinRy*rotationMatrix[0][1],sinRy*rotationMatrix[0][2]);}else{rz=Math.atan2(rotationMatrix[0][1],rotationMatrix[0][0]);rx=Math.atan2(rotationMatrix[1][2],rotationMatrix[2][2]);}return{scaleMatrix:scaleMatrix,rotationMatrix:rotationMatrix,translationMatrix:translationMatrix,skewMatrix:skewMatrix,rx:rx||0,ry:ry||0,rz:rz||0};}" };
 
-export { clampRGBA };
-export const ColorProperties = shareable1;
-export { normalizeColor };
-export const opacity = fn;
-export const red = fn2;
-export const green = fn3;
-export const blue = fn4;
-export const rgbaColor = fn5;
-export { RGBtoHSV };
-export const hsvToColor = fn6;
-export { processColorInitially };
-export { isColor };
-export { processColor };
-export { processColorsInProps };
-export { convertToRGBA };
-export { rgbaArrayToRGBAColor };
-export { toLinearSpace };
-export { toGammaSpace };
+export { isAffineMatrixFlat };
+export { isAffineMatrix };
+export { flatten };
+export { unflatten };
+export { multiplyMatrices };
+export { subtractMatrices };
+export { addMatrices };
+export { scaleMatrix };
+export { getRotationMatrix };
+export { decomposeMatrix };
+export { decomposeMatrixIntoMatricesAndAngles };

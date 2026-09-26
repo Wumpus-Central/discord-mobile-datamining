@@ -1,71 +1,140 @@
 // === Module 12322: ? ===
 
 // Module 12322
-import _mod12296 from "module_12296" /* 12296 */;
-import _mod12301 from "module_12301" /* 12301 */;
-import _mod12313 from "module_12313" /* 12313 */;
-import _mod12314 from "module_12314" /* 12314 */;
-import ScopeClass from "ScopeClass" /* 12316 */;
+import _mod12320 from "module_12320" /* 12320 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const getClient = function getClient() {
-  const mainCarrier = _mod12313.getMainCarrier();
-  const asyncContextStrategy = _mod12314.getAsyncContextStrategy(mainCarrier);
-  const currentScope = asyncContextStrategy.getCurrentScope();
-  return currentScope.getClient();
+export const isMatchingPattern = function isMatchingPattern(arr, test) {
+  let flag = arg2;
+  if (arg2 === undefined) {
+    flag = false;
+  }
+  const isStringResult = _mod12320.isString(arr);
+  if (!isStringResult) {
+    return isStringResult;
+  } else {
+    if (tmpResult.isRegExp(test)) {
+      let isMatch = test.test(arr);
+    } else {
+      isMatch = _mod12320.isString(test);
+      if (isMatch) {
+        if (flag) {
+          let hasItem = arr === test;
+        } else {
+          hasItem = arr.includes(test);
+        }
+      }
+      const tmpResult2 = _mod12320;
+    }
+    tmpResult = _mod12320;
+  }
 };
-export const getCurrentScope = function getCurrentScope() {
-  const mainCarrier = _mod12313.getMainCarrier();
-  const asyncContextStrategy = _mod12314.getAsyncContextStrategy(mainCarrier);
-  return asyncContextStrategy.getCurrentScope();
+export const safeJoin = function safeJoin(arg0, arg1) {
+  if (Array.isArray(arg0)) {
+    const items = [];
+    let num = 0;
+    if (0 < arg0.length) {
+      try {
+        const push = items.push;
+        if (obj.isVueViewModel(tmp2)) {
+          push("[VueViewModel]");
+        } else {
+          const _String = String;
+          push(String(tmp2));
+        }
+        num = num + 1;
+        obj = _mod12320;
+      } catch (err) {
+        arr.push(tmp);
+      }
+    }
+    return items.join(arg1);
+  } else {
+    return "";
+  }
 };
-export const getGlobalScope = function getGlobalScope() {
-  return _mod12296.getGlobalSingleton("globalScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
+export const snipLine = function snipLine(arr, lineno) {
+  if (arr.length <= 150) {
+    return arr;
+  } else {
+    let tmp = lineno;
+    if (lineno > length) {
+      tmp = length;
+    }
+    const _Math = Math;
+    let num3 = Math.max(tmp - 60, 0);
+    if (num3 < 5) {
+      num3 = 0;
+    }
+    const _Math2 = Math;
+    let bound = Math.min(num3 + 140, length);
+    if (bound > length - 5) {
+      bound = length;
+    }
+    if (bound === length) {
+      const _Math3 = Math;
+      num3 = Math.max(bound - 140, 0);
+    }
+    const substr = arr.slice(num3, bound);
+    let combined = substr;
+    if (num3 > 0) {
+      const _HermesInternal = HermesInternal;
+      combined = "'{snip} " + substr;
+    }
+    let text = combined;
+    if (bound < length) {
+      text = `${tmp6} {snip}`;
+    }
+    return text;
+  }
+};
+export const stringMatchesSomePattern = function stringMatchesSomePattern(transaction) {
+  if (items === undefined) {
+    items = [];
+  }
+  let flag = arg2;
+  if (arg2 === undefined) {
+    flag = false;
+  }
+  return items.some((test) => {
+    const isStringResult = _mod12320.isString(transaction);
+    if (!isStringResult) {
+      return isStringResult;
+    } else {
+      if (tmpResult.isRegExp(test)) {
+        let isMatch = test.test(transaction);
+      } else {
+        isMatch = _mod12320.isString(test);
+        if (isMatch) {
+          if (flag) {
+            let hasItem = transaction === test;
+          } else {
+            hasItem = transaction.includes(test);
+          }
+        }
+        const tmpResult2 = _mod12320;
+      }
+      tmpResult = _mod12320;
+    }
   });
 };
-export const getIsolationScope = function getIsolationScope() {
-  const mainCarrier = _mod12313.getMainCarrier();
-  const asyncContextStrategy = _mod12314.getAsyncContextStrategy(mainCarrier);
-  return asyncContextStrategy.getIsolationScope();
-};
-export const getTraceContextFromScope = function getTraceContextFromScope(getPropagationContext) {
-  const propagationContext = getPropagationContext.getPropagationContext();
-  ({ traceId, spanId, parentSpanId } = propagationContext);
-  return _mod12301.dropUndefinedKeys({ trace_id, span_id, parent_span_id });
-};
-export const withIsolationScope = function withIsolationScope() {
-  const items = [...arguments];
-  const mainCarrier = _mod12313.getMainCarrier();
-  const asyncContextStrategy = _mod12314.getAsyncContextStrategy(mainCarrier);
-  if (2 === items.length) {
-    [tmp2, tmp3] = items;
-    if (tmp2) {
-      let result = asyncContextStrategy.withSetIsolationScope(tmp2, tmp3);
-    } else {
-      result = asyncContextStrategy.withIsolationScope(tmp3);
-    }
-    return result;
-  } else {
-    return asyncContextStrategy.withIsolationScope(items[0]);
+export const truncate = function truncate(str) {
+  let num = maxValueLength;
+  if (maxValueLength === undefined) {
+    num = 0;
   }
-};
-export const withScope = function withScope() {
-  const items = [...arguments];
-  const mainCarrier = _mod12313.getMainCarrier();
-  const asyncContextStrategy = _mod12314.getAsyncContextStrategy(mainCarrier);
-  if (2 === items.length) {
-    [tmp2, tmp3] = items;
-    if (tmp2) {
-      let withSetScopeResult = asyncContextStrategy.withSetScope(tmp2, tmp3);
-    } else {
-      withSetScopeResult = asyncContextStrategy.withScope(tmp3);
+  let combined = str;
+  if (typeof str === "string") {
+    combined = str;
+    if (0 !== num) {
+      combined = str;
+      if (str.length > num) {
+        const _HermesInternal = HermesInternal;
+        combined = "" + str.slice(0, num) + "...";
+      }
     }
-    return withSetScopeResult;
-  } else {
-    return asyncContextStrategy.withScope(items[0]);
   }
+  return combined;
 };

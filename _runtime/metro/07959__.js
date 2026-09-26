@@ -2,12 +2,15 @@
 
 // Module 7959
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef7940 from "module_7940" /* 7940 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _modDef7948 from "module_7948" /* 7948 */;
+import _modDef7960 from "module_7960" /* 7960 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
+const FeGaussianBlur = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,46 +30,55 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
-class FeMergeNode {
+const jsx = fn(21).jsx;
+class FeGaussianBlur {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_0(this, FeMergeNode);
-    items1 = [...items];
-    tmp2 = c2;
-    obj = c2(FeMergeNode);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
+    tmp = closure_3(this, FeGaussianBlur);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(FeGaussianBlur);
+    tmp3 = closure_4;
+    if (closure_7()) {
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = () => {
-      const parent = props.props.parent;
-      if (parent) {
-        parent.forceUpdate();
-      }
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_classCallCheck = FeMergeNode;
-_inherits(FeMergeNode, _modDef7940);
+_inherits(FeGaussianBlur, _modDef7948);
 const entry = {
   key: "render",
   value: function render() {
-    return null;
+    const self = this;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const merged = Object.assign(FeGaussianBlur(7947).extractFilter(this.props));
+    const obj2 = FeGaussianBlur(7947);
+    const merged1 = Object.assign(FeGaussianBlur(7947).extractIn(this.props));
+    const obj3 = FeGaussianBlur(7947);
+    const merged2 = Object.assign(FeGaussianBlur(7947).extractFeGaussianBlur(this.props));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
-let items = [entry];
-const importDefaultResultResult = _createClass(FeMergeNode, items);
-importDefaultResultResult.displayName = "FeMergeNode";
+const items = [entry];
+const importDefaultResultResult = _createClass(FeGaussianBlur, items);
+importDefaultResultResult.displayName = "FeGaussianBlur";
+let obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.stdDeviation = 0;
+obj.edgeMode = "none";
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

@@ -1,77 +1,48 @@
 // === Module 9968: ? ===
 
 // Module 9968
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _mod9902 from "module_9902" /* 9902 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import alphaNum from "alphaNum" /* 9965 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class PTMergeDateRangeRefiner {
+const JPWeekdayParser = require;
+const keys = Object.keys(alphaNum.WEEKDAY_OFFSET);
+const regExp = new RegExp("((?<prefix>\u524D\u306E|\u6B21\u306E|\u4ECA\u9031))?(?<weekday>" + keys.join("|") + ")(?:\u66DC\u65E5|\u66DC)", "i");
+class JPWeekdayParser {
   constructor() {
-    self = this;
-    tmp = closure_0(this, PTMergeDateRangeRefiner);
-    tmp2 = c2;
-    obj = c2(PTMergeDateRangeRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
+    tmp = c2(this, JPWeekdayParser);
+    return;
   }
 }
-_classCallCheck = PTMergeDateRangeRefiner;
-_inherits(PTMergeDateRangeRefiner, fn(_mod9902).default);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    return /^\s*(?:-)\s*$/i;
+  key: "pattern",
+  value: function pattern() {
+    return regExp;
   }
 };
-const items = [entry];
+const items = [
+  entry,
+  {
+    key: "extract",
+    value: function extract(reference, groups) {
+      const tmp3 = JPWeekdayParser(9965).WEEKDAY_OFFSET[groups.groups.weekday];
+      if (undefined === tmp3) {
+        return null;
+      } else {
+        let str2 = "last";
+        if (!groups.groups.prefix || "".match(/前の/)) {
+          str2 = "next";
+          if (!str.match(/次の/)) {
+            str2 = null;
+            if (str.match(/今週/)) {
+              str2 = "this";
+            }
+          }
+        }
+        return JPWeekdayParser(9922).createParsingComponentsAtWeekday(reference.reference, tmp3, str2);
+      }
+    }
+  }
+];
 
-export default _createClass(PTMergeDateRangeRefiner, items);
+export default _createClass(JPWeekdayParser, items);

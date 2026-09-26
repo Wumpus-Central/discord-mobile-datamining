@@ -1,20 +1,11 @@
 // === Module 5248: ? ===
 
 // Module 5248
-import _modDef5249 from "module_5249" /* 5249 */;
 import noop from "module_19" /* 19 */;
 
-const StyleSheet = fn(17).StyleSheet;
-const jsx = fn(21).jsx;
-const styles = StyleSheet.create({ flex: { flex: 1 } });
+const jsxProd = fn(21);
+({ Fragment: closure_0, jsx: closure_1 } = jsxProd);
+const context = noop.createContext((children) => framebus(React, { children: children.children }));
 
-export const SafeAreaView = function SafeAreaView(style) {
-  const obj = {};
-  const merged = Object.assign(style);
-  const items = [styles.flex, style.style];
-  obj.style = items;
-  const rect = { top: false, bottom: false, left: false, right: false };
-  const merged1 = Object.assign(style.edges);
-  obj.edges = rect;
-  return jsx(_modDef5249, {});
-};
+export const GHContext = context;
+export const RNSScreensRefContext = noop.createContext(null);

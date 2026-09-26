@@ -1,7 +1,7 @@
 // === Module 9330: ? ===
 
 // Module 9330
-import registerAsset from "module_1121" /* 1121 */;
+import _mod9331 from "module_9331" /* 9331 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/instant_invite/native/images", width: 60, height: 60, scales: [2, 3], hash: "19a79c674ca352a1b9c59552160bbdc6", name: "telegram", type: "png" });
+export default _mod9331();

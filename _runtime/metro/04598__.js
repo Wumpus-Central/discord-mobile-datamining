@@ -1,18 +1,18 @@
 // === Module 4598: ? ===
 
 // Module 4598
-import c from "c" /* 4583 */;
-import _mod4596 from "module_4596" /* 4596 */;
+import c from "c" /* 4586 */;
+import _mod4599 from "module_4599" /* 4599 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = arg1;
-function getStringProperty(stringProperty, arg1) {
-  return stringProperty.stringProperty(arg1);
+function getNumberProperty(numberProperty, arg1) {
+  return numberProperty.numberProperty(arg1);
 }
 
-export const useRiveString = function useRiveString(LVL, instance) {
+export const useRiveNumber = function useRiveNumber(AnimationState, instance) {
   const cResult = c.c(4);
-  [tmp3, tmp4, tmp5] = _mod4596.useRiveProperty(instance, LVL, getStringProperty);
+  [tmp3, tmp4, tmp5] = _mod4599.useRiveProperty(instance, AnimationState, getNumberProperty);
   if (cResult[0] === tmp5) {
     if (cResult[1] === tmp4) {
       if (cResult[2] === tmp3) {

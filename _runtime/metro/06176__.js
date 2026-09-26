@@ -1,61 +1,51 @@
 // === Module 6176: ? ===
 
 // Module 6176
-const require = arg1;
-const dependencyMap = arg6;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-export const useComposedGesture = function useComposedGesture(type) {
-  const substr = [...arguments].slice();
-  const flatMapResult = substr.flatMap((handlerTags) => {
-    if (obj.isComposedGesture(handlerTags)) {
-      handlerTags = handlerTags.handlerTags;
-    } else {
-      handlerTags = [];
-      handlerTags[0] = handlerTags.handlerTag;
-    }
-    return handlerTags;
-  });
-  if (obj.containsDuplicates(flatMapResult)) {
-    const _Error2 = Error;
-    const error = new Error(tmp2(6073).tagMessage("Each gesture can be used only once in the gesture composition."));
-    throw error;
-  } else {
-    const obj2 = { shouldUseReanimatedDetector: substr.some((config) => config.config.shouldUseReanimatedDetector), dispatchesAnimatedEvents: substr.some((config) => config.config.dispatchesAnimatedEvents) };
-    if (obj2.shouldUseReanimatedDetector) {
-      if (obj2.dispatchesAnimatedEvents) {
-        const _Error = Error;
-        const error1 = new Error(tmp2(6073).tagMessage("Composed gestures cannot use both Reanimated and Animated events at the same time."));
-        throw error1;
+const noop = fn(19);
+({ useEffect: c2, useState: c3 } = noop);
+const AccessibilityInfo = fn(17).AccessibilityInfo;
+
+export const useIsScreenReaderEnabled = function useIsScreenReaderEnabled() {
+  const tmp = _slicedToArray(closure_3(false), 2);
+  closure_0 = tmp[1];
+  closure_2(() => {
+    closure_129_0 = closure_0(function*() {
+      closure_1 = tmp3;
+      yield screenReaderEnabled.isScreenReaderEnabled();
+      if (1 === tmp7) {
+        c3 = 0;
+        const _console = console;
+        console.warn("Could not read accessibility info: defaulting to false");
+        c5 = 3;
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 !== 2) {
+        closure_128_0 = value;
+        closure_0(closure_128_0);
+        c3 = 0;
       }
-    }
-    const Reanimated = tmp2(6111).Reanimated;
-    let composedEventHandler;
-    if (Reanimated != null) {
-      composedEventHandler = Reanimated.useComposedEventHandler(substr.map((detectorCallbacks) => detectorCallbacks.detectorCallbacks.reanimatedEventHandler || null));
-    }
-    const found = substr.filter((detectorCallbacks) => undefined !== detectorCallbacks.detectorCallbacks.animatedEventHandler);
-    let animatedEventHandler;
-    if (found.length > 0) {
-      animatedEventHandler = found[0].detectorCallbacks.animatedEventHandler;
-    }
-    const obj3 = { handlerTags: flatMapResult, type, config: obj2, detectorCallbacks: null, externalSimultaneousHandlers: null, gestures: null };
-    const obj4 = {
-      jsEventHandler(arg0) {
-          for (const item10007 of substr) {
-            if (item10007.detectorCallbacks.jsEventHandler) {
-              let detectorCallbacks = tmp.detectorCallbacks;
-              let jsEventHandlerResult = detectorCallbacks.jsEventHandler(arg0);
-            }
-            continue;
-          }
-        },
-      reanimatedEventHandler: composedEventHandler,
-      animatedEventHandler
+      return value;
+    });
+    (function checkStatus() {
+      const self = this;
+      const apply = closure_0.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
+    })();
+    closure_0 = AccessibilityInfo.addEventListener("screenReaderChanged", (event) => {
+      closure_0(event);
+    });
+    return () => {
+      closure_0.remove();
     };
-    obj3.detectorCallbacks = obj4;
-    obj3.externalSimultaneousHandlers = [];
-    obj3.gestures = substr;
-    return obj3;
-  }
-  obj = substr(6136);
+  }, []);
+  return tmp[0];
 };

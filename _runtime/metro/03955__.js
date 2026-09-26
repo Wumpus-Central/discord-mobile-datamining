@@ -1,44 +1,15 @@
 // === Module 3955: ? ===
 
 // Module 3955
-import futureSeconds from "futureSeconds" /* 3956 */;
-import module_3957 from "module_3957" /* 3957 */;
-import module_3958 from "module_3958" /* 3958 */;
-import date_mod from "module_3959" /* 3959 */;
-import date_mod from "module_3960" /* 3960 */;
+let closure_0 = { lastWeek: "'el' eeee 'pasado a la' p", yesterday: "'ayer a la' p", today: "'hoy a la' p", tomorrow: "'ma\u00F1ana a la' p", nextWeek: "eeee 'a la' p", other: "P" };
+let closure_1 = { lastWeek: "'el' eeee 'pasado a las' p", yesterday: "'ayer a las' p", today: "'hoy a las' p", tomorrow: "'ma\u00F1ana a las' p", nextWeek: "eeee 'a las' p", other: "P" };
 
-if (!futureSeconds) {
-  const obj = { default: futureSeconds };
-  let tmp3 = obj;
-} else {
-  tmp3 = futureSeconds;
-}
-if (!module_3957) {
-  const obj2 = { default: module_3957 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_3957;
-}
-if (!module_3958) {
-  const obj3 = { default: module_3958 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_3958;
-}
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
-
-export default { code: "fi", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default function formatRelative(arg0, getUTCHours, arg2, arg3) {
+  if (1 !== getUTCHours.getUTCHours()) {
+    let tmp2 = closure_1[arg0];
+  } else {
+    tmp2 = closure_0[arg0];
+  }
+  return tmp2;
+};
 export default exports.default;

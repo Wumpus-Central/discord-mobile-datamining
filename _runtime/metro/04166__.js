@@ -1,80 +1,98 @@
 // === Module 4166: ? ===
 
 // Module 4166
-import _mod3920 from "module_3920" /* 3920 */;
-import module_4078_mod from "module_4078" /* 4078 */;
-import compareAsc_mod from "compareAsc" /* 4091 */;
-import _typeof_mod from "module_3915" /* 3915 */;
-import cloneObject_mod from "cloneObject" /* 4164 */;
-import assign_mod from "assign" /* 4165 */;
-import code_mod from "module_4161" /* 4161 */;
-import requiredArgs_mod from "requiredArgs" /* 3916 */;
+import _mod3923 from "module_3923" /* 3923 */;
+import compareAsc_mod from "compareAsc" /* 4094 */;
+import differenceInMonths_mod from "differenceInMonths" /* 4116 */;
+import differenceInSeconds_mod from "differenceInSeconds" /* 4121 */;
+import code_mod from "module_4164" /* 4164 */;
+import _typeof_mod from "module_3918" /* 3918 */;
+import cloneObject_mod from "cloneObject" /* 4167 */;
+import assign_mod from "assign" /* 4168 */;
+import module_4081_mod from "module_4081" /* 4081 */;
+import requiredArgs_mod from "requiredArgs" /* 3919 */;
 
-let module_4078 = module_4078_mod;
-if (!module_4078) {
-  let obj = { default: module_4078 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4078;
-}
-module_4078 = tmp3;
 let compareAsc = compareAsc_mod;
 if (!compareAsc) {
-  const obj2 = { default: compareAsc };
+  let obj = { default: compareAsc };
+  let tmp3 = obj;
+} else {
+  tmp3 = compareAsc;
+}
+compareAsc = tmp3;
+let differenceInMonths = differenceInMonths_mod;
+if (!differenceInMonths) {
+  const obj2 = { default: differenceInMonths };
   let tmp5 = obj2;
 } else {
-  tmp5 = compareAsc;
+  tmp5 = differenceInMonths;
 }
-compareAsc = tmp5;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj3 = { default: _typeof };
+differenceInMonths = tmp5;
+let differenceInSeconds = differenceInSeconds_mod;
+if (!differenceInSeconds) {
+  const obj3 = { default: differenceInSeconds };
   let tmp7 = obj3;
 } else {
-  tmp7 = _typeof;
+  tmp7 = differenceInSeconds;
 }
-_typeof = tmp7;
-let cloneObject = cloneObject_mod;
-if (!cloneObject) {
-  const obj4 = { default: cloneObject };
-  let tmp9 = obj4;
-} else {
-  tmp9 = cloneObject;
-}
-cloneObject = tmp9;
-let assign = assign_mod;
-if (!assign) {
-  const obj5 = { default: assign };
-  let tmp11 = obj5;
-} else {
-  tmp11 = assign;
-}
-assign = tmp11;
+differenceInSeconds = tmp7;
 let code = code_mod;
 if (!code) {
-  const obj6 = { default: code };
+  const obj4 = { default: code };
+  let tmp9 = obj4;
+} else {
+  tmp9 = code;
+}
+code = tmp9;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj5 = { default: _typeof };
+  let tmp11 = obj5;
+} else {
+  tmp11 = _typeof;
+}
+_typeof = tmp11;
+let cloneObject = cloneObject_mod;
+if (!cloneObject) {
+  const obj6 = { default: cloneObject };
   let tmp13 = obj6;
 } else {
-  tmp13 = code;
+  tmp13 = cloneObject;
 }
-code = tmp13;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj7 = { default: requiredArgs };
+cloneObject = tmp13;
+let assign = assign_mod;
+if (!assign) {
+  const obj7 = { default: assign };
   let tmp15 = obj7;
 } else {
-  tmp15 = requiredArgs;
+  tmp15 = assign;
 }
-requiredArgs = tmp15;
-let c9 = 60000;
-let c10 = 1440;
-let c11 = 43200;
-let c12 = 525600;
+assign = tmp15;
+let module_4081 = module_4081_mod;
+if (!module_4081) {
+  const obj8 = { default: module_4081 };
+  let tmp17 = obj8;
+} else {
+  tmp17 = module_4081;
+}
+module_4081 = tmp17;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj9 = { default: requiredArgs };
+  let tmp19 = obj9;
+} else {
+  tmp19 = requiredArgs;
+}
+requiredArgs = tmp19;
+let c11 = 1440;
+let c12 = 2520;
+let c13 = 43200;
+let c14 = 86400;
 
-export default function formatDistanceStrict(arg0, arg1, locale) {
+export default function formatDistance(arg0, arg1, locale) {
   requiredArgs.default(2, arguments);
   locale = undefined;
-  const defaultOptions = _mod3920.getDefaultOptions();
+  const defaultOptions = _mod3923.getDefaultOptions();
   if (null != locale) {
     locale = locale.locale;
   }
@@ -88,7 +106,7 @@ export default function formatDistanceStrict(arg0, arg1, locale) {
     const defaultResult1 = compareAsc.default(arg0, arg1);
     const _isNaN = isNaN;
     if (isNaN(defaultResult1)) {
-      const _RangeError4 = RangeError;
+      const _RangeError2 = RangeError;
       const rangeError = new RangeError("Invalid time value");
       throw rangeError;
     } else {
@@ -105,96 +123,74 @@ export default function formatDistanceStrict(arg0, arg1, locale) {
         defaultResult4 = _typeof.default(arg0);
         defaultResult5 = _typeof.default(arg1);
       }
-      let roundingMethod;
-      if (null != locale) {
-        roundingMethod = locale.roundingMethod;
-      }
-      let str3 = "round";
-      if (null !== roundingMethod) {
-        str3 = "round";
-        if (undefined !== roundingMethod) {
-          str3 = roundingMethod;
-        }
-      }
-      const StringResult = String(str3);
-      if ("floor" === StringResult) {
-        const _Math3 = Math;
-        let round = Math.floor;
-      } else if ("ceil" === StringResult) {
-        const _Math2 = Math;
-        round = Math.ceil;
-      } else if ("round" !== StringResult) {
-        const _RangeError2 = RangeError;
-        const rangeError1 = new RangeError("roundingMethod must be 'floor', 'ceil' or 'round'");
-        throw rangeError1;
-      } else {
-        const _Math = Math;
-        round = Math.round;
-      }
-      const time = defaultResult5.getTime();
-      const diff = time - defaultResult4.getTime();
-      const result = diff / c9;
+      const defaultResult6 = differenceInSeconds.default(defaultResult5, defaultResult4);
       const defaultResult2 = cloneObject.default(locale);
-      const result1 = (diff - (module_4078.default(defaultResult5) - module_4078.default(defaultResult4))) / c9;
-      let unit;
-      if (null != locale) {
-        unit = locale.unit;
-      }
-      if (unit) {
-        const _String = String;
-        let str7 = String(unit);
-      } else {
-        str7 = "second";
-        if (result >= 1) {
-          let str8 = "minute";
-          if (result >= 60) {
-            let str9 = "hour";
-            if (result >= c10) {
-              let str10 = "day";
-              if (result1 >= c11) {
-                let str11 = "year";
-                if (result1 < c12) {
-                  str11 = "month";
-                }
-                str10 = str11;
-              }
-              str9 = str10;
+      const _Math = Math;
+      const rounded = Math.round((defaultResult6 - (module_4081.default(defaultResult5) - module_4081.default(defaultResult4)) / 1000) / 60);
+      if (rounded < 2) {
+        if (null != locale) {
+          if (locale.includeSeconds) {
+            if (defaultResult6 < 5) {
+              let formatDistanceResult = locale.formatDistance("lessThanXSeconds", 5, defaultResult3);
+            } else if (defaultResult6 < 10) {
+              formatDistanceResult = locale.formatDistance("lessThanXSeconds", 10, defaultResult3);
+            } else if (defaultResult6 < 20) {
+              formatDistanceResult = locale.formatDistance("lessThanXSeconds", 20, defaultResult3);
+            } else if (defaultResult6 < 40) {
+              formatDistanceResult = locale.formatDistance("halfAMinute", 0, defaultResult3);
+            } else if (defaultResult6 < 60) {
+              formatDistanceResult = locale.formatDistance("lessThanXMinutes", 1, defaultResult3);
+            } else {
+              formatDistanceResult = locale.formatDistance("xMinutes", 1, defaultResult3);
             }
-            str8 = str9;
           }
-          str7 = str8;
         }
-      }
-      if ("second" === str7) {
-        return locale.formatDistance("xSeconds", round(diff / 1000), defaultResult3);
-      } else if ("minute" === str7) {
-        return locale.formatDistance("xMinutes", round(result), defaultResult3);
-      } else if ("hour" === str7) {
-        return locale.formatDistance("xHours", round(result / 60), defaultResult3);
-      } else if ("day" === str7) {
-        return locale.formatDistance("xDays", round(result1 / c10), defaultResult3);
-      } else if ("month" === str7) {
-        const roundResult = round(result1 / c11);
-        if (12 === roundResult) {
-          if ("month" !== unit) {
-            let formatDistanceResult = locale.formatDistance("xYears", 1, defaultResult3);
-          }
-          return formatDistanceResult;
+        if (0 === rounded) {
+          let formatDistanceResult1 = locale.formatDistance("lessThanXMinutes", 1, defaultResult3);
+        } else {
+          formatDistanceResult1 = locale.formatDistance("xMinutes", rounded, defaultResult3);
         }
-        formatDistanceResult = locale.formatDistance("xMonths", roundResult, defaultResult3);
-      } else if ("year" === str7) {
-        return locale.formatDistance("xYears", round(result1 / c12), defaultResult3);
+        return formatDistanceResult1;
+      } else if (rounded < 45) {
+        return locale.formatDistance("xMinutes", rounded, defaultResult3);
+      } else if (rounded < 90) {
+        return locale.formatDistance("aboutXHours", 1, defaultResult3);
+      } else if (rounded < c11) {
+        const _Math6 = Math;
+        return locale.formatDistance("aboutXHours", Math.round(rounded / 60), defaultResult3);
+      } else if (rounded < c12) {
+        return locale.formatDistance("xDays", 1, defaultResult3);
+      } else if (rounded < c13) {
+        const _Math5 = Math;
+        return locale.formatDistance("xDays", Math.round(rounded / tmp37), defaultResult3);
+      } else if (rounded < c14) {
+        const _Math4 = Math;
+        return locale.formatDistance("aboutXMonths", Math.round(rounded / c13), defaultResult3);
       } else {
-        const _RangeError3 = RangeError;
-        const rangeError2 = new RangeError("unit must be 'second', 'minute', 'hour', 'day', 'month' or 'year'");
-        throw rangeError2;
+        const defaultResult8 = differenceInMonths.default(defaultResult5, defaultResult4);
+        if (defaultResult8 < 12) {
+          const _Math3 = Math;
+          return locale.formatDistance("xMonths", Math.round(rounded / c13), defaultResult3);
+        } else {
+          const result = defaultResult8 % 12;
+          const _Math2 = Math;
+          const rounded1 = Math.floor(defaultResult8 / 12);
+          if (result < 3) {
+            let formatDistanceResult2 = locale.formatDistance("aboutXYears", rounded1, defaultResult3);
+          } else if (result < 9) {
+            formatDistanceResult2 = locale.formatDistance("overXYears", rounded1, defaultResult3);
+          } else {
+            formatDistanceResult2 = locale.formatDistance("almostXYears", rounded1 + 1, defaultResult3);
+          }
+          return formatDistanceResult2;
+        }
       }
-      const defaultResult6 = module_4078.default(defaultResult5);
+      const defaultResult7 = module_4081.default(defaultResult5);
     }
   } else {
     const _RangeError = RangeError;
-    const rangeError3 = new RangeError("locale must contain localize.formatDistance property");
-    throw rangeError3;
+    const rangeError1 = new RangeError("locale must contain formatDistance property");
+    throw rangeError1;
   }
 };
 export default exports.default;

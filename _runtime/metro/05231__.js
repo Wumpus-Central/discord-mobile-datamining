@@ -1,60 +1,15 @@
 // === Module 5231: ? ===
 
 // Module 5231
-import get_synchronousScreenUpdatesEnabled from "get synchronousScreenUpdatesEnabled" /* 5211 */;
 import noop from "module_19" /* 19 */;
 
-require = arg1;
-let context = noop.createContext({ topAlreadyApplied: false, leftDisabled: false, rightDisabled: false, bottomDisabled: false });
+({ useEffect: closure_0, useRef: closure_1 } = noop);
 
-export const EdgeInsetApplicationContext = context;
-export const useEdgeInsetApplication = function useEdgeInsetApplication(arg0, flag, flag2, flag3, flag4) {
-  context = noop.useContext(context);
-  const topAlreadyApplied = context.topAlreadyApplied;
-  ({ leftDisabled, rightDisabled, bottomDisabled } = context);
-  const experiment = get_synchronousScreenUpdatesEnabled.featureFlags.experiment;
-  flag = undefined;
-  if (experiment != null) {
-    flag = experiment.androidLegacyTopInsetBehavior;
-  }
-  if (flag == null) {
-    flag = false;
-  }
-  let tmp2 = flag;
-  if (!flag) {
-    let tmp3 = !topAlreadyApplied;
-    if (!topAlreadyApplied) {
-      tmp3 = arg0;
-    }
-    tmp2 = tmp3;
-  }
-  closure_1 = tmp2;
-  let tmp4 = tmp2;
-  if (tmp2) {
-    tmp4 = !flag;
-  }
-  if (!leftDisabled) {
-    leftDisabled = flag2;
-  }
-  if (!rightDisabled) {
-    rightDisabled = flag3;
-  }
-  if (!bottomDisabled) {
-    bottomDisabled = flag4;
-  }
-  const items = [topAlreadyApplied, tmp2, leftDisabled, rightDisabled, bottomDisabled];
-  return {
-    appliesTopInset: tmp4,
-    consumeLeftInset: !leftDisabled,
-    consumeRightInset: !rightDisabled,
-    consumeBottomInset: !bottomDisabled,
-    useLegacyBehavior: flag,
-    nextContextValue: noop.useMemo(() => {
-      let tmp = topAlreadyApplied;
-      if (!topAlreadyApplied) {
-        tmp = closure_1;
-      }
-      return { topAlreadyApplied: tmp, leftDisabled, rightDisabled, bottomDisabled };
-    }, items)
-  };
+export const usePrevious = function usePrevious(current) {
+  const tmp = framebus(undefined);
+  closure_1 = tmp;
+  React(() => {
+    closure_1.current = current;
+  });
+  return tmp.current;
 };

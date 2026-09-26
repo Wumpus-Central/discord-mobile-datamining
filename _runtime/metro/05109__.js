@@ -1,41 +1,34 @@
 // === Module 5109: ? ===
 
 // Module 5109
-import _Symbol from "_Symbol" /* 1285 */;
 import callBoundIntrinsic from "callBoundIntrinsic" /* 1315 */;
-import regexTester from "regexTester" /* 1447 */;
+import _mod1446 from "module_1446" /* 1446 */;
 
-let closure_0 = callBoundIntrinsic("Object.prototype.toString");
-if (_Symbol()) {
-  let closure_1 = callBoundIntrinsic("Symbol.prototype.toString");
-  let closure_2 = regexTester(/^Symbol\(.*\)$/);
-  module.exports = function isSymbol(obj) {
-    if (typeof obj === "symbol") {
-      return true;
-    } else {
-      if (obj) {
-        if (typeof obj === "object") {
-          if ("[object Symbol]" === closure_0(obj)) {
-            try {
-              return (function isRealSymbolObject(arg0) {
-                const valueOfResult = arg0.valueOf();
-                let tmp2 = typeof valueOfResult === "symbol";
-                if (typeof valueOfResult === "symbol") {
-                  tmp2 = closure_1_2(closure_1_1(arg0));
-                }
-                return tmp2;
-              })(obj);
-            } catch (err) {
-              return false;
-            }
-          }
-        }
-      }
-      return false;
+let closure_0 = callBoundIntrinsic("String.prototype.valueOf");
+let closure_1 = callBoundIntrinsic("Object.prototype.toString");
+let closure_2 = _mod1446();
+
+export default function isString(str) {
+  let tmp = typeof str === "string";
+  if (typeof str !== "string") {
+    let tmp2 = !str;
+    if (str) {
+      tmp2 = typeof str !== "object";
     }
-  };
-} else {
-  module.exports = function isSymbol(arg0) {
-    return false;
-  };
-}
+    if (tmp2) {
+      tmp = !tmp2;
+    } else if (closure_2) {
+      let tmp5 = (function tryStringObject(arg0) {
+        try {
+          closure_1_0(arg0);
+          return true;
+        } catch (err) {
+          return false;
+        }
+      })(str);
+    } else {
+      tmp5 = "[object String]" === closure_1(str);
+    }
+  }
+  return tmp;
+};

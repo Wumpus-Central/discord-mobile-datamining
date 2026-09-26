@@ -1,52 +1,41 @@
 // === Module 5116: ? ===
 
 // Module 5116
-import _mod1457 from "module_1457" /* 1457 */;
-import defineDataProperty from "defineDataProperty" /* 1458 */;
-import keys2 from "keys2" /* 5117 */;
+import _Symbol from "_Symbol" /* 1285 */;
+import callBoundIntrinsic from "callBoundIntrinsic" /* 1315 */;
+import regexTester from "regexTester" /* 1448 */;
 
-let tmp = typeof Symbol === "function";
-if (typeof Symbol === "function") {
-  const _Symbol = Symbol;
-  tmp = typeof Symbol("foo") === "symbol";
-}
-let closure_2 = tmp;
-const tmp2 = _mod1457();
-let closure_5 = tmp2;
-function defineProperty(arg0, arg1, arg2, arg3) {
-
-}
-function defineProperties(prototype, ownPropertyDescriptors) {
-  const arr = keys2(ownPropertyDescriptors);
-  if (!closure_2) {
-    let num = 0;
-    if (0 < arr.length) {
-      while (typeof defineProperty === "function") {
-        if (!(tmp7 in prototype)) {
-          let tmp14 = defineDataProperty;
-          if (closure_5) {
-            let flag2 = true;
-            let tmp14Result = tmp14(prototype, tmp7, tmp8, true);
-          } else {
-            let tmp14Result2 = tmp14(prototype, tmp7, tmp8);
-          }
-        } else if (true !== tmp9) {
-          if (typeof tmp9 === "function") {
-            let call2 = toString.call;
+let closure_0 = callBoundIntrinsic("Object.prototype.toString");
+if (_Symbol()) {
+  let closure_1 = callBoundIntrinsic("Symbol.prototype.toString");
+  let closure_2 = regexTester(/^Symbol\(.*\)$/);
+  module.exports = function isSymbol(obj) {
+    if (typeof obj === "symbol") {
+      return true;
+    } else {
+      if (obj) {
+        if (typeof obj === "object") {
+          if ("[object Symbol]" === closure_0(obj)) {
+            try {
+              return (function isRealSymbolObject(arg0) {
+                const valueOfResult = arg0.valueOf();
+                let tmp2 = typeof valueOfResult === "symbol";
+                if (typeof valueOfResult === "symbol") {
+                  tmp2 = closure_1_2(closure_1_1(arg0));
+                }
+                return tmp2;
+              })(obj);
+            } catch (err) {
+              return false;
+            }
           }
         }
-        num = num + 1;
       }
-      throw new TypeError("Trying to call a non-function");
+      return false;
     }
-  } else {
-    const call = concat.call;
-    const _Object = Object;
-    const ownPropertySymbols = Object.getOwnPropertySymbols(ownPropertyDescriptors);
-    typeof call === "unknown" ? concat(ownPropertySymbols) : call(arr, ownPropertySymbols);
-  }
-  const tmp = arguments.length > 2 ? arguments[2] : {};
+  };
+} else {
+  module.exports = function isSymbol(arg0) {
+    return false;
+  };
 }
-defineProperties.supportsDescriptors = tmp2;
-
-export default defineProperties;

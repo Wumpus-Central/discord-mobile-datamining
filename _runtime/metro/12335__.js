@@ -1,39 +1,19 @@
 // === Module 12335: ? ===
 
 // Module 12335
-import _mod12295 from "module_12295" /* 12295 */;
-import _mod12323 from "module_12323" /* 12323 */;
+import _mod12319 from "module_12319" /* 12319 */;
 
 require = arg1;
 const dependencyMap = arg6;
+const _sentrySpan = "_sentrySpan";
 
-export const parseSampleRate = function parseSampleRate(flag) {
-  if (typeof flag === "boolean") {
-    const _Number = Number;
-    return Number(flag);
+export const _getSpanForScope = function _getSpanForScope(currentScope) {
+  return currentScope[_sentrySpan];
+};
+export const _setSpanForScope = function _setSpanForScope(arg0, arg1) {
+  if (arg1) {
+    const result = _mod12319.addNonEnumerableProperty(arg0, _sentrySpan, arg1);
   } else {
-    let parsed = flag;
-    if (typeof flag === "string") {
-      const _parseFloat = parseFloat;
-      parsed = parseFloat(flag);
-    }
-    if (typeof parsed === "number") {
-      const _isNaN = isNaN;
-      if (!isNaN(parsed)) {
-        if (parsed >= 0) {
-          if (parsed <= 1) {
-            return parsed;
-          }
-        }
-      }
-    }
-    if (_mod12323.DEBUG_BUILD) {
-      const logger = _mod12295.logger;
-      const _JSON = JSON;
-      const json = JSON.stringify(flag);
-      const _JSON2 = JSON;
-      const _HermesInternal = HermesInternal;
-      logger.warn("[Tracing] Given sample rate is invalid. Sample rate must be a boolean or a number between 0 and 1. Got " + json + " of type " + JSON.stringify(typeof flag) + ".");
-    }
+    delete tmp2[tmp];
   }
 };

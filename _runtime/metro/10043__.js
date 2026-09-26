@@ -1,14 +1,16 @@
 // === Module 10043: ? ===
 
 // Module 10043
-import _mod10040 from "module_10040" /* 10040 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 9895 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 9902 */;
+import _mod10039 from "module_10039" /* 10039 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const UKTimeUnitAgoFormatParser = require;
+const ESMonthNameLittleEndianParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,12 +30,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class UKTimeUnitAgoFormatParser {
+const regExp = new RegExp("([0-9]{1,2})(?:\u00BA|\u00AA|\u00B0)?(?:\\s*(?:desde|de|\\-|\\\u2013|ao?|\\s)\\s*([0-9]{1,2})(?:\u00BA|\u00AA|\u00B0)?)?\\s*(?:de)?\\s*(?:-|/|\\s*(?:de|,)?\\s*)(" + repeatedTimeunitPattern.matchAnyPattern(_mod10039.MONTH_DICTIONARY) + ")(?:\\s*(?:de|,)?\\s*(" + _mod10039.YEAR_PATTERN + "))?(?=\\W|$)", "i");
+class ESMonthNameLittleEndianParser {
   constructor() {
     self = this;
-    tmp = c2(this, UKTimeUnitAgoFormatParser);
+    tmp = c2(this, ESMonthNameLittleEndianParser);
     tmp2 = closure_4;
-    obj = closure_4(UKTimeUnitAgoFormatParser);
+    obj = closure_4(ESMonthNameLittleEndianParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -48,23 +51,48 @@ class UKTimeUnitAgoFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(UKTimeUnitAgoFormatParser, _mod10040.AbstractParserWithLeftBoundaryChecking);
+_inherits(ESMonthNameLittleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return "(" + UKTimeUnitAgoFormatParser(10038).TIME_UNITS_PATTERN + ")\\s{0,5}\u0442\u043E\u043C\u0443(?=(?:\\W|$))";
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   }
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const parseDurationResult = UKTimeUnitAgoFormatParser(10038).parseDuration(arg1[1]);
-      const ParsingComponents = UKTimeUnitAgoFormatParser(9887).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(reference.reference, UKTimeUnitAgoFormatParser(9886).reverseDuration(UKTimeUnitAgoFormatParser(10038).parseDuration(arg1[1])));
+    value: function innerExtract(createParsingResult, index) {
+      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
+      const tmp4 = ESMonthNameLittleEndianParser(10039).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
+      const parsed = parseInt(index[1]);
+      if (parsed > 31) {
+        index.index = index.index + index[1].length;
+        return null;
+      } else {
+        const start4 = parsingResult.start;
+        start4.assign("month", tmp4);
+        const start5 = parsingResult.start;
+        start5.assign("day", parsed);
+        if (index[4]) {
+          const start2 = parsingResult.start;
+          start2.assign("year", ESMonthNameLittleEndianParser(10039).parseYear(index[4]));
+        } else {
+          const start = parsingResult.start;
+          start.imply("year", ESMonthNameLittleEndianParser(9896).findYearClosestToRef(createParsingResult.refDate, parsed, tmp4));
+        }
+        if (index[2]) {
+          const _parseInt = parseInt;
+          const start3 = parsingResult.start;
+          const parsed1 = parseInt(index[2]);
+          parsingResult.end = start3.clone();
+          const end = parsingResult.end;
+          end.assign("day", parsed1);
+        }
+        return parsingResult;
+      }
     }
   }
 ];
 
-export default _createClass(UKTimeUnitAgoFormatParser, items);
+export default _createClass(ESMonthNameLittleEndianParser, items);

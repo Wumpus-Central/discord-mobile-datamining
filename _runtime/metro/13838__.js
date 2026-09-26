@@ -2,7 +2,15 @@
 
 // Module 13838
 import _mod13839 from "module_13839" /* 13839 */;
-import _mod13843 from "module_13843" /* 13843 */;
 
 
-export default (arg0) => _mod13839(_mod13843(arg0));
+export default (arg0) => {
+  let num = 0;
+  {
+    num = 0;
+    if (0 !== tmp) {
+      num = _mod13839(tmp);
+    }
+  }
+  return num;
+};

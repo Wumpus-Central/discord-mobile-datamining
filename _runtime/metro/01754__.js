@@ -1,45 +1,23 @@
 // === Module 1754: ? ===
 
 // Module 1754
+import startObservingProgress from "startObservingProgress" /* 1674 */;
+
 const require = globalThis.__r;
 
-for (const key10013 in require("module_1755")) {
-  arg5[key10013] = require("module_1755")[key10013];
+for (const key10015 in require("BaseAnimationBuilder")) {
+  arg5[key10015] = require("BaseAnimationBuilder")[key10015];
   continue;
 }
-for (const key10017 in require("module_1756")) {
-  arg5[key10017] = require("module_1756")[key10017];
+for (const key10019 in require("module_1755")) {
+  arg5[key10019] = require("module_1755")[key10019];
   continue;
 }
-for (const key10021 in require("module_1757")) {
-  arg5[key10021] = require("module_1757")[key10021];
+for (const key10023 in require("module_1766")) {
+  arg5[key10023] = require("module_1766")[key10023];
   continue;
 }
-for (const key10025 in require("module_1758")) {
-  arg5[key10025] = require("module_1758")[key10025];
-  continue;
-}
-for (const key10029 in require("module_1759")) {
-  arg5[key10029] = require("module_1759")[key10029];
-  continue;
-}
-for (const key10033 in require("module_1760")) {
-  arg5[key10033] = require("module_1760")[key10033];
-  continue;
-}
-for (const key10037 in require("module_1761")) {
-  arg5[key10037] = require("module_1761")[key10037];
-  continue;
-}
-for (const key10041 in require("module_1762")) {
-  arg5[key10041] = require("module_1762")[key10041];
-  continue;
-}
-for (const key10045 in require("module_1763")) {
-  arg5[key10045] = require("module_1763")[key10045];
-  continue;
-}
-for (const key10049 in require("module_1764")) {
-  arg5[key10049] = require("module_1764")[key10049];
+for (const key10027 in require("ProgressTransitionManager")) {
+  arg5[key10027] = require("ProgressTransitionManager")[key10027];
   continue;
 }

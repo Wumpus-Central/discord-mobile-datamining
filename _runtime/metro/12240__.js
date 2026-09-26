@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/hub/native/images", width: 120, height: 80, scales: [2, 3], hash: "8a1b4cbcf69c94f39bb256787c4e1df8", name: "search_empty_state", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 192.33333333333334, height: 416, scales: [3], hash: "313fd6dabf823cbd5c0b9608bb8b54d4", name: "invite-bg", type: "png" });

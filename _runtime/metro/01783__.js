@@ -1,172 +1,46 @@
 // === Module 1783: ? ===
 
 // Module 1783
-import _mod1648 from "module_1648" /* 1648 */;
-import _mod1662 from "module_1662" /* 1662 */;
+import _mod1641 from "module_1641" /* 1641 */;
+import _mod1649 from "module_1649" /* 1649 */;
+import _mod1663 from "module_1663" /* 1663 */;
+import freezeObjectInDev from "freezeObjectInDev" /* 1668 */;
+import _mod1784 from "module_1784" /* 1784 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const dependencyMap = arg6;
-function isAnimated(onFrame) {
-  if (Array.isArray(onFrame)) {
-    let someResult = onFrame.some(require);
-  } else {
-    someResult = typeof onFrame === "object";
-    if (typeof onFrame === "object") {
-      someResult = null !== onFrame;
-    }
-    if (someResult) {
-      let someResult1 = undefined !== onFrame.onFrame;
-      if (!someResult1) {
-        const _Object = Object;
-        const values = Object.values(onFrame);
-        someResult1 = values.some(require);
-      }
-      someResult = someResult1;
-    }
-  }
-  return someResult;
-}
-let closure_129_0 = isAnimated;
-isAnimated.__closure = {};
-isAnimated.__workletHash = 4296700641760;
-isAnimated.__initData = { code: "function isAnimated_Pnpm_utilsTs1(prop){const isAnimated_Pnpm_utilsTs1=this._recur;if(Array.isArray(prop)){return prop.some(isAnimated_Pnpm_utilsTs1);}else if(typeof prop==='object'&&prop!==null){if(prop.onFrame!==undefined){return true;}else{return Object.values(prop).some(isAnimated_Pnpm_utilsTs1);}}return false;}" };
-function shallowEqual(c8, arg1) {
-  const keys = Object.keys(c8);
-  if (keys.length !== Object.keys(arg1).length) {
-    return false;
-  } else {
-    let num = 0;
-    if (0 < keys.length) {
-      while (c8[keys[num]] === arg1[keys[num]]) {
-        num = num + 1;
-      }
-      return false;
-    }
-    return true;
-  }
-}
-shallowEqual.__closure = {};
-shallowEqual.__workletHash = 6945711106539;
-shallowEqual.__initData = { code: "function shallowEqual_Pnpm_utilsTs2(a,b){const aKeys=Object.keys(a);const bKeys=Object.keys(b);if(aKeys.length!==bKeys.length){return false;}for(let i=0;i<aKeys.length;i++){if(a[aKeys[i]]!==b[aKeys[i]]){return false;}}return true;}" };
-function validateAnimatedStyles(obj) {
-  if (typeof obj !== "object") {
-    const _HermesInternal = HermesInternal;
-    const reanimatedError = new _mod1648.ReanimatedError("`useAnimatedStyle` has to return an object, found " + typeof obj + " instead.");
-    throw reanimatedError;
-  } else {
-    const _Array = Array;
-    if (Array.isArray(obj)) {
-      const reanimatedError1 = new _mod1648.ReanimatedError("`useAnimatedStyle` has to return an object and cannot return static styles combined with dynamic ones. Please do merging where a component receives props.");
-      throw reanimatedError1;
-    }
-  }
-}
-validateAnimatedStyles.__closure = {};
-validateAnimatedStyles.__workletHash = 9250446401049;
-validateAnimatedStyles.__initData = { code: "function validateAnimatedStyles_Pnpm_utilsTs3(styles){if(typeof styles!=='object'){throw new ReanimatedError(\"`useAnimatedStyle` has to return an object, found \"+typeof styles+\" instead.\");}else if(Array.isArray(styles)){throw new ReanimatedError('`useAnimatedStyle` has to return an object and cannot return static styles combined with dynamic ones. Please do merging where a component receives props.');}}" };
+({ useEffect: c2, useRef: c3 } = noop);
 
-export const buildWorkletsHash = function buildWorkletsHash(items1) {
-  const values = Object.values(items1);
-  return values.reduce((acc, __workletHash) => acc + __workletHash.__workletHash.toString(), "");
-};
-export const buildDependencies = function buildDependencies(arr, memoizedGestureCallbacks) {
-  const values = Object.values(memoizedGestureCallbacks);
-  const found = values.filter((item) => undefined !== item);
-  let tmp2 = found;
-  if (arr) {
-    const _Object = Object;
-    const values2 = Object.values(found);
-    arr = arr.push(values2.reduce((acc, __workletHash) => acc + __workletHash.__workletHash.toString(), ""));
-    tmp2 = arr;
+export const useHandler = function useHandler(memoizedGestureCallbacks, items10) {
+  const tmp = React3(null);
+  closure_0 = tmp;
+  if (null === tmp.current) {
+    const obj2 = { context: freezeObjectInDev.makeShareable({}), savedDependencies: [] };
+    tmp.current = obj2;
   }
-  return tmp2;
-};
-export const areDependenciesEqual = function areDependenciesEqual(dependencies, savedDependencies) {
-  if (typeof Object.is === "function") {
-    const _Object = Object;
-  } else {
-    is = function is(arg0, arg1) {
-      let tmp = arg0 === arg1;
-      if (tmp) {
-        let tmp2 = 0 !== arg0;
-        if (!tmp2) {
-          tmp2 = 1 / arg0 === 1 / arg1;
-        }
-        tmp = tmp2;
-      }
-      if (!tmp) {
-        const _Number = Number;
-        let isNaNResult = Number.isNaN(arg0);
-        if (isNaNResult) {
-          const _Number2 = Number;
-          isNaNResult = Number.isNaN(arg1);
-        }
-        tmp = isNaNResult;
-      }
-      return tmp;
-    };
-  }
-  let flag = false;
-  if (dependencies) {
-    flag = false;
-    if (savedDependencies) {
-      flag = false;
-      if (savedDependencies.length === dependencies.length) {
-        let num = 0;
-        flag = true;
-        if (0 < savedDependencies.length) {
-          while (true) {
-            let tmp2 = dependencies[num];
-            let tmp3 = savedDependencies[num];
-            if (is(tmp2, tmp3)) {
-              let sum = num + 1;
-              num = sum;
-              flag = true;
-              if (sum >= savedDependencies.length) {
-                break;
-              }
-            } else {
-              let obj = _mod1662;
-              flag = false;
-              if (!obj.isWorkletFunction(tmp2)) {
-                break;
-              } else {
-                let tmp5Result = _mod1662;
-                flag = false;
-                if (!tmp5Result.isWorkletFunction(tmp3)) {
-                  break;
-                } else {
-                  let __closure = tmp2;
-                  let __closure2 = tmp3;
-                  let flag2 = false;
-                  if (tmp2.__workletHash === tmp3.__workletHash) {
-                    let _Object2 = Object;
-                    let keys = Object.keys(tmp2.__closure);
-                    let _Object3 = Object;
-                    let tmp7 = keys.length === Object.keys(tmp3.__closure).length && keys.every((item) => {
-                      let tmp2 = item in __closure2.__closure;
-                      if (tmp2) {
-                        tmp2 = __closure.__closure[item] === tmp.__closure[item];
-                      }
-                      return tmp2;
-                    });
-                    flag2 = tmp7;
-                  }
-                  flag = false;
-                  if (!flag2) {
-                    break;
-                  }
-                }
-              }
-            }
-            break;
-          }
-        }
-      }
+  React2(() => () => {
+    closure_1_0.current = null;
+  }, []);
+  ({ context, savedDependencies } = tmp.current);
+  for (const key10024 in arg0) {
+    let obj8 = _mod1663;
+    if (obj8.isWorkletFunction(arg0[key10024])) {
+      continue;
+    } else {
+      let tmp5 = new.target;
+      let str = "Passed a function that is not a worklet. Please provide a worklet function.";
+      let tmp6 = new.target;
+      let reanimatedError = new _mod1649.ReanimatedError("Passed a function that is not a worklet. Please provide a worklet function.");
+      throw reanimatedError;
     }
   }
-  return flag;
+  const dependencies = _mod1784.buildDependencies(items10, memoizedGestureCallbacks);
+  tmp.current.savedDependencies = dependencies;
+  const obj5 = { context, doDependenciesDiffer: !_mod1784.areDependenciesEqual(dependencies, savedDependencies), useWeb: null };
+  let isWebResult = _mod1641.isWeb();
+  if (!isWebResult) {
+    isWebResult = _mod1641.isJest();
+    const tmp9Result = _mod1641;
+  }
+  obj5.useWeb = isWebResult;
+  return obj5;
 };
-export { isAnimated };
-export { shallowEqual };
-export { validateAnimatedStyles };

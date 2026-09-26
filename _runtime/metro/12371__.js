@@ -1,23 +1,25 @@
 // === Module 12371: ? ===
 
 // Module 12371
-import eventFromMessage from "eventFromMessage" /* 12355 */;
-import _mod12372 from "module_12372" /* 12372 */;
-import setupIntegration from "module_12351" /* 12351 */;
+import _mod12327 from "module_12327" /* 12327 */;
+import _mod12357 from "module_12357" /* 12357 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export const linkedErrorsIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
+export const createClientReportEnvelope = function createClientReportEnvelope(discarded_events, dsn, arg2) {
+  let result = arg2;
+  const items = [{ type: "client_report" }, ];
+  if (!arg2) {
+    result = _mod12327.dateTimestampInSeconds();
   }
-  closure_0 = obj.limit || 5;
-  closure_1 = obj.key || "cause";
-  return {
-    name: "LinkedErrors",
-    preprocessEvent(exception, originalException, getOptions) {
-      const options = getOptions.getOptions();
-      const result = _mod12372.applyAggregateErrorsToEvent(eventFromMessage.exceptionFromError, options.stackParser, options.maxValueLength, closure_1, closure_0, exception, originalException);
-    }
-  };
-});
+  items[1] = { timestamp: result, discarded_events };
+  if (dsn) {
+    const obj3 = { dsn };
+    let obj4 = obj3;
+  } else {
+    obj4 = {};
+  }
+  const items1 = [items];
+  return _mod12357.createEnvelope(obj4, items1);
+};

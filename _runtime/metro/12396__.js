@@ -1,102 +1,56 @@
 // === Module 12396: ? ===
 
 // Module 12396
-import _mod12301 from "module_12301" /* 12301 */;
-import _slicedToArray from "module_32" /* 32 */;
+const items = ["X-Client-IP", "X-Forwarded-For", "Fly-Client-IP", "CF-Connecting-IP", "Fastly-Client-Ip", "True-Client-Ip", "X-Real-IP", "X-Cluster-Client-IP", "X-Forwarded", "Forwarded-For", "Forwarded", "X-Vercel-Forwarded-For"];
 
-let items = [["\n", "\\n"], ["\r", "\\r"], ["\t", "\\t"], ["\\", "\\\\"], ["|", "\\u{7c}"], [",", "\\u{2c}"]];
-
-export const getBucketKey = function getBucketKey(metricType, sanitizeMetricKeyResult, sanitizeUnitResult, sanitizeTagsResult) {
-  const entries = Object.entries(_mod12301.dropUndefinedKeys(sanitizeTagsResult));
-  return "" + metricType + sanitizeMetricKeyResult + sanitizeUnitResult + entries.sort((arg0, arg1) => {
-    const first = arg0[0];
-    return first.localeCompare(arg1[0]);
-  });
-};
-export const sanitizeMetricKey = function sanitizeMetricKey(str) {
-  return str.replace(/[^\w\-.]+/gi, "_");
-};
-export const sanitizeTags = function sanitizeTags(tags) {
-  let obj = {};
-  for (const key10007 in arg0) {
-    let _Object = Object;
-    hasOwnProperty = Object.prototype.hasOwnProperty;
-    let call = hasOwnProperty.call;
-    if (typeof call === "unknown") {
-      let hasOwnPropertyResult = hasOwnProperty(key10007);
-    } else {
-      hasOwnPropertyResult = call(arg0, key10007);
+export const getClientIPAddress = function getClientIPAddress(headers) {
+  let mapped = items.map((item) => {
+    let str = obj;
+    if (Array.isArray(headers[item])) {
+      str = obj.join(";");
     }
-    if (!hasOwnPropertyResult) {
-      continue;
-    } else {
-      let _String = String;
-      let replaced = key10007.replace(/[^\w\-./]+/gi, "");
-      items = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(String(arg0[key10007]), 0);
-      obj[replaced] = items.reduce((acc, item) => acc + (function getCharOrReplacement(item) {
-        const obj = dependencyMap[Symbol.iterator]();
-        while (obj !== undefined) {
-          let tmp4 = closure_1_2(tmp2, 2);
-          if (item === tmp4[0]) {
-            obj.return();
-            return tmp5;
+    if ("Forwarded" === item) {
+      let mapped = (function parseForwardedHeader(str) {
+        if (str) {
+          const parts = str.split(";");
+          const iter = parts[Symbol.iterator]();
+          const nextResult = iter.next();
+          while (iter !== undefined) {
+            let arr = nextResult;
+            if (nextResult.startsWith("for=")) {
+              let substr = arr.slice(4);
+              iter.return();
+              return substr;
+            }
           }
+          return null;
+        } else {
+          return null;
         }
-        return item;
-      })(item), "");
-      continue;
+      })(str);
+    } else {
+      mapped = str;
+      if (str) {
+        let parts = str.split(",");
+        mapped = parts.map((item) => item.trim());
+      }
     }
-    continue;
-  }
-  return obj;
-};
-export const sanitizeUnit = function sanitizeUnit(none) {
-  return none.replace(/[^\w]+/gi, "_");
-};
-export const serializeMetricBuckets = function serializeMetricBuckets(arg0) {
-  let str = "";
-  const iter = arg0[Symbol.iterator]();
-  const nextResult = iter.next();
-  while (iter !== undefined) {
-    let tmp2 = nextResult;
-    let _Object = Object;
-    let entries = Object.entries(nextResult.tags);
-    let arr2 = entries;
-    let str2 = "";
-    if (entries.length > 0) {
-      let mapped = arr2.map((item) => {
-        [tmp, tmp2] = item;
-        return "" + tmp + ":" + tmp2;
-      });
-      let _HermesInternal = HermesInternal;
-      str2 = "|#" + mapped.join(",");
+    return mapped;
+  });
+  const reduced = mapped.reduce((arr, item) => {
+    let combined = arr;
+    if (item) {
+      combined = arr.concat(item);
     }
-    let _HermesInternal2 = HermesInternal;
-    let str3 = "";
-    let str4 = "@";
-    let str5 = ":";
-    let str6 = "|";
-    let str7 = "|T";
-    let str8 = "\n";
-    str = str + "" + tmp2.name + "@" + tmp2.unit + ":" + tmp2.metric + "|" + tmp2.metricType + str2 + "|T" + tmp2.timestamp + "\n";
-    continue;
-  }
-  return str;
+    return combined;
+  }, []);
+  return reduced.find((item) => {
+    let isMatch = null !== item;
+    if (isMatch) {
+      isMatch = /(?:^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$)|(?:^(?:(?:[a-fA-F\d]{1,4}:){7}(?:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){6}(?:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){5}(?::(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,2}|:)|(?:[a-fA-F\d]{1,4}:){4}(?:(?::[a-fA-F\d]{1,4}){0,1}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,3}|:)|(?:[a-fA-F\d]{1,4}:){3}(?:(?::[a-fA-F\d]{1,4}){0,2}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,4}|:)|(?:[a-fA-F\d]{1,4}:){2}(?:(?::[a-fA-F\d]{1,4}){0,3}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,5}|:)|(?:[a-fA-F\d]{1,4}:){1}(?:(?::[a-fA-F\d]{1,4}){0,4}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,6}|:)|(?::(?:(?::[a-fA-F\d]{1,4}){0,5}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,7}|:)))(?:%[0-9a-zA-Z]{1,})?$)/.test(item);
+      const obj = /(?:^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$)|(?:^(?:(?:[a-fA-F\d]{1,4}:){7}(?:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){6}(?:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){5}(?::(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,2}|:)|(?:[a-fA-F\d]{1,4}:){4}(?:(?::[a-fA-F\d]{1,4}){0,1}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,3}|:)|(?:[a-fA-F\d]{1,4}:){3}(?:(?::[a-fA-F\d]{1,4}){0,2}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,4}|:)|(?:[a-fA-F\d]{1,4}:){2}(?:(?::[a-fA-F\d]{1,4}){0,3}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,5}|:)|(?:[a-fA-F\d]{1,4}:){1}(?:(?::[a-fA-F\d]{1,4}){0,4}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,6}|:)|(?::(?:(?::[a-fA-F\d]{1,4}){0,5}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,7}|:)))(?:%[0-9a-zA-Z]{1,})?$)/;
+    }
+    return isMatch;
+  }) || null;
 };
-export const simpleHash = function simpleHash(item) {
-  let length;
-  let num = 0;
-  let num2 = 0;
-  let num3 = 0;
-  if (0 < item.length) {
-    do {
-      let sum = (num2 << 5) - num2 + item.charCodeAt(num);
-      num2 = sum & sum;
-      num = num + 1;
-      num3 = num2;
-      length = item.length;
-    } while (num < length);
-  }
-  return num3 >>> 0;
-};
+export const ipHeaderNames = items;

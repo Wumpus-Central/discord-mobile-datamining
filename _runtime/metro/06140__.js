@@ -1,124 +1,102 @@
 // === Module 6140: ? ===
 
 // Module 6140
-import jsxProd from "jsxProd" /* 21 */;
-import noop_mod from "module_19" /* 19 */;
-import get_ActivityIndicator from "module_17" /* 17 */;
 
-let noop = noop_mod;
-({ useCallback: closure_0, useEffect: closure_1, useMemo: c2, useRef: c3 } = noop);
-let noop = noop_mod;
-({ Keyboard: closure_4, StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
-const jsx = jsxProd.jsx;
-let c7 = 0;
-let closure_8 = [];
-let c9 = false;
-const context = noop.createContext(null);
-const logicalResponder = StyleSheet.create({ logicalResponder: { display: "contents" } });
-
-export default function _default(children) {
-  const keyboardShouldPersistTaps = children.keyboardShouldPersistTaps;
-  const tmp = closure_3(false);
-  const isRNGHResponderEvent = tmp;
-  let items = [tmp, keyboardShouldPersistTaps];
-  isRNGHResponderEvent(() => {
-    sum = sum + 1;
-    if (1 >= sum) {
-      let addListener;
-      if (closure_1_4 != null) {
-        addListener = closure_1_4.addListener;
+export const isComposedGesture = function isComposedGesture(gesture) {
+  return "handlerTags" in gesture;
+};
+export const prepareRelations = function prepareRelations(config, handlerTag) {
+  const simultaneousWith1 = config.simultaneousWith;
+  closure_0 = handlerTag;
+  if (simultaneousWith1) {
+    const _Array = Array;
+    if (Array.isArray(simultaneousWith1)) {
+      const item = simultaneousWith1.forEach(function processSingleGesture(externalSimultaneousHandlers) {
+        if ("handlerTags" in externalSimultaneousHandlers) {
+          let prop = externalSimultaneousHandlers.externalSimultaneousHandlers;
+        } else {
+          prop = externalSimultaneousHandlers.gestureRelations.simultaneousHandlers;
+        }
+        if (!prop.includes(closure_0)) {
+          prop.push(closure_0);
+        }
+      });
+    } else {
+      if ("handlerTags" in simultaneousWith1) {
+        let prop = simultaneousWith1.externalSimultaneousHandlers;
+      } else {
+        prop = simultaneousWith1.gestureRelations.simultaneousHandlers;
       }
-      if (null != addListener) {
-        const metrics = closure_1_4.metrics;
-        let height;
-        if (metrics != null) {
-          const metricsResult = metrics();
-          if (metricsResult != null) {
-            height = metricsResult.height;
-          }
-        }
-        let tmp5 = null != height;
-        if (tmp5) {
-          tmp5 = height > 0;
-        }
-        function setVisible(endCoordinates) {
-          endCoordinates = endCoordinates.endCoordinates;
-          let height;
-          if (endCoordinates != null) {
-            height = endCoordinates.height;
-          }
-          let tmp2 = null != height;
-          if (tmp2) {
-            tmp2 = height > 0;
-          }
-          c9 = tmp2;
-        }
-        closure_9 = tmp5;
-        items = [
-          closure_1_4.addListener("keyboardDidShow", setVisible),
-          closure_1_4.addListener("keyboardWillShow", setVisible),
-          closure_1_4.addListener("keyboardDidHide", () => {
-                c9 = false;
-              })
-        ];
+      if (!prop.includes(handlerTag)) {
+        prop.push(handlerTag);
       }
     }
-    return () => {
-      (function unsubscribeFromKeyboardVisibility() {
-        diff = diff - 1;
-        if (0 >= diff) {
-          for (const item10008 of closure_8) {
-            let removeResult = item10008.remove();
-            continue;
-          }
-          closure_8 = [];
-          c9 = false;
+  }
+  const simultaneousWith = config.simultaneousWith;
+  if (simultaneousWith) {
+    const _Array2 = Array;
+    if (Array.isArray(simultaneousWith)) {
+      let flatMapResult = simultaneousWith.flatMap((handlerTags) => {
+        if ("handlerTags" in handlerTags) {
+          handlerTags = handlerTags.handlerTags;
+        } else {
+          handlerTags = [];
+          handlerTags[0] = handlerTags.handlerTag;
         }
-      })();
-    };
-  }, []);
-  const items1 = [keyboardShouldPersistTaps];
-  let tmp2 = closure_2(() => ({ isRNGHResponderEvent, keyboardShouldPersistTaps }), items);
-  const obj = { value: tmp2, children: null };
-  const tmp4 = keyboardShouldPersistTaps(() => {
-    closure_1.current = false;
-    return false;
-  }, []);
-  obj.children = <closure_5 collapsable={false} onStartShouldSetResponderCapture={keyboardShouldPersistTaps(() => {
-    closure_1.current = false;
-    return false;
-  }, [])} onStartShouldSetResponder={keyboardShouldPersistTaps(() => {
-    let current = "handled" === keyboardShouldPersistTaps;
-    if (current) {
-      current = isRNGHResponderEvent.current;
+        return handlerTags;
+      });
+    } else if ("handlerTags" in simultaneousWith) {
+      flatMapResult = simultaneousWith.handlerTags;
+    } else {
+      flatMapResult = [simultaneousWith.handlerTag];
     }
-    isRNGHResponderEvent.current = false;
-    return current;
-  }, items1)} pointerEvents="box-none" style={logicalResponder.logicalResponder}>{children.children}</closure_5>;
-  return <context value={tmp2}>{null}</context>;
-};
-export const JSResponderContext = context;
-export const updateResponderEventValue = function updateResponderEventValue(isRNGHResponderEvent, current) {
-  isRNGHResponderEvent = undefined;
-  if (isRNGHResponderEvent != null) {
-    isRNGHResponderEvent = isRNGHResponderEvent.isRNGHResponderEvent;
-  }
-  if (isRNGHResponderEvent) {
-    isRNGHResponderEvent.current = current;
-  }
-};
-export const isKeyboardDismissingTap = function isKeyboardDismissingTap(keyboardShouldPersistTaps) {
-  if (null == keyboardShouldPersistTaps) {
-    return false;
   } else {
-    keyboardShouldPersistTaps = keyboardShouldPersistTaps.keyboardShouldPersistTaps;
-    let tmp = !keyboardShouldPersistTaps;
-    if (keyboardShouldPersistTaps) {
-      tmp = "never" === keyboardShouldPersistTaps;
+    const obj = { simultaneousHandlers: [], waitFor: null, blocksHandlers: null };
+    const requireToFail = config.requireToFail;
+    if (requireToFail) {
+      const _Array3 = Array;
+      if (Array.isArray(requireToFail)) {
+        let flatMapResult1 = requireToFail.flatMap((handlerTags) => {
+          if ("handlerTags" in handlerTags) {
+            handlerTags = handlerTags.handlerTags;
+          } else {
+            handlerTags = [];
+            handlerTags[0] = handlerTags.handlerTag;
+          }
+          return handlerTags;
+        });
+      } else if ("handlerTags" in requireToFail) {
+        flatMapResult1 = requireToFail.handlerTags;
+      } else {
+        flatMapResult1 = [requireToFail.handlerTag];
+      }
+    } else {
+      obj.waitFor = [];
+      const block = config.block;
+      if (block) {
+        const _Array4 = Array;
+        if (Array.isArray(block)) {
+          let flatMapResult2 = block.flatMap((handlerTags) => {
+            if ("handlerTags" in handlerTags) {
+              handlerTags = handlerTags.handlerTags;
+            } else {
+              handlerTags = [];
+              handlerTags[0] = handlerTags.handlerTag;
+            }
+            return handlerTags;
+          });
+        } else if ("handlerTags" in block) {
+          flatMapResult2 = block.handlerTags;
+        } else {
+          flatMapResult2 = [block.handlerTag];
+        }
+      } else {
+        obj.blocksHandlers = [];
+        return obj;
+      }
     }
-    if (tmp) {
-      tmp = c9;
-    }
-    return tmp;
   }
+};
+export const containsDuplicates = function containsDuplicates(flatMapResult) {
+  return new Set(flatMapResult).size !== flatMapResult.length;
 };

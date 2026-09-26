@@ -1,12 +1,7 @@
 // === Module 10784: ? ===
 
 // Module 10784
-import _mod10783 from "module_10783" /* 10783 */;
+import registerAsset from "module_1121" /* 1121 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export const keepLocalCopy = function keepLocalCopy(arg0) {
-  const NativeDocumentPicker = _mod10783.NativeDocumentPicker;
-  return NativeDocumentPicker.keepLocalCopy(arg0);
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "eac553938fe05ac1b820e85a05890a1f", name: "SlashBoxIcon", type: "png" });

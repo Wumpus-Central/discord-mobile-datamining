@@ -1,16 +1,14 @@
 // === Module 13851: ? ===
 
 // Module 13851
-import prop_mod from "module_13852" /* 13852 */;
+import _mod13789 from "module_13789" /* 13789 */;
+import all from "module_13815" /* 13815 */;
 
-let prop = prop_mod;
-if (prop) {
-  const _Symbol = Symbol;
-  prop = !Symbol.sham;
-}
-if (prop) {
-  const _Symbol2 = Symbol;
-  prop = typeof Symbol.iterator === "symbol";
+let _moduleResult = all(_mod13789.WeakMap);
+if (_moduleResult) {
+  const _String = String;
+  _moduleResult = /native code/.test(String(_mod13789.WeakMap));
+  const obj = /native code/;
 }
 
-export default prop;
+export default _moduleResult;

@@ -1,0 +1,152 @@
+// === Module 1598: clone ===
+
+// Module 1598 (clone)
+import BaseNavigationContainer from "BaseNavigationContainer" /* 1488 */;
+import _modDef1507 from "module_1507" /* 1507 */;
+import get_options from "get options" /* 1585 */;
+import _mod1599 from "module_1599" /* 1599 */;
+import noop from "module_19" /* 19 */;
+
+require = fn;
+function clone(screen, arg1) {
+  let keys = arg1;
+  if (arg1 === undefined) {
+    keys = closure_4;
+  }
+  if (typeof screen === "object") {
+    if (null != screen) {
+      value = undefined;
+      if (get != null) {
+        value = get.get(screen);
+      }
+      if (value) {
+        return value;
+      } else {
+        const _Array = Array;
+        const isArray = Array.isArray(screen);
+        if (keys === closure_5) {
+          if ("screen" in screen) {
+            if (typeof screen.screen !== "string") {
+              if ("state" in screen) {
+                if (typeof screen.state === "object") {
+                  if (null != screen.state) {
+                    if ("routes" in screen.state) {
+                      const _Array2 = Array;
+                    }
+                  }
+                }
+              }
+              return screen;
+            }
+          }
+        }
+        let tmp8;
+        if (keys === closure_5) {
+          const obj = {};
+          const merged = Object.assign(screen);
+          tmp8 = obj;
+        }
+        let tmp12 = tmp8;
+        let weakMap = get;
+        if (get == null) {
+          const _WeakMap = WeakMap;
+          weakMap = new WeakMap();
+        }
+        let tmp15 = tmp12;
+        if (tmp12 == null) {
+          tmp15 = screen;
+        }
+        const result = weakMap.set(screen, tmp15);
+        if (isArray) {
+          keys = screen.keys();
+        }
+        const iter = keys[Symbol.iterator]();
+        const nextResult = iter.next();
+        while (iter !== undefined) {
+          let _Reflect = Reflect;
+          let tmp21 = nextResult;
+          value2 = Reflect.get(screen, nextResult);
+          let tmp23 = value2;
+          if ("params" === nextResult) {
+            let tmp25 = closure_5;
+          } else {
+            tmp25 = closure_4;
+          }
+          let tmp24Result = clone(value2, tmp25, weakMap);
+          if (tmp24Result !== tmp23) {
+            if (tmp12 != null) {
+              let result1 = weakMap.set(screen, tmp12);
+              let _Object = Object;
+              let obj2 = {};
+              obj2[tmp21] = tmp29;
+              let merged1 = Object.assign(tmp12, obj2);
+            } else if (isArray) {
+              let items = [];
+              let arraySpreadResult = HermesBuiltin.arraySpread(screen, 0);
+            } else {
+              let obj3 = {};
+              let merged2 = Object.assign(screen);
+            }
+          }
+          continue;
+        }
+        if (tmp12 == null) {
+          tmp12 = screen;
+        }
+        return tmp12;
+      }
+    }
+  }
+  return screen;
+}
+const Platform = fn(17).Platform;
+let closure_4 = ["payload", "params", "state", "routes"];
+let closure_5 = ["params", "state"];
+
+export const useLinkProps = function useLinkProps(arg0) {
+  ({ screen: require, params: importDefault, action: dependencyMap } = arg0);
+  const merged = Object.assign(arg0, Object.assign({ screen: 0, params: 0, action: 0 }));
+  const context = merged.useContext(BaseNavigationContainer.NavigationContainerRefContext);
+  let context1 = merged.useContext(BaseNavigationContainer.NavigationHelpersContext);
+  if (context1 == null) {
+    context1 = context;
+  }
+  if (null == context1) {
+    let _Error = Error;
+    let error = new Error("Couldn't find a navigation object. Is your component inside NavigationContainer?");
+    throw error;
+  } else {
+    const options = obj.useContext(get_options.LinkingContext).options;
+    const tmp14 = _modDef1507((preventDefault) => {
+      if (preventDefault != null) {
+        preventDefault.preventDefault();
+      }
+      if (null != dependencyMap) {
+        let tmp8 = clone(tmp2);
+      } else if (null == closure_1_0) {
+        const _Error = Error;
+        const error = new Error("Couldn't find a screen to navigate to. Make sure to provide a screen name.");
+        throw error;
+      } else {
+        const CommonActions = BaseNavigationContainer.CommonActions;
+        tmp8 = clone(CommonActions.navigate(tmp3, importDefault));
+      }
+      context1.dispatch(tmp8);
+    });
+    const items = [merged.href, _mod1599.useDeepStableValue(undefined), , ];
+    let getPathFromState;
+    if (options != null) {
+      getPathFromState = options.getPathFromState;
+    }
+    items[2] = getPathFromState;
+    let config;
+    if (options != null) {
+      config = options.config;
+    }
+    const obj2 = { href: null, role: "link", onPress: null };
+    items[3] = config;
+    obj2.href = obj.useMemo(() => merged.href, items);
+    obj2.onPress = tmp14;
+    return obj2;
+  }
+};

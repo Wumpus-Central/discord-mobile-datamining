@@ -1,417 +1,148 @@
 // === Module 12336: ? ===
 
 // Module 12336
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
+import _mod12319 from "module_12319" /* 12319 */;
+import _mod12324 from "module_12324" /* 12324 */;
+import _mod12327 from "module_12327" /* 12327 */;
+import _mod12337 from "module_12337" /* 12337 */;
+import __SENTRY_DEBUG__ from "module_12312" /* 12312 */;
+import consoleSandbox from "module_12313" /* 12313 */;
 
-const SentrySpan = require;
-function isFullFinishedSpan(start_timestamp) {
-  return start_timestamp.start_timestamp && start_timestamp.timestamp && start_timestamp.span_id && start_timestamp.trace_id;
-}
-class SentrySpan {
-  constructor() {
-    obj = global;
-    if (global === undefined) {
-      obj = {};
+function updateSession(ipAddress) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
+  }
+  if (obj.user) {
+    ipAddress = ipAddress.ipAddress;
+    let ip_address = !ipAddress;
+    if (!ipAddress) {
+      ip_address = obj.user.ip_address;
     }
-    self = this;
-    tmp = c2(this, SentrySpan);
-    traceId = obj.traceId;
-    if (!traceId) {
-      tmp2 = closure_0;
-      tmp3 = closure_1;
-      obj2 = closure_0(closure_1[2]);
-      traceId = obj2.generateTraceId();
+    if (ip_address) {
+      ipAddress.ipAddress = obj.user.ip_address;
     }
-    self._traceId = traceId;
-    spanId = obj.spanId;
-    if (!spanId) {
-      tmp4 = closure_0;
-      tmp5 = closure_1;
-      obj3 = closure_0(closure_1[2]);
-      spanId = obj3.generateSpanId();
+    if (!tmp) {
+      ipAddress.did = obj.user.id || obj.user.email || obj.user.username;
     }
-    self._spanId = spanId;
-    startTimestamp = obj.startTimestamp;
-    if (!startTimestamp) {
-      tmp6 = closure_0;
-      tmp7 = closure_1;
-      obj4 = closure_0(closure_1[3]);
-      startTimestamp = obj4.timestampInSeconds();
+    tmp = ipAddress.did || obj.did;
+  }
+  let timestamp = obj.timestamp;
+  if (!timestamp) {
+    timestamp = _mod12327.timestampInSeconds();
+  }
+  ipAddress.timestamp = timestamp;
+  if (obj.abnormal_mechanism) {
+    ipAddress.abnormal_mechanism = obj.abnormal_mechanism;
+  }
+  if (obj.ignoreDuration) {
+    ipAddress.ignoreDuration = obj.ignoreDuration;
+  }
+  if (!obj.sid) {
+    if (undefined !== obj.init) {
+      ipAddress.init = obj.init;
     }
-    self._startTime = startTimestamp;
-    self._attributes = {};
-    obj1 = { [closure_2_0(closure_2_1[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "manual" };
-    obj1[closure_0(closure_1[4]).SEMANTIC_ATTRIBUTE_SENTRY_OP] = obj.op;
-    merged = Object.assign(obj.attributes);
-    setAttributesResult = self.setAttributes(obj1);
-    self._name = obj.name;
-    if (obj.parentSpanId) {
-      self._parentSpanId = obj.parentSpanId;
+    const did = ipAddress.did;
+    let did2 = !did;
+    if (!did) {
+      did2 = obj.did;
     }
-    if ("sampled" in obj) {
-      self._sampled = obj.sampled;
+    if (did2) {
+      const _HermesInternal = HermesInternal;
+      ipAddress.did = "" + obj.did;
     }
-    if (obj.endTimestamp) {
-      self._endTime = obj.endTimestamp;
+    if (typeof obj.started === "number") {
+      ipAddress.started = obj.started;
     }
-    self._events = [];
-    self._isStandaloneSpan = obj.isStandalone;
-    if (self._endTime) {
-      _onSpanEndedResult = self._onSpanEnded();
+    if (ipAddress.ignoreDuration) {
+      ipAddress.duration = undefined;
+    } else if (typeof obj.duration === "number") {
+      ipAddress.duration = obj.duration;
+    } else {
+      const diff = ipAddress.timestamp - ipAddress.started;
+      let num2 = 0;
+      if (diff >= 0) {
+        num2 = diff;
+      }
+      ipAddress.duration = num2;
     }
-    return;
+    if (obj.release) {
+      ipAddress.release = obj.release;
+    }
+    if (obj.environment) {
+      ipAddress.environment = obj.environment;
+    }
+    const ipAddress2 = ipAddress.ipAddress;
+    let ipAddress3 = !ipAddress2;
+    if (!ipAddress2) {
+      ipAddress3 = obj.ipAddress;
+    }
+    if (ipAddress3) {
+      ipAddress.ipAddress = obj.ipAddress;
+    }
+    const userAgent = ipAddress.userAgent;
+    let userAgent2 = !userAgent;
+    if (!userAgent) {
+      userAgent2 = obj.userAgent;
+    }
+    if (userAgent2) {
+      ipAddress.userAgent = obj.userAgent;
+    }
+    if (typeof obj.errors === "number") {
+      ipAddress.errors = obj.errors;
+    }
+    if (obj.status) {
+      ipAddress.status = obj.status;
+    }
+  } else {
+    if (32 === obj.sid.length) {
+      let sid = obj.sid;
+    } else {
+      sid = _mod12324.uuid4();
+    }
+    ipAddress.sid = sid;
   }
 }
-const entry = {
-  key: "addLink",
-  value: function addLink(arg0) {
-    return this;
+_mod12337;
+
+export const closeSession = function closeSession(status, status2) {
+  if (status2) {
+    const obj2 = { status: status2 };
+    let obj = obj2;
+  } else {
+    obj = {};
+    if ("ok" === status.status) {
+      obj = { status: "exited" };
+    }
   }
+  updateSession(status, obj);
 };
-let items = [
-  entry,
-  {
-    key: "addLinks",
-    value: function addLinks(arg0) {
-      return this;
+export const makeSession = function makeSession(arg0) {
+  const timestampInSecondsResult = obj2(12327).timestampInSeconds();
+  obj2 = { sid: null, init: true, timestamp: null, started: null, duration: 0, status: "ok", errors: 0, ignoreDuration: false, toJSON: null };
+  let obj = obj2(12327);
+  obj2.sid = obj2(12324).uuid4();
+  obj2.timestamp = timestampInSecondsResult;
+  obj2.started = timestampInSecondsResult;
+  obj2.toJSON = function toJSON() {
+    const obj3 = { sid: "" + obj2.sid, init: obj2.init, started: null, timestamp: null, status: null, errors: null, did: null, duration: null, abnormal_mechanism: null, attrs: null };
+    const obj = _mod12319;
+    obj3.started = new Date(1000 * obj2.started).toISOString();
+    const date = new Date(1000 * obj2.started);
+    obj3.timestamp = new Date(1000 * obj2.timestamp).toISOString();
+    ({ status: obj2.status, errors: obj2.errors } = obj2);
+    if (typeof obj2.did === "number") {
+      const _HermesInternal = HermesInternal;
+      const combined = "" + obj2.did;
     }
-  },
-  {
-    key: "recordException",
-    value: function recordException(arg0, arg1) {
-
-    }
-  },
-  {
-    key: "spanContext",
-    value: function spanContext() {
-      const obj = { spanId: this._spanId, traceId: this._traceId, traceFlags: null };
-      const tmp = SentrySpan(12300);
-      obj.traceFlags = this._sampled ? tmp.TRACE_FLAG_SAMPLED : tmp.TRACE_FLAG_NONE;
-      return obj;
-    }
-  },
-  {
-    key: "setAttribute",
-    value: function setAttribute(arg0, arg1) {
-      const self = this;
-      if (undefined === arg1) {
-        const _attributes = self._attributes;
-        delete tmp[tmp2];
-      } else {
-        self._attributes[arg0] = arg1;
-      }
-      return self;
-    }
-  },
-  {
-    key: "setAttributes",
-    value: function setAttributes(arg0) {
-      const self = this;
-      closure_0 = arg0;
-      const keys = Object.keys(arg0);
-      const item = keys.forEach((item) => self.setAttribute(item, closure_0[item]));
-      return this;
-    }
-  },
-  {
-    key: "updateStartTime",
-    value: function updateStartTime(arg0) {
-      this._startTime = SentrySpan(12300).spanTimeInputToSeconds(arg0);
-    }
-  },
-  {
-    key: "setStatus",
-    value: function setStatus(_status) {
-      this._status = _status;
-      return this;
-    }
-  },
-  {
-    key: "updateName",
-    value: function updateName(_name) {
-      this._name = _name;
-      const attr = this.setAttribute(SentrySpan(12310).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE, "custom");
-      return this;
-    }
-  },
-  {
-    key: "end",
-    value: function end(arg0) {
-      const self = this;
-      if (!this._endTime) {
-        self._endTime = SentrySpan(12300).spanTimeInputToSeconds(arg0);
-        const obj = SentrySpan(12300);
-        SentrySpan(12333).logSpanEnd(self);
-        self._onSpanEnded();
-        const obj2 = SentrySpan(12333);
-      }
-    }
-  },
-  {
-    key: "getSpanJSON",
-    value: function getSpanJSON() {
-      const self = this;
-      const obj6 = { data: this._attributes, description: this._name, op: this._attributes[SentrySpan(undefined, 12310).SEMANTIC_ATTRIBUTE_SENTRY_OP], parent_span_id: this._parentSpanId, span_id: this._spanId, start_timestamp: this._startTime, status: null, timestamp: null, trace_id: null, origin: null, _metrics_summary: null, profile_id: null, exclusive_time: null, measurements: null, is_segment: null, segment_id: null };
-      const obj = SentrySpan(12301);
-      obj6.status = SentrySpan(12300).getStatusMessage(this._status);
-      ({ _endTime: obj2.timestamp, _traceId: obj2.trace_id, _attributes } = this);
-      obj6.origin = _attributes[SentrySpan(undefined, 12310).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN];
-      const obj3 = SentrySpan(12300);
-      obj6._metrics_summary = SentrySpan(12311).getMetricSummaryJsonForSpan(this);
-      obj6.profile_id = this._attributes[SentrySpan(undefined, 12310).SEMANTIC_ATTRIBUTE_PROFILE_ID];
-      obj6.exclusive_time = this._attributes[SentrySpan(undefined, 12310).SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME];
-      const obj4 = SentrySpan(12311);
-      obj6.measurements = SentrySpan(12337).timedEventsToMeasurements(this._events);
-      let _isStandaloneSpan = this._isStandaloneSpan;
-      if (_isStandaloneSpan) {
-        _isStandaloneSpan = SentrySpan(12300).getRootSpan(self) === self;
-        const tmpResult = SentrySpan(12300);
-      }
-      obj6.is_segment = _isStandaloneSpan;
-      let spanId;
-      if (self._isStandaloneSpan) {
-        const rootSpan = SentrySpan(12300).getRootSpan(self);
-        spanId = rootSpan.spanContext().spanId;
-        const tmpResult2 = SentrySpan(12300);
-      }
-      obj6.segment_id = spanId;
-      return obj.dropUndefinedKeys(obj6);
-    }
-  },
-  {
-    key: "isRecording",
-    value: function isRecording() {
-      const _endTime = this._endTime;
-      let _sampled = !_endTime;
-      if (!_endTime) {
-        _sampled = this._sampled;
-      }
-      return _sampled;
-    }
-  },
-  {
-    key: "addEvent",
-    value: function addEvent(name, num, arg2) {
-      if (SentrySpan(12323).DEBUG_BUILD) {
-        const logger = SentrySpan(12295).logger;
-        logger.log("[Tracing] Adding an event to span:", name);
-      }
-      let isArray = num;
-      if (num) {
-        isArray = typeof num === "number";
-      }
-      if (!isArray) {
-        const _Date = Date;
-        isArray = num instanceof Date;
-      }
-      if (!isArray) {
-        const _Array = Array;
-        isArray = Array.isArray(num);
-      }
-      let tmp7 = num;
-      if (!isArray) {
-        let timestampInSecondsResult = arg2;
-        if (!arg2) {
-          timestampInSecondsResult = SentrySpan(12309).timestampInSeconds();
-          const tmpResult = SentrySpan(12309);
-        }
-        tmp7 = timestampInSecondsResult;
-      }
-      let isArray1 = num;
-      if (num) {
-        isArray1 = typeof num === "number";
-      }
-      if (!isArray1) {
-        const _Date2 = Date;
-        isArray1 = num instanceof Date;
-      }
-      if (!isArray1) {
-        const _Array2 = Array;
-        isArray1 = Array.isArray(num);
-      }
-      if (isArray1) {
-        let obj = {};
-      } else {
-        obj = num;
-        if (!num) {
-          obj = {};
-        }
-      }
-      const obj2 = { name, time: SentrySpan(12300).spanTimeInputToSeconds(tmp7), attributes: obj };
-      const _events = this._events;
-      _events.push(obj2);
-      return this;
-    }
-  },
-  {
-    key: "isStandaloneSpan",
-    value: function isStandaloneSpan() {
-      return this._isStandaloneSpan;
-    }
-  },
-  {
-    key: "_onSpanEnded",
-    value: function _onSpanEnded() {
-      const self = this;
-      const client = SentrySpan(12322).getClient();
-      if (client) {
-        client.emit("spanEnd", self);
-      }
-      if (self._isStandaloneSpan) {
-        if (self._isStandaloneSpan) {
-          if (self._sampled) {
-            const items = [self];
-            const spanEnvelope = SentrySpan(12338).createSpanEnvelope(items, client);
-            const tmpResult = SentrySpan(12338);
-            const client1 = SentrySpan(12322).getClient();
-            if (client1) {
-              if (spanEnvelope[1]) {
-                if (0 !== arr2.length) {
-                  client1.sendEnvelope(spanEnvelope);
-                }
-              }
-              client1.recordDroppedEvent("before_send", "span");
-            }
-            const tmpResult5 = SentrySpan(12322);
-          } else {
-            if (SentrySpan(12323).DEBUG_BUILD) {
-              const logger = SentrySpan(12295).logger;
-              logger.log("[Tracing] Discarding standalone span because its trace was not chosen to be sampled.");
-            }
-            if (client) {
-              client.recordDroppedEvent("sample_rate", "span");
-            }
-          }
-        } else {
-          const result = self._convertSpanToTransaction();
-          if (result) {
-            let scope = SentrySpan(12324).getCapturedScopesOnSpan(self).scope;
-            if (!scope) {
-              scope = SentrySpan(12322).getCurrentScope();
-              const tmpResult7 = SentrySpan(12322);
-            }
-            scope.captureEvent(result);
-            const tmpResult6 = SentrySpan(12324);
-          }
-        }
-      } else {
-        SentrySpan(12300);
-      }
-      const obj = SentrySpan(12322);
-    }
-  },
-  {
-    key: "_convertSpanToTransaction",
-    value: function _convertSpanToTransaction() {
-      const self = this;
-      const spanToJSONResult = self(12300).spanToJSON(this);
-      if (tmp6) {
-        if (!self._name) {
-          if (tmp3(12323).DEBUG_BUILD) {
-            const logger = tmp3(12295).logger;
-            logger.warn("Transaction has no name, falling back to `<unlabeled transaction>`.");
-          }
-          self._name = "<unlabeled transaction>";
-        }
-        const capturedScopesOnSpan = tmp3(12324).getCapturedScopesOnSpan(self);
-        const scope = capturedScopesOnSpan.scope;
-        let currentScope = scope;
-        if (!scope) {
-          currentScope = tmp3(12322).getCurrentScope();
-          const tmp3Result9 = tmp3(12322);
-        }
-        let client = currentScope.getClient();
-        if (!client) {
-          client = tmp3(12322).getClient();
-          const tmp3Result10 = tmp3(12322);
-        }
-        if (true !== self._sampled) {
-          if (tmp3(12323).DEBUG_BUILD) {
-            const logger3 = tmp3(12295).logger;
-            logger3.log("[Tracing] Discarding transaction because its trace was not chosen to be sampled.");
-          }
-          if (client) {
-            client.recordDroppedEvent("sample_rate", "transaction");
-          }
-        } else {
-          const spanDescendants = tmp3(12300).getSpanDescendants(self);
-          const found = spanDescendants.filter((isStandaloneSpan) => {
-            let tmp = isStandaloneSpan !== self;
-            if (tmp) {
-              tmp = !(isStandaloneSpan instanceof _moduleResult && isStandaloneSpan.isStandaloneSpan());
-              const tmp3 = isStandaloneSpan instanceof _moduleResult && isStandaloneSpan.isStandaloneSpan();
-            }
-            return tmp;
-          });
-          const mapped = found.map((item) => self(12300).spanToJSON(item));
-          const found1 = mapped.filter(isFullFinishedSpan);
-          const tmp24 = self._attributes[tmp3(undefined, 12310).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE];
-          const _attributes = self._attributes;
-          let SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME = tmp3(12310).SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME;
-          delete tmp2[tmp];
-          const item = found1.forEach((data) => {
-            if (data.data) {
-              data = data.data;
-              const SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME = self(12310).SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME;
-              delete tmp2[tmp];
-            }
-          });
-          const obj2 = { contexts: null, spans: null, start_timestamp: null, timestamp: null, transaction: null, type: "transaction", sdkProcessingMetadata: null, _metrics_summary: null };
-          const obj3 = { trace: null };
-          const tmp3Result11 = tmp3(12300);
-          obj3.trace = tmp3(12300).spanToTransactionTraceContext(self);
-          obj2.contexts = obj3;
-          let substr = found1;
-          if (found1.length > 1000) {
-            const sorted = found1.sort((start_timestamp, start_timestamp2) => start_timestamp.start_timestamp - start_timestamp2.start_timestamp);
-            substr = sorted.slice(0, 1000);
-          }
-          obj2.spans = substr;
-          ({ _startTime: obj16.start_timestamp, _endTime: obj16.timestamp, _name: obj16.transaction } = self);
-          const obj4 = { capturedSpanScope: scope, capturedSpanIsolationScope: capturedScopesOnSpan.isolationScope };
-          const tmp3Result12 = tmp3(12300);
-          const obj5 = { dynamicSamplingContext: null };
-          const tmp3Result13 = tmp3(12301);
-          obj5.dynamicSamplingContext = tmp3(12331).getDynamicSamplingContextFromSpan(self);
-          const merged = Object.assign(tmp3Result13.dropUndefinedKeys(obj5));
-          obj2.sdkProcessingMetadata = obj4;
-          const tmp3Result14 = tmp3(12331);
-          obj2._metrics_summary = tmp3(12311).getMetricSummaryJsonForSpan(self);
-          let tmp12 = tmp24;
-          if (tmp24) {
-            const obj6 = { transaction_info: null };
-            const obj7 = { source: tmp24 };
-            obj6.transaction_info = obj7;
-            tmp12 = obj6;
-          }
-          const merged1 = Object.assign(tmp12);
-          const tmp3Result15 = tmp3(12311);
-          const result = tmp3(12337).timedEventsToMeasurements(self._events);
-          let length = result;
-          if (result) {
-            const _Object = Object;
-            length = Object.keys(result).length;
-          }
-          if (length) {
-            if (tmp3(12323).DEBUG_BUILD) {
-              const logger2 = tmp3(12295).logger;
-              const _JSON = JSON;
-              logger2.log("[Measurements] Adding measurements to transaction event", JSON.stringify(result, undefined, 2));
-            }
-            obj2.measurements = result;
-          }
-          return obj2;
-        }
-        const tmp3Result = tmp3(12324);
-      }
-      const obj = self(12300);
-      tmp6 = spanToJSONResult.start_timestamp && spanToJSONResult.timestamp && spanToJSONResult.span_id && spanToJSONResult.trace_id;
-    }
+    obj3.did = combined;
+    ({ duration: obj2.duration, abnormal_mechanism: obj2.abnormal_mechanism } = obj2);
+    obj3.attrs = { release: obj2.release, environment: obj2.environment, ip_address: obj2.ipAddress, user_agent: obj2.userAgent };
+    return obj.dropUndefinedKeys(obj3);
+  };
+  if (arg0) {
+    updateSession(obj2, arg0);
   }
-];
-const _moduleResult = _createClass(SentrySpan, items);
-let c3 = _moduleResult;
-
-export const SentrySpan = _moduleResult;
+  return obj2;
+};
+export { updateSession };

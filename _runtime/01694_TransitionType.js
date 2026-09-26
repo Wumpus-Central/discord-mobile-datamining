@@ -1,0 +1,56 @@
+// === Module 1694: TransitionType ===
+
+// Module 1694 (TransitionType)
+import FadeInData from "FadeInData" /* 1695 */;
+import BounceInData from "BounceInData" /* 1698 */;
+import FlipInData from "FlipInData" /* 1699 */;
+import StretchInData from "StretchInData" /* 1700 */;
+import ZoomInData from "ZoomInData" /* 1701 */;
+import SlideInData from "SlideInData" /* 1702 */;
+import LightSpeedInData from "LightSpeedInData" /* 1703 */;
+import PinwheelData from "PinwheelData" /* 1704 */;
+import RotateInData from "RotateInData" /* 1705 */;
+import RollInData from "RollInData" /* 1706 */;
+
+const merged = Object.assign(FadeInData.FadeInData);
+const merged1 = Object.assign(FadeInData.FadeOutData);
+const merged2 = Object.assign(BounceInData.BounceInData);
+const merged3 = Object.assign(BounceInData.BounceOutData);
+const merged4 = Object.assign(FlipInData.FlipInData);
+const merged5 = Object.assign(FlipInData.FlipOutData);
+const merged6 = Object.assign(StretchInData.StretchInData);
+const merged7 = Object.assign(StretchInData.StretchOutData);
+const merged8 = Object.assign(ZoomInData.ZoomInData);
+const merged9 = Object.assign(ZoomInData.ZoomOutData);
+const merged10 = Object.assign(SlideInData.SlideInData);
+const merged11 = Object.assign(SlideInData.SlideOutData);
+const merged12 = Object.assign(LightSpeedInData.LightSpeedInData);
+const merged13 = Object.assign(LightSpeedInData.LightSpeedOutData);
+const merged14 = Object.assign(PinwheelData.PinwheelData);
+const merged15 = Object.assign(RotateInData.RotateInData);
+const merged16 = Object.assign(RotateInData.RotateOutData);
+const merged17 = Object.assign(RollInData.RollInData);
+const merged18 = Object.assign(RollInData.RollOutData);
+const merged19 = Object.assign(FadeInData.FadeIn);
+const merged20 = Object.assign(FadeInData.FadeOut);
+const merged21 = Object.assign(BounceInData.BounceIn);
+const merged22 = Object.assign(BounceInData.BounceOut);
+const merged23 = Object.assign(FlipInData.FlipIn);
+const merged24 = Object.assign(FlipInData.FlipOut);
+const merged25 = Object.assign(StretchInData.StretchIn);
+const merged26 = Object.assign(StretchInData.StretchOut);
+const merged27 = Object.assign(ZoomInData.ZoomIn);
+const merged28 = Object.assign(ZoomInData.ZoomOut);
+const merged29 = Object.assign(SlideInData.SlideIn);
+const merged30 = Object.assign(SlideInData.SlideOut);
+const merged31 = Object.assign(LightSpeedInData.LightSpeedIn);
+const merged32 = Object.assign(LightSpeedInData.LightSpeedOut);
+const merged33 = Object.assign(PinwheelData.Pinwheel);
+const merged34 = Object.assign(RotateInData.RotateIn);
+const merged35 = Object.assign(RotateInData.RotateOut);
+const merged36 = Object.assign(RollInData.RollIn);
+const merged37 = Object.assign(RollInData.RollOut);
+
+export const TransitionType = { LINEAR: 0, [0]: "LINEAR", SEQUENCED: 1, [1]: "SEQUENCED", FADING: 2, [2]: "FADING", JUMPING: 3, [3]: "JUMPING", CURVED: 4, [4]: "CURVED", ENTRY_EXIT: 5, [5]: "ENTRY_EXIT" };
+export const AnimationsData = {};
+export const Animations = {};

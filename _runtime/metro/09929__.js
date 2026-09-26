@@ -1,90 +1,49 @@
 // === Module 9929: ? ===
 
 // Module 9929
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 9884 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 9891 */;
-import _mod9930 from "module_9930" /* 9930 */;
+import _mod9894 from "module_9894" /* 9894 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
 
-const DEWeekdayParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-const regExp = new RegExp("(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:a[mn]\\s*?)?(?:(diese[mn]|letzte[mn]|n(?:\u00E4|ae)chste[mn])\\s*)?(" + repeatedTimeunitPattern.matchAnyPattern(_mod9930.WEEKDAY_DICTIONARY) + ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(diese|letzte|n(?:\u00E4|ae)chste)\\s*woche)?(?=\\W|$)", "i");
-class DEWeekdayParser {
+const ENExtractYearSuffixRefiner = require;
+const regExp = new RegExp("^\\s*(" + _mod9894.YEAR_PATTERN + ")", "i");
+class ENExtractYearSuffixRefiner {
   constructor() {
-    self = this;
-    tmp = c2(this, DEWeekdayParser);
-    tmp2 = closure_4;
-    obj = closure_4(DEWeekdayParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
+    tmp = c2(this, ENExtractYearSuffixRefiner);
+    return;
   }
 }
-_inherits(DEWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+  key: "refine",
+  value: function refine(arg0, arr) {
+    let text = arg0;
+    const item = arr.forEach((start) => {
+      text = start;
+      start = start.start;
+      if (start.isDateWithUnknownYear()) {
+        const match = regExp.exec(text.text.substring(start.index + start.text.length));
+        if (match) {
+          if (str2.trim().length > 3) {
+            obj.debug(() => {
+              console.log("Extracting year: '" + match[0] + "' into : " + closure_0);
+            });
+            const parseYearResult = ENExtractYearSuffixRefiner(9894).parseYear(match[1]);
+            if (null != start.end) {
+              const end = start.end;
+              end.assign("year", parseYearResult);
+            }
+            const start2 = start.start;
+            start2.assign("year", parseYearResult);
+            start.text = start.text + match[0];
+          }
+          str2 = match[0];
+        }
+        obj = text;
+      }
+    });
+    return arr;
   }
 };
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const formatted = arg1[2].toLowerCase();
-      let str2 = arg1[1];
-      if (!str2) {
-        str2 = arg1[3];
-      }
-      if (!str2) {
-        str2 = "";
-      }
-      const str3 = str2.toLowerCase();
-      let str4 = "last";
-      if (!str3.match(/letzte/)) {
-        str4 = "next";
-        if (!str3.match(/chste/)) {
-          str4 = null;
-          if (str3.match(/diese/)) {
-            str4 = "this";
-          }
-        }
-      }
-      return DEWeekdayParser(9911).createParsingComponentsAtWeekday(reference.reference, DEWeekdayParser(9930).WEEKDAY_DICTIONARY[formatted], str4);
-    }
-  }
-];
+const items = [entry];
 
-export default _createClass(DEWeekdayParser, items);
+export default _createClass(ENExtractYearSuffixRefiner, items);

@@ -1,110 +1,286 @@
 // === Module 12372: ? ===
 
 // Module 12372
-import _mod12302 from "module_12302" /* 12302 */;
-import _mod12304 from "module_12304" /* 12304 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _mod12368 from "module_12368" /* 12368 */;
+import _slicedToArray from "module_32" /* 32 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
+import _inherits from "_inherits" /* 98 */;
+import __SENTRY_DEBUG__ from "module_12312" /* 12312 */;
+import dateTimestampInSeconds from "module_12327" /* 12327 */;
 
-require = arg1;
-let dependencyMap = arg6;
-function aggregateExceptionsFromError(fn, value, arg2, errors, source, arg5, mechanism, exception_id) {
-  _require = fn;
-  dependencyMap = value;
-  aggregateExceptionsFromError = arg2;
-  closure_3 = source;
-  if (arg5.length >= arg2 + 1) {
-    return arg5;
-  } else {
-    let items = [];
-    HermesBuiltin.arraySpread(arg5, 0);
-    length = items;
-    const _Error = Error;
-    if (obj3.isInstanceOf(errors[source], Error)) {
-      mechanism.mechanism = mechanism.mechanism || { type: "generic", handled: true };
-      let obj = {};
-      let merged = Object.assign(mechanism.mechanism);
-      const tmp3 = "AggregateError" === mechanism.type && { is_exception_group: true };
-      let merged1 = Object.assign(tmp3);
-      obj.exception_id = exception_id;
-      mechanism.mechanism = obj;
-      const tmp7 = fn(value, errors[source]);
-      length = length.length;
-      tmp7.mechanism = tmp7.mechanism || { type: "generic", handled: true };
-      let obj2 = {};
-      let merged2 = Object.assign(tmp7.mechanism);
-      obj2.type = "chained";
-      obj2.source = source;
-      obj2.exception_id = length;
-      obj2.parent_id = exception_id;
-      tmp7.mechanism = obj2;
-      const items1 = [tmp7];
-      HermesBuiltin.arraySpread(length, 1);
-      length = aggregateExceptionsFromError(fn, value, arg2, errors[source], source, items1, tmp7, length);
+const ServerRuntimeClient = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    const _Array = Array;
-    if (Array.isArray(errors.errors)) {
-      errors = errors.errors;
-      const item = errors.forEach((item, index) => {
-        if (obj.isInstanceOf(item, Error)) {
-          mechanism.mechanism = mechanism.mechanism || { type: "generic", handled: true };
-          const obj2 = {};
-          const merged = Object.assign(tmp.mechanism);
-          const tmp5 = "AggregateError" === mechanism.type && { is_exception_group: true };
-          const merged1 = Object.assign(tmp5);
-          obj2.exception_id = exception_id;
-          mechanism.mechanism = obj2;
-          const tmp12 = closure_0(closure_1, item);
-          length = length.length;
-          const _HermesInternal = HermesInternal;
-          mechanism = tmp12.mechanism;
-          const combined = "errors[" + index + "]";
-          if (!mechanism) {
-            mechanism = { type: "generic", handled: true };
-          }
-          tmp12.mechanism = mechanism;
-          const obj3 = {};
-          const merged2 = Object.assign(tmp12.mechanism);
-          obj3.type = "chained";
-          obj3.source = combined;
-          obj3.exception_id = length;
-          obj3.parent_id = exception_id;
-          tmp12.mechanism = obj3;
-          const items = [tmp12];
-          HermesBuiltin.arraySpread(length, 1);
-          length = aggregateExceptionsFromError(closure_0, closure_1, closure_2, item, closure_3, items, tmp12, length);
-        }
-        obj = _mod12302;
-      });
-    }
-    return length;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
 }
-
-export const applyAggregateErrorsToEvent = function applyAggregateErrorsToEvent(exceptionFromError, stackParser) {
-  let num = maxValueLength;
-  if (maxValueLength === undefined) {
-    num = 250;
+_possibleConstructorReturn;
+class ServerRuntimeClient {
+  constructor(arg0) {
+    self = this;
+    tmp = closure_3(this, ServerRuntimeClient);
+    obj = closure_0(closure_1[9]);
+    result = obj.registerSpanErrorInstrumentation();
+    items = [];
+    items[0] = global;
+    tmp3 = hasOwnProperty;
+    obj2 = hasOwnProperty(ServerRuntimeClient);
+    tmp4 = closure_4;
+    if (closure_7()) {
+      tmp6 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj2, items, tmp3(self).constructor);
+    } else {
+      constructResult = obj2.apply(self, items);
+    }
+    return tmp4(self, constructResult);
   }
-  if (exception.exception) {
-    if (exception.exception.values) {
-      if (originalException) {
-        const _Error = Error;
-        if (obj.isInstanceOf(originalException.originalException, Error)) {
-          let tmp5;
-          if (exception.exception.values.length > 0) {
-            tmp5 = exception.exception.values[exception.exception.values.length - 1];
+}
+_inherits(ServerRuntimeClient, _mod12368.BaseClient);
+const entry = {
+  key: "eventFromException",
+  value: function eventFromException(arg0, arg1) {
+    const result = ServerRuntimeClient(12373).eventFromUnknownInput(this, this._options.stackParser, arg0, arg1);
+    result.level = "error";
+    const obj = ServerRuntimeClient(12373);
+    return ServerRuntimeClient(12337).resolvedSyncPromise(result);
+  }
+};
+let items = [
+  entry,
+  {
+    key: "eventFromMessage",
+    value: function eventFromMessage(arg0) {
+      let str = arg1;
+      if (arg1 === undefined) {
+        str = "info";
+      }
+      const obj = ServerRuntimeClient(12337);
+      return obj.resolvedSyncPromise(ServerRuntimeClient(12373).eventFromMessage(this._options.stackParser, arg0, str, arg2, this._options.attachStacktrace));
+    }
+  },
+  {
+    key: "captureException",
+    value: function captureException(arg0, arg1, arg2) {
+      const self = this;
+      if (this._options.autoSessionTracking) {
+        if (self._sessionFlusher) {
+          const isolationScope = ServerRuntimeClient(12340).getIsolationScope();
+          const requestSession = isolationScope.getRequestSession();
+          let tmp4 = requestSession;
+          if (requestSession) {
+            tmp4 = "ok" === requestSession.status;
           }
-          if (tmp5) {
-            exception.exception.values = aggregateExceptionsFromError(exceptionFromError, stackParser, arg4, originalException.originalException, arg3, exception.exception.values, tmp5, 0).map((value) => {
-              if (value.value) {
-                value.value = _mod12304.truncate(value.value, num);
-              }
-              return value;
-            });
-            const arr = aggregateExceptionsFromError(exceptionFromError, stackParser, arg4, originalException.originalException, arg3, exception.exception.values, tmp5, 0);
+          if (tmp4) {
+            requestSession.status = "errored";
           }
+          const obj = ServerRuntimeClient(12340);
         }
-        obj = num(12302);
+      }
+      let fn = metroRequire(hasOwnProperty(ServerRuntimeClient.prototype), "captureException", self);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      const items = [arg0, arg1, arg2];
+      return fn(items);
+    }
+  },
+  {
+    key: "captureEvent",
+    value: function captureEvent(type, arg1, arg2) {
+      const self = this;
+      if (this._options.autoSessionTracking) {
+        if (self._sessionFlusher) {
+          if ("exception" === tmp) {
+            if (type.exception) {
+              if (type.exception.values) {
+                if (type.exception.values.length > 0) {
+                  const isolationScope = ServerRuntimeClient(12340).getIsolationScope();
+                  const requestSession = isolationScope.getRequestSession();
+                  let tmp5 = requestSession;
+                  if (requestSession) {
+                    tmp5 = "ok" === requestSession.status;
+                  }
+                  if (tmp5) {
+                    requestSession.status = "errored";
+                  }
+                  const obj = ServerRuntimeClient(12340);
+                }
+              }
+            }
+          }
+          tmp = type.type || "exception";
+        }
+      }
+      let fn = metroRequire(hasOwnProperty(ServerRuntimeClient.prototype), "captureEvent", self);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      const items = [type, arg1, arg2];
+      return fn(items);
+    }
+  },
+  {
+    key: "close",
+    value: function close(arg0) {
+      const self = this;
+      if (this._sessionFlusher) {
+        const _sessionFlusher = self._sessionFlusher;
+        _sessionFlusher.close();
+      }
+      let fn = metroRequire(hasOwnProperty(ServerRuntimeClient.prototype), "close", self);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      const items = [arg0];
+      return fn(items);
+    }
+  },
+  {
+    key: "initSessionFlusher",
+    value: function initSessionFlusher() {
+      const self = this;
+      const release = this._options.release;
+      if (release) {
+        const obj = { release, environment: tmp };
+        const sessionFlusher = new ServerRuntimeClient(12366).SessionFlusher(self, obj);
+        self._sessionFlusher = sessionFlusher;
+      } else if (ServerRuntimeClient(12341).DEBUG_BUILD) {
+        const logger = ServerRuntimeClient(12313).logger;
+        logger.warn("Cannot initialize an instance of SessionFlusher if no release is provided!");
+      }
+    }
+  },
+  {
+    key: "captureCheckIn",
+    value: function captureCheckIn(checkInId, arg1, arg2) {
+      if ("checkInId" in checkInId) {
+        if (checkInId.checkInId) {
+          checkInId = checkInId.checkInId;
+        }
+        const self = this;
+        if (this._isEnabled()) {
+          const options = self.getOptions();
+          const tunnel = options.tunnel;
+          const obj4 = { check_in_id: checkInId, monitor_slug: null, status: null, release: null, environment: null };
+          ({ monitorSlug: obj2.monitor_slug, status: obj2.status } = checkInId);
+          ({ release: obj2.release, environment: obj2.environment } = options);
+          if ("duration" in checkInId) {
+            obj4.duration = checkInId.duration;
+          }
+          if (arg1) {
+            ({ schedule: obj3.schedule, checkinMargin: obj3.checkin_margin, maxRuntime: obj3.max_runtime, timezone: obj3.timezone, failureIssueThreshold: obj3.failure_issue_threshold, recoveryThreshold: obj3.recovery_threshold } = arg1);
+            obj4.monitor_config = { schedule: null, checkin_margin: null, max_runtime: null, timezone: null, failure_issue_threshold: null, recovery_threshold: null };
+            const obj8 = { schedule: null, checkin_margin: null, max_runtime: null, timezone: null, failure_issue_threshold: null, recovery_threshold: null };
+          }
+          [tmp9, tmp10] = self._getTraceInfoFromScope(arg2);
+          if (tmp10) {
+            const obj9 = { trace: tmp10 };
+            obj4.contexts = obj9;
+          }
+          const obj5 = ServerRuntimeClient(12374);
+          const sdkMetadata = self.getSdkMetadata();
+          const checkInEnvelope = obj5.createCheckInEnvelope(obj4, tmp9, sdkMetadata, tunnel, self.getDsn());
+          if (ServerRuntimeClient(12341).DEBUG_BUILD) {
+            const logger2 = ServerRuntimeClient(12313).logger;
+            logger2.info("Sending checkin:", checkInId.monitorSlug, checkInId.status);
+          }
+          self.sendEnvelope(checkInEnvelope);
+          return checkInId;
+        } else {
+          if (ServerRuntimeClient(12341).DEBUG_BUILD) {
+            const logger = ServerRuntimeClient(12313).logger;
+            logger.warn("SDK not enabled, will not capture checkin.");
+          }
+          return checkInId;
+        }
+      }
+      checkInId = ServerRuntimeClient(12324).uuid4();
+      const obj = ServerRuntimeClient(12324);
+    }
+  },
+  {
+    key: "_captureRequestSession",
+    value: function _captureRequestSession() {
+      if (this._sessionFlusher) {
+        const _sessionFlusher = this._sessionFlusher;
+        const result = _sessionFlusher.incrementSessionStatusCount();
+      } else if (ServerRuntimeClient(12341).DEBUG_BUILD) {
+        const logger = ServerRuntimeClient(12313).logger;
+        logger.warn("Discarded request mode session because autoSessionTracking option was disabled");
+      }
+    }
+  },
+  {
+    key: "_prepareEvent",
+    value: function _prepareEvent(platform, arg1, arg2, arg3) {
+      const self = this;
+      if (this._options.platform) {
+        platform.platform = platform.platform || self._options.platform;
+      }
+      if (self._options.runtime) {
+        const obj = {};
+        const merged = Object.assign(platform.contexts);
+        obj.runtime = platform.contexts || {}.runtime || self._options.runtime;
+        platform.contexts = obj;
+        const tmp3 = platform.contexts || {};
+      }
+      if (self._options.serverName) {
+        platform.server_name = platform.server_name || self._options.serverName;
+      }
+      let fn = metroRequire(hasOwnProperty(ServerRuntimeClient.prototype), "_prepareEvent", self);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      const items = [platform, arg1, arg2, arg3];
+      return fn(items);
+    }
+  },
+  {
+    key: "_getTraceInfoFromScope",
+    value: function _getTraceInfoFromScope(arg0) {
+      if (arg0) {
+        const _getSpanForScopeResult = ServerRuntimeClient(12335)._getSpanForScope(arg0);
+        if (_getSpanForScopeResult) {
+          let spanToTraceContextResult = ServerRuntimeClient(12318).spanToTraceContext(_getSpanForScopeResult);
+          const tmpResult = ServerRuntimeClient(12318);
+        } else {
+          spanToTraceContextResult = ServerRuntimeClient(12340).getTraceContextFromScope(arg0);
+          const tmpResult3 = ServerRuntimeClient(12340);
+        }
+        const tmpResult4 = ServerRuntimeClient(12349);
+        if (_getSpanForScopeResult) {
+          let dynamicSamplingContextFromSpan = tmpResult4.getDynamicSamplingContextFromSpan(_getSpanForScopeResult);
+        } else {
+          const self = this;
+          dynamicSamplingContextFromSpan = tmpResult4.getDynamicSamplingContextFromScope(this, arg0);
+        }
+        const items = [dynamicSamplingContextFromSpan, spanToTraceContextResult];
+        return items;
+      } else {
+        const items1 = [undefined, undefined];
+        return items1;
       }
     }
   }
-};
+];
+
+export const ServerRuntimeClient = _createClass(ServerRuntimeClient, items);

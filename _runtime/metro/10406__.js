@@ -1,7 +1,8 @@
 // === Module 10406: ? ===
 
 // Module 10406
-import registerAsset from "module_1121" /* 1121 */;
+import baseRest from "baseRest" /* 7833 */;
+import baseDelay from "baseDelay" /* 10407 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "cc9053b1cd7f0215ee3d9ba69e2b389a", name: "PinIcon", type: "png" });
+export default baseRest((arg0, arg1) => baseDelay(arg0, 1, arg1));

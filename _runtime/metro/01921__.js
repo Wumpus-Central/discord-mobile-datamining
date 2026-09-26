@@ -2,38 +2,20 @@
 
 // Module 1921
 globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "hi",
+  locale: "zh",
   pluralRuleFunction(arg0, arg1) {
-    if (arg1) {
-      let str3 = "one";
-      if (1 != arg0) {
-        let str5 = "two";
-        if (2 != arg0) {
-          str5 = "two";
-          if (3 != arg0) {
-            let str6 = "few";
-            if (4 != arg0) {
-              let str7 = "other";
-              if (6 == arg0) {
-                str7 = "many";
-              }
-              str6 = str7;
-            }
-            str5 = str6;
-          }
-        }
-        str3 = str5;
-      }
-      let str2 = str3;
-    } else {
-      str2 = "other";
-      if (arg0 >= 0) {
-        str2 = "other";
-        if (arg0 <= 1) {
-          str2 = "one";
-        }
-      }
-    }
-    return str2;
+    return "other";
   }
 });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "zh-Hans", parentLocale: "zh" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "zh-Hans-HK", parentLocale: "zh-Hans" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "zh-Hans-MO", parentLocale: "zh-Hans" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "zh-Hans-SG", parentLocale: "zh-Hans" });
+globalThis.IntlMessageFormat.__addLocaleData({
+  locale: "zh-Hant",
+  pluralRuleFunction(arg0, arg1) {
+    return "other";
+  }
+});
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "zh-Hant-HK", parentLocale: "zh-Hant" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "zh-Hant-MO", parentLocale: "zh-Hant-HK" });

@@ -1,26 +1,31 @@
 // === Module 3942: ? ===
 
 // Module 3942
-let closure_0 = { lessThanXSeconds: { one: "\u03BB\u03B9\u03B3\u03CC\u03C4\u03B5\u03C1\u03BF \u03B1\u03C0\u03CC \u03AD\u03BD\u03B1 \u03B4\u03B5\u03C5\u03C4\u03B5\u03C1\u03CC\u03BB\u03B5\u03C0\u03C4\u03BF", other: "\u03BB\u03B9\u03B3\u03CC\u03C4\u03B5\u03C1\u03BF \u03B1\u03C0\u03CC {{count}} \u03B4\u03B5\u03C5\u03C4\u03B5\u03C1\u03CC\u03BB\u03B5\u03C0\u03C4\u03B1" }, xSeconds: { one: "1 \u03B4\u03B5\u03C5\u03C4\u03B5\u03C1\u03CC\u03BB\u03B5\u03C0\u03C4\u03BF", other: "{{count}} \u03B4\u03B5\u03C5\u03C4\u03B5\u03C1\u03CC\u03BB\u03B5\u03C0\u03C4\u03B1" }, halfAMinute: "\u03BC\u03B9\u03C3\u03CC \u03BB\u03B5\u03C0\u03C4\u03CC", lessThanXMinutes: { one: "\u03BB\u03B9\u03B3\u03CC\u03C4\u03B5\u03C1\u03BF \u03B1\u03C0\u03CC \u03AD\u03BD\u03B1 \u03BB\u03B5\u03C0\u03C4\u03CC", other: "\u03BB\u03B9\u03B3\u03CC\u03C4\u03B5\u03C1\u03BF \u03B1\u03C0\u03CC {{count}} \u03BB\u03B5\u03C0\u03C4\u03AC" }, xMinutes: { one: "1 \u03BB\u03B5\u03C0\u03C4\u03CC", other: "{{count}} \u03BB\u03B5\u03C0\u03C4\u03AC" }, aboutXHours: { one: "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 1 \u03CE\u03C1\u03B1", other: "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 {{count}} \u03CE\u03C1\u03B5\u03C2" }, xHours: { one: "1 \u03CE\u03C1\u03B1", other: "{{count}} \u03CE\u03C1\u03B5\u03C2" }, xDays: { one: "1 \u03B7\u03BC\u03AD\u03C1\u03B1", other: "{{count}} \u03B7\u03BC\u03AD\u03C1\u03B5\u03C2" }, aboutXWeeks: { one: "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 1 \u03B5\u03B2\u03B4\u03BF\u03BC\u03AC\u03B4\u03B1", other: "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 {{count}} \u03B5\u03B2\u03B4\u03BF\u03BC\u03AC\u03B4\u03B5\u03C2" }, xWeeks: { one: "1 \u03B5\u03B2\u03B4\u03BF\u03BC\u03AC\u03B4\u03B1", other: "{{count}} \u03B5\u03B2\u03B4\u03BF\u03BC\u03AC\u03B4\u03B5\u03C2" }, aboutXMonths: { one: "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 1 \u03BC\u03AE\u03BD\u03B1\u03C2", other: "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 {{count}} \u03BC\u03AE\u03BD\u03B5\u03C2" }, xMonths: { one: "1 \u03BC\u03AE\u03BD\u03B1\u03C2", other: "{{count}} \u03BC\u03AE\u03BD\u03B5\u03C2" }, aboutXYears: { one: "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 1 \u03C7\u03C1\u03CC\u03BD\u03BF", other: "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 {{count}} \u03C7\u03C1\u03CC\u03BD\u03B9\u03B1" }, xYears: { one: "1 \u03C7\u03C1\u03CC\u03BD\u03BF", other: "{{count}} \u03C7\u03C1\u03CC\u03BD\u03B9\u03B1" }, overXYears: { one: "\u03C0\u03AC\u03BD\u03C9 \u03B1\u03C0\u03CC 1 \u03C7\u03C1\u03CC\u03BD\u03BF", other: "\u03C0\u03AC\u03BD\u03C9 \u03B1\u03C0\u03CC {{count}} \u03C7\u03C1\u03CC\u03BD\u03B9\u03B1" }, almostXYears: { one: "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 1 \u03C7\u03C1\u03CC\u03BD\u03BF", other: "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 {{count}} \u03C7\u03C1\u03CC\u03BD\u03B9\u03B1" } };
+import module_2120 from "module_2120" /* 2120 */;
 
-export default function formatDistance(arg0, arg1, addSuffix) {
-  if (typeof closure_0[arg0] === "string") {
-    let tmp6 = tmp;
-    if (null != addSuffix) {
-      tmp6 = tmp;
-      if (addSuffix.addSuffix) {
-        if (!addSuffix.comparison) {
-          let text = `${tmp} πριν`;
-        }
-        text = `σε ${tmp}`;
-      }
+if (!module_2120) {
+  const obj2 = { default: module_2120 };
+  let obj = obj2;
+} else {
+  obj = module_2120;
+}
+const obj3 = { narrow: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], abbreviated: ["Jan", "Feb", "M\u00E4r", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"], wide: ["Januar", "Februar", "M\u00E4rz", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"] };
+const date = {
+  ordinalNumber(arg0) {
+    return Number(arg0) + ".";
+  },
+  era: obj.default({ values: { narrow: ["v.Chr.", "n.Chr."], abbreviated: ["v.Chr.", "n.Chr."], wide: ["vor Christus", "nach Christus"] }, defaultWidth: "wide" }),
+  quarter: obj.default({
+    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["Q1", "Q2", "Q3", "Q4"], wide: ["1. Quartal", "2. Quartal", "3. Quartal", "4. Quartal"] },
+    defaultWidth: "wide",
+    argumentCallback(arg0) {
+      return arg0 - 1;
     }
-    return tmp6;
-  } else if (1 === arg1) {
-    let one = tmp.one;
-  } else {
-    const _String = String;
-    one = tmp.other.replace("{{count}}", String(arg1));
-  }
+  }),
+  month: obj.default({ values: obj3, formattingValues: { narrow: obj3.narrow, abbreviated: ["Jan.", "Feb.", "M\u00E4rz", "Apr.", "Mai", "Juni", "Juli", "Aug.", "Sep.", "Okt.", "Nov.", "Dez."], wide: obj3.wide }, defaultWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["S", "M", "D", "M", "D", "F", "S"], short: ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"], abbreviated: ["So.", "Mo.", "Di.", "Mi.", "Do.", "Fr.", "Sa."], wide: ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"] }, defaultWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "vm.", pm: "nm.", midnight: "Mitternacht", noon: "Mittag", morning: "Morgen", afternoon: "Nachm.", evening: "Abend", night: "Nacht" }, abbreviated: { am: "vorm.", pm: "nachm.", midnight: "Mitternacht", noon: "Mittag", morning: "Morgen", afternoon: "Nachmittag", evening: "Abend", night: "Nacht" }, wide: { am: "vormittags", pm: "nachmittags", midnight: "Mitternacht", noon: "Mittag", morning: "Morgen", afternoon: "Nachmittag", evening: "Abend", night: "Nacht" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "vm.", pm: "nm.", midnight: "Mitternacht", noon: "Mittag", morning: "morgens", afternoon: "nachm.", evening: "abends", night: "nachts" }, abbreviated: { am: "vorm.", pm: "nachm.", midnight: "Mitternacht", noon: "Mittag", morning: "morgens", afternoon: "nachmittags", evening: "abends", night: "nachts" }, wide: { am: "vormittags", pm: "nachmittags", midnight: "Mitternacht", noon: "Mittag", morning: "morgens", afternoon: "nachmittags", evening: "abends", night: "nachts" } }, defaultFormattingWidth: "wide" })
 };
+
+export default date;
 export default exports.default;

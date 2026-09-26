@@ -2,20 +2,24 @@
 
 // Module 1544
 
-export default (arg0, arr) => {
-  const obj = {};
-  const keys = Object.keys(arg0);
-  for (let num = 0; num < keys.length; num = num + 1) {
-    let tmp2 = keys[num];
-    let tmp3 = arg0[tmp2];
-    if (tmp) {
-      let tmp5 = -1 !== arr.indexOf(tmp2);
-    } else {
-      tmp5 = arr(tmp2, tmp3, arg0);
-    }
-    if (tmp5) {
-      obj[tmp2] = tmp3;
+export default (str, str2) => {
+  if (typeof str === "string") {
+    if (typeof str2 === "string") {
+      if ("" === str2) {
+        const items = [str];
+        return items;
+      } else {
+        const index = str.indexOf(str2);
+        if (-1 === index) {
+          const items1 = [str];
+          let items2 = items1;
+        } else {
+          items2 = [str.slice(0, index), str.slice(index + str2.length)];
+        }
+        return items2;
+      }
     }
   }
-  return obj;
+  const typeError = new TypeError("Expected the arguments to be of type `string`");
+  throw typeError;
 };

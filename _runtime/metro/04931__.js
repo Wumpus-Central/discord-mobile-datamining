@@ -1,12 +1,22 @@
 // === Module 4931: ? ===
 
 // Module 4931
-import shortOut from "shortOut" /* 4932 */;
-import overRest from "overRest" /* 4936 */;
-import flatten from "flatten" /* 4938 */;
+import _mod523 from "module_523" /* 523 */;
 
+let prototype;
+if (_mod523) {
+  prototype = _mod523.prototype;
+}
+let valueOf;
+if (prototype) {
+  valueOf = prototype.valueOf;
+}
 
-export default function flatRest(arg0) {
-  const tmp = shortOut;
-  return tmp(overRest(arg0, undefined, flatten), "" + arg0);
+export default function cloneSymbol(arg0) {
+  if (valueOf) {
+    const call = valueOf.call;
+    Object(typeof call === "unknown" ? valueOf() : call(arg0));
+  } else {
+    return {};
+  }
 };

@@ -1,17 +1,11 @@
 // === Module 5254: ? ===
 
 // Module 5254
-import _modDef5229 from "module_5229" /* 5229 */;
-import noop from "module_19" /* 19 */;
+import _mod17 from "module_17" /* 17 */;
+import module_65 from "module_65" /* 65 */;
 
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenContentWrapper", validAttributes: {} };
 
-export default function useTransitionProgress() {
-  const context = noop.useContext(_modDef5229);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find values for transition progress. Are you inside a screen in Native Stack?");
-    throw error;
-  } else {
-    return context;
-  }
-};
+export default module_65.get("RNSScreenContentWrapper", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/file_upload", scales: [1], hash: "23b8cc9c9f2f7ce0243fa024f7324767", name: "NitroFileUpload.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL2ZpbGVfdXBsb2Fk", scales: [1], hash: "090cf9b7482c3866f80eef4565789ffc", name: "zh-TW.messages.090cf9b7482c3866f80eef4565789ffc.compiled.messages", type: "jsona" });

@@ -1,30 +1,25 @@
 // === Module 4055: ? ===
 
 // Module 4055
-import module_2119 from "module_2119" /* 2119 */;
+let closure_0 = { lessThanXSeconds: { one: "bir saniyeden az", other: "{{count}} saniyeden az" }, xSeconds: { one: "1 saniye", other: "{{count}} saniye" }, halfAMinute: "yar\u0131m dakika", lessThanXMinutes: { one: "bir dakikadan az", other: "{{count}} dakikadan az" }, xMinutes: { one: "1 dakika", other: "{{count}} dakika" }, aboutXHours: { one: "yakla\u015F\u0131k 1 saat", other: "yakla\u015F\u0131k {{count}} saat" }, xHours: { one: "1 saat", other: "{{count}} saat" }, xDays: { one: "1 g\u00FCn", other: "{{count}} g\u00FCn" }, aboutXWeeks: { one: "yakla\u015F\u0131k 1 hafta", other: "yakla\u015F\u0131k {{count}} hafta" }, xWeeks: { one: "1 hafta", other: "{{count}} hafta" }, aboutXMonths: { one: "yakla\u015F\u0131k 1 ay", other: "yakla\u015F\u0131k {{count}} ay" }, xMonths: { one: "1 ay", other: "{{count}} ay" }, aboutXYears: { one: "yakla\u015F\u0131k 1 y\u0131l", other: "yakla\u015F\u0131k {{count}} y\u0131l" }, xYears: { one: "1 y\u0131l", other: "{{count}} y\u0131l" }, overXYears: { one: "1 y\u0131ldan fazla", other: "{{count}} y\u0131ldan fazla" }, almostXYears: { one: "neredeyse 1 y\u0131l", other: "neredeyse {{count}} y\u0131l" } };
 
-if (!module_2119) {
-  const obj2 = { default: module_2119 };
-  let obj = obj2;
-} else {
-  obj = module_2119;
-}
-const date = {
-  ordinalNumber(arg0, arg1) {
-    return Number(arg0) + ".";
-  },
-  era: obj.default({ values: { narrow: ["M\u00D6", "MS"], abbreviated: ["M\u00D6", "MS"], wide: ["Milattan \u00D6nce", "Milattan Sonra"] }, defaultWidth: "wide" }),
-  quarter: obj.default({
-    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["1\u00C7", "2\u00C7", "3\u00C7", "4\u00C7"], wide: ["\u0130lk \u00E7eyrek", "\u0130kinci \u00C7eyrek", "\u00DC\u00E7\u00FCnc\u00FC \u00E7eyrek", "Son \u00E7eyrek"] },
-    defaultWidth: "wide",
-    argumentCallback(arg0) {
-      return Number(arg0) - 1;
+export default function formatDistance(arg0, arg1, addSuffix) {
+  if (typeof closure_0[arg0] === "string") {
+    let tmp5 = tmp;
+    if (null != addSuffix) {
+      tmp5 = tmp;
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          let text = `${tmp} önce`;
+        }
+        text = `${tmp} sonra`;
+      }
     }
-  }),
-  month: obj.default({ values: { narrow: ["O", "\u015E", "M", "N", "M", "H", "T", "A", "E", "E", "K", "A"], abbreviated: ["Oca", "\u015Eub", "Mar", "Nis", "May", "Haz", "Tem", "A\u011Fu", "Eyl", "Eki", "Kas", "Ara"], wide: ["Ocak", "\u015Eubat", "Mart", "Nisan", "May\u0131s", "Haziran", "Temmuz", "A\u011Fustos", "Eyl\u00FCl", "Ekim", "Kas\u0131m", "Aral\u0131k"] }, defaultWidth: "wide" }),
-  day: obj.default({ values: { narrow: ["P", "P", "S", "\u00C7", "P", "C", "C"], short: ["Pz", "Pt", "Sa", "\u00C7a", "Pe", "Cu", "Ct"], abbreviated: ["Paz", "Pzt", "Sal", "\u00C7ar", "Per", "Cum", "Cts"], wide: ["Pazar", "Pazartesi", "Sal\u0131", "\u00C7ar\u015Famba", "Per\u015Fembe", "Cuma", "Cumartesi"] }, defaultWidth: "wide" }),
-  dayPeriod: obj.default({ values: { narrow: { am: "\u00F6\u00F6", pm: "\u00F6s", midnight: "gy", noon: "\u00F6", morning: "sa", afternoon: "\u00F6s", evening: "ak", night: "ge" }, abbreviated: { am: "\u00D6\u00D6", pm: "\u00D6S", midnight: "gece yar\u0131s\u0131", noon: "\u00F6\u011Fle", morning: "sabah", afternoon: "\u00F6\u011Fleden sonra", evening: "ak\u015Fam", night: "gece" }, wide: { am: "\u00D6.\u00D6.", pm: "\u00D6.S.", midnight: "gece yar\u0131s\u0131", noon: "\u00F6\u011Fle", morning: "sabah", afternoon: "\u00F6\u011Fleden sonra", evening: "ak\u015Fam", night: "gece" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "\u00F6\u00F6", pm: "\u00F6s", midnight: "gy", noon: "\u00F6", morning: "sa", afternoon: "\u00F6s", evening: "ak", night: "ge" }, abbreviated: { am: "\u00D6\u00D6", pm: "\u00D6S", midnight: "gece yar\u0131s\u0131", noon: "\u00F6\u011Flen", morning: "sabahleyin", afternoon: "\u00F6\u011Fleden sonra", evening: "ak\u015Famleyin", night: "geceleyin" }, wide: { am: "\u00F6.\u00F6.", pm: "\u00F6.s.", midnight: "gece yar\u0131s\u0131", noon: "\u00F6\u011Flen", morning: "sabahleyin", afternoon: "\u00F6\u011Fleden sonra", evening: "ak\u015Famleyin", night: "geceleyin" } }, defaultFormattingWidth: "wide" })
+    return tmp5;
+  } else if (1 === arg1) {
+    let one = tmp.one;
+  } else {
+    one = tmp.other.replace("{{count}}", arg1.toString());
+  }
 };
-
-export default date;
 export default exports.default;

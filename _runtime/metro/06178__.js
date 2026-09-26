@@ -1,14 +1,13 @@
 // === Module 6178: ? ===
 
 // Module 6178
-import ComposedGestureName from "ComposedGestureName" /* 6127 */;
-import _mod6176 from "module_6176" /* 6176 */;
+const require = globalThis.__r;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const useSimultaneousGestures = function useSimultaneousGestures() {
-  const items = [...arguments];
-  const items1 = [ComposedGestureName.ComposedGestureName.Simultaneous, ...items];
-  return _mod6176.useComposedGesture.apply(items1);
-};
+for (const key10013 in require("module_6179")) {
+  arg5[key10013] = require("module_6179")[key10013];
+  continue;
+}
+for (const key10017 in require("transformLongPressProps")) {
+  arg5[key10017] = require("transformLongPressProps")[key10017];
+  continue;
+}

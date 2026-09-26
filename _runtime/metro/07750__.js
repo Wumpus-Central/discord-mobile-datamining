@@ -1,24 +1,8 @@
 // === Module 7750: ? ===
 
 // Module 7750
+import _mod17 from "module_17" /* 17 */;
 
-export default (obj) => {
-  if (obj instanceof Object) {
-    const _Array = Array;
-    if (!Array.isArray(obj)) {
-      obj = {};
-      for (const key10010 in arg0) {
-        if (!arg0.hasOwnProperty(key10010)) {
-          continue;
-        } else {
-          obj[key10010] = key10010;
-          continue;
-        }
-        continue;
-      }
-      return obj;
-    }
-  }
-  const error = new Error("keyMirror(...): Argument must be an object.");
-  throw error;
-};
+const StyleSheet = _mod17.StyleSheet;
+
+export default StyleSheet.create({ container: { flex: 1, overflow: "hidden" }, loadingOrErrorView: { position: "absolute", flex: 1, justifyContent: "center", alignItems: "center", height: "100%", width: "100%", backgroundColor: "white" }, loadingProgressBar: { height: 20 }, errorText: { fontSize: 14, textAlign: "center", marginBottom: 2 }, errorTextTitle: { fontSize: 15, fontWeight: "500", marginBottom: 10 }, webView: { backgroundColor: "#ffffff" } });

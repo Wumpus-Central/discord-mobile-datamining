@@ -1,13 +1,15 @@
 // === Module 9925: ? ===
 
 // Module 9925
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 9891 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _mod9894 from "module_9894" /* 9894 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 9902 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
+const ENTimeUnitCasualRelativeFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,79 +29,59 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-const regExp = new RegExp("([0-9]{4})\\-([0-9]{1,2})\\-([0-9]{1,2})(?:T([0-9]{1,2}):([0-9]{1,2})(?::([0-9]{1,2})(?:\\.(\\d{1,4}))?)?(Z|([+-]\\d{2}):?(\\d{2})?)?)?(?=\\W|$)", "i");
-class ISOFormatParser {
+const regExp = new RegExp("(this|last|past|next|after|\\+|-)\\s*(" + _mod9894.TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
+const regExp1 = new RegExp("(this|last|past|next|after|\\+|-)\\s*(" + _mod9894.TIME_UNITS_NO_ABBR_PATTERN + ")(?=\\W|$)", "i");
+class ENTimeUnitCasualRelativeFormatParser {
   constructor() {
-    self = this;
-    tmp = closure_0(this, ISOFormatParser);
-    tmp2 = c2;
-    obj = c2(ISOFormatParser);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+    flag = global;
+    if (global === undefined) {
+      flag = true;
     }
-    return tmp3(self, constructResult);
+    self = this;
+    tmp = c2(this, ENTimeUnitCasualRelativeFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(ENTimeUnitCasualRelativeFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.allowAbbreviations = flag;
+    return tmp3Result;
   }
 }
-_classCallCheck = ISOFormatParser;
-_inherits(ISOFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENTimeUnitCasualRelativeFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
-    return regExp;
+    return this.allowAbbreviations ? regExp : regExp1;
   }
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingComponents, arg1) {
-      const parsingComponents = createParsingComponents.createParsingComponents({ year: parseInt(arg1[1]), month: parseInt(arg1[2]), day: parseInt(arg1[3]) });
-      if (null != arg1[4]) {
-        const _parseInt5 = parseInt;
-        parsingComponents.assign("hour", parseInt(arg1[4]));
-        const _parseInt6 = parseInt;
-        parsingComponents.assign("minute", parseInt(arg1[5]));
-        if (null != arg1[6]) {
-          const _parseInt = parseInt;
-          parsingComponents.assign("second", parseInt(arg1[6]));
-        }
-        if (null != arg1[7]) {
-          const _parseInt2 = parseInt;
-          parsingComponents.assign("millisecond", parseInt(arg1[7]));
-        }
-        if (null != arg1[8]) {
-          let num2 = 0;
-          if (!arg1[9]) {
-            let num3 = parsingComponents.assign("timezoneOffset", num2);
-          } else {
-            const _parseInt3 = parseInt;
-            num3 = 0;
-            const parsed = parseInt(arg1[9]);
-            if (null != arg1[10]) {
-              const _parseInt4 = parseInt;
-              num3 = parseInt(arg1[10]);
-            }
-            const result = 60 * parsed;
-            if (result >= 0) {
-              num2 = result + num3;
-            }
+    value: function innerExtract(reference, arg1) {
+      const formatted = arg1[1].toLowerCase();
+      const parseDurationResult = ENTimeUnitCasualRelativeFormatParser(9894).parseDuration(arg1[2]);
+      if (parseDurationResult) {
+        if ("last" !== formatted) {
+          if ("past" !== formatted) {
+            let reverseDurationResult = parseDurationResult;
           }
-          num2 = result - num3;
+          const ParsingComponents = ENTimeUnitCasualRelativeFormatParser(9898).ParsingComponents;
+          return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
         }
+        reverseDurationResult = ENTimeUnitCasualRelativeFormatParser(9897).reverseDuration(parseDurationResult);
+      } else {
+        return null;
       }
-      return parsingComponents.addTag("parser/ISOFormatParser");
     }
   }
 ];
 
-export default _createClass(ISOFormatParser, items);
+export default _createClass(ENTimeUnitCasualRelativeFormatParser, items);

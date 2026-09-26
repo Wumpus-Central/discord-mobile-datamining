@@ -2,68 +2,41 @@
 
 // Module 13912
 
-export default {
-  isASCIIDigit(decodeResult) {
-    let tmp = decodeResult >= 48;
-    if (tmp) {
-      tmp = decodeResult <= 57;
-    }
-    return tmp;
-  },
-  isASCIIAlpha(input) {
-    let tmp = input >= 65;
-    if (tmp) {
-      tmp = input <= 90;
-    }
-    if (!tmp) {
-      let tmp2 = input >= 97;
-      if (tmp2) {
-        tmp2 = input <= 122;
+export default () => (startTimer) => {
+  closure_0 = startTimer;
+  startTimer = startTimer.startTimer;
+  return {
+    features: {
+      benchmark(title) {
+        const items = [];
+        closure_2 = items();
+        function step(title) {
+          let num = 0;
+          if (0 !== items.length) {
+            num = items[items.length - 1].time;
+          }
+          const tmp = closure_2();
+          items.push({ title, time: tmp, delta: tmp - num });
+          const obj = { title, time: tmp, delta: tmp - num };
+        }
+        items.push({ title, time: 0, delta: 0 });
+        function stop(title) {
+          if (typeof step === "function") {
+            let num = 0;
+            if (0 !== items.length) {
+              num = items[items.length - 1].time;
+            }
+            const tmp3 = closure_2();
+            const obj = { title, time: tmp3, delta: tmp3 - num };
+            items.push(obj);
+            const obj2 = { title, steps: items };
+            title.send("benchmark.report", obj2);
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        }
+        return { step, stop, last: stop };
       }
-      tmp = tmp2;
     }
-    return tmp;
-  },
-  isASCIIAlphanumeric(arg0) {
-    let tmp = arg0 >= 65;
-    if (tmp) {
-      tmp = arg0 <= 90;
-    }
-    if (!tmp) {
-      let tmp2 = arg0 >= 97;
-      if (tmp2) {
-        tmp2 = arg0 <= 122;
-      }
-      tmp = tmp2;
-    }
-    if (!tmp) {
-      let tmp3 = arg0 >= 48;
-      if (tmp3) {
-        tmp3 = arg0 <= 57;
-      }
-      tmp = tmp3;
-    }
-    return tmp;
-  },
-  isASCIIHex(decodeResult) {
-    let tmp = decodeResult >= 48;
-    if (tmp) {
-      tmp = decodeResult <= 57;
-    }
-    if (!tmp) {
-      let tmp2 = decodeResult >= 65;
-      if (tmp2) {
-        tmp2 = decodeResult <= 70;
-      }
-      tmp = tmp2;
-    }
-    if (!tmp) {
-      let tmp3 = decodeResult >= 97;
-      if (tmp3) {
-        tmp3 = decodeResult <= 102;
-      }
-      tmp = tmp3;
-    }
-    return tmp;
-  }
+  };
 };

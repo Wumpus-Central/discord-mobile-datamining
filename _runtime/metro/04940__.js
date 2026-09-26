@@ -1,26 +1,23 @@
 // === Module 4940: ? ===
 
 // Module 4940
-import _mod514 from "module_514" /* 514 */;
-import _mod523 from "module_523" /* 523 */;
-import baseIsArguments from "baseIsArguments" /* 533 */;
 
-let isConcatSpreadable;
-if (_mod523) {
-  isConcatSpreadable = _mod523.isConcatSpreadable;
-}
-
-export default function isFlattenable(arg0) {
-  let tmp3 = _mod514(arg0) || baseIsArguments(arg0);
-  if (!tmp3) {
-    let tmp5 = isConcatSpreadable;
-    if (isConcatSpreadable) {
-      tmp5 = arg0;
+export default function shortOut(arg0) {
+  closure_0 = arg0;
+  c1 = 0;
+  closure_2 = 0;
+  return () => {
+    const tmp = now();
+    closure_2 = tmp;
+    if (0 < 16 - (tmp - closure_2)) {
+      const sum = c1 + 1;
+      c1 = sum;
+      if (800 <= sum) {
+        return arguments[0];
+      }
+    } else {
+      c1 = 0;
     }
-    if (tmp5) {
-      tmp5 = arg0[isConcatSpreadable];
-    }
-    tmp3 = tmp5;
-  }
-  return tmp3;
+    return closure_0(...arguments);
+  };
 };

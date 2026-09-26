@@ -1,29 +1,18 @@
 // === Module 1525: ? ===
 
 // Module 1525
-import context12 from "context1" /* 1526 */;
-import NavigationContext from "NavigationContext" /* 1528 */;
+import _mod1526 from "module_1526" /* 1526 */;
 import noop from "module_19" /* 19 */;
 
-require = fn;
-const jsx = fn(21).jsx;
-let context = noop.createContext(undefined);
+require = arg1;
 
-export const NavigationRouteContext = context;
-export const NamedRouteContextListContext = noop.createContext(undefined);
-export const NavigationProvider = function NavigationProvider(route) {
-  route = route.route;
-  ({ navigation, children } = route);
-  context = noop.useContext(context12.IsFocusedContext);
-  let tmp5 = null != context;
-  const context1 = noop.useContext(context12.FocusedRouteKeyContext);
-  if (tmp5) {
-    tmp5 = !context;
+export const useRoute = function useRoute() {
+  const context = noop.useContext(_mod1526.NavigationRouteContext);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find a route object. Is your component inside a screen in a navigator?");
+    throw error;
+  } else {
+    return context;
   }
-  let tmp6 = !tmp5;
-  if (!tmp5) {
-    tmp6 = context1 === route.key;
-  }
-  const obj = { value: route, children: jsx(NavigationContext.NavigationContext.Provider, { value: navigation, children: jsx(context12.IsFocusedContext.Provider, { value: tmp6, children }) }) };
-  return <context.Provider value={route}>{jsx(NavigationContext.NavigationContext.Provider, { value: navigation, children: jsx(context12.IsFocusedContext.Provider, { value: tmp6, children }) })}</context.Provider>;
 };

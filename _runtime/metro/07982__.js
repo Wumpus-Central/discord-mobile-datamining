@@ -2,16 +2,15 @@
 
 // Module 7982
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef7925 from "module_7925" /* 7925 */;
-import unitsDefault from "units" /* 7979 */;
-import _modDef7984 from "module_7984" /* 7984 */;
+import _modDef7933 from "module_7933" /* 7933 */;
+import _modDef7983 from "module_7983" /* 7983 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Mask = fn;
+const Line = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -33,12 +32,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Mask {
+class Line {
   constructor() {
     self = this;
-    tmp = closure_3(this, Mask);
+    tmp = closure_3(this, Line);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Mask);
+    obj = hasOwnProperty(Line);
     tmp3 = closure_4;
     if (closure_7()) {
       tmp7 = globalThis;
@@ -53,55 +52,36 @@ class Mask {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Mask, _modDef7925);
+_inherits(Line, _modDef7933);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    ({ maskUnits, maskContentUnits, style } = props);
-    const size = { x: props.x, y: props.y, width: props.width, height: props.height, maskUnits: null, maskContentUnits: null, maskType: null };
-    let num = 0;
-    if (undefined !== maskUnits) {
-      num = unitsDefault[maskUnits];
-    }
-    size.maskUnits = num;
-    let num2 = 1;
-    if (undefined !== maskContentUnits) {
-      num2 = unitsDefault[maskContentUnits];
-    }
-    size.maskContentUnits = num2;
-    let str;
-    if (props != null) {
-      str = props.maskType;
-    }
-    if (!str) {
-      let maskType;
-      if (style != null) {
-        maskType = style.maskType;
-      }
-      str = maskType;
-    }
-    if (!str) {
-      str = "luminance";
-    }
-    size.maskType = Mask(7983).maskType[str];
-    const obj = {
+    const obj = {};
+    ({ x1, y1, x2, y2 } = props);
+    const merged = Object.assign(Line(7924).extract(this, props));
+    obj.x1 = x1;
+    obj.y1 = y1;
+    obj.x2 = x2;
+    obj.y2 = y2;
+    const obj2 = Line(7924);
+    const obj3 = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
-    const merged = Object.assign(Mask(7916).withoutXY(this, props));
-    const merged1 = Object.assign(size);
-    obj.children = props.children;
-    return <tmp8 ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
+    const merged1 = Object.assign(obj);
+    return jsx(_modDef7983, {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    });
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Mask, items);
-importDefaultResultResult.displayName = "Mask";
-importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
+const importDefaultResultResult = _createClass(Line, items);
+importDefaultResultResult.displayName = "Line";
+importDefaultResultResult.defaultProps = { x1: 0, y1: 0, x2: 0, y2: 0 };
 
 export default importDefaultResultResult;

@@ -1,7 +1,7 @@
 // === Module 8421: ? ===
 
 // Module 8421
-import _mod8395 from "module_8395" /* 8395 */;
+import _mod8403 from "module_8403" /* 8403 */;
 
 const self = this;
 let self2 = this;
@@ -57,9 +57,9 @@ if (self2) {
     exports.default = function default_1() {
       if (typeof error === "function") {
         const obj = { localeError: null };
-        const obj2 = { string: { unit: "stafi", verb: "a\u00F0 hafa" }, file: { unit: "b\u00E6ti", verb: "a\u00F0 hafa" }, array: { unit: "hluti", verb: "a\u00F0 hafa" }, set: { unit: "hluti", verb: "a\u00F0 hafa" } };
-        closure_1 = { regex: "gildi", email: "netfang", url: "vefsl\u00F3\u00F0", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO dagsetning og t\u00EDmi", date: "ISO dagsetning", time: "ISO t\u00EDmi", duration: "ISO t\u00EDmalengd", ipv4: "IPv4 address", ipv6: "IPv6 address", cidrv4: "IPv4 range", cidrv6: "IPv6 range", base64: "base64-encoded strengur", base64url: "base64url-encoded strengur", json_string: "JSON strengur", e164: "E.164 t\u00F6lugildi", jwt: "JWT", template_literal: "gildi" };
-        closure_2 = { nan: "NaN", number: "n\u00FAmer", array: "fylki" };
+        const obj2 = { string: { unit: "\u06A9\u0627\u0631\u0627\u06A9\u062A\u0631", verb: "\u062F\u0627\u0634\u062A\u0647 \u0628\u0627\u0634\u062F" }, file: { unit: "\u0628\u0627\u06CC\u062A", verb: "\u062F\u0627\u0634\u062A\u0647 \u0628\u0627\u0634\u062F" }, array: { unit: "\u0622\u06CC\u062A\u0645", verb: "\u062F\u0627\u0634\u062A\u0647 \u0628\u0627\u0634\u062F" }, set: { unit: "\u0622\u06CC\u062A\u0645", verb: "\u062F\u0627\u0634\u062A\u0647 \u0628\u0627\u0634\u062F" } };
+        closure_1 = { regex: "\u0648\u0631\u0648\u062F\u06CC", email: "\u0622\u062F\u0631\u0633 \u0627\u06CC\u0645\u06CC\u0644", url: "URL", emoji: "\u0627\u06CC\u0645\u0648\u062C\u06CC", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "\u062A\u0627\u0631\u06CC\u062E \u0648 \u0632\u0645\u0627\u0646 \u0627\u06CC\u0632\u0648", date: "\u062A\u0627\u0631\u06CC\u062E \u0627\u06CC\u0632\u0648", time: "\u0632\u0645\u0627\u0646 \u0627\u06CC\u0632\u0648", duration: "\u0645\u062F\u062A \u0632\u0645\u0627\u0646 \u0627\u06CC\u0632\u0648", ipv4: "IPv4 \u0622\u062F\u0631\u0633", ipv6: "IPv6 \u0622\u062F\u0631\u0633", cidrv4: "IPv4 \u062F\u0627\u0645\u0646\u0647", cidrv6: "IPv6 \u062F\u0627\u0645\u0646\u0647", base64: "base64-encoded \u0631\u0634\u062A\u0647", base64url: "base64url-encoded \u0631\u0634\u062A\u0647", json_string: "JSON \u0631\u0634\u062A\u0647", e164: "E.164 \u0639\u062F\u062F", jwt: "JWT", template_literal: "\u0648\u0631\u0648\u062F\u06CC" };
+        closure_2 = { nan: "NaN", number: "\u0639\u062F\u062F", array: "\u0622\u0631\u0627\u06CC\u0647" };
         obj.localeError = (code) => {
           switch (code.code) {
             case "invalid_type":
@@ -74,112 +74,112 @@ if (self2) {
               }
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
-                let combined = "Rangt gildi: \u00DE\u00FA sl\u00F3st inn " + tmp48 + " \u00FEar sem \u00E1 a\u00F0 vera instanceof " + code.expected;
+                let combined = "\u0648\u0631\u0648\u062F\u06CC \u0646\u0627\u0645\u0639\u062A\u0628\u0631: \u0645\u06CC\u200C\u0628\u0627\u06CC\u0633\u062A instanceof " + code.expected + " \u0645\u06CC\u200C\u0628\u0648\u062F\u060C " + tmp48 + " \u062F\u0631\u06CC\u0627\u0641\u062A \u0634\u062F";
               } else {
                 const _HermesInternal16 = HermesInternal;
-                combined = "Rangt gildi: \u00DE\u00FA sl\u00F3st inn " + tmp48 + " \u00FEar sem \u00E1 a\u00F0 vera " + expected;
+                combined = "\u0648\u0631\u0648\u062F\u06CC \u0646\u0627\u0645\u0639\u062A\u0628\u0631: \u0645\u06CC\u200C\u0628\u0627\u06CC\u0633\u062A " + expected + " \u0645\u06CC\u200C\u0628\u0648\u062F\u060C " + tmp48 + " \u062F\u0631\u06CC\u0627\u0641\u062A \u0634\u062F";
               }
               return combined;
             case "invalid_value":
               if (1 === code.values.length) {
                 const _HermesInternal15 = HermesInternal;
-                let combined1 = "Rangt gildi: gert r\u00E1\u00F0 fyrir " + closure_2.stringifyPrimitive(code.values[0]);
+                let combined1 = "\u0648\u0631\u0648\u062F\u06CC \u0646\u0627\u0645\u0639\u062A\u0628\u0631: \u0645\u06CC\u200C\u0628\u0627\u06CC\u0633\u062A " + closure_2.stringifyPrimitive(code.values[0]) + " \u0645\u06CC\u200C\u0628\u0648\u062F";
               } else {
                 const _HermesInternal14 = HermesInternal;
-                combined1 = "\u00D3gilt val: m\u00E1 vera eitt af eftirfarandi " + closure_2.joinValues(code.values, "|");
+                combined1 = "\u06AF\u0632\u06CC\u0646\u0647 \u0646\u0627\u0645\u0639\u062A\u0628\u0631: \u0645\u06CC\u200C\u0628\u0627\u06CC\u0633\u062A \u06CC\u06A9\u06CC \u0627\u0632 " + closure_2.joinValues(code.values, "|") + " \u0645\u06CC\u200C\u0628\u0648\u062F";
               }
               return combined1;
             case "too_big":
-              let str24 = "<";
+              let str29 = "<";
               if (code.inclusive) {
-                str24 = "<=";
+                str29 = "<=";
               }
               let tmp27 = obj2[code.origin];
               if (tmp27 == null) {
                 tmp27 = null;
               }
-              let str25 = code.origin;
+              let str30 = code.origin;
               if (tmp27) {
-                if (str25 == null) {
-                  str25 = "gildi";
+                if (str30 == null) {
+                  str30 = "\u0645\u0642\u062F\u0627\u0631";
                 }
                 const str1 = code.maximum.toString();
-                let str31 = tmp27.unit;
-                if (str31 == null) {
-                  str31 = "hluti";
+                let str37 = tmp27.unit;
+                if (str37 == null) {
+                  str37 = "\u0639\u0646\u0635\u0631";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "Of st\u00F3rt: gert er r\u00E1\u00F0 fyrir a\u00F0 " + str25 + " hafi " + str24 + str1 + " " + str31;
+                let combined2 = "\u062E\u06CC\u0644\u06CC \u0628\u0632\u0631\u06AF: " + str30 + " \u0628\u0627\u06CC\u062F " + str29 + str1 + " " + str37 + " \u0628\u0627\u0634\u062F";
               } else {
-                let str26 = str25;
-                if (str25 == null) {
-                  str26 = "gildi";
+                let str31 = str30;
+                if (str30 == null) {
+                  str31 = "\u0645\u0642\u062F\u0627\u0631";
                 }
                 const _HermesInternal12 = HermesInternal;
-                combined2 = "Of st\u00F3rt: gert er r\u00E1\u00F0 fyrir a\u00F0 " + str26 + " s\u00E9 " + str24 + code.maximum.toString();
+                combined2 = "\u062E\u06CC\u0644\u06CC \u0628\u0632\u0631\u06AF: " + str31 + " \u0628\u0627\u06CC\u062F " + str29 + code.maximum.toString() + " \u0628\u0627\u0634\u062F";
               }
               return combined2;
             case "too_small":
-              let str18 = ">";
+              let str21 = ">";
               if (code.inclusive) {
-                str18 = ">=";
+                str21 = ">=";
               }
               let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
               ({ origin, minimum } = code);
-              const str45 = minimum.toString();
+              const str56 = minimum.toString();
               if (tmp15) {
                 const _HermesInternal11 = HermesInternal;
-                let combined3 = "Of l\u00EDti\u00F0: gert er r\u00E1\u00F0 fyrir a\u00F0 " + origin + " hafi " + str18 + str45 + " " + tmp15.unit;
+                let combined3 = "\u062E\u06CC\u0644\u06CC \u06A9\u0648\u0686\u06A9: " + origin + " \u0628\u0627\u06CC\u062F " + str21 + str56 + " " + tmp15.unit + " \u0628\u0627\u0634\u062F";
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "Of l\u00EDti\u00F0: gert er r\u00E1\u00F0 fyrir a\u00F0 " + origin + " s\u00E9 " + str18 + str45;
+                combined3 = "\u062E\u06CC\u0644\u06CC \u06A9\u0648\u0686\u06A9: " + origin + " \u0628\u0627\u06CC\u062F " + str21 + str56 + " \u0628\u0627\u0634\u062F";
               }
               return combined3;
             case "invalid_format":
               if ("starts_with" === code.format) {
                 const _HermesInternal9 = HermesInternal;
-                let combined4 = "\u00D3gildur strengur: ver\u00F0ur a\u00F0 byrja \u00E1 \"" + code.prefix + "\"";
+                let combined4 = "\u0631\u0634\u062A\u0647 \u0646\u0627\u0645\u0639\u062A\u0628\u0631: \u0628\u0627\u06CC\u062F \u0628\u0627 \"" + code.prefix + "\" \u0634\u0631\u0648\u0639 \u0634\u0648\u062F";
               } else if ("ends_with" === code.format) {
                 const _HermesInternal8 = HermesInternal;
-                combined4 = "\u00D3gildur strengur: ver\u00F0ur a\u00F0 enda \u00E1 \"" + code.suffix + "\"";
+                combined4 = "\u0631\u0634\u062A\u0647 \u0646\u0627\u0645\u0639\u062A\u0628\u0631: \u0628\u0627\u06CC\u062F \u0628\u0627 \"" + code.suffix + "\" \u062A\u0645\u0627\u0645 \u0634\u0648\u062F";
               } else if ("includes" === code.format) {
                 const _HermesInternal7 = HermesInternal;
-                combined4 = "\u00D3gildur strengur: ver\u00F0ur a\u00F0 innihalda \"" + code.includes + "\"";
+                combined4 = "\u0631\u0634\u062A\u0647 \u0646\u0627\u0645\u0639\u062A\u0628\u0631: \u0628\u0627\u06CC\u062F \u0634\u0627\u0645\u0644 \"" + code.includes + "\" \u0628\u0627\u0634\u062F";
               } else if ("regex" === code.format) {
                 const _HermesInternal6 = HermesInternal;
-                combined4 = "\u00D3gildur strengur: ver\u00F0ur a\u00F0 fylgja mynstri " + code.pattern;
+                combined4 = "\u0631\u0634\u062A\u0647 \u0646\u0627\u0645\u0639\u062A\u0628\u0631: \u0628\u0627\u06CC\u062F \u0628\u0627 \u0627\u0644\u06AF\u0648\u06CC " + code.pattern + " \u0645\u0637\u0627\u0628\u0642\u062A \u062F\u0627\u0634\u062A\u0647 \u0628\u0627\u0634\u062F";
               } else {
                 let format = closure_1[code.format];
                 if (format == null) {
                   format = code.format;
                 }
                 const _HermesInternal5 = HermesInternal;
-                combined4 = "Rangt " + format;
+                combined4 = "" + format + " \u0646\u0627\u0645\u0639\u062A\u0628\u0631";
               }
               return combined4;
             case "not_multiple_of":
               const _HermesInternal4 = HermesInternal;
-              return "R\u00F6ng tala: ver\u00F0ur a\u00F0 vera margfeldi af " + code.divisor;
+              return "\u0639\u062F\u062F \u0646\u0627\u0645\u0639\u062A\u0628\u0631: \u0628\u0627\u06CC\u062F \u0645\u0636\u0631\u0628 " + code.divisor + " \u0628\u0627\u0634\u062F";
             case "unrecognized_keys":
-              let str3 = "ur lykill";
+              let str3 = "";
               if (code.keys.length > 1) {
-                str3 = "ir lyklar";
+                str3 = "\u0647\u0627\u06CC";
               }
               const _HermesInternal3 = HermesInternal;
-              return "\u00D3\u00FEekkt " + str3 + ": " + closure_2.joinValues(code.keys, ", ");
+              return "\u06A9\u0644\u06CC\u062F" + str3 + " \u0646\u0627\u0634\u0646\u0627\u0633: " + closure_2.joinValues(code.keys, ", ");
             case "invalid_key":
               const _HermesInternal2 = HermesInternal;
-              return "Rangur lykill \u00ED " + code.origin;
+              return "\u06A9\u0644\u06CC\u062F \u0646\u0627\u0634\u0646\u0627\u0633 \u062F\u0631 " + code.origin;
             case "invalid_union":
-              return "Rangt gildi";
+              return "\u0648\u0631\u0648\u062F\u06CC \u0646\u0627\u0645\u0639\u062A\u0628\u0631";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              return "Rangt gildi \u00ED " + code.origin;
+              return "\u0645\u0642\u062F\u0627\u0631 \u0646\u0627\u0645\u0639\u062A\u0628\u0631 \u062F\u0631 " + code.origin;
             default:
-              return "Rangt gildi";
+              return "\u0648\u0631\u0648\u062F\u06CC \u0646\u0627\u0645\u0639\u062A\u0628\u0631";
           }
         };
         return obj;
@@ -187,7 +187,7 @@ if (self2) {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    let closure_2 = fn(_mod8395);
+    let closure_2 = fn(_mod8403);
     function error() {
 
     }

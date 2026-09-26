@@ -1,43 +1,38 @@
 // === Module 6065: ? ===
 
 // Module 6065
-import normalizeSnapPoint from "normalizeSnapPoint" /* 6057 */;
-import noop from "module_19" /* 19 */;
+import cancelAnimation from "cancelAnimation" /* 1638 */;
 
-const require = globalThis.__r;
-
-({ useCallback: c2, useEffect: c3 } = noop);
-
-export const useScrollableSetter = (scrollableRef, value, scrollableContentOffsetY, value2) => {
-  _require = scrollableRef;
-  dependencyMap = value;
-  let tmp = focusHook;
-  if (focusHook === undefined) {
-    tmp = value2;
+require = fn;
+const dependencyMap = arg6;
+fn = function n(keyboard, value) {
+  if ("easeIn" === keyboard) {
+    const obj2 = { easing: null, duration: null };
+    const Easing3 = cancelAnimation.Easing;
+    obj2.easing = Easing3.in(cancelAnimation.Easing.ease);
+    obj2.duration = value;
+    return obj2;
+  } else if ("easeOut" === keyboard) {
+    const obj3 = { easing: null, duration: null };
+    const Easing2 = cancelAnimation.Easing;
+    obj3.easing = Easing2.out(cancelAnimation.Easing.ease);
+    obj3.duration = value;
+    return obj3;
+  } else if ("easeInEaseOut" === keyboard) {
+    const obj4 = { easing: null, duration: null };
+    const Easing = cancelAnimation.Easing;
+    obj4.easing = Easing.inOut(cancelAnimation.Easing.ease);
+    obj4.duration = value;
+    return obj4;
+  } else if ("linear" === keyboard) {
+    const obj = { easing: cancelAnimation.Easing.linear, duration: value };
+    return obj;
+  } else if ("keyboard" === keyboard) {
+    return { damping: 500, stiffness: 1000, mass: 3, overshootClamping: true, restDisplacementThreshold: 10, restSpeedThreshold: 10 };
   }
-  const bottomSheetInternal = require("module_6048").useBottomSheetInternal();
-  const animatedScrollableType = bottomSheetInternal.animatedScrollableType;
-  const animatedScrollableContentOffsetY = bottomSheetInternal.animatedScrollableContentOffsetY;
-  const isContentHeightFixed = bottomSheetInternal.isContentHeightFixed;
-  const isScrollableRefreshable = bottomSheetInternal.isScrollableRefreshable;
-  const setScrollableRef = bottomSheetInternal.setScrollableRef;
-  const removeScrollableRef = bottomSheetInternal.removeScrollableRef;
-  const items = [scrollableRef, value, value2, animatedScrollableType, animatedScrollableContentOffsetY, scrollableContentOffsetY, isScrollableRefreshable, isContentHeightFixed, setScrollableRef, removeScrollableRef];
-  tmp(scrollableContentOffsetY(() => {
-    animatedScrollableContentOffsetY.value = scrollableContentOffsetY.value;
-    animatedScrollableType.value = value;
-    isScrollableRefreshable.value = value2;
-    isContentHeightFixed.value = false;
-    const findNodeHandleResult = normalizeSnapPoint.findNodeHandle(scrollableRef.current);
-    if (findNodeHandleResult) {
-      const obj2 = { id: findNodeHandleResult, node: scrollableRef };
-      setScrollableRef(obj2);
-    } else {
-      const _console = console;
-      console.warn("Couldn't find the scrollable node handle id!");
-    }
-    return () => {
-      removeScrollableRef(scrollableRef);
-    };
-  }, items));
 };
+fn.__closure = { Easing: fn(1638).Easing };
+fn.__workletHash = 10639588577824;
+fn.__initData = { code: "function pnpm_getKeyboardAnimationConfigsTs1(easing,duration){const{Easing}=this.__closure;switch(easing){case'easeIn':return{easing:Easing.in(Easing.ease),duration:duration};case'easeOut':return{easing:Easing.out(Easing.ease),duration:duration};case'easeInEaseOut':return{easing:Easing.inOut(Easing.ease),duration:duration};case'linear':return{easing:Easing.linear,duration:duration};case'keyboard':return{damping:500,stiffness:1000,mass:3,overshootClamping:true,restDisplacementThreshold:10,restSpeedThreshold:10};}}" };
+
+export const getKeyboardAnimationConfigs = fn;

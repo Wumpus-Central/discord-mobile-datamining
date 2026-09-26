@@ -1,16 +1,15 @@
 // === Module 8005: ? ===
 
 // Module 8005
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef7925 from "module_7925" /* 7925 */;
-import _modDef8006 from "module_8006" /* 8006 */;
+import _modDef7933 from "module_7933" /* 7933 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Use = fn;
+const Symbol = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,16 +29,15 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Use {
+class Symbol {
   constructor() {
     self = this;
-    tmp = closure_3(this, Use);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Use);
-    tmp3 = closure_4;
-    if (closure_7()) {
+    tmp = c2(this, Symbol);
+    tmp2 = closure_4;
+    obj = closure_4(Symbol);
+    tmp3 = closure_3;
+    if (metroRequire()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -52,46 +50,29 @@ class Use {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Use, _modDef7925);
+_inherits(Symbol, _modDef7933);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    let str = props.href;
-    ({ children, x, y, width, height } = props);
-    if (undefined === str) {
-      str = props.xlinkHref;
-    }
-    let match = str;
-    if (str) {
-      match = str.match(Use(7917).idPattern);
-    }
-    let tmp4 = match;
-    if (match) {
-      tmp4 = match[1];
-    }
-    if (!tmp4) {
-      const _console = console;
-      console.warn(`Invalid \`href\` prop for \`Use\` element, expected a href like "#id", but got: "${str}"`);
-    }
-    const size = { href: tmp4, x, y, width, height };
-    const obj = {
+    const obj2 = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
-    const merged = Object.assign(Use(7916).withoutXY(this, props));
-    const merged1 = Object.assign(size);
-    obj.children = children;
-    return <tmp7 ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
+    const merged = Object.assign({ name: props.id });
+    const merged1 = Object.assign(Symbol(7922)(props));
+    obj2.children = props.children;
+    return jsx(Symbol(8006), {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    });
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Use, items);
-importDefaultResultResult.displayName = "Use";
-importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0 };
+const importDefaultResultResult = _createClass(Symbol, items);
+importDefaultResultResult.displayName = "Symbol";
 
 export default importDefaultResultResult;

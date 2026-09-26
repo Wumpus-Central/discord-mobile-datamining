@@ -1,26 +1,26 @@
 // === Module 4083: ? ===
 
 // Module 4083
-import module_3919_mod from "module_3919" /* 3919 */;
-import module_4063_mod from "module_4063" /* 4063 */;
-import requiredArgs_mod from "requiredArgs" /* 3916 */;
+import module_3922_mod from "module_3922" /* 3922 */;
+import module_4073_mod from "module_4073" /* 4073 */;
+import requiredArgs_mod from "requiredArgs" /* 3919 */;
 
-let module_3919 = module_3919_mod;
-if (!module_3919) {
-  const obj = { default: module_3919 };
+let module_3922 = module_3922_mod;
+if (!module_3922) {
+  const obj = { default: module_3922 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3919;
+  tmp3 = module_3922;
 }
-module_3919 = tmp3;
-let module_4063 = module_4063_mod;
-if (!module_4063) {
-  const obj2 = { default: module_4063 };
+module_3922 = tmp3;
+let module_4073 = module_4073_mod;
+if (!module_4073) {
+  const obj2 = { default: module_4073 };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4063;
+  tmp5 = module_4073;
 }
-module_4063 = tmp5;
+module_4073 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj3 = { default: requiredArgs };
@@ -29,9 +29,10 @@ if (!requiredArgs) {
   tmp7 = requiredArgs;
 }
 requiredArgs = tmp7;
+let c3 = 60000;
 
-export default function addWeeks(arg0, arg1) {
+export default function addMinutes(interval, arg1) {
   requiredArgs.default(2, arguments);
-  return module_4063.default(arg0, 7 * module_3919.default(arg1));
+  return module_4073.default(interval, module_3922.default(arg1) * c3);
 };
 export default exports.default;

@@ -1,126 +1,107 @@
 // === Module 12349: ? ===
 
 // Module 12349
-import _mod12342 from "module_12342" /* 12342 */;
+import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 12318 */;
+import _mod12319 from "module_12319" /* 12319 */;
+import BAGGAGE_HEADER_NAME from "BAGGAGE_HEADER_NAME" /* 12326 */;
+import _mod12328 from "module_12328" /* 12328 */;
+import _mod12340 from "module_12340" /* 12340 */;
+import _mod12350 from "module_12350" /* 12350 */;
 
 require = arg1;
 const dependencyMap = arg6;
-
-export const getEnvelopeEndpointWithUrlEncodedAuth = function getEnvelopeEndpointWithUrlEncodedAuth(protocol, tunnel, name) {
-  let combined1 = tunnel;
-  if (!tunnel) {
-    let str2 = "";
-    if (protocol.protocol) {
-      const _HermesInternal = HermesInternal;
-      str2 = "" + protocol.protocol + ":";
-    }
-    let str4 = "";
-    if (protocol.port) {
-      const _HermesInternal2 = HermesInternal;
-      str4 = ":" + protocol.port;
-    }
-    const host = protocol.host;
-    let str6 = "";
-    if (protocol.path) {
-      const _HermesInternal3 = HermesInternal;
-      str6 = "/" + protocol.path;
-    }
-    const _HermesInternal4 = HermesInternal;
-    const _HermesInternal5 = HermesInternal;
-    const obj = { sentry_version: "7" };
-    const combined = "" + "" + str2 + "//" + host + str4 + str6 + "/api/" + protocol.projectId + "/envelope/";
-    if (protocol.publicKey) {
-      obj.sentry_key = protocol.publicKey;
-    }
-    if (name) {
-      const _HermesInternal6 = HermesInternal;
-      obj.sentry_client = "" + name.name + "/" + name.version;
-    }
-    const _URLSearchParams = URLSearchParams;
-    const str13 = new URLSearchParams(obj);
-    const _HermesInternal7 = HermesInternal;
-    combined1 = "" + combined + "?" + str13.toString();
-  }
-  return combined1;
-};
-export const getReportDialogEndpoint = function getReportDialogEndpoint(protocol, user) {
-  const url = _mod12342.makeDsn(protocol);
-  if (url) {
-    let str = "";
-    if (url.protocol) {
-      const _HermesInternal = HermesInternal;
-      str = "" + url.protocol + ":";
-    }
-    let str3 = "";
-    if (url.port) {
-      const _HermesInternal2 = HermesInternal;
-      str3 = ":" + url.port;
-    }
-    const host = url.host;
-    let str5 = "";
-    if (url.path) {
-      const _HermesInternal3 = HermesInternal;
-      str5 = "/" + url.path;
-    }
-    const _HermesInternal4 = HermesInternal;
-    const _HermesInternal5 = HermesInternal;
-    const combined = "" + "" + str + "//" + host + str3 + str5 + "/api/" + "embed/error-page/";
-    const _HermesInternal6 = HermesInternal;
-    let combined1 = "dsn=" + _mod12342.dsnToString(url);
-    let tmp16 = combined1;
-    const keys = Object.keys();
-    if (keys !== undefined) {
-      tmp16 = combined1;
-      while (keys[tmp] !== undefined) {
-        if ("dsn" === tmp19) {
-          continue;
-        } else {
-          combined1 = tmp18;
-          if ("onClose" === tmp19) {
-            continue;
-          } else {
-            if ("user" === tmp19) {
-              user = user.user;
-              combined1 = tmp18;
-              if (!user) {
-                continue;
-              } else {
-                let sum = tmp18;
-                if (user.name) {
-                  let _encodeURIComponent3 = encodeURIComponent;
-                  let _HermesInternal8 = HermesInternal;
-                  sum = tmp18 + "&name=" + encodeURIComponent(user.name);
-                }
-                combined1 = sum;
-                if (!user.email) {
-                  continue;
-                } else {
-                  let _encodeURIComponent4 = encodeURIComponent;
-                  let _HermesInternal9 = HermesInternal;
-                  combined1 = sum + "&email=" + encodeURIComponent(user.email);
-                  continue;
-                }
-                continue;
-              }
-              continue;
-            } else {
-              let _encodeURIComponent = encodeURIComponent;
-              let _encodeURIComponent2 = encodeURIComponent;
-              let encodeURIComponentResult = encodeURIComponent(tmp19);
-              let _HermesInternal7 = HermesInternal;
-              combined1 = tmp18 + "&" + encodeURIComponentResult + "=" + encodeURIComponent(user[tmp19]);
-              continue;
-            }
-            continue;
-          }
-          continue;
+function getDynamicSamplingContextFromSpan(spanContext) {
+  const client = _mod12340.getClient();
+  if (client) {
+    const rootSpan = spanTimeInputToSeconds.getRootSpan(spanContext);
+    if (rootSpan[_frozenDsc]) {
+      return tmp5;
+    } else {
+      const traceState = rootSpan.spanContext().traceState;
+      value = traceState;
+      if (traceState) {
+        value = traceState.get("sentry.dsc");
+      }
+      let result = value;
+      if (value) {
+        result = BAGGAGE_HEADER_NAME.baggageHeaderToDynamicSamplingContext(value);
+        const tmpResult6 = BAGGAGE_HEADER_NAME;
+      }
+      if (result) {
+        return result;
+      } else {
+        const options = client.getOptions();
+        const tmp9 = client.getDsn() || {};
+        let DEFAULT_ENVIRONMENT = options.environment;
+        if (!DEFAULT_ENVIRONMENT) {
+          DEFAULT_ENVIRONMENT = _mod12350.DEFAULT_ENVIRONMENT;
         }
-        continue;
+        const obj2 = { environment: DEFAULT_ENVIRONMENT, release: options.release, public_key: tmp9.publicKey, trace_id: spanContext.spanContext().traceId };
+        const dropUndefinedKeysResult = _mod12319.dropUndefinedKeys(obj2);
+        client.emit("createDsc", dropUndefinedKeysResult);
+        const tmpResult7 = _mod12319;
+        const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(rootSpan);
+        const tmp13 = spanToJSONResult.data || {};
+        const tmp14 = tmp13[_mod12328.SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE];
+        if (null != tmp14) {
+          const _HermesInternal = HermesInternal;
+          dropUndefinedKeysResult.sample_rate = "" + tmp14;
+        }
+        const description = spanToJSONResult.description;
+        const tmpResult8 = spanTimeInputToSeconds;
+        if (tmp17) {
+          dropUndefinedKeysResult.transaction = description;
+        }
+        tmp17 = "url" !== tmp13[_mod12328.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] && description;
+        if (tmpResult9.hasTracingEnabled()) {
+          const _String = String;
+          dropUndefinedKeysResult.sampled = String(spanTimeInputToSeconds.spanIsSampled(rootSpan));
+          const tmpResult10 = spanTimeInputToSeconds;
+        }
+        client.emit("createDsc", dropUndefinedKeysResult, rootSpan);
+        return dropUndefinedKeysResult;
       }
     }
-    const _HermesInternal10 = HermesInternal;
-    return "" + combined + "?" + tmp16;
+    const tmpResult = spanTimeInputToSeconds;
   } else {
-    return "";
+    return {};
   }
+}
+const _frozenDsc = "_frozenDsc";
+
+export const freezeDscOnSpan = function freezeDscOnSpan(arg0, dsc) {
+  const result = _mod12319.addNonEnumerableProperty(arg0, _frozenDsc, dsc);
+};
+export const getDynamicSamplingContextFromClient = function getDynamicSamplingContextFromClient(trace_id, getOptions) {
+  const options = getOptions.getOptions();
+  const tmp2 = getOptions.getDsn() || {};
+  let DEFAULT_ENVIRONMENT = options.environment;
+  if (!DEFAULT_ENVIRONMENT) {
+    DEFAULT_ENVIRONMENT = _mod12350.DEFAULT_ENVIRONMENT;
+  }
+  const dropUndefinedKeysResult = _mod12319.dropUndefinedKeys({ environment: DEFAULT_ENVIRONMENT, release: options.release, public_key: tmp2.publicKey, trace_id });
+  getOptions.emit("createDsc", dropUndefinedKeysResult);
+  return dropUndefinedKeysResult;
+};
+export const getDynamicSamplingContextFromScope = function getDynamicSamplingContextFromScope(getOptions, getPropagationContext) {
+  const propagationContext = getPropagationContext.getPropagationContext();
+  let dsc = propagationContext.dsc;
+  if (!dsc) {
+    const options = getOptions.getOptions();
+    const tmp4 = getOptions.getDsn() || {};
+    let DEFAULT_ENVIRONMENT = options.environment;
+    if (!DEFAULT_ENVIRONMENT) {
+      DEFAULT_ENVIRONMENT = _mod12350.DEFAULT_ENVIRONMENT;
+    }
+    const obj2 = { environment: DEFAULT_ENVIRONMENT, release: options.release, public_key: tmp4.publicKey, trace_id: propagationContext.traceId };
+    const dropUndefinedKeysResult = _mod12319.dropUndefinedKeys(obj2);
+    getOptions.emit("createDsc", dropUndefinedKeysResult);
+    dsc = dropUndefinedKeysResult;
+  }
+  return dsc;
+};
+export { getDynamicSamplingContextFromSpan };
+export const spanToBaggageHeader = function spanToBaggageHeader(arg0) {
+  const tmp = getDynamicSamplingContextFromSpan(arg0);
+  return BAGGAGE_HEADER_NAME.dynamicSamplingContextToSentryBaggageHeader(tmp);
 };

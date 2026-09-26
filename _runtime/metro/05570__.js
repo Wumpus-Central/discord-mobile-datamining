@@ -1,76 +1,81 @@
 // === Module 5570: ? ===
 
 // Module 5570
-import _mod5520 from "module_5520" /* 5520 */;
+import _mod5526 from "module_5526" /* 5526 */;
+import _modDef5531 from "module_5531" /* 5531 */;
+import get0thIfdOffset from "get0thIfdOffset" /* 5546 */;
+import IFD_TYPE_0TH from "IFD_TYPE_0TH" /* 5547 */;
 
 require = arg1;
+importDefault = arg2;
 const dependencyMap = arg6;
+const MODEL_ID = { K3_III: 78420 };
+let obj2 = { CAMERA_ORIENTATION: 1, ROLL_ANGLE: 3, PITCH_ANGLE: 5 };
 
 export default {
-  read(byteLength) {
-    let tmp;
-    if (6 <= byteLength.byteLength) {
-      const stringFromDataView = _mod5520.getStringFromDataView(byteLength, 3, 3);
-      const obj2 = { value: stringFromDataView, description: stringFromDataView };
-      tmp = obj2;
+  read(byteLength, arg1, arg2, arg3) {
+    const obj = _modDef5531;
+    const byteOrder = obj.getByteOrder(byteLength, arg1 + arg2 + 8);
+    const sum = arg1 + arg2;
+    obj2 = get0thIfdOffset;
+    const ifd = obj2.readIfd(byteLength, IFD_TYPE_0TH.IFD_TYPE_PENTAX, sum, sum + 10, byteOrder, arg3, true);
+    let LevelInfo = ifd.PentaxModelID;
+    if (LevelInfo) {
+      LevelInfo = ifd.PentaxModelID.value === obj.K3_III;
     }
-    const obj3 = { "GIF Version": tmp, "Image Width": null, "Image Height": null, "Global Color Map": null, "Bits Per Pixel": null, "Color Resolution Depth": null };
-    let tmp5;
-    if (8 <= byteLength.byteLength) {
-      const uint16 = byteLength.getUint16(6, true);
-      const obj4 = { value: uint16, description: null };
-      const _HermesInternal = HermesInternal;
-      obj4.description = "" + uint16 + "px";
-      tmp5 = obj4;
+    if (LevelInfo) {
+      LevelInfo = ifd.LevelInfo;
     }
-    obj3["Image Width"] = tmp5;
-    let tmp8;
-    if (10 <= byteLength.byteLength) {
-      const uint161 = byteLength.getUint16(8, true);
-      const obj5 = { value: uint161, description: null };
-      const _HermesInternal2 = HermesInternal;
-      obj5.description = "" + uint161 + "px";
-      tmp8 = obj5;
-    }
-    obj3["Image Height"] = tmp8;
-    let tmp11;
-    if (11 <= byteLength.byteLength) {
-      const tmp12 = (128 & byteLength.getUint8(10)) >>> 7;
-      const obj6 = { value: tmp12, description: null };
-      let str5 = "No";
-      if (1 === tmp12) {
-        str5 = "Yes";
+    let tmp10 = ifd;
+    if (LevelInfo) {
+      const sum1 = sum + ifd.LevelInfo.__offset;
+      const obj3 = {};
+      if (sum1 + 7 <= byteLength.byteLength) {
+        const int8 = byteLength.getInt8(sum1 + obj2.CAMERA_ORIENTATION);
+        const obj4 = { value: int8, description: null };
+        let str6 = "Horizontal (normal)";
+        if (0 !== int8) {
+          let str = "Rotate 270 CW";
+          if (1 !== int8) {
+            let str2 = "Rotate 180";
+            if (2 !== int8) {
+              let str3 = "Rotate 90 CW";
+              if (3 !== int8) {
+                let str4 = "Upwards";
+                if (4 !== int8) {
+                  let str5 = "Unknown";
+                  if (5 === int8) {
+                    str5 = "Downwards";
+                  }
+                  str4 = str5;
+                }
+                str3 = str4;
+              }
+              str2 = str3;
+            }
+            str = str2;
+          }
+          str6 = str;
+        }
+        obj4.description = str6;
+        obj3.CameraOrientation = obj4;
+        const sum2 = sum1 + tmp17.ROLL_ANGLE;
+        const int16 = byteLength.getInt16(sum2, byteOrder === _modDef5531.LITTLE_ENDIAN);
+        const obj5 = { value: int16, description: "" + -0.5 * int16 };
+        obj3.RollAngle = obj5;
+        const sum3 = sum1 + tmp17.PITCH_ANGLE;
+        const int161 = byteLength.getInt16(sum3, byteOrder === _modDef5531.LITTLE_ENDIAN);
+        const obj6 = { value: int161, description: "" + -0.5 * int161 };
+        obj3.PitchAngle = obj6;
       }
-      obj6.description = str5;
-      tmp11 = obj6;
+      const tmp7Result = _mod5526;
+      delete tmp[tmp2];
+      tmp10 = _mod5526.objectAssign({}, ifd, obj3);
+      const objectAssignResult = _mod5526.objectAssign({}, ifd, obj3);
     }
-    obj3["Global Color Map"] = tmp11;
-    let tmp13;
-    if (11 <= byteLength.byteLength) {
-      const sum = 1 + (7 & byteLength.getUint8(10));
-      const obj7 = { value: sum, description: null };
-      let str6 = "bits";
-      if (1 === sum) {
-        str6 = "bit";
-      }
-      const _HermesInternal3 = HermesInternal;
-      obj7.description = "" + sum + " " + str6;
-      tmp13 = obj7;
-    }
-    obj3["Bits Per Pixel"] = tmp13;
-    let tmp16;
-    if (11 <= byteLength.byteLength) {
-      const sum1 = 1 + ((112 & byteLength.getUint8(10)) >>> 4);
-      const obj8 = { value: sum1, description: null };
-      let str9 = "bits";
-      if (1 === sum1) {
-        str9 = "bit";
-      }
-      const _HermesInternal4 = HermesInternal;
-      obj8.description = "" + sum1 + " " + str9;
-      tmp16 = obj8;
-    }
-    obj3["Color Resolution Depth"] = tmp16;
-    return obj3;
-  }
+    return tmp10;
+  },
+  PENTAX_IFD_OFFSET: 10,
+  MODEL_ID,
+  LIK3III: obj2
 };

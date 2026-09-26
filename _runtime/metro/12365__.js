@@ -1,29 +1,74 @@
 // === Module 12365: ? ===
 
 // Module 12365
-import _mod12297 from "module_12297" /* 12297 */;
-
-require = arg1;
+const require = arg1;
 const dependencyMap = arg6;
+function getFilenameToDebugIdMap(arg0) {
+  _require = arg0;
+  _sentryDebugIds = require("module_12314").GLOBAL_OBJ._sentryDebugIds;
+  if (_sentryDebugIds) {
+    const _Object = Object;
+    const keys = Object.keys(_sentryDebugIds);
+    if (reduced) {
+      return reduced;
+    }
+    reduced = keys.reduce((acc, item) => {
+      let filename;
+      let tmp = obj;
+      if (!obj) {
+        obj = {};
+        tmp = obj;
+      }
+      if (tmp[item]) {
+        acc[tmp2[0]] = tmp2[1];
+      } else {
+        const arr = closure_0(item);
+        let diff = arr.length - 1;
+        if (0 <= diff) {
+          while (true) {
+            let tmp5 = arr[diff];
+            filename = tmp5;
+            if (tmp5) {
+              filename = tmp5.filename;
+            }
+            if (filename) {
+              if (_sentryDebugIds[item]) {
+                break;
+              }
+            }
+            diff = diff - 1;
+          }
+          acc[filename] = tmp8;
+          const items = [filename, tmp8];
+          obj[item] = items;
+        }
+      }
+      return acc;
+    }, {});
+  } else {
+    return {};
+  }
+}
 
-export const applySdkMetadata = function applySdkMetadata(_metadata, arg1) {
-  let arr = arg2;
-  if (arg2 === undefined) {
-    const items = [arg1];
-    arr = items;
+export const getDebugImagesForResources = function getDebugImagesForResources(arg0, arg1) {
+  const tmp = getFilenameToDebugIdMap(arg0);
+  const items = [];
+  if (tmp) {
+    const iter = arg1[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      let tmp7 = nextResult;
+      if (nextResult) {
+        obj = { type: "sourcemap", code_file: null, debug_id: null };
+        obj.code_file = tmp7;
+        obj.debug_id = tmp[tmp7];
+        let arr = items.push(obj);
+      }
+      continue;
+    }
+    return items;
+  } else {
+    return items;
   }
-  let str = arg3;
-  if (arg3 === undefined) {
-    str = "npm";
-  }
-  const tmp = _metadata._metadata || {};
-  if (!tmp.sdk) {
-    const obj = { name: null, packages: null, version: null };
-    const _HermesInternal = HermesInternal;
-    obj.name = "sentry.javascript." + arg1;
-    obj.packages = arr.map((item) => ({ name: "" + str + ":@sentry/" + item, version: _mod12297.SDK_VERSION }));
-    obj.version = str(12297).SDK_VERSION;
-    tmp.sdk = obj;
-  }
-  _metadata._metadata = tmp;
 };
+export { getFilenameToDebugIdMap };

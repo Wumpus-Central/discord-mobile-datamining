@@ -1,17 +1,17 @@
 // === Module 4262: ? ===
 
 // Module 4262
-import module_4263_mod from "module_4263" /* 4263 */;
-import requiredArgs_mod from "requiredArgs" /* 3916 */;
+import _typeof_mod from "module_3918" /* 3918 */;
+import requiredArgs_mod from "requiredArgs" /* 3919 */;
 
-let module_4263 = module_4263_mod;
-if (!module_4263) {
-  const obj = { default: module_4263 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4263;
+  tmp3 = _typeof;
 }
-module_4263 = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,8 +21,9 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isSameISOWeek(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_4263.default(arg0, arg1, { weekStartsOn: 1 });
+export default function isPast(date) {
+  requiredArgs.default(1, arguments);
+  const time = _typeof.default(date).getTime();
+  return time < Date.now();
 };
 export default exports.default;
