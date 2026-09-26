@@ -9,12 +9,12 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const NsfwGateSource = fn(9222).NsfwGateSource;
+const NsfwGateSource = fn(9233).NsfwGateSource;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, HelpdeskArticles: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = {
   container: {
     flex: 1,
@@ -41,8 +41,8 @@ export default function NsfwGateGuild(guildId) {
   const intl3 = guildId(1115).intl;
   let obj = { helpURL: null };
   const stringResult1 = intl2.string(guildId(1115).t.Crj6eC);
-  obj.helpURL = currentUser(2110).getArticleURL(constants2.NSFW_GUILD_GUIDELINES);
-  let obj2 = currentUser(2110);
+  obj.helpURL = currentUser(2111).getArticleURL(constants2.NSFW_GUILD_GUIDELINES);
+  let obj2 = currentUser(2111);
   currentUser = UserStore.getCurrentUser();
   const items = [guildId, currentUser];
   const effect = noop.useEffect(() => {
@@ -75,22 +75,22 @@ export default function NsfwGateGuild(guildId) {
     AnalyticsUtilsDefault.track(constants.GUILD_NSFW_GATE_VIEWED, obj2);
   }, items);
   let obj3 = { style: tmp.container, children: null };
-  const items1 = [closure_11(currentUser(6389), {}), , , , ,];
+  const items1 = [closure_11(currentUser(6394), {}), , , , ,];
   const formatResult = intl3.format(guildId(1115).t.Z12LNW, obj);
-  items1[1] = closure_11(closure_5, { source: currentUser(9223), style: tmp.image });
-  items1[2] = closure_11(guildId(4825).Text, {
+  items1[1] = closure_11(closure_5, { source: currentUser(9234), style: tmp.image });
+  items1[2] = closure_11(guildId(4832).Text, {
     style: tmp.header,
     variant: "heading-xl/extrabold",
     color: "mobile-text-heading-primary",
     children: stringResult,
   });
-  items1[3] = closure_11(guildId(4825).Text, {
+  items1[3] = closure_11(guildId(4832).Text, {
     style: tmp.description,
     variant: "text-md/normal",
     color: "text-default",
     children: stringResult1,
   });
-  items1[4] = closure_11(guildId(4825).Text, {
+  items1[4] = closure_11(guildId(4832).Text, {
     style: tmp.description,
     variant: "text-md/normal",
     color: "text-default",
@@ -99,7 +99,7 @@ export default function NsfwGateGuild(guildId) {
   const obj8 = { onPress: guildId.onClose, size: "md", text: null };
   const intl4 = guildId(1115).intl;
   obj8.text = intl4.string(guildId(1115).t.gRqiWV);
-  items1[5] = closure_11(guildId(5274).Button, obj8);
+  items1[5] = closure_11(guildId(5281).Button, obj8);
   obj3.children = items1;
   return closure_12(closure_4, obj3);
 }

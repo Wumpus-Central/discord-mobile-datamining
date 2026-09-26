@@ -9,10 +9,10 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conversations/components/native/ConversationPreviewFocusScreen.tsx");
 
 export default function ConversationPreviewFocusScreen() {
-  const params = conversationId(1487).useRoute().params;
+  const params = conversationId(1488).useRoute().params;
   conversationId = params.conversationId;
   ({ channelId, messageId } = params);
-  let obj = conversationId(1487);
+  let obj = conversationId(1488);
   const items = [ConversationPreviewStore];
   const items1 = [conversationId];
   const messages = conversationId(504).useStateFromStores(

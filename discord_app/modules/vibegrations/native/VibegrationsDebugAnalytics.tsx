@@ -1,6 +1,6 @@
 // discord_app/modules/vibegrations/native/VibegrationsDebugAnalytics.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3714 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3715 from "../intl/VibegrationsUntranslated.messages.js";
 import VibegrationsDebugFormat from "../lib/VibegrationsDebugFormat.tsx";
 import VibegrationsDebugLabels from "../lib/VibegrationsDebugLabels.tsx";
 import VibegrationsDebugPrimitives from "VibegrationsDebugPrimitives.tsx";
@@ -17,9 +17,9 @@ export const VibegrationsDebugAgentAnalyticsRows = function VibegrationsDebugAge
   if ("ok" !== analytics.status) {
     const obj2 = { label: null, value: null, hint: null };
     const intl4 = util.intl;
-    obj2.label = intl4.string(_modDef3714.H6PMwW);
+    obj2.label = intl4.string(_modDef3715.H6PMwW);
     const intl5 = util.intl;
-    obj2.value = intl5.string(_modDef3714.TLOZ8J);
+    obj2.value = intl5.string(_modDef3715.TLOZ8J);
     obj2.hint = VibegrationsDebugLabels.analyticsUnavailableReason(analytics);
     return React3(VibegrationsDebugPrimitives.DebugStatRow, obj2);
   } else {
@@ -31,22 +31,22 @@ export const VibegrationsDebugAgentAnalyticsRows = function VibegrationsDebugAge
     if (null == found) {
       const obj3 = { label: null, value: "\u2014", hint: null };
       const intl2 = util.intl;
-      obj3.label = intl2.string(_modDef3714.H6PMwW);
+      obj3.label = intl2.string(_modDef3715.H6PMwW);
       const intl3 = util.intl;
-      obj3.hint = intl3.string(_modDef3714.uAzxdh);
+      obj3.hint = intl3.string(_modDef3715.uAzxdh);
       return React3(VibegrationsDebugPrimitives.DebugStatRow, obj3);
     } else {
       const analyticsMemoryValueResult = VibegrationsDebugLabels.analyticsMemoryValue(found);
       const obj4 = { label: null, value: null };
       const intl6 = util.intl;
-      obj4.label = intl6.string(_modDef3714.awAqRi);
+      obj4.label = intl6.string(_modDef3715.awAqRi);
       obj4.value = VibegrationsDebugFormat.formatMs(found.cpu_ms);
       const items = [React3(VibegrationsDebugPrimitives.DebugStatRow, obj4)];
       let tmp17Result = null;
       if (null != analyticsMemoryValueResult) {
         const obj = { label: null, value: null };
         const intl = util.intl;
-        obj.label = intl.string(_modDef3714.WdGviA);
+        obj.label = intl.string(_modDef3715.WdGviA);
         obj.value = analyticsMemoryValueResult;
         tmp17Result = React3(VibegrationsDebugPrimitives.DebugStatRow, obj);
       }
@@ -60,7 +60,7 @@ export const VibegrationsDebugAgentAnalyticsRows = function VibegrationsDebugAge
 export const VibegrationsDebugWorkerAnalyticsSection = function VibegrationsDebugWorkerAnalyticsSection(analytics) {
   analytics = analytics.analytics;
   let intl = util.intl;
-  const stringResult = intl.string(_modDef3714.Pgvj3h);
+  const stringResult = intl.string(_modDef3715.Pgvj3h);
   if ("ok" !== analytics.status) {
     let obj2 = { title: stringResult, children: null };
     let obj3 = { children: VibegrationsDebugLabels.analyticsUnavailableReason(analytics) };
@@ -80,7 +80,7 @@ export const VibegrationsDebugWorkerAnalyticsSection = function VibegrationsDebu
     if (0 === found.length) {
       let obj4 = { children: null };
       const intl2 = util.intl;
-      obj4.children = intl2.string(_modDef3714.uAzxdh);
+      obj4.children = intl2.string(_modDef3715.uAzxdh);
       let mapped1 = React3(VibegrationsDebugPrimitives.DebugNote, obj4);
     } else {
       mapped1 = found.map((label) => {
@@ -88,7 +88,7 @@ export const VibegrationsDebugWorkerAnalyticsSection = function VibegrationsDebu
         const obj = { label: label.label, value: null, hint: null };
         const intl = util.intl;
         const obj2 = { cpu: VibegrationsDebugFormat.formatMs(object.cpu_ms) };
-        obj.value = intl.formatToPlainString(_modDef3714.AnRynJ, obj2);
+        obj.value = intl.formatToPlainString(_modDef3715.AnRynJ, obj2);
         obj.hint = VibegrationsDebugLabels.analyticsMemoryValue(object);
         return closure_1_3(VibegrationsDebugPrimitives.DebugStatRow, obj, object.role);
       });

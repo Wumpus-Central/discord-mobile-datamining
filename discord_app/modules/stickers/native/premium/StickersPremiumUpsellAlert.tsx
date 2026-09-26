@@ -6,9 +6,9 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import openPremiumModalDefault from "../../../../components_native/premium/openPremiumModal.tsx";
-import _modDef9860 from "../../../../../_runtime/metro/09860__.js";
-import _modDef9861 from "../../../../../_runtime/metro/09861__.js";
-import _modDef9862 from "../../../../../_runtime/metro/09862__.js";
+import _modDef9871 from "../../../../../_runtime/metro/09871__.js";
+import _modDef9872 from "../../../../../_runtime/metro/09872__.js";
+import _modDef9873 from "../../../../../_runtime/metro/09873__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import IAPStore from "../../../../stores/native/IAPStore.android.tsx";
 
@@ -54,7 +54,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let items = [
   {
-    icon: _modDef9860,
+    icon: _modDef9871,
     description() {
       const intl = util.intl;
       return intl.string(util.t.uAfKTe);
@@ -64,7 +64,7 @@ let items = [
   ,
 ];
 let obj = {
-  icon: _modDef9860,
+  icon: _modDef9871,
   description() {
     const intl = util.intl;
     return intl.string(util.t.uAfKTe);
@@ -72,28 +72,28 @@ let obj = {
   color: nativeDefault.unsafe_rawColors.PREMIUM_PERK_PURPLE,
 };
 items[1] = {
-  icon: _modDef9861,
+  icon: _modDef9872,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
   },
 };
 let obj2 = {
-  icon: _modDef9861,
+  icon: _modDef9872,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
   },
 };
 items[2] = {
-  icon: _modDef9862,
+  icon: _modDef9873,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
   },
   color: nativeDefault.unsafe_rawColors.PREMIUM_PERK_GREEN,
 };
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj5 = {
   alert: { paddingTop: 18 },
   shortHeightAlert: { height: 500 },
@@ -108,7 +108,7 @@ let obj5 = {
   imageHeader: null,
 };
 let obj3 = {
-  icon: _modDef9862,
+  icon: _modDef9873,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
@@ -158,12 +158,12 @@ export default function StickersPremiumUpsellAlert(arg0) {
       const obj = analyticsLocations(dependencyMap[14]);
     }
   }, []);
-  const tmp5 = analyticsLocations(8657)(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
+  const tmp5 = analyticsLocations(8665)(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
   let priceString;
   if (tmp5 != null) {
     priceString = tmp5.priceString;
   }
-  analyticsLocations = tmp3(6578)().analyticsLocations;
+  analyticsLocations = tmp3(6583)().analyticsLocations;
   let obj = {
     cancelText: null,
     confirmColor: null,
@@ -193,15 +193,15 @@ export default function StickersPremiumUpsellAlert(arg0) {
   obj.onCancel = onClose;
   items = [tmp.alert];
   let shortHeightAlert = null;
-  if (analyticsLocations(1478)().height <= 580) {
+  if (analyticsLocations(1479)().height <= 580) {
     shortHeightAlert = tmp.shortHeightAlert;
   }
   items[1] = shortHeightAlert;
   obj.style = items;
   let obj2 = { style: tmp.closeContainer, children: null };
   let obj3 = { accessibilityRole: "button", accessibilityLabel: "close", onPress: onClose, children: null };
-  const tmp3Result = analyticsLocations(5293);
-  obj3.children = closure_14(native.Icon, { source: analyticsLocations(6408) });
+  const tmp3Result = analyticsLocations(5300);
+  obj3.children = closure_14(native.Icon, { source: analyticsLocations(6413) });
   obj2.children = closure_14(Pressables.PressableOpacity, obj3);
   const items1 = [closure_14(closure_4, obj2)];
   const obj5 = {
@@ -211,8 +211,8 @@ export default function StickersPremiumUpsellAlert(arg0) {
     },
     children: null,
   };
-  const obj4 = { source: analyticsLocations(6408) };
-  const items2 = [closure_14(closure_5, { source: analyticsLocations(9863), style: tmp.imageHeader }), ,];
+  const obj4 = { source: analyticsLocations(6413) };
+  const items2 = [closure_14(closure_5, { source: analyticsLocations(9874), style: tmp.imageHeader }), ,];
   const obj7 = { style: tmp.description, variant: "text-md/medium", children: null };
   const intl3 = util.intl;
   if (priceString == null) {
@@ -221,7 +221,7 @@ export default function StickersPremiumUpsellAlert(arg0) {
   const obj8 = { children: null };
   obj7.children = intl3.format(util.t.TBsJfQ, { monthlyPrice: priceString });
   items2[1] = closure_14(Text_Text.Text, obj7);
-  const obj6 = { source: analyticsLocations(9863), style: tmp.imageHeader };
+  const obj6 = { source: analyticsLocations(9874), style: tmp.imageHeader };
   items2[2] = closure_14(closure_4, {
     style: tmp.perks,
     children: items.map((perk, index) =>

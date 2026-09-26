@@ -4,22 +4,22 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import SearchQueryStore from "../../../../search/native/stores/SearchQueryStore.tsx";
 
 const require = fn;
-let closure_5 = fn(7296).setIsChannelDetailsSearchActive;
+let closure_5 = fn(7301).setIsChannelDetailsSearchActive;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj = {
   back: {
     justifyContent: "center",
-    height: fn(11845).SEARCH_BAR_HEIGHT,
-    paddingStart: fn(10366).CHANNEL_DETAILS_MARGIN,
+    height: fn(11859).SEARCH_BAR_HEIGHT,
+    paddingStart: fn(10377).CHANNEL_DETAILS_MARGIN,
     paddingEnd: 8,
   },
 };
 let closure_7 = createStyles.createStyles(obj);
 let obj3 = {
   justifyContent: "center",
-  height: fn(11845).SEARCH_BAR_HEIGHT,
-  paddingStart: fn(10366).CHANNEL_DETAILS_MARGIN,
+  height: fn(11859).SEARCH_BAR_HEIGHT,
+  paddingStart: fn(10377).CHANNEL_DETAILS_MARGIN,
   paddingEnd: 8,
 };
 const size = fn(2);
@@ -30,7 +30,6 @@ export default noop.memo(
     channelId = channelId.channelId;
     const onBackPress = channelId.onBackPress;
     let flag = channelId.showBackButton;
-    ({ guildId, onSuggestionsLayoutMesure, suggestionsDismissed, setSuggestionsDismissed } = channelId);
     if (flag === undefined) {
       flag = true;
     }
@@ -39,7 +38,7 @@ export default noop.memo(
     const tmp = closure_7();
     channelDetailsSearchContext = channelId(channelDetailsSearchContext[7]).useChannelDetailsSearchContext(
       channelId,
-      guildId,
+      channelId.guildId,
     );
     const items = [channelId, channelDetailsSearchContext];
     const effect = callback.useEffect(
@@ -68,14 +67,7 @@ export default noop.memo(
         callback1();
       }
     }, items3);
-    const obj2 = {
-      ref,
-      searchContext: channelDetailsSearchContext,
-      onSuggestionsLayoutMesure,
-      suggestionsDismissed,
-      setSuggestionsDismissed,
-      backButton: null,
-    };
+    const obj2 = { ref, searchContext: channelDetailsSearchContext, backButton: null };
     let tmp9Result = null;
     let obj = channelId(channelDetailsSearchContext[7]);
     if (flag) {
@@ -101,9 +93,6 @@ export default noop.memo(
     return jsx(onBackPress(channelDetailsSearchContext[10]), {
       ref,
       searchContext: channelDetailsSearchContext,
-      onSuggestionsLayoutMesure,
-      suggestionsDismissed,
-      setSuggestionsDismissed,
       backButton: null,
     });
   }),

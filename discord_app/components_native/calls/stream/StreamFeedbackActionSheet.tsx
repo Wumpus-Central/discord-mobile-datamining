@@ -1,6 +1,6 @@
 // discord_app/components_native/calls/stream/StreamFeedbackActionSheet.tsx
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01980_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01981_asyncRequireImpl.js";
 import ToastUtils from "../../../modules/toast/native/ToastUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
 import FeedbackUtils from "../../../modules/feedback/FeedbackUtils.tsx";
@@ -11,7 +11,7 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const Constants = fn(11107);
+const Constants = fn(11121);
 ({ FeedbackCategory: hasOwnProperty, FeedbackType: metroRequire, StreamFeedbackOption: closure_7 } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -20,8 +20,8 @@ const result = size.fileFinishedImporting("components_native/calls/stream/Stream
 export default function StreamFeedbackActionSheet(stream) {
   stream = stream.stream;
   const analyticsData = stream.analyticsData;
-  dependencyMap = stream(7152).useGetStreamApplication(stream);
-  let obj = stream(7152);
+  dependencyMap = stream(7157).useGetStreamApplication(stream);
+  let obj = stream(7157);
   const items = [AuthenticationStore];
   const stateFromStores = stream(504).useStateFromStores(items, () => AuthenticationStore.getId() === stream.ownerId);
   const intl = stream(1115).intl;
@@ -38,7 +38,7 @@ export default function StreamFeedbackActionSheet(stream) {
     freeformConfig: null,
   };
   const intl4 = tmp(1115).intl;
-  const tmp9 = analyticsData(2748);
+  const tmp9 = analyticsData(2749);
   if (stateFromStores) {
     let TVTIT1 = tmp9["0ZBLiZ"];
     let tmp10 = tmp8;
@@ -50,7 +50,7 @@ export default function StreamFeedbackActionSheet(stream) {
   const intl5 = tmp(1115).intl;
   obj3.problemsHeader = intl5.string(stream(1115).t["6Y1t5P"]);
   const stringResult1 = intl2.string(stream(1115).t["0uxA2V"]);
-  obj3.problemOptions = stream(11110).getStreamFeedbackOptions({ isStreamer: stateFromStores });
+  obj3.problemOptions = stream(11124).getStreamFeedbackOptions({ isStreamer: stateFromStores });
   let obj4 = { value: constants2.FREEFORM, label: null };
   const intl6 = tmp(1115).intl;
   obj4.label = intl6.string(stream(1115).t.emlT91);
@@ -64,13 +64,13 @@ export default function StreamFeedbackActionSheet(stream) {
     trackOpen: null,
     trackReport: null,
   };
-  const tmpResult = stream(11110);
+  const tmpResult = stream(11124);
   if (stateFromStores) {
     stringResult2 = stringResult1;
   }
   obj5.ratingBody = stringResult2;
   const intl7 = tmp(1115).intl;
-  obj5.categoriesHeader = intl7.string(tmp10(2748).tq8598);
+  obj5.categoriesHeader = intl7.string(tmp10(2749).tq8598);
   const items1 = [obj3];
   obj5.optionsTree = items1;
   obj5.trackOpen = function trackOpen() {
@@ -144,7 +144,7 @@ export default function StreamFeedbackActionSheet(stream) {
       if (null != reason) {
         if (obj3.shouldShowLogUploadForCategory(rating, category, reason)) {
           ({ media_session_id: obj6.mediaSessionId, rtc_connection_id: obj6.rtcConnectionId } = analyticsData);
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16295, dependencyMap.paths), "UploadLogs", {
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16323, dependencyMap.paths), "UploadLogs", {
             mediaSessionId: null,
             rtcConnectionId: null,
           });
@@ -156,7 +156,7 @@ export default function StreamFeedbackActionSheet(stream) {
       ToastUtils.presentFeedbackSent();
     }
   };
-  return jsx(tmp10(16292), {
+  return jsx(tmp10(16320), {
     headerLabel: stringResult,
     showHeaderCloseButton: true,
     ratingBody: null,

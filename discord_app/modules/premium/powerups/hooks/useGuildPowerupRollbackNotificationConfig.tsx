@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupRollbackNotificationConfig.tsx
 import util from "../../../../intl/index.native.tsx";
 import dismissible_content from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import _modDef2518 from "../GuildPowerups.messages.js";
+import _modDef2519 from "../GuildPowerups.messages.js";
 import getGuildPowerupFormattedDateStringDefault from "../utils/getGuildPowerupFormattedDateString.tsx";
 import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 
@@ -20,7 +20,7 @@ export default function useGuildPowerupRollbackNotificationConfig(guildId, useGu
     GuildPowerupsStore.getStateForGuild(closure_0),
   );
   if (stateFromStores != null) {
-    const tmp4 = stateFromStores.allPowerups[tmp(undefined, 4723).GUILD_POWERUP_GUILD_THEME_SKU_ID];
+    const tmp4 = stateFromStores.allPowerups[tmp(undefined, 4727).GUILD_POWERUP_GUILD_THEME_SKU_ID];
   }
   const obj = require("initialize");
   let tmp5 = null;
@@ -34,17 +34,17 @@ export default function useGuildPowerupRollbackNotificationConfig(guildId, useGu
       if (null != storeRemovalDate) {
         const tmp8 = getGuildPowerupFormattedDateStringDefault(storeRemovalDate);
         const obj2 = {
-          dismissibleContent: tmp(2028).DismissibleContent.GUILD_THEME_POWERUP_ROLLBACK_NOTIFICATION,
+          dismissibleContent: tmp(2029).DismissibleContent.GUILD_THEME_POWERUP_ROLLBACK_NOTIFICATION,
           title: null,
           description: null,
         };
         const intl = tmp(1115).intl;
         const obj3 = { dateString: tmp8 };
-        obj2.title = intl.formatToPlainString(_modDef2518["6e2ry1"], obj3);
+        obj2.title = intl.formatToPlainString(_modDef2519["6e2ry1"], obj3);
         const intl2 = tmp(1115).intl;
         const obj4 = { startDate: tmp8, endDate: tmp8, perkName: null, boostCount: null };
         ({ title: obj5.perkName, cost: obj5.boostCount } = tmp4);
-        obj2.description = intl2.formatToPlainString(_modDef2518.jd8fki, obj4);
+        obj2.description = intl2.formatToPlainString(_modDef2519.jd8fki, obj4);
         tmp6 = obj2;
       }
     }
@@ -68,11 +68,11 @@ export const getGuildThemeRollbackNotificationConfig = function getGuildThemeRol
       };
       const intl = util.intl;
       const obj2 = { dateString: tmp3 };
-      obj.title = intl.formatToPlainString(_modDef2518["6e2ry1"], obj2);
+      obj.title = intl.formatToPlainString(_modDef2519["6e2ry1"], obj2);
       const intl2 = util.intl;
       const obj5 = { startDate: tmp3, endDate: tmp3, perkName: null, boostCount: null };
       ({ title: obj3.perkName, cost: obj3.boostCount } = storeRemovalDate);
-      obj.description = intl2.formatToPlainString(_modDef2518.jd8fki, obj5);
+      obj.description = intl2.formatToPlainString(_modDef2519.jd8fki, obj5);
       return obj;
     }
   }

@@ -8,7 +8,7 @@ import GuildBoostSlotStore from "../../../../../stores/billing/GuildBoostSlotSto
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(4720);
+const GuildPowerupsConstants = fn(4724);
 ({ BoostPurchaseIntent: metroRequire, GuildPowerupType: closure_7 } = GuildPowerupsConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnActivate.tsx");
@@ -76,7 +76,7 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
               analyticsLocations,
               guildId: stateFromStores.id,
               onBack() {
-                return PERK(5032).popWithKey(diff(6827).PREMIUM_KEY);
+                return PERK(5039).popWithKey(diff(6832).PREMIUM_KEY);
               },
               onPaymentSuccess() {
                 const availableGuildBoostSlots = GuildBoostingUtils.getAvailableGuildBoostSlots(
@@ -98,7 +98,7 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
                 }
               },
               onPaymentDismiss() {
-                return PERK(5032).popWithKey(diff(6827).PREMIUM_KEY);
+                return PERK(5039).popWithKey(diff(6832).PREMIUM_KEY);
               },
             };
             const result = tmp17(onToggle[13]).launchGuildBoostFlowOrAlert(obj3);

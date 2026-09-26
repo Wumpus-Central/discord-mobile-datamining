@@ -10,7 +10,7 @@ function cacheBustParam() {
   return "x=" + Math.floor(new Date().getMinutes() / 5);
 }
 const Endpoints = fn(1074).Endpoints;
-const ChangelogPlatforms = fn(2097).ChangelogPlatforms;
+const ChangelogPlatforms = fn(2098).ChangelogPlatforms;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/ChangeLogActionCreators.tsx");
 

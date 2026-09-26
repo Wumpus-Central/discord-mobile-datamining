@@ -7,18 +7,19 @@ import GuildOfficialMessageUtils from "../../GuildOfficialMessageUtils.tsx";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
+import NativeMediaManagerModule from "../../../../../discord_common/js/packages/rtn-codegen/js/NativeMediaManagerModule.tsx";
 
 require = fn;
-const MessageConstants = fn(4822);
+const MessageConstants = fn(4829);
 ({ DEFAULT_GUILD_OFFICIAL_COLOR: metroRequire, GUILD_OFFICIAL_HIGHLIGHT_ALPHA_COLOR: closure_7 } = MessageConstants);
-const SwipeActionsType = fn(7370).SwipeActionsType;
+const SwipeActionsType = fn(7375).SwipeActionsType;
 const Constants = fn(1074);
 ({ MessageFlags: closure_9, MessageTypes: c10 } = Constants);
-let createStyles = fn(4829);
+let createStyles = fn(4836);
 const result = createStyles.experimental_createToken(() =>
   ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BRAND_500, 0.1),
 );
-createStyles = fn(4829);
+createStyles = fn(4836);
 const nativeStyleProperties = createStyles.createNativeStyleProperties({
   ephemeralBackgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE,
   ephemeralGutterColor: nativeDefault.colors.BACKGROUND_BRAND,
@@ -29,8 +30,7 @@ const nativeStyleProperties = createStyles.createNativeStyleProperties({
   automodBlockedGutterColor: nativeDefault.unsafe_rawColors.RED_345,
   editingColor: nativeDefault.colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT,
 });
-const MediaManager = fn(17).NativeModules.MediaManager;
-const set = new Set(MediaManager.getConstants().supportedExtensions);
+const set = new Set(NativeMediaManagerModule.getConstants().supportedExtensions);
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/messages/native/renderer/RowGeneratorUtils.tsx");
 

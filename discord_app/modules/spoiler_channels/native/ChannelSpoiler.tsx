@@ -15,10 +15,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const VoicePanelControlsModes = fn(11739).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(11753).VoicePanelControlsModes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = {
   subtitle: { textAlign: "center", lineHeight: 22 },
   subtitleContainer: { alignItems: "center" },
@@ -50,7 +50,7 @@ export default function ChannelSpoiler(channelId) {
     isVocalResult = stateFromStores1.isVocal();
   }
   dependencyMap = isVocalResult;
-  setControlsMode = noop.useContext(tmp6(11740)).setControlsMode;
+  setControlsMode = noop.useContext(tmp6(11754)).setControlsMode;
   const items2 = [, , ,];
   ({ guildId: arr3[0], channelId: arr3[1] } = channelId);
   items2[2] = setControlsMode;
@@ -78,8 +78,8 @@ export default function ChannelSpoiler(channelId) {
     }
   }, items3);
   if (null != stateFromStores1) {
-    channelIconComponent = tmp(5328).getChannelIconComponent(stateFromStores1);
-    const tmpResult = tmp(5328);
+    channelIconComponent = tmp(5335).getChannelIconComponent(stateFromStores1);
+    const tmpResult = tmp(5335);
   }
   if (null != channelIconComponent) {
     let obj3 = { style: { flexDirection: "row", alignItems: "center", gap: 4, flexShrink: 1 }, children: null };
@@ -91,7 +91,7 @@ export default function ChannelSpoiler(channelId) {
       style: { flexShrink: 1 },
       children: tmp7,
     };
-    items4[1] = closure_10(tmp(4825).Text, obj5);
+    items4[1] = closure_10(tmp(4832).Text, obj5);
     obj3.children = items4;
     let stringResult = closure_11(View, obj3);
   } else {
@@ -110,8 +110,8 @@ export default function ChannelSpoiler(channelId) {
       const obj7 = { style: tmp4.subtitleMeasure, pointerEvents: "none", children: null };
       const obj8 = { variant: "text-md/medium", maxFontSizeMultiplier: 2, onTextLayout: callback1, children: null };
       const obj9 = { channelId: stateFromStores1.id };
-      obj8.children = tmp6(4819).parseTopic(stateFromStores1.topic, true, obj9);
-      obj7.children = closure_10(tmp(4825).Text, obj8);
+      obj8.children = tmp6(4823).parseTopic(stateFromStores1.topic, true, obj9);
+      obj7.children = closure_10(tmp(4832).Text, obj8);
       const items5 = [closure_10(View, obj7), , ,];
       const obj10 = {
         color: "text-muted",
@@ -121,10 +121,10 @@ export default function ChannelSpoiler(channelId) {
         lineClamp: 3,
         children: null,
       };
-      const tmp6Result = tmp6(4819);
+      const tmp6Result = tmp6(4823);
       const obj11 = { channelId: stateFromStores1.id };
-      obj10.children = tmp6(4819).parseTopic(stateFromStores1.topic, true, obj11);
-      items5[1] = closure_10(tmp(4825).Text, obj10);
+      obj10.children = tmp6(4823).parseTopic(stateFromStores1.topic, true, obj11);
+      items5[1] = closure_10(tmp(4832).Text, obj10);
       let tmp24Result = null;
       if (tmp5[0]) {
         const obj12 = { onPress: callback2, accessibilityRole: "button", children: null };
@@ -136,15 +136,15 @@ export default function ChannelSpoiler(channelId) {
         };
         const intl2 = tmp(1115).intl;
         obj13.children = intl2.string(tmp(1115).t["/QvRak"]);
-        obj12.children = closure_10(tmp(4825).Text, obj13);
-        tmp24Result = closure_10(tmp(5428).PressableHighlight, obj12);
+        obj12.children = closure_10(tmp(4832).Text, obj13);
+        tmp24Result = closure_10(tmp(5435).PressableHighlight, obj12);
       }
       items5[2] = tmp24Result;
       const obj14 = { style: tmp4.divider };
       items5[3] = closure_10(View, obj14);
       obj6.children = items5;
-      tmp23Result = closure_11(tmp(5272).Stack, obj6);
-      const tmp6Result3 = tmp6(4819);
+      tmp23Result = closure_11(tmp(5279).Stack, obj6);
+      const tmp6Result3 = tmp6(4823);
     }
     str = stateFromStores1.topic;
   }

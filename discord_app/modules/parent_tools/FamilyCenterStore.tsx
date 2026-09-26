@@ -59,7 +59,7 @@ function handleInitialLoad(arg0) {
     const merged = Object.assign(acc);
     const obj2 = {};
     const merged1 = Object.assign(
-      closure_0(2058).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count),
+      closure_0(2059).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count),
     );
     let num = approximate_member_count.approximate_member_count;
     if (num == null) {
@@ -193,7 +193,7 @@ function handleTeenActivityFetch(familyCenterTeenActivity) {
       const merged = Object.assign(acc);
       const obj2 = {};
       const merged1 = Object.assign(
-        closure_0(2058).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count),
+        closure_0(2059).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count),
       );
       let num = approximate_member_count.approximate_member_count;
       if (num == null) {
@@ -256,7 +256,7 @@ function handleTeenActivityMoreFetch(familyCenterTeenActivity) {
     const merged = Object.assign(acc);
     const obj2 = {};
     const merged1 = Object.assign(
-      closure_0(2058).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count),
+      closure_0(2059).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count),
     );
     let num = approximate_member_count.approximate_member_count;
     if (num == null) {
@@ -424,8 +424,8 @@ function reset() {
   c31 = null;
   c19 = false;
 }
-const getCountryCodeByAlpha2 = fn(5044).getCountryCodeByAlpha2;
-const FamilyCenterConstants = fn(6953);
+const getCountryCodeByAlpha2 = fn(5051).getCountryCodeByAlpha2;
+const FamilyCenterConstants = fn(6958);
 ({ FAMILY_CENTER_REFETCH_COOLDOWN: metroRequire, FAMILY_CENTER_SUB_ROUTES } = FamilyCenterConstants);
 const FamilyCenterSubPages = FamilyCenterConstants.FamilyCenterSubPages;
 const TeenActionDisplayType = FamilyCenterConstants.TeenActionDisplayType;
@@ -542,7 +542,7 @@ prototype["loadCache"] = function loadCache() {
       const merged = Object.assign(acc);
       const obj2 = {};
       const merged1 = Object.assign(
-        closure_0(2058).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count),
+        closure_0(2059).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count),
       );
       let num = approximate_member_count.approximate_member_count;
       if (num == null) {
@@ -575,7 +575,7 @@ prototype["loadCache"] = function loadCache() {
     snapshot = teenActivityTotals.reduce((acc, item) => {
       [tmp2, tmp3] = item.split(":");
       const tmp = _slicedToArray(item.split(":"), 2);
-      const result = closure_0(7007).displayTypeFromString(tmp2);
+      const result = closure_0(7012).displayTypeFromString(tmp2);
       let tmp5 = acc;
       if (undefined !== result) {
         const obj2 = {};

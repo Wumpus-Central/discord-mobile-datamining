@@ -4,8 +4,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import QuestDockStore from "QuestDockStore.tsx";
 
 const require = fn;
-const QuestDockMode = fn(5751).QuestDockMode;
-const height = fn(14599).QUEST_DOCK_COLLAPSED_HEIGHT;
+const QuestDockMode = fn(5756).QuestDockMode;
+const height = fn(14624).QUEST_DOCK_COLLAPSED_HEIGHT;
 const jsx = fn(21).jsx;
 const obj = {
   questDockWrapperSpecs: null,
@@ -13,7 +13,7 @@ const obj = {
   activeQuestDockMode: null,
   minExpandedContentHeight: null,
 };
-let ReanimatedHelperTypes = fn(6490);
+let ReanimatedHelperTypes = fn(6495);
 obj.questDockWrapperSpecs = ReanimatedHelperTypes.createFakeSharedValue({
   width: 0,
   height: 0,
@@ -21,16 +21,16 @@ obj.questDockWrapperSpecs = ReanimatedHelperTypes.createFakeSharedValue({
   y: 0,
   prevDeltaY: 0,
 });
-ReanimatedHelperTypes = fn(6490);
+ReanimatedHelperTypes = fn(6495);
 obj.windowDimensions = ReanimatedHelperTypes.createFakeSharedValue({
   width: 0,
   height: 0,
   maxContentHeight: 0,
   landscape: false,
 });
-ReanimatedHelperTypes = fn(6490);
+ReanimatedHelperTypes = fn(6495);
 obj.activeQuestDockMode = ReanimatedHelperTypes.createFakeSharedValue(QuestDockMode.COLLAPSED);
-ReanimatedHelperTypes = fn(6490);
+ReanimatedHelperTypes = fn(6495);
 obj.minExpandedContentHeight = ReanimatedHelperTypes.createFakeSharedValue(0);
 const context = noop.createContext(obj);
 let size = fn(2);

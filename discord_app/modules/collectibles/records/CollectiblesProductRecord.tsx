@@ -5,7 +5,7 @@ import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord.t
 import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord.tsx";
 
 const require = fn;
-const CollectiblesItemRecord = fn(6961);
+const CollectiblesItemRecord = fn(6966);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } =
   CollectiblesItemRecord);
 let closure_7 = fn(1076).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
@@ -255,17 +255,17 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
                 summary: null,
                 styles: "Button",
                 type: "Array",
-                premiumType: "channel",
-                items: "BACKGROUND_SYNC",
-                categorySkuId: "CHANNEL_CREATE",
-                isCategoryReward: "CHANNEL_DELETE",
-                prices: "CHANNEL_UPDATES",
-                previewAssets: "CONNECTION_OPEN",
-                googleSkuIds: "GUILD_CREATE",
-                eligibleOffers: "GUILD_DELETE",
-                variants: "GUILD_EMOJIS_UPDATE",
-                bundledProducts: "GUILD_ROLE_CREATE",
-                isFirstParty: "GUILD_ROLE_DELETE",
+                premiumType: "channelId",
+                items: "<string:1862330198>",
+                categorySkuId: "<string:2932244736>",
+                isCategoryReward: "<string:851704355>",
+                prices: "<string:1340029796>",
+                previewAssets: "<string:3224598413>",
+                googleSkuIds: "<string:1443109011>",
+                eligibleOffers: "<string:1076358414>",
+                variants: "<string:263131218>",
+                bundledProducts: "<string:3881259695>",
+                isFirstParty: "<string:2840717144>",
               };
               let str;
               if (first != null) {

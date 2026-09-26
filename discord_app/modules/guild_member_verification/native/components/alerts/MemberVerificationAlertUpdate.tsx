@@ -3,7 +3,7 @@ import util from "../../../../../intl/index.native.tsx";
 import LinkingDefault from "../../../../../lib/native/Linking.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import common_AlertDefault from "../../../../../components_native/common/Alert.tsx";
-import _modDef6507 from "../../../../../../_runtime/metro/06507__.js";
+import _modDef6512 from "../../../../../../_runtime/metro/06512__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -11,7 +11,7 @@ const Image = fn(17).Image;
 const DownloadLinks = fn(1074).DownloadLinks;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_7 = createStyles.createStyles({
   headerImage: { marginLeft: "auto", marginRight: "auto", marginTop: 8 },
   header: { marginTop: 24, textAlign: "center" },
@@ -35,7 +35,7 @@ export default function MemberVerificationAlertUpdate(onClose) {
   };
   obj.onCancel = onClose.onClose;
   const tmp2 = common_AlertDefault;
-  const items = [hasOwnProperty(Image, { source: _modDef6507, style: tmp.headerImage }), ,];
+  const items = [hasOwnProperty(Image, { source: _modDef6512, style: tmp.headerImage }), ,];
   const obj3 = {
     style: tmp.header,
     variant: "heading-lg/extrabold",

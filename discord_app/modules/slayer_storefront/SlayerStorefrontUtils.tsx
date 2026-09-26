@@ -2,7 +2,7 @@
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import StoreUtils from "../../utils/StoreUtils.tsx";
-import keysSorter from "../../../_runtime/05763_keysSorter.js";
+import keysSorter from "../../../_runtime/05768_keysSorter.js";
 import SocialLayerStorefrontTypes from "SocialLayerStorefrontTypes.tsx";
 import StorefrontUtils from "../storefront/StorefrontUtils.tsx";
 import ApplicationStore from "../applications/ApplicationStore.tsx";
@@ -184,8 +184,8 @@ function getSKUShareURL(guildId, applicationId) {
       applicationId.slug,
     );
 }
-let closure_4 = fn(6643).WishlistRecommendationReason;
-const SocialLayerStorefrontConstants = fn(6645);
+let closure_4 = fn(6648).WishlistRecommendationReason;
+const SocialLayerStorefrontConstants = fn(6650);
 ({
   getChannelsGameShopPrefix: closure_9,
   STOREFRONT_MARKETING_GUILD_ID: c10,
@@ -201,7 +201,7 @@ const Constants = fn(1074);
 const CollectibleShopTab = fn(1076).CollectibleShopTab;
 const CurrencyCodes = fn(1085).CurrencyCodes;
 let str = "jpg";
-if (fn(5085).SUPPORTS_WEBP) {
+if (fn(5092).SUPPORTS_WEBP) {
   str = "webp";
 }
 function getCountryPrices(arg0, arg1) {
@@ -501,7 +501,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       if (0 !== tenantMetadata.tenantMetadata.socialLayer.carouselItems.length) {
         const first = tenantMetadata.tenantMetadata.socialLayer.carouselItems[0];
         if (null == first.labelIconAssetId) {
-          let obj4 = { primaryIconAsset: "isArray", primaryIconLabel: "paddingHorizontal" };
+          let obj4 = { primaryIconAsset: "Array", primaryIconLabel: "paddingHorizontal" };
         } else {
           const obj3 = StoreUtils;
           obj4 = {
@@ -518,7 +518,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       }
     }
   }
-  return { primaryIconAsset: "isArray", primaryIconLabel: "paddingHorizontal" };
+  return { primaryIconAsset: "Array", primaryIconLabel: "paddingHorizontal" };
 };
 export const getGameItemThumbnailUrl = function getGameItemThumbnailUrl(value2) {
   let obj = arg1;

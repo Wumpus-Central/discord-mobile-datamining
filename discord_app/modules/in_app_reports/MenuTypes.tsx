@@ -1,6 +1,7 @@
 // discord_app/modules/in_app_reports/MenuTypes.tsx
 import size from "../../../_runtime/metro/00002__.js";
 
+const MediaTakedownRegulation = { TIDA: "tida", UK_STOPNCII: "uk_stopncii" };
 const result = size.fileFinishedImporting("modules/in_app_reports/MenuTypes.tsx");
 
 export const ReportNames = {
@@ -21,6 +22,11 @@ export const UnauthenticatedReportNames = {
   USER: "user_urf",
   GUILD: "guild_urf",
   MEDIA_TAKEDOWN: "media_takedown",
+};
+export { MediaTakedownRegulation };
+export const isMediaTakedownRegulation = function isMediaTakedownRegulation(arg0) {
+  const values = Object.values(obj);
+  return values.includes(arg0);
 };
 export const ReportSubType = {
   SUB_SPAM: "sub_spam",

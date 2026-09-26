@@ -1,7 +1,7 @@
 // discord_app/modules/tiny_bronco/native/useDismissOnce.tsx
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const ContentDismissActionType = fn(2041).ContentDismissActionType;
+const ContentDismissActionType = fn(2042).ContentDismissActionType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/tiny_bronco/native/useDismissOnce.tsx");
 

@@ -10,7 +10,7 @@ export default function useNavigatorConfirmChangesOnBack() {
   const ref = noop.useRef(null);
   dependencyMap = noop.useRef(false);
   let obj = {
-    onGoBack: ref(10372)({
+    onGoBack: ref(10383)({
       onBeforeGoBack(navigation) {
         if (navigation.preventable) {
           let current = ref2.current;

@@ -3,7 +3,7 @@ import Constants from "../../../../discord_common/js/shared/Constants.tsx";
 import util from "../../../intl/index.native.tsx";
 import NameplateRecord from "../records/NameplateRecord.tsx";
 import constants from "constants.tsx";
-import decodeImageDefault from "../../../../_runtime/01976_decodeImage.js";
+import decodeImageDefault from "../../../../_runtime/01977_decodeImage.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const isNameplateRecord = NameplateRecord.isNameplateRecord;

@@ -1,5 +1,5 @@
 // discord_app/modules/guild_scheduled_events/GuildScheduledEventModalActionCreators.native.tsx
-import asyncRequireImpl from "../../../_runtime/01980_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01981_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import ScheduleUtils from "utils/ScheduleUtils.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -15,8 +15,8 @@ function openGuildEventDetails(arg0) {
     const tmp2Result = ScheduleUtils;
   }
   obj2.recurrenceId = recurrenceId;
-  obj.openLazy(asyncRequireImpl(9070, dependencyMap.paths), closure_5, obj2, "stack");
-  const tmp3 = asyncRequireImpl(9070, dependencyMap.paths);
+  obj.openLazy(asyncRequireImpl(9081, dependencyMap.paths), closure_5, obj2, "stack");
+  const tmp3 = asyncRequireImpl(9081, dependencyMap.paths);
 }
 let closure_7 = async function _transitionToEventDetailsFromInvite(arg0) {
   if (c5 === 2) {
@@ -76,8 +76,8 @@ let closure_7 = async function _transitionToEventDetailsFromInvite(arg0) {
     }
   }
 };
-let closure_4 = fn(2050).EXPLICIT_END_EVENT_SHEET_KEY;
-let closure_5 = fn(8966).GUILD_EVENT_INFO_ACTION_SHEET_KEY;
+let closure_4 = fn(2051).EXPLICIT_END_EVENT_SHEET_KEY;
+let closure_5 = fn(8977).GUILD_EVENT_INFO_ACTION_SHEET_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_scheduled_events/GuildScheduledEventModalActionCreators.native.tsx",
@@ -95,5 +95,5 @@ export const transitionToEventDetailsFromInvite = function transitionToEventDeta
   return applyArgumentsResult;
 };
 export const openEndEventModal = function openEndEventModal(channel) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9085, dependencyMap.paths), closure_4, { channel });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9096, dependencyMap.paths), closure_4, { channel });
 };

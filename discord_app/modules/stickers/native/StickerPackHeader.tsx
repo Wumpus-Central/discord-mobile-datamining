@@ -5,19 +5,19 @@ import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import StickersUtils from "../StickersUtils.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef9848 from "../../../../_runtime/metro/09848__.js";
-import _modDef9849 from "../../../../_runtime/metro/09849__.js";
+import _modDef9859 from "../../../../_runtime/metro/09859__.js";
+import _modDef9860 from "../../../../_runtime/metro/09860__.js";
 import StickerPackBannerDefault from "StickerPackBanner.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const StickerPickerConstants = fn(9725);
+const StickerPickerConstants = fn(9736);
 ({ PADDING_VERTICAL, PADDING_HORIZONTAL } = StickerPickerConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
 let result = 2 * PADDING_VERTICAL;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj = {
   section: {
     paddingTop: PADDING_VERTICAL,
@@ -89,7 +89,7 @@ export default noop.memo((withDescription) => {
   if (result) {
     const obj5 = { style: tmp.iconContainer, children: null };
     const obj6 = {
-      source: _modDef9848,
+      source: _modDef9859,
       style: tmp.animatedIcon,
       size: native.Icon.Sizes.EXTRA_SMALL,
       color: tmp.icon.color,
@@ -107,7 +107,7 @@ export default noop.memo((withDescription) => {
     children: stickerPack.name,
   };
   obj7.children = React4(native.Icon, {
-    source: _modDef9849,
+    source: _modDef9860,
     style: tmp.premiumIcon,
     size: native.Icon.Sizes.EXTRA_SMALL,
     color: tmp.icon.color,

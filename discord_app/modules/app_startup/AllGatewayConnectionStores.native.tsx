@@ -142,6 +142,7 @@ import ChannelFollowerStatsStore from "../../stores/ChannelFollowerStatsStore.ts
 import ChannelMemberStore from "../../stores/ChannelMemberStore.tsx";
 import ChannelPinsStore from "../../stores/ChannelPinsStore.tsx";
 import ChannelSKUStore from "../../stores/ChannelSKUStore.tsx";
+import ChannelSectionStore from "../../stores/ChannelSectionStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import CollapsedVoiceChannelStore from "../../stores/CollapsedVoiceChannelStore.tsx";
 import ConnectedAccountsStore from "../../stores/ConnectedAccountsStore.tsx";

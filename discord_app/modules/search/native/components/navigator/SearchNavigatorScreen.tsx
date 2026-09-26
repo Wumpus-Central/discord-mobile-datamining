@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, tabs: null, back: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.tabs = { flex: 1, marginTop: nativeDefault.space.PX_16 };
@@ -29,10 +29,10 @@ export default function SearchNavigatorScreen(navigation) {
   const searchContext = navigation.route.params.searchContext;
   const tmp = closure_8();
   importDefault = tmp;
-  const searchSuggestionsGesture = navigation(16406).useSearchSuggestionsGesture(searchContext);
-  ({ gesture, dismissed, setDismissed, onLayoutMeasure } = searchSuggestionsGesture);
+  const searchSuggestionsGesture = navigation(16435).useSearchSuggestionsGesture(searchContext);
+  ({ gesture, detectorRef, suggestionsContext } = searchSuggestionsGesture);
   const items = [navigation.goBack, tmp.back];
-  let obj = navigation(16406);
+  let obj = navigation(16435);
   let obj2 = { children: null };
   const memo = noop.useMemo(() => {
     const obj = { children: null };
@@ -53,19 +53,12 @@ export default function SearchNavigatorScreen(navigation) {
     return hasOwnProperty(View, obj);
   }, items);
   const items1 = [closure_5(ThemedGradientDefault, { absolute: true, wide: true, tall: true })];
-  const obj3 = { gesture, children: null };
-  const obj4 = { style: null, children: null };
+  const obj3 = { value: suggestionsContext, children: null };
+  const obj4 = { gesture, children: null };
+  const obj5 = { ref: detectorRef, style: null, children: null };
   const items2 = [tmp.wrapper, { paddingTop: useSearchLayoutInsetTopDefault() }];
-  obj4.style = items2;
-  const items3 = [
-    closure_5(SearchScreenSearchBarDefault, {
-      searchContext,
-      suggestionsDismissed: dismissed,
-      setSuggestionsDismissed: setDismissed,
-      onSuggestionsLayoutMesure: onLayoutMeasure,
-      backButton: memo,
-    }),
-  ];
+  obj5.style = items2;
+  const items3 = [closure_5(SearchScreenSearchBarDefault, { searchContext, backButton: memo })];
   const tmp3 = useSearchLayoutInsetTopDefault();
   items3[1] = closure_5(View, {
     style: tmp.tabs,
@@ -74,9 +67,10 @@ export default function SearchNavigatorScreen(navigation) {
       width: useBaseAppContainerDimensionsDefault().width,
     }),
   });
-  obj4.children = items3;
-  obj3.children = closure_6(View, obj4);
-  items1[1] = closure_5(navigation(15973).NonCollapsableGestureDetector, obj3);
+  obj5.children = items3;
+  obj4.children = closure_6(View, obj5);
+  obj3.children = closure_5(navigation(16001).NonCollapsableGestureDetector, obj4);
+  items1[1] = closure_5(navigation(16435).SearchSuggestionsProvider, obj3);
   obj2.children = items1;
   return closure_6(closure_7, obj2);
 }

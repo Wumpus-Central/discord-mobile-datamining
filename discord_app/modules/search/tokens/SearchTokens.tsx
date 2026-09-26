@@ -1,7 +1,7 @@
 // discord_app/modules/search/tokens/SearchTokens.tsx
 import _modDef12 from "../../../../_runtime/metro/00012__.js";
 import util from "../../../intl/index.native.tsx";
-import _modDef4418 from "../../../../_runtime/metro/04418__.js";
+import _modDef4421 from "../../../../_runtime/metro/04421__.js";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import useChannelName from "../../channel/useChannelName.tsx";
 import AutocompleteUtilsDefault from "../../../utils/AutocompleteUtils.tsx";
@@ -23,46 +23,46 @@ function getShortcuts() {
   let obj = {};
   const intl = util.intl;
   obj[intl.string(util.t.HYiVEQ)] = () => {
-    const obj = _modDef4418();
-    const addResult = _modDef4418().startOf("day").add(0, "day");
+    const obj = _modDef4421();
+    const addResult = _modDef4421().startOf("day").add(0, "day");
     const items = [addResult];
-    const startOfResult = _modDef4418().startOf("day");
+    const startOfResult = _modDef4421().startOf("day");
     items[1] = addResult.clone().add(1, "day");
     return items;
   };
   const intl2 = util.intl;
   obj[intl2.string(util.t.cu86KC)] = () => {
-    const obj = _modDef4418();
-    const addResult = _modDef4418().startOf("day").add(-1, "day");
+    const obj = _modDef4421();
+    const addResult = _modDef4421().startOf("day").add(-1, "day");
     const items = [addResult];
-    const startOfResult = _modDef4418().startOf("day");
+    const startOfResult = _modDef4421().startOf("day");
     items[1] = addResult.clone().add(1, "day");
     return items;
   };
   const intl3 = util.intl;
   obj[intl3.string(util.t["FvBj/6"])] = () => {
-    const obj = _modDef4418();
-    const addResult = _modDef4418().startOf("week").add(0, "week");
+    const obj = _modDef4421();
+    const addResult = _modDef4421().startOf("week").add(0, "week");
     const items = [addResult];
-    const startOfResult = _modDef4418().startOf("week");
+    const startOfResult = _modDef4421().startOf("week");
     items[1] = addResult.clone().add(1, "week");
     return items;
   };
   const intl4 = util.intl;
   obj[intl4.string(util.t["20uWCw"])] = () => {
-    const obj = _modDef4418();
-    const addResult = _modDef4418().startOf("month").add(0, "month");
+    const obj = _modDef4421();
+    const addResult = _modDef4421().startOf("month").add(0, "month");
     const items = [addResult];
-    const startOfResult = _modDef4418().startOf("month");
+    const startOfResult = _modDef4421().startOf("month");
     items[1] = addResult.clone().add(1, "month");
     return items;
   };
   const intl5 = util.intl;
   obj[intl5.string(util.t["dXC/hn"])] = () => {
-    const obj = _modDef4418();
-    const addResult = _modDef4418().startOf("year").add(0, "year");
+    const obj = _modDef4421();
+    const addResult = _modDef4421().startOf("year").add(0, "year");
     const items = [addResult];
-    const startOfResult = _modDef4418().startOf("year");
+    const startOfResult = _modDef4421().startOf("year");
     items[1] = addResult.clone().add(1, "year");
     return items;
   };
@@ -113,23 +113,23 @@ function dateValidator(getFullMatch, after) {
     const tmp23 = _slicedToArray(tmp2(), 2);
   } else {
     const _Set3 = Set;
-    const set = new Set(_modDef4418.months().map((item) => item.toLowerCase()));
+    const set = new Set(_modDef4421.months().map((item) => item.toLowerCase()));
     if (set.has(formatted)) {
-      const localResult = _modDef4418(formatted, "MMMM").local();
+      const localResult = _modDef4421(formatted, "MMMM").local();
       const items = [localResult];
-      const obj17 = _modDef4418(formatted, "MMMM");
+      const obj17 = _modDef4421(formatted, "MMMM");
       items[1] = localResult.clone().add(1, "month");
       const cloneResult = localResult.clone();
       [obj9, obj10] = items;
       const tmp21 = _slicedToArray(items, 2);
     } else {
       const _Set = Set;
-      const tmp32Result = _modDef4418;
-      const set1 = new Set(_modDef4418.weekdays().map((item) => item.toLowerCase()));
+      const tmp32Result = _modDef4421;
+      const set1 = new Set(_modDef4421.weekdays().map((item) => item.toLowerCase()));
       if (set1.has(formatted)) {
-        const localResult1 = _modDef4418(formatted, "dddd").local();
+        const localResult1 = _modDef4421(formatted, "dddd").local();
         const items1 = [localResult1];
-        const obj14 = _modDef4418(formatted, "dddd");
+        const obj14 = _modDef4421(formatted, "dddd");
         items1[1] = localResult1.clone().add(1, "day");
         const cloneResult1 = localResult1.clone();
         [obj9, obj10] = items1;
@@ -142,17 +142,17 @@ function dateValidator(getFullMatch, after) {
         const tmp32Result2 = _modDef12;
         const set2 = new Set(_modDef12.range(2015, fullYear + 1).map((item) => item.toString()));
         if (set2.has(formatted)) {
-          const localResult2 = _modDef4418(formatted, "YYYY").local();
+          const localResult2 = _modDef4421(formatted, "YYYY").local();
           const items2 = [localResult2];
-          const obj11 = _modDef4418(formatted, "YYYY");
+          const obj11 = _modDef4421(formatted, "YYYY");
           items2[1] = localResult2.clone().add(1, "year");
           const cloneResult2 = localResult2.clone();
           [obj9, obj10] = items2;
           const tmp17 = _slicedToArray(items2, 2);
         } else {
-          const localResult3 = _modDef4418(formatted, value2).local();
+          const localResult3 = _modDef4421(formatted, value2).local();
           const items3 = [localResult3];
-          const obj6 = _modDef4418(formatted, value2);
+          const obj6 = _modDef4421(formatted, value2);
           items3[1] = localResult3.clone().add(1, "day");
           const cloneResult3 = localResult3.clone();
           [obj9, obj10] = items3;
@@ -160,9 +160,9 @@ function dateValidator(getFullMatch, after) {
         }
         const rangeResult = _modDef12.range(2015, fullYear + 1);
       }
-      const weekdaysResult = _modDef4418.weekdays();
+      const weekdaysResult = _modDef4421.weekdays();
     }
-    const monthsResult = _modDef4418.months();
+    const monthsResult = _modDef4421.months();
   }
   const isValidResult = obj9.isValid();
   let tmp25 = !isValidResult;
@@ -292,7 +292,7 @@ function isValidChannelAutocomplete(token, items) {
         flag = flag2;
       }
     }
-    obj2 = replaced(11809);
+    obj2 = replaced(11823);
   }
   return flag;
 }
@@ -346,13 +346,13 @@ function isValidPinnedAutocomplete(getMatch) {
   return flag;
 }
 function generateDateAutocompletions() {
-  const monthsResult = _modDef4418.months();
-  const items = [...Array.from(new Set(_modDef4418.months().map((item) => item.toLowerCase())))];
-  const set = new Set(_modDef4418.months().map((item) => item.toLowerCase()));
-  const weekdaysResult = _modDef4418.weekdays();
-  const set1 = new Set(_modDef4418.weekdays().map((item) => item.toLowerCase()));
+  const monthsResult = _modDef4421.months();
+  const items = [...Array.from(new Set(_modDef4421.months().map((item) => item.toLowerCase())))];
+  const set = new Set(_modDef4421.months().map((item) => item.toLowerCase()));
+  const weekdaysResult = _modDef4421.weekdays();
+  const set1 = new Set(_modDef4421.weekdays().map((item) => item.toLowerCase()));
   const arraySpreadResult = HermesBuiltin.arraySpread(
-    Array.from(new Set(_modDef4418.weekdays().map((item) => item.toLowerCase()))),
+    Array.from(new Set(_modDef4421.weekdays().map((item) => item.toLowerCase()))),
     tmp2,
   );
   const fullYear = new Date().getFullYear();
@@ -581,8 +581,8 @@ function getChannelAutocompletions(arg0) {
       };
       const obj12 = AutocompleteUtilsDefault;
       const tmp7 = importDefault;
-      obj.boosters = tmp(5749).getBoosterMap(tmp(9279).AutocompleterResultTypes.TEXT_CHANNEL);
-      const tmpResult = tmp(5749);
+      obj.boosters = tmp(5754).getBoosterMap(tmp(9290).AutocompleterResultTypes.TEXT_CHANNEL);
+      const tmpResult = tmp(5754);
       const queryChannelsResult = obj12.queryChannels(obj);
       obj2 = {
         query: substr1,
@@ -594,7 +594,7 @@ function getChannelAutocompletions(arg0) {
         boosters: null,
       };
       const obj16 = AutocompleteUtilsDefault;
-      obj2.boosters = tmp(5749).getBoosterMap(tmp(9279).AutocompleterResultTypes.VOICE_CHANNEL);
+      obj2.boosters = tmp(5754).getBoosterMap(tmp(9290).AutocompleterResultTypes.VOICE_CHANNEL);
       const combined = queryChannelsResult.concat(obj16.queryChannels(obj2));
       const mapped = combined.map((record) => record.record);
       if (0 === substr1.length) {
@@ -606,7 +606,7 @@ function getChannelAutocompletions(arg0) {
         }
       }
       importDefault = GuildChannelStore.getTextChannelNameDisambiguations(guildId);
-      const tmpResult4 = tmp(5749);
+      const tmpResult4 = tmp(5754);
       const obj19 = tmp7(12)(mapped);
       const takeResult = tmp7(12)(mapped).take(maxResults);
       let substr3 = tmp7(12)(mapped)
@@ -639,15 +639,15 @@ function getChannelAutocompletions(arg0) {
         if (!StreamerModeStore.hidePersonalInformation) {
           const obj5 = { query: substr1, limit: maxResults, fuzzy: true, boosters: null };
           const obj4 = AutocompleteUtilsDefault;
-          obj5.boosters = tmp(5749).getBoosterMap(tmp(9279).AutocompleterResultTypes.GROUP_DM);
-          const tmpResult5 = tmp(5749);
+          obj5.boosters = tmp(5754).getBoosterMap(tmp(9290).AutocompleterResultTypes.GROUP_DM);
+          const tmpResult5 = tmp(5754);
           const queryGroupDMsResult = obj4.queryGroupDMs(obj5);
           const obj6 = { query: substr1, limit: maxResults, boosters: null };
           const obj8 = AutocompleteUtilsDefault;
-          obj6.boosters = tmp(5749).getBoosterMap(tmp(9279).AutocompleterResultTypes.USER);
-          const tmpResult6 = tmp(5749);
+          obj6.boosters = tmp(5754).getBoosterMap(tmp(9290).AutocompleterResultTypes.USER);
+          const tmpResult6 = tmp(5754);
           const queryDMChannelsResult = obj8.queryDMChannels(obj6);
-          const sorted = _modDef12(queryGroupDMsResult.concat(queryDMChannelsResult)).sort(tmp(9279).sortByMatchScore);
+          const sorted = _modDef12(queryGroupDMsResult.concat(queryDMChannelsResult)).sort(tmp(9290).sortByMatchScore);
           const mapped1 = sorted.map((record) => {
             record = record.record;
             const obj = { text: record.comparator, channel: record, key: null };
@@ -1101,7 +1101,7 @@ function makeSearchTokenConfigs(arg0) {
   obj[SearchTokenTypes.ANSWER_AUTHOR_TYPE] = obj26;
   return obj;
 }
-let GuildChannelStore = fn(4464);
+let GuildChannelStore = fn(4467);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: hasOwnProperty, GUILD_VOCAL_CHANNELS_KEY: metroRequire } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1074);

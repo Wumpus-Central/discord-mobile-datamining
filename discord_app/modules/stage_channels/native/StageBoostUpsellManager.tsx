@@ -1,5 +1,5 @@
 // discord_app/modules/stage_channels/native/StageBoostUpsellManager.tsx
-import asyncRequireImpl from "../../../../_runtime/01980_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01981_asyncRequireImpl.js";
 import StageChannelPermissions from "../StageChannelPermissions.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import StageMediaHooks from "../StageMediaHooks.tsx";
@@ -11,7 +11,7 @@ import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const STAGE_BOOSTING_SHEET_KEY = fn(5721).STAGE_BOOSTING_SHEET_KEY;
+const STAGE_BOOSTING_SHEET_KEY = fn(5726).STAGE_BOOSTING_SHEET_KEY;
 let c8 = false;
 class StageBoostUpsellManager extends tmp2 {
   constructor() {
@@ -49,7 +49,7 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates() {
               if (PermissionStore.can(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, channel)) {
                 const obj2 = { channel };
                 ActionSheetActionCreatorsDefault.openLazy(
-                  asyncRequireImpl(5737, dependencyMap.paths),
+                  asyncRequireImpl(5742, dependencyMap.paths),
                   STAGE_BOOSTING_SHEET_KEY,
                   obj2,
                 );

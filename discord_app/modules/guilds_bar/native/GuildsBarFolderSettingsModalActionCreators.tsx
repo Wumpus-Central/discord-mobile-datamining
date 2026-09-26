@@ -1,5 +1,5 @@
 // discord_app/modules/guilds_bar/native/GuildsBarFolderSettingsModalActionCreators.tsx
-import asyncRequireImpl from "../../../../_runtime/01980_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01981_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarFo
 
 export const showGuildsBarFolderModal = function showGuildsBarFolderModal(folderId) {
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(15899, dependencyMap.paths),
+    asyncRequireImpl(15927, dependencyMap.paths),
     { folderId },
     GUILD_FOLDER_SETTINGS_MODAL_KEY,
   );

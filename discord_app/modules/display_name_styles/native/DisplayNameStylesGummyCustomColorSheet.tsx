@@ -12,7 +12,7 @@ const DisplayNameStylesConstants = fn(1390);
   DisplayNameStylesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = {
   body: {
     paddingHorizontal: nativeDefault.space.PX_16,
@@ -45,12 +45,12 @@ let result = size.fileFinishedImporting(
 export default function DisplayNameStylesGummyCustomColorSheet(onSelect) {
   onSelect = onSelect.onSelect;
   const tmp = closure_9();
-  let obj = onSelect(4563);
+  let obj = onSelect(4566);
   let obj2 = onSelect(1389);
   const sharedValue = obj.useSharedValue(obj2.wrapHue(onSelect(1092).int2hslRaw(onSelect.initialColor).h));
   const items = [sharedValue, onSelect];
   const callback = noop.useCallback(() => {
-    const result = onSelect(4797).triggerHapticFeedback(onSelect(4797).HapticFeedbackTypes.IMPACT_LIGHT);
+    const result = onSelect(4801).triggerHapticFeedback(onSelect(4801).HapticFeedbackTypes.IMPACT_LIGHT);
   }, []);
   const callback1 = noop.useCallback(() => {
     const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
@@ -66,19 +66,19 @@ export default function DisplayNameStylesGummyCustomColorSheet(onSelect) {
   const intl2 = onSelect(1115).intl;
   obj6.text = intl2.string(onSelect(1115).t.XqMe3N);
   obj6.onPress = callback1;
-  obj5.trailing = closure_7(onSelect(5274).Button, obj6);
-  obj4.header = closure_7(sharedValue(14864), obj5);
+  obj5.trailing = closure_7(onSelect(5281).Button, obj6);
+  obj4.header = closure_7(sharedValue(14892), obj5);
   const obj7 = { style: tmp.body, children: null };
   const obj8 = { style: tmp.previewWrapper, children: null };
-  const tmp5 = sharedValue(14864);
+  const tmp5 = sharedValue(14892);
   obj8.children = closure_7(View, {
     style: tmp.preview,
-    children: closure_7(sharedValue(14870), { hue: sharedValue }),
+    children: closure_7(sharedValue(14898), { hue: sharedValue }),
   });
   const items1 = [closure_7(View, obj8)];
   const obj10 = {
     style: tmp.huePickerInset,
-    children: closure_7(sharedValue(14134), {
+    children: closure_7(sharedValue(14159), {
       hue: sharedValue,
       onPanFinalize: callback,
       saturation,
@@ -89,5 +89,5 @@ export default function DisplayNameStylesGummyCustomColorSheet(onSelect) {
   items1[1] = closure_7(View, obj10);
   obj7.children = items1;
   obj4.children = closure_8(View, obj7);
-  return closure_7(onSelect(6566).BottomSheet, obj4);
+  return closure_7(onSelect(6571).BottomSheet, obj4);
 }

@@ -201,7 +201,7 @@ function handleRelationshipAddOrUpdate(relationship) {
   }
   tmp14 = type === RelationshipTypes.BLOCKED || userIgnored;
 }
-const isGuildEventEnded = fn(6941).isGuildEventEnded;
+const isGuildEventEnded = fn(6946).isGuildEventEnded;
 const RelationshipTypes = fn(1074).RelationshipTypes;
 let obj = {
   loading: false,
@@ -214,8 +214,8 @@ let obj = {
   notifCenterLocalItems: [],
   paginationHasMore: true,
   paginationCursor: "flexDirection",
-  notifCenterActive: "none",
-  notifCenterTabFocused: "URL",
+  notifCenterActive: "onAccessibilityAction",
+  notifCenterTabFocused: "woman_with_probing_cane",
 };
 const PersistedStore = initializeDefault.PersistedStore;
 class NotificationCenterItemsStore extends PersistedStore {}
@@ -398,8 +398,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "flexDirection",
-      notifCenterActive: "none",
-      notifCenterTabFocused: "URL",
+      notifCenterActive: "onAccessibilityAction",
+      notifCenterTabFocused: "woman_with_probing_cane",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -540,8 +540,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "flexDirection",
-      notifCenterActive: "none",
-      notifCenterTabFocused: "URL",
+      notifCenterActive: "onAccessibilityAction",
+      notifCenterTabFocused: "woman_with_probing_cane",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -599,7 +599,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       const user = UserStore.getUser(id);
       if (tmp6) {
         const items = [];
-        obj = id(7050);
+        obj = id(7055);
         items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingGameFriendRequestLocalItem(
           user,
           since,
@@ -711,8 +711,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "flexDirection",
-      notifCenterActive: "none",
-      notifCenterTabFocused: "URL",
+      notifCenterActive: "onAccessibilityAction",
+      notifCenterTabFocused: "woman_with_probing_cane",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;

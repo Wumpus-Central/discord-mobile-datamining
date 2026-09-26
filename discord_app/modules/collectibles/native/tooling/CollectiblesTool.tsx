@@ -136,12 +136,12 @@ function FramePreviewOverrideSection() {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let closure_11 = fn(7641).useFramePreviewOverrideStore;
+let closure_11 = fn(7648).useFramePreviewOverrideStore;
 const application_id = fn(1074).COLLECTIBLES_APPLICATION_ID;
 const PremiumGiftStyles = fn(1374).PremiumGiftStyles;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   scrollContainer: null,

@@ -5,7 +5,7 @@ import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop_mod from "../../../../_runtime/metro/00019__.js";
 
-const Text_Text = tmp(4825);
+const Text_Text = tmp(4832);
 require = fn;
 let noop = fn(19);
 ({ useState: closure_4, useEffect: hasOwnProperty, useRef: metroRequire, useCallback: closure_7 } = noop);

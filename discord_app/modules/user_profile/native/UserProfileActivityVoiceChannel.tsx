@@ -2,7 +2,7 @@
 import _mod17 from "../../../../_runtime/metro/00017__.js";
 import Constants from "../../../../discord_common/js/shared/Constants.tsx";
 import native from "../../../design/void/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01980_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01981_asyncRequireImpl.js";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import PrivateChannelCallUtils from "../../../utils/native/PrivateChannelCallUtils.tsx";
@@ -132,7 +132,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
   obj15.onPress = function onPress() {
     onAction({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(12565, dependencyMap.paths),
+      asyncRequireImpl(12582, dependencyMap.paths),
       "UserProfileActivityVoiceChannelUsers",
       {
         users,

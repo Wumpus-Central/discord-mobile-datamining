@@ -8,7 +8,7 @@ import QuestCustomAppStoreOverlayUtils from "../../utils/QuestCustomAppStoreOver
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestsExperimentLocations = fn(5751).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5756).QuestsExperimentLocations;
 const ComponentActions = fn(1074).ComponentActions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountyPauseAppStoreSheet.tsx");
@@ -59,7 +59,7 @@ export const useBountyPauseAppStoreSheet = function useBountyPauseAppStoreSheet(
   }, []);
   const items2 = [callback];
   const effect2 = isActive.useEffect(() => () => callback(), items2);
-  const items3 = [bounty, getQuestImpressionId, playerRef, sourceQuestContent, callback];
+  const items3 = [bounty, getQuestImpressionId, playerRef, sourceQuestContent, callback, tmp5];
   callback1 = isActive.useCallback(() => {
     let trackingCtx = {
       content: bounty(sourceQuestContent[7]).QuestContent.VIDEO_MODAL_MOBILE,
@@ -116,12 +116,21 @@ export const useBountyPauseAppStoreSheet = function useBountyPauseAppStoreSheet(
     const tmpResult = bounty(sourceQuestContent[9]);
     return obj3.openAppStoreOrUrl(obj4).then((result) => {
       if (result) {
-        const current = ref.current;
+        let current = ref.current;
         if (current != null) {
           current.pause();
         }
         function handleFinished() {
           closure_1_8();
+          if (!tmp5) {
+            const current = ref.current;
+            if (current != null) {
+              current.play();
+            }
+          }
+          tmp5 =
+            closure_1_5 !== obj(sourceQuestContent[3]).BountiesMobileQuestBarCtrVariant.EVERY_PAUSE_APP_STORE_OVERLAY &&
+            closure_1_5 !== obj(sourceQuestContent[3]).BountiesMobileQuestBarCtrVariant.FIRST_TAP_APP_STORE_OVERLAY;
         }
         callback();
         const ComponentDispatch = bounty(sourceQuestContent[6]).ComponentDispatch;

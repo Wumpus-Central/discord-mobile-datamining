@@ -4,7 +4,7 @@ import AccessibilityStore from "../a11y/AccessibilityStore.tsx";
 import ThemeStore from "../user_settings/ThemeStore.tsx";
 
 require = fn;
-const UIDensityConstants = fn(8907);
+const UIDensityConstants = fn(8918);
 ({
   RESPONSIVE_DENSITY_FALLBACK: closure_4,
   RESPONSIVE_DENSITY_MEDIA_QUERY: hasOwnProperty,

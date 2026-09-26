@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkModalActionCreators.tsx
-import asyncRequireImpl from "../../../../../../../_runtime/01980_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../../_runtime/01981_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../../../../actions/ModalActionCreators.tsx";
 import size from "../../../../../../../_runtime/metro/00002__.js";
 
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting(
 export default {
   showModal(locationStack, platformType) {
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(8553, dependencyMap.paths),
+      asyncRequireImpl(8561, dependencyMap.paths),
       { locationStack, platformType },
       c3,
     );

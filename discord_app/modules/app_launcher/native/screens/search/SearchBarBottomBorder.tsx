@@ -6,7 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { border: { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 } };
 let closure_5 = createStyles.createStyles(obj2);
 const __initData = {
@@ -21,7 +21,7 @@ export const usePinnedSearchBarBottomBorder = function usePinnedSearchBarBottomB
     triggerScrollHeight = 1;
   }
   const tmp = closure_5();
-  const sharedValue = triggerScrollHeight(4563).useSharedValue(0);
+  const sharedValue = triggerScrollHeight(4566).useSharedValue(0);
   const items = [key, sharedValue];
   const effect = noop.useEffect(() => {
     const result = sharedValue.set(0);
@@ -30,7 +30,7 @@ export const usePinnedSearchBarBottomBorder = function usePinnedSearchBarBottomB
   const callback = noop.useCallback((offset) => {
     const result = sharedValue.set(offset.offset);
   }, items1);
-  let obj = triggerScrollHeight(4563);
+  let obj = triggerScrollHeight(4566);
   const fn = function u() {
     let num = 0;
     if (sharedValue.get() > triggerScrollHeight) {
@@ -38,12 +38,12 @@ export const usePinnedSearchBarBottomBorder = function usePinnedSearchBarBottomB
     }
     return { opacity: spring.withSpring(num, springPresets.springStandard) };
   };
-  const obj2 = triggerScrollHeight(4563);
+  const obj2 = triggerScrollHeight(4566);
   fn.__closure = {
-    withSpring: triggerScrollHeight(5273).withSpring,
+    withSpring: triggerScrollHeight(5280).withSpring,
     scrollPosition: sharedValue,
     triggerScrollHeight,
-    springStandard: triggerScrollHeight(5277).springStandard,
+    springStandard: triggerScrollHeight(5284).springStandard,
   };
   fn.__workletHash = 5466161440826;
   fn.__initData = __initData;
@@ -52,6 +52,6 @@ export const usePinnedSearchBarBottomBorder = function usePinnedSearchBarBottomB
   const obj5 = { style: null };
   const items2 = [tmp.border, animatedStyle];
   obj5.style = items2;
-  obj4.bottomBorderComponent = jsx(sharedValue(4563).View, { style: null }, key);
+  obj4.bottomBorderComponent = jsx(sharedValue(4566).View, { style: null }, key);
   return obj4;
 };

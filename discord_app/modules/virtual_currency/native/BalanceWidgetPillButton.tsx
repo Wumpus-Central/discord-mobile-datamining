@@ -1,7 +1,7 @@
 // discord_app/modules/virtual_currency/native/BalanceWidgetPillButton.tsx
 import util from "../../../intl/index.native.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import _modDef8291 from "../../../../_runtime/metro/08291__.js";
+import _modDef8299 from "../../../../_runtime/metro/08299__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;

@@ -1176,8 +1176,8 @@ const frozen2 = Object.freeze({
   SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_BY_APPLICATION_ID(applicationId, id) {
     return "/partner-sdk/applications/" + applicationId + "/storefront/skus/" + id;
   },
-  SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU(arg0, id) {
-    return "/partner-sdk/guilds/" + arg0 + "/application-storefront/skus/" + id;
+  SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU(guildId, id) {
+    return "/partner-sdk/guilds/" + guildId + "/application-storefront/skus/" + id;
   },
   SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_ELIGIBILITY(arg0, skuId) {
     return "/partner-sdk/applications/" + arg0 + "/storefront/skus/" + skuId + "/eligibility";
@@ -3214,8 +3214,8 @@ const obj2 = {
   SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_BY_APPLICATION_ID(applicationId, id) {
     return "/partner-sdk/applications/" + applicationId + "/storefront/skus/" + id;
   },
-  SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU(arg0, id) {
-    return "/partner-sdk/guilds/" + arg0 + "/application-storefront/skus/" + id;
+  SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU(guildId, id) {
+    return "/partner-sdk/guilds/" + guildId + "/application-storefront/skus/" + id;
   },
   SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_ELIGIBILITY(arg0, skuId) {
     return "/partner-sdk/applications/" + arg0 + "/storefront/skus/" + skuId + "/eligibility";
@@ -4496,6 +4496,7 @@ const obj6 = {
   DESIGN_SYSTEM_BACKDROP: "Design Systems (Backdrop)",
   DESIGN_SYSTEM_MODAL: "Design System (Modal)",
   DESIGN_SYSTEM_PILE: "Design Systems (Pile)",
+  DESIGN_SYSTEM_TAG_GROUP: "Design Systems (Tag Group)",
   DESIGN_SYSTEM_SHEETS: "Design Systems (Sheets)",
   DESIGN_SYSTEM_FORM_PRIMITIVES: "Design Systems (Form Primitives)",
   DESIGN_SYSTEM_LEGACY_BUTTON: "Design System (Legacy Button)",
@@ -4879,6 +4880,7 @@ const obj7 = {
   DESIGN_SYSTEM_BACKDROP: obj10.DESIGN_SYSTEM_BACKDROP,
   DESIGN_SYSTEM_MODAL: obj10.DESIGN_SYSTEM_MODAL,
   DESIGN_SYSTEM_PILE: obj10.DESIGN_SYSTEM_PILE,
+  DESIGN_SYSTEM_TAG_GROUP: obj10.DESIGN_SYSTEM_TAG_GROUP,
   DESIGN_SYSTEM_SHEETS: obj10.DESIGN_SYSTEM_SHEETS,
   DESIGN_SYSTEM_FORM_PRIMITIVES: obj10.DESIGN_SYSTEM_FORM_PRIMITIVES,
   DESIGN_SYSTEM_LEGACY_BUTTON: obj10.DESIGN_SYSTEM_LEGACY_BUTTON,
@@ -5288,7 +5290,7 @@ const obj18 = {
   EMBEDDED_RELEASED: null,
   EMBEDDED_IAP: null,
   APPLICATION_AUTO_MODERATION_RULE_CREATE_BADGE: null,
-  GAME_PROFILE_DISABLED: null,
+  GAME_DISABLED: null,
   CONTEXTLESS_ACTIVITY: null,
   SOCIAL_LAYER_INTEGRATION_LIMITED: null,
   CLOUD_GAMING_DEMO: null,
@@ -5315,7 +5317,7 @@ obj18.EMBEDDED_IAP = BigFlagUtils.getFlag(3);
 let BigFlagUtils = BigFlagUtils_mod;
 obj18.APPLICATION_AUTO_MODERATION_RULE_CREATE_BADGE = BigFlagUtils.getFlag(6);
 let BigFlagUtils = BigFlagUtils_mod;
-obj18.GAME_PROFILE_DISABLED = BigFlagUtils.getFlag(7);
+obj18.GAME_DISABLED = BigFlagUtils.getFlag(7);
 let BigFlagUtils = BigFlagUtils_mod;
 obj18.CONTEXTLESS_ACTIVITY = BigFlagUtils.getFlag(9);
 let BigFlagUtils = BigFlagUtils_mod;
@@ -8787,6 +8789,8 @@ export const AnalyticEvents = {
   GATEWAY_SOCKET_RESET: "gateway_socket_reset",
   SESSION_START_CLIENT: "session_start_client",
   APPLE_PARTNER_IAP_REQUEST_SENT: "apple_partner_iap_request_sent",
+  APPLE_RESTORE_AND_APPLY_PURCHASES_SUCCEEDED: "apple_restore_and_apply_purchases_succeeded",
+  APPLE_PURCHASE_UPDATED_LISTENER_SUCCEEDED: "apple_purchase_updated_listener_succeeded",
   POMELO_ERRORS: "pomelo_errors",
   POMELO_EDIT_STEP_VIEWED: "pomelo_edit_step_viewed",
   MESSAGE_COMPOSER_TRANSITIONED: "message_composer_transitioned",

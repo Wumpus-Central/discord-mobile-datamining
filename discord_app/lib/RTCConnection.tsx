@@ -33,6 +33,7 @@ import RTCMediaSinkWantsManagerDefault from "RTCMediaSinkWantsManager.tsx";
 import GoLiveQualityManagerDefault from "../modules/go_live/GoLiveQualityManager.tsx";
 import BrowserTransceiverPaddingRemovalExperiment2 from "../modules/media_engine/BrowserTransceiverPaddingRemovalExperiment.tsx";
 import VideoStabilizationExperimentDefault from "../modules/calls/VideoStabilizationExperiment.tsx";
+import LinuxGpuDecodeExperiment from "../modules/media_engine/LinuxGpuDecodeExperiment.tsx";
 import ServerLadderExperiment2 from "../modules/media_engine/ServerLadderExperiment.tsx";
 import AV1BitrateTuningExperiment from "../modules/media_engine/AV1BitrateTuningExperiment.tsx";
 import NativeMuteManagerDefault from "../modules/calls/NativeMuteManager.native.tsx";
@@ -81,10 +82,10 @@ let Constants = fn(1074);
   RTCConnectionQuality: closure_20,
   BoostedGuildTiers: closure_21,
 } = Constants);
-const StreamSettingsConstants = fn(4876);
+const StreamSettingsConstants = fn(4883);
 ({ ApplicationStreamFPS: closure_22, ApplicationStreamResolutions: closure_23 } = StreamSettingsConstants);
-let closure_24 = fn(13330).BROWSER_SUPPORTS_UNIFIED_PLAN;
-Constants = fn(4854);
+let closure_24 = fn(13347).BROWSER_SUPPORTS_UNIFIED_PLAN;
+Constants = fn(4861);
 ({
   Features: closure_25,
   MediaEngineContextTypes: closure_26,
@@ -177,7 +178,7 @@ class RTCConnection extends tmp5 {
     };
     tmp11 = closure_1;
     tmp12 = closure_3;
-    obj._alertMLSFailureDebouced = closure_1(closure_3[65])(obj._alertMLSFailure, 100);
+    obj._alertMLSFailureDebouced = closure_1(closure_3[66])(obj._alertMLSFailure, 100);
     obj._handleNetworkOnline = function _handleNetworkOnline() {
       obj.expeditedHeartbeat(5000, "network detected online.");
     };
@@ -1211,13 +1212,26 @@ prototype["_chooseExperiments"] = function _chooseExperiments() {
   let isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {
     isAndroidResult = SurfaceDirectRendererExperiment.isSurfaceDirectRendererExperimentEnabled();
-    const tmp8Result4 = SurfaceDirectRendererExperiment;
+    const tmp8Result6 = SurfaceDirectRendererExperiment;
   }
   if (isAndroidResult) {
     items.push(SurfaceDirectRendererExperiment.ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT);
   }
+  const tmp8Result5 = PlatformUtils;
+  if (tmp8Result7.isLinux()) {
+    const mode2 = LinuxGpuDecodeExperiment.getLinuxGpuDecodeExperimentConfig("_chooseExperiments").mode;
+    let tmp14 = "disable_all" === mode2;
+    if (!tmp14) {
+      tmp14 = "disable_nvidia" === mode2 && MediaEngineStore.getHasNvidiaGpu();
+      const tmp15 = "disable_nvidia" === mode2 && MediaEngineStore.getHasNvidiaGpu();
+    }
+    if (tmp14) {
+      items.push("disable_electron_decode");
+    }
+    const tmp8Result8 = LinuxGpuDecodeExperiment;
+  }
   this._selectedExperiments = items;
-  const tmp8Result3 = PlatformUtils;
+  tmp8Result7 = PlatformUtils;
 };
 prototype["_handleConnecting"] = function _handleConnecting() {
   const self = this;
@@ -1963,7 +1977,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
   });
   if (self.context === constants6.STREAM) {
     if ("streamer" === self.getVoiceParticipantType()) {
-      const tmp19ResultResult = tmp19(4967)("RTCConnection", UserStore.getCurrentUser(), self.guildId);
+      const tmp19ResultResult = tmp19(4974)("RTCConnection", UserStore.getCurrentUser(), self.guildId);
       let maxResolution;
       if (tmp19ResultResult != null) {
         maxResolution = tmp19ResultResult.maxResolution;
@@ -1973,11 +1987,11 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
         num = 921600;
       }
       const result1 = connectResult.setFakeGoLiveEncodePixelCount(num);
-      const tmp19Result = tmp19(4967);
+      const tmp19Result = tmp19(4974);
     }
   }
   if (MediaEngineStore.supports(constants5.IMAGE_QUALITY_MEASUREMENT)) {
-    const SingleCpuCopyExperiment = tmp2(13342).SingleCpuCopyExperiment;
+    const SingleCpuCopyExperiment = tmp2(13360).SingleCpuCopyExperiment;
     const enabled = SingleCpuCopyExperiment.getConfig({ location: "RTCConnection" }).enabled;
     let str4 = "imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec";
     if (enabled) {
@@ -3522,7 +3536,7 @@ prototype["_handleMLSPrepareCommitTransition"] = function _handleMLSPrepareCommi
   const byteLength = arg1;
   let logger = this.logger;
   logger.info("Received MLS commit for transition ID " + arg0);
-  dependencyMap = _connection(4858).now();
+  dependencyMap = _connection(4865).now();
   _connection = this._connection;
   if (_connection != null) {
     let result = _connection.prepareMLSCommitTransition(arg0, arg1, (arg0, protocolVersion, arg2) => {
@@ -3559,7 +3573,7 @@ prototype["_handleMLSWelcome"] = function _handleMLSWelcome(arg0, arg1) {
   const byteLength = arg1;
   const logger = this.logger;
   logger.info("Received MLS welcome for transition ID " + arg0);
-  dependencyMap = _connection(4858).now();
+  dependencyMap = _connection(4865).now();
   _connection = this._connection;
   if (_connection != null) {
     _connection.processMLSWelcome(arg0, arg1, (arg0, protocolVersion, arg2) => {

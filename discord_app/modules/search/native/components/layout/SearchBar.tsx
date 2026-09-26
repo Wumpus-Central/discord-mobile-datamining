@@ -16,12 +16,12 @@ const SearchPlatformUtilsDefault = SearchPlatformUtils;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(7298);
+const SearchConstants = fn(7303);
 ({ SEARCH_BAR_HEIGHT: c10, SearchQueryTagTypes: closure_11 } = SearchConstants);
-const SearchFilterAddLocations = fn(7297).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(7302).SearchFilterAddLocations;
 const SearchTypes = fn(1074).SearchTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_15 = createStyles.createStyles((minHeight) => {
   const obj = {
     searchBar: { minHeight: minHeight + 2 },
@@ -35,11 +35,12 @@ let result = size.fileFinishedImporting("modules/search/native/components/layout
 export default noop.memo(
   noop.forwardRef((searchContext, arg1) => {
     searchContext = searchContext.searchContext;
-    const setSuggestionsDismissed = searchContext.setSuggestionsDismissed;
     let stateFromStores;
     let ref;
-    let tmp = closure_15(closure_10 * Math.min(2, searchContext(stateFromStores[15]).useFontScale()));
+    const setDismissed = searchContext(stateFromStores[15]).useSearchSuggestionsContext().setDismissed;
     let obj = searchContext(stateFromStores[15]);
+    let tmp = closure_15(closure_10 * Math.min(2, searchContext(stateFromStores[16]).useFontScale()));
+    let obj2 = searchContext(stateFromStores[16]);
     const items = [SearchQueryStore];
     const items1 = [searchContext];
     stateFromStores = searchContext(stateFromStores[14]).useStateFromStores(
@@ -61,7 +62,7 @@ export default noop.memo(
     }, items3);
     ref = ref.useRef(null);
     closure_129_0 = searchContext;
-    let obj2 = searchContext(stateFromStores[14]);
+    let obj3 = searchContext(stateFromStores[14]);
     const items4 = [SearchQueryStore];
     const items5 = [searchContext];
     const stateFromStores1 = searchContext(stateFromStores[14]).useStateFromStores(
@@ -223,7 +224,7 @@ export default noop.memo(
         }
       }
     }, items7);
-    const items9 = [searchContext, setSuggestionsDismissed];
+    const items9 = [searchContext, setDismissed];
     const callback1 = ref.useCallback((arg0) => {
       closure_0 = arg0;
       const tmp2 = SearchQueryStore.getTags(searchContext)[arg0];
@@ -270,35 +271,35 @@ export default noop.memo(
           result = "" !== trimmed;
         }
         if (result) {
-          result = searchContext(stateFromStores[20]).isValidFilterAnswerForSubmit(prefixTag.searchTokenType, trimmed);
-          const obj2 = searchContext(stateFromStores[20]);
+          result = searchContext(stateFromStores[21]).isValidFilterAnswerForSubmit(prefixTag.searchTokenType, trimmed);
+          const obj2 = searchContext(stateFromStores[21]);
         }
         if (result) {
-          setSuggestionsDismissed(stateFromStores[17]).updateSearchQuery(searchContext, (setTextInputValue) => {
+          setDismissed(stateFromStores[18]).updateSearchQuery(searchContext, (setTextInputValue) => {
             setTextInputValue.setTextInputValue("");
             setTextInputValue.addTag({ type: constants.ANSWER, text: trimmed });
             const result = setTextInputValue.restoreDraftTextInputValue();
           });
-          const obj3 = setSuggestionsDismissed(stateFromStores[17]);
+          const obj3 = setDismissed(stateFromStores[18]);
           const obj8 = { searchContext, searchTokenType: null, location: null };
           ({ searchTokenType: obj5.searchTokenType, location: obj5.location } = prefixTag);
-          setSuggestionsDismissed(stateFromStores[19]).trackSearchFilterAdd(obj8);
-          const obj4 = setSuggestionsDismissed(stateFromStores[19]);
+          setDismissed(stateFromStores[20]).trackSearchFilterAdd(obj8);
+          const obj4 = setDismissed(stateFromStores[20]);
         }
         if (!SearchQueryStore.isQueryStringEmpty(searchContext)) {
-          setSuggestionsDismissed(stateFromStores[17]).updateSearchQuery(searchContext, (markExplicitSearchSubmitted) =>
+          setDismissed(stateFromStores[18]).updateSearchQuery(searchContext, (markExplicitSearchSubmitted) =>
             markExplicitSearchSubmitted.markExplicitSearchSubmitted(),
           );
-          const obj6 = setSuggestionsDismissed(stateFromStores[17]);
-          const initialMessages = setSuggestionsDismissed(stateFromStores[16]).fetchInitialMessages(searchContext);
-          const obj7 = setSuggestionsDismissed(stateFromStores[16]);
+          const obj6 = setDismissed(stateFromStores[18]);
+          const initialMessages = setDismissed(stateFromStores[17]).fetchInitialMessages(searchContext);
+          const obj7 = setDismissed(stateFromStores[17]);
         }
         const str = SearchQueryStore.getTextInputValue(searchContext);
       },
       items9,
     );
     const textInputValue = SearchQueryStore.getTextInputValue(searchContext);
-    let obj4 = {
+    let obj5 = {
       ref,
       accessibilityHint: memo1,
       autoFocus: true,
@@ -314,15 +315,15 @@ export default noop.memo(
       horizontal: true,
       autoClearInputOnTagAdd: false,
     };
-    let obj5 = { style: tmp.icon, children: null };
-    let obj3 = searchContext(stateFromStores[14]);
-    obj5.children = jsx(setSuggestionsDismissed(stateFromStores[22]), { searchContext });
-    obj4.icon = <View style={tmp.icon}>{null}</View>;
-    obj4.onChangeText = callback;
-    obj4.onRemove = callback1;
-    obj4.placeholder = stateFromStores1;
-    obj4.onSubmitEditing = memo2;
-    return jsx(setSuggestionsDismissed(stateFromStores[21]), {
+    let obj6 = { style: tmp.icon, children: null };
+    let obj4 = searchContext(stateFromStores[14]);
+    obj6.children = jsx(setDismissed(stateFromStores[23]), { searchContext });
+    obj5.icon = <View style={tmp.icon}>{null}</View>;
+    obj5.onChangeText = callback;
+    obj5.onRemove = callback1;
+    obj5.placeholder = stateFromStores1;
+    obj5.onSubmitEditing = memo2;
+    return jsx(setDismissed(stateFromStores[22]), {
       ref,
       accessibilityHint: memo1,
       autoFocus: true,

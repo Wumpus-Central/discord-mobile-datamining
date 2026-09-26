@@ -44,15 +44,15 @@ export const useKeyboardTypePrevious = function useKeyboardTypePrevious() {
   return KeyboardUIStoreDefault((arg0) => arg0.byAppEntry[closure_0].keyboardTypePrevious);
 };
 export const useKeyboardTypeSharedValue = function useKeyboardTypeSharedValue() {
-  appEntryKey = appEntryKey(1481).useAppEntryKey();
-  const obj = appEntryKey(1481);
+  appEntryKey = appEntryKey(1482).useAppEntryKey();
+  const obj = appEntryKey(1482);
   let tmp = appEntryKey;
   let DEFAULT_APP_ENTRY_KEY = appEntryKey;
   if (appEntryKey === undefined) {
-    DEFAULT_APP_ENTRY_KEY = tmp(1481).DEFAULT_APP_ENTRY_KEY;
+    DEFAULT_APP_ENTRY_KEY = tmp(1482).DEFAULT_APP_ENTRY_KEY;
   }
-  const obj2 = appEntryKey(4563);
-  sharedValue = obj2.useSharedValue(sharedValue(1482).getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardType);
+  const obj2 = appEntryKey(4566);
+  sharedValue = obj2.useSharedValue(sharedValue(1483).getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardType);
   const items = [appEntryKey, sharedValue];
   const effect = noop.useEffect(
     () =>
@@ -70,18 +70,18 @@ export const useKeyboardTypeSharedValue = function useKeyboardTypeSharedValue() 
   return sharedValue;
 };
 export const useKeyboardWillOpenSharedValue = function useKeyboardWillOpenSharedValue() {
-  appEntryKey = appEntryKey(1481).useAppEntryKey();
-  const obj = appEntryKey(1481);
+  appEntryKey = appEntryKey(1482).useAppEntryKey();
+  const obj = appEntryKey(1482);
   let tmp = appEntryKey;
   let DEFAULT_APP_ENTRY_KEY = appEntryKey;
   if (appEntryKey === undefined) {
-    DEFAULT_APP_ENTRY_KEY = tmp(1481).DEFAULT_APP_ENTRY_KEY;
+    DEFAULT_APP_ENTRY_KEY = tmp(1482).DEFAULT_APP_ENTRY_KEY;
   }
-  const obj2 = appEntryKey(4563);
+  const obj2 = appEntryKey(4566);
   sharedValue = obj2.useSharedValue(
     true ===
-      sharedValue(1482).getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardContexts[
-        appEntryKey(undefined, 1610).KeyboardTypes.SYSTEM
+      sharedValue(1483).getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardContexts[
+        appEntryKey(undefined, 1611).KeyboardTypes.SYSTEM
       ].keyboardWillOpen,
   );
   const items = [appEntryKey, sharedValue];

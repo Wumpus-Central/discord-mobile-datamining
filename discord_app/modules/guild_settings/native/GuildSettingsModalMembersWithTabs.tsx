@@ -18,7 +18,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   content: { flex: 1 },
@@ -123,12 +123,12 @@ export default noop.memo((guildId) => {
       items: membersManagementActions,
       children(ref) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-        const obj = { source: closure_1_1(9080), accessibilityLabel: null, ref: null };
+        const obj = { source: closure_1_1(9091), accessibilityLabel: null, ref: null };
         const intl = guildId(1115).intl;
         obj.accessibilityLabel = intl.string(guildId(1115).t.ogxXGq);
         obj.ref = ref.ref;
         const merged1 = Object.assign(merged);
-        return closure_1_9(guildId(6790).HeaderActionButton, obj);
+        return closure_1_9(guildId(6795).HeaderActionButton, obj);
       },
     });
   }, items5);
@@ -168,7 +168,7 @@ export default noop.memo((guildId) => {
     (toLocaleString) => "(" + guildId(num[23]).defaultCountFormatter(toLocaleString) + ")",
     [],
   );
-  obj5.children = closure_9(guildId(num[24]).Tabs, {
+  obj5.children = closure_9(guildId(num[23]).Tabs, {
     state: segmentedControlState,
     grow: true,
     formatCount: callback3,
@@ -178,7 +178,7 @@ export default noop.memo((guildId) => {
   items8[1] = closure_9(navigation, {
     style: tmp4.content,
     onLayout: callback2,
-    children: closure_9(guildId(num[25]).SegmentedControlPages, { state: segmentedControlState }),
+    children: closure_9(guildId(num[24]).SegmentedControlPages, { state: segmentedControlState }),
   });
   obj4.children = items8;
   return closure_10(navigation, obj4);

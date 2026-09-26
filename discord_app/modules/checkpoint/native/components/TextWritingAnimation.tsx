@@ -8,7 +8,7 @@ const noop = fn(19);
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_10 = createStyles.createStyles({
   hiddenText: { opacity: 0 },
   animatedText: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 },

@@ -1,6 +1,6 @@
 // discord_app/modules/vibegrations/native/VibegrationsRepliedMessage.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3714 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3715 from "../intl/VibegrationsUntranslated.messages.js";
 import VibegrationsDesignFeedback from "../lib/VibegrationsDesignFeedback.tsx";
 import VibegrationsSelectedMentionDefault from "VibegrationsSelectedMention.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -10,12 +10,12 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const diff = fn(16307).MESSAGE_EDGE_INSET + fn(16307).MESSAGE_AVATAR_SIZE / 2 - 1;
-const diff1 = fn(16307).MESSAGE_CONTENT_INSET - 4 - diff;
-const createStyles = fn(4829);
+const diff = fn(16335).MESSAGE_EDGE_INSET + fn(16335).MESSAGE_AVATAR_SIZE / 2 - 1;
+const diff1 = fn(16335).MESSAGE_CONTENT_INSET - 4 - diff;
+const createStyles = fn(4836);
 let obj2 = {
   root: {
-    marginLeft: diff - fn(16307).MESSAGE_CONTENT_INSET,
+    marginLeft: diff - fn(16335).MESSAGE_CONTENT_INSET,
     paddingLeft: diff1 + 4,
     height: 20,
     flexDirection: "row",
@@ -49,9 +49,9 @@ export default function VibegrationsRepliedMessage(replied) {
   replied = replied.replied;
   const onJump = replied.onJump;
   const tmp = closure_8();
-  const messageAuthorUser = replied(16310).useMessageAuthorUser(replied.userId);
-  const obj = replied(16310);
-  let str = replied(4675).useName(messageAuthorUser);
+  const messageAuthorUser = replied(16338).useMessageAuthorUser(replied.userId);
+  const obj = replied(16338);
+  let str = replied(4678).useName(messageAuthorUser);
   if (str == null) {
     str = "";
   }
@@ -64,7 +64,7 @@ export default function VibegrationsRepliedMessage(replied) {
   if (body == null) {
     body = replied.content;
   }
-  const obj2 = replied(4675);
+  const obj2 = replied(4678);
   const trimmed = body.replace(/\s+/g, " ").trim();
   const obj3 = {
     style: tmp.root,
@@ -75,17 +75,17 @@ export default function VibegrationsRepliedMessage(replied) {
     children: null,
   };
   const intl = tmp2(1115).intl;
-  obj3.accessibilityLabel = intl.formatToPlainString(_modDef3714.loFt7s, { name: str, content: trimmed });
+  obj3.accessibilityLabel = intl.formatToPlainString(_modDef3715.loFt7s, { name: str, content: trimmed });
   const items1 = [closure_6(closure_5, { style: tmp.spine }), , ,];
   let tmp11Result = null;
   if (null != messageAuthorUser) {
     const obj5 = { style: tmp.avatar, children: null };
     const obj6 = { userId: replied.userId, size: tmp2(1177).AvatarSizes.SIZE_16 };
-    obj5.children = closure_6(tmp2(16310).VibegrationsUserAvatar, obj6);
+    obj5.children = closure_6(tmp2(16338).VibegrationsUserAvatar, obj6);
     tmp11Result = closure_6(closure_5, obj5);
   }
   items1[1] = tmp11Result;
-  items1[2] = closure_6(replied(4825).Text, {
+  items1[2] = closure_6(replied(4832).Text, {
     variant: "text-xs/semibold",
     color: "text-default",
     style: tmp.name,
@@ -115,7 +115,7 @@ export default function VibegrationsRepliedMessage(replied) {
   items2[1] = str3;
   items2[2] = trimmed;
   obj8.children = items2;
-  items1[3] = closure_7(replied(4825).Text, obj8);
+  items1[3] = closure_7(replied(4832).Text, obj8);
   obj3.children = items1;
   return closure_7(closure_4, obj3);
 }

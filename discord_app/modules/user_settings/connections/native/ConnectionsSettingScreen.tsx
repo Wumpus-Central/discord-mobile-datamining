@@ -1,21 +1,21 @@
 // discord_app/modules/user_settings/connections/native/ConnectionsSettingScreen.tsx
-import asyncRequireImpl from "../../../../../_runtime/01980_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01981_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function onPress() {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14469, dependencyMap.paths), "AddConnection");
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14494, dependencyMap.paths), "AddConnection");
 }
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/ConnectionsSettingScreen.tsx");
 
 export default noop.memo(function ConnectionsSettingScreen() {
-  stackNavigation = stackNavigation(1484).useStackNavigation();
-  let obj = stackNavigation(1484);
+  stackNavigation = stackNavigation(1485).useStackNavigation();
+  let obj = stackNavigation(1485);
   const tmp = stackNavigation;
-  const params = stackNavigation(6410).useSettingNavigationRoute().params;
+  const params = stackNavigation(6415).useSettingNavigationRoute().params;
   let selectedPlatformType;
   if (params != null) {
     selectedPlatformType = params.selectedPlatformType;
@@ -29,9 +29,9 @@ export default noop.memo(function ConnectionsSettingScreen() {
         obj.onPress = onPress;
         const intl = stackNavigation(1115).intl;
         obj.label = intl.string(stackNavigation(1115).t.OYkgVk);
-        return closure_1_4(stackNavigation(7283).HeaderTextButton, obj);
+        return closure_1_4(stackNavigation(7288).HeaderTextButton, obj);
       },
     });
   }, items);
-  return jsx(tmp(14470).UserSettingsConnections, { selectedPlatformType });
+  return jsx(tmp(14495).UserSettingsConnections, { selectedPlatformType });
 });

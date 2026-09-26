@@ -2,13 +2,13 @@
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef4418 from "../../../../_runtime/metro/04418__.js";
+import _modDef4421 from "../../../../_runtime/metro/04421__.js";
 import PushNotificationDefault from "../../../lib/pushnotification/PushNotification.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import GuildVerificationStore from "../../../stores/GuildVerificationStore.tsx";
 
 require = fn;
-const Constants = fn(8496);
+const Constants = fn(8504);
 ({ LocalNotificationTypes: hasOwnProperty, FIRE_DATE_FORMAT: metroRequire } = Constants);
 const VerificationLevels = fn(1074).VerificationLevels;
 const set = new Set();
@@ -40,11 +40,11 @@ const localPushNotificationStore = new LocalPushNotificationStore(DispatcherDefa
             set.add(userInfo);
           }
         }
-        const result = closure_1_1(8738).cancelLocalNotifications(userInfo);
-        const obj = closure_1_1(8738);
-        const result1 = closure_1_1(8738).cancelLocalNotifications(userInfo);
+        const result = closure_1_1(8746).cancelLocalNotifications(userInfo);
+        const obj = closure_1_1(8746);
+        const result1 = closure_1_1(8746).cancelLocalNotifications(userInfo);
         set.delete(userInfo);
-        const obj2 = closure_1_1(8738);
+        const obj2 = closure_1_1(8746);
       });
     });
   },
@@ -59,12 +59,12 @@ const localPushNotificationStore = new LocalPushNotificationStore(DispatcherDefa
         if (guild.verificationLevel === VerificationLevels.MEDIUM) {
           const verificationLevel = guild.verificationLevel;
           if (VerificationLevels.MEDIUM === verificationLevel) {
-            let obj = _modDef4418(check.accountDeadline);
+            let obj = _modDef4421(check.accountDeadline);
           } else if (VerificationLevels.HIGH === verificationLevel) {
-            obj = _modDef4418(check.memberDeadline);
+            obj = _modDef4421(check.memberDeadline);
           }
           if (null != obj) {
-            if (!obj.isSameOrBefore(_modDef4418(), "minute")) {
+            if (!obj.isSameOrBefore(_modDef4421(), "minute")) {
               const obj2 = { type: constants.GUILD_VERIFICATION, guildId: guild.id };
               set.add(obj2);
               const obj3 = {

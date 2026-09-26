@@ -13,7 +13,7 @@ const require = globalThis.__r;
 
 require = fn;
 const InputModes = fn(1074).InputModes;
-const StaticChannelRoute = fn(2051).StaticChannelRoute;
+const StaticChannelRoute = fn(2052).StaticChannelRoute;
 let closure_11 = {
   LURKER: "lurker",
   VOICE: "voice",
@@ -24,7 +24,7 @@ let closure_11 = {
   APPS: "apps",
   NONE: "none",
 };
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_12 = createStyles.createStyles((backgroundColor) => {
   const obj = {
     lurker: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },

@@ -5,14 +5,14 @@ import useStageSpeakingForCurrentUser from "../useStageSpeakingForCurrentUser.ts
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const native = Text(1177);
-const CircleInformationIcon = Text(4783);
-const Text_Text = Text(4825);
-const WarningIcon2 = Text(8040);
+const CircleInformationIcon = Text(4787);
+const Text_Text = Text(4832);
+const WarningIcon2 = Text(8048);
 require = fn;
 function StageChannelAgeVerificationNoticeContent(onConfirmPress) {
   onConfirmPress = onConfirmPress.onConfirmPress;
   closure_1 = closure_8();
-  const isVerifiedTeen = onConfirmPress(5041).useIsVerifiedTeen();
+  const isVerifiedTeen = onConfirmPress(5048).useIsVerifiedTeen();
   const intl = onConfirmPress(1115).intl;
   const format = intl.format;
   const t = onConfirmPress(1115).t;
@@ -24,8 +24,8 @@ function StageChannelAgeVerificationNoticeContent(onConfirmPress) {
           color: "text-default",
           style: closure_1.linkText,
           onPress() {
-            const tmp = closure_1(4516);
-            tmp(closure_1(2110).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
+            const tmp = closure_1(4519);
+            tmp(closure_1(2111).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
             if (onConfirmPress != null) {
               onConfirmPress();
             }
@@ -43,9 +43,9 @@ function StageChannelAgeVerificationNoticeContent(onConfirmPress) {
           color: "text-default",
           style: closure_1.linkText,
           onPress() {
-            const obj = closure_1(7851);
+            const obj = closure_1(7859);
             const result = obj.showAgeVerificationGetStartedModal({
-              entryPoint: onConfirmPress(7853).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
+              entryPoint: onConfirmPress(7861).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
             });
             if (closure_1_0 != null) {
               closure_1_0();
@@ -95,7 +95,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = {
   container: { marginTop: nativeDefault.space.PX_16 },
   containerWithDivider: null,

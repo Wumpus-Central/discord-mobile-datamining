@@ -5,7 +5,7 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import ContactSyncModalActionCreators from "../../../../contact_sync/native/ContactSyncModalActionCreators.tsx";
 import ContactSyncUtils from "../../../../contact_sync/native/ContactSyncUtils.tsx";
-import _modDef12172 from "../../../../../../_runtime/metro/12172__.js";
+import _modDef12190 from "../../../../../../_runtime/metro/12190__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = {
   content: {
     alignItems: "center",
@@ -68,7 +68,7 @@ const result = size.fileFinishedImporting(
 export default function AddFriendsContactSyncEmptyState() {
   const tmp = closure_7();
   const obj = { style: tmp.content, children: null };
-  const items = [hasOwnProperty(React4, { resizeMode: "contain", style: tmp.headerImage, source: _modDef12172 }), , ,];
+  const items = [hasOwnProperty(React4, { resizeMode: "contain", style: tmp.headerImage, source: _modDef12190 }), , ,];
   const obj3 = { style: tmp.title, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["/G+nci"]);
@@ -76,7 +76,7 @@ export default function AddFriendsContactSyncEmptyState() {
   const obj4 = { style: tmp.subtitle, children: null };
   const obj5 = { style: tmp.subtitleText, variant: "text-sm/medium", children: null };
   const intl2 = util.intl;
-  const obj2 = { resizeMode: "contain", style: tmp.headerImage, source: _modDef12172 };
+  const obj2 = { resizeMode: "contain", style: tmp.headerImage, source: _modDef12190 };
   obj5.children = intl2.format(util.t.OXdOPf, { learnMoreHook: ContactSyncUtils.handleOpenLearnMoreLink });
   obj4.children = hasOwnProperty(Text_Text.Text, obj5);
   items[2] = hasOwnProperty(React3, obj4);

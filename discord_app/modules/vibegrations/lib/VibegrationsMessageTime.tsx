@@ -1,4 +1,5 @@
 // discord_app/modules/vibegrations/lib/VibegrationsMessageTime.tsx
+import DateUtils from "../../../utils/DateUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsMessageTime.tsx");
@@ -12,11 +13,11 @@ export const describeMessageTime = function describeMessageTime(at) {
   if (isFiniteResult) {
     isFiniteResult = at > 0;
   }
-  let toLocaleTimeStringResult = null;
+  let calendarFormatResult = null;
   if (isFiniteResult) {
     const _Date = Date;
     const date = new Date(at);
-    toLocaleTimeStringResult = date.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
+    calendarFormatResult = DateUtils.calendarFormat(date, true);
   }
-  return toLocaleTimeStringResult;
+  return calendarFormatResult;
 };

@@ -103,9 +103,9 @@ function FrameViewInner(frame) {
     children: null,
   });
 }
-const FramesConstants = fn(8492);
+const FramesConstants = fn(8500);
 ({ asLaunched: metroRequire, FrameLayoutModes: closure_7 } = FramesConstants);
-const ActivityPlatform = fn(2004).ActivityPlatform;
+const ActivityPlatform = fn(2005).ActivityPlatform;
 const jsx = fn(21).jsx;
 const memoResult = noop.memo(function FrameViewGate(arg0) {
   const items = [FramesStore];

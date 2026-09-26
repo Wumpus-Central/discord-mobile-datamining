@@ -1,7 +1,7 @@
 // discord_app/modules/forums/native/ForumGuidelinesActionSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01980_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01981_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import LinkUtils from "../../links/LinkUtils.tsx";
 import ChannelSettingsActionCreatorsDefault from "../../../actions/ChannelSettingsActionCreators.tsx";
@@ -11,10 +11,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(6686).FORUM_GUIDELINES_ACTION_SHEET;
+let closure_6 = fn(6691).FORUM_GUIDELINES_ACTION_SHEET;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = {
   scrollContainer: { paddingHorizontal: 16 },
   header: { alignItems: "center", paddingTop: 20, paddingBottom: 24 },
@@ -233,5 +233,5 @@ export const openForumGuidelinesActionSheet = function openForumGuidelinesAction
   const obj = ActionSheetActionCreatorsDefault;
   const obj2 = {};
   const merged = Object.assign(arg0);
-  obj.openLazy(asyncRequireImpl(9719, dependencyMap.paths), closure_6, obj2);
+  obj.openLazy(asyncRequireImpl(9730, dependencyMap.paths), closure_6, obj2);
 };

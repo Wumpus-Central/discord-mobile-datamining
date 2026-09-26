@@ -1,5 +1,5 @@
 // discord_app/design/components/Navigator/native/useNavigation.native.tsx
-import Link from "../../../../../_runtime/01485_Link.js";
+import Link from "../../../../../_runtime/01486_Link.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 function useNavigation() {

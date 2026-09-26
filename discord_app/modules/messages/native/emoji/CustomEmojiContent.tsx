@@ -1,7 +1,7 @@
 // discord_app/modules/messages/native/emoji/CustomEmojiContent.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01980_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01981_asyncRequireImpl.js";
 import PremiumUtilsDefault from "../../../../utils/PremiumUtils.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -27,7 +27,7 @@ const Constants = fn(1074);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = {
   nitroWheel: { height: 32, width: 32 },
   nitroWheelPurple: { tintColor: nativeDefault.colors.CONTROL_BRAND_FOREGROUND_NEW },
@@ -365,7 +365,7 @@ export default function CustomEmojiContent(emojiNode) {
       const obj22 = { accessibilityLabel: null, style: null, onPress: null, children: null };
       function handleOpenEmojiOptionsMenu() {
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(9790, dependencyMap.paths),
+          asyncRequireImpl(9801, dependencyMap.paths),
           "EmojiOptionsActionSheet",
           { emojiSrc: emojiNode.src },
           "stack",

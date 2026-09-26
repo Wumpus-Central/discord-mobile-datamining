@@ -4,8 +4,8 @@ import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import CircleErrorIcon from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
-import UniqueUsernamesTypes from "../../../unique_usernames/UniqueUsernamesTypes.tsx";
 import useFocusRefOnNavigationDefault from "../../../../design/components/Navigator/native/useFocusRefOnNavigation.tsx";
+import UniqueUsernamesTypes from "../../../unique_usernames/UniqueUsernamesTypes.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -65,21 +65,21 @@ function UsernameStatusMessage(arg0) {
   return tmp6;
 }
 let closure_3 = ["username"];
-const RegistrationUIStore = fn(15543);
+const RegistrationUIStore = fn(15572);
 ({ setRegistrationErrors: closure_7, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_12 = createStyles.createStyles({ status: { width: "90%" }, inputHint: { width: "100%" } });
 let obj2 = { entering: null, exiting: null };
-const FadeIn = fn(4563).FadeIn;
+const FadeIn = fn(4566).FadeIn;
 obj2.entering = FadeIn.duration(300);
-const FadeOut = fn(4563).FadeOut;
+const FadeOut = fn(4566).FadeOut;
 obj2.exiting = FadeOut.duration(300);
 let obj3 = { layout: null };
-const LinearTransition = fn(4563).LinearTransition;
-const Easing = fn(4563).Easing;
-obj3.layout = LinearTransition.easing(Easing.inOut(fn(4563).Easing.quad)).duration(300);
+const LinearTransition = fn(4566).LinearTransition;
+const Easing = fn(4566).Easing;
+obj3.layout = LinearTransition.easing(Easing.inOut(fn(4566).Easing.quad)).duration(300);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/RegisterUsernameInput.tsx");
 
@@ -158,14 +158,14 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
     type = usernameStatus.type;
   }
   let str2;
-  if (type === tmp14(14240).NameValidationState.ERROR) {
+  if (type === tmp14(14265).NameValidationState.ERROR) {
     str2 = "error";
   }
   const obj6 = { children: null };
   obj3.status = str2;
   obj3.submitBehavior = submitBehavior;
   const items3 = [
-    closure_9(setUsername(6019).TextInput, obj3),
+    closure_9(setUsername(6024).TextInput, obj3),
     closure_9(UsernameStatusMessage, { usernameStatus, isUsernameFocused: tmp5[0] }),
   ];
   obj6.children = items3;

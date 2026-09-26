@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = {
   header: { flexDirection: "row", marginHorizontal: nativeDefault.space.PX_16 },
   headerSpacer: null,
@@ -91,14 +91,14 @@ export const UserProfileStackedActionSheetList = function UserProfileStackedActi
   if (obj2.isAndroid()) {
     num = renderItem(576).space.PX_16;
   }
-  items[1] = { paddingBottom: renderItem(1612)().bottom + num };
+  items[1] = { paddingBottom: renderItem(1613)().bottom + num };
   items[2] = data.contentContainerStyle;
   obj.contentContainerStyle = items;
   obj.renderItem = function renderItem(index) {
     index = index.index;
     return renderItem({ item: index.item, index, start: 0 === index, end: index === data.length - 1 });
   };
-  return closure_4(data(6040).BottomSheetFlatList, obj);
+  return closure_4(data(6045).BottomSheetFlatList, obj);
 };
 export const UserProfileStackedActionSheetSectionList = function UserProfileStackedActionSheetSectionList(renderItem) {
   renderItem = renderItem.renderItem;
@@ -114,5 +114,5 @@ export const UserProfileStackedActionSheetSectionList = function UserProfileStac
   obj.ItemSeparatorComponent = function ItemSeparatorComponent() {
     return React4(Form.FormDivider, { style: divider.divider });
   };
-  return closure_4(renderItem(6040).BottomSheetSectionList, obj);
+  return closure_4(renderItem(6045).BottomSheetSectionList, obj);
 };

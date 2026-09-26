@@ -175,9 +175,20 @@ let closure_15 = async function _getDsaExperiment() {
   return value;
 };
 let closure_16 = async function _fetchUrfCapabilities() {
+  closure_1 = tmp2;
+  closure_0 = tmp5;
   const HTTP = HTTPUtils.HTTP;
   await HTTP.get({ url: constants.DSA_CAPABILITIES, rejectWithError: false });
-  return value;
+  const body = value.body;
+  const capabilities = body.capabilities;
+  closure_128_2 = body.media_takedown_regulation;
+  const obj7 = { capabilities, media_takedown_regulation: null };
+  let tmp7 = null;
+  if (obj8.isMediaTakedownRegulation(closure_128_2)) {
+    tmp7 = closure_128_2;
+  }
+  obj7.media_takedown_regulation = tmp7;
+  return obj7;
 };
 let closure_17 = async function _submitReportSecondLook() {
   c2 = 0;
@@ -216,7 +227,7 @@ function genSubmitData(version, name, arr, email_token) {
   if (str == null) {
     str = "en";
   }
-  let obj2 = { channel_id: "Array", message_id: "channel", stage_instance_id: "end", guild_id: "window", guild_scheduled_event_id: "HermesInternal", user_id: "WireType", email_token: "__d", application_id: "__d", entrypoint: "__d", widget_id: "__d" };
+  let obj2 = { channel_id: "channel", message_id: "Object", stage_instance_id: "WireType", guild_id: "Array", guild_scheduled_event_id: "channel", user_id: "marginBottom", email_token: "", application_id: "sa", entrypoint: "Error", widget_id: "isArray" };
   obj.language = str;
   obj.breadcrumbs = arr.map((nodeRef) => nodeRef.nodeRef);
   obj.elements = arr.reduce((acc, item) => {
@@ -355,7 +366,7 @@ function genSubmitData(version, name, arr, email_token) {
 }
 const Constants = fn(1074);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7 } = Constants);
-const SafetyToastType = fn(7839).SafetyToastType;
+const SafetyToastType = fn(7847).SafetyToastType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/ReportUtils.tsx");
 
@@ -394,7 +405,7 @@ export const submitReport = function submitReport(language, name, arr) {
   if (DevSettingsStore.get("iar_skip_api_report_submit")) {
     let resolved = Promise.resolve();
   } else {
-    const REPORT_TO_MOD = obj4(8084).ReportMenuTypeSets.REPORT_TO_MOD;
+    const REPORT_TO_MOD = obj4(8092).ReportMenuTypeSets.REPORT_TO_MOD;
     if (REPORT_TO_MOD.has(name.name)) {
       let str2 = language.language;
       const obj = { version: null, variant: null, language: null, breadcrumbs: null, elements: null };
@@ -427,8 +438,8 @@ export const submitReport = function submitReport(language, name, arr) {
         return {};
       }, {});
       let tmp15 = null;
-      if (name.name === tmp4(8082).ModeratorReportNames.MESSAGE) {
-        let obj2 = { channel_id: "Array", message_id: "channel", guild_id: "unicodeVersion" };
+      if (name.name === tmp4(8090).ModeratorReportNames.MESSAGE) {
+        let obj2 = { channel_id: "Array", message_id: "channel", guild_id: "hd" };
         obj4 = {};
         ({ channel_id, id } = name.record);
         let merged = Object.assign(obj);
@@ -440,11 +451,11 @@ export const submitReport = function submitReport(language, name, arr) {
       }
       obj4 = tmp15;
       const HTTP2 = tmp4(1271).HTTP;
-      const REPORT_TO_MOD2 = tmp4(8084).ReportMenuTypeSets.REPORT_TO_MOD;
+      const REPORT_TO_MOD2 = tmp4(8092).ReportMenuTypeSets.REPORT_TO_MOD;
       const _HermesInternal2 = HermesInternal;
       const hasItem = REPORT_TO_MOD2.has(name.name);
       _modDef38(hasItem, "Invalid report type " + name.name);
-      if (name.name === tmp4(8082).ModeratorReportNames.MESSAGE) {
+      if (name.name === tmp4(8090).ModeratorReportNames.MESSAGE) {
         const request = { url: closure_7.SUBMIT_MODERATOR_MESSAGE_REPORT(name.record.channel_id, name.record.id), body: tmp15, rejectWithError: false };
         resolved = HTTP2.post(request).then((result) => {
           SafetyToastsActionCreatorsDefault.showSuccessToast(SafetyToastType.REPORT_TO_MOD_SUCCESS);
@@ -480,7 +491,7 @@ export const submitReport = function submitReport(language, name, arr) {
       const request1 = { url: null, body: null, rejectWithError: false };
       name = name.name;
       let _Object = Object;
-      const values = Object.values(tmp4(8082).ReportNames);
+      const values = Object.values(tmp4(8090).ReportNames);
       const _HermesInternal = HermesInternal;
       const hasItem1 = values.includes(name);
       _modDef38(hasItem1, "Invalid report type " + name.name);

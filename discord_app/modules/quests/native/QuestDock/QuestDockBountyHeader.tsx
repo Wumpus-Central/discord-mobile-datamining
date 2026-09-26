@@ -9,14 +9,14 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const QuestDockMode = fn(5751).QuestDockMode;
-const QuestDockConstants = fn(14599);
-({ QUEST_DOCK_COLLAPSED_HEADER_PADDING_LEFT, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: metroRequire } =
-  QuestDockConstants);
+const QuestConstants = fn(5756);
+({ QuestDockMode: hasOwnProperty, QuestsExperimentLocations: metroRequire } = QuestConstants);
+const QuestDockConstants = fn(14624);
+({ QUEST_DOCK_COLLAPSED_HEADER_PADDING_LEFT, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_7 } = QuestDockConstants);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_32 = nativeDefault.space.PX_32;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj = {
   wrapper: {
     alignItems: "center",
@@ -52,7 +52,7 @@ obj.smokeArt = { position: "absolute", left: -QUEST_DOCK_COLLAPSED_HEADER_PADDIN
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.smokeArtFade = {};
 obj.title = { lineHeight: 16 };
-let closure_9 = createStyles.createStyles(obj);
+let closure_10 = createStyles.createStyles(obj);
 const __initData = {
   code: "function QuestDockBountyHeaderTsx1(){const{withSpring,activeQuestDockMode,QuestDockMode,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED}=this.__closure;return{opacity:withSpring(activeQuestDockMode.get()===QuestDockMode.EXPANDED?0:1,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)};}",
 };
@@ -75,7 +75,7 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDock/Quest
 
 export default noop.memo(function QuestDockBountyHeader() {
   const questDockBounty = activeQuestDockMode(height[7]).useQuestDockBounty();
-  const tmp4 = closure_9();
+  const tmp4 = closure_10();
   let str = questDockBounty.productName;
   if (str == null) {
     str = "";
@@ -99,7 +99,7 @@ export default noop.memo(function QuestDockBountyHeader() {
   fn.__workletHash = 16909083558605;
   fn.__initData = __initData;
   const animatedStyle = tmpResult.useAnimatedStyle(fn);
-  let obj2 = {
+  const obj3 = {
     withSpring: activeQuestDockMode(height[10]).withSpring,
     activeQuestDockMode,
     QuestDockMode,
@@ -112,7 +112,7 @@ export default noop.memo(function QuestDockBountyHeader() {
     }
     return { opacity: spring.withSpring(num, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED) };
   };
-  const tmpResult5 = activeQuestDockMode(height[9]);
+  const tmpResult7 = activeQuestDockMode(height[9]);
   fn2.__closure = {
     withSpring: activeQuestDockMode(height[10]).withSpring,
     activeQuestDockMode,
@@ -122,29 +122,35 @@ export default noop.memo(function QuestDockBountyHeader() {
   };
   fn2.__workletHash = 273450441779;
   fn2.__initData = __initData2;
-  const animatedStyle1 = tmpResult5.useAnimatedStyle(fn2);
-  const tmp8 = width(height[11])(activeQuestDockMode) === QuestDockMode.EXPANDED;
-  const obj3 = {
+  const animatedStyle1 = tmpResult7.useAnimatedStyle(fn2);
+  const obj4 = {
     withSpring: activeQuestDockMode(height[10]).withSpring,
     activeQuestDockMode,
     QuestDockMode,
     PROMOTED_LABEL_OPACITY: 0.7,
     QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,
   };
-  let size = activeQuestDockMode(height[12]).useSmokeArtSize();
+  const tmp8 = width(height[11])(activeQuestDockMode);
+  const isBountiesAndroidQuestBarSmokeAnimationEnabled = activeQuestDockMode(
+    height[12],
+  ).useIsBountiesAndroidQuestBarSmokeAnimationEnabled(constants.QUESTS_BAR_MOBILE);
+  const tmpResult8 = activeQuestDockMode(height[12]);
+  const tmp10 = activeQuestDockMode(height[13]).isAndroid() && isBountiesAndroidQuestBarSmokeAnimationEnabled;
+  const tmpResult9 = activeQuestDockMode(height[13]);
+  let size = activeQuestDockMode(height[14]).useSmokeArtSize();
   width = size.width;
   height = size.height;
   const items = [width, height];
-  const memo = bountyCreative.useMemo(() => {
+  const memo = obj2.useMemo(() => {
     const size = { width, height };
     return size;
   }, items);
-  const tmpResult6 = activeQuestDockMode(height[12]);
+  const tmpResult10 = activeQuestDockMode(height[14]);
   bountyCreative = activeQuestDockMode(height[7]).useBountyCreative(questDockBounty);
-  const tmpResult7 = activeQuestDockMode(height[7]);
+  const tmpResult11 = activeQuestDockMode(height[7]);
   const items1 = [bountyCreative];
-  const tmpResult8 = activeQuestDockMode(height[13]);
-  const callback = bountyCreative.useCallback(() => {
+  const tmpResult12 = activeQuestDockMode(height[15]);
+  const callback = obj2.useCallback(() => {
     const obj2 = { creative: bountyCreative, isTargetedDisclosure: true, trackingCtx: null };
     const obj = QuestDisclosureModalActionCreatorsDefault;
     obj2.trackingCtx = {
@@ -154,18 +160,18 @@ export default noop.memo(function QuestDockBountyHeader() {
     };
     obj.showModal(obj2);
   }, items1);
-  const obj4 = {
-    onSubmenuPress: activeQuestDockMode(height[13]).useActionSheetPressHandler(bountyCreative),
+  const obj5 = {
+    onSubmenuPress: activeQuestDockMode(height[15]).useActionSheetPressHandler(bountyCreative),
     hideBlurWhenCollapsed: true,
     promotedLabelLeading: true,
     collapsedContent: null,
     secondaryContentWidth: null,
     children: null,
   };
-  const actionSheetPressHandler = activeQuestDockMode(height[13]).useActionSheetPressHandler(bountyCreative);
-  obj4.collapsedContent = closure_7(width(height[18]), {});
-  obj4.secondaryContentWidth = activeQuestDockMode(height[18]).QUEST_DOCK_BOUNTY_ILLUSTRATION_RESERVED_WIDTH;
-  const obj5 = {
+  const actionSheetPressHandler = activeQuestDockMode(height[15]).useActionSheetPressHandler(bountyCreative);
+  obj5.collapsedContent = closure_8(width(height[20]), {});
+  obj5.secondaryContentWidth = activeQuestDockMode(height[20]).QUEST_DOCK_BOUNTY_ILLUSTRATION_RESERVED_WIDTH;
+  const obj6 = {
     style: null,
     pointerEvents: "none",
     accessible: false,
@@ -173,48 +179,56 @@ export default noop.memo(function QuestDockBountyHeader() {
     children: null,
   };
   const items2 = [tmp4.smokeArt, memo];
-  obj5.style = items2;
-  const obj6 = { style: null, children: null };
+  obj6.style = items2;
+  const obj7 = { style: null, needsOffscreenAlphaCompositing: tmp10, children: null };
   const items3 = [tmp4.smokeArtFade, animatedStyle];
-  obj6.style = items3;
-  const tmp14 = width(height[17]);
-  obj6.children = closure_7(width(height[12]), { paused: tmp8 });
-  obj5.children = closure_7(width(height[19]), obj6);
-  const items4 = [closure_7(closure_4, obj5)];
-  const obj7 = { style: tmp4.wrapper, children: null };
-  let tmp15Result = null != questDockBounty.productIcon;
-  if (tmp15Result) {
-    const obj8 = {
+  obj7.style = items3;
+  const tmp7Result = width(height[19]);
+  const obj8 = { surface: null, paused: null };
+  const tmp7Result5 = width(height[21]);
+  obj8.surface = activeQuestDockMode(height[14]).QuestDockBountySmokeSurface.COLLAPSED;
+  obj8.paused = tmp8 === QuestDockMode.EXPANDED;
+  obj7.children = closure_8(width(height[14]), obj8);
+  let str2 = "no-offscreen-compositing";
+  if (tmp10) {
+    str2 = "offscreen-compositing";
+  }
+  obj6.children = closure_8(tmp7Result5, obj7, str2);
+  const items4 = [closure_8(closure_4, obj6)];
+  const obj9 = { style: tmp4.wrapper, children: null };
+  let tmp18Result = null != questDockBounty.productIcon;
+  if (tmp18Result) {
+    const obj10 = {
       style: tmp4.productIcon,
       source: null,
       resizeMode: "cover",
       accessible: false,
       importantForAccessibility: "no",
     };
-    const obj9 = { uri: questDockBounty.productIcon };
-    obj8.source = obj9;
-    tmp15Result = closure_7(tmp7(tmp2[20]), obj8);
+    const obj11 = { uri: questDockBounty.productIcon };
+    obj10.source = obj11;
+    tmp18Result = closure_8(tmp7(tmp2[22]), obj10);
   }
-  const items5 = [tmp15Result];
-  const obj10 = { style: tmp4.crossFadeWrapper, children: null };
-  const obj11 = { style: null, children: null };
+  const items5 = [tmp18Result];
+  const obj12 = { style: tmp4.crossFadeWrapper, children: null };
+  const obj13 = { style: null, children: null };
   const items6 = [tmp4.copy, animatedStyle];
-  obj11.style = items6;
-  const obj12 = {
+  obj13.style = items6;
+  const obj14 = {
     accessible: true,
     accessibilityRole: "text",
     accessibilityLabel: str,
-    accessibilityElementsHidden: tmp8,
+    accessibilityElementsHidden: tmp8 === QuestDockMode.EXPANDED,
     importantForAccessibility: null,
     children: null,
   };
-  let str2 = "yes";
-  const tmp17 = width(height[19]);
-  if (tmp8) {
-    str2 = "no-hide-descendants";
+  let str3 = "yes";
+  const tmp7Result6 = width(height[14]);
+  if (tmp8 === QuestDockMode.EXPANDED) {
+    str3 = "no-hide-descendants";
   }
-  obj12.importantForAccessibility = str2;
-  obj12.children = closure_7(activeQuestDockMode(height[21]).Text, {
+  obj14.importantForAccessibility = str3;
+  obj14.children = closure_8(activeQuestDockMode(height[23]).Text, {
     variant: "text-sm/medium",
     color: "text-strong",
     lineClamp: 2,
@@ -222,13 +236,13 @@ export default noop.memo(function QuestDockBountyHeader() {
     style: tmp4.title,
     children: str,
   });
-  obj11.children = closure_7(closure_4, obj12);
-  const items7 = [closure_7(width(height[19]), obj11)];
-  const obj14 = { style: null, children: null };
+  obj13.children = closure_8(closure_4, obj14);
+  const items7 = [closure_8(width(height[21]), obj13)];
+  const obj16 = { style: null, children: null };
   const items8 = [tmp4.promotedLabel, animatedStyle1];
-  obj14.style = items8;
-  let str3 = "none";
-  const obj13 = {
+  obj16.style = items8;
+  let str4 = "none";
+  const obj15 = {
     variant: "text-sm/medium",
     color: "text-strong",
     lineClamp: 2,
@@ -236,33 +250,33 @@ export default noop.memo(function QuestDockBountyHeader() {
     style: tmp4.title,
     children: str,
   };
-  const tmp7Result = width(height[19]);
-  if (tmp8) {
-    str3 = "auto";
+  const tmp7Result7 = width(height[21]);
+  if (tmp8 === QuestDockMode.EXPANDED) {
+    str4 = "auto";
   }
-  const obj15 = {
-    pointerEvents: str3,
-    accessibilityElementsHidden: !tmp8,
+  const obj17 = {
+    pointerEvents: str4,
+    accessibilityElementsHidden: tmp8 !== QuestDockMode.EXPANDED,
     importantForAccessibility: null,
     children: null,
   };
-  let str4 = "no-hide-descendants";
-  if (tmp8) {
-    str4 = "yes";
+  let str5 = "no-hide-descendants";
+  if (tmp8 === QuestDockMode.EXPANDED) {
+    str5 = "yes";
   }
-  obj15.importantForAccessibility = str4;
-  const obj16 = { onPress: callback, accessibilityRole: "button", children: null };
-  const obj17 = { variant: "text-sm/medium", color: "text-default", children: null };
-  const intl = tmp(tmp2[23]).intl;
-  obj17.children = intl.string(activeQuestDockMode(height[23]).t.o6FLcF);
-  obj16.children = closure_7(activeQuestDockMode(height[21]).Text, obj17);
-  obj15.children = closure_7(activeQuestDockMode(height[22]).PressableOpacity, obj16);
-  obj14.children = closure_7(closure_4, obj15);
-  items7[1] = closure_7(width(height[19]), obj14);
-  obj10.children = items7;
-  items5[1] = closure_8(closure_4, obj10);
-  obj7.children = items5;
-  items4[1] = closure_8(closure_4, obj7);
-  obj4.children = items4;
-  return closure_8(tmp14, obj4);
+  obj17.importantForAccessibility = str5;
+  const obj18 = { onPress: callback, accessibilityRole: "button", children: null };
+  const obj19 = { variant: "text-sm/medium", color: "text-default", children: null };
+  const intl = tmp(tmp2[25]).intl;
+  obj19.children = intl.string(activeQuestDockMode(height[25]).t.o6FLcF);
+  obj18.children = closure_8(activeQuestDockMode(height[23]).Text, obj19);
+  obj17.children = closure_8(activeQuestDockMode(height[24]).PressableOpacity, obj18);
+  obj16.children = closure_8(closure_4, obj17);
+  items7[1] = closure_8(width(height[21]), obj16);
+  obj12.children = items7;
+  items5[1] = closure_9(closure_4, obj12);
+  obj9.children = items5;
+  items4[1] = closure_9(closure_4, obj9);
+  obj5.children = items4;
+  return closure_9(tmp7Result, obj5);
 });

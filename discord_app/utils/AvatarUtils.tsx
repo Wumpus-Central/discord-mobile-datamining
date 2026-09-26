@@ -5,12 +5,12 @@ import Url from "../../_runtime/01368_Url.js";
 import AvatarDecorationConstants from "../modules/collectibles/avatar_decorations/AvatarDecorationConstants.tsx";
 import utils_AvatarUtils from "native/AvatarUtils.tsx";
 import ImageLoaderUtils from "../modules/image_upload/ImageLoaderUtils.tsx";
-import _modDef1472 from "../../_runtime/metro/01472__.js";
+import _modDef1473 from "../../_runtime/metro/01473__.js";
 import ForceSdrEmojisStickersExperiment from "../modules/image_upload/ForceSdrEmojisStickersExperiment.tsx";
 import NumberUtils from "../../discord_common/js/shared/utils/NumberUtils.tsx";
 import AvatarDecorationUtils from "../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
 import CollectiblesAssetUtils from "../modules/collectibles/utils/CollectiblesAssetUtils.tsx";
-import _modDef1968 from "../../_runtime/metro/01968__.js";
+import _modDef1969 from "../../_runtime/metro/01969__.js";
 import Constants from "../Constants.tsx";
 import PlatformUtils from "PlatformUtils.tsx";
 import size from "../../_runtime/metro/00002__.js";
@@ -109,7 +109,7 @@ function getAvatarURL(canAnimate) {
           obj4.animated = true;
         }
         const _HermesInternal2 = HermesInternal;
-        return combined + "?" + _modDef1472.stringify(obj4);
+        return combined + "?" + _modDef1473.stringify(obj4);
       }
     }
   }
@@ -267,7 +267,7 @@ function getGuildMemberAvatarURLSimple(size) {
   if (tmp20) {
     obj.animated = true;
   }
-  return combined + "?" + _modDef1472.stringify(obj);
+  return combined + "?" + _modDef1473.stringify(obj);
 }
 function getGuildBannerURL(guild) {
   ({ id, banner } = guild);
@@ -324,7 +324,7 @@ function getGuildBannerURL(guild) {
       obj.animated = true;
     }
     const _HermesInternal2 = HermesInternal;
-    return combined + "?" + _modDef1472.stringify(obj);
+    return combined + "?" + _modDef1473.stringify(obj);
   }
 }
 function getApplicationIconURL(guildMember) {
@@ -442,7 +442,7 @@ function getApplicationIconURL(guildMember) {
     }
     let tmp18;
     if (fallbackAvatar) {
-      tmp18 = _modDef1968;
+      tmp18 = _modDef1969;
     }
     return tmp18;
   }
@@ -650,7 +650,7 @@ function getUserBannerURL(arg0) {
       obj.animated = true;
     }
     const _HermesInternal2 = HermesInternal;
-    return combined + "?" + _modDef1472.stringify(obj);
+    return combined + "?" + _modDef1473.stringify(obj);
   }
 }
 function getAvatarDecorationURL(canAnimate) {
@@ -759,7 +759,7 @@ function getGuildMemberBannerURL(arg0) {
         obj.animated = true;
       }
       const _HermesInternal2 = HermesInternal;
-      return combined + "?" + _modDef1472.stringify(obj);
+      return combined + "?" + _modDef1473.stringify(obj);
     }
   }
 }

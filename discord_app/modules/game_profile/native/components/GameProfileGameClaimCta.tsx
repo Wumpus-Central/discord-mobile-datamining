@@ -39,13 +39,13 @@ export default function GameProfileGameClaimCta(trackAction) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              trackAction(v3(8131).GameProfileTrackActionActions.ClaimGame);
+              trackAction(v3(8139).GameProfileTrackActionActions.ClaimGame);
               v1 = 1;
               v3 = 1;
               const obj4 = {
-                value: v1(6730).redirectDeveloperPortalWithHandoffToken(
+                value: v1(6735).redirectDeveloperPortalWithHandoffToken(
                   constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY,
-                  v3(6734).LoginHandoffSource.GAME_CLAIM,
+                  v3(6739).LoginHandoffSource.GAME_CLAIM,
                 ),
                 done: false,
               };
@@ -78,7 +78,7 @@ export default function GameProfileGameClaimCta(trackAction) {
     const intl = trackAction(1115).intl;
     obj.text = intl.string(trackAction(1115).t["mqg+to"]);
     obj.onPress = callback;
-    let tmp3 = jsx(trackAction(5274).Button, { variant: "secondary", size: "md", text: null, onPress: null });
+    let tmp3 = jsx(trackAction(5281).Button, { variant: "secondary", size: "md", text: null, onPress: null });
   } else {
     tmp3 = null;
   }

@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx
-import Link from "../../../../_runtime/01485_Link.js";
+import Link from "../../../../_runtime/01486_Link.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx");

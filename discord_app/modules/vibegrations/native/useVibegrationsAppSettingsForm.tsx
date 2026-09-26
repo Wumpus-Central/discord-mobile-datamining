@@ -1,7 +1,7 @@
 // discord_app/modules/vibegrations/native/useVibegrationsAppSettingsForm.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3714 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3715 from "../intl/VibegrationsUntranslated.messages.js";
 import ActionSheetActionCreators from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import VibegrationsUtils from "../lib/VibegrationsUtils.tsx";
 import ChannelPickerActionSheetDefault from "../../channel/native/ChannelPickerActionSheet.tsx";
@@ -81,7 +81,7 @@ function VibegrationsChannelSettingRow(projectId) {
         obj3.channels = channels;
         obj3.selectedChannel = found;
         const intl = util.intl;
-        obj3.noChannelOptionLabel = intl.string(_modDef3714.aO4AM6);
+        obj3.noChannelOptionLabel = intl.string(_modDef3715.aO4AM6);
         obj3.onSelect = function onSelect(id) {
           let str;
           if (id != null) {
@@ -102,7 +102,7 @@ function VibegrationsChannelSettingRow(projectId) {
   return fallback;
 }
 const View = fn(17).View;
-let VibegrationsConnectionStore = fn(12607);
+let VibegrationsConnectionStore = fn(12624);
 ({
   requestProjectRebuild: closure_12,
   sendUserMessage: map1,
@@ -111,7 +111,7 @@ let VibegrationsConnectionStore = fn(12607);
 let VibegrationsConnectionStore = VibegrationsConnectionStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { section: { gap: nativeDefault.space.PX_16 }, secretRow: null, secretRowInfo: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.secretRow = {
@@ -667,9 +667,9 @@ export default function useVibegrationsAppSettingsForm(projectId) {
                   if (application_id == null) {
                     _null = null;
                   }
-                  _null2(12432)(_null);
+                  _null2(12450)(_null);
                   let prop;
-                  const tmp19 = _null2(12432);
+                  const tmp19 = _null2(12450);
                   if (project2 != null) {
                     prop = project2.preview_application_id;
                   }
@@ -677,8 +677,8 @@ export default function useVibegrationsAppSettingsForm(projectId) {
                   if (prop == null) {
                     _null2 = null;
                   }
-                  _null2(12432)(_null2);
-                  const tmp27 = _null2(12432);
+                  _null2(12450)(_null2);
+                  const tmp27 = _null2(12450);
                 }
                 c5 = 0;
                 closure_131_12(false);
@@ -687,7 +687,7 @@ export default function useVibegrationsAppSettingsForm(projectId) {
               closure_1_12(closure_131_0);
             }
             const intl = _null(1115).intl;
-            closure_1_13(closure_131_0, intl.string(_null2(3714).gqJFu0));
+            closure_1_13(closure_131_0, intl.string(_null2(3715).gqJFu0));
           }
         } catch (tmp67) {
           closure_4 = tmp67;

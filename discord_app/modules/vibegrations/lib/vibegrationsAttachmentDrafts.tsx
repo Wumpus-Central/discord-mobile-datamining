@@ -1,6 +1,6 @@
 // discord_app/modules/vibegrations/lib/vibegrationsAttachmentDrafts.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3714 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3715 from "../intl/VibegrationsUntranslated.messages.js";
 import VibegrationsTypes from "../VibegrationsTypes.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import Dispatcher_mod from "../../../Dispatcher.tsx";
@@ -97,10 +97,10 @@ function discardProject(projectId, arg1) {
     zustandStore.setState(obj);
   }
 }
-const deleteStagedAttachment = fn(12607).deleteStagedAttachment;
+const deleteStagedAttachment = fn(12624).deleteStagedAttachment;
 let closure_6 = [];
 let c7 = 1;
-const zustandStore = fn(4701).createZustandStore(() => ({ draftsByProject: {} }));
+const zustandStore = fn(4705).createZustandStore(() => ({ draftsByProject: {} }));
 let Dispatcher = Dispatcher_mod;
 const subscription = Dispatcher.subscribe("LOGOUT", () => {
   const keys = Object.keys(zustandStore.getState().draftsByProject);

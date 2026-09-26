@@ -1,7 +1,7 @@
 // discord_app/modules/vibegrations/native/VibegrationsTraceTab.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3714 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3715 from "../intl/VibegrationsUntranslated.messages.js";
 import ActionSheetActionCreators from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Card from "../../../design/components/Card/native/Card.native.tsx";
@@ -30,7 +30,7 @@ function TraceRow(entry) {
     if (null != entry.promptTokens) {
       const intl = util.intl;
       const obj3 = { tokens: vibegrations_VibegrationsTraceFormat.formatTokens(entry.promptTokens) };
-      let formatToPlainStringResult = intl.formatToPlainString(_modDef3714["PYO+Jv"], obj3);
+      let formatToPlainStringResult = intl.formatToPlainString(_modDef3715["PYO+Jv"], obj3);
       const tmp2Result = vibegrations_VibegrationsTraceFormat;
     }
     const items = [tmp.rowSlot];
@@ -109,7 +109,7 @@ function TraceOverview(arg0) {
   let reduced;
   let tmp = closure_9();
   closure_1 = tmp;
-  dependencyMap = entries(16383).useTraceCategoryFillStyles();
+  dependencyMap = entries(16412).useTraceCategoryFillStyles();
   let items = [entries];
   const memo = reduced.useMemo(() => VibegrationsTraceUtils.traceCategoryTotals(entries), items);
   reduced = memo.reduce((acc, ms) => acc + ms.ms, 0);
@@ -139,7 +139,7 @@ function TraceOverview(arg0) {
   obj3.children = mapped;
   let items1 = [closure_7(View, obj3)];
   let obj4 = { style: tmp.legend, children: null };
-  const TRACE_CATEGORIES = entries(16385).TRACE_CATEGORIES;
+  const TRACE_CATEGORIES = entries(16414).TRACE_CATEGORIES;
   obj4.children = TRACE_CATEGORIES.map((item) => {
     closure_0 = item;
     const found = memo.find((category) => category.category === closure_0);
@@ -168,7 +168,7 @@ function TraceOverview(arg0) {
     items1[1] = React5(Text_Text.Text, obj3);
     const obj5 = { variant: "text-xs/normal", color: "text-subtle", children: null };
     const intl = util.intl;
-    obj5.children = intl.formatToPlainString(_modDef3714.UffawN, { percent: num2 });
+    obj5.children = intl.formatToPlainString(_modDef3715.UffawN, { percent: num2 });
     items1[2] = React5(Text_Text.Text, obj5);
     const intl2 = util.intl;
     let num4;
@@ -181,7 +181,7 @@ function TraceOverview(arg0) {
     items1[3] = React5(Text_Text.Text, {
       variant: "text-xs/normal",
       color: "text-subtle",
-      children: intl2.formatToPlainString(_modDef3714.w8vPbe, { count: num4 }),
+      children: intl2.formatToPlainString(_modDef3715.w8vPbe, { count: num4 }),
     });
     let tmp6Result = null;
     if (0 !== num) {
@@ -210,7 +210,7 @@ function itemType(kind) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = {
   list: { paddingHorizontal: nativeDefault.space.PX_16 },
   header: null,
@@ -329,7 +329,7 @@ export default function VibegrationsTraceTab(projectId) {
           obj2.key = "group-" + turnId;
           const intl = util.intl;
           const obj3 = { number: index + 1 };
-          obj2.label = intl.formatToPlainString(_modDef3714["Y/j+TD"], obj3);
+          obj2.label = intl.formatToPlainString(_modDef3715["Y/j+TD"], obj3);
           obj2.started = VibegrationsTimeFormat.formatClockTime(turnId.startedAt);
           obj2.spanMs = turnId.spanMs;
           items.push(obj2);

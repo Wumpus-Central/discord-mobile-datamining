@@ -1,6 +1,6 @@
 // discord_app/modules/premium/premium_group/PremiumGroupConstants.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3198 from "PremiumGroup.messages.js";
+import _modDef3199 from "PremiumGroup.messages.js";
 import Constants from "../../../Constants.tsx";
 import HelpdeskUtils from "../../../utils/HelpdeskUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -25,7 +25,7 @@ export const HELP_CENTER_LINK = articleURL;
 export const CANNOT_INVITE_STATUSES = items;
 export const getPremiumGroupProductName = function getPremiumGroupProductName() {
   const intl = util.intl;
-  return intl.string(_modDef3198.aFBQ3d);
+  return intl.string(_modDef3199.aFBQ3d);
 };
 export const getPremiumGroupCountryName = function getPremiumGroupCountryName() {
   const intl = util.intl;

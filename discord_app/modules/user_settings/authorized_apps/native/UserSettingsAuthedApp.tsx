@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/authorized_apps/native/UserSettingsAuthedApp.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import Link from "../../../../../_runtime/01485_Link.js";
+import Link from "../../../../../_runtime/01486_Link.js";
 import RootNavigationRef from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
 import CircleInformationIcon from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
@@ -39,7 +39,7 @@ function WarningLabel(children) {
 }
 function AuthorizedAppTwoWay(application) {
   let navigation;
-  navigation = navigation(1484).useNavigation();
+  navigation = navigation(1485).useNavigation();
   const items = [navigation];
   const obj2 = { text: null };
   const callback = noop.useCallback(() => {
@@ -63,11 +63,11 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1074);
 ({ UserSettingsSections: closure_12, AnalyticsSections: map1, AnalyticsPages: closure_14 } = Constants);
-let closure_15 = fn(10366).ChannelDetailsNavigatorScreens;
-let closure_16 = fn(10913).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_15 = fn(10377).ChannelDetailsNavigatorScreens;
+let closure_16 = fn(10926).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = {
   container: { paddingHorizontal: 16, paddingVertical: 24 },
   section: { marginBottom: 24 },

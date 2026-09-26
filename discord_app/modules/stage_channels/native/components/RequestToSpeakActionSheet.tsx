@@ -14,7 +14,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
-const _modDef9367 = tmp4(9367);
+const _modDef9378 = tmp4(9378);
 require = fn;
 function RequestToSpeakRow(channel) {
   c0 = undefined;
@@ -48,7 +48,7 @@ function ManageSelfSpeakerRow(channel) {
     id = channel.id;
   }
   const tmp8 =
-    useAudienceRequestToSpeakStateDefault(stateFromStores, id) === channel(4976).RequestToSpeakStates.ON_STAGE;
+    useAudienceRequestToSpeakStateDefault(stateFromStores, id) === channel(4983).RequestToSpeakStates.ON_STAGE;
   importDefault = tmp8;
   const intl = tmp(1115).intl;
   const string = intl.string;
@@ -59,9 +59,9 @@ function ManageSelfSpeakerRow(channel) {
     stringResult = string(t["8Joh+p"]);
   }
   if (tmp8) {
-    let MicrophoneArrowRightIcon = tmp(9363).GroupArrowDownIcon;
+    let MicrophoneArrowRightIcon = tmp(9374).GroupArrowDownIcon;
   } else {
-    MicrophoneArrowRightIcon = tmp(9365).MicrophoneArrowRightIcon;
+    MicrophoneArrowRightIcon = tmp(9376).MicrophoneArrowRightIcon;
   }
   let obj2 = {
     onPress() {
@@ -83,14 +83,14 @@ function ManageSelfSpeakerRow(channel) {
     trailing: null,
   };
   const tmp5Result = useAudienceRequestToSpeakStateDefault(stateFromStores, id);
-  obj2.trailing = closure_9(channel(1177).Icon, { source: _modDef9367 });
-  return closure_9(channel(5912).TableRow, obj2);
+  obj2.trailing = closure_9(channel(1177).Icon, { source: _modDef9378 });
+  return closure_9(channel(5917).TableRow, obj2);
 }
 const View = fn(17).View;
-let closure_8 = fn(5721).REQUEST_TO_SPEAK_SHEET_KEY;
+let closure_8 = fn(5726).REQUEST_TO_SPEAK_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -101,20 +101,20 @@ export default function RequestToSpeakActionSheet(channelId) {
   let first;
   let first1;
   noop = undefined;
-  const token = channelId(4528).useToken(first(576).modules.mobile.TABLE_ROW_PADDING);
-  const obj = channelId(4528);
+  const token = channelId(4531).useToken(first(576).modules.mobile.TABLE_ROW_PADDING);
+  const obj = channelId(4531);
   const tmp3 = first;
   const items = [];
   const tmp5 = closure_11();
-  const tmp6 = first(6578);
-  items[HermesBuiltin.arraySpread(channelId.analyticsLocations, 0)] = first(6598).REQUEST_TO_SPEAK;
+  const tmp6 = first(6583);
+  items[HermesBuiltin.arraySpread(channelId.analyticsLocations, 0)] = first(6603).REQUEST_TO_SPEAK;
   const arraySpreadResult = HermesBuiltin.arraySpread(channelId.analyticsLocations, 0);
   const items1 = [ChannelStore];
   const stateFromStores = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   const obj2 = channelId(504);
-  const stageParticipantsCount = channelId(5738).useStageParticipantsCount(
+  const stageParticipantsCount = channelId(5743).useStageParticipantsCount(
     channelId,
-    channelId(5732).StageChannelParticipantNamedIndex.ALL_REQUESTED_TO_SPEAK,
+    channelId(5737).StageChannelParticipantNamedIndex.ALL_REQUESTED_TO_SPEAK,
   );
   const tmp10 = first1(noop.useState(0), 2);
   first = tmp10[0];
@@ -161,7 +161,7 @@ export default function RequestToSpeakActionSheet(channelId) {
     const obj11 = { channel: stateFromStores };
     items2[1] = closure_9(ManageSelfSpeakerRow, obj11);
     obj9.children = items2;
-    const items3 = [closure_10(tmp(5994).TableRowGroup, obj9)];
+    const items3 = [closure_10(tmp(5999).TableRowGroup, obj9)];
     const obj12 = { style: null, children: null };
     const obj13 = { paddingHorizontal: token };
     obj12.style = obj13;
@@ -171,20 +171,20 @@ export default function RequestToSpeakActionSheet(channelId) {
     const _HermesInternal = HermesInternal;
     obj15.numHands = "" + stageParticipantsCount;
     obj14.children = intl.format(tmp(1115).t["5z7q5a"], obj15);
-    obj12.children = closure_9(tmp(4825).Text, obj14);
+    obj12.children = closure_9(tmp(4832).Text, obj14);
     items3[1] = closure_9(View, obj12);
     obj8.children = items3;
-    const items4 = [closure_10(tmp(5272).Stack, obj8)];
+    const items4 = [closure_10(tmp(5279).Stack, obj8)];
     const obj16 = { channel: stateFromStores, height: null };
     const _Math = Math;
     obj16.height = Math.max(first1 - first - 8, 0);
-    items4[1] = closure_9(tmp3(9368), obj16);
+    items4[1] = closure_9(tmp3(9379), obj16);
     obj7.children = items4;
-    obj6.children = closure_10(tmp(5272).Stack, obj7);
-    obj5.children = closure_9(tmp(6040).BottomSheetScrollView, obj6);
-    obj4.children = closure_9(tmp(6566).BottomSheet, obj5);
-    tmp14 = closure_9(tmp(6578).AnalyticsLocationProvider, obj4);
-    const tmp3Result = tmp3(9368);
+    obj6.children = closure_10(tmp(5279).Stack, obj7);
+    obj5.children = closure_9(tmp(6045).BottomSheetScrollView, obj6);
+    obj4.children = closure_9(tmp(6571).BottomSheet, obj5);
+    tmp14 = closure_9(tmp(6583).AnalyticsLocationProvider, obj4);
+    const tmp3Result = tmp3(9379);
   }
   return tmp14;
 }

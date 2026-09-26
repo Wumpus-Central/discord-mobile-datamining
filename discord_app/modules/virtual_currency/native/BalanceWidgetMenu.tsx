@@ -9,7 +9,7 @@ import ButtonEllipsis from "../../../design/components/Button/native/ButtonEllip
 import QuestTypes from "../../quests/QuestTypes.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
-import _mod8307 from "../hooks/index.tsx";
+import _mod8315 from "../hooks/index.tsx";
 import SelectedDismissibleContentDefault from "../../dismissible_content/native/SelectedDismissibleContent.tsx";
 import BalanceWidgetPillButtonDefault from "BalanceWidgetPillButton.tsx";
 import QuestUtils from "../../quests/native/QuestUtils.native.tsx";
@@ -65,7 +65,7 @@ class OrbsOnboardingMenuDismissibleContent {
       markAsDismissed = markAsDismissed.markAsDismissed;
       if (
         markAsDismissed.visibleContent ===
-        markAsDismissed(2028).DismissibleContent.VIRTUAL_CURRENCY_MOBILE_ONBOARDING_PILL
+        markAsDismissed(2029).DismissibleContent.VIRTUAL_CURRENCY_MOBILE_ONBOARDING_PILL
       ) {
         let obj = { accessibilityLabel: null, onPress: null, trailing: null };
         const intl = tmp(1115).intl;
@@ -79,7 +79,7 @@ class OrbsOnboardingMenuDismissibleContent {
             fromContent: QuestTypes.QuestContent.MOBILE_ORBS_ONBOARDING_DC,
           });
         };
-        obj.trailing = closure_9(closure_1(15272), {});
+        obj.trailing = closure_9(closure_1(15300), {});
         return closure_9(closure_10, obj);
       } else {
         return null;
@@ -89,7 +89,7 @@ class OrbsOnboardingMenuDismissibleContent {
   }
 }
 function BalanceWidgetMenu() {
-  str = str(8307).useFetchVirtualCurrencyBalance().balance;
+  str = str(8315).useFetchVirtualCurrencyBalance().balance;
   let items = [str];
   const callback = noop.useCallback(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.USER_PROFILE_ACTION, { profile_action: "ORBS_BALANCE_PRESSED" });
@@ -111,7 +111,7 @@ function BalanceWidgetMenu() {
       obj5.analyticsLocations = items;
       obj5.analyticsSource = AnalyticsLocationDefault.COLLECTIBLES_SHOP;
       obj5.screen = constants2.ORBS;
-      const result = str(6956).openCollectiblesShopMobile(obj5);
+      const result = str(6961).openCollectiblesShopMobile(obj5);
     };
     obj3.primaryButtonConfig = obj4;
     let obj5 = { buttonText: null, onButtonPress: null };
@@ -126,11 +126,11 @@ function BalanceWidgetMenu() {
       });
       const obj2 = { type: "GO_TO_QUEST_HOME", source: AnalyticsLocationDefault.YOU_SCREEN, balance };
       ActionSheetActionCreatorsDefault.hideActionSheet();
-      const obj4 = str(10665);
+      const obj4 = str(10678);
       obj4.openQuestHome({
         mergeExistingRoutes: true,
         filter: constants3.VIRTUAL_CURRENCY,
-        fromContent: str(5754).QuestContent.ORBS_BALANCE_MENU,
+        fromContent: str(5759).QuestContent.ORBS_BALANCE_MENU,
       });
     };
     obj3.secondaryButtonConfig = obj5;
@@ -149,7 +149,7 @@ function BalanceWidgetMenu() {
   if (str2 == null) {
     str2 = "";
   }
-  let obj = str(8307);
+  let obj = str(8315);
   return (
     <OrbsBalanceRow
       accessibilityLabel={intl.formatToPlainString(str(1115).t.zPaLL9, { balance: str2 })}
@@ -160,15 +160,15 @@ function BalanceWidgetMenu() {
 }
 const AnalyticEvents = fn(1074).AnalyticEvents;
 let closure_5 = fn(1076).CollectiblesMobileShopScreen;
-const DismissibleContentConstants = fn(2041);
+const DismissibleContentConstants = fn(2042);
 ({ ContentDismissActionType: metroRequire, DismissibleContentGroupName: closure_7 } = DismissibleContentConstants);
-const RewardFilterTypes = fn(5751).RewardFilterTypes;
+const RewardFilterTypes = fn(5756).RewardFilterTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/virtual_currency/native/BalanceWidgetMenu.tsx");
 
 export default function BalanceWidgetMenuWrapper() {
-  const balance = _mod8307.useFetchVirtualCurrencyBalance().balance;
+  const balance = _mod8315.useFetchVirtualCurrencyBalance().balance;
   DismissibleContentUnsafeUtils;
   if (null == balance) {
     const obj2 = { accessibilityLabel: null, trailing: null, isBusy: true };

@@ -1,7 +1,7 @@
 // discord_app/modules/explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx
 import util from "../../../intl/index.native.tsx";
 import preloaded_user_settings from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import asyncRequireImpl from "../../../../_runtime/01980_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01981_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ObscuredMediaUtils from "../ObscuredMediaUtils.tsx";
 import ExplicitMediaRedactionModels from "../ExplicitMediaRedactionModels.tsx";
@@ -11,8 +11,8 @@ import AgeVerificationAnalyticsUtils from "../../age_assurance/AgeVerificationAn
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-let closure_4 = fn(7016).EXPLICIT_MEDIA_SETTINGS_ACTION_SHEET_KEY;
-const SearchMediaTypes = fn(7298).SearchMediaTypes;
+let closure_4 = fn(7021).EXPLICIT_MEDIA_SETTINGS_ACTION_SHEET_KEY;
+const SearchMediaTypes = fn(7303).SearchMediaTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx",
@@ -75,7 +75,7 @@ export const handleSensitiveMediaFilterPress = function handleSensitiveMediaFilt
     };
     items.push(obj3);
   }
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14339, dependencyMap.paths), closure_4, {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14364, dependencyMap.paths), closure_4, {
     title,
     subtitle,
     options: items,

@@ -14,9 +14,9 @@ class VoiceActionSheetManager extends tmp2 {
       const channel = applyArgumentsResult.channel;
       if (null != channel) {
         DispatcherDefault.wait(() => {
-          const result = applyArgumentsResult(5036).dismissVoiceChannelScreens(channel);
-          const obj = applyArgumentsResult(5036);
-          applyArgumentsResult(5036).openChannelCallModal(channel);
+          const result = applyArgumentsResult(5043).dismissVoiceChannelScreens(channel);
+          const obj = applyArgumentsResult(5043);
+          applyArgumentsResult(5043).openChannelCallModal(channel);
         });
         applyArgumentsResult.terminate();
       }

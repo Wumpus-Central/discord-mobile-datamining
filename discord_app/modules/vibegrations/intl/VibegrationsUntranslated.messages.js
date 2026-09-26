@@ -1,13 +1,13 @@
 // discord_app/modules/vibegrations/intl/VibegrationsUntranslated.messages.js
 import AssetJsonUtils from "../../asset_json/native/AssetJsonUtils.tsx";
-import _mod3715 from "../../../../_runtime/metro/03715__.js";
+import _mod3716 from "../../../../_runtime/metro/03716__.js";
 import module_1154_mod from "../../../../_runtime/metro/01154__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let module_1154 = module_1154_mod;
 const loader = module_1154.createLoader({
   () => {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3715);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3716);
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");

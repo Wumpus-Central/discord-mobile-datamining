@@ -58,7 +58,7 @@ export default function BadgeDirectoryScreen(targetUserId) {
         return obj;
       }, items2);
       const obj4 = { screens: memo, initialRouteName };
-      return jsx(tmp(10756).Modal, { screens: memo, initialRouteName });
+      return jsx(tmp(10769).Modal, { screens: memo, initialRouteName });
     }
   }
   const intl = tmp(1115).intl;

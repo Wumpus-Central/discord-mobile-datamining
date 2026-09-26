@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/hooks/useScheduleTimeControlsRowProps.tsx
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import util from "../../../intl/index.native.tsx";
-import _modDef2486 from "../FamilyCenter.messages.js";
+import _modDef2487 from "../FamilyCenter.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -13,17 +13,17 @@ export default function useScheduleTimeControlsRowProps(arr) {
     const obj2 = { subLabel: null, trailing: "a" };
     const obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
     const intl = util.intl;
-    obj3.children = intl.string(_modDef2486.fOBIZH);
+    obj3.children = intl.string(_modDef2487.fOBIZH);
     obj2.subLabel = jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", children: null });
     return obj2;
   } else {
     const obj4 = { subLabel: null, trailing: null };
     const intl2 = util.intl;
     const obj5 = { count: arr.length };
-    obj4.subLabel = intl2.formatToPlainString(_modDef2486.XfwcpX, obj5);
+    obj4.subLabel = intl2.formatToPlainString(_modDef2487.XfwcpX, obj5);
     const intl3 = util.intl;
     const string = intl3.string;
-    const tmp11 = _modDef2486;
+    const tmp11 = _modDef2487;
     if (someResult) {
       let stringResult = string(tmp11["8vDHRq"]);
     } else {

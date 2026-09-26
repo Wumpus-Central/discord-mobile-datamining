@@ -9,7 +9,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_10 = createStyles.createStyles({
   spinner: { height: 32, width: 32 },
   center: { alignItems: "center", justifyContent: "center" },
@@ -37,7 +37,7 @@ export default noop.memo((gestureEnabled) => {
   c9 = undefined;
   let onReady;
   const tmp2 = onReady();
-  const surfaceDirectRendererExperiment = resizeMode(8873).useSurfaceDirectRendererExperiment(userId, {
+  const surfaceDirectRendererExperiment = resizeMode(8881).useSurfaceDirectRendererExperiment(userId, {
     location: "VideoRenderer",
   });
   let tmp6 = first1(noop.useState(0), 2);
@@ -52,10 +52,10 @@ export default noop.memo((gestureEnabled) => {
   const tmp13 = first1(noop.useState(0), 2);
   const first3 = tmp13[0];
   closure_8 = tmp15;
-  let obj = resizeMode(8873);
+  let obj = resizeMode(8881);
   [tmp17, c9] = first1(noop.useState(true), 2);
-  width(8874)({ location: "VideoRenderer", videoSpinnerContext, userId, streamId, paused, loading: tmp17 });
-  onReady = width(8876)({ streamId, userId, videoSpinnerContext, paused, loading: tmp17, streamKey }).onReady;
+  width(8882)({ location: "VideoRenderer", videoSpinnerContext, userId, streamId, paused, loading: tmp17 });
+  onReady = width(8884)({ streamId, userId, videoSpinnerContext, paused, loading: tmp17, streamKey }).onReady;
   noop.useRef(null);
   const ref1 = noop.useRef(null);
   ref = noop.useRef({ width: 0, height: 0 });
@@ -142,7 +142,7 @@ export default noop.memo((gestureEnabled) => {
   }, items2);
   const tmp16 = first1(noop.useState(true), 2);
   const items3 = [width, first1, first2, first3, memo];
-  const store = resizeMode(7772).useStore((orientation) => orientation.orientation);
+  const store = resizeMode(7780).useStore((orientation) => orientation.orientation);
   const layoutEffect = noop.useLayoutEffect(() => {
     let isAndroidResult = PlatformUtils.isAndroid();
     if (isAndroidResult) {
@@ -219,10 +219,10 @@ export default noop.memo((gestureEnabled) => {
   }, items9);
   if (tmp17) {
     const obj3 = { animate: true, style: tmp2.spinner };
-    tmp35 = closure_8(tmp18(8881), obj3);
+    tmp35 = closure_8(tmp18(8889), obj3);
   }
-  const tmp37 = store === resizeMode(7772).OrientationType.PORTRAIT;
-  const obj2 = resizeMode(7772);
+  const tmp37 = store === resizeMode(7780).OrientationType.PORTRAIT;
+  const obj2 = resizeMode(7780);
   if (tmp3Result.isAndroid()) {
     const obj4 = { onLayout: callback2, style: null, children: null };
     const items10 = [tmp2.center, closure_6.absoluteFillObject];
@@ -244,10 +244,10 @@ export default noop.memo((gestureEnabled) => {
       onReady: callback1,
       style: memo2,
     };
-    const items11 = [closure_8(tmp18(8884), obj7), tmp35];
+    const items11 = [closure_8(tmp18(8892), obj7), tmp35];
     obj6.children = items11;
     obj5.children = c9(first2, obj6);
-    const items12 = [closure_8(tmp18(8882), obj5)];
+    const items12 = [closure_8(tmp18(8890), obj5)];
     const obj8 = { style: memo5, children: null };
     let tmp56 = null;
     if (!tmp17) {
@@ -267,7 +267,7 @@ export default noop.memo((gestureEnabled) => {
     items12[1] = closure_8(first2, obj8);
     obj4.children = items12;
     let tmp43Result1 = c9(tmp52, obj4);
-    const tmp18Result = tmp18(8882);
+    const tmp18Result = tmp18(8890);
   } else if (flag) {
     const obj9 = {
       ref,
@@ -293,8 +293,8 @@ export default noop.memo((gestureEnabled) => {
       onReady: callback1,
       style: memo1,
     };
-    obj12.children = closure_8(tmp18(8884), obj13);
-    const items13 = [closure_8(tmp18(4563).View, obj12)];
+    obj12.children = closure_8(tmp18(8892), obj13);
+    const items13 = [closure_8(tmp18(4566).View, obj12)];
     let tmp48 = null;
     if (tmp37) {
       let renderTagResult1;
@@ -330,7 +330,7 @@ export default noop.memo((gestureEnabled) => {
       onReady: callback1,
       style: memo1,
     };
-    const items17 = [closure_8(tmp18(8884), obj16), tmp35];
+    const items17 = [closure_8(tmp18(8892), obj16), tmp35];
     obj15.children = items17;
     tmp43Result1 = c9(first2, obj15);
   }

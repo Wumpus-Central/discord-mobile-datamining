@@ -1,5 +1,5 @@
 // discord_app/modules/guild_tag/native/badges/GuildBadgeClover.tsx
-import inlineStyles from "../../../../../_runtime/07901_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07909_inlineStyles.js";
 import GuildBadgeUtils from "GuildBadgeUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 

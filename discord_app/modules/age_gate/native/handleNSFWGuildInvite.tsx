@@ -1,6 +1,6 @@
 // discord_app/modules/age_gate/native/handleNSFWGuildInvite.tsx
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01980_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01981_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import RegionalFeatureConfigUtils from "../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import TinyBroncoExperiment from "../../tiny_bronco/TinyBroncoExperiment.tsx";
@@ -11,7 +11,7 @@ const require = globalThis.__r;
 
 require = fn;
 const GuildNSFWContentLevel = fn(1074).GuildNSFWContentLevel;
-let closure_5 = fn(9220).TINY_BRONCO_NSFW_SERVER_LOCATION;
+let closure_5 = fn(9231).TINY_BRONCO_NSFW_SERVER_LOCATION;
 const items = [,];
 ({ EXPLICIT: arr[0], AGE_RESTRICTED: arr[1] } = GuildNSFWContentLevel);
 const set = new Set(items);
@@ -54,7 +54,7 @@ export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite, arg1
     if (null == GuildStore.getGuild(id)) {
       if (obj7.isIOS()) {
         const obj = { guildId: id };
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9221, dependencyMap.paths), obj);
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9232, dependencyMap.paths), obj);
         if (onCancel != null) {
           onCancel();
         }

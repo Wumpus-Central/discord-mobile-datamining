@@ -1,6 +1,6 @@
 // discord_app/modules/chat_input/native/RefreshChatInputCoachmark.tsx
 import util from "../../../intl/index.native.tsx";
-import native from "../../../../discord_common/js/packages/design/native.tsx";
+import OmnibuttonCoachmarkRive from "../../../../discord_common/js/packages/design/components/Rive/native/generated/OmnibuttonCoachmarkRive.tsx";
 import useCoachmark from "../../../design/components/Coachmark/native/useCoachmark.native.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const ContentDismissActionType = fn(2041).ContentDismissActionType;
+const ContentDismissActionType = fn(2042).ContentDismissActionType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/RefreshChatInputCoachmark.tsx");
 
@@ -23,7 +23,7 @@ export const useRefreshChatInputCoachmark = function useRefreshChatInputCoachmar
   if (disabled.disabled) {
     let items = [];
   } else {
-    items = [tmp(2028).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK];
+    items = [tmp(2029).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK];
   }
   const tmp3 = _slicedToArray(require("useSelectedDismissibleContent").useSelectedDismissibleContent(items), 2);
   _require = tmp4;
@@ -51,7 +51,7 @@ export const useRefreshChatInputCoachmark = function useRefreshChatInputCoachmar
       obj.onDismiss = function onDismiss() {
         closure_1_0(constants.USER_DISMISS);
       };
-      obj.graphic = { type: "rive", rive: native.OmnibuttonCoachmarkRive, aspectRatio: "16/9" };
+      obj.graphic = { type: "rive", rive: OmnibuttonCoachmarkRive.OmnibuttonCoachmarkRive, aspectRatio: "16/9" };
       return obj;
     }, items1);
   }

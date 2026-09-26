@@ -8,10 +8,10 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conversations/components/native/ConversationFocusScreen.tsx");
 
 export default function ConversationFocusScreen() {
-  const params = channelId(1487).useRoute().params;
+  const params = channelId(1488).useRoute().params;
   channelId = params.channelId;
   const conversationId = params.conversationId;
-  const obj = channelId(1487);
+  const obj = channelId(1488);
   const items = [ConversationsStore];
   const items1 = [channelId, conversationId];
   const messages = channelId(504).useStateFromStores(
@@ -51,7 +51,7 @@ export default function ConversationFocusScreen() {
     items3,
   );
   ({ fullyHydrated, isFullFetchPending, startMessageId } = stateFromStoresObject);
-  return jsx(conversationId(12808), {
+  return jsx(conversationId(12825), {
     channelId,
     conversationId,
     messages,

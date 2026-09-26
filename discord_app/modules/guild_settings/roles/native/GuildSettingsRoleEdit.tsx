@@ -10,13 +10,13 @@ import AppAnalyticsUtils from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import AlertActionCreatorsDefault from "../../../../actions/AlertActionCreators.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import GuildActionCreatorsDefault from "../../../../actions/GuildActionCreators.tsx";
-import _modDef5904 from "../../../../../_runtime/metro/05904__.js";
+import _modDef5909 from "../../../../../_runtime/metro/05909__.js";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import HeaderActionButton from "../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
-import _modDef8802 from "../../../../../_runtime/metro/08802__.js";
+import _modDef8810 from "../../../../../_runtime/metro/08810__.js";
 import ChannelPermissionsUtils from "../../../channel_permissions/ChannelPermissionsUtils.tsx";
 import ConnectionsRoleActionCreators from "../../../connections/ConnectionsRoleActionCreators.tsx";
 import GuildSettingsRolesUtils from "../GuildSettingsRolesUtils.tsx";
@@ -38,15 +38,15 @@ import GuildSettingsRolesStore from "../GuildSettingsRolesStore.tsx";
 require = fn;
 let closure_4 = ["guild"];
 const View = fn(17).View;
-const isEveryoneRole = fn(2102).isEveryoneRole;
-const RoleColorsStyle = fn(17376).RoleColorsStyle;
-const constants = fn(17371).GuildSettingsRoleEditSections;
+const isEveryoneRole = fn(2103).isEveryoneRole;
+const RoleColorsStyle = fn(17406).RoleColorsStyle;
+const constants = fn(17401).GuildSettingsRoleEditSections;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_18, DEFAULT_ROLE_COLOR: closure_19, GuildSettingsSections: closure_20 } = Constants);
-const HOLOGRAPHIC_ROLE_COLORS = fn(17378).HOLOGRAPHIC_ROLE_COLORS;
+const HOLOGRAPHIC_ROLE_COLORS = fn(17408).HOLOGRAPHIC_ROLE_COLORS;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23, Fragment: closure_24 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = {
   container: { flex: 1, paddingTop: 16 },
   innerContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
@@ -195,14 +195,14 @@ class GuildSettingsRoleEdit extends PureComponent {
           closure_2 = editedRoleConnectionConfigurationsMap.get(id);
         }
         function success() {
-          applyArgumentsResult(17390).commitSectionChanges(id, effectiveSection);
+          applyArgumentsResult(17420).commitSectionChanges(id, effectiveSection);
           navigation.pop();
           closure_2_0.setState({ submitting: false, formErrors: {} });
-          const obj = applyArgumentsResult(17390);
+          const obj = applyArgumentsResult(17420);
           const obj3 = { key: "ROLE_EDIT_SAVED", content: null, icon: null };
           const intl = applyArgumentsResult(1115).intl;
           obj3.content = intl.string(applyArgumentsResult(1115).t.ulZn1j);
-          obj3.icon = _modDef8802;
+          obj3.icon = _modDef8810;
           ToastActionCreatorsDefault.open(obj3);
           closure_0(true);
         }
@@ -218,7 +218,7 @@ class GuildSettingsRoleEdit extends PureComponent {
           const obj = { key: "ERROR_OCCURRED_TRY_AGAIN", content: null, icon: null };
           const intl = applyArgumentsResult(1115).intl;
           obj.content = intl.string(applyArgumentsResult(1115).t.fEptJP);
-          obj.icon = _modDef5904;
+          obj.icon = _modDef5909;
           ToastActionCreatorsDefault.open(obj);
           closure_0(false);
         }
@@ -303,7 +303,7 @@ class GuildSettingsRoleEdit extends PureComponent {
                 if (null === guild_connections) {
                   v1 = 1;
                   c2 = 1;
-                  const obj6 = { value: tmp4(11054).putRoleConnectionsConfigurations(id.id, role.id, []), done: false };
+                  const obj6 = { value: tmp4(11068).putRoleConnectionsConfigurations(id.id, role.id, []), done: false };
                   return obj6;
                 }
               }
@@ -315,7 +315,7 @@ class GuildSettingsRoleEdit extends PureComponent {
               const obj = { value, done: true };
               return obj;
             }
-            v1(5827).deleteRole(closure_128_1.id, closure_128_2.id);
+            v1(5832).deleteRole(closure_128_1.id, closure_128_2.id);
             closure_128_3.pop();
             c2 = 3;
             return { value: "HermesInternal", done: null };
@@ -373,16 +373,16 @@ class GuildSettingsRoleEdit extends PureComponent {
             const id = closure_2_0.props.role.id;
             const effectiveSection = closure_2_0.getEffectiveSection();
             if (effectiveSection === constants.VERIFICATIONS) {
-              const result = applyArgumentsResult(17390).discardConnectionsChanges(id);
-              const obj2 = applyArgumentsResult(17390);
+              const result = applyArgumentsResult(17420).discardConnectionsChanges(id);
+              const obj2 = applyArgumentsResult(17420);
             } else {
-              const result1 = applyArgumentsResult(17390).discardSectionChanges(id, effectiveSection);
-              const obj = applyArgumentsResult(17390);
+              const result1 = applyArgumentsResult(17420).discardSectionChanges(id, effectiveSection);
+              const obj = applyArgumentsResult(17420);
             }
             closure_0(true);
           };
           obj2.confirmColor = closure_1_0(1177).ButtonColors.BRAND;
-          closure_1_1(5196).show(obj2);
+          closure_1_1(5203).show(obj2);
         });
       } else {
         navigation.pop();
@@ -420,7 +420,7 @@ prototype["updateNavigation"] = function updateNavigation(role, submitting) {
   submitting = this.state.submitting;
   let setOptionsResult = { headerLeft: null, headerRight: null, headerTitle: null };
   const sectionChanges = self.getSectionChanges();
-  setOptionsResult.headerLeft = role(5931).getHeaderConditionalBackButton(self.handleBack);
+  setOptionsResult.headerLeft = role(5936).getHeaderConditionalBackButton(self.handleBack);
   if (submitting) {
     let fn = () => closure_1_22(role(dependencyMap[18]).HeaderSubmittingIndicator, {});
   } else if (sectionChanges) {
@@ -449,23 +449,23 @@ prototype["renderSubScreenButtons"] = function renderSubScreenButtons() {
   obj2.onPress = function onPress() {
     return self.onSubScreenValueChange(constants.PERMISSIONS);
   };
-  const items = [closure_22(self(5912).TableRow, obj2), ,];
+  const items = [closure_22(self(5917).TableRow, obj2), ,];
   const obj3 = { label: null, onPress: null, arrow: true };
   const intl2 = self(1115).intl;
   obj3.label = intl2.string(self(1115).t["5//Muu"]);
   obj3.onPress = function onPress() {
     return self.onSubScreenValueChange(constants.VERIFICATIONS);
   };
-  items[1] = closure_22(self(5912).TableRow, obj3);
+  items[1] = closure_22(self(5917).TableRow, obj3);
   const obj4 = { label: null, onPress: null, arrow: true };
   const intl3 = self(1115).intl;
   obj4.label = intl3.string(self(1115).t.J4ZtH1);
   obj4.onPress = function onPress() {
     return self.onSubScreenValueChange(constants.MEMBERS);
   };
-  items[2] = closure_22(self(5912).TableRow, obj4);
+  items[2] = closure_22(self(5917).TableRow, obj4);
   obj.children = items;
-  return closure_23(self(5994).TableRowGroup, obj);
+  return closure_23(self(5999).TableRowGroup, obj);
 };
 prototype["renderDeleteButton"] = function renderDeleteButton() {
   const obj = { hasIcons: false, children: null };
@@ -593,7 +593,7 @@ prototype["render"] = function render() {
   obj6.children = tmp22Result;
   return __initData2(View, obj6);
 };
-GuildSettingsRoleEdit.contextType = fn(4537).ThemeContext;
+GuildSettingsRoleEdit.contextType = fn(4540).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleEdit.tsx");
 

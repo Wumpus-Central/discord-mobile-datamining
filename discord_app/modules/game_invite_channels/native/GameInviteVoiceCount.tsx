@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_7 = createStyles.createStyles({
   container: { flexDirection: "row", alignItems: "center", gap: 4, marginLeft: 8 },
 });
@@ -28,9 +28,9 @@ export default function GameInviteVoiceCount(channel) {
   if (0 !== stateFromStores) {
     const obj2 = { style: tmp.container, children: null };
     const obj3 = { size: "xs", color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE };
-    const items2 = [closure_5(tmp2(5408).VoiceNormalIcon, obj3)];
+    const items2 = [closure_5(tmp2(5415).VoiceNormalIcon, obj3)];
     const obj4 = { variant: "text-sm/medium", color: "text-feedback-positive", children: stateFromStores };
-    items2[1] = closure_5(tmp2(4825).Text, obj4);
+    items2[1] = closure_5(tmp2(4832).Text, obj4);
     obj2.children = items2;
     tmp5 = closure_6(View, obj2);
   }

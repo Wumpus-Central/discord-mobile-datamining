@@ -22,20 +22,20 @@ function UnmuteOptions(channel) {
   }, items);
   const obj2 = { icon: null, label: null, onPress: null, start: true, end: true };
   const tmp = closure_13();
-  obj2.icon = closure_10(channel(1177).Icon, { disableColor: true, source: navigation(9592) });
+  obj2.icon = closure_10(channel(1177).Icon, { disableColor: true, source: navigation(9603) });
   const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = channel(1115).intl;
   const obj5 = { name: null };
-  const obj3 = { disableColor: true, source: navigation(9592) };
-  obj5.name = channel(4982).computeChannelName(channel, UserStore, RelationshipStore, true);
+  const obj3 = { disableColor: true, source: navigation(9603) };
+  obj5.name = channel(4989).computeChannelName(channel, UserStore, RelationshipStore, true);
   obj4.children = intl.format(channel(1115).t["eC+9rj"], obj5);
-  obj2.label = closure_10(channel(4825).Text, obj4);
+  obj2.label = closure_10(channel(4832).Text, obj4);
   obj2.onPress = callback;
-  const items1 = [closure_10(channel(5912).TableRow, obj2)];
+  const items1 = [closure_10(channel(5917).TableRow, obj2)];
   const obj7 = { muteConfig: channel.muteConfig, type: null };
-  const obj6 = channel(4982);
-  const tmp6 = navigation(9593);
-  const MuteSettingType = channel(9593).MuteSettingType;
+  const obj6 = channel(4989);
+  const tmp6 = navigation(9604);
+  const MuteSettingType = channel(9604).MuteSettingType;
   obj7.type = channel.isPrivate() ? MuteSettingType.DM : MuteSettingType.CHANNEL;
   items1[1] = closure_10(tmp6, obj7);
   obj.children = items1;
@@ -174,7 +174,7 @@ const View = fn(17).View;
 const ChannelSettingsSections = fn(1074).ChannelSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, padding: 16 },
   options: { marginBottom: 16 },

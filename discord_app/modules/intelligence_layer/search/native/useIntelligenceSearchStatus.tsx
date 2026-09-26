@@ -7,7 +7,7 @@ import IntelligenceSearchStore from "../IntelligenceSearchStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const SearchTabs = fn(7298).SearchTabs;
+const SearchTabs = fn(7303).SearchTabs;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/intelligence_layer/search/native/useIntelligenceSearchStatus.tsx");
 

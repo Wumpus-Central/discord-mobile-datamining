@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Constants from "../../../../Constants.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef3036 from "../../Checkpoint2026.messages.js";
+import _modDef3037 from "../../Checkpoint2026.messages.js";
 import CheckpointConstants from "../../CheckpointConstants.tsx";
 import CheckpointTextDefault from "CheckpointText.tsx";
 import CheckpointButtonDefault from "CheckpointButton.tsx";
@@ -63,8 +63,8 @@ export default function CheckpointNavigationControls(onNext) {
             variant: "text-sm/medium",
             style: link.link,
             onPress() {
-              const obj = closure_1_1(4522);
-              return obj.openURL(closure_1_1(2110).getArticleURL(constants.CHECKPOINT));
+              const obj = closure_1_1(4525);
+              return obj.openURL(closure_1_1(2111).getArticleURL(constants.CHECKPOINT));
             },
             accessibilityRole: "link",
             children,
@@ -73,7 +73,7 @@ export default function CheckpointNavigationControls(onNext) {
         );
       },
     };
-    obj3.children = intl4.format(_modDef3036.hcNhyq, obj4);
+    obj3.children = intl4.format(_modDef3037.hcNhyq, obj4);
     items2[1] = closure_7(CheckpointTextDefault, obj3);
     obj.children = items2;
     let tmp11 = obj;

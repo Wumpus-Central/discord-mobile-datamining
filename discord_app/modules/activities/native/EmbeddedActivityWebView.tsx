@@ -9,7 +9,7 @@ import URLUtilsDefault from "../../../utils/URLUtils.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../actions/ChannelRTCActionCreators.tsx";
 import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
 import usePreviousDefault from "../../../hooks/usePrevious.tsx";
-import WebView from "../../../../_runtime/07738_WebView.js";
+import WebView from "../../../../_runtime/07746_WebView.js";
 import getURLForApplication from "../getURLForApplication.tsx";
 import getPostMessageJavaScriptDefault from "getPostMessageJavaScript.tsx";
 import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager.tsx";
@@ -973,13 +973,13 @@ class BaseActivityWebView {
   }
 }
 const Linking = fn(17).Linking;
-let Constants = fn(2004);
+let Constants = fn(2005);
 ({ ActivityPlatform: closure_9, DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY: c10 } = Constants);
 Constants = fn(1074);
 ({ ComponentActions: closure_11, AnalyticEvents: closure_12 } = Constants);
-const TransportTypes = fn(4735).TransportTypes;
+const TransportTypes = fn(4739).TransportTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_15 = createStyles.createStyles({ webView: { backgroundColor: "transparent" } });
 let closure_16 = new LoggerDefault("EmbeddedActivityWebView");
 const PlatformUtils = fn(1364);

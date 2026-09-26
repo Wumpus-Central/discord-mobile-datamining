@@ -130,20 +130,24 @@ function resolveMessageCodedLinks(content) {
                 if (code(dependencyMap[5]).CodedLinkType.EMBEDDED_ACTIVITY_INVITE !== type) {
                   if (code(dependencyMap[5]).CodedLinkType.GUILD_PRODUCT !== type) {
                     if (code(dependencyMap[5]).CodedLinkType.SERVER_SHOP !== type) {
-                      if (code(dependencyMap[5]).CodedLinkType.SOCIAL_LAYER_STOREFRONT !== type) {
-                        if (code(dependencyMap[5]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !== type) {
-                          if (code(dependencyMap[5]).CodedLinkType.QUESTS_EMBED !== type) {
-                            if (code(dependencyMap[5]).CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
-                              if (code(dependencyMap[5]).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU !== type) {
-                                if (code(dependencyMap[5]).CodedLinkType.APP_OAUTH2_LINK !== type) {
-                                  if (code(dependencyMap[5]).CodedLinkType.COLLECTIBLES_SHOP !== type) {
-                                    if (code(dependencyMap[5]).CodedLinkType.EXPERIMENT !== type) {
-                                      if (code(dependencyMap[5]).CodedLinkType.GAME_PROFILE !== type) {
-                                        if (code(dependencyMap[5]).CodedLinkType.GAME_SERVER_SHARE !== type) {
-                                          if (code(dependencyMap[5]).CodedLinkType.USER_PROFILE !== type) {
+                      if (code(dependencyMap[5]).CodedLinkType.QUESTS_EMBED !== type) {
+                        if (code(dependencyMap[5]).CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
+                          if (code(dependencyMap[5]).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU !== type) {
+                            if (code(dependencyMap[5]).CodedLinkType.APP_OAUTH2_LINK !== type) {
+                              if (code(dependencyMap[5]).CodedLinkType.COLLECTIBLES_SHOP !== type) {
+                                if (code(dependencyMap[5]).CodedLinkType.EXPERIMENT !== type) {
+                                  if (code(dependencyMap[5]).CodedLinkType.GAME_PROFILE !== type) {
+                                    if (code(dependencyMap[5]).CodedLinkType.GAME_SERVER_SHARE !== type) {
+                                      if (code(dependencyMap[5]).CodedLinkType.USER_PROFILE !== type) {
+                                        if (code(dependencyMap[5]).CodedLinkType.SOCIAL_LAYER_STOREFRONT !== type) {
+                                          if (
+                                            code(dependencyMap[5]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !== type
+                                          ) {
                                             if (code(dependencyMap[5]).CodedLinkType.APP_DIRECTORY_PROFILE === type) {
-                                              const embedApplication = code(dependencyMap[9]).getEmbedApplication(code);
-                                              const tmpResult4 = code(dependencyMap[9]);
+                                              const embedApplication = code(dependencyMap[10]).getEmbedApplication(
+                                                code,
+                                              );
+                                              const tmpResult4 = code(dependencyMap[10]);
                                             } else {
                                               const _Error = Error;
                                               const _HermesInternal = HermesInternal;
@@ -151,6 +155,7 @@ function resolveMessageCodedLinks(content) {
                                             }
                                           }
                                         }
+                                        closure_1(dependencyMap[9])(type, code);
                                       }
                                     }
                                   }
@@ -289,24 +294,27 @@ function resolveMessageCodedLinks(content) {
                     if (code(dependencyMap[5]).CodedLinkType.EMBEDDED_ACTIVITY_INVITE !== type) {
                       if (code(dependencyMap[5]).CodedLinkType.GUILD_PRODUCT !== type) {
                         if (code(dependencyMap[5]).CodedLinkType.SERVER_SHOP !== type) {
-                          if (code(dependencyMap[5]).CodedLinkType.SOCIAL_LAYER_STOREFRONT !== type) {
-                            if (code(dependencyMap[5]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !== type) {
-                              if (code(dependencyMap[5]).CodedLinkType.QUESTS_EMBED !== type) {
-                                if (code(dependencyMap[5]).CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
-                                  if (code(dependencyMap[5]).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU !== type) {
-                                    if (code(dependencyMap[5]).CodedLinkType.APP_OAUTH2_LINK !== type) {
-                                      if (code(dependencyMap[5]).CodedLinkType.COLLECTIBLES_SHOP !== type) {
-                                        if (code(dependencyMap[5]).CodedLinkType.EXPERIMENT !== type) {
-                                          if (code(dependencyMap[5]).CodedLinkType.GAME_PROFILE !== type) {
-                                            if (code(dependencyMap[5]).CodedLinkType.GAME_SERVER_SHARE !== type) {
-                                              if (code(dependencyMap[5]).CodedLinkType.USER_PROFILE !== type) {
+                          if (code(dependencyMap[5]).CodedLinkType.QUESTS_EMBED !== type) {
+                            if (code(dependencyMap[5]).CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
+                              if (code(dependencyMap[5]).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU !== type) {
+                                if (code(dependencyMap[5]).CodedLinkType.APP_OAUTH2_LINK !== type) {
+                                  if (code(dependencyMap[5]).CodedLinkType.COLLECTIBLES_SHOP !== type) {
+                                    if (code(dependencyMap[5]).CodedLinkType.EXPERIMENT !== type) {
+                                      if (code(dependencyMap[5]).CodedLinkType.GAME_PROFILE !== type) {
+                                        if (code(dependencyMap[5]).CodedLinkType.GAME_SERVER_SHARE !== type) {
+                                          if (code(dependencyMap[5]).CodedLinkType.USER_PROFILE !== type) {
+                                            if (code(dependencyMap[5]).CodedLinkType.SOCIAL_LAYER_STOREFRONT !== type) {
+                                              if (
+                                                code(dependencyMap[5]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !==
+                                                type
+                                              ) {
                                                 if (
                                                   code(dependencyMap[5]).CodedLinkType.APP_DIRECTORY_PROFILE === type
                                                 ) {
-                                                  const embedApplication = code(dependencyMap[9]).getEmbedApplication(
+                                                  const embedApplication = code(dependencyMap[10]).getEmbedApplication(
                                                     code,
                                                   );
-                                                  const tmpResult4 = code(dependencyMap[9]);
+                                                  const tmpResult4 = code(dependencyMap[10]);
                                                 } else {
                                                   const _Error = Error;
                                                   const _HermesInternal = HermesInternal;
@@ -314,6 +322,7 @@ function resolveMessageCodedLinks(content) {
                                                 }
                                               }
                                             }
+                                            closure_1(dependencyMap[9])(type, code);
                                           }
                                         }
                                       }
@@ -339,7 +348,7 @@ function resolveMessageCodedLinks(content) {
 class MessageCodedLinkManager extends tmp7 {
   constructor() {
     tmp3 = new MessageCodedLinkManager(tmp2, tmp, new.target);
-    tmp4 = closure_1(closure_2[11])(tmp3, resolveMessageCodedLinks);
+    tmp4 = closure_1(closure_2[12])(tmp3, resolveMessageCodedLinks);
     return tmp3;
   }
 }

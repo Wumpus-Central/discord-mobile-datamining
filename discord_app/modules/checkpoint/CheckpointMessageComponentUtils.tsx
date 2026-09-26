@@ -1,7 +1,7 @@
 // discord_app/modules/checkpoint/CheckpointMessageComponentUtils.tsx
 import util from "../../intl/index.native.tsx";
 import Server from "../../flow/Server.tsx";
-import _modDef3004 from "Checkpoint.messages.js";
+import _modDef3005 from "Checkpoint.messages.js";
 import CheckpointConstants from "CheckpointConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -57,7 +57,7 @@ export const getCheckpointDataFromMessage = function getCheckpointDataFromMessag
 export const getCheckpointLabel = function getCheckpointLabel(checkpointDataFromMessage) {
   if (CheckpointVersions.V2025 === checkpointDataFromMessage.version) {
     const intl = util.intl;
-    return intl.string(_modDef3004.goiR2u);
+    return intl.string(_modDef3005.goiR2u);
   } else {
     const V2026 = tmp.V2026;
     return null;

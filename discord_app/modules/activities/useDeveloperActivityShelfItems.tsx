@@ -3,7 +3,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 import DeveloperActivityShelfStore from "DeveloperActivityShelfStore.tsx";
 
 const require = fn;
-let closure_4 = fn(2004).DEFAULT_EMBEDDED_ACTIVITY_CONFIG;
+let closure_4 = fn(2005).DEFAULT_EMBEDDED_ACTIVITY_CONFIG;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useDeveloperActivityShelfItems.tsx");
 

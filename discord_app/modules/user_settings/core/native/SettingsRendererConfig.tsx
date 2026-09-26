@@ -208,6 +208,7 @@ import DesignSystemStackSettingDefault from "../../defs/native/DesignSystemStack
 import DesignSystemBackdropSettingDefault from "../../defs/native/DesignSystemBackdropSetting.tsx";
 import DesignSystemsModalSettingDefault from "../../defs/native/DesignSystemsModalSetting.tsx";
 import DesignSystemPileSettingDefault from "../../defs/native/DesignSystemPileSetting.tsx";
+import DesignSystemTagGroupSettingDefault from "../../defs/native/DesignSystemTagGroupSetting.tsx";
 import DesignSystemSheetsSettingDefault from "../../defs/native/DesignSystemSheetsSetting.tsx";
 import DesignSystemFormPrimitivesSettingDefault from "../../defs/native/DesignSystemFormPrimitivesSetting.tsx";
 import DesignSystemHapticsSettingDefault from "../../defs/native/DesignSystemHapticsSetting.tsx";
@@ -491,6 +492,7 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   DESIGN_SYSTEM_BACKDROP,
   DESIGN_SYSTEMS_MODAL,
   DESIGN_SYSTEM_PILE,
+  DESIGN_SYSTEM_TAG_GROUP,
   DESIGN_SYSTEM_SHEETS,
   DESIGN_SYSTEM_FORM_PRIMITIVES,
   DESIGN_SYSTEM_HAPTICS,
@@ -539,7 +541,6 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   PARENTAL_CONTROLS_DATA_USAGE_PERSONALIZATION,
   PARENTAL_CONTROLS_DATA_USAGE_QUESTS,
   PARENTAL_CONTROLS_DATA_USAGE_QUESTS_3P,
-  ACTIVITY_PRIVACY_SHARE_MY_ACTIVITY,
 } = MobileUserSettings);
 const merged = Object.assign(MobileNotifSettingsRendererConfig.MOBILE_NOTIF_SETTINGS_RENDERER_CONFIG);
 const frozen = Object.freeze({
@@ -761,6 +762,7 @@ const frozen = Object.freeze({
   [DESIGN_SYSTEM_BACKDROP]: DesignSystemBackdropSettingDefault,
   [DESIGN_SYSTEMS_MODAL]: DesignSystemsModalSettingDefault,
   [DESIGN_SYSTEM_PILE]: DesignSystemPileSettingDefault,
+  [DESIGN_SYSTEM_TAG_GROUP]: DesignSystemTagGroupSettingDefault,
   [DESIGN_SYSTEM_SHEETS]: DesignSystemSheetsSettingDefault,
   [DESIGN_SYSTEM_FORM_PRIMITIVES]: DesignSystemFormPrimitivesSettingDefault,
   [DESIGN_SYSTEM_HAPTICS]: DesignSystemHapticsSettingDefault,
@@ -810,7 +812,7 @@ const frozen = Object.freeze({
   [PARENTAL_CONTROLS_DATA_USAGE_PERSONALIZATION]: ParentalControlsUseDataToCustomizeDiscordSettingDefault,
   [PARENTAL_CONTROLS_DATA_USAGE_QUESTS]: ParentalControlsUseDataForQuestsSettingDefault,
   [PARENTAL_CONTROLS_DATA_USAGE_QUESTS_3P]: ParentalControlsUseDataForQuests3PSettingDefault,
-  [ACTIVITY_PRIVACY_SHARE_MY_ACTIVITY]: ActivityPrivacyShareMyActivitySettingDefault,
+  [MobileUserSettings.ACTIVITY_PRIVACY_SHARE_MY_ACTIVITY]: ActivityPrivacyShareMyActivitySettingDefault,
   [MobileUserSettings.ACTIVITY_PRIVACY_DEFAULT_SHARING]: ActivityPrivacyDefaultSharingSettingDefault,
   [MobileUserSettings.FRIEND_REQUEST_NOTES]: FriendRequestsNotesSettingDefault,
   [MobileUserSettings.NOTIFY_FRIENDS_ON_COME_ONLINE]: NotifyFriendsOnComeOnlineSettingDefault,

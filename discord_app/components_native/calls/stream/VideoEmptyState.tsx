@@ -11,7 +11,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const VideoEmptyTypes = { NONE: "NONE", STREAM_ENDED: "STREAM_ENDED", STREAM_FAILED: "STREAM_FAILED" };
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj3 = {
   container: {
     alignItems: "center",
@@ -53,7 +53,7 @@ export default function VideoEmptyState(style) {
     let tmp10 = !removeSplashImage;
     if (!removeSplashImage) {
       let obj2 = { style: tmp2.placeholderImage };
-      tmp10 = closure_5(stream(8869).StreamEnded, obj2);
+      tmp10 = closure_5(stream(8877).StreamEnded, obj2);
     }
     let obj3 = { children: null };
     const items = [tmp10];
@@ -72,13 +72,13 @@ export default function VideoEmptyState(style) {
     tmp8Result = null;
   }
   if (null != avError) {
-    let errorCode = stream(8867).getErrorInfo(avError).errorCode;
-    const obj6 = stream(8867);
+    let errorCode = stream(8875).getErrorInfo(avError).errorCode;
+    const obj6 = stream(8875);
   } else {
     errorCode = null;
     if (type === tmp3.STREAM_FAILED) {
-      errorCode = stream(8867).getErrorInfo(stream(8867).AVError.STREAM_FAILED_TO_START).errorCode;
-      const obj5 = stream(8867);
+      errorCode = stream(8875).getErrorInfo(stream(8875).AVError.STREAM_FAILED_TO_START).errorCode;
+      const obj5 = stream(8875);
     }
   }
   const items1 = [ChannelStore];
@@ -105,7 +105,7 @@ export default function VideoEmptyState(style) {
     const intl3 = stream(1115).intl;
     const obj10 = { errorCode };
     obj9.children = intl3.formatToPlainString(stream(1115).t.ejOT95, obj10);
-    tmp28 = closure_5(stream(4825).Text, obj9);
+    tmp28 = closure_5(stream(4832).Text, obj9);
   }
   items4[1] = tmp28;
   let tmp30 = !removeCloseButton;
@@ -118,7 +118,7 @@ export default function VideoEmptyState(style) {
       const obj = StreamActionCreators;
       obj.stopStream(StreamKeyUtils.encodeStreamKey(stream));
     };
-    obj11.children = closure_5(stream(5274).Button, obj12);
+    obj11.children = closure_5(stream(5281).Button, obj12);
     tmp30 = closure_5(View, obj11);
   }
   items4[2] = tmp30;

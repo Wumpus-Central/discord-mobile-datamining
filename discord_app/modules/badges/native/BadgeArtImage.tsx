@@ -47,7 +47,7 @@ export default function BadgeArtImage(style) {
       } else {
         APNGPlayer(1364);
       }
-      APNGPlayer = APNGPlayer(8263).APNGPlayer;
+      APNGPlayer = APNGPlayer(8271).APNGPlayer;
       const obj5 = { url: fallbackUrl, style: size, autoplay: true };
       tmpResult2 = <APNGPlayer url={fallbackUrl} style={size} autoplay />;
     }

@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/panels/createChatPanelNativeStackNavigator.tsx
-import Link from "../../../../../_runtime/01485_Link.js";
+import Link from "../../../../../_runtime/01486_Link.js";
 import NavigationRouteUtils from "../../helpers/NavigationRouteUtils.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 

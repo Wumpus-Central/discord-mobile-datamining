@@ -23,6 +23,12 @@ const items = [
     summary: "A project you import gets fixed up and running straight away, instead of asking you to approve a plan.",
   },
   {
+    date: "2026-09-25",
+    time: "08:01",
+    platforms: ["desktop", "mobile"],
+    summary: "A timer beside Conjuring\u2026 counts how long Conjure has been working on your latest request.",
+  },
+  {
     date: "2026-09-07",
     time: "00:01",
     platforms: ["desktop", "mobile"],
@@ -122,6 +128,13 @@ const items = [
       "Comment mode now picks whatever is under your pointer, not only buttons and headings, and outlines it so you can see what you are about to comment on. Each note is pinned to the exact spot you clicked, and its card opens out of that pin.",
   },
   {
+    date: "2026-09-25",
+    time: "05:01",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Conjure's checklist says what it is doing on each task in progress, several at once when it is, and never leaves one spinning after a turn ends.",
+  },
+  {
     date: "2026-08-25",
     time: "00:00",
     platforms: ["desktop"],
@@ -172,6 +185,13 @@ const items = [
     time: "00:00",
     platforms: ["desktop", "mobile"],
     summary: "Hitting your project limit, or conjuring too fast, now says so instead of just asking you to try again.",
+  },
+  {
+    date: "2026-09-25",
+    time: "20:30",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "If Conjure restarts partway through a long task, it now picks up from its last step and keeps the steps it already showed you.",
   },
   {
     date: "2026-09-08",
@@ -233,6 +253,13 @@ const items = [
       "On phones, Select to edit in the builder\u2019s header lets you tap a part of your app\u2019s Frame, see what you picked, and tell Conjure what should change there.",
   },
   {
+    date: "2026-09-25",
+    time: "06:20",
+    platforms: ["mobile"],
+    summary:
+      "On phones, a build now opens with Conjure\u2019s name above the live status line, which says what is being made, instead of a separate opening sentence.",
+  },
+  {
     date: "2026-09-18",
     time: "00:09",
     platforms: ["mobile"],
@@ -292,6 +319,12 @@ const items = [
     platforms: ["mobile"],
     summary:
       "On phones, install your app or review its new permissions right from the builder; publishing no longer stops at a notice you could only act on from desktop.",
+  },
+  {
+    date: "2026-09-25",
+    time: "04:43",
+    platforms: ["mobile"],
+    summary: "On phones, message times in the builder chat now show the date for anything sent before today.",
   },
   {
     date: "2026-09-18",
@@ -408,6 +441,13 @@ const items = [
     time: "00:02",
     platforms: ["desktop", "mobile"],
     summary: "Pick which app a voice channel runs from the call itself, and switch between it and the participants.",
+  },
+  {
+    date: "2026-09-24",
+    time: "23:06",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Picking a template shows it running in a few seconds, instead of after Conjure has rebuilt it from scratch.",
   },
   {
     date: "2026-08-31",

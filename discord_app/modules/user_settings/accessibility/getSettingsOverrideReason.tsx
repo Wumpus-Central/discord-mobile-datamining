@@ -1,5 +1,6 @@
 // discord_app/modules/user_settings/accessibility/getSettingsOverrideReason.tsx
 import util from "../../../intl/index.native.tsx";
+import _modDef3909 from "../../game_mode/GameMode.messages.js";
 import UserSettingsOverridesStore from "../UserSettingsOverridesStore.tsx";
 
 const require = globalThis.__r;
@@ -11,11 +12,14 @@ const result = size.fileFinishedImporting("modules/user_settings/accessibility/g
 
 export default function getSettingsOverrideReason(arg0) {
   if (constants.REDUCED_MOTION === arg0) {
+    const intl3 = util.intl;
+    return intl3.format(util.t["1dT9V4"], {});
+  } else if (constants.REDUCED_MOTION_STICKERS === arg0) {
     const intl2 = util.intl;
-    return intl2.format(util.t["1dT9V4"], {});
-  } else if (tmp.REDUCED_MOTION_STICKERS === arg0) {
+    return intl2.string(util.t["2ExvRu"]);
+  } else if (constants.GAME_MODE === arg0) {
     const intl = util.intl;
-    return intl.string(util.t["2ExvRu"]);
+    return intl.string(_modDef3909.VGcdxP);
   }
 }
 export const useSettingsOverrideReason = function useSettingsOverrideReason(arg0) {
@@ -26,10 +30,21 @@ export const useSettingsOverrideReason = function useSettingsOverrideReason(arg0
     if (constants.REDUCED_MOTION === appliedOverrideReasonKey) {
       const intl2 = util.intl;
       let formatResult = intl2.format(util.t["1dT9V4"], {});
-    } else if (tmp2.REDUCED_MOTION_STICKERS === appliedOverrideReasonKey) {
+    } else if (constants.REDUCED_MOTION_STICKERS === appliedOverrideReasonKey) {
       const intl = util.intl;
       formatResult = intl.string(util.t["2ExvRu"]);
+    } else if (constants.GAME_MODE === appliedOverrideReasonKey) {
+      const intl3 = util.intl;
+      formatResult = intl3.string(_modDef3909.VGcdxP);
     }
     return formatResult;
   });
+};
+export const useIsSettingLockedByOverride = function useIsSettingLockedByOverride(arg0) {
+  _require = arg0;
+  const items = [UserSettingsOverridesStore];
+  return require("initialize").useStateFromStores(
+    items,
+    () => UserSettingsOverridesStore.getAppliedOverrideReasonKey(closure_0) === constants.GAME_MODE,
+  );
 };

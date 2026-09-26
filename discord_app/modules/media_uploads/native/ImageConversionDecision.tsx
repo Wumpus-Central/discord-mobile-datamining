@@ -5,10 +5,10 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/media_uploads/native/ImageConversionDecision.tsx");
 
-export const isPhotoKitAsset = function isPhotoKitAsset(str, importDefault) {
+export const isPhotoKitAsset = function isPhotoKitAsset(str, filename) {
   let tmp = null != str.match(/^ph:\/\//i);
   if (tmp) {
-    tmp = null != importDefault;
+    tmp = null != filename;
   }
   return tmp;
 };

@@ -2,7 +2,7 @@
 import DispatcherDefault from "../../Dispatcher.tsx";
 import util from "../../intl/index.native.tsx";
 import FamilyCenterModels from "FamilyCenterModels.tsx";
-import _modDef2486 from "FamilyCenter.messages.js";
+import _modDef2487 from "FamilyCenter.messages.js";
 import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils.tsx";
 import RestrictedHoursActionCreators from "RestrictedHoursActionCreators.native.tsx";
 import NotificationSettingsStore from "../../stores/NotificationSettingsStore.tsx";
@@ -50,7 +50,7 @@ function scheduleUpcomingWarning() {
         const intl = util.intl;
         const _Date2 = Date;
         const date2 = new Date(startAtMs);
-        const stringResult = intl.string(_modDef2486["0JlDg0"]);
+        const stringResult = intl.string(_modDef2487["0JlDg0"]);
         const items = [FamilyCenterModels.JS_DAY_TO_DAY_OF_WEEK[date2.getDay(date2)]];
         const formatDaysResult = FamilyCenterRestrictedHoursUtils.formatDays(items);
         const _HermesInternal2 = HermesInternal;

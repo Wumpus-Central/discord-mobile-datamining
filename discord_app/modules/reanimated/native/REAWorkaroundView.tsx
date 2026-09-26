@@ -2,7 +2,7 @@
 import _mod19 from "../../../../_runtime/metro/00019__.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import ReanimatedViewNativeComponentDefault from "../../../../discord_common/js/packages/rtn-codegen/js/ReanimatedViewNativeComponent.tsx";
-import cancelAnimation from "../../../../_runtime/01637_cancelAnimation.js";
+import cancelAnimation from "../../../../_runtime/01638_cancelAnimation.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;

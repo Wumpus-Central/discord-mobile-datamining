@@ -1,14 +1,14 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesScrollIndicatorAnimation.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
-import native from "../../../../../discord_common/js/packages/design/native.tsx";
+import BountiesScrollIndicatorRive from "../../../../../discord_common/js/packages/design/components/Rive/native/generated/BountiesScrollIndicatorRive.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_7 = createStyles.createStyles(() => ({ container: { width: 80, height: 80 } }));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollIndicatorAnimation.tsx");
@@ -28,7 +28,7 @@ export default function BountiesScrollIndicatorAnimation(startAnimation) {
   const obj2 = {
     style: tmp.container,
     children: jsx(
-      native.BountiesScrollIndicatorRive,
+      BountiesScrollIndicatorRive.BountiesScrollIndicatorRive,
       {
         stateMachine: "State Machine 1",
         fit: "contain",
@@ -40,7 +40,7 @@ export default function BountiesScrollIndicatorAnimation(startAnimation) {
   return (
     <View style={tmp.container}>
       {jsx(
-        native.BountiesScrollIndicatorRive,
+        BountiesScrollIndicatorRive.BountiesScrollIndicatorRive,
         {
           stateMachine: "State Machine 1",
           fit: "contain",

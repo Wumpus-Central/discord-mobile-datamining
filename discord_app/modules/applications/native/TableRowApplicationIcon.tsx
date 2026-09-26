@@ -1,19 +1,19 @@
-// discord_app/modules/app_channels/native/AppChannelApplicationIcon.tsx
+// discord_app/modules/applications/native/TableRowApplicationIcon.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 const obj2 = { icon: null };
-let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.md };
+let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.sm };
 obj2.icon = size;
 let closure_3 = createStyles.createStyles(obj2);
 size = fn(2);
-const result = size.fileFinishedImporting("modules/app_channels/native/AppChannelApplicationIcon.tsx");
+const result = size.fileFinishedImporting("modules/applications/native/TableRowApplicationIcon.tsx");
 
-export default function AppChannelApplicationIcon(application) {
+export default function TableRowApplicationIcon(application) {
   application = application.application;
   const obj = { source: null, style: null };
   const tmp = closure_3();

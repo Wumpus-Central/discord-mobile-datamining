@@ -5,7 +5,7 @@ import UserSettingsActionCreatorsDefault from "../../actions/UserSettingsActionC
 import AccessibilityStore from "AccessibilityStore.tsx";
 
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const StickerAnimationSettings = fn(2023).StickerAnimationSettings;
+const StickerAnimationSettings = fn(2024).StickerAnimationSettings;
 const constants = fn(1084).SettingsOverrideReasonKeys;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/a11y/AccessibilityActionCreators.tsx");
@@ -62,11 +62,11 @@ export const setSaturation = function setSaturation(saturation) {
   DispatcherDefault.dispatch({ type: "ACCESSIBILITY_SET_SATURATION", saturation });
 };
 export const setPrefersReducedMotion = function setPrefersReducedMotion(reduce) {
-  let useReducedMotion = AccessibilityStore.useReducedMotion;
+  let prefersReducedMotion = AccessibilityStore.prefersReducedMotion;
   DispatcherDefault.dispatch({ type: "ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION", prefersReducedMotion: reduce });
-  const useReducedMotion2 = AccessibilityStore.useReducedMotion;
-  if (!useReducedMotion) {
-    if (useReducedMotion2) {
+  const prefersReducedMotion2 = AccessibilityStore.prefersReducedMotion;
+  if (!prefersReducedMotion) {
+    if (prefersReducedMotion2) {
       const obj3 = { gifAutoPlay: null, animateEmoji: null, animateStickers: null };
       const obj4 = { value: false, reasonKey: constants.REDUCED_MOTION };
       obj3.gifAutoPlay = obj4;
@@ -81,10 +81,10 @@ export const setPrefersReducedMotion = function setPrefersReducedMotion(reduce) 
       const tmpResult = UserSettingsActionCreatorsDefault;
     }
   }
-  if (useReducedMotion) {
-    useReducedMotion = !useReducedMotion2;
+  if (prefersReducedMotion) {
+    prefersReducedMotion = !prefersReducedMotion2;
   }
-  if (useReducedMotion) {
+  if (prefersReducedMotion) {
     const result1 = UserSettingsActionCreatorsDefault.clearSettingsOverride(
       "gifAutoPlay",
       "animateEmoji",

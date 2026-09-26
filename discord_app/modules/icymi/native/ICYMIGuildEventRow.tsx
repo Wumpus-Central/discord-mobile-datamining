@@ -16,7 +16,7 @@ function ICYMIGuildEventRow(event) {
   ({ channel, guild } = event);
   noop = undefined;
   const tmp = closure_13();
-  const tmp4 = guild(8938)(event, null);
+  const tmp4 = guild(8949)(event, null);
   const tmp5 = closure_7(event);
   dependencyMap = tmp5;
   let toISOStringResult;
@@ -26,15 +26,15 @@ function ICYMIGuildEventRow(event) {
   }
   noop = toISOStringResult;
   const items = [toISOStringResult, tmp5];
-  const tmp7 = guild(4982)(channel);
-  const locationFromEvent = event(8972).getLocationFromEvent(event);
-  let obj = event(8972);
-  const eventLocationIconSource = event(9048).getEventLocationIconSource(event, channel, true);
-  let obj2 = event(9048);
-  const eventLocationIconComponent = event(9048).getEventLocationIconComponent(event, channel, true);
-  let obj3 = event(9048);
+  const tmp7 = guild(4989)(channel);
+  const locationFromEvent = event(8983).getLocationFromEvent(event);
+  let obj = event(8983);
+  const eventLocationIconSource = event(9059).getEventLocationIconSource(event, channel, true);
+  let obj2 = event(9059);
+  const eventLocationIconComponent = event(9059).getEventLocationIconComponent(event, channel, true);
+  let obj3 = event(9059);
   const items1 = [event];
-  const nextRecurrenceIdInEvent = event(8935).getNextRecurrenceIdInEvent(event);
+  const nextRecurrenceIdInEvent = event(8946).getNextRecurrenceIdInEvent(event);
   const items2 = [guild.id, event.id];
   const callback = noop.useCallback(() => {
     ICYMIActionCreatorsDefault.itemInteracted(event.id, "guild_event", "press_event");
@@ -92,7 +92,7 @@ function ICYMIGuildEventRow(event) {
     title = event.description.length > 0;
   }
   let guild_id;
-  const obj4 = event(8935);
+  const obj4 = event(8946);
   if (event != null) {
     guild_id = event.guild_id;
   }
@@ -100,7 +100,7 @@ function ICYMIGuildEventRow(event) {
   if (event != null) {
     id = event.id;
   }
-  const tmp2Result = guild(9060);
+  const tmp2Result = guild(9071);
   const obj5 = {
     actionLabel: null,
     id: null,
@@ -112,7 +112,7 @@ function ICYMIGuildEventRow(event) {
     onHeaderLongPress: null,
     children: null,
   };
-  const tmp2ResultResult = guild(9060)(guild_id, id, nextRecurrenceIdInEvent);
+  const tmp2ResultResult = guild(9071)(guild_id, id, nextRecurrenceIdInEvent);
   let intl = tmp8(1115).intl;
   obj5.actionLabel = intl.string(event(1115).t["6pFsLQ"]);
   obj5.id = event.id;
@@ -122,7 +122,7 @@ function ICYMIGuildEventRow(event) {
   }
   obj5.channelId = id1;
   obj5.guildId = guild.id;
-  const tmp2Result3 = guild(16108);
+  const tmp2Result3 = guild(16136);
   obj5.timestamp = guild(11).extractTimestamp(event.id);
   obj5.onHeaderPress = callback1;
   obj5.onHeaderLongPress = callback1;
@@ -132,7 +132,7 @@ function ICYMIGuildEventRow(event) {
   if (tmp5) {
     str = "status-positive";
   }
-  obj7.children = closure_11(event(4825).Text, {
+  obj7.children = closure_11(event(4832).Text, {
     variant: "text-sm/semibold",
     color: str,
     children: noop.useMemo(() => {
@@ -152,7 +152,7 @@ function ICYMIGuildEventRow(event) {
   if (title) {
     title = tmp.title;
   }
-  items3[1] = closure_11(event(4825).Text, { style: title, variant: "text-lg/semibold", children: event.name });
+  items3[1] = closure_11(event(4832).Text, { style: title, variant: "text-lg/semibold", children: event.name });
   let tmp19Result = null != event.description;
   if (tmp19Result) {
     tmp19Result = event.description.length > 0;
@@ -160,19 +160,19 @@ function ICYMIGuildEventRow(event) {
   if (tmp19Result) {
     const obj9 = { variant: "text-md/normal", color: "text-subtle", lineClamp: 5, children: null };
     const obj10 = { guildId: guild.id };
-    obj9.children = tmp8(9050).guildEventDetailsParser(event.description, true, obj10);
-    tmp19Result = closure_11(tmp8(4825).Text, obj9);
-    const tmp8Result = tmp8(9050);
+    obj9.children = tmp8(9061).guildEventDetailsParser(event.description, true, obj10);
+    tmp19Result = closure_11(tmp8(4832).Text, obj9);
+    const tmp8Result = tmp8(9061);
   }
   items3[2] = tmp19Result;
   items3[3] = closure_11(closure_5, { style: tmp.separator });
   const obj12 = { style: tmp.infoContainer, children: null };
   const obj13 = { style: tmp.locationContainer, children: null };
-  const items4 = [closure_11(event(5396).GroupIcon, { size: "xs", style: tmp.eventsChannelIcon })];
+  const items4 = [closure_11(event(5403).GroupIcon, { size: "xs", style: tmp.eventsChannelIcon })];
   const obj15 = { lineClamp: 1, variant: "text-xs/normal", color: "text-muted", children: null };
   const intl2 = tmp8(1115).intl;
   obj15.children = intl2.format(event(1115).t["+DLsD8"], { count: tmp2ResultResult });
-  items4[1] = closure_11(event(4825).Text, obj15);
+  items4[1] = closure_11(event(4832).Text, obj15);
   obj13.children = items4;
   const items5 = [closure_12(closure_5, obj13)];
   const obj16 = { style: tmp.locationContainer, children: null };
@@ -196,12 +196,12 @@ function ICYMIGuildEventRow(event) {
   if (tmp7 == null) {
     let result = null;
     if (null != locationFromEvent) {
-      result = tmp8(9050).guildEventLocationParser(locationFromEvent, true);
-      const tmp8Result2 = tmp8(9050);
+      result = tmp8(9061).guildEventLocationParser(locationFromEvent, true);
+      const tmp8Result2 = tmp8(9061);
     }
     tmp27 = result;
   }
-  items6[1] = closure_11(event(4825).Text, {
+  items6[1] = closure_11(event(4832).Text, {
     lineClamp: 2,
     variant: "text-xs/normal",
     color: "text-muted",
@@ -217,12 +217,12 @@ function ICYMIGuildEventRow(event) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let GuildScheduledEventStore = fn(6941);
+let GuildScheduledEventStore = fn(6946);
 ({ isGuildEventEnded: metroRequire, isGuildScheduledEventActive: closure_7 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createICYMIStyles = fn(16067);
+const createICYMIStyles = fn(16095);
 let closure_13 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   const obj = {
     container: {

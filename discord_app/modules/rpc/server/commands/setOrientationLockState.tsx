@@ -4,8 +4,8 @@ import RPCErrorDefault from "../../RPCError.tsx";
 import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
 import FramesStore from "../../../frames/FramesStore.tsx";
 
-const TransportTypes = fn(4735).TransportTypes;
-const OrientationLockState = fn(2004).OrientationLockState;
+const TransportTypes = fn(4739).TransportTypes;
+const OrientationLockState = fn(2005).OrientationLockState;
 const Constants = fn(1085);
 const RPCErrors = Constants.RPCErrors;
 const size = fn(2);

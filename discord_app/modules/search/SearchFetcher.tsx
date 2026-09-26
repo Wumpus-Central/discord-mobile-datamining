@@ -1,6 +1,6 @@
 // discord_app/modules/search/SearchFetcher.tsx
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef1472 from "../../../_runtime/metro/01472__.js";
+import _modDef1473 from "../../../_runtime/metro/01473__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
@@ -191,7 +191,7 @@ prototype2["makeRequest"] = function makeRequest(rejectWithError) {
     const HTTP = HTTPUtils.HTTP;
     const request = {
       url: endpoint,
-      query: _modDef1472.stringify(this.query),
+      query: _modDef1473.stringify(this.query),
       oldFormErrors: true,
       rejectWithError: rejectWithError.rejectWithError,
     };

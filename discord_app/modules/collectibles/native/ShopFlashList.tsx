@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import generated_NoResults from "../../../design/components/Illustration/native/redesign/generated/NoResults.tsx";
-import _mod8171 from "../../../../discord_common/js/packages/flash-list/index.js";
+import _mod8179 from "../../../../discord_common/js/packages/flash-list/index.js";
 import useScrollToInitialIndexOnce from "hooks/useScrollToInitialIndexOnce.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -15,7 +15,7 @@ function ShopEmptyState() {
   return jsx(native.EmptyState, { style: { marginTop: 42 }, Illustration: generated_NoResults.NoResults, body: null });
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 const obj2 = { contentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -37,7 +37,7 @@ export default function ShopFlashList(initialScrollIndex) {
     flashListRef: ref,
     afterMs: useScrollToInitialIndexOnce.INITIAL_SCROLL_DELAY_MS,
   });
-  return jsx(_mod8171.FlashList, {
+  return jsx(_mod8179.FlashList, {
     ref,
     data,
     renderItem,

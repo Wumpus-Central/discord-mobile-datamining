@@ -17,32 +17,32 @@ function createNativePlaceholderConfig(listFooter) {
     borderRadius: "Array",
     borderTopLeftRadius: "create",
     borderTopRightRadius: "diversity",
-    borderBottomLeftRadius: "h",
-    borderBottomRightRadius: "e",
+    borderBottomLeftRadius: "p",
+    borderBottomRightRadius: "to",
     divider: "isArray",
     dividerColor: "isArray",
-    dividerPaddingLeft: "Number",
-    dividerPaddingRight: "e",
+    dividerPaddingLeft: "LengthDelimited",
+    dividerPaddingRight: "to",
     placeholderShape: "isArray",
     placeholderShapeColor: "isArray",
-    placeholderShapeCount: "Object",
-    placeholderShapeGap: "e",
+    placeholderShapeCount: "limit",
+    placeholderShapeGap: "to",
     placeholderShapePaddingHorizontal: "isArray",
     placeholderShapePaddingVertical: "isArray",
-    placeholderFeedBackgroundColor: "PX_16",
-    placeholderFeedColor: "e",
+    placeholderFeedBackgroundColor: "i",
+    placeholderFeedColor: "to",
     placeholderFeedLabelPadding: "isArray",
     placeholderFeedLabelPaddingInnerRatio: "isArray",
-    placeholderFeedLabelSize: "flex",
-    placeholderFeedLabelSecondarySize: "e",
+    placeholderFeedLabelSize: "it",
+    placeholderFeedLabelSecondarySize: "to",
     placeholderFeedPadding: "isArray",
     placeholderFeedShape: "isArray",
     placeholderFeedShapeSize: "channel",
     placeholderType: NONE,
-    width: "Hinweise",
-    height: "Hobby",
-    verticalAlignment: "passen",
-    horizontalAlignment: "puzzeln",
+    width: null,
+    height: null,
+    verticalAlignment: null,
+    horizontalAlignment: null,
   };
   if (null == listFooter) {
     return size;
@@ -161,7 +161,7 @@ function createNativePlaceholderConfig(listFooter) {
   }
 }
 const processColor = fn(17).processColor;
-const obj = { sectionItem: { type: fn(6478).FastestListPropsPlaceholderType.NONE } };
+const obj = { sectionItem: { type: fn(6483).FastestListPropsPlaceholderType.NONE } };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
 

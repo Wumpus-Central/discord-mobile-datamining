@@ -1,5 +1,5 @@
 // discord_app/modules/collectibles/native/openGiftModal.tsx
-import asyncRequireImpl from "../../../../_runtime/01980_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01981_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -10,7 +10,7 @@ export const ShopGiftModalKey = "Shop Gift Modal";
 export const openShopGiftModal = function openShopGiftModal(items1) {
   ({ navigationParams, skuId, analyticsLocations, lockedRecipientUser, onGiftModalDismiss, giftingOrigin } = items1);
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(10463, dependencyMap.paths),
+    asyncRequireImpl(10474, dependencyMap.paths),
     { skuId, analyticsLocations, lockedRecipientUser, onGiftModalDismiss, giftingOrigin },
     c3,
     navigationParams,

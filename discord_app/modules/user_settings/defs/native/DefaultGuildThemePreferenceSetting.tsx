@@ -6,14 +6,14 @@ import ServerThemeUserExperiment from "../../../premium/powerups/experiments/Ser
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const SettingBuilders = fn(10993);
+const SettingBuilders = fn(11006);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Q7mm4g);
   },
-  parent: fn(7412).MobileUserSettings.APPEARANCE,
-  useValue: fn(2020).DefaultGuildThemePreference.useSetting,
+  parent: fn(7417).MobileUserSettings.APPEARANCE,
+  useValue: fn(2021).DefaultGuildThemePreference.useSetting,
   onValueChange: function onDefaultGuildThemePreferenceChange(arg0) {
     const DefaultGuildThemePreference = UserSettings.DefaultGuildThemePreference;
     DefaultGuildThemePreference.updateSetting(Number(arg0));

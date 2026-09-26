@@ -71,7 +71,7 @@ export default function ProviderConnectionCard(connection) {
               } else {
                 const obj4 = {};
                 const obj5 = v3(1241);
-                const merged = Object.assign(provider_id(5009).collectGuildAnalyticsMetadata(guildId));
+                const merged = Object.assign(provider_id(5016).collectGuildAnalyticsMetadata(guildId));
                 obj4.connection_type = "provider";
                 provider_id = connection.provider_id;
                 if (provider_id == null) {

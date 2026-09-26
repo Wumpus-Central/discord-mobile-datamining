@@ -17,11 +17,11 @@ import SlowmodeStore from "../../../stores/SlowmodeStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const DraftType = fn(5193).DraftType;
-let closure_11 = fn(8835).updateChatInputContainerHeight;
+const DraftType = fn(5200).DraftType;
+let closure_11 = fn(8843).updateChatInputContainerHeight;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const COMMAND_SENTINEL = fn(5299).COMMAND_SENTINEL;
-const MessageSendLocation = fn(4822).MessageSendLocation;
+const COMMAND_SENTINEL = fn(5306).COMMAND_SENTINEL;
+const MessageSendLocation = fn(4829).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/useChatInputRefs.tsx");
 
@@ -39,7 +39,7 @@ export default function useChatInputRefs(chatInputProps) {
   const chatInputNative = noop.useRef(null);
   const chatInputSendButton = noop.useRef(null);
   const chatInputTextFlushedResponses = noop.useRef(new Map());
-  const tmp2 = chatInputTextFieldHeight(5905)(() =>
+  const tmp2 = chatInputTextFieldHeight(5910)(() =>
     ChatInputUtils.createInputRefTracker(chatInputProps.channel.id, chatInputProps.screenIndex),
   );
   closure_12 = tmp2;
@@ -68,7 +68,7 @@ export default function useChatInputRefs(chatInputProps) {
     };
   }, items2);
   const state = noop.useRef(
-    chatInputTextFieldHeight(5905)(() => ({
+    chatInputTextFieldHeight(5910)(() => ({
       editId: null,
       focused: false,
       selectionStart: 0,
@@ -390,7 +390,7 @@ export default function useChatInputRefs(chatInputProps) {
                   const merged = Object.assign(ref.current);
                   obj4.chatInputRef = chatInputRef;
                   obj2.params = obj4;
-                  const result = threadCreationCallback(11465).chatInputSendApplicationCommand(obj2);
+                  const result = threadCreationCallback(11479).chatInputSendApplicationCommand(obj2);
                 },
               );
             }
@@ -415,15 +415,15 @@ export default function useChatInputRefs(chatInputProps) {
                     tmp8 = chatInputRef;
                     obj3.chatInputRef = chatInputRef;
                     obj2.params = obj3;
-                    const result = chatInputProps(11465).chatInputHandleSendText(obj2);
-                    const obj = chatInputProps(11465);
+                    const result = chatInputProps(11479).chatInputHandleSendText(obj2);
+                    const obj = chatInputProps(11479);
                   }
-                  const keyboardType = chatInputProps(4699).getKeyboardType();
-                  if (keyboardType === chatInputProps(1610).KeyboardTypes.SYSTEM) {
+                  const keyboardType = chatInputProps(4703).getKeyboardType();
+                  if (keyboardType === chatInputProps(1611).KeyboardTypes.SYSTEM) {
                     const current2 = tmp8.current;
                     current2.focus();
                   }
-                  obj4 = chatInputProps(4699);
+                  obj4 = chatInputProps(4703);
                 },
               );
               let obj = chatInputTextFieldHeight(ref[14]);

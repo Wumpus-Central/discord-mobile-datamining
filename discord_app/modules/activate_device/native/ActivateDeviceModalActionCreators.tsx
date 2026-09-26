@@ -1,5 +1,5 @@
 // discord_app/modules/activate_device/native/ActivateDeviceModalActionCreators.tsx
-import asyncRequireImpl from "../../../../_runtime/01980_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01981_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/activate_device/native/Activa
 export default {
   showModal(userCode) {
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(13401, dependencyMap.paths),
+      asyncRequireImpl(13419, dependencyMap.paths),
       { userCode },
       ACTIVATE_DEVICE_MODAL_KEY,
     );

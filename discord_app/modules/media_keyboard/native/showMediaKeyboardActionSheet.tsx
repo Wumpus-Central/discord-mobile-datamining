@@ -1,6 +1,6 @@
 // discord_app/modules/media_keyboard/native/showMediaKeyboardActionSheet.tsx
 import _mod17 from "../../../../_runtime/metro/00017__.js";
-import asyncRequireImpl from "../../../../_runtime/01980_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01981_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -13,7 +13,7 @@ export const hideMediaKeyboardActionSheet = function hideMediaKeyboardActionShee
 };
 export const showMediaKeyboardActionSheet = function showMediaKeyboardActionSheet(arg0) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(10089, dependencyMap.paths),
+    asyncRequireImpl(10100, dependencyMap.paths),
     MEDIA_KEYBOARD_ACTION_SHEET,
     arg0,
   );

@@ -3,7 +3,7 @@ import router_utils from "../../../routing/router_utils.tsx";
 import ThreadConstants from "../../../threads/ThreadConstants.tsx";
 import AppLauncherNativeConstants from "../../../app_launcher/native/AppLauncherNativeConstants.tsx";
 import KeyboardTypes from "../../../keyboard/native/KeyboardTypes.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01980_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01981_asyncRequireImpl.js";
 import ChannelConstants from "../../../channel/ChannelConstants.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import parseURLDefault from "../../../../utils/native/parseURL.tsx";
@@ -152,11 +152,11 @@ export const handleMessagesTapLink = function handleMessagesTapLink(tapLinkData)
                 const obj19 = ActionSheetActionCreatorsDefault;
                 const obj9 = { guildId: guild_id };
                 obj19.openLazy(
-                  asyncRequireImpl(9195, dependencyMap.paths),
+                  asyncRequireImpl(9206, dependencyMap.paths),
                   "GuildProfileActionSheet:" + guild_id,
                   obj9,
                 );
-                const tmp97 = asyncRequireImpl(9195, dependencyMap.paths);
+                const tmp97 = asyncRequireImpl(9206, dependencyMap.paths);
               }
             }
             break;
@@ -398,7 +398,7 @@ export const handleMessagesTapLink = function handleMessagesTapLink(tapLinkData)
                   constants.MESSAGE_EMBED,
                 );
               } else {
-                const tmp106 = asyncRequireImpl(11127, dependencyMap.paths);
+                const tmp106 = asyncRequireImpl(11141, dependencyMap.paths);
                 const obj49 = { location: constants.MESSAGE_EMBED, messageId: data.message.id, notificationType: null };
                 let TOP_MESSAGE_PUSH = data.notificationType;
                 if (TOP_MESSAGE_PUSH == null) {

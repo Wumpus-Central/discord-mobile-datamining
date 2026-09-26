@@ -7,7 +7,7 @@ import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
 const PremiumTypes = fn(1374).PremiumTypes;
-const ApexExperiment = fn(1434);
+const ApexExperiment = fn(1435);
 const obj2 = {
   kind: "user",
   name: "2026-03-clips-experiment",

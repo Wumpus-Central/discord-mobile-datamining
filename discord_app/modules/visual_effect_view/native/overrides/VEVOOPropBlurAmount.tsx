@@ -7,10 +7,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const VEVOOStore = fn(5263);
+const VEVOOStore = fn(5270);
 ({ getVisualEffectViewOverrides: hasOwnProperty, setVisualEffectViewOverides: metroRequire } = VEVOOStore);
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_8 = createStyles.createStyles({ enabledSwitchStyle: { alignSelf: "flex-start" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOOPropBlurAmount.tsx");
@@ -67,7 +67,7 @@ export default noop.memo(function VEVOOPropBlurAmount() {
     },
   };
   const ref = noop.useRef(first);
-  obj.subLabel = jsx(first(15525), {
+  obj.subLabel = jsx(first(15554), {
     disabled: !tmp3,
     disabledOpacity: !tmp3,
     initialValue: noop.useRef(first),

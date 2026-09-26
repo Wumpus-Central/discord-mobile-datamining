@@ -12,7 +12,7 @@ import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestDockMode = fn(5751).QuestDockMode;
+const QuestDockMode = fn(5756).QuestDockMode;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestBottomSheet/QuestBottomSheetHooks.tsx");
 
@@ -164,17 +164,17 @@ export const useMobileActivityPressHandler = function useMobileActivityPressHand
             let captureAdUserAction = tmp4;
             if (
               obj12.shouldMigrateToAdAnalyticsInterface(
-                tmp4(7148).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
+                tmp4(7153).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
                 "quest_bottom_sheet_mobile_activity",
               )
             ) {
-              captureAdUserAction = captureAdUserAction(7137).captureAdUserAction;
+              captureAdUserAction = captureAdUserAction(7142).captureAdUserAction;
               const obj9 = {
-                type: tmp4(7147).AdUserActionType.CLICK_INTERNAL,
-                adCreativeType: tmp4(5758).AdCreativeType.QUEST,
+                type: tmp4(7152).AdUserActionType.CLICK_INTERNAL,
+                adCreativeType: tmp4(5763).AdCreativeType.QUEST,
                 adCreativeId: closure_128_0,
-                questContentCTA: tmp4(7136).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY,
-                surfaceId: tmp4(5754).QuestContent.QUEST_BOTTOM_SHEET,
+                questContentCTA: tmp4(7141).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY,
+                surfaceId: tmp4(5759).QuestContent.QUEST_BOTTOM_SHEET,
                 sourceQuestContent: closure_128_1,
                 impressionId: null,
                 questContentPosition: null,
@@ -190,12 +190,12 @@ export const useMobileActivityPressHandler = function useMobileActivityPressHand
               }
               obj9.questContentPosition = questContentPosition;
               captureAdUserAction(obj9);
-              const captureAdUserActionResult = captureAdUserAction(7137);
+              const captureAdUserActionResult = captureAdUserAction(7142);
             } else {
               const obj10 = {
                 questId: closure_128_0,
-                questContent: tmp4(5754).QuestContent.QUEST_BOTTOM_SHEET,
-                questContentCTA: tmp4(7136).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY,
+                questContent: tmp4(5759).QuestContent.QUEST_BOTTOM_SHEET,
+                questContentCTA: tmp4(7141).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY,
                 questContentPosition: null,
                 impressionId: null,
                 sourceQuestContent: null,
@@ -211,11 +211,11 @@ export const useMobileActivityPressHandler = function useMobileActivityPressHand
               }
               obj10.impressionId = id1;
               obj10.sourceQuestContent = closure_128_1;
-              const result = captureAdUserAction(7126).trackQuestContentClicked(obj10);
-              const captureAdUserActionResult2 = captureAdUserAction(7126);
+              const result = captureAdUserAction(7131).trackQuestContentClicked(obj10);
+              const captureAdUserActionResult2 = captureAdUserAction(7131);
             }
             dependencyMap = 3;
-            obj12 = tmp4(7148);
+            obj12 = tmp4(7153);
           }
         } catch (tmp36) {
           dependencyMap = tmp;

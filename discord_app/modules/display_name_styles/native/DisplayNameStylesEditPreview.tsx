@@ -4,7 +4,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import utils from "../../collectibles/nameplates/utils.tsx";
-import _modDef2876 from "../intl/DisplayNameStyles.messages.js";
+import _modDef2877 from "../intl/DisplayNameStyles.messages.js";
 import DateUtils from "../../../utils/DateUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import usePendingAvatarSettingsDefault from "../../user_profile/hooks/usePendingAvatarSettings.tsx";
@@ -73,7 +73,7 @@ function ChatPreview(arg0) {
   const items3 = [React5(View, obj6)];
   const obj9 = { variant: "text-md/normal", color: "text-default", style: tmp.chatMessageText, children: null };
   const intl = util.intl;
-  obj9.children = intl.string(_modDef2876.h5Cuej);
+  obj9.children = intl.string(_modDef2877.h5Cuej);
   items3[1] = timestampProducer(Text_Text.Text, obj9);
   obj5.children = items3;
   items1[1] = React5(View, obj5);
@@ -83,7 +83,7 @@ function ChatPreview(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = {
   previewSection: {
     marginBottom: nativeDefault.space.PX_24,
@@ -169,7 +169,7 @@ export default function DisplayNameStylesEditPreview(selectedEffectId) {
     accessibilityLabel: null,
   };
   const intl = util.intl;
-  obj4.accessibilityLabel = intl.string(_modDef2876.zoh6MT);
+  obj4.accessibilityLabel = intl.string(_modDef2877.zoh6MT);
   const items1 = [timestampProducer(UserProfilePreviewDefault, obj4), ,];
   items1[1] = timestampProducer(View, {
     style: tmp.chatPreviewWrapper,

@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/ListBulletsIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod17316 from "../../../../../../../_runtime/metro/17316__.js";
+import _mod17346 from "../../../../../../../_runtime/metro/17346__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const ListBulletsIcon = function ListBulletsIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17316, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17346, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

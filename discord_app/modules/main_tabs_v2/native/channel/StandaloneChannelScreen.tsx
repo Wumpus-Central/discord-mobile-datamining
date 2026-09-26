@@ -147,14 +147,14 @@ function Header(channelId) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const MainTabsV2Constants = fn(7284);
+const MainTabsV2Constants = fn(7289);
 ({ ONYX_BORDER_WIDTH, MIN_HEADER_HEIGHT: closure_7 } = MainTabsV2Constants);
 const Constants = fn(1074);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_8, ME: closure_9, ThemeTypes: c10 } = Constants);
-const StaticChannelRoute = fn(2051).StaticChannelRoute;
+const StaticChannelRoute = fn(2052).StaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj = {
   container: { flex: 1 },
   onyxContainerBorder: {
@@ -238,20 +238,20 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
   closure_6 = undefined;
   const tmp = closure_15();
   dependencyMap = tmp;
-  noop = channelId(1485).useNavigation();
-  const obj = channelId(1485);
-  const isSwipeToMemberListEnabled = channelId(10991).useIsSwipeToMemberListEnabled();
-  const needSubscriptionToAccess = frame(5307)(channelId).needSubscriptionToAccess;
-  const obj2 = channelId(10991);
+  noop = channelId(1486).useNavigation();
+  const obj = channelId(1486);
+  const isSwipeToMemberListEnabled = channelId(11004).useIsSwipeToMemberListEnabled();
+  const needSubscriptionToAccess = frame(5314)(channelId).needSubscriptionToAccess;
+  const obj2 = channelId(11004);
   let tmp6 = guildId;
   if (guildId == null) {
     tmp6 = closure_8;
   }
-  const canSeeOnboardingHome = channelId(6638).useCanSeeOnboardingHome(tmp6);
-  const obj3 = channelId(6638);
-  const tmp9 = frame(4763)() === constants.ONYX;
+  const canSeeOnboardingHome = channelId(6643).useCanSeeOnboardingHome(tmp6);
+  const obj3 = channelId(6643);
+  const tmp9 = frame(4767)() === constants.ONYX;
   closure_4 = tmp9;
-  const tmp10 = frame(4691)();
+  const tmp10 = frame(4695)();
   isChatBesideChannelList = tmp10.isChatBesideChannelList;
   const isChatLockedOpen = tmp10.isChatLockedOpen;
   let items = [frame, tmp9, isChatBesideChannelList, ,];
@@ -282,7 +282,7 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
   }, items1);
   const ref = noop.useRef(null);
   let tmp14 = !isChatLockedOpen;
-  const isForumChannelSearchActive = channelId(12836).useIsForumChannelSearchActive(channelId);
+  const isForumChannelSearchActive = channelId(12853).useIsForumChannelSearchActive(channelId);
   if (isChatLockedOpen) {
     tmp14 = isNavigationScreen;
   }
@@ -290,7 +290,7 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
     tmp14 = !isForumChannelSearchActive;
   }
   closure_6 = tmp14;
-  const tmp2Result = channelId(12836);
+  const tmp2Result = channelId(12853);
   const items2 = [closure_6];
   const items3 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(
@@ -305,7 +305,7 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
     items3,
   );
   const tmp2Result4 = channelId(504);
-  const isVibegrationsChannelCandidate = channelId(5363).useIsVibegrationsChannelCandidate(
+  const isVibegrationsChannelCandidate = channelId(5370).useIsVibegrationsChannelCandidate(
     stateFromStores,
     "StandaloneChannelScreen",
   );
@@ -332,7 +332,7 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
             let tmp32Result = null;
             if (canSeeOnboardingHome) {
               const obj7 = { guildId };
-              tmp32Result = closure_12(frame(16177), obj7);
+              tmp32Result = closure_12(frame(16205), obj7);
             }
             obj6.children = tmp32Result;
             items4[1] = closure_12(closure_4, obj6);
@@ -340,10 +340,10 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
             return closure_13(closure_4, obj4);
           } else if (channelId === StaticChannelRoute.MEMBER_SAFETY) {
             const obj8 = { guildId };
-            return closure_12(frame(16195), obj8);
+            return closure_12(frame(16223), obj8);
           } else if (channelId === StaticChannelRoute.VIBEGRATIONS) {
             const obj9 = { guildId };
-            return closure_12(frame(16212), obj9);
+            return closure_12(frame(16240), obj9);
           } else {
             if (isVibegrationsChannelCandidate) {
               if (!tmp18) {
@@ -362,7 +362,7 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
                   const items5 = [closure_12(Header, obj11)];
                   const obj12 = { style: memo1, children: null };
                   const obj13 = { channel: stateFromStores };
-                  obj12.children = closure_12(frame(16394), obj13);
+                  obj12.children = closure_12(frame(16423), obj13);
                   items5[1] = closure_12(closure_4, obj12);
                   obj10.children = items5;
                   return closure_13(closure_4, obj10);
@@ -383,7 +383,7 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
               };
               const items6 = [closure_12(Header, obj15)];
               const obj16 = { channelId, screenIndex };
-              items6[1] = closure_12(channelId(16398).CreateThreadView, obj16);
+              items6[1] = closure_12(channelId(16427).CreateThreadView, obj16);
               obj14.children = items6;
               return closure_13(closure_4, obj14);
             } else {
@@ -401,8 +401,8 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
               const items7 = [closure_12(Header, obj18)];
               const obj19 = { name: "chat_container", tracking: "include", style: memo1, children: null };
               const obj20 = { guildId, channelId, chatInputRef: ref, screenIndex };
-              obj19.children = closure_12(frame(10869), obj20);
-              items7[1] = closure_12(channelId(16151).NavTTIView, obj19);
+              obj19.children = closure_12(frame(10882), obj20);
+              items7[1] = closure_12(channelId(16179).NavTTIView, obj19);
               obj17.children = items7;
               const tmp19Result = closure_13(closure_14, obj17);
               if (isSwipeToMemberListEnabled) {
@@ -414,12 +414,12 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
                   isBackEnabled: tmp14,
                   children: tmp19Result,
                 };
-                let tmp21Result = closure_12(frame(16402), obj21);
+                let tmp21Result = closure_12(frame(16431), obj21);
               } else {
                 const obj22 = {
                   name: "channel_screen",
                   navigationKey: channelId,
-                  definition: channelId(16404).CHANNEL_NAVIGATION_TTI,
+                  definition: channelId(16433).CHANNEL_NAVIGATION_TTI,
                   visibilityMode: "prerendered",
                   isVisible: isNavigationTTIVisible,
                   descendantTracking: "included",
@@ -432,7 +432,7 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
                   style: memo,
                   children: tmp19Result,
                 };
-                tmp21Result = closure_12(channelId(16403).NavTTISurfaceProvider, obj22);
+                tmp21Result = closure_12(channelId(16432).NavTTISurfaceProvider, obj22);
               }
               return tmp21Result;
             }
@@ -452,14 +452,14 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
       };
       const items8 = [closure_12(Header, obj24)];
       const obj25 = { style: memo1, children: null };
-      const items9 = [closure_12(frame(5430), { absolute: true })];
+      const items9 = [closure_12(frame(5437), { absolute: true })];
       const obj26 = { guildId, gatedChannelId: null };
       let tmp40;
       if (needSubscriptionToAccess) {
         tmp40 = channelId;
       }
       obj26.gatedChannelId = tmp40;
-      items9[1] = closure_12(frame(16160), obj26);
+      items9[1] = closure_12(frame(16188), obj26);
       obj25.children = items9;
       items8[1] = closure_13(closure_4, obj25);
       obj23.children = items8;

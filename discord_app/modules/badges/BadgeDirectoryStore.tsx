@@ -3,7 +3,7 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import BackoffDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
-import privDefault from "../../../_runtime/01438_priv.js";
+import privDefault from "../../../_runtime/01439_priv.js";
 import BadgeIdResolution from "BadgeIdResolution.tsx";
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators.tsx";
 import UserStore from "../../stores/UserStore.tsx";

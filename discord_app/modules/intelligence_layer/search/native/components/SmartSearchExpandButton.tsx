@@ -1,7 +1,7 @@
 // discord_app/modules/intelligence_layer/search/native/components/SmartSearchExpandButton.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import _modDef3876 from "../../IntelligenceSearch.messages.js";
+import _modDef3877 from "../../IntelligenceSearch.messages.js";
 import ChevronSmallDownIcon2 from "../../../../../design/components/Icon/native/redesign/generated/ChevronSmallDownIcon.tsx";
 import ChevronSmallUpIcon from "../../../../../design/components/Icon/native/redesign/generated/ChevronSmallUpIcon.tsx";
 import useSearchHostSurface from "../useSearchHostSurface.tsx";
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const rect = { top: nativeDefault.space.PX_8, bottom: nativeDefault.space.PX_8 };
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_9 = createStyles.createStyles((backgroundColor) => {
   const obj = {
     block: { position: "absolute", left: 0, right: 0, bottom: 0, alignItems: "center" },
@@ -59,7 +59,7 @@ export default noop.memo((isExpanded) => {
     children: null,
   };
   const intl = util.intl;
-  const tmp9 = _modDef3876;
+  const tmp9 = _modDef3877;
   if (isExpanded) {
     let OLD0mz = tmp9.ih0v1g;
     let tmp10 = importDefault;

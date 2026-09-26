@@ -22,7 +22,7 @@ const constants = {
   ADS: "Ads",
   ZENDESK: "Zendesk",
 };
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_11 = createStyles.createStyles({
   content: { padding: 16 },
   header: { marginBottom: 8 },
@@ -176,8 +176,8 @@ export default noop.memo(() => {
             const intl2 = closure_1_0(1115).intl;
             obj2.title = intl2.string(closure_1_0(1115).t.OjbtDm);
             obj2.body = message;
-            closure_1_1(5196).show(obj2);
-            const obj = closure_1_1(5196);
+            closure_1_1(5203).show(obj2);
+            const obj = closure_1_1(5203);
           },
         )
         .finally(() => closure_1_1(false));
@@ -226,8 +226,8 @@ export default noop.memo(() => {
           const intl2 = closure_1_0(1115).intl;
           obj2.title = intl2.string(closure_1_0(1115).t.OjbtDm);
           obj2.body = message;
-          closure_1_1(5196).show(obj2);
-          const obj = closure_1_1(5196);
+          closure_1_1(5203).show(obj2);
+          const obj = closure_1_1(5203);
         },
       );
     } else {

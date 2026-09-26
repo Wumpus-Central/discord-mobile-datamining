@@ -1,7 +1,7 @@
 // discord_app/modules/intelligence_layer/search/native/components/IntelligenceSearchEmptyScreen.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import _modDef3876 from "../../IntelligenceSearch.messages.js";
+import _modDef3877 from "../../IntelligenceSearch.messages.js";
 import AccessibilityAnnouncer2 from "../../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj = { container: { flex: 1, gap: nativeDefault.space.PX_8 }, copy: null };
 let obj3 = { flex: 1, gap: nativeDefault.space.PX_8 };
 obj.copy = {
@@ -50,11 +50,11 @@ export default noop.memo(() => {
   const obj2 = { style: tmp.copy, children: null };
   const obj3 = { variant: "text-sm/semibold", color: "text-muted", accessibilityRole: "header", children: null };
   let intl = util.intl;
-  obj3.children = intl.string(_modDef3876["0Vo35I"]);
+  obj3.children = intl.string(_modDef3877["0Vo35I"]);
   const items1 = [hasOwnProperty(Text_Text.Text, obj3)];
   const obj4 = { variant: "text-sm/semibold", color: "text-muted", accessibilityRole: "header", children: null };
   const intl2 = util.intl;
-  obj4.children = intl2.string(_modDef3876.njrqqv);
+  obj4.children = intl2.string(_modDef3877.njrqqv);
   items1[1] = hasOwnProperty(Text_Text.Text, obj4);
   obj2.children = items1;
   obj.children = timestampProducer(View, obj2);

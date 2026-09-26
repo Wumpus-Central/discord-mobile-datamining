@@ -2,11 +2,14 @@
 import themes from "utils/shared/themes.tsx";
 import Colors from "../../discord_common/js/packages/design/components/Colors/shared/Colors.tsx";
 import design_shared from "../../discord_common/js/packages/design/shared.tsx";
+import StickerTypes from "../../discord_common/js/packages/design/components/Stickers/StickerTypes.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("design/shared.tsx");
 
 export const AccessibilityAnnouncer = design_shared.AccessibilityAnnouncer;
+export const StickerFormat = StickerTypes.StickerFormat;
+export const MetaStickerType = StickerTypes.MetaStickerType;
 export const AccessibilityPreferencesContext = design_shared.AccessibilityPreferencesContext;
 export const LOW_SATURATION_THRESHOLD = design_shared.LOW_SATURATION_THRESHOLD;
 export const ContrastPreference = design_shared.ContrastPreference;

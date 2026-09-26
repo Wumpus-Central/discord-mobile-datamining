@@ -1,9 +1,9 @@
 // discord_app/modules/vibegrations/native/getVibegrationsChannelIcon.tsx
-import _modDef5333 from "../../../../_runtime/metro/05333__.js";
+import _modDef5340 from "../../../../_runtime/metro/05340__.js";
 import vibegrationsChannelIconKind from "../lib/vibegrationsChannelIconKind.tsx";
 import AppsIcon from "../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
 import AppsLockIcon from "../../../design/components/Icon/native/redesign/generated/AppsLockIcon.tsx";
-import _modDef5369 from "../../../../_runtime/metro/05369__.js";
+import _modDef5376 from "../../../../_runtime/metro/05376__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("modules/vibegrations/native/getVibegrationsChannelIcon.tsx");
@@ -24,9 +24,9 @@ export const getVibegrationsChannelIconComponent = function getVibegrationsChann
 export const getVibegrationsChannelIconSource = function getVibegrationsChannelIconSource(channel, getChannelIcon) {
   const result = vibegrationsChannelIconKind.vibegrationsChannelIconKind(channel, getChannelIcon);
   if ("apps" === result) {
-    return _modDef5333;
+    return _modDef5340;
   } else if ("apps-lock" === result) {
-    return _modDef5369;
+    return _modDef5376;
   } else {
     return null;
   }

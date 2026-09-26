@@ -2,27 +2,27 @@
 import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01980_asyncRequireImpl.js";
-import _modDef4772 from "../../../../../_runtime/metro/04772__.js";
+import asyncRequireImpl from "../../../../../_runtime/01981_asyncRequireImpl.js";
+import _modDef4776 from "../../../../../_runtime/metro/04776__.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import actions_AlertActionCreatorsDefault from "../../../../actions/native/AlertActionCreators.tsx";
 import MessageActionCreatorsDefault from "../../../../actions/MessageActionCreators.tsx";
 import getInviteURLDefault from "../../getInviteURL.tsx";
-import _modDef9055 from "../../../../../_runtime/metro/09055__.js";
+import _modDef9066 from "../../../../../_runtime/metro/09066__.js";
 import icons_ShareDefault from "../../../icons/native/Share.tsx";
-import _modDef9304 from "../../../../../_runtime/metro/09304__.js";
-import _modDef9305 from "../../../../../_runtime/metro/09305__.js";
-import _modDef9306 from "../../../../../_runtime/metro/09306__.js";
-import _modDef9324 from "../../../../../_runtime/metro/09324__.js";
-import _modDef9325 from "../../../../../_runtime/metro/09325__.js";
-import _modDef9326 from "../../../../../_runtime/metro/09326__.js";
-import _modDef9327 from "../../../../../_runtime/metro/09327__.js";
-import _modDef9328 from "../../../../../_runtime/metro/09328__.js";
-import _modDef9329 from "../../../../../_runtime/metro/09329__.js";
-import _modDef9330 from "../../../../../_runtime/metro/09330__.js";
-import _modDef9331 from "../../../../../_runtime/metro/09331__.js";
-import _modDef9332 from "../../../../../_runtime/metro/09332__.js";
-import _modDef9333 from "../../../../../_runtime/metro/09333__.js";
+import _modDef9315 from "../../../../../_runtime/metro/09315__.js";
+import _modDef9316 from "../../../../../_runtime/metro/09316__.js";
+import _modDef9317 from "../../../../../_runtime/metro/09317__.js";
+import _modDef9335 from "../../../../../_runtime/metro/09335__.js";
+import _modDef9336 from "../../../../../_runtime/metro/09336__.js";
+import _modDef9337 from "../../../../../_runtime/metro/09337__.js";
+import _modDef9338 from "../../../../../_runtime/metro/09338__.js";
+import _modDef9339 from "../../../../../_runtime/metro/09339__.js";
+import _modDef9340 from "../../../../../_runtime/metro/09340__.js";
+import _modDef9341 from "../../../../../_runtime/metro/09341__.js";
+import _modDef9342 from "../../../../../_runtime/metro/09342__.js";
+import _modDef9343 from "../../../../../_runtime/metro/09343__.js";
+import _modDef9344 from "../../../../../_runtime/metro/09344__.js";
 import InstantInviteConstants from "../InstantInviteConstants.tsx";
 import Constants from "../../../../Constants.tsx";
 import MetaQuestUtils from "../../../device/MetaQuestUtils.android.tsx";
@@ -64,7 +64,7 @@ const items = [
     type: obj.SHARE,
     icon: icons_ShareDefault,
     isAvailable: Promise.resolve(true),
-    IconComponent: _modDef9055,
+    IconComponent: _modDef9066,
     backgroundColor: nativeDefault.unsafe_rawColors.BRAND_500,
     getLabel() {
       const intl = util.intl;
@@ -89,7 +89,7 @@ let obj2 = {
   type: obj.SHARE,
   icon: icons_ShareDefault,
   isAvailable: Promise.resolve(true),
-  IconComponent: _modDef9055,
+  IconComponent: _modDef9066,
   backgroundColor: nativeDefault.unsafe_rawColors.BRAND_500,
   getLabel() {
     const intl = util.intl;
@@ -102,9 +102,9 @@ let obj2 = {
 };
 items[1] = {
   type: obj.COPY,
-  icon: _modDef9304,
+  icon: _modDef9315,
   isAvailable: Promise.resolve(true),
-  IconComponent: _modDef4772,
+  IconComponent: _modDef4776,
   getLabel() {
     const intl = util.intl;
     return intl.string(util.t.WqhZss);
@@ -116,14 +116,14 @@ items[1] = {
 };
 let obj4 = {
   type: obj.QR_CODE,
-  icon: _modDef9305,
+  icon: _modDef9316,
   isAvailable: null,
   IconComponent: null,
   getLabel: null,
   onPress: null,
 };
 obj4.isAvailable = Promise.resolve(!MetaQuestUtils.isMetaQuest());
-obj4.IconComponent = _modDef9306;
+obj4.IconComponent = _modDef9317;
 obj4.getLabel = function getLabel() {
   const intl = util.intl;
   return intl.string(util.t.rriLm1);
@@ -137,20 +137,20 @@ obj4.onPress = function onPress(code) {
   obj2.link = getInviteURLDefault(code);
   obj2.location = _location;
   obj2.channel = channel;
-  obj.openLazy(asyncRequireImpl(9307, dependencyMap.paths), combined, obj2, "stack");
+  obj.openLazy(asyncRequireImpl(9318, dependencyMap.paths), combined, obj2, "stack");
 };
 items[2] = obj4;
 let obj5 = { type: obj.MESSAGES, fullIcon: null, icon: null, isAvailable: null, getLabel: null, onPress: null };
 let PlatformUtils = PlatformUtils_mod;
 let importDefaultResult;
 if (PlatformUtils.isIOS()) {
-  importDefaultResult = _modDef9324;
+  importDefaultResult = _modDef9335;
 }
 obj5.fullIcon = importDefaultResult;
 let PlatformUtils = PlatformUtils_mod;
 let importDefaultResult1;
 if (PlatformUtils.isAndroid()) {
-  importDefaultResult1 = _modDef9325;
+  importDefaultResult1 = _modDef9336;
 }
 obj5.icon = importDefaultResult1;
 let DCDSendUtils = DCDSendUtils_mod;
@@ -163,15 +163,15 @@ obj5.onPress = function onPress(channel) {
   channel = channel.channel;
   const code = channel.code;
   ({ message, location: _location } = channel);
-  channel(9264).trackOptionClicked(code, channel, constants.SMS, _location);
-  let obj = channel(9264);
+  channel(9275).trackOptionClicked(code, channel, constants.SMS, _location);
+  let obj = channel(9275);
   const tmp = channel;
   if (obj2.isIOS()) {
-    code(4796).hideActionSheet();
-    let obj3 = code(4796);
+    code(4800).hideActionSheet();
+    let obj3 = code(4800);
   }
   obj2 = channel(1364);
-  tmp(4962).sendSMS({ body: message }, (arg0, arg1, arg2) => {
+  tmp(4969).sendSMS({ body: message }, (arg0, arg1, arg2) => {
     if (arg0) {
       const obj2 = {
         inviteKey: code,
@@ -199,20 +199,20 @@ obj5.onPress = function onPress(channel) {
       actions_AlertActionCreatorsDefault.show(obj5);
     }
   });
-  const tmpResult = tmp(4962);
+  const tmpResult = tmp(4969);
 };
 items[3] = obj5;
 const obj6 = { type: obj.MAIL, fullIcon: null, icon: null, isAvailable: null, getLabel: null, onPress: null };
 let PlatformUtils = PlatformUtils_mod;
 let importDefaultResult2;
 if (PlatformUtils.isIOS()) {
-  importDefaultResult2 = _modDef9326;
+  importDefaultResult2 = _modDef9337;
 }
 obj6.fullIcon = importDefaultResult2;
 let PlatformUtils = PlatformUtils_mod;
 let importDefaultResult3;
 if (PlatformUtils.isAndroid()) {
-  importDefaultResult3 = _modDef9327;
+  importDefaultResult3 = _modDef9338;
 }
 obj6.icon = importDefaultResult3;
 let DCDSendUtils = DCDSendUtils_mod;
@@ -225,15 +225,15 @@ obj6.onPress = function onPress(channel) {
   channel = channel.channel;
   const code = channel.code;
   ({ message, location: _location } = channel);
-  channel(9264).trackOptionClicked(code, channel, constants.EMAIL, _location);
-  let obj = channel(9264);
+  channel(9275).trackOptionClicked(code, channel, constants.EMAIL, _location);
+  let obj = channel(9275);
   const tmp = channel;
   if (obj2.isIOS()) {
-    code(4796).hideActionSheet();
-    let obj3 = code(4796);
+    code(4800).hideActionSheet();
+    let obj3 = code(4800);
   }
   obj2 = channel(1364);
-  tmp(4962).sendMail({ subject: "", body: message }, (arg0, arg1, arg2) => {
+  tmp(4969).sendMail({ subject: "", body: message }, (arg0, arg1, arg2) => {
     if (arg0) {
       const obj2 = {
         inviteKey: code,
@@ -261,10 +261,10 @@ obj6.onPress = function onPress(channel) {
       actions_AlertActionCreatorsDefault.show(obj5);
     }
   });
-  const tmpResult = tmp(4962);
+  const tmpResult = tmp(4969);
 };
 items[4] = obj6;
-const obj7 = { type: obj.FB_MESSENGER, fullIcon: _modDef9328, isAvailable: null, getLabel: null, onPress: null };
+const obj7 = { type: obj.FB_MESSENGER, fullIcon: _modDef9339, isAvailable: null, getLabel: null, onPress: null };
 let InstantInviteUtils = InstantInviteUtils_mod;
 obj7.isAvailable = InstantInviteUtils.isAppInstalled(SHARE_APPS_KEY.MESSENGER);
 obj7.getLabel = function getLabel() {
@@ -279,7 +279,7 @@ obj7.onPress = function onPress(code) {
   Linking.openURL(SHARE_URLS[SHARE_APPS_KEY.MESSENGER](tmp));
 };
 items[5] = obj7;
-const obj8 = { type: obj.GMAIL, fullIcon: _modDef9329, isAvailable: null, getLabel: null, onPress: null };
+const obj8 = { type: obj.GMAIL, fullIcon: _modDef9340, isAvailable: null, getLabel: null, onPress: null };
 let InstantInviteUtils = InstantInviteUtils_mod;
 obj8.isAvailable = InstantInviteUtils.isAppInstalled(SHARE_APPS_KEY.GMAIL);
 obj8.getLabel = function getLabel() {
@@ -292,7 +292,7 @@ obj8.onPress = function onPress(code) {
   Linking.openURL(SHARE_URLS[SHARE_APPS_KEY.GMAIL]("", message));
 };
 items[6] = obj8;
-const obj9 = { type: obj.TELEGRAM, fullIcon: _modDef9330, isAvailable: null, getLabel: null, onPress: null };
+const obj9 = { type: obj.TELEGRAM, fullIcon: _modDef9341, isAvailable: null, getLabel: null, onPress: null };
 let InstantInviteUtils = InstantInviteUtils_mod;
 obj9.isAvailable = InstantInviteUtils.isAppInstalled(SHARE_APPS_KEY.TELEGRAM);
 obj9.getLabel = function getLabel() {
@@ -307,7 +307,7 @@ obj9.onPress = function onPress(code) {
   Linking.openURL(SHARE_URLS[SHARE_APPS_KEY.TELEGRAM](message, tmp));
 };
 items[7] = obj9;
-const obj10 = { type: obj.TWITTER, fullIcon: _modDef9331, isAvailable: null, getLabel: null, onPress: null };
+const obj10 = { type: obj.TWITTER, fullIcon: _modDef9342, isAvailable: null, getLabel: null, onPress: null };
 let InstantInviteUtils = InstantInviteUtils_mod;
 obj10.isAvailable = InstantInviteUtils.isAppInstalled(SHARE_APPS_KEY.TWITTER);
 obj10.getLabel = function getLabel() {
@@ -320,7 +320,7 @@ obj10.onPress = function onPress(code) {
   Linking.openURL(SHARE_URLS[SHARE_APPS_KEY.TWITTER](message));
 };
 items[8] = obj10;
-const obj11 = { type: obj.WHATSAPP, fullIcon: _modDef9332, isAvailable: null, getLabel: null, onPress: null };
+const obj11 = { type: obj.WHATSAPP, fullIcon: _modDef9343, isAvailable: null, getLabel: null, onPress: null };
 let InstantInviteUtils = InstantInviteUtils_mod;
 obj11.isAvailable = InstantInviteUtils.isAppInstalled(SHARE_APPS_KEY.WHATSAPP);
 obj11.getLabel = function getLabel() {
@@ -333,7 +333,7 @@ obj11.onPress = function onPress(code) {
   Linking.openURL(SHARE_URLS[SHARE_APPS_KEY.WHATSAPP](message));
 };
 items[9] = obj11;
-const obj12 = { type: obj.LINE, fullIcon: _modDef9333, isAvailable: null, getLabel: null, onPress: null };
+const obj12 = { type: obj.LINE, fullIcon: _modDef9344, isAvailable: null, getLabel: null, onPress: null };
 let InstantInviteUtils = InstantInviteUtils_mod;
 obj12.isAvailable = InstantInviteUtils.isAppInstalled(SHARE_APPS_KEY.LINE);
 obj12.getLabel = function getLabel() {

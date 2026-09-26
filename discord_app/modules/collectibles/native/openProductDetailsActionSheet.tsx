@@ -1,5 +1,5 @@
 // discord_app/modules/collectibles/native/openProductDetailsActionSheet.tsx
-import asyncRequireImpl from "../../../../_runtime/01980_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01981_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import CollectiblesActionCreators from "../CollectiblesActionCreators.tsx";
 import CollectiblesProductUtils from "../utils/CollectiblesProductUtils.tsx";
@@ -31,7 +31,7 @@ export const openProductDetailsActionSheet = function openProductDetailsActionSh
   CollectiblesActionCreators.productDetailsOpened(skuId);
   const tmpResult = CollectiblesActionCreators;
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(7615, dependencyMap.paths),
+    asyncRequireImpl(7622, dependencyMap.paths),
     c3,
     { product, initialVariantIndex: num, analyticsLocations, shopAnalyticsContext },
     stack,
@@ -43,7 +43,7 @@ export const openProductDetailsActionSheetForSku = function openProductDetailsAc
   ({ initialVariantIndex, analyticsLocations, shopAnalyticsContext, stageCollectibleChangeForEditProfile } = skuId);
   CollectiblesActionCreators.productDetailsOpened(skuId);
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(7615, dependencyMap.paths),
+    asyncRequireImpl(7622, dependencyMap.paths),
     c3,
     { skuId, initialVariantIndex, analyticsLocations, shopAnalyticsContext, stageCollectibleChangeForEditProfile },
     stack,

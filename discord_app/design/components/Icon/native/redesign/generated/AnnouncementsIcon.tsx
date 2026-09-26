@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/AnnouncementsIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod5336 from "../../../../../../../_runtime/metro/05336__.js";
+import _mod5343 from "../../../../../../../_runtime/metro/05343__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const AnnouncementsIcon = function AnnouncementsIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5336, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5343, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

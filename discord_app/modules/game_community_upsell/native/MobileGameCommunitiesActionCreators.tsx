@@ -2,7 +2,7 @@
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import DurationsDefault from "../../../utils/Durations.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef1472 from "../../../../_runtime/metro/01472__.js";
+import _modDef1473 from "../../../../_runtime/metro/01473__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import LocalAppDetectionStore from "../../local_app_detection/native/LocalAppDetectionStore.tsx";
 import MobileGameCommunitiesStore from "MobileGameCommunitiesStore.tsx";
@@ -56,7 +56,7 @@ let closure_7 = async function _fetchDetectedGameCommunities() {
           const obj4 = { game_ids: tmp19, limit: 20, ignored_guild_ids: null };
           const _Array = Array;
           obj4.ignored_guild_ids = Array.from(dismissedGuildIds.getDismissedGuildIds());
-          request.query = _modDef1472.stringify(obj4);
+          request.query = _modDef1473.stringify(obj4);
           c2 = 1;
           c3 = 1;
           const obj5 = { value: HTTP.get(request), done: false };

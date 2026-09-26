@@ -5,7 +5,7 @@ import NUFChannelIllustrationDefault from "NUFChannelIllustration.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const ContentDismissActionType = fn(2041).ContentDismissActionType;
+const ContentDismissActionType = fn(2042).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/nuf_channels/native/components/NUFChannelsActionSheet.tsx");
@@ -51,7 +51,7 @@ export default function NUFChannelsActionSheet(markAsDismissed) {
     CTALabel: null,
     onCTAPress: null,
   });
-  return jsx(markAsDismissed(6566).BottomSheet, {
+  return jsx(markAsDismissed(6571).BottomSheet, {
     onDismiss() {
       let tmpResult;
       if (markAsDismissed != null) {

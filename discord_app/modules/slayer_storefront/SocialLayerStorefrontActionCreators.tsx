@@ -1060,12 +1060,12 @@ export const fetchSocialLayerStorefrontSkuForApplication = function fetchSocialL
     obj,
   );
 };
-export const fetchSocialLayerStorefrontSku = function fetchSocialLayerStorefrontSku(arg0, id, arg2) {
+export const fetchSocialLayerStorefrontSku = function fetchSocialLayerStorefrontSku(guildId, id, arg2) {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
   }
-  return _fetchSocialLayerStorefrontSkuWithUrl(id, Endpoints.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU(arg0, id), obj);
+  return _fetchSocialLayerStorefrontSkuWithUrl(id, Endpoints.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU(guildId, id), obj);
 };
 export const setSocialLayerStorefrontState = function setSocialLayerStorefrontState(applicationId, pageIndex, skuId) {
   DispatcherDefault.dispatch({ type: "SET_SOCIAL_LAYER_STOREFRONT_STATE", applicationId, pageIndex, skuId });

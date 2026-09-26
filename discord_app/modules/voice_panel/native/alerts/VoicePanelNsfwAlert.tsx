@@ -4,7 +4,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
 const require = fn;
-const isGuildNSFW = fn(2062).isGuildNSFW;
+const isGuildNSFW = fn(2063).isGuildNSFW;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const size = fn(2);
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/alerts/Voi
 export default function VoicePanelNsfwAlert(guildId) {
   guildId = guildId.guildId;
   const onConnect = guildId.onConnect;
-  dependencyMap = guildId(5202).useDismissModalCallback();
+  dependencyMap = guildId(5209).useDismissModalCallback();
   const tmp3 = isGuildNSFW(GuildStore.getGuild(guildId));
   const intl = guildId(1115).intl;
   const string = intl.string;
@@ -45,7 +45,7 @@ export default function VoicePanelNsfwAlert(guildId) {
   };
   const intl3 = tmp(1115).intl;
   obj4.text = intl3.string(guildId(1115).t.wVq7uo);
-  const items = [closure_5(guildId(5202).AlertActionButton, obj4, "confirm")];
+  const items = [closure_5(guildId(5209).AlertActionButton, obj4, "confirm")];
   const obj5 = {
     variant: "secondary",
     onPress() {
@@ -56,9 +56,9 @@ export default function VoicePanelNsfwAlert(guildId) {
   };
   const intl4 = tmp(1115).intl;
   obj5.text = intl4.string(guildId(1115).t["/g10LC"]);
-  items[1] = closure_5(guildId(5202).AlertActionButton, obj5, "add-profile-picture");
+  items[1] = closure_5(guildId(5209).AlertActionButton, obj5, "add-profile-picture");
   obj3.children = items;
-  obj2.actions = closure_6(guildId(5202).AlertActions, obj3);
-  return closure_5(guildId(5202).AlertModal, obj2);
+  obj2.actions = closure_6(guildId(5209).AlertActions, obj3);
+  return closure_5(guildId(5209).AlertModal, obj2);
 }
 export const VOICE_PANEL_NSFW_KEY = "voice-panel-nsfw";

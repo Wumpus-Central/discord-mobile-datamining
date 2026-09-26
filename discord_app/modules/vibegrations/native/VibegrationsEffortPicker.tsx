@@ -1,6 +1,6 @@
 // discord_app/modules/vibegrations/native/VibegrationsEffortPicker.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3714 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3715 from "../intl/VibegrationsUntranslated.messages.js";
 import TableRadioRow from "../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import BottomSheetTitleHeader from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import ActionSheet from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
@@ -196,7 +196,7 @@ export const VibegrationsEffortPickerSheet = function VibegrationsEffortPickerSh
   const obj = { header: null, children: null };
   const obj2 = { title: null };
   const intl = util.intl;
-  obj2.title = intl.string(_modDef3714.GDs9Vq);
+  obj2.title = intl.string(_modDef3715.GDs9Vq);
   obj.header = timestampProducer(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
   obj.children = timestampProducer(View, {
     children: timestampProducer(VibegrationsEffortPicker, {

@@ -1,7 +1,7 @@
 // discord_app/modules/conversations/ConversationPreviewStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import privDefault from "../../../_runtime/01438_priv.js";
+import privDefault from "../../../_runtime/01439_priv.js";
 import MessageRecordUtils from "../messages/MessageRecordUtils.tsx";
 import ConversationsUtils from "ConversationsUtils.tsx";
 import ConversationMessageCacheUtils from "ConversationMessageCacheUtils.tsx";
@@ -111,8 +111,8 @@ function evictWhere(fn) {
   }
   return flag;
 }
-let obj = { max: fn(7010).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex };
-const navigation = new privDefault({ max: fn(7010).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex });
+let obj = { max: fn(7015).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex };
+const navigation = new privDefault({ max: fn(7015).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex });
 let map = new Map();
 const map1 = new Map();
 const Store = initializeDefault.Store;

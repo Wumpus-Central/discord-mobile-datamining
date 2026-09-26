@@ -34,7 +34,7 @@ function GuildTemplatesJoinFooter(trigger) {
   trigger = trigger.trigger;
   const onHeightChange = trigger.onHeightChange;
   const tmp = closure_16();
-  dependencyMap = trigger(1484).useNavigation();
+  dependencyMap = trigger(1485).useNavigation();
   if (trigger === constants3.NUF) {
     const intl2 = tmp2(1115).intl;
     let stringResult = intl2.string(tmp2(1115).t.INo2NK);
@@ -50,7 +50,7 @@ function GuildTemplatesJoinFooter(trigger) {
     }, items),
     children: null,
   };
-  const items1 = [tmp.footerSafeAreaContainer, { paddingBottom: onHeightChange(1612)().bottom }];
+  const items1 = [tmp.footerSafeAreaContainer, { paddingBottom: onHeightChange(1613)().bottom }];
   obj2.style = items1;
   let obj3 = { style: tmp.footerContainer, children: null };
   let obj4 = {
@@ -62,8 +62,8 @@ function GuildTemplatesJoinFooter(trigger) {
   const intl3 = tmp2(1115).intl;
   obj4.children = intl3.string(trigger(1115).t["N+Mi/U"]);
   const items2 = [
-    closure_14(trigger(4825).Text, obj4),
-    closure_14(trigger(5274).Button, {
+    closure_14(trigger(4832).Text, obj4),
+    closure_14(trigger(5281).Button, {
       variant: "primary",
       grow: true,
       text: stringResult,
@@ -99,9 +99,9 @@ function GuildTemplatesItem(guildTemplate) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-let CreateGuildConstants = fn(12186);
+let CreateGuildConstants = fn(12204);
 ({ getGuildTemplatesMap: closure_7, GuildTemplateId: closure_8 } = CreateGuildConstants);
-CreateGuildConstants = fn(6394);
+CreateGuildConstants = fn(6399);
 ({
   CreateGuildModalStates: closure_9,
   GuildTemplateTriggers: c10,
@@ -111,10 +111,10 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, AnalyticsLocations: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = {
   flex: { flex: 1 },
-  contentContainer: { marginTop: fn(5989).NAV_BAR_HEIGHT },
+  contentContainer: { marginTop: fn(5994).NAV_BAR_HEIGHT },
   scrollContainer: null,
   sections: null,
   headerContainer: null,
@@ -124,7 +124,7 @@ let obj2 = {
   footerContainer: null,
   footerTitle: null,
 };
-let obj3 = { marginTop: fn(5989).NAV_BAR_HEIGHT };
+let obj3 = { marginTop: fn(5994).NAV_BAR_HEIGHT };
 obj2.scrollContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.sections = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING, gap: 24 };

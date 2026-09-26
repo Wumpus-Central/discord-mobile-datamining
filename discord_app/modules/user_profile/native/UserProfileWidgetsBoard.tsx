@@ -32,11 +32,11 @@ function WidgetRenderer(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, Pressable: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const UserProfileSections = fn(7621).UserProfileSections;
+const UserProfileSections = fn(7628).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const hitSlop = { top: 8, bottom: 8, left: 8, right: 8 };
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj = {
   board: { gap: nativeDefault.space.PX_16 },
   coverPlaceholder: null,
@@ -527,11 +527,11 @@ export default function UserProfileWidgetsBoard(userId) {
   }
   const cardStyle = userId.cardStyle;
   const tmp = closure_14();
-  const displayableBoardWidgets = userId(12440).useDisplayableBoardWidgets(userId);
+  const displayableBoardWidgets = userId(12458).useDisplayableBoardWidgets(userId);
   closure_129_0 = flag;
   closure_129_1 = tmp2;
-  let obj = userId(12440);
-  const trackUserProfileAction = userId(7628).useUserProfileAnalyticsContext().trackUserProfileAction;
+  let obj = userId(12458);
+  const trackUserProfileAction = userId(7635).useUserProfileAnalyticsContext().trackUserProfileAction;
   closure_129_2 = trackUserProfileAction;
   closure_129_3 = noop.useRef(false);
   const items = [flag, displayableBoardWidgets.length > 0, trackUserProfileAction];

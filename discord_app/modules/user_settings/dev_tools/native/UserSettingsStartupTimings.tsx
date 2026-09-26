@@ -24,7 +24,7 @@ function Code(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   code: { fontFamily: fn(1074).Fonts.CODE_BOLD },
@@ -96,7 +96,7 @@ export default function UserSettingsStartupTimings() {
               closure_128_1 = undefined;
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: tmp5(4695).getAppFirstVisibleTimestamp(), done: false };
+              const obj5 = { value: tmp5(4699).getAppFirstVisibleTimestamp(), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -108,9 +108,9 @@ export default function UserSettingsStartupTimings() {
             return obj6;
           } else {
             closure_128_0 = value;
-            closure_128_1 = tmp5(9642)(closure_128_0);
+            closure_128_1 = tmp5(9653)(closure_128_0);
             const obj7 = { message: closure_128_1 };
-            tmp2(7801).showShareActionSheet(obj7, "Startup Timing");
+            tmp2(7809).showShareActionSheet(obj7, "Startup Timing");
             c3 = 3;
             return { value: "HermesInternal", done: null };
           }
@@ -125,7 +125,7 @@ export default function UserSettingsStartupTimings() {
   let obj4 = { style: tmp.wrap, children: null };
   let obj5 = { contentContainerStyle: null, ListHeaderComponent: null, data: null, renderItem: null };
   let obj3 = require("TTIAnalyticsUtils");
-  obj5.contentContainerStyle = { paddingBottom: checked(1612)().bottom + tmp2(576).space.PX_16 };
+  obj5.contentContainerStyle = { paddingBottom: checked(1613)().bottom + tmp2(576).space.PX_16 };
   obj5.ListHeaderComponent = function ListHeaderComponent() {
     const obj = { spacing: 16, style: { padding: 16 }, children: null };
     const obj2 = {
@@ -278,6 +278,6 @@ export default function UserSettingsStartupTimings() {
   obj5.renderItem = function renderItem(children) {
     return closure_8(lastTrackedAppUiViewed2Properties, { children: children.item });
   };
-  obj4.children = closure_8(tmp10(8171).FlashList, obj5);
+  obj4.children = closure_8(tmp10(8179).FlashList, obj5);
   return closure_8(checked, obj4);
 }

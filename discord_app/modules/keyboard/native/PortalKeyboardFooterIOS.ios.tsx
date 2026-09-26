@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { keyboardStickyFooter: null };
 const rect = {
   position: "absolute",
@@ -39,13 +39,13 @@ export default function PortalKeyboardFooterIOS(animatedSheetIndex) {
   let animatedStyle;
   const tmp = progress();
   dependencyMap = tmp;
-  const bottom = flag(1612)().bottom;
-  const reanimatedKeyboardAnimation = animatedSheetIndex(1626).useReanimatedKeyboardAnimation();
+  const bottom = flag(1613)().bottom;
+  const reanimatedKeyboardAnimation = animatedSheetIndex(1627).useReanimatedKeyboardAnimation();
   const height = reanimatedKeyboardAnimation.height;
   progress = reanimatedKeyboardAnimation.progress;
-  let obj = animatedSheetIndex(1626);
-  const keyboardTypeSharedValue = animatedSheetIndex(4699).useKeyboardTypeSharedValue();
-  let obj2 = animatedSheetIndex(4699);
+  let obj = animatedSheetIndex(1627);
+  const keyboardTypeSharedValue = animatedSheetIndex(4703).useKeyboardTypeSharedValue();
+  let obj2 = animatedSheetIndex(4703);
   class S {
     constructor() {
       tmp = closure_0;
@@ -85,14 +85,14 @@ export default function PortalKeyboardFooterIOS(animatedSheetIndex) {
       return;
     }
   }
-  let obj3 = animatedSheetIndex(4563);
+  let obj3 = animatedSheetIndex(4566);
   S.__closure = {
-    interpolate: animatedSheetIndex(4563).interpolate,
+    interpolate: animatedSheetIndex(4566).interpolate,
     progress,
     bottom,
     followSystemKeyboard: flag,
     keyboardType: keyboardTypeSharedValue,
-    KeyboardTypes: animatedSheetIndex(1610).KeyboardTypes,
+    KeyboardTypes: animatedSheetIndex(1611).KeyboardTypes,
     animatedSheetIndex,
     height,
     EXPRESSION_FOOTER_HEIGHT: animatedSheetIndex(1094).EXPRESSION_FOOTER_HEIGHT,
@@ -106,15 +106,15 @@ export default function PortalKeyboardFooterIOS(animatedSheetIndex) {
     return items;
   }, items);
   let obj4 = {
-    interpolate: animatedSheetIndex(4563).interpolate,
+    interpolate: animatedSheetIndex(4566).interpolate,
     progress,
     bottom,
     followSystemKeyboard: flag,
     keyboardType: keyboardTypeSharedValue,
-    KeyboardTypes: animatedSheetIndex(1610).KeyboardTypes,
+    KeyboardTypes: animatedSheetIndex(1611).KeyboardTypes,
     animatedSheetIndex,
     height,
     EXPRESSION_FOOTER_HEIGHT: animatedSheetIndex(1094).EXPRESSION_FOOTER_HEIGHT,
   };
-  return height(flag(4563).View, { style: memo, children: height(animatedSheetIndex(4704).PortalHost, { name: str }) });
+  return height(flag(4566).View, { style: memo, children: height(animatedSheetIndex(4708).PortalHost, { name: str }) });
 }

@@ -25,12 +25,12 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(8821);
+const ChannelCallStore = fn(8829);
 ({ togglePipFocus: map1, useIsVoiceChatFocused: closure_14 } = ChannelCallStore);
-const ParticipantTypes = fn(4850).ParticipantTypes;
+const ParticipantTypes = fn(4857).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj = {
   elevationShadow: null,
   background: null,
@@ -314,67 +314,78 @@ let closure_22 = noop.memo((arg0) => {
     if (null != found) {
       let tmp14 = found;
     }
+    let avatarURL;
     const token = tmp2(tmp3[30]).useToken(selfParticipant(tmp3[15]).unsafe_rawColors.PRIMARY_800);
     if (tmp14 != null) {
       const user = tmp14.user;
-      const avatarURL = user.getAvatarURL(channel.guild_id, 80);
+      avatarURL = user.getAvatarURL(channel.guild_id, 80);
     }
+    const tmp2Result = tmp2(tmp3[30]);
+    const tmp23 = selfParticipant(tmp3[31])(avatarURL, token);
+    let id1;
+    const useAvatarSpeakingColor = tmp2(tmp3[32]).useAvatarSpeakingColor;
+    if (tmp14 != null) {
+      id1 = tmp14.user.id;
+    }
+    const obj6 = { userId: id1, guildId: channel.guild_id };
     if (null == tmp14) {
       return null;
     } else {
-      let tmp25 = null != tmp14.streamId;
-      if (tmp25) {
+      let tmp28 = null != tmp14.streamId;
+      if (tmp28) {
         const voiceState = tmp14.voiceState;
         let selfVideo;
         if (voiceState != null) {
           selfVideo = voiceState.selfVideo;
         }
-        tmp25 = selfVideo;
+        tmp28 = selfVideo;
       }
-      const obj6 = { style: null, children: null };
+      const obj7 = { style: null, children: null };
       const items6 = [tmp.avatarContainer];
-      const obj7 = { backgroundColor: tmp23 };
-      items6[1] = obj7;
-      obj6.style = items6;
-      if (tmp25) {
+      const obj8 = { backgroundColor: tmp23 };
+      items6[1] = obj8;
+      obj7.style = items6;
+      if (tmp28) {
         if (!tmp6) {
-          let tmp28 = closure_16;
-          const obj8 = {
+          let tmp31 = closure_16;
+          const obj9 = {
             participant: tmp14,
             avatarSize: tmp2(tmp3[14]).AvatarSizes.PROFILE,
             resizeMode: tmp2(tmp3[24]).ResizeMode.COVER,
           };
-          let tmp30 = closure_16(selfParticipant(tmp3[26]), obj8);
+          let tmp33 = closure_16(selfParticipant(tmp3[26]), obj9);
           const tmp20Result = selfParticipant(tmp3[26]);
         }
-        const items7 = [tmp30];
-        let tmp28Result = null;
+        const items7 = [tmp33];
+        let tmp31Result = null;
         if (tmp5) {
-          const obj9 = { style: tmp.thermalAlertIconContainer, children: null };
-          const obj11 = {
+          const obj10 = { style: tmp.thermalAlertIconContainer, children: null };
+          const obj12 = {
             style: tmp.thermalAlertIcon,
-            source: selfParticipant(tmp3[32]),
+            source: selfParticipant(tmp3[33]),
             color: tmp.thermalAlertIcon.color,
           };
-          obj9.children = tmp28(tmp2(tmp3[14]).Icon, obj11);
-          tmp28Result = tmp28(closure_5, obj9);
+          obj10.children = tmp31(tmp2(tmp3[14]).Icon, obj12);
+          tmp31Result = tmp31(closure_5, obj10);
         }
-        items7[1] = tmp28Result;
-        obj6.children = items7;
-        return tmp26(closure_5, obj6);
+        items7[1] = tmp31Result;
+        obj7.children = items7;
+        return tmp29(closure_5, obj7);
       }
-      const obj12 = {
+      const obj13 = {
         size: tmp2(tmp3[14]).AvatarSizes.LARGE_48,
         channel,
         guildId: channel.guild_id,
         user: null,
         speaking: null,
+        speakingColor: null,
       };
-      ({ user: obj10.user, speaking: obj10.speaking } = tmp14);
-      tmp30 = closure_16(tmp2(tmp3[14]).Avatar, obj12);
-      tmp28 = closure_16;
+      ({ user: obj11.user, speaking: obj11.speaking } = tmp14);
+      obj13.speakingColor = tmp26;
+      tmp33 = closure_16(tmp2(tmp3[14]).Avatar, obj13);
+      tmp31 = closure_16;
     }
-    const tmp2Result = tmp2(tmp3[30]);
+    const tmp2Result2 = tmp2(tmp3[32]);
   }
   let streamId;
   if (selfParticipant != null) {

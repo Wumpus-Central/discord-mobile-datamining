@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/native/UserProfileBadgesEditButton.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01980_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01981_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import BadgeCatalogIconDefault from "../../badges/native/BadgeCatalogIcon.tsx";
 import BadgeUtils from "../../badges/BadgeUtils.tsx";
@@ -12,10 +12,10 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const ContentDismissActionType = fn(2041).ContentDismissActionType;
+const ContentDismissActionType = fn(2042).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = {
   content: { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 },
   badge: { width: 32, height: 32 },
@@ -64,7 +64,7 @@ export default function UserProfileBadgesEditButton(arg0) {
   closure_5 = tmp8;
   const items2 = [analyticsLocations, tmp8, tmp6[1]];
   onPress = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14153, dependencyMap.paths), "Customize Badges", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14178, dependencyMap.paths), "Customize Badges", {
       analyticsLocations,
     });
     if (closure_5) {

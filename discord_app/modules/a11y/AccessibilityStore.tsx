@@ -5,6 +5,7 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import shared from "../../design/shared.tsx";
 import CrossPlatformNativeUtilsDefault from "../../utils/CrossPlatformNativeUtils.native.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
+import GameModeStore from "../game_mode/GameModeStore.tsx";
 import SelectivelySyncedUserSettingsStore from "../user_settings/SelectivelySyncedUserSettingsStore.tsx";
 import ThemeStore from "../user_settings/ThemeStore.tsx";
 import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx";
@@ -91,11 +92,11 @@ let closure_3 = ["fontScale"];
 const Constants = fn(1074);
 const Accessibility = Constants.Accessibility;
 const ThemeTypes = Constants.ThemeTypes;
-const MessageConstants = fn(4822);
+const MessageConstants = fn(4829);
 ({
-  MESSAGE_GROUP_SPACING: c10,
-  DEFAULT_COMPACT_SPACING: closure_11,
-  DEFAULT_COZY_SPACING: closure_12,
+  MESSAGE_GROUP_SPACING: closure_11,
+  DEFAULT_COMPACT_SPACING: closure_12,
+  DEFAULT_COZY_SPACING: map1,
 } = MessageConstants);
 let obj = { DEFAULT: "default", HIGH: "high" };
 let obj2 = { FLEXIBLE: "flexible", CONDENSED: "condensed", HIDDEN: "hidden" };
@@ -137,7 +138,7 @@ let obj3 = {
   youBarAvatarDecoAnimation: "animate-never",
 };
 obj = obj3;
-let closure_17 = {
+let closure_18 = {
   12: "font-size-12",
   14: "font-size-14",
   15: "font-size-15",
@@ -166,11 +167,21 @@ prototype["initialize"] = function initialize(arg0) {
   if (null != obj.messageGroupSpacing) {
     num = obj.messageGroupSpacing;
   }
-  if (closure_1_10.indexOf(num) < 0) {
+  if (closure_11.indexOf(num) < 0) {
     obj.messageGroupSpacing = null;
   }
   const items = [UserSettingsProtoStore, SelectivelySyncedUserSettingsStore];
   self.syncWith(items, maybeApplyNoTextColorForLightCustomTheme);
+  let isThrottling = false;
+  const items1 = [GameModeStore];
+  self.syncWith(items1, () => {
+    isThrottling = GameModeStore.isThrottling;
+    let flag = isThrottling !== isThrottling;
+    if (flag) {
+      flag = true;
+    }
+    return flag;
+  });
 };
 Object.defineProperty(prototype, "fontScale", {
   get: function fontScale() {
@@ -199,7 +210,7 @@ Object.defineProperty(prototype, "isFontScaledDown", {
 Object.defineProperty(prototype, "fontScaleClass", {
   get: function fontScaleClass() {
     const self = this;
-    let str = closure_17[this.fontSize];
+    let str = closure_18[this.fontSize];
     if (str == null) {
       str = "";
     }
@@ -290,7 +301,7 @@ Object.defineProperty(prototype, "messageGroupSpacing", {
       let messageGroupSpacing = obj.messageGroupSpacing;
     } else {
       const MessageDisplayCompact = require("UserSettings").MessageDisplayCompact;
-      messageGroupSpacing = MessageDisplayCompact.getSetting() ? closure_1_11 : closure_1_12;
+      messageGroupSpacing = MessageDisplayCompact.getSetting() ? closure_1_12 : map1;
     }
     return messageGroupSpacing;
   },
@@ -299,14 +310,14 @@ Object.defineProperty(prototype, "messageGroupSpacing", {
 Object.defineProperty(prototype, "isMessageGroupSpacingIncreased", {
   get: function isMessageGroupSpacingIncreased() {
     const MessageDisplayCompact = require("UserSettings").MessageDisplayCompact;
-    return this.messageGroupSpacing > (MessageDisplayCompact.getSetting() ? closure_1_11 : closure_1_12);
+    return this.messageGroupSpacing > (MessageDisplayCompact.getSetting() ? closure_1_12 : map1);
   },
   set: undefined,
 });
 Object.defineProperty(prototype, "isMessageGroupSpacingDecreased", {
   get: function isMessageGroupSpacingDecreased() {
     const MessageDisplayCompact = require("UserSettings").MessageDisplayCompact;
-    return this.messageGroupSpacing < (MessageDisplayCompact.getSetting() ? closure_1_11 : closure_1_12);
+    return this.messageGroupSpacing < (MessageDisplayCompact.getSetting() ? closure_1_12 : map1);
   },
   set: undefined,
 });
@@ -334,8 +345,8 @@ Object.defineProperty(prototype, "rawPrefersReducedMotion", {
   },
   set: undefined,
 });
-Object.defineProperty(prototype, "useReducedMotion", {
-  get: function useReducedMotion() {
+Object.defineProperty(prototype, "prefersReducedMotion", {
+  get: function prefersReducedMotion() {
     const prefersReducedMotion = obj.prefersReducedMotion;
     if ("no-preference" === prefersReducedMotion) {
       let flag = false;
@@ -346,6 +357,17 @@ Object.defineProperty(prototype, "useReducedMotion", {
       }
     }
     return flag;
+  },
+  set: undefined,
+});
+Object.defineProperty(prototype, "useReducedMotion", {
+  get: function useReducedMotion() {
+    let prefersReducedMotion = GameModeStore.isThrottling;
+    if (!prefersReducedMotion) {
+      const self = this;
+      prefersReducedMotion = this.prefersReducedMotion;
+    }
+    return prefersReducedMotion;
   },
   set: undefined,
 });

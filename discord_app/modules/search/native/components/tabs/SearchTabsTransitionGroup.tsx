@@ -143,7 +143,7 @@ function AnimatedTabs(state) {
     tmp13 = callback1;
   }
   obj4.onEndDrag = tmp13;
-  obj3.children = context(state(cleanUp[9]).Tabs, obj4);
+  obj3.children = context(state(cleanUp[3]).Tabs, obj4);
   return context(transitionState(cleanUp[4]).View, obj3);
 }
 function renderItem(key, state, transitionState, cleanUp) {

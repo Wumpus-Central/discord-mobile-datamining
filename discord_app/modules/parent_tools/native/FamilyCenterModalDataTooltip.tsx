@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/native/FamilyCenterModalDataTooltip.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef2486 from "../FamilyCenter.messages.js";
+import _modDef2487 from "../FamilyCenter.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
@@ -37,9 +37,9 @@ function FamilyCenterModalDataTooltipScreen() {
   const intl = require("util").intl;
   obj = require("useAgeSpecificText");
   const intl2 = require("util").intl;
-  const ageSpecificText = obj.useAgeSpecificText(intl.string(_modDef2486.n6LOrh), intl2.string(_modDef2486.JNLpDZ));
+  const ageSpecificText = obj.useAgeSpecificText(intl.string(_modDef2487.n6LOrh), intl2.string(_modDef2487.JNLpDZ));
   _require = useIsInAdultAgeGroupDefault();
-  const stringResult = intl.string(_modDef2486.n6LOrh);
+  const stringResult = intl.string(_modDef2487.n6LOrh);
   const sortedActivityTypeConfigs = require("FamilyCenterUtils").getSortedActivityTypeConfigs();
   const obj3 = { children: null };
   const obj4 = { children: null };
@@ -78,18 +78,18 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = {
-  [USER_INTERACTION]: fn(5378).ChatIcon,
-  [USER_CALLED]: fn(11385).PhoneIcon,
-  [USER_ADD]: fn(4526).FriendsIcon,
-  [GUILD_ADD]: fn(13112).ServerGridIcon,
-  [GUILD_INTERACTION]: fn(5380).ThreadIcon,
-  [PURCHASES]: fn(11387).CreditCardIcon,
-  [TOTAL_VOICE_MINUTES]: fn(4791).ClockIcon,
-  [GIFTS]: fn(10485).GiftIcon,
+  [USER_INTERACTION]: fn(5385).ChatIcon,
+  [USER_CALLED]: fn(11399).PhoneIcon,
+  [USER_ADD]: fn(4529).FriendsIcon,
+  [GUILD_ADD]: fn(13129).ServerGridIcon,
+  [GUILD_INTERACTION]: fn(5387).ThreadIcon,
+  [PURCHASES]: fn(11401).CreditCardIcon,
+  [TOTAL_VOICE_MINUTES]: fn(4795).ClockIcon,
+  [GIFTS]: fn(10496).GiftIcon,
 };
 ({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } =
-  fn(6953).TeenActionDisplayType);
-let createStyles = fn(4829);
+  fn(6958).TeenActionDisplayType);
+let createStyles = fn(4836);
 let obj3 = {
   row: {
     display: "flex",
@@ -134,7 +134,7 @@ obj3.header = { marginBottom: nativeDefault.space.PX_4 };
 let obj5 = { marginBottom: nativeDefault.space.PX_4 };
 obj3.icon = { tintColor: nativeDefault.colors.TEXT_BRAND };
 let closure_8 = createStyles.createStyles(obj3);
-createStyles = fn(4829);
+createStyles = fn(4836);
 let obj7 = { container: null, groupHeader: null };
 const obj6 = { tintColor: nativeDefault.colors.TEXT_BRAND };
 obj7.container = { display: "flex", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };

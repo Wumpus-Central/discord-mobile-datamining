@@ -54,7 +54,7 @@ function AnimatedEnterExitContainer(children) {
   let sharedValue;
   sharedValue = state(sharedValue[10]).useSharedValue(0);
   let obj = state(sharedValue[10]);
-  let fn = function l() {
+  let fn = function c() {
     let obj = { opacity: null, transform: null };
     value = sharedValue.get();
     const fn = function t(arg0) {
@@ -105,9 +105,9 @@ function AnimatedEnterExitContainer(children) {
   return jsx(cleanUp(sharedValue[10]).View, { style, children: children.children });
 }
 const View = fn(17).View;
-const SearchFilterAddLocations = fn(7297).SearchFilterAddLocations;
-let jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const SearchFilterAddLocations = fn(7302).SearchFilterAddLocations;
+const jsx = fn(21).jsx;
+const createStyles = fn(4836);
 let obj = { card: null };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj.card = {
@@ -143,19 +143,22 @@ let result = size.fileFinishedImporting(
 
 export default noop.memo(function SearchFilterSuggestions(searchContext) {
   searchContext = searchContext.searchContext;
-  const onLayoutMeasure = searchContext.onLayoutMeasure;
   const containerStyle = searchContext.containerStyle;
-  const dismissed = searchContext.dismissed;
+  closure_8 = undefined;
   let memo;
-  let getItemKey;
-  const tmp = memo();
-  noop = tmp;
-  const validFilterTokens = searchContext(containerStyle[14]).useValidFilterTokens(searchContext);
-  const tmp3 = dismissed(noop.useState([]), 2);
-  const first = tmp3[0];
-  jsx = tmp5;
-  let items = [validFilterTokens, searchContext, tmp3[1]];
-  const effect = noop.useEffect(
+  const tmp = closure_8();
+  dependencyMap = tmp;
+  const searchSuggestionsContext = searchContext(16435).useSearchSuggestionsContext();
+  const suggestionsRef = searchSuggestionsContext.suggestionsRef;
+  const suggestionsMounted = searchSuggestionsContext.suggestionsMounted;
+  const dismissed = searchSuggestionsContext.dismissed;
+  let obj = searchContext(16435);
+  const validFilterTokens = searchContext(16444).useValidFilterTokens(searchContext);
+  const tmp4 = suggestionsRef(suggestionsMounted.useState([]), 2);
+  const first = tmp4[0];
+  closure_8 = tmp6;
+  let items = [validFilterTokens, searchContext, tmp4[1]];
+  const effect = suggestionsMounted.useEffect(
     () =>
       SearchPlatformUtilsDefault.subscribeSearchQueryState(
         searchContext,
@@ -167,9 +170,7 @@ export default noop.memo(function SearchFilterSuggestions(searchContext) {
           ({ textInputValue, isAutocompleteVisible } = arg0);
           if ("" !== textInputValue.trim()) {
             if (!isAutocompleteVisible) {
-              const searchFilterSuggestions = searchContext(containerStyle[7]).getSearchFilterSuggestions(
-                textInputValue,
-              );
+              const searchFilterSuggestions = searchContext(card[7]).getSearchFilterSuggestions(textInputValue);
               if (0 !== searchFilterSuggestions.length) {
                 closure_1 = [];
                 const item = searchFilterSuggestions.forEach((token, index) => {
@@ -180,17 +181,17 @@ export default noop.memo(function SearchFilterSuggestions(searchContext) {
                       searchTokenType: token,
                       start: 0 === index,
                       end: index === searchFilterSuggestions.length - 1,
-                      onPress: searchContext(containerStyle[7]).getSearchTokenPressHandler(
+                      onPress: searchContext(dependencyMap[7]).getSearchTokenPressHandler(
                         closure_2_0,
                         token,
-                        first.SEARCH_INPUT_DROPDOWN,
+                        validFilterTokens.SEARCH_INPUT_DROPDOWN,
                       ),
                     };
                     closure_1.push(obj);
-                    const obj2 = searchContext(containerStyle[7]);
+                    const obj2 = searchContext(dependencyMap[7]);
                   }
                 });
-                closure_7((arr) => {
+                closure_8((arr) => {
                   const mapped = arr.map((text) => text.text);
                   let tmp2 = closure_1;
                   const joined = mapped.join(" ");
@@ -201,66 +202,53 @@ export default noop.memo(function SearchFilterSuggestions(searchContext) {
                   return tmp2;
                 });
               } else {
-                closure_7(closure_1_14);
+                closure_8(closure_1_14);
               }
-              let obj = searchContext(containerStyle[7]);
+              let obj = searchContext(card[7]);
             }
           }
-          closure_7(closure_1_14);
+          closure_8(closure_1_14);
         },
       ),
     items,
   );
-  let obj = searchContext(containerStyle[14]);
-  const fn = function b() {
+  let obj2 = searchContext(16444);
+  const fn = function f() {
     return dismissed.get();
   };
   fn.__closure = { dismissed };
   fn.__workletHash = 17191989548971;
   fn.__initData = __initData2;
-  class E {
+  class T {
     constructor(arg0) {
       if (searchContext) {
         tmp = closure_0;
         tmp2 = closure_2;
         obj = closure_0(closure_2[10]);
-        tmp3 = closure_7;
+        tmp3 = closure_8;
         tmp4 = closure_14;
-        tmp5 = obj.runOnJS(closure_7)(closure_14);
+        tmp5 = obj.runOnJS(closure_8)(closure_14);
       }
       return;
     }
   }
-  let obj2 = searchContext(containerStyle[10]);
-  E.__closure = {
-    runOnJS: searchContext(containerStyle[10]).runOnJS,
-    setSuggestions: tmp3[1],
-    EMPTY_SEARCH_FILTER_ROWS,
-  };
-  E.__workletHash = 8991360021943;
-  E.__initData = __initData3;
-  const animatedReaction = obj2.useAnimatedReaction(fn, E);
-  let items1 = [containerStyle, tmp.card];
-  memo = noop.useMemo(() => {
+  const obj3 = searchContext(4566);
+  T.__closure = { runOnJS: searchContext(4566).runOnJS, setSuggestions: tmp4[1], EMPTY_SEARCH_FILTER_ROWS };
+  T.__workletHash = 8991360021943;
+  T.__initData = __initData3;
+  const animatedReaction = obj3.useAnimatedReaction(fn, T);
+  let items1 = [first, suggestionsMounted];
+  const effect1 = suggestionsMounted.useEffect(() => {
+    const result = suggestionsMounted.set(first.length > 0);
+  }, items1);
+  const items2 = [containerStyle, tmp.card];
+  memo = suggestionsMounted.useMemo(() => {
     const items = [card.card, containerStyle];
     return items;
-  }, items1);
-  noop.useRef(null);
-  const items2 = [onLayoutMeasure];
-  getItemKey = noop.useCallback(() => {
-    const timerId = setTimeout(() => {
-      const current = ref.current;
-      if (current != null) {
-        current.measure((arg0, arg1, arg2, arg3, left, top) => {
-          const rect = { top, bottom: top + arg3, left, right: left + arg2 };
-          closure_1_1(rect);
-        });
-      }
-    });
   }, items2);
   const items3 = [first];
-  const items4 = [memo, getItemKey];
-  const memo1 = noop.useMemo(() => {
+  const items4 = [memo, suggestionsRef];
+  const memo1 = suggestionsMounted.useMemo(() => {
     if (first.length > 0) {
       const items = [tmp];
       let items1 = items;
@@ -269,29 +257,33 @@ export default noop.memo(function SearchFilterSuggestions(searchContext) {
     }
     return items1;
   }, items3);
-  const callback1 = noop.useCallback((key, arr, state, cleanUp) => {
+  const callback = suggestionsMounted.useCallback((key, arr, state, cleanUp) => {
     const obj = {
       state,
       cleanUp,
       children: (
-        <View ref={ref} style={memo} collapsable={false} onLayout={onLayout}>
+        <View ref={suggestionsRef} style={memo} collapsable={false}>
           {arr.map((text) => {
             const merged = Object.assign(text);
-            return closure_1_7(ref, {}, text.text);
+            return first(memo, {}, text.text);
           })}
         </View>
       ),
     };
     return (
       <AnimatedEnterExitContainer key={key} state={state} cleanUp={cleanUp}>
-        <View ref={ref} style={memo} collapsable={false} onLayout={onLayout}>
+        <View ref={suggestionsRef} style={memo} collapsable={false}>
           {arr.map((text) => {
             const merged = Object.assign(text);
-            return closure_1_7(ref, {}, text.text);
+            return first(memo, {}, text.text);
           })}
         </View>
       </AnimatedEnterExitContainer>
     );
   }, items4);
-  return jsx(searchContext(containerStyle[13]).TransitionGroup, { items: memo1, renderItem: callback1, getItemKey });
+  return first(searchContext(4540).TransitionGroup, {
+    items: memo1,
+    renderItem: callback,
+    getItemKey: getSuggestionsKey,
+  });
 });

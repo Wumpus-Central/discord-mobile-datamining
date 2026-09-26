@@ -129,6 +129,11 @@ function transformUser(mfa_enabled) {
     delete tmp[tmp3];
     const tmp4Result9 = CustomTypingIndicatorTypes;
   }
+  const vad_colors = mfa_enabled.vad_colors;
+  if (undefined !== vad_colors) {
+    mfa_enabled.vadColors = vad_colors;
+    delete tmp[tmp3];
+  }
   const premium_state = mfa_enabled.premium_state;
   if (undefined !== premium_state) {
     mfa_enabled.premiumState = PremiumStateUtils.parseServerPremiumState(premium_state);

@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 const constants = fn(1074).PriceSetAssignmentPurchaseTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 const obj2 = {
   container: {
     flexDirection: "row",
@@ -53,9 +53,9 @@ export default function SocialLayerStorefrontGiftProductDetails(sku) {
   sku = sku.sku;
   let getOrFetchApplication;
   const tmp = closure_9();
-  getOrFetchApplication = getOrFetchApplication(6584).useGetOrFetchApplication(sku.applicationId);
-  let obj = getOrFetchApplication(6584);
-  const userPrice = getOrFetchApplication(10255).useFormattedSKUPrice({
+  getOrFetchApplication = getOrFetchApplication(6589).useGetOrFetchApplication(sku.applicationId);
+  let obj = getOrFetchApplication(6589);
+  const userPrice = getOrFetchApplication(10267).useFormattedSKUPrice({
     sku,
     priceSetAssignmentPurchaseType: constants.GIFT,
   }).userPrice;
@@ -85,20 +85,20 @@ export default function SocialLayerStorefrontGiftProductDetails(sku) {
     }
     const items2 = [tmp8Result];
     const obj9 = { variant: "text-sm/medium", color: "text-muted", children: getOrFetchApplication.name };
-    items2[1] = closure_7(tmp2(4825).Text, obj9);
+    items2[1] = closure_7(tmp2(4832).Text, obj9);
     obj6.children = items2;
     tmp6Result = closure_8(closure_5, obj6);
   }
   const items3 = [
     tmp6Result,
-    closure_7(getOrFetchApplication(4825).Text, { variant: "text-md/semibold", children: sku.name }),
+    closure_7(getOrFetchApplication(4832).Text, { variant: "text-md/semibold", children: sku.name }),
   ];
   obj5.children = items3;
   items1[1] = closure_8(closure_5, obj5);
   let tmp8Result2 = null != userPrice;
   if (tmp8Result2) {
     const obj11 = { variant: "text-md/semibold", children: userPrice };
-    tmp8Result2 = closure_7(tmp2(4825).Text, obj11);
+    tmp8Result2 = closure_7(tmp2(4832).Text, obj11);
   }
   items1[2] = tmp8Result2;
   obj4.children = items1;

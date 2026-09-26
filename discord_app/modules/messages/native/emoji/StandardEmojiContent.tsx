@@ -32,7 +32,7 @@ function Emoji(surrogate) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = {
   emojiSurrogate: { lineHeight: 48, fontSize: 40, margin: 8 },
   ctaContainer: { paddingTop: nativeDefault.space.PX_4 },

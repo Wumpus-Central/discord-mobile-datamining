@@ -73,8 +73,8 @@ function JoinStageOverlay(channel) {
     }
     return { opacity: spring.withSpring(num, closure_11) };
   };
-  let obj = showOverlay(4563);
-  fn.__closure = { withSpring: showOverlay(5273).withSpring, showOverlay, viewAnimationConfig };
+  let obj = showOverlay(4566);
+  fn.__closure = { withSpring: showOverlay(5280).withSpring, showOverlay, viewAnimationConfig };
   fn.__workletHash = 1929951426580;
   fn.__initData = __initData2;
   const animatedStyle = obj.useAnimatedStyle(fn);
@@ -88,7 +88,7 @@ function JoinStageOverlay(channel) {
   }, []);
   const obj3 = { style: null, children: null };
   const items = [closure_5.absoluteFill, ,];
-  const obj2 = { withSpring: showOverlay(5273).withSpring, showOverlay, viewAnimationConfig };
+  const obj2 = { withSpring: showOverlay(5280).withSpring, showOverlay, viewAnimationConfig };
   items[1] = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_800 };
   items[2] = animatedStyle;
   obj3.style = items;
@@ -127,7 +127,7 @@ const __initData = {
 const __initData2 = {
   code: "function StageChannelCallNavigatorTsx2(){const{withSpring,showOverlay,viewAnimationConfig}=this.__closure;return{opacity:withSpring(showOverlay?1:0,viewAnimationConfig)};}",
 };
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { startStagePrompt: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_17 = createStyles.createStyles(obj2);
 const size = fn(2);

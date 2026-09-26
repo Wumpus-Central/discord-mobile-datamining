@@ -5,7 +5,7 @@ import ChannelSectionStore from "../../stores/ChannelSectionStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 
 require = fn;
-const isGuildHomeChannel = fn(2051).isGuildHomeChannel;
+const isGuildHomeChannel = fn(2052).isGuildHomeChannel;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/isSelectedFromHomeChannel.native.tsx");
 

@@ -3,7 +3,7 @@ import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import InstantInviteActionCreatorsDefault from "../../../actions/InstantInviteActionCreators.tsx";
-import _modDef8802 from "../../../../_runtime/metro/08802__.js";
+import _modDef8810 from "../../../../_runtime/metro/08810__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 
@@ -18,7 +18,7 @@ export const revokeAllFriendInvites = function revokeAllFriendInvites() {
     const obj2 = { key: "TOAST_FRIEND_INVITES_REVOKED", content: null, icon: null };
     const intl = util.intl;
     obj2.content = intl.string(util.t.jSHEOQ);
-    obj2.icon = _modDef8802;
+    obj2.icon = _modDef8810;
     ToastActionCreatorsDefault.open(obj2);
   });
 };
@@ -46,12 +46,12 @@ export const acceptFriendInvite = function acceptFriendInvite(invite, context) {
           obj.open({
             key: "FRIEND_INVITE_ACCEPT_CONFIRMATION",
             content: intl.formatToPlainString(util.t.st2dcs, { username }),
-            icon: _modDef8802,
+            icon: _modDef8810,
           });
           const obj2 = {
             key: "FRIEND_INVITE_ACCEPT_CONFIRMATION",
             content: intl.formatToPlainString(util.t.st2dcs, { username }),
-            icon: _modDef8802,
+            icon: _modDef8810,
           };
           DispatcherDefault.wait(() => closure_1_1(closure_1_2[7])());
           const tmpResult = DispatcherDefault;

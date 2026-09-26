@@ -36,7 +36,7 @@ export default function useIsCurrentUserEligibleForPowerupUpsells() {
     const isPremiumGroupMemberResult = stateFromStores.isPremiumGroupMember();
     let tmp5 = !isPremiumGroupMemberResult;
     if (!isPremiumGroupMemberResult) {
-      let isPremiumResult = tmp(1969).isPremium(stateFromStores, PremiumTypes.TIER_2);
+      let isPremiumResult = tmp(1970).isPremium(stateFromStores, PremiumTypes.TIER_2);
       if (!isPremiumResult) {
         isPremiumResult =
           stateFromStoresArray.some(
@@ -64,7 +64,7 @@ export default function useIsCurrentUserEligibleForPowerupUpsells() {
           });
       }
       tmp5 = isPremiumResult;
-      const tmpResult = tmp(1969);
+      const tmpResult = tmp(1970);
     }
     tmp3 = tmp5;
   }
@@ -84,7 +84,7 @@ export const getIsCurrentUserEligibleForPowerupUpsells = function getIsCurrentUs
     const isPremiumGroupMemberResult = currentUser.isPremiumGroupMember();
     let tmp5 = !isPremiumGroupMemberResult;
     if (!isPremiumGroupMemberResult) {
-      let isPremiumResult = currentUser(1969).isPremium(currentUser, PremiumTypes.TIER_2);
+      let isPremiumResult = currentUser(1970).isPremium(currentUser, PremiumTypes.TIER_2);
       if (!isPremiumResult) {
         isPremiumResult =
           items.some((premiumGuildSubscription) => null != premiumGuildSubscription.premiumGuildSubscription) ||
@@ -108,7 +108,7 @@ export const getIsCurrentUserEligibleForPowerupUpsells = function getIsCurrentUs
           });
       }
       tmp5 = isPremiumResult;
-      const obj3 = currentUser(1969);
+      const obj3 = currentUser(1970);
     }
     tmp3 = tmp5;
   }

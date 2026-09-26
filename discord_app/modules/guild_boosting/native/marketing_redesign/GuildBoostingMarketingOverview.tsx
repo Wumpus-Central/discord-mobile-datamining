@@ -12,7 +12,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, AnalyticsPages: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_13 = createStyles.createStyles({ wrapper: { paddingBottom: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -88,9 +88,9 @@ export default function GuildBoostingMarketingOverview(guildId) {
   );
   const effect1 = obj4.useEffect(() => {
     guildBoostSlots(stateFromStores[16]).wait(() => {
-      const premiumSubscriptionPlans = guildId(6670).fetchPremiumSubscriptionPlans();
-      const obj = guildId(6670);
-      const paymentSources = guildId(5167).fetchPaymentSources();
+      const premiumSubscriptionPlans = guildId(6675).fetchPremiumSubscriptionPlans();
+      const obj = guildId(6675);
+      const paymentSources = guildId(5174).fetchPaymentSources();
     });
   }, []);
   let tmp18 = null;

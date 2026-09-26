@@ -1,5 +1,5 @@
 // discord_app/modules/blocked_domains/BlockedDomainModalActionCreators.native.tsx
-import asyncRequireImpl from "../../../_runtime/01980_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01981_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -7,6 +7,6 @@ const result = size.fileFinishedImporting("modules/blocked_domains/BlockedDomain
 
 export default {
   show(url) {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12488, dependencyMap.paths), "blocked-domain", { url });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12505, dependencyMap.paths), "blocked-domain", { url });
   },
 };

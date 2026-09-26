@@ -1,28 +1,28 @@
 // discord_app/modules/vibegrations/lib/VibegrationsDebugLabels.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3714 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3715 from "../intl/VibegrationsUntranslated.messages.js";
 import VibegrationsDebugFormat from "VibegrationsDebugFormat.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const set = new Set(["error", "aborted", "length"]);
 let closure_4 = {
   db() {
-    return _modDef3714.r6cciE;
+    return _modDef3715.r6cciE;
   },
   db_preview() {
-    return _modDef3714.JmIyL8;
+    return _modDef3715.JmIyL8;
   },
   runtime() {
-    return _modDef3714.bzNyv8;
+    return _modDef3715.bzNyv8;
   },
   runtime_preview() {
-    return _modDef3714["LONZ/8"];
+    return _modDef3715["LONZ/8"];
   },
   bot() {
-    return _modDef3714.jdpw3A;
+    return _modDef3715.jdpw3A;
   },
   bot_preview() {
-    return _modDef3714["/g6wUz"];
+    return _modDef3715["/g6wUz"];
   },
 };
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsDebugLabels.tsx");
@@ -30,15 +30,15 @@ const result = size.fileFinishedImporting("modules/vibegrations/lib/Vibegrations
 export const debugEnvLabel = function debugEnvLabel(env) {
   const intl = util.intl;
   if ("preview" === env) {
-    let kiOVnt = _modDef3714["+m8XM6"];
+    let kiOVnt = _modDef3715["+m8XM6"];
   } else {
-    kiOVnt = _modDef3714.kiOVnt;
+    kiOVnt = _modDef3715.kiOVnt;
   }
   return intl.string(kiOVnt);
 };
 export const debugYesNo = function debugYesNo(connected) {
   const intl = util.intl;
-  const tmp = _modDef3714;
+  const tmp = _modDef3715;
   return intl.string(connected ? tmp["9KlveJ"] : tmp["4tYZVa"]);
 };
 export const DEBUG_LOG_FILTERS = ["all", "preview", "stable", "web"];
@@ -47,18 +47,18 @@ export const debugLogFilterLabel = function debugLogFilterLabel(id) {
     if ("stable" !== id) {
       if ("web" === id) {
         const intl2 = util.intl;
-        return intl2.string(_modDef3714.J2TPCe);
+        return intl2.string(_modDef3715.J2TPCe);
       } else {
         const intl = util.intl;
-        return intl.string(_modDef3714.humq1B);
+        return intl.string(_modDef3715.humq1B);
       }
     }
   }
   const intl3 = util.intl;
   if ("preview" === id) {
-    let kiOVnt = _modDef3714["+m8XM6"];
+    let kiOVnt = _modDef3715["+m8XM6"];
   } else {
-    kiOVnt = _modDef3714.kiOVnt;
+    kiOVnt = _modDef3715.kiOVnt;
   }
   return intl3.string(kiOVnt);
 };
@@ -102,23 +102,23 @@ export const modelCallOutcome = function modelCallOutcome(call) {
 export const forceCompactionStatus = function forceCompactionStatus(stateFromStores3) {
   if ("idle" === stateFromStores3) {
     const intl4 = util.intl;
-    return intl4.string(_modDef3714.wBng42);
+    return intl4.string(_modDef3715.wBng42);
   } else if ("pending" === stateFromStores3) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3714["0tgo31"]);
+    return intl3.string(_modDef3715["0tgo31"]);
   } else {
     const formatObservedAtResult = VibegrationsDebugFormat.formatObservedAt(stateFromStores3.observedAt);
     if ("compacted" === stateFromStores3.outcome) {
       const intl2 = util.intl;
       const obj2 = { time: formatObservedAtResult };
-      return intl2.formatToPlainString(_modDef3714["eL8+rZ"], obj2);
+      return intl2.formatToPlainString(_modDef3715["eL8+rZ"], obj2);
     } else {
       if ("declined" === stateFromStores3.outcome) {
-        let v9vZuG6 = _modDef3714["9vZuG6"];
+        let v9vZuG6 = _modDef3715["9vZuG6"];
       } else if ("busy" === stateFromStores3.outcome) {
-        v9vZuG6 = _modDef3714.GV4sdd;
+        v9vZuG6 = _modDef3715.GV4sdd;
       } else {
-        v9vZuG6 = _modDef3714["Y+0nUb"];
+        v9vZuG6 = _modDef3715["Y+0nUb"];
       }
       const intl = util.intl;
       let str2 = stateFromStores3.reason;
@@ -134,21 +134,21 @@ export const analyticsUnavailableReason = function analyticsUnavailableReason(an
   const reason = analytics.reason;
   if ("local" === reason) {
     const intl5 = util.intl;
-    return intl5.string(_modDef3714.M7Vn6y);
+    return intl5.string(_modDef3715.M7Vn6y);
   } else if ("unconfigured" === reason) {
     const intl4 = util.intl;
-    return intl4.string(_modDef3714.QirpMl);
+    return intl4.string(_modDef3715.QirpMl);
   } else if ("unauthorized" === reason) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3714.QZ1e4l);
+    return intl3.string(_modDef3715.QZ1e4l);
   } else {
     if (null != analytics.detail) {
       const intl2 = util.intl;
       const obj = { detail: analytics.detail };
-      let formatToPlainStringResult = intl2.formatToPlainString(_modDef3714.zUTHf7, obj);
+      let formatToPlainStringResult = intl2.formatToPlainString(_modDef3715.zUTHf7, obj);
     } else {
       const intl = util.intl;
-      formatToPlainStringResult = intl.string(_modDef3714.WIAQes);
+      formatToPlainStringResult = intl.string(_modDef3715.WIAQes);
     }
     return formatToPlainStringResult;
   }
@@ -169,7 +169,7 @@ export const analyticsMemoryValue = function analyticsMemoryValue(found) {
       num2 = 0;
     }
     obj2.p999 = VibegrationsDebugFormat.formatBytes(num2);
-    let formatToPlainStringResult = intl.formatToPlainString(_modDef3714.SBkDIZ, obj2);
+    let formatToPlainStringResult = intl.formatToPlainString(_modDef3715.SBkDIZ, obj2);
     const tmp2Result = VibegrationsDebugFormat;
   } else {
     formatToPlainStringResult = null;

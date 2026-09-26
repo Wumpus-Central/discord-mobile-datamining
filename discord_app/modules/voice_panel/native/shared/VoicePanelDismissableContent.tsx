@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/shared/VoicePanelDismissableContent.tsx
-import asyncRequireImpl from "../../../../../_runtime/01980_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01981_asyncRequireImpl.js";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -7,10 +7,10 @@ import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 
 require = fn;
 function VoiceControlsNuxActionSheetImporter() {
-  return asyncRequireImpl(16891, dependencyMap.paths);
+  return asyncRequireImpl(16920, dependencyMap.paths);
 }
-const VoicePanelModes = fn(11741).VoicePanelModes;
-const isActivityParticipant = fn(4850).isActivityParticipant;
+const VoicePanelModes = fn(11755).VoicePanelModes;
+const isActivityParticipant = fn(4857).isActivityParticipant;
 const jsx = fn(21).jsx;
 const __initData = {
   code: "function VoicePanelDismissableContentTsx1(){const{mode,VoicePanelModes,focused}=this.__closure;var _focused$get;return mode.get()===VoicePanelModes.PANEL?(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id:undefined;}",

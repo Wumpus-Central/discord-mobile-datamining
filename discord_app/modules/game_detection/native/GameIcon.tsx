@@ -1,9 +1,9 @@
 // discord_app/modules/game_detection/native/GameIcon.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef6589 from "../../../../_runtime/metro/06589__.js";
-import _modDef6590 from "../../../../_runtime/metro/06590__.js";
-import _modDef6591 from "../../../../_runtime/metro/06591__.js";
-import _modDef6592 from "../../../../_runtime/metro/06592__.js";
+import _modDef6594 from "../../../../_runtime/metro/06594__.js";
+import _modDef6595 from "../../../../_runtime/metro/06595__.js";
+import _modDef6596 from "../../../../_runtime/metro/06596__.js";
+import _modDef6597 from "../../../../_runtime/metro/06597__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 class GameIcon {
@@ -90,7 +90,7 @@ let obj2 = {
   [GameIconSizes.NORMAL]: 48,
   [GameIconSizes.LARGE]: 80,
 };
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj4 = {
   gameIcon: { justifyContent: "center", alignItems: "center" },
   size24: null,

@@ -1,5 +1,5 @@
 // discord_app/records/InviteRecord.tsx
-import _modDef4418 from "../../_runtime/metro/04418__.js";
+import _modDef4421 from "../../_runtime/metro/04421__.js";
 import Record from "../lib/Record.tsx";
 import UserRecord from "UserRecord.tsx";
 
@@ -52,7 +52,7 @@ InviteRecord["createFromServer"] = function createFromServer(created_at) {
   const merged = Object.assign(created_at);
   ({ max_uses: obj.maxUses, max_age: obj.maxAge } = created_at);
   created_at = created_at.created_at;
-  obj.createdAt = _modDef4418(created_at);
+  obj.createdAt = _modDef4421(created_at);
   ({
     target_type: obj.targetType,
     target_user: obj.targetUser,
@@ -63,12 +63,12 @@ InviteRecord["createFromServer"] = function createFromServer(created_at) {
 prototype["isExpired"] = function isExpired() {
   const maxAge = this.maxAge;
   if (maxAge > 0) {
-    const obj = _modDef4418(tmp.createdAt);
+    const obj = _modDef4421(tmp.createdAt);
     const _Date = Date;
     if (addResult.isBefore(Date.now())) {
       return true;
     }
-    addResult = _modDef4418(tmp.createdAt).add(maxAge, "seconds");
+    addResult = _modDef4421(tmp.createdAt).add(maxAge, "seconds");
   }
   return false;
 };
@@ -76,9 +76,9 @@ prototype["getExpiresAt"] = function getExpiresAt() {
   const self = this;
   let num = Infinity;
   if (this.maxAge > 0) {
-    const obj = _modDef4418(self.createdAt);
-    num = _modDef4418(self.createdAt).add(self.maxAge, "seconds").toDate();
-    const addResult = _modDef4418(self.createdAt).add(self.maxAge, "seconds");
+    const obj = _modDef4421(self.createdAt);
+    num = _modDef4421(self.createdAt).add(self.maxAge, "seconds").toDate();
+    const addResult = _modDef4421(self.createdAt).add(self.maxAge, "seconds");
   }
   return num;
 };

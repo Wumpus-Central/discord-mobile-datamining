@@ -3,8 +3,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import design_shared from "../../../../discord_common/js/packages/design/shared.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05286_LinearGradient.js";
-import _modDef5971 from "../../../../_runtime/metro/05971__.js";
+import LinearGradientDefault from "../../../../_runtime/05293_LinearGradient.js";
+import _modDef5976 from "../../../../_runtime/metro/05976__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -84,7 +84,7 @@ function PremiumRewardGlowGradient(arg0) {
     children: timestampProducer(LinearGradientDefault, { style: React4.absoluteFill, colors: memo, start, end }),
   };
   items2[1] = glowLight;
-  const items3 = [timestampProducer(_modDef5971, obj5), children];
+  const items3 = [timestampProducer(_modDef5976, obj5), children];
   obj4.children = items3;
   return React5(hasOwnProperty, obj4);
 }
@@ -92,7 +92,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let createStyles = fn(4829);
+let createStyles = fn(4836);
 let closure_8 = createStyles.createStyles({
   wrapper: { position: "relative", overflow: "hidden" },
   fill: { position: "absolute", left: 0, right: 0, bottom: 0, height: "100%" },
@@ -103,10 +103,10 @@ const start = { x: 0, y: 0.5 };
 const end = { x: 1, y: 0.5 };
 const start2 = { x: 0.5, y: 0 };
 const end2 = { x: 0.5, y: 1 };
-fn(4680);
-const ColorUtils = fn(4680);
+fn(4683);
+const ColorUtils = fn(4683);
 const hexOpacityToRgbaResult = ColorUtils.hexOpacityToRgba("#000000", 0);
-createStyles = fn(4829);
+createStyles = fn(4836);
 let closure_13 = createStyles.createStyleProperties({
   transparentBlack: hexOpacityToRgbaResult,
   opaqueBlack: nativeDefault.colors.BLACK,

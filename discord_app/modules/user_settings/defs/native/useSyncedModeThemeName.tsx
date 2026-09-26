@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/useSyncedModeThemeName.tsx
 import util from "../../../../intl/index.native.tsx";
 import ClientThemesUtils from "../../../client_themes/ClientThemesUtils.tsx";
-import _modDef2716 from "../../../client_themes/intl/ClientThemes.messages.js";
+import _modDef2717 from "../../../client_themes/intl/ClientThemes.messages.js";
 import ThemeStore from "../../ThemeStore.tsx";
 
 const require = globalThis.__r;
@@ -23,7 +23,7 @@ export const useSyncedModeThemeName = function useSyncedModeThemeName(DARK) {
     }
     if (null != prop) {
       const intl = util.intl;
-      let stringResult = intl.string(_modDef2716.yl1iMm);
+      let stringResult = intl.string(_modDef2717.yl1iMm);
     } else {
       let prop1;
       if (syncedClientTheme != null) {

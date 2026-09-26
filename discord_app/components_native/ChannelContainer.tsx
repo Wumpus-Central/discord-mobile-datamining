@@ -21,10 +21,10 @@ function NotificationsContainer() {
 }
 const View = fn(17).View;
 const ChannelTypes = fn(1074).ChannelTypes;
-const ContentDismissActionType = fn(2041).ContentDismissActionType;
+const ContentDismissActionType = fn(2042).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_12 = createStyles.createStyles({
   container: { position: "absolute", left: 0, right: 0, backgroundColor: "transparent", marginTop: 8 },
 });
@@ -51,7 +51,7 @@ export const ChannelContainer = function ChannelContainer(children) {
   ({ channel, isStageChannel } = stateFromStoresObject);
   let tmp5 = !isStageChannel;
   if (isStageChannel) {
-    tmp5 = channelId(8853)(stateFromStoresObject.voiceChannelId);
+    tmp5 = channelId(8861)(stateFromStoresObject.voiceChannelId);
   }
   const items1 = [LurkingStore];
   let isPrivateResult = null != channel;
@@ -66,9 +66,9 @@ export const ChannelContainer = function ChannelContainer(children) {
     isPrivateResult = channel.isPrivate();
   }
   dependencyMap = isPrivateResult;
-  const tmp8 = channelId(7712)(isPrivateResult);
+  const tmp8 = channelId(7720)(isPrivateResult);
   noop = tmp8;
-  const tmp9 = channelId(7712)(channelId);
+  const tmp9 = channelId(7720)(channelId);
   closure_4 = tmp9;
   const items2 = [channelId, tmp9, isPrivateResult, tmp8];
   const effect = noop.useEffect(() => {
@@ -107,13 +107,13 @@ export const ChannelContainer = function ChannelContainer(children) {
     tmp15 = null;
     if (stateFromStores) {
       const obj4 = { channel };
-      tmp15 = closure_10(channelId(10853), obj4);
+      tmp15 = closure_10(channelId(10866), obj4);
     }
   }
   const items3 = [tmp15, children.children];
   if (tmp5) {
     const obj5 = { style: channelStyles.callPTTButton };
-    tmp5 = closure_10(channelId(8962), obj5);
+    tmp5 = closure_10(channelId(8973), obj5);
   }
   items3[2] = tmp5;
   obj3.children = items3;

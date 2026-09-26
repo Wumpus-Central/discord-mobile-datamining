@@ -20,7 +20,7 @@ let items = [
   { value: "60", label: "Last hour" },
   { value: "1440", label: "Last 24 hours" },
 ];
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, content: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.content = { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
@@ -65,9 +65,9 @@ export default function DevToolsBountyQaScreen() {
                 c1 = 3;
                 c3 = 1;
                 const obj7 = {
-                  value: tmp3(10731).resetCreativePreviewDeliveryState(
+                  value: tmp3(10744).resetCreativePreviewDeliveryState(
                     tmp22,
-                    tmp3(5754).AdPlacement.MOBILE_HOME_DOCK_AREA,
+                    tmp3(5759).AdPlacement.MOBILE_HOME_DOCK_AREA,
                   ),
                   done: false,
                 };
@@ -78,7 +78,7 @@ export default function DevToolsBountyQaScreen() {
               const NumberResult = Number(tmp37);
               c1 = 2;
               c3 = 1;
-              const obj8 = { value: tmp3(10731).resetPreviewDeliveryStateLookback(NumberResult), done: false };
+              const obj8 = { value: tmp3(10744).resetPreviewDeliveryStateLookback(NumberResult), done: false };
               return obj8;
             }
           }
@@ -102,13 +102,13 @@ export default function DevToolsBountyQaScreen() {
               const obj = { value, done: true };
               return obj;
             }
-            const questToDeliver = tmp3(10670).fetchQuestToDeliver(
-              tmp3(5754).AdPlacement.MOBILE_HOME_DOCK_AREA,
+            const questToDeliver = tmp3(10683).fetchQuestToDeliver(
+              tmp3(5759).AdPlacement.MOBILE_HOME_DOCK_AREA,
               "devTools-bountyQa",
             );
             toast("Reset delivery state and refreshing dock", "bounty-qa-reset-and-refresh");
             dependencyMap = 0;
-            const obj2 = tmp3(10670);
+            const obj2 = tmp3(10683);
           }
           dependencyMap = 0;
           c3 = 3;
@@ -126,16 +126,16 @@ export default function DevToolsBountyQaScreen() {
     }
   };
   const tmp = closure_11();
-  const tmp3 = str(1612)();
+  const tmp3 = str(1613)();
   items = [AdDeliveryStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => {
     const deliveryAdDecisionByPlacement = AdDeliveryStore.deliveryAdDecisionByPlacement;
-    value = deliveryAdDecisionByPlacement.get(stateFromStores(5754).AdPlacement.MOBILE_HOME_DOCK_AREA);
+    value = deliveryAdDecisionByPlacement.get(stateFromStores(5759).AdPlacement.MOBILE_HOME_DOCK_AREA);
     let creative;
     if (value != null) {
       creative = value.creative;
     }
-    const deliveredBounty = stateFromStores(7109).getDeliveredBounty(creative);
+    const deliveredBounty = stateFromStores(7114).getDeliveredBounty(creative);
     let id;
     if (deliveredBounty != null) {
       id = deliveredBounty.id;
@@ -174,11 +174,11 @@ export default function DevToolsBountyQaScreen() {
     str4 = "Last dock bounty still in memory: " + stateFromStores + ".";
   }
   const items5 = [
-    closure_8(stateFromStores(4825).Text, { variant: "text-sm/medium", color: "text-muted", children: str4 }),
+    closure_8(stateFromStores(4832).Text, { variant: "text-sm/medium", color: "text-muted", children: str4 }),
     ,
   ];
   let obj = stateFromStores(504);
-  items5[1] = closure_8(stateFromStores(5992).TableRadioGroup, {
+  items5[1] = closure_8(stateFromStores(5997).TableRadioGroup, {
     title: "Reset scope",
     description: "Used by Reset and re-serve. Refresh Organic Serve ignores this.",
     value: str,
@@ -187,7 +187,7 @@ export default function DevToolsBountyQaScreen() {
     children: items3.map((value) => {
       value = value.value;
       ({ label, subLabel } = value);
-      return closure_1_8(stateFromStores(5995).TableRadioRow, { value, label, subLabel }, value);
+      return closure_1_8(stateFromStores(6000).TableRadioRow, { value, label, subLabel }, value);
     }),
   });
   const obj4 = {
@@ -199,15 +199,15 @@ export default function DevToolsBountyQaScreen() {
     children: items3.map((value) => {
       value = value.value;
       ({ label, subLabel } = value);
-      return closure_1_8(stateFromStores(5995).TableRadioRow, { value, label, subLabel }, value);
+      return closure_1_8(stateFromStores(6000).TableRadioRow, { value, label, subLabel }, value);
     }),
   };
   const items6 = [
-    closure_8(stateFromStores(5912).TableRow, {
+    closure_8(stateFromStores(5917).TableRow, {
       label: "Reset and re-serve",
       subLabel:
         "Clears serve, dismiss, claim, and impression for the selected scope, then asks the dock for a new decision.",
-      icon: closure_8(stateFromStores(14613).UndoIcon, {}),
+      icon: closure_8(stateFromStores(14638).UndoIcon, {}),
       onPress: function handleResetAndRefresh() {
         const self = this;
         const apply = closure_2.apply;
@@ -225,7 +225,7 @@ export default function DevToolsBountyQaScreen() {
     label: "Reset and re-serve",
     subLabel:
       "Clears serve, dismiss, claim, and impression for the selected scope, then asks the dock for a new decision.",
-    icon: closure_8(stateFromStores(14613).UndoIcon, {}),
+    icon: closure_8(stateFromStores(14638).UndoIcon, {}),
     onPress: function handleResetAndRefresh() {
       const self = this;
       const apply = closure_2.apply;
@@ -237,17 +237,17 @@ export default function DevToolsBountyQaScreen() {
       return applyArgumentsResult;
     },
   };
-  items6[1] = closure_8(stateFromStores(5912).TableRow, {
+  items6[1] = closure_8(stateFromStores(5917).TableRow, {
     label: "Refresh Organic Serve",
     subLabel: "Re-runs the dock decision without clearing delivery state. Use to confirm a cooldown still blocks.",
-    icon: closure_8(stateFromStores(14611).RedoIcon, {}),
+    icon: closure_8(stateFromStores(14636).RedoIcon, {}),
     onPress: function handleRefreshOrganicServe() {
-      const questToDeliver = stateFromStores(10670).fetchQuestToDeliver(
-        stateFromStores(5754).AdPlacement.MOBILE_HOME_DOCK_AREA,
+      const questToDeliver = stateFromStores(10683).fetchQuestToDeliver(
+        stateFromStores(5759).AdPlacement.MOBILE_HOME_DOCK_AREA,
         "devTools-bountyQa",
       );
-      const obj = stateFromStores(10670);
-      str(4525).open({ content: "Refreshing dock serve", key: "bounty-qa-refresh" });
+      const obj = stateFromStores(10683);
+      str(4528).open({ content: "Refreshing dock serve", key: "bounty-qa-refresh" });
     },
   });
   let tmp13Result = null;
@@ -255,7 +255,7 @@ export default function DevToolsBountyQaScreen() {
     let obj7 = {
       label: "Reset Seen",
       subLabel: "Clears the Quest Home NEW pill for the last dock bounty. Does not restore the dock.",
-      icon: closure_8(tmp4(6384).EyeIcon, {}),
+      icon: closure_8(tmp4(6389).EyeIcon, {}),
       onPress: function handleResetSeen() {
         if (null != stateFromStores) {
           items = [tmp];
@@ -269,10 +269,10 @@ export default function DevToolsBountyQaScreen() {
         }
       },
     };
-    tmp13Result = closure_8(tmp4(5912).TableRow, obj7);
+    tmp13Result = closure_8(tmp4(5917).TableRow, obj7);
   }
   items6[2] = tmp13Result;
-  items5[2] = closure_9(stateFromStores(5994).TableRowGroup, { title: "Dock QA", hasIcons: true, children: items6 });
+  items5[2] = closure_9(stateFromStores(5999).TableRowGroup, { title: "Dock QA", hasIcons: true, children: items6 });
   obj3.children = items5;
   return closure_9(ScrollView, obj3);
 }

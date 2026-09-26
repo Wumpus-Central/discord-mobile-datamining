@@ -1,6 +1,6 @@
 // discord_app/modules/guild_settings_picker/native/components/GuildPicker.tsx
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01980_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01981_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -14,12 +14,12 @@ export default function GuildPicker(isGuildIncluded) {
   const guildId = isGuildIncluded.guildId;
   const onChange = isGuildIncluded.onChange;
   dependencyMap = undefined;
-  ({ options: c2, selectedGuild } = onChange(13422)({
+  ({ options: c2, selectedGuild } = onChange(13440)({
     isGuildIncluded: isGuildIncluded.isGuildIncluded,
     selectedGuildId: guildId,
   }));
   let name;
-  const tmp2 = onChange(13422)({ isGuildIncluded: isGuildIncluded.isGuildIncluded, selectedGuildId: guildId });
+  const tmp2 = onChange(13440)({ isGuildIncluded: isGuildIncluded.isGuildIncluded, selectedGuildId: guildId });
   if (selectedGuild != null) {
     name = selectedGuild.name;
   }
@@ -42,13 +42,13 @@ export default function GuildPicker(isGuildIncluded) {
         });
       };
       obj2.selectedItem = guildId;
-      obj.openLazy(asyncRequireImpl(8721, dependencyMap.paths), GuildPicker, obj2);
+      obj.openLazy(asyncRequireImpl(8729, dependencyMap.paths), GuildPicker, obj2);
     },
     placeholder: null,
   };
   let intl = guildId(1115).intl;
   obj.placeholder = intl.string(guildId(1115).t.etZ9tX);
-  return jsx(onChange(13423), {
+  return jsx(onChange(13441), {
     label: name,
     onPress() {
       const obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
@@ -67,7 +67,7 @@ export default function GuildPicker(isGuildIncluded) {
         });
       };
       obj2.selectedItem = guildId;
-      obj.openLazy(asyncRequireImpl(8721, dependencyMap.paths), GuildPicker, obj2);
+      obj.openLazy(asyncRequireImpl(8729, dependencyMap.paths), GuildPicker, obj2);
     },
     placeholder: null,
   });

@@ -20,7 +20,7 @@ export const openUserSettings = (screen, fn) => {
     }
     const obj2 = { type: "USER_SETTINGS_MODAL_INIT", section: screen };
     DispatcherDefault.dispatch(obj2);
-    rootNavigationRef.navigate("settings", screen);
+    rootNavigationRef.navigate("settings", screen, { pop: true });
     if (fn != null) {
       fn();
     }

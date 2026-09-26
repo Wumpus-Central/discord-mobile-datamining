@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/ProfilePrivacySetting.tsx
 import util from "../../../../intl/index.native.tsx";
 import preloaded_user_settings from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01980_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01981_asyncRequireImpl.js";
 import UserSettings from "../../UserSettings.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
@@ -36,7 +36,7 @@ const radio = SettingBuilders.createRadio({
           mappedActivityValue: obj4.mappedActivityValue,
         } = profileToActivityUpsell);
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(14364, dependencyMap.paths),
+          asyncRequireImpl(14389, dependencyMap.paths),
           "ProfileToActivityPrivacyUpsellActionSheet",
           { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null },
         );

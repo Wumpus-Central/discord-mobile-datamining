@@ -7,7 +7,7 @@ import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useFontScale from "../../screen/native/useFontScale.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef6558 from "../../../../_runtime/metro/06558__.js";
+import _modDef6563 from "../../../../_runtime/metro/06563__.js";
 import ChannelListLayout from "../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx";
 import AvatarDuoPile from "../../../design/components/Pile/native/AvatarDuoPile.native.tsx";
 import ChannelPressableWrapper from "../../main_tabs_v2/native/shared_components/guild_channels/ChannelPressableWrapper.tsx";
@@ -66,7 +66,7 @@ function ForYouShowAllRow(panelVariant) {
   items1[2] = React5(native.Icon, {
     style: tmp4.icon,
     color: tmp4.iconColor.color,
-    source: _modDef6558,
+    source: _modDef6563,
     size: native.IconSizes.CUSTOM,
   });
   obj9.children = items1;
@@ -75,10 +75,10 @@ function ForYouShowAllRow(panelVariant) {
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const Sections = fn(12178).Sections;
+const Sections = fn(12196).Sections;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_10 = createStyles.createStyles((layout) => {
   const layoutStyles = ChannelListLayout.getLayoutStyles(layout);
   const sizeStyle = ChannelListLayout.makeSizeStyle(layoutStyles.icon.wrapper.size);

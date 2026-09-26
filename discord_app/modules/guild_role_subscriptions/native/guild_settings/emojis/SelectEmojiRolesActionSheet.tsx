@@ -18,7 +18,7 @@ const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 const itemSize = fn(1181).FORM_ROW_VERTICAL_PADDING + 22;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = {
   list: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   label: { flex: 1, flexDirection: "row", alignItems: "center" },
@@ -194,6 +194,6 @@ export default function SelectEmojiRolesActionSheet(arg0) {
   };
   const items1 = [subscriptionListingsForGuild.length];
   obj6.sections = items1;
-  obj5.children = closure_6(emoji(6488), obj6);
+  obj5.children = closure_6(emoji(6493), obj6);
   return closure_6(ActionSheet.ActionSheet, obj5);
 }

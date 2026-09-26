@@ -4,8 +4,8 @@ import _modDef672 from "../../../../../_runtime/metro/00672__.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05286_LinearGradient.js";
-import _modDef5971 from "../../../../../_runtime/metro/05971__.js";
+import LinearGradientDefault from "../../../../../_runtime/05293_LinearGradient.js";
+import _modDef5976 from "../../../../../_runtime/metro/05976__.js";
 import useQuestDockAnimatedBorderRadiusDefault from "../../../quests/native/QuestDock/useQuestDockAnimatedBorderRadius.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -55,7 +55,7 @@ function YouBarMaskedBackground(barWidth) {
       backgroundColor: "black",
     },
   };
-  const tmp3 = _modDef5971;
+  const tmp3 = _modDef5976;
   const tmp4 = LinearGradientDefault;
   const obj9 = _modDef672("#000000");
   const items1 = [_modDef672("#000000").alpha(0).hex(), "#000000"];
@@ -79,7 +79,7 @@ function YouBarAnimatedBackground(arg0) {
   const token = require("useToken").useToken(nativeDefault.modules.mobile.YOU_BAR_BORDER_RADIUS);
   const tmp3 = useQuestDockAnimatedBorderRadiusDefault(token);
   _require = tmp3;
-  const tmp4 = useQuestDockAnimatedBorderRadiusDefault(token, YOU_BAR_HEIGHT / 2);
+  const tmp4 = useQuestDockAnimatedBorderRadiusDefault(YOU_BAR_HEIGHT / 2, token);
   importDefault = tmp4;
   let obj = require("useToken");
   const fn = function u() {
@@ -114,12 +114,12 @@ function YouBarAnimatedBackground(arg0) {
   return closure_6(ReanimatedRexportDefault.View, obj4);
 }
 const View = fn(17).View;
-const YouBarConstants = fn(14602);
+const YouBarConstants = fn(14627);
 const YOU_BAR_HEIGHT = YouBarConstants.YOU_BAR_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = YouBarConstants.YOU_BAR_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj = {
   youRowFloating: {
     borderWidth: 1,

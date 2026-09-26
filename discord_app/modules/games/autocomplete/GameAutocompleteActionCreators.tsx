@@ -74,7 +74,12 @@ let closure_6 = async function _fetchGameAutocomplete(arg0) {
         if (body == null) {
           importDefault = [];
         }
-        closure_130_1 = importDefault.map((id) => ({ id: String(id.id), name: id.name, icon: id.icon }));
+        closure_130_1 = importDefault.map((id) => ({
+          id: String(id.id),
+          name: id.name,
+          icon: id.icon,
+          platformAvailability: id.platform_availability,
+        }));
         const obj10 = { type: "GAME_AUTOCOMPLETE_FETCH_SUCCESS", query: closure_130_0, results: closure_130_1 };
         closure_131_1(closure_131_2[4]).dispatch(obj10);
         c5 = 0;

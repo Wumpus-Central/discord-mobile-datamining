@@ -9,59 +9,59 @@ require = fn;
 function FavoritesGuildCategoryActionSheetConnected(category) {
   category = category.category;
   const onClose = category.onClose;
-  const tmp3 = onClose(10427)(category);
+  const tmp3 = onClose(10438)(category);
   dependencyMap = tmp3;
-  const DeveloperMode = category(2020).DeveloperMode;
+  const DeveloperMode = category(2021).DeveloperMode;
   const setting = DeveloperMode.useSetting();
   let obj = {
-    header: closure_5(category(6565).BottomSheetTitleHeader, { title: onClose(4982)(category, true) }),
+    header: closure_5(category(6570).BottomSheetTitleHeader, { title: onClose(4989)(category, true) }),
     children: null,
   };
   let tmp7Result = null;
   if (null != tmp3) {
     const obj2 = { hasIcons: true, children: null };
     const obj3 = { label: tmp3.label, icon: null, onPress: null };
-    const obj4 = { IconComponent: tmp4(10402).PlusLargeIcon };
-    obj3.icon = closure_5(tmp4(6615).ActionSheetRow.Icon, obj4);
+    const obj4 = { IconComponent: tmp4(10413).PlusLargeIcon };
+    obj3.icon = closure_5(tmp4(6620).ActionSheetRow.Icon, obj4);
     obj3.onPress = function onPress() {
       closure_2.perform();
       onClose();
     };
-    obj2.children = closure_5(tmp4(6615).ActionSheetRow, obj3);
-    tmp7Result = closure_5(tmp4(6615).ActionSheetRow.Group, obj2);
+    obj2.children = closure_5(tmp4(6620).ActionSheetRow, obj3);
+    tmp7Result = closure_5(tmp4(6620).ActionSheetRow.Group, obj2);
   }
   const items = [tmp7Result, ,];
   const obj5 = { hasIcons: true, children: null };
   const obj6 = { label: null, icon: null, onPress: null };
   const intl = tmp4(1115).intl;
   obj6.label = intl.string(category(1115).t.zdPFs9);
-  const tmp2 = onClose(4982)(category, true);
-  obj6.icon = closure_5(category(6615).ActionSheetRow.Icon, { IconComponent: category(6793).SettingsIcon });
+  const tmp2 = onClose(4989)(category, true);
+  obj6.icon = closure_5(category(6620).ActionSheetRow.Icon, { IconComponent: category(6798).SettingsIcon });
   obj6.onPress = function onPress() {
     openFavoritesGuildCategorySettingsModalDefault(category.id);
     onClose();
   };
-  obj5.children = closure_5(category(6615).ActionSheetRow, obj6);
-  items[1] = closure_5(category(6615).ActionSheetRow.Group, obj5);
+  obj5.children = closure_5(category(6620).ActionSheetRow, obj6);
+  items[1] = closure_5(category(6620).ActionSheetRow.Group, obj5);
   let tmp7Result2 = null;
   if (setting) {
     const obj8 = { hasIcons: true, children: null };
     const obj9 = { label: null, icon: null, onPress: null };
     const intl2 = tmp4(1115).intl;
     obj9.label = intl2.string(tmp4(1115).t["2visC6"]);
-    const obj10 = { IconComponent: tmp4(10081).IdIcon };
-    obj9.icon = closure_5(tmp4(6615).ActionSheetRow.Icon, obj10);
+    const obj10 = { IconComponent: tmp4(10092).IdIcon };
+    obj9.icon = closure_5(tmp4(6620).ActionSheetRow.Icon, obj10);
     obj9.onPress = function onPress() {
       ClipboardUtils.copy(category.id);
       ToastUtils.presentIdCopied();
       onClose();
     };
-    obj8.children = closure_5(tmp4(6615).ActionSheetRow, obj9);
-    tmp7Result2 = closure_5(tmp4(6615).ActionSheetRow.Group, obj8);
+    obj8.children = closure_5(tmp4(6620).ActionSheetRow, obj9);
+    tmp7Result2 = closure_5(tmp4(6620).ActionSheetRow.Group, obj8);
   }
   items[2] = tmp7Result2;
   obj.children = items;
-  return closure_6(category(6613).ActionSheet, obj);
+  return closure_6(category(6618).ActionSheet, obj);
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);

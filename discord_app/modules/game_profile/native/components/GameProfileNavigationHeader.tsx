@@ -9,7 +9,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = {
   headerContainer: {
     height: 56,
@@ -63,13 +63,13 @@ export default function GameProfileNavigationHeader(game) {
   let sharedValue;
   const tmp = closure_9();
   dependencyMap = tmp6;
-  const token = game(4528).useToken(application(576).colors.LEGACY_BLUR_FALLBACK_ULTRA_THIN);
-  let obj = game(4528);
+  const token = game(4531).useToken(application(576).colors.LEGACY_BLUR_FALLBACK_ULTRA_THIN);
+  let obj = game(4531);
   let num = 0;
   if (null != headerRight) {
     num = 1;
   }
-  sharedValue = game(4563).useSharedValue(num);
+  sharedValue = game(4566).useSharedValue(num);
   const items = [null != headerRight, sharedValue];
   const effect = sharedValue.useEffect(() => {
     let num = 0;
@@ -78,15 +78,15 @@ export default function GameProfileNavigationHeader(game) {
     }
     const result = sharedValue.set(timing.withTiming(num, { duration: 200 }));
   }, items);
-  const obj2 = game(4563);
+  const obj2 = game(4566);
   const fn = function b() {
     return { opacity: sharedValue.get() };
   };
   fn.__closure = { headerRightProgress: sharedValue };
   fn.__workletHash = 16001524280109;
   fn.__initData = __initData;
-  const animatedStyle = game(4563).useAnimatedStyle(fn);
-  const tmp2Result = game(4563);
+  const animatedStyle = game(4566).useAnimatedStyle(fn);
+  const tmp2Result = game(4566);
   const fn2 = function k() {
     return { opacity: 1 - sharedValue.get() };
   };
@@ -94,7 +94,7 @@ export default function GameProfileNavigationHeader(game) {
   fn2.__workletHash = 5182160908530;
   fn2.__initData = __initData2;
   const items1 = [game, application];
-  const animatedStyle1 = game(4563).useAnimatedStyle(fn2);
+  const animatedStyle1 = game(4566).useAnimatedStyle(fn2);
   const memo = sharedValue.useMemo(() => {
     let iconURL;
     if (game != null) {
@@ -135,7 +135,7 @@ export default function GameProfileNavigationHeader(game) {
   if (null != name) {
     const obj3 = { style: tmp.headerContainer, children: null };
     const obj4 = { android_fallbackColor: token };
-    const items2 = [closure_7(tmp2(8362).BackgroundBlurFill, obj4)];
+    const items2 = [closure_7(tmp2(8370).BackgroundBlurFill, obj4)];
     const obj5 = { style: tmp.headerRow, children: null };
     let tmp17Result = null != memo;
     if (tmp17Result) {
@@ -153,7 +153,7 @@ export default function GameProfileNavigationHeader(game) {
       lineClamp: 1,
       children: name,
     };
-    const items4 = [closure_7(tmp2(4825).Heading, obj9)];
+    const items4 = [closure_7(tmp2(4832).Heading, obj9)];
     let l30Rank;
     if (game != null) {
       l30Rank = game.l30Rank;
@@ -162,13 +162,13 @@ export default function GameProfileNavigationHeader(game) {
     if (tmp15Result) {
       const obj10 = { style: tmp.rankPillContainer, children: null };
       const obj11 = { rank: game.l30Rank, compact: true };
-      const items5 = [closure_7(tmp4(8164), obj11)];
+      const items5 = [closure_7(tmp4(8172), obj11)];
       const obj12 = { style: null, children: null };
       const items6 = [StyleSheet.absoluteFill, animatedStyle1];
       obj12.style = items6;
       const obj13 = { rank: game.l30Rank };
-      obj12.children = closure_7(tmp4(8164), obj13);
-      items5[1] = closure_7(tmp4(4563).View, obj12);
+      obj12.children = closure_7(tmp4(8172), obj13);
+      items5[1] = closure_7(tmp4(4566).View, obj12);
       obj10.children = items5;
       tmp15Result = closure_8(closure_5, obj10);
     }
@@ -181,7 +181,7 @@ export default function GameProfileNavigationHeader(game) {
       const items7 = [tmp.headerRight, animatedStyle];
       obj14.style = items7;
       obj14.children = headerRight();
-      tmp17Result2 = closure_7(tmp4(4563).View, obj14);
+      tmp17Result2 = closure_7(tmp4(4566).View, obj14);
     }
     items3[2] = tmp17Result2;
     obj5.children = items3;

@@ -1,7 +1,7 @@
 // discord_app/modules/network/NetStats.android.tsx
 import LoggerDefault from "../debug/Logger.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
-import configure from "../../../_runtime/01464_configure.js";
+import configure from "../../../_runtime/01465_configure.js";
 import NativeTTIManagerModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx";
 import RTCBandwidthMonitor from "../../lib/RTCBandwidthMonitor.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -70,7 +70,7 @@ let closure_10 = {
 };
 let c11 = null;
 const tmp3 = new LoggerDefault("NetStats");
-let global = { type: fn(1464).NetInfoStateType.unknown, effectiveSpeed: null, serviceProvider: null };
+let global = { type: fn(1465).NetInfoStateType.unknown, effectiveSpeed: null, serviceProvider: null };
 global = null;
 let closure_14 = "active" === AppState.currentState;
 let closure_15 = 0;

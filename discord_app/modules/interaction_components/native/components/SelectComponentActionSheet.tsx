@@ -72,10 +72,10 @@ function SelectionHeader(renderIcon) {
     };
     const intl3 = tmp6(1115).intl;
     obj3.text = intl3.string(tmp6(1115).t.XqMe3N);
-    tmp5Result = closure_8(tmp6(5274).Button, obj3);
+    tmp5Result = closure_8(tmp6(5281).Button, obj3);
   }
   obj.trailing = tmp5Result;
-  const children = [closure_8(renderIcon(6565).BottomSheetTitleHeader, obj)];
+  const children = [closure_8(renderIcon(6570).BottomSheetTitleHeader, obj)];
   let tmp5Result4 = null;
   if (null != onQueryChange) {
     tmp5Result4 = null;
@@ -116,8 +116,8 @@ function SelectionHeader(renderIcon) {
         }
         onQueryChange(arg0);
       };
-      tmp5Result4 = closure_8(selectedOptions(9025), obj4);
-      const tmp13 = selectedOptions(9025);
+      tmp5Result4 = closure_8(selectedOptions(9036), obj4);
+      const tmp13 = selectedOptions(9036);
     }
   }
   children[1] = tmp5Result4;
@@ -215,10 +215,10 @@ function SelectionOptionItem(item) {
   return React6(TableRow.TableRow, obj2);
 }
 const View = fn(17).View;
-let closure_7 = fn(6567).ACTION_SHEET_START_HEIGHT_RATIO;
+let closure_7 = fn(6572).ACTION_SHEET_START_HEIGHT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = {
   selectionOptionItemIconWrapper: { width: nativeDefault.space.PX_32, alignItems: "center" },
   tagListIconWrapper: null,

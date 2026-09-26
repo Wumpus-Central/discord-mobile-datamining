@@ -81,7 +81,7 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
     }
   }
 }
-const ExplicitContentFilterTypes = fn(2022).ExplicitContentFilterTypes;
+const ExplicitContentFilterTypes = fn(2023).ExplicitContentFilterTypes;
 let obj = {};
 const DISABLED = ExplicitContentFilterTypes.DISABLED;
 obj[DISABLED.valueOf()] = fn(1186).ExplicitContentRedaction.SHOW;

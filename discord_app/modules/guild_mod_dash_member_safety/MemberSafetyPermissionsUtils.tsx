@@ -8,8 +8,8 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const isGuildOwner = fn(2062).isGuildOwner;
-let closure_8 = fn(4470).MemberSafetyPagePermissions;
+const isGuildOwner = fn(2063).isGuildOwner;
+let closure_8 = fn(4473).MemberSafetyPagePermissions;
 const Constants = fn(1074);
 ({ GuildFeatures: closure_9, Permissions: c10 } = Constants);
 const size = fn(2);

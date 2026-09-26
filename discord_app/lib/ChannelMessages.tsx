@@ -1057,10 +1057,10 @@ prototype2["mergeDelta"] = function mergeDelta() {
     const item1 = items1.forEach((id) => set.add(id.id));
     const _array = _before._array;
     const found = _array.filter((id) => !set.has(id.id));
-    const mapped = items.map((item) => set(5051).createMessageRecord(item));
+    const mapped = items.map((item) => set(5058).createMessageRecord(item));
     const combined = found.concat(
       mapped,
-      items1.map((item) => set(5051).createMessageRecord(item)),
+      items1.map((item) => set(5058).createMessageRecord(item)),
     );
     _before._array = combined.sort((id, id2) => items1(11).compare(id.id, id2.id));
   });
@@ -1246,7 +1246,7 @@ prototype2["receiveMessage"] = function receiveMessage(nonce) {
     if (id === id1) {
       if (null != nonce.nonce) {
         if (value.id === nonce.nonce) {
-          const messageRecord = messageRecord1(5051).createMessageRecord(nonce);
+          const messageRecord = messageRecord1(5058).createMessageRecord(nonce);
           if (null != value.interactionData) {
             messageRecord.interactionData = value.interactionData;
           }
@@ -1261,7 +1261,7 @@ prototype2["receiveMessage"] = function receiveMessage(nonce) {
     }
     return self;
   } else {
-    messageRecord1 = messageRecord1(5051).createMessageRecord(nonce);
+    messageRecord1 = messageRecord1(5058).createMessageRecord(nonce);
     const lastResult = self.last();
     if (null != lastResult) {
       if (obj5.compare(nonce.id, lastResult.id) < 0) {
@@ -1301,7 +1301,7 @@ prototype2["receiveMessage"] = function receiveMessage(nonce) {
     }
     const items = [messageRecord1];
     mutation = self.merge(items);
-    let obj = messageRecord1(5051);
+    let obj = messageRecord1(5058);
   }
 };
 prototype2["receivePushNotification"] = function receivePushNotification(message, isConnectedResult) {
@@ -1446,7 +1446,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
         jumpType = jump.jumpType;
       }
       if (jumpType == null) {
-        jumpType = id(4759).JumpType.ANIMATED;
+        jumpType = id(4763).JumpType.ANIMATED;
       }
       let obj2 = {
         ready: true,
@@ -1637,7 +1637,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
 };
 prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
   const self = this;
-  const result = reversed(5583).requireSortedDescending(messages);
+  const result = reversed(5588).requireSortedDescending(messages);
   const mapped = messages.map((item) => mergeMessage(self, item));
   reversed = mapped.reverse();
   const _array = this._array;
@@ -1652,7 +1652,7 @@ prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
   if (!stale) {
     cached = self.cached;
   }
-  const obj = reversed(5583);
+  const obj = reversed(5588);
   const obj2 = { ready: true, cached: stale, error: false, initialScrollSequenceId: null };
   const initialScrollSequenceId = self.initialScrollSequenceId;
   if (cached) {

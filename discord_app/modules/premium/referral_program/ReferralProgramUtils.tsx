@@ -9,7 +9,7 @@ import UserSettingsProtoStore from "../../user_settings/UserSettingsProtoStore.t
 import ReferralTrialStore from "../ReferralTrialStore.tsx";
 
 require = fn;
-const ContentDismissActionType = fn(2041).ContentDismissActionType;
+const ContentDismissActionType = fn(2042).ContentDismissActionType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/referral_program/ReferralProgramUtils.tsx");
 
@@ -94,8 +94,8 @@ export const markReferralIncentivePopoverSeen = function markReferralIncentivePo
   );
 };
 export const useIsReferralProgramPopoverShowable = function useIsReferralProgramPopoverShowable() {
-  let isEligibleSenderForReferralProgram = stateFromStores1(7494).useIsEligibleSenderForReferralProgram(false);
-  let obj = stateFromStores1(7494);
+  let isEligibleSenderForReferralProgram = stateFromStores1(7500).useIsEligibleSenderForReferralProgram(false);
+  let obj = stateFromStores1(7500);
   const items = [ReferralTrialStore];
   const stateFromStores = stateFromStores1(504).useStateFromStores(items, () =>
     ReferralTrialStore.getReferralsRemaining(),

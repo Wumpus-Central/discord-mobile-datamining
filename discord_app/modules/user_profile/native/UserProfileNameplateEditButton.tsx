@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/native/UserProfileNameplateEditButton.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01980_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01981_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
@@ -8,10 +8,10 @@ import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const COLLECTIBLES_PREVIEW_SIZE = fn(6624).COLLECTIBLES_PREVIEW_SIZE;
+const COLLECTIBLES_PREVIEW_SIZE = fn(6629).COLLECTIBLES_PREVIEW_SIZE;
 const NOOP = fn(1085).NOOP;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { previewContainer: null, noneIcon: null };
 let size = {
   height: COLLECTIBLES_PREVIEW_SIZE,
@@ -56,13 +56,13 @@ export default function UserProfileNameplateEditButton(user) {
   }
   obj3.guildValue = nameplate2;
   obj3.guildId = guildId;
-  const profilePreviewValue = user(7604).getProfilePreviewValue(obj3);
-  const obj2 = user(7604);
+  const profilePreviewValue = user(7611).getProfilePreviewValue(obj3);
+  const obj2 = user(7611);
   let skuId;
   if (profilePreviewValue != null) {
     skuId = profilePreviewValue.skuId;
   }
-  const fetchNameplate = user(14168).useFetchNameplate(skuId);
+  const fetchNameplate = user(14193).useFetchNameplate(skuId);
   ({ nameplateProduct, nameplateData, nameplateRecord, isFetching } = fetchNameplate);
   if (null != guildId) {
     let nameplate3;
@@ -99,7 +99,7 @@ export default function UserProfileNameplateEditButton(user) {
     obj4.buttonText = intl5.string(tmp3(1115).t.MKDeyL);
     obj4.onPress = NOOP;
     obj4.leading = <closure_4 animating size="large" />;
-    return jsx(tmp3(14151).UserProfileEditFormButton, {
+    return jsx(tmp3(14176).UserProfileEditFormButton, {
       label: null,
       buttonText: null,
       onPress: null,
@@ -138,15 +138,15 @@ export default function UserProfileNameplateEditButton(user) {
         if (null != nameplateProduct) {
           const obj8 = { style: tmp.previewContainer, children: null };
           const obj9 = { nameplate: nameplateData, fullOpacity: true, isSquarePreview: true };
-          obj8.children = jsx(guildId(8273), { nameplate: nameplateData, fullOpacity: true, isSquarePreview: true });
+          obj8.children = jsx(guildId(8281), { nameplate: nameplateData, fullOpacity: true, isSquarePreview: true });
           let tmp15Result = <closure_5 style={tmp.previewContainer}>{null}</closure_5>;
         }
         obj6.leading = tmp15Result;
-        return jsx(tmp3(14151).UserProfileEditFormButton, obj6);
+        return jsx(tmp3(14176).UserProfileEditFormButton, obj6);
       }
     }
-    const obj10 = { source: guildId(12729), style: tmp.noneIcon };
-    tmp15Result = jsx(tmp3(1177).Icon, { source: guildId(12729), style: tmp.noneIcon });
+    const obj10 = { source: guildId(12746), style: tmp.noneIcon };
+    tmp15Result = jsx(tmp3(1177).Icon, { source: guildId(12746), style: tmp.noneIcon });
   }
-  const tmp3Result = user(14168);
+  const tmp3Result = user(14193);
 }

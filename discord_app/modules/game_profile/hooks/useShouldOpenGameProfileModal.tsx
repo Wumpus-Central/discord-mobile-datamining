@@ -33,10 +33,7 @@ export default function useShouldOpenGameProfileModal(applicationId) {
   isLoading = gameId2.isLoading;
   let shouldOpenGameProfile = null != gameRecord;
   if (shouldOpenGameProfile) {
-    shouldOpenGameProfile = !require("FlagUtils").hasFlag(
-      gameRecord.gameFlags,
-      source(tmp[5]).GameFlags.GAME_PROFILE_DISABLED,
-    );
+    shouldOpenGameProfile = !require("FlagUtils").hasFlag(gameRecord.gameFlags, source(tmp[5]).GameFlags.GAME_DISABLED);
     const obj2 = require("FlagUtils");
   }
   let items = [gameRecord, shouldOpenGameProfile, isLoading, source, trackEntryPointImpression];
@@ -61,7 +58,7 @@ export default function useShouldOpenGameProfileModal(applicationId) {
         let tmp11 = items;
       } else {
         const items1 = [];
-        if (obj3.hasFlag(gameRecord.gameFlags, GameFlags.GameFlags.GAME_PROFILE_DISABLED)) {
+        if (obj3.hasFlag(gameRecord.gameFlags, GameFlags.GameFlags.GAME_DISABLED)) {
           items1.push(obj.Disabled);
         }
         obj3 = FlagUtilsAll;
@@ -101,7 +98,7 @@ export const gameIsAcceptable = function gameIsAcceptable(gameFlags) {
     let arr = items;
   } else {
     const items1 = [];
-    if (obj2.hasFlag(gameFlags.gameFlags, GameFlags.GameFlags.GAME_PROFILE_DISABLED)) {
+    if (obj2.hasFlag(gameFlags.gameFlags, GameFlags.GameFlags.GAME_DISABLED)) {
       items1.push(obj.Disabled);
     }
     obj2 = FlagUtilsAll;
@@ -121,7 +118,7 @@ export const gameIdIsAcceptable = function gameIdIsAcceptable(gameId) {
     let arr = items;
   } else {
     const items1 = [];
-    if (obj2.hasFlag(game.gameFlags, GameFlags.GameFlags.GAME_PROFILE_DISABLED)) {
+    if (obj2.hasFlag(game.gameFlags, GameFlags.GameFlags.GAME_DISABLED)) {
       items1.push(obj.Disabled);
     }
     obj2 = FlagUtilsAll;

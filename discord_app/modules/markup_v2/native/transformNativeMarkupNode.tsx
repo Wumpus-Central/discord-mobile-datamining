@@ -101,7 +101,7 @@ function transformNode(type, channelId) {
         obj18.inQuote = true;
         let arr2 = transformNativeBlocks(type.value, obj18, "quote");
         if (arr2.length <= 0) {
-          const obj19 = { type: tmp51(5295).AST_KEY.TEXT, content: " " };
+          const obj19 = { type: tmp51(5302).AST_KEY.TEXT, content: " " };
           const items1 = [obj19];
           arr2 = items1;
         }
@@ -216,7 +216,7 @@ function transformNativeBlocks(value, channelId, quote) {
   return items;
 }
 const set = new Set(["paragraph", "quote"]);
-const regExp = new RegExp(fn(4824).ANSI_CONTROL_SEQUENCE_RE, "g");
+const regExp = new RegExp(fn(4831).ANSI_CONTROL_SEQUENCE_RE, "g");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/markup_v2/native/transformNativeMarkupNode.tsx");
 

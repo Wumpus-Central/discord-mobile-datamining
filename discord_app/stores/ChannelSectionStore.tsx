@@ -102,21 +102,10 @@ function handlePermissionsChange() {
   }
   return flag2;
 }
-function setIsSearchSidebarOpen() {
-  let hasSearchStateResult = null != searchContextId;
-  if (hasSearchStateResult) {
-    hasSearchStateResult = SearchMessageStore.hasSearchState(searchContextId);
-  }
-  if (hasSearchStateResult === c25) {
-    return false;
-  } else {
-    c25 = hasSearchStateResult;
-  }
-}
-const isChannelChatInSidebar = fn(2048).isChannelChatInSidebar;
+const isChannelChatInSidebar = fn(2049).isChannelChatInSidebar;
 const Constants = fn(1074);
 ({ ChannelSections: closure_12, ComponentActions: map1 } = Constants);
-const ChannelConstants = fn(2051);
+const ChannelConstants = fn(2052);
 ({ isStaticChannelRoute: closure_14, buildGuildStaticChannelId: closure_15 } = ChannelConstants);
 const Permissions = fn(1085).Permissions;
 let c17 = false;
@@ -163,10 +152,8 @@ prototype["initialize"] = function initialize(isMembersOpen) {
       guildSidebars = {};
     }
   }
-  const items = [SearchMessageStore];
-  this.syncWith(items, setIsSearchSidebarOpen);
-  const items1 = [PermissionStore];
-  this.syncWith(items1, handlePermissionsChange);
+  const items = [PermissionStore];
+  this.syncWith(items, handlePermissionsChange);
   this.waitFor(
     ChannelStore,
     ExperimentStore,
@@ -353,10 +340,49 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
     if (hasSearchStateResult) {
       hasSearchStateResult = SearchMessageStore.hasSearchState(searchContextId);
     }
-    if (hasSearchStateResult !== c25) {
+    let flag = hasSearchStateResult !== c25;
+    if (flag) {
       c25 = hasSearchStateResult;
+      flag = true;
     }
-    return false;
+    return flag;
+  },
+  SEARCH_MESSAGES_START: function handleSearchMessagesStart(ids) {
+    ids = ids.ids;
+    let tmp = null != searchContextId;
+    if (tmp) {
+      let hasItem = ids.includes(searchContextId);
+      if (hasItem) {
+        let flag = !c25;
+        if (!c25) {
+          c25 = true;
+          flag = true;
+        }
+        hasItem = flag;
+      }
+      tmp = hasItem;
+    }
+    return tmp;
+  },
+  SEARCH_MESSAGES_CLEAR: function handleSearchMessagesClear(id) {
+    let tmp = id.id === searchContextId;
+    if (tmp) {
+      let flag = c25;
+      if (flag) {
+        c25 = false;
+        flag = true;
+      }
+      tmp = flag;
+    }
+    return tmp;
+  },
+  CONNECTION_OPEN: function handleConnectionOpen() {
+    let flag = c25;
+    if (flag) {
+      c25 = false;
+      flag = true;
+    }
+    return flag;
   },
   CHANNEL_TOGGLE_MEMBERS_SECTION: function handleChannelToggleMembersSection() {
     if (c25) {
@@ -508,6 +534,13 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
     }
     if (null != tmp3) {
       delete tmp[tmp2];
+      let hasSearchStateResult = null != searchContextId;
+      if (hasSearchStateResult) {
+        hasSearchStateResult = SearchMessageStore.hasSearchState(searchContextId);
+      }
+      if (hasSearchStateResult !== c25) {
+        c25 = hasSearchStateResult;
+      }
     }
   },
   SIDEBAR_CLOSE_GUILD: function handleGuildCloseSidebar(arg0) {

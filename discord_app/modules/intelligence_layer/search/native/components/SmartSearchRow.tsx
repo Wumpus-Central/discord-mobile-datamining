@@ -9,12 +9,12 @@ import IntelligenceSearchStore from "../../IntelligenceSearchStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const IntelligenceSearchConstants = fn(11833);
+const IntelligenceSearchConstants = fn(11847);
 ({ MAX_PRESENTED_CITATIONS: closure_9, COLLAPSED_FRAME_HEIGHT } = IntelligenceSearchConstants);
-let closure_10 = fn(7298).SEARCH_MESSAGES_DEFAULT_LINE_CLAMP;
+let closure_10 = fn(7303).SEARCH_MESSAGES_DEFAULT_LINE_CLAMP;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj = {
   collapsedFrame: { height: COLLAPSED_FRAME_HEIGHT },
   content: { paddingBottom: nativeDefault.space.PX_40, overflow: "hidden" },

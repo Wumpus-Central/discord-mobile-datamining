@@ -11,15 +11,15 @@ import useSpeakerTooltipsDefault from "../hooks/useSpeakerTooltips.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GameConsoleStore from "../../../game_console/GameConsoleStore.tsx";
-import StageChannelAudioStore from "../../../stage_channels/native/StageChannelAudioStore.tsx";
 import AudioRouteStore from "../../../voice_calls/AudioRouteStore.native.tsx";
+import AudioRouteSwitchingStore from "../../../voice_calls/native/AudioRouteSwitchingStore.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import SessionsStore from "../../../../stores/SessionsStore.tsx";
 
 require = fn;
 let closure_3 = ["ref"];
 const NativeModules = fn(17).NativeModules;
-const setVoiceUpsellDismissed = fn(16911).setVoiceUpsellDismissed;
+const setVoiceUpsellDismissed = fn(16940).setVoiceUpsellDismissed;
 const PlatformTypes = fn(1074).PlatformTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
@@ -38,6 +38,7 @@ export default noop.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChan
   const style = isConnectedToVoiceChannel.style;
   noop = undefined;
   c6 = undefined;
+  let disabled;
   closure_12 = undefined;
   closure_14 = undefined;
   let onPress;
@@ -57,10 +58,8 @@ export default noop.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChan
     awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo(),
   );
   let obj2 = isConnectedToVoiceChannel(style[16]);
-  const items1 = [stateFromStores];
-  const disabled = isConnectedToVoiceChannel(style[16]).useStateFromStores(items1, () =>
-    stateFromStores.getQueueAudioSwap(),
-  );
+  const items1 = [disabled];
+  disabled = isConnectedToVoiceChannel(style[16]).useStateFromStores(items1, () => disabled.getQueueAudioSwap());
   let obj3 = isConnectedToVoiceChannel(style[16]);
   const items2 = [closure_12];
   const stateFromStores1 = isConnectedToVoiceChannel(style[16]).useStateFromStores(items2, () => {
@@ -117,9 +116,9 @@ export default noop.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChan
     obj = PlatformUtils;
   }, items4);
   let obj4 = isConnectedToVoiceChannel(style[16]);
-  const items5 = [disabled];
+  const items5 = [stateFromStores];
   stateFromStores2 = isConnectedToVoiceChannel(style[16]).useStateFromStores(items5, () =>
-    disabled.getCurrentRouteType(),
+    stateFromStores.getCurrentRouteType(),
   );
   const items6 = [arr5, channelId, isConnectedToVoiceChannel, stateFromStores2, tmp5];
   const items7 = [tmp2];

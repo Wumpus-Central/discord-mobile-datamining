@@ -210,11 +210,11 @@ function EditSection(navigateToProfileCustomization) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const useIsContentShown = fn(2034).useIsContentShown;
-let UserProfileSections = fn(7621).UserProfileSections;
-const UserProfileThemeTypes = fn(6624).UserProfileThemeTypes;
-const ContentDismissActionType = fn(2041).ContentDismissActionType;
-let closure_13 = fn(10647).UserProfileEditAutoFocusElement;
+const useIsContentShown = fn(2035).useIsContentShown;
+let UserProfileSections = fn(7628).UserProfileSections;
+const UserProfileThemeTypes = fn(6629).UserProfileThemeTypes;
+const ContentDismissActionType = fn(2042).ContentDismissActionType;
+let closure_13 = fn(10658).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 const size = fn(2);
@@ -566,7 +566,7 @@ export default function YouScreenUserProfileContent(user) {
             initialTab === UserProfileSections.WISHLIST ? UserProfileSections.WISHLIST : UserProfileSections.MAIN,
           );
           ref.current(num, false, true);
-          navigation.setParams({ initialTab: "r" });
+          navigation.setParams({ initialTab: "__initData" });
         }, 80);
       }
       return () => {

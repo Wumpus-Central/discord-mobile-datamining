@@ -17,8 +17,8 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 require = fn;
 function AdvancedInstantInviteScreen() {
   let tmp = closure_12();
-  navigation = navigation(1484).useNavigation();
-  let obj = navigation(1484);
+  navigation = navigation(1485).useNavigation();
+  let obj = navigation(1485);
   const items = [ChannelStore, CreateInviteModalStore, GuildStore];
   const stateFromStoresObject = navigation(504).useStateFromStoresObject(items, () => {
     const pendingSettings = CreateInviteModalStore.getPendingSettings();
@@ -69,8 +69,8 @@ function AdvancedInstantInviteScreen() {
     }
   }, items1);
   const tmp2Result = navigation(12);
-  const unmountEffect = navigation(5291).useUnmountEffect(() => {
-    channel(573).wait(channel(9270).resetSettings);
+  const unmountEffect = navigation(5298).useUnmountEffect(() => {
+    channel(573).wait(channel(9281).resetSettings);
   });
   const items2 = [channel];
   callback = noop.useCallback(() => {
@@ -97,26 +97,26 @@ function AdvancedInstantInviteScreen() {
           const obj = { onPress, text: null };
           const intl = navigation(1115).intl;
           obj.text = intl.string(navigation(1115).t["R3BPH+"]);
-          tmp = jsx(navigation(6790).HeaderActionButton, { onPress, text: null });
+          tmp = jsx(navigation(6795).HeaderActionButton, { onPress, text: null });
         }
         return tmp;
       },
     });
   }, items3);
   const callback1 = noop.useCallback((maxUses) => {
-    channel(9270).updateSettings({ maxUses });
+    channel(9281).updateSettings({ maxUses });
   }, []);
   const callback2 = noop.useCallback((maxAge) => {
-    channel(9270).updateSettings({ maxAge });
+    channel(9281).updateSettings({ maxAge });
   }, []);
   const callback3 = noop.useCallback((temporary) => {
-    channel(9270).updateSettings({ temporary });
+    channel(9281).updateSettings({ temporary });
   }, []);
   const callback4 = noop.useCallback((flags) => {
-    channel(9270).updateSettings({ flags });
+    channel(9281).updateSettings({ flags });
   }, []);
   const callback5 = noop.useCallback((roleIds) => {
-    channel(9270).updateSettings({ roleIds });
+    channel(9281).updateSettings({ roleIds });
   }, []);
   let obj4 = { contentContainerStyle: tmp.formContainer, children: null };
   let obj5 = {
@@ -135,15 +135,15 @@ function AdvancedInstantInviteScreen() {
     onChangeFlags: null,
     onChangeRoleIds: null,
   };
-  const tmp2Result2 = navigation(5291);
-  obj5.maxUsesOptions = channel(9266).getMaxUsesOptions;
+  const tmp2Result2 = navigation(5298);
+  obj5.maxUsesOptions = channel(9277).getMaxUsesOptions;
   ({ temporary: obj7.temporary, flags: obj7.flags, roleIds: obj7.roleIds } = settings);
   obj5.onChangeMaxAge = callback2;
   obj5.onChangeMaxUses = callback1;
   obj5.onChangeTemporary = callback3;
   obj5.onChangeFlags = callback4;
   obj5.onChangeRoleIds = callback5;
-  obj4.children = jsx(channel(17590), {
+  obj4.children = jsx(channel(17620), {
     style: tmp.formContent,
     channel: first,
     guild,
@@ -159,12 +159,12 @@ function AdvancedInstantInviteScreen() {
     onChangeFlags: null,
     onChangeRoleIds: null,
   });
-  return jsx(navigation(8045).Form, { contentContainerStyle: tmp.formContainer, children: null });
+  return jsx(navigation(8053).Form, { contentContainerStyle: tmp.formContainer, children: null });
 }
 const Constants = fn(1074);
 ({ InviteModalScenes: closure_9, Permissions: c10 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = {
   formContainer: { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 },
   formContent: null,

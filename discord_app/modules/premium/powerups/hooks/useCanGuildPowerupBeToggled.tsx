@@ -6,7 +6,7 @@ import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const PowerupActiveStatusType = fn(4720).PowerupActiveStatusType;
+const PowerupActiveStatusType = fn(4724).PowerupActiveStatusType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useCanGuildPowerupBeToggled.tsx");
 
@@ -56,7 +56,7 @@ export default function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
           if (null != found1) {
             if (null != allPowerups[found1]) {
               const intl = closure_0(1115).intl;
-              const tmp11 = skuId(2518);
+              const tmp11 = skuId(2519);
               let title;
               if (allPowerups[found1] != null) {
                 title = tmp13.title;

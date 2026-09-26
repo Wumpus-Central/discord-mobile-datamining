@@ -1,6 +1,6 @@
 // discord_app/modules/premium/powerups/hooks/useMultiPerkStatusValues.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef2518 from "../GuildPowerups.messages.js";
+import _modDef2519 from "../GuildPowerups.messages.js";
 import GuildPowerupsConstants from "../constants/GuildPowerupsConstants.tsx";
 import usePowerupActiveStatus from "usePowerupActiveStatus.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -38,7 +38,7 @@ export default function useMultiPerkStatusValues(powerups) {
     } else if (someResult) {
       const obj3 = { type: "active", statusText: null };
       const intl = util.intl;
-      obj3.statusText = intl.string(_modDef2518.FFLkmx);
+      obj3.statusText = intl.string(_modDef2519.FFLkmx);
       tmp4 = obj3;
     }
     const reduced1 = powerupsActiveStatuses.reduce((acc, type) => {

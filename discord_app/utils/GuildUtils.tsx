@@ -5,7 +5,7 @@ import UserUtilsAll from "UserUtils.tsx";
 import GuildActionCreatorsDefault from "../actions/GuildActionCreators.tsx";
 import GuildStore from "../stores/GuildStore.tsx";
 import UserStore from "../stores/UserStore.tsx";
-import priv from "../../_runtime/01438_priv.js";
+import priv from "../../_runtime/01439_priv.js";
 
 require = fn;
 function getGuildNameSuggestion(truncateUsername) {

@@ -1,7 +1,7 @@
 // discord_app/modules/games/autocomplete/GameAutocompleteStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import privDefault from "../../../../_runtime/01438_priv.js";
+import privDefault from "../../../../_runtime/01439_priv.js";
 import GameAutocompleteUtils from "GameAutocompleteUtils.tsx";
 
 require = fn;

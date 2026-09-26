@@ -3,7 +3,7 @@ import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import SubscriptionRoleStore from "SubscriptionRoleStore.tsx";
 
 require = fn;
-const constants = fn(14724).UserGuildRoleSubscriptionRelationship;
+const constants = fn(14752).UserGuildRoleSubscriptionRelationship;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useUserRoleSubscriptionRelationship.tsx");
 

@@ -14,7 +14,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj = {
   headerPanel: {
     position: "relative",
@@ -43,7 +43,7 @@ let obj4 = {
   justifyContent: "space-between",
 };
 obj.headerPanelButtons = {
-  height: fn(5279).SMALL_BUTTON_HEIGHT,
+  height: fn(5286).SMALL_BUTTON_HEIGHT,
   gap: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP,
   flexDirection: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT,
   alignItems: "center",
@@ -59,7 +59,7 @@ const __initData = {
   code: "function MessagesHeaderTsx1(){const{withSpring,scrollPosition}=this.__closure;return{opacity:withSpring(scrollPosition.get()>0?1:0)};}",
 };
 let obj5 = {
-  height: fn(5279).SMALL_BUTTON_HEIGHT,
+  height: fn(5286).SMALL_BUTTON_HEIGHT,
   gap: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP,
   flexDirection: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT,
   alignItems: "center",
@@ -84,13 +84,13 @@ export default noop.memo(function MessagesHeader(height) {
     }
     return { opacity: spring.withSpring(num) };
   };
-  let obj = height(4563);
-  fn.__closure = { withSpring: height(5273).withSpring, scrollPosition };
+  let obj = height(4566);
+  fn.__closure = { withSpring: height(5280).withSpring, scrollPosition };
   fn.__workletHash = 17233409273245;
   fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj2 = { withSpring: height(5273).withSpring, scrollPosition };
-  const isHomeDrawerEnabled = height(15629).useIsHomeDrawerEnabled();
+  let obj2 = { withSpring: height(5280).withSpring, scrollPosition };
+  const isHomeDrawerEnabled = height(15657).useIsHomeDrawerEnabled();
   const callback = noop.useCallback(() => {
     const rootNavigationRef = height(headerPanel[12]).getRootNavigationRef();
     if (rootNavigationRef != null) {
@@ -123,10 +123,10 @@ export default noop.memo(function MessagesHeader(height) {
       }
     }
   }, []);
-  let obj3 = height(15629);
+  let obj3 = height(15657);
   const obj4 = { variant: "primary", icon: null, size: "sm", accessibilityLabel: null, onPress: null };
-  const tmp12 = scrollPosition(5932)("bespoke");
-  obj4.icon = closure_6(height(10402).PlusLargeIcon, { size: "sm", color: scrollPosition(576).colors.WHITE });
+  const tmp12 = scrollPosition(5937)("bespoke");
+  obj4.icon = closure_6(height(10413).PlusLargeIcon, { size: "sm", color: scrollPosition(576).colors.WHITE });
   const intl = height(1115).intl;
   obj4.accessibilityLabel = intl.string(height(1115).t.jD1qzM);
   obj4.onPress = callback3;
@@ -141,7 +141,7 @@ export default noop.memo(function MessagesHeader(height) {
   } else {
     stringResult = string(t.OIgYlQ);
   }
-  obj7.children = closure_6(height(4825).Text, {
+  obj7.children = closure_6(height(4832).Text, {
     color: "mobile-text-heading-primary",
     variant: "heading-lg/semibold",
     maxFontSizeMultiplier: 1.75,
@@ -154,14 +154,14 @@ export default noop.memo(function MessagesHeader(height) {
     onPress: callback2,
     variant: "secondary",
     size: "sm",
-    icon: scrollPosition(6468),
+    icon: scrollPosition(6473),
     accessibilityLabel: null,
   };
   const intl3 = tmp3(1115).intl;
   obj9.accessibilityLabel = intl3.string(height(1115).t["5h0QOP"]);
   const items2 = [
-    closure_6(height(7358).IconButton, obj9),
-    closure_6(scrollPosition(15635), { noMargin: true, onPress: callback, alternateVariant: true }),
+    closure_6(height(7363).IconButton, obj9),
+    closure_6(scrollPosition(15663), { noMargin: true, onPress: callback, alternateVariant: true }),
     ,
   ];
   const obj10 = {
@@ -169,21 +169,21 @@ export default noop.memo(function MessagesHeader(height) {
     grow: true,
     shrink: true,
     size: "sm",
-    icon: scrollPosition(4766),
+    icon: scrollPosition(4770),
     onPress: callback1,
     maxFontSizeMultiplier: 1,
     text: null,
   };
   const intl4 = tmp3(1115).intl;
   obj10.text = intl4.string(height(1115).t.zIJnA6);
-  items2[2] = closure_6(height(5274).Button, obj10);
-  items2[3] = closure_6(height(7358).IconButton, obj4);
+  items2[2] = closure_6(height(5281).Button, obj10);
+  items2[3] = closure_6(height(7363).IconButton, obj4);
   obj8.children = items2;
   items1[1] = closure_7(closure_4, obj8);
   const obj11 = { style: null };
   const items3 = [tmp.headerBorder, animatedStyle];
   obj11.style = items3;
-  items1[2] = closure_6(scrollPosition(4563).View, obj11);
+  items1[2] = closure_6(scrollPosition(4566).View, obj11);
   items1[3] = tmp12;
   obj6.children = items1;
   return closure_7(closure_4, obj6);

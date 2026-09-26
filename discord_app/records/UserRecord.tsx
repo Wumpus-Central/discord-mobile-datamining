@@ -190,6 +190,14 @@ class UserRecord extends tmp2 {
       displayNameStyles = tmp12Result.parseServerDisplayNameStyles(global.display_name_styles);
     }
     tmp6.displayNameStyles = displayNameStyles;
+    vadColors = global.vadColors;
+    if (vadColors == null) {
+      vadColors = global.vad_colors;
+    }
+    if (vadColors == null) {
+      vadColors = null;
+    }
+    tmp6.vadColors = vadColors;
     typingIndicatorStyle = global.typingIndicatorStyle;
     if (typingIndicatorStyle == null) {
       tmp12Result1 = tmp12(tmp13[5]);

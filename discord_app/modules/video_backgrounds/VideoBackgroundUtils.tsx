@@ -90,7 +90,7 @@ function getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption) {
   }
   return str;
 }
-const VideoBackgroundConstants = fn(6403);
+const VideoBackgroundConstants = fn(6408);
 ({
   DefaultVideoBackground: hasOwnProperty,
   VideoFilterType: metroRequire,
@@ -184,7 +184,7 @@ export const trackBackgroundOptionDeleted = function trackBackgroundOptionDelete
 };
 export const getVideoBackgroundProtoFromOption = function getVideoBackgroundProtoFromOption(type) {
   if (null == type) {
-    let obj = { oneofKind: "r" };
+    let obj = { oneofKind: "__initData" };
   } else {
     let tmp = null != type && typeof type === "object";
     if (tmp) {

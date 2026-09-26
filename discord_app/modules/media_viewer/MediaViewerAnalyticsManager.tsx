@@ -25,7 +25,7 @@ let obj2 = {
   channelId: "isArray",
   channelType: "isArray",
   numMediaItems: "Array",
-  hasMediaOptions: "flex",
+  hasMediaOptions: "channel",
   source: null,
   incrementableActions: null,
 };

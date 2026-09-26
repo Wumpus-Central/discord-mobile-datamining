@@ -45,7 +45,7 @@ function ensureGuildLoaded(guild_id, Full, getBasicChannel) {
               );
             } else {
               [arr, tmp41] = result;
-              tmp4(2095)(arr);
+              tmp4(2096)(arr);
               if (Full !== tmp2.Basic) {
                 closure_34 = closure_34 + 1;
               }
@@ -506,7 +506,7 @@ function guildChannelCount(id) {
   }
   return length;
 }
-const ChannelRecord = fn(2048);
+const ChannelRecord = fn(2049);
 ({
   createChannelRecordFromServer: closure_7,
   isPrivate: closure_8,
@@ -565,7 +565,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
       return null;
     } else if (found.some((item) => !set.has(item))) {
       dependencyMap = closure_31;
-      return tmp(2093).tryLoadOrResetCacheGatewayAsync(
+      return tmp(2094).tryLoadOrResetCacheGatewayAsync(
         "loadChannels",
         asyncGeneratorStep(async () => {
           if (c7 === 2) {

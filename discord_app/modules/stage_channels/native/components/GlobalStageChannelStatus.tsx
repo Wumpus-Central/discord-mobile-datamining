@@ -49,18 +49,18 @@ class StageChannelRaiseHandAck {
               channel = tmp7;
               if (null != id) {
                 if (obj9.shouldAgeVerifyToSpeakForCurrentUser(id.id)) {
-                  const obj5 = { entryPoint: tmp41(7853).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
-                  const result = tmp3(7851).showAgeVerificationGetStartedModal(obj5);
-                  const obj4 = tmp3(7851);
+                  const obj5 = { entryPoint: tmp41(7861).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
+                  const result = tmp3(7859).showAgeVerificationGetStartedModal(obj5);
+                  const obj4 = tmp3(7859);
                 } else {
                   dependencyMap(true);
                   dependencyMap = 1;
                   c4 = 2;
                   c5 = 1;
-                  const obj6 = { value: tmp41(7838).audienceAckRequestToSpeak(id, false), done: false };
+                  const obj6 = { value: tmp41(7846).audienceAckRequestToSpeak(id, false), done: false };
                   return obj6;
                 }
-                obj9 = channel(5729);
+                obj9 = channel(5734);
               }
               c5 = 3;
             }
@@ -76,8 +76,8 @@ class StageChannelRaiseHandAck {
             dependencyMap = 0;
             closure_129_3(false);
             if (null == key.getKey()) {
-              tmp27(7834).openStageChannel(closure_129_0);
-              const obj8 = tmp27(7834);
+              tmp27(7842).openStageChannel(closure_129_0);
+              const obj8 = tmp27(7842);
             }
           }
           dependencyMap = 0;
@@ -252,7 +252,7 @@ const View = fn(17).View;
 const Fonts = fn(1074).Fonts;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = {
   invitedContainer: { paddingHorizontal: nativeDefault.space.PX_8 },
   icon: null,
@@ -344,7 +344,7 @@ export default function GlobalStageChannelStatus(arg0) {
   }
   if (!invitedHeaderText) {
     if (!tmp7) {
-      tmp8(4535);
+      tmp8(4538);
       let str = "dark-content";
     }
     if (null != channel) {
@@ -369,7 +369,7 @@ export default function GlobalStageChannelStatus(arg0) {
           const obj5 = {
             style: activeSpeakerIcon,
             size: tmp8(1177).Icon.Sizes.REFRESH_SMALL_16,
-            source: tmp8(5328).getChannelIconWithGuild(channel, guild),
+            source: tmp8(5335).getChannelIconWithGuild(channel, guild),
           };
           items2[1] = closure_10(tmp8(1177).Icon, obj5);
           let tmp13Result = "" !== str2;
@@ -409,7 +409,7 @@ export default function GlobalStageChannelStatus(arg0) {
           items2[2] = closure_11(tmp8(1177).LegacyText, obj8);
           obj3.children = items2;
           tmp13Result2 = closure_11(View, obj3);
-          const tmp8Result2 = tmp8(5328);
+          const tmp8Result2 = tmp8(5335);
         }
         return tmp13Result2;
       }

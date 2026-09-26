@@ -1,7 +1,7 @@
 // discord_app/utils/GuildDiscoveryUtils.tsx
 import AnalyticsUtilsDefault from "AnalyticsUtils.tsx";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef1472 from "../../_runtime/metro/01472__.js";
+import _modDef1473 from "../../_runtime/metro/01473__.js";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import LurkingStore from "../modules/lurker_mode/LurkingStore.tsx";
 import GuildMemberCountStore from "../stores/GuildMemberCountStore.tsx";
@@ -230,7 +230,7 @@ let closure_13 = async function _getDiscoverableGuild() {
             const HTTP = HTTPUtils.HTTP;
             const request = { url: constants.GUILD_DISCOVERY, query: null, oldFormErrors: true, rejectWithError: true };
             const obj4 = { guild_ids };
-            request.query = _modDef1472.stringify(obj4);
+            request.query = _modDef1473.stringify(obj4);
             c5 = 2;
             c6 = 1;
             const obj5 = { value: HTTP.get(request), done: false };

@@ -2,11 +2,11 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import SentryInitUtils from "../../../../modules/errors/native/SentryInitUtils.tsx";
-import Link from "../../../../../_runtime/01485_Link.js";
+import Link from "../../../../../_runtime/01486_Link.js";
 import NavigatorHeader from "NavigatorHeader.native.tsx";
-import _mod5938 from "../../../../../_runtime/metro/05938__.js";
+import _mod5943 from "../../../../../_runtime/metro/05943__.js";
 import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade.native.tsx";
-import StackNavigator from "../../../../../_runtime/06418_StackNavigator.js";
+import StackNavigator from "../../../../../_runtime/06423_StackNavigator.js";
 import NavigatorScreen from "NavigatorScreen.native.tsx";
 import useNavigationTheme from "useNavigationTheme.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -254,7 +254,7 @@ function WrappedNavigationStack(arg0) {
     }),
     1,
   )[0];
-  const tmp4 = navigationContainerRef(4763)();
+  const tmp4 = navigationContainerRef(4767)();
   let navigationTheme1 = useNavigationTheme.useNavigationTheme(tmp4);
   const obj3 = {
     ref: navigationContainerRef,
@@ -293,13 +293,13 @@ function WrappedNavigationStack(arg0) {
     onStateChange: null,
     children: null,
   });
-  obj4.children = jsx(_mod5938.HeaderBackContext.Provider, { value: "Array", children: 0 });
+  obj4.children = jsx(_mod5943.HeaderBackContext.Provider, { value: "Array", children: 0 });
   return jsx(Link.NavigationIndependentTree, { children: null });
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { container: null, navbar: null, headerLeftContainerStyle: null, headerRightContainerStyle: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

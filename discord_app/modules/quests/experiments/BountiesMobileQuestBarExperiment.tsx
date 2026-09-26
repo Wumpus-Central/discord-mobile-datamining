@@ -13,13 +13,13 @@ const obj = {
   [3]: "EVERY_PAUSE_APP_STORE_OVERLAY",
 };
 const obj2 = { ILLUSTRATION_1: "illustration1", ILLUSTRATION_2: "illustration2", ILLUSTRATION_3: "illustration3" };
-const ILLUSTRATION_1 = obj2.ILLUSTRATION_1;
+const ILLUSTRATION_3 = obj2.ILLUSTRATION_3;
 const obj3 = {
   name: "2026-08-bounties-mobile-quest-bar",
   kind: "user",
   defaultConfig: {
     enabled: false,
-    illustration: ILLUSTRATION_1,
+    illustration: ILLUSTRATION_3,
     ctrVariant: obj.CONTROL,
     hapticFeedbackOnRewardEarnedEnabled: false,
   },
@@ -47,26 +47,26 @@ const obj4 = {
   },
   5: {
     enabled: true,
-    illustration: ILLUSTRATION_1,
+    illustration: ILLUSTRATION_3,
     ctrVariant: obj.FIRST_TAP_APP_STORE_OVERLAY,
     hapticFeedbackOnRewardEarnedEnabled: false,
   },
   6: {
     enabled: true,
-    illustration: ILLUSTRATION_1,
+    illustration: ILLUSTRATION_3,
     ctrVariant: obj.EVERY_PAUSE_APP_STORE_OVERLAY,
     hapticFeedbackOnRewardEarnedEnabled: false,
   },
   7: {
     enabled: true,
-    illustration: ILLUSTRATION_1,
+    illustration: ILLUSTRATION_3,
     ctrVariant: obj.LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY,
     hapticFeedbackOnRewardEarnedEnabled: false,
   },
 };
 obj4[7] = {
   enabled: true,
-  illustration: ILLUSTRATION_1,
+  illustration: ILLUSTRATION_3,
   ctrVariant: obj.CONTROL,
   hapticFeedbackOnRewardEarnedEnabled: true,
 };

@@ -10,11 +10,11 @@ export default (channelId) => {
   channelId = channelId.channelId;
   return new Promise((arg0) => {
     closure_0 = arg0;
-    channelId(17723).awaitStorage(() => {
+    channelId(17753).awaitStorage(() => {
       const invite = InstantInviteActionCreatorsDefault.createInvite(channelId, {}, "Mobile Voice Overlay");
       invite.then((code) => {
         RNCClipboard = RNCClipboard.RNCClipboard;
-        RNCClipboard.setString(channelId(7173)(code.code));
+        RNCClipboard.setString(channelId(7178)(code.code));
         closure_1_0(true);
       });
     });

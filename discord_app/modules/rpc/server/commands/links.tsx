@@ -145,7 +145,7 @@ let closure_13 = async function _openExternalLink(arg0) {
           } else {
             new Promise((arg0) => {
               closure_0 = arg0;
-              let obj = closure_1_0(7810);
+              let obj = closure_1_0(7818);
               const obj2 = {
                 href: dependencyMap,
                 shouldConfirm: true,
@@ -153,7 +153,7 @@ let closure_13 = async function _openExternalLink(arg0) {
                   return false;
                 },
                 onConfirm() {
-                  closure_1(4516)(dependencyMap);
+                  closure_1(4519)(dependencyMap);
                   application = closure_2_0.application;
                   let id;
                   if (application != null) {
@@ -185,7 +185,7 @@ let closure_13 = async function _openExternalLink(arg0) {
                 obj2,
                 undefined,
                 undefined,
-                closure_1_0(14022).getActivitiesModalContextKey({ application, channelId }),
+                closure_1_0(14047).getActivitiesModalContextKey({ application, channelId }),
               );
             });
           }
@@ -204,7 +204,7 @@ let closure_13 = async function _openExternalLink(arg0) {
     }
   })();
 };
-let Constants = fn(4735);
+let Constants = fn(4739);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
 Constants = fn(1074);
 ({
@@ -215,7 +215,7 @@ Constants = fn(1074);
   UserSettingsSections: closure_9,
   AnalyticEvents: c10,
 } = Constants);
-Constants = fn(2004);
+Constants = fn(2005);
 const items = [,];
 ({ AM_HARMONY_PRD_APPLICATION_ID: arr[0], AM_HARMONY_STG_APPLICATION_ID: arr[1] } = Constants);
 const set = new Set(items);
@@ -357,7 +357,7 @@ obj3 = {
 };
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
-const CONTEXT_MENU_ICON_NAMES = fn(14014);
+const CONTEXT_MENU_ICON_NAMES = fn(14039);
 let obj5 = {
   scope: null,
   handler(arg0) {

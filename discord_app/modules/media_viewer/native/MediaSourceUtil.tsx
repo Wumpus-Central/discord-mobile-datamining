@@ -2,6 +2,7 @@
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import util from "../../../intl/index.native.tsx";
 import FlagUtils from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import NativeMediaManagerModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeMediaManagerModule.tsx";
 import utils_ImageUtilsDefault from "../../../utils/native/ImageUtils.tsx";
 import Server from "../../../flow/Server.tsx";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
@@ -697,10 +698,9 @@ function handleDownloadError() {
   obj2.body = intl2.string(util.t.r4Zjzv);
   actions_AlertActionCreatorsDefault.show(obj2);
 }
-const NativeModules = fn(17).NativeModules;
 const Constants = fn(1074);
-({ MessageAttachmentFlags: metroRequire, WEBP_RE_IOS: closure_7 } = Constants);
-const re8 = /\.avif$/i;
+({ MessageAttachmentFlags: hasOwnProperty, WEBP_RE_IOS: metroRequire } = Constants);
+const re7 = /\.avif$/i;
 const VideoSourceType = {
   PORTAL: 0,
   [0]: "PORTAL",
@@ -976,7 +976,7 @@ export const extractMediaSourcesFromComponent = function extractMediaSourcesFrom
     return null;
   } else {
     const type = value.type;
-    if (tmp(1978).ComponentType.MEDIA_GALLERY === type) {
+    if (tmp(1979).ComponentType.MEDIA_GALLERY === type) {
       let num2 = 0;
       if (null != componentMediaIndex) {
         num2 = 0;
@@ -999,7 +999,7 @@ export const extractMediaSourcesFromComponent = function extractMediaSourcesFrom
       });
       const obj2 = { initialIndex: dependencyMap, sources: mapped.filter(tmp(1370).isNotNullish) };
       return obj2;
-    } else if (tmp(1978).ComponentType.THUMBNAIL === type) {
+    } else if (tmp(1979).ComponentType.THUMBNAIL === type) {
       const tmp7 = toMediaSourceFromUnfurledMedia(message2, guild_id, value.media, value.description, value.spoiler);
       let tmp8 = null;
       if (null != tmp7) {
@@ -1138,8 +1138,7 @@ export const useSelectedMediaSource = function useSelectedMediaSource(syncer) {
 };
 export const downloadMediaAsset = function downloadMediaAsset(mediaUrl, VIDEO) {
   closure_0 = VIDEO;
-  const MediaManager = NativeModules.MediaManager;
-  return MediaManager.downloadMediaAsset(mediaUrl, VIDEO).then(() => {
+  return NativeMediaManagerModuleDefault.downloadMediaAsset(mediaUrl, VIDEO).then(() => {
     if (ConstantsIOS.MediaType.IMAGE === closure_0) {
       ToastUtils.presentImageSaved();
       const tmp2Result = ToastUtils;
@@ -1161,11 +1160,9 @@ export const downloadMediaAssetWithContentType = function downloadMediaAssetWith
 ) {
   closure_0 = VIDEO;
   if (null != contentType) {
-    const MediaManager2 = NativeModules.MediaManager;
-    let result = MediaManager2.downloadMediaAssetWithContentType(mediaUrl, VIDEO, contentType);
+    let result = NativeMediaManagerModuleDefault.downloadMediaAssetWithContentType(mediaUrl, VIDEO, contentType);
   } else {
-    const MediaManager = NativeModules.MediaManager;
-    result = MediaManager.downloadMediaAsset(mediaUrl, VIDEO);
+    result = NativeMediaManagerModuleDefault.downloadMediaAsset(mediaUrl, VIDEO);
   }
   return result.then(() => {
     if (ConstantsIOS.MediaType.IMAGE === closure_0) {
@@ -1261,7 +1258,7 @@ export const supportOverlayVideoControls = function supportOverlayVideoControls(
 export const isAnimatedWebpSource = function isAnimatedWebpSource(sourceURI) {
   let result = null != sourceURI.sourceURI && null != sourceURI.uri;
   if (result) {
-    result = MediaFormatTesters.urlMatchesFileExtension(sourceURI.sourceURI, React5);
+    result = MediaFormatTesters.urlMatchesFileExtension(sourceURI.sourceURI, timestampProducer);
   }
   if (result) {
     const _URL = URL;
@@ -1274,7 +1271,7 @@ export const isAnimatedWebpSource = function isAnimatedWebpSource(sourceURI) {
 export const isAnimatedAvifSource = function isAnimatedAvifSource(sourceURI) {
   let result = null != sourceURI.sourceURI && null != sourceURI.uri;
   if (result) {
-    result = MediaFormatTesters.urlMatchesFileExtension(sourceURI.sourceURI, re8);
+    result = MediaFormatTesters.urlMatchesFileExtension(sourceURI.sourceURI, re7);
   }
   if (result) {
     const _URL = URL;
@@ -1292,7 +1289,7 @@ export const isAnimatedImageSource = function isAnimatedImageSource(source) {
   if (!result) {
     let result1 = null != source.sourceURI && null != source.uri;
     if (result1) {
-      result1 = MediaFormatTesters.urlMatchesFileExtension(source.sourceURI, React5);
+      result1 = MediaFormatTesters.urlMatchesFileExtension(source.sourceURI, timestampProducer);
       const tmpResult = MediaFormatTesters;
     }
     if (result1) {
@@ -1306,7 +1303,7 @@ export const isAnimatedImageSource = function isAnimatedImageSource(source) {
   if (!result) {
     let result2 = null != source.sourceURI && null != source.uri;
     if (result2) {
-      result2 = MediaFormatTesters.urlMatchesFileExtension(source.sourceURI, re8);
+      result2 = MediaFormatTesters.urlMatchesFileExtension(source.sourceURI, re7);
       const tmpResult2 = MediaFormatTesters;
     }
     if (result2) {

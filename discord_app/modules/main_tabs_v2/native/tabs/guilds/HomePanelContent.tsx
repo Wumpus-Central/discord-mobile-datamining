@@ -11,8 +11,8 @@ import HomeDrawerStore from "../../../../home_drawer/native/HomeDrawerStore.tsx"
 require = fn;
 function ContentMaskGradient(offsetX) {
   offsetX = offsetX.offsetX;
-  const guildsBarPullX = offsetX(15629).useHomeDrawerState().guildsBarPullX;
-  let obj = offsetX(15629);
+  const guildsBarPullX = offsetX(15657).useHomeDrawerState().guildsBarPullX;
+  let obj = offsetX(15657);
   const fn = function n() {
     const obj = { transform: null };
     const obj2 = { translateX: roundToNearestPixelDefault(-offsetX - guildsBarPullX.get()) };
@@ -20,38 +20,38 @@ function ContentMaskGradient(offsetX) {
     obj.transform = items;
     return obj;
   };
-  let obj2 = offsetX(4563);
-  fn.__closure = { roundToNearestPixel: guildsBarPullX(10445), offsetX, guildsBarPullX };
+  let obj2 = offsetX(4566);
+  fn.__closure = { roundToNearestPixel: guildsBarPullX(10456), offsetX, guildsBarPullX };
   fn.__workletHash = 7539125302557;
   fn.__initData = __initData;
   const animatedStyle = obj2.useAnimatedStyle(fn);
   const obj4 = {
     pointerEvents: "none",
     style: null,
-    children: closure_9(guildsBarPullX(5430), { absolute: true, tall: true, wide: true, mix: true }),
+    children: closure_9(guildsBarPullX(5437), { absolute: true, tall: true, wide: true, mix: true }),
   };
   let items = [absoluteFill.absoluteFill, animatedStyle];
   obj4.style = items;
-  return closure_9(guildsBarPullX(4563).View, obj4);
+  return closure_9(guildsBarPullX(4566).View, obj4);
 }
 function HomeDrawerPanelContent() {
   const tmp2 = closure_11();
-  const drawerOpen = ref(15632).useDrawerOpen();
-  let obj = ref(15632);
-  const doesLandOnHomeDrawer = ref(15629).useDoesLandOnHomeDrawer();
+  const drawerOpen = ref(15660).useDrawerOpen();
+  let obj = ref(15660);
+  const doesLandOnHomeDrawer = ref(15657).useDoesLandOnHomeDrawer();
   ref = isClientThemeOrCustomThemeActive.useRef(null);
-  let obj2 = ref(15629);
-  const homeDrawerState = ref(15629).useHomeDrawerState();
+  let obj2 = ref(15657);
+  const homeDrawerState = ref(15657).useHomeDrawerState();
   const panelTranslateX = homeDrawerState.panelTranslateX;
   const tmp8 = HomeDrawerStore((maxX) => maxX.maxX);
   dependencyMap = tmp8;
-  let obj3 = ref(15629);
-  isClientThemeOrCustomThemeActive = ref(7294).useIsClientThemeOrCustomThemeActive();
-  let obj4 = ref(7294);
-  const token = ref(4528).useToken(panelTranslateX(576).colors.BACKGROUND_BASE_LOWEST);
-  const obj5 = ref(4528);
-  const token1 = ref(4528).useToken(panelTranslateX(576).colors.PANEL_BG);
-  const obj6 = ref(4528);
+  let obj3 = ref(15657);
+  isClientThemeOrCustomThemeActive = ref(7299).useIsClientThemeOrCustomThemeActive();
+  let obj4 = ref(7299);
+  const token = ref(4531).useToken(panelTranslateX(576).colors.BACKGROUND_BASE_LOWEST);
+  const obj5 = ref(4531);
+  const token1 = ref(4531).useToken(panelTranslateX(576).colors.PANEL_BG);
+  const obj6 = ref(4531);
   const fn = function n() {
     if (!isClientThemeOrCustomThemeActive) {
       if (closure_2 > 0) {
@@ -64,11 +64,11 @@ function HomeDrawerPanelContent() {
     }
     obj = { backgroundColor: "transparent" };
   };
-  const obj7 = ref(4563);
+  const obj7 = ref(4566);
   fn.__closure = {
     isGradientTheme: isClientThemeOrCustomThemeActive,
     maxX: tmp8,
-    interpolateColor: ref(4563).interpolateColor,
+    interpolateColor: ref(4566).interpolateColor,
     panelTranslateX,
     baseLowest: token,
     panelBg: token1,
@@ -93,7 +93,7 @@ function HomeDrawerPanelContent() {
   const obj8 = {
     isGradientTheme: isClientThemeOrCustomThemeActive,
     maxX: tmp8,
-    interpolateColor: ref(4563).interpolateColor,
+    interpolateColor: ref(4566).interpolateColor,
     panelTranslateX,
     baseLowest: token,
     panelBg: token1,
@@ -120,14 +120,14 @@ function HomeDrawerPanelContent() {
     }
     return obj4;
   };
-  const obj9 = ref(4563);
+  const obj9 = ref(4566);
   fn2.__closure = {
-    interpolate: ref(4563).interpolate,
+    interpolate: ref(4566).interpolate,
     panelTranslateX,
-    INITIAL_OPEN_WIDTH: ref(15629).INITIAL_OPEN_WIDTH,
-    Extrapolation: ref(4563).Extrapolation,
+    INITIAL_OPEN_WIDTH: ref(15657).INITIAL_OPEN_WIDTH,
+    Extrapolation: ref(4566).Extrapolation,
     isGradientTheme: isClientThemeOrCustomThemeActive,
-    interpolateColor: ref(4563).interpolateColor,
+    interpolateColor: ref(4566).interpolateColor,
     maxX: tmp8,
     baseLowest: token,
     panelBg: token1,
@@ -144,7 +144,7 @@ function HomeDrawerPanelContent() {
     homeDrawerState.guildsBarDrawerStyle,
   ];
   obj12.style = items2;
-  const items3 = [closure_9(panelTranslateX(15893), { enableHome: true }), ,];
+  const items3 = [closure_9(panelTranslateX(15921), { enableHome: true }), ,];
   const obj13 = { style: null, pointerEvents: "none", collapsable: false, children: null };
   const items4 = [tmp2.contentMask, { left: GUILD_LIST_WIDTH }, animatedStyle1];
   obj13.style = items4;
@@ -154,23 +154,23 @@ function HomeDrawerPanelContent() {
     tmp16Result = closure_9(ContentMaskGradient, obj14);
   }
   obj13.children = tmp16Result;
-  items3[1] = closure_9(panelTranslateX(4563).View, obj13);
+  items3[1] = closure_9(panelTranslateX(4566).View, obj13);
   let tmp16Result2 = null;
   if (doesLandOnHomeDrawer) {
-    tmp16Result2 = closure_9(tmp10(15972), {});
+    tmp16Result2 = closure_9(tmp10(16000), {});
   }
   items3[2] = tmp16Result2;
   obj12.children = items3;
-  obj11.children = closure_10(panelTranslateX(4563).View, obj12);
-  return closure_9(panelTranslateX(4563).View, obj11);
+  obj11.children = closure_10(panelTranslateX(4566).View, obj12);
+  return closure_9(panelTranslateX(4566).View, obj11);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const DM_WIDTH = fn(1074).DM_WIDTH;
-const GUILD_LIST_WIDTH = fn(15892).GUILD_LIST_WIDTH;
+const GUILD_LIST_WIDTH = fn(15920).GUILD_LIST_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_11 = createStyles.createStyles((width) => {
   const obj = {
     container: { flex: 1 },

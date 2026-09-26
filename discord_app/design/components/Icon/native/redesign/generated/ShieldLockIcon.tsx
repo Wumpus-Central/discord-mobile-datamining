@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/ShieldLockIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod9228 from "../../../../../../../_runtime/metro/09228__.js";
+import _mod9239 from "../../../../../../../_runtime/metro/09239__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const ShieldLockIcon = function ShieldLockIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9228, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9239, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

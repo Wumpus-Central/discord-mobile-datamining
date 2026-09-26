@@ -36,8 +36,8 @@ let closure_17 = async function _handleVoiceChannelPress(arg0) {
   })();
 };
 const View = fn(17).View;
-const NO_VOICE_STATES = fn(4853).NO_VOICE_STATES;
-const RedesignChannelListConstants = fn(9566);
+const NO_VOICE_STATES = fn(4860).NO_VOICE_STATES;
+const RedesignChannelListConstants = fn(9577);
 ({ CHANNEL_SUBTITLE_TEXT_VARIANT: closure_12, CHANNEL_MARGIN_VERTICAL } = RedesignChannelListConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: map1, Permissions: closure_14 } = Constants);

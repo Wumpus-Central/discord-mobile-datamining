@@ -9,8 +9,8 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildAutoAddedThreadsAction.tsx");
 
 export default function useFavoritesGuildAutoAddedThreadsAction() {
-  hasAccess = hasAccess(9674).useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
-  let obj = hasAccess(9674);
+  hasAccess = hasAccess(9685).useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
+  let obj = hasAccess(9685);
   const items = [UserStore];
   if (hasAccess) {
     hasAccess = obj2.useStateFromStores(items, () => {
@@ -36,9 +36,9 @@ export default function useFavoritesGuildAutoAddedThreadsAction() {
     }
   }, items2);
   const intl = tmp(1115).intl;
-  obj3.label = intl.string(stateFromStores(3360).DIyQIF);
+  obj3.label = intl.string(stateFromStores(3361).DIyQIF);
   const intl2 = tmp(1115).intl;
-  obj3.subLabel = intl2.string(stateFromStores(3360).g2vHYJ);
+  obj3.subLabel = intl2.string(stateFromStores(3361).g2vHYJ);
   obj3.toggle = callback;
   return obj3;
 }

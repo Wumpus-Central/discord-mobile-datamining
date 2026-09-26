@@ -4,7 +4,7 @@ import useUploadDisabledDefault from "../useUploadDisabled.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let MediaKeyboardTarget = fn(1608).MediaKeyboardTarget;
+let MediaKeyboardTarget = fn(1609).MediaKeyboardTarget;
 const Constants = fn(1074);
 ({ ChannelTypesSets: hasOwnProperty, MAX_UPLOAD_COUNT: metroRequire } = Constants);
 const size = fn(2);
@@ -14,12 +14,12 @@ export default function useMediaKeyboardConfig(arg0) {
   ({ channel, context } = arg0);
   MediaKeyboardTarget = undefined;
   let mediaKeyboardDraftType;
-  const tmp4 = context(7175).useCanPostPollsInChannel(channel) && context.target !== MediaKeyboardTarget.COMMAND;
+  const tmp4 = context(7180).useCanPostPollsInChannel(channel) && context.target !== MediaKeyboardTarget.COMMAND;
   importDefault = tmp4;
   const tmp5 = useUploadDisabledDefault(channel);
   dependencyMap = tmp5;
-  let obj = context(7175);
-  let canStartThread = context(6682).useCanStartThread(channel);
+  let obj = context(7180);
+  let canStartThread = context(6687).useCanStartThread(channel);
   if (canStartThread) {
     const GUILD_THREADS_ONLY = mediaKeyboardDraftType.GUILD_THREADS_ONLY;
     canStartThread = !GUILD_THREADS_ONLY.has(channel.type);
@@ -30,11 +30,11 @@ export default function useMediaKeyboardConfig(arg0) {
   if (canStartThread) {
     canStartThread = !tmp;
   }
-  const tmp2Result = context(6682);
-  const tmp8 = context(8781).useIsAppLauncherEnabled(channel.id) && context.target !== MediaKeyboardTarget.COMMAND;
+  const tmp2Result = context(6687);
+  const tmp8 = context(8789).useIsAppLauncherEnabled(channel.id) && context.target !== MediaKeyboardTarget.COMMAND;
   MediaKeyboardTarget = tmp8;
-  const tmp2Result3 = context(8781);
-  mediaKeyboardDraftType = context(10087).getMediaKeyboardDraftType(context.target);
+  const tmp2Result3 = context(8789);
+  mediaKeyboardDraftType = context(10098).getMediaKeyboardDraftType(context.target);
   let items = [context, tmp4, tmp5, mediaKeyboardDraftType, canStartThread, tmp8];
   return canStartThread.useMemo(() => {
     const target = context.target;

@@ -5,7 +5,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_4 = createStyles.createStyles((arg0) => {
   const obj = {
     container: {
@@ -31,7 +31,7 @@ export default noop.memo(function MediaModalOverlayAltTextButton(description) {
   if (str == null) {
     str = "";
   }
-  const ViewImageDescriptions = str(2020).ViewImageDescriptions;
+  const ViewImageDescriptions = str(2021).ViewImageDescriptions;
   let tmp4 = null;
   if (ViewImageDescriptions.useSetting()) {
     tmp4 = null;
@@ -50,8 +50,8 @@ export default noop.memo(function MediaModalOverlayAltTextButton(description) {
       const obj2 = { variant: "text-xs/semibold", color: "text-overlay-light", children: null };
       const intl = tmp3(1115).intl;
       obj2.children = intl.string(tmp3(1115).t.Q5VqrN);
-      obj.children = jsx(tmp3(4825).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
-      tmp4 = jsx(tmp3(5428).PressableOpacity, {
+      obj.children = jsx(tmp3(4832).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
+      tmp4 = jsx(tmp3(5435).PressableOpacity, {
         style: tmp2.container,
         onPress() {
           if (str == null) {

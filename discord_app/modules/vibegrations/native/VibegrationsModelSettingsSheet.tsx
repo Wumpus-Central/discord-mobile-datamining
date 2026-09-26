@@ -1,7 +1,7 @@
 // discord_app/modules/vibegrations/native/VibegrationsModelSettingsSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3714 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3715 from "../intl/VibegrationsUntranslated.messages.js";
 import BottomSheetTitleHeader from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import ActionSheet from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import VibegrationsEffortPickerDefault from "VibegrationsEffortPicker.tsx";
@@ -87,7 +87,7 @@ class VibegrationsModelSettingsContent {
   }
 }
 const View = fn(17).View;
-const sendModelSettings = fn(12607).sendModelSettings;
+const sendModelSettings = fn(12624).sendModelSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
@@ -97,7 +97,7 @@ export default function VibegrationsModelSettingsSheet(projectId) {
   const obj = { header: null, children: null };
   const obj2 = { title: null };
   const intl = util.intl;
-  obj2.title = intl.string(_modDef3714["2NWMqY"]);
+  obj2.title = intl.string(_modDef3715["2NWMqY"]);
   obj.header = React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
   obj.children = React5(View, {
     children: React5(VibegrationsModelSettingsContent, { projectId: projectId.projectId }),

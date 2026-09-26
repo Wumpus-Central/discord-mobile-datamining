@@ -3,7 +3,7 @@ import HelpdeskUtilsDefault from "../../utils/HelpdeskUtils.tsx";
 import AgeVerificationActionCreatorsDefault from "../age_assurance/AgeVerificationActionCreators.native.tsx";
 import LocationMetadataStore from "../location_metadata/stores/LocationMetadataStore.tsx";
 
-const TinyBroncoConstants = fn(9220);
+const TinyBroncoConstants = fn(9231);
 ({ TINY_BRONCO_AGE_GROUP_SUPPORT_ARTICLE_IDS_BY_COUNTRY: c3, TINY_BRONCO_DEFAULT_ARTICLE_ID: closure_4 } =
   TinyBroncoConstants);
 const size = fn(2);

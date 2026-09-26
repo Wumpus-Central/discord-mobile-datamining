@@ -15,10 +15,10 @@ function keyExtractor(section) {
   return "" + section.section + "-" + section.row;
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(2041).ContentDismissActionType;
+const ContentDismissActionType = fn(2042).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj = {
   container: { flex: 1 },
   header: { marginTop: nativeDefault.space.PX_12, marginHorizontal: nativeDefault.space.PX_16 },
@@ -100,13 +100,13 @@ let closure_17 = noop.memo((channel) => {
   channel = channel.channel;
   const onChannelClick = channel.onChannelClick;
   const tmp = closure_15();
-  const tmp3 = onChannelClick(4982)(channel);
+  const tmp3 = onChannelClick(4989)(channel);
   const items = [UserGuildSettingsStore];
   const stateFromStores = channel(504).useStateFromStores(items, () =>
     UserGuildSettingsStore.isChannelOptedIn(channel.guild_id, channel.id),
   );
   const obj = channel(504);
-  const checkboxA11yNative = channel(4545).useCheckboxA11yNative({ checked: stateFromStores });
+  const checkboxA11yNative = channel(4548).useCheckboxA11yNative({ checked: stateFromStores });
   const obj3 = {
     style: tmp.categoryContainer,
     onPress() {
@@ -127,25 +127,25 @@ let closure_17 = noop.memo((channel) => {
   }
   obj3.accessibilityState = accessibilityState;
   const items1 = [
-    closure_12(channel(5994).TableRowGroupTitle, { style: tmp.categoryTitle, title: tmp3, lineClamp: 1 }),
+    closure_12(channel(5999).TableRowGroupTitle, { style: tmp.categoryTitle, title: tmp3, lineClamp: 1 }),
   ];
   let tmp10Result = null;
   if ("null" !== channel.id) {
     const obj5 = { style: tmp.selectAllContainer, children: null };
     const obj6 = { style: tmp.selectAllCheckbox, children: null };
     const obj7 = { checked: stateFromStores };
-    obj6.children = closure_12(tmp4(5924).FormCheckbox, obj7);
+    obj6.children = closure_12(tmp4(5929).FormCheckbox, obj7);
     const items2 = [closure_12(View, obj6)];
     const obj8 = { variant: "text-xs/semibold", color: "interactive-text-default", children: null };
     const intl = tmp4(1115).intl;
     obj8.children = intl.string(tmp4(1115).t.mSQwnW);
-    items2[1] = closure_12(tmp4(4825).Text, obj8);
+    items2[1] = closure_12(tmp4(4832).Text, obj8);
     obj5.children = items2;
     tmp10Result = closure_13(View, obj5);
   }
   items1[1] = tmp10Result;
   obj3.children = closure_13(closure_14, { children: items1 });
-  return closure_12(channel(5428).PressableOpacity, obj3);
+  return closure_12(channel(5435).PressableOpacity, obj3);
 });
 let closure_18 = noop.memo((channel) => {
   channel = channel.channel;

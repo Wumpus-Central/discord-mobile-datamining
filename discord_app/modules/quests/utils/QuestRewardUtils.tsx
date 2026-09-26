@@ -1,6 +1,6 @@
 // discord_app/modules/quests/utils/QuestRewardUtils.tsx
 import util from "../../../intl/index.native.tsx";
-import _mod4061 from "../../../../_runtime/metro/04061__.js";
+import _mod4064 from "../../../../_runtime/metro/04064__.js";
 import QuestTypes from "../QuestTypes.tsx";
 import QuestDataUtils from "QuestDataUtils.tsx";
 import QuestRewardTypes from "../../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx";
@@ -75,8 +75,8 @@ function _getDefaultRewardName(rewardsConfig, stateFromStores, arg2) {
   }
 }
 let items = [
-  fn(10682).QuestRewardExpirationMode.PREMIUM_EXTENSION,
-  fn(10682).QuestRewardExpirationMode.PREMIUM_PERMANENT,
+  fn(10695).QuestRewardExpirationMode.PREMIUM_EXTENSION,
+  fn(10695).QuestRewardExpirationMode.PREMIUM_PERMANENT,
 ];
 const set = new Set(items);
 const size = fn(2);
@@ -138,7 +138,7 @@ export const getCollectibleQuestRewardDuration = function getCollectibleQuestRew
         const date = new Date(config.expiresAt);
         const _Date2 = Date;
         const date1 = new Date(tmp5.expiresAt);
-        const differenceInDaysResult = _mod4061.differenceInDays(date1, date);
+        const differenceInDaysResult = _mod4064.differenceInDays(date1, date);
         const _Math3 = Math;
         let num = 0;
         const rounded = Math.floor(differenceInDaysResult / 30);
@@ -157,7 +157,7 @@ export const getCollectibleQuestRewardDuration = function getCollectibleQuestRew
           const obj3 = { months: sum };
           return intl3.formatToPlainString(util.t.kridzK, obj3);
         } else {
-          const differenceInDaysResult1 = _mod4061.differenceInDays(date1, date);
+          const differenceInDaysResult1 = _mod4064.differenceInDays(date1, date);
           if (differenceInDaysResult1 >= 7) {
             const _Math = Math;
             const rounded2 = Math.ceil(differenceInDaysResult1 / 7);
@@ -169,9 +169,9 @@ export const getCollectibleQuestRewardDuration = function getCollectibleQuestRew
             const obj = { days: differenceInDaysResult1 };
             return intl.formatToPlainString(util.t["k2UNz+"], obj);
           }
-          const tmp3Result2 = _mod4061;
+          const tmp3Result2 = _mod4064;
         }
-        const tmp3Result = _mod4061;
+        const tmp3Result = _mod4064;
       }
     }
   }

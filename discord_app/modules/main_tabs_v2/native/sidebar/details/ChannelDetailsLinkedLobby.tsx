@@ -5,13 +5,13 @@ import useGetOrFetchApplications from "../../../../applications/useGetOrFetchApp
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const util = BPDKoA(1115);
-const Text_Text = BPDKoA(4825);
+const Text_Text = BPDKoA(4832);
 require = fn;
 const View = fn(17).View;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ Fragment: hasOwnProperty, jsxs: metroRequire, jsx: closure_7 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { container: { alignItems: "center" }, divider: null };
 let size = { height: 1, width: 48, marginTop: 12, backgroundColor: nativeDefault.colors.BORDER_STRONG };
 obj2.divider = size;

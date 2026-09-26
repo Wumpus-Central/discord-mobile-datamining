@@ -15,11 +15,11 @@ import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const isThread = fn(2048).isThread;
-const TextAreaCta = fn(11430).TextAreaCta;
+const isThread = fn(2049).isThread;
+const TextAreaCta = fn(11444).TextAreaCta;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, ChannelTypes: closure_12, VerificationCriteria: map1 } = Constants);
-let closure_14 = fn(6459).PHONE_VERIFICATION_MODAL_KEY;
+let closure_14 = fn(6464).PHONE_VERIFICATION_MODAL_KEY;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardWrapper.tsx");

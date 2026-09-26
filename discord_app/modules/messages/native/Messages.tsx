@@ -60,7 +60,7 @@ import ActivityLauncherStore from "../../../stores/views/ActivityLauncherStore.t
 import SortedVoiceStateStore from "../../../stores/views/SortedVoiceStateStore.tsx";
 
 require = fn;
-const PollsInteractionStore = fn(10958);
+const PollsInteractionStore = fn(10971);
 ({ useChannelPollInteractions: closure_27, useMessagePollInteractions: closure_28 } = PollsInteractionStore);
 const Constants = fn(1074);
 ({
@@ -823,9 +823,9 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
     return displayNameStyles;
   });
   const tmpResult151 = tmp(tmp2[57]);
-  const fetchSocialLayerStorefrontProductDetailsEmbedData = tmp(
+  const fetchSocialLayerStorefrontProductDetailsEmbedApplications = tmp(
     tmp2[92],
-  ).useFetchSocialLayerStorefrontProductDetailsEmbedData(stateFromStores);
+  ).useFetchSocialLayerStorefrontProductDetailsEmbedApplications(stateFromStores);
   const obj3 = { profile: null, children: null };
   const tmpResult152 = tmp(tmp2[92]);
   obj3.profile = tmp(tmp2[93]).Profiles.Messages;

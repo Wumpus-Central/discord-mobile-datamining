@@ -31,7 +31,7 @@ class UserSettingsProto {
       if (databaseResult != null) {
         databaseResult.transaction((database) => {
           const state = closure_1_3.computeState();
-          const result = closure_1_0(2073).userSettingsTransaction(database);
+          const result = closure_1_0(2074).userSettingsTransaction(database);
           for (const key10014 in state) {
             obj2 = { id: null, value: null };
             let _Number = Number;
@@ -48,10 +48,10 @@ class UserSettingsProto {
           if (num == null) {
             num = -1;
           }
-          obj = closure_1_0(2073);
-          const result1 = closure_1_0(2073).nonGuildVersionsTransaction(database);
+          obj = closure_1_0(2074);
+          const result1 = closure_1_0(2074).nonGuildVersionsTransaction(database);
           result1.put({ id: "user_settings_version", version: num });
-          const obj3 = closure_1_0(2073);
+          const obj3 = closure_1_0(2074);
         }, "handleUserSettingsProtoChange");
       }
     };
@@ -166,7 +166,7 @@ obj.handleUserSettingsProtoChange = function handleUserSettingsProtoChange() {
   if (databaseResult != null) {
     databaseResult.transaction((database) => {
       const state = closure_1_3.computeState();
-      const result = closure_1_0(2073).userSettingsTransaction(database);
+      const result = closure_1_0(2074).userSettingsTransaction(database);
       for (const key10014 in state) {
         obj2 = { id: null, value: null };
         let _Number = Number;
@@ -183,10 +183,10 @@ obj.handleUserSettingsProtoChange = function handleUserSettingsProtoChange() {
       if (num == null) {
         num = -1;
       }
-      obj = closure_1_0(2073);
-      const result1 = closure_1_0(2073).nonGuildVersionsTransaction(database);
+      obj = closure_1_0(2074);
+      const result1 = closure_1_0(2074).nonGuildVersionsTransaction(database);
       result1.put({ id: "user_settings_version", version: num });
-      const obj3 = closure_1_0(2073);
+      const obj3 = closure_1_0(2074);
     }, "handleUserSettingsProtoChange");
   }
 };

@@ -13,13 +13,13 @@ require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const MetaQuestUtils = fn(1609);
+const MetaQuestUtils = fn(1610);
 if (MetaQuestUtils.isMetaQuest()) {
-  let MobilePhoneShareIcon = fn(12010).ScreenArrowIcon;
+  let MobilePhoneShareIcon = fn(12028).ScreenArrowIcon;
 } else {
-  MobilePhoneShareIcon = fn(16993).MobilePhoneShareIcon;
+  MobilePhoneShareIcon = fn(17021).MobilePhoneShareIcon;
 }
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj3 = { circle: null, iconContainer: null };
 let size = { width: "100%", height: "100%", borderRadius: nativeDefault.radii.round };
 obj3.circle = size;

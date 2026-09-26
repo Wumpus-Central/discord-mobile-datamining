@@ -17,13 +17,13 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);
-const FetchState = fn(6523).FetchState;
+const FetchState = fn(6528).FetchState;
 const Constants = fn(1074);
 ({ AnalyticsPages: closure_9, UserSettingsSections: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const PX_24 = nativeDefault.space.PX_24;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = {
   spinner: { padding: 16 },
   emptyText: { marginTop: 24 },
@@ -53,33 +53,24 @@ export default function UserSettingsAuthedApps() {
   noop = noop.useCallback((item) => {
     item = item.item;
     const index = item.index;
-    const applicationIconSource = appAuthTokens(navigation[19]).getApplicationIconSource({
-      id: item.application.id,
-      icon: item.application.icon,
-    });
-    let obj = appAuthTokens(navigation[19]);
-    const obj2 = { id: item.application.id, icon: item.application.icon };
-    return closure_1_11(
-      closure_0(navigation[20]).TableRow,
-      {
-        icon: closure_1_11(appAuthTokens(navigation[21]), { iconSource: applicationIconSource, iconBorderRadius: 6 }),
-        label: item.application.name,
-        onPress() {
-          UserSettingsModalActionCreatorsDefault.setSection(constants2.AUTHORIZED_APP);
-          const obj3 = {
-            destinationPane: constants2.AUTHORIZED_APP,
-            source: { page: constants.USER_SETTINGS },
-            applicationId: item.application.id,
-          };
-          const result = UserSettingsUtils.trackUserSettingsPaneViewed(obj3);
-          navigation.push(constants2.AUTHORIZED_APP, { oauth2Token: item });
-        },
-        arrow: true,
-        start: 0 === index,
-        end: index === item.numItems - 1,
+    let obj = {
+      icon: closure_1_11(appAuthTokens(navigation[20]), { application: item.application }),
+      label: item.application.name,
+      onPress() {
+        UserSettingsModalActionCreatorsDefault.setSection(constants2.AUTHORIZED_APP);
+        const obj3 = {
+          destinationPane: constants2.AUTHORIZED_APP,
+          source: { page: constants.USER_SETTINGS },
+          applicationId: item.application.id,
+        };
+        const result = UserSettingsUtils.trackUserSettingsPaneViewed(obj3);
+        navigation.push(constants2.AUTHORIZED_APP, { oauth2Token: item });
       },
-      item.id,
-    );
+      arrow: true,
+      start: 0 === index,
+      end: index === item.numItems - 1,
+    };
+    return closure_1_11(closure_0(navigation[19]).TableRow, obj, item.id);
   }, items1);
   if (null != appAuthTokens) {
     if (stateFromStoresObject.fetchState === FetchState.FETCHED) {

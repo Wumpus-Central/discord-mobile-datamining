@@ -90,7 +90,7 @@ function useIsTopicalNavEnabled(guild_id, channel_header) {
   return tmp9;
 }
 const GuildFeatures = fn(1074).GuildFeatures;
-let ApexExperiment = fn(1434);
+let ApexExperiment = fn(1435);
 let obj2 = {
   kind: "user",
   name: "2026-03-conversation-highlighting-utility",
@@ -101,7 +101,7 @@ let obj3 = { 1: null, 2: { enabled: false } };
 obj3[2] = { enabled: true };
 obj2.variations = obj3;
 const apexExperiment = ApexExperiment.createApexExperiment(obj2);
-ApexExperiment = fn(1434);
+ApexExperiment = fn(1435);
 const obj5 = {
   kind: "guild",
   name: "2026-06-topical-navigation-guild",
@@ -112,7 +112,7 @@ const obj6 = { 1: null };
 obj6[1] = { enabled: true };
 obj5.variations = obj6;
 const apexExperiment1 = ApexExperiment.createApexExperiment(obj5);
-ApexExperiment = fn(1434);
+ApexExperiment = fn(1435);
 const obj8 = {
   kind: "user",
   name: "2026-09-conversation-topic-header",
@@ -123,7 +123,7 @@ const obj9 = { 1: null };
 obj9[1] = { enabled: true };
 obj8.variations = obj9;
 const apexExperiment2 = ApexExperiment.createApexExperiment(obj8);
-ApexExperiment = fn(1434);
+ApexExperiment = fn(1435);
 const obj11 = {
   kind: "user",
   name: "2026-04-topical-navigation-staff-control",

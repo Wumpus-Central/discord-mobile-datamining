@@ -15,6 +15,7 @@ export default function parseReactionPermissions(arg0) {
     isAutomodQuarantined,
   } = arg0);
   const isPrivateResult = channel.isPrivate();
+  let isSystemDMResult = channel.isSystemDM();
   const isMediaThreadResult = channel.isMediaThread();
   if (!canChat) {
     canChat = isPrivateResult;
@@ -44,15 +45,18 @@ export default function parseReactionPermissions(arg0) {
       !isMediaThreadResult;
   }
   obj.disableReactionCreates = tmp4;
-  if (!isLurking) {
-    isLurking = !canChat;
+  if (!isSystemDMResult) {
+    isSystemDMResult = isLurking;
   }
-  if (!isLurking) {
-    isLurking = true === communicationDisabled;
+  if (!isSystemDMResult) {
+    isSystemDMResult = !canChat;
   }
-  if (!isLurking) {
-    isLurking = true === isAutomodQuarantined;
+  if (!isSystemDMResult) {
+    isSystemDMResult = true === communicationDisabled;
   }
-  obj.disableReactionUpdates = isLurking;
+  if (!isSystemDMResult) {
+    isSystemDMResult = true === isAutomodQuarantined;
+  }
+  obj.disableReactionUpdates = isSystemDMResult;
   return obj;
 }

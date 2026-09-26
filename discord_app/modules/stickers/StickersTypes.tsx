@@ -1,19 +1,19 @@
 // discord_app/modules/stickers/StickersTypes.tsx
 import js_shim_PlainRecord from "../../../discord_common/js/packages/libdiscore/js_shim/js/PlainRecord.tsx";
-import StickerTypes from "../../../discord_common/js/packages/design/components/Stickers/StickerTypes.tsx";
+import shared from "../../design/shared.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const TypeTag = js_shim_PlainRecord.TypeTag;
 const result = size.fileFinishedImporting("modules/stickers/StickersTypes.tsx");
 
-export const StickerFormat = StickerTypes.StickerFormat;
-export const MetaStickerType = StickerTypes.MetaStickerType;
+export const StickerFormat = shared.StickerFormat;
+export const MetaStickerType = shared.MetaStickerType;
 export const StickerExtensions = { PNG: "png", APNG: "png", LOTTIE: "json", WEBP: "webp", GIF: "gif" };
 export const isAnimatedSticker = function isAnimatedSticker(arg0) {
-  return arg0 !== StickerTypes.StickerFormat.PNG;
+  return arg0 !== shared.StickerFormat.PNG;
 };
 export const isCustomSticker = function isCustomSticker(arg0) {
-  return arg0 !== StickerTypes.MetaStickerType.STANDARD;
+  return arg0 !== shared.MetaStickerType.STANDARD;
 };
 export const StickerGridItemTypes = { STICKER: 0, [0]: "STICKER", CREATE_STICKER: 1, [1]: "CREATE_STICKER" };
 export const StickerCategoryTypes = {

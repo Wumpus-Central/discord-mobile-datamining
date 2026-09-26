@@ -1,6 +1,6 @@
 // discord_app/design/components/Modal/native/ModalStepIndicator.native.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef2124 from "../../../intl/Mana.messages.js";
+import _modDef2125 from "../../../intl/Mana.messages.js";
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -82,7 +82,7 @@ function StepPill(isActive) {
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 let closure_6 = { overshootClamping: true };
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_7 = createStyles.createStyles({
   container: { flexDirection: "row", gap: 4 },
   stepPill: { height: 4, borderRadius: 2 },
@@ -122,7 +122,7 @@ export const ModalStepIndicator = function ModalStepIndicator(arg0) {
       const obj4 = {
         accessible: true,
         accessibilityRole: "progressbar",
-        accessibilityLabel: intl.string(_modDef2124.KUwsC0),
+        accessibilityLabel: intl.string(_modDef2125.KUwsC0),
         accessibilityValue: null,
         importantForAccessibility: "yes",
         style: null,
@@ -136,7 +136,7 @@ export const ModalStepIndicator = function ModalStepIndicator(arg0) {
         <View
           accessible
           accessibilityRole="progressbar"
-          accessibilityLabel={intl.string(_modDef2124.KUwsC0)}
+          accessibilityLabel={intl.string(_modDef2125.KUwsC0)}
           accessibilityValue={null}
           importantForAccessibility="yes"
           style={null}

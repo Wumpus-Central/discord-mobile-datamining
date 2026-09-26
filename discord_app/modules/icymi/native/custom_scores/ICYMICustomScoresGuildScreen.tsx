@@ -1,7 +1,7 @@
 // discord_app/modules/icymi/native/custom_scores/ICYMICustomScoresGuildScreen.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01980_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01981_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ChannelListState from "../../../guild_sidebar/ChannelListState.tsx";
@@ -121,7 +121,7 @@ function keyExtractor(kind, arg1) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = {
   container: {
     flex: 1,
@@ -192,9 +192,9 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
   const items2 = [ICYMIStore];
   const stateFromStores1 = navigation(504).useStateFromStores(items2, () => ICYMIStore.getCustomGuildScore(guildId));
   const tmp2Result = navigation(504);
-  const numberToCustomScoreResult = navigation(7790).numberToCustomScore(stateFromStores1);
+  const numberToCustomScoreResult = navigation(7798).numberToCustomScore(stateFromStores1);
   noop = numberToCustomScoreResult;
-  const tmp2Result3 = navigation(7790);
+  const tmp2Result3 = navigation(7798);
   const items3 = [ChannelListStore];
   guildChannels = navigation(504).useStateFromStoresObject(items3, () =>
     ChannelListStore.getGuild(guildId),
@@ -309,11 +309,11 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
     data: null,
     keyExtractor: null,
   };
-  const rect = { bottom: guildId(1612)().bottom, top: guildId(576).space.PX_12 };
+  const rect = { bottom: guildId(1613)().bottom, top: guildId(576).space.PX_12 };
   obj4.contentInset = rect;
   obj4.renderItem = callback;
   obj4.data = memo;
   obj4.keyExtractor = keyExtractor;
-  obj3.children = closure_11(navigation(8171).AnimatedFlashList, obj4);
+  obj3.children = closure_11(navigation(8179).AnimatedFlashList, obj4);
   return closure_11(guildChannels, obj3);
 }

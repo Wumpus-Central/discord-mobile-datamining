@@ -11,7 +11,7 @@ import ChatChangesetUpdateTracker from "../../../chat/native/ChatChangesetUpdate
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const useChatBottomManagerUIStore = fn(8835);
+const useChatBottomManagerUIStore = fn(8843);
 ({ updateIsAtBottom: closure_4, updateShouldShowJumpToPresentButton: hasOwnProperty } = useChatBottomManagerUIStore);
 let closure_6 = new LoggerDefault("useScrollHandlers");
 const size = fn(2);

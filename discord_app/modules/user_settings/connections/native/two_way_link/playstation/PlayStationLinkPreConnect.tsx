@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkPreConnect.tsx
-import _modDef8558 from "../../../../../../../discord_assets/assets/connections/ps_discord_link.png.js";
+import _modDef8566 from "../../../../../../../discord_assets/assets/connections/ps_discord_link.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_4 = fn(8554).PlayStationLinkModalScenes;
+let closure_4 = fn(8562).PlayStationLinkModalScenes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_6 = createStyles.createStyles({ image: { width: 231, height: 160 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting(
 export const PlayStationLinkPreConnect = function PlayStationLinkPreConnect(platformType) {
   let navigation;
   const tmp = closure_6();
-  navigation = navigation(1484).useNavigation();
+  navigation = navigation(1485).useNavigation();
   const items = [navigation];
   const items1 = [navigation];
   const callback = noop.useCallback((arg0) => {
@@ -24,7 +24,7 @@ export const PlayStationLinkPreConnect = function PlayStationLinkPreConnect(plat
   const callback1 = noop.useCallback(() => {
     navigation.push(constants.ERROR, {});
   }, items1);
-  const memo = noop.useMemo(() => ({ uri: _modDef8558 }), []);
+  const memo = noop.useMemo(() => ({ uri: _modDef8566 }), []);
   const obj2 = {
     platformType: platformType.platformType,
     onError: callback1,
@@ -38,7 +38,7 @@ export const PlayStationLinkPreConnect = function PlayStationLinkPreConnect(plat
   obj2.title = intl.string(navigation(1115).t["6n+UPR"]);
   const intl2 = navigation(1115).intl;
   obj2.body = intl2.string(navigation(1115).t.JaaqIf);
-  return jsx(navigation(8534).TwoWayLinkPreConnect, {
+  return jsx(navigation(8542).TwoWayLinkPreConnect, {
     platformType: platformType.platformType,
     onError: callback1,
     onNext: callback,

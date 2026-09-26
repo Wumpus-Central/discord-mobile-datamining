@@ -1,6 +1,6 @@
 // discord_app/modules/guild_settings/safety/native/TransferOwnershipModalActionCreators.tsx
 import DispatcherDefault from "../../../../Dispatcher.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01980_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01981_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting(
 export default {
   open(guild, toUser) {
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(11310, dependencyMap.paths),
+      asyncRequireImpl(11324, dependencyMap.paths),
       { guild, toUser },
       TRANSFER_OWNERSHIP_MODAL_KEY,
     );

@@ -126,8 +126,8 @@ function showNotification(uri) {
               }
               closure_128_0 = tmp7;
               BUG_REPORTER = constants.BUG_REPORTER;
-              notificationDuration = tmp2(9543).getNotificationDuration(BUG_REPORTER);
-              const obj5 = tmp2(9543);
+              notificationDuration = tmp2(9554).getNotificationDuration(BUG_REPORTER);
+              const obj5 = tmp2(9554);
               const obj11 = {
                 type: BUG_REPORTER,
                 duration: notificationDuration,
@@ -137,7 +137,7 @@ function showNotification(uri) {
                 onDismiss: null,
                 inAppNotificationId: null,
               };
-              const obj6 = tmp3(9545);
+              const obj6 = tmp3(9556);
               obj11.key = tmp2(1255).v4();
               obj11.image = closure_128_0;
               uri = undefined;
@@ -177,7 +177,7 @@ function showNotification(uri) {
 get_ActivityIndicator = fn(17);
 const NativeModules = get_ActivityIndicator.NativeModules;
 const InAppNotificationTypes = fn(1074).InAppNotificationTypes;
-const NativePermissionStatus = fn(5038).NativePermissionStatus;
+const NativePermissionStatus = fn(5045).NativePermissionStatus;
 const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(NativeModules.ScreenshotHelper);
 class BugReportManager extends tmp4 {}
 const prototype = BugReportManager.prototype;

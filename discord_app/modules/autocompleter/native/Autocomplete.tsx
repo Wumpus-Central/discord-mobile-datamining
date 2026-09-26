@@ -12,12 +12,14 @@ import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowTrailingText from "../../../design/components/TableRow/native/TableRowTrailingText.native.tsx";
-import _modDef7573 from "../../../../_runtime/metro/07573__.js";
+import _modDef7581 from "../../../../_runtime/metro/07581__.js";
 import UnknownGameIcon from "../../../design/components/Icon/native/redesign/generated/UnknownGameIcon.tsx";
 import Form from "../../../design/void/Form/native/index.tsx";
 import StickerDefault from "../../stickers/native/Sticker.tsx";
 import StickersHooks from "../../stickers/StickersHooks.tsx";
 import ChannelAutocompleteEmojiUpsellDefault from "../../channel_text_area/native/ChannelAutocompleteEmojiUpsell.tsx";
+import GameSearchRowExperimentDefault from "../../games/GameSearchRowExperiment.tsx";
+import GamePlatformBadgeRowDefault from "../../games/native/GamePlatformBadgeRow.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import RelationshipStore from "../../../stores/RelationshipStore.tsx";
@@ -33,10 +35,10 @@ const Constants = fn(1074);
 ({ ChannelTypes: closure_8, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = {
   row: {
-    height: fn(9715).AUTOCOMPLETE_ROW_HEIGHT,
+    height: fn(9726).AUTOCOMPLETE_ROW_HEIGHT,
     paddingVertical: 0,
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   },
@@ -54,7 +56,7 @@ let obj2 = {
   labelRow: null,
 };
 let obj3 = {
-  height: fn(9715).AUTOCOMPLETE_ROW_HEIGHT,
+  height: fn(9726).AUTOCOMPLETE_ROW_HEIGHT,
   paddingVertical: 0,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
@@ -69,7 +71,7 @@ let obj5 = { fontSize: 14, color: nativeDefault.colors.TEXT_MUTED };
 obj2.username = { color: nativeDefault.unsafe_rawColors.PRIMARY_400 };
 obj2.emoji = { width: 32, height: 32 };
 obj2.emojiImage = { resizeMode: "contain" };
-const obj6 = { color: nativeDefault.unsafe_rawColors.PRIMARY_400 };
+let obj6 = { color: nativeDefault.unsafe_rawColors.PRIMARY_400 };
 obj2.emojiText = { lineHeight: 32, fontSize: 27, textAlign: "center", color: nativeDefault.colors.TEXT_DEFAULT };
 let size = {
   width: 56,
@@ -92,7 +94,7 @@ obj2.commandChoiceLoadingItem = {
 obj2.autocompleteIcon = { opacity: 0.6 };
 const size1 = { width: 32, height: 32, borderRadius: nativeDefault.radii.sm };
 obj2.gameIcon = size1;
-const obj8 = {
+let obj8 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
   height: 16,
   borderRadius: nativeDefault.radii.lg,
@@ -129,8 +131,8 @@ export default {
       nick = stateFromStores;
     }
     if (nick == null) {
-      nick = guildId(4675).getName(user);
-      const obj3 = guildId(4675);
+      nick = guildId(4678).getName(user);
+      const obj3 = guildId(4678);
     }
     obj2.label = closure_9(AutocompleteLabel, { text: nick });
     const obj = user(504);
@@ -145,8 +147,8 @@ export default {
     const items1 = [,];
     ({ trailing: arr2[0], username: arr2[1] } = tmp);
     obj5.usernameStyle = items1;
-    obj2.trailing = closure_9(guildId(9083), obj5);
-    return closure_9(user(8045).FormRow, obj2);
+    obj2.trailing = closure_9(guildId(9094), obj5);
+    return closure_9(user(8053).FormRow, obj2);
   },
   Global(arg0) {
     ({ text, badge } = arg0);
@@ -191,7 +193,7 @@ export default {
     ({ channel, category } = onPress);
     const tmp = closure_11();
     if (channel.type === constants.GUILD_CATEGORY) {
-      let channelIconWithGuild = _modDef7573;
+      let channelIconWithGuild = _modDef7581;
     } else {
       channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, tmp2);
     }
@@ -293,24 +295,32 @@ export default {
     game = game.game;
     const tmp = closure_11();
     const tmp4 = getGameMediaRefURLDefault(game.id, game.icon, { size: 32 });
-    if (obj.isNullOrEmpty(tmp4)) {
-      const obj2 = { size: "sm", style: tmp.gameIcon };
-      let tmp6Result = React7(UnknownGameIcon.UnknownGameIcon, obj2);
+    const obj = GameSearchRowExperimentDefault;
+    if (obj2.isNullOrEmpty(tmp4)) {
+      const obj3 = { size: "sm", style: tmp.gameIcon };
+      let tmp6Result = React7(UnknownGameIcon.UnknownGameIcon, obj3);
       let tmp8 = React7;
     } else {
-      const obj3 = { style: tmp.gameIcon, source: null };
-      const obj4 = { uri: tmp4 };
-      obj3.source = obj4;
-      tmp6Result = React7(FastImageDefault, obj3);
+      const obj4 = { style: tmp.gameIcon, source: null };
+      const obj5 = { uri: tmp4 };
+      obj4.source = obj5;
+      tmp6Result = React7(FastImageDefault, obj4);
       tmp8 = React7;
     }
-    const obj5 = {
+    const obj6 = {
       onPress: game.onPress,
       accessibilityRole: "menuitem",
       leading: tmp6Result,
       label: tmp8(AutocompleteLabel, { text: game.name }),
+      trailing: null,
     };
-    return tmp8(Form.FormRow, obj5);
+    let tmp8Result;
+    if (obj.useConfig({ location: "game_mention_autocomplete_native" }).extraChromeEnabled) {
+      const obj8 = { platforms: game.platformAvailability };
+      tmp8Result = tmp8(GamePlatformBadgeRowDefault, obj8);
+    }
+    obj6.trailing = tmp8Result;
+    return tmp8(Form.FormRow, obj6);
   },
   Timestamp(description) {
     let str = description.description;

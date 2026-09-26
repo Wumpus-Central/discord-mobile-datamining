@@ -2,7 +2,7 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import native from "../../../../../discord_common/js/packages/design/native.tsx";
+import BountiesScrollGradientRive from "../../../../../discord_common/js/packages/design/components/Rive/native/generated/BountiesScrollGradientRive.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useTypeConsolidationTextTransform from "../../../design/useTypeConsolidationTextTransform.tsx";
 import OrbsIcon from "../../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_7 = createStyles.createStyles(() => {
   const obj = {
     container: { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_4 },
@@ -91,7 +91,7 @@ export const BountiesScrollRecapFooterGradient = function BountiesScrollRecapFoo
   if (stateFromStores) {
     str = "halt";
   }
-  obj2.children = hasOwnProperty(native.BountiesScrollGradientRive, {
+  obj2.children = hasOwnProperty(BountiesScrollGradientRive.BountiesScrollGradientRive, {
     stateMachine: "State Machine 1",
     fit: "fill",
     alignment: "bottom-center",

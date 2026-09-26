@@ -6,85 +6,85 @@ const require = globalThis.__r;
 const require = fn;
 let closure_2 = {
   bg() {
-    return require("../../../../_runtime/metro/01932__.js");
-  },
-  cs() {
     return require("../../../../_runtime/metro/01933__.js");
   },
-  da() {
+  cs() {
     return require("../../../../_runtime/metro/01934__.js");
   },
-  de() {
+  da() {
     return require("../../../../_runtime/metro/01935__.js");
   },
-  el() {
+  de() {
     return require("../../../../_runtime/metro/01936__.js");
   },
-  () => require("../../../../_runtime/metro/01937__.js"),
+  el() {
+    return require("../../../../_runtime/metro/01937__.js");
+  },
   () => require("../../../../_runtime/metro/01938__.js"),
   () => require("../../../../_runtime/metro/01939__.js"),
   () => require("../../../../_runtime/metro/01940__.js"),
+  () => require("../../../../_runtime/metro/01941__.js"),
   fi() {
-    return require("../../../../_runtime/metro/01941__.js");
-  },
-  fr() {
     return require("../../../../_runtime/metro/01942__.js");
   },
-  hi() {
+  fr() {
     return require("../../../../_runtime/metro/01943__.js");
   },
-  hr() {
+  hi() {
     return require("../../../../_runtime/metro/01944__.js");
   },
-  hu() {
+  hr() {
     return require("../../../../_runtime/metro/01945__.js");
   },
-  id() {
+  hu() {
     return require("../../../../_runtime/metro/01946__.js");
   },
-  it() {
+  id() {
     return require("../../../../_runtime/metro/01947__.js");
   },
-  ja() {
+  it() {
     return require("../../../../_runtime/metro/01948__.js");
   },
-  ko() {
+  ja() {
     return require("../../../../_runtime/metro/01949__.js");
   },
-  lt() {
+  ko() {
     return require("../../../../_runtime/metro/01950__.js");
   },
-  nl() {
+  lt() {
     return require("../../../../_runtime/metro/01951__.js");
   },
-  no() {
+  nl() {
     return require("../../../../_runtime/metro/01952__.js");
   },
-  pl() {
+  no() {
     return require("../../../../_runtime/metro/01953__.js");
   },
-  () => require("../../../../_runtime/metro/01954__.js"),
-  ro() {
-    return require("../../../../_runtime/metro/01955__.js");
+  pl() {
+    return require("../../../../_runtime/metro/01954__.js");
   },
-  ru() {
+  () => require("../../../../_runtime/metro/01955__.js"),
+  ro() {
     return require("../../../../_runtime/metro/01956__.js");
   },
-  () => require("../../../../_runtime/metro/01957__.js"),
-  th() {
-    return require("../../../../_runtime/metro/01958__.js");
+  ru() {
+    return require("../../../../_runtime/metro/01957__.js");
   },
-  tr() {
+  () => require("../../../../_runtime/metro/01958__.js"),
+  th() {
     return require("../../../../_runtime/metro/01959__.js");
   },
-  uk() {
+  tr() {
     return require("../../../../_runtime/metro/01960__.js");
   },
-  vi() {
+  uk() {
     return require("../../../../_runtime/metro/01961__.js");
   },
-  () => require("../../../../_runtime/metro/01962__.js"),
-  () => require("../../../../_runtime/metro/01963__.js")
+  vi() {
+    return require("../../../../_runtime/metro/01962__.js");
+  },
+  () => require("../../../../_runtime/metro/01963__.js"),
+  () => require("../../../../_runtime/metro/01964__.js")
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/shared/i18n/index.native.tsx");
@@ -101,6 +101,6 @@ export default new i18nDefault({
     }
   },
   getLanguages() {
-    return require("../../../../_runtime/metro/01964__.js");
+    return require("../../../../_runtime/metro/01965__.js");
   }
 });

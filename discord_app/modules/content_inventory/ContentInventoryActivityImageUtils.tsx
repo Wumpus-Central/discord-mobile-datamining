@@ -207,7 +207,7 @@ function useRichImageForActivity(activity, activityApplication) {
     const application_id = activity.application_id;
   }
   if (null == activity) {
-    return { largeImage: "isArray", smallImage: "paddingHorizontal" };
+    return { largeImage: "Array", smallImage: "paddingHorizontal" };
   } else {
     let large_image;
     if (activity != null) {

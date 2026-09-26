@@ -4,7 +4,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 import DeveloperActivityShelfStore from "DeveloperActivityShelfStore.tsx";
 
 require = fn;
-const DevShelfFetchState = fn(8312).DevShelfFetchState;
+const DevShelfFetchState = fn(8320).DevShelfFetchState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useFetchDeveloperActivityShelfItems.tsx");
 

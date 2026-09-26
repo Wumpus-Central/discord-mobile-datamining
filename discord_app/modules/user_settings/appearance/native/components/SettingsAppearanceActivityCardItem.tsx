@@ -12,7 +12,7 @@ const ClipViewDefault = ClipView;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const HappeningNowConstants = fn(14815);
+const HappeningNowConstants = fn(14843);
 ({
   HAPPENING_NOW_BADGE_SIZE,
   HAPPENING_NOW_CONTENT_HEIGHT,
@@ -24,7 +24,7 @@ const HappeningNowConstants = fn(14815);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(1177).Icon);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj = {
   card: {
     borderRadius: nativeDefault.radii.lg,
