@@ -1,42 +1,48 @@
 // _runtime/metro/03968__.js
-const obj = { lessThanXSeconds: { one: { standalone: "manje od 1 sekunde", withPrepositionAgo: "manje od 1 sekunde", withPrepositionIn: "manje od 1 sekundu" }, dual: "manje od {{count}} sekunde", other: "manje od {{count}} sekundi" }, xSeconds: { one: { standalone: "1 sekunda", withPrepositionAgo: "1 sekunde", withPrepositionIn: "1 sekundu" }, dual: "{{count}} sekunde", other: "{{count}} sekundi" }, halfAMinute: "pola minute", lessThanXMinutes: { one: { standalone: "manje od 1 minute", withPrepositionAgo: "manje od 1 minute", withPrepositionIn: "manje od 1 minutu" }, dual: "manje od {{count}} minute", other: "manje od {{count}} minuta" }, xMinutes: { one: { standalone: "1 minuta", withPrepositionAgo: "1 minute", withPrepositionIn: "1 minutu" }, dual: "{{count}} minute", other: "{{count}} minuta" }, aboutXHours: { one: { standalone: "oko 1 sat", withPrepositionAgo: "oko 1 sat", withPrepositionIn: "oko 1 sat" }, dual: "oko {{count}} sata", other: "oko {{count}} sati" }, xHours: { one: { standalone: "1 sat", withPrepositionAgo: "1 sat", withPrepositionIn: "1 sat" }, dual: "{{count}} sata", other: "{{count}} sati" }, xDays: { one: { standalone: "1 dan", withPrepositionAgo: "1 dan", withPrepositionIn: "1 dan" }, dual: "{{count}} dana", other: "{{count}} dana" }, aboutXWeeks: { one: { standalone: "oko 1 tjedan", withPrepositionAgo: "oko 1 tjedan", withPrepositionIn: "oko 1 tjedan" }, dual: "oko {{count}} tjedna", other: "oko {{count}} tjedana" }, xWeeks: { one: { standalone: "1 tjedan", withPrepositionAgo: "1 tjedan", withPrepositionIn: "1 tjedan" }, dual: "{{count}} tjedna", other: "{{count}} tjedana" }, aboutXMonths: { one: { standalone: "oko 1 mjesec", withPrepositionAgo: "oko 1 mjesec", withPrepositionIn: "oko 1 mjesec" }, dual: "oko {{count}} mjeseca", other: "oko {{count}} mjeseci" }, xMonths: { one: { standalone: "1 mjesec", withPrepositionAgo: "1 mjesec", withPrepositionIn: "1 mjesec" }, dual: "{{count}} mjeseca", other: "{{count}} mjeseci" }, aboutXYears: { one: { standalone: "oko 1 godinu", withPrepositionAgo: "oko 1 godinu", withPrepositionIn: "oko 1 godinu" }, dual: "oko {{count}} godine", other: "oko {{count}} godina" }, xYears: { one: { standalone: "1 godina", withPrepositionAgo: "1 godine", withPrepositionIn: "1 godinu" }, dual: "{{count}} godine", other: "{{count}} godina" }, overXYears: { one: { standalone: "preko 1 godinu", withPrepositionAgo: "preko 1 godinu", withPrepositionIn: "preko 1 godinu" }, dual: "preko {{count}} godine", other: "preko {{count}} godina" }, almostXYears: { one: { standalone: "gotovo 1 godinu", withPrepositionAgo: "gotovo 1 godinu", withPrepositionIn: "gotovo 1 godinu" }, dual: "gotovo {{count}} godine", other: "gotovo {{count}} godina" } };
+import 02120__ from "02120__.js";
 
-export default function formatDistance(arg0, arg1, addSuffix) {
-  one = obj[arg0];
-  if (typeof one === "string") {
-    let tmp7 = one;
-    if (null != addSuffix) {
-      tmp7 = one;
-      if (addSuffix.addSuffix) {
-        if (!addSuffix.comparison) {
-          let text = `prije ${one}`;
-        }
-        text = `za ${one}`;
-      }
+if (!module_2120) {
+  const obj2 = { default: module_2120 };
+  let obj = obj2;
+} else {
+  obj = module_2120;
+}
+const date = {
+  ordinalNumber(arg0, unit) {
+    const NumberResult = Number(arg0);
+    if (null != unit) {
+      unit = unit.unit;
     }
-    return tmp7;
-  } else {
-    if (1 !== arg1) {
-      if (1 < arg1 % 10) {
-        if (arg1 % 10 < 5) {
-          const _String = String;
-          if ("1" !== str.substr(-2, 1)) {
-            const _String3 = String;
-            let replaced = one.dual.replace("{{count}}", String(arg1));
+    if (0 === NumberResult) {
+      return "0";
+    } else {
+      let str = "\u00E8me";
+      if (1 === NumberResult) {
+        let str3 = "er";
+        if (unit) {
+          const items = ["year", "week", "hour", "minute", "second"];
+          str3 = "er";
+          if (items.includes(unit)) {
+            str3 = "\u00E8re";
           }
-          str = String(arg1);
         }
+        str = str3;
       }
-      const _String2 = String;
-      replaced = one.other.replace("{{count}}", String(arg1));
+      return NumberResult + str;
     }
-    if (null == addSuffix) {
-      const standalone = one.one.standalone;
+  },
+  era: obj.default({ values: { narrow: ["av. J.-C", "ap. J.-C"], abbreviated: ["av. J.-C", "ap. J.-C"], wide: ["avant J\u00E9sus-Christ", "apr\u00E8s J\u00E9sus-Christ"] }, defaultWidth: "wide" }),
+  quarter: obj.default({
+    values: { narrow: ["T1", "T2", "T3", "T4"], abbreviated: ["1er trim.", "2\u00E8me trim.", "3\u00E8me trim.", "4\u00E8me trim."], wide: ["1er trimestre", "2\u00E8me trimestre", "3\u00E8me trimestre", "4\u00E8me trimestre"] },
+    defaultWidth: "wide",
+    argumentCallback(arg0) {
+      return arg0 - 1;
     }
-    if (!addSuffix.comparison) {
-      const withPrepositionAgo = one.one.withPrepositionAgo;
-    }
-    ({ one, withPrepositionIn } = one);
-  }
+  }),
+  month: obj.default({ values: { narrow: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], abbreviated: ["janv.", "f\u00E9vr.", "mars", "avr.", "mai", "juin", "juil.", "ao\u00FBt", "sept.", "oct.", "nov.", "d\u00E9c."], wide: ["janvier", "f\u00E9vrier", "mars", "avril", "mai", "juin", "juillet", "ao\u00FBt", "septembre", "octobre", "novembre", "d\u00E9cembre"] }, defaultWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["D", "L", "M", "M", "J", "V", "S"], short: ["di", "lu", "ma", "me", "je", "ve", "sa"], abbreviated: ["dim.", "lun.", "mar.", "mer.", "jeu.", "ven.", "sam."], wide: ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"] }, defaultWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "AM", pm: "PM", midnight: "minuit", noon: "midi", morning: "mat.", afternoon: "ap.m.", evening: "soir", night: "mat." }, abbreviated: { am: "AM", pm: "PM", midnight: "minuit", noon: "midi", morning: "matin", afternoon: "apr\u00E8s-midi", evening: "soir", night: "matin" }, wide: { am: "AM", pm: "PM", midnight: "minuit", noon: "midi", morning: "du matin", afternoon: "de l\u2019apr\u00E8s-midi", evening: "du soir", night: "du matin" } }, defaultWidth: "wide" })
 };
+
+export default date;
 export default exports.default;

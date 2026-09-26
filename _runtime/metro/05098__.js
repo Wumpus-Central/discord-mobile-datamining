@@ -1,44 +1,30 @@
 // _runtime/metro/05098__.js
+import _mod5099 from "05099__.js";
 
-export default function properlyBoxed(call) {
-  c0 = true;
-  closure_1 = true;
-  if (typeof call === "function") {
-    try {
-      call = call.call;
-      const fn = (arg0, arg1, obj) => {
-        if (typeof obj !== "object") {
-          c0 = false;
+export default function Type(num) {
+  let str = "Null";
+  if (null !== num) {
+    let str2 = "Undefined";
+    if (undefined !== num) {
+      let str3 = "Object";
+      if (!_mod5099(num)) {
+        let str4 = "Number";
+        if (typeof num !== "number") {
+          let str5 = "Boolean";
+          if (typeof num !== "boolean") {
+            let str6;
+            if (typeof num === "string") {
+              str6 = "String";
+            }
+            str5 = str6;
+          }
+          str4 = str5;
         }
-      };
-      if (typeof call === "unknown") {
-        call(fn);
-      } else {
-        call("f", fn);
+        str3 = str4;
       }
-      const call2 = call.call;
-      const items = [null];
-      const fn2 = function () {
-        closure_1 = typeof this === "string";
-      };
-      if (typeof call2 === "unknown") {
-        call(fn2, "x");
-      } else {
-        call2(items, fn2, "x");
-      }
-      let flag = false;
-      let tmp3 = !flag;
-      if (!flag) {
-        tmp3 = c0;
-      }
-      if (tmp3) {
-        tmp3 = closure_1;
-      }
-      return tmp3;
-    } catch (err) {
-      flag = true;
+      str2 = str3;
     }
-  } else {
-    return false;
+    str = str2;
   }
+  return str;
 }

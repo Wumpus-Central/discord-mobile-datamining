@@ -1,253 +1,797 @@
 // _runtime/metro/05561__.js
-import _mod5520 from "05520__.js";
-import iccTags from "../05562_iccTags.js";
+import _wrapNativeSuperDefault from "00158__wrapNativeSuper.js";
+import _modDef5562 from "05562__.js";
+import calculateGPSValueDefault from "../05564_calculateGPSValue.js";
+import _slicedToArray from "00032__.js";
+import _createClass from "00042__createClass.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import hasOwnProperty from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-require = arg1;
-const dependencyMap = arg6;
-function parseTags(buffer) {
-  buffer = buffer.buffer;
-  if (buffer.byteLength !== buffer.getUint32()) {
-    const _Error3 = Error;
-    const error = new Error("ICC profile length not matching");
-    throw error;
-  } else if (buffer.byteLength < c2) {
-    const _Error2 = Error;
-    const error1 = new Error("ICC profile too short");
-    throw error1;
-  } else {
-    const obj2 = {};
-    const _Object = Object;
-    const keys = Object.keys(iccTags.iccProfile);
-    for (let num = 0; num < keys.length; num = num + 1) {
-      let tmp = keys[num];
-      let iter = iccTags.iccProfile[tmp];
-      let _parseInt = parseInt;
-      let valueResult = iter.value(buffer, parseInt(tmp, 10));
-      let descriptionResult = valueResult;
-      if (iter.description) {
-        descriptionResult = iter.description(valueResult);
-      }
-      let obj = { value: valueResult, description: descriptionResult };
-      obj2[iter.name] = obj;
-    }
-    const _String = String;
-    const _Uint8Array = Uint8Array;
-    const uint8Array = new Uint8Array(buffer.slice(36, 40));
-    if (fromCharCode.apply(null, uint8Array) !== acsp) {
-      const _Error = Error;
-      const error2 = new Error("ICC profile: missing signature");
-      throw error2;
+const ParseError = arg1;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      let num6 = 132;
-      if (buffer.length < 132) {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+function readTags(_raw, buffer, arg2) {
+  try {
+    let str = _raw._raw;
+    ({ doc, raw } = (function getDocument(byteLength, arg1) {
+      value = _modDef5562.get(arg1);
+      if (value) {
+        let str2 = byteLength;
+        if (typeof byteLength !== "string") {
+          str2 = ParseError(dependencyMap[7]).getStringFromDataView(byteLength, 0, byteLength.byteLength);
+          const obj3 = ParseError(dependencyMap[7]);
+        }
+        const obj2 = {
+          doc: parseFromString(
+            value,
+            str2.replace(/^.+(<\?xpacket begin)/, "$1").replace(/(<\?xpacket end=".*"\?>).+$/, "$1"),
+          ),
+          raw: str2,
+        };
         return obj2;
       } else {
-        const uint32 = buffer.getUint32(128);
-        let num7 = 0;
-        if (0 < uint32) {
-          while (buffer.length >= num6 + c8) {
-            let obj17 = _mod5520;
-            let stringFromDataView = obj17.getStringFromDataView(buffer, num6, 4);
-            let uint321 = buffer.getUint32(num6 + 4);
-            let uint322 = buffer.getUint32(num6 + 8);
-            if (uint321 > buffer.length) {
-              return obj2;
-            } else {
-              let tmp55Result = _mod5520;
-              let stringFromDataView1 = tmp55Result.getStringFromDataView(buffer, uint321, 4);
-              if (stringFromDataView1 === desc) {
-                let uint323 = buffer.getUint32(uint321 + 8);
-                if (uint323 > uint322) {
-                  return obj2;
-                } else {
-                  let _String4 = String;
-                  let _Uint8Array4 = Uint8Array;
-                  let tmp70 = new.target;
-                  let tmp71 = new.target;
-                  let uint8Array1 = new Uint8Array(buffer.slice(uint321 + 12, uint321 + uint323 + 11));
-                  let applyResult = fromCharCode4.apply(null, uint8Array1);
-                  if (iccTags.iccTags[stringFromDataView]) {
-                    let obj3 = { value: applyResult, description: applyResult };
-                    obj2[iccTags.iccTags[stringFromDataView].name] = obj3;
-                  } else {
-                    let obj4 = { value: applyResult, description: applyResult };
-                    obj2[stringFromDataView] = obj4;
-                  }
-                }
-              } else if (stringFromDataView1 === mluc) {
-                let uint324 = buffer.getUint32(uint321 + 8);
-                let sum = uint321 + 16;
-                let items = [];
-                let num4 = 0;
-                let tmp25 = require;
-                if (0 < uint324) {
-                  do {
-                    let obj6 = _mod5520;
-                    let stringFromDataView2 = obj6.getStringFromDataView(buffer, sum, 2);
-                    let obj7 = _mod5520;
-                    let stringFromDataView3 = obj7.getStringFromDataView(buffer, sum + 2, 2);
-                    let uint325 = buffer.getUint32(sum + 4);
-                    let uint326 = buffer.getUint32(sum + 8);
-                    let obj8 = _mod5520;
-                    let obj5 = {
-                      languageCode: stringFromDataView2,
-                      countryCode: stringFromDataView3,
-                      text: obj8.getUnicodeStringFromDataView(buffer, uint321 + uint326, uint325),
-                    };
-                    let arr = items.push(obj5);
-                    sum = sum + tmp22;
-                    num4 = num4 + 1;
-                    tmp25 = require;
-                  } while (num4 < uint324);
-                }
-                if (1 === uint324) {
-                  text = items[0].text;
-                  if (tmp25(5562).iccTags[stringFromDataView]) {
-                    let obj9 = { value: text, description: text };
-                    obj2[tmp25(5562).iccTags[stringFromDataView].name] = obj9;
-                  } else {
-                    let obj10 = { value: text, description: text };
-                    obj2[stringFromDataView] = obj10;
-                  }
-                } else {
-                  let obj11 = {};
-                  let num5 = 0;
-                  if (0 < items.length) {
-                    do {
-                      let _HermesInternal = HermesInternal;
-                      obj11["" + items[num5].languageCode + "-" + items[num5].countryCode] = items[num5].text;
-                      num5 = num5 + 1;
-                      length = items.length;
-                    } while (num5 < length);
-                  }
-                  if (iccTags.iccTags[stringFromDataView]) {
-                    let obj12 = { value: obj11, description: obj11 };
-                    obj2[iccTags.iccTags[stringFromDataView].name] = obj12;
-                  } else {
-                    let obj13 = { value: obj11, description: obj11 };
-                    obj2[stringFromDataView] = obj13;
-                  }
-                }
-              } else if (stringFromDataView1 === text) {
-                let _String2 = String;
-                let _Uint8Array2 = Uint8Array;
-                let tmp16 = new.target;
-                let tmp17 = new.target;
-                let uint8Array2 = new Uint8Array(buffer.slice(uint321 + 8, uint321 + uint322 - 7));
-                let applyResult1 = fromCharCode2.apply(null, uint8Array2);
-                if (iccTags.iccTags[stringFromDataView]) {
-                  let obj14 = { value: applyResult1, description: applyResult1 };
-                  obj2[iccTags.iccTags[stringFromDataView].name] = obj14;
-                } else {
-                  let obj15 = { value: applyResult1, description: applyResult1 };
-                  obj2[stringFromDataView] = obj15;
-                }
-              } else if (stringFromDataView1 === c7) {
-                let _String3 = String;
-                let _Uint8Array3 = Uint8Array;
-                let tmp65 = new.target;
-                let tmp66 = new.target;
-                let uint8Array3 = new Uint8Array(buffer.slice(uint321 + 8, uint321 + 12));
-                let applyResult2 = fromCharCode3.apply(null, uint8Array3);
-                if (iccTags.iccTags[stringFromDataView]) {
-                  let obj16 = { value: applyResult2, description: applyResult2 };
-                  obj2[iccTags.iccTags[stringFromDataView].name] = obj16;
-                } else {
-                  let obj18 = { value: applyResult2, description: applyResult2 };
-                  obj2[stringFromDataView] = obj18;
-                }
-              }
-              num6 = num6 + 12;
-              num7 = num7 + 1;
-            }
-          }
-          return obj2;
-        }
-        return obj2;
+        const _console = console;
+        console.warn("Warning: DOMParser is not available. It is needed to be able to parse XMP tags.");
+        const _Error = Error;
+        const error = new Error();
+        throw error;
       }
+    })(buffer, arg2));
+    if (!str) {
+      str = "";
+    }
+    _raw._raw = str + raw;
+    const tmp4 = (function getDocument(byteLength, arg1) {
+      value = _modDef5562.get(arg1);
+      if (value) {
+        let str2 = byteLength;
+        if (typeof byteLength !== "string") {
+          str2 = ParseError(dependencyMap[7]).getStringFromDataView(byteLength, 0, byteLength.byteLength);
+          const obj3 = ParseError(dependencyMap[7]);
+        }
+        const obj2 = {
+          doc: parseFromString(
+            value,
+            str2.replace(/^.+(<\?xpacket begin)/, "$1").replace(/(<\?xpacket end=".*"\?>).+$/, "$1"),
+          ),
+          raw: str2,
+        };
+        return obj2;
+      } else {
+        const _console = console;
+        console.warn("Warning: DOMParser is not available. It is needed to be able to parse XMP tags.");
+        const _Error = Error;
+        const error = new Error();
+        throw error;
+      }
+    })(buffer, arg2);
+    const tmp6 = getRDF(doc);
+    ParseError(5526).objectAssign(_raw, parseXMPObject(convertToObject(tmp6, true)));
+    return true;
+  } catch (err) {
+    return false;
+  }
+}
+function parseFromString(parseFromString, tmp13Result) {
+  try {
+    const parseFromStringResult = parseFromString.parseFromString(tmp13Result, "application/xml");
+    const elements = parseFromStringResult.getElementsByTagName("parsererror");
+    if (elements.length > 0) {
+      const tmp10 = new closure_8(elements[0].textContent);
+      throw tmp10;
+    } else {
+      return parseFromStringResult;
+    }
+  } catch (tmp12) {
+    if ("ParseError" === tmp12.name) {
+      if (obj2.isMissingNamespaceError(tmp12)) {
+        if (!tmp4) {
+          tmp13Result = ParseError(5563);
+          return parseFromString(tmp2, tmp13Result.addMissingNamespaces(tmp), true);
+        }
+      }
+      obj2 = ParseError(5563);
+    }
+    throw tmp12;
+  }
+}
+function getRDF(doc) {
+  let num = 0;
+  if (0 < doc.childNodes.length) {
+    while ("x:xmpmeta" !== doc.childNodes[num].tagName) {
+      if ("rdf:RDF" === doc.childNodes[num].tagName) {
+        return doc.childNodes[num];
+      } else {
+        num = num + 1;
+      }
+    }
+    return getRDF(doc.childNodes[num]);
+  }
+  const error = new Error();
+  throw error;
+}
+function convertToObject(childNodes, arg1) {
+  let length;
+  let flag = arg1;
+  if (arg1 === undefined) {
+    flag = false;
+  }
+  let items = [];
+  let num = 0;
+  if (0 < childNodes.childNodes.length) {
+    do {
+      let arr = items.push(childNodes.childNodes[num]);
+      num = num + 1;
+      length = childNodes.childNodes.length;
+    } while (num < length);
+  }
+  let tmp2 = 1 === items.length;
+  if (tmp2) {
+    tmp2 = "#text" === items[0].nodeName;
+  }
+  if (tmp2) {
+    if (flag) {
+      let obj2 = {};
+    }
+  } else {
+    let attributes = {};
+    const item = items.forEach((nodeName) => {
+      let length;
+      nodeName = nodeName.nodeName;
+      if (nodeName) {
+        nodeName = "#text" !== nodeName.nodeName;
+      }
+      if (nodeName) {
+        attributes = {};
+        let num3 = 0;
+        if (0 < nodeName.attributes.length) {
+          do {
+            let _decodeURIComponent = decodeURIComponent;
+            let _escape = escape;
+            attributes[nodeName.attributes[num3].nodeName] = decodeURIComponent(
+              escape(nodeName.attributes[num3].value),
+            );
+            num3 = num3 + 1;
+            length = nodeName.attributes.length;
+          } while (num3 < length);
+        }
+        const obj2 = { attributes, value: convertToObject(nodeName) };
+        if (undefined !== attributes[nodeName.nodeName]) {
+          const _Array = Array;
+          if (!Array.isArray(tmp3[nodeName.nodeName])) {
+            const items = [tmp3[nodeName.nodeName]];
+            tmp3[nodeName.nodeName] = items;
+          }
+          tmp3[nodeName.nodeName].push(obj2);
+        } else {
+          tmp3[nodeName.nodeName] = obj2;
+        }
+      }
+    });
+    return attributes;
+  }
+}
+function parseXMPObject(str) {
+  if (typeof str === "string") {
+    return str;
+  } else {
+    for (const key10002 in arg0) {
+      let tmp5 = arg0[key10002];
+      let _Array = Array;
+      let arr2 = tmp5;
+      if (!Array.isArray(tmp5)) {
+        let items = [tmp5];
+        arr2 = items;
+      }
+      let item = arr2.forEach((attributes) => {
+        obj = ParseError(5526);
+        obj.objectAssign(obj, parseNodeAttributesAsTags(attributes.attributes));
+        if (typeof attributes.value === "object") {
+          ParseError(5526).objectAssign(tmp3, parseNodeChildrenAsTags(attributes.value));
+          const tmpResult = ParseError(5526);
+        }
+        tmp3 = obj;
+      });
+      continue;
+    }
+    return obj;
+  }
+  obj = {};
+}
+function parseNodeAttributesAsTags(attributes) {
+  const obj = {};
+  for (const key10005 in arg0) {
+    try {
+      if (isTagAttribute(key10005)) {
+        let obj2 = { value: arg0[key10005], attributes: {}, description: null };
+        let tmp3 = getLocalName(key10005);
+        obj2.description = getDescription(arg0[key10005], key10005);
+        obj[tmp3] = obj2;
+      }
+      continue;
+    } catch (err) {
+      continue;
+    }
+  }
+  return obj;
+}
+function isTagAttribute(key10005) {
+  let tmp = "rdf:parseType" !== key10005;
+  if (tmp) {
+    tmp = "xmlns" !== key10005.split(":")[0];
+  }
+  return tmp;
+}
+function isNamespaceDefinition(key10005) {
+  return "xmlns" === key10005.split(":")[0];
+}
+function getLocalName(key10005) {
+  let str = "RatingPercent";
+  if (!obj.test(key10005)) {
+    str = key10005.split(":")[1];
+  }
+  return str;
+}
+function getDescription(arr) {
+  if (Array.isArray(arr)) {
+    const tmp11 = (function getDescriptionOfArray(arr) {
+      const mapped = arr.map((value) => {
+        if (undefined !== value.value) {
+          let tmp2 = closure_1_18(value.value);
+        } else {
+          tmp2 = closure_1_18(value);
+        }
+        return tmp2;
+      });
+      return mapped.join(", ");
+    })(arr);
+    let tmp12 = tmp11;
+    if (tmp2) {
+      tmp12 = tmp11;
+      if (typeof calculateGPSValueDefault[tmp2] === "function") {
+        tmp12 = calculateGPSValueDefault[tmp2](arr, tmp11);
+        const tmp13Result = calculateGPSValueDefault;
+      }
+    }
+    return tmp12;
+  } else if (typeof arr === "object") {
+    return (function getDescriptionOfObject(arr) {
+      const items = [];
+      for (const key10024 in arg0) {
+        let str8 = "CreatorCity";
+        if ("CiAdrCity" !== key10024) {
+          let str = "CreatorCountry";
+          if ("CiAdrCtry" !== key10024) {
+            let str2 = "CreatorAddress";
+            if ("CiAdrExtadr" !== key10024) {
+              let str3 = "CreatorPostalCode";
+              if ("CiAdrPcode" !== key10024) {
+                let str4 = "CreatorRegion";
+                if ("CiAdrRegion" !== key10024) {
+                  let str5 = "CreatorWorkEmail";
+                  if ("CiEmailWork" !== key10024) {
+                    let str6 = "CreatorWorkPhone";
+                    if ("CiTelWork" !== key10024) {
+                      let str7 = "CreatorWorkUrl";
+                      if ("CiUrlWork" !== key10024) {
+                        str7 = key10024;
+                      }
+                      str6 = str7;
+                    }
+                    str5 = str6;
+                  }
+                  str4 = str5;
+                }
+                str3 = str4;
+              }
+              str2 = str3;
+            }
+            str = str2;
+          }
+          str8 = str;
+        }
+        let _HermesInternal = HermesInternal;
+        arr = items.push("" + str8 + ": " + getDescription(arg0[key10024].value));
+        continue;
+      }
+      return items.join("; ");
+    })(arr);
+  } else {
+    try {
+      if (tmp2) {
+        if (typeof calculateGPSValueDefault[tmp2] === "function") {
+          let decodeURIComponentResult = calculateGPSValueDefault[tmp2](arr);
+          const tmp4Result = calculateGPSValueDefault;
+        }
+        return decodeURIComponentResult;
+      }
+      const _decodeURIComponent = decodeURIComponent;
+      const _escape = escape;
+      decodeURIComponentResult = decodeURIComponent(escape(arr));
+    } catch (err) {
+      return tmp;
     }
   }
 }
-let c2 = 84;
-const acsp = "acsp";
-const desc = "desc";
-const mluc = "mluc";
-let text = "text";
-let c7 = "sig ";
-let c8 = 12;
+function parseNodeChildrenAsTags(value) {
+  const obj = {};
+  for (const key10005 in arg0) {
+    try {
+      if (!isNamespaceDefinition(key10005)) {
+        let tmp3 = getLocalName(key10005);
+        obj[tmp3] = parseNodeAsTag(arg0[key10005], key10005);
+      }
+      continue;
+    } catch (err) {
+      continue;
+    }
+  }
+  return obj;
+}
+function parseNodeAsTag(attributes, key10005) {
+  if (Array.isArray(attributes)) {
+    let tmp9 = parseNodeAsSimpleValue(attributes[attributes.length - 1], key10005);
+  } else {
+    let tmp = "Resource" === attributes.attributes["rdf:parseType"] && typeof attributes.value === "string";
+    if (tmp) {
+      tmp = "" === attributes.value.trim();
+    }
+    if (tmp) {
+      const obj3 = { value: "", attributes: {}, description: "" };
+      tmp9 = obj3;
+    } else {
+      let tmp2 = "Resource" === attributes.attributes["rdf:parseType"];
+      if (tmp2) {
+        tmp2 = undefined !== attributes.value["rdf:value"];
+      }
+      if (!tmp2) {
+        tmp2 =
+          undefined !== attributes.value["rdf:Description"] &&
+          undefined !== attributes.value["rdf:Description"].value["rdf:value"];
+        let tmp3 =
+          undefined !== attributes.value["rdf:Description"] &&
+          undefined !== attributes.value["rdf:Description"].value["rdf:value"];
+      }
+      if (tmp2) {
+        tmp9 = parseNodeAsSimpleRdfDescription(attributes, key10005);
+      } else {
+        let tmp4 = "Resource" === attributes.attributes["rdf:parseType"];
+        if (!tmp4) {
+          tmp4 =
+            undefined !== attributes.value["rdf:Description"] &&
+            undefined === attributes.value["rdf:Description"].value["rdf:value"];
+          let tmp5 =
+            undefined !== attributes.value["rdf:Description"] &&
+            undefined === attributes.value["rdf:Description"].value["rdf:value"];
+        }
+        if (tmp4) {
+          tmp9 = parseNodeAsStructureRdfDescription(attributes, key10005);
+        } else {
+          let _Object = Object;
+          let tmp6 = 0 === Object.keys(attributes.value).length;
+          if (tmp6) {
+            tmp6 = undefined === attributes.attributes["xml:lang"];
+          }
+          if (tmp6) {
+            tmp6 = undefined === attributes.attributes["rdf:resource"];
+          }
+          if (tmp6) {
+            const tmp16 = parseNodeAttributesAsTags(attributes.attributes);
+            const obj4 = { value: tmp16, attributes: {}, description: getDescription(tmp16, key10005) };
+            tmp9 = obj4;
+          } else {
+            value = attributes.value;
+            if (undefined !== tmp7) {
+              value2 = attributes.value;
+              const prop = value2["rdf:Bag"] || value2["rdf:Seq"] || value2["rdf:Alt"].value["rdf:li"];
+              let obj = {};
+              for (const key10070 in arg0.attributes) {
+                let tmp11 = "rdf:parseType" === key10070;
+                if (!tmp11) {
+                  tmp11 = "rdf:resource" === key10070;
+                }
+                if (!tmp11) {
+                  tmp11 = "xmlns" === key10070.split(":")[0];
+                }
+                if (tmp11) {
+                  continue;
+                } else {
+                  let obj2 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
+                  let str9 = "RatingPercent";
+                  if (!obj2.test(key10070)) {
+                    str9 = key10070.split(":")[1];
+                  }
+                  obj[str9] = arg0.attributes[key10070];
+                  continue;
+                }
+                continue;
+              }
+              const items = [];
+              if (undefined === prop) {
+                let items1 = [];
+              } else {
+                const _Array = Array;
+                items1 = prop;
+                if (!Array.isArray(prop)) {
+                  const items2 = [prop];
+                  items1 = items2;
+                }
+              }
+              const item = items1.forEach((attributes) => {
+                let tmp2 = "Resource" === attributes.attributes["rdf:parseType"];
+                if (tmp2) {
+                  tmp2 = undefined !== attributes.value["rdf:value"];
+                }
+                if (!tmp2) {
+                  tmp2 =
+                    undefined !== attributes.value["rdf:Description"] &&
+                    undefined !== attributes.value["rdf:Description"].value["rdf:value"];
+                  const tmp3 =
+                    undefined !== attributes.value["rdf:Description"] &&
+                    undefined !== attributes.value["rdf:Description"].value["rdf:value"];
+                }
+                if (tmp2) {
+                  value = parseNodeAsSimpleRdfDescription(attributes);
+                } else {
+                  let tmp4 = "Resource" === attributes.attributes["rdf:parseType"];
+                  if (!tmp4) {
+                    tmp4 =
+                      undefined !== attributes.value["rdf:Description"] &&
+                      undefined === attributes.value["rdf:Description"].value["rdf:value"];
+                    const tmp5 =
+                      undefined !== attributes.value["rdf:Description"] &&
+                      undefined === attributes.value["rdf:Description"].value["rdf:value"];
+                  }
+                  if (tmp4) {
+                    value = parseNodeAsStructureRdfDescription(attributes).value;
+                  } else {
+                    const _Object = Object;
+                    let tmp7 = 0 === Object.keys(attributes.value).length;
+                    if (tmp7) {
+                      tmp7 = undefined === attributes.attributes["xml:lang"];
+                    }
+                    if (tmp7) {
+                      tmp7 = undefined === attributes.attributes["rdf:resource"];
+                    }
+                    if (tmp7) {
+                      const tmp10 = parseNodeAttributesAsTags(attributes.attributes);
+                      getDescription(tmp10, undefined);
+                      value = tmp10;
+                    } else {
+                      value = parseNodeAsSimpleValue(attributes);
+                    }
+                  }
+                }
+                items.push(value);
+              });
+              const obj5 = { value: items, attributes: obj, description: null };
+              obj = getDescription(items, key10005);
+              obj5.description = obj;
+              const iter = value2["rdf:Bag"] || value2["rdf:Seq"] || value2["rdf:Alt"];
+            } else {
+              tmp9 = parseNodeAsSimpleValue(attributes, key10005);
+            }
+            tmp7 = value["rdf:Bag"] || value["rdf:Seq"] || value["rdf:Alt"];
+          }
+        }
+      }
+    }
+  }
+  return tmp9;
+}
+function parseNodeAsSimpleRdfDescription(attributes, key10005) {
+  const obj = {};
+  for (const key10009 in arg0.attributes) {
+    let tmp = "rdf:parseType" === key10009;
+    if (!tmp) {
+      tmp = "rdf:resource" === key10009;
+    }
+    if (!tmp) {
+      tmp = "xmlns" === key10009.split(":")[0];
+    }
+    if (tmp) {
+      continue;
+    } else {
+      let obj2 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
+      let str = "RatingPercent";
+      if (!obj2.test(key10009)) {
+        str = key10009.split(":")[1];
+      }
+      obj[str] = arg0.attributes[key10009];
+      continue;
+    }
+    continue;
+  }
+  let iter = attributes;
+  if (undefined !== attributes.value["rdf:Description"]) {
+    iter = attributes.value["rdf:Description"];
+  }
+  const obj4 = {};
+  for (const key10035 in iter.attributes) {
+    let tmp2 = "rdf:parseType" === key10035;
+    if (!tmp2) {
+      tmp2 = "rdf:resource" === key10035;
+    }
+    if (!tmp2) {
+      tmp2 = "xmlns" === key10035.split(":")[0];
+    }
+    if (tmp2) {
+      continue;
+    } else {
+      let obj5 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
+      let str2 = "RatingPercent";
+      if (!obj5.test(key10035)) {
+        str2 = key10035.split(":")[1];
+      }
+      obj4[str2] = iter.attributes[key10035];
+      continue;
+    }
+    continue;
+  }
+  const obj6 = {};
+  for (const key10052 in iter.value) {
+    let tmp3 = "rdf:value" === key10052;
+    if (!tmp3) {
+      tmp3 = "xmlns" === key10052.split(":")[0];
+    }
+    if (tmp3) {
+      continue;
+    } else {
+      let obj7 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
+      let str3 = "RatingPercent";
+      if (!obj7.test(key10052)) {
+        str3 = key10052.split(":")[1];
+      }
+      obj6[str3] = iter.value[key10052].value;
+      continue;
+    }
+    continue;
+  }
+  ParseError(5526).objectAssign(obj, obj4, obj6);
+  const prop = iter.value["rdf:value"];
+  const obj3 = ParseError(5526);
+  return {
+    value: (prop.attributes && prop.attributes["rdf:resource"]) || iter.value["rdf:value"].value,
+    attributes: obj,
+    description: getDescription(
+      (prop.attributes && prop.attributes["rdf:resource"]) || iter.value["rdf:value"].value,
+      key10005,
+    ),
+  };
+}
+function parseNodeAsStructureRdfDescription(value, key10005) {
+  const obj = { value: {}, attributes: {} };
+  let iter = value;
+  if (undefined !== value.value["rdf:Description"]) {
+    ParseError(5526).objectAssign(obj.value, parseNodeAttributesAsTags(value.value["rdf:Description"].attributes));
+    const obj4 = ParseError(5526);
+    const obj6 = {};
+    for (const key10008 in arg0.attributes) {
+      let tmp = "rdf:parseType" === key10008;
+      if (!tmp) {
+        tmp = "rdf:resource" === key10008;
+      }
+      if (!tmp) {
+        tmp = "xmlns" === key10008.split(":")[0];
+      }
+      if (tmp) {
+        continue;
+      } else {
+        let obj2 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
+        let str = "RatingPercent";
+        if (!obj2.test(key10008)) {
+          str = key10008.split(":")[1];
+        }
+        obj6[str] = arg0.attributes[key10008];
+        continue;
+      }
+      continue;
+    }
+    ParseError(5526).objectAssign(obj.attributes, obj6);
+    iter = value.value["rdf:Description"];
+    const obj5 = ParseError(5526);
+  }
+  ParseError(5526).objectAssign(obj.value, parseNodeChildrenAsTags(iter.value));
+  obj.description = getDescription(obj.value, key10005);
+  return obj;
+}
+function parseNodeAsSimpleValue(attributes, key10005) {
+  let tmp2 = attributes.attributes && attributes.attributes["rdf:resource"];
+  if (!tmp2) {
+    value = attributes.value;
+    let obj = {};
+    let tmp3 = value;
+    if (typeof value !== "string") {
+      tmp3 = obj;
+      const keys = Object.keys();
+      if (keys !== undefined) {
+        tmp3 = obj;
+        while (keys[tmp] !== undefined) {
+          let tmp11 = value[tmp4];
+          let _Array = Array;
+          let arr2 = tmp11;
+          if (!Array.isArray(tmp11)) {
+            let items = [tmp11];
+            arr2 = items;
+          }
+          let item = arr2.forEach((attributes) => {
+            obj = ParseError(5526);
+            obj.objectAssign(obj, parseNodeAttributesAsTags(attributes.attributes));
+            if (typeof attributes.value === "object") {
+              ParseError(5526).objectAssign(tmp3, parseNodeChildrenAsTags(attributes.value));
+              const tmpResult = ParseError(5526);
+            }
+            tmp3 = obj;
+          });
+          continue;
+        }
+      }
+    }
+    tmp2 = tmp3;
+  }
+  const obj2 = { value: tmp2, attributes: null, description: null };
+  const obj3 = {};
+  for (const key10021 in arg0.attributes) {
+    let tmp6 = "rdf:parseType" === key10021;
+    if (!tmp6) {
+      tmp6 = "rdf:resource" === key10021;
+    }
+    if (!tmp6) {
+      tmp6 = "xmlns" === key10021.split(":")[0];
+    }
+    if (tmp6) {
+      continue;
+    } else {
+      let obj4 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
+      let str = "RatingPercent";
+      if (!obj4.test(key10021)) {
+        str = key10021.split(":")[1];
+      }
+      obj3[str] = arg0.attributes[key10021];
+      continue;
+    }
+    continue;
+  }
+  obj2.attributes = obj3;
+  obj2.description = getDescription(tmp2, key10005);
+  return obj2;
+}
+class ParseError {
+  constructor(arg0) {
+    self = this;
+    tmp = closure_4(this, ParseError);
+    items = [];
+    items[0] = global;
+    tmp2 = metroRequire;
+    obj = metroRequire(ParseError);
+    tmp3 = hasOwnProperty;
+    if (closure_7()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.name = "ParseError";
+    return tmp3Result;
+  }
+}
+_inherits(ParseError, _wrapNativeSuperDefault(Error));
+let closure_8 = _createClass(ParseError);
 
 export default {
   read(buffer, arr, arg2) {
-    if (arg2) {
-      if (arr[0].compressionMethod !== _mod5520.COMPRESSION_METHOD_NONE) {
-        if (arr[0].compressionMethod === _mod5520.COMPRESSION_METHOD_DEFLATE) {
-          let _DataView = DataView;
-          buffer = buffer.buffer;
-          let dataView = new DataView(buffer.slice(arr[0].offset, arr[0].offset + arr[0].length));
-          const tmpResult = _mod5520;
-          const decompressResult = tmpResult.decompress(dataView, arr[0].compressionMethod, "utf-8", "dataview");
-          let catchPromise = tmpResult
-            .decompress(dataView, arr[0].compressionMethod, "utf-8", "dataview")
-            .then(parseTags)
-            .catch(() => ({}));
-          const nextPromise = tmpResult
-            .decompress(dataView, arr[0].compressionMethod, "utf-8", "dataview")
-            .then(parseTags);
-        } else {
-          catchPromise = {};
-        }
-        return catchPromise;
-      }
-    }
-    return (function readIcc(buffer, arr) {
-      let length;
-      let sum;
-      closure_0 = arr;
-      try {
-        let _Uint8Array = Uint8Array;
-        let uint8Array = new Uint8Array(arr.reduce((acc, item) => acc + item.length, 0));
-        closure_2 = 0;
-        closure_3 = (function getBuffer(buffer) {
-          if (Array.isArray(buffer)) {
-            const _DataView = DataView;
-            const _Uint8Array = Uint8Array;
-            const dataView = new DataView(Uint8Array.from(buffer).buffer);
-            return dataView.buffer;
-          } else {
-            return buffer.buffer;
-          }
-        })(buffer);
-        function _loop(arg0) {
-          closure_0 = arg0;
-          const found = closure_0.find((chunkNumber) => chunkNumber.chunkNumber === closure_0);
-          if (found) {
-            const _Uint8Array = Uint8Array;
-            uint8Array = new Uint8Array(closure_3.slice(found.offset, found.offset + found.length));
-            const result = uint8Array.set(uint8Array, closure_2);
-            closure_2 = closure_2 + uint8Array.length;
-          } else {
-            const _Error = Error;
-            const _HermesInternal = HermesInternal;
-            const error = new Error("ICC chunk " + arg0 + " not found");
-            throw error;
-          }
-        }
-        let num3 = 1;
-        if (1 <= arr.length) {
+    let length;
+    let length2;
+    let length3;
+    const obj = {};
+    if (typeof buffer === "string") {
+      readTags(obj, buffer, arg2);
+      return obj;
+    } else {
+      if (0 === arr.length) {
+        let items = [];
+      } else {
+        const substr = arr.slice(0, 1);
+        const _Uint8Array5 = Uint8Array;
+        const uint8Array = new Uint8Array(substr.reduce((acc, item) => acc + item.length, 0));
+        let num2 = 0;
+        let num = 0;
+        if (0 < substr.length) {
           do {
-            let _loopResult = _loop(num3);
-            sum = num3 + 1;
-            num3 = sum;
-            length = arr.length;
-          } while (sum <= length);
+            arr = substr[num2];
+            buffer = buffer.buffer;
+            let _Uint8Array = Uint8Array;
+            let tmp3 = new.target;
+            let tmp4 = new.target;
+            let uint8Array1 = new Uint8Array(buffer.slice(arr.dataOffset, arr.dataOffset + arr.length));
+            let result = uint8Array.set(uint8Array1, num);
+            num = num + arr.length;
+            num2 = num2 + 1;
+            length = substr.length;
+          } while (num2 < length);
         }
-        let _DataView = DataView;
-        let dataView = new DataView(uint8Array.buffer);
-        return parseTags(dataView);
-      } catch (err) {
-        return {};
+        const _DataView = DataView;
+        const dataView = new DataView(uint8Array.buffer);
+        const items1 = [dataView];
+        items = items1;
+        if (arr.length > 1) {
+          const substr1 = arr.slice(1);
+          const _Uint8Array6 = Uint8Array;
+          const uint8Array2 = new Uint8Array(substr1.reduce((acc, item) => acc + item.length, 0));
+          let num4 = 0;
+          let num3 = 0;
+          if (0 < substr1.length) {
+            do {
+              let arr5 = substr1[num4];
+              let buffer1 = buffer.buffer;
+              let _Uint8Array2 = Uint8Array;
+              let tmp12 = new.target;
+              let tmp13 = new.target;
+              let uint8Array3 = new Uint8Array(buffer1.slice(arr5.dataOffset, arr5.dataOffset + arr5.length));
+              let result1 = uint8Array2.set(uint8Array3, num3);
+              num3 = num3 + arr5.length;
+              num4 = num4 + 1;
+              length2 = substr1.length;
+            } while (num4 < length2);
+          }
+          const _DataView2 = DataView;
+          const dataView1 = new DataView(uint8Array2.buffer);
+          items1.push(dataView1);
+          items = items1;
+        }
       }
-    })(buffer, arr);
+      const tmp23 = _slicedToArray(items, 2);
+      let tmp25Result = readTags(obj, tmp23[0], arg2);
+      if (tmp23[1]) {
+        if (!tmp25Result) {
+          tmp25Result = readTags(obj, tmp24, arg2);
+        }
+        if (!tmp25Result) {
+          delete tmp[tmp2];
+          const _Uint8Array3 = Uint8Array;
+          const uint8Array4 = new Uint8Array(arr.reduce((acc, item) => acc + item.length, 0));
+          let num7 = 0;
+          let num8 = 0;
+          if (0 < arr.length) {
+            do {
+              let arr7 = arr[num7];
+              let buffer2 = buffer.buffer;
+              let _Uint8Array4 = Uint8Array;
+              let tmp31 = new.target;
+              let tmp32 = new.target;
+              let uint8Array5 = new Uint8Array(buffer2.slice(arr7.dataOffset, arr7.dataOffset + arr7.length));
+              let result2 = uint8Array4.set(uint8Array5, num8);
+              num8 = num8 + arr7.length;
+              num7 = num7 + 1;
+              length3 = arr.length;
+            } while (num7 < length3);
+          }
+          const _DataView3 = DataView;
+          const dataView2 = new DataView(uint8Array4.buffer);
+          readTags(obj, dataView2, arg2);
+        }
+      }
+      return obj;
+    }
   },
 };
-export { parseTags };

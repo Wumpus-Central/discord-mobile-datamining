@@ -1,13 +1,14 @@
 // _runtime/metro/10033__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import AbstractParserWithWordBoundaryChecking from "../09891_AbstractParserWithWordBoundaryChecking.js";
-import now from "../09908_now.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
+import now from "../09919_now.js";
+import _mod10026 from "10026__.js";
+import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
 let self = this;
+const RUCasualTimeParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,8 +27,6 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
 let self2 = this;
 if (this) {
   self2 = self.__createBinding;
@@ -43,7 +42,7 @@ if (self2) {
       fn = self.__importStar;
     }
     if (!fn) {
-      fn = function o(arg0) {
+      fn = function c(arg0) {
         fn = Object.getOwnPropertyNames;
         if (!fn) {
           fn = (obj) => {
@@ -90,15 +89,15 @@ if (self2) {
       };
     }
     const _Object3 = Object;
-    let closure_7 = fn(now);
-    class ESCasualDateParser {
+    let closure_9 = fn(now);
+    class RUCasualTimeParser {
       constructor() {
         self = this;
-        tmp = closure_0(this, ESCasualDateParser);
-        tmp2 = c2;
-        obj = c2(ESCasualDateParser);
-        tmp3 = closure_1;
-        if (closure_3()) {
+        tmp = c2(this, RUCasualTimeParser);
+        tmp2 = closure_4;
+        obj = closure_4(RUCasualTimeParser);
+        tmp3 = closure_3;
+        if (hasOwnProperty()) {
           tmp7 = globalThis;
           _Reflect = Reflect;
           tmp8 = arguments;
@@ -111,34 +110,61 @@ if (self2) {
         return tmp3(self, constructResult);
       }
     }
-    _classCallCheck = ESCasualDateParser;
-    _inherits(ESCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+    _inherits(RUCasualTimeParser, _mod10026.AbstractParserWithLeftRightBoundaryChecking);
     const entry = {
-      key: "innerPattern",
-      value: function innerPattern(arg0) {
-        return /(ahora|hoy|mañana|ayer)(?=\W|$)/i;
+      key: "innerPatternString",
+      value: function innerPatternString(arg0) {
+        return "(\u0441\u0435\u0439\u0447\u0430\u0441|\u043F\u0440\u043E\u0448\u043B\u044B\u043C\\s*\u0432\u0435\u0447\u0435\u0440\u043E\u043C|\u043F\u0440\u043E\u0448\u043B\u043E\u0439\\s*\u043D\u043E\u0447\u044C\u044E|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0439\\s*\u043D\u043E\u0447\u044C\u044E|\u0441\u0435\u0433\u043E\u0434\u043D\u044F\\s*\u043D\u043E\u0447\u044C\u044E|\u044D\u0442\u043E\u0439\\s*\u043D\u043E\u0447\u044C\u044E|\u043D\u043E\u0447\u044C\u044E|\u044D\u0442\u0438\u043C \u0443\u0442\u0440\u043E\u043C|\u0443\u0442\u0440\u043E\u043C|\u0443\u0442\u0440\u0430|\u0432\\s*\u043F\u043E\u043B\u0434\u0435\u043D\u044C|\u0432\u0435\u0447\u0435\u0440\u043E\u043C|\u0432\u0435\u0447\u0435\u0440\u0430|\u0432\\s*\u043F\u043E\u043B\u043D\u043E\u0447\u044C)";
       },
     };
     let items = [entry];
     const entry1 = {
       key: "innerExtract",
-      value: function innerExtract(reference, arg1) {
-        const formatted = arg1[0].toLowerCase();
-        if ("ahora" === formatted) {
-          return closure_7.now(reference.reference);
-        } else if ("hoy" === formatted) {
-          return closure_7.today(reference.reference);
-        } else if ("ma\u00F1ana" === formatted) {
-          return closure_7.tomorrow(reference.reference);
-        } else if ("ayer" === formatted) {
-          return closure_7.yesterday(reference.reference);
+      value: function innerExtract(refDate, arg1) {
+        refDate = refDate.refDate;
+        const str2 = arg1[0].toLowerCase();
+        let parsingComponents = refDate.createParsingComponents();
+        if ("\u0441\u0435\u0439\u0447\u0430\u0441" === str2) {
+          return closure_9.now(refDate.reference);
         } else {
-          return tmp2;
+          if ("\u0432\u0435\u0447\u0435\u0440\u043E\u043C" !== str2) {
+            if ("\u0432\u0435\u0447\u0435\u0440\u0430" !== str2) {
+              if (!str2.endsWith("\u0443\u0442\u0440\u043E\u043C")) {
+                if (!str2.endsWith("\u0443\u0442\u0440\u0430")) {
+                  if (str2.match(/в\s*полдень/)) {
+                    return closure_9.noon(refDate.reference);
+                  } else if (str2.match(/прошлой\s*ночью/)) {
+                    return closure_9.lastNight(refDate.reference);
+                  } else if (str2.match(/прошлым\s*вечером/)) {
+                    return closure_9.yesterdayEvening(refDate.reference);
+                  } else {
+                    if (str2.match(/следующей\s*ночью/)) {
+                      let num2 = 2;
+                      if (refDate.getHours() < 22) {
+                        num2 = 1;
+                      }
+                      const _Date = Date;
+                      const date = new Date(refDate.getTime());
+                      date.setDate(date.getDate() + num2);
+                      RUCasualTimeParser(9901).assignSimilarDate(parsingComponents, date);
+                      parsingComponents.imply("hour", 0);
+                    }
+                    if (str2.match(/в\s*полночь/)) {
+                      parsingComponents = closure_9.midnight(refDate.reference);
+                    }
+                    return parsingComponents;
+                  }
+                }
+              }
+              return closure_9.morning(refDate.reference);
+            }
+          }
+          return closure_9.evening(refDate.reference);
         }
       },
     };
     items[1] = entry1;
-    exports.default = _createClass(ESCasualDateParser, items);
+    exports.default = _createClass(RUCasualTimeParser, items);
   } else {
     const _Object2 = Object;
   }

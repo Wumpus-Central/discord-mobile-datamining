@@ -1,56 +1,117 @@
 // _runtime/metro/09922__.js
-import _classCallCheck_mod from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
+import ReferenceWithTimezone from "../09898_ReferenceWithTimezone.js";
+import Meridiem from "../09900_Meridiem.js";
 
-let _classCallCheck = _classCallCheck_mod;
-const regExp = new RegExp("^\\s*(?:\\(?(?:GMT|UTC)\\s?)?([+-])(\\d{1,2})(?::?(\\d{2}))?\\)?", "i");
-class ExtractTimezoneOffsetRefiner {
-  constructor() {
-    tmp = closure_0(this, ExtractTimezoneOffsetRefiner);
-    return;
+require = arg1;
+const dependencyMap = arg6;
+function getDaysToWeekday(dateWithAdjustedTimezone, sum, next) {
+  const day = dateWithAdjustedTimezone.getDay();
+  if ("this" === next) {
+    const diff = sum - dateWithAdjustedTimezone.getDay();
+    sum = diff;
+    if (diff < 0) {
+      sum = diff + 7;
+    }
+    return sum;
+  } else if ("last" === next) {
+    const diff1 = sum - dateWithAdjustedTimezone.getDay();
+    let diff2 = diff1;
+    if (diff1 >= 0) {
+      diff2 = diff1 - 7;
+    }
+    return diff2;
+  } else if ("next" === next) {
+    if (day == Meridiem.Weekday.SUNDAY) {
+      let num12 = 7;
+      if (sum != Meridiem.Weekday.SUNDAY) {
+        num12 = sum;
+      }
+      let sum3 = num12;
+    } else if (day == Meridiem.Weekday.SATURDAY) {
+      let num9 = 7;
+      if (sum != Meridiem.Weekday.SATURDAY) {
+        let num10 = 8;
+        if (sum != Meridiem.Weekday.SUNDAY) {
+          num10 = 1 + sum;
+        }
+        num9 = num10;
+      }
+      sum3 = num9;
+    } else {
+      if (sum < day) {
+        if (sum != Meridiem.Weekday.SUNDAY) {
+          const diff3 = sum - dateWithAdjustedTimezone.getDay();
+          let sum1 = diff3;
+          if (diff3 < 0) {
+            sum1 = diff3 + 7;
+          }
+          sum3 = sum1;
+        }
+      }
+      const diff4 = sum - dateWithAdjustedTimezone.getDay();
+      let sum2 = diff4;
+      if (diff4 < 0) {
+        sum2 = diff4 + 7;
+      }
+      sum3 = sum2 + 7;
+    }
+    return sum3;
+  } else {
+    const diff5 = sum - dateWithAdjustedTimezone.getDay();
+    let diff6 = diff5;
+    if (diff5 >= 0) {
+      diff6 = diff5 - 7;
+    }
+    const diff7 = sum - dateWithAdjustedTimezone.getDay();
+    let sum4 = diff7;
+    if (diff7 < 0) {
+      sum4 = diff7 + 7;
+    }
+    if (sum4 < -diff6) {
+      diff6 = sum4;
+    }
+    return diff6;
   }
 }
-_classCallCheck = ExtractTimezoneOffsetRefiner;
-const entry = {
-  key: "refine",
-  value: function refine(arg0, arr) {
-    let text = arg0;
-    const item = arr.forEach((start) => {
-      text = start;
-      start = start.start;
-      if (!start.isCertain("timezoneOffset")) {
-        const match = regExp.exec(text.text.substring(start.index + start.text.length));
-        if (match) {
-          obj.debug(() => {
-            console.log("Extracting timezone: '" + match[0] + "' into : " + closure_0);
-          });
-          const _parseInt = parseInt;
-          let str2 = match[3];
-          const result = 60 * parseInt(match[2]);
-          if (!str2) {
-            str2 = "0";
-          }
-          const sum = result + parseInt(str2);
-          if (sum <= 840) {
-            let tmp7 = sum;
-            if ("-" === match[1]) {
-              tmp7 = -sum;
-            }
-            if (null != start.end) {
-              const end = start.end;
-              end.assign("timezoneOffset", tmp7);
-            }
-            const start2 = start.start;
-            start2.assign("timezoneOffset", tmp7);
-            start.text = start.text + match[0];
-          }
-        }
-        obj = text;
-      }
-    });
-    return arr;
-  },
-};
-const items = [entry];
 
-export default _createClass(ExtractTimezoneOffsetRefiner, items);
+export const createParsingComponentsAtWeekday = function createParsingComponentsAtWeekday(reference, sum, next) {
+  const parsingComponents = new ReferenceWithTimezone.ParsingComponents(reference);
+  const addDurationAsImpliedResult = parsingComponents.addDurationAsImplied({
+    day: getDaysToWeekday(reference.getDateWithAdjustedTimezone(), sum, next),
+  });
+  addDurationAsImpliedResult.assign("weekday", sum);
+  return addDurationAsImpliedResult;
+};
+export { getDaysToWeekday };
+export const getDaysToWeekdayClosest = function getDaysToWeekdayClosest(getDay, arg1) {
+  const diff = arg1 - getDay.getDay();
+  let diff1 = diff;
+  if (diff >= 0) {
+    diff1 = diff - 7;
+  }
+  const diff2 = arg1 - getDay.getDay();
+  let sum = diff2;
+  if (diff2 < 0) {
+    sum = diff2 + 7;
+  }
+  if (sum < -diff1) {
+    diff1 = sum;
+  }
+  return diff1;
+};
+export const getDaysForwardToWeekday = function getDaysForwardToWeekday(getDay, arg1) {
+  const diff = arg1 - getDay.getDay();
+  let sum = diff;
+  if (diff < 0) {
+    sum = diff + 7;
+  }
+  return sum;
+};
+export const getBackwardDaysToWeekday = function getBackwardDaysToWeekday(getDay, arg1) {
+  const diff = arg1 - getDay.getDay();
+  let diff1 = diff;
+  if (diff >= 0) {
+    diff1 = diff - 7;
+  }
+  return diff1;
+};

@@ -1,188 +1,83 @@
 // _runtime/metro/01454__.js
-let apply = typeof Reflect === "object";
-if (typeof Reflect === "object") {
-  const _Reflect2 = Reflect;
-  apply = null !== Reflect;
-}
-if (apply) {
-  const _Reflect = Reflect;
-  apply = Reflect.apply;
-}
-let c3 = apply;
-if (typeof apply === "function") {
-  const _Object3 = Object;
-  if (typeof Object.defineProperty === "function") {
-    try {
-      const _Object = Object;
-      let obj = {
-        get() {
-          throw obj2;
-        },
-      };
-      apply(
-        () => {
-          throw 42;
-        },
-        null,
-        Object.defineProperty({}, "length", obj),
-      );
-      let tmp3 = apply;
-      const definePropertyResult = Object.defineProperty({}, "length", obj);
-      const obj2 = {};
-    } catch (tmp8) {
-      tmp3 = tmp2;
-      if (tmp8 !== tmp) {
-        c3 = null;
-        tmp3 = null;
-      }
-    }
-  }
-  const re4 = /^\s*class\b/;
-  function isES6ClassFunction(fn) {
-    try {
-      let tmp2 = toString;
-      const call = toString.call;
-      if (typeof call === "unknown") {
-        let callResult = tmp2();
-      } else {
-        callResult = call(fn);
-      }
-      tmp2 = re4;
-      const isMatch = re4.test(callResult);
-    } catch (err) {
-      return false;
-    }
-  }
-  function tryFunctionToStr(fn) {
-    try {
-      const tmp3 = isES6ClassFunction(fn);
-      let flag = !tmp3;
-      if (!tmp3) {
-        const call = toString.call;
-        if (typeof call === "unknown") {
-          toString();
-          flag = true;
-        } else {
-          call(fn);
-          flag = true;
-        }
-      }
-      return flag;
-    } catch (err) {
-      return false;
-    }
-  }
-  const _Object2 = Object;
-  toString = Object.prototype.toString;
-  const _Symbol = Symbol;
-  let toStringTag = typeof Symbol === "function";
-  if (typeof Symbol === "function") {
-    const _Symbol2 = Symbol;
-    toStringTag = Symbol.toStringTag;
-  }
-  const items = [];
-  items.length = 1;
-  let closure_9 = !(0 in items);
-  function isDocumentDotAll() {
-    return false;
-  }
-  const _document = document;
-  if (typeof document === "object") {
-    const _document3 = document;
-    ({ call: call2, call } = toString);
-    const _document2 = document;
-    if (tmp11 === (typeof call === "unknown" ? toString() : call(all))) {
-      isDocumentDotAll = function isDocumentDotAll(obj) {
-        if (closure_9) {
-          try {
-            const call = toString.call;
-            if (typeof call === "unknown") {
-              let callResult = toString();
+import _mod1455 from "01455__.js";
+
+export default function forEach(str, call, arg2) {
+  if (_mod1455(call)) {
+    call = toString.call;
+    if ("[object Array]" === (typeof call === "unknown" ? toString() : call(str))) {
+      let num4 = 0;
+      if (0 < str.length) {
+        do {
+          let call4 = hasOwnProperty.call;
+          let tmp20 = num4;
+          if (typeof call4 === "unknown" ? hasOwnProperty(num4) : call4(str, num4)) {
+            if (null == tmp6) {
+              let tmp23 = call(str[num4], num4, str);
             } else {
-              callResult = call(obj);
-            }
-            let tmp4 = "[object HTMLAllCollection]" === callResult;
-            if (!tmp4) {
-              tmp4 = "[object HTML document.all class]" === tmp3;
-            }
-            if (!tmp4) {
-              tmp4 = "[object HTMLCollection]" === tmp3;
-            }
-            if (!tmp4) {
-              tmp4 = "[object Object]" === tmp3;
-            }
-            if (tmp4) {
-              tmp4 = null == obj("");
-            }
-            return tmp4;
-          } catch (err) {}
-        }
-        return false;
-      };
-    }
-    tmp11 = typeof call2 === "unknown" ? toString() : call2(all2);
-  }
-  module.exports = tmp3
-    ? function isCallable(fn) {
-        if (isDocumentDotAll(fn)) {
-          return true;
-        } else if (fn) {
-          if (typeof fn !== "function") {
-            if (typeof fn !== "object") {
-              return false;
+              let call5 = call.call;
+              let tmp21 = str[num4];
+              if (typeof call5 === "unknown") {
+                let tmp22 = call(tmp21, num4, str);
+              } else {
+                let call5Result = call5(tmp6, tmp21, tmp20, str);
+              }
             }
           }
-          try {
-            _null(fn, null, definePropertyResult);
-            const tmp8 = isES6ClassFunction(fn);
-            let tmp9 = !tmp8;
-            if (!tmp8) {
-              tmp9 = tryFunctionToStr(fn);
-            }
-            return tmp9;
-          } catch (tmp5) {
-            if (tmp5 !== obj2) {
-              return false;
-            }
-          }
-        } else {
-          return false;
-        }
+          num4 = num4 + 1;
+        } while (num4 < length2);
       }
-    : function isCallable(fn) {
-        if (isDocumentDotAll(fn)) {
-          return true;
-        } else if (fn) {
-          if (typeof fn !== "function") {
-            if (typeof fn !== "object") {
-              return false;
-            }
-          }
-          if (toStringTag) {
-            return tryFunctionToStr(fn);
-          } else if (isES6ClassFunction(fn)) {
-            return false;
+    } else if (typeof str === "string") {
+      let num2 = 0;
+      if (0 < str.length) {
+        do {
+          if (null == tmp6) {
+            let tmp17 = call(str.charAt(num2), num2, str);
           } else {
-            const call = toString.call;
-            const tmp4 = typeof call === "unknown" ? toString() : call(fn);
-            let tmp5 = "[object Function]" !== tmp4;
-            if (tmp5) {
-              tmp5 = "[object GeneratorFunction]" !== tmp4;
+            let call3 = call.call;
+            let charAtResult = str.charAt(num2);
+            if (typeof call3 === "unknown") {
+              let tmp16 = call(charAtResult, num2, str);
+            } else {
+              let call3Result = call3(tmp6, charAtResult, tmp14, str);
             }
-            if (tmp5) {
-              tmp5 = !/^\[object HTML/.test(tmp4);
-              const obj = /^\[object HTML/;
-            }
-            let tmp6 = !tmp5;
-            if (!tmp5) {
-              tmp6 = tryFunctionToStr(fn);
-            }
-            return tmp6;
           }
+          num2 = num2 + 1;
+        } while (num2 < length);
+      }
+    } else {
+      for (const key10024 in arg0) {
+        let call6 = hasOwnProperty.call;
+        if (typeof call6 === "unknown") {
+          let call6Result = hasOwnProperty(key10024);
         } else {
-          return false;
+          call6Result = call6(arg0, key10024);
         }
-      };
+        if (!call6Result) {
+          continue;
+        } else {
+          if (null == tmp6) {
+            let tmp12 = arg1(arg0[key10024], key10024, arg0);
+            continue;
+          } else {
+            let call2 = arg1.call;
+            let tmp10 = arg0[key10024];
+            if (typeof call2 === "unknown") {
+              let tmp11 = arg1(tmp10, key10024, arg0);
+              continue;
+            } else {
+              let call2Result = call2(tmp6, tmp10, key10024, arg0);
+              continue;
+            }
+            continue;
+          }
+          continue;
+        }
+        continue;
+      }
+    }
+  } else {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("iterator must be a function");
+    throw typeError;
+  }
 }
-tmp3 = null;
-c3 = null;

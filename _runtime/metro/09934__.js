@@ -1,33 +1,10 @@
 // _runtime/metro/09934__.js
-import AbstractParserWithWordBoundaryChecking from "../09891_AbstractParserWithWordBoundaryChecking.js";
-import now from "../09908_now.js";
-import _mod9935 from "09935__.js";
+import assignSimilarDate from "../09901_assignSimilarDate.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
 
 let self = this;
-const DECasualDateParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
+const ForwardDateRefiner = require;
 let self2 = this;
 if (this) {
   self2 = self.__createBinding;
@@ -43,7 +20,7 @@ if (self2) {
       fn = self.__importStar;
     }
     if (!fn) {
-      fn = function u(arg0) {
+      fn = function t(arg0) {
         fn = Object.getOwnPropertyNames;
         if (!fn) {
           fn = (obj) => {
@@ -89,116 +66,151 @@ if (self2) {
         return obj;
       };
     }
-    let fn2 = self;
-    if (self) {
-      fn2 = self.__importDefault;
-    }
-    if (!fn2) {
-      fn2 = (__esModule) => {
-        if (!__esModule) {
-          const obj = { default: __esModule };
-          let tmp = obj;
-        } else {
-          tmp = __esModule;
-        }
-        return tmp;
-      };
-    }
     const _Object3 = Object;
-    let closure_9 = fn2(_mod9935);
-    let closure_10 = fn(now);
-    const _RegExp = RegExp;
-    const regExp = new RegExp(
-      "(jetzt|heute|morgen|\u00FCbermorgen|uebermorgen|gestern|vorgestern|letzte\\s*nacht)(?:\\s*(morgen|vormittag|mittags?|nachmittag|abend|nacht|mitternacht))?(?=\\W|$)",
-      "i",
-    );
-    class DECasualDateParser {
+    let closure_6 = fn(assignSimilarDate);
+    class ForwardDateRefiner {
       constructor() {
-        self = this;
-        tmp = c2(this, DECasualDateParser);
-        tmp2 = closure_4;
-        obj = closure_4(DECasualDateParser);
-        tmp3 = closure_3;
-        if (hasOwnProperty()) {
-          tmp7 = globalThis;
-          _Reflect = Reflect;
-          tmp8 = arguments;
-          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-        } else {
-          tmp4 = arguments;
-          tmp5 = arguments;
-          constructResult = obj(...arguments);
-        }
-        return tmp3(self, constructResult);
+        tmp = closure_3(this, ForwardDateRefiner);
+        return;
       }
     }
-    _inherits(DECasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
     const entry = {
-      key: "innerPattern",
-      value: function innerPattern(arg0) {
-        return regExp;
-      },
-    };
-    let items = [entry];
-    const entry1 = {
-      key: "innerExtract",
-      value: function innerExtract(reference, arg1) {
-        reference = reference.reference;
-        const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
-        const str2 = arg1[1] || "".toLowerCase();
-        const formatted = arg1[2] || "".toLowerCase();
-        const parsingComponents = reference.createParsingComponents();
-        if ("jetzt" === str2) {
-          let nowResult = closure_10.now(reference.reference);
-        } else if ("heute" === str2) {
-          nowResult = closure_10.today(reference.reference);
-        } else if ("morgen" === str2) {
-          const addDurationResult = DECasualDateParser(9886).addDuration(dateWithAdjustedTimezone, { day: 1 });
-          DECasualDateParser(9890).assignSimilarDate(parsingComponents, addDurationResult);
-          DECasualDateParser(9890).implySimilarTime(parsingComponents, addDurationResult);
-          nowResult = parsingComponents;
-        } else {
-          if ("\u00FCbermorgen" !== str2) {
-            if ("uebermorgen" !== str2) {
-              if ("gestern" === str2) {
-                const addDurationResult1 = DECasualDateParser(9886).addDuration(dateWithAdjustedTimezone, { day: -1 });
-                DECasualDateParser(9890).assignSimilarDate(parsingComponents, addDurationResult1);
-                DECasualDateParser(9890).implySimilarTime(parsingComponents, addDurationResult1);
-                nowResult = parsingComponents;
-              } else if ("vorgestern" === str2) {
-                const addDurationResult2 = DECasualDateParser(9886).addDuration(dateWithAdjustedTimezone, { day: -2 });
-                DECasualDateParser(9890).assignSimilarDate(parsingComponents, addDurationResult2);
-                DECasualDateParser(9890).implySimilarTime(parsingComponents, addDurationResult2);
-                nowResult = parsingComponents;
-              } else {
-                nowResult = parsingComponents;
-                if (str2.match(/letzte\s*nacht/)) {
-                  let addDurationResult3 = dateWithAdjustedTimezone;
-                  if (dateWithAdjustedTimezone.getHours() > 6) {
-                    addDurationResult3 = DECasualDateParser(9886).addDuration(dateWithAdjustedTimezone, { day: -1 });
+      key: "refine",
+      value: function refine(option, arr) {
+        const self = this;
+        if (option.option.forwardDate) {
+          const item = arr.forEach((start) => {
+            option = start;
+            const reference = option.reference;
+            const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
+            start = start.start;
+            if (start.isOnlyTime()) {
+              const start2 = start.start;
+              if (obj.reference.instant > start2.date()) {
+                const reference2 = obj.reference;
+                const dateWithAdjustedTimezone1 = reference2.getDateWithAdjustedTimezone();
+                const _Date = Date;
+                const date = new Date(dateWithAdjustedTimezone1);
+                date.setDate(date.getDate() + 1);
+                closure_1_6.implySimilarDate(start.start, date);
+                obj.debug(() => {
+                  console.log(
+                    "" +
+                      self.constructor.name +
+                      " adjusted " +
+                      closure_0 +
+                      " time from the ref date (" +
+                      dateWithAdjustedTimezone1 +
+                      ") to the following day (" +
+                      date +
+                      ")",
+                  );
+                });
+                let end2 = start.end;
+                if (end2) {
+                  const end = start.end;
+                  end2 = end.isOnlyTime();
+                }
+                if (end2) {
+                  closure_1_6.implySimilarDate(start.end, date);
+                  ({ start: start3, end: end3 } = start);
+                  if (dateResult > end3.date()) {
+                    date.setDate(date.getDate() + 1);
+                    closure_1_6.implySimilarDate(start.end, date);
                   }
-                  DECasualDateParser(9890).assignSimilarDate(parsingComponents, addDurationResult3);
-                  parsingComponents.imply("hour", 0);
-                  nowResult = parsingComponents;
+                  dateResult = start3.date();
                 }
               }
             }
-          }
-          const addDurationResult4 = DECasualDateParser(9886).addDuration(dateWithAdjustedTimezone, { day: 2 });
-          DECasualDateParser(9890).assignSimilarDate(parsingComponents, addDurationResult4);
-          DECasualDateParser(9890).implySimilarTime(parsingComponents, addDurationResult4);
-          nowResult = parsingComponents;
+            const start4 = start.start;
+            let tmp5 = dateWithAdjustedTimezone;
+            if (start4.isOnlyWeekdayComponent()) {
+              const start5 = start.start;
+              tmp5 = dateWithAdjustedTimezone;
+              if (dateWithAdjustedTimezone > start5.date()) {
+                const start11 = start.start;
+                value = start11.get("weekday");
+                const diff = value - dateWithAdjustedTimezone.getDay();
+                let sum = diff;
+                if (diff <= 0) {
+                  sum = diff + 7;
+                }
+                const obj2 = { day: sum };
+                const addDurationResult = option(self[3]).addDuration(dateWithAdjustedTimezone, obj2);
+                option(self[2]).implySimilarDate(start.start, addDurationResult);
+                obj.debug(() => {
+                  console.log("" + self.constructor.name + " adjusted " + start + " weekday (" + start.start + ")");
+                });
+                tmp5 = addDurationResult;
+                if (start.end) {
+                  const end4 = start.end;
+                  tmp5 = addDurationResult;
+                  if (end4.isOnlyWeekdayComponent()) {
+                    const end5 = start.end;
+                    value2 = end5.get("weekday");
+                    const diff1 = value2 - addDurationResult.getDay();
+                    let sum1 = diff1;
+                    if (diff1 <= 0) {
+                      sum1 = diff1 + 7;
+                    }
+                    const obj3 = { day: sum1 };
+                    const addDurationResult1 = tmp7(self[3]).addDuration(addDurationResult, obj3);
+                    tmp7(self[2]).implySimilarDate(start.end, addDurationResult1);
+                    obj.debug(() => {
+                      console.log("" + self.constructor.name + " adjusted " + start + " weekday (" + start.end + ")");
+                    });
+                    tmp5 = addDurationResult1;
+                  }
+                }
+              }
+            }
+            const start6 = start.start;
+            if (start6.isDateWithUnknownYear()) {
+              const start7 = start.start;
+              if (tmp5 > start7.date()) {
+                const start12 = start.start;
+                let num3 = 0;
+                if (tmp5 > start12.date()) {
+                  while (true) {
+                    ({ start: start8, start: start9 } = start);
+                    let implyResult = start8.imply("year", start9.get("year") + 1);
+                    let obj6 = option;
+                    let debugResult3 = option.debug(() => {
+                      console.log("" + self.constructor.name + " adjusted " + start + " year (" + start.start + ")");
+                    });
+                    let end6 = start.end;
+                    if (end6) {
+                      let end7 = start.end;
+                      end6 = !end7.isCertain("year");
+                    }
+                    if (end6) {
+                      ({ end: end8, end: end9 } = start);
+                      let implyResult1 = end8.imply("year", end9.get("year") + 1);
+                      let debugResult4 = obj6.debug(() => {
+                        console.log("" + self.constructor.name + " adjusted " + start + " month (" + start.start + ")");
+                      });
+                    }
+                    let sum2 = num3 + 1;
+                    if (sum2 >= 3) {
+                      break;
+                    } else {
+                      let start10 = start.start;
+                      num3 = sum2;
+                      if (tmp5 <= start10.date()) {
+                        break;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          });
         }
-        let result = nowResult;
-        if (formatted) {
-          result = closure_9.default.extractTimeComponents(nowResult, formatted);
-          const _default = closure_9.default;
-        }
-        return result;
+        return arr;
       },
     };
-    items[1] = entry1;
-    exports.default = _createClass(DECasualDateParser, items);
+    let items = [entry];
+    exports.default = _createClass(ForwardDateRefiner, items);
   } else {
     const _Object2 = Object;
   }

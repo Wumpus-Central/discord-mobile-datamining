@@ -1,89 +1,176 @@
 // _runtime/metro/05566__.js
-import _modDef5537 from "05537__.js";
+import _mod5526 from "05526__.js";
+import _modDef5543 from "05543__.js";
+import _slicedToArray from "00032__.js";
 
-importDefault = arg2;
-const dependencyMap = arg6;
-
-export default {
-  read(byteLength, sum) {
-    let tmp;
-    if (sum + 4 <= byteLength.byteLength) {
-      const longAt = _modDef5537.getLongAt(byteLength, sum);
-      const obj2 = { value: longAt, description: null };
-      const _HermesInternal = HermesInternal;
-      obj2.description = "" + longAt + "px";
-      tmp = obj2;
+require = arg1;
+function parseBezierKnot(dataView, arg1) {
+  const items = [];
+  let num = 0;
+  do {
+    let sum = arg1 + num;
+    let obj = _modDef5543;
+    let longAt = obj.getLongAt(dataView, sum);
+    let num2 = -1;
+    if (longAt >>> 31 === 0) {
+      num2 = 1;
     }
-    const obj3 = {
-      "Image Width": tmp,
-      "Image Height": null,
-      "Bit Depth": null,
-      "Color Type": null,
-      Compression: null,
-      Filter: null,
-      Interlace: null,
-    };
-    let tmp6;
-    if (sum + 4 + 4 <= byteLength.byteLength) {
-      const longAt1 = _modDef5537.getLongAt(byteLength, sum + 4);
-      const obj5 = { value: longAt1, description: null };
-      const _HermesInternal2 = HermesInternal;
-      obj5.description = "" + longAt1 + "px";
-      tmp6 = obj5;
+    let str = (2130706432 & longAt) >>> 24;
+    let _parseInt = parseInt;
+    let obj2 = _mod5526;
+    let str2 = longAt & parseInt(obj2.strRepeat("1", 24), 2);
+    let obj3 = _mod5526;
+    let text = `${str.toString(2)}.`;
+    let obj4 = _mod5526;
+    let result = num2 * obj3.parseFloatRadix(`${str.toString(2)}.` + obj4.padStart(str2.toString(2), 24, "0"), 2);
+    let tmp2Result = _modDef5543;
+    let longAt1 = tmp2Result.getLongAt(dataView, sum + 4);
+    let num3 = -1;
+    if (longAt1 >>> 31 === 0) {
+      num3 = 1;
     }
-    obj3["Image Height"] = tmp6;
-    let tmp11;
-    if (sum + 8 + 1 <= byteLength.byteLength) {
-      const byteAt = _modDef5537.getByteAt(byteLength, sum + 8);
-      const obj7 = { value: byteAt, description: null };
-      const _HermesInternal3 = HermesInternal;
-      obj7.description = "" + byteAt;
-      tmp11 = obj7;
-    }
-    obj3["Bit Depth"] = tmp11;
-    let tmp16;
-    if (sum + 9 + 1 <= byteLength.byteLength) {
-      const byteAt1 = _modDef5537.getByteAt(byteLength, sum + 9);
-      const obj9 = {
-        value: byteAt1,
-        description:
-          { 0: "Grayscale", 2: "RGB", 3: "Palette", 4: "Grayscale with Alpha", 6: "RGB with Alpha" }[byteAt1] ||
-          "Unknown",
-      };
-      tmp16 = obj9;
-    }
-    obj3["Color Type"] = tmp16;
-    let tmp20;
-    if (sum + 10 + 1 <= byteLength.byteLength) {
-      const byteAt2 = _modDef5537.getByteAt(byteLength, sum + 10);
-      const obj11 = { value: byteAt2, description: null };
-      let str6 = "Unknown";
-      if (0 === byteAt2) {
-        str6 = "Deflate/Inflate";
+    let str3 = (2130706432 & longAt1) >>> 24;
+    let _parseInt2 = parseInt;
+    let tmp6Result = _mod5526;
+    let str4 = longAt1 & parseInt(tmp6Result.strRepeat("1", 24), 2);
+    let tmp6Result3 = _mod5526;
+    let text1 = `${str3.toString(2)}.`;
+    let tmp6Result4 = _mod5526;
+    let items1 = [num3 * tmp6Result3.parseFloatRadix(`${str3.toString(2)}.` + tmp6Result4.padStart(str4.toString(2), 24, "0"), 2), result];
+    let arr = items.push(items1);
+    num = num + 8;
+  } while (num < 24);
+  return items;
+}
+let obj = { CLOSED_SUBPATH_LENGTH: 0, CLOSED_SUBPATH_BEZIER_LINKED: 1, CLOSED_SUBPATH_BEZIER_UNLINKED: 2, OPEN_SUBPATH_LENGTH: 3, OPEN_SUBPATH_BEZIER_LINKED: 4, OPEN_SUBPATH_BEZIER_UNLINKED: 5, FILL_RULE: 6, CLIPBOARD: 7, INITIAL_FILL_RULE: 8 };
+let obj2 = { 2000: null, 2999: null };
+obj2[2000] = {
+  name: "PathInformation",
+  description: function pathResource(byteLength) {
+    const types = {};
+    const paths = [];
+    for (let num = 0; num < byteLength.byteLength; num = num + 26) {
+      let obj2 = _modDef5543;
+      let shortAt = obj2.getShortAt(byteLength, num);
+      if (dependencyMap[shortAt]) {
+        if (!types[shortAt]) {
+          types[shortAt] = dependencyMap[shortAt].description;
+        }
+        let obj = { type: shortAt, path: null };
+        let obj4 = dependencyMap[shortAt];
+        obj.path = obj4.path(byteLength, num + 2);
+        let arr = paths.push(obj);
       }
-      obj11.description = str6;
-      tmp20 = obj11;
     }
-    obj3.Compression = tmp20;
-    let tmp24;
-    if (sum + 11 + 1 <= byteLength.byteLength) {
-      const byteAt3 = _modDef5537.getByteAt(byteLength, sum + 11);
-      const obj13 = { value: byteAt3, description: null };
-      let str7 = "Unknown";
-      if (0 === byteAt3) {
-        str7 = "Adaptive";
-      }
-      obj13.description = str7;
-      tmp24 = obj13;
-    }
-    obj3.Filter = tmp24;
-    let tmp28;
-    if (sum + 12 + 1 <= byteLength.byteLength) {
-      const byteAt4 = _modDef5537.getByteAt(byteLength, sum + 12);
-      const obj15 = { value: byteAt4, description: { 0: "Noninterlaced", 1: "Adam7 Interlace" }[byteAt4] || "Unknown" };
-      tmp28 = obj15;
-    }
-    obj3.Interlace = tmp28;
-    return obj3;
-  },
+    return JSON.stringify({ types, paths });
+  }
 };
+obj2[2999] = {
+  name: "ClippingPathName",
+  description(getUint8) {
+    return _slicedToArray(_mod5526.getPascalStringFromDataView(getUint8, 0), 2)[1];
+  }
+};
+const dependencyMap = {
+  [obj.CLOSED_SUBPATH_LENGTH]: {
+    description: "Closed subpath length",
+    path(dataView, sum) {
+      const items = [_modDef5543.getShortAt(dataView, sum)];
+      return items;
+    }
+  },
+  [obj.CLOSED_SUBPATH_BEZIER_LINKED]: { description: "Closed subpath Bezier knot, linked", path: parseBezierKnot },
+  [obj.CLOSED_SUBPATH_BEZIER_UNLINKED]: { description: "Closed subpath Bezier knot, unlinked", path: parseBezierKnot },
+  [obj.OPEN_SUBPATH_LENGTH]: {
+    description: "Open subpath length",
+    path(dataView, sum) {
+      const items = [_modDef5543.getShortAt(dataView, sum)];
+      return items;
+    }
+  },
+  [obj.OPEN_SUBPATH_BEZIER_LINKED]: { description: "Open subpath Bezier knot, linked", path: parseBezierKnot },
+  [obj.OPEN_SUBPATH_BEZIER_UNLINKED]: { description: "Open subpath Bezier knot, unlinked", path: parseBezierKnot },
+  [obj.FILL_RULE]: {
+    description: "Path fill rule",
+    path() {
+      return [];
+    }
+  },
+  [obj.INITIAL_FILL_RULE]: {
+    description: "Initial fill rule",
+    path(dataView, sum) {
+      const items = [_modDef5543.getShortAt(dataView, sum)];
+      return items;
+    }
+  },
+  [obj.CLIPBOARD]: {
+    description: "Clipboard",
+    path: function parseClipboard(dataView, sum) {
+      const longAt = _modDef5543.getLongAt(dataView, sum);
+      let num = -1;
+      let num2 = -1;
+      if (longAt >>> 31 === 0) {
+        num2 = 1;
+      }
+      const str2 = longAt & parseInt(_mod5526.strRepeat("1", 24), 2);
+      const text = `${str.toString(2)}.`;
+      const obj3 = _mod5526;
+      const items = [num2 * obj3.parseFloatRadix(`${(2130706432 & longAt) >>> 24.toString(2)}.` + _mod5526.padStart(str2.toString(2), 24, "0"), 2), , , ];
+      sum = sum + 4;
+      const longAt1 = _modDef5543.getLongAt(dataView, sum);
+      let num3 = num;
+      if (longAt1 >>> 31 === 0) {
+        num3 = 1;
+      }
+      const tmpResult = _modDef5543;
+      const tmp4Result = _mod5526;
+      const str4 = longAt1 & parseInt(_mod5526.strRepeat("1", 24), 2);
+      const text1 = `${str3.toString(2)}.`;
+      const tmp4Result12 = _mod5526;
+      items[1] = num3 * tmp4Result12.parseFloatRadix(`${(2130706432 & longAt1) >>> 24.toString(2)}.` + _mod5526.padStart(str4.toString(2), 24, "0"), 2);
+      const sum1 = sum + 8;
+      const tmp4Result13 = _mod5526;
+      const longAt2 = _modDef5543.getLongAt(dataView, sum1);
+      let num4 = num;
+      if (longAt2 >>> 31 === 0) {
+        num4 = 1;
+      }
+      const tmpResult4 = _modDef5543;
+      const tmp4Result14 = _mod5526;
+      const str6 = longAt2 & parseInt(_mod5526.strRepeat("1", 24), 2);
+      const text2 = `${str5.toString(2)}.`;
+      const tmp4Result15 = _mod5526;
+      items[2] = num4 * tmp4Result15.parseFloatRadix(`${(2130706432 & longAt2) >>> 24.toString(2)}.` + _mod5526.padStart(str6.toString(2), 24, "0"), 2);
+      const sum2 = sum + 12;
+      const tmp4Result16 = _mod5526;
+      const longAt3 = _modDef5543.getLongAt(dataView, sum2);
+      let num5 = num;
+      if (longAt3 >>> 31 === 0) {
+        num5 = 1;
+      }
+      const tmpResult5 = _modDef5543;
+      const tmp4Result17 = _mod5526;
+      const str8 = longAt3 & parseInt(_mod5526.strRepeat("1", 24), 2);
+      const text3 = `${str7.toString(2)}.`;
+      const tmp4Result18 = _mod5526;
+      items[3] = num5 * tmp4Result18.parseFloatRadix(`${(2130706432 & longAt3) >>> 24.toString(2)}.` + _mod5526.padStart(str8.toString(2), 24, "0"), 2);
+      const items1 = [items, ];
+      const sum3 = sum + 16;
+      const tmp4Result19 = _mod5526;
+      const longAt4 = _modDef5543.getLongAt(dataView, sum3);
+      if (longAt4 >>> 31 === 0) {
+        num = 1;
+      }
+      const tmpResult6 = _modDef5543;
+      const tmp4Result20 = _mod5526;
+      const str10 = longAt4 & parseInt(_mod5526.strRepeat("1", 24), 2);
+      const text4 = `${str9.toString(2)}.`;
+      const tmp4Result21 = _mod5526;
+      items1[1] = num * tmp4Result21.parseFloatRadix(`${(2130706432 & longAt4) >>> 24.toString(2)}.` + _mod5526.padStart(str10.toString(2), 24, "0"), 2);
+      return items1;
+    }
+  }
+};
+
+export default obj2;
+export const PathRecordTypes = obj;

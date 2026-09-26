@@ -1,6 +1,6 @@
 // _runtime/metro/09966__.js
 import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import AbstractTimeExpressionParser from "../09898_AbstractTimeExpressionParser.js";
+import _mod9913 from "09913__.js";
 import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
@@ -26,12 +26,27 @@ function _isNativeReflectConstruct() {
 }
 let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturn;
-class PTTimeExpressionParser {
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class JPMergeDateRangeRefiner {
   constructor() {
     self = this;
-    tmp = closure_0(this, PTTimeExpressionParser);
+    tmp = closure_0(this, JPMergeDateRangeRefiner);
     tmp2 = c2;
-    obj = c2(PTTimeExpressionParser);
+    obj = c2(JPMergeDateRangeRefiner);
     tmp3 = closure_1;
     if (closure_3()) {
       tmp7 = globalThis;
@@ -46,22 +61,14 @@ class PTTimeExpressionParser {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = PTTimeExpressionParser;
-_inherits(PTTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
+_classCallCheck = JPMergeDateRangeRefiner;
+_inherits(JPMergeDateRangeRefiner, fn(_mod9913).default);
 const entry = {
-  key: "primaryPrefix",
-  value: function primaryPrefix() {
-    return "(?:(?:ao?|\u00E0s?|das|da|de|do)\\s*)?";
+  key: "patternBetween",
+  value: function patternBetween() {
+    return /^\s*(から|－|ー|-|～|~)\s*$/i;
   },
 };
-const items = [
-  entry,
-  {
-    key: "followingPhase",
-    value: function followingPhase() {
-      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|a(?:o)?|\\?)\\s*";
-    },
-  },
-];
+const items = [entry];
 
-export default _createClass(PTTimeExpressionParser, items);
+export default _createClass(JPMergeDateRangeRefiner, items);

@@ -1,6 +1,6 @@
 // _runtime/metro/04213__.js
-import _typeof_mod from "03915__.js";
-import requiredArgs_mod from "../03916_requiredArgs.js";
+import _typeof_mod from "03918__.js";
+import requiredArgs_mod from "../03919_requiredArgs.js";
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -19,8 +19,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isFirstDayOfMonth(arg0) {
-  requiredArgs.default(1, arguments);
-  return 1 === _typeof.default(arg0).getDate();
+export default function isBefore(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const time = defaultResult1.getTime();
+  return time < _typeof.default(arg1).getTime();
 };
 export default exports.default;

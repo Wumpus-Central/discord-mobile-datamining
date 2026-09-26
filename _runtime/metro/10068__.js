@@ -1,13 +1,14 @@
 // _runtime/metro/10068__.js
-import AbstractParserWithWordBoundaryChecking from "../09891_AbstractParserWithWordBoundaryChecking.js";
-import _mod10053 from "10053__.js";
+import repeatedTimeunitPattern from "../09895_repeatedTimeunitPattern.js";
+import AbstractParserWithWordBoundaryChecking from "../09902_AbstractParserWithWordBoundaryChecking.js";
+import _mod10064 from "10064__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ENTimeUnitCasualRelativeFormatParser = require;
+const ENCasualYearMonthDayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,17 +28,17 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 const regExp = new RegExp(
-  "(questo|ultimo|passato|prossimo|dopo|questa|ultima|passata|prossima|\\+|-)\\s*(" +
-    _mod10053.TIME_UNITS_PATTERN +
-    ")(?=\\W|$)",
+  "([0-9]{4})[\\.\\/\\s](?:(" +
+    repeatedTimeunitPattern.matchAnyPattern(_mod10064.MONTH_DICTIONARY) +
+    ")|([0-9]{1,2}))[\\.\\/\\s]([0-9]{1,2})(?=\\W|$)",
   "i",
 );
-class ENTimeUnitCasualRelativeFormatParser {
+class ENCasualYearMonthDayParser {
   constructor() {
     self = this;
-    tmp = c2(this, ENTimeUnitCasualRelativeFormatParser);
+    tmp = c2(this, ENCasualYearMonthDayParser);
     tmp2 = closure_4;
-    obj = closure_4(ENTimeUnitCasualRelativeFormatParser);
+    obj = closure_4(ENCasualYearMonthDayParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -52,10 +53,7 @@ class ENTimeUnitCasualRelativeFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(
-  ENTimeUnitCasualRelativeFormatParser,
-  AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking,
-);
+_inherits(ENCasualYearMonthDayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
@@ -66,19 +64,28 @@ const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const formatted = arg1[1].toLowerCase();
-      const parseDurationResult = ENTimeUnitCasualRelativeFormatParser(10053).parseDuration(arg1[2]);
-      if ("last" !== formatted) {
-        if ("past" !== formatted) {
-          let reverseDurationResult = parseDurationResult;
-        }
-        const ParsingComponents = ENTimeUnitCasualRelativeFormatParser(9887).ParsingComponents;
-        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+    value: function innerExtract(arg0, arg1) {
+      if (arg1[3]) {
+        const _parseInt = parseInt;
+        let parsed = parseInt(arg1[3]);
+      } else {
+        parsed = ENCasualYearMonthDayParser(10064).MONTH_DICTIONARY[str.toLowerCase(str)];
       }
-      reverseDurationResult = ENTimeUnitCasualRelativeFormatParser(9886).reverseDuration(parseDurationResult);
+      if (parsed >= 1) {
+        if (parsed <= 12) {
+          const _parseInt2 = parseInt;
+          const date = { day: null, month: null, year: null };
+          const _parseInt3 = parseInt;
+          const parsed1 = parseInt(arg1[1]);
+          date.day = parseInt(arg1[4]);
+          date.month = parsed;
+          date.year = parsed1;
+          return date;
+        }
+      }
+      return null;
     },
   },
 ];
 
-export default _createClass(ENTimeUnitCasualRelativeFormatParser, items);
+export default _createClass(ENCasualYearMonthDayParser, items);

@@ -1,100 +1,165 @@
 // _runtime/metro/12360__.js
+import _mod12313 from "12313__.js";
 import _slicedToArray from "00032__.js";
 
-function parseRetryAfterHeader(arg0) {
-  let timestamp = arg1;
-  if (arg1 === undefined) {
-    const _Date = Date;
-    timestamp = Date.now();
-  }
-  const parsed = parseInt("" + arg0, 10);
-  if (isNaN(parsed)) {
-    const _Date2 = Date;
-    const _HermesInternal = HermesInternal;
-    const parsed1 = Date.parse("" + arg0);
-    const _isNaN = isNaN;
-    let num2 = 60000;
-    if (!isNaN(parsed1)) {
-      num2 = parsed1 - timestamp;
+function dsnFromString(arg0) {
+  closure_0 = arg0;
+  const match = re3.exec(arg0);
+  if (match) {
+    const tmp5 = _slicedToArray(match.slice(1), 6);
+    let str = tmp5[1];
+    let str3 = "";
+    if (undefined !== tmp5[2]) {
+      str3 = tmp6;
     }
-    return num2;
+    let str4 = "";
+    if (undefined !== tmp5[3]) {
+      str4 = tmp7;
+    }
+    let str5 = "";
+    if (undefined !== tmp5[4]) {
+      str5 = tmp8;
+    }
+    let str6 = "";
+    if (undefined !== tmp5[5]) {
+      str6 = tmp9;
+    }
+    const parts = str6.split("/");
+    let str8 = str6;
+    let str9 = "";
+    if (parts.length > 1) {
+      const substr = parts.slice(0, -1);
+      str9 = substr.join("/");
+      str8 = parts.pop();
+    }
+    let first = str8;
+    if (str8) {
+      const match1 = str8.match(/^\d+/);
+      first = str8;
+      if (match1) {
+        first = match1[0];
+      }
+    }
+    const url = { protocol: tmp5[0], publicKey: null, pass: null, host: null, port: null, path: null, projectId: null };
+    if (!str) {
+      str = "";
+    }
+    url.publicKey = str;
+    if (!str3) {
+      str3 = "";
+    }
+    url.pass = str3;
+    url.host = str4;
+    if (!str5) {
+      str5 = "";
+    }
+    url.port = str5;
+    if (!str9) {
+      str9 = "";
+    }
+    url.path = str9;
+    url.projectId = first;
+    return url;
   } else {
-    return 1000 * parsed;
+    _mod12313.consoleSandbox(() => {
+      console.error("Invalid Sentry Dsn: " + closure_0);
+    });
   }
 }
+const re3 = /^(?:(\w+):)\/\/(?:(\w+)(?::(\w+)?)?@)([\w.-]+)(?::(\d+))?\/(.+)/;
 
-export const DEFAULT_RETRY_AFTER = 60000;
-export const disabledUntil = function disabledUntil(all, arg1) {
-  return all[arg1] || all.all || 0;
-};
-export const isRateLimited = function isRateLimited(all, result) {
-  let timestamp = arg2;
-  if (arg2 === undefined) {
-    const _Date = Date;
-    timestamp = Date.now();
+export { dsnFromString };
+export const dsnToString = function dsnToString(url) {
+  let flag = arg1;
+  if (arg1 === undefined) {
+    flag = false;
   }
-  return (all[result] || all.all || 0) > timestamp;
-};
-export { parseRetryAfterHeader };
-export const updateRateLimits = function updateRateLimits(arg0, headers) {
-  headers = headers.headers;
-  let timestamp = arg2;
-  if (arg2 === undefined) {
-    const _Date = Date;
-    timestamp = Date.now();
-  }
-  const obj = {};
-  const merged = Object.assign(arg0);
-  let str = headers;
-  if (headers) {
-    str = headers["x-sentry-rate-limits"];
-  }
-  let prop = headers;
-  if (headers) {
-    prop = headers["retry-after"];
-  }
-  if (str) {
-    const parts = str.trim().split(",");
-    const iter = parts[Symbol.iterator]();
-    const str2 = str.trim();
-    while (iter !== undefined) {
-      let tmp12 = _slicedToArray(str8.split(":", 5), 5);
-      let str9 = tmp12[1];
-      let str10 = tmp12[4];
-      let _parseInt = parseInt;
-      let parsed = parseInt(tmp12[0], 10);
-      let _isNaN = isNaN;
-      let num6 = 60;
-      if (!isNaN(parsed)) {
-        num6 = parsed;
-      }
-      let result = 1000 * num6;
-      if (str9) {
-        let parts1 = str9.split(";");
-        for (const item10065 of parts1) {
-          let tmp23 = "metric_bucket" === item10065;
-          if (tmp23) {
-            tmp23 = str10;
-          }
-          if (tmp23) {
-            let parts2 = str10.split(";");
-            tmp23 = !parts2.includes("custom");
-          }
-          if (!tmp23) {
-            obj[item10065] = timestamp + result;
-          }
-          continue;
-        }
-      } else {
-        obj.all = timestamp + result;
-      }
-      continue;
+  ({ host, path, pass, port, projectId, protocol, publicKey } = url);
+  let str = "";
+  if (flag) {
+    str = "";
+    if (pass) {
+      const _HermesInternal = HermesInternal;
+      str = ":" + pass;
     }
-    str8 = iter.next();
-  } else if (prop) {
-    obj.all = timestamp + parseRetryAfterHeader(prop, timestamp);
-  } else if (429 === headers.statusCode) {
-    obj.all = timestamp + 60000;
   }
-  return obj;
+  let str3 = "";
+  if (port) {
+    const _HermesInternal2 = HermesInternal;
+    str3 = ":" + port;
+  }
+  let combined = path;
+  if (path) {
+    const _HermesInternal3 = HermesInternal;
+    combined = "" + path + "/";
+  }
+  return "" + protocol + "://" + publicKey + str + "@" + host + str3 + "/" + combined + projectId;
+};
+export const makeDsn = function makeDsn(protocol) {
+  if (typeof protocol === "string") {
+    let url = dsnFromString(protocol);
+  } else {
+    url = {
+      protocol: protocol.protocol,
+      publicKey: protocol.publicKey || "",
+      pass: protocol.pass || "",
+      host: protocol.host,
+      port: protocol.port || "",
+      path: protocol.path || "",
+      projectId: protocol.projectId,
+    };
+  }
+  if (url) {
+    let error = url;
+    let flag = true;
+    if (url(12312).DEBUG_BUILD) {
+      ({ port, projectId, protocol } = url);
+      const items = ["protocol", "publicKey", "host", "projectId"];
+      const found = items.find((item) => {
+        let flag = !tmp;
+        if (!url[item]) {
+          const logger = _mod12313.logger;
+          const _HermesInternal = HermesInternal;
+          logger.error("Invalid Sentry Dsn: " + item + " missing");
+          flag = true;
+        }
+        return flag;
+      });
+      if (found) {
+        flag = !found;
+      } else {
+        if (!projectId.match(/^\d+$/)) {
+          let logger = error(12313).logger;
+          let _HermesInternal = HermesInternal;
+          logger.error("Invalid Sentry Dsn: Invalid projectId " + projectId);
+        }
+        let tmp6 = "http" === protocol;
+        if (!tmp6) {
+          tmp6 = "https" === protocol;
+        }
+        if (tmp6) {
+          let num3 = port;
+          if (port) {
+            const _isNaN = isNaN;
+            const _parseInt = parseInt;
+            num3 = isNaN(parseInt(port, 10));
+          }
+          if (num3) {
+            const logger3 = error(12313).logger;
+            error = logger3.error;
+            const _HermesInternal3 = HermesInternal;
+            error("Invalid Sentry Dsn: Invalid port " + port);
+            num3 = 1;
+          }
+        } else {
+          const logger2 = error(12313).logger;
+          const _HermesInternal2 = HermesInternal;
+          logger2.error("Invalid Sentry Dsn: Invalid protocol " + protocol);
+        }
+      }
+    }
+    if (flag) {
+      return url;
+    }
+  }
 };

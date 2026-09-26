@@ -1,13 +1,3 @@
 // _runtime/metro/09323__.js
-import registerAsset from "01121__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/auth",
-  width: 100,
-  height: 100,
-  scales: [1],
-  hash: "2466a8cae3eebcc6d13072f6ff1957c4",
-  name: "img-auth-qrcode-overlay",
-  type: "png",
-});
+export default { MODE_NUMBER: 1, MODE_ALPHA_NUM: 2, MODE_8BIT_BYTE: 4, MODE_KANJI: 8 };

@@ -1,28 +1,72 @@
 // _runtime/metro/12313__.js
-import _mod12296 from "12296__.js";
-import _mod12297 from "12297__.js";
+import GLOBAL_OBJ from "12314__.js";
 
-require = arg1;
-const dependencyMap = arg6;
+const require = globalThis.__r;
 
-export const getMainCarrier = function getMainCarrier() {
-  const GLOBAL_OBJ = _mod12296.GLOBAL_OBJ;
-  const tmp3 = GLOBAL_OBJ.__SENTRY__ || {};
-  GLOBAL_OBJ.__SENTRY__ = tmp3;
-  tmp3.version = tmp3.version || _mod12297.SDK_VERSION;
-  const tmp4 = tmp3.version || _mod12297.SDK_VERSION;
-  tmp3[_mod12297.SDK_VERSION] = tmp3[_mod12297.SDK_VERSION] || {};
-  return _mod12296.GLOBAL_OBJ;
-};
-export const getSentryCarrier = function getSentryCarrier(__SENTRY__) {
-  const tmp = __SENTRY__.__SENTRY__ || {};
-  __SENTRY__.__SENTRY__ = tmp;
-  let SDK_VERSION = tmp.version;
-  if (!SDK_VERSION) {
-    SDK_VERSION = _mod12297.SDK_VERSION;
+function consoleSandbox(fn) {
+  if ("console" in console(12314).GLOBAL_OBJ) {
+    console = tmp(12314).GLOBAL_OBJ.console;
+    dependencyMap = {};
+    const _Object = Object;
+    const keys = Object.keys(obj);
+    const item = keys.forEach((item) => {
+      closure_1[item] = console[item];
+      console[item] = obj[item];
+    });
+    try {
+      const item1 = keys.forEach((item) => {
+        console[item] = closure_1[item];
+      });
+      return fn();
+    } catch (tmp8) {
+      const item2 = arr.forEach((item) => {
+        console[item] = closure_1[item];
+      });
+      throw tmp8;
+    }
+  } else {
+    return fn();
   }
-  tmp.version = SDK_VERSION;
-  const tmp4 = tmp[_mod12297.SDK_VERSION] || {};
-  tmp[_mod12297.SDK_VERSION] = tmp4;
-  return tmp4;
-};
+  tmp = console;
+}
+let items = ["debug", "info", "warn", "error", "log", "assert", "trace"];
+const originalConsoleMethods = {};
+
+export const CONSOLE_LEVELS = items;
+export { consoleSandbox };
+export const logger = GLOBAL_OBJ.getGlobalSingleton("logger", function makeLogger() {
+  _require = false;
+  const obj = {
+    enable() {
+      c0 = true;
+    },
+    disable() {
+      c0 = false;
+    },
+    isEnabled() {
+      return c0;
+    },
+  };
+  const forEach = items.forEach;
+  if (require("12312__.js").DEBUG_BUILD) {
+    const item = forEach((arg0) => {
+      closure_0 = arg0;
+      obj[arg0] = () => {
+        const args = [...arguments];
+        if (args) {
+          consoleSandbox(() => {
+            const _console = GLOBAL_OBJ.GLOBAL_OBJ.console;
+            items = ["Sentry Logger [" + args + "]:", ...closure_0];
+            _console[args].apply(items);
+          });
+        }
+      };
+    });
+  } else {
+    const item1 = forEach((arg0) => {
+      obj[arg0] = () => {};
+    });
+  }
+  return obj;
+});
+export { originalConsoleMethods };

@@ -1,28 +1,99 @@
 // _runtime/metro/13835__.js
-import _mod13836 from "13836__.js";
-import _mod13838 from "13838__.js";
-import text from "../13845_text.js";
-import _mod13856 from "13856__.js";
-import _mod13866 from "13866__.js";
-import _mod13868 from "13868__.js";
-import _mod13870 from "13870__.js";
-import _mod13871 from "13871__.js";
+let c0 = false;
 
-if (!_mod13836) {
-  getOwnPropertyDescriptor = function getOwnPropertyDescriptor(arg0, arg1) {
-    const tmp3 = _mod13838(arg0);
-    const tmp4 = text(arg1);
-    if (!_mod13868) {
-      if (_mod13856(tmp3, tmp4)) {
-        const tmpResult = _mod13870;
-        return tmpResult(!_mod13866(_mod13871.f, tmp3, tmp4), tmp3[tmp4]);
+export default {
+  includes: (arg0, arg1, arg2) => {
+    const tmp3 = closure_0(13794)(arg0);
+    const tmp4 = closure_0(13836)(tmp3);
+    if (0 === tmp4) {
+      let num3 = !c0;
+      if (!c0) {
+        num3 = -1;
       }
+      return num3;
     } else {
-      try {
-        return getOwnPropertyDescriptor(tmp3, tmp4);
-      } catch (err) {}
+      let sum = closure_0(13840)(arg2, tmp4);
+      if (c0) {
+        if (arg1 != arg1) {
+          if (tmp4 > sum) {
+            while (tmp3[+sum] == tmp3[+sum]) {
+              sum = tmp7 + 1;
+            }
+            return true;
+          }
+        }
+        let num2 = !c0;
+        if (!c0) {
+          num2 = -1;
+        }
+        return num2;
+      }
+      let sum1 = sum;
+      if (tmp4 > sum) {
+        while (true) {
+          let num = c0;
+          if (c0) {
+            if (tmp3[sum1] === arg1) {
+              break;
+            }
+          }
+          sum1 = sum1 + 1;
+        }
+        if (!num) {
+          num = sum1;
+        }
+        if (!num) {
+          num = 0;
+        }
+        return num;
+      }
     }
-  };
-}
-
-export const f = getOwnPropertyDescriptor;
+  },
+  indexOf: (arg0, arg1, arg2) => {
+    const tmp3 = closure_0(13794)(arg0);
+    const tmp4 = closure_0(13836)(tmp3);
+    if (0 === tmp4) {
+      let num3 = !c0;
+      if (!c0) {
+        num3 = -1;
+      }
+      return num3;
+    } else {
+      let sum = closure_0(13840)(arg2, tmp4);
+      if (c0) {
+        if (arg1 != arg1) {
+          if (tmp4 > sum) {
+            while (tmp3[+sum] == tmp3[+sum]) {
+              sum = tmp7 + 1;
+            }
+            return true;
+          }
+        }
+        let num2 = !c0;
+        if (!c0) {
+          num2 = -1;
+        }
+        return num2;
+      }
+      let sum1 = sum;
+      if (tmp4 > sum) {
+        while (true) {
+          let num = c0;
+          if (c0) {
+            if (tmp3[sum1] === arg1) {
+              break;
+            }
+          }
+          sum1 = sum1 + 1;
+        }
+        if (!num) {
+          num = sum1;
+        }
+        if (!num) {
+          num = 0;
+        }
+        return num;
+      }
+    }
+  },
+};

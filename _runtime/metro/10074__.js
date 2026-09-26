@@ -1,13 +1,11 @@
 // _runtime/metro/10074__.js
-import AbstractParserWithWordBoundaryChecking from "../09891_AbstractParserWithWordBoundaryChecking.js";
-import _mod10072 from "10072__.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
+import _mod9916 from "09916__.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const SVTimeUnitCasualRelativeFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,72 +24,52 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const regExp = new RegExp(
-  "(denna|den h\u00E4r|f\u00F6rra|passerade|n\u00E4sta|kommande|efter|\\+|-)\\s*(" +
-    _mod10072.TIME_UNITS_PATTERN +
-    ")(?=\\W|$)",
-  "i",
-);
-const regExp1 = new RegExp(
-  "(denna|den h\u00E4r|f\u00F6rra|passerade|n\u00E4sta|kommande|efter|\\+|-)\\s*(" +
-    _mod10072.TIME_UNITS_NO_ABBR_PATTERN +
-    ")(?=\\W|$)",
-  "i",
-);
-class SVTimeUnitCasualRelativeFormatParser {
-  constructor() {
-    flag = global;
-    if (global === undefined) {
-      flag = true;
-    }
-    self = this;
-    tmp = c2(this, SVTimeUnitCasualRelativeFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(SVTimeUnitCasualRelativeFormatParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
     } else {
-      constructResult = obj.apply(self, undefined);
+      tmp = __esModule;
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.allowAbbreviations = flag;
-    return tmp3Result;
+    return tmp;
+  };
+}
+class ENMergeDateTimeRefiner {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, ENMergeDateTimeRefiner);
+    tmp2 = c2;
+    obj = c2(ENMergeDateTimeRefiner);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
   }
 }
-_inherits(
-  SVTimeUnitCasualRelativeFormatParser,
-  AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking,
-);
+_classCallCheck = ENMergeDateTimeRefiner;
+_inherits(ENMergeDateTimeRefiner, fn(_mod9916).default);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return this.allowAbbreviations ? regExp : regExp1;
+  key: "patternBetween",
+  value: function patternBetween() {
+    const regExp = new RegExp("^\\s*(T|alle|dopo|prima|il|di|del|delle|,|-)?\\s*$");
+    return regExp;
   },
 };
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const formatted = arg1[1].toLowerCase();
-      const parseDurationResult = SVTimeUnitCasualRelativeFormatParser(10072).parseDuration(arg1[2]);
-      if (parseDurationResult) {
-        if ("f\u00F6rra" !== formatted) {
-          if ("passerade" !== formatted) {
-            let reverseDurationResult = parseDurationResult;
-          }
-          const ParsingComponents = SVTimeUnitCasualRelativeFormatParser(9887).ParsingComponents;
-          return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
-        }
-        reverseDurationResult = SVTimeUnitCasualRelativeFormatParser(9886).reverseDuration(parseDurationResult);
-      } else {
-        return null;
-      }
-    },
-  },
-];
+const items = [entry];
 
-export default _createClass(SVTimeUnitCasualRelativeFormatParser, items);
+export default _createClass(ENMergeDateTimeRefiner, items);

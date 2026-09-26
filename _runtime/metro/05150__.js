@@ -1,28 +1,46 @@
 // _runtime/metro/05150__.js
+import _mod1282 from "01282__.js";
+import _mod1314 from "01314__.js";
 
-export default function fromPropertyDescriptor(__Value__) {
-  if (undefined === __Value__) {
-    return __Value__;
-  } else {
-    const obj = {};
-    if ("[[Value]]" in __Value__) {
-      obj.value = __Value__["[[Value]]"];
+let closure_2 = Object.assign({
+  "[[Configurable]]": true,
+  "[[Enumerable]]": true,
+  "[[Get]]": true,
+  "[[Set]]": true,
+  "[[Value]]": true,
+  "[[Writable]]": true,
+});
+
+export default function isPropertyDescriptor(obj) {
+  if (obj) {
+    if (typeof obj === "object") {
+      for (const key10001 in arg0) {
+        if (!_mod1314(arg0, key10001)) {
+          continue;
+        } else if (closure_2[key10001]) {
+          continue;
+        } else {
+          let flag = false;
+          return false;
+        }
+        continue;
+      }
+      let tmp4 = _mod1314(obj, "[[Value]]");
+      if (!tmp4) {
+        tmp4 = _mod1314(obj, "[[Writable]]");
+      }
+      let tmp5 = _mod1314(obj, "[[Get]]");
+      if (!tmp5) {
+        tmp5 = _mod1314(obj, "[[Set]]");
+      }
+      if (tmp4) {
+        if (tmp5) {
+          const tmp8 = new _mod1282("Property Descriptors may not be both accessor and data descriptors");
+          throw tmp8;
+        }
+      }
+      return true;
     }
-    if ("[[Writable]]" in __Value__) {
-      obj.writable = __Value__["[[Writable]]"];
-    }
-    if ("[[Get]]" in __Value__) {
-      obj.get = __Value__["[[Get]]"];
-    }
-    if ("[[Set]]" in __Value__) {
-      obj.set = __Value__["[[Set]]"];
-    }
-    if ("[[Enumerable]]" in __Value__) {
-      obj.enumerable = __Value__["[[Enumerable]]"];
-    }
-    if ("[[Configurable]]" in __Value__) {
-      obj.configurable = __Value__["[[Configurable]]"];
-    }
-    return obj;
   }
+  return false;
 }

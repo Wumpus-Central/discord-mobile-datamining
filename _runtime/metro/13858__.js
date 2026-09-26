@@ -1,11 +1,4 @@
 // _runtime/metro/13858__.js
-import _mod13859 from "13859__.js";
+import _mod17 from "00017__.js";
 
-export default (obj) => {
-  if (typeof obj === "object") {
-    let tmp2 = null !== obj;
-  } else {
-    tmp2 = _mod13859(obj);
-  }
-  return tmp2;
-};
+const parsed = parseInt(_mod17.Platform.Version, 10);

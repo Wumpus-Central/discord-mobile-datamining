@@ -1,45 +1,81 @@
 // _runtime/metro/05563__.js
-import _mod5520 from "05520__.js";
-import get0thIfdOffset from "../05540_get0thIfdOffset.js";
-import IFD_TYPE_0TH from "../05541_IFD_TYPE_0TH.js";
+let closure_0 = {
+  xmp: "http://ns.adobe.com/xap/1.0/",
+  tiff: "http://ns.adobe.com/tiff/1.0/",
+  exif: "http://ns.adobe.com/exif/1.0/",
+  dc: "http://purl.org/dc/elements/1.1/",
+  xmpMM: "http://ns.adobe.com/xap/1.0/mm/",
+  stEvt: "http://ns.adobe.com/xap/1.0/sType/ResourceEvent#",
+  stRef: "http://ns.adobe.com/xap/1.0/sType/ResourceRef#",
+  photoshop: "http://ns.adobe.com/photoshop/1.0/",
+};
 
-require = arg1;
-const dependencyMap = arg6;
-
-export default {
-  read(byteLength, sum, arg2, byteOrder, arg4) {
-    const ifd = get0thIfdOffset.readIfd(byteLength, IFD_TYPE_0TH.IFD_TYPE_CANON, sum, sum + arg2, byteOrder, arg4);
-    let tmp6 = ifd;
-    if (ifd.ShotInfo) {
-      value = ifd.ShotInfo.value;
-      const obj2 = {};
-      if (undefined !== value[27]) {
-        const obj3 = { value: value[27], description: null };
-        let str = "None";
-        if (0 !== value[27]) {
-          let str2 = "Rotate 90 CW";
-          if (1 !== tmp7) {
-            let str3 = "Rotate 180";
-            if (2 !== tmp7) {
-              let str4 = "Unknown";
-              if (3 === tmp7) {
-                str4 = "Rotate 270 CW";
-              }
-              str3 = str4;
-            }
-            str2 = str3;
-          }
-          str = str2;
-        }
-        obj3.description = str;
-        obj2.AutoRotate = obj3;
-      }
-      const tmp3Result = _mod5520;
-      delete tmp[tmp2];
-      tmp6 = _mod5520.objectAssign({}, ifd, obj2);
-      const objectAssignResult = _mod5520.objectAssign({}, ifd, obj2);
+export const isMissingNamespaceError = function isMissingNamespaceError(message) {
+  const items = [
+    "prefix is non-null and namespace is null",
+    "prefix not bound to a namespace",
+    "prefix inte bundet till en namnrymd",
+    /Namespace prefix .+ is not defined/,
+  ];
+  let num = 0;
+  if (0 < items.length) {
+    const _RegExp = RegExp;
+    const regExp = new RegExp(items[num]);
+    while (!regExp.test(message.message)) {
+      num = num + 1;
     }
-    return tmp6;
-  },
-  SHOT_INFO_AUTO_ROTATE: 27,
+    return true;
+  }
+  return false;
+};
+export const addMissingNamespaces = function addMissingNamespaces(str) {
+  const match = str.match(/<([A-Za-z_][A-Za-z0-9._-]*)([^>]*)>/);
+  if (match) {
+    const items = [];
+    const obj = /xmlns:([\w-]+)=["'][^"']+["']/g;
+    let match1 = obj.exec(str);
+    if (null !== match1) {
+      do {
+        if (-1 === items.indexOf(match1[1])) {
+          let arr = items.push(match1[1]);
+        }
+        match1 = obj.exec(str);
+      } while (null !== match1);
+    }
+    const items1 = [];
+    const obj2 = /\b([A-Za-z_][A-Za-z0-9._-]*):[A-Za-z_][A-Za-z0-9._-]*\b/g;
+    let match2 = obj2.exec(str);
+    if (null !== match2) {
+      do {
+        let tmp8 = match2[1];
+        let tmp9 = "xmlns" !== tmp8 && "xml" !== tmp8;
+        if (tmp9) {
+          if (-1 === items1.indexOf(tmp8)) {
+            let arr2 = items1.push(tmp8);
+          }
+        }
+        match2 = obj2.exec(str);
+      } while (null !== match2);
+    }
+    const found = items1.filter((item) => -1 === items.indexOf(item));
+    let replaced = str;
+    if (0 !== found.length) {
+      const items2 = [];
+      for (let num3 = 0; num3 < found.length; num3 = num3 + 1) {
+        let tmp12 = found[num3];
+        let text = closure_0[tmp12];
+        if (!text) {
+          text = `http://fallback.namespace/${tmp12}`;
+        }
+        let arr3 = items2.push(` xmlns:${tmp12}="${tmp14}"`);
+      }
+      const _RegExp = RegExp;
+      const joined = items2.join("");
+      const regExp = new RegExp("<" + tmp2 + "([^>]*)>");
+      replaced = str.replace(regExp, `<${tmp2}$1${tmp17}>`);
+    }
+    return replaced;
+  } else {
+    return str;
+  }
 };

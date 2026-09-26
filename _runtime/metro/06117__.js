@@ -1,73 +1,62 @@
 // _runtime/metro/06117__.js
-import handlerIDToTag from "../06072_handlerIDToTag.js";
-import convertToHandlerTag from "../06092_convertToHandlerTag.js";
-import RNGestureHandlerModuleDefault from "../06097_RNGestureHandlerModule.js";
-import transformIntoHandlerTags from "../06099_transformIntoHandlerTags.js";
+import RNGestureHandlerModuleDefault from "../06102_RNGestureHandlerModule.js";
 
-const require = globalThis.__r;
-
-require = arg1;
-importDefault = arg2;
-const dependencyMap = arg6;
-
-export const updateHandlers = function updateHandlers(attachedGestures, prepare, gesturesToAttach) {
-  _require = attachedGestures;
-  prepare.prepare();
-  for (let num = 0; num < gesturesToAttach.length; num = num + 1) {
-    let tmp2 = attachedGestures.attachedGestures[num];
-    let obj = require("convertToHandlerTag");
-    let result = obj.checkGestureCallbacksForWorklets(tmp2);
-    if (gesturesToAttach[num].handlerTag !== tmp2.handlerTag) {
-      ({ handlerTag: gesturesToAttach[num].handlerTag, handlerTag: gesturesToAttach[num].handlers.handlerTag } = tmp2);
-    }
-  }
-  attachedGestures = attachedGestures.attachedGestures;
-  require("ghQueueMicrotask").ghQueueMicrotask(() => {
-    if (attachedGestures.isMounted) {
-      let arr = attachedGestures;
-      if (attachedGestures === tmp.attachedGestures) {
-        let tmp21 = arr.length !== gesturesToAttach.length;
-        let num = 0;
-        let tmp22 = tmp21;
-        if (0 < gesturesToAttach.length) {
-          do {
-            let tmp3 = attachedGestures[num];
-            let tmp4 = tmp3.handlers.gestureId !== gesturesToAttach[num].handlers.gestureId;
-            let flag = tmp21;
-            if (tmp4) {
-              let tmp6 = gesturesToAttach[num].shouldUseReanimated || tmp3.shouldUseReanimated;
-              tmp4 = tmp6;
-            }
-            if (tmp4) {
-              flag = true;
-            }
-            tmp3.config = gesturesToAttach[num].config;
-            tmp3.handlers = gesturesToAttach[num].handlers;
-            let obj = RNGestureHandlerModuleDefault;
-            let obj2 = transformIntoHandlerTags;
-            let result = obj.setGestureHandlerConfig(
-              tmp3.handlerTag,
-              obj2.filterConfig(tmp3.config, convertToHandlerTag.ALLOWED_PROPS),
-            );
-            let obj3 = RNGestureHandlerModuleDefault;
-            let obj4 = convertToHandlerTag;
-            let configureRelationsResult = obj3.configureRelations(tmp3.handlerTag, obj4.extractGestureRelations(tmp3));
-            let obj5 = handlerIDToTag;
-            let registerHandlerResult = obj5.registerHandler(tmp3.handlerTag, tmp3, tmp3.config.testId);
-            num = num + 1;
-            tmp21 = flag;
-            tmp22 = flag;
-            arr = attachedGestures;
-          } while (num < gesturesToAttach.length);
-        }
-        if (attachedGestures.animatedHandlers) {
-          if (tmp22) {
-            const found = arr.filter((shouldUseReanimated) => shouldUseReanimated.shouldUseReanimated);
-            tmp23.animatedHandlers.value = found.map((handlers) => handlers.handlers);
-          }
-        }
-        const result1 = transformIntoHandlerTags.scheduleFlushOperations();
+const require = arg1;
+importDefault = fn;
+let dependencyMap = arg6;
+let obj = {
+  createGestureHandler(Handler, handlerTag, config) {
+    _require = Handler;
+    closure_1 = handlerTag;
+    dependencyMap = config;
+    const result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
+      let obj2 = closure_2;
+      if (!closure_2) {
+        obj2 = {};
       }
-    }
+      RNGestureHandlerModuleDefault.createGestureHandler(closure_0, closure_1, obj2);
+    });
+  },
+  setGestureHandlerConfig(handlerTag, result) {
+    _require = handlerTag;
+    closure_1 = result;
+    result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
+      result = RNGestureHandlerModuleDefault.setGestureHandlerConfig(closure_0, closure_1);
+    });
+  },
+  updateGestureHandlerConfig: null,
+  dropGestureHandler: null,
+  configureRelations: null,
+  installUIRuntimeBindings: null,
+};
+fn = function n(arg0, arg1) {
+  const result = RNGestureHandlerModuleDefault.updateGestureHandlerConfig(arg0, arg1);
+  RNGestureHandlerModuleDefault.flushOperations();
+};
+fn.__closure = {
+  updateGestureHandlerConfig: fn(6102).updateGestureHandlerConfig,
+  flushOperations: fn(6102).flushOperations,
+};
+fn.__workletHash = 12442858879797;
+fn.__initData = {
+  code: "function pnpm_NativeProxyTs1(handlerTag,newConfig){const{updateGestureHandlerConfig,flushOperations}=this.__closure;updateGestureHandlerConfig(handlerTag,newConfig);flushOperations();}",
+};
+obj.updateGestureHandlerConfig = fn;
+obj.dropGestureHandler = function dropGestureHandler(handlerTag) {
+  _require = handlerTag;
+  const result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
+    RNGestureHandlerModuleDefault.dropGestureHandler(closure_0);
   });
 };
+obj.configureRelations = function configureRelations(arg0, arg1) {
+  _require = arg0;
+  closure_1 = arg1;
+  const result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
+    RNGestureHandlerModuleDefault.configureRelations(closure_0, closure_1);
+  });
+};
+obj.installUIRuntimeBindings = function installUIRuntimeBindings() {
+  return RNGestureHandlerModuleDefault.installUIRuntimeBindings();
+};
+
+export const NativeProxy = obj;

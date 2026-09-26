@@ -1,52 +1,45 @@
 // _runtime/metro/05569__.js
-import _modDef5537 from "05537__.js";
+import _mod5526 from "05526__.js";
+import get0thIfdOffset from "../05546_get0thIfdOffset.js";
+import IFD_TYPE_0TH from "../05547_IFD_TYPE_0TH.js";
 
-importDefault = arg2;
+require = arg1;
 const dependencyMap = arg6;
-let c2 = 4;
-let c3 = 7;
 
 export default {
-  read(getUint8, sum) {
-    const byteAt = _modDef5537.getByteAt(getUint8, sum);
-    let num = 0;
-    if (16 & byteAt) {
-      num = 1;
+  read(byteLength, sum, arg2, byteOrder, arg4) {
+    const ifd = get0thIfdOffset.readIfd(byteLength, IFD_TYPE_0TH.IFD_TYPE_CANON, sum, sum + arg2, byteOrder, arg4);
+    let tmp6 = ifd;
+    if (ifd.ShotInfo) {
+      value = ifd.ShotInfo.value;
+      const obj2 = {};
+      if (undefined !== value[27]) {
+        const obj3 = { value: value[27], description: null };
+        let str = "None";
+        if (0 !== value[27]) {
+          let str2 = "Rotate 90 CW";
+          if (1 !== tmp7) {
+            let str3 = "Rotate 180";
+            if (2 !== tmp7) {
+              let str4 = "Unknown";
+              if (3 === tmp7) {
+                str4 = "Rotate 270 CW";
+              }
+              str3 = str4;
+            }
+            str2 = str3;
+          }
+          str = str2;
+        }
+        obj3.description = str;
+        obj2.AutoRotate = obj3;
+      }
+      const tmp3Result = _mod5526;
+      delete tmp[tmp2];
+      tmp6 = _mod5526.objectAssign({}, ifd, obj2);
+      const objectAssignResult = _mod5526.objectAssign({}, ifd, obj2);
     }
-    const obj2 = { value: num, description: null };
-    let str = "No";
-    let str2 = "No";
-    if (16 & byteAt) {
-      str2 = "Yes";
-    }
-    const obj3 = { Alpha: obj2 };
-    obj2.description = str2;
-    let num2 = 0;
-    if (2 & byteAt) {
-      num2 = 1;
-    }
-    const obj4 = { value: num2, description: null };
-    if (2 & byteAt) {
-      str = "Yes";
-    }
-    obj4.description = str;
-    obj3.Animation = obj4;
-    sum = sum + c2;
-    const byteAt1 = _modDef5537.getByteAt(getUint8, sum);
-    const tmpResult = _modDef5537;
-    const sum1 = byteAt1 + 256 * _modDef5537.getByteAt(getUint8, sum + 1);
-    const tmpResult6 = _modDef5537;
-    const sum2 = sum1 + 65536 * _modDef5537.getByteAt(getUint8, sum + 2) + 1;
-    obj3.ImageWidth = { value: sum2, description: `${tmp9}px` };
-    const sum3 = sum + c3;
-    const obj5 = { value: sum2, description: `${tmp9}px` };
-    const tmpResult7 = _modDef5537;
-    const byteAt2 = _modDef5537.getByteAt(getUint8, sum3);
-    const tmpResult8 = _modDef5537;
-    const sum4 = byteAt2 + 256 * _modDef5537.getByteAt(getUint8, sum3 + 1);
-    const tmpResult9 = _modDef5537;
-    const sum5 = sum4 + 65536 * _modDef5537.getByteAt(getUint8, sum3 + 2) + 1;
-    obj3.ImageHeight = { value: sum5, description: `${tmp13}px` };
-    return obj3;
+    return tmp6;
   },
+  SHOT_INFO_AUTO_ROTATE: 27,
 };

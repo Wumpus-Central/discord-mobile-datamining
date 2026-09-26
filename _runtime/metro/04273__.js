@@ -1,15 +1,15 @@
 // _runtime/metro/04273__.js
-import module_4265_mod from "04265__.js";
-import requiredArgs_mod from "../03916_requiredArgs.js";
+import _typeof_mod from "03918__.js";
+import requiredArgs_mod from "../03919_requiredArgs.js";
 
-let module_4265 = module_4265_mod;
-if (!module_4265) {
-  const obj = { default: module_4265 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4265;
+  tmp3 = _typeof;
 }
-module_4265 = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -19,8 +19,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisMinute(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_4265.default(Date.now(), arg0);
+export default function isSameYear(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const fullYear = defaultResult1.getFullYear();
+  return fullYear === _typeof.default(arg1).getFullYear();
 };
 export default exports.default;

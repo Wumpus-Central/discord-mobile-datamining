@@ -1,20 +1,27 @@
 // _runtime/metro/05534__.js
-import _mod5520 from "05520__.js";
+import findOffsets from "../05535_findOffsets.js";
 
 require = arg1;
 const dependencyMap = arg6;
-let c2 = 6;
-let closure_3 = ["GIF87a", "GIF89a"];
 
 export default {
-  isGifFile(dataView) {
-    let hasItem = dataView;
-    if (hasItem) {
-      hasItem = closure_3.includes(_mod5520.getStringFromDataView(dataView, 0, c2));
+  isHeicFile(getUint32) {
+    if (getUint32) {
+      try {
+        let parseBoxResult = findOffsets.parseBox(getUint32, 0);
+        if (parseBoxResult) {
+          const items = ["heic", "heix", "hevc", "hevx", "heim", "heis", "hevm", "hevs", "mif1"];
+          parseBoxResult = -1 !== items.indexOf(parseBoxResult.majorBrand);
+        }
+        return parseBoxResult;
+      } catch (err) {
+        return false;
+      }
+    } else {
+      return false;
     }
-    return hasItem;
   },
-  findOffsets() {
-    return { gifHeaderOffset: 0 };
+  findHeicOffsets(byteLength) {
+    return findOffsets.findOffsets(byteLength);
   },
 };

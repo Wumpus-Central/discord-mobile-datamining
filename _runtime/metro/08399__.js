@@ -1,3 +1,140 @@
 // _runtime/metro/08399__.js
+import _mod8400 from "08400__.js";
+import _mod8401 from "08401__.js";
+import _mod8402 from "08402__.js";
+import _mod8403 from "08403__.js";
+import _mod8404 from "08404__.js";
+import _mod8405 from "08405__.js";
+import _mod8406 from "08406__.js";
+import _mod8407 from "08407__.js";
+import Doc from "../08408_Doc.js";
+import ar from "../08409_ar.js";
+import $output from "../08459__output.js";
+import _mod8460 from "08460__.js";
+import initializeContext from "../08461_initializeContext.js";
+import _mod8464 from "08464__.js";
 
-export const version = { major: 4, minor: 3, patch: 6 };
+const require = globalThis.__r;
+
+const self = this;
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
+}
+if (self2) {
+  let __setModuleDefault = self;
+  if (self) {
+    __setModuleDefault = self.__setModuleDefault;
+  }
+  if (__setModuleDefault) {
+    let fn = self;
+    if (self) {
+      fn = self.__exportStar;
+    }
+    if (!fn) {
+      fn = (obj, exports) => {
+        for (const key10007 in arg0) {
+          let tmp6 = "default" === key10007;
+          if (tmp6) {
+            if (tmp6) {
+              continue;
+            } else {
+              let tmp4 = self2(arg1, arg0, key10007);
+              continue;
+            }
+            continue;
+          } else {
+            let _Object = Object;
+            hasOwnProperty = Object.prototype.hasOwnProperty;
+            let call = hasOwnProperty.call;
+            if (typeof call === "unknown") {
+              let hasOwnPropertyResult = hasOwnProperty(key10007);
+            } else {
+              hasOwnPropertyResult = call(arg1, key10007);
+            }
+          }
+        }
+      };
+    }
+    let fn2 = self;
+    if (self) {
+      fn2 = self.__importStar;
+    }
+    if (!fn2) {
+      fn2 = (__esModule) => {
+        if (__esModule) {
+          if (__esModule.__esModule) {
+            return __esModule;
+          }
+        }
+        const obj = {};
+        if (null != __esModule) {
+          for (const key10009 in arg0) {
+            let tmp9 = "default" !== key10009;
+            if (!tmp9) {
+              if (!tmp9) {
+                continue;
+              } else {
+                let tmp6 = self2(obj, arg0, key10009);
+                continue;
+              }
+              continue;
+            } else {
+              let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
+              let call = hasOwnProperty.call;
+              if (typeof call === "unknown") {
+                let hasOwnPropertyResult = hasOwnProperty(key10009);
+              } else {
+                hasOwnPropertyResult = call(arg0, key10009);
+              }
+            }
+          }
+        }
+        __setModuleDefault(obj, __esModule);
+        return obj;
+      };
+    }
+    const _Object3 = Object;
+    exports.util = undefined;
+    exports.regexes = undefined;
+    exports.locales = undefined;
+    exports.toJSONSchema = undefined;
+    exports.JSONSchemaGenerator = undefined;
+    exports.JSONSchema = undefined;
+    fn(_mod8400, exports);
+    fn(_mod8401, exports);
+    fn(_mod8402, exports);
+    fn(_mod8404, exports);
+    fn(_mod8405, exports);
+    fn(_mod8407, exports);
+    exports.util = fn2(_mod8403);
+    exports.regexes = fn2(_mod8406);
+    exports.locales = fn2(ar);
+    fn($output, exports);
+    fn(Doc, exports);
+    fn(_mod8460, exports);
+    fn(initializeContext, exports);
+    const _Object4 = Object;
+    let obj = {
+      enumerable: true,
+      get() {
+        return require("stringProcessor").toJSONSchema;
+      },
+    };
+    Object.defineProperty(exports, "toJSONSchema", obj);
+    const _Object5 = Object;
+    const obj2 = {
+      enumerable: true,
+      get() {
+        return require("JSONSchemaGenerator").JSONSchemaGenerator;
+      },
+    };
+    Object.defineProperty(exports, "JSONSchemaGenerator", obj2);
+    exports.JSONSchema = fn2(_mod8464);
+  } else {
+    const _Object2 = Object;
+  }
+} else {
+  let _Object = Object;
+}

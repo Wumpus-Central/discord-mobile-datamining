@@ -4,10 +4,10 @@ import registerAsset from "01121__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
-  width: 16,
-  height: 16,
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "a73209a775cff7b9f0bb0d6d53c071e6",
-  name: "ic_trash_filled_16px",
+  hash: "4e2695064a96facdf08d029a4fb1d275",
+  name: "ic_add_perk_24px",
   type: "png",
 });

@@ -26,17 +26,17 @@ function _isNativeReflectConstruct() {
 }
 let _slicedToArray = _slicedToArray_mod;
 let closure_5 = {
-  code: "function pnpm_ZoomTs1(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{scale:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{scale:0}],...initialValues},callback:callback};}",
+  code: "function pnpm_StretchTs1(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{scaleX:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{scaleX:0}],...initialValues},callback:callback};}",
 };
-class ZoomIn {
+class StretchInX {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = closure_1(this, ZoomOutEasyDown);
+    tmp = closure_1(this, StretchOutY);
     items1 = [...items];
     tmp2 = closure_3;
-    obj = closure_3(ZoomOutEasyDown);
+    obj = closure_3(StretchOutY);
     tmp3 = c2;
     if (closure_4()) {
       tmp5 = globalThis;
@@ -55,14 +55,14 @@ class ZoomIn {
       const delay = closure_0.getDelay();
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
-      const fn = function t() {
+      const fn = function n() {
         const obj = { animations: null, initialValues: null, callback: null };
         const obj2 = { transform: null };
-        const items = [{ scale: delayFunction(delay, first(1, closure_2)) }];
+        const items = [{ scaleX: delayFunction(delay, first(1, closure_2)) }];
         obj2.transform = items;
         obj.animations = obj2;
         const obj4 = { transform: null };
-        const items1 = [{ scale: 0 }];
+        const items1 = [{ scaleX: 0 }];
         obj4.transform = items1;
         const merged = Object.assign(initialValues);
         obj.initialValues = obj4;
@@ -70,15 +70,15 @@ class ZoomIn {
         return obj;
       };
       fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 1262081960523;
+      fn.__workletHash = 8236429657427;
       fn.__initData = __initData;
       return fn;
     };
     return tmp3Result;
   }
 }
-_slicedToArray = ZoomIn;
-_inherits(ZoomIn, fn(1707).ComplexAnimationBuilder);
+_slicedToArray = StretchInX;
+_inherits(StretchInX, fn(1708).ComplexAnimationBuilder);
 const entry = {
   key: "createInstance",
   value: function createInstance() {
@@ -86,99 +86,20 @@ const entry = {
   },
 };
 let items = [entry];
-const importDefaultResultResult = _createClass(ZoomIn, null, items);
-importDefaultResultResult.presetName = "ZoomIn";
+const importDefaultResultResult = _createClass(StretchInX, null, items);
+importDefaultResultResult.presetName = "StretchInX";
 let closure_6 = {
-  code: 'function pnpm_ZoomTs2(){const{delayFunction,delay,animation,config,rotate,initialValues,callback}=this.__closure;return{animations:{transform:[{scale:delayFunction(delay,animation(1,config))},{rotate:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{scale:0},{rotate:rotate+"rad"}],...initialValues},callback:callback};}',
+  code: "function pnpm_StretchTs2(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{scaleY:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{scaleY:0}],...initialValues},callback:callback};}",
 };
-class ZoomInRotate {
+class StretchInY {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = closure_1(this, ZoomOutEasyDown);
+    tmp = closure_1(this, StretchOutY);
     items1 = [...items];
     tmp2 = closure_3;
-    obj = closure_3(ZoomOutEasyDown);
-    tmp3 = c2;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      const delayFunction = closure_0.getDelayFunction();
-      const tmp3 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
-      const animation = tmp3[0];
-      closure_2 = tmp5;
-      const delay = closure_0.getDelay();
-      let str = "0.3";
-      if (closure_0.rotateV) {
-        str = closure_0.rotateV;
-      }
-      const callbackV = closure_0.callbackV;
-      const initialValues = closure_0.initialValues;
-      const fn = function t() {
-        const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const items = [{ scale: delayFunction(delay, first(1, closure_2)) }];
-        const obj3 = { scale: delayFunction(delay, first(1, closure_2)) };
-        items[1] = { rotate: delayFunction(delay, first(0, closure_2)) };
-        obj2.transform = items;
-        obj.animations = obj2;
-        const obj5 = { transform: null };
-        const items1 = [{ scale: 0 }];
-        const obj4 = { rotate: delayFunction(delay, first(0, closure_2)) };
-        items1[1] = { rotate: "" + str + "rad" };
-        obj5.transform = items1;
-        const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
-        obj.callback = callbackV;
-        return obj;
-      };
-      fn.__closure = {
-        delayFunction,
-        delay,
-        animation,
-        config: tmp3[1],
-        rotate: str,
-        initialValues,
-        callback: callbackV,
-      };
-      fn.__workletHash = 15519876599894;
-      fn.__initData = __initData;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-_slicedToArray = ZoomInRotate;
-_inherits(ZoomInRotate, fn(1707).ComplexAnimationBuilder);
-const entry1 = {
-  key: "createInstance",
-  value: function createInstance() {
-    return _slicedToArray();
-  },
-};
-let items1 = [entry1];
-const importDefaultResultResult1 = _createClass(ZoomInRotate, null, items1);
-importDefaultResultResult1.presetName = "ZoomInRotate";
-let closure_7 = {
-  code: "function pnpm_ZoomTs3(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,animation(0,config))},{scale:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{translateX:-values.windowWidth},{scale:0}],...initialValues},callback:callback};}",
-};
-class ZoomInLeft {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_1(this, ZoomOutEasyDown);
-    items1 = [...items];
-    tmp2 = closure_3;
-    obj = closure_3(ZoomOutEasyDown);
+    obj = closure_3(StretchOutY);
     tmp3 = c2;
     if (closure_4()) {
       tmp5 = globalThis;
@@ -197,404 +118,14 @@ class ZoomInLeft {
       const delay = closure_0.getDelay();
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
-      const fn = function t(translateX) {
+      const fn = function n() {
         const obj = { animations: null, initialValues: null, callback: null };
         const obj2 = { transform: null };
-        const items = [{ translateX: delayFunction(delay, first(0, closure_2)) }];
-        const obj3 = { translateX: delayFunction(delay, first(0, closure_2)) };
-        items[1] = { scale: delayFunction(delay, first(1, closure_2)) };
-        obj2.transform = items;
-        obj.animations = obj2;
-        const obj5 = { transform: null };
-        const items1 = [{ translateX: -translateX.windowWidth }, { scale: 0 }];
-        obj5.transform = items1;
-        const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
-        obj.callback = callbackV;
-        return obj;
-      };
-      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 9623778840206;
-      fn.__initData = __initData;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-_slicedToArray = ZoomInLeft;
-_inherits(ZoomInLeft, fn(1707).ComplexAnimationBuilder);
-const entry2 = {
-  key: "createInstance",
-  value: function createInstance() {
-    return _slicedToArray();
-  },
-};
-const items2 = [entry2];
-const importDefaultResultResult2 = _createClass(ZoomInLeft, null, items2);
-importDefaultResultResult2.presetName = "ZoomInLeft";
-let closure_8 = {
-  code: "function pnpm_ZoomTs4(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,animation(0,config))},{scale:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{translateX:values.windowWidth},{scale:0}],...initialValues},callback:callback};}",
-};
-class ZoomInRight {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_1(this, ZoomOutEasyDown);
-    items1 = [...items];
-    tmp2 = closure_3;
-    obj = closure_3(ZoomOutEasyDown);
-    tmp3 = c2;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      const delayFunction = closure_0.getDelayFunction();
-      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
-      const animation = tmp2[0];
-      closure_2 = tmp4;
-      const delay = closure_0.getDelay();
-      const callbackV = closure_0.callbackV;
-      const initialValues = closure_0.initialValues;
-      const fn = function t(translateX) {
-        const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const items = [{ translateX: delayFunction(delay, first(0, closure_2)) }];
-        const obj3 = { translateX: delayFunction(delay, first(0, closure_2)) };
-        items[1] = { scale: delayFunction(delay, first(1, closure_2)) };
-        obj2.transform = items;
-        obj.animations = obj2;
-        const obj5 = { transform: null };
-        const items1 = [{ translateX: translateX.windowWidth }, { scale: 0 }];
-        obj5.transform = items1;
-        const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
-        obj.callback = callbackV;
-        return obj;
-      };
-      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 3951441470564;
-      fn.__initData = __initData;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-_slicedToArray = ZoomInRight;
-_inherits(ZoomInRight, fn(1707).ComplexAnimationBuilder);
-const entry3 = {
-  key: "createInstance",
-  value: function createInstance() {
-    return _slicedToArray();
-  },
-};
-const items3 = [entry3];
-const importDefaultResultResult3 = _createClass(ZoomInRight, null, items3);
-importDefaultResultResult3.presetName = "ZoomInRight";
-let closure_9 = {
-  code: "function pnpm_ZoomTs5(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,animation(0,config))},{scale:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{translateY:-values.windowHeight},{scale:0}],...initialValues},callback:callback};}",
-};
-class ZoomInUp {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_1(this, ZoomOutEasyDown);
-    items1 = [...items];
-    tmp2 = closure_3;
-    obj = closure_3(ZoomOutEasyDown);
-    tmp3 = c2;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      const delayFunction = closure_0.getDelayFunction();
-      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
-      const animation = tmp2[0];
-      closure_2 = tmp4;
-      const delay = closure_0.getDelay();
-      const callbackV = closure_0.callbackV;
-      const initialValues = closure_0.initialValues;
-      const fn = function t(translateY) {
-        const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const items = [{ translateY: delayFunction(delay, first(0, closure_2)) }];
-        const obj3 = { translateY: delayFunction(delay, first(0, closure_2)) };
-        items[1] = { scale: delayFunction(delay, first(1, closure_2)) };
-        obj2.transform = items;
-        obj.animations = obj2;
-        const obj5 = { transform: null };
-        const items1 = [{ translateY: -translateY.windowHeight }, { scale: 0 }];
-        obj5.transform = items1;
-        const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
-        obj.callback = callbackV;
-        return obj;
-      };
-      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 11673124834481;
-      fn.__initData = __initData;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-_slicedToArray = ZoomInUp;
-_inherits(ZoomInUp, fn(1707).ComplexAnimationBuilder);
-const entry4 = {
-  key: "createInstance",
-  value: function createInstance() {
-    return _slicedToArray();
-  },
-};
-const items4 = [entry4];
-const importDefaultResultResult4 = _createClass(ZoomInUp, null, items4);
-importDefaultResultResult4.presetName = "ZoomInUp";
-let closure_10 = {
-  code: "function pnpm_ZoomTs6(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,animation(0,config))},{scale:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{translateY:values.windowHeight},{scale:0}],...initialValues},callback:callback};}",
-};
-class ZoomInDown {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_1(this, ZoomOutEasyDown);
-    items1 = [...items];
-    tmp2 = closure_3;
-    obj = closure_3(ZoomOutEasyDown);
-    tmp3 = c2;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      const delayFunction = closure_0.getDelayFunction();
-      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
-      const animation = tmp2[0];
-      closure_2 = tmp4;
-      const delay = closure_0.getDelay();
-      const callbackV = closure_0.callbackV;
-      const initialValues = closure_0.initialValues;
-      const fn = function t(translateY) {
-        const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const items = [{ translateY: delayFunction(delay, first(0, closure_2)) }];
-        const obj3 = { translateY: delayFunction(delay, first(0, closure_2)) };
-        items[1] = { scale: delayFunction(delay, first(1, closure_2)) };
-        obj2.transform = items;
-        obj.animations = obj2;
-        const obj5 = { transform: null };
-        const items1 = [{ translateY: translateY.windowHeight }, { scale: 0 }];
-        obj5.transform = items1;
-        const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
-        obj.callback = callbackV;
-        return obj;
-      };
-      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 16474472853503;
-      fn.__initData = __initData;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-_slicedToArray = ZoomInDown;
-_inherits(ZoomInDown, fn(1707).ComplexAnimationBuilder);
-const entry5 = {
-  key: "createInstance",
-  value: function createInstance() {
-    return _slicedToArray();
-  },
-};
-const items5 = [entry5];
-const importDefaultResultResult5 = _createClass(ZoomInDown, null, items5);
-importDefaultResultResult5.presetName = "ZoomInDown";
-let closure_11 = {
-  code: "function pnpm_ZoomTs7(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,animation(0,config))},{scale:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{translateY:-values.targetHeight},{scale:0}],...initialValues},callback:callback};}",
-};
-class ZoomInEasyUp {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_1(this, ZoomOutEasyDown);
-    items1 = [...items];
-    tmp2 = closure_3;
-    obj = closure_3(ZoomOutEasyDown);
-    tmp3 = c2;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      const delayFunction = closure_0.getDelayFunction();
-      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
-      const animation = tmp2[0];
-      closure_2 = tmp4;
-      const delay = closure_0.getDelay();
-      const callbackV = closure_0.callbackV;
-      const initialValues = closure_0.initialValues;
-      const fn = function t(targetHeight) {
-        const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const items = [{ translateY: delayFunction(delay, first(0, closure_2)) }];
-        const obj3 = { translateY: delayFunction(delay, first(0, closure_2)) };
-        items[1] = { scale: delayFunction(delay, first(1, closure_2)) };
-        obj2.transform = items;
-        obj.animations = obj2;
-        const obj5 = { transform: null };
-        const items1 = [{ translateY: -targetHeight.targetHeight }, { scale: 0 }];
-        obj5.transform = items1;
-        const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
-        obj.callback = callbackV;
-        return obj;
-      };
-      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 9580191401742;
-      fn.__initData = __initData;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-_slicedToArray = ZoomInEasyUp;
-_inherits(ZoomInEasyUp, fn(1707).ComplexAnimationBuilder);
-const entry6 = {
-  key: "createInstance",
-  value: function createInstance() {
-    return _slicedToArray();
-  },
-};
-const items6 = [entry6];
-const importDefaultResultResult6 = _createClass(ZoomInEasyUp, null, items6);
-importDefaultResultResult6.presetName = "ZoomInEasyUp";
-let closure_12 = {
-  code: "function pnpm_ZoomTs8(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,animation(0,config))},{scale:delayFunction(delay,animation(1,config))}]},initialValues:{transform:[{translateY:values.targetHeight},{scale:0}],...initialValues},callback:callback};}",
-};
-class ZoomInEasyDown {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_1(this, ZoomOutEasyDown);
-    items1 = [...items];
-    tmp2 = closure_3;
-    obj = closure_3(ZoomOutEasyDown);
-    tmp3 = c2;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      const delayFunction = closure_0.getDelayFunction();
-      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
-      const animation = tmp2[0];
-      closure_2 = tmp4;
-      const delay = closure_0.getDelay();
-      const callbackV = closure_0.callbackV;
-      const initialValues = closure_0.initialValues;
-      const fn = function t(targetHeight) {
-        const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const items = [{ translateY: delayFunction(delay, first(0, closure_2)) }];
-        const obj3 = { translateY: delayFunction(delay, first(0, closure_2)) };
-        items[1] = { scale: delayFunction(delay, first(1, closure_2)) };
-        obj2.transform = items;
-        obj.animations = obj2;
-        const obj5 = { transform: null };
-        const items1 = [{ translateY: targetHeight.targetHeight }, { scale: 0 }];
-        obj5.transform = items1;
-        const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
-        obj.callback = callbackV;
-        return obj;
-      };
-      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 8663849822572;
-      fn.__initData = __initData;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-_slicedToArray = ZoomInEasyDown;
-_inherits(ZoomInEasyDown, fn(1707).ComplexAnimationBuilder);
-const entry7 = {
-  key: "createInstance",
-  value: function createInstance() {
-    return _slicedToArray();
-  },
-};
-const items7 = [entry7];
-const importDefaultResultResult7 = _createClass(ZoomInEasyDown, null, items7);
-importDefaultResultResult7.presetName = "ZoomInEasyDown";
-let closure_13 = {
-  code: "function pnpm_ZoomTs9(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{scale:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{scale:1}],...initialValues},callback:callback};}",
-};
-class ZoomOut {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_1(this, ZoomOutEasyDown);
-    items1 = [...items];
-    tmp2 = closure_3;
-    obj = closure_3(ZoomOutEasyDown);
-    tmp3 = c2;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      const delayFunction = closure_0.getDelayFunction();
-      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
-      const animation = tmp2[0];
-      closure_2 = tmp4;
-      const delay = closure_0.getDelay();
-      const callbackV = closure_0.callbackV;
-      const initialValues = closure_0.initialValues;
-      const fn = function t() {
-        const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const items = [{ scale: delayFunction(delay, first(0, closure_2)) }];
+        const items = [{ scaleY: delayFunction(delay, first(1, closure_2)) }];
         obj2.transform = items;
         obj.animations = obj2;
         const obj4 = { transform: null };
-        const items1 = [{ scale: 1 }];
+        const items1 = [{ scaleY: 0 }];
         obj4.transform = items1;
         const merged = Object.assign(initialValues);
         obj.initialValues = obj4;
@@ -602,113 +133,36 @@ class ZoomOut {
         return obj;
       };
       fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 11880899972707;
+      fn.__workletHash = 15758510181808;
       fn.__initData = __initData;
       return fn;
     };
     return tmp3Result;
   }
 }
-_slicedToArray = ZoomOut;
-_inherits(ZoomOut, fn(1707).ComplexAnimationBuilder);
-const entry8 = {
+_slicedToArray = StretchInY;
+_inherits(StretchInY, fn(1708).ComplexAnimationBuilder);
+const entry1 = {
   key: "createInstance",
   value: function createInstance() {
     return _slicedToArray();
   },
 };
-const items8 = [entry8];
-const importDefaultResultResult8 = _createClass(ZoomOut, null, items8);
-importDefaultResultResult8.presetName = "ZoomOut";
-let closure_14 = {
-  code: "function pnpm_ZoomTs10(){const{delayFunction,delay,animation,config,rotate,initialValues,callback}=this.__closure;return{animations:{transform:[{scale:delayFunction(delay,animation(0,config))},{rotate:delayFunction(delay,animation(rotate,config))}]},initialValues:{transform:[{scale:1},{rotate:'0rad'}],...initialValues},callback:callback};}",
+let items1 = [entry1];
+const importDefaultResultResult1 = _createClass(StretchInY, null, items1);
+importDefaultResultResult1.presetName = "StretchInY";
+let closure_7 = {
+  code: "function pnpm_StretchTs3(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{scaleX:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{scaleX:1}],...initialValues},callback:callback};}",
 };
-class ZoomOutRotate {
+class StretchOutX {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = closure_1(this, ZoomOutEasyDown);
+    tmp = closure_1(this, StretchOutY);
     items1 = [...items];
     tmp2 = closure_3;
-    obj = closure_3(ZoomOutEasyDown);
-    tmp3 = c2;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      const delayFunction = closure_0.getDelayFunction();
-      const tmp3 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
-      const animation = tmp3[0];
-      closure_2 = tmp5;
-      const delay = closure_0.getDelay();
-      let str = "0.3";
-      if (closure_0.rotateV) {
-        str = closure_0.rotateV;
-      }
-      const callbackV = closure_0.callbackV;
-      const initialValues = closure_0.initialValues;
-      const fn = function t() {
-        const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const items = [{ scale: delayFunction(delay, first(0, closure_2)) }];
-        const obj3 = { scale: delayFunction(delay, first(0, closure_2)) };
-        items[1] = { rotate: delayFunction(delay, first(str, closure_2)) };
-        obj2.transform = items;
-        obj.animations = obj2;
-        const obj5 = { transform: null };
-        const items1 = [{ scale: 1 }, { rotate: "0rad" }];
-        obj5.transform = items1;
-        const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
-        obj.callback = callbackV;
-        return obj;
-      };
-      fn.__closure = {
-        delayFunction,
-        delay,
-        animation,
-        config: tmp3[1],
-        rotate: str,
-        initialValues,
-        callback: callbackV,
-      };
-      fn.__workletHash = 14218456220590;
-      fn.__initData = __initData;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-_slicedToArray = ZoomOutRotate;
-_inherits(ZoomOutRotate, fn(1707).ComplexAnimationBuilder);
-const entry9 = {
-  key: "createInstance",
-  value: function createInstance() {
-    return _slicedToArray();
-  },
-};
-const items9 = [entry9];
-const importDefaultResultResult9 = _createClass(ZoomOutRotate, null, items9);
-importDefaultResultResult9.presetName = "ZoomOutRotate";
-let closure_15 = {
-  code: "function pnpm_ZoomTs11(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,animation(-values.windowWidth,config))},{scale:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{translateX:0},{scale:1}],...initialValues},callback:callback};}",
-};
-class ZoomOutLeft {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_1(this, ZoomOutEasyDown);
-    items1 = [...items];
-    tmp2 = closure_3;
-    obj = closure_3(ZoomOutEasyDown);
+    obj = closure_3(StretchOutY);
     tmp3 = c2;
     if (closure_4()) {
       tmp5 = globalThis;
@@ -727,53 +181,51 @@ class ZoomOutLeft {
       const delay = closure_0.getDelay();
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
-      const fn = function t(windowWidth) {
+      const fn = function n() {
         const obj = { animations: null, initialValues: null, callback: null };
         const obj2 = { transform: null };
-        const items = [{ translateX: delayFunction(delay, first(-windowWidth.windowWidth, closure_2)) }];
-        const obj3 = { translateX: delayFunction(delay, first(-windowWidth.windowWidth, closure_2)) };
-        items[1] = { scale: delayFunction(delay, first(0, closure_2)) };
+        const items = [{ scaleX: delayFunction(delay, first(0, closure_2)) }];
         obj2.transform = items;
         obj.animations = obj2;
-        const obj5 = { transform: null };
-        const items1 = [{ translateX: 0 }, { scale: 1 }];
-        obj5.transform = items1;
+        const obj4 = { transform: null };
+        const items1 = [{ scaleX: 1 }];
+        obj4.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
+        obj.initialValues = obj4;
         obj.callback = callbackV;
         return obj;
       };
       fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 4016039076957;
+      fn.__workletHash = 2374207350737;
       fn.__initData = __initData;
       return fn;
     };
     return tmp3Result;
   }
 }
-_slicedToArray = ZoomOutLeft;
-_inherits(ZoomOutLeft, fn(1707).ComplexAnimationBuilder);
-const entry10 = {
+_slicedToArray = StretchOutX;
+_inherits(StretchOutX, fn(1708).ComplexAnimationBuilder);
+const entry2 = {
   key: "createInstance",
   value: function createInstance() {
     return _slicedToArray();
   },
 };
-const items10 = [entry10];
-const importDefaultResultResult10 = _createClass(ZoomOutLeft, null, items10);
-importDefaultResultResult10.presetName = "ZoomOutLeft";
-let closure_16 = {
-  code: "function pnpm_ZoomTs12(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateX:delayFunction(delay,animation(values.windowWidth,config))},{scale:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{translateX:0},{scale:1}],...initialValues},callback:callback};}",
+const items2 = [entry2];
+const importDefaultResultResult2 = _createClass(StretchOutX, null, items2);
+importDefaultResultResult2.presetName = "StretchOutX";
+let closure_8 = {
+  code: "function pnpm_StretchTs4(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{scaleY:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{scaleY:1}],...initialValues},callback:callback};}",
 };
-class ZoomOutRight {
+class StretchOutY {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = closure_1(this, ZoomOutEasyDown);
+    tmp = closure_1(this, StretchOutY);
     items1 = [...items];
     tmp2 = closure_3;
-    obj = closure_3(ZoomOutEasyDown);
+    obj = closure_3(StretchOutY);
     tmp3 = c2;
     if (closure_4()) {
       tmp5 = globalThis;
@@ -792,315 +244,41 @@ class ZoomOutRight {
       const delay = closure_0.getDelay();
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
-      const fn = function t(windowWidth) {
+      const fn = function n() {
         const obj = { animations: null, initialValues: null, callback: null };
         const obj2 = { transform: null };
-        const items = [{ translateX: delayFunction(delay, first(windowWidth.windowWidth, closure_2)) }];
-        const obj3 = { translateX: delayFunction(delay, first(windowWidth.windowWidth, closure_2)) };
-        items[1] = { scale: delayFunction(delay, first(0, closure_2)) };
+        const items = [{ scaleY: delayFunction(delay, first(0, closure_2)) }];
         obj2.transform = items;
         obj.animations = obj2;
-        const obj5 = { transform: null };
-        const items1 = [{ translateX: 0 }, { scale: 1 }];
-        obj5.transform = items1;
+        const obj4 = { transform: null };
+        const items1 = [{ scaleY: 1 }];
+        obj4.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
+        obj.initialValues = obj4;
         obj.callback = callbackV;
         return obj;
       };
       fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 13414598349747;
+      fn.__workletHash = 3228047902646;
       fn.__initData = __initData;
       return fn;
     };
     return tmp3Result;
   }
 }
-_slicedToArray = ZoomOutRight;
-_inherits(ZoomOutRight, fn(1707).ComplexAnimationBuilder);
-const entry11 = {
+_slicedToArray = StretchOutY;
+_inherits(StretchOutY, fn(1708).ComplexAnimationBuilder);
+const entry3 = {
   key: "createInstance",
   value: function createInstance() {
     return _slicedToArray();
   },
 };
-const items11 = [entry11];
-const importDefaultResultResult11 = _createClass(ZoomOutRight, null, items11);
-importDefaultResultResult11.presetName = "ZoomOutRight";
-let closure_17 = {
-  code: "function pnpm_ZoomTs13(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,animation(-values.windowHeight,config))},{scale:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{translateY:0},{scale:1}],...initialValues},callback:callback};}",
-};
-class ZoomOutUp {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_1(this, ZoomOutEasyDown);
-    items1 = [...items];
-    tmp2 = closure_3;
-    obj = closure_3(ZoomOutEasyDown);
-    tmp3 = c2;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      const delayFunction = closure_0.getDelayFunction();
-      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
-      const animation = tmp2[0];
-      closure_2 = tmp4;
-      const delay = closure_0.getDelay();
-      const callbackV = closure_0.callbackV;
-      const initialValues = closure_0.initialValues;
-      const fn = function t(windowHeight) {
-        const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const items = [{ translateY: delayFunction(delay, first(-windowHeight.windowHeight, closure_2)) }];
-        const obj3 = { translateY: delayFunction(delay, first(-windowHeight.windowHeight, closure_2)) };
-        items[1] = { scale: delayFunction(delay, first(0, closure_2)) };
-        obj2.transform = items;
-        obj.animations = obj2;
-        const obj5 = { transform: null };
-        const items1 = [{ translateY: 0 }, { scale: 1 }];
-        obj5.transform = items1;
-        const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
-        obj.callback = callbackV;
-        return obj;
-      };
-      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 570907039910;
-      fn.__initData = __initData;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-_slicedToArray = ZoomOutUp;
-_inherits(ZoomOutUp, fn(1707).ComplexAnimationBuilder);
-const entry12 = {
-  key: "createInstance",
-  value: function createInstance() {
-    return _slicedToArray();
-  },
-};
-const items12 = [entry12];
-const importDefaultResultResult12 = _createClass(ZoomOutUp, null, items12);
-importDefaultResultResult12.presetName = "ZoomOutUp";
-let closure_18 = {
-  code: "function pnpm_ZoomTs14(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,animation(values.windowHeight,config))},{scale:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{translateY:0},{scale:1}],...initialValues},callback:callback};}",
-};
-class ZoomOutDown {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_1(this, ZoomOutEasyDown);
-    items1 = [...items];
-    tmp2 = closure_3;
-    obj = closure_3(ZoomOutEasyDown);
-    tmp3 = c2;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      const delayFunction = closure_0.getDelayFunction();
-      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
-      const animation = tmp2[0];
-      closure_2 = tmp4;
-      const delay = closure_0.getDelay();
-      const callbackV = closure_0.callbackV;
-      const initialValues = closure_0.initialValues;
-      const fn = function t(windowHeight) {
-        const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const items = [{ translateY: delayFunction(delay, first(windowHeight.windowHeight, closure_2)) }];
-        const obj3 = { translateY: delayFunction(delay, first(windowHeight.windowHeight, closure_2)) };
-        items[1] = { scale: delayFunction(delay, first(0, closure_2)) };
-        obj2.transform = items;
-        obj.animations = obj2;
-        const obj5 = { transform: null };
-        const items1 = [{ translateY: 0 }, { scale: 1 }];
-        obj5.transform = items1;
-        const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
-        obj.callback = callbackV;
-        return obj;
-      };
-      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 4332816695692;
-      fn.__initData = __initData;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-_slicedToArray = ZoomOutDown;
-_inherits(ZoomOutDown, fn(1707).ComplexAnimationBuilder);
-const entry13 = {
-  key: "createInstance",
-  value: function createInstance() {
-    return _slicedToArray();
-  },
-};
-const items13 = [entry13];
-const importDefaultResultResult13 = _createClass(ZoomOutDown, null, items13);
-importDefaultResultResult13.presetName = "ZoomOutDown";
-let closure_19 = {
-  code: "function pnpm_ZoomTs15(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,animation(-values.currentHeight,config))},{scale:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{translateY:0},{scale:1}],...initialValues},callback:callback};}",
-};
-class ZoomOutEasyUp {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_1(this, ZoomOutEasyDown);
-    items1 = [...items];
-    tmp2 = closure_3;
-    obj = closure_3(ZoomOutEasyDown);
-    tmp3 = c2;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      const delayFunction = closure_0.getDelayFunction();
-      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
-      const animation = tmp2[0];
-      closure_2 = tmp4;
-      const delay = closure_0.getDelay();
-      const callbackV = closure_0.callbackV;
-      const initialValues = closure_0.initialValues;
-      const fn = function t(currentHeight) {
-        const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const items = [{ translateY: delayFunction(delay, first(-currentHeight.currentHeight, closure_2)) }];
-        const obj3 = { translateY: delayFunction(delay, first(-currentHeight.currentHeight, closure_2)) };
-        items[1] = { scale: delayFunction(delay, first(0, closure_2)) };
-        obj2.transform = items;
-        obj.animations = obj2;
-        const obj5 = { transform: null };
-        const items1 = [{ translateY: 0 }, { scale: 1 }];
-        obj5.transform = items1;
-        const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
-        obj.callback = callbackV;
-        return obj;
-      };
-      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 1576389803461;
-      fn.__initData = __initData;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-_slicedToArray = ZoomOutEasyUp;
-_inherits(ZoomOutEasyUp, fn(1707).ComplexAnimationBuilder);
-const entry14 = {
-  key: "createInstance",
-  value: function createInstance() {
-    return _slicedToArray();
-  },
-};
-const items14 = [entry14];
-const importDefaultResultResult14 = _createClass(ZoomOutEasyUp, null, items14);
-importDefaultResultResult14.presetName = "ZoomOutEasyUp";
-let closure_20 = {
-  code: "function pnpm_ZoomTs16(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{transform:[{translateY:delayFunction(delay,animation(values.currentHeight,config))},{scale:delayFunction(delay,animation(0,config))}]},initialValues:{transform:[{translateY:0},{scale:1}],...initialValues},callback:callback};}",
-};
-class ZoomOutEasyDown {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_1(this, ZoomOutEasyDown);
-    items1 = [...items];
-    tmp2 = closure_3;
-    obj = closure_3(ZoomOutEasyDown);
-    tmp3 = c2;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      const delayFunction = closure_0.getDelayFunction();
-      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
-      const animation = tmp2[0];
-      closure_2 = tmp4;
-      const delay = closure_0.getDelay();
-      const callbackV = closure_0.callbackV;
-      const initialValues = closure_0.initialValues;
-      const fn = function t(currentHeight) {
-        const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { transform: null };
-        const items = [{ translateY: delayFunction(delay, first(currentHeight.currentHeight, closure_2)) }];
-        const obj3 = { translateY: delayFunction(delay, first(currentHeight.currentHeight, closure_2)) };
-        items[1] = { scale: delayFunction(delay, first(0, closure_2)) };
-        obj2.transform = items;
-        obj.animations = obj2;
-        const obj5 = { transform: null };
-        const items1 = [{ translateY: 0 }, { scale: 1 }];
-        obj5.transform = items1;
-        const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
-        obj.callback = callbackV;
-        return obj;
-      };
-      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 14278999536075;
-      fn.__initData = __initData;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-_slicedToArray = ZoomOutEasyDown;
-_inherits(ZoomOutEasyDown, fn(1707).ComplexAnimationBuilder);
-const entry15 = {
-  key: "createInstance",
-  value: function createInstance() {
-    return _slicedToArray();
-  },
-};
-const items15 = [entry15];
-const importDefaultResultResult15 = _createClass(ZoomOutEasyDown, null, items15);
-importDefaultResultResult15.presetName = "ZoomOutEasyDown";
+const items3 = [entry3];
+const importDefaultResultResult3 = _createClass(StretchOutY, null, items3);
+importDefaultResultResult3.presetName = "StretchOutY";
 
-export const ZoomIn = importDefaultResultResult;
-export const ZoomInRotate = importDefaultResultResult1;
-export const ZoomInLeft = importDefaultResultResult2;
-export const ZoomInRight = importDefaultResultResult3;
-export const ZoomInUp = importDefaultResultResult4;
-export const ZoomInDown = importDefaultResultResult5;
-export const ZoomInEasyUp = importDefaultResultResult6;
-export const ZoomInEasyDown = importDefaultResultResult7;
-export const ZoomOut = importDefaultResultResult8;
-export const ZoomOutRotate = importDefaultResultResult9;
-export const ZoomOutLeft = importDefaultResultResult10;
-export const ZoomOutRight = importDefaultResultResult11;
-export const ZoomOutUp = importDefaultResultResult12;
-export const ZoomOutDown = importDefaultResultResult13;
-export const ZoomOutEasyUp = importDefaultResultResult14;
-export const ZoomOutEasyDown = importDefaultResultResult15;
+export const StretchInX = importDefaultResultResult;
+export const StretchInY = importDefaultResultResult1;
+export const StretchOutX = importDefaultResultResult2;
+export const StretchOutY = importDefaultResultResult3;

@@ -1,16 +1,40 @@
 // _runtime/metro/04710__.js
-import _mod19 from "00019__.js";
-import _mod4707 from "04707__.js";
+import ACTIONS from "../04712_ACTIONS.js";
+import noop from "00019__.js";
 
-const useContext = _mod19.useContext;
+({ useCallback: c2, useContext: c3 } = noop);
 
-export const usePortalState = (name) => {
-  const tmp = useContext(_mod4707.PortalStateContext);
+export const usePortal = () => {
+  let str = hostName;
+  if (hostName === undefined) {
+    str = "root";
+  }
+  const tmp = closure_3(str(4711).PortalDispatchContext);
+  dependencyMap = tmp;
   if (null === tmp) {
     const _Error = Error;
-    const error = new Error("'PortalStateContext' cannot be null, please add 'PortalProvider' to the root component.");
+    const error = new Error(
+      "'PortalDispatchContext' cannot be null, please add 'PortalProvider' to the root component.",
+    );
     throw error;
   } else {
-    return tmp[name] || [];
+    const tmp3 = closure_2(() => {
+      closure_1({ type: ACTIONS.ACTIONS.REGISTER_HOST, hostName: str });
+    }, []);
+    const tmp5 = closure_2((portalName, node) => {
+      closure_1({ type: ACTIONS.ACTIONS.ADD_UPDATE_PORTAL, hostName: str, portalName, node });
+    }, []);
+    const obj = {
+      registerHost: tmp3,
+      deregisterHost: closure_2(() => {
+        closure_1({ type: ACTIONS.ACTIONS.DEREGISTER_HOST, hostName: str });
+      }, []),
+      addPortal: tmp5,
+      updatePortal: tmp5,
+      removePortal: closure_2((portalName) => {
+        closure_1({ type: ACTIONS.ACTIONS.REMOVE_PORTAL, hostName: str, portalName });
+      }, []),
+    };
+    return obj;
   }
 };

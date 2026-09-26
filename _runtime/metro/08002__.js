@@ -1,12 +1,80 @@
 // _runtime/metro/08002__.js
-import _mod26 from "00026__.js";
-import weakSet from "../00106_weakSet.js";
-import 00065__ from "00065__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _modDef7933 from "07933__.js";
+import _modDef8003 from "08003__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGText", directEventTypes: { topSvgLayout: { registrationName: "onSvgLayout" } }, validAttributes: null };
-const point = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: _mod26.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, fontSize: true, fontWeight: true, font: true, dx: true, dy: true, x: true, y: true, rotate: true, inlineSize: true, textLength: true, baselineShift: true, lengthAdjust: true, alignmentBaseline: true, verticalAlign: true };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSvgLayout: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = point;
+const Rect = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class Rect {
+  constructor() {
+    self = this;
+    tmp = closure_3(this, Rect);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(Rect);
+    tmp3 = closure_4;
+    if (closure_7()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(Rect, _modDef7933);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    const size = { x: props.x, y: props.y, width: props.width, height: props.height, rx: props.rx, ry: props.ry };
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    };
+    const merged = Object.assign(Rect(7924).withoutXY(this, props));
+    const merged1 = Object.assign(size);
+    return (
+      <tmp
+        ref={function ref(arg0) {
+          return self.refMethod(arg0);
+        }}
+      />
+    );
+  },
+};
+const items = [entry];
+const importDefaultResultResult = _createClass(Rect, items);
+importDefaultResultResult.displayName = "Rect";
+importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0 };
 
-export default module_65.get("RNSVGText", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default importDefaultResultResult;

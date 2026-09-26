@@ -4,10 +4,10 @@ import registerAsset from "01121__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 256,
-  height: 256,
+  width: 24,
+  height: 24,
   scales: [1],
-  hash: "08e89c7c23b84c36ce6ed8da12dbbbbb",
-  name: "img_bungie_light",
-  type: "png",
+  hash: "f2fc96c4a753dd0c5dd02646aa2a518c",
+  name: "img_account_sync_battlenet_white",
+  type: "svg",
 });

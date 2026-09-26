@@ -1,5 +1,5 @@
 // _runtime/metro/07976__.js
-import _modDef7925 from "07925__.js";
+import _modDef7933 from "07933__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
@@ -7,7 +7,7 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const LinearGradient = importDefault;
+const Filter = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,12 +27,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 const jsx = fn(21).jsx;
-class LinearGradient {
+class Filter {
   constructor() {
     self = this;
-    tmp = c2(this, LinearGradient);
+    tmp = c2(this, Filter);
     tmp2 = closure_4;
-    obj = closure_4(LinearGradient);
+    obj = closure_4(Filter);
     tmp3 = closure_3;
     if (metroRequire()) {
       tmp7 = globalThis;
@@ -47,15 +47,29 @@ class LinearGradient {
     return tmp3(self, constructResult);
   }
 }
-_inherits(LinearGradient, _modDef7925);
+_inherits(Filter, _modDef7933);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    const merged = Object.assign({ x1: props.x1, y1: props.y1, x2: props.x2, y2: props.y2 });
-    const merged1 = Object.assign(LinearGradient(7978)(props, this));
-    return jsx(LinearGradient(7977), {
+    const size = {
+      name: props.id,
+      x: props.x,
+      y: props.y,
+      width: props.width,
+      height: props.height,
+      filterUnits: props.filterUnits,
+      primitiveUnits: props.primitiveUnits,
+    };
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    };
+    const merged = Object.assign(size);
+    obj.children = this.props.children;
+    return jsx(Filter(7977), {
       ref(arg0) {
         return self.refMethod(arg0);
       },
@@ -63,8 +77,15 @@ const entry = {
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(LinearGradient, items);
-importDefaultResultResult.displayName = "LinearGradient";
-importDefaultResultResult.defaultProps = { x1: "0%", y1: "0%", x2: "100%", y2: "0%" };
+const importDefaultResultResult = _createClass(Filter, items);
+importDefaultResultResult.displayName = "Filter";
+importDefaultResultResult.defaultProps = {
+  x: "-10%",
+  y: "-10%",
+  width: "120%",
+  height: "120%",
+  filterUnits: "objectBoundingBox",
+  primitiveUnits: "userSpaceOnUse",
+};
 
 export default importDefaultResultResult;

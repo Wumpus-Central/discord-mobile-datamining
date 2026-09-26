@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/contact_sync/native/images",
-  width: 215.5,
-  height: 135,
+  httpServerLocation: "/assets/images/native/icons/empty_channel",
+  width: 32,
+  height: 32,
   scales: [2, 3],
-  hash: "fad7ba73a3f13e1d6de72f833c30efc1",
-  name: "header-art-onboarding",
+  hash: "9a47d778a0b93e08af7ca2a5a0e14da1",
+  name: "add_friend_32px",
   type: "png",
 });

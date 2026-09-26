@@ -1,140 +1,97 @@
 // _runtime/metro/12302__.js
-function isInstanceOf(arg0, arg1) {
-  try {
-    return arg0 instanceof arg1;
-  } catch (err) {
-    return false;
-  }
-}
+import _objectWithoutProperties from "00109__objectWithoutProperties.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import hasOwnProperty from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
+import emptyFunction from "04663__.js";
 
-export const isDOMError = function isDOMError(arg0) {
-  const call = toString.call;
-  return (typeof call === "unknown" ? toString() : call(arg0)) === "[object " + "DOMError" + "]";
-};
-export const isDOMException = function isDOMException(arg0) {
-  const call = toString.call;
-  return (typeof call === "unknown" ? toString() : call(arg0)) === "[object " + "DOMException" + "]";
-};
-export const isElement = function isElement(arg0) {
-  let tmp = typeof globalThis.Element !== "undefined";
-  if (typeof globalThis.Element !== "undefined") {
-    tmp = isInstanceOf(arg0, globalThis.Element);
-  }
-  return tmp;
-};
-export const isError = function isError(originalException) {
-  const call = toString.call;
-  const tmp2 = typeof call === "unknown" ? toString() : call(originalException);
-  if ("[object Error]" !== tmp2) {
-    if ("[object Exception]" !== tmp2) {
-      if ("[object DOMException]" !== tmp2) {
-        if ("[object WebAssembly.Exception]" !== tmp2) {
-          const _Error = Error;
-          return isInstanceOf(originalException, Error);
+let Link = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+let closure_2 = ["component", "to", "replace"];
+const jsx = fn(21).jsx;
+class Link {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_4(this, Link);
+    items1 = [...items];
+    tmp2 = metroRequire;
+    obj = metroRequire(Link);
+    tmp3 = hasOwnProperty;
+    if (closure_8()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.handlePress = (defaultPrevented, str) => {
+      if (props.props.onPress) {
+        props = tmp.props;
+        props.onPress(defaultPrevented);
+      }
+      if (!defaultPrevented.defaultPrevented) {
+        const to = str.to;
+        if (tmp.props.replace) {
+          const replaced = str.replace(to);
+        } else {
+          str.push(to);
         }
       }
-    }
+    };
+    return tmp3Result;
   }
-  return true;
+}
+_inherits(Link, noop.Component);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    ({ component: dependencyMap, to, replace } = props);
+    Link = _objectWithoutProperties(props, self);
+    return jsx(Link(4666).__HistoryContext.Consumer, {
+      children(arg0) {
+        closure_0 = arg0;
+        const obj = {};
+        const merged = Object.assign(closure_0);
+        obj.onPress = function onPress(arg0) {
+          return self.handlePress(arg0, closure_0);
+        };
+        return <closure_1 />;
+      },
+    });
+  },
 };
-export const isErrorEvent = function isErrorEvent(name) {
-  const call = toString.call;
-  return (typeof call === "unknown" ? toString() : call(name)) === "[object " + "ErrorEvent" + "]";
-};
-export const isEvent = function isEvent(type) {
-  let tmp = typeof Event !== "undefined";
-  if (typeof Event !== "undefined") {
-    const _Event = Event;
-    tmp = isInstanceOf(type, Event);
-  }
-  return tmp;
-};
-export { isInstanceOf };
-export const isParameterizedString = function isParameterizedString(obj) {
-  let tmp = typeof obj === "object";
-  if (typeof obj === "object") {
-    tmp = null !== obj;
-  }
-  if (tmp) {
-    tmp = "__sentry_template_string__" in obj;
-  }
-  if (tmp) {
-    tmp = "__sentry_template_values__" in obj;
-  }
-  return tmp;
-};
-export const isPlainObject = function isPlainObject(user) {
-  const call = toString.call;
-  return (typeof call === "unknown" ? toString() : call(user)) === "[object " + "Object" + "]";
-};
-export const isPrimitive = function isPrimitive(obj) {
-  let tmp = null === obj;
-  if (!tmp) {
-    let tmp2 = typeof obj === "object";
-    if (typeof obj === "object") {
-      tmp2 = null !== obj;
-    }
-    if (tmp2) {
-      tmp2 = "__sentry_template_string__" in obj;
-    }
-    if (tmp2) {
-      tmp2 = "__sentry_template_values__" in obj;
-    }
-    tmp = tmp2;
-  }
-  if (!tmp) {
-    let tmp3 = typeof obj !== "object";
-    if (typeof obj !== "object") {
-      tmp3 = typeof obj !== "function";
-    }
-    tmp = tmp3;
-  }
-  return tmp;
-};
-export const isRegExp = function isRegExp(test) {
-  const call = toString.call;
-  return (typeof call === "unknown" ? toString() : call(test)) === "[object " + "RegExp" + "]";
-};
-export const isString = function isString(body) {
-  const call = toString.call;
-  return (typeof call === "unknown" ? toString() : call(body)) === "[object " + "String" + "]";
-};
-export const isSyntheticEvent = function isSyntheticEvent(arg0) {
-  const call = toString.call;
-  let tmp3 = (typeof call === "unknown" ? toString() : call(arg0)) === "[object " + "Object" + "]";
-  if (tmp3) {
-    tmp3 = "nativeEvent" in arg0;
-  }
-  if (tmp3) {
-    tmp3 = "preventDefault" in arg0;
-  }
-  if (tmp3) {
-    tmp3 = "stopPropagation" in arg0;
-  }
-  return tmp3;
-};
-export const isThenable = function isThenable(arg0) {
-  let then = arg0;
-  if (arg0) {
-    then = arg0.then;
-  }
-  if (then) {
-    then = typeof arg0.then === "function";
-  }
-  return Boolean(then);
-};
-export const isVueViewModel = function isVueViewModel(__isVue) {
-  let tmp = typeof __isVue !== "object";
-  if (typeof __isVue === "object") {
-    tmp = null === __isVue;
-  }
-  if (!tmp) {
-    __isVue = __isVue.__isVue;
-    let tmp2 = !__isVue;
-    if (!__isVue) {
-      tmp2 = !__isVue._isVue;
-    }
-    tmp = tmp2;
-  }
-  return !tmp;
-};
+let items = [entry];
+const importDefaultResultResult = _createClass(Link, items);
+importDefaultResultResult.defaultProps = { component: fn(17).TouchableHighlight, replace: false };
+let obj = { onPress: emptyFunction.func, component: emptyFunction.elementType, replace: emptyFunction.bool, to: null };
+let items1 = [emptyFunction.string, emptyFunction.object];
+obj.to = emptyFunction.oneOfType(items1);
+importDefaultResultResult.propTypes = obj;
+
+export default importDefaultResultResult;

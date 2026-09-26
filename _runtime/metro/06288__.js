@@ -1,31 +1,28 @@
 // _runtime/metro/06288__.js
-import _mod6289 from "06289__.js";
-import _slicedToArray from "06270__.js";
-
-require = fn;
-const noop = fn(19);
-({ useState: c3, useCallback: closure_4 } = noop);
-
-export const useLayoutState = function useLayoutState(arg0) {
-  const tmp = _slicedToArray(React3(arg0), 2);
-  closure_0 = tmp[1];
-  const recyclerViewContext = _mod6289.useRecyclerViewContext();
-  const items = [tmp[0]];
-  const items1 = [recyclerViewContext];
-  items[1] = React4((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_0((arg0) => {
-      let tmpResult = closure_0;
-      if (typeof closure_0 === "function") {
-        tmpResult = tmp(arg0);
-      }
-      return tmpResult;
-    });
-    if (!arg1) {
-      if (recyclerViewContext != null) {
-        recyclerViewContext.layout();
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      exports = (arg0) => typeof arg0;
+    }
+    module.exports = exports;
+    return exports(arg0);
+  }
+  exports = (arg0) => {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
+        }
+        return str;
       }
     }
-  }, items1);
-  return items;
-};
+    str = typeof arg0;
+  };
+}
+let exports = _typeof;
+
+export default _typeof;

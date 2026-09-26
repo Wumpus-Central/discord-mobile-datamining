@@ -1,97 +1,90 @@
 // _runtime/metro/09952__.js
-import includeCommonConfiguration from "../09920_includeCommonConfiguration.js";
-import _mod9926 from "09926__.js";
-import JPStandardParser2 from "../09953_JPStandardParser.js";
-import _mod9955 from "09955__.js";
-import _mod9956 from "09956__.js";
-import _mod9957 from "09957__.js";
-import _mod9958 from "09958__.js";
-import _mod9959 from "09959__.js";
-import _mod9960 from "09960__.js";
-import _mod9961 from "09961__.js";
-import _mod9962 from "09962__.js";
+import AbstractParserWithWordBoundaryChecking from "../09902_AbstractParserWithWordBoundaryChecking.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-const require = globalThis.__r;
-
-function createConfiguration() {
-  if (flag === undefined) {
-    flag = true;
-  }
-  const obj = { parsers: null, refiners: null };
-  const items = [new JPStandardParser.default(), , , ,];
-  const _default = new JPStandardParser.default();
-  items[1] = new regExp.default();
-  const _default1 = new regExp.default();
-  items[2] = new regExp.default();
-  const _default2 = new regExp.default();
-  items[3] = new regExp.default();
-  const _default3 = new regExp.default();
-  items[4] = new _isNativeReflectConstruct.default();
-  obj.parsers = items;
-  const _default4 = new _isNativeReflectConstruct.default();
-  const items1 = [new _isNativeReflectConstruct.default(), ,];
-  const _default5 = new _isNativeReflectConstruct.default();
-  items1[1] = new _isNativeReflectConstruct.default();
-  const _default6 = new _isNativeReflectConstruct.default();
-  items1[2] = new _isNativeReflectConstruct.default();
-  obj.refiners = items1;
-  const result = includeCommonConfiguration.includeCommonConfiguration(obj, flag);
-  const refiners = result.refiners;
-  result.refiners = refiners.filter((item) => !(item instanceof _isNativeReflectConstruct.default));
-  return result;
-}
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
+const FRCasualTimeParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      tmp = __esModule;
+      callResult = call(constructResult);
     }
-    return tmp;
-  };
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
 }
-function createCasualConfiguration() {
-  const tmp = createConfiguration(false);
-  const parsers = tmp.parsers;
-  parsers.unshift(new module_9956.default());
-  return tmp;
+class FRCasualTimeParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, FRCasualTimeParser);
+    tmp2 = closure_4;
+    obj = closure_4(FRCasualTimeParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
 }
-const JPStandardParser = fn(JPStandardParser2);
-fn(_mod9955);
-const module_9956 = fn(_mod9956);
-fn(_mod9957);
-fn(_mod9958);
-fn(_mod9959);
-fn(_mod9960);
-fn(_mod9961);
-const regExp = fn(_mod9962);
-const _isNativeReflectConstruct = fn(_mod9926);
-const configuration = createConfiguration(false);
-let parsers = configuration.parsers;
-parsers.unshift(new module_9956.default());
-const chrono = new require("09880__.js").Chrono(configuration);
-const chrono1 = new require("09880__.js").Chrono(createConfiguration(true));
+_inherits(FRCasualTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const entry = {
+  key: "innerPattern",
+  value: function innerPattern(arg0) {
+    return /(cet?)?\s*(matin|soir|après-midi|aprem|a midi|à minuit)(?=\W|$)/i;
+  },
+};
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(createParsingComponents, arg1) {
+      const formatted = arg1[2].toLowerCase();
+      const parsingComponents = createParsingComponents.createParsingComponents();
+      if ("apr\u00E8s-midi" !== formatted) {
+        if ("aprem" !== formatted) {
+          if ("soir" === formatted) {
+            parsingComponents.imply("hour", 18);
+            parsingComponents.imply("minute", 0);
+            parsingComponents.imply("meridiem", FRCasualTimeParser(9900).Meridiem.PM);
+          } else if ("matin" === formatted) {
+            parsingComponents.imply("hour", 8);
+            parsingComponents.imply("minute", 0);
+            parsingComponents.imply("meridiem", FRCasualTimeParser(9900).Meridiem.AM);
+          } else if ("a midi" === formatted) {
+            parsingComponents.imply("hour", 12);
+            parsingComponents.imply("minute", 0);
+            parsingComponents.imply("meridiem", FRCasualTimeParser(9900).Meridiem.AM);
+          } else if ("\u00E0 minuit" === formatted) {
+            parsingComponents.imply("hour", 0);
+            parsingComponents.imply("meridiem", FRCasualTimeParser(9900).Meridiem.AM);
+          }
+        }
+        return parsingComponents;
+      }
+      parsingComponents.imply("hour", 14);
+      parsingComponents.imply("minute", 0);
+      parsingComponents.imply("meridiem", FRCasualTimeParser(9900).Meridiem.PM);
+    },
+  },
+];
 
-export const parse = function parse(arg0, arg1, arg2) {
-  const casual = exports.casual;
-  return casual.parse(arg0, arg1, arg2);
-};
-export const parseDate = function parseDate(arg0, arg1, arg2) {
-  const casual = exports.casual;
-  return casual.parseDate(arg0, arg1, arg2);
-};
-export { createCasualConfiguration };
-export { createConfiguration };
-export const Chrono = require("09880__.js").Chrono;
-export const ParsingResult = require("ReferenceWithTimezone").ParsingResult;
-export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
-export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
-export const Meridiem = require("Meridiem").Meridiem;
-export const Weekday = require("Meridiem").Weekday;
-export const casual = chrono;
-export const strict = chrono1;
+export default _createClass(FRCasualTimeParser, items);

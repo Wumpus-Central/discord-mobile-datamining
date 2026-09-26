@@ -1,28 +1,26 @@
 // _runtime/metro/13849__.js
-import _mod13833 from "13833__.js";
-import _mod13834 from "13834__.js";
-import _mod13850 from "13850__.js";
+import _mod13812 from "13812__.js";
+import getOwnPropertyDescriptor_mod from "13792__.js";
 
-let prop = _mod13833["__core-js_shared__"];
-if (!prop) {
-  prop = _mod13834("__core-js_shared__", {});
+let getOwnPropertyDescriptor = getOwnPropertyDescriptor_mod;
+if (getOwnPropertyDescriptor) {
+  const _Object = Object;
+  getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
 }
-let versions = prop.versions;
-if (!versions) {
-  const items = [];
-  prop.versions = items;
-  versions = items;
+const tmp = _mod13812(prototype, "name");
+let tmp2 = tmp;
+if (tmp) {
+  tmp2 = "something" === function something() {}.name;
 }
-let str2 = "global";
-if (_mod13850) {
-  str2 = "pure";
+let tmp3 = tmp;
+if (tmp) {
+  const _module = getOwnPropertyDescriptor;
+  let tmp5 = !_module;
+  if (_module) {
+    tmp5 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
+    const tmp6 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
+  }
+  tmp3 = tmp5;
 }
-versions.push({
-  version: "3.41.0",
-  mode: str2,
-  copyright: "\u00A9 2014-2025 Denis Pushkarev (zloirock.ru)",
-  license: "https://github.com/zloirock/core-js/blob/v3.41.0/LICENSE",
-  source: "https://github.com/zloirock/core-js",
-});
 
-export default prop;
+export default { EXISTS: tmp, PROPER: tmp2, CONFIGURABLE: tmp3 };

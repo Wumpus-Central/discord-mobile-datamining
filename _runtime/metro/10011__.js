@@ -1,160 +1,140 @@
 // _runtime/metro/10011__.js
-import _mod9913 from "09913__.js";
-import includeCommonConfiguration from "../09920_includeCommonConfiguration.js";
-import _mod10012 from "10012__.js";
-import _mod10014 from "10014__.js";
-import _mod10016 from "10016__.js";
-import _mod10017 from "10017__.js";
-import _mod10018 from "10018__.js";
-import _mod10019 from "10019__.js";
-import _mod10020 from "10020__.js";
-import _mod10021 from "10021__.js";
-import _mod10022 from "10022__.js";
-import _mod10023 from "10023__.js";
-import _mod10024 from "10024__.js";
-import _mod10025 from "10025__.js";
+import AbstractParserWithWordBoundaryChecking from "../09902_AbstractParserWithWordBoundaryChecking.js";
+import _mod10010 from "10010__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-const require = globalThis.__r;
-
-function createConfiguration() {
-  if (flag === undefined) {
-    flag = true;
-  }
-  const obj = { parsers: null, refiners: null };
-  const items = [new regExp.default(true), , , , ,];
-  const _default = new regExp.default(true);
-  items[1] = new _isNativeReflectConstruct.default();
-  const _default1 = new _isNativeReflectConstruct.default();
-  items[2] = new _isNativeReflectConstruct.default();
-  const _default2 = new _isNativeReflectConstruct.default();
-  items[3] = new _isNativeReflectConstruct.default();
-  const _default3 = new _isNativeReflectConstruct.default();
-  items[4] = new _isNativeReflectConstruct.default(flag);
-  const _default4 = new _isNativeReflectConstruct.default(flag);
-  items[5] = new _isNativeReflectConstruct.default();
-  obj.parsers = items;
-  const _default5 = new _isNativeReflectConstruct.default();
-  const items1 = [new _isNativeReflectConstruct.default()];
-  const _default6 = new _isNativeReflectConstruct.default();
-  items1[1] = new _isNativeReflectConstruct.default();
-  obj.refiners = items1;
-  return includeCommonConfiguration.includeCommonConfiguration(obj, flag);
-}
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
+const ZHHantDeadlineFormatParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      tmp = __esModule;
+      callResult = call(constructResult);
     }
-    return tmp;
-  };
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
 }
-function createCasualConfiguration() {
-  const tmp = createConfiguration(false);
-  const parsers = tmp.parsers;
-  parsers.unshift(new _isNativeReflectConstruct.default());
-  const parsers1 = tmp.parsers;
-  const _default = new _isNativeReflectConstruct.default();
-  parsers1.unshift(new _isNativeReflectConstruct.default());
-  const parsers2 = tmp.parsers;
-  const _default1 = new _isNativeReflectConstruct.default();
-  parsers2.unshift(new _isNativeReflectConstruct.default());
-  const parsers3 = tmp.parsers;
-  const _default2 = new _isNativeReflectConstruct.default();
-  parsers3.unshift(new _isNativeReflectConstruct.default());
-  const parsers4 = tmp.parsers;
-  const _default3 = new _isNativeReflectConstruct.default();
-  parsers4.unshift(new _isNativeReflectConstruct.default());
-  return tmp;
+const keys = Object.keys(_mod10010.NUMBER);
+const regExp = new RegExp(
+  "(\\d+|[" +
+    keys.join("") +
+    "]+|\u534A|\u5E7E)(?:\\s*)(?:\u500B)?(\u79D2(?:\u9418)?|\u5206\u9418|\u5C0F\u6642|\u9418|\u65E5|\u5929|\u661F\u671F|\u79AE\u62DC|\u6708|\u5E74)(?:(?:\u4E4B|\u904E)?\u5F8C|(?:\u4E4B)?\u5167)",
+  "i",
+);
+class ZHHantDeadlineFormatParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, ZHHantDeadlineFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(ZHHantDeadlineFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
 }
-fn(_mod10012);
-fn(_mod10014);
-fn(_mod10016);
-fn(_mod10017);
-fn(_mod10018);
-fn(_mod10019);
-fn(_mod10020);
-fn(_mod10021);
-fn(_mod10022);
-fn(_mod10023);
-fn(_mod10024);
-const regExp = fn(_mod9913);
-const _isNativeReflectConstruct = fn(_mod10025);
-const configuration = createConfiguration(false);
-let parsers = configuration.parsers;
-parsers.unshift(new _isNativeReflectConstruct.default());
-let parsers1 = configuration.parsers;
-let _default = new _isNativeReflectConstruct.default();
-let obj = {
-  enumerable: true,
-  get() {
-    return require("09880__.js").Chrono;
+_inherits(ZHHantDeadlineFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const entry = {
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   },
 };
-const obj2 = {
-  enumerable: true,
-  get() {
-    return require("ReferenceWithTimezone").ParsingResult;
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(createParsingResult, index) {
+      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
+      let num = parseInt(index[1]);
+      if (isNaN(num)) {
+        num = ZHHantDeadlineFormatParser(10010).zhStringToNumber(index[1]);
+      }
+      if (isNaN(num)) {
+        num = 3;
+        if ("\u5E7E" !== index[1]) {
+          num = 0.5;
+          if ("\u534A" !== tmp4) {
+            return null;
+          }
+        }
+      }
+      const obj = {};
+      if (index[2][0].match(/[日天星禮月年]/)) {
+        if ("\u65E5" != str3) {
+          if ("\u5929" != str3) {
+            if ("\u661F" != str3) {
+              if ("\u79AE" != str3) {
+                if ("\u6708" == str3) {
+                  obj.month = num;
+                } else if ("\u5E74" == str3) {
+                  obj.year = num;
+                }
+              }
+            }
+            obj.week = num;
+          }
+          const addDurationResult = ZHHantDeadlineFormatParser(9897).addDuration(createParsingResult.refDate, obj);
+          const start7 = parsingResult.start;
+          start7.assign("year", addDurationResult.getFullYear());
+          const start8 = parsingResult.start;
+          start8.assign("month", addDurationResult.getMonth() + 1);
+          const start9 = parsingResult.start;
+          start9.assign("day", addDurationResult.getDate());
+          return parsingResult;
+        }
+        obj.day = num;
+      } else {
+        if ("\u79D2" == str3) {
+          obj.second = num;
+        } else if ("\u5206" == str3) {
+          obj.minute = num;
+        } else {
+          let tmp6 = "\u5C0F" != str3;
+          if (tmp6) {
+            tmp6 = "\u9418" != str3;
+          }
+          if (!tmp6) {
+            obj.hour = num;
+          }
+        }
+        const addDurationResult1 = ZHHantDeadlineFormatParser(9897).addDuration(createParsingResult.refDate, obj);
+        const start = parsingResult.start;
+        start.imply("year", addDurationResult1.getFullYear());
+        const start2 = parsingResult.start;
+        start2.imply("month", addDurationResult1.getMonth() + 1);
+        const start3 = parsingResult.start;
+        start3.imply("day", addDurationResult1.getDate());
+        const start4 = parsingResult.start;
+        start4.assign("hour", addDurationResult1.getHours());
+        const start5 = parsingResult.start;
+        start5.assign("minute", addDurationResult1.getMinutes());
+        const start6 = parsingResult.start;
+        start6.assign("second", addDurationResult1.getSeconds());
+        return parsingResult;
+      }
+    },
   },
-};
-const obj3 = {
-  enumerable: true,
-  get() {
-    return require("ReferenceWithTimezone").ParsingComponents;
-  },
-};
-const obj4 = {
-  enumerable: true,
-  get() {
-    return require("ReferenceWithTimezone").ReferenceWithTimezone;
-  },
-};
-const obj5 = {
-  enumerable: true,
-  get() {
-    return require("Meridiem").Meridiem;
-  },
-};
-const obj6 = {
-  enumerable: true,
-  get() {
-    return require("Meridiem").Weekday;
-  },
-};
-parsers1.unshift(new _isNativeReflectConstruct.default());
-let parsers2 = configuration.parsers;
-let _default1 = new _isNativeReflectConstruct.default();
-parsers2.unshift(new _isNativeReflectConstruct.default());
-let parsers3 = configuration.parsers;
-let _default2 = new _isNativeReflectConstruct.default();
-parsers3.unshift(new _isNativeReflectConstruct.default());
-let parsers4 = configuration.parsers;
-let _default3 = new _isNativeReflectConstruct.default();
-parsers4.unshift(new _isNativeReflectConstruct.default());
-const chrono = new require("09880__.js").Chrono(configuration);
-const chrono1 = new require("09880__.js").Chrono(createConfiguration(true));
+];
 
-export const parse = function parse(arg0, arg1, arg2) {
-  const casual = exports.casual;
-  return casual.parse(arg0, arg1, arg2);
-};
-export const parseDate = function parseDate(arg0, arg1, arg2) {
-  const casual = exports.casual;
-  return casual.parseDate(arg0, arg1, arg2);
-};
-export { createCasualConfiguration };
-export { createConfiguration };
-export const Chrono = require("09880__.js").Chrono;
-export const ParsingResult = require("ReferenceWithTimezone").ParsingResult;
-export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
-export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
-export const Meridiem = require("Meridiem").Meridiem;
-export const Weekday = require("Meridiem").Weekday;
-export const casual = chrono;
-export const strict = chrono1;
+export default _createClass(ZHHantDeadlineFormatParser, items);

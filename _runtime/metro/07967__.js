@@ -1,12 +1,11 @@
 // _runtime/metro/07967__.js
-import _modDef7940 from "07940__.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _modDef7948 from "07948__.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const FeTurbulence = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,38 +24,46 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FeTurbulence {
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+class FeMergeNode {
   constructor() {
     self = this;
-    tmp = c2(this, FeTurbulence);
-    tmp2 = closure_4;
-    obj = closure_4(FeTurbulence);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_0(this, FeMergeNode);
+    items1 = [...items];
+    tmp2 = c2;
+    obj = c2(FeMergeNode);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.setNativeProps = () => {
+      const parent = props.props.parent;
+      if (parent) {
+        parent.forceUpdate();
+      }
+    };
+    return tmp3Result;
   }
 }
-_inherits(FeTurbulence, _modDef7940);
+_classCallCheck = FeMergeNode;
+_inherits(FeMergeNode, _modDef7948);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeTurbulence(7917).warnUnimplementedFilter();
     return null;
   },
 };
-const items = [entry];
-const importDefaultResultResult = _createClass(FeTurbulence, items);
-importDefaultResultResult.displayName = "FeTurbulence";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+let items = [entry];
+const importDefaultResultResult = _createClass(FeMergeNode, items);
+importDefaultResultResult.displayName = "FeMergeNode";
 
 export default importDefaultResultResult;

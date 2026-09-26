@@ -1,10 +1,7 @@
 // _runtime/metro/13856__.js
-import _mod13840 from "13840__.js";
-import _mod13857 from "13857__.js";
+import _mod17 from "00017__.js";
+import setupURLPolyfill_mod from "../13857_setupURLPolyfill.js";
 
-let closure_2 = _mod13840({}.hasOwnProperty);
-
-export default Object.hasOwn ||
-  function hasOwn(arg0, arg1) {
-    return closure_2(_mod13857(arg0), arg1);
-  };
+const Platform = _mod17.Platform;
+let setupURLPolyfill = setupURLPolyfill_mod;
+setupURLPolyfill = setupURLPolyfill.setupURLPolyfill();

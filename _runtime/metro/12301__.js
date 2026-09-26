@@ -1,270 +1,159 @@
 // _runtime/metro/12301__.js
-import _mod12294 from "12294__.js";
-import _mod12295 from "12295__.js";
-import _mod12302 from "12302__.js";
-import _mod12303 from "12303__.js";
-import _mod12304 from "12304__.js";
+import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-function addNonEnumerableProperty(arg0, arg1, value) {
+const DeepLinking = fn;
+function _isNativeReflectConstruct() {
   try {
-    const _Object = Object;
-    const obj = { value, writable: true, configurable: true };
-    Object.defineProperty(arg0, arg1, obj);
-  } catch (err) {
-    if (_mod12294.DEBUG_BUILD) {
-      const logger = _mod12295.logger;
-      const _HermesInternal = HermesInternal;
-      logger.log('Failed to add non-enumerable property "' + tmp2 + '" to object', tmp);
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-  }
-}
-function markFunctionWrapped(arg0, arg1) {
-  try {
-    let prototype = arg1.prototype;
-    if (!prototype) {
-      prototype = {};
-    }
-    arg1.prototype = prototype;
-    arg0.prototype = prototype;
-    addNonEnumerableProperty(arg0, "__sentry_original__", arg1);
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
   } catch (err) {}
 }
-function convertToPlainObject(type) {
-  if (obj.isError(type)) {
-    const error = { message: null, name: null, stack: null };
-    ({ message: obj6.message, name: obj6.name, stack: obj6.stack } = type);
-    if (typeof type === "object") {
-      if (null !== type) {
-        const obj2 = {};
-        let obj3 = obj2;
-        const keys = Object.keys();
-        if (keys !== undefined) {
-          obj3 = obj2;
-          while (keys[tmp] !== undefined) {
-            let _Object2 = Object;
-            let call2 = hasOwnProperty2.call;
-            if (!(typeof call2 === "unknown" ? hasOwnProperty2(tmp17) : call2(type, tmp17))) {
-              continue;
-            } else {
-              obj2[tmp17] = type[tmp17];
-              continue;
-            }
-            continue;
-          }
-        }
-      }
-      const merged = Object.assign(obj3);
-      return error;
+const Linking = fn(17).Linking;
+const jsx = fn(21).jsx;
+const re8 = /.*?:\/\//g;
+let closure_1;
+class DeepLinking {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = c2(this, DeepLinking);
+    items1 = [...items];
+    tmp2 = closure_4;
+    obj = closure_4(DeepLinking);
+    tmp3 = closure_3;
+    if (closure_7()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
     }
-    obj3 = {};
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.handleChange = (url) => {
+      closure_0.push(url.url);
+    };
+    return tmp3Result;
+  }
+}
+_inherits(DeepLinking, noop.Component);
+const entry = {
+  key: "push",
+  value: function push(str) {
+    const history = this.history;
+    history.push(str.replace(re8, ""));
+  },
+};
+let items = [entry, , ,];
+const entry1 = { key: "componentDidMount", value: null };
+closure_1 = asyncGeneratorStep(async function () {
+  const self = this;
+  c4 = 0;
+  c5 = 0;
+  return (async (arg0) => {
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_3 = self;
+            closure_2 = self;
+            closure_1 = tmp2;
+            closure_129_0 = undefined;
+            c4 = 1;
+            c5 = 1;
+            const obj4 = { value: c5.getInitialURL(), done: false };
+            return obj4;
+          }
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          closure_129_0 = value;
+          if (closure_129_0) {
+            closure_3.push(closure_129_0);
+          }
+          const listener = c5.addEventListener("url", closure_3.handleChange);
+          c5 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      } catch (tmp17) {
+        c5 = tmp;
+        throw tmp17;
+      }
+    }
+  })();
+});
+entry1.value = function componentDidMount() {
+  const self = this;
+  const apply = closure_1.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
-    if (tmp2Result.isEvent(type)) {
-      const obj4 = {
-        type: type.type,
-        target: serializeEventTarget(type.target),
-        currentTarget: serializeEventTarget(type.currentTarget),
-      };
-      if (typeof type === "object") {
-        if (null !== type) {
-          const obj5 = {};
-          let obj7 = obj5;
-          const keys1 = Object.keys();
-          if (keys1 !== undefined) {
-            obj7 = obj5;
-            while (keys1[tmp] !== undefined) {
-              let _Object = Object;
-              hasOwnProperty = Object.prototype.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              if (!(typeof call === "unknown" ? hasOwnProperty(tmp8) : call(type, tmp8))) {
-                continue;
-              } else {
-                obj5[tmp8] = type[tmp8];
-                continue;
-              }
-              continue;
-            }
-          }
-        }
-        const merged1 = Object.assign(obj7);
-        let isInstanceOfResult = typeof globalThis.CustomEvent !== "undefined";
-        if (typeof globalThis.CustomEvent !== "undefined") {
-          isInstanceOfResult = _mod12302.isInstanceOf(type, globalThis.CustomEvent);
-          const tmp2Result2 = _mod12302;
-        }
-        if (isInstanceOfResult) {
-          obj4.detail = type.detail;
-        }
-        return obj4;
-      }
-      obj7 = {};
-    } else {
-      return type;
-    }
-    tmp2Result = _mod12302;
+    applyArgumentsResult = apply(self, arguments);
   }
-  obj = _mod12302;
-}
-function serializeEventTarget(arg0) {
-  try {
-    if (obj.isElement(arg0)) {
-      let htmlTreeAsStringResult = _mod12303.htmlTreeAsString(arg0);
-      const tmp2Result = _mod12303;
-    } else {
-      const _Object = Object;
-      const call = toString.call;
-      if (typeof call === "unknown") {
-        htmlTreeAsStringResult = toString();
-      } else {
-        htmlTreeAsStringResult = call(arg0);
-      }
-    }
-    return htmlTreeAsStringResult;
-  } catch (err) {
-    return "<unknown>";
-  }
-}
-function _dropUndefinedKeys(arr, map) {
-  if (
-    (function isPojo(arr) {
-      if (obj.isPlainObject(arr)) {
-        try {
-          const _Object = Object;
-          const name = Object.getPrototypeOf(arr).constructor.name;
-          let tmp3 = !name;
-          if (name) {
-            tmp3 = "Object" === tmp2;
-          }
-          return tmp3;
-        } catch (err) {
-          return true;
-        }
-      } else {
-        return false;
-      }
-    })(arr)
-  ) {
-    value = map.get(arr);
-    if (undefined !== value) {
-      return value;
-    } else {
-      const obj = {};
-      const result = map.set(arr, obj);
-      let _Object = Object;
-      const ownPropertyNames = Object.getOwnPropertyNames(arr);
-      for (const item10030 of ownPropertyNames) {
-        if (undefined !== arg0[item10030]) {
-          obj[item10030] = _dropUndefinedKeys(arg0[item10030], arg1);
-        }
-        continue;
-      }
-      return obj;
-    }
-  } else {
-    const _Array = Array;
-    if (Array.isArray(arr)) {
-      value2 = map.get(arr);
-      if (undefined !== value2) {
-        return value2;
-      } else {
-        const items = [];
-        const result1 = map.set(arr, items);
-        const item = arr.forEach((item) => {
-          items.push(_dropUndefinedKeys(item, closure_0));
-        });
-        return items;
-      }
-    } else {
-      return arr;
-    }
-  }
-}
+  return applyArgumentsResult;
+};
+items[1] = entry1;
+items[2] = {
+  key: "componentWillUnmount",
+  value: function componentWillUnmount() {
+    const removed = Linking.removeEventListener("url", this.handleChange);
+  },
+};
+items[3] = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    return jsx(DeepLinking(closure_1[9]).__HistoryContext.Consumer, {
+      children(history) {
+        self.history = history;
+        return self.props.children || null;
+      },
+    });
+  },
+};
 
-export { addNonEnumerableProperty };
-export { convertToPlainObject };
-export const dropUndefinedKeys = function dropUndefinedKeys(arr) {
-  return _dropUndefinedKeys(arr, new Map());
-};
-export const extractExceptionKeysForMessage = function extractExceptionKeysForMessage(name) {
-  let num = maxValueLength;
-  if (maxValueLength === undefined) {
-    num = 40;
-  }
-  const keys = Object.keys(convertToPlainObject(name));
-  const sorted = keys.sort();
-  const first = keys[0];
-  if (first) {
-    if (first.length >= num) {
-      return _mod12304.truncate(first, num);
-    } else {
-      let length = keys.length;
-      if (length > 0) {
-        const substr = keys.slice(0, length);
-        const joined = substr.join(", ");
-        while (joined.length > num) {
-          length = length - 1;
-        }
-        let truncateResult = joined;
-        if (length !== keys.length) {
-          truncateResult = _mod12304.truncate(joined, num);
-        }
-        return truncateResult;
-      }
-      return "";
-    }
-  } else {
-    return "[object has no keys]";
-  }
-};
-export const fill = function fill(GLOBAL_OBJ, fetch, fn) {
-  if (fetch in GLOBAL_OBJ) {
-    const tmp6 = fn(GLOBAL_OBJ[fetch]);
-    if (typeof tmp6 === "function") {
-      markFunctionWrapped(tmp6, tmp5);
-    }
-    try {
-      GLOBAL_OBJ[fetch] = tmp6;
-    } catch (err) {
-      if (_mod12294.DEBUG_BUILD) {
-        const logger = _mod12295.logger;
-        const _HermesInternal = HermesInternal;
-        logger.log('Failed to replace method "' + tmp3 + '" in object', tmp2);
-      }
-    }
-  }
-};
-export const getOriginalFunction = function getOriginalFunction(__sentry_original__) {
-  return __sentry_original__.__sentry_original__;
-};
-export { markFunctionWrapped };
-export const objectify = function objectify(arg0) {
-  if ((null == arg0) === true) {
-    const _String = String;
-    let string = new String(arg0);
-  } else {
-    let tmp = typeof arg0 === "symbol";
-    if (typeof arg0 !== "symbol") {
-      tmp = typeof arg0 === "bigint";
-    }
-    if (tmp === true) {
-      const _Object = Object;
-      string = Object(arg0);
-    } else {
-      string = arg0;
-      if (obj.isPrimitive(arg0) === true) {
-        string = new arg0.constructor(arg0);
-      }
-      obj = _mod12302;
-    }
-  }
-  return string;
-};
-export const urlEncode = function urlEncode(arg0) {
-  const entries = Object.entries(arg0);
-  const mapped = entries.map((item) => {
-    [tmp, tmp2] = item;
-    return "" + encodeURIComponent(tmp) + "=" + encodeURIComponent(tmp2);
-  });
-  return mapped.join("&");
-};
+export default _createClass(DeepLinking, items);

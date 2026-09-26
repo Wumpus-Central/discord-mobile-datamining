@@ -1,91 +1,140 @@
 // _runtime/metro/10037__.js
-import AbstractParserWithWordBoundaryChecking from "../09891_AbstractParserWithWordBoundaryChecking.js";
+import _mod9924 from "09924__.js";
+import includeCommonConfiguration from "../09931_includeCommonConfiguration.js";
 import _mod10038 from "10038__.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
+import _mod10040 from "10040__.js";
+import _mod10041 from "10041__.js";
+import _mod10042 from "10042__.js";
+import _mod10043 from "10043__.js";
+import _mod10044 from "10044__.js";
+import _mod10045 from "10045__.js";
+import _mod10046 from "10046__.js";
 
-const UKTimeUnitWithinFormatParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-let closure_6 =
-  "(?:(?:\u043F\u0440\u0438\u0431\u043B\u0438\u0437\u043D\u043E|\u043E\u0440\u0456\u0454\u043D\u0442\u043E\u0432\u043D\u043E)\\s*(?:~\\s*)?)?(" +
-  _mod10038.TIME_UNITS_PATTERN +
-  ")" +
-  _mod10038.REGEX_PARTS.rightBoundary;
-class UKTimeUnitWithinFormatParser {
-  constructor() {
-    self = this;
-    tmp = c2(this, UKTimeUnitWithinFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(UKTimeUnitWithinFormatParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
+const require = globalThis.__r;
+
+function createConfiguration() {
+  if (flag === undefined) {
+    flag = true;
   }
+  let flag2 = arg1;
+  if (arg1 === undefined) {
+    flag2 = true;
+  }
+  const obj = { parsers: null, refiners: null };
+  const items = [new regExp.default(flag2), , , ,];
+  const _default = new regExp.default(flag2);
+  items[1] = new _isNativeReflectConstruct.default();
+  const _default1 = new _isNativeReflectConstruct.default();
+  items[2] = new _isNativeReflectConstruct.default();
+  const _default2 = new _isNativeReflectConstruct.default();
+  items[3] = new _isNativeReflectConstruct.default();
+  const _default3 = new _isNativeReflectConstruct.default();
+  items[4] = new _isNativeReflectConstruct.default();
+  obj.parsers = items;
+  const _default4 = new _isNativeReflectConstruct.default();
+  const items1 = [new _isNativeReflectConstruct.default()];
+  const _default5 = new _isNativeReflectConstruct.default();
+  items1[1] = new _isNativeReflectConstruct.default();
+  obj.refiners = items1;
+  return includeCommonConfiguration.includeCommonConfiguration(obj, flag);
 }
-_inherits(UKTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-const entry = {
-  key: "patternLeftBoundary",
-  value: function patternLeftBoundary() {
-    return UKTimeUnitWithinFormatParser(10038).REGEX_PARTS.leftBoundary;
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+function createCasualConfiguration() {
+  let flag = arg0;
+  if (arg0 === undefined) {
+    flag = true;
+  }
+  const tmp = createConfiguration(false, flag);
+  const parsers = tmp.parsers;
+  parsers.push(new _isNativeReflectConstruct.default());
+  const parsers1 = tmp.parsers;
+  const _default = new _isNativeReflectConstruct.default();
+  parsers1.push(new _isNativeReflectConstruct.default());
+  return tmp;
+}
+const regExp = fn(_mod9924);
+fn(_mod10038);
+fn(_mod10040);
+fn(_mod10041);
+fn(_mod10042);
+fn(_mod10043);
+fn(_mod10044);
+fn(_mod10045);
+const _isNativeReflectConstruct = fn(_mod10046);
+const configuration = createConfiguration(false, true);
+let parsers = configuration.parsers;
+parsers.push(new _isNativeReflectConstruct.default());
+let parsers1 = configuration.parsers;
+let _default = new _isNativeReflectConstruct.default();
+let obj = {
+  enumerable: true,
+  get() {
+    return require("09891__.js").Chrono;
   },
 };
-const items = [
-  entry,
-  {
-    key: "innerPattern",
-    value: function innerPattern(option) {
-      const _RegExp = RegExp;
-      if (option.option.forwardDate) {
-        let _RegExp1 = new _RegExp(closure_6, "i");
-      } else {
-        const _HermesInternal = HermesInternal;
-        const combined =
-          "(?:\u043F\u0440\u043E\u0442\u044F\u0433\u043E\u043C|\u043D\u0430 \u043F\u0440\u043E\u0442\u044F\u0437\u0456|\u043F\u0440\u043E\u0442\u044F\u0433\u043E\u043C|\u0443\u043F\u0440\u043E\u0434\u043E\u0432\u0436|\u0432\u043F\u0440\u043E\u0434\u043E\u0432\u0436)\\s*" +
-          closure_6;
-        _RegExp1 = new _RegExp(combined, UKTimeUnitWithinFormatParser(10038).REGEX_PARTS.flags);
-      }
-      return _RegExp1;
-    },
+const obj2 = {
+  enumerable: true,
+  get() {
+    return require("ReferenceWithTimezone").ParsingResult;
   },
-  {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const ParsingComponents = UKTimeUnitWithinFormatParser(9887).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(
-        reference.reference,
-        UKTimeUnitWithinFormatParser(10038).parseDuration(arg1[1]),
-      );
-    },
+};
+const obj3 = {
+  enumerable: true,
+  get() {
+    return require("ReferenceWithTimezone").ParsingComponents;
   },
-];
+};
+const obj4 = {
+  enumerable: true,
+  get() {
+    return require("ReferenceWithTimezone").ReferenceWithTimezone;
+  },
+};
+const obj5 = {
+  enumerable: true,
+  get() {
+    return require("Meridiem").Meridiem;
+  },
+};
+const obj6 = {
+  enumerable: true,
+  get() {
+    return require("Meridiem").Weekday;
+  },
+};
+parsers1.push(new _isNativeReflectConstruct.default());
+const chrono = new require("09891__.js").Chrono(configuration);
+const chrono1 = new require("09891__.js").Chrono(createConfiguration(true));
 
-export default _createClass(UKTimeUnitWithinFormatParser, items);
+export const parse = function parse(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parse(arg0, arg1, arg2);
+};
+export const parseDate = function parseDate(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parseDate(arg0, arg1, arg2);
+};
+export { createCasualConfiguration };
+export { createConfiguration };
+export const Chrono = require("09891__.js").Chrono;
+export const ParsingResult = require("ReferenceWithTimezone").ParsingResult;
+export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
+export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
+export const Meridiem = require("Meridiem").Meridiem;
+export const Weekday = require("Meridiem").Weekday;
+export const casual = chrono;
+export const strict = chrono1;

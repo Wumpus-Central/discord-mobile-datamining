@@ -1,22 +1,180 @@
 // _runtime/metro/01709__.js
-import resolvePath from "../01676_resolvePath.js";
-import _mod1677 from "01677__.js";
-import _mod1688 from "01688__.js";
-import _mod1710 from "01710__.js";
-import validateConfig from "../01711_validateConfig.js";
-import _mod1716 from "01716__.js";
-import _mod1717 from "01717__.js";
-import _mod1718 from "01718__.js";
-import _mod1719 from "01719__.js";
+import _createClassDefault from "00042__createClass.js";
+import _classCallCheck from "00041__classCallCheck.js";
 
-export const withClamp = _mod1710.withClamp;
-export const withDecay = validateConfig.withDecay;
-export const withDelay = _mod1716.withDelay;
-export const withRepeat = _mod1717.withRepeat;
-export const withSequence = _mod1718.withSequence;
-export const withSpring = _mod1719.withSpring;
-export const withStyleAnimation = resolvePath.withStyleAnimation;
-export const withTiming = _mod1688.withTiming;
-export const cancelAnimation = _mod1677.cancelAnimation;
-export const defineAnimation = _mod1677.defineAnimation;
-export const initialUpdaterRun = _mod1677.initialUpdaterRun;
+const BaseAnimationBuilder = arg1;
+const __initData = {
+  code: "function pnpm_BaseAnimationBuilderTs1(delay,animation){const{withDelay,reduceMotion}=this.__closure;return withDelay(delay,animation,reduceMotion);}",
+};
+const __initData2 = {
+  code: "function pnpm_BaseAnimationBuilderTs2(_,animation){const{getReduceMotionFromConfig,reduceMotion}=this.__closure;animation.reduceMotion=getReduceMotionFromConfig(reduceMotion);return animation;}",
+};
+class BaseAnimationBuilder {
+  constructor() {
+    tmp = c2(this, BaseAnimationBuilder);
+    this.reduceMotionV = closure_0(closure_1[2]).ReduceMotion.System;
+    this.randomizeDelay = false;
+    this.build = () => {
+      const reanimatedError = new BaseAnimationBuilder(dependencyMap[3]).ReanimatedError(
+        "Unimplemented method in child class.",
+      );
+      throw reanimatedError;
+    };
+    return;
+  }
+}
+const entry = {
+  key: "duration",
+  value: function duration(durationV) {
+    this.durationV = durationV;
+    return this;
+  },
+};
+const items = [
+  entry,
+  {
+    key: "delay",
+    value: function delay(delayV) {
+      this.delayV = delayV;
+      return this;
+    },
+  },
+  {
+    key: "withCallback",
+    value: function withCallback(callbackV) {
+      this.callbackV = callbackV;
+      return this;
+    },
+  },
+  {
+    key: "reduceMotion",
+    value: function reduceMotion(reduceMotionV) {
+      this.reduceMotionV = reduceMotionV;
+      return this;
+    },
+  },
+  {
+    key: "getDuration",
+    value: function getDuration() {
+      let num = this.durationV;
+      if (num == null) {
+        num = 300;
+      }
+      return num;
+    },
+  },
+  {
+    key: "randomDelay",
+    value: function randomDelay() {
+      this.randomizeDelay = true;
+      return this;
+    },
+  },
+  {
+    key: "getDelay",
+    value: function getDelay() {
+      const self = this;
+      if (this.randomizeDelay) {
+        const _Math = Math;
+        let num2 = self.delayV;
+        const random = Math.random();
+        if (num2 == null) {
+          num2 = 1000;
+        }
+        let num = random * num2;
+      } else {
+        num = self.delayV;
+        if (num == null) {
+          num = 0;
+        }
+      }
+      return num;
+    },
+  },
+  {
+    key: "getReduceMotion",
+    value: function getReduceMotion() {
+      return this.reduceMotionV;
+    },
+  },
+  {
+    key: "getDelayFunction",
+    value: function getDelayFunction() {
+      const self = this;
+      const reduceMotion = self.getReduceMotion();
+      if (tmp) {
+        const fn2 = function n(c12, tmpResult) {
+          return BaseAnimationBuilder(1710).withDelay(c12, tmpResult, reduceMotion);
+        };
+        const obj2 = { withDelay: reduceMotion(1710).withDelay, reduceMotion };
+        fn2.__closure = obj2;
+        fn2.__workletHash = 15544853359686;
+        fn2.__initData = __initData;
+        let fn = fn2;
+      } else {
+        fn = function t(arg0, arg1) {
+          arg1.reduceMotion = BaseAnimationBuilder(1678).getReduceMotionFromConfig(reduceMotion);
+          return arg1;
+        };
+        const obj = { getReduceMotionFromConfig: reduceMotion(1678).getReduceMotionFromConfig, reduceMotion };
+        fn.__closure = obj;
+        fn.__workletHash = 8417033392474;
+        fn.__initData = __initData2;
+      }
+      return fn;
+    },
+  },
+];
+const entry1 = {
+  key: "duration",
+  value: function duration(arg0) {
+    const instance = this.createInstance();
+    return instance.duration(arg0);
+  },
+};
+const items1 = [
+  entry1,
+  {
+    key: "delay",
+    value: function delay(arg0) {
+      const instance = this.createInstance();
+      return instance.delay(arg0);
+    },
+  },
+  {
+    key: "withCallback",
+    value: function withCallback(arg0) {
+      const instance = this.createInstance();
+      return instance.withCallback(arg0);
+    },
+  },
+  {
+    key: "reduceMotion",
+    value: function reduceMotion(arg0) {
+      const instance = this.createInstance();
+      return instance.reduceMotion(arg0);
+    },
+  },
+  {
+    key: "getDuration",
+    value: function getDuration() {
+      return 300;
+    },
+  },
+  {
+    key: "randomDelay",
+    value: function randomDelay() {
+      const instance = this.createInstance();
+      return instance.randomDelay();
+    },
+  },
+  {
+    key: "build",
+    value: function build() {
+      const instance = this.createInstance();
+      return instance.build();
+    },
+  },
+];
+
+export const BaseAnimationBuilder = _createClassDefault(BaseAnimationBuilder, items, items1);

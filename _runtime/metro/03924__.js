@@ -1,38 +1,177 @@
 // _runtime/metro/03924__.js
-const obj = { lessThanXSeconds: { one: { regular: "m\u00E9n\u011B ne\u017E sekunda", past: "p\u0159ed m\u00E9n\u011B ne\u017E sekundou", future: "za m\u00E9n\u011B ne\u017E sekundu" }, few: { regular: "m\u00E9n\u011B ne\u017E {{count}} sekundy", past: "p\u0159ed m\u00E9n\u011B ne\u017E {{count}} sekundami", future: "za m\u00E9n\u011B ne\u017E {{count}} sekundy" }, many: { regular: "m\u00E9n\u011B ne\u017E {{count}} sekund", past: "p\u0159ed m\u00E9n\u011B ne\u017E {{count}} sekundami", future: "za m\u00E9n\u011B ne\u017E {{count}} sekund" } }, xSeconds: { one: { regular: "sekunda", past: "p\u0159ed sekundou", future: "za sekundu" }, few: { regular: "{{count}} sekundy", past: "p\u0159ed {{count}} sekundami", future: "za {{count}} sekundy" }, many: { regular: "{{count}} sekund", past: "p\u0159ed {{count}} sekundami", future: "za {{count}} sekund" } }, halfAMinute: { type: "other", other: { regular: "p\u016Fl minuty", past: "p\u0159ed p\u016Fl minutou", future: "za p\u016Fl minuty" } }, lessThanXMinutes: { one: { regular: "m\u00E9n\u011B ne\u017E minuta", past: "p\u0159ed m\u00E9n\u011B ne\u017E minutou", future: "za m\u00E9n\u011B ne\u017E minutu" }, few: { regular: "m\u00E9n\u011B ne\u017E {{count}} minuty", past: "p\u0159ed m\u00E9n\u011B ne\u017E {{count}} minutami", future: "za m\u00E9n\u011B ne\u017E {{count}} minuty" }, many: { regular: "m\u00E9n\u011B ne\u017E {{count}} minut", past: "p\u0159ed m\u00E9n\u011B ne\u017E {{count}} minutami", future: "za m\u00E9n\u011B ne\u017E {{count}} minut" } }, xMinutes: { one: { regular: "minuta", past: "p\u0159ed minutou", future: "za minutu" }, few: { regular: "{{count}} minuty", past: "p\u0159ed {{count}} minutami", future: "za {{count}} minuty" }, many: { regular: "{{count}} minut", past: "p\u0159ed {{count}} minutami", future: "za {{count}} minut" } }, aboutXHours: { one: { regular: "p\u0159ibli\u017En\u011B hodina", past: "p\u0159ibli\u017En\u011B p\u0159ed hodinou", future: "p\u0159ibli\u017En\u011B za hodinu" }, few: { regular: "p\u0159ibli\u017En\u011B {{count}} hodiny", past: "p\u0159ibli\u017En\u011B p\u0159ed {{count}} hodinami", future: "p\u0159ibli\u017En\u011B za {{count}} hodiny" }, many: { regular: "p\u0159ibli\u017En\u011B {{count}} hodin", past: "p\u0159ibli\u017En\u011B p\u0159ed {{count}} hodinami", future: "p\u0159ibli\u017En\u011B za {{count}} hodin" } }, xHours: { one: { regular: "hodina", past: "p\u0159ed hodinou", future: "za hodinu" }, few: { regular: "{{count}} hodiny", past: "p\u0159ed {{count}} hodinami", future: "za {{count}} hodiny" }, many: { regular: "{{count}} hodin", past: "p\u0159ed {{count}} hodinami", future: "za {{count}} hodin" } }, xDays: { one: { regular: "den", past: "p\u0159ed dnem", future: "za den" }, few: { regular: "{{count}} dny", past: "p\u0159ed {{count}} dny", future: "za {{count}} dny" }, many: { regular: "{{count}} dn\u00ED", past: "p\u0159ed {{count}} dny", future: "za {{count}} dn\u00ED" } }, aboutXWeeks: { one: { regular: "p\u0159ibli\u017En\u011B t\u00FDden", past: "p\u0159ibli\u017En\u011B p\u0159ed t\u00FDdnem", future: "p\u0159ibli\u017En\u011B za t\u00FDden" }, few: { regular: "p\u0159ibli\u017En\u011B {{count}} t\u00FDdny", past: "p\u0159ibli\u017En\u011B p\u0159ed {{count}} t\u00FDdny", future: "p\u0159ibli\u017En\u011B za {{count}} t\u00FDdny" }, many: { regular: "p\u0159ibli\u017En\u011B {{count}} t\u00FDdn\u016F", past: "p\u0159ibli\u017En\u011B p\u0159ed {{count}} t\u00FDdny", future: "p\u0159ibli\u017En\u011B za {{count}} t\u00FDdn\u016F" } }, xWeeks: { one: { regular: "t\u00FDden", past: "p\u0159ed t\u00FDdnem", future: "za t\u00FDden" }, few: { regular: "{{count}} t\u00FDdny", past: "p\u0159ed {{count}} t\u00FDdny", future: "za {{count}} t\u00FDdny" }, many: { regular: "{{count}} t\u00FDdn\u016F", past: "p\u0159ed {{count}} t\u00FDdny", future: "za {{count}} t\u00FDdn\u016F" } }, aboutXMonths: { one: { regular: "p\u0159ibli\u017En\u011B m\u011Bs\u00EDc", past: "p\u0159ibli\u017En\u011B p\u0159ed m\u011Bs\u00EDcem", future: "p\u0159ibli\u017En\u011B za m\u011Bs\u00EDc" }, few: { regular: "p\u0159ibli\u017En\u011B {{count}} m\u011Bs\u00EDce", past: "p\u0159ibli\u017En\u011B p\u0159ed {{count}} m\u011Bs\u00EDci", future: "p\u0159ibli\u017En\u011B za {{count}} m\u011Bs\u00EDce" }, many: { regular: "p\u0159ibli\u017En\u011B {{count}} m\u011Bs\u00EDc\u016F", past: "p\u0159ibli\u017En\u011B p\u0159ed {{count}} m\u011Bs\u00EDci", future: "p\u0159ibli\u017En\u011B za {{count}} m\u011Bs\u00EDc\u016F" } }, xMonths: { one: { regular: "m\u011Bs\u00EDc", past: "p\u0159ed m\u011Bs\u00EDcem", future: "za m\u011Bs\u00EDc" }, few: { regular: "{{count}} m\u011Bs\u00EDce", past: "p\u0159ed {{count}} m\u011Bs\u00EDci", future: "za {{count}} m\u011Bs\u00EDce" }, many: { regular: "{{count}} m\u011Bs\u00EDc\u016F", past: "p\u0159ed {{count}} m\u011Bs\u00EDci", future: "za {{count}} m\u011Bs\u00EDc\u016F" } }, aboutXYears: { one: { regular: "p\u0159ibli\u017En\u011B rok", past: "p\u0159ibli\u017En\u011B p\u0159ed rokem", future: "p\u0159ibli\u017En\u011B za rok" }, few: { regular: "p\u0159ibli\u017En\u011B {{count}} roky", past: "p\u0159ibli\u017En\u011B p\u0159ed {{count}} roky", future: "p\u0159ibli\u017En\u011B za {{count}} roky" }, many: { regular: "p\u0159ibli\u017En\u011B {{count}} rok\u016F", past: "p\u0159ibli\u017En\u011B p\u0159ed {{count}} roky", future: "p\u0159ibli\u017En\u011B za {{count}} rok\u016F" } }, xYears: { one: { regular: "rok", past: "p\u0159ed rokem", future: "za rok" }, few: { regular: "{{count}} roky", past: "p\u0159ed {{count}} roky", future: "za {{count}} roky" }, many: { regular: "{{count}} rok\u016F", past: "p\u0159ed {{count}} roky", future: "za {{count}} rok\u016F" } }, overXYears: { one: { regular: "v\u00EDce ne\u017E rok", past: "p\u0159ed v\u00EDce ne\u017E rokem", future: "za v\u00EDce ne\u017E rok" }, few: { regular: "v\u00EDce ne\u017E {{count}} roky", past: "p\u0159ed v\u00EDce ne\u017E {{count}} roky", future: "za v\u00EDce ne\u017E {{count}} roky" }, many: { regular: "v\u00EDce ne\u017E {{count}} rok\u016F", past: "p\u0159ed v\u00EDce ne\u017E {{count}} roky", future: "za v\u00EDce ne\u017E {{count}} rok\u016F" } }, almostXYears: { one: { regular: "skoro rok", past: "skoro p\u0159ed rokem", future: "skoro za rok" }, few: { regular: "skoro {{count}} roky", past: "skoro p\u0159ed {{count}} roky", future: "skoro za {{count}} roky" }, many: { regular: "skoro {{count}} rok\u016F", past: "skoro p\u0159ed {{count}} roky", future: "skoro za {{count}} rok\u016F" } } };
+import 02120__ from "02120__.js";
 
-export default function formatDistance(arg0, arg1, addSuffix) {
-  if ("other" === obj[arg0].type) {
-    let many = tmp.other;
-  } else if (1 === arg1) {
-    many = tmp.one;
-  } else {
-    if (arg1 > 1) {
-      if (arg1 < 5) {
-        many = tmp.few;
+if (!module_2120) {
+  const obj2 = { default: module_2120 };
+  let obj = obj2;
+} else {
+  obj = module_2120;
+}
+const date = {
+  ordinalNumber(arg0, unit) {
+    const NumberResult = Number(arg0);
+    if (null != unit) {
+      unit = unit.unit;
+    }
+    if (0 === NumberResult) {
+      let str49 = "\u0435\u0432\u043E";
+      if ("quarter" !== unit) {
+        let tmp9 = "year" === unit;
+        if (!tmp9) {
+          tmp9 = "week" === unit;
+        }
+        if (!tmp9) {
+          tmp9 = "minute" === unit;
+        }
+        if (!tmp9) {
+          tmp9 = "second" === unit;
+        }
+        let str55 = "\u0435\u0432";
+        if (tmp9) {
+          str55 = "\u0435\u0432\u0430";
+        }
+        str49 = str55;
       }
+      return "-" + str49;
+    } else if (NumberResult % 1000 === 0) {
+      let str41 = "\u043D\u043E";
+      if ("quarter" !== unit) {
+        let tmp8 = "year" === unit;
+        if (!tmp8) {
+          tmp8 = "week" === unit;
+        }
+        if (!tmp8) {
+          tmp8 = "minute" === unit;
+        }
+        if (!tmp8) {
+          tmp8 = "second" === unit;
+        }
+        let str47 = "\u0435\u043D";
+        if (tmp8) {
+          str47 = "\u043D\u0430";
+        }
+        str41 = str47;
+      }
+      return NumberResult + "-" + str41;
+    } else if (NumberResult % 100 === 0) {
+      let str33 = "\u0442\u043D\u043E";
+      if ("quarter" !== unit) {
+        let tmp7 = "year" === unit;
+        if (!tmp7) {
+          tmp7 = "week" === unit;
+        }
+        if (!tmp7) {
+          tmp7 = "minute" === unit;
+        }
+        if (!tmp7) {
+          tmp7 = "second" === unit;
+        }
+        let str39 = "\u0442\u0435\u043D";
+        if (tmp7) {
+          str39 = "\u0442\u043D\u0430";
+        }
+        str33 = str39;
+      }
+      return NumberResult + "-" + str33;
+    } else {
+      const result = NumberResult % 100;
+      if (20 < result) {
+        const result1 = result % 10;
+        if (1 === result1) {
+          let str25 = "\u0432\u043E";
+          if ("quarter" !== unit) {
+            let tmp6 = "year" === unit;
+            if (!tmp6) {
+              tmp6 = "week" === unit;
+            }
+            if (!tmp6) {
+              tmp6 = "minute" === unit;
+            }
+            if (!tmp6) {
+              tmp6 = "second" === unit;
+            }
+            let str31 = "\u0432\u0438";
+            if (tmp6) {
+              str31 = "\u0432\u0430";
+            }
+            str25 = str31;
+          }
+          return NumberResult + "-" + str25;
+        } else if (2 === result1) {
+          let str17 = "\u0440\u043E";
+          if ("quarter" !== unit) {
+            let tmp5 = "year" === unit;
+            if (!tmp5) {
+              tmp5 = "week" === unit;
+            }
+            if (!tmp5) {
+              tmp5 = "minute" === unit;
+            }
+            if (!tmp5) {
+              tmp5 = "second" === unit;
+            }
+            let str23 = "\u0440\u0438";
+            if (tmp5) {
+              str23 = "\u0440\u0430";
+            }
+            str17 = str23;
+          }
+          return NumberResult + "-" + str17;
+        } else {
+          let str9 = "\u043C\u043E";
+          if ("quarter" !== unit) {
+            let tmp4 = "year" === unit;
+            if (!tmp4) {
+              tmp4 = "week" === unit;
+            }
+            if (!tmp4) {
+              tmp4 = "minute" === unit;
+            }
+            if (!tmp4) {
+              tmp4 = "second" === unit;
+            }
+            let str15 = "\u043C\u0438";
+            if (tmp4) {
+              str15 = "\u043C\u0430";
+            }
+            str9 = str15;
+          }
+          return NumberResult + "-" + str9;
+        }
+      }
+      let str = "\u0442\u043E";
+      if ("quarter" !== unit) {
+        let tmp3 = "year" === unit;
+        if (!tmp3) {
+          tmp3 = "week" === unit;
+        }
+        if (!tmp3) {
+          tmp3 = "minute" === unit;
+        }
+        if (!tmp3) {
+          tmp3 = "second" === unit;
+        }
+        let str7 = "\u0442\u0438";
+        if (tmp3) {
+          str7 = "\u0442\u0430";
+        }
+        str = str7;
+      }
+      return NumberResult + "-" + str;
     }
-    many = tmp.many;
-  }
-  addSuffix = undefined;
-  if (null != addSuffix) {
-    addSuffix = addSuffix.addSuffix;
-  }
-  if (null != addSuffix) {
-    const comparison = addSuffix.comparison;
-  }
-  if (true === addSuffix) {
-    if (-1 === comparison) {
-      let str = many.past;
+  },
+  era: obj.default({ values: { narrow: ["\u043F\u0440.\u043D.\u0435.", "\u043D.\u0435."], abbreviated: ["\u043F\u0440\u0435\u0434\u0438 \u043D. \u0435.", "\u043D. \u0435."], wide: ["\u043F\u0440\u0435\u0434\u0438 \u043D\u043E\u0432\u0430\u0442\u0430 \u0435\u0440\u0430", "\u043D\u043E\u0432\u0430\u0442\u0430 \u0435\u0440\u0430"] }, defaultWidth: "wide" }),
+  quarter: obj.default({
+    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["1-\u0432\u043E \u0442\u0440\u0438\u043C\u0435\u0441.", "2-\u0440\u043E \u0442\u0440\u0438\u043C\u0435\u0441.", "3-\u0442\u043E \u0442\u0440\u0438\u043C\u0435\u0441.", "4-\u0442\u043E \u0442\u0440\u0438\u043C\u0435\u0441."], wide: ["1-\u0432\u043E \u0442\u0440\u0438\u043C\u0435\u0441\u0435\u0447\u0438\u0435", "2-\u0440\u043E \u0442\u0440\u0438\u043C\u0435\u0441\u0435\u0447\u0438\u0435", "3-\u0442\u043E \u0442\u0440\u0438\u043C\u0435\u0441\u0435\u0447\u0438\u0435", "4-\u0442\u043E \u0442\u0440\u0438\u043C\u0435\u0441\u0435\u0447\u0438\u0435"] },
+    defaultWidth: "wide",
+    argumentCallback(arg0) {
+      return arg0 - 1;
     }
-    const _String = String;
-    return str.replace("{{count}}", String(arg1));
-  }
-  if (true === addSuffix) {
-    if (1 === comparison) {
-      str = many.future;
-    }
-  }
-  str = many.regular;
+  }),
+  month: obj.default({ values: { abbreviated: ["\u044F\u043D\u0443", "\u0444\u0435\u0432", "\u043C\u0430\u0440", "\u0430\u043F\u0440", "\u043C\u0430\u0439", "\u044E\u043D\u0438", "\u044E\u043B\u0438", "\u0430\u0432\u0433", "\u0441\u0435\u043F", "\u043E\u043A\u0442", "\u043D\u043E\u0435", "\u0434\u0435\u043A"], wide: ["\u044F\u043D\u0443\u0430\u0440\u0438", "\u0444\u0435\u0432\u0440\u0443\u0430\u0440\u0438", "\u043C\u0430\u0440\u0442", "\u0430\u043F\u0440\u0438\u043B", "\u043C\u0430\u0439", "\u044E\u043D\u0438", "\u044E\u043B\u0438", "\u0430\u0432\u0433\u0443\u0441\u0442", "\u0441\u0435\u043F\u0442\u0435\u043C\u0432\u0440\u0438", "\u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438", "\u043D\u043E\u0435\u043C\u0432\u0440\u0438", "\u0434\u0435\u043A\u0435\u043C\u0432\u0440\u0438"] }, defaultWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["\u041D", "\u041F", "\u0412", "\u0421", "\u0427", "\u041F", "\u0421"], short: ["\u043D\u0434", "\u043F\u043D", "\u0432\u0442", "\u0441\u0440", "\u0447\u0442", "\u043F\u0442", "\u0441\u0431"], abbreviated: ["\u043D\u0435\u0434", "\u043F\u043E\u043D", "\u0432\u0442\u043E", "\u0441\u0440\u044F", "\u0447\u0435\u0442", "\u043F\u0435\u0442", "\u0441\u044A\u0431"], wide: ["\u043D\u0435\u0434\u0435\u043B\u044F", "\u043F\u043E\u043D\u0435\u0434\u0435\u043B\u043D\u0438\u043A", "\u0432\u0442\u043E\u0440\u043D\u0438\u043A", "\u0441\u0440\u044F\u0434\u0430", "\u0447\u0435\u0442\u0432\u044A\u0440\u0442\u044A\u043A", "\u043F\u0435\u0442\u044A\u043A", "\u0441\u044A\u0431\u043E\u0442\u0430"] }, defaultWidth: "wide" }),
+  dayPeriod: obj.default({ values: { wide: { am: "\u043F\u0440\u0435\u0434\u0438 \u043E\u0431\u044F\u0434", pm: "\u0441\u043B\u0435\u0434 \u043E\u0431\u044F\u0434", midnight: "\u0432 \u043F\u043E\u043B\u0443\u043D\u043E\u0449", noon: "\u043D\u0430 \u043E\u0431\u044F\u0434", morning: "\u0441\u0443\u0442\u0440\u0438\u043D\u0442\u0430", afternoon: "\u0441\u043B\u0435\u0434\u043E\u0431\u0435\u0434", evening: "\u0432\u0435\u0447\u0435\u0440\u0442\u0430", night: "\u043F\u0440\u0435\u0437 \u043D\u043E\u0449\u0442\u0430" } }, defaultWidth: "wide" })
 };
+
+export default date;
 export default exports.default;

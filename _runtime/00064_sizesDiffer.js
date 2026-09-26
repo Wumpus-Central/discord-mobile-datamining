@@ -1,5 +1,5 @@
 // _runtime/00064_sizesDiffer.js
-let closure_0 = { width: "isArray", height: "paddingHorizontal" };
+let closure_0 = { width: "Array", height: "paddingHorizontal" };
 
 export default function sizesDiffer(arg0, arg1) {
   let size = arg0;

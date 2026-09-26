@@ -1,13 +1,12 @@
 // _runtime/metro/09988__.js
-import AbstractParserWithWordBoundaryChecking from "../09891_AbstractParserWithWordBoundaryChecking.js";
-import _mod9978 from "09978__.js";
+import AbstractParserWithWordBoundaryChecking from "../09902_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const NLTimeUnitAgoFormatParser = require;
+const NLTimeUnitWithinFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,32 +25,35 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const regExp = new RegExp("(" + _mod9978.TIME_UNITS_PATTERN + ")(?:geleden|voor|eerder)(?=(?:\\W|$))", "i");
-const regExp1 = new RegExp("(" + _mod9978.TIME_UNITS_PATTERN + ")geleden(?=(?:\\W|$))", "i");
-class NLTimeUnitAgoFormatParser {
-  constructor(arg0) {
+class NLTimeUnitWithinFormatParser {
+  constructor() {
     self = this;
-    tmp = c2(this, NLTimeUnitAgoFormatParser);
+    tmp = c2(this, NLTimeUnitWithinFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(NLTimeUnitAgoFormatParser);
+    obj = closure_4(NLTimeUnitWithinFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.strictMode = global;
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(NLTimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(NLTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
-    return this.strictMode ? regExp1 : regExp;
+    const regExp = new RegExp(
+      "(?:binnen|in|binnen de|voor)\\s*(" + NLTimeUnitWithinFormatParser(9989).TIME_UNITS_PATTERN + ")(?=\\W|$)",
+      "i",
+    );
+    return regExp;
   },
 };
 const items = [
@@ -59,14 +61,13 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const parseDurationResult = NLTimeUnitAgoFormatParser(9978).parseDuration(arg1[1]);
-      const ParsingComponents = NLTimeUnitAgoFormatParser(9887).ParsingComponents;
+      const ParsingComponents = NLTimeUnitWithinFormatParser(9898).ParsingComponents;
       return ParsingComponents.createRelativeFromReference(
         reference.reference,
-        NLTimeUnitAgoFormatParser(9886).reverseDuration(NLTimeUnitAgoFormatParser(9978).parseDuration(arg1[1])),
+        NLTimeUnitWithinFormatParser(9989).parseDuration(arg1[1]),
       );
     },
   },
 ];
 
-export default _createClass(NLTimeUnitAgoFormatParser, items);
+export default _createClass(NLTimeUnitWithinFormatParser, items);

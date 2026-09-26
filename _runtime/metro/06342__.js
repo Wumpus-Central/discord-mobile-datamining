@@ -1,6 +1,19 @@
 // _runtime/metro/06342__.js
-import _mod17 from "00017__.js";
+import _mod19 from "00019__.js";
+import _mod6294 from "06294__.js";
 
-const StyleSheet = _mod17.StyleSheet;
+_mod19.useCallback;
 
-export const styles = StyleSheet.create({ container: {} });
+export const useMappingHelper = () => {
+  const recyclerViewContext = _mod6294.useRecyclerViewContext();
+  const obj2 = { getMappingKey: null };
+  const items = [recyclerViewContext];
+  obj2.getMappingKey = useCallback((arg0, arg1) => {
+    let tmp = arg0;
+    if (recyclerViewContext) {
+      tmp = arg1;
+    }
+    return tmp;
+  }, items);
+  return obj2;
+};

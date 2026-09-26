@@ -1,82 +1,73 @@
 // _runtime/metro/06122__.js
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
+import handlerIDToTag from "../06077_handlerIDToTag.js";
+import convertToHandlerTag from "../06097_convertToHandlerTag.js";
+import RNGestureHandlerModuleDefault from "../06102_RNGestureHandlerModule.js";
+import transformIntoHandlerTags from "../06104_transformIntoHandlerTags.js";
 
-const Wrap = fn;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+const require = globalThis.__r;
+
+require = arg1;
+importDefault = arg2;
+const dependencyMap = arg6;
+
+export const updateHandlers = function updateHandlers(attachedGestures, prepare, gesturesToAttach) {
+  _require = attachedGestures;
+  prepare.prepare();
+  for (let num = 0; num < gesturesToAttach.length; num = num + 1) {
+    let tmp2 = attachedGestures.attachedGestures[num];
+    let obj = require("convertToHandlerTag");
+    let result = obj.checkGestureCallbacksForWorklets(tmp2);
+    if (gesturesToAttach[num].handlerTag !== tmp2.handlerTag) {
+      ({ handlerTag: gesturesToAttach[num].handlerTag, handlerTag: gesturesToAttach[num].handlers.handlerTag } = tmp2);
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-class Wrap {
-  constructor() {
-    self = this;
-    tmp = c2(this, Wrap);
-    tmp2 = closure_4;
-    obj = closure_4(Wrap);
-    tmp3 = closure_3;
-    if (metroRequire()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
   }
-}
-_inherits(Wrap, noop.Component);
-const entry = {
-  key: "render",
-  value: function render() {
-    try {
-      const self = this;
-      const Children = noop.Children;
-      const onlyResult = Children.only(this.props.children);
-      return noop.cloneElement(onlyResult, { collapsable: false }, onlyResult.props.children);
-    } catch (err) {
-      const _Error = Error;
-      const error = new Error(
-        Wrap(6073).tagMessage(
-          "GestureDetector got more than one view as a child. If you want the gesture to work on multiple views, wrap them with a common parent and attach the gesture to that view.",
-        ),
-      );
-      throw error;
+  attachedGestures = attachedGestures.attachedGestures;
+  require("ghQueueMicrotask").ghQueueMicrotask(() => {
+    if (attachedGestures.isMounted) {
+      let arr = attachedGestures;
+      if (attachedGestures === tmp.attachedGestures) {
+        let tmp21 = arr.length !== gesturesToAttach.length;
+        let num = 0;
+        let tmp22 = tmp21;
+        if (0 < gesturesToAttach.length) {
+          do {
+            let tmp3 = attachedGestures[num];
+            let tmp4 = tmp3.handlers.gestureId !== gesturesToAttach[num].handlers.gestureId;
+            let flag = tmp21;
+            if (tmp4) {
+              let tmp6 = gesturesToAttach[num].shouldUseReanimated || tmp3.shouldUseReanimated;
+              tmp4 = tmp6;
+            }
+            if (tmp4) {
+              flag = true;
+            }
+            tmp3.config = gesturesToAttach[num].config;
+            tmp3.handlers = gesturesToAttach[num].handlers;
+            let obj = RNGestureHandlerModuleDefault;
+            let obj2 = transformIntoHandlerTags;
+            let result = obj.setGestureHandlerConfig(
+              tmp3.handlerTag,
+              obj2.filterConfig(tmp3.config, convertToHandlerTag.ALLOWED_PROPS),
+            );
+            let obj3 = RNGestureHandlerModuleDefault;
+            let obj4 = convertToHandlerTag;
+            let configureRelationsResult = obj3.configureRelations(tmp3.handlerTag, obj4.extractGestureRelations(tmp3));
+            let obj5 = handlerIDToTag;
+            let registerHandlerResult = obj5.registerHandler(tmp3.handlerTag, tmp3, tmp3.config.testId);
+            num = num + 1;
+            tmp21 = flag;
+            tmp22 = flag;
+            arr = attachedGestures;
+          } while (num < gesturesToAttach.length);
+        }
+        if (attachedGestures.animatedHandlers) {
+          if (tmp22) {
+            const found = arr.filter((shouldUseReanimated) => shouldUseReanimated.shouldUseReanimated);
+            tmp23.animatedHandlers.value = found.map((handlers) => handlers.handlers);
+          }
+        }
+        const result1 = transformIntoHandlerTags.scheduleFlushOperations();
+      }
     }
-  },
+  });
 };
-const items = [entry];
-const importDefaultResultResult = _createClass(Wrap, items);
-const Reanimated = fn(6111).Reanimated;
-let animatedComponent;
-if (Reanimated != null) {
-  if (Reanimated.default != null) {
-    animatedComponent = _default.createAnimatedComponent(importDefaultResultResult);
-  }
-}
-if (animatedComponent == null) {
-  animatedComponent = importDefaultResultResult;
-}
-
-export const Wrap = importDefaultResultResult;
-export const AnimatedWrap = animatedComponent;

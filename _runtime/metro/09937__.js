@@ -1,12 +1,11 @@
 // _runtime/metro/09937__.js
-import AbstractParserWithWordBoundaryChecking from "../09891_AbstractParserWithWordBoundaryChecking.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
+import Filter from "../09914_Filter.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const DETimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,70 +24,68 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class DETimeUnitAgoFormatParser {
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+class MergeWeekdayComponentRefiner {
   constructor() {
     self = this;
-    tmp = c2(this, DETimeUnitAgoFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(DETimeUnitAgoFormatParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
+    tmp = closure_0(this, MergeWeekdayComponentRefiner);
+    tmp2 = c2;
+    obj = c2(MergeWeekdayComponentRefiner);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
     return tmp3(self, constructResult);
   }
 }
-_inherits(DETimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_classCallCheck = MergeWeekdayComponentRefiner;
+_inherits(MergeWeekdayComponentRefiner, Filter.MergingRefiner);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    const regExp = new RegExp(
-      "(?:\\s*((?:n\u00E4chste|kommende|folgende|letzte|vergangene|vorige|vor(?:her|an)gegangene)(?:s|n|m|r)?|vor|in)\\s*)?(" +
-        DETimeUnitAgoFormatParser(9930).NUMBER_PATTERN +
-        ")?(?:\\s*(n\u00E4chste|kommende|folgende|letzte|vergangene|vorige|vor(?:her|an)gegangene)(?:s|n|m|r)?)?\\s*(" +
-        DETimeUnitAgoFormatParser(9884).matchAnyPattern(DETimeUnitAgoFormatParser(9930).TIME_UNIT_DICTIONARY) +
-        ")",
-      "i",
-    );
-    return regExp;
+  key: "mergeResults",
+  value: function mergeResults(arg0, index, clone) {
+    const cloneResult = clone.clone();
+    cloneResult.index = index.index;
+    cloneResult.text = index.text + arg0 + cloneResult.text;
+    const start = cloneResult.start;
+    const start2 = index.start;
+    start.assign("weekday", start2.get("weekday"));
+    if (cloneResult.end) {
+      const end = cloneResult.end;
+      const start3 = index.start;
+      end.assign("weekday", start3.get("weekday"));
+    }
+    return cloneResult;
   },
 };
 const items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      let num = 1;
-      if (arg1[2]) {
-        num = DETimeUnitAgoFormatParser(9930).parseNumberPattern(arg1[2]);
+    key: "shouldMergeResults",
+    value: function shouldMergeResults(str, start, start2) {
+      start = start.start;
+      let result = start.isOnlyWeekdayComponent();
+      if (result) {
+        start2 = start.start;
+        result = !start2.isCertain("hour");
       }
-      const obj = {};
-      obj[DETimeUnitAgoFormatParser(9930).TIME_UNIT_DICTIONARY[arg1[4].toLowerCase(arg1[4])]] = num;
-      const formatted = arg1[1] || arg1[3] || "".toLowerCase();
-      if (formatted) {
-        let isMatch = /vor/.test(formatted);
-        if (!isMatch) {
-          isMatch = /letzte/.test(formatted);
-          const obj3 = /letzte/;
-        }
-        if (!isMatch) {
-          isMatch = /vergangen/.test(formatted);
-          const obj4 = /vergangen/;
-        }
-        let reverseDurationResult = obj;
-        if (isMatch) {
-          reverseDurationResult = DETimeUnitAgoFormatParser(9886).reverseDuration(obj);
-        }
-        const ParsingComponents = DETimeUnitAgoFormatParser(9887).ParsingComponents;
-        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+      if (result) {
+        const start3 = start2.start;
+        result = start3.isCertain("day");
       }
-      const str2 = arg1[1] || arg1[3] || "";
+      if (result) {
+        result = null != str.match(/^,?\s*$/);
+      }
+      return result;
     },
   },
 ];
 
-export default _createClass(DETimeUnitAgoFormatParser, items);
+export default _createClass(MergeWeekdayComponentRefiner, items);

@@ -1,62 +1,13 @@
 // _runtime/metro/06112__.js
-import RNGestureHandlerModuleDefault from "../06097_RNGestureHandlerModule.js";
+import get_ActivityIndicator from "00017__.js";
 
-const require = arg1;
-importDefault = fn;
-let dependencyMap = arg6;
-let obj = {
-  createGestureHandler(Handler, handlerTag, config) {
-    _require = Handler;
-    closure_1 = handlerTag;
-    dependencyMap = config;
-    const result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
-      let obj2 = closure_2;
-      if (!closure_2) {
-        obj2 = {};
-      }
-      RNGestureHandlerModuleDefault.createGestureHandler(closure_0, closure_1, obj2);
-    });
-  },
-  setGestureHandlerConfig(handlerTag, result) {
-    _require = handlerTag;
-    closure_1 = result;
-    result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
-      result = RNGestureHandlerModuleDefault.setGestureHandlerConfig(closure_0, closure_1);
-    });
-  },
-  updateGestureHandlerConfig: null,
-  dropGestureHandler: null,
-  configureRelations: null,
-  installUIRuntimeBindings: null,
-};
-fn = function n(arg0, arg1) {
-  const result = RNGestureHandlerModuleDefault.updateGestureHandlerConfig(arg0, arg1);
-  RNGestureHandlerModuleDefault.flushOperations();
-};
-fn.__closure = {
-  updateGestureHandlerConfig: fn(6097).updateGestureHandlerConfig,
-  flushOperations: fn(6097).flushOperations,
-};
-fn.__workletHash = 12442858879797;
-fn.__initData = {
-  code: "function pnpm_NativeProxyTs1(handlerTag,newConfig){const{updateGestureHandlerConfig,flushOperations}=this.__closure;updateGestureHandlerConfig(handlerTag,newConfig);flushOperations();}",
-};
-obj.updateGestureHandlerConfig = fn;
-obj.dropGestureHandler = function dropGestureHandler(handlerTag) {
-  _require = handlerTag;
-  const result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
-    RNGestureHandlerModuleDefault.dropGestureHandler(closure_0);
-  });
-};
-obj.configureRelations = function configureRelations(arg0, arg1) {
-  _require = arg0;
-  closure_1 = arg1;
-  const result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
-    RNGestureHandlerModuleDefault.configureRelations(closure_0, closure_1);
-  });
-};
-obj.installUIRuntimeBindings = function installUIRuntimeBindings() {
-  return RNGestureHandlerModuleDefault.installUIRuntimeBindings();
-};
+const NativeModules = get_ActivityIndicator.NativeModules;
+let PlatformConstants;
+if (NativeModules != null) {
+  PlatformConstants = NativeModules.PlatformConstants;
+}
+if (PlatformConstants == null) {
+  PlatformConstants = get_ActivityIndicator.Platform.constants;
+}
 
-export const NativeProxy = obj;
+export default PlatformConstants;

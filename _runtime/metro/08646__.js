@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stickers/native/images",
-  width: 77.5,
-  height: 72,
+  httpServerLocation: "/assets/images/native/custom_app_icons/BlushIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "215c6cf6cc2b74cad508b12b0e602266",
-  name: "empty",
+  hash: "def0b6d35103453cf4894471df6b84ad",
+  name: "BlushIcon",
   type: "png",
 });

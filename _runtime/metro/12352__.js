@@ -1,58 +1,72 @@
 // _runtime/metro/12352__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import _createClass from "00042__createClass.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
-import _wrapNativeSuper from "00158__wrapNativeSuper.js";
+import _mod12313 from "12313__.js";
+import _mod12340 from "12340__.js";
+import _mod12341 from "12341__.js";
+import _mod12345 from "12345__.js";
+import _mod12353 from "12353__.js";
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
+require = arg1;
+const dependencyMap = arg6;
+
+export const sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) {
+  if (obj.hasTracingEnabled(tracesSampler)) {
+    const isolationScope = _mod12340.getIsolationScope();
+    const obj2 = {};
+    const merged = Object.assign(normalizedRequest);
+    obj2.normalizedRequest =
+      normalizedRequest.normalizedRequest || isolationScope.getScopeData().sdkProcessingMetadata.normalizedRequest;
+    if (typeof tracesSampler.tracesSampler === "function") {
+      let num = tracesSampler.tracesSampler(obj2);
+    } else if (undefined !== obj2.parentSampled) {
+      num = obj2.parentSampled;
     } else {
-      callResult = call(constructResult);
+      num = 1;
+      if (undefined !== tracesSampler.tracesSampleRate) {
+        num = tracesSampler.tracesSampleRate;
+      }
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-class SentryError {
-  constructor(arg0) {
-    str = require;
-    if (require === undefined) {
-      str = "warn";
-    }
-    self = this;
-    tmp = closure_0(this, SentryError);
-    items = [];
-    items[0] = global;
-    tmp2 = c2;
-    obj = c2(SentryError);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+    const tmpResult = _mod12340;
+    const parseSampleRateResult = _mod12353.parseSampleRate(num);
+    if (undefined === parseSampleRateResult) {
+      if (_mod12341.DEBUG_BUILD) {
+        const logger3 = _mod12313.logger;
+        logger3.warn("[Tracing] Discarding transaction because of invalid sample rate.");
+      }
+      const items = [false];
+      let items3 = items;
+    } else if (parseSampleRateResult) {
+      const _Math = Math;
+      if (Math.random() < parseSampleRateResult) {
+        const items1 = [true, parseSampleRateResult];
+        let items2 = items1;
+      } else {
+        if (_mod12341.DEBUG_BUILD) {
+          const logger2 = _mod12313.logger;
+          const _Number = Number;
+          const _HermesInternal = HermesInternal;
+          logger2.log(
+            "[Tracing] Discarding transaction because it's not included in the random sample (sampling rate = " +
+              Number(num) +
+              ")",
+          );
+        }
+        items2 = [false, parseSampleRateResult];
+      }
     } else {
-      constructResult = obj.apply(self, items);
+      if (_mod12341.DEBUG_BUILD) {
+        const logger = _mod12313.logger;
+        let str = "a negative sampling decision was inherited or tracesSampleRate is set to 0";
+        if (typeof tracesSampler.tracesSampler === "function") {
+          str = "tracesSampler returned 0 or false";
+        }
+        logger.log(`[Tracing] Discarding transaction because ${str}`);
+      }
+      items3 = [false, parseSampleRateResult];
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.message = global;
-    tmp3Result.logLevel = str;
-    return tmp3Result;
+    return items3;
+  } else {
+    const items4 = [false];
+    return items4;
   }
-}
-_classCallCheck = SentryError;
-_inherits(SentryError, _wrapNativeSuper(Error));
-
-export const SentryError = _createClass(SentryError);
+  obj = _mod12345;
+};

@@ -1,219 +1,69 @@
 // _runtime/metro/12340__.js
-import stackParserFromStackParserOptions from "../12298_stackParserFromStackParserOptions.js";
-import _mod12301 from "12301__.js";
-import _mod12302 from "12302__.js";
-import memoBuilder from "../12341_memoBuilder.js";
-import _slicedToArray from "00032__.js";
+import _mod12314 from "12314__.js";
+import _mod12319 from "12319__.js";
+import _mod12331 from "12331__.js";
+import _mod12332 from "12332__.js";
+import ScopeClass from "../12334_ScopeClass.js";
 
-function normalize(arg0) {
-  let num = arg1;
-  if (arg1 === undefined) {
-    num = 100;
-  }
-  let num2 = arg2;
-  if (arg2 === undefined) {
-    num2 = Infinity;
-  }
-  try {
-    return visit("", arg0, num, num2);
-  } catch (tmp5) {
-    const obj = { ERROR: null };
-    const _HermesInternal = HermesInternal;
-    obj.ERROR = "**non-serializable** (" + tmp5 + ")";
-    return obj;
-  }
-}
-function visit(arg0, __sentry_skip_normalization__) {
-  let num = arg2;
-  if (arg2 === undefined) {
-    num = Infinity;
-  }
-  let num2 = arg3;
-  if (arg3 === undefined) {
-    num2 = Infinity;
-  }
-  let memoBuilderResult = arg4;
-  if (arg4 === undefined) {
-    memoBuilderResult = memoBuilder.memoBuilder();
-  }
-  _slicedToArray(memoBuilderResult, 2);
-  if (null != __sentry_skip_normalization__) {
-    const items = ["boolean", "string"];
-    if (!items.includes(typeof __sentry_skip_normalization__)) {
-      if (typeof __sentry_skip_normalization__ === "number") {
-        let _Number = Number;
-      }
-      let str = (function stringifyValue(arg0, _events) {
-        try {
-          if ("domain" === arg0) {
-            if (_events) {
-              if (typeof _events === "object") {
-                if (_events._events) {
-                  return "[Domain]";
-                }
-              }
-            }
-          }
-          if ("domainEmitter" === arg0) {
-            return "[DomainEmitter]";
-          } else {
-            if (undefined !== global) {
-              if (_events === global) {
-                return "[Global]";
-              }
-            }
-            const _window = window;
-            if (typeof window !== "undefined") {
-              const _window2 = window;
-              if (_events === window) {
-                return "[Window]";
-              }
-            }
-            const _document = document;
-            if (typeof document !== "undefined") {
-              const _document2 = document;
-              if (_events === document) {
-                return "[Document]";
-              }
-            }
-            if (obj.isVueViewModel(_events)) {
-              return "[VueViewModel]";
-            } else {
-              if (tmp4Result.isSyntheticEvent(_events)) {
-                return "[SyntheticEvent]";
-              } else {
-                if (typeof _events === "number") {
-                  const _Number = Number;
-                  if (!Number.isFinite(_events)) {
-                    const _HermesInternal = HermesInternal;
-                    return "[" + _events + "]";
-                  }
-                }
-                if (typeof _events === "function") {
-                  const _HermesInternal4 = HermesInternal;
-                  return "[Function: " + stackParserFromStackParserOptions.getFunctionName(_events) + "]";
-                } else if (typeof _events === "symbol") {
-                  const _String2 = String;
-                  const _HermesInternal3 = HermesInternal;
-                  return "[" + String(_events) + "]";
-                } else if (typeof _events === "bigint") {
-                  const _String = String;
-                  const _HermesInternal2 = HermesInternal;
-                  return "[BigInt: " + String(_events) + "]";
-                } else {
-                  const tmp9 = (function getConstructorName(_events) {
-                    const prototypeOf = Object.getPrototypeOf(_events);
-                    let str = "null prototype";
-                    if (prototypeOf) {
-                      str = prototypeOf.constructor.name;
-                    }
-                    return str;
-                  })(_events);
-                  const _HermesInternal6 = HermesInternal;
-                  if (obj4.test(tmp9)) {
-                    let combined = concat(tmp10, "]");
-                  } else {
-                    combined = concat(tmp10, "]");
-                  }
-                  return combined;
-                }
-              }
-              tmp4Result = _mod12302;
-            }
-            obj = _mod12302;
-          }
-        } catch (tmp7) {
-          const _HermesInternal5 = HermesInternal;
-          return "**non-serializable** (" + tmp7 + ")";
-        }
-      })(arg0, __sentry_skip_normalization__);
-      if (str.startsWith("[object ")) {
-        if (__sentry_skip_normalization__.__sentry_skip_normalization__) {
-          return __sentry_skip_normalization__;
-        } else {
-          if (typeof __sentry_skip_normalization__.__sentry_override_normalization_depth__ === "number") {
-            num = __sentry_skip_normalization__.__sentry_override_normalization_depth__;
-          }
-          if (0 === num) {
-            return str.replace("object ", "");
-          } else if (tmp6(__sentry_skip_normalization__)) {
-            return "[Circular ~]";
-          } else {
-            if (__sentry_skip_normalization__) {
-              if (typeof __sentry_skip_normalization__.toJSON === "function") {
-                try {
-                  return visit("", __sentry_skip_normalization__.toJSON(), num - 1, num2, tmp8);
-                } catch (err) {}
-              }
-            }
-            const _Array = Array;
-            const tmp14 = Array.isArray(__sentry_skip_normalization__) ? [] : {};
-            const convertToPlainObjectResult = _mod12301.convertToPlainObject(__sentry_skip_normalization__);
-            const keys = Object.keys();
-            if (keys !== undefined) {
-              while (keys[tmp] !== undefined) {
-                let _Object = Object;
-                hasOwnProperty = Object.prototype.hasOwnProperty;
-                let call = hasOwnProperty.call;
-                let tmp28 = tmp21;
-                if (!(typeof call === "unknown" ? hasOwnProperty(tmp21) : call(convertToPlainObjectResult, tmp21))) {
-                  continue;
-                } else {
-                  if (tmp20 >= num2) {
-                    let str4 = "[MaxProperties ~]";
-                    tmp14[tmp21] = "[MaxProperties ~]";
-                    break;
-                  } else {
-                    tmp14[tmp21] = visit(tmp28, convertToPlainObjectResult[tmp21], num - 1, num2, tmp8);
-                    let num6 = tmp20 + 1;
-                    continue;
-                  }
-                  break;
-                }
-                break;
-              }
-            }
-            tmp7(__sentry_skip_normalization__);
-            return tmp14;
-          }
-        }
-      } else {
-        return str;
-      }
+require = arg1;
+const dependencyMap = arg6;
+
+export const getClient = function getClient() {
+  const mainCarrier = _mod12331.getMainCarrier();
+  const asyncContextStrategy = _mod12332.getAsyncContextStrategy(mainCarrier);
+  const currentScope = asyncContextStrategy.getCurrentScope();
+  return currentScope.getClient();
+};
+export const getCurrentScope = function getCurrentScope() {
+  const mainCarrier = _mod12331.getMainCarrier();
+  const asyncContextStrategy = _mod12332.getAsyncContextStrategy(mainCarrier);
+  return asyncContextStrategy.getCurrentScope();
+};
+export const getGlobalScope = function getGlobalScope() {
+  return _mod12314.getGlobalSingleton("globalScope", () => {
+    const scope = new ScopeClass.Scope();
+    return scope;
+  });
+};
+export const getIsolationScope = function getIsolationScope() {
+  const mainCarrier = _mod12331.getMainCarrier();
+  const asyncContextStrategy = _mod12332.getAsyncContextStrategy(mainCarrier);
+  return asyncContextStrategy.getIsolationScope();
+};
+export const getTraceContextFromScope = function getTraceContextFromScope(getPropagationContext) {
+  const propagationContext = getPropagationContext.getPropagationContext();
+  ({ traceId, spanId, parentSpanId } = propagationContext);
+  return _mod12319.dropUndefinedKeys({ trace_id, span_id, parent_span_id });
+};
+export const withIsolationScope = function withIsolationScope() {
+  const items = [...arguments];
+  const mainCarrier = _mod12331.getMainCarrier();
+  const asyncContextStrategy = _mod12332.getAsyncContextStrategy(mainCarrier);
+  if (2 === items.length) {
+    [tmp2, tmp3] = items;
+    if (tmp2) {
+      let result = asyncContextStrategy.withSetIsolationScope(tmp2, tmp3);
+    } else {
+      result = asyncContextStrategy.withIsolationScope(tmp3);
     }
+    return result;
+  } else {
+    return asyncContextStrategy.withIsolationScope(items[0]);
   }
-  return __sentry_skip_normalization__;
-}
-function normalizeToSize(arg0) {
-  let num = arg1;
-  if (arg1 === undefined) {
-    num = 3;
+};
+export const withScope = function withScope() {
+  const items = [...arguments];
+  const mainCarrier = _mod12331.getMainCarrier();
+  const asyncContextStrategy = _mod12332.getAsyncContextStrategy(mainCarrier);
+  if (2 === items.length) {
+    [tmp2, tmp3] = items;
+    if (tmp2) {
+      let withSetScopeResult = asyncContextStrategy.withSetScope(tmp2, tmp3);
+    } else {
+      withSetScopeResult = asyncContextStrategy.withScope(tmp3);
+    }
+    return withSetScopeResult;
+  } else {
+    return asyncContextStrategy.withScope(items[0]);
   }
-  let num2 = arg2;
-  if (arg2 === undefined) {
-    num2 = 102400;
-  }
-  let tmp = normalize(arg0, num);
-  if (~-str.split(/%..|./).length > num2) {
-    tmp = normalizeToSize(arg0, num - 1, num2);
-  }
-  return tmp;
-}
-
-export { normalize };
-export { normalizeToSize };
-export const normalizeUrlToBase = function normalizeUrlToBase(arg0, str) {
-  const replaced = str.replace(/\\/g, "/");
-  try {
-    const _decodeURI = decodeURI;
-    str = decodeURI(arg0);
-    const str2 = str.replace(/\\/g, "/");
-    const _RegExp = RegExp;
-    const _HermesInternal = HermesInternal;
-    const regExp = new RegExp("(file://)?/*" + tmp2 + "/*", "ig");
-    return str
-      .replace(/\\/g, "/")
-      .replace(/webpack:\/?/g, "")
-      .replace(regExp, "app:///");
-  } catch (err) {}
 };

@@ -1,45 +1,67 @@
 // _runtime/metro/05506__.js
-import _mod5507 from "05507__.js";
-import _mod5509 from "05509__.js";
+import _mod5498 from "05498__.js";
+import _mod5499 from "05499__.js";
 
-const self = this;
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let fn = self;
-  if (self) {
-    fn = self.__exportStar;
+require = arg1;
+const dependencyMap = arg6;
+
+export const isAVI = function isAVI(fileChunk) {
+  fileChunk = _mod5498.getFileChunk(fileChunk);
+  const FileTypes = _mod5499.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "avi");
+};
+export const isFLV = function isFLV(fileChunk) {
+  fileChunk = _mod5498.getFileChunk(fileChunk);
+  const FileTypes = _mod5499.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "flv") && _mod5498.isFlvStringIncluded(fileChunk);
+};
+export const isM4V = function isM4V(fileChunk) {
+  fileChunk = _mod5498.getFileChunk(fileChunk);
+  const FileTypes = _mod5499.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "m4v") && _mod5498.isftypStringIncluded(fileChunk);
+};
+export const isMKV = function isMKV(fileChunk) {
+  fileChunk = _mod5498.getFileChunk(fileChunk, 64);
+  const FileTypes = _mod5499.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "mkv") && "mkv" === _mod5498.findMatroskaDocTypeElements(fileChunk);
+};
+export const isMOV = function isMOV(fileChunk) {
+  fileChunk = _mod5498.getFileChunk(fileChunk);
+  const FileTypes = _mod5499.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "mov");
+};
+export const isMP4 = function isMP4(fileChunk, excludeSimilarTypes) {
+  fileChunk = _mod5498.getFileChunk(fileChunk);
+  const FileTypes = _mod5499.FileTypes;
+  let checkByFileTypeResult = FileTypes.checkByFileType(fileChunk, "mp4");
+  if (!checkByFileTypeResult) {
+    excludeSimilarTypes = undefined;
+    if (null != excludeSimilarTypes) {
+      excludeSimilarTypes = excludeSimilarTypes.excludeSimilarTypes;
+    }
+    let tmp8 = !excludeSimilarTypes;
+    if (!excludeSimilarTypes) {
+      const fileChunk1 = _mod5498.getFileChunk(fileChunk);
+      const FileTypes2 = _mod5499.FileTypes;
+      tmp8 = FileTypes2.checkByFileType(fileChunk1, "m4v") && _mod5498.isftypStringIncluded(fileChunk1);
+      const tmp10 = FileTypes2.checkByFileType(fileChunk1, "m4v") && _mod5498.isftypStringIncluded(fileChunk1);
+    }
+    checkByFileTypeResult = tmp8;
   }
-  if (!fn) {
-    fn = (obj, exports) => {
-      for (const key10007 in arg0) {
-        let tmp6 = "default" === key10007;
-        if (tmp6) {
-          if (tmp6) {
-            continue;
-          } else {
-            let tmp4 = self2(arg1, arg0, key10007);
-            continue;
-          }
-          continue;
-        } else {
-          let _Object = Object;
-          hasOwnProperty = Object.prototype.hasOwnProperty;
-          let call = hasOwnProperty.call;
-          if (typeof call === "unknown") {
-            let hasOwnPropertyResult = hasOwnProperty(key10007);
-          } else {
-            hasOwnPropertyResult = call(arg1, key10007);
-          }
-        }
-      }
-    };
-  }
-  const _Object2 = Object;
-  fn(_mod5507, exports);
-  fn(_mod5509, exports);
-} else {
-  let _Object = Object;
-}
+  return checkByFileTypeResult;
+};
+export const isOGG = function isOGG(fileChunk) {
+  fileChunk = _mod5498.getFileChunk(fileChunk);
+  const FileTypes = _mod5499.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "ogg");
+};
+export const isSWF = function isSWF(fileChunk) {
+  fileChunk = _mod5498.getFileChunk(fileChunk);
+  const FileTypes = _mod5499.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "swf");
+};
+export const isWEBM = function isWEBM(fileChunk) {
+  fileChunk = _mod5498.getFileChunk(fileChunk, 64);
+  const FileTypes = _mod5499.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "webm") && "webm" === _mod5498.findMatroskaDocTypeElements(fileChunk);
+};

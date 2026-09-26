@@ -1,28 +1,23 @@
 // _runtime/metro/12371__.js
-import eventFromMessage from "../12355_eventFromMessage.js";
-import _mod12372 from "12372__.js";
-import setupIntegration from "12351__.js";
+import _mod12327 from "12327__.js";
+import _mod12357 from "12357__.js";
 
-export const linkedErrorsIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
+require = arg1;
+const dependencyMap = arg6;
+
+export const createClientReportEnvelope = function createClientReportEnvelope(discarded_events, dsn, arg2) {
+  let result = arg2;
+  const items = [{ type: "client_report" }];
+  if (!arg2) {
+    result = _mod12327.dateTimestampInSeconds();
   }
-  closure_0 = obj.limit || 5;
-  closure_1 = obj.key || "cause";
-  return {
-    name: "LinkedErrors",
-    preprocessEvent(exception, originalException, getOptions) {
-      const options = getOptions.getOptions();
-      const result = _mod12372.applyAggregateErrorsToEvent(
-        eventFromMessage.exceptionFromError,
-        options.stackParser,
-        options.maxValueLength,
-        closure_1,
-        closure_0,
-        exception,
-        originalException,
-      );
-    },
-  };
-});
+  items[1] = { timestamp: result, discarded_events };
+  if (dsn) {
+    const obj3 = { dsn };
+    let obj4 = obj3;
+  } else {
+    obj4 = {};
+  }
+  const items1 = [items];
+  return _mod12357.createEnvelope(obj4, items1);
+};

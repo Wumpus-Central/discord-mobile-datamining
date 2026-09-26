@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/video_calls/native/images",
-  width: 16,
-  height: 16,
-  scales: [2, 3],
-  hash: "e75d6cb3291053e29f69fac93519aa0b",
-  name: "spectator",
+  httpServerLocation: "/assets/modules/nuf_channels/native/images",
+  width: 38,
+  height: 76,
+  scales: [1],
+  hash: "0874b569caae69893f5d6cd4e4046089",
+  name: "star_green",
   type: "png",
 });

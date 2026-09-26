@@ -1,17 +1,30 @@
 // _runtime/metro/13860__.js
-import _mod13851 from "13851__.js";
-import _mod13859 from "13859__.js";
-import _mod13861 from "13861__.js";
-import _mod13862 from "13862__.js";
+import _mod17 from "00017__.js";
+import replaceByteInByteSequence from "../13861_replaceByteInByteSequence.js";
 
-export default _mod13851
-  ? (arg0) => typeof arg0 === "symbol"
-  : (arg0) => {
-      const tmp3 = _mod13861("Symbol");
-      let tmpResultResult = _mod13859(tmp3);
-      if (tmpResultResult) {
-        tmpResultResult = _mod13862(tmp3.prototype, Object(arg0));
-        const tmpResult = _mod13862;
-      }
-      return tmpResultResult;
-    };
+let closure_0 = null;
+const BlobModule = _mod17.NativeModules.BlobModule;
+let tmp2 = BlobModule;
+if (BlobModule) {
+  tmp2 = typeof BlobModule.BLOB_URI_SCHEME === "string";
+}
+if (tmp2) {
+  closure_0 = `${BlobModule.BLOB_URI_SCHEME}:`;
+  if (typeof BlobModule.BLOB_URI_HOST === "string") {
+    let _HermesInternal = HermesInternal;
+    closure_0 = `${BlobModule.BLOB_URI_SCHEME}:` + "//" + BlobModule.BLOB_URI_HOST + "/";
+  }
+}
+replaceByteInByteSequence.URL.createObjectURL = function createObjectURL(data) {
+  if (null === closure_0) {
+    const _Error = Error;
+    const error = new Error("Cannot create URL for blob!");
+    throw error;
+  } else {
+    const _HermesInternal = HermesInternal;
+    return "" + closure_0 + data.data.blobId + "?offset=" + data.data.offset + "&size=" + data.size;
+  }
+};
+replaceByteInByteSequence.URL.revokeObjectURL = function revokeObjectURL(arg0) {};
+
+export const URL = replaceByteInByteSequence.URL;

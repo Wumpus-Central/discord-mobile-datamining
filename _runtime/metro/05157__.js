@@ -1,18 +1,28 @@
 // _runtime/metro/05157__.js
-import _mod1281 from "01281__.js";
-import _mod5105 from "05105__.js";
 
-let closure_2 = _mod1281("%Object.isExtensible%", true);
-
-export default _mod1281("%Object.preventExtensions%", true)
-  ? function IsExtensible(arg0) {
-      const tmp = _mod5105(arg0);
-      let tmp2 = !tmp;
-      if (!tmp) {
-        tmp2 = closure_2(arg0);
-      }
-      return tmp2;
+export default function fromPropertyDescriptor(__Value__) {
+  if (undefined === __Value__) {
+    return __Value__;
+  } else {
+    const obj = {};
+    if ("[[Value]]" in __Value__) {
+      obj.value = __Value__["[[Value]]"];
     }
-  : function IsExtensible(arg0) {
-      return !_mod5105(arg0);
-    };
+    if ("[[Writable]]" in __Value__) {
+      obj.writable = __Value__["[[Writable]]"];
+    }
+    if ("[[Get]]" in __Value__) {
+      obj.get = __Value__["[[Get]]"];
+    }
+    if ("[[Set]]" in __Value__) {
+      obj.set = __Value__["[[Set]]"];
+    }
+    if ("[[Enumerable]]" in __Value__) {
+      obj.enumerable = __Value__["[[Enumerable]]"];
+    }
+    if ("[[Configurable]]" in __Value__) {
+      obj.configurable = __Value__["[[Configurable]]"];
+    }
+    return obj;
+  }
+}

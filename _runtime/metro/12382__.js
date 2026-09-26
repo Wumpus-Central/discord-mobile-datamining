@@ -1,15 +1,11 @@
 // _runtime/metro/12382__.js
 
-export const severityLevelFromString = function severityLevelFromString(level) {
-  let str = "warning";
-  if ("warn" !== level) {
-    const items = ["fatal", "error", "warning", "log", "info", "debug"];
-    let str2 = "log";
-    if (items.includes(level)) {
-      str2 = level;
-    }
-    str = str2;
-  }
-  return str;
+export const parameterize = function parameterize(join) {
+  const substr = [...arguments].slice();
+  const items = [join, ...substr];
+  const string = new String(String.raw.apply(items));
+  const str = join.join("\0");
+  string.__sentry_template_string__ = join.join("\0").replace(/%/g, "%%").replace(/\0/g, "%s");
+  string.__sentry_template_values__ = substr;
+  return string;
 };
-export const validSeverityLevels = ["fatal", "error", "warning", "log", "info", "debug"];

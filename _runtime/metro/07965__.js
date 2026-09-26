@@ -1,11 +1,14 @@
 // _runtime/metro/07965__.js
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _modDef7948 from "07948__.js";
+import _modDef7966 from "07966__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-const FeSpotLight = fn;
+const FeMerge = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,14 +27,16 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FeSpotLight {
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class FeMerge {
   constructor() {
     self = this;
-    tmp = c2(this, FeSpotLight);
-    tmp2 = closure_4;
-    obj = closure_4(FeSpotLight);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_3(this, FeMerge);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(FeMerge);
+    tmp3 = closure_4;
+    if (closure_7()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -44,17 +49,32 @@ class FeSpotLight {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeSpotLight, fn(19).Component);
+_inherits(FeMerge, _modDef7948);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeSpotLight(7917).warnUnimplementedFilter();
-    return null;
+    const self = this;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    };
+    const merged = Object.assign(FeMerge(7947).extractFilter(this.props));
+    const obj2 = FeMerge(7947);
+    const merged1 = Object.assign(FeMerge(7947).extractFeMerge(this.props, this));
+    return (
+      <tmp
+        ref={function ref(arg0) {
+          return self.refMethod(arg0);
+        }}
+      />
+    );
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeSpotLight, items);
-importDefaultResultResult.displayName = "FeSpotLight";
+const importDefaultResultResult = _createClass(FeMerge, items);
+importDefaultResultResult.displayName = "FeMerge";
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
 importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

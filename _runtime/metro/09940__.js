@@ -1,14 +1,14 @@
 // _runtime/metro/09940__.js
-import AbstractParserWithWordBoundaryChecking from "../09891_AbstractParserWithWordBoundaryChecking.js";
-import now from "../09908_now.js";
+import repeatedTimeunitPattern from "../09895_repeatedTimeunitPattern.js";
+import AbstractParserWithWordBoundaryChecking from "../09902_AbstractParserWithWordBoundaryChecking.js";
+import _mod9941 from "09941__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-let self = this;
-const FRCasualDateParser = require;
+const DEWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,132 +27,70 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let __setModuleDefault = self;
-  if (self) {
-    __setModuleDefault = self.__setModuleDefault;
+const regExp = new RegExp(
+  "(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:a[mn]\\s*?)?(?:(diese[mn]|letzte[mn]|n(?:\u00E4|ae)chste[mn])\\s*)?(" +
+    repeatedTimeunitPattern.matchAnyPattern(_mod9941.WEEKDAY_DICTIONARY) +
+    ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(diese|letzte|n(?:\u00E4|ae)chste)\\s*woche)?(?=\\W|$)",
+  "i",
+);
+class DEWeekdayParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, DEWeekdayParser);
+    tmp2 = closure_4;
+    obj = closure_4(DEWeekdayParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
   }
-  if (__setModuleDefault) {
-    let fn = self;
-    if (self) {
-      fn = self.__importStar;
-    }
-    if (!fn) {
-      fn = function c(arg0) {
-        fn = Object.getOwnPropertyNames;
-        if (!fn) {
-          fn = (obj) => {
-            const items = [];
-            for (const key10005 in arg0) {
-              let _Object = Object;
-              hasOwnProperty = Object.prototype.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              if (typeof call === "unknown") {
-                let hasOwnPropertyResult = hasOwnProperty(key10005);
-              } else {
-                hasOwnPropertyResult = call(arg0, key10005);
-              }
-              if (!hasOwnPropertyResult) {
-                continue;
-              } else {
-                items[items.length] = key10005;
-                continue;
-              }
-              continue;
-            }
-            return items;
-          };
-        }
-        return fn(arg0);
-      };
-      fn = (__esModule) => {
-        if (__esModule) {
-          if (__esModule.__esModule) {
-            return __esModule;
-          }
-        }
-        const obj = {};
-        if (null != __esModule) {
-          const arr = fn(__esModule);
-          for (let num = 0; num < arr.length; num = num + 1) {
-            if ("default" !== arr[num]) {
-              let tmp4 = self2(obj, __esModule, arr[num]);
-            }
-          }
-        }
-        __setModuleDefault(obj, __esModule);
-        return obj;
-      };
-    }
-    const _Object3 = Object;
-    let closure_9 = fn(now);
-    class FRCasualDateParser {
-      constructor() {
-        self = this;
-        tmp = c2(this, FRCasualDateParser);
-        tmp2 = closure_4;
-        obj = closure_4(FRCasualDateParser);
-        tmp3 = closure_3;
-        if (hasOwnProperty()) {
-          tmp7 = globalThis;
-          _Reflect = Reflect;
-          tmp8 = arguments;
-          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-        } else {
-          tmp4 = arguments;
-          tmp5 = arguments;
-          constructResult = obj(...arguments);
-        }
-        return tmp3(self, constructResult);
+}
+_inherits(DEWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const entry = {
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
+  },
+};
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const formatted = arg1[2].toLowerCase();
+      let str2 = arg1[1];
+      if (!str2) {
+        str2 = arg1[3];
       }
-    }
-    _inherits(FRCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-    const entry = {
-      key: "innerPattern",
-      value: function innerPattern(arg0) {
-        return /(maintenant|aujourd'hui|demain|hier|cette\s*nuit|la\s*veille)(?=\W|$)/i;
-      },
-    };
-    let items = [entry];
-    const entry1 = {
-      key: "innerExtract",
-      value: function innerExtract(refDate, arg1) {
-        refDate = refDate.refDate;
-        const str2 = arg1[0].toLowerCase();
-        const parsingComponents = refDate.createParsingComponents();
-        if ("maintenant" === str2) {
-          return closure_9.now(refDate.reference);
-        } else if ("aujourd'hui" === str2) {
-          return closure_9.today(refDate.reference);
-        } else if ("hier" === str2) {
-          return closure_9.yesterday(refDate.reference);
-        } else if ("demain" === str2) {
-          return closure_9.tomorrow(refDate.reference);
-        } else {
-          if (str2.match(/cette\s*nuit/)) {
-            FRCasualDateParser(9890).assignSimilarDate(parsingComponents, refDate);
-            parsingComponents.imply("hour", 22);
-            parsingComponents.imply("meridiem", FRCasualDateParser(9889).Meridiem.PM);
-          } else if (str2.match(/la\s*veille/)) {
-            const _Date = Date;
-            const date = new Date(refDate.getTime());
-            date.setDate(date.getDate() - 1);
-            FRCasualDateParser(9890).assignSimilarDate(parsingComponents, date);
-            parsingComponents.imply("hour", 0);
+      if (!str2) {
+        str2 = "";
+      }
+      const str3 = str2.toLowerCase();
+      let str4 = "last";
+      if (!str3.match(/letzte/)) {
+        str4 = "next";
+        if (!str3.match(/chste/)) {
+          str4 = null;
+          if (str3.match(/diese/)) {
+            str4 = "this";
           }
-          return parsingComponents;
         }
-      },
-    };
-    items[1] = entry1;
-    exports.default = _createClass(FRCasualDateParser, items);
-  } else {
-    const _Object2 = Object;
-  }
-} else {
-  let _Object = Object;
-}
+      }
+      return DEWeekdayParser(9922).createParsingComponentsAtWeekday(
+        reference.reference,
+        DEWeekdayParser(9941).WEEKDAY_DICTIONARY[formatted],
+        str4,
+      );
+    },
+  },
+];
+
+export default _createClass(DEWeekdayParser, items);

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "4c483b0c9e54993ee793f71f5dfd0dd4",
-  name: "SendMessageIcon",
+  hash: "262032a99df43d5b5fc14dd6e335ec5e",
+  name: "UserMinusIcon",
   type: "png",
 });

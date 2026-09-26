@@ -1,5 +1,5 @@
 // _runtime/00079_insetsDiffer.js
-let closure_0 = { top: "Array", left: "channelId", right: "formatToPlainString", bottom: "raw" };
+let closure_0 = { top: "Promise", left: "sa", right: "Date", bottom: "isArray" };
 
 export default function insetsDiffer(arg0, arg1) {
   let rect = arg0;

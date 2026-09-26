@@ -1,8 +1,7 @@
 // _runtime/metro/04179__.js
-import _typeof_mod from "03915__.js";
-import startOfYear_mod from "../04134_startOfYear.js";
-import differenceInCalendarDays_mod from "../04077_differenceInCalendarDays.js";
-import requiredArgs_mod from "../03916_requiredArgs.js";
+import _typeof_mod from "03918__.js";
+import module_3922_mod from "03922__.js";
+import requiredArgs_mod from "../03919_requiredArgs.js";
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -12,34 +11,25 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-let startOfYear = startOfYear_mod;
-if (!startOfYear) {
-  const obj2 = { default: startOfYear };
+let module_3922 = module_3922_mod;
+if (!module_3922) {
+  const obj2 = { default: module_3922 };
   let tmp5 = obj2;
 } else {
-  tmp5 = startOfYear;
+  tmp5 = module_3922;
 }
-startOfYear = tmp5;
-let differenceInCalendarDays = differenceInCalendarDays_mod;
-if (!differenceInCalendarDays) {
-  const obj3 = { default: differenceInCalendarDays };
-  let tmp7 = obj3;
-} else {
-  tmp7 = differenceInCalendarDays;
-}
-differenceInCalendarDays = tmp7;
+module_3922 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
-  tmp9 = requiredArgs;
+  tmp7 = requiredArgs;
 }
-requiredArgs = tmp9;
+requiredArgs = tmp7;
 
-export default function getDayOfYear(arg0) {
+export default function fromUnixTime(arg0) {
   requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  return differenceInCalendarDays.default(defaultResult1, startOfYear.default(defaultResult1)) + 1;
+  return _typeof.default(1000 * module_3922.default(arg0));
 };
 export default exports.default;

@@ -1,29 +1,37 @@
 // _runtime/metro/05219__.js
-import _mod17 from "00017__.js";
+import _mod5217 from "05217__.js";
+import noop from "00019__.js";
 
-const Image = _mod17.Image;
+const require = globalThis.__r;
 
-export const parseAndroidIconToNativeProps = function parseAndroidIconToNativeProps(icon) {
-  if (icon) {
-    if ("imageSource" === icon.type) {
-      const assetSource = Image.resolveAssetSource(icon.imageSource);
-      if (!assetSource) {
-        const _console = console;
-        console.error("[RNScreens] Failed to resolve an asset.");
+require = fn;
+const findNodeHandle = fn(17).findNodeHandle;
+
+export const useRenderDebugInfo = function useRenderDebugInfo(arg0) {
+  _require = arg0;
+  const ref = ref1.useRef(null);
+  ref1 = ref1.useRef(-1);
+  closure_3 = ref1.useEffectEvent((arg0) => {
+    const RNSLog = _mod5217.RNSLog;
+    RNSLog.log("" + closure_0 + " [" + ref1.current + "] " + arg0);
+  });
+  const effect = ref1.useEffect(() => {
+    if (null != ref.current) {
+      let num = findNodeHandle(tmp.current);
+      if (num == null) {
+        num = -1;
       }
-      const obj2 = { imageIconResource: assetSource };
-      return obj2;
-    } else if ("drawableResource" === icon.type) {
-      const obj = { drawableIconResourceName: icon.name };
-      return obj;
-    } else {
-      const _Error = Error;
-      const error = new Error(
-        "[RNScreens] Incorrect icon format for Android. You must provide `imageSource` or `drawableResource`.",
-      );
-      throw error;
+      ref1.current = num;
+      if (-1 === ref1.current) {
+        closure_3("failed to find node handle");
+      }
     }
-  } else {
-    return {};
-  }
+    closure_3("mounted");
+    return () => {
+      closure_1_3("unmounted");
+    };
+  }, []);
+  let RNSLog = require("05217__.js").RNSLog;
+  RNSLog.log("" + arg0 + " [" + ref1.current + "] " + "rendered");
+  return ref;
 };

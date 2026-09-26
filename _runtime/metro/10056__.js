@@ -1,14 +1,11 @@
 // _runtime/metro/10056__.js
-import repeatedTimeunitPattern from "../09884_repeatedTimeunitPattern.js";
-import AbstractParserWithWordBoundaryChecking from "../09891_AbstractParserWithWordBoundaryChecking.js";
-import _mod10053 from "10053__.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
+import _mod9916 from "09916__.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ENMonthNameParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,22 +24,31 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const regExp = new RegExp(
-  "((?:in)\\s*)?(" +
-    repeatedTimeunitPattern.matchAnyPattern(_mod10053.MONTH_DICTIONARY) +
-    ")\\s*(?:[,-]?\\s*(" +
-    _mod10053.YEAR_PATTERN +
-    ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)",
-  "i",
-);
-class ENMonthNameParser {
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class UKMergeDateTimeRefiner {
   constructor() {
     self = this;
-    tmp = c2(this, ENMonthNameParser);
-    tmp2 = closure_4;
-    obj = closure_4(ENMonthNameParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_0(this, UKMergeDateTimeRefiner);
+    tmp2 = c2;
+    obj = c2(UKMergeDateTimeRefiner);
+    tmp3 = closure_1;
+    if (closure_3()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -55,47 +61,15 @@ class ENMonthNameParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ENMonthNameParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_classCallCheck = UKMergeDateTimeRefiner;
+_inherits(UKMergeDateTimeRefiner, fn(_mod9916).default);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
+  key: "patternBetween",
+  value: function patternBetween() {
+    const regExp = new RegExp("^\\s*(T|\u0432|\u0443|\u043E|,|-)?\\s*$");
     return regExp;
   },
 };
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const formatted = index[2].toLowerCase();
-      if (index[0].length <= 3) {
-        if (!ENMonthNameParser(10053).FULL_MONTH_NAME_DICTIONARY[formatted]) {
-          return null;
-        }
-      }
-      let str2 = index[1];
-      if (!str2) {
-        str2 = "";
-      }
-      const parsingResult = createParsingResult.createParsingResult(
-        index.index + str2.length,
-        index.index + index[0].length,
-      );
-      const start = parsingResult.start;
-      start.imply("day", 1);
-      const tmp9 = ENMonthNameParser(10053).MONTH_DICTIONARY[formatted];
-      const start2 = parsingResult.start;
-      start2.assign("month", tmp9);
-      if (index[3]) {
-        const start4 = parsingResult.start;
-        start4.assign("year", ENMonthNameParser(10053).parseYear(index[3]));
-      } else {
-        const start3 = parsingResult.start;
-        start3.imply("year", ENMonthNameParser(9885).findYearClosestToRef(createParsingResult.refDate, 1, tmp9));
-      }
-      return parsingResult;
-    },
-  },
-];
+const items = [entry];
 
-export default _createClass(ENMonthNameParser, items);
+export default _createClass(UKMergeDateTimeRefiner, items);

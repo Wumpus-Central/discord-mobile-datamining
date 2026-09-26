@@ -1,22 +1,35 @@
 // _runtime/metro/05096__.js
-import callBoundIntrinsic from "../01315_callBoundIntrinsic.js";
-import properlyBoxed from "../05097_properlyBoxed.js";
-import _mod5099 from "05099__.js";
-import RequireObjectCoercible from "../05101_RequireObjectCoercible.js";
-import shimArrayPrototypeMap from "../05162_shimArrayPrototypeMap.js";
-import callBind from "../01455_callBind.js";
-import defineProperty from "05116__.js";
+import _mod1281 from "01281__.js";
+import requirePromise from "../05094_requirePromise.js";
+import PromiseResolve from "../05170_PromiseResolve.js";
+import callBind_mod from "../01456_callBind.js";
 
-let closure_2 = callBind.apply(properlyBoxed());
-let closure_3 = callBoundIntrinsic("Array.prototype.slice");
-function map(arg0, arg1) {
-  RequireObjectCoercible(arg0);
-  return closure_2(arg0, closure_3(arguments, 1));
+requirePromise();
+let callBind = callBind_mod;
+let closure_2 = callBind(_mod1281("%Promise.all%"));
+let callBind = callBind_mod;
+let closure_3 = callBind(_mod1281("%Promise.reject%"));
+
+export default function allSettled(arg0) {
+  const self = this;
+  if ("Object" !== self(5097)(this)) {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("`this` value must be an object");
+    throw typeError;
+  } else {
+    return closure_2(
+      this,
+      tmp(5103)(tmp(5100)(arg0), (arg0) => {
+        try {
+          return promise.then(
+            (value) => ({ status: "fulfilled", value }),
+            (reason) => ({ status: "rejected", reason }),
+          );
+        } catch (tmp3) {
+          return closure_3(tmp, tmp3);
+        }
+        promise = PromiseResolve(self, arg0);
+      }),
+    );
+  }
 }
-const obj = { getPolyfill: null, implementation: null, shim: null };
-obj.getPolyfill = properlyBoxed;
-obj.implementation = _mod5099;
-obj.shim = shimArrayPrototypeMap;
-defineProperty(map, obj);
-
-export default map;

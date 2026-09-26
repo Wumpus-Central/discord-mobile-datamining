@@ -1,101 +1,53 @@
 // _runtime/metro/13569__.js
-import _mod13541 from "13541__.js";
-import _mod13542 from "13542__.js";
-import _mod13546 from "13546__.js";
+import _mod13559 from "13559__.js";
 
-export default (num, arg1) => {
-  if (num instanceof _mod13542) {
-    return num;
+export default (arg0, arg1) => {
+  const obj = _mod13559(arg0, null, true);
+  const tmp = _mod13559(arg1, null, true);
+  const compareResult = obj.compare(tmp);
+  if (0 === compareResult) {
+    return null;
   } else {
-    let StringResult = num;
-    if (typeof num === "number") {
-      const _String = String;
-      StringResult = String(num);
+    let tmp3 = tmp;
+    if (compareResult > 0) {
+      tmp3 = obj;
     }
-    if (typeof StringResult !== "string") {
-      return null;
+    let tmp4 = obj;
+    if (compareResult > 0) {
+      tmp4 = tmp;
+    }
+    if (tmp4.prerelease.length) {
+      if (!length) {
+        if (tmp4.patch) {
+          let str2 = "patch";
+          if (!tmp3.patch) {
+            let str3 = "major";
+            if (tmp3.minor) {
+              str3 = "minor";
+            }
+            str2 = str3;
+          }
+          let str = str2;
+        } else {
+          str = "major";
+        }
+        return str;
+      }
+    }
+    let str4 = "";
+    if (tmp3.prerelease.length) {
+      str4 = "pre";
+    }
+    if (obj.major !== tmp.major) {
+      let str5 = `${str4}major`;
+    } else if (obj.minor !== tmp.minor) {
+      str5 = `${str4}minor`;
     } else {
-      let obj = arg1;
-      if (!arg1) {
-        obj = {};
-      }
-      if (obj.rtl) {
-        const safeRe2 = _mod13546.safeRe;
-        const t2 = _mod13546.t;
-        if (obj.includePrerelease) {
-          let obj2 = safeRe2[t2.COERCERTLFULL];
-        } else {
-          obj2 = safeRe2[t2.COERCERTL];
-        }
-        let match = obj2.exec(StringResult);
-        let tmp6 = null;
-        let tmp8 = null;
-        if (match) {
-          while (true) {
-            let tmp10 = tmp6;
-            let tmp11 = tmp6;
-            if (tmp6) {
-              tmp11 = match.index + match[0].length === tmp10.index + tmp10[0].length;
-            }
-            if (!tmp11) {
-              tmp10 = match;
-            }
-            obj2.lastIndex = match.index + match[1].length + match[2].length;
-            let match1 = obj2.exec(StringResult);
-            tmp8 = tmp10;
-            if (!match1) {
-              break;
-            } else {
-              match = match1;
-              tmp6 = tmp10;
-              if (!tmp10) {
-                continue;
-              } else {
-                match = match1;
-                tmp6 = tmp10;
-                tmp8 = tmp10;
-                if (tmp10.index + tmp10[0].length === StringResult.length) {
-                  break;
-                }
-              }
-              continue;
-            }
-          }
-        }
-        obj2.lastIndex = -1;
-        let match2 = tmp8;
-      } else {
-        const safeRe = _mod13546.safeRe;
-        const t = _mod13546.t;
-        if (obj.includePrerelease) {
-          let tmp3 = safeRe[t.COERCEFULL];
-        } else {
-          tmp3 = safeRe[t.COERCE];
-        }
-        match2 = StringResult.match(tmp3);
-      }
-      if (null === match2) {
-        return null;
-      } else {
-        let str2 = "";
-        if (obj.includePrerelease) {
-          str2 = "";
-          if (match2[5]) {
-            const _HermesInternal = HermesInternal;
-            str2 = "-" + match2[5];
-          }
-        }
-        let str4 = "";
-        if (obj.includePrerelease) {
-          str4 = "";
-          if (match2[6]) {
-            const _HermesInternal2 = HermesInternal;
-            str4 = "+" + match2[6];
-          }
-        }
-        const _HermesInternal3 = HermesInternal;
-        return _mod13541("" + match2[2] + "." + match2[3] || "0" + "." + match2[4] || "0" + str2 + str4, obj);
+      str5 = "prerelease";
+      if (obj.patch !== tmp.patch) {
+        str5 = `${str4}patch`;
       }
     }
+    return str5;
   }
 };

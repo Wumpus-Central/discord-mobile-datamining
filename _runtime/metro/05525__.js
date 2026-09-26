@@ -1,19 +1,18 @@
 // _runtime/metro/05525__.js
-let c0 = 18761;
-let c1 = 19789;
-
-export default {
-  BIG_ENDIAN: 19789,
-  LITTLE_ENDIAN: 18761,
-  getByteOrder(getUint16, c5) {
-    if (getUint16.getUint16(c5) === c0) {
-      return c0;
-    } else if (getUint16.getUint16(c5) === c1) {
-      return c1;
-    } else {
-      const _Error = Error;
-      const error = new Error("Illegal byte order value. Faulty image.");
-      throw error;
+class MetadataMissingError {
+  constructor(arg0) {
+    obj = { name: "MetadataMissingError" };
+    str = arg0;
+    if (!arg0) {
+      str = "No Exif data";
     }
-  },
-};
+    obj.message = str;
+    error = new Error();
+    obj.stack = error.stack;
+    return;
+  }
+}
+let error = new Error();
+MetadataMissingError.prototype = error;
+
+export default { MetadataMissingError };

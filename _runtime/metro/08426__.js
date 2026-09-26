@@ -1,5 +1,5 @@
 // _runtime/metro/08426__.js
-import _mod8395 from "08395__.js";
+import _mod8403 from "08403__.js";
 
 const self = this;
 let self2 = this;
@@ -56,16 +56,16 @@ if (self2) {
       if (typeof error === "function") {
         const obj = { localeError: null };
         const obj2 = {
-          string: { unit: "\u178F\u17BD\u17A2\u1780\u17D2\u179F\u179A", verb: "\u1782\u17BD\u179A\u1798\u17B6\u1793" },
-          file: { unit: "\u1794\u17C3", verb: "\u1782\u17BD\u179A\u1798\u17B6\u1793" },
-          array: { unit: "\u1792\u17B6\u178F\u17BB", verb: "\u1782\u17BD\u179A\u1798\u17B6\u1793" },
-          set: { unit: "\u1792\u17B6\u178F\u17BB", verb: "\u1782\u17BD\u179A\u1798\u17B6\u1793" },
+          string: { unit: "karakter", verb: "legyen" },
+          file: { unit: "byte", verb: "legyen" },
+          array: { unit: "elem", verb: "legyen" },
+          set: { unit: "elem", verb: "legyen" },
         };
         closure_1 = {
-          regex: "\u1791\u17B7\u1793\u17D2\u1793\u1793\u17D0\u1799\u1794\u1789\u17D2\u1785\u17BC\u179B",
-          email: "\u17A2\u17B6\u179F\u1799\u178A\u17D2\u178B\u17B6\u1793\u17A2\u17CA\u17B8\u1798\u17C2\u179B",
+          regex: "bemenet",
+          email: "email c\u00EDm",
           url: "URL",
-          emoji: "\u179F\u1789\u17D2\u1789\u17B6\u17A2\u17B6\u179A\u1798\u17D2\u1798\u178E\u17CD",
+          emoji: "emoji",
           uuid: "UUID",
           uuidv4: "UUIDv4",
           uuidv6: "UUIDv6",
@@ -76,29 +76,22 @@ if (self2) {
           ulid: "ULID",
           xid: "XID",
           ksuid: "KSUID",
-          datetime:
-            "\u1780\u17B6\u179B\u1794\u179A\u17B7\u1785\u17D2\u1786\u17C1\u1791 \u1793\u17B7\u1784\u1798\u17C9\u17C4\u1784 ISO",
-          date: "\u1780\u17B6\u179B\u1794\u179A\u17B7\u1785\u17D2\u1786\u17C1\u1791 ISO",
-          time: "\u1798\u17C9\u17C4\u1784 ISO",
-          duration: "\u179A\u1799\u17C8\u1796\u17C1\u179B ISO",
-          ipv4: "\u17A2\u17B6\u179F\u1799\u178A\u17D2\u178B\u17B6\u1793 IPv4",
-          ipv6: "\u17A2\u17B6\u179F\u1799\u178A\u17D2\u178B\u17B6\u1793 IPv6",
-          cidrv4: "\u178A\u17C2\u1793\u17A2\u17B6\u179F\u1799\u178A\u17D2\u178B\u17B6\u1793 IPv4",
-          cidrv6: "\u178A\u17C2\u1793\u17A2\u17B6\u179F\u1799\u178A\u17D2\u178B\u17B6\u1793 IPv6",
-          base64: "\u1781\u17D2\u179F\u17C2\u17A2\u1780\u17D2\u179F\u179A\u17A2\u17CA\u17B7\u1780\u17BC\u178A base64",
-          base64url:
-            "\u1781\u17D2\u179F\u17C2\u17A2\u1780\u17D2\u179F\u179A\u17A2\u17CA\u17B7\u1780\u17BC\u178A base64url",
-          json_string: "\u1781\u17D2\u179F\u17C2\u17A2\u1780\u17D2\u179F\u179A JSON",
-          e164: "\u179B\u17C1\u1781 E.164",
+          datetime: "ISO id\u0151b\u00E9lyeg",
+          date: "ISO d\u00E1tum",
+          time: "ISO id\u0151",
+          duration: "ISO id\u0151intervallum",
+          ipv4: "IPv4 c\u00EDm",
+          ipv6: "IPv6 c\u00EDm",
+          cidrv4: "IPv4 tartom\u00E1ny",
+          cidrv6: "IPv6 tartom\u00E1ny",
+          base64: "base64-k\u00F3dolt string",
+          base64url: "base64url-k\u00F3dolt string",
+          json_string: "JSON string",
+          e164: "E.164 sz\u00E1m",
           jwt: "JWT",
-          template_literal: "\u1791\u17B7\u1793\u17D2\u1793\u1793\u17D0\u1799\u1794\u1789\u17D2\u1785\u17BC\u179B",
+          template_literal: "bemenet",
         };
-        closure_2 = {
-          nan: "NaN",
-          number: "\u179B\u17C1\u1781",
-          array: "\u17A2\u17B6\u179A\u17C1 (Array)",
-          null: "\u1782\u17D2\u1798\u17B6\u1793\u178F\u1798\u17D2\u179B\u17C3 (null)",
-        };
+        closure_2 = { nan: "NaN", number: "sz\u00E1m", array: "t\u00F6mb" };
         obj.localeError = (code) => {
           switch (code.code) {
             case "invalid_type":
@@ -114,16 +107,16 @@ if (self2) {
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined =
-                  "\u1791\u17B7\u1793\u17D2\u1793\u1793\u17D0\u1799\u1794\u1789\u17D2\u1785\u17BC\u179B\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u1780\u17B6\u179A instanceof " +
+                  "\u00C9rv\u00E9nytelen bemenet: a v\u00E1rt \u00E9rt\u00E9k instanceof " +
                   code.expected +
-                  " \u1794\u17C9\u17BB\u1793\u17D2\u178F\u17C2\u1791\u1791\u17BD\u179B\u1794\u17B6\u1793 " +
+                  ", a kapott \u00E9rt\u00E9k " +
                   tmp48;
               } else {
                 const _HermesInternal16 = HermesInternal;
                 combined =
-                  "\u1791\u17B7\u1793\u17D2\u1793\u1793\u17D0\u1799\u1794\u1789\u17D2\u1785\u17BC\u179B\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u1780\u17B6\u179A " +
+                  "\u00C9rv\u00E9nytelen bemenet: a v\u00E1rt \u00E9rt\u00E9k " +
                   expected +
-                  " \u1794\u17C9\u17BB\u1793\u17D2\u178F\u17C2\u1791\u1791\u17BD\u179B\u1794\u17B6\u1793 " +
+                  ", a kapott \u00E9rt\u00E9k " +
                   tmp48;
               }
               return combined;
@@ -131,12 +124,12 @@ if (self2) {
               if (1 === code.values.length) {
                 const _HermesInternal15 = HermesInternal;
                 let combined1 =
-                  "\u1791\u17B7\u1793\u17D2\u1793\u1793\u17D0\u1799\u1794\u1789\u17D2\u1785\u17BC\u179B\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u1780\u17B6\u179A " +
+                  "\u00C9rv\u00E9nytelen bemenet: a v\u00E1rt \u00E9rt\u00E9k " +
                   closure_2.stringifyPrimitive(code.values[0]);
               } else {
                 const _HermesInternal14 = HermesInternal;
                 combined1 =
-                  "\u1787\u1798\u17D2\u179A\u17BE\u179F\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u1787\u17B6\u1798\u17BD\u1799\u1780\u17D2\u1793\u17BB\u1784\u1785\u17C6\u178E\u17C4\u1798 " +
+                  "\u00C9rv\u00E9nytelen opci\u00F3: valamelyik \u00E9rt\u00E9k v\u00E1rt " +
                   closure_2.joinValues(code.values, "|");
               }
               return combined1;
@@ -152,133 +145,101 @@ if (self2) {
               let str27 = code.origin;
               if (tmp27) {
                 if (str27 == null) {
-                  str27 = "\u178F\u1798\u17D2\u179B\u17C3";
+                  str27 = "\u00E9rt\u00E9k";
                 }
                 const str1 = code.maximum.toString();
-                let str35 = tmp27.unit;
-                if (str35 == null) {
-                  str35 = "\u1792\u17B6\u178F\u17BB";
+                let str33 = tmp27.unit;
+                if (str33 == null) {
+                  str33 = "elem";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 =
-                  "\u1792\u17C6\u1796\u17C1\u1780\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u1780\u17B6\u179A " +
-                  str27 +
-                  " " +
-                  str26 +
-                  " " +
-                  str1 +
-                  " " +
-                  str35;
+                let combined2 = "T\u00FAl nagy: " + str27 + " m\u00E9rete t\u00FAl nagy " + str26 + str1 + " " + str33;
               } else {
                 let str28 = str27;
                 if (str27 == null) {
-                  str28 = "\u178F\u1798\u17D2\u179B\u17C3";
+                  str28 = "\u00E9rt\u00E9k";
                 }
                 const _HermesInternal12 = HermesInternal;
                 combined2 =
-                  "\u1792\u17C6\u1796\u17C1\u1780\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u1780\u17B6\u179A " +
+                  "T\u00FAl nagy: a bemeneti \u00E9rt\u00E9k " +
                   str28 +
-                  " " +
+                  " t\u00FAl nagy: " +
                   str26 +
-                  " " +
                   code.maximum.toString();
               }
               return combined2;
             case "too_small":
-              let str16 = ">";
+              let str20 = ">";
               if (code.inclusive) {
-                str16 = ">=";
+                str20 = ">=";
               }
               let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
               ({ origin, minimum } = code);
-              const str51 = minimum.toString();
+              const str47 = minimum.toString();
               if (tmp15) {
                 const _HermesInternal11 = HermesInternal;
                 let combined3 =
-                  "\u178F\u17BC\u1785\u1796\u17C1\u1780\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u1780\u17B6\u179A " +
+                  "T\u00FAl kicsi: a bemeneti \u00E9rt\u00E9k " +
                   origin +
-                  " " +
-                  str16 +
-                  " " +
-                  str51 +
+                  " m\u00E9rete t\u00FAl kicsi " +
+                  str20 +
+                  str47 +
                   " " +
                   tmp15.unit;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 =
-                  "\u178F\u17BC\u1785\u1796\u17C1\u1780\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u1780\u17B6\u179A " +
-                  origin +
-                  " " +
-                  str16 +
-                  " " +
-                  str51;
+                combined3 = "T\u00FAl kicsi: a bemeneti \u00E9rt\u00E9k " + origin + " t\u00FAl kicsi " + str20 + str47;
               }
               return combined3;
             case "invalid_format":
               if ("starts_with" === code.format) {
                 const _HermesInternal9 = HermesInternal;
                 let combined4 =
-                  '\u1781\u17D2\u179F\u17C2\u17A2\u1780\u17D2\u179F\u179A\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u1785\u17B6\u1794\u17CB\u1795\u17D2\u178F\u17BE\u1798\u178A\u17C4\u1799 "' +
-                  code.prefix +
-                  '"';
+                  '\u00C9rv\u00E9nytelen string: "' + code.prefix + '" \u00E9rt\u00E9kkel kell kezd\u0151dnie';
               } else if ("ends_with" === code.format) {
                 const _HermesInternal8 = HermesInternal;
                 combined4 =
-                  '\u1781\u17D2\u179F\u17C2\u17A2\u1780\u17D2\u179F\u179A\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u1794\u1789\u17D2\u1785\u1794\u17CB\u178A\u17C4\u1799 "' +
-                  code.suffix +
-                  '"';
+                  '\u00C9rv\u00E9nytelen string: "' + code.suffix + '" \u00E9rt\u00E9kkel kell v\u00E9gz\u0151dnie';
               } else if ("includes" === code.format) {
                 const _HermesInternal7 = HermesInternal;
-                combined4 =
-                  '\u1781\u17D2\u179F\u17C2\u17A2\u1780\u17D2\u179F\u179A\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u1798\u17B6\u1793 "' +
-                  code.includes +
-                  '"';
+                combined4 = '\u00C9rv\u00E9nytelen string: "' + code.includes + '" \u00E9rt\u00E9ket kell tartalmaznia';
               } else if ("regex" === code.format) {
                 const _HermesInternal6 = HermesInternal;
-                combined4 =
-                  "\u1781\u17D2\u179F\u17C2\u17A2\u1780\u17D2\u179F\u179A\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u178F\u17C2\u1795\u17D2\u1782\u17BC\u1795\u17D2\u1782\u1784\u1793\u17B9\u1784\u1791\u1798\u17D2\u179A\u1784\u17CB\u178A\u17C2\u179B\u1794\u17B6\u1793\u1780\u17C6\u178E\u178F\u17CB " +
-                  code.pattern;
+                combined4 = "\u00C9rv\u00E9nytelen string: " + code.pattern + " mint\u00E1nak kell megfelelnie";
               } else {
                 let format = closure_1[code.format];
                 if (format == null) {
                   format = code.format;
                 }
                 const _HermesInternal5 = HermesInternal;
-                combined4 =
-                  "\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u17D6 " + format;
+                combined4 = "\u00C9rv\u00E9nytelen " + format;
               }
               return combined4;
             case "not_multiple_of":
               const _HermesInternal4 = HermesInternal;
               return (
-                "\u179B\u17C1\u1781\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u178F\u17C2\u1787\u17B6\u1796\u17A0\u17BB\u1782\u17BB\u178E\u1793\u17C3 " +
-                code.divisor
+                "\u00C9rv\u00E9nytelen sz\u00E1m: " + code.divisor + " t\u00F6bbsz\u00F6r\u00F6s\u00E9nek kell lennie"
               );
             case "unrecognized_keys":
+              let str3 = "";
+              if (code.keys.length > 1) {
+                str3 = "s";
+              }
               const _HermesInternal3 = HermesInternal;
-              return (
-                "\u179A\u1780\u1783\u17BE\u1789\u179F\u17C4\u1798\u17B7\u1793\u179F\u17D2\u1782\u17B6\u179B\u17CB\u17D6 " +
-                closure_2.joinValues(code.keys, ", ")
-              );
+              return "Ismeretlen kulcs" + str3 + ": " + closure_2.joinValues(code.keys, ", ");
             case "invalid_key":
               const _HermesInternal2 = HermesInternal;
-              return (
-                "\u179F\u17C4\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u1793\u17C5\u1780\u17D2\u1793\u17BB\u1784 " +
-                code.origin
-              );
+              return "\u00C9rv\u00E9nytelen kulcs " + code.origin;
             case "invalid_union":
-              return "\u1791\u17B7\u1793\u17D2\u1793\u1793\u17D0\u1799\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C";
+              return "\u00C9rv\u00E9nytelen bemenet";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              return (
-                "\u1791\u17B7\u1793\u17D2\u1793\u1793\u17D0\u1799\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u1793\u17C5\u1780\u17D2\u1793\u17BB\u1784 " +
-                code.origin
-              );
+              return "\u00C9rv\u00E9nytelen \u00E9rt\u00E9k: " + code.origin;
             default:
-              return "\u1791\u17B7\u1793\u17D2\u1793\u1793\u17D0\u1799\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C";
+              return "\u00C9rv\u00E9nytelen bemenet";
           }
         };
         return obj;
@@ -286,7 +247,7 @@ if (self2) {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    let closure_2 = fn(_mod8395);
+    let closure_2 = fn(_mod8403);
     function error() {}
     module.exports = exports.default;
   } else {

@@ -1,510 +1,177 @@
 // _runtime/metro/01810__.js
-import _mod1648 from "01648__.js";
-import 01640__ from "01640__.js";
-
-const require = globalThis.__r;
-
-let obj = { fps: 60 };
-function getStylesFromObject(jestInlineStyle) {
-  if (undefined === jestInlineStyle) {
-    let fromEntriesResult = {};
+const channelFromLrgb = function r() {
+  let num = arg0;
+  if (arg0 === undefined) {
+    num = 0;
+  }
+  const absolute = Math.abs(num);
+  if (absolute > 0.0031308) {
+    const _Math = Math;
+    const _Math2 = Math;
+    let result = (Math.sign(num) || 1) * (1.055 * Math.pow(absolute, 0.4166666666666667) - 0.055);
+    const tmp3 = Math.sign(num) || 1;
   } else {
-    const _Object = Object;
-    const _Object2 = Object;
-    const entries = Object.entries(jestInlineStyle);
-    fromEntriesResult = Object.fromEntries(entries.map((item) => {
-      [tmp, iter] = item;
-      const items = [tmp, ];
-      value = iter;
-      if (iter._isReanimatedSharedValue) {
-        value = iter.value;
-      }
-      items[1] = value;
-      return items;
-    }));
+    result = 12.92 * num;
   }
-  return fromEntriesResult;
-}
-function getCurrentStyle(props) {
-  const style = props.props.style;
-  obj = {};
-  if (Array.isArray(style)) {
-    const item = style.forEach((item) => {
-      obj = {};
-      const merged = Object.assign(obj);
-      const merged1 = Object.assign(item);
-    });
-  }
-  const jestInlineStyle = props.props.jestInlineStyle;
-  if (props.props.jestAnimatedStyle != null) {
-    value = iter.value;
-  }
-  if (Array.isArray(jestInlineStyle)) {
-    const iter2 = jestInlineStyle[Symbol.iterator]();
-    const nextResult = iter2.next();
-    while (iter2 !== undefined) {
-      if (!("jestAnimatedValues" in nextResult)) {
-        let tmp18 = getStylesFromObject(tmp15);
-        let obj2 = {};
-        let merged = Object.assign(obj);
-        let merged1 = Object.assign(tmp18);
-        obj = obj2;
-      }
-      continue;
+  return result;
+};
+channelFromLrgb.__closure = {};
+channelFromLrgb.__workletHash = 9046778946531;
+channelFromLrgb.__initData = {
+  code: "function pnpm_lrgbTs1(c=0){const abs=Math.abs(c);if(abs>0.0031308){return(Math.sign(c)||1)*(1.055*Math.pow(abs,1/2.4)-0.055);}return c*12.92;}",
+};
+const fn2 = function n(arg0) {
+  ({ r, g, b } = arg0);
+  if (typeof fn === "function") {
+    if (r === undefined) {
+      r = 0;
     }
-    const obj3 = {};
-    const merged2 = Object.assign(obj);
-    const merged3 = Object.assign(value);
-    obj = obj3;
-    return obj3;
-  } else {
-    const tmp3 = getStylesFromObject(jestInlineStyle);
-    obj = {};
-    if (((value) => {
-      let tmp = !value;
-      if (value) {
-        const _Object = Object;
-        tmp = 0 === Object.keys(value).length;
-      }
-      return tmp;
-    })(value)) {
-      const merged4 = Object.assign(tmp3);
-      let tmp7 = obj;
+    const _Math = Math;
+    const absolute = Math.abs(r);
+    if (absolute > 0.0031308) {
+      const _Math2 = Math;
+      const _Math3 = Math;
+      let result = (Math.sign(r) || 1) * (1.055 * Math.pow(absolute, 0.4166666666666667) - 0.055);
+      const tmp7 = Math.sign(r) || 1;
     } else {
-      const merged5 = Object.assign(value);
-      tmp7 = obj;
+      result = 12.92 * r;
     }
-    obj = tmp7;
-    return tmp7;
-  }
-}
-function checkEqual(arr2, arr3) {
-  if (Array.isArray(arr3)) {
-    const _Array = Array;
-    if (Array.isArray(arr2)) {
-      if (arr3.length === arr2.length) {
-        let num4 = 0;
-        if (0 < arr2.length) {
-          while (checkEqual(arr2[num4], arr3[num4])) {
-            num4 = num4 + 1;
-          }
-          return false;
-        }
+    const obj = { r: result, g: null, b: null, alpha: null };
+    if (typeof fn === "function") {
+      if (g === undefined) {
+        g = 0;
       }
-    }
-    return false;
-  } else {
-    if (typeof arr2 === "object") {
-      if (arr2) {
-        if (typeof arr3 === "object") {
-          if (arr3) {
-            for (const key10009 in arg1) {
-              if (checkEqual(arg0[key10009], arg1[key10009])) {
-                continue;
-              } else {
-                let flag = false;
-                return false;
-              }
-            }
-          }
-        }
-        return false;
-      }
-    }
-    return arr2 === arr3;
-  }
-  return true;
-}
-function compareAndFormatDifferences(currentStyle, arg1) {
-  let flag = shouldMatchAllProps;
-  if (shouldMatchAllProps === undefined) {
-    flag = false;
-  }
-  closure_0 = undefined;
-  closure_1 = undefined;
-  closure_2 = undefined;
-  const items = [];
-  let flag2 = true;
-  let flag3 = true;
-  const keys = Object.keys();
-  if (keys !== undefined) {
-    flag3 = flag2;
-    while (keys[tmp] !== undefined) {
-      let arr4 = currentStyle[tmp4];
-      let arr5 = arg1[tmp4];
-      if (typeof checkEqual === "function") {
-        let _Array = Array;
-        if (Array.isArray(arr5)) {
-          let _Array4 = Array;
-          let flag4 = false;
-          if (Array.isArray(arr4)) {
-            flag4 = false;
-            if (arr5.length === arr4.length) {
-              let num3 = 0;
-              flag4 = true;
-              if (0 < arr4.length) {
-                let arr2 = arr4[num3];
-                let arr3 = arr5[num3];
-                let sum1 = num3;
-                while (typeof checkEqual === "function") {
-                  let _Array5 = Array;
-                  if (Array.isArray(arr3)) {
-                    let _Array6 = Array;
-                    let flag6 = false;
-                    if (Array.isArray(arr2)) {
-                      flag6 = false;
-                      if (arr3.length === arr2.length) {
-                        let num2 = 0;
-                        flag6 = true;
-                        if (0 < arr2.length) {
-                          let sum = num2;
-                          flag6 = false;
-                          while (checkEqual(arr2[num2], arr3[num2])) {
-                            sum = sum + 1;
-                            num2 = sum;
-                            flag6 = true;
-                            if (sum >= arr2.length) {
-                              break;
-                            }
-                          }
-                        }
-                      }
-                    }
-                  } else {
-                    if (typeof arr2 === "object") {
-                      if (arr2) {
-                        flag6 = false;
-                        if (typeof arr3 === "object") {
-                          flag6 = false;
-                          if (arr3) {
-                            flag6 = true;
-                            let keys1 = Object.keys();
-                            if (keys1 !== undefined) {
-                              flag6 = true;
-                              let tmp17 = keys1[sum];
-                              while (tmp17 !== undefined) {
-                                flag6 = false;
-                                if (checkEqual(arr2[tmp17], arr3[tmp17])) {
-                                  continue;
-                                } else {
-                                  break;
-                                }
-                                break;
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                    flag6 = arr2 === arr3;
-                  }
-                  flag4 = false;
-                  if (flag6) {
-                    sum1 = sum1 + 1;
-                    num3 = sum1;
-                    flag4 = true;
-                  }
-                  continue;
-                }
-                let str4 = "Trying to call a non-function";
-                throw new TypeError("Trying to call a non-function");
-              }
-            }
-          }
-        } else {
-          if (typeof arr4 === "object") {
-            if (arr4) {
-              flag4 = false;
-              if (typeof arr5 === "object") {
-                flag4 = false;
-                if (arr5) {
-                  flag4 = true;
-                  let keys2 = Object.keys();
-                  if (keys2 !== undefined) {
-                    flag4 = true;
-                    let tmp7 = keys2[sum1];
-                    while (tmp7 !== undefined) {
-                      let arr6 = arr4[tmp7];
-                      let arr7 = arr5[tmp7];
-                      if (typeof checkEqual === "function") {
-                        let _Array2 = Array;
-                        if (Array.isArray(arr7)) {
-                          let _Array3 = Array;
-                          let flag5 = false;
-                          if (Array.isArray(arr6)) {
-                            flag5 = false;
-                            if (arr7.length === arr6.length) {
-                              let num = 0;
-                              flag5 = true;
-                              if (0 < arr6.length) {
-                                sum = num;
-                                flag5 = false;
-                                while (checkEqual(arr6[num], arr7[num])) {
-                                  sum = sum + 1;
-                                  num = sum;
-                                  flag5 = true;
-                                  if (sum >= arr6.length) {
-                                    break;
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        } else {
-                          if (typeof arr6 === "object") {
-                            if (arr6) {
-                              flag5 = false;
-                              if (typeof arr7 === "object") {
-                                flag5 = false;
-                                if (arr7) {
-                                  flag5 = true;
-                                  let keys3 = Object.keys();
-                                  if (keys3 !== undefined) {
-                                    flag5 = true;
-                                    let tmp10 = keys3[sum];
-                                    while (tmp10 !== undefined) {
-                                      flag5 = false;
-                                      if (checkEqual(arr6[tmp10], arr7[tmp10])) {
-                                        continue;
-                                      } else {
-                                        break;
-                                      }
-                                      break;
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                          flag5 = arr6 === arr7;
-                        }
-                        flag4 = false;
-                        if (flag5) {
-                          continue;
-                        } else {
-                          break;
-                        }
-                        break;
-                      } else {
-                        let str3 = "Trying to call a non-function";
-                        throw new TypeError("Trying to call a non-function");
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-          flag4 = arr4 === arr5;
-        }
-        if (flag4) {
-          continue;
-        } else {
-          obj = { property: tmp4, current: currentStyle[tmp4], expect: arg1[tmp4] };
-          let arr = items.push(obj);
-          flag2 = false;
-          continue;
-        }
-        continue;
+      const _Math4 = Math;
+      const absolute1 = Math.abs(g);
+      if (absolute1 > 0.0031308) {
+        const _Math5 = Math;
+        const _Math6 = Math;
+        let result1 = (Math.sign(g) || 1) * (1.055 * Math.pow(absolute1, 0.4166666666666667) - 0.055);
+        const tmp11 = Math.sign(g) || 1;
       } else {
-        let str2 = "Trying to call a non-function";
+        result1 = 12.92 * g;
+      }
+      obj.g = result1;
+      if (typeof fn === "function") {
+        if (b === undefined) {
+          b = 0;
+        }
+        const _Math7 = Math;
+        const absolute2 = Math.abs(b);
+        if (absolute2 > 0.0031308) {
+          const _Math8 = Math;
+          const _Math9 = Math;
+          let result2 = (Math.sign(b) || 1) * (1.055 * Math.pow(absolute2, 0.4166666666666667) - 0.055);
+          const tmp15 = Math.sign(b) || 1;
+        } else {
+          result2 = 12.92 * b;
+        }
+        obj.b = result2;
+        obj.alpha = tmp;
+        return obj;
+      } else {
         throw new TypeError("Trying to call a non-function");
       }
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-  }
-  let flag7 = flag3;
-  if (flag) {
-    const _Object = Object;
-    const _Object2 = Object;
-    flag7 = flag3;
-    if (Object.keys(currentStyle).length !== Object.keys(arg1).length) {
-      flag7 = false;
-      const keys4 = Object.keys();
-      if (keys4 !== undefined) {
-        flag7 = false;
-        const first = keys4[0];
-        while (first !== undefined) {
-          if (undefined !== arg1[first]) {
-            continue;
-          } else {
-            let obj2 = { property: first, current: currentStyle[first], expect: arg1[first] };
-            let arr9 = items.push(obj2);
-            continue;
-          }
-          continue;
-        }
-      }
-    }
-  }
-  if (flag7) {
-    const obj3 = {
-      message() {
-          return "ok";
-        },
-      pass: true
-    };
-    return obj3;
   } else {
-    const _JSON = JSON;
-    closure_0 = JSON.stringify(currentStyle);
-    const _JSON2 = JSON;
-    closure_1 = JSON.stringify(arg1);
-    const mapped = items.map((expect) => {
-      const json = JSON.stringify(expect.expect);
-      return "- '" + expect.property + "' should be " + json + ", but is " + JSON.stringify(expect.current);
-    });
-    closure_2 = mapped.join("\n");
-    const obj4 = {
-      message() {
-          return "Expected: " + closure_1 + "\nReceived: " + closure_0 + "\n\nDifferences:\n" + closure_2;
-        },
-      pass: false
-    };
-    return obj4;
+    throw new TypeError("Trying to call a non-function");
   }
-}
-let closure_8 = Math.round(1000 / obj.fps);
-if (!module_1640.isJest()) {
-  require = () => {
-    const reanimatedError = new _mod1648.ReanimatedError("`setUpTests` is available only in Jest environment.");
-    throw reanimatedError;
-  };
-}
+};
+fn2.__closure = { channelFromLrgb };
+fn2.__workletHash = 2514333579516;
+fn2.__initData = {
+  code: "function pnpm_lrgbTs2({r:r,g:g,b:b,alpha:alpha}){const{channelFromLrgb}=this.__closure;return{r:channelFromLrgb(r),g:channelFromLrgb(g),b:channelFromLrgb(b),alpha:alpha};}",
+};
+const fn3 = function t() {
+  let num = arg0;
+  if (arg0 === undefined) {
+    num = 0;
+  }
+  const absolute = Math.abs(num);
+  if (absolute <= 0.04045) {
+    let result = num / 12.92;
+  } else {
+    const _Math = Math;
+    const _Math2 = Math;
+    result = (Math.sign(num) || 1) * Math.pow((absolute + 0.055) / 1.055, 2.4);
+    const tmp2 = Math.sign(num) || 1;
+  }
+  return result;
+};
+fn3.__closure = {};
+fn3.__workletHash = 7878321042954;
+fn3.__initData = {
+  code: "function pnpm_lrgbTs3(c=0){const abs=Math.abs(c);if(abs<=0.04045){return c/12.92;}return(Math.sign(c)||1)*Math.pow((abs+0.055)/1.055,2.4);}",
+};
+let obj = { convert: null };
+const obj2 = { fromRgb: null, toRgb: fn2 };
+const fn4 = function o(arg0) {
+  ({ r, g, b } = arg0);
+  if (typeof fn3 === "function") {
+    if (r === undefined) {
+      r = 0;
+    }
+    const _Math = Math;
+    const absolute = Math.abs(r);
+    if (absolute <= 0.04045) {
+      let result = r / 12.92;
+    } else {
+      const _Math2 = Math;
+      const _Math3 = Math;
+      result = (Math.sign(r) || 1) * Math.pow((absolute + 0.055) / 1.055, 2.4);
+      const tmp5 = Math.sign(r) || 1;
+    }
+    const obj = { r: result, g: null, b: null, alpha: null };
+    if (typeof fn3 === "function") {
+      if (g === undefined) {
+        g = 0;
+      }
+      const _Math4 = Math;
+      const absolute1 = Math.abs(g);
+      if (absolute1 <= 0.04045) {
+        let result1 = g / 12.92;
+      } else {
+        const _Math5 = Math;
+        const _Math6 = Math;
+        result1 = (Math.sign(g) || 1) * Math.pow((absolute1 + 0.055) / 1.055, 2.4);
+        const tmp9 = Math.sign(g) || 1;
+      }
+      obj.g = result1;
+      if (typeof fn3 === "function") {
+        if (b === undefined) {
+          b = 0;
+        }
+        const _Math7 = Math;
+        const absolute2 = Math.abs(b);
+        if (absolute2 <= 0.04045) {
+          let result2 = b / 12.92;
+        } else {
+          const _Math8 = Math;
+          const _Math9 = Math;
+          result2 = (Math.sign(b) || 1) * Math.pow((absolute2 + 0.055) / 1.055, 2.4);
+          const tmp12 = Math.sign(b) || 1;
+        }
+        obj.b = result2;
+        obj.alpha = tmp;
+        return obj;
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+};
+fn4.__closure = { channelToLrgb: fn3 };
+fn4.__workletHash = 7438857771706;
+fn4.__initData = {
+  code: "function pnpm_lrgbTs4({r:r,g:g,b:b,alpha:alpha}){const{channelToLrgb}=this.__closure;return{r:channelToLrgb(r),g:channelToLrgb(g),b:channelToLrgb(b),alpha:alpha};}",
+};
+obj2.fromRgb = fn4;
+obj.convert = obj2;
 
-export const withReanimatedTimer = (fn) => {
-  console.warn("This method is deprecated, you should define your own before and after test hooks to enable jest.useFakeTimers(). Check out the documentation for details on testing");
-  const fakeTimers = globalThis.jest.useFakeTimers();
-  fn();
-  globalThis.jest.runOnlyPendingTimers();
-  const realTimers = globalThis.jest.useRealTimers();
-};
-export const advanceAnimationByTime = () => {
-  let tmp = arg0;
-  if (arg0 === undefined) {
-    tmp = closure_8;
-  }
-  console.warn("This method is deprecated, use jest.advanceTimersByTime directly");
-  globalThis.jest.advanceTimersByTime(tmp);
-  globalThis.jest.runOnlyPendingTimers();
-};
-export const advanceAnimationByFrame = (arg0) => {
-  console.warn("This method is deprecated, use jest.advanceTimersByTime directly");
-  globalThis.jest.advanceTimersByTime(arg0 * closure_8);
-  globalThis.jest.runOnlyPendingTimers();
-};
-export const setUpTests = () => {
-  obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
-  }
-  let _default = global.expect;
-  if (undefined === _default) {
-    const tmp2 = require("expect");
-    _default = tmp2;
-    if (!tmp3) {
-      _default = tmp2.default;
-    }
-    tmp3 = undefined !== tmp2 && undefined !== tmp2.extend;
-  }
-  let merged = Object.assign(obj);
-  const merged1 = Object.assign(obj);
-  closure_8 = Math.round(1000 / {}.fps);
-  _default.extend({
-    toHaveAnimatedProps(props, arg1) {
-      if (props.props.jestAnimatedProps) {
-        const _Object = Object;
-        if (0 === Object.keys(props.props.jestAnimatedProps.value).length) {
-          const obj2 = {
-            message() {
-                  return "Component doesn't have props.";
-                },
-            pass: false
-          };
-          let tmp7 = obj2;
-        }
-        return tmp7;
-      }
-      value = undefined;
-      if (props.props.jestAnimatedProps != null) {
-        value = iter.value;
-      }
-      obj = {};
-      if (value) {
-        const merged = Object.assign(value);
-        let tmp3 = obj;
-      } else {
-        tmp3 = obj;
-      }
-      tmp7 = compareAndFormatDifferences(tmp3, arg1);
-    }
-  });
-  _default.extend({
-    toHaveAnimatedStyle(props, arg1) {
-      obj = arg2;
-      if (arg2 === undefined) {
-        obj = {};
-      }
-      if (props.props.style) {
-        let obj2 = compareAndFormatDifferences(getCurrentStyle(props), arg1, obj.shouldMatchAllProps);
-      } else {
-        obj2 = {
-          message() {
-              return "Component doesn't have a style.";
-            },
-          pass: false
-        };
-      }
-      return obj2;
-    }
-  });
-  let obj2 = {};
-  const obj3 = {
-    toHaveAnimatedProps(props, arg1) {
-      if (props.props.jestAnimatedProps) {
-        const _Object = Object;
-        if (0 === Object.keys(props.props.jestAnimatedProps.value).length) {
-          const obj2 = {
-            message() {
-                  return "Component doesn't have props.";
-                },
-            pass: false
-          };
-          let tmp7 = obj2;
-        }
-        return tmp7;
-      }
-      value = undefined;
-      if (props.props.jestAnimatedProps != null) {
-        value = iter.value;
-      }
-      obj = {};
-      if (value) {
-        const merged = Object.assign(value);
-        let tmp3 = obj;
-      } else {
-        tmp3 = obj;
-      }
-      tmp7 = compareAndFormatDifferences(tmp3, arg1);
-    }
-  };
-  const obj4 = {
-    toHaveAnimatedStyle(props, arg1) {
-      obj = arg2;
-      if (arg2 === undefined) {
-        obj = {};
-      }
-      if (props.props.style) {
-        let obj2 = compareAndFormatDifferences(getCurrentStyle(props), arg1, obj.shouldMatchAllProps);
-      } else {
-        obj2 = {
-          message() {
-              return "Component doesn't have a style.";
-            },
-          pass: false
-        };
-      }
-      return obj2;
-    }
-  };
-};
-export const getAnimatedStyle = (props) => getCurrentStyle(props);
+export default obj;

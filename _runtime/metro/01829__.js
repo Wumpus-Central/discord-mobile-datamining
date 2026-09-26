@@ -1,107 +1,79 @@
 // _runtime/metro/01829__.js
-import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
+import cancelAnimation from "../01638_cancelAnimation.js";
 
-let c2 = true;
-let obj = { height: 0, duration: 0, timestamp: null, target: -1, type: "default", appearance: "light" };
-obj.timestamp = new Date().getTime();
-let global = obj;
-let KeyboardEvents = fn(1627).KeyboardEvents;
-KeyboardEvents.addListener("keyboardDidHide", (arg0) => {
-  c2 = true;
-  global = arg0;
-});
-const KeyboardEvents2 = fn(1627).KeyboardEvents;
-KeyboardEvents2.addListener("keyboardWillShow", (arg0) => {
-  c2 = false;
-  global = arg0;
-});
-let closure_0 = asyncGeneratorStep(async (arg0) => {
-  if (c3 === 2) {
-    c3 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c3 = 2;
-      if (arg0 === 1) {
-        c3 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c3 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
-      } else {
-        let keepFocus;
-        if (closure_0 != null) {
-          keepFocus = tmp18.keepFocus;
-        }
-        c1 = keepFocus;
-        if (keepFocus == null) {
-          c1 = false;
-        }
-        closure_0 = c1;
-        let animated;
-        if (closure_0 != null) {
-          animated = tmp18.animated;
-        }
-        c2 = animated;
-        if (animated == null) {
-          c2 = true;
-        }
-        dependencyMap = c2;
-        const promise = new Promise((fn) => {
-          closure_0 = fn;
-          if (c2) {
-            fn();
-          } else {
-            const KeyboardEvents = closure_0(1627).KeyboardEvents;
-            closure_1 = KeyboardEvents.addListener("keyboardDidHide", () => {
-              closure_0(undefined);
-              closure_1.remove();
-            });
-            const KeyboardControllerNative = closure_0(1627).KeyboardControllerNative;
-            KeyboardControllerNative.dismiss(closure_0, closure_1);
-          }
-        });
-        c3 = 3;
-        const obj = { value: promise, done: true };
-        return obj;
-      }
-    } catch (tmp13) {
-      c3 = tmp;
-      throw tmp13;
-    }
-  }
-});
-const date = new Date();
+require = arg1;
+const dependencyMap = arg6;
+const __initData = {
+  code: 'function pnpm_reanimatedNativeTs1(event){const{handlers,context}=this.__closure;const{onKeyboardMoveStart:onKeyboardMoveStart,onKeyboardMove:onKeyboardMove,onKeyboardMoveEnd:onKeyboardMoveEnd,onKeyboardMoveInteractive:onKeyboardMoveInteractive}=handlers;if(onKeyboardMoveStart&&event.eventName.endsWith("onKeyboardMoveStart")){onKeyboardMoveStart(event,context);}if(onKeyboardMove&&event.eventName.endsWith("onKeyboardMove")){onKeyboardMove(event,context);}if(onKeyboardMoveEnd&&event.eventName.endsWith("onKeyboardMoveEnd")){onKeyboardMoveEnd(event,context);}if(onKeyboardMoveInteractive&&event.eventName.endsWith("onKeyboardMoveInteractive")){onKeyboardMoveInteractive(event,context);}}',
+};
+const __initData2 = {
+  code: 'function pnpm_reanimatedNativeTs2(event){const{handlers,context}=this.__closure;const{onFocusedInputLayoutChanged:onFocusedInputLayoutChanged}=handlers;if(onFocusedInputLayoutChanged&&event.eventName.endsWith("onFocusedInputLayoutChanged")){onFocusedInputLayoutChanged(event,context);}}',
+};
 
-export const KeyboardController = {
-  setDefaultMode: fn(1627).KeyboardControllerNative.setDefaultMode,
-  setInputMode: fn(1627).KeyboardControllerNative.setInputMode,
-  setFocusTo: fn(1627).KeyboardControllerNative.setFocusTo,
-  preload: fn(1627).KeyboardControllerNative.preload,
-  dismiss(arg0) {
-    const self = this;
-    const apply = closure_0.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
+export const useAnimatedKeyboardHandler = (handlers, items10) => {
+  closure_0 = handlers;
+  const handler = cancelAnimation.useHandler(handlers, items10);
+  const context = handler.context;
+  const fn = function v(eventName) {
+    ({ onKeyboardMoveStart, onKeyboardMove, onKeyboardMoveEnd, onKeyboardMoveInteractive } = closure_0);
+    let endsWithResult = onKeyboardMoveStart;
+    if (onKeyboardMoveStart) {
+      eventName = eventName.eventName;
+      endsWithResult = eventName.endsWith("onKeyboardMoveStart");
     }
-    return applyArgumentsResult;
-  },
-  isVisible() {
-    return !c2;
-  },
-  state() {
-    return global;
-  },
+    if (endsWithResult) {
+      onKeyboardMoveStart(eventName, context);
+    }
+    let endsWithResult1 = onKeyboardMove;
+    if (onKeyboardMove) {
+      const eventName2 = eventName.eventName;
+      endsWithResult1 = eventName2.endsWith("onKeyboardMove");
+    }
+    if (endsWithResult1) {
+      onKeyboardMove(eventName, context);
+    }
+    let endsWithResult2 = onKeyboardMoveEnd;
+    if (onKeyboardMoveEnd) {
+      const eventName3 = eventName.eventName;
+      endsWithResult2 = eventName3.endsWith("onKeyboardMoveEnd");
+    }
+    if (endsWithResult2) {
+      onKeyboardMoveEnd(eventName, context);
+    }
+    let endsWithResult3 = onKeyboardMoveInteractive;
+    if (onKeyboardMoveInteractive) {
+      const eventName4 = eventName.eventName;
+      endsWithResult3 = eventName4.endsWith("onKeyboardMoveInteractive");
+    }
+    if (endsWithResult3) {
+      const result = onKeyboardMoveInteractive(eventName, context);
+    }
+  };
+  fn.__closure = { handlers, context };
+  fn.__workletHash = 6092807753388;
+  fn.__initData = __initData;
+  return cancelAnimation.useEvent(
+    fn,
+    ["onKeyboardMoveStart", "onKeyboardMove", "onKeyboardMoveEnd", "onKeyboardMoveInteractive"],
+    handler.doDependenciesDiffer,
+  );
+};
+export const useFocusedInputLayoutHandler = (handlers, items10) => {
+  const handler = cancelAnimation.useHandler(handlers, items10);
+  const context = handler.context;
+  const fn = function v(eventName) {
+    const onFocusedInputLayoutChanged = handlers.onFocusedInputLayoutChanged;
+    let endsWithResult = onFocusedInputLayoutChanged;
+    if (onFocusedInputLayoutChanged) {
+      eventName = eventName.eventName;
+      endsWithResult = eventName.endsWith("onFocusedInputLayoutChanged");
+    }
+    if (endsWithResult) {
+      const result = onFocusedInputLayoutChanged(eventName, context);
+    }
+  };
+  fn.__closure = { handlers, context };
+  fn.__workletHash = 9976853307145;
+  fn.__initData = __initData2;
+  return cancelAnimation.useEvent(fn, ["onFocusedInputLayoutChanged"], handler.doDependenciesDiffer);
 };

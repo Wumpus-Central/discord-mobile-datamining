@@ -1,37 +1,49 @@
 // _runtime/metro/13903__.js
 
-export default {
-  name: "react-native-url-polyfill",
-  version: "2.0.0",
-  description: "A lightweight and trustworthy URL polyfill for React Native",
-  keywords: ["URL", "URLSearchParams", "polyfill", "react native", "whatwg-url"],
-  bugs: { url: "https://github.com/charpeni/react-native-url-polyfill/issues" },
-  homepage: "https://github.com/charpeni/react-native-url-polyfill",
-  readme: "https://github.com/charpeni/react-native-url-polyfill#readme",
-  repository: { type: "git", url: "https://github.com/charpeni/react-native-url-polyfill.git" },
-  main: "index.js",
-  types: "index.d.ts",
-  scripts: { test: "jest", lint: "eslint .", prepare: "husky install", "bundle-size": "node scripts/bundle-size" },
-  author: "Nicolas Charpentier <nicolas.charpentier079@gmail.com>",
-  license: "MIT",
-  dependencies: { "whatwg-url-without-unicode": "8.0.0-3" },
-  devDependencies: {
-    "@react-native-community/eslint-config": "3.2.0",
-    detox: "20.9.1",
-    eslint: "8.44.0",
-    "eslint-plugin-prettier": "4.2.1",
-    husky: "8.0.3",
-    jest: "29.5.0",
-    "lint-staged": "13.2.3",
-    "metro-react-native-babel-preset": "0.76.7",
-    nanoid: "3.3.6",
-    prettier: "2.8.8",
-    react: "18.2.0",
-    "react-native": "0.72.1",
-    "react-native-bundle-scale": "1.1.0",
-    typescript: "5.1.6",
-  },
-  peerDependencies: { "react-native": "*" },
-  jest: { preset: "react-native", testPathIgnorePatterns: ["/node_modules/", "./platforms/"] },
-  "lint-staged": { "*.js": ["eslint --fix"] },
+export default (arg0) => {
+  let map = arg0;
+  if (!arg0) {
+    const _Map = Map;
+    map = new Map();
+  }
+  return {
+    all: map,
+    on(arg0, arg1) {
+      value = map.get(arg0);
+      if (value) {
+        value.push(arg1);
+      } else {
+        const items = [arg1];
+        const result = map.set(arg0, items);
+      }
+    },
+    off(arg0, arg1) {
+      value = map.get(arg0);
+      if (value) {
+        if (arg1) {
+          value.splice(value.indexOf(arg1) >>> 0, 1);
+        } else {
+          const result = map.set(arg0, []);
+        }
+      }
+    },
+    emit(arg0, arg1) {
+      closure_0 = arg0;
+      closure_1 = arg1;
+      value = map.get(arg0);
+      if (value) {
+        const substr = value.slice();
+        const mapped = substr.map((fn) => {
+          fn(closure_1);
+        });
+      }
+      value2 = map.get("*");
+      if (value2) {
+        const substr1 = value2.slice();
+        const mapped1 = substr1.map((fn) => {
+          fn(closure_0, closure_1);
+        });
+      }
+    },
+  };
 };

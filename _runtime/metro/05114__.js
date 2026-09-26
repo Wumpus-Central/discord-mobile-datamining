@@ -1,17 +1,103 @@
 // _runtime/metro/05114__.js
-import callBoundIntrinsic from "../01315_callBoundIntrinsic.js";
-import RequireObjectCoercible from "../05101_RequireObjectCoercible.js";
-import ToString from "../05115_ToString.js";
+import _mod1455 from "01455__.js";
+import _mod5115 from "05115__.js";
+import _mod5116 from "05116__.js";
+import _mod5117 from "05117__.js";
 
-let closure_2 = callBoundIntrinsic("String.prototype.replace");
-const isMatch = /^\s$/.test("\u180E");
-let closure_3 = isMatch
-  ? /^[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+/
-  : /^[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+/;
-let closure_4 = isMatch
-  ? /[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+$/
-  : /[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+$/;
+let tmp = typeof Symbol === "function";
+if (typeof Symbol === "function") {
+  let _Symbol = Symbol;
+  tmp = typeof Symbol.iterator === "symbol";
+}
+let closure_2 = tmp;
 
-export default function trim() {
-  return closure_2(closure_2(ToString(RequireObjectCoercible(this)), closure_3, ""), closure_4, "");
+export default function ToPrimitive(arg0) {
+  let tmp22;
+  if (_mod5115(arg0)) {
+    return arg0;
+  } else {
+    let str2 = "default";
+    if (arguments.length > 1) {
+      const _String = String;
+      let str3 = "string";
+      if (arguments[1] !== String) {
+        const _Number = Number;
+        let str4 = "default";
+        if (arguments[1] === Number) {
+          str4 = "number";
+        }
+        str3 = str4;
+      }
+      str2 = str3;
+    }
+    if (!closure_2) {
+      {
+        let tmp16 = "default" === str2;
+        if (tmp16) {
+          tmp16 = _mod5117(arg0) || _mod5116(arg0);
+          const tmp15 = _mod5117(arg0) || _mod5116(arg0);
+        }
+        let str8 = str2;
+        if (tmp16) {
+          str8 = "string";
+        }
+        let str10 = "number";
+        if ("default" !== str8) {
+          str10 = str8;
+        }
+        if (null == arg0) {
+          const _TypeError4 = TypeError;
+          const typeError = new TypeError("Cannot call method on " + arg0);
+          throw typeError;
+        } else {
+          if (typeof str10 === "string") {
+            const arr = "string" === str10 ? ["toString", "valueOf"] : ["valueOf", "toString"];
+            let num2 = 0;
+            if (0 < arr.length) {
+              while (true) {
+                let tmp18 = arg0[arr[num2]];
+                if (_mod1455(tmp18)) {
+                  let call = tmp18.call;
+                  tmp22 = typeof call === "unknown" ? tmp18() : call(arg0);
+                  if (_mod5115(tmp22)) {
+                    break;
+                  }
+                }
+                num2 = num2 + 1;
+              }
+              return tmp22;
+            }
+            const _TypeError2 = TypeError;
+            const typeError1 = new TypeError("No default value");
+            throw typeError1;
+          }
+          const _TypeError3 = TypeError;
+          const typeError2 = new TypeError('hint must be "string" or "number"');
+          throw typeError2;
+        }
+      }
+    } else {
+      const _Symbol = Symbol;
+      if (Symbol.toPrimitive) {
+        const _Symbol3 = Symbol;
+        let tmp8;
+        if (null != arg0[toPrimitive]) {
+          tmp8 = tmp6;
+          if (!_mod1455(tmp6)) {
+            const _TypeError = TypeError;
+            const _String2 = String;
+            const text = `${tmp6} returned for property `;
+            const typeError3 = new TypeError(
+              `${tmp6} returned for property ` + String(toPrimitive) + " of object " + arg0 + " is not a function",
+            );
+            throw typeError3;
+          }
+        }
+        let valueOf = tmp8;
+      } else if (_mod5116(arg0)) {
+        const _Symbol2 = Symbol;
+        valueOf = Symbol.prototype.valueOf;
+      }
+    }
+  }
 }

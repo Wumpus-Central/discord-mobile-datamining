@@ -1,32 +1,15 @@
 // _runtime/metro/13852__.js
-import _mod13833 from "13833__.js";
-import _mod13837 from "13837__.js";
-import _mod13853 from "13853__.js";
+import _mod13804 from "13804__.js";
+import _mod13811 from "13811__.js";
 
-let prop = Object.getOwnPropertySymbols;
-if (prop) {
-  prop = !_mod13837(() => {
-    const SymbolResult = Symbol("symbol detection");
-    const StringResult = _mod13833.String(SymbolResult);
-    let tmp5 = !StringResult;
-    if (StringResult) {
-      const _Object = Object;
-      const _Symbol = Symbol;
-      tmp5 = !(Object(SymbolResult) instanceof Symbol);
-    }
-    if (!tmp5) {
-      const _Symbol2 = Symbol;
-      let tmp2Result = !sham;
-      if (!sham) {
-        tmp2Result = _mod13853;
-      }
-      if (tmp2Result) {
-        tmp2Result = _mod13853 < 41;
-      }
-      tmp5 = tmp2Result;
-    }
-    return tmp5;
-  });
-}
+let closure_2 = _mod13804("keys");
 
-export default prop;
+export default (arg0) => {
+  let tmp2 = closure_2[arg0];
+  if (!tmp2) {
+    const tmp5 = _mod13811(arg0);
+    tmp[arg0] = tmp5;
+    tmp2 = tmp5;
+  }
+  return tmp2;
+};

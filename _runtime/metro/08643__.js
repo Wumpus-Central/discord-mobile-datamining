@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_identity/images",
-  width: 295,
-  height: 190,
+  httpServerLocation: "/assets/images/native/custom_app_icons/GamingIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "977038e35a08043eb799ac3c20093988",
-  name: "guild_identity_education_dark",
+  hash: "27dc2bbcf6aa3b0cbef53a5212edf486",
+  name: "GamingIcon",
   type: "png",
 });

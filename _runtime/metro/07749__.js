@@ -1,4 +1,12 @@
 // _runtime/metro/07749__.js
-import _modDef7750 from "07750__.js";
+const re0 = /[|\\{}()[\]^$+*?.-]/g;
 
-export default _modDef7750({ contain: null, cover: null, stretch: null });
+export default (str) => {
+  if (typeof str !== "string") {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("Expected a string");
+    throw typeError;
+  } else {
+    return str.replace(re0, "\\$&");
+  }
+};

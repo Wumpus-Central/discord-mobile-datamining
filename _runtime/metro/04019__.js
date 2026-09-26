@@ -1,28 +1,84 @@
 // _runtime/metro/04019__.js
-import 02119__ from "02119__.js";
+const obj = { lessThanXSeconds: { one: { regular: "mniej ni\u017C sekunda", past: "mniej ni\u017C sekund\u0119", future: "mniej ni\u017C sekund\u0119" }, twoFour: "mniej ni\u017C {{count}} sekundy", other: "mniej ni\u017C {{count}} sekund" }, xSeconds: { one: { regular: "sekunda", past: "sekund\u0119", future: "sekund\u0119" }, twoFour: "{{count}} sekundy", other: "{{count}} sekund" }, halfAMinute: { one: "p\u00F3\u0142 minuty", twoFour: "p\u00F3\u0142 minuty", other: "p\u00F3\u0142 minuty" }, lessThanXMinutes: { one: { regular: "mniej ni\u017C minuta", past: "mniej ni\u017C minut\u0119", future: "mniej ni\u017C minut\u0119" }, twoFour: "mniej ni\u017C {{count}} minuty", other: "mniej ni\u017C {{count}} minut" }, xMinutes: { one: { regular: "minuta", past: "minut\u0119", future: "minut\u0119" }, twoFour: "{{count}} minuty", other: "{{count}} minut" }, aboutXHours: { one: { regular: "oko\u0142o godziny", past: "oko\u0142o godziny", future: "oko\u0142o godzin\u0119" }, twoFour: "oko\u0142o {{count}} godziny", other: "oko\u0142o {{count}} godzin" }, xHours: { one: { regular: "godzina", past: "godzin\u0119", future: "godzin\u0119" }, twoFour: "{{count}} godziny", other: "{{count}} godzin" }, xDays: { one: { regular: "dzie\u0144", past: "dzie\u0144", future: "1 dzie\u0144" }, twoFour: "{{count}} dni", other: "{{count}} dni" }, aboutXWeeks: { one: "oko\u0142o tygodnia", twoFour: "oko\u0142o {{count}} tygodni", other: "oko\u0142o {{count}} tygodni" }, xWeeks: { one: "tydzie\u0144", twoFour: "{{count}} tygodnie", other: "{{count}} tygodni" }, aboutXMonths: { one: "oko\u0142o miesi\u0105c", twoFour: "oko\u0142o {{count}} miesi\u0105ce", other: "oko\u0142o {{count}} miesi\u0119cy" }, xMonths: { one: "miesi\u0105c", twoFour: "{{count}} miesi\u0105ce", other: "{{count}} miesi\u0119cy" }, aboutXYears: { one: "oko\u0142o rok", twoFour: "oko\u0142o {{count}} lata", other: "oko\u0142o {{count}} lat" }, xYears: { one: "rok", twoFour: "{{count}} lata", other: "{{count}} lat" }, overXYears: { one: "ponad rok", twoFour: "ponad {{count}} lata", other: "ponad {{count}} lat" }, almostXYears: { one: "prawie rok", twoFour: "prawie {{count}} lata", other: "prawie {{count}} lat" } };
 
-if (!module_2119) {
-  const obj2 = { default: module_2119 };
-  let obj = obj2;
-} else {
-  obj = module_2119;
-}
-const date = {
-  ordinalNumber(arg0, arg1) {
-    return String(arg0);
-  },
-  era: obj.default({ values: { narrow: ["p.n.e.", "n.e."], abbreviated: ["p.n.e.", "n.e."], wide: ["przed nasz\u0105 er\u0105", "naszej ery"] }, defaultWidth: "wide" }),
-  quarter: obj.default({
-    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["I kw.", "II kw.", "III kw.", "IV kw."], wide: ["I kwarta\u0142", "II kwarta\u0142", "III kwarta\u0142", "IV kwarta\u0142"] },
-    defaultWidth: "wide",
-    argumentCallback(arg0) {
-      return arg0 - 1;
+export default function formatDistance(arg0, arg1, addSuffix) {
+  let replaced = arg1;
+  let replace = obj[arg0];
+  if (null != addSuffix) {
+    if (addSuffix.addSuffix) {
+      if (!addSuffix.comparison) {
+        if (1 === replaced) {
+          let other2 = replace.one;
+        } else {
+          const result = replaced % 100;
+          if (result <= 20) {
+            if (10 < result) {
+              other2 = replace.other;
+            }
+          }
+          const result1 = result % 10;
+          if (2 <= result1) {
+            if (result1 <= 4) {
+              other2 = replace.twoFour;
+            }
+          }
+          other2 = replace.other;
+        }
+        let past = other2;
+        if (typeof other2 !== "string") {
+          past = other2.past;
+        }
+        const _String = String;
+        let text = `${tmp6("{{count}}", String(tmp))} temu`;
+      }
+      if (1 === replaced) {
+        let other3 = replace.one;
+      } else {
+        const result2 = replaced % 100;
+        if (result2 <= 20) {
+          if (10 < result2) {
+            other3 = replace.other;
+          }
+        }
+        const result3 = result2 % 10;
+        if (2 <= result3) {
+          if (result3 <= 4) {
+            other3 = replace.twoFour;
+          }
+        }
+        other3 = replace.other;
+      }
+      let str4 = other3;
+      if (typeof other3 !== "string") {
+        str4 = other3.future;
+      }
+      replace = str4.replace;
+      const _String2 = String;
+      replaced = replace("{{count}}", String(replaced));
+      text = `za ${tmp}`;
     }
-  }),
-  month: obj.default({ values: { narrow: ["S", "L", "M", "K", "M", "C", "L", "S", "W", "P", "L", "G"], abbreviated: ["sty", "lut", "mar", "kwi", "maj", "cze", "lip", "sie", "wrz", "pa\u017A", "lis", "gru"], wide: ["stycze\u0144", "luty", "marzec", "kwiecie\u0144", "maj", "czerwiec", "lipiec", "sierpie\u0144", "wrzesie\u0144", "pa\u017Adziernik", "listopad", "grudzie\u0144"] }, defaultWidth: "wide", formattingValues: { narrow: ["s", "l", "m", "k", "m", "c", "l", "s", "w", "p", "l", "g"], abbreviated: ["sty", "lut", "mar", "kwi", "maj", "cze", "lip", "sie", "wrz", "pa\u017A", "lis", "gru"], wide: ["stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca", "sierpnia", "wrze\u015Bnia", "pa\u017Adziernika", "listopada", "grudnia"] }, defaultFormattingWidth: "wide" }),
-  day: obj.default({ values: { narrow: ["N", "P", "W", "\u015A", "C", "P", "S"], short: ["nie", "pon", "wto", "\u015Bro", "czw", "pi\u0105", "sob"], abbreviated: ["niedz.", "pon.", "wt.", "\u015Br.", "czw.", "pt.", "sob."], wide: ["niedziela", "poniedzia\u0142ek", "wtorek", "\u015Broda", "czwartek", "pi\u0105tek", "sobota"] }, defaultWidth: "wide", formattingValues: { narrow: ["n", "p", "w", "\u015B", "c", "p", "s"], short: ["nie", "pon", "wto", "\u015Bro", "czw", "pi\u0105", "sob"], abbreviated: ["niedz.", "pon.", "wt.", "\u015Br.", "czw.", "pt.", "sob."], wide: ["niedziela", "poniedzia\u0142ek", "wtorek", "\u015Broda", "czwartek", "pi\u0105tek", "sobota"] }, defaultFormattingWidth: "wide" }),
-  dayPeriod: obj.default({ values: { narrow: { am: "a", pm: "p", midnight: "p\u00F3\u0142n.", noon: "po\u0142", morning: "rano", afternoon: "popo\u0142.", evening: "wiecz.", night: "noc" }, abbreviated: { am: "AM", pm: "PM", midnight: "p\u00F3\u0142noc", noon: "po\u0142udnie", morning: "rano", afternoon: "popo\u0142udnie", evening: "wiecz\u00F3r", night: "noc" }, wide: { am: "AM", pm: "PM", midnight: "p\u00F3\u0142noc", noon: "po\u0142udnie", morning: "rano", afternoon: "popo\u0142udnie", evening: "wiecz\u00F3r", night: "noc" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "a", pm: "p", midnight: "o p\u00F3\u0142n.", noon: "w po\u0142.", morning: "rano", afternoon: "po po\u0142.", evening: "wiecz.", night: "w nocy" }, abbreviated: { am: "AM", pm: "PM", midnight: "o p\u00F3\u0142nocy", noon: "w po\u0142udnie", morning: "rano", afternoon: "po po\u0142udniu", evening: "wieczorem", night: "w nocy" }, wide: { am: "AM", pm: "PM", midnight: "o p\u00F3\u0142nocy", noon: "w po\u0142udnie", morning: "rano", afternoon: "po po\u0142udniu", evening: "wieczorem", night: "w nocy" } }, defaultFormattingWidth: "wide" })
+  }
+  if (1 === replaced) {
+    let other = replace.one;
+  } else {
+    const result4 = replaced % 100;
+    if (result4 <= 20) {
+      if (10 < result4) {
+        other = replace.other;
+      }
+    }
+    const result5 = result4 % 10;
+    if (2 <= result5) {
+      if (result5 <= 4) {
+        other = replace.twoFour;
+      }
+    }
+    other = replace.other;
+  }
+  let str = other;
+  if (typeof other !== "string") {
+    str = other.regular;
+  }
+  return str.replace("{{count}}", String(replaced));
 };
-
-export default date;
 export default exports.default;

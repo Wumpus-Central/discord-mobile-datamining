@@ -1,33 +1,37 @@
 // _runtime/metro/05220__.js
-import get_ActivityIndicator from "00017__.js";
+import RNSLog2 from "../05216_RNSLog.js";
+import noop from "00019__.js";
 
-({ Platform, UIManager: closure_0 } = get_ActivityIndicator);
+require = fn;
+const findNodeHandle = fn(17).findNodeHandle;
 
-export const isNativePlatformSupported = true;
-export const enableScreens = function enableScreens() {
-  flag = arg0;
-  if (arg0 === undefined) {
-    flag = true;
-  }
-  if (flag) {
-    flag = !viewManagerConfig.getViewManagerConfig("RNSScreen");
-  }
-  if (flag) {
-    const _console = console;
-    console.error(
-      "Screen native module hasn't been linked. Please check the react-native-screens README for more details",
-    );
-  }
+export const useTabsHost = function useTabsHost(arg0) {
+  ({ componentNodeRef: require, onTabSelected } = arg0);
+  noop = undefined;
+  noop = noop.useRef(-1);
+  const effect = noop.useEffect(() => {
+    if (null != ref.current) {
+      let num2 = findNodeHandle(tmp.current);
+      if (num2 == null) {
+        num2 = -1;
+      }
+      closure_2.current = num2;
+    } else {
+      closure_2.current = -1;
+    }
+  }, []);
+  const obj = { onTabSelected: null };
+  const items = [onTabSelected];
+  obj.onTabSelected = noop.useCallback((nativeEvent) => {
+    const RNSLog = RNSLog2.RNSLog;
+    let num = ref2.current;
+    if (num == null) {
+      num = -1;
+    }
+    RNSLog.log("TabsHost [" + num + "] onTabSelected: " + JSON.stringify(nativeEvent.nativeEvent));
+    if (onTabSelected != null) {
+      onTabSelected(nativeEvent);
+    }
+  }, items);
+  return obj;
 };
-export function enableFreeze() {
-  flag = arg0;
-  if (arg0 === undefined) {
-    flag = true;
-  }
-}
-export function screensEnabled() {
-  return flag;
-}
-export function freezeEnabled() {
-  return flag;
-}

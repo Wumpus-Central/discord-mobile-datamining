@@ -1,28 +1,23 @@
 // _runtime/metro/03953__.js
-import 02119__ from "02119__.js";
+let closure_0 = { lessThanXSeconds: { one: "menos de un segundo", other: "menos de {{count}} segundos" }, xSeconds: { one: "1 segundo", other: "{{count}} segundos" }, halfAMinute: "medio minuto", lessThanXMinutes: { one: "menos de un minuto", other: "menos de {{count}} minutos" }, xMinutes: { one: "1 minuto", other: "{{count}} minutos" }, aboutXHours: { one: "alrededor de 1 hora", other: "alrededor de {{count}} horas" }, xHours: { one: "1 hora", other: "{{count}} horas" }, xDays: { one: "1 d\u00EDa", other: "{{count}} d\u00EDas" }, aboutXWeeks: { one: "alrededor de 1 semana", other: "alrededor de {{count}} semanas" }, xWeeks: { one: "1 semana", other: "{{count}} semanas" }, aboutXMonths: { one: "alrededor de 1 mes", other: "alrededor de {{count}} meses" }, xMonths: { one: "1 mes", other: "{{count}} meses" }, aboutXYears: { one: "alrededor de 1 a\u00F1o", other: "alrededor de {{count}} a\u00F1os" }, xYears: { one: "1 a\u00F1o", other: "{{count}} a\u00F1os" }, overXYears: { one: "m\u00E1s de 1 a\u00F1o", other: "m\u00E1s de {{count}} a\u00F1os" }, almostXYears: { one: "casi 1 a\u00F1o", other: "casi {{count}} a\u00F1os" } };
 
-if (!module_2119) {
-  const obj2 = { default: module_2119 };
-  let obj = obj2;
-} else {
-  obj = module_2119;
-}
-const date = {
-  ordinalNumber(arg0, arg1) {
-    return Number(arg0) + "\u00BA";
-  },
-  era: obj.default({ values: { narrow: ["AC", "DC"], abbreviated: ["AC", "DC"], wide: ["antes de cristo", "despu\u00E9s de cristo"] }, defaultWidth: "wide" }),
-  quarter: obj.default({
-    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["T1", "T2", "T3", "T4"], wide: ["1\u00BA trimestre", "2\u00BA trimestre", "3\u00BA trimestre", "4\u00BA trimestre"] },
-    defaultWidth: "wide",
-    argumentCallback(arg0) {
-      return Number(arg0) - 1;
+export default function formatDistance(arg0, arg1, addSuffix) {
+  if (typeof closure_0[arg0] === "string") {
+    let tmp5 = tmp;
+    if (null != addSuffix) {
+      tmp5 = tmp;
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          let text = `hace ${tmp}`;
+        }
+        text = `en ${tmp}`;
+      }
     }
-  }),
-  month: obj.default({ values: { narrow: ["e", "f", "m", "a", "m", "j", "j", "a", "s", "o", "n", "d"], abbreviated: ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"], wide: ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"] }, defaultWidth: "wide" }),
-  day: obj.default({ values: { narrow: ["d", "l", "m", "m", "j", "v", "s"], short: ["do", "lu", "ma", "mi", "ju", "vi", "s\u00E1"], abbreviated: ["dom", "lun", "mar", "mi\u00E9", "jue", "vie", "s\u00E1b"], wide: ["domingo", "lunes", "martes", "mi\u00E9rcoles", "jueves", "viernes", "s\u00E1bado"] }, defaultWidth: "wide" }),
-  dayPeriod: obj.default({ values: { narrow: { am: "a", pm: "p", midnight: "mn", noon: "md", morning: "ma\u00F1ana", afternoon: "tarde", evening: "tarde", night: "noche" }, abbreviated: { am: "AM", pm: "PM", midnight: "medianoche", noon: "mediodia", morning: "ma\u00F1ana", afternoon: "tarde", evening: "tarde", night: "noche" }, wide: { am: "a.m.", pm: "p.m.", midnight: "medianoche", noon: "mediodia", morning: "ma\u00F1ana", afternoon: "tarde", evening: "tarde", night: "noche" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "a", pm: "p", midnight: "mn", noon: "md", morning: "de la ma\u00F1ana", afternoon: "de la tarde", evening: "de la tarde", night: "de la noche" }, abbreviated: { am: "AM", pm: "PM", midnight: "medianoche", noon: "mediodia", morning: "de la ma\u00F1ana", afternoon: "de la tarde", evening: "de la tarde", night: "de la noche" }, wide: { am: "a.m.", pm: "p.m.", midnight: "medianoche", noon: "mediodia", morning: "de la ma\u00F1ana", afternoon: "de la tarde", evening: "de la tarde", night: "de la noche" } }, defaultFormattingWidth: "wide" })
+    return tmp5;
+  } else if (1 === arg1) {
+    let one = tmp.one;
+  } else {
+    one = tmp.other.replace("{{count}}", arg1.toString());
+  }
 };
-
-export default date;
 export default exports.default;

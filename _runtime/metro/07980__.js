@@ -1,13 +1,14 @@
 // _runtime/metro/07980__.js
-import _modDef7925 from "07925__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _modDef7933 from "07933__.js";
+import _modDef7981 from "07981__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const Marker = importDefault;
+const SvgImage = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,15 +27,18 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
+_possibleConstructorReturnDefault;
+const Image = fn(17).Image;
 const jsx = fn(21).jsx;
-class Marker {
+const re9 = /\s+/;
+class SvgImage {
   constructor() {
     self = this;
-    tmp = c2(this, Marker);
-    tmp2 = closure_4;
-    obj = closure_4(Marker);
-    tmp3 = closure_3;
-    if (metroRequire()) {
+    tmp = closure_3(this, SvgImage);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(SvgImage);
+    tmp3 = closure_4;
+    if (closure_8()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -47,47 +51,66 @@ class Marker {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Marker, _modDef7925);
+_inherits(SvgImage, _modDef7933);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    ({ viewBox, preserveAspectRatio, markerWidth, markerHeight, children } = props);
+    ({ preserveAspectRatio, href } = props);
+    ({ x, y, width, height } = props);
+    if (undefined === href) {
+      href = props.xlinkHref;
+    }
+    if (preserveAspectRatio) {
+      let parts = preserveAspectRatio.trim().split(re9);
+      const str = preserveAspectRatio.trim();
+    } else {
+      parts = [];
+    }
+    const size = {
+      x,
+      y,
+      width,
+      height,
+      onLoad: props.onLoad,
+      meetOrSlice: SvgImage(7922).meetOrSliceTypes[tmp3] || 0,
+      align: null,
+      src: null,
+    };
+    [tmp2, tmp3] = parts;
+    const tmp6 = SvgImage(7922).meetOrSliceTypes[tmp3] || 0;
+    size.align = SvgImage(7922).alignEnum[tmp2] || "xMidYMid";
+    let assetSource = null;
+    if (href) {
+      let tmp10 = href;
+      if (typeof href === "string") {
+        const obj = { uri: href };
+        tmp10 = obj;
+      }
+      assetSource = Image.resolveAssetSource(tmp10);
+    }
+    size.src = assetSource;
     const obj2 = {
       ref(arg0) {
         return self.refMethod(arg0);
       },
     };
-    const obj = {
-      name: props.id,
-      refX: props.refX,
-      refY: props.refY,
-      markerUnits: props.markerUnits,
-      orient: String(props.orient),
-      markerWidth,
-      markerHeight,
-    };
-    const merged = Object.assign(obj);
-    const merged1 = Object.assign(Marker(7914)({ viewBox, preserveAspectRatio }));
-    obj2.children = children;
-    return jsx(Marker(7981), {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    });
+    const tmp7 = SvgImage(7922).alignEnum[tmp2] || "xMidYMid";
+    const merged = Object.assign(SvgImage(7924).withoutXY(this, props));
+    const merged1 = Object.assign(size);
+    return (
+      <tmp11
+        ref={function ref(arg0) {
+          return self.refMethod(arg0);
+        }}
+      />
+    );
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Marker, items);
-importDefaultResultResult.displayName = "Marker";
-importDefaultResultResult.defaultProps = {
-  refX: 0,
-  refY: 0,
-  orient: "0",
-  markerWidth: 3,
-  markerHeight: 3,
-  markerUnits: "strokeWidth",
-};
+const importDefaultResultResult = _createClass(SvgImage, items);
+importDefaultResultResult.displayName = "Image";
+importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0, preserveAspectRatio: "xMidYMid meet" };
 
 export default importDefaultResultResult;

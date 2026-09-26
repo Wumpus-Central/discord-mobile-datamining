@@ -1,7 +1,6 @@
 // _runtime/metro/04256__.js
-import Parser2 from "../04221_Parser.js";
+import Parser2 from "../04224_Parser.js";
 
-let closure_1 = dependencyMap;
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
@@ -27,15 +26,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(TimestampSecondsParser, Parser) {
+function _setPrototypeOf(FractionOfSecondParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(TimestampSecondsParser, Parser) {
-      TimestampSecondsParser.__proto__ = Parser;
-      return TimestampSecondsParser;
+    _setPrototypeOf = function _setPrototypeOf(FractionOfSecondParser, Parser) {
+      FractionOfSecondParser.__proto__ = Parser;
+      return FractionOfSecondParser;
     };
   }
-  return _setPrototypeOf(TimestampSecondsParser, Parser);
+  return _setPrototypeOf(FractionOfSecondParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -55,7 +54,7 @@ function _getPrototypeOf(arg0) {
 }
 const Parser = Parser2.Parser;
 let _createSuperInternal;
-class TimestampSecondsParser {
+class FractionOfSecondParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -82,7 +81,7 @@ class TimestampSecondsParser {
       if (tmp13) {
         _ReferenceError2 = ReferenceError;
         tmp20 = new.target;
-        str6 = "this hasn't been initialised - super() hasn't been called";
+        str5 = "this hasn't been initialised - super() hasn't been called";
         tmp21 = new.target;
         referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
         tmp23 = referenceError;
@@ -92,36 +91,33 @@ class TimestampSecondsParser {
         if ("priority" in applyResult) {
           _Object = Object;
           definePropertyResult = Object.defineProperty(applyResult, "priority", {
-            value: 40,
+            value: 30,
             enumerable: true,
             configurable: true,
             writable: true,
           });
         } else {
-          num3 = 40;
-          applyResult.priority = 40;
+          num3 = 30;
+          applyResult.priority = 30;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
           tmp16 = new.target;
-          str5 = "this hasn't been initialised - super() hasn't been called";
+          str4 = "this hasn't been initialised - super() hasn't been called";
           tmp17 = new.target;
           referenceError1 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
+          items1 = ["t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
-            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", {
-              value: "*",
-              enumerable: true,
-              configurable: true,
-              writable: true,
-            });
+            obj = { value: null, enumerable: true, configurable: true, writable: true };
+            obj.value = items1;
+            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", obj);
           } else {
-            str4 = "*";
-            applyResult.incompatibleTokens = "*";
+            applyResult.incompatibleTokens = items1;
           }
           return applyResult;
         }
@@ -137,7 +133,7 @@ class TimestampSecondsParser {
     }
   }
 }
-closure_1 = TimestampSecondsParser;
+let dependencyMap = FractionOfSecondParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -149,14 +145,14 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-TimestampSecondsParser.prototype = Object.create(prototype, {
-  constructor: { value: TimestampSecondsParser, writable: true, configurable: true },
+FractionOfSecondParser.prototype = Object.create(prototype, {
+  constructor: { value: FractionOfSecondParser, writable: true, configurable: true },
 });
 if (Parser) {
-  _setPrototypeOf(TimestampSecondsParser, Parser);
+  _setPrototypeOf(FractionOfSecondParser, Parser);
 }
 let num = 0;
-closure_1 = (function _isNativeReflectConstruct() {
+dependencyMap = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
     const _Reflect3 = Reflect;
     if (Reflect.construct) {
@@ -214,17 +210,22 @@ _createSuperInternal = function _createSuperInternal() {
 };
 const entry = {
   key: "parse",
-  value: function parse(arg0) {
-    return _createSuperInternal(closure_1[0]).parseAnyDigitsSigned(arg0);
+  value: function parse(arg0, arg1) {
+    return _createSuperInternal(4226).mapValue(
+      _createSuperInternal(4226).parseNDigits(arg1.length, arg0),
+      function valueCallback(arg0) {
+        return Math.floor(arg0 * Math.pow(10, 3 - length.length));
+      },
+    );
   },
 };
 let items = [
   entry,
   {
     key: "set",
-    value: function set(arg0, arg1, arg2) {
-      const items = [new Date(1000 * arg2), { timestampIsSet: true }];
-      return items;
+    value: function set(setUTCMilliseconds, arg1, arg2) {
+      setUTCMilliseconds.setUTCMilliseconds(arg2);
+      return setUTCMilliseconds;
     },
   },
 ];
@@ -246,4 +247,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { TimestampSecondsParser };
+export { FractionOfSecondParser };

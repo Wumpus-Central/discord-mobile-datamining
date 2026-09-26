@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/premium/perks",
+  width: 20,
+  height: 20,
   scales: [2, 3],
-  hash: "efc7df36de437c3f1595567d5ebedccf",
-  name: "ic_sticker_24px",
+  hash: "41b77a6677a2cd0322d1116c3e0298ad",
+  name: "img_nitro_premium_guilds_20px",
   type: "png",
 });

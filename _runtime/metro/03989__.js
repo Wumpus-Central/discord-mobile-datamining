@@ -1,61 +1,35 @@
 // _runtime/metro/03989__.js
-import 02119__ from "02119__.js";
+let closure_0 = { lessThanXSeconds: { one: "1\u79D2\u672A\u6E80", other: "{{count}}\u79D2\u672A\u6E80", oneWithSuffix: "\u7D041\u79D2", otherWithSuffix: "\u7D04{{count}}\u79D2" }, xSeconds: { one: "1\u79D2", other: "{{count}}\u79D2" }, halfAMinute: "30\u79D2", lessThanXMinutes: { one: "1\u5206\u672A\u6E80", other: "{{count}}\u5206\u672A\u6E80", oneWithSuffix: "\u7D041\u5206", otherWithSuffix: "\u7D04{{count}}\u5206" }, xMinutes: { one: "1\u5206", other: "{{count}}\u5206" }, aboutXHours: { one: "\u7D041\u6642\u9593", other: "\u7D04{{count}}\u6642\u9593" }, xHours: { one: "1\u6642\u9593", other: "{{count}}\u6642\u9593" }, xDays: { one: "1\u65E5", other: "{{count}}\u65E5" }, aboutXWeeks: { one: "\u7D041\u9031\u9593", other: "\u7D04{{count}}\u9031\u9593" }, xWeeks: { one: "1\u9031\u9593", other: "{{count}}\u9031\u9593" }, aboutXMonths: { one: "\u7D041\u304B\u6708", other: "\u7D04{{count}}\u304B\u6708" }, xMonths: { one: "1\u304B\u6708", other: "{{count}}\u304B\u6708" }, aboutXYears: { one: "\u7D041\u5E74", other: "\u7D04{{count}}\u5E74" }, xYears: { one: "1\u5E74", other: "{{count}}\u5E74" }, overXYears: { one: "1\u5E74\u4EE5\u4E0A", other: "{{count}}\u5E74\u4EE5\u4E0A" }, almostXYears: { one: "1\u5E74\u8FD1\u304F", other: "{{count}}\u5E74\u8FD1\u304F" } };
 
-if (!module_2119) {
-  const obj2 = { default: module_2119 };
-  let obj = obj2;
-} else {
-  obj = module_2119;
-}
-const date = {
-  ordinalNumber(arg0, unit) {
-    const NumberResult = Number(arg0);
-    unit = undefined;
-    if (null != unit) {
-      unit = unit.unit;
-    }
-    const StringResult = String(unit);
-    if ("year" === StringResult) {
-      const concat9 = "".concat;
-      return "".concat(NumberResult, "\u5E74");
-    } else if ("quarter" === StringResult) {
-      const concat8 = "\u7B2C".concat;
-      return "\u7B2C".concat(NumberResult, "\u56DB\u534A\u671F");
-    } else if ("month" === StringResult) {
-      const concat7 = "".concat;
-      return "".concat(NumberResult, "\u6708");
-    } else if ("week" === StringResult) {
-      const concat6 = "\u7B2C".concat;
-      return "\u7B2C".concat(NumberResult, "\u9031");
-    } else if ("date" === StringResult) {
-      const concat5 = "".concat;
-      return "".concat(NumberResult, "\u65E5");
-    } else if ("hour" === StringResult) {
-      const concat4 = "".concat;
-      return "".concat(NumberResult, "\u6642");
-    } else if ("minute" === StringResult) {
-      const concat3 = "".concat;
-      return "".concat(NumberResult, "\u5206");
-    } else if ("second" === StringResult) {
-      const concat2 = "".concat;
-      return "".concat(NumberResult, "\u79D2");
+export default function formatDistance(arg0, arg1, arg2) {
+  let obj = arg2;
+  if (!arg2) {
+    obj = {};
+  }
+  if (typeof closure_0[arg0] === "string") {
+    if (!obj.addSuffix) {
+      return tmp2;
     } else {
-      const concat = "".concat;
-      return "".concat(NumberResult);
+      if (!obj.comparison) {
+        let text = `${tmp}前`;
+      }
+      text = `${tmp}後`;
     }
-  },
-  era: obj.default({ values: { narrow: ["BC", "AC"], abbreviated: ["\u7D00\u5143\u524D", "\u897F\u66A6"], wide: ["\u7D00\u5143\u524D", "\u897F\u66A6"] }, defaultWidth: "wide" }),
-  quarter: obj.default({
-    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["Q1", "Q2", "Q3", "Q4"], wide: ["\u7B2C1\u56DB\u534A\u671F", "\u7B2C2\u56DB\u534A\u671F", "\u7B2C3\u56DB\u534A\u671F", "\u7B2C4\u56DB\u534A\u671F"] },
-    defaultWidth: "wide",
-    argumentCallback(arg0) {
-      return Number(arg0) - 1;
+  } else {
+    if (1 !== arg1) {
+      if (obj.addSuffix) {
+        if (tmp.otherWithSuffix) {
+          const _String2 = String;
+          let replaced = tmp.otherWithSuffix.replace("{{count}}", String(arg1));
+        }
+      }
+      const _String = String;
+      replaced = tmp.other.replace("{{count}}", String(arg1));
     }
-  }),
-  month: obj.default({ values: { narrow: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], abbreviated: ["1\u6708", "2\u6708", "3\u6708", "4\u6708", "5\u6708", "6\u6708", "7\u6708", "8\u6708", "9\u6708", "10\u6708", "11\u6708", "12\u6708"], wide: ["1\u6708", "2\u6708", "3\u6708", "4\u6708", "5\u6708", "6\u6708", "7\u6708", "8\u6708", "9\u6708", "10\u6708", "11\u6708", "12\u6708"] }, defaultWidth: "wide" }),
-  day: obj.default({ values: { narrow: ["\u65E5", "\u6708", "\u706B", "\u6C34", "\u6728", "\u91D1", "\u571F"], short: ["\u65E5", "\u6708", "\u706B", "\u6C34", "\u6728", "\u91D1", "\u571F"], abbreviated: ["\u65E5", "\u6708", "\u706B", "\u6C34", "\u6728", "\u91D1", "\u571F"], wide: ["\u65E5\u66DC\u65E5", "\u6708\u66DC\u65E5", "\u706B\u66DC\u65E5", "\u6C34\u66DC\u65E5", "\u6728\u66DC\u65E5", "\u91D1\u66DC\u65E5", "\u571F\u66DC\u65E5"] }, defaultWidth: "wide" }),
-  dayPeriod: obj.default({ values: { narrow: { am: "\u5348\u524D", pm: "\u5348\u5F8C", midnight: "\u6DF1\u591C", noon: "\u6B63\u5348", morning: "\u671D", afternoon: "\u5348\u5F8C", evening: "\u591C", night: "\u6DF1\u591C" }, abbreviated: { am: "\u5348\u524D", pm: "\u5348\u5F8C", midnight: "\u6DF1\u591C", noon: "\u6B63\u5348", morning: "\u671D", afternoon: "\u5348\u5F8C", evening: "\u591C", night: "\u6DF1\u591C" }, wide: { am: "\u5348\u524D", pm: "\u5348\u5F8C", midnight: "\u6DF1\u591C", noon: "\u6B63\u5348", morning: "\u671D", afternoon: "\u5348\u5F8C", evening: "\u591C", night: "\u6DF1\u591C" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "\u5348\u524D", pm: "\u5348\u5F8C", midnight: "\u6DF1\u591C", noon: "\u6B63\u5348", morning: "\u671D", afternoon: "\u5348\u5F8C", evening: "\u591C", night: "\u6DF1\u591C" }, abbreviated: { am: "\u5348\u524D", pm: "\u5348\u5F8C", midnight: "\u6DF1\u591C", noon: "\u6B63\u5348", morning: "\u671D", afternoon: "\u5348\u5F8C", evening: "\u591C", night: "\u6DF1\u591C" }, wide: { am: "\u5348\u524D", pm: "\u5348\u5F8C", midnight: "\u6DF1\u591C", noon: "\u6B63\u5348", morning: "\u671D", afternoon: "\u5348\u5F8C", evening: "\u591C", night: "\u6DF1\u591C" } }, defaultFormattingWidth: "wide" })
+    if (!obj.addSuffix) {
+      const one = tmp.one;
+    }
+    const oneWithSuffix = tmp.oneWithSuffix;
+  }
 };
-
-export default date;
 export default exports.default;

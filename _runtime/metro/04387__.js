@@ -1,55 +1,59 @@
 // _runtime/metro/04387__.js
-if (Intl.ListFormat) {
-  const _Intl = Intl;
-  if (typeof Intl.ListFormat.__addLocaleData === "function") {
-    const _Intl2 = Intl;
-    const obj2 = { data: null, locale: "cs" };
-    const obj3 = { conjunction: null, disjunction: null, unit: null };
-    const obj4 = {
-      long: { end: "{0} a\u00A0{1}", middle: "{0}, {1}", pair: "{0} a\u00A0{1}", start: "{0}, {1}" },
-      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-      short: { end: "{0} a\u00A0{1}", middle: "{0}, {1}", pair: "{0} a\u00A0{1}", start: "{0}, {1}" },
-    };
-    obj3.conjunction = obj4;
-    const obj5 = {
-      long: { end: "{0} nebo {1}", middle: "{0}, {1}", pair: "{0} nebo {1}", start: "{0}, {1}" },
-      narrow: { end: "{0} nebo {1}", middle: "{0}, {1}", pair: "{0} nebo {1}", start: "{0}, {1}" },
-      short: { end: "{0} nebo {1}", middle: "{0}, {1}", pair: "{0} nebo {1}", start: "{0}, {1}" },
-    };
-    obj3.disjunction = obj5;
-    const obj6 = {
-      long: { end: "{0} a\u00A0{1}", middle: "{0}, {1}", pair: "{0} a\u00A0{1}", start: "{0}, {1}" },
-      narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
-      short: { end: "{0} a\u00A0{1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-    };
-    obj3.unit = obj6;
-    obj2.data = obj3;
-    ListFormat.__addLocaleData(obj2);
+import _mod4384 from "04384__.js";
+import 02122__ from "02122__.js";
+import 02123__ from "02123__.js";
+
+if (!module_2122) {
+  const obj2 = { default: module_2122 };
+  let obj = obj2;
+} else {
+  obj = module_2122;
+}
+if (!module_2123) {
+  const obj4 = { default: module_2123 };
+  let obj3 = obj4;
+} else {
+  obj3 = module_2123;
+}
+const date = { ordinalNumber: obj3.default({ matchPattern: /^[०१२३४५६७८९]+/i, parsePattern: /^[०१२३४५६७८९]+/i, valueCallback: _mod4384.localeToNumber }), era: null, quarter: null, month: null, day: null, dayPeriod: null };
+const obj6 = { matchPatterns: { narrow: /^(ईसा-पूर्व|ईस्वी)/i, abbreviated: /^(ईसा\.?\s?पूर्व\.?|ईसा\.?)/i, wide: /^(ईसा-पूर्व|ईसवी पूर्व|ईसवी सन|ईसवी)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj7 = { any: null };
+const items = [/^b/i, /^(a|c)/i];
+obj7.any = items;
+obj6.parsePatterns = obj7;
+date.era = obj.default(obj6);
+const obj8 = {
+  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^ति[1234]/i, wide: /^[1234](पहली|दूसरी|तीसरी|चौथी)? तिमाही/i },
+  defaultMatchWidth: "wide",
+  parsePatterns: null,
+  defaultParseWidth: "any",
+  valueCallback(arg0) {
+    return arg0 + 1;
   }
-}
-let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
-if (!prop) {
-  prop = [];
-}
-globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
-const obj = {
-  data: {
-    conjunction: {
-      long: { end: "{0} a\u00A0{1}", middle: "{0}, {1}", pair: "{0} a\u00A0{1}", start: "{0}, {1}" },
-      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-      short: { end: "{0} a\u00A0{1}", middle: "{0}, {1}", pair: "{0} a\u00A0{1}", start: "{0}, {1}" },
-    },
-    disjunction: {
-      long: { end: "{0} nebo {1}", middle: "{0}, {1}", pair: "{0} nebo {1}", start: "{0}, {1}" },
-      narrow: { end: "{0} nebo {1}", middle: "{0}, {1}", pair: "{0} nebo {1}", start: "{0}, {1}" },
-      short: { end: "{0} nebo {1}", middle: "{0}, {1}", pair: "{0} nebo {1}", start: "{0}, {1}" },
-    },
-    unit: {
-      long: { end: "{0} a\u00A0{1}", middle: "{0}, {1}", pair: "{0} a\u00A0{1}", start: "{0}, {1}" },
-      narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
-      short: { end: "{0} a\u00A0{1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-    },
-  },
-  locale: "cs",
 };
-prop.push(obj);
+const obj9 = { any: null };
+const items1 = [/1/i, /2/i, /3/i, /4/i];
+obj9.any = items1;
+obj8.parsePatterns = obj9;
+date.quarter = obj.default(obj8);
+const obj10 = { matchPatterns: { narrow: /^[जफ़माअप्मईजूनजुअगसिअक्तनदि]/i, abbreviated: /^(जन|फ़र|मार्च|अप्|मई|जून|जुल|अग|सित|अक्तू|नव|दिस)/i, wide: /^(जनवरी|फ़रवरी|मार्च|अप्रैल|मई|जून|जुलाई|अगस्त|सितंबर|अक्तूबर|नवंबर|दिसंबर)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj11 = { narrow: null, any: null };
+const items2 = [/^ज/i, /^फ़/i, /^मा/i, /^अप्/i, /^मई/i, /^जू/i, /^जु/i, /^अग/i, /^सि/i, /^अक्तू/i, /^न/i, /^दि/i];
+obj11.narrow = items2;
+const items3 = [/^जन/i, /^फ़/i, /^मा/i, /^अप्/i, /^मई/i, /^जू/i, /^जु/i, /^अग/i, /^सि/i, /^अक्तू/i, /^नव/i, /^दिस/i];
+obj11.any = items3;
+obj10.parsePatterns = obj11;
+date.month = obj.default(obj10);
+const obj12 = { matchPatterns: { narrow: /^[रविसोममंगलबुधगुरुशुक्रशनि]/i, short: /^(रवि|सोम|मंगल|बुध|गुरु|शुक्र|शनि)/i, abbreviated: /^(रवि|सोम|मंगल|बुध|गुरु|शुक्र|शनि)/i, wide: /^(रविवार|सोमवार|मंगलवार|बुधवार|गुरुवार|शुक्रवार|शनिवार)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj13 = { narrow: null, any: null };
+const items4 = [/^रवि/i, /^सोम/i, /^मंगल/i, /^बुध/i, /^गुरु/i, /^शुक्र/i, /^शनि/i];
+obj13.narrow = items4;
+const items5 = [/^रवि/i, /^सोम/i, /^मंगल/i, /^बुध/i, /^गुरु/i, /^शुक्र/i, /^शनि/i];
+obj13.any = items5;
+obj12.parsePatterns = obj13;
+date.day = obj.default(obj12);
+const obj14 = { matchPatterns: { narrow: /^(पू|अ|म|द.\?|सु|दो|शा|रा)/i, any: /^(पूर्वाह्न|अपराह्न|म|द.\?|सु|दो|शा|रा)/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^पूर्वाह्न/i, pm: /^अपराह्न/i, midnight: /^मध्य/i, noon: /^दो/i, morning: /सु/i, afternoon: /दो/i, evening: /शा/i, night: /रा/i } }, defaultParseWidth: "any" };
+date.dayPeriod = obj.default(obj14);
+
+export default date;
+export default exports.default;

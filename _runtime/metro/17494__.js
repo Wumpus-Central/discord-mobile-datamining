@@ -1,13 +1,6 @@
 // _runtime/metro/17494__.js
-import registerAsset from "01121__.js";
+const regex = RegExp("[\\u200d\\ud800-\\udfff\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff\\ufe0e\\ufe0f]");
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/guild_settings/welcome/images",
-  width: 40,
-  height: 40.5,
-  scales: [2, 3],
-  hash: "0839bdcd20fab094e9db3928575b1df5",
-  name: "role_subscription_benefit_avatar_1",
-  type: "png",
-});
+export default function hasUnicode(arg0) {
+  return regex.test(arg0);
+}

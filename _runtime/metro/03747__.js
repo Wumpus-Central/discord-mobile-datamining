@@ -3,9 +3,9 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/custom_typing_indicator/intl",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jdXN0b21fdHlwaW5nX2luZGljYXRvci9pbnRs",
   scales: [1],
-  hash: "aa1a2f6cb8e40414f994299cdc8ed2c6",
-  name: "CustomTypingIndicator.compiled.messages",
+  hash: "8d9595de2656fce2e3241f4c359b5075",
+  name: "zh-TW.messages.8d9595de2656fce2e3241f4c359b5075.compiled.messages",
   type: "jsona",
 });

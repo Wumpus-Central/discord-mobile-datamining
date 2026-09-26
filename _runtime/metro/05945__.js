@@ -1,16 +1,14 @@
 // _runtime/metro/05945__.js
-import Link from "../01485_Link.js";
-import noop from "00019__.js";
+import registerAsset from "01121__.js";
 
-require = fn;
-const Animated = fn(17).Animated;
-const jsx = fn(21).jsx;
-
-export const Background = function Background(style) {
-  const merged = Object.assign(style, Object.assign({ style: 0 }));
-  const obj2 = {};
-  const merged1 = Object.assign(merged);
-  const items = [{ flex: 1, backgroundColor: Link.useTheme().colors.background }, style.style];
-  obj2.style = items;
-  return <Animated.View />;
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation:
+    "/assets/../node_modules/.pnpm/@react-navigation+elements@2.9.34_ogrwmflqwrxbxbb3hpokpwnsgq/node_modules/@react-navigation/elements/lib/module/assets",
+  width: 50,
+  height: 85,
+  scales: [1],
+  hash: "0a328cd9c1afd0afe8e3b1ec5165b1b4",
+  name: "back-icon-mask",
+  type: "png",
+});

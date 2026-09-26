@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "f707107902b0c142d4942c459b0a28b3",
-  name: "TwitchNeutralIcon",
+  hash: "1d8ebef8a3957ec5bd51e54121ce2c75",
+  name: "GlobeEarthIcon",
   type: "png",
 });

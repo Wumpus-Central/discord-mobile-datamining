@@ -1,12 +1,13 @@
 // _runtime/metro/17460__.js
+import registerAsset from "01121__.js";
 
-export default function basePropertyOf(arg0) {
-  closure_0 = arg0;
-  return (arg0) => {
-    let tmp2;
-    if (null != closure_0) {
-      tmp2 = tmp[arg0];
-    }
-    return tmp2;
-  };
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
+  width: 375,
+  height: 180,
+  scales: [2, 3],
+  hash: "ed3a2617f9b5f5cc8eac96d446f7dd22",
+  name: "intro_header_darker",
+  type: "png",
+});

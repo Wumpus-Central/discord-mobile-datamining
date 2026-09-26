@@ -1,5 +1,5 @@
 // _runtime/metro/04230__.js
-import Parser2 from "../04221_Parser.js";
+import Parser2 from "../04224_Parser.js";
 
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
@@ -26,15 +26,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(MonthParser, Parser) {
+function _setPrototypeOf(ExtendedYearParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(MonthParser, Parser) {
-      MonthParser.__proto__ = Parser;
-      return MonthParser;
+    _setPrototypeOf = function _setPrototypeOf(ExtendedYearParser, Parser) {
+      ExtendedYearParser.__proto__ = Parser;
+      return ExtendedYearParser;
     };
   }
-  return _setPrototypeOf(MonthParser, Parser);
+  return _setPrototypeOf(ExtendedYearParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -54,7 +54,7 @@ function _getPrototypeOf(arg0) {
 }
 const Parser = Parser2.Parser;
 let _createSuperInternal;
-class MonthParser {
+class ExtendedYearParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -87,15 +87,18 @@ class MonthParser {
         tmp23 = referenceError;
         throw referenceError;
       } else {
-        items1 = ["Y", "R", "q", "Q", "L", "w", "I", "D", "i", "e", "c", "t", "T"];
-        str2 = "incompatibleTokens";
-        if ("incompatibleTokens" in applyResult) {
+        str2 = "priority";
+        if ("priority" in applyResult) {
           _Object = Object;
-          obj = { value: null, enumerable: true, configurable: true, writable: true };
-          obj.value = items1;
-          definePropertyResult = Object.defineProperty(applyResult, "incompatibleTokens", obj);
+          definePropertyResult = Object.defineProperty(applyResult, "priority", {
+            value: 130,
+            enumerable: true,
+            configurable: true,
+            writable: true,
+          });
         } else {
-          applyResult.incompatibleTokens = items1;
+          num3 = 130;
+          applyResult.priority = 130;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -106,18 +109,15 @@ class MonthParser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          str3 = "priority";
-          if ("priority" in applyResult) {
+          items1 = ["G", "y", "Y", "R", "w", "I", "i", "e", "c", "t", "T"];
+          str3 = "incompatibleTokens";
+          if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
-            definePropertyResult1 = Object.defineProperty(applyResult, "priority", {
-              value: 110,
-              enumerable: true,
-              configurable: true,
-              writable: true,
-            });
+            obj = { value: null, enumerable: true, configurable: true, writable: true };
+            obj.value = items1;
+            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", obj);
           } else {
-            num3 = 110;
-            applyResult.priority = 110;
+            applyResult.incompatibleTokens = items1;
           }
           return applyResult;
         }
@@ -133,7 +133,7 @@ class MonthParser {
     }
   }
 }
-let dependencyMap = MonthParser;
+let dependencyMap = ExtendedYearParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -145,11 +145,11 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-MonthParser.prototype = Object.create(prototype, {
-  constructor: { value: MonthParser, writable: true, configurable: true },
+ExtendedYearParser.prototype = Object.create(prototype, {
+  constructor: { value: ExtendedYearParser, writable: true, configurable: true },
 });
 if (Parser) {
-  _setPrototypeOf(MonthParser, Parser);
+  _setPrototypeOf(ExtendedYearParser, Parser);
 }
 let num = 0;
 dependencyMap = (function _isNativeReflectConstruct() {
@@ -210,53 +210,23 @@ _createSuperInternal = function _createSuperInternal() {
 };
 const entry = {
   key: "parse",
-  value: function parse(arg0, arg1, ordinalNumber) {
-    function valueCallback(arg0) {
-      return arg0 - 1;
-    }
-    if ("M" === arg1) {
-      return _createSuperInternal(4223).mapValue(
-        _createSuperInternal(4223).parseNumericPattern(_createSuperInternal(4224).numericPatterns.month, arg0),
-        valueCallback,
-      );
-    } else if ("MM" === arg1) {
-      return _createSuperInternal(4223).mapValue(_createSuperInternal(4223).parseNDigits(2, arg0), valueCallback);
-    } else if ("Mo" === arg1) {
-      return _createSuperInternal(4223).mapValue(ordinalNumber.ordinalNumber(arg0, { unit: "month" }), valueCallback);
-    } else if ("MMM" === arg1) {
-      return (
-        ordinalNumber.month(arg0, { width: "abbreviated", context: "formatting" }) ||
-        ordinalNumber.month(arg0, { width: "narrow", context: "formatting" })
-      );
-    } else if ("MMMMM" === arg1) {
-      return ordinalNumber.month(arg0, { width: "narrow", context: "formatting" });
+  value: function parse(arg0, arg1) {
+    if ("u" === arg1) {
+      let parseNDigitsSignedResult = _createSuperInternal(4226).parseNDigitsSigned(4, arg0);
     } else {
-      return (
-        ordinalNumber.month(arg0, { width: "wide", context: "formatting" }) ||
-        ordinalNumber.month(arg0, { width: "abbreviated", context: "formatting" }) ||
-        ordinalNumber.month(arg0, { width: "narrow", context: "formatting" })
-      );
+      parseNDigitsSignedResult = _createSuperInternal(4226).parseNDigitsSigned(arg1.length, arg0);
     }
+    return parseNDigitsSignedResult;
   },
 };
 let items = [
   entry,
   {
-    key: "validate",
-    value: function validate(arg0, arg1) {
-      let tmp = arg1 >= 0;
-      if (tmp) {
-        tmp = arg1 <= 11;
-      }
-      return tmp;
-    },
-  },
-  {
     key: "set",
-    value: function set(setUTCMonth, arg1, arg2) {
-      setUTCMonth.setUTCMonth(arg2, 1);
-      setUTCMonth.setUTCHours(0, 0, 0, 0);
-      return setUTCMonth;
+    value: function set(setUTCFullYear, arg1, arg2) {
+      setUTCFullYear.setUTCFullYear(arg2, 0, 1);
+      setUTCFullYear.setUTCHours(0, 0, 0, 0);
+      return setUTCFullYear;
     },
   },
 ];
@@ -278,4 +248,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { MonthParser };
+export { ExtendedYearParser };

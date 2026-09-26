@@ -1,14 +1,12 @@
 // _runtime/metro/09948__.js
-import repeatedTimeunitPattern from "../09884_repeatedTimeunitPattern.js";
-import AbstractParserWithWordBoundaryChecking from "../09891_AbstractParserWithWordBoundaryChecking.js";
-import _mod9946 from "09946__.js";
+import AbstractParserWithWordBoundaryChecking from "../09902_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const FRMonthNameLittleEndianParser = require;
+const DETimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,42 +25,35 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const regExp = new RegExp(
-  "(?:on\\s*?)?(" +
-    _mod9946.ORDINAL_NUMBER_PATTERN +
-    ")(?:\\s*(?:au|\\-|\\\u2013|jusqu'au?|\\s)\\s*(" +
-    _mod9946.ORDINAL_NUMBER_PATTERN +
-    "))?(?:-|/|\\s*(?:de)?\\s*)(" +
-    repeatedTimeunitPattern.matchAnyPattern(_mod9946.MONTH_DICTIONARY) +
-    ")(?:(?:-|/|,?\\s*)(" +
-    _mod9946.YEAR_PATTERN +
-    "(?![^\\s]\\d)))?(?=\\W|$)",
-  "i",
-);
-class FRMonthNameLittleEndianParser {
+class DETimeUnitAgoFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, FRMonthNameLittleEndianParser);
+    tmp = c2(this, DETimeUnitAgoFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(FRMonthNameLittleEndianParser);
+    obj = closure_4(DETimeUnitAgoFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
     return tmp3(self, constructResult);
   }
 }
-_inherits(FRMonthNameLittleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(DETimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
+    const regExp = new RegExp(
+      "(?:\\s*((?:n\u00E4chste|kommende|folgende|letzte|vergangene|vorige|vor(?:her|an)gegangene)(?:s|n|m|r)?|vor|in)\\s*)?(" +
+        DETimeUnitAgoFormatParser(9941).NUMBER_PATTERN +
+        ")?(?:\\s*(n\u00E4chste|kommende|folgende|letzte|vergangene|vorige|vor(?:her|an)gegangene)(?:s|n|m|r)?)?\\s*(" +
+        DETimeUnitAgoFormatParser(9895).matchAnyPattern(DETimeUnitAgoFormatParser(9941).TIME_UNIT_DICTIONARY) +
+        ")",
+      "i",
+    );
     return regExp;
   },
 };
@@ -70,39 +61,34 @@ const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const tmp4 = FRMonthNameLittleEndianParser(9946).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
-      const result = FRMonthNameLittleEndianParser(9946).parseOrdinalNumberPattern(index[1]);
-      if (result > 31) {
-        index.index = index.index + index[1].length;
-        return null;
-      } else {
-        const start4 = parsingResult.start;
-        start4.assign("month", tmp4);
-        const start5 = parsingResult.start;
-        start5.assign("day", result);
-        if (index[4]) {
-          const start2 = parsingResult.start;
-          start2.assign("year", FRMonthNameLittleEndianParser(9946).parseYear(index[4]));
-        } else {
-          const start = parsingResult.start;
-          start.imply(
-            "year",
-            FRMonthNameLittleEndianParser(9885).findYearClosestToRef(createParsingResult.refDate, result, tmp4),
-          );
-        }
-        if (index[2]) {
-          const start3 = parsingResult.start;
-          const result1 = FRMonthNameLittleEndianParser(9946).parseOrdinalNumberPattern(index[2]);
-          parsingResult.end = start3.clone();
-          const end = parsingResult.end;
-          end.assign("day", result1);
-        }
-        return parsingResult;
+    value: function innerExtract(reference, arg1) {
+      let num = 1;
+      if (arg1[2]) {
+        num = DETimeUnitAgoFormatParser(9941).parseNumberPattern(arg1[2]);
       }
+      const obj = {};
+      obj[DETimeUnitAgoFormatParser(9941).TIME_UNIT_DICTIONARY[arg1[4].toLowerCase(arg1[4])]] = num;
+      const formatted = arg1[1] || arg1[3] || "".toLowerCase();
+      if (formatted) {
+        let isMatch = /vor/.test(formatted);
+        if (!isMatch) {
+          isMatch = /letzte/.test(formatted);
+          const obj3 = /letzte/;
+        }
+        if (!isMatch) {
+          isMatch = /vergangen/.test(formatted);
+          const obj4 = /vergangen/;
+        }
+        let reverseDurationResult = obj;
+        if (isMatch) {
+          reverseDurationResult = DETimeUnitAgoFormatParser(9897).reverseDuration(obj);
+        }
+        const ParsingComponents = DETimeUnitAgoFormatParser(9898).ParsingComponents;
+        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+      }
+      const str2 = arg1[1] || arg1[3] || "";
     },
   },
 ];
 
-export default _createClass(FRMonthNameLittleEndianParser, items);
+export default _createClass(DETimeUnitAgoFormatParser, items);

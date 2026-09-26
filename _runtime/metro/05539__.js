@@ -1,69 +1,105 @@
 // _runtime/metro/05539__.js
-import _mod5520 from "05520__.js";
-import _modDef5525 from "05525__.js";
-import get0thIfdOffset from "../05540_get0thIfdOffset.js";
-import IFD_TYPE_0TH from "../05541_IFD_TYPE_0TH.js";
+import _mod5526 from "05526__.js";
+import _modDef5529 from "05529__.js";
 
 require = arg1;
 importDefault = arg2;
 const dependencyMap = arg6;
-let c3 = "Exif IFD Pointer";
-let c4 = "GPS Info IFD Pointer";
-let c5 = "Interoperability IFD Pointer";
 
 export default {
-  read(getUint16, c5, arg2) {
-    const byteOrder = _modDef5525.getByteOrder(getUint16, c5);
-    const obj2 = get0thIfdOffset;
-    const ifd = obj2.readIfd(
-      getUint16,
-      IFD_TYPE_0TH.IFD_TYPE_0TH,
-      c5,
-      get0thIfdOffset.get0thIfdOffset(getUint16, c5, byteOrder),
-      byteOrder,
-      arg2,
-    );
-    let objectAssignResult = ifd;
-    if (undefined !== ifd[c3]) {
-      const tmp3Result6 = get0thIfdOffset;
-      objectAssignResult = _mod5520.objectAssign(
-        ifd,
-        tmp3Result6.readIfd(getUint16, IFD_TYPE_0TH.IFD_TYPE_EXIF, c5, c5 + ifd[tmp5].value, byteOrder, arg2),
-      );
-      const tmp3Result = _mod5520;
+  isWebpFile(dataView) {
+    let tmp = dataView;
+    if (tmp) {
+      tmp = _mod5526.getStringFromDataView(dataView, 0, 4) === "RIFF";
     }
-    let objectAssignResult3 = objectAssignResult;
-    if (undefined !== objectAssignResult[c4]) {
-      const tmp3Result8 = get0thIfdOffset;
-      objectAssignResult3 = _mod5520.objectAssign(
-        objectAssignResult,
-        tmp3Result8.readIfd(
-          getUint16,
-          IFD_TYPE_0TH.IFD_TYPE_GPS,
-          c5,
-          c5 + objectAssignResult[tmp12].value,
-          byteOrder,
-          arg2,
-        ),
-      );
-      const tmp3Result7 = _mod5520;
+    if (tmp) {
+      tmp = _mod5526.getStringFromDataView(dataView, 8, 4) === "WEBP";
     }
-    let objectAssignResult4 = objectAssignResult3;
-    if (undefined !== objectAssignResult3[c5]) {
-      const tmp3Result10 = get0thIfdOffset;
-      objectAssignResult4 = _mod5520.objectAssign(
-        objectAssignResult3,
-        tmp3Result10.readIfd(
-          getUint16,
-          IFD_TYPE_0TH.IFD_TYPE_INTEROPERABILITY,
-          c5,
-          c5 + objectAssignResult3[tmp19].value,
-          byteOrder,
-          arg2,
-        ),
-      );
-      const tmp3Result9 = _mod5520;
+    return tmp;
+  },
+  findOffsets(byteLength) {
+    let flag = false;
+    let num = 12;
+    let hasAppMarkers = false;
+    let vp8xChunkOffset;
+    let iccChunks;
+    let xmpChunks;
+    let tiffHeaderOffset;
+    if (20 < byteLength.byteLength) {
+      while (true) {
+        let obj = _mod5526;
+        let stringFromDataView = obj.getStringFromDataView(byteLength, num, 4);
+        let uint32 = byteLength.getUint32(num + 4, true);
+        let flag3 = flag;
+        if (_modDef5529.USE_EXIF) {
+          if ("EXIF" === stringFromDataView) {
+            let tmp9Result = _mod5526;
+            let sum = num + 8;
+            let sum1 = sum;
+            if (tmp9Result.getStringFromDataView(byteLength, sum, 6) === "Exif\0\0") {
+              sum1 = sum + 6;
+            }
+            let tmp22 = sum1;
+            flag3 = true;
+            let sum4 = tmp;
+            let tmp20 = tmp2;
+            let tmp21 = tmp3;
+            let sum2 = uint32;
+            if (uint32 % 2 !== 0) {
+              sum2 = uint32 + 1;
+            }
+            let sum3 = num + (8 + sum2);
+            flag = flag3;
+            num = sum3;
+            tmp = sum4;
+            tmp2 = tmp20;
+            tmp3 = tmp21;
+            let tmp4 = tmp22;
+            hasAppMarkers = flag3;
+            vp8xChunkOffset = sum4;
+            iccChunks = tmp20;
+            xmpChunks = tmp21;
+            tiffHeaderOffset = tmp22;
+            if (sum3 + 8 >= byteLength.byteLength) {
+              break;
+            }
+          }
+        }
+        if (_modDef5529.USE_XMP) {
+          if ("XMP " === stringFromDataView) {
+            let obj2 = { dataOffset: num + 8, length: uint32 };
+            let items = [obj2];
+            flag3 = true;
+            sum4 = tmp;
+            tmp20 = tmp2;
+            tmp21 = items;
+            tmp22 = tmp4;
+          }
+        }
+        if (_modDef5529.USE_ICC) {
+          if ("ICCP" === stringFromDataView) {
+            let obj3 = { offset: num + 8, length: uint32, chunkNumber: 1, chunksTotal: 1 };
+            let items1 = [obj3];
+            flag3 = true;
+            sum4 = tmp;
+            tmp20 = items1;
+            tmp21 = tmp3;
+            tmp22 = tmp4;
+          }
+        }
+        sum4 = tmp;
+        tmp20 = tmp2;
+        tmp21 = tmp3;
+        tmp22 = tmp4;
+        if ("VP8X" === stringFromDataView) {
+          sum4 = num + 8;
+          flag3 = true;
+          tmp20 = tmp2;
+          tmp21 = tmp3;
+          tmp22 = tmp4;
+        }
+      }
     }
-    return { tags: objectAssignResult4, byteOrder };
+    return { hasAppMarkers, tiffHeaderOffset, xmpChunks, iccChunks, vp8xChunkOffset };
   },
 };

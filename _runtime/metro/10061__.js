@@ -1,13 +1,12 @@
 // _runtime/metro/10061__.js
-import AbstractParserWithWordBoundaryChecking from "../09891_AbstractParserWithWordBoundaryChecking.js";
-import _mod10053 from "10053__.js";
+import _mod10051 from "10051__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ENTimeUnitLaterFormatParser = require;
+const UKTimeUnitCasualRelativeFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,35 +25,35 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const regExp = new RegExp(
-  "(" + _mod10053.TIME_UNITS_PATTERN + ")\\s{0,5}(?:dopo|pi\u00F9 tardi|da adesso|avanti|oltre|a seguire)(?=(?:\\W|$))",
-  "i",
-);
-const regExp1 = new RegExp("(" + _mod10053.TIME_UNITS_PATTERN + ")(dopo|pi\u00F9 tardi)(?=(?:\\W|$))", "i");
-class ENTimeUnitLaterFormatParser {
-  constructor(arg0) {
+class UKTimeUnitCasualRelativeFormatParser {
+  constructor() {
     self = this;
-    tmp = c2(this, ENTimeUnitLaterFormatParser);
+    tmp = c2(this, UKTimeUnitCasualRelativeFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(ENTimeUnitLaterFormatParser);
+    obj = closure_4(UKTimeUnitCasualRelativeFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.strictMode = global;
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(ENTimeUnitLaterFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(UKTimeUnitCasualRelativeFormatParser, _mod10051.AbstractParserWithLeftRightBoundaryChecking);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return this.strictMode ? regExp1 : regExp;
+  key: "innerPatternString",
+  value: function innerPatternString(arg0) {
+    return (
+      "(\u0446\u0456|\u043E\u0441\u0442\u0430\u043D\u043D\u0456|\u043C\u0438\u043D\u0443\u043B\u0456|\u043C\u0430\u0439\u0431\u0443\u0442\u043D\u0456|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0456|\u043F\u0456\u0441\u043B\u044F|\u0447\u0435\u0440\u0435\u0437|\\+|-)\\s*(" +
+      UKTimeUnitCasualRelativeFormatParser(10049).TIME_UNITS_PATTERN +
+      ")"
+    );
   },
 };
 const items = [
@@ -62,13 +61,18 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const ParsingComponents = ENTimeUnitLaterFormatParser(9887).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(
-        reference.reference,
-        ENTimeUnitLaterFormatParser(10053).parseDuration(arg1[1]),
-      );
+      const formatted = arg1[1].toLowerCase();
+      const parseDurationResult = UKTimeUnitCasualRelativeFormatParser(10049).parseDuration(arg1[3]);
+      if ("\u043E\u0441\u0442\u0430\u043D\u043D\u0456" !== formatted) {
+        if ("\u043C\u0438\u043D\u0443\u043B\u0456" !== formatted) {
+          let reverseDurationResult = parseDurationResult;
+        }
+        const ParsingComponents = UKTimeUnitCasualRelativeFormatParser(9898).ParsingComponents;
+        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+      }
+      reverseDurationResult = UKTimeUnitCasualRelativeFormatParser(9897).reverseDuration(parseDurationResult);
     },
   },
 ];
 
-export default _createClass(ENTimeUnitLaterFormatParser, items);
+export default _createClass(UKTimeUnitCasualRelativeFormatParser, items);

@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "ec67305879cbfc8d1c27dd7c85d614f6",
-  name: "ic_community_guild_badge_dark_24px",
+  hash: "e8a96141e48bf46350215d4dadeaaebc",
+  name: "ExperimentalGameControllerLinkIcon",
   type: "png",
 });

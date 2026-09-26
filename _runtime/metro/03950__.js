@@ -1,23 +1,42 @@
 // _runtime/metro/03950__.js
-let closure_0 = { lessThanXSeconds: { one: "menos de un segundo", other: "menos de {{count}} segundos" }, xSeconds: { one: "1 segundo", other: "{{count}} segundos" }, halfAMinute: "medio minuto", lessThanXMinutes: { one: "menos de un minuto", other: "menos de {{count}} minutos" }, xMinutes: { one: "1 minuto", other: "{{count}} minutos" }, aboutXHours: { one: "alrededor de 1 hora", other: "alrededor de {{count}} horas" }, xHours: { one: "1 hora", other: "{{count}} horas" }, xDays: { one: "1 d\u00EDa", other: "{{count}} d\u00EDas" }, aboutXWeeks: { one: "alrededor de 1 semana", other: "alrededor de {{count}} semanas" }, xWeeks: { one: "1 semana", other: "{{count}} semanas" }, aboutXMonths: { one: "alrededor de 1 mes", other: "alrededor de {{count}} meses" }, xMonths: { one: "1 mes", other: "{{count}} meses" }, aboutXYears: { one: "alrededor de 1 a\u00F1o", other: "alrededor de {{count}} a\u00F1os" }, xYears: { one: "1 a\u00F1o", other: "{{count}} a\u00F1os" }, overXYears: { one: "m\u00E1s de 1 a\u00F1o", other: "m\u00E1s de {{count}} a\u00F1os" }, almostXYears: { one: "casi 1 a\u00F1o", other: "casi {{count}} a\u00F1os" } };
+import 02115__ from "02115__.js";
+import 02118__ from "02118__.js";
+import date_mod from "02119__.js";
+import date_mod from "02121__.js";
+import 03951__ from "03951__.js";
 
-export default function formatDistance(arg0, arg1, addSuffix) {
-  if (typeof closure_0[arg0] === "string") {
-    let tmp5 = tmp;
-    if (null != addSuffix) {
-      tmp5 = tmp;
-      if (addSuffix.addSuffix) {
-        if (!addSuffix.comparison) {
-          let text = `hace ${tmp}`;
-        }
-        text = `en ${tmp}`;
-      }
-    }
-    return tmp5;
-  } else if (1 === arg1) {
-    let one = tmp.one;
-  } else {
-    one = tmp.other.replace("{{count}}", arg1.toString());
-  }
-};
+if (!module_2115) {
+  const obj = { default: module_2115 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_2115;
+}
+if (!module_2118) {
+  const obj2 = { default: module_2118 };
+  let tmp5 = obj2;
+} else {
+  tmp5 = module_2118;
+}
+let date = date_mod;
+if (!date) {
+  const obj3 = { default: date };
+  let tmp7 = obj3;
+} else {
+  tmp7 = date;
+}
+let date = date_mod;
+if (!date) {
+  const obj4 = { default: date };
+  let tmp9 = obj4;
+} else {
+  tmp9 = date;
+}
+if (!module_3951) {
+  const obj5 = { default: module_3951 };
+  let tmp11 = obj5;
+} else {
+  tmp11 = module_3951;
+}
+
+export default { code: "en-GB", formatDistance: tmp3.default, formatLong: tmp11.default, formatRelative: tmp5.default, localize: tmp7.default, match: tmp9.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
 export default exports.default;

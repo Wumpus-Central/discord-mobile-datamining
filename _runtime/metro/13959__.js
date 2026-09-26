@@ -1,12 +1,11 @@
 // _runtime/metro/13959__.js
+import registerAsset from "01121__.js";
 
-export default () => (arg0) => {
-  closure_0 = arg0;
-  return {
-    features: {
-      clear() {
-        return closure_0.send("clear");
-      },
-    },
-  };
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
+  scales: [1],
+  hash: "bc4f103d29d98767eb7ae693f67ae198",
+  name: "NitroGem2",
+  type: "lottie",
+});

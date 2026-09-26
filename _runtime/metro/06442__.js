@@ -1,17 +1,35 @@
 // _runtime/metro/06442__.js
-import _mod17 from "00017__.js";
+import noop from "00019__.js";
 
-const constants = _mod17.Platform.constants;
-if (constants != null) {
-  const reactNativeVersion = constants.reactNativeVersion;
-}
+const View = fn(17).View;
+const jsx = fn(21).jsx;
 try {
-  let major;
-  if (reactNativeVersion != null) {
-    major = reactNativeVersion.major;
-  }
-  if (0 !== major) {
-    const InteractionManager = _mod17.InteractionManager;
-  }
-  exports.InteractionManager = InteractionManager;
+  let closure_0 = fn(5211);
+  exports.MaybeScreenContainer = (enabled) => {
+    const merged = Object.assign(enabled, Object.assign({ enabled: 0 }));
+    if (null != closure_0) {
+      const obj2 = { enabled: enabled.enabled };
+      const merged1 = Object.assign(merged);
+      let tmp8 = <tmp2.ScreenContainer enabled={enabled.enabled} />;
+    } else {
+      const obj = {};
+      const merged2 = Object.assign(merged);
+      tmp8 = <View />;
+    }
+    return tmp8;
+  };
+  exports.MaybeScreen = (arg0) => {
+    ({ enabled, active } = arg0);
+    const merged = Object.assign(arg0, Object.assign({ enabled: 0, active: 0 }));
+    if (null != closure_0) {
+      const obj2 = { enabled, activityState: active };
+      const merged1 = Object.assign(merged);
+      let tmp8 = <tmp2.Screen enabled={enabled} activityState={active} />;
+    } else {
+      const obj = {};
+      const merged2 = Object.assign(merged);
+      tmp8 = <View />;
+    }
+    return tmp8;
+  };
 } catch (err) {}

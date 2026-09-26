@@ -1,10 +1,4 @@
 // _runtime/metro/04666__.js
-let fn = Array.isArray;
-if (!fn) {
-  fn = (arg0) => {
-    const call = toString.call;
-    return "[object Array]" == (typeof call === "unknown" ? toString() : call(arg0));
-  };
-}
+import _mod4667 from "04667__.js";
 
-export default fn;
+export default _mod4667;

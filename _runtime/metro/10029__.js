@@ -1,11 +1,12 @@
 // _runtime/metro/10029__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import AbstractTimeExpressionParser from "../09898_AbstractTimeExpressionParser.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
+import _mod10026 from "10026__.js";
+import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
+const RUTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,16 +25,14 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-class ESTimeExpressionParser {
+class RUTimeUnitAgoFormatParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, ESTimeExpressionParser);
-    tmp2 = c2;
-    obj = c2(ESTimeExpressionParser);
-    tmp3 = closure_1;
-    if (closure_3()) {
+    tmp = c2(this, RUTimeUnitAgoFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(RUTimeUnitAgoFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -46,22 +45,28 @@ class ESTimeExpressionParser {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = ESTimeExpressionParser;
-_inherits(ESTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
+_inherits(RUTimeUnitAgoFormatParser, _mod10026.AbstractParserWithLeftBoundaryChecking);
 const entry = {
-  key: "primaryPrefix",
-  value: function primaryPrefix() {
-    return "(?:(?:aslas|deslas|las?|al?|de|del)\\s*)?";
+  key: "innerPatternString",
+  value: function innerPatternString(arg0) {
+    return (
+      "(" + RUTimeUnitAgoFormatParser(10024).TIME_UNITS_PATTERN + ")\\s{0,5}\u043D\u0430\u0437\u0430\u0434(?=(?:\\W|$))"
+    );
   },
 };
 const items = [
   entry,
   {
-    key: "followingPhase",
-    value: function followingPhase() {
-      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|a(?:l)?|\\?)\\s*";
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const parseDurationResult = RUTimeUnitAgoFormatParser(10024).parseDuration(arg1[1]);
+      const ParsingComponents = RUTimeUnitAgoFormatParser(9898).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(
+        reference.reference,
+        RUTimeUnitAgoFormatParser(9897).reverseDuration(RUTimeUnitAgoFormatParser(10024).parseDuration(arg1[1])),
+      );
     },
   },
 ];
 
-export default _createClass(ESTimeExpressionParser, items);
+export default _createClass(RUTimeUnitAgoFormatParser, items);

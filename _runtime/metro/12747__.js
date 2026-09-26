@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/gifting",
-  width: 120,
-  height: 120,
-  scales: [1, 2, 3],
-  hash: "de24dca6f22cd1565a148efb5c4a88a9",
-  name: "wumpus_box_premium120",
+  httpServerLocation: "/assets/modules/collectibles/native/images",
+  width: 20.5,
+  height: 20,
+  scales: [2, 3],
+  hash: "1852cc5a5de0318feebc04948ebfbffa",
+  name: "img_collectibles_shop",
   type: "png",
 });

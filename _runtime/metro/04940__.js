@@ -1,24 +1,21 @@
 // _runtime/metro/04940__.js
-import _mod514 from "00514__.js";
-import _mod523 from "00523__.js";
-import baseIsArguments from "../00533_baseIsArguments.js";
 
-let isConcatSpreadable;
-if (_mod523) {
-  isConcatSpreadable = _mod523.isConcatSpreadable;
-}
-
-export default function isFlattenable(arg0) {
-  let tmp3 = _mod514(arg0) || baseIsArguments(arg0);
-  if (!tmp3) {
-    let tmp5 = isConcatSpreadable;
-    if (isConcatSpreadable) {
-      tmp5 = arg0;
+export default function shortOut(arg0) {
+  closure_0 = arg0;
+  c1 = 0;
+  closure_2 = 0;
+  return () => {
+    const tmp = now();
+    closure_2 = tmp;
+    if (0 < 16 - (tmp - closure_2)) {
+      const sum = c1 + 1;
+      c1 = sum;
+      if (800 <= sum) {
+        return arguments[0];
+      }
+    } else {
+      c1 = 0;
     }
-    if (tmp5) {
-      tmp5 = arg0[isConcatSpreadable];
-    }
-    tmp3 = tmp5;
-  }
-  return tmp3;
+    return closure_0(...arguments);
+  };
 }

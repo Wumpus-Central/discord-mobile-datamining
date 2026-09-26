@@ -1,12 +1,11 @@
 // _runtime/metro/09915__.js
-import Filter from "../09903_Filter.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
+import _mod9916 from "09916__.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ENMergeRelativeAfterDateRefiner = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,14 +24,31 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class ENMergeRelativeAfterDateRefiner {
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class ENMergeDateTimeRefiner {
   constructor() {
     self = this;
-    tmp = c2(this, ENMergeRelativeAfterDateRefiner);
-    tmp2 = closure_4;
-    obj = closure_4(ENMergeRelativeAfterDateRefiner);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_0(this, ENMergeDateTimeRefiner);
+    tmp2 = c2;
+    obj = c2(ENMergeDateTimeRefiner);
+    tmp3 = closure_1;
+    if (closure_3()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -45,47 +61,15 @@ class ENMergeRelativeAfterDateRefiner {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ENMergeRelativeAfterDateRefiner, Filter.MergingRefiner);
+_classCallCheck = ENMergeDateTimeRefiner;
+_inherits(ENMergeDateTimeRefiner, fn(_mod9916).default);
 const entry = {
-  key: "shouldMergeResults",
-  value: function shouldMergeResults(str, arg1, text) {
-    let match = str.match(/^\s*$/i);
-    if (match) {
-      let tmp4 = null != str.match(/^[+-]/i);
-      if (!tmp4) {
-        tmp4 = null != text.text.match(/^-/i);
-      }
-      match = tmp4;
-    }
-    return match;
+  key: "patternBetween",
+  value: function patternBetween() {
+    const regExp = new RegExp("^\\s*(T|at|after|before|on|of|,|-|\\.|\u2219|:)?\\s*$");
+    return regExp;
   },
 };
-const items = [
-  entry,
-  {
-    key: "mergeResults",
-    value: function mergeResults(arg0, start, text, arg3) {
-      const parseDurationResult = ENMergeRelativeAfterDateRefiner(9883).parseDuration(text.text);
-      let reverseDurationResult = parseDurationResult;
-      if (null != str.match(/^-/i)) {
-        reverseDurationResult = ENMergeRelativeAfterDateRefiner(9886).reverseDuration(parseDurationResult);
-      }
-      const ParsingComponents = ENMergeRelativeAfterDateRefiner(9887).ParsingComponents;
-      const ReferenceWithTimezone = ENMergeRelativeAfterDateRefiner(9887).ReferenceWithTimezone;
-      start = start.start;
-      const relativeFromReference = ParsingComponents.createRelativeFromReference(
-        ReferenceWithTimezone.fromDate(start.date()),
-        reverseDurationResult,
-      );
-      ({ reference, index } = start);
-      return new ENMergeRelativeAfterDateRefiner(9887).ParsingResult(
-        reference,
-        index,
-        "" + start.text + arg0 + text.text,
-        relativeFromReference,
-      );
-    },
-  },
-];
+const items = [entry];
 
-export default _createClass(ENMergeRelativeAfterDateRefiner, items);
+export default _createClass(ENMergeDateTimeRefiner, items);

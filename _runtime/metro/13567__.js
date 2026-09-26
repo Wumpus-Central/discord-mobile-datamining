@@ -1,4 +1,12 @@
 // _runtime/metro/13567__.js
-import _mod13556 from "13556__.js";
+import _mod13559 from "13559__.js";
 
-export default (arg0, arg1, arg2) => _mod13556(arg0, arg1, arg2) <= 0;
+export default (str, arg1) => {
+  str = str.trim();
+  const tmpResult = _mod13559(str.replace(/^[=v]+/, ""), arg1);
+  let version = null;
+  if (tmpResult) {
+    version = tmpResult.version;
+  }
+  return version;
+};

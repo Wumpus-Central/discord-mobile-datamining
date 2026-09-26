@@ -1,216 +1,175 @@
 // _runtime/metro/04435__.js
-import _mod4418 from "04418__.js";
+import _mod4421 from "04421__.js";
 
 const fn = function n(moment) {
-  function translate(arg0, arg1, arg2) {
+  function translateSingular(arg0, arg1, arg2, arg3) {
+    const parts = dependencyMap[arg2].split("_");
+    if (arg1) {
+      let first = parts[0];
+    } else {
+      first = arg3 ? parts[1] : parts[2];
+    }
+    return first;
+  }
+  function translate(arg0, arg1, arg2, arg3) {
     const text = `${arg0} `;
-    if ("ss" === arg2) {
+    if (1 === arg0) {
+      const parts = dependencyMap[arg2[0]].split("_");
+      if (arg1) {
+        let first = parts[0];
+      } else {
+        first = arg3 ? parts[1] : parts[2];
+      }
+      const sum = text + first;
+    } else if (arg1) {
       const result = arg0 % 10;
-      let tmp13 = result < 5;
-      if (result < 5) {
-        tmp13 = arg0 % 10 > 1;
+      let tmp10 = result === 0;
+      if (result !== 0) {
+        let tmp11 = arg0 > 10;
+        if (tmp11) {
+          tmp11 = arg0 < 20;
+        }
+        tmp10 = tmp11;
       }
-      if (tmp13) {
-        tmp13 = (~~arg0 / 10) % 10 !== 1;
+      const parts1 = dependencyMap[arg2].split("_");
+      const sum1 = text + (tmp10 ? parts1[1] : parts1[0]);
+    } else {
+      if (arg3) {
+        let sum2 = text + dependencyMap[arg2].split("_")[1];
+      } else {
+        const result1 = arg0 % 10;
+        let tmp3 = result1 === 0;
+        if (result1 !== 0) {
+          let tmp4 = arg0 > 10;
+          if (tmp4) {
+            tmp4 = arg0 < 20;
+          }
+          tmp3 = tmp4;
+        }
+        const parts2 = dependencyMap[arg2].split("_");
+        sum2 = text + (tmp3 ? parts2[1] : parts2[2]);
       }
-      let str9 = "sekund";
-      if (tmp13) {
-        str9 = "sekundy";
-      }
-      return text + str9;
-    } else if ("m" === arg2) {
-      let str8 = "minut\u0119";
-      if (arg1) {
-        str8 = "minuta";
-      }
-      return str8;
-    } else if ("mm" === arg2) {
-      const result1 = arg0 % 10;
-      let tmp11 = result1 < 5;
-      if (result1 < 5) {
-        tmp11 = arg0 % 10 > 1;
-      }
-      if (tmp11) {
-        tmp11 = (~~arg0 / 10) % 10 !== 1;
-      }
-      let str7 = "minut";
-      if (tmp11) {
-        str7 = "minuty";
-      }
-      return text + str7;
-    } else if ("h" === arg2) {
-      let str6 = "godzin\u0119";
-      if (arg1) {
-        str6 = "godzina";
-      }
-      return str6;
-    } else if ("hh" === arg2) {
-      const result2 = arg0 % 10;
-      let tmp9 = result2 < 5;
-      if (result2 < 5) {
-        tmp9 = arg0 % 10 > 1;
-      }
-      if (tmp9) {
-        tmp9 = (~~arg0 / 10) % 10 !== 1;
-      }
-      let str5 = "godzin";
-      if (tmp9) {
-        str5 = "godziny";
-      }
-      return text + str5;
-    } else if ("ww" === arg2) {
-      const result3 = arg0 % 10;
-      let tmp7 = result3 < 5;
-      if (result3 < 5) {
-        tmp7 = arg0 % 10 > 1;
-      }
-      if (tmp7) {
-        tmp7 = (~~arg0 / 10) % 10 !== 1;
-      }
-      let str4 = "tygodni";
-      if (tmp7) {
-        str4 = "tygodnie";
-      }
-      return text + str4;
-    } else if ("MM" === arg2) {
-      const result4 = arg0 % 10;
-      let tmp5 = result4 < 5;
-      if (result4 < 5) {
-        tmp5 = arg0 % 10 > 1;
-      }
-      if (tmp5) {
-        tmp5 = (~~arg0 / 10) % 10 !== 1;
-      }
-      let str3 = "miesi\u0119cy";
-      if (tmp5) {
-        str3 = "miesi\u0105ce";
-      }
-      return text + str3;
-    } else if ("yy" === arg2) {
-      const result5 = arg0 % 10;
-      let tmp3 = result5 < 5;
-      if (result5 < 5) {
-        tmp3 = arg0 % 10 > 1;
-      }
-      if (tmp3) {
-        tmp3 = (~~arg0 / 10) % 10 !== 1;
-      }
-      let str2 = "lat";
-      if (tmp3) {
-        str2 = "lata";
-      }
-      return text + str2;
+      return sum2;
     }
   }
-  closure_0 =
-    "stycze\u0144_luty_marzec_kwiecie\u0144_maj_czerwiec_lipiec_sierpie\u0144_wrzesie\u0144_pa\u017Adziernik_listopad_grudzie\u0144".split(
-      "_",
-    );
-  closure_1 =
-    "stycznia_lutego_marca_kwietnia_maja_czerwca_lipca_sierpnia_wrze\u015Bnia_pa\u017Adziernika_listopada_grudnia".split(
-      "_",
-    );
-  const items = [
-    /^sty/i,
-    /^lut/i,
-    /^mar/i,
-    /^kwi/i,
-    /^maj/i,
-    /^cze/i,
-    /^lip/i,
-    /^sie/i,
-    /^wrz/i,
-    /^paź/i,
-    /^lis/i,
-    /^gru/i,
-  ];
-  return moment.defineLocale("pl", {
-    months(arg0, arg1) {
-      if (arg0) {
-        if (obj.test(arg1)) {
-          let tmp3 = closure_1[arg0.month(arg0)];
-        } else {
-          tmp3 = closure_0[arg0.month(arg0)];
+  dependencyMap = {
+    ss: "sekund\u0117_sekund\u017Ei\u0173_sekundes",
+    m: "minut\u0117_minut\u0117s_minut\u0119",
+    mm: "minut\u0117s_minu\u010Di\u0173_minutes",
+    h: "valanda_valandos_valand\u0105",
+    hh: "valandos_valand\u0173_valandas",
+    d: "diena_dienos_dien\u0105",
+    dd: "dienos_dien\u0173_dienas",
+    M: "m\u0117nuo_m\u0117nesio_m\u0117nes\u012F",
+    MM: "m\u0117nesiai_m\u0117nesi\u0173_m\u0117nesius",
+    y: "metai_met\u0173_metus",
+    yy: "metai_met\u0173_metus",
+  };
+  const obj = {
+    months: {
+      format:
+        "sausio_vasario_kovo_baland\u017Eio_gegu\u017E\u0117s_bir\u017Eelio_liepos_rugpj\u016B\u010Dio_rugs\u0117jo_spalio_lapkri\u010Dio_gruod\u017Eio".split(
+          "_",
+        ),
+      standalone:
+        "sausis_vasaris_kovas_balandis_gegu\u017E\u0117_bir\u017Eelis_liepa_rugpj\u016Btis_rugs\u0117jis_spalis_lapkritis_gruodis".split(
+          "_",
+        ),
+      isFormat: /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?|MMMM?(\[[^\[\]]*\]|\s)+D[oD]?/,
+    },
+    monthsShort: "sau_vas_kov_bal_geg_bir_lie_rgp_rgs_spa_lap_grd".split("_"),
+    weekdays: null,
+    weekdaysShort: null,
+    weekdaysMin: null,
+    weekdaysParseExact: true,
+    longDateFormat: null,
+    calendar: null,
+    relativeTime: null,
+    dayOfMonthOrdinalParse: null,
+    ordinal: null,
+    week: null,
+  };
+  const obj2 = {
+    format:
+      "sausio_vasario_kovo_baland\u017Eio_gegu\u017E\u0117s_bir\u017Eelio_liepos_rugpj\u016B\u010Dio_rugs\u0117jo_spalio_lapkri\u010Dio_gruod\u017Eio".split(
+        "_",
+      ),
+    standalone:
+      "sausis_vasaris_kovas_balandis_gegu\u017E\u0117_bir\u017Eelis_liepa_rugpj\u016Btis_rugs\u0117jis_spalis_lapkritis_gruodis".split(
+        "_",
+      ),
+    isFormat: /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?|MMMM?(\[[^\[\]]*\]|\s)+D[oD]?/,
+  };
+  obj.weekdays = {
+    format:
+      "sekmadien\u012F_pirmadien\u012F_antradien\u012F_tre\u010Diadien\u012F_ketvirtadien\u012F_penktadien\u012F_\u0161e\u0161tadien\u012F".split(
+        "_",
+      ),
+    standalone:
+      "sekmadienis_pirmadienis_antradienis_tre\u010Diadienis_ketvirtadienis_penktadienis_\u0161e\u0161tadienis".split(
+        "_",
+      ),
+    isFormat: /dddd HH:mm/,
+  };
+  obj.weekdaysShort = "Sek_Pir_Ant_Tre_Ket_Pen_\u0160e\u0161".split("_");
+  obj.weekdaysMin = "S_P_A_T_K_Pn_\u0160".split("_");
+  obj.longDateFormat = {
+    LT: "HH:mm",
+    LTS: "HH:mm:ss",
+    L: "YYYY-MM-DD",
+    LL: "YYYY [m.] MMMM D [d.]",
+    LLL: "YYYY [m.] MMMM D [d.], HH:mm [val.]",
+    LLLL: "YYYY [m.] MMMM D [d.], dddd, HH:mm [val.]",
+    l: "YYYY-MM-DD",
+    ll: "YYYY [m.] MMMM D [d.]",
+    lll: "YYYY [m.] MMMM D [d.], HH:mm [val.]",
+    llll: "YYYY [m.] MMMM D [d.], ddd, HH:mm [val.]",
+  };
+  obj.calendar = {
+    sameDay: "[\u0160iandien] LT",
+    nextDay: "[Rytoj] LT",
+    nextWeek: "dddd LT",
+    lastDay: "[Vakar] LT",
+    lastWeek: "[Pra\u0117jus\u012F] dddd LT",
+    sameElse: "L",
+  };
+  obj.relativeTime = {
+    future: "po %s",
+    past: "prie\u0161 %s",
+    s: function translateSeconds(arg0, arg1, arg2, arg3) {
+      let str = "kelios sekund\u0117s";
+      if (!arg1) {
+        let str2 = "kelias sekundes";
+        if (arg3) {
+          str2 = "keli\u0173 sekund\u017Ei\u0173";
         }
-        obj = /D MMMM/;
-      } else {
-        return closure_0;
+        str = str2;
       }
+      return str;
     },
-    monthsShort: "sty_lut_mar_kwi_maj_cze_lip_sie_wrz_pa\u017A_lis_gru".split("_"),
-    monthsParse: items,
-    longMonthsParse: items,
-    shortMonthsParse: items,
-    weekdays: "niedziela_poniedzia\u0142ek_wtorek_\u015Broda_czwartek_pi\u0105tek_sobota".split("_"),
-    weekdaysShort: "ndz_pon_wt_\u015Br_czw_pt_sob".split("_"),
-    weekdaysMin: "Nd_Pn_Wt_\u015Ar_Cz_Pt_So".split("_"),
-    longDateFormat: {
-      LT: "HH:mm",
-      LTS: "HH:mm:ss",
-      L: "DD.MM.YYYY",
-      LL: "D MMMM YYYY",
-      LLL: "D MMMM YYYY HH:mm",
-      LLLL: "dddd, D MMMM YYYY HH:mm",
-    },
-    calendar: {
-      sameDay: "[Dzi\u015B o] LT",
-      nextDay: "[Jutro o] LT",
-      nextWeek() {
-        const dayResult = this.day();
-        if (0 === dayResult) {
-          return "[W niedziel\u0119 o] LT";
-        } else if (2 === dayResult) {
-          return "[We wtorek o] LT";
-        } else if (3 === dayResult) {
-          return "[W \u015Brod\u0119 o] LT";
-        } else if (6 === dayResult) {
-          return "[W sobot\u0119 o] LT";
-        } else {
-          return "[W] dddd [o] LT";
-        }
-      },
-      lastDay: "[Wczoraj o] LT",
-      lastWeek() {
-        const dayResult = this.day();
-        if (0 === dayResult) {
-          return "[W zesz\u0142\u0105 niedziel\u0119 o] LT";
-        } else if (3 === dayResult) {
-          return "[W zesz\u0142\u0105 \u015Brod\u0119 o] LT";
-        } else if (6 === dayResult) {
-          return "[W zesz\u0142\u0105 sobot\u0119 o] LT";
-        } else {
-          return "[W zesz\u0142y] dddd [o] LT";
-        }
-      },
-      sameElse: "L",
-    },
-    relativeTime: {
-      future: "za %s",
-      past: "%s temu",
-      s: "kilka sekund",
-      ss: translate,
-      m: translate,
-      mm: translate,
-      h: translate,
-      hh: translate,
-      d: "1 dzie\u0144",
-      dd: "%d dni",
-      w: "tydzie\u0144",
-      ww: translate,
-      M: "miesi\u0105c",
-      MM: translate,
-      y: "rok",
-      yy: translate,
-    },
-    dayOfMonthOrdinalParse: /\d{1,2}\./,
-    ordinal: "%d.",
-    week: { dow: 1, doy: 4 },
-  });
+    ss: translate,
+    m: translateSingular,
+    mm: translate,
+    h: translateSingular,
+    hh: translate,
+    d: translateSingular,
+    dd: translate,
+    M: translateSingular,
+    MM: translate,
+    y: translateSingular,
+    yy: translate,
+  };
+  obj.dayOfMonthOrdinalParse = /\d{1,2}-oji/;
+  obj.ordinal = function ordinal(arg0) {
+    return arg0 + "-oji";
+  };
+  obj.week = { dow: 1, doy: 4 };
+  return moment.defineLocale("lt", obj);
 };
 if (typeof exports === "object") {
   if (undefined !== module) {
     if (typeof require === "function") {
-      fn(_mod4418);
+      fn(_mod4421);
     }
   }
 }

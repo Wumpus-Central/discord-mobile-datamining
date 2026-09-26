@@ -1,21 +1,13 @@
 // _runtime/metro/07544__.js
-import reviveBigInts from "../07545_reviveBigInts.js";
-import DiscordMarkdownDefault from "../07546_DiscordMarkdown.js";
+import registerAsset from "01121__.js";
 
-require = arg1;
-importDefault = arg2;
-const dependencyMap = arg6;
-
-export const parse = function parse(arg0, arg1, arg2) {
-  const obj = reviveBigInts;
-  let json;
-  if (null != arg1) {
-    const _JSON = JSON;
-    json = JSON.stringify(arg1);
-  }
-  return obj.decodeAstJson(DiscordMarkdownDefault.parseToAstString(arg0, json, arg2));
-};
-export const unparse = function unparse(arg0) {
-  const obj = DiscordMarkdownDefault;
-  return obj.unparseFromAstString(reviveBigInts.encodeAstJson(arg0));
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "06dd03fc60ccef8d12f4f7cb6c5d239c",
+  name: "XNeutralIcon",
+  type: "png",
+});

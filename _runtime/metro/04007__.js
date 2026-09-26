@@ -1,28 +1,24 @@
 // _runtime/metro/04007__.js
-import 02119__ from "02119__.js";
+let closure_0 = { lessThanXSeconds: { one: "minder dan een seconde", other: "minder dan {{count}} seconden" }, xSeconds: { one: "1 seconde", other: "{{count}} seconden" }, halfAMinute: "een halve minuut", lessThanXMinutes: { one: "minder dan een minuut", other: "minder dan {{count}} minuten" }, xMinutes: { one: "een minuut", other: "{{count}} minuten" }, aboutXHours: { one: "ongeveer 1 uur", other: "ongeveer {{count}} uur" }, xHours: { one: "1 uur", other: "{{count}} uur" }, xDays: { one: "1 dag", other: "{{count}} dagen" }, aboutXWeeks: { one: "ongeveer 1 week", other: "ongeveer {{count}} weken" }, xWeeks: { one: "1 week", other: "{{count}} weken" }, aboutXMonths: { one: "ongeveer 1 maand", other: "ongeveer {{count}} maanden" }, xMonths: { one: "1 maand", other: "{{count}} maanden" }, aboutXYears: { one: "ongeveer 1 jaar", other: "ongeveer {{count}} jaar" }, xYears: { one: "1 jaar", other: "{{count}} jaar" }, overXYears: { one: "meer dan 1 jaar", other: "meer dan {{count}} jaar" }, almostXYears: { one: "bijna 1 jaar", other: "bijna {{count}} jaar" } };
 
-if (!module_2119) {
-  const obj2 = { default: module_2119 };
-  let obj = obj2;
-} else {
-  obj = module_2119;
-}
-const date = {
-  ordinalNumber(arg0, arg1) {
-    return Number(arg0) + "e";
-  },
-  era: obj.default({ values: { narrow: ["v.C.", "n.C."], abbreviated: ["v.Chr.", "n.Chr."], wide: ["voor Christus", "na Christus"] }, defaultWidth: "wide" }),
-  quarter: obj.default({
-    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["K1", "K2", "K3", "K4"], wide: ["1e kwartaal", "2e kwartaal", "3e kwartaal", "4e kwartaal"] },
-    defaultWidth: "wide",
-    argumentCallback(arg0) {
-      return arg0 - 1;
+export default function formatDistance(arg0, arg1, addSuffix) {
+  if (typeof closure_0[arg0] === "string") {
+    let tmp6 = tmp;
+    if (null != addSuffix) {
+      tmp6 = tmp;
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          let text = `${tmp} geleden`;
+        }
+        text = `over ${tmp}`;
+      }
     }
-  }),
-  month: obj.default({ values: { narrow: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], abbreviated: ["jan.", "feb.", "mrt.", "apr.", "mei", "jun.", "jul.", "aug.", "sep.", "okt.", "nov.", "dec."], wide: ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"] }, defaultWidth: "wide" }),
-  day: obj.default({ values: { narrow: ["Z", "M", "D", "W", "D", "V", "Z"], short: ["zo", "ma", "di", "wo", "do", "vr", "za"], abbreviated: ["zon", "maa", "din", "woe", "don", "vri", "zat"], wide: ["zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag"] }, defaultWidth: "wide" }),
-  dayPeriod: obj.default({ values: { narrow: { am: "AM", pm: "PM", midnight: "middernacht", noon: "het middaguur", morning: "'s ochtends", afternoon: "'s middags", evening: "'s avonds", night: "'s nachts" }, abbreviated: { am: "AM", pm: "PM", midnight: "middernacht", noon: "het middaguur", morning: "'s ochtends", afternoon: "'s middags", evening: "'s avonds", night: "'s nachts" }, wide: { am: "AM", pm: "PM", midnight: "middernacht", noon: "het middaguur", morning: "'s ochtends", afternoon: "'s middags", evening: "'s avonds", night: "'s nachts" } }, defaultWidth: "wide" })
+    return tmp6;
+  } else if (1 === arg1) {
+    let one = tmp.one;
+  } else {
+    const _String = String;
+    one = tmp.other.replace("{{count}}", String(arg1));
+  }
 };
-
-export default date;
 export default exports.default;

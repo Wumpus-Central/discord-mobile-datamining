@@ -1,17 +1,31 @@
 // _runtime/metro/12310__.js
+import _mod12311 from "12311__.js";
+import _mod12314 from "12314__.js";
 
-export const SEMANTIC_ATTRIBUTE_CACHE_HIT = "cache.hit";
-export const SEMANTIC_ATTRIBUTE_CACHE_ITEM_SIZE = "cache.item_size";
-export const SEMANTIC_ATTRIBUTE_CACHE_KEY = "cache.key";
-export const SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME = "sentry.exclusive_time";
-export const SEMANTIC_ATTRIBUTE_HTTP_REQUEST_METHOD = "http.request.method";
-export const SEMANTIC_ATTRIBUTE_PROFILE_ID = "sentry.profile_id";
-export const SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME = "sentry.custom_span_name";
-export const SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON = "sentry.idle_span_finish_reason";
-export const SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT = "sentry.measurement_unit";
-export const SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE = "sentry.measurement_value";
-export const SEMANTIC_ATTRIBUTE_SENTRY_OP = "sentry.op";
-export const SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN = "sentry.origin";
-export const SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE = "sentry.sample_rate";
-export const SEMANTIC_ATTRIBUTE_SENTRY_SOURCE = "sentry.source";
-export const SEMANTIC_ATTRIBUTE_URL_FULL = "url.full";
+require = arg1;
+const dependencyMap = arg6;
+function instrumentError() {
+  onerror = _mod12314.GLOBAL_OBJ.onerror;
+  _mod12314.GLOBAL_OBJ.onerror = function (msg, url, line, column, error) {
+    _mod12311.triggerHandlers("error", { column, error, line, msg, url });
+    if (!onerror) {
+      return onerror;
+    } else {
+      const self = this;
+      const apply = onerror.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+    }
+    const obj = { column, error, line, msg, url };
+  };
+  _mod12314.GLOBAL_OBJ.onerror.__SENTRY_INSTRUMENTED__ = true;
+}
+let onerror = null;
+
+export const addGlobalErrorInstrumentationHandler = function addGlobalErrorInstrumentationHandler(errorCallback) {
+  _mod12311.addHandler("error", errorCallback);
+  _mod12311.maybeInstrument("error", instrumentError);
+};

@@ -1,89 +1,136 @@
 // _runtime/metro/12414__.js
-import _readOnlyError from "00377__readOnlyError.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
+import _mod12319 from "12319__.js";
+import _slicedToArray from "00032__.js";
 
-let _classCallCheck = _classCallCheck_mod;
-class LRUMap {
-  constructor(arg0) {
-    tmp = closure_0(this, LRUMap);
-    this._maxSize = global;
-    map = new Map();
-    this._cache = map;
-    return;
-  }
-}
-_classCallCheck = LRUMap;
 let items = [
-  {
-    key: "size",
-    get() {
-      return this._cache.size;
-    },
-  },
-  {
-    key: "get",
-    value: function get(arg0) {
-      const self = this;
-      const _cache = this._cache;
-      value = _cache.get(arg0);
-      if (undefined !== value) {
-        const _cache2 = self._cache;
-        _cache2.delete(arg0);
-        const _cache3 = self._cache;
-        const result = _cache3.set(arg0, value);
-        return value;
-      }
-    },
-  },
-  {
-    key: "set",
-    value: function set(arg0, arg1) {
-      const self = this;
-      if (this._cache.size >= this._maxSize) {
-        ({ _cache, _cache: _cache2 } = self);
-        _cache.delete(_cache2.keys().next().value);
-        const iter = _cache2.keys();
-      }
-      const _cache3 = self._cache;
-      const result = _cache3.set(arg0, arg1);
-    },
-  },
-  {
-    key: "remove",
-    value: function remove(arg0) {
-      const _cache = this._cache;
-      value = _cache.get(arg0);
-      if (value) {
-        const _cache2 = this._cache;
-        _cache2.delete(arg0);
-      }
-      return value;
-    },
-  },
-  {
-    key: "clear",
-    value: function clear() {
-      const _cache = this._cache;
-      _cache.clear();
-    },
-  },
-  {
-    key: "keys",
-    value: function keys() {
-      const _cache = this._cache;
-      return Array.from(_cache.keys());
-    },
-  },
-  {
-    key: "values",
-    value: function values() {
-      const items = [];
-      const _cache = this._cache;
-      const item = _cache.forEach((item) => items.push(item));
-      return items;
-    },
-  },
+  ["\n", "\\n"],
+  ["\r", "\\r"],
+  ["\t", "\\t"],
+  ["\\", "\\\\"],
+  ["|", "\\u{7c}"],
+  [",", "\\u{2c}"],
 ];
 
-export const LRUMap = _createClass(LRUMap, items);
+export const getBucketKey = function getBucketKey(
+  metricType,
+  sanitizeMetricKeyResult,
+  sanitizeUnitResult,
+  sanitizeTagsResult,
+) {
+  const entries = Object.entries(_mod12319.dropUndefinedKeys(sanitizeTagsResult));
+  return (
+    "" +
+    metricType +
+    sanitizeMetricKeyResult +
+    sanitizeUnitResult +
+    entries.sort((arg0, arg1) => {
+      const first = arg0[0];
+      return first.localeCompare(arg1[0]);
+    })
+  );
+};
+export const sanitizeMetricKey = function sanitizeMetricKey(str) {
+  return str.replace(/[^\w\-.]+/gi, "_");
+};
+export const sanitizeTags = function sanitizeTags(tags) {
+  let obj = {};
+  for (const key10007 in arg0) {
+    let _Object = Object;
+    hasOwnProperty = Object.prototype.hasOwnProperty;
+    let call = hasOwnProperty.call;
+    if (typeof call === "unknown") {
+      let hasOwnPropertyResult = hasOwnProperty(key10007);
+    } else {
+      hasOwnPropertyResult = call(arg0, key10007);
+    }
+    if (!hasOwnPropertyResult) {
+      continue;
+    } else {
+      let _String = String;
+      let replaced = key10007.replace(/[^\w\-./]+/gi, "");
+      items = [];
+      let arraySpreadResult = HermesBuiltin.arraySpread(String(arg0[key10007]), 0);
+      obj[replaced] = items.reduce(
+        (acc, item) =>
+          acc +
+          (function getCharOrReplacement(item) {
+            const obj = dependencyMap[Symbol.iterator]();
+            while (obj !== undefined) {
+              let tmp4 = closure_1_2(tmp2, 2);
+              if (item === tmp4[0]) {
+                obj.return();
+                return tmp5;
+              }
+            }
+            return item;
+          })(item),
+        "",
+      );
+      continue;
+    }
+    continue;
+  }
+  return obj;
+};
+export const sanitizeUnit = function sanitizeUnit(none) {
+  return none.replace(/[^\w]+/gi, "_");
+};
+export const serializeMetricBuckets = function serializeMetricBuckets(arg0) {
+  let str = "";
+  const iter = arg0[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp2 = nextResult;
+    let _Object = Object;
+    let entries = Object.entries(nextResult.tags);
+    let arr2 = entries;
+    let str2 = "";
+    if (entries.length > 0) {
+      let mapped = arr2.map((item) => {
+        [tmp, tmp2] = item;
+        return "" + tmp + ":" + tmp2;
+      });
+      let _HermesInternal = HermesInternal;
+      str2 = "|#" + mapped.join(",");
+    }
+    let _HermesInternal2 = HermesInternal;
+    let str3 = "";
+    let str4 = "@";
+    let str5 = ":";
+    let str6 = "|";
+    let str7 = "|T";
+    let str8 = "\n";
+    str =
+      str +
+      "" +
+      tmp2.name +
+      "@" +
+      tmp2.unit +
+      ":" +
+      tmp2.metric +
+      "|" +
+      tmp2.metricType +
+      str2 +
+      "|T" +
+      tmp2.timestamp +
+      "\n";
+    continue;
+  }
+  return str;
+};
+export const simpleHash = function simpleHash(item) {
+  let length;
+  let num = 0;
+  let num2 = 0;
+  let num3 = 0;
+  if (0 < item.length) {
+    do {
+      let sum = (num2 << 5) - num2 + item.charCodeAt(num);
+      num2 = sum & sum;
+      num = num + 1;
+      num3 = num2;
+      length = item.length;
+    } while (num < length);
+  }
+  return num3 >>> 0;
+};

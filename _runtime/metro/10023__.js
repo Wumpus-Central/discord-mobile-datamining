@@ -1,12 +1,13 @@
 // _runtime/metro/10023__.js
-import _mod10015 from "10015__.js";
+import AbstractParserWithWordBoundaryChecking from "../09902_AbstractParserWithWordBoundaryChecking.js";
+import REGEX_PARTS from "../10024_REGEX_PARTS.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const RUWeekdayParser = require;
+const RUTimeUnitWithinFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +26,17 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class RUWeekdayParser {
+let closure_6 =
+  "(?:(?:\u043E\u043A\u043E\u043B\u043E|\u043F\u0440\u0438\u043C\u0435\u0440\u043D\u043E)\\s*(?:~\\s*)?)?(" +
+  REGEX_PARTS.TIME_UNITS_PATTERN +
+  ")" +
+  REGEX_PARTS.REGEX_PARTS.rightBoundary;
+class RUTimeUnitWithinFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, RUWeekdayParser);
+    tmp = c2(this, RUTimeUnitWithinFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(RUWeekdayParser);
+    obj = closure_4(RUTimeUnitWithinFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,70 +51,41 @@ class RUWeekdayParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(RUWeekdayParser, _mod10015.AbstractParserWithLeftRightBoundaryChecking);
+_inherits(RUTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return (
-      "(?:(?:,|\\(|\uFF08)\\s*)?(?:\u0432\\s*?)?(?:(\u044D\u0442\u0443|\u044D\u0442\u043E\u0442|\u043F\u0440\u043E\u0448\u043B\u044B\u0439|\u043F\u0440\u043E\u0448\u043B\u0443\u044E|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0443\u044E|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0433\u043E)\\s*)?(" +
-      RUWeekdayParser(9884).matchAnyPattern(RUWeekdayParser(10013).WEEKDAY_DICTIONARY) +
-      ")(?:\\s*(?:,|\\)|\uFF09))?(?:\\s*\u043D\u0430\\s*(\u044D\u0442\u043E\u0439|\u043F\u0440\u043E\u0448\u043B\u043E\u0439|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0439)\\s*\u043D\u0435\u0434\u0435\u043B\u0435)?"
-    );
+  key: "patternLeftBoundary",
+  value: function patternLeftBoundary() {
+    return RUTimeUnitWithinFormatParser(10024).REGEX_PARTS.leftBoundary;
   },
 };
 const items = [
   entry,
   {
+    key: "innerPattern",
+    value: function innerPattern(option) {
+      const _RegExp = RegExp;
+      if (option.option.forwardDate) {
+        let _RegExp1 = new _RegExp(closure_6, RUTimeUnitWithinFormatParser(10024).REGEX_PARTS.flags);
+      } else {
+        const _HermesInternal = HermesInternal;
+        const combined =
+          "(?:\u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0435|\u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0438)\\s*" +
+          closure_6;
+        _RegExp1 = new _RegExp(combined, RUTimeUnitWithinFormatParser(10024).REGEX_PARTS.flags);
+      }
+      return _RegExp1;
+    },
+  },
+  {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const formatted = arg1[2].toLowerCase();
-      let str2 = arg1[1];
-      if (!str2) {
-        str2 = arg1[3];
-      }
-      if (!str2) {
-        str2 = "";
-      }
-      const formatted1 = str2.toLowerCase();
-      let str3 = "last";
-      if ("\u043F\u0440\u043E\u0448\u043B\u044B\u0439" != formatted1) {
-        str3 = "last";
-        if ("\u043F\u0440\u043E\u0448\u043B\u0443\u044E" != formatted1) {
-          str3 = "last";
-          if ("\u043F\u0440\u043E\u0448\u043B\u043E\u0439" != formatted1) {
-            str3 = "next";
-            if ("\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439" != formatted1) {
-              str3 = "next";
-              if ("\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0443\u044E" != formatted1) {
-                str3 = "next";
-                if ("\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0439" != formatted1) {
-                  str3 = "next";
-                  if ("\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0433\u043E" != formatted1) {
-                    let tmp5 = "\u044D\u0442\u043E\u0442" != formatted1;
-                    if (tmp5) {
-                      tmp5 = "\u044D\u0442\u0443" != formatted1;
-                    }
-                    if (tmp5) {
-                      tmp5 = "\u044D\u0442\u043E\u0439" != formatted1;
-                    }
-                    str3 = null;
-                    if (!tmp5) {
-                      str3 = "this";
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      return RUWeekdayParser(9911).createParsingComponentsAtWeekday(
+      const ParsingComponents = RUTimeUnitWithinFormatParser(9898).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(
         reference.reference,
-        RUWeekdayParser(10013).WEEKDAY_DICTIONARY[formatted],
-        str3,
+        RUTimeUnitWithinFormatParser(10024).parseDuration(arg1[1]),
       );
     },
   },
 ];
 
-export default _createClass(RUWeekdayParser, items);
+export default _createClass(RUTimeUnitWithinFormatParser, items);

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "d91139b8e746209ecc3e711216b338c8",
-  name: "ChatIcon",
+  hash: "55dfae0c7ba72f2b92f72dd1258be0b7",
+  name: "VoiceWarningIcon",
   type: "png",
 });

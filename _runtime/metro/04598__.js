@@ -1,16 +1,16 @@
 // _runtime/metro/04598__.js
-import c from "../04583_c.js";
-import _mod4596 from "04596__.js";
+import c from "../04586_c.js";
+import _mod4599 from "04599__.js";
 import _slicedToArray from "00032__.js";
 
 require = arg1;
-function getStringProperty(stringProperty, arg1) {
-  return stringProperty.stringProperty(arg1);
+function getNumberProperty(numberProperty, arg1) {
+  return numberProperty.numberProperty(arg1);
 }
 
-export const useRiveString = function useRiveString(LVL, instance) {
+export const useRiveNumber = function useRiveNumber(AnimationState, instance) {
   const cResult = c.c(4);
-  [tmp3, tmp4, tmp5] = _mod4596.useRiveProperty(instance, LVL, getStringProperty);
+  [tmp3, tmp4, tmp5] = _mod4599.useRiveProperty(instance, AnimationState, getNumberProperty);
   if (cResult[0] === tmp5) {
     if (cResult[1] === tmp4) {
       if (cResult[2] === tmp3) {

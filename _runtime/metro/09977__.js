@@ -1,12 +1,11 @@
 // _runtime/metro/09977__.js
-import AbstractParserWithWordBoundaryChecking from "../09891_AbstractParserWithWordBoundaryChecking.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
+import AbstractTimeExpressionParser from "../09909_AbstractTimeExpressionParser.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const NLTimeUnitWithinFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,14 +24,16 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class NLTimeUnitWithinFormatParser {
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+class PTTimeExpressionParser {
   constructor() {
     self = this;
-    tmp = c2(this, NLTimeUnitWithinFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(NLTimeUnitWithinFormatParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_0(this, PTTimeExpressionParser);
+    tmp2 = c2;
+    obj = c2(PTTimeExpressionParser);
+    tmp3 = closure_1;
+    if (closure_3()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -45,29 +46,22 @@ class NLTimeUnitWithinFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(NLTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_classCallCheck = PTTimeExpressionParser;
+_inherits(PTTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    const regExp = new RegExp(
-      "(?:binnen|in|binnen de|voor)\\s*(" + NLTimeUnitWithinFormatParser(9978).TIME_UNITS_PATTERN + ")(?=\\W|$)",
-      "i",
-    );
-    return regExp;
+  key: "primaryPrefix",
+  value: function primaryPrefix() {
+    return "(?:(?:ao?|\u00E0s?|das|da|de|do)\\s*)?";
   },
 };
 const items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const ParsingComponents = NLTimeUnitWithinFormatParser(9887).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(
-        reference.reference,
-        NLTimeUnitWithinFormatParser(9978).parseDuration(arg1[1]),
-      );
+    key: "followingPhase",
+    value: function followingPhase() {
+      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|a(?:o)?|\\?)\\s*";
     },
   },
 ];
 
-export default _createClass(NLTimeUnitWithinFormatParser, items);
+export default _createClass(PTTimeExpressionParser, items);

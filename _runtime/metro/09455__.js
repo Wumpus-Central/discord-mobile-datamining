@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "06839429466f04b07ee5c7156e6fbf8c",
-  name: "MicrophoneIcon",
+  httpServerLocation: "/assets/images/native",
+  width: 195,
+  height: 92,
+  scales: [1, 2, 3],
+  hash: "6d3bdfffed77899f44fd075e4ef2e92a",
+  name: "krisp_logo_dark",
   type: "png",
 });

@@ -1,5 +1,5 @@
 // _runtime/metro/08430__.js
-import _mod8395 from "08395__.js";
+import _mod8403 from "08403__.js";
 
 const self = this;
 let self2 = this;
@@ -56,14 +56,14 @@ if (self2) {
       if (typeof error === "function") {
         const obj = { localeError: null };
         const obj2 = {
-          string: { unit: "aksara", verb: "mempunyai" },
-          file: { unit: "bait", verb: "mempunyai" },
-          array: { unit: "elemen", verb: "mempunyai" },
-          set: { unit: "elemen", verb: "mempunyai" },
+          string: { unit: "caratteri", verb: "avere" },
+          file: { unit: "byte", verb: "avere" },
+          array: { unit: "elementi", verb: "avere" },
+          set: { unit: "elementi", verb: "avere" },
         };
         closure_1 = {
           regex: "input",
-          email: "alamat e-mel",
+          email: "indirizzo email",
           url: "URL",
           emoji: "emoji",
           uuid: "UUID",
@@ -76,22 +76,22 @@ if (self2) {
           ulid: "ULID",
           xid: "XID",
           ksuid: "KSUID",
-          datetime: "tarikh masa ISO",
-          date: "tarikh ISO",
-          time: "masa ISO",
-          duration: "tempoh ISO",
-          ipv4: "alamat IPv4",
-          ipv6: "alamat IPv6",
-          cidrv4: "julat IPv4",
-          cidrv6: "julat IPv6",
-          base64: "string dikodkan base64",
-          base64url: "string dikodkan base64url",
-          json_string: "string JSON",
-          e164: "nombor E.164",
+          datetime: "data e ora ISO",
+          date: "data ISO",
+          time: "ora ISO",
+          duration: "durata ISO",
+          ipv4: "indirizzo IPv4",
+          ipv6: "indirizzo IPv6",
+          cidrv4: "intervallo IPv4",
+          cidrv6: "intervallo IPv6",
+          base64: "stringa codificata in base64",
+          base64url: "URL codificata in base64",
+          json_string: "stringa JSON",
+          e164: "numero E.164",
           jwt: "JWT",
           template_literal: "input",
         };
-        closure_2 = { nan: "NaN", number: "nombor" };
+        closure_2 = { nan: "NaN", number: "numero", array: "vettore" };
         obj.localeError = (code) => {
           switch (code.code) {
             case "invalid_type":
@@ -100,25 +100,25 @@ if (self2) {
                 expected = code.expected;
               }
               const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp47 = closure_2[parsedTypeResult];
-              if (tmp47 == null) {
-                tmp47 = parsedTypeResult;
+              let tmp50 = closure_2[parsedTypeResult];
+              if (tmp50 == null) {
+                tmp50 = parsedTypeResult;
               }
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
-                let combined = "Input tidak sah: dijangka instanceof " + code.expected + ", diterima " + tmp47;
+                let combined = "Input non valido: atteso instanceof " + code.expected + ", ricevuto " + tmp50;
               } else {
                 const _HermesInternal16 = HermesInternal;
-                combined = "Input tidak sah: dijangka " + expected + ", diterima " + tmp47;
+                combined = "Input non valido: atteso " + expected + ", ricevuto " + tmp50;
               }
               return combined;
             case "invalid_value":
               if (1 === code.values.length) {
                 const _HermesInternal15 = HermesInternal;
-                let combined1 = "Input tidak sah: dijangka " + closure_2.stringifyPrimitive(code.values[0]);
+                let combined1 = "Input non valido: atteso " + closure_2.stringifyPrimitive(code.values[0]);
               } else {
                 const _HermesInternal14 = HermesInternal;
-                combined1 = "Pilihan tidak sah: dijangka salah satu daripada " + closure_2.joinValues(code.values, "|");
+                combined1 = "Opzione non valida: atteso uno tra " + closure_2.joinValues(code.values, "|");
               }
               return combined1;
             case "too_big":
@@ -126,97 +126,96 @@ if (self2) {
               if (code.inclusive) {
                 str27 = "<=";
               }
-              let tmp25 = obj2[code.origin];
-              if (tmp25 == null) {
-                tmp25 = null;
+              let tmp29 = obj2[code.origin];
+              if (tmp29 == null) {
+                tmp29 = null;
               }
               let str28 = code.origin;
-              if (tmp25) {
+              if (tmp29) {
                 if (str28 == null) {
-                  str28 = "nilai";
+                  str28 = "valore";
                 }
-                const verb = tmp25.verb;
                 const str1 = code.maximum.toString();
-                let str34 = tmp25.unit;
+                let str34 = tmp29.unit;
                 if (str34 == null) {
-                  str34 = "elemen";
+                  str34 = "elementi";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "Terlalu besar: dijangka " + str28 + " " + verb + " " + str27 + str1 + " " + str34;
+                let combined2 = "Troppo grande: " + str28 + " deve avere " + str27 + str1 + " " + str34;
               } else {
                 let str29 = str28;
                 if (str28 == null) {
-                  str29 = "nilai";
+                  str29 = "valore";
                 }
                 const _HermesInternal12 = HermesInternal;
-                combined2 = "Terlalu besar: dijangka " + str29 + " adalah " + str27 + code.maximum.toString();
+                combined2 = "Troppo grande: " + str29 + " deve essere " + str27 + code.maximum.toString();
               }
               return combined2;
             case "too_small":
-              let str17 = ">";
+              let str21 = ">";
               if (code.inclusive) {
-                str17 = ">=";
+                str21 = ">=";
               }
-              let tmp15 = obj2[code.origin];
-              if (tmp15 == null) {
-                tmp15 = null;
+              let tmp17 = obj2[code.origin];
+              if (tmp17 == null) {
+                tmp17 = null;
               }
-              const origin = code.origin;
-              if (tmp15) {
+              ({ origin, minimum } = code);
+              const str48 = minimum.toString();
+              if (tmp17) {
                 const _HermesInternal11 = HermesInternal;
-                let combined3 =
-                  "Terlalu kecil: dijangka " +
-                  origin +
-                  " " +
-                  tmp15.verb +
-                  " " +
-                  str17 +
-                  code.minimum.toString() +
-                  " " +
-                  tmp15.unit;
+                let combined3 = "Troppo piccolo: " + origin + " deve avere " + str21 + str48 + " " + tmp17.unit;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "Terlalu kecil: dijangka " + origin + " adalah " + str17 + code.minimum.toString();
+                combined3 = "Troppo piccolo: " + origin + " deve essere " + str21 + str48;
               }
               return combined3;
             case "invalid_format":
               if ("starts_with" === code.format) {
                 const _HermesInternal9 = HermesInternal;
-                let combined4 = 'String tidak sah: mesti bermula dengan "' + code.prefix + '"';
+                let combined4 = 'Stringa non valida: deve iniziare con "' + code.prefix + '"';
               } else if ("ends_with" === code.format) {
                 const _HermesInternal8 = HermesInternal;
-                combined4 = 'String tidak sah: mesti berakhir dengan "' + code.suffix + '"';
+                combined4 = 'Stringa non valida: deve terminare con "' + code.suffix + '"';
               } else if ("includes" === code.format) {
                 const _HermesInternal7 = HermesInternal;
-                combined4 = 'String tidak sah: mesti mengandungi "' + code.includes + '"';
+                combined4 = 'Stringa non valida: deve includere "' + code.includes + '"';
               } else if ("regex" === code.format) {
                 const _HermesInternal6 = HermesInternal;
-                combined4 = "String tidak sah: mesti sepadan dengan corak " + code.pattern;
+                combined4 = "Stringa non valida: deve corrispondere al pattern " + code.pattern;
               } else {
                 let format = closure_1[code.format];
                 if (format == null) {
                   format = code.format;
                 }
                 const _HermesInternal5 = HermesInternal;
-                combined4 = "" + format + " tidak sah";
+                combined4 = "Invalid " + format;
               }
               return combined4;
             case "not_multiple_of":
               const _HermesInternal4 = HermesInternal;
-              return "Nombor tidak sah: perlu gandaan " + code.divisor;
+              return "Numero non valido: deve essere un multiplo di " + code.divisor;
             case "unrecognized_keys":
+              let str4 = "e";
+              if (code.keys.length > 1) {
+                str4 = "i";
+              }
+              let str5 = "a";
+              if (code.keys.length > 1) {
+                str5 = "e";
+              }
               const _HermesInternal3 = HermesInternal;
-              return "Kunci tidak dikenali: " + closure_2.joinValues(code.keys, ", ");
+              return "Chiav" + str4 + " non riconosciut" + str5 + ": " + closure_2.joinValues(code.keys, ", ");
             case "invalid_key":
               const _HermesInternal2 = HermesInternal;
-              return "Kunci tidak sah dalam " + code.origin;
+              return "Chiave non valida in " + code.origin;
             case "invalid_union":
-              return "Input tidak sah";
+              return "Input non valido";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              return "Nilai tidak sah dalam " + code.origin;
+              return "Valore non valido in " + code.origin;
             default:
-              return "Input tidak sah";
+              return "Input non valido";
           }
         };
         return obj;
@@ -224,7 +223,7 @@ if (self2) {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    let closure_2 = fn(_mod8395);
+    let closure_2 = fn(_mod8403);
     function error() {}
     module.exports = exports.default;
   } else {
