@@ -1,8 +1,8 @@
-// === Module 10541: getCurrentUserProfile ===
+// === Module 10552: getCurrentUserProfile ===
 
-// Module 10541 (getCurrentUserProfile)
+// Module 10552 (getCurrentUserProfile)
 import UserStore from "UserStore" /* 1372 */;
-import UserProfileStore from "UserProfileStore" /* 7030 */;
+import UserProfileStore from "UserProfileStore" /* 7035 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/utils/getCurrentUserProfile.tsx");

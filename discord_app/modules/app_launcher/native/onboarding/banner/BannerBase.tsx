@@ -1,12 +1,12 @@
-// === Module 11529: BannerBase ===
+// === Module 11543: BannerBase ===
 
-// Module 11529 (BannerBase)
+// Module 11543 (BannerBase)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
-import spring from "spring" /* 5273 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
+import spring from "spring" /* 5280 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4821 */;
+import AccessibilityStore from "AccessibilityStore" /* 4825 */;
 
 const require = globalThis.__r;
 
@@ -16,9 +16,9 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const SPRING_CONFIG = { mass: 1, stiffness: 100, damping: 15 };
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { banner: null, bannerGradientColor: null, bannerBackgroundGradient: null, imageContainer: null, trinketsLottie: null, bannerTextContainer: null, bannerText: null };
-const rect = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, position: "absolute", borderRadius: nativeDefault.radii.lg, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: PX_12, flexDirection: "row", minHeight: fn(11518).APP_ICON_SIZE + 2 * PX_12 + 4, bottom: nativeDefault.space.PX_16, left: nativeDefault.space.PX_16 };
+const rect = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, position: "absolute", borderRadius: nativeDefault.radii.lg, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: PX_12, flexDirection: "row", minHeight: fn(11532).APP_ICON_SIZE + 2 * PX_12 + 4, bottom: nativeDefault.space.PX_16, left: nativeDefault.space.PX_16 };
 obj2.banner = rect;
 obj2.bannerGradientColor = { backgroundColor: "#7eaaff" };
 const rect1 = { position: "absolute", top: 0, left: 0, borderRadius: nativeDefault.radii.lg };
@@ -40,7 +40,7 @@ export default function BannerBase(arg0) {
   [tmp3, c0] = noop.useState(0);
   const tmp2 = _slicedToArray(noop.useState(0), 2);
   const sharedValue = require("ReanimatedRexport").useSharedValue(false);
-  const diff = sharedValue(1478)().width - 2 * sharedValue(576).space.PX_16;
+  const diff = sharedValue(1479)().width - 2 * sharedValue(576).space.PX_16;
   const backgroundColor = tmp.bannerGradientColor.backgroundColor;
   const obj = require("ReanimatedRexport");
   let items = [require("ColorUtils").hexOpacityToRgba(backgroundColor, 0.2), ];
@@ -95,17 +95,17 @@ export default function BannerBase(arg0) {
   const obj8 = { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: items, style: null };
   const items3 = [tmp.bannerBackgroundGradient, { height: tmp3, width: diff }];
   obj8.style = items3;
-  const items4 = [closure_7(sharedValue(5286), obj8), , ];
+  const items4 = [closure_7(sharedValue(5293), obj8), , ];
   const obj9 = { style: tmp.imageContainer, children: null };
   const obj10 = { style: tmp.trinketsLottie, source: null, autoPlay: null };
   let obj6 = { bannerMeasured: sharedValue, withDelay: require("ReanimatedRexport").withDelay, withSpring: require("spring").withSpring, SPRING_CONFIG };
-  obj10.source = require("module_11530");
+  obj10.source = require("module_11544");
   obj10.autoPlay = !stateFromStores;
-  const items5 = [closure_7(sharedValue(5836), obj10), image];
+  const items5 = [closure_7(sharedValue(5841), obj10), image];
   obj9.children = items5;
   items4[1] = closure_8(View, obj9);
   const obj11 = { style: tmp.bannerTextContainer, children: closure_7(require("Text/Text").Text, { variant: "text-md/semibold", color: "text-overlay-light", style: tmp.bannerText, children: text }) };
   items4[2] = closure_7(View, obj11);
   obj7.children = items4;
-  return closure_8(sharedValue(4563).View, obj7);
+  return closure_8(sharedValue(4566).View, obj7);
 };

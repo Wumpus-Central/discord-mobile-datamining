@@ -1,13 +1,13 @@
-// === Module 2112: IntlLoaderStore ===
+// === Module 2113: IntlLoaderStore ===
 
-// Module 2112 (IntlLoaderStore)
+// Module 2113 (IntlLoaderStore)
 import util from "util" /* 1115 */;
-import _modDef2113 from "module_2113" /* 2113 */;
-import bg from "bg" /* 3910 */;
-import formatjs from "formatjs" /* 4385 */;
-import moment from "moment" /* 4416 */;
+import _modDef2114 from "module_2114" /* 2114 */;
+import bg from "bg" /* 3913 */;
+import formatjs from "formatjs" /* 4388 */;
+import moment from "moment" /* 4419 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import module_1882 from "module_1882" /* 1882 */;
+import module_1883 from "module_1883" /* 1883 */;
 
 require = fn;
 let closure_6 = async function _setAppLocale(arg0) {
@@ -73,7 +73,7 @@ let closure_6 = async function _setAppLocale(arg0) {
                     closure_0 = tmp4;
                     c1 = 1;
                     dependencyMap = 1;
-                    const obj6 = { value: closure_0(2123).preloadAllIntlMessageFiles(), done: false };
+                    const obj6 = { value: closure_0(2124).preloadAllIntlMessageFiles(), done: false };
                     return obj6;
                   }
                 } else if (1 === tmp4) {
@@ -203,7 +203,7 @@ let closure_7 = async function _loadDateFnsLocale(arg0) {
             const obj4 = { value: tmp20(), done: false };
             return obj4;
           } else {
-            state.setLocaleData(_modDef2113);
+            state.setLocaleData(_modDef2114);
             c3 = 3;
           }
         }
@@ -346,11 +346,11 @@ const identity = fn(1243);
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
-  let obj = {
+  return {
     isLoading: false,
     inProgressLocale: "Boolean",
     error: "paddingHorizontal",
-    localeData: _modDef2113,
+    localeData: _modDef2114,
     setLoadingStarted(inProgressLocale) {
       return closure_0({ isLoading: true, inProgressLocale });
     },
@@ -369,7 +369,6 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       closure_0({ localeData });
     }
   };
-  return obj;
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("intl/IntlLoaderStore.tsx");
@@ -397,7 +396,7 @@ export const setAppLocale = function setAppLocale() {
 export const useLocaleData = function useLocaleData() {
   let tmp = withEqualityFn((localeData) => localeData.localeData);
   if (tmp == null) {
-    tmp = _modDef2113;
+    tmp = _modDef2114;
   }
   return tmp;
 };

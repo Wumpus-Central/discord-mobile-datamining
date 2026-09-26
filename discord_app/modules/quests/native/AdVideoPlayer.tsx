@@ -1,18 +1,18 @@
-// === Module 14539: AdVideoPlayer ===
+// === Module 14564: AdVideoPlayer ===
 
-// Module 14539 (AdVideoPlayer)
+// Module 14564 (AdVideoPlayer)
 import nativeDefault from "native" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import timing from "timing" /* 4830 */;
-import timingPresets from "timingPresets" /* 4833 */;
-import spring from "spring" /* 5273 */;
-import springPresets from "springPresets" /* 5277 */;
-import _modDef7748 from "module_7748" /* 7748 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 14526 */;
+import timing from "timing" /* 4837 */;
+import timingPresets from "timingPresets" /* 4840 */;
+import spring from "spring" /* 5280 */;
+import springPresets from "springPresets" /* 5284 */;
+import _modDef7756 from "module_7756" /* 7756 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 14551 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AppStateStore from "AppStateStore" /* 1979 */;
+import AppStateStore from "AppStateStore" /* 1980 */;
 import n from "module_672" /* 672 */;
 
 const require = globalThis.__r;
@@ -25,7 +25,7 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let rect = { left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16, top: nativeDefault.space.PX_16, bottom: nativeDefault.space.PX_16 };
-const _isNativeReflectConstruct = noop.memo(_modDef7748);
+const _isNativeReflectConstruct = noop.memo(_modDef7756);
 function hasVideoEnded(arg0, arg1) {
   return arg0 >= arg1 - 1;
 }
@@ -50,7 +50,7 @@ function canSeekForward(arg0, arg1, arg2, arg3) {
 canSeekForward.__closure = { hasVideoEnded };
 canSeekForward.__workletHash = 14098132092693;
 canSeekForward.__initData = { code: "function canSeekForward_AdVideoPlayerTsx2(currentTime,maxTimestamp,videoDuration,allowUnrestrictedSeeking){const{hasVideoEnded}=this.__closure;return!hasVideoEnded(currentTime,videoDuration)&&(allowUnrestrictedSeeking||currentTime<=maxTimestamp-1);}" };
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj = { container: null, loadingContainer: null, bufferingSpinner: null, bufferingSpinnerCentered: null, video: null, videoContainer: null, controls: null, controlsTopBottom: null, controlsMiddle: null, controlsTop: null, controlsBottom: null, progressContainer: null, progress: null, icon: null, iconDisabled: null, controlButton: null };
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.container = {};

@@ -1,12 +1,12 @@
-// === Module 8906: DiscordEnvironment ===
+// === Module 8917: DiscordEnvironment ===
 
-// Module 8906 (DiscordEnvironment)
-import UserSettings from "UserSettings" /* 2020 */;
-import AccessibilityStore from "AccessibilityStore" /* 4821 */;
+// Module 8917 (DiscordEnvironment)
+import UserSettings from "UserSettings" /* 2021 */;
+import AccessibilityStore from "AccessibilityStore" /* 4825 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 
 require = fn;
-const UIDensityConstants = fn(8907);
+const UIDensityConstants = fn(8918);
 ({ RESPONSIVE_DENSITY_FALLBACK: closure_4, RESPONSIVE_DENSITY_MEDIA_QUERY: hasOwnProperty, resolveUIDensity: metroRequire } = UIDensityConstants);
 const frozen = Object.freeze({ baseTheme: "dark", customTheme: null, uiDensity: "default", messageDisplayCompact: false, fontScale: 100, reducedMotion: false, highContrast: false, forcedColors: false, underlineLinks: false });
 let closure_8 = ["custom-theme-background", "custom-client-theme"];

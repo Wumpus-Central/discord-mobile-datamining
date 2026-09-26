@@ -1,6 +1,6 @@
-// === Module 15226: ? ===
+// === Module 15254: ? ===
 
-// Module 15226
+// Module 15254
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/click-next.mp3.js");

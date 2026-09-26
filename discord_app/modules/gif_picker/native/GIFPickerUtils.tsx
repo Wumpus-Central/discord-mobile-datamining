@@ -1,9 +1,9 @@
-// === Module 9819: gif_picker/GIFPickerUtils ===
+// === Module 9830: gif_picker/GIFPickerUtils ===
 
-// Module 9819 (gif_picker/GIFPickerUtils)
+// Module 9830 (gif_picker/GIFPickerUtils)
 import util from "util" /* 1115 */;
 import URLUtilsDefault from "URLUtils" /* 1366 */;
-import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 9388 */;
+import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 9399 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -60,9 +60,9 @@ let result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerUtil
 
 export const GIF_HEADER_HEIGHT = 56;
 export const useFavoriteGIFsMobile = function useFavoriteGIFsMobile() {
-  sortedFavoriteGIFs = sortedFavoriteGIFs(9820).useSortedFavoriteGIFs(transformFavoriteGifUrl);
+  sortedFavoriteGIFs = sortedFavoriteGIFs(9831).useSortedFavoriteGIFs(transformFavoriteGifUrl);
   const items = [sortedFavoriteGIFs];
-  let obj = sortedFavoriteGIFs(9820);
+  let obj = sortedFavoriteGIFs(9831);
   return {
     favorites: sortedFavoriteGIFs,
     favoritesCategory: noop.useMemo(() => {

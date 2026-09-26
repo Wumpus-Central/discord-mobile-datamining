@@ -1,19 +1,19 @@
-// === Module 13282: PrivateChannelRecipientsInviteStore ===
+// === Module 13299: PrivateChannelRecipientsInviteStore ===
 
-// Module 13282 (PrivateChannelRecipientsInviteStore)
+// Module 13299 (PrivateChannelRecipientsInviteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import StringUtils from "StringUtils" /* 2010 */;
-import UserUtilsDefault from "UserUtils" /* 4675 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 9283 */;
-import ExperimentStore from "ExperimentStore" /* 4746 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7067 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import ConsentStore from "ConsentStore" /* 6007 */;
-import FrecencyStore from "FrecencyStore" /* 5816 */;
-import GuildMemberStore from "GuildMemberStore" /* 2107 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import RelationshipStore from "RelationshipStore" /* 4476 */;
+import StringUtils from "StringUtils" /* 2011 */;
+import UserUtilsDefault from "UserUtils" /* 4678 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 9294 */;
+import ExperimentStore from "ExperimentStore" /* 4750 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7072 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
+import ConsentStore from "ConsentStore" /* 6012 */;
+import FrecencyStore from "FrecencyStore" /* 5821 */;
+import GuildMemberStore from "GuildMemberStore" /* 2108 */;
+import GuildStore from "GuildStore" /* 2067 */;
+import RelationshipStore from "RelationshipStore" /* 4479 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -219,7 +219,7 @@ function handleActionSheetDismiss(key) {
 function performQueryOnAffinityChange() {
   return false;
 }
-const PrivateChannelRecord = fn(2048).PrivateChannelRecord;
+const PrivateChannelRecord = fn(2049).PrivateChannelRecord;
 const Constants = fn(1074);
 ({ NEW_GROUP_DM_POPOUT_ID: closure_14, Consents } = Constants);
 let c15 = false;

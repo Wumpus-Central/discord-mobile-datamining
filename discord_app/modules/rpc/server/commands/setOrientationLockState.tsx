@@ -1,13 +1,13 @@
-// === Module 14031: setOrientationLockState ===
+// === Module 14056: setOrientationLockState ===
 
-// Module 14031 (setOrientationLockState)
+// Module 14056 (setOrientationLockState)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import RPCErrorDefault from "RPCError" /* 8762 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8765 */;
-import FramesStore from "FramesStore" /* 8491 */;
+import RPCErrorDefault from "RPCError" /* 8770 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8773 */;
+import FramesStore from "FramesStore" /* 8499 */;
 
-const TransportTypes = fn(4735).TransportTypes;
-const OrientationLockState = fn(2004).OrientationLockState;
+const TransportTypes = fn(4739).TransportTypes;
+const OrientationLockState = fn(2005).OrientationLockState;
 const Constants = fn(1085);
 const RPCErrors = Constants.RPCErrors;
 const size = fn(2);

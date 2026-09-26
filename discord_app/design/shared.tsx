@@ -1,14 +1,17 @@
-// === Module 4682: shared ===
+// === Module 4685: shared ===
 
-// Module 4682 (shared)
-import themes from "themes" /* 4535 */;
-import Colors from "Colors" /* 4647 */;
-import design_shared from "design/shared" /* 4683 */;
+// Module 4685 (shared)
+import themes from "themes" /* 4538 */;
+import Colors from "Colors" /* 4650 */;
+import design_shared from "design/shared" /* 4686 */;
+import StickerTypes from "StickerTypes" /* 4687 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/shared.tsx");
 
 export const AccessibilityAnnouncer = design_shared.AccessibilityAnnouncer;
+export const StickerFormat = StickerTypes.StickerFormat;
+export const MetaStickerType = StickerTypes.MetaStickerType;
 export const AccessibilityPreferencesContext = design_shared.AccessibilityPreferencesContext;
 export const LOW_SATURATION_THRESHOLD = design_shared.LOW_SATURATION_THRESHOLD;
 export const ContrastPreference = design_shared.ContrastPreference;

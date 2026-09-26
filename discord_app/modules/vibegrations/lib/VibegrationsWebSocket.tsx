@@ -1,6 +1,6 @@
-// === Module 12612: VibegrationsWebSocket ===
+// === Module 12629: VibegrationsWebSocket ===
 
-// Module 12612 (VibegrationsWebSocket)
+// Module 12629 (VibegrationsWebSocket)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsWebSocket.tsx");
@@ -42,14 +42,14 @@ prototype["open"] = function open(ticket) {
     }
   });
 };
-prototype["sendUserMessage"] = function sendUserMessage(content, nonce, attachment_ids, project_name) {
+prototype["sendUserMessage"] = function sendUserMessage(content, nonce, attachment_ids, project_name, template_id) {
   const self = this;
   if (null != this.socket) {
     const _WebSocket = WebSocket;
     if (self.socket.readyState === WebSocket.OPEN) {
       const socket = self.socket;
       const _JSON = JSON;
-      const obj = { type: "user_message", content, nonce, attachment_ids, project_name };
+      const obj = { type: "user_message", content, nonce, attachment_ids, project_name, template_id };
       socket.send(JSON.stringify(obj));
     }
   }

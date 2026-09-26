@@ -1,17 +1,17 @@
-// === Module 11736: ChatFloatingNavButton ===
+// === Module 11750: ChatFloatingNavButton ===
 
-// Module 11736 (ChatFloatingNavButton)
+// Module 11750 (ChatFloatingNavButton)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
-import spring from "spring" /* 5273 */;
-import springPresets from "springPresets" /* 5277 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
+import spring from "spring" /* 5280 */;
+import springPresets from "springPresets" /* 5284 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, Pressable: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { pill: null, icon: null };
 let size = { height: nativeDefault.modules.mobile.JUMP_TO_PRESENT_BUTTON_SIZE, width: nativeDefault.modules.mobile.JUMP_TO_PRESENT_BUTTON_SIZE, borderRadius: nativeDefault.modules.button.BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: nativeDefault.colors.BORDER_MUTED, alignItems: "center", justifyContent: "center", overflow: "hidden" };
 obj2.pill = size;

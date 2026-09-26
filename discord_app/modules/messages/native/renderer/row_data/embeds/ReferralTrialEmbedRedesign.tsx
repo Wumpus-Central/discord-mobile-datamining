@@ -1,24 +1,24 @@
-// === Module 7491: ReferralTrialEmbedRedesign ===
+// === Module 7497: ReferralTrialEmbedRedesign ===
 
-// Module 7491 (ReferralTrialEmbedRedesign)
+// Module 7497 (ReferralTrialEmbedRedesign)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1609 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2110 */;
-import PremiumUtils from "PremiumUtils" /* 4485 */;
-import UserUtilsDefault from "UserUtils" /* 4675 */;
-import createStyles from "createStyles" /* 4829 */;
-import ProductIds from "ProductIds" /* 6656 */;
-import useTrialOffer from "useTrialOffer" /* 6864 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7383 */;
-import _modDef7489 from "module_7489" /* 7489 */;
-import _modDef7492 from "module_7492" /* 7492 */;
-import ReferralProgramUtils from "ReferralProgramUtils" /* 7493 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1610 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2111 */;
+import PremiumUtils from "PremiumUtils" /* 4488 */;
+import UserUtilsDefault from "UserUtils" /* 4678 */;
+import createStyles from "createStyles" /* 4836 */;
+import ProductIds from "ProductIds" /* 6661 */;
+import useTrialOffer from "useTrialOffer" /* 6869 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7388 */;
+import _modDef7495 from "module_7495" /* 7495 */;
+import _modDef7498 from "module_7498" /* 7498 */;
+import ReferralProgramUtils from "ReferralProgramUtils" /* 7499 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
 import UserStore from "UserStore" /* 1372 */;
-import SubscriptionStore from "SubscriptionStore" /* 4491 */;
-import UserOfferStore from "UserOfferStore" /* 6865 */;
-import IAPStore from "IAPStore" /* 6653 */;
+import SubscriptionStore from "SubscriptionStore" /* 4494 */;
+import UserOfferStore from "UserOfferStore" /* 6870 */;
+import IAPStore from "IAPStore" /* 6658 */;
 
 const PremiumUtilsDefault = PremiumUtils;
 
@@ -64,7 +64,7 @@ export const createReferralTrialEmbedRedesign = function createReferralTrialEmbe
             obj4.helpdeskArticle = obj5;
             const obj6 = { titleText: formatToPlainStringResult, titleColor, headerImageUrl: null, headerText: null, headerColor: null, backgroundColor: null, borderColor: null, learnMoreLink: null };
             const tmp41Result9 = HelpdeskUtilsDefault;
-            obj6.headerImageUrl = _modDef7492;
+            obj6.headerImageUrl = _modDef7498;
             const intl12 = util.intl;
             obj6.headerText = intl12.string(util.t.HtTvXA);
             obj6.headerColor = headerTextColor;
@@ -174,7 +174,7 @@ export const createReferralTrialEmbedRedesign = function createReferralTrialEmbe
                     const intl7 = util.intl;
                     obj13.acceptLabelText = intl7.string(util.t.bXTClc);
                     obj13.acceptLabelColor = acceptLabelColor;
-                    obj13.acceptLabelIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7489);
+                    obj13.acceptLabelIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7495);
                     tmp31 = obj13;
                     const tmp39Result7 = renderer_EmbedUtils;
                   }
@@ -223,7 +223,7 @@ export const createReferralTrialEmbedRedesign = function createReferralTrialEmbe
             const formatToPartsResult = intl11.formatToParts(util.t.yisueA, obj4);
           }
         }
-        const obj19 = { titleText: "", titleColor, headerImageUrl: _modDef7492, headerText: "", headerColor: headerTextColor, backgroundColor, borderColor: backgroundColor, bodyText: null, bodyTextColor: null, canBeAccepted: false };
+        const obj19 = { titleText: "", titleColor, headerImageUrl: _modDef7498, headerText: "", headerColor: headerTextColor, backgroundColor, borderColor: backgroundColor, bodyText: null, bodyTextColor: null, canBeAccepted: false };
         const intl9 = util.intl;
         obj19.bodyText = intl9.string(util.t.eEz1N5);
         obj19.bodyTextColor = bodyTextColor;

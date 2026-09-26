@@ -1,8 +1,8 @@
-// === Module 8183: OpenCriticRatingCircle ===
+// === Module 8191: OpenCriticRatingCircle ===
 
-// Module 8183 (OpenCriticRatingCircle)
+// Module 8191 (OpenCriticRatingCircle)
 import jsxProd from "jsxProd" /* 21 */;
-import inlineStyles from "inlineStyles" /* 7901 */;
+import inlineStyles from "inlineStyles" /* 7909 */;
 import size from "module_2" /* 2 */;
 
 const inlineStylesDefault = inlineStyles;

@@ -1,14 +1,14 @@
-// === Module 10942: useUnreadSettingNotice ===
+// === Module 10955: useUnreadSettingNotice ===
 
-// Module 10942 (useUnreadSettingNotice)
-import UnreadSettingNoticeStore2Default from "UnreadSettingNoticeStore2" /* 10943 */;
+// Module 10955 (useUnreadSettingNotice)
+import UnreadSettingNoticeStore2Default from "UnreadSettingNoticeStore2" /* 10956 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let closure_5 = fn(2048).CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING;
+let closure_5 = fn(2049).CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/settings_unread_notice/utils/useUnreadSettingNotice.tsx");
 

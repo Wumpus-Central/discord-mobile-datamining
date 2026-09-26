@@ -1,12 +1,12 @@
-// === Module 11354: AppealIngestionActivitySummary ===
+// === Module 11368: AppealIngestionActivitySummary ===
 
-// Module 11354 (AppealIngestionActivitySummary)
-import ClassificationEvidenceDefault from "ClassificationEvidence" /* 11355 */;
+// Module 11368 (AppealIngestionActivitySummary)
+import ClassificationEvidenceDefault from "ClassificationEvidence" /* 11369 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_4 = createStyles.createStyles({ activity: { marginBottom: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionActivitySummary.tsx");

@@ -1,6 +1,6 @@
-// === Module 15978: ? ===
+// === Module 16006: ? ===
 
-// Module 15978
+// Module 16006
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PrivateProfileAbstractUI-2x.png.js");

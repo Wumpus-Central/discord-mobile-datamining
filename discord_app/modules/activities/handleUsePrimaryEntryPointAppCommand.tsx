@@ -1,9 +1,9 @@
-// === Module 10728: handleUsePrimaryEntryPointAppCommand ===
+// === Module 10741: handleUsePrimaryEntryPointAppCommand ===
 
-// Module 10728 (handleUsePrimaryEntryPointAppCommand)
-import getCachedOrFetchActivityApplicationForLaunchDefault from "getCachedOrFetchActivityApplicationForLaunch" /* 8785 */;
+// Module 10741 (handleUsePrimaryEntryPointAppCommand)
+import getCachedOrFetchActivityApplicationForLaunchDefault from "getCachedOrFetchActivityApplicationForLaunch" /* 8793 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = fn;

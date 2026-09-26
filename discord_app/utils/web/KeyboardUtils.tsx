@@ -1,10 +1,10 @@
-// === Module 13591: utils/KeyboardUtils ===
+// === Module 13609: utils/KeyboardUtils ===
 
-// Module 13591 (utils/KeyboardUtils)
+// Module 13609 (utils/KeyboardUtils)
 import PlatformUtils2 from "PlatformUtils" /* 1364 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import keyCodeDefault from "keyCode" /* 13592 */;
-import KeyboardLayoutMapUtils from "KeyboardLayoutMapUtils" /* 13593 */;
+import keyCodeDefault from "keyCode" /* 13610 */;
+import KeyboardLayoutMapUtils from "KeyboardLayoutMapUtils" /* 13611 */;
 import _slicedToArray from "module_32" /* 32 */;
 import apply_mod from "module_12" /* 12 */;
 
@@ -190,7 +190,7 @@ function toPrettyKey(str) {
   }
   return str;
 }
-const KeyboardConstants = fn(6919);
+const KeyboardConstants = fn(6924);
 ({ KeyboardDeviceTypes: hasOwnProperty, LinuxKeyToCode } = KeyboardConstants);
 const MacosKeyToCode = KeyboardConstants.MacosKeyToCode;
 const WindowsKeyToCode = KeyboardConstants.WindowsKeyToCode;
@@ -484,7 +484,7 @@ export const toCombo = function toCombo(shortcut) {
     }
     const str2 = shortcut.replace(/numpad plus/i, "");
     const str4 = shortcut.replace(/numpad plus/i, "").replace(/NUMPAD \+/i, "numpad plus");
-    const parts = shortcut.replace(/numpad plus/i, "").replace(/NUMPAD \+/i, "numpad plus").replace(/mod/i, KEYBOARD_KEY(13594).modKey).split("+");
+    const parts = shortcut.replace(/numpad plus/i, "").replace(/NUMPAD \+/i, "numpad plus").replace(/mod/i, KEYBOARD_KEY(13612).modKey).split("+");
     const mapped = parts.map((item) => item.trim().replace("plus", "+"));
     return mapped.reduce((arr, item) => {
       const tmp3 = keyToCode((function toUglyKey(item) {

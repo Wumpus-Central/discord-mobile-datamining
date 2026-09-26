@@ -1,9 +1,9 @@
-// === Module 12592: NoteStore ===
+// === Module 12609: NoteStore ===
 
-// Module 12592 (NoteStore)
-import LibdiscoreStore2 from "LibdiscoreStore" /* 2067 */;
-import libdiscoreExperiments from "libdiscoreExperiments" /* 2070 */;
-import PlainRecord from "PlainRecord" /* 2059 */;
+// Module 12609 (NoteStore)
+import LibdiscoreStore2 from "LibdiscoreStore" /* 2068 */;
+import libdiscoreExperiments from "libdiscoreExperiments" /* 2071 */;
+import PlainRecord from "PlainRecord" /* 2060 */;
 import size from "module_2" /* 2 */;
 
 ({ TypeTag, constructInPlace: closure_0 } = PlainRecord);

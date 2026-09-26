@@ -1,22 +1,22 @@
-// === Module 16808: ActivityPanelPIPView ===
+// === Module 16837: ActivityPanelPIPView ===
 
-// Module 16808 (ActivityPanelPIPView)
+// Module 16837 (ActivityPanelPIPView)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import native2 from "native" /* 4537 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
-import timing from "timing" /* 4830 */;
-import spring from "spring" /* 5273 */;
-import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 8904 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10883 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 16806 */;
-import MorphablePanelUtils from "MorphablePanelUtils" /* 16810 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
+import native2 from "native" /* 4540 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
+import timing from "timing" /* 4837 */;
+import spring from "spring" /* 5280 */;
+import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 8915 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10896 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 16835 */;
+import MorphablePanelUtils from "MorphablePanelUtils" /* 16839 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4821 */;
-import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 8928 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
+import AccessibilityStore from "AccessibilityStore" /* 4825 */;
+import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 8939 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
 
 require = fn;
 class BaseActivityPanelPIPView {
@@ -254,18 +254,18 @@ class BaseActivityPanelPIPView {
   }
 }
 const View = fn(17).View;
-const ActivityLayoutMode = fn(2004).ActivityLayoutMode;
-const ActivityPanelConstants = fn(8494);
+const ActivityLayoutMode = fn(2005).ActivityLayoutMode;
+const ActivityPanelConstants = fn(8502);
 let ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
 ({ ActivityPanelModes: closure_11, ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_12, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: map1, LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: closure_14 } = ActivityPanelConstants);
-let closure_15 = fn(16809).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+let closure_15 = fn(16838).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 const ThemeTypes = fn(1074).ThemeTypes;
-const PIP_WINDOW_OFFSET = fn(11742).PIP_WINDOW_OFFSET;
+const PIP_WINDOW_OFFSET = fn(11756).PIP_WINDOW_OFFSET;
 const jsx = fn(21).jsx;
 const REDUCED_MOTION_TIMING = { duration: 300 };
 const native = fn(1177);
 const boxShadowStyle = native.generateBoxShadowStyle(fn(1177).EXPERIMENTAL_HIGH_ELEVATION_SHADOW_PARAMS);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj = { wrapper: null, mask: null };
 let merged = Object.assign(ACTIVITY_PIP_SIZE);
 const merged1 = Object.assign(boxShadowStyle);
@@ -312,7 +312,7 @@ export default noop.memo((transitionState) => {
   const tmpResult = transitionState(504);
   const items2 = [memo];
   stateFromStores1 = transitionState(504).useStateFromStores(items2, () => ChannelStore.getChannel(c2));
-  const tmp8 = transitionCleanUp(1612)();
+  const tmp8 = transitionCleanUp(1613)();
   closure_129_0 = tmp8;
   const items3 = [tmp8.right];
   memo = activity.useMemo(() => {

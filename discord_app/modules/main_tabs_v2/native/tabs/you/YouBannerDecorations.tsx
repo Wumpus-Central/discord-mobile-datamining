@@ -1,27 +1,27 @@
-// === Module 16571: YouBannerDecorations ===
+// === Module 16600: YouBannerDecorations ===
 
-// Module 16571 (YouBannerDecorations)
+// Module 16600 (YouBannerDecorations)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1365 */;
-import dismissible_content from "dismissible_content" /* 2028 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4651 */;
-import QuestTypes from "QuestTypes" /* 5754 */;
-import useTrialOffer from "useTrialOffer" /* 6864 */;
-import QuestUtils from "QuestUtils" /* 10665 */;
-import PromotionsHooks from "PromotionsHooks" /* 13080 */;
-import you_tracking_Tracking from "you/tracking/Tracking" /* 16574 */;
+import dismissible_content from "dismissible_content" /* 2029 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4654 */;
+import QuestTypes from "QuestTypes" /* 5759 */;
+import useTrialOffer from "useTrialOffer" /* 6869 */;
+import QuestUtils from "QuestUtils" /* 10678 */;
+import PromotionsHooks from "PromotionsHooks" /* 13097 */;
+import you_tracking_Tracking from "you/tracking/Tracking" /* 16603 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const ContentDismissActionType = fn(2041).ContentDismissActionType;
+const ContentDismissActionType = fn(2042).ContentDismissActionType;
 let closure_9 = fn(1374).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_13 = createStyles.createStyles((arg0, arg1, color, borderColor) => {
   const obj = { containerFloatingWrap: null, containerFloatingGradient: null, containerFloating: null, buttonsFloating: null, loading: null };
   const obj2 = {};

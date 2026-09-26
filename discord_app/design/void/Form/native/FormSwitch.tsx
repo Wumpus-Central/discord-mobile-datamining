@@ -1,14 +1,14 @@
-// === Module 8057: Form/FormSwitch ===
+// === Module 8065: Form/FormSwitch ===
 
-// Module 8057 (Form/FormSwitch)
+// Module 8065 (Form/FormSwitch)
 import nativeDefault from "native" /* 576 */;
-import shared from "shared" /* 4682 */;
+import shared from "shared" /* 4685 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Switch = fn(17).Switch;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { switch: { marginVertical: -5 }, track: { color: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);

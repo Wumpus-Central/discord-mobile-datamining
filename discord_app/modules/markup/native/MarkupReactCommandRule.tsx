@@ -1,14 +1,14 @@
-// === Module 10769: MarkupReactCommandRule ===
+// === Module 10782: MarkupReactCommandRule ===
 
-// Module 10769 (MarkupReactCommandRule)
-import KeyboardTypes from "KeyboardTypes" /* 1610 */;
-import ToastUtils from "ToastUtils" /* 4524 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
-import ClipboardUtils from "ClipboardUtils" /* 6605 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 6938 */;
-import navigateToLastChannelDefault from "navigateToLastChannel" /* 10774 */;
+// Module 10782 (MarkupReactCommandRule)
+import KeyboardTypes from "KeyboardTypes" /* 1611 */;
+import ToastUtils from "ToastUtils" /* 4527 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
+import ClipboardUtils from "ClipboardUtils" /* 6610 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 6943 */;
+import navigateToLastChannelDefault from "navigateToLastChannel" /* 10787 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
 
 require = fn;
 function handleTapCommandMention(channelId) {
@@ -114,7 +114,7 @@ function handleLongPressCommandMention(arg0, arg1) {
     const obj2 = { label: null, IconComponent: null, onPress: null };
     const intl2 = tmp(1115).intl;
     obj2.label = intl2.string(tmp(1115).t.oJ1Muw);
-    obj2.IconComponent = tmp(10081).IdIcon;
+    obj2.IconComponent = tmp(10092).IdIcon;
     obj2.onPress = function onPress() {
       ToastUtils.presentIdCopied();
       ClipboardUtils.copy(closure_1);
@@ -124,10 +124,10 @@ function handleLongPressCommandMention(arg0, arg1) {
   const result = require("showSimpleActionSheet").showSimpleActionSheet({ key: "LongPressCommandMention", options: items, hasIcons: true });
   const tmpResult = require("showSimpleActionSheet");
 }
-const AppLauncherNativeConstants = fn(1483);
+const AppLauncherNativeConstants = fn(1484);
 ({ AppLauncherRouteName: hasOwnProperty, useAppLauncherNavigation: metroRequire } = AppLauncherNativeConstants);
-const SUB_COMMAND_KEY_SEPARATOR = fn(5298).SUB_COMMAND_KEY_SEPARATOR;
-const COMMAND_SENTINEL = fn(5299).COMMAND_SENTINEL;
+const SUB_COMMAND_KEY_SEPARATOR = fn(5305).SUB_COMMAND_KEY_SEPARATOR;
+const COMMAND_SENTINEL = fn(5306).COMMAND_SENTINEL;
 const jsxs = fn(21).jsxs;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/markup/native/MarkupReactCommandRule.tsx");
@@ -135,7 +135,7 @@ let result = size.fileFinishedImporting("modules/markup/native/MarkupReactComman
 export default function MarkupReactCommandRule(node) {
   node = node.node;
   ({ output, state, style } = node);
-  closure_1 = null != noop.useContext(node(10772).AppLauncherContext);
+  closure_1 = null != noop.useContext(node(10785).AppLauncherContext);
   dependencyMap = closure_6();
   let obj = {
     style,
@@ -184,9 +184,9 @@ export default function MarkupReactCommandRule(node) {
     },
     children: null
   };
-  const items = ["/", node(7534).smartOutput(node, output, state)];
+  const items = ["/", node(7542).smartOutput(node, output, state)];
   obj.children = items;
-  return jsxs(node(4825).Text, {
+  return jsxs(node(4832).Text, {
     style,
     variant: "text-md/bold",
     onPress() {

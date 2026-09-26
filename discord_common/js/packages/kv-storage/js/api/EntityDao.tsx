@@ -1,8 +1,8 @@
-// === Module 2084: EntityDao ===
+// === Module 2085: EntityDao ===
 
-// Module 2084 (EntityDao)
-import Table from "Table" /* 2078 */;
-import TableId from "TableId" /* 2080 */;
+// Module 2085 (EntityDao)
+import Table from "Table" /* 2079 */;
+import TableId from "TableId" /* 2081 */;
 import size from "module_2" /* 2 */;
 
 let EntityDao;

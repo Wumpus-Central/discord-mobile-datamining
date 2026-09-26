@@ -1,7 +1,7 @@
-// === Module 13988: NotificationSettingsExperiments ===
+// === Module 14013: NotificationSettingsExperiments ===
 
-// Module 13988 (NotificationSettingsExperiments)
-import ApexExperiment from "ApexExperiment" /* 1434 */;
+// Module 14013 (NotificationSettingsExperiments)
+import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 
 const obj = { "2026-05-noisier-notif-settings-defaults": null };

@@ -1,15 +1,15 @@
-// === Module 11972: GuildDismissibleContentUtils ===
+// === Module 11990: GuildDismissibleContentUtils ===
 
-// Module 11972 (GuildDismissibleContentUtils)
+// Module 11990 (GuildDismissibleContentUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import Uint8ArrayUtils from "Uint8ArrayUtils" /* 2027 */;
+import Uint8ArrayUtils from "Uint8ArrayUtils" /* 2028 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const ContentDismissActionType = fn(2041).ContentDismissActionType;
+const ContentDismissActionType = fn(2042).ContentDismissActionType;
 const UserSettingsDelay = fn(1084).UserSettingsDelay;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_dismissible_content/GuildDismissibleContentUtils.tsx");
@@ -53,7 +53,7 @@ export const markContentAsDismissed = function markContentAsDismissed(GAME_SERVE
   }, UserSettingsDelay.INFREQUENT_USER_ACTION);
   if (arg2) {
     let UNKNOWN = AUTO_DISMISS;
-    const obj3 = { type: tmp(2028).DismissibleGuildContent[GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK], guild_id: guildId, action: null };
+    const obj3 = { type: tmp(2029).DismissibleGuildContent[GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK], guild_id: guildId, action: null };
     if (AUTO_DISMISS == null) {
       UNKNOWN = ContentDismissActionType.UNKNOWN;
     }

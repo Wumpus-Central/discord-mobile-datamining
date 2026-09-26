@@ -1,11 +1,11 @@
-// === Module 6593: ConnectionCardView ===
+// === Module 6598: ConnectionCardView ===
 
-// Module 6593 (ConnectionCardView)
+// Module 6598 (ConnectionCardView)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4788 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import components_Button_Button from "components/Button/Button" /* 5274 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4792 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import components_Button_Button from "components/Button/Button" /* 5281 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, ActivityIndicator: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { card: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.md, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, padding: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, leftContent: null, icon: null, textContent: null, connectedStatus: null };
 const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.md, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, padding: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
 obj2.leftContent = { flexDirection: "row", alignItems: "center", flex: 1, marginRight: nativeDefault.space.PX_12 };

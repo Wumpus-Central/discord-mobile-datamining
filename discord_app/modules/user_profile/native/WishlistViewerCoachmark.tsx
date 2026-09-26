@@ -1,23 +1,23 @@
-// === Module 12684: WishlistViewerCoachmark ===
+// === Module 12701: WishlistViewerCoachmark ===
 
-// Module 12684 (WishlistViewerCoachmark)
+// Module 12701 (WishlistViewerCoachmark)
 import util from "util" /* 1115 */;
-import _modDef12685 from "module_12685" /* 12685 */;
+import _modDef12702 from "module_12702" /* 12702 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function CoachmarkImage() {
   const tmp = closure_8();
   const obj = { style: tmp.imageContainer, children: null };
-  const obj2 = { source: { uri: _modDef12685 }, style: tmp.image };
-  obj.children = <hasOwnProperty source={{ uri: _modDef12685 }} style={tmp.image} />;
+  const obj2 = { source: { uri: _modDef12702 }, style: tmp.image };
+  obj.children = <hasOwnProperty source={{ uri: _modDef12702 }} style={tmp.image} />;
   return <React4 style={tmp.imageContainer}>{null}</React4>;
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const ContentDismissActionType = fn(2041).ContentDismissActionType;
+const ContentDismissActionType = fn(2042).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_8 = createStyles.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" }, image: { width: 160, height: 106 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/WishlistViewerCoachmark.tsx");

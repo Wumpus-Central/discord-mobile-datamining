@@ -1,12 +1,12 @@
-// === Module 5848: GuildJoinRequestActionCreators ===
+// === Module 5853: GuildJoinRequestActionCreators ===
 
-// Module 5848 (GuildJoinRequestActionCreators)
+// Module 5853 (GuildJoinRequestActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4655 */;
-import GuildJoinRequestAnalyticUtils from "GuildJoinRequestAnalyticUtils" /* 5850 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4658 */;
+import GuildJoinRequestAnalyticUtils from "GuildJoinRequestAnalyticUtils" /* 5855 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5849 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5854 */;
 
 require = fn;
 let closure_9 = async function _fetchGuildJoinRequests(arg0) {
@@ -331,8 +331,8 @@ let closure_13 = async function _updateGuildJoinRequest() {
       obj2.title = intl.string(closure_1_0(1115).t.DxJj4e);
       const intl2 = closure_1_0(1115).intl;
       obj2.body = intl2.string(closure_1_0(1115).t.rSAOk9);
-      closure_1_1(5196).show(obj2);
-      const obj = closure_1_1(5196);
+      closure_1_1(5203).show(obj2);
+      const obj = closure_1_1(5203);
     }
     return Promise.reject(error);
   });
@@ -567,8 +567,8 @@ let closure_17 = async function _createOrEnterJoinRequestInterview(arg0) {
     }
   }
 };
-let closure_4 = fn(2048).createChannelRecordFromServer;
-const joinRequestFromServer = fn(4653).joinRequestFromServer;
+let closure_4 = fn(2049).createChannelRecordFromServer;
+const joinRequestFromServer = fn(4656).joinRequestFromServer;
 const Constants = fn(1074);
 ({ AbortCodes: closure_7, Endpoints: closure_8 } = Constants);
 const size = fn(2);

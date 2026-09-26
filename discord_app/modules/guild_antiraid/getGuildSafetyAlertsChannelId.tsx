@@ -1,6 +1,6 @@
-// === Module 9550: getGuildSafetyAlertsChannelId ===
+// === Module 9561: getGuildSafetyAlertsChannelId ===
 
-// Module 9550 (getGuildSafetyAlertsChannelId)
+// Module 9561 (getGuildSafetyAlertsChannelId)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_antiraid/getGuildSafetyAlertsChannelId.tsx");

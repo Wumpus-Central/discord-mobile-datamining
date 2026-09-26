@@ -1,14 +1,14 @@
-// === Module 16240: VibegrationsModelSettingsSheet ===
+// === Module 16268: VibegrationsModelSettingsSheet ===
 
-// Module 16240 (VibegrationsModelSettingsSheet)
+// Module 16268 (VibegrationsModelSettingsSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import _modDef3714 from "module_3714" /* 3714 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6565 */;
-import ActionSheet from "ActionSheet" /* 6613 */;
-import VibegrationsEffortPickerDefault from "VibegrationsEffortPicker" /* 16220 */;
+import _modDef3715 from "module_3715" /* 3715 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6570 */;
+import ActionSheet from "ActionSheet" /* 6618 */;
+import VibegrationsEffortPickerDefault from "VibegrationsEffortPicker" /* 16248 */;
 import noop from "module_19" /* 19 */;
-import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 12607 */;
+import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 12624 */;
 
 require = fn;
 class VibegrationsModelSettingsContent {
@@ -80,7 +80,7 @@ class VibegrationsModelSettingsContent {
   }
 }
 const View = fn(17).View;
-const sendModelSettings = fn(12607).sendModelSettings;
+const sendModelSettings = fn(12624).sendModelSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
@@ -90,7 +90,7 @@ export default function VibegrationsModelSettingsSheet(projectId) {
   const obj = { header: null, children: null };
   const obj2 = { title: null };
   const intl = util.intl;
-  obj2.title = intl.string(_modDef3714["2NWMqY"]);
+  obj2.title = intl.string(_modDef3715["2NWMqY"]);
   obj.header = React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
   obj.children = React5(View, { children: React5(VibegrationsModelSettingsContent, { projectId: projectId.projectId }) });
   return React5(ActionSheet.ActionSheet, obj);

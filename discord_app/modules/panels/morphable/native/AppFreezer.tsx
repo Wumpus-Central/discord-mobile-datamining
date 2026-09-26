@@ -1,10 +1,10 @@
-// === Module 16137: AppFreezer ===
+// === Module 16165: AppFreezer ===
 
-// Module 16137 (AppFreezer)
-import Suspender from "Suspender" /* 5227 */;
-import NativeViewDefault from "NativeView" /* 5896 */;
+// Module 16165 (AppFreezer)
+import Suspender from "Suspender" /* 5234 */;
+import NativeViewDefault from "NativeView" /* 5901 */;
 import noop from "module_19" /* 19 */;
-import AppFreezeStore from "AppFreezeStore" /* 7730 */;
+import AppFreezeStore from "AppFreezeStore" /* 7738 */;
 
 require = fn;
 const jsx = fn(21).jsx;

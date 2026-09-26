@@ -1,13 +1,13 @@
-// === Module 5465: IosImageTypesManager ===
+// === Module 5472: IosImageTypesManager ===
 
-// Module 5465 (IosImageTypesManager)
+// Module 5472 (IosImageTypesManager)
 import LoggerDefault from "Logger" /* 3 */;
+import NativeMediaManagerModuleDefault from "NativeMediaManagerModule" /* 1427 */;
 import _slicedToArray from "module_32" /* 32 */;
-import LifecycleManager from "LifecycleManager" /* 1982 */;
+import LifecycleManager from "LifecycleManager" /* 1983 */;
 
-const NativeModules = fn(17).NativeModules;
 const logger = new LoggerDefault("IosImageTypesManager");
-let closure_3 = null;
+let closure_4 = null;
 class IosImageTypesManager extends tmp3 {
 }
 const prototype = IosImageTypesManager.prototype;
@@ -18,11 +18,10 @@ prototype["_terminate"] = function _terminate() {
 
 };
 prototype["initializeSupportedImageTypes"] = function initializeSupportedImageTypes() {
-  if (null === closure_3) {
+  if (null === closure_4) {
     try {
-      const MediaManager = NativeModules.MediaManager;
-      const supportedImageTypes = MediaManager.getSupportedImageTypes();
-      closure_3 = supportedImageTypes;
+      const supportedImageTypes = NativeMediaManagerModuleDefault.getSupportedImageTypes();
+      closure_4 = supportedImageTypes;
       const _Set = Set;
       const set = new Set();
       const _Set2 = Set;
@@ -31,26 +30,26 @@ prototype["initializeSupportedImageTypes"] = function initializeSupportedImageTy
       const set2 = new Set();
       const _Object = Object;
       const entries = Object.entries(supportedImageTypes);
-      const tmp14 = entries[Symbol.iterator]();
-      while (tmp14 !== undefined) {
-        let tmp19 = _slicedToArray(tmp16, 2);
-        [r10040, tmp20] = tmp19;
-        let extension = tmp20.extension;
-        let tmp21 = extension;
-        let mimeType = tmp20.mimeType;
-        let tmp22 = null != extension;
-        if (tmp22) {
-          tmp22 = "" !== tmp21;
+      const tmp15 = entries[Symbol.iterator]();
+      while (tmp15 !== undefined) {
+        let tmp20 = _slicedToArray(tmp17, 2);
+        [r10042, tmp21] = tmp20;
+        let extension = tmp21.extension;
+        let tmp22 = extension;
+        let mimeType = tmp21.mimeType;
+        let tmp23 = null != extension;
+        if (tmp23) {
+          tmp23 = "" !== tmp22;
         }
-        if (tmp22) {
-          let addResult = obj2.add(tmp21);
+        if (tmp23) {
+          let addResult = obj3.add(tmp22);
         }
-        let tmp28 = null != mimeType;
-        if (tmp28) {
-          tmp28 = "" !== mimeType;
+        let tmp29 = null != mimeType;
+        if (tmp29) {
+          tmp29 = "" !== mimeType;
         }
-        if (tmp28) {
-          let addResult1 = obj3.add(mimeType);
+        if (tmp29) {
+          let addResult1 = obj4.add(mimeType);
         }
         continue;
       }
@@ -60,11 +59,11 @@ prototype["initializeSupportedImageTypes"] = function initializeSupportedImageTy
       set3 = set;
       set4 = set1;
       set5 = set2;
-      obj2 = set;
-      obj3 = set1;
-    } catch (tmp36) {
-      logger.warn("Failed to get iOS supported image types:", tmp36);
-      closure_3 = {};
+      obj3 = set;
+      obj4 = set1;
+    } catch (tmp37) {
+      logger.warn("Failed to get iOS supported image types:", tmp37);
+      closure_4 = {};
       const _Set4 = Set;
       set3 = new Set();
       const _Set5 = Set;
@@ -75,10 +74,10 @@ prototype["initializeSupportedImageTypes"] = function initializeSupportedImageTy
   }
 };
 prototype["getSupportedImageTypes"] = function getSupportedImageTypes() {
-  return closure_3;
+  return closure_4;
 };
 prototype["isImageTypeSupported"] = function isImageTypeSupported(arg0) {
-  let tmp2 = null !== closure_3;
+  let tmp2 = null !== closure_4;
   if (tmp2) {
     tmp2 = arg0 in tmp;
   }

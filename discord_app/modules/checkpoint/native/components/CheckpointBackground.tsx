@@ -1,13 +1,13 @@
-// === Module 15230: CheckpointBackground ===
+// === Module 15258: CheckpointBackground ===
 
-// Module 15230 (CheckpointBackground)
+// Module 15258 (CheckpointBackground)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1074 */;
-import CheckpointConstants from "CheckpointConstants" /* 5054 */;
-import LinearGradientDefault from "LinearGradient" /* 5286 */;
-import _modDef15231 from "module_15231" /* 15231 */;
+import CheckpointConstants from "CheckpointConstants" /* 5061 */;
+import LinearGradientDefault from "LinearGradient" /* 5293 */;
+import _modDef15259 from "module_15259" /* 15259 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4829 */;
+import createStyles from "createStyles" /* 4836 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -21,7 +21,7 @@ export default function CheckpointBackground() {
   const tmp = closure_8();
   const obj = { children: null };
   const items = [hasOwnProperty(LinearGradientDefault, { colors, start: VerticalGradient.START, end: VerticalGradient.END, style: tmp.background }), ];
-  const obj3 = { source: { uri: _modDef15231 }, style: tmp.background, resizeMode: "cover" };
+  const obj3 = { source: { uri: _modDef15259 }, style: tmp.background, resizeMode: "cover" };
   items[1] = hasOwnProperty(Image, obj3);
   obj.children = items;
   return React5(timestampProducer, obj);

@@ -1,9 +1,9 @@
-// === Module 6413: Tracking ===
+// === Module 6418: Tracking ===
 
-// Module 6413 (Tracking)
+// Module 6418 (Tracking)
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import SettingSearchSessionAnalyticsManagerDefault from "SettingSearchSessionAnalyticsManager" /* 6412 */;
+import SettingSearchSessionAnalyticsManagerDefault from "SettingSearchSessionAnalyticsManager" /* 6417 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

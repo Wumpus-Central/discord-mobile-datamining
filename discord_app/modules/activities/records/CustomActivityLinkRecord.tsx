@@ -1,9 +1,9 @@
-// === Module 12480: CustomActivityLinkRecord ===
+// === Module 12498: CustomActivityLinkRecord ===
 
-// Module 12480 (CustomActivityLinkRecord)
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 7588 */;
-import CustomActivityLinkUtils from "CustomActivityLinkUtils" /* 12478 */;
-import utils_CustomActivityLinkUtils from "utils/CustomActivityLinkUtils" /* 12481 */;
+// Module 12498 (CustomActivityLinkRecord)
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 7595 */;
+import CustomActivityLinkUtils from "CustomActivityLinkUtils" /* 12496 */;
+import utils_CustomActivityLinkUtils from "utils/CustomActivityLinkUtils" /* 12499 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/activities/records/CustomActivityLinkRecord.tsx");

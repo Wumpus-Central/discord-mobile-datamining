@@ -1,10 +1,10 @@
-// === Module 4476: RelationshipStore ===
+// === Module 4479: RelationshipStore ===
 
-// Module 4476 (RelationshipStore)
+// Module 4479 (RelationshipStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessageRecord from "MessageRecord" /* 4477 */;
+import MessageRecord from "MessageRecord" /* 4480 */;
 import UserStore from "UserStore" /* 1372 */;
 
 function markAllUserIdListsStale() {
@@ -94,7 +94,7 @@ let closure_14 = 0;
 const dependencyMap = {};
 let closure_16 = 0;
 let size = 0;
-let closure_19 = { friends: "Array", blocked: "channelId", ignored: "formatToPlainString", blockedOrIgnored: "raw" };
+let closure_19 = { friends: "Promise", blocked: "sa", ignored: "Date", blockedOrIgnored: "isArray" };
 const set3 = new Set();
 const map1 = new Map();
 const Store = initializeDefault.Store;

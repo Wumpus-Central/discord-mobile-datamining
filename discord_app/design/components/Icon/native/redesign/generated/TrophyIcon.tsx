@@ -1,9 +1,9 @@
-// === Module 8165: TrophyIcon ===
+// === Module 8173: TrophyIcon ===
 
-// Module 8165 (TrophyIcon)
+// Module 8173 (TrophyIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4527 */;
-import _mod7586 from "module_7586" /* 7586 */;
+import BaseIconImage from "BaseIconImage" /* 4530 */;
+import _mod7533 from "module_7533" /* 7533 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const TrophyIcon = function TrophyIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7586, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7533, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

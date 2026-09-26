@@ -1,28 +1,28 @@
-// === Module 9704: ForumComposerModal ===
+// === Module 9715: ForumComposerModal ===
 
-// Module 9704 (ForumComposerModal)
+// Module 9715 (ForumComposerModal)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import KeyboardUIStore from "KeyboardUIStore" /* 1482 */;
-import KeyboardTypes from "KeyboardTypes" /* 1610 */;
-import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1875 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5197 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 7191 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 8600 */;
-import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 9703 */;
+import KeyboardUIStore from "KeyboardUIStore" /* 1483 */;
+import KeyboardTypes from "KeyboardTypes" /* 1611 */;
+import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1876 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5204 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 7196 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 8608 */;
+import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 9714 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 8955 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import DraftStore from "DraftStore" /* 5193 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 5192 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 6690 */;
+import NativeMenuStore from "NativeMenuStore" /* 8966 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
+import DraftStore from "DraftStore" /* 5200 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 5199 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 6695 */;
 
 require = fn;
 const View = fn(17).View;
-const DraftType = fn(5193).DraftType;
+const DraftType = fn(5200).DraftType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);

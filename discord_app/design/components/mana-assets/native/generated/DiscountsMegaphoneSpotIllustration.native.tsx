@@ -1,9 +1,9 @@
-// === Module 12704: DiscountsMegaphoneSpotIllustration ===
+// === Module 12721: DiscountsMegaphoneSpotIllustration ===
 
-// Module 12704 (DiscountsMegaphoneSpotIllustration)
+// Module 12721 (DiscountsMegaphoneSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5894 */;
-import _modDef12705 from "module_12705" /* 12705 */;
+import FastImageDefault from "FastImage" /* 5899 */;
+import _modDef12722 from "module_12722" /* 12722 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const DiscountsMegaphoneSpotIllustration = function DiscountsMegaphoneSpo
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef12705 };
+  const obj2 = { uri: _modDef12722 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

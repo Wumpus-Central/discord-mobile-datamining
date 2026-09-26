@@ -1,13 +1,13 @@
-// === Module 16314: VibegrationsSelectedMention ===
+// === Module 16342: VibegrationsSelectedMention ===
 
-// Module 16314 (VibegrationsSelectedMention)
+// Module 16342 (VibegrationsSelectedMention)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4825 */;
+import Text_Text from "Text/Text" /* 4832 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 const obj2 = { chip: { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND, borderRadius: 3, paddingHorizontal: 2 } };
 let closure_3 = createStyles.createStyles(obj2);
 const size = fn(2);

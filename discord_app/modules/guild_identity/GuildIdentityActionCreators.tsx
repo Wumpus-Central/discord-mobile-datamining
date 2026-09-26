@@ -1,6 +1,6 @@
-// === Module 9218: GuildIdentityActionCreators ===
+// === Module 9229: GuildIdentityActionCreators ===
 
-// Module 9218 (GuildIdentityActionCreators)
+// Module 9229 (GuildIdentityActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -40,10 +40,11 @@ let closure_5 = async function _saveGuildIdentityChanges(arg0) {
           closure_131_6 = undefined;
           closure_131_7 = undefined;
           closure_131_8 = undefined;
-          closure_131_0 = closure_0;
-          ({ nick: closure_131_1, avatar: closure_131_2, avatarDescription: closure_131_3, avatarId: closure_131_4, avatarDecoration: closure_131_5, nameplate: closure_131_6, displayNameStyles: closure_131_7, avatarOriginalMd5: closure_131_8 } = closure_1);
           closure_131_9 = undefined;
+          closure_131_0 = closure_0;
+          ({ nick: closure_131_1, avatar: closure_131_2, avatarDescription: closure_131_3, avatarId: closure_131_4, avatarDecoration: closure_131_5, nameplate: closure_131_6, displayNameStyles: closure_131_7, vadColors: closure_131_8, avatarOriginalMd5: closure_131_9 } = closure_1);
           closure_131_10 = undefined;
+          closure_131_11 = undefined;
           let body2;
           let body;
           c7 = 1;
@@ -65,7 +66,7 @@ let closure_5 = async function _saveGuildIdentityChanges(arg0) {
         } else {
           const obj6 = { type: "USER_PROFILE_SETTINGS_SUBMIT", guildId: closure_131_0 };
           closure_132_1(closure_132_2[2]).dispatch(obj6);
-          const obj7 = { nick: closure_131_1, avatar: closure_131_2, avatar_description: closure_131_3, avatar_id: closure_131_4, avatar_decoration_sku_id: null, collectibles: null, display_name_font_id: null, display_name_effect_id: null, display_name_colors: null };
+          const obj7 = { nick: closure_131_1, avatar: closure_131_2, avatar_description: closure_131_3, avatar_id: closure_131_4, avatar_decoration_sku_id: null, collectibles: null, display_name_font_id: null, display_name_effect_id: null, display_name_colors: null, vad_colors: null };
           let tmp36;
           if (undefined !== closure_131_5) {
             let skuId;
@@ -117,13 +118,14 @@ let closure_5 = async function _saveGuildIdentityChanges(arg0) {
             tmp57 = colors;
           }
           obj7.display_name_colors = tmp57;
-          closure_131_9 = obj7;
+          obj7.vad_colors = closure_131_8;
+          closure_131_10 = obj7;
           c6 = 1;
           const HTTP = closure_132_0(closure_132_2[3]).HTTP;
-          const request = { url: closure_132_4.SET_GUILD_MEMBER(closure_131_0), body: closure_131_9, headers: null, oldFormErrors: true, rejectWithError: false };
+          const request = { url: closure_132_4.SET_GUILD_MEMBER(closure_131_0), body: closure_131_10, headers: null, oldFormErrors: true, rejectWithError: false };
           const obj20 = closure_132_1(closure_132_2[2]);
           const obj11 = {};
-          obj11[closure_132_0(closure_132_2[5]).SafetyScannedUploadSurface.USER_GUILD_PROFILE_AVATAR] = closure_131_8;
+          obj11[closure_132_0(closure_132_2[5]).SafetyScannedUploadSurface.USER_GUILD_PROFILE_AVATAR] = closure_131_9;
           request.headers = closure_132_1(closure_132_2[4]).buildHeadersForMd5(obj11);
           c7 = 3;
           c8 = 1;
@@ -132,8 +134,8 @@ let closure_5 = async function _saveGuildIdentityChanges(arg0) {
         }
       } else if (2 === tmp9) {
         c6 = 0;
-        closure_131_13 = closure_5;
-        body = closure_131_13.body;
+        closure_131_14 = closure_5;
+        body = closure_131_14.body;
         let username;
         if (body != null) {
           username = body.username;
@@ -142,10 +144,10 @@ let closure_5 = async function _saveGuildIdentityChanges(arg0) {
           body.nick = body.username;
           delete tmp6[tmp3];
         }
-        const obj13 = { type: "USER_PROFILE_SETTINGS_SUBMIT_FAILURE", guildId: closure_131_0, errors: closure_131_13.body };
+        const obj13 = { type: "USER_PROFILE_SETTINGS_SUBMIT_FAILURE", guildId: closure_131_0, errors: closure_131_14.body };
         closure_132_1(closure_132_2[2]).dispatch(obj13);
         c8 = 3;
-        const obj14 = { value: closure_131_13, done: true };
+        const obj14 = { value: closure_131_14, done: true };
         return obj14;
       } else if (arg0 === 1) {
         c8 = 3;
@@ -156,8 +158,8 @@ let closure_5 = async function _saveGuildIdentityChanges(arg0) {
         const obj15 = { value, done: true };
         return obj15;
       } else {
-        closure_131_10 = value;
-        body2 = closure_131_10.body;
+        closure_131_11 = value;
+        body2 = closure_131_11.body;
         const obj17 = { type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS", guildId: closure_131_0 };
         closure_132_1(closure_132_2[2]).dispatch(obj17);
         const obj16 = closure_132_1(closure_132_2[2]);
@@ -173,14 +175,14 @@ let closure_5 = async function _saveGuildIdentityChanges(arg0) {
         }
         c6 = 0;
         c8 = 3;
-        const obj21 = { value: closure_131_10, done: true };
+        const obj21 = { value: closure_131_11, done: true };
         return obj21;
       }
-    } catch (tmp76) {
-      closure_5 = tmp76;
+    } catch (tmp77) {
+      closure_5 = tmp77;
       if (tmp5 === c6) {
         c8 = tmp2;
-        throw tmp76;
+        throw tmp77;
       } else {
         c7 = tmp;
       }

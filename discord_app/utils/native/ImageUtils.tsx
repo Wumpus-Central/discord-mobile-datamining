@@ -1,13 +1,13 @@
-// === Module 1477: utils/ImageUtils ===
+// === Module 1478: utils/ImageUtils ===
 
-// Module 1477 (utils/ImageUtils)
+// Module 1478 (utils/ImageUtils)
 import AvatarUtils from "AvatarUtils" /* 1397 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1400 */;
-import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment" /* 1432 */;
-import AttachmentImageLadder from "AttachmentImageLadder" /* 1433 */;
-import _modDef1472 from "module_1472" /* 1472 */;
-import useWindowDimensions from "useWindowDimensions" /* 1478 */;
-import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1879 */;
+import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment" /* 1433 */;
+import AttachmentImageLadder from "AttachmentImageLadder" /* 1434 */;
+import _modDef1473 from "module_1473" /* 1473 */;
+import useWindowDimensions from "useWindowDimensions" /* 1479 */;
+import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1880 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -21,7 +21,7 @@ function getSrcWithWidthAndHeight(animated) {
     flag = false;
   }
   const tmp = _slicedToArray(src.split("?"), 2);
-  const items = [tmp[0], _modDef1472.parse(tmp[1])];
+  const items = [tmp[0], _modDef1473.parse(tmp[1])];
   [tmp5, tmp6] = items;
   if (re8.test(tmp5)) {
     tmp6.format = "webp";
@@ -67,7 +67,7 @@ function getSrcWithWidthAndHeight(animated) {
   const tmp4 = _slicedToArray(items, 2);
   let text = tmp5;
   if (!tmp2Result.isEmpty(tmp6)) {
-    _modDef1472;
+    _modDef1473;
     text = `${tmp5}?${obj6.stringify(tmp6)}`;
   }
   return text;

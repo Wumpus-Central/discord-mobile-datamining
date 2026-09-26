@@ -1,7 +1,7 @@
-// === Module 7805: MobileMediaViewerShareExperiment ===
+// === Module 7813: MobileMediaViewerShareExperiment ===
 
-// Module 7805 (MobileMediaViewerShareExperiment)
-import ApexExperiment from "ApexExperiment" /* 1434 */;
+// Module 7813 (MobileMediaViewerShareExperiment)
+import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-06-mobile-media-viewer-share", kind: "user", defaultConfig: { enabled: false }, variations: null };

@@ -1,13 +1,13 @@
-// === Module 11449: CustomTypingIndicatorGlyph ===
+// === Module 11463: CustomTypingIndicatorGlyph ===
 
-// Module 11449 (CustomTypingIndicatorGlyph)
-import CustomTypingIndicatorAnimatedEmojiDefault from "CustomTypingIndicatorAnimatedEmoji" /* 11450 */;
+// Module 11463 (CustomTypingIndicatorGlyph)
+import CustomTypingIndicatorAnimatedEmojiDefault from "CustomTypingIndicatorAnimatedEmoji" /* 11464 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_5 = createStyles.createStyles({ emojiRow: { flexDirection: "row", alignItems: "center" } });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorGlyph.tsx");

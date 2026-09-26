@@ -1,11 +1,11 @@
-// === Module 15735: VoiceUsersItem ===
+// === Module 15763: VoiceUsersItem ===
 
-// Module 15735 (VoiceUsersItem)
+// Module 15763 (VoiceUsersItem)
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_2 = createStyles.createStyles({ voiceStates: { paddingRight: 8 }, voiceStatesCollapsed: { paddingRight: 0, flexDirection: "row", flexWrap: "wrap", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/VoiceUsersItem.tsx");

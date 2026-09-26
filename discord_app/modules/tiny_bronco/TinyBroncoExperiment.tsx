@@ -1,7 +1,7 @@
-// === Module 9224: TinyBroncoExperiment ===
+// === Module 9235: TinyBroncoExperiment ===
 
-// Module 9224 (TinyBroncoExperiment)
-import ApexExperiment from "ApexExperiment" /* 1434 */;
+// Module 9235 (TinyBroncoExperiment)
+import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-08-tiny-bronco", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

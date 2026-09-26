@@ -1,8 +1,8 @@
-// === Module 12815: VibegrationsAppChannelActionCreators ===
+// === Module 12832: VibegrationsAppChannelActionCreators ===
 
-// Module 12815 (VibegrationsAppChannelActionCreators)
+// Module 12832 (VibegrationsAppChannelActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import VibegrationsAppChannelsStore from "VibegrationsAppChannelsStore" /* 12811 */;
+import VibegrationsAppChannelsStore from "VibegrationsAppChannelsStore" /* 12828 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/actions/VibegrationsAppChannelActionCreators.tsx");

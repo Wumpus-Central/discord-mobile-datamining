@@ -1,14 +1,14 @@
-// === Module 10207: PremiumGiftPromotionDetails ===
+// === Module 10219: PremiumGiftPromotionDetails ===
 
-// Module 10207 (PremiumGiftPromotionDetails)
+// Module 10219 (PremiumGiftPromotionDetails)
 import nativeDefault from "native" /* 576 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1365 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1973 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import SKUPreview from "SKUPreview" /* 8226 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1974 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import SKUPreview from "SKUPreview" /* 8234 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4821 */;
+import AccessibilityStore from "AccessibilityStore" /* 4825 */;
 
 require = fn;
 function PremiumGiftPromotionDetailsBase(arg0) {
@@ -91,30 +91,28 @@ function AnimatedImage(arg0) {
   const tmp10 = stateFromStores(aPNGPlayerControls[11]);
   if (tmpResult.isAndroid()) {
     if (!stateFromStores) {
-      const obj3 = { style, children: null };
-      const obj4 = { ref, url: imageUrl, autoplay: false, style: { width: "100%", height: "100%" } };
-      obj3.children = closure_7(tmp(tmp2[9]).APNGPlayer, obj4);
-      let tmp14 = closure_7(View, obj3);
+      const obj3 = { ref, url: imageUrl, autoplay: false, style };
+      let tmp13 = closure_7(tmp(tmp2[9]).APNGPlayer, obj3);
     }
-    return tmp14;
+    return tmp13;
   }
-  tmp14 = closure_7(tmp9(tmp2[12]), { style, resizeMode: "contain", source: { uri: imageUrl } });
-  const obj5 = { style, resizeMode: "contain", source: { uri: imageUrl } };
+  tmp13 = closure_7(tmp9(tmp2[12]), { style, resizeMode: "contain", source: { uri: imageUrl } });
+  const obj4 = { style, resizeMode: "contain", source: { uri: imageUrl } };
   tmpResult = shouldAnimate(aPNGPlayerControls[10]);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
-let createStyles = fn(4829);
+let createStyles = fn(4836);
 let closure_10 = createStyles.createStyles(() => {
   const obj = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 }, image: null, textContainer: null };
-  const size = { width: PX_40, height: PX_40, borderRadius: nativeDefault.radii.xs, overflow: "hidden" };
+  const size = { width: PX_40, height: PX_40, borderRadius: nativeDefault.radii.xs };
   obj.image = size;
   obj.textContainer = { flex: 1 };
   return obj;
 });
-createStyles = fn(4829);
+createStyles = fn(4836);
 let obj3 = { preview: null };
 let size = { width: PX_40, height: PX_40, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, border: { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 }, overflow: "hidden" };
 obj3.preview = size;
@@ -164,7 +162,7 @@ export const PremiumGiftPromotionCollectibleRewardDetails = function PremiumGift
       let rounded = Math.floor(1.2 * PX_40);
     } else {
       rounded = PX_40;
-      if (memo.item.type === tmp8(1973).CollectiblesItemType.AVATAR_DECORATION) {
+      if (memo.item.type === tmp8(1974).CollectiblesItemType.AVATAR_DECORATION) {
         const _Math = Math;
         rounded = Math.floor(1.5 * PX_40);
       }

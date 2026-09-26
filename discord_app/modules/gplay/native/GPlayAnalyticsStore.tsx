@@ -1,6 +1,6 @@
-// === Module 8661: GPlayAnalyticsStore ===
+// === Module 8669: GPlayAnalyticsStore ===
 
-// Module 8661 (GPlayAnalyticsStore)
+// Module 8669 (GPlayAnalyticsStore)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

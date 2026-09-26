@@ -1,17 +1,17 @@
-// === Module 16814: ActivityPanelFocusedView ===
+// === Module 16843: ActivityPanelFocusedView ===
 
-// Module 16814 (ActivityPanelFocusedView)
+// Module 16843 (ActivityPanelFocusedView)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 4537 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
-import timing from "timing" /* 4830 */;
-import spring from "spring" /* 5273 */;
-import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 8904 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 16806 */;
+import native from "native" /* 4540 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
+import timing from "timing" /* 4837 */;
+import spring from "spring" /* 5280 */;
+import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 8915 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 16835 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4821 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
+import AccessibilityStore from "AccessibilityStore" /* 4825 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
 
 require = fn;
 class BaseActivityPanelFocusedView {
@@ -222,17 +222,17 @@ class BaseActivityPanelFocusedView {
     return tmp13(transitionState(closure_2[19]).ThemeContextProvider, obj13);
   }
 }
-const ActivityLayoutMode = fn(2004).ActivityLayoutMode;
-const ActivityPanelConstants = fn(8494);
+const ActivityLayoutMode = fn(2005).ActivityLayoutMode;
+const ActivityPanelConstants = fn(8502);
 ({ ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_8, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_9, ActivityPanelModes: c10 } = ActivityPanelConstants);
-const ActivityPanelNativeConstants = fn(16809);
+const ActivityPanelNativeConstants = fn(16838);
 ({ DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: closure_11, DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_12, DEFAULT_LANDSCAPE_PILLERBOX_CONFIG: map1 } = ActivityPanelNativeConstants);
 const ThemeTypes = fn(1074).ThemeTypes;
-const IS_IOS = fn(11741).IS_IOS;
+const IS_IOS = fn(11755).IS_IOS;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 const collapsedCategories = { duration: 300 };
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj = { wrapper: { position: "absolute", flexDirection: "row", alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, shade: null };
 let obj4 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
@@ -302,7 +302,7 @@ export default noop.memo((transitionState) => {
 });
 export const useBaseActivityPanelFocusedView = function useBaseActivityPanelFocusedView(context) {
   let isWindowLandscape;
-  const tmp = isWindowLandscape(1612)();
+  const tmp = isWindowLandscape(1613)();
   closure_0 = tmp;
   const wrapperDimensions = noop.useContext(context.context).wrapperDimensions;
   const isLandscape = wrapperDimensions.isLandscape;

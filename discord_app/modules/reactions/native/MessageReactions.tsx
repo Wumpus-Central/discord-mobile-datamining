@@ -1,10 +1,10 @@
-// === Module 10812: MessageReactions ===
+// === Module 10825: MessageReactions ===
 
-// Module 10812 (MessageReactions)
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6578 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6598 */;
+// Module 10825 (MessageReactions)
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6583 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6603 */;
 import noop from "module_19" /* 19 */;
-import MessageStore from "MessageStore" /* 5049 */;
+import MessageStore from "MessageStore" /* 5056 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -68,10 +68,10 @@ export default function MessageReactions(emoji) {
   if (items3.length > 0) {
     let obj3 = { channelId, messageId, emoji: emoji.emoji, reactions: items3, isSelectedBurst };
     let merged1 = Object.assign(merged);
-    let tmp9Result = jsx(tmp4(10813).MessageReactionsContent, { channelId, messageId, emoji: emoji.emoji, reactions: items3, isSelectedBurst });
+    let tmp9Result = jsx(tmp4(10826).MessageReactionsContent, { channelId, messageId, emoji: emoji.emoji, reactions: items3, isSelectedBurst });
   } else {
-    tmp9Result = jsx(tmp4(10813).MessageReactionsEmpty, {});
+    tmp9Result = jsx(tmp4(10826).MessageReactionsEmpty, {});
   }
   obj2.children = tmp9Result;
-  return jsx(items3(6578).AnalyticsLocationProvider, { value: tmp3(AnalyticsLocationDefault.MESSAGE_REACTIONS).analyticsLocations, children: null });
+  return jsx(items3(6583).AnalyticsLocationProvider, { value: tmp3(AnalyticsLocationDefault.MESSAGE_REACTIONS).analyticsLocations, children: null });
 };

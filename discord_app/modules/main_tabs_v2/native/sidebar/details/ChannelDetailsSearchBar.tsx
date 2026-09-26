@@ -1,17 +1,17 @@
-// === Module 16407: ChannelDetailsSearchBar ===
+// === Module 16436: ChannelDetailsSearchBar ===
 
-// Module 16407 (ChannelDetailsSearchBar)
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 11830 */;
+// Module 16436 (ChannelDetailsSearchBar)
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 11844 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 11808 */;
+import SearchQueryStore from "SearchQueryStore" /* 11822 */;
 
 const require = fn;
-let closure_5 = fn(7296).setIsChannelDetailsSearchActive;
+let closure_5 = fn(7301).setIsChannelDetailsSearchActive;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
-let obj = { back: { justifyContent: "center", height: fn(11845).SEARCH_BAR_HEIGHT, paddingStart: fn(10366).CHANNEL_DETAILS_MARGIN, paddingEnd: 8 } };
+const createStyles = fn(4836);
+let obj = { back: { justifyContent: "center", height: fn(11859).SEARCH_BAR_HEIGHT, paddingStart: fn(10377).CHANNEL_DETAILS_MARGIN, paddingEnd: 8 } };
 let closure_7 = createStyles.createStyles(obj);
-let obj3 = { justifyContent: "center", height: fn(11845).SEARCH_BAR_HEIGHT, paddingStart: fn(10366).CHANNEL_DETAILS_MARGIN, paddingEnd: 8 };
+let obj3 = { justifyContent: "center", height: fn(11859).SEARCH_BAR_HEIGHT, paddingStart: fn(10377).CHANNEL_DETAILS_MARGIN, paddingEnd: 8 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsSearchBar.tsx");
 
@@ -19,14 +19,13 @@ export default noop.memo(noop.forwardRef((channelId, ref) => {
   channelId = channelId.channelId;
   const onBackPress = channelId.onBackPress;
   let flag = channelId.showBackButton;
-  ({ guildId, onSuggestionsLayoutMesure, suggestionsDismissed, setSuggestionsDismissed } = channelId);
   if (flag === undefined) {
     flag = true;
   }
   let channelDetailsSearchContext;
   let callback;
   const tmp = closure_7();
-  channelDetailsSearchContext = channelId(channelDetailsSearchContext[7]).useChannelDetailsSearchContext(channelId, guildId);
+  channelDetailsSearchContext = channelId(channelDetailsSearchContext[7]).useChannelDetailsSearchContext(channelId, channelId.guildId);
   const items = [channelId, channelDetailsSearchContext];
   const effect = callback.useEffect(() => () => {
     onBackPress(channelDetailsSearchContext[8]).trackSearchClosed({ searchContext });
@@ -51,7 +50,7 @@ export default noop.memo(noop.forwardRef((channelId, ref) => {
       callback1();
     }
   }, items3);
-  const obj2 = { ref, searchContext: channelDetailsSearchContext, onSuggestionsLayoutMesure, suggestionsDismissed, setSuggestionsDismissed, backButton: null };
+  const obj2 = { ref, searchContext: channelDetailsSearchContext, backButton: null };
   let tmp9Result = null;
   let obj = channelId(channelDetailsSearchContext[7]);
   if (flag) {
@@ -62,5 +61,5 @@ export default noop.memo(noop.forwardRef((channelId, ref) => {
     tmp9Result = jsx(tmp2(tmp3[11]).PressableOpacity, { accessibilityRole: "button", onPress: callback2, style: tmp.back, accessibilityLabel: null, children: null });
   }
   obj2.backButton = tmp9Result;
-  return jsx(onBackPress(channelDetailsSearchContext[10]), { ref, searchContext: channelDetailsSearchContext, onSuggestionsLayoutMesure, suggestionsDismissed, setSuggestionsDismissed, backButton: null });
+  return jsx(onBackPress(channelDetailsSearchContext[10]), { ref, searchContext: channelDetailsSearchContext, backButton: null });
 }));

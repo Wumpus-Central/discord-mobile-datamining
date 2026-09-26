@@ -1,9 +1,9 @@
-// === Module 10752: trackBadgeDirectoryAction ===
+// === Module 10765: trackBadgeDirectoryAction ===
 
-// Module 10752 (trackBadgeDirectoryAction)
+// Module 10765 (trackBadgeDirectoryAction)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import UserStore from "UserStore" /* 1372 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7630 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7637 */;
 
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const size = fn(2);

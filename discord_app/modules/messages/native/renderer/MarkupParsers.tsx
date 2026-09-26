@@ -1,16 +1,16 @@
-// === Module 7527: MarkupParsers ===
+// === Module 7535: MarkupParsers ===
 
-// Module 7527 (MarkupParsers)
+// Module 7535 (MarkupParsers)
 import Constants from "Constants" /* 1074 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 4819 */;
-import renderMessageMarkup from "renderMessageMarkup" /* 7308 */;
-import NativeMarkdownExperiment2 from "NativeMarkdownExperiment" /* 7528 */;
-import ChangeLogStandardTemplate from "ChangeLogStandardTemplate" /* 7529 */;
-import trackMarkdownParse from "trackMarkdownParse" /* 7541 */;
-import parseNativeMarkupDefault from "parseNativeMarkup" /* 7543 */;
-import priv from "priv" /* 1438 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4823 */;
+import renderMessageMarkup from "renderMessageMarkup" /* 7313 */;
+import NativeMarkdownExperiment2 from "NativeMarkdownExperiment" /* 7536 */;
+import ChangeLogStandardTemplate from "ChangeLogStandardTemplate" /* 7537 */;
+import trackMarkdownParse from "trackMarkdownParse" /* 7549 */;
+import parseNativeMarkupDefault from "parseNativeMarkup" /* 7551 */;
+import priv from "priv" /* 1439 */;
 import size from "module_2" /* 2 */;
 
 const MessageTypes = Constants.MessageTypes;

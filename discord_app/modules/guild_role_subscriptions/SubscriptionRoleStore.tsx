@@ -1,14 +1,14 @@
-// === Module 5767: SubscriptionRoleStore ===
+// === Module 5772: SubscriptionRoleStore ===
 
-// Module 5767 (SubscriptionRoleStore)
+// Module 5772 (SubscriptionRoleStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildRecord from "GuildRecord" /* 2062 */;
-import GuildRoleRecord from "GuildRoleRecord" /* 2102 */;
-import PremiumRoleUtils from "PremiumRoleUtils" /* 4456 */;
-import GuildMemberStore from "GuildMemberStore" /* 2107 */;
-import GuildRoleStore from "GuildRoleStore" /* 2101 */;
-import GuildStore from "GuildStore" /* 2066 */;
+import GuildRecord from "GuildRecord" /* 2063 */;
+import GuildRoleRecord from "GuildRoleRecord" /* 2103 */;
+import PremiumRoleUtils from "PremiumRoleUtils" /* 4459 */;
+import GuildMemberStore from "GuildMemberStore" /* 2108 */;
+import GuildRoleStore from "GuildRoleStore" /* 2102 */;
+import GuildStore from "GuildStore" /* 2067 */;
 import UserStore from "UserStore" /* 1372 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;

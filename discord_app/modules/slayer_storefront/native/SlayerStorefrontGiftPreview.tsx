@@ -1,10 +1,10 @@
-// === Module 10978: SlayerStorefrontGiftPreview ===
+// === Module 10991: SlayerStorefrontGiftPreview ===
 
-// Module 10978 (SlayerStorefrontGiftPreview)
+// Module 10991 (SlayerStorefrontGiftPreview)
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8280 */;
-import InfoBox from "InfoBox" /* 9243 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8288 */;
+import InfoBox from "InfoBox" /* 9254 */;
 import noop from "module_19" /* 19 */;
 
 const InfoBoxDefault = InfoBox;
@@ -22,7 +22,7 @@ function WarningBox(application) {
     const obj = { look: InfoBox.InfoBoxLooks.WARNING, style: tmp.warningBox, children: null };
     const intl = util.intl;
     if (mobileAccountLinkingDisabled) {
-      BMMo2K = name(3584).BMMo2K;
+      BMMo2K = name(3585).BMMo2K;
       tmp2 = application == tmp2;
       name = undefined;
       if (!tmp2) {
@@ -51,7 +51,7 @@ function WarningBox(application) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_6 = createStyles.createStyles({ container: { alignItems: "center", justifyContent: "center", gap: 16, marginTop: 20 }, text: { textAlign: "center", paddingHorizontal: 32 }, warningBox: { marginHorizontal: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/native/SlayerStorefrontGiftPreview.tsx");

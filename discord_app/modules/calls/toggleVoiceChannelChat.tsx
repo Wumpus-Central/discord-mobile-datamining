@@ -1,10 +1,10 @@
-// === Module 14050: toggleVoiceChannelChat ===
+// === Module 14075: toggleVoiceChannelChat ===
 
-// Module 14050 (toggleVoiceChannelChat)
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5030 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4852 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4845 */;
+// Module 14075 (toggleVoiceChannelChat)
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5037 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4859 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4852 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/toggleVoiceChannelChat.tsx");

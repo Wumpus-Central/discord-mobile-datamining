@@ -1,24 +1,24 @@
-// === Module 14488: FriendRequestsEveryoneSetting ===
+// === Module 14513: FriendRequestsEveryoneSetting ===
 
-// Module 14488 (FriendRequestsEveryoneSetting)
+// Module 14513 (FriendRequestsEveryoneSetting)
 import util from "util" /* 1115 */;
-import UserSettings from "UserSettings" /* 2020 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6411 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14329 */;
+import UserSettings from "UserSettings" /* 2021 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6416 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14354 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ AllFriendSourceFlags: c3, FriendSourceFlags: closure_4 } = Constants);
-const SettingBuilders = fn(10993);
+const SettingBuilders = fn(11006);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.mGr3CX);
   },
-  parent: fn(7412).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(7417).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useFriendRequestsEveryoneSettingValue() {
-    const FriendSourceFlagsSetting = setting(2020).FriendSourceFlagsSetting;
+    const FriendSourceFlagsSetting = setting(2021).FriendSourceFlagsSetting;
     setting = FriendSourceFlagsSetting.useSetting();
     const items = [setting];
     return noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items).all;

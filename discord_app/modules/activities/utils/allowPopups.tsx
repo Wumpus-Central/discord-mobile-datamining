@@ -1,7 +1,7 @@
-// === Module 8920: allowPopups ===
+// === Module 8931: allowPopups ===
 
-// Module 8920 (allowPopups)
-import Constants from "Constants" /* 2004 */;
+// Module 8931 (allowPopups)
+import Constants from "Constants" /* 2005 */;
 import size from "module_2" /* 2 */;
 
 Constants.APPLICATIONS_WITH_ALLOWED_POPUPS;

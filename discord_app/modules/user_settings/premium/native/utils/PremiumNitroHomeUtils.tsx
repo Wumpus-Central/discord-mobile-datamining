@@ -1,6 +1,6 @@
-// === Module 12948: PremiumNitroHomeUtils ===
+// === Module 12965: PremiumNitroHomeUtils ===
 
-// Module 12948 (PremiumNitroHomeUtils)
+// Module 12965 (PremiumNitroHomeUtils)
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import size from "module_2" /* 2 */;

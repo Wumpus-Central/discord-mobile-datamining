@@ -1,13 +1,13 @@
-// === Module 10342: ActivityEmoji ===
+// === Module 10353: ActivityEmoji ===
 
-// Module 10342 (ActivityEmoji)
+// Module 10353 (ActivityEmoji)
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import EmojiDefault from "Emoji" /* 6546 */;
+import EmojiDefault from "Emoji" /* 6551 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_5 = createStyles.createStyles({ emoji: { flexShrink: 0, width: "100%", height: "100%" }, text: { textAlign: "center", fontFamily: "System" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/native/ActivityEmoji.tsx");
@@ -25,7 +25,7 @@ export default function ActivityEmoji(emoji) {
   importDefault = undefined;
   const tmp = closure_5();
   let ReactionIcon = emoji;
-  const AnimateEmoji = emoji(2020).AnimateEmoji;
+  const AnimateEmoji = emoji(2021).AnimateEmoji;
   let animated;
   const setting = AnimateEmoji.useSetting();
   if (emoji != null) {
@@ -60,7 +60,7 @@ export default function ActivityEmoji(emoji) {
     }
   }
   if (null == emoji) {
-    ReactionIcon = ReactionIcon(8211).ReactionIcon;
+    ReactionIcon = ReactionIcon(8219).ReactionIcon;
     const obj = { style, size: "sm" };
     <ReactionIcon style={style} size="sm" />;
   } else {

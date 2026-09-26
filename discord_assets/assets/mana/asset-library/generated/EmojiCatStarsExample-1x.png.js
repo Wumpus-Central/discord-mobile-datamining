@@ -1,6 +1,6 @@
-// === Module 11445: ? ===
+// === Module 11459: ? ===
 
-// Module 11445
+// Module 11459
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/EmojiCatStarsExample-1x.png.js");

@@ -1,16 +1,16 @@
-// === Module 16146: MainTabsChannelScreenStack ===
+// === Module 16174: MainTabsChannelScreenStack ===
 
-// Module 16146 (MainTabsChannelScreenStack)
+// Module 16174 (MainTabsChannelScreenStack)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import native from "native" /* 4537 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
-import useChatLayout from "useChatLayout" /* 4691 */;
-import FramesNativeManagerDefault from "FramesNativeManager" /* 8743 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 15604 */;
-import StandaloneChannelScreenDefault from "StandaloneChannelScreen" /* 16150 */;
+import native from "native" /* 4540 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
+import useChatLayout from "useChatLayout" /* 4695 */;
+import FramesNativeManagerDefault from "FramesNativeManager" /* 8751 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 15632 */;
+import StandaloneChannelScreenDefault from "StandaloneChannelScreen" /* 16178 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 8491 */;
+import FramesStore from "FramesStore" /* 8499 */;
 
 require = fn;
 function EnabledChannelScreenNavigationTTIVisibility(children) {
@@ -88,15 +88,15 @@ function getKey(index) {
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const ONYX_BORDER_WIDTH = fn(7284).ONYX_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(7289).ONYX_BORDER_WIDTH;
 const Constants = fn(1074);
 ({ AnalyticsObjectTypes: closure_9, AnalyticsObjects: c10, AnalyticsSections: closure_11 } = Constants);
-const FramesConstants = fn(8492);
+const FramesConstants = fn(8500);
 ({ FrameIntent: closure_12, getChannelIdForSurface: map1 } = FramesConstants);
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_17 = createStyles.createStyles({ onyxContainerStyles: { marginTop: -ONYX_BORDER_WIDTH, marginLeft: -ONYX_BORDER_WIDTH } });
 const __initData = { code: "function MainTabsChannelScreenStackTsx1(){const{isStackVisible,highestFullyRenderedScreenIndex,index,alwaysVisible,translateX,maxWidth}=this.__closure;return isStackVisible&&highestFullyRenderedScreenIndex.get()<=index&&(alwaysVisible||translateX.get()<maxWidth);}" };
 const __initData2 = { code: "function MainTabsChannelScreenStackTsx2(visible,wasVisible){const{runOnJS,setIsVisible}=this.__closure;if(visible===wasVisible)return;runOnJS(setIsVisible)(visible);}" };

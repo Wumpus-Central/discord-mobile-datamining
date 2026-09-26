@@ -1,7 +1,7 @@
-// === Module 13604: VoiceGatewayProtocolVersionExperiment ===
+// === Module 13622: VoiceGatewayProtocolVersionExperiment ===
 
-// Module 13604 (VoiceGatewayProtocolVersionExperiment)
-import ApexExperiment from "ApexExperiment" /* 1434 */;
+// Module 13622 (VoiceGatewayProtocolVersionExperiment)
+import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 
 let obj = { name: "2026-04-voice-gateway-protocol-version", kind: "user", defaultConfig: { enabled: false }, variations: null };

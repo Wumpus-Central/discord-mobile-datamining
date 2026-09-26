@@ -1,13 +1,13 @@
-// === Module 11006: getMessageJumpData ===
+// === Module 11019: getMessageJumpData ===
 
-// Module 11006 (getMessageJumpData)
+// Module 11019 (getMessageJumpData)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 1878 */;
-import Client from "Client" /* 4759 */;
+import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 1879 */;
+import Client from "Client" /* 4763 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1480 */;
+import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1481 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

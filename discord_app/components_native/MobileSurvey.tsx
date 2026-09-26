@@ -1,21 +1,21 @@
-// === Module 16712: MobileSurvey ===
+// === Module 16741: MobileSurvey ===
 
-// Module 16712 (MobileSurvey)
+// Module 16741 (MobileSurvey)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import LinkingDefault from "Linking" /* 4522 */;
-import SurveyActionCreators from "SurveyActionCreators" /* 5021 */;
-import _modDef8544 from "module_8544" /* 8544 */;
+import LinkingDefault from "Linking" /* 4525 */;
+import SurveyActionCreators from "SurveyActionCreators" /* 5028 */;
+import _modDef8552 from "module_8552" /* 8552 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SurveyStore from "SurveyStore" /* 5020 */;
+import SurveyStore from "SurveyStore" /* 5027 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_8 = createStyles.createStyles({ confirmIcon: { marginLeft: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/MobileSurvey.tsx");
@@ -102,10 +102,10 @@ export default function MobileSurvey() {
       return SurveyActionCreators.surveyHide(stateFromStores.key, true);
     };
     obj3.renderConfirmRightIcon = function renderConfirmRightIcon() {
-      return jsx(native.Icon, { style: confirmIcon.confirmIcon, color: nativeDefault.unsafe_rawColors.WHITE, size: native.Icon.Sizes.SMALL, source: _modDef8544 });
+      return jsx(native.Icon, { style: confirmIcon.confirmIcon, color: nativeDefault.unsafe_rawColors.WHITE, size: native.Icon.Sizes.SMALL, source: _modDef8552 });
     };
-    tmp5 = jsx(stateFromStores(5293), { body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, renderConfirmRightIcon: null });
-    const tmp8 = stateFromStores(5293);
+    tmp5 = jsx(stateFromStores(5300), { body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, renderConfirmRightIcon: null });
+    const tmp8 = stateFromStores(5300);
   }
   return tmp5;
 };

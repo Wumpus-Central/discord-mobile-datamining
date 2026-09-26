@@ -1,29 +1,29 @@
-// === Module 11379: FamilyCenterModalRequest ===
+// === Module 11393: FamilyCenterModalRequest ===
 
-// Module 11379 (FamilyCenterModalRequest)
+// Module 11393 (FamilyCenterModalRequest)
 import _modDef38 from "module_38" /* 38 */;
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import useNavigation from "useNavigation" /* 1484 */;
-import Server from "Server" /* 1978 */;
-import _modDef2486 from "module_2486" /* 2486 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5032 */;
-import components_Button_Button from "components/Button/Button" /* 5274 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5884 */;
-import NavigatorHeader2 from "NavigatorHeader" /* 5931 */;
-import _modDef6408 from "module_6408" /* 6408 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 6954 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 7007 */;
-import ModalScreen from "ModalScreen" /* 7862 */;
-import ModalContent from "ModalContent" /* 7863 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8098 */;
-import _modDef11045 from "module_11045" /* 11045 */;
-import FamilyCenterModalRequestRouting from "FamilyCenterModalRequestRouting" /* 11380 */;
-import ModalFooter from "ModalFooter" /* 11391 */;
-import EnvelopeSpotIllustration from "EnvelopeSpotIllustration" /* 11392 */;
+import useNavigation from "useNavigation" /* 1485 */;
+import Server from "Server" /* 1979 */;
+import _modDef2487 from "module_2487" /* 2487 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5039 */;
+import components_Button_Button from "components/Button/Button" /* 5281 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5889 */;
+import NavigatorHeader2 from "NavigatorHeader" /* 5936 */;
+import _modDef6413 from "module_6413" /* 6413 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 6959 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 7012 */;
+import ModalScreen from "ModalScreen" /* 7870 */;
+import ModalContent from "ModalContent" /* 7871 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8106 */;
+import _modDef11059 from "module_11059" /* 11059 */;
+import FamilyCenterModalRequestRouting from "FamilyCenterModalRequestRouting" /* 11394 */;
+import ModalFooter from "ModalFooter" /* 11405 */;
+import EnvelopeSpotIllustration from "EnvelopeSpotIllustration" /* 11406 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -443,8 +443,8 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
   teenIdentity = teenIdentity.teenIdentity;
   const tmp = closure_25();
   let navigation;
-  navigation = navigation(1484).useNavigation();
-  let obj = navigation(1484);
+  navigation = navigation(1485).useNavigation();
+  let obj = navigation(1485);
   const items = [UserStore];
   const stateFromStores = navigation(563).useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
@@ -454,7 +454,7 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
     }
     return prop;
   });
-  const tmp7 = stateFromStores(7712)(stateFromStores);
+  const tmp7 = stateFromStores(7720)(stateFromStores);
   dependencyMap = tmp7;
   const items1 = [stateFromStores, tmp7, navigation];
   const effect = noop.useEffect(() => {
@@ -473,12 +473,12 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
     }
   }, items1);
   const callback = noop.useCallback(() => {
-    const obj = stateFromStores(7851);
-    const result = obj.showAgeVerificationGetStartedModal({ entryPoint: navigation(7853).AgeVerificationModalEntryPoint.FAMILY_CENTER_CONNECTION });
+    const obj = stateFromStores(7859);
+    const result = obj.showAgeVerificationGetStartedModal({ entryPoint: navigation(7861).AgeVerificationModalEntryPoint.FAMILY_CENTER_CONNECTION });
   }, []);
   const obj3 = { style: tmp.content, children: null };
   const obj2 = navigation(563);
-  const items2 = [closure_12(closure_6, { style: tmp.art, children: closure_12(navigation(11394).FamilyShieldSpotIllustration, {}) }), , ];
+  const items2 = [closure_12(closure_6, { style: tmp.art, children: closure_12(navigation(11408).FamilyShieldSpotIllustration, {}) }), , ];
   const obj5 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   const intl = navigation(1115).intl;
   let str;
@@ -496,33 +496,33 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
     str = "";
   }
   const obj6 = { children: null };
-  obj5.children = intl.formatToPlainString(stateFromStores(2486).pQQMJ7, { username: str });
-  items2[1] = closure_12(navigation(4825).Text, obj5);
+  obj5.children = intl.formatToPlainString(stateFromStores(2487).pQQMJ7, { username: str });
+  items2[1] = closure_12(navigation(4832).Text, obj5);
   const obj7 = { variant: "text-sm/medium", color: "text-muted", style: tmp.description, children: null };
   const intl2 = tmp2(1115).intl;
-  obj7.children = intl2.format(stateFromStores(2486)["0o3yg8"], { link: "https://support.discord.com/hc/articles/14155060633623" });
-  items2[2] = closure_12(navigation(4825).Text, obj7);
+  obj7.children = intl2.format(stateFromStores(2487)["0o3yg8"], { link: "https://support.discord.com/hc/articles/14155060633623" });
+  items2[2] = closure_12(navigation(4832).Text, obj7);
   obj3.children = items2;
   const items3 = [closure_13(closure_6, obj3), ];
   const obj8 = { children: null };
   const obj9 = { children: null };
   const obj10 = { variant: "primary", text: null, onPress: null };
   const intl3 = tmp2(1115).intl;
-  obj10.text = intl3.string(stateFromStores(2486)["3oUE4o"]);
+  obj10.text = intl3.string(stateFromStores(2487)["3oUE4o"]);
   obj10.onPress = callback;
-  const items4 = [closure_12(navigation(5274).Button, obj10), ];
+  const items4 = [closure_12(navigation(5281).Button, obj10), ];
   const obj11 = { variant: "tertiary", text: null, onPress: null };
   const intl4 = tmp2(1115).intl;
   obj11.text = intl4.string(navigation(1115).t.oEAioF);
   obj11.onPress = function onPress() {
-    return stateFromStores(5032).pop();
+    return stateFromStores(5039).pop();
   };
-  items4[1] = closure_12(navigation(5274).Button, obj11);
+  items4[1] = closure_12(navigation(5281).Button, obj11);
   obj9.children = items4;
-  obj8.children = closure_13(navigation(5740).ButtonGroup, obj9);
-  items3[1] = closure_12(navigation(11391).ModalFooter, obj8);
+  obj8.children = closure_13(navigation(5745).ButtonGroup, obj9);
+  items3[1] = closure_12(navigation(11405).ModalFooter, obj8);
   obj6.children = items3;
-  return closure_13(navigation(7862).ModalScreen, obj6);
+  return closure_13(navigation(7870).ModalScreen, obj6);
 }
 function FamilyCenterVerifyingScreen() {
   const tmp = closure_21();
@@ -567,9 +567,9 @@ function FamilyCenterVerifyingScreen() {
 function FamilyCenterPrereqInvalidCodeScreen() {
   const obj = { title: null, description: null, primaryButton: null };
   const intl = util.intl;
-  obj.title = intl.string(_modDef2486.ewSb6o);
+  obj.title = intl.string(_modDef2487.ewSb6o);
   const intl2 = util.intl;
-  obj.description = intl2.string(_modDef2486.jcUN2F);
+  obj.description = intl2.string(_modDef2487.jcUN2F);
   const obj2 = { text: null, onPress: null };
   const intl3 = util.intl;
   obj2.text = intl3.string(util.t.WAI6xu);
@@ -578,8 +578,8 @@ function FamilyCenterPrereqInvalidCodeScreen() {
   return closure_1_12(FamilyCenterPrereqScreen, obj);
 }
 function FamilyCenterPrereqMustBeAdultScreen() {
-  navigation = navigation(1484).useNavigation();
-  let obj = navigation(1484);
+  navigation = navigation(1485).useNavigation();
+  let obj = navigation(1485);
   const items = [UserStore];
   const stateFromStores = navigation(563).useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
@@ -589,7 +589,7 @@ function FamilyCenterPrereqMustBeAdultScreen() {
     }
     return prop;
   });
-  const tmp3 = stateFromStores(7712)(stateFromStores);
+  const tmp3 = stateFromStores(7720)(stateFromStores);
   dependencyMap = tmp3;
   const items1 = [stateFromStores, tmp3, navigation];
   const effect = noop.useEffect(() => {
@@ -609,27 +609,27 @@ function FamilyCenterPrereqMustBeAdultScreen() {
   }, items1);
   const obj3 = { title: null, description: null, primaryButton: null };
   const callback = noop.useCallback(() => {
-    const obj = stateFromStores(7851);
-    const result = obj.showAgeVerificationGetStartedModal({ entryPoint: navigation(7853).AgeVerificationModalEntryPoint.FAMILY_CENTER_CONNECTION });
+    const obj = stateFromStores(7859);
+    const result = obj.showAgeVerificationGetStartedModal({ entryPoint: navigation(7861).AgeVerificationModalEntryPoint.FAMILY_CENTER_CONNECTION });
   }, []);
   const intl = navigation(1115).intl;
-  obj3.title = intl.string(stateFromStores(2486).BQFHXW);
+  obj3.title = intl.string(stateFromStores(2487).BQFHXW);
   const intl2 = navigation(1115).intl;
-  obj3.description = intl2.format(stateFromStores(2486).WDjaKn, { link: { onClick: callback } });
+  obj3.description = intl2.format(stateFromStores(2487).WDjaKn, { link: { onClick: callback } });
   const obj5 = { text: null, onPress: null };
   const intl3 = navigation(1115).intl;
   obj5.text = intl3.string(navigation(1115).t["NX+WJN"]);
-  obj5.onPress = stateFromStores(5032).pop;
+  obj5.onPress = stateFromStores(5039).pop;
   obj3.primaryButton = obj5;
   return closure_12(FamilyCenterPrereqScreen, obj3);
 }
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const FamilyCenterConstants = fn(6953);
+const FamilyCenterConstants = fn(6958);
 ({ FAMILY_CENTER_AGE_VERIFICATION_RESUME_TIMEOUT: closure_8, FAMILY_CENTER_LINK_REQUEST_ERROR_EXPERIENCES: closure_9, FamilyCenterFailureCode: c10, FamilyCenterIconType: closure_11 } = FamilyCenterConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-let createStyles = fn(4829);
+let createStyles = fn(4836);
 let obj2 = { headerText: { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 }, art: { width: 165, height: 119 }, connectionHeader: null, headerIcons: null, ellipseGroup: null, ellipse: null, title: null, teenName: null, consent: null };
 let obj3 = { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 };
 obj2.connectionHeader = { alignItems: "center", marginBottom: nativeDefault.space.PX_16 };
@@ -645,7 +645,7 @@ obj2.teenName = { marginTop: nativeDefault.space.PX_4, textAlign: "center" };
 let obj7 = { marginTop: nativeDefault.space.PX_4, textAlign: "center" };
 obj2.consent = { marginTop: nativeDefault.space.PX_8, textAlign: "center", paddingHorizontal: nativeDefault.space.PX_16 };
 const __initData = createStyles.createStyles(obj2);
-createStyles = fn(4829);
+createStyles = fn(4836);
 let obj9 = { content: null, textWrapper: null, header: null, description: null, illustration: null };
 let obj8 = { marginTop: nativeDefault.space.PX_8, textAlign: "center", paddingHorizontal: nativeDefault.space.PX_16 };
 obj9.content = { flex: 1, flexDirection: "column", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 };
@@ -656,7 +656,7 @@ obj9.description = { textAlign: "center" };
 const rect = { position: "absolute", bottom: "100%", left: 0, right: 0, alignItems: "center", paddingBottom: nativeDefault.space.PX_24 };
 obj9.illustration = rect;
 let closure_17 = createStyles.createStyles(obj9);
-createStyles = fn(4829);
+createStyles = fn(4836);
 let obj13 = { header: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center" }, ring: null, iconContainer: null, positive: null, negative: null };
 const size1 = { display: "flex", justifyContent: "center", alignItems: "center", height: 64, width: 64, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginBottom: 24 };
 obj13.ring = size1;
@@ -667,15 +667,15 @@ obj13.positive = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE };
 let obj14 = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE };
 obj13.negative = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL };
 let closure_19 = createStyles.createStyles(obj13);
-createStyles = fn(4829);
+createStyles = fn(4836);
 let closure_21 = createStyles.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
-createStyles = fn(4829);
+createStyles = fn(4836);
 let obj17 = { content: { flex: 1, flexDirection: "column", alignItems: "center", justifyContent: "center", paddingHorizontal: 32 }, title: null, description: null };
 let obj16 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL };
 obj17.title = { textAlign: "center", marginBottom: nativeDefault.space.PX_8 };
 obj17.description = { textAlign: "center" };
 let closure_23 = createStyles.createStyles(obj17);
-createStyles = fn(4829);
+createStyles = fn(4836);
 let obj19 = { content: { flex: 1, flexDirection: "column", alignItems: "center", justifyContent: "center", paddingHorizontal: 32 }, art: null, title: null, description: null };
 let obj18 = { textAlign: "center", marginBottom: nativeDefault.space.PX_8 };
 obj19.art = { marginBottom: nativeDefault.space.PX_24 };
@@ -684,7 +684,7 @@ obj19.title = { textAlign: "center", marginBottom: nativeDefault.space.PX_8 };
 obj19.description = { textAlign: "center" };
 let closure_25 = createStyles.createStyles(obj19);
 let obj24 = { headerShown: true, headerLeft: null, headerTitle: null };
-const NavigatorHeader = fn(5931);
+const NavigatorHeader = fn(5936);
 obj24.headerLeft = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
 obj24.headerTitle = function headerTitle() {
   return null;
@@ -769,10 +769,10 @@ export default function FamilyCenterRequestModal(userId) {
     obj[FamilyCenterModalRequestRouting.FamilyCenterModalRequestSections.ERROR] = obj11;
     return obj;
   }, items);
-  let obj = { initialRouteName: userId(11380).FamilyCenterModalRequestSections.PREREQ_LOADING, screens: memo, headerBackTitle: null };
+  let obj = { initialRouteName: userId(11394).FamilyCenterModalRequestSections.PREREQ_LOADING, screens: memo, headerBackTitle: null };
   const intl = userId(1115).intl;
   obj.headerBackTitle = intl.string(userId(1115).t["13/7kX"]);
-  return closure_12(userId(10756).Modal, obj);
+  return closure_12(userId(10769).Modal, obj);
 };
 export { FamilyCenterModalRequestConfirm };
 export { FamilyCenterModalRequestSuccess };

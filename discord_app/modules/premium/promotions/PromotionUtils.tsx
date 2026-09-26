@@ -1,16 +1,16 @@
-// === Module 12946: PromotionUtils ===
+// === Module 12963: PromotionUtils ===
 
-// Module 12946 (PromotionUtils)
+// Module 12963 (PromotionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import FlagUtils from "FlagUtils" /* 1385 */;
-import dismissible_content from "dismissible_content" /* 2028 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 2030 */;
-import constants from "constants" /* 10149 */;
+import dismissible_content from "dismissible_content" /* 2029 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 2031 */;
+import constants from "constants" /* 10160 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
-import PromotionRecord from "PromotionRecord" /* 10118 */;
-import PromotionsStore from "PromotionsStore" /* 10117 */;
+import PromotionRecord from "PromotionRecord" /* 10129 */;
+import PromotionsStore from "PromotionsStore" /* 10128 */;
 
 require = fn;
 function claimedOutboundPromotionCodeFromServer(code) {
@@ -113,7 +113,7 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
 const PromotionFlags = fn(1374).PromotionFlags;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, Endpoints: closure_9, Platforms: c10 } = Constants);
-const ActivityPlatform = fn(2004).ActivityPlatform;
+const ActivityPlatform = fn(2005).ActivityPlatform;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/promotions/PromotionUtils.tsx");
 

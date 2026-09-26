@@ -1,12 +1,12 @@
-// === Module 6906: UserGuildSettings ===
+// === Module 6911: UserGuildSettings ===
 
-// Module 6906 (UserGuildSettings)
+// Module 6911 (UserGuildSettings)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 2073 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 2074 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const UserGuildSettingsStore = fn(5010);
+const UserGuildSettingsStore = fn(5017);
 ({ convertChannelOverridesToMap: c3, getGuildDefaults: closure_4 } = UserGuildSettingsStore);
 let closure_5 = new LoggerDefault("ReadStates");
 class UserGuildSettings {

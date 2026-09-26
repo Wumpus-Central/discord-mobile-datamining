@@ -1,21 +1,21 @@
-// === Module 5719: SelectedChannelActionCreatorsAdditional ===
+// === Module 5724: SelectedChannelActionCreatorsAdditional ===
 
-// Module 5719 (SelectedChannelActionCreatorsAdditional)
+// Module 5724 (SelectedChannelActionCreatorsAdditional)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import v1 from "v1" /* 1255 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 5720 */;
-import PermissionStore from "PermissionStore" /* 4466 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4652 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
+import GuildStore from "GuildStore" /* 2067 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 5725 */;
+import PermissionStore from "PermissionStore" /* 4469 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4655 */;
 import UserStore from "UserStore" /* 1372 */;
-import VoiceStateStore from "VoiceStateStore" /* 4848 */;
+import VoiceStateStore from "VoiceStateStore" /* 4855 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const STAGE_BOOSTING_SHEET_KEY = fn(5721).STAGE_BOOSTING_SHEET_KEY;
+const STAGE_BOOSTING_SHEET_KEY = fn(5726).STAGE_BOOSTING_SHEET_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/SelectedChannelActionCreatorsAdditional.native.tsx");
 

@@ -1,10 +1,10 @@
-// === Module 8798: VideoStreamStore ===
+// === Module 8806: VideoStreamStore ===
 
-// Module 8798 (VideoStreamStore)
+// Module 8806 (VideoStreamStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
-import Constants2 from "Constants" /* 4854 */;
+import Constants2 from "Constants" /* 4861 */;
 import size from "module_2" /* 2 */;
 
 function makeTimeoutKey(arg0, arg1) {

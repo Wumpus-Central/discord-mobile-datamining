@@ -1,9 +1,9 @@
-// === Module 13436: NsfwGateGuildSettingsActionSheet ===
+// === Module 13454: NsfwGateGuildSettingsActionSheet ===
 
-// Module 13436 (NsfwGateGuildSettingsActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6535 */;
-import GuildActionSheetActions from "GuildActionSheetActions" /* 13438 */;
+// Module 13454 (NsfwGateGuildSettingsActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6540 */;
+import GuildActionSheetActions from "GuildActionSheetActions" /* 13456 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,8 +14,8 @@ const result = size.fileFinishedImporting("modules/age_gate/native/components/Ns
 
 export default function NsfwGateGuildSettingsActionSheet(guild) {
   guild = guild.guild;
-  const messageRequestPrivacyOption = guild(13437).useMessageRequestPrivacyOption({ guild });
-  const obj2 = { header: closure_3(guild(6565).BottomSheetTitleHeader, { title: guild.name }), children: null };
+  const messageRequestPrivacyOption = guild(13455).useMessageRequestPrivacyOption({ guild });
+  const obj2 = { header: closure_3(guild(6570).BottomSheetTitleHeader, { title: guild.name }), children: null };
   const obj4 = { hasIcons: false, children: null };
   const obj5 = { label: null, onPress: null };
   const intl = guild(1115).intl;
@@ -24,15 +24,15 @@ export default function NsfwGateGuildSettingsActionSheet(guild) {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     NotificationSettingsModalActionCreatorsDefault.open(guild.id);
   };
-  const items = [closure_3(guild(6615).ActionSheetRow, obj5), closure_3(guild(13438).RestrictedGuildPrivacyOption, { guild }), messageRequestPrivacyOption, ];
+  const items = [closure_3(guild(6620).ActionSheetRow, obj5), closure_3(guild(13456).RestrictedGuildPrivacyOption, { guild }), messageRequestPrivacyOption, ];
   const obj6 = { variant: "danger", label: null, onPress: null };
   const intl2 = guild(1115).intl;
   obj6.label = intl2.string(guild(1115).t.J2TBi3);
   obj6.onPress = function onPress() {
     return GuildActionSheetActions.handleLeaveServer(guild);
   };
-  items[3] = closure_3(guild(6615).ActionSheetRow, obj6);
+  items[3] = closure_3(guild(6620).ActionSheetRow, obj6);
   obj4.children = items;
-  obj2.children = closure_4(guild(6615).ActionSheetRow.Group, obj4);
-  return closure_3(guild(6613).ActionSheet, obj2);
+  obj2.children = closure_4(guild(6620).ActionSheetRow.Group, obj4);
+  return closure_3(guild(6618).ActionSheet, obj2);
 };

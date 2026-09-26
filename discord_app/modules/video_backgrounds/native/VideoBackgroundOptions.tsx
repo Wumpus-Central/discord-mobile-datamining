@@ -1,18 +1,18 @@
-// === Module 9446: VideoBackgroundOptions ===
+// === Module 9457: VideoBackgroundOptions ===
 
-// Module 9446 (VideoBackgroundOptions)
+// Module 9457 (VideoBackgroundOptions)
 import nativeDefault from "native" /* 576 */;
-import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 9105 */;
+import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 9116 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const Image = fn(17).Image;
-const BLUR_BACKGROUND_OPTION = fn(6403).BLUR_BACKGROUND_OPTION;
+const BLUR_BACKGROUND_OPTION = fn(6408).BLUR_BACKGROUND_OPTION;
 const jsx = fn(21).jsx;
 const none = "none";
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { imageThumbnail: null };
 let size = { width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, height: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, borderRadius: nativeDefault.radii.lg };
 obj2.imageThumbnail = size;

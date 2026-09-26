@@ -1,9 +1,9 @@
-// === Module 10656: ExperimentalCommonIcon ===
+// === Module 10669: ExperimentalCommonIcon ===
 
-// Module 10656 (ExperimentalCommonIcon)
+// Module 10669 (ExperimentalCommonIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4527 */;
-import _mod10657 from "module_10657" /* 10657 */;
+import BaseIconImage from "BaseIconImage" /* 4530 */;
+import _mod10670 from "module_10670" /* 10670 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const ExperimentalCommonIcon = function ExperimentalCommonIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10657, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10670, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

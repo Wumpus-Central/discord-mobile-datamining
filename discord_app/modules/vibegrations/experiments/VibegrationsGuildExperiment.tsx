@@ -1,7 +1,7 @@
-// === Module 5365: VibegrationsGuildExperiment ===
+// === Module 5372: VibegrationsGuildExperiment ===
 
-// Module 5365 (VibegrationsGuildExperiment)
-import GuildStore from "GuildStore" /* 2066 */;
+// Module 5372 (VibegrationsGuildExperiment)
+import GuildStore from "GuildStore" /* 2067 */;
 
 const require = globalThis.__r;
 
@@ -28,7 +28,7 @@ function hasVibegrationsGuild(arg0, location) {
   return false;
 }
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
-const ApexExperiment = fn(1434);
+const ApexExperiment = fn(1435);
 let closure_4 = ApexExperiment.createApexExperiment({ name: "2026-07-vibegrations-guild", kind: "guild", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/experiments/VibegrationsGuildExperiment.tsx");

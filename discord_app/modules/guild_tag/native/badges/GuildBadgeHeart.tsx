@@ -1,8 +1,8 @@
-// === Module 13453: GuildBadgeHeart ===
+// === Module 13471: GuildBadgeHeart ===
 
-// Module 13453 (GuildBadgeHeart)
-import inlineStyles from "inlineStyles" /* 7901 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 13445 */;
+// Module 13471 (GuildBadgeHeart)
+import inlineStyles from "inlineStyles" /* 7909 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 13463 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

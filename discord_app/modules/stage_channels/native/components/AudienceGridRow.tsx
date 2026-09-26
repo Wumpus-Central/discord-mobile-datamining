@@ -1,8 +1,8 @@
-// === Module 9516: AudienceGridRow ===
+// === Module 9527: AudienceGridRow ===
 
-// Module 9516 (AudienceGridRow)
-import BlankAudienceTileDefault from "BlankAudienceTile" /* 9517 */;
-import AudienceTileDefault from "AudienceTile" /* 9518 */;
+// Module 9527 (AudienceGridRow)
+import BlankAudienceTileDefault from "BlankAudienceTile" /* 9528 */;
+import AudienceTileDefault from "AudienceTile" /* 9529 */;
 import noop from "module_19" /* 19 */;
 
 class BlankAudience {
@@ -19,10 +19,10 @@ class BlankAudience {
   }
 }
 const View = fn(17).View;
-const MAX_AUDIENCE_ROW_LIMIT = fn(5721).MAX_AUDIENCE_ROW_LIMIT;
+const MAX_AUDIENCE_ROW_LIMIT = fn(5726).MAX_AUDIENCE_ROW_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_6 = createStyles.createStyles({ rowContainer: { flex: 1, flexDirection: "row", marginVertical: 16, paddingHorizontal: 4, justifyContent: "space-between" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/AudienceGridRow.tsx");

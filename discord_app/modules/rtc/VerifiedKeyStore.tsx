@@ -1,10 +1,10 @@
-// === Module 9136: VerifiedKeyStore ===
+// === Module 9147: VerifiedKeyStore ===
 
-// Module 9136 (VerifiedKeyStore)
+// Module 9147 (VerifiedKeyStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import _mod9137 from "module_9137" /* 9137 */;
+import _mod9148 from "module_9148" /* 9148 */;
 
 require = fn;
 let users = {};
@@ -25,7 +25,7 @@ prototype["getState"] = function getState() {
   return { users };
 };
 prototype["getKeyTrustedAt"] = function getKeyTrustedAt(arg0, uint8Array) {
-  const obj = _mod9137;
+  const obj = _mod9148;
   let tmp2;
   if (users[arg0] != null) {
     tmp2 = tmp[obj.serializeKey(obj, uint8Array)];
@@ -52,7 +52,7 @@ const verifiedKeyStore = new VerifiedKeyStore(DispatcherDefault, {
     }
     users[userId] = obj;
     const uint8Array = new Uint8Array(key);
-    obj[_mod9137.serializeKey(uint8Array)] = Date.now();
+    obj[_mod9148.serializeKey(uint8Array)] = Date.now();
   },
   SECURE_FRAMES_VERIFIED_KEY_DELETE: function handleSecureFramesVerifiedKeyDelete(arg0) {
     let tmp6 = null;

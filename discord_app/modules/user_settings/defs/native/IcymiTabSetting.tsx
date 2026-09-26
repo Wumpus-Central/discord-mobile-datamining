@@ -1,13 +1,13 @@
-// === Module 15059: IcymiTabSetting ===
+// === Module 15087: IcymiTabSetting ===
 
-// Module 15059 (IcymiTabSetting)
+// Module 15087 (IcymiTabSetting)
 import util from "util" /* 1115 */;
-import SettingsConstants from "SettingsConstants" /* 7412 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 7791 */;
-import ICYMIExperiment from "ICYMIExperiment" /* 7792 */;
-import useLabFeatureDefault from "useLabFeature" /* 7795 */;
-import LabFeatureActions from "LabFeatureActions" /* 15060 */;
-import SettingBuilders from "SettingBuilders" /* 10993 */;
+import SettingsConstants from "SettingsConstants" /* 7417 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 7799 */;
+import ICYMIExperiment from "ICYMIExperiment" /* 7800 */;
+import useLabFeatureDefault from "useLabFeature" /* 7803 */;
+import LabFeatureActions from "LabFeatureActions" /* 15088 */;
+import SettingBuilders from "SettingBuilders" /* 11006 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

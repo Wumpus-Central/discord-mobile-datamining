@@ -1,19 +1,19 @@
-// === Module 10755: BadgeTierGrid ===
+// === Module 10768: BadgeTierGrid ===
 
-// Module 10755 (BadgeTierGrid)
+// Module 10768 (BadgeTierGrid)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import LockIcon from "LockIcon" /* 5402 */;
-import BadgeUtils from "BadgeUtils" /* 10648 */;
-import BadgeArtImageDefault from "BadgeArtImage" /* 10753 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import LockIcon from "LockIcon" /* 5409 */;
+import BadgeUtils from "BadgeUtils" /* 10659 */;
+import BadgeArtImageDefault from "BadgeArtImage" /* 10766 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { section: { gap: nativeDefault.space.PX_16 }, grid: null, item: null, progressLabel: null, icon: null, dimmedIcon: null, subtitleRow: null, centeredText: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.grid = { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 };
@@ -45,7 +45,7 @@ export default function BadgeTierGrid(badge) {
     let intl = badge(1115).intl;
     let obj3 = { username: targetUsername };
     obj2.children = intl.formatToPlainString(badge(1115).t.KyTwIh, obj3);
-    isViewingOtherUser = closure_4(badge(4825).Text, obj2);
+    isViewingOtherUser = closure_4(badge(4832).Text, obj2);
   }
   let items = [isViewingOtherUser, ];
   let obj4 = { style: tmp.grid, accessibilityRole: "list", children: null };

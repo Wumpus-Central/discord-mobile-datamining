@@ -1,11 +1,11 @@
-// === Module 13663: AIShimmer ===
+// === Module 13940: AIShimmer ===
 
-// Module 13663 (AIShimmer)
-import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import AIShimmerTypes from "AIShimmerTypes" /* 13664 */;
-import waveTransition2 from "waveTransition" /* 13665 */;
-import createWaveTransition from "createWaveTransition" /* 13667 */;
+// Module 13940 (AIShimmer)
+import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import AIShimmerTypes from "AIShimmerTypes" /* 13941 */;
+import waveTransition2 from "waveTransition" /* 13942 */;
+import createWaveTransition from "createWaveTransition" /* 13944 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -170,13 +170,13 @@ function ShimmerLayers(pass) {
     obj2.opacity = obj3.glyphLayerOpacityAt(waveTransition2.easeTail(diff));
     return obj2;
   };
-  const obj5 = pass(4563);
-  fn.__closure = { animationProgress: animationProgress2, bandEdgesAt: pass(13665).bandEdgesAt, animationWidth: animationWidth2, overshoot: overshoot2, glyphLayerOpacityAt: pass(13665).glyphLayerOpacityAt, easeTail: pass(13665).easeTail };
+  const obj5 = pass(4566);
+  fn.__closure = { animationProgress: animationProgress2, bandEdgesAt: pass(13942).bandEdgesAt, animationWidth: animationWidth2, overshoot: overshoot2, glyphLayerOpacityAt: pass(13942).glyphLayerOpacityAt, easeTail: pass(13942).easeTail };
   fn.__workletHash = 5565898978148;
   fn.__initData = __initData9;
   const derivedValue = obj5.useDerivedValue(fn);
   closure_129_5 = derivedValue;
-  const obj6 = { animationProgress: animationProgress2, bandEdgesAt: pass(13665).bandEdgesAt, animationWidth: animationWidth2, overshoot: overshoot2, glyphLayerOpacityAt: pass(13665).glyphLayerOpacityAt, easeTail: pass(13665).easeTail };
+  const obj6 = { animationProgress: animationProgress2, bandEdgesAt: pass(13942).bandEdgesAt, animationWidth: animationWidth2, overshoot: overshoot2, glyphLayerOpacityAt: pass(13942).glyphLayerOpacityAt, easeTail: pass(13942).easeTail };
   class T {
     constructor() {
       obj = { opacity: closure_1_1.get() };
@@ -186,8 +186,8 @@ function ShimmerLayers(pass) {
   T.__closure = { crossFadeOpacity: crossFadeOpacity2 };
   T.__workletHash = 1960911197633;
   T.__initData = __initData10;
-  const animatedStyle = pass(4563).useAnimatedStyle(T);
-  const obj7 = pass(4563);
+  const animatedStyle = pass(4566).useAnimatedStyle(T);
+  const obj7 = pass(4566);
   const fn2 = function f() {
     value = closure_1_5.get();
     const obj = { opacity: value.opacity, transform: null };
@@ -198,8 +198,8 @@ function ShimmerLayers(pass) {
   fn2.__closure = { bandState: derivedValue };
   fn2.__workletHash = 1697100745255;
   fn2.__initData = __initData11;
-  const animatedStyle1 = pass(4563).useAnimatedStyle(fn2);
-  const obj8 = pass(4563);
+  const animatedStyle1 = pass(4566).useAnimatedStyle(fn2);
+  const obj8 = pass(4566);
   const fn3 = function y() {
     value = closure_1_5.get();
     const obj = { transform: null };
@@ -210,8 +210,8 @@ function ShimmerLayers(pass) {
   fn3.__closure = { bandState: derivedValue, clippingWindowWidth: clippingWindowWidth2 };
   fn3.__workletHash = 14480924886008;
   fn3.__initData = __initData12;
-  const animatedStyle2 = pass(4563).useAnimatedStyle(fn3);
-  const obj9 = pass(4563);
+  const animatedStyle2 = pass(4566).useAnimatedStyle(fn3);
+  const obj9 = pass(4566);
   const fn4 = function _() {
     const obj = { transform: null };
     const items = [{ translateX: _slicedToArray - closure_1_5.get().bandEnd }];
@@ -222,7 +222,7 @@ function ShimmerLayers(pass) {
   fn4.__workletHash = 9956205645387;
   fn4.__initData = __initData13;
   let items = [pass.slotA];
-  const animatedStyle3 = pass(4563).useAnimatedStyle(fn4);
+  const animatedStyle3 = pass(4566).useAnimatedStyle(fn4);
   const items1 = [pass.slotB];
   const memo = noop.useMemo(() => waveTransition2.shiftedLineFor(pass.slotA), items);
   const memo1 = noop.useMemo(() => waveTransition2.shiftedLineFor(pass.slotB), items1);
@@ -380,7 +380,7 @@ get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_10 = createStyles.createStyles((height, height2) => {
   const obj = { container: { alignSelf: "flex-start", height }, sizer: { opacity: 0 }, layer: { position: "absolute", top: 0, left: 0, height }, glyphLayer: null, window: { position: "absolute", top: 0, left: 0, height, overflow: "hidden" } };
   const rect = { position: "absolute", top: (height - height2) / 2, left: 0, height: height2 };

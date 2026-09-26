@@ -1,19 +1,19 @@
-// === Module 11579: home/EmptyState ===
+// === Module 11593: home/EmptyState ===
 
-// Module 11579 (home/EmptyState)
+// Module 11593 (home/EmptyState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 8704 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11519 */;
-import HomeEmptyStateDefault from "HomeEmptyState" /* 11580 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 8712 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11533 */;
+import HomeEmptyStateDefault from "HomeEmptyState" /* 11594 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { container: { padding: 16, gap: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.lg, alignItems: "center", justifyContent: "center" }, textContainer: { textAlign: "center" } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

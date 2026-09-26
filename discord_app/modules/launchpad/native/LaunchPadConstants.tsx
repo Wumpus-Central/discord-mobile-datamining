@@ -1,8 +1,8 @@
-// === Module 10989: LaunchPadConstants ===
+// === Module 11002: LaunchPadConstants ===
 
-// Module 10989 (LaunchPadConstants)
+// Module 11002 (LaunchPadConstants)
 import _mod17 from "module_17" /* 17 */;
-import DeviceUtils from "DeviceUtils" /* 4808 */;
+import DeviceUtils from "DeviceUtils" /* 4812 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import size_mod from "module_2" /* 2 */;
 

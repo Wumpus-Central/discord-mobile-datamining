@@ -1,6 +1,6 @@
-// === Module 4850: CallConstants ===
+// === Module 4857: CallConstants ===
 
-// Module 4850 (CallConstants)
+// Module 4857 (CallConstants)
 import size from "module_2" /* 2 */;
 
 const ParticipantTypes = { STREAM: 0, [0]: "STREAM", HIDDEN_STREAM: 1, [1]: "HIDDEN_STREAM", USER: 2, [2]: "USER", ACTIVITY: 3, [3]: "ACTIVITY" };

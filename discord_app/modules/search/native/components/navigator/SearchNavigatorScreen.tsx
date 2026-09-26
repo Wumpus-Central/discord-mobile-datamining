@@ -1,22 +1,22 @@
-// === Module 16655: SearchNavigatorScreen ===
+// === Module 16684: SearchNavigatorScreen ===
 
-// Module 16655 (SearchNavigatorScreen)
+// Module 16684 (SearchNavigatorScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4693 */;
-import Pressables from "Pressables" /* 5428 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5430 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5935 */;
-import SearchScreenSearchBarDefault from "SearchScreenSearchBar" /* 16408 */;
-import SearchScreenLayoutDefault from "SearchScreenLayout" /* 16417 */;
-import useSearchLayoutInsetTopDefault from "useSearchLayoutInsetTop" /* 16656 */;
+import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4697 */;
+import Pressables from "Pressables" /* 5435 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5437 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5940 */;
+import SearchScreenSearchBarDefault from "SearchScreenSearchBar" /* 16437 */;
+import SearchScreenLayoutDefault from "SearchScreenLayout" /* 16446 */;
+import useSearchLayoutInsetTopDefault from "useSearchLayoutInsetTop" /* 16685 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, tabs: null, back: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.tabs = { flex: 1, marginTop: nativeDefault.space.PX_16 };
@@ -31,10 +31,10 @@ export default function SearchNavigatorScreen(navigation) {
   const searchContext = navigation.route.params.searchContext;
   const tmp = closure_8();
   importDefault = tmp;
-  const searchSuggestionsGesture = navigation(16406).useSearchSuggestionsGesture(searchContext);
-  ({ gesture, dismissed, setDismissed, onLayoutMeasure } = searchSuggestionsGesture);
+  const searchSuggestionsGesture = navigation(16435).useSearchSuggestionsGesture(searchContext);
+  ({ gesture, detectorRef, suggestionsContext } = searchSuggestionsGesture);
   const items = [navigation.goBack, tmp.back];
-  let obj = navigation(16406);
+  let obj = navigation(16435);
   let obj2 = { children: null };
   const memo = noop.useMemo(() => {
     const obj = { children: null };
@@ -47,16 +47,18 @@ export default function SearchNavigatorScreen(navigation) {
     return hasOwnProperty(View, obj);
   }, items);
   const items1 = [closure_5(ThemedGradientDefault, { absolute: true, wide: true, tall: true }), ];
-  const obj3 = { gesture, children: null };
-  const obj4 = { style: null, children: null };
+  const obj3 = { value: suggestionsContext, children: null };
+  const obj4 = { gesture, children: null };
+  const obj5 = { ref: detectorRef, style: null, children: null };
   const items2 = [tmp.wrapper, { paddingTop: useSearchLayoutInsetTopDefault() }];
-  obj4.style = items2;
-  const items3 = [closure_5(SearchScreenSearchBarDefault, { searchContext, suggestionsDismissed: dismissed, setSuggestionsDismissed: setDismissed, onSuggestionsLayoutMesure: onLayoutMeasure, backButton: memo }), ];
+  obj5.style = items2;
+  const items3 = [closure_5(SearchScreenSearchBarDefault, { searchContext, backButton: memo }), ];
   const tmp3 = useSearchLayoutInsetTopDefault();
   items3[1] = closure_5(View, { style: tmp.tabs, children: closure_5(SearchScreenLayoutDefault, { searchContext, width: useBaseAppContainerDimensionsDefault().width }) });
-  obj4.children = items3;
-  obj3.children = closure_6(View, obj4);
-  items1[1] = closure_5(navigation(15973).NonCollapsableGestureDetector, obj3);
+  obj5.children = items3;
+  obj4.children = closure_6(View, obj5);
+  obj3.children = closure_5(navigation(16001).NonCollapsableGestureDetector, obj4);
+  items1[1] = closure_5(navigation(16435).SearchSuggestionsProvider, obj3);
   obj2.children = items1;
   return closure_6(closure_7, obj2);
 };

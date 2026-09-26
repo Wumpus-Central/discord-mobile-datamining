@@ -1,8 +1,8 @@
-// === Module 15929: isHomeDrawerChannelInChannelList ===
+// === Module 15957: isHomeDrawerChannelInChannelList ===
 
-// Module 15929 (isHomeDrawerChannelInChannelList)
+// Module 15957 (isHomeDrawerChannelInChannelList)
 import initialize from "initialize" /* 504 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5010 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5017 */;
 
 require = fn;
 const size = fn(2);

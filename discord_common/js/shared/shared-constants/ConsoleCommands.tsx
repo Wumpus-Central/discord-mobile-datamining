@@ -1,6 +1,6 @@
-// === Module 9234: ConsoleCommands ===
+// === Module 9245: ConsoleCommands ===
 
-// Module 9234 (ConsoleCommands)
+// Module 9245 (ConsoleCommands)
 import size from "module_2" /* 2 */;
 
 const obj = { ALL: new Set(["connect_voice"]) };

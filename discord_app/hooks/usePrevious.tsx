@@ -1,6 +1,6 @@
-// === Module 7712: usePrevious ===
+// === Module 7720: usePrevious ===
 
-// Module 7712 (usePrevious)
+// Module 7720 (usePrevious)
 import noop from "module_19" /* 19 */;
 import size from "module_2" /* 2 */;
 

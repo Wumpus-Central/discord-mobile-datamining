@@ -1,22 +1,22 @@
-// === Module 10596: PremiumUpsellTooltipActionSheet ===
+// === Module 10607: PremiumUpsellTooltipActionSheet ===
 
-// Module 10596 (PremiumUpsellTooltipActionSheet)
+// Module 10607 (PremiumUpsellTooltipActionSheet)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4651 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import components_Button_Button from "components/Button/Button" /* 5274 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6566 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4654 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import components_Button_Button from "components/Button/Button" /* 5281 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6571 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
-const ContentDismissActionType = fn(2041).ContentDismissActionType;
+const ContentDismissActionType = fn(2042).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { container: { justifyContent: "center", paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, img: null, header: null, title: null, description: null, nitroWheel: null, buttonContainer: null };
 let size = { alignSelf: "center", width: 231, height: 231, borderRadius: nativeDefault.radii.sm, marginBottom: 16 };
 obj2.img = size;

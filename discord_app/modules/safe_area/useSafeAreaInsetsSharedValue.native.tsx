@@ -1,12 +1,12 @@
-// === Module 10882: useSafeAreaInsetsSharedValue ===
+// === Module 10895: useSafeAreaInsetsSharedValue ===
 
-// Module 10882 (useSafeAreaInsetsSharedValue)
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1481 */;
-import AppEntryKey from "AppEntryKey" /* 1625 */;
-import subscribeToSafeAreaInsetsDefault from "subscribeToSafeAreaInsets" /* 8915 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10883 */;
-import ReanimatedRexport_mod from "ReanimatedRexport" /* 4563 */;
-import useSafeAreaInsets_mod from "useSafeAreaInsets" /* 1612 */;
+// Module 10895 (useSafeAreaInsetsSharedValue)
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1482 */;
+import AppEntryKey from "AppEntryKey" /* 1626 */;
+import subscribeToSafeAreaInsetsDefault from "subscribeToSafeAreaInsets" /* 8926 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10896 */;
+import ReanimatedRexport_mod from "ReanimatedRexport" /* 4566 */;
+import useSafeAreaInsets_mod from "useSafeAreaInsets" /* 1613 */;
 import size from "module_2" /* 2 */;
 
 let obj = { main: null, share: null };

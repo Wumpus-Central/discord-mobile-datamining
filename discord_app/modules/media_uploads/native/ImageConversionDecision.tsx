@@ -1,16 +1,16 @@
-// === Module 5464: ImageConversionDecision ===
+// === Module 5471: ImageConversionDecision ===
 
-// Module 5464 (ImageConversionDecision)
+// Module 5471 (ImageConversionDecision)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import IosImageTypesManagerDefault from "IosImageTypesManager" /* 5465 */;
+import IosImageTypesManagerDefault from "IosImageTypesManager" /* 5472 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/media_uploads/native/ImageConversionDecision.tsx");
 
-export const isPhotoKitAsset = function isPhotoKitAsset(str, importDefault) {
+export const isPhotoKitAsset = function isPhotoKitAsset(str, filename) {
   let tmp = null != str.match(/^ph:\/\//i);
   if (tmp) {
-    tmp = null != importDefault;
+    tmp = null != filename;
   }
   return tmp;
 };

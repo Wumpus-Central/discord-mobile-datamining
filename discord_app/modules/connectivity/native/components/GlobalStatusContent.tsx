@@ -1,30 +1,30 @@
-// === Module 8956: GlobalStatusContent ===
+// === Module 8967: GlobalStatusContent ===
 
-// Module 8956 (GlobalStatusContent)
+// Module 8967 (GlobalStatusContent)
 import nativeDefault from "native" /* 576 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import useThemeDefault from "useTheme" /* 4763 */;
-import ChannelCallModalDefault from "ChannelCallModal" /* 8827 */;
-import StatusBarDefault from "StatusBar" /* 8831 */;
-import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 8853 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 8948 */;
-import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 8951 */;
-import GlobalStageChannelStatusDefault from "GlobalStageChannelStatus" /* 8957 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
+import useThemeDefault from "useTheme" /* 4767 */;
+import ChannelCallModalDefault from "ChannelCallModal" /* 8835 */;
+import StatusBarDefault from "StatusBar" /* 8839 */;
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 8861 */;
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 8959 */;
+import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 8962 */;
+import GlobalStageChannelStatusDefault from "GlobalStageChannelStatus" /* 8968 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4852 */;
-import SessionsStore from "SessionsStore" /* 4847 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
+import GuildStore from "GuildStore" /* 2067 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4859 */;
+import SessionsStore from "SessionsStore" /* 4854 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const RTC_PANEL_HEIGHT = fn(8950).RTC_PANEL_HEIGHT;
+const RTC_PANEL_HEIGHT = fn(8961).RTC_PANEL_HEIGHT;
 const RTCConnectionStates = fn(1074).RTCConnectionStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { bgNeutral: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, bg: null, container: null };
 const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.bg = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
@@ -105,8 +105,8 @@ export default function ConnectivityGlobalStatusContent() {
   const isThemeDarkResult = require("shared").isThemeDark(useThemeDefault());
   let isScreenLandscape = require("useIsScreenLandscape").useIsScreenLandscape();
   if (isScreenLandscape) {
-    isScreenLandscape = tmp5(4688).isModalOpen(ChannelCallModalDefault);
-    const tmp5Result5 = tmp5(4688);
+    isScreenLandscape = tmp5(4692).isModalOpen(ChannelCallModalDefault);
+    const tmp5Result5 = tmp5(4692);
   }
   if (isScreenLandscape) {
     isScreenLandscape = tmp5(1364).isAndroid();

@@ -1,7 +1,7 @@
-// === Module 15330: useDesignSystemsSettingPredicate ===
+// === Module 15357: useDesignSystemsSettingPredicate ===
 
-// Module 15330 (useDesignSystemsSettingPredicate)
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14354 */;
+// Module 15357 (useDesignSystemsSettingPredicate)
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14379 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/useDesignSystemsSettingPredicate.tsx");

@@ -1,19 +1,19 @@
-// === Module 15568: useUsernameRegistrationStep ===
+// === Module 15596: useUsernameRegistrationStep ===
 
-// Module 15568 (useUsernameRegistrationStep)
+// Module 15596 (useUsernameRegistrationStep)
 import util from "util" /* 1115 */;
-import Link from "Link" /* 1485 */;
-import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 14240 */;
-import RegistrationStepsUtils from "RegistrationStepsUtils" /* 15542 */;
+import Link from "Link" /* 1486 */;
+import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 14265 */;
+import RegistrationStepsUtils from "RegistrationStepsUtils" /* 15571 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UniqueUsernamesStore from "UniqueUsernamesStore" /* 14243 */;
+import UniqueUsernamesStore from "UniqueUsernamesStore" /* 14268 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const useRegistrationUIStore = fn(15543).useRegistrationUIStore;
-const RegistrationConstants = fn(15544);
+const useRegistrationUIStore = fn(15572).useRegistrationUIStore;
+const RegistrationConstants = fn(15573);
 ({ authStateToRegisterTransitionStep: closure_7, RegistrationTransitionActionTypes: closure_8 } = RegistrationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/auth/native/components/utils/useUsernameRegistrationStep.tsx");

@@ -1,13 +1,13 @@
-// === Module 5076: useMessageAuthor ===
+// === Module 5083: useMessageAuthor ===
 
-// Module 5076 (useMessageAuthor)
+// Module 5083 (useMessageAuthor)
 import _modDef38 from "module_38" /* 38 */;
-import UserUtilsDefault from "UserUtils" /* 4675 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildMemberStore from "GuildMemberStore" /* 2107 */;
-import GuildRoleStore from "GuildRoleStore" /* 2101 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import RelationshipStore from "RelationshipStore" /* 4476 */;
+import UserUtilsDefault from "UserUtils" /* 4678 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
+import GuildMemberStore from "GuildMemberStore" /* 2108 */;
+import GuildRoleStore from "GuildRoleStore" /* 2102 */;
+import GuildStore from "GuildStore" /* 2067 */;
+import RelationshipStore from "RelationshipStore" /* 4479 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = fn;

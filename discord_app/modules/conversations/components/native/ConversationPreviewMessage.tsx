@@ -1,13 +1,13 @@
-// === Module 7368: ConversationPreviewMessage ===
+// === Module 7373: ConversationPreviewMessage ===
 
-// Module 7368 (ConversationPreviewMessage)
+// Module 7373 (ConversationPreviewMessage)
 import nativeDefault from "native" /* 576 */;
-import DateUtils from "DateUtils" /* 4509 */;
-import RowGeneratorDefault from "RowGenerator" /* 7369 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 7575 */;
+import DateUtils from "DateUtils" /* 4512 */;
+import RowGeneratorDefault from "RowGenerator" /* 7374 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 7583 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4821 */;
-import GuildMemberStore from "GuildMemberStore" /* 2107 */;
+import AccessibilityStore from "AccessibilityStore" /* 4825 */;
+import GuildMemberStore from "GuildMemberStore" /* 2108 */;
 
 require = fn;
 function modifyRow(arg0) {
@@ -19,7 +19,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let rowGenerator = new RowGeneratorDefault();
 rowGenerator.setOptions({ renderReplies: false, renderReactions: false });
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj3 = { container: { gap: nativeDefault.space.PX_4 }, header: null, authorRow: null, headerTimestamp: null };
 let obj4 = { gap: nativeDefault.space.PX_4 };
 obj3.header = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };

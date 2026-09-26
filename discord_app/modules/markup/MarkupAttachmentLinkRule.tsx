@@ -1,8 +1,8 @@
-// === Module 5309: MarkupAttachmentLinkRule ===
+// === Module 5316: MarkupAttachmentLinkRule ===
 
-// Module 5309 (MarkupAttachmentLinkRule)
-import _modDef1929 from "module_1929" /* 1929 */;
-import AttachmentUrlConstants from "AttachmentUrlConstants" /* 5310 */;
+// Module 5316 (MarkupAttachmentLinkRule)
+import _modDef1930 from "module_1930" /* 1930 */;
+import AttachmentUrlConstants from "AttachmentUrlConstants" /* 5317 */;
 import size from "module_2" /* 2 */;
 
 const mapped = Array.from(AttachmentUrlConstants.ATTACHMENT_PATH_PREFIXES).map((item) => item.replaceAll("/", ""));
@@ -10,7 +10,7 @@ const regExp = new RegExp("^https://(?:[A-Za-z0-9-]+\\.)*(?:(?:media|images)" + 
 let obj = { attachmentLink: null };
 const arr = Array.from(AttachmentUrlConstants.ATTACHMENT_PATH_PREFIXES);
 obj.attachmentLink = {
-  order: _modDef1929.defaultRules.url.order - 0.5,
+  order: _modDef1930.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     return regExp.exec(arg0);

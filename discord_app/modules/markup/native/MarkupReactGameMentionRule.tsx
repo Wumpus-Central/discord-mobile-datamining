@@ -1,10 +1,10 @@
-// === Module 13373: MarkupReactGameMentionRule ===
+// === Module 13391: MarkupReactGameMentionRule ===
 
-// Module 13373 (MarkupReactGameMentionRule)
+// Module 13391 (MarkupReactGameMentionRule)
 import nativeDefault from "native" /* 576 */;
-import useGame from "useGame" /* 6722 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8125 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8131 */;
+import useGame from "useGame" /* 6727 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8133 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8139 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -104,7 +104,7 @@ function FetchingGameMention(state) {
 }
 const jsxProd = fn(21);
 ({ jsxs: c3, jsx: closure_4 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { icon: null, chip: null, chipText: null };
 let size = { width: 16, height: 16, borderRadius: nativeDefault.radii.xs, marginRight: 2 };
 obj2.icon = size;

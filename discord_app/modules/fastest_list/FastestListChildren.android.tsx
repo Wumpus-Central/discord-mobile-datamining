@@ -1,13 +1,13 @@
-// === Module 6483: FastestListChildren ===
+// === Module 6488: FastestListChildren ===
 
-// Module 6483 (FastestListChildren)
-import getFastestListVisibleItemsDefault from "getFastestListVisibleItemsDefault" /* 6484 */;
+// Module 6488 (FastestListChildren)
+import getFastestListVisibleItemsDefault from "getFastestListVisibleItemsDefault" /* 6489 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_6 = createStyles.createStyles({ portal: { position: "absolute", opacity: 0, height: 0, top: 0 } });
 let obj = { items: [], keys: new Map(), keyIndex: 0 };
 let map = new Map();

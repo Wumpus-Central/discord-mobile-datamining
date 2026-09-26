@@ -1,10 +1,10 @@
-// === Module 1985: BaseTelemetryExportChannel ===
+// === Module 1986: BaseTelemetryExportChannel ===
 
-// Module 1985 (BaseTelemetryExportChannel)
+// Module 1986 (BaseTelemetryExportChannel)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage2 from "Storage" /* 510 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BaseTelemetryChannel from "BaseTelemetryChannel" /* 1986 */;
+import BaseTelemetryChannel from "BaseTelemetryChannel" /* 1987 */;
 
 require = fn;
 class BaseTelemetryExportChannel extends tmp2 {

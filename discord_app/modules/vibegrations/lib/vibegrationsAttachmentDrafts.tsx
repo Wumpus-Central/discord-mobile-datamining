@@ -1,9 +1,9 @@
-// === Module 16371: vibegrationsAttachmentDrafts ===
+// === Module 16400: vibegrationsAttachmentDrafts ===
 
-// Module 16371 (vibegrationsAttachmentDrafts)
+// Module 16400 (vibegrationsAttachmentDrafts)
 import util from "util" /* 1115 */;
-import _modDef3714 from "module_3714" /* 3714 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 5364 */;
+import _modDef3715 from "module_3715" /* 3715 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 5371 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import Dispatcher_mod from "Dispatcher" /* 573 */;
 
@@ -101,10 +101,10 @@ function discardProject(projectId, arg1) {
     zustandStore.setState(obj);
   }
 }
-const deleteStagedAttachment = fn(12607).deleteStagedAttachment;
+const deleteStagedAttachment = fn(12624).deleteStagedAttachment;
 let closure_6 = [];
 let c7 = 1;
-const zustandStore = fn(4701).createZustandStore(() => ({ draftsByProject: {} }));
+const zustandStore = fn(4705).createZustandStore(() => ({ draftsByProject: {} }));
 let Dispatcher = Dispatcher_mod;
 const subscription = Dispatcher.subscribe("LOGOUT", () => {
   const keys = Object.keys(zustandStore.getState().draftsByProject);

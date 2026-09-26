@@ -1,18 +1,18 @@
-// === Module 6802: useGetDismissibleContent ===
+// === Module 6807: useGetDismissibleContent ===
 
-// Module 6802 (useGetDismissibleContent)
+// Module 6807 (useGetDismissibleContent)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import Uint8ArrayUtils from "Uint8ArrayUtils" /* 2027 */;
-import dismissible_content from "dismissible_content" /* 2028 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 2030 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4651 */;
+import Uint8ArrayUtils from "Uint8ArrayUtils" /* 2028 */;
+import dismissible_content from "dismissible_content" /* 2029 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 2031 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4654 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4652 */;
-import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 2032 */;
-import DismissibleContentShownStateStore from "DismissibleContentShownStateStore" /* 2034 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4655 */;
+import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 2033 */;
+import DismissibleContentShownStateStore from "DismissibleContentShownStateStore" /* 2035 */;
 
 const require = globalThis.__r;
 
@@ -35,8 +35,8 @@ function useGetVisibleContent(found1, stateFromStores, GUILD_HEADER_TOOLTIPS, la
   closure_6 = tmp6;
   let result = null != found1;
   if (result) {
-    result = tmp2(2030).isDismissibleContentBlockedByOverlay(found1, first, tmp6);
-    const tmp2Result = tmp2(2030);
+    result = tmp2(2031).isDismissibleContentBlockedByOverlay(found1, first, tmp6);
+    const tmp2Result = tmp2(2031);
   }
   let obj = require("OverlayTrackingUtils");
   const items = [ref];
@@ -152,7 +152,7 @@ function canShowTimeRecurringContent(arg0, lastDismissedAtMs, numTimesDismissed,
   }
   return hasLoadedResult;
 }
-const removeCandidateContent = fn(2034).removeCandidateContent;
+const removeCandidateContent = fn(2035).removeCandidateContent;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const UserSettingsTypes = fn(1084).UserSettingsTypes;
 let closure_13 = {};
@@ -307,7 +307,7 @@ export const useGetTimeRecurringDismissibleContent = function useGetTimeRecurrin
     }
     dependencyMap = tmp10;
     tmp5 = tmp10;
-    tmpResult = tmp(4673);
+    tmpResult = tmp(4676);
   }
   const items2 = [useGetVisibleContent(tmp5, stateFromStores1, groupName), ];
   const items3 = [tmp5, groupName, stateFromStores1];

@@ -1,13 +1,13 @@
-// === Module 8488: VibegrationsActionCreators ===
+// === Module 8496: VibegrationsActionCreators ===
 
-// Module 8488 (VibegrationsActionCreators)
+// Module 8496 (VibegrationsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 5364 */;
-import VibegrationsAnalytics from "VibegrationsAnalytics" /* 8489 */;
-import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 8490 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 5371 */;
+import VibegrationsAnalytics from "VibegrationsAnalytics" /* 8497 */;
+import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 8498 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8487 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8495 */;
 
 require = fn;
 function reloadVibegrationsAppFrames(application_id) {

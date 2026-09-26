@@ -1,26 +1,26 @@
-// === Module 16975: VoicePanelMicButton ===
+// === Module 17003: VoicePanelMicButton ===
 
-// Module 16975 (VoicePanelMicButton)
+// Module 17003 (VoicePanelMicButton)
 import LoggerDefault from "Logger" /* 3 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
-import HapticUtils from "HapticUtils" /* 4797 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6068 */;
-import useMuteStates from "useMuteStates" /* 6758 */;
-import MediaEngineActionCreators from "MediaEngineActionCreators" /* 8963 */;
-import MicrophoneDenyIcon from "MicrophoneDenyIcon" /* 9127 */;
-import VoiceActionUtils from "VoiceActionUtils" /* 9452 */;
-import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 9453 */;
-import useDeafStates from "useDeafStates" /* 9467 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
+import HapticUtils from "HapticUtils" /* 4801 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6073 */;
+import useMuteStates from "useMuteStates" /* 6763 */;
+import MediaEngineActionCreators from "MediaEngineActionCreators" /* 8974 */;
+import MicrophoneDenyIcon from "MicrophoneDenyIcon" /* 9138 */;
+import VoiceActionUtils from "VoiceActionUtils" /* 9463 */;
+import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 9464 */;
+import useDeafStates from "useDeafStates" /* 9478 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 4846 */;
-import ImpersonateStore from "ImpersonateStore" /* 2100 */;
+import GameConsoleStore from "GameConsoleStore" /* 4853 */;
+import ImpersonateStore from "ImpersonateStore" /* 2101 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import MediaEngineStore from "MediaEngineStore" /* 1992 */;
-import PermissionStore from "PermissionStore" /* 4466 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
+import MediaEngineStore from "MediaEngineStore" /* 1993 */;
+import PermissionStore from "PermissionStore" /* 4469 */;
 import UserStore from "UserStore" /* 1372 */;
-import VoiceStateStore from "VoiceStateStore" /* 4848 */;
+import VoiceStateStore from "VoiceStateStore" /* 4855 */;
 
 const require = globalThis.__r;
 
@@ -28,7 +28,7 @@ require = fn;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 let closure_16 = new LoggerDefault("VoicePanelMicButton");
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_17 = createStyles.createStyles({ text: { position: "absolute", left: 0, right: 0, bottom: 4, textAlign: "center", opacity: 0.5 } });
 let closure_18 = { code: "function VoicePanelMicButtonTsx1(){const{runOnJS,handlePTTEnd}=this.__closure;runOnJS(handlePTTEnd)();}" };
 let closure_19 = { code: "function VoicePanelMicButtonTsx2(event,manager){const{State,runOnJS,handleDragStart}=this.__closure;if(event.state!==State.BEGAN)return;manager.activate();runOnJS(handleDragStart)();}" };

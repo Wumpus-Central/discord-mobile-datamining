@@ -1,7 +1,7 @@
-// === Module 15943: GuildMediaStateStoreExperiment ===
+// === Module 15971: GuildMediaStateStoreExperiment ===
 
-// Module 15943 (GuildMediaStateStoreExperiment)
-import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1435 */;
+// Module 15971 (GuildMediaStateStoreExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1436 */;
 
 const obj = { HOOK: "hook", STORE: "store", SHADOW: "shadow" };
 const obj2 = { kind: "user", name: "2026-08-guilds-bar-media-state-store", defaultConfig: { source: obj.HOOK }, variations: { 0: { source: obj.HOOK }, 1: { source: obj.STORE }, 2: { source: obj.SHADOW } } };

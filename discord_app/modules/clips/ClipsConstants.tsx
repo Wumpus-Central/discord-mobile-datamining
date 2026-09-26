@@ -1,6 +1,6 @@
-// === Module 5437: ClipsConstants ===
+// === Module 5444: ClipsConstants ===
 
-// Module 5437 (ClipsConstants)
+// Module 5444 (ClipsConstants)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1091 */;
 

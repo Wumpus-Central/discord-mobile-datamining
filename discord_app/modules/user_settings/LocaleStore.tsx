@@ -1,9 +1,9 @@
-// === Module 2111: LocaleStore ===
+// === Module 2112: LocaleStore ===
 
-// Module 2111 (LocaleStore)
+// Module 2112 (LocaleStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import DiscordNativeDefault from "DiscordNative" /* 4447 */;
+import DiscordNativeDefault from "DiscordNative" /* 4450 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
 
@@ -101,7 +101,7 @@ function handleUpdate() {
   }
   return flag;
 }
-const setAppLocale = fn(2112).setAppLocale;
+const setAppLocale = fn(2113).setAppLocale;
 let locale = fn(1115).intl.currentLocale;
 let global = fn(1115).systemLocale;
 (function getSystemLocale() {

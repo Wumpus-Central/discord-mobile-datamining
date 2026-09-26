@@ -1,7 +1,7 @@
-// === Module 6922: isSpam ===
+// === Module 6927: isSpam ===
 
-// Module 6922 (isSpam)
-import AutomodMessageUtils from "AutomodMessageUtils" /* 6923 */;
+// Module 6927 (isSpam)
+import AutomodMessageUtils from "AutomodMessageUtils" /* 6928 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

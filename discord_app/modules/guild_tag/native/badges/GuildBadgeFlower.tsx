@@ -1,8 +1,8 @@
-// === Module 13457: GuildBadgeFlower ===
+// === Module 13475: GuildBadgeFlower ===
 
-// Module 13457 (GuildBadgeFlower)
-import inlineStyles from "inlineStyles" /* 7901 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 13445 */;
+// Module 13475 (GuildBadgeFlower)
+import inlineStyles from "inlineStyles" /* 7909 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 13463 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

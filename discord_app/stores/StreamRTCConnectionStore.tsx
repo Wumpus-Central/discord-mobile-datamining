@@ -1,20 +1,20 @@
-// === Module 4868: StreamRTCConnectionStore ===
+// === Module 4875: StreamRTCConnectionStore ===
 
-// Module 4868 (StreamRTCConnectionStore)
+// Module 4875 (StreamRTCConnectionStore)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import StreamRTCConnection from "StreamRTCConnection" /* 4873 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4881 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4884 */;
-import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7152 */;
-import canSpectateDefault from "canSpectate" /* 13329 */;
-import RunningGameStore from "RunningGameStore" /* 1999 */;
+import StreamRTCConnection from "StreamRTCConnection" /* 4880 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4888 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4891 */;
+import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7157 */;
+import canSpectateDefault from "canSpectate" /* 13346 */;
+import RunningGameStore from "RunningGameStore" /* 2000 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 1992 */;
-import PresenceStore from "PresenceStore" /* 4869 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4852 */;
+import MediaEngineStore from "MediaEngineStore" /* 1993 */;
+import PresenceStore from "PresenceStore" /* 4876 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4859 */;
 import Dispatcher from "Dispatcher" /* 573 */;
 
 const StreamRTCConnectionDefault = StreamRTCConnection;
@@ -22,7 +22,7 @@ const StreamRTCConnectionDefault = StreamRTCConnection;
 require = fn;
 const Constants = fn(1074);
 ({ RTCConnectionQuality: closure_9, StreamLayouts } = Constants);
-const StreamTypes = fn(4871).StreamTypes;
+const StreamTypes = fn(4878).StreamTypes;
 let dependencyMap = {};
 dependencyMap = {};
 let closure_13 = {};

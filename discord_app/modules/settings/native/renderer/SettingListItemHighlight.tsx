@@ -1,16 +1,16 @@
-// === Module 14230: SettingListItemHighlight ===
+// === Module 14255: SettingListItemHighlight ===
 
-// Module 14230 (SettingListItemHighlight)
+// Module 14255 (SettingListItemHighlight)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
-import timing from "timing" /* 4830 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
+import timing from "timing" /* 4837 */;
 import noop from "module_19" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14225 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14250 */;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj = { background: { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_HOVER } };
 let closure_7 = createStyles.createStyles(obj);
 const __initData = { code: "function SettingListItemHighlightTsx1(){const{withSequence,withDelay,withTiming,Easing,runOnJS,clearSelectedSearchResult}=this.__closure;return{opacity:withSequence(withDelay(500,withTiming(0,{duration:0})),withTiming(0.2,{duration:300,easing:Easing.ease}),withTiming(0,{duration:300,easing:Easing.ease},'respect-motion-settings',function(finished){if(finished){runOnJS(clearSelectedSearchResult);}}))};}" };

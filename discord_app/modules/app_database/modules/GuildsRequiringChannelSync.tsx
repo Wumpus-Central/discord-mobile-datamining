@@ -1,21 +1,21 @@
-// === Module 7060: GuildsRequiringChannelSync ===
+// === Module 7065: GuildsRequiringChannelSync ===
 
-// Module 7060 (GuildsRequiringChannelSync)
+// Module 7065 (GuildsRequiringChannelSync)
 import LoggerDefault from "Logger" /* 3 */;
 import Constants2 from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import v1 from "v1" /* 1255 */;
 import FlagUtils from "FlagUtils" /* 1385 */;
-import ChannelConstants from "ChannelConstants" /* 2051 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 2073 */;
-import PremiumRoleUtils from "PremiumRoleUtils" /* 4456 */;
-import ChannelRecord from "ChannelRecord" /* 2048 */;
+import ChannelConstants from "ChannelConstants" /* 2052 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 2074 */;
+import PremiumRoleUtils from "PremiumRoleUtils" /* 4459 */;
+import ChannelRecord from "ChannelRecord" /* 2049 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildMemberStore from "GuildMemberStore" /* 2107 */;
-import GuildRoleStore from "GuildRoleStore" /* 2101 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4466 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
+import GuildMemberStore from "GuildMemberStore" /* 2108 */;
+import GuildRoleStore from "GuildRoleStore" /* 2102 */;
+import GuildStore from "GuildStore" /* 2067 */;
+import PermissionStore from "PermissionStore" /* 4469 */;
 import Constants from "Constants" /* 1074 */;
 import BigFlagUtils from "BigFlagUtils" /* 1086 */;
 import size from "module_2" /* 2 */;

@@ -1,6 +1,6 @@
-// === Module 9530: NotificationSettingsStore ===
+// === Module 9541: NotificationSettingsStore ===
 
-// Module 9530 (NotificationSettingsStore)
+// Module 9541 (NotificationSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;

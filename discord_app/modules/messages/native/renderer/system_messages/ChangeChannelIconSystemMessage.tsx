@@ -1,13 +1,13 @@
-// === Module 7420: ChangeChannelIconSystemMessage ===
+// === Module 7425: ChangeChannelIconSystemMessage ===
 
-// Module 7420 (ChangeChannelIconSystemMessage)
+// Module 7425 (ChangeChannelIconSystemMessage)
 import util from "util" /* 1115 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 7390 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7397 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7399 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7401 */;
-import MessageAccessibilityActions from "MessageAccessibilityActions" /* 7404 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 7395 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7402 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7404 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7406 */;
+import MessageAccessibilityActions from "MessageAccessibilityActions" /* 7409 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
 
 require = fn;
 const size = fn(2);

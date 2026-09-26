@@ -1,11 +1,11 @@
-// === Module 10458: SocialLayerStorefrontGiftPurchaseSection ===
+// === Module 10469: SocialLayerStorefrontGiftPurchaseSection ===
 
-// Module 10458 (SocialLayerStorefrontGiftPurchaseSection)
+// Module 10469 (SocialLayerStorefrontGiftPurchaseSection)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10250 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10262 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -13,12 +13,12 @@ import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const View = fn(17).View;
-let useNativeCheckoutStore = fn(6839).useNativeCheckoutStore;
+let useNativeCheckoutStore = fn(6844).useNativeCheckoutStore;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const GiftingOrigin = fn(1374).GiftingOrigin;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_13 = createStyles.createStyles((arg0) => {
   const obj = { container: null, legalCopy: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_TOP_HIGH);

@@ -1,11 +1,11 @@
-// === Module 6594: ProviderConnectionCard ===
+// === Module 6599: ProviderConnectionCard ===
 
-// Module 6594 (ProviderConnectionCard)
+// Module 6599 (ProviderConnectionCard)
 import native from "native" /* 1177 */;
 import AvatarUtils from "AvatarUtils" /* 1397 */;
-import shared from "shared" /* 4682 */;
-import LinkIcon from "LinkIcon" /* 4771 */;
-import PlatformsDefault from "Platforms" /* 5590 */;
+import shared from "shared" /* 4685 */;
+import LinkIcon from "LinkIcon" /* 4775 */;
+import PlatformsDefault from "Platforms" /* 5595 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -72,7 +72,7 @@ export default function ProviderConnectionCard(connection) {
             } else {
               const obj4 = {};
               const obj5 = v3(1241);
-              const merged = Object.assign(provider_id(5009).collectGuildAnalyticsMetadata(guildId));
+              const merged = Object.assign(provider_id(5016).collectGuildAnalyticsMetadata(guildId));
               obj4.connection_type = "provider";
               provider_id = connection.provider_id;
               if (provider_id == null) {

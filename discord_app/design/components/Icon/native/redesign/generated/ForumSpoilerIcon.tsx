@@ -1,9 +1,9 @@
-// === Module 5390: ForumSpoilerIcon ===
+// === Module 5397: ForumSpoilerIcon ===
 
-// Module 5390 (ForumSpoilerIcon)
+// Module 5397 (ForumSpoilerIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4527 */;
-import _mod5351 from "module_5351" /* 5351 */;
+import BaseIconImage from "BaseIconImage" /* 4530 */;
+import _mod5358 from "module_5358" /* 5358 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const ForumSpoilerIcon = function ForumSpoilerIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5351, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5358, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

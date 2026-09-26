@@ -1,7 +1,7 @@
-// === Module 12575: getStreamURL ===
+// === Module 12592: getStreamURL ===
 
-// Module 12575 (getStreamURL)
-import Constants from "Constants" /* 2004 */;
+// Module 12592 (getStreamURL)
+import Constants from "Constants" /* 2005 */;
 import size from "module_2" /* 2 */;
 
 const validStreamURL = Constants.validStreamURL;

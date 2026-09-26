@@ -1,10 +1,10 @@
-// === Module 10257: NativeCheckoutStoreProvider ===
+// === Module 10269: NativeCheckoutStoreProvider ===
 
-// Module 10257 (NativeCheckoutStoreProvider)
+// Module 10269 (NativeCheckoutStoreProvider)
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import v1 from "v1" /* 1255 */;
-import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10258 */;
+import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -15,7 +15,7 @@ require = fn;
 function NativeCheckoutStoreProvider(children) {
   ({ checkoutInitParameters: require, order } = children);
   ({ paymentGateway: dependencyMap, orderRequired: asyncGeneratorStep, onOrderRetryCancellation: _slicedToArray, initialSubscriptionFacet: noop, checkoutAnalyticsFields: View, analyticsInitialStep: closure_7 } = children);
-  const contextMetadata = order(5905)(() => {
+  const contextMetadata = order(5910)(() => {
     let id;
     if (order != null) {
       id = order.id;
@@ -28,7 +28,7 @@ function NativeCheckoutStoreProvider(children) {
     const obj3 = { message: "Checkout session ID: " + id };
     return { loadId: id, startTime: Date.now() };
   });
-  redux = order(5905)(() => {
+  redux = order(5910)(() => {
     const obj = {};
     const merged = Object.assign(View);
     obj.load_id = contextMetadata.loadId;
@@ -36,7 +36,7 @@ function NativeCheckoutStoreProvider(children) {
     return obj;
   });
   value = _slicedToArray(noop.useState(() => React5({ order, checkoutInitParameters, contextMetadata, analyticsFields, paymentGateway: dependencyMap, orderRequired, onOrderRetryCancellation, initialSubscriptionFacet })), 1)[0];
-  order(5291)(() => {
+  order(5298)(() => {
     if (null != View) {
       const result = PaymentFlowStartedTriggerPoint.trackPaymentFlowStartedAnalyticsAndCTP(closure_9);
       const obj3 = {};
@@ -80,21 +80,21 @@ function NativeCheckoutStoreProvider(children) {
       const obj2 = { checkoutSucceeded: tmp2, order: null };
       ({ id: obj3.id, status: obj3.status } = orderRecord);
       obj2.order = { id: null, status: null };
-      checkoutInitParameters(10260).discardDraftOrder(obj2);
-      const obj = checkoutInitParameters(10260);
+      checkoutInitParameters(10272).discardDraftOrder(obj2);
+      const obj = checkoutInitParameters(10272);
       const obj5 = { id: null, status: null };
     }
   }, items1);
   return <contextMetadata value={value}><redux.Provider value={value}>{children.children}</redux.Provider></contextMetadata>;
 }
 const View = fn(17).View;
-const NativeCheckoutStore = fn(6839);
+const NativeCheckoutStore = fn(6844);
 ({ createNativeStore: closure_7, NativeCheckoutStoreContext: closure_8, NativeCheckoutStoreContextOrNull: closure_9 } = NativeCheckoutStore);
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const ItemPurchaseType = fn(4811).ItemPurchaseType;
+const ItemPurchaseType = fn(4815).ItemPurchaseType;
 const PaymentGateways = fn(1085).PaymentGateways;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_14 = createStyles.createStyles({ loadingSpinnerContainer: { display: "flex", alignItems: "center", justifyContent: "center", height: "100%" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkout/native/stores/NativeCheckoutStoreProvider.tsx");

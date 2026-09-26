@@ -1,7 +1,7 @@
-// === Module 11916: MessageRequestRestrictionExperiment ===
+// === Module 11934: MessageRequestRestrictionExperiment ===
 
-// Module 11916 (MessageRequestRestrictionExperiment)
-import ApexExperiment from "ApexExperiment" /* 1434 */;
+// Module 11934 (MessageRequestRestrictionExperiment)
+import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-06-non-friend-messages-requests-in-uk", kind: "user", defaultConfig: { enabled: false }, variations: null };

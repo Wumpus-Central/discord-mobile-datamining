@@ -1,13 +1,13 @@
-// === Module 14728: UserSettingsGuildRoleSubscriptions ===
+// === Module 14756: UserSettingsGuildRoleSubscriptions ===
 
-// Module 14728 (UserSettingsGuildRoleSubscriptions)
+// Module 14756 (UserSettingsGuildRoleSubscriptions)
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import useRestorePurchasesDefault from "useRestorePurchases" /* 14729 */;
-import useActiveGuildSubscriptionsDefault from "useActiveGuildSubscriptions" /* 14730 */;
-import LoadingIndicatorDefault from "LoadingIndicator" /* 14734 */;
-import ManageSubscriptionCardDefault from "ManageSubscriptionCard" /* 14735 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import useRestorePurchasesDefault from "useRestorePurchases" /* 14757 */;
+import useActiveGuildSubscriptionsDefault from "useActiveGuildSubscriptions" /* 14758 */;
+import LoadingIndicatorDefault from "LoadingIndicator" /* 14762 */;
+import ManageSubscriptionCardDefault from "ManageSubscriptionCard" /* 14763 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -40,7 +40,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = "role-subscriptions";
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_8 = createStyles.createStyles({ container: { flex: 1 }, list: { flex: 1 }, listContentContainer: { paddingHorizontal: 16 }, sectionHeader: { paddingVertical: 24 }, sectionSubtitle: { marginTop: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/manage_subscriptions/UserSettingsGuildRoleSubscriptions.tsx");

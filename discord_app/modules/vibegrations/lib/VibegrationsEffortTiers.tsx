@@ -1,15 +1,15 @@
-// === Module 16221: VibegrationsEffortTiers ===
+// === Module 16249: VibegrationsEffortTiers ===
 
-// Module 16221 (VibegrationsEffortTiers)
+// Module 16249 (VibegrationsEffortTiers)
 import util from "util" /* 1115 */;
-import _modDef3714 from "module_3714" /* 3714 */;
-import VibegrationsModelLabels from "VibegrationsModelLabels" /* 16222 */;
+import _modDef3715 from "module_3715" /* 3715 */;
+import VibegrationsModelLabels from "VibegrationsModelLabels" /* 16250 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;
 let closure_2 = ["thinking"];
 let closure_3 = ["fast"];
-let obj = { simple: _modDef3714.Mo0a1m, balanced: _modDef3714.dkt78K, complex: _modDef3714.Ly6zYL };
+let obj = { simple: _modDef3715.Mo0a1m, balanced: _modDef3715.dkt78K, complex: _modDef3715.Ly6zYL };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsEffortTiers.tsx");
 

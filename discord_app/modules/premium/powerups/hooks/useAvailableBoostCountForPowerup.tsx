@@ -1,14 +1,14 @@
-// === Module 12015: useAvailableBoostCountForPowerup ===
+// === Module 12033: useAvailableBoostCountForPowerup ===
 
-// Module 12015 (useAvailableBoostCountForPowerup)
+// Module 12033 (useAvailableBoostCountForPowerup)
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4719 */;
+import GuildStore from "GuildStore" /* 2067 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4723 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(4720);
+const GuildPowerupsConstants = fn(4724);
 ({ GuildPowerupType: metroRequire, POWERUPS_INCLUDED_IN_LEVEL: closure_7, LEVEL_SKU_ID_TO_BOOSTING_TIER: closure_8 } = GuildPowerupsConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useAvailableBoostCountForPowerup.tsx");

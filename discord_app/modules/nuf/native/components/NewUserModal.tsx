@@ -1,8 +1,8 @@
-// === Module 17184: NewUserModal ===
+// === Module 17214: NewUserModal ===
 
-// Module 17184 (NewUserModal)
+// Module 17214 (NewUserModal)
 import nativeDefault from "native" /* 576 */;
-import NewUserUtils from "NewUserUtils" /* 17182 */;
+import NewUserUtils from "NewUserUtils" /* 17212 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,9 +12,9 @@ require = fn;
 const NativeModules = fn(17).NativeModules;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const NativeStackNavigator = fn(7334);
+const NativeStackNavigator = fn(7339);
 const Navigator = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj3 = { header: { borderBottomWidth: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" } };
 let closure_9 = createStyles.createStyles(obj3);
 const size = fn(2);
@@ -46,12 +46,12 @@ export default function NewUserModal(arg0) {
       closure_1_4(lastShownStepIndex);
       if (continueNavigation) {
         if (null != ref.current) {
-          closure_0(17182).continueToNextStep(onboardingStepIndex, tmp3.current);
-          const obj2 = closure_0(17182);
+          closure_0(17212).continueToNextStep(onboardingStepIndex, tmp3.current);
+          const obj2 = closure_0(17212);
         }
       }
-      first(5032).popWithKey(closure_0(17183).NEW_USER_MODAL_KEY);
-      const obj = first(5032);
+      first(5039).popWithKey(closure_0(17213).NEW_USER_MODAL_KEY);
+      const obj = first(5039);
     });
   }, items);
   let obj = require("Navigator");
@@ -97,14 +97,14 @@ export default function NewUserModal(arg0) {
     closure_6(Navigator.Screen, {
       name: "enable-notification",
       getComponent() {
-        return closure_0(15598).RedesignNotificationScreen;
+        return closure_0(15626).RedesignNotificationScreen;
       },
       initialParams: { onComplete }
     }),
     closure_6(Navigator.Screen, {
       name: "choose-avatar",
       getComponent() {
-        return closure_0(17186).default;
+        return closure_0(17216).default;
       },
       options() {
         return {
@@ -114,13 +114,13 @@ export default function NewUserModal(arg0) {
             obj.onPress = function onPress() {
               closure_0 = closure_1_7;
               const lazyResult = React.lazy(() => closure_0(paths[8])(paths[7], paths.paths));
-              closure_2_0(5198).openAlert("skip-avatar-upload", closure_2_6(lazyResult, {
+              closure_2_0(5205).openAlert("skip-avatar-upload", closure_2_6(lazyResult, {
                 onConfirm() {
                   return closure_0(true);
                 }
               }));
             };
-            return closure_6(first(12175), obj);
+            return closure_6(first(12193), obj);
           }
         };
       },
@@ -130,7 +130,7 @@ export default function NewUserModal(arg0) {
       name: "contact-sync",
       options: { headerShown: false },
       getComponent() {
-        return closure_0(12164).ContactSyncOnboardingModal;
+        return closure_0(12182).ContactSyncOnboardingModal;
       },
       initialParams: { onComplete }
     }),
@@ -138,14 +138,14 @@ export default function NewUserModal(arg0) {
       name: "discoverability",
       options: { headerShown: false },
       getComponent() {
-        return closure_0(17187).default;
+        return closure_0(17217).default;
       },
       initialParams: { onComplete }
     }),
     closure_6(Navigator.Screen, {
       name: "connect-guardian",
       getComponent() {
-        return closure_0(17189).default;
+        return closure_0(17219).default;
       },
       initialParams: { onComplete }
     })

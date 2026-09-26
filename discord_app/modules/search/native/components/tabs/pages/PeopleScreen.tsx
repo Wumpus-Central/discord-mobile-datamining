@@ -1,18 +1,18 @@
-// === Module 16482: PeopleScreen ===
+// === Module 16511: PeopleScreen ===
 
-// Module 16482 (PeopleScreen)
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 11827 */;
+// Module 16511 (PeopleScreen)
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 11841 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SearchPeopleTabStore from "SearchPeopleTabStore" /* 11838 */;
-import SearchQueryStore from "SearchQueryStore" /* 11808 */;
+import SearchPeopleTabStore from "SearchPeopleTabStore" /* 11852 */;
+import SearchQueryStore from "SearchQueryStore" /* 11822 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const SearchConstants = fn(7298);
+const SearchConstants = fn(7303);
 ({ SearchListItemTypes: closure_7, USER_ESTIMATED_ITEM_SIZE: closure_8 } = SearchConstants);
-let closure_9 = fn(7297).SearchResultContentEntityTypes;
+let closure_9 = fn(7302).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/PeopleScreen.tsx");

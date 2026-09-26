@@ -1,15 +1,15 @@
-// === Module 14404: FamilyCenterUsernameHeader ===
+// === Module 14429: FamilyCenterUsernameHeader ===
 
-// Module 14404 (FamilyCenterUsernameHeader)
-import UserUtilsDefault from "UserUtils" /* 4675 */;
-import Text_Text from "Text/Text" /* 4825 */;
+// Module 14429 (FamilyCenterUsernameHeader)
+import UserUtilsDefault from "UserUtils" /* 4678 */;
+import Text_Text from "Text/Text" /* 4832 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_6 = createStyles.createStyles({ container: { justifyContent: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterUsernameHeader.tsx");

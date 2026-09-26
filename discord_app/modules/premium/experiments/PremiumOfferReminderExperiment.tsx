@@ -1,7 +1,7 @@
-// === Module 12859: PremiumOfferReminderExperiment ===
+// === Module 12876: PremiumOfferReminderExperiment ===
 
-// Module 12859 (PremiumOfferReminderExperiment)
-import ApexExperiment from "ApexExperiment" /* 1434 */;
+// Module 12876 (PremiumOfferReminderExperiment)
+import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-02-premium-offer-reminder-xp", kind: "user", defaultConfig: { enabled: false }, variations: null };

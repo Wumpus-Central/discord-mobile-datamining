@@ -1,16 +1,16 @@
-// === Module 12695: NameplateProductPreview ===
+// === Module 12712: NameplateProductPreview ===
 
-// Module 12695 (NameplateProductPreview)
+// Module 12712 (NameplateProductPreview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import utils from "utils" /* 1970 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import LinearGradientDefault from "LinearGradient" /* 5286 */;
-import TableRow from "TableRow" /* 5912 */;
-import useShopProductItems from "useShopProductItems" /* 7609 */;
+import utils from "utils" /* 1971 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import LinearGradientDefault from "LinearGradient" /* 5293 */;
+import TableRow from "TableRow" /* 5917 */;
+import useShopProductItems from "useShopProductItems" /* 7616 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4821 */;
+import AccessibilityStore from "AccessibilityStore" /* 4825 */;
 
 require = fn;
 function NameplateUser(arg0) {
@@ -42,7 +42,7 @@ function NameplateUser(arg0) {
   }
   const items1 = [currentUser, tmp5Result, stateFromStores];
   const icon = noop.useMemo(() => {
-    const obj = { user: currentUser, guildId: "a", size: native.AvatarSizes.NORMAL, avatarDecoration, animate: !stateFromStores, autoStatusCutout: 152, "aria-hidden": 122 };
+    const obj = { user: currentUser, guildId: "a", size: native.AvatarSizes.NORMAL, avatarDecoration, animate: !stateFromStores, autoStatusCutout: "media_engine_connect", "aria-hidden": "MEDIA_SESSION_JOINED" };
     return timestampProducer(native.Avatar, obj);
   }, items1);
   return closure_6(currentUser(stateFromStores[20]).UserNameplateRow, { nameplate, icon, label, isPreviewRow: true });
@@ -62,7 +62,7 @@ function PlaceholderUser(end) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { container: { position: "relative", flex: 1, justifyContent: "center", overflow: "hidden" }, memberListContainer: { paddingHorizontal: nativeDefault.space.PX_16 }, memberListTitle: null, memberListGradient: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.memberListTitle = { paddingVertical: nativeDefault.space.PX_8 };

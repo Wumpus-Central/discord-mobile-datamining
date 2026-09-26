@@ -1,20 +1,20 @@
-// === Module 15454: DataAndPrivacySetting ===
+// === Module 15483: DataAndPrivacySetting ===
 
-// Module 15454 (DataAndPrivacySetting)
+// Module 15483 (DataAndPrivacySetting)
 import util from "util" /* 1115 */;
-import ConsentActionCreators from "ConsentActionCreators" /* 14367 */;
-import RequestYourDataSetting from "RequestYourDataSetting" /* 14370 */;
+import ConsentActionCreators from "ConsentActionCreators" /* 14392 */;
+import RequestYourDataSetting from "RequestYourDataSetting" /* 14395 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(10993);
+const SettingBuilders = fn(11006);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.OAuOHD);
   },
   parent: null,
-  IconComponent: fn(9227).ShieldLockIcon,
+  IconComponent: fn(9238).ShieldLockIcon,
   screen: {
     route: fn(1074).UserSettingsSections.DATA_AND_PRIVACY,
     getComponent() {

@@ -1,18 +1,18 @@
-// === Module 15960: GuildsBarItemUnavailableGuilds ===
+// === Module 15988: GuildsBarItemUnavailableGuilds ===
 
-// Module 15960 (GuildsBarItemUnavailableGuilds)
+// Module 15988 (GuildsBarItemUnavailableGuilds)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5196 */;
-import _modDef15951 from "module_15951" /* 15951 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5203 */;
+import _modDef15979 from "module_15979" /* 15979 */;
 import noop from "module_19" /* 19 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5194 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5201 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: c3, Pressable: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 const obj = { unavailableGuilds: { marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING, justifyContent: "center", alignItems: "center" }, unavailableGuildsIcon: null };
 let size = { width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
 obj.unavailableGuildsIcon = size;
@@ -40,8 +40,8 @@ export default noop.memo(function GuildsBarItemUnavailableGuilds() {
       AlertActionCreatorsDefault.show(obj2);
     };
     obj2.style = tmp.unavailableGuilds;
-    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef15951 };
-    obj2.children = <closure_3 style={tmp.unavailableGuildsIcon} source={_modDef15951} />;
+    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef15979 };
+    obj2.children = <closure_3 style={tmp.unavailableGuildsIcon} source={_modDef15979} />;
     tmp5 = <closure_4 accessibilityRole="button" accessibilityLabel={null} onPress={null} style={null}>{null}</closure_4>;
   }
   return tmp5;

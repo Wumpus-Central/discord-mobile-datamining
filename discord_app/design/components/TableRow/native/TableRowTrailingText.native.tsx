@@ -1,7 +1,7 @@
-// === Module 5921: TableRowTrailingText ===
+// === Module 5926: TableRowTrailingText ===
 
-// Module 5921 (TableRowTrailingText)
-import Text_Text from "Text/Text" /* 4825 */;
+// Module 5926 (TableRowTrailingText)
+import Text_Text from "Text/Text" /* 4832 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

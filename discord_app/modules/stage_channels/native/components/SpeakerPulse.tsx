@@ -1,18 +1,18 @@
-// === Module 13640: SpeakerPulse ===
+// === Module 13658: SpeakerPulse ===
 
-// Module 13640 (SpeakerPulse)
+// Module 13658 (SpeakerPulse)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
-import timing from "timing" /* 4830 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
+import timing from "timing" /* 4837 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4821 */;
+import AccessibilityStore from "AccessibilityStore" /* 4825 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 0.16;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { pulse: { backgroundColor: nativeDefault.colors.WHITE }, border: null };
 let obj3 = { backgroundColor: nativeDefault.colors.WHITE };
 obj2.border = { backgroundColor: nativeDefault.colors.STATUS_SPEAKING };
@@ -22,8 +22,8 @@ const __initData2 = { code: "function SpeakerPulseTsx2(){const{animatedOuterOpac
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/native/components/SpeakerPulse.tsx");
 
-export default function SpeakerPulse(style) {
-  style = style.style;
+export default function SpeakerPulse(arg0) {
+  ({ color, style } = arg0);
   let stateFromStores;
   let sharedValue1;
   const tmp = closure_10();
@@ -68,18 +68,23 @@ export default function SpeakerPulse(style) {
   T.__initData = __initData;
   const animatedStyle = stateFromStores(sharedValue1[7]).useAnimatedStyle(T);
   let obj4 = stateFromStores(sharedValue1[7]);
-  const fn = function k() {
+  const fn = function b() {
     return { opacity: sharedValue1.get() };
   };
   fn.__closure = { animatedOuterOpacity: sharedValue1 };
   fn.__workletHash = 13537504931930;
   fn.__initData = __initData2;
-  let obj6 = { children: null };
-  let obj7 = { style: null };
-  const items2 = [tmp.border, style];
-  obj7.style = items2;
+  const items2 = [tmp.border, , ];
+  let tmp13 = null;
   const animatedStyle1 = stateFromStores(sharedValue1[7]).useAnimatedStyle(fn);
-  const items3 = [closure_6(View, obj7), , ];
+  if (null != color) {
+    let obj6 = { backgroundColor: color };
+    tmp13 = obj6;
+  }
+  let obj7 = { children: null };
+  items2[1] = tmp13;
+  items2[2] = style;
+  const items3 = [closure_6(View, { style: items2 }), , ];
   let obj8 = { style: null };
   const items4 = [tmp.pulse, style, animatedStyle, ];
   let obj9 = { transform: null };
@@ -96,6 +101,6 @@ export default function SpeakerPulse(style) {
   items6[3] = obj11;
   obj10.style = items6;
   items3[2] = closure_6(sharedValue(sharedValue1[7]).View, obj10);
-  obj6.children = items3;
-  return closure_8(closure_7, obj6);
+  obj7.children = items3;
+  return closure_8(closure_7, obj7);
 };

@@ -1,6 +1,6 @@
-// === Module 17278: KeywordTextUtils ===
+// === Module 17308: KeywordTextUtils ===
 
-// Module 17278 (KeywordTextUtils)
+// Module 17308 (KeywordTextUtils)
 import size from "module_2" /* 2 */;
 
 const re0 = /[\t\n,]/g;

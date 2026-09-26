@@ -1,14 +1,14 @@
-// === Module 13717: InputView ===
+// === Module 13673: InputView ===
 
-// Module 13717 (InputView)
+// Module 13673 (InputView)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import shared from "shared" /* 4682 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import CircleXIcon from "CircleXIcon" /* 6029 */;
-import components_BottomSheetTextInputDefault from "components/BottomSheetTextInput" /* 11641 */;
+import shared from "shared" /* 4685 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import CircleXIcon from "CircleXIcon" /* 6034 */;
+import components_BottomSheetTextInputDefault from "components/BottomSheetTextInput" /* 11655 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,20 +19,20 @@ get_ActivityIndicator = fn(17);
 const Fonts = fn(1074).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { disabled: { opacity: 0.5 }, topContainer: { minHeight: 16, alignItems: "center", flexDirection: "row", marginBottom: 5, flexWrap: "wrap" }, inputViewTitle: { marginRight: 5 }, inputViewError: { fontSize: 10, color: nativeDefault.unsafe_rawColors.RED_400 }, inputBorder: null, inputView: null, inputViewBorder: null, inputViewBorderActive: null, inputContainer: null, bottomContainer: null, charactersLength: null, closeIcon: null, clearButton: null, required: null };
 let obj3 = { fontSize: 10, color: nativeDefault.unsafe_rawColors.RED_400 };
 obj2.inputBorder = { backgroundColor: nativeDefault.colors.TEXT_MUTED };
 let obj4 = { backgroundColor: nativeDefault.colors.TEXT_MUTED };
-obj2.inputView = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: fn(5748).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+obj2.inputView = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: fn(5753).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
 obj2.inputViewBorder = { marginTop: 8, height: 2 };
-let obj5 = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: fn(5748).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+let obj5 = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: fn(5753).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
 obj2.inputViewBorderActive = { backgroundColor: nativeDefault.unsafe_rawColors.TRANSPARENT };
 obj2.inputContainer = { flexDirection: "row", alignItems: "center", position: "relative" };
 obj2.bottomContainer = { marginTop: 5 };
 let obj6 = { backgroundColor: nativeDefault.unsafe_rawColors.TRANSPARENT };
-obj2.charactersLength = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(5748).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
-let obj7 = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(5748).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
+obj2.charactersLength = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(5753).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
+let obj7 = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(5753).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
 obj2.closeIcon = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.clearButton = { position: "absolute", right: 6 };
 let obj8 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
@@ -385,7 +385,7 @@ prototype["render"] = function render() {
   obj.children = closure_1_10(hasOwnProperty, obj2);
   return React7(React5, obj);
 };
-InputView.contextType = fn(4537).ThemeContext;
+InputView.contextType = fn(4540).ThemeContext;
 InputView.defaultProps = { showBorder: true, value: "", returnKeyType: "next", disabled: false, autoFocus: false, multiline: false, numberOfLines: 1, showTopContainer: true, showCharactersRemaining: false, clearButtonVisibility: "never", inActionSheet: false };
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/InputView/native/InputView.tsx");

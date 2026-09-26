@@ -1,7 +1,7 @@
-// === Module 8882: ZoomLayout ===
+// === Module 8890: ZoomLayout ===
 
-// Module 8882 (ZoomLayout)
-import ZoomLayoutNativeComponentDefault from "ZoomLayoutNativeComponent" /* 8883 */;
+// Module 8890 (ZoomLayout)
+import ZoomLayoutNativeComponentDefault from "ZoomLayoutNativeComponent" /* 8891 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -27,7 +27,7 @@ export default noop.forwardRef((arg0, arg1) => {
         value = PixelRatio.get();
         const result = x * value;
         const result1 = y * value;
-        const Commands = ref(8883).Commands;
+        const Commands = ref(8891).Commands;
         Commands.zoomTo(tmp.current, result / num - result, result1 / num - result1, num, flag);
       }
     },
@@ -41,7 +41,7 @@ export default noop.forwardRef((arg0, arg1) => {
         flag = true;
       }
       if (null != ref.current) {
-        const Commands = ref(8883).Commands;
+        const Commands = ref(8891).Commands;
         Commands.unzoom(tmp.current, flag);
       }
     }

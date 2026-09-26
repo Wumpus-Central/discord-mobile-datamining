@@ -1,9 +1,9 @@
-// === Module 4814: InviteCodeUtils ===
+// === Module 4818: InviteCodeUtils ===
 
-// Module 4814 (InviteCodeUtils)
+// Module 4818 (InviteCodeUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import _modDef1472 from "module_1472" /* 1472 */;
-import QueryStringUtils from "QueryStringUtils" /* 4815 */;
+import _modDef1473 from "module_1473" /* 1473 */;
+import QueryStringUtils from "QueryStringUtils" /* 4819 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -29,7 +29,7 @@ function generateInviteKeyFromExtraData(arg0) {
       obj[message] = targetMessageId;
     }
   }
-  const json = _modDef1472.stringify(obj);
+  const json = _modDef1473.stringify(obj);
   let combined = baseCode;
   if ("" !== json) {
     const _HermesInternal = HermesInternal;
@@ -53,7 +53,7 @@ export const generateInviteKeyFromUrlParams = function generateInviteKeyFromUrlP
       substr = search.substring(1);
     }
     try {
-      const parsed = _modDef1472.parse(substr);
+      const parsed = _modDef1473.parse(substr);
       const firstQueryStringValue = QueryStringUtils.getFirstQueryStringValue(parsed[event]);
       const tmp12 = readSnowflake(QueryStringUtils.getFirstQueryStringValue(parsed[channel]));
       const obj4 = { baseCode: match2, guildScheduledEventId: firstQueryStringValue, targetChannelId: tmp12, targetMessageId: null };
@@ -76,7 +76,7 @@ export const parseExtraDataFromInviteKey = function parseExtraDataFromInviteKey(
     const obj2 = { baseCode: tmp2 };
     return obj2;
   } else {
-    const parsed = _modDef1472.parse(tmp3);
+    const parsed = _modDef1473.parse(tmp3);
     const firstQueryStringValue = QueryStringUtils.getFirstQueryStringValue(parsed[event]);
     const firstQueryStringValue1 = QueryStringUtils.getFirstQueryStringValue(parsed[channel]);
     let tmp4;

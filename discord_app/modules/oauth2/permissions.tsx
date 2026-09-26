@@ -1,6 +1,6 @@
-// === Module 8518: permissions ===
+// === Module 8526: permissions ===
 
-// Module 8518 (permissions)
+// Module 8526 (permissions)
 import Constants from "Constants" /* 1074 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import util from "util" /* 1115 */;

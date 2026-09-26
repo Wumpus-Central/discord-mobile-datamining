@@ -1,12 +1,12 @@
-// === Module 13999: validateEmbeddedAppFrame ===
+// === Module 14024: validateEmbeddedAppFrame ===
 
-// Module 13999 (validateEmbeddedAppFrame)
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8313 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8493 */;
-import RPCErrorDefault from "RPCError" /* 8762 */;
-import RPCHelpers from "RPCHelpers" /* 8767 */;
-import FramesStore from "FramesStore" /* 8491 */;
-import VibegrationsBuilderPreviewStore from "VibegrationsBuilderPreviewStore" /* 14000 */;
+// Module 14024 (validateEmbeddedAppFrame)
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8321 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8501 */;
+import RPCErrorDefault from "RPCError" /* 8770 */;
+import RPCHelpers from "RPCHelpers" /* 8775 */;
+import FramesStore from "FramesStore" /* 8499 */;
+import VibegrationsBuilderPreviewStore from "VibegrationsBuilderPreviewStore" /* 14025 */;
 
 require = fn;
 function validateEmbeddedAppFrame(transport) {
@@ -26,7 +26,7 @@ function validateEmbeddedAppFrame(transport) {
           if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL !== type) {
             if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
               if (tmp35.applicationId === VibegrationsBuilderPreviewStore.getBuilderPreviewApplicationId()) {
-                let obj5 = { channelId: "isArray", guildId: "paddingHorizontal" };
+                let obj5 = { channelId: "Array", guildId: "paddingHorizontal" };
               } else {
                 obj5 = null;
               }
@@ -57,10 +57,10 @@ function validateEmbeddedAppFrame(transport) {
   }
   obj3 = ApplicationFlagUtils;
 }
-const TransportTypes = fn(4735).TransportTypes;
+const TransportTypes = fn(4739).TransportTypes;
 const Constants = fn(1074);
 ({ ApplicationFlags: metroRequire, RPCErrors: closure_7 } = Constants);
-const asLaunched = fn(8492).asLaunched;
+const asLaunched = fn(8500).asLaunched;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/helpers/validateEmbeddedAppFrame.tsx");
 

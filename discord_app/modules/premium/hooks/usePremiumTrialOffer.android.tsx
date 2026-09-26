@@ -1,7 +1,7 @@
-// === Module 6862: usePremiumTrialOffer ===
+// === Module 6867: usePremiumTrialOffer ===
 
-// Module 6862 (usePremiumTrialOffer)
-import useAndroidAndLegacyIOSPremiumTrialOfferCandidates from "useAndroidAndLegacyIOSPremiumTrialOfferCandidates" /* 6863 */;
+// Module 6867 (usePremiumTrialOffer)
+import useAndroidAndLegacyIOSPremiumTrialOfferCandidates from "useAndroidAndLegacyIOSPremiumTrialOfferCandidates" /* 6868 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/hooks/usePremiumTrialOffer.android.tsx");

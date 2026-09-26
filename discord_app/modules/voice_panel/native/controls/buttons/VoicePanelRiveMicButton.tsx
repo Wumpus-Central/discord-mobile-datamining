@@ -1,9 +1,9 @@
-// === Module 9453: VoicePanelRiveMicButton ===
+// === Module 9464: VoicePanelRiveMicButton ===
 
-// Module 9453 (VoicePanelRiveMicButton)
-import native from "native" /* 4537 */;
-import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 9129 */;
-import MicrophoneIcon2 from "MicrophoneIcon" /* 9454 */;
+// Module 9464 (VoicePanelRiveMicButton)
+import MicrophoneRive from "MicrophoneRive" /* 4636 */;
+import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 9140 */;
+import MicrophoneIcon2 from "MicrophoneIcon" /* 9465 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,6 +27,6 @@ export const VoicePanelRiveMicButton = function VoicePanelRiveMicButton(arg0) {
     MicrophoneIcon = MicrophoneIcon2.MicrophoneIcon;
   }
   obj2.fallback = <MicrophoneIcon color={color} />;
-  obj.children = jsx(native.MicrophoneRive, { dataBinding: { fill: color, on: !muted }, defaultViewModelInstance: null, fallback: null });
+  obj.children = jsx(MicrophoneRive.MicrophoneRive, { dataBinding: { fill: color, on: !muted }, defaultViewModelInstance: null, fallback: null });
   return <View style={{ width: 24, height: 24, pointerEvents: "none" }}>{null}</View>;
 };

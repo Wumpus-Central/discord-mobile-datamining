@@ -1,12 +1,12 @@
-// === Module 8873: SurfaceDirectRendererExperiment ===
+// === Module 8881: SurfaceDirectRendererExperiment ===
 
-// Module 8873 (SurfaceDirectRendererExperiment)
+// Module 8881 (SurfaceDirectRendererExperiment)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ApexExperiment = fn(1434);
+const ApexExperiment = fn(1435);
 const obj2 = { kind: "user", name: "2026-03-surface-direct-renderer", defaultConfig: { enableSurfaceDirectRenderer: false }, variations: null };
 const obj3 = { 1: null };
 obj3[1] = { enableSurfaceDirectRenderer: true };

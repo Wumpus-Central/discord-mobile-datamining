@@ -1,8 +1,8 @@
-// === Module 13345: NetworkQuality ===
+// === Module 13363: NetworkQuality ===
 
-// Module 13345 (NetworkQuality)
-import TimeUtils from "TimeUtils" /* 4858 */;
-import NetworkStore from "NetworkStore" /* 4878 */;
+// Module 13363 (NetworkQuality)
+import TimeUtils from "TimeUtils" /* 4865 */;
+import NetworkStore from "NetworkStore" /* 4885 */;
 
 require = fn;
 const Constants = fn(1074);

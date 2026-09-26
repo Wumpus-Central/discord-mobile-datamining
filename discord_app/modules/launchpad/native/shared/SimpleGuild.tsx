@@ -1,17 +1,17 @@
-// === Module 16767: SimpleGuild ===
+// === Module 16796: SimpleGuild ===
 
-// Module 16767 (SimpleGuild)
+// Module 16796 (SimpleGuild)
 import util from "util" /* 1115 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7045 */;
-import GuildStore from "GuildStore" /* 2066 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7050 */;
+import GuildStore from "GuildStore" /* 2067 */;
 
 require = fn;
 const View = fn(17).View;
-const getGuildIconSource = fn(2062).getGuildIconSource;
+const getGuildIconSource = fn(2063).getGuildIconSource;
 const ME = fn(1074).ME;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_10 = createStyles.createStyles({ dmsWrapper: { flex: 1, justifyContent: "center", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/shared/SimpleGuild.tsx");

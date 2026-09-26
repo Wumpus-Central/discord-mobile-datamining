@@ -1,13 +1,13 @@
-// === Module 17578: GuildRoleSubscriptionTierTemplateFullCard ===
+// === Module 17608: GuildRoleSubscriptionTierTemplateFullCard ===
 
-// Module 17578 (GuildRoleSubscriptionTierTemplateFullCard)
+// Module 17608 (GuildRoleSubscriptionTierTemplateFullCard)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 14756 */;
-import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 15724 */;
-import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 17581 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 14784 */;
+import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 15752 */;
+import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 17611 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -50,7 +50,7 @@ function BenefitSection(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1, padding: 16 }, subscriptionPlanTextStyle: null, descriptionPlanTextStyle: null, content: null, separator: null, benefitRowContainer: null, benefitTextContainer: null, benefitDescription: null, channelTitle: null, channelIcon: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1, padding: 16 };
 obj2.subscriptionPlanTextStyle = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };

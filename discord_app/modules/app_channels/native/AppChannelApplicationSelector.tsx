@@ -1,9 +1,9 @@
-// === Module 9009: AppChannelApplicationSelector ===
+// === Module 9020: AppChannelApplicationSelector ===
 
-// Module 9009 (AppChannelApplicationSelector)
-import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
-import AppChannelApplicationActionSheet from "AppChannelApplicationActionSheet" /* 9013 */;
+// Module 9020 (AppChannelApplicationSelector)
+import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
+import AppChannelApplicationActionSheet from "AppChannelApplicationActionSheet" /* 9024 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -47,7 +47,7 @@ export default function AppChannelApplicationSelector(guildId) {
   if (true !== disabled && !hasNoApplications) {
     fn = () => {
       const obj = ActionSheetActionCreatorsDefault;
-      obj.openLazy(asyncRequireImpl(9013, dependencyMap.paths), AppChannelApplicationActionSheet.APP_CHANNEL_APPLICATION_ACTION_SHEET_KEY, { guildId, channelId, selectedApplicationId, onChange });
+      obj.openLazy(asyncRequireImpl(9024, dependencyMap.paths), AppChannelApplicationActionSheet.APP_CHANNEL_APPLICATION_ACTION_SHEET_KEY, { guildId, channelId, selectedApplicationId, onChange });
     };
   }
   obj3.onPress = fn;

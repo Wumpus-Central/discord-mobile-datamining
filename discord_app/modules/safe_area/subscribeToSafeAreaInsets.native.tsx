@@ -1,8 +1,8 @@
-// === Module 8915: subscribeToSafeAreaInsets ===
+// === Module 8926: subscribeToSafeAreaInsets ===
 
-// Module 8915 (subscribeToSafeAreaInsets)
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1481 */;
-import SafeAreaStoreDefault from "SafeAreaStore" /* 1613 */;
+// Module 8926 (subscribeToSafeAreaInsets)
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1482 */;
+import SafeAreaStoreDefault from "SafeAreaStore" /* 1614 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/safe_area/subscribeToSafeAreaInsets.native.tsx");

@@ -1,8 +1,8 @@
-// === Module 13537: AudioFidelityExperiment ===
+// === Module 13555: AudioFidelityExperiment ===
 
-// Module 13537 (AudioFidelityExperiment)
+// Module 13555 (AudioFidelityExperiment)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import ApexExperiment from "ApexExperiment" /* 1434 */;
+import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 
 let obj = { kind: "user", name: "2026-08-audio-fidelity", defaultConfig: { capSampleRate: false, capChannelCount: false, condition: "none" }, variations: null };

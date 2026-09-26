@@ -1,13 +1,13 @@
-// === Module 14810: SettingsAppearanceChannelList ===
+// === Module 14838: SettingsAppearanceChannelList ===
 
-// Module 14810 (SettingsAppearanceChannelList)
+// Module 14838 (SettingsAppearanceChannelList)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4563 */;
-import SettingsAppearanceChannelRowItemDefault from "SettingsAppearanceChannelRowItem" /* 14811 */;
-import SettingsAppearanceMessagesHeaderItemDefault from "SettingsAppearanceMessagesHeaderItem" /* 14812 */;
-import SettingsAppearanceActivityCardsItemDefault from "SettingsAppearanceActivityCardsItem" /* 14813 */;
-import SettingsAppearanceGradientBackgroundDefault from "SettingsAppearanceGradientBackground" /* 14819 */;
-import SettingsAppearanceChannelListPreviewNitroUpsellDefault from "SettingsAppearanceChannelListPreviewNitroUpsell" /* 14822 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4566 */;
+import SettingsAppearanceChannelRowItemDefault from "SettingsAppearanceChannelRowItem" /* 14839 */;
+import SettingsAppearanceMessagesHeaderItemDefault from "SettingsAppearanceMessagesHeaderItem" /* 14840 */;
+import SettingsAppearanceActivityCardsItemDefault from "SettingsAppearanceActivityCardsItem" /* 14841 */;
+import SettingsAppearanceGradientBackgroundDefault from "SettingsAppearanceGradientBackground" /* 14847 */;
+import SettingsAppearanceChannelListPreviewNitroUpsellDefault from "SettingsAppearanceChannelListPreviewNitroUpsell" /* 14850 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { channelPreviewGradient: null, channelPreviewCardContainer: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -86,7 +86,7 @@ export default function ChannelListPreview(useGradientBackground) {
     showsVerticalScrollIndicator: false,
     importantForAccessibility: "no-hide-descendants"
   };
-  items2[1] = closure_5(animatedStyles(8171).FlashList, obj4);
+  items2[1] = closure_5(animatedStyles(8179).FlashList, obj4);
   items2[2] = closure_5(SettingsAppearanceChannelListPreviewNitroUpsellDefault, { visible: isNitroLocked, theme: themes[themeIndex] });
   obj.children = items2;
   return closure_6(ReanimatedRexportDefault.View, obj);

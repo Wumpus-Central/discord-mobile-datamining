@@ -1,14 +1,13 @@
-// === Module 1884: i18n/i18n ===
+// === Module 1885: i18n/i18n ===
 
-// Module 1884 (i18n/i18n)
+// Module 1885 (i18n/i18n)
 import getSystemLocale from "getSystemLocale" /* 1337 */;
-import _modDef1885 from "module_1885" /* 1885 */;
-import _mod1926 from "module_1926" /* 1926 */;
-import parse from "parse" /* 1927 */;
+import _modDef1886 from "module_1886" /* 1886 */;
+import _mod1927 from "module_1927" /* 1927 */;
+import parse from "parse" /* 1928 */;
 
 require = fn;
-global.IntlMessageFormat = _modDef1885;
-const module_1894 = fn(1894);
+global.IntlMessageFormat = _modDef1886;
 const module_1895 = fn(1895);
 const module_1896 = fn(1896);
 const module_1897 = fn(1897);
@@ -36,9 +35,10 @@ const module_1918 = fn(1918);
 const module_1919 = fn(1919);
 const module_1920 = fn(1920);
 const module_1921 = fn(1921);
+const module_1922 = fn(1922);
 delete tmp2[tmp];
 if (typeof Intl === "undefined") {
-  fn(1922);
+  fn(1923);
 }
 const React2 = "en-US";
 class Provider {
@@ -136,10 +136,10 @@ _instance_members_initializer_I18N_ = function() {
       return _createProxy(obj3);
     } else {
       try {
-        return self(1927).getMessage(tmp4, locale);
+        return self(1928).getMessage(tmp4, locale);
       } catch (err) {
         if (typeof tmp3[tmp2] === "string") {
-          return self(1927).getMessage(tmp7, tmp);
+          return self(1928).getMessage(tmp7, tmp);
         } else {
           return "";
         }

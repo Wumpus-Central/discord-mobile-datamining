@@ -1,12 +1,12 @@
-// === Module 12264: ForumChannelEmptyState ===
+// === Module 12282: ForumChannelEmptyState ===
 
-// Module 12264 (ForumChannelEmptyState)
+// Module 12282 (ForumChannelEmptyState)
 import util from "util" /* 1115 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import shared from "shared" /* 4682 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import _modDef12265 from "module_12265" /* 12265 */;
-import _modDef12266 from "module_12266" /* 12266 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
+import shared from "shared" /* 4685 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import _modDef12283 from "module_12283" /* 12283 */;
+import _modDef12284 from "module_12284" /* 12284 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_7 = createStyles.createStyles({ container: { flex: 1, alignSelf: "stretch", justifyContent: "center", alignItems: "center" }, image: { width: 120, height: 80 }, title: { textAlign: "center", marginTop: 16, marginHorizontal: 20 }, subtext: { textAlign: "center", marginTop: 4, marginHorizontal: 20 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/ForumChannelEmptyState.tsx");
@@ -32,9 +32,9 @@ export default noop.memo((topViewHeight) => {
   obj2.style = items;
   const obj = shared;
   if (obj3.isThemeLight(obj.useThemeContext().theme)) {
-    let tmp4Result = _modDef12265;
+    let tmp4Result = _modDef12283;
   } else {
-    tmp4Result = _modDef12266;
+    tmp4Result = _modDef12284;
   }
   const items1 = [hasOwnProperty(React4, { source: tmp4Result, style: tmp.image }), , ];
   const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };

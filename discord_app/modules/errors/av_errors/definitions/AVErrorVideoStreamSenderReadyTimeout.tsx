@@ -1,9 +1,9 @@
-// === Module 17641: AVErrorVideoStreamSenderReadyTimeout ===
+// === Module 17671: AVErrorVideoStreamSenderReadyTimeout ===
 
-// Module 17641 (AVErrorVideoStreamSenderReadyTimeout)
-import AVError from "AVError" /* 8867 */;
+// Module 17671 (AVErrorVideoStreamSenderReadyTimeout)
+import AVError from "AVError" /* 8875 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import VideoStreamStore from "VideoStreamStore" /* 8798 */;
+import VideoStreamStore from "VideoStreamStore" /* 8806 */;
 
 require = fn;
 const size = fn(2);

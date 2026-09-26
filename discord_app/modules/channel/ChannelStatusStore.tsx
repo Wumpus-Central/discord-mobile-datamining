@@ -1,10 +1,10 @@
-// === Module 6944: ChannelStatusStore ===
+// === Module 6949: ChannelStatusStore ===
 
-// Module 6944 (ChannelStatusStore)
+// Module 6949 (ChannelStatusStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ChannelTypes from "ChannelTypes" /* 1095 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5584 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5589 */;
 
 require = fn;
 function handleConnectionReset() {

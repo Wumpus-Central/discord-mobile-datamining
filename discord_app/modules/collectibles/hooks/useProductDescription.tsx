@@ -1,9 +1,9 @@
-// === Module 12701: useProductDescription ===
+// === Module 12718: useProductDescription ===
 
-// Module 12701 (useProductDescription)
+// Module 12718 (useProductDescription)
 import _mod19 from "module_19" /* 19 */;
 import util from "util" /* 1115 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1973 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1974 */;
 import size from "module_2" /* 2 */;
 
 function getBundleDescription(bundledProducts) {

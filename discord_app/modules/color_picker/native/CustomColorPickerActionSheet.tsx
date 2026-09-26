@@ -1,13 +1,13 @@
-// === Module 14129: CustomColorPickerActionSheet ===
+// === Module 14154: CustomColorPickerActionSheet ===
 
-// Module 14129 (CustomColorPickerActionSheet)
+// Module 14154 (CustomColorPickerActionSheet)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
-import ColorUtils from "ColorUtils" /* 4680 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
-import ColorPickerUtils from "ColorPickerUtils" /* 14131 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
+import ColorUtils from "ColorUtils" /* 4683 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
+import ColorPickerUtils from "ColorPickerUtils" /* 14156 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -45,7 +45,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = "#000000";
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, suggestedColor: null, suggestedColorsContainer: null };
 const obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj2.suggestedColor = { minWidth: 32, height: 32, borderRadius: nativeDefault.radii.xs };
@@ -88,11 +88,11 @@ export default function CustomColorPickerActionSheet(arg0) {
     }
   }, items);
   let int2hsvResult = onSelect(1092).int2hsv(color);
-  sharedValue = onSelect(4563).useSharedValue(h);
-  const obj4 = onSelect(4563);
-  const sharedValue1 = onSelect(4563).useSharedValue(s);
-  const obj6 = onSelect(4563);
-  const sharedValue2 = onSelect(4563).useSharedValue(v);
+  sharedValue = onSelect(4566).useSharedValue(h);
+  const obj4 = onSelect(4566);
+  const sharedValue1 = onSelect(4566).useSharedValue(s);
+  const obj6 = onSelect(4566);
+  const sharedValue2 = onSelect(4566).useSharedValue(v);
   let combined;
   if (suggestedColors != null) {
     const mapped = suggestedColors.map((item) => onSelect(1092).hex2int(item));
@@ -124,8 +124,8 @@ export default function CustomColorPickerActionSheet(arg0) {
   const intl2 = onSelect(1115).intl;
   obj9.text = intl2.string(onSelect(1115).t.XqMe3N);
   obj9.onPress = callback1;
-  obj7.trailing = sharedValue2(onSelect(5274).Button, obj9);
-  obj5.header = sharedValue2(onSelect(6565).BottomSheetTitleHeader, obj7);
+  obj7.trailing = sharedValue2(onSelect(5281).Button, obj9);
+  obj5.header = sharedValue2(onSelect(6570).BottomSheetTitleHeader, obj7);
   const obj10 = { style: tmp.container, children: null };
   const obj11 = { accessibilityLabel: null, value: null, onChange: null, maxLength: 7 };
   const intl3 = onSelect(1115).intl;
@@ -148,9 +148,9 @@ export default function CustomColorPickerActionSheet(arg0) {
       const result2 = sharedValue2.set(hex2rgb2hsvResult.v / 100);
     }
   };
-  const items3 = [sharedValue2(onSelect(6019).TextInput, obj11), , ];
+  const items3 = [sharedValue2(onSelect(6024).TextInput, obj11), , ];
   const obj12 = { suggestedColors: null, onSelect: null, color: null };
-  const obj8 = onSelect(4563);
+  const obj8 = onSelect(4566);
   const tmp13 = updateInputHexValueFromHsv;
   const tmp14 = sharedValue1;
   const tmp16 = value;
@@ -171,7 +171,7 @@ export default function CustomColorPickerActionSheet(arg0) {
   }
   obj12.color = memo;
   items3[1] = sharedValue2(SuggestedColors, obj12);
-  items3[2] = sharedValue2(tmp16(14132), {
+  items3[2] = sharedValue2(tmp16(14157), {
     hue: sharedValue,
     saturation: sharedValue1,
     value: sharedValue2,
@@ -185,5 +185,5 @@ export default function CustomColorPickerActionSheet(arg0) {
   });
   obj10.children = items3;
   obj5.children = tmp13(tmp14, obj10);
-  return sharedValue2(onSelect(6566).BottomSheet, obj5);
+  return sharedValue2(onSelect(6571).BottomSheet, obj5);
 };

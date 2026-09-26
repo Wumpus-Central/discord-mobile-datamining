@@ -1,22 +1,22 @@
-// === Module 16239: useVibegrationsAppSettingsForm ===
+// === Module 16267: useVibegrationsAppSettingsForm ===
 
-// Module 16239 (useVibegrationsAppSettingsForm)
+// Module 16267 (useVibegrationsAppSettingsForm)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import _modDef3714 from "module_3714" /* 3714 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4796 */;
-import VibegrationsUtils from "VibegrationsUtils" /* 5363 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 10859 */;
+import _modDef3715 from "module_3715" /* 3715 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4800 */;
+import VibegrationsUtils from "VibegrationsUtils" /* 5370 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 10872 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4464 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import RelationshipStore from "RelationshipStore" /* 4476 */;
+import GuildChannelStore from "GuildChannelStore" /* 4467 */;
+import GuildStore from "GuildStore" /* 2067 */;
+import RelationshipStore from "RelationshipStore" /* 4479 */;
 import UserStore from "UserStore" /* 1372 */;
-import VibegrationsChatStore from "VibegrationsChatStore" /* 12608 */;
-import VibegrationsConnectionStore_mod from "VibegrationsConnectionStore" /* 12607 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8487 */;
+import VibegrationsChatStore from "VibegrationsChatStore" /* 12625 */;
+import VibegrationsConnectionStore_mod from "VibegrationsConnectionStore" /* 12624 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8495 */;
 
 require = fn;
 function VibegrationsChannelSettingRow(projectId) {
@@ -68,7 +68,7 @@ function VibegrationsChannelSettingRow(projectId) {
         obj3.channels = channels;
         obj3.selectedChannel = found;
         const intl = util.intl;
-        obj3.noChannelOptionLabel = intl.string(_modDef3714.aO4AM6);
+        obj3.noChannelOptionLabel = intl.string(_modDef3715.aO4AM6);
         obj3.onSelect = function onSelect(id) {
           let str;
           if (id != null) {
@@ -89,12 +89,12 @@ function VibegrationsChannelSettingRow(projectId) {
   return fallback;
 }
 const View = fn(17).View;
-let VibegrationsConnectionStore = fn(12607);
+let VibegrationsConnectionStore = fn(12624);
 ({ requestProjectRebuild: closure_12, sendUserMessage: map1, submitProjectSettings: closure_14 } = VibegrationsConnectionStore);
 let VibegrationsConnectionStore = VibegrationsConnectionStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { section: { gap: nativeDefault.space.PX_16 }, secretRow: null, secretRowInfo: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.secretRow = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8 };
@@ -580,9 +580,9 @@ export default function useVibegrationsAppSettingsForm(projectId) {
                 if (application_id == null) {
                   _null = null;
                 }
-                _null2(12432)(_null);
+                _null2(12450)(_null);
                 let prop;
-                const tmp19 = _null2(12432);
+                const tmp19 = _null2(12450);
                 if (project2 != null) {
                   prop = project2.preview_application_id;
                 }
@@ -590,8 +590,8 @@ export default function useVibegrationsAppSettingsForm(projectId) {
                 if (prop == null) {
                   _null2 = null;
                 }
-                _null2(12432)(_null2);
-                const tmp27 = _null2(12432);
+                _null2(12450)(_null2);
+                const tmp27 = _null2(12450);
               }
               c5 = 0;
               closure_131_12(false);
@@ -600,7 +600,7 @@ export default function useVibegrationsAppSettingsForm(projectId) {
             closure_1_12(closure_131_0);
           }
           const intl = _null(1115).intl;
-          closure_1_13(closure_131_0, intl.string(_null2(3714).gqJFu0));
+          closure_1_13(closure_131_0, intl.string(_null2(3715).gqJFu0));
         }
       } catch (tmp67) {
         closure_4 = tmp67;

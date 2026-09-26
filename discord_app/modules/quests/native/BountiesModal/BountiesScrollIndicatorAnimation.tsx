@@ -1,16 +1,16 @@
-// === Module 14551: BountiesScrollIndicatorAnimation ===
+// === Module 14576: BountiesScrollIndicatorAnimation ===
 
-// Module 14551 (BountiesScrollIndicatorAnimation)
+// Module 14576 (BountiesScrollIndicatorAnimation)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4528 */;
-import native from "native" /* 4537 */;
+import useToken from "useToken" /* 4531 */;
+import BountiesScrollIndicatorRive from "BountiesScrollIndicatorRive" /* 4620 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_7 = createStyles.createStyles(() => ({ container: { width: 80, height: 80 } }));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollIndicatorAnimation.tsx");
@@ -27,6 +27,6 @@ export default function BountiesScrollIndicatorAnimation(startAnimation) {
       tmp7((arg0) => arg0 + 1);
     }
   }
-  const obj2 = { style: tmp.container, children: jsx(native.BountiesScrollIndicatorRive, { stateMachine: "State Machine 1", fit: "contain", dataBinding: { color: token, startAnimation: !startAnimation.isFadingInContent } }, tmp6) };
-  return <View style={tmp.container}>{jsx(native.BountiesScrollIndicatorRive, { stateMachine: "State Machine 1", fit: "contain", dataBinding: { color: token, startAnimation: !startAnimation.isFadingInContent } }, tmp6)}</View>;
+  const obj2 = { style: tmp.container, children: jsx(BountiesScrollIndicatorRive.BountiesScrollIndicatorRive, { stateMachine: "State Machine 1", fit: "contain", dataBinding: { color: token, startAnimation: !startAnimation.isFadingInContent } }, tmp6) };
+  return <View style={tmp.container}>{jsx(BountiesScrollIndicatorRive.BountiesScrollIndicatorRive, { stateMachine: "State Machine 1", fit: "contain", dataBinding: { color: token, startAnimation: !startAnimation.isFadingInContent } }, tmp6)}</View>;
 };

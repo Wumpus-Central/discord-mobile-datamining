@@ -1,6 +1,6 @@
-// === Module 16385: VibegrationsTraceUtils ===
+// === Module 16414: VibegrationsTraceUtils ===
 
-// Module 16385 (VibegrationsTraceUtils)
+// Module 16414 (VibegrationsTraceUtils)
 import size from "module_2" /* 2 */;
 
 function traceCategory(entry) {

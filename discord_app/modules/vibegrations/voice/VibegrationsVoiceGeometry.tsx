@@ -1,6 +1,6 @@
-// === Module 13998: VibegrationsVoiceGeometry ===
+// === Module 14023: VibegrationsVoiceGeometry ===
 
-// Module 13998 (VibegrationsVoiceGeometry)
+// Module 14023 (VibegrationsVoiceGeometry)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/vibegrations/voice/VibegrationsVoiceGeometry.tsx");

@@ -1,8 +1,8 @@
-// === Module 2094: ChannelReader ===
+// === Module 2095: ChannelReader ===
 
-// Module 2094 (ChannelReader)
+// Module 2095 (ChannelReader)
 import LoggerDefault from "Logger" /* 3 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 2073 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 2074 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const logger = new LoggerDefault("ChannelReader");

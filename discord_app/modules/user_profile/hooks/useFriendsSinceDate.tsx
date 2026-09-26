@@ -1,8 +1,8 @@
-// === Module 10766: useFriendsSinceDate ===
+// === Module 10779: useFriendsSinceDate ===
 
-// Module 10766 (useFriendsSinceDate)
-import LocaleStore from "LocaleStore" /* 2111 */;
-import RelationshipStore from "RelationshipStore" /* 4476 */;
+// Module 10779 (useFriendsSinceDate)
+import LocaleStore from "LocaleStore" /* 2112 */;
+import RelationshipStore from "RelationshipStore" /* 4479 */;
 
 const require = globalThis.__r;
 

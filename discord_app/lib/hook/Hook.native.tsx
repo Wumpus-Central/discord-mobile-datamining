@@ -1,6 +1,6 @@
-// === Module 13532: Hook ===
+// === Module 13550: Hook ===
 
-// Module 13532 (Hook)
+// Module 13550 (Hook)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/hook/Hook.native.tsx");

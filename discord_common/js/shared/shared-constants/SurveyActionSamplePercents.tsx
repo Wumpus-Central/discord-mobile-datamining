@@ -1,6 +1,6 @@
-// === Module 5026: SurveyActionSamplePercents ===
+// === Module 5033: SurveyActionSamplePercents ===
 
-// Module 5026 (SurveyActionSamplePercents)
+// Module 5033 (SurveyActionSamplePercents)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/SurveyActionSamplePercents.tsx");

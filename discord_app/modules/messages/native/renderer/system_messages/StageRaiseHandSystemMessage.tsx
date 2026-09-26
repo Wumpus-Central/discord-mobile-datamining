@@ -1,16 +1,16 @@
-// === Module 7467: StageRaiseHandSystemMessage ===
+// === Module 7473: StageRaiseHandSystemMessage ===
 
-// Module 7467 (StageRaiseHandSystemMessage)
+// Module 7473 (StageRaiseHandSystemMessage)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1115 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2110 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4976 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7397 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7399 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7401 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5725 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import PermissionStore from "PermissionStore" /* 4466 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2111 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4983 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7402 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7404 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7406 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5730 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
+import PermissionStore from "PermissionStore" /* 4469 */;
 
 require = fn;
 const Constants = fn(1074);

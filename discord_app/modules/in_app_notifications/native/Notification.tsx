@@ -1,21 +1,21 @@
-// === Module 9619: Notification ===
+// === Module 9630: Notification ===
 
-// Module 9619 (Notification)
+// Module 9630 (Notification)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
-import timing from "timing" /* 4830 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5009 */;
-import spring from "spring" /* 5273 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 9543 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
+import timing from "timing" /* 4837 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5016 */;
+import spring from "spring" /* 5280 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 9554 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const InAppNotificationConstants = fn(9544);
+const InAppNotificationConstants = fn(9555);
 ({ MIN_SWIPE_VELOCITY: closure_4, STARTED_SWIPE_THRESHOLD: hasOwnProperty, NOTIFICATION_MAX_WIDTH } = InAppNotificationConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { shadow: null, container: null };
 let obj3 = {};
 let merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);

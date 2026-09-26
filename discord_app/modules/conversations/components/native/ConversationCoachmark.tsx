@@ -1,9 +1,9 @@
-// === Module 12817: ConversationCoachmark ===
+// === Module 12834: ConversationCoachmark ===
 
-// Module 12817 (ConversationCoachmark)
+// Module 12834 (ConversationCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4825 */;
+import Text_Text from "Text/Text" /* 4832 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,11 +17,11 @@ function NewBadge() {
   return <View style={closure_9().badge}>{null}</View>;
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(2041).ContentDismissActionType;
+const ContentDismissActionType = fn(2042).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const TOPICAL_NAVIGATION_HEADER_COACHMARK = fn(2028).DismissibleContent.TOPICAL_NAVIGATION_HEADER_COACHMARK;
+const TOPICAL_NAVIGATION_HEADER_COACHMARK = fn(2029).DismissibleContent.TOPICAL_NAVIGATION_HEADER_COACHMARK;
 let items = [TOPICAL_NAVIGATION_HEADER_COACHMARK];
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { badge: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, paddingVertical: 2, paddingHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.round }, coachmarkWrapper: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, paddingVertical: 2, paddingHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.round };
 obj2.coachmarkWrapper = { marginRight: nativeDefault.space.PX_12 };
@@ -34,7 +34,7 @@ export const ConversationCoachmark = function ConversationCoachmark(arg0) {
   ({ children, isLast } = arg0);
   const ref = noop.useRef(null);
   const tmp = closure_9();
-  const tmp3 = _slicedToArray(first(6801).useSelectedDismissibleContent(items), 2);
+  const tmp3 = _slicedToArray(first(6806).useSelectedDismissibleContent(items), 2);
   first = tmp3[0];
   dependencyMap = tmp5;
   items = [tmp3[1], first];
@@ -53,8 +53,8 @@ export const ConversationCoachmark = function ConversationCoachmark(arg0) {
     };
     return obj;
   }, items);
-  let obj = first(6801);
-  const coachmark = first(10578).useCoachmark(ref, memo);
+  let obj = first(6806);
+  const coachmark = first(10589).useCoachmark(ref, memo);
   const items1 = [tmp3[1]];
   let coachmarkWrapper;
   const callback = noop.useCallback(() => {
@@ -64,7 +64,7 @@ export const ConversationCoachmark = function ConversationCoachmark(arg0) {
     coachmarkWrapper = tmp.coachmarkWrapper;
   }
   const obj3 = { style: coachmarkWrapper, children: null };
-  const obj2 = first(10578);
+  const obj2 = first(10589);
   obj3.children = <View ref={ref}>{children(callback)}</View>;
   return <View style={coachmarkWrapper}>{null}</View>;
 };

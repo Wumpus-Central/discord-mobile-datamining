@@ -1,13 +1,13 @@
-// === Module 10575: DoubleTapEmojiUpdatedToast ===
+// === Module 10586: DoubleTapEmojiUpdatedToast ===
 
-// Module 10575 (DoubleTapEmojiUpdatedToast)
+// Module 10586 (DoubleTapEmojiUpdatedToast)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4525 */;
-import Text_Text from "Text/Text" /* 4825 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4528 */;
+import Text_Text from "Text/Text" /* 4832 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4821 */;
+import AccessibilityStore from "AccessibilityStore" /* 4825 */;
 
 require = fn;
 class ToastEmoji {
@@ -58,7 +58,7 @@ function ToastText(emoji) {
 }
 const EMOJI_URL_BASE_SIZE = fn(1375).EMOJI_URL_BASE_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { toastEmoji: { marginLeft: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_8 }, toastEmojiCustom: { width: 24, height: 24 }, toastEmojiText: null, toastText: null };
 let PlatformUtils = fn(1364);
 let num = 16;
@@ -84,7 +84,7 @@ export { ToastEmoji };
 export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdatedToast(emoji) {
   emoji = emoji.emoji;
   if (obj.getIsScreenReaderEnabled()) {
-    const AccessibilityAnnouncer = tmp(4538).AccessibilityAnnouncer;
+    const AccessibilityAnnouncer = tmp(4541).AccessibilityAnnouncer;
     const intl = tmp(1115).intl;
     const obj3 = { emojiName: emoji.name };
     AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp(1115).t.nKY0Fl, obj3));
@@ -101,5 +101,5 @@ export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdated
     };
     ToastActionCreatorsDefault.open(obj4);
   }
-  obj = emoji(5259);
+  obj = emoji(5266);
 };

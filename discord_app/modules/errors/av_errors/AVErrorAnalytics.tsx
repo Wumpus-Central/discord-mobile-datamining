@@ -1,20 +1,20 @@
-// === Module 17646: AVErrorAnalytics ===
+// === Module 17676: AVErrorAnalytics ===
 
-// Module 17646 (AVErrorAnalytics)
+// Module 17676 (AVErrorAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import ProcessUtilsDefault from "ProcessUtils" /* 1358 */;
-import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4823 */;
-import VideoQualityStats from "VideoQualityStats" /* 7155 */;
-import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 8877 */;
+import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4830 */;
+import VideoQualityStats from "VideoQualityStats" /* 7160 */;
+import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 8885 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MediaEngineStatsStore from "MediaEngineStatsStore" /* 4867 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4875 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import MediaEngineStore from "MediaEngineStore" /* 1992 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4852 */;
-import RTCRegionStore from "RTCRegionStore" /* 4879 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4868 */;
+import MediaEngineStatsStore from "MediaEngineStatsStore" /* 4874 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4882 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
+import MediaEngineStore from "MediaEngineStore" /* 1993 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4859 */;
+import RTCRegionStore from "RTCRegionStore" /* 4886 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4875 */;
 
 const require = globalThis.__r;
 
@@ -72,9 +72,9 @@ function getCurrentScreenshareCaptureMethod(mediaEngineConnectionId) {
   }
   return null;
 }
-const getSystemAnalyticsInfo = fn(4874).getSystemAnalyticsInfo;
+const getSystemAnalyticsInfo = fn(4881).getSystemAnalyticsInfo;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const Constants = fn(4854);
+const Constants = fn(4861);
 ({ MediaEngineContextTypes: closure_14, SIMULCAST_HQ_QUALITY: closure_15 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/errors/av_errors/AVErrorAnalytics.tsx");

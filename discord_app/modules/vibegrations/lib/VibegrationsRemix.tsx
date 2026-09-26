@@ -1,7 +1,7 @@
-// === Module 16230: VibegrationsRemix ===
+// === Module 16258: VibegrationsRemix ===
 
-// Module 16230 (VibegrationsRemix)
-import VibegrationsActionCreators from "VibegrationsActionCreators" /* 8488 */;
+// Module 16258 (VibegrationsRemix)
+import VibegrationsActionCreators from "VibegrationsActionCreators" /* 8496 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -132,7 +132,7 @@ let closure_9 = async function _remixVibegrationsProjectInto(arg0) {
     }
   })();
 };
-const VibegrationsConnectionStore = fn(12607);
+const VibegrationsConnectionStore = fn(12624);
 ({ VibegrationsRemixError: closure_4, ensureConnection: hasOwnProperty, remixProjectWorkspace: metroRequire, sendUserMessage: closure_7 } = VibegrationsConnectionStore);
 let c8 = " (Remix)";
 const size = fn(2);

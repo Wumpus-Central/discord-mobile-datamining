@@ -1,21 +1,21 @@
-// === Module 15902: useGuildsBarProps ===
+// === Module 15930: useGuildsBarProps ===
 
-// Module 15902 (useGuildsBarProps)
-import useWindowDimensions from "useWindowDimensions" /* 1478 */;
-import GuildsBarFooterWrapperDefault from "GuildsBarFooterWrapper" /* 15959 */;
+// Module 15930 (useGuildsBarProps)
+import useWindowDimensions from "useWindowDimensions" /* 1479 */;
+import GuildsBarFooterWrapperDefault from "GuildsBarFooterWrapper" /* 15987 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5584 */;
-import LurkingStore from "LurkingStore" /* 4467 */;
-import MessageRequestStore from "MessageRequestStore" /* 6635 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6636 */;
-import GeoRestrictedGuildStore from "GeoRestrictedGuildStore" /* 13273 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5194 */;
-import GuildMemberStore from "GuildMemberStore" /* 2107 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 13281 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4652 */;
-import SortedGuildStore from "SortedGuildStore" /* 5745 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 15895 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5589 */;
+import LurkingStore from "LurkingStore" /* 4470 */;
+import MessageRequestStore from "MessageRequestStore" /* 6640 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6641 */;
+import GeoRestrictedGuildStore from "GeoRestrictedGuildStore" /* 13290 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5201 */;
+import GuildMemberStore from "GuildMemberStore" /* 2108 */;
+import GuildStore from "GuildStore" /* 2067 */;
+import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 13298 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4655 */;
+import SortedGuildStore from "SortedGuildStore" /* 5750 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 15923 */;
 
 const require = globalThis.__r;
 
@@ -75,8 +75,8 @@ function isAnchorIdEqual(arg0, arg1, arg2) {
   }
   return tmp;
 }
-const GuildsNodeType = fn(5745).GuildsNodeType;
-const GuildsBarConstants = fn(15892);
+const GuildsNodeType = fn(5750).GuildsNodeType;
+const GuildsBarConstants = fn(15920);
 ({ FastListRenderSections: closure_17, useGuildWrapperSize: closure_18 } = GuildsBarConstants);
 const jsx = fn(21).jsx;
 let closure_21 = { MESSAGES: "section-messages", FAVORITES: "section-favorites", PENDING_JOIN_REQUESTS: "section-pending-join-requests", LURKING_GUILDS: "section-lurking-guilds", GUEST_GUILDS: "section-guest-guilds", UNREAD_PRIVATE_CHANNELS: "section-private-channels", SEPARATOR: "section-separator", GUILDS: "section-guilds" };
@@ -443,22 +443,22 @@ export default function useGuildsBarProps(arg0) {
         const obj = {
           children: items1.map((item) => {
             if ("unavailable-guilds" === item) {
-              return closure_1_19(closure_1_1(15960), {}, item);
+              return closure_1_19(closure_1_1(15988), {}, item);
             } else if ("empty-nux" === item) {
-              return closure_1_19(closure_1_1(15961), {}, item);
+              return closure_1_19(closure_1_1(15989), {}, item);
             } else if ("create-join-guild" === item) {
-              return closure_1_19(closure_1_1(15963), {}, item);
+              return closure_1_19(closure_1_1(15991), {}, item);
             }
           })
         };
         return jsx(GuildsBarFooterWrapperDefault, {
           children: items1.map((item) => {
             if ("unavailable-guilds" === item) {
-              return closure_1_19(closure_1_1(15960), {}, item);
+              return closure_1_19(closure_1_1(15988), {}, item);
             } else if ("empty-nux" === item) {
-              return closure_1_19(closure_1_1(15961), {}, item);
+              return closure_1_19(closure_1_1(15989), {}, item);
             } else if ("create-join-guild" === item) {
-              return closure_1_19(closure_1_1(15963), {}, item);
+              return closure_1_19(closure_1_1(15991), {}, item);
             }
           })
         });

@@ -1,13 +1,13 @@
-// === Module 17528: GuildSettingsRoleSubscriptionContainer ===
+// === Module 17558: GuildSettingsRoleSubscriptionContainer ===
 
-// Module 17528 (GuildSettingsRoleSubscriptionContainer)
-import ErrorBlockDefault from "ErrorBlock" /* 11691 */;
-import GroupListingsFetchContext from "GroupListingsFetchContext" /* 14732 */;
-import WarningNoticeDefault from "WarningNotice" /* 17477 */;
-import useOnboardingMonetizationEnableFlowDefault from "useOnboardingMonetizationEnableFlow" /* 17504 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 17518 */;
+// Module 17558 (GuildSettingsRoleSubscriptionContainer)
+import ErrorBlockDefault from "ErrorBlock" /* 11705 */;
+import GroupListingsFetchContext from "GroupListingsFetchContext" /* 14760 */;
+import WarningNoticeDefault from "WarningNotice" /* 17507 */;
+import useOnboardingMonetizationEnableFlowDefault from "useOnboardingMonetizationEnableFlow" /* 17534 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 17548 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2066 */;
+import GuildStore from "GuildStore" /* 2067 */;
 
 require = fn;
 function ApplicationRejectedNotice(guildId) {
@@ -89,7 +89,7 @@ get_ActivityIndicator = fn(17);
 const GuildFeatures = fn(1074).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_9 = createStyles.createStyles({ container: { flex: 1 }, warningBlockContainer: { marginHorizontal: 16, marginTop: 16 }, spinner: { marginTop: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionContainer.tsx");

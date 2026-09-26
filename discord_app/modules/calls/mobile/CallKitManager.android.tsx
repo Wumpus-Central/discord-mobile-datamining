@@ -1,7 +1,7 @@
-// === Module 13978: CallKitManager ===
+// === Module 14003: CallKitManager ===
 
-// Module 13978 (CallKitManager)
-import LifecycleManager from "LifecycleManager" /* 1982 */;
+// Module 14003 (CallKitManager)
+import LifecycleManager from "LifecycleManager" /* 1983 */;
 
 class CallKitLifecycleManager extends tmp2 {
 }

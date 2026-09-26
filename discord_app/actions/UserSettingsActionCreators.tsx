@@ -1,12 +1,12 @@
-// === Module 8651: UserSettingsActionCreators ===
+// === Module 8659: UserSettingsActionCreators ===
 
-// Module 8651 (UserSettingsActionCreators)
+// Module 8659 (UserSettingsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
 import wrappers from "wrappers" /* 1217 */;
-import UserSettings from "UserSettings" /* 2020 */;
+import UserSettings from "UserSettings" /* 2021 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4650 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4653 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1183 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 
@@ -79,7 +79,7 @@ export default {
               return obj4;
             } else if (tmp3) {
               dependencyMap = 1;
-              const PreloadedUserSettingsActionCreators = tmp3(2025).PreloadedUserSettingsActionCreators;
+              const PreloadedUserSettingsActionCreators = tmp3(2026).PreloadedUserSettingsActionCreators;
               v2 = 2;
               c3 = 1;
               const obj5 = {
@@ -107,7 +107,7 @@ export default {
                           if (gradientPreset != null) {
                             id = gradientPreset.id;
                           }
-                          const ClientThemeSettings = tmp4(2020).ClientThemeSettings;
+                          const ClientThemeSettings = tmp4(2021).ClientThemeSettings;
                           const setting = ClientThemeSettings.getSetting();
                           let prop;
                           if (setting != null) {
@@ -128,7 +128,7 @@ export default {
                           }
                           obj6.customUserThemeSettings = tmp17;
                           arg0.clientThemeSettings = obj6;
-                        }, tmp3(2025).UserSettingsDelay.INFREQUENT_USER_ACTION),
+                        }, tmp3(2026).UserSettingsDelay.INFREQUENT_USER_ACTION),
                 done: false
               };
               return obj5;
@@ -159,10 +159,10 @@ export default {
               id = gradientPreset.id;
             }
             const obj8 = { backgroundGradientPresetId: id, customUserThemeSettings: null };
-            let ClientThemeSettings = tmp3(2020).ClientThemeSettings;
+            let ClientThemeSettings = tmp3(2021).ClientThemeSettings;
             obj8.customUserThemeSettings = ClientThemeSettings.getSetting().customUserThemeSettings;
             obj7.clientThemeSettings = obj8;
-            const DeveloperMode = tmp3(2020).DeveloperMode;
+            const DeveloperMode = tmp3(2021).DeveloperMode;
             obj7.developerMode = DeveloperMode.getSetting();
           }
           const obj9 = { type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: null };

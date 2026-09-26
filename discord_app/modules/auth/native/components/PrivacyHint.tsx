@@ -1,12 +1,12 @@
-// === Module 15581: PrivacyHint ===
+// === Module 15609: PrivacyHint ===
 
-// Module 15581 (PrivacyHint)
+// Module 15609 (PrivacyHint)
 import util from "util" /* 1115 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4545 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import FormCheckbox from "FormCheckbox" /* 5924 */;
-import Form from "Form" /* 8045 */;
-import PromotionalEmailCheckBoxDefault from "PromotionalEmailCheckBox" /* 15582 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4548 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import FormCheckbox from "FormCheckbox" /* 5929 */;
+import Form from "Form" /* 8053 */;
+import PromotionalEmailCheckBoxDefault from "PromotionalEmailCheckBox" /* 15610 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -47,12 +47,12 @@ function PrivacyPolicyCheckbox(onToggleConsent) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, Pressable: closure_4 } = get_ActivityIndicator);
-const usePromoEmailConsentStore = fn(6006).usePromoEmailConsentStore;
-const useRegistrationUIStore = fn(15543).useRegistrationUIStore;
+const usePromoEmailConsentStore = fn(6011).usePromoEmailConsentStore;
+const useRegistrationUIStore = fn(15572).useRegistrationUIStore;
 const MarketingURLs = fn(1074).MarketingURLs;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_10 = createStyles.createStyles({ multiItem: { flexDirection: "column", gap: 16 }, checkbox: { flexDirection: "row", alignItems: "flex-start", gap: 8 }, radio: { flexDirection: "row", alignItems: "center", gap: 8 }, checkboxLabel: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/PrivacyHint.tsx");

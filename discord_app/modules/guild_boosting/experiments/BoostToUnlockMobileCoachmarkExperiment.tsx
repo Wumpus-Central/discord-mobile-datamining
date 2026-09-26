@@ -1,7 +1,7 @@
-// === Module 11980: BoostToUnlockMobileCoachmarkExperiment ===
+// === Module 11998: BoostToUnlockMobileCoachmarkExperiment ===
 
-// Module 11980 (BoostToUnlockMobileCoachmarkExperiment)
-import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1435 */;
+// Module 11998 (BoostToUnlockMobileCoachmarkExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1436 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_boosting/experiments/BoostToUnlockMobileCoachmarkExperiment.tsx");

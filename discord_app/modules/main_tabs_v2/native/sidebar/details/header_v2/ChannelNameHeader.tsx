@@ -1,20 +1,20 @@
-// === Module 16524: ChannelNameHeader ===
+// === Module 16553: ChannelNameHeader ===
 
-// Module 16524 (ChannelNameHeader)
+// Module 16553 (ChannelNameHeader)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import _modDef3650 from "module_3650" /* 3650 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import transitionToChannel from "transitionToChannel" /* 4840 */;
-import ChannelUtils from "ChannelUtils" /* 4974 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5328 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7617 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10360 */;
+import _modDef3651 from "module_3651" /* 3651 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import transitionToChannel from "transitionToChannel" /* 4847 */;
+import ChannelUtils from "ChannelUtils" /* 4981 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5335 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7624 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10371 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4466 */;
-import PresenceStore from "PresenceStore" /* 4869 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
+import GuildStore from "GuildStore" /* 2067 */;
+import PermissionStore from "PermissionStore" /* 4469 */;
+import PresenceStore from "PresenceStore" /* 4876 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -105,16 +105,16 @@ function ChannelSubtitle(channel) {
       tmp8 = null;
       if ("" !== stateFromStores) {
         const obj2 = { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, children: stateFromStores };
-        tmp8 = closure_12(tmp(4825).Text, obj2);
+        tmp8 = closure_12(tmp(4832).Text, obj2);
       }
     }
     return tmp8;
   } else if (channel.isGameInvitesChannel()) {
     const intl = tmp(1115).intl;
-    let stringResult = intl.string(_modDef3650["D+2/QP"]);
+    let stringResult = intl.string(_modDef3651["D+2/QP"]);
   } else {
-    stringResult = tmp(4974).channelTypeString(channel);
-    const tmpResult = tmp(4974);
+    stringResult = tmp(4981).channelTypeString(channel);
+    const tmpResult = tmp(4981);
   }
   let obj = channel(504);
 }
@@ -218,7 +218,7 @@ function ChannelNameHeaderContent(channel) {
 function DMChannelNameHeader(channel) {
   channel = channel.channel;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(6578)().analyticsLocations;
+  analyticsLocations = analyticsLocations(6583)().analyticsLocations;
   const items = [channel, analyticsLocations];
   const callback = noop.useCallback(() => {
     const recipientId = channel.getRecipientId();
@@ -230,7 +230,7 @@ function DMChannelNameHeader(channel) {
   let obj = { style: null, onPress: callback, children: closure_12(ChannelNameHeaderContent, { channel }) };
   const items1 = [closure_15().container, channel.containerStyle];
   obj.style = items1;
-  return closure_12(channel(5428).PressableOpacity, obj);
+  return closure_12(channel(5435).PressableOpacity, obj);
 }
 function DefaultChannelNameHeader(arg0) {
   ({ channel, containerStyle } = arg0);
@@ -245,7 +245,7 @@ const Constants = fn(1074);
 ({ Permissions: c10, StatusTypes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj = { container: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" }, channelIcon: { height: 40, width: 40, justifyContent: "center", alignItems: "center" }, channelTypeBox: null, channelData: null, statusStyle: null };
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" };
 obj.channelTypeBox = { borderRadius: nativeDefault.modules.mobile.CHANNEL_NAME_CHANNEL_ICON_RADIUS, borderWidth: nativeDefault.modules.mobile.CHANNEL_NAME_CHANNEL_BORDER_WIDTH, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };

@@ -1,16 +1,16 @@
-// === Module 14531: useBountyPauseAppStoreSheet ===
+// === Module 14556: useBountyPauseAppStoreSheet ===
 
-// Module 14531 (useBountyPauseAppStoreSheet)
+// Module 14556 (useBountyPauseAppStoreSheet)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
-import AdCreativeType from "AdCreativeType" /* 5758 */;
-import AnalyticsActions from "AnalyticsActions" /* 7126 */;
-import BountiesMobileQuestBarExperiment2 from "BountiesMobileQuestBarExperiment" /* 10674 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 14526 */;
-import QuestCustomAppStoreOverlayUtils from "QuestCustomAppStoreOverlayUtils" /* 14529 */;
+import AdCreativeType from "AdCreativeType" /* 5763 */;
+import AnalyticsActions from "AnalyticsActions" /* 7131 */;
+import BountiesMobileQuestBarExperiment2 from "BountiesMobileQuestBarExperiment" /* 10687 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 14551 */;
+import QuestCustomAppStoreOverlayUtils from "QuestCustomAppStoreOverlayUtils" /* 14554 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestsExperimentLocations = fn(5751).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5756).QuestsExperimentLocations;
 const ComponentActions = fn(1074).ComponentActions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountyPauseAppStoreSheet.tsx");
@@ -61,7 +61,7 @@ export const useBountyPauseAppStoreSheet = function useBountyPauseAppStoreSheet(
   }, []);
   const items2 = [callback];
   const effect2 = isActive.useEffect(() => () => callback(), items2);
-  const items3 = [bounty, getQuestImpressionId, playerRef, sourceQuestContent, callback];
+  const items3 = [bounty, getQuestImpressionId, playerRef, sourceQuestContent, callback, tmp5];
   callback1 = isActive.useCallback(() => {
     let trackingCtx = { content: bounty(sourceQuestContent[7]).QuestContent.VIDEO_MODAL_MOBILE, ctaContent: bounty(sourceQuestContent[8]).QuestContentCTA.OPEN_GAME_LINK, impressionId: getQuestImpressionId(), sourceQuestContent };
     const directAppStoreLinkFromCta = bounty(sourceQuestContent[9]).getDirectAppStoreLinkFromCta(trackingCtx.cta);
@@ -85,12 +85,19 @@ export const useBountyPauseAppStoreSheet = function useBountyPauseAppStoreSheet(
     const tmpResult = bounty(sourceQuestContent[9]);
     return obj3.openAppStoreOrUrl(obj4).then((result) => {
       if (result) {
-        const current = ref.current;
+        let current = ref.current;
         if (current != null) {
           current.pause();
         }
         function handleFinished() {
           closure_1_8();
+          if (!tmp5) {
+            const current = ref.current;
+            if (current != null) {
+              current.play();
+            }
+          }
+          tmp5 = closure_1_5 !== obj(sourceQuestContent[3]).BountiesMobileQuestBarCtrVariant.EVERY_PAUSE_APP_STORE_OVERLAY && closure_1_5 !== obj(sourceQuestContent[3]).BountiesMobileQuestBarCtrVariant.FIRST_TAP_APP_STORE_OVERLAY;
         }
         callback();
         const ComponentDispatch = bounty(sourceQuestContent[6]).ComponentDispatch;

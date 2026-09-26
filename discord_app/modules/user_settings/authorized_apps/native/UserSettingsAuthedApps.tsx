@@ -1,31 +1,31 @@
-// === Module 14450: UserSettingsAuthedApps ===
+// === Module 14475: UserSettingsAuthedApps ===
 
-// Module 14450 (UserSettingsAuthedApps)
+// Module 14475 (UserSettingsAuthedApps)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4783 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import TableRowGroup from "TableRowGroup" /* 5994 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6406 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6411 */;
-import GlobeEarthIcon from "GlobeEarthIcon" /* 8346 */;
-import applications from "applications" /* 8512 */;
-import EmbedIcon from "EmbedIcon" /* 8726 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4787 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import TableRowGroup from "TableRowGroup" /* 5999 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6411 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6416 */;
+import GlobeEarthIcon from "GlobeEarthIcon" /* 8354 */;
+import applications from "applications" /* 8520 */;
+import EmbedIcon from "EmbedIcon" /* 8734 */;
 import noop from "module_19" /* 19 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6523 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6528 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);
-const FetchState = fn(6523).FetchState;
+const FetchState = fn(6528).FetchState;
 const Constants = fn(1074);
 ({ AnalyticsPages: closure_9, UserSettingsSections: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const PX_24 = nativeDefault.space.PX_24;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { spinner: { padding: 16 }, emptyText: { marginTop: 24 }, emptyContainer: { padding: 16 }, container: { paddingHorizontal: 16, paddingTop: nativeDefault.space.PX_24 }, headerDescription: { marginTop: 12 }, appListHeader: { marginTop: 24 } };
 let closure_15 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -45,11 +45,8 @@ export default function UserSettingsAuthedApps() {
   noop = noop.useCallback((item) => {
     item = item.item;
     const index = item.index;
-    const applicationIconSource = appAuthTokens(navigation[19]).getApplicationIconSource({ id: item.application.id, icon: item.application.icon });
-    let obj = appAuthTokens(navigation[19]);
-    const obj2 = { id: item.application.id, icon: item.application.icon };
-    return closure_1_11(closure_0(navigation[20]).TableRow, {
-      icon: closure_1_11(appAuthTokens(navigation[21]), { iconSource: applicationIconSource, iconBorderRadius: 6 }),
+    let obj = {
+      icon: closure_1_11(appAuthTokens(navigation[20]), { application: item.application }),
       label: item.application.name,
       onPress() {
         UserSettingsModalActionCreatorsDefault.setSection(constants2.AUTHORIZED_APP);
@@ -60,7 +57,8 @@ export default function UserSettingsAuthedApps() {
       arrow: true,
       start: 0 === index,
       end: index === item.numItems - 1
-    }, item.id);
+    };
+    return closure_1_11(closure_0(navigation[19]).TableRow, obj, item.id);
   }, items1);
   if (null != appAuthTokens) {
     if (stateFromStoresObject.fetchState === FetchState.FETCHED) {

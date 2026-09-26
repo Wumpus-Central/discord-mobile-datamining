@@ -1,18 +1,18 @@
-// === Module 11633: AppLauncherChoicesActionSheet ===
+// === Module 11647: AppLauncherChoicesActionSheet ===
 
-// Module 11633 (AppLauncherChoicesActionSheet)
+// Module 11647 (AppLauncherChoicesActionSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5749 */;
-import Form from "Form" /* 8045 */;
-import _mod8171 from "module_8171" /* 8171 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5754 */;
+import Form from "Form" /* 8053 */;
+import _mod8179 from "module_8179" /* 8179 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function FlashListWrapper(scrollable) {
   const merged = Object.assign(scrollable, Object.assign({ scrollable: 0 }));
-  const tmp3 = _mod8171;
+  const tmp3 = _mod8179;
   if (scrollable.scrollable) {
     const obj2 = { preserveScrollMomentum: true };
     const merged1 = Object.assign(merged);
@@ -25,10 +25,10 @@ function FlashListWrapper(scrollable) {
   return tmp2Result;
 }
 const View = fn(17).View;
-const DEFAULT_CONTENT_PADDING = fn(1483).DEFAULT_CONTENT_PADDING;
+const DEFAULT_CONTENT_PADDING = fn(1484).DEFAULT_CONTENT_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { listItemContainer: { overflow: "hidden" }, listItem: { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT }, firstItem: null, lastItem: null, divider: null };
 let obj3 = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT };
 obj2.firstItem = { borderTopLeftRadius: nativeDefault.radii.xl, borderTopRightRadius: nativeDefault.radii.xl };
@@ -50,7 +50,7 @@ export default function AppLauncherChoicesActionSheet(option) {
   ({ initChoiceIndex, onDismiss } = option);
   const tmp = closure_9();
   dependencyMap = tmp;
-  const bottom = onChoiceSelect(1612)().bottom;
+  const bottom = onChoiceSelect(1613)().bottom;
   let sum = bottom;
   if (!obj.isIOS()) {
     sum = bottom + closure_6;
@@ -131,11 +131,11 @@ export default function AppLauncherChoicesActionSheet(option) {
   let tmp16 = tmp13;
   if (tmp13) {
     const obj3 = { onChange: callback };
-    tmp16 = closure_7(tmp3(11635).AppLauncherListSearchBar, obj3);
+    tmp16 = closure_7(tmp3(11649).AppLauncherListSearchBar, obj3);
   }
   const items3 = [tmp16, ];
   if (0 === data.length) {
-    let tmp20 = closure_7(tmp3(11635).AppLauncherListEmptyState, {});
+    let tmp20 = closure_7(tmp3(11649).AppLauncherListEmptyState, {});
   } else {
     const obj4 = { scrollable: tmp13, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, data: null, renderItem: null, ItemSeparatorComponent: null, accessibilityRole: "radiogroup" };
     const obj5 = { paddingBottom: sum };
@@ -152,5 +152,5 @@ export default function AppLauncherChoicesActionSheet(option) {
   }
   items3[1] = tmp20;
   obj2.children = items3;
-  return closure_8(option(11634).AppLauncherCommandOptionActionSheet, obj2);
+  return closure_8(option(11648).AppLauncherCommandOptionActionSheet, obj2);
 };

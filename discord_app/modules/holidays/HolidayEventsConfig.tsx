@@ -1,10 +1,10 @@
-// === Module 17116: HolidayEventsConfig ===
+// === Module 17144: HolidayEventsConfig ===
 
-// Module 17116 (HolidayEventsConfig)
+// Module 17144 (HolidayEventsConfig)
 import util from "util" /* 1115 */;
-import HalloweenHolidayExperimentDefault from "HalloweenHolidayExperiment" /* 17117 */;
-import _modDef17118 from "module_17118" /* 17118 */;
-import _modDef17119 from "module_17119" /* 17119 */;
+import HalloweenHolidayExperimentDefault from "HalloweenHolidayExperiment" /* 17145 */;
+import _modDef17146 from "module_17146" /* 17146 */;
+import _modDef17147 from "module_17147" /* 17147 */;
 
 require = fn;
 const obj = {
@@ -18,9 +18,9 @@ const obj = {
   startTimeMs: 1791388800000,
   endTimeMs: 1793638800000,
   isDesktopOnly: true,
-  soundpack: fn(9348).Soundpacks.HALLOWEEN,
+  soundpack: fn(9359).Soundpacks.HALLOWEEN,
   soundpackLabel: fn(1115).t["+LasFV"],
-  appSpinnerSources: { webmDark: _modDef17118, webmLight: _modDef17119 },
+  appSpinnerSources: { webmDark: _modDef17146, webmLight: _modDef17147 },
   getLoadingTips() {
     const intl = util.intl;
     const items = [intl.string(util.t.ydMZ2o), , , , , , , , , , , , ];
@@ -50,7 +50,7 @@ const obj = {
     items[12] = intl13.string(util.t["1XGw3F"]);
     return items;
   },
-  coachmarkDismissibleContent: fn(2028).DismissibleContent.HOLIDAY_COACHMARK_HALLOWEEN_2026
+  coachmarkDismissibleContent: fn(2029).DismissibleContent.HOLIDAY_COACHMARK_HALLOWEEN_2026
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/holidays/HolidayEventsConfig.tsx");

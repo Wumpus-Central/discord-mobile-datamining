@@ -1,9 +1,9 @@
-// === Module 9763: PremiumExpressionPickerSearchUpsell ===
+// === Module 9774: PremiumExpressionPickerSearchUpsell ===
 
-// Module 9763 (PremiumExpressionPickerSearchUpsell)
+// Module 9774 (PremiumExpressionPickerSearchUpsell)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import Pressables from "Pressables" /* 5428 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import Pressables from "Pressables" /* 5435 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 const sum = 56 + nativeDefault.space.PX_8;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_8 }, upsell: null, content: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_8 };
 obj2.upsell = { height: 56, padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, flexDirection: "row", justifyContent: "space-between", alignItems: "center", alignContent: "center" };

@@ -1,6 +1,6 @@
-// === Module 14073: MediaPlayerManager ===
+// === Module 14098: MediaPlayerManager ===
 
-// Module 14073 (MediaPlayerManager)
+// Module 14098 (MediaPlayerManager)
 import LoggerDefault from "Logger" /* 3 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -8,19 +8,19 @@ import Constants from "Constants" /* 1074 */;
 import Constants2 from "Constants" /* 1085 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import RootNavigationRef from "RootNavigationRef" /* 4689 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 6871 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 8494 */;
+import RootNavigationRef from "RootNavigationRef" /* 4693 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 6876 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 8502 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
-import VoicePanelStore from "VoicePanelStore" /* 5037 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import MessageStore from "MessageStore" /* 5049 */;
-import PermissionStore from "PermissionStore" /* 4466 */;
-import AppStateStore from "AppStateStore" /* 1979 */;
-import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 14074 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
+import VoicePanelStore from "VoicePanelStore" /* 5044 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
+import MessageStore from "MessageStore" /* 5056 */;
+import PermissionStore from "PermissionStore" /* 4469 */;
+import AppStateStore from "AppStateStore" /* 1980 */;
+import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 14099 */;
 import module_560 from "module_560" /* 560 */;
-import LifecycleManager from "LifecycleManager" /* 1982 */;
+import LifecycleManager from "LifecycleManager" /* 1983 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -41,12 +41,12 @@ const useMediaPlayerManagerStore = module_560.create((arg0) => {
     wasPipClosedByUser: null,
     progress: null,
     rate: "flex",
-    showPip: "hatched_chick",
+    showPip: "face_with_hand_over_mouth",
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: "duck"
+    currentlyDisplayedChannelId: "shushing_face"
   };
   return obj;
 });

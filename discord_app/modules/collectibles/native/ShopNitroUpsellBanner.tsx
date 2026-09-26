@@ -1,20 +1,20 @@
-// === Module 15399: ShopNitroUpsellBanner ===
+// === Module 15428: ShopNitroUpsellBanner ===
 
-// Module 15399 (ShopNitroUpsellBanner)
+// Module 15428 (ShopNitroUpsellBanner)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import useToken from "useToken" /* 4528 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import Stack_Stack from "Stack/Stack" /* 5272 */;
-import components_Button_Button from "components/Button/Button" /* 5274 */;
-import LinearGradientDefault from "LinearGradient" /* 5286 */;
-import Card from "Card" /* 5914 */;
-import XSmallIcon from "XSmallIcon" /* 5987 */;
-import NitroUpsellButtonDefault from "NitroUpsellButton" /* 9414 */;
-import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment" /* 15398 */;
+import useToken from "useToken" /* 4531 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import Stack_Stack from "Stack/Stack" /* 5279 */;
+import components_Button_Button from "components/Button/Button" /* 5281 */;
+import LinearGradientDefault from "LinearGradient" /* 5293 */;
+import Card from "Card" /* 5919 */;
+import XSmallIcon from "XSmallIcon" /* 5992 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 9425 */;
+import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment" /* 15427 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -98,7 +98,7 @@ class ShopNitroUpsellBanner {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { card: { overflow: "hidden", padding: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_8, marginHorizontal: nativeDefault.space.PX_16, borderWidth: 1 }, borderDark: null, borderLight: null, gradientBackground: null, text: null, closeButton: null };
 let obj3 = { overflow: "hidden", padding: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_8, marginHorizontal: nativeDefault.space.PX_16, borderWidth: 1 };
 obj2.borderDark = { borderColor: nativeDefault.unsafe_rawColors.PRIMARY_660 };

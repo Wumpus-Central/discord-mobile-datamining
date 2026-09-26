@@ -1,7 +1,7 @@
-// === Module 15883: FavoritesGuildSuggestionsLoader ===
+// === Module 15911: FavoritesGuildSuggestionsLoader ===
 
-// Module 15883 (FavoritesGuildSuggestionsLoader)
-import useFavoritesGuildSuggestionCandidatesDefault from "useFavoritesGuildSuggestionCandidates" /* 15884 */;
+// Module 15911 (FavoritesGuildSuggestionsLoader)
+import useFavoritesGuildSuggestionCandidatesDefault from "useFavoritesGuildSuggestionCandidates" /* 15912 */;
 import noop from "module_19" /* 19 */;
 
 function FavoritesGuildSuggestionsLoaderInner() {
@@ -13,7 +13,7 @@ function FavoritesGuildSuggestionsLoaderInner() {
   }, items);
   return null;
 }
-const FavoritesGuildSuggestionsStore = fn(15808);
+const FavoritesGuildSuggestionsStore = fn(15836);
 ({ NO_SUGGESTIONS: c3, setFavoritesGuildSuggestions: closure_4, useFavoritesGuildSuggestionsVisibility: hasOwnProperty } = FavoritesGuildSuggestionsStore);
 const jsx = fn(21).jsx;
 const size = fn(2);

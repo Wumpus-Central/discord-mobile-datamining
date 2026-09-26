@@ -1,9 +1,9 @@
-// === Module 7309: MarkupPostProcessors ===
+// === Module 7314: MarkupPostProcessors ===
 
-// Module 7309 (MarkupPostProcessors)
+// Module 7314 (MarkupPostProcessors)
 import Constants from "Constants" /* 1074 */;
 import EmojiConstants from "EmojiConstants" /* 1375 */;
-import RedundantLinkUtils from "RedundantLinkUtils" /* 7310 */;
+import RedundantLinkUtils from "RedundantLinkUtils" /* 7315 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -41002,14 +41002,14 @@ export const removeExperimentLinks = function removeExperimentLinks(arr) {
   return arr.filter((type) => {
     let tmp = "link" !== type.type;
     if (!tmp) {
-      tmp = !closure_0(7311).isExperimentEmbedURL(type.target);
-      const obj = closure_0(7311);
+      tmp = !closure_0(7316).isExperimentEmbedURL(type.target);
+      const obj = closure_0(7316);
     }
     return tmp;
   });
 };
 export const removeRedundantLinks = function removeRedundantLinks(arr) {
-  obj = { onlyLinkContent: obj(7310).readContentLinks(arr, isLinkNode).onlyLinks, stripGameServerShareLinks: false };
+  obj = { onlyLinkContent: obj(7315).readContentLinks(arr, isLinkNode).onlyLinks, stripGameServerShareLinks: false };
   return arr.filter((type) => {
     let tmp = null;
     if ("link" === type.type) {
@@ -41134,12 +41134,12 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
     }
     let items2 = tmp;
     if (obj3.hasOnlySimpleEmbed(tmp3.embeds)) {
-      const tmp4Result = tmp4(7310);
+      const tmp4Result = tmp4(7315);
       items2 = tmp;
       if (tmp4Result.isSingleLinkContent(tmp4Result2.readContentLinks(tmp, isLinkNode))) {
         items2 = [];
       }
-      tmp4Result2 = tmp4(7310);
+      tmp4Result2 = tmp4(7315);
     }
     arr3 = items2;
     obj3 = require("RedundantLinkUtils");
@@ -41244,8 +41244,8 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
     found1 = found.filter((type) => {
       let tmp = "link" !== type.type;
       if (!tmp) {
-        tmp = !closure_0(7311).isExperimentEmbedURL(type.target);
-        const obj = closure_0(7311);
+        tmp = !closure_0(7316).isExperimentEmbedURL(type.target);
+        const obj = closure_0(7316);
       }
       return tmp;
     });

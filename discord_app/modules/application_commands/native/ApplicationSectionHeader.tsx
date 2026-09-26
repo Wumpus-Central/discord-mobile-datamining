@@ -1,15 +1,15 @@
-// === Module 11871: ApplicationSectionHeader ===
+// === Module 11889: ApplicationSectionHeader ===
 
-// Module 11871 (ApplicationSectionHeader)
+// Module 11889 (ApplicationSectionHeader)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 2107 */;
+import GuildMemberStore from "GuildMemberStore" /* 2108 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 const obj2 = { applicationHeaderWrapper: { flexDirection: "row", alignItems: "center", height: 32, backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, paddingHorizontal: 16 }, applicationIcon: null };
 let size = { width: 16, height: 16, borderRadius: nativeDefault.radii.sm, marginRight: 8 };
 obj2.applicationIcon = size;
@@ -34,7 +34,7 @@ export default function ApplicationSectionHeader(section) {
     }
   });
   const obj = section(504);
-  const applicationCommandsIconSource = section(11699).getApplicationCommandsIconSource(section, stateFromStores);
+  const applicationCommandsIconSource = section(11713).getApplicationCommandsIconSource(section, stateFromStores);
   let nick;
   if (stateFromStores != null) {
     nick = stateFromStores.nick;
@@ -50,9 +50,9 @@ export default function ApplicationSectionHeader(section) {
   let tmp9 = null != applicationCommandsIconSource;
   if (tmp9) {
     const obj4 = { style: tmp.applicationIcon, source: applicationCommandsIconSource };
-    tmp9 = closure_5(guildId(5894), obj4);
+    tmp9 = closure_5(guildId(5899), obj4);
   }
-  const items1 = [tmp9, closure_5(section(4825).Text, { variant: "eyebrow", color: "interactive-text-default", children: name })];
+  const items1 = [tmp9, closure_5(section(4832).Text, { variant: "eyebrow", color: "interactive-text-default", children: name })];
   obj3.children = items1;
   return closure_6(View, obj3);
 };

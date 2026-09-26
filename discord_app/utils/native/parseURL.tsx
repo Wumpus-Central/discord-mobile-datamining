@@ -1,24 +1,24 @@
-// === Module 4809: parseURL ===
+// === Module 4813: parseURL ===
 
-// Module 4809 (parseURL)
+// Module 4813 (parseURL)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import FingerprintUtils from "FingerprintUtils" /* 1254 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import URLUtilsDefault from "URLUtils" /* 1366 */;
 import UrlDefault from "Url" /* 1368 */;
-import _modDef1472 from "module_1472" /* 1472 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1609 */;
-import _modDef1929 from "module_1929" /* 1929 */;
-import findCodedLinks from "findCodedLinks" /* 4812 */;
-import CodedLink from "CodedLink" /* 4817 */;
-import LinkUtils from "LinkUtils" /* 4983 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 5082 */;
-import MobileWebRedirectCheckoutUtils from "MobileWebRedirectCheckoutUtils" /* 6821 */;
-import Authorize from "Authorize" /* 8508 */;
-import SecureFramesDeeplinkExperiment from "SecureFramesDeeplinkExperiment" /* 9162 */;
-import useVirtualCurrencyMobileEnabled from "useVirtualCurrencyMobileEnabled" /* 12484 */;
-import QRLoginUtils from "QRLoginUtils" /* 13376 */;
-import urlPartToSettingsEnumDefault from "urlPartToSettingsEnum" /* 13377 */;
+import _modDef1473 from "module_1473" /* 1473 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1610 */;
+import _modDef1930 from "module_1930" /* 1930 */;
+import findCodedLinks from "findCodedLinks" /* 4816 */;
+import CodedLink from "CodedLink" /* 4821 */;
+import LinkUtils from "LinkUtils" /* 4990 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 5089 */;
+import MobileWebRedirectCheckoutUtils from "MobileWebRedirectCheckoutUtils" /* 6826 */;
+import Authorize from "Authorize" /* 8516 */;
+import SecureFramesDeeplinkExperiment from "SecureFramesDeeplinkExperiment" /* 9173 */;
+import useVirtualCurrencyMobileEnabled from "useVirtualCurrencyMobileEnabled" /* 12501 */;
+import QRLoginUtils from "QRLoginUtils" /* 13394 */;
+import urlPartToSettingsEnumDefault from "urlPartToSettingsEnum" /* 13395 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -26,7 +26,7 @@ function parseQuery(arg0) {
   try {
     const _Object = Object;
     const _Object2 = Object;
-    const entries = Object.entries(_modDef1472.parse(arg0));
+    const entries = Object.entries(_modDef1473.parse(arg0));
     return Object.fromEntries(entries.map((item) => {
       [tmp, tmp2] = item;
       const items = [tmp, ];
@@ -45,8 +45,8 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_4, GuildSettingsSections: hasOwnProperty, GuildSettingsSubsections: metroRequire, LinkingTypes: closure_7 } = Constants);
 const CollectiblesShopConstants = fn(1076);
 ({ CollectibleShopTab: closure_8, CollectiblesMobileShopScreen: closure_9 } = CollectiblesShopConstants);
-const UPDATE_CONFIG = fn(4810).UPDATE_CONFIG;
-const PaymentConstants = fn(4811);
+const UPDATE_CONFIG = fn(4814).UPDATE_CONFIG;
+const PaymentConstants = fn(4815);
 ({ MobileWebRedirectCheckoutDeepLinkActions: closure_11, MobileWebRedirectCheckoutDeepLinkQueryKeys: closure_12 } = PaymentConstants);
 const re13 = /feature\/([\w-]+)/;
 const re14 = /feature\/boost\/([0-9]+)/;
@@ -73,7 +73,7 @@ export default function parseURL(ctaLink) {
   if (arg1 === undefined) {
     flag = false;
   }
-  const sanitizeUrlResult = _modDef1929.sanitizeUrl(ctaLink);
+  const sanitizeUrlResult = _modDef1930.sanitizeUrl(ctaLink);
   if (null == sanitizeUrlResult) {
     const obj3 = { payload: null };
     const obj4 = { type: React5.NONE };
@@ -274,7 +274,7 @@ export default function parseURL(ctaLink) {
               if (query == null) {
                 str5 = "";
               }
-              let ad_creative_ids = _modDef1472.parse(str5).ad_creative_ids;
+              let ad_creative_ids = _modDef1473.parse(str5).ad_creative_ids;
               if (ad_creative_ids == null) {
                 ad_creative_ids = [];
               }
@@ -286,14 +286,14 @@ export default function parseURL(ctaLink) {
                 obj38.payload = obj39;
                 return obj38;
               }
-              const tmpResult9 = _modDef1472;
+              const tmpResult9 = _modDef1473;
             }
             if (null != pathname.match(re27)) {
               let str25 = query;
               if (query == null) {
                 str25 = "";
               }
-              let ad_creative_ids1 = _modDef1472.parse(str25).ad_creative_ids;
+              let ad_creative_ids1 = _modDef1473.parse(str25).ad_creative_ids;
               if (ad_creative_ids1 == null) {
                 ad_creative_ids1 = [];
               }

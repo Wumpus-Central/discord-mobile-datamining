@@ -1,21 +1,21 @@
-// === Module 7137: captureAdUserAction ===
+// === Module 7142: captureAdUserAction ===
 
-// Module 7137 (captureAdUserAction)
+// Module 7142 (captureAdUserAction)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import v1 from "v1" /* 1255 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import AdCreativeType from "AdCreativeType" /* 5758 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7085 */;
-import QuestDataUtils from "QuestDataUtils" /* 7107 */;
-import getQuestLogger from "getQuestLogger" /* 7117 */;
-import AnalyticsActions from "AnalyticsActions" /* 7126 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7136 */;
-import QuestHomeSearchSession from "QuestHomeSearchSession" /* 7138 */;
-import BrandSafetyContext from "BrandSafetyContext" /* 7139 */;
-import AdDataUtils from "AdDataUtils" /* 7142 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7147 */;
+import AdCreativeType from "AdCreativeType" /* 5763 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7090 */;
+import QuestDataUtils from "QuestDataUtils" /* 7112 */;
+import getQuestLogger from "getQuestLogger" /* 7122 */;
+import AnalyticsActions from "AnalyticsActions" /* 7131 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7141 */;
+import QuestHomeSearchSession from "QuestHomeSearchSession" /* 7143 */;
+import BrandSafetyContext from "BrandSafetyContext" /* 7144 */;
+import AdDataUtils from "AdDataUtils" /* 7147 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7152 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import QuestStore from "QuestStore" /* 7111 */;
+import QuestStore from "QuestStore" /* 7116 */;
 
 require = fn;
 function emitClickEventWithCreative() {

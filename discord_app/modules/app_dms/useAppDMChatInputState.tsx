@@ -1,18 +1,18 @@
-// === Module 12822: useAppDMChatInputState ===
+// === Module 12839: useAppDMChatInputState ===
 
-// Module 12822 (useAppDMChatInputState)
+// Module 12839 (useAppDMChatInputState)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7625 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7632 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5056 */;
-import UserProfileStore from "UserProfileStore" /* 7030 */;
-import ApplicationRecord from "ApplicationRecord" /* 2002 */;
+import ApplicationStore from "ApplicationStore" /* 5063 */;
+import UserProfileStore from "UserProfileStore" /* 7035 */;
+import ApplicationRecord from "ApplicationRecord" /* 2003 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = fn;
-const useQueryState = fn(8583).useQueryState;
+const useQueryState = fn(8591).useQueryState;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
-let items = [fn(1978).ApplicationCommandType.PRIMARY_ENTRY_POINT, fn(1978).ApplicationCommandType.CHAT, fn(1978).ApplicationCommandType.MESSAGE, fn(1978).ApplicationCommandType.USER];
+let items = [fn(1979).ApplicationCommandType.PRIMARY_ENTRY_POINT, fn(1979).ApplicationCommandType.CHAT, fn(1979).ApplicationCommandType.MESSAGE, fn(1979).ApplicationCommandType.USER];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_dms/useAppDMChatInputState.tsx");
 

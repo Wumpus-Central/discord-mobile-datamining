@@ -1,15 +1,15 @@
-// === Module 13647: LiveTag ===
+// === Module 13665: LiveTag ===
 
-// Module 13647 (LiveTag)
+// Module 13665 (LiveTag)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4825 */;
+import Text_Text from "Text/Text" /* 4832 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { tag: { paddingHorizontal: 6, paddingVertical: 2, borderRadius: nativeDefault.radii.round, overflow: "hidden", justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BADGE_NOTIFICATION_BACKGROUND }, tagText: null };
 const obj4 = { textAlign: "center", color: nativeDefault.unsafe_rawColors.WHITE, marginTop: null };
 const PlatformUtils = fn(1364);

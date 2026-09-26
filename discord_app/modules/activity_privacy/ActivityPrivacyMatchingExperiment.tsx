@@ -1,8 +1,8 @@
-// === Module 15499: ActivityPrivacyMatchingExperiment ===
+// === Module 15528: ActivityPrivacyMatchingExperiment ===
 
-// Module 15499 (ActivityPrivacyMatchingExperiment)
-import PrivateProfilesExperiment from "PrivateProfilesExperiment" /* 12632 */;
-import ApexExperiment from "ApexExperiment" /* 1434 */;
+// Module 15528 (ActivityPrivacyMatchingExperiment)
+import PrivateProfilesExperiment from "PrivateProfilesExperiment" /* 12649 */;
+import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = ApexExperiment.createApexExperiment({ name: "2026-02-activity-privacy-matching", kind: "user", defaultConfig: { copyChanges: false, upsell: false }, variations: { 0: { copyChanges: false, upsell: false }, 1: { copyChanges: true, upsell: false }, 2: { copyChanges: true, upsell: true } } });

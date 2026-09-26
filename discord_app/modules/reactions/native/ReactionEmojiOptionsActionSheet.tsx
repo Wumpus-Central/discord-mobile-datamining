@@ -1,24 +1,24 @@
-// === Module 10818: ReactionEmojiOptionsActionSheet ===
+// === Module 10831: ReactionEmojiOptionsActionSheet ===
 
-// Module 10818 (ReactionEmojiOptionsActionSheet)
+// Module 10831 (ReactionEmojiOptionsActionSheet)
 import nativeDefault from "native" /* 576 */;
-import ToastUtils from "ToastUtils" /* 4524 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4525 */;
-import ClipboardUtils from "ClipboardUtils" /* 6605 */;
-import ReactionActionCreatorsAll from "ReactionActionCreators" /* 7178 */;
-import StarIcon from "StarIcon" /* 9687 */;
-import StarOutlineIcon2 from "StarOutlineIcon" /* 9693 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 9786 */;
+import ToastUtils from "ToastUtils" /* 4527 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4528 */;
+import ClipboardUtils from "ClipboardUtils" /* 6610 */;
+import ReactionActionCreatorsAll from "ReactionActionCreators" /* 7183 */;
+import StarIcon from "StarIcon" /* 9698 */;
+import StarOutlineIcon2 from "StarOutlineIcon" /* 9704 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 9797 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4821 */;
-import EmojiStore from "EmojiStore" /* 5766 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4652 */;
+import AccessibilityStore from "AccessibilityStore" /* 4825 */;
+import EmojiStore from "EmojiStore" /* 5771 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4655 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { header: { alignItems: "center", paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_16 }, reactionPill: null, emoji: null, emojiText: null, reactionText: null, starIcon: null, starIconSelected: null, starIconUnselected: null };
 let obj3 = { alignItems: "center", paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_16 };
 obj2.reactionPill = { flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.xl, borderWidth: 4, borderColor: nativeDefault.colors.BORDER_STRONG, paddingVertical: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };

@@ -1,19 +1,19 @@
-// === Module 15956: GuildsBarPendingGuild ===
+// === Module 15984: GuildsBarPendingGuild ===
 
-// Module 15956 (GuildsBarPendingGuild)
+// Module 15984 (GuildsBarPendingGuild)
 import nativeDefault from "native" /* 576 */;
-import GuildIcon from "GuildIcon" /* 5891 */;
-import getGuildsBarGuildMenuItemsDefault from "getGuildsBarGuildMenuItems" /* 15896 */;
+import GuildIcon from "GuildIcon" /* 5896 */;
+import getGuildsBarGuildMenuItemsDefault from "getGuildsBarGuildMenuItems" /* 15924 */;
 import noop from "module_19" /* 19 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4653 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4652 */;
-import SortedGuildStore from "SortedGuildStore" /* 5745 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4656 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4655 */;
+import SortedGuildStore from "SortedGuildStore" /* 5750 */;
 
 require = fn;
-const GuildRecord = fn(2062);
+const GuildRecord = fn(2063);
 ({ getGuildIconSource: hasOwnProperty, getGuildIconURL: metroRequire } = GuildRecord);
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj = { guildIcon: null };
 let size = { width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
 obj.guildIcon = size;
@@ -121,7 +121,7 @@ export default noop.memo(function GuildsBarPendingGuild(guildId) {
   ({ accessibilityActions, onAccessibilityAction } = memo1);
   let tmp2Result = guildId(stateFromStores[10]);
   const sharedValue = guildId(stateFromStores[19]).useSharedValue(guildId);
-  const obj7 = { id: guildId, accessibilityActions, onAccessibilityAction, cutouts, selected: stateFromStores, sharedId: sharedValue, circle: !stateFromStores, overState: "flex", unread: null, label: null, config: null, styles: null, externalChildren: null, expandedChildren: null, children: "M99.2224 90.9774C103.136 90.9774 106.31 87.7696 106.31 83.8127C106.31 79.8558 103.136 76.6481 99.2224 76.6481C95.3082 76.6481 92.1351 79.8558 92.1351 83.8127C92.1351 87.7696 95.3082 90.9774 99.2224 90.9774Z" };
+  const obj7 = { id: guildId, accessibilityActions, onAccessibilityAction, cutouts, selected: stateFromStores, sharedId: sharedValue, circle: !stateFromStores, overState: "flex", unread: null, label: null, config: null, styles: null, externalChildren: null, expandedChildren: null, children: "icl" };
   let str = guildName;
   const tmp2Result2 = guildId(stateFromStores[19]);
   if (guildName == null) {
@@ -141,5 +141,5 @@ export default noop.memo(function GuildsBarPendingGuild(guildId) {
     const tmp5Result2 = tmp5(tmp3[11]);
   }
   obj7.children = tmp19Result;
-  return jsx(token(stateFromStores[8]), { id: guildId, accessibilityActions, onAccessibilityAction, cutouts, selected: stateFromStores, sharedId: sharedValue, circle: !stateFromStores, overState: "flex", unread: null, label: null, config: null, styles: null, externalChildren: null, expandedChildren: null, children: "M99.2224 90.9774C103.136 90.9774 106.31 87.7696 106.31 83.8127C106.31 79.8558 103.136 76.6481 99.2224 76.6481C95.3082 76.6481 92.1351 79.8558 92.1351 83.8127C92.1351 87.7696 95.3082 90.9774 99.2224 90.9774Z" });
+  return jsx(token(stateFromStores[8]), { id: guildId, accessibilityActions, onAccessibilityAction, cutouts, selected: stateFromStores, sharedId: sharedValue, circle: !stateFromStores, overState: "flex", unread: null, label: null, config: null, styles: null, externalChildren: null, expandedChildren: null, children: "icl" });
 });

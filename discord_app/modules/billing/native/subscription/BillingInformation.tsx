@@ -1,6 +1,6 @@
-// === Module 12916: BillingInformation ===
+// === Module 12933: BillingInformation ===
 
-// Module 12916 (BillingInformation)
+// Module 12933 (BillingInformation)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -28,7 +28,7 @@ export const useBillingInformationNative = function useBillingInformationNative(
   if (null == subscriptionPeriodStart) {
     return null;
   } else {
-    const tmp2Result = tmp2(4485);
+    const tmp2Result = tmp2(4488);
     const billingInformationString = tmp2Result.getBillingInformationString(subscription, subscriptionPeriodStart, tmp, flag, fractionalPremiumInfo);
     let formatResult = billingInformationString;
     if (tmp2Result2.isIOS()) {

@@ -1,16 +1,16 @@
-// === Module 15427: useCollectiblesShopHeader ===
+// === Module 15456: useCollectiblesShopHeader ===
 
-// Module 15427 (useCollectiblesShopHeader)
+// Module 15456 (useCollectiblesShopHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5032 */;
-import CheckmarkSmallIcon3 from "CheckmarkSmallIcon" /* 6549 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6598 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7617 */;
-import ShopIcon from "ShopIcon" /* 11606 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5039 */;
+import CheckmarkSmallIcon3 from "CheckmarkSmallIcon" /* 6554 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6603 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7624 */;
+import ShopIcon from "ShopIcon" /* 11620 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -50,11 +50,11 @@ function CollectiblesShopHeaderRight(currentScreen) {
     obj.label = intl.string(util.t["xNiB/O"]);
     obj.action = function action() {
       const obj2 = { analyticsLocations: null, analyticsSource: null, screen: null };
-      const items = [stateFromStores(6598).COLLECTIBLES_SHOP_MOBILE_FEATURED_PAGE_MENU_ITEM];
+      const items = [stateFromStores(6603).COLLECTIBLES_SHOP_MOBILE_FEATURED_PAGE_MENU_ITEM];
       obj2.analyticsLocations = items;
-      obj2.analyticsSource = stateFromStores(6598).COLLECTIBLES_SHOP_MOBILE_FEATURED_PAGE_MENU_ITEM;
+      obj2.analyticsSource = stateFromStores(6603).COLLECTIBLES_SHOP_MOBILE_FEATURED_PAGE_MENU_ITEM;
       obj2.screen = constants.FEATURED_PAGE;
-      const result = currentScreen(6956).openCollectiblesShopMobile(obj2);
+      const result = currentScreen(6961).openCollectiblesShopMobile(obj2);
     };
     let CheckmarkSmallIcon;
     if (currentScreen === constants.FEATURED_PAGE) {
@@ -67,11 +67,11 @@ function CollectiblesShopHeaderRight(currentScreen) {
     obj2.label = intl2.string(util.t.RSyoZu);
     obj2.action = function action() {
       const obj2 = { analyticsLocations: null, analyticsSource: null, screen: null };
-      const items = [stateFromStores(6598).COLLECTIBLES_SHOP_MOBILE_SHOP_ALL_MENU_ITEM];
+      const items = [stateFromStores(6603).COLLECTIBLES_SHOP_MOBILE_SHOP_ALL_MENU_ITEM];
       obj2.analyticsLocations = items;
-      obj2.analyticsSource = stateFromStores(6598).COLLECTIBLES_SHOP_MOBILE_SHOP_ALL_MENU_ITEM;
+      obj2.analyticsSource = stateFromStores(6603).COLLECTIBLES_SHOP_MOBILE_SHOP_ALL_MENU_ITEM;
       obj2.screen = constants.SHOP_ALL;
-      const result = currentScreen(6956).openCollectiblesShopMobile(obj2);
+      const result = currentScreen(6961).openCollectiblesShopMobile(obj2);
     };
     let CheckmarkSmallIcon1;
     if (currentScreen === constants.SHOP_ALL) {
@@ -84,11 +84,11 @@ function CollectiblesShopHeaderRight(currentScreen) {
     obj3.label = intl3.string(util.t.EBYkzk);
     obj3.action = function action() {
       const obj2 = { analyticsLocations: null, analyticsSource: null, screen: null };
-      const items = [stateFromStores(6598).COLLECTIBLES_SHOP_MOBILE_ORBS_MENU_ITEM];
+      const items = [stateFromStores(6603).COLLECTIBLES_SHOP_MOBILE_ORBS_MENU_ITEM];
       obj2.analyticsLocations = items;
-      obj2.analyticsSource = stateFromStores(6598).COLLECTIBLES_SHOP_MOBILE_ORBS_MENU_ITEM;
+      obj2.analyticsSource = stateFromStores(6603).COLLECTIBLES_SHOP_MOBILE_ORBS_MENU_ITEM;
       obj2.screen = constants.ORBS;
-      const result = currentScreen(6956).openCollectiblesShopMobile(obj2);
+      const result = currentScreen(6961).openCollectiblesShopMobile(obj2);
     };
     let CheckmarkSmallIcon2;
     if (currentScreen === constants.ORBS) {
@@ -191,11 +191,11 @@ function CollectiblesShopHeaderRight(currentScreen) {
 const View = fn(17).View;
 const constants = fn(1076).CollectiblesMobileShopScreen;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const RewardFilterTypes = fn(5751).RewardFilterTypes;
-const UserProfileSections = fn(7621).UserProfileSections;
+const RewardFilterTypes = fn(5756).RewardFilterTypes;
+const UserProfileSections = fn(7628).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { headerTitleContainer: { width: "100%", flexDirection: "row", alignItems: "center", marginTop: nativeDefault.space.PX_8, paddingLeft: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, headerTitle: { flexShrink: 1 }, headerRightContainer: null };
 let obj3 = { width: "100%", flexDirection: "row", alignItems: "center", marginTop: nativeDefault.space.PX_8, paddingLeft: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 obj2.headerRightContainer = { flexDirection: "row", justifyContent: "flex-end", alignItems: "center", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_8 };
@@ -209,7 +209,7 @@ export default function useCollectiblesShopHeader() {
     obj = {};
   }
   const currentScreen = obj.currentScreen;
-  const navigation = currentScreen(1484).useNavigation();
+  const navigation = currentScreen(1485).useNavigation();
   const items = [navigation, currentScreen];
   const layoutEffect = noop.useLayoutEffect(() => {
     navigation.setOptions({

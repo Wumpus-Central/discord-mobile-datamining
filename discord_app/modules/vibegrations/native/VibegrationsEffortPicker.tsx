@@ -1,13 +1,13 @@
-// === Module 16220: VibegrationsEffortPicker ===
+// === Module 16248: VibegrationsEffortPicker ===
 
-// Module 16220 (VibegrationsEffortPicker)
+// Module 16248 (VibegrationsEffortPicker)
 import util from "util" /* 1115 */;
-import _modDef3714 from "module_3714" /* 3714 */;
-import TableRadioRow from "TableRadioRow" /* 5995 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6565 */;
-import ActionSheet from "ActionSheet" /* 6613 */;
-import VibegrationsEffortTiers from "VibegrationsEffortTiers" /* 16221 */;
-import VibegrationsModelLabels from "VibegrationsModelLabels" /* 16222 */;
+import _modDef3715 from "module_3715" /* 3715 */;
+import TableRadioRow from "TableRadioRow" /* 6000 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6570 */;
+import ActionSheet from "ActionSheet" /* 6618 */;
+import VibegrationsEffortTiers from "VibegrationsEffortTiers" /* 16249 */;
+import VibegrationsModelLabels from "VibegrationsModelLabels" /* 16250 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -182,7 +182,7 @@ export const VibegrationsEffortPickerSheet = function VibegrationsEffortPickerSh
   const obj = { header: null, children: null };
   const obj2 = { title: null };
   const intl = util.intl;
-  obj2.title = intl.string(_modDef3714.GDs9Vq);
+  obj2.title = intl.string(_modDef3715.GDs9Vq);
   obj.header = timestampProducer(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
   obj.children = timestampProducer(View, { children: timestampProducer(VibegrationsEffortPicker, { settings: tmp[0], tiers, choices, disabled: false, onChange: callback, hideTitle: true }) });
   return timestampProducer(ActionSheet.ActionSheet, obj);

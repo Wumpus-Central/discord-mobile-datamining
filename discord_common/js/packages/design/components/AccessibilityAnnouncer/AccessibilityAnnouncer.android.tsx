@@ -1,8 +1,8 @@
-// === Module 4538: AccessibilityAnnouncer ===
+// === Module 4541: AccessibilityAnnouncer ===
 
-// Module 4538 (AccessibilityAnnouncer)
+// Module 4541 (AccessibilityAnnouncer)
 import _mod17 from "module_17" /* 17 */;
-import AccessibilityAnnouncerLiveRegion from "AccessibilityAnnouncerLiveRegion" /* 4539 */;
+import AccessibilityAnnouncerLiveRegion from "AccessibilityAnnouncerLiveRegion" /* 4542 */;
 import size from "module_2" /* 2 */;
 
 const AccessibilityInfo = _mod17.AccessibilityInfo;

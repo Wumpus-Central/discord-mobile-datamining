@@ -1,18 +1,18 @@
-// === Module 16278: VibegrationsVersionHistorySheet ===
+// === Module 16306: VibegrationsVersionHistorySheet ===
 
-// Module 16278 (VibegrationsVersionHistorySheet)
+// Module 16306 (VibegrationsVersionHistorySheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const fetchSourceHistory = fn(12607).fetchSourceHistory;
+const fetchSourceHistory = fn(12624).fetchSourceHistory;
 const jsx = fn(21).jsx;
 const VibegrationsVersionHistorySheet = "VibegrationsVersionHistorySheet";
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { state: { alignItems: "center", padding: nativeDefault.space.PX_24 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -66,16 +66,16 @@ export default function VibegrationsVersionHistorySheet(projectId) {
     const obj3 = { style: tmp.state, accessibilityRole: "alert", children: null };
     const obj4 = { variant: "text-md/normal", color: "text-muted", children: null };
     let intl2 = projectId(1115).intl;
-    obj4.children = intl2.string(tmp2(3714)["mSJn+K"]);
-    obj3.children = jsx(projectId(4825).Text, { variant: "text-md/normal", color: "text-muted", children: null });
+    obj4.children = intl2.string(tmp2(3715)["mSJn+K"]);
+    obj3.children = jsx(projectId(4832).Text, { variant: "text-md/normal", color: "text-muted", children: null });
     tmp9 = <closure_6 style={tmp.state} accessibilityRole="alert">{null}</closure_6>;
     tmp7 = jsx;
   } else if (0 === tmp5.entries.length) {
     const obj5 = { style: tmp.state, children: null };
     const obj6 = { variant: "text-md/normal", color: "text-muted", children: null };
     let intl = projectId(1115).intl;
-    obj6.children = intl.string(tmp2(3714).TOmYPT);
-    obj5.children = jsx(projectId(4825).Text, { variant: "text-md/normal", color: "text-muted", children: null });
+    obj6.children = intl.string(tmp2(3715).TOmYPT);
+    obj5.children = jsx(projectId(4832).Text, { variant: "text-md/normal", color: "text-muted", children: null });
     tmp9 = <closure_6 style={tmp.state}>{null}</closure_6>;
     tmp7 = jsx;
   } else {
@@ -97,15 +97,15 @@ export default function VibegrationsVersionHistorySheet(projectId) {
       };
       return jsx(projectId(_undefined[15]).TableRow, { label: subject.subject.replace(/^Build: /, ""), subLabel: null, arrow: true, onPress: null }, subject.sha);
     });
-    tmp9 = jsx(projectId(5994).TableRowGroup, { hasIcons: false, children: null });
+    tmp9 = jsx(projectId(5999).TableRowGroup, { hasIcons: false, children: null });
   }
   const obj7 = { scrollable: true, header: null, children: null };
   const obj8 = { title: null };
   let intl3 = projectId(1115).intl;
-  obj8.title = intl3.string(onRestore(3714).jAWwzi);
-  obj7.header = tmp7(projectId(6565).BottomSheetTitleHeader, obj8);
+  obj8.title = intl3.string(onRestore(3715).jAWwzi);
+  obj7.header = tmp7(projectId(6570).BottomSheetTitleHeader, obj8);
   const tmp4 = _slicedToArray(noop.useState({ status: "loading" }), 2);
-  obj7.children = tmp7(projectId(6040).BottomSheetScrollView, { contentContainerStyle: { paddingBottom: onRestore(1612)().bottom }, children: tmp9 });
-  return tmp7(projectId(6613).ActionSheet, obj7);
+  obj7.children = tmp7(projectId(6045).BottomSheetScrollView, { contentContainerStyle: { paddingBottom: onRestore(1613)().bottom }, children: tmp9 });
+  return tmp7(projectId(6618).ActionSheet, obj7);
 };
 export const VIBEGRATIONS_VERSION_HISTORY_SHEET_KEY = "VibegrationsVersionHistorySheet";

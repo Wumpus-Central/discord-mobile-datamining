@@ -1,15 +1,15 @@
-// === Module 11683: ForLaterCardHeader ===
+// === Module 11697: ForLaterCardHeader ===
 
-// Module 11683 (ForLaterCardHeader)
+// Module 11697 (ForLaterCardHeader)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
-import useChannelNameDefault from "useChannelName" /* 4982 */;
-import GuildIconDefault from "GuildIcon" /* 5891 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 6625 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10360 */;
-import GuildStore from "GuildStore" /* 2066 */;
+import useChannelNameDefault from "useChannelName" /* 4989 */;
+import GuildIconDefault from "GuildIcon" /* 5896 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 6630 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10371 */;
+import GuildStore from "GuildStore" /* 2067 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4829 */;
+import createStyles from "createStyles" /* 4836 */;
 import size from "module_2" /* 2 */;
 
 function HeaderIcon(channel) {
@@ -18,7 +18,7 @@ function HeaderIcon(channel) {
   const items = [GuildStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   if (null != stateFromStores) {
-    const obj2 = { guild: stateFromStores, size: tmp2(5891).GuildIconSizes.XSMALL };
+    const obj2 = { guild: stateFromStores, size: tmp2(5896).GuildIconSizes.XSMALL };
     let tmp6Result = closure_5(GuildIconDefault, obj2);
   } else {
     let isGroupDMResult;
@@ -29,7 +29,7 @@ function HeaderIcon(channel) {
       const obj3 = { channel, size: tmp2(1177).AvatarSizes.XSMALL };
       tmp6Result = closure_5(GroupDMAvatarDefault, obj3);
     } else {
-      const obj4 = { style: tmp.dmIcon, children: closure_5(tmp2(5378).ChatIcon, { size: "xxs" }) };
+      const obj4 = { style: tmp.dmIcon, children: closure_5(tmp2(5385).ChatIcon, { size: "xxs" }) };
       tmp6Result = closure_5(View, obj4);
     }
   }
@@ -42,7 +42,7 @@ function ChannelName(channel) {
   const stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   const tmp5 = useChannelNameDefault(channel, false);
   const obj = channel(504);
-  const channelIconComponentWithGuild = channel(5328).getChannelIconComponentWithGuild(channel, stateFromStores);
+  const channelIconComponentWithGuild = channel(5335).getChannelIconComponentWithGuild(channel, stateFromStores);
   let isPrivateResult = channel.isPrivate();
   if (!isPrivateResult) {
     isPrivateResult = null == channelIconComponentWithGuild;
@@ -59,7 +59,7 @@ function ChannelName(channel) {
     const obj5 = { style: tmp.channelTypeIcon, size: "xxs" };
     tmp12 = closure_5(channelIconComponentWithGuild, obj5);
   }
-  const items1 = [tmp12, closure_5(channel(4825).Text, { style: tmp.channelName, variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: formatToPlainStringResult })];
+  const items1 = [tmp12, closure_5(channel(4832).Text, { style: tmp.channelName, variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: formatToPlainStringResult })];
   obj4.children = items1;
   return closure_6(View, obj4);
 }

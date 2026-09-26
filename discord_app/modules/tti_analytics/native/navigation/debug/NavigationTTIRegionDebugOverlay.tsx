@@ -1,11 +1,11 @@
-// === Module 16159: NavigationTTIRegionDebugOverlay ===
+// === Module 16187: NavigationTTIRegionDebugOverlay ===
 
-// Module 16159 (NavigationTTIRegionDebugOverlay)
+// Module 16187 (NavigationTTIRegionDebugOverlay)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 16155 */;
-import NavigationTTIDebugFreeze from "NavigationTTIDebugFreeze" /* 16156 */;
-import NavigationTTIRegionDebugState from "NavigationTTIRegionDebugState" /* 16157 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 16183 */;
+import NavigationTTIDebugFreeze from "NavigationTTIDebugFreeze" /* 16184 */;
+import NavigationTTIRegionDebugState from "NavigationTTIRegionDebugState" /* 16185 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -100,7 +100,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let closure_9 = ["time_start", "first_paint"];
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { outline: null, includedOutline: null, excludedOutline: null, mixedOutline: null, violationOutline: null, badge: null, expandedBadge: null, badgeText: null, includedBadge: null, excludedBadge: null, mixedBadge: null, violationBadge: null, armedBadge: null, freezeControl: null, armedFreezeControl: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -144,16 +144,16 @@ export const NavigationTTIRegionDebugOverlay = function NavigationTTIRegionDebug
   noop = undefined;
   closure_5 = undefined;
   const tmp = closure_10();
-  const navTTISurface = name(16153).useNavTTISurface();
-  let obj = name(16153);
+  const navTTISurface = name(16181).useNavTTISurface();
+  let obj = name(16181);
   const tmp2 = name;
   [tmp6, c2] = noop.useState(false);
-  const syncExternalStore = noop.useSyncExternalStore(name(16156).subscribeNavigationTTIDebugFreezeTarget, name(16156).getNavigationTTIDebugFreezeTarget, name(16156).getNavigationTTIDebugFreezeTarget);
+  const syncExternalStore = noop.useSyncExternalStore(name(16184).subscribeNavigationTTIDebugFreezeTarget, name(16184).getNavigationTTIDebugFreezeTarget, name(16184).getNavigationTTIDebugFreezeTarget);
   closure_129_0 = name;
   closure_129_1 = regionId;
   closure_129_2 = tracking;
   const tmp5 = _slicedToArray(noop.useState(false), 2);
-  const navTTISurface1 = name(16153).useNavTTISurface();
+  const navTTISurface1 = name(16181).useNavTTISurface();
   closure_129_3 = navTTISurface1;
   const items = [name, regionId, navTTISurface1, tracking];
   const callback = noop.useCallback((arg0) => {
@@ -418,7 +418,7 @@ export const NavigationTTIRegionDebugOverlay = function NavigationTTIRegionDebug
     }
     obj6.lineClamp = num2;
     obj6.children = combined1;
-    obj4.children = closure_7(tmp2(4825).Text, obj6);
+    obj4.children = closure_7(tmp2(4832).Text, obj6);
     const items3 = [closure_7(closure_5, obj4), ];
     let tmp44Result = null;
     if (0 === hierarchyDepth) {
@@ -430,5 +430,5 @@ export const NavigationTTIRegionDebugOverlay = function NavigationTTIRegionDebug
     return closure_8(closure_6, obj3);
   }
   str21 = " \u00B7 " + combined;
-  let obj2 = name(16153);
+  let obj2 = name(16181);
 };

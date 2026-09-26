@@ -1,26 +1,26 @@
-// === Module 14268: AgeGroupResetSetting ===
+// === Module 14293: AgeGroupResetSetting ===
 
-// Module 14268 (AgeGroupResetSetting)
+// Module 14293 (AgeGroupResetSetting)
 import jsxProd from "jsxProd" /* 21 */;
 import util from "util" /* 1115 */;
-import _modDef3038 from "module_3038" /* 3038 */;
-import useAlertStore from "useAlertStore" /* 5198 */;
-import SettingsConstants from "SettingsConstants" /* 7412 */;
-import AgeGroupScreenRowProps from "AgeGroupScreenRowProps" /* 14265 */;
-import SettingsAgeGroupResetAlert from "SettingsAgeGroupResetAlert" /* 14269 */;
-import SettingBuilders from "SettingBuilders" /* 10993 */;
+import _modDef3039 from "module_3039" /* 3039 */;
+import useAlertStore from "useAlertStore" /* 5205 */;
+import SettingsConstants from "SettingsConstants" /* 7417 */;
+import AgeGroupScreenRowProps from "AgeGroupScreenRowProps" /* 14290 */;
+import SettingsAgeGroupResetAlert from "SettingsAgeGroupResetAlert" /* 14294 */;
+import SettingBuilders from "SettingBuilders" /* 11006 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3038["bD//cU"]);
+    return intl.string(_modDef3039["bD//cU"]);
   },
   parent: SettingsConstants.MobileUserSettings.ACCOUNT_AGE_GROUP_ASSIGNED_ADULT,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef3038.Gn0SAj);
+    return intl.string(_modDef3039.Gn0SAj);
   },
   onPress() {
     useAlertStore.openAlert(SettingsAgeGroupResetAlert.SETTINGS_AGE_GROUP_RESET_ALERT_ID, jsx(SettingsAgeGroupResetAlert.default, {}));

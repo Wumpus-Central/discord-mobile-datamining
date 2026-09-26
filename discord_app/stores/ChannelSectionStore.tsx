@@ -1,20 +1,20 @@
-// === Module 6693: ChannelSectionStore ===
+// === Module 6698: ChannelSectionStore ===
 
-// Module 6693 (ChannelSectionStore)
+// Module 6698 (ChannelSectionStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
-import ApexExperiment from "ApexExperiment" /* 1434 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 6695 */;
-import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 6696 */;
-import ExperimentStore from "ExperimentStore" /* 4746 */;
-import SearchMessageStore from "SearchMessageStore" /* 6694 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4466 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4652 */;
+import ApexExperiment from "ApexExperiment" /* 1435 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 6700 */;
+import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 6701 */;
+import ExperimentStore from "ExperimentStore" /* 4750 */;
+import SearchMessageStore from "SearchMessageStore" /* 6699 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
+import GuildStore from "GuildStore" /* 2067 */;
+import PermissionStore from "PermissionStore" /* 4469 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4655 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -104,21 +104,10 @@ function handlePermissionsChange() {
   }
   return flag2;
 }
-function setIsSearchSidebarOpen() {
-  let hasSearchStateResult = null != searchContextId;
-  if (hasSearchStateResult) {
-    hasSearchStateResult = SearchMessageStore.hasSearchState(searchContextId);
-  }
-  if (hasSearchStateResult === c25) {
-    return false;
-  } else {
-    c25 = hasSearchStateResult;
-  }
-}
-const isChannelChatInSidebar = fn(2048).isChannelChatInSidebar;
+const isChannelChatInSidebar = fn(2049).isChannelChatInSidebar;
 const Constants = fn(1074);
 ({ ChannelSections: closure_12, ComponentActions: map1 } = Constants);
-const ChannelConstants = fn(2051);
+const ChannelConstants = fn(2052);
 ({ isStaticChannelRoute: closure_14, buildGuildStaticChannelId: closure_15 } = ChannelConstants);
 const Permissions = fn(1085).Permissions;
 let c17 = false;
@@ -166,10 +155,8 @@ prototype["initialize"] = function initialize(isMembersOpen) {
       guildSidebars = {};
     }
   }
-  const items = [SearchMessageStore];
-  this.syncWith(items, setIsSearchSidebarOpen);
-  const items1 = [PermissionStore];
-  this.syncWith(items1, handlePermissionsChange);
+  const items = [PermissionStore];
+  this.syncWith(items, handlePermissionsChange);
   this.waitFor(ChannelStore, ExperimentStore, ApexExperiment.ApexExperimentStore, GuildStore, PermissionStore, SearchMessageStore, SelectedChannelStore, SelectedGuildStore, UserStore);
 };
 prototype["getState"] = function getState() {
@@ -344,10 +331,49 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
     if (hasSearchStateResult) {
       hasSearchStateResult = SearchMessageStore.hasSearchState(searchContextId);
     }
-    if (hasSearchStateResult !== c25) {
+    let flag = hasSearchStateResult !== c25;
+    if (flag) {
       c25 = hasSearchStateResult;
+      flag = true;
     }
-    return false;
+    return flag;
+  },
+  SEARCH_MESSAGES_START: function handleSearchMessagesStart(ids) {
+    ids = ids.ids;
+    let tmp = null != searchContextId;
+    if (tmp) {
+      let hasItem = ids.includes(searchContextId);
+      if (hasItem) {
+        let flag = !c25;
+        if (!c25) {
+          c25 = true;
+          flag = true;
+        }
+        hasItem = flag;
+      }
+      tmp = hasItem;
+    }
+    return tmp;
+  },
+  SEARCH_MESSAGES_CLEAR: function handleSearchMessagesClear(id) {
+    let tmp = id.id === searchContextId;
+    if (tmp) {
+      let flag = c25;
+      if (flag) {
+        c25 = false;
+        flag = true;
+      }
+      tmp = flag;
+    }
+    return tmp;
+  },
+  CONNECTION_OPEN: function handleConnectionOpen() {
+    let flag = c25;
+    if (flag) {
+      c25 = false;
+      flag = true;
+    }
+    return flag;
   },
   CHANNEL_TOGGLE_MEMBERS_SECTION: function handleChannelToggleMembersSection() {
     if (c25) {
@@ -494,6 +520,13 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
     }
     if (null != tmp3) {
       delete tmp[tmp2];
+      let hasSearchStateResult = null != searchContextId;
+      if (hasSearchStateResult) {
+        hasSearchStateResult = SearchMessageStore.hasSearchState(searchContextId);
+      }
+      if (hasSearchStateResult !== c25) {
+        c25 = hasSearchStateResult;
+      }
     }
   },
   SIDEBAR_CLOSE_GUILD: function handleGuildCloseSidebar(arg0) {

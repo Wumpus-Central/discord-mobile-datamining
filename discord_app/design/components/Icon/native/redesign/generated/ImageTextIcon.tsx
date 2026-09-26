@@ -1,9 +1,9 @@
-// === Module 14980: ImageTextIcon ===
+// === Module 15008: ImageTextIcon ===
 
-// Module 14980 (ImageTextIcon)
+// Module 15008 (ImageTextIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4527 */;
-import _mod14981 from "module_14981" /* 14981 */;
+import BaseIconImage from "BaseIconImage" /* 4530 */;
+import _mod15009 from "module_15009" /* 15009 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const ImageTextIcon = function ImageTextIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod14981, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15009, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

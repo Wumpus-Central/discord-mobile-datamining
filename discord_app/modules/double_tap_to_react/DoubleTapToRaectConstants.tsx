@@ -1,6 +1,6 @@
-// === Module 7406: DoubleTapToRaectConstants ===
+// === Module 7411: DoubleTapToRaectConstants ===
 
-// Module 7406 (DoubleTapToRaectConstants)
+// Module 7411 (DoubleTapToRaectConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/double_tap_to_react/DoubleTapToRaectConstants.tsx");

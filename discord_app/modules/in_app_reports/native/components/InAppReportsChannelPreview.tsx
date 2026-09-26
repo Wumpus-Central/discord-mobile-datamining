@@ -1,16 +1,16 @@
-// === Module 12443: InAppReportsChannelPreview ===
+// === Module 12461: InAppReportsChannelPreview ===
 
-// Module 12443 (InAppReportsChannelPreview)
+// Module 12461 (InAppReportsChannelPreview)
 import nativeDefault from "native" /* 576 */;
-import GuildIconDefault from "GuildIcon" /* 5891 */;
+import GuildIconDefault from "GuildIcon" /* 5896 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2066 */;
+import GuildStore from "GuildStore" /* 2067 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, borderColor: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, title: { lineHeight: 16, marginBottom: 8 }, itemContainer: null, guildInfo: null, guildName: null, topic: null };
 let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj2.itemContainer = { minHeight: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 1, padding: 8 };
@@ -29,27 +29,27 @@ export default function ChannelPreview(stageInstance) {
   if (null != stateFromStores) {
     if (null != stageInstance) {
       const obj2 = { style: tmp.container, children: null };
-      const tmp2Result = tmp2(4680);
+      const tmp2Result = tmp2(4683);
       const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
       const intl = tmp2(1115).intl;
       obj3.children = intl.string(tmp2(1115).t.InbJ8x);
-      const items1 = [closure_5(tmp2(4825).Text, obj3), ];
+      const items1 = [closure_5(tmp2(4832).Text, obj3), ];
       const obj4 = { style: null, children: null };
       const items2 = [tmp.itemContainer, ];
-      const obj5 = { borderColor: tmp2(4680).hexWithOpacity(tmp.borderColor.color, 0.08) };
+      const obj5 = { borderColor: tmp2(4683).hexWithOpacity(tmp.borderColor.color, 0.08) };
       items2[1] = obj5;
       obj4.style = items2;
       const obj6 = { style: tmp.guildInfo, children: null };
       const obj7 = { guild: stateFromStores, size: null, selected: false };
-      const hexWithOpacityResult = tmp2(4680).hexWithOpacity(tmp.borderColor.color, 0.08);
-      obj7.size = tmp2(5891).GuildIconSizes.XXSMALL;
+      const hexWithOpacityResult = tmp2(4683).hexWithOpacity(tmp.borderColor.color, 0.08);
+      obj7.size = tmp2(5896).GuildIconSizes.XXSMALL;
       const items3 = [closure_5(GuildIconDefault, obj7), ];
       const obj8 = { style: tmp.guildName, variant: "text-sm/medium", color: "text-default", children: stateFromStores.name };
-      items3[1] = closure_5(tmp2(4825).Text, obj8);
+      items3[1] = closure_5(tmp2(4832).Text, obj8);
       obj6.children = items3;
       const items4 = [closure_6(View, obj6), ];
       const obj9 = { style: tmp.topic, variant: "text-md/bold", color: "mobile-text-heading-primary", children: stageInstance.topic };
-      items4[1] = closure_5(tmp2(4825).Text, obj9);
+      items4[1] = closure_5(tmp2(4832).Text, obj9);
       obj4.children = items4;
       items1[1] = closure_6(View, obj4);
       obj2.children = items1;

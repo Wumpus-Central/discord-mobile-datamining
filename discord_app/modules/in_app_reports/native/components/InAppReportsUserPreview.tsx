@@ -1,19 +1,19 @@
-// === Module 8108: InAppReportsUserPreview ===
+// === Module 8116: InAppReportsUserPreview ===
 
-// Module 8108 (InAppReportsUserPreview)
+// Module 8116 (InAppReportsUserPreview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import ColorUtils from "ColorUtils" /* 4680 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6395 */;
+import ColorUtils from "ColorUtils" /* 4683 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6400 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, borderColor: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, title: { lineHeight: 16, marginBottom: 8 }, userContainer: null, userProfileInfo: null };
 let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj2.userContainer = { flexDirection: "row", alignItems: "center", justifyContent: "flex-start", minHeight: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 1, padding: 12 };

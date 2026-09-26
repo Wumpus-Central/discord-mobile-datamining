@@ -1,9 +1,9 @@
-// === Module 5850: GuildJoinRequestAnalyticUtils ===
+// === Module 5855: GuildJoinRequestAnalyticUtils ===
 
-// Module 5850 (GuildJoinRequestAnalyticUtils)
+// Module 5855 (GuildJoinRequestAnalyticUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 2107 */;
+import GuildMemberStore from "GuildMemberStore" /* 2108 */;
 
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const size = fn(2);

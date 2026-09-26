@@ -1,7 +1,7 @@
-// === Module 1930: markdownRules ===
+// === Module 1931: markdownRules ===
 
-// Module 1930 (markdownRules)
-import t_mod from "module_1929" /* 1929 */;
+// Module 1931 (markdownRules)
+import t_mod from "module_1930" /* 1930 */;
 import size from "module_2" /* 2 */;
 
 const link = t.defaultRules.link;

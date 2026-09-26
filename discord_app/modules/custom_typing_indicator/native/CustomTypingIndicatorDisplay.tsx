@@ -1,19 +1,19 @@
-// === Module 11448: CustomTypingIndicatorDisplay ===
+// === Module 11462: CustomTypingIndicatorDisplay ===
 
-// Module 11448 (CustomTypingIndicatorDisplay)
+// Module 11462 (CustomTypingIndicatorDisplay)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 11439 */;
-import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 11449 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 11453 */;
+import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 11463 */;
 import noop from "module_19" /* 19 */;
 
-const Text_Text = tmp3(4825);
-const Stack_Stack = tmp3(5272);
-const Pressables = tmp3(5428);
+const Text_Text = tmp3(4832);
+const Stack_Stack = tmp3(5279);
+const Pressables = tmp3(5435);
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_5 = createStyles.createStyles(() => ({ text: { flexShrink: 1 }, pressable: { flex: 1 } }));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorDisplay.tsx");

@@ -1,9 +1,9 @@
-// === Module 11008: useDrawerWidth ===
+// === Module 11021: useDrawerWidth ===
 
-// Module 11008 (useDrawerWidth)
+// Module 11021 (useDrawerWidth)
 import Constants from "Constants" /* 1074 */;
-import useChatLayout from "useChatLayout" /* 4691 */;
-import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4693 */;
+import useChatLayout from "useChatLayout" /* 4695 */;
+import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4697 */;
 import size from "module_2" /* 2 */;
 
 const useChatLayoutDefault = useChatLayout;

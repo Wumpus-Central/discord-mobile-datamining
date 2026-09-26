@@ -1,14 +1,14 @@
-// === Module 9473: ScreenshareParticipant ===
+// === Module 9484: ScreenshareParticipant ===
 
-// Module 9473 (ScreenshareParticipant)
+// Module 9484 (ScreenshareParticipant)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import components_Button_Button from "components/Button/Button" /* 5274 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6068 */;
-import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 8862 */;
-import _modDef8863 from "module_8863" /* 8863 */;
-import useScreenshareUtils from "useScreenshareUtils" /* 9397 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import components_Button_Button from "components/Button/Button" /* 5281 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6073 */;
+import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 8870 */;
+import _modDef8871 from "module_8871" /* 8871 */;
+import useScreenshareUtils from "useScreenshareUtils" /* 9408 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { container: { alignItems: "center", justifyContent: "center", flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, image: { marginBottom: 12 }, title: { textAlign: "center", marginBottom: 8 }, description: { lineHeight: 18, textAlign: "center", marginBottom: 16 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -48,7 +48,7 @@ export default function ScreenshareParticipant(participant) {
   const items2 = [tmp4.container, participant.containerStyle];
   obj2.style = items2;
   const tmp3 = useParticipantTileTapGestureDefault({ onSingleTapStart: callback, onDoubleTapStart: callback1 });
-  const items3 = [timestampProducer(hasOwnProperty, { source: _modDef8863, style: tmp4.image }), , , ];
+  const items3 = [timestampProducer(hasOwnProperty, { source: _modDef8871, style: tmp4.image }), , , ];
   const obj4 = { style: tmp4.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t.gMOwov);

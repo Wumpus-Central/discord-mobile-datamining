@@ -1,14 +1,14 @@
-// === Module 16388: VibegrationsTraceDetailSheet ===
+// === Module 16417: VibegrationsTraceDetailSheet ===
 
-// Module 16388 (VibegrationsTraceDetailSheet)
+// Module 16417 (VibegrationsTraceDetailSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import _modDef3714 from "module_3714" /* 3714 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import vibegrations_VibegrationsTraceFormat from "vibegrations/VibegrationsTraceFormat" /* 16384 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
+import _modDef3715 from "module_3715" /* 3715 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import vibegrations_VibegrationsTraceFormat from "vibegrations/VibegrationsTraceFormat" /* 16413 */;
 import noop from "module_19" /* 19 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8487 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8495 */;
 
 require = fn;
 function Row(muted) {
@@ -42,13 +42,13 @@ function FieldRow(field) {
     if (null != iter.chars) {
       const intl2 = util.intl;
       const obj3 = { count: iter.chars };
-      let formatToPlainStringResult = intl2.formatToPlainString(_modDef3714.DdXP0P, obj3);
+      let formatToPlainStringResult = intl2.formatToPlainString(_modDef3715.DdXP0P, obj3);
     } else {
       formatToPlainStringResult = null;
       if (null != iter.items) {
         const intl = util.intl;
         const obj = { count: iter.items };
-        formatToPlainStringResult = intl.formatToPlainString(_modDef3714.OB8Qvn, obj);
+        formatToPlainStringResult = intl.formatToPlainString(_modDef3715.OB8Qvn, obj);
       }
     }
     const obj5 = { label: iter.key, value: null, muted: true };
@@ -70,7 +70,7 @@ function RichEntries(arg0) {
     let obj = { children: null };
     let obj2 = { variant: "text-xs/semibold", color: "text-feedback-warning", children: null };
     let intl = require("util").intl;
-    obj2.children = intl.string(_modDef3714.fy9PRy);
+    obj2.children = intl.string(_modDef3715.fy9PRy);
     let items = [
       closure_5(require("Text/Text").Text, obj2),
       entries.map((children) => {
@@ -90,7 +90,7 @@ function RichEntries(arg0) {
           if (true === children.scrubbed) {
             const obj5 = { variant: "text-xs/normal", color: "text-feedback-warning", children: null };
             const intl2 = util.intl;
-            obj5.children = intl2.string(_modDef3714.PkIUHD);
+            obj5.children = intl2.string(_modDef3715.PkIUHD);
             tmp4Result3 = hasOwnProperty(Text_Text.Text, obj5);
           }
           items[2] = tmp4Result3;
@@ -101,11 +101,11 @@ function RichEntries(arg0) {
           } else {
             if (null == children.chars) {
               intl = util.intl;
-              let stringResult = intl.string(_modDef3714["1kBG9Z"]);
+              let stringResult = intl.string(_modDef3715["1kBG9Z"]);
             } else {
               const intl3 = util.intl;
               const obj6 = { count: children.chars };
-              stringResult = intl3.formatToPlainString(_modDef3714.VGSwo4, obj6);
+              stringResult = intl3.formatToPlainString(_modDef3715.VGSwo4, obj6);
             }
             obj7 = { variant: "text-xs/normal", color: "text-subtle", children: stringResult };
             hasOwnProperty(Text_Text.Text, obj7);
@@ -121,7 +121,7 @@ function RichEntries(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, head: null, headTitle: null, section: null, row: null, rich: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.head = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -141,13 +141,13 @@ export default function VibegrationsTraceDetailSheet(projectId) {
   ({ entryId, initialEntry } = projectId);
   const tmp = closure_8();
   const tmp2 = projectId;
-  const traceCategoryTextStyles = projectId(16383).useTraceCategoryTextStyles();
-  let obj = projectId(16383);
+  const traceCategoryTextStyles = projectId(16412).useTraceCategoryTextStyles();
+  let obj = projectId(16412);
   const items = [VibegrationsProjectStore];
   const items1 = [projectId];
   const stateFromStoresArray = projectId(504).useStateFromStoresArray(items, () => VibegrationsProjectStore.getTrace(projectId), items1);
   const obj2 = projectId(504);
-  let findTraceEntryResult = projectId(16385).findTraceEntry(stateFromStoresArray, entryId);
+  let findTraceEntryResult = projectId(16414).findTraceEntry(stateFromStoresArray, entryId);
   if (findTraceEntryResult == null) {
     findTraceEntryResult = initialEntry;
   }
@@ -157,53 +157,53 @@ export default function VibegrationsTraceDetailSheet(projectId) {
     if (parentId == null) {
       parentId = null;
     }
-    findTraceEntryResult1 = tmp2(16385).findTraceEntry(stateFromStoresArray, parentId);
-    const tmp2Result = tmp2(16385);
+    findTraceEntryResult1 = tmp2(16414).findTraceEntry(stateFromStoresArray, parentId);
+    const tmp2Result = tmp2(16414);
   }
-  const obj3 = projectId(16385);
-  const length = tmp2(16385).traceChildren(stateFromStoresArray, findTraceEntryResult.id).length;
-  const tmp2Result13 = tmp2(16385);
-  const traceDetailSectionsResult = tmp2(16389).traceDetailSections(findTraceEntryResult, { childCount: length, hasParent: null != findTraceEntryResult1 });
+  const obj3 = projectId(16414);
+  const length = tmp2(16414).traceChildren(stateFromStoresArray, findTraceEntryResult.id).length;
+  const tmp2Result13 = tmp2(16414);
+  const traceDetailSectionsResult = tmp2(16418).traceDetailSections(findTraceEntryResult, { childCount: length, hasParent: null != findTraceEntryResult1 });
   const obj4 = { childCount: length, hasParent: null != findTraceEntryResult1 };
-  const tmp2Result14 = tmp2(16389);
+  const tmp2Result14 = tmp2(16418);
   let detailId;
   if ("tool" === findTraceEntryResult.kind) {
     detailId = findTraceEntryResult.detailId;
   }
-  const vibegrationsTraceDetail = tmp2(16390).useVibegrationsTraceDetail(projectId, detailId);
+  const vibegrationsTraceDetail = tmp2(16419).useVibegrationsTraceDetail(projectId, detailId);
   const tmp12 = "model" === findTraceEntryResult.kind ? findTraceEntryResult.model : findTraceEntryResult.tool;
-  const tmp2Result15 = tmp2(16390);
-  const formatClockTimeResult = tmp2(16387).formatClockTime(findTraceEntryResult.startedAt, "millis");
-  const tmp2Result16 = tmp2(16387);
-  const traceCategoryResult = tmp2(16385).traceCategory(findTraceEntryResult);
-  const tmp2Result17 = tmp2(16385);
-  const traceRichStatusLabelResult = tmp2(16384).traceRichStatusLabel(vibegrationsTraceDetail);
-  const obj5 = { scrollable: true, header: closure_5(tmp2(6565).BottomSheetTitleHeader, { title: tmp12 }), children: null };
+  const tmp2Result15 = tmp2(16419);
+  const formatClockTimeResult = tmp2(16416).formatClockTime(findTraceEntryResult.startedAt, "millis");
+  const tmp2Result16 = tmp2(16416);
+  const traceCategoryResult = tmp2(16414).traceCategory(findTraceEntryResult);
+  const tmp2Result17 = tmp2(16414);
+  const traceRichStatusLabelResult = tmp2(16413).traceRichStatusLabel(vibegrationsTraceDetail);
+  const obj5 = { scrollable: true, header: closure_5(tmp2(6570).BottomSheetTitleHeader, { title: tmp12 }), children: null };
   const obj6 = { contentContainerStyle: { paddingBottom: useSafeAreaInsetsDefault().bottom }, children: null };
   const obj7 = { style: tmp.content, children: null };
   const obj8 = { style: tmp.head, children: null };
-  const items2 = [closure_5(tmp2(16383).TraceStatusDot, { status: findTraceEntryResult.status }), , ];
+  const items2 = [closure_5(tmp2(16412).TraceStatusDot, { status: findTraceEntryResult.status }), , ];
   const obj10 = { variant: "text-xs/semibold", style: traceCategoryTextStyles[traceCategoryResult], children: null };
   const obj9 = { status: findTraceEntryResult.status };
-  const tmp2Result18 = tmp2(16384);
-  obj10.children = tmp2(16384).categoryLabel(traceCategoryResult);
-  items2[1] = closure_5(tmp2(4825).Text, obj10);
+  const tmp2Result18 = tmp2(16413);
+  obj10.children = tmp2(16413).categoryLabel(traceCategoryResult);
+  items2[1] = closure_5(tmp2(4832).Text, obj10);
   const obj11 = { variant: "text-xs/normal", color: "text-muted", style: tmp.headTitle, children: null };
   if (null == findTraceEntryResult.durationMs) {
     let intl = tmp2(1115).intl;
-    let stringResult = intl.string(_modDef3714.HpKDyl);
+    let stringResult = intl.string(_modDef3715.HpKDyl);
   } else {
-    stringResult = tmp2(16384).formatDuration(findTraceEntryResult.durationMs);
-    const tmp2Result20 = tmp2(16384);
+    stringResult = tmp2(16413).formatDuration(findTraceEntryResult.durationMs);
+    const tmp2Result20 = tmp2(16413);
   }
   obj11.children = stringResult;
-  items2[2] = closure_5(tmp2(4825).Text, obj11);
+  items2[2] = closure_5(tmp2(4832).Text, obj11);
   obj8.children = items2;
   const items3 = [closure_6(View, obj8), , , , , , ];
   let tmp16Result = null;
   if (null != findTraceEntryResult.error) {
     const obj12 = { variant: "text-xs/normal", color: "text-feedback-critical", selectable: true, children: findTraceEntryResult.error };
-    tmp16Result = closure_5(tmp2(4825).Text, obj12);
+    tmp16Result = closure_5(tmp2(4832).Text, obj12);
   }
   items3[1] = tmp16Result;
   let tmp17Result = null;
@@ -212,7 +212,7 @@ export default function VibegrationsTraceDetailSheet(projectId) {
     if ("tool" === findTraceEntryResult.kind) {
       const obj13 = { title: null, children: null };
       const intl25 = tmp2(1115).intl;
-      obj13.title = intl25.string(_modDef3714.jXY3mm);
+      obj13.title = intl25.string(_modDef3715.jXY3mm);
       let fields = findTraceEntryResult.fields;
       if (fields == null) {
         fields = [];
@@ -234,7 +234,7 @@ export default function VibegrationsTraceDetailSheet(projectId) {
       let tmp16Result19 = null;
       if (null != traceRichStatusLabelResult) {
         const obj15 = { variant: "text-xs/normal", color: "text-subtle", children: traceRichStatusLabelResult };
-        tmp16Result19 = closure_5(tmp2(4825).Text, obj15);
+        tmp16Result19 = closure_5(tmp2(4832).Text, obj15);
       }
       items4[2] = tmp16Result19;
       obj13.children = items4;
@@ -248,23 +248,23 @@ export default function VibegrationsTraceDetailSheet(projectId) {
     if ("tool" === findTraceEntryResult.kind) {
       const obj16 = { title: null, children: null };
       const intl26 = tmp2(1115).intl;
-      obj16.title = intl26.string(_modDef3714.KXrf5F);
+      obj16.title = intl26.string(_modDef3715.KXrf5F);
       const obj17 = { label: null, value: null };
       const intl27 = tmp2(1115).intl;
-      obj17.label = intl27.string(_modDef3714["2Aii2k"]);
+      obj17.label = intl27.string(_modDef3715["2Aii2k"]);
       const intl28 = tmp2(1115).intl;
       let num = findTraceEntryResult.resultChars;
       if (num == null) {
         num = 0;
       }
       const obj18 = { count: num };
-      obj17.value = intl28.formatToPlainString(_modDef3714.DdXP0P, obj18);
+      obj17.value = intl28.formatToPlainString(_modDef3715.DdXP0P, obj18);
       const items5 = [closure_5(Row, obj17), , , ];
       let tmp16Result20 = null;
       if (null != findTraceEntryResult.resultAdded) {
         const obj19 = { label: null, value: null };
         const intl2 = tmp2(1115).intl;
-        obj19.label = intl2.string(_modDef3714.hpGFzS);
+        obj19.label = intl2.string(_modDef3715.hpGFzS);
         ({ resultRemoved, resultAdded } = findTraceEntryResult);
         if (resultRemoved == null) {
           resultRemoved = 0;
@@ -278,9 +278,9 @@ export default function VibegrationsTraceDetailSheet(projectId) {
       if (true === findTraceEntryResult.resultTruncated) {
         const obj20 = { label: null, value: null, muted: true };
         const intl3 = tmp2(1115).intl;
-        obj20.label = intl3.string(_modDef3714["UV2R1/"]);
+        obj20.label = intl3.string(_modDef3715["UV2R1/"]);
         const intl4 = tmp2(1115).intl;
-        obj20.value = intl4.string(_modDef3714["1kBG9Z"]);
+        obj20.value = intl4.string(_modDef3715["1kBG9Z"]);
         tmp16Result21 = closure_5(Row, obj20);
       }
       items5[2] = tmp16Result21;
@@ -308,58 +308,58 @@ export default function VibegrationsTraceDetailSheet(projectId) {
     if ("model" === findTraceEntryResult.kind) {
       const obj22 = { title: null, children: null };
       const intl29 = tmp2(1115).intl;
-      obj22.title = intl29.string(_modDef3714["W+4BVk"]);
+      obj22.title = intl29.string(_modDef3715["W+4BVk"]);
       let tmp16Result23 = null;
       if (null != findTraceEntryResult.promptTokens) {
         const obj23 = { label: null, value: null };
         const intl5 = tmp2(1115).intl;
-        obj23.label = intl5.string(_modDef3714.Ran4BY);
+        obj23.label = intl5.string(_modDef3715.Ran4BY);
         const intl6 = tmp2(1115).intl;
-        const obj24 = { tokens: tmp2(16384).formatTokens(findTraceEntryResult.promptTokens) };
-        obj23.value = intl6.formatToPlainString(_modDef3714["PYO+Jv"], obj24);
+        const obj24 = { tokens: tmp2(16413).formatTokens(findTraceEntryResult.promptTokens) };
+        obj23.value = intl6.formatToPlainString(_modDef3715["PYO+Jv"], obj24);
         tmp16Result23 = closure_5(Row, obj23);
-        const tmp2Result21 = tmp2(16384);
+        const tmp2Result21 = tmp2(16413);
       }
       const items6 = [tmp16Result23, , , , , , ];
       let tmp16Result24 = null;
       if (null != findTraceEntryResult.systemTokens) {
         const obj25 = { label: null, value: null };
         const intl7 = tmp2(1115).intl;
-        obj25.label = intl7.string(_modDef3714.vPIcyv);
+        obj25.label = intl7.string(_modDef3715.vPIcyv);
         const intl8 = tmp2(1115).intl;
-        const obj26 = { system: tmp2(16384).formatTokens(findTraceEntryResult.systemTokens), tools: null, toolCount: null, messages: null, messageCount: null };
-        const tmp2Result22 = tmp2(16384);
+        const obj26 = { system: tmp2(16413).formatTokens(findTraceEntryResult.systemTokens), tools: null, toolCount: null, messages: null, messageCount: null };
+        const tmp2Result22 = tmp2(16413);
         let num2 = findTraceEntryResult.toolsTokens;
         if (num2 == null) {
           num2 = 0;
         }
-        obj26.tools = tmp2(16384).formatTokens(num2);
+        obj26.tools = tmp2(16413).formatTokens(num2);
         let num3 = findTraceEntryResult.tools;
         if (num3 == null) {
           num3 = 0;
         }
         obj26.toolCount = num3;
-        const tmp2Result23 = tmp2(16384);
+        const tmp2Result23 = tmp2(16413);
         let num4 = findTraceEntryResult.messagesTokens;
         if (num4 == null) {
           num4 = 0;
         }
-        obj26.messages = tmp2(16384).formatTokens(num4);
+        obj26.messages = tmp2(16413).formatTokens(num4);
         let num5 = findTraceEntryResult.messages;
         if (num5 == null) {
           num5 = 0;
         }
         obj26.messageCount = num5;
-        obj25.value = intl8.formatToPlainString(_modDef3714.Qy2iTq, obj26);
+        obj25.value = intl8.formatToPlainString(_modDef3715.Qy2iTq, obj26);
         tmp16Result24 = closure_5(Row, obj25);
-        const tmp2Result24 = tmp2(16384);
+        const tmp2Result24 = tmp2(16413);
       }
       items6[1] = tmp16Result24;
       let tmp16Result25 = null;
       if (null != findTraceEntryResult.inputTokens) {
         const obj27 = { label: null, value: null };
         const intl9 = tmp2(1115).intl;
-        obj27.label = intl9.string(_modDef3714["/703Yk"]);
+        obj27.label = intl9.string(_modDef3715["/703Yk"]);
         const _String = String;
         obj27.value = String(findTraceEntryResult.inputTokens);
         tmp16Result25 = closure_5(Row, obj27);
@@ -369,7 +369,7 @@ export default function VibegrationsTraceDetailSheet(projectId) {
       if (null != findTraceEntryResult.outputTokens) {
         const obj28 = { label: null, value: null };
         const intl10 = tmp2(1115).intl;
-        obj28.label = intl10.string(_modDef3714["6+W0dJ"]);
+        obj28.label = intl10.string(_modDef3715["6+W0dJ"]);
         const _String2 = String;
         obj28.value = String(findTraceEntryResult.outputTokens);
         tmp16Result26 = closure_5(Row, obj28);
@@ -379,7 +379,7 @@ export default function VibegrationsTraceDetailSheet(projectId) {
       if (null != findTraceEntryResult.cacheReadTokens) {
         const obj29 = { label: null, value: null };
         const intl11 = tmp2(1115).intl;
-        obj29.label = intl11.string(_modDef3714.VyAl6j);
+        obj29.label = intl11.string(_modDef3715.VyAl6j);
         const intl12 = tmp2(1115).intl;
         const obj30 = { read: null, write: null };
         ({ cacheReadTokens: obj40.read, cacheWriteTokens } = findTraceEntryResult);
@@ -387,7 +387,7 @@ export default function VibegrationsTraceDetailSheet(projectId) {
           cacheWriteTokens = 0;
         }
         obj30.write = cacheWriteTokens;
-        obj29.value = intl12.formatToPlainString(_modDef3714.lkMc23, obj30);
+        obj29.value = intl12.formatToPlainString(_modDef3715.lkMc23, obj30);
         tmp16Result27 = closure_5(Row, obj29);
       }
       items6[4] = tmp16Result27;
@@ -395,7 +395,7 @@ export default function VibegrationsTraceDetailSheet(projectId) {
       if (null != findTraceEntryResult.costUsd) {
         const obj31 = { label: null, value: null };
         const intl13 = tmp2(1115).intl;
-        obj31.label = intl13.string(_modDef3714.l9YFEQ);
+        obj31.label = intl13.string(_modDef3715.l9YFEQ);
         const costUsd = findTraceEntryResult.costUsd;
         const _HermesInternal2 = HermesInternal;
         obj31.value = "$" + costUsd.toFixed(4);
@@ -404,8 +404,8 @@ export default function VibegrationsTraceDetailSheet(projectId) {
       items6[5] = tmp16Result28;
       const obj32 = { variant: "text-xs/normal", color: "text-subtle", children: null };
       const intl14 = tmp2(1115).intl;
-      obj32.children = intl14.string(_modDef3714.F9jaUF);
-      items6[6] = closure_5(tmp2(4825).Text, obj32);
+      obj32.children = intl14.string(_modDef3715.F9jaUF);
+      items6[6] = closure_5(tmp2(4832).Text, obj32);
       obj22.children = items6;
       tmp17Result6 = closure_6(Section, obj22);
     }
@@ -414,8 +414,8 @@ export default function VibegrationsTraceDetailSheet(projectId) {
   if (traceDetailSectionsResult.includes("arguments")) {
     const obj33 = { variant: "text-xs/normal", color: "text-subtle", children: null };
     const intl15 = tmp2(1115).intl;
-    obj33.children = intl15.string(_modDef3714["ppv+97"]);
-    let tmp16Result29 = closure_5(tmp2(4825).Text, obj33);
+    obj33.children = intl15.string(_modDef3715["ppv+97"]);
+    let tmp16Result29 = closure_5(tmp2(4832).Text, obj33);
   } else {
     tmp16Result29 = null;
   }
@@ -424,17 +424,17 @@ export default function VibegrationsTraceDetailSheet(projectId) {
   if (traceDetailSectionsResult.includes("diagnostics")) {
     const obj34 = { title: null, children: null };
     const intl16 = tmp2(1115).intl;
-    obj34.title = intl16.string(_modDef3714.T7SFyZ);
+    obj34.title = intl16.string(_modDef3715.T7SFyZ);
     if (null == findTraceEntryResult1) {
       const items7 = [null, , , , , , ];
       let tmp16Result30 = null;
       if (length > 0) {
         const obj35 = { label: null, value: null };
         const intl18 = tmp2(1115).intl;
-        obj35.label = intl18.string(_modDef3714.fI6mzD);
+        obj35.label = intl18.string(_modDef3715.fI6mzD);
         const intl19 = tmp2(1115).intl;
         const obj36 = { count: length };
-        obj35.value = intl19.formatToPlainString(_modDef3714.hO8FYp, obj36);
+        obj35.value = intl19.formatToPlainString(_modDef3715.hO8FYp, obj36);
         tmp16Result30 = closure_5(Row, obj35);
       }
       items7[1] = tmp16Result30;
@@ -442,21 +442,21 @@ export default function VibegrationsTraceDetailSheet(projectId) {
       if (null != findTraceEntryResult.turnId) {
         const obj37 = { label: null, value: null };
         const intl20 = tmp2(1115).intl;
-        obj37.label = intl20.string(_modDef3714.I7cJP0);
+        obj37.label = intl20.string(_modDef3715.I7cJP0);
         obj37.value = findTraceEntryResult.turnId;
         tmp16Result31 = closure_5(Row, obj37);
       }
       items7[2] = tmp16Result31;
       const obj38 = { label: null, value: null };
       const intl21 = tmp2(1115).intl;
-      obj38.label = intl21.string(_modDef3714["XVTP/S"]);
+      obj38.label = intl21.string(_modDef3715["XVTP/S"]);
       obj38.value = findTraceEntryResult.id;
       items7[3] = closure_5(Row, obj38);
       let tmp16Result32 = null;
       if (null != formatClockTimeResult) {
         const obj39 = { label: null, value: null };
         const intl22 = tmp2(1115).intl;
-        obj39.label = intl22.string(_modDef3714.rD7bm0);
+        obj39.label = intl22.string(_modDef3715.rD7bm0);
         obj39.value = formatClockTimeResult;
         tmp16Result32 = closure_5(Row, obj39);
       }
@@ -467,7 +467,7 @@ export default function VibegrationsTraceDetailSheet(projectId) {
         if (null != findTraceEntryResult.stopReason) {
           const obj41 = { label: null, value: null };
           const intl23 = tmp2(1115).intl;
-          obj41.label = intl23.string(_modDef3714.rxmzYT);
+          obj41.label = intl23.string(_modDef3715.rxmzYT);
           obj41.value = findTraceEntryResult.stopReason;
           tmp16Result33 = closure_5(Row, obj41);
         }
@@ -482,13 +482,13 @@ export default function VibegrationsTraceDetailSheet(projectId) {
             const obj42 = { children: null };
             const obj43 = { variant: "text-xs/semibold", color: "text-muted", children: null };
             const intl24 = tmp2(1115).intl;
-            obj43.children = intl24.string(_modDef3714["6oILKx"]);
-            const items8 = [closure_5(tmp2(4825).Text, obj43), ];
+            obj43.children = intl24.string(_modDef3715["6oILKx"]);
+            const items8 = [closure_5(tmp2(4832).Text, obj43), ];
             const schema = findTraceEntryResult.schema;
             items8[1] = schema.map((label) => {
               const obj = { label: label.name, value: null };
               const intl = projectId(1115).intl;
-              const tmp3 = _modDef3714;
+              const tmp3 = _modDef3715;
               obj.value = intl.formatToPlainString(label.required ? tmp3["6QoPmP"] : tmp3["/L6GFe"], { type: label.type });
               return closure_1_5(Row, obj, label.name);
             });
@@ -503,7 +503,7 @@ export default function VibegrationsTraceDetailSheet(projectId) {
     } else {
       const obj44 = { label: null, value: null };
       const intl17 = tmp2(1115).intl;
-      obj44.label = intl17.string(_modDef3714.NnBqcd);
+      obj44.label = intl17.string(_modDef3715.NnBqcd);
       obj44.value = "model" === findTraceEntryResult1.kind ? findTraceEntryResult1.model : findTraceEntryResult1.tool;
       closure_5(Row, obj44);
     }
@@ -511,7 +511,7 @@ export default function VibegrationsTraceDetailSheet(projectId) {
   items3[6] = tmp17Result8;
   obj7.children = items3;
   obj6.children = closure_6(View, obj7);
-  obj5.children = closure_5(tmp2(6040).BottomSheetScrollView, obj6);
-  return closure_5(tmp2(6613).ActionSheet, obj5);
+  obj5.children = closure_5(tmp2(6045).BottomSheetScrollView, obj6);
+  return closure_5(tmp2(6618).ActionSheet, obj5);
 };
 export const VIBEGRATIONS_TRACE_DETAIL_SHEET_KEY = "VibegrationsTraceDetailSheet";

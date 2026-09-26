@@ -1,8 +1,8 @@
-// === Module 9103: LastUsedVideoBackgroundOption ===
+// === Module 9114: LastUsedVideoBackgroundOption ===
 
-// Module 9103 (LastUsedVideoBackgroundOption)
-import PremiumUtilsDefault from "PremiumUtils" /* 4485 */;
-import VideoBackgroundUtils from "VideoBackgroundUtils" /* 9104 */;
+// Module 9114 (LastUsedVideoBackgroundOption)
+import PremiumUtilsDefault from "PremiumUtils" /* 4488 */;
+import VideoBackgroundUtils from "VideoBackgroundUtils" /* 9115 */;
 import noop from "module_19" /* 19 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1184 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;

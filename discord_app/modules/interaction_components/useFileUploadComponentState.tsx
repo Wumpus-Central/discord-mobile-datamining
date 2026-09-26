@@ -1,12 +1,12 @@
-// === Module 17132: useFileUploadComponentState ===
+// === Module 17160: useFileUploadComponentState ===
 
-// Module 17132 (useFileUploadComponentState)
-import Server from "Server" /* 1978 */;
+// Module 17160 (useFileUploadComponentState)
+import Server from "Server" /* 1979 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 5192 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 5199 */;
 
 require = fn;
-const DraftType = fn(5193).DraftType;
+const DraftType = fn(5200).DraftType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/useFileUploadComponentState.tsx");
 

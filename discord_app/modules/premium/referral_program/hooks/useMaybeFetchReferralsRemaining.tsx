@@ -1,9 +1,9 @@
-// === Module 7495: useMaybeFetchReferralsRemaining ===
+// === Module 7501: useMaybeFetchReferralsRemaining ===
 
-// Module 7495 (useMaybeFetchReferralsRemaining)
+// Module 7501 (useMaybeFetchReferralsRemaining)
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 6867 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 6872 */;
 
 const require = fn;
 const PremiumConstants = fn(1374);
@@ -20,18 +20,18 @@ export const useMaybeFetchReferralsRemaining = function useMaybeFetchReferralsRe
   const stateFromStores = flag(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = flag(504);
   let tmp = flag;
-  const hasDiscountApplied = flag(7496).useHasDiscountApplied();
-  const obj2 = flag(7496);
-  const hasActiveTrial = flag(7497).useHasActiveTrial();
-  const tmp6 = fetched(6808)();
+  const hasDiscountApplied = flag(7502).useHasDiscountApplied();
+  const obj2 = flag(7502);
+  const hasActiveTrial = flag(7503).useHasActiveTrial();
+  const tmp6 = fetched(6813)();
   let verified;
   if (stateFromStores != null) {
     verified = stateFromStores.verified;
   }
   fetched = true === verified;
   if (fetched) {
-    fetched = tmp(1969).isPremiumExactly(stateFromStores, TIER_2.TIER_2);
-    const tmpResult = tmp(1969);
+    fetched = tmp(1970).isPremiumExactly(stateFromStores, TIER_2.TIER_2);
+    const tmpResult = tmp(1970);
   }
   if (fetched) {
     fetched = tmp6.fetched;
@@ -55,5 +55,5 @@ export const useMaybeFetchReferralsRemaining = function useMaybeFetchReferralsRe
       const result = ReferralTrialStore.checkAndFetchReferralsRemaining();
     }
   }, items1);
-  const obj3 = flag(7497);
+  const obj3 = flag(7503);
 };

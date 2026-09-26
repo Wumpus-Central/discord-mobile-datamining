@@ -1,20 +1,20 @@
-// === Module 9507: TouchableStreamPreview ===
+// === Module 9518: TouchableStreamPreview ===
 
-// Module 9507 (TouchableStreamPreview)
+// Module 9518 (TouchableStreamPreview)
 import nativeDefault from "native" /* 576 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4881 */;
-import StreamActionCreators from "StreamActionCreators" /* 4971 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5030 */;
-import transitionToStreamDefault from "transitionToStream" /* 5031 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5718 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4888 */;
+import StreamActionCreators from "StreamActionCreators" /* 4978 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5037 */;
+import transitionToStreamDefault from "transitionToStream" /* 5038 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5723 */;
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 4846 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4851 */;
+import GameConsoleStore from "GameConsoleStore" /* 4853 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4858 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4466 */;
-import VoiceStateStore from "VoiceStateStore" /* 4848 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
+import GuildStore from "GuildStore" /* 2067 */;
+import PermissionStore from "PermissionStore" /* 4469 */;
+import VoiceStateStore from "VoiceStateStore" /* 4855 */;
 
 const require = globalThis.__r;
 
@@ -111,13 +111,13 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const Permissions = fn(1074).Permissions;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { touchable: { borderRadius: 5, overflow: "hidden" }, ctaWrapper: null, ctaBackground: null, ctaText: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj3.alignItems = "center";
 obj3.justifyContent = "center";
-const ColorUtils = fn(4680);
+const ColorUtils = fn(4683);
 obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.7);
 obj2.ctaWrapper = obj3;
 obj2.ctaBackground = { height: 40, paddingHorizontal: 16, borderRadius: 20, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_500, justifyContent: "center", alignItems: "center" };

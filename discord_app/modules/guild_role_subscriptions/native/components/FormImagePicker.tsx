@@ -1,11 +1,11 @@
-// === Module 17524: FormImagePicker ===
+// === Module 17554: FormImagePicker ===
 
-// Module 17524 (FormImagePicker)
+// Module 17554 (FormImagePicker)
 import nativeDefault from "native" /* 576 */;
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1431 */;
-import utils_UploadUtilsDefault from "utils/UploadUtils" /* 5443 */;
-import FastImageDefault from "FastImage" /* 5894 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9192 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1432 */;
+import utils_UploadUtilsDefault from "utils/UploadUtils" /* 5450 */;
+import FastImageDefault from "FastImage" /* 5899 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9203 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -184,7 +184,7 @@ class ImagePickerIcon {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { imageSelectionRow: { flexDirection: "row", justifyContent: "space-between", marginHorizontal: 16 }, buttonColumn: { flex: 1, flexDirection: "column", marginEnd: 16 }, imageDescription: { flexWrap: "wrap", marginBottom: 16 }, image: { alignSelf: "center", width: 84, height: 84 }, imageCentered: { alignSelf: "center", width: 20, height: 20 }, imageCircle: { borderRadius: 42 }, imageSquircle: { borderRadius: nativeDefault.radii.sm }, imageContainerEmpty: null, editImageIcon: null, standaloneIcon: null, disabled: null };
 let obj3 = { borderRadius: nativeDefault.radii.sm };
 obj2.imageContainerEmpty = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -215,8 +215,8 @@ export default function FormImagePicker(children) {
   const obj = { style: tmp2.imageSelectionRow, children: null };
   const obj2 = { style: tmp2.buttonColumn, children: null };
   const items = [
-    closure_6(tmp6(4825).Text, { style: tmp2.imageDescription, variant: "text-sm/medium", color: "text-default", children: children.description }),
-    closure_6(tmp6(5274).Button, {
+    closure_6(tmp6(4832).Text, { style: tmp2.imageDescription, variant: "text-sm/medium", color: "text-default", children: children.description }),
+    closure_6(tmp6(5281).Button, {
       text: stringResult,
       variant: "secondary",
       onPress() {

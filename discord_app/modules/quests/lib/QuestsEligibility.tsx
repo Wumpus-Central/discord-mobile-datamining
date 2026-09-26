@@ -1,7 +1,7 @@
-// === Module 10669: QuestsEligibility ===
+// === Module 10682: QuestsEligibility ===
 
-// Module 10669 (QuestsEligibility)
-import MetaQuestUtils from "MetaQuestUtils" /* 1609 */;
+// Module 10682 (QuestsEligibility)
+import MetaQuestUtils from "MetaQuestUtils" /* 1610 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/lib/QuestsEligibility.tsx");

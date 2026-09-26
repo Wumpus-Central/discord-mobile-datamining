@@ -1,7 +1,7 @@
-// === Module 4964: getSoundshareAnalyticsContext ===
+// === Module 4971: getSoundshareAnalyticsContext ===
 
-// Module 4964 (getSoundshareAnalyticsContext)
-import RunningGameStore from "RunningGameStore" /* 1999 */;
+// Module 4971 (getSoundshareAnalyticsContext)
+import RunningGameStore from "RunningGameStore" /* 2000 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/go_live/utils/getSoundshareAnalyticsContext.tsx");

@@ -1,16 +1,16 @@
-// === Module 15918: GuildsBarMessages ===
+// === Module 15946: GuildsBarMessages ===
 
-// Module 15918 (GuildsBarMessages)
+// Module 15946 (GuildsBarMessages)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ChatIcon from "ChatIcon" /* 5378 */;
-import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 15904 */;
-import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 15907 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 15919 */;
-import HomeDrawerDirectMessagesRowDefault from "HomeDrawerDirectMessagesRow" /* 15920 */;
+import ChatIcon from "ChatIcon" /* 5385 */;
+import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 15932 */;
+import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 15935 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 15947 */;
+import HomeDrawerDirectMessagesRowDefault from "HomeDrawerDirectMessagesRow" /* 15948 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4652 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4655 */;
 
 const GuildsBarAnimatedItemWrapperDefault = GuildsBarAnimatedItemWrapper;
 
@@ -38,7 +38,7 @@ export default noop.memo(function GuildsBarMessages() {
   });
   ({ badge, cutouts } = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 }));
   const colors = nativeDefault.colors;
-  const obj3 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config, overState: "y", label: "usePremiumPlanPrice", externalChildren: "GPLAY_UPDATE_PENDING_DOWNGRADE", expandedChildren: null, children: "header" };
+  const obj3 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config, overState: "y", label: "ACTION_SHEET", externalChildren: null, expandedChildren: null, children: null };
   const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
   const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
   const intl = util.intl;
@@ -46,5 +46,5 @@ export default noop.memo(function GuildsBarMessages() {
   obj3.externalChildren = badge;
   obj3.expandedChildren = jsx(HomeDrawerDirectMessagesRowDefault, {});
   obj3.children = jsx(ChatIcon.ChatIcon, { color: tmp7 });
-  return jsx(GuildsBarAnimatedItemWrapperDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config, overState: "y", label: "usePremiumPlanPrice", externalChildren: "GPLAY_UPDATE_PENDING_DOWNGRADE", expandedChildren: null, children: "header" });
+  return jsx(GuildsBarAnimatedItemWrapperDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config, overState: "y", label: "ACTION_SHEET", externalChildren: null, expandedChildren: null, children: null });
 });

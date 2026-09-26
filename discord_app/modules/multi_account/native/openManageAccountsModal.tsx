@@ -1,10 +1,10 @@
-// === Module 15987: openManageAccountsModal ===
+// === Module 16015: openManageAccountsModal ===
 
-// Module 15987 (openManageAccountsModal)
-import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5032 */;
-import Constants from "Constants" /* 11889 */;
+// Module 16015 (openManageAccountsModal)
+import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5039 */;
+import Constants from "Constants" /* 11907 */;
 import size from "module_2" /* 2 */;
 
 const SWITCH_ACCOUNTS_MODAL_KEY = Constants.SWITCH_ACCOUNTS_MODAL_KEY;
@@ -12,5 +12,5 @@ const result = size.fileFinishedImporting("modules/multi_account/native/openMana
 
 export default function openManageAccountsModal(initialRouteName) {
   ActionSheetActionCreatorsDefault.hideActionSheet();
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15988, dependencyMap.paths), { initialRouteName }, SWITCH_ACCOUNTS_MODAL_KEY);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16016, dependencyMap.paths), { initialRouteName }, SWITCH_ACCOUNTS_MODAL_KEY);
 };

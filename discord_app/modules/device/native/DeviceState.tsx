@@ -1,6 +1,6 @@
-// === Module 7164: device/DeviceState ===
+// === Module 7169: device/DeviceState ===
 
-// Module 7164 (device/DeviceState)
+// Module 7169 (device/DeviceState)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -27,17 +27,17 @@ let closure_5 = async function _getDeviceState() {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp5;
           let fallback;
-          let obj4 = closure_0;
+          let obj5 = closure_0;
           if (closure_0 === undefined) {
-            obj4 = { fallback: true };
+            obj5 = { fallback: true };
           }
-          fallback = obj4.fallback;
+          fallback = obj5.fallback;
           c5 = 1;
           c6 = 1;
           return { value: "flex", done: true };
@@ -48,22 +48,21 @@ let closure_5 = async function _getDeviceState() {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           c4 = 1;
-          const MediaManager = closure_130_3.MediaManager;
           c5 = 3;
           c6 = 1;
-          const obj6 = { value: MediaManager.getDeviceStateInfo(), done: false };
-          return obj6;
+          const obj7 = { value: closure_130_1(closure_130_2[2]).getDeviceStateInfo(), done: false };
+          return obj7;
         }
       } else if (2 === tmp8) {
         c4 = 0;
         closure_129_1 = closure_3;
         closure_130_4.warn("Failed to get device state:", closure_129_1);
         if (fallback) {
-          const DEFAULT_DEVICE_STATE = closure_130_0(closure_130_1[3]).DEFAULT_DEVICE_STATE;
+          const DEFAULT_DEVICE_STATE = closure_130_0(closure_130_2[3]).DEFAULT_DEVICE_STATE;
         }
         c6 = 3;
       } else if (arg0 === 1) {
@@ -72,26 +71,25 @@ let closure_5 = async function _getDeviceState() {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj7 = { value, done: true };
-        return obj7;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
         c4 = 0;
         c6 = 3;
         const obj = { value, done: true };
         return obj;
       }
-    } catch (tmp24) {
-      closure_3 = tmp24;
+    } catch (tmp25) {
+      closure_3 = tmp25;
       if (tmp4 === c4) {
         c6 = tmp2;
-        throw tmp24;
+        throw tmp25;
       } else {
         c5 = tmp;
       }
     }
   }
 };
-const NativeModules = fn(17).NativeModules;
 const tmp2 = new LoggerDefault("native/DeviceState.tsx");
 let closure_4 = tmp2;
 const size = fn(2);

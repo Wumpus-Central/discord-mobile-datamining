@@ -1,10 +1,10 @@
-// === Module 17512: GuildSettingsRoleSubscriptionsEnableMonetization ===
+// === Module 17542: GuildSettingsRoleSubscriptionsEnableMonetization ===
 
-// Module 17512 (GuildSettingsRoleSubscriptionsEnableMonetization)
-import UnavailableNoticeDefault from "UnavailableNotice" /* 16161 */;
-import PlaceholderDefault from "Placeholder" /* 17474 */;
+// Module 17542 (GuildSettingsRoleSubscriptionsEnableMonetization)
+import UnavailableNoticeDefault from "UnavailableNotice" /* 16189 */;
+import PlaceholderDefault from "Placeholder" /* 17504 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2066 */;
+import GuildStore from "GuildStore" /* 2067 */;
 
 const require = fn;
 const jsx = fn(21).jsx;

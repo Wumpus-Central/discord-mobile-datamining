@@ -1,14 +1,14 @@
-// === Module 7708: NativePortalView ===
+// === Module 7716: NativePortalView ===
 
-// Module 7708 (NativePortalView)
-import PortalViewNativeComponentDefault from "PortalViewNativeComponent" /* 7709 */;
+// Module 7716 (NativePortalView)
+import PortalViewNativeComponentDefault from "PortalViewNativeComponent" /* 7717 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ NativeModules, requireNativeComponent, NativeEventEmitter } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_5 = createStyles.createStyles({ base: { overflow: "hidden" } });
 const PlatformUtils = fn(1364);
 if (PlatformUtils.isAndroid()) {

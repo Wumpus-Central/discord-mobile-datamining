@@ -1,22 +1,22 @@
-// === Module 11352: AppealIngestionSpeedBump ===
+// === Module 11366: AppealIngestionSpeedBump ===
 
-// Module 11352 (AppealIngestionSpeedBump)
-import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 11354 */;
-import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 11364 */;
-import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 11365 */;
+// Module 11366 (AppealIngestionSpeedBump)
+import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 11368 */;
+import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 11378 */;
+import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 11379 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 7873 */;
+import SafetyHubStore from "SafetyHubStore" /* 7881 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(7860);
+const SafetyHubConstants = fn(7868);
 ({ SafetyHubAnalyticsActions: hasOwnProperty, SafetyHubLinks: metroRequire } = SafetyHubConstants);
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_10 = createStyles.createStyles({ container: { flex: 1, alignSelf: "stretch", paddingHorizontal: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionSpeedBump.tsx");
@@ -119,7 +119,7 @@ export default function AppealIngestionSpeedBump(arg0) {
     const obj10 = { variant: "text-xs/normal", children: null };
     const intl7 = tmp2(1115).intl;
     obj10.children = intl7.format(tmp2(1115).t.WMUgCX, {});
-    isDsaEligible = closure_8(tmp2(4825).Text, obj10);
+    isDsaEligible = closure_8(tmp2(4832).Text, obj10);
   }
   const obj11 = { children: null };
   items2[6] = isDsaEligible;

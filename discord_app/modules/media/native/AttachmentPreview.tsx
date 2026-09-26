@@ -1,27 +1,27 @@
-// === Module 9646: AttachmentPreview ===
+// === Module 9657: AttachmentPreview ===
 
-// Module 9646 (AttachmentPreview)
+// Module 9657 (AttachmentPreview)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import FileUtils from "FileUtils" /* 5439 */;
-import FastImageDefault from "FastImage" /* 5894 */;
-import common_Video from "common/Video" /* 7747 */;
-import _modDef9647 from "module_9647" /* 9647 */;
-import _modDef9648 from "module_9648" /* 9648 */;
-import _modDef9649 from "module_9649" /* 9649 */;
-import _modDef9650 from "module_9650" /* 9650 */;
-import _modDef9651 from "module_9651" /* 9651 */;
-import _modDef9652 from "module_9652" /* 9652 */;
-import _modDef9653 from "module_9653" /* 9653 */;
-import _modDef9654 from "module_9654" /* 9654 */;
-import _modDef9655 from "module_9655" /* 9655 */;
-import _modDef9656 from "module_9656" /* 9656 */;
-import _modDef9657 from "module_9657" /* 9657 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import FileUtils from "FileUtils" /* 5446 */;
+import FastImageDefault from "FastImage" /* 5899 */;
+import common_Video from "common/Video" /* 7755 */;
 import _modDef9658 from "module_9658" /* 9658 */;
 import _modDef9659 from "module_9659" /* 9659 */;
 import _modDef9660 from "module_9660" /* 9660 */;
+import _modDef9661 from "module_9661" /* 9661 */;
+import _modDef9662 from "module_9662" /* 9662 */;
+import _modDef9663 from "module_9663" /* 9663 */;
+import _modDef9664 from "module_9664" /* 9664 */;
+import _modDef9665 from "module_9665" /* 9665 */;
+import _modDef9666 from "module_9666" /* 9666 */;
+import _modDef9667 from "module_9667" /* 9667 */;
+import _modDef9668 from "module_9668" /* 9668 */;
+import _modDef9669 from "module_9669" /* 9669 */;
+import _modDef9670 from "module_9670" /* 9670 */;
+import _modDef9671 from "module_9671" /* 9671 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -41,7 +41,7 @@ class AttachmentIcon {
             }
             let tmp2 = obj4[obj.classifyFileName(obj, str)];
             if (tmp2 == null) {
-              tmp2 = _modDef9658;
+              tmp2 = _modDef9669;
             }
             return tmp2;
           }, items)
@@ -94,10 +94,10 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj = { fileInfoAttachmentPreviewFile: { flexDirection: "row", alignItems: "center", overflow: "hidden", borderRadius: nativeDefault.radii.sm, height: 75, padding: 12, flex: 1, gap: nativeDefault.space.PX_8 }, attachmentFileIcon: { height: 32, width: 24 }, attachmentFileName: { paddingRight: 4, paddingLeft: 4, maxWidth: 136 }, videoIcon: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, alignItems: "center", justifyContent: "center" } };
 const React6 = createStyles.createStyles(obj);
-let obj4 = { archive: _modDef9647, acrobat: _modDef9648, ae: _modDef9649, ai: _modDef9650, audio: _modDef9651, code: _modDef9652, document: _modDef9653, image: _modDef9654, photoshop: _modDef9655, sketch: _modDef9656, spreadsheet: _modDef9657, unknown: _modDef9658, video: _modDef9659, webcode: _modDef9660 };
+let obj4 = { archive: _modDef9658, acrobat: _modDef9659, ae: _modDef9660, ai: _modDef9661, audio: _modDef9662, code: _modDef9663, document: _modDef9664, image: _modDef9665, photoshop: _modDef9666, sketch: _modDef9667, spreadsheet: _modDef9668, unknown: _modDef9669, video: _modDef9670, webcode: _modDef9671 };
 let closure_13 = noop.memo((borderRadius) => {
   ({ uri, width, height, style, fileName } = borderRadius);
   const size = { uri, width, height };
@@ -210,7 +210,7 @@ export default function AttachmentPreview(height) {
       const obj8 = { style: null, children: null };
       videoIcon = videoIcon.videoIcon;
       obj8.style = videoIcon;
-      CirclePlayIcon = CirclePlayIcon(8168).CirclePlayIcon;
+      CirclePlayIcon = CirclePlayIcon(8176).CirclePlayIcon;
       tmp6 = timestampProducer(CirclePlayIcon, { size: "md", color: "white", secondaryColor: "black" });
       obj8.children = tmp6;
       items[1] = timestampProducer(hasOwnProperty, obj8);

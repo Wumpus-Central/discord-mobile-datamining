@@ -1,6 +1,6 @@
-// === Module 16092: GuildSettingsDiscoveryConstants ===
+// === Module 16120: GuildSettingsDiscoveryConstants ===
 
-// Module 16092 (GuildSettingsDiscoveryConstants)
+// Module 16120 (GuildSettingsDiscoveryConstants)
 import util from "util" /* 1115 */;
 import size from "module_2" /* 2 */;
 

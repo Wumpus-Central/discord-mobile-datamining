@@ -1,19 +1,19 @@
-// === Module 11189: DestinationFailedAlertModal ===
+// === Module 11203: DestinationFailedAlertModal ===
 
-// Module 11189 (DestinationFailedAlertModal)
+// Module 11203 (DestinationFailedAlertModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import UserUtilsDefault from "UserUtils" /* 4675 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import useChannelNameDefault from "useChannelName" /* 4982 */;
-import AlertModal from "AlertModal" /* 5202 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10360 */;
+import UserUtilsDefault from "UserUtils" /* 4678 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import useChannelNameDefault from "useChannelName" /* 4989 */;
+import AlertModal from "AlertModal" /* 5209 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10371 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import PresenceStore from "PresenceStore" /* 4869 */;
-import RelationshipStore from "RelationshipStore" /* 4476 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
+import GuildStore from "GuildStore" /* 2067 */;
+import PresenceStore from "PresenceStore" /* 4876 */;
+import RelationshipStore from "RelationshipStore" /* 4479 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -41,7 +41,7 @@ function FailedUserRow(user) {
   let tmp9Result = null;
   if (null != user) {
     const obj3 = { style: tmp.row, children: null };
-    const obj4 = { user, guildId: "Boolean", status: true, isMobileOnline: "done", isVROnline: true, size: null, avatarDecoration: "header", autoStatusCutout: null };
+    const obj4 = { user, guildId: "Boolean", status: true, isMobileOnline: false, isVROnline: null, size: true, avatarDecoration: null, autoStatusCutout: false };
     let tmp13 = null;
     if (StatusTypes.OFFLINE !== status) {
       tmp13 = status;
@@ -57,7 +57,7 @@ function FailedUserRow(user) {
       stateFromStores = UserUtilsDefault.getName(user);
     }
     obj5.children = stateFromStores;
-    items2[1] = closure_10(tmp2(4825).Text, obj5);
+    items2[1] = closure_10(tmp2(4832).Text, obj5);
     obj3.children = items2;
     tmp9Result = closure_11(View, obj3);
   }
@@ -77,7 +77,7 @@ function FailedChannelRow(channel) {
   const obj2 = { style: tmp.row, children: null };
   const obj = channel(504);
   const tmp3 = useChannelNameDefault(channel);
-  const items1 = [closure_10(channel(10454).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(10454).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(4825).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
+  const items1 = [closure_10(channel(10465).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(10465).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(4832).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
   obj2.children = items1;
   return closure_11(View, obj2);
 }
@@ -121,7 +121,7 @@ const View = fn(17).View;
 const StatusTypes = fn(1085).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { container: { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG, borderRadius: nativeDefault.radii.lg, paddingVertical: nativeDefault.space.PX_8 }, row: null, label: null };
 let obj3 = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG, borderRadius: nativeDefault.radii.lg, paddingVertical: nativeDefault.space.PX_8 };
 obj2.row = { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, height: 40, marginHorizontal: nativeDefault.space.PX_16 };

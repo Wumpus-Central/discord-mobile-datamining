@@ -1,13 +1,13 @@
-// === Module 8161: GameProfileHeader ===
+// === Module 8169: GameProfileHeader ===
 
-// Module 8161 (GameProfileHeader)
+// Module 8169 (GameProfileHeader)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import LinearGradientDefault from "LinearGradient" /* 5286 */;
-import SKUUtils from "SKUUtils" /* 8162 */;
-import useGameProfileHeroBackgroundURLDefault from "useGameProfileHeroBackgroundURL" /* 8163 */;
-import GameProfileRankPillDefault from "GameProfileRankPill" /* 8164 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import LinearGradientDefault from "LinearGradient" /* 5293 */;
+import SKUUtils from "SKUUtils" /* 8170 */;
+import useGameProfileHeroBackgroundURLDefault from "useGameProfileHeroBackgroundURL" /* 8171 */;
+import GameProfileRankPillDefault from "GameProfileRankPill" /* 8172 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -17,15 +17,15 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, artHero: null, artHeroImage: null, artHeroGradient: null, headerContent: null, shadowContainer: null, coverContainer: null, iconContainer: null, image: null, titleContainer: null, textShadow: null };
 const rect = { width: "100%", position: "absolute", top: 0, bottom: -nativeDefault.space.PX_80, left: 0, right: 0 };
 obj2.artHero = rect;
 obj2.artHeroImage = { height: "100%", width: "100%", resizeMode: "cover" };
 obj2.artHeroGradient = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0 };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
-obj2.headerContent = { paddingTop: nativeDefault.space.PX_32, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "flex-end", maxWidth: fn(8159).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" };
-let obj4 = { paddingTop: nativeDefault.space.PX_32, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "flex-end", maxWidth: fn(8159).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" };
+obj2.headerContent = { paddingTop: nativeDefault.space.PX_32, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "flex-end", maxWidth: fn(8167).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" };
+let obj4 = { paddingTop: nativeDefault.space.PX_32, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "flex-end", maxWidth: fn(8167).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.shadowContainer = { borderRadius: nativeDefault.radii.sm };
 let size = { width: 85, height: 114, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };

@@ -1,17 +1,17 @@
-// === Module 6634: PrivateChannelSortStore ===
+// === Module 6639: PrivateChannelSortStore ===
 
-// Module 6634 (PrivateChannelSortStore)
+// Module 6639 (PrivateChannelSortStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import _modDef4418 from "module_4418" /* 4418 */;
-import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 6637 */;
-import MessageRequestStore from "MessageRequestStore" /* 6635 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6636 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import ReadStateStore from "ReadStateStore" /* 4844 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5010 */;
+import _modDef4421 from "module_4421" /* 4421 */;
+import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 6642 */;
+import MessageRequestStore from "MessageRequestStore" /* 6640 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6641 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
+import GuildStore from "GuildStore" /* 2067 */;
+import ReadStateStore from "ReadStateStore" /* 4851 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5017 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -28,8 +28,8 @@ function makeSortedChannel(channel) {
     const isMessageRequestTimestamp = channel.isMessageRequestTimestamp;
     let tmp2 = id;
     if (null != isMessageRequestTimestamp) {
-      const obj = _modDef4418(isMessageRequestTimestamp);
-      const valueOfResult = _modDef4418(isMessageRequestTimestamp).valueOf();
+      const obj = _modDef4421(isMessageRequestTimestamp);
+      const valueOfResult = _modDef4421(isMessageRequestTimestamp).valueOf();
       let fromTimestampResult = SnowflakeUtilsDefault.fromTimestamp(valueOfResult);
       if (obj3.compare(id, fromTimestampResult) > 0) {
         fromTimestampResult = id;
@@ -61,9 +61,9 @@ function handleCacheLoaded() {
     continue;
   }
 }
-const isPrivate = fn(2048).isPrivate;
+const isPrivate = fn(2049).isPrivate;
 const constants = { DEFAULT: "DEFAULT", FAVORITE: "FAVORITE" };
-const secondaryIndexMap = new fn(4461).SecondaryIndexMap(function indexBy(value) {
+const secondaryIndexMap = new fn(4464).SecondaryIndexMap(function indexBy(value) {
   if (value.isRequest) {
     let items = [];
   } else {
@@ -76,7 +76,7 @@ const secondaryIndexMap = new fn(4461).SecondaryIndexMap(function indexBy(value)
 let values = [];
 let values2 = [];
 let closure_17 = [];
-const f38470 = () => {
+const f38522 = () => {
 
 };
 const Store = initializeDefault.Store;
@@ -89,7 +89,7 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, handleConnectionOpen);
 };
 prototype["getPrivateChannelIds"] = function getPrivateChannelIds() {
-  if (typeof f38470 === "function") {
+  if (typeof f38522 === "function") {
     values = secondaryIndexMap.values(constants.FAVORITE);
     values2 = secondaryIndexMap.values(constants.DEFAULT);
     let tmp4 = values === values;

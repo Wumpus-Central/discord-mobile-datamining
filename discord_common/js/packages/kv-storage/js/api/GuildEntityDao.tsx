@@ -1,8 +1,8 @@
-// === Module 2086: GuildEntityDao ===
+// === Module 2087: GuildEntityDao ===
 
-// Module 2086 (GuildEntityDao)
-import Table from "Table" /* 2078 */;
-import TableId from "TableId" /* 2080 */;
+// Module 2087 (GuildEntityDao)
+import Table from "Table" /* 2079 */;
+import TableId from "TableId" /* 2081 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

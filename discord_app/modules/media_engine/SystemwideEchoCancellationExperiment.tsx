@@ -1,7 +1,7 @@
-// === Module 13538: SystemwideEchoCancellationExperiment ===
+// === Module 13556: SystemwideEchoCancellationExperiment ===
 
-// Module 13538 (SystemwideEchoCancellationExperiment)
-import ApexExperiment from "ApexExperiment" /* 1434 */;
+// Module 13556 (SystemwideEchoCancellationExperiment)
+import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-06-systemwide-echo-cancellation-for-people-who-refuse-to-wear-headphones", defaultConfig: { echoReferenceMode: "mix" }, variations: null };

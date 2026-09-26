@@ -1,7 +1,7 @@
-// === Module 14178: MobileNitroPreviewDirectCheckoutExperiment ===
+// === Module 14203: MobileNitroPreviewDirectCheckoutExperiment ===
 
-// Module 14178 (MobileNitroPreviewDirectCheckoutExperiment)
-import ApexExperiment from "ApexExperiment" /* 1434 */;
+// Module 14203 (MobileNitroPreviewDirectCheckoutExperiment)
+import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-09-mobile-nitro-preview-direct-checkout", kind: "user", defaultConfig: false, variations: { 0: false, 1: true } });

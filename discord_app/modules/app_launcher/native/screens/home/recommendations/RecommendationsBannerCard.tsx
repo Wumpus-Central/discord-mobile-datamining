@@ -1,12 +1,12 @@
-// === Module 11559: RecommendationsBannerCard ===
+// === Module 11573: RecommendationsBannerCard ===
 
-// Module 11559 (RecommendationsBannerCard)
+// Module 11573 (RecommendationsBannerCard)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7625 */;
-import EntityBorderAppIconDefault from "EntityBorderAppIcon" /* 11524 */;
-import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 11554 */;
-import RecommendationsBannerDefault from "RecommendationsBanner" /* 11560 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7632 */;
+import EntityBorderAppIconDefault from "EntityBorderAppIcon" /* 11538 */;
+import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 11568 */;
+import RecommendationsBannerDefault from "RecommendationsBanner" /* 11574 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { container: { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_APP_LAUNCHER_CARD_DEFAULT, width: "100%", overflow: "hidden" }, banner: { width: "100%", height: 106, overflow: "hidden" }, appDetailsContainer: null, appDetails: null, appIconContainer: null, notifsContainer: null, badge: null, promotedLabelWrapper: null };
 const obj3 = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_APP_LAUNCHER_CARD_DEFAULT, width: "100%", overflow: "hidden" };
 obj2.appDetailsContainer = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
@@ -39,10 +39,10 @@ export default function RecommendationsBannerCard(application) {
   }
   const tmp = closure_8();
   if (!showsPromoted) {
-    showsPromoted = application(8582).isPromotedApplication(application);
-    const obj = application(8582);
+    showsPromoted = application(8590).isPromotedApplication(application);
+    const obj = application(8590);
   }
-  const shelfBadgeTypeIfActive = application(8582).getShelfBadgeTypeIfActive(application);
+  const shelfBadgeTypeIfActive = application(8590).getShelfBadgeTypeIfActive(application);
   let bot = application.bot;
   let id;
   if (bot != null) {
@@ -60,11 +60,11 @@ export default function RecommendationsBannerCard(application) {
     }
     maybeFetchUserProfileDefault(id);
   }, items);
-  const obj2 = application(8582);
+  const obj2 = application(8590);
   const applicationIconSource = AvatarUtilsDefault.getApplicationIconSource({ id: application.id, icon: application.icon, bot: application.bot, botIconFirst: true });
   if (isLandscape) {
     const obj5 = { application, iconSource: applicationIconSource, onPress, isFirstRow: isFirst, isLastRow: isLast };
-    let tmp12Result2 = closure_6(tmp4(11551).BaseAppRow, obj5);
+    let tmp12Result2 = closure_6(tmp4(11565).BaseAppRow, obj5);
   } else {
     const items1 = [tmp.container, , ];
     let num = 8;
@@ -85,7 +85,7 @@ export default function RecommendationsBannerCard(application) {
     const obj9 = { style: tmp.banner, children: null };
     const obj10 = { applicationBot: application.bot, applicationEmbedded: null, applicationId: null, applicationIcon: null, overrideImageUrl: null };
     const tmp10Result = RecommendationsBannerDefault;
-    obj10.applicationEmbedded = tmp4(8582).isEmbeddedApp(application);
+    obj10.applicationEmbedded = tmp4(8590).isEmbeddedApp(application);
     ({ id: obj8.applicationId, icon } = application);
     obj10.applicationIcon = icon;
     obj10.overrideImageUrl = application.overrideImageUrl;
@@ -99,7 +99,7 @@ export default function RecommendationsBannerCard(application) {
         const obj14 = { variant: "text-xxs/medium", color: "mobile-text-heading-primary", children: null };
         const intl = tmp4(1115).intl;
         obj14.children = intl.string(tmp4(1115).t["/eVltv"]);
-        obj13.children = closure_6(tmp4(4825).Text, obj14);
+        obj13.children = closure_6(tmp4(4832).Text, obj14);
         showsPromoted = closure_6(View, obj13);
       }
       items3[1] = showsPromoted;
@@ -120,17 +120,17 @@ export default function RecommendationsBannerCard(application) {
     const items5 = [tmp14Result, , ];
     const obj17 = { style: tmp.appDetails, children: null };
     const obj18 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: application.name };
-    const items6 = [closure_6(tmp4(4825).Text, obj18), ];
+    const items6 = [closure_6(tmp4(4832).Text, obj18), ];
     const obj19 = { variant: "text-sm/normal", color: "text-subtle", lineClamp: 1, children: application.description };
-    items6[1] = closure_6(tmp4(4825).Text, obj19);
+    items6[1] = closure_6(tmp4(4832).Text, obj19);
     obj17.children = items6;
     items5[1] = closure_7(View, obj17);
-    items5[2] = closure_6(tmp4(5919).TableRowArrow, {});
+    items5[2] = closure_6(tmp4(5924).TableRowArrow, {});
     obj15.children = items5;
     items4[1] = closure_7(View, obj15);
     obj7.children = items4;
-    tmp12Result2 = closure_7(tmp4(5428).PressableOpacity, obj7);
-    const tmp4Result = tmp4(8582);
+    tmp12Result2 = closure_7(tmp4(5435).PressableOpacity, obj7);
+    const tmp4Result = tmp4(8590);
   }
   return tmp12Result2;
 };

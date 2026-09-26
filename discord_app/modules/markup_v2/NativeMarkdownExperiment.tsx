@@ -1,7 +1,7 @@
-// === Module 7528: NativeMarkdownExperiment ===
+// === Module 7536: NativeMarkdownExperiment ===
 
-// Module 7528 (NativeMarkdownExperiment)
-import ApexExperiment from "ApexExperiment" /* 1434 */;
+// Module 7536 (NativeMarkdownExperiment)
+import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2025-04-native-markdown", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

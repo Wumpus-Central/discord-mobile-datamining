@@ -1,12 +1,12 @@
-// === Module 2002: ApplicationRecord ===
+// === Module 2003: ApplicationRecord ===
 
-// Module 2002 (ApplicationRecord)
+// Module 2003 (ApplicationRecord)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import ApplicationOverlayMethodFlags from "ApplicationOverlayMethodFlags" /* 2008 */;
+import ApplicationOverlayMethodFlags from "ApplicationOverlayMethodFlags" /* 2009 */;
 import Record from "Record" /* 1387 */;
-import CompanyRecord from "CompanyRecord" /* 2003 */;
+import CompanyRecord from "CompanyRecord" /* 2004 */;
 import UserRecord from "UserRecord" /* 1386 */;
 
 require = fn;
@@ -24,7 +24,7 @@ function createExecutable(os) {
   }
   return obj;
 }
-const Constants = fn(2004);
+const Constants = fn(2005);
 ({ END_GAME_APPLICATION_ID, POKER_NIGHT_APPLICATION_ID } = Constants);
 const ApplicationTypes = fn(1349).ApplicationTypes;
 let closure_7 = { [POKER_NIGHT_APPLICATION_ID]: 7, [END_GAME_APPLICATION_ID]: 12 };

@@ -1,18 +1,18 @@
-// === Module 7569: SearchableSelectActionComponentUtils ===
+// === Module 7577: SearchableSelectActionComponentUtils ===
 
-// Module 7569 (SearchableSelectActionComponentUtils)
-import NicknameUtilsDefault from "NicknameUtils" /* 4981 */;
-import useChannelName from "useChannelName" /* 4982 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 5060 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5749 */;
-import SnowflakeSelectDefaultValueTypes from "SnowflakeSelectDefaultValueTypes" /* 7570 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildMemberStore from "GuildMemberStore" /* 2107 */;
-import GuildRoleStore from "GuildRoleStore" /* 2101 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import RelationshipStore from "RelationshipStore" /* 4476 */;
+// Module 7577 (SearchableSelectActionComponentUtils)
+import NicknameUtilsDefault from "NicknameUtils" /* 4988 */;
+import useChannelName from "useChannelName" /* 4989 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 5067 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5754 */;
+import SnowflakeSelectDefaultValueTypes from "SnowflakeSelectDefaultValueTypes" /* 7578 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
+import GuildMemberStore from "GuildMemberStore" /* 2108 */;
+import GuildRoleStore from "GuildRoleStore" /* 2102 */;
+import GuildStore from "GuildStore" /* 2067 */;
+import RelationshipStore from "RelationshipStore" /* 4479 */;
 import UserStore from "UserStore" /* 1372 */;
-import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 7562 */;
+import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 7570 */;
 
 const require = globalThis.__r;
 
@@ -30,10 +30,10 @@ export const queryMentionables = function queryMentionables(type, query, channel
     const tmp2 = type === require("Server").ComponentType.USER_SELECT || type === require("Server").ComponentType.MENTIONABLE_SELECT;
     const tmp3 = type === require("Server").ComponentType.ROLE_SELECT || type === require("Server").ComponentType.MENTIONABLE_SELECT;
     let obj2 = { query, channel, canMentionEveryone: false, canMentionHere: false, canMentionUsers: tmp2, canMentionRoles: tmp3, includeAllGuildUsers: true, includeNonMentionableRoles: true, checkRecentlyTalkedOnEmptyQuery: false, limit: 15 };
-    const obj = channel(5749);
-    ({ users, roles } = channel(5749).queryMentionResults(obj2));
+    const obj = channel(5754);
+    ({ users, roles } = channel(5754).queryMentionResults(obj2));
     const items = [];
-    const queryMentionResultsResult = channel(5749).queryMentionResults(obj2);
+    const queryMentionResultsResult = channel(5754).queryMentionResults(obj2);
     HermesBuiltin.arraySpread(roles.map((id) => ({ type: channelId(dependencyMap[10]).SelectOptionType.ROLE, value: id.id, label: id.name })), HermesBuiltin.arraySpread(users.map((user) => {
       let username = NicknameUtilsDefault.getNickname(channel.getGuildId(), closure_0, user.user);
       const obj2 = { type: InteractionComponentTypes.SelectOptionType.USER, value: user.user.id, label: null };
@@ -67,7 +67,7 @@ export const getInitialSnowflakeSelectOptions = function getInitialSnowflakeSele
   const interactionComponentState = LocalInteractionComponentStateStore.getInteractionComponentState(containerId, selectActionComponent.id);
   const defaultValues = selectActionComponent.defaultValues;
   let channelTypes;
-  if (selectActionComponent.type === channelTypes(1978).ComponentType.CHANNEL_SELECT) {
+  if (selectActionComponent.type === channelTypes(1979).ComponentType.CHANNEL_SELECT) {
     channelTypes = selectActionComponent.channelTypes;
   }
   if (channelTypes === undefined) {
@@ -138,17 +138,17 @@ export const getInitialSnowflakeSelectOptions = function getInitialSnowflakeSele
   if (interactionComponentState != null) {
     type = interactionComponentState.type;
   }
-  if (type !== channelTypes(1978).ComponentType.USER_SELECT) {
+  if (type !== channelTypes(1979).ComponentType.USER_SELECT) {
     let type1;
     if (interactionComponentState != null) {
       type1 = interactionComponentState.type;
     }
-    if (type1 !== tmp2(1978).ComponentType.ROLE_SELECT) {
+    if (type1 !== tmp2(1979).ComponentType.ROLE_SELECT) {
       let type2;
       if (interactionComponentState != null) {
         type2 = interactionComponentState.type;
       }
-      if (type2 !== tmp2(1978).ComponentType.MENTIONABLE_SELECT) {
+      if (type2 !== tmp2(1979).ComponentType.MENTIONABLE_SELECT) {
         let type3;
         if (interactionComponentState != null) {
           type3 = interactionComponentState.type;

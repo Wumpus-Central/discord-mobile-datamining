@@ -1,6 +1,6 @@
-// === Module 15566: usePasswordRegistrationStep ===
+// === Module 15594: usePasswordRegistrationStep ===
 
-// Module 15566 (usePasswordRegistrationStep)
+// Module 15594 (usePasswordRegistrationStep)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 const require = fn;
-const useRegistrationUIStore = fn(15543).useRegistrationUIStore;
+const useRegistrationUIStore = fn(15572).useRegistrationUIStore;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/utils/usePasswordRegistrationStep.tsx");
 

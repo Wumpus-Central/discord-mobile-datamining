@@ -1,23 +1,23 @@
-// === Module 8858: PictureInPictureVideo ===
+// === Module 8866: PictureInPictureVideo ===
 
-// Module 8858 (PictureInPictureVideo)
+// Module 8866 (PictureInPictureVideo)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1478 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5030 */;
-import transitionToActivityDefault from "transitionToActivity" /* 8820 */;
-import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 8839 */;
-import usePipDimensionsDefault from "usePipDimensions" /* 8842 */;
-import useIsViewingActivity from "useIsViewingActivity" /* 8843 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1479 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5037 */;
+import transitionToActivityDefault from "transitionToActivity" /* 8828 */;
+import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 8847 */;
+import usePipDimensionsDefault from "usePipDimensions" /* 8850 */;
+import useIsViewingActivity from "useIsViewingActivity" /* 8851 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4845 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4852 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 1992 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import SpeakingStore from "SpeakingStore" /* 5726 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 8836 */;
+import MediaEngineStore from "MediaEngineStore" /* 1993 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
+import SpeakingStore from "SpeakingStore" /* 5731 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 8844 */;
 
 require = fn;
 function areParticipantsEqual(arg0, arg1) {
@@ -27,12 +27,12 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(8821);
+const ChannelCallStore = fn(8829);
 ({ togglePipFocus: map1, useIsVoiceChatFocused: closure_14 } = ChannelCallStore);
-const ParticipantTypes = fn(4850).ParticipantTypes;
+const ParticipantTypes = fn(4857).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj = { elevationShadow: null, background: null, backgroundPipFab: null, pip: null, pipFab: null, avatarContainer: null, activityPipContainer: null, thermalAlertIconContainer: null, thermalAlertIcon: null };
 const native = fn(1177);
 obj.elevationShadow = native.generateBoxShadowStyle(fn(1177).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
@@ -239,53 +239,63 @@ let closure_22 = noop.memo((arg0) => {
     if (null != found) {
       let tmp14 = found;
     }
+    let avatarURL;
     const token = tmp2(tmp3[30]).useToken(selfParticipant(tmp3[15]).unsafe_rawColors.PRIMARY_800);
     if (tmp14 != null) {
       const user = tmp14.user;
-      const avatarURL = user.getAvatarURL(channel.guild_id, 80);
+      avatarURL = user.getAvatarURL(channel.guild_id, 80);
     }
+    const tmp2Result = tmp2(tmp3[30]);
+    const tmp23 = selfParticipant(tmp3[31])(avatarURL, token);
+    let id1;
+    const useAvatarSpeakingColor = tmp2(tmp3[32]).useAvatarSpeakingColor;
+    if (tmp14 != null) {
+      id1 = tmp14.user.id;
+    }
+    const obj6 = { userId: id1, guildId: channel.guild_id };
     if (null == tmp14) {
       return null;
     } else {
-      let tmp25 = null != tmp14.streamId;
-      if (tmp25) {
+      let tmp28 = null != tmp14.streamId;
+      if (tmp28) {
         const voiceState = tmp14.voiceState;
         let selfVideo;
         if (voiceState != null) {
           selfVideo = voiceState.selfVideo;
         }
-        tmp25 = selfVideo;
+        tmp28 = selfVideo;
       }
-      const obj6 = { style: null, children: null };
+      const obj7 = { style: null, children: null };
       const items6 = [tmp.avatarContainer, ];
-      const obj7 = { backgroundColor: tmp23 };
-      items6[1] = obj7;
-      obj6.style = items6;
-      if (tmp25) {
+      const obj8 = { backgroundColor: tmp23 };
+      items6[1] = obj8;
+      obj7.style = items6;
+      if (tmp28) {
         if (!tmp6) {
-          let tmp28 = closure_16;
-          const obj8 = { participant: tmp14, avatarSize: tmp2(tmp3[14]).AvatarSizes.PROFILE, resizeMode: tmp2(tmp3[24]).ResizeMode.COVER };
-          let tmp30 = closure_16(selfParticipant(tmp3[26]), obj8);
+          let tmp31 = closure_16;
+          const obj9 = { participant: tmp14, avatarSize: tmp2(tmp3[14]).AvatarSizes.PROFILE, resizeMode: tmp2(tmp3[24]).ResizeMode.COVER };
+          let tmp33 = closure_16(selfParticipant(tmp3[26]), obj9);
           const tmp20Result = selfParticipant(tmp3[26]);
         }
-        const items7 = [tmp30, ];
-        let tmp28Result = null;
+        const items7 = [tmp33, ];
+        let tmp31Result = null;
         if (tmp5) {
-          const obj9 = { style: tmp.thermalAlertIconContainer, children: null };
-          const obj11 = { style: tmp.thermalAlertIcon, source: selfParticipant(tmp3[32]), color: tmp.thermalAlertIcon.color };
-          obj9.children = tmp28(tmp2(tmp3[14]).Icon, obj11);
-          tmp28Result = tmp28(closure_5, obj9);
+          const obj10 = { style: tmp.thermalAlertIconContainer, children: null };
+          const obj12 = { style: tmp.thermalAlertIcon, source: selfParticipant(tmp3[33]), color: tmp.thermalAlertIcon.color };
+          obj10.children = tmp31(tmp2(tmp3[14]).Icon, obj12);
+          tmp31Result = tmp31(closure_5, obj10);
         }
-        items7[1] = tmp28Result;
-        obj6.children = items7;
-        return tmp26(closure_5, obj6);
+        items7[1] = tmp31Result;
+        obj7.children = items7;
+        return tmp29(closure_5, obj7);
       }
-      const obj12 = { size: tmp2(tmp3[14]).AvatarSizes.LARGE_48, channel, guildId: channel.guild_id, user: null, speaking: null };
-      ({ user: obj10.user, speaking: obj10.speaking } = tmp14);
-      tmp30 = closure_16(tmp2(tmp3[14]).Avatar, obj12);
-      tmp28 = closure_16;
+      const obj13 = { size: tmp2(tmp3[14]).AvatarSizes.LARGE_48, channel, guildId: channel.guild_id, user: null, speaking: null, speakingColor: null };
+      ({ user: obj11.user, speaking: obj11.speaking } = tmp14);
+      obj13.speakingColor = tmp26;
+      tmp33 = closure_16(tmp2(tmp3[14]).Avatar, obj13);
+      tmp31 = closure_16;
     }
-    const tmp2Result = tmp2(tmp3[30]);
+    const tmp2Result2 = tmp2(tmp3[32]);
   }
   let streamId;
   if (selfParticipant != null) {

@@ -1,6 +1,6 @@
-// === Module 2035: LoginRequiredActionStore ===
+// === Module 2036: LoginRequiredActionStore ===
 
-// Module 2035 (LoginRequiredActionStore)
+// Module 2036 (LoginRequiredActionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

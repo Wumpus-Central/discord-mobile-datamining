@@ -1,13 +1,13 @@
-// === Module 14764: UntouchableAlert ===
+// === Module 14792: UntouchableAlert ===
 
-// Module 14764 (UntouchableAlert)
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5884 */;
+// Module 14792 (UntouchableAlert)
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5889 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_4 = createStyles.createLegacyClassComponentStyles({ container: { flex: 1, alignItems: "center", justifyContent: "center" } });
 const PureComponent = noop.PureComponent;
 class UntouchableAlert extends PureComponent {
@@ -41,7 +41,7 @@ prototype["render"] = function render() {
   }
   return tmp2;
 };
-UntouchableAlert.contextType = fn(4537).ThemeContext;
+UntouchableAlert.contextType = fn(4540).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/UntouchableAlert.tsx");
 

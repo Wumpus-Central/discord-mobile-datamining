@@ -1,9 +1,9 @@
-// === Module 12205: ChairIllocon ===
+// === Module 12223: ChairIllocon ===
 
-// Module 12205 (ChairIllocon)
+// Module 12223 (ChairIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5894 */;
-import _modDef12206 from "module_12206" /* 12206 */;
+import FastImageDefault from "FastImage" /* 5899 */;
+import _modDef12224 from "module_12224" /* 12224 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const ChairIllocon = function ChairIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef12206 };
+  const obj2 = { uri: _modDef12224 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

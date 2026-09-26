@@ -1,8 +1,8 @@
-// === Module 9620: NotificationContent ===
+// === Module 9631: NotificationContent ===
 
-// Module 9620 (NotificationContent)
+// Module 9631 (NotificationContent)
 import nativeDefault from "native" /* 576 */;
-import MessageNotificationHeader from "MessageNotificationHeader" /* 9621 */;
+import MessageNotificationHeader from "MessageNotificationHeader" /* 9632 */;
 import noop from "module_19" /* 19 */;
 
 const MessageNotificationHeaderDefault = MessageNotificationHeader;
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { body: { flex: 1 }, iconContainer: { marginRight: nativeDefault.space.PX_8 }, contentContainer: null, headerContainer: null, labelContainer: null };
 let obj3 = { marginRight: nativeDefault.space.PX_8 };
 obj2.contentContainer = { padding: nativeDefault.space.PX_12, flexDirection: "row" };

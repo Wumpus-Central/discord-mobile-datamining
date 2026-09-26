@@ -1,16 +1,16 @@
-// === Module 4977: MediaPostEmbedUtils ===
+// === Module 4984: MediaPostEmbedUtils ===
 
-// Module 4977 (MediaPostEmbedUtils)
+// Module 4984 (MediaPostEmbedUtils)
 import util from "util" /* 1115 */;
 import FlagUtils from "FlagUtils" /* 1385 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import findCodedLinks from "findCodedLinks" /* 4812 */;
-import MediaPostThumbnailUtils from "MediaPostThumbnailUtils" /* 4978 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4981 */;
-import useChannelName from "useChannelName" /* 4982 */;
-import LinkUtils from "LinkUtils" /* 4983 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import RelationshipStore from "RelationshipStore" /* 4476 */;
+import findCodedLinks from "findCodedLinks" /* 4816 */;
+import MediaPostThumbnailUtils from "MediaPostThumbnailUtils" /* 4985 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4988 */;
+import useChannelName from "useChannelName" /* 4989 */;
+import LinkUtils from "LinkUtils" /* 4990 */;
+import GuildStore from "GuildStore" /* 2067 */;
+import RelationshipStore from "RelationshipStore" /* 4479 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

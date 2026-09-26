@@ -1,6 +1,6 @@
-// === Module 1433: AttachmentImageLadder ===
+// === Module 1434: AttachmentImageLadder ===
 
-// Module 1433 (AttachmentImageLadder)
+// Module 1434 (AttachmentImageLadder)
 import size from "module_2" /* 2 */;
 
 const items = [128, 192, 256, 320, 384, 512, 640, 768, 1024, 1280, 1536, 2048, 3072, 4096];

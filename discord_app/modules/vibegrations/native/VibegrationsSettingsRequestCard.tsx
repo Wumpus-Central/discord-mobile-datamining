@@ -1,9 +1,9 @@
-// === Module 16355: VibegrationsSettingsRequestCard ===
+// === Module 16383: VibegrationsSettingsRequestCard ===
 
-// Module 16355 (VibegrationsSettingsRequestCard)
+// Module 16383 (VibegrationsSettingsRequestCard)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4796 */;
-import VibegrationsSettingsSheet from "VibegrationsSettingsSheet" /* 16236 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4800 */;
+import VibegrationsSettingsSheet from "VibegrationsSettingsSheet" /* 16264 */;
 import noop from "module_19" /* 19 */;
 
 const VibegrationsSettingsSheetDefault = VibegrationsSettingsSheet;
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { card: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -29,8 +29,8 @@ export default function VibegrationsSettingsRequestCard(projectId) {
   }, items);
   let obj2 = { variant: "text-xs/semibold", color: "text-muted", children: null };
   const intl = projectId(1115).intl;
-  obj2.children = intl.string(request(3714).wgDhiQ);
-  const items1 = [closure_5(projectId(4825).Text, obj2), , ];
+  obj2.children = intl.string(request(3715).wgDhiQ);
+  const items1 = [closure_5(projectId(4832).Text, obj2), , ];
   if (null != request.note) {
     if ("" !== request.note) {
       let note = request.note;
@@ -39,12 +39,12 @@ export default function VibegrationsSettingsRequestCard(projectId) {
     items1[1] = closure_5(tmp9, obj3);
     const obj4 = { variant: "secondary", size: "sm", onPress: callback, text: null };
     const intl3 = tmp6(1115).intl;
-    obj4.text = intl3.string(tmp8(3714)["KO2xN+"]);
-    items1[2] = closure_5(tmp6(5274).Button, obj4);
+    obj4.text = intl3.string(tmp8(3715)["KO2xN+"]);
+    items1[2] = closure_5(tmp6(5281).Button, obj4);
     obj.children = items1;
     return closure_6(View, obj);
   }
   const intl2 = tmp6(1115).intl;
-  note = intl2.string(tmp8(3714)["V+DBhs"]);
+  note = intl2.string(tmp8(3715)["V+DBhs"]);
   const tmp = closure_7();
 };

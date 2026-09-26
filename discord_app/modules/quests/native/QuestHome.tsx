@@ -1,34 +1,34 @@
-// === Module 14513: QuestHome ===
+// === Module 14538: QuestHome ===
 
-// Module 14513 (QuestHome)
+// Module 14538 (QuestHome)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import useNavigation from "useNavigation" /* 1484 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4525 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5032 */;
-import components_Button_Button from "components/Button/Button" /* 5274 */;
-import QuestTypes from "QuestTypes" /* 5754 */;
-import AdCreativeType from "AdCreativeType" /* 5758 */;
-import _modDef5904 from "module_5904" /* 5904 */;
-import openUserSettings from "openUserSettings" /* 6795 */;
-import QuestDataUtils from "QuestDataUtils" /* 7107 */;
-import QuestActionCreators from "QuestActionCreators" /* 10670 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 10740 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 14514 */;
-import BountiesModalTypes from "BountiesModalTypes" /* 14516 */;
-import QuestHomeEmptyStateDefault from "QuestHomeEmptyState" /* 14569 */;
-import QuestHomeBountiesDefault from "QuestHomeBounties" /* 14571 */;
-import QuestHomeOpenTriggerPoint2 from "QuestHomeOpenTriggerPoint" /* 14592 */;
-import QuestHomeRoundtripTrackerDefault from "QuestHomeRoundtripTracker" /* 14675 */;
+import useNavigation from "useNavigation" /* 1485 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4528 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5039 */;
+import components_Button_Button from "components/Button/Button" /* 5281 */;
+import QuestTypes from "QuestTypes" /* 5759 */;
+import AdCreativeType from "AdCreativeType" /* 5763 */;
+import _modDef5909 from "module_5909" /* 5909 */;
+import openUserSettings from "openUserSettings" /* 6800 */;
+import QuestDataUtils from "QuestDataUtils" /* 7112 */;
+import QuestActionCreators from "QuestActionCreators" /* 10683 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 10753 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 14539 */;
+import BountiesModalTypes from "BountiesModalTypes" /* 14541 */;
+import QuestHomeEmptyStateDefault from "QuestHomeEmptyState" /* 14594 */;
+import QuestHomeBountiesDefault from "QuestHomeBounties" /* 14596 */;
+import QuestHomeOpenTriggerPoint2 from "QuestHomeOpenTriggerPoint" /* 14617 */;
+import QuestHomeRoundtripTrackerDefault from "QuestHomeRoundtripTracker" /* 14700 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4821 */;
-import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 10666 */;
-import QuestStore from "QuestStore" /* 7111 */;
-import QuestUtmStore from "QuestUtmStore" /* 7131 */;
+import AccessibilityStore from "AccessibilityStore" /* 4825 */;
+import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 10679 */;
+import QuestStore from "QuestStore" /* 7116 */;
+import QuestUtmStore from "QuestUtmStore" /* 7136 */;
 
 require = fn;
 function EmptyStateNoQuestsAvailable() {
@@ -91,12 +91,12 @@ function HeaderWithBounties(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, StyleSheet } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(5751).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5756).QuestsExperimentLocations;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, UserSettingsSections: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj = { container: { flex: 1 }, loadingContainer: null, sectionHeader: null, previewButton: null, sectionHeaderWithTag: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -197,7 +197,7 @@ export default noop.memo(function QuestHome(filters) {
         const obj3 = { key: "QUEST_HOME_MOBILE_DEEP_LINK_QUEST_NOT_FOUND", content: null, icon: null, toastDurationMs: 5000 };
         const intl = util.intl;
         obj3.content = intl.string(util.t.sIyHuY);
-        obj3.icon = _modDef5904;
+        obj3.icon = _modDef5909;
         ToastActionCreatorsDefault.open(obj3);
         const obj5 = { quest_id: scrollToQuestId };
         AnalyticsUtilsDefault.track(constants.QUEST_HOME_MOBILE_DEEP_LINK_MISSING_QUEST, obj5);

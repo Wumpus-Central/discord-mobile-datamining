@@ -1,33 +1,33 @@
-// === Module 11283: ConnectionsRoleMessageBadgeActionSheet ===
+// === Module 11297: ConnectionsRoleMessageBadgeActionSheet ===
 
-// Module 11283 (ConnectionsRoleMessageBadgeActionSheet)
+// Module 11297 (ConnectionsRoleMessageBadgeActionSheet)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import AvatarUtils from "AvatarUtils" /* 1397 */;
-import shared from "shared" /* 4682 */;
-import useThemeDefault from "useTheme" /* 4763 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4779 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5009 */;
-import PlatformsDefault from "Platforms" /* 5590 */;
-import ConnectionsUtils from "ConnectionsUtils" /* 5714 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5827 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7617 */;
-import BotTagDefault from "BotTag" /* 8733 */;
-import OfficialConnectionIconDefault from "OfficialConnectionIcon" /* 11047 */;
-import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11050 */;
+import shared from "shared" /* 4685 */;
+import useThemeDefault from "useTheme" /* 4767 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4783 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5016 */;
+import PlatformsDefault from "Platforms" /* 5595 */;
+import ConnectionsUtils from "ConnectionsUtils" /* 5719 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5832 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7624 */;
+import BotTagDefault from "BotTag" /* 8741 */;
+import OfficialConnectionIconDefault from "OfficialConnectionIcon" /* 11061 */;
+import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11064 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1386 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 2107 */;
-import GuildRoleStore from "GuildRoleStore" /* 2101 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import GuildRoleConnectionEligibilityStore from "GuildRoleConnectionEligibilityStore" /* 11284 */;
+import GuildMemberStore from "GuildMemberStore" /* 2108 */;
+import GuildRoleStore from "GuildRoleStore" /* 2102 */;
+import GuildStore from "GuildStore" /* 2067 */;
+import GuildRoleConnectionEligibilityStore from "GuildRoleConnectionEligibilityStore" /* 11298 */;
 
 require = fn;
 function PopoutCheck(arg0) {
@@ -184,12 +184,12 @@ class PopoutChecks {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const OperatorTypes = fn(5715).OperatorTypes;
+const OperatorTypes = fn(5720).OperatorTypes;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_14, EMPTY_STRING_SNOWFLAKE_ID: closure_15 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17, Fragment: closure_18 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { container: { flexDirection: "column", alignItems: "center", padding: 16 }, header: { width: "100%", flexDirection: "row", alignItems: "center", paddingBottom: 16, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, marginBottom: nativeDefault.space.PX_24 }, verifiedContainer: { marginRight: 8, height: 24, width: 24 }, headerTextContainer: { flexShrink: 1, flexDirection: "column" }, verifiedCheck: { position: "absolute", left: 0, top: 0 }, loadingSpinner: { marginVertical: 40 }, popoutCheck: { flexDirection: "row", alignItems: "center", marginTop: 8, marginLeft: 32, paddingRight: 20 }, popoutCheckIcon: null, popoutChecksGroup: null, popoutChecksGroupBottomMargin: null, popoutCheckGroupName: null, popoutCheckGroupPlatformIcon: null, button: null, botTag: null };
 let obj3 = { width: "100%", flexDirection: "row", alignItems: "center", paddingBottom: 16, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, marginBottom: nativeDefault.space.PX_24 };
 obj2.popoutCheckIcon = { marginRight: 8, tintColor: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE };

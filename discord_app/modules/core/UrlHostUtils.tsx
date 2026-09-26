@@ -1,6 +1,6 @@
-// === Module 2015: UrlHostUtils ===
+// === Module 2016: UrlHostUtils ===
 
-// Module 2015 (UrlHostUtils)
+// Module 2016 (UrlHostUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/core/UrlHostUtils.tsx");

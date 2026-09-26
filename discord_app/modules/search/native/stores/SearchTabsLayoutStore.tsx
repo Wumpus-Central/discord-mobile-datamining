@@ -1,18 +1,18 @@
-// === Module 11831: SearchTabsLayoutStore ===
+// === Module 11845: SearchTabsLayoutStore ===
 
-// Module 11831 (SearchTabsLayoutStore)
+// Module 11845 (SearchTabsLayoutStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import SearchUtils from "SearchUtils" /* 11809 */;
-import IntelligenceSearchTypes from "IntelligenceSearchTypes" /* 11834 */;
-import IntelligenceSearchUtils from "IntelligenceSearchUtils" /* 11835 */;
-import IntelligenceSearchStore from "IntelligenceSearchStore" /* 11832 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import SearchMessageStore from "SearchMessageStore" /* 6694 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 11836 */;
-import SearchMemberTabStore from "SearchMemberTabStore" /* 11837 */;
-import SearchPeopleTabStore from "SearchPeopleTabStore" /* 11838 */;
-import SearchQueryStore from "SearchQueryStore" /* 11808 */;
+import SearchUtils from "SearchUtils" /* 11823 */;
+import IntelligenceSearchTypes from "IntelligenceSearchTypes" /* 11848 */;
+import IntelligenceSearchUtils from "IntelligenceSearchUtils" /* 11849 */;
+import IntelligenceSearchStore from "IntelligenceSearchStore" /* 11846 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
+import SearchMessageStore from "SearchMessageStore" /* 6699 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 11850 */;
+import SearchMemberTabStore from "SearchMemberTabStore" /* 11851 */;
+import SearchPeopleTabStore from "SearchPeopleTabStore" /* 11852 */;
+import SearchQueryStore from "SearchQueryStore" /* 11822 */;
 
 require = fn;
 function handleSearchQuery(searchContext) {
@@ -188,7 +188,7 @@ function computeLayoutForAll() {
   }
   return flag;
 }
-const SearchConstants = fn(7298);
+const SearchConstants = fn(7303);
 ({ SearchTabs: c10, SEARCH_TYPE_TO_SEARCH_INITIAL_TABS: closure_11, SEARCH_TYPE_TO_SEARCH_RESULT_TABS: closure_12 } = SearchConstants);
 let closure_13 = [];
 const map = new Map();

@@ -1,10 +1,10 @@
-// === Module 9208: useGuildProfileGames ===
+// === Module 9219: useGuildProfileGames ===
 
-// Module 9208 (useGuildProfileGames)
+// Module 9219 (useGuildProfileGames)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import noop from "module_19" /* 19 */;
-import GameRecord from "GameRecord" /* 2001 */;
-import GameStore from "GameStore" /* 2000 */;
+import GameRecord from "GameRecord" /* 2002 */;
+import GameStore from "GameStore" /* 2001 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;

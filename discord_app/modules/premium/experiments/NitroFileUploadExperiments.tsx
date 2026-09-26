@@ -1,8 +1,8 @@
-// === Module 5435: NitroFileUploadExperiments ===
+// === Module 5442: NitroFileUploadExperiments ===
 
-// Module 5435 (NitroFileUploadExperiments)
+// Module 5442 (NitroFileUploadExperiments)
 import PremiumConstants from "PremiumConstants" /* 1374 */;
-import ApexExperiment_mod from "ApexExperiment" /* 1434 */;
+import ApexExperiment_mod from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 
 ({ MAX_PREMIUM_TIER_2_ATTACHMENT_SIZE: closure_0, MAX_PREMIUM_TIER_2_ATTACHMENT_SIZE_1GB: closure_1 } = PremiumConstants);

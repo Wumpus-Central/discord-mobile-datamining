@@ -1,7 +1,7 @@
-// === Module 11986: NewGamesCoachmarkExperiment ===
+// === Module 12004: NewGamesCoachmarkExperiment ===
 
-// Module 11986 (NewGamesCoachmarkExperiment)
-import ApexExperiment from "ApexExperiment" /* 1434 */;
+// Module 12004 (NewGamesCoachmarkExperiment)
+import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-04-new-games-coachmark", kind: "user", defaultConfig: { enabled: false }, variations: null };

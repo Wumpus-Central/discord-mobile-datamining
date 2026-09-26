@@ -1,7 +1,7 @@
-// === Module 12989: PremiumMarketingFloatingSubscribeExperiment ===
+// === Module 13006: PremiumMarketingFloatingSubscribeExperiment ===
 
-// Module 12989 (PremiumMarketingFloatingSubscribeExperiment)
-import ApexExperiment from "ApexExperiment" /* 1434 */;
+// Module 13006 (PremiumMarketingFloatingSubscribeExperiment)
+import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-07-nitro-floating-subscribe", kind: "user", defaultConfig: { enabled: false, showAfterLastCard: false }, variations: { 0: { enabled: false, showAfterLastCard: false }, 1: { enabled: true, showAfterLastCard: false }, 2: { enabled: true, showAfterLastCard: true } } });

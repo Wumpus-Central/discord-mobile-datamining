@@ -1,15 +1,15 @@
-// === Module 14260: SettingsAgeGroupScreen ===
+// === Module 14285: SettingsAgeGroupScreen ===
 
-// Module 14260 (SettingsAgeGroupScreen)
+// Module 14285 (SettingsAgeGroupScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2110 */;
-import _modDef3038 from "module_3038" /* 3038 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7851 */;
-import SettingBuilders from "SettingBuilders" /* 10993 */;
-import SettingLayoutDefault from "SettingLayout" /* 14223 */;
-import TinyBroncoAgeGroupHeader2 from "TinyBroncoAgeGroupHeader" /* 14261 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2111 */;
+import _modDef3039 from "module_3039" /* 3039 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7859 */;
+import SettingBuilders from "SettingBuilders" /* 11006 */;
+import SettingLayoutDefault from "SettingLayout" /* 14248 */;
+import TinyBroncoAgeGroupHeader2 from "TinyBroncoAgeGroupHeader" /* 14286 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,34 +21,34 @@ function SettingsAgeGroupHeader() {
   }, []);
   const obj2 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef3038.PY4MA0);
+  obj2.children = intl.string(_modDef3039.PY4MA0);
   const items = [React5(Text_Text.Text, obj2), ];
   const obj3 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl2 = util.intl;
-  obj3.children = intl2.format(_modDef3038["1DN29p"], { handleOnHelpUrlHook: callback });
+  obj3.children = intl2.format(_modDef3039["1DN29p"], { handleOnHelpUrlHook: callback });
   items[1] = React5(Text_Text.Text, obj3);
   obj.children = items;
   return React6(View, obj);
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(7412).MobileUserSettings;
+const MobileUserSettings = fn(7417).MobileUserSettings;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { headerContainer: { gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/age_group/native/SettingsAgeGroupScreen.tsx");
 
 export default function SettingsAgeGroupScreen() {
-  isTinyBroncoSettingsEnabled = isTinyBroncoSettingsEnabled(14219).useIsTinyBroncoSettingsEnabled();
+  isTinyBroncoSettingsEnabled = isTinyBroncoSettingsEnabled(14244).useIsTinyBroncoSettingsEnabled();
   let items = [isTinyBroncoSettingsEnabled];
   const node = noop.useMemo(() => {
     const obj2 = { sections: null, ListHeaderComponent: null };
     const obj3 = { label: null, settings: null };
     const intl = util.intl;
-    obj3.label = intl.string(_modDef3038["5Mi5TE"]);
+    obj3.label = intl.string(_modDef3039["5Mi5TE"]);
     const items = [, , ];
     ({ AGE_GROUP_CONFIRM: arr[0], AGE_GROUP_RESET: arr[1], AGE_GROUP_CONFIRM_ACCOUNT_STATUS: arr[2] } = MobileUserSettings);
     obj3.settings = items;

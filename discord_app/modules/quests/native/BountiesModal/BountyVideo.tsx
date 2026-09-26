@@ -1,11 +1,11 @@
-// === Module 14537: BountyVideo ===
+// === Module 14562: BountyVideo ===
 
-// Module 14537 (BountyVideo)
+// Module 14562 (BountyVideo)
 import nativeDefault from "native" /* 576 */;
-import timing from "timing" /* 4830 */;
-import timingPresets from "timingPresets" /* 4833 */;
-import AssetUtils from "AssetUtils" /* 10676 */;
-import BountiesModalProgress from "BountiesModalProgress" /* 14538 */;
+import timing from "timing" /* 4837 */;
+import timingPresets from "timingPresets" /* 4840 */;
+import AssetUtils from "AssetUtils" /* 10689 */;
+import BountiesModalProgress from "BountiesModalProgress" /* 14563 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ const jsxProd = fn(21);
 const PlatformUtils = fn(1365);
 let closure_13 = { top: 48, bottom: 16, left: 16, right: 16 };
 const lg = nativeDefault.radii.lg;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_15 = createStyles.createStyles(() => {
   const obj = { videoContainer: null, leftRow: null, progress: null, poster: null };
   const obj2 = {};

@@ -1,6 +1,6 @@
-// === Module 7016: ExplicitMediaRedactionConstants ===
+// === Module 7021: ExplicitMediaRedactionConstants ===
 
-// Module 7016 (ExplicitMediaRedactionConstants)
+// Module 7021 (ExplicitMediaRedactionConstants)
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1096 */;
 import size from "module_2" /* 2 */;
 

@@ -1,9 +1,9 @@
-// === Module 8511: disclosures ===
+// === Module 8519: disclosures ===
 
-// Module 8511 (disclosures)
+// Module 8519 (disclosures)
 import util from "util" /* 1115 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import applications from "applications" /* 8512 */;
+import applications from "applications" /* 8520 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -77,7 +77,7 @@ const Endpoints = fn(1074).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/applications/disclosures.tsx");
 
-export const ApplicationDisclosure = fn(8512).ApplicationDisclosureType;
+export const ApplicationDisclosure = fn(8520).ApplicationDisclosureType;
 export const getDisclosures = function getDisclosures() {
   const self = this;
   const apply = closure_4.apply;

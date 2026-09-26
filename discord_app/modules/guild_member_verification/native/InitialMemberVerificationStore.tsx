@@ -1,6 +1,6 @@
-// === Module 5882: InitialMemberVerificationStore ===
+// === Module 5887: InitialMemberVerificationStore ===
 
-// Module 5882 (InitialMemberVerificationStore)
+// Module 5887 (InitialMemberVerificationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

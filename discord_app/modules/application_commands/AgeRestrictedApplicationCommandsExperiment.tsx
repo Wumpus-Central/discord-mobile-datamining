@@ -1,7 +1,7 @@
-// === Module 8702: AgeRestrictedApplicationCommandsExperiment ===
+// === Module 8710: AgeRestrictedApplicationCommandsExperiment ===
 
-// Module 8702 (AgeRestrictedApplicationCommandsExperiment)
-import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1435 */;
+// Module 8710 (AgeRestrictedApplicationCommandsExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1436 */;
 
 const obj = { kind: "user", name: "2026-05-age-restricted-application-commands", defaultConfig: { enabled: false }, variations: null };
 const obj2 = { 1: null };

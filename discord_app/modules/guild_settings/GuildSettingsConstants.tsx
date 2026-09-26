@@ -1,6 +1,6 @@
-// === Module 17371: GuildSettingsConstants ===
+// === Module 17401: GuildSettingsConstants ===
 
-// Module 17371 (GuildSettingsConstants)
+// Module 17401 (GuildSettingsConstants)
 import util from "util" /* 1115 */;
 import size from "module_2" /* 2 */;
 

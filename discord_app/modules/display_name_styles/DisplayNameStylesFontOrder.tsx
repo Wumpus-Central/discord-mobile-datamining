@@ -1,6 +1,6 @@
-// === Module 14858: DisplayNameStylesFontOrder ===
+// === Module 14886: DisplayNameStylesFontOrder ===
 
-// Module 14858 (DisplayNameStylesFontOrder)
+// Module 14886 (DisplayNameStylesFontOrder)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesFontOrder.tsx");
 
 export const useVisibleFontOrder = function useVisibleFontOrder() {
-  isDisplayNameStylesFlywheelSettersEnabled = isDisplayNameStylesFlywheelSettersEnabled(9178).useIsDisplayNameStylesFlywheelSettersEnabled("font-order");
+  isDisplayNameStylesFlywheelSettersEnabled = isDisplayNameStylesFlywheelSettersEnabled(9189).useIsDisplayNameStylesFlywheelSettersEnabled("font-order");
   items = [isDisplayNameStylesFlywheelSettersEnabled];
   return noop.useMemo(() => isDisplayNameStylesFlywheelSettersEnabled ? items1 : items, items);
 };

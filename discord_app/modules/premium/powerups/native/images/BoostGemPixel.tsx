@@ -1,7 +1,7 @@
-// === Module 13076: BoostGemPixel ===
+// === Module 13093: BoostGemPixel ===
 
-// Module 13076 (BoostGemPixel)
-import inlineStyles from "inlineStyles" /* 7901 */;
+// Module 13093 (BoostGemPixel)
+import inlineStyles from "inlineStyles" /* 7909 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;

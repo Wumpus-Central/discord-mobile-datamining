@@ -1,29 +1,29 @@
-// === Module 16405: ChannelDetails ===
+// === Module 16434: ChannelDetails ===
 
-// Module 16405 (ChannelDetails)
+// Module 16434 (ChannelDetails)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import timing from "timing" /* 4830 */;
-import timingPresets from "timingPresets" /* 4833 */;
-import spring from "spring" /* 5273 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11807 */;
-import SearchActionCreatorsDefault from "SearchActionCreators" /* 11816 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 11830 */;
+import timing from "timing" /* 4837 */;
+import timingPresets from "timingPresets" /* 4840 */;
+import spring from "spring" /* 5280 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11821 */;
+import SearchActionCreatorsDefault from "SearchActionCreators" /* 11830 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 11844 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 11808 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
+import SearchQueryStore from "SearchQueryStore" /* 11822 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const ChannelDetailsStore = fn(7296);
+const ChannelDetailsStore = fn(7301);
 ({ deleteChannelDetailsSearchState: closure_7, useChannelDetailsSearchActiveSource: closure_8, useIsChannelDetailsSearchActive: closure_9 } = ChannelDetailsStore);
-const ChannelDetailsConstants = fn(10366);
+const ChannelDetailsConstants = fn(10377);
 ({ SPRING_CHANNEL_HEADER: c10, CHANNEL_DETAILS_TOP_MARGIN } = ChannelDetailsConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj = { detailsContainer: null, information: null, linkedLobby: null, search: null, searchLocked: null, autocompleteSuggestions: null, newHeader: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -86,8 +86,8 @@ export default noop.memo(function ChannelDetails(channelId) {
   channelDetailsSearchContext = obj(tmp2[10]).useChannelDetailsSearchContext(channelId, guild_id);
   const objResult = obj(tmp2[10]);
   const searchSuggestionsGesture = obj(tmp2[11]).useSearchSuggestionsGesture(channelDetailsSearchContext);
-  ({ dismissed, setDismissed, onLayoutMeasure } = searchSuggestionsGesture);
   let tmp7 = isSearchLocked;
+  ({ gesture, detectorRef, suggestionsContext } = searchSuggestionsGesture);
   const objResult6 = obj(tmp2[11]);
   const tmp9 = nativeStackNavigation(channelId);
   closure_6 = tmp9;
@@ -153,42 +153,52 @@ export default noop.memo(function ChannelDetails(channelId) {
     }
   }, items4);
   const objResult9 = obj(tmp2[24]);
-  const fn = function j() {
-    value = sharedValue.get();
-    let str = "auto";
-    if (closure_6) {
-      str = "none";
-    }
-    const obj = { position: "relative", pointerEvents: str, opacity: null, height: null };
-    let num = 1;
-    if (closure_6) {
-      num = 0;
-    }
-    obj.opacity = timing.withTiming(num, timingPresets.timingFast, "animate-always");
-    let withSpringResult;
-    if (null != value) {
-      if (value >= 0) {
-        let num3 = 0;
-        if (!closure_6) {
-          num3 = value;
-        }
-        const obj3 = {};
-        const merged = Object.assign(closure_2_10);
-        const range = { min: 0, max: value };
-        obj3.clamp = range;
-        withSpringResult = spring.withSpring(num3, obj3);
-        const tmp3Result = spring;
+  class Q {
+    constructor() {
+      value = closure_12.get();
+      tmp2 = closure_6;
+      str = "auto";
+      if (closure_6) {
+        str = "none";
       }
+      obj = { position: "relative", pointerEvents: str, opacity: null, height: null };
+      tmp3 = closure_0;
+      tmp4 = closure_2;
+      obj2 = closure_0(closure_2[25]);
+      num = 1;
+      if (tmp2) {
+        num = 0;
+      }
+      obj.opacity = obj2.withTiming(num, tmp3(tmp4[26]).timingFast, "animate-always");
+      withSpringResult = undefined;
+      if (null != value) {
+        num2 = 0;
+        if (value >= 0) {
+          tmp3Result = tmp3(tmp4[27]);
+          num3 = 0;
+          if (!tmp2) {
+            num3 = value;
+          }
+          obj1 = {};
+          tmp6 = SPRING_CHANNEL_HEADER;
+          tmp7 = obj1;
+          merged = Object.assign(SPRING_CHANNEL_HEADER);
+          range = { min: 0, max: null };
+          range.max = value;
+          obj1.clamp = range;
+          withSpringResult = tmp3Result.withSpring(num3, obj1);
+        }
+      }
+      obj.height = withSpringResult;
+      return obj;
     }
-    obj.height = withSpringResult;
-    return obj;
-  };
+  }
   const objResult10 = obj(tmp2[24]);
-  fn.__closure = { headerHeight: sharedValue, isSearchActive: tmp9, withTiming: obj(tmp2[25]).withTiming, timingFast: obj(tmp2[26]).timingFast, withSpring: obj(tmp2[27]).withSpring, SPRING_CHANNEL_HEADER: context };
-  fn.__workletHash = 8423441529588;
-  fn.__initData = __initData;
+  Q.__closure = { headerHeight: sharedValue, isSearchActive: tmp9, withTiming: obj(tmp2[25]).withTiming, timingFast: obj(tmp2[26]).timingFast, withSpring: obj(tmp2[27]).withSpring, SPRING_CHANNEL_HEADER: context };
+  Q.__workletHash = 8423441529588;
+  Q.__initData = __initData;
   const items5 = [channelDetailsSearchContext];
-  const animatedStyle = objResult10.useAnimatedStyle(fn);
+  const animatedStyle = objResult10.useAnimatedStyle(Q);
   const effect2 = onChannelDeleted.useEffect(() => {
     const result = SearchActionCreatorsDefault.initializeAutocomplete(channelDetailsSearchContext);
     const result1 = SearchPlatformActionCreatorsDefault.initializeSearchQuery(channelDetailsSearchContext);
@@ -225,18 +235,19 @@ export default noop.memo(function ChannelDetails(channelId) {
     return null;
   } else {
     const obj4 = { value: tmp8(isSearchLocked(tmp2[13]).CHANNEL_DETAILS).analyticsLocations, children: null };
-    let obj5 = { gesture: searchSuggestionsGesture.gesture, children: null };
-    const obj6 = { style: null, accessibilityViewIsModal: true, onAccessibilityEscape: null, children: null };
+    let obj5 = { value: suggestionsContext, children: null };
+    let obj6 = { gesture, children: null };
+    const obj7 = { ref: detectorRef, style: null, accessibilityViewIsModal: true, onAccessibilityEscape: null, children: null };
     const items9 = [tmp.detailsContainer, memo];
-    obj6.style = items9;
-    obj6.onAccessibilityEscape = onBackPress;
-    let obj7 = { style: null, children: null };
+    obj7.style = items9;
+    obj7.onAccessibilityEscape = onBackPress;
+    let obj8 = { style: null, children: null };
     if (isSearchLocked) {
       const items10 = [, ];
       ({ searchLocked: arr15[0], autocompleteSuggestions: arr15[1] } = tmp);
-      obj7.style = items10;
+      obj8.style = items10;
       tmp = tmp7(tmp2[31]);
-      const obj8 = { ref, channelId, guildId: guild_id, onSuggestionsLayoutMesure: onLayoutMeasure, onBackPress, suggestionsDismissed: dismissed, setSuggestionsDismissed: setDismissed, showBackButton: null };
+      const obj9 = { ref, channelId, guildId: guild_id, onBackPress, showBackButton: null };
       if (!isAndroidResult) {
         isAndroidResult = isScreenReaderEnabled;
       }
@@ -247,49 +258,51 @@ export default noop.memo(function ChannelDetails(channelId) {
       if (isAndroidResult) {
         isAndroidResult = null != onBackPress;
       }
-      obj8.showBackButton = isAndroidResult;
-      obj7.children = tmp26(tmp, obj8);
-      obj7 = [, ];
-      obj7[0] = tmp26(tmp28, obj7);
+      obj9.showBackButton = isAndroidResult;
+      obj8.children = tmp26(tmp, obj9);
+      obj8 = [, ];
+      obj8[0] = tmp26(tmp28, obj8);
       tmp7 = tmp7(tmp2[32]);
-      const obj9 = { searchContext: channelDetailsSearchContext, width: componentWidth };
-      tmp2 = tmp26(tmp7, obj9);
-      obj7[1] = tmp2;
-      obj6.children = obj7;
-      let tmp30 = obj6;
-      const tmp26Result = tmp26(tmp28, obj7);
+      const obj10 = { searchContext: channelDetailsSearchContext, width: componentWidth };
+      tmp2 = tmp26(tmp7, obj10);
+      obj8[1] = tmp2;
+      obj7.children = obj8;
+      let tmp30 = obj7;
+      const tmp26Result = tmp26(tmp28, obj8);
     } else {
-      obj7[0] = tmp.newHeader;
-      const obj10 = { ref, channel: stateFromStores, onBackPress, onSuggestionsLayoutMeasure: onLayoutMeasure, suggestionsDismissed: dismissed, setSuggestionsDismissed: setDismissed, componentWidth };
-      const items11 = [tmp26(tmp7(tmp2[33]), obj10), ];
-      const obj11 = { style: animatedStyle, children: null };
-      const obj12 = { style: tmp.information, onLayout: callback, children: null };
-      const obj13 = { channel: stateFromStores };
-      const items12 = [tmp26(tmp7(tmp2[34]), obj13), , ];
-      const obj14 = { channel: stateFromStores, containerStyle: tmp.linkedLobby };
-      items12[1] = tmp26(tmp7(tmp2[35]), obj14);
+      obj8[0] = tmp.newHeader;
+      const obj11 = { ref, channel: stateFromStores, onBackPress, componentWidth };
+      const items11 = [tmp26(tmp7(tmp2[33]), obj11), ];
+      const obj12 = { style: animatedStyle, children: null };
+      const obj13 = { style: tmp.information, onLayout: callback, children: null };
+      const obj14 = { channel: stateFromStores };
+      const items12 = [tmp26(tmp7(tmp2[34]), obj14), , ];
+      const obj15 = { channel: stateFromStores, containerStyle: tmp.linkedLobby };
+      items12[1] = tmp26(tmp7(tmp2[35]), obj15);
       let tmp26Result3 = null;
       if (!stateFromStores.isPrivate()) {
-        const obj15 = { channel: stateFromStores, textAlign: "left", initialExpanded: flag };
-        tmp26Result3 = tmp26(tmp7(tmp2[36]), obj15);
+        const obj16 = { channel: stateFromStores, textAlign: "left", initialExpanded: flag };
+        tmp26Result3 = tmp26(tmp7(tmp2[36]), obj16);
       }
       items12[2] = tmp26Result3;
-      obj12.children = items12;
-      obj11.children = tmp27(tmp7(tmp2[24]).View, obj12);
-      items11[1] = tmp26(tmp7(tmp2[24]).View, obj11);
-      obj7[1] = items11;
-      const items13 = [tmp27(tmp28, obj7), ];
-      const obj16 = { freeze: !isShowing, children: null };
-      const obj17 = { style: tmp.search, collapsable: false, children: null };
-      const obj18 = { searchContext: channelDetailsSearchContext, width: componentWidth };
-      obj17.children = tmp26(tmp7(tmp2[32]), obj18);
-      obj16.children = tmp26(tmp28, obj17);
-      items13[1] = tmp26(obj(tmp2[37]).Freeze, obj16);
-      obj6.children = items13;
-      tmp30 = obj6;
+      obj13.children = items12;
+      obj12.children = tmp27(tmp7(tmp2[24]).View, obj13);
+      items11[1] = tmp26(tmp7(tmp2[24]).View, obj12);
+      obj8[1] = items11;
+      const items13 = [tmp27(tmp28, obj8), ];
+      const obj17 = { freeze: !isShowing, children: null };
+      const obj18 = { style: tmp.search, collapsable: false, children: null };
+      const obj19 = { searchContext: channelDetailsSearchContext, width: componentWidth };
+      obj18.children = tmp26(tmp7(tmp2[32]), obj19);
+      obj17.children = tmp26(tmp28, obj18);
+      items13[1] = tmp26(obj(tmp2[37]).Freeze, obj17);
+      obj7.children = items13;
+      tmp30 = obj7;
     }
-    obj5.children = sharedValue(stateFromStores, tmp30);
-    obj5 = tmp26(obj(tmp2[30]).GestureDetector, obj5);
+    obj6.children = sharedValue(stateFromStores, tmp30);
+    obj6 = tmp26(obj(tmp2[30]).GestureDetector, obj6);
+    obj5.children = obj6;
+    obj5 = tmp26(obj(tmp2[11]).SearchSuggestionsProvider, obj5);
     obj4.children = obj5;
     top(obj(tmp2[12]).AnalyticsLocationProvider, obj4);
   }

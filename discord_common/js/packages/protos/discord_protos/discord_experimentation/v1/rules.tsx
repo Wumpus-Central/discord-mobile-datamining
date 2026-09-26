@@ -1,6 +1,6 @@
-// === Module 7315: rules ===
+// === Module 7320: rules ===
 
-// Module 7315 (rules)
+// Module 7320 (rules)
 import _mod1187 from "module_1187" /* 1187 */;
 import wrappers from "wrappers" /* 1217 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -22,7 +22,7 @@ class Rule$Type extends MessageType {
             return items;
           }
     };
-    items = [, , , , , ];
+    items = [, , , , , , ];
     items[0] = obj;
     items[1] = {
       no: 2,
@@ -33,25 +33,34 @@ class Rule$Type extends MessageType {
             return filterType;
           }
     };
-    obj1 = { no: 3, name: "override", kind: "message", T: null };
+    items[2] = {
+      no: 3,
+      name: "override",
+      kind: "message",
+      T() {
+            return ruleType;
+          }
+    };
+    items[3] = { no: 4, name: "is_sunset_rule", kind: "scalar", T: 8 };
+    obj1 = { no: 5, name: "subtype", kind: "enum", T: null };
     class T {
       constructor() {
-        return closure_1_5;
+        items = ["discord_protos.discord_experimentation.v1.Rule.Subtype"];
+        items[1] = closure_1_4;
+        return items;
       }
     }
     obj1.T = T;
-    items[2] = obj1;
-    items[3] = { no: 4, name: "is_sunset_rule", kind: "scalar", T: 8 };
-    items[4] = {
-      no: 5,
-      name: "subtype",
-      kind: "enum",
+    items[4] = obj1;
+    items[5] = { no: 6, name: "hash", kind: "scalar", T: 9 };
+    items[6] = {
+      no: 7,
+      name: "title",
+      kind: "message",
       T() {
-            const items = ["discord_protos.discord_experimentation.v1.Rule.Subtype", obj2];
-            return items;
+            return require("wrappers").StringValue;
           }
     };
-    items[5] = { no: 6, name: "hash", kind: "scalar", T: 9 };
     tmp1 = new tmp("discord_protos.discord_experimentation.v1.Rule", items, T);
     return tmp1;
   }
@@ -91,6 +100,9 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
         obj.subtype = pos.int32();
       } else if (6 === tmp5) {
         obj.hash = pos.string();
+      } else if (7 === tmp5) {
+        let StringValue = wrappers.StringValue;
+        obj.title = StringValue.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.title);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
@@ -151,6 +163,12 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(type, tag, write
     tag.tag(6, _mod1187.WireType.LengthDelimited).string(type.hash);
     const tagResult5 = tag.tag(6, _mod1187.WireType.LengthDelimited);
   }
+  if (type.title) {
+    const StringValue = wrappers.StringValue;
+    const tagResult6 = tag.tag(7, _mod1187.WireType.LengthDelimited);
+    const joined2 = StringValue.internalBinaryWrite(type.title, tag.tag(7, _mod1187.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult2 = StringValue.internalBinaryWrite(type.title, tag.tag(7, _mod1187.WireType.LengthDelimited).fork(), writeUnknownFields);
+  }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
@@ -198,7 +216,15 @@ let items = [
       return items;
     }
   },
-  { no: 6, name: "hash", kind: "scalar", T: 9 }
+  { no: 6, name: "hash", kind: "scalar", T: 9 },
+  {
+    no: 7,
+    name: "title",
+    kind: "message",
+    T() {
+      return require("wrappers").StringValue;
+    }
+  }
 ];
 const defineProperty1 = new defineProperty("discord_protos.discord_experimentation.v1.Rule", items, tmp6, tmp5, tmp4, tmp3, "create", "internalBinaryRead", "internalBinaryWrite");
 const MessageType2 = fn(1187).MessageType;
@@ -541,7 +567,7 @@ class Filter$Type extends MessageType3 {
 }
 const prototype3 = Filter$Type.prototype;
 prototype3["create"] = function create(arr) {
-  obj = { filter: { oneofKind: "r" }, negate: false };
+  obj = { filter: { oneofKind: "__initData" }, negate: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
@@ -1566,7 +1592,7 @@ class ClientLocation_Location$Type extends MessageType13 {
 }
 const prototype13 = ClientLocation_Location$Type.prototype;
 prototype13["create"] = function create(arr) {
-  obj = { location: { oneofKind: "r" } };
+  obj = { location: { oneofKind: "__initData" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {

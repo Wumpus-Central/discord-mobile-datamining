@@ -1,9 +1,9 @@
-// === Module 16215: VibegrationsBuilderRouteStore ===
+// === Module 16243: VibegrationsBuilderRouteStore ===
 
-// Module 16215 (VibegrationsBuilderRouteStore)
+// Module 16243 (VibegrationsBuilderRouteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ChannelConstants from "ChannelConstants" /* 2051 */;
+import ChannelConstants from "ChannelConstants" /* 2052 */;
 import size from "module_2" /* 2 */;
 
 const StaticChannelRoute = ChannelConstants.StaticChannelRoute;

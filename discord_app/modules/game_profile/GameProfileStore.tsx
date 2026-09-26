@@ -1,6 +1,6 @@
-// === Module 8127: GameProfileStore ===
+// === Module 8135: GameProfileStore ===
 
-// Module 8127 (GameProfileStore)
+// Module 8135 (GameProfileStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

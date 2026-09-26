@@ -1,26 +1,26 @@
-// === Module 16196: GuildSettingsModalMembersWithTabs ===
+// === Module 16224: GuildSettingsModalMembersWithTabs ===
 
-// Module 16196 (GuildSettingsModalMembersWithTabs)
+// Module 16224 (GuildSettingsModalMembersWithTabs)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4655 */;
-import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 6678 */;
-import ContextMenu from "ContextMenu" /* 7353 */;
-import MemberSafetyPageTypes from "MemberSafetyPageTypes" /* 16197 */;
-import GuildSettingsModalMembersDefault from "GuildSettingsModalMembers" /* 16198 */;
-import showMembersManagementActionSheet from "showMembersManagementActionSheet" /* 16199 */;
-import GuildSettingsModalMemberApplicationsDefault from "GuildSettingsModalMemberApplications" /* 16204 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4658 */;
+import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 6683 */;
+import ContextMenu from "ContextMenu" /* 7358 */;
+import MemberSafetyPageTypes from "MemberSafetyPageTypes" /* 16225 */;
+import GuildSettingsModalMembersDefault from "GuildSettingsModalMembers" /* 16226 */;
+import showMembersManagementActionSheet from "showMembersManagementActionSheet" /* 16227 */;
+import GuildSettingsModalMemberApplicationsDefault from "GuildSettingsModalMemberApplications" /* 16232 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4466 */;
+import GuildStore from "GuildStore" /* 2067 */;
+import PermissionStore from "PermissionStore" /* 4469 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, content: { flex: 1 }, tabContainer: { marginTop: 12, minHeight: 32 } };
 let closure_11 = createStyles.createStyles(obj);
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
@@ -113,12 +113,12 @@ export default noop.memo((guildId) => {
       items: membersManagementActions,
       children(ref) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-        const obj = { source: closure_1_1(9080), accessibilityLabel: null, ref: null };
+        const obj = { source: closure_1_1(9091), accessibilityLabel: null, ref: null };
         const intl = guildId(1115).intl;
         obj.accessibilityLabel = intl.string(guildId(1115).t.ogxXGq);
         obj.ref = ref.ref;
         const merged1 = Object.assign(merged);
-        return closure_1_9(guildId(6790).HeaderActionButton, obj);
+        return closure_1_9(guildId(6795).HeaderActionButton, obj);
       }
     });
   }, items5);
@@ -155,10 +155,10 @@ export default noop.memo((guildId) => {
   let obj4 = { style: tmp4.container, children: null };
   let obj5 = { style: tmp4.tabContainer, children: null };
   const callback3 = obj.useCallback((toLocaleString) => "(" + guildId(num[23]).defaultCountFormatter(toLocaleString) + ")", []);
-  obj5.children = closure_9(guildId(num[24]).Tabs, { state: segmentedControlState, grow: true, formatCount: callback3 });
+  obj5.children = closure_9(guildId(num[23]).Tabs, { state: segmentedControlState, grow: true, formatCount: callback3 });
   const items8 = [closure_9(navigation, obj5), ];
   const tmp2Result6 = guildId(num[22]);
-  items8[1] = closure_9(navigation, { style: tmp4.content, onLayout: callback2, children: closure_9(guildId(num[25]).SegmentedControlPages, { state: segmentedControlState }) });
+  items8[1] = closure_9(navigation, { style: tmp4.content, onLayout: callback2, children: closure_9(guildId(num[24]).SegmentedControlPages, { state: segmentedControlState }) });
   obj4.children = items8;
   return closure_10(navigation, obj4);
 });

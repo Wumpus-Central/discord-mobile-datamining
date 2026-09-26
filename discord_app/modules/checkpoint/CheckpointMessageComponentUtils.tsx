@@ -1,10 +1,10 @@
-// === Module 5074: checkpoint/CheckpointMessageComponentUtils ===
+// === Module 5081: checkpoint/CheckpointMessageComponentUtils ===
 
-// Module 5074 (checkpoint/CheckpointMessageComponentUtils)
+// Module 5081 (checkpoint/CheckpointMessageComponentUtils)
 import util from "util" /* 1115 */;
-import Server from "Server" /* 1978 */;
-import _modDef3004 from "module_3004" /* 3004 */;
-import CheckpointConstants from "CheckpointConstants" /* 5054 */;
+import Server from "Server" /* 1979 */;
+import _modDef3005 from "module_3005" /* 3005 */;
+import CheckpointConstants from "CheckpointConstants" /* 5061 */;
 import size from "module_2" /* 2 */;
 
 const CheckpointVersions = CheckpointConstants.CheckpointVersions;
@@ -50,7 +50,7 @@ export const getCheckpointDataFromMessage = function getCheckpointDataFromMessag
 export const getCheckpointLabel = function getCheckpointLabel(checkpointDataFromMessage) {
   if (CheckpointVersions.V2025 === checkpointDataFromMessage.version) {
     const intl = util.intl;
-    return intl.string(_modDef3004.goiR2u);
+    return intl.string(_modDef3005.goiR2u);
   } else {
     const V2026 = tmp.V2026;
     return null;

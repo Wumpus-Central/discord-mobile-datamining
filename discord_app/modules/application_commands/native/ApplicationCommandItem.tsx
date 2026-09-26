@@ -1,19 +1,19 @@
-// === Module 11875: ApplicationCommandItem ===
+// === Module 11893: ApplicationCommandItem ===
 
-// Module 11875 (ApplicationCommandItem)
+// Module 11893 (ApplicationCommandItem)
 import nativeDefault from "native" /* 576 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 11699 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 11713 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 2107 */;
+import GuildMemberStore from "GuildMemberStore" /* 2108 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const AUTOCOMPLETE_ROW_HEIGHT = fn(9715).AUTOCOMPLETE_ROW_HEIGHT;
+const AUTOCOMPLETE_ROW_HEIGHT = fn(9726).AUTOCOMPLETE_ROW_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { applicationCommandItem: { flexDirection: "row", paddingVertical: 8, paddingHorizontal: 16, alignItems: "center", height: Math.max(arg0 * AUTOCOMPLETE_ROW_HEIGHT, AUTOCOMPLETE_ROW_HEIGHT) }, highlightedApplicationCommandItem: null, applicationCommandIcon: null, applicationCommandDescriptionWrapper: null, applicationCommandSectionName: null };
   const obj2 = { flexDirection: "row", paddingVertical: 8, paddingHorizontal: 16, alignItems: "center", height: Math.max(arg0 * AUTOCOMPLETE_ROW_HEIGHT, AUTOCOMPLETE_ROW_HEIGHT) };

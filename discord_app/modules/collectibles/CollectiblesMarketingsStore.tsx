@@ -1,6 +1,6 @@
-// === Module 6999: CollectiblesMarketingsStore ===
+// === Module 7004: CollectiblesMarketingsStore ===
 
-// Module 6999 (CollectiblesMarketingsStore)
+// Module 7004 (CollectiblesMarketingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

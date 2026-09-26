@@ -1,11 +1,11 @@
-// === Module 8584: ApplicationFrecencyStore ===
+// === Module 8592: ApplicationFrecencyStore ===
 
-// Module 8584 (ApplicationFrecencyStore)
+// Module 8592 (ApplicationFrecencyStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import FrecencyDefault from "Frecency" /* 4866 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
+import FrecencyDefault from "Frecency" /* 4873 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
 
 function handleUserSettingsProtoStoreChange() {
@@ -27,7 +27,7 @@ function handleUserSettingsProtoStoreChange() {
   }), global.pendingUsages);
 }
 const UserSettingsTypes = fn(1084).UserSettingsTypes;
-let items = [fn(1978).ApplicationCommandType.CHAT, fn(1978).ApplicationCommandType.PRIMARY_ENTRY_POINT];
+let items = [fn(1979).ApplicationCommandType.CHAT, fn(1979).ApplicationCommandType.PRIMARY_ENTRY_POINT];
 let global = { pendingUsages: [] };
 let obj = {
   computeBonus() {

@@ -1,13 +1,18 @@
-// === Module 5895: FastImageNativeComponent ===
+// === Module 5900: FastImageNativeComponent ===
 
-// Module 5895 (FastImageNativeComponent)
+// Module 5900 (FastImageNativeComponent)
+import resolveAssetSource_mod from "resolveAssetSource" /* 81 */;
 import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;
 
 const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "DCDFastImageView", directEventTypes: { topLoadStart: { registrationName: "onLoadStart" }, topProgress: { registrationName: "onProgress" }, topError: { registrationName: "onError" }, topLoad: { registrationName: "onLoad" }, topLoadEnd: { registrationName: "onLoadEnd" } }, validAttributes: null };
+let resolveAssetSource = resolveAssetSource_mod;
+if ("default" in resolveAssetSource) {
+  resolveAssetSource = resolveAssetSource.default;
+}
 const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onLoadStart: true, onProgress: true, onError: true, onLoad: true, onLoadEnd: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = { source: true, resizeMode: true, placeholder: true, enableAnimation: true, paused: true, manualPlayback: true, fade: true, usesSmallCache: true };
+__INTERNAL_VIEW_CONFIG.validAttributes = { source: { process: resolveAssetSource }, resizeMode: true, placeholder: true, enableAnimation: true, paused: true, manualPlayback: true, fade: true, usesSmallCache: true };
 const value = module_65.get("DCDFastImageView", () => obj);
 const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/FastImageNativeComponent.tsx");
 

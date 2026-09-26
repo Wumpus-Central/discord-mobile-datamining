@@ -1,6 +1,6 @@
-// === Module 5321: SoundboardTypes ===
+// === Module 5328: SoundboardTypes ===
 
-// Module 5321 (SoundboardTypes)
+// Module 5328 (SoundboardTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/soundboard/SoundboardTypes.tsx");

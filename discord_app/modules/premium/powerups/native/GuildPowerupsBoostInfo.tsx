@@ -1,15 +1,15 @@
-// === Module 12031: GuildPowerupsBoostInfo ===
+// === Module 12049: GuildPowerupsBoostInfo ===
 
-// Module 12031 (GuildPowerupsBoostInfo)
+// Module 12049 (GuildPowerupsBoostInfo)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4720 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6396 */;
-import BoostGemIcon from "BoostGemIcon" /* 8670 */;
-import getGuildPowerupsBoostInfoText from "getGuildPowerupsBoostInfoText" /* 12032 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4724 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6401 */;
+import BoostGemIcon from "BoostGemIcon" /* 8678 */;
+import getGuildPowerupsBoostInfoText from "getGuildPowerupsBoostInfoText" /* 12050 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4829 */;
+import createStyles from "createStyles" /* 4836 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;

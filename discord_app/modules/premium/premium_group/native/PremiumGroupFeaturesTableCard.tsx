@@ -1,18 +1,18 @@
-// === Module 13008: PremiumGroupFeaturesTableCard ===
+// === Module 13025: PremiumGroupFeaturesTableCard ===
 
-// Module 13008 (PremiumGroupFeaturesTableCard)
+// Module 13025 (PremiumGroupFeaturesTableCard)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import ColorUtils from "ColorUtils" /* 4680 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import LinearGradientDefault from "LinearGradient" /* 5286 */;
-import ColorConstants from "ColorConstants" /* 6847 */;
-import PremiumGroupWordmarkDefault from "PremiumGroupWordmark" /* 8676 */;
-import usePremiumGroupFeaturesTableCardTextDefault from "usePremiumGroupFeaturesTableCardText" /* 13009 */;
+import ColorUtils from "ColorUtils" /* 4683 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import LinearGradientDefault from "LinearGradient" /* 5293 */;
+import ColorConstants from "ColorConstants" /* 6852 */;
+import PremiumGroupWordmarkDefault from "PremiumGroupWordmark" /* 8684 */;
+import usePremiumGroupFeaturesTableCardTextDefault from "usePremiumGroupFeaturesTableCardText" /* 13026 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4829 */;
+import createStyles from "createStyles" /* 4836 */;
 import size from "module_2" /* 2 */;
 
 class BetaPill {

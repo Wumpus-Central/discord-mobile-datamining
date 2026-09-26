@@ -1,13 +1,13 @@
-// === Module 8508: Authorize ===
+// === Module 8516: Authorize ===
 
-// Module 8508 (Authorize)
+// Module 8516 (Authorize)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4471 */;
-import keysSorter from "keysSorter" /* 5763 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 7779 */;
-import scopes from "scopes" /* 8509 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4652 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4474 */;
+import keysSorter from "keysSorter" /* 5768 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 7787 */;
+import scopes from "scopes" /* 8517 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4655 */;
 
 require = fn;
 const Constants = fn(1074);

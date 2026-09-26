@@ -1,9 +1,9 @@
-// === Module 2069: FavoritesUtils ===
+// === Module 2070: FavoritesUtils ===
 
-// Module 2069 (FavoritesUtils)
+// Module 2070 (FavoritesUtils)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
-import FavoritesConstants from "FavoritesConstants" /* 2057 */;
+import FavoritesConstants from "FavoritesConstants" /* 2058 */;
 import size from "module_2" /* 2 */;
 
 const FAVORITES_RAW_GUILD_ID = FavoritesConstants.FAVORITES_RAW_GUILD_ID;

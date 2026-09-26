@@ -1,23 +1,23 @@
-// === Module 7792: ICYMIExperiment ===
+// === Module 7800: ICYMIExperiment ===
 
-// Module 7792 (ICYMIExperiment)
-import useLabFeatureDefault from "useLabFeature" /* 7795 */;
-import LabFeatureStore from "LabFeatureStore" /* 7793 */;
+// Module 7800 (ICYMIExperiment)
+import useLabFeatureDefault from "useLabFeature" /* 7803 */;
+import LabFeatureStore from "LabFeatureStore" /* 7801 */;
 
 const hide_icymi_tab = "hide_icymi_tab";
-let ApexExperiment = fn(1434);
+let ApexExperiment = fn(1435);
 const obj2 = { name: "2026-04-icymi-staff-only", kind: "user", defaultConfig: { enabled: false }, variations: null };
 const obj3 = { 1: null };
 obj3[1] = { enabled: true };
 obj2.variations = obj3;
 const apexExperiment = ApexExperiment.createApexExperiment(obj2);
-ApexExperiment = fn(1434);
+ApexExperiment = fn(1435);
 const obj5 = { name: "2026-03-icymi-staff-debugging-utility", kind: "user", defaultConfig: { enabled: false }, variations: null };
 const obj6 = { 1: null };
 obj6[1] = { enabled: true };
 obj5.variations = obj6;
 const apexExperiment1 = ApexExperiment.createApexExperiment(obj5);
-ApexExperiment = fn(1434);
+ApexExperiment = fn(1435);
 const obj8 = { name: "2026-03-icymi-desktop", kind: "user", defaultConfig: { icymiDesktopEnabled: false }, variations: null };
 const obj9 = { 1: null };
 obj9[1] = { icymiDesktopEnabled: true };

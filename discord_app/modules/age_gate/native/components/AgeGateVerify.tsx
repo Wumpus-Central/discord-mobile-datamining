@@ -1,20 +1,20 @@
-// === Module 17059: AgeGateVerify ===
+// === Module 17087: AgeGateVerify ===
 
-// Module 17059 (AgeGateVerify)
+// Module 17087 (AgeGateVerify)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import AgeGateUtils from "AgeGateUtils" /* 5039 */;
-import components_Button_Button from "components/Button/Button" /* 5274 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6539 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7851 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 7853 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import AgeGateUtils from "AgeGateUtils" /* 5046 */;
+import components_Button_Button from "components/Button/Button" /* 5281 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6544 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7859 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 7861 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { container: { padding: nativeDefault.space.PX_16, flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_16 }, header: { textAlign: "center" }, body: { textAlign: "center" }, buttonWrapper: { width: "100%" } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

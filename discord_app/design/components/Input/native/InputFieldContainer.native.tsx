@@ -1,11 +1,11 @@
-// === Module 6034: InputFieldContainer ===
+// === Module 6039: InputFieldContainer ===
 
-// Module 6034 (InputFieldContainer)
+// Module 6039 (InputFieldContainer)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4528 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import spring from "spring" /* 5273 */;
-import InputTypes from "InputTypes" /* 6035 */;
+import useToken from "useToken" /* 4531 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import spring from "spring" /* 5280 */;
+import InputTypes from "InputTypes" /* 6040 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -56,7 +56,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const RING_SPRING_CONFIG = { mass: 0.5, damping: 15, stiffness: 200, overshootClamping: true };
-let createStyles = fn(4829);
+let createStyles = fn(4836);
 let closure_9 = createStyles.createStyles(() => {
   let str = arg0;
   if (arg0 === undefined) {
@@ -140,7 +140,7 @@ let closure_9 = createStyles.createStyles(() => {
   obj9.splitBorder = obj15;
   return obj9;
 });
-createStyles = fn(4829);
+createStyles = fn(4836);
 let closure_10 = createStyles.createStyleProperties({ error: nativeDefault.colors.INPUT_BORDER_ERROR_DEFAULT, default: "transparent", focused: nativeDefault.colors.INPUT_BORDER_ACTIVE });
 const __initData = { code: "function InputFieldContainerNativeTsx1(){const{status,ringColors,isFocused,withSpring,RING_SPRING_CONFIG}=this.__closure;let borderWidth=0;let borderColor='transparent';if(status!=='default'){borderWidth=2;borderColor=ringColors.error;}else if(isFocused){borderWidth=1;borderColor=ringColors.focused;}return{borderWidth:withSpring(borderWidth,RING_SPRING_CONFIG),borderColor:withSpring(borderColor,RING_SPRING_CONFIG),left:-borderWidth,right:-borderWidth,top:-borderWidth,bottom:-borderWidth};}" };
 const size = fn(2);

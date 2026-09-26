@@ -1,9 +1,9 @@
-// === Module 8527: GameControllerIcon ===
+// === Module 8535: GameControllerIcon ===
 
-// Module 8527 (GameControllerIcon)
+// Module 8535 (GameControllerIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4527 */;
-import _mod7587 from "module_7587" /* 7587 */;
+import BaseIconImage from "BaseIconImage" /* 4530 */;
+import _mod7594 from "module_7594" /* 7594 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const GameControllerIcon = function GameControllerIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7587, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7594, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

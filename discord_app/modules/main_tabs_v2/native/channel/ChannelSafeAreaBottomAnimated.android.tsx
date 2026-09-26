@@ -1,9 +1,9 @@
-// === Module 12123: ChannelSafeAreaBottomAnimated ===
+// === Module 12141: ChannelSafeAreaBottomAnimated ===
 
-// Module 12123 (ChannelSafeAreaBottomAnimated)
-import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
-import useChannelSafeAreaHeightSharedValueDefault from "useChannelSafeAreaHeightSharedValue" /* 10881 */;
-import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 10886 */;
+// Module 12141 (ChannelSafeAreaBottomAnimated)
+import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
+import useChannelSafeAreaHeightSharedValueDefault from "useChannelSafeAreaHeightSharedValue" /* 10894 */;
+import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 10899 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;

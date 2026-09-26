@@ -1,7 +1,7 @@
-// === Module 5075: CheckpointExperiment ===
+// === Module 5082: CheckpointExperiment ===
 
-// Module 5075 (CheckpointExperiment)
-import ApexExperiment from "ApexExperiment" /* 1434 */;
+// Module 5082 (CheckpointExperiment)
+import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-09-build-a-bear", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

@@ -1,20 +1,20 @@
-// === Module 14120: ProfileCustomizationSettingScreen ===
+// === Module 14145: ProfileCustomizationSettingScreen ===
 
-// Module 14120 (ProfileCustomizationSettingScreen)
+// Module 14145 (ProfileCustomizationSettingScreen)
 import util from "util" /* 1115 */;
-import ChatInputUtils from "ChatInputUtils" /* 4697 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5009 */;
-import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 6400 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9218 */;
-import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 10373 */;
-import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 14121 */;
-import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 14179 */;
+import ChatInputUtils from "ChatInputUtils" /* 4701 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5016 */;
+import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 6405 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9229 */;
+import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 10384 */;
+import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 14146 */;
+import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 14204 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9216 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 7598 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9227 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 7605 */;
 
 const require = globalThis.__r;
 
@@ -27,7 +27,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: map1, AnalyticsSections: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_17 = createStyles.createStyles({ container: { height: "100%" }, controls: { paddingTop: 4 } });
 let items = [
   {

@@ -1,18 +1,18 @@
-// === Module 8051: FormDivider ===
+// === Module 8059: FormDivider ===
 
-// Module 8051 (FormDivider)
+// Module 8059 (FormDivider)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 4537 */;
-import ColorUtils from "ColorUtils" /* 4680 */;
-import RedesignCompat from "RedesignCompat" /* 5993 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 6600 */;
+import native from "native" /* 4540 */;
+import ColorUtils from "ColorUtils" /* 4683 */;
+import RedesignCompat from "RedesignCompat" /* 5998 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 6605 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty, Platform } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_7 = createStyles.createStyles(() => {
   const obj = { divider: {}, dividerOuter: { marginLeft: 0, height: hasOwnProperty.hairlineWidth, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: -1 * hasOwnProperty.hairlineWidth }, dividerHasIcon: { marginLeft: 56 } };
   return obj;

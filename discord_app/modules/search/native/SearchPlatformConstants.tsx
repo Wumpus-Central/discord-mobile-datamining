@@ -1,12 +1,12 @@
-// === Module 11822: SearchPlatformConstants ===
+// === Module 11836: SearchPlatformConstants ===
 
-// Module 11822 (SearchPlatformConstants)
-import LinkingWhitelist from "LinkingWhitelist" /* 4523 */;
-import FacebookNeutralIcon from "FacebookNeutralIcon" /* 7537 */;
-import InstagramNeutralIcon from "InstagramNeutralIcon" /* 7539 */;
-import YoutubeNeutralIcon from "YoutubeNeutralIcon" /* 8348 */;
-import TiktokNeutralIcon from "TiktokNeutralIcon" /* 11823 */;
-import TwitterNeutralIcon from "TwitterNeutralIcon" /* 11825 */;
+// Module 11836 (SearchPlatformConstants)
+import LinkingWhitelist from "LinkingWhitelist" /* 4526 */;
+import FacebookNeutralIcon from "FacebookNeutralIcon" /* 7545 */;
+import InstagramNeutralIcon from "InstagramNeutralIcon" /* 7547 */;
+import YoutubeNeutralIcon from "YoutubeNeutralIcon" /* 8356 */;
+import TiktokNeutralIcon from "TiktokNeutralIcon" /* 11837 */;
+import TwitterNeutralIcon from "TwitterNeutralIcon" /* 11839 */;
 import size from "module_2" /* 2 */;
 
 const items = [{ REGEX: LinkingWhitelist.LINKING_WHITELIST.tiktok.regex, Icon: TiktokNeutralIcon.TiktokNeutralIcon }, , , , ];

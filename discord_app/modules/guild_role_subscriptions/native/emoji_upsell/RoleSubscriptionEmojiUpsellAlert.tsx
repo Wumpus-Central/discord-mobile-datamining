@@ -1,17 +1,17 @@
-// === Module 9748: RoleSubscriptionEmojiUpsellAlert ===
+// === Module 9759: RoleSubscriptionEmojiUpsellAlert ===
 
-// Module 9748 (RoleSubscriptionEmojiUpsellAlert)
+// Module 9759 (RoleSubscriptionEmojiUpsellAlert)
 import util from "util" /* 1115 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5827 */;
-import _modDef8607 from "module_8607" /* 8607 */;
-import CreatorRevenueButton from "CreatorRevenueButton" /* 9749 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5832 */;
+import _modDef8615 from "module_8615" /* 8615 */;
+import CreatorRevenueButton from "CreatorRevenueButton" /* 9760 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2066 */;
+import GuildStore from "GuildStore" /* 2067 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const StaticChannelRoute = fn(2051).StaticChannelRoute;
+const StaticChannelRoute = fn(2052).StaticChannelRoute;
 const jsx = fn(21).jsx;
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/emoji_upsell/RoleSubscriptionEmojiUpsellAlert.tsx");
@@ -45,7 +45,7 @@ export default function RoleSubscriptionEmojiUpsellAlert(arg0) {
     if (stateFromStores != null) {
       name = stateFromStores.name;
     }
-    const obj = { image: _modDef8607, title: null, description: null };
+    const obj = { image: _modDef8615, title: null, description: null };
     const intl = util.intl;
     obj.title = intl.string(util.t.cBjkcx);
     const intl2 = util.intl;

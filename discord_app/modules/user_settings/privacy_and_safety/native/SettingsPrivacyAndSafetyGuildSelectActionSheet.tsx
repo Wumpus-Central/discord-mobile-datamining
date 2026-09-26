@@ -1,17 +1,17 @@
-// === Module 15460: SettingsPrivacyAndSafetyGuildSelectActionSheet ===
+// === Module 15489: SettingsPrivacyAndSafetyGuildSelectActionSheet ===
 
-// Module 15460 (SettingsPrivacyAndSafetyGuildSelectActionSheet)
+// Module 15489 (SettingsPrivacyAndSafetyGuildSelectActionSheet)
 import nativeDefault from "native" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import SortedGuildStore from "SortedGuildStore" /* 5745 */;
+import GuildStore from "GuildStore" /* 2067 */;
+import SortedGuildStore from "SortedGuildStore" /* 5750 */;
 
 const require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(15459);
+const UserSettingsSafetySelectedGuildStore = fn(15488);
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_7, setSelectedGuildId: closure_8, useUserSafetySettingsSelectedGuildStore: closure_9 } = UserSettingsSafetySelectedGuildStore);
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { iconContainer: { marginRight: nativeDefault.space.PX_12 } };
 let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -51,7 +51,7 @@ export default function SettingsPrivacyAndSafetyGuildSelectActionSheet() {
         let reduced = flattenedGuildIds.reduce((arr, item) => {
           guild = guild.getGuild(item);
           if (null != guild) {
-            const obj = { type: first(5060).SelectOptionType.GUILD, value: null, label: null, guild: null };
+            const obj = { type: first(5067).SelectOptionType.GUILD, value: null, label: null, guild: null };
             ({ id: obj.value, name: obj.label } = guild);
             obj.guild = guild;
             arr = arr.push(obj);
@@ -63,7 +63,7 @@ export default function SettingsPrivacyAndSafetyGuildSelectActionSheet() {
         const obj5 = { query };
         reduced = obj4.queryGuilds(obj5).map((record) => {
           record = record.record;
-          return { type: first(5060).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+          return { type: first(5067).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
         });
         const queryGuildsResult = obj4.queryGuilds(obj5);
       }

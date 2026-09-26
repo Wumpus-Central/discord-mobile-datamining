@@ -1,20 +1,20 @@
-// === Module 15941: useGuildMediaState ===
+// === Module 15969: useGuildMediaState ===
 
-// Module 15941 (useGuildMediaState)
+// Module 15969 (useGuildMediaState)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import ChannelTypes from "ChannelTypes" /* 1095 */;
-import BlockedUserUtils from "BlockedUserUtils" /* 13238 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
-import StageInstanceStore from "StageInstanceStore" /* 2049 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4851 */;
+import BlockedUserUtils from "BlockedUserUtils" /* 13255 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
+import StageInstanceStore from "StageInstanceStore" /* 2050 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4858 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4466 */;
-import RelationshipStore from "RelationshipStore" /* 4476 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5010 */;
-import VoiceStateStore from "VoiceStateStore" /* 4848 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
+import GuildStore from "GuildStore" /* 2067 */;
+import PermissionStore from "PermissionStore" /* 4469 */;
+import RelationshipStore from "RelationshipStore" /* 4479 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5017 */;
+import VoiceStateStore from "VoiceStateStore" /* 4855 */;
 
 const require = globalThis.__r;
 
@@ -36,7 +36,7 @@ function canConnectToChannel(type, afkChannelId) {
   }
   return canBasicChannelResult;
 }
-const isVoiceChannel = fn(2048).isVoiceChannel;
+const isVoiceChannel = fn(2049).isVoiceChannel;
 const BasicPermissions = fn(1074).BasicPermissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guilds_bar/useGuildMediaState.tsx");

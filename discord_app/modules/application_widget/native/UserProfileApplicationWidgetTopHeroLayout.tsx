@@ -1,13 +1,13 @@
-// === Module 8381: UserProfileApplicationWidgetTopHeroLayout ===
+// === Module 8389: UserProfileApplicationWidgetTopHeroLayout ===
 
-// Module 8381 (UserProfileApplicationWidgetTopHeroLayout)
+// Module 8389 (UserProfileApplicationWidgetTopHeroLayout)
 import nativeDefault from "native" /* 576 */;
-import LinearGradientDefault from "LinearGradient" /* 5286 */;
-import _modDef5971 from "module_5971" /* 5971 */;
-import UserProfileSharedStyles from "UserProfileSharedStyles" /* 7679 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 8382 */;
-import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 8469 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 8470 */;
+import LinearGradientDefault from "LinearGradient" /* 5293 */;
+import _modDef5976 from "module_5976" /* 5976 */;
+import UserProfileSharedStyles from "UserProfileSharedStyles" /* 7687 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 8390 */;
+import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 8477 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 8478 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,11 +15,11 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const HorizontalGradient = fn(1074).HorizontalGradient;
-const CARD_PADDING = fn(6624).CARD_PADDING;
+const CARD_PADDING = fn(6629).CARD_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const colors = ["transparent", "black"];
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { root: { position: "relative" }, contentRow: { flexDirection: "row", gap: nativeDefault.space.PX_12, minHeight: 140 }, heroText: null, heroImageColumn: null, heroImageSkeleton: null, heroImagePositioner: null, heroImageMask: null, heroImageFadeGradient: null, heroImageMaskRemainder: null };
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_12, minHeight: 140 };
 obj2.heroText = { flex: 1, minWidth: 120, gap: nativeDefault.space.PX_4, justifyContent: "center" };
@@ -102,7 +102,7 @@ export default function UserProfileApplicationWidgetTopHeroLayout(header) {
       obj17.source = obj18;
       obj17.style = { width: "100%", height: "100%" };
       obj12.children = React6(hasOwnProperty, obj17);
-      tmp15Result3 = React6(_modDef5971, obj12);
+      tmp15Result3 = React6(_modDef5976, obj12);
     }
     obj10.children = tmp15Result3;
     tmp15Result4 = React6(timestampProducer, obj10);

@@ -1,6 +1,6 @@
-// === Module 5478: imageFilename ===
+// === Module 5484: imageFilename ===
 
-// Module 5478 (imageFilename)
+// Module 5484 (imageFilename)
 import size from "module_2" /* 2 */;
 
 const set = new Set(["image/heic", "image/heif", "image/heic-sequence", "image/heif-sequence"]);

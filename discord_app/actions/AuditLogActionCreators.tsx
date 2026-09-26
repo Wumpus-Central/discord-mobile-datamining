@@ -1,9 +1,9 @@
-// === Module 17313: AuditLogActionCreators ===
+// === Module 17343: AuditLogActionCreators ===
 
-// Module 17313 (AuditLogActionCreators)
+// Module 17343 (AuditLogActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 17308 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 17338 */;
 
 require = fn;
 function makeRequest(arg0, arg1) {
@@ -109,7 +109,7 @@ export const filterByUserId = function filterByUserId(id, guildId) {
       if (!tmp5) {
         if (null != guildId) {
           DispatcherDefault.dispatch({ type: "AUDIT_LOG_FETCH_START" });
-          const obj2 = { userId: id, action: "Array", targetId: "ao" };
+          const obj2 = { userId: id, action: "Array", targetId: "isArray" };
           const tmp10Result = DispatcherDefault;
           nextPromise = makeRequest(guildId, obj2).then((body) => {
             ({ audit_log_entries, integrations, users, webhooks, guild_scheduled_events, auto_moderation_rules, threads, application_commands } = body.body);

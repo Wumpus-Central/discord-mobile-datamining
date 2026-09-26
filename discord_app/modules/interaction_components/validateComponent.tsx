@@ -1,10 +1,10 @@
-// === Module 7564: validateComponent ===
+// === Module 7572: validateComponent ===
 
-// Module 7564 (validateComponent)
+// Module 7572 (validateComponent)
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1115 */;
-import Server from "Server" /* 1978 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 5053 */;
+import Server from "Server" /* 1979 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 5060 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/interaction_components/validateComponent.tsx");

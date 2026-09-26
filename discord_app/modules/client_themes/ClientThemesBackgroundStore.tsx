@@ -1,20 +1,20 @@
-// === Module 4650: ClientThemesBackgroundStore ===
+// === Module 4653: ClientThemesBackgroundStore ===
 
-// Module 4650 (ClientThemesBackgroundStore)
+// Module 4653 (ClientThemesBackgroundStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1228 */;
-import UserSettings from "UserSettings" /* 2020 */;
-import dismissible_content from "dismissible_content" /* 2028 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4485 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4651 */;
-import UserUtils from "UserUtils" /* 4675 */;
-import ThemeActionCreators from "ThemeActionCreators" /* 4679 */;
+import UserSettings from "UserSettings" /* 2021 */;
+import dismissible_content from "dismissible_content" /* 2029 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4488 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4654 */;
+import UserUtils from "UserUtils" /* 4678 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 4682 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1183 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1184 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -90,7 +90,7 @@ function handleUserSettingsProtoStoreUpdate() {
     _undefined = undefined;
   }
 }
-const isGuildTextChannelType = fn(2048).isGuildTextChannelType;
+const isGuildTextChannelType = fn(2049).isGuildTextChannelType;
 const dependencyMap = fn(1229).BACKGROUND_GRADIENT_PRESETS_MAP;
 const SystemThemeState = fn(1185).SystemThemeState;
 let closure_14 = true;

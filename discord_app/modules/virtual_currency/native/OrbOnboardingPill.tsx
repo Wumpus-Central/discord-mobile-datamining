@@ -1,10 +1,10 @@
-// === Module 15272: OrbOnboardingPill ===
+// === Module 15300: OrbOnboardingPill ===
 
-// Module 15272 (OrbOnboardingPill)
+// Module 15300 (OrbOnboardingPill)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import OrbsIcon from "OrbsIcon" /* 8290 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import OrbsIcon from "OrbsIcon" /* 8298 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 OrbOnboardingPill.displayName = "OrbOnboardingPill";
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { container: { height: 36, borderRadius: nativeDefault.radii.round, justifyContent: "center", alignItems: "center", flexDirection: "row", paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_4, backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, flexShrink: 0, gap: 4 } };
 const hasOwnProperty = createStyles.createStyles(obj2);
 const size = fn(2);

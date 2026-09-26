@@ -1,6 +1,6 @@
-// === Module 8742: vibegrationsPreviewCall ===
+// === Module 8750: vibegrationsPreviewCall ===
 
-// Module 8742 (vibegrationsPreviewCall)
+// Module 8750 (vibegrationsPreviewCall)
 import size from "module_2" /* 2 */;
 
 const prototype = function PreviewFrameCallTimeout(arg0, timeoutMs) {

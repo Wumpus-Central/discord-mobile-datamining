@@ -1,13 +1,13 @@
-// === Module 15876: MobileGameCommunitiesActionCreators ===
+// === Module 15904: MobileGameCommunitiesActionCreators ===
 
-// Module 15876 (MobileGameCommunitiesActionCreators)
+// Module 15904 (MobileGameCommunitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import _modDef1472 from "module_1472" /* 1472 */;
+import _modDef1473 from "module_1473" /* 1473 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13240 */;
-import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15150 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13257 */;
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15178 */;
 
 require = fn;
 let closure_7 = async function _fetchDetectedGameCommunities() {
@@ -53,7 +53,7 @@ let closure_7 = async function _fetchDetectedGameCommunities() {
           const obj4 = { game_ids: tmp19, limit: 20, ignored_guild_ids: null };
           const _Array = Array;
           obj4.ignored_guild_ids = Array.from(dismissedGuildIds.getDismissedGuildIds());
-          request.query = _modDef1472.stringify(obj4);
+          request.query = _modDef1473.stringify(obj4);
           c2 = 1;
           c3 = 1;
           const obj5 = { value: HTTP.get(request), done: false };

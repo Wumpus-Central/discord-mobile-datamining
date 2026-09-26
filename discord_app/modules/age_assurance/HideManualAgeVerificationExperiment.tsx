@@ -1,7 +1,7 @@
-// === Module 8027: HideManualAgeVerificationExperiment ===
+// === Module 8035: HideManualAgeVerificationExperiment ===
 
-// Module 8027 (HideManualAgeVerificationExperiment)
-import ApexExperiment from "ApexExperiment" /* 1434 */;
+// Module 8035 (HideManualAgeVerificationExperiment)
+import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2025-11-hide-manual-link", defaultConfig: { isHidden: false }, variations: null };

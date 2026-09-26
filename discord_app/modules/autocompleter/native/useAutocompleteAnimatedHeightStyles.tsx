@@ -1,8 +1,8 @@
-// === Module 11868: useAutocompleteAnimatedHeightStyles ===
+// === Module 11886: useAutocompleteAnimatedHeightStyles ===
 
-// Module 11868 (useAutocompleteAnimatedHeightStyles)
-import timing from "timing" /* 4830 */;
-import timingPresets from "timingPresets" /* 4833 */;
+// Module 11886 (useAutocompleteAnimatedHeightStyles)
+import timing from "timing" /* 4837 */;
+import timingPresets from "timingPresets" /* 4840 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

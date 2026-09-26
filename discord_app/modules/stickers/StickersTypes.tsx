@@ -1,21 +1,21 @@
-// === Module 5575: StickersTypes ===
+// === Module 5581: StickersTypes ===
 
-// Module 5575 (StickersTypes)
-import js_shim_PlainRecord from "js_shim/PlainRecord" /* 2060 */;
-import StickerTypes from "StickerTypes" /* 5576 */;
+// Module 5581 (StickersTypes)
+import js_shim_PlainRecord from "js_shim/PlainRecord" /* 2061 */;
+import shared from "shared" /* 4685 */;
 import size from "module_2" /* 2 */;
 
 const TypeTag = js_shim_PlainRecord.TypeTag;
 const result = size.fileFinishedImporting("modules/stickers/StickersTypes.tsx");
 
-export const StickerFormat = StickerTypes.StickerFormat;
-export const MetaStickerType = StickerTypes.MetaStickerType;
+export const StickerFormat = shared.StickerFormat;
+export const MetaStickerType = shared.MetaStickerType;
 export const StickerExtensions = { PNG: "png", APNG: "png", LOTTIE: "json", WEBP: "webp", GIF: "gif" };
 export const isAnimatedSticker = function isAnimatedSticker(arg0) {
-  return arg0 !== StickerTypes.StickerFormat.PNG;
+  return arg0 !== shared.StickerFormat.PNG;
 };
 export const isCustomSticker = function isCustomSticker(arg0) {
-  return arg0 !== StickerTypes.MetaStickerType.STANDARD;
+  return arg0 !== shared.MetaStickerType.STANDARD;
 };
 export const StickerGridItemTypes = { STICKER: 0, [0]: "STICKER", CREATE_STICKER: 1, [1]: "CREATE_STICKER" };
 export const StickerCategoryTypes = { PACK: "PACK", FAVORITE: "FAVORITE", RECENT: "RECENT", SEARCH_RESULTS: "SEARCH_RESULTS", SEARCH_SUGGESTIONS: "SEARCH_SUGGESTIONS", GUILD: "GUILD", EMPTY_GUILD_UPSELL: "EMPTY_GUILD_UPSELL", CREATE_STICKER: "CREATE_STICKER" };

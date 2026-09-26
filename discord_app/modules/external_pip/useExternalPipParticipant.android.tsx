@@ -1,15 +1,15 @@
-// === Module 16796: useExternalPipParticipant ===
+// === Module 16825: useExternalPipParticipant ===
 
-// Module 16796 (useExternalPipParticipant)
+// Module 16825 (useExternalPipParticipant)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4845 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4852 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 1992 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4852 */;
+import MediaEngineStore from "MediaEngineStore" /* 1993 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4859 */;
 
 const require = fn;
-const CallConstants = fn(4850);
+const CallConstants = fn(4857);
 ({ isStreamParticipant: closure_8, ParticipantTypes: closure_9 } = CallConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/external_pip/useExternalPipParticipant.android.tsx");
@@ -58,7 +58,7 @@ export default function useExternalPipParticipant() {
       id2 = tmp6.id;
     }
     if (ref.current !== id2) {
-      const obj2 = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "ao", focusedParticipantType: ref2.current };
+      const obj2 = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "paddingHorizontal", focusedParticipantType: ref2.current };
       let obj = obj2;
     } else {
       let type1;

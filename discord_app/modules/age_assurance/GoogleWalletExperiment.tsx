@@ -1,7 +1,7 @@
-// === Module 8034: GoogleWalletExperiment ===
+// === Module 8042: GoogleWalletExperiment ===
 
-// Module 8034 (GoogleWalletExperiment)
-import ApexExperiment from "ApexExperiment" /* 1434 */;
+// Module 8042 (GoogleWalletExperiment)
+import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-03-age-verification-google-wallet", defaultConfig: { enabled: false }, variations: null };

@@ -1,13 +1,13 @@
-// === Module 13268: BlockedUserInVoiceChannelActionSheet ===
+// === Module 13285: BlockedUserInVoiceChannelActionSheet ===
 
-// Module 13268 (BlockedUserInVoiceChannelActionSheet)
+// Module 13285 (BlockedUserInVoiceChannelActionSheet)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5718 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5723 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import RelationshipStore from "RelationshipStore" /* 4476 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
+import RelationshipStore from "RelationshipStore" /* 4479 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
@@ -15,13 +15,13 @@ const require = globalThis.__r;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
-const setDismissalTimeForUser = fn(13262).setDismissalTimeForUser;
-const SharedSpaceWarningConstants = fn(13265);
+const setDismissalTimeForUser = fn(13279).setDismissalTimeForUser;
+const SharedSpaceWarningConstants = fn(13282);
 ({ BlockWarningEngagements: closure_9, VoiceChannelWarningSurfaces: c10 } = SharedSpaceWarningConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ Fragment: closure_12, jsxs: map1, jsx: closure_14 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8 }, headerImage: { alignSelf: "center", width: 73, height: 86 }, headerText: null, centerText: null, buttonGroup: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8 };
 obj2.headerText = { gap: nativeDefault.space.PX_4, marginBottom: nativeDefault.space.PX_16 };

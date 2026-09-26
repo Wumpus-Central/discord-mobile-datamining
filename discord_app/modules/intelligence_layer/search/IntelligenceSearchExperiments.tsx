@@ -1,15 +1,15 @@
-// === Module 11844: IntelligenceSearchExperiments ===
+// === Module 11858: IntelligenceSearchExperiments ===
 
-// Module 11844 (IntelligenceSearchExperiments)
-import GuildStore from "GuildStore" /* 2066 */;
+// Module 11858 (IntelligenceSearchExperiments)
+import GuildStore from "GuildStore" /* 2067 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const GuildFeatures = fn(1074).GuildFeatures;
-let ApexExperiment = fn(1434);
+let ApexExperiment = fn(1435);
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-09-mobile-nlp-search-user-flag", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
-ApexExperiment = fn(1434);
+ApexExperiment = fn(1435);
 const apexExperiment1 = ApexExperiment.createApexExperiment({ kind: "guild", name: "2026-09-mobile-nlp-search-guild-experiment", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/intelligence_layer/search/IntelligenceSearchExperiments.tsx");

@@ -10,10 +10,10 @@ import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1389 */;
 import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1393 */;
 import PremiumStateUtils from "PremiumStateUtils" /* 1394 */;
 import FamilyCenterModels from "FamilyCenterModels" /* 1395 */;
-import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1965 */;
-import mappers from "mappers" /* 1966 */;
-import isActivityParticipantValidGuildMemberDefault from "isActivityParticipantValidGuildMember" /* 1977 */;
-import Server from "Server" /* 1978 */;
+import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1966 */;
+import mappers from "mappers" /* 1967 */;
+import isActivityParticipantValidGuildMemberDefault from "isActivityParticipantValidGuildMember" /* 1978 */;
+import Server from "Server" /* 1979 */;
 import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1373 */;
 import UserRecord from "UserRecord" /* 1386 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -129,6 +129,11 @@ function transformUser(mfa_enabled) {
     mfa_enabled.typingIndicatorStyle = CustomTypingIndicatorTypes.parseServerTypingIndicatorStyle(typing_indicator_style);
     delete tmp[tmp3];
     const tmp4Result9 = CustomTypingIndicatorTypes;
+  }
+  const vad_colors = mfa_enabled.vad_colors;
+  if (undefined !== vad_colors) {
+    mfa_enabled.vadColors = vad_colors;
+    delete tmp[tmp3];
   }
   const premium_state = mfa_enabled.premium_state;
   if (undefined !== premium_state) {

@@ -1,8 +1,8 @@
-// === Module 15235: TextWritingAnimation ===
+// === Module 15263: TextWritingAnimation ===
 
-// Module 15235 (TextWritingAnimation)
+// Module 15263 (TextWritingAnimation)
 import _slicedToArray from "module_32" /* 32 */;
-import AccessibilityStore from "AccessibilityStore" /* 4821 */;
+import AccessibilityStore from "AccessibilityStore" /* 4825 */;
 
 let require = fn;
 const noop = fn(19);
@@ -10,7 +10,7 @@ const noop = fn(19);
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_10 = createStyles.createStyles({ hiddenText: { opacity: 0 }, animatedText: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/TextWritingAnimation.tsx");

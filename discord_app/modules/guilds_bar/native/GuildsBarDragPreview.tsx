@@ -1,12 +1,12 @@
-// === Module 15971: GuildsBarDragPreview ===
+// === Module 15999: GuildsBarDragPreview ===
 
-// Module 15971 (GuildsBarDragPreview)
-import _mod4449 from "module_4449" /* 4449 */;
-import native from "native" /* 4537 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
-import spring from "spring" /* 5273 */;
+// Module 15999 (GuildsBarDragPreview)
+import _mod4452 from "module_4452" /* 4452 */;
+import native from "native" /* 4540 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
+import spring from "spring" /* 5280 */;
 import noop from "module_19" /* 19 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 15895 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 15923 */;
 
 require = fn;
 function PreviewItem(dragRegion) {
@@ -132,7 +132,7 @@ function PreviewItem(dragRegion) {
   const memo = gestureState.useMemo(() => {
     if ("convert-after" === overState) {
       if (null != overNode) {
-        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "flex", name: "Array", color: "diversity", expanded: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004994993931151547, children: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005411243414434442 };
+        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "flex", name: "Array", color: "add", expanded: null, children: null };
         const items = [tmp2];
         element.children = items;
         return element;
@@ -285,12 +285,12 @@ function AnimatedItemPreview(cleanUp) {
   obj5.children = tmp12Result;
   return jsx(cleanUp(sharedValue[9]), { style: items, children: null });
 }
-const GuildsNodeType = fn(5745).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(15892).GUILD_ITEM_INSET_LEFT;
+const GuildsNodeType = fn(5750).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(15920).GUILD_ITEM_INSET_LEFT;
 const jsx = fn(21).jsx;
-let createStyles = fn(4829);
+let createStyles = fn(4836);
 let closure_8 = createStyles.createStyles({ dragPreview: { position: "absolute", left: 0 }, animatedPreviewStyle: { position: "absolute" }, dragPreviewHome: { right: 0 } });
-createStyles = fn(4829);
+createStyles = fn(4836);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { animatedPreviewStyleHome: null };
   const rect = { left: 0, right: 0, transformOrigin: null };
@@ -334,7 +334,7 @@ export default noop.memo(function GuildsBarDragPreview() {
       if (null != dragSpecs) {
         if (null != overSpecs) {
           const state = overSpecs.state;
-          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "function SkeletonCardTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}", scrollPosition: true, dragRegion: "/assets/design/components/Icon/native/redesign/generated/images", windowSize: 24, dropComplete: 24, listInsets: null };
+          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "\u05DE\u05D7\u05E8\u05D5\u05D6\u05EA JSON", scrollPosition: "f", dragRegion: "text-sm/normal", windowSize: "interactive-text-active", dropComplete: null, listInsets: "nitro_home" };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;
           let node;
@@ -353,7 +353,7 @@ export default noop.memo(function GuildsBarDragPreview() {
       }
       return null;
     }
-  }, _mod4449.shallow);
+  }, _mod4452.shallow);
   let tmp2 = null;
   if (null != tmp) {
     let obj = {};

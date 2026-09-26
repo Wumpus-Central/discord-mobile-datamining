@@ -1,22 +1,22 @@
-// === Module 17648: go_live/ApplicationStreamingManager ===
+// === Module 17678: go_live/ApplicationStreamingManager ===
 
-// Module 17648 (go_live/ApplicationStreamingManager)
+// Module 17678 (go_live/ApplicationStreamingManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
-import Timers from "Timers" /* 2039 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4881 */;
-import StreamActionCreators from "StreamActionCreators" /* 4971 */;
-import AVError from "AVError" /* 8867 */;
-import AVErrorContext from "AVErrorContext" /* 17628 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4851 */;
+import Timers from "Timers" /* 2040 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4888 */;
+import StreamActionCreators from "StreamActionCreators" /* 4978 */;
+import AVError from "AVError" /* 8875 */;
+import AVErrorContext from "AVErrorContext" /* 17658 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4858 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4750 */;
-import RTCRegionStore from "RTCRegionStore" /* 4879 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4868 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4754 */;
+import RTCRegionStore from "RTCRegionStore" /* 4886 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4875 */;
 import UserStore from "UserStore" /* 1372 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6534 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6539 */;
 
 require = fn;
 function updateRegion(encodeStreamKeyResult, preferredRegion) {
@@ -31,12 +31,12 @@ function updateRegion(encodeStreamKeyResult, preferredRegion) {
     StreamActionCreators.changeStreamRegion(encodeStreamKeyResult, preferredRegion);
   }
 }
-let Constants = fn(4871);
+let Constants = fn(4878);
 ({ GO_LIVE_NOTIFY_FRIENDS_MIN_MEMBER_COUNT, STREAM_NOTIFY_GUILD_MAX_SIZE } = Constants);
 Constants = fn(1074);
 ({ ApplicationStreamDeleteReasons: c10, ApplicationStreamStates: closure_11 } = Constants);
 const apply = fn(12);
-apply.debounce(fn(4971).notifyStreamStart, 1000);
+apply.debounce(fn(4978).notifyStreamStart, 1000);
 let closure_12 = {};
 let closure_13 = {};
 let closure_14 = 3 * DurationsDefault.Millis.MINUTE;
@@ -49,7 +49,7 @@ const prototype = function BaseApplicationStreamingManager() {
   require = applyArgumentsResult;
   applyArgumentsResult.handleStreamWatch = function handleStreamWatch(streamKey) {
     streamKey = streamKey.streamKey;
-    channel = channel.getChannel(streamKey(4881).decodeStreamKey(streamKey).channelId);
+    channel = channel.getChannel(streamKey(4888).decodeStreamKey(streamKey).channelId);
     if (channel != null) {
       const isGuildStageVoiceResult = channel.isGuildStageVoice();
     }
@@ -63,29 +63,29 @@ const prototype = function BaseApplicationStreamingManager() {
       if (!streamKey.allowMultiple) {
         const allActiveStreams = authStore.getAllActiveStreams();
         const item = allActiveStreams.forEach((ownerId) => {
-          const encodeStreamKeyResult = applyArgumentsResult(4881).encodeStreamKey(ownerId);
+          const encodeStreamKeyResult = applyArgumentsResult(4888).encodeStreamKey(ownerId);
           let tmp4 = ownerId.ownerId !== AuthenticationStore.getId();
           if (tmp4) {
             tmp4 = encodeStreamKeyResult !== streamKey;
           }
           if (tmp4) {
-            applyArgumentsResult(4971).stopStream(encodeStreamKeyResult, false);
-            const tmpResult = applyArgumentsResult(4971);
+            applyArgumentsResult(4978).stopStream(encodeStreamKeyResult, false);
+            const tmpResult = applyArgumentsResult(4978);
           }
-          const obj = applyArgumentsResult(4881);
+          const obj = applyArgumentsResult(4888);
         });
       }
     } else {
       let timeout = dependencyMap3[streamKey];
       if (timeout == null) {
-        timeout = new tmp3(2039).Timeout();
+        timeout = new tmp3(2040).Timeout();
       }
       dependencyMap3[streamKey] = timeout;
       timeout.start(isGuildStageVoiceResult ? closure_16 : closure_15, () => {
         DispatcherDefault.dispatch({ type: "STREAM_TIMED_OUT", streamKey: encodeStreamKeyResult });
       });
     }
-    let obj = streamKey(4881);
+    let obj = streamKey(4888);
     tmp3 = streamKey;
   };
   applyArgumentsResult.handleStreamStart = function handleStreamStart(channelId) {
@@ -124,8 +124,8 @@ const prototype = function BaseApplicationStreamingManager() {
         set.delete(item);
       }
     });
-    const obj2 = applyArgumentsResult(4881);
-    memberCount = memberCount.getMemberCount(applyArgumentsResult(4881).decodeStreamKey(streamKey).guildId);
+    const obj2 = applyArgumentsResult(4888);
+    memberCount = memberCount.getMemberCount(applyArgumentsResult(4888).decodeStreamKey(streamKey).guildId);
   };
   applyArgumentsResult.handleStreamUpdate = function handleStreamUpdate(arg0) {
     if (dependencyMap3[arg0.streamKey] != null) {
@@ -193,16 +193,16 @@ const prototype = function BaseApplicationStreamingManager() {
               if (null == authStore.getActiveStreamForUser(ownerId, channel.getGuildId())) {
                 const streamForUser = authStore.getStreamForUser(ownerId, channel.getGuildId());
                 if (null != streamForUser) {
-                  const encodeStreamKeyResult = applyArgumentsResult(4881).encodeStreamKey(streamForUser);
+                  const encodeStreamKeyResult = applyArgumentsResult(4888).encodeStreamKey(streamForUser);
                   if (encodeStreamKeyResult !== c17) {
                     const isStreamMarkedFullResult = authStore.isStreamMarkedFull(encodeStreamKeyResult);
                     if (!isStreamMarkedFullResult) {
                       c17 = encodeStreamKeyResult;
-                      applyArgumentsResult(4971).watchStream(streamForUser, { noFocus: true });
-                      const tmp2Result = applyArgumentsResult(4971);
+                      applyArgumentsResult(4978).watchStream(streamForUser, { noFocus: true });
+                      const tmp2Result = applyArgumentsResult(4978);
                     }
                   }
-                  let obj = applyArgumentsResult(4881);
+                  let obj = applyArgumentsResult(4888);
                 }
               }
             }
@@ -240,20 +240,20 @@ const prototype = function BaseApplicationStreamingManager() {
                   if (null == authStore.getActiveStreamForUser(userId, channel.getGuildId())) {
                     const streamForUser = authStore.getStreamForUser(userId, channel.getGuildId());
                     if (null != streamForUser) {
-                      const encodeStreamKeyResult = applyArgumentsResult(4881).encodeStreamKey(streamForUser);
+                      const encodeStreamKeyResult = applyArgumentsResult(4888).encodeStreamKey(streamForUser);
                       let tmp16 = encodeStreamKeyResult !== c17;
                       if (tmp16) {
                         const isStreamMarkedFullResult = authStore.isStreamMarkedFull(encodeStreamKeyResult);
                         let flag2 = !isStreamMarkedFullResult;
                         if (!isStreamMarkedFullResult) {
                           c17 = encodeStreamKeyResult;
-                          applyArgumentsResult(4971).watchStream(streamForUser, { noFocus: true });
+                          applyArgumentsResult(4978).watchStream(streamForUser, { noFocus: true });
                           flag2 = true;
-                          const tmp12Result = applyArgumentsResult(4971);
+                          const tmp12Result = applyArgumentsResult(4978);
                         }
                         tmp16 = flag2;
                       }
-                      const obj2 = applyArgumentsResult(4881);
+                      const obj2 = applyArgumentsResult(4888);
                     }
                   }
                 }
@@ -265,19 +265,19 @@ const prototype = function BaseApplicationStreamingManager() {
             if (activeStreamForUser.channelId === channelId) {
               if (!selfStream) {
                 if (activeStreamForUser.state !== constants.ENDED) {
-                  const encodeStreamKeyResult1 = applyArgumentsResult(4881).encodeStreamKey(activeStreamForUser);
+                  const encodeStreamKeyResult1 = applyArgumentsResult(4888).encodeStreamKey(activeStreamForUser);
                   let timeout = dependencyMap2[encodeStreamKeyResult1];
                   if (timeout == null) {
-                    timeout = new applyArgumentsResult(2039).Timeout();
+                    timeout = new applyArgumentsResult(2040).Timeout();
                   }
                   timeout.start(closure_2_14, () => closure_2_0(dependencyMap[11]).closeStream(encodeStreamKeyResult1, false));
                   dependencyMap2[encodeStreamKeyResult1] = timeout;
-                  const obj5 = applyArgumentsResult(4881);
+                  const obj5 = applyArgumentsResult(4888);
                 }
               }
               if (selfStream) {
                 if (activeStreamForUser.state === constants.ENDED) {
-                  const obj10 = applyArgumentsResult(4881);
+                  const obj10 = applyArgumentsResult(4888);
                   const obj11 = dependencyMap2[obj10.encodeStreamKey(obj10, activeStreamForUser)];
                   if (obj11 != null) {
                     obj11.stop();
@@ -286,10 +286,10 @@ const prototype = function BaseApplicationStreamingManager() {
                   const streamForUser1 = authStore.getStreamForUser(userId, guildId);
                   if (null != streamForUser1) {
                     if (!authStore.isStreamMarkedFull(tmp34Result.encodeStreamKey(streamForUser1))) {
-                      applyArgumentsResult(4971).watchStream(streamForUser1);
-                      const tmp34Result2 = applyArgumentsResult(4971);
+                      applyArgumentsResult(4978).watchStream(streamForUser1);
+                      const tmp34Result2 = applyArgumentsResult(4978);
                     }
-                    tmp34Result = applyArgumentsResult(4881);
+                    tmp34Result = applyArgumentsResult(4888);
                   }
                 }
               }
@@ -307,7 +307,7 @@ const prototype = function BaseApplicationStreamingManager() {
       channelId = currentUserActiveStream.channelId;
     }
     if (channelId === region.channelId) {
-      const encodeStreamKeyResult = applyArgumentsResult(4881).encodeStreamKey(currentUserActiveStream);
+      const encodeStreamKeyResult = applyArgumentsResult(4888).encodeStreamKey(currentUserActiveStream);
       if (region == null) {
         region = RTCRegionStore.getPreferredRegion();
       }
@@ -316,10 +316,10 @@ const prototype = function BaseApplicationStreamingManager() {
         tmp7 = region !== RTCRegionStore.getRegion(StreamRTCConnectionStore.getHostname(encodeStreamKeyResult));
       }
       if (tmp7) {
-        applyArgumentsResult(4971).changeStreamRegion(encodeStreamKeyResult, region);
-        const tmp3Result = applyArgumentsResult(4971);
+        applyArgumentsResult(4978).changeStreamRegion(encodeStreamKeyResult, region);
+        const tmp3Result = applyArgumentsResult(4978);
       }
-      const obj = applyArgumentsResult(4881);
+      const obj = applyArgumentsResult(4888);
     }
   };
   applyArgumentsResult.handleChannelUpdates = function handleChannelUpdates(channels) {
@@ -330,7 +330,7 @@ const prototype = function BaseApplicationStreamingManager() {
       const nextResult = iter.next();
       while (iter !== undefined) {
         if (currentUserActiveStream.channelId === nextResult.id) {
-          let obj = applyArgumentsResult(4881);
+          let obj = applyArgumentsResult(4888);
           let tmp11 = updateRegion(obj.encodeStreamKey(currentUserActiveStream), tmp6.rtcRegion);
         }
         continue;

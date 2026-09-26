@@ -1,9 +1,9 @@
-// === Module 14026: logs ===
+// === Module 14051: logs ===
 
-// Module 14026 (logs)
+// Module 14051 (logs)
 import LoggerDefault from "Logger" /* 3 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8765 */;
-import RPCHelpers from "RPCHelpers" /* 8767 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8773 */;
+import RPCHelpers from "RPCHelpers" /* 8775 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

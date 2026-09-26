@@ -1,17 +1,17 @@
-// === Module 15084: CopyClientInfoSetting ===
+// === Module 15112: CopyClientInfoSetting ===
 
-// Module 15084 (CopyClientInfoSetting)
+// Module 15112 (CopyClientInfoSetting)
 import util from "util" /* 1115 */;
-import ToastUtils from "ToastUtils" /* 4524 */;
-import CopyIcon from "CopyIcon" /* 4775 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
-import DeviceUtils from "DeviceUtils" /* 4808 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6565 */;
-import ClipboardUtils from "ClipboardUtils" /* 6605 */;
-import ActionSheet from "ActionSheet" /* 6613 */;
-import ActionSheetRow from "ActionSheetRow" /* 6615 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11253 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 10956 */;
+import ToastUtils from "ToastUtils" /* 4527 */;
+import CopyIcon from "CopyIcon" /* 4779 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
+import DeviceUtils from "DeviceUtils" /* 4812 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6570 */;
+import ClipboardUtils from "ClipboardUtils" /* 6610 */;
+import ActionSheet from "ActionSheet" /* 6618 */;
+import ActionSheetRow from "ActionSheetRow" /* 6620 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11267 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 10969 */;
 import ClientInfoUtils from "ClientInfoUtils" /* 1363 */;
 
 require = fn;
@@ -139,18 +139,18 @@ function ClientClientInfoActionSheet() {
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const Manifest = ClientInfoUtils.getConstants();
-const SettingBuilders = fn(10993);
+const SettingBuilders = fn(11006);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Na2lF9);
   },
   parent: null,
-  IconComponent: fn(5845).ClipboardListIcon,
+  IconComponent: fn(5850).ClipboardListIcon,
   onPress: function handleClientInfoPress() {
     ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: ClientClientInfoActionSheet }), "ClientClientInfoActionSheet");
   },
-  usePredicate: fn(2020).DeveloperMode.useSetting,
+  usePredicate: fn(2021).DeveloperMode.useSetting,
   withArrow: true
 });
 const size = fn(2);

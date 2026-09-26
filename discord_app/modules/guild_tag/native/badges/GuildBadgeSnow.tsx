@@ -1,8 +1,8 @@
-// === Module 13463: GuildBadgeSnow ===
+// === Module 13481: GuildBadgeSnow ===
 
-// Module 13463 (GuildBadgeSnow)
-import inlineStyles from "inlineStyles" /* 7901 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 13445 */;
+// Module 13481 (GuildBadgeSnow)
+import inlineStyles from "inlineStyles" /* 7909 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 13463 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

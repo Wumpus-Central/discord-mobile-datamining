@@ -1,12 +1,12 @@
-// === Module 8723: BotPermissions ===
+// === Module 8731: BotPermissions ===
 
-// Module 8723 (BotPermissions)
+// Module 8731 (BotPermissions)
 import nativeDefault from "native" /* 576 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import Stack_Stack from "Stack/Stack" /* 5272 */;
-import XSmallIcon from "XSmallIcon" /* 5987 */;
-import permissions from "permissions" /* 8518 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import Stack_Stack from "Stack/Stack" /* 5279 */;
+import XSmallIcon from "XSmallIcon" /* 5992 */;
+import permissions from "permissions" /* 8526 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { disabledPermissionIcon: null };
 let size = { width: 24, height: 24, flexGrow: 0, flexShrink: 0, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
 obj2.disabledPermissionIcon = size;

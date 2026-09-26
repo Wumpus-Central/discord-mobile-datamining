@@ -1,7 +1,7 @@
-// === Module 7690: VideoBackgroundProfileFetchExperiment ===
+// === Module 7698: VideoBackgroundProfileFetchExperiment ===
 
-// Module 7690 (VideoBackgroundProfileFetchExperiment)
-import ApexExperiment from "ApexExperiment" /* 1434 */;
+// Module 7698 (VideoBackgroundProfileFetchExperiment)
+import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-09-video-background-profile-fetch", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

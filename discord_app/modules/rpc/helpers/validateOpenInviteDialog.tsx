@@ -1,19 +1,19 @@
-// === Module 14018: validateOpenInviteDialog ===
+// === Module 14043: validateOpenInviteDialog ===
 
-// Module 14018 (validateOpenInviteDialog)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8493 */;
-import RPCErrorDefault from "RPCError" /* 8762 */;
-import canViewInviteModal from "canViewInviteModal" /* 9053 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14005 */;
-import FramesStore from "FramesStore" /* 8491 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4466 */;
+// Module 14043 (validateOpenInviteDialog)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8501 */;
+import RPCErrorDefault from "RPCError" /* 8770 */;
+import canViewInviteModal from "canViewInviteModal" /* 9064 */;
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14030 */;
+import FramesStore from "FramesStore" /* 8499 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
+import GuildStore from "GuildStore" /* 2067 */;
+import PermissionStore from "PermissionStore" /* 4469 */;
 
 require = fn;
-const TransportTypes = fn(4735).TransportTypes;
+const TransportTypes = fn(4739).TransportTypes;
 const RPCErrors = fn(1074).RPCErrors;
-const asLaunched = fn(8492).asLaunched;
+const asLaunched = fn(8500).asLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/validateOpenInviteDialog.tsx");
 
@@ -29,7 +29,7 @@ export const validateOpenInviteDialog = function validateOpenInviteDialog(socket
       const surface = tmp46.surface;
       const type = surface.type;
       if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
-        const obj3 = { frame: tmp46, channel: "Array", guild: "ao" };
+        const obj3 = { frame: tmp46, channel: "Array", guild: "isArray" };
         return obj3;
       } else {
         if (EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL !== type) {

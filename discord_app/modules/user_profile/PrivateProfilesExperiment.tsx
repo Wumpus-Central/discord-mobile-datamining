@@ -1,9 +1,9 @@
-// === Module 12632: PrivateProfilesExperiment ===
+// === Module 12649: PrivateProfilesExperiment ===
 
-// Module 12632 (PrivateProfilesExperiment)
-import PrivateProfilesStrictExperiment from "PrivateProfilesStrictExperiment" /* 12633 */;
-import PrivateProfilesStrictGbExperiment from "PrivateProfilesStrictGbExperiment" /* 12634 */;
-import ApexExperiment from "ApexExperiment" /* 1434 */;
+// Module 12649 (PrivateProfilesExperiment)
+import PrivateProfilesStrictExperiment from "PrivateProfilesStrictExperiment" /* 12650 */;
+import PrivateProfilesStrictGbExperiment from "PrivateProfilesStrictGbExperiment" /* 12651 */;
+import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-02-private-profiles", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

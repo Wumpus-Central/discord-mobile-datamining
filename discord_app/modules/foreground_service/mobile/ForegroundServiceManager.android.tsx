@@ -1,9 +1,9 @@
-// === Module 7170: ForegroundServiceManager ===
+// === Module 7175: ForegroundServiceManager ===
 
-// Module 7170 (ForegroundServiceManager)
+// Module 7175 (ForegroundServiceManager)
 import _mod17 from "module_17" /* 17 */;
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 7171 */;
-import LifecycleManager from "LifecycleManager" /* 1982 */;
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 7176 */;
+import LifecycleManager from "LifecycleManager" /* 1983 */;
 import size from "module_2" /* 2 */;
 
 let obj = importDefault;

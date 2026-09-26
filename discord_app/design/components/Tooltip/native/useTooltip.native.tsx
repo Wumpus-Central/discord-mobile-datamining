@@ -1,9 +1,9 @@
-// === Module 10579: useTooltip ===
+// === Module 10590: useTooltip ===
 
-// Module 10579 (useTooltip)
+// Module 10590 (useTooltip)
 import LoggerDefault from "Logger" /* 3 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1478 */;
-import AnimatedTooltip from "AnimatedTooltip" /* 10580 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1479 */;
+import AnimatedTooltip from "AnimatedTooltip" /* 10591 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -34,7 +34,7 @@ export const useTooltip = function useTooltip(ref, memo) {
   closure_129_0 = ref;
   closure_129_1 = ref;
   closure_129_2 = callback;
-  const tmp8 = context(1478)();
+  const tmp8 = context(1479)();
   closure_129_3 = tmp8;
   closure_129_4 = noop.useRef(tmp8);
   const context1 = noop.useContext(require("LayerContext").LayerContext);
@@ -55,8 +55,8 @@ export const useTooltip = function useTooltip(ref, memo) {
     memo = arg0;
     closure_1 = async function _measureHelper(arg0) {
       closure_129_0 = ref;
-      const measurements = memo(10584).getMeasurements(surfaceRef.surfaceRef, memo);
-      const items = [measurements, memo(10584).getMeasurements(closure_1, memo)];
+      const measurements = memo(10595).getMeasurements(surfaceRef.surfaceRef, memo);
+      const items = [measurements, memo(10595).getMeasurements(closure_1, memo)];
       await Promise.all(items);
       if (1 === tmp7) {
         c4 = 0;
@@ -129,8 +129,8 @@ export const useTooltipHelper = function useTooltipHelper(ref, targetRef, callba
     memo = arg0;
     closure_1 = async function _measureHelper(arg0) {
       closure_129_0 = ref;
-      const measurements = memo(10584).getMeasurements(surfaceRef.surfaceRef, memo);
-      const items = [measurements, memo(10584).getMeasurements(closure_1, memo)];
+      const measurements = memo(10595).getMeasurements(surfaceRef.surfaceRef, memo);
+      const items = [measurements, memo(10595).getMeasurements(closure_1, memo)];
       await Promise.all(items);
       if (1 === tmp7) {
         c4 = 0;

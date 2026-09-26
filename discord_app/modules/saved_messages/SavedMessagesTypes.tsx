@@ -1,7 +1,7 @@
-// === Module 7280: SavedMessagesTypes ===
+// === Module 7285: SavedMessagesTypes ===
 
-// Module 7280 (SavedMessagesTypes)
-import MessageRecordUtils from "MessageRecordUtils" /* 5051 */;
+// Module 7285 (SavedMessagesTypes)
+import MessageRecordUtils from "MessageRecordUtils" /* 5058 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/saved_messages/SavedMessagesTypes.tsx");

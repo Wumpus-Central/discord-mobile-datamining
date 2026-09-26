@@ -1,9 +1,9 @@
-// === Module 5398: AnnouncementsWarningIcon ===
+// === Module 5405: AnnouncementsWarningIcon ===
 
-// Module 5398 (AnnouncementsWarningIcon)
+// Module 5405 (AnnouncementsWarningIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4527 */;
-import _mod5346 from "module_5346" /* 5346 */;
+import BaseIconImage from "BaseIconImage" /* 4530 */;
+import _mod5353 from "module_5353" /* 5353 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const AnnouncementsWarningIcon = function AnnouncementsWarningIcon(color)
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5346, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5353, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

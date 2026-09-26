@@ -1,7 +1,7 @@
-// === Module 8770: WebViewWindowProxySocketFactory ===
+// === Module 8778: WebViewWindowProxySocketFactory ===
 
-// Module 8770 (WebViewWindowProxySocketFactory)
-import stripSensitiveLoggingDataDefault from "stripSensitiveLoggingData" /* 8759 */;
+// Module 8778 (WebViewWindowProxySocketFactory)
+import stripSensitiveLoggingDataDefault from "stripSensitiveLoggingData" /* 8767 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/rpc/native/server/transports/WebViewWindowProxySocketFactory.tsx");
@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/rpc/native/server/transports/
 export default function _default(logger) {
   logger = logger.logger;
   ({ source, postMessageToRPCClient, version, encoding, postClose } = logger);
-  return new logger(8771)({
+  return new logger(8779)({
     source,
     postMessageToRPCClient,
     version,

@@ -1,12 +1,12 @@
-// === Module 11905: ChatInputRightActions ===
+// === Module 11923: ChatInputRightActions ===
 
-// Module 11905 (ChatInputRightActions)
+// Module 11923 (ChatInputRightActions)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 4537 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4563 */;
-import ChatInputActionButtonGiftOrThreadDefault from "ChatInputActionButtonGiftOrThread" /* 11713 */;
-import ChatInputActionButtonTransitionItem from "ChatInputActionButtonTransitionItem" /* 11714 */;
-import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 11715 */;
+import native from "native" /* 4540 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4566 */;
+import ChatInputActionButtonGiftOrThreadDefault from "ChatInputActionButtonGiftOrThread" /* 11727 */;
+import ChatInputActionButtonTransitionItem from "ChatInputActionButtonTransitionItem" /* 11728 */;
+import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 11729 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,14 +21,14 @@ function LeftSlot(state) {
   obj2.style = items;
   const tmp = useChatInputFloatingBounceDefault({ visible: state !== native.TransitionStates.YEETED, initiallyVisible: state !== native.TransitionStates.ENTERED, enterDelayMs, onExitComplete: cleanup });
   const merged = Object.assign(ChatInputActionButtonTransitionItem.interactivityProps(isInteractive));
-  obj2.children = React5(ChatInputActionButtonGiftOrThreadDefault, { canStartThreads: false, channel, onPress, styleButton: "flex", shouldShowThread: "hatched_chick" });
+  obj2.children = React5(ChatInputActionButtonGiftOrThreadDefault, { canStartThreads: false, channel, onPress, styleButton: "flex", shouldShowThread: "face_with_hand_over_mouth" });
   return React5(ReanimatedRexportDefault.View, obj2);
 }
 const View = fn(17).View;
-const enterDelayMs = fn(11430).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+const enterDelayMs = fn(11444).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_9 = createStyles.createStyles(() => {
   const obj = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_GAP }, leftSlot: { alignItems: "center", justifyContent: "center" } };
   return obj;
@@ -38,10 +38,10 @@ const forwardRefResult = noop.forwardRef((channel, arg1) => {
   const onPressAction = channel.onPressAction;
   noop = undefined;
   ({ keyboardType, showKeyboardIcon, shouldShowGiftButton, onPressExpression } = channel);
-  const token = channel(4528).useToken(onPressAction(576).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
-  const obj = channel(4528);
+  const token = channel(4531).useToken(onPressAction(576).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
+  const obj = channel(4531);
   const tmp3 = onPressAction;
-  const sum = token + 2 * channel(4528).useToken(onPressAction(576).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
+  const sum = token + 2 * channel(4531).useToken(onPressAction(576).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
   dependencyMap = sum;
   const tmp6 = closure_9();
   _slicedToArray = tmp6;
@@ -65,15 +65,15 @@ const forwardRefResult = noop.forwardRef((channel, arg1) => {
       tmp15 = memo;
     }
     const obj4 = { item: tmp15, renderItem: tmp10 };
-    tmp14Result = closure_7(tmp(4537).TransitionItem, obj4);
+    tmp14Result = closure_7(tmp(4540).TransitionItem, obj4);
   }
   const items1 = [tmp14Result, ];
   const obj5 = { active: null, showKeyboardIcon: null, onPress: null };
-  const obj2 = channel(4528);
-  obj5.active = keyboardType === channel(1610).KeyboardTypes.EXPRESSION;
+  const obj2 = channel(4531);
+  obj5.active = keyboardType === channel(1611).KeyboardTypes.EXPRESSION;
   obj5.showKeyboardIcon = showKeyboardIcon;
   obj5.onPress = onPressExpression;
-  items1[1] = closure_7(tmp3(11642), obj5);
+  items1[1] = closure_7(tmp3(11656), obj5);
   obj3.children = items1;
   return closure_8(View, obj3);
 });

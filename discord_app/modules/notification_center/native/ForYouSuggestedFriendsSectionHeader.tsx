@@ -1,15 +1,15 @@
-// === Module 16051: ForYouSuggestedFriendsSectionHeader ===
+// === Module 16079: ForYouSuggestedFriendsSectionHeader ===
 
-// Module 16051 (ForYouSuggestedFriendsSectionHeader)
+// Module 16079 (ForYouSuggestedFriendsSectionHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4825 */;
+import Text_Text from "Text/Text" /* 4832 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { container: { borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: 12, marginBottom: 8, paddingHorizontal: 24, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, noDivider: { borderTopWidth: 0, marginTop: 0 }, text: null };
 const obj3 = { borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: 12, marginBottom: 8, paddingHorizontal: 24, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
 obj2.text = { marginTop: nativeDefault.space.PX_16 };

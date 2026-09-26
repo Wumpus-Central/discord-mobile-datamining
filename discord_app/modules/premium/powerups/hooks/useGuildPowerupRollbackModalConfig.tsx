@@ -1,13 +1,13 @@
-// === Module 11990: useGuildPowerupRollbackModalConfig ===
+// === Module 12008: useGuildPowerupRollbackModalConfig ===
 
-// Module 11990 (useGuildPowerupRollbackModalConfig)
+// Module 12008 (useGuildPowerupRollbackModalConfig)
 import util from "util" /* 1115 */;
-import dismissible_content from "dismissible_content" /* 2028 */;
-import _modDef2518 from "module_2518" /* 2518 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 11976 */;
+import dismissible_content from "dismissible_content" /* 2029 */;
+import _modDef2519 from "module_2519" /* 2519 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 11994 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4719 */;
+import GuildStore from "GuildStore" /* 2067 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4723 */;
 
 const require = globalThis.__r;
 
@@ -23,11 +23,11 @@ function getGuildThemeRollbackModalConfig(storeRemovalDate) {
       const intl = util.intl;
       const obj2 = { dateString: tmp3 };
       const _HermesInternal = HermesInternal;
-      obj.header = "" + storeRemovalDate.title + " " + intl.formatToPlainString(_modDef2518["6e2ry1"], obj2);
+      obj.header = "" + storeRemovalDate.title + " " + intl.formatToPlainString(_modDef2519["6e2ry1"], obj2);
       const intl2 = util.intl;
       const obj5 = { startDate: tmp3, endDate: tmp3, perkName: null, boostCount: null };
       ({ title: obj3.perkName, cost: obj3.boostCount } = storeRemovalDate);
-      const items = [intl2.formatToPlainString(_modDef2518.jd8fki, obj5)];
+      const items = [intl2.formatToPlainString(_modDef2519.jd8fki, obj5)];
       obj.bodies = items;
       return obj;
     }

@@ -1,18 +1,18 @@
-// === Module 14158: UserProfileAvatarDecorationEditButton ===
+// === Module 14183: UserProfileAvatarDecorationEditButton ===
 
-// Module 14158 (UserProfileAvatarDecorationEditButton)
+// Module 14183 (UserProfileAvatarDecorationEditButton)
 import nativeDefault from "native" /* 576 */;
-import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 7595 */;
+import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 7602 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 2107 */;
+import GuildMemberStore from "GuildMemberStore" /* 2108 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const COLLECTIBLES_PREVIEW_SIZE = fn(6624).COLLECTIBLES_PREVIEW_SIZE;
+const COLLECTIBLES_PREVIEW_SIZE = fn(6629).COLLECTIBLES_PREVIEW_SIZE;
 const NOOP = fn(1085).NOOP;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { previewContainer: null, noneIcon: null };
 let size = { position: "relative", height: COLLECTIBLES_PREVIEW_SIZE, width: COLLECTIBLES_PREVIEW_SIZE, justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.xs, overflow: "hidden" };
 obj2.previewContainer = size;

@@ -1,8 +1,8 @@
-// === Module 16350: VibegrationsTodoState ===
+// === Module 16378: VibegrationsTodoState ===
 
-// Module 16350 (VibegrationsTodoState)
-import VibegrationsChatStore from "VibegrationsChatStore" /* 12608 */;
-import VibegrationsTimelineTree from "VibegrationsTimelineTree" /* 16321 */;
+// Module 16378 (VibegrationsTodoState)
+import VibegrationsChatStore from "VibegrationsChatStore" /* 12625 */;
+import VibegrationsTimelineTree from "VibegrationsTimelineTree" /* 16349 */;
 import size from "module_2" /* 2 */;
 
 const turnSettled = VibegrationsChatStore.turnSettled;
@@ -16,6 +16,17 @@ export function todoMark(status, flag2) {
   }
   return str;
 }
+export const todoLabel = function todoLabel(activeForm, todoMarkResult) {
+  if ("in_progress" === todoMarkResult) {
+    if (null != activeForm.activeForm) {
+      if ("" !== activeForm.activeForm) {
+        let text = activeForm.activeForm;
+      }
+      return text;
+    }
+  }
+  text = activeForm.text;
+};
 export const checklistLive = function checklistLive(message) {
   const tmp = turnSettled(message);
   let tmp2 = !tmp;
@@ -24,8 +35,8 @@ export const checklistLive = function checklistLive(message) {
   }
   return tmp2;
 };
-export const unfinishedTodoCount = function unfinishedTodoCount(todos) {
-  return todos.filter((status) => "completed" !== status.status).length;
+export const unfinishedTodoCount = function unfinishedTodoCount(arr) {
+  return arr.filter((status) => "completed" !== status.status).length;
 };
 export const messageChecklist = function messageChecklist(role) {
   if ("assistant" !== role.role) {

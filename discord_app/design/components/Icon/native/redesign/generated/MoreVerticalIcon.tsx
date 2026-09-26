@@ -1,9 +1,9 @@
-// === Module 12506: MoreVerticalIcon ===
+// === Module 12523: MoreVerticalIcon ===
 
-// Module 12506 (MoreVerticalIcon)
+// Module 12523 (MoreVerticalIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4527 */;
-import _mod12507 from "module_12507" /* 12507 */;
+import BaseIconImage from "BaseIconImage" /* 4530 */;
+import _mod12524 from "module_12524" /* 12524 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const MoreVerticalIcon = function MoreVerticalIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12507, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12524, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

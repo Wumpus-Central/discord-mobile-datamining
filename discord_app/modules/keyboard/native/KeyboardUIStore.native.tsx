@@ -1,21 +1,21 @@
-// === Module 1482: KeyboardUIStore ===
+// === Module 1483: KeyboardUIStore ===
 
-// Module 1482 (KeyboardUIStore)
+// Module 1483 (KeyboardUIStore)
 import Storage5 from "Storage" /* 510 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1218 */;
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1481 */;
-import AppLauncherNativeConstants from "AppLauncherNativeConstants" /* 1483 */;
-import MediaKeyboardConstants from "MediaKeyboardConstants" /* 1608 */;
-import KeyboardTypes from "KeyboardTypes" /* 1610 */;
-import ChatInputFocused from "ChatInputFocused" /* 1611 */;
-import useSafeAreaInsets from "useSafeAreaInsets" /* 1612 */;
-import NativeSafeAreaInsetsModuleDefault from "NativeSafeAreaInsetsModule" /* 1624 */;
-import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1626 */;
-import KeyboardStateDebuggingDefault from "KeyboardStateDebugging" /* 1874 */;
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1482 */;
+import AppLauncherNativeConstants from "AppLauncherNativeConstants" /* 1484 */;
+import MediaKeyboardConstants from "MediaKeyboardConstants" /* 1609 */;
+import KeyboardTypes from "KeyboardTypes" /* 1611 */;
+import ChatInputFocused from "ChatInputFocused" /* 1612 */;
+import useSafeAreaInsets from "useSafeAreaInsets" /* 1613 */;
+import NativeSafeAreaInsetsModuleDefault from "NativeSafeAreaInsetsModule" /* 1625 */;
+import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1627 */;
+import KeyboardStateDebuggingDefault from "KeyboardStateDebugging" /* 1875 */;
 import PlatformUtils_mod from "PlatformUtils" /* 1364 */;
 import module_560 from "module_560" /* 560 */;
-import SafeAreaStore from "SafeAreaStore" /* 1613 */;
+import SafeAreaStore from "SafeAreaStore" /* 1614 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

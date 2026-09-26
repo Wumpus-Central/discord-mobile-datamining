@@ -1,15 +1,15 @@
-// === Module 16591: BadgeCustomizationProfileCoachmark ===
+// === Module 16620: BadgeCustomizationProfileCoachmark ===
 
-// Module 16591 (BadgeCustomizationProfileCoachmark)
+// Module 16620 (BadgeCustomizationProfileCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import native from "native" /* 4537 */;
+import BadgesCoachmarkRive from "BadgesCoachmarkRive" /* 4559 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
-const ContentDismissActionType = fn(2041).ContentDismissActionType;
+const ContentDismissActionType = fn(2042).ContentDismissActionType;
 const PX_64 = nativeDefault.space.PX_64;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/BadgeCustomizationProfileCoachmark.tsx");
@@ -24,10 +24,10 @@ export default function BadgeCustomizationProfileCoachmark(markAsDismissed) {
   let str2;
   const items = [str2];
   const stateFromStores = targetRef(504).useStateFromStores(items, () => visible(_undefined[9]).canUsePremiumProfileCustomization(str2.getCurrentUser()));
-  reducedMotion = reducedMotion.useContext(targetRef(4547).AccessibilityPreferencesContext).reducedMotion;
+  reducedMotion = reducedMotion.useContext(targetRef(4550).AccessibilityPreferencesContext).reducedMotion;
   dependencyMap = undefined;
-  const height = visible(1478)().height;
-  let rect = visible(1612)();
+  const height = visible(1479)().height;
+  let rect = visible(1613)();
   let obj = targetRef(504);
   let obj2 = reducedMotion;
   [rect2, c2] = stateFromStores(reducedMotion.useState(null), 2);
@@ -52,7 +52,7 @@ export default function BadgeCustomizationProfileCoachmark(markAsDismissed) {
       str = "top";
     }
     str2 = str;
-    tmpResult = tmp(16571);
+    tmpResult = tmp(16600);
   }
   const items2 = [stateFromStores, visible, str2, markAsDismissed, onTryItOut, reducedMotion.enabled];
   const memo = obj2.useMemo(() => {
@@ -64,7 +64,7 @@ export default function BadgeCustomizationProfileCoachmark(markAsDismissed) {
     obj.description = intl2.string(stateFromStores ? t.p82vky : t.IDh31t);
     obj.visible = targetRef;
     obj.position = str2;
-    const obj2 = { type: "rive", rive: native.BadgesCoachmarkRive, aspectRatio: "16/9", riveProps: null };
+    const obj2 = { type: "rive", rive: BadgesCoachmarkRive.BadgesCoachmarkRive, aspectRatio: "16/9", riveProps: null };
     const obj3 = { dataBinding: { on: targetRef, reducedMotion: reducedMotion.enabled } };
     obj2.riveProps = obj3;
     obj.graphic = obj2;
@@ -80,6 +80,6 @@ export default function BadgeCustomizationProfileCoachmark(markAsDismissed) {
     return obj;
   }, items2);
   const tmp4 = stateFromStores(reducedMotion.useState(null), 2);
-  const coachmark = targetRef(10578).useCoachmark(targetRef, memo);
+  const coachmark = targetRef(10589).useCoachmark(targetRef, memo);
   return null;
 };

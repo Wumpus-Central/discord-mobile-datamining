@@ -1,12 +1,12 @@
-// === Module 6584: useGetOrFetchApplications ===
+// === Module 6589: useGetOrFetchApplications ===
 
-// Module 6584 (useGetOrFetchApplications)
+// Module 6589 (useGetOrFetchApplications)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6579 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6584 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5056 */;
+import ApplicationStore from "ApplicationStore" /* 5063 */;
 
 const require = globalThis.__r;
 

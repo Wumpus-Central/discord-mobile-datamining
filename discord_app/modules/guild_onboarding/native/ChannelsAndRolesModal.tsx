@@ -1,14 +1,14 @@
-// === Module 11030: ChannelsAndRolesModal ===
+// === Module 11044: ChannelsAndRolesModal ===
 
-// Module 11030 (ChannelsAndRolesModal)
+// Module 11044 (ChannelsAndRolesModal)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import useGuildOnboardingAvailableDefault from "useGuildOnboardingAvailable" /* 6748 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10374 */;
+import useGuildOnboardingAvailableDefault from "useGuildOnboardingAvailable" /* 6753 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10385 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2066 */;
+import GuildStore from "GuildStore" /* 2067 */;
 
 require = fn;
 function ChannelsAndRolesScreen(guildId) {
@@ -69,10 +69,10 @@ function ChannelsAndRolesScreen(guildId) {
   obj2 = segmentedControlState;
 }
 const View = fn(17).View;
-const GuildOnboardingTab = fn(6517).GuildOnboardingTab;
+const GuildOnboardingTab = fn(6522).GuildOnboardingTab;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { screen: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, tabBar: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.tabBar = { paddingHorizontal: nativeDefault.space.PX_12, paddingTop: nativeDefault.space.PX_16 };

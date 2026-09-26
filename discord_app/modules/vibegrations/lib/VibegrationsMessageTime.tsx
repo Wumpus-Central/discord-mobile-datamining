@@ -1,6 +1,7 @@
-// === Module 16312: VibegrationsMessageTime ===
+// === Module 16340: VibegrationsMessageTime ===
 
-// Module 16312 (VibegrationsMessageTime)
+// Module 16340 (VibegrationsMessageTime)
+import DateUtils from "DateUtils" /* 4512 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsMessageTime.tsx");
@@ -14,11 +15,11 @@ export const describeMessageTime = function describeMessageTime(at) {
   if (isFiniteResult) {
     isFiniteResult = at > 0;
   }
-  let toLocaleTimeStringResult = null;
+  let calendarFormatResult = null;
   if (isFiniteResult) {
     const _Date = Date;
     const date = new Date(at);
-    toLocaleTimeStringResult = date.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
+    calendarFormatResult = DateUtils.calendarFormat(date, true);
   }
-  return toLocaleTimeStringResult;
+  return calendarFormatResult;
 };

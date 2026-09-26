@@ -1,6 +1,6 @@
-// === Module 17363: IntegrationExpireGracePeriodTypes ===
+// === Module 17393: IntegrationExpireGracePeriodTypes ===
 
-// Module 17363 (IntegrationExpireGracePeriodTypes)
+// Module 17393 (IntegrationExpireGracePeriodTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/IntegrationExpireGracePeriodTypes.tsx");

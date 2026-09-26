@@ -1,12 +1,12 @@
-// === Module 10424: useInappropriateConversationWarningsForChannel ===
+// === Module 10435: useInappropriateConversationWarningsForChannel ===
 
-// Module 10424 (useInappropriateConversationWarningsForChannel)
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10365 */;
+// Module 10435 (useInappropriateConversationWarningsForChannel)
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10376 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const SafetyWarningTypes = fn(10365).SafetyWarningTypes;
+const SafetyWarningTypes = fn(10376).SafetyWarningTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationWarningsForChannel.tsx");
 

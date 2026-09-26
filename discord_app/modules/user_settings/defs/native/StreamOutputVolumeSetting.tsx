@@ -1,24 +1,24 @@
-// === Module 14771: StreamOutputVolumeSetting ===
+// === Module 14799: StreamOutputVolumeSetting ===
 
-// Module 14771 (StreamOutputVolumeSetting)
+// Module 14799 (StreamOutputVolumeSetting)
 import _modDef38 from "module_38" /* 38 */;
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4884 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9093 */;
-import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 9426 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4851 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4891 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9104 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 9437 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4858 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 1992 */;
+import MediaEngineStore from "MediaEngineStore" /* 1993 */;
 
 require = fn;
-const SettingBuilders = fn(10993);
+const SettingBuilders = fn(11006);
 const volumeSlider = SettingBuilders.createVolumeSlider({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.pEAl4b);
   },
-  parent: fn(7412).MobileUserSettings.VOICE,
+  parent: fn(7417).MobileUserSettings.VOICE,
   maximum: 200,
   useValue: function useStreamVolumeSettingValue() {
     let items = [ApplicationStreamingStore, AuthenticationStore, MediaEngineStore];

@@ -1,24 +1,24 @@
-// === Module 14829: SyncThemeSetting ===
+// === Module 14857: SyncThemeSetting ===
 
-// Module 14829 (SyncThemeSetting)
+// Module 14857 (SyncThemeSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 8651 */;
-import actions_AnalyticsTrackingActionCreators from "actions/AnalyticsTrackingActionCreators" /* 14830 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4650 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 8659 */;
+import actions_AnalyticsTrackingActionCreators from "actions/AnalyticsTrackingActionCreators" /* 14858 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4653 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1183 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
 
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const SettingBuilders = fn(10993);
+const SettingBuilders = fn(11006);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["3340dY"]);
   },
-  parent: fn(7412).MobileUserSettings.APPEARANCE,
+  parent: fn(7417).MobileUserSettings.APPEARANCE,
   useIsDisabled: function useSyncThemeDisabled() {
     const items = [ThemeStore];
     return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());

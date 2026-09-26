@@ -1,12 +1,12 @@
-// === Module 16837: panel/LeaveActivityButton ===
+// === Module 16866: panel/LeaveActivityButton ===
 
-// Module 16837 (panel/LeaveActivityButton)
-import FramesNativeManagerDefault from "FramesNativeManager" /* 8743 */;
-import LeaveActivityButton from "LeaveActivityButton" /* 16827 */;
+// Module 16866 (panel/LeaveActivityButton)
+import FramesNativeManagerDefault from "FramesNativeManager" /* 8751 */;
+import LeaveActivityButton from "LeaveActivityButton" /* 16856 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ActivityPanelModes = fn(8494).ActivityPanelModes;
+const ActivityPanelModes = fn(8502).ActivityPanelModes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/LeaveActivityButton.tsx");

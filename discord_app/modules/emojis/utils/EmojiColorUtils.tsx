@@ -1,10 +1,10 @@
-// === Module 7394: EmojiColorUtils ===
+// === Module 7399: EmojiColorUtils ===
 
-// Module 7394 (EmojiColorUtils)
+// Module 7399 (EmojiColorUtils)
 import _modDef672 from "module_672" /* 672 */;
-import ColorUtils from "ColorUtils" /* 4680 */;
-import utils_ColorDefault from "utils/Color" /* 4681 */;
-import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 7197 */;
+import ColorUtils from "ColorUtils" /* 4683 */;
+import utils_ColorDefault from "utils/Color" /* 4684 */;
+import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 7202 */;
 import size from "module_2" /* 2 */;
 
 function buildPlatformedThemedEmojiColorPalette(shouldProcessMobileColors) {

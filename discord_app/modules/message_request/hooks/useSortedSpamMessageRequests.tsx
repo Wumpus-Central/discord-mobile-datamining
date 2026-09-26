@@ -1,10 +1,10 @@
-// === Module 16682: useSortedSpamMessageRequests ===
+// === Module 16711: useSortedSpamMessageRequests ===
 
-// Module 16682 (useSortedSpamMessageRequests)
+// Module 16711 (useSortedSpamMessageRequests)
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
 import UserStore from "UserStore" /* 1372 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6636 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6641 */;
 
 const require = fn;
 const size = fn(2);

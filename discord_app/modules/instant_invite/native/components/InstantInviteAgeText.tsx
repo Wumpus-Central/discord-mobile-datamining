@@ -1,21 +1,21 @@
-// === Module 9335: InstantInviteAgeText ===
+// === Module 9346: InstantInviteAgeText ===
 
-// Module 9335 (InstantInviteAgeText)
+// Module 9346 (InstantInviteAgeText)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import Pressables from "Pressables" /* 5428 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6396 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9264 */;
-import InstantInviteUtils from "InstantInviteUtils" /* 9266 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import Pressables from "Pressables" /* 5435 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6401 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9275 */;
+import InstantInviteUtils from "InstantInviteUtils" /* 9277 */;
 import noop from "module_19" /* 19 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 9265 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 9276 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: closure_4, jsx: hasOwnProperty } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_6 = createStyles.createStyles({ inviteAgeContainer: { flexDirection: "row", alignItems: "center", flexWrap: "wrap" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/native/components/InstantInviteAgeText.tsx");

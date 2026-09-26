@@ -1,8 +1,8 @@
-// === Module 11374: openAccountStanding ===
+// === Module 11388: openAccountStanding ===
 
-// Module 11374 (openAccountStanding)
+// Module 11388 (openAccountStanding)
 import Constants from "Constants" /* 1074 */;
-import openUserSettings from "openUserSettings" /* 6795 */;
+import openUserSettings from "openUserSettings" /* 6800 */;
 import size from "module_2" /* 2 */;
 
 const UserSettingsSections = Constants.UserSettingsSections;

@@ -1,25 +1,25 @@
-// === Module 7175: PollsUtils ===
+// === Module 7180: PollsUtils ===
 
-// Module 7175 (PollsUtils)
+// Module 7180 (PollsUtils)
 import DurationsDefault from "Durations" /* 1091 */;
 import util from "util" /* 1115 */;
 import v1 from "v1" /* 1255 */;
-import utils_StringUtils from "utils/StringUtils" /* 2011 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4981 */;
-import useMessageAuthor from "useMessageAuthor" /* 5076 */;
-import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 6637 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import MessageReactionsStore from "MessageReactionsStore" /* 7176 */;
-import MessageStore from "MessageStore" /* 5049 */;
-import PermissionStore from "PermissionStore" /* 4466 */;
-import RelationshipStore from "RelationshipStore" /* 4476 */;
+import utils_StringUtils from "utils/StringUtils" /* 2012 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4988 */;
+import useMessageAuthor from "useMessageAuthor" /* 5083 */;
+import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 6642 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
+import MessageReactionsStore from "MessageReactionsStore" /* 7181 */;
+import MessageStore from "MessageStore" /* 5056 */;
+import PermissionStore from "PermissionStore" /* 4469 */;
+import RelationshipStore from "RelationshipStore" /* 4479 */;
 
 const require = globalThis.__r;
 
 require = fn;
 function getSampleOfVoterUsernamesForAnswer(message, id) {
   const channelId = message.getChannelId();
-  const reactions = MessageReactionsStore.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(7177).ReactionTypes.VOTE);
+  const reactions = MessageReactionsStore.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(7182).ReactionTypes.VOTE);
   channel = ChannelStore.getChannel(channelId);
   let guildId = null;
   if (null != channel) {
@@ -94,7 +94,7 @@ function formatVoterTooltipText(arr, arg1) {
     return intl.formatToPlainString(util.t.yVX6kE, obj);
   }
 }
-const PollsConstants = fn(7243);
+const PollsConstants = fn(7248);
 ({ POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS: closure_8, VOTES_TOOLTIP_MAX_USERS: closure_9 } = PollsConstants);
 const Constants = fn(1074);
 ({ ChannelTypesSets: c10, Permissions: closure_11 } = Constants);
@@ -102,7 +102,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/PollsUtils.tsx");
 
 export const generateEmptyPollAnswer = function generateEmptyPollAnswer() {
-  const obj = { text: "Array", image: "ao", localCreationAnswerId: v1.v4() };
+  const obj = { text: "Array", image: "paddingHorizontal", localCreationAnswerId: v1.v4() };
   return obj;
 };
 export const generateLocalCreationAnswerId = function generateLocalCreationAnswerId() {

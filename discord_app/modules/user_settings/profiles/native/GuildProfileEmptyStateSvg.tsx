@@ -1,7 +1,7 @@
-// === Module 14183: GuildProfileEmptyStateSvg ===
+// === Module 14208: GuildProfileEmptyStateSvg ===
 
-// Module 14183 (GuildProfileEmptyStateSvg)
-import inlineStyles from "inlineStyles" /* 7901 */;
+// Module 14208 (GuildProfileEmptyStateSvg)
+import inlineStyles from "inlineStyles" /* 7909 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;

@@ -1,56 +1,52 @@
-// === Module 16627: ChannelSettingsIntegrationsOverview ===
+// === Module 16656: ChannelSettingsIntegrationsOverview ===
 
-// Module 16627 (ChannelSettingsIntegrationsOverview)
+// Module 16656 (ChannelSettingsIntegrationsOverview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import useNavigation from "useNavigation" /* 1484 */;
-import Stack_Stack from "Stack/Stack" /* 5272 */;
-import TableRow from "TableRow" /* 5912 */;
-import TableRowGroup from "TableRowGroup" /* 5994 */;
-import Form from "Form" /* 8045 */;
-import WebhookIcon from "WebhookIcon" /* 16520 */;
-import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 16628 */;
+import useNavigation from "useNavigation" /* 1485 */;
+import Stack_Stack from "Stack/Stack" /* 5279 */;
+import TableRow from "TableRow" /* 5917 */;
+import TableRowGroup from "TableRowGroup" /* 5999 */;
+import Form from "Form" /* 8053 */;
+import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 9023 */;
+import WebhookIcon from "WebhookIcon" /* 16549 */;
+import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 16657 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
 
 require = fn;
 function LinkedLobbyFormSection(channel) {
   channel = channel.channel;
-  importDefault = channel(1484).useNavigation();
-  const obj = channel(1484);
+  importDefault = channel(1485).useNavigation();
+  const obj = channel(1485);
   const linkedLobby = channel.linkedLobby;
   let application_id;
   if (linkedLobby != null) {
     application_id = linkedLobby.application_id;
   }
-  const getOrFetchApplication = channel(6584).useGetOrFetchApplication(application_id);
+  const getOrFetchApplication = channel(6589).useGetOrFetchApplication(application_id);
   let tmp5 = null;
   if (null != getOrFetchApplication) {
     const obj3 = { title: null, hasIcons: true, children: null };
     const intl = tmp(1115).intl;
     obj3.title = intl.string(tmp(1115).t.oAvIAg);
     const obj4 = { label: getOrFetchApplication.name, icon: null, arrow: true, onPress: null };
-    const obj5 = { source: null, size: null };
-    ({ id: obj7.id, icon: obj7.icon } = getOrFetchApplication);
-    obj5.source = AvatarUtilsDefault.getApplicationIconSource({ id: null, icon: null });
-    obj5.size = tmp(1177).AvatarSizes.REFRESH_MEDIUM_32;
-    obj4.icon = closure_6(tmp(1177).Avatar, obj5);
+    const obj5 = { application: getOrFetchApplication };
+    obj4.icon = closure_6(TableRowApplicationIconDefault, obj5);
     obj4.onPress = function onPress() {
       closure_1.push(ChannelSettingsSections.EDIT_LINKED_LOBBY, { channel, numScreensToPop: 1 });
     };
-    obj3.children = closure_6(tmp(5912).TableRow, obj4);
-    tmp5 = closure_6(tmp(5994).TableRowGroup, obj3);
-    const obj11 = { id: null, icon: null };
+    obj3.children = closure_6(tmp(5917).TableRow, obj4);
+    tmp5 = closure_6(tmp(5999).TableRowGroup, obj3);
   }
   return tmp5;
 }
-fn(2048).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
+fn(2049).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
 const ChannelSettingsSections = fn(1074).ChannelSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 const obj2 = { screenContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: nativeDefault.space.PX_16 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

@@ -1,19 +1,19 @@
-// === Module 6718: ForumActivePostStore ===
+// === Module 6723: ForumActivePostStore ===
 
-// Module 6718 (ForumActivePostStore)
+// Module 6723 (ForumActivePostStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ThreadSortOrder from "ThreadSortOrder" /* 2053 */;
-import ThreadSearchTagSetting from "ThreadSearchTagSetting" /* 2055 */;
-import SetUtils from "SetUtils" /* 2061 */;
-import ForumUtils from "ForumUtils" /* 6720 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 5814 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 6719 */;
+import ThreadSortOrder from "ThreadSortOrder" /* 2054 */;
+import ThreadSearchTagSetting from "ThreadSearchTagSetting" /* 2056 */;
+import SetUtils from "SetUtils" /* 2062 */;
+import ForumUtils from "ForumUtils" /* 6725 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 5819 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 6724 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import ReadStateStore from "ReadStateStore" /* 4844 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
+import ReadStateStore from "ReadStateStore" /* 4851 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
 import apply_mod from "module_12" /* 12 */;
 
 require = fn;
@@ -82,7 +82,7 @@ function rebuildState(refreshThreadIds) {
       refreshThreadIds1 = sortThreadIds;
     }
     if (refreshThreadIds1) {
-      LATEST_ACTIVITY = LATEST_ACTIVITY(2053).ThreadSortOrder.LATEST_ACTIVITY;
+      LATEST_ACTIVITY = LATEST_ACTIVITY(2054).ThreadSortOrder.LATEST_ACTIVITY;
       closure_21 = apply.chain(closure_19).sort((id, id) => {
         let compare = dependencyMap;
         let num = -1;
@@ -109,7 +109,7 @@ function rebuildState(refreshThreadIds) {
         return num;
       });
       const chainResult = apply.chain(closure_19);
-      const CREATION_DATE = LATEST_ACTIVITY(2053).ThreadSortOrder.CREATION_DATE;
+      const CREATION_DATE = LATEST_ACTIVITY(2054).ThreadSortOrder.CREATION_DATE;
       closure_20 = apply.chain(closure_19).sort((id, id) => {
         let compare = dependencyMap;
         let num = -1;
@@ -137,7 +137,7 @@ function rebuildState(refreshThreadIds) {
       });
       const chainResult1 = apply.chain(closure_19);
     }
-    const valueResult = LATEST_ACTIVITY === LATEST_ACTIVITY(2053).ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20.value();
+    const valueResult = LATEST_ACTIVITY === LATEST_ACTIVITY(2054).ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20.value();
     let found = valueResult;
     if (0 !== set.size) {
       closure_130_0 = set;
@@ -183,15 +183,15 @@ function rebuildState(refreshThreadIds) {
       tmp33 = found1;
     }
     found1 = tmp33;
-    const iter = LATEST_ACTIVITY === LATEST_ACTIVITY(2053).ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20;
+    const iter = LATEST_ACTIVITY === LATEST_ACTIVITY(2054).ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20;
   }
 }
 let items = [];
 let id = null;
 let c12 = null;
 let set = new Set();
-let LATEST_ACTIVITY = fn(2053).ThreadSortOrder.LATEST_ACTIVITY;
-let MATCH_SOME = fn(2055).ThreadSearchTagSetting.MATCH_SOME;
+let LATEST_ACTIVITY = fn(2054).ThreadSortOrder.LATEST_ACTIVITY;
+let MATCH_SOME = fn(2056).ThreadSearchTagSetting.MATCH_SOME;
 let closure_16 = 0;
 let closure_17 = [];
 let c18 = false;

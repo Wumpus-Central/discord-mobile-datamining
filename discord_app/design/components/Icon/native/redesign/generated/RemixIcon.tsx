@@ -1,9 +1,9 @@
-// === Module 16232: RemixIcon ===
+// === Module 16260: RemixIcon ===
 
-// Module 16232 (RemixIcon)
+// Module 16260 (RemixIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4527 */;
-import _mod16233 from "module_16233" /* 16233 */;
+import BaseIconImage from "BaseIconImage" /* 4530 */;
+import _mod16261 from "module_16261" /* 16261 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const RemixIcon = function RemixIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16233, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16261, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

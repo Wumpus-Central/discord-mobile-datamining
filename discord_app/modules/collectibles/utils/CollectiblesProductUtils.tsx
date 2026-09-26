@@ -1,11 +1,11 @@
-// === Module 6968: CollectiblesProductUtils ===
+// === Module 6973: CollectiblesProductUtils ===
 
-// Module 6968 (CollectiblesProductUtils)
-import CollectiblesItemType from "CollectiblesItemType" /* 1973 */;
+// Module 6973 (CollectiblesProductUtils)
+import CollectiblesItemType from "CollectiblesItemType" /* 1974 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const isProfileEffectRecord = fn(6963).isProfileEffectRecord;
+const isProfileEffectRecord = fn(6968).isProfileEffectRecord;
 const Constants = fn(1074);
 ({ CurrencyCodes: closure_4, PriceSetAssignmentPurchaseTypes: hasOwnProperty } = Constants);
 const size = fn(2);

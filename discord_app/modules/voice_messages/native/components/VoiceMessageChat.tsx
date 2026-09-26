@@ -1,14 +1,14 @@
-// === Module 12126: VoiceMessageChat ===
+// === Module 12144: VoiceMessageChat ===
 
-// Module 12126 (VoiceMessageChat)
+// Module 12144 (VoiceMessageChat)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4563 */;
-import timing from "timing" /* 4830 */;
-import spring from "spring" /* 5273 */;
-import utils_TimeUtils from "utils/TimeUtils" /* 5475 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4566 */;
+import timing from "timing" /* 4837 */;
+import spring from "spring" /* 5280 */;
+import utils_TimeUtils from "utils/TimeUtils" /* 5481 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4821 */;
+import AccessibilityStore from "AccessibilityStore" /* 4825 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
 
@@ -184,13 +184,13 @@ function Duration(animationValue) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator } = get_ActivityIndicator);
-let useVoiceMessagesUIStore = fn(11428).useVoiceMessagesUIStore;
-const VoiceMessageConstants = fn(11429);
+let useVoiceMessagesUIStore = fn(11442).useVoiceMessagesUIStore;
+const VoiceMessageConstants = fn(11443);
 ({ VOICE_RECORDING_MAX_DURATION_MILLIS: closure_8, VOICE_RECORDING_MAX_DURATION_OFFSET: closure_9, VOICE_RECORDING_REALLY_WARN_DURATION_MILLIS: c10, VOICE_RECORDING_WARN_DURATION_MILLIS: closure_11, WAVEFORM_WAVE_MAX_VALUE: closure_12 } = VoiceMessageConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = ReanimatedRexport.createAnimatedComponent(ActivityIndicator);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj = { container: { height: "100%", flexDirection: "row", alignItems: "center", paddingVertical: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_VERTICAL, paddingHorizontal: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_PILL_PADDING_HORIZONTAL, gap: nativeDefault.modules.mobile.VOICE_MESSAGE_CHAT_GAP, borderRadius: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_PILL_BORDER_RADIUS, backgroundColor: nativeDefault.colors.MOBILE_CHATINPUT_BACKGROUND_DEFAULT, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_ACTIVE }, loading: { position: "absolute", left: 12 }, dot: null, dotDismissed: null, waveformContainer: null, waveformBar: null, durationContainer: null, duration: null };
 let size = { height: 6, width: 6, backgroundColor: nativeDefault.unsafe_rawColors.RED_400, borderRadius: nativeDefault.radii.round };
 obj.dot = size;

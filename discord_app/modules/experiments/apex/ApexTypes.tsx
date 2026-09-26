@@ -1,6 +1,6 @@
-// === Module 1437: apex/ApexTypes ===
+// === Module 1438: apex/ApexTypes ===
 
-// Module 1437 (apex/ApexTypes)
+// Module 1438 (apex/ApexTypes)
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

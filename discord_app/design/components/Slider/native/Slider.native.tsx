@@ -1,16 +1,16 @@
-// === Module 13714: Slider ===
+// === Module 13998: Slider ===
 
-// Module 13714 (Slider)
+// Module 13998 (Slider)
 import nativeDefault from "native" /* 576 */;
-import HapticUtils from "HapticUtils" /* 4797 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4798 */;
+import HapticUtils from "HapticUtils" /* 4801 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4802 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { container: { flex: 1, flexDirection: "row", alignItems: "center" }, slider: { flex: 1 }, minimumTrackTintColor: { backgroundColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED }, maximumTrackTintColor: null, startIcon: null, endIcon: null };
 let obj3 = { backgroundColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
 obj2.maximumTrackTintColor = { backgroundColor: nativeDefault.colors.SLIDER_TRACK_BACKGROUND };
@@ -52,7 +52,7 @@ export const Slider = function Slider(step) {
   obj3.minimumTrackTintColor = tmp2.minimumTrackTintColor.backgroundColor;
   obj3.maximumTrackTintColor = tmp2.maximumTrackTintColor.backgroundColor;
   obj3.tapToSeek = true;
-  items1[1] = closure_5(step(7718), obj3);
+  items1[1] = closure_5(step(7726), obj3);
   let tmp8Result = null;
   if (null != endIcon) {
     const obj4 = { style: tmp2.endIcon, children: endIcon };

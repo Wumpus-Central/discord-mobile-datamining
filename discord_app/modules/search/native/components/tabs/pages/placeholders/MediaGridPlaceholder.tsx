@@ -1,25 +1,25 @@
-// === Module 16430: MediaGridPlaceholder ===
+// === Module 16459: MediaGridPlaceholder ===
 
-// Module 16430 (MediaGridPlaceholder)
+// Module 16459 (MediaGridPlaceholder)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4563 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 11807 */;
-import usePlaceholderStyles from "usePlaceholderStyles" /* 16429 */;
-import GridItemPlaceholderDefault from "GridItemPlaceholder" /* 16431 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4566 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 11821 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 16458 */;
+import GridItemPlaceholderDefault from "GridItemPlaceholder" /* 16460 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(7298);
+const SearchConstants = fn(7303);
 ({ MEDIA_NUM_COLUMNS: hasOwnProperty, MEDIA_ITEM_GAP_WIDTH: metroRequire, SEARCH_LIST_SECTION_TOP_PADDING, SEARCH_LIST_HORIZONTAL_PADDING } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { container: { zIndex: 1, position: "absolute", width: "100%" }, recentsContainer: { position: "relative", paddingHorizontal: SEARCH_LIST_HORIZONTAL_PADDING }, row: { flexDirection: "row" }, section: { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", textTransform: "none", paddingTop: SEARCH_LIST_SECTION_TOP_PADDING, paddingBottom: 8 }, sectionItem: { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BORDER_SUBTLE }, sectionText: { opacity: 0 } };
 let closure_9 = createStyles.createStyles(obj2);
 let size = fn(2);
@@ -87,5 +87,5 @@ export const RecentsMediaGridPlaceholder = function RecentsMediaGridPlaceholder(
     })
   ];
   obj2.children = items4;
-  return closure_8(numRows(4563).View, obj2);
+  return closure_8(numRows(4566).View, obj2);
 };

@@ -1,6 +1,6 @@
-// === Module 13511: SKUListing ===
+// === Module 13529: SKUListing ===
 
-// Module 13511 (SKUListing)
+// Module 13529 (SKUListing)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/SKUListing.tsx");

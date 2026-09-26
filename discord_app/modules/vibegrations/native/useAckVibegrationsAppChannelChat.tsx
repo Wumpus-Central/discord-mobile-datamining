@@ -1,11 +1,11 @@
-// === Module 12813: useAckVibegrationsAppChannelChat ===
+// === Module 12830: useAckVibegrationsAppChannelChat ===
 
-// Module 12813 (useAckVibegrationsAppChannelChat)
+// Module 12830 (useAckVibegrationsAppChannelChat)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import noop from "module_19" /* 19 */;
-import MessageStore from "MessageStore" /* 5049 */;
-import ReadStateStore from "ReadStateStore" /* 4844 */;
-import AppStateStore from "AppStateStore" /* 1979 */;
+import MessageStore from "MessageStore" /* 5056 */;
+import ReadStateStore from "ReadStateStore" /* 4851 */;
+import AppStateStore from "AppStateStore" /* 1980 */;
 
 const require = globalThis.__r;
 

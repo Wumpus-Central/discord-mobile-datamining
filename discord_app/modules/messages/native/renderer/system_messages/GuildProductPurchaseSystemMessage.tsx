@@ -1,16 +1,16 @@
-// === Module 7462: GuildProductPurchaseSystemMessage ===
+// === Module 7468: GuildProductPurchaseSystemMessage ===
 
-// Module 7462 (GuildProductPurchaseSystemMessage)
+// Module 7468 (GuildProductPurchaseSystemMessage)
 import util from "util" /* 1115 */;
 import AvatarUtils from "AvatarUtils" /* 1397 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1400 */;
-import useMessageAuthor from "useMessageAuthor" /* 5076 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7397 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7399 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7401 */;
-import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 7431 */;
-import MessageRecord from "MessageRecord" /* 4477 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
+import useMessageAuthor from "useMessageAuthor" /* 5083 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7402 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7404 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7406 */;
+import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 7436 */;
+import MessageRecord from "MessageRecord" /* 4480 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
 
 require = fn;
 const MessageTypes = fn(1074).MessageTypes;

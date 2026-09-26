@@ -1,36 +1,36 @@
-// === Module 10076: HorizontalAutocomplete ===
+// === Module 10087: HorizontalAutocomplete ===
 
-// Module 10076 (HorizontalAutocomplete)
+// Module 10087 (HorizontalAutocomplete)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4563 */;
-import UserUtilsDefault from "UserUtils" /* 4675 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import timing from "timing" /* 4830 */;
-import useMountEffectDefault from "useMountEffect" /* 5291 */;
-import FastImageDefault from "FastImage" /* 5894 */;
-import RoleIconUtils from "RoleIconUtils" /* 6603 */;
-import RoleIconDefault from "RoleIcon" /* 6621 */;
-import _modDef7573 from "module_7573" /* 7573 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4566 */;
+import UserUtilsDefault from "UserUtils" /* 4678 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import timing from "timing" /* 4837 */;
+import useMountEffectDefault from "useMountEffect" /* 5298 */;
+import FastImageDefault from "FastImage" /* 5899 */;
+import RoleIconUtils from "RoleIconUtils" /* 6608 */;
+import RoleIconDefault from "RoleIcon" /* 6626 */;
+import _modDef7581 from "module_7581" /* 7581 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4821 */;
-import GuildRoleStore from "GuildRoleStore" /* 2101 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import RelationshipStore from "RelationshipStore" /* 4476 */;
+import AccessibilityStore from "AccessibilityStore" /* 4825 */;
+import GuildRoleStore from "GuildRoleStore" /* 2102 */;
+import GuildStore from "GuildStore" /* 2067 */;
+import RelationshipStore from "RelationshipStore" /* 4479 */;
 import UserStore from "UserStore" /* 1372 */;
-import TextStyles from "TextStyles" /* 5831 */;
+import TextStyles from "TextStyles" /* 5836 */;
 
 require = fn;
 function HorizontalAutocompleteOption(arg0) {
   let sharedValue;
   ({ children, onPress } = arg0);
   const tmp = closure_13();
-  sharedValue = sharedValue(4563).useSharedValue(0);
+  sharedValue = sharedValue(4566).useSharedValue(0);
   useMountEffectDefault(() => {
     const result = sharedValue.set(timing.withTiming(1));
   });
-  const obj = sharedValue(4563);
+  const obj = sharedValue(4566);
   const fn = function c() {
     return { opacity: sharedValue.get() };
   };
@@ -38,7 +38,7 @@ function HorizontalAutocompleteOption(arg0) {
   fn.__workletHash = 14159604656069;
   fn.__initData = __initData;
   const obj3 = { onPress, children: null };
-  const animatedStyle = sharedValue(4563).useAnimatedStyle(fn);
+  const animatedStyle = sharedValue(4566).useAnimatedStyle(fn);
   const obj4 = { style: null, children };
   const items = [tmp.horizontalAutocompleteOption, animatedStyle];
   obj4.style = items;
@@ -51,7 +51,7 @@ const Constants = fn(1074);
 ({ ChannelTypes: c10, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { emoji: { width: 32, height: 32 }, emojiImage: { resizeMode: "contain" }, emojiText: { lineHeight: 32, fontSize: 27, textAlign: "center" }, emojiName: { marginLeft: 8 }, nickname: null, status: null, horizontalAutocompleteOption: null, roleIcon: null, channelName: null };
 const merged = Object.assign(TextStyles(Fonts.PRIMARY_SEMIBOLD, nativeDefault.colors.TEXT_DEFAULT, 14));
 obj2.nickname = {};
@@ -130,17 +130,17 @@ export default {
     channel(504);
     [][0] = channel;
     if (channel.type === constants.GUILD_CATEGORY) {
-      let channelIconWithGuild = _modDef7573;
+      let channelIconWithGuild = _modDef7581;
     } else {
-      channelIconWithGuild = tmp2(5328).getChannelIconWithGuild(channel, tmp5);
-      const tmp2Result = tmp2(5328);
+      channelIconWithGuild = tmp2(5335).getChannelIconWithGuild(channel, tmp5);
+      const tmp2Result = tmp2(5335);
     }
     const tmp = closure_13();
     const tmp8 = closure_11(channel(1177).Icon, { source: channelIconWithGuild });
     const obj = { onPress: channel.onPress, children: null };
     const items = [tmp8, ];
-    const channelName = channel(4982).computeChannelName(channel, UserStore, RelationshipStore);
-    items[1] = closure_11(channel(4825).Text, { style: tmp.channelName, variant: "text-sm/semibold", children: channelName });
+    const channelName = channel(4989).computeChannelName(channel, UserStore, RelationshipStore);
+    items[1] = closure_11(channel(4832).Text, { style: tmp.channelName, variant: "text-sm/semibold", children: channelName });
     obj.children = items;
     return closure_12(HorizontalAutocompleteOption, obj);
   },

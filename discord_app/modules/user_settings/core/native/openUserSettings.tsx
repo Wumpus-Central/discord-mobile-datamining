@@ -1,10 +1,10 @@
-// === Module 6795: openUserSettings ===
+// === Module 6800: openUserSettings ===
 
-// Module 6795 (openUserSettings)
+// Module 6800 (openUserSettings)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
-import RootNavigationRef from "RootNavigationRef" /* 4689 */;
-import UserSettingsAccountStore from "UserSettingsAccountStore" /* 6796 */;
+import RootNavigationRef from "RootNavigationRef" /* 4693 */;
+import UserSettingsAccountStore from "UserSettingsAccountStore" /* 6801 */;
 import size from "module_2" /* 2 */;
 
 const UserSettingsSections = Constants.UserSettingsSections;
@@ -22,7 +22,7 @@ export const openUserSettings = (screen, fn) => {
     }
     const obj2 = { type: "USER_SETTINGS_MODAL_INIT", section: screen };
     DispatcherDefault.dispatch(obj2);
-    rootNavigationRef.navigate("settings", screen);
+    rootNavigationRef.navigate("settings", screen, { pop: true });
     if (fn != null) {
       fn();
     }

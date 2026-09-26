@@ -1,15 +1,15 @@
-// === Module 15913: InvitesDisabledBadge ===
+// === Module 15941: InvitesDisabledBadge ===
 
-// Module 15913 (InvitesDisabledBadge)
+// Module 15941 (InvitesDisabledBadge)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import _modDef12221 from "module_12221" /* 12221 */;
+import _modDef12239 from "module_12239" /* 12239 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj = { pause: { alignContent: "center", justifyContent: "center", width: 10, height: 10 }, pauseBackground: null, pauseRing: null };
 let size = { borderRadius: 20, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, padding: fn(1177).BADGE_PADDING, height: 16, width: 16, alignContent: "center", justifyContent: "center" };
 obj.pauseBackground = size;
@@ -24,7 +24,7 @@ export default noop.memo(function InvitesDisabledBadge(style) {
   const obj = { style: null, children: null };
   const items = [tmp.pauseRing, style.style];
   obj.style = items;
-  const obj2 = { style: tmp.pauseBackground, children: jsx(native.ThemedIcon, { style: tmp.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef12221 }) };
-  obj.children = <View style={tmp.pauseBackground}>{jsx(native.ThemedIcon, { style: tmp.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef12221 })}</View>;
+  const obj2 = { style: tmp.pauseBackground, children: jsx(native.ThemedIcon, { style: tmp.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef12239 }) };
+  obj.children = <View style={tmp.pauseBackground}>{jsx(native.ThemedIcon, { style: tmp.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef12239 })}</View>;
   return <View style={null}>{null}</View>;
 });

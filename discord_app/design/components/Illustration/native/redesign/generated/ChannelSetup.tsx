@@ -1,8 +1,8 @@
-// === Module 17440: ChannelSetup ===
+// === Module 17470: ChannelSetup ===
 
-// Module 17440 (ChannelSetup)
-import shared from "shared" /* 4682 */;
-import _mod7671 from "module_7671" /* 7671 */;
+// Module 17470 (ChannelSetup)
+import shared from "shared" /* 4685 */;
+import _mod7679 from "module_7679" /* 7679 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,44 +14,44 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/ChannelSetup.tsx");
 
 export const getChannelSetupSource = function getChannelSetupSource(theme) {
-  return _mod7671.getIllustrationSource(theme, {
+  return _mod7679.getIllustrationSource(theme, {
     dark() {
-      return require("module_17441");
+      return require("module_17471");
     },
     darker() {
-      return require("module_17442");
+      return require("module_17472");
     },
     light() {
-      return require("module_17443");
+      return require("module_17473");
     }
   });
 };
 export const useChannelSetupSource = function useChannelSetupSource() {
   const obj = shared;
-  return _mod7671.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod7679.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_17441");
+      return require("module_17471");
     },
     darker() {
-      return require("module_17442");
+      return require("module_17472");
     },
     light() {
-      return require("module_17443");
+      return require("module_17473");
     }
   });
 };
 export const ChannelSetup = function ChannelSetup(arg0) {
   const obj = shared;
   const obj4 = {};
-  const illustrationSource = _mod7671.getIllustrationSource(obj.useThemeContext().theme, {
+  const illustrationSource = _mod7679.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_17441");
+      return require("module_17471");
     },
     darker() {
-      return require("module_17442");
+      return require("module_17472");
     },
     light() {
-      return require("module_17443");
+      return require("module_17473");
     }
   });
   const merged = Object.assign(arg0);

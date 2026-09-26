@@ -1,19 +1,19 @@
-// === Module 15601: MainTabs ===
+// === Module 15629: MainTabs ===
 
-// Module 15601 (MainTabs)
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import native from "native" /* 4537 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4684 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5430 */;
-import useActiveTheme from "useActiveTheme" /* 7294 */;
-import MainTabsNavigatorPanelDefault from "MainTabsNavigatorPanel" /* 15602 */;
+// Module 15629 (MainTabs)
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
+import native from "native" /* 4540 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4688 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5437 */;
+import useActiveTheme from "useActiveTheme" /* 7299 */;
+import MainTabsNavigatorPanelDefault from "MainTabsNavigatorPanel" /* 15630 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_6 = createStyles.createStyles({ container: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/MainTabs.tsx");

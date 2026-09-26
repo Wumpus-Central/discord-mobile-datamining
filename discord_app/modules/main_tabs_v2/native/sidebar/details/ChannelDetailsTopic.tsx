@@ -1,10 +1,10 @@
-// === Module 16526: ChannelDetailsTopic ===
+// === Module 16555: ChannelDetailsTopic ===
 
-// Module 16526 (ChannelDetailsTopic)
-import UserUtilsDefault from "UserUtils" /* 4675 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 4819 */;
-import ChannelUtils from "ChannelUtils" /* 4974 */;
-import spring from "spring" /* 5273 */;
+// Module 16555 (ChannelDetailsTopic)
+import UserUtilsDefault from "UserUtils" /* 4678 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4823 */;
+import ChannelUtils from "ChannelUtils" /* 4981 */;
+import spring from "spring" /* 5280 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -184,7 +184,7 @@ function PrivateChannelDetailsTopic(channel) {
     const obj3 = { textAlign: channel.textAlign };
     obj2.style = obj3;
     obj2.children = stateFromStores;
-    tmp4 = closure_11(channel(4825).Text, obj2);
+    tmp4 = closure_11(channel(4832).Text, obj2);
   }
   return tmp4;
 }
@@ -198,19 +198,19 @@ function GroupDMChannelDetailsTopic(channel) {
     const obj3 = { textAlign: channel.textAlign };
     obj2.style = obj3;
     obj2.children = stateFromStores;
-    tmp4 = closure_11(channel(4825).Text, obj2);
+    tmp4 = closure_11(channel(4832).Text, obj2);
   }
   return tmp4;
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const ChannelDetailsConstants = fn(10366);
+const ChannelDetailsConstants = fn(10377);
 ({ CHANNEL_TOPIC_LINE_CLAMP: closure_8, SPRING_CHANNEL_DETAILS: closure_9 } = ChannelDetailsConstants);
 const VerticalGradient = fn(1074).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const PlatformUtils = fn(1364);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_15 = createStyles.createStyles({ hidden: { flex: 1, flexGrow: 1, position: "absolute", opacity: 0 }, topic: { overflow: "hidden" }, gradient: { flex: 1, flexGrow: 1 }, expanded: { textAlign: "center" }, topicText: { paddingVertical: 5 } });
 const EMPTY_STYLE = {};
 const constants = { HIDDEN: 0, [0]: "HIDDEN", VISIBLE: 1, [1]: "VISIBLE" };

@@ -1,7 +1,7 @@
-// === Module 9341: restoreEventRecurrence ===
+// === Module 9352: restoreEventRecurrence ===
 
-// Module 9341 (restoreEventRecurrence)
-import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 8970 */;
+// Module 9352 (restoreEventRecurrence)
+import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 8981 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/restoreEventRecurrence.tsx");

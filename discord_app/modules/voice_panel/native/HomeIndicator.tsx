@@ -1,6 +1,6 @@
-// === Module 8833: HomeIndicator ===
+// === Module 8841: HomeIndicator ===
 
-// Module 8833 (HomeIndicator)
+// Module 8841 (HomeIndicator)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -63,8 +63,8 @@ HomeIndicator["_updatePropsStack"] = function _updatePropsStack() {
     const obj2 = autoHideHomeIndicator(1248);
     const tmp2 = undefined !== prefersDeferringSystemGestures && prefersDeferringSystemGestures;
     if (obj3.isAndroid()) {
-      const result = closure_1(1624).setNavigationBarVisible(!tmp);
-      const obj4 = closure_1(1624);
+      const result = closure_1(1625).setNavigationBarVisible(!tmp);
+      const obj4 = closure_1(1625);
     } else if (DCDHomeIndicator.DCDHomeIndicator) {
       DCDHomeIndicator = tmp5.DCDHomeIndicator;
       DCDHomeIndicator.setPrefersAutoHidden(tmp);

@@ -1,15 +1,15 @@
-// === Module 11624: ApplicationCommandValidators ===
+// === Module 11638: ApplicationCommandValidators ===
 
-// Module 11624 (ApplicationCommandValidators)
+// Module 11638 (ApplicationCommandValidators)
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1115 */;
-import Server from "Server" /* 1978 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 6936 */;
-import ApplicationCommandOptionUtilsAll from "ApplicationCommandOptionUtils" /* 8707 */;
-import ApplicationCommandChoiceUtils from "ApplicationCommandChoiceUtils" /* 8709 */;
-import PlaintextResolvers from "PlaintextResolvers" /* 8710 */;
-import LocaleStore from "LocaleStore" /* 2111 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 5192 */;
+import Server from "Server" /* 1979 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 6941 */;
+import ApplicationCommandOptionUtilsAll from "ApplicationCommandOptionUtils" /* 8715 */;
+import ApplicationCommandChoiceUtils from "ApplicationCommandChoiceUtils" /* 8717 */;
+import PlaintextResolvers from "PlaintextResolvers" /* 8718 */;
+import LocaleStore from "LocaleStore" /* 2112 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 5199 */;
 
 require = fn;
 function validateNumericOptionRange(NumberResult, minValue, _8Y5zsp, CyRLmH, VD3Q_S) {
@@ -51,9 +51,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandValidators.tsx");
 
 export default {
-  [fn(1978).ApplicationCommandOptionType.SUB_COMMAND]: () => ({ success: false }),
-  [fn(1978).ApplicationCommandOptionType.SUB_COMMAND_GROUP]: () => ({ success: false }),
-  [fn(1978).ApplicationCommandOptionType.BOOLEAN]: (type) => {
+  [fn(1979).ApplicationCommandOptionType.SUB_COMMAND]: () => ({ success: false }),
+  [fn(1979).ApplicationCommandOptionType.SUB_COMMAND_GROUP]: () => ({ success: false }),
+  [fn(1979).ApplicationCommandOptionType.BOOLEAN]: (type) => {
     if ("text" !== type.type) {
       return { success: false };
     } else {
@@ -63,7 +63,7 @@ export default {
       return obj;
     }
   },
-  [fn(1978).ApplicationCommandOptionType.STRING]: (type, type2, id) => {
+  [fn(1979).ApplicationCommandOptionType.STRING]: (type, type2, id) => {
     _modDef38(type2.type === Server.ApplicationCommandOptionType.STRING, "option type must match validator type");
     type = type.type;
     if ("emoji" === type) {
@@ -143,7 +143,7 @@ export default {
       return { success: true };
     }
   },
-  [fn(1978).ApplicationCommandOptionType.INTEGER]: (type, type2, id) => {
+  [fn(1979).ApplicationCommandOptionType.INTEGER]: (type, type2, id) => {
     _modDef38(type2.type === Server.ApplicationCommandOptionType.INTEGER, "option type must match validator type");
     let trimmed = null;
     if ("text" === type.type) {
@@ -182,7 +182,7 @@ export default {
     }
     return { success: false };
   },
-  [fn(1978).ApplicationCommandOptionType.NUMBER]: (type, type2, id) => {
+  [fn(1979).ApplicationCommandOptionType.NUMBER]: (type, type2, id) => {
     _modDef38(type2.type === Server.ApplicationCommandOptionType.NUMBER, "option type must match validator type");
     let trimmed = null;
     if ("text" === type.type) {
@@ -219,7 +219,7 @@ export default {
     }
     return { success: false };
   },
-  [fn(1978).ApplicationCommandOptionType.USER]: (type, arg1, id2, id) => {
+  [fn(1979).ApplicationCommandOptionType.USER]: (type, arg1, id2, id) => {
     if ("text" === type.type) {
       if (obj2.isSnowflake(type.text)) {
         return { success: true };
@@ -239,7 +239,7 @@ export default {
       return obj;
     }
   },
-  [fn(1978).ApplicationCommandOptionType.CHANNEL]: (type, arg1, id2, id) => {
+  [fn(1979).ApplicationCommandOptionType.CHANNEL]: (type, arg1, id2, id) => {
     if ("text" === type.type) {
       if (obj2.isSnowflake(type.text)) {
         return { success: true };
@@ -258,7 +258,7 @@ export default {
       return obj;
     }
   },
-  [fn(1978).ApplicationCommandOptionType.ROLE]: (type, arg1, id2, id) => {
+  [fn(1979).ApplicationCommandOptionType.ROLE]: (type, arg1, id2, id) => {
     if ("text" === type.type) {
       if (obj2.isSnowflake(type.text)) {
         return { success: true };
@@ -286,7 +286,7 @@ export default {
       return obj;
     }
   },
-  [fn(1978).ApplicationCommandOptionType.MENTIONABLE]: (type, arg1, id2, id) => {
+  [fn(1979).ApplicationCommandOptionType.MENTIONABLE]: (type, arg1, id2, id) => {
     if ("text" === type.type) {
       if (obj2.isSnowflake(type.text)) {
         return { success: true };
@@ -329,7 +329,7 @@ export default {
       return obj;
     }
   },
-  [fn(1978).ApplicationCommandOptionType.ATTACHMENT]: (type, name, channelId, arg3, arg4) => {
+  [fn(1979).ApplicationCommandOptionType.ATTACHMENT]: (type, name, channelId, arg3, arg4) => {
     if ("text" !== type.type) {
       return { success: false };
     } else {

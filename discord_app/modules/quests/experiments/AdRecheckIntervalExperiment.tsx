@@ -1,7 +1,7 @@
-// === Module 14623: AdRecheckIntervalExperiment ===
+// === Module 14648: AdRecheckIntervalExperiment ===
 
-// Module 14623 (AdRecheckIntervalExperiment)
-import ApexExperiment from "ApexExperiment" /* 1434 */;
+// Module 14648 (AdRecheckIntervalExperiment)
+import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-07-ad-recheck-interval-experiment", kind: "user", defaultConfig: { enableFastAdRecheck: false }, variations: null };

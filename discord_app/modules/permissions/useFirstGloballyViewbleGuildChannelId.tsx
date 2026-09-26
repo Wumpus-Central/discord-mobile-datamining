@@ -1,8 +1,8 @@
-// === Module 15669: useFirstGloballyViewbleGuildChannelId ===
+// === Module 15697: useFirstGloballyViewbleGuildChannelId ===
 
-// Module 15669 (useFirstGloballyViewbleGuildChannelId)
-import PermissionUtilsAll from "PermissionUtils" /* 4471 */;
-import GuildChannelStore from "GuildChannelStore" /* 4464 */;
+// Module 15697 (useFirstGloballyViewbleGuildChannelId)
+import PermissionUtilsAll from "PermissionUtils" /* 4474 */;
+import GuildChannelStore from "GuildChannelStore" /* 4467 */;
 
 const require = globalThis.__r;
 

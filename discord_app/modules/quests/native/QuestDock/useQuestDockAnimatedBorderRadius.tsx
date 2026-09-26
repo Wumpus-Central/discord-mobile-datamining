@@ -1,7 +1,7 @@
-// === Module 14690: useQuestDockAnimatedBorderRadius ===
+// === Module 14715: useQuestDockAnimatedBorderRadius ===
 
-// Module 14690 (useQuestDockAnimatedBorderRadius)
-import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
+// Module 14715 (useQuestDockAnimatedBorderRadius)
+import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

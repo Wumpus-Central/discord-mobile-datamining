@@ -1,8 +1,8 @@
-// === Module 2085: GuildDao ===
+// === Module 2086: GuildDao ===
 
-// Module 2085 (GuildDao)
-import Table from "Table" /* 2078 */;
-import TableId from "TableId" /* 2080 */;
+// Module 2086 (GuildDao)
+import Table from "Table" /* 2079 */;
+import TableId from "TableId" /* 2081 */;
 import size from "module_2" /* 2 */;
 
 let GuildDao;

@@ -1,15 +1,15 @@
-// === Module 11198: MessageRemindersTypes ===
+// === Module 11212: MessageRemindersTypes ===
 
-// Module 11198 (MessageRemindersTypes)
+// Module 11212 (MessageRemindersTypes)
 import util from "util" /* 1115 */;
-import _modDef4418 from "module_4418" /* 4418 */;
+import _modDef4421 from "module_4421" /* 4421 */;
 import size from "module_2" /* 2 */;
 
 const items = [
   {
     getDueAt() {
-      const obj = _modDef4418();
-      return _modDef4418().add(30, "minutes").toDate();
+      const obj = _modDef4421();
+      return _modDef4421().add(30, "minutes").toDate();
     },
     getLabel() {
       const intl = util.intl;
@@ -18,8 +18,8 @@ const items = [
   },
   {
     getDueAt() {
-      const obj = _modDef4418();
-      return _modDef4418().add(1, "hour").toDate();
+      const obj = _modDef4421();
+      return _modDef4421().add(1, "hour").toDate();
     },
     getLabel() {
       const intl = util.intl;
@@ -28,8 +28,8 @@ const items = [
   },
   {
     getDueAt() {
-      const obj = _modDef4418();
-      return _modDef4418().add(4, "hour").toDate();
+      const obj = _modDef4421();
+      return _modDef4421().add(4, "hour").toDate();
     },
     getLabel() {
       const intl = util.intl;
@@ -38,9 +38,9 @@ const items = [
   },
   {
     getDueAt() {
-      const obj = _modDef4418();
-      const addResult = _modDef4418().startOf("day").add(9, "hours");
-      const startOfResult = _modDef4418().startOf("day");
+      const obj = _modDef4421();
+      const addResult = _modDef4421().startOf("day").add(9, "hours");
+      const startOfResult = _modDef4421().startOf("day");
       if (obj4.hour() >= 9) {
         let toDateResult = addResult.add(1, "day").toDate();
         const addResult1 = addResult.add(1, "day");
@@ -62,23 +62,23 @@ const items = [
   },
   {
     getDueAt() {
-      const dayResult = _modDef4418().day();
+      const dayResult = _modDef4421().day();
       if (0 === dayResult) {
         let num3 = 1;
       } else {
         num3 = 8;
         if (1 === dayResult) {
-          const obj2 = _modDef4418();
-          _modDef4418().startOf("day").add(9, "hours");
+          const obj2 = _modDef4421();
+          _modDef4421().startOf("day").add(9, "hours");
           num3 = 8;
-          const startOfResult = _modDef4418().startOf("day");
+          const startOfResult = _modDef4421().startOf("day");
         }
       }
-      const obj = _modDef4418();
-      const obj5 = _modDef4418();
-      const dayResult1 = _modDef4418().day(num3);
-      const startOfResult1 = _modDef4418().day(num3).startOf("day");
-      return _modDef4418().day(num3).startOf("day").add(9, "hours").toDate();
+      const obj = _modDef4421();
+      const obj5 = _modDef4421();
+      const dayResult1 = _modDef4421().day(num3);
+      const startOfResult1 = _modDef4421().day(num3).startOf("day");
+      return _modDef4421().day(num3).startOf("day").add(9, "hours").toDate();
     },
     getLabel() {
       const intl = util.intl;

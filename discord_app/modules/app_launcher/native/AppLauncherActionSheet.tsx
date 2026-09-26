@@ -1,14 +1,14 @@
-// === Module 16267: AppLauncherActionSheet ===
+// === Module 16295: AppLauncherActionSheet ===
 
-// Module 16267 (AppLauncherActionSheet)
-import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6566 */;
-import ActionSheetContextDefault from "ActionSheetContext" /* 6568 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 8704 */;
-import AppLauncherContext from "AppLauncherContext" /* 10772 */;
-import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 10773 */;
-import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 11550 */;
-import getAppDMApplication from "getAppDMApplication" /* 11664 */;
+// Module 16295 (AppLauncherActionSheet)
+import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6571 */;
+import ActionSheetContextDefault from "ActionSheetContext" /* 6573 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 8712 */;
+import AppLauncherContext from "AppLauncherContext" /* 10785 */;
+import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 10786 */;
+import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 11564 */;
+import getAppDMApplication from "getAppDMApplication" /* 11678 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -133,7 +133,7 @@ function AppLauncherActionSheet(arg0) {
   })} entrypoint={TEXT} keyboardCloseReasonRef={ref2} width={defaultAppLauncherWidth} overrideParams={null} />;
   return jsx(Sheet_BottomSheet.BottomSheet, { ref, animatedIndex: sharedValue, scrollable: true, startExpanded: true, children: null });
 }
-const AppLauncherRouteName = fn(1483).AppLauncherRouteName;
+const AppLauncherRouteName = fn(1484).AppLauncherRouteName;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherActionSheet.tsx");

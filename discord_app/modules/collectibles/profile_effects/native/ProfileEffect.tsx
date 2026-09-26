@@ -1,17 +1,17 @@
-// === Module 8256: ProfileEffect ===
+// === Module 8264: ProfileEffect ===
 
-// Module 8256 (ProfileEffect)
+// Module 8264 (ProfileEffect)
 import initialize from "initialize" /* 504 */;
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
-import useProfileEffectDefault from "useProfileEffect" /* 7664 */;
-import utils from "utils" /* 8257 */;
-import constants from "constants" /* 8258 */;
-import ProfileEffectUtils from "ProfileEffectUtils" /* 8259 */;
-import ProfileEffectLayerDefault from "ProfileEffectLayer" /* 8262 */;
+import useProfileEffectDefault from "useProfileEffect" /* 7672 */;
+import utils from "utils" /* 8265 */;
+import constants from "constants" /* 8266 */;
+import ProfileEffectUtils from "ProfileEffectUtils" /* 8267 */;
+import ProfileEffectLayerDefault from "ProfileEffectLayer" /* 8270 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4821 */;
-import AppStateStore from "AppStateStore" /* 1979 */;
+import AccessibilityStore from "AccessibilityStore" /* 4825 */;
+import AppStateStore from "AppStateStore" /* 1980 */;
 
 require = fn;
 function StaticEffect(useThumbnail) {
@@ -27,7 +27,7 @@ function StaticEffect(useThumbnail) {
   c0 = undefined;
   ({ thumbnailPreviewSrc, accessibilityLabel } = profileEffect);
   [tmp3, c0] = thumbnailUrlOverride.useState(0);
-  const height = reducedMotionSrc(1478)().height;
+  const height = reducedMotionSrc(1479)().height;
   const callback = thumbnailUrlOverride.useCallback((nativeEvent) => {
     memo(nativeEvent.nativeEvent.layout.width);
   }, []);
@@ -67,15 +67,15 @@ function StaticEffect(useThumbnail) {
     const size1 = { width: tmp3, height: tmp8, top: 0 - bannerAdjustment };
     items1[1] = size1;
     size.style = items1;
-    obj3.children = jsx(tmp4(5894), { resizeMode: "cover", resizeMethod: "resize", enableAnimation: true, source: null, alt: null, height: null, width: null, style: null });
-    const tmp4Result = tmp4(5894);
+    obj3.children = jsx(tmp4(5899), { resizeMode: "cover", resizeMethod: "resize", enableAnimation: true, source: null, alt: null, height: null, width: null, style: null });
+    const tmp4Result = tmp4(5899);
   }
   return <closure_5 {...obj3} />;
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 let jsx = fn(21).jsx;
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_10 = createStyles.createStyles({ profileEffects: { position: "absolute", width: "100%", top: 0, bottom: 0, left: 0, right: 0, flex: 1, justifyContent: "flex-start" }, effect: { position: "absolute" } });
 function ProfileEffect(profileEffect) {
   profileEffect = profileEffect.profileEffect;
@@ -88,7 +88,7 @@ function ProfileEffect(profileEffect) {
   const tmp = c10();
   let ref = tmp;
   const tmp2 = ref(noop.useState(0), 2);
-  const height = memo1(1478)().height;
+  const height = memo1(1479)().height;
   noop = tmp2[0];
   const accessibilityLabel = profileEffect.accessibilityLabel;
   let items = [profileEffect.effects];
@@ -114,7 +114,7 @@ function ProfileEffect(profileEffect) {
       }
     }
   }, []);
-  jsx = noop.useRef(-memo(8258).PROFILE_EFFECT_INTRO_DELAY);
+  jsx = noop.useRef(-memo(8266).PROFILE_EFFECT_INTRO_DELAY);
   [c10, c11] = ref(noop.useState([]), 2);
   noop.useRef([]);
   noop.useRef(false);
@@ -130,7 +130,7 @@ function ProfileEffect(profileEffect) {
   }, items3);
   const items4 = [ref];
   const tmp7 = ref(noop.useState([]), 2);
-  const tmp9Result = memo1(8261)(noop.useCallback((arg0) => {
+  const tmp9Result = memo1(8269)(noop.useCallback((arg0) => {
     if (ref.current) {
       if (!ref3.current) {
         tmp.current = true;
@@ -156,7 +156,7 @@ function ProfileEffect(profileEffect) {
   }, items4));
   const stop = tmp9Result.stop;
   const reset = tmp9Result.reset;
-  const tmp9 = memo1(8261);
+  const tmp9 = memo1(8269);
   const items5 = [onLoad];
   const stateFromStores = memo(504).useStateFromStores(items5, () => onLoad.getState());
   noop.useRef(null);

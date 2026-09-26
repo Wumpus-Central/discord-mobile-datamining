@@ -1,7 +1,7 @@
-// === Module 7518: MobileFriendAnniversaryExperiment ===
+// === Module 7524: MobileFriendAnniversaryExperiment ===
 
-// Module 7518 (MobileFriendAnniversaryExperiment)
-import ApexExperiment from "ApexExperiment" /* 1434 */;
+// Module 7524 (MobileFriendAnniversaryExperiment)
+import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-06-mobile-friendship-anniversary", kind: "user", defaultConfig: { enabled: false }, variations: null };

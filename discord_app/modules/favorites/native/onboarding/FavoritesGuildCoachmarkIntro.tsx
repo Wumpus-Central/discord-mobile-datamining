@@ -1,18 +1,18 @@
-// === Module 15924: FavoritesGuildCoachmarkIntro ===
+// === Module 15952: FavoritesGuildCoachmarkIntro ===
 
-// Module 15924 (FavoritesGuildCoachmarkIntro)
+// Module 15952 (FavoritesGuildCoachmarkIntro)
 import util from "util" /* 1115 */;
-import _modDef3360 from "module_3360" /* 3360 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
-import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 9685 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 15919 */;
+import _modDef3361 from "module_3361" /* 3361 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
+import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 9696 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 15947 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 15895 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 15923 */;
 
 require = fn;
 const FAVORITES = fn(1074).FAVORITES;
-const ContentDismissActionType = fn(2041).ContentDismissActionType;
+const ContentDismissActionType = fn(2042).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const __initData = { code: "function FavoritesGuildCoachmarkIntroTsx1(){const{scrollPosition}=this.__closure;return scrollPosition.get()<=0;}" };
 const __initData2 = { code: "function FavoritesGuildCoachmarkIntroTsx2(atTop,wasAtTop){const{runOnJS,setScrolledToTop}=this.__closure;if(atTop===wasAtTop){return;}runOnJS(setScrolledToTop)(atTop);}" };
@@ -58,15 +58,15 @@ export default function FavoritesGuildCoachmarkIntro(markAsDismissed) {
   const memo = onDismiss.useMemo(() => {
     const obj = { visible, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: null, buttonLabel: null, onButtonPress: null };
     const intl = util.intl;
-    obj.title = intl.string(_modDef3360["bu/mLv"]);
+    obj.title = intl.string(_modDef3361["bu/mLv"]);
     const intl2 = util.intl;
-    obj.description = intl2.string(_modDef3360.kxQJ7q);
+    obj.description = intl2.string(_modDef3361.kxQJ7q);
     obj.onDismiss = onDismiss;
     obj.renderImgComponent = function renderImgComponent() {
       return closure_1_8(scrollPosition(visible[11]), {});
     };
     const intl3 = util.intl;
-    obj.buttonLabel = intl3.string(_modDef3360["vN/KQ9"]);
+    obj.buttonLabel = intl3.string(_modDef3361["vN/KQ9"]);
     obj.onButtonPress = callback1;
     return obj;
   }, items2);

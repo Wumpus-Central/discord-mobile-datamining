@@ -1,12 +1,12 @@
-// === Module 1999: RunningGameStore ===
+// === Module 2000: RunningGameStore ===
 
-// Module 1999 (RunningGameStore)
+// Module 2000 (RunningGameStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import OverlayTypes from "OverlayTypes" /* 13518 */;
-import GameStore from "GameStore" /* 2000 */;
-import DetectableGameStore from "DetectableGameStore" /* 2016 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 6812 */;
+import OverlayTypes from "OverlayTypes" /* 13536 */;
+import GameStore from "GameStore" /* 2001 */;
+import DetectableGameStore from "DetectableGameStore" /* 2017 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 6817 */;
 
 require = fn;
 const Store = initializeDefault.Store;

@@ -1180,7 +1180,7 @@ class TypingIndicatorEmoji$Type extends MessageType8 {
 }
 const prototype8 = TypingIndicatorEmoji$Type.prototype;
 prototype8["create"] = function create(arr) {
-  obj = { emoji: { oneofKind: "r" }, animated: false };
+  obj = { emoji: { oneofKind: "__initData" }, animated: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
@@ -2156,7 +2156,7 @@ class Badge$Type extends MessageType16 {
 }
 const prototype16 = Badge$Type.prototype;
 prototype16["create"] = function create(arr) {
-  obj = { badge: { oneofKind: "r" } };
+  obj = { badge: { oneofKind: "__initData" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
@@ -4189,7 +4189,7 @@ class PerkConfig$Type extends MessageType29 {
 }
 const prototype29 = PerkConfig$Type.prototype;
 prototype29["create"] = function create(arr) {
-  obj = { source: [], kind: { oneofKind: "r" } };
+  obj = { source: [], kind: { oneofKind: "__initData" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {

@@ -1,7 +1,7 @@
-// === Module 15206: button ===
+// === Module 15234: button ===
 
-// Module 15206 (button)
-import components_Button_Button from "components/Button/Button" /* 5274 */;
+// Module 15234 (button)
+import components_Button_Button from "components/Button/Button" /* 5281 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

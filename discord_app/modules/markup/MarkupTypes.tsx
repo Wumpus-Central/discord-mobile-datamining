@@ -1,6 +1,6 @@
-// === Module 5295: MarkupTypes ===
+// === Module 5302: MarkupTypes ===
 
-// Module 5295 (MarkupTypes)
+// Module 5302 (MarkupTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/markup/MarkupTypes.tsx");

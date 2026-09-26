@@ -1,19 +1,19 @@
-// === Module 11302: RoleName ===
+// === Module 11316: RoleName ===
 
-// Module 11302 (RoleName)
+// Module 11316 (RoleName)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7398 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7403 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4821 */;
+import AccessibilityStore from "AccessibilityStore" /* 4825 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 }, name: { flexShrink: 1 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

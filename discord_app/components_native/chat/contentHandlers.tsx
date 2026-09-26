@@ -1,15 +1,15 @@
-// === Module 11067: contentHandlers ===
+// === Module 11081: contentHandlers ===
 
-// Module 11067 (contentHandlers)
+// Module 11081 (contentHandlers)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
-import ToastUtils from "ToastUtils" /* 4524 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4796 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5196 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6598 */;
-import ClipboardUtils from "ClipboardUtils" /* 6605 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7617 */;
-import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 11065 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
+import ToastUtils from "ToastUtils" /* 4527 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5203 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6603 */;
+import ClipboardUtils from "ClipboardUtils" /* 6610 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7624 */;
+import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 11079 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -213,7 +213,7 @@ obj.onLongPressAttachmentLink = function() {
   return applyArgumentsResult;
 };
 obj.onTapMention = function onTapMention(nativeEvent) {
-  const nativeSyntheticEventData = parsedUserId(11028).getNativeSyntheticEventData(nativeEvent);
+  const nativeSyntheticEventData = parsedUserId(11042).getNativeSyntheticEventData(nativeEvent);
   ({ userId, channelId, roleName, parsedUserId } = nativeSyntheticEventData);
   ({ roleId, guildId } = nativeSyntheticEventData);
   if (null != userId) {
@@ -225,21 +225,21 @@ obj.onTapMention = function onTapMention(nativeEvent) {
     if (null != roleId) {
       if (null != guildId) {
         const obj3 = { guildId, roleId, channelId };
-        ActionSheetActionCreatorsDefault.openLazy(parsedUserId(1980)(11068, dependencyMap.paths), "RoleMembersActionSheet", obj3);
+        ActionSheetActionCreatorsDefault.openLazy(parsedUserId(1981)(11082, dependencyMap.paths), "RoleMembersActionSheet", obj3);
       }
     }
     if ("@everyone" === roleName) {
       if (null != guildId) {
         const obj5 = { guildId, roleId: null, channelId: null };
         const obj6 = ActionSheetActionCreatorsDefault;
-        const tmp10 = parsedUserId(1980)(11068, dependencyMap.paths);
+        const tmp10 = parsedUserId(1981)(11082, dependencyMap.paths);
         obj5.roleId = SnowflakeUtilsDefault.castGuildIdAsEveryoneGuildRoleId(guildId);
         obj5.channelId = channelId;
         obj6.openLazy(tmp10, "RoleMembersActionSheet", obj5);
       }
     }
     if (null == roleName) {
-      const DeveloperMode = parsedUserId(2020).DeveloperMode;
+      const DeveloperMode = parsedUserId(2021).DeveloperMode;
       if (DeveloperMode.getSetting()) {
         if (null != parsedUserId) {
           const obj7 = { secondaryConfirmText: null, onConfirmSecondary: null };
@@ -264,7 +264,7 @@ obj.onTapMention = function onTapMention(nativeEvent) {
       obj11 = {};
     }
   }
-  let obj = parsedUserId(11028);
+  let obj = parsedUserId(11042);
 };
 obj.onTapTimestamp = function onTapTimestamp(nativeEvent) {
   ToastUtils.presentTimestamp(nativeEvent.nativeEvent.node.full);
@@ -278,7 +278,7 @@ obj.onTapInlineCode = function onTapInlineCode(nativeEvent) {
   tmp = null != node.content && typeof node.content === "string";
 };
 obj.onTapEmoji = function onTapEmoji(emojiNode) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9779, dependencyMap.paths), "MessageEmojiActionSheet", { emojiNode: emojiNode.nativeEvent.node });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9790, dependencyMap.paths), "MessageEmojiActionSheet", { emojiNode: emojiNode.nativeEvent.node });
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/chat/contentHandlers.tsx");

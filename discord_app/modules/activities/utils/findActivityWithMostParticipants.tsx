@@ -1,7 +1,7 @@
-// === Module 15670: findActivityWithMostParticipants ===
+// === Module 15698: findActivityWithMostParticipants ===
 
-// Module 15670 (findActivityWithMostParticipants)
-import RelationshipStore from "RelationshipStore" /* 4476 */;
+// Module 15698 (findActivityWithMostParticipants)
+import RelationshipStore from "RelationshipStore" /* 4479 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/findActivityWithMostParticipants.tsx");

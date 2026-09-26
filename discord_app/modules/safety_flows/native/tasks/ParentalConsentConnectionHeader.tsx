@@ -1,13 +1,13 @@
-// === Module 17672: ParentalConsentConnectionHeader ===
+// === Module 17702: ParentalConsentConnectionHeader ===
 
-// Module 17672 (ParentalConsentConnectionHeader)
+// Module 17702 (ParentalConsentConnectionHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import _modDef2780 from "module_2780" /* 2780 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6005 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
+import _modDef2781 from "module_2781" /* 2781 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6010 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -15,9 +15,9 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4829);
-let obj2 = { row: { height: fn(5989).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 }, logOut: null };
-let obj3 = { height: fn(5989).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 };
+const createStyles = fn(4836);
+let obj2 = { row: { height: fn(5994).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 }, logOut: null };
+let obj3 = { height: fn(5994).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.logOut = { position: "absolute", left: nativeDefault.space.PX_16 };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -47,7 +47,7 @@ export const ParentalConsentConnectionNavbar = function ParentalConsentConnectio
     children: null
   };
   const intl = util.intl;
-  obj4.children = intl.string(_modDef2780["3HuGuY"]);
+  obj4.children = intl.string(_modDef2781["3HuGuY"]);
   const items1 = [hasOwnProperty(Text_Text.Text, obj4), ];
   let tmp5Result = null != stateFromStores;
   if (tmp5Result) {

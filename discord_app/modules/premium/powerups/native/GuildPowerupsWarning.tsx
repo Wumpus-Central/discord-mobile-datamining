@@ -1,8 +1,8 @@
-// === Module 12038: GuildPowerupsWarning ===
+// === Module 12056: GuildPowerupsWarning ===
 
-// Module 12038 (GuildPowerupsWarning)
+// Module 12056 (GuildPowerupsWarning)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4825 */;
+import Text_Text from "Text/Text" /* 4832 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { container: { flexDirection: "row", alignItems: "flex-start", padding: nativeDefault.space.PX_24, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, borderWidth: 1, borderColor: nativeDefault.colors.STATUS_WARNING, borderRadius: nativeDefault.radii.lg, gap: nativeDefault.space.PX_8, overflow: "hidden" }, contentContainer: null, warningText: null, text: null };
 let obj3 = { flexDirection: "row", alignItems: "flex-start", padding: nativeDefault.space.PX_24, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, borderWidth: 1, borderColor: nativeDefault.colors.STATUS_WARNING, borderRadius: nativeDefault.radii.lg, gap: nativeDefault.space.PX_8, overflow: "hidden" };
 obj2.contentContainer = { flex: 1, gap: nativeDefault.space.PX_4, alignItems: "center" };
@@ -35,15 +35,15 @@ export default function GuildPowerupsWarning(warnings) {
     const obj2 = { style: tmp.container, children: null };
     const obj3 = { style: tmp.contentContainer, children: null };
     const obj4 = { color: tmp5(576).colors.TEXT_FEEDBACK_WARNING, size: "md" };
-    let items = [closure_4(tmp2(6023).CircleErrorIcon, obj4), , , ];
+    let items = [closure_4(tmp2(6028).CircleErrorIcon, obj4), , , ];
     const obj5 = { variant: "text-md/semibold", color: "text-feedback-warning", style: tmp.text, children: tmp7 };
-    items[1] = closure_4(tmp2(4825).Text, obj5);
+    items[1] = closure_4(tmp2(4832).Text, obj5);
     let str = "text-sm/medium";
     if (manaTypeConsolidationExperiment) {
       str = "experimental/body-sm/normal";
     }
     const obj6 = { variant: str, style: tmp.text, children: tmp8 };
-    items[2] = closure_4(tmp2(4825).Text, obj6);
+    items[2] = closure_4(tmp2(4832).Text, obj6);
     let mapped;
     if (warnings != null) {
       mapped = warnings.map((children, index) => {

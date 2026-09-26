@@ -1,21 +1,21 @@
-// === Module 15629: useHomeDrawerGesture ===
+// === Module 15657: useHomeDrawerGesture ===
 
-// Module 15629 (useHomeDrawerGesture)
-import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4688 */;
-import HapticUtils from "HapticUtils" /* 4797 */;
-import timing from "timing" /* 4830 */;
-import reanimated_AccessibilityPreferencesSharedValue from "reanimated/AccessibilityPreferencesSharedValue" /* 4832 */;
-import HomeDrawerAnimations from "HomeDrawerAnimations" /* 15624 */;
+// Module 15657 (useHomeDrawerGesture)
+import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4692 */;
+import HapticUtils from "HapticUtils" /* 4801 */;
+import timing from "timing" /* 4837 */;
+import reanimated_AccessibilityPreferencesSharedValue from "reanimated/AccessibilityPreferencesSharedValue" /* 4839 */;
+import HomeDrawerAnimations from "HomeDrawerAnimations" /* 15652 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 15623 */;
-import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 15630 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 15651 */;
+import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 15658 */;
 
 require = fn;
-const computeMaxX = fn(15623).computeMaxX;
+const computeMaxX = fn(15651).computeMaxX;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const LaunchPadTypes = fn(10989).LaunchPadTypes;
+const LaunchPadTypes = fn(11002).LaunchPadTypes;
 let c10 = 144;
 let c11 = 96.00000000000001;
 let c12 = 48;
@@ -41,17 +41,17 @@ let closure_31 = { code: "function useHomeDrawerGestureTsx18(event){const{gestur
 let closure_32 = { code: "function useHomeDrawerGestureTsx19(event,manager){const{gestureState,isOpenTarget,ACTIVATION_MIN_DISTANCE,beginDrag}=this.__closure;if(gestureState.get().active)return;const touchX=event.changedTouches[0].absoluteX;const touchY=event.changedTouches[0].absoluteY;const absoluteXDiff=Math.abs(touchX-gestureState.get().initialX);const absoluteYDiff=Math.abs(touchY-gestureState.get().initialY);const isOpen=isOpenTarget.get();if(absoluteYDiff>absoluteXDiff||!isOpen&&touchX<gestureState.get().initialX||isOpen&&touchX>gestureState.get().initialX){manager.fail();return;}if(absoluteXDiff<ACTIVATION_MIN_DISTANCE){return;}beginDrag(touchX);manager.activate();}" };
 let closure_33 = { code: "function useHomeDrawerGestureTsx20(event){const{isPanelTouchActive,dragOffsetX,activationOffsetX,didSettle,didSnapThisGesture,snappedByDrag,hasThrown,flingThrow,withTiming,HOME_DRAWER_FLING_RETURN_TIMING,gestureState,panelX,snapX}=this.__closure;isPanelTouchActive.set(true);dragOffsetX.set(0);activationOffsetX.set(0);didSettle.set(false);didSnapThisGesture.set(false);snappedByDrag.set(false);hasThrown.set(false);flingThrow.set(withTiming(0,HOME_DRAWER_FLING_RETURN_TIMING));gestureState.set({active:false,initialX:event.absoluteX,initialY:event.absoluteY,panelX:panelX.get()+snapX.get()});}" };
 let obj = { gesture: null, panelStyles: null, gestureState: null, panelX: null, panelTranslateX: null, guildsBarDrawerStyle: null, guildsBarPullX: null };
-let Gesture = fn(6068).Gesture;
+let Gesture = fn(6073).Gesture;
 obj.gesture = Gesture.Pan();
 obj.panelStyles = {};
-let ReanimatedHelperTypes = fn(6490);
+let ReanimatedHelperTypes = fn(6495);
 obj.gestureState = ReanimatedHelperTypes.createFakeSharedValue({ active: false, initialX: 0, initialY: 0, panelX: 0 });
-ReanimatedHelperTypes = fn(6490);
+ReanimatedHelperTypes = fn(6495);
 obj.panelX = ReanimatedHelperTypes.createFakeSharedValue(0);
-ReanimatedHelperTypes = fn(6490);
+ReanimatedHelperTypes = fn(6495);
 obj.panelTranslateX = ReanimatedHelperTypes.createFakeSharedValue(0);
 obj.guildsBarDrawerStyle = {};
-ReanimatedHelperTypes = fn(6490);
+ReanimatedHelperTypes = fn(6495);
 obj.guildsBarPullX = ReanimatedHelperTypes.createFakeSharedValue(0);
 const context = noop.createContext({ homeDrawerState: obj, enableHome: false, landOnHome: false });
 const size = fn(2);

@@ -1,8 +1,8 @@
-// === Module 15998: YouBarUser ===
+// === Module 16026: YouBarUser ===
 
-// Module 15998 (YouBarUser)
+// Module 16026 (YouBarUser)
 import nativeDefault from "native" /* 576 */;
-import spring from "spring" /* 5273 */;
+import spring from "spring" /* 5280 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -10,11 +10,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(14602);
+const YouBarConstants = fn(14627);
 ({ YOU_BAR_SPRING_CONFIG: metroRequire, YOU_BAR_LARGE_AVATAR_NAME_MARGIN: closure_7, YOU_BAR_SMALL_AVATAR_NAME_MARGIN: closure_8 } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj = { youButton: { flexDirection: "row", alignItems: "center", borderRadius: nativeDefault.modules.mobile.YOU_BAR_BORDER_RADIUS }, userText: { flexDirection: "column", justifyContent: "center", height: "100%", gap: 1 }, placeholder: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.round, height: 16, width: 80 };
 obj.placeholder = size;
@@ -48,20 +48,20 @@ export default noop.memo(function YouBarUser(isQuestRendered) {
   S.__closure = { nameMargin: sharedValue };
   S.__workletHash = 12063452832866;
   S.__initData = __initData;
-  const animatedStyle = tmp2(4563).useAnimatedStyle(S);
-  const tmp2Result = tmp2(4563);
-  const name = sharedValue(4675).useName(stateFromStores);
+  const animatedStyle = tmp2(4566).useAnimatedStyle(S);
+  const tmp2Result = tmp2(4566);
+  const name = sharedValue(4678).useName(stateFromStores);
   if (null != stateFromStores) {
     if (null != name) {
       let obj3 = { style: tmp.youButton, children: null };
       const obj5 = { isLargeAvatar: tmp5, onPress: isQuestRendered.onAvatarPress };
-      const items2 = [closure_9(tmp9(16000), obj5), ];
+      const items2 = [closure_9(tmp9(16028), obj5), ];
       const obj6 = { style: null, children: null };
       const items3 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
       obj6.style = items3;
       const obj7 = { userId: stateFromStores.id, username: name };
-      obj6.children = closure_9(tmp9(16001), obj7);
-      items2[1] = closure_9(tmp9(4563).View, obj6);
+      obj6.children = closure_9(tmp9(16029), obj7);
+      items2[1] = closure_9(tmp9(4566).View, obj6);
       obj3.children = items2;
     }
     return tmp11(View, obj3);
@@ -69,13 +69,13 @@ export default noop.memo(function YouBarUser(isQuestRendered) {
   const obj8 = { style: null, children: null };
   const items4 = [tmp.youButton];
   obj8.style = items4;
-  const items5 = [closure_9(sharedValue(15999), { isLarge: !isQuestRendered }), ];
+  const items5 = [closure_9(sharedValue(16027), { isLarge: !isQuestRendered }), ];
   const obj9 = { style: null, children: closure_9(View, { style: tmp.placeholder }) };
   const items6 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
   obj9.style = items6;
-  items5[1] = closure_9(sharedValue(4563).View, obj9);
+  items5[1] = closure_9(sharedValue(4566).View, obj9);
   obj8.children = items5;
   obj3 = obj8;
   const obj10 = { style: tmp.placeholder };
-  const obj4 = sharedValue(4675);
+  const obj4 = sharedValue(4678);
 });

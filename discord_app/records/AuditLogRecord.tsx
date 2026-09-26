@@ -1,9 +1,9 @@
-// === Module 17309: AuditLogRecord ===
+// === Module 17339: AuditLogRecord ===
 
-// Module 17309 (AuditLogRecord)
+// Module 17339 (AuditLogRecord)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
-import _modDef4418 from "module_4418" /* 4418 */;
+import _modDef4421 from "module_4421" /* 4421 */;
 import Record from "Record" /* 1387 */;
 
 function getTargetType(action) {
@@ -265,7 +265,7 @@ const prototype = function AuditLogRecord(timestampEnd) {
   tmp5.actionType = getActionType(tmp5.action);
   ({ targetId: tmp5.targetId, timestampStart } = timestampEnd);
   if (timestampStart == null) {
-    const tmp8 = _modDef4418;
+    const tmp8 = _modDef4421;
     timestampStart = tmp8(SnowflakeUtilsDefault.extractTimestamp(tmp5.id));
   }
   tmp5.timestampStart = timestampStart;

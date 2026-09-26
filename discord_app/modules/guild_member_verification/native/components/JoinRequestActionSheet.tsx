@@ -1,11 +1,11 @@
-// === Module 16206: JoinRequestActionSheet ===
+// === Module 16234: JoinRequestActionSheet ===
 
-// Module 16206 (JoinRequestActionSheet)
-import isChangelogUserDefault from "isChangelogUser" /* 2096 */;
-import GuildJoinRequestAnalyticUtils from "GuildJoinRequestAnalyticUtils" /* 5850 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7625 */;
+// Module 16234 (JoinRequestActionSheet)
+import isChangelogUserDefault from "isChangelogUser" /* 2097 */;
+import GuildJoinRequestAnalyticUtils from "GuildJoinRequestAnalyticUtils" /* 5855 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7632 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4821 */;
+import AccessibilityStore from "AccessibilityStore" /* 4825 */;
 import UserRecord from "UserRecord" /* 1386 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -178,7 +178,7 @@ const View = fn(17).View;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_11 = createStyles.createStyles({ container: { flex: 1 }, profileContainer: { position: "relative" }, noPadding: { paddingHorizontal: 0 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_member_verification/native/components/JoinRequestActionSheet.tsx");

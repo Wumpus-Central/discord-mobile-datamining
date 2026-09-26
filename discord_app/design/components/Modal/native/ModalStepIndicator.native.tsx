@@ -1,10 +1,10 @@
-// === Module 13711: ModalStepIndicator ===
+// === Module 13995: ModalStepIndicator ===
 
-// Module 13711 (ModalStepIndicator)
+// Module 13995 (ModalStepIndicator)
 import util from "util" /* 1115 */;
-import _modDef2124 from "module_2124" /* 2124 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
-import spring from "spring" /* 5273 */;
+import _modDef2125 from "module_2125" /* 2125 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
+import spring from "spring" /* 5280 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -75,7 +75,7 @@ function StepPill(isActive) {
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 let closure_6 = { overshootClamping: true };
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_7 = createStyles.createStyles({ container: { flexDirection: "row", gap: 4 }, stepPill: { height: 4, borderRadius: 2 } });
 const __initData = { code: "function ModalStepIndicatorNativeTsx1(){const{interpolate,sharedValue,WIDTH_INACTIVE,WIDTH_ACTIVE,interpolateColor,inactiveColor,activeColor,inactiveOpacity}=this.__closure;return{width:interpolate(sharedValue.get(),[0,1],[WIDTH_INACTIVE,WIDTH_ACTIVE]),backgroundColor:interpolateColor(sharedValue.get(),[0,1],[inactiveColor,activeColor]),opacity:interpolate(sharedValue.get(),[0,1],[inactiveOpacity,1])};}" };
 const size = fn(2);
@@ -99,12 +99,12 @@ export const ModalStepIndicator = function ModalStepIndicator(arg0) {
       return <View style={tmp.container}>{items}</View>;
     } else {
       const intl = util.intl;
-      const obj4 = { accessible: true, accessibilityRole: "progressbar", accessibilityLabel: intl.string(_modDef2124.KUwsC0), accessibilityValue: null, importantForAccessibility: "yes", style: null, children: null };
+      const obj4 = { accessible: true, accessibilityRole: "progressbar", accessibilityLabel: intl.string(_modDef2125.KUwsC0), accessibilityValue: null, importantForAccessibility: "yes", style: null, children: null };
       const range = { min: 1, max: totalSteps, now: currentStep + 1 };
       obj4.accessibilityValue = range;
       obj4.style = tmp.container;
       obj4.children = items;
-      return <View accessible accessibilityRole="progressbar" accessibilityLabel={intl.string(_modDef2124.KUwsC0)} accessibilityValue={null} importantForAccessibility="yes" style={null}>{null}</View>;
+      return <View accessible accessibilityRole="progressbar" accessibilityLabel={intl.string(_modDef2125.KUwsC0)} accessibilityValue={null} importantForAccessibility="yes" style={null}>{null}</View>;
     }
   }
 };

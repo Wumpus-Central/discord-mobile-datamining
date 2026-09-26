@@ -1,13 +1,13 @@
-// === Module 11477: ForumPostMedia ===
+// === Module 11491: ForumPostMedia ===
 
-// Module 11477 (ForumPostMedia)
+// Module 11491 (ForumPostMedia)
 import nativeDefault from "native" /* 576 */;
-import utils_ImageUtils from "utils/ImageUtils" /* 1477 */;
-import UserSettings from "UserSettings" /* 2020 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5262 */;
-import FastImageDefault from "FastImage" /* 5894 */;
-import SpoilerIconDefault from "SpoilerIcon" /* 11478 */;
-import MessageAttachmentUtils from "MessageAttachmentUtils" /* 11480 */;
+import utils_ImageUtils from "utils/ImageUtils" /* 1478 */;
+import UserSettings from "UserSettings" /* 2021 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5269 */;
+import FastImageDefault from "FastImage" /* 5899 */;
+import SpoilerIconDefault from "SpoilerIcon" /* 11492 */;
+import MessageAttachmentUtils from "MessageAttachmentUtils" /* 11494 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
@@ -70,9 +70,9 @@ function ForumPostMedia(obscureReason) {
   if (obscureReason.isMediaPost) {
     const obj2 = {};
     const merged = Object.assign(obscureReason);
-    let tmp6Result = closure_10(ref(11479), obj2);
+    let tmp6Result = closure_10(ref(11493), obj2);
     let tmp12 = closure_10;
-    const tmp19 = ref(11479);
+    const tmp19 = ref(11493);
   } else {
     if (tmp3Result.isAndroid()) {
       const obj3 = {};
@@ -88,7 +88,7 @@ function ForumPostMedia(obscureReason) {
     tmp3Result = tmp3(1364);
   }
   if (null != obscureReason.obscureReason) {
-    const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(6709).AGE_VERIFICATION_OBSCURABLE_REASONS;
+    const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(6714).AGE_VERIFICATION_OBSCURABLE_REASONS;
     if (AGE_VERIFICATION_OBSCURABLE_REASONS.has(obscureReason.obscureReason)) {
       if (shouldAgeVerifyForReason) {
         const obj5 = { style: null, ref: null, children: null };
@@ -99,12 +99,12 @@ function ForumPostMedia(obscureReason) {
           androidRippleConfig: ANDROID_FOREGROUND_RIPPLE,
           activeOpacity: 0,
           onPress() {
-                  const obj = ref(7851);
-                  const result = obj.showAgeVerificationGetStartedModal({ entryPoint: obscureReason(7853).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW });
+                  const obj = ref(7859);
+                  const result = obj.showAgeVerificationGetStartedModal({ entryPoint: obscureReason(7861).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW });
                 },
           children: tmp6Result
         };
-        obj5.children = tmp12(tmp3(5428).PressableOpacity, obj6);
+        obj5.children = tmp12(tmp3(5435).PressableOpacity, obj6);
         let tmp12Result = tmp12(closure_5, obj5);
       }
       return tmp12Result;
@@ -128,7 +128,7 @@ function ForumPostMedia(obscureReason) {
         },
       children: tmp6Result
     };
-    obj7.children = tmp12(tmp3(5428).PressableOpacity, obj8);
+    obj7.children = tmp12(tmp3(5435).PressableOpacity, obj8);
     tmp12Result = tmp12(closure_5, obj7);
   } else {
     const obj9 = { style: null, ref: null, children: null };
@@ -147,7 +147,7 @@ const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 let closure_13 = Math.min(PixelRatio.get(), 4);
 let closure_14 = Math.min(PixelRatio.get(), 4);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { mediaContainer: { position: "relative", overflow: "hidden" }, thumbnailBorder: { borderRadius: nativeDefault.radii.sm }, thumbnail: { height: 80, width: 80 }, spoilerIconContainer: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center" }, spoilerIcon: null, gridMediaContainer: null };
 let obj3 = { borderRadius: nativeDefault.radii.sm };
 obj2.spoilerIcon = { color: nativeDefault.unsafe_rawColors.PRIMARY_300, alignSelf: "center" };

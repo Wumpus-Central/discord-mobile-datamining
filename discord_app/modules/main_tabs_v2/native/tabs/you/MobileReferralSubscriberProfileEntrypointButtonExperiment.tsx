@@ -1,10 +1,10 @@
-// === Module 16573: MobileReferralSubscriberProfileEntrypointButtonExperiment ===
+// === Module 16602: MobileReferralSubscriberProfileEntrypointButtonExperiment ===
 
-// Module 16573 (MobileReferralSubscriberProfileEntrypointButtonExperiment)
+// Module 16602 (MobileReferralSubscriberProfileEntrypointButtonExperiment)
 import DurationsDefault from "Durations" /* 1091 */;
 
 const result = 3 * DurationsDefault.Millis.DAYS_30;
-const ApexExperiment = fn(1434);
+const ApexExperiment = fn(1435);
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-05-mobile-referral-subscriber-profile-entrypoint-button", kind: "user", defaultConfig: { enabled: false, showReferralNotificationDot: false }, variations: { 0: { enabled: false, showReferralNotificationDot: false }, 1: { enabled: true, showReferralNotificationDot: false }, 2: { enabled: true, showReferralNotificationDot: true } } });
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/MobileReferralSubscriberProfileEntrypointButtonExperiment.tsx");

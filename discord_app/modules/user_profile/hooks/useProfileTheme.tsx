@@ -1,18 +1,18 @@
-// === Module 7665: useProfileTheme ===
+// === Module 7673: useProfileTheme ===
 
-// Module 7665 (useProfileTheme)
+// Module 7673 (useProfileTheme)
 import initialize from "initialize" /* 504 */;
 import shims from "shims" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
-import shared from "shared" /* 4682 */;
-import useThemeDefault from "useTheme" /* 4763 */;
-import useAvatarColor from "useAvatarColor" /* 7581 */;
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 7667 */;
+import shared from "shared" /* 4685 */;
+import useThemeDefault from "useTheme" /* 4767 */;
+import useAvatarColor from "useAvatarColor" /* 7589 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 7675 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AccessibilityStore from "AccessibilityStore" /* 4821 */;
+import AccessibilityStore from "AccessibilityStore" /* 4825 */;
 
 require = fn;
-const useEffectiveThemeOverride = fn(7666).useEffectiveThemeOverride;
+const useEffectiveThemeOverride = fn(7674).useEffectiveThemeOverride;
 const ThemeTypes = fn(1074).ThemeTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/useProfileTheme.tsx");

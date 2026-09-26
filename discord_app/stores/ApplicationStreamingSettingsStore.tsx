@@ -1,10 +1,10 @@
-// === Module 4875: ApplicationStreamingSettingsStore ===
+// === Module 4882: ApplicationStreamingSettingsStore ===
 
-// Module 4875 (ApplicationStreamingSettingsStore)
+// Module 4882 (ApplicationStreamingSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import Constants from "Constants" /* 4854 */;
-import StreamSettingsConstants from "StreamSettingsConstants" /* 4876 */;
+import Constants from "Constants" /* 4861 */;
+import StreamSettingsConstants from "StreamSettingsConstants" /* 4883 */;
 import size from "module_2" /* 2 */;
 
 const ApplicationStreamPresets = StreamSettingsConstants.ApplicationStreamPresets;

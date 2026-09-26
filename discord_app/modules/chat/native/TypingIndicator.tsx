@@ -1,17 +1,17 @@
-// === Module 11432: TypingIndicator ===
+// === Module 11446: TypingIndicator ===
 
-// Module 11432 (TypingIndicator)
+// Module 11446 (TypingIndicator)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import native from "native" /* 4537 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4981 */;
-import spring from "spring" /* 5273 */;
-import springPresets from "springPresets" /* 5277 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 11439 */;
+import native from "native" /* 4540 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4988 */;
+import spring from "spring" /* 5280 */;
+import springPresets from "springPresets" /* 5284 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 11453 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 4828 */;
-import RawGuildEmojiStore from "RawGuildEmojiStore" /* 5768 */;
-import TypingStore from "TypingStore" /* 11433 */;
+import DevSettingsStore from "DevSettingsStore" /* 4835 */;
+import RawGuildEmojiStore from "RawGuildEmojiStore" /* 5773 */;
+import TypingStore from "TypingStore" /* 11447 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -214,12 +214,12 @@ function renderTypingIndicator(arg0, arg1, transitionState, cleanUp) {
   return closure_1_12(TypingIndicatorInner, obj, arg0);
 }
 const View = fn(17).View;
-let closure_5 = fn(8835).useChatShowingAutoComplete;
-const SlowmodeType = fn(7095).SlowmodeType;
+let closure_5 = fn(8843).useChatShowingAutoComplete;
+const SlowmodeType = fn(7100).SlowmodeType;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let closure_15 = createStyles.createStyles((arg0) => {
   const obj = { typingWrapper: { paddingTop: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP, paddingBottom: 4, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: "transparent", paddingRight: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingLeft: 2 * arg0 }, wrapperHoriz: { justifyContent: "space-between", flexDirection: "row", alignItems: "center" }, horiz: null, text: null };
   const obj2 = { paddingTop: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP, paddingBottom: 4, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: "transparent", paddingRight: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingLeft: 2 * arg0 };

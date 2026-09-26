@@ -1,20 +1,20 @@
-// === Module 8827: ChannelCallModal ===
+// === Module 8835: ChannelCallModal ===
 
-// Module 8827 (ChannelCallModal)
-import ReanimatedRexport from "ReanimatedRexport" /* 4563 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4688 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 5036 */;
-import VoiceChatHooks from "VoiceChatHooks" /* 8825 */;
-import RevealProvider from "RevealProvider" /* 8829 */;
-import CameraPreviewDefault from "CameraPreview" /* 8834 */;
-import ChannelCallModalManagerDefault from "ChannelCallModalManager" /* 8926 */;
-import ChannelCallNavigatorDefault from "ChannelCallNavigator" /* 8927 */;
-import PanGestureAnimations from "PanGestureAnimations" /* 12279 */;
-import RouteManagerUtils from "RouteManagerUtils" /* 12280 */;
+// Module 8835 (ChannelCallModal)
+import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4692 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 5043 */;
+import VoiceChatHooks from "VoiceChatHooks" /* 8833 */;
+import RevealProvider from "RevealProvider" /* 8837 */;
+import CameraPreviewDefault from "CameraPreview" /* 8842 */;
+import ChannelCallModalManagerDefault from "ChannelCallModalManager" /* 8937 */;
+import ChannelCallNavigatorDefault from "ChannelCallNavigator" /* 8938 */;
+import PanGestureAnimations from "PanGestureAnimations" /* 12297 */;
+import RouteManagerUtils from "RouteManagerUtils" /* 12298 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4845 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4852 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
 
 require = fn;
 class ChannelCallCameraPreview {
@@ -52,10 +52,10 @@ class ChannelCallModal {
     return jsx(closure_30, obj);
   }
 }
-const ChannelCallStore = fn(8821);
+const ChannelCallStore = fn(8829);
 ({ useChannelCallOrientationHandlers: closure_7, resetChannelCallStore: closure_8, useChannelCallStore: closure_9, setVoiceChatDrawerState: c10, useIsVoiceChatFocused: closure_11 } = ChannelCallStore);
-let VoiceChatDrawerState = fn(8822).VoiceChatDrawerState;
-const Constants = fn(8828);
+let VoiceChatDrawerState = fn(8830).VoiceChatDrawerState;
+const Constants = fn(8836);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: map1, SWIPE_TO_CHAT_ACTIVE_OFFSET: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
@@ -67,14 +67,14 @@ let closure_18 = noop.memo((arg0) => {
     if (null != first) {
       ChannelCallModalManagerDefault.initialize(tmp);
       return () => {
-        closure_1_1(8926).terminate();
-        const obj = closure_1_1(8926);
-        closure_1_1(8831).setHidden(false);
-        const obj2 = closure_1_1(8831);
+        closure_1_1(8937).terminate();
+        const obj = closure_1_1(8937);
+        closure_1_1(8839).setHidden(false);
+        const obj2 = closure_1_1(8839);
         if (!obj3.isModalOpen(closure_1_31)) {
           closure_1_8();
         }
-        obj3 = channel(4688);
+        obj3 = channel(4692);
       };
     }
   }, items);

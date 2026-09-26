@@ -1,7 +1,7 @@
-// === Module 10583: TooltipConstants ===
+// === Module 10594: TooltipConstants ===
 
-// Module 10583 (TooltipConstants)
-import spring from "spring" /* 5273 */;
+// Module 10594 (TooltipConstants)
+import spring from "spring" /* 5280 */;
 import size from "module_2" /* 2 */;
 
 const TOOLTIP_SPRING = { overshootClamping: true, damping: 35, stiffness: 450, mass: 0.5, restDisplacementThreshold: 0.001 };
@@ -21,7 +21,7 @@ export const tooltipEnterExitAnimation = function tooltipEnterExitAnimation(posi
     obj2.opacity = spring.withSpring(value, closure_2, "respect-motion-settings", fn);
     return obj2;
   };
-  fn.__closure = { withSpring: num(5273).withSpring, translateY: num, TOOLTIP_SPRING };
+  fn.__closure = { withSpring: num(5280).withSpring, translateY: num, TOOLTIP_SPRING };
   fn.__workletHash = 7727487832145;
   fn.__initData = __initData;
   return fn;

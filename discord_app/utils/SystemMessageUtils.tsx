@@ -1,24 +1,26 @@
-// === Module 7423: SystemMessageUtils ===
+// === Module 7428: SystemMessageUtils ===
 
-// Module 7423 (SystemMessageUtils)
+// Module 7428 (SystemMessageUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1115 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4981 */;
-import useChannelName from "useChannelName" /* 4982 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5051 */;
-import useMessageAuthor from "useMessageAuthor" /* 5076 */;
-import MarkupParser from "MarkupParser" /* 7424 */;
-import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 7428 */;
-import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 7429 */;
-import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 7431 */;
-import ApplicationSubscriptionSystemMessageUtils from "ApplicationSubscriptionSystemMessageUtils" /* 7432 */;
-import PrivateChannelIntegrationSystemMessageUtils from "PrivateChannelIntegrationSystemMessageUtils" /* 7433 */;
+import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4457 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4988 */;
+import useChannelName from "useChannelName" /* 4989 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5058 */;
+import useMessageAuthor from "useMessageAuthor" /* 5083 */;
+import MarkupParser from "MarkupParser" /* 7429 */;
+import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 7433 */;
+import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 7434 */;
+import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 7436 */;
+import ApplicationSubscriptionSystemMessageUtils from "ApplicationSubscriptionSystemMessageUtils" /* 7437 */;
+import PrivateChannelIntegrationSystemMessageUtils from "PrivateChannelIntegrationSystemMessageUtils" /* 7438 */;
+import GuildLeaderboardSystemMessageCopy from "GuildLeaderboardSystemMessageCopy" /* 7439 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessageRecord from "MessageRecord" /* 4477 */;
+import MessageRecord from "MessageRecord" /* 4480 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import RelationshipStore from "RelationshipStore" /* 4476 */;
+import ChannelStore from "ChannelStore" /* 2045 */;
+import GuildStore from "GuildStore" /* 2067 */;
+import RelationshipStore from "RelationshipStore" /* 4479 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
@@ -33,7 +35,7 @@ const Constants = fn(1074);
 ({ MessageEmbedTypes: c10, MessageTypes: closure_11, NOOP: closure_12 } = Constants);
 let closure_13 = { "234395307759108106": "https://groovy.bot/commands", "365975655608745985": "https://www.pokecord.com/getting-started", "512412940897484800": "http://jameslantz.net/smilebot" };
 const size = fn(2);
-const result = size.fileFinishedImporting("utils/SystemMessageUtils.tsx");
+let result = size.fileFinishedImporting("utils/SystemMessageUtils.tsx");
 
 export default {
   stringify(mentions, isForumPost) {
@@ -48,31 +50,31 @@ export default {
       const type = mentions.type;
       if (constants.RECIPIENT_ADD === type) {
         if (null != null) {
-          const intl18 = util.intl;
-          const obj2 = { username: name, usernameOnClick, otherUsername: null, otherUsernameOnClick: null };
-          const obj61 = MarkupParser;
-          obj2.otherUsername = NicknameUtilsDefault.getName(null, channel_id, null);
-          obj2.otherUsernameOnClick = usernameOnClick;
-          return obj61.astToString(intl18.formatToParts(util.t["7/Xl0S"], obj2));
+          const intl19 = util.intl;
+          const obj3 = { username: name, usernameOnClick, otherUsername: null, otherUsernameOnClick: null };
+          const obj69 = MarkupParser;
+          obj3.otherUsername = NicknameUtilsDefault.getName(null, channel_id, null);
+          obj3.otherUsernameOnClick = usernameOnClick;
+          return obj69.astToString(intl19.formatToParts(util.t["7/Xl0S"], obj3));
         }
       } else if (constants.RECIPIENT_REMOVE === type) {
         if (null != null) {
           const author = mentions.author;
           if (null != author) {
             if (author.id !== null.id) {
-              const intl17 = util.intl;
-              const obj4 = { username: name, usernameOnClick, otherUsername: null, otherUsernameOnClick: null };
-              const obj58 = MarkupParser;
-              obj4.otherUsername = NicknameUtilsDefault.getName(null, channel_id, null);
-              obj4.otherUsernameOnClick = usernameOnClick;
-              let astToStringResult = obj58.astToString(intl17.formatToParts(util.t.QtZ0RD, obj4));
-              const tmp6Result2 = NicknameUtilsDefault;
+              const intl18 = util.intl;
+              const obj5 = { username: name, usernameOnClick, otherUsername: null, otherUsernameOnClick: null };
+              const obj66 = MarkupParser;
+              obj5.otherUsername = NicknameUtilsDefault.getName(null, channel_id, null);
+              obj5.otherUsernameOnClick = usernameOnClick;
+              let astToStringResult = obj66.astToString(intl18.formatToParts(util.t.QtZ0RD, obj5));
+              const tmp6Result4 = NicknameUtilsDefault;
             }
             return astToStringResult;
           }
-          const intl16 = util.intl;
-          const obj5 = { username: name, usernameOnClick };
-          astToStringResult = MarkupParser.astToString(intl16.formatToParts(util.t["Qn5+Lf"], obj5));
+          const intl17 = util.intl;
+          const obj6 = { username: name, usernameOnClick };
+          astToStringResult = MarkupParser.astToString(intl17.formatToParts(util.t["Qn5+Lf"], obj6));
         }
       } else if (constants.CALL === type) {
         const call = mentions.call;
@@ -80,51 +82,51 @@ export default {
         if (null != call) {
           const participants = call.participants;
           if (-1 === participants.indexOf(AuthenticationStore.getId())) {
-            const intl15 = util.intl;
+            const intl16 = util.intl;
             const obj7 = { username: name, usernameOnClick };
-            astToStringResult1 = MarkupParser.astToString(intl15.formatToParts(util.t.DbgSA0, obj7));
+            astToStringResult1 = MarkupParser.astToString(intl16.formatToParts(util.t.DbgSA0, obj7));
           }
         }
         return astToStringResult1;
       } else if (constants.CHANNEL_NAME_CHANGE === type) {
-        const intl14 = util.intl;
-        const obj52 = MarkupParser;
+        const intl15 = util.intl;
+        const obj57 = MarkupParser;
         const t = util.t;
-        const obj8 = { username: name, usernameOnClick, channelName: mentions.content };
-        return obj52.astToString(intl14.formatToParts(isForumPost.isForumPost() ? t["qa0e/n"] : t.XCPMEG, obj8));
+        const obj9 = { username: name, usernameOnClick, channelName: mentions.content };
+        return obj57.astToString(intl15.formatToParts(isForumPost.isForumPost() ? t["qa0e/n"] : t.XCPMEG, obj9));
       } else if (constants.CHANNEL_ICON_CHANGE === type) {
-        const intl13 = util.intl;
-        const obj9 = { username: name, usernameOnClick };
-        return MarkupParser.astToString(intl13.formatToParts(util.t.wypJZ0, obj9));
-      } else if (constants.CHANNEL_PINNED_MESSAGE === type) {
-        const intl12 = util.intl;
+        const intl14 = util.intl;
         const obj10 = { username: name, usernameOnClick };
-        return MarkupParser.astToString(intl12.formatToParts(util.t["/M60j0"], obj10));
-      } else if (constants.USER_JOIN === type) {
-        const intl11 = util.intl;
-        const obj11 = { username: name, usernameOnClick };
-        return MarkupParser.astToString(intl11.formatToParts(getSystemMessageUserJoinMobile(mentions.id), obj11));
-      } else if (constants.GUILD_BOOST === type) {
-        const intl10 = util.intl;
+        return MarkupParser.astToString(intl14.formatToParts(util.t.wypJZ0, obj10));
+      } else if (constants.CHANNEL_PINNED_MESSAGE === type) {
+        const intl13 = util.intl;
         const obj12 = { username: name, usernameOnClick };
-        return MarkupParser.astToString(intl10.formatToParts(util.t.ihxM9x, obj12));
+        return MarkupParser.astToString(intl13.formatToParts(util.t["/M60j0"], obj12));
+      } else if (constants.USER_JOIN === type) {
+        const intl12 = util.intl;
+        const obj13 = { username: name, usernameOnClick };
+        return MarkupParser.astToString(intl12.formatToParts(getSystemMessageUserJoinMobile(mentions.id), obj13));
+      } else if (constants.GUILD_BOOST === type) {
+        const intl11 = util.intl;
+        const obj14 = { username: name, usernameOnClick };
+        return MarkupParser.astToString(intl11.formatToParts(util.t.ihxM9x, obj14));
       } else {
         if (constants.GUILD_BOOST_TIER_1 !== type) {
           if (constants.GUILD_BOOST_TIER_2 !== type) {
             if (constants.GUILD_BOOST_TIER_3 !== type) {
               if (constants.GUILD_INVITE_REMINDER === type) {
-                const intl7 = util.intl;
-                return intl7.string(util.t.gxyKvr);
+                const intl8 = util.intl;
+                return intl8.string(util.t.gxyKvr);
               } else if (constants.THREAD_STARTER_MESSAGE === type) {
-                const intl6 = util.intl;
-                const obj13 = { username: name, threadName: useChannelName.computeChannelName(isForumPost, UserStore, RelationshipStore) };
-                return intl6.formatToPlainString(util.t["B8H+Cl"], obj13);
+                const intl7 = util.intl;
+                const obj15 = { username: name, threadName: useChannelName.computeChannelName(isForumPost, UserStore, RelationshipStore) };
+                return intl7.formatToPlainString(util.t["B8H+Cl"], obj15);
               } else if (constants.ROLE_SUBSCRIPTION_PURCHASE === type) {
                 let astToStringResult2 = null;
                 if (!(mentions instanceof MessageRecord)) {
-                  const obj34 = MarkupParser;
-                  const obj14 = { username: name, guildId: isForumPost.guild_id, roleSubscriptionData: mentions.role_subscription_data };
-                  astToStringResult2 = obj34.astToString(GuildRoleSubscriptionSystemMessageUtils.getRoleSubscriptionPurchaseSystemMessageContentMobile(obj14));
+                  const obj39 = MarkupParser;
+                  const obj16 = { username: name, guildId: isForumPost.guild_id, roleSubscriptionData: mentions.role_subscription_data };
+                  astToStringResult2 = obj39.astToString(GuildRoleSubscriptionSystemMessageUtils.getRoleSubscriptionPurchaseSystemMessageContentMobile(obj16));
                 }
                 return astToStringResult2;
               } else if (constants.PURCHASE_NOTIFICATION === type) {
@@ -140,9 +142,9 @@ export default {
                   }
                   astToStringResult3 = null;
                   if (null != product_name) {
-                    const obj31 = MarkupParser;
-                    const obj15 = { username: name, productName: mentions.purchase_notification.guild_product_purchase.product_name };
-                    astToStringResult3 = obj31.astToString(GuildProductSystemMessageUtils.getGuildProductPurchaseSystemMessageContentMobile(obj15));
+                    const obj36 = MarkupParser;
+                    const obj17 = { username: name, productName: mentions.purchase_notification.guild_product_purchase.product_name };
+                    astToStringResult3 = obj36.astToString(GuildProductSystemMessageUtils.getGuildProductPurchaseSystemMessageContentMobile(obj17));
                   }
                 }
                 return astToStringResult3;
@@ -150,32 +152,32 @@ export default {
                 if (mentions instanceof MessageRecord) {
                   return null;
                 } else {
-                  const obj26 = useMessageAuthor;
-                  const messageAuthor = obj26.getMessageAuthor(MessageRecordUtils.createMessageRecord(mentions));
-                  const obj28 = MarkupParser;
+                  const obj31 = useMessageAuthor;
+                  const messageAuthor = obj31.getMessageAuthor(MessageRecordUtils.createMessageRecord(mentions));
+                  const obj33 = MarkupParser;
                   const obj18 = { application: mentions.application, username: messageAuthor.nick };
-                  return obj28.astToString(ApplicationSubscriptionSystemMessageUtils.getApplicationSubscriptionSystemMessageASTContent(obj18));
+                  return obj33.astToString(ApplicationSubscriptionSystemMessageUtils.getApplicationSubscriptionSystemMessageASTContent(obj18));
                 }
               } else if (constants.PRIVATE_CHANNEL_INTEGRATION_ADDED === type) {
                 let astToStringResult4 = null;
                 if (!(mentions instanceof MessageRecord)) {
-                  const obj21 = MarkupParser;
-                  const obj23 = { application: mentions.application, username: null };
-                  const obj22 = PrivateChannelIntegrationSystemMessageUtils;
-                  const obj24 = useMessageAuthor;
-                  obj23.username = obj24.getMessageAuthor(MessageRecordUtils.createMessageRecord(mentions)).nick;
-                  astToStringResult4 = obj21.astToString(obj22.getPrivateChannelIntegrationAddedSystemMessageASTContent(obj23));
+                  const obj26 = MarkupParser;
+                  const obj19 = { application: mentions.application, username: null };
+                  const obj27 = PrivateChannelIntegrationSystemMessageUtils;
+                  const obj29 = useMessageAuthor;
+                  obj19.username = obj29.getMessageAuthor(MessageRecordUtils.createMessageRecord(mentions)).nick;
+                  astToStringResult4 = obj26.astToString(obj27.getPrivateChannelIntegrationAddedSystemMessageASTContent(obj19));
                 }
                 return astToStringResult4;
               } else if (constants.PRIVATE_CHANNEL_INTEGRATION_REMOVED === type) {
                 let astToStringResult5 = null;
                 if (!(mentions instanceof MessageRecord)) {
-                  const obj16 = MarkupParser;
-                  const obj30 = { application: mentions.application, username: null };
-                  const obj17 = PrivateChannelIntegrationSystemMessageUtils;
-                  const obj19 = useMessageAuthor;
-                  obj30.username = obj19.getMessageAuthor(MessageRecordUtils.createMessageRecord(mentions)).nick;
-                  astToStringResult5 = obj16.astToString(obj17.getPrivateChannelIntegrationRemovedSystemMessageASTContent(obj30));
+                  const obj21 = MarkupParser;
+                  const obj20 = { application: mentions.application, username: null };
+                  const obj22 = PrivateChannelIntegrationSystemMessageUtils;
+                  const obj24 = useMessageAuthor;
+                  obj20.username = obj24.getMessageAuthor(MessageRecordUtils.createMessageRecord(mentions)).nick;
+                  astToStringResult5 = obj21.astToString(obj22.getPrivateChannelIntegrationRemovedSystemMessageASTContent(obj20));
                 }
                 return astToStringResult5;
               } else if (constants.AUTO_MODERATION_ACTION === type) {
@@ -212,20 +214,20 @@ export default {
                     astToStringResult6 = null;
                     if (null != guild) {
                       if (AutomodNotificationEmbedTypeKeys.AutomodNotificationEmbedTypeKeys.ACTIVITY_ALERTS_ENABLED === value) {
-                        const intl5 = util.intl;
-                        const obj33 = { guildName: guild.name };
-                        astToStringResult6 = MarkupParser.astToString(intl5.formatToParts(util.t.wt3ZUM, obj33));
-                        const tmp34Result = MarkupParser;
+                        const intl6 = util.intl;
+                        const obj23 = { guildName: guild.name };
+                        astToStringResult6 = MarkupParser.astToString(intl6.formatToParts(util.t.wt3ZUM, obj23));
+                        const tmp45Result = MarkupParser;
                       } else if (AutomodNotificationEmbedTypeKeys.AutomodNotificationEmbedTypeKeys.INTERACTION_BLOCKED === value) {
-                        const intl4 = util.intl;
-                        const obj36 = { guildName: guild.name };
-                        astToStringResult6 = MarkupParser.astToString(intl4.formatToParts(util.t.AkqI0g, obj36));
-                        const tmp34Result3 = MarkupParser;
+                        const intl5 = util.intl;
+                        const obj28 = { guildName: guild.name };
+                        astToStringResult6 = MarkupParser.astToString(intl5.formatToParts(util.t.AkqI0g, obj28));
+                        const tmp45Result3 = MarkupParser;
                       } else {
-                        const intl3 = util.intl;
-                        const obj37 = { guildName: guild.name };
-                        astToStringResult6 = MarkupParser.astToString(intl3.formatToParts(util.t["a+lJKl"], obj37));
-                        const tmp34Result4 = MarkupParser;
+                        const intl4 = util.intl;
+                        const obj35 = { guildName: guild.name };
+                        astToStringResult6 = MarkupParser.astToString(intl4.formatToParts(util.t["a+lJKl"], obj35));
+                        const tmp45Result4 = MarkupParser;
                       }
                     }
                   }
@@ -234,41 +236,97 @@ export default {
                   return mentions.content;
                 }
               } else if (constants.GUILD_INCIDENT_ALERT_MODE_ENABLED === type) {
-                const content = mentions.content;
+                const content2 = mentions.content;
                 const channel1 = ChannelStore.getChannel(channel_id);
-                let tmp17 = null;
+                let tmp28 = null;
                 if (null != channel1) {
                   const guild1 = GuildStore.getGuild(channel1.getGuildId());
                   let astToStringResult7 = null;
                   if (null != guild1) {
-                    const intl2 = util.intl;
-                    const obj39 = { username: name, guildName: guild1.name, time: null };
-                    let str = "";
-                    if ("" !== content) {
+                    const intl3 = util.intl;
+                    const obj38 = { username: name, guildName: guild1.name, time: null };
+                    let str2 = "";
+                    if ("" !== content2) {
                       const _Date = Date;
-                      const date = new Date(content);
-                      str = date.toLocaleString(util.intl.currentLocale, { hour: "numeric", minute: "2-digit" });
+                      const date = new Date(content2);
+                      str2 = date.toLocaleString(util.intl.currentLocale, { hour: "numeric", minute: "2-digit" });
                     }
-                    obj39.time = str;
-                    astToStringResult7 = MarkupParser.astToString(intl2.formatToParts(util.t.iOuWPk, obj39));
+                    obj38.time = str2;
+                    astToStringResult7 = MarkupParser.astToString(intl3.formatToParts(util.t.iOuWPk, obj38));
                   }
-                  tmp17 = astToStringResult7;
+                  tmp28 = astToStringResult7;
                 }
-                return tmp17;
+                return tmp28;
               } else if (constants.GUILD_INCIDENT_ALERT_MODE_DISABLED === type) {
                 const channel2 = ChannelStore.getChannel(channel_id);
-                let tmp11 = null;
+                let tmp22 = null;
                 if (null != channel2) {
                   const guild2 = GuildStore.getGuild(channel2.getGuildId());
                   let astToStringResult8 = null;
                   if (null != guild2) {
-                    const intl = util.intl;
+                    const intl2 = util.intl;
                     const obj41 = { username: name, guildName: guild2.name };
-                    astToStringResult8 = MarkupParser.astToString(intl.formatToParts(util.t.axmbpm, obj41));
+                    astToStringResult8 = MarkupParser.astToString(intl2.formatToParts(util.t.axmbpm, obj41));
                   }
-                  tmp11 = astToStringResult8;
+                  tmp22 = astToStringResult8;
                 }
-                return tmp11;
+                return tmp22;
+              } else if (constants.GUILD_SPACE_MESSAGE === type) {
+                if (mentions instanceof MessageRecord) {
+                  const guildSpaceData = mentions.guildSpaceData;
+                  let leaderboard1;
+                  if (guildSpaceData != null) {
+                    leaderboard1 = guildSpaceData.leaderboard;
+                  }
+                  let leaderboard = leaderboard1;
+                } else {
+                  const guild_space_data = mentions.guild_space_data;
+                  if (guild_space_data != null) {
+                    leaderboard = guild_space_data.leaderboard;
+                  }
+                }
+                const result = GuildLeaderboardTypes.parseGuildSpaceLeaderboardMessageData(leaderboard);
+                let userId;
+                if (result != null) {
+                  userId = result.userId;
+                }
+                let previousUserId;
+                const user = UserStore.getUser(userId);
+                if (result != null) {
+                  previousUserId = result.previousUserId;
+                }
+                const guildSpaceLeaderboardMessage = GuildLeaderboardSystemMessageCopy.resolveGuildSpaceLeaderboardMessage(result, user, UserStore.getUser(previousUserId));
+                if (null == guildSpaceLeaderboardMessage) {
+                  return mentions.content;
+                } else {
+                  const guildId = isForumPost.getGuildId();
+                  const obj42 = { username: null, previousUsername: null };
+                  const tmp10Result2 = GuildLeaderboardSystemMessageCopy;
+                  obj42.username = NicknameUtilsDefault.getName(guildId, channel_id, guildSpaceLeaderboardMessage.subject);
+                  let str = "";
+                  if (null != guildSpaceLeaderboardMessage.previousLeader) {
+                    str = NicknameUtilsDefault.getName(guildId, channel_id, guildSpaceLeaderboardMessage.previousLeader);
+                    const tmp6Result6 = NicknameUtilsDefault;
+                  }
+                  obj42.previousUsername = str;
+                  const leaderboardSystemMessage = tmp10Result2.getLeaderboardSystemMessage(guildSpaceLeaderboardMessage.data, obj42);
+                  if (null == leaderboardSystemMessage) {
+                    let content = mentions.content;
+                  } else {
+                    const intl = util.intl;
+                    const obj44 = {};
+                    const merged = Object.assign(leaderboardSystemMessage.values);
+                    obj44.usernameHook = function usernameHook(arg0) {
+                      return arg0;
+                    };
+                    obj44.previousUsernameHook = function previousUsernameHook(arg0) {
+                      return arg0;
+                    };
+                    content = intl.formatToPlainString(leaderboardSystemMessage.message, obj44);
+                  }
+                  return content;
+                }
+                const tmp10Result = GuildLeaderboardSystemMessageCopy;
               } else {
                 return mentions.content;
               }
@@ -278,15 +336,15 @@ export default {
         const channel3 = ChannelStore.getChannel(channel_id);
         if (null != channel3) {
           if (null != GuildStore.getGuild(channel3.getGuildId())) {
-            const intl8 = util.intl;
-            const obj43 = { username: name, usernameOnClick };
-            let astToStringResult9 = MarkupParser.astToString(intl8.formatToParts(util.t.ihxM9x, obj43));
+            const intl9 = util.intl;
+            const obj46 = { username: name, usernameOnClick };
+            let astToStringResult9 = MarkupParser.astToString(intl9.formatToParts(util.t.ihxM9x, obj46));
           }
           return astToStringResult9;
         }
-        const intl9 = util.intl;
-        const obj45 = { username: name, usernameOnClick };
-        astToStringResult9 = MarkupParser.astToString(intl9.formatToParts(util.t.ihxM9x, obj45));
+        const intl10 = util.intl;
+        const obj48 = { username: name, usernameOnClick };
+        astToStringResult9 = MarkupParser.astToString(intl10.formatToParts(util.t.ihxM9x, obj48));
       }
     } else if (typeof first === "object") {
       first = UserStore.getUser(first.id);
@@ -294,9 +352,9 @@ export default {
         first = null;
       }
     } else if (typeof first === "string") {
-      let user = UserStore.getUser(first);
-      if (user == null) {
-        user = null;
+      let user1 = UserStore.getUser(first);
+      if (user1 == null) {
+        user1 = null;
       }
     }
   },

@@ -1,6 +1,6 @@
-// === Module 10709: AppStoreMetadataActionCreators ===
+// === Module 10722: AppStoreMetadataActionCreators ===
 
-// Module 10709 (AppStoreMetadataActionCreators)
+// Module 10722 (AppStoreMetadataActionCreators)
 import DurationsDefault from "Durations" /* 1091 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import Dispatcher from "Dispatcher" /* 573 */;

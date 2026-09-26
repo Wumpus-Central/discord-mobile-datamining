@@ -1,31 +1,31 @@
-// === Module 17568: GuildSettingsRoleSubscriptionTierEdit ===
+// === Module 17598: GuildSettingsRoleSubscriptionTierEdit ===
 
-// Module 17568 (GuildSettingsRoleSubscriptionTierEdit)
+// Module 17598 (GuildSettingsRoleSubscriptionTierEdit)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import useNavigation from "useNavigation" /* 1484 */;
-import dismissible_content from "dismissible_content" /* 2028 */;
-import ToastUtils from "ToastUtils" /* 4524 */;
-import Text_Text from "Text/Text" /* 4825 */;
-import components_Button_Button from "components/Button/Button" /* 5274 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6539 */;
-import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 6666 */;
-import FormHeaderDefault from "FormHeader" /* 9260 */;
-import DismissibleActionSheet from "DismissibleActionSheet" /* 10078 */;
-import ErrorBlockDefault from "ErrorBlock" /* 11691 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 14731 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 17518 */;
-import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 17531 */;
-import EditStateContextProvider from "EditStateContextProvider" /* 17535 */;
-import GuildRoleSubscriptionTierBenefitsModal from "GuildRoleSubscriptionTierBenefitsModal" /* 17538 */;
-import GuildRoleSubscriptionTierDesignModal from "GuildRoleSubscriptionTierDesignModal" /* 17561 */;
-import GuildRoleSubscriptionTierDetailsModal from "GuildRoleSubscriptionTierDetailsModal" /* 17563 */;
-import _modDef17569 from "module_17569" /* 17569 */;
-import ActionableNoticeDefault from "ActionableNotice" /* 17570 */;
+import useNavigation from "useNavigation" /* 1485 */;
+import dismissible_content from "dismissible_content" /* 2029 */;
+import ToastUtils from "ToastUtils" /* 4527 */;
+import Text_Text from "Text/Text" /* 4832 */;
+import components_Button_Button from "components/Button/Button" /* 5281 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6544 */;
+import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 6671 */;
+import FormHeaderDefault from "FormHeader" /* 9271 */;
+import DismissibleActionSheet from "DismissibleActionSheet" /* 10089 */;
+import ErrorBlockDefault from "ErrorBlock" /* 11705 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 14759 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 17548 */;
+import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 17561 */;
+import EditStateContextProvider from "EditStateContextProvider" /* 17565 */;
+import GuildRoleSubscriptionTierBenefitsModal from "GuildRoleSubscriptionTierBenefitsModal" /* 17568 */;
+import GuildRoleSubscriptionTierDesignModal from "GuildRoleSubscriptionTierDesignModal" /* 17591 */;
+import GuildRoleSubscriptionTierDetailsModal from "GuildRoleSubscriptionTierDetailsModal" /* 17593 */;
+import _modDef17599 from "module_17599" /* 17599 */;
+import ActionableNoticeDefault from "ActionableNotice" /* 17600 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4459 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 17523 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4462 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 17553 */;
 
 const util = Spacer(1115);
 require = fn;
@@ -43,7 +43,7 @@ function ArchiveOrDeleteTierSection() {
   const obj7 = { variant: "destructive", grow: true, icon: null, onPress: null, disabled: null, text: null };
   const obj4 = { style: tmp.actionHeader, children: buttonText };
   const obj5 = { style: tmp.actionDescription, variant: "text-sm/medium", color: "text-default", children: descriptionText };
-  obj7.icon = closure_1_14(native.Icon, { size: native.Icon.Sizes.SMALL, disableColor: true, source: _modDef17569 });
+  obj7.icon = closure_1_14(native.Icon, { size: native.Icon.Sizes.SMALL, disableColor: true, source: _modDef17599 });
   obj7.onPress = handleArchiveOrDelete;
   let tmp9 = !allowSelfRemoveMonetization;
   if (allowSelfRemoveMonetization) {
@@ -86,13 +86,13 @@ function TabContent(selectedTab) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const FetchState = fn(4459).FetchState;
-const GuildRoleSubscriptionsTierScenes = fn(14724).GuildRoleSubscriptionsTierScenes;
+const FetchState = fn(4462).FetchState;
+const GuildRoleSubscriptionsTierScenes = fn(14752).GuildRoleSubscriptionsTierScenes;
 const GuildSettingsSections = fn(1074).GuildSettingsSections;
-const ContentDismissActionType = fn(2041).ContentDismissActionType;
+const ContentDismissActionType = fn(2042).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4829);
+const createStyles = fn(4836);
 let obj2 = { container: { flex: 1 }, tabsContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16 }, tabsContainerWithDraft: { paddingBottom: 0 }, actionButton: { alignSelf: "stretch", margin: 16, marginTop: 0 }, tabContent: null, actionHeader: null, actionDescription: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16 };
 obj2.tabContent = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
