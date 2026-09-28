@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/vibegrations/native/Vibegrati
 
 export default function VibegrationsStaffAccessNotice() {
   const tmp = closure_8();
-  vibegrationsStaffAccessTarget = vibegrationsStaffAccessTarget(16272).useVibegrationsStaffAccessTarget();
+  vibegrationsStaffAccessTarget = vibegrationsStaffAccessTarget(16268).useVibegrationsStaffAccessTarget();
   [][0] = vibegrationsStaffAccessTarget;
   let tmp6 = null;
   if (null != vibegrationsStaffAccessTarget) {
@@ -28,7 +28,7 @@ export default function VibegrationsStaffAccessNotice() {
     const items = [closure_6(tmp2(4787).CircleInformationIcon, obj4)];
     const obj5 = { variant: "text-sm/normal", color: "text-default", style: tmp.copy, children: null };
     const intl = tmp2(1115).intl;
-    const obj6 = { channel: tmp2(16272).VIBEGRATIONS_STAFF_ACCESS_CHANNEL_NAME, onNavigate: tmp5 };
+    const obj6 = { channel: tmp2(16268).VIBEGRATIONS_STAFF_ACCESS_CHANNEL_NAME, onNavigate: tmp5 };
     obj5.children = intl.format(_modDef3715["4BsHmp"], obj6);
     items[1] = closure_6(tmp2(4832).Text, obj5);
     obj3.children = items;

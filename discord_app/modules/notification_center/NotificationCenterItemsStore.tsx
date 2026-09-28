@@ -214,8 +214,8 @@ let obj = {
   notifCenterLocalItems: [],
   paginationHasMore: true,
   paginationCursor: "flexDirection",
-  notifCenterActive: "onAccessibilityAction",
-  notifCenterTabFocused: "woman_with_probing_cane",
+  notifCenterActive: "no_entry",
+  notifCenterTabFocused: "<string:4039766216>",
 };
 const PersistedStore = initializeDefault.PersistedStore;
 class NotificationCenterItemsStore extends PersistedStore {}
@@ -398,8 +398,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "flexDirection",
-      notifCenterActive: "onAccessibilityAction",
-      notifCenterTabFocused: "woman_with_probing_cane",
+      notifCenterActive: "no_entry",
+      notifCenterTabFocused: "<string:4039766216>",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -540,8 +540,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "flexDirection",
-      notifCenterActive: "onAccessibilityAction",
-      notifCenterTabFocused: "woman_with_probing_cane",
+      notifCenterActive: "no_entry",
+      notifCenterTabFocused: "<string:4039766216>",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -711,8 +711,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "flexDirection",
-      notifCenterActive: "onAccessibilityAction",
-      notifCenterTabFocused: "woman_with_probing_cane",
+      notifCenterActive: "no_entry",
+      notifCenterTabFocused: "<string:4039766216>",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;

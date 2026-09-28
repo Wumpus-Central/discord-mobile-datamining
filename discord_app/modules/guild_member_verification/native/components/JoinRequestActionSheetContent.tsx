@@ -180,9 +180,9 @@ let closure_12 = noop.memo((user) => {
     obj7.containerStyle = items3;
     const obj9 = { style: tmp3.primaryInfo, children: null };
     const obj10 = { user, displayProfile, badgeContainerBackground: containerBackground, isPreviewingChanges: false };
-    const items4 = [closure_8(tmp6(12616).PrimaryInfo, obj10)];
+    const items4 = [closure_8(tmp6(12634).PrimaryInfo, obj10)];
     const obj11 = { user };
-    items4[1] = closure_8(joinRequest(12689), obj11);
+    items4[1] = closure_8(joinRequest(12688), obj11);
     obj9.children = items4;
     obj7.children = closure_9(View, obj9);
     items2[1] = closure_8(joinRequest(10573), obj7);
@@ -544,7 +544,7 @@ export default noop.memo(function JoinRequestActionSheetContent(displayProfile) 
   obj6.children = mapped;
   items1[2] = closure_8(View, obj6);
   items1[3] = closure_8(closure_17, { joinRequest, user });
-  items1[4] = closure_8(memo(16236), {
+  items1[4] = closure_8(memo(16232), {
     guildId: joinRequest.guildId,
     userId: joinRequest.userId,
     selectedJoinRequestId: joinRequest.joinRequestId,

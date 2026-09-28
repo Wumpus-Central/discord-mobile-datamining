@@ -4,7 +4,7 @@ import router_utils from "../../routing/router_utils.tsx";
 import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
 import GuildOnboardingHomeActionCreators from "../GuildOnboardingHomeActionCreators.tsx";
 import useResourceChannelsDefault from "../useResourceChannels.tsx";
-import _modDef16222 from "../../../../_runtime/metro/16222__.js";
+import _modDef16218 from "../../../../_runtime/metro/16218__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildChannelStore from "../../../stores/GuildChannelStore.tsx";
@@ -42,7 +42,7 @@ function ResourceChannelRow(channelId) {
   }
   const obj6 = channelId(7323);
   let flag = channelId(11491).useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
-  const tmp11 = stateFromStores(16221)(firstResult);
+  const tmp11 = stateFromStores(16217)(firstResult);
   const tmp12 =
     null != stateFromStores &&
     null == stateFromStores2.first() &&
@@ -199,7 +199,7 @@ export default function GuildHomeResources(guildId) {
     const intl = guildId(1115).intl;
     obj3.children = intl.string(guildId(1115).t.owvC9U);
     const items = [closure_12(guildId(4832).Text, obj3), ,];
-    const obj4 = { style: tmp.emptyStateImage, source: _modDef16222 };
+    const obj4 = { style: tmp.emptyStateImage, source: _modDef16218 };
     items[1] = closure_12(closure_5, obj4);
     const obj5 = {
       onPress() {

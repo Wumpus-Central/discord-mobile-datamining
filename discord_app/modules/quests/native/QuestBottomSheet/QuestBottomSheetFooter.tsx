@@ -17,8 +17,8 @@ import ContentImpressionTrackerHooks from "../../lib/analytics/ContentImpression
 import QuestPlatformUtils from "../../utils/QuestPlatformUtils.tsx";
 import MobileQuestVideoWatchCtaCopy from "../../utils/MobileQuestVideoWatchCtaCopy.tsx";
 import AnalyticsHooks from "../../lib/analytics/AnalyticsHooks.tsx";
-import QuestBottomSheetHooks from "QuestBottomSheetHooks.tsx";
 import RefreshIcon from "../../../../design/components/Icon/native/redesign/generated/RefreshIcon.tsx";
+import QuestBottomSheetHooks from "QuestBottomSheetHooks.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";

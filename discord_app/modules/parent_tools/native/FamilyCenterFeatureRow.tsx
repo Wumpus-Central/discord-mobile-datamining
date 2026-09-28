@@ -11,7 +11,7 @@ import _modDef9316 from "../../../../_runtime/metro/09316__.js";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
 import _modDef11865 from "../../../../_runtime/metro/11865__.js";
 import QrCodeIcon from "../../../design/components/Icon/native/redesign/generated/QrCodeIcon.tsx";
-import _modDef14423 from "../../../../_runtime/metro/14423__.js";
+import _modDef14422 from "../../../../_runtime/metro/14422__.js";
 import ChatCheckIcon from "../../../design/components/Icon/native/redesign/generated/ChatCheckIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -48,7 +48,7 @@ export default function FamilyCenterFeatureRows() {
     intl5.string(_modDef2487["+pi4Yt"]),
     intl6.string(_modDef2487["1xPTwE"]),
   );
-  obj4.icon = _modDef14423;
+  obj4.icon = _modDef14422;
   obj4.IconComponent = ChatCheckIcon.ChatCheckIcon;
   const intl7 = util.intl;
   obj4.header = intl7.string(_modDef2487["001l3m"]);

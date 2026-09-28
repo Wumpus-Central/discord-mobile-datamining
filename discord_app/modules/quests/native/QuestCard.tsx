@@ -1138,7 +1138,7 @@ export const QuestCard = noop.memo((questContent) => {
     const obj44 = {
       onPress() {
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(14699, dependencyMap.paths),
+          asyncRequireImpl(14697, dependencyMap.paths),
           "QuestEnrollmentBlockedBottomSheet",
           { questId: quest.id, questEnrollmentBlockedUntil, sourceQuestContent },
         );

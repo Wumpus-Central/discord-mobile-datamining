@@ -26,7 +26,7 @@ export default noop.memo(function InviteActivityButton(applicationId) {
       onPress() {
         const obj = ActionSheetActionCreatorsDefault;
         obj.openLazy(
-          asyncRequireImpl(16847, dependencyMap.paths),
+          asyncRequireImpl(16851, dependencyMap.paths),
           "ActivityInviteSheet-" + stateFromStores.session_id,
           { activity: stateFromStores },
         );
@@ -47,7 +47,7 @@ export default noop.memo(function InviteActivityButton(applicationId) {
       onPress() {
         const obj = ActionSheetActionCreatorsDefault;
         obj.openLazy(
-          asyncRequireImpl(16847, dependencyMap.paths),
+          asyncRequireImpl(16851, dependencyMap.paths),
           "ActivityInviteSheet-" + stateFromStores.session_id,
           { activity: stateFromStores },
         );

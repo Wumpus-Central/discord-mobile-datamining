@@ -9,9 +9,9 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const RegistrationUIStore = fn(15572);
+const RegistrationUIStore = fn(15570);
 ({ updateRegistrationOptions: closure_8, useRegistrationUIStore: closure_9 } = RegistrationUIStore);
-const RegistrationConstants = fn(15573);
+const RegistrationConstants = fn(15571);
 ({ RegisterTransitionSteps: c10, RegistrationTransitionActionTypes: closure_11 } = RegistrationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);

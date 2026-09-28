@@ -6,8 +6,8 @@ import shared from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import LinearGradientDefault from "../../../../../_runtime/05293_LinearGradient.js";
+import _modDef13016 from "../../../../../_runtime/metro/13016__.js";
 import _modDef13017 from "../../../../../_runtime/metro/13017__.js";
-import _modDef13018 from "../../../../../_runtime/metro/13018__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -18,14 +18,14 @@ function CheckIcon() {
   const isThemeDarkResult = shared.isThemeDark(tmp3);
   const tmp6 = shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
   return closure_1_11(native.Icon, {
-    source: _modDef13017,
+    source: _modDef13016,
     color: shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860,
     size: native.IconSizes.SMALL,
   });
 }
 function CloseIcon() {
   const tmp = closure_16();
-  return closure_1_11(native.Icon, { source: _modDef13018, style: closure_16().icon, size: native.IconSizes.SMALL });
+  return closure_1_11(native.Icon, { source: _modDef13017, style: closure_16().icon, size: native.IconSizes.SMALL });
 }
 function CellText(children) {
   return closure_1_11(Text_Text.Text, {

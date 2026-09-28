@@ -108,7 +108,7 @@ export default noop.memo(function VoicePanelHeaderUserState(isHeaderHidden) {
     }
     return id;
   });
-  const tmp4 = useVoicePanelHeaderUserStateIcons(channelId(16925)(stateFromStores, channelId, guildId), guildId);
+  const tmp4 = useVoicePanelHeaderUserStateIcons(channelId(16929)(stateFromStores, channelId, guildId), guildId);
   isHeaderHidden(4566);
   const fn = function h() {
     let num = 0;

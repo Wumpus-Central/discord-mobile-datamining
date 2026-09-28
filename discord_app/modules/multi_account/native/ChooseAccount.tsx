@@ -158,7 +158,7 @@ export default function ChooseAccount() {
   let intl2 = require("util").intl;
   obj4.children = intl2.string(require("util").t["0M5fN7"]);
   obj3.subHeader = closure_11(require("Text/Text").Text, obj4);
-  obj3.backgroundImageSource = multiAccountUsers(13410);
+  obj3.backgroundImageSource = multiAccountUsers(13409);
   obj3.contentStyle = tmp.container;
   let obj5 = { style: tmp.mainCard, children: null };
   let items = [
@@ -220,7 +220,7 @@ export default function ChooseAccount() {
         },
         children: null,
       };
-      const tmp = multiAccountUsers(15578);
+      const tmp = multiAccountUsers(15576);
       obj2.children = closure_1_11(user(1177).Icon, {
         size: user(1177).Icon.Sizes.SMALL_20,
         source: multiAccountUsers(9091),
@@ -235,7 +235,7 @@ export default function ChooseAccount() {
   obj6.leading = closure_11(require("Form").FormRow.Icon, {
     themedColor: multiAccountUsers(576).colors.TEXT_LINK,
     size: require("native").Icon.Sizes.SMALL_20,
-    source: multiAccountUsers(15579),
+    source: multiAccountUsers(15577),
   });
   let intl3 = require("util").intl;
   obj6.label = intl3.string(require("util").t.bPP34Q);

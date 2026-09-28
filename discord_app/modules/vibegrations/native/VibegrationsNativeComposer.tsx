@@ -35,7 +35,7 @@ function tooLargeText(contentType) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const uploadAttachmentBytes = fn(12624).uploadAttachmentBytes;
+const uploadAttachmentBytes = fn(12642).uploadAttachmentBytes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
@@ -286,7 +286,7 @@ export default function VibegrationsNativeComposer(projectId) {
         };
         return obj5;
       });
-      obj2 = obj2(16400);
+      obj2 = obj2(16389);
       result = obj2.addVibegrationsAttachmentDrafts(projectId, "chat", mapped);
     }
   }, items3);

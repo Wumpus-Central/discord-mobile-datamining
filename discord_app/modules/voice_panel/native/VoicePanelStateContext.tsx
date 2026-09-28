@@ -59,7 +59,7 @@ obj.dismissPanel = function dismissPanel() {
   const error = new Error("VoicePanelContextType.Provider.dismissDrawer: not called within a context provider");
   throw error;
 };
-obj.dismissToPIPGestureRef = { current: "__initData" };
+obj.dismissToPIPGestureRef = { current: "r" };
 ReanimatedHelperTypes = fn(6495);
 obj.dragScrolling = ReanimatedHelperTypes.createFakeSharedValue(false);
 ReanimatedHelperTypes = fn(6495);

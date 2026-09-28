@@ -10,7 +10,7 @@ import ICYMIStore from "ICYMIStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const SCROLL_EVENT_THROTTLE_MS = fn(16094).SCROLL_EVENT_THROTTLE_MS;
+const SCROLL_EVENT_THROTTLE_MS = fn(16090).SCROLL_EVENT_THROTTLE_MS;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/useSharedICYMILogic.tsx");
 

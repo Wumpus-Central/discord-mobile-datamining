@@ -331,7 +331,7 @@ prototype["update"] = function update(id, id, arg2, arr) {
             if (!set.has(user_id)) {
               set.add(user_id);
               obj2 = { userId: user_id, position: null };
-              obj2.position = obj2(14023).toListenerRelativePosition(closure_0, user_id.position);
+              obj2.position = obj2(14022).toListenerRelativePosition(closure_0, user_id.position);
               return obj2;
             }
           }

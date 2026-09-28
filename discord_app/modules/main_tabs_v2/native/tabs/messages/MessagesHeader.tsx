@@ -90,7 +90,7 @@ export default noop.memo(function MessagesHeader(height) {
   fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
   let obj2 = { withSpring: height(5280).withSpring, scrollPosition };
-  const isHomeDrawerEnabled = height(15657).useIsHomeDrawerEnabled();
+  const isHomeDrawerEnabled = height(15655).useIsHomeDrawerEnabled();
   const callback = noop.useCallback(() => {
     const rootNavigationRef = height(headerPanel[12]).getRootNavigationRef();
     if (rootNavigationRef != null) {
@@ -123,7 +123,7 @@ export default noop.memo(function MessagesHeader(height) {
       }
     }
   }, []);
-  let obj3 = height(15657);
+  let obj3 = height(15655);
   const obj4 = { variant: "primary", icon: null, size: "sm", accessibilityLabel: null, onPress: null };
   const tmp12 = scrollPosition(5937)("bespoke");
   obj4.icon = closure_6(height(10413).PlusLargeIcon, { size: "sm", color: scrollPosition(576).colors.WHITE });
@@ -161,7 +161,7 @@ export default noop.memo(function MessagesHeader(height) {
   obj9.accessibilityLabel = intl3.string(height(1115).t["5h0QOP"]);
   const items2 = [
     closure_6(height(7363).IconButton, obj9),
-    closure_6(scrollPosition(15663), { noMargin: true, onPress: callback, alternateVariant: true }),
+    closure_6(scrollPosition(15661), { noMargin: true, onPress: callback, alternateVariant: true }),
     ,
   ];
   const obj10 = {

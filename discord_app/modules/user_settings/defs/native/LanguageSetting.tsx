@@ -10,7 +10,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.IHMsPn);
   },
   parent: null,
-  IconComponent: fn(14972).LanguageIcon,
+  IconComponent: fn(14970).LanguageIcon,
   useTrailing: function useLanguageSettingTrailing() {
     const items = [LocaleStore];
     _require = require("initialize").useStateFromStores(items, () => locale.locale);

@@ -9,7 +9,7 @@ import LinearGradientDefault from "../../../../_runtime/05293_LinearGradient.js"
 import common_AlertDefault from "../../common/Alert.tsx";
 import actions_BoostingActionCreators from "../../../actions/native/BoostingActionCreators.tsx";
 import SequencedLottieAnimationViewDefault from "../../common/SequencedLottieAnimationView.tsx";
-import _mod13166 from "../../../../_runtime/metro/13166__.js";
+import _mod13165 from "../../../../_runtime/metro/13165__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
@@ -124,9 +124,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const obj6 = { style: tmp.activatedImage, source: null };
   const tmp14 = LinearGradientDefault;
   if (tmp2Result.isThemeLight(tmp9)) {
-    let tmp8Result = tmp8(13167);
+    let tmp8Result = tmp8(13166);
   } else {
-    tmp8Result = tmp8(13168);
+    tmp8Result = tmp8(13167);
   }
   obj6.source = tmp8Result;
   obj5.children = closure_9(closure_6, obj6);

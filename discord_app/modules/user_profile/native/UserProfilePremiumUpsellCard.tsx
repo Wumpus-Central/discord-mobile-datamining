@@ -73,7 +73,7 @@ function GetNitroCard(style) {
   ));
   const tmp5 = usePremiumFeatureUpsellGetNitroDefault(false, callback, constants2.USER_SETTINGS, undefined, items);
   const mobileNitroPreviewDirectCheckoutEnabled =
-    analyticsLocations(14203).useMobileNitroPreviewDirectCheckoutEnabled();
+    analyticsLocations(14202).useMobileNitroPreviewDirectCheckoutEnabled();
   const obj3 = { style: style.style, ctaText: null, description: null, disabled: null, onPress: null };
   if (nitroTrialCtaOverride == null) {
     const intl = tmp(1115).intl;

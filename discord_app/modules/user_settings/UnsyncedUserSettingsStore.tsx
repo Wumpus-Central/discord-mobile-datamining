@@ -51,16 +51,6 @@ prototype["initialize"] = function initialize(arg0) {
 prototype["getUserAgnosticState"] = function getUserAgnosticState() {
   return closure_12;
 };
-Object.defineProperty(prototype, "displayCompactAvatars", {
-  get: function displayCompactAvatars() {
-    let flag = closure_12.displayCompactAvatars;
-    if (flag == null) {
-      flag = false;
-    }
-    return flag;
-  },
-  set: undefined,
-});
 Object.defineProperty(prototype, "lowQualityImageMode", {
   get: function lowQualityImageMode() {
     let flag = closure_12.lowQualityImageMode;

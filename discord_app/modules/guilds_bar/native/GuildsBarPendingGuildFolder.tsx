@@ -14,9 +14,9 @@ let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarPend
 export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   id = id.id;
   ({ expanded, childNodes } = id);
-  let obj = id(15932);
+  let obj = id(15930);
   importDefault = usePendingFolderGuildIdsDefault();
-  const guildsBarAnimatedWrapperStyles = id(15932).useGuildsBarAnimatedWrapperStyles({
+  const guildsBarAnimatedWrapperStyles = id(15930).useGuildsBarAnimatedWrapperStyles({
     disableSelectedColor: true,
     disableBGColor: false,
   });
@@ -70,10 +70,10 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
     label: null,
     sharedId: null,
     cutouts: "a",
-    overState: "paddingHorizontal",
-    config: "_propsStack",
-    externalChildren: "internalInstanceHandle",
-    children: "QUEST_COMPLETED_BADGE",
+    overState: "apply",
+    config: "<string:4076863906>",
+    externalChildren: "<string:2113929792>",
+    children: "<string:33554987>",
   };
   const obj3 = id(4566);
   obj4.id = "" + id;
@@ -88,7 +88,7 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   let tmp8Result = null;
   if (expanded) {
     const obj5 = { folderId: id, totalItems: childNodes.length };
-    tmp8Result = jsx(tmp(15931).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
+    tmp8Result = jsx(tmp(15929).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
   }
   obj4.externalChildren = tmp8Result;
   obj4.children = jsx(id(12456).HourglassIcon, {});
@@ -103,9 +103,9 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
     label: null,
     sharedId: null,
     cutouts: "a",
-    overState: "paddingHorizontal",
-    config: "_propsStack",
-    externalChildren: "internalInstanceHandle",
-    children: "QUEST_COMPLETED_BADGE",
+    overState: "apply",
+    config: "<string:4076863906>",
+    externalChildren: "<string:2113929792>",
+    children: "<string:33554987>",
   });
 });

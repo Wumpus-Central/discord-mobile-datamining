@@ -58,7 +58,7 @@ function AnimatedWrapper(children) {
   fn.__workletHash = 3576504626753;
   fn.__initData = __initData15;
   const derivedValue = wrapperOffset(4566).useDerivedValue(fn);
-  obj4 = wrapperOffset(16912);
+  obj4 = wrapperOffset(16916);
   const pIPState = obj4.usePIPState();
   let obj3 = wrapperOffset(4566);
   const fn2 = function l() {
@@ -170,8 +170,8 @@ function AnimatedWrapper(children) {
     wrapperDimensions,
     updateSharedValueIfChanged: height(10896),
     wrapperOffset,
-    getMaxPanelWidth: wrapperOffset(16899).getMaxPanelWidth,
-    getPanelX: wrapperOffset(16899).getPanelX,
+    getMaxPanelWidth: wrapperOffset(16903).getMaxPanelWidth,
+    getPanelX: wrapperOffset(16903).getPanelX,
     roundToNearestPixel: height(10456),
     windowDimensions,
   };
@@ -184,8 +184,8 @@ function AnimatedWrapper(children) {
     wrapperDimensions,
     updateSharedValueIfChanged: height(10896),
     wrapperOffset,
-    getMaxPanelWidth: wrapperOffset(16899).getMaxPanelWidth,
-    getPanelX: wrapperOffset(16899).getPanelX,
+    getMaxPanelWidth: wrapperOffset(16903).getMaxPanelWidth,
+    getPanelX: wrapperOffset(16903).getPanelX,
     roundToNearestPixel: height(10456),
     windowDimensions,
   };
@@ -1215,7 +1215,7 @@ export default noop.memo(function VoicePanelUI() {
               }
               flag = false;
               if (tmp12) {
-                channelId(4566).runOnJS(closure_1(16915))();
+                channelId(4566).runOnJS(closure_1(16919))();
                 flag = true;
                 const tmpResult = channelId(4566);
               }
@@ -1400,12 +1400,12 @@ export default noop.memo(function VoicePanelUI() {
             windowDimensions: windowDimensions.get(),
             safeArea: safeArea.get(),
           };
-          const result = channelId(16908).calculatePIPPositionFromVelocity(obj6);
+          const result = channelId(16912).calculatePIPPositionFromVelocity(obj6);
           ({ pipX, pipY } = result);
           const obj7 = { pipX, pipY };
           closure_1(10896)(wrapperDimensions, obj7);
           closure_1(10896)(wrapperOffset, { gestureActive: false });
-          const obj5 = channelId(16908);
+          const obj5 = channelId(16912);
         } else if (mode.get() === setMode.PANEL) {
           if (velocityY > 0) {
             if (connected.get()) {
@@ -1782,7 +1782,7 @@ export default noop.memo(function VoicePanelUI() {
   if (tmp6[0]) {
     const obj22 = { value: tmp4(AnalyticsLocationDefault.VOICE_PANEL).analyticsLocations, children: null };
     const obj23 = { children: null };
-    const items6 = [closure_21(tmp2(16917), {}), ,];
+    const items6 = [closure_21(tmp2(16921), {}), ,];
     const obj24 = { opacity: derivedValue, onPress: context.dismissPanel };
     items6[1] = closure_21(closure_70, obj24);
     const obj25 = { gesture: tmp35, children: null };
@@ -1798,15 +1798,15 @@ export default noop.memo(function VoicePanelUI() {
     obj26.nativeID = "voice-panel-ui-" + channelId;
     obj26.layout = layoutTransition;
     obj26.onAccessibilityEscape = tmp2(8761);
-    const items7 = [closure_21(tmp2(16919), {}), , ,];
+    const items7 = [closure_21(tmp2(16923), {}), , ,];
     const obj27 = { wrapperOffset, children: null };
     const obj28 = { zIndex: 2, children: null };
     const obj29 = { wrapperOffset, gestureState: sharedValue4, layout: layoutTransition };
-    obj28.children = closure_21(tmp2(16921), obj29);
+    obj28.children = closure_21(tmp2(16925), obj29);
     const items8 = [closure_21(channelId(6577).LayerScope, obj28)];
     const obj30 = { gesture: memo1, children: null };
     const obj31 = { style: StyleSheet.absoluteFill, layout: layoutTransition, collapsable: false, children: null };
-    let tmp2Result = tmp2(16918);
+    let tmp2Result = tmp2(16922);
     const obj32 = { gesture: memo, children: null };
     const obj33 = {
       layout: scrollViewLayoutTransition,
@@ -1821,7 +1821,7 @@ export default noop.memo(function VoicePanelUI() {
       children: null,
     };
     const obj34 = { viewableChunks: sharedValue3 };
-    const items9 = [closure_21(tmp2(16951), obj34), closure_21(tmp2(16980), {})];
+    const items9 = [closure_21(tmp2(16955), obj34), closure_21(tmp2(16984), {})];
     obj33.children = items9;
     obj32.children = lockScrolling(closure_32, obj33);
     obj31.children = closure_21(channelId(6073).GestureDetector, obj32);
@@ -1829,9 +1829,9 @@ export default noop.memo(function VoicePanelUI() {
     items8[1] = closure_21(channelId(6073).GestureDetector, obj30);
     obj27.children = items8;
     items7[1] = lockScrolling(AnimatedWrapper, obj27);
-    items7[2] = closure_21(tmp2(16984), {});
+    items7[2] = closure_21(tmp2(16988), {});
     const obj35 = { gestureState: sharedValue4 };
-    items7[3] = closure_21(tmp2(16989), obj35);
+    items7[3] = closure_21(tmp2(16993), obj35);
     obj26.children = items7;
     obj25.children = lockScrolling(tmp2Result, obj26);
     items6[2] = closure_21(channelId(6073).GestureDetector, obj25);

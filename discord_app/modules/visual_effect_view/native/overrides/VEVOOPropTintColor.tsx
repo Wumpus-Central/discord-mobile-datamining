@@ -130,7 +130,7 @@ export default noop.memo(function VEVOOPropTintColor() {
     },
   };
   const ref = noop.useRef(first1);
-  obj7.subLabel = closure_8(backgroundColor(15554), {
+  obj7.subLabel = closure_8(backgroundColor(15552), {
     disabled: !tmp7,
     initialValue: noop.useRef(first1),
     onValueChange(arg0) {

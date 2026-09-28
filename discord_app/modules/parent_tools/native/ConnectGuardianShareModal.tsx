@@ -68,7 +68,7 @@ function ConnectGuardianShareScreen() {
         expiresAt: stateFromStores1,
         onRefresh: getLinkCode,
       };
-      let tmp11Result = closure_6(tmp2(14418).ConnectGuardianCard, obj11);
+      let tmp11Result = closure_6(tmp2(14417).ConnectGuardianCard, obj11);
     }
     const obj12 = { children: null };
     const obj13 = { children: null };

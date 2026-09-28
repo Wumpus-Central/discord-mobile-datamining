@@ -350,7 +350,7 @@ let closure_24 = noop.forwardRef((cleanUp, ref) => {
   const animatedStyle = obj.useAnimatedStyle(fn);
   let obj3 = {
     style: null,
-    children: closure_15(cleanUp(16436), {
+    children: closure_15(cleanUp(16440), {
       ref,
       channelId: channel.id,
       guildId: channel.guild_id,

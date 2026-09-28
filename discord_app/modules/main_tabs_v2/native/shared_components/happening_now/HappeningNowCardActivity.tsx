@@ -6,8 +6,8 @@ import asyncRequireImpl from "../../../../../../_runtime/01981_asyncRequireImpl.
 import ColorUtils from "../../../../../utils/ColorUtils.tsx";
 import useFetchStreamPreviewDefault from "../../../../go_live/useFetchStreamPreview.tsx";
 import useLiveStageData from "useLiveStageData.tsx";
-import _modDef15709 from "../../../../../../_runtime/metro/15709__.js";
-import _modDef15710 from "../../../../../../_runtime/metro/15710__.js";
+import _modDef15707 from "../../../../../../_runtime/metro/15707__.js";
+import _modDef15708 from "../../../../../../_runtime/metro/15708__.js";
 import HappeningNowAvatarStack from "HappeningNowAvatarStack.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import StageInstanceStore from "../../../../stage_channels/StageInstanceStore.tsx";
@@ -145,7 +145,7 @@ function IconOrPreview(arg0) {
         if (type === constants2.LISTENING) {
           const intl3 = tmp28(1115).intl;
           stringResult = intl3.string(tmp28(1115).t.kUEnxN);
-        } else if (tmp2(12558)(activity)) {
+        } else if (tmp2(12576)(activity)) {
           const intl2 = tmp28(1115).intl;
           stringResult = intl2.string(tmp28(1115).t.T0uYK9);
         } else {
@@ -177,7 +177,7 @@ function IconOrPreview(arg0) {
       userId = substr.charCodeAt(0);
       let tmp2Result2 = items[userId % items.length];
     } else {
-      tmp2Result2 = tmp2(15719);
+      tmp2Result2 = tmp2(15717);
     }
   }
 }
@@ -199,7 +199,7 @@ function StageStreamAvatars(stage) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio, View: closure_4 } = get_ActivityIndicator);
-const HappeningNowConstants = fn(14843);
+const HappeningNowConstants = fn(14841);
 ({
   HAPPENING_NOW_CONTENT_HEIGHT,
   HappeningNowCardTrackingType: closure_7,
@@ -211,7 +211,7 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const pixelSizeForLayoutSize = PixelRatio.getPixelSizeForLayoutSize(HAPPENING_NOW_CONTENT_HEIGHT);
-let items = [_modDef15709, _modDef15710];
+let items = [_modDef15707, _modDef15708];
 const createStyles = fn(4836);
 let obj = {
   content: { flexShrink: 1, gap: 2 },

@@ -174,7 +174,7 @@ function getUsersSubtitle(arg0) {
   }
 }
 const View = fn(17).View;
-const HappeningNowConstants = fn(14843);
+const HappeningNowConstants = fn(14841);
 ({
   HappeningNowCardTrackingType: hasOwnProperty,
   HAPPENING_NOW_CONTENT_HEIGHT,

@@ -147,9 +147,9 @@ let closure_21 = async function _handleRegistrationSubmit(arg0) {
   return value;
 };
 const usePromoEmailConsentStore = fn(6011).usePromoEmailConsentStore;
-const RegistrationUIStore = fn(15572);
+const RegistrationUIStore = fn(15570);
 ({ setRegistrationErrors: metroRequire, setSubmitting: closure_7, useRegistrationUIStore: closure_8, clearRegistrationErrorMessage: closure_9 } = RegistrationUIStore);
-const RegistrationConstants = fn(15573);
+const RegistrationConstants = fn(15571);
 ({ authStateToRegisterTransitionStep: c10, RegisterTransitionSteps: closure_11, RegistrationSteps: closure_12, RegistrationTransitionActionTypes: map1 } = RegistrationConstants);
 const AuthStates = fn(1074).AuthStates;
 const jsx = fn(21).jsx;

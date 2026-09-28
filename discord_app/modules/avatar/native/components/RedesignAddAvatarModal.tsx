@@ -90,7 +90,7 @@ export default function RedesignAddAvatarModal(route) {
             pendingImage = undefined;
             if (null != base64) {
               const obj11 = { imageUri: base64, description: null };
-              const obj = tmp2(14151);
+              const obj = tmp2(14150);
               obj11.description = tmp2(7614).generateAvatarDescription();
               pendingImage = obj.createPendingImage(obj11);
               const obj3 = tmp2(7614);

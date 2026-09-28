@@ -131,9 +131,9 @@ export default function FriendRequestsScreen() {
   first = tmp9[0];
   dependencyMap = tmp11;
   let obj2 = analyticsLocations(563);
-  gameRelationshipsByType = analyticsLocations(12619).useGameRelationshipsByType(ignoredUsers.PENDING_INCOMING);
-  let obj3 = analyticsLocations(12619);
-  gameRelationshipsByType1 = analyticsLocations(12619).useGameRelationshipsByType(ignoredUsers.PENDING_OUTGOING);
+  gameRelationshipsByType = analyticsLocations(12637).useGameRelationshipsByType(ignoredUsers.PENDING_INCOMING);
+  let obj3 = analyticsLocations(12637);
+  gameRelationshipsByType1 = analyticsLocations(12637).useGameRelationshipsByType(ignoredUsers.PENDING_OUTGOING);
   const items3 = [gameRelationshipsByType, gameRelationshipsByType1];
   const memo = gameRelationshipsByType1.useMemo(() => {
     const set = new Set();
@@ -155,7 +155,7 @@ export default function FriendRequestsScreen() {
   pendingOutgoingIds = memo1.pendingOutgoingIds;
   spamIds = memo1.spamIds;
   const ignoredUserIds = memo1.ignoredUserIds;
-  let obj4 = analyticsLocations(12619);
+  let obj4 = analyticsLocations(12637);
   const items5 = [ignoredUserIds];
   const items6 = [
     ignoredUserIds,

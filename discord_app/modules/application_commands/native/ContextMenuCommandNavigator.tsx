@@ -59,7 +59,7 @@ export default function ContextMenuCommandNavigator() {
   obj5.title = intl.string(require("util").t.PHjkRE);
   obj4.options = obj5;
   obj4.getComponent = function getComponent() {
-    return closure_0(16687).default;
+    return closure_0(16691).default;
   };
   const items1 = [
     closure_5(Screen, obj4),
@@ -74,7 +74,7 @@ export default function ContextMenuCommandNavigator() {
         return { title };
       },
       getComponent() {
-        return closure_0(16689).default;
+        return closure_0(16693).default;
       },
     }),
   ];

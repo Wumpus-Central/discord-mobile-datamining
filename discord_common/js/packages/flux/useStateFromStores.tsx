@@ -27,7 +27,7 @@ function useStateFromStores(items, getCurrentRestrictedHoursState, items1) {
       areStatesEqual: tmp,
       getStateFromStores: getCurrentRestrictedHoursState,
       prevDeps: "Boolean",
-      state: "ix",
+      state: "channel",
     };
     tmp2.current = obj;
   }

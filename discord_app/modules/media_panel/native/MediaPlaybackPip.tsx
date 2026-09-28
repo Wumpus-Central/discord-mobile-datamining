@@ -93,7 +93,7 @@ function MediaInfo(message) {
         if (memo) {
           const obj6 = { style: { flex: 1 }, children: null };
           const obj7 = { spacing: 20, speed: 0.2, children: tmp14 };
-          const items3 = [closure_15(tmp2(17045).Marquee, obj7)];
+          const items3 = [closure_15(tmp2(17049).Marquee, obj7)];
           const obj8 = {
             start: { x: 0, y: 0 },
             end: { x: 1, y: 0 },
@@ -214,7 +214,7 @@ get_ActivityIndicator = fn(17);
 ({ Easing: hasOwnProperty, StyleSheet, TouchableOpacity: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, MessageFlags: map1, Routes: closure_14 } = Constants);
-const SquarePIPReferenceDimensions = fn(16909).SquarePIPReferenceDimensions;
+const SquarePIPReferenceDimensions = fn(16913).SquarePIPReferenceDimensions;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const createStyles = fn(4836);

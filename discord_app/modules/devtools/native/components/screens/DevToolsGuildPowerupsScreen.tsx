@@ -173,7 +173,7 @@ function GuildDCSwitchRow(dc) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const DevToolsGuildPowerupsConstants = fn(15306);
+const DevToolsGuildPowerupsConstants = fn(15304);
 ({
   GUILD_DCS: closure_11,
   SERVER_TAG_GUILD_DCS: closure_12,

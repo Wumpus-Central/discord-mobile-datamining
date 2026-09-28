@@ -18,7 +18,7 @@ export default function useCheckpointMusic() {
     if (CheckpointStore.isMuted) {
       num = 0;
     }
-    const sound = obj.createSound(ref(15256), "vibing_wumpus", num);
+    const sound = obj.createSound(ref(15254), "vibing_wumpus", num);
     ref.current = sound;
     sound.loop();
     ref = AppState.addEventListener("change", (event) => {

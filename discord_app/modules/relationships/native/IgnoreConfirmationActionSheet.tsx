@@ -183,10 +183,10 @@ const result = size.fileFinishedImporting("modules/relationships/native/IgnoreCo
 export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
   userId = userId.userId;
   const channelId = userId.channelId;
-  ({ onIgnore: dependencyMap, onSuccess: _slicedToArray } = userId);
-  noop = undefined;
+  ({ onBlock: dependencyMap, onIgnore: _slicedToArray, onSuccess: noop } = userId);
+  c5 = undefined;
   const tmp = closure_15();
-  [tmp3, c4] = noop.useState(false);
+  [tmp3, c5] = noop.useState(false);
   const bottom = channelId(1613)().bottom;
   let tmp2 = _slicedToArray(noop.useState(false), 2);
   items = [channelId(6603).IGNORE_CONFIRMATION_ACTION_SHEET];
@@ -195,7 +195,7 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
   const items2 = [userId];
   const stateFromStores = userId(504).useStateFromStores(items1, () => UserStore.getUser(userId), items2);
   let obj = userId(504);
-  const items3 = [ChannelStore];
+  const items3 = [stateFromStores];
   const items4 = [channelId];
   const stateFromStores1 = userId(504).useStateFromStores(
     items3,
@@ -218,7 +218,7 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
   let tmp12Result = null;
   if (null != stateFromStores) {
     function handleClose() {
-      channelId(1241).track(constants2.USER_REMEDIATION_ACTION, {
+      channelId(onBlock[21]).track(constants2.USER_REMEDIATION_ACTION, {
         action: constants.DISMISS_IGNORE,
         location: "user-profile-context-menu",
       });
@@ -245,9 +245,9 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
     const obj10 = { style: tmp.avatarIconContainer, children: null };
     const obj11 = { size: tmp7(1177).Icon.Sizes.MEDIUM, source: tmp4(6388) };
     obj10.children = closure_13(tmp7(1177).Icon, obj11);
-    items6[1] = closure_13(stateFromStores, obj10);
+    items6[1] = closure_13(c5, obj10);
     obj7.children = items6;
-    const items7 = [closure_14(stateFromStores, obj7), ,];
+    const items7 = [closure_14(c5, obj7), ,];
     const obj12 = {
       style: tmp.title,
       variant: "heading-xl/bold",
@@ -270,9 +270,9 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
     obj14.children = intl2.string(tmp7(1115).t.JKL1u1);
     items7[2] = closure_13(tmp7(4832).Text, obj14);
     obj6.children = items7;
-    const items8 = [closure_14(stateFromStores, obj6), , ,];
+    const items8 = [closure_14(c5, obj6), , ,];
     const obj15 = { style: tmp.tableContainer, children: closure_13(IgnoredInformationTable, {}) };
-    items8[1] = closure_13(stateFromStores, obj15);
+    items8[1] = closure_13(c5, obj15);
     const obj16 = { style: tmp.otherOptions, children: null };
     const obj17 = { title: null, hasIcons: true, children: null };
     const intl3 = tmp7(1115).intl;
@@ -310,6 +310,8 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
         {
           userId,
           channelId,
+          onBlock,
+          onIgnore,
           onSuccess,
           impressionName: discord_common_AnalyticsUtils.ImpressionNames.BLOCK_USER_CONFIRMATION,
         },
@@ -318,7 +320,7 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
     };
     obj17.children = closure_13(tmp7(5917).TableRow, obj18);
     obj16.children = closure_13(tmp7(5999).TableRowGroup, obj17);
-    items8[2] = closure_13(stateFromStores, obj16);
+    items8[2] = closure_13(c5, obj16);
     const obj21 = { style: tmp.button, children: null };
     const obj22 = { size: "lg", text: null, onPress: null, disabled: null, loading: null };
     const intl7 = tmp7(1115).intl;
@@ -333,10 +335,10 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
         if (onSuccess != null) {
           tmp();
         }
-        channelId(4800).hideActionSheet();
+        channelId(onBlock[29]).hideActionSheet();
       });
-      if (dependencyMap != null) {
-        dependencyMap();
+      if (onIgnore != null) {
+        onIgnore();
       }
       const ignoreUserResult = RelationshipActionCreatorsDefault.ignoreUser(
         userId,
@@ -361,17 +363,17 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
     const intl8 = tmp7(1115).intl;
     const obj25 = {
       articleLink() {
-        channelId(4800).hideActionSheet();
-        const obj = channelId(4800);
-        const articleURL = channelId(2111).getArticleURL(constants3.STEALTH_REMEDIATION_FEATURE_GUIDE);
-        const obj2 = channelId(2111);
-        channelId(4525).openURL(articleURL);
+        channelId(onBlock[29]).hideActionSheet();
+        const obj = channelId(onBlock[29]);
+        const articleURL = channelId(onBlock[35]).getArticleURL(constants3.STEALTH_REMEDIATION_FEATURE_GUIDE);
+        const obj2 = channelId(onBlock[35]);
+        channelId(onBlock[36]).openURL(articleURL);
       },
     };
     obj23.children = intl8.format(tmp7(1115).t.iX9qtL, obj25);
     items9[1] = closure_13(tmp7(4832).Text, obj23);
     obj21.children = items9;
-    items8[3] = closure_14(stateFromStores, obj21);
+    items8[3] = closure_14(c5, obj21);
     obj8.children = items8;
     obj4.children = closure_14(tmp7(6045).BottomSheetScrollView, obj8);
     obj3.children = closure_13(tmp7(6571).BottomSheet, obj4);

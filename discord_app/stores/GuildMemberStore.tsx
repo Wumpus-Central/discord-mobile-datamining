@@ -93,7 +93,7 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
       colorRoleId: "children",
       hoistRoleId: "current",
       iconRoleId: "justifyContent",
-      highestRoleId: "raw",
+      highestRoleId: "methodobject",
     };
   } else {
     const iter = roles[Symbol.iterator]();

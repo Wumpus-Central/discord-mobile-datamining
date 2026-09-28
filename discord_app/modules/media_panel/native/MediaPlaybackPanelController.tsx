@@ -7,7 +7,7 @@ import EmbeddedActivitiesStore from "../../activities/EmbeddedActivitiesStore.ts
 import VoicePanelStore from "../../voice_panel/VoicePanelStore.tsx";
 
 const require = fn;
-const MediaPlaybackPanelModes = fn(14099).MediaPlaybackPanelModes;
+const MediaPlaybackPanelModes = fn(14098).MediaPlaybackPanelModes;
 const ActivityPanelModes = fn(8502).ActivityPanelModes;
 let MorphablePanelModes = fn(11756).MorphablePanelModes;
 const jsx = fn(21).jsx;

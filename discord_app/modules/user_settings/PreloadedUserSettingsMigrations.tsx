@@ -713,6 +713,36 @@ let items = [
     },
     cleanup() {},
   },
+  {
+    version: 22,
+    run(textAndImages) {
+      const Storage = Storage4.Storage;
+      value = Storage.get("UnsyncedUserSettingsStore");
+      let prop;
+      if (value != null) {
+        const _state = value._state;
+        if (_state != null) {
+          prop = _state.displayCompactAvatars;
+        }
+      }
+      let tmp5 = true === prop;
+      if (tmp5) {
+        if (textAndImages.textAndImages == null) {
+          const TextAndImagesSettings = preloaded_user_settings.TextAndImagesSettings;
+          textAndImages.textAndImages = TextAndImagesSettings.create();
+        }
+        let flag = null == textAndImages.textAndImages.displayCompactAvatars;
+        if (flag) {
+          const BoolValue = wrappers.BoolValue;
+          textAndImages.textAndImages.displayCompactAvatars = BoolValue.create({ value: true });
+          flag = true;
+        }
+        tmp5 = flag;
+      }
+      return tmp5;
+    },
+    cleanup() {},
+  },
 ];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/PreloadedUserSettingsMigrations.tsx");

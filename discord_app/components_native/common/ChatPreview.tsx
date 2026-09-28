@@ -284,9 +284,9 @@ class ChatPreviewBase extends PureComponent {
           jumpTargetId,
           jumpType: "flexDirection",
           shouldInitialScroll: "Array",
-          animated: "2026-08-badge-management",
-          scrollPosition: "user",
-          focusTargetId: null,
+          animated: 0,
+          scrollPosition: 2,
+          focusTargetId: 0,
         };
         applyArgumentsResult.scrollData = computeScrollDataDefault(obj3);
         if (!tmp7) {

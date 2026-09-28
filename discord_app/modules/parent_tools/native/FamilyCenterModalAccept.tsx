@@ -29,12 +29,12 @@ function FamilyCenterModalAcceptScreen(otherUser) {
   const obj = otherUser(11395);
   obj5.iconSrc = acceptLinkRequest(4776);
   obj5.iconStyles = tmp.icon;
-  const items1 = [closure_5(acceptLinkRequest(14459), obj5), ,];
+  const items1 = [closure_5(acceptLinkRequest(14458), obj5), ,];
   const obj6 = { style: tmp.headerText, variant: "text-lg/bold", children: null };
   let intl = otherUser(1115).intl;
   obj6.children = intl.string(acceptLinkRequest(2487).rlNJwZ);
   items1[1] = closure_5(otherUser(4832).Text, obj6);
-  items1[2] = closure_5(acceptLinkRequest(14429), { user: otherUser });
+  items1[2] = closure_5(acceptLinkRequest(14428), { user: otherUser });
   obj4.children = items1;
   const items2 = [closure_6(View, obj4), closure_5(acceptLinkRequest(11397), {})];
   const obj7 = { style: tmp.disclaimer, variant: "text-xs/normal", color: "text-default", children: null };

@@ -8,7 +8,7 @@ import VibegrationsChatStore from "../stores/VibegrationsChatStore.tsx";
 import VibegrationsProjectStore from "../stores/VibegrationsProjectStore.tsx";
 
 require = fn;
-const turnSettled = fn(12625).turnSettled;
+const turnSettled = fn(12643).turnSettled;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const Constants = fn(11121);
 ({

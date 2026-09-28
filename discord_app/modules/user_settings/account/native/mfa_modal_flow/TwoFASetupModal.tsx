@@ -10,7 +10,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const TwoFAModalSetupSections = fn(14318).TwoFAModalSetupSections;
+const TwoFAModalSetupSections = fn(14317).TwoFAModalSetupSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4836);
@@ -39,20 +39,20 @@ export default function TwoFASetupModal(initialRouteName) {
       const obj2 = {};
       const obj3 = { headerLeft: null, headerTitle: null, render: null };
       const obj = totpSecret(6370);
-      obj3.headerLeft = totpSecret(5936).getHeaderCloseButton(closure_1(14316).close);
+      obj3.headerLeft = totpSecret(5936).getHeaderCloseButton(closure_1(14315).close);
       obj3.headerTitle = function headerTitle() {
-        return closure_1_6(totpSecret(14319).PageMarker, {
+        return closure_1_6(totpSecret(14318).PageMarker, {
           currentPage: dependencyMap2[constants.LANDING],
           numMarkers: Object.keys(dependencyMap2).length - 1,
         });
       };
       obj3.render = function render() {
-        return closure_1_6(closure_1_1(14320), {});
+        return closure_1_6(closure_1_1(14319), {});
       };
       obj2[constants.LANDING] = obj3;
       obj2[constants.SCAN] = {
         headerTitle() {
-          return closure_1_6(totpSecret(14319).PageMarker, {
+          return closure_1_6(totpSecret(14318).PageMarker, {
             currentPage: dependencyMap2[constants.SCAN],
             numMarkers: Object.keys(dependencyMap2).length - 1,
           });
@@ -63,7 +63,7 @@ export default function TwoFASetupModal(initialRouteName) {
       };
       obj2[constants.ENTER_CODE] = {
         headerTitle() {
-          return closure_1_6(totpSecret(14319).PageMarker, {
+          return closure_1_6(totpSecret(14318).PageMarker, {
             currentPage: dependencyMap2[constants.ENTER_CODE],
             numMarkers: Object.keys(dependencyMap2).length - 1,
           });
@@ -74,12 +74,12 @@ export default function TwoFASetupModal(initialRouteName) {
       };
       const obj5 = { headerLeft: null, headerTitle: null, render: null };
       const obj4 = totpSecret(5936);
-      obj5.headerLeft = totpSecret(5936).getHeaderCloseButton(closure_1(14316).close);
+      obj5.headerLeft = totpSecret(5936).getHeaderCloseButton(closure_1(14315).close);
       obj5.headerTitle = function headerTitle() {
         return null;
       };
       obj5.render = function render() {
-        return closure_1_6(closure_1_1(14326), {});
+        return closure_1_6(closure_1_1(14325), {});
       };
       obj2[constants.SUCCESS] = obj5;
       return obj2;

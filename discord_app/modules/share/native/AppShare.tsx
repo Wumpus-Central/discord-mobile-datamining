@@ -18,7 +18,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ BackHandler: hasOwnProperty, NativeModules: metroRequire } = get_ActivityIndicator);
 const AnalyticsTrackingStore = fn(6880);
-const ShareStore = fn(13888);
+const ShareStore = fn(13887);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 let closure_9 = fn(11907).MultiAccountSwitchLocation;
 const jsxProd = fn(21);
@@ -124,7 +124,7 @@ export default function AppShare(targetUserId) {
   } else {
     const items5 = [closure_10(tmp9(6460).SceneLoadingIndicator, {}), , ,];
     const obj5 = { appEntryKey: share };
-    items5[1] = closure_10(tmp9(16727).ActionSheetContainer, obj5);
+    items5[1] = closure_10(tmp9(16731).ActionSheetContainer, obj5);
     items5[2] = closure_10(ToastContainerDefault, {});
     items5[3] = closure_10(tmp9(5209).AlertModalContainer, {});
     obj3.children = items5;

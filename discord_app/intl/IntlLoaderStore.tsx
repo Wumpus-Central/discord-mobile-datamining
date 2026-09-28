@@ -347,14 +347,14 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   return {
     isLoading: false,
     inProgressLocale: "Boolean",
-    error: "paddingHorizontal",
+    error: "channel",
     localeData: _modDef2114,
     setLoadingStarted(inProgressLocale) {
       return closure_0({ isLoading: true, inProgressLocale });
     },
     setLoadingSucceeded(arg0) {
       if (closure_1().inProgressLocale === arg0) {
-        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "paddingHorizontal" });
+        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "channel" });
       }
     },
     setLoadingFailed(error, arg1) {

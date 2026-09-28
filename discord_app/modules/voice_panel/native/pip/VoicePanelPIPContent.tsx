@@ -566,7 +566,7 @@ function Stream(participantId) {
   c5 = undefined;
   let callback2;
   let tmp = closure_24();
-  const mode = participantId(16912).usePIPState().mode;
+  const mode = participantId(16916).usePIPState().mode;
   closure_129_0 = transitionState;
   closure_129_1 = transitionCleanUp;
   const items = [transitionState, transitionCleanUp];
@@ -602,7 +602,7 @@ function Stream(participantId) {
   let tmp5 = transitionState === participantId(4540).TransitionStates.YEETED ? tmp.onTop : tmp.onBottom;
   const context = obj2.useContext(mode(11754));
   ({ channelId: c2, layoutManager } = context);
-  let obj = participantId(16912);
+  let obj = participantId(16916);
   const items1 = [callback2];
   const stateFromStoresObject = participantId(563).useStateFromStoresObject(items1, () => {
     const participant = ChannelRTCStore.getParticipant(c2, participantId);
@@ -764,7 +764,7 @@ function areParticipantsEqual(arg0, arg1) {
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const VoicePanelModes = fn(11755).VoicePanelModes;
-const VoicePanelPIPModes = fn(16909).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(16913).VoicePanelPIPModes;
 let Constants = fn(1074);
 ({ ApplicationStreamStates: closure_16, ComponentActions: closure_17 } = Constants);
 Constants = fn(2005);

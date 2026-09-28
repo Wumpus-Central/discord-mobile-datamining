@@ -71,7 +71,7 @@ function ChangeBannerColorRow(user) {
   obj5.text = intl.string(require("util").t.xzNfPz);
   obj4.label = closure_9(require("Form").FormLabel, obj5);
   const obj6 = { style: tmp.selectedColor, children: null };
-  const items2 = [closure_9(pendingAccentColor(14155), { style: tmp.bannerColor, color: pendingAccentColor }), ,];
+  const items2 = [closure_9(pendingAccentColor(14154), { style: tmp.bannerColor, color: pendingAccentColor }), ,];
   const obj8 = {
     style: tmp.selectedColorHex,
     variant: "text-md/medium",
@@ -86,7 +86,7 @@ function ChangeBannerColorRow(user) {
   items2[2] = closure_9(require("native").Icon, {
     style: tmp.rowArrow,
     size: require("native").Icon.Sizes.CUSTOM,
-    source: pendingAccentColor(14160),
+    source: pendingAccentColor(14159),
   });
   obj6.children = items2;
   obj4.trailing = closure_10(View, obj6);
@@ -208,8 +208,8 @@ export default function ChangeBannerActionSheet(isTryItOut) {
               originalAsset: "Array",
               originalMd5,
             };
-            closure_129_0(tmp2(14151).createPendingImage(obj8));
-            const obj = tmp2(14151);
+            closure_129_0(tmp2(14150).createPendingImage(obj8));
+            const obj = tmp2(14150);
           }
           c3 = 3;
           return { value: "HermesInternal", done: null };
@@ -275,7 +275,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   if (!flag) {
     const obj9 = { style: tmp.upsellButton, children: null };
     const obj10 = { analyticsObject: constants.EDIT_PROFILE_BANNER };
-    obj9.children = closure_9(tmp2(14152), obj10);
+    obj9.children = closure_9(tmp2(14151), obj10);
     tmp4Result6 = closure_9(View, obj9);
   }
   items3[1] = tmp4Result6;

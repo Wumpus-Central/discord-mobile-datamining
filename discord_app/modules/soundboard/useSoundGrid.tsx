@@ -370,7 +370,7 @@ export default function useSoundGrid(guild_id) {
         const obj11 = { key: tmp13(5328).SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
         const obj12 = { type: tmp13(5328).SoundboardSoundGridSectionType.DEFAULTS };
         obj11.categoryInfo = obj12;
-        const sortSoundsOldestToNewestCreationDate2 = tmp13(16883).sortSoundsOldestToNewestCreationDate;
+        const sortSoundsOldestToNewestCreationDate2 = tmp13(16887).sortSoundsOldestToNewestCreationDate;
         let result1 = value7;
         if (null != sortSoundsOldestToNewestCreationDate2) {
           result1 = sortSoundsOldestToNewestCreationDate2(value7);
@@ -437,7 +437,7 @@ export default function useSoundGrid(guild_id) {
         const obj14 = { key: tmp13(5328).SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
         const obj15 = { type: tmp13(5328).SoundboardSoundGridSectionType.DEFAULTS };
         obj14.categoryInfo = obj15;
-        const sortSoundsOldestToNewestCreationDate3 = tmp13(16883).sortSoundsOldestToNewestCreationDate;
+        const sortSoundsOldestToNewestCreationDate3 = tmp13(16887).sortSoundsOldestToNewestCreationDate;
         let result2 = value8;
         if (null != sortSoundsOldestToNewestCreationDate3) {
           result2 = sortSoundsOldestToNewestCreationDate3(value8);

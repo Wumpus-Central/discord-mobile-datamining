@@ -29,7 +29,7 @@ let items = [obj, , ,];
 let obj2 = { tier: BoostedGuildTiers.TIER_1, title: null, IconComponent: null };
 let intl2 = fn(1115).intl;
 obj2.title = intl2.string(fn(1115).t.nzXtaS);
-obj2.IconComponent = fn(17371).BoostGemOutlineIcon;
+obj2.IconComponent = fn(17375).BoostGemOutlineIcon;
 items[1] = obj2;
 let obj3 = { tier: BoostedGuildTiers.TIER_2, title: null, IconComponent: null };
 let intl3 = fn(1115).intl;
@@ -39,7 +39,7 @@ items[2] = obj3;
 let obj4 = { tier: BoostedGuildTiers.TIER_3, title: null, IconComponent: null };
 const intl4 = fn(1115).intl;
 obj4.title = intl4.string(fn(1115).t.BfF6ED);
-obj4.IconComponent = fn(13065).BoostTier3Icon;
+obj4.IconComponent = fn(13064).BoostTier3Icon;
 items[3] = obj4;
 const createStyles = fn(4836);
 let closure_15 = createStyles.createStyles((arg0) => {

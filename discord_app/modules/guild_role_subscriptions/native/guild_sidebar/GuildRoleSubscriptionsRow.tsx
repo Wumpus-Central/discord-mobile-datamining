@@ -35,7 +35,7 @@ export default function GuildRoleSubscriptionsRow(selected) {
     router_utils.transitionTo(Routes.CHANNEL(id, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
   }, items);
   const callback1 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15840, dependencyMap.paths), c1, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15838, dependencyMap.paths), c1, {
       guildId: id,
       onClose() {
         c1(dependencyMap[8]).hideActionSheet(closure_1_1);

@@ -153,7 +153,7 @@ function ManagedProductDetailsActionSheetInner(skuId) {
     obj5.children = closure_13(tmp(5281).Button, obj6);
     closure_13(tmp(1177).EmptyState, obj5);
   } else {
-    closure_13(initialVariantIndex(12741), {});
+    closure_13(initialVariantIndex(12740), {});
   }
   ref = noop.useRef(null);
 }

@@ -181,7 +181,7 @@ export { UnionIcon };
 export const useShouldShowRobloxConnectionCoachmark = function useShouldShowRobloxConnectionCoachmark() {
   const items = [LocalAppDetectionStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () =>
-    appInstalled.isAppInstalled(stateFromStores(13258).DetectableAppNames.ROBLOX),
+    appInstalled.isAppInstalled(stateFromStores(13257).DetectableAppNames.ROBLOX),
   );
   const tmp2 = hasRoloxAccount(noop.useState(false), 2);
   const first = tmp2[0];

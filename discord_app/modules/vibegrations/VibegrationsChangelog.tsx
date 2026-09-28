@@ -101,6 +101,13 @@ const items = [
     summary: "Claude Fable 5.1 replaces Claude Fable 5 in the model picker, sharper on long builds at the same price.",
   },
   {
+    date: "2026-09-28",
+    time: "02:26",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Claude Opus 5.5 now powers the Big Brain effort stop, and each effort stop runs the same models in every project.",
+  },
+  {
     date: "2026-09-03",
     time: "00:01",
     platforms: ["desktop"],
@@ -112,6 +119,13 @@ const items = [
     platforms: ["desktop", "mobile"],
     summary:
       "Cloned an app? When the original improves, Conjure offers to update your copy while keeping every change you made, only checking with you on the rare spot it cannot keep both. You can also ask it to inherit updates from another app by its project id, even for a project you imported rather than cloned.",
+  },
+  {
+    date: "2026-09-27",
+    time: "09:51",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Coding tools you connect to an app can now search and script its files, read the Mana docs, set its settings, public pages and icon, use your uploads, and bring in updates from the original, and a broken manifest edit is caught before it deploys.",
   },
   {
     date: "2026-09-06",
@@ -128,6 +142,32 @@ const items = [
       "Comment mode now picks whatever is under your pointer, not only buttons and headings, and outlines it so you can see what you are about to comment on. Each note is pinned to the exact spot you clicked, and its card opens out of that pin.",
   },
   {
+    date: "2026-09-27",
+    time: "04:34",
+    platforms: ["desktop", "mobile"],
+    summary: "Conjure can search the web and read pages, so it checks current docs and APIs instead of guessing.",
+  },
+  {
+    date: "2026-09-27",
+    time: "17:58",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Conjure now follows the AGENTS.md notes in your project and the skills you add under .discord/skills, including running their JavaScript helpers.",
+  },
+  {
+    date: "2026-09-26",
+    time: "01:40",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Conjure talks you through what it is doing between steps, and each step says in plain words what it looked at or changed.",
+  },
+  {
+    date: "2026-09-27",
+    time: "03:00",
+    platforms: ["desktop", "mobile"],
+    summary: "Conjure ticks off each checklist step as it finishes it, instead of all at once at the end.",
+  },
+  {
     date: "2026-09-25",
     time: "05:01",
     platforms: ["desktop", "mobile"],
@@ -139,6 +179,13 @@ const items = [
     time: "00:00",
     platforms: ["desktop"],
     summary: "Conjuring has its own doorway in the desktop title bar, so it is one click away from anywhere.",
+  },
+  {
+    date: "2026-09-26",
+    time: "01:44",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Deleting an app closes the confirmation right away; the app shows as deleting in your list until it is gone.",
   },
   {
     date: "2026-09-20",
@@ -169,6 +216,12 @@ const items = [
       "Files you attach in the chat stay put while you hop to another server, view, or app, until you send or remove them.",
   },
   {
+    date: "2026-09-27",
+    time: "08:19",
+    platforms: ["desktop", "mobile"],
+    summary: "Files your connected MCP tools generate can now be saved into your project.",
+  },
+  {
     date: "2026-09-05",
     time: "00:03",
     platforms: ["desktop", "mobile"],
@@ -187,6 +240,13 @@ const items = [
     summary: "Hitting your project limit, or conjuring too fast, now says so instead of just asking you to try again.",
   },
   {
+    date: "2026-09-26",
+    time: "02:06",
+    platforms: ["desktop"],
+    summary:
+      "Hover a message you sent in the builder chat and open its More menu to copy the text, just like in a channel.",
+  },
+  {
     date: "2026-09-25",
     time: "20:30",
     platforms: ["desktop", "mobile"],
@@ -194,11 +254,25 @@ const items = [
       "If Conjure restarts partway through a long task, it now picks up from its last step and keeps the steps it already showed you.",
   },
   {
+    date: "2026-09-27",
+    time: "08:08",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Images you attach before your app is built now reach Conjure, whether you send them while it works, approve a plan, pick an idea, or answer its questions.",
+  },
+  {
     date: "2026-09-08",
     time: "00:02",
     platforms: ["desktop"],
     summary:
       "Importing a big project is faster and narrates its progress, and a zip that still has node_modules or .git inside now imports cleanly, telling you what was left out.",
+  },
+  {
+    date: "2026-09-26",
+    time: "02:14",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Keys needed cards now have a clear Press here to add securely button, set apart from the key names above it.",
   },
   {
     date: "2026-09-08",
@@ -450,6 +524,13 @@ const items = [
       "Picking a template shows it running in a few seconds, instead of after Conjure has rebuilt it from scratch.",
   },
   {
+    date: "2026-09-26",
+    time: "02:20",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Plan cards have an Approve button that starts the build. To change the plan, type what you want different.",
+  },
+  {
     date: "2026-08-31",
     time: "00:03",
     platforms: ["desktop", "mobile"],
@@ -461,6 +542,13 @@ const items = [
     platforms: ["desktop", "mobile"],
     summary:
       "Plans for an app you imported or cloned no longer invent a wireframe sketch: the sketch is reserved for brand-new apps that have no screens yet.",
+  },
+  {
+    date: "2026-09-27",
+    time: "21:37",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Preview checks finish as soon as your Activity loads instead of waiting a few seconds, and Conjure now fixes a crash in your app the first time it happens.",
   },
   {
     date: "2026-09-23",
@@ -483,6 +571,13 @@ const items = [
     summary: "Remix is now called Clone: same button, same copy of the app to make your own.",
   },
   {
+    date: "2026-09-27",
+    time: "21:38",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Reopening an app shows what Conjure is recalling while your conversation loads, and a brand new app greets you straight away.",
+  },
+  {
     date: "2026-09-02",
     time: "00:01",
     platforms: ["desktop", "mobile"],
@@ -495,6 +590,19 @@ const items = [
     platforms: ["desktop", "mobile"],
     summary:
       "Starting Moderation Bot from a server it can be built in now skips the pick-a-server step; the bot is made for the server you are in.",
+  },
+  {
+    date: "2026-09-28",
+    time: "02:09",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Starting from a template shows its progress as one Putting it in the preview step, the same as every other change.",
+  },
+  {
+    date: "2026-09-26",
+    time: "02:20",
+    platforms: ["desktop", "mobile"],
+    summary: "Task lists show a visible empty box beside every step still to come, instead of a blank gap.",
   },
   {
     date: "2026-09-23",
@@ -522,6 +630,13 @@ const items = [
     time: "00:02",
     platforms: ["mobile"],
     summary: "The builder chat now glides smoothly with the keyboard as it opens and closes.",
+  },
+  {
+    date: "2026-09-28",
+    time: "03:35",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "The chat no longer adds a \u201CTested the app\u201D line; the blue bar on your Frame shows when Conjure is testing.",
   },
   {
     date: "2026-09-08",
@@ -582,10 +697,31 @@ const items = [
       'The working status above the chat box now reads simply "Conjuring\u2026" or "Thinking\u2026", without repeating the name in front.',
   },
   {
+    date: "2026-09-27",
+    time: "23:27",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Tools from an MCP server you connect are ready right away, so Conjure can use them without waiting for your next message.",
+  },
+  {
+    date: "2026-09-27",
+    time: "23:57",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Tools you connect now say what each call is for in Conjure's activity, instead of repeating the tool's name down the list.",
+  },
+  {
     date: "2026-09-18",
     time: "00:02",
     platforms: ["desktop", "mobile"],
     summary: "What\u2019s new keeps its three newest lines and adds View all, which opens the whole history.",
+  },
+  {
+    date: "2026-09-27",
+    time: "20:17",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "When Conjure needs keys only you can add, their card pulses and says so, and reminds you that you can always just ask what to do.",
   },
   {
     date: "2026-09-02",
@@ -602,11 +738,25 @@ const items = [
       'When something breaks behind the scenes, people using your app now see a plain "Something went wrong" message instead of internal error text.',
   },
   {
+    date: "2026-09-27",
+    time: "05:47",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "When the app keeps crashing after a request, Conjure notices and fixes it on its own, even while you are away.",
+  },
+  {
     date: "2026-09-22",
     time: "00:05",
     platforms: ["desktop"],
     summary:
       "When your app needs a setting before it can carry on, the form now appears right in the chat, so you fill it in without opening a dialog.",
+  },
+  {
+    date: "2026-09-26",
+    time: "01:46",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "While Conjure is testing your app, a blue bar across the top of your Frame says so and lets you stop it, a cursor shows every move and click it makes, and the chat keeps a line saying how long the test took.",
   },
   {
     date: "2026-09-24",
@@ -662,6 +812,19 @@ const items = [
     platforms: ["desktop", "mobile"],
     summary:
       "Your app now has its own web address: pages people can open in a browser, a second address showing the version you are still working on, and a Sign in with Discord button that never asks anyone for a password.",
+  },
+  {
+    date: "2026-09-27",
+    time: "20:05",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Your app's icon, name and description now travel with the project: an export includes them, and importing that export brings them back.",
+  },
+  {
+    date: "2026-09-27",
+    time: "06:27",
+    platforms: ["desktop", "mobile"],
+    summary: "Your frame stays on screen while a new build deploys, and only blinks once to load it.",
   },
   {
     date: "2026-08-31",

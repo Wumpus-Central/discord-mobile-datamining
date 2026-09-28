@@ -10,8 +10,8 @@ import _modDef7408 from "../../../../../_runtime/metro/07408__.js";
 import _modDef10823 from "../../../../../_runtime/metro/10823__.js";
 import _modDef11059 from "../../../../../_runtime/metro/11059__.js";
 import _modDef12289 from "../../../../../_runtime/metro/12289__.js";
-import _modDef15385 from "../../../../../_runtime/metro/15385__.js";
-import _modDef15386 from "../../../../../_runtime/metro/15386__.js";
+import _modDef15383 from "../../../../../_runtime/metro/15383__.js";
+import _modDef15384 from "../../../../../_runtime/metro/15384__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -50,8 +50,8 @@ function DemoContextMenu(align) {
             label: length[index % length.length],
             IconComponent: "a",
             iconSource: length2[index % length2.length],
-            variant: "flower_playing_cards",
-            action: "ValueSetter",
+            variant: false,
+            action: false,
           };
           let str = "default";
           if (index === closure_0 - 1) {
@@ -74,8 +74,8 @@ function DemoContextMenu(align) {
           label: length[index % length.length],
           IconComponent: "a",
           iconSource: length2[index % length2.length],
-          variant: "flower_playing_cards",
-          action: "ValueSetter",
+          variant: false,
+          action: false,
         };
         let str = "default";
         if (index === closure_0 - 1) {
@@ -115,8 +115,8 @@ let items = [
   _modDef7408,
   _modDef10823,
   _modDef4796,
-  _modDef15385,
-  _modDef15386,
+  _modDef15383,
+  _modDef15384,
   _modDef11059,
 ];
 let closure_8 = [

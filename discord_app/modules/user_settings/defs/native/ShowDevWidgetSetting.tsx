@@ -10,7 +10,7 @@ const toggle = SettingBuilders.createToggle({
     return "Show Dev Tools Widget";
   },
   parent: null,
-  IconComponent: fn(15133).StaffBadgeIcon,
+  IconComponent: fn(15131).StaffBadgeIcon,
   onValueChange: function handleShowDevWidgetSettingToggle(showDevWidget) {
     const result = DevToolsActionCreators.updateDevToolsSettings({ showDevWidget });
   },
@@ -18,7 +18,7 @@ const toggle = SettingBuilders.createToggle({
     const items = [DevToolsSettingsStore];
     return initialize.useStateFromStores(items, () => showDevWidget.showDevWidget);
   },
-  usePredicate: fn(14379).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(14378).useStaffOrDeveloperSettingPredicate,
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/ShowDevWidgetSetting.tsx");

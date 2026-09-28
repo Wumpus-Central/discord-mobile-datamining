@@ -123,13 +123,13 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
         guildId: "e",
         isMobileOnline: stateFromStores3,
         isVROnline: stateFromStores4,
-        status: null,
-        streaming: "009399942588b8344d40cad62cdde902",
-        style: "en-GB.messages.009399942588b8344d40cad62cdde902.compiled.messages",
-        size: "jsona",
-        animate: "active",
-        typing: "md",
-        autoStatusCutout: null,
+        status: true,
+        streaming: true,
+        style: false,
+        size: true,
+        animate: true,
+        typing: "channel",
+        autoStatusCutout: 17082177,
       };
       let tmp12 = null;
       if (!stateFromStores2.isSystemUser()) {
@@ -147,13 +147,13 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
         guildId: "e",
         isMobileOnline: stateFromStores3,
         isVROnline: stateFromStores4,
-        status: null,
-        streaming: "009399942588b8344d40cad62cdde902",
-        style: "en-GB.messages.009399942588b8344d40cad62cdde902.compiled.messages",
-        size: "jsona",
-        animate: "active",
-        typing: "md",
-        autoStatusCutout: null,
+        status: true,
+        streaming: true,
+        style: false,
+        size: true,
+        animate: true,
+        typing: "channel",
+        autoStatusCutout: 17082177,
       });
     }
   }

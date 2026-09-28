@@ -20,7 +20,7 @@ let obj = {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: fn(12744).GUTTER_SIZE,
+    paddingHorizontal: fn(12743).GUTTER_SIZE,
   },
   rowSpacer: null,
   profileEffect: null,
@@ -30,9 +30,9 @@ let obj3 = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
-  paddingHorizontal: fn(12744).GUTTER_SIZE,
+  paddingHorizontal: fn(12743).GUTTER_SIZE,
 };
-obj.rowSpacer = { height: fn(12744).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(12743).GUTTER_SIZE };
 obj.profileEffect = { overflow: "hidden", width: "100%", height: "100%" };
 obj.sampleProfile = { aspectRatio: fn(8261).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 let closure_9 = createStyles.createStyles(obj);

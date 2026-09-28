@@ -66,7 +66,7 @@ function GuildChannelMemberCount(channel) {
     const count = ChannelMemberCountStore.requestCount(channel.guild_id, channel.id);
   }, items1);
   if (null == total) {
-    const tmpResult = tmp(12848);
+    const tmpResult = tmp(12847);
     return tmpResult.renderMemberCountText(online, total, flag, tmp(6038).ICON_SIZE[token]);
   }
   const obj2 = channel(504);

@@ -1,8 +1,8 @@
 // discord_app/modules/messages/native/renderer/row_data/SurveyIndication.tsx
 import util from "../../../../../intl/index.native.tsx";
 import PushNotificationConstants from "../../../../push_notifications/PushNotificationConstants.tsx";
+import _modDef12759 from "../../../../../../_runtime/metro/12759__.js";
 import _modDef12760 from "../../../../../../_runtime/metro/12760__.js";
-import _modDef12761 from "../../../../../../_runtime/metro/12761__.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const NotificationTypes = PushNotificationConstants.NotificationTypes;
@@ -26,9 +26,9 @@ export const createSurveyIndication = function createSurveyIndication(message, f
   obj.notificationType = TOP_MESSAGE_PUSH;
   const tmp2Result = tmp2(7388);
   if (tmp2Result2.isThemeDark(forcedTheme)) {
-    let tmp7Result = _modDef12760;
+    let tmp7Result = _modDef12759;
   } else {
-    tmp7Result = _modDef12761;
+    tmp7Result = _modDef12760;
   }
   obj2.feedbackIconUrl = tmp2Result.getAssetUriForEmbed(tmp7Result);
   return obj2;

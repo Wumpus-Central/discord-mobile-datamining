@@ -13,7 +13,7 @@ import CollectiblesActionCreators from "../CollectiblesActionCreators.tsx";
 import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import useCollectiblesDataDefault from "../hooks/useCollectiblesData.tsx";
 import CollectiblesBadges from "CollectiblesBadges.tsx";
-import _modDef12746 from "../../../../_runtime/metro/12746__.js";
+import _modDef12745 from "../../../../_runtime/metro/12745__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -99,7 +99,7 @@ export const EditCollectiblesListItemNone = function EditCollectiblesListItemNon
   const tmp = closure_9();
   const obj = { style: tmp.optionCell };
   const merged = Object.assign(asDefault);
-  const items = [React5(native.Icon, { source: _modDef12746, size: native.IconSizes.LARGE })];
+  const items = [React5(native.Icon, { source: _modDef12745, size: native.IconSizes.LARGE })];
   const obj3 = {
     variant: "text-sm/medium",
     color: "mobile-text-heading-primary",
@@ -142,7 +142,7 @@ export const EditCollectiblesListItemShop = function EditCollectiblesListItemSho
   const merged1 = Object.assign(merged);
   const items1 = [
     closure_7(analyticsSource(1177).Icon, {
-      source: analyticsLocations(12747),
+      source: analyticsLocations(12746),
       size: analyticsSource(1177).IconSizes.LARGE,
     }),
     ,

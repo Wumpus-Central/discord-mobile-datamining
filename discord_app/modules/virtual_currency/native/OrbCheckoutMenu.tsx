@@ -28,7 +28,7 @@ export default function OrbCheckoutMenu() {
           });
         },
       };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12728, dependencyMap.paths), obj2);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12727, dependencyMap.paths), obj2);
     }
   }, items);
   let obj = { children: null };

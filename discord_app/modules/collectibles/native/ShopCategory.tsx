@@ -91,13 +91,13 @@ export const ShopCategory = function ShopCategory(category) {
   const mobileBannerUrl = category.mobileBannerUrl;
   let obj2 = category(14604);
   let obj3 = { products: category.products, bypassAndroidUnsyncedFilter: category.isOrbsExclusive };
-  const collectiblesShopDeepLinkProps = category(15426).useCollectiblesShopDeepLinkProps({
+  const collectiblesShopDeepLinkProps = category(15424).useCollectiblesShopDeepLinkProps({
     products: filteredAndSortedProducts,
   });
   ({ productIndex, initialProductSkuId } = collectiblesShopDeepLinkProps);
   const initialVariantIndex = collectiblesShopDeepLinkProps.initialVariantIndex;
   const ref = unpublishedAt.useRef(null);
-  const obj4 = category(15426);
+  const obj4 = category(15424);
   let items = [category.storeListingId];
   const recyclingState = category(8179).useRecyclingState(null, items, () => {
     const current = ref.current;
@@ -110,19 +110,19 @@ export const ShopCategory = function ShopCategory(category) {
   if (tmp9) {
     tmp9 = productIndex > 0;
   }
-  const obj7 = category(15430);
+  const obj7 = category(15428);
   const scrollToInitialIndexOnce = obj7.useScrollToInitialIndexOnce({
     shouldScroll: tmp9,
     initialScrollIndex: productIndex,
     flashListRef: ref,
-    afterMs: category(15430).INITIAL_SCROLL_DELAY_MS,
+    afterMs: category(15428).INITIAL_SCROLL_DELAY_MS,
     resetKey: category.storeListingId,
   });
   const obj8 = {
     shouldScroll: tmp9,
     initialScrollIndex: productIndex,
     flashListRef: ref,
-    afterMs: category(15430).INITIAL_SCROLL_DELAY_MS,
+    afterMs: category(15428).INITIAL_SCROLL_DELAY_MS,
     resetKey: category.storeListingId,
   };
   collectiblesAnalyticsContext = category(8229).useCollectiblesAnalyticsContext();

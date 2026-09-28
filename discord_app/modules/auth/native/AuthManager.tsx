@@ -77,8 +77,8 @@ class AuthManager extends tmp3 {
             closure_129_0();
           }
           const obj6 = { onComplete: closure_129_0 };
-          const result = applyArgumentsResult(15625).showPushNotificationPromptModal(obj6);
-          const obj = applyArgumentsResult(15625);
+          const result = applyArgumentsResult(15623).showPushNotificationPromptModal(obj6);
+          const obj = applyArgumentsResult(15623);
         } catch (tmp19) {
           DCDShortcutManager = tmp;
           throw tmp19;

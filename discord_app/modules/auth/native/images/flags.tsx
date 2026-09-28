@@ -1,4 +1,6 @@
 // discord_app/modules/auth/native/images/flags.tsx
+import _mod14974 from "../../../../../_runtime/metro/14974__.js";
+import _mod14975 from "../../../../../_runtime/metro/14975__.js";
 import _mod14976 from "../../../../../_runtime/metro/14976__.js";
 import _mod14977 from "../../../../../_runtime/metro/14977__.js";
 import _mod14978 from "../../../../../_runtime/metro/14978__.js";
@@ -28,42 +30,40 @@ import _mod15001 from "../../../../../_runtime/metro/15001__.js";
 import _mod15002 from "../../../../../_runtime/metro/15002__.js";
 import _mod15003 from "../../../../../_runtime/metro/15003__.js";
 import _mod15004 from "../../../../../_runtime/metro/15004__.js";
-import _mod15005 from "../../../../../_runtime/metro/15005__.js";
-import _mod15006 from "../../../../../_runtime/metro/15006__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/auth/native/images/flags.tsx");
 
 export const flags = {
-  bg: _mod14976,
-  cs: _mod14977,
-  da: _mod14978,
-  de: _mod14979,
-  el: _mod14980,
-  "en-GB": _mod14981,
-  "en-US": _mod14982,
-  "es-ES": _mod14983,
-  "es-419": _mod14984,
-  fi: _mod14985,
-  fr: _mod14986,
-  hi: _mod14987,
-  hr: _mod14988,
-  hu: _mod14989,
-  it: _mod14990,
-  ja: _mod14991,
-  ko: _mod14992,
-  lt: _mod14993,
-  nl: _mod14994,
-  no: _mod14995,
-  pl: _mod14996,
-  "pt-BR": _mod14997,
-  ro: _mod14998,
-  ru: _mod14999,
-  "sv-SE": _mod15000,
-  th: _mod15001,
-  tr: _mod15002,
-  uk: _mod15003,
-  vi: _mod15004,
-  "zh-CN": _mod15005,
-  "zh-TW": _mod15006,
+  bg: _mod14974,
+  cs: _mod14975,
+  da: _mod14976,
+  de: _mod14977,
+  el: _mod14978,
+  "en-GB": _mod14979,
+  "en-US": _mod14980,
+  "es-ES": _mod14981,
+  "es-419": _mod14982,
+  fi: _mod14983,
+  fr: _mod14984,
+  hi: _mod14985,
+  hr: _mod14986,
+  hu: _mod14987,
+  it: _mod14988,
+  ja: _mod14989,
+  ko: _mod14990,
+  lt: _mod14991,
+  nl: _mod14992,
+  no: _mod14993,
+  pl: _mod14994,
+  "pt-BR": _mod14995,
+  ro: _mod14996,
+  ru: _mod14997,
+  "sv-SE": _mod14998,
+  th: _mod14999,
+  tr: _mod15000,
+  uk: _mod15001,
+  vi: _mod15002,
+  "zh-CN": _mod15003,
+  "zh-TW": _mod15004,
 };

@@ -18,7 +18,7 @@ export default noop.memo(function YouBarNameplate(isQuestRendered) {
   let token;
   ({ nameplate, barWidth } = isQuestRendered);
   token = isQuestRendered(4531).useToken(token(576).modules.mobile.YOU_BAR_BORDER_RADIUS);
-  const tmp4 = token(14715)(token);
+  const tmp4 = token(14713)(token);
   dependencyMap = tmp4;
   let obj = isQuestRendered(4531);
   const tmp2 = token;

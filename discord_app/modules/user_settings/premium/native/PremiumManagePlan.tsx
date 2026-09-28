@@ -849,8 +849,8 @@ export default function PremiumManagePlan() {
   const tmp = closure_32();
   const rect = useSafeAreaInsetsDefault();
   const top = rect.top;
-  const youBarSettingsOutsideSafeAreaTop = navigation(13000).useYouBarSettingsOutsideSafeAreaTop();
-  let obj = navigation(13000);
+  const youBarSettingsOutsideSafeAreaTop = navigation(12999).useYouBarSettingsOutsideSafeAreaTop();
+  let obj = navigation(12999);
   navigation = navigation(1485).useNavigation();
   let items = [navigation];
   const layoutEffect = noop.useLayoutEffect(() => {
@@ -896,7 +896,7 @@ export default function PremiumManagePlan() {
   const obj6 = navigation(504);
   let isInReverseTrial = navigation(7509).useIsInReverseTrial();
   const obj8 = navigation(7509);
-  const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(13002).CountDownMessageTypes.SHORT_TIME);
+  const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(13001).CountDownMessageTypes.SHORT_TIME);
   const unactivatedFractionalPremiumDurationString =
     navigation(4488).getUnactivatedFractionalPremiumDurationString(tmp12);
   if (null !== tmp10) {
@@ -1046,9 +1046,9 @@ export default function PremiumManagePlan() {
       },
       subscription: tmp10,
     };
-    const items10 = [closure_29(tmp2(12892), obj17)];
+    const items10 = [closure_29(tmp2(12891), obj17)];
     const obj18 = { style: tmp.billingInfo, subscription: tmp10 };
-    items10[1] = closure_29(tmp2(12932), obj18);
+    items10[1] = closure_29(tmp2(12931), obj18);
     obj16.children = items10;
     tmp27Result = closure_30(closure_8, obj16);
   }

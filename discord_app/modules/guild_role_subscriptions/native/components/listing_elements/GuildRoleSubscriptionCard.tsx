@@ -62,7 +62,7 @@ export const Content = function Content(arg0) {
   const items = [
     closure_6(SectionTitle, obj7),
     closure_6(guildId(1177).Spacer, { size: 8 }),
-    closure_6(guildId(14785).GuildRoleSubscriptionMemberPreview, { guildId, role }),
+    closure_6(guildId(14783).GuildRoleSubscriptionMemberPreview, { guildId, role }),
   ];
   obj6.children = items;
   const items1 = [closure_8(closure_7, obj6), , ,];

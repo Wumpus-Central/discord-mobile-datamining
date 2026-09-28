@@ -20,7 +20,7 @@ import _modDef12294 from "../../../../../../_runtime/metro/12294__.js";
 import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground.tsx";
 import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary.tsx";
 import useActivityUsersDefault from "../../../../activities/useActivityUsers.tsx";
-import _modDef16971 from "../../../../../../_runtime/metro/16971__.js";
+import _modDef16975 from "../../../../../../_runtime/metro/16975__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const useActivityShelfItemDefault = useActivityShelfItem;
@@ -261,7 +261,7 @@ export default function ActivityShelfItem(arg0) {
       const obj9 = { style: tmp.developerIconContainer, children: null };
       const obj10 = {
         size: native.Icon.Sizes.REFRESH_SMALL_16,
-        source: _modDef16971,
+        source: _modDef16975,
         color: tmp.developerIconColor.color,
       };
       obj9.children = timestampProducer(native.Icon, obj10);

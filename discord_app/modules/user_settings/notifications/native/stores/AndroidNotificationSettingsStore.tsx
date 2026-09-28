@@ -126,10 +126,10 @@ let closure_5 = async function _initializeAndroidNotificationSettingsStore() {
 };
 const identity = fn(1243);
 let closure_4 = identity.createWithEqualityFn(() => ({
-  isLightsEnabled: "Promise",
-  isVibrationsEnabled: "sa",
-  isSoundsEnabled: "Date",
-  isNotifyEveryTime: "isArray",
+  isLightsEnabled: "Array",
+  isVibrationsEnabled: "PX_8",
+  isSoundsEnabled: "y",
+  isNotifyEveryTime: "HermesInternal",
 }));
 const size = fn(2);
 let result = size.fileFinishedImporting(

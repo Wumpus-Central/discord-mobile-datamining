@@ -20,7 +20,7 @@ let obj = {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: fn(12744).GUTTER_SIZE,
+    paddingHorizontal: fn(12743).GUTTER_SIZE,
   },
   rowSpacer: null,
   previewContainer: null,
@@ -29,9 +29,9 @@ let obj3 = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
-  paddingHorizontal: fn(12744).GUTTER_SIZE,
+  paddingHorizontal: fn(12743).GUTTER_SIZE,
 };
-obj.rowSpacer = { height: fn(12744).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(12743).GUTTER_SIZE };
 obj.previewContainer = {
   width: "100%",
   height: "100%",

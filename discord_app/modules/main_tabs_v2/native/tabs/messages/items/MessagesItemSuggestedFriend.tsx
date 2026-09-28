@@ -6,7 +6,7 @@ import asyncRequireImpl from "../../../../../../../_runtime/01981_asyncRequireIm
 import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
 import _mod8179 from "../../../../../../../discord_common/js/packages/flash-list/index.js";
 import useScaledTextLineHeight from "../../../../../screen/native/useScaledTextLineHeight.android.tsx";
-import _mod15676 from "../../../../../../../_runtime/metro/15676__.js";
+import _mod15674 from "../../../../../../../_runtime/metro/15674__.js";
 import FriendSuggestionUtils from "../../../../../friend_suggestions/FriendSuggestionUtils.tsx";
 import AddFriendsScreenUtils from "../../../friends/components/AddFriendsScreenUtils.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
@@ -217,7 +217,7 @@ export const MessagesItemSuggestedFriendFast = memoResult;
 export const MessagesItemSuggestedFriendFlash = memoResult1;
 export const MessagesItemSuggestedFriendLegend = noop.memo((arg0) => {
   const obj2 = {};
-  [tmp2, tmp3] = _mod15676.useRecyclingState(false);
+  [tmp2, tmp3] = _mod15674.useRecyclingState(false);
   const merged = Object.assign(arg0);
   obj2.addedPressed = tmp2;
   obj2.setAddedPressed = tmp3;

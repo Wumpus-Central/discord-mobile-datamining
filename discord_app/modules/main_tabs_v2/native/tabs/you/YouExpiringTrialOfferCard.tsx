@@ -60,7 +60,7 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
     }
   }
   const time = useCountdownDefault(num, closure_15);
-  shouldShowExpiringTrialOfferCard = navigateToPremium(16621).useShouldShowExpiringTrialOfferCard();
+  shouldShowExpiringTrialOfferCard = navigateToPremium(16625).useShouldShowExpiringTrialOfferCard();
   const items1 = [stateFromStores, shouldShowExpiringTrialOfferCard, premiumTrialOffer];
   const effect = stateFromStores.useEffect(() => {
     let tmp = shouldShowExpiringTrialOfferCard;
@@ -190,5 +190,5 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
   } else {
     return null;
   }
-  const tmp4Result = navigateToPremium(16621);
+  const tmp4Result = navigateToPremium(16625);
 }

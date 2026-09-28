@@ -6,7 +6,7 @@ import Text_Text from "../../../../../../design/components/Text/native/Text.tsx"
 import BotTagDefault from "../../../../../applications/native/BotTag.tsx";
 import _modDef9034 from "../../../../../../../_runtime/metro/09034__.js";
 import ActivityStatusDefault from "../../../../../activity_status/native/ActivityStatus.tsx";
-import _modDef13042 from "../../../../../../../_runtime/metro/13042__.js";
+import _modDef13041 from "../../../../../../../_runtime/metro/13041__.js";
 import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
@@ -195,7 +195,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result3 = null != premiumSince;
       if (tmp4Result3) {
         const obj6 = { style: title.tag, children: null };
-        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13042, disableColor: true };
+        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13041, disableColor: true };
         obj6.children = map1(native.Icon, obj7);
         tmp4Result3 = map1(timestampProducer, obj6);
       }

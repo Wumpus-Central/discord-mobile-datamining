@@ -14,7 +14,7 @@ import ClientThemesOverrides from "../../client_themes/native/ClientThemesOverri
 import ShareEventUtils from "../../guild_scheduled_events/utils/ShareEventUtils.tsx";
 import useShareChatInputActions from "../../share/native/useShareChatInputActions.tsx";
 import ShareChatInputDefault from "../../share/native/ShareChatInput.tsx";
-import _modDef16147 from "../../../../_runtime/metro/16147__.js";
+import _modDef16143 from "../../../../_runtime/metro/16143__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -55,7 +55,7 @@ function Screenshot(setUri) {
   const obj5 = { style: tmp.base, children: null };
   const obj6 = { absolute: true, wide: true, tall: true, mix: true, mixAmount: null };
   const obj7 = { dark: null, light: null };
-  const tmp6 = _modDef16147;
+  const tmp6 = _modDef16143;
   obj7.dark = client_themes_ClientThemesUtils.OverlayOpacity.LEVEL_7;
   obj7.light = client_themes_ClientThemesUtils.OverlayOpacity.LEVEL_8;
   obj6.mixAmount = obj7;
@@ -512,7 +512,7 @@ export const GameShareModal = function GameShareModal(content) {
             };
             c5 = 2;
             c6 = 1;
-            const obj7 = { value: entry(16146).sendMessageWithEmbed(obj6), done: false };
+            const obj7 = { value: entry(16142).sendMessageWithEmbed(obj6), done: false };
             return obj7;
           }
         } else if (1 === tmp7) {

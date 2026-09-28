@@ -1,7 +1,7 @@
 // discord_app/modules/premium/native/PremiumPlanSelectYearlyUpsellModal.tsx
 import common_AlertDefault from "../../../components_native/common/Alert.tsx";
 import TextStylesDefault from "../../rebrand/native/TextStyles.tsx";
-import _modDef13095 from "../../../../_runtime/metro/13095__.js";
+import _modDef13094 from "../../../../_runtime/metro/13094__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
@@ -10,7 +10,7 @@ import IAPStore from "../../../stores/native/IAPStore.android.tsx";
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const usePremiumPlanSelectStore = fn(13083).usePremiumPlanSelectStore;
+const usePremiumPlanSelectStore = fn(13082).usePremiumPlanSelectStore;
 let closure_10 = fn(1374).PREMIUM_YEARLY_DISCOUNT_PERCENT;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -94,7 +94,7 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
     const obj6 = { style: tmp.container, children: null };
     const obj7 = { style: tmp.image, source: null };
     const tmp5Result = productId(1882);
-    obj7.source = _modDef13095;
+    obj7.source = _modDef13094;
     const items2 = [closure_11(closure_5, obj7), , , , ,];
     const obj8 = { style: tmp.header, accessibilityRole: "header", children: null };
     const intl = productId(1115).intl;

@@ -3,8 +3,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef17298 from "../../../../_runtime/metro/17298__.js";
-import _modDef17299 from "../../../../_runtime/metro/17299__.js";
+import _modDef17302 from "../../../../_runtime/metro/17302__.js";
+import _modDef17303 from "../../../../_runtime/metro/17303__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -160,13 +160,13 @@ prototype["render"] = function render() {
   obj.disabled = disabled;
   let tmp9 = source;
   if (null == source) {
-    tmp9 = _modDef17298;
+    tmp9 = _modDef17302;
   }
   const obj2 = { source: tmp9, style: tmp.asset, children: null };
   let tmp5Result = null;
   if (!disabled) {
     const obj3 = { style: tmp.uploadIconWrapper, children: null };
-    const obj4 = { style: tmp.uploadIcon, source: _modDef17299 };
+    const obj4 = { style: tmp.uploadIcon, source: _modDef17303 };
     obj3.children = React7(hasOwnProperty, obj4);
     tmp5Result = React7(React4, obj3);
   }

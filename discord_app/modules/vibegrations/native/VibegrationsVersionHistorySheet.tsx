@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const fetchSourceHistory = fn(12624).fetchSourceHistory;
+const fetchSourceHistory = fn(12642).fetchSourceHistory;
 const jsx = fn(21).jsx;
 const VibegrationsVersionHistorySheet = "VibegrationsVersionHistorySheet";
 const createStyles = fn(4836);

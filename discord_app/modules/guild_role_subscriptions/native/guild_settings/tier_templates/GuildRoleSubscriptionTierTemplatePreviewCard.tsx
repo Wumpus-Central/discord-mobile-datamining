@@ -236,7 +236,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
     if (closure_7) {
       const obj2 = { selectedTemplate, handleCreateFromTemplate, newPricesToPick: suggestedUnusedPrices };
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(17612, dependencyMap.paths),
+        asyncRequireImpl(17616, dependencyMap.paths),
         "TierTemplatePriceReselectionCard",
         obj2,
       );
@@ -258,7 +258,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   const obj7 = {
     style: tmp.contentContainer,
     onPress() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17608, dependencyMap.paths), "TierTemplateCard", {
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17612, dependencyMap.paths), "TierTemplateCard", {
         template,
         guildId,
         handleSelectTemplateInPreview: callback1,

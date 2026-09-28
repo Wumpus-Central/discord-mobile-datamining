@@ -12,7 +12,7 @@ import UserSettingsAccountActionCreatorsAll from "../../../../actions/UserSettin
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
 import showInvalidUsernameToastNative from "showInvalidUsernameToastNative.tsx";
 import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader.tsx";
-import _modDef14313 from "../../../../../_runtime/metro/14313__.js";
+import _modDef14312 from "../../../../../_runtime/metro/14312__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import LoginRequiredActionStore from "../../../auth/LoginRequiredActionStore.tsx";
 import UserSettingsAccountStore from "../../../../stores/UserSettingsAccountStore.tsx";
@@ -27,7 +27,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: c10, LoginRequiredActions: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const state = { newPassword: "channel", password: 17065025 };
+const state = { newPassword: "channel", password: 17082177 };
 const createStyles = fn(4836);
 let obj2 = {
   onePass: { width: 20, height: 20 },
@@ -158,7 +158,7 @@ prototype["render"] = function render() {
   let tmp4Result = showForcedPasswordUpdate;
   if (showForcedPasswordUpdate) {
     const obj3 = { style: tmp.header, children: null };
-    const obj4 = { source: _modDef14313, style: tmp.image };
+    const obj4 = { source: _modDef14312, style: tmp.image };
     const items1 = [closure_1_12(React4, obj4), ,];
     const obj5 = {
       style: tmp.requiredActionsTitle,

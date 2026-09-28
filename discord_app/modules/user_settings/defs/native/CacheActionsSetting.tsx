@@ -222,7 +222,7 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t.ZVZVwR);
   },
   parent: null,
-  IconComponent: fn(15129).FileWarningIcon,
+  IconComponent: fn(15127).FileWarningIcon,
   onPress: function handleCacheActionsPress() {
     ActionSheetActionCreatorsDefault.openLazy(
       Promise.resolve({ default: CacheActionsActionSheet }),

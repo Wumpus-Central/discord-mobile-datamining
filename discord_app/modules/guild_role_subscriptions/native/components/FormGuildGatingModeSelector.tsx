@@ -24,7 +24,7 @@ export default function FormGuildGatingModeSelector(isFullServerGating) {
   const onChange = isFullServerGating.onChange;
   const tmp = closure_8();
   dependencyMap = tmp;
-  const roleSubscriptionSettingsDisabled = isFullServerGating(17548).useRoleSubscriptionSettingsDisabled();
+  const roleSubscriptionSettingsDisabled = isFullServerGating(17552).useRoleSubscriptionSettingsDisabled();
   let items = [onChange];
   const items1 = [onChange, isFullServerGating, tmp];
   const callback = noop.useCallback(() => {
@@ -62,7 +62,7 @@ export default function FormGuildGatingModeSelector(isFullServerGating) {
     onChange(true);
   }, items1);
   let obj3 = { icon: null, title: null, description: null, selected: null, onPress: null, disabled: null };
-  let obj = isFullServerGating(17548);
+  let obj = isFullServerGating(17552);
   obj3.icon = onChange(11282);
   let intl = isFullServerGating(1115).intl;
   obj3.title = intl.string(isFullServerGating(1115).t.rXqxhF);
@@ -71,11 +71,11 @@ export default function FormGuildGatingModeSelector(isFullServerGating) {
   obj3.selected = !isFullServerGating;
   obj3.onPress = callback;
   obj3.disabled = roleSubscriptionSettingsDisabled;
-  const items2 = [closure_5(onChange(17550), obj3), closure_5(View, { style: tmp.space })];
+  const items2 = [closure_5(onChange(17554), obj3), closure_5(View, { style: tmp.space })];
   let obj5 = { icon: null, title: null, description: null, selected: null, onPress: null, disabled: null };
   let obj4 = { style: tmp.space };
-  const tmp5 = onChange(17550);
-  obj5.icon = onChange(17551);
+  const tmp5 = onChange(17554);
+  obj5.icon = onChange(17555);
   let intl3 = isFullServerGating(1115).intl;
   obj5.title = intl3.string(isFullServerGating(1115).t.WzC9s6);
   const intl4 = isFullServerGating(1115).intl;
@@ -83,7 +83,7 @@ export default function FormGuildGatingModeSelector(isFullServerGating) {
   obj5.selected = isFullServerGating;
   obj5.onPress = callback1;
   obj5.disabled = roleSubscriptionSettingsDisabled;
-  items2[2] = closure_5(onChange(17550), obj5);
+  items2[2] = closure_5(onChange(17554), obj5);
   obj2.children = items2;
   return closure_7(View, obj2);
 }

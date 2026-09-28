@@ -200,7 +200,7 @@ function YouBarAvatarLarge(transitionState) {
       status: null,
       statusSizeOverride: null,
       cutout: null,
-      statusStyle: "heading-sm/bold",
+      statusStyle: "GUILD_SETTINGS_CANCEL_CHANGES",
     };
     if (OFFLINE === StatusTypes.UNKNOWN) {
       OFFLINE = StatusTypes.OFFLINE;

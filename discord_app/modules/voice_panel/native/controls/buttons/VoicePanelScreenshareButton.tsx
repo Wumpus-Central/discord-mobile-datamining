@@ -17,7 +17,7 @@ const MetaQuestUtils = fn(1610);
 if (MetaQuestUtils.isMetaQuest()) {
   let MobilePhoneShareIcon = fn(12028).ScreenArrowIcon;
 } else {
-  MobilePhoneShareIcon = fn(17021).MobilePhoneShareIcon;
+  MobilePhoneShareIcon = fn(17025).MobilePhoneShareIcon;
 }
 const createStyles = fn(4836);
 let obj3 = { circle: null, iconContainer: null };

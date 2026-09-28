@@ -19,7 +19,7 @@ import AudioActionCreatorsDefault from "../../../actions/AudioActionCreators.tsx
 import updateSharedValueIfChangedDefault from "../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import VoicePanelCardLayoutManagerDefault from "card/VoicePanelCardLayoutManager.tsx";
 import applyActivityOrientationLockDefault from "../../activities/native/applyActivityOrientationLock.tsx";
-import _modDef16871 from "../../../../_runtime/metro/16871__.js";
+import _modDef16875 from "../../../../_runtime/metro/16875__.js";
 import trackActivityThermalStateNoticeShown from "../../activities/trackActivityThermalStateNoticeShown.tsx";
 import VoicePanelFloatingCTAUtils from "controls/utils/VoicePanelFloatingCTAUtils.tsx";
 import useIsVoicePanelParticipantFocusable from "utils/useIsVoicePanelParticipantFocusable.tsx";
@@ -1251,7 +1251,7 @@ export default function VoicePanelController(channelId) {
             if (tmp15) {
               const obj2 = {
                 key: "EMBEDDED_ACTIVITIES_VIDEO_DISABLED_FOR_THERMAL_STATE",
-                icon: _modDef16871,
+                icon: _modDef16875,
                 content: null,
                 disableAnimations: true,
                 toastDurationMs: 3000,

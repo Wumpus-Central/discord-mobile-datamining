@@ -23,13 +23,13 @@ export default function ICYMINavigator() {
     closure_2(closure_4.Screen, {
       name: "icymi-screen",
       getComponent() {
-        return closure_0(16093).ICYMITab;
+        return closure_0(16089).ICYMITab;
       },
     }),
     closure_2(closure_4.Screen, {
       name: "notifications-screen",
       getComponent() {
-        return closure_0(16042).ThemedNotificationsModal;
+        return closure_0(16038).ThemedNotificationsModal;
       },
     }),
   ];

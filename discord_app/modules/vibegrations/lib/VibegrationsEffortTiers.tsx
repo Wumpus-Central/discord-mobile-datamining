@@ -94,44 +94,14 @@ export const vibegrationsCeilingSupportsFast = function vibegrationsCeilingSuppo
   }
   return tmp5;
 };
-export const vibegrationsNormalizeFast = function vibegrationsNormalizeFast(vibegrationsWithTierResult, tiers, main) {
+export const vibegrationsNormalizeFast = function vibegrationsNormalizeFast(vibegrationsWithTierResult) {
   const tmp = _objectWithoutProperties(vibegrationsWithTierResult, closure_3);
   let tmp2 = tmp;
   if (true === vibegrationsWithTierResult.fast) {
-    ({ tier, models } = vibegrationsWithTierResult);
-    let tmp3;
-    if (models != null) {
-      tmp3 = models[tier];
-    }
-    if (tmp3 == null) {
-      let model;
-      if (tiers != null) {
-        if (tiers[tier] != null) {
-          model = tmp6.model;
-        }
-      }
-      tmp3 = model;
-    }
-    if (tmp3 == null) {
-      tmp3 = null;
-    }
-    c0 = tmp3;
-    let tmp7 = null != tmp3;
-    if (tmp7) {
-      const found = main.find((id) => id.id === c0);
-      let supports_fast;
-      if (found != null) {
-        supports_fast = found.supports_fast;
-      }
-      tmp7 = true === supports_fast;
-    }
-    tmp2 = tmp;
-    if (tmp7) {
-      obj = {};
-      const merged = Object.assign(tmp);
-      obj.fast = true;
-      tmp2 = obj;
-    }
+    obj = {};
+    const merged = Object.assign(tmp);
+    obj.fast = true;
+    tmp2 = obj;
   }
   return tmp2;
 };

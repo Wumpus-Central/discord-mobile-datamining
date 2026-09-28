@@ -222,7 +222,7 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
     const obj4 = { value: tmp4(items).analyticsLocations, children: null };
     const obj5 = {
       onDismiss() {
-        channelId(1241).track(constants3.USER_REMEDIATION_ACTION, {
+        channelId(onBlock[24]).track(constants3.USER_REMEDIATION_ACTION, {
           action: constants.DISMISS_BLOCK,
           location: "user-profile-context-menu",
         });
@@ -312,6 +312,7 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
           {
             userId,
             channelId,
+            onBlock,
             onSuccess,
             onIgnore,
             impressionName: discord_common_AnalyticsUtils.ImpressionNames.IGNORE_USER_CONFIRMATION,
@@ -334,16 +335,16 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
       let obj = RelationshipActionCreatorsDefault;
       const obj2 = { location: AnalyticsLocationDefault.BLOCK_CONFIRMATION_ACTION_SHEET };
       obj.blockUser(userId, { location: AnalyticsLocationDefault.BLOCK_CONFIRMATION_ACTION_SHEET }).then(() => {
-        const result = channelId(7852).showBlockSuccessToast(userId, closure_1_1);
+        const result = channelId(onBlock[36]).showBlockSuccessToast(userId, closure_1_1);
         if (onSuccess != null) {
           onSuccess();
         }
-        const obj = channelId(7852);
-        channelId(4800).hideActionSheet();
-        const tmpResult = channelId(4800);
+        const obj = channelId(onBlock[36]);
+        channelId(onBlock[30]).hideActionSheet();
+        const tmpResult = channelId(onBlock[30]);
       });
-      if (dependencyMap != null) {
-        dependencyMap();
+      if (onBlock != null) {
+        onBlock();
       }
       const blockUserResult = obj.blockUser(userId, {
         location: AnalyticsLocationDefault.BLOCK_CONFIRMATION_ACTION_SHEET,
@@ -358,11 +359,11 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
     const intl8 = tmp7(1115).intl;
     const obj24 = {
       articleLink() {
-        channelId(4800).hideActionSheet();
-        const obj = channelId(4800);
-        const articleURL = channelId(2111).getArticleURL(constants2.STEALTH_REMEDIATION_FEATURE_GUIDE);
-        const obj2 = channelId(2111);
-        channelId(4525).openURL(articleURL);
+        channelId(onBlock[30]).hideActionSheet();
+        const obj = channelId(onBlock[30]);
+        const articleURL = channelId(onBlock[37]).getArticleURL(constants2.STEALTH_REMEDIATION_FEATURE_GUIDE);
+        const obj2 = channelId(onBlock[37]);
+        channelId(onBlock[38]).openURL(articleURL);
       },
     };
     obj23.children = intl8.format(tmp7(1115).t.CpTgBn, obj24);

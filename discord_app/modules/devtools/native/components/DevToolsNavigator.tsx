@@ -65,8 +65,8 @@ let closure_8 = noop.memo((screenKey) => {
     }),
     ,
   ];
-  let merged = Object.assign(tmp(15136).DevToolsScreens);
-  let merged1 = Object.assign(tmp(15136).PerformanceTestingScreens);
+  let merged = Object.assign(tmp(15134).DevToolsScreens);
+  let merged1 = Object.assign(tmp(15134).PerformanceTestingScreens);
   const entries = Object.entries({});
   items1[1] = entries.map((item) => {
     [tmp] = item;

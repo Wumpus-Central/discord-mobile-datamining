@@ -512,7 +512,7 @@ function QuestDockWithEntranceAnimation(arg0) {
     withAndroidOffscreenAlphaCompositingWorkaround: closure_9,
   } = arg0);
   ({ renderImpressionTracker, trackAssetLoadingFailure } = arg0);
-  const context = noop.useContext(identifierMetricTag(14713));
+  const context = noop.useContext(identifierMetricTag(14711));
   const isRendered = context.isRendered;
   let items = [mode];
   mode = initialize.useStateFromStores(items, () => mode.prevRestingQuestDockMode);
@@ -875,13 +875,13 @@ function QuestDockBountyContent(bounty) {
   let obj = bounty(14621);
   const questDockAppThemedBackgroundColor = bounty(14621).useQuestDockAppThemedBackgroundColor();
   const obj2 = bounty(14621);
-  const questDockBountySmokeCollapsedPlaceholderUrl = bounty(14735).useQuestDockBountySmokeCollapsedPlaceholderUrl();
-  const obj3 = bounty(14735);
+  const questDockBountySmokeCollapsedPlaceholderUrl = bounty(14733).useQuestDockBountySmokeCollapsedPlaceholderUrl();
+  const obj3 = bounty(14733);
   const isBountiesAndroidQuestBarSmokeAnimationEnabled = bounty(
-    14736,
+    14734,
   ).useIsBountiesAndroidQuestBarSmokeAnimationEnabled(constants.QUESTS_BAR_MOBILE);
   const obj5 = { bounty, children: null };
-  const obj4 = bounty(14736);
+  const obj4 = bounty(14734);
   obj5.children = closure_23(QuestDockWithEntranceAnimation, {
     identifierMetricTag: "ad_creative_id:" + bounty.id,
     backgroundImageUrl: questDockBountySmokeCollapsedPlaceholderUrl,

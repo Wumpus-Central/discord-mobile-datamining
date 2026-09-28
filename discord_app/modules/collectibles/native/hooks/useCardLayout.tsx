@@ -12,7 +12,7 @@ export const useCardLayout = function useCardLayout() {
     num = 2;
   }
   if (num < 2) {
-    const obj2 = { columns: num, cardWidth: "Array", rowWidth: "isArray" };
+    const obj2 = { columns: num, cardWidth: "Array", rowWidth: "text" };
     return obj2;
   } else {
     let num2 = 2;

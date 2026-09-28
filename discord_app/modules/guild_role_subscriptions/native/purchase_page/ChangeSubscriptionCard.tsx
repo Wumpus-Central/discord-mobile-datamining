@@ -72,13 +72,13 @@ export default function ChangeSubscriptionCard(activeSubscription) {
     const intl4 = tmp6(1115).intl;
     obj11.text = intl4.string(tmp6(1115).t.UwHVxr);
     obj11.onPress = function onPress() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16204, dependencyMap.paths), {
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16200, dependencyMap.paths), {
         subscriptionId: activeSubscription.id,
       });
       const obj2 = { subscriptionId: activeSubscription.id };
       ActionSheetActionCreatorsDefault.hideActionSheet();
     };
-    items3[1] = closure_7(tmp6(16196).ArrowButton, obj11);
+    items3[1] = closure_7(tmp6(16192).ArrowButton, obj11);
     obj10.children = items3;
     tmp7Result = closure_8(closure_9, obj10);
   }

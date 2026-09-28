@@ -346,7 +346,7 @@ export default function UserProfileRecentActivityCard(style) {
           const obj7 = { title: entry.extra.activity_name };
           obj8 = obj7;
         } else {
-          obj8 = { title: "__initData" };
+          obj8 = { title: "r" };
         }
         tmpResult6 = ContentInventoryTypes;
       }

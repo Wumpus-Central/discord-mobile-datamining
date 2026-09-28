@@ -17,7 +17,7 @@ const toggle = SettingBuilders.createToggle({
   parent: fn(7417).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useFriendRequestsMutualGuildsSettingValue() {
     const selectedTeenId = controlledSetting(8107).useSelectedTeenId();
-    const ParentalControlledFriendSourceFlags = controlledSetting(14355).ParentalControlledFriendSourceFlags;
+    const ParentalControlledFriendSourceFlags = controlledSetting(14354).ParentalControlledFriendSourceFlags;
     controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
     const items = [controlledSetting];
     return noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items).mutualGuilds;

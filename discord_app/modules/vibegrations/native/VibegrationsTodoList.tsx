@@ -152,7 +152,7 @@ let size = {
   justifyContent: "center",
   borderRadius: nativeDefault.modules.mobile.CONTROL_CHECKBOX_BORDER_RADIUS,
   borderWidth: nativeDefault.modules.mobile.CONTROL_CHECKBOX_BORDER_WIDTH,
-  borderColor: nativeDefault.colors.BORDER_MUTED,
+  borderColor: nativeDefault.colors.CHECKBOX_BORDER_DEFAULT,
 };
 obj2.marker = size;
 let obj7 = { flexDirection: "row", gap: nativeDefault.space.PX_8, alignItems: "center" };
@@ -321,7 +321,7 @@ export default function VibegrationsTodoList(announceProgress) {
         obj3.children = VibegrationsTodoState.todoLabel(status, todoMarkResult);
         items[1] = timestampProducer(Text_Text.Text, obj3);
         let tmp7Result = null;
-        if ("in_progress" === todoMarkResult) {
+        if ("completed" !== todoMarkResult) {
           let items2 = closure_3.get(status.id);
           if (items2 == null) {
             items2 = [];

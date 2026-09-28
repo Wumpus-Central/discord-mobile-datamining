@@ -370,7 +370,7 @@ export const showGuildEventModeratorActionSheet = function showGuildEventModerat
                 "stack",
               );
             },
-            onRsvp: "round",
+            onRsvp: "paddingHorizontal",
           });
         },
       };

@@ -52,7 +52,7 @@ export default function BadgeCustomizationProfileCoachmark(markAsDismissed) {
       str = "top";
     }
     str2 = str;
-    tmpResult = tmp(16600);
+    tmpResult = tmp(16604);
   }
   const items2 = [stateFromStores, visible, str2, markAsDismissed, onTryItOut, reducedMotion.enabled];
   const memo = obj2.useMemo(() => {

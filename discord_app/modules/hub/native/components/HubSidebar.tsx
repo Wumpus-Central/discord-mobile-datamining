@@ -83,7 +83,7 @@ export default function HubSidebar(guild) {
     }
     return tmp2;
   });
-  guild(15846);
+  guild(15844);
   let tmp9Result = null;
   if (null != stateFromStores) {
     let row = null;
@@ -92,10 +92,10 @@ export default function HubSidebar(guild) {
     }
     const obj4 = { style: row, children: null };
     const obj5 = { guild };
-    const items4 = [closure_7(stateFromStores(15847), obj5), , ,];
+    const items4 = [closure_7(stateFromStores(15845), obj5), , ,];
     const obj6 = {
       active: stateFromStores1,
-      IconComponent: tmp(15151).CompassIcon,
+      IconComponent: tmp(15149).CompassIcon,
       label: null,
       handleItemClick: null,
       unreadCount: null,

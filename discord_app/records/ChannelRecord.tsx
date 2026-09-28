@@ -903,8 +903,8 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
     rawRecipients: true,
     recipients: true,
     recipientFlags: true,
-    rtcRegion: "kissing_closed_eyes",
-    safetyWarnings: false,
+    rtcRegion: "punch",
+    safetyWarnings: "oncoming_fist",
     blockedUserWarningDismissed: false,
     template: false,
     themeColor: false,
@@ -916,9 +916,9 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
     version: false,
     videoQualityMode: false,
     linkedLobby: false,
-    hdStreamingUntil: true,
-    hdStreamingBuyerId: false,
-    voiceHangout: "android",
+    hdStreamingUntil: false,
+    hdStreamingBuyerId: true,
+    voiceHangout: false,
   };
   if (null == application_id.available_tags) {
     obj.availableTags = undefined;

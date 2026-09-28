@@ -110,7 +110,7 @@ const memoResult = noop.memo((node) => {
   const items = [field, node];
   const memo = noop.useMemo(() => SettingRendererUtils.toSettingListItems(node, field), items);
   const ref = noop.useRef(null);
-  node(14256).useAutoScrollToSearchResultSetting(ref, memo, node.scrollTarget);
+  node(14255).useAutoScrollToSearchResultSetting(ref, memo, node.scrollTarget);
   const obj2 = { style: tmp.container, children: null };
   const obj3 = {
     ref,

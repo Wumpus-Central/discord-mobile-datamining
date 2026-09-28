@@ -205,7 +205,7 @@ const VoicePanelConstants = fn(11755);
   VOICE_PANEL_CHUNK_DIVISOR,
 } = VoicePanelConstants);
 const VoicePanelControlsModes = fn(11753).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(16909).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(16913).VoicePanelPIPModes;
 const EDGE_GUTTER = fn(11758).EDGE_GUTTER;
 const isUserParticipant = fn(4857).isUserParticipant;
 const jsx = fn(21).jsx;

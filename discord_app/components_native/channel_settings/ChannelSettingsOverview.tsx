@@ -106,7 +106,7 @@ const ChannelRecord = fn(2049);
   GUILD_WEBHOOK_CHANNEL_TYPES: closure_14,
 } = ChannelRecord);
 const isGuildNSFW = fn(2063).isGuildNSFW;
-let closure_25 = fn(16629).ChannelSettingsAutoFocusElement;
+let closure_25 = fn(16633).ChannelSettingsAutoFocusElement;
 const Constants = fn(1074);
 ({
   AnalyticEvents: closure_26,
@@ -936,7 +936,7 @@ prototype["renderAutoArchiveDuration"] = function renderAutoArchiveDuration() {
       obj.selected = autoArchiveDuration;
       obj.channel = channel;
       obj.onSelectDuration = this.handleAutoArchiveDurationChange;
-      return closure_1_47(tmp5(16633).AutoArchiveDurationOptions, obj);
+      return closure_1_47(tmp5(16637).AutoArchiveDurationOptions, obj);
     }
   }
   return null;
@@ -1255,7 +1255,7 @@ prototype["renderUserLimitSettings"] = function renderUserLimitSettings() {
       obj7.value = Math.min(channel.userLimit, tmp10);
       obj7.maximumValue = tmp10;
       obj7.onValueChange = this.handleUserLimitChange;
-      items2[1] = closure_1_47(tmp7(13998).Slider, obj7);
+      items2[1] = closure_1_47(tmp7(13997).Slider, obj7);
       obj3.children = items2;
       obj2.children = __V(tmp7(5919).Card, obj3);
       items.push(closure_1_47(tmp7(5999).TableRowGroup, obj2, "channel-user-limit"));
@@ -1440,7 +1440,7 @@ prototype["renderDefaultForumLayout"] = function renderDefaultForumLayout() {
     const obj4 = { text: stringResult };
     obj3.trailing = closure_47(self(5917).TableRow.TrailingText, obj4);
     if (channel.defaultForumLayout === GridSquareIcon(2055).ForumLayout.GRID) {
-      GridSquareIcon = GridSquareIcon(16635).GridSquareIcon;
+      GridSquareIcon = GridSquareIcon(16639).GridSquareIcon;
       obj = {};
       let tmpResult = closure_47(GridSquareIcon, obj);
     } else {
@@ -1803,7 +1803,7 @@ prototype["renderCategory"] = function renderCategory() {
         const obj = self(4989);
       }
       const obj2 = {
-        icon: closure_47(tmp7(15788).FolderPlusIcon, {}),
+        icon: closure_47(tmp7(15786).FolderPlusIcon, {}),
         label: null,
         trailing: null,
         arrow: null,

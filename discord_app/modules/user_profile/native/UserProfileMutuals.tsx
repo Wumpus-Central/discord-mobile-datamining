@@ -29,7 +29,7 @@ export default function UserProfileMutuals(user) {
   ({ context: c2, trackUserProfileAction: c3 } = userProfileAnalyticsContext);
   let obj = user(7635);
   ({ mutualFriends, mutualGuilds } = guildId(12099)(user));
-  if (guildId(12550)(user)) {
+  if (guildId(12568)(user)) {
     let tmp7 = null != mutualFriends;
     if (tmp7) {
       tmp7 = mutualFriends.length > 0;
@@ -92,7 +92,7 @@ export default function UserProfileMutuals(user) {
           ),
         ),
       };
-      const items = [closure_6(tmp2(12583).AvatarPile, obj4)];
+      const items = [closure_6(tmp2(12601).AvatarPile, obj4)];
       const obj5 = { variant, color, children: tmp5(12106)(mutualFriends.length) };
       items[1] = closure_6(tmp2(4832).Text, obj5);
       obj3.children = items;

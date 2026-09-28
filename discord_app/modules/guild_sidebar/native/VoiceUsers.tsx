@@ -161,7 +161,7 @@ let closure_12 = noop.memo((voiceState) => {
   obj5.sessionId = voiceState2.sessionId;
   obj5.channel = channel;
   obj5.isGuest = isGuest;
-  obj2.children = closure_6(tmp(15756), obj5, user.id);
+  obj2.children = closure_6(tmp(15754), obj5, user.id);
   return closure_6(View, obj2);
 });
 const size = fn(2);

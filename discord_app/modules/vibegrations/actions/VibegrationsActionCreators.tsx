@@ -385,17 +385,99 @@ let closure_16 = async function _setProjectIcon(arg0) {
     }
   })();
 };
-let closure_17 = async function _deleteProject() {
-  closure_2 = tmp2;
-  closure_1 = tmp5;
-  closure_129_0 = closure_0;
-  const HTTP = HTTPUtils.HTTP;
-  await HTTP.del({ url: Endpoints.VIBEGRATIONS_PROJECT(closure_0), rejectWithError: false });
-  closure_129_1 = value;
-  closure_130_1(closure_130_2[3]).dispatch({ type: "VIBEGRATIONS_PROJECT_DELETE_SUCCESS", projectId: closure_129_0 });
-  return closure_129_1;
+function deleteProject() {
+  const self = this;
+  const apply = closure_18.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_18 = async function _deleteProject() {
+  c5 = 0;
+  c6 = 0;
+  c4 = 0;
+  return (async (arg0) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_2 = tmp3;
+            closure_1 = tmp7;
+            closure_129_0 = projectId;
+            closure_129_1 = undefined;
+            const obj4 = { type: "VIBEGRATIONS_PROJECT_DELETE_START", projectId };
+            DispatcherDefault.dispatch(obj4);
+            c4 = 1;
+            const HTTP = HTTPUtils.HTTP;
+            const obj6 = { url: Endpoints.VIBEGRATIONS_PROJECT(projectId), rejectWithError: false };
+            c5 = 2;
+            c6 = 1;
+            const obj7 = { value: HTTP.del(obj6), done: false };
+            return obj7;
+          }
+        } else if (1 === tmp7) {
+          c4 = 0;
+          closure_129_2 = closure_3;
+          const obj8 = { type: "VIBEGRATIONS_PROJECT_DELETE_FAIL", projectId: closure_129_0 };
+          closure_130_1(closure_130_2[3]).dispatch(obj8);
+          throw closure_129_2;
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 0;
+          c6 = 3;
+          const obj9 = { value, done: true };
+          return obj9;
+        } else {
+          closure_129_1 = value;
+          c4 = 0;
+          let str = "VIBEGRATIONS_PROJECT_DELETE_FAIL";
+          if (closure_129_1.ok) {
+            str = "VIBEGRATIONS_PROJECT_DELETE_SUCCESS";
+          }
+          const obj11 = { type: str, projectId: closure_129_0 };
+          closure_130_1(closure_130_2[3]).dispatch(obj11);
+          c6 = 3;
+          const obj12 = { value: closure_129_1, done: true };
+          return obj12;
+        }
+      } catch (tmp25) {
+        closure_3 = tmp25;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp25;
+        } else {
+          c5 = tmp;
+        }
+      }
+    }
+  })();
 };
-let closure_18 = async function _refreshPublishedProject(arg0, arg1) {
+let closure_19 = async function _refreshPublishedProject(arg0, arg1) {
   closure_0 = arg0;
   let isPreview = arg1;
   c4 = 0;
@@ -599,22 +681,21 @@ export const setProjectIcon = function setProjectIcon() {
 export const setGuildHints = function setGuildHints(first1, arg1) {
   return patchProject(first1, arg1);
 };
-export const deleteProject = function deleteProject() {
-  const self = this;
-  const apply = closure_17.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+export { deleteProject };
+export const deleteProjectInBackground = function deleteProjectInBackground(id, arg1) {
+  closure_0 = arg1;
+  deleteProject(id).then((ok) => {
+    if (!ok.ok) {
+      closure_0();
+    }
+  }, arg1);
 };
 export const setSelectedProjectForGuild = function setSelectedProjectForGuild(guildId, projectId) {
   DispatcherDefault.dispatch({ type: "VIBEGRATIONS_PROJECT_SELECT", guildId, projectId });
 };
 export const refreshPublishedProject = function refreshPublishedProject() {
   const self = this;
-  const apply = closure_18.apply;
+  const apply = closure_19.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

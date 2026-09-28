@@ -140,7 +140,7 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
   const tmp2Result7 = channelId(504);
   const items4 = [callParticipants];
   const stateFromStores3 = channelId(504).useStateFromStores(items4, () => callParticipants.supports(constants2.VIDEO));
-  const VideoGuardExperiment = tmp2(12838).VideoGuardExperiment;
+  const VideoGuardExperiment = tmp2(12837).VideoGuardExperiment;
   const videoEnabled = VideoGuardExperiment.useConfig({ location: "PrivateChannelButtons" }).videoEnabled;
   closure_7 = tmp10;
   const tmp2Result8 = channelId(504);
@@ -189,7 +189,7 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
     tmp15 = callParticipants.length > 0;
   }
   closure_11 = tmp15;
-  const tmp17 = screenIndex(12839)({ context: { type: "channel", channel: stateFromStores } });
+  const tmp17 = screenIndex(12838)({ context: { type: "channel", channel: stateFromStores } });
   application = tmp17.application;
   const items7 = [stateFromStores];
   callback = obj9.useCallback(() => {
@@ -272,7 +272,7 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
       AppAnalyticsUtilsDefault.trackWithMetadata(constants.SETTINGS_PANE_VIEWED, obj2);
       const obj4 = { userId: recipientId, channel: stateFromStores, application };
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(12856, dependencyMap.paths),
+        asyncRequireImpl(12855, dependencyMap.paths),
         "AppDMOptionsBottomSheet",
         obj4,
       );
@@ -487,7 +487,7 @@ export default noop.memo(function PrivateChannelButtons(channelId) {
             if (videoEnabled) {
               let VideoDenyIcon = tmp2(9569).VideoIcon;
             } else {
-              VideoDenyIcon = tmp2(12858).VideoDenyIcon;
+              VideoDenyIcon = tmp2(12857).VideoDenyIcon;
             }
             obj15.children = tmp33(VideoDenyIcon, { size: "sm" });
             tmp33(tmp2(5435).PressableOpacity, obj15);

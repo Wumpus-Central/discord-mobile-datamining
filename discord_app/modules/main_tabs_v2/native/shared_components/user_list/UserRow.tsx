@@ -415,14 +415,14 @@ export default noop.memo(function UserRow(type) {
               channel = channel.getChannel(result);
               if (null != channel) {
                 user(38)(channel.isPrivate(), "must be a DM");
-                const obj4 = user(10329)(channel, false);
-                if (!obj4.inCall) {
-                  obj4.onPress();
+                const obj2 = user(10329)(channel, false);
+                if (!obj2.inCall) {
+                  obj2.onPress();
                 }
-                const tmp6 = user(38);
+                const tmp3 = user(38);
                 const obj = { recipientIds: current.id };
                 user(4849).openPrivateChannel(obj);
-                const tmp4Result = user(4849);
+                const tmpResult = user(4849);
               }
             });
         };
@@ -471,14 +471,14 @@ export default noop.memo(function UserRow(type) {
         channel = channel.getChannel(result);
         if (null != channel) {
           user(38)(channel.isPrivate(), "must be a DM");
-          const obj4 = user(10329)(channel, false);
-          if (!obj4.inCall) {
-            obj4.onPress();
+          const obj2 = user(10329)(channel, false);
+          if (!obj2.inCall) {
+            obj2.onPress();
           }
-          const tmp6 = user(38);
+          const tmp3 = user(38);
           const obj = { recipientIds: current.id };
           user(4849).openPrivateChannel(obj);
-          const tmp4Result = user(4849);
+          const tmpResult = user(4849);
         }
       });
       const ensurePrivateChannelResult = ChannelActionCreatorsDefault.ensurePrivateChannel(user.id);
@@ -691,7 +691,7 @@ export default noop.memo(function UserRow(type) {
         const merged1 = Object.assign(obj10);
         let tmp32Result6 = label(tmp4(tmp5[45]), obj12);
         let tmp32 = label;
-        let tmp4Result = tmp4(tmp5[45]);
+        const tmp4Result = tmp4(tmp5[45]);
       }
       const items16 = [tmp32Result6, memo4, ,];
       if (user.bot) {

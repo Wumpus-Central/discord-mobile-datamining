@@ -185,7 +185,7 @@ let closure_13 = async function _openExternalLink(arg0) {
                 obj2,
                 undefined,
                 undefined,
-                closure_1_0(14047).getActivitiesModalContextKey({ application, channelId }),
+                closure_1_0(14046).getActivitiesModalContextKey({ application, channelId }),
               );
             });
           }
@@ -357,7 +357,7 @@ obj3 = {
 };
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
-const CONTEXT_MENU_ICON_NAMES = fn(14039);
+const CONTEXT_MENU_ICON_NAMES = fn(14038);
 let obj5 = {
   scope: null,
   handler(arg0) {

@@ -11,7 +11,7 @@ import HammerIcon from "../../../design/components/Icon/native/redesign/generate
 import RobotIcon from "../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
 import ShieldUserIcon from "../../../design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx";
 import GuildSettingsActionCreatorsDefault from "../GuildSettingsActionCreators.tsx";
-import _modDef12793 from "../../../../_runtime/metro/12793__.js";
+import _modDef12792 from "../../../../_runtime/metro/12792__.js";
 import ModerationIcon from "../../../design/components/Icon/native/redesign/generated/ModerationIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildChannelStore from "../../../stores/GuildChannelStore.tsx";
@@ -46,7 +46,7 @@ function SettingsSection(guild) {
     const obj4 = { label: null, arrow: true, icon: null, onPress: null };
     const intl2 = tmp2(1115).intl;
     obj4.label = intl2.string(tmp2(1115).t.OGiMXJ);
-    const obj5 = { IconComponent: tmp2(17285).ChannelListIcon };
+    const obj5 = { IconComponent: tmp2(17289).ChannelListIcon };
     obj4.icon = closure_15(tmp2(5917).TableRow.Icon, obj5);
     obj4.onPress = function onPress() {
       guild = GuildSettingsModalChannelsStore.initGuild(guild.id);
@@ -65,7 +65,7 @@ function SettingsSection(guild) {
     const obj6 = { label: null, arrow: true, icon: null, onPress: null };
     const intl3 = tmp2(1115).intl;
     obj6.label = intl3.string(tmp2(1115).t.CIsNZw);
-    const obj7 = { IconComponent: tmp2(14491).PuzzlePieceIcon };
+    const obj7 = { IconComponent: tmp2(14490).PuzzlePieceIcon };
     obj6.icon = closure_15(tmp2(5917).TableRow.Icon, obj7);
     obj6.onPress = function onPress() {
       return importDefault(constants2.INTEGRATIONS);
@@ -85,8 +85,8 @@ function SettingsSection(guild) {
     items.push(closure_15(tmp2(5917).TableRow, obj8, "server-tag"));
   }
   if (isGuildAdmin) {
-    isGuildAdmin = tmp2(17287).canSeeVanityUrlSettings(guild);
-    const tmp2Result2 = tmp2(17287);
+    isGuildAdmin = tmp2(17291).canSeeVanityUrlSettings(guild);
+    const tmp2Result2 = tmp2(17291);
   }
   if (isGuildAdmin) {
     const obj10 = { label: null, arrow: true, icon: null, onPress: null };
@@ -103,7 +103,7 @@ function SettingsSection(guild) {
     const obj12 = { label: null, arrow: true, icon: null, onPress: null };
     const intl6 = tmp2(1115).intl;
     obj12.label = intl6.string(tmp2(1115).t.KUw7Ss);
-    const obj13 = { source: _modDef12793 };
+    const obj13 = { source: _modDef12792 };
     obj12.icon = closure_15(tmp2(5917).TableRow.Icon, obj13);
     obj12.onPress = function onPress() {
       return importDefault(constants2.GUILD_TEMPLATES);
@@ -311,7 +311,7 @@ function CommunitySection(pushScreen) {
       obj.label = Icon(t.nRtNqn);
       Icon = tmp3(5917).TableRow.Icon;
       const obj5 = { IconComponent: null };
-      TreehouseIcon = tmp3(15149).TreehouseIcon;
+      TreehouseIcon = tmp3(15147).TreehouseIcon;
       obj5.IconComponent = TreehouseIcon;
       obj.icon = closure_15(Icon, obj5);
       obj.onPress = function onPress() {
@@ -320,7 +320,7 @@ function CommunitySection(pushScreen) {
       let tmp2Result = closure_15(TableRow, obj, "community-overview");
     } else {
       obj.label = Icon(t.ElKTeb);
-      const obj6 = { IconComponent: tmp3(15149).TreehouseIcon };
+      const obj6 = { IconComponent: tmp3(15147).TreehouseIcon };
       obj.icon = closure_15(tmp3(5917).TableRow.Icon, obj6);
       obj.onPress = function onPress() {
         return pushScreen(constants2.COMMUNITY_INTRO, {});
@@ -391,8 +391,8 @@ function GuildSettingsModalLandingInner(guild) {
     canViewGuildAnalytics,
   } = stateFromStoresObject);
   const obj4 = guild(504);
-  const obj6 = guild(17290);
-  const tmp11 = guild(17290).useChannelsAllowedToUnlink(guild.id).length > 0;
+  const obj6 = guild(17294);
+  const tmp11 = guild(17294).useChannelsAllowedToUnlink(guild.id).length > 0;
   const canManageGuildRoleSubscriptions = guild(6678).useCanManageGuildRoleSubscriptions(guild);
   let result = canManageGuild;
   if (canManageGuild) {
@@ -410,7 +410,7 @@ function GuildSettingsModalLandingInner(guild) {
   obj8.contentContainerStyle = items4;
   const obj9 = { style: { paddingHorizontal: token }, spacing: updateErrors(576).space.PX_24, children: null };
   const items5 = [
-    closure_15(updateErrors(16669), {
+    closure_15(updateErrors(16673), {
       iconProps: {
         onUpload(icon) {
           GuildSettingsActionCreatorsDefault.updateIcon(guild.id, icon);
@@ -453,7 +453,7 @@ function GuildSettingsModalLandingInner(guild) {
   let tmp17Result = canManageGuildRoleSubscriptions;
   if (canManageGuildRoleSubscriptions) {
     const obj11 = { guild, pushScreen: callback };
-    tmp17Result = closure_15(tmp3(17291), obj11);
+    tmp17Result = closure_15(tmp3(17295), obj11);
   }
   const obj12 = { children: null };
   items5[6] = tmp17Result;

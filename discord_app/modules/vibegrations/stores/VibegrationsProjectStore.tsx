@@ -41,18 +41,19 @@ function pickNumbers(value7, arg1) {
 let map = new Map();
 let map1 = new Map();
 const map2 = new Map();
-let obj = null;
 let set = new Set();
+let obj = null;
+let set1 = new Set();
 const map3 = new Map();
-let closure_11 = [];
+let closure_12 = [];
 const map4 = new Map();
-let c13 = 0;
+let c14 = 0;
 const map5 = new Map();
 const map6 = new Map();
-let closure_16 = [];
+let closure_17 = [];
 const map7 = new Map();
 const map8 = new Map();
-let closure_19 = { status: "idle", truncated: false, count: 0 };
+let closure_20 = { status: "idle", truncated: false, count: 0 };
 const map9 = new Map();
 const Store = initializeDefault.Store;
 class VibegrationsProjectStore extends Store {
@@ -101,6 +102,9 @@ prototype["getIntegrationStatus"] = function getIntegrationStatus(projectId) {
   }
   return value;
 };
+prototype["isProjectDeleting"] = function isProjectDeleting(id) {
+  return set.has(id);
+};
 prototype["getSelectedProjectId"] = function getSelectedProjectId(guildId) {
   value = map2.get(guildId);
   if (value == null) {
@@ -111,7 +115,7 @@ prototype["getSelectedProjectId"] = function getSelectedProjectId(guildId) {
 prototype["getLogs"] = function getLogs(projectId) {
   value = map4.get(projectId);
   if (value == null) {
-    value = closure_11;
+    value = closure_12;
   }
   return value;
 };
@@ -147,7 +151,7 @@ prototype["getUnreadLogErrorCount"] = function getUnreadLogErrorCount(arg0) {
 prototype["getTrace"] = function getTrace(projectId) {
   value = map7.get(projectId);
   if (value == null) {
-    value = closure_16;
+    value = closure_17;
   }
   return value;
 };
@@ -158,7 +162,7 @@ prototype["getHistoryState"] = function getHistoryState(arg0, arg1) {
     value2 = value.get(arg1);
   }
   if (value2 == null) {
-    value2 = closure_19;
+    value2 = closure_20;
   }
   return value2;
 };
@@ -166,7 +170,7 @@ prototype["getProjectsFetchState"] = function getProjectsFetchState() {
   return obj;
 };
 prototype["hasFetchedGuildProjects"] = function hasFetchedGuildProjects(arg0) {
-  return set.has(arg0);
+  return set1.has(arg0);
 };
 prototype["getGuildProjectsFetchState"] = function getGuildProjectsFetchState(guildId) {
   let str = map3.get(guildId);
@@ -190,13 +194,15 @@ obj = {
     if (0 === map.size) {
       if (0 === map1.size) {
         if (0 === map2.size) {
-          if (0 === map4.size) {
-            if (0 === set.size) {
-              if (0 === map7.size) {
-                if (0 === map9.size) {
-                  if (0 === map8.size) {
-                    if (null == obj) {
-                      return false;
+          if (0 === set.size) {
+            if (0 === map4.size) {
+              if (0 === set1.size) {
+                if (0 === map7.size) {
+                  if (0 === map9.size) {
+                    if (0 === map8.size) {
+                      if (null == obj) {
+                        return false;
+                      }
                     }
                   }
                 }
@@ -209,8 +215,9 @@ obj = {
     obj.clear();
     map1.clear();
     map2.clear();
-    map4.clear();
     set.clear();
+    map4.clear();
+    set1.clear();
     map3.clear();
     map5.clear();
     map6.clear();
@@ -252,7 +259,7 @@ obj = {
       continue;
     }
     if (null != guildId) {
-      set.add(guildId);
+      set1.add(guildId);
       const result1 = map3.set(guildId, "success");
     }
     (function pruneProjectScopedState() {
@@ -288,8 +295,12 @@ obj = {
   VIBEGRATIONS_PROJECT_INTEGRATION_STATUS_UPDATE: function handleProjectIntegrationStatusUpdate(projectId) {
     const result = map1.set(projectId.projectId, projectId.integrationStatus);
   },
+  VIBEGRATIONS_PROJECT_DELETE_START: function handleProjectDeleteStart(projectId) {
+    set.add(projectId.projectId);
+  },
   VIBEGRATIONS_PROJECT_DELETE_SUCCESS: function handleProjectDeleteSuccess(projectId) {
     projectId = projectId.projectId;
+    set.delete(projectId);
     map.delete(projectId);
     map1.delete(projectId);
     map4.delete(projectId);
@@ -298,15 +309,18 @@ obj = {
     map7.delete(projectId);
     map9.delete(projectId);
     map8.delete(projectId);
-    while (tmp10 !== undefined) {
-      let tmp13 = _slicedToArray(tmp11, 2);
-      let first = tmp13[0];
-      if (tmp13[1] === projectId) {
-        let deleteResult8 = map2.delete(first);
+    while (tmp11 !== undefined) {
+      let tmp14 = _slicedToArray(tmp12, 2);
+      let first = tmp14[0];
+      if (tmp14[1] === projectId) {
+        let deleteResult9 = map2.delete(first);
       }
       continue;
     }
-    tmp10 = map2[Symbol.iterator]();
+    tmp11 = map2[Symbol.iterator]();
+  },
+  VIBEGRATIONS_PROJECT_DELETE_FAIL: function handleProjectDeleteFail(projectId) {
+    return set.delete(projectId.projectId);
   },
   VIBEGRATIONS_PROJECT_SELECT: function handleProjectSelect(arg0) {
     ({ guildId, projectId } = arg0);
@@ -326,13 +340,13 @@ obj = {
     projectId = projectId.projectId;
     value = map7.get(projectId);
     if (value == null) {
-      value = closure_16;
+      value = closure_17;
     }
     obj = { snapshot: new Set(value.map((kind) => "" + kind.kind + ":" + kind.id)), touched: null };
     set = new Set(value.map((kind) => "" + kind.kind + ":" + kind.id));
     obj.touched = new Set();
     const result = map10.set(projectId, obj);
-    const set1 = new Set();
+    set1 = new Set();
   },
   VIBEGRATIONS_HISTORY_LOAD_SETTLE: function handleHistoryLoadSettle(arg0) {
     ({ projectId, scope } = arg0);
@@ -417,8 +431,8 @@ obj = {
       const result = map5.set(projectId, seq);
     }
     const obj2 = { key: null, log };
-    const sum = c13 + 1;
-    c13 = sum;
+    const sum = c14 + 1;
+    c14 = sum;
     obj2.key = sum;
     value2 = map4.get(projectId);
     if (null == value2) {
@@ -476,7 +490,7 @@ obj = {
     } else {
       let value7 = map7.get(projectId);
       if (value7 == null) {
-        value7 = closure_16;
+        value7 = closure_17;
       }
       const tool = "tool";
       const id = toolCall.id;
@@ -686,7 +700,7 @@ obj = {
     } else {
       let value7 = map7.get(projectId);
       if (value7 == null) {
-        value7 = closure_16;
+        value7 = closure_17;
       }
       const model = "model";
       const id = modelCall.id;

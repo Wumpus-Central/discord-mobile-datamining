@@ -84,7 +84,7 @@ let Constants = fn(1074);
 } = Constants);
 const StreamSettingsConstants = fn(4883);
 ({ ApplicationStreamFPS: closure_22, ApplicationStreamResolutions: closure_23 } = StreamSettingsConstants);
-let closure_24 = fn(13347).BROWSER_SUPPORTS_UNIFIED_PLAN;
+let closure_24 = fn(13346).BROWSER_SUPPORTS_UNIFIED_PLAN;
 Constants = fn(4861);
 ({
   Features: closure_25,
@@ -1991,7 +1991,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
     }
   }
   if (MediaEngineStore.supports(constants5.IMAGE_QUALITY_MEASUREMENT)) {
-    const SingleCpuCopyExperiment = tmp2(13360).SingleCpuCopyExperiment;
+    const SingleCpuCopyExperiment = tmp2(13359).SingleCpuCopyExperiment;
     const enabled = SingleCpuCopyExperiment.getConfig({ location: "RTCConnection" }).enabled;
     let str4 = "imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec";
     if (enabled) {
@@ -2209,16 +2209,16 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
     }
     if (type === constants2.GUILD_STAGE_VOICE) {
       if (!self._videoDecoderFallbackSuppressed) {
-        const logger = self.logger;
-        logger.info("Suppressing video decoder fallback: stage channel");
+        const logger2 = self.logger;
+        logger2.info("Suppressing video decoder fallback: stage channel");
         self._videoDecoderFallbackSuppressed = true;
       }
     } else {
       const found = codecs.filter((type) => "video" === type.type);
       const mapped = found.map((name) => name.name);
-      const logger2 = self.logger;
+      const logger = self.logger;
       const _HermesInternal = HermesInternal;
-      logger2.info(
+      logger.info(
         "The originally selected video decoder is not working, fallback to the other available decoders: " +
           mapped.join(","),
       );

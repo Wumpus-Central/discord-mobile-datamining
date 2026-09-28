@@ -42,7 +42,7 @@ export default function CollectiblesShopCardsGrid(accessibilityLabel) {
   ({ disableBundleStaticBackground: noop, muteBundleStaticBackground: closure_4 } = accessibilityLabel);
   ({ onScroll, paddingTop, paddingBottom } = accessibilityLabel);
   const rowContainer = closure_8();
-  const cardLayout = products(15444).useCardLayout();
+  const cardLayout = products(15442).useCardLayout();
   const columns = cardLayout.columns;
   const cardWidth = cardLayout.cardWidth;
   const items = [products, columns];
@@ -56,7 +56,7 @@ export default function CollectiblesShopCardsGrid(accessibilityLabel) {
     contentContainerStyle: null,
     children: null,
   };
-  let obj = products(15444);
+  let obj = products(15442);
   obj2.contentContainerStyle = {
     gap: products(8226).COLLECTIBLES_SHOP_CARD_GAP,
     paddingTop,

@@ -82,7 +82,7 @@ export default function _default(feedBlock) {
   const stateFromStores1 = feedBlock(504).useStateFromStores(items1, () =>
     ConsentStore.hasConsented(constants2.PERSONALIZATION),
   );
-  let tmp6 = stateFromStores1(15436)();
+  let tmp6 = stateFromStores1(15434)();
   dependencyMap = tmp6;
   const items2 = [feedBlock.sortedSkuIds, tmp6, stateFromStores1];
   const memo = noop.useMemo(() => {
@@ -178,7 +178,7 @@ export default function _default(feedBlock) {
   obj7.children = items5;
   const items6 = [
     closure_12(closure_5, obj7),
-    closure_11(stateFromStores1(15443), {
+    closure_11(stateFromStores1(15441), {
       products: filteredAndSortedProducts,
       loadingCardsNum: 36,
       preferVCPrice,
@@ -204,7 +204,7 @@ export default function _default(feedBlock) {
         importantForAccessibility: "no-hide-descendants",
       };
       const obj15 = { uri: null };
-      tmp5Result = tmp5(15451);
+      tmp5Result = tmp5(15449);
       obj15.uri = tmp5Result;
       obj14.source = obj15;
       feedFooterOrbImage = feedFooterOrbImage.feedFooterOrbImage;
@@ -213,7 +213,7 @@ export default function _default(feedBlock) {
     } else {
       if (tmpResult.isAndroid()) {
         const obj16 = {
-          url: tmp5(15452),
+          url: tmp5(15450),
           autoplay: true,
           style: feedFooterOrbImage.feedFooterOrbImage,
           accessibilityElementsHidden: true,
@@ -230,7 +230,7 @@ export default function _default(feedBlock) {
           accessibilityElementsHidden: true,
           importantForAccessibility: "no-hide-descendants",
         };
-        const obj18 = { uri: tmp5(15452) };
+        const obj18 = { uri: tmp5(15450) };
         obj17.source = obj18;
         obj17.style = feedFooterOrbImage.feedFooterOrbImage;
         tmp12Result2 = closure_11(tmp5(5899), obj17);
@@ -246,11 +246,11 @@ export default function _default(feedBlock) {
       importantForAccessibility: "no-hide-descendants",
     };
     if (stateFromStores) {
-      obj19.source = tmp(15453);
+      obj19.source = tmp(15451);
       obj19.style = feedFooterOrbImage.feedFooterImage;
       let tmp18 = obj19;
     } else {
-      obj19.source = tmp(15454);
+      obj19.source = tmp(15452);
       obj19.style = feedFooterOrbImage.feedFooterImage;
       tmp18 = obj19;
     }

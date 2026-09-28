@@ -113,7 +113,7 @@ function computeGuildMediaState(guildId) {
       continue;
     }
     obj = {
-      skipMutedVcs: guildId(13254).getIsDontBadgeMutedVcsEnabled("GuildMediaStateStore"),
+      skipMutedVcs: guildId(13253).getIsDontBadgeMutedVcsEnabled("GuildMediaStateStore"),
       currentUserId: id.getId(),
       selectedVoiceChannelId: voiceChannelId,
       selectedVoiceGuildId: null,

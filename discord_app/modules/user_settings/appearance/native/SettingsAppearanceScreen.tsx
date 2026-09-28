@@ -10,7 +10,7 @@ import ThemeStore from "../../ThemeStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const FontScaleStore = fn(14812);
+const FontScaleStore = fn(14810);
 ({ DEFAULT_FONT_SCALE_STORE_STATE: closure_7, useFontScaleStore: closure_8 } = FontScaleStore);
 const MobileUserSettings = fn(7417).MobileUserSettings;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
@@ -21,8 +21,8 @@ const result = size.fileFinishedImporting("modules/user_settings/appearance/nati
 export default noop.memo(() => {
   nativeStackNavigation(5298)(() => {
     if (SelectivelySyncedUserSettingsStore.shouldSync("appearance")) {
-      const userCustomThemes = closure_0(14813).fetchUserCustomThemes();
-      const obj = closure_0(14813);
+      const userCustomThemes = closure_0(14811).fetchUserCustomThemes();
+      const obj = closure_0(14811);
     }
   });
   let items = [ThemeStore, ClientThemesBackgroundStore];
@@ -55,7 +55,7 @@ export default noop.memo(() => {
     if (obj.isAndroid()) {
       if (closure_0.persistedFontScale === closure_0.fontScale) {
         if (closure_0.persistedIsClassicChatFontScaleEnabled === closure_0.isClassicChatFontScaleEnabled) {
-          nativeStackNavigation.setOptions({ headerRight: "__initData" });
+          nativeStackNavigation.setOptions({ headerRight: "r" });
         }
       }
       const obj2 = { headerRight: null };
@@ -140,5 +140,5 @@ export default noop.memo(() => {
     return obj.createList(obj2);
   }, []);
   let obj2 = require("useNavigation");
-  return jsx(nativeStackNavigation(14248), { node }, "" + theme + "-" + gradientPresetId);
+  return jsx(nativeStackNavigation(14247), { node }, "" + theme + "-" + gradientPresetId);
 });

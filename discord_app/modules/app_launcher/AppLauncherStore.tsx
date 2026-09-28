@@ -33,7 +33,7 @@ const obj = {
   activeViewType: null,
   activeChannelId: null,
   closeReason: fn(8712).AppLauncherCloseReason.DISMISSED,
-  initialState: "round",
+  initialState: "paddingHorizontal",
 };
 const Store = initializeDefault.Store;
 class AppLauncherStore extends Store {}

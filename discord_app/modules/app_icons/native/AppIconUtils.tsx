@@ -142,7 +142,7 @@ const PremiumTypes = fn(1374).PremiumTypes;
 let closure_12 = new LoggerDefault("AppIconUtils");
 const PlatformUtils = fn(1364);
 if (PlatformUtils.isAndroid()) {
-  let DCDIconManager = fn(12997).default;
+  let DCDIconManager = fn(12996).default;
 } else {
   DCDIconManager = fn(17).NativeModules.DCDIconManager;
 }

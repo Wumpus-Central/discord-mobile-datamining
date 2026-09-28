@@ -9,7 +9,7 @@ import actions_BillingActionCreatorsAll from "../../billing/actions/BillingActio
 import actions_BoostingActionCreators from "../../../actions/native/BoostingActionCreators.tsx";
 import GuildIcon from "../../guild/native/GuildIcon.tsx";
 import useCountdownDefault from "../../../hooks/useCountdown.tsx";
-import _modDef13042 from "../../../../_runtime/metro/13042__.js";
+import _modDef13041 from "../../../../_runtime/metro/13041__.js";
 import SubscriptionPlaceholderPattern from "../../../design/components/Illustration/native/redesign/generated/SubscriptionPlaceholderPattern.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
@@ -210,7 +210,7 @@ function BoostedGuildInfo(guild) {
     };
     const items1 = [closure_1_11(Text_Text.Text, obj5)];
     const obj6 = { style: tmp.guildInfoRowBottom, children: null };
-    const obj7 = { source: _modDef13042, style: tmp.guildInfoRowIcon };
+    const obj7 = { source: _modDef13041, style: tmp.guildInfoRowIcon };
     const items2 = [closure_1_11(timestampProducer, obj7)];
     const obj8 = {
       style: tmp.guildInfoSubscriptionCount,
@@ -268,7 +268,7 @@ function BoostedGuild(arg0) {
     tmp11Result = closure_11(closure_5, obj8);
   }
   items3[1] = tmp11Result;
-  items3[2] = closure_11(guildBoostSlots(13047), { guild: stateFromStores, theme: stateFromStores1 });
+  items3[2] = closure_11(guildBoostSlots(13046), { guild: stateFromStores, theme: stateFromStores1 });
   obj6.children = items3;
   const items4 = [
     closure_12(closure_5, obj6),

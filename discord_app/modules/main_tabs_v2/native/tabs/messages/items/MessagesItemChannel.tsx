@@ -5,7 +5,7 @@ import _mod8179 from "../../../../../../../discord_common/js/packages/flash-list
 import useScaledTextLineHeight from "../../../../../screen/native/useScaledTextLineHeight.android.tsx";
 import MessagesItemChannelBase from "channel/MessagesItemChannelBase.tsx";
 import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder.tsx";
-import _mod15676 from "../../../../../../../_runtime/metro/15676__.js";
+import _mod15674 from "../../../../../../../_runtime/metro/15674__.js";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../../../stores/ChannelStore.tsx";
@@ -80,7 +80,7 @@ export const MessagesItemChannelFast = memoResult;
 export const MessagesItemChannelFlash = memoResult1;
 export const MessagesItemChannelLegend = noop.memo((arg0) => {
   const obj2 = {};
-  [tmp2, tmp3] = _mod15676.useRecyclingState(false);
+  [tmp2, tmp3] = _mod15674.useRecyclingState(false);
   const merged = Object.assign(arg0);
   obj2.isPressed = tmp2;
   obj2.setIsPressed = tmp3;

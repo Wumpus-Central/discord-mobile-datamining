@@ -204,8 +204,8 @@ export default function ViewModerators(channel) {
             const _HermesInternal = HermesInternal;
             const obj2 = ActionSheetActionCreatorsDefault;
             const obj3 = { channel, canSkip: false };
-            obj2.openLazy(asyncRequireImpl(16642, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj3);
-            const tmp7 = asyncRequireImpl(16642, dependencyMap.paths);
+            obj2.openLazy(asyncRequireImpl(16646, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj3);
+            const tmp7 = asyncRequireImpl(16646, dependencyMap.paths);
           }
         };
         obj9.disabled = !canUpdateStageChannelModerators;
@@ -262,7 +262,7 @@ export const openAddModeratorsActionSheet = function openAddModeratorsActionShee
   }
   AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
   const obj2 = ActionSheetActionCreatorsDefault;
-  obj2.openLazy(asyncRequireImpl(16642, dependencyMap.paths), "channel-add-moderators-" + channel.id, {
+  obj2.openLazy(asyncRequireImpl(16646, dependencyMap.paths), "channel-add-moderators-" + channel.id, {
     channel,
     canSkip: flag,
   });

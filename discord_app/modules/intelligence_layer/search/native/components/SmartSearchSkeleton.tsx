@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const IntelligenceSearchConstants = fn(11847);
 ({ LOADING_BLOCK_HEIGHT: hasOwnProperty, LOADING_BOTTOM_GAP: metroRequire } = IntelligenceSearchConstants);
-const AILoaderConstants = fn(13937);
+const AILoaderConstants = fn(13936);
 ({
   AI_LOADER_CYCLE_MS: closure_7,
   AI_LOADER_REDUCED_MOTION_CYCLE_MS: closure_8,
@@ -91,8 +91,8 @@ export default noop.memo((isCollapsed) => {
   const obj2 = { style: tmp.header, children: null };
   ({ shimmerDurationMs, shimmerDelayMs, shimmerInitialDelayMs } = memo1);
   const items1 = [
-    closure_9(reducedMotion(13936).AILoader, { size: 12, color: "interactive-text-default" }),
-    closure_9(reducedMotion(13940).AIShimmer, {
+    closure_9(reducedMotion(13935).AILoader, { size: 12, color: "interactive-text-default" }),
+    closure_9(reducedMotion(13939).AIShimmer, {
       text: memo,
       variant: "text-sm/semibold",
       color: "interactive-text-default",

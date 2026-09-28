@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting(
 export default noop.memo((height) => {
   let searchHostSurfaceColor;
   const tmp = closure_7(height.height);
-  searchHostSurfaceColor = searchHostSurfaceColor(16509).useSearchHostSurfaceColor();
+  searchHostSurfaceColor = searchHostSurfaceColor(16513).useSearchHostSurfaceColor();
   let items = [searchHostSurfaceColor];
   const memo = noop.useMemo(() => {
     const obj = _modDef672(searchHostSurfaceColor);

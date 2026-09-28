@@ -1,13 +1,13 @@
 // discord_app/modules/saved_messages/native/useForLaterCoachmark.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef12871 from "../../../../_runtime/metro/12871__.js";
+import _modDef12870 from "../../../../_runtime/metro/12870__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function CoachmarkImg() {
-  const obj = { source: _modDef12871, style: closure_9().imageContainer };
-  return <Image source={_modDef12871} style={closure_9().imageContainer} />;
+  const obj = { source: _modDef12870, style: closure_9().imageContainer };
+  return <Image source={_modDef12870} style={closure_9().imageContainer} />;
 }
 const Image = fn(17).Image;
 const ContentDismissActionType = fn(2042).ContentDismissActionType;

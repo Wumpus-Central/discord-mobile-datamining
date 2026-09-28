@@ -7,7 +7,7 @@ import Timers from "../../../discord_common/js/packages/timers/Timers.tsx";
 import AudioActionCreatorsDefault from "../../actions/AudioActionCreators.tsx";
 import GameConsoleActionCreators from "GameConsoleActionCreators.tsx";
 import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils.tsx";
-import _modDef17132 from "getErrorMessageForCommandResult.tsx";
+import _modDef17136 from "getErrorMessageForCommandResult.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
@@ -260,7 +260,7 @@ const prototype = function GameConsoleManager() {
             obj.name = intl2.string(util.t["UQMV/E"]);
             device = obj;
           }
-          const tmp8Result = _modDef17132(device, result, error);
+          const tmp8Result = _modDef17136(device, result, error);
           if (null != tmp8Result) {
             const obj2 = { title: null, body: null, errorCodeMessage: null, reconnectPlatformType: null };
             ({ title: obj3.title, body: obj3.body, errorCodeMessage: obj3.errorCodeMessage } = tmp8Result);

@@ -82,8 +82,8 @@ export const QuestEmbedPreview = function QuestEmbedPreview(questId) {
       horizontalOffset: 0,
       pointerEvents: "none",
     });
-    tmp6 = jsx(stateFromStores(14704), { title: null, children: null });
-    const tmp9 = stateFromStores(14704);
+    tmp6 = jsx(stateFromStores(14702), { title: null, children: null });
+    const tmp9 = stateFromStores(14702);
   }
   return tmp6;
 };

@@ -1,8 +1,8 @@
 // discord_app/modules/vibegrations/lib/vibegrationsPreviewCall.tsx
 import size from "../../../../_runtime/metro/00002__.js";
 
-const prototype = function PreviewFrameCallTimeout(arg0, timeoutMs) {
-  const tmp2 = new tmp("preview frame did not answer " + arg0 + " within " + timeoutMs + "ms", " within ");
+const prototype = function PreviewFrameCallTimeout(c0, timeoutMs) {
+  const tmp2 = new tmp("preview frame did not answer " + c0 + " within " + timeoutMs + "ms", " within ");
   tmp2.name = "PreviewFrameCallTimeout";
   return tmp2;
 }.prototype;
@@ -118,6 +118,7 @@ export const controlAnswerTimeoutMs = function controlAnswerTimeoutMs(timeoutMs)
 };
 export const PREVIEW_FRAME_WAIT_MS = 6000;
 export const CONTROL_RETRY_MS = 400;
+export const CONTROL_END_TIMEOUT_MS = 2000;
 export const CAPTURE_NOW_ACCEPT_TIMEOUT_MS = 8000;
 export const CAPTURE_NOW_RETRY_MS = 400;
 export const INSPECT_TIMEOUT_MS = 1500;

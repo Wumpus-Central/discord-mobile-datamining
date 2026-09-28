@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import CreateChannelModalActionCreatorsDefault from "../../../../../../actions/native/CreateChannelModalActionCreators.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../../../guild_settings/GuildSettingsActionCreators.tsx";
-import _modDef15889 from "../../../../../../../_runtime/metro/15889__.js";
-import _modDef15890 from "../../../../../../../_runtime/metro/15890__.js";
+import _modDef15887 from "../../../../../../../_runtime/metro/15887__.js";
+import _modDef15888 from "../../../../../../../_runtime/metro/15888__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 import PermissionStore from "../../../../../../stores/PermissionStore.tsx";
 
@@ -69,7 +69,7 @@ export default noop.memo(function ChannelsEmpty(guild) {
   if (canCustomizeGuild) {
     const obj5 = { style: tmp.personalizeButtonWrapper, children: null };
     const obj6 = { icon: null, label: null, onPress: null };
-    const obj7 = { source: _modDef15889, disableColor: true };
+    const obj7 = { source: _modDef15887, disableColor: true };
     obj6.icon = closure_8(tmp2(1177).Icon, obj7);
     const intl = tmp2(1115).intl;
     obj6.label = intl.string(tmp2(1115).t["Yhi9/N"]);
@@ -80,7 +80,7 @@ export default noop.memo(function ChannelsEmpty(guild) {
   const items5 = [canCustomizeGuild];
   const obj8 = { style: tmp.content, children: null };
   const obj4 = { paddingBottom: guild(14629).useYouBarTotalHeight(16) };
-  const items6 = [closure_8(closure_5, { source: _modDef15890 }), , ,];
+  const items6 = [closure_8(closure_5, { source: _modDef15888 }), , ,];
   const obj10 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: null, children: null };
   const items7 = [,];
   ({ text: arr8[0], headerText: arr8[1] } = tmp);

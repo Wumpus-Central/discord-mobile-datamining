@@ -78,13 +78,13 @@ export default function DisplayNameStylesFontPickerSheet(displayName) {
   const tmp = closure_10();
   importDefault = tmp;
   let obj = onSelectFont(7615);
-  const visibleFontOrder = onSelectFont(14886).useVisibleFontOrder();
-  let obj2 = onSelectFont(14886);
-  const displayNameStylesNewFonts = onSelectFont(14888).useDisplayNameStylesNewFonts(visibleFontOrder);
+  const visibleFontOrder = onSelectFont(14884).useVisibleFontOrder();
+  let obj2 = onSelectFont(14884);
+  const displayNameStylesNewFonts = onSelectFont(14886).useDisplayNameStylesNewFonts(visibleFontOrder);
   ({ dotFontIds: c2, dismissFontDot: c3 } = displayNameStylesNewFonts);
   [first, closure_5] = first.useState(selectedFontId);
   let tmp15Result = first !== onSelectFont(1392).DisplayNameFont.DEFAULT;
-  let obj3 = onSelectFont(14888);
+  let obj3 = onSelectFont(14886);
   closure_6 = tmp9;
   let obj4 = onSelectFont(1389);
   constants = first.useCallback((arg0) => {

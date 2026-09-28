@@ -15,7 +15,7 @@ const route = SettingBuilders.createRoute({
     const items = [ThemeStore];
     return !initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   },
-  useTrailing: fn(14808).useAppearanceSettingTrailing,
+  useTrailing: fn(14806).useAppearanceSettingTrailing,
   screen: {
     route: fn(1074).UserSettingsSections.APPEARANCE_THEME_PICKER,
     getComponent() {

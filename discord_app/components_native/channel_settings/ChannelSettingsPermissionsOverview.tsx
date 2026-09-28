@@ -136,7 +136,7 @@ function ChannelPermissionSyncModule(channel) {
     formatToPlainStringResult = formatToPlainString(t.OIhm0M, obj4);
   }
   let obj5 = { title: formatToPlainStringResult, hasIcons: true, children: null };
-  let obj6 = { icon: closure_16(channel(14689).RefreshIcon, {}), label: null, onPress: null };
+  let obj6 = { icon: closure_16(channel(14506).RefreshIcon, {}), label: null, onPress: null };
   let intl2 = tmp3(1115).intl;
   obj6.label = intl2.string(channel(1115).t.NVwuHq);
   obj6.onPress = callback;

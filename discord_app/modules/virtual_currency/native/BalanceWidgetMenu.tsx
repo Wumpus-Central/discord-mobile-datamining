@@ -79,7 +79,7 @@ class OrbsOnboardingMenuDismissibleContent {
             fromContent: QuestTypes.QuestContent.MOBILE_ORBS_ONBOARDING_DC,
           });
         };
-        obj.trailing = closure_9(closure_1(15300), {});
+        obj.trailing = closure_9(closure_1(15298), {});
         return closure_9(closure_10, obj);
       } else {
         return null;

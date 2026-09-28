@@ -96,7 +96,7 @@ const toggle = SettingBuilders.createToggle({
     }
     return sMSBackupDisabledMessage;
   },
-  usePredicate: fn(14243).useIsTOTPEnabled,
+  usePredicate: fn(14242).useIsTOTPEnabled,
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountSmsBackupSetting.tsx");

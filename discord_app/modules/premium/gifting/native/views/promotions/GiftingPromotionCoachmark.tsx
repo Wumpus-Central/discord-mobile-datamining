@@ -92,7 +92,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
   if (stateFromStores1 != null) {
     endDate = stateFromStores1.endDate;
   }
-  const str = markAsDismissed(16747).useTickingFormattedLimitedOfferTimeLeft(endDate);
+  const str = markAsDismissed(16751).useTickingFormattedLimitedOfferTimeLeft(endDate);
   importDefault = tmp9;
   const tmp11 = usePreviousDefault(null != stateFromStores1);
   dependencyMap = tmp11;
@@ -115,7 +115,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
       markAsDismissed(ContentDismissActionType.AUTO_DISMISS);
     }
   }, items2);
-  const tmp2Result3 = markAsDismissed(16747);
+  const tmp2Result3 = markAsDismissed(16751);
   analyticsLocations = useAnalyticsLocationsDefault(
     AnalyticsLocationDefault.GIFTING_PROMOTION_COACHMARK,
   ).analyticsLocations;

@@ -102,7 +102,7 @@ function VibegrationsChannelSettingRow(projectId) {
   return fallback;
 }
 const View = fn(17).View;
-let VibegrationsConnectionStore = fn(12624);
+let VibegrationsConnectionStore = fn(12642);
 ({
   requestProjectRebuild: closure_12,
   sendUserMessage: map1,

@@ -15,13 +15,13 @@ let closure_7 = createStyles.createStyles((arg0) => {
   const obj = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
   const obj2 = { wrapper: null, cloudsImage: null, cloudsImageLight: null, gradient: null, solidBackground: null };
-  const merged1 = Object.assign(arg0 ? { top: "__initData" } : { bottom: "__initData" });
+  const merged1 = Object.assign(arg0 ? { top: "r" } : { bottom: "r" });
   obj.height = 380;
   obj.zIndex = 1;
   obj2.wrapper = obj;
   const obj3 = {};
   const merged2 = Object.assign(absoluteFillObject.absoluteFillObject);
-  const merged3 = Object.assign(arg0 ? { top: "__initData" } : { bottom: "__initData" });
+  const merged3 = Object.assign(arg0 ? { top: "r" } : { bottom: "r" });
   if (arg0) {
     let obj4 = {};
   } else {

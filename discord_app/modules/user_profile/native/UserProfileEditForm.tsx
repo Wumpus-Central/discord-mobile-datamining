@@ -5,7 +5,7 @@ import ProfileCustomizationUtils from "../../profile_customization/ProfileCustom
 import UserProfileActionCreators from "../UserProfileActionCreators.tsx";
 import BadgeDirectoryActionCreators from "../../badges/BadgeDirectoryActionCreators.tsx";
 import PendingBadgeSettings from "../../badges/PendingBadgeSettings.tsx";
-import _modDef14148 from "../../../../_runtime/metro/14148__.js";
+import _modDef14147 from "../../../../_runtime/metro/14147__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import BadgeDirectoryStore from "../../badges/BadgeDirectoryStore.tsx";
 import ProfileCustomizationNavigationStore from "../../profile_customization/ProfileCustomizationNavigationStore.tsx";
@@ -57,7 +57,7 @@ function EditUserProfileBanner(user) {
       fn = (banner) => user(isTryItOut[19]).setPendingChanges({ banner });
     }
     obj2.onBannerChange = fn;
-    const tmp3 = asyncRequireImpl(14150, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(14149, dependencyMap.paths);
     let banner;
     if (displayProfile != null) {
       banner = displayProfile.banner;
@@ -84,10 +84,10 @@ const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let obj = {
   assetOrigin: fn(6410).AssetOriginTypes.NEW_ASSET,
-  imageUri: _modDef14148,
-  staticImageUri: _modDef14148,
+  imageUri: _modDef14147,
+  staticImageUri: _modDef14147,
   description: "",
-  originalAsset: "channelId",
+  originalAsset: "add",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditForm.tsx");

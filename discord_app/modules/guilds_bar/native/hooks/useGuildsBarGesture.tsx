@@ -274,7 +274,7 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, fastListRef, map) {
 }
 const Dimensions = fn(17).Dimensions;
 const GuildsNodeType = fn(5750).GuildsNodeType;
-const GuildsBarConstants = fn(15920);
+const GuildsBarConstants = fn(15918);
 ({ FastListRenderSections: c10, useGuildWrapperSize: closure_11 } = GuildsBarConstants);
 let c12 = 160;
 let c13 = 16.666666666666668;

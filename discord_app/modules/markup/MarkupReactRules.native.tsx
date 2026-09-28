@@ -494,7 +494,7 @@ function MarkupAttachmentLink(state) {
     str2 = "text-xs/medium";
   }
   let obj = { variant: str2, style: tmp.channelMentionText, children: null };
-  const obj2 = { themedColor: node(576).colors.MENTION_FOREGROUND, source: node(13386), size: null };
+  const obj2 = { themedColor: node(576).colors.MENTION_FOREGROUND, source: node(13385), size: null };
   const fontScale = closure_4.getFontScale();
   if (fontScale < 1) {
     let SMALL = tmp3(1177).Icon.Sizes.EXTRA_SMALL_10;
@@ -1003,7 +1003,7 @@ export default function createRules() {
     },
     [closure_0(closure_2[43]).AST_KEY.GAME_MENTION]: {
       react(node, arg1, state) {
-        return closure_1_15(obj2(13391), { node, state }, state.key);
+        return closure_1_15(obj2(13390), { node, state }, state.key);
       },
     },
     [closure_0(closure_2[43]).AST_KEY.TIMESTAMP]: {
@@ -1214,4 +1214,4 @@ export const plainSpoilerRenderer = function plainSpoilerRenderer(content) {
   }
   return str;
 };
-export const createFetchingGameMentionRule = fn(13391).createFetchingGameMentionRule;
+export const createFetchingGameMentionRule = fn(13390).createFetchingGameMentionRule;

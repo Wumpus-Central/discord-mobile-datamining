@@ -12,7 +12,7 @@ import ShieldLockIcon from "../../../../design/components/Icon/native/redesign/g
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import QuestActivityButtonDefault from "../../../frames/panel/native/QuestActivityButton.tsx";
 import VoicePanelHeaderUserState from "../header/VoicePanelHeaderUserState.tsx";
-import _modDef16929 from "../../../../../_runtime/metro/16929__.js";
+import _modDef16933 from "../../../../../_runtime/metro/16933__.js";
 import VoicePanelSettingsActionCreators from "../header/VoicePanelSettingsActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ApplicationStore from "../../../applications/ApplicationStore.tsx";
@@ -84,7 +84,7 @@ function StreamButton(arg0) {
   const intl2 = util.intl;
   obj2.accessibilityLabel = intl2.formatToPlainString(util.t.I0mOAs, { username: name });
   obj2.text = name;
-  obj2.icon = _modDef16929;
+  obj2.icon = _modDef16933;
   obj2.onPress = onPress;
   return React7(native.HeaderButton, obj2);
 }
@@ -217,7 +217,7 @@ export default noop.memo(function VoicePanelTitleButton() {
     }
     return id;
   });
-  const tmp3 = channelId(16925)(derivedStateFromSharedValue, channelId, guildId);
+  const tmp3 = channelId(16929)(derivedStateFromSharedValue, channelId, guildId);
   const items = [guildId, channelId];
   const onPress = noop.useCallback(() => {
     const result = VoicePanelSettingsActionCreators.openVoicePanelSettingsActionSheet(guildId, channelId);

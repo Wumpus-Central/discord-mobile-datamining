@@ -350,7 +350,7 @@ obj2[RPCEvents.VOICE_SESSION_PARTICIPANTS_UPDATE] = {
   handler(args) {
     const session_id = args.args.session_id;
     const socket = args.socket;
-    const result = socket(14021).validateEventSubscription(socket, session_id);
+    const result = socket(14020).validateEventSubscription(socket, session_id);
     return (prevState) => {
       prevState = prevState.prevState;
       const participantsForEventSubscription =
@@ -453,7 +453,7 @@ const obj35 = {
   handler() {},
 };
 obj2[RPCEvents.FRAME_LAYOUT_MODE_UPDATE] = obj35;
-obj2[RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE] = fn(14026).activityInstanceConnectedParticipantsUpdateEvent;
+obj2[RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE] = fn(14025).activityInstanceConnectedParticipantsUpdateEvent;
 const obj36 = {
   scope: null,
   handler() {},

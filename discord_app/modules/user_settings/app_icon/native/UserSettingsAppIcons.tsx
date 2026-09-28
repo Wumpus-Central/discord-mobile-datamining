@@ -66,7 +66,7 @@ export default noop.memo(() => {
                   }
                   dependencyMap = 1;
                   v3 = 1;
-                  const obj8 = { value: stateFromStores(12996).setAppIcon(id, premiumType), done: false };
+                  const obj8 = { value: stateFromStores(12995).setAppIcon(id, premiumType), done: false };
                   return obj8;
                 }
               } else {
@@ -77,7 +77,7 @@ export default noop.memo(() => {
                 dependencyMap = 2;
                 v3 = 1;
                 const obj9 = {
-                  value: stateFromStores(12996).setAppIcon(
+                  value: stateFromStores(12995).setAppIcon(
                     stateFromStores(8625).FreemiumAppIconIds.DEFAULT,
                     premiumType1,
                   ),
@@ -116,8 +116,8 @@ export default noop.memo(() => {
   const items = [currentUser];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = stateFromStores(504);
-  importDefault = stateFromStores(12996).useCurrentAppIcon();
-  let obj2 = stateFromStores(12996);
+  importDefault = stateFromStores(12995).useCurrentAppIcon();
+  let obj2 = stateFromStores(12995);
   const isPremiumResult = stateFromStores(1970).isPremium(stateFromStores);
   dependencyMap = isPremiumResult;
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;

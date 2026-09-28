@@ -3,14 +3,14 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import native from "../../../../design/void/native.tsx";
 import TouchableHitBoxDefault from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import _modDef9396 from "../../../../../_runtime/metro/09396__.js";
-import _modDef13442 from "../../../../../_runtime/metro/13442__.js";
+import _modDef13441 from "../../../../../_runtime/metro/13441__.js";
 import FormStylesDefault from "FormStyles.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import TextStyles_mod from "../../../rebrand/native/TextStyles.tsx";
 
 require = fn;
 function LockedIcon() {
-  return React3(native.Icon, { size: native.Icon.Sizes.MEDIUM, source: _modDef13442 });
+  return React3(native.Icon, { size: native.Icon.Sizes.MEDIUM, source: _modDef13441 });
 }
 function DropdownIcon() {
   const obj = { style: null, size: native.Icon.Sizes.MEDIUM, source: _modDef9396 };

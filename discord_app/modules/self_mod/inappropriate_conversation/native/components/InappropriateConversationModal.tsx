@@ -109,7 +109,7 @@ function CrisisTextLineScreen(trackAnalyticsEvent) {
   trackAnalyticsEvent = trackAnalyticsEvent.trackAnalyticsEvent;
   const tmp = closure_15();
   const obj = { style: tmp.container, children: null };
-  const items = [closure_13(trackAnalyticsEvent(15327).SafetyChatSpotIllustration, {}), ,];
+  const items = [closure_13(trackAnalyticsEvent(15325).SafetyChatSpotIllustration, {}), ,];
   const obj2 = { style: tmp.warningText, children: null };
   const obj3 = {
     variant: "heading-xl/semibold",

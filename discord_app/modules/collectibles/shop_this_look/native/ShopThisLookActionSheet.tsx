@@ -189,8 +189,8 @@ export default function ShopThisLookActionSheet(arg0) {
   );
   let obj = require("useMaybeFetchEquippedCollectibleProducts");
   let obj2 = { maxWidth: ACTION_SHEET_MAX_WIDTH };
-  ({ cardWidth: c0, rowWidth, gap } = analyticsLocations(12660)({ maxWidth: ACTION_SHEET_MAX_WIDTH }));
-  const tmp2 = analyticsLocations(12660)({ maxWidth: ACTION_SHEET_MAX_WIDTH });
+  ({ cardWidth: c0, rowWidth, gap } = analyticsLocations(12560)({ maxWidth: ACTION_SHEET_MAX_WIDTH }));
+  const tmp2 = analyticsLocations(12560)({ maxWidth: ACTION_SHEET_MAX_WIDTH });
   analyticsLocations = analyticsLocations(6583)(analyticsLocations(6603).USER_PROFILE_OVERFLOW_MENU).analyticsLocations;
   const items = [analyticsLocations];
   dependencyMap = noop.useCallback((initialProductSkuId) => {

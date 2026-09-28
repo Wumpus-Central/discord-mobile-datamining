@@ -106,7 +106,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
               dependencyMap(true);
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: tmp2(13460).adoptGuildIdentity(guildId, true), done: false };
+              const obj5 = { value: tmp2(13459).adoptGuildIdentity(guildId, true), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -190,7 +190,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
         height: null,
       };
       ({ SIZE_12: obj16.width, SIZE_12: obj16.height } = GuildTagBadgeSize);
-      tmp15Result = closure_10(tmp2(13461).GuildBadge, size);
+      tmp15Result = closure_10(tmp2(13460).GuildBadge, size);
     }
     obj14.guildBadge = tmp15Result;
     tmp15Result3 = closure_10(tmp2(9205).BaseGuildTagChiplet, obj14);
@@ -213,7 +213,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
   const obj11 = { source, style: tmp.avatar, importantForAccessibility: "no" };
   const obj7 = { source: onAdopted(9619), style: tmp.avatar, importantForAccessibility: "no" };
   const items11 = [
-    closure_10(closure_6, { source: onAdopted(13505), style: tmp.avatar, importantForAccessibility: "no" }),
+    closure_10(closure_6, { source: onAdopted(13504), style: tmp.avatar, importantForAccessibility: "no" }),
   ];
   const obj19 = { style: tmp.messageBody, children: null };
   const items12 = [

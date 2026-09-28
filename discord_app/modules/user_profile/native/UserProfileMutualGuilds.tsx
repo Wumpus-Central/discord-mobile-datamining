@@ -21,7 +21,7 @@ export default function UserProfileMutualGuilds(user) {
   const tmp = closure_7();
   const trackUserProfileAction = user(7635).useUserProfileAnalyticsContext().trackUserProfileAction;
   const mutualGuilds = trackUserProfileAction(12099)(user).mutualGuilds;
-  if (trackUserProfileAction(12550)(user)) {
+  if (trackUserProfileAction(12568)(user)) {
     if (null != mutualGuilds) {
       if (0 !== mutualGuilds.length) {
         const substr = mutualGuilds.slice(0, 3);

@@ -220,9 +220,9 @@ export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildS
     presenceCount: null,
     memberCount: null,
     premiumSubscriptionCount: "r",
-    preferredLocale: "sa",
-    discoverySplash: 13107200,
-    emojis: 1683030016,
+    preferredLocale: "channel",
+    discoverySplash: true,
+    emojis: true,
   };
   ({
     approximate_presence_count: obj.presenceCount,

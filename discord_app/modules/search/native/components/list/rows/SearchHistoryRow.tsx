@@ -32,7 +32,7 @@ function SearchHistoryTextRow(searchContext) {
   const searchHistoryItem = searchContext.searchHistoryItem;
   const tmp = closure_12();
   dependencyMap = tmp;
-  const onPressSearchHistoryText = searchContext(16454).useOnPressSearchHistoryText({ searchContext });
+  const onPressSearchHistoryText = searchContext(16458).useOnPressSearchHistoryText({ searchContext });
   const items = [onPressSearchHistoryText, searchContext, , ,];
   ({ tags: arr[2], text: arr[3], type: arr[4] } = searchHistoryItem);
   const callback = noop.useCallback(() => {
@@ -76,7 +76,7 @@ function SearchHistoryTextRow(searchContext) {
   obj3.onPress = callback;
   obj3.trailing = closure_10(SearchHistoryRemoveIcon, { searchContext, searchHistoryItem });
   obj3.iconContainerStyle = tmp.textIconContainer;
-  let obj = searchContext(16454);
+  let obj = searchContext(16458);
   const obj4 = {
     lineClamp: 1,
     variant: "text-md/semibold",
@@ -88,7 +88,7 @@ function SearchHistoryTextRow(searchContext) {
     style: tmp.iconContainer,
     children: closure_10(searchContext(6472).MagnifyingGlassIcon, { size: "sm", color: "interactive-text-default" }),
   });
-  return closure_10(searchContext(16464).SearchListRow, obj3);
+  return closure_10(searchContext(16468).SearchListRow, obj3);
 }
 function SearchHistoryGroupDMRow(searchContext) {
   searchContext = searchContext.searchContext;

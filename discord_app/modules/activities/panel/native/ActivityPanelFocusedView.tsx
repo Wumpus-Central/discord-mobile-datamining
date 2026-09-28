@@ -276,7 +276,7 @@ const ActivityPanelConstants = fn(8502);
   ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_9,
   ActivityPanelModes: c10,
 } = ActivityPanelConstants);
-const ActivityPanelNativeConstants = fn(16838);
+const ActivityPanelNativeConstants = fn(16842);
 ({
   DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: closure_11,
   DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_12,

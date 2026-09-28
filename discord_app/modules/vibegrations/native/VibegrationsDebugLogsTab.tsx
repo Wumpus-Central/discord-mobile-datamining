@@ -53,7 +53,7 @@ let closure_11 = noop.memo((entry) => {
   }
   const obj = { style: tmp.row, children: null };
   const obj2 = { style: tmp.rowHead, children: null };
-  const obj3 = { variant: "text-xs/normal", color: "text-subtle", children: tmp6(16407).formatClockTime(entry.ts) };
+  const obj3 = { variant: "text-xs/normal", color: "text-subtle", children: tmp6(16411).formatClockTime(entry.ts) };
   const items1 = [closure_7(tmp6(4832).Text, obj3), , ,];
   const level = entry.level;
   let str2 = "text-feedback-critical";

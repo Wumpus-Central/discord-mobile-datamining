@@ -5,7 +5,7 @@ import CircleMinusIcon from "../../../../design/components/Icon/native/redesign/
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const useFontScaleStore = fn(14812).useFontScaleStore;
+const useFontScaleStore = fn(14810).useFontScaleStore;
 const FontScales = fn(1084).FontScales;
 const jsx = fn(21).jsx;
 const SettingBuilders = fn(11006);

@@ -429,7 +429,7 @@ export default function ChannelActions(channelId) {
   const obj3 = { style: containerStyle, children: null };
   if (obj2.useHasForumSearchQuery(channelId)) {
     const obj4 = { channelId };
-    let tmp4Result = jsx(tmp(12835).ForumChannelCloseSearchButton, { channelId });
+    let tmp4Result = jsx(tmp(12834).ForumChannelCloseSearchButton, { channelId });
   } else {
     if (!isDM) {
       if (!isMultiUserDM) {

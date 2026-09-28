@@ -177,7 +177,7 @@ function Header(recipientLimit) {
   fn.__initData = __initData;
   if (recipientLimit.usePersonLimitCopy) {
     let obj2 = { title, memberCount: numInGroup + 1, recipientLimit };
-    return closure_17(recipientLimit(16578), obj2);
+    return closure_17(recipientLimit(16582), obj2);
   } else {
     const obj3 = { style: tmp.header, children: null };
     const obj4 = { title };
@@ -496,7 +496,7 @@ export default function NewMessageScreen(navigation) {
           obj2.channel = {
             id: navigation(6642).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID,
             guild_id: "Array",
-            parent_id: "isArray",
+            parent_id: "text",
           };
           obj.dispatch(obj2);
         };

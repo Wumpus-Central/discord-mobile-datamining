@@ -39,7 +39,7 @@ export default function GuildMemberDashChannelRow(arg0) {
   let hasItem;
   const tmp = closure_8();
   const id = guild.id;
-  let num = id(15849).useSubmittedGuildJoinRequestTotal({ guildId: id });
+  let num = id(15847).useSubmittedGuildJoinRequestTotal({ guildId: id });
   if (num == null) {
     num = 0;
   }
@@ -69,7 +69,7 @@ export default function GuildMemberDashChannelRow(arg0) {
     icon: null,
     channelInfo: null,
   };
-  let obj = id(15849);
+  let obj = id(15847);
   const intl = tmp2(1115).intl;
   obj2.accessibilityLabel = intl.string(id(1115).t["9Oq93m"]);
   obj2.accessibilityState = { selected };

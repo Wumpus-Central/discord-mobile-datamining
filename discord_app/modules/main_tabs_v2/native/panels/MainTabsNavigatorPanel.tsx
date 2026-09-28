@@ -49,7 +49,7 @@ export default noop.memo(function MainTabsNavigatorPanel() {
       let obj = require;
       let result = dependencyMap;
       if (isChatLockedOpen) {
-        obj = obj(15631);
+        obj = obj(15629);
         result = obj.convertPortraitToLandscapeScreens();
       } else {
         obj(4701).dismissKeyboard();

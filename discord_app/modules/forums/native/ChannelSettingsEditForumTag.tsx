@@ -226,7 +226,7 @@ export default function ChannelSettingsEditForumTag(channelId) {
       };
       setOptions(obj);
     } else {
-      setOptions({ headerRight: "__initData" });
+      setOptions({ headerRight: "r" });
     }
   }, items5);
   const obj5 = { style: tmp.container, children: null };

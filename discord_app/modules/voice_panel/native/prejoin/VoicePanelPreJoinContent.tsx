@@ -508,7 +508,7 @@ const MODE_CHANGE_PHYSICS = fn(11755).MODE_CHANGE_PHYSICS;
 const EDGE_GUTTER = fn(11758).EDGE_GUTTER;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_20, AnalyticsSections: closure_21, Permissions: closure_22 } = Constants);
-const constants4 = fn(13282).VoiceChannelWarningSurfaces;
+const constants4 = fn(13281).VoiceChannelWarningSurfaces;
 const Features = fn(4861).Features;
 const jsxProd = fn(21);
 ({ jsx: closure_25, jsxs: closure_26, Fragment: closure_27 } = jsxProd);
@@ -803,7 +803,7 @@ export default noop.memo(function VoicePanelPreJoinWrapper() {
   const context = noop.useContext(guildId(11754));
   const channelId = context.channelId;
   guildId = context.guildId;
-  const tmp2 = guildId(16857)(channelId);
+  const tmp2 = guildId(16861)(channelId);
   dependencyMap = tmp2;
   let items = [
     SortedVoiceStateStore,
@@ -853,7 +853,7 @@ export default noop.memo(function VoicePanelPreJoinWrapper() {
       }
     },
     items1,
-    channelId(16983).areVoicePanelPreJoinContentPropsEqual,
+    channelId(16987).areVoicePanelPreJoinContentPropsEqual,
   );
   return closure_25(channelId(4540).TransitionItem, { item: stateFromStores, renderItem });
 });

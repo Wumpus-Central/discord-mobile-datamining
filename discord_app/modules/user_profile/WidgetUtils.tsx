@@ -178,18 +178,18 @@ export const addWidgetToPending = function addWidgetToPending(type) {
     })
   ) {
     if (type.type === WidgetType.WidgetType.PERSONAL) {
-      const obj3 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
+      const obj2 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
       const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(
         dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_COACHMARK,
-        obj3,
+        obj2,
       );
-      const tmp13Result = DismissibleContentUnsafeUtils;
-      const obj4 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
+      const tmp16Result = DismissibleContentUnsafeUtils;
+      const obj3 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
       const result1 = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(
         dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE,
-        obj4,
+        obj3,
       );
-      const tmp13Result2 = DismissibleContentUnsafeUtils;
+      const tmp16Result2 = DismissibleContentUnsafeUtils;
     }
     const items = [type];
     HermesBuiltin.arraySpread(tmp7, 1);

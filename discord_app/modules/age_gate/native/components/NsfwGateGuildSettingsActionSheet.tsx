@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/age_gate/native/components/Ns
 
 export default function NsfwGateGuildSettingsActionSheet(guild) {
   guild = guild.guild;
-  const messageRequestPrivacyOption = guild(13455).useMessageRequestPrivacyOption({ guild });
+  const messageRequestPrivacyOption = guild(13454).useMessageRequestPrivacyOption({ guild });
   const obj2 = { header: closure_3(guild(6570).BottomSheetTitleHeader, { title: guild.name }), children: null };
   const obj4 = { hasIcons: false, children: null };
   const obj5 = { label: null, onPress: null };
@@ -24,7 +24,7 @@ export default function NsfwGateGuildSettingsActionSheet(guild) {
   };
   const items = [
     closure_3(guild(6620).ActionSheetRow, obj5),
-    closure_3(guild(13456).RestrictedGuildPrivacyOption, { guild }),
+    closure_3(guild(13455).RestrictedGuildPrivacyOption, { guild }),
     messageRequestPrivacyOption,
   ];
   const obj6 = { variant: "danger", label: null, onPress: null };

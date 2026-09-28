@@ -46,7 +46,7 @@ export default function ICYMICustomScoresModal() {
         return obj;
       },
       getComponent() {
-        return closure_0(16099).default;
+        return closure_0(16095).default;
       },
     }),
     closure_3(closure_5.Screen, {
@@ -56,7 +56,7 @@ export default function ICYMICustomScoresModal() {
         return obj;
       },
       getComponent() {
-        return closure_0(16100).default;
+        return closure_0(16096).default;
       },
     }),
   ];

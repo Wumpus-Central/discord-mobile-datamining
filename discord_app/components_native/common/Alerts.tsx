@@ -176,7 +176,7 @@ AlertWrapper.prototype["render"] = function render() {
   return map1(Dialog.Dialog, obj2);
 };
 AlertWrapper.contextType = fn(4540).ThemeContext;
-let closure_18 = Object.freeze({ renderAlert: "Array", renderKey: "channel", props: "hd" });
+let closure_18 = Object.freeze({ renderAlert: "Array", renderKey: "paddingHorizontal", props: "dispatch" });
 const tmp7 = new ModalRegistryDefault(items1);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/Alerts.tsx");
@@ -208,7 +208,7 @@ export default noop.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "Array", renderKey: "channel", props: "hd" };
+        return { renderAlert: "Array", renderKey: "paddingHorizontal", props: "dispatch" };
       }
     }
   });

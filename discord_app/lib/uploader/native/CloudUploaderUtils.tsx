@@ -12,7 +12,7 @@ function getUploadPayload(self) {
     filename: self.filename,
     file_size: self.currentSize,
     id: _modDef12.uniqueId(),
-    original_content_type: "flex",
+    original_content_type: "a",
   };
   return obj;
 }

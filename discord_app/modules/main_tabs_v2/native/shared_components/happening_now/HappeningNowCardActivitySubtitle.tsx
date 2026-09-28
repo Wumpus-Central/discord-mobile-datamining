@@ -35,7 +35,7 @@ export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubti
     const obj3 = { channel: stateFromStores };
     tmp8 = getChannelA11yLabelDefault(obj3);
   }
-  obj2.children = jsx(voiceState(14844).HappeningNowCardSubtitle, {
+  obj2.children = jsx(voiceState(14842).HappeningNowCardSubtitle, {
     lineClamp: 1,
     accessibilityLabel: tmp8,
     children: useChannelNameDefault(stateFromStores),

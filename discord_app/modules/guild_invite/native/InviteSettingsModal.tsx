@@ -143,7 +143,7 @@ function AdvancedInstantInviteScreen() {
   obj5.onChangeTemporary = callback3;
   obj5.onChangeFlags = callback4;
   obj5.onChangeRoleIds = callback5;
-  obj4.children = jsx(channel(17620), {
+  obj4.children = jsx(channel(17624), {
     style: tmp.formContent,
     channel: first,
     guild,

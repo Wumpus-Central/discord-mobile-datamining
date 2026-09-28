@@ -95,10 +95,10 @@ const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCen
 export default function FamilyCenterActivitySection(displayType) {
   displayType = displayType.displayType;
   let loadMoreButton = closure_13();
-  const actionsForDisplayType = displayType(14431).useActionsForDisplayType(displayType);
-  const obj = displayType(14431);
-  const actionTotalsForDisplayType = displayType(14431).useActionTotalsForDisplayType(displayType);
-  const obj2 = displayType(14431);
+  const actionsForDisplayType = displayType(14430).useActionsForDisplayType(displayType);
+  const obj = displayType(14430);
+  const actionTotalsForDisplayType = displayType(14430).useActionTotalsForDisplayType(displayType);
+  const obj2 = displayType(14430);
   const familyCenterActions = displayType(11395).useFamilyCenterActions({});
   const loadMore = familyCenterActions.loadMore;
   const tmp6 = _slicedToArray(noop.useState(closure_7), 2);
@@ -117,7 +117,7 @@ export default function FamilyCenterActivitySection(displayType) {
     const obj6 = { displayType };
     const items1 = [
       closure_9(FamilyCenterActivitySectionHeader, obj6),
-      substr.map((action) => closure_1_9(loadMore(14437), { action }, action.event_id)),
+      substr.map((action) => closure_1_9(loadMore(14436), { action }, action.event_id)),
     ];
     if (substr.length >= actionTotalsForDisplayType) {
       items1[2] = null;

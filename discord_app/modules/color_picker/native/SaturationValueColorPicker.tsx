@@ -21,7 +21,7 @@ function ColorBox(hue) {
     }
   }
   let obj = hue(4566);
-  S.__closure = { hslToRgbWorklet: hue(14156).hslToRgbWorklet, hue };
+  S.__closure = { hslToRgbWorklet: hue(14155).hslToRgbWorklet, hue };
   S.__workletHash = 8814597686728;
   S.__initData = __initData;
   const fn = function v(arg0, arg1) {
@@ -31,7 +31,7 @@ function ColorBox(hue) {
       const runOnJSResult = ReanimatedRexport.runOnJS(closure_1);
     }
   };
-  const obj2 = { hslToRgbWorklet: hue(14156).hslToRgbWorklet, hue };
+  const obj2 = { hslToRgbWorklet: hue(14155).hslToRgbWorklet, hue };
   fn.__closure = { runOnJS: hue(4566).runOnJS, setColor: tmp2[1] };
   fn.__workletHash = 14688428173537;
   fn.__initData = __initData2;
@@ -132,7 +132,7 @@ export default function SaturationValueColorPicker(hue) {
   };
   let size = {
     saturation,
-    normalizeValue: hue(14156).normalizeValue,
+    normalizeValue: hue(14155).normalizeValue,
     width: colorBoxWidth,
     value,
     height: first1,
@@ -153,7 +153,7 @@ export default function SaturationValueColorPicker(hue) {
   };
   const size1 = {
     saturation,
-    normalizeValue: hue(14156).normalizeValue,
+    normalizeValue: hue(14155).normalizeValue,
     width: colorBoxWidth,
     value,
     height: first1,
@@ -199,7 +199,7 @@ export default function SaturationValueColorPicker(hue) {
   };
   let obj6 = hue(4566);
   fn4.__closure = {
-    hsvToRgbWorklet: hue(14156).hsvToRgbWorklet,
+    hsvToRgbWorklet: hue(14155).hsvToRgbWorklet,
     hue,
     saturation,
     value,
@@ -231,7 +231,7 @@ export default function SaturationValueColorPicker(hue) {
   obj5.style = items1;
   const obj7 = { gesture: panGesture, children: null };
   let obj4 = {
-    hsvToRgbWorklet: hue(14156).hsvToRgbWorklet,
+    hsvToRgbWorklet: hue(14155).hsvToRgbWorklet,
     hue,
     saturation,
     value,

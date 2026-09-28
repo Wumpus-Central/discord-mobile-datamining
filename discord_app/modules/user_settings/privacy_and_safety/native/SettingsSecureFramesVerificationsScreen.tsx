@@ -121,7 +121,7 @@ export default function SettingsSecureFramesVerificationsScreen() {
     navigation.setOptions(obj);
   });
   const obj4 = navigation(4678);
-  secureFramesUserVerifiedKeys = userId(15470).useSecureFramesUserVerifiedKeys(userId);
+  secureFramesUserVerifiedKeys = userId(15468).useSecureFramesUserVerifiedKeys(userId);
   const items1 = [userId, secureFramesUserVerifiedKeys];
   const items2 = [navigation, secureFramesUserVerifiedKeys];
   const memo = secureFramesUserVerifiedKeys.useMemo(() => {
@@ -156,7 +156,7 @@ export default function SettingsSecureFramesVerificationsScreen() {
     contentContainerStyle: tmp.listContent,
     ListFooterComponent: null,
   };
-  const obj5 = userId(15470);
+  const obj5 = userId(15468);
   obj7.ListFooterComponent = (
     <View style={tmp.listFooter}>
       <ClearVerificationsListFooter userId={userId} />

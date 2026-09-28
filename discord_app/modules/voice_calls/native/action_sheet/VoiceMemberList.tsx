@@ -152,13 +152,13 @@ function VoiceSectionRow(arg0) {
       },
       isActionSheet,
     };
-    return closure_21(tmp2(13330), obj2);
+    return closure_21(tmp2(13329), obj2);
   } else {
     let obj3 = {};
     const merged = Object.assign(item);
     obj3.onPress = onPressUser;
     obj3.isActionSheet = isActionSheet;
-    return closure_21(tmp2(13331), obj3);
+    return closure_21(tmp2(13330), obj3);
   }
   let obj = isActionSheet(8895);
   tmp3 = undefined !== item.url && undefined !== item.applicationId;
@@ -197,8 +197,8 @@ let closure_26 = noop.memo((channel) => {
       const intl = tmp4(1115).intl;
       obj3.accessibilityLabel = intl.string(tmp4(1115).t["6Qgrev"]);
       obj3.source = _modDef9491;
-      obj3.size = tmp4(13007).CircularIconButton.Sizes.MEDIUM_32;
-      obj2.leading = closure_21(tmp4(13007).CircularIconButton, obj3);
+      obj3.size = tmp4(13006).CircularIconButton.Sizes.MEDIUM_32;
+      obj2.leading = closure_21(tmp4(13006).CircularIconButton, obj3);
       const intl2 = tmp4(1115).intl;
       obj2.label = intl2.string(tmp4(1115).t["6Qgrev"]);
       obj2.onPress = function onPress() {
@@ -396,7 +396,7 @@ export default noop.forwardRef(function VoiceMemberList(channel, ref) {
               return sum;
             } else {
               if (tmp) {
-                tmp4 = tmp4(13330);
+                tmp4 = tmp4(13329);
                 calculateActivityRowHeight = tmp4.calculateActivityRowHeight;
                 let result = calculateActivityRowHeight(closure_4);
               } else {

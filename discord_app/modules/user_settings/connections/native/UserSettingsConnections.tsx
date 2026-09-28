@@ -14,7 +14,7 @@ import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import ConnectedAccountsStore from "../../../../stores/ConnectedAccountsStore.tsx";
 import LocaleStore from "../../LocaleStore.tsx";
 
-const ConnectionsEmptyStateUpsellDefault = tmp2(14496);
+const ConnectionsEmptyStateUpsellDefault = tmp2(14495);
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
 const FetchState = fn(6528).FetchState;
@@ -68,7 +68,7 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
   const effect2 = authorizedAppsFetchState.useEffect(() => {
     if (null != selectedPlatformType) {
       if (-1 === selectedPlatformType) {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14494, dependencyMap.paths), "AddConnection");
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14493, dependencyMap.paths), "AddConnection");
       } else {
         const obj = { platformType: selectedPlatformType, location: AnalyticsLocations.USER_SETTINGS };
         authorizeConnectionDefault(obj);

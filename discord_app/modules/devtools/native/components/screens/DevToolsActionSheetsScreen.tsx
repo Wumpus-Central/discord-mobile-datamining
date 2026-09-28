@@ -106,7 +106,7 @@ let items = [
     description: "Shows safety warning for inappropriate conversations",
     show() {
       return ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(15325, dependencyMap.paths),
+        asyncRequireImpl(15323, dependencyMap.paths),
         {
           warningId: "test-warning-123",
           warningType: "inappropriate_conversation",

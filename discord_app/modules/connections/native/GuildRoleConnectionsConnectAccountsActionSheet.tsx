@@ -277,7 +277,7 @@ function IdentityConnectionsCheckGroup(eligibilityState) {
     obj7.onPress = callback;
     let tmp15Result = null;
     if (null != memo) {
-      const obj8 = { style: tmp.appIcon, user: memo, size: tmp2(tmp3[21]).AvatarSizes.XSMALL, guildId: "flex" };
+      const obj8 = { style: tmp.appIcon, user: memo, size: tmp2(tmp3[21]).AvatarSizes.XSMALL, guildId: "a" };
       tmp15Result = tmp15(tmp2(tmp3[21]).Avatar, obj8);
     }
     const items3 = [tmp15Result, ,];
@@ -580,7 +580,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
     items1[1] = tmp24Result6;
     let tmp24Result7 = null;
     if (null != tmp11) {
-      const obj13 = { style: closure_5.appIcon, user: tmp11, size: tmp15(1177).AvatarSizes.XSMALL, guildId: "flex" };
+      const obj13 = { style: closure_5.appIcon, user: tmp11, size: tmp15(1177).AvatarSizes.XSMALL, guildId: "a" };
       tmp24Result7 = tmp24(tmp15(1177).Avatar, obj13);
     }
     items1[2] = tmp24Result7;

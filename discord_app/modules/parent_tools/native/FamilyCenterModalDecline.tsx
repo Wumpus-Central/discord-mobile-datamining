@@ -31,12 +31,12 @@ function FamilyCenterModalDeclineScreen(otherUser) {
   const obj5 = { otherUser, iconSrc: null };
   const obj = otherUser(11395);
   obj5.iconSrc = declineLinkRequest(6413);
-  const items1 = [closure_5(declineLinkRequest(14459), obj5), ,];
+  const items1 = [closure_5(declineLinkRequest(14458), obj5), ,];
   const obj6 = { style: tmp.headerText, variant: "text-lg/bold", children: null };
   let intl = otherUser(1115).intl;
   obj6.children = intl.string(declineLinkRequest(2487).teIRCR);
   items1[1] = closure_5(otherUser(4832).Text, obj6);
-  items1[2] = closure_5(declineLinkRequest(14429), { user: otherUser });
+  items1[2] = closure_5(declineLinkRequest(14428), { user: otherUser });
   obj4.children = items1;
   const items2 = [closure_6(View, obj4)];
   const obj7 = { style: tmp.body, children: null };

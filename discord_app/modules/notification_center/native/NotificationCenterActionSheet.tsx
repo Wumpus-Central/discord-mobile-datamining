@@ -98,7 +98,7 @@ export default function NotificationCenterActionSheet() {
   const obj9 = { IconComponent: roleFilter(5404).AtIcon, source: everyoneFilter(11915) };
   obj10.icon = closure_6(roleFilter(6620).ActionSheetRow.Icon, {
     IconComponent: roleFilter(9067).BellIcon,
-    source: everyoneFilter(16050),
+    source: everyoneFilter(16046),
   });
   items3[1] = closure_6(roleFilter(6620).ActionSheetSwitchRow, obj10);
   obj7.children = items3;
@@ -142,7 +142,7 @@ export default function NotificationCenterActionSheet() {
   const obj18 = { hasIcons: true, children: null };
   items5[2] = tmp10Result4;
   const obj19 = { icon: null, label: null, onPress: null, arrow: true };
-  const obj11 = { IconComponent: roleFilter(9067).BellIcon, source: everyoneFilter(16050) };
+  const obj11 = { IconComponent: roleFilter(9067).BellIcon, source: everyoneFilter(16046) };
   obj19.icon = closure_6(roleFilter(6620).ActionSheetRow.Icon, { IconComponent: roleFilter(6798).SettingsIcon });
   const intl8 = tmp(1115).intl;
   obj19.label = intl8.string(roleFilter(1115).t.h850Ss);

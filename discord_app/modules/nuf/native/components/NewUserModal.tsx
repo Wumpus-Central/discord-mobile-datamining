@@ -50,11 +50,11 @@ export default function NewUserModal(arg0) {
       closure_1_4(lastShownStepIndex);
       if (continueNavigation) {
         if (null != ref.current) {
-          closure_0(17212).continueToNextStep(onboardingStepIndex, tmp3.current);
-          const obj2 = closure_0(17212);
+          closure_0(17216).continueToNextStep(onboardingStepIndex, tmp3.current);
+          const obj2 = closure_0(17216);
         }
       }
-      first(5039).popWithKey(closure_0(17213).NEW_USER_MODAL_KEY);
+      first(5039).popWithKey(closure_0(17217).NEW_USER_MODAL_KEY);
       const obj = first(5039);
     });
   }, items);
@@ -101,14 +101,14 @@ export default function NewUserModal(arg0) {
     closure_6(Navigator.Screen, {
       name: "enable-notification",
       getComponent() {
-        return closure_0(15626).RedesignNotificationScreen;
+        return closure_0(15624).RedesignNotificationScreen;
       },
       initialParams: { onComplete },
     }),
     closure_6(Navigator.Screen, {
       name: "choose-avatar",
       getComponent() {
-        return closure_0(17216).default;
+        return closure_0(17220).default;
       },
       options() {
         return {
@@ -145,14 +145,14 @@ export default function NewUserModal(arg0) {
       name: "discoverability",
       options: { headerShown: false },
       getComponent() {
-        return closure_0(17217).default;
+        return closure_0(17221).default;
       },
       initialParams: { onComplete },
     }),
     closure_6(Navigator.Screen, {
       name: "connect-guardian",
       getComponent() {
-        return closure_0(17219).default;
+        return closure_0(17223).default;
       },
       initialParams: { onComplete },
     }),

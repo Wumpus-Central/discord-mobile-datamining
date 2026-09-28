@@ -56,9 +56,9 @@ export default function BuildOverrideModal(overrideUrl) {
   const tmp = closure_9();
   const tmp4 = stateFromStores(4767)();
   if (obj.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(13416);
+    let tmp2Result = tmp2(13415);
   } else {
-    tmp2Result = tmp2(13417);
+    tmp2Result = tmp2(13416);
   }
   obj = str(4685);
   const items = [BuildOverrideStore];

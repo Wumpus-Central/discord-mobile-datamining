@@ -24,12 +24,7 @@ function SharedUser(user) {
   }
   items[1] = erroredAvatar;
   const items1 = [
-    closure_5(user(1177).Avatar, {
-      style: items,
-      size: user(1177).AvatarSizes.REFRESH_MEDIUM_32,
-      user,
-      guildId: "flex",
-    }),
+    closure_5(user(1177).Avatar, { style: items, size: user(1177).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "a" }),
     ,
   ];
   if (tmp6) {
@@ -51,7 +46,7 @@ function SharedUser(user) {
   const obj9 = { variant: "secondary", size: "sm", text: null, icon: null, onPress: null };
   const intl2 = tmp5(1115).intl;
   obj9.text = intl2.string(user(1115).t["g33r/P"]);
-  const obj3 = { style: items, size: user(1177).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "flex" };
+  const obj3 = { style: items, size: user(1177).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "a" };
   obj9.icon = closure_5(user(5385).ChatIcon, {
     size: "xs",
     color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT,
@@ -141,7 +136,7 @@ export default function ReferralProgramShareConfirmationActionSheet(trialCreatio
   const obj4 = { children: null };
   const formatResult = intl3.format(tmp5(1115).t.AwGSWl, obj);
   const items = [
-    closure_5(View, { style: tmp.headerAsset, children: closure_5(tmp5(12986).FistBumpSpotIllustration, {}) }),
+    closure_5(View, { style: tmp.headerAsset, children: closure_5(tmp5(12985).FistBumpSpotIllustration, {}) }),
     closure_5(tmp5(4832).Text, {
       variant: "heading-lg/bold",
       color: "mobile-text-heading-primary",
@@ -156,7 +151,7 @@ export default function ReferralProgramShareConfirmationActionSheet(trialCreatio
     }),
   ];
   const obj8 = { style: tmp.recipientContainer, children: null };
-  const obj5 = { style: tmp.headerAsset, children: closure_5(tmp5(12986).FistBumpSpotIllustration, {}) };
+  const obj5 = { style: tmp.headerAsset, children: closure_5(tmp5(12985).FistBumpSpotIllustration, {}) };
   const obj6 = {
     variant: "heading-lg/bold",
     color: "mobile-text-heading-primary",

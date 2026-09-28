@@ -49,12 +49,12 @@ function CreatorGuildCard(highlightedCreatorGuild) {
   const guild_id = highlightedCreatorGuild.guild_id;
   let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
   ({ quote, quote_attribution } = highlightedCreatorGuild);
-  const tmp6 = guild_id(17532)(guild_id, 3, 60);
+  const tmp6 = guild_id(17536)(guild_id, 3, 60);
   dependencyMap = tmp6;
   const hasAllImperativeDetails = tmp6.hasAllImperativeDetails;
   let items = [hasAllImperativeDetails, tmp6];
   if (tmp6.isLoading) {
-    const obj2 = { style: tmp.cardContainer, children: closure_6(tmp5(17504), {}) };
+    const obj2 = { style: tmp.cardContainer, children: closure_6(tmp5(17508), {}) };
     return closure_6(closure_4, obj2);
   } else if (hasAllImperativeDetails) {
     const details = tmp6.details;

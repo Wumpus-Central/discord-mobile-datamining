@@ -5,7 +5,7 @@ import native from "../../../../design/void/native.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import _modDef12289 from "../../../../../_runtime/metro/12289__.js";
-import _modDef13408 from "../../../../../_runtime/metro/13408__.js";
+import _modDef13407 from "../../../../../_runtime/metro/13407__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -60,7 +60,7 @@ export default function TouchableUploadAvatar(onSelectAvatar) {
   }
   const tmp = closure_6();
   if (!showPendingAvatar) {
-    let tmp3 = _modDef13408;
+    let tmp3 = _modDef13407;
   } else {
     tmp3 = avatarSource;
   }

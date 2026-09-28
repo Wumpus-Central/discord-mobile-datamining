@@ -110,7 +110,7 @@ export default function ForLaterCardActionButtons(savedMessage) {
       action: null,
     };
     if (savedMessage.throttledNow > savedMessage.saveData.dueAt) {
-      let PencilIcon = tmp3(12866).BellZIcon;
+      let PencilIcon = tmp3(12865).BellZIcon;
     } else {
       PencilIcon = tmp3(9713).PencilIcon;
     }

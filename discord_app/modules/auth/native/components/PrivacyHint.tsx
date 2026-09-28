@@ -54,7 +54,7 @@ function PrivacyPolicyCheckbox(onToggleConsent) {
 get_ActivityIndicator = fn(17);
 ({ View: c3, Pressable: closure_4 } = get_ActivityIndicator);
 const usePromoEmailConsentStore = fn(6011).usePromoEmailConsentStore;
-const useRegistrationUIStore = fn(15572).useRegistrationUIStore;
+const useRegistrationUIStore = fn(15570).useRegistrationUIStore;
 const MarketingURLs = fn(1074).MarketingURLs;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

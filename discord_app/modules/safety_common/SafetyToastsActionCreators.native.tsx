@@ -29,11 +29,11 @@ export default {
       SafetyToastsUtils.getSafetyToastTypeContent(SafetyToastType.BLOCK_SUCCESS, id, channelId),
     );
   },
-  showUnblockSuccessToast(id, id2) {
+  showUnblockSuccessToast(id, channelId) {
     const obj = ToastUtils;
     obj.showSafetySuccess(
       SafetyToastType.UNBLOCK_SUCCESS,
-      SafetyToastsUtils.getSafetyToastTypeContent(SafetyToastType.UNBLOCK_SUCCESS, id, id2),
+      SafetyToastsUtils.getSafetyToastTypeContent(SafetyToastType.UNBLOCK_SUCCESS, id, channelId),
     );
   },
   showMuteSuccessToast(id, channelId) {

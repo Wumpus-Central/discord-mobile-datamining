@@ -62,7 +62,7 @@ export default function VibegrationsThinkingOverlay(projectId) {
   const obj5 = { style: tmp.body, children: null };
   const obj6 = { style: tmp.header, children: null };
   const obj2 = projectId(16346);
-  const items2 = [closure_7(projectId(16061).LightbulbIcon, { size: "xs", color: ref(576).colors.TEXT_BRAND })];
+  const items2 = [closure_7(projectId(16057).LightbulbIcon, { size: "xs", color: ref(576).colors.TEXT_BRAND })];
   const obj8 = { variant: "text-sm/semibold", color: "text-strong", children: null };
   const intl = tmp3(1115).intl;
   obj8.children = intl.string(ref(3715).ltkR4n);

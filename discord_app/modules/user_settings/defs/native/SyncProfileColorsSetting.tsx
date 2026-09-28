@@ -15,7 +15,7 @@ const toggle = SettingBuilders.createToggle({
     const items = [AccessibilityStore];
     return initialize.useStateFromStores(items, () => AccessibilityStore.syncProfileThemeWithUserTheme);
   },
-  onValueChange: fn(13999).toggleSyncProfileThemeWithUserTheme,
+  onValueChange: fn(13998).toggleSyncProfileThemeWithUserTheme,
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/SyncProfileColorsSetting.tsx");

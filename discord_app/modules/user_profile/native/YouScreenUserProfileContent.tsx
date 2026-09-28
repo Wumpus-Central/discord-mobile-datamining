@@ -566,7 +566,7 @@ export default function YouScreenUserProfileContent(user) {
             initialTab === UserProfileSections.WISHLIST ? UserProfileSections.WISHLIST : UserProfileSections.MAIN,
           );
           ref.current(num, false, true);
-          navigation.setParams({ initialTab: "__initData" });
+          navigation.setParams({ initialTab: "r" });
         }, 80);
       }
       return () => {

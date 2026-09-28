@@ -128,9 +128,9 @@ export default function VibegrationsSettingsSheet(projectId) {
   if (guild_id == null) {
     guild_id = guildId;
   }
-  const tmpResultResult = stateFromStores1(16265)(projectId, guild_id);
+  const tmpResultResult = stateFromStores1(16261)(projectId, guild_id);
   asyncGeneratorStep = tmpResultResult;
-  const tmp13 = stateFromStores1(16267)({ projectId, scopeKeys, note, notifyAgent, isPreview });
+  const tmp13 = stateFromStores1(16263)({ projectId, scopeKeys, note, notifyAgent, isPreview });
   _slicedToArray = tmp13;
   isScoped = tmp13.isScoped;
   loaded = tmp13.loaded;
@@ -267,7 +267,7 @@ export default function VibegrationsSettingsSheet(projectId) {
   obj5.dismissAccessibilityLabel = intl.string(stateFromStores1(3715).Wzi4Jd);
   const intl2 = tmp4(1115).intl;
   const tmpResult2 = stateFromStores1(3715);
-  const tmpResult = stateFromStores1(16265);
+  const tmpResult = stateFromStores1(16261);
   obj5.header = found(projectId(6570).BottomSheetTitleHeader, {
     title: intl2.string(isScoped ? tmpResult2.wgDhiQ : tmpResult2.cWmjzs),
   });
@@ -311,7 +311,7 @@ export default function VibegrationsSettingsSheet(projectId) {
     tmp21Result3 = null;
     if ("model" === found) {
       const obj9 = { projectId };
-      tmp21Result3 = tmp21(tmp4(16268).VibegrationsModelSettingsContent, obj9);
+      tmp21Result3 = tmp21(tmp4(16264).VibegrationsModelSettingsContent, obj9);
     }
   }
   items9[4] = tmp21Result3;

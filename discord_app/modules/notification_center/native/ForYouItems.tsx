@@ -604,7 +604,7 @@ let closure_35 = noop.memo((item) => {
       obj3.icon = tmp6(notificationCenterItemAcked[42]);
       obj3.IconComponent = tmp2(notificationCenterItemAcked[43]).TrashIcon;
       item = navigation(function* () {
-        yield tmp3(16055).deleteNotificationCenterItem(tmp3);
+        yield tmp3(16051).deleteNotificationCenterItem(tmp3);
         if (1 === tmp7) {
           c3 = 0;
           const obj7 = { key: "REMOVE_NOTIFICATION_ERROR", content: null };

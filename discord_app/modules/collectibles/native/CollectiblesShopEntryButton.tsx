@@ -58,7 +58,7 @@ export default function CollectiblesShopEntryButton(navigateToShop) {
   const shopButtonRef = navigateToShop.shopButtonRef;
   const items = [CollectiblesMarketingsStore];
   const stateFromStores = navigateToShop(563).useStateFromStores(items, () =>
-    marketingBySurface.getMarketingBySurface(navigateToShop(13533).CollectiblesMarketingSurface.MOBILE_SHOP_BUTTON),
+    marketingBySurface.getMarketingBySurface(navigateToShop(13532).CollectiblesMarketingSurface.MOBILE_SHOP_BUTTON),
   );
   let tmp4 = null != stateFromStores;
   if (tmp4) {
@@ -94,7 +94,7 @@ export default function CollectiblesShopEntryButton(navigateToShop) {
         }
       };
       obj.showRedDot = null != visibleContent;
-      return closure_1_6(shopButtonRef(16604), obj);
+      return closure_1_6(shopButtonRef(16608), obj);
     }
     if (tmp4) {
       let type1;

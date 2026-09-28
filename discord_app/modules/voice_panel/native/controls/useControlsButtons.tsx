@@ -69,10 +69,10 @@ export default function useControlsButtons() {
   const context = treatment.useContext(safeArea(11754));
   const windowDimensions = context.windowDimensions;
   safeArea = context.safeArea;
-  const tmp2 = safeArea(16857)(context.channelId);
+  const tmp2 = safeArea(16861)(context.channelId);
   dependencyMap = tmp2;
-  treatment = safeArea(16922).useConfig({ location: "VoicePanelControlButtons" }).treatment;
-  let obj = safeArea(16922);
+  treatment = safeArea(16926).useConfig({ location: "VoicePanelControlButtons" }).treatment;
+  let obj = safeArea(16926);
   let items = [stateFromStores];
   stateFromStores = windowDimensions(504).useStateFromStores(
     items,
@@ -111,7 +111,7 @@ export default function useControlsButtons() {
           const obj3 = { type: "icon-normal", key: "connected-mic", render: redux.micConnected };
           items.push(obj3);
         }
-        if (treatment === _true(16922).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT) {
+        if (treatment === _true(16926).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT) {
           const obj4 = { type: "icon-normal", key: "connected-screenshare", render: redux.screenshare };
           items.push(obj4);
         } else {
@@ -122,7 +122,7 @@ export default function useControlsButtons() {
           const obj6 = { type: "icon-large", key: "connected-ptt", render: redux.ptt };
           items.push(obj6);
         }
-        if (treatment === _true(16922).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD) {
+        if (treatment === _true(16926).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD) {
           const obj7 = { type: "icon-normal", key: "connected-screenshare", render: redux.screenshare };
           items.push(obj7);
         } else {

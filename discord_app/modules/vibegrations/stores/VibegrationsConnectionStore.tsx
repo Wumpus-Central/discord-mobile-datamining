@@ -312,7 +312,7 @@ function handleEvent(projectId, pendingEvents, type) {
       messages1 = [];
     }
     const substr = messages1.slice();
-    const obj6 = { type: "VIBEGRATIONS_CHAT_HISTORY_SET", projectId, entries: substr, cursor: null };
+    const obj6 = { type: "VIBEGRATIONS_CHAT_HISTORY_SET", projectId, entries: substr, cursor: null, degraded: null };
     let tmp191 = null;
     if (true === type.has_more) {
       let cursor1 = type.cursor;
@@ -322,6 +322,7 @@ function handleEvent(projectId, pendingEvents, type) {
       tmp191 = cursor1;
     }
     obj6.cursor = tmp191;
+    obj6.degraded = true === type.degraded;
     attachment_id(573).dispatch(obj6);
     map7.delete(projectId);
     (function beginHistoryDrain(projectId) {
@@ -340,8 +341,8 @@ function handleEvent(projectId, pendingEvents, type) {
     pendingEvents = pendingEvents.pendingEvents;
     pendingEvents.pendingEvents = [];
     setConnState(projectId, "open");
-    for (const item10639 of pendingEvents) {
-      let tmp202 = handleEvent(arg0, arg1, item10639);
+    for (const item10643 of pendingEvents) {
+      let tmp202 = handleEvent(arg0, arg1, item10643);
       continue;
     }
     const pendingModelSettings = pendingEvents.pendingModelSettings;
@@ -426,13 +427,13 @@ function handleEvent(projectId, pendingEvents, type) {
     const obj68 = attachment_id(573);
   } else if ("step" === type.type) {
     if ("reply" === type.kind) {
-      let str29 = type.message;
-      if (str29 == null) {
-        str29 = "";
+      let str30 = type.message;
+      if (str30 == null) {
+        str30 = "";
       }
-      if ("" !== str29) {
+      if ("" !== str30) {
         const obj21 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
-        const obj24 = { content: str29, kind: "message" };
+        const obj24 = { content: str30, kind: "message" };
         obj21.patch = obj24;
         attachment_id(573).dispatch(obj21);
         const obj65 = attachment_id(573);
@@ -549,10 +550,10 @@ function handleEvent(projectId, pendingEvents, type) {
         const obj41 = { todos: items };
         obj40.patch = obj41;
         attachment_id(573).dispatch(obj40);
-        const obj92 = attachment_id(573);
+        const obj96 = attachment_id(573);
         const obj43 = { type: "VIBEGRATIONS_CHAT_STEP_APPEND", projectId, turnId: type.turn_id, step: type };
         attachment_id(573).dispatch(obj43);
-        const obj95 = attachment_id(573);
+        const obj99 = attachment_id(573);
       }
     } else if ("plan_proposed" === type.kind) {
       if (null != type.proposal) {
@@ -618,11 +619,11 @@ function handleEvent(projectId, pendingEvents, type) {
         const obj59 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
         const obj61 = { secretRequest: null };
         const obj63 = { fields, note: null, copy_values: null };
-        ({ note: obj91.note, copy_values: obj91.copy_values } = type);
+        ({ note: obj95.note, copy_values: obj95.copy_values } = type);
         obj61.secretRequest = obj63;
         obj59.patch = obj61;
         attachment_id(573).dispatch(obj59);
-        const obj88 = attachment_id(573);
+        const obj92 = attachment_id(573);
       }
     } else if ("collect_settings" === type.kind) {
       const obj64 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
@@ -633,6 +634,16 @@ function handleEvent(projectId, pendingEvents, type) {
       attachment_id(573).dispatch(obj64);
       const obj35 = attachment_id(573);
       const obj67 = { keys: null, note: null };
+    } else if ("awaiting_user" === type.kind) {
+      if ("secrets" === type.action) {
+        const obj75 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
+        const obj77 = { awaitingUser: null };
+        const obj80 = { action: type.action };
+        obj77.awaitingUser = obj80;
+        obj75.patch = obj77;
+        attachment_id(573).dispatch(obj75);
+        const obj88 = attachment_id(573);
+      }
     } else if ("intake" === type.kind) {
       let tmp88 = null != type.intake;
       if (tmp88) {
@@ -647,17 +658,17 @@ function handleEvent(projectId, pendingEvents, type) {
         tmp88 = num5 > 0;
       }
       if (tmp88) {
-        const obj75 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
-        const obj77 = { intake: type.intake };
-        obj75.patch = obj77;
-        attachment_id(573).dispatch(obj75);
+        const obj81 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
+        const obj84 = { intake: type.intake };
+        obj81.patch = obj84;
+        attachment_id(573).dispatch(obj81);
         const obj32 = attachment_id(573);
       }
     } else if ("usage" === type.kind) {
       if (tmp83) {
-        const obj80 = { type: "VIBEGRATIONS_CHAT_USAGE_SET", projectId, turn: null, project: null };
+        const obj89 = { type: "VIBEGRATIONS_CHAT_USAGE_SET", projectId, turn: null, project: null };
         ({ turn: obj31.turn, project: obj31.project } = type);
-        attachment_id(573).dispatch(obj80);
+        attachment_id(573).dispatch(obj89);
         const obj30 = attachment_id(573);
       }
       tmp83 = null != type.turn && null != type.project;
@@ -748,28 +759,28 @@ function handleEvent(projectId, pendingEvents, type) {
     } else if ("turn_result" === type.kind) {
       let result = require("VibegrationsAnalytics").trackVibegrationTurnResulted(projectId, type);
       if ("deployed" === type.result) {
-        const obj81 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: { kind: "plan_implemented" } };
-        attachment_id(573).dispatch(obj81);
+        const obj90 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: { kind: "plan_implemented" } };
+        attachment_id(573).dispatch(obj90);
         const obj23 = attachment_id(573);
       }
       const obj22 = require("VibegrationsAnalytics");
       const tmp61 = attachment_id;
-      const obj84 = { type: "VIBEGRATIONS_CHAT_TURN_FINISHED", projectId, turnId: null, summary: null };
+      const obj91 = { type: "VIBEGRATIONS_CHAT_TURN_FINISHED", projectId, turnId: null, summary: null };
       ({ turn_id: obj26.turnId, summary: obj26.summary } = type);
-      attachment_id(573).dispatch(obj84);
+      attachment_id(573).dispatch(obj91);
       let deleteResult2 = set.delete(projectId);
       if (deleteResult2) {
         deleteResult2 = "cancelled" === type.result;
       }
       if (deleteResult2) {
-        const obj89 = { type: "VIBEGRATIONS_CHAT_INTERRUPTED", projectId };
-        tmp61(573).dispatch(obj89);
+        const obj93 = { type: "VIBEGRATIONS_CHAT_INTERRUPTED", projectId };
+        tmp61(573).dispatch(obj93);
         const tmp61Result = tmp61(573);
       }
       const obj25 = attachment_id(573);
     } else {
-      const obj90 = { type: "VIBEGRATIONS_CHAT_STEP_APPEND", projectId, turnId: type.turn_id, step: type };
-      attachment_id(573).dispatch(obj90);
+      const obj94 = { type: "VIBEGRATIONS_CHAT_STEP_APPEND", projectId, turnId: type.turn_id, step: type };
+      attachment_id(573).dispatch(obj94);
       let tmp49 = "build_error" !== type.kind;
       if (tmp49) {
         tmp49 = "healthcheck_failed" !== type.kind;
@@ -778,15 +789,15 @@ function handleEvent(projectId, pendingEvents, type) {
         tmp49 = "error" !== type.kind;
       }
       if (!tmp49) {
-        const obj93 = {};
+        const obj97 = {};
         const merged1 = Object.assign(obj3[type.kind]);
-        obj93.message = type.message;
+        obj97.message = type.message;
         let stderr_tail;
         if ("build_error" === type.kind) {
           stderr_tail = type.stderr_tail;
         }
-        obj93.details = stderr_tail;
-        let result1 = require("VibegrationsAnalytics").trackVibegrationErrored(projectId, obj93);
+        obj97.details = stderr_tail;
+        let result1 = require("VibegrationsAnalytics").trackVibegrationErrored(projectId, obj97);
         const obj20 = require("VibegrationsAnalytics");
       }
       if ("preview_ready" === type.kind) {
@@ -856,42 +867,42 @@ function handleEvent(projectId, pendingEvents, type) {
             const obj17 = attachment_id(8498);
           }
         } else if ("model_settings" === type.type) {
-          const obj94 = { type: "VIBEGRATIONS_MODEL_SETTINGS_SET", projectId, settings: null, tierSettings: null, tiers: null, choices: null };
+          const obj98 = { type: "VIBEGRATIONS_MODEL_SETTINGS_SET", projectId, settings: null, tierSettings: null, tiers: null, choices: null };
           ({ settings: obj16.settings, tier_settings } = type);
           if (tier_settings == null) {
             tier_settings = null;
           }
-          obj94.tierSettings = tier_settings;
+          obj98.tierSettings = tier_settings;
           let tiers = type.tiers;
           if (tiers == null) {
             tiers = null;
           }
-          obj94.tiers = tiers;
-          obj94.choices = type.choices;
-          attachment_id(573).dispatch(obj94);
+          obj98.tiers = tiers;
+          obj98.choices = type.choices;
+          attachment_id(573).dispatch(obj98);
           const obj15 = attachment_id(573);
         } else if ("debug_status" === type.type) {
-          const obj96 = { type: "VIBEGRATIONS_DEBUG_STATUS_SET", projectId, status: null, failed: null };
+          const obj100 = { type: "VIBEGRATIONS_DEBUG_STATUS_SET", projectId, status: null, failed: null };
           let status = type.status;
           if (status == null) {
             status = null;
           }
-          obj96.status = status;
-          obj96.failed = true === type.failed || null == type.status;
-          attachment_id(573).dispatch(obj96);
+          obj100.status = status;
+          obj100.failed = true === type.failed || null == type.status;
+          attachment_id(573).dispatch(obj100);
           const obj13 = attachment_id(573);
         } else if ("settings" === type.type) {
-          const obj144 = { type: "VIBEGRATIONS_SETTINGS_SET", projectId, settings: null };
+          const obj151 = { type: "VIBEGRATIONS_SETTINGS_SET", projectId, settings: null };
           ({ schema: obj12.schema, values: obj12.values, secrets: obj12.secrets, connections: obj12.connections } = type);
-          obj144.settings = { schema: null, values: null, secrets: null, connections: null };
-          attachment_id(573).dispatch(obj144);
+          obj151.settings = { schema: null, values: null, secrets: null, connections: null };
+          attachment_id(573).dispatch(obj151);
           const obj10 = attachment_id(573);
-          const obj145 = { schema: null, values: null, secrets: null, connections: null };
+          const obj152 = { schema: null, values: null, secrets: null, connections: null };
         } else if ("debug_model_call" === type.type) {
-          const obj146 = { type: "VIBEGRATIONS_MODEL_CALL_APPEND", projectId, modelCall: type };
-          attachment_id(573).dispatch(obj146);
+          const obj153 = { type: "VIBEGRATIONS_MODEL_CALL_APPEND", projectId, modelCall: type };
+          attachment_id(573).dispatch(obj153);
           if ("started" !== type.status) {
-            const obj147 = { type: "VIBEGRATIONS_DEBUG_MODEL_CALL", projectId, id: type.id, role: null, model: null, stopReason: null, durationMs: null, inputTokens: null, outputTokens: null, cacheReadTokens: null, cacheWriteTokens: null, observedAt: null };
+            const obj154 = { type: "VIBEGRATIONS_DEBUG_MODEL_CALL", projectId, id: type.id, role: null, model: null, stopReason: null, durationMs: null, inputTokens: null, outputTokens: null, cacheReadTokens: null, cacheWriteTokens: null, observedAt: null };
             let str10 = "compaction";
             if ("compaction" !== type.agent) {
               let str8 = "orchestrator";
@@ -900,8 +911,8 @@ function handleEvent(projectId, pendingEvents, type) {
               }
               str10 = str8;
             }
-            obj147.role = str10;
-            obj147.model = type.model;
+            obj154.role = str10;
+            obj154.model = type.model;
             if ("error" === type.status) {
               let str12 = type.stop_reason;
               if (str12 == null) {
@@ -911,38 +922,38 @@ function handleEvent(projectId, pendingEvents, type) {
             } else {
               stop_reason = type.stop_reason;
             }
-            obj147.stopReason = stop_reason;
+            obj154.stopReason = stop_reason;
             ({ duration_ms: obj82.durationMs, input_tokens } = type);
             if (input_tokens == null) {
               input_tokens = 0;
             }
-            obj147.inputTokens = input_tokens;
+            obj154.inputTokens = input_tokens;
             let num2 = type.output_tokens;
             if (num2 == null) {
               num2 = 0;
             }
-            obj147.outputTokens = num2;
+            obj154.outputTokens = num2;
             let num3 = type.cache_read_tokens;
             if (num3 == null) {
               num3 = 0;
             }
-            obj147.cacheReadTokens = num3;
+            obj154.cacheReadTokens = num3;
             let num4 = type.cache_write_tokens;
             if (num4 == null) {
               num4 = 0;
             }
-            obj147.cacheWriteTokens = num4;
+            obj154.cacheWriteTokens = num4;
             const _Date = Date;
             const date3 = new Date();
-            obj147.observedAt = date3.toISOString();
-            tmp14(573).dispatch(obj147);
+            obj154.observedAt = date3.toISOString();
+            tmp14(573).dispatch(obj154);
             const tmp14Result = tmp14(573);
           }
           obj7 = attachment_id(573);
           tmp14 = attachment_id;
         } else if ("debug_tool_call" === type.type) {
-          const obj148 = { type: "VIBEGRATIONS_TOOL_CALL_APPEND", projectId, toolCall: type };
-          attachment_id(573).dispatch(obj148);
+          const obj155 = { type: "VIBEGRATIONS_TOOL_CALL_APPEND", projectId, toolCall: type };
+          attachment_id(573).dispatch(obj155);
           const obj5 = attachment_id(573);
         } else if ("request_upstream_ticket" === type.type) {
           (function mintUpstreamTicket() {
@@ -957,13 +968,13 @@ function handleEvent(projectId, pendingEvents, type) {
           })(pendingEvents, type.id, type.project_id);
         } else if ("debug_history_state" === type.type) {
           obj3 = attachment_id(573);
-          const obj149 = { type: "VIBEGRATIONS_HISTORY_LOAD_SETTLE", projectId, scope: null, status: null, count: null, truncated: null };
+          const obj156 = { type: "VIBEGRATIONS_HISTORY_LOAD_SETTLE", projectId, scope: null, status: null, count: null, truncated: null };
           ({ scope: obj4.scope, status: obj4.status, count: obj4.count } = type);
-          obj149.truncated = true === type.truncated;
-          obj3.dispatch(obj149);
+          obj156.truncated = true === type.truncated;
+          obj3.dispatch(obj156);
         } else {
-          const obj150 = { type: "VIBEGRATIONS_LOG_APPEND", projectId, log: type };
-          attachment_id(573).dispatch(obj150);
+          const obj157 = { type: "VIBEGRATIONS_LOG_APPEND", projectId, log: type };
+          attachment_id(573).dispatch(obj157);
           (function reportRuntimeError(projectId, historical) {
             if (true !== historical.historical) {
               if ("error" === historical.level) {
@@ -2825,7 +2836,7 @@ function closeAllConnections() {
   map8.clear();
   tmp2 = Array.from(map.keys())[Symbol.iterator]();
 }
-const getOlderHistoryCursor = fn(12625).getOlderHistoryCursor;
+const getOlderHistoryCursor = fn(12643).getOlderHistoryCursor;
 const map = new Map();
 const map1 = new Map();
 const map2 = new Map();
@@ -3461,7 +3472,7 @@ export const requestExternalAuthorizeUrl = function requestExternalAuthorizeUrl(
   }
   return applyArgumentsResult;
 };
-export const deleteStagedAttachment = function deleteStagedAttachment(projectId, id) {
+export const deleteStagedAttachment = function deleteStagedAttachment(arg0, arg1) {
   const self = this;
   const apply = closure_62.apply;
   if (typeof apply === "unknown") {

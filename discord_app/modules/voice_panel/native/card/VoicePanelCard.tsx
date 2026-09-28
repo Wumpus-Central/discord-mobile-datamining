@@ -1038,7 +1038,7 @@ const VoicePanelConstants = fn(11755);
   VoicePanelCardItemType: map1,
 } = VoicePanelConstants);
 const VoicePanelControlsModes = fn(11753).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(16909).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(16913).VoicePanelPIPModes;
 const EDGE_GUTTER = fn(11758).EDGE_GUTTER;
 const ApplicationStreamStates = fn(1074).ApplicationStreamStates;
 const ParticipantTypes = fn(4857).ParticipantTypes;
@@ -1409,7 +1409,7 @@ const __initData9 = {
 const __initData10 = {
   code: "function VoicePanelCardTsx12(props,previous){const{cheapWorkletShallowEqual,VoicePanelModes,TransitionStates,sharedVisible,isScrollVisible,runOnJS,cleanUp,id}=this.__closure;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const{mode:mode,focused:focused,transitionState:transitionState}=props;const isPIPMode=mode===VoicePanelModes.PIP;const manuallyFocusedId=focused===null||focused===void 0?void 0:focused.id;if(previous==null&&transitionState!==TransitionStates.YEETED){sharedVisible.set(1);}else if(transitionState===TransitionStates.YEETED){if(sharedVisible.get()===1&&isScrollVisible.get()){sharedVisible.set(0);}else{runOnJS(cleanUp)();}}else if((previous===null||previous===void 0?void 0:previous.transitionState)===TransitionStates.YEETED){sharedVisible.set(1);}else if(!isPIPMode){if(manuallyFocusedId==null){sharedVisible.set(1);}else{if(manuallyFocusedId!==id){sharedVisible.set(0);}else{sharedVisible.set(1);}}}}",
 };
-let closure_47 = { isSelf: false, hasVideo: false, user: { id: "__initData" } };
+let closure_47 = { isSelf: false, hasVideo: false, user: { id: "r" } };
 function layoutTransitionFunction(originX, SUBTLE_SPRING, scale, sharedValue2) {
   if (flag === undefined) {
     flag = false;
@@ -1746,14 +1746,13 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
       tmp27 = closure_20;
     }
   }
-  const obj13 = {
+  tmp29Result = closure_20(closure_37, {
     isRinging: tmp8,
     avatarURI: "r",
-    avatarDecoration: "isArray",
+    avatarDecoration: "Path",
     layout: layoutTransition,
     layoutPhysics: physics,
-  };
-  tmp29Result = closure_20(closure_37, obj13);
+  });
   tmp27 = closure_20;
   const tmp5Result16 = scrollPosition(id2[14]);
 });

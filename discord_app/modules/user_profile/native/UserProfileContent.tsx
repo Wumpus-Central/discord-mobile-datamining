@@ -148,7 +148,7 @@ function RemoveGameFriendIconButton(user) {
   const items = [channelId, guildId, user];
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(12618, dependencyMap.paths),
+      asyncRequireImpl(12636, dependencyMap.paths),
       "UserProfileGameFriendActionSheet",
       { user, guildId, channelId },
       "stack",
@@ -276,7 +276,7 @@ function EditSection(guildId) {
   };
   const obj2 = guildId(504);
   const obj4 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
-  const tmp7 = trackUserProfileAction(12552);
+  const tmp7 = trackUserProfileAction(12570);
   obj4.icon = closure_20(guildId(9713).PencilIcon, { size: "sm", color: trackUserProfileAction(576).colors.WHITE });
   if (null != stateFromStores) {
     const intl2 = tmp4(1115).intl;

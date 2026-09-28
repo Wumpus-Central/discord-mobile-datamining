@@ -14,7 +14,7 @@ const pressable = SettingBuilders.createPressable({
     return "Experiments Overrides Active";
   },
   parent: null,
-  IconComponent: fn(15141).BeakerIcon,
+  IconComponent: fn(15139).BeakerIcon,
   useDescription: function useExperimentOverrideActiveDescription() {
     const items = [ExperimentStore];
     const stateFromStores = initialize.useStateFromStores(

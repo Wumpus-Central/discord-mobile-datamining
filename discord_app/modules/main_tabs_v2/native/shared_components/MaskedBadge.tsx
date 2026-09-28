@@ -8,7 +8,7 @@ require = fn;
 const jsx = fn(21).jsx;
 const createStyles = fn(4836);
 let obj2 = {
-  maskStyle: { position: "relative", right: "HermesInternal" },
+  maskStyle: { position: "relative", right: "applicationId" },
   unreadDot: { width: 0, height: 0 },
   badgeStyle: { flexGrow: 1, flexShrink: 0 },
   unreadBadge: { position: "relative", bottom: -3 },

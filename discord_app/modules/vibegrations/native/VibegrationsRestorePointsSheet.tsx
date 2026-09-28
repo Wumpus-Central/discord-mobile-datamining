@@ -11,7 +11,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VibegrationsConnectionStore = fn(12624);
+const VibegrationsConnectionStore = fn(12642);
 ({
   createDatabaseRestorePoint: closure_7,
   fetchDatabaseRestorePoints: closure_8,

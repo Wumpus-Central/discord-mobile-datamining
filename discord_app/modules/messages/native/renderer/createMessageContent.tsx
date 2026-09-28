@@ -1404,8 +1404,8 @@ function createMessageContent(message) {
     }
     parseMessageMarkupResult = {
       content: "flexDirection",
-      hasSpoilerEmbeds: "onAccessibilityAction",
-      hasBailedAst: "woman_with_probing_cane",
+      hasSpoilerEmbeds: "b\u00E6rbar computer",
+      hasBailedAst: "computer",
     };
     const tmp13Result63 = tmp13(tmp3[42]);
   }

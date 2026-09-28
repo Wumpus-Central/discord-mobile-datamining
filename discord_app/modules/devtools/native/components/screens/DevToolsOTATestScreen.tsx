@@ -195,7 +195,7 @@ export default function DevToolsOTATestScreen() {
     closure_8(subLabel(5917).TableRow, {
       label: "Status",
       subLabel: tmp8[0],
-      icon: closure_8(subLabel(15117).WrenchIcon, {}),
+      icon: closure_8(subLabel(15115).WrenchIcon, {}),
     }),
     closure_8(subLabel(5917).TableRow, {
       label: "Root Path (tap to copy)",
@@ -214,7 +214,7 @@ export default function DevToolsOTATestScreen() {
   if (str == null) {
     str = "Unknown";
   }
-  let obj3 = { label: "Status", subLabel: tmp8[0], icon: closure_8(subLabel(15117).WrenchIcon, {}) };
+  let obj3 = { label: "Status", subLabel: tmp8[0], icon: closure_8(subLabel(15115).WrenchIcon, {}) };
   let obj4 = {
     label: "Root Path (tap to copy)",
     subLabel,
@@ -226,7 +226,7 @@ export default function DevToolsOTATestScreen() {
     closure_8(subLabel(5917).TableRow, {
       label: "Manifest Source",
       subLabel: str,
-      icon: closure_8(subLabel(15117).WrenchIcon, {}),
+      icon: closure_8(subLabel(15115).WrenchIcon, {}),
     }),
   ];
   const obj6 = { icon: closure_8(subLabel(7336).PaperIcon, {}), label: null };
@@ -243,7 +243,7 @@ export default function DevToolsOTATestScreen() {
   items2[1] = closure_8(subLabel(5917).TableRow, obj6);
   obj7.children = items2;
   items1[1] = closure_9(subLabel(5999).TableRowGroup, obj7);
-  let obj8 = { icon: closure_8(subLabel(15117).WrenchIcon, {}), label: "Is cookie set?", subLabel: null };
+  let obj8 = { icon: closure_8(subLabel(15115).WrenchIcon, {}), label: "Is cookie set?", subLabel: null };
   let str3 = "Yes";
   if (null == tmp7) {
     str3 = "No";
@@ -252,7 +252,7 @@ export default function DevToolsOTATestScreen() {
   const items3 = [closure_8(subLabel(5917).TableRow, obj8)];
   let tmp12Result = null != tmp7;
   if (tmp12Result) {
-    const obj9 = { icon: closure_8(tmp15(15117).WrenchIcon, {}), label: null };
+    const obj9 = { icon: closure_8(tmp15(15115).WrenchIcon, {}), label: null };
     const _JSON = JSON;
     obj9.label = JSON.stringify(tmp7, null, 2);
     tmp12Result = closure_8(tmp15(5917).TableRow, obj9);
@@ -263,7 +263,7 @@ export default function DevToolsOTATestScreen() {
     hasIcons: true,
     children: items3,
   });
-  let obj5 = { label: "Manifest Source", subLabel: str, icon: closure_8(subLabel(15117).WrenchIcon, {}) };
+  let obj5 = { label: "Manifest Source", subLabel: str, icon: closure_8(subLabel(15115).WrenchIcon, {}) };
   const items4 = [
     closure_8(subLabel(5917).TableRow, {
       label: "Check for Update & Reload",
@@ -285,7 +285,7 @@ export default function DevToolsOTATestScreen() {
   items4[1] = closure_8(subLabel(5917).TableRow, {
     label: "Verify OTA Files",
     subLabel: str4,
-    icon: closure_8(subLabel(15216).ClipboardCheckIcon, {}),
+    icon: closure_8(subLabel(15214).ClipboardCheckIcon, {}),
     onPress: function verifyFiles() {
       const self = this;
       const apply = closure_6.apply;

@@ -38,7 +38,7 @@ function CreateThreadHeaderButton(channel) {
 const View = fn(17).View;
 const constants = fn(10377).ChannelDetailsNavigatorScreens;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const SearchNavigatorScreens = fn(16455).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(16459).SearchNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let closure_11 = Object.freeze({});

@@ -23,9 +23,9 @@ import GuildSettingsRoleCreateModalActionCreatorsDefault from "GuildSettingsRole
 import GuildSettingsRolesUtils from "../GuildSettingsRolesUtils.tsx";
 import actions_GuildActionCreators from "../../../../actions/native/GuildActionCreators.tsx";
 import GuildSettingsModalRolesActionCreatorsDefault from "../GuildSettingsModalRolesActionCreators.tsx";
-import _modDef17415 from "../../../../../_runtime/metro/17415__.js";
-import _modDef17416 from "../../../../../_runtime/metro/17416__.js";
-import _modDef17417 from "../../../../../_runtime/metro/17417__.js";
+import _modDef17419 from "../../../../../_runtime/metro/17419__.js";
+import _modDef17420 from "../../../../../_runtime/metro/17420__.js";
+import _modDef17421 from "../../../../../_runtime/metro/17421__.js";
 import GuildSettingsRoleItemDefault from "GuildSettingsRoleItem.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -43,7 +43,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, StyleSheet } = get_ActivityIndicator);
 const isEveryoneRole = fn(2103).isEveryoneRole;
-let closure_16 = fn(17401).GuildSettingsRoleEditSections;
+let closure_16 = fn(17405).GuildSettingsRoleEditSections;
 const Constants = fn(1074);
 ({
   GuildSettingsSections: closure_17,
@@ -192,7 +192,7 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
   highestRole = stateFromStoresObject.highestRole;
   closure_129_0 = ref;
   let obj4 = guildId(504);
-  const guildSettingsRolesManagerState = guildId(17402).useGuildSettingsRolesManagerState(
+  const guildSettingsRolesManagerState = guildId(17406).useGuildSettingsRolesManagerState(
     (roleJustCreated) => roleJustCreated.roleJustCreated,
   );
   closure_129_1 = guildSettingsRolesManagerState;
@@ -220,7 +220,7 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
     }
   }, items2);
   closure_130_0 = guildId;
-  let obj5 = guildId(17402);
+  let obj5 = guildId(17406);
   let items3 = [highestRole, sorting];
   const stateFromStoresObject1 = guildId(504).useStateFromStoresObject(items3, () => {
     guild = GuildStore.getGuild(guildId);
@@ -476,16 +476,16 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
     let tmp4 = dependencyMap;
     if (closure_3) {
       if (isThemeDarkResult) {
-        tmp4 = 17414;
+        tmp4 = 17418;
         let tmp3Result = importDefault(tmp4);
       } else {
-        tmp3Result = _modDef17415;
+        tmp3Result = _modDef17419;
       }
     } else {
       if (isThemeDarkResult) {
-        let tmp3Result2 = _modDef17416;
+        let tmp3Result2 = _modDef17420;
       } else {
-        tmp3Result2 = _modDef17417;
+        tmp3Result2 = _modDef17421;
       }
       if (hasRoles) {
         const items = [closure_1.subheaderContainer];
@@ -640,7 +640,7 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
         };
       }
       obj2.onMoveDown = fn2;
-      return hasRoles(closure_1(17418), obj2, role.id);
+      return hasRoles(closure_1(17422), obj2, role.id);
     }
   }, items19);
   const items20 = [callback2, callback6, callback5, hasRoles, sorting, navigation];

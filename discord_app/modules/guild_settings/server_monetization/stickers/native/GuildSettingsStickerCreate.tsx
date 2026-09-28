@@ -539,7 +539,7 @@ export default noop.forwardRef((stickerId, arg1) => {
     obj18.style = tmp.stickerPreviewImage;
     tmp32Result = tmp32(c6, obj18);
   } else {
-    tmp32Result = tmp32(tmp31(17378).StickerPlusIcon, { size: "lg" });
+    tmp32Result = tmp32(tmp31(17382).StickerPlusIcon, { size: "lg" });
   }
   obj16.children = tmp32Result;
   items4[1] = onPressEmoji(stickerId(5435).PressableHighlight, obj16);

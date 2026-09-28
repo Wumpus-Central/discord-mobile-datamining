@@ -26,7 +26,7 @@ export default function MessageRequestMutualServers(textVariant) {
   }
   const suffix = textVariant.suffix;
   const tmp3 = closure_6();
-  const mutualGuildsForMessageRequests = iconSize(16699).useMutualGuildsForMessageRequests(userId);
+  const mutualGuildsForMessageRequests = iconSize(16703).useMutualGuildsForMessageRequests(userId);
   const substr = mutualGuildsForMessageRequests.slice(0, 3);
   if (mutualGuildsForMessageRequests.length > 0) {
     const intl2 = tmp4(1115).intl;

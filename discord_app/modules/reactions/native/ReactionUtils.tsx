@@ -69,7 +69,7 @@ export const handleAddNewReactions = function handleAddNewReactions(channel, id)
           require("ActionSheetActionCreators").openLazy(
             tmp13(ReactionTypes[14])(ReactionTypes[13], ReactionTypes.paths),
             "SuperReactionUpsellActionSheet",
-            { onDismiss: "__initData" },
+            { onDismiss: "r" },
           );
           const obj3 = require("ActionSheetActionCreators");
         }

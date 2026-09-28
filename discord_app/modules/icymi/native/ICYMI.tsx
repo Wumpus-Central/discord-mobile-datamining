@@ -41,8 +41,8 @@ const require = globalThis.__r;
 const util = LeftBackIconWithBadge(1115);
 const Pressables = LeftBackIconWithBadge(5435);
 const XSmallIcon = LeftBackIconWithBadge(5992);
-const notifications_Notifications = LeftBackIconWithBadge(16042);
-const BackIconWithBadge = LeftBackIconWithBadge(16044);
+const notifications_Notifications = LeftBackIconWithBadge(16038);
+const BackIconWithBadge = LeftBackIconWithBadge(16040);
 require = fn;
 function SettingsButton() {
   return closure_1_14(IconButton.IconButton, {
@@ -182,7 +182,7 @@ function ICYMI(inNestedNavigator) {
       hasOpenedEnoughTimesResult = ICYMIStore.hasOpenedEnoughTimes();
     }
     if (hasOpenedEnoughTimesResult) {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16118, dependencyMap.paths), "ICYMIFeedbackSheet", {});
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16114, dependencyMap.paths), "ICYMIFeedbackSheet", {});
     }
   }, items6);
   const ref = handleOnRefresh.useRef(null);
@@ -412,7 +412,7 @@ function keyExtractor(id) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, RefreshControl: metroRequire } = get_ActivityIndicator);
-let closure_12 = fn(16094).NUM_GUILDS_EXTENDED_ONBOARDING;
+let closure_12 = fn(16090).NUM_GUILDS_EXTENDED_ONBOARDING;
 const ContentDismissActionType = fn(2042).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
@@ -429,7 +429,7 @@ let closure_17 = createStyles.createStyles((paddingTop) => {
   };
   return obj;
 });
-const createICYMIStyles = fn(16095);
+const createICYMIStyles = fn(16091);
 let closure_18 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = {
     container: { flex: 1, flexShrink: 1, flexGrow: 1 },

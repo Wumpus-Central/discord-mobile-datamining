@@ -7,7 +7,7 @@ import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx
 import NativePaymentHooksDefault from "../../../payments/native/hooks/NativePaymentHooks.android.tsx";
 import useStoreFrontPriceDefault from "../../../billing/native/subscription/useStoreFrontPrice.tsx";
 import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import _modDef16197 from "../../../../../_runtime/metro/16197__.js";
+import _modDef16193 from "../../../../../_runtime/metro/16193__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import SubscriptionPlanStore from "../../../../stores/billing/SubscriptionPlanStore.tsx";
@@ -136,7 +136,7 @@ export const ArrowButton = function ArrowButton(arg0) {
       style: tmp.arrowButtonText,
       children: text,
     }),
-    React7(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef16197, style: tmp.arrowButtonIcon }),
+    React7(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef16193, style: tmp.arrowButtonIcon }),
   ];
   obj.children = items;
   return closure_1_10(Pressables.PressableOpacity, obj);

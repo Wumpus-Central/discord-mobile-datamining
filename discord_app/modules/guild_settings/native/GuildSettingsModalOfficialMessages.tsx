@@ -9,7 +9,7 @@ import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSh
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import GuildOfficialMessageUtils from "../../messages/GuildOfficialMessageUtils.tsx";
 import HeaderActionButton from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import _modDef14831 from "../../../../_runtime/metro/14831__.js";
+import _modDef14829 from "../../../../_runtime/metro/14829__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -48,7 +48,7 @@ function MessagePreview(theme) {
   const items1 = [tmp.chatContainerInner, { backgroundColor: _modDef672(selectedColor).alpha(closure_1_10).hex() }];
   obj4.style = items1;
   const hexResult1 = _modDef672(selectedColor).alpha(closure_1_10).hex();
-  const items2 = [closure_1_12(native.Avatar, { source: _modDef14831 })];
+  const items2 = [closure_1_12(native.Avatar, { source: _modDef14829 })];
   const obj6 = { style: tmp.chatContent, children: null };
   const obj7 = { style: tmp.chatHeader, children: null };
   const obj8 = {
@@ -243,7 +243,7 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
     obj2.onSelect = function onSelect(officialMessageColor) {
       navigation(submitting[18]).updateGuild({ officialMessageColor });
     };
-    obj.openLazy(asyncRequireImpl(15929, dependencyMap.paths), "RoleColorPicker", obj2);
+    obj.openLazy(asyncRequireImpl(15927, dependencyMap.paths), "RoleColorPicker", obj2);
   }, items5);
   const tmp8 = hasChanges(officialMessageColor.useState(0), 2);
   [tmp15, c7] = hasChanges(officialMessageColor.useState(0), 2);

@@ -29,8 +29,8 @@ import _modDef10915 from "../../../../../_runtime/metro/10915__.js";
 import SoundboardIcon from "../../../../design/components/Icon/native/redesign/generated/SoundboardIcon.tsx";
 import useInviteMembersCallback from "../hooks/useInviteMembersCallback.tsx";
 import useCanInviteMembers from "../hooks/useCanInviteMembers.tsx";
-import _modDef16937 from "../../../../../_runtime/metro/16937__.js";
-import _modDef16938 from "../../../../../_runtime/metro/16938__.js";
+import _modDef16941 from "../../../../../_runtime/metro/16941__.js";
+import _modDef16942 from "../../../../../_runtime/metro/16942__.js";
 import useSoundboardConfigDefault from "../hooks/useSoundboardConfig.tsx";
 import useHideSelfVideoDefault from "../../../calls/useHideSelfVideo.tsx";
 import ChannelCallUtils from "../../../video_calls/native/ChannelCallUtils.tsx";
@@ -172,7 +172,7 @@ function toggleDeaf() {
 }
 const Constants = fn(1074);
 ({ AnalyticEvents: map1, PlatformTypes: closure_14 } = Constants);
-let closure_15 = fn(17031).SelfStreamAndVideoAlertType;
+let closure_15 = fn(17035).SelfStreamAndVideoAlertType;
 const MediaEngineContextTypes = fn(4861).MediaEngineContextTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -342,7 +342,7 @@ export const DeafenSwitch = function DeafenSwitch() {
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null };
   obj2.icon = jsx(TableRowIcon.TableRowIcon, {
     IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon,
-    source: _modDef16938,
+    source: _modDef16942,
   });
   const intl = util.intl;
   obj2.accessibilityHint = intl.string(util.t.wjcRFX);
@@ -457,7 +457,7 @@ export const HideSelfVideo = function HideSelfVideo() {
       if (!paths) {
         if (!VIDEO) {
           VIDEO = constants.VIDEO;
-          const f121525 = () => f121525(!VIDEO);
+          const f121578 = () => f121578(!VIDEO);
           const obj2 = {
             importer() {
               return VIDEO(paths[16])(paths[15], paths.paths).then((result) => {
@@ -542,7 +542,7 @@ export const VoiceSettingsButton = function VoiceSettingsButton(guildId) {
   }, items);
   const obj = {
     onPress: callback,
-    icon: jsx(guildId(5923).TableRowIcon, { IconComponent: guildId(6798).SettingsIcon, source: _modDef16937 }),
+    icon: jsx(guildId(5923).TableRowIcon, { IconComponent: guildId(6798).SettingsIcon, source: _modDef16941 }),
     label: null,
     subLabel: null,
     trailing: null,
@@ -554,7 +554,7 @@ export const VoiceSettingsButton = function VoiceSettingsButton(guildId) {
   obj.trailing = jsx(guildId(5924).TableRowArrow, {});
   return jsx(guildId(5917).TableRow, {
     onPress: callback,
-    icon: jsx(guildId(5923).TableRowIcon, { IconComponent: guildId(6798).SettingsIcon, source: _modDef16937 }),
+    icon: jsx(guildId(5923).TableRowIcon, { IconComponent: guildId(6798).SettingsIcon, source: _modDef16941 }),
     label: null,
     subLabel: null,
     trailing: null,

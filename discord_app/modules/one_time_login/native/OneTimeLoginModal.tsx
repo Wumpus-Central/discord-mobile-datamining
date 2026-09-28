@@ -243,7 +243,7 @@ export default function OneTimeLoginModal(token) {
   const items6 = [closure_13(ThemedGradientDefault, obj2)];
   let obj4 = { style: tmp.container, children: null };
   let obj5 = { style: tmp.centerContent, children: null };
-  const items7 = [closure_13(callback3, { source: token(13408), style: tmp.logo })];
+  const items7 = [closure_13(callback3, { source: token(13407), style: tmp.logo })];
   const obj7 = { style: tmp.loadingContainer, children: null };
   const items8 = [closure_13(callback2, {})];
   const obj8 = { variant: "text-lg/semibold", children: null };

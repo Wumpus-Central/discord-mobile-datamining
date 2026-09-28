@@ -92,7 +92,7 @@ function WishlistSuggestionsGridContents(arg0) {
   let obj2 = trackUserProfileWishlistAction(504);
   const obj3 = { minCardSize: 80, maxCardSize: 120, containerWidth, maxWidth, sidePadding: closure_8 + PX_16 + 1, gap };
   const tmp7 = useInitialValueDefault(() => trackUserProfileWishlistAction(dependencyMap[18]).v4());
-  let obj4 = trackUserProfileWishlistAction(12666);
+  let obj4 = trackUserProfileWishlistAction(12683);
   const items2 = obj4.useAddToWishlistGridItems({
     userId,
     wishlist,
@@ -207,7 +207,7 @@ function WishlistSuggestionsGridContents(arg0) {
     items6[2] = closure_12(View, obj18);
     obj10.children = items6;
     obj8.children = closure_13(ReanimatedRexportDefault.View, obj10);
-    tmp12Result = closure_12(tmp(12667).WishlistAnalyticsProvider, obj8);
+    tmp12Result = closure_12(tmp(12684).WishlistAnalyticsProvider, obj8);
   }
   return tmp12Result;
 }

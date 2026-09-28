@@ -15,8 +15,8 @@ const result = size.fileFinishedImporting("modules/safety_flows/native/OverviewS
 
 export default function OverviewScreen() {
   let tmp = closure_6();
-  task = task(17693).useSafetyFlowTask().task;
-  let obj = task(17693);
+  task = task(17697).useSafetyFlowTask().task;
+  let obj = task(17697);
   const navigation = task(1485).useNavigation();
   const items = [task, navigation];
   const callback = noop.useCallback(() => {
@@ -48,7 +48,7 @@ export default function OverviewScreen() {
     const tasks = flow_context.tasks;
     if (tasks != null) {
       mapped = tasks.map((task_type, index) => {
-        const obj = { tip: task(17688).TASK_TYPE_TO_TITLE[task_type.task_type], index: index + 1 };
+        const obj = { tip: task(17692).TASK_TYPE_TO_TITLE[task_type.task_type], index: index + 1 };
         return closure_1_4(navigation(8036), obj, task_type.task_type);
       });
     }
@@ -66,7 +66,7 @@ export default function OverviewScreen() {
   obj8.children = closure_5(task(5279).Stack, obj3);
   const items3 = [closure_4(task(7871).ModalContent, obj8)];
   const obj10 = { children: null };
-  const items4 = [closure_4(navigation(17695), {})];
+  const items4 = [closure_4(navigation(17699), {})];
   const obj11 = { variant: "primary", text: null, onPress: null };
   const intl4 = tmp2(1115).intl;
   obj11.text = intl4.string(navigation(2781).Ks6opt);

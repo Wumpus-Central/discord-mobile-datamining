@@ -19,7 +19,7 @@ export default noop.memo(
     const optional = chatInputRef.optional;
     ref = undefined;
     dependencyMap = ref;
-    let obj = chatInputRef(16429);
+    let obj = chatInputRef(16433);
     let obj2 = { content: threadSettingsDraft.name };
     ref = ref.useRef(threadSettingsDraft.name);
     const items = [threadSettingsDraft.parentChannelId];
@@ -69,7 +69,7 @@ export default noop.memo(
         }
       }
     }, items3);
-    const renderErrorResult = chatInputRef(16429).renderError(chatInputRef.threadNameError, {
+    const renderErrorResult = chatInputRef(16433).renderError(chatInputRef.threadNameError, {
       content: threadSettingsDraft.name,
     });
     const items4 = [ChannelStore];

@@ -61,7 +61,7 @@ export const getSettingTitle = function getSettingTitle(id) {
   return cachedSettingTitle;
 };
 export const getSettingSearchableTitles = function getSettingSearchableTitles() {
-  const entries = Object.entries(items(14143).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(14142).SETTING_RENDERER_CONFIG);
   items = [];
   const item = entries.forEach((item) => {
     [tmp, tmp2] = item;
@@ -82,7 +82,7 @@ export const getSettingSearchableTitles = function getSettingSearchableTitles() 
 export const getSettingScreens = function getSettingScreens() {
   let items = [];
   set = new Set();
-  const entries = Object.entries(items(14143).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(14142).SETTING_RENDERER_CONFIG);
   const item = entries.forEach((item) => {
     [tmp, tmp2] = item;
     if (tmp2.type === constants2.ROUTE) {
@@ -97,7 +97,7 @@ export const getSettingScreens = function getSettingScreens() {
 };
 export const getDesignSystemScreens = function getDesignSystemScreens() {
   let items = [];
-  const entries = Object.entries(items(14143).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(14142).SETTING_RENDERER_CONFIG);
   const item = entries.forEach((item) => {
     [tmp, tmp2] = item;
     let tmp3 = tmp2.type === constants2.ROUTE;

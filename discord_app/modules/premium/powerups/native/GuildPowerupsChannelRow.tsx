@@ -127,7 +127,7 @@ export default function GuildPowerupsChannelRow(guildId) {
   obj5.mode = DEFAULT;
   obj4.name = closure_5(tmp14(11868).BaseChannelName, obj5);
   const tmp3Result = dismissNewBadgeIfShown(11868);
-  obj4.icon = closure_5(tmp14(11868).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp14(15852).BoostTier2Icon });
+  obj4.icon = closure_5(tmp14(11868).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp14(15850).BoostTier2Icon });
   if (tmp6Result.showNewBadgeOnRow) {
     let tmp16Result = closure_5(tmp14(11774).NewBadge, {});
   } else {

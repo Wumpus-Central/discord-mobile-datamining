@@ -490,7 +490,7 @@ let closure_14 = noop.memo(function TemplateControls(arg0) {
   };
   const tmp = _slicedToArray(noop.useState(false), 2);
   _slicedToArray = tmp[1];
-  const tmp3 = guildTemplate(17449)(guildTemplate.code);
+  const tmp3 = guildTemplate(17453)(guildTemplate.code);
   noop = tmp3;
   let obj = { spacing: guildTemplate(576).space.PX_12, children: null };
   let obj2 = { label: null, children: null };

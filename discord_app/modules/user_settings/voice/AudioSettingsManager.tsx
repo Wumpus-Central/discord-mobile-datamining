@@ -119,7 +119,7 @@ function handleSetLocalMute(arg0) {
       "audioContextSettings",
       async (arg0) => {
         closure_0 = arg0;
-        let result = closure_0(13615).drainPendingAudioSettings((arg0, arg1, arg2) => {
+        let result = closure_0(13614).drainPendingAudioSettings((arg0, arg1, arg2) => {
           let diff;
           const result = AudioSettingsUtils.coerceAudioContextForProto(arg0);
           flag = false;
@@ -195,7 +195,7 @@ function handleSetLocalSoundboardMute(userId) {
       "audioContextSettings",
       async (arg0) => {
         closure_0 = arg0;
-        let result = closure_0(13615).drainPendingAudioSettings((arg0, arg1, arg2) => {
+        let result = closure_0(13614).drainPendingAudioSettings((arg0, arg1, arg2) => {
           let diff;
           const result = AudioSettingsUtils.coerceAudioContextForProto(arg0);
           flag = false;
@@ -293,7 +293,7 @@ let closure_12 = apply.debounce(() => {
     "audioContextSettings",
     async (arg0) => {
       closure_0 = arg0;
-      let result = closure_0(13615).drainPendingAudioSettings((arg0, arg1, arg2) => {
+      let result = closure_0(13614).drainPendingAudioSettings((arg0, arg1, arg2) => {
         let diff;
         const result = AudioSettingsUtils.coerceAudioContextForProto(arg0);
         flag = false;

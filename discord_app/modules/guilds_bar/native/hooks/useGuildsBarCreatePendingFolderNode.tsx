@@ -31,7 +31,7 @@ export default function useGuildsBarCreatePendingFolderNode() {
   }, items2);
   if (arr2.length > 0) {
     const obj3 = {
-      folderId: tmp2(15997).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER,
+      folderId: tmp2(15995).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER,
       folderName: null,
       expanded: null,
       guildIds: null,

@@ -77,8 +77,8 @@ export default {
       const id = socket.socket.application.id;
       if (null == id) {
         const obj = { errorCode: constants2.INVALID_COMMAND };
-        const tmp7 = new RPCErrorDefault(obj, "No application.");
-        throw tmp7;
+        const tmp10 = new RPCErrorDefault(obj, "No application.");
+        throw tmp10;
       } else {
         const HTTP = HTTPUtils.HTTP;
         const request = {

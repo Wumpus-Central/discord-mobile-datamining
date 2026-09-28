@@ -14,7 +14,7 @@ const pressable = SettingBuilders.createPressable({
     return "Build Override Active";
   },
   parent: null,
-  IconComponent: fn(14689).RefreshIcon,
+  IconComponent: fn(14506).RefreshIcon,
   useDescription: function useBuildOverrideActiveDescription() {
     const items = [BuildOverrideStore];
     const stateFromStores = initialize.useStateFromStores(items, () => {

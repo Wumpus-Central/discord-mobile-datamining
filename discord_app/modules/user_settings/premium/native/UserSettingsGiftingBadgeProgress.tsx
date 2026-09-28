@@ -404,7 +404,7 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
     obj23.children = intl5.string(tmp4(2583).WZ4cXA);
     const items6 = [closure_9(tmp7(4832).Text, obj23)];
     if (tmp11Result) {
-      let ChevronSmallDownIcon = tmp7(13114).ChevronSmallUpIcon;
+      let ChevronSmallDownIcon = tmp7(13113).ChevronSmallUpIcon;
     } else {
       ChevronSmallDownIcon = tmp7(10615).ChevronSmallDownIcon;
     }

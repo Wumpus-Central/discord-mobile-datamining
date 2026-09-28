@@ -22,8 +22,8 @@ export default function FormTrialIntervalPicker(disabled) {
     let intl = interval(1115).intl;
     let stringResult = intl.string(interval(1115).t.WZG1BU);
   } else {
-    stringResult = interval(14778).formatPlanIntervalDuration(interval);
-    let obj = interval(14778);
+    stringResult = interval(14776).formatPlanIntervalDuration(interval);
+    let obj = interval(14776);
   }
   return jsx(FormDropdownDefault, {
     label: stringResult,

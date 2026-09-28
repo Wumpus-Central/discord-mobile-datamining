@@ -1,5 +1,5 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockBlurredHeaderPlaceholder.tsx
-import thumbHashToRGBA from "../../../../../_runtime/14725_thumbHashToRGBA.js";
+import thumbHashToRGBA from "../../../../../_runtime/14723_thumbHashToRGBA.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;

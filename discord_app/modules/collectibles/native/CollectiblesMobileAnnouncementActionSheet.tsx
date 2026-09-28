@@ -7,8 +7,8 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import BottomSheetModal from "../../../../_runtime/06045_BottomSheetModal.js";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import CollectiblesActionCreators from "../CollectiblesActionCreators.tsx";
-import _modDef16765 from "../../../../discord_assets/assets/collectibles/frames/announcement_sheet_frame.png.js";
-import _modDef16766 from "../../../../discord_assets/assets/collectibles/frames/ea/announcement_key_1.png.js";
+import _modDef16769 from "../../../../discord_assets/assets/collectibles/frames/announcement_sheet_frame.png.js";
+import _modDef16770 from "../../../../discord_assets/assets/collectibles/frames/ea/announcement_key_1.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -46,7 +46,7 @@ function CatEarsBackdrop() {
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
   };
-  obj5.source = { uri: _modDef16765 };
+  obj5.source = { uri: _modDef16769 };
   obj5.style = tmp.mascotImage;
   obj4.children = React7(React4, obj5);
   obj3.children = React7(hasOwnProperty, obj4);
@@ -150,7 +150,7 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   let obj = { onDismiss: callback1, backdropChildren: memo, children: null };
   const obj2 = { style: tmp.container, children: null };
   const obj3 = {
-    source: { uri: _modDef16766 },
+    source: { uri: _modDef16770 },
     style: tmp.framePreviewImage,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
@@ -175,7 +175,7 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   const intl3 = markAsDismissed(1115).intl;
   obj8.text = intl3.string(markAsDismissed(1115).t.MkVbBY);
   items4[1] = closure_9(FeatureRow, obj8);
-  const obj9 = { icon: closure_9(markAsDismissed(16767).ShopIllocon, { size: 32 }), text: null };
+  const obj9 = { icon: closure_9(markAsDismissed(16771).ShopIllocon, { size: 32 }), text: null };
   const intl4 = markAsDismissed(1115).intl;
   obj9.text = intl4.string(markAsDismissed(1115).t["/4bQuG"]);
   items4[2] = closure_9(FeatureRow, obj9);

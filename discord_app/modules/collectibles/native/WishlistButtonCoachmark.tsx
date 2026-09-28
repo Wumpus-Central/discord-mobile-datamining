@@ -30,7 +30,7 @@ export default function WishlistButtonCoachmark(anchorRef) {
   const tmp5 = tmp3[0] === hasNeverWishlisted(2029).DismissibleContent.WISHLIST_MOBILE_NUX_PRODUCT_CARD_COACHMARK;
   _slicedToArray = tmp5;
   const obj2 = hasNeverWishlisted(6806);
-  registerDismiss = hasNeverWishlisted(15434).useCollectiblesCoachmarkScrollDismissContext().registerDismiss;
+  registerDismiss = hasNeverWishlisted(15432).useCollectiblesCoachmarkScrollDismissContext().registerDismiss;
   let items1 = [tmp5, registerDismiss, tmp3[1]];
   const effect = registerDismiss.useEffect(() => {
     if (closure_2) {
@@ -50,7 +50,7 @@ export default function WishlistButtonCoachmark(anchorRef) {
     };
     return obj;
   }, items2);
-  const obj3 = hasNeverWishlisted(15434);
+  const obj3 = hasNeverWishlisted(15432);
   const coachmark = hasNeverWishlisted(10589).useCoachmark(anchorRef.anchorRef, memo1);
   return null;
 }

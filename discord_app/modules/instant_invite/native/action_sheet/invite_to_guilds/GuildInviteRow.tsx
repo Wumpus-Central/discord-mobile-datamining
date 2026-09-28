@@ -6,7 +6,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const useGuildInviteSendStates = fn(12673).useGuildInviteSendStates;
+const useGuildInviteSendStates = fn(12546).useGuildInviteSendStates;
 const InviteSendStates = fn(7155).InviteSendStates;
 const jsx = fn(21).jsx;
 const size = fn(2);

@@ -315,7 +315,7 @@ let ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
   ACTIVITY_LAYOUT_PHYSICS_DEFAULT: map1,
   LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: closure_14,
 } = ActivityPanelConstants);
-let closure_15 = fn(16838).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+let closure_15 = fn(16842).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 const ThemeTypes = fn(1074).ThemeTypes;
 const PIP_WINDOW_OFFSET = fn(11756).PIP_WINDOW_OFFSET;
 const jsx = fn(21).jsx;

@@ -453,7 +453,7 @@ export const UserProfileAccountConnectionsCard = function UserProfileAccountConn
   const stateFromStores = userId(504).useStateFromStores(items1, () => StreamerModeStore.hidePersonalInformation);
   const obj3 = userId(504);
   const tmp5 = theme;
-  ({ connections, appIdentities } = theme(12654)(userId));
+  ({ connections, appIdentities } = theme(12672)(userId));
   if (!stateFromStores) {
     const items2 = [];
     HermesBuiltin.arraySpread(

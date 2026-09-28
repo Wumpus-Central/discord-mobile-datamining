@@ -244,11 +244,7 @@ export default function useExternalPipParticipant() {
           return obj;
         }
       }
-      return {
-        selectedParticipantSpeaking: false,
-        selectedParticipantUserId: "Boolean",
-        selectedStreamId: "paddingHorizontal",
-      };
+      return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "channel" };
     },
     items4,
   );

@@ -4,7 +4,7 @@ import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import NotificationPermissionUtil from "../../NotificationPermissionUtil.tsx";
 import PushNotificationActionCreators from "../../../../../actions/native/PushNotificationActionCreators.tsx";
 import NewUserPermissionsOnboardingDefault from "../NewUserPermissionsOnboarding.android.tsx";
-import _modDef15627 from "../../../../../../_runtime/metro/15627__.js";
+import _modDef15625 from "../../../../../../_runtime/metro/15625__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;

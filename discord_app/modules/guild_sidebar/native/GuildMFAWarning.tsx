@@ -5,7 +5,7 @@ import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import useScaledTextLineHeight from "../../screen/native/useScaledTextLineHeight.android.tsx";
-import _modDef15834 from "../../../../_runtime/metro/15834__.js";
+import _modDef15832 from "../../../../_runtime/metro/15832__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -92,7 +92,7 @@ const result = size.fileFinishedImporting("modules/guild_sidebar/native/GuildMFA
 export default function GuildMFAWarning() {
   const tmp = closure_8();
   const obj = { accessibilityRole: "button", style: tmp.MFAWarning, onPress: handlePress, children: null };
-  const items = [timestampProducer(Image, { style: tmp.MFAWarningIcon, source: _modDef15834 })];
+  const items = [timestampProducer(Image, { style: tmp.MFAWarningIcon, source: _modDef15832 })];
   const obj3 = { variant: "text-xs/medium", color: "text-default", children: null };
   const intl = util.intl;
   const items1 = [intl.string(util.t.ZIf8Ag)];

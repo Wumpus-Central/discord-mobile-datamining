@@ -5,7 +5,7 @@ import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/Actio
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import useCreateChannelSubmit from "../../../channel/useCreateChannelSubmit.tsx";
 import CreateChannelModalActionCreatorsDefault from "../../../../actions/native/CreateChannelModalActionCreators.tsx";
-import _modDef13148 from "../../../../../_runtime/metro/13148__.js";
+import _modDef13147 from "../../../../../_runtime/metro/13147__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
@@ -39,9 +39,9 @@ function ChannelRow(channel) {
   obj.channel = channel;
   obj.selected = selected;
   obj.resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
-  const children = [closure_11(onChannelSelected(15750), obj)];
+  const children = [closure_11(onChannelSelected(15748), obj)];
   if (selected) {
-    const obj2 = { style: tmp.selectedIcon, source: tmp2(17516) };
+    const obj2 = { style: tmp.selectedIcon, source: tmp2(17520) };
     selected = closure_11(tmp2(5899), obj2);
     const tmp2Result = tmp2(5899);
   }
@@ -193,7 +193,7 @@ export default function ChannelSelectorActionSheet(guildId) {
     if (tmp.createChannelLabel.color != null) {
       str1 = str.toString();
     }
-    const obj7 = { color: str1, source: _modDef13148 };
+    const obj7 = { color: str1, source: _modDef13147 };
     const items3 = [closure_11(tmp5(1177).Icon, obj7)];
     const obj8 = { style: tmp.createChannelLabel, variant: "text-md/medium", color: "text-link", children: null };
     const intl3 = tmp5(1115).intl;

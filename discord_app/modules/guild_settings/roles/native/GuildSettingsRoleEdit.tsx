@@ -39,11 +39,11 @@ require = fn;
 let closure_4 = ["guild"];
 const View = fn(17).View;
 const isEveryoneRole = fn(2103).isEveryoneRole;
-const RoleColorsStyle = fn(17406).RoleColorsStyle;
-const constants = fn(17401).GuildSettingsRoleEditSections;
+const RoleColorsStyle = fn(17410).RoleColorsStyle;
+const constants = fn(17405).GuildSettingsRoleEditSections;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_18, DEFAULT_ROLE_COLOR: closure_19, GuildSettingsSections: closure_20 } = Constants);
-const HOLOGRAPHIC_ROLE_COLORS = fn(17408).HOLOGRAPHIC_ROLE_COLORS;
+const HOLOGRAPHIC_ROLE_COLORS = fn(17412).HOLOGRAPHIC_ROLE_COLORS;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23, Fragment: closure_24 } = jsxProd);
 const createStyles = fn(4836);
@@ -195,10 +195,10 @@ class GuildSettingsRoleEdit extends PureComponent {
           closure_2 = editedRoleConnectionConfigurationsMap.get(id);
         }
         function success() {
-          applyArgumentsResult(17420).commitSectionChanges(id, effectiveSection);
+          applyArgumentsResult(17424).commitSectionChanges(id, effectiveSection);
           navigation.pop();
           closure_2_0.setState({ submitting: false, formErrors: {} });
-          const obj = applyArgumentsResult(17420);
+          const obj = applyArgumentsResult(17424);
           const obj3 = { key: "ROLE_EDIT_SAVED", content: null, icon: null };
           const intl = applyArgumentsResult(1115).intl;
           obj3.content = intl.string(applyArgumentsResult(1115).t.ulZn1j);
@@ -373,11 +373,11 @@ class GuildSettingsRoleEdit extends PureComponent {
             const id = closure_2_0.props.role.id;
             const effectiveSection = closure_2_0.getEffectiveSection();
             if (effectiveSection === constants.VERIFICATIONS) {
-              const result = applyArgumentsResult(17420).discardConnectionsChanges(id);
-              const obj2 = applyArgumentsResult(17420);
+              const result = applyArgumentsResult(17424).discardConnectionsChanges(id);
+              const obj2 = applyArgumentsResult(17424);
             } else {
-              const result1 = applyArgumentsResult(17420).discardSectionChanges(id, effectiveSection);
-              const obj = applyArgumentsResult(17420);
+              const result1 = applyArgumentsResult(17424).discardSectionChanges(id, effectiveSection);
+              const obj = applyArgumentsResult(17424);
             }
             closure_0(true);
           };

@@ -4,7 +4,7 @@ import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import _modDef9419 from "../../../../_runtime/metro/09419__.js";
 import AppIconUtils from "AppIconUtils.tsx";
-import _modDef16745 from "../../../../_runtime/metro/16745__.js";
+import _modDef16749 from "../../../../_runtime/metro/16749__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -52,9 +52,9 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
   };
   const obj4 = { style: tmp.info, children: null };
   const isPremiumResult = PremiumUtilsDefault.isPremium(stateFromStores);
-  const items2 = [closure_8(closure_4, { source: _modDef16745, style: tmp.image }), ,];
+  const items2 = [closure_8(closure_4, { source: _modDef16749, style: tmp.image }), ,];
   const obj6 = { style: tmp.titleContainer, children: null };
-  const obj5 = { source: _modDef16745, style: tmp.image };
+  const obj5 = { source: _modDef16749, style: tmp.image };
   const items3 = [
     closure_8(markAsDismissed(1177).Icon, {
       source: _modDef9419,

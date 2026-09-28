@@ -24,7 +24,7 @@ import RouteManagerDefault from "../modules/routing/RouteManager.tsx";
 import DiscordGestureHandlerRootViewDefault from "../modules/gesture_handler/native/DiscordGestureHandlerRootView.android.tsx";
 import getChannelDetailsFromRouteDefault from "../modules/main_tabs_v2/native/getChannelDetailsFromRoute.tsx";
 import MainNavigationLoggerDefault from "../modules/main_tabs_v2/helpers/MainNavigationLogger.tsx";
-import ReanimatedScreenProvider from "../../_runtime/14123_ReanimatedScreenProvider.js";
+import ReanimatedScreenProvider from "../../_runtime/14122_ReanimatedScreenProvider.js";
 import RootThemeContextProvider from "../modules/themes/RootThemeContextProvider.native.tsx";
 import AccessibilityPreferencesContextProviderDefault from "../modules/a11y/native/AccessibilityPreferencesContextProvider.native.tsx";
 import ErrorBoundaryDefault from "ErrorBoundary.tsx";
@@ -191,7 +191,7 @@ let result = ReanimatedRexport.configureReanimatedLogger({ level: fn(4566).Reani
 try {
   fn(5211).enableFreeze();
   let obj6 = fn(5211);
-  let obj8 = { useTrackNavigatorScreenImpression: fn(14119).useTrackNavigatorScreenImpression };
+  let obj8 = { useTrackNavigatorScreenImpression: fn(14118).useTrackNavigatorScreenImpression };
   fn(6457).setDesignConfig(obj8);
   let c22 = false;
   let closure_23 = {
@@ -201,7 +201,7 @@ try {
   const result1 = SentryUtilsDefault.profiledRootComponent(function AppContainer(children) {
     children = children.children;
     const appEntryKey = children.appEntryKey;
-    const requestGatewaySocket = appEntryKey(14122).useRequestGatewaySocket("AppContainer:" + appEntryKey);
+    const requestGatewaySocket = appEntryKey(14121).useRequestGatewaySocket("AppContainer:" + appEntryKey);
     const effect = noop.useEffect(() => {
       if (!c22) {
         RNScreensTurboModule = RNScreensTurboModule.RNScreensTurboModule;
@@ -228,8 +228,8 @@ try {
       }
       const obj = appEntryKey(1364);
     }, []);
-    let obj = appEntryKey(14122);
-    const riveAppStatePlaybackExperiment = appEntryKey(15565).useRiveAppStatePlaybackExperiment("AppContainer");
+    let obj = appEntryKey(14121);
+    const riveAppStatePlaybackExperiment = appEntryKey(15563).useRiveAppStatePlaybackExperiment("AppContainer");
     closure_129_0 = riveAppStatePlaybackExperiment;
     let items = [riveAppStatePlaybackExperiment];
     const memo = noop.useMemo(() => {

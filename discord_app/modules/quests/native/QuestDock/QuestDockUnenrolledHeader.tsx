@@ -6,8 +6,8 @@ import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
 import QuestDisclosureModalActionCreatorsDefault from "../QuestDisclosureModal/QuestDisclosureModalActionCreators.tsx";
 import QuestGameLogotypeDefault from "../QuestGameLogotype.tsx";
 import QuestDockBackgroundBlurHeaderDefault from "QuestDockBackgroundBlurHeader.tsx";
-import _modDef14727 from "../../../../../_runtime/metro/14727__.js";
-import _modDef14728 from "../../../../../_runtime/metro/14728__.js";
+import _modDef14725 from "../../../../../_runtime/metro/14725__.js";
+import _modDef14726 from "../../../../../_runtime/metro/14726__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -78,9 +78,9 @@ export default noop.memo(function QuestDockUnenrolledHeader() {
   const obj7 = { style: tmp11.primaryContent, children: null };
   const tmp7Result = QuestDockBackgroundBlurHeaderDefault;
   if (LIGHT === tmp10.DARK) {
-    let tmp7Result4 = _modDef14727;
+    let tmp7Result4 = _modDef14725;
   } else {
-    tmp7Result4 = _modDef14728;
+    tmp7Result4 = _modDef14726;
   }
   const items1 = [
     closure_6(FastImageDefault, { source: tmp7Result4, resizeMode: "contain", style: tmp11.wreathImage }),

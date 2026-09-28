@@ -97,7 +97,7 @@ class YouBarButtonIcon {
         right: "children",
         bottom: "current",
         padding: "justifyContent",
-        minWidth: "raw",
+        minWidth: "methodobject",
       };
       return rect;
     }, items1);

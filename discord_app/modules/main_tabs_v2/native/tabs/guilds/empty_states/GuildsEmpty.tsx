@@ -7,7 +7,7 @@ import Text_Text from "../../../../../../design/components/Text/native/Text.tsx"
 import Stack_Stack from "../../../../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../../../../design/components/Button/native/Button.native.tsx";
 import CreateGuildModalActionCreatorsDefault from "../../../../../create_guild/native/CreateGuildModalActionCreators.tsx";
-import _modDef15908 from "../../../../../../../_runtime/metro/15908__.js";
+import _modDef15906 from "../../../../../../../_runtime/metro/15906__.js";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../../../../../stores/AuthenticationStore.tsx";

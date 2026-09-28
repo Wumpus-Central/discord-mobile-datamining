@@ -72,8 +72,9 @@ export const useVibegrationsPreviewMode = function useVibegrationsPreviewMode(ar
     }
     const tmp8Result6 = ApplicationActionCreators;
     const application = ApplicationActionCreators.useApplication(applicationId);
+    ({ data: data2, isLoading } = application);
     if (!declaredActivity) {
-      declaredActivity = canLaunchFrame.canLaunchFrame(tmp25);
+      declaredActivity = canLaunchFrame.canLaunchFrame(data2);
       const tmp8Result8 = canLaunchFrame;
     }
     const tmp8Result7 = ApplicationActionCreators;
@@ -87,13 +88,13 @@ export const useVibegrationsPreviewMode = function useVibegrationsPreviewMode(ar
     const result1 = vibegrationsPreviewModes.previewModeAvailability(obj3);
     const obj4 = {
       availability: result1,
-      isResolving: null != applicationId && application.isLoading,
+      isResolving: null != applicationId && isLoading && null == data2,
       activeMode: null,
       setMode: null,
       widgetApplicationId: null,
     };
     let previewMode = null;
-    if (!(null != applicationId && application.isLoading)) {
+    if (!(null != applicationId && isLoading && null == data2)) {
       previewMode = vibegrationsPreviewModes.resolvePreviewMode(tmp2, result1);
       const tmp8Result10 = vibegrationsPreviewModes;
     }

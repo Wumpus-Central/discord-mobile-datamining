@@ -36,7 +36,7 @@ function AndroidPasskeyRadioGroup(onChange) {
   return React5(native.RadioGroup, obj4);
 }
 const View = fn(17).View;
-const WebAuthnScreens = fn(14216).WebAuthnScreens;
+const WebAuthnScreens = fn(14215).WebAuthnScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4836);
@@ -99,10 +99,10 @@ export default function WebAuthnRegisterStep() {
   const items2 = [onRegisterSuccess, tmp11, tmp8];
   closure_6 = obj2.useMemo(() => ({ onRegisterSuccess, setError, setRegistering }), items2);
   const obj3 = navigation(1364);
-  const announceError = navigation(14235).useAnnounceError(tmp10);
+  const announceError = navigation(14234).useAnnounceError(tmp10);
   const rect = { bottom: true, left: true, right: true, style: tmp4.flexContainer, children: null };
   obj4 = { style: tmp4.centerFlex, children: null };
-  const items3 = [closure_7(navigation(14236).KeyImage, {}), ,];
+  const items3 = [closure_7(navigation(14235).KeyImage, {}), ,];
   obj5 = { style: tmp4.margin, variant: "text-md/normal", children: null };
   const intl = tmp(1115).intl;
   const string = intl.string;

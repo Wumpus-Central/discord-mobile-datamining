@@ -64,7 +64,7 @@ function getAccountStanding() {
   return require("SuspendedUserPage").default;
 }
 const View = fn(17).View;
-let animation = fn(15567).StackNavigationAnimationSettings;
+let animation = fn(15565).StackNavigationAnimationSettings;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, DrawerSourceTypes: closure_9 } = Constants);
 const jsxProd = fn(21);

@@ -48,8 +48,8 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 const TableRowGroup = currentLocale(5999);
 const TableSwitchRow = currentLocale(6621);
 const BellSlashIcon = currentLocale(9613);
-const DevToolsContentDefault = tmp4(15348);
-const YouSwitchClientsRadioGroupDefault = tmp4(16021);
+const DevToolsContentDefault = tmp4(15346);
+const YouSwitchClientsRadioGroupDefault = tmp4(16017);
 require = fn;
 function AccountSectionHeading(children) {
   const tmp = closure_21();
@@ -64,23 +64,23 @@ function AccountSectionHeading(children) {
 function YouStatusRadioGroup() {
   const memo = noop.useMemo(() => {
     const obj = {
-      icon: closure_1_19(setting(5923).TableRowIcon, { source: closure_1(13655), variant: "text-status-online" }),
+      icon: closure_1_19(setting(5923).TableRowIcon, { source: closure_1(13654), variant: "text-status-online" }),
       value: constants.ONLINE,
     };
     const items = [obj, , ,];
     const obj3 = { icon: null, value: null };
-    const obj2 = { source: closure_1(13655), variant: "text-status-online" };
-    obj3.icon = closure_1_19(setting(5923).TableRowIcon, { source: closure_1(13652), variant: "text-status-idle" });
+    const obj2 = { source: closure_1(13654), variant: "text-status-online" };
+    obj3.icon = closure_1_19(setting(5923).TableRowIcon, { source: closure_1(13651), variant: "text-status-idle" });
     obj3.value = constants.IDLE;
     items[1] = obj3;
     const obj5 = { icon: null, value: null };
-    const obj4 = { source: closure_1(13652), variant: "text-status-idle" };
-    obj5.icon = closure_1_19(setting(5923).TableRowIcon, { source: closure_1(13653), variant: "text-status-dnd" });
+    const obj4 = { source: closure_1(13651), variant: "text-status-idle" };
+    obj5.icon = closure_1_19(setting(5923).TableRowIcon, { source: closure_1(13652), variant: "text-status-dnd" });
     obj5.value = constants.DND;
     items[2] = obj5;
     const obj7 = { icon: null, value: null };
-    const obj6 = { source: closure_1(13653), variant: "text-status-dnd" };
-    obj7.icon = closure_1_19(setting(5923).TableRowIcon, { source: closure_1(13654), variant: "text-status-offline" });
+    const obj6 = { source: closure_1(13652), variant: "text-status-dnd" };
+    obj7.icon = closure_1_19(setting(5923).TableRowIcon, { source: closure_1(13653), variant: "text-status-offline" });
     obj7.value = constants.INVISIBLE;
     items[3] = obj7;
     return items;
@@ -222,9 +222,9 @@ function YouAccountRadioGroup() {
   const items = [UserStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = stateFromStores(504);
-  const multiAccountUsers = stateFromStores(15577).useMultiAccountUsers().multiAccountUsers;
+  const multiAccountUsers = stateFromStores(15575).useMultiAccountUsers().multiAccountUsers;
   closure_129_0 = multiAccountUsers;
-  let obj2 = stateFromStores(15577);
+  let obj2 = stateFromStores(15575);
   const items1 = [StreamerModeStore];
   const stateFromStores1 = stateFromStores(504).useStateFromStores(
     items1,
@@ -279,7 +279,7 @@ function YouAccountRadioGroup() {
     const obj6 = { style: tmp.manage, children: null };
     const obj7 = {
       onPress() {
-        return multiAccountUsers(16015)();
+        return multiAccountUsers(16011)();
       },
       children: null,
     };
@@ -357,7 +357,7 @@ function FocusModeSetting() {
             const obj = closure_1_0(9550);
             closure_1_1(4800).hideActionSheet();
             const obj2 = closure_1_1(4800);
-            const result = closure_1_0(16010).showYouAccountActionSheet();
+            const result = closure_1_0(16006).showYouAccountActionSheet();
           },
         };
         require("ActionSheetActionCreators").openLazy(

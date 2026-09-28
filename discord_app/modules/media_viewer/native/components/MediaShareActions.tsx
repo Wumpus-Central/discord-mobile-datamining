@@ -143,7 +143,7 @@ function useMediaShareActions(source) {
             message: stateFromStores,
             source: "media-viewer",
             initialSelectedDestinations: "Array",
-            forwardOptions: "GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE",
+            forwardOptions: "CONTENT_INVENTORY_INBOX_STALE",
           };
           const obj4 = { onlyAttachmentIds: null };
           const items = [attachmentId];
@@ -156,7 +156,7 @@ function useMediaShareActions(source) {
           message: stateFromStores,
           source: "media-viewer",
           initialSelectedDestinations: "Array",
-          forwardOptions: "GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE",
+          forwardOptions: "CONTENT_INVENTORY_INBOX_STALE",
         };
         const obj7 = { onlyEmbedIndices: null };
         const items1 = [source.mediaIndex];
