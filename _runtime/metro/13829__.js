@@ -1,21 +1,19 @@
 // _runtime/metro/13829__.js
-import _mod13812 from "13812__.js";
-import _mod13830 from "13830__.js";
+import _mod13795 from "13795__.js";
+import _mod13816 from "13816__.js";
+import f2 from "../13830_f.js";
+import _mod13840 from "13840__.js";
+import _mod13841 from "13841__.js";
 
-export default (arg0, arg1, arg2) => {
-  const arr = _mod13830(arg1);
-  for (let num = 0; num < arr.length; num = num + 1) {
-    let tmp3 = arr[num];
-    let tmp6 = _mod13812(arg0, tmp3);
-    if (!tmp6) {
-      let tmp8 = arg2;
-      if (arg2) {
-        tmp8 = _mod13812(arg2, tmp3);
-      }
-      tmp6 = tmp8;
+let closure_2 = _mod13795([].concat);
+
+export default _mod13816("Reflect", "ownKeys") ||
+  function ownKeys(arg0) {
+    const fResult = f2.f(_mod13840(arg0));
+    const f = _mod13841.f;
+    let tmp2 = fResult;
+    if (f) {
+      tmp2 = closure_2(fResult, f(arg0));
     }
-    if (!tmp6) {
-      let tmpResult = tmp(arg0, tmp3, tmp2(arg1, tmp3));
-    }
-  }
-};
+    return tmp2;
+  };

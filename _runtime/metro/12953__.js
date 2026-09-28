@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 300,
   height: 175,
   scales: [2, 3],
-  hash: "7e68c2960201e89a20761843ca26d40b",
-  name: "super_reaction",
+  hash: "cb2a2e3b1b856419d08252c8139a8321",
+  name: "entrace_sounds",
   type: "png",
 });

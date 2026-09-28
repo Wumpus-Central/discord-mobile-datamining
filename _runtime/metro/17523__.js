@@ -4,10 +4,10 @@ import registerAsset from "01121__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/guild_role_subscriptions/native/guild_settings/welcome/images",
-  width: 54,
-  height: 54.5,
+  width: 87,
+  height: 61.5,
   scales: [2, 3],
-  hash: "bae4699ad33ec116553db1943dc80292",
-  name: "role_subscription_earning_metric_avatar",
+  hash: "d8d9b21fdc821b420337e07a880866f5",
+  name: "asset_role_subscription_exclusive_perks",
   type: "png",
 });

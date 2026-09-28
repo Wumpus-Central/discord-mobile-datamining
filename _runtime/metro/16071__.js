@@ -4,10 +4,10 @@ import registerAsset from "01121__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/main_tabs",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "afec4e7bfe67c8da93450ca26af6a62e",
-  name: "NotificationCenter",
+  width: 48,
+  height: 48,
+  scales: [1],
+  hash: "af7e0b726a672f5506a1ba72e26e2adc",
+  name: "NitroWheelIconWithGradient",
   type: "png",
 });

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 16,
   height: 16,
   scales: [2, 3],
-  hash: "7730e55139737e3f08bf4e9540ae6591",
-  name: "StatusOffline",
+  hash: "82f333ceda03bd515ab62e8f0d1ea043",
+  name: "StatusOnline",
   type: "png",
 });

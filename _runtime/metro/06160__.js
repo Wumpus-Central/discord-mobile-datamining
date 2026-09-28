@@ -63,7 +63,7 @@ export const useReanimatedEventHandler = function useReanimatedEventHandler(
   const fn = function h(handlerTag) {
     let tmp = mutable.value[handlerTag.handlerTag];
     if (undefined === tmp) {
-      const obj = { lastUpdateEvent: "__initData" };
+      const obj = { lastUpdateEvent: "r" };
       iter.value[handlerTag.handlerTag] = obj;
       tmp = obj;
     }

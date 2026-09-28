@@ -4,10 +4,10 @@ import registerAsset from "01121__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 180.5,
-  height: 88,
+  width: 134.5,
+  height: 82,
   scales: [2, 3],
-  hash: "170926482058c89c2a2a9d537ff237a4",
-  name: "img_what_you_lose_emojis",
+  hash: "db25e5ae76d4f6a3f9af5fda0e269762",
+  name: "img_what_you_lose_uploads",
   type: "png",
 });

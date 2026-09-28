@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/summaries/native/images",
-  width: 14,
-  height: 18,
+  httpServerLocation: "/assets/images/native",
+  width: 120,
+  height: 62,
   scales: [2, 3],
-  hash: "813d44b12eef1bb0afea69b8182d002f",
-  name: "summary_indicator_end",
+  hash: "45f60dd7d404beac5f4bf97c97606d27",
+  name: "poop_light_large",
   type: "png",
 });

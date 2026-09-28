@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 32,
-  height: 32,
+  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "d505051fb36c757db4674831cf82260a",
-  name: "ic_image_upload",
+  hash: "a17cd266a5cb265705b13e07d0e2871a",
+  name: "ic_money_emoji_24px",
   type: "png",
 });

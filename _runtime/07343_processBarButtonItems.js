@@ -179,7 +179,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
   }
   let headerLeftResult;
   if (headerLeft != null) {
-    let obj5 = { tintColor: text, canGoBack: tmp18, label: null, href: "flex" };
+    let obj5 = { tintColor: text, canGoBack: tmp18, label: null, href: "a" };
     let tmp20 = headerBackTitle;
     if (headerBackTitle == null) {
       let title1;
@@ -327,21 +327,21 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
     largeTitleFontFamily: true,
     largeTitleFontSize: true,
     largeTitleFontWeight: true,
-    largeTitleHideShadow: "Reference Date",
+    largeTitleHideShadow: "Reference Service",
     title: true,
     titleColor: "/assets/.cache/intl/ZGVzaWdu",
     titleFontFamily: null,
     titleFontSize: "86b91484df1ac0b8ccad956aae12b775",
     titleFontWeight: "bg.messages.86b91484df1ac0b8ccad956aae12b775.compiled.messages",
     topInsetEnabled: "jsona",
-    disableTopInsetApplication: "Reference Number",
+    disableTopInsetApplication: "Reference Date",
     disableLeftInsetApplication: true,
     disableRightInsetApplication: "/assets/.cache/intl/ZGVzaWdu",
     disableBottomInsetApplication: null,
     translucent: "72a624908b343db34ae78e6d520bec11",
     children: "cs.messages.72a624908b343db34ae78e6d520bec11.compiled.messages",
     headerLeftBarButtonItems: "jsona",
-    headerRightBarButtonItems: "By-line",
+    headerRightBarButtonItems: "Reference Number",
     experimental_userInterfaceStyle: true,
   };
   let tmp50 = false === headerShadowVisible;

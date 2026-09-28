@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "24a38b74eed4b16cf7662ebd8e1be84d",
-  name: "ic_message_retry",
+  hash: "17f53f43d68e8a19fbcd8776cb4d1537",
+  name: "RefreshIcon",
   type: "png",
 });

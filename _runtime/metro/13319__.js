@@ -4,10 +4,10 @@ import registerAsset from "01121__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/nuf_channels/native/images",
-  width: 40,
-  height: 77,
+  width: 38,
+  height: 76,
   scales: [1],
-  hash: "a22d4ac6a3cb3a331ce2730f706e3d95",
-  name: "star_pink",
+  hash: "0874b569caae69893f5d6cd4e4046089",
+  name: "star_green",
   type: "png",
 });

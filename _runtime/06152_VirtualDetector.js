@@ -73,9 +73,9 @@ export const VirtualDetector = function VirtualDetector(children) {
             handlerTags,
             methods: tmp2.gesture.detectorCallbacks,
             viewRef: "a",
-            userSelect: null,
-            touchAction: null,
-            enableContextMenu: null,
+            userSelect: "atrament",
+            touchAction: "hrot",
+            enableContextMenu: "inkoust",
           };
           ({
             userSelect: obj.userSelect,
