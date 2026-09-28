@@ -1,27 +1,17 @@
 // === Module 13796: ? ===
 
 // Module 13796
-import module_13797_mod from "module_13797" /* 13797 */;
+import _mod13792 from "module_13792" /* 13792 */;
 
-const call = prototype.call;
-let module_13797 = module_13797_mod;
-if (module_13797) {
-  const bind = prototype.bind;
-  module_13797 = bind.bind(call, call);
-}
-if (!module_13797) {
-  module_13797 = (arg0) => {
-    closure_0 = arg0;
-    return () => {
-      const apply = call.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(closure_0);
-      } else {
-        applyArgumentsResult = apply(closure_0, arguments);
-      }
-      return applyArgumentsResult;
-    };
+
+export default !_mod13792(() => {
+  const fn = () => {
+
   };
-}
-
-export default module_13797;
+  const bindResult = fn.bind();
+  let hasOwnPropertyResult = typeof bindResult !== "function";
+  if (typeof bindResult === "function") {
+    hasOwnPropertyResult = bindResult.hasOwnProperty("prototype");
+  }
+  return hasOwnPropertyResult;
+});

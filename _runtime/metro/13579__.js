@@ -1,10 +1,7 @@
 // === Module 13579: ? ===
 
 // Module 13579
-import _mod13577 from "module_13577" /* 13577 */;
+import _mod13573 from "module_13573" /* 13573 */;
 
 
-export default (arr, arg1) => {
-  closure_0 = arg1;
-  return arr.sort((arg0, arg1) => _mod13577(arg1, arg0, closure_0));
-};
+export default (arg0, arg1, arg2) => _mod13573(arg0, arg1, arg2) > 0;

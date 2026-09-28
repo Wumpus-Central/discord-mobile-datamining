@@ -1,24 +1,20 @@
 // === Module 13829: ? ===
 
 // Module 13829
-import _mod13812 from "module_13812" /* 13812 */;
-import _mod13830 from "module_13830" /* 13830 */;
+import _mod13795 from "module_13795" /* 13795 */;
+import _mod13816 from "module_13816" /* 13816 */;
+import f2 from "f" /* 13830 */;
+import _mod13840 from "module_13840" /* 13840 */;
+import _mod13841 from "module_13841" /* 13841 */;
 
+let closure_2 = _mod13795([].concat);
 
-export default (arg0, arg1, arg2) => {
-  const arr = _mod13830(arg1);
-  for (let num = 0; num < arr.length; num = num + 1) {
-    let tmp3 = arr[num];
-    let tmp6 = _mod13812(arg0, tmp3);
-    if (!tmp6) {
-      let tmp8 = arg2;
-      if (arg2) {
-        tmp8 = _mod13812(arg2, tmp3);
-      }
-      tmp6 = tmp8;
-    }
-    if (!tmp6) {
-      let tmpResult = tmp(arg0, tmp3, tmp2(arg1, tmp3));
-    }
+export default _mod13816("Reflect", "ownKeys") || (function ownKeys(arg0) {
+  const fResult = f2.f(_mod13840(arg0));
+  const f = _mod13841.f;
+  let tmp2 = fResult;
+  if (f) {
+    tmp2 = closure_2(fResult, f(arg0));
   }
-};
+  return tmp2;
+});

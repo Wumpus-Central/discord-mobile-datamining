@@ -4,12 +4,20 @@
 import _mod13559 from "module_13559" /* 13559 */;
 
 
-export default (str, arg1) => {
-  str = str.trim();
-  const tmpResult = _mod13559(str.replace(/^[=v]+/, ""), arg1);
-  let version = null;
-  if (tmpResult) {
-    version = tmpResult.version;
+export default (version, pre, major2, major2, major22) => {
+  let tmp = major22;
+  let tmp2 = major2;
+  if (typeof major2 === "string") {
+    tmp = major2;
+    tmp2 = major2;
   }
-  return version;
+  try {
+    if (version instanceof _mod13559) {
+      version = version.version;
+    }
+    const tmp72 = new _mod13559(version, tmp3);
+    return tmp72.inc(pre, tmp2, tmp).version;
+  } catch (err) {
+    return null;
+  }
 };

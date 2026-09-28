@@ -26,16 +26,16 @@ export const gestureActivationCriteria = (direction) => {
     return obj4;
   } else {
     const sum = -layout.width + gestureResponseDistance;
-    if (1 === obj9.getInvertedMultiplier(gestureDirection, "rtl" === direction.direction)) {
+    if (1 === obj.getInvertedMultiplier(gestureDirection, "rtl" === direction.direction)) {
       const obj6 = { minOffsetX: 5, maxDeltaY: 20, hitSlop: null, enableTrackpadTwoFingerGesture: true };
       const obj7 = { right: sum };
       obj6.hitSlop = obj7;
-      let obj = obj6;
+      let obj8 = obj6;
     } else {
-      obj = { minOffsetX: -5, maxDeltaY: 20, hitSlop: null, enableTrackpadTwoFingerGesture: true };
-      const obj8 = { left: sum };
-      obj.hitSlop = obj8;
+      obj8 = { minOffsetX: -5, maxDeltaY: 20, hitSlop: null, enableTrackpadTwoFingerGesture: true };
+      const obj9 = { left: sum };
+      obj8.hitSlop = obj9;
     }
-    return obj;
+    return obj8;
   }
 };

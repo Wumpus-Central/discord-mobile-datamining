@@ -1,969 +1,291 @@
 // === Module 15101: ? ===
 
 // Module 15101
+import _mod19 from "module_19" /* 19 */;
+import _mod32 from "module_32" /* 32 */;
+import PLAY_MODE from "PLAY_MODE" /* 15100 */;
+import _mod15103 from "module_15103" /* 15103 */;
+import PLAYER_FUNCTIONS3 from "PLAYER_FUNCTIONS" /* 15104 */;
+import deepComparePlayList from "deepComparePlayList" /* 15106 */;
+import module_7727 from "module_7727" /* 7727 */;
+import _getRequireWildcardCache from "_getRequireWildcardCache" /* 15102 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
-export default function _regeneratorRuntime() {
-  function define(arg0, arg1, value) {
-    Object.defineProperty(arg0, arg1, { value, enumerable: true, configurable: true, writable: true });
-    return arg0[arg1];
+module_7727(_mod15103);
+let _slicedToArray = module_7727(_mod32);
+const noop = _getRequireWildcardCache(_mod19);
+const self = this;
+let c7 = "/Users/ananthukanive/side-proj/react-native-youtube-iframe/src/YoutubeIframe.js";
+const StyleSheet = get_ActivityIndicator.StyleSheet;
+const styles = StyleSheet.create({ webView: { backgroundColor: "transparent" } });
+
+export default noop.forwardRef(function YoutubeIframe(videoId, arg1) {
+  videoId = videoId.videoId;
+  const playList = videoId.playList;
+  let play = videoId.play;
+  let tmp = undefined !== play;
+  ({ height, width } = videoId);
+  if (tmp) {
+    tmp = play;
   }
-  let define2 = define;
-  function tryCatch(call, arg1, arg2) {
-    try {
-      obj = arg2;
-      call = call.call;
-      if (typeof call === "unknown") {
-        let callResult = call(obj);
-      } else {
-        callResult = call(arg1, obj);
-      }
-      obj = { type: "normal", arg: callResult };
-    } catch (tmp4) {
-      const obj2 = { type: "throw", arg: tmp4 };
-      return obj2;
-    }
+  play = tmp;
+  const mute = videoId.mute;
+  _slicedToArray = tmp2;
+  const volume = videoId.volume;
+  let num = 100;
+  if (undefined !== volume) {
+    num = volume;
   }
-  class Generator {
-    constructor() {
-      return;
-    }
+  const useLocalHTML = videoId.useLocalHTML;
+  const baseUrlOverride = videoId.baseUrlOverride;
+  const playbackRate = videoId.playbackRate;
+  let num2 = 1;
+  let num3 = 1;
+  ({ webViewStyle, webViewProps } = videoId);
+  if (undefined !== playbackRate) {
+    num3 = playbackRate;
   }
-  class GeneratorFunction {
-    constructor() {
-      return;
-    }
+  const contentScale = videoId.contentScale;
+  if (undefined !== contentScale) {
+    num2 = contentScale;
   }
-  class GeneratorFunctionPrototype {
-    constructor() {
-      return;
-    }
-  }
-  class AsyncIterator {
-    constructor(arg0, arg1) {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      invoke = function invoke(arg0, _invoke, arg2, fn) {
-        iter = arg2;
-        closure_1 = fn;
-        const tmp = tryCatch(iter[arg0], iter, _invoke);
-        if ("throw" !== tmp.type) {
-          iter = tmp.arg;
-          value = iter.value;
-          if (value) {
-            obj = obj(closure_2[0]);
-            if ("object" == obj.default(value)) {
-              const call = closure_1.call;
-              if (typeof call === "unknown") {
-                let callResult = closure_1("__await");
-              } else {
-                callResult = call(value, "__await");
-              }
-              if (callResult) {
-                let nextPromise = closure_1.resolve(value.__await).then((result) => {
-                  obj("next", result, closure_0, closure_1);
-                }, (arg0) => {
-                  obj("throw", arg0, closure_0, closure_1);
-                });
-                const resolveResult = closure_1.resolve(value.__await);
-              }
-              return nextPromise;
-            }
-          }
-          nextPromise = closure_1.resolve(value).then((value) => {
-            iter.value = value;
-            closure_0(iter);
-          }, (arg0) => obj("throw", arg0, closure_0, closure_1));
-          const resolveResult1 = closure_1.resolve(value);
-        } else {
-          fn(tmp.arg);
-        }
-      };
-      obj = {
-        value(arg0, arg1) {
-              closure_0 = arg0;
-              closure_1 = arg1;
-              if (nextPromise) {
-                function callInvokeWithMethodAndArg() {
-                  return new closure_1((arg0, arg1) => {
-                    obj(closure_1_0, closure_1_1, arg0, arg1);
-                  });
-                }
-                nextPromise = nextPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg);
-              } else {
-                nextPromise = new closure_1((arg0, arg1) => {
-                  obj(closure_1_0, closure_1_1, arg0, arg1);
-                });
-              }
-              return nextPromise;
-            }
-      };
-      tmp = invoke(this, "_invoke", obj);
-      return;
-    }
-  }
-  function maybeInvokeDelegate(iterator, method) {
-    method = method.method;
-    if (iterator.iterator[method] === undefined) {
-      method.delegate = null;
-      let tmp14 = "throw" === method && iterator.iterator.return;
-      if (tmp14) {
-        method.method = "return";
-        method.arg = undefined;
-        maybeInvokeDelegate(iterator, method);
-        tmp14 = "throw" === method.method;
-      }
-      if (!tmp14) {
-        if ("return" !== method) {
-          method.method = "throw";
-          const _TypeError2 = TypeError;
-          const typeError = new TypeError("The iterator does not provide a '" + method + "' method");
-          method.arg = typeError;
-        }
-      }
-      return closure_11;
-    } else {
-      const tmp24 = tryCatch(tmp, iterator.iterator, method.arg);
-      if ("throw" === tmp24.type) {
-        method.method = "throw";
-        method.arg = tmp24.arg;
-        method.delegate = null;
-        return closure_11;
-      } else {
-        if (tmp24.arg) {
-          let tmp9 = iter;
-          if (iter.done) {
-            method[iterator.resultName] = iter.value;
-            method.next = iterator.nextLoc;
-            if ("return" !== method.method) {
-              method.method = "next";
-              method.arg = undefined;
-            }
-            method.delegate = null;
-            tmp9 = closure_11;
-          }
-          let tmp8 = tmp9;
-        } else {
-          method.method = "throw";
-          const _TypeError = TypeError;
-          const typeError1 = new TypeError("iterator result is not an object");
-          method.arg = typeError1;
-          method.delegate = null;
-          tmp8 = closure_11;
-        }
-        return tmp8;
-      }
-    }
-  }
-  function pushTryEntry(tryLoc) {
-    obj = { tryLoc: tryLoc[0] };
-    if (1 in tryLoc) {
-      obj.catchLoc = tryLoc[1];
-    }
-    if (2 in tryLoc) {
-      obj.finallyLoc = tryLoc[2];
-      obj.afterLoc = tryLoc[3];
-    }
-    const tryEntries = this.tryEntries;
-    tryEntries.push(obj);
-  }
-  function resetTryEntry(completion) {
-    const tmp3 = completion.completion || {};
-    tmp3.type = "normal";
-    delete tmp[tmp2];
-    completion.completion = tmp3;
-  }
-  class Context {
-    constructor(arg0) {
-      items = [];
-      items[0] = { tryLoc: "root" };
-      this.tryEntries = items;
-      item = arg0.forEach(pushTryEntry, this);
-      resetResult = this.reset(true);
-      return;
-    }
-  }
-  hasOwnProperty.exports = function _regeneratorRuntime() {
-    return obj;
-  };
-  let obj = {};
-  hasOwnProperty = prototype.hasOwnProperty;
-  let tmp = Object.defineProperty || ((arg0, arg1, value) => {
-    arg0[arg1] = value.value;
-  });
-  dependencyMap = tmp;
-  let tmp2 = typeof Symbol === "function" ? Symbol : {};
-  closure_3 = tmp3;
-  closure_4 = tmp5;
-  try {
-    define({}, "");
-    let tmp7 = define;
-    function values(next) {
-      closure_0 = next;
-      if (next) {
-        if (next[closure_3]) {
-          const call = tmp2.call;
-          return typeof call === "unknown" ? tmp2() : call(next);
-        } else if (typeof next.next === "function") {
-          return next;
-        } else {
-          const _isNaN = isNaN;
-          if (!isNaN(next.length)) {
-            c1 = -1;
-            next = function next() {
-              const sum = sum1 + 1;
-              sum1 = sum;
-              if (sum < next.length) {
-                while (true) {
-                  let call = hasOwnProperty.call;
-                  let tmp3 = sum1;
-                  if (typeof call === "unknown" ? hasOwnProperty(tmp3) : call(next, tmp3)) {
-                    break;
-                  } else {
-                    sum1 = sum1 + 1;
-                  }
-                }
-                next.value = next[sum1];
-                next.done = false;
-                return next;
-              }
-              next.value = undefined;
-              next.done = true;
-              return next;
-            };
-            next.next = next;
-            return next;
-          }
-        }
-      }
-      obj = obj(45);
-      const typeError = new TypeError(obj.default(next) + " is not iterable");
-      throw typeError;
-    }
-    class Generator {
-      constructor() {
-        return;
-      }
-    }
-    class GeneratorFunction {
-      constructor() {
-        return;
-      }
-    }
-    class GeneratorFunctionPrototype {
-      constructor() {
-        return;
-      }
-    }
-    class AsyncIterator {
-      constructor(arg0, arg1) {
-        closure_0 = arg0;
-        closure_1 = arg1;
-        invoke = function invoke(arg0, _invoke, arg2, fn) {
-          iter = arg2;
-          closure_1 = fn;
-          const tmp = tryCatch(iter[arg0], iter, _invoke);
-          if ("throw" !== tmp.type) {
-            iter = tmp.arg;
-            value = iter.value;
-            if (value) {
-              obj = obj(closure_2[0]);
-              if ("object" == obj.default(value)) {
-                const call = closure_1.call;
-                if (typeof call === "unknown") {
-                  let callResult = closure_1("__await");
-                } else {
-                  callResult = call(value, "__await");
-                }
-                if (callResult) {
-                  let nextPromise = closure_1.resolve(value.__await).then((result) => {
-                    obj("next", result, closure_0, closure_1);
-                  }, (arg0) => {
-                    obj("throw", arg0, closure_0, closure_1);
-                  });
-                  const resolveResult = closure_1.resolve(value.__await);
-                }
-                return nextPromise;
-              }
-            }
-            nextPromise = closure_1.resolve(value).then((value) => {
-              iter.value = value;
-              closure_0(iter);
-            }, (arg0) => obj("throw", arg0, closure_0, closure_1));
-            const resolveResult1 = closure_1.resolve(value);
-          } else {
-            fn(tmp.arg);
-          }
-        };
-        obj = {
-          value(arg0, arg1) {
-                  closure_0 = arg0;
-                  closure_1 = arg1;
-                  if (nextPromise) {
-                    function callInvokeWithMethodAndArg() {
-                      return new closure_1((arg0, arg1) => {
-                        obj(closure_1_0, closure_1_1, arg0, arg1);
-                      });
-                    }
-                    nextPromise = nextPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg);
-                  } else {
-                    nextPromise = new closure_1((arg0, arg1) => {
-                      obj(closure_1_0, closure_1_1, arg0, arg1);
-                    });
-                  }
-                  return nextPromise;
-                }
-        };
-        tmp = invoke(this, "_invoke", obj);
-        return;
-      }
-    }
-    const completed = "completed";
-    closure_11 = {};
-    let obj2 = {};
-    class Context {
-      constructor(arg0) {
-        items = [];
-        items[0] = { tryLoc: "root" };
-        this.tryEntries = items;
-        item = arg0.forEach(pushTryEntry, this);
-        resetResult = this.reset(true);
-        return;
-      }
-    }
-    let _Object = Object;
-    let prototypeOf = getPrototypeOf;
-    if (getPrototypeOf) {
-      prototypeOf = getPrototypeOf(getPrototypeOf(values([])));
-    }
-    let tmp9 = prototypeOf;
-    if (prototypeOf) {
-      tmp9 = prototypeOf !== prototype;
-    }
-    if (!tmp9) {
-      if (tmp9) {
-        obj2 = prototypeOf;
-      }
-      function defineIteratorMethods(arg0) {
-        closure_0 = arg0;
-        const items = ["next", "throw", "return"];
-        const item = items.forEach((item) => {
-          closure_0 = item;
-          define2(closure_0, item, function(arg0) {
-            return this._invoke(closure_0, arg0);
-          });
-        });
-      }
-      const _Object2 = Object;
-      const obj3 = Object.create(obj2);
-      class Generator {
-        constructor() {
-          return;
-        }
-      }
-      GeneratorFunctionPrototype.prototype = obj3;
-      class GeneratorFunction {
-        constructor() {
-          return;
-        }
-      }
-      GeneratorFunction.prototype = GeneratorFunctionPrototype;
-      class GeneratorFunctionPrototype {
-        constructor() {
-          return;
-        }
-      }
-      tmp13[0] = GeneratorFunctionPrototype;
-      class AsyncIterator {
-        constructor(arg0, arg1) {
-          closure_0 = arg0;
-          closure_1 = arg1;
-          invoke = function invoke(arg0, _invoke, arg2, fn) {
-            iter = arg2;
-            closure_1 = fn;
-            const tmp = tryCatch(iter[arg0], iter, _invoke);
-            if ("throw" !== tmp.type) {
-              iter = tmp.arg;
-              value = iter.value;
-              if (value) {
-                obj = obj(closure_2[0]);
-                if ("object" == obj.default(value)) {
-                  const call = closure_1.call;
-                  if (typeof call === "unknown") {
-                    let callResult = closure_1("__await");
-                  } else {
-                    callResult = call(value, "__await");
-                  }
-                  if (callResult) {
-                    let nextPromise = closure_1.resolve(value.__await).then((result) => {
-                      obj("next", result, closure_0, closure_1);
-                    }, (arg0) => {
-                      obj("throw", arg0, closure_0, closure_1);
-                    });
-                    const resolveResult = closure_1.resolve(value.__await);
-                  }
-                  return nextPromise;
-                }
-              }
-              nextPromise = closure_1.resolve(value).then((value) => {
-                iter.value = value;
-                closure_0(iter);
-              }, (arg0) => obj("throw", arg0, closure_0, closure_1));
-              const resolveResult1 = closure_1.resolve(value);
-            } else {
-              fn(tmp.arg);
-            }
-          };
-          obj = {
-            value(arg0, arg1) {
-                      closure_0 = arg0;
-                      closure_1 = arg1;
-                      if (nextPromise) {
-                        function callInvokeWithMethodAndArg() {
-                          return new closure_1((arg0, arg1) => {
-                            obj(closure_1_0, closure_1_1, arg0, arg1);
-                          });
-                        }
-                        nextPromise = nextPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg);
-                      } else {
-                        nextPromise = new closure_1((arg0, arg1) => {
-                          obj(closure_1_0, closure_1_1, arg0, arg1);
-                        });
-                      }
-                      return nextPromise;
-                    }
-          };
-          tmp = invoke(this, "_invoke", obj);
-          return;
-        }
-      }
-      tmp(obj3, "constructor", tmp13);
-      const obj4 = { value: GeneratorFunction, configurable: true };
-      tmp(GeneratorFunctionPrototype, "constructor", obj4);
-      class Context {
-        constructor(arg0) {
-          items = [];
-          items[0] = { tryLoc: "root" };
-          this.tryEntries = items;
-          item = arg0.forEach(pushTryEntry, this);
-          resetResult = this.reset(true);
-          return;
-        }
-      }
-      GeneratorFunction.displayName = tmp7(GeneratorFunctionPrototype, tmp5, "GeneratorFunction");
-      obj.isGeneratorFunction = (fn) => {
-        let constructor = typeof fn === "function";
-        if (typeof fn === "function") {
-          constructor = fn.constructor;
-        }
-        let tmp = constructor;
-        if (tmp) {
-          let tmp3 = constructor === GeneratorFunction;
-          if (!tmp3) {
-            tmp3 = "GeneratorFunction" === (constructor.displayName || constructor.name);
-            const tmp4 = constructor.displayName || constructor.name;
-          }
-          tmp = tmp3;
-        }
-        return tmp;
-      };
-      obj.mark = (arg0) => {
-        if (Object.setPrototypeOf) {
-          const _Object = Object;
-          Object.setPrototypeOf(arg0, GeneratorFunctionPrototype);
-        } else {
-          arg0.__proto__ = GeneratorFunctionPrototype;
-          define2(arg0, closure_4, "GeneratorFunction");
-        }
-        arg0.prototype = Object.create(closure_1_15);
-        return arg0;
-      };
-      obj.awrap = (__await) => ({ __await });
-      const result = defineIteratorMethods(AsyncIterator.prototype);
-      tmp7(AsyncIterator.prototype, tmp4, function() {
-        return this;
-      });
-      obj.AsyncIterator = AsyncIterator;
-      obj.async = (arg0, fn, arg2, arg3, arg4) => {
-        let _Promise = arg4;
-        if (undefined === arg4) {
-          _Promise = Promise;
-        }
-        if (!fn) {
-          let tmp4 = Generator;
-        } else {
-          tmp4 = fn;
-        }
-        let items = arg3;
-        const obj2 = Object.create(tmp4.prototype);
-        if (!arg3) {
-          items = [];
-        }
-        obj = Object.create(Context.prototype);
-        const items1 = [{ tryLoc: "root" }];
-        obj.tryEntries = items1;
-        const item = items.forEach(pushTryEntry, obj);
-        obj.reset(true);
-        closure_1 = arg2;
-        closure_3 = closure_7;
-        obj(obj2, "_invoke", {
-          value: (method, arg) => {
-            if (closure_3 === closure_2_9) {
-              const _Error = Error;
-              throw Error("Generator is already running");
-            } else if (tmp === completed) {
-              if ("throw" === method) {
-                throw arg;
-              } else {
-                return { value: "HermesInternal", done: null };
-              }
-            } else {
-              obj.method = method;
-              obj.arg = arg;
-              while (true) {
-                iter = obj;
-                let delegate = obj.delegate;
-                if (delegate) {
-                  let tmp3 = maybeInvokeDelegate(delegate, iter);
-                  if (tmp3) {
-                    if (tmp3 === closure_11) {
-                      continue;
-                    } else {
-                      return tmp3;
-                    }
-                  }
-                }
-                if ("next" === iter.method) {
-                  arg = iter.arg;
-                  iter._sent = arg;
-                  iter.sent = arg;
-                } else if ("throw" === iter.method) {
-                  if (closure_3 === closure_2_7) {
-                    break;
-                  } else {
-                    let dispatchExceptionResult = iter.dispatchException(iter.arg);
-                  }
-                } else if ("return" === iter.method) {
-                  let abruptResult = iter.abrupt("return", iter.arg);
-                }
-                closure_3 = closure_2_9;
-                let tmp13 = tryCatch(iter, closure_1, iter);
-                if ("normal" === tmp13.type) {
-                  closure_3 = iter.done ? completed : closure_2_8;
-                  if (tmp13.arg === closure_11) {
-                    continue;
-                  } else {
-                    obj = { value: tmp13.arg, done: iter.done };
-                    return obj;
-                  }
-                } else {
-                  if ("throw" !== tmp13.type) {
-                    continue;
-                  } else {
-                    closure_3 = completed;
-                    iter.method = "throw";
-                    iter.arg = tmp13.arg;
-                    continue;
-                  }
-                  continue;
-                }
-                continue;
-              }
-              closure_3 = completed;
-              throw iter.arg;
-            }
-          }
-        });
-        let iter = Object.create(AsyncIterator.prototype);
-        closure_129_0 = obj2;
-        closure_129_1 = _Promise;
-        closure_129_3 = undefined;
-        closure_129_2 = function invoke(arg0, _invoke, arg2, fn) {
-          iter = arg2;
-          closure_1 = fn;
-          const tmp = tryCatch(iter[arg0], iter, _invoke);
-          if ("throw" !== tmp.type) {
-            iter = tmp.arg;
-            value = iter.value;
-            if (value) {
-              obj = obj(closure_2[0]);
-              if ("object" == obj.default(value)) {
-                const call = closure_1.call;
-                if (typeof call === "unknown") {
-                  let callResult = closure_1("__await");
-                } else {
-                  callResult = call(value, "__await");
-                }
-                if (callResult) {
-                  let nextPromise = closure_1.resolve(value.__await).then((result) => {
-                    obj("next", result, closure_0, closure_1);
-                  }, (arg0) => {
-                    obj("throw", arg0, closure_0, closure_1);
-                  });
-                  const resolveResult = closure_1.resolve(value.__await);
-                }
-                return nextPromise;
-              }
-            }
-            nextPromise = closure_1.resolve(value).then((value) => {
-              iter.value = value;
-              closure_0(iter);
-            }, (arg0) => obj("throw", arg0, closure_0, closure_1));
-            const resolveResult1 = closure_1.resolve(value);
-          } else {
-            fn(tmp.arg);
-          }
-        };
-        obj(iter, "_invoke", {
-          value(arg0, arg1) {
-            closure_0 = arg0;
-            closure_1 = arg1;
-            if (nextPromise) {
-              function callInvokeWithMethodAndArg() {
-                return new closure_1((arg0, arg1) => {
-                  obj(closure_1_0, closure_1_1, arg0, arg1);
-                });
-              }
-              nextPromise = nextPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg);
-            } else {
-              nextPromise = new closure_1((arg0, arg1) => {
-                obj(closure_1_0, closure_1_1, arg0, arg1);
-              });
-            }
-            return nextPromise;
-          }
-        });
-        let nextPromise = iter;
-        if (!iter.isGeneratorFunction(fn)) {
-          nextPromise = iter.next().then((done) => {
-            if (done.done) {
-              let nextResult = done.value;
-            } else {
-              nextResult = iter.next();
-            }
-            return nextResult;
-          });
-          let nextResult = iter.next();
-        }
-        return nextPromise;
-      };
-      const result1 = defineIteratorMethods(obj3);
-      tmp7(obj3, tmp5, "Generator");
-      tmp7(obj3, tmp3, function() {
-        return this;
-      });
-      tmp7(obj3, "toString", () => "[object Generator]");
-      obj.keys = (arg0) => {
-        const ObjectResult = Object(arg0);
-        const items = [];
-        for (const key10008 in ObjectResult) {
-          let arr = items.push(key10008);
-          continue;
-        }
-        const reversed = items.reverse();
-        function next() {
-          if (items.length) {
-            next.value = items.pop();
-            next.done = false;
-            return next;
-          }
-          next.done = true;
-          return next;
-        }
-        return next;
-      };
-      obj.values = values;
-      const obj8 = {
-        constructor: Context,
-        reset(arg0) {
-              obj = { prev: 0, next: 0, _sent: undefined, sent: undefined, done: false, delegate: null, method: "next", arg: undefined };
-              const tryEntries = obj.tryEntries;
-              const item = tryEntries.forEach(resetTryEntry);
-              if (!arg0) {
-                for (const key10018 in obj) {
-                  let tmp7 = "t" === key10018.charAt(0);
-                  if (!tmp7) {
-                    if (tmp7) {
-                      let _isNaN = isNaN;
-                      tmp7 = !isNaN(+key10018.slice(1));
-                    }
-                    if (!tmp7) {
-                      continue;
-                    } else {
-                      obj[key10018] = undefined;
-                      continue;
-                    }
-                    continue;
-                  } else {
-                    let call = hasOwnProperty.call;
-                    if (typeof call === "unknown") {
-                      let callResult = hasOwnProperty(key10018);
-                    } else {
-                      callResult = call(obj, key10018);
-                    }
-                  }
-                }
-              }
-            },
-        stop() {
-              this.done = true;
-              const completion = this.tryEntries[0].completion;
-              if ("throw" === completion.type) {
-                throw completion.arg;
-              } else {
-                return tmp.rval;
-              }
-            },
-        dispatchException(arg) {
-              const self = this;
-              if (this.done) {
-                throw arg;
-              } else {
-                let diff = self.tryEntries.length - 1;
-                if (0 <= diff) {
-                  const completion = tmp2.completion;
-                  while ("root" !== self.tryEntries[diff].tryLoc) {
-                    if (tmp2.tryLoc <= self.prev) {
-                      let call2 = hasOwnProperty.call;
-                      let tmp4 = typeof call2 === "unknown" ? hasOwnProperty("catchLoc") : call2(tmp2, "catchLoc");
-                      let call = hasOwnProperty.call;
-                      let tmp5 = typeof call === "unknown" ? hasOwnProperty("finallyLoc") : call(tmp2, "finallyLoc");
-                      if (tmp4) {
-                        if (tmp5) {
-                          if (self.prev < tmp2.catchLoc) {
-                            let str8 = "throw";
-                            completion.type = "throw";
-                            completion.arg = arg;
-                            self.next = tmp2.catchLoc;
-                            let str9 = "next";
-                            self.method = "next";
-                            self.arg = undefined;
-                            let flag3 = true;
-                            return true;
-                          } else if (self.prev < tmp2.finallyLoc) {
-                            let str7 = "throw";
-                            completion.type = "throw";
-                            completion.arg = arg;
-                            self.next = tmp2.finallyLoc;
-                            let flag2 = false;
-                            return false;
-                          }
-                        }
-                      }
-                      if (tmp4) {
-                        if (self.prev < tmp2.catchLoc) {
-                          let str5 = "throw";
-                          completion.type = "throw";
-                          completion.arg = arg;
-                          self.next = tmp2.catchLoc;
-                          let str6 = "next";
-                          self.method = "next";
-                          self.arg = undefined;
-                          let flag = true;
-                          return true;
-                        }
-                      } else if (tmp5) {
-                        if (self.prev < tmp2.finallyLoc) {
-                          let str12 = "throw";
-                          completion.type = "throw";
-                          completion.arg = arg;
-                          self.next = tmp2.finallyLoc;
-                          let flag5 = false;
-                          return false;
-                        }
-                      } else {
-                        let tmp6 = globalThis;
-                        let _Error = Error;
-                        let str4 = "try statement without catch or finally";
-                        throw Error("try statement without catch or finally");
-                      }
-                    }
-                    diff = diff - 1;
-                  }
-                  completion.type = "throw";
-                  completion.arg = arg;
-                  self.next = "end";
-                  return false;
-                }
-              }
-            },
-        abrupt(type, arg) {
-              const self = this;
-              let diff = this.tryEntries.length - 1;
-              let tmp2;
-              if (0 <= diff) {
-                while (true) {
-                  let tmp3 = self.tryEntries[diff];
-                  if (tmp3.tryLoc <= self.prev) {
-                    let call = hasOwnProperty.call;
-                    if (typeof call === "unknown" ? hasOwnProperty("finallyLoc") : call(tmp3, "finallyLoc")) {
-                      tmp2 = tmp3;
-                      if (self.prev < tmp3.finallyLoc) {
-                        break;
-                      }
-                    }
-                    break;
-                  }
-                  diff = diff - 1;
-                  if (0 > diff) {
-                    break;
-                  }
-                }
-              }
-              let tmp6 = tmp2;
-              if (tmp2) {
-                let tmp7 = "break" === type;
-                if (!tmp7) {
-                  tmp7 = "continue" === type;
-                }
-                tmp6 = tmp7;
-              }
-              if (tmp6) {
-                tmp6 = tmp2.tryLoc <= arg;
-              }
-              if (tmp6) {
-                tmp6 = arg <= tmp2.finallyLoc;
-              }
-              if (tmp6) {
-                tmp2 = null;
-              }
-              const tmp8 = tmp2 ? tmp2.completion : {};
-              tmp8.type = type;
-              tmp8.arg = arg;
-              if (tmp2) {
-                self.method = "next";
-                self.next = tmp2.finallyLoc;
-                let completeResult = closure_11;
-              } else {
-                completeResult = self.complete(tmp8);
-              }
-              return completeResult;
-            },
-        complete(type, next) {
-              if ("throw" === type.type) {
-                throw type.arg;
-              } else {
-                const self = this;
-                if ("break" !== type.type) {
-                  if ("continue" !== type.type) {
-                    if ("return" === type.type) {
-                      const arg = type.arg;
-                      self.arg = arg;
-                      self.rval = arg;
-                      self.method = "return";
-                      self.next = "end";
-                    } else {
-                      if (tmp2) {
-                        self.next = next;
-                      }
-                      tmp2 = "normal" === type.type && next;
-                    }
-                  }
-                  return closure_11;
-                }
-                self.next = type.arg;
-              }
-            },
-        finish(arg0) {
-              const self = this;
-              let diff = this.tryEntries.length - 1;
-              if (0 <= diff) {
-                while (self.tryEntries[diff].finallyLoc !== arg0) {
-                  diff = diff - 1;
-                }
-                self.complete(self.tryEntries[diff].completion, self.tryEntries[diff].afterLoc);
-                const tmp7 = self.tryEntries[diff].completion || {};
-                tmp7.type = "normal";
-                delete tmp[tmp2];
-                self.tryEntries[diff].completion = tmp7;
-                return closure_11;
-              }
-            },
-        catch: function _catch(arg0) {
-              let diff = this.tryEntries.length - 1;
-              if (0 <= diff) {
-                while (this.tryEntries[diff].tryLoc !== arg0) {
-                  diff = diff - 1;
-                }
-                const completion = tmp4.completion;
-                let arg;
-                if ("throw" === completion.type) {
-                  let completion1 = tmp4.completion;
-                  if (!completion1) {
-                    completion1 = {};
-                  }
-                  completion1.type = "normal";
-                  delete tmp[tmp2];
-                  tmp4.completion = completion1;
-                  arg = completion.arg;
-                }
-                return arg;
-              }
-              throw Error("illegal catch attempt");
-            },
-        delegateYield(next, resultName, nextLoc) {
-              if (next) {
-                if (next[closure_3]) {
-                  let call = tmp2.call;
-                  typeof call === "unknown" ? tmp2() : call(next);
-                } else {
-                  let tmp3 = next;
-                  if (typeof next.next !== "function") {
-                    const _isNaN = isNaN;
-                    if (!isNaN(next.length)) {
-                      let sum1 = -1;
-                      next = function next() {
-                        const sum = sum1 + 1;
-                        sum1 = sum;
-                        if (sum < next.length) {
-                          while (true) {
-                            let call = hasOwnProperty.call;
-                            let tmp3 = sum1;
-                            if (typeof call === "unknown" ? hasOwnProperty(tmp3) : call(next, tmp3)) {
-                              break;
-                            } else {
-                              sum1 = sum1 + 1;
-                            }
-                          }
-                          next.value = next[sum1];
-                          next.done = false;
-                          return next;
-                        }
-                        next.value = undefined;
-                        next.done = true;
-                        return next;
-                      };
-                      next.next = next;
-                      tmp3 = next;
-                    }
-                  }
-                  const obj2 = { iterator: tmp3, resultName, nextLoc };
-                  this.delegate = obj2;
-                  if ("next" === this.method) {
-                    tmp6.arg = undefined;
-                  }
-                  return closure_11;
-                }
-              }
-              obj = obj(45);
-              const typeError = new TypeError(obj.default(next) + " is not iterable");
-              throw typeError;
-            }
-      };
-      Context.prototype = obj8;
-      return obj;
-    } else {
-      let call = hasOwnProperty.call;
-      if (typeof call === "unknown") {
-        let hasOwnPropertyResult = hasOwnProperty(tmp3);
-      } else {
-        hasOwnPropertyResult = call(prototypeOf, tmp3);
-      }
-    }
-  } catch (err) {
-    define2 = function define(arg0, arg1, arg2) {
-      arg0[arg1] = arg2;
-      return arg2;
+  let fn = videoId.onError;
+  if (undefined === fn) {
+    fn = (arg0) => {
+
     };
-    tmp7 = define2;
   }
-};
+  let fn2 = videoId.onReady;
+  if (undefined === fn2) {
+    fn2 = (arg0) => {
+
+    };
+  }
+  const playListStartIndex = videoId.playListStartIndex;
+  let num4 = 0;
+  if (undefined !== playListStartIndex) {
+    num4 = playListStartIndex;
+  }
+  ({ initialPlayerParams, allowWebViewZoom } = videoId);
+  closure_12 = tmp3;
+  const forceAndroidAutoplay = videoId.forceAndroidAutoplay;
+  let fn3 = videoId.onChangeState;
+  if (undefined === fn3) {
+    fn3 = (arg0) => {
+
+    };
+  }
+  let fn4 = videoId.onFullScreenChange;
+  if (undefined === fn4) {
+    fn4 = (arg0) => {
+
+    };
+  }
+  let fn5 = videoId.onPlaybackQualityChange;
+  if (undefined === fn5) {
+    fn5 = (arg0) => {
+
+    };
+  }
+  let fn6 = videoId.onPlaybackRateChange;
+  if (undefined === fn6) {
+    fn6 = (arg0) => {
+
+    };
+  }
+  const defaultResult = _slicedToArray.default(num.useState(false), 2);
+  const first = defaultResult[0];
+  closure_18 = defaultResult[1];
+  let ref = num.useRef(videoId);
+  num.useRef(playList);
+  if (!initialPlayerParams) {
+    initialPlayerParams = {};
+  }
+  ref = num.useRef(initialPlayerParams);
+  const ref1 = obj.useRef(null);
+  const eventEmitter = new videoId(playList[6]).EventEmitter();
+  num.useRef(eventEmitter);
+  const imperativeHandle = obj.useImperativeHandle(arg1, () => ({
+    getVideoUrl() {
+      let current = ref1.current;
+      current.injectJavaScript(videoId(playList[7]).PLAYER_FUNCTIONS.getVideoUrlScript);
+      return new Promise((arg0) => {
+        const current = ref.current;
+        current.once("getVideoUrl", arg0);
+      });
+    },
+    getDuration() {
+      let current = ref1.current;
+      current.injectJavaScript(videoId(playList[7]).PLAYER_FUNCTIONS.durationScript);
+      return new Promise((arg0) => {
+        const current = ref.current;
+        current.once("getDuration", arg0);
+      });
+    },
+    getCurrentTime() {
+      let current = ref1.current;
+      current.injectJavaScript(videoId(playList[7]).PLAYER_FUNCTIONS.currentTimeScript);
+      return new Promise((arg0) => {
+        const current = ref.current;
+        current.once("getCurrentTime", arg0);
+      });
+    },
+    isMuted() {
+      let current = ref1.current;
+      current.injectJavaScript(videoId(playList[7]).PLAYER_FUNCTIONS.isMutedScript);
+      return new Promise((arg0) => {
+        const current = ref.current;
+        current.once("isMuted", arg0);
+      });
+    },
+    getVolume() {
+      let current = ref1.current;
+      current.injectJavaScript(videoId(playList[7]).PLAYER_FUNCTIONS.getVolumeScript);
+      return new Promise((arg0) => {
+        const current = ref.current;
+        current.once("getVolume", arg0);
+      });
+    },
+    getPlaybackRate() {
+      let current = ref1.current;
+      current.injectJavaScript(videoId(playList[7]).PLAYER_FUNCTIONS.getPlaybackRateScript);
+      return new Promise((arg0) => {
+        const current = ref.current;
+        current.once("getPlaybackRate", arg0);
+      });
+    },
+    getAvailablePlaybackRates() {
+      let current = ref1.current;
+      current.injectJavaScript(videoId(playList[7]).PLAYER_FUNCTIONS.getAvailablePlaybackRatesScript);
+      return new Promise((arg0) => {
+        const current = ref.current;
+        current.once("getAvailablePlaybackRates", arg0);
+      });
+    },
+    seekTo(arg0, arg1) {
+      const current = ref1.current;
+      const PLAYER_FUNCTIONS = videoId(playList[7]).PLAYER_FUNCTIONS;
+      current.injectJavaScript(PLAYER_FUNCTIONS.seekToScript(arg0, arg1));
+    }
+  }), []);
+  let items = [tmp, undefined !== mute && mute, num, num3, first];
+  const effect = obj.useEffect(() => {
+    if (first) {
+      const items = [PLAYER_FUNCTIONS3.playMode[play], PLAYER_FUNCTIONS3.soundMode[closure_3], , ];
+      const PLAYER_FUNCTIONS = PLAYER_FUNCTIONS3.PLAYER_FUNCTIONS;
+      items[2] = PLAYER_FUNCTIONS.setVolume(num);
+      const PLAYER_FUNCTIONS2 = PLAYER_FUNCTIONS3.PLAYER_FUNCTIONS;
+      items[3] = PLAYER_FUNCTIONS2.setPlaybackRate(num3);
+      const item = items.forEach(ref1.current.injectJavaScript);
+    }
+  }, items);
+  const items1 = [videoId, tmp, first];
+  const effect1 = obj.useEffect(() => {
+    let tmp = first;
+    if (first) {
+      tmp = ref.current !== videoId;
+    }
+    if (tmp) {
+      ref.current = videoId;
+      const current = ref1.current;
+      const PLAYER_FUNCTIONS = PLAYER_FUNCTIONS3.PLAYER_FUNCTIONS;
+      current.injectJavaScript(PLAYER_FUNCTIONS.loadVideoById(videoId, play));
+    }
+  }, items1);
+  const items2 = [playList, tmp, num4, first];
+  const effect2 = obj.useEffect(() => {
+    let tmp = first;
+    if (first) {
+      tmp = playList;
+    }
+    if (tmp) {
+      tmp = !deepComparePlayList.deepComparePlayList(ref2.current, playList);
+    }
+    if (tmp) {
+      ref2.current = playList;
+      const current = ref1.current;
+      const PLAYER_FUNCTIONS = PLAYER_FUNCTIONS3.PLAYER_FUNCTIONS;
+      current.injectJavaScript(PLAYER_FUNCTIONS.loadPlaylist(playList, num4, play));
+    }
+  }, items2);
+  const items3 = [fn2, fn, fn3, fn4, fn6, fn5];
+  const items4 = [baseUrlOverride];
+  const callback = obj.useCallback((nativeEvent) => {
+    try {
+      const _JSON = JSON;
+      const parsed = JSON.parse(nativeEvent.nativeEvent.data);
+      const eventType = parsed.eventType;
+      if ("fullScreenChange" === eventType) {
+        fn4(parsed.data);
+      } else if ("playerStateChange" === eventType) {
+        fn3(PLAY_MODE.PLAYER_STATES[tmp4.data]);
+      } else if ("playerReady" === eventType) {
+        fn2();
+        closure_18(true);
+      } else if ("playerQualityChange" === eventType) {
+        fn5(tmp4.data);
+      } else if ("playerError" === eventType) {
+        fn(PLAY_MODE.PLAYER_ERROR[tmp4.data]);
+      } else if ("playbackRateChange" === eventType) {
+        fn6(tmp4.data);
+      } else {
+        const current = ref3.current;
+        current.emit(tmp4.eventType, tmp4.data);
+      }
+    } catch (tmp30) {
+      const _console = console;
+      console.warn("[rn-youtube-iframe]", tmp30);
+    }
+  }, items3);
+  const items5 = [useLocalHTML, num2, baseUrlOverride, undefined !== allowWebViewZoom && allowWebViewZoom];
+  const callback1 = obj.useCallback((mainDocumentURL) => {
+    try {
+      let url = mainDocumentURL.mainDocumentURL;
+      if (!url) {
+        url = mainDocumentURL.url;
+      }
+      let startsWithResult = "ios" === get_ActivityIndicator.Platform.OS;
+      if (startsWithResult) {
+        startsWithResult = "about:blank" === obj;
+      }
+      if (!startsWithResult) {
+        let DEFAULT_BASE_URL = baseUrlOverride;
+        if (!baseUrlOverride) {
+          DEFAULT_BASE_URL = PLAY_MODE.DEFAULT_BASE_URL;
+        }
+        startsWithResult = obj.startsWith(DEFAULT_BASE_URL);
+      }
+      return startsWithResult;
+    } catch (err) {
+      return true;
+    }
+  }, items4);
+  const memo = obj.useMemo(() => {
+    if (useLocalHTML) {
+      const obj2 = { html: MAIN_SCRIPTResult.htmlString };
+      if (baseUrlOverride) {
+        obj2.baseUrl = baseUrlOverride;
+      }
+      return obj2;
+    } else {
+      let DEFAULT_BASE_URL = baseUrlOverride;
+      if (!baseUrlOverride) {
+        DEFAULT_BASE_URL = PLAY_MODE.DEFAULT_BASE_URL;
+      }
+      const obj = { uri: `${DEFAULT_BASE_URL}?data=${tmp3.urlEncodedJSON}` };
+      return obj;
+    }
+    MAIN_SCRIPTResult = PLAYER_FUNCTIONS3.MAIN_SCRIPT(ref.current, ref2.current, ref.current, closure_12, num2);
+  }, items5);
+  const obj3 = { bounces: false, originWhitelist: ["*"], allowsInlineMediaPlayback: true, style: null, mediaPlaybackRequiresUserAction: false, onShouldStartLoadWithRequest: callback1, allowsFullscreenVideo: !ref.current.preventFullScreen, userAgent: null };
+  const items6 = [num2.webView, webViewStyle];
+  obj3.style = items6;
+  let str = "";
+  if (tmp4) {
+    const Platform = useLocalHTML.Platform;
+    const obj4 = { android: videoId(playList[9]).CUSTOM_USER_AGENT, ios: "" };
+    str = Platform.select(obj4);
+  }
+  obj3.userAgent = str;
+  return <useLocalHTML.View style={{ height, width }} __self={baseUrlOverride} __source={{ fileName: num3, lineNumber: 251, columnNumber: 5 }}>{num.default.createElement(videoId(playList[10]).WebView, play.default(obj3, webViewProps, { source: memo, ref: ref1, onMessage: callback, __self: baseUrlOverride, __source: { fileName: num3, lineNumber: 252, columnNumber: 7 } }))}</useLocalHTML.View>;
+});

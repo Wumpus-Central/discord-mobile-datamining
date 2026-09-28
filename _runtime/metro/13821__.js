@@ -1,11 +1,20 @@
 // === Module 13821: ? ===
 
 // Module 13821
+import _mod13796 from "module_13796" /* 13796 */;
 
-export default (arg0) => {
-  try {
-    return String(arg0);
-  } catch (err) {
-    return "Object";
-  }
-};
+if (_mod13796) {
+  let fn = call.bind(call);
+} else {
+  fn = () => {
+    const apply = call.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(call);
+    } else {
+      applyArgumentsResult = apply(call, arguments);
+    }
+    return applyArgumentsResult;
+  };
+}
+
+export default fn;

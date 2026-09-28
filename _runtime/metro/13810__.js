@@ -1,13 +1,18 @@
 // === Module 13810: ? ===
 
 // Module 13810
-import _mod13789 from "module_13789" /* 13789 */;
+import _mod13795 from "module_13795" /* 13795 */;
 
-const tmp = _mod13789.navigator && _mod13789.navigator.userAgent;
-let str = "";
-if (tmp) {
-  const _String = String;
-  str = String(tmp);
-}
+let c0 = 0;
+let closure_1 = Math.random();
+let closure_2 = _mod13795(1.toString);
 
-export default str;
+export default (arg0) => {
+  let str = "";
+  if (undefined !== arg0) {
+    str = arg0;
+  }
+  const sum = c0 + 1;
+  c0 = sum;
+  return `Symbol(${str}` + ")_" + closure_2(sum + closure_1, 36);
+};

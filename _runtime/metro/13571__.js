@@ -1,7 +1,7 @@
 // === Module 13571: ? ===
 
 // Module 13571
-import _mod13560 from "module_13560" /* 13560 */;
+import _mod13559 from "module_13559" /* 13559 */;
 
 
-export default (arg0, arg1) => new _mod13560(arg0, arg1).minor;
+export default (arg0, arg1) => new _mod13559(arg0, arg1).patch;

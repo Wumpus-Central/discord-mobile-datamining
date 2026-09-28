@@ -80,8 +80,8 @@ fn = function n(userConfig, fn) {
       initialVelocity: 0,
       current: "sa",
       lastTimestamp: null,
-      startTimestamp: "UPLOAD_ATTACHMENT_REMOVE_FILE",
-      reduceMotion: null
+      startTimestamp: "absolute",
+      reduceMotion: "50%"
     };
     let num = obj.velocity;
     if (num == null) {

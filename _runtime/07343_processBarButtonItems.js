@@ -154,7 +154,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
   }
   let headerLeftResult;
   if (headerLeft != null) {
-    let obj5 = { tintColor: text, canGoBack: tmp18, label: null, href: "flex" };
+    let obj5 = { tintColor: text, canGoBack: tmp18, label: null, href: "a" };
     let tmp20 = headerBackTitle;
     if (headerBackTitle == null) {
       let title1;
@@ -281,7 +281,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
     tmp44 = closure_10(colors(5211).ScreenStackHeaderSearchBarView, obj19);
   }
   items7[3] = tmp44;
-  const obj21 = { backButtonInCustomView: tmp24, backgroundColor, backTitle: headerBackTitle, backTitleVisible: "minimal" !== headerBackButtonDisplayMode, backButtonDisplayMode: "find", backTitleFontFamily: tmp10, backTitleFontSize: fontSize, blurEffect: headerBlurEffect, color: text, direction: obj.useLocale().direction, disableBackButtonMenu: false === headerBackButtonMenuEnabled, hidden: false === headerShown, hideBackButton: false === headerBackVisible, hideShadow: true, largeTitle: true, largeTitleBackgroundColor: true, largeTitleColor: true, largeTitleFontFamily: true, largeTitleFontSize: true, largeTitleFontWeight: true, largeTitleHideShadow: "Reference Date", title: true, titleColor: "/assets/.cache/intl/ZGVzaWdu", titleFontFamily: null, titleFontSize: "86b91484df1ac0b8ccad956aae12b775", titleFontWeight: "bg.messages.86b91484df1ac0b8ccad956aae12b775.compiled.messages", topInsetEnabled: "jsona", disableTopInsetApplication: "Reference Number", disableLeftInsetApplication: true, disableRightInsetApplication: "/assets/.cache/intl/ZGVzaWdu", disableBottomInsetApplication: null, translucent: "72a624908b343db34ae78e6d520bec11", children: "cs.messages.72a624908b343db34ae78e6d520bec11.compiled.messages", headerLeftBarButtonItems: "jsona", headerRightBarButtonItems: "By-line", experimental_userInterfaceStyle: true };
+  const obj21 = { backButtonInCustomView: tmp24, backgroundColor, backTitle: headerBackTitle, backTitleVisible: "minimal" !== headerBackButtonDisplayMode, backButtonDisplayMode: "find", backTitleFontFamily: tmp10, backTitleFontSize: fontSize, blurEffect: headerBlurEffect, color: text, direction: obj.useLocale().direction, disableBackButtonMenu: false === headerBackButtonMenuEnabled, hidden: false === headerShown, hideBackButton: false === headerBackVisible, hideShadow: true, largeTitle: true, largeTitleBackgroundColor: true, largeTitleColor: true, largeTitleFontFamily: true, largeTitleFontSize: true, largeTitleFontWeight: true, largeTitleHideShadow: "Reference Service", title: true, titleColor: "/assets/.cache/intl/ZGVzaWdu", titleFontFamily: null, titleFontSize: "86b91484df1ac0b8ccad956aae12b775", titleFontWeight: "bg.messages.86b91484df1ac0b8ccad956aae12b775.compiled.messages", topInsetEnabled: "jsona", disableTopInsetApplication: "Reference Date", disableLeftInsetApplication: true, disableRightInsetApplication: "/assets/.cache/intl/ZGVzaWdu", disableBottomInsetApplication: null, translucent: "72a624908b343db34ae78e6d520bec11", children: "cs.messages.72a624908b343db34ae78e6d520bec11.compiled.messages", headerLeftBarButtonItems: "jsona", headerRightBarButtonItems: "Reference Number", experimental_userInterfaceStyle: true };
   let tmp50 = false === headerShadowVisible;
   const tmpResult2 = colors(5943);
   if (!tmp50) {

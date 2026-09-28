@@ -1,17 +1,9 @@
 // === Module 13797: ? ===
 
 // Module 13797
-import _mod13793 from "module_13793" /* 13793 */;
+import _mod13795 from "module_13795" /* 13795 */;
 
+let closure_0 = _mod13795({}.toString);
+let closure_1 = _mod13795("".slice);
 
-export default !_mod13793(() => {
-  const fn = () => {
-
-  };
-  const bindResult = fn.bind();
-  let hasOwnPropertyResult = typeof bindResult !== "function";
-  if (typeof bindResult === "function") {
-    hasOwnPropertyResult = bindResult.hasOwnProperty("prototype");
-  }
-  return hasOwnPropertyResult;
-});
+export default (arg0) => closure_1(closure_0(arg0), 8, -1);

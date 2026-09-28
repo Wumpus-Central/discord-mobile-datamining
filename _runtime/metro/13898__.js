@@ -1,34 +1,19 @@
 // === Module 13898: ? ===
 
 // Module 13898
+import _mod13899 from "module_13899" /* 13899 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
-export const getReactNativeVersionWithModules = function getReactNativeVersionWithModules(constants) {
+
+export default function getReactNativeDimensions() {
   try {
-    if (constants) {
-      if (constants.reactNativeVersion) {
-        const major = constants.reactNativeVersion.major;
-        const minor = constants.reactNativeVersion.minor;
-        const patch = constants.reactNativeVersion.patch;
-        const prerelease = constants.reactNativeVersion.prerelease;
-        if (typeof major !== "number") {
-          return null;
-        } else {
-          const items = [];
-          const _HermesInternal2 = HermesInternal;
-          items.push("" + tmp4 + "." + minor + "." + patch);
-          if (prerelease) {
-            const _HermesInternal = HermesInternal;
-            arr2.push("-" + prerelease);
-          }
-          return items.join("");
-        }
-      } else {
-        return null;
-      }
-    } else {
-      return null;
+    const Dimensions = get_ActivityIndicator.Dimensions;
+    try {
+      const Dimensions2 = get_ActivityIndicator.Dimensions;
+      value = Dimensions2.get("window");
+      return _mod13899.getReactNativeDimensionsWithDimensions(tmp2, value);
+    } catch (err) {
     }
   } catch (err) {
-    return null;
   }
 };

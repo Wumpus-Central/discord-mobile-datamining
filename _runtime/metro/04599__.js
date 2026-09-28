@@ -8,10 +8,10 @@ require = fn;
 const noop = fn(19);
 ({ useCallback: c3, useEffect: closure_4, useRef: hasOwnProperty, useState: metroRequire } = noop);
 
-export const useRiveProperty = function useRiveProperty(instance, FillColor, f30735) {
+export const useRiveProperty = function useRiveProperty(instance, FillColor, f30740) {
   closure_0 = instance;
   closure_1 = FillColor;
-  closure_2 = f30735;
+  closure_2 = f30740;
   let tmp = hasOwnProperty(undefined);
   const items = [instance, FillColor];
   const disposableMemo = _mod4600.useDisposableMemo(() => {
