@@ -1,9 +1,9 @@
-// === Module 12632: UserProfileActivityTab ===
+// === Module 12650: UserProfileActivityTab ===
 
-// Module 12632 (UserProfileActivityTab)
+// Module 12650 (UserProfileActivityTab)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import UserProfileRecentActivityCardDefault from "UserProfileRecentActivityCard" /* 12637 */;
+import UserProfileRecentActivityCardDefault from "UserProfileRecentActivityCard" /* 12655 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -84,13 +84,13 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 export default function UserProfileActivityTab(user) {
   user = user.user;
   ({ currentUser, guildId, cardStyle } = user);
-  ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = cardStyle(12633)({ userId: user.id, currentUserId: currentUser.id, guildId }));
+  ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = cardStyle(12651)({ userId: user.id, currentUserId: currentUser.id, guildId }));
   if (!hasCurrentActivity) {
     if (!hasRecentActivity) {
       if (tmp4) {
         let tmp10Result = closure_5(UserProfileActivityTabSkeleton, {});
       } else {
-        const tmp7 = user(12636);
+        const tmp7 = user(12654);
         if (isCurrentUser) {
           tmp10Result = closure_5(tmp7.UserProfileActivityEmptyCurrentUser, {});
         } else {
@@ -106,7 +106,7 @@ export default function UserProfileActivityTab(user) {
     const intl = user(1115).intl;
     obj3.heading = intl.string(user(1115).t.J6STd9);
     const obj4 = { user, currentUser, guildId, style: cardStyle };
-    obj3.children = closure_5(cardStyle(12554), obj4);
+    obj3.children = closure_5(cardStyle(12572), obj4);
     hasCurrentActivity = closure_5(Section, obj3);
   }
   const items = [hasCurrentActivity, ];
@@ -125,5 +125,5 @@ export default function UserProfileActivityTab(user) {
   items[1] = hasRecentActivity;
   tmp10Result = closure_6(closure_7, { children: items });
   const obj = { userId: user.id, currentUserId: currentUser.id, guildId };
-  const tmp3 = cardStyle(12633)({ userId: user.id, currentUserId: currentUser.id, guildId });
+  const tmp3 = cardStyle(12651)({ userId: user.id, currentUserId: currentUser.id, guildId });
 };

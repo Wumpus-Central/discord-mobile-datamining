@@ -1,6 +1,6 @@
-// === Module 15482: DisableStreamPreviewsSetting ===
+// === Module 15480: DisableStreamPreviewsSetting ===
 
-// Module 15482 (DisableStreamPreviewsSetting)
+// Module 15480 (DisableStreamPreviewsSetting)
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 2021 */;
 import SettingsConstants from "SettingsConstants" /* 7417 */;

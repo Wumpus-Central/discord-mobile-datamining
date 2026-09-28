@@ -1,6 +1,6 @@
-// === Module 15655: NativeFreezeScreens ===
+// === Module 15653: NativeFreezeScreens ===
 
-// Module 15655 (NativeFreezeScreens)
+// Module 15653 (NativeFreezeScreens)
 import enableScreens from "enableScreens" /* 5211 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

@@ -1,9 +1,9 @@
-// === Module 15007: ChatSetting ===
+// === Module 15005: ChatSetting ===
 
-// Module 15007 (ChatSetting)
+// Module 15005 (ChatSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
-import ImageTextIcon from "ImageTextIcon" /* 15008 */;
+import ImageTextIcon from "ImageTextIcon" /* 15006 */;
 import SettingBuilders from "SettingBuilders" /* 11006 */;
 import size from "module_2" /* 2 */;
 

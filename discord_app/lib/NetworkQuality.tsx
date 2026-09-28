@@ -1,6 +1,6 @@
-// === Module 13363: NetworkQuality ===
+// === Module 13362: NetworkQuality ===
 
-// Module 13363 (NetworkQuality)
+// Module 13362 (NetworkQuality)
 import TimeUtils from "TimeUtils" /* 4865 */;
 import NetworkStore from "NetworkStore" /* 4885 */;
 

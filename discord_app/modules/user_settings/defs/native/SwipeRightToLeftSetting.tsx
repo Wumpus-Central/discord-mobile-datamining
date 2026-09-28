@@ -1,6 +1,6 @@
-// === Module 15026: SwipeRightToLeftSetting ===
+// === Module 15024: SwipeRightToLeftSetting ===
 
-// Module 15026 (SwipeRightToLeftSetting)
+// Module 15024 (SwipeRightToLeftSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;

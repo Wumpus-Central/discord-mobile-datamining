@@ -1,6 +1,6 @@
-// === Module 17197: NewUserManager ===
+// === Module 17201: NewUserManager ===
 
-// Module 17197 (NewUserManager)
+// Module 17201 (NewUserManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
 import NUFActionCreators from "NUFActionCreators" /* 12201 */;
@@ -26,7 +26,7 @@ let obj2 = {
     }
     return null == avatar;
   },
-  transitionToStep: fn(17198).openAddAvatarModal
+  transitionToStep: fn(17202).openAddAvatarModal
 };
 const items = [obj2, , , , , ];
 let obj3 = {

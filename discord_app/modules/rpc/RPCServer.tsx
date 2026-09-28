@@ -1,12 +1,12 @@
-// === Module 14089: RPCServer ===
+// === Module 14088: RPCServer ===
 
-// Module 14089 (RPCServer)
+// Module 14088 (RPCServer)
 import _modDef12 from "module_12" /* 12 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import RPCErrorDefault from "RPCError" /* 8770 */;
 import transformUserDefault from "transformUser" /* 8776 */;
 import RpcCommandInterception from "RpcCommandInterception" /* 12448 */;
-import validateScopeDefault from "validateScope" /* 14065 */;
+import validateScopeDefault from "validateScope" /* 14064 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

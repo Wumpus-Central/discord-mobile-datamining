@@ -1,18 +1,18 @@
-// === Module 17318: GuildSettingsAutomodRule ===
+// === Module 17322: GuildSettingsAutomodRule ===
 
-// Module 17318 (GuildSettingsAutomodRule)
+// Module 17322 (GuildSettingsAutomodRule)
 import nativeDefault from "native" /* 576 */;
 import ToastUtils from "ToastUtils" /* 4527 */;
 import NavigatorHeader from "NavigatorHeader" /* 5936 */;
 import ClipboardUtils from "ClipboardUtils" /* 6610 */;
-import AutomodRuleUtils from "AutomodRuleUtils" /* 17305 */;
+import AutomodRuleUtils from "AutomodRuleUtils" /* 17309 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const useAutomodRulesList = fn(17302).useAutomodRulesList;
-const GuildSettingsAutomodRuleStore = fn(17304);
+const useAutomodRulesList = fn(17306).useAutomodRulesList;
+const GuildSettingsAutomodRuleStore = fn(17308);
 ({ useAutomodEditingRuleActions: closure_7, useAutomodEditingRuleState: closure_8 } = GuildSettingsAutomodRuleStore);
 const MAX_RULE_NAME_LENGTH = fn(11341).MAX_RULE_NAME_LENGTH;
 const jsxProd = fn(21);

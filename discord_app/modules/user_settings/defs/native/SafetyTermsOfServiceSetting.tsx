@@ -1,6 +1,6 @@
-// === Module 15494: SafetyTermsOfServiceSetting ===
+// === Module 15492: SafetyTermsOfServiceSetting ===
 
-// Module 15494 (SafetyTermsOfServiceSetting)
+// Module 15492 (SafetyTermsOfServiceSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
 import LinkingDefault from "Linking" /* 4525 */;

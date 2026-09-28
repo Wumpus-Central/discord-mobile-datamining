@@ -1,6 +1,6 @@
-// === Module 15869: VoiceChannel ===
+// === Module 15867: VoiceChannel ===
 
-// Module 15869 (VoiceChannel)
+// Module 15867 (VoiceChannel)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9060 */;

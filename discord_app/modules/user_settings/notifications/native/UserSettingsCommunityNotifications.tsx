@@ -1,6 +1,6 @@
-// === Module 15073: UserSettingsCommunityNotifications ===
+// === Module 15071: UserSettingsCommunityNotifications ===
 
-// Module 15073 (UserSettingsCommunityNotifications)
+// Module 15071 (UserSettingsCommunityNotifications)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1115 */;
 import TableRowGroup from "TableRowGroup" /* 5999 */;

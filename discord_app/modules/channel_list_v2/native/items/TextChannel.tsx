@@ -1,6 +1,6 @@
-// === Module 15859: TextChannel ===
+// === Module 15857: TextChannel ===
 
-// Module 15859 (TextChannel)
+// Module 15857 (TextChannel)
 import nativeDefault from "native" /* 576 */;
 import RoutingSourcesDefault from "RoutingSources" /* 1113 */;
 import transitionToChannel from "transitionToChannel" /* 4847 */;

@@ -1,6 +1,6 @@
-// === Module 16137: getIconForChannel ===
+// === Module 16133: getIconForChannel ===
 
-// Module 16137 (getIconForChannel)
+// Module 16133 (getIconForChannel)
 import Constants from "Constants" /* 1074 */;
 import TextIcon from "TextIcon" /* 5394 */;
 import ImageIcon from "ImageIcon" /* 5401 */;

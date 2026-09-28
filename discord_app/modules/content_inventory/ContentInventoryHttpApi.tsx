@@ -1,6 +1,6 @@
-// === Module 12635: ContentInventoryHttpApi ===
+// === Module 12653: ContentInventoryHttpApi ===
 
-// Module 12635 (ContentInventoryHttpApi)
+// Module 12653 (ContentInventoryHttpApi)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

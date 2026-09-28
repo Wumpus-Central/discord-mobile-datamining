@@ -1,6 +1,6 @@
-// === Module 12754: transformMessageAttachments ===
+// === Module 12753: transformMessageAttachments ===
 
-// Module 12754 (transformMessageAttachments)
+// Module 12753 (transformMessageAttachments)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;

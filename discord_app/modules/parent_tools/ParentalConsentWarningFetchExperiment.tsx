@@ -1,6 +1,6 @@
-// === Module 17232: ParentalConsentWarningFetchExperiment ===
+// === Module 17236: ParentalConsentWarningFetchExperiment ===
 
-// Module 17232 (ParentalConsentWarningFetchExperiment)
+// Module 17236 (ParentalConsentWarningFetchExperiment)
 import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 

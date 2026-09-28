@@ -1,6 +1,6 @@
-// === Module 16200: GuildRoleSubscriptionPurchasePreviewCard ===
+// === Module 16196: GuildRoleSubscriptionPurchasePreviewCard ===
 
-// Module 16200 (GuildRoleSubscriptionPurchasePreviewCard)
+// Module 16196 (GuildRoleSubscriptionPurchasePreviewCard)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
@@ -9,8 +9,8 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800
 import Text_Text from "Text/Text" /* 4832 */;
 import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6400 */;
 import LayoutUtils from "LayoutUtils" /* 9807 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 14774 */;
-import EmojiIconDefault from "EmojiIcon" /* 14787 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 14772 */;
+import EmojiIconDefault from "EmojiIcon" /* 14785 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
@@ -140,8 +140,8 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
   const size = first.size;
   const obj7 = { style: tmp.container, children: null };
   const obj8 = { style: tmp.header, children: null };
-  const formattedSubscriptionPlan = listingId(16196).useFormattedSubscriptionPlan(listingId);
-  const obj6 = listingId(16196);
+  const formattedSubscriptionPlan = listingId(16192).useFormattedSubscriptionPlan(listingId);
+  const obj6 = listingId(16192);
   const tmp11 = guildId;
   if (str == null) {
     str = "";
@@ -152,7 +152,7 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
   obj10.children = items1;
   items[2] = closure_9(closure_6, obj10);
   obj8.children = items;
-  const items2 = [closure_9(closure_6, obj8), closure_8(listingId(1177).Spacer, { size: 16 }), closure_8(tmp11(16202), { listingId }), ];
+  const items2 = [closure_9(closure_6, obj8), closure_8(listingId(1177).Spacer, { size: 16 }), closure_8(tmp11(16198), { listingId }), ];
   let tmp8Result6 = length > 0 || size > 0 || length2 > 0;
   if (tmp8Result6) {
     const items3 = [closure_8(tmp4(1177).Spacer, { size: 24 }), , ];
@@ -223,7 +223,7 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
     const obj45 = {
       onPress() {
           const obj = ActionSheetActionCreatorsDefault;
-          obj.openLazy(asyncRequireImpl(16201, dependencyMap.paths), "PurchaseCard:" + listingId, { listingId, guildId });
+          obj.openLazy(asyncRequireImpl(16197, dependencyMap.paths), "PurchaseCard:" + listingId, { listingId, guildId });
         }
     };
     items3[2] = closure_8(ShowAllButton, obj45);

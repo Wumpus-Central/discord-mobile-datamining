@@ -1,6 +1,6 @@
-// === Module 15497: useAllowFriendsFromMutualGuildsOnly ===
+// === Module 15495: useAllowFriendsFromMutualGuildsOnly ===
 
-// Module 15497 (useAllowFriendsFromMutualGuildsOnly)
+// Module 15495 (useAllowFriendsFromMutualGuildsOnly)
 import UserSettingsUtils from "UserSettingsUtils" /* 6416 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 13331: VoiceMemberUser ===
+// === Module 13330: VoiceMemberUser ===
 
-// Module 13331 (VoiceMemberUser)
+// Module 13330 (VoiceMemberUser)
 import nativeDefault from "native" /* 576 */;
 import UserUtilsDefault from "UserUtils" /* 4678 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4692 */;
@@ -286,7 +286,7 @@ let closure_16 = noop.memo((user) => {
       const obj7 = { style: tmp2.row, children: null };
       let tmp22Result = null;
       if (user.isSpectating) {
-        const obj8 = { size: tmp8(1177).Icon.Sizes.REFRESH_SMALL_16, source: channel(13337), style: tmp21 };
+        const obj8 = { size: tmp8(1177).Icon.Sizes.REFRESH_SMALL_16, source: channel(13336), style: tmp21 };
         tmp22Result = closure_11(tmp8(1177).Icon, obj8);
       }
       const items3 = [tmp22Result, , , , ];
@@ -294,7 +294,7 @@ let closure_16 = noop.memo((user) => {
         items3[1] = null;
         let tmp22Result5 = null;
         if (tmp16) {
-          const obj9 = { size: tmp8(1177).Icon.Sizes.REFRESH_SMALL_16, source: channel(13334), style: tmp21 };
+          const obj9 = { size: tmp8(1177).Icon.Sizes.REFRESH_SMALL_16, source: channel(13333), style: tmp21 };
           tmp22Result5 = closure_11(tmp8(1177).Icon, obj9);
         }
         items3[2] = tmp22Result5;
@@ -310,18 +310,18 @@ let closure_16 = noop.memo((user) => {
           tmp25Result = closure_12(tmp26, obj7);
         } else {
           if (localVideoDisabled) {
-            const obj11 = { size: tmp8(1177).Icon.Sizes.REFRESH_SMALL_16, source: channel(13335), style: tmp2.voiceStatusIconMargin, disableColor: true };
+            const obj11 = { size: tmp8(1177).Icon.Sizes.REFRESH_SMALL_16, source: channel(13334), style: tmp2.voiceStatusIconMargin, disableColor: true };
             let obj12 = obj11;
           } else {
-            obj12 = { size: tmp8(1177).Icon.Sizes.REFRESH_SMALL_16, source: channel(13336), style: tmp21 };
+            obj12 = { size: tmp8(1177).Icon.Sizes.REFRESH_SMALL_16, source: channel(13335), style: tmp21 };
           }
           closure_11(tmp8(1177).Icon, obj12);
         }
       } else {
         if (tmp8Result6.isThemeDark(stateFromStores)) {
-          let tmp5Result = channel(13332);
+          let tmp5Result = channel(13331);
         } else {
-          tmp5Result = channel(13333);
+          tmp5Result = channel(13332);
         }
         const obj13 = { size: tmp8(1177).Icon.Sizes.REFRESH_SMALL_16, source: tmp5Result, style: tmp2.voiceStatusIconMargin, color: tmp21.tintColor, disableColor: localMute };
         closure_11(tmp8(1177).Icon, obj13);

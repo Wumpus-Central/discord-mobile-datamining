@@ -1,6 +1,6 @@
-// === Module 16714: RestrictedMessageRequestPreview ===
+// === Module 16718: RestrictedMessageRequestPreview ===
 
-// Module 16714 (RestrictedMessageRequestPreview)
+// Module 16718 (RestrictedMessageRequestPreview)
 import nativeDefault from "native" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -101,9 +101,9 @@ export default function RestrictedMessageRequestPreview(channelId) {
         }
       };
       const obj6 = { channel: stateFromStores, user: stateFromStores1 };
-      const items8 = [closure_10(tmp2(16715), obj6), ];
+      const items8 = [closure_10(tmp2(16719), obj6), ];
       const obj7 = { channelId };
-      items8[1] = closure_10(tmp2(16717), obj7);
+      items8[1] = closure_10(tmp2(16721), obj7);
       obj5.children = items8;
       const items9 = [closure_11(closure_5, obj5), ];
       const obj8 = { style: null, children: null };

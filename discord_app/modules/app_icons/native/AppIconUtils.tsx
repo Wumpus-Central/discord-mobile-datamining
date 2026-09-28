@@ -1,6 +1,6 @@
-// === Module 12996: AppIconUtils ===
+// === Module 12995: AppIconUtils ===
 
-// Module 12996 (AppIconUtils)
+// Module 12995 (AppIconUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1610 */;
@@ -140,7 +140,7 @@ const PremiumTypes = fn(1374).PremiumTypes;
 let closure_12 = new LoggerDefault("AppIconUtils");
 const PlatformUtils = fn(1364);
 if (PlatformUtils.isAndroid()) {
-  let DCDIconManager = fn(12997).default;
+  let DCDIconManager = fn(12996).default;
 } else {
   DCDIconManager = fn(17).NativeModules.DCDIconManager;
 }

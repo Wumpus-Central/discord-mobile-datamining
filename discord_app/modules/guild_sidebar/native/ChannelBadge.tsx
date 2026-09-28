@@ -1,11 +1,11 @@
-// === Module 15863: ChannelBadge ===
+// === Module 15861: ChannelBadge ===
 
-// Module 15863 (ChannelBadge)
+// Module 15861 (ChannelBadge)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import NumberUtils from "NumberUtils" /* 1882 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import NewBadgeDefault from "NewBadge" /* 11779 */;
-import MentionsBadgeDefault from "MentionsBadge" /* 15864 */;
+import MentionsBadgeDefault from "MentionsBadge" /* 15862 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2112 */;
 

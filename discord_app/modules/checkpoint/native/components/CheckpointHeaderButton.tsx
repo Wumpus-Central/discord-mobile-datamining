@@ -1,6 +1,6 @@
-// === Module 15278: CheckpointHeaderButton ===
+// === Module 15276: CheckpointHeaderButton ===
 
-// Module 15278 (CheckpointHeaderButton)
+// Module 15276 (CheckpointHeaderButton)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;

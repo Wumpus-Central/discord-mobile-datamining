@@ -1,11 +1,11 @@
-// === Module 16388: VibegrationsStatusLabels ===
+// === Module 16393: VibegrationsStatusLabels ===
 
-// Module 16388 (VibegrationsStatusLabels)
+// Module 16393 (VibegrationsStatusLabels)
 import util from "util" /* 1115 */;
 import _modDef3715 from "module_3715" /* 3715 */;
 import VibegrationsTypes from "VibegrationsTypes" /* 5371 */;
-import size from "module_2" /* 2 */;
 
+require = fn;
 function thinkingLabel(restoring) {
   ({ activity, compacting } = restoring);
   if (compacting === undefined) {
@@ -15,30 +15,52 @@ function thinkingLabel(restoring) {
   if (flag === undefined) {
     flag = false;
   }
-  let flag2 = restoring.controlling;
+  let flag2 = restoring.recalling;
   if (flag2 === undefined) {
     flag2 = false;
+  }
+  let flag3 = restoring.controlling;
+  if (flag3 === undefined) {
+    flag3 = false;
   }
   let tmp = null != activity;
   if (tmp) {
     tmp = "end" !== activity.phase;
   }
-  const tmp2 = _modDef3715;
-  if (flag2) {
-    let ivvYHP = tmp2.ivvYHP;
+  if (flag3) {
+    let ivvYHP = _modDef3715.ivvYHP;
   } else if (flag) {
-    ivvYHP = tmp2.aFffp2;
-  } else if (compacting) {
-    ivvYHP = tmp2["0vH/5G"];
+    ivvYHP = _modDef3715.aFffp2;
+  } else if (flag2) {
+    ivvYHP = items[0];
   } else {
-    ivvYHP = tmp ? tmp2.Ly7F7x : tmp2.QDGuNS;
+    const tmp4 = _modDef3715;
+    if (compacting) {
+      ivvYHP = tmp4["0vH/5G"];
+    } else {
+      ivvYHP = tmp ? tmp4.Ly7F7x : tmp4.QDGuNS;
+    }
   }
   return ivvYHP;
 }
+const items = [_modDef3715.krnkPq, _modDef3715["8oUm/J"], _modDef3715["6Ea4dF"], _modDef3715.fQx5qC, _modDef3715["phXeK/"]];
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsStatusLabels.tsx");
 
 export const INDICATOR_PASS_MS = 1000;
 export const INDICATOR_PASS_STAGGER_MS = 1800;
+export const RECALLING_LINES = items;
+export const recallingLine = function recallingLine(current) {
+  const intl = util.intl;
+  return intl.string(items[current % items.length]);
+};
+export const isRecallingLine = function isRecallingLine(current) {
+  closure_0 = current;
+  return items.some((item) => {
+    const intl = util.intl;
+    return intl.string(item) === closure_0;
+  });
+};
 export const connectionLabel = function connectionLabel(stateFromStores6) {
   if ("connecting" === stateFromStores6) {
     const intl3 = util.intl;

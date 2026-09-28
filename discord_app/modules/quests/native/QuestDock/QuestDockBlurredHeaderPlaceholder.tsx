@@ -1,7 +1,7 @@
-// === Module 14724: QuestDockBlurredHeaderPlaceholder ===
+// === Module 14722: QuestDockBlurredHeaderPlaceholder ===
 
-// Module 14724 (QuestDockBlurredHeaderPlaceholder)
-import thumbHashToRGBA from "thumbHashToRGBA" /* 14725 */;
+// Module 14722 (QuestDockBlurredHeaderPlaceholder)
+import thumbHashToRGBA from "thumbHashToRGBA" /* 14723 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

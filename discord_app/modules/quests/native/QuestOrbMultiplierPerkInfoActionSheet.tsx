@@ -1,6 +1,6 @@
-// === Module 14698: QuestOrbMultiplierPerkInfoActionSheet ===
+// === Module 14696: QuestOrbMultiplierPerkInfoActionSheet ===
 
-// Module 14698 (QuestOrbMultiplierPerkInfoActionSheet)
+// Module 14696 (QuestOrbMultiplierPerkInfoActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
@@ -152,6 +152,6 @@ export default function QuestOrbMultiplierPerkInfoActionSheet(multiplier) {
   let obj3 = { visible: orbMultiplierEligibility === multiplier(10697).QuestOrbMultiplierEligibilityType.NITRO || orbMultiplierEligibility === multiplier(10697).QuestOrbMultiplierEligibilityType.UPSELL, children: null };
   const tmp4 = orbMultiplierEligibility === multiplier(10697).QuestOrbMultiplierEligibilityType.NITRO || orbMultiplierEligibility === multiplier(10697).QuestOrbMultiplierEligibilityType.UPSELL;
   obj3.children = closure_8(SheetContent, { title: memo, body: memo1, eligibleToReceivePremiumRewards: result });
-  obj2.children = closure_8(orbMultiplierEligibility(14695), obj3);
+  obj2.children = closure_8(orbMultiplierEligibility(14693), obj3);
   return closure_8(multiplier(6571).BottomSheet, obj2);
 };

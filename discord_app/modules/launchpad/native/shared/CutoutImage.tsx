@@ -1,12 +1,12 @@
-// === Module 16799: CutoutImage ===
+// === Module 16803: CutoutImage ===
 
-// Module 16799 (CutoutImage)
+// Module 16803 (CutoutImage)
 import v1 from "v1" /* 1255 */;
 import inlineStylesDefault from "inlineStyles" /* 7909 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const getReactNativeSVGImageSourceDefault = tmp13(12587);
+const getReactNativeSVGImageSourceDefault = tmp13(12605);
 require = fn;
 const Image = fn(17).Image;
 const jsxProd = fn(21);

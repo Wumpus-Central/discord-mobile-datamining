@@ -9,7 +9,7 @@ import StreamRTCConnection from "StreamRTCConnection" /* 4880 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 4888 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4891 */;
 import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7157 */;
-import canSpectateDefault from "canSpectate" /* 13346 */;
+import canSpectateDefault from "canSpectate" /* 13345 */;
 import RunningGameStore from "RunningGameStore" /* 2000 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1993 */;

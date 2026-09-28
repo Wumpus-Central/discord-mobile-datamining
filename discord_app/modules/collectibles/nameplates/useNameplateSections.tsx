@@ -1,6 +1,6 @@
-// === Module 14195: useNameplateSections ===
+// === Module 14194: useNameplateSections ===
 
-// Module 14195 (useNameplateSections)
+// Module 14194 (useNameplateSections)
 import util from "util" /* 1115 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 6974 */;
 import _slicedToArray from "module_32" /* 32 */;

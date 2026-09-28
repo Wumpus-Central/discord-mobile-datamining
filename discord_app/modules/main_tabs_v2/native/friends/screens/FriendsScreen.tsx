@@ -1,6 +1,6 @@
-// === Module 16570: FriendsScreen ===
+// === Module 16574: FriendsScreen ===
 
-// Module 16570 (FriendsScreen)
+// Module 16574 (FriendsScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1876 */;
@@ -10,7 +10,7 @@ import TableRow from "TableRow" /* 5917 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7624 */;
 import NoResultsDefault from "NoResults" /* 10457 */;
 import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 14645 */;
-import _modDef16085 from "module_16085" /* 16085 */;
+import _modDef16081 from "module_16081" /* 16081 */;
 import noop from "module_19" /* 19 */;
 import GameRelationshipStore from "GameRelationshipStore" /* 7071 */;
 import RelationshipStore from "RelationshipStore" /* 4479 */;
@@ -80,7 +80,7 @@ export default function FriendsScreen() {
     }
     const items = [];
     if (tmp2) {
-      const obj = { icon: _modDef16085, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
+      const obj = { icon: _modDef16081, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
       const intl = util.intl;
       obj.label = intl.string(util.t.fyA115);
       const intl2 = util.intl;
@@ -123,7 +123,7 @@ export default function FriendsScreen() {
       let v1IEawz = require;
       let obj9 = dependencyMap;
       let obj7 = { start: true, end: true, icon: null, trailing: null, label: null, subLabel: null, onPress: null };
-      const obj8 = { source: _modDef16085 };
+      const obj8 = { source: _modDef16081 };
       obj7.icon = React5(TableRow.TableRow.Icon, obj8);
       obj7.trailing = React5(TableRow.TableRow.Arrow, {});
       const intl5 = util.intl;

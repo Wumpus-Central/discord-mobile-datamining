@@ -1,6 +1,6 @@
-// === Module 14719: QuestDockDragHandle ===
+// === Module 14717: QuestDockDragHandle ===
 
-// Module 14719 (QuestDockDragHandle)
+// Module 14717 (QuestDockDragHandle)
 import spring from "spring" /* 5280 */;
 import noop from "module_19" /* 19 */;
 

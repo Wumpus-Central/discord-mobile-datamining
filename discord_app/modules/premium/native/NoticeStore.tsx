@@ -1,6 +1,6 @@
-// === Module 13267: NoticeStore ===
+// === Module 13266: NoticeStore ===
 
-// Module 13267 (NoticeStore)
+// Module 13266 (NoticeStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;

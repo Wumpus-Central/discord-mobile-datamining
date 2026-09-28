@@ -1,6 +1,6 @@
-// === Module 12725: useVirtualCurrencyData ===
+// === Module 12724: useVirtualCurrencyData ===
 
-// Module 12725 (useVirtualCurrencyData)
+// Module 12724 (useVirtualCurrencyData)
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 6973 */;
 import _mod8315 from "module_8315" /* 8315 */;
 import noop from "module_19" /* 19 */;

@@ -1,6 +1,6 @@
-// === Module 12790: useEmbeddedActivityParticipantAvatarUris ===
+// === Module 12789: useEmbeddedActivityParticipantAvatarUris ===
 
-// Module 12790 (useEmbeddedActivityParticipantAvatarUris)
+// Module 12789 (useEmbeddedActivityParticipantAvatarUris)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;

@@ -1,6 +1,6 @@
-// === Module 16279: useVibegrationsPublishedChannelId ===
+// === Module 16275: useVibegrationsPublishedChannelId ===
 
-// Module 16279 (useVibegrationsPublishedChannelId)
+// Module 16275 (useVibegrationsPublishedChannelId)
 import VibegrationsUtils from "VibegrationsUtils" /* 5370 */;
 import GuildChannelStore from "GuildChannelStore" /* 4467 */;
 

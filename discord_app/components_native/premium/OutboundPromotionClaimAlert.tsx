@@ -1,10 +1,10 @@
-// === Module 13101: OutboundPromotionClaimAlert ===
+// === Module 13100: OutboundPromotionClaimAlert ===
 
-// Module 13101 (OutboundPromotionClaimAlert)
+// Module 13100 (OutboundPromotionClaimAlert)
 import nativeDefault from "native" /* 576 */;
 import LinkingDefault from "Linking" /* 4525 */;
 import ClipboardUtils from "ClipboardUtils" /* 6610 */;
-import PromotionUtils from "PromotionUtils" /* 12963 */;
+import PromotionUtils from "PromotionUtils" /* 12962 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

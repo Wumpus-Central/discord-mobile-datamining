@@ -1,6 +1,6 @@
-// === Module 17700: UpdateAppScreen ===
+// === Module 17704: UpdateAppScreen ===
 
-// Module 17700 (UpdateAppScreen)
+// Module 17704 (UpdateAppScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef2781 from "module_2781" /* 2781 */;

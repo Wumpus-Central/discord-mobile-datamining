@@ -1,11 +1,11 @@
-// === Module 16405: VibegrationsDebugLogsTab ===
+// === Module 16409: VibegrationsDebugLogsTab ===
 
-// Module 16405 (VibegrationsDebugLogsTab)
+// Module 16409 (VibegrationsDebugLogsTab)
 import nativeDefault from "native" /* 576 */;
 import _modDef3715 from "module_3715" /* 3715 */;
-import VibegrationsDebugJson from "VibegrationsDebugJson" /* 16406 */;
-import VibegrationsDebugFormat from "VibegrationsDebugFormat" /* 16407 */;
-import VibegrationsDebugLabels from "VibegrationsDebugLabels" /* 16408 */;
+import VibegrationsDebugJson from "VibegrationsDebugJson" /* 16410 */;
+import VibegrationsDebugFormat from "VibegrationsDebugFormat" /* 16411 */;
+import VibegrationsDebugLabels from "VibegrationsDebugLabels" /* 16412 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8495 */;
@@ -48,7 +48,7 @@ let closure_11 = noop.memo((entry) => {
   }
   const obj = { style: tmp.row, children: null };
   const obj2 = { style: tmp.rowHead, children: null };
-  const obj3 = { variant: "text-xs/normal", color: "text-subtle", children: tmp6(16407).formatClockTime(entry.ts) };
+  const obj3 = { variant: "text-xs/normal", color: "text-subtle", children: tmp6(16411).formatClockTime(entry.ts) };
   const items1 = [closure_7(tmp6(4832).Text, obj3), , , ];
   const level = entry.level;
   let str2 = "text-feedback-critical";

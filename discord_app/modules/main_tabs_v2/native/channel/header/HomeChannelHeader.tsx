@@ -1,6 +1,6 @@
-// === Module 12843: HomeChannelHeader ===
+// === Module 12842: HomeChannelHeader ===
 
-// Module 12843 (HomeChannelHeader)
+// Module 12842 (HomeChannelHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;

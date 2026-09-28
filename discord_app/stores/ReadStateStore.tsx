@@ -21,9 +21,9 @@ import isChangelogChannelDefault from "isChangelogChannel" /* 7822 */;
 import ThreadNotificationSettings from "ThreadNotificationSettings" /* 9548 */;
 import isChannelFocused from "isChannelFocused" /* 9549 */;
 import DiscordAppStateDefault from "DiscordAppState" /* 10704 */;
-import networkAwareRetryDefault from "networkAwareRetry" /* 13382 */;
-import MessageRequestUtils from "MessageRequestUtils" /* 13383 */;
-import visibleInlineChannels from "visibleInlineChannels" /* 13385 */;
+import networkAwareRetryDefault from "networkAwareRetry" /* 13381 */;
+import MessageRequestUtils from "MessageRequestUtils" /* 13382 */;
+import visibleInlineChannels from "visibleInlineChannels" /* 13384 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
@@ -50,7 +50,7 @@ import RelationshipStore from "RelationshipStore" /* 4479 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5017 */;
 import UserStore from "UserStore" /* 1372 */;
-import WindowStore from "WindowStore" /* 13379 */;
+import WindowStore from "WindowStore" /* 13378 */;
 
 const isMessageMentionedDefault = isMessageMentioned;
 
@@ -734,8 +734,8 @@ const logger = new LoggerDefault("ReadStateStore");
 function isOverlayChannelVisible() {
   return false;
 }
-if (fn(13380).OVERLAY_SUPPORTED) {
-  isOverlayChannelVisible = fn(13381).isOverlayChannelVisible;
+if (fn(13379).OVERLAY_SUPPORTED) {
+  isOverlayChannelVisible = fn(13380).isOverlayChannelVisible;
 }
 function handleMessageDelete(channelId) {
   value = ReadState.get(channelId.channelId);
@@ -981,7 +981,7 @@ class ReadState {
       tmp = ReadStateTypes;
       CHANNEL = ReadStateTypes.CHANNEL;
     }
-    merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "flex" });
+    merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "a" });
     merged[0] = ReadStateTypes.CHANNEL;
     merged.channelId = global;
     merged.type = CHANNEL;
@@ -1042,7 +1042,7 @@ ReadState["get"] = function get(channelId) {
       if (CHANNEL === undefined) {
         CHANNEL2 = ReadStateTypes.CHANNEL;
       }
-      merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "flex" });
+      merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "a" });
       merged[0] = ReadStateTypes.CHANNEL;
       merged.channelId = channelId;
       merged.type = CHANNEL2;
@@ -1946,14 +1946,14 @@ prototype2["_ack"] = function _ack(importDefault, ackMessageId) {
         }
         DispatcherDefault.dispatch({ type: "MESSAGE_ACKED" });
         if (closure_2) {
-          asyncRequireImpl(13384, dependencyMap.paths).then((result) => {
+          asyncRequireImpl(13383, dependencyMap.paths).then((result) => {
             let obj = importDefault;
             if (importDefault == null) {
               obj = {};
             }
             result.default(channelId.channelId, obj);
           });
-          const promise = asyncRequireImpl(13384, dependencyMap.paths);
+          const promise = asyncRequireImpl(13383, dependencyMap.paths);
         }
       }
     });
@@ -3212,7 +3212,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
   },
   CHANNEL_LOCAL_ACK: function handleChannelLocalAck(channelId) {
     value = ReadState.get(channelId.channelId);
-    return value.ack({ messageId: "HermesInternal", local: "HermesInternal", immediate: "flex", force: "noiseSuppression", isExplicitUserAction: "function withEllipsisAnimation_ButtonEllipsisNativeTsx1(offset,value){const{ELLIPSIS_APPEAR_DURATION,withDelay,withRepeat,withTiming,ELLIPSIS_APPEAR_TIMING}=this.__closure;const animationTimeMs=ELLIPSIS_APPEAR_DURATION;const animationStaggerTimeMs=animationTimeMs/3;return withDelay(offset*animationStaggerTimeMs,withRepeat(withTiming(value,ELLIPSIS_APPEAR_TIMING,'animate-always'),-1,true));}", trackAnalytics: "function ButtonEllipsisNativeTsx2(){const{opacity,scale}=this.__closure;return{opacity:opacity.get(),transform:[{scale:scale.get()}]};}" });
+    return value.ack({ messageId: "HermesInternal", local: "HermesInternal", immediate: "flex", force: "noiseSuppression", isExplicitUserAction: "configuration", trackAnalytics: false });
   },
   CHANNEL_PINS_ACK: function handleChannelPinsAck(channelId) {
     value = ReadState.get(channelId.channelId);
@@ -3576,7 +3576,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
     });
     const item = found.forEach((messageId) => {
       value = ReadState.get(messageId.channelId, messageId.readStateType);
-      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "flex", isExplicitUserAction: "bindJumpToMessage", trackAnalytics: null });
+      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "flex", isExplicitUserAction: "header", trackAnalytics: "heading-lg/bold" });
     });
     if (context === closure_1_41) {
       const push = navigation.push;

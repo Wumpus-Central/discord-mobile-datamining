@@ -1,6 +1,6 @@
-// === Module 15624: AuthManager ===
+// === Module 15622: AuthManager ===
 
-// Module 15624 (AuthManager)
+// Module 15622 (AuthManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import transitionToGuild from "transitionToGuild" /* 6760 */;
@@ -79,8 +79,8 @@ class AuthManager extends tmp3 {
             closure_129_0();
           }
           const obj6 = { onComplete: closure_129_0 };
-          const result = applyArgumentsResult(15625).showPushNotificationPromptModal(obj6);
-          const obj = applyArgumentsResult(15625);
+          const result = applyArgumentsResult(15623).showPushNotificationPromptModal(obj6);
+          const obj = applyArgumentsResult(15623);
         } catch (tmp19) {
           DCDShortcutManager = tmp;
           throw tmp19;

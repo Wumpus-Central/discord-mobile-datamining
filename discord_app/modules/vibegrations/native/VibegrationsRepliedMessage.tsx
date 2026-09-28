@@ -3,7 +3,7 @@
 // Module 16337 (VibegrationsRepliedMessage)
 import nativeDefault from "native" /* 576 */;
 import _modDef3715 from "module_3715" /* 3715 */;
-import VibegrationsDesignFeedback from "VibegrationsDesignFeedback" /* 16242 */;
+import VibegrationsDesignFeedback from "VibegrationsDesignFeedback" /* 16238 */;
 import VibegrationsSelectedMentionDefault from "VibegrationsSelectedMention" /* 16342 */;
 import noop from "module_19" /* 19 */;
 

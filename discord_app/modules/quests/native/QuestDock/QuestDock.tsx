@@ -1,6 +1,6 @@
-// === Module 14714: QuestDock ===
+// === Module 14712: QuestDock ===
 
-// Module 14714 (QuestDock)
+// Module 14712 (QuestDock)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
@@ -19,9 +19,9 @@ import QuestActionCreators from "QuestActionCreators" /* 10683 */;
 import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 10753 */;
 import QuestDockUtils from "QuestDockUtils" /* 14623 */;
 import QuestDockGestureContext from "QuestDockGestureContext" /* 14625 */;
-import QuestDockBountyHeaderDefault from "QuestDockBountyHeader" /* 14742 */;
-import QuestDockBountyBodyDefault from "QuestDockBountyBody" /* 14745 */;
-import QuestDockBountyBackgroundDefault from "QuestDockBountyBackground" /* 14747 */;
+import QuestDockBountyHeaderDefault from "QuestDockBountyHeader" /* 14740 */;
+import QuestDockBountyBodyDefault from "QuestDockBountyBody" /* 14743 */;
+import QuestDockBountyBackgroundDefault from "QuestDockBountyBackground" /* 14745 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
@@ -372,7 +372,7 @@ function QuestDockWithEntranceAnimation(arg0) {
   ({ renderModeChangeTracker: require, identifierMetricTag } = arg0);
   ({ backgroundImageUrl, iconUrl, layoutVariant: dependencyMap, theme: closure_3, backgroundColor: asyncGeneratorStep, expandedHeight: _slicedToArray, collapsedContent: _objectWithoutProperties, expandedContent: noop, backgroundContent: closure_8, withAndroidOffscreenAlphaCompositingWorkaround: closure_9 } = arg0);
   ({ renderImpressionTracker, trackAssetLoadingFailure } = arg0);
-  const context = noop.useContext(identifierMetricTag(14713));
+  const context = noop.useContext(identifierMetricTag(14711));
   const isRendered = context.isRendered;
   let items = [mode];
   mode = initialize.useStateFromStores(items, () => mode.prevRestingQuestDockMode);
@@ -703,11 +703,11 @@ function QuestDockBountyContent(bounty) {
   let obj = bounty(14621);
   const questDockAppThemedBackgroundColor = bounty(14621).useQuestDockAppThemedBackgroundColor();
   const obj2 = bounty(14621);
-  const questDockBountySmokeCollapsedPlaceholderUrl = bounty(14735).useQuestDockBountySmokeCollapsedPlaceholderUrl();
-  const obj3 = bounty(14735);
-  const isBountiesAndroidQuestBarSmokeAnimationEnabled = bounty(14736).useIsBountiesAndroidQuestBarSmokeAnimationEnabled(constants.QUESTS_BAR_MOBILE);
+  const questDockBountySmokeCollapsedPlaceholderUrl = bounty(14733).useQuestDockBountySmokeCollapsedPlaceholderUrl();
+  const obj3 = bounty(14733);
+  const isBountiesAndroidQuestBarSmokeAnimationEnabled = bounty(14734).useIsBountiesAndroidQuestBarSmokeAnimationEnabled(constants.QUESTS_BAR_MOBILE);
   const obj5 = { bounty, children: null };
-  const obj4 = bounty(14736);
+  const obj4 = bounty(14734);
   obj5.children = closure_23(QuestDockWithEntranceAnimation, {
     identifierMetricTag: "ad_creative_id:" + bounty.id,
     backgroundImageUrl: questDockBountySmokeCollapsedPlaceholderUrl,

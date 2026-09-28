@@ -1,6 +1,6 @@
-// === Module 14718: QuestDockContentExpanded ===
+// === Module 14716: QuestDockContentExpanded ===
 
-// Module 14718 (QuestDockContentExpanded)
+// Module 14716 (QuestDockContentExpanded)
 import spring from "spring" /* 5280 */;
 import QuestDockUtils from "QuestDockUtils" /* 14623 */;
 import noop from "module_19" /* 19 */;

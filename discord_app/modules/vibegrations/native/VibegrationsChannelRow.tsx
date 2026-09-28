@@ -1,6 +1,6 @@
-// === Module 15850: VibegrationsChannelRow ===
+// === Module 15848: VibegrationsChannelRow ===
 
-// Module 15850 (VibegrationsChannelRow)
+// Module 15848 (VibegrationsChannelRow)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1101 */;
 import _modDef3715 from "module_3715" /* 3715 */;

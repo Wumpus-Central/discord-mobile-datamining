@@ -1,6 +1,6 @@
-// === Module 12726: ProductDetailsActionSheetVariants ===
+// === Module 12725: ProductDetailsActionSheetVariants ===
 
-// Module 12726 (ProductDetailsActionSheetVariants)
+// Module 12725 (ProductDetailsActionSheetVariants)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Pressables from "Pressables" /* 5435 */;

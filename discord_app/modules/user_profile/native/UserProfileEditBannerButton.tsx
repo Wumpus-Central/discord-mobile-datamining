@@ -1,6 +1,6 @@
-// === Module 14149: UserProfileEditBannerButton ===
+// === Module 14148: UserProfileEditBannerButton ===
 
-// Module 14149 (UserProfileEditBannerButton)
+// Module 14148 (UserProfileEditBannerButton)
 import nativeDefault from "native" /* 576 */;
 import Pressables from "Pressables" /* 5435 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7624 */;

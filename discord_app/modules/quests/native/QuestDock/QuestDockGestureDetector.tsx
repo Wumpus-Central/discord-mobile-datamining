@@ -1,6 +1,6 @@
-// === Module 14716: QuestDockGestureDetector ===
+// === Module 14714: QuestDockGestureDetector ===
 
-// Module 14716 (QuestDockGestureDetector)
+// Module 14714 (QuestDockGestureDetector)
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import HapticUtils from "HapticUtils" /* 4801 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6073 */;

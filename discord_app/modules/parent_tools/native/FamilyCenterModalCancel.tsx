@@ -1,6 +1,6 @@
-// === Module 14464: FamilyCenterModalCancel ===
+// === Module 14463: FamilyCenterModalCancel ===
 
-// Module 14464 (FamilyCenterModalCancel)
+// Module 14463 (FamilyCenterModalCancel)
 import nativeDefault from "native" /* 576 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5039 */;
 import NavigatorHeader from "NavigatorHeader" /* 5936 */;
@@ -33,12 +33,12 @@ function FamilyCenterModalCancelScreen(otherUser) {
   const obj5 = { otherUser, iconSrc: null };
   const obj = otherUser(11395);
   obj5.iconSrc = cancelLinkRequest(6413);
-  const items1 = [closure_5(cancelLinkRequest(14459), obj5), , ];
+  const items1 = [closure_5(cancelLinkRequest(14458), obj5), , ];
   const obj6 = { style: tmp.headerText, variant: "text-lg/bold", children: null };
   let intl = otherUser(1115).intl;
   obj6.children = intl.string(cancelLinkRequest(2487).HynllX);
   items1[1] = closure_5(otherUser(4832).Text, obj6);
-  items1[2] = closure_5(cancelLinkRequest(14429), { user: otherUser });
+  items1[2] = closure_5(cancelLinkRequest(14428), { user: otherUser });
   obj4.children = items1;
   obj3.children = closure_6(View, obj4);
   const items2 = [closure_5(otherUser(7871).ModalContent, obj3), ];

@@ -1,8 +1,8 @@
-// === Module 16820: ExternalPipView ===
+// === Module 16824: ExternalPipView ===
 
-// Module 16820 (ExternalPipView)
+// Module 16824 (ExternalPipView)
 import ExternalPipDefault from "ExternalPip" /* 8886 */;
-import ExternalPipViewVideoDefault from "ExternalPipViewVideo" /* 16823 */;
+import ExternalPipViewVideoDefault from "ExternalPipViewVideo" /* 16827 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AppFreezeStore from "AppFreezeStore" /* 7738 */;

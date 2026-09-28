@@ -1,6 +1,6 @@
-// === Module 14301: SafetyHubPage ===
+// === Module 14300: SafetyHubPage ===
 
-// Module 14301 (SafetyHubPage)
+// Module 14300 (SafetyHubPage)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -17,8 +17,8 @@ import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /
 import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8047 */;
 import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 11360 */;
 import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 11362 */;
-import useAvailableAgeVerificationMethods from "useAvailableAgeVerificationMethods" /* 14302 */;
-import useShouldShowInitialGoogleWalletBanner from "useShouldShowInitialGoogleWalletBanner" /* 14303 */;
+import useAvailableAgeVerificationMethods from "useAvailableAgeVerificationMethods" /* 14301 */;
+import useShouldShowInitialGoogleWalletBanner from "useShouldShowInitialGoogleWalletBanner" /* 14302 */;
 import noop from "module_19" /* 19 */;
 import SafetyHubStore from "SafetyHubStore" /* 7881 */;
 
@@ -200,7 +200,7 @@ export default function SafetyHubPage(visible) {
   const effect = noop.useEffect(() => {
     if (visible) {
       if (null != safetyHubFetchError) {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14305, dependencyMap.paths), "SafetyHubErrorActionSheet", {});
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14304, dependencyMap.paths), "SafetyHubErrorActionSheet", {});
       }
     }
     ActionSheetActionCreatorsDefault.hideActionSheet("SafetyHubErrorActionSheet");

@@ -1,6 +1,6 @@
-// === Module 16434: ChannelDetails ===
+// === Module 16438: ChannelDetails ===
 
-// Module 16434 (ChannelDetails)
+// Module 16438 (ChannelDetails)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import timing from "timing" /* 4837 */;

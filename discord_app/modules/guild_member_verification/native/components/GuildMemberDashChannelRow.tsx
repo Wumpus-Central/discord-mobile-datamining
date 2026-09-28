@@ -1,6 +1,6 @@
-// === Module 15848: GuildMemberDashChannelRow ===
+// === Module 15846: GuildMemberDashChannelRow ===
 
-// Module 15848 (GuildMemberDashChannelRow)
+// Module 15846 (GuildMemberDashChannelRow)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1101 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4658 */;
@@ -27,7 +27,7 @@ export default function GuildMemberDashChannelRow(arg0) {
   let hasItem;
   const tmp = closure_8();
   const id = guild.id;
-  let num = id(15849).useSubmittedGuildJoinRequestTotal({ guildId: id });
+  let num = id(15847).useSubmittedGuildJoinRequestTotal({ guildId: id });
   if (num == null) {
     num = 0;
   }
@@ -47,7 +47,7 @@ export default function GuildMemberDashChannelRow(arg0) {
   const ChannelModes = tmp2(11868).ChannelModes;
   const tmp7 = selected ? ChannelModes.SELECTED : ChannelModes.DEFAULT;
   let obj2 = { onPress: callback, style: tmp.container, accessible: true, accessibilityLabel: null, accessibilityState: null, mode: null, name: null, icon: null, channelInfo: null };
-  let obj = id(15849);
+  let obj = id(15847);
   const intl = tmp2(1115).intl;
   obj2.accessibilityLabel = intl.string(id(1115).t["9Oq93m"]);
   obj2.accessibilityState = { selected };

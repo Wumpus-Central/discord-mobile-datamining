@@ -1,6 +1,6 @@
-// === Module 17470: ChannelSetup ===
+// === Module 17474: ChannelSetup ===
 
-// Module 17470 (ChannelSetup)
+// Module 17474 (ChannelSetup)
 import shared from "shared" /* 4685 */;
 import _mod7679 from "module_7679" /* 7679 */;
 import noop from "module_19" /* 19 */;
@@ -16,13 +16,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getChannelSetupSource = function getChannelSetupSource(theme) {
   return _mod7679.getIllustrationSource(theme, {
     dark() {
-      return require("module_17471");
+      return require("module_17475");
     },
     darker() {
-      return require("module_17472");
+      return require("module_17476");
     },
     light() {
-      return require("module_17473");
+      return require("module_17477");
     }
   });
 };
@@ -30,13 +30,13 @@ export const useChannelSetupSource = function useChannelSetupSource() {
   const obj = shared;
   return _mod7679.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_17471");
+      return require("module_17475");
     },
     darker() {
-      return require("module_17472");
+      return require("module_17476");
     },
     light() {
-      return require("module_17473");
+      return require("module_17477");
     }
   });
 };
@@ -45,13 +45,13 @@ export const ChannelSetup = function ChannelSetup(arg0) {
   const obj4 = {};
   const illustrationSource = _mod7679.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_17471");
+      return require("module_17475");
     },
     darker() {
-      return require("module_17472");
+      return require("module_17476");
     },
     light() {
-      return require("module_17473");
+      return require("module_17477");
     }
   });
   const merged = Object.assign(arg0);

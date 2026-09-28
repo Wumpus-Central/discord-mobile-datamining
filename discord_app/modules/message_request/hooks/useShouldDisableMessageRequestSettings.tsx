@@ -1,6 +1,6 @@
-// === Module 15499: useShouldDisableMessageRequestSettings ===
+// === Module 15497: useShouldDisableMessageRequestSettings ===
 
-// Module 15499 (useShouldDisableMessageRequestSettings)
+// Module 15497 (useShouldDisableMessageRequestSettings)
 import AgeVerificationUtils from "AgeVerificationUtils" /* 5048 */;
 import SettingsDefaultFeature from "SettingsDefaultFeature" /* 6717 */;
 import size from "module_2" /* 2 */;

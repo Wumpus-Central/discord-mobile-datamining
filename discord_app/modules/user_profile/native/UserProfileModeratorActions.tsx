@@ -1,6 +1,6 @@
-// === Module 12604: UserProfileModeratorActions ===
+// === Module 12622: UserProfileModeratorActions ===
 
-// Module 12604 (UserProfileModeratorActions)
+// Module 12622 (UserProfileModeratorActions)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import FlagUtils from "FlagUtils" /* 1385 */;

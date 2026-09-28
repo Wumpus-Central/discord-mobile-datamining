@@ -1,6 +1,6 @@
-// === Module 15847: HubSideBarProgressOverview ===
+// === Module 15845: HubSideBarProgressOverview ===
 
-// Module 15847 (HubSideBarProgressOverview)
+// Module 15845 (HubSideBarProgressOverview)
 import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
 import noop from "module_19" /* 19 */;
@@ -43,7 +43,7 @@ export default function HubSidebarProgressOverview(guild) {
       subtitle: formatToPlainStringResult,
       percentComplete: bound
     };
-    return jsx(tmp(13521).GuildProgressOverviewView, {
+    return jsx(tmp(13520).GuildProgressOverviewView, {
       onPress() {
           ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12170, dependencyMap.paths), React3, { guild, analyticsSource: "Channels Sidebar" });
         },

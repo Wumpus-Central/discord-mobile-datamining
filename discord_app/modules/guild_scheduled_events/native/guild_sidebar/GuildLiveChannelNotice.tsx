@@ -1,6 +1,6 @@
-// === Module 15822: GuildLiveChannelNotice ===
+// === Module 15820: GuildLiveChannelNotice ===
 
-// Module 15822 (GuildLiveChannelNotice)
+// Module 15820 (GuildLiveChannelNotice)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
@@ -390,8 +390,8 @@ export default noop.memo((guild) => {
   let activeEventOrStageInstanceChannel;
   const tmp = closure_29();
   const tmp2 = activeEventOrStageInstanceChannel;
-  activeEventOrStageInstanceChannel = activeEventOrStageInstanceChannel(15821).useActiveEventOrStageInstanceChannel(guild.id);
-  let obj = activeEventOrStageInstanceChannel(15821);
+  activeEventOrStageInstanceChannel = activeEventOrStageInstanceChannel(15819).useActiveEventOrStageInstanceChannel(guild.id);
+  let obj = activeEventOrStageInstanceChannel(15819);
   const guildActiveEvent = activeEventOrStageInstanceChannel(8943).useGuildActiveEvent(guild.id);
   let obj2 = activeEventOrStageInstanceChannel(8943);
   const items = [StageInstanceStore];

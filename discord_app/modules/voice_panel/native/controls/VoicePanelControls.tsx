@@ -1,6 +1,6 @@
-// === Module 16989: VoicePanelControls ===
+// === Module 16993: VoicePanelControls ===
 
-// Module 16989 (VoicePanelControls)
+// Module 16993 (VoicePanelControls)
 import nativeDefault from "native" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
 import native from "native" /* 4540 */;
@@ -13,14 +13,14 @@ import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 8853 */;
 import roundToNearestPixelDefault from "roundToNearestPixel" /* 10456 */;
 import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11759 */;
 import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 11762 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 16873 */;
-import useControlsLockDefault from "useControlsLock" /* 16914 */;
-import useDrawerToggleDefault from "useDrawerToggle" /* 16990 */;
-import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 16991 */;
-import VoicePanelControlUtils from "VoicePanelControlUtils" /* 16992 */;
-import useConsoleConnectingInfoDefault from "useConsoleConnectingInfo" /* 16993 */;
-import VoicePanelFloatingCTAContainer from "VoicePanelFloatingCTAContainer" /* 16997 */;
-import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 16999 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 16877 */;
+import useControlsLockDefault from "useControlsLock" /* 16918 */;
+import useDrawerToggleDefault from "useDrawerToggle" /* 16994 */;
+import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 16995 */;
+import VoicePanelControlUtils from "VoicePanelControlUtils" /* 16996 */;
+import useConsoleConnectingInfoDefault from "useConsoleConnectingInfo" /* 16997 */;
+import VoicePanelFloatingCTAContainer from "VoicePanelFloatingCTAContainer" /* 17001 */;
+import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 17003 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4852 */;

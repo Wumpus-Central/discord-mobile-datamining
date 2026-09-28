@@ -1,6 +1,6 @@
-// === Module 17200: AddAvatarModal ===
+// === Module 17204: AddAvatarModal ===
 
-// Module 17200 (AddAvatarModal)
+// Module 17204 (AddAvatarModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -12,9 +12,9 @@ import NavigatorHeader from "NavigatorHeader" /* 5936 */;
 import Navigator from "Navigator" /* 6421 */;
 import RecentAvatarUtils from "RecentAvatarUtils" /* 7614 */;
 import VideoBackground from "VideoBackground" /* 7694 */;
-import ProfilePendingImageUtils from "ProfilePendingImageUtils" /* 14151 */;
-import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 17198 */;
-import PresetAvatarSelect from "PresetAvatarSelect" /* 17201 */;
+import ProfilePendingImageUtils from "ProfilePendingImageUtils" /* 14150 */;
+import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 17202 */;
+import PresetAvatarSelect from "PresetAvatarSelect" /* 17205 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -71,7 +71,7 @@ function AddAvatarScreen() {
             pendingImage = undefined;
             if (null != base64) {
               const obj11 = { imageUri: base64, description: null };
-              const obj = tmp2(14151);
+              const obj = tmp2(14150);
               obj11.description = tmp2(7614).generateAvatarDescription();
               pendingImage = obj.createPendingImage(obj11);
               const obj3 = tmp2(7614);
@@ -142,7 +142,7 @@ function AddAvatarScreen() {
   obj5.children = items2;
   const items3 = [closure_10(View, obj5), , ];
   const memoizedImageSourceResult = VideoBackground.memoizedImageSource(imageUri);
-  items3[1] = closure_9(selectedAvatar(17210), {
+  items3[1] = closure_9(selectedAvatar(17214), {
     avatarSource: VideoBackground.memoizedImageSource(imageUri),
     showPendingAvatar: null != pendingImage,
     onSelectAvatar: function handleSelectAvatar() {
@@ -166,7 +166,7 @@ function AddAvatarScreen() {
   obj9.children = closure_9(native.LegacyText, obj10);
   items3[2] = closure_9(View, obj9);
   obj4.children = items3;
-  const items4 = [closure_10(View, obj4), closure_9(selectedAvatar(17201), { onAvatarSelect: tmp4[1], selectedAvatar }), ];
+  const items4 = [closure_10(View, obj4), closure_9(selectedAvatar(17205), { onAvatarSelect: tmp4[1], selectedAvatar }), ];
   let obj11 = { style: tmp.buttonContainer, children: null };
   let obj12 = { text: null, grow: true, onPress: null, disabled: null };
   const intl4 = util.intl;

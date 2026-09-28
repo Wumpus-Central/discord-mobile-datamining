@@ -1,6 +1,6 @@
-// === Module 16979: GameTagChiplet ===
+// === Module 16983: GameTagChiplet ===
 
-// Module 16979 (GameTagChiplet)
+// Module 16983 (GameTagChiplet)
 import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8128 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8139 */;
 import GuildTag from "GuildTag" /* 9205 */;

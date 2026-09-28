@@ -1,6 +1,6 @@
-// === Module 12733: FractionalNitroCollectedActionSheet ===
+// === Module 12732: FractionalNitroCollectedActionSheet ===
 
-// Module 12733 (FractionalNitroCollectedActionSheet)
+// Module 12732 (FractionalNitroCollectedActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import shared from "shared" /* 4685 */;
@@ -9,14 +9,14 @@ import FastImageDefault from "FastImage" /* 5899 */;
 import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration" /* 8307 */;
 import _modDef10188 from "module_10188" /* 10188 */;
 import _modDef10189 from "module_10189" /* 10189 */;
-import _modDef12734 from "module_12734" /* 12734 */;
+import _modDef12733 from "module_12733" /* 12733 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function NitroAcquiredHeader(skuId) {
   const tmp = closure_12();
   const obj = { style: tmp.header, children: null };
-  const obj2 = { source: _modDef12734 };
+  const obj2 = { source: _modDef12733 };
   const items = [React7(FastImageDefault, obj2), ];
   const obj3 = { style: tmp.fractionNitroIcon, children: null };
   const size = { skuId: skuId.skuId, width: FractionalNitroCoinIllustration.FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET, height: FractionalNitroCoinIllustration.FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET };

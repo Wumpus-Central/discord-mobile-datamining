@@ -1,6 +1,6 @@
-// === Module 12809: isMostRecentDeadEndInvite ===
+// === Module 12808: isMostRecentDeadEndInvite ===
 
-// Module 12809 (isMostRecentDeadEndInvite)
+// Module 12808 (isMostRecentDeadEndInvite)
 import Constants from "Constants" /* 1074 */;
 import isInviteActiveDefault from "isInviteActive" /* 11254 */;
 import size from "module_2" /* 2 */;

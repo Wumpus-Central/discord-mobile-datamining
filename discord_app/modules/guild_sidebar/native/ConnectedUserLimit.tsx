@@ -1,8 +1,8 @@
-// === Module 15753: ConnectedUserLimit ===
+// === Module 15751: ConnectedUserLimit ===
 
-// Module 15753 (ConnectedUserLimit)
+// Module 15751 (ConnectedUserLimit)
 import useChannelVideoLimitDefault from "useChannelVideoLimit" /* 9103 */;
-import VoiceChannelUserLimitDefault from "VoiceChannelUserLimit" /* 15754 */;
+import VoiceChannelUserLimitDefault from "VoiceChannelUserLimit" /* 15752 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

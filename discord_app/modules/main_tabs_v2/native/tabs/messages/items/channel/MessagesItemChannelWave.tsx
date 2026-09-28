@@ -1,6 +1,6 @@
-// === Module 15674: MessagesItemChannelWave ===
+// === Module 15672: MessagesItemChannelWave ===
 
-// Module 15674 (MessagesItemChannelWave)
+// Module 15672 (MessagesItemChannelWave)
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import components_Button_Button from "components/Button/Button" /* 5281 */;

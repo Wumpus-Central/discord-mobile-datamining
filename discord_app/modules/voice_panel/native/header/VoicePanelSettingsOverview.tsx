@@ -1,6 +1,6 @@
-// === Module 16932: VoicePanelSettingsOverview ===
+// === Module 16936: VoicePanelSettingsOverview ===
 
-// Module 16932 (VoicePanelSettingsOverview)
+// Module 16936 (VoicePanelSettingsOverview)
 import LogAggregator from "LogAggregator" /* 7 */;
 import initialize from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -25,9 +25,9 @@ import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9167
 import useIsSecureFramesUIEnabled from "useIsSecureFramesUIEnabled" /* 9183 */;
 import ShieldLockIcon from "ShieldLockIcon" /* 9238 */;
 import ChannelCallConnectingScreen from "ChannelCallConnectingScreen" /* 9433 */;
-import WrenchIcon from "WrenchIcon" /* 15117 */;
-import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 16930 */;
-import getChannelInfoSubtitleDefault from "getChannelInfoSubtitle" /* 16933 */;
+import WrenchIcon from "WrenchIcon" /* 15115 */;
+import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 16934 */;
+import getChannelInfoSubtitleDefault from "getChannelInfoSubtitle" /* 16937 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4852 */;
@@ -239,7 +239,7 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
   }, items9);
   const items11 = [channelId, stateFromStores4];
   const callback4 = stateFromStores1.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16934, dependencyMap.paths), closure_17, { channelId });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16938, dependencyMap.paths), closure_17, { channelId });
   }, items10);
   const callback5 = stateFromStores1.useCallback(() => {
     if (null != stateFromStores4) {

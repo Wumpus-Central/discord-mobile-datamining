@@ -1,6 +1,6 @@
-// === Module 16673: ChannelSettingsEditForumTag ===
+// === Module 16677: ChannelSettingsEditForumTag ===
 
-// Module 16673 (ChannelSettingsEditForumTag)
+// Module 16677 (ChannelSettingsEditForumTag)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5204 */;
@@ -214,7 +214,7 @@ export default function ChannelSettingsEditForumTag(channelId) {
       };
       setOptions(obj);
     } else {
-      setOptions({ headerRight: "__initData" });
+      setOptions({ headerRight: "r" });
     }
   }, items5);
   const obj5 = { style: tmp.container, children: null };

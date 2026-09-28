@@ -1,6 +1,6 @@
-// === Module 14731: QuestDockInsetHeaderBody ===
+// === Module 14729: QuestDockInsetHeaderBody ===
 
-// Module 14731 (QuestDockInsetHeaderBody)
+// Module 14729 (QuestDockInsetHeaderBody)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
@@ -9,8 +9,8 @@ import components_Button_Button from "components/Button/Button" /* 5281 */;
 import QuestRewardTileDefault from "QuestRewardTile" /* 10745 */;
 import QuestDockRewardTileDefault from "QuestDockRewardTile" /* 10746 */;
 import QuestDockHooks from "QuestDockHooks" /* 14621 */;
-import QuestDockBlurredContentBackgroundDefault from "QuestDockBlurredContentBackground" /* 14692 */;
-import PremiumRewardGradientDefault from "PremiumRewardGradient" /* 14695 */;
+import QuestDockBlurredContentBackgroundDefault from "QuestDockBlurredContentBackground" /* 14690 */;
+import PremiumRewardGradientDefault from "PremiumRewardGradient" /* 14693 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

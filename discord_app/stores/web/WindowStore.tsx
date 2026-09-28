@@ -1,6 +1,6 @@
-// === Module 13379: WindowStore ===
+// === Module 13378: WindowStore ===
 
-// Module 13379 (WindowStore)
+// Module 13378 (WindowStore)
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;

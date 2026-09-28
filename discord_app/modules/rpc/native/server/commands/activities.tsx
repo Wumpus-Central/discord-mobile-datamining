@@ -1,9 +1,9 @@
-// === Module 14076: commands/activities ===
+// === Module 14075: commands/activities ===
 
-// Module 14076 (commands/activities)
+// Module 14075 (commands/activities)
 import RPCErrorDefault from "RPCError" /* 8770 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9275 */;
-import validateOpenInviteDialog from "validateOpenInviteDialog" /* 14043 */;
+import validateOpenInviteDialog from "validateOpenInviteDialog" /* 14042 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -77,7 +77,7 @@ obj4.handler = function handler(socket) {
               const tmp62 = new tmp2(8770)(obj4, "No application.");
               throw tmp62;
             } else {
-              const tmp91 = tmp2(14034)(tmp87);
+              const tmp91 = tmp2(14033)(tmp87);
               let id1;
               if (tmp91 != null) {
                 id1 = tmp91.id;

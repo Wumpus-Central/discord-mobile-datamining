@@ -1,6 +1,6 @@
-// === Module 15022: ShowSpoilersSetting ===
+// === Module 15020: ShowSpoilersSetting ===
 
-// Module 15022 (ShowSpoilersSetting)
+// Module 15020 (ShowSpoilersSetting)
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 2021 */;
 import noop from "module_19" /* 19 */;

@@ -1,6 +1,6 @@
-// === Module 16164: NewContentPill ===
+// === Module 16160: NewContentPill ===
 
-// Module 16164 (NewContentPill)
+// Module 16160 (NewContentPill)
 import nativeDefault from "native" /* 576 */;
 import spring from "spring" /* 5280 */;
 import GuildIcon from "GuildIcon" /* 5896 */;

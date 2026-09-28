@@ -1,6 +1,6 @@
-// === Module 13634: GradientBorder ===
+// === Module 13633: GradientBorder ===
 
-// Module 13634 (GradientBorder)
+// Module 13633 (GradientBorder)
 import nativeDefault from "native" /* 576 */;
 import _mod5021 from "module_5021" /* 5021 */;
 import LinearGradientDefault from "LinearGradient" /* 5293 */;

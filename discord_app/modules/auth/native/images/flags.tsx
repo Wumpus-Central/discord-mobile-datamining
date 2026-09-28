@@ -1,6 +1,8 @@
-// === Module 14975: flags ===
+// === Module 14973: flags ===
 
-// Module 14975 (flags)
+// Module 14973 (flags)
+import _mod14974 from "module_14974" /* 14974 */;
+import _mod14975 from "module_14975" /* 14975 */;
 import _mod14976 from "module_14976" /* 14976 */;
 import _mod14977 from "module_14977" /* 14977 */;
 import _mod14978 from "module_14978" /* 14978 */;
@@ -30,10 +32,8 @@ import _mod15001 from "module_15001" /* 15001 */;
 import _mod15002 from "module_15002" /* 15002 */;
 import _mod15003 from "module_15003" /* 15003 */;
 import _mod15004 from "module_15004" /* 15004 */;
-import _mod15005 from "module_15005" /* 15005 */;
-import _mod15006 from "module_15006" /* 15006 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/auth/native/images/flags.tsx");
 
-export const flags = { bg: _mod14976, cs: _mod14977, da: _mod14978, de: _mod14979, el: _mod14980, "en-GB": _mod14981, "en-US": _mod14982, "es-ES": _mod14983, "es-419": _mod14984, fi: _mod14985, fr: _mod14986, hi: _mod14987, hr: _mod14988, hu: _mod14989, it: _mod14990, ja: _mod14991, ko: _mod14992, lt: _mod14993, nl: _mod14994, no: _mod14995, pl: _mod14996, "pt-BR": _mod14997, ro: _mod14998, ru: _mod14999, "sv-SE": _mod15000, th: _mod15001, tr: _mod15002, uk: _mod15003, vi: _mod15004, "zh-CN": _mod15005, "zh-TW": _mod15006 };
+export const flags = { bg: _mod14974, cs: _mod14975, da: _mod14976, de: _mod14977, el: _mod14978, "en-GB": _mod14979, "en-US": _mod14980, "es-ES": _mod14981, "es-419": _mod14982, fi: _mod14983, fr: _mod14984, hi: _mod14985, hr: _mod14986, hu: _mod14987, it: _mod14988, ja: _mod14989, ko: _mod14990, lt: _mod14991, nl: _mod14992, no: _mod14993, pl: _mod14994, "pt-BR": _mod14995, ro: _mod14996, ru: _mod14997, "sv-SE": _mod14998, th: _mod14999, tr: _mod15000, uk: _mod15001, vi: _mod15002, "zh-CN": _mod15003, "zh-TW": _mod15004 };

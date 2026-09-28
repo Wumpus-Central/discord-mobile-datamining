@@ -1,6 +1,6 @@
-// === Module 16887: SoundboardSoundPickerList ===
+// === Module 16891: SoundboardSoundPickerList ===
 
-// Module 16887 (SoundboardSoundPickerList)
+// Module 16891 (SoundboardSoundPickerList)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
@@ -16,8 +16,8 @@ import PremiumUpsellSectionDivider from "PremiumUpsellSectionDivider" /* 9766 */
 import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 9767 */;
 import chunkDefault from "chunk" /* 9805 */;
 import _modDef9853 from "module_9853" /* 9853 */;
-import SoundButton from "SoundButton" /* 16888 */;
-import _modDef16896 from "module_16896" /* 16896 */;
+import SoundButton from "SoundButton" /* 16892 */;
+import _modDef16900 from "module_16900" /* 16900 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -100,7 +100,7 @@ function SoundPickerButtonRow(row) {
   let obj = row(section[10]);
 }
 const View = fn(17).View;
-const SoundboardStyleConstants = fn(16881);
+const SoundboardStyleConstants = fn(16885);
 ({ SOUND_ROW_HORIZONTAL_PADDING, SOUNDS_PER_ROW: metroRequire, SOUND_BUTTON_HEIGHT, SOUND_ROW_SPACING } = SoundboardStyleConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -306,7 +306,7 @@ export const SoundboardSoundPickerList = noop.memo(function SoundboardSoundPicke
         const obj3 = { size: GuildIcon.GuildIconSizes.XXSMALL_12, guild: tmp2.category.categoryInfo.guild, style: currentUser.sectionIcon };
         let tmp8Result = React5(GuildIconDefault, obj3);
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
-        const obj4 = { source: _modDef16896, style: currentUser.sectionIcon };
+        const obj4 = { source: _modDef16900, style: currentUser.sectionIcon };
         tmp8Result = React5(native.Icon, obj4);
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
         const obj5 = { source: _modDef9853, style: currentUser.sectionIcon };

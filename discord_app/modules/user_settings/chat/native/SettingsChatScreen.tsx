@@ -1,12 +1,12 @@
-// === Module 15010: SettingsChatScreen ===
+// === Module 15008: SettingsChatScreen ===
 
-// Module 15010 (SettingsChatScreen)
+// Module 15008 (SettingsChatScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6411 */;
 import _modDef9860 from "module_9860" /* 9860 */;
 import SettingBuilders from "SettingBuilders" /* 11006 */;
-import SettingLayoutDefault from "SettingLayout" /* 14248 */;
+import SettingLayoutDefault from "SettingLayout" /* 14247 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 import SubscriptionStore from "SubscriptionStore" /* 4494 */;

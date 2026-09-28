@@ -1,6 +1,6 @@
-// === Module 16829: applyActivityOrientationLock ===
+// === Module 16833: applyActivityOrientationLock ===
 
-// Module 16829 (applyActivityOrientationLock)
+// Module 16833 (applyActivityOrientationLock)
 import Constants from "Constants" /* 2005 */;
 import applyOrientationLock from "applyOrientationLock" /* 10758 */;
 import size from "module_2" /* 2 */;

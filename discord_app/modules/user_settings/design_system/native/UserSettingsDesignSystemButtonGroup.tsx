@@ -1,6 +1,6 @@
-// === Module 15368: UserSettingsDesignSystemButtonGroup ===
+// === Module 15366: UserSettingsDesignSystemButtonGroup ===
 
-// Module 15368 (UserSettingsDesignSystemButtonGroup)
+// Module 15366 (UserSettingsDesignSystemButtonGroup)
 import Text_Text from "Text/Text" /* 4832 */;
 import Stack_Stack from "Stack/Stack" /* 5279 */;
 import components_Button_Button from "components/Button/Button" /* 5281 */;

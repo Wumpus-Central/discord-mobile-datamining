@@ -1,12 +1,12 @@
-// === Module 15999: GuildsBarDragPreview ===
+// === Module 15997: GuildsBarDragPreview ===
 
-// Module 15999 (GuildsBarDragPreview)
+// Module 15997 (GuildsBarDragPreview)
 import _mod4452 from "module_4452" /* 4452 */;
 import native from "native" /* 4540 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import spring from "spring" /* 5280 */;
 import noop from "module_19" /* 19 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 15923 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 15921 */;
 
 require = fn;
 function PreviewItem(dragRegion) {
@@ -286,7 +286,7 @@ function AnimatedItemPreview(cleanUp) {
   return jsx(cleanUp(sharedValue[9]), { style: items, children: null });
 }
 const GuildsNodeType = fn(5750).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(15920).GUILD_ITEM_INSET_LEFT;
+const GUILD_ITEM_INSET_LEFT = fn(15918).GUILD_ITEM_INSET_LEFT;
 const jsx = fn(21).jsx;
 let createStyles = fn(4836);
 let closure_8 = createStyles.createStyles({ dragPreview: { position: "absolute", left: 0 }, animatedPreviewStyle: { position: "absolute" }, dragPreviewHome: { right: 0 } });
@@ -334,7 +334,7 @@ export default noop.memo(function GuildsBarDragPreview() {
       if (null != dragSpecs) {
         if (null != overSpecs) {
           const state = overSpecs.state;
-          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "\u05DE\u05D7\u05E8\u05D5\u05D6\u05EA JSON", scrollPosition: "f", dragRegion: "text-sm/normal", windowSize: "interactive-text-active", dropComplete: null, listInsets: "nitro_home" };
+          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "v_tone4", scrollPosition: "getInitialScrollIndex", dragRegion: null, windowSize: "\u270C\u{1F3FF}", dropComplete: true, listInsets: null };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;
           let node;

@@ -1,13 +1,13 @@
 // === Module 16310: useVibegrationsConnectActions ===
 
 // Module 16310 (useVibegrationsConnectActions)
-import vibegrationsExternalConnections from "vibegrationsExternalConnections" /* 12631 */;
+import vibegrationsExternalConnections from "vibegrationsExternalConnections" /* 12649 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_6 = fn(12624).requestExternalAuthorizeUrl;
+let closure_6 = fn(12642).requestExternalAuthorizeUrl;
 const set = new Set();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/lib/useVibegrationsConnectActions.tsx");
@@ -82,7 +82,7 @@ export const useVibegrationsConnectActions = function useVibegrationsConnectActi
                 stringResult = intl.string(presentError(3715)["5fwOcF"]);
               }
               closure_1(stringResult);
-              obj3 = type(12631);
+              obj3 = type(12649);
             }
           } catch (tmp33) {
             c3 = tmp;
@@ -91,7 +91,7 @@ export const useVibegrationsConnectActions = function useVibegrationsConnectActi
         }
       };
       if (null != projectId) {
-        const result = projectId(12631).beginExternalAuthorization(ref.current, type.type);
+        const result = projectId(12649).beginExternalAuthorization(ref.current, type.type);
         if (null != result) {
           ref.current = result;
           dependencyMap(result);
@@ -116,7 +116,7 @@ export const useVibegrationsConnectActions = function useVibegrationsConnectActi
             return applyArgumentsResult;
           })();
         }
-        let obj = projectId(12631);
+        let obj = projectId(12649);
       }
     }, items)
   };

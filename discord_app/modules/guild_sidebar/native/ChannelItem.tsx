@@ -1,6 +1,6 @@
-// === Module 15750: ChannelItem ===
+// === Module 15748: ChannelItem ===
 
-// Module 15750 (ChannelItem)
+// Module 15748 (ChannelItem)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1101 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
@@ -8,7 +8,7 @@ import utils_ChannelUtils from "utils/ChannelUtils" /* 5335 */;
 import BookCheckIcon2 from "BookCheckIcon" /* 5389 */;
 import FastImageDefault from "FastImage" /* 5899 */;
 import BaseChannelItem from "BaseChannelItem" /* 11868 */;
-import _modDef15751 from "module_15751" /* 15751 */;
+import _modDef15749 from "module_15749" /* 15749 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 4876 */;
@@ -65,7 +65,7 @@ function ChannelIcon(arg0) {
       }
     }
     if (tmp2) {
-      let tmp12 = _modDef15751;
+      let tmp12 = _modDef15749;
       let BookCheckIcon = BookCheckIcon2.BookCheckIcon;
       let tmp9 = require;
     } else {

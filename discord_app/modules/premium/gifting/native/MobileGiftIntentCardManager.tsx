@@ -1,6 +1,6 @@
-// === Module 17234: MobileGiftIntentCardManager ===
+// === Module 17238: MobileGiftIntentCardManager ===
 
-// Module 17234 (MobileGiftIntentCardManager)
+// Module 17238 (MobileGiftIntentCardManager)
 import ChannelTypes from "ChannelTypes" /* 1095 */;
 import Timers from "Timers" /* 2040 */;
 import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 9303 */;
@@ -9,7 +9,7 @@ import ChannelStore from "ChannelStore" /* 2045 */;
 import MessageStore from "MessageStore" /* 5056 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
 import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 7521 */;
-import GiftIntentReconcilingManager from "GiftIntentReconcilingManager" /* 17235 */;
+import GiftIntentReconcilingManager from "GiftIntentReconcilingManager" /* 17239 */;
 
 require = fn;
 const PremiumConstants = fn(1374);

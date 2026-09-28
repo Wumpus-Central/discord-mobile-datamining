@@ -1,8 +1,8 @@
-// === Module 16859: FramePanelContainer ===
+// === Module 16863: FramePanelContainer ===
 
-// Module 16859 (FramePanelContainer)
-import FramePanelControllerDefault from "FramePanelController" /* 16860 */;
-import FramePanelUIDefault from "FramePanelUI" /* 16862 */;
+// Module 16863 (FramePanelContainer)
+import FramePanelControllerDefault from "FramePanelController" /* 16864 */;
+import FramePanelUIDefault from "FramePanelUI" /* 16866 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 8499 */;
 

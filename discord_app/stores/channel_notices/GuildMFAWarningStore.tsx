@@ -1,6 +1,6 @@
-// === Module 13302: GuildMFAWarningStore ===
+// === Module 13301: GuildMFAWarningStore ===
 
-// Module 13302 (GuildMFAWarningStore)
+// Module 13301 (GuildMFAWarningStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import GuildChannelStore from "GuildChannelStore" /* 4467 */;

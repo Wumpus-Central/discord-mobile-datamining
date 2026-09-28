@@ -1,6 +1,6 @@
-// === Module 16856: LeaveActivityButton ===
+// === Module 16860: LeaveActivityButton ===
 
-// Module 16856 (LeaveActivityButton)
+// Module 16860 (LeaveActivityButton)
 import util from "util" /* 1115 */;
 import components_Button_Button from "components/Button/Button" /* 5281 */;
 import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 8765 */;

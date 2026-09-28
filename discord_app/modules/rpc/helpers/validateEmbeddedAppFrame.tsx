@@ -1,12 +1,12 @@
-// === Module 14024: validateEmbeddedAppFrame ===
+// === Module 14023: validateEmbeddedAppFrame ===
 
-// Module 14024 (validateEmbeddedAppFrame)
+// Module 14023 (validateEmbeddedAppFrame)
 import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8321 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8501 */;
 import RPCErrorDefault from "RPCError" /* 8770 */;
 import RPCHelpers from "RPCHelpers" /* 8775 */;
 import FramesStore from "FramesStore" /* 8499 */;
-import VibegrationsBuilderPreviewStore from "VibegrationsBuilderPreviewStore" /* 14025 */;
+import VibegrationsBuilderPreviewStore from "VibegrationsBuilderPreviewStore" /* 14024 */;
 
 require = fn;
 function validateEmbeddedAppFrame(transport) {

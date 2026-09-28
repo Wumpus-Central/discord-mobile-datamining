@@ -1,6 +1,6 @@
-// === Module 16840: getActivityContainerPIPStylesSpec ===
+// === Module 16844: getActivityContainerPIPStylesSpec ===
 
-// Module 16840 (getActivityContainerPIPStylesSpec)
+// Module 16844 (getActivityContainerPIPStylesSpec)
 import Constants from "Constants" /* 2005 */;
 import ActivityPanelConstants from "ActivityPanelConstants" /* 8502 */;
 import roundToNearestPixelDefault from "roundToNearestPixel" /* 10456 */;

@@ -1,6 +1,6 @@
-// === Module 17444: GuildSettingsModalInstantInvites ===
+// === Module 17448: GuildSettingsModalInstantInvites ===
 
-// Module 17444 (GuildSettingsModalInstantInvites)
+// Module 17448 (GuildSettingsModalInstantInvites)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1115 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;

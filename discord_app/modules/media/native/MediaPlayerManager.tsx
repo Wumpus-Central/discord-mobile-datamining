@@ -1,6 +1,6 @@
-// === Module 14098: MediaPlayerManager ===
+// === Module 14097: MediaPlayerManager ===
 
-// Module 14098 (MediaPlayerManager)
+// Module 14097 (MediaPlayerManager)
 import LoggerDefault from "Logger" /* 3 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -18,7 +18,7 @@ import ChannelStore from "ChannelStore" /* 2045 */;
 import MessageStore from "MessageStore" /* 5056 */;
 import PermissionStore from "PermissionStore" /* 4469 */;
 import AppStateStore from "AppStateStore" /* 1980 */;
-import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 14099 */;
+import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 14098 */;
 import module_560 from "module_560" /* 560 */;
 import LifecycleManager from "LifecycleManager" /* 1983 */;
 import size from "module_2" /* 2 */;

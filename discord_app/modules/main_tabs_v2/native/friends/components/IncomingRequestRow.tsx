@@ -1,10 +1,10 @@
-// === Module 16584: IncomingRequestRow ===
+// === Module 16588: IncomingRequestRow ===
 
-// Module 16584 (IncomingRequestRow)
+// Module 16588 (IncomingRequestRow)
 import util from "util" /* 1115 */;
 import UserUtilsDefault from "UserUtils" /* 4678 */;
 import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 12125 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 15679 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 15677 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4825 */;
 import ApplicationStore from "ApplicationStore" /* 5063 */;

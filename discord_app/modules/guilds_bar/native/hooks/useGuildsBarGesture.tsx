@@ -1,6 +1,6 @@
-// === Module 15922: useGuildsBarGesture ===
+// === Module 15920: useGuildsBarGesture ===
 
-// Module 15922 (useGuildsBarGesture)
+// Module 15920 (useGuildsBarGesture)
 import util from "util" /* 1115 */;
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
@@ -16,7 +16,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2067 */;
 import SortedGuildStore from "SortedGuildStore" /* 5750 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 15923 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 15921 */;
 import debounce from "debounce" /* 551 */;
 
 const require = globalThis.__r;
@@ -276,7 +276,7 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, fastListRef, map) {
 }
 const Dimensions = fn(17).Dimensions;
 const GuildsNodeType = fn(5750).GuildsNodeType;
-const GuildsBarConstants = fn(15920);
+const GuildsBarConstants = fn(15918);
 ({ FastListRenderSections: c10, useGuildWrapperSize: closure_11 } = GuildsBarConstants);
 let c12 = 160;
 let c13 = 16.666666666666668;

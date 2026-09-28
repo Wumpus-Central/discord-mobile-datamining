@@ -1,6 +1,6 @@
-// === Module 14911: CustomTypingIndicatorEmojiSlots ===
+// === Module 14909: CustomTypingIndicatorEmojiSlots ===
 
-// Module 14911 (CustomTypingIndicatorEmojiSlots)
+// Module 14909 (CustomTypingIndicatorEmojiSlots)
 import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1393 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
@@ -121,7 +121,7 @@ function CustomTypingIndicatorEmojiSlot(index) {
 const EmojiIntention = fn(1375).EmojiIntention;
 const jsx = fn(21).jsx;
 let c7 = 28;
-let items = [fn(14912).EmojiAngryFaceWithHornsIcon, fn(14914).EmojiColdFaceIcon, fn(14916).EmojiCowboyHatFaceIcon, fn(14918).EmojiCryingFaceIcon, fn(14920).EmojiDisguisedFaceIcon, fn(14922).EmojiFaceVomitingIcon, fn(14924).EmojiFaceWithMonocleIcon, fn(14926).EmojiFaceWithSpiralEyesIcon, fn(14928).EmojiMeltingFaceIcon, fn(14930).EmojiMoneyMouthFaceIcon, fn(14932).EmojiNerdFaceIcon, fn(14934).EmojiPartyingFaceIcon, fn(14936).EmojiSalutingFaceIcon, fn(14938).EmojiSkullIcon, fn(14940).EmojiSmilingFaceWithHornsIcon, fn(14942).EmojiSmilingFaceWithSunglassesIcon, fn(14944).EmojiSquintingFaceWithTongueIcon, fn(14946).EmojiUpsideDownFaceIcon, fn(14948).EmojiWoozyFaceIcon, fn(14950).EmojiZanyFaceIcon, fn(14952).EmojiRollingOnTheFloorLaughingIcon, fn(14954).EmojiSmilingFaceWithHeartsIcon];
+let items = [fn(14910).EmojiAngryFaceWithHornsIcon, fn(14912).EmojiColdFaceIcon, fn(14914).EmojiCowboyHatFaceIcon, fn(14916).EmojiCryingFaceIcon, fn(14918).EmojiDisguisedFaceIcon, fn(14920).EmojiFaceVomitingIcon, fn(14922).EmojiFaceWithMonocleIcon, fn(14924).EmojiFaceWithSpiralEyesIcon, fn(14926).EmojiMeltingFaceIcon, fn(14928).EmojiMoneyMouthFaceIcon, fn(14930).EmojiNerdFaceIcon, fn(14932).EmojiPartyingFaceIcon, fn(14934).EmojiSalutingFaceIcon, fn(14936).EmojiSkullIcon, fn(14938).EmojiSmilingFaceWithHornsIcon, fn(14940).EmojiSmilingFaceWithSunglassesIcon, fn(14942).EmojiSquintingFaceWithTongueIcon, fn(14944).EmojiUpsideDownFaceIcon, fn(14946).EmojiWoozyFaceIcon, fn(14948).EmojiZanyFaceIcon, fn(14950).EmojiRollingOnTheFloorLaughingIcon, fn(14952).EmojiSmilingFaceWithHeartsIcon];
 const createStyles = fn(4836);
 let closure_9 = createStyles.createStyles({ slot: { flex: 1, height: 64, alignItems: "center", justifyContent: "center" } });
 const __initData = { code: "function CustomTypingIndicatorEmojiSlotsTsx1(){const{pressed,withSpring,interpolate,PLACEHOLDER_EMOJI_RESTING_OPACITY,ON_PRESS_SPRING,PLACEHOLDER_EMOJI_ACTIVE_SCALE}=this.__closure;const value=pressed.get();return{opacity:withSpring(interpolate(value,[0,1],[PLACEHOLDER_EMOJI_RESTING_OPACITY,1]),ON_PRESS_SPRING),transform:[{scale:withSpring(interpolate(value,[0,1],[1,PLACEHOLDER_EMOJI_ACTIVE_SCALE]),ON_PRESS_SPRING)}]};}" };

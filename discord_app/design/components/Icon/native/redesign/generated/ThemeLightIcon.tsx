@@ -1,9 +1,9 @@
-// === Module 14816: ThemeLightIcon ===
+// === Module 14814: ThemeLightIcon ===
 
-// Module 14816 (ThemeLightIcon)
+// Module 14814 (ThemeLightIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4530 */;
-import _mod14817 from "module_14817" /* 14817 */;
+import _mod14815 from "module_14815" /* 14815 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const ThemeLightIcon = function ThemeLightIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod14817, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod14815, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

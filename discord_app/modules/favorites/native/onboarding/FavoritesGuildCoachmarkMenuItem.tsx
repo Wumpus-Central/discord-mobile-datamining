@@ -1,6 +1,6 @@
-// === Module 15868: FavoritesGuildCoachmarkMenuItem ===
+// === Module 15866: FavoritesGuildCoachmarkMenuItem ===
 
-// Module 15868 (FavoritesGuildCoachmarkMenuItem)
+// Module 15866 (FavoritesGuildCoachmarkMenuItem)
 import util from "util" /* 1115 */;
 import _modDef3361 from "module_3361" /* 3361 */;
 import LayerScope from "LayerScope" /* 6577 */;
@@ -30,7 +30,7 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
   }, items2);
   const items3 = [shouldShowPopover, stateFromStores, onDismiss, callback1];
   const memo = onDismiss.useMemo(() => {
-    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "M10 12v1H9v2H7v-2H6v-1H5v-1h1v-1h1V9h2v1h1v1h1v1h-1Z", onButtonPress: null };
+    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "M9 3H7v1h2V3ZM9 4H7v1h2V4Z", onButtonPress: null };
     const intl = util.intl;
     const tmp4 = _modDef3361;
     if (stateFromStores) {

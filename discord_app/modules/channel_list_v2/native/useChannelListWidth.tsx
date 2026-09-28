@@ -1,6 +1,6 @@
-// === Module 15654: useChannelListWidth ===
+// === Module 15652: useChannelListWidth ===
 
-// Module 15654 (useChannelListWidth)
+// Module 15652 (useChannelListWidth)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
 import useToken from "useToken" /* 4531 */;

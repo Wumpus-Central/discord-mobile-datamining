@@ -1,9 +1,9 @@
-// === Module 14380: SyncContactsSetting ===
+// === Module 14379: SyncContactsSetting ===
 
-// Module 14380 (SyncContactsSetting)
+// Module 14379 (SyncContactsSetting)
 import util from "util" /* 1115 */;
 import ContactSyncUtils from "ContactSyncUtils" /* 12177 */;
-import ContactSyncSettings from "ContactSyncSettings" /* 14381 */;
+import ContactSyncSettings from "ContactSyncSettings" /* 14380 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5593 */;
 import UserStore from "UserStore" /* 1372 */;
 

@@ -1,6 +1,6 @@
-// === Module 14341: BlockedUserRowV2 ===
+// === Module 14340: BlockedUserRowV2 ===
 
-// Module 14341 (BlockedUserRowV2)
+// Module 14340 (BlockedUserRowV2)
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7624 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9195 */;
 import noop from "module_19" /* 19 */;

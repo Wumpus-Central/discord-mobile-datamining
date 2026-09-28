@@ -1,6 +1,6 @@
-// === Module 13254: DontBadgeMutedVcsExperiment ===
+// === Module 13253: DontBadgeMutedVcsExperiment ===
 
-// Module 13254 (DontBadgeMutedVcsExperiment)
+// Module 13253 (DontBadgeMutedVcsExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1436 */;
 
 let closure_0 = apex_ApexExperimentDefault({ kind: "user", name: "2026-06-dont-badge-muted-vcs", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

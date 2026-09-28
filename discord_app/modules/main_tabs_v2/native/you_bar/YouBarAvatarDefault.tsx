@@ -1,6 +1,6 @@
-// === Module 16027: YouBarAvatarDefault ===
+// === Module 16023: YouBarAvatarDefault ===
 
-// Module 16027 (YouBarAvatarDefault)
+// Module 16023 (YouBarAvatarDefault)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import useToken from "useToken" /* 4531 */;

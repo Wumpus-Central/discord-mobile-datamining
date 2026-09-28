@@ -1,9 +1,9 @@
-// === Module 14345: AccountDeleteSetting ===
+// === Module 14344: AccountDeleteSetting ===
 
-// Module 14345 (AccountDeleteSetting)
+// Module 14344 (AccountDeleteSetting)
 import util from "util" /* 1115 */;
 import SettingsConstants from "SettingsConstants" /* 7417 */;
-import handleDisableAccountDefault from "handleDisableAccount" /* 14346 */;
+import handleDisableAccountDefault from "handleDisableAccount" /* 14345 */;
 import SettingBuilders from "SettingBuilders" /* 11006 */;
 import size from "module_2" /* 2 */;
 

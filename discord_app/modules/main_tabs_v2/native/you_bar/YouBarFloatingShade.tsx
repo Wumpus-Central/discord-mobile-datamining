@@ -1,6 +1,6 @@
-// === Module 16036: YouBarFloatingShade ===
+// === Module 16032: YouBarFloatingShade ===
 
-// Module 16036 (YouBarFloatingShade)
+// Module 16032 (YouBarFloatingShade)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
@@ -16,7 +16,7 @@ import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4653 */
 require = fn;
 const View = fn(17).View;
 let closure_5 = fn(14627).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
-const GUILD_LIST_WIDTH = fn(15920).GUILD_LIST_WIDTH;
+const GUILD_LIST_WIDTH = fn(15918).GUILD_LIST_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4836);

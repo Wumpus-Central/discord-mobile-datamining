@@ -1,13 +1,13 @@
-// === Module 16174: MainTabsChannelScreenStack ===
+// === Module 16170: MainTabsChannelScreenStack ===
 
-// Module 16174 (MainTabsChannelScreenStack)
+// Module 16170 (MainTabsChannelScreenStack)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import native from "native" /* 4540 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import useChatLayout from "useChatLayout" /* 4695 */;
 import FramesNativeManagerDefault from "FramesNativeManager" /* 8751 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 15632 */;
-import StandaloneChannelScreenDefault from "StandaloneChannelScreen" /* 16178 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 15630 */;
+import StandaloneChannelScreenDefault from "StandaloneChannelScreen" /* 16174 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 8499 */;

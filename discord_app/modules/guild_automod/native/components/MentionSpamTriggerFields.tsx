@@ -1,7 +1,7 @@
-// === Module 17320: MentionSpamTriggerFields ===
+// === Module 17324: MentionSpamTriggerFields ===
 
-// Module 17320 (MentionSpamTriggerFields)
-import AutomodRuleUtils from "AutomodRuleUtils" /* 17305 */;
+// Module 17324 (MentionSpamTriggerFields)
+import AutomodRuleUtils from "AutomodRuleUtils" /* 17309 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

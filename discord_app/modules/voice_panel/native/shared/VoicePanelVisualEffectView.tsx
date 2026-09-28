@@ -1,6 +1,6 @@
-// === Module 17001: VoicePanelVisualEffectView ===
+// === Module 17005: VoicePanelVisualEffectView ===
 
-// Module 17001 (VoicePanelVisualEffectView)
+// Module 17005 (VoicePanelVisualEffectView)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4531 */;
 import native from "native" /* 8370 */;

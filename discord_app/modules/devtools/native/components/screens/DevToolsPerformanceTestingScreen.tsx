@@ -1,9 +1,9 @@
-// === Module 15330: DevToolsPerformanceTestingScreen ===
+// === Module 15328: DevToolsPerformanceTestingScreen ===
 
-// Module 15330 (DevToolsPerformanceTestingScreen)
+// Module 15328 (DevToolsPerformanceTestingScreen)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 14140 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 14139 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

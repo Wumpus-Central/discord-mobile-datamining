@@ -1,6 +1,6 @@
-// === Module 15373: DesignSystemsTableRowSetting ===
+// === Module 15371: DesignSystemsTableRowSetting ===
 
-// Module 15373 (DesignSystemsTableRowSetting)
+// Module 15371 (DesignSystemsTableRowSetting)
 import Constants from "Constants" /* 1074 */;
 import SettingsConstants from "SettingsConstants" /* 7417 */;
 import SettingBuilders from "SettingBuilders" /* 11006 */;

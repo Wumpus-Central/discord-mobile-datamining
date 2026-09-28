@@ -1,17 +1,17 @@
-// === Module 16506: SmartSearchSkeleton ===
+// === Module 16510: SmartSearchSkeleton ===
 
-// Module 16506 (SmartSearchSkeleton)
+// Module 16510 (SmartSearchSkeleton)
 import nativeDefault from "native" /* 576 */;
 import _modDef3877 from "module_3877" /* 3877 */;
-import waveTransition from "waveTransition" /* 13942 */;
-import FormRowPlaceholderDefault from "FormRowPlaceholder" /* 16490 */;
+import waveTransition from "waveTransition" /* 13941 */;
+import FormRowPlaceholderDefault from "FormRowPlaceholder" /* 16494 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const IntelligenceSearchConstants = fn(11847);
 ({ LOADING_BLOCK_HEIGHT: hasOwnProperty, LOADING_BOTTOM_GAP: metroRequire } = IntelligenceSearchConstants);
-const AILoaderConstants = fn(13937);
+const AILoaderConstants = fn(13936);
 ({ AI_LOADER_CYCLE_MS: closure_7, AI_LOADER_REDUCED_MOTION_CYCLE_MS: closure_8, AI_LOADER_REST_FRACTION, AI_LOADER_STEP_FRACTION } = AILoaderConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -66,7 +66,7 @@ export default noop.memo((isCollapsed) => {
   const obj = { style: tmp.block, children: null };
   const obj2 = { style: tmp.header, children: null };
   ({ shimmerDurationMs, shimmerDelayMs, shimmerInitialDelayMs } = memo1);
-  const items1 = [closure_9(reducedMotion(13936).AILoader, { size: 12, color: "interactive-text-default" }), closure_9(reducedMotion(13940).AIShimmer, { text: memo, variant: "text-sm/semibold", color: "interactive-text-default", delay: shimmerDelayMs, initialDelay: shimmerInitialDelayMs, duration: shimmerDurationMs, style: tmp.label })];
+  const items1 = [closure_9(reducedMotion(13935).AILoader, { size: 12, color: "interactive-text-default" }), closure_9(reducedMotion(13939).AIShimmer, { text: memo, variant: "text-sm/semibold", color: "interactive-text-default", delay: shimmerDelayMs, initialDelay: shimmerInitialDelayMs, duration: shimmerDurationMs, style: tmp.label })];
   obj2.children = items1;
   const items2 = [closure_10(View, obj2), ];
   const obj4 = { style: tmp.skeletons, children: null };

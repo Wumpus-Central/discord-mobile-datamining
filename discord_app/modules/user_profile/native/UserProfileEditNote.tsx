@@ -1,6 +1,6 @@
-// === Module 12612: UserProfileEditNote ===
+// === Module 12630: UserProfileEditNote ===
 
-// Module 12612 (UserProfileEditNote)
+// Module 12630 (UserProfileEditNote)
 import NavigatorHeader from "NavigatorHeader" /* 5936 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

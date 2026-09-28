@@ -1,9 +1,9 @@
-// === Module 13224: settings/NotifSettingsUtils ===
+// === Module 13223: settings/NotifSettingsUtils ===
 
-// Module 13224 (settings/NotifSettingsUtils)
+// Module 13223 (settings/NotifSettingsUtils)
 import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1222 */;
-import notification_settings from "notification_settings" /* 13226 */;
-import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 13225 */;
+import notification_settings from "notification_settings" /* 13225 */;
+import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 13224 */;
 
 const require = globalThis.__r;
 

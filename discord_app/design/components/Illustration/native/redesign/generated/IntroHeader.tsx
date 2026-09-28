@@ -1,6 +1,6 @@
-// === Module 17458: IntroHeader ===
+// === Module 17462: IntroHeader ===
 
-// Module 17458 (IntroHeader)
+// Module 17462 (IntroHeader)
 import shared from "shared" /* 4685 */;
 import _mod7679 from "module_7679" /* 7679 */;
 import noop from "module_19" /* 19 */;
@@ -16,13 +16,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getIntroHeaderSource = function getIntroHeaderSource(theme) {
   return _mod7679.getIllustrationSource(theme, {
     dark() {
-      return require("module_17459");
+      return require("module_17463");
     },
     darker() {
-      return require("module_17460");
+      return require("module_17464");
     },
     light() {
-      return require("module_17461");
+      return require("module_17465");
     }
   });
 };
@@ -30,13 +30,13 @@ export const useIntroHeaderSource = function useIntroHeaderSource() {
   const obj = shared;
   return _mod7679.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_17459");
+      return require("module_17463");
     },
     darker() {
-      return require("module_17460");
+      return require("module_17464");
     },
     light() {
-      return require("module_17461");
+      return require("module_17465");
     }
   });
 };
@@ -45,13 +45,13 @@ export const IntroHeader = function IntroHeader(arg0) {
   const obj4 = {};
   const illustrationSource = _mod7679.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_17459");
+      return require("module_17463");
     },
     darker() {
-      return require("module_17460");
+      return require("module_17464");
     },
     light() {
-      return require("module_17461");
+      return require("module_17465");
     }
   });
   const merged = Object.assign(arg0);

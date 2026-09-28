@@ -1,14 +1,14 @@
-// === Module 14905: TypingIndicatorSetting ===
+// === Module 14903: TypingIndicatorSetting ===
 
-// Module 14905 (TypingIndicatorSetting)
+// Module 14903 (TypingIndicatorSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
 import dismissible_content from "dismissible_content" /* 2029 */;
 import _modDef3717 from "module_3717" /* 3717 */;
 import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 11449 */;
-import ChatDotsIcon from "ChatDotsIcon" /* 14906 */;
-import SettingRendererTypes from "SettingRendererTypes" /* 14957 */;
-import DismissibleBadgeUtils from "DismissibleBadgeUtils" /* 14284 */;
+import ChatDotsIcon from "ChatDotsIcon" /* 14904 */;
+import SettingRendererTypes from "SettingRendererTypes" /* 14955 */;
+import DismissibleBadgeUtils from "DismissibleBadgeUtils" /* 14283 */;
 import SettingBuilders from "SettingBuilders" /* 11006 */;
 import size from "module_2" /* 2 */;
 

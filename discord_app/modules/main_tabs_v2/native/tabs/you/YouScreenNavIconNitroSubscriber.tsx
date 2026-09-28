@@ -1,13 +1,13 @@
-// === Module 16607: YouScreenNavIconNitroSubscriber ===
+// === Module 16611: YouScreenNavIconNitroSubscriber ===
 
-// Module 16607 (YouScreenNavIconNitroSubscriber)
+// Module 16611 (YouScreenNavIconNitroSubscriber)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ReferralTrialStore from "ReferralTrialStore" /* 6872 */;
-import PremiumNitroNavigationStore from "PremiumNitroNavigationStore" /* 12936 */;
+import PremiumNitroNavigationStore from "PremiumNitroNavigationStore" /* 12935 */;
 
 const require = fn;
-const NitroHomeSectionId = fn(12936).NitroHomeSectionId;
+const NitroHomeSectionId = fn(12935).NitroHomeSectionId;
 const ContentDismissActionType = fn(2042).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -37,7 +37,7 @@ export default noop.memo(function SubscriberNitroIcon(onPress) {
     }
   }
   const tmpResult2 = onPress(6806);
-  const tmp5 = _slicedToArray(tmpResult2.useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: onPress(16602).REFERRAL_NITRO_BUTTON_RED_DOT_COOLDOWN_MS }, undefined, true), 2);
+  const tmp5 = _slicedToArray(tmpResult2.useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: onPress(16606).REFERRAL_NITRO_BUTTON_RED_DOT_COOLDOWN_MS }, undefined, true), 2);
   dependencyMap = tmp6;
   const tmp7 = tmp5[0] === onPress(2029).DismissibleContent.REFERRAL_PROGRAM_ENTRYPOINT_NITRO_BUTTON_NOTIFICATION;
   _slicedToArray = tmp7;
@@ -51,11 +51,11 @@ export default noop.memo(function SubscriberNitroIcon(onPress) {
     onPress();
   }, items2);
   const obj3 = { IconComponent: null, accessibilityLabel: null, onPress: null, showRedDot: null };
-  const obj2 = { cooldownDurationMs: onPress(16602).REFERRAL_NITRO_BUTTON_RED_DOT_COOLDOWN_MS };
+  const obj2 = { cooldownDurationMs: onPress(16606).REFERRAL_NITRO_BUTTON_RED_DOT_COOLDOWN_MS };
   obj3.IconComponent = onPress(8122).NitroWheelIcon;
   const intl = tmp(1115).intl;
   obj3.accessibilityLabel = intl.string(onPress(1115).t.Ipxkog);
   obj3.onPress = callback;
   obj3.showRedDot = tmp7;
-  return jsx(showReferralNotificationDot(16604), { IconComponent: null, accessibilityLabel: null, onPress: null, showRedDot: null });
+  return jsx(showReferralNotificationDot(16608), { IconComponent: null, accessibilityLabel: null, onPress: null, showRedDot: null });
 });

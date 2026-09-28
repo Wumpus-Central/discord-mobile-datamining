@@ -1,9 +1,9 @@
-// === Module 16251: VibegrationsTemplates ===
+// === Module 16247: VibegrationsTemplates ===
 
-// Module 16251 (VibegrationsTemplates)
+// Module 16247 (VibegrationsTemplates)
 import util from "util" /* 1115 */;
 import _modDef3715 from "module_3715" /* 3715 */;
-import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 12624 */;
+import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 12642 */;
 import size from "module_2" /* 2 */;
 
 const sendUserMessage = VibegrationsConnectionStore.sendUserMessage;

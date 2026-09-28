@@ -1,6 +1,6 @@
-// === Module 12579: useActivityTimer ===
+// === Module 12597: useActivityTimer ===
 
-// Module 12579 (useActivityTimer)
+// Module 12597 (useActivityTimer)
 import DurationsDefault from "Durations" /* 1091 */;
 import utils from "utils" /* 7592 */;
 import _slicedToArray from "module_32" /* 32 */;

@@ -1,6 +1,6 @@
-// === Module 16911: usePanelOpenState ===
+// === Module 16915: usePanelOpenState ===
 
-// Module 16911 (usePanelOpenState)
+// Module 16915 (usePanelOpenState)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import _slicedToArray from "module_32" /* 32 */;

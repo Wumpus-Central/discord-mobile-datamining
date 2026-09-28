@@ -1,12 +1,12 @@
-// === Module 15080: AppIconRows ===
+// === Module 15078: AppIconRows ===
 
-// Module 15080 (AppIconRows)
+// Module 15078 (AppIconRows)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1970 */;
 import AppIconTypes from "AppIconTypes" /* 8625 */;
-import AppIconUtils from "AppIconUtils" /* 12996 */;
-import AppIconRowDefault from "AppIconRow" /* 15081 */;
+import AppIconUtils from "AppIconUtils" /* 12995 */;
+import AppIconRowDefault from "AppIconRow" /* 15079 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;

@@ -1,10 +1,10 @@
-// === Module 12961: PromotionsActionCreators ===
+// === Module 12960: PromotionsActionCreators ===
 
-// Module 12961 (PromotionsActionCreators)
+// Module 12960 (PromotionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import wrappers from "wrappers" /* 1217 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import MarketingComponentPlatform from "MarketingComponentPlatform" /* 12962 */;
+import MarketingComponentPlatform from "MarketingComponentPlatform" /* 12961 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2112 */;
 import UserStore from "UserStore" /* 1372 */;

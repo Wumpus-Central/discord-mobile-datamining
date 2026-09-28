@@ -1,8 +1,8 @@
-// === Module 17479: GuildSettingsModalAnalytics ===
+// === Module 17483: GuildSettingsModalAnalytics ===
 
-// Module 17479 (GuildSettingsModalAnalytics)
+// Module 17483 (GuildSettingsModalAnalytics)
 import nativeDefault from "native" /* 576 */;
-import GuildSettingsAnalyticsCardDefault from "GuildSettingsAnalyticsCard" /* 17500 */;
+import GuildSettingsAnalyticsCardDefault from "GuildSettingsAnalyticsCard" /* 17504 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2112 */;
@@ -25,7 +25,7 @@ export default function GuildSettingsModalAnalytics(guildId) {
   const items = [LocaleStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => locale.locale);
   let obj = guildId(504);
-  const guildAnalyticsOverview = guildId(17480).useGuildAnalyticsOverview(guildId);
+  const guildAnalyticsOverview = guildId(17484).useGuildAnalyticsOverview(guildId);
   ({ analytics, notice } = guildAnalyticsOverview);
   const items1 = [guildId];
   let obj3 = { style: tmp.container, contentContainerStyle: null, children: null };
@@ -85,7 +85,7 @@ export default function GuildSettingsModalAnalytics(guildId) {
   let obj4 = { spacing: nativeDefault.space.PX_16, children: null };
   let obj5 = { variant: "text-sm/medium", color: "text-default", children: null };
   const intl = guildId(1115).intl;
-  let obj2 = guildId(17480);
+  let obj2 = guildId(17484);
   obj5.children = intl.string(guildId(1115).t.NIZ60a).trim();
   const items3 = [closure_9(guildId(4832).Text, obj5), , , , ];
   if (null == notice) {
@@ -108,31 +108,31 @@ export default function GuildSettingsModalAnalytics(guildId) {
       const intl5 = tmp2(1115).intl;
       obj9.description = intl5.string(tmp2(1115).t.KiRbLJ);
       const tmp11Result = GuildSettingsAnalyticsCardDefault;
-      const merged = Object.assign(tmp2(17480).getGuildAnalyticsCardProps(analytics.visitors, analytics.visitorsChange, stateFromStores));
+      const merged = Object.assign(tmp2(17484).getGuildAnalyticsCardProps(analytics.visitors, analytics.visitorsChange, stateFromStores));
       const items4 = [closure_9(tmp11Result, obj9), , , ];
       const obj10 = { metricKey: "communicators", title: null, description: null };
-      const tmp2Result = tmp2(17480);
+      const tmp2Result = tmp2(17484);
       const intl6 = tmp2(1115).intl;
       obj10.title = intl6.string(tmp2(1115).t.DDAHdQ);
       const intl7 = tmp2(1115).intl;
       obj10.description = intl7.string(tmp2(1115).t.HxWUkU);
       const tmp11Result4 = GuildSettingsAnalyticsCardDefault;
-      const merged1 = Object.assign(tmp2(17480).getGuildAnalyticsCardProps(analytics.communicators, analytics.communicatorsChange, stateFromStores));
+      const merged1 = Object.assign(tmp2(17484).getGuildAnalyticsCardProps(analytics.communicators, analytics.communicatorsChange, stateFromStores));
       items4[1] = closure_9(tmp11Result4, obj10);
       const obj11 = { metricKey: "new_members", title: null };
-      const tmp2Result4 = tmp2(17480);
+      const tmp2Result4 = tmp2(17484);
       const intl8 = tmp2(1115).intl;
       obj11.title = intl8.string(tmp2(1115).t.hYeOqC);
       const tmp11Result5 = GuildSettingsAnalyticsCardDefault;
-      const merged2 = Object.assign(tmp2(17480).getGuildAnalyticsCardProps(analytics.newMembers, analytics.newMembersChange, stateFromStores));
+      const merged2 = Object.assign(tmp2(17484).getGuildAnalyticsCardProps(analytics.newMembers, analytics.newMembersChange, stateFromStores));
       items4[2] = closure_9(tmp11Result5, obj11);
       const obj12 = { metricKey: "new_member_retention", title: null, description: null };
-      const tmp2Result5 = tmp2(17480);
+      const tmp2Result5 = tmp2(17484);
       const intl9 = tmp2(1115).intl;
       obj12.title = intl9.string(tmp2(1115).t.jj7OPw);
       const intl10 = tmp2(1115).intl;
       obj12.description = intl10.string(tmp2(1115).t.MQCslz);
-      const tmp2Result6 = tmp2(17480);
+      const tmp2Result6 = tmp2(17484);
       const merged3 = Object.assign(tmp2Result6.getGuildAnalyticsCardProps(analytics.pctRetained, analytics.pctRetainedChange, stateFromStores, true));
       items4[3] = closure_9(GuildSettingsAnalyticsCardDefault, obj12);
       obj8.children = items4;

@@ -1,6 +1,6 @@
-// === Module 15382: UserSettingsDesignSystemTabs ===
+// === Module 15380: UserSettingsDesignSystemTabs ===
 
-// Module 15382 (UserSettingsDesignSystemTabs)
+// Module 15380 (UserSettingsDesignSystemTabs)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import _slicedToArray from "module_32" /* 32 */;

@@ -1,6 +1,6 @@
-// === Module 16389: VibegrationsConjureShellGlow ===
+// === Module 16394: VibegrationsConjureShellGlow ===
 
-// Module 16389 (VibegrationsConjureShellGlow)
+// Module 16394 (VibegrationsConjureShellGlow)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;

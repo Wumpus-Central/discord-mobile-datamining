@@ -17,7 +17,7 @@ import GatewayConnectionStore from "GatewayConnectionStore" /* 5589 */;
 import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7020 */;
 import MessageQueue from "MessageQueue" /* 7253 */;
 import canEditMessageDefault from "canEditMessage" /* 11246 */;
-import GuildAutomodMessageStoreUtils from "GuildAutomodMessageStoreUtils" /* 13307 */;
+import GuildAutomodMessageStoreUtils from "GuildAutomodMessageStoreUtils" /* 13306 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ImpersonateStore from "ImpersonateStore" /* 2101 */;
@@ -989,9 +989,9 @@ const messageStore = new MessageStore(DispatcherDefault, {
       if (orCreate === removeManyResult) {
         return false;
       } else {
-        let tmp8 = removeManyResult;
+        let tmp3 = removeManyResult;
         if (null != removeManyResult.revealedMessageId) {
-          tmp8 = removeManyResult;
+          tmp3 = removeManyResult;
           if (tmpResult.some(ids, (arg0) => mutation.revealedMessageId === arg0)) {
             let id = removeManyResult.getAfter(removeManyResult.revealedMessageId);
             if (null == id) {
@@ -1004,7 +1004,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
           }
           tmpResult = tmp(12);
         }
-        tmp(5584).commit(tmp8);
+        tmp(5584).commit(tmp3);
         const item1 = ids.forEach((item) => {
           set.delete(item);
         });

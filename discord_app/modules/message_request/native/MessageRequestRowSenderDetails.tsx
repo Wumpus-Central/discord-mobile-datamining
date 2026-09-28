@@ -1,11 +1,11 @@
-// === Module 16695: MessageRequestRowSenderDetails ===
+// === Module 16699: MessageRequestRowSenderDetails ===
 
-// Module 16695 (MessageRequestRowSenderDetails)
+// Module 16699 (MessageRequestRowSenderDetails)
 import nativeDefault from "native" /* 576 */;
 import utils_AvatarUtilsDefault from "utils/AvatarUtils" /* 1400 */;
 import UserUtilsDefault from "UserUtils" /* 4678 */;
-import MessageRequestPreviewDefault from "MessageRequestPreview" /* 16697 */;
-import MessageRequestMutualServersDefault from "MessageRequestMutualServers" /* 16698 */;
+import MessageRequestPreviewDefault from "MessageRequestPreview" /* 16701 */;
+import MessageRequestMutualServersDefault from "MessageRequestMutualServers" /* 16702 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4479 */;
 
@@ -44,7 +44,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     return tmp2;
   });
   let obj = otherUser(504);
-  const messageRequestRelativeTimestampText = otherUser(16696).useMessageRequestRelativeTimestampText(channel);
+  const messageRequestRelativeTimestampText = otherUser(16700).useMessageRequestRelativeTimestampText(channel);
   const random = Math.random();
   const rounded = Math.floor(random * utils_AvatarUtilsDefault.DEFAULT_AVATARS.length);
   const obj3 = { style: tmp.avatarContainer, children: null };

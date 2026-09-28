@@ -1,8 +1,8 @@
-// === Module 16784: updateVisualRefresh ===
+// === Module 16788: updateVisualRefresh ===
 
-// Module 16784 (updateVisualRefresh)
+// Module 16788 (updateVisualRefresh)
 import _mod17 from "module_17" /* 17 */;
-import NativeThemeModuleDefault from "NativeThemeModule" /* 14001 */;
+import NativeThemeModuleDefault from "NativeThemeModule" /* 14000 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;

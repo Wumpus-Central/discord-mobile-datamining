@@ -1,8 +1,8 @@
-// === Module 15030: SettingsWebBrowserScreen ===
+// === Module 15028: SettingsWebBrowserScreen ===
 
-// Module 15030 (SettingsWebBrowserScreen)
+// Module 15028 (SettingsWebBrowserScreen)
 import SettingBuilders from "SettingBuilders" /* 11006 */;
-import SettingLayoutDefault from "SettingLayout" /* 14248 */;
+import SettingLayoutDefault from "SettingLayout" /* 14247 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

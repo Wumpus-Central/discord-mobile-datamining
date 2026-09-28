@@ -1,8 +1,8 @@
-// === Module 16986: VoicePanelSecondaryPIPContent ===
+// === Module 16990: VoicePanelSecondaryPIPContent ===
 
-// Module 16986 (VoicePanelSecondaryPIPContent)
+// Module 16990 (VoicePanelSecondaryPIPContent)
 import roundToNearestPixelDefault from "roundToNearestPixel" /* 10456 */;
-import getActivityContainerPIPStylesSpecDefault from "getActivityContainerPIPStylesSpec" /* 16840 */;
+import getActivityContainerPIPStylesSpecDefault from "getActivityContainerPIPStylesSpec" /* 16844 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
 import FramesStore from "FramesStore" /* 8499 */;

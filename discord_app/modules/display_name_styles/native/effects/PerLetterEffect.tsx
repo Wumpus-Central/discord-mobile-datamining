@@ -54,7 +54,7 @@ export default function PerLetterEffect(name) {
     accessibilityLabel = name;
   }
   obj2.accessibilityLabel = accessibilityLabel;
-  const items2 = [textStyle, { lineHeight: "__initData" }];
+  const items2 = [textStyle, { lineHeight: "r" }];
   obj2.style = items2;
   obj2.children = memo;
   obj.children = jsx(name(4832).Text, {});

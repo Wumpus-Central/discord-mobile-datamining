@@ -1,6 +1,6 @@
-// === Module 17456: GuildSettingsModalCommunity ===
+// === Module 17460: GuildSettingsModalCommunity ===
 
-// Module 17456 (GuildSettingsModalCommunity)
+// Module 17460 (GuildSettingsModalCommunity)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
@@ -17,7 +17,7 @@ import GuildSettingsStore from "GuildSettingsStore" /* 9049 */;
 
 require = fn;
 let closure_6 = fn(4467).GUILD_SELECTABLE_CHANNELS_KEY;
-const calculateLocaleOptions = fn(16120).calculateLocaleOptions;
+const calculateLocaleOptions = fn(16116).calculateLocaleOptions;
 const Constants = fn(1074);
 ({ ChannelTypes: closure_12, GuildFeatures: map1, GuildSettingsSections: closure_14, Permissions: closure_15 } = Constants);
 const jsxProd = fn(21);

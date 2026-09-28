@@ -1,6 +1,6 @@
-// === Module 15262: CheckpointScreen ===
+// === Module 15260: CheckpointScreen ===
 
-// Module 15262 (CheckpointScreen)
+// Module 15260 (CheckpointScreen)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 

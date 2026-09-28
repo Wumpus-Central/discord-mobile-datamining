@@ -1,6 +1,6 @@
-// === Module 14201: UserProfileLegacyUsernameSwitch ===
+// === Module 14200: UserProfileLegacyUsernameSwitch ===
 
-// Module 14201 (UserProfileLegacyUsernameSwitch)
+// Module 14200 (UserProfileLegacyUsernameSwitch)
 import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 6405 */;
 import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 7609 */;
 import noop from "module_19" /* 19 */;
@@ -40,5 +40,5 @@ export default function UserProfileLegacyUsernameSwitch(pendingLegacyUsernameDis
       UserProfileSettingsActionCreators.setPendingChanges(obj2);
     }
   };
-  return jsx(setting(14176).UserProfileEditFormSwitch, { value: !tmp4, label: null, subLabel: null, accessibilityLabel: null, onValueChange: null });
+  return jsx(setting(14175).UserProfileEditFormSwitch, { value: !tmp4, label: null, subLabel: null, accessibilityLabel: null, onValueChange: null });
 };

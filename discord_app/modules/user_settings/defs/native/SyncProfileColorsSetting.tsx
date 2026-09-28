@@ -1,6 +1,6 @@
-// === Module 14965: SyncProfileColorsSetting ===
+// === Module 14963: SyncProfileColorsSetting ===
 
-// Module 14965 (SyncProfileColorsSetting)
+// Module 14963 (SyncProfileColorsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import AccessibilityStore from "AccessibilityStore" /* 4825 */;
@@ -17,7 +17,7 @@ const toggle = SettingBuilders.createToggle({
     const items = [AccessibilityStore];
     return initialize.useStateFromStores(items, () => AccessibilityStore.syncProfileThemeWithUserTheme);
   },
-  onValueChange: fn(13999).toggleSyncProfileThemeWithUserTheme
+  onValueChange: fn(13998).toggleSyncProfileThemeWithUserTheme
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/SyncProfileColorsSetting.tsx");

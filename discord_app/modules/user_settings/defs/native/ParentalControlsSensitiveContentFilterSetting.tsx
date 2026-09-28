@@ -1,6 +1,6 @@
-// === Module 15511: ParentalControlsSensitiveContentFilterSetting ===
+// === Module 15509: ParentalControlsSensitiveContentFilterSetting ===
 
-// Module 15511 (ParentalControlsSensitiveContentFilterSetting)
+// Module 15509 (ParentalControlsSensitiveContentFilterSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
 import ImageWarningIcon from "ImageWarningIcon" /* 5395 */;

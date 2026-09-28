@@ -1,6 +1,6 @@
-// === Module 16921: VoicePanelHeader ===
+// === Module 16925: VoicePanelHeader ===
 
-// Module 16921 (VoicePanelHeader)
+// Module 16925 (VoicePanelHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
@@ -10,8 +10,8 @@ import spring from "spring" /* 5280 */;
 import StageMusicActionCreators from "StageMusicActionCreators" /* 9368 */;
 import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 9493 */;
 import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11759 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 16855 */;
-import useStableParticipant from "useStableParticipant" /* 16925 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 16859 */;
+import useStableParticipant from "useStableParticipant" /* 16929 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4852 */;

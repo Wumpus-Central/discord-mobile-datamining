@@ -1,6 +1,6 @@
-// === Module 17634: InappropriateConversationsManager ===
+// === Module 17638: InappropriateConversationsManager ===
 
-// Module 17634 (InappropriateConversationsManager)
+// Module 17638 (InappropriateConversationsManager)
 import _modDef4960 from "module_4960" /* 4960 */;
 import SoundUtils from "SoundUtils" /* 9357 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6539 */;

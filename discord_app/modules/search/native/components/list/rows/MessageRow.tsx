@@ -1,6 +1,6 @@
-// === Module 16486: MessageRow ===
+// === Module 16490: MessageRow ===
 
-// Module 16486 (MessageRow)
+// Module 16490 (MessageRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -15,10 +15,10 @@ import BotTagDefault from "BotTag" /* 8741 */;
 import ChannelRowPreview from "ChannelRowPreview" /* 9568 */;
 import _modDef9603 from "module_9603" /* 9603 */;
 import _modDef9853 from "module_9853" /* 9853 */;
-import BellZIcon from "BellZIcon" /* 12866 */;
-import SearchListRow from "SearchListRow" /* 16464 */;
-import useSearchMessageTimestamp from "useSearchMessageTimestamp" /* 16487 */;
-import PollBadgeDefault from "PollBadge" /* 16488 */;
+import BellZIcon from "BellZIcon" /* 12865 */;
+import SearchListRow from "SearchListRow" /* 16468 */;
+import useSearchMessageTimestamp from "useSearchMessageTimestamp" /* 16491 */;
+import PollBadgeDefault from "PollBadge" /* 16492 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4825 */;
 import FavoriteStore from "FavoriteStore" /* 2048 */;
@@ -86,7 +86,7 @@ function PrivateChannelMessageRowLabel(message) {
     }
     tmp = channel.isDM() || channel.isGroupDM();
   }, items1);
-  const searchMessageTimestamp = message(16487).useSearchMessageTimestamp(message, channel);
+  const searchMessageTimestamp = message(16491).useSearchMessageTimestamp(message, channel);
   const obj2 = { style: tmp.labelContainer, children: null };
   const obj3 = { style: tmp.authorRow, children: null };
   ({ timestamp, timestampAccessibilityLabel } = searchMessageTimestamp);
@@ -108,13 +108,13 @@ function PrivateChannelMessageRowLabel(message) {
   let tmp9Result = null;
   if (message.hasFlag(MessageFlags.SUPPRESS_NOTIFICATIONS)) {
     const obj7 = { size: "xs", style: tmp.suppressNotificationsIcon };
-    tmp9Result = closure_11(tmp4(12866).BellZIcon, obj7);
+    tmp9Result = closure_11(tmp4(12865).BellZIcon, obj7);
   }
   items3[2] = tmp9Result;
   let tmp9Result2 = null;
   if (message.isPoll()) {
     const obj8 = { style: tmp.pollBadge };
-    tmp9Result2 = closure_11(channel(16488), obj8);
+    tmp9Result2 = closure_11(channel(16492), obj8);
   }
   items3[3] = tmp9Result2;
   obj2.children = items3;

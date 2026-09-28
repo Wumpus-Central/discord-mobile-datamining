@@ -1,6 +1,6 @@
-// === Module 13409: RemoteAuthModal ===
+// === Module 13408: RemoteAuthModal ===
 
-// Module 13409 (RemoteAuthModal)
+// Module 13408 (RemoteAuthModal)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -13,10 +13,10 @@ import components_Button_Button from "components/Button/Button" /* 5281 */;
 import ButtonGroup from "ButtonGroup" /* 5745 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5889 */;
 import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5893 */;
-import _modDef13408 from "module_13408" /* 13408 */;
+import _modDef13407 from "module_13407" /* 13407 */;
+import _modDef13409 from "module_13409" /* 13409 */;
 import _modDef13410 from "module_13410" /* 13410 */;
 import _modDef13411 from "module_13411" /* 13411 */;
-import _modDef13412 from "module_13412" /* 13412 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -97,7 +97,7 @@ function RemoteAuthLogin(arg0) {
       closure_1_1(constants.NOT_FOUND);
     });
   }, 1000, { leading: true, trailing: false });
-  const items = [closure_9(closure_6, { source: _modDef13411, style: tmp.mainImage }), , , ];
+  const items = [closure_9(closure_6, { source: _modDef13410, style: tmp.mainImage }), , , ];
   const obj4 = { variant: "heading-md/extrabold", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t.jD2pqF);
@@ -131,7 +131,7 @@ function RemoteAuthLogin(arg0) {
 function RemoteAuthLoginSucceeded() {
   const tmp = closure_12();
   const obj = { children: null };
-  const items = [React7(timestampProducer, { source: _modDef13412, style: tmp.mainImage }), , , ];
+  const items = [React7(timestampProducer, { source: _modDef13411, style: tmp.mainImage }), , , ];
   const obj3 = { variant: "heading-xl/extrabold", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.HbwTOZ);
@@ -192,9 +192,9 @@ let result = size.fileFinishedImporting("modules/remote_auth/components/native/R
 
 export default function RemoteAuth(arg0) {
   const tmp = closure_12();
-  const obj = { source: _modDef13410, imageStyle: null, style: null, children: null };
+  const obj = { source: _modDef13409, imageStyle: null, style: null, children: null };
   ({ imageStyle: obj.imageStyle, background: obj.style } = tmp);
-  const obj2 = { style: null, source: _modDef13408 };
+  const obj2 = { style: null, source: _modDef13407 };
   const items = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
   obj2.style = items;
   const items1 = [React7(timestampProducer, obj2), ];

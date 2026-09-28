@@ -1,7 +1,7 @@
-// === Module 17651: GlobalDiscoveryServersFeaturedSearchManager ===
+// === Module 17655: GlobalDiscoveryServersFeaturedSearchManager ===
 
-// Module 17651 (GlobalDiscoveryServersFeaturedSearchManager)
-import GlobalDiscoveryServersSearchResultsStoreDefault from "GlobalDiscoveryServersSearchResultsStore" /* 13250 */;
+// Module 17655 (GlobalDiscoveryServersFeaturedSearchManager)
+import GlobalDiscoveryServersSearchResultsStoreDefault from "GlobalDiscoveryServersSearchResultsStore" /* 13249 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6539 */;
 

@@ -1,6 +1,6 @@
-// === Module 17366: EmptyServerSettingsEmoji ===
+// === Module 17370: EmptyServerSettingsEmoji ===
 
-// Module 17366 (EmptyServerSettingsEmoji)
+// Module 17370 (EmptyServerSettingsEmoji)
 import shared from "shared" /* 4685 */;
 import _mod7679 from "module_7679" /* 7679 */;
 import noop from "module_19" /* 19 */;
@@ -16,13 +16,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getEmptyServerSettingsEmojiSource = function getEmptyServerSettingsEmojiSource(theme) {
   return _mod7679.getIllustrationSource(theme, {
     dark() {
-      return require("module_17367");
+      return require("module_17371");
     },
     darker() {
-      return require("module_17368");
+      return require("module_17372");
     },
     light() {
-      return require("module_17369");
+      return require("module_17373");
     }
   });
 };
@@ -30,13 +30,13 @@ export const useEmptyServerSettingsEmojiSource = function useEmptyServerSettings
   const obj = shared;
   return _mod7679.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_17367");
+      return require("module_17371");
     },
     darker() {
-      return require("module_17368");
+      return require("module_17372");
     },
     light() {
-      return require("module_17369");
+      return require("module_17373");
     }
   });
 };
@@ -45,13 +45,13 @@ export const EmptyServerSettingsEmoji = function EmptyServerSettingsEmoji(arg0) 
   const obj4 = {};
   const illustrationSource = _mod7679.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_17367");
+      return require("module_17371");
     },
     darker() {
-      return require("module_17368");
+      return require("module_17372");
     },
     light() {
-      return require("module_17369");
+      return require("module_17373");
     }
   });
   const merged = Object.assign(arg0);

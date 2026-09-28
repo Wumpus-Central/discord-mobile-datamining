@@ -1,6 +1,6 @@
-// === Module 16925: useStableParticipant ===
+// === Module 16929: useStableParticipant ===
 
-// Module 16925 (useStableParticipant)
+// Module 16929 (useStableParticipant)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import NicknameUtils from "NicknameUtils" /* 4988 */;
 import useAvatarDecoration from "useAvatarDecoration" /* 7661 */;
@@ -40,7 +40,7 @@ export default function useStableParticipant(id, arg1, arg2) {
       if (null == participant) {
         const user = UserStore.getUser(id);
         if (null != user) {
-          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "flexDirection", ringing: null, hasVideo: 0, isSelf: 1 };
+          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "flexDirection", ringing: null, hasVideo: 64.59, isSelf: 21.194 };
           id = AuthenticationStore.getId();
           obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);
           obj3.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, closure_2);

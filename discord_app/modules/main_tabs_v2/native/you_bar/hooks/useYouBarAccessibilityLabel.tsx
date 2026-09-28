@@ -1,6 +1,6 @@
-// === Module 16007: useYouBarAccessibilityLabel ===
+// === Module 16005: useYouBarAccessibilityLabel ===
 
-// Module 16007 (useYouBarAccessibilityLabel)
+// Module 16005 (useYouBarAccessibilityLabel)
 import util from "util" /* 1115 */;
 import UserUtils from "UserUtils" /* 4678 */;
 import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10337 */;
@@ -29,39 +29,30 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  let obj = id(4678);
-  dependencyMap = require("YouBarActivityStatusExperiment").useYouBarActivityStatusEnabled("YouBar");
-  const obj2 = require("YouBarActivityStatusExperiment");
-  const isYouBarGuildTagEnabled = require("YouBarGuildTagExperiment").useIsYouBarGuildTagEnabled("YouBar");
   const CustomStatusSetting = require("UserSettings").CustomStatusSetting;
   const setting = CustomStatusSetting.useSetting();
   let text;
   if (setting != null) {
     text = setting.text;
   }
-  let obj3 = require("YouBarGuildTagExperiment");
-  let tmp7 = null;
+  let obj = id(4678);
+  let tmp6 = null;
   if ("" !== text) {
-    tmp7 = text;
+    tmp6 = text;
   }
-  closure_3 = require("useGameMentionsAsPlainText").useGameMentionsAsPlainText(tmp7);
-  let tmp8;
-  if (isYouBarGuildTagEnabled) {
-    let primaryGuild;
-    if (stateFromStores != null) {
-      primaryGuild = stateFromStores.primaryGuild;
-    }
-    const userPrimaryGuild = tmp3(7610).getUserPrimaryGuild(primaryGuild);
-    let tag;
-    if (userPrimaryGuild != null) {
-      tag = userPrimaryGuild.tag;
-    }
-    tmp8 = tag;
-    const tmp3Result3 = tmp3(7610);
-  }
-  tag = tmp8;
+  dependencyMap = require("useGameMentionsAsPlainText").useGameMentionsAsPlainText(tmp6);
   const tmp3Result = require("useGameMentionsAsPlainText");
-  let items = [SelfPresenceStore, closure_3, RelationshipStore, tag, PermissionStore, VoiceStateStore, PresenceStore];
+  let primaryGuild;
+  if (stateFromStores != null) {
+    primaryGuild = stateFromStores.primaryGuild;
+  }
+  const userPrimaryGuild = require("GuildTagUtils").getUserPrimaryGuild(primaryGuild);
+  let tag;
+  if (userPrimaryGuild != null) {
+    tag = userPrimaryGuild.tag;
+  }
+  const tmp3Result3 = require("GuildTagUtils");
+  let items = [SelfPresenceStore, tag, RelationshipStore, ChannelStore, PermissionStore, VoiceStateStore, PresenceStore];
   return require("initialize").useStateFromStores(items, () => {
     if (null != closure_0) {
       const status = SelfPresenceStore.getStatus();
@@ -71,59 +62,56 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
       const obj4 = { ChannelStore, PermissionStore, VoiceStateStore };
       const voiceChannel = useUserVoiceActivity.getVisibleUserVoiceActivity(obj3, obj4).voiceChannel;
       let text = null;
-      if (closure_2) {
+      if (null != id) {
         text = null;
-        if (null != id) {
+        if (status !== constants.OFFLINE) {
           text = null;
-          if (status !== constants.OFFLINE) {
-            text = null;
-            if (status !== constants.INVISIBLE) {
-              const activities = PresenceStore.getActivities(id);
-              if (null != discoverableApplicationStream) {
-                let name;
-                if (activities != null) {
-                  const found = activities.find(isGameActivityDefault);
-                  if (found != null) {
-                    name = found.name;
-                  }
+          if (status !== constants.INVISIBLE) {
+            const activities = PresenceStore.getActivities(id);
+            if (null != discoverableApplicationStream) {
+              let name;
+              if (activities != null) {
+                const found = activities.find(isGameActivityDefault);
+                if (found != null) {
+                  name = found.name;
                 }
-                if (null == name) {
-                  const intl3 = util.intl;
-                  let stringResult = intl3.string(util.t.eXan7B);
-                }
-                const intl4 = util.intl;
-                const obj5 = { name };
-                stringResult = intl4.formatToPlainString(util.t["0wJXSh"], obj5);
+              }
+              if (null == name) {
+                const intl3 = util.intl;
+                let stringResult = intl3.string(util.t.eXan7B);
+              }
+              const intl4 = util.intl;
+              const obj5 = { name };
+              stringResult = intl4.formatToPlainString(util.t["0wJXSh"], obj5);
+            } else {
+              let found1;
+              if (activities != null) {
+                found1 = activities.find((type) => {
+                  type = type.type;
+                  return type !== constants.CUSTOM_STATUS && type !== constants.HANG_STATUS;
+                });
+              }
+              if (null != found1) {
+                text = getActivityStatusTextDefault(found1, true).text;
               } else {
-                let found1;
-                if (activities != null) {
-                  found1 = activities.find((type) => {
-                    type = type.type;
-                    return type !== constants.CUSTOM_STATUS && type !== constants.HANG_STATUS;
-                  });
-                }
-                if (null != found1) {
-                  text = getActivityStatusTextDefault(found1, true).text;
-                } else {
-                  text = null;
-                  if (null != voiceChannel) {
-                    if (!voiceChannel.isDM()) {
-                      if (!voiceChannel.isGroupDM()) {
-                        const intl = util.intl;
-                        const string = intl.string;
-                        const t = util.t;
-                        if (isGuildStageVoiceResult) {
-                          let stringResult1 = string(t.QygGCN);
-                        } else {
-                          stringResult1 = string(t.msxteM);
-                        }
-                        isGuildStageVoiceResult = voiceChannel.isGuildStageVoice();
+                text = null;
+                if (null != voiceChannel) {
+                  if (!voiceChannel.isDM()) {
+                    if (!voiceChannel.isGroupDM()) {
+                      const intl = util.intl;
+                      const string = intl.string;
+                      const t = util.t;
+                      if (isGuildStageVoiceResult) {
+                        let stringResult1 = string(t.QygGCN);
+                      } else {
+                        stringResult1 = string(t.msxteM);
                       }
-                      text = stringResult1;
+                      isGuildStageVoiceResult = voiceChannel.isGuildStageVoice();
                     }
-                    const intl2 = util.intl;
-                    stringResult1 = intl2.string(util.t["9FaEzi"]);
+                    text = stringResult1;
                   }
+                  const intl2 = util.intl;
+                  stringResult1 = intl2.string(util.t["9FaEzi"]);
                 }
               }
             }
@@ -131,7 +119,7 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
         }
       }
       if (text == null) {
-        text = closure_3;
+        text = closure_2;
       }
       if (text == null) {
         text = UserUtils.humanizeStatus(status);

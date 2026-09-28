@@ -1,6 +1,6 @@
-// === Module 17601: GuildRoleSubscriptionTierTemplateSelectedActionSheet ===
+// === Module 17605: GuildRoleSubscriptionTierTemplateSelectedActionSheet ===
 
-// Module 17601 (GuildRoleSubscriptionTierTemplateSelectedActionSheet)
+// Module 17605 (GuildRoleSubscriptionTierTemplateSelectedActionSheet)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
 import noop from "module_19" /* 19 */;

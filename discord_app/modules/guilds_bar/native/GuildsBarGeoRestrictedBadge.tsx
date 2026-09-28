@@ -1,6 +1,6 @@
-// === Module 15986: GuildsBarGeoRestrictedBadge ===
+// === Module 15984: GuildsBarGeoRestrictedBadge ===
 
-// Module 15986 (GuildsBarGeoRestrictedBadge)
+// Module 15984 (GuildsBarGeoRestrictedBadge)
 import nativeDefault from "native" /* 576 */;
 import FastImageDefault from "FastImage" /* 5899 */;
 import _modDef11746 from "module_11746" /* 11746 */;

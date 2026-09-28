@@ -1,6 +1,6 @@
-// === Module 16280: VibegrationsNativePreview ===
+// === Module 16276: VibegrationsNativePreview ===
 
-// Module 16280 (VibegrationsNativePreview)
+// Module 16276 (VibegrationsNativePreview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3715 from "module_3715" /* 3715 */;
@@ -24,7 +24,7 @@ import AppStateStore from "AppStateStore" /* 1980 */;
 require = fn;
 function StatusCard(arg0) {
   ({ title, body, children } = arg0);
-  const tmp = closure_27();
+  const tmp = closure_26();
   const obj = { style: tmp.centered, children: null };
   const obj2 = { variant: "primary", style: tmp.card, children: null };
   const obj3 = { style: tmp.cardBody, children: null };
@@ -58,7 +58,7 @@ class PreviewFrame {
     items[0] = projectId;
     items[1] = visible;
     effect = closure_4.useEffect(() => () => closure_2_13(projectId), items);
-    tmp5 = closure_27();
+    tmp5 = closure_26();
     tmp6 = makeFrameId(applicationId, MAIN_SURFACE);
     closure_2 = tmp6;
     tmp7 = projectId;
@@ -102,110 +102,73 @@ class PreviewFrame {
     }
     tmp14Result = tmp7Result(tmp15);
     if (null != tmp9) {
-      tmp21 = jsxs;
-      tmp22 = View;
       obj1 = { style: null, children: null };
       obj1.style = tmp5.frame;
       tmp23 = jsx;
-      obj17 = { frameId: null, layoutMode: null };
-      obj17.frameId = tmp9.id;
+      tmp21 = jsxs;
+      tmp22 = View;
+      obj10 = { frameId: null, layoutMode: null };
+      obj10.frameId = tmp9.id;
       tmp24 = FrameLayoutModes;
-      obj17.layoutMode = FrameLayoutModes.FOCUSED;
+      obj10.layoutMode = FrameLayoutModes.FOCUSED;
       items2 = [, , ];
-      items2[0] = jsx(tmp(tmp2[21]).InlineFrameView, obj17);
+      items2[0] = jsx(tmp(tmp2[21]).InlineFrameView, obj10);
       tmp23Result = null;
       if (visible) {
         tmp23Result = null;
         if (closure_14(projectId).active) {
           tmp23Result = null;
           if (!vibegrationsControlActive) {
-            obj18 = { projectId: null };
-            obj18.projectId = projectId;
-            tmp23Result = tmp23(tmp7(tmp2[22]), obj18);
+            obj11 = { projectId: null };
+            obj11.projectId = projectId;
+            tmp23Result = tmp23(tmp7(tmp2[22]), obj11);
           }
         }
       }
       items2[1] = tmp23Result;
-      tmp21Result1 = null;
+      tmp23Result1 = null;
       if (visible) {
-        tmp21Result1 = null;
-        if (vibegrationsControlActive) {
-          tmp27 = Fragment;
-          obj19 = { style: null, pointerEvents: "box-only" };
-          obj19.style = tmp5.controlBlock;
-          items3 = [, ];
-          items3[0] = tmp23(tmp22, obj19);
-          obj20 = { style: null, pointerEvents: "box-none", accessibilityLiveRegion: "polite", children: null };
-          obj20.style = tmp5.controlOverlay;
-          obj21 = { style: null, children: null };
-          obj21.style = tmp5.controlNotice;
-          obj22 = { variant: "text-sm/medium", color: "text-default", style: null, children: null };
-          obj22.style = tmp5.controlText;
-          intl4 = tmp(tmp2[23]).intl;
-          obj22.children = intl4.string(tmp7(tmp2[24]).dIE9zO);
-          items4 = [, ];
-          items4[0] = tmp23(tmp(tmp2[15]).Text, obj22);
-          tmp21Result = null;
-          if (null != onOpenPublishedApp) {
-            obj23 = { children: null };
-            obj24 = { variant: "text-sm/normal", color: "text-muted", style: null, children: null };
-            obj24.style = tmp5.controlText;
-            intl5 = tmp(tmp2[23]).intl;
-            obj24.children = intl5.string(tmp7(tmp2[24]).SNcPbe);
-            items5 = [, ];
-            items5[0] = tmp23(tmp(tmp2[15]).Text, obj24);
-            obj25 = { variant: "secondary", size: "sm", text: null, onPress: null };
-            intl6 = tmp(tmp2[23]).intl;
-            obj25.text = intl6.string(tmp7(tmp2[24]).kj5epw);
-            obj25.onPress = onOpenPublishedApp;
-            items5[1] = tmp23(tmp(tmp2[25]).Button, obj25);
-            obj23.children = items5;
-            tmp21Result = tmp21(tmp27, obj23);
-          }
-          obj26 = { children: null };
-          items4[1] = tmp21Result;
-          obj21.children = items4;
-          obj20.children = tmp21(tmp22, obj21);
-          items3[1] = tmp23(tmp22, obj20);
-          obj26.children = items3;
-          tmp21Result1 = tmp21(tmp27, obj26);
-        }
+        obj12 = { projectId: null, active: null, onOpenPublishedApp: null };
+        obj12.projectId = projectId;
+        obj12.active = vibegrationsControlActive;
+        obj12.onOpenPublishedApp = onOpenPublishedApp;
+        tmp23Result1 = tmp23(tmp7(tmp2[23]), obj12);
       }
-      items2[2] = tmp21Result1;
+      items2[2] = tmp23Result1;
       obj1.children = items2;
-      tmp21Result2 = tmp21(tmp22, obj1);
+      tmp21Result = tmp21(tmp22, obj1);
     } else {
-      tmp29 = jsx;
+      tmp27 = jsx;
       if (first) {
         tmp20 = StatusCard;
-        obj27 = { title: null, body: null, children: null };
-        intl = tmp(tmp2[23]).intl;
-        obj27.title = intl.string(tmp7(tmp2[24]).MeLWCr);
-        intl2 = tmp(tmp2[23]).intl;
-        obj27.body = intl2.string(tmp7(tmp2[24])["1RCbQT"]);
-        obj28 = { variant: "primary", size: "sm", text: null, onPress: null };
-        intl3 = tmp(tmp2[23]).intl;
-        obj28.text = intl3.string(tmp7(tmp2[24])["42EdIV"]);
-        obj28.onPress = function onPress() {
+        obj13 = { title: null, body: null, children: null };
+        intl = tmp(tmp2[24]).intl;
+        obj13.title = intl.string(tmp7(tmp2[25]).MeLWCr);
+        intl2 = tmp(tmp2[24]).intl;
+        obj13.body = intl2.string(tmp7(tmp2[25])["1RCbQT"]);
+        obj14 = { variant: "primary", size: "sm", text: null, onPress: null };
+        intl3 = tmp(tmp2[24]).intl;
+        obj14.text = intl3.string(tmp7(tmp2[25])["42EdIV"]);
+        obj14.onPress = function onPress() {
           return closure_5(false);
         };
-        obj27.children = tmp29(tmp(tmp2[25]).Button, obj28);
-        tmp21Result2 = tmp29(StatusCard, obj27);
+        obj13.children = tmp27(tmp(tmp2[26]).Button, obj14);
+        tmp21Result = tmp27(StatusCard, obj13);
       } else {
         tmp17 = View;
-        obj29 = { style: null, children: null };
-        obj29.style = tmp5.centered;
+        obj15 = { style: null, children: null };
+        obj15.style = tmp5.centered;
         tmp18 = closure_5;
-        obj29.children = tmp29(closure_5, {});
-        tmp21Result2 = tmp29(View, obj29);
+        obj15.children = tmp27(closure_5, {});
+        tmp21Result = tmp27(View, obj15);
       }
     }
-    return tmp21Result2;
+    return tmp21Result;
   }
 }
 function PreviewWidget(applicationId) {
   applicationId = applicationId.applicationId;
-  const tmp = closure_27();
+  const tmp = closure_26();
   const items = [AuthenticationStore];
   [][0] = applicationId;
   const stateFromStores = applicationId(504).useStateFromStores(items, () => id.getId());
@@ -233,7 +196,7 @@ function PreviewBot(previewApplicationId) {
   let id1;
   let stateFromStores1;
   let stateFromStores2;
-  let tmp = closure_27();
+  let tmp = closure_26();
   const application = id(6584).useApplication(previewApplicationId.previewApplicationId);
   const data = application.data;
   id = undefined;
@@ -370,16 +333,16 @@ function PreviewBot(previewApplicationId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const vibegrationsDesignFeedbackStore = fn(16241);
+const vibegrationsDesignFeedbackStore = fn(16237);
 ({ exitVibegrationsDesignFeedback: map1, useVibegrationsDesignFeedback: closure_14 } = vibegrationsDesignFeedbackStore);
 const Constants = fn(1074);
 ({ AnalyticsObjects: closure_15, AnalyticsObjectTypes: closure_16, AnalyticsSections: closure_17, AppStates: closure_18, ME: closure_19 } = Constants);
 const FramesConstants = fn(8500);
 ({ FrameLayoutModes: closure_20, isLaunched: closure_21, MAIN_SURFACE: closure_22, makeFrameId: closure_23 } = FramesConstants);
 const jsxProd = fn(21);
-({ jsx: closure_24, jsxs: closure_25, Fragment: closure_26 } = jsxProd);
+({ jsx: closure_24, jsxs: closure_25 } = jsxProd);
 const createStyles = fn(4836);
-let obj2 = { frame: { flex: 1 }, centered: { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24 }, card: { alignSelf: "stretch" }, cardBody: null, cardCopy: null, cardText: null, widget: null, controlBlock: null, controlOverlay: null, controlNotice: null, controlText: null, dm: null };
+let obj2 = { frame: { flex: 1 }, centered: { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24 }, card: { alignSelf: "stretch" }, cardBody: null, cardCopy: null, cardText: null, widget: null, dm: null };
 let obj3 = { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24 };
 obj2.cardBody = { padding: nativeDefault.space.PX_16, alignItems: "center", gap: nativeDefault.space.PX_12 };
 let obj4 = { padding: nativeDefault.space.PX_16, alignItems: "center", gap: nativeDefault.space.PX_12 };
@@ -387,14 +350,8 @@ obj2.cardCopy = { alignItems: "center", gap: nativeDefault.space.PX_4 };
 obj2.cardText = { textAlign: "center" };
 let obj5 = { alignItems: "center", gap: nativeDefault.space.PX_4 };
 obj2.widget = { padding: nativeDefault.space.PX_16 };
-obj2.controlBlock = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 };
-const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "flex-end", padding: nativeDefault.space.PX_16 };
-obj2.controlOverlay = rect;
-let obj6 = { padding: nativeDefault.space.PX_16 };
-obj2.controlNotice = { alignItems: "center", gap: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, padding: nativeDefault.space.PX_12 };
-obj2.controlText = { textAlign: "center" };
 obj2.dm = { flex: 1 };
-const __initData5 = createStyles.createStyles(obj2);
+let dependencyMap = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/native/VibegrationsNativePreview.tsx");
 

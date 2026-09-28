@@ -1,6 +1,6 @@
-// === Module 16427: CreateThreadView ===
+// === Module 16431: CreateThreadView ===
 
-// Module 16427 (CreateThreadView)
+// Module 16431 (CreateThreadView)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1101 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
@@ -114,8 +114,8 @@ function CreateThreadViewInner(screenIndex) {
                 current(null);
                 c5 = 1;
                 if (null == parentMessageId.parentMessageId) {
-                  current(closure_0(16429).makeEmptyTitleError());
-                  const obj8 = closure_0(16429);
+                  current(closure_0(16433).makeEmptyTitleError());
+                  const obj8 = closure_0(16433);
                   closure_0(4701).dismissKeyboard();
                   tmp60.current = false;
                   c5 = 0;
@@ -138,8 +138,8 @@ function CreateThreadViewInner(screenIndex) {
                 code = body.code;
               }
               if (code === constants.AUTOMOD_TITLE_BLOCKED) {
-                current(closure_0(16429).makeAutomodViolationError(closure_130_0.body, closure_0));
-                const obj5 = closure_0(16429);
+                current(closure_0(16433).makeAutomodViolationError(closure_130_0.body, closure_0));
+                const obj5 = closure_0(16433);
                 closure_0(4701).dismissKeyboard();
                 const obj6 = closure_0(4701);
               } else {
@@ -161,8 +161,8 @@ function CreateThreadViewInner(screenIndex) {
                   tmp23 = null != name;
                 }
                 if (tmp23) {
-                  current(closure_0(16429).makeApiNameRequiredError());
-                  const obj3 = closure_0(16429);
+                  current(closure_0(16433).makeApiNameRequiredError());
+                  const obj3 = closure_0(16433);
                   closure_0(4701).dismissKeyboard();
                   const obj4 = closure_0(4701);
                 }
@@ -226,7 +226,7 @@ function CreateThreadViewInner(screenIndex) {
   const isForumLikeChannelResult = parentChannel.isForumLikeChannel();
   let obj7 = { style: tmp.expander };
   const tmp20 = null != threadSettingsDraft.parentMessageId;
-  const items6 = [closure_13(closure_6, { style: tmp.threadIconContainer, children: closure_13(require("ThreadIcon").ThreadIcon, { size: "lg" }) }), closure_13(parentChannel(16428), { ref: ref1, chatInputRef: ref, threadSettingsDraft, threadNameError: tmp6[0], optional: tmp20 }), ];
+  const items6 = [closure_13(closure_6, { style: tmp.threadIconContainer, children: closure_13(require("ThreadIcon").ThreadIcon, { size: "lg" }) }), closure_13(parentChannel(16432), { ref: ref1, chatInputRef: ref, threadSettingsDraft, threadNameError: tmp6[0], optional: tmp20 }), ];
   let tmp22Result = null;
   if (!isForumLikeChannelResult) {
     tmp22Result = null;
@@ -262,7 +262,7 @@ function CreateThreadViewInner(screenIndex) {
     const obj15 = { style: tmp.border };
     const items8 = [closure_13(closure_6, obj15), ];
     const obj16 = { channelId: parentChannel.id, messageId: threadSettingsDraft.parentMessageId };
-    items8[1] = closure_13(tmp2(16430).ThreadCreationStarterMessage, obj16);
+    items8[1] = closure_13(tmp2(16434).ThreadCreationStarterMessage, obj16);
     obj14.children = items8;
     tmp21Result = closure_14(closure_6, obj14);
   }

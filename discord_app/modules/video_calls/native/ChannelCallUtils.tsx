@@ -1,6 +1,6 @@
-// === Module 17034: ChannelCallUtils ===
+// === Module 17038: ChannelCallUtils ===
 
-// Module 17034 (ChannelCallUtils)
+// Module 17038 (ChannelCallUtils)
 import util from "util" /* 1115 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4528 */;
@@ -12,8 +12,8 @@ import _modDef8087 from "module_8087" /* 8087 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9275 */;
 import _modDef9461 from "module_9461" /* 9461 */;
 import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11085 */;
-import _modDef17035 from "module_17035" /* 17035 */;
-import _modDef17036 from "module_17036" /* 17036 */;
+import _modDef17039 from "module_17039" /* 17039 */;
+import _modDef17040 from "module_17040" /* 17040 */;
 import noop from "module_19" /* 19 */;
 import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4875 */;
 
@@ -30,7 +30,7 @@ export const voiceSettings = function voiceSettings() {
   let obj = { label: null, icon: null, onPress: null };
   const intl = util.intl;
   obj.label = intl.string(util.t.dsXapM);
-  obj.icon = _modDef17035;
+  obj.icon = _modDef17039;
   obj.onPress = function onPress() {
     require("openUserSettings").openUserSettings({ screen: constants.VOICE });
     const obj = require("openUserSettings");
@@ -56,7 +56,7 @@ export const openHideSelfStreamAndVideoConfirmDialog = function openHideSelfStre
   importDefault = arg1;
   actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(17032, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(17036, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};
@@ -86,7 +86,7 @@ export const reportStreamIssue = function reportStreamIssue(stream) {
   let obj = { label: null, icon: null, onPress: null };
   const intl = require("util").intl;
   obj.label = intl.string(require("util").t.KHGhHf);
-  obj.icon = _modDef17036;
+  obj.icon = _modDef17040;
   obj.onPress = function onPress() {
     const encodeStreamKeyResult = StreamKeyUtils.encodeStreamKey(stream);
     let videoStats = StreamRTCConnectionStore.getVideoStats(encodeStreamKeyResult);
@@ -96,8 +96,8 @@ export const reportStreamIssue = function reportStreamIssue(stream) {
     const merged = Object.assign(videoStats);
     const obj3 = { media_session_id: StreamRTCConnectionStore.getMediaSessionId(encodeStreamKeyResult), rtc_connection_id: StreamRTCConnectionStore.getRtcConnectionId(encodeStreamKeyResult), stream_region: StreamRTCConnectionStore.getRegion(encodeStreamKeyResult), max_viewers: StreamRTCConnectionStore.getMaxViewers(encodeStreamKeyResult) };
     const obj5 = ActionSheetActionCreatorsDefault;
-    obj5.openLazy(asyncRequireImpl(17037, dependencyMap.paths), "StreamReportProblem" + stream.ownerId, { stream, analyticsData: obj3 });
-    const tmp6 = asyncRequireImpl(17037, dependencyMap.paths);
+    obj5.openLazy(asyncRequireImpl(17041, dependencyMap.paths), "StreamReportProblem" + stream.ownerId, { stream, analyticsData: obj3 });
+    const tmp6 = asyncRequireImpl(17041, dependencyMap.paths);
   };
   return obj;
 };

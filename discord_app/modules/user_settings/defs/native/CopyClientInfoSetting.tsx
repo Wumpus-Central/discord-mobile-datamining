@@ -1,6 +1,6 @@
-// === Module 15112: CopyClientInfoSetting ===
+// === Module 15110: CopyClientInfoSetting ===
 
-// Module 15112 (CopyClientInfoSetting)
+// Module 15110 (CopyClientInfoSetting)
 import util from "util" /* 1115 */;
 import ToastUtils from "ToastUtils" /* 4527 */;
 import CopyIcon from "CopyIcon" /* 4779 */;

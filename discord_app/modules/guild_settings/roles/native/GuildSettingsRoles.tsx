@@ -1,6 +1,6 @@
-// === Module 17399: GuildSettingsRoles ===
+// === Module 17403: GuildSettingsRoles ===
 
-// Module 17399 (GuildSettingsRoles)
+// Module 17403 (GuildSettingsRoles)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
@@ -18,17 +18,17 @@ import useIsWindowLargeDefault from "useIsWindowLarge" /* 6364 */;
 import GuildRoleMemberActionCreatorsAll from "GuildRoleMemberActionCreators" /* 6550 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9048 */;
 import ArrowsUpDownIcon from "ArrowsUpDownIcon" /* 11633 */;
-import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 15778 */;
-import SortableListViewDefault from "SortableListView" /* 16018 */;
-import GuildSettingsRolesManager from "GuildSettingsRolesManager" /* 17402 */;
-import GuildSettingsRoleCreateModalActionCreatorsDefault from "GuildSettingsRoleCreateModalActionCreators" /* 17403 */;
-import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 17410 */;
-import actions_GuildActionCreators from "actions/GuildActionCreators" /* 17412 */;
-import GuildSettingsModalRolesActionCreatorsDefault from "GuildSettingsModalRolesActionCreators" /* 17413 */;
-import _modDef17415 from "module_17415" /* 17415 */;
-import _modDef17416 from "module_17416" /* 17416 */;
-import _modDef17417 from "module_17417" /* 17417 */;
-import GuildSettingsRoleItemDefault from "GuildSettingsRoleItem" /* 17418 */;
+import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 15776 */;
+import SortableListViewDefault from "SortableListView" /* 16014 */;
+import GuildSettingsRolesManager from "GuildSettingsRolesManager" /* 17406 */;
+import GuildSettingsRoleCreateModalActionCreatorsDefault from "GuildSettingsRoleCreateModalActionCreators" /* 17407 */;
+import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 17414 */;
+import actions_GuildActionCreators from "actions/GuildActionCreators" /* 17416 */;
+import GuildSettingsModalRolesActionCreatorsDefault from "GuildSettingsModalRolesActionCreators" /* 17417 */;
+import _modDef17419 from "module_17419" /* 17419 */;
+import _modDef17420 from "module_17420" /* 17420 */;
+import _modDef17421 from "module_17421" /* 17421 */;
+import GuildSettingsRoleItemDefault from "GuildSettingsRoleItem" /* 17422 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
@@ -38,14 +38,14 @@ import GuildRoleStore from "GuildRoleStore" /* 2102 */;
 import GuildStore from "GuildStore" /* 2067 */;
 import PermissionStore from "PermissionStore" /* 4469 */;
 import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 6549 */;
-import GuildSettingsModalRolesStore from "GuildSettingsModalRolesStore" /* 17400 */;
+import GuildSettingsModalRolesStore from "GuildSettingsModalRolesStore" /* 17404 */;
 import TextStyles from "TextStyles" /* 5836 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, StyleSheet } = get_ActivityIndicator);
 const isEveryoneRole = fn(2103).isEveryoneRole;
-let closure_16 = fn(17401).GuildSettingsRoleEditSections;
+let closure_16 = fn(17405).GuildSettingsRoleEditSections;
 const Constants = fn(1074);
 ({ GuildSettingsSections: closure_17, AnalyticEvents: closure_18, AnalyticsSections: closure_19, Permissions: closure_20, Fonts } = Constants);
 const jsxProd = fn(21);
@@ -152,7 +152,7 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
   highestRole = stateFromStoresObject.highestRole;
   closure_129_0 = ref;
   let obj4 = guildId(504);
-  const guildSettingsRolesManagerState = guildId(17402).useGuildSettingsRolesManagerState((roleJustCreated) => roleJustCreated.roleJustCreated);
+  const guildSettingsRolesManagerState = guildId(17406).useGuildSettingsRolesManagerState((roleJustCreated) => roleJustCreated.roleJustCreated);
   closure_129_1 = guildSettingsRolesManagerState;
   let items2 = [ref, guildSettingsRolesManagerState];
   const layoutEffect = guild.useLayoutEffect(() => {
@@ -178,7 +178,7 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
     }
   }, items2);
   closure_130_0 = guildId;
-  let obj5 = guildId(17402);
+  let obj5 = guildId(17406);
   let items3 = [highestRole, sorting];
   const stateFromStoresObject1 = guildId(504).useStateFromStoresObject(items3, () => {
     guild = GuildStore.getGuild(guildId);
@@ -401,16 +401,16 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
     let tmp4 = dependencyMap;
     if (closure_3) {
       if (isThemeDarkResult) {
-        tmp4 = 17414;
+        tmp4 = 17418;
         let tmp3Result = importDefault(tmp4);
       } else {
-        tmp3Result = _modDef17415;
+        tmp3Result = _modDef17419;
       }
     } else {
       if (isThemeDarkResult) {
-        let tmp3Result2 = _modDef17416;
+        let tmp3Result2 = _modDef17420;
       } else {
-        tmp3Result2 = _modDef17417;
+        tmp3Result2 = _modDef17421;
       }
       if (hasRoles) {
         const items = [closure_1.subheaderContainer, ];
@@ -537,7 +537,7 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
         };
       }
       obj2.onMoveDown = fn2;
-      return hasRoles(closure_1(17418), obj2, role.id);
+      return hasRoles(closure_1(17422), obj2, role.id);
     }
   }, items19);
   const items20 = [callback2, callback6, callback5, hasRoles, sorting, navigation];

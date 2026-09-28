@@ -1,6 +1,6 @@
-// === Module 15332: DevToolsDisplayNameEffectsBenchmarkScreen ===
+// === Module 15330: DevToolsDisplayNameEffectsBenchmarkScreen ===
 
-// Module 15332 (DevToolsDisplayNameEffectsBenchmarkScreen)
+// Module 15330 (DevToolsDisplayNameEffectsBenchmarkScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef2877 from "module_2877" /* 2877 */;

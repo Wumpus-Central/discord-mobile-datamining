@@ -1,7 +1,7 @@
-// === Module 13213: PrivateChannelHidingExperiment ===
+// === Module 13212: PrivateChannelHidingExperiment ===
 
-// Module 13213 (PrivateChannelHidingExperiment)
-import PrivateChannelHidingExperimentCache from "PrivateChannelHidingExperimentCache" /* 13214 */;
+// Module 13212 (PrivateChannelHidingExperiment)
+import PrivateChannelHidingExperimentCache from "PrivateChannelHidingExperimentCache" /* 13213 */;
 import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 

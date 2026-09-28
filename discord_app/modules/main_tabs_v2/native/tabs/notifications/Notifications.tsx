@@ -1,6 +1,6 @@
-// === Module 16042: notifications/Notifications ===
+// === Module 16038: notifications/Notifications ===
 
-// Module 16042 (notifications/Notifications)
+// Module 16038 (notifications/Notifications)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
 import native from "native" /* 4540 */;
@@ -13,12 +13,12 @@ import LayerScope from "LayerScope" /* 6577 */;
 import useAnalyticsLocations from "useAnalyticsLocations" /* 6583 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6603 */;
 import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11375 */;
-import TabsPerformanceTracker from "TabsPerformanceTracker" /* 15649 */;
-import useForLaterCoachmarkDefault from "useForLaterCoachmark" /* 16043 */;
-import ForLaterOpenActionButtonDefault from "ForLaterOpenActionButton" /* 16045 */;
-import NotificationCenterActionButtonDefault from "NotificationCenterActionButton" /* 16047 */;
-import NotificationCenterPermissionNudgeDefault from "NotificationCenterPermissionNudge" /* 16051 */;
-import NotificationCenterForYou from "NotificationCenterForYou" /* 16052 */;
+import TabsPerformanceTracker from "TabsPerformanceTracker" /* 15647 */;
+import useForLaterCoachmarkDefault from "useForLaterCoachmark" /* 16039 */;
+import ForLaterOpenActionButtonDefault from "ForLaterOpenActionButton" /* 16041 */;
+import NotificationCenterActionButtonDefault from "NotificationCenterActionButton" /* 16043 */;
+import NotificationCenterPermissionNudgeDefault from "NotificationCenterPermissionNudge" /* 16047 */;
+import NotificationCenterForYou from "NotificationCenterForYou" /* 16048 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -166,7 +166,7 @@ let closure_12 = noop.memo(function HeaderInner(nestedInLaunchPad) {
     const intl = tmp5(1115).intl;
     obj4.accessibilityLabel = intl.string(tmp5(1115).t["13/7kX"]);
     obj4.onPress = goBack;
-    obj4.children = closure_7(tmp5(16044).LeftBackIconWithBadge, {});
+    obj4.children = closure_7(tmp5(16040).LeftBackIconWithBadge, {});
     const items1 = [closure_7(tmp5(5435).PressableOpacity, obj4), , ];
     const obj5 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", style: tmp.headerText, maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
     const intl2 = tmp5(1115).intl;

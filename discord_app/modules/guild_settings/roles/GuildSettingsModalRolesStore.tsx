@@ -1,6 +1,6 @@
-// === Module 17400: GuildSettingsModalRolesStore ===
+// === Module 17404: GuildSettingsModalRolesStore ===
 
-// Module 17400 (GuildSettingsModalRolesStore)
+// Module 17404 (GuildSettingsModalRolesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;

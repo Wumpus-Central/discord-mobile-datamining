@@ -1,14 +1,14 @@
-// === Module 14187: EditProfileEffectSection ===
+// === Module 14186: EditProfileEffectSection ===
 
-// Module 14187 (EditProfileEffectSection)
+// Module 14186 (EditProfileEffectSection)
 import FastImageDefault from "FastImage" /* 5899 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6603 */;
 import useProfileEffectDefault from "useProfileEffect" /* 7672 */;
 import ProfileEffectDefault from "ProfileEffect" /* 8264 */;
 import _modDef8286 from "module_8286" /* 8286 */;
-import useCollectibleListLayout from "useCollectibleListLayout" /* 12744 */;
-import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 12745 */;
-import useProfileEffectSections from "useProfileEffectSections" /* 14186 */;
+import useCollectibleListLayout from "useCollectibleListLayout" /* 12743 */;
+import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 12744 */;
+import useProfileEffectSections from "useProfileEffectSections" /* 14185 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,9 +17,9 @@ const isProfileEffectRecord = fn(6968).isProfileEffectRecord;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4836);
-let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(12744).GUTTER_SIZE }, rowSpacer: null, profileEffect: null, sampleProfile: null };
-let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(12744).GUTTER_SIZE };
-obj.rowSpacer = { height: fn(12744).GUTTER_SIZE };
+let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(12743).GUTTER_SIZE }, rowSpacer: null, profileEffect: null, sampleProfile: null };
+let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(12743).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(12743).GUTTER_SIZE };
 obj.profileEffect = { overflow: "hidden", width: "100%", height: "100%" };
 obj.sampleProfile = { aspectRatio: fn(8261).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 let closure_9 = createStyles.createStyles(obj);

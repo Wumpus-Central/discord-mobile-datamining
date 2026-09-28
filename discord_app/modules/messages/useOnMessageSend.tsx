@@ -1,6 +1,6 @@
-// === Module 16577: useOnMessageSend ===
+// === Module 16581: useOnMessageSend ===
 
-// Module 16577 (useOnMessageSend)
+// Module 16581 (useOnMessageSend)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import noop from "module_19" /* 19 */;
 

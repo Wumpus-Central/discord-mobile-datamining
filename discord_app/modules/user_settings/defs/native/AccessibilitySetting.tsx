@@ -1,6 +1,6 @@
-// === Module 14875: AccessibilitySetting ===
+// === Module 14873: AccessibilitySetting ===
 
-// Module 14875 (AccessibilitySetting)
+// Module 14873 (AccessibilitySetting)
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 6806 */;
@@ -18,7 +18,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.G0neg7);
   },
   parent: null,
-  IconComponent: fn(14876).AccessibilityIcon,
+  IconComponent: fn(14874).AccessibilityIcon,
   useTrailing() {
     [tmp4, r10012] = useSelectedDismissibleContent.useSelectedDismissibleContent(items);
     let tmp5 = null;

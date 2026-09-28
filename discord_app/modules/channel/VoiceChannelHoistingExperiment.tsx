@@ -1,6 +1,6 @@
-// === Module 17114: VoiceChannelHoistingExperiment ===
+// === Module 17118: VoiceChannelHoistingExperiment ===
 
-// Module 17114 (VoiceChannelHoistingExperiment)
+// Module 17118 (VoiceChannelHoistingExperiment)
 import ExperimentConstants from "ExperimentConstants" /* 4751 */;
 import createExperiment from "module_4748" /* 4748 */;
 import size from "module_2" /* 2 */;

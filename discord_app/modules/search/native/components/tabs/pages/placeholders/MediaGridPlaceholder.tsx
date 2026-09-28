@@ -1,14 +1,14 @@
-// === Module 16459: MediaGridPlaceholder ===
+// === Module 16463: MediaGridPlaceholder ===
 
-// Module 16459 (MediaGridPlaceholder)
+// Module 16463 (MediaGridPlaceholder)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4566 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import SearchPlatformUtils from "SearchPlatformUtils" /* 11821 */;
-import usePlaceholderStyles from "usePlaceholderStyles" /* 16458 */;
-import GridItemPlaceholderDefault from "GridItemPlaceholder" /* 16460 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 16462 */;
+import GridItemPlaceholderDefault from "GridItemPlaceholder" /* 16464 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

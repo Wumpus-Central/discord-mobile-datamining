@@ -1,6 +1,6 @@
-// === Module 15078: AppIcon ===
+// === Module 15076: AppIcon ===
 
-// Module 15078 (AppIcon)
+// Module 15076 (AppIcon)
 import nativeDefault from "native" /* 576 */;
 import useThemeDefault from "useTheme" /* 4767 */;
 import noop from "module_19" /* 19 */;

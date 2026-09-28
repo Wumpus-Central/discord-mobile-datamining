@@ -1,6 +1,6 @@
-// === Module 13328: JoinVoiceChannelButton ===
+// === Module 13327: JoinVoiceChannelButton ===
 
-// Module 13328 (JoinVoiceChannelButton)
+// Module 13327 (JoinVoiceChannelButton)
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1876 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5723 */;
 import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 9394 */;

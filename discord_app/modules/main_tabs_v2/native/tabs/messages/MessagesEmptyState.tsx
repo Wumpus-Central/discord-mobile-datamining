@@ -1,6 +1,6 @@
-// === Module 15688: MessagesEmptyState ===
+// === Module 15686: MessagesEmptyState ===
 
-// Module 15688 (MessagesEmptyState)
+// Module 15686 (MessagesEmptyState)
 import util from "util" /* 1115 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1479 */;
@@ -10,7 +10,7 @@ import components_Button_Button from "components/Button/Button" /* 5281 */;
 import useIsScreenLandscape from "useIsScreenLandscape" /* 5438 */;
 import useTrackImpressionDefault from "useTrackImpression" /* 8230 */;
 import useYouBarTotalHeight from "useYouBarTotalHeight" /* 14629 */;
-import _modDef15689 from "module_15689" /* 15689 */;
+import _modDef15687 from "module_15687" /* 15687 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -60,7 +60,7 @@ export default function MessagesEmptyState() {
   const obj5 = { style: tmp.container, onLayout: callback, children: null };
   const obj6 = { style: tmp.innerContainer, children: null };
   const obj7 = { style: tmp.imageContainer, children: null };
-  const obj8 = { resizeMode: "contain", source: _modDef15689, style: null };
+  const obj8 = { resizeMode: "contain", source: _modDef15687, style: null };
   let num = 350;
   if (result < 622) {
     num = result / 622 * 350;

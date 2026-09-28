@@ -1,8 +1,8 @@
-// === Module 16705: MessageRequestEmpty ===
+// === Module 16709: MessageRequestEmpty ===
 
-// Module 16705 (MessageRequestEmpty)
+// Module 16709 (MessageRequestEmpty)
 import native from "native" /* 1177 */;
-import Pending from "Pending" /* 16706 */;
+import Pending from "Pending" /* 16710 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

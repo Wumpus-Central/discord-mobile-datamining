@@ -1,6 +1,6 @@
-// === Module 12742: useAvatarDecorationSections ===
+// === Module 12741: useAvatarDecorationSections ===
 
-// Module 12742 (useAvatarDecorationSections)
+// Module 12741 (useAvatarDecorationSections)
 import util from "util" /* 1115 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 6974 */;
 import _slicedToArray from "module_32" /* 32 */;

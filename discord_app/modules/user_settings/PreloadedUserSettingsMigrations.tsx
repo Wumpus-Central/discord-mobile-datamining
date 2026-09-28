@@ -1,6 +1,6 @@
-// === Module 14017: PreloadedUserSettingsMigrations ===
+// === Module 14016: PreloadedUserSettingsMigrations ===
 
-// Module 14017 (PreloadedUserSettingsMigrations)
+// Module 14016 (PreloadedUserSettingsMigrations)
 import initializeDefault from "initialize" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
@@ -676,6 +676,38 @@ let items = [
         flag = true;
       }
       return flag;
+    },
+    cleanup() {
+
+    }
+  },
+  {
+    version: 22,
+    run(textAndImages) {
+      const Storage = Storage4.Storage;
+      value = Storage.get("UnsyncedUserSettingsStore");
+      let prop;
+      if (value != null) {
+        const _state = value._state;
+        if (_state != null) {
+          prop = _state.displayCompactAvatars;
+        }
+      }
+      let tmp5 = true === prop;
+      if (tmp5) {
+        if (textAndImages.textAndImages == null) {
+          const TextAndImagesSettings = preloaded_user_settings.TextAndImagesSettings;
+          textAndImages.textAndImages = TextAndImagesSettings.create();
+        }
+        let flag = null == textAndImages.textAndImages.displayCompactAvatars;
+        if (flag) {
+          const BoolValue = wrappers.BoolValue;
+          textAndImages.textAndImages.displayCompactAvatars = BoolValue.create({ value: true });
+          flag = true;
+        }
+        tmp5 = flag;
+      }
+      return tmp5;
     },
     cleanup() {
 

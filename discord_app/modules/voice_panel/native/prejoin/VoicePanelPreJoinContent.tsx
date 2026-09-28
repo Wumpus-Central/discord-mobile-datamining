@@ -1,6 +1,6 @@
-// === Module 16980: VoicePanelPreJoinContent ===
+// === Module 16984: VoicePanelPreJoinContent ===
 
-// Module 16980 (VoicePanelPreJoinContent)
+// Module 16984 (VoicePanelPreJoinContent)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
@@ -24,7 +24,7 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
 import GameConsoleStore from "GameConsoleStore" /* 4853 */;
-import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore" /* 13277 */;
+import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore" /* 13276 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4858 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
@@ -451,7 +451,7 @@ const MODE_CHANGE_PHYSICS = fn(11755).MODE_CHANGE_PHYSICS;
 const EDGE_GUTTER = fn(11758).EDGE_GUTTER;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_20, AnalyticsSections: closure_21, Permissions: closure_22 } = Constants);
-const constants4 = fn(13282).VoiceChannelWarningSurfaces;
+const constants4 = fn(13281).VoiceChannelWarningSurfaces;
 const Features = fn(4861).Features;
 const jsxProd = fn(21);
 ({ jsx: closure_25, jsxs: closure_26, Fragment: closure_27 } = jsxProd);
@@ -647,7 +647,7 @@ export default noop.memo(function VoicePanelPreJoinWrapper() {
   const context = noop.useContext(guildId(11754));
   const channelId = context.channelId;
   guildId = context.guildId;
-  const tmp2 = guildId(16857)(channelId);
+  const tmp2 = guildId(16861)(channelId);
   dependencyMap = tmp2;
   let items = [SortedVoiceStateStore, VoiceChannelBlockedUserStore, EmbeddedActivitiesStore, MediaEngineStore, ApplicationStreamingStore];
   let items1 = [tmp2, channelId, guildId];
@@ -687,6 +687,6 @@ export default noop.memo(function VoicePanelPreJoinWrapper() {
       };
       return obj;
     }
-  }, items1, channelId(16983).areVoicePanelPreJoinContentPropsEqual);
+  }, items1, channelId(16987).areVoicePanelPreJoinContentPropsEqual);
   return closure_25(channelId(4540).TransitionItem, { item: stateFromStores, renderItem });
 });

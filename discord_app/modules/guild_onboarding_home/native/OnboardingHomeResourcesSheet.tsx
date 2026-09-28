@@ -1,14 +1,14 @@
-// === Module 16215: OnboardingHomeResourcesSheet ===
+// === Module 16211: OnboardingHomeResourcesSheet ===
 
-// Module 16215 (OnboardingHomeResourcesSheet)
+// Module 16211 (OnboardingHomeResourcesSheet)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
 import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 11767 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 16214 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 16210 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_3 = fn(16213).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
+let closure_3 = fn(16209).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
 const jsx = fn(21).jsx;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/native/OnboardingHomeResourcesSheet.tsx");

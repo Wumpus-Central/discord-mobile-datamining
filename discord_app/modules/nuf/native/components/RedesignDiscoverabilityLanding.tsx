@@ -1,6 +1,6 @@
-// === Module 17218: RedesignDiscoverabilityLanding ===
+// === Module 17222: RedesignDiscoverabilityLanding ===
 
-// Module 17218 (RedesignDiscoverabilityLanding)
+// Module 17222 (RedesignDiscoverabilityLanding)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;

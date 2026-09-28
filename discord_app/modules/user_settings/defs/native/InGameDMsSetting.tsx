@@ -1,6 +1,6 @@
-// === Module 15508: InGameDMsSetting ===
+// === Module 15506: InGameDMsSetting ===
 
-// Module 15508 (InGameDMsSetting)
+// Module 15506 (InGameDMsSetting)
 import util from "util" /* 1115 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
 import UserSettings from "UserSettings" /* 2021 */;

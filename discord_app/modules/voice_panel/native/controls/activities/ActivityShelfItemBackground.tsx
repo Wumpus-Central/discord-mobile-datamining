@@ -1,6 +1,6 @@
-// === Module 16967: ActivityShelfItemBackground ===
+// === Module 16971: ActivityShelfItemBackground ===
 
-// Module 16967 (ActivityShelfItemBackground)
+// Module 16971 (ActivityShelfItemBackground)
 import NativeViewDefault from "NativeView" /* 5901 */;
 import BrokenImageDefault from "BrokenImage" /* 11567 */;
 import _slicedToArray from "module_32" /* 32 */;

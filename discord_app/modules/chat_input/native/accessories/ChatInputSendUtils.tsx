@@ -331,8 +331,7 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
             let intl2 = util.intl;
             obj3.confirmText = intl2.string(util.t.KJnHq3);
             obj3.onConfirm = function onConfirm() {
-              const obj = { text, parsedMessage, tts: "paddingHorizontal", source: 1359020034, params };
-              chatInputSendMessage(obj);
+              chatInputSendMessage({ text, parsedMessage, tts: "paddingHorizontal", source: null, params });
             };
             let intl3 = util.intl;
             obj3.cancelText = intl3.string(util.t.fsBWmS);
@@ -347,7 +346,8 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
               threadId: channel.id,
               attachments: uploads,
               sendMessage() {
-                          chatInputSendMessage({ text, parsedMessage, tts: "paddingHorizontal", source: null, params });
+                          const obj = { text, parsedMessage, tts: "paddingHorizontal", source: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001956731347274897, params };
+                          chatInputSendMessage(obj);
                         }
             };
             params(4800).openLazy(tmp19(1981)(11480, tmp20.paths), "add-media-to-original-forum-post", obj5);
@@ -357,7 +357,7 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
           tmp19 = require;
           tmp20 = dependencyMap;
         }
-        const obj7 = { text, parsedMessage: tmp2, tts: "paddingHorizontal", source: "Array", params };
+        const obj7 = { text, parsedMessage: tmp2, tts: "paddingHorizontal", source: "<string:1090584577>", params };
         chatInputSendMessage(obj7);
       }
     }

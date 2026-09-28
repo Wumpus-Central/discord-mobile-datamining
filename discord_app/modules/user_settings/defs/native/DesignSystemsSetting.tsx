@@ -1,9 +1,9 @@
-// === Module 15356: DesignSystemsSetting ===
+// === Module 15354: DesignSystemsSetting ===
 
-// Module 15356 (DesignSystemsSetting)
+// Module 15354 (DesignSystemsSetting)
 import Constants from "Constants" /* 1074 */;
-import PaintPaletteIcon from "PaintPaletteIcon" /* 14809 */;
-import useDesignSystemsSettingPredicate from "useDesignSystemsSettingPredicate" /* 15357 */;
+import PaintPaletteIcon from "PaintPaletteIcon" /* 14807 */;
+import useDesignSystemsSettingPredicate from "useDesignSystemsSettingPredicate" /* 15355 */;
 import SettingBuilders from "SettingBuilders" /* 11006 */;
 import size from "module_2" /* 2 */;
 

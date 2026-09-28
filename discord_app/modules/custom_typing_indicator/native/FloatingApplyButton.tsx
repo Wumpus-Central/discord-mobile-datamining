@@ -1,6 +1,6 @@
-// === Module 14956: FloatingApplyButton ===
+// === Module 14954: FloatingApplyButton ===
 
-// Module 14956 (FloatingApplyButton)
+// Module 14954 (FloatingApplyButton)
 import nativeDefault from "native" /* 576 */;
 import HapticUtils from "HapticUtils" /* 4801 */;
 import spring from "spring" /* 5280 */;

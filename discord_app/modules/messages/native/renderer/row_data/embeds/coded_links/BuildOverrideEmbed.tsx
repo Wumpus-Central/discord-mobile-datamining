@@ -1,6 +1,6 @@
-// === Module 12794: BuildOverrideEmbed ===
+// === Module 12793: BuildOverrideEmbed ===
 
-// Module 12794 (BuildOverrideEmbed)
+// Module 12793 (BuildOverrideEmbed)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -12,8 +12,8 @@ import BuildOverrideStore2 from "BuildOverrideStore" /* 10969 */;
 import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11267 */;
 import _modDef11286 from "module_11286" /* 11286 */;
 import _modDef11287 from "module_11287" /* 11287 */;
-import _modDef12793 from "module_12793" /* 12793 */;
-import validateBuildOverrideDefault from "validateBuildOverride" /* 12795 */;
+import _modDef12792 from "module_12792" /* 12792 */;
+import validateBuildOverrideDefault from "validateBuildOverride" /* 12794 */;
 import size from "module_2" /* 2 */;
 
 const BuildOverrideStore = BuildOverrideStore2;
@@ -90,7 +90,7 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
               obj3.titleColor = colors.titleColor;
               obj3.subtitle = id;
               obj3.subtitleColor = colors.subtitleColor;
-              obj3.thumbnailUrl = Image.resolveAssetSource(_modDef12793).uri;
+              obj3.thumbnailUrl = Image.resolveAssetSource(_modDef12792).uri;
               let str2 = "primary";
               if (tmp10) {
                 str2 = "destructive";

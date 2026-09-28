@@ -1,12 +1,12 @@
-// === Module 15873: DMChannel ===
+// === Module 15871: DMChannel ===
 
-// Module 15873 (DMChannel)
+// Module 15871 (DMChannel)
 import nativeDefault from "native" /* 576 */;
 import transitionToChannel from "transitionToChannel" /* 4847 */;
 import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9060 */;
 import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10374 */;
-import useCallA11yStateDefault from "useCallA11yState" /* 15667 */;
-import ChannelItemDefault from "ChannelItem" /* 15750 */;
+import useCallA11yStateDefault from "useCallA11yState" /* 15665 */;
+import ChannelItemDefault from "ChannelItem" /* 15748 */;
 import noop from "module_19" /* 19 */;
 import ReadStateStore from "ReadStateStore" /* 4851 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5017 */;

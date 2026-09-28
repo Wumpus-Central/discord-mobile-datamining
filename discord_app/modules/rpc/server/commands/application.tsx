@@ -1,6 +1,6 @@
-// === Module 14029: application ===
+// === Module 14028: application ===
 
-// Module 14029 (application)
+// Module 14028 (application)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import TestModeUtils from "TestModeUtils" /* 8319 */;
@@ -9,7 +9,7 @@ import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 8755 */;
 import RPCErrorDefault from "RPCError" /* 8770 */;
 import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8773 */;
 import RPCHelpers from "RPCHelpers" /* 8775 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14030 */;
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14029 */;
 import ApplicationStore from "ApplicationStore" /* 5063 */;
 
 require = fn;
@@ -74,8 +74,8 @@ export default {
       const id = socket.socket.application.id;
       if (null == id) {
         const obj = { errorCode: constants2.INVALID_COMMAND };
-        const tmp7 = new RPCErrorDefault(obj, "No application.");
-        throw tmp7;
+        const tmp10 = new RPCErrorDefault(obj, "No application.");
+        throw tmp10;
       } else {
         const HTTP = HTTPUtils.HTTP;
         const request = { url: hasOwnProperty.APPLICATION_TICKET(id), body: null, retries: 3, oldFormErrors: true, rejectWithError: false };

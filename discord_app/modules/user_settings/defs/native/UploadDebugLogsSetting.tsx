@@ -1,6 +1,6 @@
-// === Module 15091: UploadDebugLogsSetting ===
+// === Module 15089: UploadDebugLogsSetting ===
 
-// Module 15091 (UploadDebugLogsSetting)
+// Module 15089 (UploadDebugLogsSetting)
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import DebugUploadManager from "DebugUploadManager" /* 9648 */;

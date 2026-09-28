@@ -2,7 +2,7 @@
 
 // Module 14527 (PremiumPlanSelectSettingScreen)
 import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6415 */;
-import PremiumPlanSelectDefault from "PremiumPlanSelect" /* 13082 */;
+import PremiumPlanSelectDefault from "PremiumPlanSelect" /* 13081 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

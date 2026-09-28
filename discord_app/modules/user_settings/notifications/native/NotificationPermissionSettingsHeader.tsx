@@ -1,6 +1,6 @@
-// === Module 15037: NotificationPermissionSettingsHeader ===
+// === Module 15035: NotificationPermissionSettingsHeader ===
 
-// Module 15037 (NotificationPermissionSettingsHeader)
+// Module 15035 (NotificationPermissionSettingsHeader)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import noop from "module_19" /* 19 */;

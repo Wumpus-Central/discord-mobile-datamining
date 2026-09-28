@@ -1,6 +1,6 @@
-// === Module 15470: useSecureFramesUserVerifiedKeys ===
+// === Module 15468: useSecureFramesUserVerifiedKeys ===
 
-// Module 15470 (useSecureFramesUserVerifiedKeys)
+// Module 15468 (useSecureFramesUserVerifiedKeys)
 import _modDef12 from "module_12" /* 12 */;
 import VerifiedKeyStore from "VerifiedKeyStore" /* 9147 */;
 

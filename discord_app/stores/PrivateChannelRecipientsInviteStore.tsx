@@ -1,6 +1,6 @@
-// === Module 13299: PrivateChannelRecipientsInviteStore ===
+// === Module 13298: PrivateChannelRecipientsInviteStore ===
 
-// Module 13299 (PrivateChannelRecipientsInviteStore)
+// Module 13298 (PrivateChannelRecipientsInviteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import StringUtils from "StringUtils" /* 2011 */;

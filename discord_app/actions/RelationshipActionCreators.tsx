@@ -259,11 +259,11 @@ let obj2 = {
       AccessibilityAnnouncer.announce(intl.string(userId(1115).t.n6Jo3E));
     });
   },
-  unignoreUser(id, newestAnalyticsLocation, id2) {
+  unignoreUser(id, UserProfileRemediatedNotice, channelId) {
     const _require = id;
     const HTTP = require("HTTPUtils").HTTP;
-    obj = { url: closure_6.IGNORE_USER(id), context: { location: newestAnalyticsLocation }, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
-    obj2 = { location: newestAnalyticsLocation };
+    obj = { url: closure_6.IGNORE_USER(id), context: { location: UserProfileRemediatedNotice }, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
+    obj2 = { location: UserProfileRemediatedNotice };
     const obj3 = require("HTTPUtils");
     const delResult = HTTP.del(obj);
     return HTTP.del(obj).then(() => {
@@ -272,7 +272,7 @@ let obj2 = {
       const intl = util.intl;
       AccessibilityAnnouncer.announce(intl.string(util.t.QlH5w6));
     }).catch(() => {
-      id2(7852).showFailedToast();
+      channelId(7852).showFailedToast();
       const AccessibilityAnnouncer = id(4685).AccessibilityAnnouncer;
       const intl = id(1115).intl;
       AccessibilityAnnouncer.announce(intl.string(id(1115).t.n6Jo3E));

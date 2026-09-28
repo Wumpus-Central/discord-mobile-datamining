@@ -1,6 +1,6 @@
-// === Module 12970: PromotionStringUtils ===
+// === Module 12969: PromotionStringUtils ===
 
-// Module 12970 (PromotionStringUtils)
+// Module 12969 (PromotionStringUtils)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2111 */;

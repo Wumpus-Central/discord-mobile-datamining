@@ -1,6 +1,6 @@
-// === Module 15318: TextDisplayComponent ===
+// === Module 15316: TextDisplayComponent ===
 
-// Module 15318 (TextDisplayComponent)
+// Module 15316 (TextDisplayComponent)
 import MarkupUtilsDefault from "MarkupUtils" /* 4823 */;
 import renderMessageMarkup from "renderMessageMarkup" /* 7313 */;
 import handleMessagesTapLink from "handleMessagesTapLink" /* 11111 */;

@@ -1,6 +1,6 @@
-// === Module 13521: GuildProgressOverview ===
+// === Module 13520: GuildProgressOverview ===
 
-// Module 13521 (GuildProgressOverview)
+// Module 13520 (GuildProgressOverview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
@@ -10,7 +10,7 @@ import showSimpleActionSheet from "showSimpleActionSheet" /* 6615 */;
 import _modDef9396 from "module_9396" /* 9396 */;
 import GuildProgressUtils from "GuildProgressUtils" /* 11967 */;
 import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 11970 */;
-import GuildProgressBarDefault from "GuildProgressBar" /* 13522 */;
+import GuildProgressBarDefault from "GuildProgressBar" /* 13521 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

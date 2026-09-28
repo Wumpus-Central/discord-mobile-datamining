@@ -1,6 +1,6 @@
-// === Module 17261: ThreadManager ===
+// === Module 17265: ThreadManager ===
 
-// Module 17261 (ThreadManager)
+// Module 17265 (ThreadManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ForumActionCreatorsDefault from "ForumActionCreators" /* 7324 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

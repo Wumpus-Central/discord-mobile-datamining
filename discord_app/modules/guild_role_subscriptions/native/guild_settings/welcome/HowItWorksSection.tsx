@@ -1,14 +1,14 @@
-// === Module 17518: HowItWorksSection ===
+// === Module 17522: HowItWorksSection ===
 
-// Module 17518 (HowItWorksSection)
+// Module 17522 (HowItWorksSection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import FastImageDefault from "FastImage" /* 5899 */;
-import _modDef17519 from "module_17519" /* 17519 */;
-import _modDef17520 from "module_17520" /* 17520 */;
-import _modDef17521 from "module_17521" /* 17521 */;
+import _modDef17523 from "module_17523" /* 17523 */;
+import _modDef17524 from "module_17524" /* 17524 */;
+import _modDef17525 from "module_17525" /* 17525 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -44,19 +44,19 @@ export default function HowItWorksSection() {
   const obj3 = { cardNumber: 1, description: null, iconSource: null };
   const intl = util.intl;
   obj3.description = intl.string(util.t.lT0ZNS);
-  obj3.iconSource = _modDef17519;
+  obj3.iconSource = _modDef17523;
   const items = [React4(HowItWorksCard, obj3), React4(native.Spacer, { size: 12 }), ];
   const obj4 = { cardNumber: 2, description: null, iconSource: null };
   const intl2 = util.intl;
   obj4.description = intl2.string(util.t.ihN2Wb);
-  obj4.iconSource = _modDef17520;
+  obj4.iconSource = _modDef17524;
   items[2] = React4(HowItWorksCard, obj4);
   obj2.children = items;
   const items1 = [hasOwnProperty(View, obj2), ];
   const obj5 = { cardNumber: 3, description: null, iconSource: null };
   const intl3 = util.intl;
   obj5.description = intl3.string(util.t.c8krDQ);
-  obj5.iconSource = _modDef17521;
+  obj5.iconSource = _modDef17525;
   items1[1] = React4(HowItWorksCard, obj5);
   obj.children = items1;
   return hasOwnProperty(View, obj);

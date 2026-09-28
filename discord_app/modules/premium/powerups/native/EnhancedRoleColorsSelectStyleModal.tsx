@@ -1,6 +1,6 @@
-// === Module 17426: EnhancedRoleColorsSelectStyleModal ===
+// === Module 17430: EnhancedRoleColorsSelectStyleModal ===
 
-// Module 17426 (EnhancedRoleColorsSelectStyleModal)
+// Module 17430 (EnhancedRoleColorsSelectStyleModal)
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1115 */;
@@ -14,11 +14,11 @@ import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6570 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6571 */;
 import RowGeneratorDefault from "RowGenerator" /* 7374 */;
 import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7403 */;
-import _modDef12872 from "module_12872" /* 12872 */;
-import GuildSettingsRoleConstants from "GuildSettingsRoleConstants" /* 17405 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 17406 */;
-import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 17408 */;
-import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 17427 */;
+import _modDef12871 from "module_12871" /* 12871 */;
+import GuildSettingsRoleConstants from "GuildSettingsRoleConstants" /* 17409 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 17410 */;
+import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 17412 */;
+import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 17431 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4836 */;
@@ -117,7 +117,7 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
               const result = EnhancedRoleColorUtils.extractColorStringsFromServerColors(id.colors);
               message.message.roleColors = enhanced_role_colors_EnhancedRoleColorUtils.processColorStrings(result);
               message.message.shouldShowRoleOnName = true;
-              message.message.avatarURL = _modDef12872;
+              message.message.avatarURL = _modDef12871;
             }
           }),
 

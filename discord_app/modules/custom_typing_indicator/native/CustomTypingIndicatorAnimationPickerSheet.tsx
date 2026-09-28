@@ -1,6 +1,6 @@
-// === Module 14910: CustomTypingIndicatorAnimationPickerSheet ===
+// === Module 14908: CustomTypingIndicatorAnimationPickerSheet ===
 
-// Module 14910 (CustomTypingIndicatorAnimationPickerSheet)
+// Module 14908 (CustomTypingIndicatorAnimationPickerSheet)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import Stack_Stack from "Stack/Stack" /* 5279 */;

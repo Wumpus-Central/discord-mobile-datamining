@@ -1,6 +1,6 @@
-// === Module 14479: AuthorizedAppPermissionsSetting ===
+// === Module 14478: AuthorizedAppPermissionsSetting ===
 
-// Module 14479 (AuthorizedAppPermissionsSetting)
+// Module 14478 (AuthorizedAppPermissionsSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
 import SettingsConstants from "SettingsConstants" /* 7417 */;

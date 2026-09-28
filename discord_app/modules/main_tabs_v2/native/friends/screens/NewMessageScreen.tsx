@@ -1,6 +1,6 @@
-// === Module 16576: NewMessageScreen ===
+// === Module 16580: NewMessageScreen ===
 
-// Module 16576 (NewMessageScreen)
+// Module 16580 (NewMessageScreen)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1101 */;
@@ -23,8 +23,8 @@ import ChatViewDefault from "ChatView" /* 10882 */;
 import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 11087 */;
 import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11089 */;
 import NewMessageUserListDefault from "NewMessageUserList" /* 11853 */;
-import GroupDMNitroUpsellBannerDefault from "GroupDMNitroUpsellBanner" /* 16517 */;
-import useOnMessageSendDefault from "useOnMessageSend" /* 16577 */;
+import GroupDMNitroUpsellBannerDefault from "GroupDMNitroUpsellBanner" /* 16521 */;
+import useOnMessageSendDefault from "useOnMessageSend" /* 16581 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -179,7 +179,7 @@ function Header(recipientLimit) {
   fn.__initData = __initData;
   if (recipientLimit.usePersonLimitCopy) {
     let obj2 = { title, memberCount: numInGroup + 1, recipientLimit };
-    return closure_17(recipientLimit(16578), obj2);
+    return closure_17(recipientLimit(16582), obj2);
   } else {
     const obj3 = { style: tmp.header, children: null };
     const obj4 = { title };
@@ -451,7 +451,7 @@ export default function NewMessageScreen(navigation) {
         return () => {
           const obj2 = { type: "CHANNEL_DELETE", channel: null };
           const obj = source_page(573);
-          obj2.channel = { id: navigation(6642).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "isArray" };
+          obj2.channel = { id: navigation(6642).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "text" };
           obj.dispatch(obj2);
         };
       }

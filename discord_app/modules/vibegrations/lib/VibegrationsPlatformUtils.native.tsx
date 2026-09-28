@@ -6,7 +6,7 @@ import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8505 */;
 import ApplicationUtils from "ApplicationUtils" /* 8506 */;
 import PushNotificationDefault from "PushNotification" /* 8746 */;
 import vibegrationsPreviewCall from "vibegrationsPreviewCall" /* 8750 */;
-import vibegrationsPreviewControlLease from "vibegrationsPreviewControlLease" /* 12446 */;
+import vibegrationsPreviewControlLease2 from "vibegrationsPreviewControlLease" /* 12446 */;
 import vibegrationsPreviewNativeSurfaces from "vibegrationsPreviewNativeSurfaces" /* 12447 */;
 import restartVibegrationsAppFramesDefault from "restartVibegrationsAppFrames" /* 12450 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -144,17 +144,17 @@ function waitForPreviewFrame(value, arg1, fn) {
 }
 function callNativePreviewFrame(control, result, id) {
   _require = control;
+  closure_1 = id;
   const previewCallTypesResult = require("vibegrationsPreviewCall").previewCallTypes(control);
   importAll = previewCallTypesResult;
   obj2 = { type: previewCallTypesResult.request, id: id.id };
   const merged = Object.assign(result);
-  let obj = require("vibegrationsPreviewCall");
+  const obj = require("vibegrationsPreviewCall");
   const webViewProxy = require("WebView").getWebViewProxy(require("FramesNativeManager").FRAME_WEB_VIEW_KEY);
   const timestamp = Date.now();
   const obj3 = require("WebView");
   return new Promise((arg0, arg1) => {
     closure_0 = arg0;
-    id = arg1;
     function cleanup() {
       clearTimeout(closure_3);
       if (null != c2) {
@@ -170,39 +170,40 @@ function callNativePreviewFrame(control, result, id) {
         clearInterval(c2);
       }
       closure_4.remove();
-      const previewFrameCallTimeout = new vibegrationsPreviewCall.PreviewFrameCallTimeout(closure_0, closure_1.timeoutMs);
+      const previewFrameCallTimeout = new vibegrationsPreviewCall.PreviewFrameCallTimeout(c0, obj3.timeoutMs);
       closure_1(previewFrameCallTimeout);
-    }, id.timeoutMs);
+    }, obj3.timeoutMs);
     closure_4 = closure_4.addOnMessageListener((data) => {
       try {
         const _JSON = JSON;
         const parsed = JSON.parse(data.data);
-        if (obj.isResultEnvelope(parsed, previewCallTypesResult.ack, closure_1.id)) {
-          if (null != c2) {
+        if (obj.isResultEnvelope(parsed, _null.ack, obj3.id)) {
+          if (null != _null) {
             const _clearInterval = clearInterval;
-            clearInterval(c2);
+            clearInterval(_null);
           }
-          c2 = null;
+          _null = null;
         } else {
-          if (tmp5Result.isResultEnvelope(parsed, previewCallTypesResult.result, closure_1.id)) {
+          if (tmp5Result.isResultEnvelope(parsed, tmp8.result, obj3.id)) {
             cleanup();
             closure_0(parsed);
           }
           tmp5Result = vibegrationsPreviewCall;
         }
         obj = vibegrationsPreviewCall;
+        tmp8 = _null;
       } catch (err) {
         return tmp;
       }
     });
-    closure_4.injectJavaScript(id(obj2[14])(timeout)).catch(() => {
+    closure_4.injectJavaScript(require("getPostMessageJavaScript")(timeout)).catch(() => {
 
     });
     const interval = setInterval(function post() {
-      closure_4.injectJavaScript(closure_1(obj2[14])(closure_3)).catch(() => {
+      closure_4.injectJavaScript(obj3(obj5[14])(closure_3)).catch(() => {
 
       });
-    }, id.retryMs);
+    }, obj3.retryMs);
   });
 }
 let closure_18 = async function _relayPreviewCapture(arg0) {
@@ -277,7 +278,7 @@ let closure_18 = async function _relayPreviewCapture(arg0) {
             const obj8 = { value: { status: "unavailable" }, done: true };
             return obj8;
           } else if (null == closure_132_2) {
-            let obj9 = { uploadToken: "__initData" };
+            let obj9 = { uploadToken: "r" };
           } else {
             c8 = 2;
             c9 = 1;
@@ -572,7 +573,7 @@ let closure_21 = async function _relayPreviewControl(arg0) {
           if (Array.isArray(closure_133_7.results)) {
             closure_4 = 0;
             items = [];
-            closure_4 = HermesBuiltin.arraySpread(closure_134_22.drain(closure_133_0), closure_4);
+            closure_4 = HermesBuiltin.arraySpread(closure_134_23.drain(closure_133_0), closure_4);
             closure_4 = HermesBuiltin.arraySpread(closure_133_6.drain(), closure_4);
             closure_133_8 = items;
             if (0 === closure_133_8.length) {
@@ -618,8 +619,112 @@ const FramesConstants = fn(8500);
 const LocalNotificationTypes = fn(8504).LocalNotificationTypes;
 let items = [fn(7787).OAuth2Scopes.BOT, fn(7787).OAuth2Scopes.APPLICATIONS_COMMANDS];
 let c19 = 0;
+let c22 = 0;
+const vibegrationsPreviewControlLease = fn(12446);
+let result = vibegrationsPreviewControlLease.subscribeVibegrationsControlReleased((arg0) => {
+  const project = VibegrationsProjectStore.getProject(arg0);
+  let prop;
+  if (project != null) {
+    prop = project.preview_application_id;
+  }
+  let tmp3 = null;
+  if (null != prop) {
+    const frame = FramesStore.getFrame(closure_10(prop, closure_9));
+    let tmp8 = null;
+    if (null != frame) {
+      let obj = { applicationId: prop, launched: closure_8(frame) };
+      tmp8 = obj;
+    }
+    tmp3 = tmp8;
+  }
+  let launched;
+  if (tmp3 != null) {
+    launched = tmp3.launched;
+  }
+  let tmp11 = null;
+  if (true === launched) {
+    const obj2 = { applicationId: tmp3.applicationId };
+    tmp11 = obj2;
+  }
+  if (null != tmp11) {
+    const obj3 = { id: null, timeoutMs: null, retryMs: null };
+    const sum = c22 + 1;
+    c22 = sum;
+    const _Date = Date;
+    const _HermesInternal = HermesInternal;
+    obj3.id = "control-end-" + sum + "-" + Date.now();
+    obj3.timeoutMs = require("vibegrationsPreviewCall").CONTROL_END_TIMEOUT_MS;
+    obj3.retryMs = require("vibegrationsPreviewCall").CONTROL_RETRY_MS;
+    _require = "control-end";
+    obj5 = undefined;
+    const previewCallTypesResult = require("vibegrationsPreviewCall").previewCallTypes("control-end");
+    c2 = previewCallTypesResult;
+    obj5 = { type: previewCallTypesResult.request, id: obj3.id };
+    const merged = Object.assign({});
+    const obj4 = require("vibegrationsPreviewCall");
+    const webViewProxy = require("WebView").getWebViewProxy(require("FramesNativeManager").FRAME_WEB_VIEW_KEY);
+    const _Date2 = Date;
+    const timestamp = Date.now();
+    const promise = new Promise((arg0, arg1) => {
+      closure_0 = arg0;
+      function cleanup() {
+        clearTimeout(closure_3);
+        if (null != c2) {
+          const _clearInterval = clearInterval;
+          clearInterval(c2);
+        }
+        closure_4.remove();
+      }
+      const timeout = setTimeout(() => {
+        clearTimeout(closure_3);
+        if (null != c2) {
+          const _clearInterval = clearInterval;
+          clearInterval(c2);
+        }
+        closure_4.remove();
+        const previewFrameCallTimeout = new vibegrationsPreviewCall.PreviewFrameCallTimeout(c0, obj3.timeoutMs);
+        closure_1(previewFrameCallTimeout);
+      }, obj3.timeoutMs);
+      closure_4 = closure_4.addOnMessageListener((data) => {
+        try {
+          const _JSON = JSON;
+          const parsed = JSON.parse(data.data);
+          if (obj.isResultEnvelope(parsed, _null.ack, obj3.id)) {
+            if (null != _null) {
+              const _clearInterval = clearInterval;
+              clearInterval(_null);
+            }
+            _null = null;
+          } else {
+            if (tmp5Result.isResultEnvelope(parsed, tmp8.result, obj3.id)) {
+              cleanup();
+              closure_0(parsed);
+            }
+            tmp5Result = vibegrationsPreviewCall;
+          }
+          obj = vibegrationsPreviewCall;
+          tmp8 = _null;
+        } catch (err) {
+          return tmp;
+        }
+      });
+      closure_4.injectJavaScript(require("getPostMessageJavaScript")(timeout)).catch(() => {
+
+      });
+      const interval = setInterval(function post() {
+        closure_4.injectJavaScript(obj3(obj5[14])(closure_3)).catch(() => {
+
+        });
+      }, obj3.retryMs);
+    });
+    promise.catch(() => {
+
+    });
+    const obj6 = require("WebView");
+  }
+});
 const vibegrationsPreviewOperationSurfaces = fn(12449);
-let closure_22 = vibegrationsPreviewOperationSurfaces.createPreviewOperationSurfaces((arg0) => {
+let closure_23 = vibegrationsPreviewOperationSurfaces.createPreviewOperationSurfaces((arg0) => {
   const project = VibegrationsProjectStore.getProject(arg0);
   let prop;
   if (project != null) {
@@ -675,7 +780,7 @@ let closure_22 = vibegrationsPreviewOperationSurfaces.createPreviewOperationSurf
   }
 });
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsPlatformUtils.native.tsx");
+const result1 = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsPlatformUtils.native.tsx");
 
 export default {
   openVibegrationsAppInstallModal(application) {
@@ -765,13 +870,13 @@ export default {
     return applyArgumentsResult;
   },
   releasePreviewControl(projectId) {
-    const result = vibegrationsPreviewControlLease.releaseVibegrationsControlLeases(projectId);
+    const result = vibegrationsPreviewControlLease2.releaseVibegrationsControlLeases(projectId);
   },
   beginPreviewOperation(projectId) {
-    closure_22.begin(projectId);
+    closure_23.begin(projectId);
   },
   endPreviewOperation(projectId) {
-    closure_22.end(projectId);
+    closure_23.end(projectId);
   },
   reloadAppFrames(application_id) {
     restartVibegrationsAppFramesDefault(application_id);

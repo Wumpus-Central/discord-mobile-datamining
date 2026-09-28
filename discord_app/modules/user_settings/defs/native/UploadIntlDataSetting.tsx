@@ -1,6 +1,6 @@
-// === Module 15092: UploadIntlDataSetting ===
+// === Module 15090: UploadIntlDataSetting ===
 
-// Module 15092 (UploadIntlDataSetting)
+// Module 15090 (UploadIntlDataSetting)
 import AssetJsonUtils from "AssetJsonUtils" /* 1119 */;
 import _mod1153 from "module_1153" /* 1153 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
@@ -259,7 +259,7 @@ const pressable = SettingBuilders.createPressable({
     return "Upload i18n data";
   },
   parent: null,
-  IconComponent: fn(15093).FileUpIcon,
+  IconComponent: fn(15091).FileUpIcon,
   onPress: function handleUploadIntlDataSettingPress() {
     const self = this;
     const apply = closure_11.apply;
@@ -270,7 +270,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(14379).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(14378).useStaffOrDeveloperSettingPredicate,
   useTrailing: function useUploadIntlDataTrailing() {
     let tmp = null;
     if (closure_9().isUploading) {

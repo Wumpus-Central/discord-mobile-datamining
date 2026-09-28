@@ -1,6 +1,6 @@
-// === Module 17650: WebAuthnSignalManager ===
+// === Module 17654: WebAuthnSignalManager ===
 
-// Module 17650 (WebAuthnSignalManager)
+// Module 17654 (WebAuthnSignalManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6539 */;

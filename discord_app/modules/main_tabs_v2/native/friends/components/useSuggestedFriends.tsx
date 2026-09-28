@@ -1,6 +1,6 @@
-// === Module 15681: useSuggestedFriends ===
+// === Module 15679: useSuggestedFriends ===
 
-// Module 15681 (useSuggestedFriends)
+// Module 15679 (useSuggestedFriends)
 import _modDef12 from "module_12" /* 12 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

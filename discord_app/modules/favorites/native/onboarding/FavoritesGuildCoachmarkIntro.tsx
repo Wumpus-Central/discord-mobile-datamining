@@ -1,14 +1,14 @@
-// === Module 15952: FavoritesGuildCoachmarkIntro ===
+// === Module 15950: FavoritesGuildCoachmarkIntro ===
 
-// Module 15952 (FavoritesGuildCoachmarkIntro)
+// Module 15950 (FavoritesGuildCoachmarkIntro)
 import util from "util" /* 1115 */;
 import _modDef3361 from "module_3361" /* 3361 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 9696 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 15947 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 15945 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 15923 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 15921 */;
 
 require = fn;
 const FAVORITES = fn(1074).FAVORITES;

@@ -1,6 +1,6 @@
-// === Module 17389: getGuildTagBadgeLabel ===
+// === Module 17393: getGuildTagBadgeLabel ===
 
-// Module 17389 (getGuildTagBadgeLabel)
+// Module 17393 (getGuildTagBadgeLabel)
 import util from "util" /* 1115 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import GuildTagConstants from "GuildTagConstants" /* 7386 */;

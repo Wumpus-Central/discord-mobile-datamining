@@ -13,7 +13,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VibegrationsConnectionStore = fn(12624);
+const VibegrationsConnectionStore = fn(12642);
 ({ createDatabaseRestorePoint: closure_7, fetchDatabaseRestorePoints: closure_8, fetchDatabaseRestoreWindow: closure_9, restoreDatabaseToPoint: c10, restoreDatabaseToTimestamp: closure_11 } = VibegrationsConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);

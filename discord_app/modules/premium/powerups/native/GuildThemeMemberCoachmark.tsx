@@ -1,6 +1,6 @@
-// === Module 15803: GuildThemeMemberCoachmark ===
+// === Module 15801: GuildThemeMemberCoachmark ===
 
-// Module 15803 (GuildThemeMemberCoachmark)
+// Module 15801 (GuildThemeMemberCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef2519 from "module_2519" /* 2519 */;
@@ -48,7 +48,7 @@ export default function GuildThemeMemberCoachmark(guildId) {
   const obj2 = guildId(504);
   guildPowerupBannerImage = guildId(12016).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
   if (guildPowerupBannerImage == null) {
-    guildPowerupBannerImage = markAsDismissed(15804);
+    guildPowerupBannerImage = markAsDismissed(15802);
   }
   const diff = onDismiss - markAsDismissed(4743)(guildId).available;
   c5 = diff;

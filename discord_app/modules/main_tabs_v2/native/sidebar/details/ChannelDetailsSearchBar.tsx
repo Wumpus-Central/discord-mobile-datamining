@@ -1,6 +1,6 @@
-// === Module 16436: ChannelDetailsSearchBar ===
+// === Module 16440: ChannelDetailsSearchBar ===
 
-// Module 16436 (ChannelDetailsSearchBar)
+// Module 16440 (ChannelDetailsSearchBar)
 import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 11844 */;
 import noop from "module_19" /* 19 */;
 import SearchQueryStore from "SearchQueryStore" /* 11822 */;

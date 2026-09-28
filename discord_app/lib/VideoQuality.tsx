@@ -1,6 +1,6 @@
-// === Module 13366: VideoQuality ===
+// === Module 13365: VideoQuality ===
 
-// Module 13366 (VideoQuality)
+// Module 13365 (VideoQuality)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
@@ -8,7 +8,7 @@ import TimeUtils from "TimeUtils" /* 4865 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4891 */;
 import VideoQualityStats from "VideoQualityStats" /* 7160 */;
 import Histogram from "Histogram" /* 7161 */;
-import NetworkQualityDefault from "NetworkQuality" /* 13363 */;
+import NetworkQualityDefault from "NetworkQuality" /* 13362 */;
 import TypedEventEmitter from "TypedEventEmitter" /* 4894 */;
 
 require = fn;

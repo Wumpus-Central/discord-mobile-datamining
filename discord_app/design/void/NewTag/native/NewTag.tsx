@@ -1,6 +1,6 @@
-// === Module 13637: NewTag ===
+// === Module 13636: NewTag ===
 
-// Module 13637 (NewTag)
+// Module 13636 (NewTag)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4832 */;

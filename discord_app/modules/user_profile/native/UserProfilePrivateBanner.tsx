@@ -1,6 +1,6 @@
-// === Module 12670: UserProfilePrivateBanner ===
+// === Module 12687: UserProfilePrivateBanner ===
 
-// Module 12670 (UserProfilePrivateBanner)
+// Module 12687 (UserProfilePrivateBanner)
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
 import util from "util" /* 1115 */;

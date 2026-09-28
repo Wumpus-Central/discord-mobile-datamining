@@ -1,6 +1,6 @@
-// === Module 13413: QRScannerModal ===
+// === Module 13412: QRScannerModal ===
 
-// Module 13413 (QRScannerModal)
+// Module 13412 (QRScannerModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import URLUtilsDefault from "URLUtils" /* 1366 */;
@@ -13,8 +13,8 @@ import _modDef6510 from "module_6510" /* 6510 */;
 import openUserSettings from "openUserSettings" /* 6800 */;
 import TouchableHitBoxDefault from "TouchableHitBox" /* 9203 */;
 import FamilyCenterNativeUtils from "FamilyCenterNativeUtils" /* 11392 */;
-import QRLoginUtils from "QRLoginUtils" /* 13394 */;
-import QRScannerNativeComponentDefault from "QRScannerNativeComponent" /* 13414 */;
+import QRLoginUtils from "QRLoginUtils" /* 13393 */;
+import QRScannerNativeComponentDefault from "QRScannerNativeComponent" /* 13413 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -87,7 +87,7 @@ export default function QRScannerModal(showHelp) {
             ModalActionCreatorsDefault.pop();
             const tmp21Result = ModalActionCreatorsDefault;
             obj2 = { remoteAuthFingerprint: result };
-            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13409, dependencyMap.paths), obj2);
+            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13408, dependencyMap.paths), obj2);
             const tmp21Result4 = ModalActionCreatorsDefault;
           } else {
             let match;

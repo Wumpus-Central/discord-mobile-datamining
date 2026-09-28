@@ -1,6 +1,6 @@
-// === Module 12931: SubscriptionAccountHoldNotice ===
+// === Module 12930: SubscriptionAccountHoldNotice ===
 
-// Module 12931 (SubscriptionAccountHoldNotice)
+// Module 12930 (SubscriptionAccountHoldNotice)
 import nativeDefault from "native" /* 576 */;
 import PremiumUtils from "PremiumUtils" /* 4488 */;
 import _modDef12285 from "module_12285" /* 12285 */;

@@ -1,7 +1,7 @@
-// === Module 15829: ShowAllVoiceChannelsButton ===
+// === Module 15827: ShowAllVoiceChannelsButton ===
 
-// Module 15829 (ShowAllVoiceChannelsButton)
-import VoiceCategoryActionCreators from "VoiceCategoryActionCreators" /* 15830 */;
+// Module 15827 (ShowAllVoiceChannelsButton)
+import VoiceCategoryActionCreators from "VoiceCategoryActionCreators" /* 15828 */;
 import noop from "module_19" /* 19 */;
 import ChannelListVoiceCategoryStore from "ChannelListVoiceCategoryStore" /* 6953 */;
 

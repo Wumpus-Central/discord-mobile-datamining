@@ -1,6 +1,6 @@
-// === Module 14280: TinyBroncoPromoSheet ===
+// === Module 14279: TinyBroncoPromoSheet ===
 
-// Module 14280 (TinyBroncoPromoSheet)
+// Module 14279 (TinyBroncoPromoSheet)
 import nativeDefault from "native" /* 576 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2111 */;
 import _modDef3071 from "module_3071" /* 3071 */;
@@ -8,7 +8,7 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800
 import openUserSettings from "openUserSettings" /* 6800 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7859 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 7861 */;
-import openTinyBroncoPromoSheet from "openTinyBroncoPromoSheet" /* 14279 */;
+import openTinyBroncoPromoSheet from "openTinyBroncoPromoSheet" /* 14278 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,7 +33,7 @@ export default function TinyBroncoPromoSheet(markAsDismissed) {
   const tmp = closure_11();
   const isVerifiedTeen = dismissOnce(5048).useIsVerifiedTeen();
   let obj = dismissOnce(5048);
-  dismissOnce = dismissOnce(14281).useDismissOnce(markAsDismissed.markAsDismissed);
+  dismissOnce = dismissOnce(14280).useDismissOnce(markAsDismissed.markAsDismissed);
   const items = [dismissOnce];
   const items1 = [dismissOnce];
   const callback = noop.useCallback(() => {
@@ -82,8 +82,8 @@ export default function TinyBroncoPromoSheet(markAsDismissed) {
     tmp15 = obj3;
   }
   const obj4 = { illustration: null, title: null, description: null, onDismiss: null, actions: null };
-  let obj2 = dismissOnce(14281);
-  obj4.illustration = closure_9(Image, { source: tmp14(14282), style: tmp.illustration, resizeMode: "contain" });
+  let obj2 = dismissOnce(14280);
+  obj4.illustration = closure_9(Image, { source: tmp14(14281), style: tmp.illustration, resizeMode: "contain" });
   const intl2 = tmp2(1115).intl;
   obj4.title = intl2.string(tmp14(3071).GdTVPF);
   const intl3 = tmp2(1115).intl;

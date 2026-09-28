@@ -1,12 +1,12 @@
-// === Module 15046: AndroidMessageNotificationsSetting ===
+// === Module 15044: AndroidMessageNotificationsSetting ===
 
-// Module 15046 (AndroidMessageNotificationsSetting)
+// Module 15044 (AndroidMessageNotificationsSetting)
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import _modDef2813 from "module_2813" /* 2813 */;
 import SettingsConstants from "SettingsConstants" /* 7417 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 15040 */;
-import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15034 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 15038 */;
+import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15032 */;
 import SettingBuilders_mod from "SettingBuilders" /* 11006 */;
 import size from "module_2" /* 2 */;
 

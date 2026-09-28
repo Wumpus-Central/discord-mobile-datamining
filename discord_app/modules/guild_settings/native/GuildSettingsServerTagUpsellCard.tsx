@@ -1,6 +1,6 @@
-// === Module 17383: GuildSettingsServerTagUpsellCard ===
+// === Module 17387: GuildSettingsServerTagUpsellCard ===
 
-// Module 17383 (GuildSettingsServerTagUpsellCard)
+// Module 17387 (GuildSettingsServerTagUpsellCard)
 import nativeDefault from "native" /* 576 */;
 import Powerups from "Powerups" /* 4727 */;
 import LinearGradientDefault from "LinearGradient" /* 5293 */;
@@ -77,7 +77,7 @@ export default function GuildSettingsServerTagUpsellCard(guildId) {
   const obj12 = { variant: "primary", size: "lg", text: null, icon: null, iconPosition: "start", onPress: null };
   const intl3 = tmp2(1115).intl;
   obj12.text = intl3.string(guildId(1115).t.kMRDWs);
-  obj12.icon = closure_6(guildId(15852).BoostTier2Icon, { color: "white" });
+  obj12.icon = closure_6(guildId(15850).BoostTier2Icon, { color: "white" });
   obj12.onPress = guildId.onUnlockPress;
   items5[2] = closure_6(guildId(5281).Button, obj12);
   obj6.children = items5;

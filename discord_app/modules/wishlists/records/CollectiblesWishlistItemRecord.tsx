@@ -81,18 +81,18 @@ prototype["fromSKU"] = function fromSKU(id) {
     return null;
   } else {
     const obj = { sku_id: id.id, sku_product_line: SKUProductLines.COLLECTIBLES, sku_name: id.name, sku: id, skipValidation: true };
-    const tmp6 = new prototype(obj);
+    const tmp8 = new prototype(obj);
     let item;
     if ("single" === tmp.type) {
       item = tmp.item;
     }
-    tmp6.collectiblesItem = item;
+    tmp8.collectiblesItem = item;
     let items;
     if ("bundle" === tmp.type) {
       items = tmp.items;
     }
-    tmp6.bundleItems = items;
-    return tmp6;
+    tmp8.bundleItems = items;
+    return tmp8;
   }
 };
 const size = fn(2);

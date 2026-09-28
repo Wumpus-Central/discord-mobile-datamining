@@ -1,6 +1,6 @@
-// === Module 17198: AddAvatarModalActionCreators ===
+// === Module 17202: AddAvatarModalActionCreators ===
 
-// Module 17198 (AddAvatarModalActionCreators)
+// Module 17202 (AddAvatarModalActionCreators)
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
@@ -10,7 +10,7 @@ import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators
 import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 7609 */;
 import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 7611 */;
 import NUFActionCreators from "NUFActionCreators" /* 12201 */;
-import AddAvatarModalConstants from "AddAvatarModalConstants" /* 17199 */;
+import AddAvatarModalConstants from "AddAvatarModalConstants" /* 17203 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -60,5 +60,5 @@ export const showSkipAvatarModal = function showSkipAvatarModal(arg0) {
   AlertActionCreatorsDefault.show(obj3);
 };
 export const openAddAvatarModal = function openAddAvatarModal() {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17200, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17204, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
 };

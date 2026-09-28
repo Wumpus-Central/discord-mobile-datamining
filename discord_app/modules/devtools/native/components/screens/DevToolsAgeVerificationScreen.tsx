@@ -1,6 +1,6 @@
-// === Module 15312: DevToolsAgeVerificationScreen ===
+// === Module 15310: DevToolsAgeVerificationScreen ===
 
-// Module 15312 (DevToolsAgeVerificationScreen)
+// Module 15310 (DevToolsAgeVerificationScreen)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
 import TableRow from "TableRow" /* 5917 */;

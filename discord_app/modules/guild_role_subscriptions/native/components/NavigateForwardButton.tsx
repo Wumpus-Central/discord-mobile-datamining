@@ -1,11 +1,11 @@
-// === Module 14768: NavigateForwardButton ===
+// === Module 14766: NavigateForwardButton ===
 
-// Module 14768 (NavigateForwardButton)
+// Module 14766 (NavigateForwardButton)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import Pressables from "Pressables" /* 5435 */;
-import _modDef14769 from "module_14769" /* 14769 */;
+import _modDef14767 from "module_14767" /* 14767 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ export default function NavigateForwardButton(arg0) {
   ({ onPress, text } = arg0);
   const tmp = closure_5();
   const obj = { style: tmp.container, onPress, children: null };
-  const items = [React3(Text_Text.Text, { style: tmp.text, variant: "text-md/semibold", color: "interactive-text-active", children: text }), React3(native.Icon, { source: _modDef14769 })];
+  const items = [React3(Text_Text.Text, { style: tmp.text, variant: "text-md/semibold", color: "interactive-text-active", children: text }), React3(native.Icon, { source: _modDef14767 })];
   obj.children = items;
   return React4(Pressables.PressableHighlight, obj);
 };

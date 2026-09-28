@@ -1,9 +1,9 @@
-// === Module 16383: VibegrationsSettingsRequestCard ===
+// === Module 16386: VibegrationsSettingsRequestCard ===
 
-// Module 16383 (VibegrationsSettingsRequestCard)
+// Module 16386 (VibegrationsSettingsRequestCard)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4800 */;
-import VibegrationsSettingsSheet from "VibegrationsSettingsSheet" /* 16264 */;
+import VibegrationsSettingsSheet from "VibegrationsSettingsSheet" /* 16260 */;
 import noop from "module_19" /* 19 */;
 
 const VibegrationsSettingsSheetDefault = VibegrationsSettingsSheet;

@@ -1,6 +1,6 @@
-// === Module 17088: AgeVerificationManager ===
+// === Module 17092: AgeVerificationManager ===
 
-// Module 17088 (AgeVerificationManager)
+// Module 17092 (AgeVerificationManager)
 import LoggerDefault from "Logger" /* 3 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1096 */;
 import Server from "Server" /* 1979 */;

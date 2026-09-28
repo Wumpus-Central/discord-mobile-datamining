@@ -1,6 +1,6 @@
-// === Module 17250: SelfPresenceStoreManager ===
+// === Module 17254: SelfPresenceStoreManager ===
 
-// Module 17250 (SelfPresenceStoreManager)
+// Module 17254 (SelfPresenceStoreManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 5591 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6539 */;

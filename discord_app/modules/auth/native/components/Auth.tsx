@@ -1,6 +1,6 @@
-// === Module 15569: Auth ===
+// === Module 15567: Auth ===
 
-// Module 15569 (Auth)
+// Module 15567 (Auth)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1365 */;
@@ -10,12 +10,12 @@ import WideAuthScrollContext from "WideAuthScrollContext" /* 6392 */;
 import BackgroundImageDefault from "BackgroundImage" /* 6394 */;
 import Navigator from "Navigator" /* 6421 */;
 import StackNavigator from "StackNavigator" /* 6423 */;
-import RegistrationHandoff from "RegistrationHandoff" /* 15570 */;
-import RegistrationUtils from "RegistrationUtils" /* 15580 */;
-import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 15622 */;
-import _mod15623 from "module_15623" /* 15623 */;
-import AuthManagerDefault from "AuthManager" /* 15624 */;
-import useOrientationLockDefault from "useOrientationLock" /* 15628 */;
+import RegistrationHandoff from "RegistrationHandoff" /* 15568 */;
+import RegistrationUtils from "RegistrationUtils" /* 15578 */;
+import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 15620 */;
+import _mod15621 from "module_15621" /* 15621 */;
+import AuthManagerDefault from "AuthManager" /* 15622 */;
+import useOrientationLockDefault from "useOrientationLock" /* 15626 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import MultiAccountStore from "MultiAccountStore" /* 11906 */;
@@ -62,7 +62,7 @@ function NavigatorWithCaptchaHook() {
     closure_1(false);
   }, []);
   const obj3 = { backgroundImageSource: null, backgroundImageCover: true };
-  obj3.backgroundImageSource = _mod15623;
+  obj3.backgroundImageSource = _mod15621;
   const children = [closure_9(BackgroundImageDefault, obj3), ];
   if (tmp5) {
     const obj5 = { value: tmp11, children: null };
@@ -132,7 +132,7 @@ get_ActivityIndicator = fn(17);
 const AuthStates = fn(1074).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-let RegistrationStepsUtils = fn(15571);
+let RegistrationStepsUtils = fn(15569);
 RegistrationStepsUtils = RegistrationStepsUtils.getAllAuthScreens();
 RegistrationStepsUtils = Object.entries(RegistrationStepsUtils);
 const screens = Object.fromEntries(RegistrationStepsUtils.map((item) => {

@@ -1,6 +1,6 @@
-// === Module 15378: DesignSystemsShadowsSetting ===
+// === Module 15376: DesignSystemsShadowsSetting ===
 
-// Module 15378 (DesignSystemsShadowsSetting)
+// Module 15376 (DesignSystemsShadowsSetting)
 import Constants from "Constants" /* 1074 */;
 import SettingsConstants from "SettingsConstants" /* 7417 */;
 import SettingBuilders from "SettingBuilders" /* 11006 */;

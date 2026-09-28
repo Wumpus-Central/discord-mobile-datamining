@@ -1,6 +1,6 @@
-// === Module 17248: SearchTokensManager ===
+// === Module 17252: SearchTokensManager ===
 
-// Module 17248 (SearchTokensManager)
+// Module 17252 (SearchTokensManager)
 import IntlLoaderStore from "IntlLoaderStore" /* 2113 */;
 import SearchUtils from "SearchUtils" /* 11823 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6539 */;

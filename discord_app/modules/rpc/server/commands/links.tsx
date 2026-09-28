@@ -1,6 +1,6 @@
-// === Module 14044: links ===
+// === Module 14043: links ===
 
-// Module 14044 (links)
+// Module 14043 (links)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4458 */;
@@ -11,10 +11,10 @@ import RPCErrorDefault from "RPCError" /* 8770 */;
 import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8773 */;
 import RPCHelpers from "RPCHelpers" /* 8775 */;
 import ActivityPopoutUtils from "ActivityPopoutUtils" /* 8827 */;
-import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 14024 */;
-import internalDeepLinks from "internalDeepLinks" /* 14045 */;
-import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 14046 */;
-import openActivityShareLinkModal from "openActivityShareLinkModal" /* 14048 */;
+import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 14023 */;
+import internalDeepLinks from "internalDeepLinks" /* 14044 */;
+import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 14045 */;
+import openActivityShareLinkModal from "openActivityShareLinkModal" /* 14047 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
 import ApplicationStore from "ApplicationStore" /* 5063 */;
@@ -174,7 +174,7 @@ let closure_13 = async function _openExternalLink(arg0) {
                   closure_0({ opened: false });
                 }
               };
-              return obj.handleClick(obj2, undefined, undefined, closure_1_0(14047).getActivitiesModalContextKey({ application, channelId }));
+              return obj.handleClick(obj2, undefined, undefined, closure_1_0(14046).getActivitiesModalContextKey({ application, channelId }));
             });
           }
           c5 = 0;
@@ -338,7 +338,7 @@ obj3 = {
 };
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
-const CONTEXT_MENU_ICON_NAMES = fn(14039);
+const CONTEXT_MENU_ICON_NAMES = fn(14038);
 let obj5 = {
   scope: null,
   handler(arg0) {

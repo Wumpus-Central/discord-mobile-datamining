@@ -1,8 +1,8 @@
-// === Module 14739: useIsQuestDockContentVisible ===
+// === Module 14737: useIsQuestDockContentVisible ===
 
-// Module 14739 (useIsQuestDockContentVisible)
+// Module 14737 (useIsQuestDockContentVisible)
 import initialize from "initialize" /* 504 */;
-import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 14713 */;
+import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 14711 */;
 import noop from "module_19" /* 19 */;
 import QuestDockStore from "QuestDockStore" /* 14622 */;
 

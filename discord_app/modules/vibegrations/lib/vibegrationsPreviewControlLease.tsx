@@ -13,6 +13,16 @@ function emit() {
     }
   }
 }
+function emitReleased(projectId) {
+  const items = [...set1];
+  const iter = items[Symbol.iterator]();
+  if (iter !== undefined) {
+    try {
+      tmp2(projectId);
+    } catch (err) {
+    }
+  }
+}
 function subscribeVibegrationsControl(arg0) {
   closure_0 = arg0;
   set.add(arg0);
@@ -22,6 +32,7 @@ function subscribeVibegrationsControl(arg0) {
 }
 const map = new Map();
 let set = new Set();
+let set1 = new Set();
 const map1 = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/lib/vibegrationsPreviewControlLease.tsx");
@@ -41,15 +52,18 @@ export const acquireVibegrationsControlLease = function acquireVibegrationsContr
     if (!c2) {
       c2 = true;
       const _clearTimeout = clearTimeout;
-      clearTimeout(closure_1_3);
+      clearTimeout(set1);
       if (map.get(closure_0) === closure_1_1) {
         const timers = closure_1_1.timers;
-        timers.delete(closure_1_3);
+        timers.delete(set1);
         closure_1_1.holders = closure_1_1.holders - 1;
         if (closure_1_1.holders <= 0) {
           map.delete(closure_0);
         }
         emit();
+        if (closure_1_1.holders <= 0) {
+          emitReleased(closure_0);
+        }
       }
     }
   }
@@ -59,21 +73,24 @@ export const acquireVibegrationsControlLease = function acquireVibegrationsContr
     if (!c2) {
       c2 = true;
       const _clearTimeout = clearTimeout;
-      clearTimeout(closure_1_3);
+      clearTimeout(set1);
       if (map.get(closure_0) === closure_1_1) {
         const timers = closure_1_1.timers;
-        timers.delete(closure_1_3);
+        timers.delete(set1);
         closure_1_1.holders = closure_1_1.holders - 1;
         if (closure_1_1.holders <= 0) {
           map.delete(closure_0);
         }
         emit();
+        if (closure_1_1.holders <= 0) {
+          emitReleased(closure_0);
+        }
       }
     }
   }, 35000);
   const timers = value.timers;
   timers.add(timerId);
-  timerId();
+  emit();
   return release;
 };
 export const CONTROL_OPERATION_IDLE_MS = 20000;
@@ -110,15 +127,18 @@ export const beginVibegrationsControlOperation = function beginVibegrationsContr
       if (!c2) {
         c2 = true;
         const _clearTimeout = clearTimeout;
-        clearTimeout(closure_1_3);
+        clearTimeout(set1);
         if (map.get(closure_0) === closure_1_1) {
           const timers = closure_1_1.timers;
-          timers.delete(closure_1_3);
+          timers.delete(set1);
           closure_1_1.holders = closure_1_1.holders - 1;
           if (closure_1_1.holders <= 0) {
             map.delete(closure_0);
           }
           emit();
+          if (closure_1_1.holders <= 0) {
+            emitReleased(closure_0);
+          }
         }
       }
     };
@@ -129,15 +149,18 @@ export const beginVibegrationsControlOperation = function beginVibegrationsContr
       if (!c2) {
         c2 = true;
         const _clearTimeout = clearTimeout;
-        clearTimeout(closure_1_3);
+        clearTimeout(set1);
         if (map.get(closure_0) === closure_1_1) {
           const timers = closure_1_1.timers;
-          timers.delete(closure_1_3);
+          timers.delete(set1);
           closure_1_1.holders = closure_1_1.holders - 1;
           if (closure_1_1.holders <= 0) {
             map.delete(closure_0);
           }
           emit();
+          if (closure_1_1.holders <= 0) {
+            emitReleased(closure_0);
+          }
         }
       }
     }, 35000);
@@ -157,7 +180,7 @@ export const beginVibegrationsControlOperation = function beginVibegrationsContr
     if (value4 == null) {
       const obj4 = { holders: 0, timers: null };
       const _Set = Set;
-      const set1 = new Set();
+      set1 = new Set();
       obj4.timers = set1;
       value4 = obj4;
     }
@@ -168,15 +191,18 @@ export const beginVibegrationsControlOperation = function beginVibegrationsContr
       if (!c2) {
         c2 = true;
         const _clearTimeout = clearTimeout;
-        clearTimeout(closure_1_3);
+        clearTimeout(set1);
         if (map.get(closure_0) === closure_1_1) {
           const timers = closure_1_1.timers;
-          timers.delete(closure_1_3);
+          timers.delete(set1);
           closure_1_1.holders = closure_1_1.holders - 1;
           if (closure_1_1.holders <= 0) {
             map.delete(closure_0);
           }
           emit();
+          if (closure_1_1.holders <= 0) {
+            emitReleased(closure_0);
+          }
         }
       }
     }
@@ -187,15 +213,18 @@ export const beginVibegrationsControlOperation = function beginVibegrationsContr
       if (!c2) {
         c2 = true;
         const _clearTimeout = clearTimeout;
-        clearTimeout(closure_1_3);
+        clearTimeout(set1);
         if (map.get(closure_0) === closure_1_1) {
           const timers = closure_1_1.timers;
-          timers.delete(closure_1_3);
+          timers.delete(set1);
           closure_1_1.holders = closure_1_1.holders - 1;
           if (closure_1_1.holders <= 0) {
             map.delete(closure_0);
           }
           emit();
+          if (closure_1_1.holders <= 0) {
+            emitReleased(closure_0);
+          }
         }
       }
     }, 35000);
@@ -235,6 +264,7 @@ export const releaseVibegrationsControlLeases = function releaseVibegrationsCont
     }
     map.delete(projectId);
     emit();
+    emitReleased(projectId);
   }
 };
 export const isVibegrationsControlActive = function isVibegrationsControlActive(openResult) {
@@ -253,6 +283,13 @@ export const getVibegrationsControlActiveProjectIds = function getVibegrationsCo
   return items;
 };
 export { subscribeVibegrationsControl };
+export const subscribeVibegrationsControlReleased = function subscribeVibegrationsControlReleased(arg0) {
+  closure_0 = arg0;
+  set1.add(arg0);
+  return () => {
+    set1.delete(closure_0);
+  };
+};
 export const useVibegrationsControlActive = function useVibegrationsControlActive(projectId) {
   noop = projectId;
   const items = [projectId];

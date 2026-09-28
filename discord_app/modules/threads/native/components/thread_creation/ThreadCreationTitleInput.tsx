@@ -1,6 +1,6 @@
-// === Module 16428: ThreadCreationTitleInput ===
+// === Module 16432: ThreadCreationTitleInput ===
 
-// Module 16428 (ThreadCreationTitleInput)
+// Module 16432 (ThreadCreationTitleInput)
 import sanitizeThreadNameDefault from "sanitizeThreadName" /* 6692 */;
 import DraftActionCreatorsDefault from "DraftActionCreators" /* 7196 */;
 import noop from "module_19" /* 19 */;
@@ -18,7 +18,7 @@ export default noop.memo(noop.forwardRef((chatInputRef, ref) => {
   const optional = chatInputRef.optional;
   ref = undefined;
   dependencyMap = ref;
-  let obj = chatInputRef(16429);
+  let obj = chatInputRef(16433);
   let obj2 = { content: threadSettingsDraft.name };
   ref = ref.useRef(threadSettingsDraft.name);
   const items = [threadSettingsDraft.parentChannelId];
@@ -68,7 +68,7 @@ export default noop.memo(noop.forwardRef((chatInputRef, ref) => {
       }
     }
   }, items3);
-  const renderErrorResult = chatInputRef(16429).renderError(chatInputRef.threadNameError, { content: threadSettingsDraft.name });
+  const renderErrorResult = chatInputRef(16433).renderError(chatInputRef.threadNameError, { content: threadSettingsDraft.name });
   const items4 = [ChannelStore];
   const stateFromStores = chatInputRef(504).useStateFromStores(items4, () => ChannelStore.getChannel(threadSettingsDraft.parentChannelId));
   let str = "";

@@ -1,8 +1,8 @@
-// === Module 17178: MessageCodedLinkManager ===
+// === Module 17182: MessageCodedLinkManager ===
 
-// Module 17178 (MessageCodedLinkManager)
+// Module 17182 (MessageCodedLinkManager)
 import findCodedLinksDefault from "findCodedLinks" /* 4816 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 17188 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 17192 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildTemplateStore from "GuildTemplateStore" /* 6877 */;
 import ChannelStore from "ChannelStore" /* 2045 */;

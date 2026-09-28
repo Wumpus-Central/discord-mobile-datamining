@@ -1,16 +1,16 @@
-// === Module 15486: ContentAndSocialScreen ===
+// === Module 15484: ContentAndSocialScreen ===
 
-// Module 15486 (ContentAndSocialScreen)
+// Module 15484 (ContentAndSocialScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2111 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import SettingBuilders from "SettingBuilders" /* 11006 */;
 import ContactSyncUtils from "ContactSyncUtils" /* 12177 */;
-import SettingLayoutDefault from "SettingLayout" /* 14248 */;
-import TinyBroncoSettingsNoticesLazy from "TinyBroncoSettingsNoticesLazy" /* 14352 */;
-import SafetyGuildSettingGuildSelect from "SafetyGuildSettingGuildSelect" /* 15487 */;
-import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 15493 */;
+import SettingLayoutDefault from "SettingLayout" /* 14247 */;
+import TinyBroncoSettingsNoticesLazy from "TinyBroncoSettingsNoticesLazy" /* 14351 */;
+import SafetyGuildSettingGuildSelect from "SafetyGuildSettingGuildSelect" /* 15485 */;
+import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 15491 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,8 +1,8 @@
-// === Module 16907: calculatePIPState ===
+// === Module 16911: calculatePIPState ===
 
-// Module 16907 (calculatePIPState)
+// Module 16911 (calculatePIPState)
 import StreamKeyUtils from "StreamKeyUtils" /* 4888 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 16908 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 16912 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4852 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4858 */;
 

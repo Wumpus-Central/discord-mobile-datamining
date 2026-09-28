@@ -1,6 +1,6 @@
-// === Module 15074: HighlightNotificationsSetting ===
+// === Module 15072: HighlightNotificationsSetting ===
 
-// Module 15074 (HighlightNotificationsSetting)
+// Module 15072 (HighlightNotificationsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import GuildStore from "GuildStore" /* 2067 */;

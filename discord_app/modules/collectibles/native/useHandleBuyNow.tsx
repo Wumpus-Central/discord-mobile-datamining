@@ -1,6 +1,6 @@
-// === Module 12740: useHandleBuyNow ===
+// === Module 12739: useHandleBuyNow ===
 
-// Module 12740 (useHandleBuyNow)
+// Module 12739 (useHandleBuyNow)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;

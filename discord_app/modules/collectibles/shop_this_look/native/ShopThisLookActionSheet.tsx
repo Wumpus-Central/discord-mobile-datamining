@@ -1,6 +1,6 @@
-// === Module 12681: ShopThisLookActionSheet ===
+// === Module 12556: ShopThisLookActionSheet ===
 
-// Module 12681 (ShopThisLookActionSheet)
+// Module 12556 (ShopThisLookActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4528 */;
@@ -8,8 +8,8 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6603 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 6961 */;
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 6973 */;
-import ShopThisLookUtils from "ShopThisLookUtils" /* 12682 */;
-import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 12684 */;
+import ShopThisLookUtils from "ShopThisLookUtils" /* 12557 */;
+import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 12559 */;
 import noop from "module_19" /* 19 */;
 import StorefrontProductStore from "StorefrontProductStore" /* 7664 */;
 
@@ -155,8 +155,8 @@ export default function ShopThisLookActionSheet(arg0) {
   const equippedCollectibleSkuIds = require("useMaybeFetchEquippedCollectibleProducts").useEquippedCollectibleSkuIds(userId, guildId);
   let obj = require("useMaybeFetchEquippedCollectibleProducts");
   let obj2 = { maxWidth: ACTION_SHEET_MAX_WIDTH };
-  ({ cardWidth: c0, rowWidth, gap } = analyticsLocations(12660)({ maxWidth: ACTION_SHEET_MAX_WIDTH }));
-  const tmp2 = analyticsLocations(12660)({ maxWidth: ACTION_SHEET_MAX_WIDTH });
+  ({ cardWidth: c0, rowWidth, gap } = analyticsLocations(12560)({ maxWidth: ACTION_SHEET_MAX_WIDTH }));
+  const tmp2 = analyticsLocations(12560)({ maxWidth: ACTION_SHEET_MAX_WIDTH });
   analyticsLocations = analyticsLocations(6583)(analyticsLocations(6603).USER_PROFILE_OVERFLOW_MENU).analyticsLocations;
   const items = [analyticsLocations];
   dependencyMap = noop.useCallback((initialProductSkuId) => {

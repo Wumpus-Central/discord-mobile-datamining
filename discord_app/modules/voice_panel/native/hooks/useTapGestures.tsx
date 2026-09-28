@@ -1,6 +1,6 @@
-// === Module 16956: useTapGestures ===
+// === Module 16960: useTapGestures ===
 
-// Module 16956 (useTapGestures)
+// Module 16960 (useTapGestures)
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import HapticUtils from "HapticUtils" /* 4801 */;
 import noop from "module_19" /* 19 */;

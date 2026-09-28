@@ -1,6 +1,6 @@
-// === Module 14500: ConnectedAccount ===
+// === Module 14499: ConnectedAccount ===
 
-// Module 14500 (ConnectedAccount)
+// Module 14499 (ConnectedAccount)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native2 from "native" /* 1177 */;
@@ -9,20 +9,20 @@ import _modDef3135 from "module_3135" /* 3135 */;
 import shared from "shared" /* 4685 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5203 */;
-import Stack_Stack from "Stack/Stack" /* 5279 */;
 import common_AlertDefault from "common/Alert" /* 5300 */;
-import Pressables from "Pressables" /* 5435 */;
 import PlatformsDefault from "Platforms" /* 5595 */;
 import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 5718 */;
 import GuildIconDefault from "GuildIcon" /* 5896 */;
+import TableRowDivider from "TableRowDivider" /* 5914 */;
 import TableRow from "TableRow" /* 5917 */;
-import TableRowGroup from "TableRowGroup" /* 5999 */;
-import _modDef6413 from "module_6413" /* 6413 */;
+import TableRowGroupContext from "TableRowGroupContext" /* 5918 */;
 import TableSwitchRow from "TableSwitchRow" /* 6621 */;
+import IconButton from "IconButton" /* 7363 */;
+import XLargeBoldIcon from "XLargeBoldIcon" /* 9184 */;
 import InfoBoxDefault from "InfoBox" /* 9254 */;
-import shouldWarnConnectedAccountTwoWayDefault from "shouldWarnConnectedAccountTwoWay" /* 14501 */;
-import XboxTwoWayLinkUpsell from "XboxTwoWayLinkUpsell" /* 14502 */;
-import PlayStationTwoWayLinkUpsell from "PlayStationTwoWayLinkUpsell" /* 14505 */;
+import shouldWarnConnectedAccountTwoWayDefault from "shouldWarnConnectedAccountTwoWay" /* 14500 */;
+import XboxTwoWayLinkUpsell from "XboxTwoWayLinkUpsell" /* 14501 */;
+import PlayStationTwoWayLinkUpsell from "PlayStationTwoWayLinkUpsell" /* 14504 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -106,31 +106,42 @@ function Integration(integration) {
   }
   const obj3 = integration(504);
 }
-function RowSwitch(label) {
-  const merged = Object.assign(label, Object.assign({ label: 0 }));
-  const merged1 = Object.assign(merged);
-  return closure_1_14(TableSwitchRow.TableSwitchRow, { label: label.label });
+function RowGroup(children) {
+  c0 = false;
+  const Children = noop.Children;
+  return Children.map(children.children, (arg0) => {
+    if (null == arg0) {
+      return null;
+    } else if (c0) {
+      const obj = { children: null };
+      const items = [closure_2_14(TableRowDivider.TableRowDivider, {}), arg0];
+      obj.children = items;
+      const tmp2 = __initData(value2, obj);
+    } else {
+      c0 = true;
+    }
+  });
 }
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ FRIEND_SYNC_PLATFORM_TYPES: closure_9, ACTIVITY_PLATFORM_TYPES: c10, PlatformTypes: closure_11, HelpdeskArticles: closure_12, Fonts } = Constants);
 const MetadataFields = fn(5720).MetadataFields;
 const jsxProd = fn(21);
-({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
+({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 const createStyles = fn(4836);
-let obj2 = { platformIcon: { marginRight: 4 }, connectedApplicationIdentityIcon: null, deleteConnectionIcon: null, container: null, connectedAccountItem: null, connectedAccountTopContainer: null, connectedAccountContentContainer: null, integrationContainer: null, integrationContainerInternal: null, integrationTextRowContainer: null, integrationErrorText: null, integrationCategoryLabel: null, integrationGuildIcon: null, integrationJoinButton: null, divider: null, alertInfoBox: null, alertBodyText: null, metadataContainer: null, metadataItemsContainer: null, metadataRefreshButton: null, metadataRefreshButtonDisabled: null, metadataRefreshIcon: null, metadataBannerContainer: null, newBadge: null, rowDivider: null, addDetailsButton: null, learnMoreButton: null, relinkButton: null, relinkText: null };
+let obj2 = { platformIcon: { marginRight: 4 }, connectedApplicationIdentityIcon: null, container: null, connectedAccountItem: null, connectedAccountHeader: null, connectedAccountSection: null, integrationsSection: null, integrationContainer: null, integrationContainerInternal: null, integrationTextRowContainer: null, integrationErrorText: null, integrationCategoryLabel: null, integrationGuildIcon: null, integrationJoinButton: null, alertInfoBox: null, alertBodyText: null, metadataContainer: null, metadataItemsContainer: null, refreshButtonContainer: null, metadataBannerContainer: null, newBadge: null, rowDivider: null, addDetailsButton: null, learnMoreButton: null, relinkButton: null, relinkText: null };
 let obj3 = { borderRadius: null, marginRight: 4 };
 const native = fn(1177);
 obj3.borderRadius = native.getIconSize(fn(1177).Icon.Sizes.LARGE);
 obj2.connectedApplicationIdentityIcon = obj3;
-obj2.deleteConnectionIcon = { marginRight: 10, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.container = { marginHorizontal: 8, marginVertical: 4 };
-let obj5 = { marginRight: 10, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.connectedAccountItem = { borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" };
-let obj6 = { borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" };
-obj2.connectedAccountTopContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderTopLeftRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderTopRightRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS };
-obj2.connectedAccountContentContainer = { marginTop: 8, gap: 8 };
-let obj7 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderTopLeftRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderTopRightRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS };
+let obj5 = { borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" };
+obj2.connectedAccountHeader = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST };
+let obj6 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST };
+obj2.connectedAccountSection = { backgroundColor: nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT, paddingTop: 8, gap: 8 };
+obj2.integrationsSection = { paddingHorizontal: 12, paddingBottom: 12, gap: 0 };
+let obj7 = { backgroundColor: nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT, paddingTop: 8, gap: 8 };
 obj2.integrationContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, marginTop: 12, paddingVertical: 4, borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, flexDirection: "column", alignItems: "center" };
 obj2.integrationContainerInternal = { alignItems: "center", flexDirection: "row" };
 obj2.integrationTextRowContainer = { alignItems: "flex-start", flexDirection: "column", flex: 1 };
@@ -138,24 +149,20 @@ obj2.integrationErrorText = { alignItems: "center", marginTop: 4, marginBottom: 
 obj2.integrationCategoryLabel = { marginVertical: 0 };
 obj2.integrationGuildIcon = { margin: 8 };
 obj2.integrationJoinButton = { alignSelf: "center", marginEnd: 8, marginStart: 8 };
-let obj8 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, marginTop: 12, paddingVertical: 4, borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, flexDirection: "column", alignItems: "center" };
-obj2.divider = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, height: 1, marginVertical: 8, marginHorizontal: 16 };
 obj2.alertInfoBox = { marginTop: 8 };
 let merged = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.TEXT_DEFAULT, 16));
 obj2.alertBodyText = { marginTop: 16 };
-let obj10 = { marginTop: 16 };
-let obj9 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, height: 1, marginVertical: 8, marginHorizontal: 16 };
-obj2.metadataContainer = { display: "flex", flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, padding: 8, marginLeft: 16, marginRight: 16 };
-obj2.metadataItemsContainer = { display: "flex", flexDirection: "row", flexWrap: "wrap", alignItems: "center", alignContent: "flex-start", paddingRight: 8, flexShrink: 1 };
-obj2.metadataRefreshButton = { alignSelf: "center", marginLeft: "auto" };
-obj2.metadataRefreshButtonDisabled = { opacity: 0.5 };
-obj2.metadataRefreshIcon = { height: 16, width: 16 };
+let obj8 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, marginTop: 12, paddingVertical: 4, borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, flexDirection: "column", alignItems: "center" };
+let obj9 = { marginTop: 16 };
+obj2.metadataContainer = { display: "flex", flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, marginHorizontal: 16, alignItems: "center", justifyContent: "space-between" };
+obj2.metadataItemsContainer = { display: "flex", flexDirection: "row", flexWrap: "wrap", alignItems: "center", alignContent: "flex-start", padding: 8, flexShrink: 1 };
+obj2.refreshButtonContainer = { marginRight: 4 };
 obj2.metadataBannerContainer = { justifyContent: "center", flexWrap: "wrap", alignItems: "center", paddingHorizontal: 16, paddingVertical: 14 };
 obj2.newBadge = { marginRight: 4 };
 obj2.rowDivider = { flexBasis: "100%", height: 12 };
 obj2.addDetailsButton = { paddingHorizontal: 16, flexGrow: 0, marginRight: 12 };
 obj2.learnMoreButton = { paddingHorizontal: 16, flexGrow: 0 };
-let obj11 = { display: "flex", flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, padding: 8, marginLeft: 16, marginRight: 16 };
+let obj10 = { display: "flex", flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, marginHorizontal: 16, alignItems: "center", justifyContent: "space-between" };
 obj2.relinkButton = { paddingVertical: 8, paddingHorizontal: 12, borderRadius: nativeDefault.radii.round };
 obj2.relinkText = { marginTop: 8 };
 let legacyClassComponentStyles = createStyles.createLegacyClassComponentStyles(obj2);
@@ -411,7 +418,7 @@ prototype["renderVisibilityCheckRow"] = function renderVisibilityCheckRow() {
   obj.label = intl.string(util.t.f7yOAX);
   obj.value = this.state.isVisible;
   obj.onValueChange = this.handleVisibilityChange;
-  return closure_1_14(RowSwitch, obj);
+  return closure_1_14(TableSwitchRow.TableSwitchRow, obj);
 };
 prototype["renderMetadataVisibilityCheckRow"] = function renderMetadataVisibilityCheckRow() {
   const self = this;
@@ -423,14 +430,14 @@ prototype["renderMetadataVisibilityCheckRow"] = function renderMetadataVisibilit
   if (true !== hasMetadata) {
     return null;
   } else {
-    const obj2 = { label: null, value: null, disabled: null, onValueChange: null };
     ({ isMetadataVisible, isVisible } = self.state);
+    const obj2 = { label: null, value: null, disabled: null, onValueChange: null };
     const intl = util.intl;
     obj2.label = intl.string(util.t.FYKGsL);
     obj2.value = isMetadataVisible;
     obj2.disabled = !isVisible;
     obj2.onValueChange = self.handleMetadataVisibilityChange;
-    return closure_1_14(RowSwitch, obj2);
+    return closure_1_14(TableSwitchRow.TableSwitchRow, obj2);
   }
 };
 prototype["renderMetadata"] = function renderMetadata() {
@@ -501,7 +508,7 @@ prototype["renderMetadata"] = function renderMetadata() {
     } else {
       const obj4 = { style: null, children: null };
       const items = [, ];
-      ({ metadataContainer: arr4[0], metadataBannerContainer: arr4[1] } = tmp);
+      ({ metadataContainer: arr3[0], metadataBannerContainer: arr3[1] } = tmp);
       obj4.style = items;
       const obj5 = { text: null, style: null };
       const intl4 = tmp2(1115).intl;
@@ -545,34 +552,25 @@ prototype["renderMetadata"] = function renderMetadata() {
       obj4.children = items1;
       closure_15(View, obj4);
     }
-    const obj13 = self(5595);
+    const obj14 = self(5595);
   } else {
-    const obj12 = { accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, onPress: null, disabled: null, style: null, children: null };
+    if (self.state.metadataAlreadyRefreshed) {
+      let tmp19Result = closure_14(tmp2(8258).CheckmarkLargeBoldIcon, { size: "sm" });
+    } else {
+      tmp19Result = closure_14(tmp2(14506).RefreshIcon, { size: "sm" });
+    }
+    const obj12 = { size: "sm", variant: "icon-only", icon: tmp19Result, accessibilityLabel: null, onPress: null, disabled: null };
     const intl3 = tmp2(1115).intl;
     obj12.accessibilityLabel = intl3.string(tmp2(1115).t.wzzjk9);
-    obj12.hitSlop = { top: 8, right: 8, bottom: 8, left: 8 };
     obj12.onPress = handleRefresh;
     obj12.disabled = intl2;
-    const items2 = [tmp.metadataRefreshButton, ];
-    let metadataRefreshButtonDisabled = intl2;
-    if (intl2) {
-      metadataRefreshButtonDisabled = tmp.metadataRefreshButtonDisabled;
-    }
-    items2[1] = metadataRefreshButtonDisabled;
-    obj12.style = items2;
-    const obj14 = { style: tmp.metadataRefreshIcon, size: tmp2(1177).Icon.Sizes.SMALL, source: null };
-    if (self.state.metadataAlreadyRefreshed) {
-      let tmp9Result = tmp9(10115);
-    } else {
-      tmp9Result = tmp9(14507);
-    }
-    obj14.source = tmp9Result;
-    obj12.children = closure_14(tmp2(1177).Icon, obj14);
-    const obj15 = { style: tmp.metadataContainer, children: null };
-    const obj16 = { style: tmp.metadataItemsContainer, children: redditMetadataItems };
-    const items3 = [closure_14(View, obj16), closure_14(tmp2(5435).PressableOpacity, obj12)];
-    obj15.children = items3;
-    return closure_15(View, obj15);
+    const obj13 = { style: tmp.metadataContainer, children: null };
+    const obj15 = { style: tmp.metadataItemsContainer, children: redditMetadataItems };
+    const items2 = [closure_14(View, obj15), ];
+    const obj16 = { style: tmp.refreshButtonContainer, children: closure_14(tmp2(7363).IconButton, obj12) };
+    items2[1] = closure_14(View, obj16);
+    obj13.children = items2;
+    return closure_15(View, obj13);
   }
   const obj2 = account(5719);
 };
@@ -584,7 +582,7 @@ prototype["renderFriendSyncCheckRow"] = function renderFriendSyncCheckRow() {
     obj2.label = intl.string(util.t["+KCMSi"]);
     obj2.value = this.state.friendSync;
     obj2.onValueChange = this.handleFriendSyncChange;
-    tmp2 = closure_1_14(RowSwitch, obj2);
+    tmp2 = closure_1_14(TableSwitchRow.TableSwitchRow, obj2);
   }
   return tmp2;
 };
@@ -598,7 +596,7 @@ prototype["renderActivityCheckRow"] = function renderActivityCheckRow() {
     obj2.label = intl.formatToPlainString(util.t["6u6J0q"], obj3);
     obj2.value = this.state.showActivity;
     obj2.onValueChange = this.handleShowActivityChange;
-    tmp3 = closure_1_14(RowSwitch, obj2);
+    tmp3 = closure_1_14(TableSwitchRow.TableSwitchRow, obj2);
   }
   return tmp3;
 };
@@ -609,19 +607,17 @@ prototype["renderIntegrationsRow"] = function renderIntegrationsRow() {
   if (account.integrations.length > 0) {
     tmp2 = null;
     if (!account.revoked) {
-      const obj = { children: null };
-      const obj2 = { style: tmp.divider };
-      const items = [closure_1_14(View, obj2), ];
-      const obj3 = { style: { paddingHorizontal: 16, paddingVertical: 8 }, children: null };
-      const obj4 = { style: tmp.integrationCategoryLabel, variant: "eyebrow", color: "mobile-text-heading-primary", children: null };
+      const obj = { style: null, children: null };
+      const items = [, ];
+      ({ connectedAccountSection: arr[0], integrationsSection: arr[1] } = tmp);
+      obj.style = items;
+      const obj2 = { style: tmp.integrationCategoryLabel, variant: "eyebrow", color: "mobile-text-heading-primary", children: null };
       const intl = util.intl;
-      obj4.children = intl.string(util.t.fOe3fZ);
-      const items1 = [closure_1_14(Text_Text.Text, obj4), ];
+      obj2.children = intl.string(util.t.fOe3fZ);
+      const items1 = [closure_1_14(Text_Text.Text, obj2), ];
       const integrations = account.integrations;
       items1[1] = integrations.map((integration) => closure_1_14(Integration, { integration }, integration.id));
-      obj3.children = items1;
-      items[1] = __initData(View, obj3);
-      obj.children = items;
+      obj.children = items1;
       tmp2 = __initData(View, obj);
     }
   }
@@ -649,38 +645,40 @@ prototype["render"] = function render() {
   const obj4 = AvatarUtils;
   const icon = value.icon;
   obj3.source = obj4.makeSource(shared.isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG);
-  const obj6 = { spacing: 8, direction: "horizontal", align: "center", children: null };
-  const obj7 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
+  const obj6 = { size: "sm", variant: "icon-only", icon: closure_1_14(XLargeBoldIcon.XLargeBoldIcon, { size: "sm" }), accessibilityLabel: null, onPress: null };
   const intl2 = util.intl;
-  obj7.accessibilityLabel = intl2.string(util.t["DT39A+"]);
-  obj7.onPress = self.handleDisconnect;
-  obj7.hitSlop = { top: 5, left: 5, bottom: 5, right: 5 };
+  obj6.accessibilityLabel = intl2.string(util.t["DT39A+"]);
+  obj6.onPress = self.handleDisconnect;
   const tmp7Result = closure_1_14(native2.Icon, obj3);
-  obj7.children = closure_1_14(native2.Icon, { style: tmp.deleteConnectionIcon, source: _modDef6413 });
-  obj6.children = closure_1_14(Pressables.PressableOpacity, obj7);
-  const obj8 = { style: tmp.deleteConnectionIcon, source: _modDef6413 };
   const result = self.renderIntegrationsRow();
   const result1 = self.renderFriendSyncCheckRow();
   const result2 = self.renderActivityCheckRow();
   const result3 = self.renderMetadataVisibilityCheckRow();
-  const obj9 = { style: tmp.container, children: null };
-  const obj10 = { style: tmp.connectedAccountItem, children: null };
-  const obj11 = { style: tmp.connectedAccountTopContainer, children: null };
   const result4 = self.renderVisibilityCheckRow();
-  obj11.children = closure_1_14(TableRow.TableRow, { label: name, icon: tmp7Result, trailing: closure_1_14(Stack_Stack.Stack, obj6) });
-  const items = [closure_1_14(View, obj11), ];
-  const obj12 = { style: tmp.connectedAccountContentContainer, children: null };
-  const items1 = [self.renderUpsell(), self.renderMetadata(), , ];
-  const obj13 = { hasIcons: false, children: null };
-  const items2 = [result4, result3, result2, result1];
-  obj13.children = items2;
-  items1[2] = __initData(TableRowGroup.TableRowGroup, obj13);
-  items1[3] = result;
-  obj12.children = items1;
-  items[1] = __initData(View, obj12);
-  obj10.children = items;
-  obj9.children = __initData(View, obj10);
-  return closure_1_14(View, obj9);
+  const renderUpsellResult = self.renderUpsell();
+  const tmp7Result2 = closure_1_14(IconButton.IconButton, obj6);
+  const obj7 = { style: tmp.container, children: null };
+  const obj8 = { style: tmp.connectedAccountItem, children: null };
+  const renderMetadataResult = self.renderMetadata();
+  const items = [closure_1_14(View, { style: tmp.connectedAccountHeader, children: closure_1_14(TableRow.TableRow, { label: name, icon: tmp7Result, trailing: tmp7Result2 }) }), , ];
+  if (null != renderUpsellResult) {
+    const obj10 = { style: tmp.connectedAccountSection, children: null };
+    const items1 = [renderUpsellResult, renderMetadataResult];
+    obj10.children = items1;
+    let tmp19Result = __initData(View, obj10);
+  } else {
+    tmp19Result = null;
+  }
+  const obj11 = { value: true, children: null };
+  items[1] = tmp19Result;
+  const obj12 = { children: null };
+  const items2 = [result4, result3, result2, result1, result];
+  obj12.children = items2;
+  items[2] = __initData(RowGroup, obj12);
+  obj11.children = items;
+  obj8.children = __initData(TableRowGroupContext.TableRowGroupContext, obj11);
+  obj7.children = closure_1_14(View, obj8);
+  return closure_1_14(View, obj7);
 };
 ConnectedAccount.contextType = fn(4540).ThemeContext;
 const size = fn(2);

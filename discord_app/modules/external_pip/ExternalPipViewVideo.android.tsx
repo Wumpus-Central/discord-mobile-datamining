@@ -1,12 +1,12 @@
-// === Module 16823: ExternalPipViewVideo ===
+// === Module 16827: ExternalPipViewVideo ===
 
-// Module 16823 (ExternalPipViewVideo)
+// Module 16827 (ExternalPipViewVideo)
 import nativeDefault from "native" /* 576 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 4787 */;
 import StreamEnded from "StreamEnded" /* 8877 */;
 import ExternalPipDefault from "ExternalPip" /* 8886 */;
-import VideoActionCreators from "VideoActionCreators" /* 16824 */;
-import useExternalPipParticipantDefault from "useExternalPipParticipant" /* 16825 */;
+import VideoActionCreators from "VideoActionCreators" /* 16828 */;
+import useExternalPipParticipantDefault from "useExternalPipParticipant" /* 16829 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;

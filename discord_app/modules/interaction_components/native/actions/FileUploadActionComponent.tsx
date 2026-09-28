@@ -1,6 +1,6 @@
-// === Module 17159: FileUploadActionComponent ===
+// === Module 17163: FileUploadActionComponent ===
 
-// Module 17159 (FileUploadActionComponent)
+// Module 17163 (FileUploadActionComponent)
 import util from "util" /* 1115 */;
 import FileSizeUtils from "FileSizeUtils" /* 4731 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 4792 */;
@@ -11,7 +11,7 @@ import IconButton from "IconButton" /* 7363 */;
 import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 8608 */;
 import AttachmentPreview from "AttachmentPreview" /* 9657 */;
 import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10098 */;
-import FileUpIcon from "FileUpIcon" /* 15093 */;
+import FileUpIcon from "FileUpIcon" /* 15091 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;

@@ -1,6 +1,6 @@
-// === Module 17131: GameConsoleManager ===
+// === Module 17135: GameConsoleManager ===
 
-// Module 17131 (GameConsoleManager)
+// Module 17135 (GameConsoleManager)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1115 */;
@@ -9,7 +9,7 @@ import Timers from "Timers" /* 2040 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 9104 */;
 import GameConsoleActionCreators from "GameConsoleActionCreators" /* 9243 */;
 import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 9246 */;
-import _modDef17132 from "module_17132" /* 17132 */;
+import _modDef17136 from "module_17136" /* 17136 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1993 */;
@@ -259,7 +259,7 @@ const prototype = function GameConsoleManager() {
             obj.name = intl2.string(util.t["UQMV/E"]);
             device = obj;
           }
-          const tmp8Result = _modDef17132(device, result, error);
+          const tmp8Result = _modDef17136(device, result, error);
           if (null != tmp8Result) {
             const obj2 = { title: null, body: null, errorCodeMessage: null, reconnectPlatformType: null };
             ({ title: obj3.title, body: obj3.body, errorCodeMessage: obj3.errorCodeMessage } = tmp8Result);

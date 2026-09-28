@@ -1,6 +1,6 @@
-// === Module 15642: getScreenAnalyticsName ===
+// === Module 15640: getScreenAnalyticsName ===
 
-// Module 15642 (getScreenAnalyticsName)
+// Module 15640 (getScreenAnalyticsName)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4692 */;
 import RootNavigationRef from "RootNavigationRef" /* 4693 */;
 import ChannelStore from "ChannelStore" /* 2045 */;

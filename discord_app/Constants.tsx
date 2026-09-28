@@ -2030,8 +2030,8 @@ const frozen2 = Object.freeze({
     return "/guilds/" + arg0 + "/rooms/" + arg1 + "/objects/" + arg2;
   },
   VIBEGRATIONS_PROJECTS: "/vibegrations/projects",
-  VIBEGRATIONS_PROJECT(arg0) {
-    return "/vibegrations/projects/" + arg0;
+  VIBEGRATIONS_PROJECT(projectId) {
+    return "/vibegrations/projects/" + projectId;
   },
   VIBEGRATIONS_PROJECT_WS_TICKET(projectId) {
     return "/vibegrations/projects/" + projectId + "/ws-ticket";
@@ -4057,8 +4057,8 @@ const obj2 = {
     return "/guilds/" + arg0 + "/rooms/" + arg1 + "/objects/" + arg2;
   },
   VIBEGRATIONS_PROJECTS: "/vibegrations/projects",
-  VIBEGRATIONS_PROJECT(arg0) {
-    return "/vibegrations/projects/" + arg0;
+  VIBEGRATIONS_PROJECT(projectId) {
+    return "/vibegrations/projects/" + projectId;
   },
   VIBEGRATIONS_PROJECT_WS_TICKET(projectId) {
     return "/vibegrations/projects/" + projectId + "/ws-ticket";

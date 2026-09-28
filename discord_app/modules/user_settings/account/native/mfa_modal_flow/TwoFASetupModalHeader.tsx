@@ -1,6 +1,6 @@
-// === Module 14319: TwoFASetupModalHeader ===
+// === Module 14318: TwoFASetupModalHeader ===
 
-// Module 14319 (TwoFASetupModalHeader)
+// Module 14318 (TwoFASetupModalHeader)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 

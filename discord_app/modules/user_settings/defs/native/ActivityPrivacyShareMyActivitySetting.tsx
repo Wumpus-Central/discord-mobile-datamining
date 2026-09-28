@@ -1,6 +1,6 @@
-// === Module 15526: ActivityPrivacyShareMyActivitySetting ===
+// === Module 15524: ActivityPrivacyShareMyActivitySetting ===
 
-// Module 15526 (ActivityPrivacyShareMyActivitySetting)
+// Module 15524 (ActivityPrivacyShareMyActivitySetting)
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 2021 */;
 import _modDef2653 from "module_2653" /* 2653 */;

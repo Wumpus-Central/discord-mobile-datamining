@@ -1,6 +1,6 @@
-// === Module 14458: FamilyCenterModalDisconnect ===
+// === Module 14457: FamilyCenterModalDisconnect ===
 
-// Module 14458 (FamilyCenterModalDisconnect)
+// Module 14457 (FamilyCenterModalDisconnect)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef2487 from "module_2487" /* 2487 */;
@@ -9,7 +9,7 @@ import UserUtilsDefault from "UserUtils" /* 4678 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5039 */;
 import NavigatorHeader from "NavigatorHeader" /* 5936 */;
 import _modDef6413 from "module_6413" /* 6413 */;
-import FamilyCenterAvatarPairDefault from "FamilyCenterAvatarPair" /* 14459 */;
+import FamilyCenterAvatarPairDefault from "FamilyCenterAvatarPair" /* 14458 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -96,7 +96,7 @@ function FamilyCenterModalDisconnectScreen(otherUser) {
   let tmp28Result = requiresParentalConsent;
   if (requiresParentalConsent) {
     const obj13 = { style: tmp.warning, text: ageSpecificText1 };
-    tmp28Result = closure_6(tmp3(14411), obj13);
+    tmp28Result = closure_6(tmp3(14410), obj13);
   }
   const obj14 = { children: null };
   items4[1] = tmp28Result;

@@ -1,12 +1,12 @@
-// === Module 16220: GuildHomeResources ===
+// === Module 16216: GuildHomeResources ===
 
-// Module 16220 (GuildHomeResources)
+// Module 16216 (GuildHomeResources)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1101 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 6876 */;
 import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 11767 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 16214 */;
-import _modDef16222 from "module_16222" /* 16222 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 16210 */;
+import _modDef16218 from "module_16218" /* 16218 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import GuildChannelStore from "GuildChannelStore" /* 4467 */;
@@ -42,7 +42,7 @@ function ResourceChannelRow(channelId) {
   }
   const obj6 = channelId(7323);
   let flag = channelId(11491).useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
-  const tmp11 = stateFromStores(16221)(firstResult);
+  const tmp11 = stateFromStores(16217)(firstResult);
   const tmp12 = null != stateFromStores && null == stateFromStores2.first() && !stateFromStores2.loadingMore && !stateFromStores2.ready && !stateFromStores2.hasFetched;
   dependencyMap = tmp12;
   const items3 = [channelId, tmp12];
@@ -156,7 +156,7 @@ export default function GuildHomeResources(guildId) {
     const intl = guildId(1115).intl;
     obj3.children = intl.string(guildId(1115).t.owvC9U);
     const items = [closure_12(guildId(4832).Text, obj3), , ];
-    const obj4 = { style: tmp.emptyStateImage, source: _modDef16222 };
+    const obj4 = { style: tmp.emptyStateImage, source: _modDef16218 };
     items[1] = closure_12(closure_5, obj4);
     const obj5 = {
       onPress() {

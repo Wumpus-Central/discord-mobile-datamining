@@ -1,6 +1,6 @@
-// === Module 13118: useMarketablePowerupPerks ===
+// === Module 13117: useMarketablePowerupPerks ===
 
-// Module 13118 (useMarketablePowerupPerks)
+// Module 13117 (useMarketablePowerupPerks)
 import Powerups from "Powerups" /* 4727 */;
 import noop from "module_19" /* 19 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 4723 */;

@@ -1,6 +1,6 @@
-// === Module 17423: RoleIconActionSheet ===
+// === Module 17427: RoleIconActionSheet ===
 
-// Module 17423 (RoleIconActionSheet)
+// Module 17427 (RoleIconActionSheet)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
@@ -9,10 +9,10 @@ import TableRow from "TableRow" /* 5917 */;
 import TableRowGroup from "TableRowGroup" /* 5999 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6570 */;
 import ActionSheet from "ActionSheet" /* 6618 */;
-import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 17420 */;
+import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 17424 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 17406 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 17410 */;
 
 require = fn;
 const UPLOAD_SMALL_SIZE = fn(1074).UPLOAD_SMALL_SIZE;
@@ -178,18 +178,18 @@ export default function RoleIconActionSheet(arg0) {
                   surrogates = closure_0.surrogates;
                 }
                 if (null != surrogates) {
-                  closure_0(17420).updateRoleIcon(surrogates, null, tmp26);
-                  const obj5 = closure_0(17420);
+                  closure_0(17424).updateRoleIcon(surrogates, null, tmp26);
+                  const obj5 = closure_0(17424);
                 }
               } else {
                 c6 = 1;
-                const tmp22 = closure_0(17420);
+                const tmp22 = closure_0(17424);
                 closure_4 = tmp22;
                 const updateRoleIcon = tmp22.updateRoleIcon;
                 closure_2 = surrogates;
                 c7 = 2;
                 c8 = 1;
-                const obj7 = { value: closure_0(17424).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
+                const obj7 = { value: closure_0(17428).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
                 return obj7;
               }
             }

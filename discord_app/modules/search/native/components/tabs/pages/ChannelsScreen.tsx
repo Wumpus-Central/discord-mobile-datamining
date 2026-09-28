@@ -1,6 +1,6 @@
-// === Module 16519: ChannelsScreen ===
+// === Module 16523: ChannelsScreen ===
 
-// Module 16519 (ChannelsScreen)
+// Module 16523 (ChannelsScreen)
 import util from "util" /* 1115 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4541 */;
 import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 11841 */;

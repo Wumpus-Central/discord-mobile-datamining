@@ -1,6 +1,6 @@
-// === Module 17117: CustomStatusManager ===
+// === Module 17121: CustomStatusManager ===
 
-// Module 17117 (CustomStatusManager)
+// Module 17121 (CustomStatusManager)
 import setUserStatusDefault from "setUserStatus" /* 9551 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 5591 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6539 */;

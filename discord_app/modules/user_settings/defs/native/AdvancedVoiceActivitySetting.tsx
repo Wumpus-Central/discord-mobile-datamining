@@ -1,6 +1,6 @@
-// === Module 14807: AdvancedVoiceActivitySetting ===
+// === Module 14805: AdvancedVoiceActivitySetting ===
 
-// Module 14807 (AdvancedVoiceActivitySetting)
+// Module 14805 (AdvancedVoiceActivitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 9104 */;

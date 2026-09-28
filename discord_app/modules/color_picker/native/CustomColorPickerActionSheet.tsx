@@ -1,13 +1,13 @@
-// === Module 14154: CustomColorPickerActionSheet ===
+// === Module 14153: CustomColorPickerActionSheet ===
 
-// Module 14154 (CustomColorPickerActionSheet)
+// Module 14153 (CustomColorPickerActionSheet)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import ColorUtils from "ColorUtils" /* 4683 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
-import ColorPickerUtils from "ColorPickerUtils" /* 14156 */;
+import ColorPickerUtils from "ColorPickerUtils" /* 14155 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -171,7 +171,7 @@ export default function CustomColorPickerActionSheet(arg0) {
   }
   obj12.color = memo;
   items3[1] = sharedValue2(SuggestedColors, obj12);
-  items3[2] = sharedValue2(tmp16(14157), {
+  items3[2] = sharedValue2(tmp16(14156), {
     hue: sharedValue,
     saturation: sharedValue1,
     value: sharedValue2,

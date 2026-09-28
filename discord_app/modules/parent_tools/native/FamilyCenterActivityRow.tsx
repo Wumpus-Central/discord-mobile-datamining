@@ -1,6 +1,6 @@
-// === Module 14437: FamilyCenterActivityRow ===
+// === Module 14436: FamilyCenterActivityRow ===
 
-// Module 14437 (FamilyCenterActivityRow)
+// Module 14436 (FamilyCenterActivityRow)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
@@ -9,9 +9,9 @@ import UserUtilsDefault from "UserUtils" /* 4678 */;
 import GuildIconDefault from "GuildIcon" /* 5896 */;
 import GuildBadgeDefault from "GuildBadge" /* 5902 */;
 import FamilyCenterUtils from "FamilyCenterUtils" /* 7012 */;
-import FamilyCenterActivityPurchaseRowDefault from "FamilyCenterActivityPurchaseRow" /* 14438 */;
-import FamilyCenterActivityGiftRowUtils from "FamilyCenterActivityGiftRowUtils" /* 14441 */;
-import FamilyCenterActivityGiftRowDefault from "FamilyCenterActivityGiftRow" /* 14442 */;
+import FamilyCenterActivityPurchaseRowDefault from "FamilyCenterActivityPurchaseRow" /* 14437 */;
+import FamilyCenterActivityGiftRowUtils from "FamilyCenterActivityGiftRowUtils" /* 14440 */;
+import FamilyCenterActivityGiftRowDefault from "FamilyCenterActivityGiftRow" /* 14441 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 6957 */;

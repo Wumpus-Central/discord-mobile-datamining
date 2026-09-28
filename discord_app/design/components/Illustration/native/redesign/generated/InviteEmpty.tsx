@@ -1,6 +1,6 @@
-// === Module 17445: InviteEmpty ===
+// === Module 17449: InviteEmpty ===
 
-// Module 17445 (InviteEmpty)
+// Module 17449 (InviteEmpty)
 import shared from "shared" /* 4685 */;
 import _mod7679 from "module_7679" /* 7679 */;
 import noop from "module_19" /* 19 */;
@@ -19,7 +19,7 @@ export const getInviteEmptySource = function getInviteEmptySource(theme) {
       return require("module_10412");
     },
     darker() {
-      return require("module_17446");
+      return require("module_17450");
     },
     light() {
       return require("module_10411");
@@ -33,7 +33,7 @@ export const useInviteEmptySource = function useInviteEmptySource() {
       return require("module_10412");
     },
     darker() {
-      return require("module_17446");
+      return require("module_17450");
     },
     light() {
       return require("module_10411");
@@ -48,7 +48,7 @@ export const InviteEmpty = function InviteEmpty(arg0) {
       return require("module_10412");
     },
     darker() {
-      return require("module_17446");
+      return require("module_17450");
     },
     light() {
       return require("module_10411");

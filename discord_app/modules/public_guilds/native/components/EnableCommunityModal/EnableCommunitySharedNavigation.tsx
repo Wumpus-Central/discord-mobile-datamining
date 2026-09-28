@@ -1,6 +1,6 @@
-// === Module 17464: EnableCommunitySharedNavigation ===
+// === Module 17468: EnableCommunitySharedNavigation ===
 
-// Module 17464 (EnableCommunitySharedNavigation)
+// Module 17468 (EnableCommunitySharedNavigation)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import noop from "module_19" /* 19 */;
 import GuildSettingsStore from "GuildSettingsStore" /* 9049 */;

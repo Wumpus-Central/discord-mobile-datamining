@@ -1,6 +1,6 @@
-// === Module 16656: ChannelSettingsIntegrationsOverview ===
+// === Module 16660: ChannelSettingsIntegrationsOverview ===
 
-// Module 16656 (ChannelSettingsIntegrationsOverview)
+// Module 16660 (ChannelSettingsIntegrationsOverview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -10,8 +10,8 @@ import TableRow from "TableRow" /* 5917 */;
 import TableRowGroup from "TableRowGroup" /* 5999 */;
 import Form from "Form" /* 8053 */;
 import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 9023 */;
-import WebhookIcon from "WebhookIcon" /* 16549 */;
-import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 16657 */;
+import WebhookIcon from "WebhookIcon" /* 16553 */;
+import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 16661 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 

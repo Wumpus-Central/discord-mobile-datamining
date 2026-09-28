@@ -1,6 +1,6 @@
-// === Module 16145: ICYMIShareModal ===
+// === Module 16141: ICYMIShareModal ===
 
-// Module 16145 (ICYMIShareModal)
+// Module 16141 (ICYMIShareModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1479 */;
@@ -16,7 +16,7 @@ import ClientThemesOverrides from "ClientThemesOverrides" /* 7297 */;
 import ShareEventUtils from "ShareEventUtils" /* 9065 */;
 import useShareChatInputActions from "useShareChatInputActions" /* 11189 */;
 import ShareChatInputDefault from "ShareChatInput" /* 11201 */;
-import _modDef16147 from "module_16147" /* 16147 */;
+import _modDef16143 from "module_16143" /* 16143 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -57,7 +57,7 @@ function Screenshot(setUri) {
   const obj5 = { style: tmp.base, children: null };
   const obj6 = { absolute: true, wide: true, tall: true, mix: true, mixAmount: null };
   const obj7 = { dark: null, light: null };
-  const tmp6 = _modDef16147;
+  const tmp6 = _modDef16143;
   obj7.dark = client_themes_ClientThemesUtils.OverlayOpacity.LEVEL_7;
   obj7.light = client_themes_ClientThemesUtils.OverlayOpacity.LEVEL_8;
   obj6.mixAmount = obj7;
@@ -447,7 +447,7 @@ export const GameShareModal = function GameShareModal(content) {
             const obj6 = { channel: entry, content: "", entry, whenReady: false, doNotNotifyOnError: true, location: constants2.ICYMI };
             c5 = 2;
             c6 = 1;
-            const obj7 = { value: entry(16146).sendMessageWithEmbed(obj6), done: false };
+            const obj7 = { value: entry(16142).sendMessageWithEmbed(obj6), done: false };
             return obj7;
           }
         } else if (1 === tmp7) {

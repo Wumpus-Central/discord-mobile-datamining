@@ -1,6 +1,6 @@
-// === Module 12553: AddOrOpenAppButton ===
+// === Module 12571: AddOrOpenAppButton ===
 
-// Module 12553 (AddOrOpenAppButton)
+// Module 12571 (AddOrOpenAppButton)
 import ToastUtils from "ToastUtils" /* 4527 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
 import ClipboardUtils from "ClipboardUtils" /* 6610 */;

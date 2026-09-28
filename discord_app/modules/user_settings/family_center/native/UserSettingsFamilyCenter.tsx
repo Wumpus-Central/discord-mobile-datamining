@@ -1,6 +1,6 @@
-// === Module 14406: UserSettingsFamilyCenter ===
+// === Module 14405: UserSettingsFamilyCenter ===
 
-// Module 14406 (UserSettingsFamilyCenter)
+// Module 14405 (UserSettingsFamilyCenter)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import MonitoringAgentDefault from "MonitoringAgent" /* 5179 */;
@@ -21,8 +21,8 @@ function FamilyCenter() {
   const tmp = closure_18();
   const tmp3 = isLoading(6583);
   const acceptedRequestsCount = familyCenterInitialized(8105).useAcceptedRequestsCount();
-  const tmp6 = isLoading(14407)();
-  const selectedTab = isLoading(14408)().selectedTab;
+  const tmp6 = isLoading(14406)();
+  const selectedTab = isLoading(14407)().selectedTab;
   let obj = familyCenterInitialized(8105);
   const selectedTeenId = familyCenterInitialized(8107).useSelectedTeenId();
   let obj2 = familyCenterInitialized(8107);
@@ -43,13 +43,13 @@ function FamilyCenter() {
   const intl = familyCenterInitialized(1115).intl;
   obj6.label = intl.string(isLoading(2487).bdBmqy);
   obj6.id = FamilyCenterSubPages.ACTIVITY;
-  obj6.page = closure_14(isLoading(14409), {});
+  obj6.page = closure_14(isLoading(14408), {});
   const items1 = [obj6, ];
   const obj7 = { label: null, id: null, page: null };
   const intl2 = familyCenterInitialized(1115).intl;
   obj7.label = intl2.string(isLoading(2487)["gVWG+6"]);
   obj7.id = FamilyCenterSubPages.REQUESTS;
-  obj7.page = closure_14(isLoading(14449), {});
+  obj7.page = closure_14(isLoading(14448), {});
   items1[1] = obj7;
   obj5.items = items1;
   obj5.onPageChange = function onPageChange(arg0) {

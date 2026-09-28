@@ -1,9 +1,9 @@
-// === Module 16770: FileUploadSpotIllustration ===
+// === Module 16774: FileUploadSpotIllustration ===
 
-// Module 16770 (FileUploadSpotIllustration)
+// Module 16774 (FileUploadSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
 import FastImageDefault from "FastImage" /* 5899 */;
-import _modDef16771 from "module_16771" /* 16771 */;
+import _modDef16775 from "module_16775" /* 16775 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const FileUploadSpotIllustration = function FileUploadSpotIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef16771 };
+  const obj2 = { uri: _modDef16775 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

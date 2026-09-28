@@ -1,12 +1,12 @@
-// === Module 16547: AutocompleteScreen ===
+// === Module 16551: AutocompleteScreen ===
 
-// Module 16547 (AutocompleteScreen)
+// Module 16551 (AutocompleteScreen)
 import UserUtilsDefault from "UserUtils" /* 4678 */;
 import useChannelName from "useChannelName" /* 4989 */;
 import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11821 */;
 import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 11841 */;
 import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 11844 */;
-import AutocompleteScreenUtils from "AutocompleteScreenUtils" /* 16548 */;
+import AutocompleteScreenUtils from "AutocompleteScreenUtils" /* 16552 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;

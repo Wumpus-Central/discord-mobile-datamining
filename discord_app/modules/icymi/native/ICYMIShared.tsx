@@ -1,6 +1,6 @@
-// === Module 16134: ICYMIShared ===
+// === Module 16130: ICYMIShared ===
 
-// Module 16134 (ICYMIShared)
+// Module 16130 (ICYMIShared)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
@@ -17,7 +17,7 @@ import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 76
 import ICYMIUtils from "ICYMIUtils" /* 7798 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 7799 */;
 import ClipView from "ClipView" /* 8276 */;
-import openDetailsActionSheet from "openDetailsActionSheet" /* 16135 */;
+import openDetailsActionSheet from "openDetailsActionSheet" /* 16131 */;
 import noop from "module_19" /* 19 */;
 import ThreadMessageStore from "ThreadMessageStore" /* 6724 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
@@ -148,7 +148,7 @@ const Constants = fn(1074);
 ({ AnalyticsObjects: c10, AnalyticsObjectTypes: closure_11, AnalyticsPages: closure_12, DEFAULT_ROLE_COLOR_HEX: map1, MAX_MESSAGES_FOR_JUMP: closure_14, MessageFlags: closure_15, Permissions: closure_16, Routes: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-const createICYMIStyles = fn(16095);
+const createICYMIStyles = fn(16091);
 createICYMIStyles.createICYMIStyles((paddingBottom) => {
   let num = 0;
   if (obj.isAndroid()) {

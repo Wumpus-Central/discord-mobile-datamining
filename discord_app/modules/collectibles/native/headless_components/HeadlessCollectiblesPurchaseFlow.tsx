@@ -1,6 +1,6 @@
-// === Module 12738: HeadlessCollectiblesPurchaseFlow ===
+// === Module 12737: HeadlessCollectiblesPurchaseFlow ===
 
-// Module 12738 (HeadlessCollectiblesPurchaseFlow)
+// Module 12737 (HeadlessCollectiblesPurchaseFlow)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import BillingPlatformUtils from "BillingPlatformUtils" /* 4501 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
@@ -10,7 +10,7 @@ import ACOMExperiments from "ACOMExperiments" /* 8666 */;
 import NativeCheckoutStoreProviderDefault from "NativeCheckoutStoreProvider" /* 10269 */;
 import NativePaymentContext from "NativePaymentContext" /* 10282 */;
 import useCollectiblesExternalGatewayFacetDefault from "useCollectiblesExternalGatewayFacet" /* 10475 */;
-import HeadlessCollectiblesPurchaseRunner from "HeadlessCollectiblesPurchaseRunner" /* 12739 */;
+import HeadlessCollectiblesPurchaseRunner from "HeadlessCollectiblesPurchaseRunner" /* 12738 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

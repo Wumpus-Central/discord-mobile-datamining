@@ -1,9 +1,9 @@
-// === Module 17756: ToggleDeafen ===
+// === Module 17760: ToggleDeafen ===
 
-// Module 17756 (ToggleDeafen)
+// Module 17760 (ToggleDeafen)
 import VoiceActionUtils from "VoiceActionUtils" /* 9463 */;
 import useDeafStates from "useDeafStates" /* 9478 */;
-import HeadlessTaskUtilsDefault from "HeadlessTaskUtils" /* 17753 */;
+import HeadlessTaskUtilsDefault from "HeadlessTaskUtils" /* 17757 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 
 require = fn;

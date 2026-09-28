@@ -53,15 +53,15 @@ function updateFriendAnniversaries() {
               if (userAffinity.dmProbability > 0) {
                 if (null != since) {
                   let _Date = Date;
-                  let tmp25 = new.target;
                   let tmp26 = new.target;
+                  let tmp27 = new.target;
                   let date = new Date(since);
-                  let tmp29 = date;
+                  let tmp30 = date;
                   let obj = FriendAnniversaryUtils;
                   if (obj.isFriendAnniversary(date)) {
                     let arr = closure_11.push(tmp17);
                     let obj2 = { friendsSince: null };
-                    obj2.friendsSince = tmp29;
+                    obj2.friendsSince = tmp30;
                     closure_14[tmp17] = obj2;
                   }
                 }

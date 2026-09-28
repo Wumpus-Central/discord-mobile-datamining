@@ -1,9 +1,9 @@
-// === Module 15523: ParentalControlsUseDataToCustomizeDiscordSetting ===
+// === Module 15521: ParentalControlsUseDataToCustomizeDiscordSetting ===
 
-// Module 15523 (ParentalControlsUseDataToCustomizeDiscordSetting)
+// Module 15521 (ParentalControlsUseDataToCustomizeDiscordSetting)
 import util from "util" /* 1115 */;
 import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 6959 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14354 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14353 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 6957 */;
 
 require = fn;

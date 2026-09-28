@@ -1,6 +1,6 @@
-// === Module 13524: RowGroup ===
+// === Module 13523: RowGroup ===
 
-// Module 13524 (RowGroup)
+// Module 13523 (RowGroup)
 import nativeDefault from "native" /* 576 */;
 import Stack_Stack from "Stack/Stack" /* 5279 */;
 import TableRowGroup from "TableRowGroup" /* 5999 */;

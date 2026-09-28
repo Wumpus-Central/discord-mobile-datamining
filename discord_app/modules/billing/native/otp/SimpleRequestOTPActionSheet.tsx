@@ -1,6 +1,6 @@
-// === Module 15297: SimpleRequestOTPActionSheet ===
+// === Module 15295: SimpleRequestOTPActionSheet ===
 
-// Module 15297 (SimpleRequestOTPActionSheet)
+// Module 15295 (SimpleRequestOTPActionSheet)
 import LoggerDefault from "Logger" /* 3 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 6961 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 6974 */;

@@ -1,6 +1,6 @@
-// === Module 16640: ChannelSettingsPermissionsStore ===
+// === Module 16644: ChannelSettingsPermissionsStore ===
 
-// Module 16640 (ChannelSettingsPermissionsStore)
+// Module 16644 (ChannelSettingsPermissionsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;

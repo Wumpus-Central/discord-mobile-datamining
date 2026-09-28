@@ -1,10 +1,10 @@
-// === Module 15754: VoiceChannelUserLimit ===
+// === Module 15752: VoiceChannelUserLimit ===
 
-// Module 15754 (VoiceChannelUserLimit)
+// Module 15752 (VoiceChannelUserLimit)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import _modDef13336 from "module_13336" /* 13336 */;
+import _modDef13335 from "module_13335" /* 13335 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,7 +34,7 @@ export default noop.memo(function VoiceChannelUserLimit(videoLimit) {
   const obj2 = { style: rect.left, children: null };
   let tmp3 = null;
   if (videoLimit.videoLimit) {
-    const obj3 = { source: _modDef13336, size: native.Icon.Sizes.REFRESH_SMALL_16, style: rect.videoIcon };
+    const obj3 = { source: _modDef13335, size: native.Icon.Sizes.REFRESH_SMALL_16, style: rect.videoIcon };
     tmp3 = React4(native.Icon, obj3);
   }
   const items = [tmp3, ];

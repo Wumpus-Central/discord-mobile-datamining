@@ -1,6 +1,6 @@
-// === Module 16551: ChannelDetailsNavigationBar ===
+// === Module 16555: ChannelDetailsNavigationBar ===
 
-// Module 16551 (ChannelDetailsNavigationBar)
+// Module 16555 (ChannelDetailsNavigationBar)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import timing from "timing" /* 4837 */;
@@ -264,7 +264,7 @@ let closure_24 = noop.forwardRef((cleanUp, ref) => {
   fn.__workletHash = 1270940013897;
   fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj3 = { style: null, children: closure_15(cleanUp(16436), { ref, channelId: channel.id, guildId: channel.guild_id, showBackButton: true }) };
+  let obj3 = { style: null, children: closure_15(cleanUp(16440), { ref, channelId: channel.id, guildId: channel.guild_id, showBackButton: true }) };
   const items = [tmp.searchHeader, animatedStyle];
   obj3.style = items;
   return closure_15(cleanUp(4566).View, obj3);

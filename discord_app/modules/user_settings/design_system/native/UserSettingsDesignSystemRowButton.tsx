@@ -1,6 +1,6 @@
-// === Module 15370: UserSettingsDesignSystemRowButton ===
+// === Module 15368: UserSettingsDesignSystemRowButton ===
 
-// Module 15370 (UserSettingsDesignSystemRowButton)
+// Module 15368 (UserSettingsDesignSystemRowButton)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import Stack_Stack from "Stack/Stack" /* 5279 */;

@@ -1,9 +1,9 @@
-// === Module 15483: DataAndPrivacySetting ===
+// === Module 15481: DataAndPrivacySetting ===
 
-// Module 15483 (DataAndPrivacySetting)
+// Module 15481 (DataAndPrivacySetting)
 import util from "util" /* 1115 */;
-import ConsentActionCreators from "ConsentActionCreators" /* 14392 */;
-import RequestYourDataSetting from "RequestYourDataSetting" /* 14395 */;
+import ConsentActionCreators from "ConsentActionCreators" /* 14391 */;
+import RequestYourDataSetting from "RequestYourDataSetting" /* 14394 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

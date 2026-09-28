@@ -1,6 +1,6 @@
-// === Module 12653: UserProfileConnections ===
+// === Module 12671: UserProfileConnections ===
 
-// Module 12653 (UserProfileConnections)
+// Module 12671 (UserProfileConnections)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native2 from "native" /* 1177 */;
@@ -18,7 +18,7 @@ import MaskedLinkUtils from "MaskedLinkUtils" /* 7818 */;
 import ConnectionMetadataVanityItems from "ConnectionMetadataVanityItems" /* 11070 */;
 import _modDef11075 from "module_11075" /* 11075 */;
 import _modDef11076 from "module_11076" /* 11076 */;
-import useUserProfileApplicationRoleConnectionsDefault from "useUserProfileApplicationRoleConnections" /* 12657 */;
+import useUserProfileApplicationRoleConnectionsDefault from "useUserProfileApplicationRoleConnections" /* 12675 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2112 */;
 import StreamerModeStore from "StreamerModeStore" /* 4679 */;
@@ -400,7 +400,7 @@ export const UserProfileAccountConnectionsCard = function UserProfileAccountConn
   const stateFromStores = userId(504).useStateFromStores(items1, () => StreamerModeStore.hidePersonalInformation);
   const obj3 = userId(504);
   const tmp5 = theme;
-  ({ connections, appIdentities } = theme(12654)(userId));
+  ({ connections, appIdentities } = theme(12672)(userId));
   if (!stateFromStores) {
     const items2 = [];
     HermesBuiltin.arraySpread(appIdentities.map((application) => {

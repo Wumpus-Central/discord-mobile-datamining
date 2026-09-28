@@ -1,6 +1,6 @@
-// === Module 14378: StaffOnlyFindYourFriendsDeletionSetting ===
+// === Module 14377: StaffOnlyFindYourFriendsDeletionSetting ===
 
-// Module 14378 (StaffOnlyFindYourFriendsDeletionSetting)
+// Module 14377 (StaffOnlyFindYourFriendsDeletionSetting)
 import _mod4452 from "module_4452" /* 4452 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -115,7 +115,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(14379).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(14378).useStaffOrDeveloperSettingPredicate,
   useTrailing: function useIsFindYourFriendsDeletionTrailing() {
     let tmp = null;
     if (closure_6((isLoading) => isLoading.isLoading, _mod4452.shallow)) {

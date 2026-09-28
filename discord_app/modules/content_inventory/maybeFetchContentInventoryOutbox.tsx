@@ -1,8 +1,8 @@
-// === Module 12634: maybeFetchContentInventoryOutbox ===
+// === Module 12652: maybeFetchContentInventoryOutbox ===
 
-// Module 12634 (maybeFetchContentInventoryOutbox)
+// Module 12652 (maybeFetchContentInventoryOutbox)
 import DurationsDefault from "Durations" /* 1091 */;
-import ContentInventoryHttpApi from "ContentInventoryHttpApi" /* 12635 */;
+import ContentInventoryHttpApi from "ContentInventoryHttpApi" /* 12653 */;
 import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8254 */;
 
 require = fn;

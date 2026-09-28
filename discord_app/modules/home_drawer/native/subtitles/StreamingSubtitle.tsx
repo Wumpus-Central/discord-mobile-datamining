@@ -1,6 +1,6 @@
-// === Module 15960: StreamingSubtitle ===
+// === Module 15958: StreamingSubtitle ===
 
-// Module 15960 (StreamingSubtitle)
+// Module 15958 (StreamingSubtitle)
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4988 */;

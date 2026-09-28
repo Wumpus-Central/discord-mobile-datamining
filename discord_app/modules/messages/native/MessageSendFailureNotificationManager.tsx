@@ -1,6 +1,6 @@
-// === Module 17640: MessageSendFailureNotificationManager ===
+// === Module 17644: MessageSendFailureNotificationManager ===
 
-// Module 17640 (MessageSendFailureNotificationManager)
+// Module 17644 (MessageSendFailureNotificationManager)
 import util from "util" /* 1115 */;
 import PushNotificationDefault from "PushNotification" /* 8746 */;
 import InAppNotificationUtils from "InAppNotificationUtils" /* 9554 */;

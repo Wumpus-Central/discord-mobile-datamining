@@ -1,6 +1,6 @@
-// === Module 16643: ChannelSettingsPermissionsOverview ===
+// === Module 16647: ChannelSettingsPermissionsOverview ===
 
-// Module 16643 (ChannelSettingsPermissionsOverview)
+// Module 16647 (ChannelSettingsPermissionsOverview)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -11,8 +11,8 @@ import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5893 */;
 import TableRow from "TableRow" /* 5917 */;
 import RoleLabel from "RoleLabel" /* 9733 */;
 import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10404 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 14861 */;
-import useGetOrFetchChannelOverwriteUsersDefault from "useGetOrFetchChannelOverwriteUsers" /* 16644 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 14859 */;
+import useGetOrFetchChannelOverwriteUsersDefault from "useGetOrFetchChannelOverwriteUsers" /* 16648 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -128,7 +128,7 @@ function ChannelPermissionSyncModule(channel) {
     formatToPlainStringResult = formatToPlainString(t.OIhm0M, obj4);
   }
   let obj5 = { title: formatToPlainStringResult, hasIcons: true, children: null };
-  let obj6 = { icon: closure_16(channel(14689).RefreshIcon, {}), label: null, onPress: null };
+  let obj6 = { icon: closure_16(channel(14506).RefreshIcon, {}), label: null, onPress: null };
   let intl2 = tmp3(1115).intl;
   obj6.label = intl2.string(channel(1115).t.NVwuHq);
   obj6.onPress = callback;

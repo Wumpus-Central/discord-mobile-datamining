@@ -1,9 +1,9 @@
-// === Module 15093: FileUpIcon ===
+// === Module 15091: FileUpIcon ===
 
-// Module 15093 (FileUpIcon)
+// Module 15091 (FileUpIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4530 */;
-import _mod15094 from "module_15094" /* 15094 */;
+import _mod15092 from "module_15092" /* 15092 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const FileUpIcon = function FileUpIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15094, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15092, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

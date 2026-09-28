@@ -1,6 +1,6 @@
-// === Module 17140: GuildVerificationManager ===
+// === Module 17144: GuildVerificationManager ===
 
-// Module 17140 (GuildVerificationManager)
+// Module 17144 (GuildVerificationManager)
 import Constants from "Constants" /* 1074 */;
 import FlagUtils from "FlagUtils" /* 1385 */;
 import GuildInviteFlags from "GuildInviteFlags" /* 7840 */;

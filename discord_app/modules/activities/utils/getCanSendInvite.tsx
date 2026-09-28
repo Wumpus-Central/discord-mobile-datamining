@@ -1,6 +1,6 @@
-// === Module 12807: getCanSendInvite ===
+// === Module 12806: getCanSendInvite ===
 
-// Module 12807 (getCanSendInvite)
+// Module 12806 (getCanSendInvite)
 import hasFlagDefault from "hasFlag" /* 6731 */;
 import isInviteActiveDefault from "isInviteActive" /* 11254 */;
 import getPartySize from "getPartySize" /* 11255 */;

@@ -1,6 +1,6 @@
-// === Module 14382: ContactSyncNameUpdateModal ===
+// === Module 14381: ContactSyncNameUpdateModal ===
 
-// Module 14382 (ContactSyncNameUpdateModal)
+// Module 14381 (ContactSyncNameUpdateModal)
 import nativeDefault from "native" /* 576 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5039 */;
 import Navigator from "Navigator" /* 6421 */;

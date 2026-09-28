@@ -1,6 +1,6 @@
-// === Module 15731: MessagesItemSuggestedFriendsHeader ===
+// === Module 15729: MessagesItemSuggestedFriendsHeader ===
 
-// Module 15731 (MessagesItemSuggestedFriendsHeader)
+// Module 15729 (MessagesItemSuggestedFriendsHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;

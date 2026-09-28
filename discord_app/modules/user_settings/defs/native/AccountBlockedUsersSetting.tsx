@@ -1,6 +1,6 @@
-// === Module 14335: AccountBlockedUsersSetting ===
+// === Module 14334: AccountBlockedUsersSetting ===
 
-// Module 14335 (AccountBlockedUsersSetting)
+// Module 14334 (AccountBlockedUsersSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import RelationshipStore from "RelationshipStore" /* 4479 */;

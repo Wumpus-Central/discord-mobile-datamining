@@ -1,6 +1,6 @@
-// === Module 12781: createActivityMessageEmbed ===
+// === Module 12780: createActivityMessageEmbed ===
 
-// Module 12781 (createActivityMessageEmbed)
+// Module 12780 (createActivityMessageEmbed)
 import createAppMessageEmbed from "createAppMessageEmbed" /* 11420 */;
 import CustomActivityLinkUtils from "CustomActivityLinkUtils" /* 12496 */;
 import size from "module_2" /* 2 */;

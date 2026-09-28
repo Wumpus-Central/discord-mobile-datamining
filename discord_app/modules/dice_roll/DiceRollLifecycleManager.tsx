@@ -1,6 +1,6 @@
-// === Module 17119: DiceRollLifecycleManager ===
+// === Module 17123: DiceRollLifecycleManager ===
 
-// Module 17119 (DiceRollLifecycleManager)
+// Module 17123 (DiceRollLifecycleManager)
 import util from "util" /* 1115 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 6876 */;
 import MessageParserDefault from "MessageParser" /* 7095 */;

@@ -1,6 +1,6 @@
-// === Module 15025: TimestampHourCycleSetting ===
+// === Module 15023: TimestampHourCycleSetting ===
 
-// Module 15025 (TimestampHourCycleSetting)
+// Module 15023 (TimestampHourCycleSetting)
 import util from "util" /* 1115 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
 import UserSettings from "UserSettings" /* 2021 */;

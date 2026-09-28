@@ -1,6 +1,6 @@
-// === Module 15384: UserSettingsDesignSystemContextMenu ===
+// === Module 15382: UserSettingsDesignSystemContextMenu ===
 
-// Module 15384 (UserSettingsDesignSystemContextMenu)
+// Module 15382 (UserSettingsDesignSystemContextMenu)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import _modDef4796 from "module_4796" /* 4796 */;
@@ -12,8 +12,8 @@ import _modDef7408 from "module_7408" /* 7408 */;
 import _modDef10823 from "module_10823" /* 10823 */;
 import _modDef11059 from "module_11059" /* 11059 */;
 import _modDef12289 from "module_12289" /* 12289 */;
-import _modDef15385 from "module_15385" /* 15385 */;
-import _modDef15386 from "module_15386" /* 15386 */;
+import _modDef15383 from "module_15383" /* 15383 */;
+import _modDef15384 from "module_15384" /* 15384 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,7 +48,7 @@ function DemoContextMenu(align) {
         const obj2 = text(num[13]);
         const obj3 = { length };
         return Array.from({ length }).map((item, index) => {
-          const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "flower_playing_cards", action: "ValueSetter" };
+          const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: false, action: false };
           let str = "default";
           if (index === closure_0 - 1) {
             str = "destructive";
@@ -68,7 +68,7 @@ function DemoContextMenu(align) {
       const _Array2 = Array;
       const obj4 = { length: num };
       mapped = Array.from(obj4).map((item, index) => {
-        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "flower_playing_cards", action: "ValueSetter" };
+        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: false, action: false };
         let str = "default";
         if (index === closure_0 - 1) {
           str = "destructive";
@@ -103,7 +103,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let items = [_modDef12289, _modDef6515, _modDef7408, _modDef10823, _modDef4796, _modDef15385, _modDef15386, _modDef11059];
+let items = [_modDef12289, _modDef6515, _modDef7408, _modDef10823, _modDef4796, _modDef15383, _modDef15384, _modDef11059];
 let closure_8 = ["Launch Probe!", "Activate Laser", "Teleport Widget", "Engage Hyperdrive", "Deploy Robots", "Initiate Time Warp", "Beam Up Snacks", "Hack Database", "Trigger Cosmic Boom", "Unleash Space Vortex", "Activate Cloaking Device"];
 const createStyles = fn(4836);
 let obj2 = { container: { flexDirection: "column", gap: 12, padding: 16 }, card: { gap: 12 }, divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 12 } };

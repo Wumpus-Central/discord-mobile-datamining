@@ -1,6 +1,6 @@
-// === Module 14717: QuestDockContentCollapsed ===
+// === Module 14715: QuestDockContentCollapsed ===
 
-// Module 14717 (QuestDockContentCollapsed)
+// Module 14715 (QuestDockContentCollapsed)
 import spring from "spring" /* 5280 */;
 import noop from "module_19" /* 19 */;
 

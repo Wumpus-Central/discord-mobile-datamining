@@ -1,6 +1,6 @@
-// === Module 13455: useMessageRequestPrivacyOption ===
+// === Module 13454: useMessageRequestPrivacyOption ===
 
-// Module 13455 (useMessageRequestPrivacyOption)
+// Module 13454 (useMessageRequestPrivacyOption)
 import UserSettings from "UserSettings" /* 2021 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 6416 */;
 import useIsStricterMessageRequestsDefault from "useIsStricterMessageRequests" /* 11938 */;

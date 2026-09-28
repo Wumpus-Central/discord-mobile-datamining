@@ -1,6 +1,6 @@
-// === Module 15994: UnreadBars ===
+// === Module 15992: UnreadBars ===
 
-// Module 15994 (UnreadBars)
+// Module 15992 (UnreadBars)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;

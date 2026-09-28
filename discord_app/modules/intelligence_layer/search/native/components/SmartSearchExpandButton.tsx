@@ -1,12 +1,12 @@
-// === Module 16510: SmartSearchExpandButton ===
+// === Module 16514: SmartSearchExpandButton ===
 
-// Module 16510 (SmartSearchExpandButton)
+// Module 16514 (SmartSearchExpandButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3877 from "module_3877" /* 3877 */;
 import ChevronSmallDownIcon2 from "ChevronSmallDownIcon" /* 10615 */;
-import ChevronSmallUpIcon from "ChevronSmallUpIcon" /* 13114 */;
-import useSearchHostSurface from "useSearchHostSurface" /* 16509 */;
+import ChevronSmallUpIcon from "ChevronSmallUpIcon" /* 13113 */;
+import useSearchHostSurface from "useSearchHostSurface" /* 16513 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -4,10 +4,10 @@
 import util from "util" /* 1115 */;
 import _modDef3715 from "module_3715" /* 3715 */;
 import ToastUtils from "ToastUtils" /* 4527 */;
-import vibegrationsExternalConnections from "vibegrationsExternalConnections" /* 12631 */;
+import vibegrationsExternalConnections from "vibegrationsExternalConnections" /* 12649 */;
 import vibegrationsProjectMenuItems from "vibegrationsProjectMenuItems" /* 16311 */;
 import noop from "module_19" /* 19 */;
-import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 12624 */;
+import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 12642 */;
 
 require = fn;
 const size = fn(2);

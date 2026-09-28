@@ -1,6 +1,6 @@
-// === Module 14056: setOrientationLockState ===
+// === Module 14055: setOrientationLockState ===
 
-// Module 14056 (setOrientationLockState)
+// Module 14055 (setOrientationLockState)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import RPCErrorDefault from "RPCError" /* 8770 */;
 import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8773 */;

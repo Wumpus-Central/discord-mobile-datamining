@@ -1,12 +1,12 @@
-// === Module 16031: YouBarICYMIButton ===
+// === Module 16027: YouBarICYMIButton ===
 
-// Module 16031 (YouBarICYMIButton)
+// Module 16027 (YouBarICYMIButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import RootNavigationRef from "RootNavigationRef" /* 4693 */;
-import FlashIcon from "FlashIcon" /* 12567 */;
-import useICYMITabBadgeDefault from "useICYMITabBadge" /* 16032 */;
-import YouBarButtonDefault from "YouBarButton" /* 16033 */;
+import FlashIcon from "FlashIcon" /* 12585 */;
+import useICYMITabBadgeDefault from "useICYMITabBadge" /* 16028 */;
+import YouBarButtonDefault from "YouBarButton" /* 16029 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

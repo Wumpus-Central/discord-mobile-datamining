@@ -1,6 +1,6 @@
-// === Module 17507: WarningNotice ===
+// === Module 17511: WarningNotice ===
 
-// Module 17507 (WarningNotice)
+// Module 17511 (WarningNotice)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import components_Button_Button from "components/Button/Button" /* 5281 */;

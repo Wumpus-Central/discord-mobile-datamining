@@ -1,6 +1,6 @@
-// === Module 14885: useDisplayNameStylesHandleApply ===
+// === Module 14883: useDisplayNameStylesHandleApply ===
 
-// Module 14885 (useDisplayNameStylesHandleApply)
+// Module 14883 (useDisplayNameStylesHandleApply)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import DisplayNameEffect from "DisplayNameEffect" /* 1391 */;
 import DisplayNameFont from "DisplayNameFont" /* 1392 */;

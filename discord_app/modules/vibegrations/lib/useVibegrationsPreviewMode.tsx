@@ -1,12 +1,12 @@
-// === Module 16274: useVibegrationsPreviewMode ===
+// === Module 16270: useVibegrationsPreviewMode ===
 
-// Module 16274 (useVibegrationsPreviewMode)
+// Module 16270 (useVibegrationsPreviewMode)
 import initialize from "initialize" /* 504 */;
 import ApplicationActionCreators from "ApplicationActionCreators" /* 6584 */;
 import ApplicationWidgetConfigSurface from "ApplicationWidgetConfigSurface" /* 8473 */;
 import canLaunchFrame from "canLaunchFrame" /* 8783 */;
-import useUserApplicationWidgetDataDefault from "useUserApplicationWidgetData" /* 16275 */;
-import vibegrationsPreviewModes from "vibegrationsPreviewModes" /* 16276 */;
+import useUserApplicationWidgetDataDefault from "useUserApplicationWidgetData" /* 16271 */;
+import vibegrationsPreviewModes from "vibegrationsPreviewModes" /* 16272 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -74,16 +74,17 @@ export const useVibegrationsPreviewMode = function useVibegrationsPreviewMode(ar
     }
     const tmp8Result6 = ApplicationActionCreators;
     const application = ApplicationActionCreators.useApplication(applicationId);
+    ({ data: data2, isLoading } = application);
     if (!declaredActivity) {
-      declaredActivity = canLaunchFrame.canLaunchFrame(tmp25);
+      declaredActivity = canLaunchFrame.canLaunchFrame(data2);
       const tmp8Result8 = canLaunchFrame;
     }
     const tmp8Result7 = ApplicationActionCreators;
     const obj3 = { installScope, hasFrame: declaredActivity, hasProfileWidget: tmp18, hasBotDm: tmp21, ownerAuthorizationRevoked };
     const result1 = vibegrationsPreviewModes.previewModeAvailability(obj3);
-    const obj4 = { availability: result1, isResolving: null != applicationId && application.isLoading, activeMode: null, setMode: null, widgetApplicationId: null };
+    const obj4 = { availability: result1, isResolving: null != applicationId && isLoading && null == data2, activeMode: null, setMode: null, widgetApplicationId: null };
     let previewMode = null;
-    if (!(null != applicationId && application.isLoading)) {
+    if (!(null != applicationId && isLoading && null == data2)) {
       previewMode = vibegrationsPreviewModes.resolvePreviewMode(tmp2, result1);
       const tmp8Result10 = vibegrationsPreviewModes;
     }

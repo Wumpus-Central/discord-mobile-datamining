@@ -1,6 +1,6 @@
-// === Module 16566: MemberVerificationScreen ===
+// === Module 16570: MemberVerificationScreen ===
 
-// Module 16566 (MemberVerificationScreen)
+// Module 16570 (MemberVerificationScreen)
 import nativeDefault from "native" /* 576 */;
 import router_utilsAll from "router_utils" /* 1101 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
@@ -99,7 +99,7 @@ const jsx = fn(21).jsx;
 const createStyles = fn(4836);
 let obj2 = { flex: { flex: 1 }, flexLoading: { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_12 = createStyles.createStyles(obj2);
-const makeAuthenticated = fn(16567);
+const makeAuthenticated = fn(16571);
 const authenticated = makeAuthenticated.makeAuthenticated(function MemberVerificationRouteContainer(navigation) {
   navigation = navigation.navigation;
   guildId = navigation.route.params.guildId;

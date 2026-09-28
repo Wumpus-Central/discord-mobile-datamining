@@ -1,15 +1,15 @@
-// === Module 14722: QuestDockUnenrolledHeader ===
+// === Module 14720: QuestDockUnenrolledHeader ===
 
-// Module 14722 (QuestDockUnenrolledHeader)
+// Module 14720 (QuestDockUnenrolledHeader)
 import useThemeDefault from "useTheme" /* 4767 */;
 import QuestTypes from "QuestTypes" /* 5759 */;
 import FastImageDefault from "FastImage" /* 5899 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7141 */;
 import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 14642 */;
 import QuestGameLogotypeDefault from "QuestGameLogotype" /* 14681 */;
-import QuestDockBackgroundBlurHeaderDefault from "QuestDockBackgroundBlurHeader" /* 14723 */;
-import _modDef14727 from "module_14727" /* 14727 */;
-import _modDef14728 from "module_14728" /* 14728 */;
+import QuestDockBackgroundBlurHeaderDefault from "QuestDockBackgroundBlurHeader" /* 14721 */;
+import _modDef14725 from "module_14725" /* 14725 */;
+import _modDef14726 from "module_14726" /* 14726 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -59,9 +59,9 @@ export default noop.memo(function QuestDockUnenrolledHeader() {
   const obj7 = { style: tmp11.primaryContent, children: null };
   const tmp7Result = QuestDockBackgroundBlurHeaderDefault;
   if (LIGHT === tmp10.DARK) {
-    let tmp7Result4 = _modDef14727;
+    let tmp7Result4 = _modDef14725;
   } else {
-    tmp7Result4 = _modDef14728;
+    tmp7Result4 = _modDef14726;
   }
   const items1 = [closure_6(FastImageDefault, { source: tmp7Result4, resizeMode: "contain", style: tmp11.wreathImage }), closure_6(QuestGameLogotypeDefault, { assetUrl: questGameLogotypeAssetUrl, height: 36, maxWidth: 120, style: tmp11.logo })];
   obj7.children = items1;

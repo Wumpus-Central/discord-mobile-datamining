@@ -1,6 +1,6 @@
-// === Module 15871: StageVoiceChannel ===
+// === Module 15869: StageVoiceChannel ===
 
-// Module 15871 (StageVoiceChannel)
+// Module 15869 (StageVoiceChannel)
 import nativeDefault from "native" /* 576 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1876 */;
 import useChannelNameDefault from "useChannelName" /* 4989 */;
@@ -9,10 +9,10 @@ import useShowMemberVerificationGate from "useShowMemberVerificationGate" /* 536
 import StageMediaHooks from "StageMediaHooks" /* 5729 */;
 import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5881 */;
 import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10374 */;
-import ChannelItemDefault from "ChannelItem" /* 15750 */;
-import VoiceUsersDefault from "VoiceUsers" /* 15755 */;
-import ChannelInfoDefault from "ChannelInfo" /* 15861 */;
-import useStageChannelSpeakerVoiceStatesDefault from "useStageChannelSpeakerVoiceStates" /* 15872 */;
+import ChannelItemDefault from "ChannelItem" /* 15748 */;
+import VoiceUsersDefault from "VoiceUsers" /* 15753 */;
+import ChannelInfoDefault from "ChannelInfo" /* 15859 */;
+import useStageChannelSpeakerVoiceStatesDefault from "useStageChannelSpeakerVoiceStates" /* 15870 */;
 import noop from "module_19" /* 19 */;
 import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 6947 */;
 import PermissionStore from "PermissionStore" /* 4469 */;

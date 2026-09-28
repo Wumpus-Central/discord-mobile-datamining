@@ -1,9 +1,9 @@
-// === Module 15784: FavoritesGuildHeaderActions ===
+// === Module 15782: FavoritesGuildHeaderActions ===
 
-// Module 15784 (FavoritesGuildHeaderActions)
+// Module 15782 (FavoritesGuildHeaderActions)
 import IconButton from "IconButton" /* 7363 */;
-import useFavoritesGuildHeaderActionDefault from "useFavoritesGuildHeaderAction" /* 15785 */;
-import FavoritesGuildAddActionSheet from "FavoritesGuildAddActionSheet" /* 15786 */;
+import useFavoritesGuildHeaderActionDefault from "useFavoritesGuildHeaderAction" /* 15783 */;
+import FavoritesGuildAddActionSheet from "FavoritesGuildAddActionSheet" /* 15784 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

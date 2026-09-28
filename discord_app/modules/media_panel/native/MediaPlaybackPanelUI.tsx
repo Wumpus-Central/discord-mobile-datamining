@@ -1,6 +1,6 @@
-// === Module 17043: MediaPlaybackPanelUI ===
+// === Module 17047: MediaPlaybackPanelUI ===
 
-// Module 17043 (MediaPlaybackPanelUI)
+// Module 17047 (MediaPlaybackPanelUI)
 import nativeDefault from "native" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1479 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
@@ -9,8 +9,8 @@ import timingPresets from "timingPresets" /* 4840 */;
 import spring from "spring" /* 5280 */;
 import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 8853 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10896 */;
-import MorphablePanelUtils from "MorphablePanelUtils" /* 16839 */;
-import MediaPlaybackPanelStateContextDefault from "MediaPlaybackPanelStateContext" /* 17042 */;
+import MorphablePanelUtils from "MorphablePanelUtils" /* 16843 */;
+import MediaPlaybackPanelStateContextDefault from "MediaPlaybackPanelStateContext" /* 17046 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 8939 */;
@@ -19,7 +19,7 @@ const require = globalThis.__r;
 
 require = fn;
 const useContext = fn(19).useContext;
-const MediaPlaybackPanelConstants = fn(14099);
+const MediaPlaybackPanelConstants = fn(14098);
 ({ MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: closure_7, MediaPlaybackPanelModes: closure_8 } = MediaPlaybackPanelConstants);
 const IS_IOS = fn(11756).IS_IOS;
 const BORDER_RADIUS_PHYSICS = fn(11755).BORDER_RADIUS_PHYSICS;
@@ -310,26 +310,26 @@ export default function MediaPlaybackPanelUI() {
       fn4.__workletHash = 8557652955267;
       fn4.__initData = __initData7;
       const animatedStyle3 = tmp6(4566).useAnimatedStyle(fn4);
-      const context1 = noop.useContext(tmp2(17042));
+      const context1 = noop.useContext(tmp2(17046));
       ({ wrapperOffset: wrapperOffset2, pipState: pipState2 } = context1);
       const obj14 = { panGestureEnabled: true, mode: null, pipState: null, wrapperOffset: null };
       const tmp6Result4 = tmp6(4566);
-      obj14.mode = tmp6(16841).MorphablePanelModes.PIP;
+      obj14.mode = tmp6(16845).MorphablePanelModes.PIP;
       obj14.pipState = pipState2;
       obj14.wrapperOffset = wrapperOffset2;
-      const tmp2Result = tmp2(16841);
+      const tmp2Result = tmp2(16845);
       const obj15 = { children: null };
       const obj16 = { style: animatedStyle, pointerEvents: "box-none", children: null };
       const obj17 = { style: tmp30, children: null };
       const View = tmp2(4566).View;
       const obj18 = { style: tmp31, children: null };
-      const obj19 = { gesture: tmp2(16841)(obj14), children: null };
+      const obj19 = { gesture: tmp2(16845)(obj14), children: null };
       const obj20 = { style: null, children: null };
       const items3 = [tmp.content, animatedStyle3];
       obj20.style = items3;
-      obj20.children = jsx(tmp2(17044), {});
+      obj20.children = jsx(tmp2(17048), {});
       obj19.children = jsx(tmp2(4566).View, { style: null, children: null });
-      obj18.children = jsx(tmp6(6073).GestureDetector, { gesture: tmp2(16841)(obj14), children: null });
+      obj18.children = jsx(tmp6(6073).GestureDetector, { gesture: tmp2(16845)(obj14), children: null });
       obj17.children = jsx(tmp2(4566).View, { style: tmp31, children: null });
       class R {
         constructor() {

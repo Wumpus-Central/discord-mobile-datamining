@@ -1098,7 +1098,7 @@ function createMessageContent(message) {
       applicationIconSource = author.getAvatarSource(undefined);
       tmp13Result69 = tmp13(tmp3[53]);
     }
-    parseMessageMarkupResult = { content: "flexDirection", hasSpoilerEmbeds: "onAccessibilityAction", hasBailedAst: "woman_with_probing_cane" };
+    parseMessageMarkupResult = { content: "flexDirection", hasSpoilerEmbeds: "b\u00E6rbar computer", hasBailedAst: "computer" };
     const tmp13Result63 = tmp13(tmp3[42]);
   }
   const obj4 = message(tmp3[37]);

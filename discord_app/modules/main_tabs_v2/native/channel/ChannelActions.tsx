@@ -16,9 +16,9 @@ import SwipeToMemberListUtils from "SwipeToMemberListUtils" /* 11004 */;
 import useSearchContext from "useSearchContext" /* 11782 */;
 import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators" /* 11783 */;
 import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 11841 */;
-import IconActionButtonDefault from "IconActionButton" /* 12831 */;
-import ConversationCoachmark from "ConversationCoachmark" /* 12834 */;
-import PrivateChannelButtonsDefault from "PrivateChannelButtons" /* 12837 */;
+import IconActionButtonDefault from "IconActionButton" /* 12830 */;
+import ConversationCoachmark from "ConversationCoachmark" /* 12833 */;
+import PrivateChannelButtonsDefault from "PrivateChannelButtons" /* 12836 */;
 import noop from "module_19" /* 19 */;
 import ActiveThreadsStore from "ActiveThreadsStore" /* 5819 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
@@ -391,7 +391,7 @@ export default function ChannelActions(channelId) {
   const obj3 = { style: containerStyle, children: null };
   if (obj2.useHasForumSearchQuery(channelId)) {
     const obj4 = { channelId };
-    let tmp4Result = jsx(tmp(12835).ForumChannelCloseSearchButton, { channelId });
+    let tmp4Result = jsx(tmp(12834).ForumChannelCloseSearchButton, { channelId });
   } else {
     if (!isDM) {
       if (!isMultiUserDM) {

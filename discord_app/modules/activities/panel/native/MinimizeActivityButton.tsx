@@ -1,6 +1,6 @@
-// === Module 16850: MinimizeActivityButton ===
+// === Module 16854: MinimizeActivityButton ===
 
-// Module 16850 (MinimizeActivityButton)
+// Module 16854 (MinimizeActivityButton)
 import _modDef10616 from "module_10616" /* 10616 */;
 import noop from "module_19" /* 19 */;
 

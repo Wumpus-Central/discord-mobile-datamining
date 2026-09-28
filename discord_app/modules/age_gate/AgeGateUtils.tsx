@@ -12,7 +12,7 @@ import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5735 */;
 import AgeGatedFeature from "AgeGatedFeature" /* 5736 */;
 import AgeGateModalActionCreators from "AgeGateModalActionCreators" /* 6632 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 7861 */;
-import getTinyBroncoWarningDescriptions from "getTinyBroncoWarningDescriptions" /* 13309 */;
+import getTinyBroncoWarningDescriptions from "getTinyBroncoWarningDescriptions" /* 13308 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 5047 */;
 import GuildStore from "GuildStore" /* 2067 */;

@@ -378,8 +378,8 @@ let closure_25 = async function _openImagePicker(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -387,8 +387,8 @@ let closure_25 = async function _openImagePicker(arg0) {
           closure_129_1 = undefined;
           c5 = 1;
           c6 = 1;
-          const obj6 = { value: NativePermissionUtilsDefault.requestPermission(constants.PHOTOS), done: false };
-          return obj6;
+          const obj4 = { value: NativePermissionUtilsDefault.requestPermission(constants.PHOTOS), done: false };
+          return obj4;
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -415,13 +415,13 @@ let closure_25 = async function _openImagePicker(arg0) {
         if ("E_PICKER_CANCELLED" !== closure_129_2.code) {
           if (closure_129_2.message !== closure_130_22) {
             if ("E_CROPPER_IMAGE_NOT_FOUND" === closure_129_2.code) {
-              const intl = closure_130_0(closure_130_2[15]).intl;
-              closure_130_0(closure_130_2[14]).presentFailedToast(intl.string(closure_130_0(closure_130_2[15]).t.TTzyzW));
-              const obj4 = closure_130_0(closure_130_2[14]);
+              const intl2 = closure_130_0(closure_130_2[15]).intl;
+              closure_130_0(closure_130_2[14]).presentFailedToast(intl2.string(closure_130_0(closure_130_2[15]).t.TTzyzW));
+              const obj6 = closure_130_0(closure_130_2[14]);
             } else {
               closure_130_0(closure_130_2[14]).presentFailedToast(closure_129_2.message);
               { errorStr: null }[0] = closure_129_2.message;
-              const obj3 = closure_130_0(closure_130_2[14]);
+              const obj5 = closure_130_0(closure_130_2[14]);
             }
           }
           c6 = 3;
@@ -437,21 +437,21 @@ let closure_25 = async function _openImagePicker(arg0) {
       } else {
         closure_129_1 = value;
         if (null != closure_129_1.errorStr) {
-          const intl2 = closure_130_0(closure_130_2[15]).intl;
-          const obj15 = { reason: closure_129_1.errorStr };
-          closure_130_0(closure_130_2[14]).presentFailedToast(intl2.formatToPlainString(closure_130_0(closure_130_2[15]).t.Ex162J, obj15));
-          const obj14 = closure_130_0(closure_130_2[14]);
+          const intl = closure_130_0(closure_130_2[15]).intl;
+          const obj14 = { reason: closure_129_1.errorStr };
+          closure_130_0(closure_130_2[14]).presentFailedToast(intl.formatToPlainString(closure_130_0(closure_130_2[15]).t.Ex162J, obj14));
+          const obj = closure_130_0(closure_130_2[14]);
         }
         c4 = 0;
         c6 = 3;
-        const obj = { value: closure_129_1, done: true };
-        return obj;
+        const obj15 = { value: closure_129_1, done: true };
+        return obj15;
       }
-    } catch (tmp36) {
-      closure_3 = tmp36;
+    } catch (tmp46) {
+      closure_3 = tmp46;
       if (tmp4 === c4) {
         c6 = tmp2;
-        throw tmp36;
+        throw tmp46;
       } else {
         c5 = tmp;
       }

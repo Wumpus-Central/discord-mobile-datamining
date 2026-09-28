@@ -80,4 +80,4 @@ export const VIBEGRATIONS_MODEL_TIERS = ["simple", "balanced", "complex"];
 export const VIBEGRATIONS_FALLBACK_MODEL_CHOICES = obj;
 export const VIBEGRATIONS_DEV_FALLBACK_MODEL_CHOICES = { main: items1, subagent: items1, thinking: obj.thinking };
 export const VIBEGRATIONS_DEFAULT_TIER_SETTINGS = { tier: "balanced", provider: "openai" };
-export const VIBEGRATIONS_LANDING_TIER_SEATS = { simple: { model: "gpt-6-luna", thinking: "xhigh" }, balanced: { model: "gpt-6-sol", thinking: "high" }, complex: { model: "gpt-6-astra", thinking: "high" } };
+export const VIBEGRATIONS_LANDING_TIER_SEATS = { simple: { model: "gpt-6-luna", thinking: "high" }, balanced: { model: "gpt-6-sol", thinking: "high" }, complex: { model: "claude-opus-5-5", thinking: "high" } };

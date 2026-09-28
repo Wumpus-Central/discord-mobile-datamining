@@ -1,6 +1,6 @@
-// === Module 15419: CollectiblesShopSetting ===
+// === Module 15417: CollectiblesShopSetting ===
 
-// Module 15419 (CollectiblesShopSetting)
+// Module 15417 (CollectiblesShopSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6603 */;

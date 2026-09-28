@@ -1,13 +1,13 @@
-// === Module 17365: HeaderRow ===
+// === Module 17369: HeaderRow ===
 
-// Module 17365 (HeaderRow)
+// Module 17369 (HeaderRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 17359 */;
+import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 17363 */;
 
 require = fn;
 function HeaderRow(guild) {

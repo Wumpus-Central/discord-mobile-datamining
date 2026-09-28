@@ -1,6 +1,6 @@
-// === Module 14805: SidechainCompressionSetting ===
+// === Module 14803: SidechainCompressionSetting ===
 
-// Module 14805 (SidechainCompressionSetting)
+// Module 14803 (SidechainCompressionSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 9104 */;

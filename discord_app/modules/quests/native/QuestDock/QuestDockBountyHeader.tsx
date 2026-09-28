@@ -1,6 +1,6 @@
-// === Module 14742: QuestDockBountyHeader ===
+// === Module 14740: QuestDockBountyHeader ===
 
-// Module 14742 (QuestDockBountyHeader)
+// Module 14740 (QuestDockBountyHeader)
 import nativeDefault from "native" /* 576 */;
 import spring from "spring" /* 5280 */;
 import QuestTypes from "QuestTypes" /* 5759 */;

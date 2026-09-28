@@ -1,6 +1,6 @@
-// === Module 14802: NoiseSuppressionKrispSetting ===
+// === Module 14800: NoiseSuppressionKrispSetting ===
 
-// Module 14802 (NoiseSuppressionKrispSetting)
+// Module 14800 (NoiseSuppressionKrispSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 9449 */;

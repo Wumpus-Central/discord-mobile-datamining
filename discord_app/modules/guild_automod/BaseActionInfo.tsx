@@ -1,6 +1,6 @@
-// === Module 17311: BaseActionInfo ===
+// === Module 17315: BaseActionInfo ===
 
-// Module 17311 (BaseActionInfo)
+// Module 17315 (BaseActionInfo)
 import util from "util" /* 1115 */;
 import useChannelName from "useChannelName" /* 4989 */;
 import ChannelStore from "ChannelStore" /* 2045 */;

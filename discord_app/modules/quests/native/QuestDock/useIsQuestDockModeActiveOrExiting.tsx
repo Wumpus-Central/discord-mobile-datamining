@@ -1,6 +1,6 @@
-// === Module 14734: useIsQuestDockModeActiveOrExiting ===
+// === Module 14732: useIsQuestDockModeActiveOrExiting ===
 
-// Module 14734 (useIsQuestDockModeActiveOrExiting)
+// Module 14732 (useIsQuestDockModeActiveOrExiting)
 import spring from "spring" /* 5280 */;
 import noop from "module_19" /* 19 */;
 

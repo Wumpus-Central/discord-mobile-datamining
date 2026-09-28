@@ -1,6 +1,6 @@
-// === Module 16869: VoicePanelController ===
+// === Module 16873: VoicePanelController ===
 
-// Module 16869 (VoicePanelController)
+// Module 16873 (VoicePanelController)
 import DurationsDefault from "Durations" /* 1091 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
 import util from "util" /* 1115 */;
@@ -20,12 +20,12 @@ import _modDef8907 from "module_8907" /* 8907 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 9104 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10896 */;
 import VoicePanelCardLayoutManagerDefault from "VoicePanelCardLayoutManager" /* 11757 */;
-import applyActivityOrientationLockDefault from "applyActivityOrientationLock" /* 16829 */;
-import _modDef16871 from "module_16871" /* 16871 */;
-import trackActivityThermalStateNoticeShown from "trackActivityThermalStateNoticeShown" /* 16872 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 16873 */;
-import useIsVoicePanelParticipantFocusable from "useIsVoicePanelParticipantFocusable" /* 16900 */;
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 16912 */;
+import applyActivityOrientationLockDefault from "applyActivityOrientationLock" /* 16833 */;
+import _modDef16875 from "module_16875" /* 16875 */;
+import trackActivityThermalStateNoticeShown from "trackActivityThermalStateNoticeShown" /* 16876 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 16877 */;
+import useIsVoicePanelParticipantFocusable from "useIsVoicePanelParticipantFocusable" /* 16904 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 16916 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4825 */;
@@ -1075,7 +1075,7 @@ export default function VoicePanelController(channelId) {
               tmp15 = tmp11;
             }
             if (tmp15) {
-              const obj2 = { key: "EMBEDDED_ACTIVITIES_VIDEO_DISABLED_FOR_THERMAL_STATE", icon: _modDef16871, content: null, disableAnimations: true, toastDurationMs: 3000 };
+              const obj2 = { key: "EMBEDDED_ACTIVITIES_VIDEO_DISABLED_FOR_THERMAL_STATE", icon: _modDef16875, content: null, disableAnimations: true, toastDurationMs: 3000 };
               const intl = util.intl;
               obj2.content = intl.string(util.t.O2IlPT);
               ToastActionCreatorsDefault.open(obj2);

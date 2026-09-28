@@ -1,6 +1,6 @@
-// === Module 14471: ScheduleDowntimeScreen ===
+// === Module 14470: ScheduleDowntimeScreen ===
 
-// Module 14471 (ScheduleDowntimeScreen)
+// Module 14470 (ScheduleDowntimeScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
@@ -526,7 +526,7 @@ export default function ScheduleDowntimeScreen() {
     obj13.trailing = closure_11(tmp2(stringResult[14]).Text, obj14);
     obj13.onPress = function handleStartTimePress() {
       const intl = util.intl;
-      const f118269 = (first1) => {
+      const f118316 = (first1) => {
         closure_1_11(first1);
         const result = (closure_0(rule[19]).timeToMinutes(first1) + 540) % 1440;
         const time = { hours: Math.floor(result / 60), minutes: result % 60 };

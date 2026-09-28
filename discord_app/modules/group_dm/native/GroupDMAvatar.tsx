@@ -70,7 +70,7 @@ class FacepileGroupDMAvatar {
     merged = Object.assign(obj11);
     items3 = [, ];
     items3[0] = tmp11(tmp2(tmp3[4]).Avatar, obj9);
-    obj12 = { status, statusSizeOverride: tmp2(tmp3[4]).StatusSizes.REFRESH_MEDIUM_10, autoStatusCutout: true, style: tmp.secondFace, size: pileSizeOverride, guildId: "Array", animate: "Force libdiscore Store Error" };
+    obj12 = { status, statusSizeOverride: tmp2(tmp3[4]).StatusSizes.REFRESH_MEDIUM_10, autoStatusCutout: true, style: tmp.secondFace, size: pileSizeOverride, guildId: "Array", animate: "Refresh Override" };
     obj12.animate = animate;
     if (null == users) {
       obj13 = { source: null };
@@ -113,18 +113,11 @@ export default function GroupDMAvatar(pileSizeOverride) {
     return mapped.filter(GlobalUtils.isNotNullish);
   });
   if (null == channel.icon) {
-    if (0 !== channel.recipients.length) {
-      if (0 !== stateFromStoresArray.length) {
-        if (1 === stateFromStoresArray.length) {
-          const obj2 = { autoStatusCutout: true, status, style, size, user: stateFromStoresArray[0], guildId: "a", animate, accessible, accessibilityLabel };
-          let tmp5 = closure_5(channel(1177).Avatar, obj2);
-        } else {
-          const obj3 = { status, style, size, animate, users: stateFromStoresArray, pileSizeOverride: pileSizeOverride.pileSizeOverride, accessible, accessibilityLabel };
-          tmp5 = closure_5(FacepileGroupDMAvatar, obj3);
-        }
-      }
-      return tmp5;
+    if (stateFromStoresArray.length > 1) {
+      const obj2 = { status, style, size, animate, users: stateFromStoresArray, pileSizeOverride: pileSizeOverride.pileSizeOverride, accessible, accessibilityLabel };
+      let tmp5 = closure_5(FacepileGroupDMAvatar, obj2);
     }
+    return tmp5;
   }
   tmp5 = closure_5(channel(1177).Avatar, { autoStatusCutout: true, status, style, size, channel, animate, accessible, accessibilityLabel });
   obj = channel(504);

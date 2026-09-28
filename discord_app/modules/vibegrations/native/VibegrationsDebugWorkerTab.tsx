@@ -1,13 +1,13 @@
-// === Module 16420: VibegrationsDebugWorkerTab ===
+// === Module 16424: VibegrationsDebugWorkerTab ===
 
-// Module 16420 (VibegrationsDebugWorkerTab)
+// Module 16424 (VibegrationsDebugWorkerTab)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3715 from "module_3715" /* 3715 */;
-import VibegrationsDebugFormat from "VibegrationsDebugFormat" /* 16407 */;
-import VibegrationsDebugLabels from "VibegrationsDebugLabels" /* 16408 */;
-import VibegrationsDebugPrimitives from "VibegrationsDebugPrimitives" /* 16410 */;
-import VibegrationsDebugAnalytics from "VibegrationsDebugAnalytics" /* 16421 */;
+import VibegrationsDebugFormat from "VibegrationsDebugFormat" /* 16411 */;
+import VibegrationsDebugLabels from "VibegrationsDebugLabels" /* 16412 */;
+import VibegrationsDebugPrimitives from "VibegrationsDebugPrimitives" /* 16414 */;
+import VibegrationsDebugAnalytics from "VibegrationsDebugAnalytics" /* 16425 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -151,11 +151,11 @@ function RuntimeEnvBlock(env) {
   let obj = { children: null };
   const obj2 = { label: null, value: null };
   let intl = env(1115).intl;
-  let obj3 = { env: env(16408).debugEnvLabel(env) };
+  let obj3 = { env: env(16412).debugEnvLabel(env) };
   obj2.label = intl.formatToPlainString(_modDef3715.BVORfc, obj3);
-  let obj4 = env(16408);
-  obj2.value = env(16407).formatCount(runtime.connections);
-  const items = [closure_5(env(16410).DebugStatRow, obj2), ];
+  let obj4 = env(16412);
+  obj2.value = env(16411).formatCount(runtime.connections);
+  const items = [closure_5(env(16414).DebugStatRow, obj2), ];
   const schedules = runtime.schedules;
   items[1] = schedules.map((id) => {
     const obj = { label: null, value: null, hint: null };
@@ -319,15 +319,15 @@ function StorageSection(status) {
     let tmp4 = limits;
     let items1 = items;
   } else {
-    let obj = { key: "preview", label: limits(16408).debugEnvLabel("preview"), metrics: tmp };
+    let obj = { key: "preview", label: limits(16412).debugEnvLabel("preview"), metrics: tmp };
     items1 = [obj, ];
     let obj5 = { key: "stable", label: null, metrics: null };
-    let obj2 = limits(16408);
-    obj5.label = limits(16408).debugEnvLabel("stable");
+    let obj2 = limits(16412);
+    obj5.label = limits(16412).debugEnvLabel("stable");
     obj5.metrics = stable;
     items1[1] = obj5;
     tmp4 = limits;
-    let obj4 = limits(16408);
+    let obj4 = limits(16412);
   }
   let obj6 = { title: null, children: null };
   let intl2 = tmp4(1115).intl;
@@ -368,7 +368,7 @@ function StorageSection(status) {
     }
     return tmp18Result;
   });
-  return closure_5(tmp4(16410).DebugSection, obj6);
+  return closure_5(tmp4(16414).DebugSection, obj6);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);

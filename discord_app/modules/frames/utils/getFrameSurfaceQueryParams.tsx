@@ -1,6 +1,6 @@
-// === Module 16288: getFrameSurfaceQueryParams ===
+// === Module 16284: getFrameSurfaceQueryParams ===
 
-// Module 16288 (getFrameSurfaceQueryParams)
+// Module 16284 (getFrameSurfaceQueryParams)
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8501 */;
 import size from "module_2" /* 2 */;
 

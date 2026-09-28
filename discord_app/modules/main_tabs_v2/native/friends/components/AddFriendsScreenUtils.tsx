@@ -1,6 +1,6 @@
-// === Module 15679: AddFriendsScreenUtils ===
+// === Module 15677: AddFriendsScreenUtils ===
 
-// Module 15679 (AddFriendsScreenUtils)
+// Module 15677 (AddFriendsScreenUtils)
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9195 */;
 import PeopleUtilsDefault from "PeopleUtils" /* 10330 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

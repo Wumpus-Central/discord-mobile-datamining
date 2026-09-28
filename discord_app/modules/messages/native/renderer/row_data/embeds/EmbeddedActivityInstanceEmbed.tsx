@@ -1,6 +1,6 @@
-// === Module 12799: EmbeddedActivityInstanceEmbed ===
+// === Module 12798: EmbeddedActivityInstanceEmbed ===
 
-// Module 12799 (EmbeddedActivityInstanceEmbed)
+// Module 12798 (EmbeddedActivityInstanceEmbed)
 import util from "util" /* 1115 */;
 import ApplicationActionCreators from "ApplicationActionCreators" /* 6584 */;
 import ContentClassificationVisibility from "ContentClassificationVisibility" /* 11421 */;
@@ -8,8 +8,8 @@ import CodedLinksTypes from "CodedLinksTypes" /* 11422 */;
 import getPlayInContext from "getPlayInContext" /* 11423 */;
 import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 11424 */;
 import getApplicationInstallURL from "getApplicationInstallURL" /* 11614 */;
-import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 12790 */;
-import EmbeddedApplicationInstanceUtils from "EmbeddedApplicationInstanceUtils" /* 12800 */;
+import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 12789 */;
+import EmbeddedApplicationInstanceUtils from "EmbeddedApplicationInstanceUtils" /* 12799 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
 import ApplicationStore from "ApplicationStore" /* 5063 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

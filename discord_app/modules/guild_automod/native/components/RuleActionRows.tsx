@@ -1,13 +1,13 @@
-// === Module 17330: RuleActionRows ===
+// === Module 17334: RuleActionRows ===
 
-// Module 17330 (RuleActionRows)
+// Module 17334 (RuleActionRows)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import Stack_Stack from "Stack/Stack" /* 5279 */;
 import TableRow from "TableRow" /* 5917 */;
 import FormCheckbox from "FormCheckbox" /* 5929 */;
-import getActionInfo from "getActionInfo" /* 17310 */;
+import getActionInfo from "getActionInfo" /* 17314 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 
@@ -67,7 +67,7 @@ const result = size.fileFinishedImporting("modules/guild_automod/native/componen
 export default function RuleActionRows(rule) {
   rule = rule.rule;
   const onChangeRule = rule.onChangeRule;
-  const availableActionTypes = rule(17306).getAvailableActionTypes(rule.triggerType);
+  const availableActionTypes = rule(17310).getAvailableActionTypes(rule.triggerType);
   let tmp3 = null;
   if (0 !== availableActionTypes.length) {
     let obj2 = { title: null, hasIcons: true, children: null };

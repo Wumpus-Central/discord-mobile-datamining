@@ -1,6 +1,6 @@
-// === Module 17357: GuildSettingsModalIntegrations ===
+// === Module 17361: GuildSettingsModalIntegrations ===
 
-// Module 17357 (GuildSettingsModalIntegrations)
+// Module 17361 (GuildSettingsModalIntegrations)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4469 */;

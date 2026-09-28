@@ -1,13 +1,13 @@
-// === Module 12860: ForLaterScreen ===
+// === Module 12859: ForLaterScreen ===
 
-// Module 12860 (ForLaterScreen)
+// Module 12859 (ForLaterScreen)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4566 */;
 import spring from "spring" /* 5280 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6583 */;
 import useTrackImpressionDefault from "useTrackImpression" /* 8230 */;
-import useSavedMessagesForPageDefault from "useSavedMessagesForPage" /* 12861 */;
-import ForLaterMessageCardDefault from "ForLaterMessageCard" /* 12863 */;
+import useSavedMessagesForPageDefault from "useSavedMessagesForPage" /* 12860 */;
+import ForLaterMessageCardDefault from "ForLaterMessageCard" /* 12862 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SavedMessagesStore from "SavedMessagesStore" /* 11155 */;
@@ -72,7 +72,7 @@ function ForLaterPage(type) {
   if (0 === arr.length) {
     const obj5 = { value: analyticsLocations, children: null };
     const obj6 = { type };
-    obj5.children = closure_7(tmp2(12869), obj6);
+    obj5.children = closure_7(tmp2(12868), obj6);
     let tmp24Result = closure_7(tmp4(6583).AnalyticsLocationProvider, obj5);
   } else {
     const obj7 = { value: analyticsLocations, children: null };
@@ -83,7 +83,7 @@ function ForLaterPage(type) {
     let tmp25Result = null;
     if (tmp9) {
       const obj10 = { isReminder: tmp5, isAtLimit: tmp8 };
-      tmp25Result = closure_7(tmp2(12873), obj10);
+      tmp25Result = closure_7(tmp2(12872), obj10);
     }
     items2[1] = tmp25Result;
     obj7.children = items2;

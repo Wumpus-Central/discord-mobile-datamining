@@ -1,6 +1,6 @@
-// === Module 17477: ChannelSetupScreen ===
+// === Module 17481: ChannelSetupScreen ===
 
-// Module 17477 (ChannelSetupScreen)
+// Module 17481 (ChannelSetupScreen)
 import util from "util" /* 1115 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;

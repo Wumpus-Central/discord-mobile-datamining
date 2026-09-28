@@ -1,12 +1,12 @@
-// === Module 15983: GuildsBarSeparator ===
+// === Module 15981: GuildsBarSeparator ===
 
-// Module 15983 (GuildsBarSeparator)
+// Module 15981 (GuildsBarSeparator)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4531 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import NativeViewDefault from "NativeView" /* 5901 */;
 import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 6494 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 15657 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 15655 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

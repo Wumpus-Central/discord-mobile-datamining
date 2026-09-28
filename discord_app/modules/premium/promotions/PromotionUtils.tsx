@@ -1,6 +1,6 @@
-// === Module 12963: PromotionUtils ===
+// === Module 12962: PromotionUtils ===
 
-// Module 12963 (PromotionUtils)
+// Module 12962 (PromotionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import FlagUtils from "FlagUtils" /* 1385 */;

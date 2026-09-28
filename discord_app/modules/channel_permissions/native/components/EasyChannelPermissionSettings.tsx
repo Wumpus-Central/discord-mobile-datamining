@@ -1,6 +1,6 @@
-// === Module 16639: EasyChannelPermissionSettings ===
+// === Module 16643: EasyChannelPermissionSettings ===
 
-// Module 16639 (EasyChannelPermissionSettings)
+// Module 16643 (EasyChannelPermissionSettings)
 import nativeDefault from "native" /* 576 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5016 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5203 */;
@@ -11,7 +11,7 @@ import channel_permissions_ChannelPermissionsUtils from "channel_permissions/Cha
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelSettingsPermissionsStore from "ChannelSettingsPermissionsStore" /* 16640 */;
+import ChannelSettingsPermissionsStore from "ChannelSettingsPermissionsStore" /* 16644 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import GuildMemberStore from "GuildMemberStore" /* 2108 */;
 import GuildRoleStore from "GuildRoleStore" /* 2102 */;
@@ -231,7 +231,7 @@ function ChannelPermissionSettingsBasicView(channel) {
   const sortedGuildRoles = stateFromStoresObject.sortedGuildRoles;
   const items1 = [navigation];
   const layoutEffect = togglePrivateChannel.useLayoutEffect(() => {
-    navigation.setOptions({ headerRight: "__initData" });
+    navigation.setOptions({ headerRight: "r" });
   }, items1);
   const items2 = [guild, sortedGuildRoles, channel];
   const memo = togglePrivateChannel.useMemo(() => {

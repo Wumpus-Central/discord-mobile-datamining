@@ -1,6 +1,6 @@
-// === Module 14035: commands/config ===
+// === Module 14034: commands/config ===
 
-// Module 14035 (commands/config)
+// Module 14034 (commands/config)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import RPCErrorDefault from "RPCError" /* 8770 */;
 import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8773 */;

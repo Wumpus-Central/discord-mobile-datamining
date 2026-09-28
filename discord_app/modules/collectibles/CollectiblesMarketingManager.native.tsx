@@ -1,6 +1,6 @@
-// === Module 14108: CollectiblesMarketingManager ===
+// === Module 14107: CollectiblesMarketingManager ===
 
-// Module 14108 (CollectiblesMarketingManager)
+// Module 14107 (CollectiblesMarketingManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 6961 */;
 import CollectiblesMarketingReleaseType2 from "CollectiblesMarketingReleaseType" /* 7010 */;

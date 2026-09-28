@@ -1,6 +1,6 @@
-// === Module 12831: IconActionButton ===
+// === Module 12830: IconActionButton ===
 
-// Module 12831 (IconActionButton)
+// Module 12830 (IconActionButton)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;

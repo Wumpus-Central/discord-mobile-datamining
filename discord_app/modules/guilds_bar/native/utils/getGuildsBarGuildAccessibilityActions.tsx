@@ -1,10 +1,10 @@
-// === Module 15977: getGuildsBarGuildAccessibilityActions ===
+// === Module 15975: getGuildsBarGuildAccessibilityActions ===
 
-// Module 15977 (getGuildsBarGuildAccessibilityActions)
+// Module 15975 (getGuildsBarGuildAccessibilityActions)
 import shared from "shared" /* 4685 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5832 */;
 import UserSettingsActionCreators from "UserSettingsActionCreators" /* 8659 */;
-import getGuildBarNeighborsDefault from "getGuildBarNeighbors" /* 15978 */;
+import getGuildBarNeighborsDefault from "getGuildBarNeighbors" /* 15976 */;
 import GuildStore from "GuildStore" /* 2067 */;
 import SortedGuildStore from "SortedGuildStore" /* 5750 */;
 

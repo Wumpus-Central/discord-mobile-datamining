@@ -1,12 +1,12 @@
-// === Module 14401: FamilyCenterSetting ===
+// === Module 14400: FamilyCenterSetting ===
 
-// Module 14401 (FamilyCenterSetting)
+// Module 14400 (FamilyCenterSetting)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef2487 from "module_2487" /* 2487 */;
 import WarningIcon from "WarningIcon" /* 8048 */;
-import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 14402 */;
-import useParentalConsentWarning from "useParentalConsentWarning" /* 14403 */;
+import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 14401 */;
+import useParentalConsentWarning from "useParentalConsentWarning" /* 14402 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

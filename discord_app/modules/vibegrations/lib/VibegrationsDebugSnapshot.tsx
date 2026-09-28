@@ -1,7 +1,7 @@
-// === Module 16404: VibegrationsDebugSnapshot ===
+// === Module 16408: VibegrationsDebugSnapshot ===
 
-// Module 16404 (VibegrationsDebugSnapshot)
-import VibegrationsDebugStore from "VibegrationsDebugStore" /* 16403 */;
+// Module 16408 (VibegrationsDebugSnapshot)
+import VibegrationsDebugStore from "VibegrationsDebugStore" /* 16407 */;
 import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8495 */;
 
 const size = fn(2);

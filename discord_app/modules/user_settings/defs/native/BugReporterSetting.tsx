@@ -1,6 +1,6 @@
-// === Module 15342: BugReporterSetting ===
+// === Module 15340: BugReporterSetting ===
 
-// Module 15342 (BugReporterSetting)
+// Module 15340 (BugReporterSetting)
 import util from "util" /* 1115 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5039 */;
@@ -18,7 +18,7 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t["/tZh0A"]);
   },
   parent: null,
-  IconComponent: fn(15343).BugIcon,
+  IconComponent: fn(15341).BugIcon,
   onPress: function handleBugReporterSettingPress() {
     if (!BugReportStore.getField("isReportOpen")) {
       BugReportStore.setState({ isReportOpen: true });

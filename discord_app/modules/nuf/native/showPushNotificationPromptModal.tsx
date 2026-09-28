@@ -1,6 +1,6 @@
-// === Module 15625: showPushNotificationPromptModal ===
+// === Module 15623: showPushNotificationPromptModal ===
 
-// Module 15625 (showPushNotificationPromptModal)
+// Module 15623 (showPushNotificationPromptModal)
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5039 */;
 import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 11902 */;
 import NUFConstants from "NUFConstants" /* 12202 */;
@@ -12,7 +12,7 @@ let result = size.fileFinishedImporting("modules/nuf/native/showPushNotification
 
 export const showPushNotificationPromptModal = function showPushNotificationPromptModal(onComplete) {
   onComplete = onComplete.onComplete;
-  ModalActionCreatorsDefault.pushLazy(onComplete(1981)(15626, dependencyMap.paths), {
+  ModalActionCreatorsDefault.pushLazy(onComplete(1981)(15624, dependencyMap.paths), {
     onComplete() {
       ModalActionCreatorsDefault.popWithKey(closure_4);
       onComplete();

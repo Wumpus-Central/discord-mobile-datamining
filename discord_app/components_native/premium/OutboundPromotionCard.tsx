@@ -1,6 +1,6 @@
-// === Module 13099: OutboundPromotionCard ===
+// === Module 13098: OutboundPromotionCard ===
 
-// Module 13099 (OutboundPromotionCard)
+// Module 13098 (OutboundPromotionCard)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;

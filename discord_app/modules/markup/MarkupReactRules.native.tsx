@@ -26,8 +26,8 @@ import SpoilerDefault from "Spoiler" /* 9586 */;
 import TimestampDefault from "Timestamp" /* 9588 */;
 import MarkupReactCommandRuleDefault from "MarkupReactCommandRule" /* 10782 */;
 import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 11079 */;
-import SignPostIcon2 from "SignPostIcon" /* 13387 */;
-import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 13389 */;
+import SignPostIcon2 from "SignPostIcon" /* 13386 */;
+import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 13388 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4825 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
@@ -483,7 +483,7 @@ function MarkupAttachmentLink(state) {
     str2 = "text-xs/medium";
   }
   let obj = { variant: str2, style: tmp.channelMentionText, children: null };
-  const obj2 = { themedColor: node(576).colors.MENTION_FOREGROUND, source: node(13386), size: null };
+  const obj2 = { themedColor: node(576).colors.MENTION_FOREGROUND, source: node(13385), size: null };
   const fontScale = closure_4.getFontScale();
   if (fontScale < 1) {
     let SMALL = tmp3(1177).Icon.Sizes.EXTRA_SMALL_10;
@@ -943,7 +943,7 @@ export default function createRules() {
     },
     [closure_0(closure_2[43]).AST_KEY.GAME_MENTION]: {
       react(node, arg1, state) {
-        return closure_1_15(obj2(13391), { node, state }, state.key);
+        return closure_1_15(obj2(13390), { node, state }, state.key);
       }
     },
     [closure_0(closure_2[43]).AST_KEY.TIMESTAMP]: {
@@ -1154,4 +1154,4 @@ export const plainSpoilerRenderer = function plainSpoilerRenderer(content) {
   }
   return str;
 };
-export const createFetchingGameMentionRule = fn(13391).createFetchingGameMentionRule;
+export const createFetchingGameMentionRule = fn(13390).createFetchingGameMentionRule;

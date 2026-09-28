@@ -1,6 +1,6 @@
-// === Module 17211: RedesignNewUserManager ===
+// === Module 17215: RedesignNewUserManager ===
 
-// Module 17211 (RedesignNewUserManager)
+// Module 17215 (RedesignNewUserManager)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4692 */;
 import ContactSyncModalStore from "ContactSyncModalStore" /* 12174 */;
 import NewUserStore from "NewUserStore" /* 5871 */;

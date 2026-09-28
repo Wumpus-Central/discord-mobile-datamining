@@ -1,6 +1,6 @@
-// === Module 15836: FavoritesGuildSuggestionsStore ===
+// === Module 15834: FavoritesGuildSuggestionsStore ===
 
-// Module 15836 (FavoritesGuildSuggestionsStore)
+// Module 15834 (FavoritesGuildSuggestionsStore)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import DismissibleContentShownStateStore from "DismissibleContentShownStateStore" /* 2035 */;

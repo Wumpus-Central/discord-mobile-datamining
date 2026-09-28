@@ -1,6 +1,6 @@
-// === Module 15299: BalanceWidgetMenu ===
+// === Module 15297: BalanceWidgetMenu ===
 
-// Module 15299 (BalanceWidgetMenu)
+// Module 15297 (BalanceWidgetMenu)
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import dismissible_content from "dismissible_content" /* 2029 */;
@@ -59,7 +59,7 @@ class OrbsOnboardingMenuDismissibleContent {
           const obj2 = QuestUtils;
           obj2.openQuestHome({ filter: constants3.VIRTUAL_CURRENCY, fromContent: QuestTypes.QuestContent.MOBILE_ORBS_ONBOARDING_DC });
         };
-        obj.trailing = closure_9(closure_1(15300), {});
+        obj.trailing = closure_9(closure_1(15298), {});
         return closure_9(closure_10, obj);
       } else {
         return null;

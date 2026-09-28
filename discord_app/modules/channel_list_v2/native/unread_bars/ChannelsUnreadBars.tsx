@@ -1,6 +1,6 @@
-// === Module 15815: ChannelsUnreadBars ===
+// === Module 15813: ChannelsUnreadBars ===
 
-// Module 15815 (ChannelsUnreadBars)
+// Module 15813 (ChannelsUnreadBars)
 import debounceDefault from "debounce" /* 551 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import HapticUtils from "HapticUtils" /* 4801 */;

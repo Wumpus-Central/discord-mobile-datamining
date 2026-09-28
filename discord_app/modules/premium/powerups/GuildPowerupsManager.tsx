@@ -1,6 +1,6 @@
-// === Module 17136: GuildPowerupsManager ===
+// === Module 17140: GuildPowerupsManager ===
 
-// Module 17136 (GuildPowerupsManager)
+// Module 17140 (GuildPowerupsManager)
 import FavoritesUtils from "FavoritesUtils" /* 2070 */;
 import BoostingActionCreators from "BoostingActionCreators" /* 4732 */;
 import GameServerExperiment2 from "GameServerExperiment" /* 4747 */;
@@ -11,7 +11,7 @@ import shared_PlatformUtils from "shared/PlatformUtils" /* 5091 */;
 import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 11984 */;
 import GameServerPricingExperiment2 from "GameServerPricingExperiment" /* 12005 */;
 import useHasAllocateBoostPermission from "useHasAllocateBoostPermission" /* 12009 */;
-import useIsCurrentUserEligibleForPowerupUpsells from "useIsCurrentUserEligibleForPowerupUpsells" /* 15801 */;
+import useIsCurrentUserEligibleForPowerupUpsells from "useIsCurrentUserEligibleForPowerupUpsells" /* 15799 */;
 import GuildStore from "GuildStore" /* 2067 */;
 import PermissionStore from "PermissionStore" /* 4469 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4655 */;

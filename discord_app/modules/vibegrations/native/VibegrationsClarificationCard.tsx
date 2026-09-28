@@ -1,8 +1,8 @@
-// === Module 16379: VibegrationsClarificationCard ===
+// === Module 16381: VibegrationsClarificationCard ===
 
-// Module 16379 (VibegrationsClarificationCard)
+// Module 16381 (VibegrationsClarificationCard)
 import nativeDefault from "native" /* 576 */;
-import VibegrationsClarification from "VibegrationsClarification" /* 16380 */;
+import VibegrationsClarification from "VibegrationsClarification" /* 16382 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

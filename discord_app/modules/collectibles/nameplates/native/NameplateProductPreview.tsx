@@ -1,6 +1,6 @@
-// === Module 12712: NameplateProductPreview ===
+// === Module 12711: NameplateProductPreview ===
 
-// Module 12712 (NameplateProductPreview)
+// Module 12711 (NameplateProductPreview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;

@@ -1,8 +1,8 @@
-// === Module 13479: GuildBadgePsychic ===
+// === Module 13478: GuildBadgePsychic ===
 
-// Module 13479 (GuildBadgePsychic)
+// Module 13478 (GuildBadgePsychic)
 import inlineStyles from "inlineStyles" /* 7909 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 13463 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 13462 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

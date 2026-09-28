@@ -1,6 +1,6 @@
-// === Module 14903: DisplayNameStylesColorPickerSheet ===
+// === Module 14901: DisplayNameStylesColorPickerSheet ===
 
-// Module 14903 (DisplayNameStylesColorPickerSheet)
+// Module 14901 (DisplayNameStylesColorPickerSheet)
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
@@ -8,8 +8,8 @@ import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1389 */;
 import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4783 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
 import HapticUtils from "HapticUtils" /* 4801 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14153 */;
-import ColorPickerConsts from "ColorPickerConsts" /* 14900 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14152 */;
+import ColorPickerConsts from "ColorPickerConsts" /* 14898 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -35,7 +35,7 @@ const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj7.alignItems = "center";
 obj7.justifyContent = "center";
 obj2.checkmarkOverlay = obj7;
-const size1 = { width: fn(14900).CHECKMARK_SIZE, height: fn(14900).CHECKMARK_SIZE };
+const size1 = { width: fn(14898).CHECKMARK_SIZE, height: fn(14898).CHECKMARK_SIZE };
 obj2.checkmark = size1;
 let obj6 = { borderColor: nativeDefault.colors.CONTROL_BRAND_FOREGROUND };
 obj2.buttonsContainer = { alignSelf: "stretch", flexDirection: "row", gap: nativeDefault.space.PX_16 };

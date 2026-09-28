@@ -1,9 +1,9 @@
-// === Module 15289: PremiumTrialOfferActionSheet ===
+// === Module 15287: PremiumTrialOfferActionSheet ===
 
-// Module 15289 (PremiumTrialOfferActionSheet)
+// Module 15287 (PremiumTrialOfferActionSheet)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import openPremiumModalDefault from "openPremiumModal" /* 8695 */;
-import UserTrialActionCreatorsDefault from "UserTrialActionCreators" /* 12891 */;
+import UserTrialActionCreatorsDefault from "UserTrialActionCreators" /* 12890 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

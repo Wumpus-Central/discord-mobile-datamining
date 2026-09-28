@@ -1,15 +1,15 @@
-// === Module 16597: YouScreenContainer ===
+// === Module 16601: YouScreenContainer ===
 
-// Module 16597 (YouScreenContainer)
+// Module 16601 (YouScreenContainer)
 import nativeDefault from "native" /* 576 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1365 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
-import TabsPerformanceTracker from "TabsPerformanceTracker" /* 15649 */;
+import TabsPerformanceTracker from "TabsPerformanceTracker" /* 15647 */;
 import noop from "module_19" /* 19 */;
 
 const useWindowDimensionsDefault = tmp(1479);
 const useChatLayoutDefault = tmp(4695);
-const YouScreenDefault = tmp(16598);
+const YouScreenDefault = tmp(16602);
 require = fn;
 const View = fn(17).View;
 const RootNavigatorScreen = fn(10549).RootNavigatorScreen;

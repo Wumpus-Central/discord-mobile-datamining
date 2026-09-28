@@ -1,13 +1,13 @@
-// === Module 14326: TwoFASetupSuccess ===
+// === Module 14325: TwoFASetupSuccess ===
 
-// Module 14326 (TwoFASetupSuccess)
+// Module 14325 (TwoFASetupSuccess)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import components_Button_Button from "components/Button/Button" /* 5281 */;
-import TwoFASetupModal from "TwoFASetupModal" /* 14317 */;
-import _mod14327 from "module_14327" /* 14327 */;
+import TwoFASetupModal from "TwoFASetupModal" /* 14316 */;
+import _mod14326 from "module_14326" /* 14326 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -94,9 +94,9 @@ export default function TwoFASetupSuccess() {
               c6 = 3;
               throw value;
             } else if (arg0 !== 2) {
-              setError(14316).close();
+              setError(14315).close();
               c4 = 0;
-              const obj = setError(14316);
+              const obj = setError(14315);
             }
             c4 = 0;
             c6 = 3;
@@ -133,7 +133,7 @@ export default function TwoFASetupSuccess() {
   const items = [closure_8(closure_6, { style: tmp.flex }), , , , , , , ];
   let obj2 = { style: tmp.flex };
   const tmp4 = _slicedToArray(noop.useState(""), 2);
-  items[1] = closure_8(closure_7, { source: _mod14327, style: tmp.image });
+  items[1] = closure_8(closure_7, { source: _mod14326, style: tmp.image });
   let obj4 = { style: tmp.success, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = util.intl;
   obj4.children = intl.string(util.t.Awk3Gw);

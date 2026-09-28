@@ -1,6 +1,6 @@
-// === Module 15480: ManageSponsoredContentSetting ===
+// === Module 15478: ManageSponsoredContentSetting ===
 
-// Module 15480 (ManageSponsoredContentSetting)
+// Module 15478 (ManageSponsoredContentSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
 import _modDef2157 from "module_2157" /* 2157 */;

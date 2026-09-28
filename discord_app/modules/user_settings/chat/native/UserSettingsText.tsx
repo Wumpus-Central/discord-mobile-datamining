@@ -1,6 +1,6 @@
-// === Module 15014: UserSettingsText ===
+// === Module 15012: UserSettingsText ===
 
-// Module 15014 (UserSettingsText)
+// Module 15012 (UserSettingsText)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import UserSettings from "UserSettings" /* 2021 */;

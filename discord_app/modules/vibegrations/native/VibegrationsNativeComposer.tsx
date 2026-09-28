@@ -1,6 +1,6 @@
-// === Module 16398: VibegrationsNativeComposer ===
+// === Module 16403: VibegrationsNativeComposer ===
 
-// Module 16398 (VibegrationsNativeComposer)
+// Module 16403 (VibegrationsNativeComposer)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3715 from "module_3715" /* 3715 */;
@@ -12,15 +12,15 @@ import PlusLargeIcon from "PlusLargeIcon" /* 10413 */;
 import ChatInputActionButtonDefault from "ChatInputActionButton" /* 11721 */;
 import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 11728 */;
 import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 14536 */;
-import StopIcon from "StopIcon" /* 15563 */;
-import VibegrationsModelSettingsSheet from "VibegrationsModelSettingsSheet" /* 16268 */;
-import vibegrationsAttachmentDrafts from "vibegrationsAttachmentDrafts" /* 16400 */;
+import StopIcon from "StopIcon" /* 15561 */;
+import VibegrationsModelSettingsSheet from "VibegrationsModelSettingsSheet" /* 16264 */;
+import vibegrationsAttachmentDrafts from "vibegrationsAttachmentDrafts" /* 16389 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4825 */;
-import VibegrationsComposerDraftStore from "VibegrationsComposerDraftStore" /* 16399 */;
-import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 12624 */;
+import VibegrationsComposerDraftStore from "VibegrationsComposerDraftStore" /* 16404 */;
+import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 12642 */;
 
 const VibegrationsModelSettingsSheetDefault = VibegrationsModelSettingsSheet;
 
@@ -37,7 +37,7 @@ function tooLargeText(contentType) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const uploadAttachmentBytes = fn(12624).uploadAttachmentBytes;
+const uploadAttachmentBytes = fn(12642).uploadAttachmentBytes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
@@ -288,7 +288,7 @@ export default function VibegrationsNativeComposer(projectId) {
         };
         return obj5;
       });
-      obj2 = obj2(16400);
+      obj2 = obj2(16389);
       result = obj2.addVibegrationsAttachmentDrafts(projectId, "chat", mapped);
     }
   }, items3);

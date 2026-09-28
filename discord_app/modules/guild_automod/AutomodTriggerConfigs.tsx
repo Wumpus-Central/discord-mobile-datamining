@@ -1,6 +1,6 @@
-// === Module 17306: AutomodTriggerConfigs ===
+// === Module 17310: AutomodTriggerConfigs ===
 
-// Module 17306 (AutomodTriggerConfigs)
+// Module 17310 (AutomodTriggerConfigs)
 import util from "util" /* 1115 */;
 import guild_automod_ExperimentUtils from "guild_automod/ExperimentUtils" /* 9559 */;
 import noop from "module_19" /* 19 */;

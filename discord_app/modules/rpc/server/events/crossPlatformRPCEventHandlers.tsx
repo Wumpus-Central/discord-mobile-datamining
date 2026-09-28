@@ -1,6 +1,6 @@
-// === Module 14082: crossPlatformRPCEventHandlers ===
+// === Module 14081: crossPlatformRPCEventHandlers ===
 
-// Module 14082 (crossPlatformRPCEventHandlers)
+// Module 14081 (crossPlatformRPCEventHandlers)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
@@ -9,9 +9,9 @@ import RPCErrorDefault from "RPCError" /* 8770 */;
 import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8773 */;
 import RPCHelpers from "RPCHelpers" /* 8775 */;
 import transformUserDefault from "transformUser" /* 8776 */;
-import VibegrationsVoiceSessionCoordinatorDefault from "VibegrationsVoiceSessionCoordinator" /* 14021 */;
-import transformGuildMemberDefault from "transformGuildMember" /* 14083 */;
-import transformApplicationDefault from "transformApplication" /* 14084 */;
+import VibegrationsVoiceSessionCoordinatorDefault from "VibegrationsVoiceSessionCoordinator" /* 14020 */;
+import transformGuildMemberDefault from "transformGuildMember" /* 14082 */;
+import transformApplicationDefault from "transformApplication" /* 14083 */;
 import ApplicationStore from "ApplicationStore" /* 5063 */;
 import RunningGameStore from "RunningGameStore" /* 2000 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4858 */;
@@ -321,7 +321,7 @@ obj2[RPCEvents.VOICE_SESSION_PARTICIPANTS_UPDATE] = {
   handler(args) {
     const session_id = args.args.session_id;
     const socket = args.socket;
-    const result = socket(14021).validateEventSubscription(socket, session_id);
+    const result = socket(14020).validateEventSubscription(socket, session_id);
     return (prevState) => {
       prevState = prevState.prevState;
       const participantsForEventSubscription = VibegrationsVoiceSessionCoordinatorDefault.getParticipantsForEventSubscription(socket, session_id);
@@ -439,7 +439,7 @@ const obj35 = {
   }
 };
 obj2[RPCEvents.FRAME_LAYOUT_MODE_UPDATE] = obj35;
-obj2[RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE] = fn(14026).activityInstanceConnectedParticipantsUpdateEvent;
+obj2[RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE] = fn(14025).activityInstanceConnectedParticipantsUpdateEvent;
 const obj36 = {
   scope: null,
   handler() {

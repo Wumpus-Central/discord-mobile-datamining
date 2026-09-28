@@ -1,13 +1,13 @@
-// === Module 16377: VibegrationsTodoList ===
+// === Module 16379: VibegrationsTodoList ===
 
-// Module 16377 (VibegrationsTodoList)
+// Module 16379 (VibegrationsTodoList)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3715 from "module_3715" /* 3715 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import VibegrationsNativeStatusLine from "VibegrationsNativeStatusLine" /* 16335 */;
 import VibegrationsTodoAgents from "VibegrationsTodoAgents" /* 16376 */;
-import VibegrationsTodoState from "VibegrationsTodoState" /* 16378 */;
+import VibegrationsTodoState from "VibegrationsTodoState" /* 16380 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -116,7 +116,7 @@ let obj5 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.spac
 obj2.list = { gap: nativeDefault.space.PX_8 };
 let obj6 = { gap: nativeDefault.space.PX_8 };
 obj2.row = { flexDirection: "row", gap: nativeDefault.space.PX_8, alignItems: "center" };
-let size = { width: nativeDefault.modules.mobile.CONTROL_CHECKBOX_SIZE_DEFAULT, height: nativeDefault.modules.mobile.CONTROL_CHECKBOX_SIZE_DEFAULT, flexGrow: 0, flexShrink: 0, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.modules.mobile.CONTROL_CHECKBOX_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CONTROL_CHECKBOX_BORDER_WIDTH, borderColor: nativeDefault.colors.BORDER_MUTED };
+let size = { width: nativeDefault.modules.mobile.CONTROL_CHECKBOX_SIZE_DEFAULT, height: nativeDefault.modules.mobile.CONTROL_CHECKBOX_SIZE_DEFAULT, flexGrow: 0, flexShrink: 0, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.modules.mobile.CONTROL_CHECKBOX_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CONTROL_CHECKBOX_BORDER_WIDTH, borderColor: nativeDefault.colors.CHECKBOX_BORDER_DEFAULT };
 obj2.marker = size;
 let obj7 = { flexDirection: "row", gap: nativeDefault.space.PX_8, alignItems: "center" };
 obj2.markerCompleted = { borderColor: nativeDefault.colors.CHECKBOX_BORDER_SELECTED_DEFAULT, backgroundColor: nativeDefault.colors.CHECKBOX_BACKGROUND_SELECTED_DEFAULT };
@@ -246,7 +246,7 @@ export default function VibegrationsTodoList(announceProgress) {
           obj3.children = VibegrationsTodoState.todoLabel(status, todoMarkResult);
           items[1] = timestampProducer(Text_Text.Text, obj3);
           let tmp7Result = null;
-          if ("in_progress" === todoMarkResult) {
+          if ("completed" !== todoMarkResult) {
             let items2 = closure_3.get(status.id);
             if (items2 == null) {
               items2 = [];

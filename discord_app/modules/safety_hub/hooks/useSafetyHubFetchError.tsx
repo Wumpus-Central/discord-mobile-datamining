@@ -1,6 +1,6 @@
-// === Module 14298: useSafetyHubFetchError ===
+// === Module 14297: useSafetyHubFetchError ===
 
-// Module 14298 (useSafetyHubFetchError)
+// Module 14297 (useSafetyHubFetchError)
 import initialize from "initialize" /* 504 */;
 import SafetyHubStore from "SafetyHubStore" /* 7881 */;
 

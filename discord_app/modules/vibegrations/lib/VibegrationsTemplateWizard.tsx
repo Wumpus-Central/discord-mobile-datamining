@@ -1,6 +1,6 @@
-// === Module 16255: VibegrationsTemplateWizard ===
+// === Module 16251: VibegrationsTemplateWizard ===
 
-// Module 16255 (VibegrationsTemplateWizard)
+// Module 16251 (VibegrationsTemplateWizard)
 import util from "util" /* 1115 */;
 import _modDef3715 from "module_3715" /* 3715 */;
 import VibegrationsUtils from "VibegrationsUtils" /* 5370 */;

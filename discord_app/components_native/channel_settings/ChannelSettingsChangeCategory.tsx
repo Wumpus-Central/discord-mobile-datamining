@@ -1,6 +1,6 @@
-// === Module 16671: ChannelSettingsChangeCategory ===
+// === Module 16675: ChannelSettingsChangeCategory ===
 
-// Module 16671 (ChannelSettingsChangeCategory)
+// Module 16675 (ChannelSettingsChangeCategory)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;

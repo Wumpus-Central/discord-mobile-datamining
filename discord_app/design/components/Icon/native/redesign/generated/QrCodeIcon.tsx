@@ -1,6 +1,6 @@
-// === Module 14419: QrCodeIcon ===
+// === Module 14418: QrCodeIcon ===
 
-// Module 14419 (QrCodeIcon)
+// Module 14418 (QrCodeIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4530 */;
 import _mod9317 from "module_9317" /* 9317 */;

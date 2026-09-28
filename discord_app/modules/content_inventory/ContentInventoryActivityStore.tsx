@@ -1,6 +1,6 @@
-// === Module 12557: ContentInventoryActivityStore ===
+// === Module 12575: ContentInventoryActivityStore ===
 
-// Module 12557 (ContentInventoryActivityStore)
+// Module 12575 (ContentInventoryActivityStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;

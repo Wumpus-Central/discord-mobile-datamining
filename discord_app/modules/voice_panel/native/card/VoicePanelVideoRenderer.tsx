@@ -1,6 +1,6 @@
-// === Module 16953: VoicePanelVideoRenderer ===
+// === Module 16957: VoicePanelVideoRenderer ===
 
-// Module 16953 (VoicePanelVideoRenderer)
+// Module 16957 (VoicePanelVideoRenderer)
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4566 */;
 import timing from "timing" /* 4837 */;
 import spring from "spring" /* 5280 */;
@@ -8,7 +8,7 @@ import LegacyBaseButton from "LegacyBaseButton" /* 6073 */;
 import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 8853 */;
 import DCDVideoRendererDefault from "DCDVideoRenderer" /* 8892 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10896 */;
-import VideoActionCreators from "VideoActionCreators" /* 16824 */;
+import VideoActionCreators from "VideoActionCreators" /* 16828 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +20,7 @@ const VoicePanelConstants = fn(11755);
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
 const VoicePanelControlsModes = fn(11753).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(16909).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(16913).VoicePanelPIPModes;
 let SCALE_PHYSICS = fn(11756).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);

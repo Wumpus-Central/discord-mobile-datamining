@@ -1,6 +1,6 @@
-// === Module 13339: VoiceChannelHeader ===
+// === Module 13338: VoiceChannelHeader ===
 
-// Module 13339 (VoiceChannelHeader)
+// Module 13338 (VoiceChannelHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
@@ -12,9 +12,9 @@ import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils
 import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 9394 */;
 import _modDef9491 from "module_9491" /* 9491 */;
 import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11085 */;
-import CallStateHooks from "CallStateHooks" /* 13340 */;
-import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 13341 */;
-import OngoingCallTimerDefault from "OngoingCallTimer" /* 13342 */;
+import CallStateHooks from "CallStateHooks" /* 13339 */;
+import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 13340 */;
+import OngoingCallTimerDefault from "OngoingCallTimer" /* 13341 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
 import GuildStore from "GuildStore" /* 2067 */;

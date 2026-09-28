@@ -1,6 +1,6 @@
-// === Module 16601: useHasNewAdContent ===
+// === Module 16605: useHasNewAdContent ===
 
-// Module 16601 (useHasNewAdContent)
+// Module 16605 (useHasNewAdContent)
 import DurationsDefault from "Durations" /* 1091 */;
 import AdCreativeType from "AdCreativeType" /* 5763 */;
 import _slicedToArray from "module_32" /* 32 */;

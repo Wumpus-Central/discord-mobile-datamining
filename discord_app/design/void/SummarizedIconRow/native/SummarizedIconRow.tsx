@@ -1,6 +1,6 @@
-// === Module 13640: SummarizedIconRow ===
+// === Module 13639: SummarizedIconRow ===
 
-// Module 13640 (SummarizedIconRow)
+// Module 13639 (SummarizedIconRow)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import noop from "module_19" /* 19 */;

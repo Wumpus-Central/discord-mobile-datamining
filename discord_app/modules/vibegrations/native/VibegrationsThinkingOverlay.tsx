@@ -1,9 +1,9 @@
-// === Module 16392: VibegrationsThinkingOverlay ===
+// === Module 16397: VibegrationsThinkingOverlay ===
 
-// Module 16392 (VibegrationsThinkingOverlay)
+// Module 16397 (VibegrationsThinkingOverlay)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
-import VibegrationsChatStore from "VibegrationsChatStore" /* 12625 */;
+import VibegrationsChatStore from "VibegrationsChatStore" /* 12643 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
@@ -49,7 +49,7 @@ export default function VibegrationsThinkingOverlay(projectId) {
   const obj5 = { style: tmp.body, children: null };
   const obj6 = { style: tmp.header, children: null };
   const obj2 = projectId(16346);
-  const items2 = [closure_7(projectId(16061).LightbulbIcon, { size: "xs", color: ref(576).colors.TEXT_BRAND }), ];
+  const items2 = [closure_7(projectId(16057).LightbulbIcon, { size: "xs", color: ref(576).colors.TEXT_BRAND }), ];
   const obj8 = { variant: "text-sm/semibold", color: "text-strong", children: null };
   const intl = tmp3(1115).intl;
   obj8.children = intl.string(ref(3715).ltkR4n);

@@ -1,6 +1,6 @@
-// === Module 12918: WhatYouLoseProfileTier1 ===
+// === Module 12917: WhatYouLoseProfileTier1 ===
 
-// Module 12918 (WhatYouLoseProfileTier1)
+// Module 12917 (WhatYouLoseProfileTier1)
 import shared from "shared" /* 4685 */;
 import _mod7679 from "module_7679" /* 7679 */;
 import noop from "module_19" /* 19 */;
@@ -16,13 +16,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getWhatYouLoseProfileTier1Source = function getWhatYouLoseProfileTier1Source(theme) {
   return _mod7679.getIllustrationSource(theme, {
     dark() {
-      return require("module_12919");
+      return require("module_12918");
     },
     darker() {
-      return require("module_12920");
+      return require("module_12919");
     },
     light() {
-      return require("module_12921");
+      return require("module_12920");
     }
   });
 };
@@ -30,13 +30,13 @@ export const useWhatYouLoseProfileTier1Source = function useWhatYouLoseProfileTi
   const obj = shared;
   return _mod7679.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_12919");
+      return require("module_12918");
     },
     darker() {
-      return require("module_12920");
+      return require("module_12919");
     },
     light() {
-      return require("module_12921");
+      return require("module_12920");
     }
   });
 };
@@ -45,13 +45,13 @@ export const WhatYouLoseProfileTier1 = function WhatYouLoseProfileTier1(arg0) {
   const obj4 = {};
   const illustrationSource = _mod7679.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_12919");
+      return require("module_12918");
     },
     darker() {
-      return require("module_12920");
+      return require("module_12919");
     },
     light() {
-      return require("module_12921");
+      return require("module_12920");
     }
   });
   const merged = Object.assign(arg0);

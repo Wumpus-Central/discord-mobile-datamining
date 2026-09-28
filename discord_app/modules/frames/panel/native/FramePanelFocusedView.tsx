@@ -1,10 +1,10 @@
-// === Module 16864: FramePanelFocusedView ===
+// === Module 16868: FramePanelFocusedView ===
 
-// Module 16864 (FramePanelFocusedView)
+// Module 16868 (FramePanelFocusedView)
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 8760 */;
-import FrameViewDefault from "FrameView" /* 16283 */;
-import ActivityPanelFocusedView from "ActivityPanelFocusedView" /* 16843 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 16861 */;
+import FrameViewDefault from "FrameView" /* 16279 */;
+import ActivityPanelFocusedView from "ActivityPanelFocusedView" /* 16847 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 16865 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 8499 */;
 

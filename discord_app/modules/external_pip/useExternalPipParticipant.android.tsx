@@ -1,6 +1,6 @@
-// === Module 16825: useExternalPipParticipant ===
+// === Module 16829: useExternalPipParticipant ===
 
-// Module 16825 (useExternalPipParticipant)
+// Module 16829 (useExternalPipParticipant)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4852 */;
@@ -236,7 +236,7 @@ export default function useExternalPipParticipant() {
         return obj;
       }
     }
-    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "paddingHorizontal" };
+    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "channel" };
   }, items4);
   closure_129_4 = selectedParticipantSpeaking;
   const items5 = [selectedParticipantSpeaking.selectedParticipantSpeaking];

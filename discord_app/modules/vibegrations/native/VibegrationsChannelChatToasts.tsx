@@ -1,13 +1,13 @@
-// === Module 16424: VibegrationsChannelChatToasts ===
+// === Module 16428: VibegrationsChannelChatToasts ===
 
-// Module 16424 (VibegrationsChannelChatToasts)
+// Module 16428 (VibegrationsChannelChatToasts)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import UserUtils from "UserUtils" /* 4678 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import Card from "Card" /* 5919 */;
-import useVibegrationsChatToastMessagesDefault from "useVibegrationsChatToastMessages" /* 16425 */;
+import useVibegrationsChatToastMessagesDefault from "useVibegrationsChatToastMessages" /* 16429 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

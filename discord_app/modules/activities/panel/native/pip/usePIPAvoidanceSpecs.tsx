@@ -1,10 +1,10 @@
-// === Module 16830: pip/usePIPAvoidanceSpecs ===
+// === Module 16834: pip/usePIPAvoidanceSpecs ===
 
-// Module 16830 (pip/usePIPAvoidanceSpecs)
+// Module 16834 (pip/usePIPAvoidanceSpecs)
 import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 8853 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10896 */;
-import getPIPBottomOffsetForPIPModeDefault from "getPIPBottomOffsetForPIPMode" /* 16729 */;
-import getAdjustedBottomOffsetsDefault from "getAdjustedBottomOffsets" /* 16832 */;
+import getPIPBottomOffsetForPIPModeDefault from "getPIPBottomOffsetForPIPMode" /* 16733 */;
+import getAdjustedBottomOffsetsDefault from "getAdjustedBottomOffsets" /* 16836 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -16,9 +16,9 @@ const result = size.fileFinishedImporting("modules/activities/panel/native/pip/u
 export default function usePIPAvoidanceSpecs(safeArea) {
   _require = safeArea;
   const sharedValue = require("ReanimatedRexport").useSharedValue({ top: 0, bottom: 0 });
-  const tmp2 = sharedValue(16273)();
+  const tmp2 = sharedValue(16269)();
   dependencyMap = tmp2;
-  const tmp3 = sharedValue(16831)();
+  const tmp3 = sharedValue(16835)();
   __initData = tmp3;
   let obj = require("ReanimatedRexport");
   const fn = function n() {
@@ -39,7 +39,7 @@ export default function usePIPAvoidanceSpecs(safeArea) {
     tmp = current;
   };
   let obj2 = require("ReanimatedRexport");
-  fn2.__closure = { cheapWorkletShallowEqual: require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, getPIPBottomOffsetForPIPMode: sharedValue(16729), getAdjustedBottomOffsets: sharedValue(16832), updateSharedValueIfChanged: sharedValue(10896), pipAvoidanceSpecs: sharedValue };
+  fn2.__closure = { cheapWorkletShallowEqual: require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, getPIPBottomOffsetForPIPMode: sharedValue(16733), getAdjustedBottomOffsets: sharedValue(16836), updateSharedValueIfChanged: sharedValue(10896), pipAvoidanceSpecs: sharedValue };
   fn2.__workletHash = 643938425459;
   fn2.__initData = __initData2;
   const animatedReaction = obj2.useAnimatedReaction(fn, fn2);

@@ -1,6 +1,6 @@
-// === Module 14872: GameMentionsAutocompleteSetting ===
+// === Module 14870: GameMentionsAutocompleteSetting ===
 
-// Module 14872 (GameMentionsAutocompleteSetting)
+// Module 14870 (GameMentionsAutocompleteSetting)
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 2021 */;
 import SettingsConstants from "SettingsConstants" /* 7417 */;

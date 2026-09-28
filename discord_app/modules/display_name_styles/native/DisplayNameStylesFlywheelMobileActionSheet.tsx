@@ -1,6 +1,6 @@
-// === Module 16754: DisplayNameStylesFlywheelMobileActionSheet ===
+// === Module 16758: DisplayNameStylesFlywheelMobileActionSheet ===
 
-// Module 16754 (DisplayNameStylesFlywheelMobileActionSheet)
+// Module 16758 (DisplayNameStylesFlywheelMobileActionSheet)
 import nativeDefault from "native" /* 576 */;
 import openUserSettings from "openUserSettings" /* 6800 */;
 import noop from "module_19" /* 19 */;
@@ -92,7 +92,7 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   const obj9 = { style: tmp6.imageContainer, children: null };
   let tmp15Result = enabled;
   if (enabled) {
-    tmp15Result = closure_9(tmp2(16755).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
+    tmp15Result = closure_9(tmp2(16759).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
   }
   const items5 = [tmp15Result, ];
   if (enabled) {
@@ -139,14 +139,14 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   } else {
     if (tmp2Result.isIOS()) {
       const obj16 = { source: null, style: null, resizeMode: "contain", enableAnimation: null };
-      const obj17 = { uri: tmp4(16757) };
+      const obj17 = { uri: tmp4(16761) };
       obj16.source = obj17;
       obj16.style = tmp6.image;
       obj16.enableAnimation = !enabled;
       let tmp15Result2 = closure_9(tmp4(5899), obj16);
       const tmp4Result = tmp4(5899);
     } else {
-      const obj18 = { url: tmp4(16757), style: tmp6.image, autoplay: true };
+      const obj18 = { url: tmp4(16761), style: tmp6.image, autoplay: true };
       tmp15Result2 = closure_9(tmp2(8271).APNGPlayer, obj18);
     }
     tmp2Result = tmp2(1364);

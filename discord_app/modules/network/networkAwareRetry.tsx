@@ -1,6 +1,6 @@
-// === Module 13382: networkAwareRetry ===
+// === Module 13381: networkAwareRetry ===
 
-// Module 13382 (networkAwareRetry)
+// Module 13381 (networkAwareRetry)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 

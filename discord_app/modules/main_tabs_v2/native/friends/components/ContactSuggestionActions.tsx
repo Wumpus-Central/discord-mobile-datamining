@@ -1,11 +1,11 @@
-// === Module 16084: ContactSuggestionActions ===
+// === Module 16080: ContactSuggestionActions ===
 
-// Module 16084 (ContactSuggestionActions)
+// Module 16080 (ContactSuggestionActions)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import timing from "timing" /* 4837 */;
 import spring from "spring" /* 5280 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 15679 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 15677 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -19,8 +19,8 @@ import ContentImpressionTrackerHooks from "ContentImpressionTrackerHooks" /* 107
 import QuestPlatformUtils from "QuestPlatformUtils" /* 10719 */;
 import MobileQuestVideoWatchCtaCopy from "MobileQuestVideoWatchCtaCopy" /* 10736 */;
 import AnalyticsHooks from "AnalyticsHooks" /* 10749 */;
+import RefreshIcon from "RefreshIcon" /* 14506 */;
 import QuestBottomSheetHooks from "QuestBottomSheetHooks" /* 14654 */;
-import RefreshIcon from "RefreshIcon" /* 14689 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4825 */;

@@ -1,13 +1,13 @@
-// === Module 13253: GuildMediaStateStore ===
+// === Module 13252: GuildMediaStateStore ===
 
-// Module 13253 (GuildMediaStateStore)
+// Module 13252 (GuildMediaStateStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ChannelTypes from "ChannelTypes" /* 1095 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4458 */;
-import BlockedUserUtils from "BlockedUserUtils" /* 13255 */;
+import BlockedUserUtils from "BlockedUserUtils" /* 13254 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1235 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6946 */;
@@ -114,7 +114,7 @@ function computeGuildMediaState(guildId) {
       }
       continue;
     }
-    obj = { skipMutedVcs: guildId(13254).getIsDontBadgeMutedVcsEnabled("GuildMediaStateStore"), currentUserId: id.getId(), selectedVoiceChannelId: voiceChannelId, selectedVoiceGuildId: null, selectedVoiceChannelHasVideo: null, isSelectedVoiceChannelStage: null, blockedOrIgnoredUserIds: null, streamChannelIdsByGuild: null };
+    obj = { skipMutedVcs: guildId(13253).getIsDontBadgeMutedVcsEnabled("GuildMediaStateStore"), currentUserId: id.getId(), selectedVoiceChannelId: voiceChannelId, selectedVoiceGuildId: null, selectedVoiceChannelHasVideo: null, isSelectedVoiceChannelStage: null, blockedOrIgnoredUserIds: null, streamChannelIdsByGuild: null };
     let guild_id;
     if (channel != null) {
       guild_id = channel.guild_id;

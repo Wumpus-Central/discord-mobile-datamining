@@ -1,6 +1,6 @@
-// === Module 14790: PremiumRestoreSubscriptionSetting ===
+// === Module 14788: PremiumRestoreSubscriptionSetting ===
 
-// Module 14790 (PremiumRestoreSubscriptionSetting)
+// Module 14788 (PremiumRestoreSubscriptionSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;

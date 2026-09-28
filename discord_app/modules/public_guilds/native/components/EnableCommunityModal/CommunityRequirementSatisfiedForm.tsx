@@ -1,6 +1,6 @@
-// === Module 17476: CommunityRequirementSatisfiedForm ===
+// === Module 17480: CommunityRequirementSatisfiedForm ===
 
-// Module 17476 (CommunityRequirementSatisfiedForm)
+// Module 17480 (CommunityRequirementSatisfiedForm)
 import ToastUtils from "ToastUtils" /* 4527 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ let result = size.fileFinishedImporting("modules/public_guilds/native/components
 
 export default function CommunityRequirementSatisfiedForm(formSwitchDisabled) {
   formSwitchDisabled = formSwitchDisabled.formSwitchDisabled;
-  const enableCommunitySharedStyles = formSwitchDisabled(17466).useEnableCommunitySharedStyles();
+  const enableCommunitySharedStyles = formSwitchDisabled(17470).useEnableCommunitySharedStyles();
   const obj2 = { style: enableCommunitySharedStyles.communityRequirementSatisfiedFormWrapper, children: null };
   const items = [formSwitchDisabled.children, ];
   let tmp6 = null;

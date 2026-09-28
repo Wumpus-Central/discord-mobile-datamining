@@ -1,13 +1,13 @@
-// === Module 15663: MessageRequestsButton ===
+// === Module 15661: MessageRequestsButton ===
 
-// Module 15663 (MessageRequestsButton)
+// Module 15661 (MessageRequestsButton)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import components_Button_Button from "components/Button/Button" /* 5281 */;
 import IconButton from "IconButton" /* 7363 */;
 import _modDef9338 from "module_9338" /* 9338 */;
-import IconActionButton from "IconActionButton" /* 12831 */;
-import _mod15664 from "module_15664" /* 15664 */;
+import IconActionButton from "IconActionButton" /* 12830 */;
+import _mod15662 from "module_15662" /* 15662 */;
 import noop from "module_19" /* 19 */;
 import MessageRequestStore from "MessageRequestStore" /* 6640 */;
 import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6641 */;
@@ -32,7 +32,7 @@ function MessageRequestAnimation(color) {
       }
     }
   }, items2);
-  return React5(_mod15664.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
+  return React5(_mod15662.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);

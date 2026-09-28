@@ -1,6 +1,6 @@
-// === Module 14426: FamilyCenterActivityCard ===
+// === Module 14425: FamilyCenterActivityCard ===
 
-// Module 14426 (FamilyCenterActivityCard)
+// Module 14425 (FamilyCenterActivityCard)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
@@ -14,13 +14,13 @@ import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8106 */;
 import TouchableHitBoxDefault from "TouchableHitBox" /* 9203 */;
 import useAgeSpecificText from "useAgeSpecificText" /* 11398 */;
 import _modDef12285 from "module_12285" /* 12285 */;
-import _modDef14427 from "module_14427" /* 14427 */;
-import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader" /* 14429 */;
-import useSelectedTeenUser from "useSelectedTeenUser" /* 14430 */;
-import FamilyCenterActivityTotalDefault from "FamilyCenterActivityTotal" /* 14432 */;
-import FamilyCenterTopActivityDefault from "FamilyCenterTopActivity" /* 14433 */;
-import FamilyCenterActivitySectionDefault from "FamilyCenterActivitySection" /* 14436 */;
-import FamilyCenterSettingsControlsDefault from "FamilyCenterSettingsControls" /* 14443 */;
+import _modDef14426 from "module_14426" /* 14426 */;
+import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader" /* 14428 */;
+import useSelectedTeenUser from "useSelectedTeenUser" /* 14429 */;
+import FamilyCenterActivityTotalDefault from "FamilyCenterActivityTotal" /* 14431 */;
+import FamilyCenterTopActivityDefault from "FamilyCenterTopActivity" /* 14432 */;
+import FamilyCenterActivitySectionDefault from "FamilyCenterActivitySection" /* 14435 */;
+import FamilyCenterSettingsControlsDefault from "FamilyCenterSettingsControls" /* 14442 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -40,7 +40,7 @@ function FamilyCenterActivityCardPrefaceText() {
   const obj6 = { style: tmp.container, children: null };
   let tmp12 = null;
   if (!tmp4) {
-    const obj7 = { color: tmp.icon.color, source: _modDef14427, style: tmp.icon };
+    const obj7 = { color: tmp.icon.color, source: _modDef14426, style: tmp.icon };
     tmp12 = React6(native.Icon, obj7);
   }
   const items = [tmp12, , ];

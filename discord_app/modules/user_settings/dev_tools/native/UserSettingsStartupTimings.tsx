@@ -1,6 +1,6 @@
-// === Module 15122: UserSettingsStartupTimings ===
+// === Module 15120: UserSettingsStartupTimings ===
 
-// Module 15122 (UserSettingsStartupTimings)
+// Module 15120 (UserSettingsStartupTimings)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import Stack_Stack from "Stack/Stack" /* 5279 */;

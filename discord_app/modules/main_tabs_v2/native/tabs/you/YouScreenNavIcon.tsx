@@ -1,6 +1,6 @@
-// === Module 16604: YouScreenNavIcon ===
+// === Module 16608: YouScreenNavIcon ===
 
-// Module 16604 (YouScreenNavIcon)
+// Module 16608 (YouScreenNavIcon)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4832 */;
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const md = fn(16046).ICON_SIZE.md;
+const md = fn(16042).ICON_SIZE.md;
 const result = (nativeDefault.space.PX_32 - md) / 2;
 const TEXT_DEFAULT = nativeDefault.colors.TEXT_DEFAULT;
 const point = { shape: fn(8276).CutoutShape.Circle, x: md - 8 - 4, y: -4, size: 16 };

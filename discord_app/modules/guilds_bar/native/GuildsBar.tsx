@@ -1,14 +1,14 @@
-// === Module 15921: GuildsBar ===
+// === Module 15919: GuildsBar ===
 
-// Module 15921 (GuildsBar)
+// Module 15919 (GuildsBar)
 import NativeViewDefault from "NativeView" /* 5901 */;
 import FastListDefault from "FastList" /* 6493 */;
 import FavoritesGuildIntroPopoverDefault from "FavoritesGuildIntroPopover" /* 9701 */;
 import StartupProfilerDefault from "StartupProfiler" /* 11027 */;
-import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 15814 */;
-import useGuildsBarGestureDefault from "useGuildsBarGesture" /* 15922 */;
-import useGuildsBarPropsDefault from "useGuildsBarProps" /* 15930 */;
-import GuildsBarDragPreviewDefault from "GuildsBarDragPreview" /* 15999 */;
+import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 15812 */;
+import useGuildsBarGestureDefault from "useGuildsBarGesture" /* 15920 */;
+import useGuildsBarPropsDefault from "useGuildsBarProps" /* 15928 */;
+import GuildsBarDragPreviewDefault from "GuildsBarDragPreview" /* 15997 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

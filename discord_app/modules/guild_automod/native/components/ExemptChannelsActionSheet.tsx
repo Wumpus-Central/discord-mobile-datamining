@@ -1,6 +1,6 @@
-// === Module 17336: ExemptChannelsActionSheet ===
+// === Module 17340: ExemptChannelsActionSheet ===
 
-// Module 17336 (ExemptChannelsActionSheet)
+// Module 17340 (ExemptChannelsActionSheet)
 import utils_ChannelUtils from "utils/ChannelUtils" /* 5335 */;
 import TableRow from "TableRow" /* 5917 */;
 import getFlattedChannelListDefault from "getFlattedChannelList" /* 6533 */;
@@ -65,5 +65,5 @@ export default function ExemptChannelsActionSheet(guildId) {
   obj3.renderLabel = getChannelOptionName;
   obj3.renderIcon = callback;
   obj3.onSave = onSave;
-  return jsx(stateFromStores(17335), { title: null, searchPlaceholder: null, listId: "automod-exempt-channels", items: null, initialSelected: null, getId: null, getSearchText: null, renderLabel: null, renderIcon: null, onSave: null });
+  return jsx(stateFromStores(17339), { title: null, searchPlaceholder: null, listId: "automod-exempt-channels", items: null, initialSelected: null, getId: null, getSearchText: null, renderLabel: null, renderIcon: null, onSave: null });
 };

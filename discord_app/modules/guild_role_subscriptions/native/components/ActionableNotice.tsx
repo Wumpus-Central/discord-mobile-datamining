@@ -1,6 +1,6 @@
-// === Module 17600: ActionableNotice ===
+// === Module 17604: ActionableNotice ===
 
-// Module 17600 (ActionableNotice)
+// Module 17604 (ActionableNotice)
 import Text_Text from "Text/Text" /* 4832 */;
 import components_Button_Button from "components/Button/Button" /* 5281 */;
 import noop from "module_19" /* 19 */;

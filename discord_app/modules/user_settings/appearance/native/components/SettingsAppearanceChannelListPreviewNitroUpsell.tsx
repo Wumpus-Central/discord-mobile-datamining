@@ -1,6 +1,6 @@
-// === Module 14850: SettingsAppearanceChannelListPreviewNitroUpsell ===
+// === Module 14848: SettingsAppearanceChannelListPreviewNitroUpsell ===
 
-// Module 14850 (SettingsAppearanceChannelListPreviewNitroUpsell)
+// Module 14848 (SettingsAppearanceChannelListPreviewNitroUpsell)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import spring from "spring" /* 5280 */;

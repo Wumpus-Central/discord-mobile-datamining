@@ -1,6 +1,6 @@
-// === Module 15132: DevToolsActionCreators ===
+// === Module 15130: DevToolsActionCreators ===
 
-// Module 15132 (DevToolsActionCreators)
+// Module 15130 (DevToolsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7132 */;
 

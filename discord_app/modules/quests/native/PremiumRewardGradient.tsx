@@ -1,6 +1,6 @@
-// === Module 14695: PremiumRewardGradient ===
+// === Module 14693: PremiumRewardGradient ===
 
-// Module 14695 (PremiumRewardGradient)
+// Module 14693 (PremiumRewardGradient)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4531 */;
 import design_shared from "design/shared" /* 4686 */;

@@ -1,6 +1,6 @@
-// === Module 14197: UserProfileTypingIndicatorEditButton ===
+// === Module 14196: UserProfileTypingIndicatorEditButton ===
 
-// Module 14197 (UserProfileTypingIndicatorEditButton)
+// Module 14196 (UserProfileTypingIndicatorEditButton)
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = fn;
@@ -42,10 +42,10 @@ export default function UserProfileTypingIndicatorEditButton(isTryItOut) {
   const intl2 = isTryItOut(1115).intl;
   obj5.label = intl2.string(nativeStackNavigation(3717)["pT+BVM"]);
   const obj4 = isTryItOut(11453);
-  obj5.labelTrailing = jsx(isTryItOut(14176).UserProfileEditFormLabelBadges, { showPremiumIcon: true, showNewBadge: tmp3[0] === isTryItOut(2029).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE });
+  obj5.labelTrailing = jsx(isTryItOut(14175).UserProfileEditFormLabelBadges, { showPremiumIcon: true, showNewBadge: tmp3[0] === isTryItOut(2029).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE });
   obj5.leading = jsx(nativeStackNavigation(11463), { config: currentCustomTypingIndicatorConfig, size: 24 });
   obj5.buttonText = stringResult;
   obj5.accessibilityValue = { text: stringResult };
   obj5.onPress = tmp5;
-  return jsx(isTryItOut(14176).UserProfileEditFormButton, { label: null, labelTrailing: null, leading: null, buttonText: null, accessibilityValue: null, onPress: null });
+  return jsx(isTryItOut(14175).UserProfileEditFormButton, { label: null, labelTrailing: null, leading: null, buttonText: null, accessibilityValue: null, onPress: null });
 };

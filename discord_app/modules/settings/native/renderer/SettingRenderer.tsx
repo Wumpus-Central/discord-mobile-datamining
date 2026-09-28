@@ -1,6 +1,6 @@
-// === Module 14251: SettingRenderer ===
+// === Module 14250: SettingRenderer ===
 
-// Module 14251 (SettingRenderer)
+// Module 14250 (SettingRenderer)
 import nativeDefault from "native" /* 576 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1876 */;
 import ToastUtils from "ToastUtils" /* 4527 */;
@@ -19,14 +19,14 @@ import TableSwitchRow from "TableSwitchRow" /* 6621 */;
 import FormSwitch from "FormSwitch" /* 6622 */;
 import VolumeSliderDefault from "VolumeSlider" /* 9442 */;
 import ClydeIcon from "ClydeIcon" /* 10278 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 14252 */;
-import useHighlightSettingItem from "useHighlightSettingItem" /* 14254 */;
-import SettingListItemHighlightDefault from "SettingListItemHighlight" /* 14255 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 14251 */;
+import useHighlightSettingItem from "useHighlightSettingItem" /* 14253 */;
+import SettingListItemHighlightDefault from "SettingListItemHighlight" /* 14254 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2112 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14250 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14249 */;
 import GuildStore from "GuildStore" /* 2067 */;
 
 const GuildIconDefault = GuildIcon;
@@ -484,7 +484,7 @@ let closure_26 = noop.memo((arg0) => {
   ({ variant, useTrailing, useIsDisabled, useDescription, start, end, IconComponent } = arg0);
   let trailing;
   ({ setting, useTitle } = arg0);
-  let highlightSettingItem = trailing(14254).useHighlightSettingItem(setting);
+  let highlightSettingItem = trailing(14253).useHighlightSettingItem(setting);
   trailing = undefined;
   const title = useTitle();
   if (useTrailing != null) {

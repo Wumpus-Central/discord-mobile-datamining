@@ -1,6 +1,6 @@
-// === Module 13100: useOutboundPromotionRedemptionEndDate ===
+// === Module 13099: useOutboundPromotionRedemptionEndDate ===
 
-// Module 13100 (useOutboundPromotionRedemptionEndDate)
+// Module 13099 (useOutboundPromotionRedemptionEndDate)
 import DateUtils from "DateUtils" /* 4512 */;
 import noop from "module_19" /* 19 */;
 import hooks from "module_4421" /* 4421 */;

@@ -1,6 +1,6 @@
-// === Module 16917: VoicePanelSystemUIManager ===
+// === Module 16921: VoicePanelSystemUIManager ===
 
-// Module 16917 (VoicePanelSystemUIManager)
+// Module 16921 (VoicePanelSystemUIManager)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 8853 */;

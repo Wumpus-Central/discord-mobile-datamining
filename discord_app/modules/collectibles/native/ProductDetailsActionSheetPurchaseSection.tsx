@@ -1,6 +1,6 @@
-// === Module 12727: ProductDetailsActionSheetPurchaseSection ===
+// === Module 12726: ProductDetailsActionSheetPurchaseSection ===
 
-// Module 12727 (ProductDetailsActionSheetPurchaseSection)
+// Module 12726 (ProductDetailsActionSheetPurchaseSection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1974 */;
@@ -56,9 +56,9 @@ function VCButton(balance) {
   let color;
   const tmp = closure_17();
   noop = tmp;
-  const virtualCurrencyData = balance(12725).useVirtualCurrencyData(product, flag);
+  const virtualCurrencyData = balance(12724).useVirtualCurrencyData(product, flag);
   ({ price, canAfford } = virtualCurrencyData);
-  let obj = balance(12725);
+  let obj = balance(12724);
   let isPartiallyOwnedBundle = balance(8334).useProductDisableState(product.skuId).isDisabled;
   let obj2 = balance(8334);
   if (!isPartiallyOwnedBundle) {
@@ -73,7 +73,7 @@ function VCButton(balance) {
   const items = [navigation, product, balance, analyticsLocations, stageCollectibleChangeForEditProfile];
   closure_7 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideAllActionSheets();
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12728, dependencyMap.paths), {
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12727, dependencyMap.paths), {
       skuId: product.skuId,
       analyticsLocations,
       onCheckoutSuccess(arg0) {
@@ -88,7 +88,7 @@ function VCButton(balance) {
               },
             orbBalancePriorToPurchase
           };
-          product(5039).pushLazy(balance(1981)(12732, dependencyMap.paths), obj3, modalKey);
+          product(5039).pushLazy(balance(1981)(12731, dependencyMap.paths), obj3, modalKey);
           const tmp4Result = product(5039);
         } else {
           const ALL = balance(1077).FractionalPremiumSKUsSets.ALL;
@@ -112,8 +112,8 @@ function VCButton(balance) {
               navigation.navigate(constants2.PREMIUM_MANAGE_PLAN);
               product(4800).hideActionSheet();
             };
-            tmp4Result3.openLazy(balance(1981)(12733, dependencyMap.paths), "FractionalNitroCollectedActionSheet", obj4);
-            const tmp10 = balance(1981)(12733, dependencyMap.paths);
+            tmp4Result3.openLazy(balance(1981)(12732, dependencyMap.paths), "FractionalNitroCollectedActionSheet", obj4);
+            const tmp10 = balance(1981)(12732, dependencyMap.paths);
           } else {
             const obj5 = { product, useCategoryImage: true, showOrbBalancePill: true, orbBalancePriorToPurchase, stageCollectibleChangeForEditProfile };
             product(10542).open(obj5);

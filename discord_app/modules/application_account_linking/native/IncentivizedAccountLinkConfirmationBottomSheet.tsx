@@ -1,6 +1,6 @@
-// === Module 16763: IncentivizedAccountLinkConfirmationBottomSheet ===
+// === Module 16767: IncentivizedAccountLinkConfirmationBottomSheet ===
 
-// Module 16763 (IncentivizedAccountLinkConfirmationBottomSheet)
+// Module 16767 (IncentivizedAccountLinkConfirmationBottomSheet)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
@@ -12,8 +12,8 @@ import FastImageDefault from "FastImage" /* 5899 */;
 import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 8272 */;
 import PromoSheet from "PromoSheet" /* 9691 */;
 import WindowLaunchIcon from "WindowLaunchIcon" /* 12512 */;
-import _modDef15451 from "module_15451" /* 15451 */;
-import _modDef15452 from "module_15452" /* 15452 */;
+import _modDef15449 from "module_15449" /* 15449 */;
+import _modDef15450 from "module_15450" /* 15450 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4825 */;
 
@@ -29,7 +29,7 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
   const items = [AccessibilityStore];
   if (obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion)) {
     let obj2 = { source: null, style: null };
-    const obj3 = { uri: _modDef15451 };
+    const obj3 = { uri: _modDef15449 };
     obj2.source = obj3;
     const size = { width: v150, height: v150 };
     obj2.style = size;
@@ -38,16 +38,16 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
     let tmp9 = jsx;
   } else {
     if (tmpResult.isAndroid()) {
-      const obj4 = { url: _modDef15452, style: null };
+      const obj4 = { url: _modDef15450, style: null };
       const size1 = { width: v150, height: v150 };
       obj4.style = size1;
-      tmp3Result = jsx(APNGDecorationNativeComponentDefault, { url: _modDef15452, style: null });
+      tmp3Result = jsx(APNGDecorationNativeComponentDefault, { url: _modDef15450, style: null });
       tmp8 = importDefault;
       tmp9 = jsx;
       const tmp4Result = APNGDecorationNativeComponentDefault;
     } else {
       const obj5 = { source: null, resizeMode: "contain", style: null };
-      const obj6 = { uri: _modDef15452 };
+      const obj6 = { uri: _modDef15450 };
       obj5.source = obj6;
       const size2 = { width: v150, height: v150 };
       obj5.style = size2;

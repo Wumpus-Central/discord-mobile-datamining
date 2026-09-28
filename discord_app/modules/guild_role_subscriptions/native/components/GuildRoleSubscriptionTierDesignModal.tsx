@@ -1,13 +1,13 @@
-// === Module 17591: GuildRoleSubscriptionTierDesignModal ===
+// === Module 17595: GuildRoleSubscriptionTierDesignModal ===
 
-// Module 17591 (GuildRoleSubscriptionTierDesignModal)
+// Module 17595 (GuildRoleSubscriptionTierDesignModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useToken from "useToken" /* 4531 */;
 import RoleIconUtils from "RoleIconUtils" /* 6608 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 14774 */;
-import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 14785 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 17557 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 14772 */;
+import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 14783 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 17561 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ function MemberPreviews(role) {
   return closure_1_10(View, obj5);
 }
 function Content() {
-  const tmp3 = role(13443)();
+  const tmp3 = role(13442)();
   const editStateContext = require("EditStateContextProvider").useEditStateContext();
   ({ editStateId, guildId } = editStateContext);
   const obj = require("EditStateContextProvider");
@@ -76,18 +76,18 @@ function Content() {
     return closure_0({ icon: icon.uri, unicodeEmoji: "a" });
   };
   obj8.disabled = roleSubscriptionSettingsDisabled;
-  items1[2] = closure_9(role(17554), obj8);
+  items1[2] = closure_9(role(17558), obj8);
   const obj9 = { style: tmp3.header, children: null };
-  const tmpResult3 = role(17554);
+  const tmpResult3 = role(17558);
   const intl3 = tmp4(1115).intl;
   obj9.children = intl3.string(require("util").t["W7hH+z"]);
   items1[3] = closure_9(role(9271), obj9);
-  items1[4] = closure_9(role(17592), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
+  items1[4] = closure_9(role(17596), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
   obj6.children = items1;
   return closure_10(closure_11, obj6);
 }
 const View = fn(17).View;
-const constants = fn(14752).GuildRoleSubscriptionsTierScenes;
+const constants = fn(14750).GuildRoleSubscriptionsTierScenes;
 const UPLOAD_SMALL_SIZE = fn(1074).UPLOAD_SMALL_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);

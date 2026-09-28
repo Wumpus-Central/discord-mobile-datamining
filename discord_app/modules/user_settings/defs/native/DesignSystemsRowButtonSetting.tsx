@@ -1,6 +1,6 @@
-// === Module 15369: DesignSystemsRowButtonSetting ===
+// === Module 15367: DesignSystemsRowButtonSetting ===
 
-// Module 15369 (DesignSystemsRowButtonSetting)
+// Module 15367 (DesignSystemsRowButtonSetting)
 import Constants from "Constants" /* 1074 */;
 import SettingsConstants from "SettingsConstants" /* 7417 */;
 import SettingBuilders from "SettingBuilders" /* 11006 */;

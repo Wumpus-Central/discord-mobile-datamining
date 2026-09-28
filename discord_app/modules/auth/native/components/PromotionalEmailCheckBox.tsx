@@ -1,6 +1,6 @@
-// === Module 15610: PromotionalEmailCheckBox ===
+// === Module 15608: PromotionalEmailCheckBox ===
 
-// Module 15610 (PromotionalEmailCheckBox)
+// Module 15608 (PromotionalEmailCheckBox)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

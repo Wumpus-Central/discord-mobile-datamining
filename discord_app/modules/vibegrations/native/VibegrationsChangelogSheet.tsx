@@ -1,6 +1,6 @@
-// === Module 16270: VibegrationsChangelogSheet ===
+// === Module 16266: VibegrationsChangelogSheet ===
 
-// Module 16270 (VibegrationsChangelogSheet)
+// Module 16266 (VibegrationsChangelogSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;

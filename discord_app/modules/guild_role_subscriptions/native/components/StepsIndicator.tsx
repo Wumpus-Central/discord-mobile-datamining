@@ -1,6 +1,6 @@
-// === Module 17595: components/StepsIndicator ===
+// === Module 17599: components/StepsIndicator ===
 
-// Module 17595 (components/StepsIndicator)
+// Module 17599 (components/StepsIndicator)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import timing from "timing" /* 4837 */;

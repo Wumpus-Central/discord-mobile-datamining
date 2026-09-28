@@ -1,6 +1,6 @@
-// === Module 15082: AdvancedSetting ===
+// === Module 15080: AdvancedSetting ===
 
-// Module 15082 (AdvancedSetting)
+// Module 15080 (AdvancedSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
 import SettingsIcon from "SettingsIcon" /* 6798 */;

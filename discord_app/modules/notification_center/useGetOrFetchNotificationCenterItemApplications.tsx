@@ -1,6 +1,6 @@
-// === Module 16056: useGetOrFetchNotificationCenterItemApplications ===
+// === Module 16052: useGetOrFetchNotificationCenterItemApplications ===
 
-// Module 16056 (useGetOrFetchNotificationCenterItemApplications)
+// Module 16052 (useGetOrFetchNotificationCenterItemApplications)
 import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6589 */;
 import noop from "module_19" /* 19 */;
 

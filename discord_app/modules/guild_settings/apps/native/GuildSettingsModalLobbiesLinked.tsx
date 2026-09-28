@@ -1,6 +1,6 @@
-// === Module 17397: GuildSettingsModalLobbiesLinked ===
+// === Module 17401: GuildSettingsModalLobbiesLinked ===
 
-// Module 17397 (GuildSettingsModalLobbiesLinked)
+// Module 17401 (GuildSettingsModalLobbiesLinked)
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4479 */;
 import UserStore from "UserStore" /* 1372 */;

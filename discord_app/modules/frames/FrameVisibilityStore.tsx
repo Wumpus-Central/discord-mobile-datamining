@@ -1,6 +1,6 @@
-// === Module 14022: FrameVisibilityStore ===
+// === Module 14021: FrameVisibilityStore ===
 
-// Module 14022 (FrameVisibilityStore)
+// Module 14021 (FrameVisibilityStore)
 import size from "module_2" /* 2 */;
 
 class FrameVisibilityStore {

@@ -1,6 +1,6 @@
-// === Module 16400: vibegrationsAttachmentDrafts ===
+// === Module 16389: vibegrationsAttachmentDrafts ===
 
-// Module 16400 (vibegrationsAttachmentDrafts)
+// Module 16389 (vibegrationsAttachmentDrafts)
 import util from "util" /* 1115 */;
 import _modDef3715 from "module_3715" /* 3715 */;
 import VibegrationsTypes from "VibegrationsTypes" /* 5371 */;
@@ -46,7 +46,7 @@ function getVibegrationsAttachmentDrafts(projectId, chat) {
     tmp2 = tmp[chat];
   }
   if (tmp2 == null) {
-    tmp2 = closure_6;
+    tmp2 = closure_7;
   }
   return tmp2;
 }
@@ -68,10 +68,10 @@ function discardDraft(projectId, item10010) {
     URL.revokeObjectURL(item10010.previewUrl);
   }
   if (null != item10010.ref) {
-    deleteStagedAttachment(projectId, item10010.ref.id).catch(() => {
+    React4(projectId, item10010.ref.id).catch(() => {
 
     });
-    const promise = deleteStagedAttachment(projectId, item10010.ref.id);
+    const promise = React4(projectId, item10010.ref.id);
   }
 }
 function discardProject(projectId, arg1) {
@@ -83,7 +83,7 @@ function discardProject(projectId, arg1) {
     let nextResult = iter.next();
     while (iter !== undefined) {
       if (nextResult == null) {
-        nextResult = closure_6;
+        nextResult = closure_7;
       }
       for (const item10017 of nextResult) {
         if (tmp) {
@@ -101,9 +101,36 @@ function discardProject(projectId, arg1) {
     zustandStore.setState(obj);
   }
 }
-const deleteStagedAttachment = fn(12624).deleteStagedAttachment;
-let closure_6 = [];
-let c7 = 1;
+function takeVibegrationsAttachmentRefs(projectId, chat) {
+  const arr = getVibegrationsAttachmentDrafts(projectId, chat);
+  if (0 === arr.length) {
+    return [];
+  } else {
+    const iter = arr[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      if (null != nextResult.previewUrl) {
+        let _URL = URL;
+        let revokeObjectURLResult = URL.revokeObjectURL(tmp7.previewUrl);
+      }
+      continue;
+    }
+    setDrafts(projectId, chat, closure_7);
+    return arr.flatMap((ref) => {
+      if (null != ref.ref) {
+        const items = [ref.ref];
+        let items1 = items;
+      } else {
+        items1 = [];
+      }
+      return items1;
+    });
+  }
+}
+const VibegrationsConnectionStore = fn(12642);
+({ deleteStagedAttachment: closure_4, sendUserMessage: hasOwnProperty } = VibegrationsConnectionStore);
+let closure_7 = [];
+let c8 = 1;
 const zustandStore = fn(4705).createZustandStore(() => ({ draftsByProject: {} }));
 let Dispatcher = Dispatcher_mod;
 const subscription = Dispatcher.subscribe("LOGOUT", () => {
@@ -132,7 +159,7 @@ export const useVibegrationsAttachmentDraftList = function useVibegrationsAttach
       tmp2 = tmp[closure_1];
     }
     if (tmp2 == null) {
-      tmp2 = closure_6;
+      tmp2 = closure_7;
     }
     return tmp2;
   });
@@ -145,8 +172,8 @@ export const addVibegrationsAttachmentDrafts = function addVibegrationsAttachmen
       const obj = { draft: null, upload: null };
       const obj2 = {};
       const merged = Object.assign(draft.draft);
-      closure_7 = tmp2 + 1;
-      obj2.localId = +closure_7;
+      closure_8 = tmp2 + 1;
+      obj2.localId = +closure_8;
       obj.draft = obj2;
       obj.upload = draft.upload;
       return obj;
@@ -170,7 +197,7 @@ export const removeVibegrationsAttachmentDraft = function removeVibegrationsAtta
     tmp2 = tmp[chat];
   }
   if (tmp2 == null) {
-    tmp2 = closure_6;
+    tmp2 = closure_7;
   }
   const found = tmp2.find((localId) => localId.localId === closure_0);
   if (null != found) {
@@ -179,10 +206,10 @@ export const removeVibegrationsAttachmentDraft = function removeVibegrationsAtta
       URL.revokeObjectURL(found.previewUrl);
     }
     if (null != found.ref) {
-      deleteStagedAttachment(projectId, found.ref.id).catch(() => {
+      React4(projectId, found.ref.id).catch(() => {
 
       });
-      const promise = deleteStagedAttachment(projectId, found.ref.id);
+      const promise = React4(projectId, found.ref.id);
     }
     const found1 = tmp2.filter((localId) => localId.localId !== closure_0);
     const draftsByProject = zustandStore.getState().draftsByProject;
@@ -204,32 +231,23 @@ export const clearVibegrationsAttachmentDrafts = function clearVibegrationsAttac
       let tmp4 = discardDraft(arg0, item10010);
       continue;
     }
-    setDrafts(projectId, chat, closure_6);
+    setDrafts(projectId, chat, closure_7);
   }
 };
-export const takeVibegrationsAttachmentRefs = function takeVibegrationsAttachmentRefs(projectId, chat) {
-  const arr = getVibegrationsAttachmentDrafts(projectId, chat);
-  if (0 === arr.length) {
-    return [];
-  } else {
-    const iter = arr[Symbol.iterator]();
-    const nextResult = iter.next();
-    while (iter !== undefined) {
-      if (null != nextResult.previewUrl) {
-        let _URL = URL;
-        let revokeObjectURLResult = URL.revokeObjectURL(tmp7.previewUrl);
-      }
-      continue;
+export { takeVibegrationsAttachmentRefs };
+export const sendVibegrationsCardReply = function sendVibegrationsCardReply(projectId, implementation_prompt) {
+  const tmp = zustandStore.getState().draftsByProject[projectId];
+  let chat;
+  if (tmp != null) {
+    chat = tmp.chat;
+  }
+  if (chat == null) {
+    chat = closure_7;
+  }
+  if (chat.length > 0) {
+    if (chat.every((status) => "ready" === status.status)) {
+      takeVibegrationsAttachmentRefs(projectId, "chat");
     }
-    setDrafts(projectId, chat, closure_6);
-    return arr.flatMap((ref) => {
-      if (null != ref.ref) {
-        const items = [ref.ref];
-        let items1 = items;
-      } else {
-        items1 = [];
-      }
-      return items1;
-    });
+    hasOwnProperty(projectId, implementation_prompt, []);
   }
 };

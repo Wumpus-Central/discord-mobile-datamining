@@ -1,6 +1,6 @@
-// === Module 14475: UserSettingsAuthedApps ===
+// === Module 14474: UserSettingsAuthedApps ===
 
-// Module 14475 (UserSettingsAuthedApps)
+// Module 14474 (UserSettingsAuthedApps)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 4787 */;

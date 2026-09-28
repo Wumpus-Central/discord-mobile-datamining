@@ -1,6 +1,6 @@
-// === Module 17714: QuestProgressManager ===
+// === Module 17718: QuestProgressManager ===
 
-// Module 17714 (QuestProgressManager)
+// Module 17718 (QuestProgressManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
@@ -25,7 +25,7 @@ import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4858 */;
 import DetectableGameStore from "DetectableGameStore" /* 2017 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4860 */;
 import QuestStore from "QuestStore" /* 7116 */;
-import UnenrolledActivityQuestStore from "UnenrolledActivityQuestStore" /* 16852 */;
+import UnenrolledActivityQuestStore from "UnenrolledActivityQuestStore" /* 16856 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6539 */;
 
 require = fn;

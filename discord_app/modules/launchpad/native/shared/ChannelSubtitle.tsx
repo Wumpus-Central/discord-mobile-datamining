@@ -1,10 +1,10 @@
-// === Module 16809: ChannelSubtitle ===
+// === Module 16813: ChannelSubtitle ===
 
-// Module 16809 (ChannelSubtitle)
+// Module 16813 (ChannelSubtitle)
 import Text_Text from "Text/Text" /* 4832 */;
 import MessagePreviewMarkup from "MessagePreviewMarkup" /* 9575 */;
-import getChannelSubtitleData from "getChannelSubtitleData" /* 15860 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 16475 */;
+import getChannelSubtitleData from "getChannelSubtitleData" /* 15858 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 16479 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

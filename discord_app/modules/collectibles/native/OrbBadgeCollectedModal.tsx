@@ -1,6 +1,6 @@
-// === Module 12732: OrbBadgeCollectedModal ===
+// === Module 12731: OrbBadgeCollectedModal ===
 
-// Module 12732 (OrbBadgeCollectedModal)
+// Module 12731 (OrbBadgeCollectedModal)
 import nativeDefault from "native" /* 576 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5039 */;
 import NavigatorHeader from "NavigatorHeader" /* 5936 */;

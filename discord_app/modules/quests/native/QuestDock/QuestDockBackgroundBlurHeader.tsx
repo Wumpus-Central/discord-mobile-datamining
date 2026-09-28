@@ -1,6 +1,6 @@
-// === Module 14723: QuestDockBackgroundBlurHeader ===
+// === Module 14721: QuestDockBackgroundBlurHeader ===
 
-// Module 14723 (QuestDockBackgroundBlurHeader)
+// Module 14721 (QuestDockBackgroundBlurHeader)
 import nativeDefault from "native" /* 576 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1365 */;
 import spring from "spring" /* 5280 */;
@@ -83,7 +83,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
   }, []);
   const tmp4 = token(noop.useState(false), 2);
   token = activeQuestDockMode(4531).useToken(questDockWrapperSpecs(576).modules.mobile.QUEST_DOCK_BORDER_RADIUS);
-  const tmp9 = questDockWrapperSpecs(14715)(token);
+  const tmp9 = questDockWrapperSpecs(14713)(token);
   noop = tmp9;
   let obj = activeQuestDockMode(4531);
   const fn = function q() {
@@ -283,7 +283,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
   if (tmpResult.isAndroid()) {
     if (null != blurHash) {
       const obj23 = { placeholder: blurHash, layoutAnimatedStyle: animatedStyle5, opacityAnimatedStyle: animatedStyle6, layoutAnimation: questDockHeaderLayoutAnimation };
-      let tmp22Result = tmp22(tmp7(14724), obj23);
+      let tmp22Result = tmp22(tmp7(14722), obj23);
     }
     const items4 = [tmp22Result, , ];
     let tmp22Result2 = children;
@@ -326,7 +326,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
     const tmp7Result5 = tmp7(6494);
     if (!flag) {
       const obj31 = { children: null };
-      const items11 = [tmp19Result, tmp22(tmp7(14726), {})];
+      const items11 = [tmp19Result, tmp22(tmp7(14724), {})];
       obj31.children = items11;
       tmp25Result = closure_14(closure_13, obj31);
     }
@@ -357,6 +357,6 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
     }
     return closure_14(tmp7Result, obj22);
   }
-  tmp22Result = tmp22(tmp7(14692), { layoutAnimatedStyle: animatedStyle5, opacityAnimatedStyle: animatedStyle6, layoutAnimation: questDockHeaderLayoutAnimation });
+  tmp22Result = tmp22(tmp7(14690), { layoutAnimatedStyle: animatedStyle5, opacityAnimatedStyle: animatedStyle6, layoutAnimation: questDockHeaderLayoutAnimation });
   tmpResult = activeQuestDockMode(1365);
 });

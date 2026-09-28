@@ -1,6 +1,6 @@
-// === Module 13671: Badge/Badge ===
+// === Module 13670: Badge/Badge ===
 
-// Module 13671 (Badge/Badge)
+// Module 13670 (Badge/Badge)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2112 */;

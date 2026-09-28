@@ -22,9 +22,9 @@ export default {
     const obj = ToastUtils;
     obj.showSafetySuccess(SafetyToastType.BLOCK_SUCCESS, SafetyToastsUtils.getSafetyToastTypeContent(SafetyToastType.BLOCK_SUCCESS, id, channelId));
   },
-  showUnblockSuccessToast(id, id2) {
+  showUnblockSuccessToast(id, channelId) {
     const obj = ToastUtils;
-    obj.showSafetySuccess(SafetyToastType.UNBLOCK_SUCCESS, SafetyToastsUtils.getSafetyToastTypeContent(SafetyToastType.UNBLOCK_SUCCESS, id, id2));
+    obj.showSafetySuccess(SafetyToastType.UNBLOCK_SUCCESS, SafetyToastsUtils.getSafetyToastTypeContent(SafetyToastType.UNBLOCK_SUCCESS, id, channelId));
   },
   showMuteSuccessToast(id, channelId) {
     const obj = ToastUtils;

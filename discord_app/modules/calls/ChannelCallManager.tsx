@@ -1,6 +1,6 @@
-// === Module 17108: ChannelCallManager ===
+// === Module 17112: ChannelCallManager ===
 
-// Module 17108 (ChannelCallManager)
+// Module 17112 (ChannelCallManager)
 import SoundpackStore from "SoundpackStore" /* 9358 */;
 import CallStore from "CallStore" /* 5590 */;
 import NotificationSettingsStore from "NotificationSettingsStore" /* 9541 */;

@@ -1,6 +1,6 @@
-// === Module 12783: invite/GuildInvite ===
+// === Module 12782: invite/GuildInvite ===
 
-// Module 12783 (invite/GuildInvite)
+// Module 12782 (invite/GuildInvite)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -24,7 +24,7 @@ import _modDef11286 from "module_11286" /* 11286 */;
 import _modDef11287 from "module_11287" /* 11287 */;
 import InviteErrorUtils from "InviteErrorUtils" /* 12238 */;
 import _modDef12239 from "module_12239" /* 12239 */;
-import getHeaderTextForInvite from "getHeaderTextForInvite" /* 12784 */;
+import getHeaderTextForInvite from "getHeaderTextForInvite" /* 12783 */;
 import GuildRecord from "GuildRecord" /* 2063 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4858 */;
 import ChannelStore from "ChannelStore" /* 2045 */;

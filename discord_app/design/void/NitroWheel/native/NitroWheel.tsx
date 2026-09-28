@@ -1,6 +1,6 @@
-// === Module 13668: NitroWheel ===
+// === Module 13667: NitroWheel ===
 
-// Module 13668 (NitroWheel)
+// Module 13667 (NitroWheel)
 import FastImageDefault from "FastImage" /* 5899 */;
 import _modDef8661 from "module_8661" /* 8661 */;
 import noop from "module_19" /* 19 */;

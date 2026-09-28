@@ -1,6 +1,6 @@
-// === Module 16827: ActivityPanelController ===
+// === Module 16831: ActivityPanelController ===
 
-// Module 16827 (ActivityPanelController)
+// Module 16831 (ActivityPanelController)
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import ChatInputUtils from "ChatInputUtils" /* 4701 */;
 import transitionToChannel from "transitionToChannel" /* 4847 */;
@@ -8,7 +8,7 @@ import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators"
 import DeviceOrientation from "DeviceOrientation" /* 7780 */;
 import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 8782 */;
 import doesOrientationMatchLockStateDefault from "doesOrientationMatchLockState" /* 8916 */;
-import applyActivityOrientationLockDefault from "applyActivityOrientationLock" /* 16829 */;
+import applyActivityOrientationLockDefault from "applyActivityOrientationLock" /* 16833 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 5063 */;
@@ -337,6 +337,6 @@ export default function ActivityPanelController(children) {
     }
   }, items1);
   let obj = mode(504);
-  return <BaseActivityPanelController context={connectedActivityInTextChannelId(16835)} orientationLockStateForApp={orientationLockStateForApp} mode={mode} hasConnectedActivity={hasConnectedActivity} connectedActivityAppId={connectedActivityAppId} currentApp={currentApp} updateActivityPanelMode={EmbeddedActivitiesActionCreatorsAll.updateActivityPanelMode}>{children.children}</BaseActivityPanelController>;
+  return <BaseActivityPanelController context={connectedActivityInTextChannelId(16839)} orientationLockStateForApp={orientationLockStateForApp} mode={mode} hasConnectedActivity={hasConnectedActivity} connectedActivityAppId={connectedActivityAppId} currentApp={currentApp} updateActivityPanelMode={EmbeddedActivitiesActionCreatorsAll.updateActivityPanelMode}>{children.children}</BaseActivityPanelController>;
 };
 export { BaseActivityPanelController };

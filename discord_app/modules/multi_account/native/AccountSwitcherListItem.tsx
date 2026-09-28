@@ -1,6 +1,6 @@
-// === Module 15578: AccountSwitcherListItem ===
+// === Module 15576: AccountSwitcherListItem ===
 
-// Module 15578 (AccountSwitcherListItem)
+// Module 15576 (AccountSwitcherListItem)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;

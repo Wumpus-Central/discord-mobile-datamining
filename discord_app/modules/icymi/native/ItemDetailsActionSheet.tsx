@@ -1,6 +1,6 @@
-// === Module 16101: ItemDetailsActionSheet ===
+// === Module 16097: ItemDetailsActionSheet ===
 
-// Module 16101 (ItemDetailsActionSheet)
+// Module 16097 (ItemDetailsActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
@@ -12,7 +12,7 @@ import TableRowGroup from "TableRowGroup" /* 5999 */;
 import ActionSheet from "ActionSheet" /* 6618 */;
 import ICYMIUtils from "ICYMIUtils" /* 7798 */;
 import ActionSheetIconHeader from "ActionSheetIconHeader" /* 10464 */;
-import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 16102 */;
+import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 16098 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import GuildStore from "GuildStore" /* 2067 */;

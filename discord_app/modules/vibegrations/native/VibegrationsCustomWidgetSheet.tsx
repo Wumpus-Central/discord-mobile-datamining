@@ -1,6 +1,6 @@
-// === Module 12623: VibegrationsCustomWidgetSheet ===
+// === Module 12641: VibegrationsCustomWidgetSheet ===
 
-// Module 12623 (VibegrationsCustomWidgetSheet)
+// Module 12641 (VibegrationsCustomWidgetSheet)
 import nativeDefault from "native" /* 576 */;
 import _modDef3715 from "module_3715" /* 3715 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -9,7 +9,7 @@ import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const VibegrationsConnectionStore = fn(12624);
+const VibegrationsConnectionStore = fn(12642);
 ({ ensureConnection: closure_7, sendUserMessage: closure_8 } = VibegrationsConnectionStore);
 const Routes = fn(1074).Routes;
 const StaticChannelRoute = fn(2052).StaticChannelRoute;
@@ -83,13 +83,13 @@ export default function VibegrationsCustomWidgetSheet() {
                   const obj6 = { guild_id: tmp62, install_scope: "user" };
                   c4 = 3;
                   c5 = 1;
-                  const obj7 = { value: value(tmp70[15]).createProject(obj6), done: false };
+                  const obj7 = { value: value(tmp71[15]).createProject(obj6), done: false };
                   return obj7;
                 }
               }
             } else {
-              const intl = value(tmp70[11]).intl;
-              dependencyMap(intl.string(tmp4(tmp70[12]).Wo5sQv));
+              const intl = value(tmp71[11]).intl;
+              dependencyMap(intl.string(tmp4(tmp71[12]).Wo5sQv));
             }
             c5 = 3;
           }
@@ -97,14 +97,14 @@ export default function VibegrationsCustomWidgetSheet() {
           c3 = 0;
           closure_129_4.current = false;
           closure_129_3(false);
-          throw tmp70;
+          throw tmp71;
         } else {
           if (2 === tmp8) {
             c3 = 1;
-            closure_128_3 = tmp70;
+            closure_128_3 = tmp71;
             if (null == closure_128_1) {
-              closure_129_2(value(tmp70[17]).getVibegrationsCreateErrorMessage(closure_128_3));
-              const obj3 = value(tmp70[17]);
+              closure_129_2(value(tmp71[17]).getVibegrationsCreateErrorMessage(closure_128_3));
+              const obj3 = value(tmp71[17]);
             }
           } else if (arg0 === 1) {
             c5 = 3;
@@ -119,10 +119,10 @@ export default function VibegrationsCustomWidgetSheet() {
           } else {
             closure_128_1 = value;
             closure_1_7(closure_128_1);
-            closure_1_8(closure_128_1, value(tmp70[16]).composeVibegrationsCustomWidgetPrompt(closure_128_0));
+            closure_1_8(closure_128_1, value(tmp71[16]).composeVibegrationsCustomWidgetPrompt(closure_128_0));
             closure_128_2(closure_128_1);
             c3 = 1;
-            let obj = value(tmp70[16]);
+            let obj = value(tmp71[16]);
           }
           c3 = 0;
           closure_129_4.current = false;
@@ -134,11 +134,11 @@ export default function VibegrationsCustomWidgetSheet() {
         closure_129_3(false);
         c5 = 3;
         return { value: "HermesInternal", done: null };
-      } catch (tmp70) {
+      } catch (tmp71) {
         if (tmp5 === c3) {
           c5 = tmp3;
-          throw tmp70;
-        } else if (tmp2 === tmp72) {
+          throw tmp71;
+        } else if (tmp2 === tmp73) {
           c4 = tmp2;
         } else {
           c4 = tmp;
@@ -162,7 +162,7 @@ export default function VibegrationsCustomWidgetSheet() {
   obj4.errorMessage = tmp5;
   obj4.value = value;
   obj4.onChange = callback;
-  obj4.maxLength = value(12622).VIBEGRATIONS_CUSTOM_WIDGET_PROMPT_MAX_LENGTH;
+  obj4.maxLength = value(12640).VIBEGRATIONS_CUSTOM_WIDGET_PROMPT_MAX_LENGTH;
   obj4.disabled = tmp7;
   const items1 = [closure_11(value(6506).TextArea, obj4), ];
   let obj5 = { variant: "primary", text: null, onPress: null, loading: null, disabled: null };

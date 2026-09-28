@@ -1,6 +1,6 @@
-// === Module 12659: MobileWishlistSuggestionsExperiment ===
+// === Module 12677: MobileWishlistSuggestionsExperiment ===
 
-// Module 12659 (MobileWishlistSuggestionsExperiment)
+// Module 12677 (MobileWishlistSuggestionsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 16438: layout/SearchBar ===
+// === Module 16442: layout/SearchBar ===
 
-// Module 16438 (layout/SearchBar)
+// Module 16442 (layout/SearchBar)
 import util from "util" /* 1115 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4541 */;
 import useChannelName from "useChannelName" /* 4989 */;

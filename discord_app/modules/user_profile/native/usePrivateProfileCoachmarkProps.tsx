@@ -1,9 +1,9 @@
-// === Module 16004: usePrivateProfileCoachmarkProps ===
+// === Module 16002: usePrivateProfileCoachmarkProps ===
 
-// Module 16004 (usePrivateProfileCoachmarkProps)
+// Module 16002 (usePrivateProfileCoachmarkProps)
 import util from "util" /* 1115 */;
 import dismissible_content from "dismissible_content" /* 2029 */;
-import PrivateProfileAbstractUI from "PrivateProfileAbstractUI" /* 16005 */;
+import PrivateProfileAbstractUI from "PrivateProfileAbstractUI" /* 16003 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

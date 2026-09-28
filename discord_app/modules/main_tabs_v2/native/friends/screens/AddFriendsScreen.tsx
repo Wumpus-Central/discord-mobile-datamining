@@ -1,6 +1,6 @@
-// === Module 16581: AddFriendsScreen ===
+// === Module 16585: AddFriendsScreen ===
 
-// Module 16581 (AddFriendsScreen)
+// Module 16585 (AddFriendsScreen)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
@@ -8,8 +8,8 @@ import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 76
 import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7826 */;
 import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12173 */;
 import ContactSyncUtils from "ContactSyncUtils" /* 12177 */;
-import IncomingRequestRow from "IncomingRequestRow" /* 16584 */;
-import ContactSuggestionRow from "ContactSuggestionRow" /* 16586 */;
+import IncomingRequestRow from "IncomingRequestRow" /* 16588 */;
+import ContactSuggestionRow from "ContactSuggestionRow" /* 16590 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;

@@ -1,6 +1,6 @@
-// === Module 15574: Welcome ===
+// === Module 15572: Welcome ===
 
-// Module 15574 (Welcome)
+// Module 15572 (Welcome)
 import _modDef38 from "module_38" /* 38 */;
 import Storage2 from "Storage" /* 510 */;
 import nativeDefault from "native" /* 576 */;
@@ -14,11 +14,11 @@ import useIsWindowLargeDefault from "useIsWindowLarge" /* 6364 */;
 import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6400 */;
 import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 6895 */;
 import GuildInviteIconDefault from "GuildInviteIcon" /* 12156 */;
-import _modDef12793 from "module_12793" /* 12793 */;
-import _mod13408 from "module_13408" /* 13408 */;
-import RegistrationStepsUtils from "RegistrationStepsUtils" /* 15571 */;
+import _modDef12792 from "module_12792" /* 12792 */;
+import _mod13407 from "module_13407" /* 13407 */;
+import RegistrationStepsUtils from "RegistrationStepsUtils" /* 15569 */;
 import noop from "module_19" /* 19 */;
-import AgeGateStore from "AgeGateStore" /* 15575 */;
+import AgeGateStore from "AgeGateStore" /* 15573 */;
 import ExperimentStore from "ExperimentStore" /* 4750 */;
 import GuildTemplateStore from "GuildTemplateStore" /* 6877 */;
 import MultiAccountStore from "MultiAccountStore" /* 11906 */;
@@ -90,7 +90,7 @@ function GuildTemplateCard(arg0) {
   const obj = { style: null, children: null };
   const items = [tmp.container, style];
   obj.style = items;
-  const items1 = [__initData(hasOwnProperty, { source: _modDef12793 }), ];
+  const items1 = [__initData(hasOwnProperty, { source: _modDef12792 }), ];
   const obj3 = { style: tmp.text, children: null };
   const obj4 = { variant: "text-sm/medium", color: "text-subtle", children: null };
   const intl = util.intl;
@@ -114,7 +114,7 @@ function Centerpiece(inlineButtons) {
   const items = [tmp3.centerpieceContainer];
   obj2.style = items;
   const obj3 = { alwaysBounceVertical: false, contentContainerStyle: tmp3.scrollViewContainer, children: null };
-  const items1 = [__initData(hasOwnProperty, { style: tmp3.logo, source: _mod13408 }), , ];
+  const items1 = [__initData(hasOwnProperty, { style: tmp3.logo, source: _mod13407 }), , ];
   const obj5 = { style: null, lineClamp: null, variant: "display-md", color: "text-overlay-light", maxFontSizeMultiplier: 1, children: null };
   const items2 = [tmp3.header, typeConsolidationTextTransform];
   obj5.style = items2;

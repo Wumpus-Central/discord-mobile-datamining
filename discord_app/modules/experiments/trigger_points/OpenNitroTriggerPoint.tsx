@@ -1,6 +1,6 @@
-// === Module 12999: OpenNitroTriggerPoint ===
+// === Module 12998: OpenNitroTriggerPoint ===
 
-// Module 12999 (OpenNitroTriggerPoint)
+// Module 12998 (OpenNitroTriggerPoint)
 import ExperimentConstants from "ExperimentConstants" /* 4751 */;
 import Helpers from "Helpers" /* 10271 */;
 import size from "module_2" /* 2 */;

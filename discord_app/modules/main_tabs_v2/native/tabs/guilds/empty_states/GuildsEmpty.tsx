@@ -1,6 +1,6 @@
-// === Module 15907: GuildsEmpty ===
+// === Module 15905: GuildsEmpty ===
 
-// Module 15907 (GuildsEmpty)
+// Module 15905 (GuildsEmpty)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import FavoritesUtils from "FavoritesUtils" /* 2070 */;
@@ -9,7 +9,7 @@ import Text_Text from "Text/Text" /* 4832 */;
 import Stack_Stack from "Stack/Stack" /* 5279 */;
 import components_Button_Button from "components/Button/Button" /* 5281 */;
 import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12205 */;
-import _modDef15908 from "module_15908" /* 15908 */;
+import _modDef15906 from "module_15906" /* 15906 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

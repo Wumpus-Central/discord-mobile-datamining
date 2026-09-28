@@ -1,12 +1,12 @@
-// === Module 14191: EditProfileFrameSection ===
+// === Module 14190: EditProfileFrameSection ===
 
-// Module 14191 (EditProfileFrameSection)
+// Module 14190 (EditProfileFrameSection)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6603 */;
 import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8285 */;
-import useCollectibleListLayout from "useCollectibleListLayout" /* 12744 */;
-import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 12745 */;
-import useProfileFrameSections from "useProfileFrameSections" /* 14190 */;
+import useCollectibleListLayout from "useCollectibleListLayout" /* 12743 */;
+import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 12744 */;
+import useProfileFrameSections from "useProfileFrameSections" /* 14189 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,9 +17,9 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
 const createStyles = fn(4836);
-let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(12744).GUTTER_SIZE }, rowSpacer: null, previewContainer: null };
-let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(12744).GUTTER_SIZE };
-obj.rowSpacer = { height: fn(12744).GUTTER_SIZE };
+let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(12743).GUTTER_SIZE }, rowSpacer: null, previewContainer: null };
+let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(12743).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(12743).GUTTER_SIZE };
 obj.previewContainer = { width: "100%", height: "100%", paddingVertical: PX_8, overflow: "hidden", alignItems: "center", justifyContent: "center" };
 let closure_11 = createStyles.createStyles(obj);
 const memoResult = noop.memo((arg0) => {

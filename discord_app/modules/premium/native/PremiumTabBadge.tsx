@@ -23,7 +23,7 @@ import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferra
 import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 7504 */;
 import useTrackImpressionDefault from "useTrackImpression" /* 8230 */;
 import MarketingComponentType from "MarketingComponentType" /* 10203 */;
-import usePromotionMarketingComponent from "usePromotionMarketingComponent" /* 12960 */;
+import usePromotionMarketingComponent from "usePromotionMarketingComponent" /* 12959 */;
 import _modDef14519 from "module_14519" /* 14519 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

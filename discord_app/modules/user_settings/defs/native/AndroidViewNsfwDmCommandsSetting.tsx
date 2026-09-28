@@ -1,6 +1,6 @@
-// === Module 14377: AndroidViewNsfwDmCommandsSetting ===
+// === Module 14376: AndroidViewNsfwDmCommandsSetting ===
 
-// Module 14377 (AndroidViewNsfwDmCommandsSetting)
+// Module 14376 (AndroidViewNsfwDmCommandsSetting)
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import UserSettings from "UserSettings" /* 2021 */;

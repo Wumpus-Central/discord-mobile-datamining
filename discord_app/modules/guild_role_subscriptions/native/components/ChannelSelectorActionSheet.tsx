@@ -1,13 +1,13 @@
-// === Module 17579: ChannelSelectorActionSheet ===
+// === Module 17583: ChannelSelectorActionSheet ===
 
-// Module 17579 (ChannelSelectorActionSheet)
+// Module 17583 (ChannelSelectorActionSheet)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5039 */;
 import useCreateChannelSubmit from "useCreateChannelSubmit" /* 9013 */;
 import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 9015 */;
-import _modDef13148 from "module_13148" /* 13148 */;
+import _modDef13147 from "module_13147" /* 13147 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
@@ -32,9 +32,9 @@ function ChannelRow(channel) {
   obj.channel = channel;
   obj.selected = selected;
   obj.resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
-  const children = [closure_11(onChannelSelected(15750), obj), ];
+  const children = [closure_11(onChannelSelected(15748), obj), ];
   if (selected) {
-    const obj2 = { style: tmp.selectedIcon, source: tmp2(17516) };
+    const obj2 = { style: tmp.selectedIcon, source: tmp2(17520) };
     selected = closure_11(tmp2(5899), obj2);
     const tmp2Result = tmp2(5899);
   }
@@ -153,7 +153,7 @@ export default function ChannelSelectorActionSheet(guildId) {
     if (tmp.createChannelLabel.color != null) {
       str1 = str.toString();
     }
-    const obj7 = { color: str1, source: _modDef13148 };
+    const obj7 = { color: str1, source: _modDef13147 };
     const items3 = [closure_11(tmp5(1177).Icon, obj7), ];
     const obj8 = { style: tmp.createChannelLabel, variant: "text-md/medium", color: "text-link", children: null };
     const intl3 = tmp5(1115).intl;

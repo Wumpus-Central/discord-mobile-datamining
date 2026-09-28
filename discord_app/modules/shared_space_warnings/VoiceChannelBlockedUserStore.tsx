@@ -1,9 +1,9 @@
-// === Module 13277: VoiceChannelBlockedUserStore ===
+// === Module 13276: VoiceChannelBlockedUserStore ===
 
-// Module 13277 (VoiceChannelBlockedUserStore)
+// Module 13276 (VoiceChannelBlockedUserStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import SharedSpacesWarningManagerDefault from "SharedSpacesWarningManager" /* 13278 */;
+import SharedSpacesWarningManagerDefault from "SharedSpacesWarningManager" /* 13277 */;
 import RelationshipStore from "RelationshipStore" /* 4479 */;
 import VoiceStateStore from "VoiceStateStore" /* 4855 */;
 

@@ -1,9 +1,9 @@
-// === Module 13084: TreasureChestBannerSpotIllustration ===
+// === Module 13083: TreasureChestBannerSpotIllustration ===
 
-// Module 13084 (TreasureChestBannerSpotIllustration)
+// Module 13083 (TreasureChestBannerSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
 import FastImageDefault from "FastImage" /* 5899 */;
-import _modDef13085 from "module_13085" /* 13085 */;
+import _modDef13084 from "module_13084" /* 13084 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const TreasureChestBannerSpotIllustration = function TreasureChestBannerS
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef13085 };
+  const obj2 = { uri: _modDef13084 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

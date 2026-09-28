@@ -1,15 +1,15 @@
-// === Module 12854: GuildChannelHeader ===
+// === Module 12853: GuildChannelHeader ===
 
-// Module 12854 (GuildChannelHeader)
+// Module 12853 (GuildChannelHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2111 */;
 import useChannelName from "useChannelName" /* 4989 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 5335 */;
-import ChannelHeader from "ChannelHeader" /* 12841 */;
+import ChannelHeader from "ChannelHeader" /* 12840 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberCountStore from "ChannelMemberCountStore" /* 12855 */;
+import ChannelMemberCountStore from "ChannelMemberCountStore" /* 12854 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5589 */;
 import ChannelMemberStore from "ChannelMemberStore" /* 6697 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
@@ -68,7 +68,7 @@ function GuildChannelMemberCount(channel) {
     const count = ChannelMemberCountStore.requestCount(channel.guild_id, channel.id);
   }, items1);
   if (null == total) {
-    const tmpResult = tmp(12848);
+    const tmpResult = tmp(12847);
     return tmpResult.renderMemberCountText(online, total, flag, tmp(6038).ICON_SIZE[token]);
   }
   const obj2 = channel(504);

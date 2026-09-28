@@ -1,6 +1,6 @@
-// === Module 14499: ConnectedApplicationIdentity ===
+// === Module 14498: ConnectedApplicationIdentity ===
 
-// Module 14499 (ConnectedApplicationIdentity)
+// Module 14498 (ConnectedApplicationIdentity)
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
@@ -149,38 +149,28 @@ export default function ConnectedApplicationIdentity(identity) {
     obj3.size = token(tmp3[15]).Sizes.LARGE;
     obj3.source = memo;
     const tmp15 = token(tmp3[15]);
-    let obj4 = { spacing: 8, direction: "horizontal", align: "center", children: null };
-    let obj5 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, disabled: null, children: null };
+    let obj4 = { size: "sm", variant: "icon-only", icon: closure_7(tmp2(tmp3[18]).XLargeBoldIcon, { size: "sm" }), accessibilityLabel: null, onPress: null };
     let intl2 = tmp2(tmp3[7]).intl;
-    obj5.accessibilityLabel = intl2.string(tmp2(tmp3[7]).t["DT39A+"]);
-    obj5.onPress = callback;
-    obj5.hitSlop = { top: 5, left: 5, bottom: 5, right: 5 };
-    obj5.disabled = null == token;
-    const obj6 = { style: legacyClassComponentStyles.deleteConnectionIcon, source: null };
+    obj4.accessibilityLabel = intl2.string(tmp2(tmp3[7]).t["DT39A+"]);
+    obj4.onPress = callback;
+    let obj5 = { style: legacyClassComponentStyles.container, children: null };
+    const obj6 = { style: legacyClassComponentStyles.connectedAccountItem, children: null };
     const tmp16 = closure_7(token(tmp3[15]), obj3);
-    obj6.source = token(tmp3[19]);
-    obj5.children = closure_7(token(tmp3[15]), obj6);
-    obj4.children = closure_7(tmp2(tmp3[18]).PressableOpacity, obj5);
-    let obj7 = { style: legacyClassComponentStyles.container, children: null };
-    const obj8 = { style: legacyClassComponentStyles.connectedAccountItem, children: null };
-    const obj9 = { style: legacyClassComponentStyles.connectedAccountTopContainer, children: null };
-    const tmp17 = token(tmp3[15]);
-    const obj10 = { label: application.name, icon: tmp16, trailing: closure_7(tmp2(tmp3[17]).Stack, obj4) };
-    obj9.children = closure_7(tmp2(tmp3[20]).TableRow, obj10);
-    const items4 = [closure_7(View, obj9), ];
-    const obj11 = { style: legacyClassComponentStyles.connectedAccountContentContainer, children: null };
-    const obj12 = { hasIcons: false, children: null };
-    const obj13 = { label: null, value: null, onValueChange: null };
+    let obj7 = { value: true, children: null };
+    const obj8 = { style: legacyClassComponentStyles.connectedAccountHeader, children: null };
+    const obj9 = { label: application.name, icon: tmp16, trailing: closure_7(tmp2(tmp3[17]).IconButton, obj4) };
+    obj8.children = closure_7(tmp2(tmp3[20]).TableRow, obj9);
+    const items4 = [closure_7(View, obj8), ];
+    const obj10 = { label: null, value: null, onValueChange: null };
     let intl3 = tmp2(tmp3[7]).intl;
-    obj13.label = intl3.string(tmp2(tmp3[7]).t.f7yOAX);
-    obj13.value = tmp6;
-    obj13.onValueChange = tmp12;
-    obj12.children = closure_7(tmp2(tmp3[22]).TableSwitchRow, obj13);
-    obj11.children = closure_7(tmp2(tmp3[21]).TableRowGroup, obj12);
-    items4[1] = closure_7(View, obj11);
-    obj8.children = items4;
-    obj7.children = closure_8(View, obj8);
-    return closure_7(View, obj7);
+    obj10.label = intl3.string(tmp2(tmp3[7]).t.f7yOAX);
+    obj10.value = tmp6;
+    obj10.onValueChange = tmp12;
+    items4[1] = closure_7(tmp2(tmp3[21]).TableSwitchRow, obj10);
+    obj7.children = items4;
+    obj6.children = closure_8(tmp2(tmp3[19]).TableRowGroupContext, obj7);
+    obj5.children = closure_7(View, obj6);
+    return closure_7(View, obj5);
   }
   const tmp5 = _slicedToArray(noop.useState(flag), 2);
 };

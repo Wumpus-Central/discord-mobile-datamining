@@ -1,6 +1,6 @@
-// === Module 12814: getRequestToStreamCTAAndIsDisabled ===
+// === Module 12813: getRequestToStreamCTAAndIsDisabled ===
 
-// Module 12814 (getRequestToStreamCTAAndIsDisabled)
+// Module 12813 (getRequestToStreamCTAAndIsDisabled)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1115 */;
 import _modDef2973 from "module_2973" /* 2973 */;

@@ -1,6 +1,6 @@
-// === Module 13230: VoiceChannelAnimationStateStore ===
+// === Module 13229: VoiceChannelAnimationStateStore ===
 
-// Module 13230 (VoiceChannelAnimationStateStore)
+// Module 13229 (VoiceChannelAnimationStateStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import _slicedToArray from "module_32" /* 32 */;

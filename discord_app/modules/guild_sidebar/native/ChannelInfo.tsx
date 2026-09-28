@@ -1,14 +1,14 @@
-// === Module 15861: ChannelInfo ===
+// === Module 15859: ChannelInfo ===
 
-// Module 15861 (ChannelInfo)
+// Module 15859 (ChannelInfo)
 import StageMediaHooks from "StageMediaHooks" /* 5729 */;
 import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11541 */;
-import Badges from "Badges" /* 12564 */;
-import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 15752 */;
-import showChannelBadgeDefault from "showChannelBadge" /* 15862 */;
-import ChannelBadgeDefault from "ChannelBadge" /* 15863 */;
-import ChannelItemEmbeddedActivitiesDefault from "ChannelItemEmbeddedActivities" /* 15866 */;
-import useVoiceChannelStartTime from "useVoiceChannelStartTime" /* 15867 */;
+import Badges from "Badges" /* 12582 */;
+import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 15750 */;
+import showChannelBadgeDefault from "showChannelBadge" /* 15860 */;
+import ChannelBadgeDefault from "ChannelBadge" /* 15861 */;
+import ChannelItemEmbeddedActivitiesDefault from "ChannelItemEmbeddedActivities" /* 15864 */;
+import useVoiceChannelStartTime from "useVoiceChannelStartTime" /* 15865 */;
 import noop from "module_19" /* 19 */;
 import NewChannelsStore from "NewChannelsStore" /* 6952 */;
 import GuildStore from "GuildStore" /* 2067 */;
@@ -46,7 +46,7 @@ function LimitAndDurationInfo(channel) {
     }
     obj3.video = hasVideo;
     obj3.channel = channel;
-    let tmp6Result = jsx(tmp(15753).ConnectedUserLimit, { userCount: voiceStatesCount, video: null, channel: null });
+    let tmp6Result = jsx(tmp(15751).ConnectedUserLimit, { userCount: voiceStatesCount, video: null, channel: null });
   } else {
     const obj4 = { channel };
     tmp6Result = <DurationInfo channel={channel} />;
@@ -115,7 +115,7 @@ export default function ChannelInfo(channel) {
           const obj4 = { embeddedApps: tmp5, muted };
           tmp11Result = jsx(ChannelItemEmbeddedActivitiesDefault, { embeddedApps: tmp5, muted });
         }
-        tmpResult2 = tmp(15865);
+        tmpResult2 = tmp(15863);
       }
     }
     if (null != isSubscriptionGated) {

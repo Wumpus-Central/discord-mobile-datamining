@@ -1,15 +1,15 @@
-// === Module 17748: AppShare ===
+// === Module 17752: AppShare ===
 
-// Module 17748 (AppShare)
+// Module 17752 (AppShare)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import useMountEffectDefault from "useMountEffect" /* 5298 */;
 import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6010 */;
 import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 6895 */;
 import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 7810 */;
-import ShareScreenDefault from "ShareScreen" /* 13445 */;
-import AccessibilityManagerDefault from "AccessibilityManager" /* 13927 */;
-import ToastContainerDefault from "ToastContainer" /* 16780 */;
+import ShareScreenDefault from "ShareScreen" /* 13444 */;
+import AccessibilityManagerDefault from "AccessibilityManager" /* 13926 */;
+import ToastContainerDefault from "ToastContainer" /* 16784 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -20,7 +20,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ BackHandler: hasOwnProperty, NativeModules: metroRequire } = get_ActivityIndicator);
 const AnalyticsTrackingStore = fn(6880);
-const ShareStore = fn(13888);
+const ShareStore = fn(13887);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 let closure_9 = fn(11907).MultiAccountSwitchLocation;
 const jsxProd = fn(21);
@@ -118,7 +118,7 @@ export default function AppShare(targetUserId) {
   } else {
     const items5 = [closure_10(tmp9(6460).SceneLoadingIndicator, {}), , , ];
     const obj5 = { appEntryKey: share };
-    items5[1] = closure_10(tmp9(16727).ActionSheetContainer, obj5);
+    items5[1] = closure_10(tmp9(16731).ActionSheetContainer, obj5);
     items5[2] = closure_10(ToastContainerDefault, {});
     items5[3] = closure_10(tmp9(5209).AlertModalContainer, {});
     obj3.children = items5;

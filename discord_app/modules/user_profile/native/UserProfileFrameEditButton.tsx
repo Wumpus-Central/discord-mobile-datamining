@@ -1,6 +1,6 @@
-// === Module 14188: UserProfileFrameEditButton ===
+// === Module 14187: UserProfileFrameEditButton ===
 
-// Module 14188 (UserProfileFrameEditButton)
+// Module 14187 (UserProfileFrameEditButton)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
@@ -76,7 +76,7 @@ export default function UserProfileFrameEditButton(arg0) {
   const items1 = [userProfileFrame, guildId, user, tmp4[1]];
   let name;
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14189, dependencyMap.paths), "Profile Frame", { user, currentProfileFrame: userProfileFrame, guildId });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14188, dependencyMap.paths), "Profile Frame", { user, currentProfileFrame: userProfileFrame, guildId });
     closure_2(ContentDismissActionType.TAKE_ACTION);
   }, items1);
   if (product != null) {
@@ -109,7 +109,7 @@ export default function UserProfileFrameEditButton(arg0) {
     const intl3 = user(1115).intl;
     obj6.label = intl3.string(user(1115).t.GWrZOd);
     const obj7 = { showNewBadge: tmp4[0] === user(2029).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE };
-    obj6.labelTrailing = jsx(user(14176).UserProfileEditFormLabelBadges, { showNewBadge: tmp4[0] === user(2029).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE });
+    obj6.labelTrailing = jsx(user(14175).UserProfileEditFormLabelBadges, { showNewBadge: tmp4[0] === user(2029).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE });
     obj6.buttonText = formatToPlainStringResult;
     const obj8 = { text: formatToPlainStringResult };
     obj6.accessibilityValue = obj8;
@@ -121,10 +121,10 @@ export default function UserProfileFrameEditButton(arg0) {
       let tmp18Result = <View style={tmp.previewContainer}>{null}</View>;
       const tmp23 = guildId(8285);
     } else {
-      const obj11 = { source: guildId(12746), style: tmp.noneIcon };
-      tmp18Result = jsx(user(1177).Icon, { source: guildId(12746), style: tmp.noneIcon });
+      const obj11 = { source: guildId(12745), style: tmp.noneIcon };
+      tmp18Result = jsx(user(1177).Icon, { source: guildId(12745), style: tmp.noneIcon });
     }
     obj6.leading = tmp18Result;
   }
-  return jsx(user(14176).UserProfileEditFormButton, obj6);
+  return jsx(user(14175).UserProfileEditFormButton, obj6);
 };

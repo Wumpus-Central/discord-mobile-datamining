@@ -1,14 +1,14 @@
-// === Module 16207: GuildFeedBanner ===
+// === Module 16203: GuildFeedBanner ===
 
-// Module 16207 (GuildFeedBanner)
+// Module 16203 (GuildFeedBanner)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import timing from "timing" /* 4837 */;
 import timingPresets from "timingPresets" /* 4840 */;
-import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 13515 */;
+import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 13514 */;
 import noop from "module_19" /* 19 */;
-import GuildPopoutStore from "GuildPopoutStore" /* 13514 */;
+import GuildPopoutStore from "GuildPopoutStore" /* 13513 */;
 import GuildStore from "GuildStore" /* 2067 */;
 
 require = fn;
@@ -108,9 +108,9 @@ function GuildFeedBanner(guild) {
     const items6 = [size2, animatedStyle];
     obj6.style = items6;
     if (tmp2Result6.isThemeDark(tmp8)) {
-      let tmp6Result = tmp6(16209);
+      let tmp6Result = tmp6(16205);
     } else {
-      tmp6Result = tmp6(16210);
+      tmp6Result = tmp6(16206);
     }
     obj6.source = tmp6Result;
     obj6.onLoad = handleLoad;
@@ -163,7 +163,7 @@ function GuildFeedBanner(guild) {
             },
         children: null
       };
-      const obj17 = { style: tmp.publicIcon, source: tmp6(16211) };
+      const obj17 = { style: tmp.publicIcon, source: tmp6(16207) };
       const items12 = [closure_11(tmp2(1177).Icon, obj17), ];
       const obj18 = { variant: "text-xs/medium", color: "text-default", children: null };
       let intl = tmp2(1115).intl;
@@ -203,7 +203,7 @@ function GuildFeedBanner(guild) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const GuildFeedConstants = fn(16208);
+const GuildFeedConstants = fn(16204);
 const GUILD_FEED_CARD_MARGIN_HORIZONTAL = GuildFeedConstants.GUILD_FEED_CARD_MARGIN_HORIZONTAL;
 let closure_9 = GuildFeedConstants.GUILD_FEED_MIN_BANNER_HEIGHT;
 const GuildFeatures = fn(1074).GuildFeatures;

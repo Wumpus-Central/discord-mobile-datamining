@@ -357,7 +357,7 @@ class ConnectedApplicationUserRoleAccount {
             const obj = { style: closure_1.connectedAccountPoweredByText, children: null };
             let tmp5 = null;
             if (null != applicationRoleConnection.application.bot) {
-              const obj2 = { style: tmp3.connectedAccountPoweredByAvatar, user: null, size: null, guildId: "flex" };
+              const obj2 = { style: tmp3.connectedAccountPoweredByAvatar, user: null, size: null, guildId: "a" };
               const tmp12 = new UserRecord(applicationRoleConnection.application.bot);
               obj2.user = tmp12;
               obj2.size = native.AvatarSizes.SIZE_16;

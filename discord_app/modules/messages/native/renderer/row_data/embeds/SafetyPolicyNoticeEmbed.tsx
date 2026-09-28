@@ -1,6 +1,6 @@
-// === Module 12819: SafetyPolicyNoticeEmbed ===
+// === Module 12818: SafetyPolicyNoticeEmbed ===
 
-// Module 12819 (SafetyPolicyNoticeEmbed)
+// Module 12818 (SafetyPolicyNoticeEmbed)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;

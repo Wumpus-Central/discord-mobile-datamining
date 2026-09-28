@@ -1,6 +1,6 @@
-// === Module 12748: EditCollectiblesPreviewDetails ===
+// === Module 12747: EditCollectiblesPreviewDetails ===
 
-// Module 12748 (EditCollectiblesPreviewDetails)
+// Module 12747 (EditCollectiblesPreviewDetails)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4488 */;

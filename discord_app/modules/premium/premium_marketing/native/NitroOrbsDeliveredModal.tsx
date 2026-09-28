@@ -1,6 +1,6 @@
-// === Module 12882: NitroOrbsDeliveredModal ===
+// === Module 12881: NitroOrbsDeliveredModal ===
 
-// Module 12882 (NitroOrbsDeliveredModal)
+// Module 12881 (NitroOrbsDeliveredModal)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6603 */;
 import openUserSettings from "openUserSettings" /* 6800 */;
@@ -9,7 +9,7 @@ import useTrackImpressionDefault from "useTrackImpression" /* 8230 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef12883 = tmp2(12883);
+const _modDef12882 = tmp2(12882);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, Image: metroRequire, StyleSheet } = get_ActivityIndicator);
@@ -75,7 +75,7 @@ export default function NitroOrbsDeliveredModal(arg0) {
     obj6.children = closure_11(onClose(6619).ActionSheetCloseButton, obj7);
     const items3 = [closure_11(View, obj6), , ];
     const obj8 = { style: tmp.body, children: null };
-    const obj9 = { source: _modDef12883, style: tmp.orbGraphic, resizeMode: "contain" };
+    const obj9 = { source: _modDef12882, style: tmp.orbGraphic, resizeMode: "contain" };
     const items4 = [closure_11(closure_6, obj9), ];
     const obj10 = { children: null };
     const obj11 = { variant: "heading-lg/bold", color: "text-overlay-light", style: tmp.title, children: null };

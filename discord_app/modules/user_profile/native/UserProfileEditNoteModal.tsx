@@ -1,8 +1,8 @@
-// === Module 12611: UserProfileEditNoteModal ===
+// === Module 12629: UserProfileEditNoteModal ===
 
-// Module 12611 (UserProfileEditNoteModal)
+// Module 12629 (UserProfileEditNoteModal)
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5039 */;
-import UserProfileEditNote from "UserProfileEditNote" /* 12612 */;
+import UserProfileEditNote from "UserProfileEditNote" /* 12630 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

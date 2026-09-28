@@ -1,6 +1,6 @@
-// === Module 16458: usePlaceholderStyles ===
+// === Module 16462: usePlaceholderStyles ===
 
-// Module 16458 (usePlaceholderStyles)
+// Module 16462 (usePlaceholderStyles)
 import native from "native" /* 1177 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1479 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;

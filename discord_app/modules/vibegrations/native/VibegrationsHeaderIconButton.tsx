@@ -1,6 +1,6 @@
-// === Module 16244: VibegrationsHeaderIconButton ===
+// === Module 16240: VibegrationsHeaderIconButton ===
 
-// Module 16244 (VibegrationsHeaderIconButton)
+// Module 16240 (VibegrationsHeaderIconButton)
 import Pressables from "Pressables" /* 5435 */;
 import noop from "module_19" /* 19 */;
 

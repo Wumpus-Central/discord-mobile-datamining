@@ -1,6 +1,6 @@
-// === Module 16482: SearchMediaImage ===
+// === Module 16486: SearchMediaImage ===
 
-// Module 16482 (SearchMediaImage)
+// Module 16486 (SearchMediaImage)
 import ImageWarningIcon from "ImageWarningIcon" /* 5395 */;
 import ObscureMediaModels from "ObscureMediaModels" /* 6714 */;
 import MediaSourceUtil from "MediaSourceUtil" /* 7713 */;

@@ -1,6 +1,6 @@
-// === Module 12592: getStreamURL ===
+// === Module 12610: getStreamURL ===
 
-// Module 12592 (getStreamURL)
+// Module 12610 (getStreamURL)
 import Constants from "Constants" /* 2005 */;
 import size from "module_2" /* 2 */;
 

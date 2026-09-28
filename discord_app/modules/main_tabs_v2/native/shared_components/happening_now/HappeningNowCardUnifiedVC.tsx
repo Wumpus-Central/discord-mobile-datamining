@@ -1,10 +1,10 @@
-// === Module 15707: HappeningNowCardUnifiedVC ===
+// === Module 15705: HappeningNowCardUnifiedVC ===
 
-// Module 15707 (HappeningNowCardUnifiedVC)
-import findActivityWithMostParticipantsDefault from "findActivityWithMostParticipants" /* 15698 */;
-import HappeningNowCardActivityDefault from "HappeningNowCardActivity" /* 15708 */;
-import HappeningNowCardEmbeddedActivityDefault from "HappeningNowCardEmbeddedActivity" /* 15720 */;
-import HappeningNowCardVoiceDefault from "HappeningNowCardVoice" /* 15721 */;
+// Module 15705 (HappeningNowCardUnifiedVC)
+import findActivityWithMostParticipantsDefault from "findActivityWithMostParticipants" /* 15696 */;
+import HappeningNowCardActivityDefault from "HappeningNowCardActivity" /* 15706 */;
+import HappeningNowCardEmbeddedActivityDefault from "HappeningNowCardEmbeddedActivity" /* 15718 */;
+import HappeningNowCardVoiceDefault from "HappeningNowCardVoice" /* 15719 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4858 */;

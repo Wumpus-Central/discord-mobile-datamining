@@ -1,13 +1,13 @@
-// === Module 17531: CreatorHighlightSection ===
+// === Module 17535: CreatorHighlightSection ===
 
-// Module 17531 (CreatorHighlightSection)
+// Module 17535 (CreatorHighlightSection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import LinkingDefault from "Linking" /* 4525 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import _modDef9762 from "module_9762" /* 9762 */;
-import EmojiIconDefault from "EmojiIcon" /* 14787 */;
+import EmojiIconDefault from "EmojiIcon" /* 14785 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,12 +35,12 @@ function CreatorGuildCard(highlightedCreatorGuild) {
   const guild_id = highlightedCreatorGuild.guild_id;
   let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
   ({ quote, quote_attribution } = highlightedCreatorGuild);
-  const tmp6 = guild_id(17532)(guild_id, 3, 60);
+  const tmp6 = guild_id(17536)(guild_id, 3, 60);
   dependencyMap = tmp6;
   const hasAllImperativeDetails = tmp6.hasAllImperativeDetails;
   let items = [hasAllImperativeDetails, tmp6];
   if (tmp6.isLoading) {
-    const obj2 = { style: tmp.cardContainer, children: closure_6(tmp5(17504), {}) };
+    const obj2 = { style: tmp.cardContainer, children: closure_6(tmp5(17508), {}) };
     return closure_6(closure_4, obj2);
   } else if (hasAllImperativeDetails) {
     const details = tmp6.details;

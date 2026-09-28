@@ -1,6 +1,6 @@
-// === Module 12667: WishlistAnalyticsContext ===
+// === Module 12684: WishlistAnalyticsContext ===
 
-// Module 12667 (WishlistAnalyticsContext)
+// Module 12684 (WishlistAnalyticsContext)
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

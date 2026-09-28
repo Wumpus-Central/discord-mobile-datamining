@@ -1,10 +1,10 @@
-// === Module 15015: VideoUploadQualitySetting ===
+// === Module 15013: VideoUploadQualitySetting ===
 
-// Module 15015 (VideoUploadQualitySetting)
+// Module 15013 (VideoUploadQualitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 2021 */;
-import UserSettingsText from "UserSettingsText" /* 15014 */;
+import UserSettingsText from "UserSettingsText" /* 15012 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1184 */;
 
 require = fn;

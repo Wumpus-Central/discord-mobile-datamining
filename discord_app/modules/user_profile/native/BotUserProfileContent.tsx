@@ -82,7 +82,7 @@ export default noop.memo(function BotUserProfileContent(user) {
       const obj5 = { style: null, children: null };
       const items3 = [tmp3.bannerButtons, bannerAnimatedStyle];
       obj5.style = items3;
-      const obj6 = { user, application, channel };
+      const obj6 = { user, currentUser: stateFromStores, application, displayProfile, channel };
       obj5.children = closure_9(tmp(tmp2[23]), obj6);
       items2[1] = closure_9(tmp(tmp2[22]).View, obj5);
       const obj7 = { style: contentAnimatedStyle, children: null };

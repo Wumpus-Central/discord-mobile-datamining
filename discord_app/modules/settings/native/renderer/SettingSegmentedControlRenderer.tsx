@@ -1,11 +1,11 @@
-// === Module 14262: SettingSegmentedControlRenderer ===
+// === Module 14261: SettingSegmentedControlRenderer ===
 
-// Module 14262 (SettingSegmentedControlRenderer)
+// Module 14261 (SettingSegmentedControlRenderer)
 import nativeDefault from "native" /* 576 */;
-import SettingTreeManagerDefault from "SettingTreeManager" /* 14253 */;
+import SettingTreeManagerDefault from "SettingTreeManager" /* 14252 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14250 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14249 */;
 
 const require = globalThis.__r;
 
@@ -54,13 +54,13 @@ export default function SettingSegmentedControl(node) {
   const memo = noop.useMemo(() => {
     const items = [];
     const item = settings.forEach((id) => {
-      const tmp = items(14143).SETTING_RENDERER_CONFIG[id];
+      const tmp = items(14142).SETTING_RENDERER_CONFIG[id];
       settings(38)(tmp.type === constants.ROUTE, "Invalid setting type for segmented control: " + id);
       const screen = tmp.screen;
       const obj = { label: null, id: null, page: null };
       const component = screen.getComponent();
       const tmp2 = settings(38);
-      obj.label = items(14252).getSettingTitle(id);
+      obj.label = items(14251).getSettingTitle(id);
       obj.id = id;
       obj.page = closure_2_8(component, {});
       items.push(obj);

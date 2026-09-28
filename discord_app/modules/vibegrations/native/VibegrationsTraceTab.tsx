@@ -1,6 +1,6 @@
-// === Module 16411: VibegrationsTraceTab ===
+// === Module 16415: VibegrationsTraceTab ===
 
-// Module 16411 (VibegrationsTraceTab)
+// Module 16415 (VibegrationsTraceTab)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3715 from "module_3715" /* 3715 */;
@@ -8,11 +8,11 @@ import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4800 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import Card from "Card" /* 5919 */;
 import FileManagerUtils from "FileManagerUtils" /* 7650 */;
-import VibegrationsTraceFormat from "VibegrationsTraceFormat" /* 16412 */;
-import vibegrations_VibegrationsTraceFormat from "vibegrations/VibegrationsTraceFormat" /* 16413 */;
-import VibegrationsTraceUtils from "VibegrationsTraceUtils" /* 16414 */;
-import VibegrationsTimeFormat from "VibegrationsTimeFormat" /* 16416 */;
-import VibegrationsTraceDetailSheet from "VibegrationsTraceDetailSheet" /* 16417 */;
+import VibegrationsTraceFormat from "VibegrationsTraceFormat" /* 16416 */;
+import vibegrations_VibegrationsTraceFormat from "vibegrations/VibegrationsTraceFormat" /* 16417 */;
+import VibegrationsTraceUtils from "VibegrationsTraceUtils" /* 16418 */;
+import VibegrationsTimeFormat from "VibegrationsTimeFormat" /* 16420 */;
+import VibegrationsTraceDetailSheet from "VibegrationsTraceDetailSheet" /* 16421 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8495 */;
@@ -101,7 +101,7 @@ function TraceOverview(arg0) {
   let reduced;
   let tmp = closure_9();
   closure_1 = tmp;
-  dependencyMap = entries(16412).useTraceCategoryFillStyles();
+  dependencyMap = entries(16416).useTraceCategoryFillStyles();
   let items = [entries];
   const memo = reduced.useMemo(() => VibegrationsTraceUtils.traceCategoryTotals(entries), items);
   reduced = memo.reduce((acc, ms) => acc + ms.ms, 0);
@@ -126,7 +126,7 @@ function TraceOverview(arg0) {
   obj3.children = mapped;
   let items1 = [closure_7(View, obj3), ];
   let obj4 = { style: tmp.legend, children: null };
-  const TRACE_CATEGORIES = entries(16414).TRACE_CATEGORIES;
+  const TRACE_CATEGORIES = entries(16418).TRACE_CATEGORIES;
   obj4.children = TRACE_CATEGORIES.map((item) => {
     closure_0 = item;
     const found = memo.find((category) => category.category === closure_0);

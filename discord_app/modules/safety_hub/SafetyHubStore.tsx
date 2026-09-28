@@ -233,12 +233,12 @@ const safetyHubStore = new SafetyHubStore(DispatcherDefault, {
       throw new TypeError("Cannot destructure 'undefined' or 'null'.");
     } else {
       NONE = AgeCheckStatus.LOADING;
-      for (const key10002 in closure_6) {
-        if (!dependencyMap[key10002].is_coppa) {
+      for (const key10007 in closure_6) {
+        if (!dependencyMap[key10007].is_coppa) {
           continue;
         } else {
           let obj = { status: SafetyHubModels.AppealStatusType.REVIEW_PENDING };
-          dependencyMap[key10002].appeal_status = obj;
+          dependencyMap[key10007].appeal_status = obj;
           continue;
         }
         continue;

@@ -1,6 +1,6 @@
-// === Module 16924: useVoicePanelNavArrowPressed ===
+// === Module 16928: useVoicePanelNavArrowPressed ===
 
-// Module 16924 (useVoicePanelNavArrowPressed)
+// Module 16928 (useVoicePanelNavArrowPressed)
 import noop from "module_19" /* 19 */;
 
 const VoicePanelControlsModes = fn(11753).VoicePanelControlsModes;

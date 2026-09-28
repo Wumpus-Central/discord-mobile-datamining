@@ -1,6 +1,6 @@
-// === Module 12576: useTrackUserProfileActivityAction ===
+// === Module 12594: useTrackUserProfileActivityAction ===
 
-// Module 12576 (useTrackUserProfileActivityAction)
+// Module 12594 (useTrackUserProfileActivityAction)
 import _mod19 from "module_19" /* 19 */;
 import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 7636 */;
 import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8254 */;

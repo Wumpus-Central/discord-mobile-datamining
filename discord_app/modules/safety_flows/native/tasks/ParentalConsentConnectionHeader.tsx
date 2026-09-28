@@ -1,6 +1,6 @@
-// === Module 17702: ParentalConsentConnectionHeader ===
+// === Module 17706: ParentalConsentConnectionHeader ===
 
-// Module 17702 (ParentalConsentConnectionHeader)
+// Module 17706 (ParentalConsentConnectionHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;

@@ -1,17 +1,17 @@
-// === Module 15566: MainNavigator ===
+// === Module 15564: MainNavigator ===
 
-// Module 15566 (MainNavigator)
+// Module 15564 (MainNavigator)
 import PlatformUtils2 from "PlatformUtils" /* 1364 */;
 import GlobalStatusIndicatorDefault from "GlobalStatusIndicator" /* 8965 */;
 import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10386 */;
 import StartupProfiler from "StartupProfiler" /* 11027 */;
-import createAccessibleNativeStackNavigatorDefault from "createAccessibleNativeStackNavigator" /* 13992 */;
-import createChatPanelNativeStackNavigatorDefault from "createChatPanelNativeStackNavigator" /* 15568 */;
-import AutoAnalytics from "AutoAnalytics" /* 16559 */;
-import VisualEffectViewTargetDefault from "VisualEffectViewTarget" /* 16613 */;
-import LaunchPadContainerDefault from "LaunchPadContainer" /* 16786 */;
-import ParentalConsentWarningBannerDefault from "ParentalConsentWarningBanner" /* 16817 */;
-import AppComponents from "AppComponents" /* 16819 */;
+import createAccessibleNativeStackNavigatorDefault from "createAccessibleNativeStackNavigator" /* 13991 */;
+import createChatPanelNativeStackNavigatorDefault from "createChatPanelNativeStackNavigator" /* 15566 */;
+import AutoAnalytics from "AutoAnalytics" /* 16563 */;
+import VisualEffectViewTargetDefault from "VisualEffectViewTarget" /* 16617 */;
+import LaunchPadContainerDefault from "LaunchPadContainer" /* 16790 */;
+import ParentalConsentWarningBannerDefault from "ParentalConsentWarningBanner" /* 16821 */;
+import AppComponents from "AppComponents" /* 16823 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -66,7 +66,7 @@ function getAccountStanding() {
   return require("SuspendedUserPage").default;
 }
 const View = fn(17).View;
-let animation = fn(15567).StackNavigationAnimationSettings;
+let animation = fn(15565).StackNavigationAnimationSettings;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, DrawerSourceTypes: closure_9 } = Constants);
 const jsxProd = fn(21);

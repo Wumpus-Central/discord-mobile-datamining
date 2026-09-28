@@ -1,6 +1,6 @@
-// === Module 15825: GameClaimCardStack ===
+// === Module 15823: GameClaimCardStack ===
 
-// Module 15825 (GameClaimCardStack)
+// Module 15823 (GameClaimCardStack)
 import nativeDefault from "native" /* 576 */;
 import PlusSmallIcon from "PlusSmallIcon" /* 8332 */;
 import noop from "module_19" /* 19 */;

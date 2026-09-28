@@ -1,6 +1,6 @@
-// === Module 13160: GuildSubscriptionRemoval ===
+// === Module 13159: GuildSubscriptionRemoval ===
 
-// Module 13160 (GuildSubscriptionRemoval)
+// Module 13159 (GuildSubscriptionRemoval)
 import shared from "shared" /* 4685 */;
 import _mod7679 from "module_7679" /* 7679 */;
 import noop from "module_19" /* 19 */;
@@ -16,13 +16,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getGuildSubscriptionRemovalSource = function getGuildSubscriptionRemovalSource(theme) {
   return _mod7679.getIllustrationSource(theme, {
     dark() {
-      return require("module_13161");
+      return require("module_13160");
     },
     darker() {
-      return require("module_13162");
+      return require("module_13161");
     },
     light() {
-      return require("module_13163");
+      return require("module_13162");
     }
   });
 };
@@ -30,13 +30,13 @@ export const useGuildSubscriptionRemovalSource = function useGuildSubscriptionRe
   const obj = shared;
   return _mod7679.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_13161");
+      return require("module_13160");
     },
     darker() {
-      return require("module_13162");
+      return require("module_13161");
     },
     light() {
-      return require("module_13163");
+      return require("module_13162");
     }
   });
 };
@@ -45,13 +45,13 @@ export const GuildSubscriptionRemoval = function GuildSubscriptionRemoval(arg0) 
   const obj4 = {};
   const illustrationSource = _mod7679.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_13161");
+      return require("module_13160");
     },
     darker() {
-      return require("module_13162");
+      return require("module_13161");
     },
     light() {
-      return require("module_13163");
+      return require("module_13162");
     }
   });
   const merged = Object.assign(arg0);

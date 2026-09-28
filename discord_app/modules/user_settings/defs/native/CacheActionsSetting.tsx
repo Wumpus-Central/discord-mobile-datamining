@@ -1,6 +1,6 @@
-// === Module 15124: CacheActionsSetting ===
+// === Module 15122: CacheActionsSetting ===
 
-// Module 15124 (CacheActionsSetting)
+// Module 15122 (CacheActionsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 2021 */;
@@ -14,11 +14,11 @@ import TableRowGroup from "TableRowGroup" /* 5999 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6570 */;
 import ActionSheet from "ActionSheet" /* 6618 */;
 import FileIcon from "FileIcon" /* 9593 */;
-import FileUpIcon from "FileUpIcon" /* 15093 */;
-import CacheActionsDiskUsageSection from "CacheActionsDiskUsageSection" /* 15125 */;
-import DiskUsageManagerDefault from "DiskUsageManager" /* 15126 */;
-import CacheActionCreators from "CacheActionCreators" /* 15128 */;
-import FileWarningIcon from "FileWarningIcon" /* 15129 */;
+import FileUpIcon from "FileUpIcon" /* 15091 */;
+import CacheActionsDiskUsageSection from "CacheActionsDiskUsageSection" /* 15123 */;
+import DiskUsageManagerDefault from "DiskUsageManager" /* 15124 */;
+import CacheActionCreators from "CacheActionCreators" /* 15126 */;
+import FileWarningIcon from "FileWarningIcon" /* 15127 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5589 */;
@@ -211,7 +211,7 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t.ZVZVwR);
   },
   parent: null,
-  IconComponent: fn(15129).FileWarningIcon,
+  IconComponent: fn(15127).FileWarningIcon,
   onPress: function handleCacheActionsPress() {
     ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: CacheActionsActionSheet }), CacheActionsActionSheet);
   },

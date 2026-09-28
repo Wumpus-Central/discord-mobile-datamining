@@ -1,14 +1,14 @@
-// === Module 14743: QuestDockBountyIllustration ===
+// === Module 14741: QuestDockBountyIllustration ===
 
-// Module 14743 (QuestDockBountyIllustration)
+// Module 14741 (QuestDockBountyIllustration)
 import initialize from "initialize" /* 504 */;
 import native from "native" /* 4540 */;
 import FastImageDefault from "FastImage" /* 5899 */;
 import APNGPlayer from "APNGPlayer" /* 8271 */;
 import BountiesMobileQuestBarExperiment2 from "BountiesMobileQuestBarExperiment" /* 10687 */;
 import QuestDockHooks from "QuestDockHooks" /* 14621 */;
-import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible" /* 14739 */;
-import _modDef14744 from "module_14744" /* 14744 */;
+import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible" /* 14737 */;
+import _modDef14742 from "module_14742" /* 14742 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4825 */;
 
@@ -87,7 +87,7 @@ function QuestDock3DOrbsAPNGPlayer(shouldAnimate) {
       aPNGPlayerControls.pause();
     }
   }, items);
-  return jsx(APNGPlayer.APNGPlayer, { ref, url: _modDef14744, style: tmp.fill, autoplay: false });
+  return jsx(APNGPlayer.APNGPlayer, { ref, url: _modDef14742, style: tmp.fill, autoplay: false });
 }
 function QuestDock3DOrbsIllustration() {
   const tmp = closure_8();
@@ -107,7 +107,7 @@ function QuestDock3DOrbsIllustration() {
     let tmp8Result = <QuestDock3DOrbsAPNGPlayer shouldAnimate={tmp7} />;
   } else {
     const obj4 = { source: null, style: null, resizeMode: "contain", enableAnimation: null, paused: null, accessible: false };
-    const obj5 = { uri: _modDef14744 };
+    const obj5 = { uri: _modDef14742 };
     obj4.source = obj5;
     obj4.style = tmp.fill;
     obj4.enableAnimation = !stateFromStores;

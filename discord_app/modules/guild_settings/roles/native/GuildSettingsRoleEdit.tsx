@@ -1,6 +1,6 @@
-// === Module 17419: GuildSettingsRoleEdit ===
+// === Module 17423: GuildSettingsRoleEdit ===
 
-// Module 17419 (GuildSettingsRoleEdit)
+// Module 17423 (GuildSettingsRoleEdit)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -21,12 +21,12 @@ import Form from "Form" /* 8053 */;
 import _modDef8810 from "module_8810" /* 8810 */;
 import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 9016 */;
 import ConnectionsRoleActionCreators from "ConnectionsRoleActionCreators" /* 11068 */;
-import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 17410 */;
-import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 17420 */;
-import GuildSettingsRoleEditDisplayDefault from "GuildSettingsRoleEditDisplay" /* 17421 */;
-import GuildSettingsRoleEditPermissionsDefault from "GuildSettingsRoleEditPermissions" /* 17430 */;
-import GuildSettingsRoleMembersDefault from "GuildSettingsRoleMembers" /* 17432 */;
-import GuildSettingsRoleEditConnectionsControlsDefault from "GuildSettingsRoleEditConnectionsControls" /* 17433 */;
+import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 17414 */;
+import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 17424 */;
+import GuildSettingsRoleEditDisplayDefault from "GuildSettingsRoleEditDisplay" /* 17425 */;
+import GuildSettingsRoleEditPermissionsDefault from "GuildSettingsRoleEditPermissions" /* 17434 */;
+import GuildSettingsRoleMembersDefault from "GuildSettingsRoleMembers" /* 17436 */;
+import GuildSettingsRoleEditConnectionsControlsDefault from "GuildSettingsRoleEditConnectionsControls" /* 17437 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -35,17 +35,17 @@ import GuildMemberStore from "GuildMemberStore" /* 2108 */;
 import GuildRoleStore from "GuildRoleStore" /* 2102 */;
 import GuildStore from "GuildStore" /* 2067 */;
 import GuildSettingsStore from "GuildSettingsStore" /* 9049 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 17406 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 17410 */;
 
 require = fn;
 let closure_4 = ["guild"];
 const View = fn(17).View;
 const isEveryoneRole = fn(2103).isEveryoneRole;
-const RoleColorsStyle = fn(17406).RoleColorsStyle;
-const constants = fn(17401).GuildSettingsRoleEditSections;
+const RoleColorsStyle = fn(17410).RoleColorsStyle;
+const constants = fn(17405).GuildSettingsRoleEditSections;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_18, DEFAULT_ROLE_COLOR: closure_19, GuildSettingsSections: closure_20 } = Constants);
-const HOLOGRAPHIC_ROLE_COLORS = fn(17408).HOLOGRAPHIC_ROLE_COLORS;
+const HOLOGRAPHIC_ROLE_COLORS = fn(17412).HOLOGRAPHIC_ROLE_COLORS;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23, Fragment: closure_24 } = jsxProd);
 const createStyles = fn(4836);
@@ -173,10 +173,10 @@ class GuildSettingsRoleEdit extends PureComponent {
           closure_2 = editedRoleConnectionConfigurationsMap.get(id);
         }
         function success() {
-          applyArgumentsResult(17420).commitSectionChanges(id, effectiveSection);
+          applyArgumentsResult(17424).commitSectionChanges(id, effectiveSection);
           navigation.pop();
           closure_2_0.setState({ submitting: false, formErrors: {} });
-          const obj = applyArgumentsResult(17420);
+          const obj = applyArgumentsResult(17424);
           const obj3 = { key: "ROLE_EDIT_SAVED", content: null, icon: null };
           const intl = applyArgumentsResult(1115).intl;
           obj3.content = intl.string(applyArgumentsResult(1115).t.ulZn1j);
@@ -326,11 +326,11 @@ class GuildSettingsRoleEdit extends PureComponent {
             const id = closure_2_0.props.role.id;
             const effectiveSection = closure_2_0.getEffectiveSection();
             if (effectiveSection === constants.VERIFICATIONS) {
-              const result = applyArgumentsResult(17420).discardConnectionsChanges(id);
-              const obj2 = applyArgumentsResult(17420);
+              const result = applyArgumentsResult(17424).discardConnectionsChanges(id);
+              const obj2 = applyArgumentsResult(17424);
             } else {
-              const result1 = applyArgumentsResult(17420).discardSectionChanges(id, effectiveSection);
-              const obj = applyArgumentsResult(17420);
+              const result1 = applyArgumentsResult(17424).discardSectionChanges(id, effectiveSection);
+              const obj = applyArgumentsResult(17424);
             }
             closure_0(true);
           };

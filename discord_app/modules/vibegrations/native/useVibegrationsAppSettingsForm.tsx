@@ -1,6 +1,6 @@
-// === Module 16267: useVibegrationsAppSettingsForm ===
+// === Module 16263: useVibegrationsAppSettingsForm ===
 
-// Module 16267 (useVibegrationsAppSettingsForm)
+// Module 16263 (useVibegrationsAppSettingsForm)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3715 from "module_3715" /* 3715 */;
@@ -14,8 +14,8 @@ import GuildChannelStore from "GuildChannelStore" /* 4467 */;
 import GuildStore from "GuildStore" /* 2067 */;
 import RelationshipStore from "RelationshipStore" /* 4479 */;
 import UserStore from "UserStore" /* 1372 */;
-import VibegrationsChatStore from "VibegrationsChatStore" /* 12625 */;
-import VibegrationsConnectionStore_mod from "VibegrationsConnectionStore" /* 12624 */;
+import VibegrationsChatStore from "VibegrationsChatStore" /* 12643 */;
+import VibegrationsConnectionStore_mod from "VibegrationsConnectionStore" /* 12642 */;
 import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8495 */;
 
 require = fn;
@@ -89,7 +89,7 @@ function VibegrationsChannelSettingRow(projectId) {
   return fallback;
 }
 const View = fn(17).View;
-let VibegrationsConnectionStore = fn(12624);
+let VibegrationsConnectionStore = fn(12642);
 ({ requestProjectRebuild: closure_12, sendUserMessage: map1, submitProjectSettings: closure_14 } = VibegrationsConnectionStore);
 let VibegrationsConnectionStore = VibegrationsConnectionStore_mod;
 const jsxProd = fn(21);

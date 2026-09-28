@@ -1,6 +1,6 @@
-// === Module 12588: UserProfileActivityButtons ===
+// === Module 12606: UserProfileActivityButtons ===
 
-// Module 12588 (UserProfileActivityButtons)
+// Module 12606 (UserProfileActivityButtons)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -17,9 +17,9 @@ import StageChannelModalActionCreators from "StageChannelModalActionCreators" /*
 import authorizeConnectionDefault from "authorizeConnection" /* 8528 */;
 import handleJoinEmbeddedActivityDefault from "handleJoinEmbeddedActivity" /* 8826 */;
 import GamesActionCreatorsDefault from "GamesActionCreators" /* 11265 */;
-import getActivityChannelIdDefault from "getActivityChannelId" /* 12589 */;
-import getActivityJoinability from "getActivityJoinability" /* 12590 */;
-import getStreamURLDefault from "getStreamURL" /* 12592 */;
+import getActivityChannelIdDefault from "getActivityChannelId" /* 12607 */;
+import getActivityJoinability from "getActivityJoinability" /* 12608 */;
+import getStreamURLDefault from "getStreamURL" /* 12610 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;

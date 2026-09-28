@@ -1,6 +1,6 @@
-// === Module 12699: usePrivateChannelCall ===
+// === Module 12698: usePrivateChannelCall ===
 
-// Module 12699 (usePrivateChannelCall)
+// Module 12698 (usePrivateChannelCall)
 import util from "util" /* 1115 */;
 import getPrivateChannelCallDefault from "getPrivateChannelCall" /* 10329 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

@@ -1,6 +1,6 @@
-// === Module 12716: OrbBadgePreview ===
+// === Module 12715: OrbBadgePreview ===
 
-// Module 12716 (OrbBadgePreview)
+// Module 12715 (OrbBadgePreview)
 import util from "util" /* 1115 */;
 import useCurrentUser from "useCurrentUser" /* 7623 */;
 import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8313 */;

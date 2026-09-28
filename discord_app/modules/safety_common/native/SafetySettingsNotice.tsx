@@ -1,9 +1,9 @@
-// === Module 14246: SafetySettingsNotice ===
+// === Module 14245: SafetySettingsNotice ===
 
-// Module 14246 (SafetySettingsNotice)
+// Module 14245 (SafetySettingsNotice)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import SafetySettingsUtils from "SafetySettingsUtils" /* 14247 */;
+import SafetySettingsUtils from "SafetySettingsUtils" /* 14246 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 15456: useCollectiblesShopHeader ===
+// === Module 15454: useCollectiblesShopHeader ===
 
-// Module 15456 (useCollectiblesShopHeader)
+// Module 15454 (useCollectiblesShopHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;

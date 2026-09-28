@@ -1,6 +1,6 @@
-// === Module 14721: QuestDockEnrolledHeader ===
+// === Module 14719: QuestDockEnrolledHeader ===
 
-// Module 14721 (QuestDockEnrolledHeader)
+// Module 14719 (QuestDockEnrolledHeader)
 import Text_Text from "Text/Text" /* 4832 */;
 import QuestTypes from "QuestTypes" /* 5759 */;
 import hooks_QuestHooks from "hooks/QuestHooks" /* 10681 */;

@@ -1,6 +1,6 @@
-// === Module 15755: VoiceUsers ===
+// === Module 15753: VoiceUsers ===
 
-// Module 15755 (VoiceUsers)
+// Module 15753 (VoiceUsers)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4832 */;
@@ -84,7 +84,7 @@ let closure_12 = noop.memo((voiceState) => {
   obj5.sessionId = voiceState2.sessionId;
   obj5.channel = channel;
   obj5.isGuest = isGuest;
-  obj2.children = closure_6(tmp(15756), obj5, user.id);
+  obj2.children = closure_6(tmp(15754), obj5, user.id);
   return closure_6(View, obj2);
 });
 const size = fn(2);

@@ -1,6 +1,6 @@
-// === Module 17581: FormEmojiPicker ===
+// === Module 17585: FormEmojiPicker ===
 
-// Module 17581 (FormEmojiPicker)
+// Module 17585 (FormEmojiPicker)
 import nativeDefault from "native" /* 576 */;
 import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10583 */;
 import noop from "module_19" /* 19 */;
@@ -35,14 +35,14 @@ export default function FormEmojiPicker(emoji) {
     emojiId = tmp2(4483).convertSurrogateToName(emojiName, false);
     const tmp2Result = tmp2(4483);
   }
-  const tmp4 = onChange(13443)();
-  const emojiByIdOrName = guildId(14788).useEmojiByIdOrName(guildId, emojiId);
+  const tmp4 = onChange(13442)();
+  const emojiByIdOrName = guildId(14786).useEmojiByIdOrName(guildId, emojiId);
   if (null != emojiId) {
     let obj = { guildId, id: emojiId };
-    let tmp9 = closure_4(tmp2(14787), obj);
+    let tmp9 = closure_4(tmp2(14785), obj);
     let tmp10 = closure_4;
   } else {
-    const obj3 = { resizeMode: "contain", source: tmp2(17582) };
+    const obj3 = { resizeMode: "contain", source: tmp2(17586) };
     tmp9 = closure_4(tmp2(5899), obj3);
     tmp10 = closure_4;
     const tmp2Result3 = tmp2(5899);
@@ -74,7 +74,7 @@ export default function FormEmojiPicker(emoji) {
   const items = [tmp.container, tmp4.textInput];
   obj4.style = items;
   const items1 = [tmp9, , ];
-  let obj2 = guildId(14788);
+  let obj2 = guildId(14786);
   const items2 = [tmp.content, ];
   const obj5 = { style: items2, children: null };
   items2[1] = null != emojiByIdOrName ? tmp.text : tmp.placeholder;

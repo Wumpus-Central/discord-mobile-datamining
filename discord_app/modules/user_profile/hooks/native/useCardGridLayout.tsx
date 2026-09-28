@@ -1,6 +1,6 @@
-// === Module 12660: useCardGridLayout ===
+// === Module 12560: useCardGridLayout ===
 
-// Module 12660 (useCardGridLayout)
+// Module 12560 (useCardGridLayout)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1479 */;
 import Constants from "Constants" /* 6629 */;
 import size from "module_2" /* 2 */;

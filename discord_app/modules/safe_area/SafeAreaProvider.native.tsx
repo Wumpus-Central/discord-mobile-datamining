@@ -1,6 +1,6 @@
-// === Module 14138: SafeAreaProvider ===
+// === Module 14137: SafeAreaProvider ===
 
-// Module 14138 (SafeAreaProvider)
+// Module 14137 (SafeAreaProvider)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
 import SafeAreaConstants from "SafeAreaConstants" /* 1615 */;
 import _mod1616 from "module_1616" /* 1616 */;

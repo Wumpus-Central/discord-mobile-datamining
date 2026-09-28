@@ -1,6 +1,6 @@
-// === Module 14691: QuestBottomSheetProgressCard ===
+// === Module 14689: QuestBottomSheetProgressCard ===
 
-// Module 14691 (QuestBottomSheetProgressCard)
+// Module 14689 (QuestBottomSheetProgressCard)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import LinearGradientDefault from "LinearGradient" /* 5293 */;
@@ -11,7 +11,7 @@ import hooks_QuestHooks from "hooks/QuestHooks" /* 10681 */;
 import AssetUtils from "AssetUtils" /* 10689 */;
 import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 14649 */;
 import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 14662 */;
-import QuestDockBlurredContentBackgroundDefault from "QuestDockBlurredContentBackground" /* 14692 */;
+import QuestDockBlurredContentBackgroundDefault from "QuestDockBlurredContentBackground" /* 14690 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 

@@ -36,7 +36,7 @@ const memoResult = noop.memo((height) => {
     const obj3 = { style: tmp.mainIdentity, children: null };
     let tmp8Result = null;
     if (hasAvatarForGuildResult) {
-      const obj4 = { size: native.AvatarSizes.SIZE_16, style: tmp.primaryAvatar, user, guildId: "flex" };
+      const obj4 = { size: native.AvatarSizes.SIZE_16, style: tmp.primaryAvatar, user, guildId: "a" };
       tmp8Result = hasOwnProperty(native.Avatar, obj4);
     }
     const items1 = [tmp8Result, ];

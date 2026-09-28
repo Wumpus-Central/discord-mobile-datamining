@@ -1,11 +1,11 @@
-// === Module 17042: MediaPlaybackPanelStateContext ===
+// === Module 17046: MediaPlaybackPanelStateContext ===
 
-// Module 17042 (MediaPlaybackPanelStateContext)
+// Module 17046 (MediaPlaybackPanelStateContext)
 import noop from "module_19" /* 19 */;
 
 const obj = { mode: null, setMode: null, morphablePanelMode: null, wrapperDimensions: null, useReducedMotion: null, pipState: null, pipAvoidanceSpecs: null, dismissToPipGestureRef: null, dismissPanel: null, scrollPosition: null, canShowPIP: null, lockScrolling: null, wrapperOffset: null };
 let ReanimatedHelperTypes = fn(6495);
-obj.mode = ReanimatedHelperTypes.createFakeSharedValue(fn(14099).MediaPlaybackPanelModes.PIP);
+obj.mode = ReanimatedHelperTypes.createFakeSharedValue(fn(14098).MediaPlaybackPanelModes.PIP);
 obj.setMode = function setMode() {
   const error = new Error("MediaPlaybackPanelModes.Provider.setMode: not called within a context provider");
   throw error;
@@ -20,7 +20,7 @@ ReanimatedHelperTypes = fn(6495);
 obj.pipState = ReanimatedHelperTypes.createFakeSharedValue({ x: -1, y: -1 });
 ReanimatedHelperTypes = fn(6495);
 obj.pipAvoidanceSpecs = ReanimatedHelperTypes.createFakeSharedValue({ top: 0, bottom: 0 });
-obj.dismissToPipGestureRef = { current: "__initData" };
+obj.dismissToPipGestureRef = { current: "r" };
 obj.dismissPanel = function dismissPanel() {
   const error = new Error("VoicePanelContextType.Provider.dismissDrawer: not called within a context provider");
   throw error;

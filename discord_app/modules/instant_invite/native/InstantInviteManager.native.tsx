@@ -1,6 +1,6 @@
-// === Module 17170: InstantInviteManager ===
+// === Module 17174: InstantInviteManager ===
 
-// Module 17170 (InstantInviteManager)
+// Module 17174 (InstantInviteManager)
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4528 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6539 */;
 

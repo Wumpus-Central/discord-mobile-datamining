@@ -1,16 +1,16 @@
-// === Module 16423: VibegrationsAppChannelView ===
+// === Module 16427: VibegrationsAppChannelView ===
 
-// Module 16423 (VibegrationsAppChannelView)
+// Module 16427 (VibegrationsAppChannelView)
 import nativeDefault from "native" /* 576 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 6876 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8501 */;
 import FramesNativeManagerDefault from "FramesNativeManager" /* 8751 */;
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 8760 */;
-import VibegrationsAppChannelActionCreators from "VibegrationsAppChannelActionCreators" /* 12832 */;
+import VibegrationsAppChannelActionCreators from "VibegrationsAppChannelActionCreators" /* 12831 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 8499 */;
-import VibegrationsAppChannelsStore from "VibegrationsAppChannelsStore" /* 12828 */;
+import VibegrationsAppChannelsStore from "VibegrationsAppChannelsStore" /* 12827 */;
 
 const require = globalThis.__r;
 

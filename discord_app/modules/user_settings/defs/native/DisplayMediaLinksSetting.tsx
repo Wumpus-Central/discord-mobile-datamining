@@ -1,6 +1,6 @@
-// === Module 15011: DisplayMediaLinksSetting ===
+// === Module 15009: DisplayMediaLinksSetting ===
 
-// Module 15011 (DisplayMediaLinksSetting)
+// Module 15009 (DisplayMediaLinksSetting)
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 2021 */;
 import SettingsConstants from "SettingsConstants" /* 7417 */;

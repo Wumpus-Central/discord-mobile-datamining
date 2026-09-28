@@ -1,6 +1,6 @@
-// === Module 16034: YouBarNotificationsButton ===
+// === Module 16030: YouBarNotificationsButton ===
 
-// Module 16034 (YouBarNotificationsButton)
+// Module 16030 (YouBarNotificationsButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import HapticUtils from "HapticUtils" /* 4801 */;

@@ -1,13 +1,13 @@
-// === Module 15924: getGuildsBarGuildMenuItems ===
+// === Module 15922: getGuildsBarGuildMenuItems ===
 
-// Module 15924 (getGuildsBarGuildMenuItems)
+// Module 15922 (getGuildsBarGuildMenuItems)
 import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
 import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6535 */;
 import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6540 */;
 import _modDef11866 from "module_11866" /* 11866 */;
 import _modDef11867 from "module_11867" /* 11867 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 13453 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 13452 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 2067 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5017 */;

@@ -1,6 +1,6 @@
-// === Module 16902: useVoicePanelParticipants ===
+// === Module 16906: useVoicePanelParticipants ===
 
-// Module 16902 (useVoicePanelParticipants)
+// Module 16906 (useVoicePanelParticipants)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4852 */;

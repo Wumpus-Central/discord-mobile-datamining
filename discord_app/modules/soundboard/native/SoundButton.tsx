@@ -1,12 +1,12 @@
-// === Module 16888: SoundButton ===
+// === Module 16892: SoundButton ===
 
-// Module 16888 (SoundButton)
+// Module 16892 (SoundButton)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4566 */;
 import spring from "spring" /* 5280 */;
 import EmojiDefault from "Emoji" /* 6551 */;
 import getSoundboardEmojiUrlDefault from "getSoundboardEmojiUrl" /* 11415 */;
-import openSoundboardSoundPreviewActionSheetDefault from "openSoundboardSoundPreviewActionSheet" /* 16894 */;
+import openSoundboardSoundPreviewActionSheetDefault from "openSoundboardSoundPreviewActionSheet" /* 16898 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexport_mod = ReanimatedRexport2;
@@ -137,8 +137,8 @@ const SPRING_CONFIG = { damping: 10, stiffness: 300, mass: 1 };
 const createStyles = fn(4836);
 let obj = { button: null, buttonPressed: null, buttonDisabled: null, buttonPlaying: null, playingBackground: null, emoji: null, emojiWrapper: null, text: null, textPlaying: null, lock: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
-obj.button = { marginTop: 4, height: fn(16881).SOUND_BUTTON_HEIGHT, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };
-let obj2 = { marginTop: 4, height: fn(16881).SOUND_BUTTON_HEIGHT, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };
+obj.button = { marginTop: 4, height: fn(16885).SOUND_BUTTON_HEIGHT, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };
+let obj2 = { marginTop: 4, height: fn(16885).SOUND_BUTTON_HEIGHT, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };
 obj.buttonPressed = { backgroundColor: nativeDefault.colors.CARD_PRIMARY_PRESSED_BG };
 obj.buttonDisabled = { opacity: 0.5 };
 let obj4 = { backgroundColor: nativeDefault.colors.CARD_PRIMARY_PRESSED_BG };
