@@ -1,24 +1,36 @@
 // _runtime/metro/06125__.js
-import noop from "00019__.js";
 
-let tmp3 = typeof window === "undefined";
-if (typeof window !== "undefined") {
-  const _window2 = window;
-  tmp3 = undefined === window.document;
-}
-if (!tmp3) {
-  const _window = window;
-  tmp3 = undefined === window.document.createElement;
-}
-let tmp4 = typeof navigator !== "undefined";
-if (typeof navigator !== "undefined") {
-  const _navigator = navigator;
-  tmp4 = "ReactNative" === navigator.product;
-}
-if (tmp3) {
-  if (!tmp4) {
-    let useLayoutEffect = noop.useEffect;
+export default function isArrayish(str) {
+  let tmp = !str;
+  if (str) {
+    tmp = typeof str === "string";
   }
-  exports.useIsomorphicLayoutEffect = useLayoutEffect;
+  let tmp2 = !tmp;
+  if (!tmp) {
+    const _Array = Array;
+    let isArray = str instanceof Array;
+    if (!isArray) {
+      const _Array2 = Array;
+      isArray = Array.isArray(str);
+    }
+    if (!isArray) {
+      let tmp5 = str.length >= 0;
+      if (tmp5) {
+        const _Function = Function;
+        let tmp6 = str.splice instanceof Function;
+        if (!tmp6) {
+          const _Object = Object;
+          let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(str, str.length - 1);
+          if (ownPropertyDescriptor) {
+            ownPropertyDescriptor = "String" !== str.constructor.name;
+          }
+          tmp6 = ownPropertyDescriptor;
+        }
+        tmp5 = tmp6;
+      }
+      isArray = tmp5;
+    }
+    tmp2 = isArray;
+  }
+  return tmp2;
 }
-useLayoutEffect = noop.useLayoutEffect;

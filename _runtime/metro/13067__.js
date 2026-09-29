@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 51,
+  height: 33,
   scales: [2, 3],
-  hash: "6ce9cfa41f5b080fb1f9fac04190337a",
-  name: "emoji",
+  hash: "68d0a7491ea9de9245e6ac89adfb6384",
+  name: "img_tier_0_error_mobile",
   type: "png",
 });

@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/uikit",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/guild_onboarding/native/images",
+  width: 45,
+  height: 34.5,
   scales: [2, 3],
-  hash: "41a2185564bcd724a593005f71c6117e",
-  name: "ic_settings_grey_24px",
+  hash: "5048f3c6d8b18fc7809b7e99f1c62a70",
+  name: "stamp-wave",
   type: "png",
 });

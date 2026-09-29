@@ -32,10 +32,10 @@ let obj = {
       }
     }
   },
-  unregisterView(portal) {
+  unregisterView(componentViewTag) {
     const self = this;
     const viewsMap = this.viewsMap;
-    viewsMap.delete(portal);
+    viewsMap.delete(componentViewTag);
     this.viewsCount = this.viewsCount - 1;
     if (0 === this.viewsCount) {
       self.unregisterInterval();

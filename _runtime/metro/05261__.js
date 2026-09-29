@@ -1,14 +1,12 @@
 // _runtime/metro/05261__.js
-import _modDef5236 from "05236__.js";
-import noop from "00019__.js";
+import requirePromise from "../05260_requirePromise.js";
+import _mod5262 from "05262__.js";
 
-export default function useTransitionProgress() {
-  const context = noop.useContext(_modDef5236);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find values for transition progress. Are you inside a screen in Native Stack?");
-    throw error;
+export default function getPolyfill() {
+  requirePromise();
+  if (typeof Promise.allSettled === "function") {
   } else {
-    return context;
+    allSettled = _mod5262;
   }
+  return allSettled;
 }

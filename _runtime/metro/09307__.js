@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/empties",
-  width: 251,
-  height: 147,
-  scales: [2, 3],
-  hash: "c013c533d835389917bf422e9978d1be",
-  name: "img_app_crash_light",
+  httpServerLocation: "/assets/modules/voice_panel/native/images",
+  width: 13,
+  height: 12,
+  scales: [1, 2, 3, 4],
+  hash: "815e22c11ceae8ad126964a943379a27",
+  name: "badconnection",
   type: "png",
 });

@@ -1,11 +1,13 @@
 // _runtime/metro/15096__.js
-import _mod15101 from "15101__.js";
-import 07727__ from "07727__.js";
+import registerAsset from "01121__.js";
 
-const require = globalThis.__r;
-
-
-export const getYoutubeMeta = require("15097__.js").getYoutubeMeta;
-export const PLAYER_STATES = require("PLAY_MODE").PLAYER_STATES_NAMES;
-export const PLAYER_ERRORS = require("PLAY_MODE").PLAYER_ERROR_NAMES;
-export default module_7727(_mod15101).default;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "11800cac78ee381d38bd7d0b06eed7b0",
+  name: "EmojiFaceVomitingIcon",
+  type: "png",
+});

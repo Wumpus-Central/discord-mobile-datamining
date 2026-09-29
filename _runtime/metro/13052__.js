@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/colored",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "8f9077e5b37bff7706de677d0f3debbe",
-  name: "tier_2_32px",
+  httpServerLocation: "/assets/modules/virtual_currency/images/native",
+  width: 576,
+  height: 324,
+  scales: [1],
+  hash: "83d6f52e41f68a6a0f493020b6be93e9",
+  name: "hero-orbs",
   type: "png",
 });

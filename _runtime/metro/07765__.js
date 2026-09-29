@@ -1,40 +1,13 @@
 // _runtime/metro/07765__.js
-import _mod7766 from "07766__.js";
-import _mod7774 from "07774__.js";
-import flattenStyle from "07767__.js";
-import "module_4663";
-import emptyFunction_mod from "04663__.js";
+import registerAsset from "01121__.js";
 
-const obj = {};
-const module_7766 = Object.assign(_mod7766);
-obj.style = flattenStyle(_mod7774);
-let emptyFunction = emptyFunction_mod;
-const obj2 = { uri: emptyFunction.string, headers: null };
-let emptyFunction = emptyFunction_mod;
-obj2.headers = emptyFunction.objectOf(emptyFunction.string);
-const items = [emptyFunction.shape(obj2), emptyFunction.number];
-let emptyFunction = emptyFunction_mod;
-const size = { uri: emptyFunction.string, width: emptyFunction.number, height: emptyFunction.number, headers: null };
-let emptyFunction = emptyFunction_mod;
-size.headers = emptyFunction.objectOf(emptyFunction.string);
-items[2] = emptyFunction.arrayOf(emptyFunction.shape(size));
-obj.source = emptyFunction.oneOfType(items);
-obj.blurRadius = emptyFunction.number;
-obj.defaultSource = emptyFunction.number;
-let emptyFunction = emptyFunction_mod;
-const items1 = [emptyFunction.shape({ uri: emptyFunction.string }), emptyFunction.number];
-obj.loadingIndicatorSource = emptyFunction.oneOfType(items1);
-obj.progressiveRenderingEnabled = emptyFunction.bool;
-obj.fadeDuration = emptyFunction.number;
-obj.internal_analyticTag = emptyFunction.string;
-obj.onLoadStart = emptyFunction.func;
-obj.onError = emptyFunction.func;
-obj.onLoad = emptyFunction.func;
-obj.onLoadEnd = emptyFunction.func;
-obj.testID = emptyFunction.string;
-let emptyFunction = emptyFunction_mod;
-obj.resizeMethod = emptyFunction.oneOf(["auto", "resize", "scale"]);
-let emptyFunction = emptyFunction_mod;
-obj.resizeMode = emptyFunction.oneOf(["cover", "contain", "stretch", "repeat", "center"]);
-
-export default obj;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "7b7fda4b104811c7ab69187b97a7e04e",
+  name: "ic_shield_24px",
+  type: "png",
+});

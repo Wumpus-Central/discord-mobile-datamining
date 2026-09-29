@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/nuf_channels/native/images",
-  width: 275.5,
-  height: 78,
+  httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/flower_star/light",
+  width: 24,
+  height: 23,
   scales: [2, 3],
-  hash: "b55be157bc31f9c933d8fe113de3e547",
-  name: "voice_channels",
+  hash: "34f1b491773518eba109fd7be7fe4cb9",
+  name: "tier_1_24px",
   type: "png",
 });

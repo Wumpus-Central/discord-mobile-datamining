@@ -1,71 +1,31 @@
 // _runtime/metro/13762__.js
-import e from "../01161_e.js";
-import calendars from "../13763_calendars.js";
-import hourCycles from "../13764_hourCycles.js";
-import timezones from "../13765_timezones.js";
-import weekData from "../13766_weekData.js";
+import _mod13728 from "13728__.js";
 
-require = arg1;
-const dependencyMap = arg6;
+const require = globalThis.__r;
 
-export const getCalendarPreferenceDataForRegion = function getCalendarPreferenceDataForRegion(region) {
-  let str = null;
-  if (region) {
-    str = region.toUpperCase();
-  }
-  if (!str) {
-    str = "";
-  }
-  return (
-    calendars.calendars[str] ||
-    calendars.calendars["001"].map((item) => {
-      let str = "gregory";
-      if ("gregorian" !== item) {
-        let str2 = "islamicc";
-        if ("islamic-civil" !== item) {
-          str2 = item;
+export default (arr, arg1, arg2) => {
+  _require = arg2;
+  dependencyMap = null;
+  closure_2 = null;
+  let regex = null;
+  try {
+    let tmp9 = new require("13757__.js")(arg1, arg2);
+    regex = tmp9;
+    const item = arr.forEach((item) => {
+      if (regex.test(item)) {
+        let tmp = closure_1;
+        if (closure_1) {
+          tmp = 1 !== closure_2.compare(item);
         }
-        str = str2;
+        if (!tmp) {
+          closure_1 = item;
+          const tmp9 = new _mod13728(closure_1, closure_0);
+          closure_2 = tmp9;
+        }
       }
-      return str;
-    })
-  );
-};
-export const getHourCyclesPreferenceDataForLocaleOrRegion = function getHourCyclesPreferenceDataForLocaleOrRegion(
-  locale,
-  region,
-) {
-  const formatted = locale.toLowerCase();
-  let str = "";
-  if (region) {
-    str = region.toUpperCase();
+    });
+    return dependencyMap;
+  } catch (err) {
+    return tmp;
   }
-  let v001 = hourCycles.hourCycles[formatted] || hourCycles.hourCycles[str];
-  if (!v001) {
-    const concat = "".concat;
-    v001 = hourCycles.hourCycles["".concat("", formatted, "-001")];
-  }
-  if (!v001) {
-    v001 = hourCycles.hourCycles["001"];
-  }
-  return e.__spreadArray([], v001, true);
-};
-export const getTimeZonePreferenceForRegion = function getTimeZonePreferenceForRegion(region) {
-  const formatted = region.toLowerCase();
-  const items = [];
-  if (timezones.timezones[formatted]) {
-    return e.__spreadArray(items, timezones.timezones[formatted], true);
-  } else {
-    return items;
-  }
-};
-export const getWeekDataForRegion = function getWeekDataForRegion(region) {
-  let str = "";
-  if (region) {
-    str = region.toUpperCase();
-  }
-  if (!str) {
-    str = "001";
-  }
-  return weekData.weekData[str] || weekData.weekData["001"];
 };

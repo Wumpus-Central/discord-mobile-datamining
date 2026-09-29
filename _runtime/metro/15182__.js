@@ -3,9 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs",
-  scales: [1],
-  hash: "c9bfed678edd340afd56ab86412945dd",
-  name: "da.messages.c9bfed678edd340afd56ab86412945dd.compiled.messages",
-  type: "jsona",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "b191595a7f3df6e7807ea696cffe591c",
+  name: "ImageTextIcon",
+  type: "png",
 });

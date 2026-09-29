@@ -1,12 +1,13 @@
 // _runtime/metro/17486__.js
-import _mod17487 from "17487__.js";
-import capitalize from "../17495_capitalize.js";
+import registerAsset from "01121__.js";
 
-export default _mod17487((arg0, str, arg2) => {
-  const formatted = str.toLowerCase();
-  let tmp2 = formatted;
-  if (arg2) {
-    tmp2 = capitalize(formatted);
-  }
-  return arg0 + tmp2;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "5d792e9e92a8795cc3d086a321f6344d",
+  name: "ic_premium_tiers_24px",
+  type: "png",
 });

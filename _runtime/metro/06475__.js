@@ -1,13 +1,17 @@
 // _runtime/metro/06475__.js
-import registerAsset from "01121__.js";
+function _setPrototypeOf(arg0, arg1) {
+  if (Object.setPrototypeOf) {
+    const _Object = Object;
+    exports = setPrototypeOf.bind();
+  } else {
+    exports = (arg0, arg1) => {
+      arg0.__proto__ = arg1;
+      return arg0;
+    };
+  }
+  module.exports = exports;
+  return exports(arg0, arg1);
+}
+let exports = _setPrototypeOf;
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 160,
-  height: 160,
-  scales: [2, 3],
-  hash: "b7eca7761481c5ff3cc170b16fbdff57",
-  name: "img_no_results",
-  type: "png",
-});
+export default _setPrototypeOf;

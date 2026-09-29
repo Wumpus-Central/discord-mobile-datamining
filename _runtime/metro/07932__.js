@@ -1,11 +1,88 @@
 // _runtime/metro/07932__.js
-import _mod26 from "00026__.js";
-import weakSet from "../00106_weakSet.js";
-import 00065__ from "00065__.js";
+const require = globalThis.__r;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGGroup", directEventTypes: { topSvgLayout: { registrationName: "onSvgLayout" } }, validAttributes: null };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSvgLayout: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: _mod26.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, fontSize: true, fontWeight: true, font: true };
+function flattenStyle(obj) {
+  if (null !== obj) {
+    if (typeof obj === "object") {
+      const _Array = Array;
+      if (Array.isArray(obj)) {
+        obj = {};
+        for (let num3 = 0; num3 < length; num3 = num3 + 1) {
+          let tmp3 = flattenStyle(obj[num3]);
+          if (tmp3) {
+            for (const key10019 in tmp3) {
+              obj[key10019] = tmp3[key10019];
+              continue;
+            }
+          }
+        }
+        return obj;
+      } else {
+        return obj;
+      }
+    }
+  }
+}
 
-export default module_65.get("RNSVGGroup", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default function DeprecatedStyleSheetPropType(arg0) {
+  _require = require("deprecatedCreateStrictShapeTypeChecker")(arg0);
+  return (arg0, arg1, arg2, arg3) => {
+    const substr = [...arguments].slice();
+    if (arg0[arg1]) {
+      let tmp4;
+      if (null !== arg0[arg1]) {
+        if (typeof arr === "object") {
+          const _Array = Array;
+          tmp4 = arr;
+          if (Array.isArray(arr)) {
+            const obj = {};
+            let num3 = 0;
+            tmp4 = obj;
+            if (0 < arr.length) {
+              do {
+                let arr2 = arr[num3];
+                let tmp6;
+                if (null !== arr2) {
+                  if (typeof arr2 === "object") {
+                    let _Array2 = Array;
+                    tmp6 = arr2;
+                    if (Array.isArray(arr2)) {
+                      let obj2 = {};
+                      let length2 = arr2.length;
+                      let num4 = 0;
+                      tmp6 = obj2;
+                      if (0 < length2) {
+                        do {
+                          let tmp8 = flattenStyle(arr2[num4]);
+                          if (tmp8) {
+                            for (const key10029 in tmp8) {
+                              obj2[key10029] = tmp8[key10029];
+                              continue;
+                            }
+                          }
+                          num4 = num4 + 1;
+                          tmp6 = obj2;
+                        } while (num4 < length2);
+                      }
+                    }
+                  }
+                }
+                if (tmp6) {
+                  for (const key10032 in tmp6) {
+                    obj[key10032] = tmp6[key10032];
+                    continue;
+                  }
+                }
+                num3 = num3 + 1;
+                tmp4 = obj;
+              } while (num3 < length);
+            }
+          }
+        }
+      }
+      const obj3 = {};
+      obj3[arg1] = tmp4;
+    }
+    return closure_0(arg1, arg2, arg3, ...substr);
+  };
+}

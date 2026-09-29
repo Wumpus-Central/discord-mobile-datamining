@@ -1,19 +1,13 @@
 // _runtime/metro/13823__.js
-import _mod13792 from "13792__.js";
-import element from "../13824_element.js";
-import getOwnPropertyDescriptor from "13791__.js";
+import registerAsset from "01121__.js";
 
-let tmp2 = !getOwnPropertyDescriptor;
-if (!getOwnPropertyDescriptor) {
-  tmp2 = !_mod13792(
-    () =>
-      7 !==
-      Object.defineProperty(element("div"), "a", {
-        get() {
-          return 7;
-        },
-      }).a,
-  );
-}
-
-export default tmp2;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/status",
+  width: 16,
+  height: 16,
+  scales: [2, 3],
+  hash: "82f333ceda03bd515ab62e8f0d1ea043",
+  name: "StatusOnline",
+  type: "png",
+});

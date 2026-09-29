@@ -1,217 +1,105 @@
 // _runtime/metro/06351__.js
-import cancelAnimation from "../01638_cancelAnimation.js";
-import LegacyBaseButton from "../06073_LegacyBaseButton.js";
-import _mod6353 from "06353__.js";
-import _slicedToArray from "00032__.js";
-import noop_mod from "00019__.js";
+import tagMessage from "../06244_tagMessage.js";
+import _mod6245 from "06245__.js";
 
 require = fn;
-let noop = fn(19);
-({
-  useCallback: closure_4,
-  useEffect: hasOwnProperty,
-  useMemo: metroRequire,
-  useRef: closure_7,
-  useState: closure_8,
-  memo,
-} = noop);
-let noop = noop_mod;
-const jsx = fn(21).jsx;
-let closure_10 = {
-  code: "function pnpm_BottomSheetBackdropTsx1(){const{runOnJS,handleOnPress}=this.__closure;runOnJS(handleOnPress)();}",
+const dependencyMap = arg6;
+const setGestureState = function t(arg0, arg1) {
+  const _globalThis = globalThis;
+  if (globalThis._setGestureStateSync) {
+    _globalThis._setGestureStateSync(arg0, arg1);
+  } else if (_globalThis._setGestureStateAsync) {
+    const _globalThis2 = globalThis;
+    const result = globalThis._setGestureStateAsync(arg0, arg1);
+  } else {
+    const _Error = Error;
+    const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
+    throw error;
+  }
 };
-let __initData = {
-  code: "function pnpm_BottomSheetBackdropTsx2(){const{interpolate,animatedIndex,disappearsOnIndex,appearsOnIndex,opacity,Extrapolation}=this.__closure;return{opacity:interpolate(animatedIndex.value,[-1,disappearsOnIndex,appearsOnIndex],[0,0,opacity],Extrapolation.CLAMP)};}",
+setGestureState.__closure = { tagMessage: fn(6244).tagMessage };
+setGestureState.__workletHash = 727405139747;
+setGestureState.__initData = {
+  code: "function pnpm_gestureStateManagerTs1(handlerTag,state){const{tagMessage}=this.__closure;if(globalThis._setGestureStateSync){globalThis._setGestureStateSync(handlerTag,state);}else if(globalThis._setGestureStateAsync){globalThis._setGestureStateAsync(handlerTag,state);}else{throw new Error(tagMessage('Failed to set gesture state'));}}",
 };
-let __initData2 = {
-  code: "function pnpm_BottomSheetBackdropTsx3(){const{animatedIndex,disappearsOnIndex}=this.__closure;return Math.round(animatedIndex.value)<=disappearsOnIndex;}",
+const obj2 = { activate: null, fail: null, deactivate: null };
+const fn2 = function _(arg0) {
+  const ACTIVE = _mod6245.State.ACTIVE;
+  if (typeof fn === "function") {
+    const _globalThis = globalThis;
+    const _globalThis2 = globalThis;
+    if (globalThis._setGestureStateSync) {
+      _globalThis2._setGestureStateSync(arg0, ACTIVE);
+    } else if (_globalThis2._setGestureStateAsync) {
+      const _globalThis3 = globalThis;
+      const result = globalThis._setGestureStateAsync(arg0, ACTIVE);
+    } else {
+      const _Error = Error;
+      const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
+      throw error;
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
 };
-let closure_13 = {
-  code: "function pnpm_BottomSheetBackdropTsx4(shouldDisableTouchability,previous){const{runOnJS,handleContainerTouchability}=this.__closure;if(shouldDisableTouchability===previous){return;}runOnJS(handleContainerTouchability)(shouldDisableTouchability);}",
+const obj = { tagMessage: fn(6244).tagMessage };
+fn2.__closure = { setGestureState, State: fn(6245).State };
+fn2.__workletHash = 14928129771754;
+fn2.__initData = {
+  code: "function activate_Pnpm_gestureStateManagerTs2(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.ACTIVE);}",
 };
-const memoResult = memo((animatedIndex) => {
-  animatedIndex = animatedIndex.animatedIndex;
-  ({ opacity, appearsOnIndex, disappearsOnIndex, enableTouchThrough, pressBehavior } = animatedIndex);
-  if (pressBehavior === undefined) {
-    pressBehavior = animatedIndex(onPress[3]).DEFAULT_PRESS_BEHAVIOR;
-  }
-  onPress = animatedIndex.onPress;
-  const style = animatedIndex.style;
-  ({ ViewComponent, children } = animatedIndex);
-  if (ViewComponent === undefined) {
-    ViewComponent = pressBehavior(onPress[4]).View;
-  }
-  let DEFAULT_ACCESSIBLE = animatedIndex.accessible;
-  if (DEFAULT_ACCESSIBLE === undefined) {
-    DEFAULT_ACCESSIBLE = animatedIndex(onPress[3]).DEFAULT_ACCESSIBLE;
-  }
-  let DEFAULT_ACCESSIBILITY_ROLE = animatedIndex.accessibilityRole;
-  if (DEFAULT_ACCESSIBILITY_ROLE === undefined) {
-    DEFAULT_ACCESSIBILITY_ROLE = animatedIndex(onPress[3]).DEFAULT_ACCESSIBILITY_ROLE;
-  }
-  let DEFAULT_ACCESSIBILITY_LABEL = animatedIndex.accessibilityLabel;
-  if (DEFAULT_ACCESSIBILITY_LABEL === undefined) {
-    DEFAULT_ACCESSIBILITY_LABEL = animatedIndex(onPress[3]).DEFAULT_ACCESSIBILITY_LABEL;
-  }
-  let DEFAULT_ACCESSIBILITY_HINT = animatedIndex.accessibilityHint;
-  if (DEFAULT_ACCESSIBILITY_HINT === undefined) {
-    DEFAULT_ACCESSIBILITY_HINT = animatedIndex(onPress[3]).DEFAULT_ACCESSIBILITY_HINT;
-  }
-  opacity = undefined;
-  appearsOnIndex = undefined;
-  disappearsOnIndex = undefined;
-  __initData = undefined;
-  __initData2 = undefined;
-  let animatedStyle;
-  const bottomSheet = animatedIndex(onPress[5]).useBottomSheet();
-  const snapToIndex = bottomSheet.snapToIndex;
-  const close = bottomSheet.close;
-  const ref = opacity(false);
-  if (opacity == null) {
-    opacity = tmp13(tmp14[3]).DEFAULT_OPACITY;
-  }
-  if (appearsOnIndex == null) {
-    appearsOnIndex = tmp13(tmp14[3]).DEFAULT_APPEARS_ON_INDEX;
-  }
-  if (disappearsOnIndex == null) {
-    disappearsOnIndex = tmp13(tmp14[3]).DEFAULT_DISAPPEARS_ON_INDEX;
-  }
-  if (enableTouchThrough == null) {
-    enableTouchThrough = tmp13(tmp14[3]).DEFAULT_ENABLE_TOUCH_THROUGH;
-  }
-  let str = "auto";
-  if (enableTouchThrough) {
-    str = "none";
-  }
-  const tmp17 = style(appearsOnIndex(str), 2);
-  let items = [snapToIndex, close, disappearsOnIndex, pressBehavior, onPress];
-  const tmp18 = snapToIndex(() => {
-    if (onPress != null) {
-      tmp();
+obj2.activate = fn2;
+const fn3 = function n(arg0) {
+  const FAILED = _mod6245.State.FAILED;
+  if (typeof fn === "function") {
+    const _globalThis = globalThis;
+    const _globalThis2 = globalThis;
+    if (globalThis._setGestureStateSync) {
+      _globalThis2._setGestureStateSync(arg0, FAILED);
+    } else if (_globalThis2._setGestureStateAsync) {
+      const _globalThis3 = globalThis;
+      const result = globalThis._setGestureStateAsync(arg0, FAILED);
+    } else {
+      const _Error = Error;
+      const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
+      throw error;
     }
-    if ("close" === pressBehavior) {
-      close();
-    } else if ("collapse" === pressBehavior) {
-      snapToIndex(disappearsOnIndex);
-    } else if (typeof pressBehavior === "number") {
-      snapToIndex(pressBehavior);
-    }
-  }, items);
-  __initData = tmp18;
-  const tmp19 = snapToIndex((arg0) => {
-    if (ref.current) {
-      let str = "auto";
-      if (arg0) {
-        str = "none";
-      }
-      __initData(str);
-    }
-  }, []);
-  __initData2 = tmp19;
-  let items1 = [tmp18];
-  let obj = animatedIndex(onPress[5]);
-  const tmp20 = ref(() => {
-    const Gesture = LegacyBaseButton.Gesture;
-    const fn = function n() {
-      animatedIndex(onPress[4]).runOnJS(handleOnPress)();
-    };
-    const TapResult = Gesture.Tap();
-    fn.__closure = { runOnJS: cancelAnimation.runOnJS, handleOnPress };
-    fn.__workletHash = 10704059633145;
-    fn.__initData = __initData;
-    return TapResult.onEnd(fn);
-  }, items1);
-  class P {
-    constructor() {
-      obj = { opacity: null };
-      obj2 = closure_0(closure_2[4]);
-      items = [-1];
-      items[1] = closure_9;
-      items[2] = DEFAULT_APPEARS_ON_INDEX;
-      items1 = [0, 0];
-      items1[2] = DEFAULT_OPACITY;
-      obj.opacity = obj2.interpolate(animatedIndex.value, items, items1, closure_0(closure_2[4]).Extrapolation.CLAMP);
-      return obj;
-    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp13Result = animatedIndex(onPress[4]);
-  P.__closure = {
-    interpolate: animatedIndex(onPress[4]).interpolate,
-    animatedIndex,
-    disappearsOnIndex,
-    appearsOnIndex,
-    opacity,
-    Extrapolation: animatedIndex(onPress[4]).Extrapolation,
-  };
-  P.__workletHash = 7085425846204;
-  P.__initData = __initData;
-  const items2 = [animatedIndex, appearsOnIndex, disappearsOnIndex, opacity];
-  animatedStyle = tmp13Result.useAnimatedStyle(P, items2);
-  const items3 = [style, animatedStyle];
-  const obj2 = {
-    interpolate: animatedIndex(onPress[4]).interpolate,
-    animatedIndex,
-    disappearsOnIndex,
-    appearsOnIndex,
-    opacity,
-    Extrapolation: animatedIndex(onPress[4]).Extrapolation,
-  };
-  const tmp22 = ref(() => {
-    const items = [_mod6353.styles.backdrop, style, animatedStyle];
-    return items;
-  }, items3);
-  class H {
-    constructor() {
-      return Math.round(animatedIndex.value) <= closure_9;
+};
+const obj3 = { setGestureState, State: fn(6245).State };
+fn3.__closure = { setGestureState, State: fn(6245).State };
+fn3.__workletHash = 1703030189599;
+fn3.__initData = {
+  code: "function fail_Pnpm_gestureStateManagerTs3(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.FAILED);}",
+};
+obj2.fail = fn3;
+const fn4 = function s(arg0) {
+  const END = _mod6245.State.END;
+  if (typeof fn === "function") {
+    const _globalThis = globalThis;
+    const _globalThis2 = globalThis;
+    if (globalThis._setGestureStateSync) {
+      _globalThis2._setGestureStateSync(arg0, END);
+    } else if (_globalThis2._setGestureStateAsync) {
+      const _globalThis3 = globalThis;
+      const result = globalThis._setGestureStateAsync(arg0, END);
+    } else {
+      const _Error = Error;
+      const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
+      throw error;
     }
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  H.__closure = { animatedIndex, disappearsOnIndex };
-  H.__workletHash = 17177056692744;
-  H.__initData = __initData2;
-  let fn = function k(arg0, arg1) {
-    if (arg0 !== arg1) {
-      cancelAnimation.runOnJS(closure_12)(arg0);
-    }
-  };
-  const tmp13Result2 = animatedIndex(onPress[4]);
-  fn.__closure = { runOnJS: animatedIndex(onPress[4]).runOnJS, handleContainerTouchability: tmp19 };
-  fn.__workletHash = 17426135168622;
-  fn.__initData = animatedStyle;
-  const items4 = [disappearsOnIndex];
-  const animatedReaction = tmp13Result2.useAnimatedReaction(H, fn, items4);
-  close(() => {
-    closure_6.current = true;
-    return () => {
-      ref.current = false;
-    };
-  }, []);
-  const obj4 = {
-    style: tmp22,
-    pointerEvents: tmp17[0],
-    accessible: DEFAULT_ACCESSIBLE,
-    accessibilityRole: DEFAULT_ACCESSIBILITY_ROLE,
-    accessibilityLabel: DEFAULT_ACCESSIBILITY_LABEL,
-    accessibilityHint: null,
-    children: null,
-  };
-  if (!DEFAULT_ACCESSIBILITY_HINT) {
-    let str2 = "move";
-    if (typeof pressBehavior === "string") {
-      str2 = pressBehavior;
-    }
-    const _HermesInternal = HermesInternal;
-    DEFAULT_ACCESSIBILITY_HINT = "Tap to " + str2 + " the Bottom Sheet";
-  }
-  obj4.accessibilityHint = DEFAULT_ACCESSIBILITY_HINT;
-  obj4.children = children;
-  const tmp25Result = disappearsOnIndex(ViewComponent, obj4);
-  let tmp25Result2 = tmp25Result;
-  if ("none" !== pressBehavior) {
-    const obj5 = { gesture: tmp20, children: tmp25Result };
-    tmp25Result2 = tmp25(tmp13(tmp14[6]).GestureDetector, obj5);
-  }
-  return tmp25Result2;
-});
-memoResult.displayName = "BottomSheetBackdrop";
+};
+const obj4 = { setGestureState, State: fn(6245).State };
+fn4.__closure = { setGestureState, State: fn(6245).State };
+fn4.__workletHash = 5511283927342;
+fn4.__initData = {
+  code: "function deactivate_Pnpm_gestureStateManagerTs4(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.END);}",
+};
+obj2.deactivate = fn4;
 
-export const BottomSheetBackdrop = memoResult;
+export const GestureStateManager = obj2;

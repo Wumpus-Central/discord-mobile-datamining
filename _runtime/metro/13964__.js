@@ -1,11 +1,25 @@
 // _runtime/metro/13964__.js
-import registerAsset from "01121__.js";
+import module_13965_mod from "13965__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
-  scales: [1],
-  hash: "3b38f8bf8ac6605b344df2f05c37673a",
-  name: "NitroGem9",
-  type: "lottie",
-});
+const call = prototype.call;
+let module_13965 = module_13965_mod;
+if (module_13965) {
+  const bind = prototype.bind;
+  module_13965 = bind.bind(call, call);
+}
+if (!module_13965) {
+  module_13965 = (arg0) => {
+    closure_0 = arg0;
+    return () => {
+      const apply = call.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(closure_0);
+      } else {
+        applyArgumentsResult = apply(closure_0, arguments);
+      }
+      return applyArgumentsResult;
+    };
+  };
+}
+
+export default module_13965;

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "220c71f96225f35f4c52e38db6b8734b",
-  name: "SoundboardIcon",
+  hash: "3ee579776b13459d07461b433997e652",
+  name: "ChevronLargeRightIcon",
   type: "png",
 });

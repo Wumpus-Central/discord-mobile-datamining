@@ -1,82 +1,13 @@
 // _runtime/metro/05505__.js
-import _mod5498 from "05498__.js";
-import _mod5499 from "05499__.js";
+import registerAsset from "01121__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const isBLEND = function isBLEND(fileChunk) {
-  fileChunk = _mod5498.getFileChunk(fileChunk);
-  const FileTypes = _mod5499.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "blend");
-};
-export const isELF = function isELF(fileChunk) {
-  fileChunk = _mod5498.getFileChunk(fileChunk);
-  const FileTypes = _mod5499.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "elf");
-};
-export const isEXE = function isEXE(fileChunk) {
-  fileChunk = _mod5498.getFileChunk(fileChunk);
-  const FileTypes = _mod5499.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "exe");
-};
-export const isMACHO = function isMACHO(fileChunk) {
-  fileChunk = _mod5498.getFileChunk(fileChunk);
-  const FileTypes = _mod5499.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "macho");
-};
-export const isINDD = function isINDD(fileChunk) {
-  fileChunk = _mod5498.getFileChunk(fileChunk);
-  const FileTypes = _mod5499.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "indd");
-};
-export const isORC = function isORC(fileChunk) {
-  fileChunk = _mod5498.getFileChunk(fileChunk);
-  const FileTypes = _mod5499.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "orc");
-};
-export const isPARQUET = function isPARQUET(fileChunk) {
-  fileChunk = _mod5498.getFileChunk(fileChunk);
-  const FileTypes = _mod5499.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "parquet");
-};
-export const isPDF = function isPDF(fileChunk) {
-  fileChunk = _mod5498.getFileChunk(fileChunk);
-  const FileTypes = _mod5499.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "pdf");
-};
-export const isPS = function isPS(fileChunk) {
-  fileChunk = _mod5498.getFileChunk(fileChunk);
-  const FileTypes = _mod5499.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "ps");
-};
-export const isRTF = function isRTF(fileChunk) {
-  fileChunk = _mod5498.getFileChunk(fileChunk);
-  const FileTypes = _mod5499.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "rtf");
-};
-export const isSQLITE = function isSQLITE(fileChunk) {
-  fileChunk = _mod5498.getFileChunk(fileChunk);
-  const FileTypes = _mod5499.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "sqlite");
-};
-export const isSTL = function isSTL(fileChunk) {
-  fileChunk = _mod5498.getFileChunk(fileChunk);
-  const FileTypes = _mod5499.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "stl");
-};
-export const isTTF = function isTTF(fileChunk) {
-  fileChunk = _mod5498.getFileChunk(fileChunk);
-  const FileTypes = _mod5499.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "ttf");
-};
-export const isDOC = function isDOC(fileChunk) {
-  fileChunk = _mod5498.getFileChunk(fileChunk);
-  const FileTypes = _mod5499.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "doc");
-};
-export const isPCAP = function isPCAP(fileChunk) {
-  fileChunk = _mod5498.getFileChunk(fileChunk);
-  const FileTypes = _mod5499.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "pcap");
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "fee15a76bef55eb0f2b368d5439c39b9",
+  name: "TextIcon",
+  type: "png",
+});

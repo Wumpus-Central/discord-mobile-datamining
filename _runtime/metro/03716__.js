@@ -5,7 +5,7 @@ export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/vibegrations/intl",
   scales: [1],
-  hash: "e3992ab3782af741550a195ce2708608",
+  hash: "576099916138c30322387c7276552980",
   name: "VibegrationsUntranslated.compiled.messages",
   type: "jsona",
 });

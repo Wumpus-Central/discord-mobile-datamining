@@ -1,8 +1,8 @@
 // _runtime/metro/06232__.js
-import _mod17 from "00017__.js";
+function print() {}
+const frozen = Object.freeze(print);
 
-const StyleSheet = _mod17.StyleSheet;
-
-export const styles = StyleSheet.create({
-  container: { flexDirection: "column-reverse", position: "absolute", top: 0, left: 0, right: 0 },
-});
+export { print };
+export const enableLogging = (arg0) => {
+  console.warn("[BottomSheet] could not enable logging on production!");
+};

@@ -1,31 +1,13 @@
 // _runtime/metro/05845__.js
-import _mod17 from "00017__.js";
+import registerAsset from "01121__.js";
 
-const Image = _mod17.Image;
-
-export const parsePossibleSources = function parsePossibleSources(source) {
-  const uri = source.uri;
-  if (typeof source === "string") {
-    const obj2 = { sourceName: source };
-    let obj = obj2;
-  } else {
-    if (typeof source === "object") {
-      if (!uri) {
-        obj = { sourceJson: null };
-        const _JSON = JSON;
-        obj.sourceJson = JSON.stringify(source);
-      }
-    }
-    if (typeof source !== "object") {
-      if (typeof source === "number") {
-        const obj3 = { sourceDotLottieURI: Image.resolveAssetSource(source).uri };
-      }
-    }
-    if (uri.includes(".lottie")) {
-      const obj4 = { sourceDotLottieURI: uri };
-    } else {
-      const obj5 = { sourceURL: uri };
-    }
-  }
-  return obj;
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/platforms",
+  width: 256,
+  height: 256,
+  scales: [1],
+  hash: "5de31cd2c9db12c0dfd39e4c1dd0eb1f",
+  name: "img_roblox_light",
+  type: "png",
+});

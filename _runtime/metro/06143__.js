@@ -1,144 +1,88 @@
 // _runtime/metro/06143__.js
-import tagMessage from "../06078_tagMessage.js";
+import _objectWithoutProperties from "00109__objectWithoutProperties.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-function isNativeEvent(arg0) {
-  return "nativeEvent" in arg0;
-}
-isNativeEvent.__closure = {};
-isNativeEvent.__workletHash = 15502708650016;
-isNativeEvent.__initData = { code: "function isNativeEvent_Pnpm_eventUtilsTs1(event){return'nativeEvent'in event;}" };
-function maybeExtractNativeEvent(nativeEvent) {
-  if (typeof isNativeEvent === "function") {
-    if ("nativeEvent" in nativeEvent) {
-      nativeEvent = nativeEvent.nativeEvent;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    return nativeEvent;
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
 }
-maybeExtractNativeEvent.__closure = { isNativeEvent };
-maybeExtractNativeEvent.__workletHash = 9418753326359;
-maybeExtractNativeEvent.__initData = {
-  code: "function maybeExtractNativeEvent_Pnpm_eventUtilsTs2(event){const{isNativeEvent}=this.__closure;return isNativeEvent(event)?event.nativeEvent:event;}",
-};
-function flattenAndFilterEvent(handlerTag) {
-  const merged = Object.assign(handlerTag.handlerData);
-  return { handlerTag: handlerTag.handlerTag };
-}
-flattenAndFilterEvent.__closure = {};
-flattenAndFilterEvent.__workletHash = 12741778497058;
-flattenAndFilterEvent.__initData = {
-  code: "function flattenAndFilterEvent_Pnpm_eventUtilsTs3(event){return{handlerTag:event.handlerTag,...event.handlerData};}",
-};
-function isEventForHandlerWithTag(arg0, handlerTag) {
-  return handlerTag.handlerTag === arg0;
-}
-isEventForHandlerWithTag.__closure = {};
-isEventForHandlerWithTag.__workletHash = 11134871115176;
-isEventForHandlerWithTag.__initData = {
-  code: "function isEventForHandlerWithTag_Pnpm_eventUtilsTs4(handlerTag,event){return event.handlerTag===handlerTag;}",
-};
-function isNativeAnimatedEvent(onUpdate) {
-  let tmp = onUpdate;
-  if (tmp) {
-    tmp = "_argMapping" in onUpdate;
-  }
-  return tmp;
-}
-isNativeAnimatedEvent.__closure = {};
-isNativeAnimatedEvent.__workletHash = 3439774750008;
-isNativeAnimatedEvent.__initData = {
-  code: "function isNativeAnimatedEvent_Pnpm_eventUtilsTs5(callback){return!!callback&&'_argMapping'in callback;}",
-};
-const __initData = {
-  code: "function pnpm_eventUtilsTs7(current,previous){const{diffCalculator}=this.__closure;const currentEventData=current.handlerData;const previousEventData=previous?previous.handlerData:null;const changePayload=diffCalculator(currentEventData,previousEventData);current.handlerData={...currentEventData,...changePayload};return current;}",
-};
-function getChangeEventCalculator(diffCalculator) {
-  const fn = function t(handlerData, handlerData2) {
-    handlerData = handlerData.handlerData;
-    let handlerData1 = null;
-    if (handlerData2) {
-      handlerData1 = handlerData2.handlerData;
+const MaskedView = ["maskElement", "children"];
+get_ActivityIndicator = fn(17);
+({ View: metroRequire, StyleSheet: closure_7, requireNativeComponent } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+let closure_11 = requireNativeComponent("RNCMaskedView");
+class MaskedView {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    tmp = c2(this, MaskedView);
+    items1 = [...items];
+    tmp2 = closure_4;
+    obj = closure_4(MaskedView);
+    tmp3 = closure_3;
+    if (c10()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
     }
-    const merged = Object.assign(handlerData);
-    const merged1 = Object.assign(diffCalculator(handlerData, handlerData1));
-    handlerData.handlerData = {};
-    return handlerData;
-  };
-  fn.__closure = { diffCalculator };
-  fn.__workletHash = 10887773943786;
-  fn.__initData = __initData;
-  return fn;
-}
-getChangeEventCalculator.__closure = {};
-getChangeEventCalculator.__workletHash = 1165584403675;
-getChangeEventCalculator.__initData = {
-  code: "function getChangeEventCalculator_Pnpm_eventUtilsTs6(diffCalculator){return function(current,previous){'worklet';const currentEventData=current.handlerData;const previousEventData=previous?previous.handlerData:null;const changePayload=diffCalculator(currentEventData,previousEventData);current.handlerData={...currentEventData,...changePayload};return current;};}",
-};
-function isTouchEvent(result) {
-  return "allTouches" in result;
-}
-isTouchEvent.__closure = {};
-isTouchEvent.__workletHash = 14798108877298;
-isTouchEvent.__initData = { code: "function isTouchEvent_Pnpm_eventUtilsTs8(event){return'allTouches'in event;}" };
-function isStateChangeEvent(oldState) {
-  let tmp = "oldState" in oldState;
-  if (tmp) {
-    tmp = undefined !== oldState.oldState;
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result._hasWarnedInvalidRenderMask = false;
+    return tmp3Result;
   }
-  return tmp;
 }
-isStateChangeEvent.__closure = {};
-isStateChangeEvent.__workletHash = 7295971713196;
-isStateChangeEvent.__initData = {
-  code: "function isStateChangeEvent_Pnpm_eventUtilsTs9(event){return'oldState'in event&&event.oldState!==undefined;}",
-};
-
-export { maybeExtractNativeEvent };
-export { flattenAndFilterEvent };
-export { isEventForHandlerWithTag };
-export { isNativeAnimatedEvent };
-export const checkMappingForChangeProperties = function checkMappingForChangeProperties(arg0) {
-  const iter = arg0._argMapping[Symbol.iterator]();
-  const nextResult = iter.next();
-  while (iter !== undefined) {
-    let tmp2 = nextResult;
-    if (nextResult) {
-      if ("nativeEvent" in tmp2) {
-        if ("handlerData" in tmp2.nativeEvent) {
-          for (const key10023 in tmp2.nativeEvent.handlerData) {
-            if (!key10023.startsWith("change")) {
-              continue;
-            } else {
-              let tmp6 = globalThis;
-              let _Error = Error;
-              let obj = tagMessage;
-              let _HermesInternal = HermesInternal;
-              let str = " is not available when using Animated.Event.";
-              let str2 = "";
-              let tmp10 = new.target;
-              let tmp11 = new.target;
-              let error = new Error(obj.tagMessage("" + key10023 + " is not available when using Animated.Event."));
-              throw error;
-            }
-          }
-        }
+_inherits(MaskedView, noop.Component);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    ({ maskElement, children } = props);
+    const tmp = _objectWithoutProperties(props, MaskedView);
+    if (noop.isValidElement(maskElement)) {
+      const obj2 = {};
+      const merged = Object.assign(tmp);
+      const obj3 = { pointerEvents: "none", style: absoluteFill.absoluteFill, children: maskElement };
+      const items = [React6(timestampProducer, obj3), children];
+      obj2.children = items;
+      let tmp9 = React7(closure_11, obj2);
+    } else {
+      if (!self._hasWarnedInvalidRenderMask) {
+        const _console = console;
+        console.warn(
+          "MaskedView: Invalid `maskElement` prop was passed to MaskedView. Expected a React Element. No mask will render.",
+        );
+        self._hasWarnedInvalidRenderMask = true;
       }
+      const obj = {};
+      const merged1 = Object.assign(tmp);
+      obj.children = children;
+      tmp9 = React6(timestampProducer, obj);
     }
-    continue;
-  }
+    return tmp9;
+  },
 };
-export const shouldHandleTouchEvents = function shouldHandleTouchEvents(onTouchesDown) {
-  return (
-    onTouchesDown.onTouchesDown ||
-    onTouchesDown.onTouchesMove ||
-    onTouchesDown.onTouchesUp ||
-    onTouchesDown.onTouchesCancel
-  );
-};
-export { getChangeEventCalculator };
-export { isTouchEvent };
-export { isStateChangeEvent };
+let items = [entry];
+
+export default _createClass(MaskedView, items);

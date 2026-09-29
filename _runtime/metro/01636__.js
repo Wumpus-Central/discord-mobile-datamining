@@ -290,11 +290,11 @@ export const KeyboardProvider = (enabled) => {
     style: null,
     onKeyboardMoveReanimated: null,
     onKeyboardMoveStart: "Boolean",
-    onKeyboardMove: "self",
-    onKeyboardMoveInteractive: true,
-    onKeyboardMoveEnd: true,
-    onFocusedInputLayoutChangedReanimated: true,
-    children: true,
+    onKeyboardMove: "manifest",
+    onKeyboardMoveInteractive: null,
+    onKeyboardMoveEnd: null,
+    onFocusedInputLayoutChangedReanimated: "onEndEditing",
+    children: "onEndEditingCapture",
   };
   let tmp18 = updateSharedValues;
   let tmp19 = updateSharedValues;

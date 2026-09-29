@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/native/images/perks",
-  width: 300,
-  height: 175,
-  scales: [2, 3],
-  hash: "fe4737c3dd5ab570ff8c05c7dd4152ca",
-  name: "custom_icons",
+  httpServerLocation: "/assets/images/native/gifting",
+  width: 50,
+  height: 50,
+  scales: [1, 2, 3],
+  hash: "6e2864dc237547922e1825f7b5583cf2",
+  name: "img_premium_basic_icon",
   type: "png",
 });

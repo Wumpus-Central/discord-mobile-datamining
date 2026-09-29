@@ -1,11 +1,11 @@
 // _runtime/metro/13847__.js
-import _mod13795 from "13795__.js";
-import _mod13804 from "13804__.js";
-import all from "13814__.js";
+import registerAsset from "01121__.js";
 
-let closure_0 = _mod13795(Function.toString);
-if (!all(_mod13804.inspectSource)) {
-  _mod13804.inspectSource = (arg0) => closure_0(arg0);
-}
-
-export default _mod13804.inspectSource;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/intl/messages",
+  scales: [1],
+  hash: "63e33176376de6242ac97dac005c5fb6",
+  name: "untranslated.compiled.messages",
+  type: "jsona",
+});

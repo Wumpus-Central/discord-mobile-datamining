@@ -1,13 +1,16 @@
 // _runtime/metro/06413__.js
-import registerAsset from "01121__.js";
+import _mod17 from "00017__.js";
+import value2 from "../06212_value2.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "133f082cc6a7642a4a6e08e490a58839",
-  name: "ic_close_24px",
-  type: "png",
-});
+const StyleSheet = _mod17.StyleSheet;
+const obj = { container: { padding: 10, cursor: "grab" }, indicator: null };
+const size = {
+  alignSelf: "center",
+  width: (7.5 * value2.WINDOW_WIDTH) / 100,
+  height: 4,
+  borderRadius: 4,
+  backgroundColor: "rgba(0, 0, 0, 0.75)",
+};
+obj.indicator = size;
+
+export const styles = StyleSheet.create(obj);

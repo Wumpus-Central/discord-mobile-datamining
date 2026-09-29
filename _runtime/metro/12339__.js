@@ -1,19 +1,13 @@
 // _runtime/metro/12339__.js
-import _mod12314 from "12314__.js";
-import ScopeClass from "../12334_ScopeClass.js";
+import registerAsset from "01121__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const getDefaultCurrentScope = function getDefaultCurrentScope() {
-  return _mod12314.getGlobalSingleton("defaultCurrentScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
-};
-export const getDefaultIsolationScope = function getDefaultIsolationScope() {
-  return _mod12314.getGlobalSingleton("defaultIsolationScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/directory_channels/native/images",
+  width: 375,
+  height: 300,
+  scales: [2],
+  hash: "ce796d5b5dedd403e327ddf7cc5530fc",
+  name: "hub_header",
+  type: "png",
+});

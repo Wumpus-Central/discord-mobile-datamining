@@ -1,4 +1,13 @@
 // _runtime/metro/13584__.js
-import _mod13573 from "13573__.js";
+import registerAsset from "01121__.js";
 
-export default (arg0, arg1, arg2) => _mod13573(arg0, arg1, arg2) <= 0;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/build_overrides/native/images",
+  width: 60,
+  height: 46,
+  scales: [2, 3],
+  hash: "43446a28e1d529de720e6c778c814b1c",
+  name: "code-illustration-dark",
+  type: "png",
+});

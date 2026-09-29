@@ -1,11 +1,13 @@
 // _runtime/metro/05842__.js
-import _mod5843 from "05843__.js";
+import registerAsset from "01121__.js";
 
-const require = globalThis.__r;
-
-for (const key10016 in require("05846__.js")) {
-  arg5[key10016] = require("05846__.js")[key10016];
-  continue;
-}
-
-export default _mod5843.LottieView;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/platforms",
+  width: 24,
+  height: 24,
+  scales: [1],
+  hash: "8ce2f7584220a9c90fe76fd89217537a",
+  name: "img_account_sync_riot_light_and_dark",
+  type: "svg",
+});

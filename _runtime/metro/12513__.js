@@ -1,13 +1,17 @@
 // _runtime/metro/12513__.js
-import registerAsset from "01121__.js";
+import _mod12490 from "12490__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "6fc18e0c40f0ce37259a8a45cc634c66",
-  name: "WindowLaunchIcon",
-  type: "png",
-});
+require = arg1;
+const dependencyMap = arg6;
+const _sentryScope = "_sentryScope";
+const _sentryIsolationScope = "_sentryIsolationScope";
+
+export const getCapturedScopesOnSpan = function getCapturedScopesOnSpan(scope) {
+  return { scope: scope[_sentryScope], isolationScope: scope[_sentryIsolationScope] };
+};
+export const setCapturedScopesOnSpan = function setCapturedScopesOnSpan(sentrySpan, scope, isolationScope) {
+  if (sentrySpan) {
+    const result = _mod12490.addNonEnumerableProperty(sentrySpan, _sentryIsolationScope, isolationScope);
+    const result1 = _mod12490.addNonEnumerableProperty(sentrySpan, _sentryScope, scope);
+  }
+};

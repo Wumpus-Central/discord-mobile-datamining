@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "6a6fd385acb30b91a0de470ed746ba76",
-  name: "MenuIcon",
+  hash: "04c46d63a9ed0af066e3c9c84ab9d498",
+  name: "ArrowLargeRightIcon",
   type: "png",
 });

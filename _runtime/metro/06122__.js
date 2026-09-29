@@ -1,73 +1,52 @@
 // _runtime/metro/06122__.js
-import handlerIDToTag from "../06077_handlerIDToTag.js";
-import convertToHandlerTag from "../06097_convertToHandlerTag.js";
-import RNGestureHandlerModuleDefault from "../06102_RNGestureHandlerModule.js";
-import transformIntoHandlerTags from "../06104_transformIntoHandlerTags.js";
+import hsl from "../06120_hsl.js";
 
-const require = globalThis.__r;
-
-require = arg1;
-importDefault = arg2;
-const dependencyMap = arg6;
-
-export const updateHandlers = function updateHandlers(attachedGestures, prepare, gesturesToAttach) {
-  _require = attachedGestures;
-  prepare.prepare();
-  for (let num = 0; num < gesturesToAttach.length; num = num + 1) {
-    let tmp2 = attachedGestures.attachedGestures[num];
-    let obj = require("convertToHandlerTag");
-    let result = obj.checkGestureCallbacksForWorklets(tmp2);
-    if (gesturesToAttach[num].handlerTag !== tmp2.handlerTag) {
-      ({ handlerTag: gesturesToAttach[num].handlerTag, handlerTag: gesturesToAttach[num].handlers.handlerTag } = tmp2);
-    }
+export default (arg0) => {
+  const obj = {};
+  const keys = Object.keys(hsl);
+  for (let num = 0; num < length; num = num + 1) {
+    obj[keys[num]] = { distance: -1, parent: null };
   }
-  attachedGestures = attachedGestures.attachedGestures;
-  require("ghQueueMicrotask").ghQueueMicrotask(() => {
-    if (attachedGestures.isMounted) {
-      let arr = attachedGestures;
-      if (attachedGestures === tmp.attachedGestures) {
-        let tmp21 = arr.length !== gesturesToAttach.length;
-        let num = 0;
-        let tmp22 = tmp21;
-        if (0 < gesturesToAttach.length) {
-          do {
-            let tmp3 = attachedGestures[num];
-            let tmp4 = tmp3.handlers.gestureId !== gesturesToAttach[num].handlers.gestureId;
-            let flag = tmp21;
-            if (tmp4) {
-              let tmp6 = gesturesToAttach[num].shouldUseReanimated || tmp3.shouldUseReanimated;
-              tmp4 = tmp6;
-            }
-            if (tmp4) {
-              flag = true;
-            }
-            tmp3.config = gesturesToAttach[num].config;
-            tmp3.handlers = gesturesToAttach[num].handlers;
-            let obj = RNGestureHandlerModuleDefault;
-            let obj2 = transformIntoHandlerTags;
-            let result = obj.setGestureHandlerConfig(
-              tmp3.handlerTag,
-              obj2.filterConfig(tmp3.config, convertToHandlerTag.ALLOWED_PROPS),
-            );
-            let obj3 = RNGestureHandlerModuleDefault;
-            let obj4 = convertToHandlerTag;
-            let configureRelationsResult = obj3.configureRelations(tmp3.handlerTag, obj4.extractGestureRelations(tmp3));
-            let obj5 = handlerIDToTag;
-            let registerHandlerResult = obj5.registerHandler(tmp3.handlerTag, tmp3, tmp3.config.testId);
-            num = num + 1;
-            tmp21 = flag;
-            tmp22 = flag;
-            arr = attachedGestures;
-          } while (num < gesturesToAttach.length);
-        }
-        if (attachedGestures.animatedHandlers) {
-          if (tmp22) {
-            const found = arr.filter((shouldUseReanimated) => shouldUseReanimated.shouldUseReanimated);
-            tmp23.animatedHandlers.value = found.map((handlers) => handlers.handlers);
-          }
-        }
-        const result1 = transformIntoHandlerTags.scheduleFlushOperations();
+  const items = [arg0];
+  obj[arg0].distance = 0;
+  while (items.length) {
+    let arr = items.pop();
+    let _Object = Object;
+    let keys1 = Object.keys(hsl[arr]);
+    let length2 = keys1.length;
+    for (let num2 = 0; num2 < length2; num2 = num2 + 1) {
+      let tmp4 = keys1[num2];
+      let tmp5 = obj[tmp4];
+      if (-1 === tmp5.distance) {
+        tmp5.distance = obj[arr].distance + 1;
+        tmp5.parent = arr;
+        let arr2 = items.unshift(tmp4);
       }
     }
-  });
+  }
+  const obj2 = {};
+  const keys2 = Object.keys(obj);
+  for (let num3 = 0; num3 < length3; num3 = num3 + 1) {
+    let tmp8 = keys2[num3];
+    if (null !== obj[tmp8].parent) {
+      let items1 = [obj[tmp8].parent, tmp8];
+      let fn = hsl[obj[tmp8].parent][tmp8];
+      let parent3 = obj[tmp8].parent;
+      let tmp13 = fn;
+      if (obj[parent3].parent) {
+        do {
+          let arr3 = items1.unshift(obj[parent3].parent);
+          closure_0 = hsl[obj[parent3].parent][parent3];
+          fn = (arg0) => fn(closure_0(arg0));
+          let parent = obj[parent3].parent;
+          parent3 = parent;
+          tmp13 = fn;
+          parent2 = obj[parent].parent;
+        } while (parent2);
+      }
+      tmp13.conversion = items1;
+      obj2[tmp8] = tmp13;
+    }
+  }
+  return obj2;
 };

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "d6f5a76861191f4dd121da59ef71950f",
-  name: "ArrowSmallUpIcon",
+  hash: "4aac4b9e524273cde97c71cf7da9357a",
+  name: "DoubleCheckmarkIcon",
   type: "png",
 });

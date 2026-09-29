@@ -1,60 +1,150 @@
 // _runtime/metro/07941__.js
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
+import colorPropType from "../07927_colorPropType.js";
+import _mod7931 from "07931__.js";
+import _mod7942 from "07942__.js";
+import emptyFunction_mod from "04663__.js";
+import "module_4663";
 
-const Defs = importDefault;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-const jsx = fn(21).jsx;
-class Defs {
-  constructor() {
-    self = this;
-    tmp = c2(this, Defs);
-    tmp2 = closure_4;
-    obj = closure_4(Defs);
-    tmp3 = closure_3;
-    if (metroRequire()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-_inherits(Defs, fn(19).Component);
-const entry = {
-  key: "render",
-  value: function render() {
-    return jsx(Defs(7942), { children: this.props.children });
-  },
-};
-const items = [entry];
-const importDefaultResultResult = _createClass(Defs, items);
-importDefaultResultResult.displayName = "Defs";
+const items = ["phoneNumber", "link", "address", "calendarEvent", "none", "all"];
+const obj = {};
+const module_7931 = Object.assign(_mod7931);
+let emptyFunction = emptyFunction_mod;
+obj.autoCapitalize = emptyFunction.oneOf(["none", "sentences", "words", "characters"]);
+let emptyFunction = emptyFunction_mod;
+obj.autoCompleteType = emptyFunction.oneOf([
+  "cc-csc",
+  "cc-exp",
+  "cc-exp-month",
+  "cc-exp-year",
+  "cc-number",
+  "email",
+  "name",
+  "password",
+  "postal-code",
+  "street-address",
+  "tel",
+  "username",
+  "off",
+]);
+obj.autoCorrect = emptyFunction.bool;
+obj.spellCheck = emptyFunction.bool;
+obj.autoFocus = emptyFunction.bool;
+obj.allowFontScaling = emptyFunction.bool;
+obj.maxFontSizeMultiplier = emptyFunction.number;
+obj.editable = emptyFunction.bool;
+let emptyFunction = emptyFunction_mod;
+obj.keyboardType = emptyFunction.oneOf([
+  "default",
+  "email-address",
+  "numeric",
+  "phone-pad",
+  "number-pad",
+  "ascii-capable",
+  "numbers-and-punctuation",
+  "url",
+  "name-phone-pad",
+  "decimal-pad",
+  "twitter",
+  "web-search",
+  "ascii-capable-number-pad",
+  "visible-password",
+]);
+let emptyFunction = emptyFunction_mod;
+obj.keyboardAppearance = emptyFunction.oneOf(["default", "light", "dark"]);
+let emptyFunction = emptyFunction_mod;
+obj.returnKeyType = emptyFunction.oneOf([
+  "done",
+  "go",
+  "next",
+  "search",
+  "send",
+  "none",
+  "previous",
+  "default",
+  "emergency-call",
+  "google",
+  "join",
+  "route",
+  "yahoo",
+]);
+obj.returnKeyLabel = emptyFunction.string;
+obj.maxLength = emptyFunction.number;
+obj.numberOfLines = emptyFunction.number;
+obj.disableFullscreenUI = emptyFunction.bool;
+obj.enablesReturnKeyAutomatically = emptyFunction.bool;
+obj.multiline = emptyFunction.bool;
+let emptyFunction = emptyFunction_mod;
+obj.textBreakStrategy = emptyFunction.oneOf(["simple", "highQuality", "balanced"]);
+obj.onBlur = emptyFunction.func;
+obj.onFocus = emptyFunction.func;
+obj.onChange = emptyFunction.func;
+obj.onChangeText = emptyFunction.func;
+obj.onContentSizeChange = emptyFunction.func;
+obj.onTextInput = emptyFunction.func;
+obj.onEndEditing = emptyFunction.func;
+obj.onSelectionChange = emptyFunction.func;
+obj.onSubmitEditing = emptyFunction.func;
+obj.onKeyPress = emptyFunction.func;
+obj.onLayout = emptyFunction.func;
+obj.onScroll = emptyFunction.func;
+obj.placeholder = emptyFunction.string;
+obj.placeholderTextColor = colorPropType;
+obj.scrollEnabled = emptyFunction.bool;
+obj.secureTextEntry = emptyFunction.bool;
+obj.selectionColor = colorPropType;
+let emptyFunction = emptyFunction_mod;
+obj.selection = emptyFunction.shape({ start: emptyFunction.number.isRequired, end: emptyFunction.number });
+obj.value = emptyFunction.string;
+obj.defaultValue = emptyFunction.string;
+let emptyFunction = emptyFunction_mod;
+obj.clearButtonMode = emptyFunction.oneOf(["never", "while-editing", "unless-editing", "always"]);
+obj.clearTextOnFocus = emptyFunction.bool;
+obj.selectTextOnFocus = emptyFunction.bool;
+obj.blurOnSubmit = emptyFunction.bool;
+obj.style = _mod7942.style;
+obj.underlineColorAndroid = colorPropType;
+obj.inlineImageLeft = emptyFunction.string;
+obj.inlineImagePadding = emptyFunction.number;
+obj.rejectResponderTermination = emptyFunction.bool;
+let emptyFunction = emptyFunction_mod;
+const items1 = [emptyFunction.oneOf(items)];
+let emptyFunction = emptyFunction_mod;
+items1[1] = emptyFunction.arrayOf(emptyFunction.oneOf(items));
+obj.dataDetectorTypes = emptyFunction.oneOfType(items1);
+obj.caretHidden = emptyFunction.bool;
+obj.contextMenuHidden = emptyFunction.bool;
+obj.inputAccessoryViewID = emptyFunction.string;
+let emptyFunction = emptyFunction_mod;
+obj.textContentType = emptyFunction.oneOf([
+  "none",
+  "URL",
+  "addressCity",
+  "addressCityAndState",
+  "addressState",
+  "countryName",
+  "creditCardNumber",
+  "emailAddress",
+  "familyName",
+  "fullStreetAddress",
+  "givenName",
+  "jobTitle",
+  "location",
+  "middleName",
+  "name",
+  "namePrefix",
+  "nameSuffix",
+  "nickname",
+  "organizationName",
+  "postalCode",
+  "streetAddressLine1",
+  "streetAddressLine2",
+  "sublocality",
+  "telephoneNumber",
+  "username",
+  "password",
+  "newPassword",
+  "oneTimeCode",
+]);
+obj.showSoftInputOnFocus = emptyFunction.bool;
 
-export default importDefaultResultResult;
+export default obj;

@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting",
-  width: 420,
-  height: 112,
-  scales: [1, 2, 3],
-  hash: "ac80f7b470e8847053e22e988a30fa87",
-  name: "subscription_placeholder_pattern_dark",
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 180,
+  height: 108.5,
+  scales: [2, 3],
+  hash: "9b8bd10d33176958273580b349a5855d",
+  name: "img_what_you_lose_hd_video",
   type: "png",
 });

@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/billing/native/images",
+  width: 223,
+  height: 128.5,
   scales: [2, 3],
-  hash: "d884288c334e9055542f154b2caf3b3e",
-  name: "TopicsIcon",
+  hash: "f5aa8d22ffc464d3c9704d96fbbd1afa",
+  name: "blocked-purchases-dark",
   type: "png",
 });

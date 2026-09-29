@@ -1,13 +1,16 @@
 // _runtime/metro/14094__.js
-import registerAsset from "01121__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/video_calls/native/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "72603ac548e054665a7efcd4a8c834e5",
-  name: "disconnect",
-  type: "png",
-});
+export const getHostFromUrl = function getHostFromUrl(scriptURL) {
+  const match = scriptURL.match(/^(?:https?:\/\/)?(\[[^\]]+\]|[^/:\s]+)(?::\d+)?(?:[/?#]|$)/);
+  let tmp2;
+  if (match != null) {
+    tmp2 = match[1];
+  }
+  if (typeof tmp2 !== "string") {
+    const _Error = Error;
+    const error = new Error("Invalid URL - host not found");
+    throw error;
+  } else {
+    return tmp2;
+  }
+};

@@ -1,18 +1,13 @@
 // _runtime/metro/06151__.js
-import noop from "00019__.js";
 
-const use = noop.use;
-const context = noop.createContext(null);
-
-export const InterceptingDetectorMode = {
-  DEFAULT: 0,
-  [0]: "DEFAULT",
-  ANIMATED: 1,
-  [1]: "ANIMATED",
-  REANIMATED: 2,
-  [2]: "REANIMATED",
-};
-export const InterceptingDetectorContext = context;
-export const useInterceptingDetectorContext = function useInterceptingDetectorContext() {
-  return use(context);
+export const getLabel = function getLabel(label, arg1) {
+  if (undefined !== label.label) {
+    let title = label.label;
+  } else {
+    title = arg1;
+    if (undefined !== label.title) {
+      title = label.title;
+    }
+  }
+  return title;
 };

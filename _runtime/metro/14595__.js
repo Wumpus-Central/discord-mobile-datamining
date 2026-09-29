@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/empties",
-  width: 375,
-  height: 229,
+  httpServerLocation: "/assets/modules/parent_tools/images",
+  width: 244,
+  height: 119,
   scales: [1, 2, 3],
-  hash: "33688e5a17ba6d5d12db0d817e82285c",
-  name: "empty_quest_home",
+  hash: "fef47f26495822d9e37d120cd2650e58",
+  name: "family_center_activity_banner_image_teen",
   type: "png",
 });

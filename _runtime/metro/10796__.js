@@ -1,6 +1,13 @@
 // _runtime/metro/10796__.js
-import _mod17 from "00017__.js";
+import registerAsset from "01121__.js";
 
-const TurboModuleRegistry = _mod17.TurboModuleRegistry;
-
-export const NativeDocumentPicker = TurboModuleRegistry.getEnforcing("RNDocumentPicker");
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/premium/tiered_tenure_badging/native/images",
+  width: 59.666666666666664,
+  height: 59.666666666666664,
+  scales: [3],
+  hash: "98f28dd3128f04f38057757d2f825a42",
+  name: "asset_gold_badge_small",
+  type: "png",
+});

@@ -1,13 +1,7 @@
 // _runtime/metro/08125__.js
-import registerAsset from "01121__.js";
+import 00065__ from "00065__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "88649cc905f8610641d77b5f0a1b135c",
-  name: "FlagIcon",
-  type: "png",
-});
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGFeGaussianBlur", validAttributes: { x: true, y: true, width: true, height: true, result: true, in1: true, stdDeviationX: true, stdDeviationY: true, edgeMode: true } };
+
+export default module_65.get("RNSVGFeGaussianBlur", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

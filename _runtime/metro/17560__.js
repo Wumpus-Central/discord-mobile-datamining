@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/empties",
+  width: 181,
+  height: 141,
   scales: [2, 3],
-  hash: "3ef4b3974aa9916e2392a41f76914807",
-  name: "ImagePlusIcon",
+  hash: "ed03b4a3566d0ff2258e5577eb7c05bd",
+  name: "empty_server_settings_emoji_dark",
   type: "png",
 });

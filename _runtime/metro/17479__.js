@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/guild_settings/community_settings",
-  width: 88,
-  height: 80,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "d16693419c73a203fe410baf14480d7e",
-  name: "finishing_touches",
+  hash: "b4bc35e77125dd7a659435efd876e4cc",
+  name: "ChannelListIcon",
   type: "png",
 });

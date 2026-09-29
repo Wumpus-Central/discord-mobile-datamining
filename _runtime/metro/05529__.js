@@ -1,22 +1,13 @@
 // _runtime/metro/05529__.js
+import registerAsset from "01121__.js";
 
-export default {
-  USE_FILE: true,
-  USE_JFIF: true,
-  USE_PNG_FILE: true,
-  USE_EXIF: true,
-  USE_IPTC: true,
-  USE_XMP: true,
-  USE_ICC: true,
-  USE_MPF: true,
-  USE_PHOTOSHOP: true,
-  USE_THUMBNAIL: true,
-  USE_TIFF: true,
-  USE_JPEG: true,
-  USE_PNG: true,
-  USE_HEIC: true,
-  USE_AVIF: true,
-  USE_WEBP: true,
-  USE_GIF: true,
-  USE_MAKER_NOTES: true,
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "e0c0be280ef4e57b36ea99cdd95bd9e8",
+  name: "AppsSpoilerIcon",
+  type: "png",
+});

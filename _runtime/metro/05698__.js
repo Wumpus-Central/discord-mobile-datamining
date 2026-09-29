@@ -1,13 +1,19 @@
 // _runtime/metro/05698__.js
-import registerAsset from "01121__.js";
+let c0 = 18761;
+let c1 = 19789;
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 1005,
-  height: 1005,
-  scales: [1],
-  hash: "3810c84a1fa3c892d5176145d44c5346",
-  name: "img_account_sync_instagram_light_and_dark",
-  type: "svg",
-});
+export default {
+  BIG_ENDIAN: 19789,
+  LITTLE_ENDIAN: 18761,
+  getByteOrder(getUint16, c5) {
+    if (getUint16.getUint16(c5) === c0) {
+      return c0;
+    } else if (getUint16.getUint16(c5) === c1) {
+      return c1;
+    } else {
+      const _Error = Error;
+      const error = new Error("Illegal byte order value. Faulty image.");
+      throw error;
+    }
+  },
+};

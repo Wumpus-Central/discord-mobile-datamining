@@ -1,9 +1,13 @@
 // _runtime/metro/06075__.js
-import _mod6076 from "06076__.js";
+import registerAsset from "01121__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const initialize = function initialize() {
-  _mod6076.startListening();
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "f6824e7bd3f8a83813ab333cc29423f8",
+  name: "yellow-alert",
+  type: "png",
+});

@@ -1,19 +1,13 @@
 // _runtime/metro/13558__.js
-import _mod13559 from "13559__.js";
+import registerAsset from "01121__.js";
 
-export default (arg0, arg1) => {
-  if (arg0 instanceof _mod13559) {
-    return arg0;
-  } else {
-    try {
-      const tmp8 = new _mod13559(arg0, arg1);
-      return tmp8;
-    } catch (tmp10) {
-      if (tmp) {
-        throw tmp10;
-      } else {
-        return null;
-      }
-    }
-  }
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "b3429e38ab32663de7a271eafbda6e13",
+  name: "ChannelListMagnifyingGlassIcon",
+  type: "png",
+});

@@ -1,9 +1,13 @@
 // _runtime/metro/12343__.js
-import errorCallback from "../12309_errorCallback.js";
+import registerAsset from "01121__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const addTracingExtensions = function addTracingExtensions() {
-  const result = errorCallback.registerSpanErrorInstrumentation();
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/icons/empty_channel",
+  width: 32,
+  height: 32,
+  scales: [2, 3],
+  hash: "9a47d778a0b93e08af7ca2a5a0e14da1",
+  name: "add_friend_32px",
+  type: "png",
+});

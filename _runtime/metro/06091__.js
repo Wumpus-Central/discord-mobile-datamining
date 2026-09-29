@@ -1,11 +1,13 @@
 // _runtime/metro/06091__.js
-import _mod17 from "00017__.js";
-import _mod19 from "00019__.js";
-import _modDef6092 from "06092__.js";
+import registerAsset from "01121__.js";
 
-const use = _mod19.use;
-const Platform = _mod17.Platform;
-
-export const useEnsureGestureHandlerRootView = function useEnsureGestureHandlerRootView() {
-  use(_modDef6092);
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "7726a7882d06e6e78ae64010f2194cb2",
+  name: "ChevronSmallRightIcon",
+  type: "png",
+});

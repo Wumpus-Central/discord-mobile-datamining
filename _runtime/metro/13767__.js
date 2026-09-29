@@ -1,8 +1,4 @@
 // _runtime/metro/13767__.js
-const require = globalThis.__r;
+import _mod13765 from "13765__.js";
 
-const require = arg1;
-const dependencyMap = arg6;
-
-export const shouldPolyfill = require("13768__.js").shouldPolyfill;
-export const supportedValuesOf = require("supportedValuesOf").supportedValuesOf;
+export default (arg0, arg1, arg2) => _mod13765(arg0, arg1, "<", arg2);

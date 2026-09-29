@@ -1,36 +1,49 @@
 // _runtime/metro/13924__.js
-import get_ActivityIndicator from "00017__.js";
+import emitUnicodeLanguageId from "../13925_emitUnicodeLanguageId.js";
+import compareKV from "../13926_compareKV.js";
+import likelySubtags from "../13929_likelySubtags.js";
+import _mod13930 from "13930__.js";
+import e_mod from "../01161_e.js";
 
-export default function getReactNativePlatformConstants() {
-  const obj = {
-    osRelease: "",
-    model: "",
-    serverHost: "",
-    uiMode: "",
-    serial: "",
-    forceTouch: false,
-    interfaceIdiom: "",
-    systemName: "",
-  };
-  if ("android" === get_ActivityIndicator.Platform.OS) {
-    const obj5 = {};
-    const merged = Object.assign(obj);
-    ({
-      Release: obj3.osRelease,
-      Model: obj3.model,
-      ServerHost: obj3.serverHost,
-      uiMode: obj3.uiMode,
-      Serial: obj3.serial,
-    } = get_ActivityIndicator.Platform.constants);
-    return obj5;
-  } else if ("ios" === get_ActivityIndicator.Platform.OS) {
-    constants = get_ActivityIndicator.Platform.constants;
-    const obj6 = {};
-    const merged1 = Object.assign(obj);
-    obj6.forceTouch = constants.forceTouchAvailable || false;
-    ({ interfaceIdiom: obj2.interfaceIdiom, systemName: obj2.systemName } = constants);
-    return obj6;
+const require = globalThis.__r;
+
+let e = e_mod;
+e.__exportStar(emitUnicodeLanguageId, exports);
+let e = e_mod;
+e.__exportStar(_mod13930, exports);
+let e = e_mod;
+e.__exportStar(likelySubtags, exports);
+
+export const getCanonicalLocales = function getCanonicalLocales(items) {
+  if (undefined === items) {
+    items = [];
   } else {
-    return obj;
+    let arr3 = items;
+    if (typeof items === "string") {
+      const items1 = [items];
+      arr3 = items1;
+    }
+    const items2 = [];
+    let num3 = 0;
+    items = items2;
+    if (0 < arr3.length) {
+      do {
+        let emitUnicodeLocaleIdResult = emitUnicodeLanguageId.emitUnicodeLocaleId(
+          compareKV.CanonicalizeUnicodeLocaleId(require("13928__.js").parseUnicodeLocaleId(arr3[num3])),
+        );
+        if (items2.indexOf(emitUnicodeLocaleIdResult) < 0) {
+          let arr = items2.push(emitUnicodeLocaleIdResult);
+        }
+        num3 = num3 + 1;
+        items = items2;
+      } while (num3 < arr3.length);
+    }
   }
-}
+  return items;
+};
+export const isStructurallyValidLanguageTag = require("13928__.js").isStructurallyValidLanguageTag;
+export const isUnicodeLanguageSubtag = require("13928__.js").isUnicodeLanguageSubtag;
+export const isUnicodeRegionSubtag = require("13928__.js").isUnicodeRegionSubtag;
+export const isUnicodeScriptSubtag = require("13928__.js").isUnicodeScriptSubtag;
+export const parseUnicodeLanguageId = require("13928__.js").parseUnicodeLanguageId;
+export const parseUnicodeLocaleId = require("13928__.js").parseUnicodeLocaleId;

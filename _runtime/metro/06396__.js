@@ -1,13 +1,11 @@
 // _runtime/metro/06396__.js
-import registerAsset from "01121__.js";
+import _mod17 from "00017__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/auth/native/images",
-  width: 375,
-  height: 413,
-  scales: [2, 3],
-  hash: "9dd921dedb90562e62ae59d45a63666c",
-  name: "register-background-light",
-  type: "png",
-});
+const StyleSheet = _mod17.StyleSheet;
+const obj = { container: null };
+const obj2 = {};
+const merged = Object.assign(StyleSheet.absoluteFillObject);
+obj2.pointerEvents = "box-none";
+obj.container = obj2;
+
+export const styles = StyleSheet.create(obj);

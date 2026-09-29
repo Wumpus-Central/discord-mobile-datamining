@@ -1,16 +1,11 @@
 // _runtime/metro/14129__.js
-import _modDef14125 from "14125__.js";
-import noop from "00019__.js";
+import registerAsset from "01121__.js";
 
-export default function useReanimatedHeaderHeight() {
-  const context = noop.useContext(_modDef14125);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error(
-      "Couldn't find the header height using Reanimated. Are you inside a screen in a navigator with a header and your NavigationContainer is wrapped in ReanimatedScreenProvider?",
-    );
-    throw error;
-  } else {
-    return context;
-  }
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
+  scales: [1],
+  hash: "920aa462df28cb5a95d2c9dd66119f32",
+  name: "NitroGem3",
+  type: "lottie",
+});

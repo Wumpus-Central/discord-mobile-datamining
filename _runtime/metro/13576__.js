@@ -1,8 +1,13 @@
 // _runtime/metro/13576__.js
-import _mod13559 from "13559__.js";
+import registerAsset from "01121__.js";
 
-export default (arg0, arg1, arg2) => {
-  const obj = new _mod13559(arg0, arg2);
-  const tmp = new _mod13559(arg1, arg2);
-  return obj.compare(tmp) || obj.compareBuild(tmp);
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native",
+  width: 120,
+  height: 120,
+  scales: [2, 3],
+  hash: "0242e2e3975e7ca5a2256573e276d96f",
+  name: "logo",
+  type: "png",
+});

@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 16,
-  height: 16,
+  httpServerLocation: "/assets/modules/game_console/images",
+  width: 32,
+  height: 32,
   scales: [2, 3],
-  hash: "31757ea45ee4fb60779fd700caf7d93e",
-  name: "ic_nitro_wheel_gradient_purple",
+  hash: "238a115f1ad03e07bad0181bb5c110d4",
+  name: "ic_playstation_device_ps5_32px",
   type: "png",
 });

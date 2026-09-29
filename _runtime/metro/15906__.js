@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/main_tabs_v2/native/tabs/guilds/empty_states/images",
-  width: 193.5,
-  height: 205.5,
-  scales: [2, 3, 4],
-  hash: "c4e35cf59b65ee25c9dfc91c26e34f5e",
-  name: "guilds-empty-illustration",
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "cb91fcb4a76fd3ba2eaf4df2140b56ac",
+  name: "ic_link_24px",
   type: "png",
 });

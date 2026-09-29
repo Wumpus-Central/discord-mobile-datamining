@@ -1,21 +1,9 @@
 // _runtime/metro/06441__.js
+import _mod6442 from "06442__.js";
+import _mod6443 from "06443__.js";
+import _mod6444 from "06444__.js";
+import _mod6446 from "06446__.js";
 
-export function getInvertedMultiplier(gestureDirection, arg1) {
-  if ("vertical" === gestureDirection) {
-    return 1;
-  } else if ("vertical-inverted" === gestureDirection) {
-    return -1;
-  } else if ("horizontal" === gestureDirection) {
-    let num2 = 1;
-    if (arg1) {
-      num2 = -1;
-    }
-    return num2;
-  } else if ("horizontal-inverted" === gestureDirection) {
-    let num = -1;
-    if (arg1) {
-      num = 1;
-    }
-    return num;
-  }
+export default function _slicedToArray(arg0, arg1) {
+  return _mod6442(arg0) || _mod6443(arg0, arg1) || _mod6444(arg0, arg1) || _mod6446();
 }

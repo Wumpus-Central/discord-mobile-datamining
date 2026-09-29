@@ -1,82 +1,205 @@
 // _runtime/metro/06127__.js
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
+import _slicedToArray from "00032__.js";
 import noop from "00019__.js";
 
-const Wrap = fn;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+const require = fn;
+get_ActivityIndicator = fn(17);
+const Animated = get_ActivityIndicator.Animated;
+({ Easing: hasOwnProperty, Platform, Pressable } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7, Fragment } = jsxProd);
+let closure_8 = Animated.createAnimatedComponent(Pressable);
+let closure_9 = Platform.Version >= 21;
+const forwardRefResult = noop.forwardRef(function PlatformPressableInternal(disabled, arg1) {
+  disabled = disabled.disabled;
+  ({
+    onPress: dependencyMap,
+    onPressIn: _slicedToArray,
+    onPressOut: noop,
+    android_ripple,
+    pressColor,
+    pressOpacity,
+  } = disabled);
+  if (pressOpacity === undefined) {
+    pressOpacity = 0.3;
+  }
+  const hoverEffect = disabled.hoverEffect;
+  ({ style, children } = disabled);
+  const merged = Object.assign(
+    disabled,
+    Object.assign({
+      disabled: 0,
+      onPress: 0,
+      onPressIn: 0,
+      onPressOut: 0,
+      android_ripple: 0,
+      pressColor: 0,
+      pressOpacity: 0,
+      hoverEffect: 0,
+      style: 0,
+      children: 0,
+    }),
+  );
+  closure_6 = arg1;
+  const first = _slicedToArray(
+    noop.useState(() => {
+      value = new pressOpacity.Value(1);
+      return value;
+    }),
+    1,
+  )[0];
+  function animateTo(arg0, arg1) {}
+  const ref = noop.useRef(null);
+  const items = [arg1];
+  const items1 = [disabled, merged.href];
+  const callback = noop.useCallback((current) => {
+    closure_9.current = null;
+    if (typeof closure_6 === "function") {
+      return closure_6(current);
+    } else if (null != closure_6) {
+      closure_6.current = current;
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
+  }, items);
+  const effect = noop.useEffect(() => {
+    const current = ref.current;
+    if (null != merged.href) {
+      if (null != current) {
+        if (disabled) {
+          function preventNavigation(event) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          const listener = current.addEventListener("click", preventNavigation, true);
+          const listener1 = current.addEventListener("auxclick", preventNavigation, true);
+          return () => {
+            const removed = current.removeEventListener("click", preventNavigation, true);
+            const removed1 = current.removeEventListener("auxclick", preventNavigation, true);
+          };
+        }
+      }
+    }
+  }, items1);
+  const obj2 = {
+    ref: callback,
+    accessible: true,
+    role: "button",
+    onPress: null,
+    onPressIn: null,
+    onPressOut: null,
+    android_ripple: null,
+    style: null,
+  };
+  let fn;
+  if (!disabled) {
+    fn = (arg0) => {
+      if (dependencyMap != null) {
+        tmp(arg0);
+      }
     };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-class Wrap {
-  constructor() {
-    self = this;
-    tmp = c2(this, Wrap);
-    tmp2 = closure_4;
-    obj = closure_4(Wrap);
-    tmp3 = closure_3;
-    if (metroRequire()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
   }
-}
-_inherits(Wrap, noop.Component);
-const entry = {
-  key: "render",
-  value: function render() {
-    try {
-      const self = this;
-      const Children = noop.Children;
-      const onlyResult = Children.only(this.props.children);
-      return noop.cloneElement(onlyResult, { collapsable: false }, onlyResult.props.children);
-    } catch (err) {
-      const _Error = Error;
-      const error = new Error(
-        Wrap(6078).tagMessage(
-          "GestureDetector got more than one view as a child. If you want the gesture to work on multiple views, wrap them with a common parent and attach the gesture to that view.",
-        ),
-      );
-      throw error;
+  obj2.onPress = fn;
+  let fn2;
+  if (!disabled) {
+    fn2 = (arg0) => {
+      if (typeof animateTo === "function") {
+        if (!closure_9) {
+          const obj = {
+            toValue: tmp,
+            duration: 0,
+            easing: hasOwnProperty.inOut(hasOwnProperty.quad),
+            useNativeDriver: true,
+          };
+          Animated.timing(first, obj).start();
+          const timingResult = Animated.timing(first, obj);
+        }
+        if (_slicedToArray != null) {
+          tmp7(arg0);
+        }
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    };
+  }
+  obj2.onPressIn = fn2;
+  let fn3;
+  if (!disabled) {
+    fn3 = (arg0) => {
+      if (typeof animateTo === "function") {
+        if (!closure_9) {
+          const obj = {
+            toValue: 1,
+            duration: 200,
+            easing: hasOwnProperty.inOut(hasOwnProperty.quad),
+            useNativeDriver: true,
+          };
+          Animated.timing(first, obj).start();
+          const timingResult = Animated.timing(first, obj);
+        }
+        if (noop != null) {
+          tmp6(arg0);
+        }
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    };
+  }
+  obj2.onPressOut = fn3;
+  let tmp8;
+  if (ref) {
+    if (!disabled) {
+      if (undefined === pressColor) {
+        let str = "rgba(0, 0, 0, .32)";
+        if (obj.useTheme().dark) {
+          str = "rgba(255, 255, 255, .32)";
+        }
+        pressColor = str;
+      }
+      const obj3 = { color: pressColor };
+      const merged1 = Object.assign(android_ripple);
+      tmp8 = obj3;
     }
-  },
+  }
+  obj2.android_ripple = tmp8;
+  let num = 1;
+  if (!ref) {
+    num = 1;
+    if (!disabled) {
+      num = first;
+    }
+  }
+  const items2 = [{ cursor: "auto", opacity: num }, style];
+  obj2.style = items2;
+  const merged2 = Object.assign(merged);
+  let tmp13 = null;
+  if (!disabled) {
+    const obj4 = {};
+    const merged3 = Object.assign(hoverEffect);
+    tmp13 = closure_6(f37499, obj4);
+  }
+  const items3 = [tmp13, children];
+  obj2.children = items3;
+  return first(animateTo, obj2);
+});
+forwardRefResult.displayName = "PlatformPressable";
+String.raw(
+  HermesBuiltin.getTemplateObject(
+    true,
+    "\n  .",
+    " {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    border-radius: inherit;\n    background-color: var(--overlay-color);\n    opacity: 0;\n    transition: opacity 0.15s;\n    pointer-events: none;\n  }\n\n  a:hover > .",
+    ", button:hover > .",
+    " {\n    opacity: var(--overlay-hover-opacity);\n  }\n\n  a:active > .",
+    ", button:active > .",
+    " {\n    opacity: var(--overlay-active-opacity);\n  }\n",
+  ),
+  "__react-navigation_elements_Pressable_hover",
+  "__react-navigation_elements_Pressable_hover",
+  "__react-navigation_elements_Pressable_hover",
+  "__react-navigation_elements_Pressable_hover",
+  "__react-navigation_elements_Pressable_hover",
+);
+const f37499 = (arg0) => {
+  ({ color, hoverOpacity, activeOpacity } = arg0);
+  return null;
 };
-const items = [entry];
-const importDefaultResultResult = _createClass(Wrap, items);
-const Reanimated = fn(6116).Reanimated;
-let animatedComponent;
-if (Reanimated != null) {
-  if (Reanimated.default != null) {
-    animatedComponent = _default.createAnimatedComponent(importDefaultResultResult);
-  }
-}
-if (animatedComponent == null) {
-  animatedComponent = importDefaultResultResult;
-}
 
-export const Wrap = importDefaultResultResult;
-export const AnimatedWrap = animatedComponent;
+export const PlatformPressable = forwardRefResult;

@@ -1,13 +1,7 @@
 // _runtime/metro/08150__.js
-import registerAsset from "01121__.js";
+import 00065__ from "00065__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "8c94b907df8972f3dc35ed38a2375c9f",
-  name: "EpicGamesNeutralIcon",
-  type: "png",
-});
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGLinearGradient", validAttributes: { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, x1: true, y1: true, x2: true, y2: true, gradient: true, gradientUnits: true, gradientTransform: true } };
+
+export default module_65.get("RNSVGLinearGradient", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

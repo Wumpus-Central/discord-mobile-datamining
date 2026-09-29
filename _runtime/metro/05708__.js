@@ -1,13 +1,22 @@
 // _runtime/metro/05708__.js
-import registerAsset from "01121__.js";
+import _mod5693 from "05693__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
-  scales: [1],
-  hash: "7700e8b6e3143c87285472edb9723d43",
-  name: "img_domain_dark",
-  type: "png",
-});
+require = arg1;
+const dependencyMap = arg6;
+let c2 = 0;
+let c3 = "<?xpacket begin";
+
+export default {
+  isXMLFile(dataView) {
+    let tmp = dataView;
+    if (tmp) {
+      tmp = _mod5693.getStringFromDataView(dataView, c2, length.length) === length;
+    }
+    return tmp;
+  },
+  findOffsets(byteLength) {
+    const xmpChunks = [];
+    xmpChunks.push({ dataOffset, length: byteLength.byteLength });
+    return { xmpChunks };
+  },
+};

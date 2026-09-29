@@ -1,4 +1,7 @@
 // _runtime/metro/13857__.js
-import _mod17 from "00017__.js";
-
-const parsed = parseInt(_mod17.Platform.Version, 10);
+Object.defineProperty(Intl, "Locale", {
+  value: fn(13858).Locale,
+  writable: true,
+  enumerable: false,
+  configurable: true,
+});
