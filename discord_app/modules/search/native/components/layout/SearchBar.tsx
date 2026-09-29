@@ -1,26 +1,26 @@
-// === Module 16442: layout/SearchBar ===
+// === Module 16627: layout/SearchBar ===
 
-// Module 16442 (layout/SearchBar)
+// Module 16627 (layout/SearchBar)
 import util from "util" /* 1115 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4541 */;
 import useChannelName from "useChannelName" /* 4989 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 11821 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 11841 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 11844 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 11990 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12010 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12013 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import GuildStore from "GuildStore" /* 2067 */;
 import RelationshipStore from "RelationshipStore" /* 4479 */;
 import UserStore from "UserStore" /* 1372 */;
-import SearchQueryStore from "SearchQueryStore" /* 11822 */;
+import SearchQueryStore from "SearchQueryStore" /* 11991 */;
 
 const SearchPlatformUtilsDefault = SearchPlatformUtils;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(7303);
+const SearchConstants = fn(7468);
 ({ SEARCH_BAR_HEIGHT: c10, SearchQueryTagTypes: closure_11 } = SearchConstants);
-const SearchFilterAddLocations = fn(7302).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(7467).SearchFilterAddLocations;
 const SearchTypes = fn(1074).SearchTypes;
 const jsx = fn(21).jsx;
 const createStyles = fn(4836);

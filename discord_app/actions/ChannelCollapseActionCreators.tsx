@@ -1,8 +1,8 @@
-// === Module 10427: ChannelCollapseActionCreators ===
+// === Module 10596: ChannelCollapseActionCreators ===
 
-// Module 10427 (ChannelCollapseActionCreators)
+// Module 10596 (ChannelCollapseActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import UserGuildSettingsManagerDefault from "UserGuildSettingsManager" /* 6537 */;
+import UserGuildSettingsManagerDefault from "UserGuildSettingsManager" /* 6703 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5017 */;
 
 const size = fn(2);

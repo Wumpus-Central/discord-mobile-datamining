@@ -1,6 +1,6 @@
-// === Module 16405: VibegrationsConjureTipCoachmark ===
+// === Module 16590: VibegrationsConjureTipCoachmark ===
 
-// Module 16405 (VibegrationsConjureTipCoachmark)
+// Module 16590 (VibegrationsConjureTipCoachmark)
 import util from "util" /* 1115 */;
 import _modDef3715 from "module_3715" /* 3715 */;
 import noop from "module_19" /* 19 */;
@@ -31,6 +31,6 @@ export default function VibegrationsConjureTipCoachmark(visible) {
     obj.onDismiss = onDismiss;
     return obj;
   }, items);
-  const coachmark = visible(10589).useCoachmark(visible.targetRef, memo);
+  const coachmark = visible(10758).useCoachmark(visible.targetRef, memo);
   return null;
 };

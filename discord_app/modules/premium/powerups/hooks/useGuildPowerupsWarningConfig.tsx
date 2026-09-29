@@ -1,10 +1,10 @@
-// === Module 12057: useGuildPowerupsWarningConfig ===
+// === Module 12228: useGuildPowerupsWarningConfig ===
 
-// Module 12057 (useGuildPowerupsWarningConfig)
+// Module 12228 (useGuildPowerupsWarningConfig)
 import util from "util" /* 1115 */;
 import _modDef2519 from "module_2519" /* 2519 */;
 import noop from "module_19" /* 19 */;
-import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 12058 */;
+import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 12229 */;
 
 const require = globalThis.__r;
 

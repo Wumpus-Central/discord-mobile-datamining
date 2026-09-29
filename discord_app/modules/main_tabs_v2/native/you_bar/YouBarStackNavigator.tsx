@@ -1,7 +1,7 @@
-// === Module 15645: YouBarStackNavigator ===
+// === Module 15820: YouBarStackNavigator ===
 
-// Module 15645 (YouBarStackNavigator)
-import notifications_Notifications from "notifications/Notifications" /* 16038 */;
+// Module 15820 (YouBarStackNavigator)
+import notifications_Notifications from "notifications/Notifications" /* 16214 */;
 import noop from "module_19" /* 19 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4655 */;
@@ -18,10 +18,10 @@ function getICYMIComponent() {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const YouBarNavigatorScreens = fn(10549).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(10718).YouBarNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const NativeStackNavigator = fn(7339);
+const NativeStackNavigator = fn(7504);
 const Navigator = NativeStackNavigator.createNativeStackNavigator();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarStackNavigator.tsx");

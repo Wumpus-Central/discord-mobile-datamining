@@ -1,10 +1,10 @@
-// === Module 10837: MessagePreviewReactions ===
+// === Module 11006: MessagePreviewReactions ===
 
-// Module 10837 (MessagePreviewReactions)
+// Module 11006 (MessagePreviewReactions)
 import noop from "module_19" /* 19 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7014 */;
-import ConversationsStore from "ConversationsStore" /* 7018 */;
-import MessagePreviewStore from "MessagePreviewStore" /* 7808 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7179 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7184 */;
+import MessagePreviewStore from "MessagePreviewStore" /* 7973 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -14,12 +14,12 @@ const result = size.fileFinishedImporting("modules/reactions/native/MessagePrevi
 
 export default function MessagePreviewReactions(emoji) {
   ({ channelId, messageId } = emoji);
-  const items = [MessagePreviewStore, ConversationsStore, ConversationPreviewStore];
+  const items = [MessagePreviewStore, ChannelConversationsStore, ConversationPreviewStore];
   const items1 = [channelId, messageId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => {
     let message = MessagePreviewStore.getMessage(messageId);
     if (message == null) {
-      message = ConversationsStore.getMessage(channelId, messageId);
+      message = ChannelConversationsStore.getMessage(channelId, messageId);
     }
     if (message == null) {
       message = ConversationPreviewStore.getMessage(messageId);
@@ -27,13 +27,13 @@ export default function MessagePreviewReactions(emoji) {
     return null != message ? message.reactions : closure_7;
   }, items1);
   const obj = channelId(504);
-  const obj2 = { value: messageId(6583)(messageId(6603).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null };
+  const obj2 = { value: messageId(6749)(messageId(6769).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null };
   if (stateFromStores.length > 0) {
     const obj3 = { channelId, messageId, emoji: emoji.emoji, reactions: stateFromStores };
-    let tmp4Result = jsx(channelId(10826).MessageReactionsContent, { channelId, messageId, emoji: emoji.emoji, reactions: stateFromStores });
+    let tmp4Result = jsx(channelId(10995).MessageReactionsContent, { channelId, messageId, emoji: emoji.emoji, reactions: stateFromStores });
   } else {
-    tmp4Result = jsx(channelId(10826).MessageReactionsEmpty, {});
+    tmp4Result = jsx(channelId(10995).MessageReactionsEmpty, {});
   }
   obj2.children = tmp4Result;
-  return jsx(channelId(6583).AnalyticsLocationProvider, { value: messageId(6583)(messageId(6603).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null });
+  return jsx(channelId(6749).AnalyticsLocationProvider, { value: messageId(6749)(messageId(6769).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null });
 };

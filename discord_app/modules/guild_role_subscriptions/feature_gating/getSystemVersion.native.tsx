@@ -1,6 +1,6 @@
-// === Module 5812: getSystemVersion ===
+// === Module 5979: getSystemVersion ===
 
-// Module 5812 (getSystemVersion)
+// Module 5979 (getSystemVersion)
 import DeviceUtils from "DeviceUtils" /* 4812 */;
 import size from "module_2" /* 2 */;
 

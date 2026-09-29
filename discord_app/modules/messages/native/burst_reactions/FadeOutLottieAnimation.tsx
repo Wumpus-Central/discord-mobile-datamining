@@ -1,6 +1,6 @@
-// === Module 7246: FadeOutLottieAnimation ===
+// === Module 7411: FadeOutLottieAnimation ===
 
-// Module 7246 (FadeOutLottieAnimation)
+// Module 7411 (FadeOutLottieAnimation)
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import timing from "timing" /* 4837 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -93,9 +93,9 @@ export default function FadeOutLottieAnimation(onComplete) {
       closure_2(true);
     };
     const merged1 = Object.assign(merged);
-    obj3.children = jsx(isAnimationComplete(5841), { style: tmp2.content, speed: null, onAnimationFinish: null });
+    obj3.children = jsx(isAnimationComplete(6007), { style: tmp2.content, speed: null, onAnimationFinish: null });
     let tmp14Result = jsx(isAnimationComplete(4566).View, { style: tmp12, children: null });
-    const tmp16 = isAnimationComplete(5841);
+    const tmp16 = isAnimationComplete(6007);
   } else {
     tmp14Result = null;
   }

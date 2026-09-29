@@ -1,13 +1,13 @@
-// === Module 16945: AudioRouteSwitchingStore ===
+// === Module 17132: AudioRouteSwitchingStore ===
 
-// Module 16945 (AudioRouteSwitchingStore)
+// Module 17132 (AudioRouteSwitchingStore)
 import _mod17 from "module_17" /* 17 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import VoiceCallTypes from "VoiceCallTypes" /* 9099 */;
+import VoiceCallTypes from "VoiceCallTypes" /* 9264 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4859 */;
-import AudioRouteStore from "AudioRouteStore" /* 9098 */;
+import AudioRouteStore from "AudioRouteStore" /* 9263 */;
 import size from "module_2" /* 2 */;
 
 function handleAudioRouteChanged() {

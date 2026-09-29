@@ -1,14 +1,14 @@
-// === Module 5932: IdentityVerificationField ===
+// === Module 6098: IdentityVerificationField ===
 
-// Module 5932 (IdentityVerificationField)
+// Module 6098 (IdentityVerificationField)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4658 */;
 import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4783 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import components_Button_Button from "components/Button/Button" /* 5281 */;
-import MobilePhoneIcon from "MobilePhoneIcon" /* 6379 */;
-import EnvelopeIcon2 from "EnvelopeIcon" /* 6502 */;
+import components_Button_Button from "components/Button/Button" /* 5447 */;
+import MobilePhoneIcon from "MobilePhoneIcon" /* 6545 */;
+import EnvelopeIcon2 from "EnvelopeIcon" /* 6668 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

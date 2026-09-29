@@ -1,16 +1,16 @@
-// === Module 7333: ConversationsActionCreators ===
+// === Module 7498: ConversationsActionCreators ===
 
-// Module 7333 (ConversationsActionCreators)
+// Module 7498 (ConversationsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 5026 */;
 import SurveyActionTypes from "SurveyActionTypes" /* 5034 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 6876 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7335 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7042 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7500 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7014 */;
-import ConversationsStore from "ConversationsStore" /* 7018 */;
-import TopicalNavigationSurveyStore from "TopicalNavigationSurveyStore" /* 7334 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7179 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7184 */;
+import TopicalNavigationSurveyStore from "TopicalNavigationSurveyStore" /* 7499 */;
 
 require = fn;
 let closure_9 = async function _fetchChannelConversations(arg0) {
@@ -30,8 +30,8 @@ let closure_9 = async function _fetchChannelConversations(arg0) {
         if (obj15.isTopicalNavEnabled(closure_132_1, "fetch_channel_conversations")) {
           const _HermesInternal = HermesInternal;
           closure_132_8 = "" + closure_132_2 + ":" + closure_132_3 + ":" + closure_132_4 + ":" + true === closure_132_5;
-          if (!closure_133_5.isListFetchPending(closure_132_0, closure_132_8)) {
-            const obj7 = { type: "CONVERSATIONS_FETCH_START", channelId: closure_132_0, direction: closure_132_2, requestKey: closure_132_8, isJump: null };
+          if (!closure_133_4.isListFetchPending(closure_132_0, closure_132_8)) {
+            const obj7 = { type: "CHANNEL_CONVERSATIONS_FETCH_START", channelId: closure_132_0, direction: closure_132_2, requestKey: closure_132_8, isJump: null };
             isJump = closure_132_5;
             if (closure_132_5 == null) {
               isJump = false;
@@ -69,7 +69,7 @@ let closure_9 = async function _fetchChannelConversations(arg0) {
       }
     } else if (2 === tmp7) {
       c6 = 0;
-      closure_133_1(closure_133_2[7]).dispatch({ type: "CONVERSATIONS_FETCH_FAILURE", channelId: closure_132_0, requestKey: closure_132_8 });
+      closure_133_1(closure_133_2[7]).dispatch({ type: "CHANNEL_CONVERSATIONS_FETCH_FAILURE", channelId: closure_132_0, requestKey: closure_132_8 });
       if (closure_132_6) {
         const _Error = Error;
         const error = new Error("Failed to fetch conversations");
@@ -85,7 +85,7 @@ let closure_9 = async function _fetchChannelConversations(arg0) {
       return { value, done: true };
     } else {
       const conversations = value.body.conversations;
-      const obj12 = { type: "CONVERSATIONS_FETCH_SUCCESS", channelId: closure_132_0, rawConversations: conversations, direction: closure_132_2, requestKey: closure_132_8, anchor: closure_132_3, isJump: null, fullyHydrated: null };
+      const obj12 = { type: "CHANNEL_CONVERSATIONS_FETCH_SUCCESS", channelId: closure_132_0, rawConversations: conversations, direction: closure_132_2, requestKey: closure_132_8, anchor: closure_132_3, isJump: null, fullyHydrated: null };
       isJump2 = closure_132_5;
       if (closure_132_5 == null) {
         isJump2 = false;
@@ -166,7 +166,7 @@ let closure_10 = async function _fetchConversation(arg0) {
           throw value;
         } else if (arg0 !== 2) {
           closure_130_1 = value;
-          const obj6 = { type: "CONVERSATION_GET_SUCCESS", channelId: closure_130_0, rawConversation: closure_130_1.body };
+          const obj6 = { type: "CONVERSATION_FETCH_SUCCESS", channelId: closure_130_0, rawConversation: closure_130_1.body };
           closure_131_1(closure_131_2[7]).dispatch(obj6);
           c4 = 0;
           const obj = closure_131_1(closure_131_2[7]);
@@ -250,7 +250,7 @@ let closure_12 = async function _fetchConversationMessages() {
               if (tmp18) {
                 let isFullyHydratedResult = ConversationPreviewStore.isFullyHydrated(conversationId);
               } else {
-                isFullyHydratedResult = ConversationsStore.isFullyHydrated(channelId, conversationId);
+                isFullyHydratedResult = ChannelConversationsStore.isFullyHydrated(channelId, conversationId);
               }
               if (isFullyHydratedResult) {
                 c8 = 3;
@@ -260,7 +260,7 @@ let closure_12 = async function _fetchConversationMessages() {
               if (tmp18) {
                 let hydratedMessages = ConversationPreviewStore.getHydratedMessages(conversationId);
               } else {
-                hydratedMessages = ConversationsStore.getHydratedMessages(channelId, conversationId);
+                hydratedMessages = ChannelConversationsStore.getHydratedMessages(channelId, conversationId);
               }
               if (null != hydratedMessages) {
                 c8 = 3;
@@ -270,10 +270,10 @@ let closure_12 = async function _fetchConversationMessages() {
             if (tmp18) {
               let result = ConversationPreviewStore.isConversationFetchPending(conversationId, tmp19);
             } else {
-              result = ConversationsStore.isConversationFetchPending(conversationId, tmp19);
+              result = ChannelConversationsStore.isConversationFetchPending(conversationId, tmp19);
             }
             if (!result) {
-              const obj6 = { type: "CONVERSATION_FETCH_START", channelId, conversationId, full: tmp19, isStandalone: tmp18 };
+              const obj6 = { type: "CONVERSATION_MESSAGES_FETCH_START", channelId, conversationId, full: tmp19, isStandalone: tmp18 };
               DispatcherDefault.dispatch(obj6);
               c6 = 1;
               const HTTP = HTTPUtils.HTTP;
@@ -289,7 +289,7 @@ let closure_12 = async function _fetchConversationMessages() {
         } else {
           if (1 === tmp7) {
             c6 = 0;
-            const obj9 = { type: "CONVERSATION_FETCH_FAILURE", channelId: closure_132_0, conversationId: closure_132_1, full: closure_132_3, isStandalone: closure_132_2 };
+            const obj9 = { type: "CONVERSATION_MESSAGES_FETCH_FAILURE", channelId: closure_132_0, conversationId: closure_132_1, full: closure_132_3, isStandalone: closure_132_2 };
             closure_133_1(closure_133_2[7]).dispatch(obj9);
             const obj2 = closure_133_1(closure_133_2[7]);
           } else if (arg0 === 1) {
@@ -297,7 +297,7 @@ let closure_12 = async function _fetchConversationMessages() {
             throw value;
           } else if (arg0 !== 2) {
             closure_132_4 = value;
-            const obj10 = { type: "CONVERSATION_FETCH_SUCCESS", channelId: closure_132_0, conversationId: closure_132_1, messages: closure_132_4.body.messages, messageReferences: closure_132_4.body.reference_messages, fullyHydrated: closure_132_3, isStandalone: closure_132_2 };
+            const obj10 = { type: "CONVERSATION_MESSAGES_FETCH_SUCCESS", channelId: closure_132_0, conversationId: closure_132_1, messages: closure_132_4.body.messages, messageReferences: closure_132_4.body.reference_messages, fullyHydrated: closure_132_3, isStandalone: closure_132_2 };
             closure_133_1(closure_133_2[7]).dispatch(obj10);
             c6 = 0;
             const obj11 = closure_133_1(closure_133_2[7]);
@@ -319,7 +319,7 @@ let closure_12 = async function _fetchConversationMessages() {
     }
   })();
 };
-const FETCH_LIMIT = fn(7015).FETCH_LIMIT;
+const FETCH_LIMIT = fn(7181).FETCH_LIMIT;
 const Endpoints = fn(1074).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/ConversationsActionCreators.tsx");
@@ -361,7 +361,7 @@ export const setSelectedConversation = function setSelectedConversation(channelI
     DispatcherDefault.dispatch(obj2);
     fetchConversationMessages(channelId, conversationId, { includeReactions: true, includeMessageReferences: true });
     if (flag) {
-      const conversationMetadata = ConversationsStore.getConversationMetadata(channelId, conversationId);
+      const conversationMetadata = ChannelConversationsStore.getConversationMetadata(channelId, conversationId);
       let startMessageId;
       if (conversationMetadata != null) {
         startMessageId = conversationMetadata.conversation.startMessageId;

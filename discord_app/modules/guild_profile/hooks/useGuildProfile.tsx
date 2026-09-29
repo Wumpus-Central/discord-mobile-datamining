@@ -1,9 +1,9 @@
-// === Module 9029: useGuildProfile ===
+// === Module 9194: useGuildProfile ===
 
-// Module 9029 (useGuildProfile)
+// Module 9194 (useGuildProfile)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildProfileStore from "GuildProfileStore" /* 9028 */;
+import GuildProfileStore from "GuildProfileStore" /* 9193 */;
 
 const require = globalThis.__r;
 

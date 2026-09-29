@@ -1,14 +1,14 @@
-// === Module 8866: PictureInPictureVideo ===
+// === Module 9031: PictureInPictureVideo ===
 
-// Module 8866 (PictureInPictureVideo)
+// Module 9031 (PictureInPictureVideo)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1479 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5037 */;
-import transitionToActivityDefault from "transitionToActivity" /* 8828 */;
-import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 8847 */;
-import usePipDimensionsDefault from "usePipDimensions" /* 8850 */;
-import useIsViewingActivity from "useIsViewingActivity" /* 8851 */;
+import transitionToActivityDefault from "transitionToActivity" /* 8993 */;
+import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 9012 */;
+import usePipDimensionsDefault from "usePipDimensions" /* 9015 */;
+import useIsViewingActivity from "useIsViewingActivity" /* 9016 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
@@ -16,8 +16,8 @@ import ChannelRTCStore from "ChannelRTCStore" /* 4852 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1993 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
-import SpeakingStore from "SpeakingStore" /* 5731 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 8844 */;
+import SpeakingStore from "SpeakingStore" /* 5898 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9009 */;
 
 require = fn;
 function areParticipantsEqual(arg0, arg1) {
@@ -27,7 +27,7 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(8829);
+const ChannelCallStore = fn(8994);
 ({ togglePipFocus: map1, useIsVoiceChatFocused: closure_14 } = ChannelCallStore);
 const ParticipantTypes = fn(4857).ParticipantTypes;
 const jsxProd = fn(21);

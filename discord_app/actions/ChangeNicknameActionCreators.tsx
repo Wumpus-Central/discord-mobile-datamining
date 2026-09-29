@@ -1,9 +1,9 @@
-// === Module 8604: ChangeNicknameActionCreators ===
+// === Module 8769: ChangeNicknameActionCreators ===
 
-// Module 8604 (ChangeNicknameActionCreators)
+// Module 8769 (ChangeNicknameActionCreators)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 6876 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7042 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

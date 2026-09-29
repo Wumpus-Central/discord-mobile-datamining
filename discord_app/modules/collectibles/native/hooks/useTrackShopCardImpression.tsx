@@ -1,10 +1,10 @@
-// === Module 8228: useTrackShopCardImpression ===
+// === Module 8393: useTrackShopCardImpression ===
 
-// Module 8228 (useTrackShopCardImpression)
+// Module 8393 (useTrackShopCardImpression)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 6973 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 6974 */;
-import useTrackImpression from "useTrackImpression" /* 8230 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7139 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7140 */;
+import useTrackImpression from "useTrackImpression" /* 8395 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

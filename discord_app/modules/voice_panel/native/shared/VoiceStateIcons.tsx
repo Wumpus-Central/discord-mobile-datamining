@@ -1,17 +1,17 @@
-// === Module 9132: VoiceStateIcons ===
+// === Module 9297: VoiceStateIcons ===
 
-// Module 9132 (VoiceStateIcons)
+// Module 9297 (VoiceStateIcons)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import inlineStyles from "inlineStyles" /* 7909 */;
-import VoiceStateIconUtils from "VoiceStateIconUtils" /* 9133 */;
-import HeadphonesDenyIcon from "HeadphonesDenyIcon" /* 9134 */;
-import HeadphonesSlashIcon from "HeadphonesSlashIcon" /* 9136 */;
-import MicrophoneDenyIcon from "MicrophoneDenyIcon" /* 9138 */;
-import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 9140 */;
-import _modDef9142 from "module_9142" /* 9142 */;
-import _modDef9143 from "module_9143" /* 9143 */;
+import inlineStyles from "inlineStyles" /* 8074 */;
+import VoiceStateIconUtils from "VoiceStateIconUtils" /* 9298 */;
+import HeadphonesDenyIcon from "HeadphonesDenyIcon" /* 9299 */;
+import HeadphonesSlashIcon from "HeadphonesSlashIcon" /* 9301 */;
+import MicrophoneDenyIcon from "MicrophoneDenyIcon" /* 9303 */;
+import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 9305 */;
+import _modDef9307 from "module_9307" /* 9307 */;
+import _modDef9308 from "module_9308" /* 9308 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -108,7 +108,7 @@ export const VideoIcon = noop.memo((state) => {
   if (VoiceStateIconUtils.VideoIconState.VIDEO_DISABLED_LOCAL_AUTO === state) {
     const obj = {};
     const merged1 = Object.assign(merged);
-    obj.source = _modDef9142;
+    obj.source = _modDef9307;
     const items = [merged.style, tmp2.noTint];
     obj.style = items;
     return React4(native.Icon, obj);
@@ -119,7 +119,7 @@ export const VideoIcon = noop.memo((state) => {
   } else if (VoiceStateIconUtils.VideoIconState.VIDEO_ACTIVE === state) {
     const obj3 = {};
     const merged3 = Object.assign(merged);
-    obj3.source = _modDef9143;
+    obj3.source = _modDef9308;
     return React4(native.Icon, obj3);
   } else {
     GlobalUtils.assertNever(state);

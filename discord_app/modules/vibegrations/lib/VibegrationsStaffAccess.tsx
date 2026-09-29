@@ -1,6 +1,6 @@
-// === Module 16268: VibegrationsStaffAccess ===
+// === Module 16448: VibegrationsStaffAccess ===
 
-// Module 16268 (VibegrationsStaffAccess)
+// Module 16448 (VibegrationsStaffAccess)
 import initialize from "initialize" /* 504 */;
 import GuildChannelStore from "GuildChannelStore" /* 4467 */;
 import GuildStore from "GuildStore" /* 2067 */;

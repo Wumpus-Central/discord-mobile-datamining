@@ -1,6 +1,6 @@
-// === Module 7825: getOnClick ===
+// === Module 7990: getOnClick ===
 
-// Module 7825 (getOnClick)
+// Module 7990 (getOnClick)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import URLUtilsDefault from "URLUtils" /* 1366 */;
@@ -8,19 +8,19 @@ import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
 import openURLDefault from "openURL" /* 4519 */;
 import CodedLink from "CodedLink" /* 4821 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5016 */;
-import QuestContent from "QuestContent" /* 5761 */;
-import safeTransitionToDefault from "safeTransitionTo" /* 6665 */;
-import storefrontMessageEmbedCodedLink from "storefrontMessageEmbedCodedLink" /* 7104 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7826 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10262 */;
-import QuestUtils from "QuestUtils" /* 10678 */;
-import storefrontCodedLink from "storefrontCodedLink" /* 11026 */;
-import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 12502 */;
+import QuestContent from "QuestContent" /* 5928 */;
+import safeTransitionToDefault from "safeTransitionTo" /* 6831 */;
+import storefrontMessageEmbedCodedLink from "storefrontMessageEmbedCodedLink" /* 7269 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7991 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10431 */;
+import QuestUtils from "QuestUtils" /* 10847 */;
+import storefrontCodedLink from "storefrontCodedLink" /* 11195 */;
+import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 12672 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 5063 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6946 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 6649 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7112 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 6815 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2108 */;
 import GuildStore from "GuildStore" /* 2067 */;
@@ -28,7 +28,7 @@ import InviteStore from "InviteStore" /* 4817 */;
 import MessageStore from "MessageStore" /* 5056 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4655 */;
-import SortedGuildStore from "SortedGuildStore" /* 5750 */;
+import SortedGuildStore from "SortedGuildStore" /* 5917 */;
 
 const require = globalThis.__r;
 
@@ -71,7 +71,7 @@ let closure_18 = async function _openInviteModal() {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            const obj5 = { type: "DISPLAYED_INVITE_SHOW", code, username: "Array", deeplinkAttemptId: "paddingHorizontal", invite_instance_id };
+            const obj5 = { type: "DISPLAYED_INVITE_SHOW", code, username: "Array", deeplinkAttemptId: "channel", invite_instance_id };
             c3 = 1;
             c2 = 1;
             const obj6 = { value: DispatcherDefault.dispatch(obj5), done: false };
@@ -259,7 +259,7 @@ const Constants = fn(1074);
 ({ AbortCodes, AnalyticEvents: closure_12, AppContext, InviteStates: map1, JoinGuildSources, Routes } = Constants);
 const CollectiblesShopConstants = fn(1076);
 ({ CollectibleShopTab: closure_14, CollectiblesMobileShopScreen: closure_15 } = CollectiblesShopConstants);
-const isGameShopPath = fn(6650).isGameShopPath;
+const isGameShopPath = fn(6816).isGameShopPath;
 let obj = { skipExtensionCheck: "Array", analyticsLocations: [] };
 const size = fn(2);
 let result = size.fileFinishedImporting("lib/getOnClick.tsx");
@@ -304,7 +304,7 @@ export default function getOnClick(url) {
         if (_undefined.type !== CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT) {
           let result = storefrontMessageEmbedCodedLink.parseStorefrontSkuCodedLink(code);
           if (result == null) {
-            result = { applicationId: "Array", skuId: "paddingHorizontal" };
+            result = { applicationId: "current", skuId: "channel" };
           }
           const tmp3Result = storefrontMessageEmbedCodedLink;
         }
@@ -317,7 +317,7 @@ export default function getOnClick(url) {
         openURLDefault(closure_0);
         return true;
       }
-      result = { applicationId: code, skuId: "a" };
+      result = { applicationId: code, skuId: "r" };
     };
   }
   if (null != findCodedLinkResult) {
@@ -492,7 +492,7 @@ export default function getOnClick(url) {
         }
         [closure_0, closure_1] = _undefined.code.split("-");
         const tmp2 = _slicedToArray(_undefined.code.split("-"), 2);
-        asyncRequireImpl(12500, dependencyMap.paths).then((openGuildProductLink) => {
+        asyncRequireImpl(12670, dependencyMap.paths).then((openGuildProductLink) => {
           openGuildProductLink.openGuildProductLink(url, analyticsLocations);
         });
         return true;
@@ -579,7 +579,7 @@ export default function getOnClick(url) {
           return true;
         };
       }
-      tmp2Result = tmp2(10682);
+      tmp2Result = tmp2(10851);
     }
   }
   if (null != findCodedLinkResult) {
@@ -691,7 +691,7 @@ export default function getOnClick(url) {
         return true;
       };
     }
-    tmp2Result4 = tmp2(7584);
+    tmp2Result4 = tmp2(7749);
   }
   const tmp2Result3 = require("LinkUtils");
 };

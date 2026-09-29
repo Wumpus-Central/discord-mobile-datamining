@@ -1,14 +1,14 @@
-// === Module 13402: ContactSyncUpsellCTA ===
+// === Module 13571: ContactSyncUpsellCTA ===
 
-// Module 13402 (ContactSyncUpsellCTA)
+// Module 13571 (ContactSyncUpsellCTA)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12173 */;
-import _modDef13403 from "module_13403" /* 13403 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12344 */;
+import _modDef13572 from "module_13572" /* 13572 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const dismissUpsellCTA = fn(12176).dismissUpsellCTA;
+const dismissUpsellCTA = fn(12347).dismissUpsellCTA;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_4, AnalyticsSections: hasOwnProperty } = Constants);
 const jsx = fn(21).jsx;
@@ -46,10 +46,10 @@ export default noop.memo(function ContactSyncUpsellCTA(location) {
       };
       const items = [obj3];
       obj2.options = items;
-      const result = location(6615).showSimpleActionSheet(obj2);
+      const result = location(6781).showSimpleActionSheet(obj2);
     },
     style: null,
-    iconSource: _modDef13403,
+    iconSource: _modDef13572,
     title: null,
     subtitle: null
   };
@@ -59,7 +59,7 @@ export default noop.memo(function ContactSyncUpsellCTA(location) {
   obj.title = intl.string(location(1115).t.T6Rfd9);
   const intl2 = location(1115).intl;
   obj.subtitle = intl2.string(location(1115).t.c6KIpg);
-  return jsx(location(8053).FormCTA, {
+  return jsx(location(8218).FormCTA, {
     onPress() {
       const obj2 = { type: constants2.CONTACT_SYNC_MODAL, location: null };
       let str = location;
@@ -84,10 +84,10 @@ export default noop.memo(function ContactSyncUpsellCTA(location) {
       };
       const items = [obj3];
       obj2.options = items;
-      const result = location(6615).showSimpleActionSheet(obj2);
+      const result = location(6781).showSimpleActionSheet(obj2);
     },
     style: null,
-    iconSource: _modDef13403,
+    iconSource: _modDef13572,
     title: null,
     subtitle: null
   });

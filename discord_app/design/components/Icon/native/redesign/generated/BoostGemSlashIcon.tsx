@@ -1,9 +1,9 @@
-// === Module 12080: BoostGemSlashIcon ===
+// === Module 12251: BoostGemSlashIcon ===
 
-// Module 12080 (BoostGemSlashIcon)
+// Module 12251 (BoostGemSlashIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4530 */;
-import _mod12081 from "module_12081" /* 12081 */;
+import _mod12252 from "module_12252" /* 12252 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const BoostGemSlashIcon = function BoostGemSlashIcon(isTierUnlocked) {
   }
   const merged = Object.assign(isTierUnlocked, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12081, color: INTERACTIVE_ICON_DEFAULT, style: isTierUnlocked.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12252, color: INTERACTIVE_ICON_DEFAULT, style: isTierUnlocked.style });
 };

@@ -1,9 +1,9 @@
-// === Module 12594: useTrackUserProfileActivityAction ===
+// === Module 12764: useTrackUserProfileActivityAction ===
 
-// Module 12594 (useTrackUserProfileActivityAction)
+// Module 12764 (useTrackUserProfileActivityAction)
 import _mod19 from "module_19" /* 19 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 7636 */;
-import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8254 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 7801 */;
+import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8419 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

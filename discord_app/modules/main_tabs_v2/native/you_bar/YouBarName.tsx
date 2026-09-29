@@ -1,20 +1,20 @@
-// === Module 16025: YouBarName ===
+// === Module 16201: YouBarName ===
 
-// Module 16025 (YouBarName)
+// Module 16201 (YouBarName)
 import nativeDefault from "native" /* 576 */;
-import GuildTagDefault from "GuildTag" /* 9205 */;
-import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10337 */;
-import useUserVoiceActivity from "useUserVoiceActivity" /* 10338 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10357 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10615 */;
-import shouldShowActivityStatusDefault from "shouldShowActivityStatus" /* 16026 */;
+import GuildTagDefault from "GuildTag" /* 9370 */;
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10506 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 10507 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10526 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10784 */;
+import shouldShowActivityStatusDefault from "shouldShowActivityStatus" /* 16202 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4858 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import PermissionStore from "PermissionStore" /* 4469 */;
 import PresenceStore from "PresenceStore" /* 4876 */;
 import RelationshipStore from "RelationshipStore" /* 4479 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5591 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5758 */;
 import VoiceStateStore from "VoiceStateStore" /* 4855 */;
 
 require = fn;
@@ -45,14 +45,14 @@ export default noop.memo(function YouName(username) {
   let items = [SelfPresenceStore];
   const stateFromStores = userId(504).useStateFromStores(items, () => status.getStatus());
   let obj = userId(504);
-  const customStatusActivity = userId(8819).useCustomStatusActivity();
-  let obj2 = userId(8819);
+  const customStatusActivity = userId(8984).useCustomStatusActivity();
+  let obj2 = userId(8984);
   let state;
   if (customStatusActivity != null) {
     state = customStatusActivity.state;
   }
-  const gameMentionsAsPlainText = userId(10339).useGameMentionsAsPlainText(state);
-  let obj3 = userId(10339);
+  const gameMentionsAsPlainText = userId(10508).useGameMentionsAsPlainText(state);
+  let obj3 = userId(10508);
   const items1 = [PresenceStore, ApplicationStreamingStore, RelationshipStore, ChannelStore, PermissionStore, VoiceStateStore];
   let obj4 = { style: tmp.userText, children: null };
   const stateFromStores1 = userId(504).useStateFromStores(items1, () => {
@@ -68,7 +68,7 @@ export default noop.memo(function YouName(username) {
   const obj5 = { style: tmp.statusRow, children: null };
   if (stateFromStores1) {
     const obj6 = { userId, emojiSize: 16, maxFontSizeMultiplier: 1.75 };
-    let tmp9Result = closure_12(stateFromStores(10335), obj6);
+    let tmp9Result = closure_12(stateFromStores(10504), obj6);
   } else {
     let emoji;
     if (customStatusActivity != null) {
@@ -77,7 +77,7 @@ export default noop.memo(function YouName(username) {
     let tmp11Result2 = null;
     if (null != emoji) {
       const obj7 = { size: 16, style: tmp.statusEmoji, emoji: customStatusActivity.emoji };
-      tmp11Result2 = closure_12(stateFromStores(10353), obj7);
+      tmp11Result2 = closure_12(stateFromStores(10522), obj7);
     }
     const items3 = [tmp11Result2, ];
     const obj8 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, ellipsizeMode: "tail", maxFontSizeMultiplier: 1.75, style: tmp.statusText, children: null };

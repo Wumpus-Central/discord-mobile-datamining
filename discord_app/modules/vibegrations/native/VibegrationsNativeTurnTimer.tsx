@@ -1,9 +1,9 @@
-// === Module 16401: VibegrationsNativeTurnTimer ===
+// === Module 16586: VibegrationsNativeTurnTimer ===
 
-// Module 16401 (VibegrationsNativeTurnTimer)
+// Module 16586 (VibegrationsNativeTurnTimer)
 import Text_Text from "Text/Text" /* 4832 */;
-import VibegrationsDuration from "VibegrationsDuration" /* 16350 */;
-import useVibegrationsElapsedMs from "useVibegrationsElapsedMs" /* 16402 */;
+import VibegrationsDuration from "VibegrationsDuration" /* 16530 */;
+import useVibegrationsElapsedMs from "useVibegrationsElapsedMs" /* 16587 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

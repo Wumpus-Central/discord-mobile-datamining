@@ -1,6 +1,6 @@
-// === Module 17154: setIncomingRingtone ===
+// === Module 17343: setIncomingRingtone ===
 
-// Module 17154 (setIncomingRingtone)
+// Module 17343 (setIncomingRingtone)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

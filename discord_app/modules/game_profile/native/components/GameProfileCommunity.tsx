@@ -1,13 +1,13 @@
-// === Module 8199: GameProfileCommunity ===
+// === Module 8364: GameProfileCommunity ===
 
-// Module 8199 (GameProfileCommunity)
+// Module 8364 (GameProfileCommunity)
 import nativeDefault from "native" /* 576 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 6364 */;
-import transitionToGuild from "transitionToGuild" /* 6760 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8139 */;
-import GameProfileSection from "GameProfileSection" /* 8194 */;
-import GameProfileSkeleton from "GameProfileSkeleton" /* 8195 */;
-import DisplayedInviteActionCreators from "DisplayedInviteActionCreators" /* 8200 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 6530 */;
+import transitionToGuild from "transitionToGuild" /* 6926 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8304 */;
+import GameProfileSection from "GameProfileSection" /* 8359 */;
+import GameProfileSkeleton from "GameProfileSkeleton" /* 8360 */;
+import DisplayedInviteActionCreators from "DisplayedInviteActionCreators" /* 8365 */;
 import noop from "module_19" /* 19 */;
 
 const GameProfileSkeletonDefault = GameProfileSkeleton;

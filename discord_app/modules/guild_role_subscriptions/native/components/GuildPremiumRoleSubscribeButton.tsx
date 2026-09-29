@@ -1,8 +1,8 @@
-// === Module 17594: GuildPremiumRoleSubscribeButton ===
+// === Module 17783: GuildPremiumRoleSubscribeButton ===
 
-// Module 17594 (GuildPremiumRoleSubscribeButton)
+// Module 17783 (GuildPremiumRoleSubscribeButton)
 import util from "util" /* 1115 */;
-import CreatorRevenueButton from "CreatorRevenueButton" /* 9760 */;
+import CreatorRevenueButton from "CreatorRevenueButton" /* 9927 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

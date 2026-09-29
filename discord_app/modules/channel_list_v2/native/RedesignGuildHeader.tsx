@@ -1,6 +1,6 @@
-// === Module 15765: RedesignGuildHeader ===
+// === Module 15940: RedesignGuildHeader ===
 
-// Module 15765 (RedesignGuildHeader)
+// Module 15940 (RedesignGuildHeader)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import FavoritesUtils from "FavoritesUtils" /* 2070 */;
@@ -8,18 +8,18 @@ import useToken from "useToken" /* 4531 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4567 */;
 import shared from "shared" /* 4685 */;
-import spring from "spring" /* 5280 */;
-import springPresets from "springPresets" /* 5284 */;
-import ButtonConstants from "ButtonConstants" /* 5286 */;
-import useFontScale from "useFontScale" /* 5288 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5437 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7298 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 9578 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 10456 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 13452 */;
-import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 15736 */;
-import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 15766 */;
-import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 15767 */;
+import spring from "spring" /* 5446 */;
+import springPresets from "springPresets" /* 5450 */;
+import ButtonConstants from "ButtonConstants" /* 5452 */;
+import useFontScale from "useFontScale" /* 5454 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5604 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7463 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 9745 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 10625 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 13621 */;
+import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 15911 */;
+import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 15941 */;
+import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 15942 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4825 */;
 import ActionSheetStore from "ActionSheetStore" /* 4521 */;
@@ -172,7 +172,7 @@ function ReanimatedGuildBanner(guild) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const RedesignChannelListConstants = fn(9577);
+const RedesignChannelListConstants = fn(9744);
 ({ STICKY_BANNER_ASPECT_RATIO: closure_9, BANNER_MAX_HEIGHT_PERCENTAGE: c10, SEARCH_BAR_MARGIN_BOTTOM: closure_11 } = RedesignChannelListConstants);
 const GuildFeatures = fn(1074).GuildFeatures;
 const jsxProd = fn(21);

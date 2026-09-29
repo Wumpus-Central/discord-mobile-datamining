@@ -1,14 +1,14 @@
-// === Module 9875: StickerPickerEmptyState ===
+// === Module 10042: StickerPickerEmptyState ===
 
-// Module 9875 (StickerPickerEmptyState)
+// Module 10042 (StickerPickerEmptyState)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import HapticUtils from "HapticUtils" /* 4801 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4802 */;
-import StickerDefault from "Sticker" /* 9636 */;
-import StickersHooks from "StickersHooks" /* 9848 */;
+import StickerDefault from "Sticker" /* 9803 */;
+import StickersHooks from "StickersHooks" /* 10015 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 5814 */;
+import StickersStore from "StickersStore" /* 5981 */;
 
 const require = globalThis.__r;
 
@@ -39,8 +39,8 @@ export default function _default() {
   _require = tmp;
   const fetchStickerPacks = require("StickersHooks").useFetchStickerPacks();
   let obj = require("StickersHooks");
-  analyticsLocations = analyticsLocations(6583)(analyticsLocations(6603).EMPTY_STATE).analyticsLocations;
-  const tmp3 = analyticsLocations(6583);
+  analyticsLocations = analyticsLocations(6749)(analyticsLocations(6769).EMPTY_STATE).analyticsLocations;
+  const tmp3 = analyticsLocations(6749);
   const items = [StickersStore];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     const mapped = EMPTY_STATE_STICKERS.map((item) => stickerById.getStickerById(item));
@@ -79,7 +79,7 @@ export default function _default() {
       if (sticker != null) {
         id = sticker.id;
       }
-      return closure_1_11(sticker(5435).PressableOpacity, obj, id);
+      return closure_1_11(sticker(5602).PressableOpacity, obj, id);
     })
   });
   const obj7 = { style: tmp.premiumButton, children: null };
@@ -101,16 +101,16 @@ export default function _default() {
       if (sticker != null) {
         id = sticker.id;
       }
-      return closure_1_11(sticker(5435).PressableOpacity, obj, id);
+      return closure_1_11(sticker(5602).PressableOpacity, obj, id);
     })
   };
-  obj9.source = analyticsLocations(8661);
+  obj9.source = analyticsLocations(8826);
   obj9.style = tmp.nitroWheel;
-  obj8.icon = closure_11(analyticsLocations(5899), obj9);
+  obj8.icon = closure_11(analyticsLocations(6065), obj9);
   const intl3 = require("util").intl;
   obj8.text = intl3.string(require("util").t.pj0XBN);
   obj8.onPress = function onPress() {
-    return analyticsLocations(9869)({ section: constants.EXPRESSION_PICKER });
+    return analyticsLocations(10036)({ section: constants.EXPRESSION_PICKER });
   };
   obj7.children = closure_11(require("components/Button/Button").Button, obj8);
   items2[3] = closure_11(View, obj7);

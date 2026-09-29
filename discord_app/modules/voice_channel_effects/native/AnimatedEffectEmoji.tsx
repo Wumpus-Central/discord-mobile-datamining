@@ -1,12 +1,12 @@
-// === Module 8910: AnimatedEffectEmoji ===
+// === Module 9075: AnimatedEffectEmoji ===
 
-// Module 8910 (AnimatedEffectEmoji)
+// Module 9075 (AnimatedEffectEmoji)
 import nativeDefault from "native" /* 576 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import native from "native" /* 1177 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import timing from "timing" /* 4837 */;
-import FastImageDefault from "FastImage" /* 5899 */;
+import FastImageDefault from "FastImage" /* 6065 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4825 */;
 

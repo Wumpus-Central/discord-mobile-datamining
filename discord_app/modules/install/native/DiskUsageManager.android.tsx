@@ -1,7 +1,7 @@
-// === Module 15124: DiskUsageManager ===
+// === Module 15299: DiskUsageManager ===
 
-// Module 15124 (DiskUsageManager)
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6539 */;
+// Module 15299 (DiskUsageManager)
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6705 */;
 
 class DiskUsageManager extends tmp2 {
   constructor() {

@@ -1,15 +1,15 @@
-// === Module 10373: ChannelRow ===
+// === Module 10542: ChannelRow ===
 
-// Module 10373 (ChannelRow)
+// Module 10542 (ChannelRow)
 import nativeDefault from "native" /* 576 */;
 import _modDef4421 from "module_4421" /* 4421 */;
 import DateUtils from "DateUtils" /* 4512 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import useChannelName from "useChannelName" /* 4989 */;
-import TextIcon2 from "TextIcon" /* 5394 */;
-import ForumIcon from "ForumIcon" /* 5402 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10374 */;
-import GuildIconWithChannelType from "GuildIconWithChannelType" /* 10465 */;
+import TextIcon2 from "TextIcon" /* 5560 */;
+import ForumIcon from "ForumIcon" /* 5568 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10543 */;
+import GuildIconWithChannelType from "GuildIconWithChannelType" /* 10634 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import GuildStore from "GuildStore" /* 2067 */;
@@ -19,7 +19,7 @@ import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10320).UserRowModes;
+const UserRowModes = fn(10489).UserRowModes;
 const ReadStateTypes = fn(5018).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);

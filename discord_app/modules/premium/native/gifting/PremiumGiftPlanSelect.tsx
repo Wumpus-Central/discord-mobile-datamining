@@ -1,15 +1,15 @@
-// === Module 10127: PremiumGiftPlanSelect ===
+// === Module 10294: PremiumGiftPlanSelect ===
 
-// Module 10127 (PremiumGiftPlanSelect)
+// Module 10294 (PremiumGiftPlanSelect)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import native from "native" /* 1177 */;
 import timing from "timing" /* 4837 */;
-import PremiumGiftFeaturesCardDefault from "PremiumGiftFeaturesCard" /* 10215 */;
+import PremiumGiftFeaturesCardDefault from "PremiumGiftFeaturesCard" /* 10382 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7637 */;
-import PromotionsStore from "PromotionsStore" /* 10128 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7802 */;
+import PromotionsStore from "PromotionsStore" /* 10295 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -503,7 +503,7 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
         const tmp4Result8 = tmp4(tmp2[31]);
       }
     } else {
-      const obj44 = { style: tmp14.avatar, guildId: "r", size: "flex", user: null };
+      const obj44 = { style: tmp14.avatar, guildId: "r", size: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004925451564688879, user: -0.000000000000000000000000000000013096336421405486 };
       const AvatarSizes = tmp(tmp2[27]).AvatarSizes;
       obj44.size = enabled ? AvatarSizes.LARGE_48 : AvatarSizes.XLARGE;
       obj44.user = recipientUser;

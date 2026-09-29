@@ -1,6 +1,6 @@
-// === Module 8927: getIFrameAllowAttributes ===
+// === Module 9092: getIFrameAllowAttributes ===
 
-// Module 8927 (getIFrameAllowAttributes)
+// Module 9092 (getIFrameAllowAttributes)
 import size from "module_2" /* 2 */;
 
 let closure_0 = ["autoplay", "encrypted-media"];

@@ -1,10 +1,10 @@
-// === Module 10331: GameRelationshipActionCreators ===
+// === Module 10500: GameRelationshipActionCreators ===
 
-// Module 10331 (GameRelationshipActionCreators)
+// Module 10500 (GameRelationshipActionCreators)
 import util from "util" /* 1115 */;
 import shared from "shared" /* 4685 */;
 import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4735 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5203 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5369 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

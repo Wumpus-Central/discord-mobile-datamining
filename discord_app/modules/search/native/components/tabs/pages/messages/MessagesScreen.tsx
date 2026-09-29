@@ -1,13 +1,13 @@
-// === Module 16541: MessagesScreen ===
+// === Module 16730: MessagesScreen ===
 
-// Module 16541 (MessagesScreen)
-import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 16504 */;
-import BaseMessagesScreen from "BaseMessagesScreen" /* 16527 */;
+// Module 16730 (MessagesScreen)
+import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 16692 */;
+import BaseMessagesScreen from "BaseMessagesScreen" /* 16716 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 11822 */;
+import SearchQueryStore from "SearchQueryStore" /* 11991 */;
 
 require = fn;
-const SearchConstants = fn(7303);
+const SearchConstants = fn(7468);
 ({ SEARCH_FILTERS_BY_TAB: hasOwnProperty, SearchFilter: metroRequire, SEARCH_PINNED_MESSAGES_LINE_CLAMP: closure_7, SEARCH_MESSAGES_DEFAULT_LINE_CLAMP: closure_8, MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_9, SearchListItemTypes: c10 } = SearchConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -50,15 +50,15 @@ export default noop.memo(function MessagesScreen(isFocused) {
   }
   const obj5 = { searchContext, tab, placeholderHeight: item, numColumns: 1 };
   const tmpResult = searchContext(stateFromStores[9]);
-  const obj6 = { searchContext, hasKeywordResults: null, isKeywordFirstPageLoading: null };
+  const obj6 = { searchContext, searchQueryString: stateFromStores, hasKeywordResults: null, isKeywordFirstPageLoading: null };
   let num = length;
   if (length == null) {
     num = 0;
   }
   obj6.hasKeywordResults = num > 0;
   obj6.isKeywordFirstPageLoading = isFirstPageLoading;
-  const intelligenceSearchMessages = searchContext(stateFromStores[10]).useIntelligenceSearchMessages(obj6);
-  item = intelligenceSearchMessages.item;
+  const smartSearchMessages = searchContext(stateFromStores[10]).useSmartSearchMessages(obj6);
+  item = smartSearchMessages.item;
   const items4 = [callback, item, tmp6, searchMessages, memo, placeholderCount];
   const memo1 = obj4.useMemo(() => {
     const items = [];
@@ -93,12 +93,12 @@ export default noop.memo(function MessagesScreen(isFocused) {
   }, items4);
   const tmpResult3 = searchContext(stateFromStores[10]);
   const contentContainerStyles = searchContext(stateFromStores[12]).useContentContainerStyles();
-  const obj7 = { data: memo1, searchContext, tab, isFocused: isFocused.isFocused, contentContainerStyle: contentContainerStyles.messagesContentContainer, ItemSeparatorComponent: null, isFirstPageLoading: null, isNextPageLoading: null, keywordResultCount: null, intelligenceStatus: null };
+  const obj7 = { data: memo1, searchContext, tab, isFocused: isFocused.isFocused, contentContainerStyle: contentContainerStyles.messagesContentContainer, ItemSeparatorComponent: null, isFirstPageLoading: null, isNextPageLoading: null, keywordResultCount: null, smartSearchStatus: null };
   const tmpResult4 = searchContext(stateFromStores[12]);
   obj7.ItemSeparatorComponent = searchContext(stateFromStores[13]).MessageVerticalSeparator;
   obj7.isFirstPageLoading = isFirstPageLoading;
   obj7.isNextPageLoading = searchMessagesLoadingState.isNextPageLoading;
   obj7.keywordResultCount = length;
-  obj7.intelligenceStatus = intelligenceSearchMessages.status;
-  return jsx(searchMessages(stateFromStores[7]), { data: memo1, searchContext, tab, isFocused: isFocused.isFocused, contentContainerStyle: contentContainerStyles.messagesContentContainer, ItemSeparatorComponent: null, isFirstPageLoading: null, isNextPageLoading: null, keywordResultCount: null, intelligenceStatus: null });
+  obj7.smartSearchStatus = smartSearchMessages.status;
+  return jsx(searchMessages(stateFromStores[7]), { data: memo1, searchContext, tab, isFocused: isFocused.isFocused, contentContainerStyle: contentContainerStyles.messagesContentContainer, ItemSeparatorComponent: null, isFirstPageLoading: null, isNextPageLoading: null, keywordResultCount: null, smartSearchStatus: null });
 });

@@ -1,6 +1,6 @@
-// === Module 5893: DeprecatedLayoutAnimation ===
+// === Module 6059: DeprecatedLayoutAnimation ===
 
-// Module 5893 (DeprecatedLayoutAnimation)
+// Module 6059 (DeprecatedLayoutAnimation)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import AccessibilityStore from "AccessibilityStore" /* 4825 */;

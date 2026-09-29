@@ -1,6 +1,6 @@
-// === Module 12038: useDeactivateWarningText ===
+// === Module 12209: useDeactivateWarningText ===
 
-// Module 12038 (useDeactivateWarningText)
+// Module 12209 (useDeactivateWarningText)
 import util from "util" /* 1115 */;
 import _modDef2519 from "module_2519" /* 2519 */;
 import Powerups from "Powerups" /* 4727 */;

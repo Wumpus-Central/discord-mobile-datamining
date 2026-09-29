@@ -1,13 +1,13 @@
-// === Module 9031: AddMembersActionSheet ===
+// === Module 9196: AddMembersActionSheet ===
 
-// Module 9031 (AddMembersActionSheet)
+// Module 9196 (AddMembersActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4474 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4541 */;
 import RegexUtilsDefault from "RegexUtils" /* 4820 */;
-import GuildUtilsDefault from "GuildUtils" /* 5831 */;
-import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 9016 */;
+import GuildUtilsDefault from "GuildUtils" /* 5998 */;
+import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 9181 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -348,7 +348,7 @@ class AddMembersBody {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_8, ScrollView: closure_9 } = get_ActivityIndicator);
-const ChannelPermissionsConstants = fn(7849);
+const ChannelPermissionsConstants = fn(8014);
 ({ RowType: closure_14, MEMBER_REQUEST_COUNT: closure_15 } = ChannelPermissionsConstants);
 const Permissions = fn(1085).Permissions;
 const jsxProd = fn(21);
@@ -395,7 +395,7 @@ export default function AddMembersActionSheet(channel) {
         }
       }
     });
-    await closure_0(9017).savePermissionUpdates(channel.id, items);
+    await closure_0(9182).savePermissionUpdates(channel.id, items);
     if (1 === tmp7) {
       dependencyMap = 0;
       c5 = 3;
@@ -447,12 +447,12 @@ export default function AddMembersActionSheet(channel) {
       }
       const obj4 = { scrollable: true, header: null, startExpanded: true, children: null };
       obj2.trailing = closure_17(tmp12, obj7);
-      obj4.header = closure_17(tmp4(6570).BottomSheetTitleHeader, obj2);
+      obj4.header = closure_17(tmp4(6736).BottomSheetTitleHeader, obj2);
       const obj5 = { style: tmp.container, children: null };
       const obj6 = { channel, guild: stateFromStores, permission: channel.accessPermissions, pendingAdditions, setPendingAdditions: tmp2[1], inActionSheet: true };
       obj5.children = closure_17(AddMembersBody, obj6);
       obj4.children = closure_17(closure_8, obj5);
-      return closure_17(tmp4(6571).BottomSheet, obj4);
+      return closure_17(tmp4(6737).BottomSheet, obj4);
     }
     obj7 = { size: "sm", text: null, onPress: null, variant: null, disabled: null };
     const intl = tmp4(1115).intl;

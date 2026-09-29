@@ -1,20 +1,20 @@
-// === Module 9858: StickerPackHeader ===
+// === Module 10025: StickerPackHeader ===
 
-// Module 9858 (StickerPackHeader)
+// Module 10025 (StickerPackHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import StickersUtils from "StickersUtils" /* 5198 */;
-import Pressables from "Pressables" /* 5435 */;
-import _modDef9859 from "module_9859" /* 9859 */;
-import _modDef9860 from "module_9860" /* 9860 */;
-import StickerPackBannerDefault from "StickerPackBanner" /* 9861 */;
+import StickersUtils from "StickersUtils" /* 5364 */;
+import Pressables from "Pressables" /* 5602 */;
+import _modDef10026 from "module_10026" /* 10026 */;
+import _modDef10027 from "module_10027" /* 10027 */;
+import StickerPackBannerDefault from "StickerPackBanner" /* 10028 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const StickerPickerConstants = fn(9736);
+const StickerPickerConstants = fn(9903);
 ({ PADDING_VERTICAL, PADDING_HORIZONTAL } = StickerPickerConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
@@ -48,14 +48,14 @@ export default noop.memo((withDescription) => {
   let result = StickersUtils.isStickerPackAnimated(stickerPack);
   if (result) {
     const obj5 = { style: tmp.iconContainer, children: null };
-    const obj6 = { source: _modDef9859, style: tmp.animatedIcon, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color };
+    const obj6 = { source: _modDef10026, style: tmp.animatedIcon, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color };
     obj5.children = React4(native.Icon, obj6);
     result = React4(View, obj5);
   }
   items[1] = result;
   const obj7 = { style: tmp.iconContainer, children: null };
   const obj3 = { style: tmp.label, lineClamp: 1, variant: "text-md/bold", color: "mobile-text-heading-primary", children: stickerPack.name };
-  obj7.children = React4(native.Icon, { source: _modDef9860, style: tmp.premiumIcon, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color });
+  obj7.children = React4(native.Icon, { source: _modDef10027, style: tmp.premiumIcon, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color });
   items[2] = React4(View, obj7);
   obj2.children = items;
   obj.children = hasOwnProperty(View, obj2);

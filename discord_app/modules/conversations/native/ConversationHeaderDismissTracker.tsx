@@ -1,6 +1,6 @@
-// === Module 11037: ConversationHeaderDismissTracker ===
+// === Module 11206: ConversationHeaderDismissTracker ===
 
-// Module 11037 (ConversationHeaderDismissTracker)
+// Module 11206 (ConversationHeaderDismissTracker)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conversations/native/ConversationHeaderDismissTracker.tsx");

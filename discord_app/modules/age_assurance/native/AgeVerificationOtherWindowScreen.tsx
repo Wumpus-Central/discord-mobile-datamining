@@ -1,14 +1,14 @@
-// === Module 7905: AgeVerificationOtherWindowScreen ===
+// === Module 8070: AgeVerificationOtherWindowScreen ===
 
-// Module 7905 (AgeVerificationOtherWindowScreen)
+// Module 8070 (AgeVerificationOtherWindowScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3039 from "module_3039" /* 3039 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import Stack_Stack from "Stack/Stack" /* 5279 */;
-import MobilePhoneIcon from "MobilePhoneIcon" /* 6379 */;
-import ModalScreen from "ModalScreen" /* 7870 */;
-import ModalContent from "ModalContent" /* 7871 */;
+import Stack_Stack from "Stack/Stack" /* 5445 */;
+import MobilePhoneIcon from "MobilePhoneIcon" /* 6545 */;
+import ModalScreen from "ModalScreen" /* 8035 */;
+import ModalContent from "ModalContent" /* 8036 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

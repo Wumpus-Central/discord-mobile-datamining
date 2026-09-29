@@ -1,9 +1,9 @@
-// === Module 12467: InAppReportsIgnoreUserElement ===
+// === Module 12637: InAppReportsIgnoreUserElement ===
 
-// Module 12467 (InAppReportsIgnoreUserElement)
+// Module 12637 (InAppReportsIgnoreUserElement)
 import NicknameUtilsDefault from "NicknameUtils" /* 4988 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5016 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9195 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9360 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import RelationshipStore from "RelationshipStore" /* 4479 */;

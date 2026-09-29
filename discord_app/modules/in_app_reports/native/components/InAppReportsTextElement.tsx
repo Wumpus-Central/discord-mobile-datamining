@@ -1,8 +1,8 @@
-// === Module 8110: InAppReportsTextElement ===
+// === Module 8275: InAppReportsTextElement ===
 
-// Module 8110 (InAppReportsTextElement)
+// Module 8275 (InAppReportsTextElement)
 import Text_Text from "Text/Text" /* 4832 */;
-import CustomMarkupAll from "CustomMarkup" /* 5301 */;
+import CustomMarkupAll from "CustomMarkup" /* 5467 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

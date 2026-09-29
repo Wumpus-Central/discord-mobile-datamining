@@ -1,6 +1,6 @@
-// === Module 7106: applicationDirectoryAnalytics ===
+// === Module 7271: applicationDirectoryAnalytics ===
 
-// Module 7106 (applicationDirectoryAnalytics)
+// Module 7271 (applicationDirectoryAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4655 */;

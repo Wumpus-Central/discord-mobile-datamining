@@ -1,6 +1,6 @@
-// === Module 8271: APNGPlayer ===
+// === Module 8436: APNGPlayer ===
 
-// Module 8271 (APNGPlayer)
+// Module 8436 (APNGPlayer)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -67,31 +67,31 @@ export const APNGPlayer = noop.forwardRef((onLoad, arg1) => {
   const imperativeHandle = noop.useImperativeHandle(arg1, () => ({
     play() {
       if (null != ref.current) {
-        const Commands = onLoad(8272).Commands;
+        const Commands = onLoad(8437).Commands;
         Commands.play(tmp.current);
       }
     },
     pause() {
       if (null != ref.current) {
-        const Commands = onLoad(8272).Commands;
+        const Commands = onLoad(8437).Commands;
         Commands.pause(tmp.current);
       }
     },
     stop() {
       if (null != ref.current) {
-        const Commands = onLoad(8272).Commands;
+        const Commands = onLoad(8437).Commands;
         Commands.seek(ref.current, 0);
-        const Commands2 = onLoad(8272).Commands;
+        const Commands2 = onLoad(8437).Commands;
         Commands2.pause(ref.current);
       }
     },
     seek(arg0) {
       if (null != ref.current) {
-        const Commands = onLoad(8272).Commands;
+        const Commands = onLoad(8437).Commands;
         Commands.seek(tmp.current, arg0);
       }
     }
   }));
   const merged1 = Object.assign(merged);
-  return jsx(ref(8272), { ref, onLoad: callback });
+  return jsx(ref(8437), { ref, onLoad: callback });
 });

@@ -1,6 +1,6 @@
-// === Module 16812: ChannelEmojiConstants ===
+// === Module 16999: ChannelEmojiConstants ===
 
-// Module 16812 (ChannelEmojiConstants)
+// Module 16999 (ChannelEmojiConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/channel_emoji/ChannelEmojiConstants.tsx");

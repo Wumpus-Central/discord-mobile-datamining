@@ -1,6 +1,6 @@
-// === Module 8706: useCanToggleCommunicationDisableOnUser ===
+// === Module 8871: useCanToggleCommunicationDisableOnUser ===
 
-// Module 8706 (useCanToggleCommunicationDisableOnUser)
+// Module 8871 (useCanToggleCommunicationDisableOnUser)
 import Constants from "Constants" /* 1074 */;
 import GuildRecord from "GuildRecord" /* 2063 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4474 */;

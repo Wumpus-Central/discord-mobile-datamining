@@ -1,6 +1,6 @@
-// === Module 6697: ChannelMemberStore ===
+// === Module 6863: ChannelMemberStore ===
 
-// Module 6697 (ChannelMemberStore)
+// Module 6863 (ChannelMemberStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -16,7 +16,7 @@ import GuildMemberStore from "GuildMemberStore" /* 2108 */;
 import GuildRoleStore from "GuildRoleStore" /* 2102 */;
 import GuildStore from "GuildStore" /* 2067 */;
 import PresenceStore from "PresenceStore" /* 4876 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5591 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5758 */;
 import UserStore from "UserStore" /* 1372 */;
 
 let require = fn;

@@ -1,11 +1,11 @@
-// === Module 11044: ChannelsAndRolesModal ===
+// === Module 11213: ChannelsAndRolesModal ===
 
-// Module 11044 (ChannelsAndRolesModal)
+// Module 11213 (ChannelsAndRolesModal)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import useGuildOnboardingAvailableDefault from "useGuildOnboardingAvailable" /* 6753 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10385 */;
+import useGuildOnboardingAvailableDefault from "useGuildOnboardingAvailable" /* 6919 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10554 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2067 */;
@@ -69,7 +69,7 @@ function ChannelsAndRolesScreen(guildId) {
   obj2 = segmentedControlState;
 }
 const View = fn(17).View;
-const GuildOnboardingTab = fn(6522).GuildOnboardingTab;
+const GuildOnboardingTab = fn(6688).GuildOnboardingTab;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4836);

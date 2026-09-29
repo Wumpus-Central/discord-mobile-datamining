@@ -1,10 +1,10 @@
-// === Module 11750: ChatFloatingNavButton ===
+// === Module 11919: ChatFloatingNavButton ===
 
-// Module 11750 (ChatFloatingNavButton)
+// Module 11919 (ChatFloatingNavButton)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
-import spring from "spring" /* 5280 */;
-import springPresets from "springPresets" /* 5284 */;
+import spring from "spring" /* 5446 */;
+import springPresets from "springPresets" /* 5450 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

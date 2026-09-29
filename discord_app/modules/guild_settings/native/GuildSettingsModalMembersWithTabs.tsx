@@ -1,15 +1,15 @@
-// === Module 16220: GuildSettingsModalMembersWithTabs ===
+// === Module 16396: GuildSettingsModalMembersWithTabs ===
 
-// Module 16220 (GuildSettingsModalMembersWithTabs)
+// Module 16396 (GuildSettingsModalMembersWithTabs)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4658 */;
-import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 6683 */;
-import ContextMenu from "ContextMenu" /* 7358 */;
-import MemberSafetyPageTypes from "MemberSafetyPageTypes" /* 16221 */;
-import GuildSettingsModalMembersDefault from "GuildSettingsModalMembers" /* 16222 */;
-import showMembersManagementActionSheet from "showMembersManagementActionSheet" /* 16223 */;
-import GuildSettingsModalMemberApplicationsDefault from "GuildSettingsModalMemberApplications" /* 16228 */;
+import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 6849 */;
+import ContextMenu from "ContextMenu" /* 7523 */;
+import MemberSafetyPageTypes from "MemberSafetyPageTypes" /* 16397 */;
+import GuildSettingsModalMembersDefault from "GuildSettingsModalMembers" /* 16398 */;
+import showMembersManagementActionSheet from "showMembersManagementActionSheet" /* 16399 */;
+import GuildSettingsModalMemberApplicationsDefault from "GuildSettingsModalMemberApplications" /* 16404 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2067 */;
@@ -113,12 +113,12 @@ export default noop.memo((guildId) => {
       items: membersManagementActions,
       children(ref) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-        const obj = { source: closure_1_1(9091), accessibilityLabel: null, ref: null };
+        const obj = { source: closure_1_1(9256), accessibilityLabel: null, ref: null };
         const intl = guildId(1115).intl;
         obj.accessibilityLabel = intl.string(guildId(1115).t.ogxXGq);
         obj.ref = ref.ref;
         const merged1 = Object.assign(merged);
-        return closure_1_9(guildId(6795).HeaderActionButton, obj);
+        return closure_1_9(guildId(6961).HeaderActionButton, obj);
       }
     });
   }, items5);

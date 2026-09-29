@@ -1,6 +1,6 @@
-// === Module 16348: vibegrationsPageVisibility ===
+// === Module 16528: vibegrationsPageVisibility ===
 
-// Module 16348 (vibegrationsPageVisibility)
+// Module 16528 (vibegrationsPageVisibility)
 import AppStateStore from "AppStateStore" /* 1980 */;
 
 const AppStates = fn(1074).AppStates;

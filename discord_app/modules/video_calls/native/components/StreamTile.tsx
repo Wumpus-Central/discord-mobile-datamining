@@ -1,16 +1,16 @@
-// === Module 8872: StreamTile ===
+// === Module 9037: StreamTile ===
 
-// Module 8872 (StreamTile)
+// Module 9037 (StreamTile)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import Pressables from "Pressables" /* 5435 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6073 */;
-import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 8870 */;
-import useVideoStreamErrorDefault from "useVideoStreamError" /* 8873 */;
-import VideoRenderer from "VideoRenderer" /* 8880 */;
-import StreamQualityLiveIndicatorDefault from "StreamQualityLiveIndicator" /* 8894 */;
-import _modDef8898 from "module_8898" /* 8898 */;
+import Pressables from "Pressables" /* 5602 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6239 */;
+import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 9035 */;
+import useVideoStreamErrorDefault from "useVideoStreamError" /* 9038 */;
+import VideoRenderer from "VideoRenderer" /* 9045 */;
+import StreamQualityLiveIndicatorDefault from "StreamQualityLiveIndicator" /* 9059 */;
+import _modDef9063 from "module_9063" /* 9063 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4858 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -79,11 +79,11 @@ let closure_15 = noop.memo((participant) => {
   if (null != stateFromStores) {
     const state = stateFromStores.state;
     if (ApplicationStreamStates.FAILED === state) {
-      const obj2 = { stream: stateFromStores, removeCloseButton: removeEmptyStateButton, removeSplashImage: removeEmptyStateImage, type: tmp(8876).VideoEmptyTypes.STREAM_FAILED, style: StyleSheet.absoluteFill };
-      return closure_10(tmp4(8876), obj2);
+      const obj2 = { stream: stateFromStores, removeCloseButton: removeEmptyStateButton, removeSplashImage: removeEmptyStateImage, type: tmp(9041).VideoEmptyTypes.STREAM_FAILED, style: StyleSheet.absoluteFill };
+      return closure_10(tmp4(9041), obj2);
     } else if (ApplicationStreamStates.ENDED === state) {
-      const obj3 = { stream: stateFromStores, removeCloseButton: removeEmptyStateButton, removeSplashImage: removeEmptyStateImage, type: tmp(8876).VideoEmptyTypes.STREAM_ENDED, style: StyleSheet.absoluteFill };
-      return closure_10(tmp4(8876), obj3);
+      const obj3 = { stream: stateFromStores, removeCloseButton: removeEmptyStateButton, removeSplashImage: removeEmptyStateImage, type: tmp(9041).VideoEmptyTypes.STREAM_ENDED, style: StyleSheet.absoluteFill };
+      return closure_10(tmp4(9041), obj3);
     } else {
       if (ApplicationStreamStates.RECONNECTING === state) {
         const obj4 = { title: null };
@@ -104,8 +104,8 @@ let closure_15 = noop.memo((participant) => {
         }
       }
       if (null != tmp5) {
-        const obj7 = { stream: stateFromStores, removeCloseButton: removeEmptyStateButton, removeSplashImage: removeEmptyStateImage, type: tmp(8876).VideoEmptyTypes.STREAM_FAILED, style: StyleSheet.absoluteFill, avError: tmp5 };
-        return closure_10(tmp4(8876), obj7);
+        const obj7 = { stream: stateFromStores, removeCloseButton: removeEmptyStateButton, removeSplashImage: removeEmptyStateImage, type: tmp(9041).VideoEmptyTypes.STREAM_FAILED, style: StyleSheet.absoluteFill, avError: tmp5 };
+        return closure_10(tmp4(9041), obj7);
       } else {
         const id = AuthenticationStore.getId();
         const obj8 = {
@@ -120,15 +120,15 @@ let closure_15 = noop.memo((participant) => {
           paused: null
         };
         if (stateFromStores.ownerId === id) {
-          let REMOTE_STREAM = tmp(8883).VideoSpinnerContext.SELF_STREAM;
+          let REMOTE_STREAM = tmp(9048).VideoSpinnerContext.SELF_STREAM;
         } else {
-          REMOTE_STREAM = tmp(8883).VideoSpinnerContext.REMOTE_STREAM;
+          REMOTE_STREAM = tmp(9048).VideoSpinnerContext.REMOTE_STREAM;
         }
         const obj9 = { children: null };
         obj8.videoSpinnerContext = REMOTE_STREAM;
         obj8.userId = user.id;
         obj8.paused = stateFromStores.state === ApplicationStreamStates.PAUSED;
-        const items1 = [closure_10(tmp4(8880), obj8), tmp9];
+        const items1 = [closure_10(tmp4(9045), obj8), tmp9];
         obj9.children = items1;
         return closure_11(closure_12, obj9);
       }
@@ -144,7 +144,7 @@ let closure_16 = noop.memo((arg0) => {
   const items = [closure_13().statusWrapper, style];
   obj.style = items;
   const tmp = closure_13();
-  obj.children = closure_1_10(native.Icon, { source: _modDef8898, size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE });
+  obj.children = closure_1_10(native.Icon, { source: _modDef9063, size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE });
   return closure_1_10(Pressables.PressableOpacity, obj);
 });
 size = fn(2);

@@ -1,7 +1,7 @@
-// === Module 11995: guildTheme ===
+// === Module 12166: guildTheme ===
 
-// Module 11995 (guildTheme)
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 11996 */;
+// Module 12166 (guildTheme)
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12167 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 4723 */;
 
 const require = globalThis.__r;

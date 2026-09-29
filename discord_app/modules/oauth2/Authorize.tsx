@@ -1,11 +1,11 @@
-// === Module 8516: Authorize ===
+// === Module 8681: Authorize ===
 
-// Module 8516 (Authorize)
+// Module 8681 (Authorize)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4474 */;
-import keysSorter from "keysSorter" /* 5768 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 7787 */;
-import scopes from "scopes" /* 8517 */;
+import keysSorter from "keysSorter" /* 5935 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 7952 */;
+import scopes from "scopes" /* 8682 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4655 */;
 

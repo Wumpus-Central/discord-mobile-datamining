@@ -1,10 +1,10 @@
-// === Module 6719: SensitiveMediaGoreRedactionSettingsUtils ===
+// === Module 6885: SensitiveMediaGoreRedactionSettingsUtils ===
 
-// Module 6719 (SensitiveMediaGoreRedactionSettingsUtils)
+// Module 6885 (SensitiveMediaGoreRedactionSettingsUtils)
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
 import UserSettings from "UserSettings" /* 2021 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5735 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 6717 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5902 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 6883 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 

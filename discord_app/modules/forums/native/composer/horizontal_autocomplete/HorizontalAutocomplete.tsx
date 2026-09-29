@@ -1,6 +1,6 @@
-// === Module 10087: HorizontalAutocomplete ===
+// === Module 10254: HorizontalAutocomplete ===
 
-// Module 10087 (HorizontalAutocomplete)
+// Module 10254 (HorizontalAutocomplete)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
@@ -8,18 +8,18 @@ import ReanimatedRexportDefault from "ReanimatedRexport" /* 4566 */;
 import UserUtilsDefault from "UserUtils" /* 4678 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import timing from "timing" /* 4837 */;
-import useMountEffectDefault from "useMountEffect" /* 5298 */;
-import FastImageDefault from "FastImage" /* 5899 */;
-import RoleIconUtils from "RoleIconUtils" /* 6608 */;
-import RoleIconDefault from "RoleIcon" /* 6626 */;
-import _modDef7581 from "module_7581" /* 7581 */;
+import useMountEffectDefault from "useMountEffect" /* 5464 */;
+import FastImageDefault from "FastImage" /* 6065 */;
+import RoleIconUtils from "RoleIconUtils" /* 6774 */;
+import RoleIconDefault from "RoleIcon" /* 6792 */;
+import _modDef7746 from "module_7746" /* 7746 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4825 */;
 import GuildRoleStore from "GuildRoleStore" /* 2102 */;
 import GuildStore from "GuildStore" /* 2067 */;
 import RelationshipStore from "RelationshipStore" /* 4479 */;
 import UserStore from "UserStore" /* 1372 */;
-import TextStyles from "TextStyles" /* 5836 */;
+import TextStyles from "TextStyles" /* 6003 */;
 
 require = fn;
 function HorizontalAutocompleteOption(arg0) {
@@ -130,10 +130,10 @@ export default {
     channel(504);
     [][0] = channel;
     if (channel.type === constants.GUILD_CATEGORY) {
-      let channelIconWithGuild = _modDef7581;
+      let channelIconWithGuild = _modDef7746;
     } else {
-      channelIconWithGuild = tmp2(5335).getChannelIconWithGuild(channel, tmp5);
-      const tmp2Result = tmp2(5335);
+      channelIconWithGuild = tmp2(5501).getChannelIconWithGuild(channel, tmp5);
+      const tmp2Result = tmp2(5501);
     }
     const tmp = closure_13();
     const tmp8 = closure_11(channel(1177).Icon, { source: channelIconWithGuild });

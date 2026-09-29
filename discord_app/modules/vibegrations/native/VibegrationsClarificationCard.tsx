@@ -1,8 +1,8 @@
-// === Module 16381: VibegrationsClarificationCard ===
+// === Module 16565: VibegrationsClarificationCard ===
 
-// Module 16381 (VibegrationsClarificationCard)
+// Module 16565 (VibegrationsClarificationCard)
 import nativeDefault from "native" /* 576 */;
-import VibegrationsClarification from "VibegrationsClarification" /* 16382 */;
+import VibegrationsClarification from "VibegrationsClarification" /* 16566 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,162 +18,298 @@ let obj4 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.spac
 obj2.footer = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 obj2.customField = { flex: 1 };
 let closure_8 = createStyles.createStyles(obj2);
+let closure_9 = [];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/native/VibegrationsClarificationCard.tsx");
 
 export default function VibegrationsClarificationCard(clarification) {
   clarification = clarification.clarification;
   const onSubmit = clarification.onSubmit;
+  const onDismiss = clarification.onDismiss;
   let first;
   noop = undefined;
-  let bound;
-  const tmp = bound();
+  c5 = undefined;
+  closure_8 = undefined;
+  closure_13 = undefined;
+  let callback;
+  closure_15 = undefined;
+  let str;
+  c17 = undefined;
+  c18 = undefined;
+  let tmp = closure_8();
   dependencyMap = tmp;
   const tmp2 = first(noop.useState({}), 2);
   first = tmp2[0];
   noop = tmp2[1];
+  [tmp5, c5] = first(noop.useState({}), 2);
+  const tmp6 = first(noop.useState({}), 2);
+  closure_6 = tmp6[1];
+  const tmp7 = first(noop.useState(0), 2);
+  closure_7 = tmp7[1];
+  let tmp8 = null == onSubmit;
+  closure_8 = tmp8;
+  const bound = Math.min(tmp7[0], length - 1);
+  let id = tmp10;
+  closure_11 = tmp11;
+  let t = dependencyMap;
   const tmp4 = first(noop.useState({}), 2);
-  closure_5 = tmp4[1];
-  let tmp5 = first(noop.useState(0), 2);
-  closure_6 = tmp5[1];
-  closure_7 = tmp6;
-  bound = Math.min(tmp5[0], length - 1);
-  const id = tmp8;
+  const accessibilityRole = clarification(4548).useCheckboxA11yNative({ checked: false }).accessibilityRole;
+  let tmp13 = tmp6[0][tmp10.id];
+  if (tmp13 == null) {
+    tmp13 = bound;
+  }
+  closure_13 = tmp13;
   let items = [first, clarification, bound, onSubmit, clarification.questions[bound].id];
-  const callback = noop.useCallback((arg0) => {
+  callback = obj.useCallback((arg0) => {
     if (null != onSubmit) {
       const obj = {};
       const merged = Object.assign(first);
       obj[id.id] = arg0;
       closure_4(obj);
-      const result = VibegrationsClarification.nextClarificationStep(clarification, obj, bound);
+      const result = VibegrationsClarification.followingClarificationStep(clarification, obj, bound);
       if (null == result) {
         const result1 = VibegrationsClarification.formatClarificationAnswers(clarification, obj);
         if ("" !== result1) {
-          tmp(result1);
+          tmp(result1, VibegrationsClarification.clarificationAnswersPayload(clarification, obj));
+          const tmp13Result2 = VibegrationsClarification;
         }
         const tmp13Result = VibegrationsClarification;
       } else {
-        closure_6(result);
+        closure_7(result);
       }
     }
   }, items);
-  let items1 = [callback];
-  closure_11 = noop.useCallback((id) => callback({ kind: "option", optionId: id.id, text: id.label }), items1);
-  const items2 = [clarification, null == onSubmit, bound];
-  let str = tmp4[0][tmp8.id];
-  const callback1 = noop.useCallback(() => {
-    if (!closure_7) {
-      if (0 !== bound) {
-        closure_0 = clarification.questions[bound - 1];
-        closure_4((arg0) => {
-          const merged = Object.assign(arg0);
-          delete tmp[tmp2];
-          return {};
-        });
-        closure_5((arg0) => {
-          const merged = Object.assign(arg0);
-          delete tmp[tmp2];
-          return {};
-        });
-        closure_6(bound - 1);
-      }
+  let items1 = [true === clarification.questions[bound].multi_select, clarification.questions[bound], callback];
+  closure_15 = obj.useCallback((arg0) => {
+    id = arg0;
+    if (closure_11) {
+      closure_6((arr) => {
+        const obj = {};
+        const merged = Object.assign(arr);
+        let tmp3 = arr[user.id];
+        if (tmp3 == null) {
+          tmp3 = closure_9;
+        }
+        obj[user.id] = VibegrationsClarification.toggleClarificationOption(user, tmp3, id.id);
+        return obj;
+      });
+    } else {
+      _undefined((arg0) => {
+        const obj = {};
+        const merged = Object.assign(arg0);
+        obj[user.id] = "";
+        return obj;
+      });
+      let obj = { kind: "option", optionId: null, text: null };
+      ({ id: obj.optionId, label: obj.text } = arg0);
+      callback(obj);
+    }
+  }, items1);
+  const items2 = [tmp8, bound];
+  str = tmp5[tmp10.id];
+  const callback1 = obj.useCallback(() => {
+    let tmp = closure_8;
+    if (!closure_8) {
+      tmp = 0 === bound;
+    }
+    if (!tmp) {
+      closure_7(bound - 1);
     }
   }, items2);
   if (str == null) {
     str = "";
   }
-  const items3 = [str, callback];
-  const obj2 = { style: tmp.card, children: null };
-  let tmp14 = null;
-  const callback2 = noop.useCallback(() => {
-    const trimmed = str.trim();
-    if ("" !== trimmed) {
-      const obj = { kind: "custom", text: trimmed };
-      callback(obj);
+  let multiSelectAnswerResult = null;
+  if (true === clarification.questions[bound].multi_select) {
+    multiSelectAnswerResult = tmp12(16566).multiSelectAnswer(tmp10, tmp13, str);
+    const tmp12Result = tmp12(16566);
+  }
+  c17 = multiSelectAnswerResult;
+  const items3 = [str, multiSelectAnswerResult, callback];
+  const callback2 = obj.useCallback(() => {
+    if (null == _undefined) {
+      const trimmed = str.trim();
+      if ("" !== trimmed) {
+        const obj = { kind: "custom", text: trimmed };
+        callback(obj);
+      }
+    } else if ("" !== _undefined.text) {
+      callback(_undefined);
     }
   }, items3);
-  if (clarification.questions.length > 1) {
-    let obj3 = { variant: "text-xs/semibold", color: "text-muted", children: null };
-    let intl = clarification(1115).intl;
-    const obj4 = { index: bound + 1, total: length };
-    obj3.children = intl.formatToPlainString(onSubmit(3715)["7bypa+"], obj4);
-    tmp14 = closure_6(clarification(4832).Text, obj3);
+  if (null != multiSelectAnswerResult) {
+    let tmp19 = null;
+    if ("" !== multiSelectAnswerResult.text) {
+      tmp19 = multiSelectAnswerResult;
+    }
+    let tmp18 = tmp19;
+  } else if ("" !== str.trim()) {
+    let obj3 = { kind: "custom", text: str.trim() };
+    tmp18 = obj3;
+  } else {
+    tmp18 = first[tmp10.id];
+    if (tmp18 == null) {
+      tmp18 = null;
+    }
   }
-  const items4 = [tmp14, closure_6(clarification(4832).Text, { variant: "text-md/semibold", color: "text-default", children: clarification.questions[bound].question }), , ];
-  const options = tmp8.options;
-  items4[2] = options.map((answer) => {
+  c18 = tmp18;
+  let obj2 = clarification(4548);
+  if (null != tmp18) {
+    let obj4 = {};
+    let merged = Object.assign(first);
+    obj4[tmp10.id] = tmp18;
+  }
+  const obj5 = { style: tmp.card, children: null };
+  let obj6 = { style: tmp.footer, children: null };
+  let obj7 = { style: tmp.customField, children: null };
+  let tmp27Result = null;
+  const tmp12Result2 = clarification(16566);
+  if (clarification.questions.length > 1) {
+    const obj8 = { variant: "text-xs/semibold", color: "text-muted", children: null };
+    let intl = tmp12(1115).intl;
+    let obj9 = { index: bound + 1, total: length };
+    obj8.children = intl.formatToPlainString(onSubmit(3715)["7bypa+"], obj9);
+    tmp27Result = tmp27(tmp12(4832).Text, obj8);
+  }
+  obj7.children = tmp27Result;
+  const items4 = [closure_6(c5, obj7), ];
+  let tmp27Result4 = null;
+  if (null != onDismiss) {
+    let obj10 = { IconComponent: tmp12(6158).XSmallIcon, onPress: onDismiss, accessibilityLabel: null };
+    let intl2 = tmp12(1115).intl;
+    obj10.accessibilityLabel = intl2.string(onSubmit(3715).fMdUNR);
+    tmp27Result4 = tmp27(onSubmit(16420), obj10);
+    const tmp32 = onSubmit(16420);
+  }
+  items4[1] = tmp27Result4;
+  obj6.children = items4;
+  const items5 = [closure_7(c5, obj6), closure_6(clarification(4832).Text, { variant: "text-md/semibold", color: "text-default", children: clarification.questions[bound].question }), , , , ];
+  let tmp27Result5 = null;
+  if (true === clarification.questions[bound].multi_select) {
+    const obj12 = { variant: "text-xs/normal", color: "text-muted", children: null };
+    const intl3 = tmp12(1115).intl;
+    obj12.children = intl3.string(onSubmit(3715).jt5JBA);
+    tmp27Result5 = tmp27(tmp12(4832).Text, obj12);
+  }
+  items5[2] = tmp27Result5;
+  const options = tmp10.options;
+  items5[3] = options.map((answer) => {
     closure_0 = answer;
     let fn;
-    if (!closure_7) {
-      fn = () => closure_11(closure_0);
+    if (!closure_8) {
+      fn = () => closure_15(closure_0);
     }
-    const obj = { onPress: fn, accessibilityLabel: null, children: null };
-    const intl = clarification(optionHeader[8]).intl;
-    if (true === answer.recommended) {
-      let k7lEgj = onSubmit(optionHeader[9]).aL1BKQ;
-      let tmp5 = onSubmit;
-    } else {
-      k7lEgj = onSubmit(optionHeader[9]).k7lEgj;
-      tmp5 = onSubmit;
-    }
-    obj.accessibilityLabel = intl.formatToPlainString(k7lEgj, { answer: answer.label });
-    const obj3 = { style: optionHeader.optionHeader, children: null };
-    const items = [closure_6(clarification(optionHeader[7]).Text, { variant: "text-sm/semibold", color: "text-default", children: answer.label }), ];
-    let tmp8Result = null;
-    if (true === answer.recommended) {
-      const obj5 = { variant: "text-xs/semibold", color: "text-muted", children: null };
-      const intl2 = clarification(optionHeader[8]).intl;
-      obj5.children = intl2.string(tmp5(optionHeader[9]).OXRWyV);
-      tmp8Result = closure_6(clarification(optionHeader[7]).Text, obj5);
-    }
-    items[1] = tmp8Result;
-    obj3.children = items;
-    const items1 = [closure_7(closure_5, obj3), ];
-    let tmp8Result2 = null;
-    if (null != answer.detail) {
-      tmp8Result2 = null;
-      if ("" !== answer.detail) {
-        const obj6 = { variant: "text-xs/normal", color: "text-muted", children: answer.detail };
-        tmp8Result2 = closure_6(clarification(optionHeader[7]).Text, obj6);
+    const obj = { onPress: fn, border: null };
+    str = undefined;
+    if (closure_11) {
+      if (closure_13.includes(answer.id)) {
+        str = "strong";
       }
     }
-    items1[1] = tmp8Result2;
-    obj.children = items1;
-    return closure_7(clarification(optionHeader[10]).Card, obj, answer.id);
-  });
-  let obj6 = { style: tmp.footer, children: null };
-  let tmp19Result = null;
-  if (bound > 0) {
-    tmp19Result = null;
-    if (!tmp6) {
-      const obj7 = { variant: "secondary", size: "sm", text: null, onPress: null };
-      let intl2 = tmp20(1115).intl;
-      obj7.text = intl2.string(onSubmit(3715).yKdgqw);
-      obj7.onPress = callback1;
-      tmp19Result = tmp19(tmp20(5281).Button, obj7);
+    obj.border = str;
+    if (closure_11) {
+      const obj2 = { accessibilityRole, accessibilityState: null };
+      const obj3 = { checked: closure_13.includes(answer.id), selected: closure_13.includes(answer.id) };
+      obj2.accessibilityState = obj3;
+      let obj4 = obj2;
+    } else {
+      obj4 = {};
     }
-  }
-  const items5 = [tmp19Result, ];
-  const obj8 = { size: "md", containerStyle: tmp.customField, placeholder: null, accessibilityLabel: null, value: null, onChange: null, onSubmitEditing: null, returnKeyType: "send" };
-  const intl3 = tmp20(1115).intl;
-  obj8.placeholder = intl3.string(onSubmit(3715).qifsdL);
-  const intl4 = tmp20(1115).intl;
-  obj8.accessibilityLabel = intl4.formatToPlainString(onSubmit(3715).XHESTL, { question: clarification.questions[bound].question });
-  obj8.value = str;
-  obj8.onChange = function onChange(arg0) {
+    const merged = Object.assign(obj4);
+    const intl = clarification(optionHeader[9]).intl;
+    if (true === answer.recommended) {
+      let k7lEgj = onSubmit(optionHeader[10]).aL1BKQ;
+      let tmp10 = onSubmit;
+    } else {
+      k7lEgj = onSubmit(optionHeader[10]).k7lEgj;
+      tmp10 = onSubmit;
+    }
+    obj.accessibilityLabel = intl.formatToPlainString(k7lEgj, { answer: answer.label });
+    const obj6 = { style: optionHeader.optionHeader, children: null };
+    let tmp13 = null;
+    if (closure_11) {
+      const obj7 = { checked: closure_13.includes(answer.id) };
+      tmp13 = closure_6(clarification(optionHeader[14]).FormCheckbox, obj7);
+    }
+    const items = [tmp13, closure_6(clarification(optionHeader[8]).Text, { variant: "text-sm/semibold", color: "text-default", children: answer.label }), ];
+    let tmp16Result = null;
+    if (true === answer.recommended) {
+      const obj9 = { variant: "text-xs/semibold", color: "text-muted", children: null };
+      const intl2 = clarification(optionHeader[9]).intl;
+      obj9.children = intl2.string(tmp10(optionHeader[10]).OXRWyV);
+      tmp16Result = closure_6(clarification(optionHeader[8]).Text, obj9);
+    }
+    items[2] = tmp16Result;
+    obj6.children = items;
+    const items1 = [closure_7(c5, obj6), ];
+    let tmp16Result2 = null;
+    if (null != answer.detail) {
+      tmp16Result2 = null;
+      if ("" !== answer.detail) {
+        const obj10 = { variant: "text-xs/normal", color: "text-muted", children: answer.detail };
+        tmp16Result2 = closure_6(clarification(optionHeader[8]).Text, obj10);
+      }
+    }
+    items1[1] = tmp16Result2;
+    obj.children = items1;
+    return closure_7(clarification(optionHeader[13]).Card, obj, answer.id);
+  });
+  const obj13 = { size: "md", placeholder: null, accessibilityLabel: null, value: null, onChange: null, onSubmitEditing: null, returnKeyType: "send" };
+  const intl4 = tmp12(1115).intl;
+  obj13.placeholder = intl4.string(onSubmit(3715).qifsdL);
+  const intl5 = tmp12(1115).intl;
+  obj13.accessibilityLabel = intl5.formatToPlainString(onSubmit(3715).XHESTL, { question: clarification.questions[bound].question });
+  obj13.value = str;
+  obj13.onChange = function onChange(arg0) {
     closure_0 = arg0;
-    return closure_5((arg0) => {
+    return _undefined((arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
       obj[id.id] = closure_0;
       return obj;
     });
   };
-  obj8.onSubmitEditing = callback2;
-  items5[1] = closure_6(clarification(6024).TextInput, obj8);
-  obj6.children = items5;
-  items4[3] = closure_7(closure_5, obj6);
-  obj2.children = items4;
-  return closure_7(closure_5, obj2);
+  obj13.onSubmitEditing = callback2;
+  items5[4] = closure_6(clarification(6190).TextInput, obj13);
+  if (clarification.questions.length <= 1) {
+    if (!tmp11) {
+      items5[5] = null;
+      obj5.children = items5;
+      return tmp25(tmp26, obj5);
+    }
+  }
+  const obj15 = { style: tmp.footer, children: null };
+  let tmp27Result6 = null;
+  if (bound > 0) {
+    tmp27Result6 = null;
+    if (!tmp8) {
+      const obj16 = { variant: "tertiary", size: "sm", text: null, onPress: null };
+      const intl6 = tmp12(1115).intl;
+      obj16.text = intl6.string(tmp35(3715).yKdgqw);
+      obj16.onPress = callback1;
+      tmp27Result6 = tmp27(tmp12(5447).Button, obj16);
+    }
+  }
+  const items6 = [tmp27Result6, closure_6(c5, { style: tmp.customField }), ];
+  if (!tmp8) {
+    tmp8 = null == tmp18;
+  }
+  let obj18 = { variant: "primary", size: "sm", disabled: tmp8, text: null, onPress: null };
+  const intl7 = tmp12(1115).intl;
+  if (tmp24) {
+    t = tmp12(1115).t;
+    let S7Sa6j = t.geKm7t;
+  } else {
+    S7Sa6j = tmp35(3715).S7Sa6j;
+  }
+  obj18.text = intl7.string(S7Sa6j);
+  obj18.onPress = function onPress() {
+    if (null != c18) {
+      callback(tmp);
+    }
+  };
+  obj18 = tmp27(tmp12(5447).Button, obj18);
+  items6[2] = obj18;
+  obj15.children = items6;
+  closure_7(c5, obj15);
 };

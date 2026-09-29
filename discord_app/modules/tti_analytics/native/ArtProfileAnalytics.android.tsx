@@ -1,8 +1,8 @@
-// === Module 7089: ArtProfileAnalytics ===
+// === Module 7254: ArtProfileAnalytics ===
 
-// Module 7089 (ArtProfileAnalytics)
+// Module 7254 (ArtProfileAnalytics)
 import Timers from "Timers" /* 2040 */;
-import NativeTTIModuleDefault from "NativeTTIModule" /* 7087 */;
+import NativeTTIModuleDefault from "NativeTTIModule" /* 7252 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

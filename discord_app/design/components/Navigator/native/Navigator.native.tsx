@@ -1,16 +1,16 @@
-// === Module 6421: Navigator ===
+// === Module 6587: Navigator ===
 
-// Module 6421 (Navigator)
+// Module 6587 (Navigator)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import SentryInitUtils from "SentryInitUtils" /* 1232 */;
 import Link from "Link" /* 1486 */;
-import NavigatorHeader from "NavigatorHeader" /* 5936 */;
-import _mod5943 from "module_5943" /* 5943 */;
-import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade" /* 6422 */;
-import StackNavigator from "StackNavigator" /* 6423 */;
-import NavigatorScreen from "NavigatorScreen" /* 6456 */;
-import useNavigationTheme from "useNavigationTheme" /* 6462 */;
+import NavigatorHeader from "NavigatorHeader" /* 6102 */;
+import _mod6109 from "module_6109" /* 6109 */;
+import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade" /* 6588 */;
+import StackNavigator from "StackNavigator" /* 6589 */;
+import NavigatorScreen from "NavigatorScreen" /* 6622 */;
+import useNavigationTheme from "useNavigationTheme" /* 6628 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -243,7 +243,7 @@ function WrappedNavigationStack(arg0) {
   const merged1 = Object.assign(merged);
   obj3.children = <NavigationStack initialRouteName={initialRouteName} />;
   obj5.children = jsx(Link.NavigationContainer, { ref: navigationContainerRef, theme: null, initialState: null, onReady: null, onStateChange: null, children: null });
-  obj4.children = jsx(_mod5943.HeaderBackContext.Provider, { value: "Array", children: 0 });
+  obj4.children = jsx(_mod6109.HeaderBackContext.Provider, { value: "Array", children: 0 });
   return jsx(Link.NavigationIndependentTree, { children: null });
 }
 get_ActivityIndicator = fn(17);

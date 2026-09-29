@@ -1,9 +1,9 @@
-// === Module 16389: vibegrationsAttachmentDrafts ===
+// === Module 16574: vibegrationsAttachmentDrafts ===
 
-// Module 16389 (vibegrationsAttachmentDrafts)
+// Module 16574 (vibegrationsAttachmentDrafts)
 import util from "util" /* 1115 */;
 import _modDef3715 from "module_3715" /* 3715 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 5371 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 5537 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import Dispatcher_mod from "Dispatcher" /* 573 */;
 
@@ -127,7 +127,7 @@ function takeVibegrationsAttachmentRefs(projectId, chat) {
     });
   }
 }
-const VibegrationsConnectionStore = fn(12642);
+const VibegrationsConnectionStore = fn(12812);
 ({ deleteStagedAttachment: closure_4, sendUserMessage: hasOwnProperty } = VibegrationsConnectionStore);
 let closure_7 = [];
 let c8 = 1;
@@ -235,7 +235,11 @@ export const clearVibegrationsAttachmentDrafts = function clearVibegrationsAttac
   }
 };
 export { takeVibegrationsAttachmentRefs };
-export const sendVibegrationsCardReply = function sendVibegrationsCardReply(projectId, implementation_prompt) {
+export const sendVibegrationsCardReply = function sendVibegrationsCardReply(projectId, implementation_prompt, arg2) {
+  let obj = arg2;
+  if (arg2 === undefined) {
+    obj = {};
+  }
   const tmp = zustandStore.getState().draftsByProject[projectId];
   let chat;
   if (tmp != null) {
@@ -246,8 +250,10 @@ export const sendVibegrationsCardReply = function sendVibegrationsCardReply(proj
   }
   if (chat.length > 0) {
     if (chat.every((status) => "ready" === status.status)) {
-      takeVibegrationsAttachmentRefs(projectId, "chat");
+      let items = takeVibegrationsAttachmentRefs(projectId, "chat");
     }
-    hasOwnProperty(projectId, implementation_prompt, []);
+    const obj2 = { clarificationAnswers: obj.clarificationAnswers };
+    hasOwnProperty(projectId, implementation_prompt, items, obj2);
   }
+  items = [];
 };

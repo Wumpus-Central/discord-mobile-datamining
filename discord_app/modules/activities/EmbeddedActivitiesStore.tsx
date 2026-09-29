@@ -5,18 +5,18 @@ import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Server from "Server" /* 1979 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4458 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 6943 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 8503 */;
-import getPlatformDefault from "getPlatform" /* 8713 */;
-import ContentClassificationEmbeddedActivityFilterExperiment2 from "ContentClassificationEmbeddedActivityFilterExperiment" /* 8808 */;
-import ContentClassificationReference from "ContentClassificationReference" /* 8809 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7109 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 8668 */;
+import getPlatformDefault from "getPlatform" /* 8878 */;
+import ContentClassificationEmbeddedActivityFilterExperiment2 from "ContentClassificationEmbeddedActivityFilterExperiment" /* 8973 */;
+import ContentClassificationReference from "ContentClassificationReference" /* 8974 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
 import UserStore from "UserStore" /* 1372 */;
 
-const isVoiceEmbeddedActivityDefault = combined(8803);
+const isVoiceEmbeddedActivityDefault = combined(8968);
 require = fn;
 function participantFromServer(userId) {
   return { userId: userId.user_id, sessionId: userId.session_id, nonce: userId.nonce };
@@ -54,7 +54,7 @@ function updateEmbeddedActivities(content_classification) {
     if (found1 != null) {
       const sessionId = found1.sessionId;
     }
-    mapped.some((item) => application_id(13531).isActivityParticipantCurrentUserCurrentSession(item));
+    mapped.some((item) => application_id(13700).isActivityParticipantCurrentUserCurrentSession(item));
     const value9 = map.get(application_id);
     let tmp12 = embeddedActivityLocationChannelId;
     if (embeddedActivityLocationChannelId == null) {
@@ -226,7 +226,7 @@ function updateEmbeddedActivities(content_classification) {
                 const ComponentDispatch2 = application_id(1110).ComponentDispatch;
                 const obj8 = { location: _location, applicationId: application_id, isFirstActivityInChannel: 0 === arr2.length, isStart: tmp78, participants: mapped, embeddedActivity: obj7, inviterUserId };
                 ComponentDispatch2.dispatch(constants.OPEN_EMBEDDED_ACTIVITY, obj8);
-                application_id(8827);
+                application_id(8992);
                 if (true === renderInFramePool) {
                   let ACTIVITY_POPOUT_WINDOW = ActivityPanelModes.DISCONNECTED;
                   const _HermesInternal2 = HermesInternal;
@@ -265,7 +265,7 @@ function updateEmbeddedActivities(content_classification) {
     const obj19 = application_id(4458);
   }
 }
-const ActivityPanelConstants = fn(8502);
+const ActivityPanelConstants = fn(8667);
 const ActivityPanelModes = ActivityPanelConstants.ActivityPanelModes;
 const FocusedActivityLayouts = ActivityPanelConstants.FocusedActivityLayouts;
 const Constants = fn(1074);

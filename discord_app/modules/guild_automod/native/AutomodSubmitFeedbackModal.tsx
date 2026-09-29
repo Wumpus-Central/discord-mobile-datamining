@@ -1,15 +1,15 @@
-// === Module 11345: AutomodSubmitFeedbackModal ===
+// === Module 11514: AutomodSubmitFeedbackModal ===
 
-// Module 11345 (AutomodSubmitFeedbackModal)
+// Module 11514 (AutomodSubmitFeedbackModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import components_Button_Button from "components/Button/Button" /* 5281 */;
-import _modDef6413 from "module_6413" /* 6413 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6544 */;
-import HeaderActionButton from "HeaderActionButton" /* 6795 */;
-import AutomodFeedback from "AutomodFeedback" /* 6938 */;
+import components_Button_Button from "components/Button/Button" /* 5447 */;
+import _modDef6579 from "module_6579" /* 6579 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6710 */;
+import HeaderActionButton from "HeaderActionButton" /* 6961 */;
+import AutomodFeedback from "AutomodFeedback" /* 7104 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,7 +22,7 @@ function Navbar(onClose) {
   const intl = util.intl;
   obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
   obj2.onPress = onClose.onClose;
-  obj2.source = _modDef6413;
+  obj2.source = _modDef6579;
   obj.children = React5(HeaderActionButton.HeaderActionButton, obj2);
   rect.children = React5(View, obj);
   return React5(common_SafeAreaView.SafeAreaPaddingView, rect);

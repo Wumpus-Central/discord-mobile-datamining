@@ -1,9 +1,9 @@
-// === Module 9232: NsfwGateGuild ===
+// === Module 17279: NsfwGateGuild ===
 
-// Module 9232 (NsfwGateGuild)
+// Module 17279 (NsfwGateGuild)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 8597 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 8762 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2108 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -11,7 +11,7 @@ import UserStore from "UserStore" /* 1372 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const NsfwGateSource = fn(9233).NsfwGateSource;
+const NsfwGateSource = fn(9398).NsfwGateSource;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, HelpdeskArticles: c10 } = Constants);
 const jsxProd = fn(21);
@@ -60,16 +60,16 @@ export default function NsfwGateGuild(guildId) {
     AnalyticsUtilsDefault.track(constants.GUILD_NSFW_GATE_VIEWED, obj2);
   }, items);
   let obj3 = { style: tmp.container, children: null };
-  const items1 = [closure_11(currentUser(6394), {}), , , , , ];
+  const items1 = [closure_11(currentUser(6560), {}), , , , , ];
   const formatResult = intl3.format(guildId(1115).t.Z12LNW, obj);
-  items1[1] = closure_11(closure_5, { source: currentUser(9234), style: tmp.image });
+  items1[1] = closure_11(closure_5, { source: currentUser(17280), style: tmp.image });
   items1[2] = closure_11(guildId(4832).Text, { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stringResult });
   items1[3] = closure_11(guildId(4832).Text, { style: tmp.description, variant: "text-md/normal", color: "text-default", children: stringResult1 });
   items1[4] = closure_11(guildId(4832).Text, { style: tmp.description, variant: "text-md/normal", color: "text-default", children: formatResult });
   const obj8 = { onPress: guildId.onClose, size: "md", text: null };
   const intl4 = guildId(1115).intl;
   obj8.text = intl4.string(guildId(1115).t.gRqiWV);
-  items1[5] = closure_11(guildId(5281).Button, obj8);
+  items1[5] = closure_11(guildId(5447).Button, obj8);
   obj3.children = items1;
   return closure_12(closure_4, obj3);
 };

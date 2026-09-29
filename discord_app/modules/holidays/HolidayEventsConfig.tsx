@@ -1,10 +1,10 @@
-// === Module 17148: HolidayEventsConfig ===
+// === Module 17337: HolidayEventsConfig ===
 
-// Module 17148 (HolidayEventsConfig)
+// Module 17337 (HolidayEventsConfig)
 import util from "util" /* 1115 */;
-import HalloweenHolidayExperimentDefault from "HalloweenHolidayExperiment" /* 17149 */;
-import _modDef17150 from "module_17150" /* 17150 */;
-import _modDef17151 from "module_17151" /* 17151 */;
+import HalloweenHolidayExperimentDefault from "HalloweenHolidayExperiment" /* 17338 */;
+import _modDef17339 from "module_17339" /* 17339 */;
+import _modDef17340 from "module_17340" /* 17340 */;
 
 require = fn;
 const obj = {
@@ -18,9 +18,9 @@ const obj = {
   startTimeMs: 1791388800000,
   endTimeMs: 1793638800000,
   isDesktopOnly: true,
-  soundpack: fn(9359).Soundpacks.HALLOWEEN,
+  soundpack: fn(9526).Soundpacks.HALLOWEEN,
   soundpackLabel: fn(1115).t["+LasFV"],
-  appSpinnerSources: { webmDark: _modDef17150, webmLight: _modDef17151 },
+  appSpinnerSources: { webmDark: _modDef17339, webmLight: _modDef17340 },
   getLoadingTips() {
     const intl = util.intl;
     const items = [intl.string(util.t.ydMZ2o), , , , , , , , , , , , ];

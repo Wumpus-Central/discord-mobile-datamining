@@ -1,14 +1,14 @@
-// === Module 8096: NodeView ===
+// === Module 8261: NodeView ===
 
-// Module 8096 (NodeView)
+// Module 8261 (NodeView)
 import nativeDefault from "native" /* 576 */;
 import ColorUtils from "ColorUtils" /* 4683 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 4787 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5016 */;
-import CustomMarkupAll from "CustomMarkup" /* 5301 */;
-import MenuTypes from "MenuTypes" /* 8090 */;
-import ArrowDefault from "Arrow" /* 8098 */;
+import CustomMarkupAll from "CustomMarkup" /* 5467 */;
+import MenuTypes from "MenuTypes" /* 8255 */;
+import ArrowDefault from "Arrow" /* 8263 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 4835 */;
@@ -98,7 +98,7 @@ function ChildItem(child) {
   const items2 = [closure_17(closure_6, obj4), closure_16(ArrowDefault, {})];
   obj3.children = items2;
   obj2.children = closure_17(closure_6, obj3);
-  return closure_16(child(5435).PressableHighlight, obj2);
+  return closure_16(child(5602).PressableHighlight, obj2);
 }
 function ChildrenView(node) {
   const children = node.node.children;
@@ -124,8 +124,8 @@ function NullComponent() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const REMEDIATION_ELEMENT_TYPES = fn(8097).REMEDIATION_ELEMENT_TYPES;
-const IN_APP_REPORTS_NODE = fn(8095).IN_APP_REPORTS_NODE;
+const REMEDIATION_ELEMENT_TYPES = fn(8262).REMEDIATION_ELEMENT_TYPES;
+const IN_APP_REPORTS_NODE = fn(8260).IN_APP_REPORTS_NODE;
 const Constants = fn(1074);
 ({ AnalyticEvents: map1, ChannelTypes: closure_14 } = Constants);
 const Permissions = fn(1085).Permissions;

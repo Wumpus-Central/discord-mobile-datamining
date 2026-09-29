@@ -1,15 +1,15 @@
-// === Module 7051: RecentMentionsStore ===
+// === Module 7216: RecentMentionsStore ===
 
-// Module 7051 (RecentMentionsStore)
+// Module 7216 (RecentMentionsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import TimeUtils from "TimeUtils" /* 4865 */;
 import AgeGateUtils from "AgeGateUtils" /* 5046 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 5058 */;
-import isMessageMentioned from "isMessageMentioned" /* 5088 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6688 */;
-import shouldRemoveSelfMentionDefault from "shouldRemoveSelfMention" /* 7052 */;
+import isMessageMentioned from "isMessageMentioned" /* 5254 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6854 */;
+import shouldRemoveSelfMentionDefault from "shouldRemoveSelfMention" /* 7217 */;
 import MessageRecord from "MessageRecord" /* 4480 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2045 */;

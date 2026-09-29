@@ -1,6 +1,6 @@
-// === Module 16624: BadgeCustomizationProfileCoachmark ===
+// === Module 16812: BadgeCustomizationProfileCoachmark ===
 
-// Module 16624 (BadgeCustomizationProfileCoachmark)
+// Module 16812 (BadgeCustomizationProfileCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import BadgesCoachmarkRive from "BadgesCoachmarkRive" /* 4559 */;
@@ -52,7 +52,7 @@ export default function BadgeCustomizationProfileCoachmark(markAsDismissed) {
       str = "top";
     }
     str2 = str;
-    tmpResult = tmp(16604);
+    tmpResult = tmp(16790);
   }
   const items2 = [stateFromStores, visible, str2, markAsDismissed, onTryItOut, reducedMotion.enabled];
   const memo = obj2.useMemo(() => {
@@ -80,6 +80,6 @@ export default function BadgeCustomizationProfileCoachmark(markAsDismissed) {
     return obj;
   }, items2);
   const tmp4 = stateFromStores(reducedMotion.useState(null), 2);
-  const coachmark = targetRef(10589).useCoachmark(targetRef, memo);
+  const coachmark = targetRef(10758).useCoachmark(targetRef, memo);
   return null;
 };

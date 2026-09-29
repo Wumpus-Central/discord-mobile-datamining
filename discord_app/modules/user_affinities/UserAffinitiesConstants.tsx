@@ -1,6 +1,6 @@
-// === Module 7073: UserAffinitiesConstants ===
+// === Module 7238: UserAffinitiesConstants ===
 
-// Module 7073 (UserAffinitiesConstants)
+// Module 7238 (UserAffinitiesConstants)
 import DurationsDefault from "Durations" /* 1091 */;
 
 const result = 8 * DurationsDefault.Millis.HOUR;

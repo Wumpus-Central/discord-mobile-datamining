@@ -297,7 +297,7 @@ const gameStore = new GameStore(DispatcherDefault, {
     });
   },
   SEARCH_MESSAGES_SUCCESS: handleLoadSearchResults,
-  INTELLIGENCE_SEARCH_FETCH_SUCCESS: function handleIntelligenceSearchFetchSuccess(messages) {
+  SMART_SEARCH_FETCH_SUCCESS: function handleSmartSearchFetchSuccess(messages) {
     messages = messages.messages;
     return messages.reduce((acc, mention_games) => {
       closure_0 = false;
@@ -355,7 +355,7 @@ const gameStore = new GameStore(DispatcherDefault, {
   LOAD_MESSAGES_SUCCESS: handleLoadMessages,
   LOAD_MESSAGES_AROUND_SUCCESS: handleLoadMessages,
   LOAD_RECENT_MENTIONS_SUCCESS: handleLoadMessages,
-  CONVERSATION_FETCH_SUCCESS: function handleConversationFetchSuccess(messages) {
+  CONVERSATION_MESSAGES_FETCH_SUCCESS: function handleConversationMessagesFetchSuccess(messages) {
     messages = messages.messages;
     const combined = messages.concat(messages.messageReferences);
     return combined.reduce((acc, mention_games) => {
@@ -410,7 +410,7 @@ const gameStore = new GameStore(DispatcherDefault, {
       return tmp6;
     }, false);
   },
-  CONVERSATIONS_FETCH_SUCCESS: function handleConversationsFetchSuccess(rawConversations) {
+  CHANNEL_CONVERSATIONS_FETCH_SUCCESS: function handleChannelConversationsFetchSuccess(rawConversations) {
     rawConversations = rawConversations.rawConversations;
     c0 = false;
     let item = rawConversations.forEach((messages) => {

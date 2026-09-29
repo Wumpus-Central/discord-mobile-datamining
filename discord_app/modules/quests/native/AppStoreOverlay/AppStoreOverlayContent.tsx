@@ -1,6 +1,6 @@
-// === Module 10721: AppStoreOverlayContent ===
+// === Module 10890: AppStoreOverlayContent ===
 
-// Module 10721 (AppStoreOverlayContent)
+// Module 10890 (AppStoreOverlayContent)
 import openURL from "openURL" /* 4519 */;
 import LinkingDefault from "Linking" /* 4525 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

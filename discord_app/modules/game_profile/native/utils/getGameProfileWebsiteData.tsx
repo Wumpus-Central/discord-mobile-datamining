@@ -1,18 +1,18 @@
-// === Module 8353: getGameProfileWebsiteData ===
+// === Module 8518: getGameProfileWebsiteData ===
 
-// Module 8353 (getGameProfileWebsiteData)
+// Module 8518 (getGameProfileWebsiteData)
 import jsxProd from "jsxProd" /* 21 */;
 import util from "util" /* 1115 */;
-import XNeutralIcon from "XNeutralIcon" /* 7543 */;
-import FacebookNeutralIcon from "FacebookNeutralIcon" /* 7545 */;
-import InstagramNeutralIcon from "InstagramNeutralIcon" /* 7547 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8139 */;
-import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 8142 */;
-import GlobeEarthIcon from "GlobeEarthIcon" /* 8354 */;
-import YoutubeNeutralIcon from "YoutubeNeutralIcon" /* 8356 */;
-import BlueskyNeutralIcon from "BlueskyNeutralIcon" /* 8358 */;
-import RedditNeutralIcon from "RedditNeutralIcon" /* 8360 */;
-import TwitchNeutralIcon from "TwitchNeutralIcon" /* 8362 */;
+import XNeutralIcon from "XNeutralIcon" /* 7708 */;
+import FacebookNeutralIcon from "FacebookNeutralIcon" /* 7710 */;
+import InstagramNeutralIcon from "InstagramNeutralIcon" /* 7712 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8304 */;
+import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 8307 */;
+import GlobeEarthIcon from "GlobeEarthIcon" /* 8519 */;
+import YoutubeNeutralIcon from "YoutubeNeutralIcon" /* 8521 */;
+import BlueskyNeutralIcon from "BlueskyNeutralIcon" /* 8523 */;
+import RedditNeutralIcon from "RedditNeutralIcon" /* 8525 */;
+import TwitchNeutralIcon from "TwitchNeutralIcon" /* 8527 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;

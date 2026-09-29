@@ -1,14 +1,14 @@
-// === Module 10657: BadgeDirectoryView ===
+// === Module 10826: BadgeDirectoryView ===
 
-// Module 10657 (BadgeDirectoryView)
+// Module 10826 (BadgeDirectoryView)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7642 */;
-import BadgeUtils from "BadgeUtils" /* 10659 */;
-import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 10662 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7807 */;
+import BadgeUtils from "BadgeUtils" /* 10828 */;
+import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 10831 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7637 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7802 */;
 
 require = fn;
 function BadgeSection(children) {
@@ -65,7 +65,7 @@ function BadgeSection(children) {
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const UserSettingsSections = fn(1074).UserSettingsSections;
-let closure_10 = fn(10658).UserProfileEditAutoFocusElement;
+let closure_10 = fn(10827).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(4836);
@@ -76,9 +76,9 @@ let obj4 = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDef
 obj2.centered = { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_32 };
 let obj5 = { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_32 };
 obj2.section = { gap: nativeDefault.space.PX_16 };
-let obj6 = { gap: nativeDefault.space.PX_16 };
+const obj6 = { gap: nativeDefault.space.PX_16 };
 obj2.grid = { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_12 };
-const obj7 = { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_12 };
+let obj7 = { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_12 };
 obj2.tile = { alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
 let size = { position: "absolute", top: nativeDefault.space.PX_6, right: nativeDefault.space.PX_6, width: 8, height: 8, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND };
 obj2.badgeIndicator = size;
@@ -88,19 +88,20 @@ let closure_13 = createStyles.createStyles(obj2);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/badges/native/BadgeDirectoryView.tsx");
 
-export default function BadgeDirectoryView(targetUserId) {
+export default function BadgeDirectoryView(arg0) {
+  ({ targetUserId, targetUsername } = arg0);
   let stateFromStores;
-  let stateFromStores1;
+  dependencyMap = undefined;
   targetUserId = undefined;
   let stateFromStoresArray;
   let tmp = closure_13();
-  let stringResult1 = stateFromStores1;
-  const diff = stateFromStores(stateFromStores1[9])().width - 2 * stateFromStores(stateFromStores1[8]).space.PX_16;
-  let result = 3 * stateFromStores(stateFromStores1[8]).space.PX_12;
-  let items = [tmp.footer, { paddingBottom: stateFromStores(stateFromStores1[13])().bottom + stateFromStores(stateFromStores1[8]).space.PX_16 }];
-  let obj = { paddingBottom: stateFromStores(stateFromStores1[13])().bottom + stateFromStores(stateFromStores1[8]).space.PX_16 };
+  let stringResult1 = dependencyMap;
+  const diff = stateFromStores(1479)().width - 2 * stateFromStores(576).space.PX_16;
+  let result = 3 * stateFromStores(576).space.PX_12;
+  let items = [tmp.footer, { paddingBottom: stateFromStores(1613)().bottom + stateFromStores(576).space.PX_16 }];
+  let obj = { paddingBottom: stateFromStores(1613)().bottom + stateFromStores(576).space.PX_16 };
   const items1 = [UserStore];
-  stateFromStores = targetUserId(stateFromStores1[14]).useStateFromStores(items1, () => {
+  stateFromStores = targetUsername(504).useStateFromStores(items1, () => {
     currentUser = currentUser.getCurrentUser();
     let id;
     if (currentUser != null) {
@@ -108,64 +109,50 @@ export default function BadgeDirectoryView(targetUserId) {
     }
     return id;
   });
-  let obj2 = targetUserId(stateFromStores1[14]);
-  const items2 = [UserStore];
-  stateFromStores1 = targetUserId(stateFromStores1[14]).useStateFromStores(items2, () => {
-    let tmp2;
-    if (null != targetUserId) {
-      const user = UserStore.getUser(tmp);
-      let username;
-      if (user != null) {
-        username = user.username;
-      }
-      tmp2 = username;
-    }
-    return tmp2;
-  });
-  noop = tmp8;
-  let tmp9 = stateFromStores;
+  dependencyMap = tmp7;
+  let tmp8 = stateFromStores;
   if (null != targetUserId && targetUserId !== stateFromStores) {
-    tmp9 = targetUserId;
+    tmp8 = targetUserId;
   }
-  targetUserId = tmp9;
-  let obj3 = targetUserId(stateFromStores1[14]);
-  const items3 = [BadgeDirectoryStore];
-  const items4 = [tmp9];
-  stateFromStoresArray = targetUserId(stringResult1[14]).useStateFromStoresArray(items3, () => {
+  targetUserId = tmp8;
+  let obj2 = targetUsername(504);
+  const items2 = [BadgeDirectoryStore];
+  const items3 = [tmp8];
+  stateFromStoresArray = targetUsername(504).useStateFromStoresArray(items2, () => {
     if (null != targetUserId) {
       let badges = BadgeDirectoryStore.getBadges(tmp);
     } else {
       badges = [];
     }
     return badges;
-  }, items4);
-  const tmp5Result = targetUserId(stringResult1[14]);
-  const items5 = [BadgeDirectoryStore];
-  const items6 = [tmp9];
-  const stateFromStores2 = targetUserId(stringResult1[14]).useStateFromStores(items5, () => {
+  }, items3);
+  const tmp5Result = targetUsername(504);
+  const items4 = [BadgeDirectoryStore];
+  const items5 = [tmp8];
+  const stateFromStores1 = targetUsername(504).useStateFromStores(items4, () => {
     let hasCatalogForResult = null != targetUserId;
     if (hasCatalogForResult) {
       hasCatalogForResult = BadgeDirectoryStore.hasCatalogFor(tmp);
     }
     return hasCatalogForResult;
-  }, items6);
-  const tmp5Result4 = targetUserId(stringResult1[14]);
-  const items7 = [BadgeDirectoryStore];
-  const items8 = [tmp9];
-  const items9 = [tmp9];
-  const stateFromStores3 = targetUserId(stringResult1[14]).useStateFromStores(items7, () => BadgeDirectoryStore.hasCatalogFetchErrorFor(targetUserId), items8);
-  const effect = noop.useEffect(() => {
+  }, items5);
+  const tmp5Result4 = targetUsername(504);
+  const items6 = [BadgeDirectoryStore];
+  const items7 = [tmp8];
+  const items8 = [tmp8];
+  const stateFromStores2 = targetUsername(504).useStateFromStores(items6, () => BadgeDirectoryStore.hasCatalogFetchErrorFor(targetUserId), items7);
+  const effect = targetUserId.useEffect(() => {
     if (null != targetUserId) {
       if (!tmp2) {
         const badgeDirectory = BadgeDirectoryActionCreators.fetchBadgeDirectory(targetUserId);
       }
       tmp2 = BadgeDirectoryStore.hasCatalogFor(targetUserId) && !BadgeDirectoryStore.isCatalogStaleFor(targetUserId);
     }
-  }, items9);
-  const items10 = [stateFromStores, null != targetUserId && targetUserId !== stateFromStores];
-  const effect1 = noop.useEffect(() => {
-    let tmp = closure_3;
-    if (closure_3) {
+  }, items8);
+  const items9 = [stateFromStores, null != targetUserId && targetUserId !== stateFromStores];
+  const effect1 = targetUserId.useEffect(() => {
+    let tmp = closure_2;
+    if (closure_2) {
       tmp = null != stateFromStores;
     }
     if (tmp) {
@@ -173,120 +160,120 @@ export default function BadgeDirectoryView(targetUserId) {
         const badgeDirectory = BadgeDirectoryActionCreators.fetchBadgeDirectory(stateFromStores);
       }
     }
-  }, items10);
-  const items11 = [stateFromStoresArray];
-  const memo = noop.useMemo(() => BadgeUtils.getDirectoryBadges(stateFromStoresArray), items11);
+  }, items9);
+  const items10 = [stateFromStoresArray];
+  const memo = targetUserId.useMemo(() => BadgeUtils.getDirectoryBadges(stateFromStoresArray), items10);
   ({ owned, earnable } = memo);
-  const tmp5Result5 = targetUserId(stringResult1[14]);
-  const obj4 = { badges: stateFromStoresArray, enabled: null };
-  let tmp30Result = !tmp8;
-  obj4.enabled = tmp30Result;
-  const badgeIndicatorIds = targetUserId(stringResult1[17]).useBadgeDirectoryBadgeIndicators(obj4).badgeIndicatorIds;
+  const tmp5Result5 = targetUsername(504);
+  let obj3 = { badges: stateFromStoresArray, enabled: null };
+  let tmp29Result = !tmp7;
+  obj3.enabled = tmp29Result;
+  const badgeIndicatorIds = targetUsername(10829).useBadgeDirectoryBadgeIndicators(obj3).badgeIndicatorIds;
   if (null != targetUserId && targetUserId !== stateFromStores) {
-    if (null != stateFromStores1) {
-      const intl2 = tmp5(stringResult1[11]).intl;
-      const obj5 = { username: stateFromStores1 };
-      let formatToPlainStringResult = intl2.formatToPlainString(tmp5(stringResult1[11]).t.EIcwoe, obj5);
+    if (null != targetUsername) {
+      const intl2 = targetUsername(1115).intl;
+      const obj4 = { username: targetUsername };
+      let formatToPlainStringResult = intl2.formatToPlainString(targetUsername(1115).t.EIcwoe, obj4);
     }
-    const items12 = [tmp9];
-    const callback = obj7.useCallback(() => {
+    const items11 = [tmp8];
+    const callback = obj6.useCallback(() => {
       if (null != targetUserId) {
         const badgeDirectory = BadgeDirectoryActionCreators.fetchBadgeDirectory(tmp, { isRetry: true });
       }
-    }, items12);
-    const items13 = [tmp9, tmp8, stateFromStores1];
-    const callback1 = obj7.useCallback(() => {
-      const result = targetUserId(stateFromStores1[18]).closeBadgeDirectoryScreen();
-      const obj = targetUserId(stateFromStores1[18]);
+    }, items11);
+    const items12 = [tmp8, tmp7, targetUsername];
+    const callback1 = obj6.useCallback(() => {
+      const result = targetUsername(isViewingOtherUser[18]).closeBadgeDirectoryScreen();
+      const obj = targetUsername(isViewingOtherUser[18]);
       const obj3 = { screen: constants.PROFILE_CUSTOMIZATION, params: { autoFocusElement: constants2.BADGES } };
-      targetUserId(stateFromStores1[19]).openUserSettings(obj3);
+      targetUsername(isViewingOtherUser[19]).openUserSettings(obj3);
     }, []);
-    const callback2 = obj7.useCallback((badge_id) => {
+    const callback2 = obj6.useCallback((badge_id) => {
       if (null != targetUserId) {
-        const obj2 = { badgeId: badge_id.badge_id, displayedUserId: tmp, isViewingOtherUser, targetUsername: stateFromStores1 };
+        const obj2 = { badgeId: badge_id.badge_id, displayedUserId: tmp, isViewingOtherUser, targetUsername };
         const result = openBadgeDetailsSheet.openBadgeDetailsSheet(obj2);
       }
-    }, items13);
-    let string = obj7.useCallback(() => {
-      const result = targetUserId(stateFromStores1[18]).closeBadgeDirectoryScreen();
-      const obj = targetUserId(stateFromStores1[18]);
-      const result1 = targetUserId(stateFromStores1[18]).openBadgeDirectoryScreen();
+    }, items12);
+    let string = obj6.useCallback(() => {
+      const result = targetUsername(isViewingOtherUser[18]).closeBadgeDirectoryScreen();
+      const obj = targetUsername(isViewingOtherUser[18]);
+      const result1 = targetUsername(isViewingOtherUser[18]).openBadgeDirectoryScreen();
     }, []);
-    if (!stateFromStores2) {
-      if (stateFromStores3) {
-        const obj6 = { style: tmp.centered, children: null };
-        const obj8 = { variant: "text-md/semibold", children: null };
-        const intl3 = tmp5(stringResult1[11]).intl;
-        obj8.children = intl3.string(tmp5(stringResult1[11]).t.iufib1);
-        const items14 = [closure_11(tmp5(stringResult1[10]).Text, obj8), , ];
-        const obj9 = { variant: "text-md/normal", color: "text-subtle", children: null };
-        const intl4 = tmp5(stringResult1[11]).intl;
-        obj9.children = intl4.string(tmp5(stringResult1[11]).t.eAn6z2);
-        items14[1] = closure_11(tmp5(stringResult1[10]).Text, obj9);
-        const obj10 = { variant: "secondary", size: "sm", onPress: callback, text: null };
-        const intl5 = tmp5(stringResult1[11]).intl;
-        obj10.text = intl5.string(tmp5(stringResult1[11]).t["7NqTJn"]);
-        items14[2] = closure_11(tmp5(stringResult1[21]).Button, obj10);
-        obj6.children = items14;
-        return closure_12(closure_6, obj6);
+    if (!stateFromStores1) {
+      if (stateFromStores2) {
+        const obj5 = { style: tmp.centered, children: null };
+        const obj7 = { variant: "text-md/semibold", children: null };
+        const intl3 = targetUsername(1115).intl;
+        obj7.children = intl3.string(targetUsername(1115).t.iufib1);
+        const items13 = [closure_11(targetUsername(4832).Text, obj7), , ];
+        const obj8 = { variant: "text-md/normal", color: "text-subtle", children: null };
+        const intl4 = targetUsername(1115).intl;
+        obj8.children = intl4.string(targetUsername(1115).t.eAn6z2);
+        items13[1] = closure_11(targetUsername(4832).Text, obj8);
+        const obj9 = { variant: "secondary", size: "sm", onPress: callback, text: null };
+        const intl5 = targetUsername(1115).intl;
+        obj9.text = intl5.string(targetUsername(1115).t["7NqTJn"]);
+        items13[2] = closure_11(targetUsername(5447).Button, obj9);
+        obj5.children = items13;
+        return closure_12(closure_6, obj5);
       }
     }
-    if (!stateFromStores2) {
-      const obj11 = { style: tmp.centered, children: closure_11(tmp5(stringResult1[22]).ActivityIndicator, {}) };
-      closure_11(closure_6, obj11);
+    if (!stateFromStores1) {
+      const obj10 = { style: tmp.centered, children: closure_11(targetUsername(6055).ActivityIndicator, {}) };
+      closure_11(closure_6, obj10);
     }
     let result1 = (diff - result) / 4;
-    const obj12 = { style: tmp.container, children: null };
-    const obj13 = { contentContainerStyle: tmp.content, children: null };
-    const obj14 = { title: formatToPlainStringResult, badges: owned, tileSize: result1, emptyText: null, onPressBadge: null, badgeIndicatorIds: null };
+    const obj11 = { style: tmp.container, children: null };
+    const obj12 = { contentContainerStyle: tmp.content, children: null };
+    const obj13 = { title: formatToPlainStringResult, badges: owned, tileSize: result1, emptyText: null, onPressBadge: null, badgeIndicatorIds: null };
     let stringResult;
-    if (!tmp8) {
-      const intl6 = tmp5(stringResult1[11]).intl;
-      stringResult = intl6.string(tmp5(stringResult1[11]).t.Qno0jg);
+    if (!tmp7) {
+      const intl6 = targetUsername(1115).intl;
+      stringResult = intl6.string(targetUsername(1115).t.Qno0jg);
     }
-    obj14.emptyText = stringResult;
-    obj14.onPressBadge = callback2;
-    obj14.badgeIndicatorIds = badgeIndicatorIds;
-    const items15 = [closure_11(BadgeSection, obj14), ];
-    if (!tmp8) {
-      const obj15 = { title: null, badges: null, tileSize: null, onPressBadge: null, badgeIndicatorIds: null };
-      const intl7 = tmp5(stringResult1[11]).intl;
-      obj15.title = intl7.string(tmp5(stringResult1[11]).t["0YzU//"]);
-      obj15.badges = earnable;
-      obj15.tileSize = result1;
-      obj15.onPressBadge = callback2;
-      obj15.badgeIndicatorIds = badgeIndicatorIds;
-      tmp30Result = closure_11(BadgeSection, obj15);
+    obj13.emptyText = stringResult;
+    obj13.onPressBadge = callback2;
+    obj13.badgeIndicatorIds = badgeIndicatorIds;
+    const items14 = [closure_11(BadgeSection, obj13), ];
+    if (!tmp7) {
+      const obj14 = { title: null, badges: null, tileSize: null, onPressBadge: null, badgeIndicatorIds: null };
+      const intl7 = targetUsername(1115).intl;
+      obj14.title = intl7.string(targetUsername(1115).t["0YzU//"]);
+      obj14.badges = earnable;
+      obj14.tileSize = result1;
+      obj14.onPressBadge = callback2;
+      obj14.badgeIndicatorIds = badgeIndicatorIds;
+      tmp29Result = closure_11(BadgeSection, obj14);
     }
-    items15[1] = tmp30Result;
-    obj13.children = items15;
-    const items16 = [closure_12(stateFromStoresArray, obj13), ];
-    if (tmp8) {
-      const obj16 = { style: items, children: null };
-      const obj17 = { variant: "secondary", onPress: string, text: null };
-      const intl9 = tmp5(stringResult1[11]).intl;
+    items14[1] = tmp29Result;
+    obj12.children = items14;
+    const items15 = [closure_12(closure_5, obj12), ];
+    if (tmp7) {
+      const obj15 = { style: items, children: null };
+      const obj16 = { variant: "secondary", onPress: string, text: null };
+      const intl9 = targetUsername(1115).intl;
       string = intl9.string;
-      stringResult1 = string(tmp5(stringResult1[11]).t.msyp90);
-      obj17.text = stringResult1;
-      items = closure_11(tmp5(stringResult1[21]).Button, obj17);
-      obj16.children = items;
-      let tmp30Result2 = closure_11(closure_6, obj16);
+      stringResult1 = string(targetUsername(1115).t.msyp90);
+      obj16.text = stringResult1;
+      items = closure_11(targetUsername(5447).Button, obj16);
+      obj15.children = items;
+      let tmp29Result2 = closure_11(closure_6, obj15);
     } else {
-      tmp30Result2 = owned.length > 0;
-      if (tmp30Result2) {
-        const obj18 = { style: items, children: null };
-        const obj19 = { variant: "secondary", onPress: callback1, text: null };
-        const intl8 = tmp5(stringResult1[11]).intl;
-        obj19.text = intl8.string(tmp5(stringResult1[11]).t["6CLLyH"]);
-        obj18.children = closure_11(tmp5(stringResult1[21]).Button, obj19);
-        tmp30Result2 = closure_11(closure_6, obj18);
+      tmp29Result2 = owned.length > 0;
+      if (tmp29Result2) {
+        const obj17 = { style: items, children: null };
+        const obj18 = { variant: "secondary", onPress: callback1, text: null };
+        const intl8 = targetUsername(1115).intl;
+        obj18.text = intl8.string(targetUsername(1115).t["6CLLyH"]);
+        obj17.children = closure_11(targetUsername(5447).Button, obj18);
+        tmp29Result2 = closure_11(closure_6, obj17);
       }
     }
-    items16[1] = tmp30Result2;
-    obj12.children = items16;
-    closure_12(closure_6, obj12);
+    items15[1] = tmp29Result2;
+    obj11.children = items15;
+    closure_12(closure_6, obj11);
   }
-  const intl = tmp5(stringResult1[11]).intl;
-  formatToPlainStringResult = intl.string(tmp5(stringResult1[11]).t.UqnlQF);
-  const tmp5Result6 = targetUserId(stringResult1[17]);
+  const intl = targetUsername(1115).intl;
+  formatToPlainStringResult = intl.string(targetUsername(1115).t.UqnlQF);
+  const tmp5Result6 = targetUsername(10829);
 };

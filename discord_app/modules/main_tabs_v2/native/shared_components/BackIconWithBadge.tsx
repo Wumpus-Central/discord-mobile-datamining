@@ -1,14 +1,14 @@
-// === Module 16040: BackIconWithBadge ===
+// === Module 16216: BackIconWithBadge ===
 
-// Module 16040 (BackIconWithBadge)
+// Module 16216 (BackIconWithBadge)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import XLargeIcon from "XLargeIcon" /* 4785 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5940 */;
-import XSmallIcon from "XSmallIcon" /* 5992 */;
-import ClipView from "ClipView" /* 8276 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6106 */;
+import XSmallIcon from "XSmallIcon" /* 6158 */;
+import ClipView from "ClipView" /* 8441 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7050 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7215 */;
 
 require = fn;
 function IconWithBadge(includeNotificationsCount) {
@@ -27,7 +27,7 @@ function IconWithBadge(includeNotificationsCount) {
   }
   let num2 = 0;
   if (flag) {
-    num2 = memo(16031)().value;
+    num2 = memo(16207)().value;
   }
   const sum = num + num2;
   _require = sum;
@@ -64,7 +64,7 @@ function IconWithBadge(includeNotificationsCount) {
     items4 = [];
   }
   const obj4 = { cutouts: items4, children: closure_6(includeNotificationsCount.Icon, { size: "md", style: tmp.backIcon, color: "interactive-text-default" }) };
-  const items5 = [closure_6(tmp5(8276), obj4), ];
+  const items5 = [closure_6(tmp5(8441), obj4), ];
   let tmp9Result = null;
   if (sum > 0) {
     const obj6 = { style: tmp.badgeWrapper, children: null };

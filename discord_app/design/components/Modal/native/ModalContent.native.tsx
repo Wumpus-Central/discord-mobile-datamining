@@ -1,6 +1,6 @@
-// === Module 7871: ModalContent ===
+// === Module 8036: ModalContent ===
 
-// Module 7871 (ModalContent)
+// Module 8036 (ModalContent)
 import noop from "module_19" /* 19 */;
 
 const ScrollView = fn(17).ScrollView;

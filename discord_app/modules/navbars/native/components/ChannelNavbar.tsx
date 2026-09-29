@@ -1,6 +1,6 @@
-// === Module 12290: ChannelNavbar ===
+// === Module 12461: ChannelNavbar ===
 
-// Module 12290 (ChannelNavbar)
+// Module 12461 (ChannelNavbar)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -10,18 +10,18 @@ import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 465
 import UserUtilsDefault from "UserUtils" /* 4678 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import useChannelName from "useChannelName" /* 4989 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5335 */;
-import Pressables from "Pressables" /* 5435 */;
-import isStreamingDefault from "isStreaming" /* 7705 */;
-import ActivityStatusDefault from "ActivityStatus" /* 10335 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5501 */;
+import Pressables from "Pressables" /* 5602 */;
+import isStreamingDefault from "isStreaming" /* 7870 */;
+import ActivityStatusDefault from "ActivityStatus" /* 10504 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5589 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5756 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import GuildStore from "GuildStore" /* 2067 */;
 import PresenceStore from "PresenceStore" /* 4876 */;
 import RelationshipStore from "RelationshipStore" /* 4479 */;
 import UserStore from "UserStore" /* 1372 */;
-import TextStyles from "TextStyles" /* 5836 */;
+import TextStyles from "TextStyles" /* 6003 */;
 
 require = fn;
 function ChannelTitleContent(arg0) {
@@ -420,7 +420,7 @@ export const ChannelButtons = function ChannelButtons(buttons) {
       obj.disabled = disabled;
       obj.style = style;
       obj.children = children;
-      const children1 = [closure_16(closure_1(9203), obj), ];
+      const children1 = [closure_16(closure_1(9368), obj), ];
       let tmp3Result = null;
       if (hasActivitiesPrivateChannelTooltip) {
         const obj2 = { contentTypes: null, groupName: null, children: null };
@@ -440,8 +440,8 @@ export const ChannelButtons = function ChannelButtons(buttons) {
           }
           return tmp2;
         };
-        tmp3Result = closure_16(closure_1(10088), obj2);
-        const tmp4Result = closure_1(10088);
+        tmp3Result = closure_16(closure_1(10255), obj2);
+        const tmp4Result = closure_1(10255);
       }
       children1[1] = tmp3Result;
       return closure_17(closure_4, { children: children1 }, index);

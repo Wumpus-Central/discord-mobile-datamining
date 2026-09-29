@@ -1,6 +1,6 @@
-// === Module 14783: GuildRoleSubscriptionMemberPreview ===
+// === Module 14958: GuildRoleSubscriptionMemberPreview ===
 
-// Module 14783 (GuildRoleSubscriptionMemberPreview)
+// Module 14958 (GuildRoleSubscriptionMemberPreview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtilsAll from "utils/ColorUtils" /* 1092 */;
@@ -9,9 +9,9 @@ import native from "native" /* 1177 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4988 */;
-import FastImageDefault from "FastImage" /* 5899 */;
-import RoleIconUtils from "RoleIconUtils" /* 6608 */;
-import RoleIconDefault from "RoleIcon" /* 6626 */;
+import FastImageDefault from "FastImage" /* 6065 */;
+import RoleIconUtils from "RoleIconUtils" /* 6774 */;
+import RoleIconDefault from "RoleIcon" /* 6792 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 

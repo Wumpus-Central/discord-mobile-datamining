@@ -1,6 +1,6 @@
-// === Module 10218: MarketingComponentHooks ===
+// === Module 10385: MarketingComponentHooks ===
 
-// Module 10218 (MarketingComponentHooks)
+// Module 10385 (MarketingComponentHooks)
 import initialize from "initialize" /* 504 */;
 import themes from "themes" /* 4538 */;
 import useThemeDefault from "useTheme" /* 4767 */;

@@ -1,12 +1,12 @@
-// === Module 9215: components/GameIcon ===
+// === Module 9380: components/GameIcon ===
 
-// Module 9215 (components/GameIcon)
+// Module 9380 (components/GameIcon)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import noop from "module_19" /* 19 */;
 
-const Pressables = FireIcon(5435);
-const FireIcon2 = FireIcon(9217);
+const Pressables = FireIcon(5602);
+const FireIcon2 = FireIcon(9382);
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);

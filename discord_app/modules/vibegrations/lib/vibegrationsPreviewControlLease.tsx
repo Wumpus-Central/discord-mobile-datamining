@@ -1,6 +1,6 @@
-// === Module 12446: vibegrationsPreviewControlLease ===
+// === Module 12617: vibegrationsPreviewControlLease ===
 
-// Module 12446 (vibegrationsPreviewControlLease)
+// Module 12617 (vibegrationsPreviewControlLease)
 import noop from "module_19" /* 19 */;
 
 function emit() {

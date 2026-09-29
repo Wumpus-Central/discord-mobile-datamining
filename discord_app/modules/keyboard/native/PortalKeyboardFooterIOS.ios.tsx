@@ -1,6 +1,6 @@
-// === Module 9738: PortalKeyboardFooterIOS ===
+// === Module 9905: PortalKeyboardFooterIOS ===
 
-// Module 9738 (PortalKeyboardFooterIOS)
+// Module 9905 (PortalKeyboardFooterIOS)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;

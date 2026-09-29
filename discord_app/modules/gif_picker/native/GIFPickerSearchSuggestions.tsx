@@ -1,9 +1,9 @@
-// === Module 9834: GIFPickerSearchSuggestions ===
+// === Module 10001: GIFPickerSearchSuggestions ===
 
-// Module 9834 (GIFPickerSearchSuggestions)
+// Module 10001 (GIFPickerSearchSuggestions)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
-import GIFPickerViewStore from "GIFPickerViewStore" /* 9826 */;
+import GIFPickerViewStore from "GIFPickerViewStore" /* 9993 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -36,7 +36,7 @@ export default noop.memo(function GIFPickerSearchSuggestions(onClickSuggestion) 
       style: tmp.suggestionsContainer,
       children: stateFromStoresArray.map((text) => {
           closure_0 = text;
-          return closure_1_5(onClickSuggestion(5281).Button, {
+          return closure_1_5(onClickSuggestion(5447).Button, {
             size: "sm",
             variant: "secondary",
             hitSlop: nativeDefault.space.PX_8,

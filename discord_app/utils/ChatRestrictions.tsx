@@ -1,9 +1,9 @@
-// === Module 9720: ChatRestrictions ===
+// === Module 9887: ChatRestrictions ===
 
-// Module 9720 (ChatRestrictions)
+// Module 9887 (ChatRestrictions)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
-import MentionGuardUtilsDefault from "MentionGuardUtils" /* 9721 */;
+import MentionGuardUtilsDefault from "MentionGuardUtils" /* 9888 */;
 import size from "module_2" /* 2 */;
 
 const TOKEN_REGEX = Constants.TOKEN_REGEX;
@@ -51,7 +51,7 @@ const items = [
       }
     },
     analyticsType: "@Everyone Warning",
-    animation: "add"
+    animation: "paddingHorizontal"
   },
   {
     check(arg0) {

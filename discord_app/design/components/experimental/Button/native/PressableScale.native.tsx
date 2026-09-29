@@ -1,8 +1,8 @@
-// === Module 8375: PressableScale ===
+// === Module 8540: PressableScale ===
 
-// Module 8375 (PressableScale)
+// Module 8540 (PressableScale)
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4566 */;
-import ButtonHooks from "ButtonHooks" /* 5287 */;
+import ButtonHooks from "ButtonHooks" /* 5453 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

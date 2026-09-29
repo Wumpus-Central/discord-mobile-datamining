@@ -1,9 +1,9 @@
-// === Module 9263: GuildEventCard ===
+// === Module 9430: GuildEventCard ===
 
-// Module 9263 (GuildEventCard)
+// Module 9430 (GuildEventCard)
 import nativeDefault from "native" /* 576 */;
-import ButtonGroup from "ButtonGroup" /* 5745 */;
-import GuildEventCardComponents from "GuildEventCardComponents" /* 9062 */;
+import ButtonGroup from "ButtonGroup" /* 5912 */;
+import GuildEventCardComponents from "GuildEventCardComponents" /* 9227 */;
 import noop from "module_19" /* 19 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4859 */;
 
@@ -27,7 +27,7 @@ function GuildEventCardControls(onCloseAction) {
   return React6(ButtonGroup.ButtonGroup, obj2);
 }
 const View = fn(17).View;
-let closure_5 = fn(6946).isGuildScheduledEventActive;
+let closure_5 = fn(7112).isGuildScheduledEventActive;
 fn(2051).AGE_VERIFICATION_STAGE_CHANNEL_TYPES;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);

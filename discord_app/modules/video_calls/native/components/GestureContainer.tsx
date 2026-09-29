@@ -1,6 +1,6 @@
-// === Module 9481: GestureContainer ===
+// === Module 9648: GestureContainer ===
 
-// Module 9481 (GestureContainer)
+// Module 9648 (GestureContainer)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
@@ -10,8 +10,8 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const useChannelCallStore = fn(8829).useChannelCallStore;
-const Constants = fn(8836);
+const useChannelCallStore = fn(8994).useChannelCallStore;
+const Constants = fn(9001);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: hasOwnProperty, SWIPE_TO_CHAT_ACTIVE_OFFSET: metroRequire } = Constants);
 const jsx = fn(21).jsx;
 const createStyles = fn(4836);
@@ -29,7 +29,7 @@ export default function GestureContainer(children) {
   const height = sharedValue(1479)().height;
   const tmp2 = useChannelCallStore((isGestureEnabled) => isGestureEnabled.isGestureEnabled);
   sharedValue = height(4566).useSharedValue(0);
-  const Gesture = height(6073).Gesture;
+  const Gesture = height(6239).Gesture;
   let obj = height(4566);
   const PanResult = Gesture.Pan();
   class S {
@@ -80,6 +80,6 @@ export default function GestureContainer(children) {
   let obj4 = { style: tmp.background, children: null };
   const animatedStyle = obj8.useAnimatedStyle(fn2);
   let obj3 = { interpolate: height(4566).interpolate, position: sharedValue, height };
-  obj4.children = jsx(height(6073).GestureDetector, { gesture: failOffsetXResult, children: jsx(sharedValue(4566).View, { style: animatedStyle, children: children.children }) });
+  obj4.children = jsx(height(6239).GestureDetector, { gesture: failOffsetXResult, children: jsx(sharedValue(4566).View, { style: animatedStyle, children: children.children }) });
   return <View style={tmp.background}>{null}</View>;
 };

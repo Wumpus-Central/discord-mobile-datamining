@@ -1,11 +1,11 @@
-// === Module 10899: useChannelSafeAreaBottomStyles ===
+// === Module 11068: useChannelSafeAreaBottomStyles ===
 
-// Module 10899 (useChannelSafeAreaBottomStyles)
+// Module 11068 (useChannelSafeAreaBottomStyles)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import KeyboardTypes from "KeyboardTypes" /* 1611 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5589 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5756 */;
 import LurkingStore from "LurkingStore" /* 4470 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import MediaEngineStore from "MediaEngineStore" /* 1993 */;

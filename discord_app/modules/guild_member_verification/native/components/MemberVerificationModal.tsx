@@ -1,20 +1,20 @@
-// === Module 5883: MemberVerificationModal ===
+// === Module 6049: MemberVerificationModal ===
 
-// Module 5883 (MemberVerificationModal)
+// Module 6049 (MemberVerificationModal)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4566 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4658 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5839 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6005 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2108 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5884 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6050 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 const View = fn(17).View;
-const MemberVerificationFormConstants = fn(5885);
+const MemberVerificationFormConstants = fn(6051);
 ({ SCROLL_EVENT_TIMER_MS: closure_7, useBannerHeight: closure_8 } = MemberVerificationFormConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);

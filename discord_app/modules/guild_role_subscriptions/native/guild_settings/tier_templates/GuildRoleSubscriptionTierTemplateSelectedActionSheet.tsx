@@ -1,6 +1,6 @@
-// === Module 17605: GuildRoleSubscriptionTierTemplateSelectedActionSheet ===
+// === Module 17794: GuildRoleSubscriptionTierTemplateSelectedActionSheet ===
 
-// Module 17605 (GuildRoleSubscriptionTierTemplateSelectedActionSheet)
+// Module 17794 (GuildRoleSubscriptionTierTemplateSelectedActionSheet)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
 import noop from "module_19" /* 19 */;
@@ -46,9 +46,9 @@ export default function GuildRoleSubscriptionTierTemplateSelectedActionSheet(mar
   obj6.onPress = function onPress() {
     return markAsDismissed(ContentDismissActionType.UNKNOWN);
   };
-  items[4] = closure_5(markAsDismissed(5282).BaseTextButton, obj6);
+  items[4] = closure_5(markAsDismissed(5448).BaseTextButton, obj6);
   obj3.children = items;
-  obj2.children = closure_6(markAsDismissed(6045).BottomSheetScrollView, obj3);
+  obj2.children = closure_6(markAsDismissed(6211).BottomSheetScrollView, obj3);
   obj.children = closure_5(View, obj2);
-  return closure_5(markAsDismissed(6571).BottomSheet, obj);
+  return closure_5(markAsDismissed(6737).BottomSheet, obj);
 };

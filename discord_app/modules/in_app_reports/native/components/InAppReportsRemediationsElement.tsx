@@ -1,9 +1,9 @@
-// === Module 12466: InAppReportsRemediationsElement ===
+// === Module 12636: InAppReportsRemediationsElement ===
 
-// Module 12466 (InAppReportsRemediationsElement)
+// Module 12636 (InAppReportsRemediationsElement)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import TableRowGroup from "TableRowGroup" /* 5999 */;
+import TableRowGroup from "TableRowGroup" /* 6165 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,8 +1,8 @@
-// === Module 10908: useIsMessageRequest ===
+// === Module 11077: useIsMessageRequest ===
 
-// Module 10908 (useIsMessageRequest)
-import MessageRequestStore from "MessageRequestStore" /* 6640 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6641 */;
+// Module 11077 (useIsMessageRequest)
+import MessageRequestStore from "MessageRequestStore" /* 6806 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6807 */;
 
 const require = globalThis.__r;
 

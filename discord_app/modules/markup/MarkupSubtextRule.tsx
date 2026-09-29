@@ -1,6 +1,6 @@
-// === Module 5333: MarkupSubtextRule ===
+// === Module 5499: MarkupSubtextRule ===
 
-// Module 5333 (MarkupSubtextRule)
+// Module 5499 (MarkupSubtextRule)
 import _mod1930 from "module_1930" /* 1930 */;
 import size from "module_2" /* 2 */;
 

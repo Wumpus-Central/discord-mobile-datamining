@@ -1,12 +1,12 @@
-// === Module 11697: ForLaterCardHeader ===
+// === Module 11866: ForLaterCardHeader ===
 
-// Module 11697 (ForLaterCardHeader)
+// Module 11866 (ForLaterCardHeader)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import useChannelNameDefault from "useChannelName" /* 4989 */;
-import GuildIconDefault from "GuildIcon" /* 5896 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 6630 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10371 */;
+import GuildIconDefault from "GuildIcon" /* 6062 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 6796 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10540 */;
 import GuildStore from "GuildStore" /* 2067 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4836 */;
@@ -18,7 +18,7 @@ function HeaderIcon(channel) {
   const items = [GuildStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   if (null != stateFromStores) {
-    const obj2 = { guild: stateFromStores, size: tmp2(5896).GuildIconSizes.XSMALL };
+    const obj2 = { guild: stateFromStores, size: tmp2(6062).GuildIconSizes.XSMALL };
     let tmp6Result = closure_5(GuildIconDefault, obj2);
   } else {
     let isGroupDMResult;
@@ -29,7 +29,7 @@ function HeaderIcon(channel) {
       const obj3 = { channel, size: tmp2(1177).AvatarSizes.XSMALL };
       tmp6Result = closure_5(GroupDMAvatarDefault, obj3);
     } else {
-      const obj4 = { style: tmp.dmIcon, children: closure_5(tmp2(5385).ChatIcon, { size: "xxs" }) };
+      const obj4 = { style: tmp.dmIcon, children: closure_5(tmp2(5551).ChatIcon, { size: "xxs" }) };
       tmp6Result = closure_5(View, obj4);
     }
   }
@@ -42,7 +42,7 @@ function ChannelName(channel) {
   const stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   const tmp5 = useChannelNameDefault(channel, false);
   const obj = channel(504);
-  const channelIconComponentWithGuild = channel(5335).getChannelIconComponentWithGuild(channel, stateFromStores);
+  const channelIconComponentWithGuild = channel(5501).getChannelIconComponentWithGuild(channel, stateFromStores);
   let isPrivateResult = channel.isPrivate();
   if (!isPrivateResult) {
     isPrivateResult = null == channelIconComponentWithGuild;

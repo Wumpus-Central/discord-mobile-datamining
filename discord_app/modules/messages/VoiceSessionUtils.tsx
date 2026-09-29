@@ -1,11 +1,11 @@
-// === Module 7514: VoiceSessionUtils ===
+// === Module 7679: VoiceSessionUtils ===
 
-// Module 7514 (VoiceSessionUtils)
-import useMessageAuthor from "useMessageAuthor" /* 5083 */;
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 7422 */;
-import maybeSortByProbability from "maybeSortByProbability" /* 7515 */;
+// Module 7679 (VoiceSessionUtils)
+import useMessageAuthor from "useMessageAuthor" /* 5249 */;
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 7587 */;
+import maybeSortByProbability from "maybeSortByProbability" /* 7680 */;
 import noop from "module_19" /* 19 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7072 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7237 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import UserStore from "UserStore" /* 1372 */;
 

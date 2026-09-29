@@ -1,12 +1,12 @@
-// === Module 6528: AuthorizedAppsStore ===
+// === Module 6694: AuthorizedAppsStore ===
 
-// Module 6528 (AuthorizedAppsStore)
+// Module 6694 (AuthorizedAppsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
-import ConnectedAppsStore from "ConnectedAppsStore" /* 6529 */;
+import ConnectedAppsStore from "ConnectedAppsStore" /* 6695 */;
 import MessageStore from "MessageStore" /* 5056 */;
 
 require = fn;

@@ -1,15 +1,15 @@
-// === Module 16557: ChannelNameHeader ===
+// === Module 16746: ChannelNameHeader ===
 
-// Module 16557 (ChannelNameHeader)
+// Module 16746 (ChannelNameHeader)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import _modDef3651 from "module_3651" /* 3651 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import transitionToChannel from "transitionToChannel" /* 4847 */;
 import ChannelUtils from "ChannelUtils" /* 4981 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5335 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7624 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10371 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5501 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7789 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10540 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import GuildStore from "GuildStore" /* 2067 */;
@@ -218,7 +218,7 @@ function ChannelNameHeaderContent(channel) {
 function DMChannelNameHeader(channel) {
   channel = channel.channel;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(6583)().analyticsLocations;
+  analyticsLocations = analyticsLocations(6749)().analyticsLocations;
   const items = [channel, analyticsLocations];
   const callback = noop.useCallback(() => {
     const recipientId = channel.getRecipientId();
@@ -230,7 +230,7 @@ function DMChannelNameHeader(channel) {
   let obj = { style: null, onPress: callback, children: closure_12(ChannelNameHeaderContent, { channel }) };
   const items1 = [closure_15().container, channel.containerStyle];
   obj.style = items1;
-  return closure_12(channel(5435).PressableOpacity, obj);
+  return closure_12(channel(5602).PressableOpacity, obj);
 }
 function DefaultChannelNameHeader(arg0) {
   ({ channel, containerStyle } = arg0);

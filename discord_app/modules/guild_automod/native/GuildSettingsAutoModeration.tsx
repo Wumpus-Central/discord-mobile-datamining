@@ -1,19 +1,19 @@
-// === Module 17305: GuildSettingsAutoModeration ===
+// === Module 17494: GuildSettingsAutoModeration ===
 
-// Module 17305 (GuildSettingsAutoModeration)
+// Module 17494 (GuildSettingsAutoModeration)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import TableRowGroup from "TableRowGroup" /* 5999 */;
-import AutomodTriggerConfigs from "AutomodTriggerConfigs" /* 17310 */;
+import TableRowGroup from "TableRowGroup" /* 6165 */;
+import AutomodTriggerConfigs from "AutomodTriggerConfigs" /* 17499 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const AutomodStore = fn(17306);
+const AutomodStore = fn(17495);
 ({ useAutomodRulesList: closure_4, useSyncAutomodRulesEffect: hasOwnProperty } = AutomodStore);
-let closure_6 = fn(17308).useAutomodEditingRuleState;
+let closure_6 = fn(17497).useAutomodEditingRuleState;
 const Constants = fn(1074);
 ({ GuildSettingsSections: closure_7, HelpdeskArticles: closure_8 } = Constants);
 const jsxProd = fn(21);

@@ -1,12 +1,12 @@
-// === Module 5452: NativePermissionManager ===
+// === Module 5619: NativePermissionManager ===
 
-// Module 5452 (NativePermissionManager)
+// Module 5619 (NativePermissionManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import NativePermissionConstants from "NativePermissionConstants" /* 5045 */;
-import NativePermissionUtils from "NativePermissionUtils" /* 5451 */;
-import ProcessArgs2 from "ProcessArgs" /* 5453 */;
+import NativePermissionUtils from "NativePermissionUtils" /* 5618 */;
+import ProcessArgs2 from "ProcessArgs" /* 5620 */;
 import LifecycleManager from "LifecycleManager" /* 1983 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 13232: CreatorMonetizationStore ===
+// === Module 13402: CreatorMonetizationStore ===
 
-// Module 13232 (CreatorMonetizationStore)
+// Module 13402 (CreatorMonetizationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

@@ -1,19 +1,19 @@
-// === Module 15822: GameClaimCoachmark ===
+// === Module 15997: GameClaimCoachmark ===
 
-// Module 15822 (GameClaimCoachmark)
+// Module 15997 (GameClaimCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import components_Button_Button from "components/Button/Button" /* 5281 */;
-import ButtonConstants from "ButtonConstants" /* 5286 */;
-import Pressables from "Pressables" /* 5435 */;
-import Card from "Card" /* 5919 */;
-import XSmallIcon from "XSmallIcon" /* 5992 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8037 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 8384 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 9578 */;
-import GameClaimCardStack from "GameClaimCardStack" /* 15823 */;
-import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 15824 */;
+import components_Button_Button from "components/Button/Button" /* 5447 */;
+import ButtonConstants from "ButtonConstants" /* 5452 */;
+import Pressables from "Pressables" /* 5602 */;
+import Card from "Card" /* 6085 */;
+import XSmallIcon from "XSmallIcon" /* 6158 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8202 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 8549 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 9745 */;
+import GameClaimCardStack from "GameClaimCardStack" /* 15998 */;
+import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 15999 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -122,7 +122,7 @@ export default noop.memo((arg0) => {
               require(constants2.TAKE_ACTION);
               v1 = 1;
               v3 = 1;
-              const obj5 = { value: v1(6735).redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(6739).LoginHandoffSource.GAME_CLAIM), done: false };
+              const obj5 = { value: v1(6901).redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(6905).LoginHandoffSource.GAME_CLAIM), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {

@@ -1,20 +1,20 @@
-// === Module 8590: AppLauncherUtils ===
+// === Module 8755: AppLauncherUtils ===
 
-// Module 8590 (AppLauncherUtils)
+// Module 8755 (AppLauncherUtils)
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import Server from "Server" /* 1979 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 6941 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8321 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 8712 */;
-import getPlatformDefault from "getPlatform" /* 8713 */;
-import ApplicationInstallUtils from "ApplicationInstallUtils" /* 8721 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7107 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8486 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 8877 */;
+import getPlatformDefault from "getPlatform" /* 8878 */;
+import ApplicationInstallUtils from "ApplicationInstallUtils" /* 8886 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 8591 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 8756 */;
 import ApplicationRecord from "ApplicationRecord" /* 2003 */;
-import AppLauncherStore from "AppLauncherStore" /* 8711 */;
+import AppLauncherStore from "AppLauncherStore" /* 8876 */;
 
 const require = globalThis.__r;
 
@@ -65,7 +65,7 @@ function getShelfBadgeTypeIfActive(application) {
 }
 let closure_3 = ["fakeAppIconURL"];
 const ApplicationFlags = fn(1074).ApplicationFlags;
-const BuiltInSectionId = fn(5305).BuiltInSectionId;
+const BuiltInSectionId = fn(5471).BuiltInSectionId;
 const MessageSendLocation = fn(4829).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherUtils.tsx");

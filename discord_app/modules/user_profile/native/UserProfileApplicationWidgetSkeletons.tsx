@@ -1,6 +1,6 @@
-// === Module 8478: UserProfileApplicationWidgetSkeletons ===
+// === Module 8643: UserProfileApplicationWidgetSkeletons ===
 
-// Module 8478 (UserProfileApplicationWidgetSkeletons)
+// Module 8643 (UserProfileApplicationWidgetSkeletons)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import noop from "module_19" /* 19 */;

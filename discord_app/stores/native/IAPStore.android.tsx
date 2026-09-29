@@ -1,12 +1,12 @@
-// === Module 6658: IAPStore ===
+// === Module 6824: IAPStore ===
 
-// Module 6658 (IAPStore)
+// Module 6824 (IAPStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants2 from "Constants" /* 1085 */;
 import BillingUtils from "BillingUtils" /* 4503 */;
-import PriceUtils from "PriceUtils" /* 6655 */;
-import Constants from "Constants" /* 6659 */;
+import PriceUtils from "PriceUtils" /* 6821 */;
+import Constants from "Constants" /* 6825 */;
 import size from "module_2" /* 2 */;
 
 function updateProduct(currencyCode) {

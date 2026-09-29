@@ -1,6 +1,6 @@
-// === Module 8334: useProductDisableState ===
+// === Module 8499: useProductDisableState ===
 
-// Module 8334 (useProductDisableState)
+// Module 8499 (useProductDisableState)
 import initialize from "initialize" /* 504 */;
 import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1077 */;
 import util from "util" /* 1115 */;

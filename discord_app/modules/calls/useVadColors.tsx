@@ -1,6 +1,6 @@
-// === Module 8904: useVadColors ===
+// === Module 9069: useVadColors ===
 
-// Module 8904 (useVadColors)
+// Module 9069 (useVadColors)
 import initialize from "initialize" /* 504 */;
 import GuildMemberStore from "GuildMemberStore" /* 2108 */;
 import UserStore from "UserStore" /* 1372 */;

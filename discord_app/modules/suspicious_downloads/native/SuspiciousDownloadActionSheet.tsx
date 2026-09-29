@@ -1,6 +1,6 @@
-// === Module 12503: SuspiciousDownloadActionSheet ===
+// === Module 12673: SuspiciousDownloadActionSheet ===
 
-// Module 12503 (SuspiciousDownloadActionSheet)
+// Module 12673 (SuspiciousDownloadActionSheet)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
 import openURLDefault from "openURL" /* 4519 */;
@@ -24,7 +24,7 @@ export default function SuspiciousDownloadActionSheet(href) {
   const items = [tmp.container, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
   obj2.style = items;
   const obj3 = { spacing: 8, justify: "center", align: "center", children: null };
-  const items1 = [closure_3(href(6004).TrafficConeSpotIllustration, {}), , ];
+  const items1 = [closure_3(href(6170).TrafficConeSpotIllustration, {}), , ];
   const obj4 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = href(1115).intl;
   obj4.children = intl.string(href(1115).t.XtDo9Z);
@@ -34,7 +34,7 @@ export default function SuspiciousDownloadActionSheet(href) {
   obj5.children = intl2.string(href(1115).t.L9yFko);
   items1[2] = closure_3(href(4832).Text, obj5);
   obj3.children = items1;
-  const items2 = [closure_4(href(5279).Stack, obj3), ];
+  const items2 = [closure_4(href(5445).Stack, obj3), ];
   const obj6 = { spacing: 8, children: null };
   const obj7 = { text: null, onPress: null };
   const intl3 = href(1115).intl;
@@ -42,7 +42,7 @@ export default function SuspiciousDownloadActionSheet(href) {
   obj7.onPress = function onPress() {
     return ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  const items3 = [closure_3(href(5281).Button, obj7), ];
+  const items3 = [closure_3(href(5447).Button, obj7), ];
   const obj8 = { text: null, onPress: null, variant: "secondary" };
   const intl4 = href(1115).intl;
   obj8.text = intl4.string(href(1115).t["/bHu89"]);
@@ -50,10 +50,10 @@ export default function SuspiciousDownloadActionSheet(href) {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     openURLDefault(href, true);
   };
-  items3[1] = closure_3(href(5281).Button, obj8);
+  items3[1] = closure_3(href(5447).Button, obj8);
   obj6.children = items3;
-  items2[1] = closure_4(href(5279).Stack, obj6);
+  items2[1] = closure_4(href(5445).Stack, obj6);
   obj2.children = items2;
-  obj.children = closure_4(href(5279).Stack, obj2);
-  return closure_3(href(6571).BottomSheet, obj);
+  obj.children = closure_4(href(5445).Stack, obj2);
+  return closure_3(href(6737).BottomSheet, obj);
 };

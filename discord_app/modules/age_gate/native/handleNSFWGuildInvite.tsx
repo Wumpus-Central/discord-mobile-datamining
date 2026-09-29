@@ -1,19 +1,18 @@
-// === Module 9230: handleNSFWGuildInvite ===
+// === Module 9395: handleNSFWGuildInvite ===
 
-// Module 9230 (handleNSFWGuildInvite)
+// Module 9395 (handleNSFWGuildInvite)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5039 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5735 */;
-import TinyBroncoExperiment from "TinyBroncoExperiment" /* 9235 */;
-import NsfwServerInviteWarningAlert from "NsfwServerInviteWarningAlert" /* 9236 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5902 */;
+import NsfwGateGuildAlert from "NsfwGateGuildAlert" /* 9397 */;
+import TinyBroncoExperiment from "TinyBroncoExperiment" /* 9399 */;
+import NsfwServerInviteWarningAlert from "NsfwServerInviteWarningAlert" /* 9400 */;
 import GuildStore from "GuildStore" /* 2067 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const GuildNSFWContentLevel = fn(1074).GuildNSFWContentLevel;
-let closure_5 = fn(9231).TINY_BRONCO_NSFW_SERVER_LOCATION;
+let closure_4 = fn(9396).TINY_BRONCO_NSFW_SERVER_LOCATION;
 const items = [, ];
 ({ EXPLICIT: arr[0], AGE_RESTRICTED: arr[1] } = GuildNSFWContentLevel);
 const set = new Set(items);
@@ -54,18 +53,17 @@ export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite, arg1
   }
   if (set.has(nsfw_level)) {
     if (null == GuildStore.getGuild(id)) {
-      if (obj7.isIOS()) {
-        const obj = { guildId: id };
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9232, dependencyMap.paths), obj);
+      if (obj6.isIOS()) {
+        const result = NsfwGateGuildAlert.showNsfwGateGuildAlert(id);
         if (onCancel != null) {
           onCancel();
         }
         return true;
       } else {
-        if (tmp10Result.hasAgeGatedFeatures()) {
-          if (tmp10Result3.isTinyBroncoEnabled(closure_5)) {
+        if (tmp9Result4.hasAgeGatedFeatures()) {
+          if (tmp9Result5.isTinyBroncoEnabled(closure_4)) {
             c2 = false;
-            const obj2 = {
+            const obj = {
               onConfirm() {
                           c2 = true;
                           require();
@@ -78,18 +76,18 @@ export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite, arg1
                           }
                         }
             };
-            const result = NsfwServerInviteWarningAlert.showNsfwServerInviteWarningAlert(obj2);
+            const result1 = NsfwServerInviteWarningAlert.showNsfwServerInviteWarningAlert(obj);
             return true;
           } else {
             return false;
           }
-          tmp10Result3 = TinyBroncoExperiment;
+          tmp9Result5 = TinyBroncoExperiment;
         } else {
           return false;
         }
-        tmp10Result = RegionalFeatureConfigUtils;
+        tmp9Result4 = RegionalFeatureConfigUtils;
       }
-      obj7 = PlatformUtils;
+      obj6 = PlatformUtils;
     }
   }
   return false;

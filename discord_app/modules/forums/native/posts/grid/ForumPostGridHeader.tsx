@@ -1,16 +1,16 @@
-// === Module 11484: ForumPostGridHeader ===
+// === Module 11653: ForumPostGridHeader ===
 
-// Module 11484 (ForumPostGridHeader)
-import ForumPostPinIconDefault from "ForumPostPinIcon" /* 11485 */;
-import ForumPostUsername from "ForumPostUsername" /* 11487 */;
-import ForumPostTimestampDefault from "ForumPostTimestamp" /* 11496 */;
-import ForumPostNewTagDefault from "ForumPostNewTag" /* 11497 */;
-import ForumPostTitleDefault from "ForumPostTitle" /* 11498 */;
+// Module 11653 (ForumPostGridHeader)
+import ForumPostPinIconDefault from "ForumPostPinIcon" /* 11654 */;
+import ForumPostUsername from "ForumPostUsername" /* 11656 */;
+import ForumPostTimestampDefault from "ForumPostTimestamp" /* 11665 */;
+import ForumPostNewTagDefault from "ForumPostNewTag" /* 11666 */;
+import ForumPostTitleDefault from "ForumPostTitle" /* 11667 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ForumTimestampFormats = fn(6691).ForumTimestampFormats;
+const ForumTimestampFormats = fn(6857).ForumTimestampFormats;
 const ChannelFlags = fn(2052).ChannelFlags;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);

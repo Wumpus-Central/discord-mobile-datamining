@@ -1,6 +1,6 @@
-// === Module 17724: websocketTelemetryHook ===
+// === Module 17913: websocketTelemetryHook ===
 
-// Module 17724 (websocketTelemetryHook)
+// Module 17913 (websocketTelemetryHook)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/websocketTelemetryHook.android.tsx");

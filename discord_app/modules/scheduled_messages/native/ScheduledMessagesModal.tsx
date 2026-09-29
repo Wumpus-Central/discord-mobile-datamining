@@ -1,27 +1,27 @@
-// === Module 11694: ScheduledMessagesModal ===
+// === Module 11863: ScheduledMessagesModal ===
 
-// Module 11694 (ScheduledMessagesModal)
+// Module 11863 (ScheduledMessagesModal)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import PremiumUtils from "PremiumUtils" /* 4488 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
-import spring from "spring" /* 5280 */;
-import _mod5943 from "module_5943" /* 5943 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6583 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6603 */;
-import ScheduledMessageActionCreators from "ScheduledMessageActionCreators" /* 7264 */;
-import HeaderShared from "HeaderShared" /* 7288 */;
-import PremiumUpsellUtils from "PremiumUpsellUtils" /* 8614 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9422 */;
-import ScheduledMessageCardDefault from "ScheduledMessageCard" /* 11696 */;
-import NitroLimitUpsellBarDefault from "NitroLimitUpsellBar" /* 11703 */;
+import spring from "spring" /* 5446 */;
+import _mod6109 from "module_6109" /* 6109 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6749 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6769 */;
+import ScheduledMessageActionCreators from "ScheduledMessageActionCreators" /* 7429 */;
+import HeaderShared from "HeaderShared" /* 7453 */;
+import PremiumUpsellUtils from "PremiumUpsellUtils" /* 8779 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9589 */;
+import ScheduledMessageCardDefault from "ScheduledMessageCard" /* 11865 */;
+import NitroLimitUpsellBarDefault from "NitroLimitUpsellBar" /* 11872 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ScheduledMessageStore from "ScheduledMessageStore" /* 11695 */;
+import ScheduledMessageStore from "ScheduledMessageStore" /* 11864 */;
 
-const NavigatorHeader = tmp4(5936);
+const NavigatorHeader = tmp4(6102);
 require = fn;
 function keyExtractor(scheduledMessageId) {
   return scheduledMessageId.scheduledMessageId;
@@ -123,7 +123,7 @@ function ScheduledMessageNitroUpsellBar(isAtLimit) {
 const View = fn(17).View;
 const AnalyticsPages = fn(1074).AnalyticsPages;
 const PremiumTypes = fn(1374).PremiumTypes;
-const premiumMax = fn(7266).MAX_SCHEDULED_MESSAGES_PER_USER;
+const premiumMax = fn(7431).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let items = [AnalyticsLocationDefault.SCHEDULED_MESSAGES_LIST];
@@ -184,7 +184,7 @@ export default function ScheduledMessagesModal() {
   obj5 = PlatformUtils;
   obj6.headerLeft = NavigatorHeader.getHeaderCloseButton(sharedValue(5039).pop);
   ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } = tmp);
-  const items1 = [closure_10(_mod5943.Header, obj6), , ];
+  const items1 = [closure_10(_mod6109.Header, obj6), , ];
   const obj7 = { style: null };
   const items2 = [tmp.headerBorder, animatedStyle];
   obj7.style = items2;

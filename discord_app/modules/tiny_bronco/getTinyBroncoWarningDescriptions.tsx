@@ -1,10 +1,10 @@
-// === Module 13308: getTinyBroncoWarningDescriptions ===
+// === Module 9402: getTinyBroncoWarningDescriptions ===
 
-// Module 13308 (getTinyBroncoWarningDescriptions)
+// Module 9402 (getTinyBroncoWarningDescriptions)
 import util from "util" /* 1115 */;
 import _modDef3071 from "module_3071" /* 3071 */;
-import TinyBroncoExperiment from "TinyBroncoExperiment" /* 9235 */;
-import TinyBroncoConstants from "TinyBroncoConstants" /* 9231 */;
+import TinyBroncoExperiment from "TinyBroncoExperiment" /* 9399 */;
+import TinyBroncoConstants from "TinyBroncoConstants" /* 9396 */;
 import size from "module_2" /* 2 */;
 
 ({ TINY_BRONCO_CHANNEL_LOCATION: c3, TINY_BRONCO_SERVER_LOCATION: closure_4 } = TinyBroncoConstants);

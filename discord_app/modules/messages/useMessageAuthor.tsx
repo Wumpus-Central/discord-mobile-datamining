@@ -1,6 +1,6 @@
-// === Module 5083: useMessageAuthor ===
+// === Module 5249: useMessageAuthor ===
 
-// Module 5083 (useMessageAuthor)
+// Module 5249 (useMessageAuthor)
 import _modDef38 from "module_38" /* 38 */;
 import UserUtilsDefault from "UserUtils" /* 4678 */;
 import ChannelStore from "ChannelStore" /* 2045 */;

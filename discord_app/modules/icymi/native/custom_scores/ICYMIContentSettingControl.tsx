@@ -1,20 +1,20 @@
-// === Module 16098: ICYMIContentSettingControl ===
+// === Module 16274: ICYMIContentSettingControl ===
 
-// Module 16098 (ICYMIContentSettingControl)
+// Module 16274 (ICYMIContentSettingControl)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import ICYMIUtils from "ICYMIUtils" /* 7798 */;
-import SegmentedControlState from "SegmentedControlState" /* 9083 */;
-import SegmentedControl from "SegmentedControl" /* 9084 */;
-import _modDef16099 from "module_16099" /* 16099 */;
-import _modDef16100 from "module_16100" /* 16100 */;
-import _modDef16101 from "module_16101" /* 16101 */;
-import NativeICYMIActionCreatorsDefault from "NativeICYMIActionCreators" /* 16102 */;
+import ICYMIUtils from "ICYMIUtils" /* 7963 */;
+import SegmentedControlState from "SegmentedControlState" /* 9248 */;
+import SegmentedControl from "SegmentedControl" /* 9249 */;
+import _modDef16275 from "module_16275" /* 16275 */;
+import _modDef16276 from "module_16276" /* 16276 */;
+import _modDef16277 from "module_16277" /* 16277 */;
+import NativeICYMIActionCreatorsDefault from "NativeICYMIActionCreators" /* 16278 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5017 */;
-import ICYMIStore from "ICYMIStore" /* 7783 */;
+import ICYMIStore from "ICYMIStore" /* 7948 */;
 
 require = fn;
 function ContentSettingsControl(initialValue) {
@@ -25,7 +25,7 @@ function ContentSettingsControl(initialValue) {
   const obj = { label: null, id: "-1", icon: null, page: null };
   const intl = util.intl;
   obj.label = intl.string(util.t.rdt65I);
-  const obj2 = { source: _modDef16099, style: null };
+  const obj2 = { source: _modDef16275, style: null };
   const items = [tmp.icon, ];
   let iconSelected = null;
   if (tmp3 === ICYMIUtils.ICYMICustomScore.LESS) {
@@ -38,7 +38,7 @@ function ContentSettingsControl(initialValue) {
   const obj3 = { label: null, id: "0", icon: null, page: null };
   const intl2 = util.intl;
   obj3.label = intl2.string(util.t.SnrG00);
-  const obj4 = { source: _modDef16100, style: null };
+  const obj4 = { source: _modDef16276, style: null };
   const items2 = [tmp.icon, ];
   let iconSelected1 = null;
   if (tmp3 === ICYMIUtils.ICYMICustomScore.DEFAULT) {
@@ -51,7 +51,7 @@ function ContentSettingsControl(initialValue) {
   const obj5 = { label: null, id: "1", icon: null, page: null };
   const intl3 = util.intl;
   obj5.label = intl3.string(util.t.Rxe3jF);
-  const obj6 = { source: _modDef16101, style: null };
+  const obj6 = { source: _modDef16277, style: null };
   const items3 = [tmp.icon, ];
   let iconSelected2 = null;
   if (tmp3 === ICYMIUtils.ICYMICustomScore.MORE) {
@@ -122,9 +122,9 @@ export const GuildScoreSettings = function GuildScoreSettings(guild) {
   const items = [ICYMIStore];
   const stateFromStores = id(504).useStateFromStores(items, () => ICYMIStore.getCustomGuildScore(id));
   let obj = id(504);
-  const numberToCustomScoreResult = id(7798).numberToCustomScore(stateFromStores);
+  const numberToCustomScoreResult = id(7963).numberToCustomScore(stateFromStores);
   c1 = numberToCustomScoreResult;
-  const tmp5 = numberToCustomScoreResult === id(7798).ICYMICustomScore.MUTED;
+  const tmp5 = numberToCustomScoreResult === id(7963).ICYMICustomScore.MUTED;
   const items1 = [id];
   const items2 = [numberToCustomScoreResult, id];
   const callback = noop.useCallback((arg0) => {
@@ -174,7 +174,7 @@ export const GuildScoreSettings = function GuildScoreSettings(guild) {
   const obj10 = { value: !tmp5, onValueChange: callback, label: null, start: true, end: true };
   const intl3 = tmp(1115).intl;
   obj10.label = intl3.string(id(1115).t.oujX73);
-  obj9.children = closure_8(id(6621).TableSwitchRow, obj10);
+  obj9.children = closure_8(id(6787).TableSwitchRow, obj10);
   items3[3] = closure_8(View, obj9);
   const obj11 = { variant: "text-xs/normal", color: "text-muted", style: tmp8.warningText, children: null };
   const intl4 = tmp(1115).intl;

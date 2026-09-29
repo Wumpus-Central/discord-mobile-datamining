@@ -1,9 +1,9 @@
-// === Module 11236: ChatArrowRightIcon ===
+// === Module 11405: ChatArrowRightIcon ===
 
-// Module 11236 (ChatArrowRightIcon)
+// Module 11405 (ChatArrowRightIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4530 */;
-import _mod11237 from "module_11237" /* 11237 */;
+import _mod11406 from "module_11406" /* 11406 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const ChatArrowRightIcon = function ChatArrowRightIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11237, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11406, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

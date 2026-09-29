@@ -1,12 +1,12 @@
-// === Module 8563: PlayStationLinkLanding ===
+// === Module 8728: PlayStationLinkLanding ===
 
-// Module 8563 (PlayStationLinkLanding)
+// Module 8728 (PlayStationLinkLanding)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2111 */;
-import _modDef8564 from "module_8564" /* 8564 */;
+import _modDef8729 from "module_8729" /* 8729 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_4 = fn(8562).PlayStationLinkModalScenes;
+let closure_4 = fn(8727).PlayStationLinkModalScenes;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsx = fn(21).jsx;
 const createStyles = fn(4836);
@@ -28,19 +28,19 @@ export const PlayStationLinkLanding = function PlayStationLinkLanding(platformTy
     obj.label = intl.string(navigation(1115).t["+eJP7o"]);
     const intl2 = navigation(1115).intl;
     obj.subLabel = intl2.string(navigation(1115).t["+0VIUh"]);
-    obj.icon = navigation(5415).VoiceNormalIcon;
+    obj.icon = navigation(5581).VoiceNormalIcon;
     const items = [obj, ];
     const obj2 = { label: null, icon: null };
     const intl3 = navigation(1115).intl;
     obj2.label = intl3.string(navigation(1115).t.ZH4QFa);
-    obj2.icon = navigation(8535).GameControllerIcon;
+    obj2.icon = navigation(8700).GameControllerIcon;
     items[1] = obj2;
     return items;
   }, []);
   const callback = noop.useCallback(() => {
     navigation.push(constants.PRE_CONNECT);
   }, items);
-  const memo1 = noop.useMemo(() => ({ uri: _modDef8564 }), []);
+  const memo1 = noop.useMemo(() => ({ uri: _modDef8729 }), []);
   const obj3 = { platformType: platformType.platformType, img: memo1, imgStyle: tmp.image, headerConnect: null, headerReconnect: null, body: null, onNext: null, valueProps: null };
   let intl2 = navigation(1115).intl;
   obj3.headerConnect = intl2.string(navigation(1115).t.xAWHOy);
@@ -49,5 +49,5 @@ export const PlayStationLinkLanding = function PlayStationLinkLanding(platformTy
   obj3.body = intl.format(navigation(1115).t.kqZQNe, { helpdeskArticleUrl: articleURL });
   obj3.onNext = callback;
   obj3.valueProps = memo;
-  return jsx(navigation(8537).TwoWayLinkLanding, { platformType: platformType.platformType, img: memo1, imgStyle: tmp.image, headerConnect: null, headerReconnect: null, body: null, onNext: null, valueProps: null });
+  return jsx(navigation(8702).TwoWayLinkLanding, { platformType: platformType.platformType, img: memo1, imgStyle: tmp.image, headerConnect: null, headerReconnect: null, body: null, onNext: null, valueProps: null });
 };

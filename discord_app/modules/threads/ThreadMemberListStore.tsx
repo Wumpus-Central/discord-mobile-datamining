@@ -1,6 +1,6 @@
-// === Module 9292: ThreadMemberListStore ===
+// === Module 9459: ThreadMemberListStore ===
 
-// Module 9292 (ThreadMemberListStore)
+// Module 9459 (ThreadMemberListStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -10,9 +10,9 @@ import UserUtilsDefault from "UserUtils" /* 4678 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import GuildMemberStore from "GuildMemberStore" /* 2108 */;
-import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 6696 */;
+import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 6862 */;
 import PresenceStore from "PresenceStore" /* 4876 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5591 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5758 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

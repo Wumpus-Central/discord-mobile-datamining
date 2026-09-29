@@ -1,6 +1,6 @@
-// === Module 17327: KeywordsRow ===
+// === Module 17516: KeywordsRow ===
 
-// Module 17327 (KeywordsRow)
+// Module 17516 (KeywordsRow)
 import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
 import noop from "module_19" /* 19 */;
@@ -34,8 +34,8 @@ export default function KeywordsRow(label) {
       obj4 = { type, maxWordCount };
     }
     const merged = Object.assign(obj4);
-    obj.openLazy(asyncRequireImpl(17328, dependencyMap.paths), "AutomodKeywords", obj2);
-    const tmp = asyncRequireImpl(17328, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(17517, dependencyMap.paths), "AutomodKeywords", obj2);
+    const tmp = asyncRequireImpl(17517, dependencyMap.paths);
   };
-  return keywords(label(5917).TableRow, obj);
+  return keywords(label(6083).TableRow, obj);
 };

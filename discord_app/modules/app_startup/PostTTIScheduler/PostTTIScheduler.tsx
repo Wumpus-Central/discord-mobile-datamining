@@ -1,6 +1,6 @@
-// === Module 7080: PostTTIScheduler ===
+// === Module 7245: PostTTIScheduler ===
 
-// Module 7080 (PostTTIScheduler)
+// Module 7245 (PostTTIScheduler)
 import size from "module_2" /* 2 */;
 
 const obj = {

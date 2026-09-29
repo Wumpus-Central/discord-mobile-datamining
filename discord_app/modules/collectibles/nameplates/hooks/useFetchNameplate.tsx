@@ -1,9 +1,9 @@
-// === Module 14192: useFetchNameplate ===
+// === Module 14367: useFetchNameplate ===
 
-// Module 14192 (useFetchNameplate)
+// Module 14367 (useFetchNameplate)
 import utils from "utils" /* 1971 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1974 */;
-import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 10508 */;
+import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 10677 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/nameplates/hooks/useFetchNameplate.tsx");

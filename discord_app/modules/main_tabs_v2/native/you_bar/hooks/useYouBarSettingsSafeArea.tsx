@@ -1,9 +1,9 @@
-// === Module 12999: useYouBarSettingsSafeArea ===
+// === Module 13169: useYouBarSettingsSafeArea ===
 
-// Module 12999 (useYouBarSettingsSafeArea)
+// Module 13169 (useYouBarSettingsSafeArea)
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1365 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 6364 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 6530 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarSettingsSafeArea.tsx");

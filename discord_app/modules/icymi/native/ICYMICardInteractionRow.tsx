@@ -1,6 +1,6 @@
-// === Module 16138: ICYMICardInteractionRow ===
+// === Module 16314: ICYMICardInteractionRow ===
 
-// Module 16138 (ICYMICardInteractionRow)
+// Module 16314 (ICYMICardInteractionRow)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
@@ -8,24 +8,24 @@ import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import ReactionUtils from "ReactionUtils" /* 4481 */;
 import ColorUtils from "ColorUtils" /* 4683 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4849 */;
-import Pressables from "Pressables" /* 5435 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 6876 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7182 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 7183 */;
-import canAddNewReactionsDefault from "canAddNewReactions" /* 7413 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 7799 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10583 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 10822 */;
-import PendingReplyActionCreators from "PendingReplyActionCreators" /* 11164 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 11176 */;
-import ForwardingIconDefault from "ForwardingIcon" /* 11185 */;
-import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 11234 */;
-import ICYMIShared from "ICYMIShared" /* 16130 */;
+import Pressables from "Pressables" /* 5602 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7042 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7347 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 7348 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 7578 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 7964 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10752 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 10991 */;
+import PendingReplyActionCreators from "PendingReplyActionCreators" /* 11333 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 11345 */;
+import ForwardingIconDefault from "ForwardingIcon" /* 11354 */;
+import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 11403 */;
+import ICYMIShared from "ICYMIShared" /* 16306 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 6724 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 6890 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 5725 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 5892 */;
 import PermissionStore from "PermissionStore" /* 4469 */;
 
 const require = globalThis.__r;

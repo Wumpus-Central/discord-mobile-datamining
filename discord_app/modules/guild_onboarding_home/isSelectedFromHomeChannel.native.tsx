@@ -1,9 +1,9 @@
-// === Module 10885: isSelectedFromHomeChannel ===
+// === Module 11054: isSelectedFromHomeChannel ===
 
-// Module 10885 (isSelectedFromHomeChannel)
+// Module 11054 (isSelectedFromHomeChannel)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4692 */;
 import RootNavigationRef from "RootNavigationRef" /* 4693 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 6698 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 6864 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
 
 require = fn;

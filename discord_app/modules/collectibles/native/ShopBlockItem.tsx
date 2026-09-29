@@ -1,10 +1,10 @@
-// === Module 15430: ShopBlockItem ===
+// === Module 15605: ShopBlockItem ===
 
-// Module 15430 (ShopBlockItem)
+// Module 15605 (ShopBlockItem)
 import nativeDefault from "native" /* 576 */;
-import ShopBlockType from "ShopBlockType" /* 6992 */;
+import ShopBlockType from "ShopBlockType" /* 7158 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 6962 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7128 */;
 
 require = fn;
 const View = fn(17).View;
@@ -28,11 +28,8 @@ export default function _default(block) {
   const items2 = [block, stateFromStores.size, stateFromStores1.size];
   const memo = noop.useMemo(() => {
     if (block.type === ShopBlockType.ShopBlockType.HERO) {
-      const _HermesInternal3 = HermesInternal;
-      let combined = "hero-" + block.categoryStoreListingId;
-    } else if (block.type === ShopBlockType.ShopBlockType.REWARD_HERO) {
       const _HermesInternal2 = HermesInternal;
-      combined = "reward-hero-" + block.categoryStoreListingId;
+      let combined = "hero-" + block.categoryStoreListingId;
     } else {
       const _HermesInternal = HermesInternal;
       combined = "" + stateFromStores.size + "-" + stateFromStores1.size;

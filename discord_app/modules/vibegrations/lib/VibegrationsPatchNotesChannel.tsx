@@ -1,6 +1,6 @@
-// === Module 16304: VibegrationsPatchNotesChannel ===
+// === Module 16419: VibegrationsPatchNotesChannel ===
 
-// Module 16304 (VibegrationsPatchNotesChannel)
+// Module 16419 (VibegrationsPatchNotesChannel)
 import Storage3 from "Storage" /* 510 */;
 import util from "util" /* 1115 */;
 import _modDef3715 from "module_3715" /* 3715 */;

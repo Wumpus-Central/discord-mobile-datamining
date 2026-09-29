@@ -1,6 +1,6 @@
-// === Module 6522: GuildOnboardingPromptsConstants ===
+// === Module 6688: GuildOnboardingPromptsConstants ===
 
-// Module 6522 (GuildOnboardingPromptsConstants)
+// Module 6688 (GuildOnboardingPromptsConstants)
 import util from "util" /* 1115 */;
 import _modDef1331 from "module_1331" /* 1331 */;
 import StringUtils from "StringUtils" /* 2011 */;

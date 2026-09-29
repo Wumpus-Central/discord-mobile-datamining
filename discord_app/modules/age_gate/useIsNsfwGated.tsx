@@ -1,6 +1,6 @@
-// === Module 7309: useIsNsfwGated ===
+// === Module 7474: useIsNsfwGated ===
 
-// Module 7309 (useIsNsfwGated)
+// Module 7474 (useIsNsfwGated)
 import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 5047 */;
 import UserStore from "UserStore" /* 1372 */;
 

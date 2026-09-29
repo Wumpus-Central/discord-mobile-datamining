@@ -1,9 +1,9 @@
-// === Module 8768: PostMessageTransport ===
+// === Module 8933: PostMessageTransport ===
 
-// Module 8768 (PostMessageTransport)
+// Module 8933 (PostMessageTransport)
 import DurationsDefault from "Durations" /* 1091 */;
-import RPCOpcodesDefault from "RPCOpcodes" /* 8769 */;
-import RPCErrorDefault from "RPCError" /* 8770 */;
+import RPCOpcodesDefault from "RPCOpcodes" /* 8934 */;
+import RPCErrorDefault from "RPCError" /* 8935 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;

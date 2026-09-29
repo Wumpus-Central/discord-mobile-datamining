@@ -1,12 +1,12 @@
-// === Module 11923: ChatInputRightActions ===
+// === Module 12094: ChatInputRightActions ===
 
-// Module 11923 (ChatInputRightActions)
+// Module 12094 (ChatInputRightActions)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 4540 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4566 */;
-import ChatInputActionButtonGiftOrThreadDefault from "ChatInputActionButtonGiftOrThread" /* 11727 */;
-import ChatInputActionButtonTransitionItem from "ChatInputActionButtonTransitionItem" /* 11728 */;
-import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 11729 */;
+import ChatInputActionButtonGiftOrThreadDefault from "ChatInputActionButtonGiftOrThread" /* 11896 */;
+import ChatInputActionButtonTransitionItem from "ChatInputActionButtonTransitionItem" /* 11897 */;
+import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 11898 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,11 +21,11 @@ function LeftSlot(state) {
   obj2.style = items;
   const tmp = useChatInputFloatingBounceDefault({ visible: state !== native.TransitionStates.YEETED, initiallyVisible: state !== native.TransitionStates.ENTERED, enterDelayMs, onExitComplete: cleanup });
   const merged = Object.assign(ChatInputActionButtonTransitionItem.interactivityProps(isInteractive));
-  obj2.children = React5(ChatInputActionButtonGiftOrThreadDefault, { canStartThreads: false, channel, onPress, styleButton: "flex", shouldShowThread: "face_with_hand_over_mouth" });
+  obj2.children = React5(ChatInputActionButtonGiftOrThreadDefault, { canStartThreads: false, channel, onPress, styleButton: "flex", shouldShowThread: "second_place" });
   return React5(ReanimatedRexportDefault.View, obj2);
 }
 const View = fn(17).View;
-const enterDelayMs = fn(11444).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+const enterDelayMs = fn(11613).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4836);
@@ -73,7 +73,7 @@ const forwardRefResult = noop.forwardRef((channel, arg1) => {
   obj5.active = keyboardType === channel(1611).KeyboardTypes.EXPRESSION;
   obj5.showKeyboardIcon = showKeyboardIcon;
   obj5.onPress = onPressExpression;
-  items1[1] = closure_7(tmp3(11656), obj5);
+  items1[1] = closure_7(tmp3(11825), obj5);
   obj3.children = items1;
   return closure_8(View, obj3);
 });

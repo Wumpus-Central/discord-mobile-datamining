@@ -1,6 +1,6 @@
-// === Module 5445: GameEventsOnPlayerExperiment ===
+// === Module 5612: GameEventsOnPlayerExperiment ===
 
-// Module 5445 (GameEventsOnPlayerExperiment)
+// Module 5612 (GameEventsOnPlayerExperiment)
 import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 

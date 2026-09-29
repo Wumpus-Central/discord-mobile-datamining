@@ -1,16 +1,16 @@
-// === Module 9630: Notification ===
+// === Module 9797: Notification ===
 
-// Module 9630 (Notification)
+// Module 9797 (Notification)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import timing from "timing" /* 4837 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5016 */;
-import spring from "spring" /* 5280 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 9554 */;
+import spring from "spring" /* 5446 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 9721 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const InAppNotificationConstants = fn(9555);
+const InAppNotificationConstants = fn(9722);
 ({ MIN_SWIPE_VELOCITY: closure_4, STARTED_SWIPE_THRESHOLD: hasOwnProperty, NOTIFICATION_MAX_WIDTH } = InAppNotificationConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);

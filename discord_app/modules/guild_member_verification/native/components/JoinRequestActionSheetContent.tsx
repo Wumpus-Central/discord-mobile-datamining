@@ -1,6 +1,6 @@
-// === Module 16231: JoinRequestActionSheetContent ===
+// === Module 16407: JoinRequestActionSheetContent ===
 
-// Module 16231 (JoinRequestActionSheetContent)
+// Module 16407 (JoinRequestActionSheetContent)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -8,10 +8,10 @@ import DateUtils from "DateUtils" /* 4512 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4658 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 4792 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import CircleXIcon from "CircleXIcon" /* 6034 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7624 */;
-import HourglassIcon from "HourglassIcon" /* 12456 */;
-import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 16229 */;
+import CircleXIcon from "CircleXIcon" /* 6200 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7789 */;
+import HourglassIcon from "HourglassIcon" /* 12627 */;
+import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 16405 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 
@@ -29,13 +29,13 @@ function OpenInterviewButton(arg0) {
     return tmp2;
   }, items1);
   const obj = interviewChannelId(504);
-  const joinRequestButtonActions = interviewChannelId(12130).useJoinRequestButtonActions(joinRequest, interviewChannelId);
+  const joinRequestButtonActions = interviewChannelId(12301).useJoinRequestButtonActions(joinRequest, interviewChannelId);
   ({ handleOpenInterview, submitting } = joinRequestButtonActions);
-  const obj2 = interviewChannelId(12130);
+  const obj2 = interviewChannelId(12301);
   if (!obj3.isActionedApplicationStatus(joinRequest.applicationStatus)) {
     const obj4 = { variant: "secondary", size: "md", icon: null, text: null, onPress: null, disabled: null };
     const obj5 = { color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, size: "sm" };
-    obj4.icon = closure_8(tmp(5385).ChatIcon, obj5);
+    obj4.icon = closure_8(tmp(5551).ChatIcon, obj5);
     if (label == null) {
       const intl = tmp(1115).intl;
       label = intl.string(tmp(1115).t["2simqN"]);
@@ -43,15 +43,15 @@ function OpenInterviewButton(arg0) {
     obj4.text = label;
     obj4.onPress = handleOpenInterview;
     obj4.disabled = submitting;
-    let tmp6Result = closure_8(tmp(5281).Button, obj4);
+    let tmp6Result = closure_8(tmp(5447).Button, obj4);
   } else {
     tmp6Result = null;
   }
   return tmp6Result;
 }
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(6572).ACTION_SHEET_MAX_WIDTH;
-const paddingTop = fn(6629).PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING;
+const ACTION_SHEET_MAX_WIDTH = fn(6738).ACTION_SHEET_MAX_WIDTH;
+const paddingTop = fn(6795).PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
 const createStyles = fn(4836);
@@ -76,25 +76,25 @@ let closure_11 = createStyles.createStyles(obj);
 let closure_12 = noop.memo((user) => {
   user = user.user;
   ({ displayProfile, joinRequest } = user);
-  const tmp3 = joinRequest(7687)();
-  const tmp4 = joinRequest(7676)(ACTION_SHEET_MAX_WIDTH);
-  ({ primaryColor, secondaryColor, theme } = joinRequest(7673)({ user, displayProfile }));
-  const tmp5 = joinRequest(7673)({ user, displayProfile });
+  const tmp3 = joinRequest(7852)();
+  const tmp4 = joinRequest(7841)(ACTION_SHEET_MAX_WIDTH);
+  ({ primaryColor, secondaryColor, theme } = joinRequest(7838)({ user, displayProfile }));
+  const tmp5 = joinRequest(7838)({ user, displayProfile });
   const tmp6 = user;
-  const userProfileColors = user(7684).useUserProfileColors({ theme, primaryColor, secondaryColor });
+  const userProfileColors = user(7849).useUserProfileColors({ theme, primaryColor, secondaryColor });
   const items = [joinRequest, user.id];
   ({ gradientFallbackBackground, containerBackground, avatarBackground, statusBackground } = userProfileColors);
   let tmp9 = null;
   if (null != user) {
     const obj2 = { children: null };
     const obj3 = { user, displayProfile, bannerHeight: tmp4 };
-    const items1 = [closure_8(joinRequest(7692), obj3), ];
+    const items1 = [closure_8(joinRequest(7857), obj3), ];
     const obj4 = { children: null };
     const obj5 = { user, disableStatus: true, backgroundColor: avatarBackground, statusStyle: null, onPress: null };
     const obj6 = { backgroundColor: statusBackground };
     obj5.statusStyle = obj6;
     obj5.onPress = tmp8;
-    const items2 = [closure_8(joinRequest(7702), obj5), ];
+    const items2 = [closure_8(joinRequest(7867), obj5), ];
     const obj7 = { fallbackBackground: gradientFallbackBackground, primaryColor, secondaryColor, containerStyle: null, children: null };
     const items3 = [, , ];
     ({ profileContentWrapper: arr4[0], profileContent: arr4[1] } = tmp3);
@@ -103,17 +103,17 @@ let closure_12 = noop.memo((user) => {
     obj7.containerStyle = items3;
     const obj9 = { style: tmp3.primaryInfo, children: null };
     const obj10 = { user, displayProfile, badgeContainerBackground: containerBackground, isPreviewingChanges: false };
-    const items4 = [closure_8(tmp6(12634).PrimaryInfo, obj10), ];
+    const items4 = [closure_8(tmp6(12804).PrimaryInfo, obj10), ];
     const obj11 = { user };
-    items4[1] = closure_8(joinRequest(12688), obj11);
+    items4[1] = closure_8(joinRequest(12858), obj11);
     obj9.children = items4;
     obj7.children = closure_9(View, obj9);
-    items2[1] = closure_8(joinRequest(10573), obj7);
+    items2[1] = closure_8(joinRequest(10742), obj7);
     obj4.children = items2;
     items1[1] = closure_9(View, obj4);
     obj2.children = items1;
     tmp9 = closure_9(closure_10, obj2);
-    const tmpResult = joinRequest(10573);
+    const tmpResult = joinRequest(10742);
   }
   return tmp9;
 });
@@ -254,16 +254,16 @@ let closure_15 = noop.memo((joinRequest) => {
   const callback = noop.useCallback(() => {
     openJoinRequestActionSheetDefault(joinRequest);
   }, items);
-  const joinRequestButtonActions = joinRequest(12130).useJoinRequestButtonActions(joinRequest, joinRequest.interviewChannelId, callback);
+  const joinRequestButtonActions = joinRequest(12301).useJoinRequestButtonActions(joinRequest, joinRequest.interviewChannelId, callback);
   ({ submitting, approveRequest, rejectRequest, handleOpenInterview } = joinRequestButtonActions);
   const obj2 = { variant: "primary", icon: null, label: null, onPress: null, disabled: null };
-  const obj = joinRequest(12130);
+  const obj = joinRequest(12301);
   obj2.icon = closure_8(joinRequest(4783).CheckmarkLargeIcon, { color: nativeDefault.colors.WHITE, size: "lg" });
   const intl = joinRequest(1115).intl;
   obj2.label = intl.string(joinRequest(1115).t.BzjDQJ);
   obj2.onPress = approveRequest;
   obj2.disabled = submitting;
-  const children = [closure_8(joinRequest(7363).IconButton, obj2), , ];
+  const children = [closure_8(joinRequest(7528).IconButton, obj2), , ];
   const obj4 = { variant: "destructive", icon: null, label: null, onPress: null, disabled: null };
   const obj3 = { color: nativeDefault.colors.WHITE, size: "lg" };
   obj4.icon = closure_8(joinRequest(4785).XLargeIcon, { color: nativeDefault.colors.WHITE, size: "lg" });
@@ -271,20 +271,20 @@ let closure_15 = noop.memo((joinRequest) => {
   obj4.label = intl2.string(joinRequest(1115).t.hDtbsz);
   obj4.onPress = rejectRequest;
   obj4.disabled = submitting;
-  children[1] = closure_8(joinRequest(7363).IconButton, obj4);
+  children[1] = closure_8(joinRequest(7528).IconButton, obj4);
   let tmp6Result = null == joinRequest.interviewChannelId;
   if (tmp6Result) {
     const obj6 = { variant: "secondary", icon: null, label: null, onPress: null, disabled: null };
     const obj7 = { color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, size: "lg" };
-    obj6.icon = closure_8(tmp2(5385).ChatIcon, obj7);
+    obj6.icon = closure_8(tmp2(5551).ChatIcon, obj7);
     const intl3 = tmp2(1115).intl;
     obj6.label = intl3.string(tmp2(1115).t.KQeYoC);
     obj6.onPress = handleOpenInterview;
     obj6.disabled = submitting;
-    tmp6Result = closure_8(tmp2(7363).IconButton, obj6);
+    tmp6Result = closure_8(tmp2(7528).IconButton, obj6);
   }
   children[2] = tmp6Result;
-  return closure_9(joinRequest(5745).ButtonGroup, { direction: "horizontal", align: "flex-start", justify: "space-evenly", children });
+  return closure_9(joinRequest(5912).ButtonGroup, { direction: "horizontal", align: "flex-start", justify: "space-evenly", children });
 });
 let closure_16 = noop.memo((arg0) => {
   ({ field, isLastField } = arg0);
@@ -433,7 +433,7 @@ export default noop.memo(function JoinRequestActionSheetContent(displayProfile) 
   obj6.children = mapped;
   items1[2] = closure_8(View, obj6);
   items1[3] = closure_8(closure_17, { joinRequest, user });
-  items1[4] = closure_8(memo(16232), { guildId: joinRequest.guildId, userId: joinRequest.userId, selectedJoinRequestId: joinRequest.joinRequestId });
+  items1[4] = closure_8(memo(16408), { guildId: joinRequest.guildId, userId: joinRequest.userId, selectedJoinRequestId: joinRequest.joinRequestId });
   obj.children = items1;
   return closure_9(View, obj);
 });

@@ -1,9 +1,9 @@
-// === Module 9023: TableRowApplicationIcon ===
+// === Module 9188: TableRowApplicationIcon ===
 
-// Module 9023 (TableRowApplicationIcon)
+// Module 9188 (TableRowApplicationIcon)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import FastImageDefault from "FastImage" /* 5899 */;
+import FastImageDefault from "FastImage" /* 6065 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

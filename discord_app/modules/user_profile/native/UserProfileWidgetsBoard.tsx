@@ -1,18 +1,18 @@
-// === Module 8127: UserProfileWidgetsBoard ===
+// === Module 8292: UserProfileWidgetsBoard ===
 
-// Module 8127 (UserProfileWidgetsBoard)
+// Module 8292 (UserProfileWidgetsBoard)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import StringUtils from "StringUtils" /* 2011 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7044 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7047 */;
-import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 8118 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8128 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8139 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 8384 */;
-import QuoteIcon from "QuoteIcon" /* 8385 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 8387 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7209 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7212 */;
+import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 8283 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8293 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8304 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 8549 */;
+import QuoteIcon from "QuoteIcon" /* 8550 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 8552 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -34,7 +34,7 @@ function WidgetRenderer(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, Pressable: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const UserProfileSections = fn(7628).UserProfileSections;
+const UserProfileSections = fn(7793).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const hitSlop = { top: 8, bottom: 8, left: 8, right: 8 };
@@ -439,11 +439,11 @@ export default function UserProfileWidgetsBoard(userId) {
   }
   const cardStyle = userId.cardStyle;
   const tmp = closure_14();
-  const displayableBoardWidgets = userId(12458).useDisplayableBoardWidgets(userId);
+  const displayableBoardWidgets = userId(12629).useDisplayableBoardWidgets(userId);
   closure_129_0 = flag;
   closure_129_1 = tmp2;
-  let obj = userId(12458);
-  const trackUserProfileAction = userId(7635).useUserProfileAnalyticsContext().trackUserProfileAction;
+  let obj = userId(12629);
+  const trackUserProfileAction = userId(7800).useUserProfileAnalyticsContext().trackUserProfileAction;
   closure_129_2 = trackUserProfileAction;
   closure_129_3 = noop.useRef(false);
   const items = [flag, displayableBoardWidgets.length > 0, trackUserProfileAction];

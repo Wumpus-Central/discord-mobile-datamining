@@ -1,11 +1,11 @@
-// === Module 15324: TakeActionScreen ===
+// === Module 15499: TakeActionScreen ===
 
-// Module 15324 (TakeActionScreen)
+// Module 15499 (TakeActionScreen)
 import nativeDefault from "native" /* 576 */;
 import LinkingDefault from "Linking" /* 4525 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7852 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9195 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 10912 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8017 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9360 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11081 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -15,7 +15,7 @@ import UserStore from "UserStore" /* 1372 */;
 require = fn;
 let useState = fn(19).useState;
 const View = fn(17).View;
-const Constants = fn(10905);
+const Constants = fn(11074);
 ({ MODAL_LOCATION_CONTEXT_MOBILE: c10, NOFILTR_URL: closure_11, THROUGHLINE_URL: closure_12, REPORTED_USER_CONFIRMATION_TOAST_KEY: map1, TOAST_CHECKMARK_ICON_COLOR: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
@@ -97,7 +97,7 @@ export default function TakeActionButtons(senderId) {
             v1 = 1;
             dependencyMap = 1;
             const obj5 = {
-              value: tmp4(8089).submitReportForInappropriateConversationSafetyAlert(lastChannelMessage, () => {
+              value: tmp4(8254).submitReportForInappropriateConversationSafetyAlert(lastChannelMessage, () => {
                         dependencyMap(true);
                         const obj2 = { key, content: null, IconComponent: null, iconColor: null, containerStyle: null };
                         const intl = closure_0(1115).intl;
@@ -121,9 +121,9 @@ export default function TakeActionButtons(senderId) {
           throw value;
         } else if (arg0 !== 2) {
           closure_128_6(false);
-          const result = v1(7852).showReportSuccessToast(closure_128_0, closure_128_1);
-          closure_128_3(tmp4(10912).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
-          const obj = v1(7852);
+          const result = v1(8017).showReportSuccessToast(closure_128_0, closure_128_1);
+          closure_128_3(tmp4(11081).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
+          const obj = v1(8017);
         }
         dependencyMap = 3;
         const obj6 = { value, done: true };

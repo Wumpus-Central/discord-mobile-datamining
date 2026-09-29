@@ -1,7 +1,7 @@
-// === Module 16377: VibegrationsAwaitingUser ===
+// === Module 16561: VibegrationsAwaitingUser ===
 
-// Module 16377 (VibegrationsAwaitingUser)
-import VibegrationsChatStore from "VibegrationsChatStore" /* 12643 */;
+// Module 16561 (VibegrationsAwaitingUser)
+import VibegrationsChatStore from "VibegrationsChatStore" /* 12813 */;
 import size from "module_2" /* 2 */;
 
 const turnSettled = VibegrationsChatStore.turnSettled;

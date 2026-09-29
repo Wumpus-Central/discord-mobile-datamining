@@ -1,12 +1,12 @@
-// === Module 6419: UserSettingsAccountUnverifiedHeader ===
+// === Module 6585: UserSettingsAccountUnverifiedHeader ===
 
-// Module 6419 (UserSettingsAccountUnverifiedHeader)
+// Module 6585 (UserSettingsAccountUnverifiedHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import Pressables from "Pressables" /* 5435 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 5933 */;
+import Pressables from "Pressables" /* 5602 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6099 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 

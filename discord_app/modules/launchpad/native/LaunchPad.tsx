@@ -1,32 +1,32 @@
-// === Module 16798: LaunchPad ===
+// === Module 16985: LaunchPad ===
 
-// Module 16798 (LaunchPad)
+// Module 16985 (LaunchPad)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import ChatInputUtils from "ChatInputUtils" /* 4701 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import Pressables from "Pressables" /* 5435 */;
-import AutocompleterDefault from "Autocompleter" /* 9291 */;
-import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9299 */;
-import hideLaunchPadDefault from "hideLaunchPad" /* 10429 */;
-import RouteManagerDefault from "RouteManager" /* 12305 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 14139 */;
+import Pressables from "Pressables" /* 5602 */;
+import AutocompleterDefault from "Autocompleter" /* 9458 */;
+import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9466 */;
+import hideLaunchPadDefault from "hideLaunchPad" /* 10598 */;
+import RouteManagerDefault from "RouteManager" /* 12476 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 14311 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 4521 */;
-import ChannelListStore from "ChannelListStore" /* 6945 */;
-import NavigationHistoryStore_mod from "NavigationHistoryStore" /* 6746 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5818 */;
+import ChannelListStore from "ChannelListStore" /* 7111 */;
+import NavigationHistoryStore_mod from "NavigationHistoryStore" /* 6912 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5985 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
-import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7133 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7050 */;
+import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7298 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7215 */;
 import GuildStore from "GuildStore" /* 2067 */;
-import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 13297 */;
+import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 13467 */;
 import ReadStateStore from "ReadStateStore" /* 4851 */;
-import SortedGuildStore from "SortedGuildStore" /* 5750 */;
+import SortedGuildStore from "SortedGuildStore" /* 5917 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5017 */;
 import VoiceStateStore from "VoiceStateStore" /* 4855 */;
 
@@ -65,7 +65,7 @@ function createAndAppendChannel(item10022, set, items) {
   }
 }
 const View = fn(17).View;
-let NavigationHistoryStore = fn(6746);
+let NavigationHistoryStore = fn(6912);
 ({ CHANNEL_PREFIX: closure_8, getIdFromHistoryItem: closure_9, GUILD_PREFIX: c10 } = NavigationHistoryStore);
 let NavigationHistoryStore = NavigationHistoryStore_mod;
 const ChannelRecord = fn(2049);
@@ -278,7 +278,7 @@ let closure_35 = noop.memo((tab) => {
   return closure_28(sharedValue, obj6);
 });
 const results = [];
-let items = [fn(9290).AutocompleterResultTypes.GUILD, fn(9290).AutocompleterResultTypes.TEXT_CHANNEL, fn(9290).AutocompleterResultTypes.GROUP_DM, fn(9290).AutocompleterResultTypes.VOICE_CHANNEL, fn(9290).AutocompleterResultTypes.USER];
+let items = [fn(9457).AutocompleterResultTypes.GUILD, fn(9457).AutocompleterResultTypes.TEXT_CHANNEL, fn(9457).AutocompleterResultTypes.GROUP_DM, fn(9457).AutocompleterResultTypes.VOICE_CHANNEL, fn(9457).AutocompleterResultTypes.USER];
 const __initData3 = { code: "function LaunchPadTsx3(){const{sharedState}=this.__closure;return sharedState.get()===0;}" };
 const __initData4 = { code: "function LaunchPadTsx4(hidden,prevHidden){const{runOnJS,clearQuery,cancelTimeout}=this.__closure;if(hidden===prevHidden)return;if(hidden&&hidden!==prevHidden){runOnJS(clearQuery)();}else if(!hidden&&hidden!==prevHidden){runOnJS(cancelTimeout)();}}" };
 let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };

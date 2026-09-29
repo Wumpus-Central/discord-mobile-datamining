@@ -1,8 +1,8 @@
-// === Module 13969: NitroGem18Lottie ===
+// === Module 14138: NitroGem18Lottie ===
 
-// Module 13969 (NitroGem18Lottie)
-import LottieIcon from "LottieIcon" /* 9405 */;
-import _mod13970 from "module_13970" /* 13970 */;
+// Module 14138 (NitroGem18Lottie)
+import LottieIcon from "LottieIcon" /* 9572 */;
+import _mod14139 from "module_14139" /* 14139 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,5 +14,5 @@ const result = size.fileFinishedImporting("design/components/LottieIcon/native/g
 
 export const NitroGem18Lottie = noop.forwardRef((arg0, ref) => {
   const merged = Object.assign(arg0);
-  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod13970, animation: "all", ref, layers, markers: items });
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod14139, animation: "all", ref, layers, markers: items });
 });

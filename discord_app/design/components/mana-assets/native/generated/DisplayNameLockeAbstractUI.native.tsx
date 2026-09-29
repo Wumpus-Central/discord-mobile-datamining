@@ -1,9 +1,9 @@
-// === Module 16622: DisplayNameLockeAbstractUI ===
+// === Module 16810: DisplayNameLockeAbstractUI ===
 
-// Module 16622 (DisplayNameLockeAbstractUI)
+// Module 16810 (DisplayNameLockeAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5899 */;
-import _modDef16623 from "module_16623" /* 16623 */;
+import FastImageDefault from "FastImage" /* 6065 */;
+import _modDef16811 from "module_16811" /* 16811 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const DisplayNameLockeAbstractUI = function DisplayNameLockeAbstractUI(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef16623 };
+  const obj2 = { uri: _modDef16811 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

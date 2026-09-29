@@ -1,10 +1,10 @@
-// === Module 11919: EmojiSuggestionBarUtils ===
+// === Module 12090: EmojiSuggestionBarUtils ===
 
-// Module 11919 (EmojiSuggestionBarUtils)
+// Module 12090 (EmojiSuggestionBarUtils)
 import native from "native" /* 4540 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import timing from "timing" /* 4837 */;
-import spring from "spring" /* 5280 */;
+import spring from "spring" /* 5446 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4825 */;

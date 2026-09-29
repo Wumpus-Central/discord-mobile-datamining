@@ -1,6 +1,6 @@
-// === Module 11886: useAutocompleteAnimatedHeightStyles ===
+// === Module 12057: useAutocompleteAnimatedHeightStyles ===
 
-// Module 11886 (useAutocompleteAnimatedHeightStyles)
+// Module 12057 (useAutocompleteAnimatedHeightStyles)
 import timing from "timing" /* 4837 */;
 import timingPresets from "timingPresets" /* 4840 */;
 import size from "module_2" /* 2 */;

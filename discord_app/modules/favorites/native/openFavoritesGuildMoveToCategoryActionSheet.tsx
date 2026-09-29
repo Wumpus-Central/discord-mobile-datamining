@@ -1,8 +1,8 @@
-// === Module 10415: openFavoritesGuildMoveToCategoryActionSheet ===
+// === Module 10584: openFavoritesGuildMoveToCategoryActionSheet ===
 
-// Module 10415 (openFavoritesGuildMoveToCategoryActionSheet)
-import FolderIcon2 from "FolderIcon" /* 5388 */;
-import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 6616 */;
+// Module 10584 (openFavoritesGuildMoveToCategoryActionSheet)
+import FolderIcon2 from "FolderIcon" /* 5554 */;
+import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 6782 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

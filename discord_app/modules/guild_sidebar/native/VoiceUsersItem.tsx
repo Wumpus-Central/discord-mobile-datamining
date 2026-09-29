@@ -1,6 +1,6 @@
-// === Module 15761: VoiceUsersItem ===
+// === Module 15936: VoiceUsersItem ===
 
-// Module 15761 (VoiceUsersItem)
+// Module 15936 (VoiceUsersItem)
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

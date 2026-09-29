@@ -1,8 +1,8 @@
-// === Module 11667: AppLauncherUserListActionSheet ===
+// === Module 11836: AppLauncherUserListActionSheet ===
 
-// Module 11667 (AppLauncherUserListActionSheet)
+// Module 11836 (AppLauncherUserListActionSheet)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
-import TableRow from "TableRow" /* 5917 */;
+import TableRow from "TableRow" /* 6083 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ function EmptyStateWithSnowflakeQuery(onPressRow) {
   };
   const items = [onPressRow.query];
   obj.data = items;
-  return jsx(onPressRow(11649).AppLauncherList, {
+  return jsx(onPressRow(11818).AppLauncherList, {
     contentContainerStyle: closure_6().emptyState,
     data: null,
     renderItem(label) {

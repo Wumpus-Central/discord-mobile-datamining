@@ -1,6 +1,6 @@
-// === Module 7276: hasForLaterPremiumType ===
+// === Module 7441: hasForLaterPremiumType ===
 
-// Module 7276 (hasForLaterPremiumType)
+// Module 7441 (hasForLaterPremiumType)
 import initialize from "initialize" /* 504 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1970 */;
 import UserStore from "UserStore" /* 1372 */;

@@ -1,8 +1,8 @@
-// === Module 11308: GuildIncidentsActionSheetStore ===
+// === Module 11477: GuildIncidentsActionSheetStore ===
 
-// Module 11308 (GuildIncidentsActionSheetStore)
+// Module 11477 (GuildIncidentsActionSheetStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
-import GuildAntiRaidConstants from "GuildAntiRaidConstants" /* 7459 */;
+import GuildAntiRaidConstants from "GuildAntiRaidConstants" /* 7624 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

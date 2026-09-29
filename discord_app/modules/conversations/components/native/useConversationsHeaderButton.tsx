@@ -1,17 +1,17 @@
-// === Module 7330: useConversationsHeaderButton ===
+// === Module 7495: useConversationsHeaderButton ===
 
-// Module 7330 (useConversationsHeaderButton)
+// Module 7495 (useConversationsHeaderButton)
 import util from "util" /* 1115 */;
-import ConversationsActionCreators from "ConversationsActionCreators" /* 7333 */;
-import PaperIcon from "PaperIcon" /* 7336 */;
+import ConversationsActionCreators from "ConversationsActionCreators" /* 7498 */;
+import PaperIcon from "PaperIcon" /* 7501 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ConversationsStore from "ConversationsStore" /* 7018 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7179 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ConversationConstants = fn(7015);
+const ConversationConstants = fn(7181);
 ({ CONVERSATION_HAS_MORE_EXPIRATION_MS: hasOwnProperty, MOBILE_FETCH_LIMIT: metroRequire, MOBILE_PREVIEW_MESSAGE_COUNT: closure_7 } = ConversationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/components/native/useConversationsHeaderButton.tsx");
@@ -113,10 +113,10 @@ export const useConversationsHeaderButton = function useConversationsHeaderButto
   const effect = callback.useEffect(() => {
     let hasChannelDataResult = !fetchPage;
     if (fetchPage) {
-      hasChannelDataResult = ConversationsStore.hasChannelData(user.id);
+      hasChannelDataResult = ChannelConversationsStore.hasChannelData(user.id);
     }
     if (!hasChannelDataResult) {
-      hasChannelDataResult = ConversationsStore.isPendingFetch(user.id);
+      hasChannelDataResult = ChannelConversationsStore.isPendingFetch(user.id);
     }
     if (!hasChannelDataResult) {
       callback();
@@ -125,7 +125,7 @@ export const useConversationsHeaderButton = function useConversationsHeaderButto
   const tmpResult = require("useConversationBackoffRef");
   const items3 = [stateFromStores];
   const items4 = [channel.id];
-  stateFromStores = require("initialize").useStateFromStores(items3, () => ConversationsStore.getEdgeMarker(user.id, "after"), items4);
+  stateFromStores = require("initialize").useStateFromStores(items3, () => ChannelConversationsStore.getEdgeMarker(user.id, "after"), items4);
   const items5 = [stateFromStores, isTopicalNavEnabled, callback];
   const effect1 = callback.useEffect(() => {
     if (fetchPage) {
@@ -147,7 +147,7 @@ export const useConversationsHeaderButton = function useConversationsHeaderButto
   const items6 = [stateFromStores];
   const items7 = [channel.id];
   const stateFromStores1 = require("initialize").useStateFromStores(items6, () => {
-    const channelConversations = ConversationsStore.getChannelConversations(user.id);
+    const channelConversations = ChannelConversationsStore.getChannelConversations(user.id);
     let num;
     if (channelConversations != null) {
       num = channelConversations.length;

@@ -1,19 +1,19 @@
-// === Module 16563: AutoAnalytics ===
+// === Module 16752: AutoAnalytics ===
 
-// Module 16563 (AutoAnalytics)
+// Module 16752 (AutoAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import FavoritesUtils from "FavoritesUtils" /* 2070 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5016 */;
-import trackChannelOpenedClickstreamDefault from "trackChannelOpenedClickstream" /* 7194 */;
-import GuildThemeAnalyticsUtils from "GuildThemeAnalyticsUtils" /* 16564 */;
-import trackGuildViewedClickstreamDefault from "trackGuildViewedClickstream" /* 16565 */;
-import trackFavoritesGuildViewedDefault from "trackFavoritesGuildViewed" /* 16566 */;
-import getChannelOpenedRouteTrackingProps from "getChannelOpenedRouteTrackingProps" /* 16567 */;
+import trackChannelOpenedClickstreamDefault from "trackChannelOpenedClickstream" /* 7359 */;
+import GuildThemeAnalyticsUtils from "GuildThemeAnalyticsUtils" /* 16753 */;
+import trackGuildViewedClickstreamDefault from "trackGuildViewedClickstream" /* 16754 */;
+import trackFavoritesGuildViewedDefault from "trackFavoritesGuildViewed" /* 16755 */;
+import getChannelOpenedRouteTrackingProps from "getChannelOpenedRouteTrackingProps" /* 16756 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4852 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5589 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6946 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5756 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7112 */;
 import StageInstanceStore from "StageInstanceStore" /* 2050 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import GuildMemberStore from "GuildMemberStore" /* 2108 */;
@@ -23,7 +23,7 @@ import NetworkStore from "NetworkStore" /* 4885 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4859 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4655 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5591 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5758 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5017 */;
 import UserStore from "UserStore" /* 1372 */;
 

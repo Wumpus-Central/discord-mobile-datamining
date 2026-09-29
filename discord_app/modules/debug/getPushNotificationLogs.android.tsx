@@ -1,7 +1,7 @@
-// === Module 9651: getPushNotificationLogs ===
+// === Module 9818: getPushNotificationLogs ===
 
-// Module 9651 (getPushNotificationLogs)
-import NativePushNotificationMonitorModuleDefault from "NativePushNotificationMonitorModule" /* 8748 */;
+// Module 9818 (getPushNotificationLogs)
+import NativePushNotificationMonitorModuleDefault from "NativePushNotificationMonitorModule" /* 8913 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const size = fn(2);

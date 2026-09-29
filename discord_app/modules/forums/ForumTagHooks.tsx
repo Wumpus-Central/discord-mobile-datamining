@@ -1,8 +1,8 @@
-// === Module 6693: ForumTagHooks ===
+// === Module 6859: ForumTagHooks ===
 
-// Module 6693 (ForumTagHooks)
+// Module 6859 (ForumTagHooks)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import ReportToModUtils from "ReportToModUtils" /* 6694 */;
+import ReportToModUtils from "ReportToModUtils" /* 6860 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import PermissionStore from "PermissionStore" /* 4469 */;

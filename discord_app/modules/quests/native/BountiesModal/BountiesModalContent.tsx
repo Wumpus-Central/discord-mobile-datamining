@@ -1,23 +1,23 @@
-// === Module 14592: BountiesModalContent ===
+// === Module 14767: BountiesModalContent ===
 
-// Module 14592 (BountiesModalContent)
+// Module 14767 (BountiesModalContent)
 import nativeDefault from "native" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
 import timing from "timing" /* 4837 */;
 import timingPresets from "timingPresets" /* 4840 */;
-import QuestContent from "QuestContent" /* 5761 */;
-import AdCreativeType from "AdCreativeType" /* 5763 */;
-import QuestDataUtils from "QuestDataUtils" /* 7112 */;
-import AnalyticsActions from "AnalyticsActions" /* 7131 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7141 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 10720 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 10735 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 10753 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 14539 */;
+import QuestContent from "QuestContent" /* 5928 */;
+import AdCreativeType from "AdCreativeType" /* 5930 */;
+import QuestDataUtils from "QuestDataUtils" /* 7277 */;
+import AnalyticsActions from "AnalyticsActions" /* 7296 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7306 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 10889 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 10904 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 10922 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 14714 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import BountyStore from "BountyStore" /* 7115 */;
+import BountyStore from "BountyStore" /* 7280 */;
 
 require = fn;
 function BountiesModalContentInner(bounty) {
@@ -226,7 +226,7 @@ function BountiesModalContentInner(bounty) {
     obj.trackAdContentEvent(obj2);
     BountiesModalActionCreatorsDefault.hideModal();
   }, items7);
-  const size1 = { bounty, sourceQuestContent, isCompleted: stateFromStores, isCtaVisible: null, isEndCardVisible: null, isProgressBarVisible: null, orbsBalance: null, handleVideoEnd: null, handleVideoProgress: null, handleVideoPaused: null, handleVideoResumed: null, handleVideoError: null, onLoadStart: null, onBuffer: null, onFirstFrame: null, onVideoTracks: null, rewardRemainingSeconds: null, rewardTotalSeconds: null, normalizedProgress: null, repeat: null, initialProgress: null, isActive: true, playerRef: null, width: null, height: null, videoEndPeekScale: null, renderEndCard: null };
+  const size1 = { bounty, sourceQuestContent, isCompleted: stateFromStores, isCtaVisible: null, isEndCardVisible: null, isProgressBarVisible: null, orbsBalance: null, handleVideoEnd: null, handleVideoProgress: null, handleVideoPaused: null, handleVideoResumed: null, handleVideoError: null, onLoadStart: null, onBuffer: null, onFirstFrame: null, onVideoTracks: null, rewardRemainingSeconds: null, rewardTotalSeconds: null, normalizedProgress: null, repeat: null, initialProgress: null, isActive: true, playerRef: null, width: null, height: null, renderEndCard: null };
   if (isCtaVisible) {
     isCtaVisible = !isVideoEndAppStoreOverlayVisible;
   }
@@ -254,7 +254,6 @@ function BountiesModalContentInner(bounty) {
   size1.initialProgress = initialProgress;
   size1.playerRef = ref;
   ({ width: obj9.width, height: obj9.height } = memo);
-  size1.videoEndPeekScale = bounty.videoEndPeekScale;
   size1.renderEndCard = function renderEndCard() {
     return closure_2_14(QuestContentImpressionTracker.QuestContentImpressionTrackerNative, {
       adContentId: bounty.id,
@@ -289,7 +288,7 @@ function BountiesModalContentInner(bounty) {
 function BountiesModalContentWithAppStore(arg0) {
   let memo;
   let sharedValue;
-  c4 = undefined;
+  _slicedToArray = undefined;
   noop = undefined;
   ({ bounty, sourceQuestContent } = arg0);
   const height = memo(sharedValue[10])().height;
@@ -317,31 +316,29 @@ function BountiesModalContentWithAppStore(arg0) {
     const size = { top: Math.floor(rect.top + (diff1 - result) / 2), left: Math.floor(rect.left + (diff - result1) / 2), width: Math.floor(result1), height: Math.floor(result), isFullWidth: flag };
     return size;
   }, items);
-  sharedValue = height(sharedValue[35]).useSharedValue(1);
+  sharedValue = height(sharedValue[35]).useSharedValue(0);
   let obj = height(sharedValue[35]);
   const tmp = memo;
   const tmp2 = sharedValue;
-  const sharedValue1 = height(sharedValue[35]).useSharedValue(0);
-  let obj2 = height(sharedValue[35]);
-  [tmp8, c4] = sharedValue1(noop.useState(null), 2);
-  noop = noop.useRef(null);
-  noop.useRef(0);
-  const isVideoEndAppStoreOverlayVisible = tmp9;
-  const items1 = [height, , ];
-  ({ top: arr2[1], height: arr2[2] } = memo);
-  const memo1 = noop.useMemo(() => closure_2_10({ windowHeight: height, videoTop: memo.top, videoHeight: memo.height }), items1);
+  [tmp7, c3] = noop.useState(null);
+  noop.useRef(null);
+  noop = noop.useRef(0);
+  const isVideoEndAppStoreOverlayVisible = tmp8;
+  const items1 = [height, , , ];
+  ({ top: arr2[1], width: arr2[2], height: arr2[3] } = memo);
+  const memo1 = noop.useMemo(() => closure_2_10({ windowHeight: height, videoTop: memo.top, videoWidth: memo.width, videoHeight: memo.height }), items1);
   const items2 = [height];
-  const items3 = [sharedValue1];
+  const items3 = [sharedValue];
   const memo2 = noop.useMemo(() => React7(height), items2);
   const showVideoEndAppStoreOverlay = noop.useCallback((current) => {
-    closure_6.current = Date.now();
-    closure_5.current = current;
+    closure_5.current = Date.now();
+    closure_4.current = current;
     _undefined(current);
-    const result = sharedValue1.set(timing.withTiming(1, timingPresets.timingSlow));
+    const result = sharedValue.set(timing.withTiming(1, timingPresets.timingSlow));
     const appId = current.metadata.appId;
     current.trackOverlayEvent(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, appId, AnalyticsActions.AppStoreOverlayVariant.CUSTOM);
   }, items3);
-  const items4 = [sharedValue1, sharedValue];
+  const items4 = [sharedValue];
   const callback1 = noop.useCallback(() => {
     const current = ref.current;
     if (null != current) {
@@ -354,26 +351,25 @@ function BountiesModalContentWithAppStore(arg0) {
       const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
       ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
       _undefined(null);
-      const result1 = sharedValue.set(timing.withTiming(1, timingPresets.timingStandard));
-      const result2 = sharedValue1.set(0);
+      const result1 = sharedValue.set(timing.withTiming(0, timingPresets.timingStandard));
     }
   }, items4);
-  const items5 = [callback1, null != tmp8, showVideoEndAppStoreOverlay, sharedValue, memo1];
-  const memo3 = noop.useMemo(() => ({ videoEndPeekTargetScale: memo1, videoEndPeekScale: sharedValue, isVideoEndAppStoreOverlayVisible, showVideoEndAppStoreOverlay, dismissVideoEndAppStoreOverlay: callback1 }), items5);
-  const obj3 = { value: memo3, children: null };
-  const items6 = [closure_14(BountiesModalContentInner, { bounty, sourceQuestContent, videoEndPeekScale: sharedValue, dismissVideoEndAppStoreOverlay: callback1 }), ];
-  let tmp16Result = null;
-  if (null != tmp8) {
-    const obj4 = { metadata: tmp8.metadata, sheetHeight: memo2, revealProgress: sharedValue1, onDismiss: callback1, onInstallPress: tmp8.onInstallPress };
-    tmp16Result = closure_14(tmp(tmp2[41]), obj4);
+  const items5 = [callback1, null != tmp7, showVideoEndAppStoreOverlay, sharedValue, memo1];
+  const memo3 = noop.useMemo(() => ({ videoEndPeekProgress: sharedValue, videoEndPeekTargetScale: memo1, isVideoEndAppStoreOverlayVisible, showVideoEndAppStoreOverlay, dismissVideoEndAppStoreOverlay: callback1 }), items5);
+  let obj2 = { value: memo3, children: null };
+  const items6 = [closure_14(BountiesModalContentInner, { bounty, sourceQuestContent, dismissVideoEndAppStoreOverlay: callback1 }), ];
+  let tmp15Result = null;
+  if (null != tmp7) {
+    const obj3 = { metadata: tmp7.metadata, sheetHeight: memo2, revealProgress: sharedValue, onDismiss: callback1, onInstallPress: tmp7.onInstallPress };
+    tmp15Result = closure_14(tmp(tmp2[41]), obj3);
   }
-  items6[1] = tmp16Result;
-  obj3.children = items6;
-  return closure_16(height(sharedValue[40]).BountyVideoEndAppStoreProvider, obj3);
+  items6[1] = tmp15Result;
+  obj2.children = items6;
+  return closure_16(height(sharedValue[40]).BountyVideoEndAppStoreProvider, obj2);
 }
 const View = fn(17).View;
-const QuestsExperimentLocations = fn(5756).QuestsExperimentLocations;
-const BountiesModalConstants = fn(14543);
+const QuestsExperimentLocations = fn(5923).QuestsExperimentLocations;
+const BountiesModalConstants = fn(14718);
 ({ getBountyVideoEndAppStoreSheetHeight: closure_9, getBountyVideoEndPeekTargetScale: c10 } = BountiesModalConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, ComponentActions: closure_12 } = Constants);

@@ -1,11 +1,11 @@
-// === Module 8848: usePipVideoOrStream ===
+// === Module 9013: usePipVideoOrStream ===
 
-// Module 8848 (usePipVideoOrStream)
+// Module 9013 (usePipVideoOrStream)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4692 */;
-import ChannelCallModalDefault from "ChannelCallModal" /* 8835 */;
+import ChannelCallModalDefault from "ChannelCallModal" /* 9000 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4852 */;
-import VideoSpeakerStore from "VideoSpeakerStore" /* 8849 */;
+import VideoSpeakerStore from "VideoSpeakerStore" /* 9014 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4858 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2045 */;

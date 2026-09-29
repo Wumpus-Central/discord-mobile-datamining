@@ -1,7 +1,7 @@
-// === Module 9547: ChannelVisibilityUtils ===
+// === Module 9714: ChannelVisibilityUtils ===
 
-// Module 9547 (ChannelVisibilityUtils)
-import ChannelSectionStore from "ChannelSectionStore" /* 6698 */;
+// Module 9714 (ChannelVisibilityUtils)
+import ChannelSectionStore from "ChannelSectionStore" /* 6864 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4655 */;
 

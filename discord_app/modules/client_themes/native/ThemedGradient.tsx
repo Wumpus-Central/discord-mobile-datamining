@@ -1,6 +1,6 @@
-// === Module 5437: ThemedGradient ===
+// === Module 5604: ThemedGradient ===
 
-// Module 5437 (ThemedGradient)
+// Module 5604 (ThemedGradient)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1230 */;
@@ -14,7 +14,7 @@ import GuildThemePresets from "GuildThemePresets" /* 4689 */;
 import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 4691 */;
 import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 4766 */;
 import useThemeDefault from "useTheme" /* 4767 */;
-import LinearGradientDefault from "LinearGradient" /* 5293 */;
+import LinearGradientDefault from "LinearGradient" /* 5459 */;
 import noop from "module_19" /* 19 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4653 */;
 
@@ -342,8 +342,8 @@ function CustomThemesGradient(arg0) {
     items2[3] = absolute;
     items2[4] = componentStyles;
     obj.style = items2;
-    tmp10Result = closure_6(reduced(5293), obj);
-    const tmp2Result = reduced(5293);
+    tmp10Result = closure_6(reduced(5459), obj);
+    const tmp2Result = reduced(5459);
   }
   return tmp10Result;
 }

@@ -1,6 +1,6 @@
-// === Module 16385: vibegrations/VibegrationsAwaitingUser ===
+// === Module 16569: vibegrations/VibegrationsAwaitingUser ===
 
-// Module 16385 (vibegrations/VibegrationsAwaitingUser)
+// Module 16569 (vibegrations/VibegrationsAwaitingUser)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import timing from "timing" /* 4837 */;

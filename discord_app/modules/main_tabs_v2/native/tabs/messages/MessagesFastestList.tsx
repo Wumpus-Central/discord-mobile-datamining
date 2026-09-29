@@ -1,14 +1,14 @@
-// === Module 15734: MessagesFastestList ===
+// === Module 15909: MessagesFastestList ===
 
-// Module 15734 (MessagesFastestList)
+// Module 15909 (MessagesFastestList)
 import nativeDefault from "native" /* 576 */;
-import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 6483 */;
-import FastestListItemTypeDefault from "FastestListItemType" /* 6485 */;
-import MessagesItemChannel from "MessagesItemChannel" /* 15663 */;
-import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 15673 */;
-import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 15675 */;
-import useMessagesData from "useMessagesData" /* 15678 */;
-import MessagesItemSeparator from "MessagesItemSeparator" /* 15728 */;
+import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 6649 */;
+import FastestListItemTypeDefault from "FastestListItemType" /* 6651 */;
+import MessagesItemChannel from "MessagesItemChannel" /* 15838 */;
+import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 15848 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 15850 */;
+import useMessagesData from "useMessagesData" /* 15853 */;
+import MessagesItemSeparator from "MessagesItemSeparator" /* 15903 */;
 import noop from "module_19" /* 19 */;
 
 const MessagesItemSeparatorDefault = MessagesItemSeparator;

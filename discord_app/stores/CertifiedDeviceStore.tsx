@@ -1,6 +1,6 @@
-// === Module 9105: CertifiedDeviceStore ===
+// === Module 9270: CertifiedDeviceStore ===
 
-// Module 9105 (CertifiedDeviceStore)
+// Module 9270 (CertifiedDeviceStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;

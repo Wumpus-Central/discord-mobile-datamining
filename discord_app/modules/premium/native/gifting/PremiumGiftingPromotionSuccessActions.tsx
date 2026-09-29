@@ -1,9 +1,9 @@
-// === Module 10541: PremiumGiftingPromotionSuccessActions ===
+// === Module 10710: PremiumGiftingPromotionSuccessActions ===
 
-// Module 10541 (PremiumGiftingPromotionSuccessActions)
+// Module 10710 (PremiumGiftingPromotionSuccessActions)
 import nativeDefault from "native" /* 576 */;
-import PremiumGiftModal from "PremiumGiftModal" /* 10125 */;
-import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 10542 */;
+import PremiumGiftModal from "PremiumGiftModal" /* 10292 */;
+import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 10711 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

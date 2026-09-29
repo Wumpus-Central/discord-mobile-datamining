@@ -1,9 +1,9 @@
-// === Module 11219: PollStyles ===
+// === Module 11388: PollStyles ===
 
-// Module 11219 (PollStyles)
+// Module 11388 (PollStyles)
 import _mod5021 from "module_5021" /* 5021 */;
-import PollLayoutTypes from "PollLayoutTypes" /* 11220 */;
-import PollMessageChatDataTypes from "PollMessageChatDataTypes" /* 11221 */;
+import PollLayoutTypes from "PollLayoutTypes" /* 11389 */;
+import PollMessageChatDataTypes from "PollMessageChatDataTypes" /* 11390 */;
 import size from "module_2" /* 2 */;
 
 function normal(border, config) {

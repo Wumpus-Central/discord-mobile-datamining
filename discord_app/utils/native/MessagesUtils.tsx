@@ -1,10 +1,10 @@
-// === Module 11438: MessagesUtils ===
+// === Module 11607: MessagesUtils ===
 
-// Module 11438 (MessagesUtils)
+// Module 11607 (MessagesUtils)
 import CodedLink from "CodedLink" /* 4821 */;
 import MediaPostEmbedUtils from "MediaPostEmbedUtils" /* 4984 */;
-import GuildTemplatesConstants from "GuildTemplatesConstants" /* 6744 */;
-import ExperimentEmbedUtils from "ExperimentEmbedUtils" /* 7316 */;
+import GuildTemplatesConstants from "GuildTemplatesConstants" /* 6910 */;
+import ExperimentEmbedUtils from "ExperimentEmbedUtils" /* 7481 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

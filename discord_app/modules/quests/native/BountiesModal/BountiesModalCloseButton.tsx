@@ -1,10 +1,10 @@
-// === Module 14590: BountiesModalCloseButton ===
+// === Module 14765: BountiesModalCloseButton ===
 
-// Module 14590 (BountiesModalCloseButton)
+// Module 14765 (BountiesModalCloseButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Pressables from "Pressables" /* 5435 */;
-import XSmallIcon from "XSmallIcon" /* 5992 */;
+import Pressables from "Pressables" /* 5602 */;
+import XSmallIcon from "XSmallIcon" /* 6158 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

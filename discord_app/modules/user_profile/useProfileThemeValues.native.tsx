@@ -1,6 +1,6 @@
-// === Module 6605: useProfileThemeValues ===
+// === Module 6771: useProfileThemeValues ===
 
-// Module 6605 (useProfileThemeValues)
+// Module 6771 (useProfileThemeValues)
 import _mod19 from "module_19" /* 19 */;
 import shims from "shims" /* 575 */;
 import nativeDefault from "native" /* 576 */;

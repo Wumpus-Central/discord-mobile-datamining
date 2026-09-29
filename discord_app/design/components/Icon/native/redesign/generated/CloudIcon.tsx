@@ -1,9 +1,9 @@
-// === Module 10763: CloudIcon ===
+// === Module 10932: CloudIcon ===
 
-// Module 10763 (CloudIcon)
+// Module 10932 (CloudIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4530 */;
-import _mod10764 from "module_10764" /* 10764 */;
+import _mod10933 from "module_10933" /* 10933 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const CloudIcon = function CloudIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10764, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10933, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

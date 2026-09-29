@@ -1,6 +1,6 @@
-// === Module 6364: useIsWindowLarge ===
+// === Module 6530: useIsWindowLarge ===
 
-// Module 6364 (useIsWindowLarge)
+// Module 6530 (useIsWindowLarge)
 import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4696 */;
 import size from "module_2" /* 2 */;
 

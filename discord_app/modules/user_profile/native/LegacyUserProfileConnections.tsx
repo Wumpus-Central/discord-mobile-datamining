@@ -1,20 +1,20 @@
-// === Module 11069: LegacyUserProfileConnections ===
+// === Module 11238: LegacyUserProfileConnections ===
 
-// Module 11069 (LegacyUserProfileConnections)
+// Module 11238 (LegacyUserProfileConnections)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import ToastUtils from "ToastUtils" /* 4527 */;
 import HapticUtils from "HapticUtils" /* 4801 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import PlatformsDefault from "Platforms" /* 5595 */;
-import ClipboardUtils from "ClipboardUtils" /* 6610 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 7818 */;
+import PlatformsDefault from "Platforms" /* 5762 */;
+import ClipboardUtils from "ClipboardUtils" /* 6776 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 7983 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2112 */;
 import UserRecord from "UserRecord" /* 1386 */;
 import StreamerModeStore from "StreamerModeStore" /* 4679 */;
-import UserProfileStore from "UserProfileStore" /* 7035 */;
+import UserProfileStore from "UserProfileStore" /* 7200 */;
 
 const require = globalThis.__r;
 
@@ -383,7 +383,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, PlatformTypes: closure_11, ThemeTypes: closure_12 } = Constants);
-const MetadataFields = fn(5720).MetadataFields;
+const MetadataFields = fn(5887).MetadataFields;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 const createStyles = fn(4836);
@@ -471,7 +471,7 @@ export default function LegacyUserProfileConnections(user) {
   const items5 = [LocaleStore];
   closure_130_3 = user(504).useStateFromStores(items5, () => LocaleStore.locale);
   const tmpResult7 = user(504);
-  closure_130_4 = user(6923).usePlatformAllowed({ forUserProfile: true });
+  closure_130_4 = user(7089).usePlatformAllowed({ forUserProfile: true });
   const found = memo1.filter((type) => {
     value = PlatformsDefault.get(type.type);
     let tmp2 = null != value;
@@ -493,8 +493,8 @@ export default function LegacyUserProfileConnections(user) {
         const intl = tmp(1115).intl;
         obj4.title = intl.string(tmp(1115).t.PHjkRE);
         obj4.children = mapped;
-        tmp10 = closure_14(stateFromStores(11077), obj4);
-        const tmp13 = stateFromStores(11077);
+        tmp10 = closure_14(stateFromStores(11246), obj4);
+        const tmp13 = stateFromStores(11246);
       }
       const obj5 = { children: null };
       const items6 = [tmp10, ];
@@ -502,10 +502,10 @@ export default function LegacyUserProfileConnections(user) {
       const intl2 = tmp(1115).intl;
       obj6.title = intl2.string(tmp(1115).t["3fe7U5"]);
       obj6.children = tmp8;
-      items6[1] = closure_14(stateFromStores(11077), obj6);
+      items6[1] = closure_14(stateFromStores(11246), obj6);
       obj5.children = items6;
       tmp17Result = closure_15(closure_16, obj5);
-      const tmp16 = stateFromStores(11077);
+      const tmp16 = stateFromStores(11246);
     }
   }
   return tmp17Result;

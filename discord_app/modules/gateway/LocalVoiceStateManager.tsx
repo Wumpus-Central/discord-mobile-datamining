@@ -1,13 +1,13 @@
-// === Module 13217: LocalVoiceStateManager ===
+// === Module 13387: LocalVoiceStateManager ===
 
-// Module 13217 (LocalVoiceStateManager)
+// Module 13387 (LocalVoiceStateManager)
 import FlagUtils from "FlagUtils" /* 1385 */;
 import UserSettings from "UserSettings" /* 2021 */;
-import isClipsEnabled from "isClipsEnabled" /* 13218 */;
+import isClipsEnabled from "isClipsEnabled" /* 13388 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import MediaEngineStore from "MediaEngineStore" /* 1993 */;
 import RTCRegionStore from "RTCRegionStore" /* 4886 */;
-import StateManager from "StateManager" /* 13215 */;
+import StateManager from "StateManager" /* 13385 */;
 
 require = fn;
 const Constants = fn(1074);

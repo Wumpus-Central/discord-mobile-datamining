@@ -1,6 +1,6 @@
-// === Module 6718: SensitiveMediaRedactionSettingUtils ===
+// === Module 6884: SensitiveMediaRedactionSettingUtils ===
 
-// Module 6718 (SensitiveMediaRedactionSettingUtils)
+// Module 6884 (SensitiveMediaRedactionSettingUtils)
 import _mod12 from "module_12" /* 12 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
 import size from "module_2" /* 2 */;

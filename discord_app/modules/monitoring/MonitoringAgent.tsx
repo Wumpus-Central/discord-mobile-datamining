@@ -1,14 +1,14 @@
-// === Module 5179: MonitoringAgent ===
+// === Module 5345: MonitoringAgent ===
 
-// Module 5179 (MonitoringAgent)
+// Module 5345 (MonitoringAgent)
+import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1074 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import ReleaseChannelUtils from "ReleaseChannelUtils" /* 5180 */;
-import ReleaseChannels from "ReleaseChannels" /* 5181 */;
-import NativeMetricMonitorModule from "NativeMetricMonitorModule" /* 5182 */;
-import MonitoringAgentUtils from "MonitoringAgentUtils" /* 5183 */;
-import get_ActivityIndicator from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
+import ReleaseChannelUtils from "ReleaseChannelUtils" /* 5346 */;
+import ReleaseChannels from "ReleaseChannels" /* 5347 */;
+import NativeMetricMonitorModule from "NativeMetricMonitorModule" /* 5348 */;
+import MonitoringAgentUtils from "MonitoringAgentUtils" /* 5349 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;
@@ -20,21 +20,11 @@ class MonitoringAgent {
     closure_0 = obj1;
     obj1._metrics = [];
     obj1._intervalId = setInterval(() => {
-      obj2._flush();
+      obj._flush();
     }, 120000);
-    tmp2 = closure_0;
-    tmp3 = closure_1;
-    tmp4 = closure_0(closure_1[4]);
-    ({ NativeModules, NativeEventEmitter } = tmp4);
-    obj = closure_0(closure_1[1]);
-    if (obj.isAndroid()) {
-      MetricMonitor = tmp2(tmp3[5]).default;
-    } else {
-      MetricMonitor = NativeModules.MetricMonitor;
-    }
-    nativeEventEmitter = new NativeEventEmitter(MetricMonitor);
+    nativeEventEmitter = new closure_0(closure_1[4]).NativeEventEmitter(closure_0(closure_1[5]).default);
     addListenerResult = nativeEventEmitter.addListener("logMetric", (arg0) => {
-      obj2.increment(arg0, false);
+      obj.increment(arg0, false);
     });
     return obj1;
   }
@@ -120,7 +110,7 @@ prototype["_flush"] = function _flush() {
     HermesBuiltin.arraySpread(self._metrics, 0);
     const HTTP = HTTPUtils.HTTP;
     const request = { url: Endpoints.METRICS_V2, body: null, retries: 1, rejectWithError: true };
-    const body = { metrics: items, client_info: { built_at: "1790572732374", build_number: "6527" } };
+    const body = { metrics: items, client_info: { built_at: "1790659134934", build_number: "6535" } };
     request.body = body;
     HTTP.post(request).catch(() => {
       if (self._metrics.length + items.length < 100) {
@@ -137,17 +127,11 @@ let obj2 = Object.create(MonitoringAgent.prototype);
 let closure_129_0 = obj2;
 obj2._metrics = [];
 obj2._intervalId = setInterval(() => {
-  obj2._flush();
+  obj._flush();
 }, 120000);
-({ NativeModules, NativeEventEmitter } = get_ActivityIndicator);
-if (PlatformUtils.isAndroid()) {
-  let MetricMonitor = NativeMetricMonitorModule.default;
-} else {
-  MetricMonitor = NativeModules.MetricMonitor;
-}
-let nativeEventEmitter = new NativeEventEmitter(MetricMonitor);
+let nativeEventEmitter = new _mod17.NativeEventEmitter(NativeMetricMonitorModule.default);
 nativeEventEmitter.addListener("logMetric", (arg0) => {
-  obj2.increment(arg0, false);
+  obj.increment(arg0, false);
 });
 const result = size.fileFinishedImporting("modules/monitoring/MonitoringAgent.tsx");
 

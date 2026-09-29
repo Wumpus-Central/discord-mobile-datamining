@@ -1,23 +1,23 @@
-// === Module 16427: VibegrationsAppChannelView ===
+// === Module 16612: VibegrationsAppChannelView ===
 
-// Module 16427 (VibegrationsAppChannelView)
+// Module 16612 (VibegrationsAppChannelView)
 import nativeDefault from "native" /* 576 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 6876 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8501 */;
-import FramesNativeManagerDefault from "FramesNativeManager" /* 8751 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 8760 */;
-import VibegrationsAppChannelActionCreators from "VibegrationsAppChannelActionCreators" /* 12831 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7042 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8666 */;
+import FramesNativeManagerDefault from "FramesNativeManager" /* 8916 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 8925 */;
+import VibegrationsAppChannelActionCreators from "VibegrationsAppChannelActionCreators" /* 13001 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 8499 */;
-import VibegrationsAppChannelsStore from "VibegrationsAppChannelsStore" /* 12827 */;
+import FramesStore from "FramesStore" /* 8664 */;
+import VibegrationsAppChannelsStore from "VibegrationsAppChannelsStore" /* 12997 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const FramesConstants = fn(8500);
+const FramesConstants = fn(8665);
 ({ FrameLayoutModes: closure_9, isLaunched: c10 } = FramesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);

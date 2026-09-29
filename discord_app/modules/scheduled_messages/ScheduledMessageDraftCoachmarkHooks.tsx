@@ -1,12 +1,12 @@
-// === Module 11468: ScheduledMessageDraftCoachmarkHooks ===
+// === Module 11637: ScheduledMessageDraftCoachmarkHooks ===
 
-// Module 11468 (ScheduledMessageDraftCoachmarkHooks)
+// Module 11637 (ScheduledMessageDraftCoachmarkHooks)
 import DismissibleContentUtils from "DismissibleContentUtils" /* 2031 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4654 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5589 */;
-import DraftStore from "DraftStore" /* 5200 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5756 */;
+import DraftStore from "DraftStore" /* 5366 */;
 
 require = fn;
 const ContentDismissActionType = fn(2042).ContentDismissActionType;

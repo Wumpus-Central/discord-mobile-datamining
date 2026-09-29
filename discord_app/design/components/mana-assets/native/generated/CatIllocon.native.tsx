@@ -1,9 +1,9 @@
-// === Module 16361: CatIllocon ===
+// === Module 16541: CatIllocon ===
 
-// Module 16361 (CatIllocon)
+// Module 16541 (CatIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5899 */;
-import _modDef16362 from "module_16362" /* 16362 */;
+import FastImageDefault from "FastImage" /* 6065 */;
+import _modDef16542 from "module_16542" /* 16542 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const CatIllocon = function CatIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef16362 };
+  const obj2 = { uri: _modDef16542 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

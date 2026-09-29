@@ -1,22 +1,22 @@
-// === Module 16675: ChannelSettingsChangeCategory ===
+// === Module 16863: ChannelSettingsChangeCategory ===
 
-// Module 16675 (ChannelSettingsChangeCategory)
+// Module 16863 (ChannelSettingsChangeCategory)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import useChannelName from "useChannelName" /* 4989 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5203 */;
-import Stack_Stack from "Stack/Stack" /* 5279 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5832 */;
-import TableRow from "TableRow" /* 5917 */;
-import TableRowGroup from "TableRowGroup" /* 5999 */;
-import Form from "Form" /* 8053 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5369 */;
+import Stack_Stack from "Stack/Stack" /* 5445 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5999 */;
+import TableRow from "TableRow" /* 6083 */;
+import TableRowGroup from "TableRowGroup" /* 6165 */;
+import Form from "Form" /* 8218 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 718 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 6532 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 6698 */;
 import GuildStore from "GuildStore" /* 2067 */;
 import PermissionStore from "PermissionStore" /* 4469 */;
 import RelationshipStore from "RelationshipStore" /* 4479 */;
@@ -286,7 +286,7 @@ export default function ConnectedChannelSettingsChangeCategory(channelId) {
   const obj = channelId(504);
   const navigation = channelId(1485).useNavigation();
   const obj2 = channelId(1485);
-  const appChannelBotUserId = channelId(11105).useAppChannelBotUserId(channel);
+  const appChannelBotUserId = channelId(11274).useAppChannelBotUserId(channel);
   _modDef38(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
   return closure_13(ChannelSettingsChangeCategory, { channel, navigation, appChannelBotUserId });
 };

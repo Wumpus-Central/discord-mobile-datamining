@@ -1,10 +1,10 @@
-// === Module 8497: VibegrationsAnalytics ===
+// === Module 8662: VibegrationsAnalytics ===
 
-// Module 8497 (VibegrationsAnalytics)
+// Module 8662 (VibegrationsAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import VibegrationsUtils from "VibegrationsUtils" /* 5370 */;
+import VibegrationsUtils from "VibegrationsUtils" /* 5536 */;
 import ApplicationStore from "ApplicationStore" /* 5063 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8495 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8660 */;
 
 require = fn;
 function vibegrationLocation(project_id, isPreview) {
@@ -229,4 +229,36 @@ export const trackVibegrationErrored = function trackVibegrationErrored(project_
   }
   obj3.error_details = substr2;
   AnalyticsUtilsDefault.track(AnalyticEvents.VIBEGRATION_ERRORED, obj3);
+};
+export const trackVibegrationPublishActionClicked = function trackVibegrationPublishActionClicked(project_id, installScope) {
+  installScope = installScope.installScope;
+  ({ entryPoint, publishState, surface, action } = installScope);
+  const project = VibegrationsProjectStore.getProject(project_id);
+  const obj2 = { project_id, application_id: null, guild_id: null, entry_point: null, publish_state: null, surface: null, install_scope: null, action: null };
+  let application_id;
+  if (project != null) {
+    application_id = project.application_id;
+  }
+  if (application_id == null) {
+    application_id = null;
+  }
+  obj2.application_id = application_id;
+  let tmp3 = null;
+  if ("user" !== installScope) {
+    let guild_id;
+    if (project != null) {
+      guild_id = project.guild_id;
+    }
+    if (guild_id == null) {
+      guild_id = null;
+    }
+    tmp3 = guild_id;
+  }
+  obj2.guild_id = tmp3;
+  obj2.entry_point = entryPoint;
+  obj2.publish_state = publishState;
+  obj2.surface = surface;
+  obj2.install_scope = installScope;
+  obj2.action = action;
+  AnalyticsUtilsDefault.track(AnalyticEvents.VIBEGRATION_PUBLISH_ACTION_CLICKED, obj2);
 };

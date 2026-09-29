@@ -1,10 +1,10 @@
-// === Module 13981: Tag ===
+// === Module 14150: Tag ===
 
-// Module 13981 (Tag)
+// Module 14150 (Tag)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import TagGroupTypes from "TagGroupTypes" /* 13979 */;
-import TagGraphic from "TagGraphic" /* 13982 */;
+import TagGroupTypes from "TagGroupTypes" /* 14148 */;
+import TagGraphic from "TagGraphic" /* 14151 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

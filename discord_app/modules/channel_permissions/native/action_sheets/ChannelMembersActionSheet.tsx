@@ -1,6 +1,6 @@
-// === Module 11104: ChannelMembersActionSheet ===
+// === Module 11273: ChannelMembersActionSheet ===
 
-// Module 11104 (ChannelMembersActionSheet)
+// Module 11273 (ChannelMembersActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -9,19 +9,19 @@ import useNavigation from "useNavigation" /* 1485 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import Pressables from "Pressables" /* 5435 */;
-import BottomSheetModal from "BottomSheetModal" /* 6045 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6570 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6571 */;
-import SettingsIcon from "SettingsIcon" /* 6798 */;
-import RowButton from "RowButton" /* 8055 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8085 */;
-import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 9016 */;
-import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 9032 */;
-import GroupPlusIcon from "GroupPlusIcon" /* 9492 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11103 */;
-import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11105 */;
-import ChannelDetailsUtils from "ChannelDetailsUtils" /* 11107 */;
+import Pressables from "Pressables" /* 5602 */;
+import BottomSheetModal from "BottomSheetModal" /* 6211 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6736 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6737 */;
+import SettingsIcon from "SettingsIcon" /* 6964 */;
+import RowButton from "RowButton" /* 8220 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8250 */;
+import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 9181 */;
+import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 9197 */;
+import GroupPlusIcon from "GroupPlusIcon" /* 9659 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11272 */;
+import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11274 */;
+import ChannelDetailsUtils from "ChannelDetailsUtils" /* 11276 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import GuildMemberStore from "GuildMemberStore" /* 2108 */;

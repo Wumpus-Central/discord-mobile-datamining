@@ -1,8 +1,8 @@
-// === Module 11930: useChangelogRenderedAnalytics ===
+// === Module 12101: useChangelogRenderedAnalytics ===
 
-// Module 11930 (useChangelogRenderedAnalytics)
+// Module 12101 (useChangelogRenderedAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 7539 */;
+import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 7704 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2112 */;
 import ReadStateStore from "ReadStateStore" /* 4851 */;

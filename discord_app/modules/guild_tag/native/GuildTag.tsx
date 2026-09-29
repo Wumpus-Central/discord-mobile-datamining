@@ -1,19 +1,19 @@
-// === Module 9205: GuildTag ===
+// === Module 9370: GuildTag ===
 
-// Module 9205 (GuildTag)
+// Module 9370 (GuildTag)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import GuildTagUtils from "GuildTagUtils" /* 7610 */;
+import GuildTagUtils from "GuildTagUtils" /* 7775 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildTagBadgeSize = fn(7386).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(7551).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4836);

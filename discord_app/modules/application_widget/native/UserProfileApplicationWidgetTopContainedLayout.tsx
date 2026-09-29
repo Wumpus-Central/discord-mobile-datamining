@@ -1,10 +1,10 @@
-// === Module 8481: UserProfileApplicationWidgetTopContainedLayout ===
+// === Module 8646: UserProfileApplicationWidgetTopContainedLayout ===
 
-// Module 8481 (UserProfileApplicationWidgetTopContainedLayout)
+// Module 8646 (UserProfileApplicationWidgetTopContainedLayout)
 import nativeDefault from "native" /* 576 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 8390 */;
-import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 8477 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 8478 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 8555 */;
+import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 8642 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 8643 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,10 +1,10 @@
-// === Module 14708: SameAsDeviceThemeUtils ===
+// === Module 14883: SameAsDeviceThemeUtils ===
 
-// Module 14708 (SameAsDeviceThemeUtils)
+// Module 14883 (SameAsDeviceThemeUtils)
 import ClientThemesUtils from "ClientThemesUtils" /* 1228 */;
 import ThemeActionCreators from "ThemeActionCreators" /* 4682 */;
 import shared from "shared" /* 4685 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 8659 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 8824 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4653 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 

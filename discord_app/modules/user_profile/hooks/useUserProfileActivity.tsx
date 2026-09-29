@@ -1,10 +1,10 @@
-// === Module 12614: useUserProfileActivity ===
+// === Module 12784: useUserProfileActivity ===
 
-// Module 12614 (useUserProfileActivity)
+// Module 12784 (useUserProfileActivity)
 import _mod19 from "module_19" /* 19 */;
 import Constants from "Constants" /* 4861 */;
-import UserProfileStackedActivityCardUtils from "UserProfileStackedActivityCardUtils" /* 12615 */;
-import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8254 */;
+import UserProfileStackedActivityCardUtils from "UserProfileStackedActivityCardUtils" /* 12785 */;
+import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8419 */;
 import MediaEngineStore from "MediaEngineStore" /* 1993 */;
 import PresenceStore from "PresenceStore" /* 4876 */;
 import size from "module_2" /* 2 */;
@@ -57,8 +57,8 @@ export default function useUserProfileActivity(arg0) {
               tmp6 = !userProfileLiveActivities.some((item) => {
                 let result = null != item;
                 if (result) {
-                  result = userProfileLiveActivities(7785).isMatchingListeningActivity(closure_0, item);
-                  const obj = userProfileLiveActivities(7785);
+                  result = userProfileLiveActivities(7950).isMatchingListeningActivity(closure_0, item);
+                  const obj = userProfileLiveActivities(7950);
                 }
                 return result;
               });
@@ -69,8 +69,8 @@ export default function useUserProfileActivity(arg0) {
               result = !userProfileLiveActivities.some((item) => {
                 let result = null != item;
                 if (result) {
-                  result = userProfileLiveActivities(7785).isMatchingWatchActivity(closure_0, item);
-                  const obj = userProfileLiveActivities(7785);
+                  result = userProfileLiveActivities(7950).isMatchingWatchActivity(closure_0, item);
+                  const obj = userProfileLiveActivities(7950);
                 }
                 return result;
               });

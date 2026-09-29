@@ -1,9 +1,9 @@
-// === Module 10468: SocialLayerStorefrontGiftProductDetails ===
+// === Module 10637: SocialLayerStorefrontGiftProductDetails ===
 
-// Module 10468 (SocialLayerStorefrontGiftProductDetails)
+// Module 10637 (SocialLayerStorefrontGiftProductDetails)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8288 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8453 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -28,9 +28,9 @@ export default function SocialLayerStorefrontGiftProductDetails(sku) {
   sku = sku.sku;
   let getOrFetchApplication;
   const tmp = closure_9();
-  getOrFetchApplication = getOrFetchApplication(6589).useGetOrFetchApplication(sku.applicationId);
-  let obj = getOrFetchApplication(6589);
-  const userPrice = getOrFetchApplication(10267).useFormattedSKUPrice({ sku, priceSetAssignmentPurchaseType: constants.GIFT }).userPrice;
+  getOrFetchApplication = getOrFetchApplication(6755).useGetOrFetchApplication(sku.applicationId);
+  let obj = getOrFetchApplication(6755);
+  const userPrice = getOrFetchApplication(10436).useFormattedSKUPrice({ sku, priceSetAssignmentPurchaseType: constants.GIFT }).userPrice;
   const items = [getOrFetchApplication];
   const memo = noop.useMemo(() => {
     let applicationIconURL = null;

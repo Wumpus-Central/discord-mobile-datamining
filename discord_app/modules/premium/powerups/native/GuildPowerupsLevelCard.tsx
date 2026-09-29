@@ -1,16 +1,16 @@
-// === Module 12061: GuildPowerupsLevelCard ===
+// === Module 12232: GuildPowerupsLevelCard ===
 
-// Module 12061 (GuildPowerupsLevelCard)
+// Module 12232 (GuildPowerupsLevelCard)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import LinearGradientDefault from "LinearGradient" /* 5293 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6401 */;
-import BoostGemIcon from "BoostGemIcon" /* 8678 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 11996 */;
-import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 12015 */;
-import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 12020 */;
-import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 12063 */;
-import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 12064 */;
+import LinearGradientDefault from "LinearGradient" /* 5459 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6567 */;
+import BoostGemIcon from "BoostGemIcon" /* 8843 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12167 */;
+import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 12186 */;
+import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 12191 */;
+import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 12234 */;
+import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 12235 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -142,7 +142,7 @@ const GuildPowerupsConstants = fn(4724);
 ({ LevelCardPosition: hasOwnProperty, PowerupActiveStatusType: metroRequire } = GuildPowerupsConstants);
 const Constants = fn(1074);
 ({ BoostedGuildTiers: closure_7, HorizontalGradient: closure_8 } = Constants);
-const TIER_CARDS = fn(12062).TIER_CARDS;
+const TIER_CARDS = fn(12233).TIER_CARDS;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(4836);

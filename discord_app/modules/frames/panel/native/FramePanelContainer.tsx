@@ -1,13 +1,13 @@
-// === Module 16863: FramePanelContainer ===
+// === Module 17050: FramePanelContainer ===
 
-// Module 16863 (FramePanelContainer)
-import FramePanelControllerDefault from "FramePanelController" /* 16864 */;
-import FramePanelUIDefault from "FramePanelUI" /* 16866 */;
+// Module 17050 (FramePanelContainer)
+import FramePanelControllerDefault from "FramePanelController" /* 17051 */;
+import FramePanelUIDefault from "FramePanelUI" /* 17053 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 8499 */;
+import FramesStore from "FramesStore" /* 8664 */;
 
 const require = fn;
-const isLaunched = fn(8500).isLaunched;
+const isLaunched = fn(8665).isLaunched;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelContainer.tsx");

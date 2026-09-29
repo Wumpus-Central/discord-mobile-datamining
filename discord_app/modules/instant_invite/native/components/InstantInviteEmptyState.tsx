@@ -1,12 +1,12 @@
-// === Module 9308: InstantInviteEmptyState ===
+// === Module 9475: InstantInviteEmptyState ===
 
-// Module 9308 (InstantInviteEmptyState)
+// Module 9475 (InstantInviteEmptyState)
 import nativeDefault from "native" /* 576 */;
-import FreeFormTextInputDefault from "FreeFormTextInput" /* 6358 */;
-import InstantInviteUtilsDefault from "InstantInviteUtils" /* 9277 */;
-import _modDef9309 from "module_9309" /* 9309 */;
+import FreeFormTextInputDefault from "FreeFormTextInput" /* 6524 */;
+import InstantInviteUtilsDefault from "InstantInviteUtils" /* 9444 */;
+import _modDef9476 from "module_9476" /* 9476 */;
 import noop from "module_19" /* 19 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 9276 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 9443 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -28,7 +28,7 @@ export default function _default(link) {
   const items = [CreateInviteModalStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => inviteSettings.getInviteSettings());
   const obj2 = { style: tmp.container, children: null };
-  const obj3 = { containerStyle: tmp.emptyStateContainer, imageStyle: tmp.emptyStateArt, titleStyle: tmp.emptyStateTitle, source: _modDef9309, title: null, body: null };
+  const obj3 = { containerStyle: tmp.emptyStateContainer, imageStyle: tmp.emptyStateArt, titleStyle: tmp.emptyStateTitle, source: _modDef9476, title: null, body: null };
   const intl = stateFromStores(1115).intl;
   obj3.title = intl.string(stateFromStores(1115).t.tQc0l8);
   const intl2 = stateFromStores(1115).intl;
@@ -49,8 +49,8 @@ export default function _default(link) {
   obj6.accessibilityLabel = intl3.string(stateFromStores(1115).t["3D5yo/"]);
   obj6.onPress = onPressSettings;
   obj6.style = tmp.settingsButton;
-  obj6.children = closure_5(stateFromStores(6798).SettingsIcon, {});
-  items2[1] = closure_5(stateFromStores(5435).PressableOpacity, obj6);
+  obj6.children = closure_5(stateFromStores(6964).SettingsIcon, {});
+  items2[1] = closure_5(stateFromStores(5602).PressableOpacity, obj6);
   obj4.children = items2;
   items1[1] = closure_6(View, obj4);
   const obj7 = { style: tmp.expireCaption, variant: "text-xs/medium", color: "text-muted", children: null };
@@ -61,7 +61,7 @@ export default function _default(link) {
     const intl5 = tmp2(1115).intl;
     obj8.text = intl5.string(tmp2(1115).t.Ej3B3Y);
     obj8.onPress = onShare;
-    items1[3] = closure_5(tmp2(5281).Button, obj8);
+    items1[3] = closure_5(tmp2(5447).Button, obj8);
     obj2.children = items1;
     return closure_6(View, obj2);
   } else {

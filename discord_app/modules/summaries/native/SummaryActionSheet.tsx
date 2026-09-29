@@ -1,6 +1,6 @@
-// === Module 11147: SummaryActionSheet ===
+// === Module 11316: SummaryActionSheet ===
 
-// Module 11147 (SummaryActionSheet)
+// Module 11316 (SummaryActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1101 */;
@@ -10,13 +10,13 @@ import ToastUtils from "ToastUtils" /* 4527 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4692 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
 import ChannelUtils from "ChannelUtils" /* 4981 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7184 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 7196 */;
-import showShareActionSheet from "showShareActionSheet" /* 7809 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7349 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 7361 */;
+import showShareActionSheet from "showShareActionSheet" /* 7974 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import MessageStore from "MessageStore" /* 5056 */;
-import SummaryStore from "SummaryStore" /* 10887 */;
+import SummaryStore from "SummaryStore" /* 11056 */;
 
 require = fn;
 const View = fn(17).View;
@@ -72,8 +72,8 @@ export default function SummaryActionSheet(summary) {
         guild_id1 = channel.guild_id;
       }
       const obj2 = { guildId: guild_id1 };
-      tmpResult.openLazy(asyncRequireImpl(11120, dependencyMap.paths), "GuildHighlightsNotifications", obj2);
-      const tmp7 = asyncRequireImpl(11120, dependencyMap.paths);
+      tmpResult.openLazy(asyncRequireImpl(11289, dependencyMap.paths), "GuildHighlightsNotifications", obj2);
+      const tmp7 = asyncRequireImpl(11289, dependencyMap.paths);
     }
   }, items);
   const items2 = [summary, channel, message];
@@ -185,7 +185,7 @@ export const openSummaryDividerActionSheet = function openSummaryDividerActionSh
     const _HermesInternal = HermesInternal;
     const obj = ActionSheetActionCreatorsDefault;
     const obj2 = { summary: findSummaryResult };
-    obj.openLazy(asyncRequireImpl(11147, dependencyMap.paths), "SummaryDivider" + summaryId, obj2);
-    const tmp5 = asyncRequireImpl(11147, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(11316, dependencyMap.paths), "SummaryDivider" + summaryId, obj2);
+    const tmp5 = asyncRequireImpl(11316, dependencyMap.paths);
   }
 };

@@ -16,11 +16,11 @@ import BillingUtils from "BillingUtils" /* 4503 */;
 import DateUtils from "DateUtils" /* 4512 */;
 import openURLDefault from "openURL" /* 4519 */;
 import FileSizeUtils from "FileSizeUtils" /* 4731 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5442 */;
-import PriceUtils from "PriceUtils" /* 6655 */;
-import CheckoutError from "CheckoutError" /* 10986 */;
-import useFPDurationLeft from "useFPDurationLeft" /* 13001 */;
-import ProductCatalog from "ProductCatalog" /* 13526 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5609 */;
+import PriceUtils from "PriceUtils" /* 6821 */;
+import CheckoutError from "CheckoutError" /* 11155 */;
+import useFPDurationLeft from "useFPDurationLeft" /* 13171 */;
+import ProductCatalog from "ProductCatalog" /* 13695 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -2157,7 +2157,7 @@ const frozen = Object.freeze({
       throw error;
     }
   },
-  getUserMaxFileSize: fn(8660).getUserMaxFileSize,
+  getUserMaxFileSize: fn(8825).getUserMaxFileSize,
   getSkuIdForPlan(planId) {
     if (null == dependencyMap2[planId]) {
       const _Error = Error;

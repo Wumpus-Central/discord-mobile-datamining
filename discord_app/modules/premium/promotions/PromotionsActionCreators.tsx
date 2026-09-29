@@ -1,14 +1,14 @@
-// === Module 12960: PromotionsActionCreators ===
+// === Module 13130: PromotionsActionCreators ===
 
-// Module 12960 (PromotionsActionCreators)
+// Module 13130 (PromotionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import wrappers from "wrappers" /* 1217 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import MarketingComponentPlatform from "MarketingComponentPlatform" /* 12961 */;
+import MarketingComponentPlatform from "MarketingComponentPlatform" /* 13131 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2112 */;
 import UserStore from "UserStore" /* 1372 */;
-import PromotionsStore from "PromotionsStore" /* 10128 */;
+import PromotionsStore from "PromotionsStore" /* 10295 */;
 
 require = fn;
 function fetchActivePromotions() {

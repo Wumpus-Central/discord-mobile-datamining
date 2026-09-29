@@ -1,6 +1,6 @@
-// === Module 5825: getPricesFromServer ===
+// === Module 5992: getPricesFromServer ===
 
-// Module 5825 (getPricesFromServer)
+// Module 5992 (getPricesFromServer)
 import SubscriptionPlanRecord from "SubscriptionPlanRecord" /* 4489 */;
 import size from "module_2" /* 2 */;
 

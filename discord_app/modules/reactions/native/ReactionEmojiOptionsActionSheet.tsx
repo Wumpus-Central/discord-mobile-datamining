@@ -1,17 +1,17 @@
-// === Module 10831: ReactionEmojiOptionsActionSheet ===
+// === Module 11000: ReactionEmojiOptionsActionSheet ===
 
-// Module 10831 (ReactionEmojiOptionsActionSheet)
+// Module 11000 (ReactionEmojiOptionsActionSheet)
 import nativeDefault from "native" /* 576 */;
 import ToastUtils from "ToastUtils" /* 4527 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4528 */;
-import ClipboardUtils from "ClipboardUtils" /* 6610 */;
-import ReactionActionCreatorsAll from "ReactionActionCreators" /* 7183 */;
-import StarIcon from "StarIcon" /* 9698 */;
-import StarOutlineIcon2 from "StarOutlineIcon" /* 9704 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 9797 */;
+import ClipboardUtils from "ClipboardUtils" /* 6776 */;
+import ReactionActionCreatorsAll from "ReactionActionCreators" /* 7348 */;
+import StarIcon from "StarIcon" /* 9865 */;
+import StarOutlineIcon2 from "StarOutlineIcon" /* 9871 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 9964 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4825 */;
-import EmojiStore from "EmojiStore" /* 5771 */;
+import EmojiStore from "EmojiStore" /* 5938 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4655 */;
 
 require = fn;

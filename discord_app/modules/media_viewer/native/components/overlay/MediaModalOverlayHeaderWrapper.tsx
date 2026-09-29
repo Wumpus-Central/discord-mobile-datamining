@@ -1,8 +1,8 @@
-// === Module 7816: MediaModalOverlayHeaderWrapper ===
+// === Module 7981: MediaModalOverlayHeaderWrapper ===
 
-// Module 7816 (MediaModalOverlayHeaderWrapper)
+// Module 7981 (MediaModalOverlayHeaderWrapper)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
-import NavigatorConstants from "NavigatorConstants" /* 5994 */;
+import NavigatorConstants from "NavigatorConstants" /* 6160 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

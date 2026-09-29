@@ -1,24 +1,24 @@
-// === Module 16038: notifications/Notifications ===
+// === Module 16214: notifications/Notifications ===
 
-// Module 16038 (notifications/Notifications)
+// Module 16214 (notifications/Notifications)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
 import native from "native" /* 4540 */;
 import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4688 */;
 import RootNavigationRef from "RootNavigationRef" /* 4693 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5437 */;
-import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 5942 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 6364 */;
-import LayerScope from "LayerScope" /* 6577 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 6583 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6603 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11375 */;
-import TabsPerformanceTracker from "TabsPerformanceTracker" /* 15647 */;
-import useForLaterCoachmarkDefault from "useForLaterCoachmark" /* 16039 */;
-import ForLaterOpenActionButtonDefault from "ForLaterOpenActionButton" /* 16041 */;
-import NotificationCenterActionButtonDefault from "NotificationCenterActionButton" /* 16043 */;
-import NotificationCenterPermissionNudgeDefault from "NotificationCenterPermissionNudge" /* 16047 */;
-import NotificationCenterForYou from "NotificationCenterForYou" /* 16048 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5604 */;
+import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 6108 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 6530 */;
+import LayerScope from "LayerScope" /* 6743 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 6749 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6769 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11544 */;
+import TabsPerformanceTracker from "TabsPerformanceTracker" /* 15822 */;
+import useForLaterCoachmarkDefault from "useForLaterCoachmark" /* 16215 */;
+import ForLaterOpenActionButtonDefault from "ForLaterOpenActionButton" /* 16217 */;
+import NotificationCenterActionButtonDefault from "NotificationCenterActionButton" /* 16219 */;
+import NotificationCenterPermissionNudgeDefault from "NotificationCenterPermissionNudge" /* 16223 */;
+import NotificationCenterForYou from "NotificationCenterForYou" /* 16224 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -127,7 +127,7 @@ class ThemedNotifications {
   }
 }
 const View = fn(17).View;
-const YouBarNavigatorScreens = fn(10549).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(10718).YouBarNavigatorScreens;
 const ContentDismissActionType = fn(2042).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
@@ -166,8 +166,8 @@ let closure_12 = noop.memo(function HeaderInner(nestedInLaunchPad) {
     const intl = tmp5(1115).intl;
     obj4.accessibilityLabel = intl.string(tmp5(1115).t["13/7kX"]);
     obj4.onPress = goBack;
-    obj4.children = closure_7(tmp5(16040).LeftBackIconWithBadge, {});
-    const items1 = [closure_7(tmp5(5435).PressableOpacity, obj4), , ];
+    obj4.children = closure_7(tmp5(16216).LeftBackIconWithBadge, {});
+    const items1 = [closure_7(tmp5(5602).PressableOpacity, obj4), , ];
     const obj5 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", style: tmp.headerText, maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
     const intl2 = tmp5(1115).intl;
     obj5.children = intl2.string(tmp5(1115).t.HcoRu0);
@@ -176,11 +176,11 @@ let closure_12 = noop.memo(function HeaderInner(nestedInLaunchPad) {
     let tmp10Result = null;
     if (isForLaterExperimentOn) {
       const obj7 = { children: null };
-      const obj8 = { ref, type: tmp5(7285).SavedMessageSortTypes.BOOKMARK, onOpen: callback };
+      const obj8 = { ref, type: tmp5(7450).SavedMessageSortTypes.BOOKMARK, onOpen: callback };
       const items2 = [closure_7(ForLaterOpenActionButtonDefault, obj8), ];
       const obj9 = { type: null, onOpen: null };
       const tmp2Result = ForLaterOpenActionButtonDefault;
-      obj9.type = tmp5(7285).SavedMessageSortTypes.REMINDER;
+      obj9.type = tmp5(7450).SavedMessageSortTypes.REMINDER;
       obj9.onOpen = callback;
       items2[1] = closure_7(ForLaterOpenActionButtonDefault, obj9);
       obj7.children = items2;

@@ -1,14 +1,14 @@
-// === Module 9494: ChannelCallHeaderButtons ===
+// === Module 9661: ChannelCallHeaderButtons ===
 
-// Module 9494 (ChannelCallHeaderButtons)
+// Module 9661 (ChannelCallHeaderButtons)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5037 */;
-import useSelectedParticipantDefault from "useSelectedParticipant" /* 8832 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9104 */;
-import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 9381 */;
-import _modDef9495 from "module_9495" /* 9495 */;
-import _modDef9496 from "module_9496" /* 9496 */;
+import useSelectedParticipantDefault from "useSelectedParticipant" /* 8997 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9269 */;
+import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 9548 */;
+import _modDef9662 from "module_9662" /* 9662 */;
+import _modDef9663 from "module_9663" /* 9663 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 1993 */;
 
@@ -26,7 +26,7 @@ export const CameraButton = function CameraButton() {
     const obj2 = { accessibilityLabel: null, source: null, onPress: null, disableBackground: true };
     const intl = util.intl;
     obj2.accessibilityLabel = intl.string(util.t["t9eQ/g"]);
-    obj2.source = _modDef9495;
+    obj2.source = _modDef9662;
     obj2.onPress = function onPress() {
       const keys = Object.keys(closure_1_1);
       const found = keys.find((item) => item !== closure_1_0);
@@ -47,7 +47,7 @@ export const GridButton = function GridButton(channel) {
       const obj = { accessibilityLabel: null, source: null, onPress: null, disableBackground: true };
       const intl = channel(1115).intl;
       obj.accessibilityLabel = intl.string(channel(1115).t.HK4JIu);
-      obj.source = _modDef9496;
+      obj.source = _modDef9663;
       obj.onPress = function onPress() {
         return ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
       };

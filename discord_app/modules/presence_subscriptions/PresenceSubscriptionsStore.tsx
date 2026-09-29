@@ -1,9 +1,9 @@
-// === Module 11009: PresenceSubscriptionsStore ===
+// === Module 11178: PresenceSubscriptionsStore ===
 
-// Module 11009 (PresenceSubscriptionsStore)
+// Module 11178 (PresenceSubscriptionsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11010 */;
+import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11179 */;
 import _slicedToArray from "module_32" /* 32 */;
 import PresenceStore from "PresenceStore" /* 4876 */;
 

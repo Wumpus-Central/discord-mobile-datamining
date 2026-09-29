@@ -1,12 +1,12 @@
-// === Module 14023: validateEmbeddedAppFrame ===
+// === Module 14195: validateEmbeddedAppFrame ===
 
-// Module 14023 (validateEmbeddedAppFrame)
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8321 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8501 */;
-import RPCErrorDefault from "RPCError" /* 8770 */;
-import RPCHelpers from "RPCHelpers" /* 8775 */;
-import FramesStore from "FramesStore" /* 8499 */;
-import VibegrationsBuilderPreviewStore from "VibegrationsBuilderPreviewStore" /* 14024 */;
+// Module 14195 (validateEmbeddedAppFrame)
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8486 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8666 */;
+import RPCErrorDefault from "RPCError" /* 8935 */;
+import RPCHelpers from "RPCHelpers" /* 8940 */;
+import FramesStore from "FramesStore" /* 8664 */;
+import VibegrationsBuilderPreviewStore from "VibegrationsBuilderPreviewStore" /* 14196 */;
 
 require = fn;
 function validateEmbeddedAppFrame(transport) {
@@ -26,7 +26,7 @@ function validateEmbeddedAppFrame(transport) {
           if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL !== type) {
             if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
               if (tmp35.applicationId === VibegrationsBuilderPreviewStore.getBuilderPreviewApplicationId()) {
-                let obj5 = { channelId: "Array", guildId: "paddingHorizontal" };
+                let obj5 = { channelId: "current", guildId: "channel" };
               } else {
                 obj5 = null;
               }
@@ -60,7 +60,7 @@ function validateEmbeddedAppFrame(transport) {
 const TransportTypes = fn(4739).TransportTypes;
 const Constants = fn(1074);
 ({ ApplicationFlags: metroRequire, RPCErrors: closure_7 } = Constants);
-const asLaunched = fn(8500).asLaunched;
+const asLaunched = fn(8665).asLaunched;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/helpers/validateEmbeddedAppFrame.tsx");
 

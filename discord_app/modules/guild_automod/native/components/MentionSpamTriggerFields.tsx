@@ -1,13 +1,13 @@
-// === Module 17324: MentionSpamTriggerFields ===
+// === Module 17513: MentionSpamTriggerFields ===
 
-// Module 17324 (MentionSpamTriggerFields)
-import AutomodRuleUtils from "AutomodRuleUtils" /* 17309 */;
+// Module 17513 (MentionSpamTriggerFields)
+import AutomodRuleUtils from "AutomodRuleUtils" /* 17498 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(11341);
+const Constants = fn(11510);
 ({ MAX_MENTION_SPAM_LIMIT: hasOwnProperty, MIN_MENTION_SPAM_LIMIT: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -22,10 +22,10 @@ export default function MentionSpamTriggerFields(rule) {
   noop = undefined;
   ({ mentionTotalLimit, mentionRaidProtectionEnabled } = rule.triggerMetadata);
   const tmp = closure_9();
-  let isMentionRaidExperimentEnabled = rule(9559).useIsMentionRaidExperimentEnabled(rule.guildId, false);
+  let isMentionRaidExperimentEnabled = rule(9726).useIsMentionRaidExperimentEnabled(rule.guildId, false);
   const intl = rule(1115).intl;
   const stringResult = intl.string(rule(1115).t["s/26oQ"]);
-  let obj = rule(9559);
+  let obj = rule(9726);
   [tmp7, c3] = noop.useState(true);
   let obj2 = { title: null, hasIcons: false, helperText: null, children: null };
   const intl2 = rule(1115).intl;
@@ -76,9 +76,9 @@ export default function MentionSpamTriggerFields(rule) {
     status: "error",
     accessibilityLabel: stringResult
   };
-  obj6.children = closure_7(rule(6031).TextField, obj7);
+  obj6.children = closure_7(rule(6197).TextField, obj7);
   obj5.trailing = closure_7(View, obj6);
-  const items = [closure_7(rule(5917).TableRow, obj5), ];
+  const items = [closure_7(rule(6083).TableRow, obj5), ];
   if (isMentionRaidExperimentEnabled) {
     const obj8 = { label: null, subLabel: null, checked: null, onPress: null };
     const intl5 = tmp2(1115).intl;
@@ -95,9 +95,9 @@ export default function MentionSpamTriggerFields(rule) {
       obj.triggerMetadata = obj2;
       return dependencyMap(obj);
     };
-    isMentionRaidExperimentEnabled = closure_7(tmp2(5916).TableCheckboxRow, obj8);
+    isMentionRaidExperimentEnabled = closure_7(tmp2(6082).TableCheckboxRow, obj8);
   }
   items[1] = isMentionRaidExperimentEnabled;
   obj2.children = items;
-  return closure_8(rule(5999).TableRowGroup, obj2);
+  return closure_8(rule(6165).TableRowGroup, obj2);
 };

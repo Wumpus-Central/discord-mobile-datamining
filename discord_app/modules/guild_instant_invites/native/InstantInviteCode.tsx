@@ -1,15 +1,15 @@
-// === Module 10402: InstantInviteCode ===
+// === Module 10571: InstantInviteCode ===
 
-// Module 10402 (InstantInviteCode)
+// Module 10571 (InstantInviteCode)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import ClockIcon from "ClockIcon" /* 4795 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import useChannelName from "useChannelName" /* 4989 */;
-import Stack_Stack from "Stack/Stack" /* 5279 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5335 */;
-import TextIcon2 from "TextIcon" /* 5394 */;
-import CountDownDefault from "CountDown" /* 10391 */;
+import Stack_Stack from "Stack/Stack" /* 5445 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5501 */;
+import TextIcon2 from "TextIcon" /* 5560 */;
+import CountDownDefault from "CountDown" /* 10560 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4479 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -80,7 +80,7 @@ export default function InstantInviteCode(invite) {
   const tmp = closure_10();
   items1[1] = closure_8(InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
   obj2.children = items1;
-  obj.children = closure_9(invite(5279).Stack, obj2);
+  obj.children = closure_9(invite(5445).Stack, obj2);
   return closure_8(View, obj);
 };
 export { InstantInviteDetails };

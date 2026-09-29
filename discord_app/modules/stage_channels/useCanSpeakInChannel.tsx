@@ -1,6 +1,6 @@
-// === Module 8861: useCanSpeakInChannel ===
+// === Module 9026: useCanSpeakInChannel ===
 
-// Module 8861 (useCanSpeakInChannel)
+// Module 9026 (useCanSpeakInChannel)
 import initialize from "initialize" /* 504 */;
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4983 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

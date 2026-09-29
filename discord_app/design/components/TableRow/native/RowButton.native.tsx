@@ -1,12 +1,12 @@
-// === Module 8055: RowButton ===
+// === Module 8220: RowButton ===
 
-// Module 8055 (RowButton)
+// Module 8220 (RowButton)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
-import TableRow from "TableRow" /* 5917 */;
-import Card from "Card" /* 5919 */;
-import TableRowIcon from "TableRowIcon" /* 5923 */;
-import BackgroundBlurView from "BackgroundBlurView" /* 8056 */;
+import TableRow from "TableRow" /* 6083 */;
+import Card from "Card" /* 6085 */;
+import TableRowIcon from "TableRowIcon" /* 6089 */;
+import BackgroundBlurView from "BackgroundBlurView" /* 8221 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -121,9 +121,9 @@ let closure_5 = createStyles.createStyles(() => {
   obj.cardWithBlur = { overflow: "hidden" };
   return obj;
 });
-RowButton.Icon = fn(5923).TableRowIcon;
+RowButton.Icon = fn(6089).TableRowIcon;
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/TableRow/native/RowButton.native.tsx");
 
-export const RowButtonIconProps = fn(5923).TableRowIconProps;
+export const RowButtonIconProps = fn(6089).TableRowIconProps;
 export { RowButton };

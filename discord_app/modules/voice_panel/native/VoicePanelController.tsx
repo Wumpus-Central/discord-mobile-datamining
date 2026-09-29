@@ -1,6 +1,6 @@
-// === Module 16873: VoicePanelController ===
+// === Module 17060: VoicePanelController ===
 
-// Module 16873 (VoicePanelController)
+// Module 17060 (VoicePanelController)
 import DurationsDefault from "Durations" /* 1091 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
 import util from "util" /* 1115 */;
@@ -12,28 +12,28 @@ import native from "native" /* 4540 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5016 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5037 */;
-import DeviceOrientation from "DeviceOrientation" /* 7780 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 8782 */;
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 8805 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 8853 */;
-import _modDef8907 from "module_8907" /* 8907 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9104 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10896 */;
-import VoicePanelCardLayoutManagerDefault from "VoicePanelCardLayoutManager" /* 11757 */;
-import applyActivityOrientationLockDefault from "applyActivityOrientationLock" /* 16833 */;
-import _modDef16875 from "module_16875" /* 16875 */;
-import trackActivityThermalStateNoticeShown from "trackActivityThermalStateNoticeShown" /* 16876 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 16877 */;
-import useIsVoicePanelParticipantFocusable from "useIsVoicePanelParticipantFocusable" /* 16904 */;
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 16916 */;
+import DeviceOrientation from "DeviceOrientation" /* 7945 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 8947 */;
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 8970 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9018 */;
+import _modDef9072 from "module_9072" /* 9072 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9269 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11065 */;
+import VoicePanelCardLayoutManagerDefault from "VoicePanelCardLayoutManager" /* 11926 */;
+import applyActivityOrientationLockDefault from "applyActivityOrientationLock" /* 17020 */;
+import _modDef17062 from "module_17062" /* 17062 */;
+import trackActivityThermalStateNoticeShown from "trackActivityThermalStateNoticeShown" /* 17063 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 17064 */;
+import useIsVoicePanelParticipantFocusable from "useIsVoicePanelParticipantFocusable" /* 17091 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17103 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4825 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4852 */;
-import AppFreezeStore from "AppFreezeStore" /* 7738 */;
-import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 8939 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 8844 */;
+import AppFreezeStore from "AppFreezeStore" /* 7903 */;
+import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 9104 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9009 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import MediaEngineStore from "MediaEngineStore" /* 1993 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4859 */;
@@ -42,20 +42,20 @@ import VoicePanelStore from "VoicePanelStore" /* 5044 */;
 
 require = fn;
 const AppState = fn(17).AppState;
-const VoicePanelConstants = fn(11755);
+const VoicePanelConstants = fn(11924);
 ({ VoicePanelModes: closure_17, getAnalyticsNameForVoicePanelMode: closure_18 } = VoicePanelConstants);
-const VoicePanelControlsConstants = fn(11753);
+const VoicePanelControlsConstants = fn(11922);
 ({ CONTROLS_HEIGHT: closure_19, CONTROLS_HEIGHT_PTT: closure_20, CONTROLS_HIDE_TIMEOUT: closure_21, VoicePanelControlsModes: closure_22 } = VoicePanelControlsConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_23, ComponentActions: closure_24, InputModes: closure_25 } = Constants);
 const OrientationLockState = fn(2005).OrientationLockState;
-const ActivityPanelModes = fn(8502).ActivityPanelModes;
+const ActivityPanelModes = fn(8667).ActivityPanelModes;
 const isActivityParticipant = fn(4857).isActivityParticipant;
-const MorphablePanelModes = fn(11756).MorphablePanelModes;
+const MorphablePanelModes = fn(11925).MorphablePanelModes;
 const jsx = fn(21).jsx;
 let __initData = { code: "function VoicePanelControllerTsx1(){const{focused,mode,connected}=this.__closure;var _focused$get;return[(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id,mode.get(),connected.get()];}" };
 let closure_32 = { code: "function VoicePanelControllerTsx2(props,previous){const{cheapWorkletArrayShallowEqual,runOnJS,handleAnimatedReaction}=this.__closure;if(cheapWorkletArrayShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const[focusedParticipantId,voicePanelMode,connectedValue]=props;runOnJS(handleAnimatedReaction)({focusedParticipantId:focusedParticipantId,voicePanelMode:voicePanelMode,connectedValue:connectedValue});}" };
-let closure_33 = 5 * DurationsDefault.Millis.MINUTE;
+const MINUTE = DurationsDefault.Millis.MINUTE;
 let __initData2 = { code: "function VoicePanelControllerTsx3(){const{focused,pipState}=this.__closure;var _focused$get;return[(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id,pipState.id];}" };
 let closure_35 = { code: "function VoicePanelControllerTsx4(props,previous){const{cheapWorkletArrayShallowEqual,runOnJS,handleStateUpdates}=this.__closure;if(cheapWorkletArrayShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const[focusedId,pipParticipantId]=props;runOnJS(handleStateUpdates)({focusedId:focusedId,pipParticipantId:pipParticipantId});}" };
 let closure_36 = { code: "function VoicePanelControllerTsx5(value){const{isFocusedVideoZoomed}=this.__closure;isFocusedVideoZoomed.set(value);}" };
@@ -112,6 +112,7 @@ export default function VoicePanelController(channelId) {
   let sharedValue14;
   let callback12;
   __initData3 = undefined;
+  let tmp = channelId;
   let tmp2 = first;
   const items1 = [sharedValue3];
   const stateFromStores = channelId(first[26]).useStateFromStores(items1, () => sharedValue3.getMode() === callback5.PUSH_TO_TALK);
@@ -123,7 +124,6 @@ export default function VoicePanelController(channelId) {
   const items2 = [first];
   const effect = type.useEffect(() => () => first.cleanUp(), items2);
   let obj = channelId(first[26]);
-  let tmp3 = sharedValue3;
   ({ items, isConnected } = guildId(first[59])(channelId, guildId));
   closure_129_0 = items;
   closure_129_1 = isConnected;
@@ -170,43 +170,43 @@ export default function VoicePanelController(channelId) {
     type = channel.type;
   }
   let tmp9 = guildId(first[59])(channelId, guildId);
-  sharedValue = channelId(tmp2[23]).useSharedValue(isConnected);
-  let tmpResult = channelId(tmp2[23]);
-  sharedValue1 = channelId(tmp2[23]).useSharedValue(sharedValue9.PANEL);
+  sharedValue = tmp(tmp2[23]).useSharedValue(isConnected);
+  let tmpResult = tmp(tmp2[23]);
+  sharedValue1 = tmp(tmp2[23]).useSharedValue(sharedValue9.PANEL);
   closure_130_3 = sharedValue1;
-  const tmpResult34 = channelId(tmp2[23]);
-  let size = channelId(tmp2[35]).getWindowDimensions();
+  const tmpResult36 = tmp(tmp2[23]);
+  let size = tmp(tmp2[35]).getWindowDimensions();
   closure_130_4 = size;
-  const tmpResult35 = channelId(tmp2[35]);
+  const tmpResult37 = tmp(tmp2[35]);
   const size1 = { width: size.width, height: size.height, landscape: size.width > size.height };
-  sharedValue2 = channelId(tmp2[23]).useSharedValue(size1);
-  const tmpResult36 = channelId(tmp2[23]);
-  const rect = channelId(tmp2[36]).getSafeAreaInsets();
+  sharedValue2 = tmp(tmp2[23]).useSharedValue(size1);
+  const tmpResult38 = tmp(tmp2[23]);
+  const rect = tmp(tmp2[36]).getSafeAreaInsets();
   closure_130_5 = rect;
-  const tmpResult37 = channelId(tmp2[36]);
+  const tmpResult39 = tmp(tmp2[36]);
   let merged = Object.assign(rect);
-  sharedValue3 = channelId(tmp2[23]).useSharedValue({});
+  sharedValue3 = tmp(tmp2[23]).useSharedValue({});
   let obj3 = {};
-  const tmpResult38 = channelId(tmp2[23]);
-  const maxPanelWidth = channelId(tmp2[37]).getMaxPanelWidth({ windowWidth: size.width, connected: isConnected, safeAreaLeft: rect.left, safeAreaRight: rect.right });
+  const tmpResult40 = tmp(tmp2[23]);
+  const maxPanelWidth = tmp(tmp2[37]).getMaxPanelWidth({ windowWidth: size.width, connected: isConnected, safeAreaLeft: rect.left, safeAreaRight: rect.right });
   let obj4 = { windowWidth: size.width, connected: isConnected, safeAreaLeft: rect.left, safeAreaRight: rect.right };
-  const tmpResult39 = channelId(tmp2[37]);
+  const tmpResult41 = tmp(tmp2[37]);
   let obj5 = { drawerHeight: size.height, drawerWidth: maxPanelWidth, drawerX: null, drawerY: null, pipX: -1, pipY: -1, animated: true, mode: null };
-  const tmpResult40 = channelId(tmp2[23]);
-  obj5.drawerX = channelId(tmp2[37]).getPanelX(size.width, maxPanelWidth);
+  const tmpResult42 = tmp(tmp2[23]);
+  obj5.drawerX = tmp(tmp2[37]).getPanelX(size.width, maxPanelWidth);
   obj5.drawerY = size.height;
   obj5.mode = sharedValue9.PANEL;
-  sharedValue4 = tmpResult40.useSharedValue(obj5);
-  const tmpResult41 = channelId(tmp2[37]);
-  sharedValue5 = channelId(tmp2[23]).useSharedValue(0);
-  const tmpResult42 = channelId(tmp2[23]);
-  sharedValue6 = channelId(tmp2[23]).useSharedValue(false);
-  const tmpResult43 = channelId(tmp2[23]);
-  sharedValue7 = channelId(tmp2[23]).useSharedValue(null);
-  const tmpResult44 = channelId(tmp2[23]);
-  sharedValue8 = channelId(tmp2[23]).useSharedValue(0);
-  const tmpResult45 = channelId(tmp2[23]);
-  sharedValue9 = channelId(tmp2[23]).useSharedValue(false);
+  sharedValue4 = tmpResult42.useSharedValue(obj5);
+  const tmpResult43 = tmp(tmp2[37]);
+  sharedValue5 = tmp(tmp2[23]).useSharedValue(0);
+  const tmpResult44 = tmp(tmp2[23]);
+  sharedValue6 = tmp(tmp2[23]).useSharedValue(false);
+  const tmpResult45 = tmp(tmp2[23]);
+  sharedValue7 = tmp(tmp2[23]).useSharedValue(null);
+  const tmpResult46 = tmp(tmp2[23]);
+  sharedValue8 = tmp(tmp2[23]).useSharedValue(0);
+  const tmpResult47 = tmp(tmp2[23]);
+  sharedValue9 = tmp(tmp2[23]).useSharedValue(false);
   closure_130_6 = sharedValue9;
   let fn = function h(arg0) {
     const result = sharedValue12.set(arg0);
@@ -216,8 +216,8 @@ export default function VoicePanelController(channelId) {
   fn.__initData = callback12;
   const items4 = [sharedValue9];
   setIsFocusedVideoZoomed = obj2.useCallback(fn, items4);
-  const tmpResult46 = channelId(tmp2[23]);
-  sharedValue10 = channelId(tmp2[23]).useSharedValue(sharedValue12.useReducedMotion);
+  const tmpResult48 = tmp(tmp2[23]);
+  sharedValue10 = tmp(tmp2[23]).useSharedValue(sharedValue12.useReducedMotion);
   closure_130_7 = sharedValue10;
   const items5 = [sharedValue10];
   const effect2 = obj2.useEffect(() => {
@@ -229,9 +229,9 @@ export default function VoicePanelController(channelId) {
       const result = AccessibilityStore.removeReactChangeListener(onChange);
     };
   }, items5);
-  const tmpResult47 = channelId(tmp2[23]);
-  sharedValue11 = channelId(tmp2[23]).useSharedValue({ gestureActive: false, x: 0, y: 0 });
-  const tmpResult48 = channelId(tmp2[23]);
+  const tmpResult49 = tmp(tmp2[23]);
+  sharedValue11 = tmp(tmp2[23]).useSharedValue({ gestureActive: false, x: 0, y: 0 });
+  const tmpResult50 = tmp(tmp2[23]);
   const fn2 = function q() {
     value = first1.get();
     if (constants.PANEL === value) {
@@ -245,7 +245,7 @@ export default function VoicePanelController(channelId) {
   fn2.__closure = { mode: sharedValue1, VoicePanelModes: sharedValue9, MorphablePanelModes: first3 };
   fn2.__workletHash = 931249605381;
   fn2.__initData = __initData3;
-  derivedValue = channelId(tmp2[23]).useDerivedValue(fn2);
+  derivedValue = tmp(tmp2[23]).useDerivedValue(fn2);
   first2 = tmp5(obj2.useState(() => {
     const obj = new VoicePanelCardLayoutManagerDefault(channelId);
     obj.updateState(guildId, { windowWidth: type.width, windowHeight: type.height, safeAreaLeft: sharedValue.left, safeAreaRight: sharedValue.right, safeAreaTop: sharedValue.top, safeAreaBottom: sharedValue.bottom, controlBarSize: first ? closure_2_20 : closure_2_19 });
@@ -255,8 +255,8 @@ export default function VoicePanelController(channelId) {
   const items6 = [first2];
   const layoutEffect = obj2.useLayoutEffect(() => () => sharedValue7.cleanUp(), items6);
   let obj6 = { mode: sharedValue1, VoicePanelModes: sharedValue9, MorphablePanelModes: first3 };
-  const tmpResult49 = channelId(tmp2[23]);
-  sharedValue12 = channelId(tmp2[23]).useSharedValue(first2.getContentDimensions());
+  const tmpResult51 = tmp(tmp2[23]);
+  sharedValue12 = tmp(tmp2[23]).useSharedValue(first2.getContentDimensions());
   constants2 = tmp5(obj2.useState(() => new guildId(first[38])()), 1)[0];
   closure_131_0 = sharedValue1;
   closure_131_1 = isConnected;
@@ -269,7 +269,7 @@ export default function VoicePanelController(channelId) {
   closure_131_8 = undefined;
   closure_131_9 = undefined;
   closure_131_10 = undefined;
-  channelId(tmp2[23]);
+  tmp(tmp2[23]);
   const obj7 = { mode: constants2.FLOATING_DEFAULT, locked: false, height: null, pushToTalk: null };
   if (stateFromStores) {
     if (isConnected) {
@@ -451,7 +451,7 @@ export default function VoicePanelController(channelId) {
       }
       tmp5 = closure_2_19;
     }, items13);
-    const tmpResult52 = tmp(tmp2[23]);
+    const tmpResult54 = tmp(tmp2[23]);
     const fn6 = function f() {
       return first.get();
     };
@@ -546,7 +546,7 @@ export default function VoicePanelController(channelId) {
     closure_133_1 = channelId;
     closure_133_2 = sharedValue7;
     const tmp56 = sharedValue11;
-    const tmpResult53 = tmp(tmp2[23]);
+    const tmpResult55 = tmp(tmp2[23]);
     const items17 = [sharedValue7];
     const stateFromStores1 = tmp(tmp2[26]).useStateFromStores(items17, () => ChannelRTCStore.getSelectedParticipantId(guildId));
     closure_133_3 = stateFromStores1;
@@ -604,7 +604,7 @@ export default function VoicePanelController(channelId) {
         type(null);
       }
     }, items21);
-    const tmpResult54 = tmp(tmp2[26]);
+    const tmpResult56 = tmp(tmp2[26]);
     const items22 = [sharedValue6];
     stateFromStores2 = tmp(tmp2[26]).useStateFromStores(items22, () => {
       const connectedActivityLocation = EmbeddedActivitiesStore.getConnectedActivityLocation();
@@ -635,12 +635,12 @@ export default function VoicePanelController(channelId) {
     closure_134_5 = first4;
     closure_134_6 = tmp79;
     const tmp75 = sharedValue6;
-    const tmpResult55 = tmp(tmp2[26]);
+    const tmpResult57 = tmp(tmp2[26]);
     const tmp5Result4 = tmp5(obj2.useState(tmp(tmp2[36]).getSafeAreaInsets()), 2);
     const first5 = tmp5Result4[0];
     closure_134_7 = first5;
     closure_134_8 = tmp82;
-    const tmpResult56 = tmp(tmp2[36]);
+    const tmpResult58 = tmp(tmp2[36]);
     const managerSubscription = tmp(tmp2[39]).useManagerSubscription(first2);
     closure_134_9 = managerSubscription;
     const obj13 = { timeout: -1, layoutKey: managerSubscription, connected: isConnected, windowState: first4, safeAreaState: first5, contentDimensions: { width: 0, height: 0 } };
@@ -873,7 +873,7 @@ export default function VoicePanelController(channelId) {
     }, items28);
     closure_136_0 = sharedValue1;
     closure_136_1 = tmp34Result;
-    const tmpResult57 = tmp(tmp2[39]);
+    const tmpResult59 = tmp(tmp2[39]);
     const fn7 = function c() {
       const items = [channelId.get(), guildId.get().mode];
       return items;
@@ -915,7 +915,7 @@ export default function VoicePanelController(channelId) {
     closure_137_3 = sharedValue;
     closure_137_4 = sharedValue1;
     closure_137_5 = tmp64;
-    const tmpResult58 = tmp(tmp2[23]);
+    const tmpResult60 = tmp(tmp2[23]);
     const sharedValue13 = tmp(tmp2[23]).useSharedValue(transitionState);
     closure_137_6 = sharedValue13;
     const items29 = [transitionState, sharedValue13, transitionCleanUp, channelId];
@@ -937,7 +937,7 @@ export default function VoicePanelController(channelId) {
       const state = flag.getState();
       const freezeLock = state.requestFreezeLock({ lockEnabled: false, key: "voice-panel-freeze-" + channelId });
     }, items30);
-    const tmpResult59 = tmp(tmp2[23]);
+    const tmpResult61 = tmp(tmp2[23]);
     const fn9 = function p() {
       const items = [first1.get(), type.get(), sharedValue12.get()];
       return items;
@@ -1003,7 +1003,7 @@ export default function VoicePanelController(channelId) {
     const obj19 = { mode: sharedValue1, controlsSpecs: tmp34Result, safeArea: sharedValue3, windowDimensions: sharedValue2 };
     const tmp104 = tmp8(tmp2[61])(obj19);
     __initData2 = tmp104;
-    const tmpResult60 = tmp(tmp2[23]);
+    const tmpResult62 = tmp(tmp2[23]);
     const obj20 = { channelId, connected: isConnected, focusedId: stateFromStores1, layoutManager: first2, mode: first3, windowDimensions: sharedValue2, pipAvoidanceSpecs: tmp104, safeArea: sharedValue3 };
     const controllerPIPState = tmp(tmp2[62]).useControllerPIPState(obj20);
     closure_138_0 = channelId;
@@ -1075,7 +1075,7 @@ export default function VoicePanelController(channelId) {
               tmp15 = tmp11;
             }
             if (tmp15) {
-              const obj2 = { key: "EMBEDDED_ACTIVITIES_VIDEO_DISABLED_FOR_THERMAL_STATE", icon: _modDef16875, content: null, disableAnimations: true, toastDurationMs: 3000 };
+              const obj2 = { key: "EMBEDDED_ACTIVITIES_VIDEO_DISABLED_FOR_THERMAL_STATE", icon: _modDef17062, content: null, disableAnimations: true, toastDurationMs: 3000 };
               const intl = util.intl;
               obj2.content = intl.string(util.t.O2IlPT);
               ToastActionCreatorsDefault.open(obj2);
@@ -1100,7 +1100,7 @@ export default function VoicePanelController(channelId) {
       batchedStoreListener.attach("thermal-state-reactions-" + batchedStoreListener);
       return () => batchedStoreListener.detach();
     }, items33);
-    const tmpResult61 = tmp(tmp2[62]);
+    const tmpResult63 = tmp(tmp2[62]);
     const fn11 = function f() {
       value = guildId.get();
       let id;
@@ -1151,7 +1151,7 @@ export default function VoicePanelController(channelId) {
       state.setIsActivityFocused(tmp3);
     }, items34);
     closure_140_4 = callback10;
-    const tmpResult62 = tmp(tmp2[23]);
+    const tmpResult64 = tmp(tmp2[23]);
     class S {
       constructor() {
         value = guildId.get();
@@ -1194,35 +1194,60 @@ export default function VoicePanelController(channelId) {
     const obj25 = { onTransition: callback11 };
     tmp8(tmp2[22])(obj25);
     closure_142_0 = callback5;
-    closure_142_1 = obj2.useRef(0);
-    const tmpResult63 = tmp(tmp2[23]);
+    closure_142_1 = obj2.useRef(false);
+    closure_142_2 = obj2.useRef(0);
+    const tmpResult65 = tmp(tmp2[23]);
     const items36 = [tmp3];
     const stateFromStores3 = tmp(tmp2[26]).useStateFromStores(items36, () => sharedValue3.getSpeakingWhileMuted());
-    closure_142_2 = stateFromStores3;
-    const items37 = [stateFromStores3, callback5];
+    closure_142_3 = stateFromStores3;
+    const tmpResult66 = tmp(tmp2[26]);
+    const items37 = [tmp3];
+    const stateFromStores4 = tmp(tmp2[26]).useStateFromStores(items37, () => sharedValue3.isMute());
+    closure_142_4 = stateFromStores4;
+    const tmpResult67 = tmp(tmp2[26]);
+    const items38 = [sharedValue5];
+    const items39 = [tmp(tmp2[26]).useStateFromStores(items38, () => sharedValue5.getRTCConnectionId())];
     const effect8 = obj2.useEffect(() => {
-      if (first) {
+      first.current = performance.now();
+      guildId.current = false;
+    }, items39);
+    const items40 = [stateFromStores4];
+    const effect9 = obj2.useEffect(() => {
+      if (type) {
         const _performance = performance;
-        if (performance.now() - guildId.current >= closure_33) {
-          const _performance2 = performance;
-          tmp2.current = performance.now();
+        first.current = performance.now();
+      } else {
+        guildId.current = false;
+      }
+    }, items40);
+    const items41 = [stateFromStores3, callback5];
+    const effect10 = obj2.useEffect(() => {
+      let tmp = first1;
+      if (first1) {
+        tmp = !guildId.current;
+      }
+      if (tmp) {
+        const _performance = performance;
+        if (performance.now() - first.current >= MINUTE) {
+          guildId.current = true;
           channelId();
-          const obj2 = { key: "SPEAKING_WHILE_MUTED", icon: _modDef8907, content: null, toastDurationMs: 3000 };
+          const obj2 = { key: "SPEAKING_WHILE_MUTED", icon: _modDef9072, content: null, toastDurationMs: null };
           const intl = util.intl;
           obj2.content = intl.string(util.t["29gnR4"]);
+          obj2.toastDurationMs = 3 * DurationsDefault.Millis.SECOND;
           ToastActionCreatorsDefault.open(obj2);
         }
       }
-    }, items37);
+    }, items41);
     tmp8(tmp2[63])(channelId, sharedValue1, tmp5Result[1], sharedValue);
     tmp8(tmp2[64])();
     closure_143_0 = isConnected;
     closure_143_1 = first3;
     closure_143_2 = stateFromStores1;
     closure_143_3 = stateFromStores2;
-    const tmpResult64 = tmp(tmp2[26]);
-    const items38 = [tmp75];
-    const stateFromStoresObject = tmp(tmp2[26]).useStateFromStoresObject(items38, () => {
+    const tmpResult68 = tmp(tmp2[26]);
+    const items42 = [tmp75];
+    const stateFromStoresObject = tmp(tmp2[26]).useStateFromStoresObject(items42, () => {
       const currentEmbeddedActivity = sharedValue6.getCurrentEmbeddedActivity();
       let applicationId;
       if (currentEmbeddedActivity != null) {
@@ -1251,7 +1276,7 @@ export default function VoicePanelController(channelId) {
     closure_143_5 = activityOrientationLockState;
     const instanceId = stateFromStoresObject.instanceId;
     closure_143_6 = instanceId;
-    const items39 = [applicationId, isConnected, first3, activityOrientationLockState, stateFromStores1, stateFromStores2, instanceId];
+    const items43 = [applicationId, isConnected, first3, activityOrientationLockState, stateFromStores1, stateFromStores2, instanceId];
     const layoutEffect15 = obj2.useLayoutEffect(() => {
       let tmp = first1;
       if (!first1) {
@@ -1277,7 +1302,7 @@ export default function VoicePanelController(channelId) {
         }
         const result = DeviceOrientation.restoreDefaultOrientation();
       }
-    }, items39);
+    }, items43);
     const layoutEffect16 = obj2.useLayoutEffect(() => () => {
       channel = channel.getChannel(voiceChannelId.getVoiceChannelId());
       let isGuildStageVoiceResult;
@@ -1292,8 +1317,8 @@ export default function VoicePanelController(channelId) {
     closure_144_0 = channelId;
     closure_144_1 = isConnected;
     closure_144_2 = first3;
-    const items40 = [first3, channelId, isConnected];
-    const effect9 = obj2.useEffect(() => {
+    const items44 = [first3, channelId, isConnected];
+    const effect11 = obj2.useEffect(() => {
       let tmp2 = first !== constants.DISMISSED;
       if (tmp2) {
         tmp2 = guildId;
@@ -1304,13 +1329,13 @@ export default function VoicePanelController(channelId) {
         const merged = Object.assign(AppAnalyticsUtils.collectVoiceAnalyticsMetadata(channelId));
         obj.track(constants3.VIDEO_LAYOUT_TOGGLED, obj2);
       }
-    }, items40);
+    }, items44);
     closure_145_0 = sharedValue1;
     closure_145_1 = obj2.useRef(-1);
-    const tmpResult65 = tmp(tmp2[26]);
+    const tmpResult69 = tmp(tmp2[26]);
     sharedValue14 = tmp(tmp2[23]).useSharedValue(null);
     closure_145_2 = sharedValue14;
-    const items41 = [sharedValue1, sharedValue14];
+    const items45 = [sharedValue1, sharedValue14];
     callback12 = obj2.useCallback((arg0) => {
       if (channelId.get() === constants.PANEL) {
         let result = first.set(arg0);
@@ -1323,20 +1348,20 @@ export default function VoicePanelController(channelId) {
           }, VoicePanelFloatingCTAUtils.FLOATING_CTA_HIDE_TIMEOUT);
         }
       }
-    }, items41);
+    }, items45);
     const layoutEffect17 = obj2.useLayoutEffect(() => () => clearTimeout(ref.current), []);
     __initData3 = obj2.useRef(undefined);
     const obj26 = { value: tmp5(obj2.useState(() => ({ channelId, channelType: type, connected: sharedValue, contentDimensions: sharedValue12, controlsSpecs, dismissPanel, dismissToPIPGestureRef, dragScrolling: sharedValue6, focused: sharedValue7, generateStateLocker: callback3, guildId, hideControls: callback4, isCall: flag, isFocusedVideoZoomed: sharedValue9, layoutManager: first2, mode: sharedValue1, morphablePanelMode: derivedValue, mountedCards: first1, pipAvoidanceSpecs, preJoinContentSize: sharedValue8, refreshIdleTimeout: callback6, safeArea: sharedValue3, scrollPosition: sharedValue5, setControlsMode, setFocused: callback7, setIsFocusedVideoZoomed, setMode, setShowFloatingCTA: callback12, showControls: callback5, showFloatingCTA: sharedValue14, streamOutputSinkStack, usePIPState: VoicePanelPIPStateContext.usePIPState, useReducedMotion: sharedValue10, windowDimensions: sharedValue2, wrapperDimensions: sharedValue4, wrapperOffset: sharedValue11, pipHandoff })), 1)[0], children: null };
     const obj27 = { value: controllerPIPState, children: null };
-    let tmp136 = guildId;
+    let tmp140 = guildId;
     if (guildId == null) {
-      tmp136 = null;
+      tmp140 = null;
     }
-    const obj28 = { value: tmp136, children: channelId.children };
+    const obj28 = { value: tmp140, children: channelId.children };
     obj27.children = setMode(tmp8(tmp2[67]).Provider, obj28);
     obj26.children = setMode(tmp(tmp2[65]).VoicePanelPIPStateContext.Provider, obj27);
     return setMode(tmp8(tmp2[66]).Provider, obj26);
   }
   tmp36 = sharedValue10;
-  const tmpResult50 = channelId(tmp2[23]);
+  const tmpResult52 = tmp(tmp2[23]);
 };

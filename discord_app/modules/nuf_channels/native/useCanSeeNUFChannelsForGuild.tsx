@@ -1,6 +1,6 @@
-// === Module 15882: useCanSeeNUFChannelsForGuild ===
+// === Module 16057: useCanSeeNUFChannelsForGuild ===
 
-// Module 15882 (useCanSeeNUFChannelsForGuild)
+// Module 16057 (useCanSeeNUFChannelsForGuild)
 import FlagUtils from "FlagUtils" /* 1385 */;
 import UserUtils from "UserUtils" /* 4678 */;
 import GuildMemberStore from "GuildMemberStore" /* 2108 */;

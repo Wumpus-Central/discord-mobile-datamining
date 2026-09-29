@@ -1,9 +1,9 @@
-// === Module 11590: ExpandableList ===
+// === Module 11759: ExpandableList ===
 
-// Module 11590 (ExpandableList)
+// Module 11759 (ExpandableList)
 import timing from "timing" /* 4837 */;
 import timingPresets from "timingPresets" /* 4840 */;
-import usePreviousDefault from "usePrevious" /* 7720 */;
+import usePreviousDefault from "usePrevious" /* 7885 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -201,7 +201,7 @@ export default function ExpandableList(onExpand) {
         tmp4(obj);
       }
     };
-    obj12 = tmp16(tmp9(5917).TableRow, obj12);
+    obj12 = tmp16(tmp9(6083).TableRow, obj12);
     obj14.children = obj12;
     tmp16(tmp17, obj14);
   }

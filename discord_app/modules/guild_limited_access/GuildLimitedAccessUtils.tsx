@@ -1,6 +1,6 @@
-// === Module 17072: GuildLimitedAccessUtils ===
+// === Module 17259: GuildLimitedAccessUtils ===
 
-// Module 17072 (GuildLimitedAccessUtils)
+// Module 17259 (GuildLimitedAccessUtils)
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

@@ -1,9 +1,9 @@
-// === Module 15550: VEVOO ===
+// === Module 15725: VEVOO ===
 
-// Module 15550 (VEVOO)
+// Module 15725 (VEVOO)
 import nativeDefault from "native" /* 576 */;
-import spring from "spring" /* 5280 */;
-import springPresets from "springPresets" /* 5284 */;
+import spring from "spring" /* 5446 */;
+import springPresets from "springPresets" /* 5450 */;
 import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 4835 */;
 

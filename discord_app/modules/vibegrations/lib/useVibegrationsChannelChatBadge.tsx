@@ -1,6 +1,6 @@
-// === Module 12828: useVibegrationsChannelChatBadge ===
+// === Module 12998: useVibegrationsChannelChatBadge ===
 
-// Module 12828 (useVibegrationsChannelChatBadge)
+// Module 12998 (useVibegrationsChannelChatBadge)
 import ReadStateStore from "ReadStateStore" /* 4851 */;
 
 const require = globalThis.__r;

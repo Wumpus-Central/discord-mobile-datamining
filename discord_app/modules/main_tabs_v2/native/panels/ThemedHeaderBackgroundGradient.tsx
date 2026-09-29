@@ -1,11 +1,11 @@
-// === Module 16169: ThemedHeaderBackgroundGradient ===
+// === Module 16345: ThemedHeaderBackgroundGradient ===
 
-// Module 16169 (ThemedHeaderBackgroundGradient)
+// Module 16345 (ThemedHeaderBackgroundGradient)
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
 import useToken from "useToken" /* 4531 */;
-import LinearGradientDefault from "LinearGradient" /* 5293 */;
+import LinearGradientDefault from "LinearGradient" /* 5459 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

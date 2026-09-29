@@ -1,14 +1,14 @@
-// === Module 14245: SafetySettingsNotice ===
+// === Module 14421: SafetySettingsNotice ===
 
-// Module 14245 (SafetySettingsNotice)
+// Module 14421 (SafetySettingsNotice)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import SafetySettingsUtils from "SafetySettingsUtils" /* 14246 */;
+import SafetySettingsUtils from "SafetySettingsUtils" /* 14422 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(7847).SafetySettingsNoticeAction;
+let closure_4 = fn(8012).SafetySettingsNoticeAction;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4836);

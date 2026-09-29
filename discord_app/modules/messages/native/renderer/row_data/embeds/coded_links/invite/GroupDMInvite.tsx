@@ -1,15 +1,15 @@
-// === Module 12784: GroupDMInvite ===
+// === Module 12954: GroupDMInvite ===
 
-// Module 12784 (GroupDMInvite)
+// Module 12954 (GroupDMInvite)
 import util from "util" /* 1115 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7387 */;
-import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 10852 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7552 */;
+import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 11021 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import RelationshipStore from "RelationshipStore" /* 4479 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
-const InviteTypes = fn(7155).InviteTypes;
+const InviteTypes = fn(7320).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/GroupDMInvite.tsx");
 
@@ -53,8 +53,8 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, th
   }
   let channelIconSource = null;
   if (null != channel) {
-    channelIconSource = tmp8(12604).getChannelIconSource(channel);
-    const tmp8Result = tmp8(12604);
+    channelIconSource = tmp8(12774).getChannelIconSource(channel);
+    const tmp8Result = tmp8(12774);
   }
   let uri = null;
   if (null != channelIconSource) {

@@ -1,9 +1,9 @@
-// === Module 17190: resolveStorefrontCodedLink ===
+// === Module 17379: resolveStorefrontCodedLink ===
 
-// Module 17190 (resolveStorefrontCodedLink)
+// Module 17379 (resolveStorefrontCodedLink)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SKUStore from "SKUStore" /* 5822 */;
+import SKUStore from "SKUStore" /* 5989 */;
 
 const require = fn;
 const set = new Set();
@@ -11,7 +11,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/resolveStorefrontCodedLink.tsx");
 
 export default function resolveStorefrontCodedLink(arg0, code) {
-  const result = obj3(11026).parseStorefrontCodedLink(code);
+  const result = obj3(11195).parseStorefrontCodedLink(code);
   if (null != result) {
     if (arg0 === tmp(4821).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
       let obj2 = { type: "application", applicationId: result.scopeId };
@@ -26,7 +26,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
         skuId(573).dispatch(obj5);
         let obj4 = skuId(573);
         const items = [skuId];
-        const storefrontCodedLink = tmp(11026).makeStorefrontCodedLink(items, result.scopeId);
+        const storefrontCodedLink = tmp(11195).makeStorefrontCodedLink(items, result.scopeId);
         closure_129_0 = storefrontCodedLink;
         closure_129_1 = asyncGeneratorStep(async () => {
           if (v3 === 2) {
@@ -96,7 +96,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
         });
         if (!set.has(storefrontCodedLink)) {
           set.add(storefrontCodedLink);
-          const result1 = tmp(17183).queueMessageLinkFetch(asyncGeneratorStep(async () => {
+          const result1 = tmp(17372).queueMessageLinkFetch(asyncGeneratorStep(async () => {
             if (c4 === 2) {
               c4 = 3;
               throw new TypeError("Generator functions may not be called on executing generators");
@@ -158,12 +158,12 @@ export default function resolveStorefrontCodedLink(arg0, code) {
               }
             }
           }));
-          const tmpResult2 = tmp(17183);
+          const tmpResult2 = tmp(17372);
         }
-        const tmpResult = tmp(11026);
+        const tmpResult = tmp(11195);
       }
       tmp4 = null != SKUStore.get(skuId) || SKUStore.isFetching(skuId) || SKUStore.didFetchingSkuFail(skuId);
     }
   }
-  let obj = obj3(11026);
+  let obj = obj3(11195);
 };

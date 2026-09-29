@@ -1,7 +1,7 @@
-// === Module 11541: useEmbeddedAppsForChannel ===
+// === Module 11710: useEmbeddedAppsForChannel ===
 
-// Module 11541 (useEmbeddedAppsForChannel)
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6589 */;
+// Module 11710 (useEmbeddedAppsForChannel)
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6755 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 4876 */;
 import UserStore from "UserStore" /* 1372 */;

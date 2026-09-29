@@ -1,16 +1,16 @@
-// === Module 7532: GuildSpaceLeaderboardSystemMessage ===
+// === Module 7697: GuildSpaceLeaderboardSystemMessage ===
 
-// Module 7532 (GuildSpaceLeaderboardSystemMessage)
+// Module 7697 (GuildSpaceLeaderboardSystemMessage)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4457 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4988 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7388 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7402 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7404 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7406 */;
-import GuildLeaderboardSystemMessageCopy from "GuildLeaderboardSystemMessageCopy" /* 7439 */;
-import _modDef7533 from "module_7533" /* 7533 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7553 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7567 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7569 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7571 */;
+import GuildLeaderboardSystemMessageCopy from "GuildLeaderboardSystemMessageCopy" /* 7604 */;
+import _modDef7698 from "module_7698" /* 7698 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -79,7 +79,7 @@ export const createGuildSpaceLeaderboardSystemMessage = function createGuildSpac
             const obj7 = { content: null, iconUrl: null, iconTintColor: null };
             obj4.previousUsernameOnClick = obj8;
             obj7.content = intl.formatToParts(mobileLeaderboardSystemMessage.message, obj4);
-            obj7.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7533);
+            obj7.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7698);
             obj7.iconTintColor = tmp13.iconTintColor;
             const merged1 = Object.assign(createCommonMessageDefault(theme));
             return obj7;

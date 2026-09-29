@@ -1,12 +1,12 @@
-// === Module 11465: SlowModeIndicator ===
+// === Module 11634: SlowModeIndicator ===
 
-// Module 11465 (SlowModeIndicator)
+// Module 11634 (SlowModeIndicator)
 import nativeDefault from "native" /* 576 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4528 */;
-import SlowmodeUtils from "SlowmodeUtils" /* 7101 */;
-import TimerIcon from "TimerIcon" /* 11100 */;
+import SlowmodeUtils from "SlowmodeUtils" /* 7266 */;
+import TimerIcon from "TimerIcon" /* 11269 */;
 import noop from "module_19" /* 19 */;
-import SlowmodeStore from "SlowmodeStore" /* 7100 */;
+import SlowmodeStore from "SlowmodeStore" /* 7265 */;
 
 require = fn;
 const jsxProd = fn(21);

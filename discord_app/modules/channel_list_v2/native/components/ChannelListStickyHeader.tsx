@@ -1,12 +1,12 @@
-// === Module 15767: ChannelListStickyHeader ===
+// === Module 15942: ChannelListStickyHeader ===
 
-// Module 15767 (ChannelListStickyHeader)
+// Module 15942 (ChannelListStickyHeader)
 import nativeDefault from "native" /* 576 */;
-import GuildBadgeV2Default from "GuildBadgeV2" /* 8202 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 13452 */;
-import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 15736 */;
-import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 15766 */;
-import openFavoritesGuildActionSheetDefault from "openFavoritesGuildActionSheet" /* 15768 */;
+import GuildBadgeV2Default from "GuildBadgeV2" /* 8367 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 13621 */;
+import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 15911 */;
+import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 15941 */;
+import openFavoritesGuildActionSheetDefault from "openFavoritesGuildActionSheet" /* 15943 */;
 import noop from "module_19" /* 19 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 
@@ -88,9 +88,9 @@ export default function ChannelListStickyHeader(guild) {
   const tmp10 = useStickyServerHeaderSubtitleDefault(guild);
   const obj2 = guild(2070);
   const tmp8 = isFavoritesGuildIdResult ? t.hW8QDk : t["Gpyp/e"];
-  const iOSPressEffects = guild(5922).useIOSPressEffects(4);
+  const iOSPressEffects = guild(6088).useIOSPressEffects(4);
   ({ onPressIn, onPressOut, pressableStyles } = iOSPressEffects);
-  const tmp6Result = guild(5922);
+  const tmp6Result = guild(6088);
   const favoritesAwareGuildName = guild(2070).getFavoritesAwareGuildName(guild);
   const tmp6Result4 = guild(2070);
   const token = guild(4531).useToken(tmp2(576).modules.mobile.CHANNEL_LIST_TITLE_TEXT_STYLE);
@@ -129,7 +129,7 @@ export default function ChannelListStickyHeader(guild) {
   let tmp22 = null;
   if (isFavoritesGuildIdResult) {
     const obj5 = { style: tmp.headerIcon, size: "sm", color: tmp2(576).colors.MOBILE_TEXT_HEADING_PRIMARY };
-    tmp22 = closure_6(tmp6(9698).StarIcon, obj5);
+    tmp22 = closure_6(tmp6(9865).StarIcon, obj5);
   }
   const items2 = [tmp22, , , ];
   const tmp6Result6 = guild(4531);
@@ -142,7 +142,7 @@ export default function ChannelListStickyHeader(guild) {
   let tmp24Result = null;
   if (flag2) {
     const obj8 = { size: "xxs", color: tmp2(576).colors.TEXT_SUBTLE, style: tmp.chevron };
-    tmp24Result = closure_6(tmp6(6630).ChevronSmallRightIcon, obj8);
+    tmp24Result = closure_6(tmp6(6796).ChevronSmallRightIcon, obj8);
   }
   items2[3] = tmp24Result;
   obj4.children = items2;
@@ -181,7 +181,7 @@ export default function ChannelListStickyHeader(guild) {
   const items6 = [closure_7(closure_8, obj3), ];
   let tmp24Result5 = null;
   if (isFavoritesGuildIdResult) {
-    tmp24Result5 = closure_6(tmp6(15782).FavoritesGuildHeaderActionButton, {});
+    tmp24Result5 = closure_6(tmp6(15957).FavoritesGuildHeaderActionButton, {});
   }
   items6[1] = tmp24Result5;
   obj15.children = items6;
@@ -189,13 +189,13 @@ export default function ChannelListStickyHeader(guild) {
   let tmp24Result6 = null;
   if (flag) {
     const obj16 = { guild, useButtonComponent: true, useEventsButton: true };
-    tmp24Result6 = closure_6(tmp2(11780), obj16);
+    tmp24Result6 = closure_6(tmp2(11949), obj16);
   }
   items7[1] = tmp24Result6;
   if (tmp24Result7) {
     const obj17 = { style: tmp.joinButton, children: null };
     const obj18 = { guildId: guild.id, joinSource: JoinGuildSources.CHANNEL_LIST_STICKY_HEADER_LURKER };
-    obj17.children = closure_6(tmp2(15787), obj18);
+    obj17.children = closure_6(tmp2(15962), obj18);
     tmp24Result7 = closure_6(closure_4, obj17);
   }
   items7[2] = tmp24Result7;
@@ -203,7 +203,7 @@ export default function ChannelListStickyHeader(guild) {
   let tmp24Result8 = null;
   if (flag3) {
     const obj20 = { targetRef: ref, guild };
-    tmp24Result8 = closure_6(tmp2(15788), obj20);
+    tmp24Result8 = closure_6(tmp2(15963), obj20);
   }
   items7[4] = tmp24Result8;
   obj14.children = items7;

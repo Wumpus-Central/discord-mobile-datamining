@@ -1,18 +1,18 @@
-// === Module 11091: GroupDMNitroCapLimitSheet ===
+// === Module 11260: GroupDMNitroCapLimitSheet ===
 
-// Module 11091 (GroupDMNitroCapLimitSheet)
+// Module 11260 (GroupDMNitroCapLimitSheet)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9422 */;
-import PremiumMarketingUtil from "PremiumMarketingUtil" /* 11092 */;
-import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction" /* 11093 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9589 */;
+import PremiumMarketingUtil from "PremiumMarketingUtil" /* 11261 */;
+import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction" /* 11262 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4825 */;
 
 require = fn;
 const View = fn(17).View;
-const number = fn(11088).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const number = fn(11257).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, AnalyticsObjects: closure_8, AnalyticsPages: closure_9, MAX_GROUP_DM_PARTICIPANTS: c10 } = Constants);
 const jsxProd = fn(21);
@@ -37,7 +37,7 @@ export default function GroupDMNitroCapLimitSheet(location) {
   const items = [AccessibilityStore];
   const stateFromStores = _location(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let obj = _location(504);
-  const groupDMNitroAudience = _location(11086).useGroupDMNitroAudience();
+  const groupDMNitroAudience = _location(11255).useGroupDMNitroAudience();
   importDefault = tmp6;
   const items1 = [_location];
   const callback = noop.useCallback(() => {
@@ -52,8 +52,8 @@ export default function GroupDMNitroCapLimitSheet(location) {
     loading = tmp9.loading;
   }
   const obj4 = { audience: groupDMNitroAudience, location: _location, acquisitionStrategy: null, onCheckout: null };
-  let obj2 = _location(11086);
-  obj4.acquisitionStrategy = _location(11086).GroupDMNitroAcquisitionStrategy.CHECKOUT;
+  let obj2 = _location(11255);
+  obj4.acquisitionStrategy = _location(11255).GroupDMNitroAcquisitionStrategy.CHECKOUT;
   obj4.onCheckout = tmp9.onPress;
   const tmp8ResultResult = useGroupDMNitroUpsellActionDefault(obj4);
   dependencyMap = tmp8ResultResult;
@@ -79,9 +79,9 @@ export default function GroupDMNitroCapLimitSheet(location) {
   const obj7 = { number: number2 };
   const obj9 = { number };
   const tmp8Result = useGroupDMNitroUpsellActionDefault;
-  obj11.text = intl3.string(_location(11086).getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
-  const tmp2Result = _location(11086);
-  obj11.icon = closure_11(_location(8122).NitroWheelIcon, { style: tmp.nitroWheelIcon, color: nativeDefault.unsafe_rawColors.WHITE, size: "custom" });
+  obj11.text = intl3.string(_location(11255).getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
+  const tmp2Result = _location(11255);
+  obj11.icon = closure_11(_location(8287).NitroWheelIcon, { style: tmp.nitroWheelIcon, color: nativeDefault.unsafe_rawColors.WHITE, size: "custom" });
   obj11.shiny = !stateFromStores;
   obj11.loading = loading;
   let tmp16 = null;
@@ -90,15 +90,15 @@ export default function GroupDMNitroCapLimitSheet(location) {
   }
   const obj13 = { children: null };
   obj11.onPress = tmp16;
-  const items4 = [closure_11(_location(5281).Button, obj11), ];
+  const items4 = [closure_11(_location(5447).Button, obj11), ];
   const obj14 = { text: null, size: "lg", variant: "secondary", onPress: null, grow: true };
   const intl4 = tmp2(1115).intl;
   obj14.text = intl4.string(_location(1115).t.PUZmk4);
   obj14.onPress = callback;
-  items4[1] = closure_11(_location(5281).Button, obj14);
+  items4[1] = closure_11(_location(5447).Button, obj14);
   obj10.children = items4;
   items3[2] = closure_12(View, obj10);
   obj5.children = items3;
   obj13.children = closure_12(View, obj5);
-  return closure_11(_location(6571).BottomSheet, obj13);
+  return closure_11(_location(6737).BottomSheet, obj13);
 };

@@ -1,6 +1,6 @@
-// === Module 16340: VibegrationsMessageTime ===
+// === Module 16519: VibegrationsMessageTime ===
 
-// Module 16340 (VibegrationsMessageTime)
+// Module 16519 (VibegrationsMessageTime)
 import DateUtils from "DateUtils" /* 4512 */;
 import size from "module_2" /* 2 */;
 

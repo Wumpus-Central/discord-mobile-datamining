@@ -1,16 +1,16 @@
-// === Module 12840: ChannelHeader ===
+// === Module 13010: ChannelHeader ===
 
-// Module 12840 (ChannelHeader)
+// Module 13010 (ChannelHeader)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import RootNavigationRef from "RootNavigationRef" /* 4693 */;
 import ChatInputUtils from "ChatInputUtils" /* 4701 */;
-import SwipeToMemberListUtils from "SwipeToMemberListUtils" /* 11004 */;
-import GuildRoleSubscriptionsChannelHeaderDefault from "GuildRoleSubscriptionsChannelHeader" /* 12841 */;
-import HomeChannelHeaderDefault from "HomeChannelHeader" /* 12842 */;
-import PrivateChannelHeaderDefault from "PrivateChannelHeader" /* 12843 */;
-import ForumChannelHeaderDefault from "ForumChannelHeader" /* 12851 */;
-import GuildChannelHeaderDefault from "GuildChannelHeader" /* 12853 */;
+import SwipeToMemberListUtils from "SwipeToMemberListUtils" /* 11173 */;
+import GuildRoleSubscriptionsChannelHeaderDefault from "GuildRoleSubscriptionsChannelHeader" /* 13011 */;
+import HomeChannelHeaderDefault from "HomeChannelHeader" /* 13012 */;
+import PrivateChannelHeaderDefault from "PrivateChannelHeader" /* 13013 */;
+import ForumChannelHeaderDefault from "ForumChannelHeader" /* 13021 */;
+import GuildChannelHeaderDefault from "GuildChannelHeader" /* 13023 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 

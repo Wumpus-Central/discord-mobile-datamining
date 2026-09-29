@@ -1,8 +1,8 @@
-// === Module 16380: VibegrationsTodoState ===
+// === Module 16564: VibegrationsTodoState ===
 
-// Module 16380 (VibegrationsTodoState)
-import VibegrationsChatStore from "VibegrationsChatStore" /* 12643 */;
-import VibegrationsTimelineTree from "VibegrationsTimelineTree" /* 16349 */;
+// Module 16564 (VibegrationsTodoState)
+import VibegrationsChatStore from "VibegrationsChatStore" /* 12813 */;
+import VibegrationsTimelineTree from "VibegrationsTimelineTree" /* 16529 */;
 import size from "module_2" /* 2 */;
 
 const turnSettled = VibegrationsChatStore.turnSettled;
@@ -27,11 +27,11 @@ export const todoLabel = function todoLabel(activeForm, todoMarkResult) {
   }
   text = activeForm.text;
 };
-export const checklistLive = function checklistLive(message) {
-  const tmp = turnSettled(message);
+export const checklistLive = function checklistLive(memo) {
+  const tmp = turnSettled(memo);
   let tmp2 = !tmp;
   if (!tmp) {
-    tmp2 = true !== message.stopRequested;
+    tmp2 = true !== memo.stopRequested;
   }
   return tmp2;
 };
@@ -56,13 +56,13 @@ export const messageChecklist = function messageChecklist(role) {
     return latestTodosResult;
   }
 };
-export const supersededChecklists = function supersededChecklists(stateFromStores1) {
+export const supersededChecklists = function supersededChecklists(memo) {
   const set = new Set();
-  let diff = stateFromStores1.length - 1;
+  let diff = memo.length - 1;
   let flag = false;
   if (0 <= diff) {
     do {
-      let tmp2 = stateFromStores1[diff];
+      let tmp2 = memo[diff];
       let tmp3 = null != tmp2;
       if (tmp3) {
         let tmp6 = null;
@@ -97,8 +97,8 @@ export const supersededChecklists = function supersededChecklists(stateFromStore
   }
   return set;
 };
-export const checklistExpanded = function checklistExpanded(c6, render_id, set) {
-  value = c6.get(render_id);
+export const checklistExpanded = function checklistExpanded(c10, render_id, set) {
+  value = c10.get(render_id);
   if (value == null) {
     value = !set;
   }

@@ -1,6 +1,6 @@
-// === Module 8592: ApplicationFrecencyStore ===
+// === Module 8757: ApplicationFrecencyStore ===
 
-// Module 8592 (ApplicationFrecencyStore)
+// Module 8757 (ApplicationFrecencyStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;

@@ -1,9 +1,9 @@
-// === Module 17433: GuildSettingsUtils ===
+// === Module 17622: GuildSettingsUtils ===
 
-// Module 17433 (GuildSettingsUtils)
+// Module 17622 (GuildSettingsUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import GuildRoleRecord from "GuildRoleRecord" /* 2103 */;
-import PermissionSpecUtilsDefault from "PermissionSpecUtils" /* 16652 */;
+import PermissionSpecUtilsDefault from "PermissionSpecUtils" /* 16840 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

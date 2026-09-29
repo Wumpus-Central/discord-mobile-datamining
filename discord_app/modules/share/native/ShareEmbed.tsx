@@ -1,9 +1,9 @@
-// === Module 13449: ShareEmbed ===
+// === Module 13618: ShareEmbed ===
 
-// Module 13449 (ShareEmbed)
+// Module 13618 (ShareEmbed)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5889 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6055 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

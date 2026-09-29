@@ -1,8 +1,8 @@
-// === Module 6668: useRoleSubscriptionsVisibleInGuild ===
+// === Module 6834: useRoleSubscriptionsVisibleInGuild ===
 
-// Module 6668 (useRoleSubscriptionsVisibleInGuild)
-import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 6669 */;
-import useHasRoleSubscriptionInGuild from "useHasRoleSubscriptionInGuild" /* 6670 */;
+// Module 6834 (useRoleSubscriptionsVisibleInGuild)
+import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 6835 */;
+import useHasRoleSubscriptionInGuild from "useHasRoleSubscriptionInGuild" /* 6836 */;
 import ImpersonateStore from "ImpersonateStore" /* 2101 */;
 import GuildStore from "GuildStore" /* 2067 */;
 
@@ -85,7 +85,7 @@ export const useShowRoleSubscriptionsInChannelList = function useShowRoleSubscri
     tmp5 = stateFromStores;
   }
   const obj2 = require("CreatorMonetizationRestrictionsHooks");
-  const guildEligibleForGuildProducts = tmp3(6676).useGuildEligibleForGuildProducts(id);
+  const guildEligibleForGuildProducts = tmp3(6842).useGuildEligibleForGuildProducts(id);
   if (tmp5) {
     let flag = !guildEligibleForGuildProducts;
     if (guildEligibleForGuildProducts) {

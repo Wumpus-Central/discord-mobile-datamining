@@ -1,6 +1,6 @@
-// === Module 15125: CacheActionsStorageDiagnostics ===
+// === Module 15300: CacheActionsStorageDiagnostics ===
 
-// Module 15125 (CacheActionsStorageDiagnostics)
+// Module 15300 (CacheActionsStorageDiagnostics)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -145,7 +145,7 @@ export default function CacheActionsStorageDiagnostics(onBusyChange) {
     }
     return applyArgumentsResult;
   };
-  items[1] = closure_6(onBusyChange(5281).Button, obj3);
+  items[1] = closure_6(onBusyChange(5447).Button, obj3);
   obj.children = items;
-  return closure_7(onBusyChange(5279).Stack, obj);
+  return closure_7(onBusyChange(5445).Stack, obj);
 };

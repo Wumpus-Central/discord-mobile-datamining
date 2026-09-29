@@ -1,15 +1,15 @@
-// === Module 8260: BundleSampleV2 ===
+// === Module 8425: BundleSampleV2 ===
 
-// Module 8260 (BundleSampleV2)
+// Module 8425 (BundleSampleV2)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import utils from "utils" /* 1971 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1974 */;
-import FastImageDefault from "FastImage" /* 5899 */;
-import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 8262 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8273 */;
-import NameplateDummyUserPreview from "NameplateDummyUserPreview" /* 8280 */;
+import FastImageDefault from "FastImage" /* 6065 */;
+import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 8427 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8438 */;
+import NameplateDummyUserPreview from "NameplateDummyUserPreview" /* 8445 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -144,7 +144,7 @@ function BundleSampleV2Composed(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: c3, StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const BUNDLE_PREVIEW_CONFIG = fn(8261).BUNDLE_PREVIEW_CONFIG;
+const BUNDLE_PREVIEW_CONFIG = fn(8426).BUNDLE_PREVIEW_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let obj = { container: null, bgBleedClip: null, bgMutedWrap: null, bgImage: null, fgClip: null, fgImage: null };

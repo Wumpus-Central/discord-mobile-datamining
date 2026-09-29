@@ -1,7 +1,7 @@
-// === Module 8108: InAppReportsShieldElement ===
+// === Module 8273: InAppReportsShieldElement ===
 
-// Module 8108 (InAppReportsShieldElement)
-import ShieldSpotIllustration from "ShieldSpotIllustration" /* 7872 */;
+// Module 8273 (InAppReportsShieldElement)
+import ShieldSpotIllustration from "ShieldSpotIllustration" /* 8037 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 8945: GuildScheduledEventUtils ===
+// === Module 9110: GuildScheduledEventUtils ===
 
-// Module 8945 (GuildScheduledEventUtils)
+// Module 9110 (GuildScheduledEventUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef4421 from "module_4421" /* 4421 */;
 import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2051 */;

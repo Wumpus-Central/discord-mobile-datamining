@@ -1,11 +1,11 @@
-// === Module 6761: searchSounds ===
+// === Module 6927: searchSounds ===
 
-// Module 6761 (searchSounds)
+// Module 6927 (searchSounds)
 import debounceDefault from "debounce" /* 551 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4483 */;
-import SoundboardUtils from "SoundboardUtils" /* 6762 */;
-import EmojiStore from "EmojiStore" /* 5771 */;
+import SoundboardUtils from "SoundboardUtils" /* 6928 */;
+import EmojiStore from "EmojiStore" /* 5938 */;
 
 require = fn;
 function trackSearchStart(location_stack, channel_id) {

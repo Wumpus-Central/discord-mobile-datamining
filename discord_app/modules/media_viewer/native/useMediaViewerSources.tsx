@@ -1,6 +1,6 @@
-// === Module 7708: useMediaViewerSources ===
+// === Module 7873: useMediaViewerSources ===
 
-// Module 7708 (useMediaViewerSources)
+// Module 7873 (useMediaViewerSources)
 import ZustandStore from "ZustandStore" /* 4705 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 7539: ChangeLogActionCreators ===
+// === Module 7704: ChangeLogActionCreators ===
 
-// Module 7539 (ChangeLogActionCreators)
+// Module 7704 (ChangeLogActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import UserSettings from "UserSettings" /* 2021 */;

@@ -1,6 +1,6 @@
-// === Module 13274: PremiumRewardsOrbsExperiment ===
+// === Module 13444: PremiumRewardsOrbsExperiment ===
 
-// Module 13274 (PremiumRewardsOrbsExperiment)
+// Module 13444 (PremiumRewardsOrbsExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1436 */;
 
 const PremiumRewardsOrbsTreatment = { CONTROL: "control", TREATMENT_A: "treatment_a", TREATMENT_B: "treatment_b", TREATMENT_C: "treatment_c", TREATMENT_D: "treatment_d" };

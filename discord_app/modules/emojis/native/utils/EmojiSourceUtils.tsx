@@ -1,6 +1,6 @@
-// === Module 15710: EmojiSourceUtils ===
+// === Module 15885: EmojiSourceUtils ===
 
-// Module 15710 (EmojiSourceUtils)
+// Module 15885 (EmojiSourceUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

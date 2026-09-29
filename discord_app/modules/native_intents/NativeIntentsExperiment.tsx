@@ -1,6 +1,6 @@
-// === Module 17687: NativeIntentsExperiment ===
+// === Module 17876: NativeIntentsExperiment ===
 
-// Module 17687 (NativeIntentsExperiment)
+// Module 17876 (NativeIntentsExperiment)
 import createExperiment from "module_4748" /* 4748 */;
 import size from "module_2" /* 2 */;
 

@@ -1,16 +1,16 @@
-// === Module 9808: EmojiPickerCategories ===
+// === Module 9975: EmojiPickerCategories ===
 
-// Module 9808 (EmojiPickerCategories)
+// Module 9975 (EmojiPickerCategories)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import HapticUtils from "HapticUtils" /* 4801 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4802 */;
-import EmojiPickerCategoriesItemDefault from "EmojiPickerCategoriesItem" /* 9809 */;
+import EmojiPickerCategoriesItemDefault from "EmojiPickerCategoriesItem" /* 9976 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const EmojiCategoryTypes = fn(5775).EmojiCategoryTypes;
+const EmojiCategoryTypes = fn(5942).EmojiCategoryTypes;
 const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsPages: metroRequire, CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT } = Constants);
 let ExpressionPickerViewType = fn(1218).ExpressionPickerViewType;

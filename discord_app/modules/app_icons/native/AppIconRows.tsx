@@ -1,12 +1,12 @@
-// === Module 15078: AppIconRows ===
+// === Module 15253: AppIconRows ===
 
-// Module 15078 (AppIconRows)
+// Module 15253 (AppIconRows)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1970 */;
-import AppIconTypes from "AppIconTypes" /* 8625 */;
-import AppIconUtils from "AppIconUtils" /* 12995 */;
-import AppIconRowDefault from "AppIconRow" /* 15079 */;
+import AppIconTypes from "AppIconTypes" /* 8790 */;
+import AppIconUtils from "AppIconUtils" /* 13165 */;
+import AppIconRowDefault from "AppIconRow" /* 15254 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -42,7 +42,7 @@ function BackwardsCompatibleAppIconRows(arg0) {
       obj.onLongPress = onLongPress;
       return createElement(AppIconRowDefault, {});
     });
-    obj.children = closure_8(merged(5999).TableRowGroup, obj2);
+    obj.children = closure_8(merged(6165).TableRowGroup, obj2);
     return closure_8(View, obj);
   }
 }

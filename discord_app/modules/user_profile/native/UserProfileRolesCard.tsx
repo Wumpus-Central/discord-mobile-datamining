@@ -1,13 +1,13 @@
-// === Module 6606: UserProfileRolesCard ===
+// === Module 6772: UserProfileRolesCard ===
 
-// Module 6606 (UserProfileRolesCard)
+// Module 6772 (UserProfileRolesCard)
 import nativeDefault from "native" /* 576 */;
 import ToastUtils from "ToastUtils" /* 4527 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import ClipboardUtils from "ClipboardUtils" /* 6610 */;
-import VerifiedRoleIconDefault from "VerifiedRoleIcon" /* 6624 */;
-import RoleIconDefault from "RoleIcon" /* 6626 */;
-import UserProfileRoleUtils from "UserProfileRoleUtils" /* 6627 */;
+import ClipboardUtils from "ClipboardUtils" /* 6776 */;
+import VerifiedRoleIconDefault from "VerifiedRoleIcon" /* 6790 */;
+import RoleIconDefault from "RoleIcon" /* 6792 */;
+import UserProfileRoleUtils from "UserProfileRoleUtils" /* 6793 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2108 */;
 import GuildRoleStore from "GuildRoleStore" /* 2102 */;
@@ -178,8 +178,8 @@ export default function UserProfileRolesCard(userId) {
     obj2.style = userId.style;
     const obj3 = { guildId, guildMemberRoleIds: roles };
     obj2.children = closure_9(RolesList, obj3);
-    tmp4 = closure_9(guildId(6628), obj2);
-    const tmp7 = guildId(6628);
+    tmp4 = closure_9(guildId(6794), obj2);
+    const tmp7 = guildId(6794);
   }
   return tmp4;
 };

@@ -1,14 +1,14 @@
-// === Module 16562: FavoritesEmptyState ===
+// === Module 16751: FavoritesEmptyState ===
 
-// Module 16562 (FavoritesEmptyState)
+// Module 16751 (FavoritesEmptyState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3361 from "module_3361" /* 3361 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import Stack_Stack from "Stack/Stack" /* 5279 */;
-import components_Button_Button from "components/Button/Button" /* 5281 */;
-import FavoritesSpotIllustration from "FavoritesSpotIllustration" /* 9694 */;
-import PlusMediumIcon from "PlusMediumIcon" /* 12269 */;
+import Stack_Stack from "Stack/Stack" /* 5445 */;
+import components_Button_Button from "components/Button/Button" /* 5447 */;
+import FavoritesSpotIllustration from "FavoritesSpotIllustration" /* 9861 */;
+import PlusMediumIcon from "PlusMediumIcon" /* 12440 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

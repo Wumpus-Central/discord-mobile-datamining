@@ -1,16 +1,16 @@
-// === Module 16285: useInlineFrameOAuthNavigation ===
+// === Module 16465: useInlineFrameOAuthNavigation ===
 
-// Module 16285 (useInlineFrameOAuthNavigation)
+// Module 16465 (useInlineFrameOAuthNavigation)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5039 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 8499 */;
+import FramesStore from "FramesStore" /* 8664 */;
 
 require = fn;
-const isLaunched = fn(8500).isLaunched;
+const isLaunched = fn(8665).isLaunched;
 const ComponentActions = fn(1074).ComponentActions;
-let closure_8 = fn(8507).OAUTH2_AUTHORIZE_MODAL_KEY;
+let closure_8 = fn(8672).OAUTH2_AUTHORIZE_MODAL_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/useInlineFrameOAuthNavigation.tsx");
 

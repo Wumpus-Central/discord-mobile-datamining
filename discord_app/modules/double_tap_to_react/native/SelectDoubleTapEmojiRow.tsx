@@ -1,17 +1,17 @@
-// === Module 11871: SelectDoubleTapEmojiRow ===
+// === Module 12042: SelectDoubleTapEmojiRow ===
 
-// Module 11871 (SelectDoubleTapEmojiRow)
+// Module 12042 (SelectDoubleTapEmojiRow)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import EmojiDefault from "Emoji" /* 6551 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7182 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10583 */;
+import EmojiDefault from "Emoji" /* 6717 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7347 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10752 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4825 */;
 
 require = fn;
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(6572).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(6738).ACTION_SHEET_MAX_WIDTH;
 const EmojiConstants = fn(1375);
 ({ EMOJI_URL_BASE_SIZE: closure_7, EmojiIntention: closure_8 } = EmojiConstants);
 const jsxProd = fn(21);
@@ -100,7 +100,7 @@ let closure_13 = noop.memo((emoji) => {
   obj4.src = url;
   obj3.children = closure_9(EmojiDefault, obj4);
   obj2.children = closure_9(View, obj3);
-  return closure_9(emoji(5435).PressableOpacity, obj2);
+  return closure_9(emoji(5602).PressableOpacity, obj2);
 });
 const obj11 = { color: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT };
 size = fn(2);

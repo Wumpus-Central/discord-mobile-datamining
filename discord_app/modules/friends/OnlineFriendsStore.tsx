@@ -1,6 +1,6 @@
-// === Module 13246: OnlineFriendsStore ===
+// === Module 13416: OnlineFriendsStore ===
 
-// Module 13246 (OnlineFriendsStore)
+// Module 13416 (OnlineFriendsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import SetUtils from "SetUtils" /* 2062 */;

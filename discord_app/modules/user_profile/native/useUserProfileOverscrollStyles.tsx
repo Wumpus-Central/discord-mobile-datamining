@@ -1,6 +1,6 @@
-// === Module 7689: useUserProfileOverscrollStyles ===
+// === Module 7854: useUserProfileOverscrollStyles ===
 
-// Module 7689 (useUserProfileOverscrollStyles)
+// Module 7854 (useUserProfileOverscrollStyles)
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

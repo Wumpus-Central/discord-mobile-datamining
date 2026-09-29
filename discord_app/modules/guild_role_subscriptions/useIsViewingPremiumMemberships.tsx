@@ -1,6 +1,6 @@
-// === Module 12292: useIsViewingPremiumMemberships ===
+// === Module 12463: useIsViewingPremiumMemberships ===
 
-// Module 12292 (useIsViewingPremiumMemberships)
+// Module 12463 (useIsViewingPremiumMemberships)
 import Constants from "Constants" /* 1074 */;
 import ChannelConstants from "ChannelConstants" /* 2052 */;
 import _mod4666 from "module_4666" /* 4666 */;

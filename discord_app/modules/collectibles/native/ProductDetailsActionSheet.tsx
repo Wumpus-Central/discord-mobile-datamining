@@ -1,17 +1,17 @@
-// === Module 7622: ProductDetailsActionSheet ===
+// === Module 7787: ProductDetailsActionSheet ===
 
-// Module 7622 (ProductDetailsActionSheet)
+// Module 7787 (ProductDetailsActionSheet)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6571 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 6973 */;
-import ShopStandalonePdpMobileExperiment from "ShopStandalonePdpMobileExperiment" /* 7619 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7624 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8229 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6737 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7139 */;
+import ShopStandalonePdpMobileExperiment from "ShopStandalonePdpMobileExperiment" /* 7784 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7789 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8394 */;
 import _slicedToArray from "module_32" /* 32 */;
 import "module_19";
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 6962 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7128 */;
 
 require = fn;
 function PreviewProfileTrigger(handlePreviewPress) {
@@ -52,7 +52,7 @@ function PreviewProfileTrigger(handlePreviewPress) {
   const intl = tmp2(1115).intl;
   obj3.accessibilityLabel = intl.string(handlePreviewPress(1115).t["3Qcx6K"]);
   const obj2 = handlePreviewPress(4685);
-  obj3.children = closure_13(handlePreviewPress(6389).EyeIcon, { size: "md", color: onTrackPress(576).colors.INTERACTIVE_ICON_DEFAULT });
+  obj3.children = closure_13(handlePreviewPress(6555).EyeIcon, { size: "md", color: onTrackPress(576).colors.INTERACTIVE_ICON_DEFAULT });
   return closure_13(closure_7, obj3);
 }
 function ProductDetailsActionSheetInner(arg0) {
@@ -86,14 +86,14 @@ function ManagedProductDetailsActionSheetInner(skuId) {
   skuId = skuId.skuId;
   const initialVariantIndex = skuId.initialVariantIndex;
   ({ analyticsLocations, stageCollectibleChangeForEditProfile } = skuId);
-  const collectiblesShopProduct = skuId(8339).useCollectiblesShopProduct(skuId, { needsCategory: false, seedCategoryStore: true });
+  const collectiblesShopProduct = skuId(8504).useCollectiblesShopProduct(skuId, { needsCategory: false, seedCategoryStore: true });
   const product = collectiblesShopProduct.product;
   dependencyMap = product;
   ({ state, retry } = collectiblesShopProduct);
-  const obj = skuId(8339);
-  const getOrFetchPurchases = skuId(10198).useGetOrFetchPurchases();
+  const obj = skuId(8504);
+  const getOrFetchPurchases = skuId(10365).useGetOrFetchPurchases();
   ({ hasPreviouslyFetched, fetchPurchasesError } = getOrFetchPurchases);
-  const obj2 = skuId(10198);
+  const obj2 = skuId(10365);
   const ref1 = noop.useRef(null);
   const items = [product, skuId, initialVariantIndex];
   if ("ready" === state) {
@@ -122,22 +122,22 @@ function ManagedProductDetailsActionSheetInner(skuId) {
           ref,
           children: closure_13(closure_19, obj3)
         };
-        return closure_13(tmp(6571).BottomSheet, obj4);
+        return closure_13(tmp(6737).BottomSheet, obj4);
       }
     }
   }
   if ("error" === state) {
-    const obj5 = { Illustration: tmp(7678).NoResults, body: null, children: null };
+    const obj5 = { Illustration: tmp(7843).NoResults, body: null, children: null };
     const intl = tmp(1115).intl;
     obj5.body = intl.string(tmp(1115).t.eAn6z2);
     const obj6 = { text: null, onPress: null };
     const intl2 = tmp(1115).intl;
     obj6.text = intl2.string(tmp(1115).t["+hivLW"]);
     obj6.onPress = retry;
-    obj5.children = closure_13(tmp(5281).Button, obj6);
+    obj5.children = closure_13(tmp(5447).Button, obj6);
     closure_13(tmp(1177).EmptyState, obj5);
   } else {
-    closure_13(initialVariantIndex(12740), {});
+    closure_13(initialVariantIndex(12910), {});
   }
   ref = noop.useRef(null);
 }
@@ -181,7 +181,7 @@ const createStyles = fn(4836);
 let obj = { container: { position: "relative", flex: 1 }, actionButtons: null, previewProfileButton: null, previewProfileButtonLight: null, previewProfileButtonLightPressed: null, previewProfileButtonDark: null, previewProfileButtonDarkPressed: null, previewProfileButtonMidnight: null, badgeWrapper: null };
 const rect = { position: "absolute", top: 0, right: nativeDefault.space.PX_16, zIndex: 2, flexDirection: "row", gap: nativeDefault.space.PX_8 };
 obj.actionButtons = rect;
-let size = { width: fn(5286).MEDIUM_BUTTON_HEIGHT, height: fn(5286).MEDIUM_BUTTON_HEIGHT, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round, borderWidth: 1, borderColor: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT };
+let size = { width: fn(5452).MEDIUM_BUTTON_HEIGHT, height: fn(5452).MEDIUM_BUTTON_HEIGHT, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round, borderWidth: 1, borderColor: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT };
 obj.previewProfileButton = size;
 let obj3 = { backgroundColor: null };
 let native = fn(4540);

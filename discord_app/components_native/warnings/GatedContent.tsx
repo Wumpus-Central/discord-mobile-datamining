@@ -1,8 +1,8 @@
-// === Module 12163: GatedContent ===
+// === Module 12334: GatedContent ===
 
-// Module 12163 (GatedContent)
+// Module 12334 (GatedContent)
 import nativeDefault from "native" /* 576 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 7861 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8026 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

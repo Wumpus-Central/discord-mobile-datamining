@@ -1,9 +1,9 @@
-// === Module 13219: ClipsExperiment ===
+// === Module 13389: ClipsExperiment ===
 
-// Module 13219 (ClipsExperiment)
+// Module 13389 (ClipsExperiment)
 import initialize from "initialize" /* 504 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4488 */;
-import isClientClipsCapableDefault from "isClientClipsCapable" /* 13220 */;
+import isClientClipsCapableDefault from "isClientClipsCapable" /* 13390 */;
 import MediaEngineStore from "MediaEngineStore" /* 1993 */;
 import UserStore from "UserStore" /* 1372 */;
 

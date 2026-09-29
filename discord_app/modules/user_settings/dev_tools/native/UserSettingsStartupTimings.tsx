@@ -1,14 +1,14 @@
-// === Module 15120: UserSettingsStartupTimings ===
+// === Module 15295: UserSettingsStartupTimings ===
 
-// Module 15120 (UserSettingsStartupTimings)
+// Module 15295 (UserSettingsStartupTimings)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import Stack_Stack from "Stack/Stack" /* 5279 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 5916 */;
-import TableRow from "TableRow" /* 5917 */;
-import TableRowGroup from "TableRowGroup" /* 5999 */;
-import serializeAppStartLogsDefault from "serializeAppStartLogs" /* 9653 */;
-import ShareIcon from "ShareIcon" /* 12470 */;
+import Stack_Stack from "Stack/Stack" /* 5445 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 6082 */;
+import TableRow from "TableRow" /* 6083 */;
+import TableRowGroup from "TableRowGroup" /* 6165 */;
+import serializeAppStartLogsDefault from "serializeAppStartLogs" /* 9820 */;
+import ShareIcon from "ShareIcon" /* 12640 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -105,9 +105,9 @@ export default function UserSettingsStartupTimings() {
           return obj6;
         } else {
           closure_128_0 = value;
-          closure_128_1 = tmp5(9653)(closure_128_0);
+          closure_128_1 = tmp5(9820)(closure_128_0);
           const obj7 = { message: closure_128_1 };
-          tmp2(7809).showShareActionSheet(obj7, "Startup Timing");
+          tmp2(7974).showShareActionSheet(obj7, "Startup Timing");
           c3 = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -257,6 +257,6 @@ export default function UserSettingsStartupTimings() {
   obj5.renderItem = function renderItem(children) {
     return closure_8(lastTrackedAppUiViewed2Properties, { children: children.item });
   };
-  obj4.children = closure_8(tmp10(8179).FlashList, obj5);
+  obj4.children = closure_8(tmp10(8344).FlashList, obj5);
   return closure_8(checked, obj4);
 };

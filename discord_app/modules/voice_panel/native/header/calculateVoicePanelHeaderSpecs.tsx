@@ -1,6 +1,6 @@
-// === Module 11759: calculateVoicePanelHeaderSpecs ===
+// === Module 11928: calculateVoicePanelHeaderSpecs ===
 
-// Module 11759 (calculateVoicePanelHeaderSpecs)
+// Module 11928 (calculateVoicePanelHeaderSpecs)
 import size from "module_2" /* 2 */;
 
 const fn = function t(top, token) {

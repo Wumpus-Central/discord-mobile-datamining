@@ -1,10 +1,10 @@
-// === Module 9445: UserSettingsSoundboardVolume ===
+// === Module 9612: UserSettingsSoundboardVolume ===
 
-// Module 9445 (UserSettingsSoundboardVolume)
+// Module 9612 (UserSettingsSoundboardVolume)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2111 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6583 */;
-import SoundboardActionCreators from "SoundboardActionCreators" /* 6756 */;
-import VolumeSliderDefault from "VolumeSlider" /* 9442 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6749 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 6922 */;
+import VolumeSliderDefault from "VolumeSlider" /* 9609 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting("modules/user_settings/voice/native/Us
 
 export default function SoundboardVolume() {
   const tmp = closure_8();
-  const amplitudinalSoundboardVolume = analyticsLocations(6762).getAmplitudinalSoundboardVolume();
+  const amplitudinalSoundboardVolume = analyticsLocations(6928).getAmplitudinalSoundboardVolume();
   analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   const obj2 = { title: null, hasIcons: false, children: null };
   const intl = analyticsLocations(1115).intl;
@@ -37,7 +37,7 @@ export default function SoundboardVolume() {
     },
     accessibilityLabel: null
   };
-  const obj = analyticsLocations(6762);
+  const obj = analyticsLocations(6928);
   const intl3 = analyticsLocations(1115).intl;
   obj6.accessibilityLabel = intl3.string(analyticsLocations(1115).t.kbFsAD);
   obj5.children = closure_5(VolumeSliderDefault, obj6);
@@ -50,6 +50,6 @@ export default function SoundboardVolume() {
   items[1] = closure_5(analyticsLocations(4832).Text, obj7);
   obj4.children = items;
   obj3.subLabel = closure_7(closure_6, obj4);
-  obj2.children = closure_5(analyticsLocations(5917).TableRow, obj3);
-  return closure_5(analyticsLocations(9434).UserSettingsTableRowGroup, obj2);
+  obj2.children = closure_5(analyticsLocations(6083).TableRow, obj3);
+  return closure_5(analyticsLocations(9601).UserSettingsTableRowGroup, obj2);
 };

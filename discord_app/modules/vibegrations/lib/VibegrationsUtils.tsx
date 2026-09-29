@@ -1,8 +1,8 @@
-// === Module 5370: VibegrationsUtils ===
+// === Module 5536: VibegrationsUtils ===
 
-// Module 5370 (VibegrationsUtils)
-import VibegrationsTypes from "VibegrationsTypes" /* 5371 */;
-import VibegrationsGuildExperiment from "VibegrationsGuildExperiment" /* 5372 */;
+// Module 5536 (VibegrationsUtils)
+import VibegrationsTypes from "VibegrationsTypes" /* 5537 */;
+import VibegrationsGuildExperiment from "VibegrationsGuildExperiment" /* 5538 */;
 import GuildChannelStore_mod from "GuildChannelStore" /* 4467 */;
 import GuildStore from "GuildStore" /* 2067 */;
 import PermissionStore from "PermissionStore" /* 4469 */;
@@ -25,8 +25,8 @@ function vibegrationsAppIdFromTopic(topic) {
   }
   return null;
 }
-function vibegrationsTextChannelsIn(guildId) {
-  return GuildChannelStore.getChannels(guildId)[React2].filter((channel) => channel.channel.type === constants.GUILD_TEXT);
+function vibegrationsTextChannelsIn(guild_id) {
+  return GuildChannelStore.getChannels(guild_id)[React2].filter((channel) => channel.channel.type === constants.GUILD_TEXT);
 }
 let GuildChannelStore = GuildChannelStore_mod;
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c2, GUILD_VOCAL_CHANNELS_KEY: c3 } = GuildChannelStore);
@@ -91,7 +91,7 @@ export const isVibegrationsProjectInGuild = function isVibegrationsProjectInGuil
   return tmp;
 };
 export { vibegrationsTextChannelsIn };
-export const findVibegrationChannelId = function findVibegrationChannelId(guildId, applicationId) {
+export const findVibegrationChannelId = function findVibegrationChannelId(guild_id, application_id) {
   for (const item10009 of tmp) {
     let channel = item10009.channel;
     if (vibegrationsAppIdFromTopic(channel.topic) === arg1) {

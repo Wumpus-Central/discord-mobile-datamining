@@ -1,17 +1,17 @@
-// === Module 10498: GiftingBadgeLevelUpProgress ===
+// === Module 10667: GiftingBadgeLevelUpProgress ===
 
-// Module 10498 (GiftingBadgeLevelUpProgress)
+// Module 10667 (GiftingBadgeLevelUpProgress)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef2583 from "module_2583" /* 2583 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10208 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10214 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10375 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10381 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(7637).getSingleRequirementThreshold;
+let closure_4 = fn(7802).getSingleRequirementThreshold;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4836);

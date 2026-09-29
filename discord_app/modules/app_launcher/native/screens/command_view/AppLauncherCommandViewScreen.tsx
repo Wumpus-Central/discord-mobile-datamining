@@ -1,6 +1,6 @@
-// === Module 11635: AppLauncherCommandViewScreen ===
+// === Module 11804: AppLauncherCommandViewScreen ===
 
-// Module 11635 (AppLauncherCommandViewScreen)
+// Module 11804 (AppLauncherCommandViewScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
@@ -11,26 +11,26 @@ import Text_Text from "Text/Text" /* 4832 */;
 import timing from "timing" /* 4837 */;
 import timingPresets from "timingPresets" /* 4840 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5016 */;
-import BaseTextButton from "BaseTextButton" /* 5282 */;
-import Upload from "Upload" /* 5440 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 5450 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 6941 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 6943 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 8590 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 8712 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10098 */;
-import showMediaKeyboardActionSheet from "showMediaKeyboardActionSheet" /* 10099 */;
-import AppLauncherContext from "AppLauncherContext" /* 10785 */;
-import ApplicationCommandOptionValueParser from "ApplicationCommandOptionValueParser" /* 11475 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11533 */;
-import _modDef11596 from "module_11596" /* 11596 */;
-import _modDef11597 from "module_11597" /* 11597 */;
-import AppLauncherCommandViewHeader from "AppLauncherCommandViewHeader" /* 11636 */;
-import ApplicationCommandValidationUtils from "ApplicationCommandValidationUtils" /* 11637 */;
-import application_commands_ApplicationCommandValidationUtils from "application_commands/ApplicationCommandValidationUtils" /* 11639 */;
-import CommandOptionViewDefault from "CommandOptionView" /* 11642 */;
-import _modDef11675 from "module_11675" /* 11675 */;
-import _modDef11676 from "module_11676" /* 11676 */;
+import BaseTextButton from "BaseTextButton" /* 5448 */;
+import Upload from "Upload" /* 5607 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 5617 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7107 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7109 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 8755 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 8877 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10265 */;
+import showMediaKeyboardActionSheet from "showMediaKeyboardActionSheet" /* 10266 */;
+import AppLauncherContext from "AppLauncherContext" /* 10954 */;
+import ApplicationCommandOptionValueParser from "ApplicationCommandOptionValueParser" /* 11644 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11702 */;
+import _modDef11765 from "module_11765" /* 11765 */;
+import _modDef11766 from "module_11766" /* 11766 */;
+import AppLauncherCommandViewHeader from "AppLauncherCommandViewHeader" /* 11805 */;
+import ApplicationCommandValidationUtils from "ApplicationCommandValidationUtils" /* 11806 */;
+import application_commands_ApplicationCommandValidationUtils from "application_commands/ApplicationCommandValidationUtils" /* 11808 */;
+import CommandOptionViewDefault from "CommandOptionView" /* 11811 */;
+import _modDef11844 from "module_11844" /* 11844 */;
+import _modDef11845 from "module_11845" /* 11845 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -1262,7 +1262,7 @@ function NotFoundState(onPress) {
   const tmp = closure_23();
   const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(AppLauncherTypes.AppLauncherEmptyStateType.COMMAND_NOT_FOUND);
   const obj2 = { style: tmp.emptyStateContainer, children: null };
-  const obj3 = { style: tmp.emptyState, lightSource: _modDef11675, darkSource: _modDef11676, title: null, body: null, children: null };
+  const obj3 = { style: tmp.emptyState, lightSource: _modDef11844, darkSource: _modDef11845, title: null, body: null, children: null };
   const intl = util.intl;
   obj3.title = intl.string(util.t["pX/qb9"]);
   const intl2 = util.intl;
@@ -1283,7 +1283,7 @@ function NoPermsState(command) {
   const items = [closure_1_20(Text_Text.Text, { variant: "heading-lg/bold", color: "text-default", children: command.displayName }), closure_1_20(Text_Text.Text, { variant: "heading-sm/medium", color: "text-default", children: command.displayDescription })];
   obj3.children = items;
   const items1 = [__initData(React5, obj3), ];
-  const obj6 = { style: tmp.emptyState, lightSource: _modDef11596, darkSource: _modDef11597, title: null, body: null, children: null };
+  const obj6 = { style: tmp.emptyState, lightSource: _modDef11765, darkSource: _modDef11766, title: null, body: null, children: null };
   const intl = util.intl;
   obj6.title = intl.string(util.t.TzufcR);
   const intl2 = util.intl;
@@ -1298,7 +1298,7 @@ function NoPermsState(command) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ActivityIndicator: closure_8, ScrollView: closure_9 } = get_ActivityIndicator);
-const ApplicationCommandIndexStore = fn(8591);
+const ApplicationCommandIndexStore = fn(8756);
 ({ useContextIndexState: closure_11, useUserIndexState: closure_12 } = ApplicationCommandIndexStore);
 const AppLauncherNativeConstants = fn(1484);
 ({ AppLauncherOptionAutoFocusType: closure_14, useAppLauncherNavigation: closure_15, DEFAULT_CONTENT_PADDING } = AppLauncherNativeConstants);
@@ -1310,7 +1310,7 @@ const jsxProd = fn(21);
 const createStyles = fn(4836);
 let obj2 = { container: { height: "100%", backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND }, optionsContainer: null, requiredOptionsContainer: null, optionalOptionsContainer: null, optionalOptionsChild: null, optionalOptionsFirstChild: null, optionalOptionsLastChild: null, footerContainer: null, submitButton: null, optionalOptionsSectionTitle: null, optionalOptionList: null, noRequiredOptionsCalloutContainer: null, noOptionCalloutContainer: null, emptyState: null, emptyStateContainer: null, failureStateButtonWrapper: null, failureStateButtonPill: null, commandNameContainer: null, linearGradient: null };
 let obj3 = { height: "100%", backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
-obj2.optionsContainer = { paddingTop: fn(11636).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4, paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingBottom: DEFAULT_CONTENT_PADDING, backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
+obj2.optionsContainer = { paddingTop: fn(11805).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4, paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingBottom: DEFAULT_CONTENT_PADDING, backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
 obj2.requiredOptionsContainer = { marginTop: 24, gap: 24 };
 obj2.optionalOptionsContainer = {};
 obj2.optionalOptionsChild = { marginBottom: 24 };
@@ -1320,15 +1320,15 @@ obj2.footerContainer = { position: "absolute", left: 0, bottom: 0, right: 0, pad
 obj2.submitButton = { flex: 1, overflow: "hidden" };
 obj2.optionalOptionsSectionTitle = { marginTop: 36 };
 obj2.optionalOptionList = { marginTop: 12 };
-let obj4 = { paddingTop: fn(11636).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4, paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingBottom: DEFAULT_CONTENT_PADDING, backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
+let obj4 = { paddingTop: fn(11805).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4, paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingBottom: DEFAULT_CONTENT_PADDING, backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
 obj2.noRequiredOptionsCalloutContainer = { paddingVertical: 16, paddingHorizontal: 12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginTop: 24, borderRadius: nativeDefault.radii.lg };
 let obj5 = { paddingVertical: 16, paddingHorizontal: 12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginTop: 24, borderRadius: nativeDefault.radii.lg };
 obj2.noOptionCalloutContainer = { padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginTop: 24, borderRadius: nativeDefault.radii.lg };
 obj2.emptyState = { backgroundColor: "transparent", justifyContent: "flex-start", paddingTop: 30 };
 let obj6 = { padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginTop: 24, borderRadius: nativeDefault.radii.lg };
-obj2.emptyStateContainer = { paddingTop: fn(11636).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4, flex: 1 };
+obj2.emptyStateContainer = { paddingTop: fn(11805).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4, flex: 1 };
 obj2.failureStateButtonWrapper = { marginTop: 24, alignSelf: "center" };
-let obj7 = { paddingTop: fn(11636).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4, flex: 1 };
+let obj7 = { paddingTop: fn(11805).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4, flex: 1 };
 obj2.failureStateButtonPill = { borderRadius: nativeDefault.radii.xxl, paddingHorizontal: 12, paddingVertical: 8 };
 obj2.commandNameContainer = { alignItems: "center", justifyContent: "center", textAlign: "center" };
 let obj8 = { borderRadius: nativeDefault.radii.xxl, paddingHorizontal: 12, paddingVertical: 8 };

@@ -1,9 +1,9 @@
-// === Module 9410: getStreamSettingsForPreset ===
+// === Module 9577: getStreamSettingsForPreset ===
 
-// Module 9410 (getStreamSettingsForPreset)
+// Module 9577 (getStreamSettingsForPreset)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import getFrontierTuningConfigIfEligibleDefault from "getFrontierTuningConfigIfEligible" /* 4974 */;
-import canStreamWithSettingsDefault from "canStreamWithSettings" /* 9411 */;
+import canStreamWithSettingsDefault from "canStreamWithSettings" /* 9578 */;
 import StreamSettingsConstants from "StreamSettingsConstants" /* 4883 */;
 import size from "module_2" /* 2 */;
 

@@ -1,11 +1,11 @@
-// === Module 16751: SlayerStorefrontTimeUtils ===
+// === Module 10386: SlayerStorefrontTimeUtils ===
 
-// Module 16751 (SlayerStorefrontTimeUtils)
+// Module 10386 (SlayerStorefrontTimeUtils)
 import DurationsDefault from "Durations" /* 1091 */;
 import util from "util" /* 1115 */;
 import _modDef3585 from "module_3585" /* 3585 */;
 import _modDef4421 from "module_4421" /* 4421 */;
-import useIntervalDefault from "useInterval" /* 6865 */;
+import useIntervalDefault from "useInterval" /* 7031 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -60,11 +60,26 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/utils/SlayerStorefrontTimeUtils.tsx");
 
 export { getLimitedOfferTimeLeft };
+export const useIsLimitedOfferExpired = function useIsLimitedOfferExpired(arg0) {
+  let tmp = null != arg0;
+  if (tmp) {
+    tmp = null == getLimitedOfferTimeLeft(arg0);
+  }
+  let SECOND = null;
+  if (null != arg0) {
+    SECOND = null;
+    if (!tmp) {
+      SECOND = DurationsDefault.Millis.SECOND;
+    }
+  }
+  useIntervalDefault(_slicedToArray(noop.useReducer((arg0) => arg0 + 1, 0), 2)[1], SECOND);
+  return tmp;
+};
 export { formatLimitedOfferTimeLeft };
 export const useTickingFormattedLimitedOfferTimeLeft = function useTickingFormattedLimitedOfferTimeLeft(endDate) {
   closure_0 = endDate;
-  let flag = arg1;
-  if (arg1 === undefined) {
+  let flag = enabled;
+  if (enabled === undefined) {
     flag = true;
   }
   const tmp = _slicedToArray(noop.useState(() => formatLimitedOfferTimeLeft(closure_0)), 2);

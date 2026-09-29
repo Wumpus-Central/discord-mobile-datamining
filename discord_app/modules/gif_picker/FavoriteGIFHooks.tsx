@@ -1,8 +1,8 @@
-// === Module 9831: FavoriteGIFHooks ===
+// === Module 9998: FavoriteGIFHooks ===
 
-// Module 9831 (FavoriteGIFHooks)
+// Module 9998 (FavoriteGIFHooks)
 import _modDef12 from "module_12" /* 12 */;
-import FrecencyUserSettingsHooks from "FrecencyUserSettingsHooks" /* 9832 */;
+import FrecencyUserSettingsHooks from "FrecencyUserSettingsHooks" /* 9999 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

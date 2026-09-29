@@ -1,7 +1,7 @@
-// === Module 11883: useMentionAnchor ===
+// === Module 12054: useMentionAnchor ===
 
-// Module 11883 (useMentionAnchor)
-import autocompleter_AutocompleteUtils from "autocompleter/AutocompleteUtils" /* 9725 */;
+// Module 12054 (useMentionAnchor)
+import autocompleter_AutocompleteUtils from "autocompleter/AutocompleteUtils" /* 9892 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

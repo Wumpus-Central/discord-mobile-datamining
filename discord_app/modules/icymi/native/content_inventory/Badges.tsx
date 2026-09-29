@@ -1,20 +1,20 @@
-// === Module 12582: Badges ===
+// === Module 12752: Badges ===
 
-// Module 12582 (Badges)
+// Module 12752 (Badges)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import utils from "utils" /* 7592 */;
-import TrophyIcon from "TrophyIcon" /* 8173 */;
-import GameControllerIcon from "GameControllerIcon" /* 8535 */;
-import FireIcon from "FireIcon" /* 9217 */;
-import RetryIcon from "RetryIcon" /* 9640 */;
-import TimerIcon from "TimerIcon" /* 11100 */;
-import NewUserIcon from "NewUserIcon" /* 12583 */;
-import FlashIcon from "FlashIcon" /* 12585 */;
-import TrendingType from "TrendingType" /* 12587 */;
+import utils from "utils" /* 7757 */;
+import TrophyIcon from "TrophyIcon" /* 8338 */;
+import GameControllerIcon from "GameControllerIcon" /* 8700 */;
+import FireIcon from "FireIcon" /* 9382 */;
+import RetryIcon from "RetryIcon" /* 9807 */;
+import TimerIcon from "TimerIcon" /* 11269 */;
+import NewUserIcon from "NewUserIcon" /* 12753 */;
+import FlashIcon from "FlashIcon" /* 12755 */;
+import TrendingType from "TrendingType" /* 12757 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2112 */;
 

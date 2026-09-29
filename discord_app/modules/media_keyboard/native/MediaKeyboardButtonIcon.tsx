@@ -1,6 +1,6 @@
-// === Module 11722: MediaKeyboardButtonIcon ===
+// === Module 11891: MediaKeyboardButtonIcon ===
 
-// Module 11722 (MediaKeyboardButtonIcon)
+// Module 11891 (MediaKeyboardButtonIcon)
 import KeyboardTypes from "KeyboardTypes" /* 1611 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4566 */;
 import useKeyboardTypeDefault from "useKeyboardType" /* 4703 */;

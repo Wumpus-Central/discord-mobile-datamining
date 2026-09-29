@@ -1,6 +1,6 @@
-// === Module 16375: VibegrationsSubagentMarks ===
+// === Module 16555: VibegrationsSubagentMarks ===
 
-// Module 16375 (VibegrationsSubagentMarks)
+// Module 16555 (VibegrationsSubagentMarks)
 import util from "util" /* 1115 */;
 import _modDef3715 from "module_3715" /* 3715 */;
 import size from "module_2" /* 2 */;

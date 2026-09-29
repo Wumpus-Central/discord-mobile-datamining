@@ -1,6 +1,6 @@
-// === Module 7701: GifTag ===
+// === Module 7866: GifTag ===
 
-// Module 7701 (GifTag)
+// Module 7866 (GifTag)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;

@@ -1,6 +1,6 @@
-// === Module 7865: AgeVerificationIncodeMethodSelectScreen ===
+// === Module 8030: AgeVerificationIncodeMethodSelectScreen ===
 
-// Module 7865 (AgeVerificationIncodeMethodSelectScreen)
+// Module 8030 (AgeVerificationIncodeMethodSelectScreen)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -9,8 +9,8 @@ import ThemeStore from "ThemeStore" /* 1182 */;
 const require = globalThis.__r;
 
 const require = fn;
-const VerificationMethod = fn(7860).VerificationMethod;
-let closure_8 = fn(7863).buildIncodeParamsInjection;
+const VerificationMethod = fn(8025).VerificationMethod;
+let closure_8 = fn(8028).buildIncodeParamsInjection;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4836);
@@ -128,14 +128,14 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
   const ModalContent = require("ModalContent").ModalContent;
   let obj2 = { children: null };
   if (tmp2) {
-    const obj3 = { align: "center", justify: "center", spacing: 16, style: tmp5.loadingContainer, children: closure_9(tmp7(5889).ActivityIndicator, { size: "large" }) };
-    obj2.children = closure_9(tmp7(5279).Stack, obj3);
+    const obj3 = { align: "center", justify: "center", spacing: 16, style: tmp5.loadingContainer, children: closure_9(tmp7(6055).ActivityIndicator, { size: "large" }) };
+    obj2.children = closure_9(tmp7(5445).Stack, obj3);
     obj.children = closure_9(ModalContent, obj2);
     let tmp11 = obj;
   } else {
     let obj4 = { align: "stretch", spacing: 24, style: tmp5.container, children: null };
     let obj5 = { align: "center", justify: "center", spacing: 16, children: null };
-    const items1 = [closure_9(tmp7(7872).ShieldSpotIllustration, { height: 100, width: 177 }), ];
+    const items1 = [closure_9(tmp7(8037).ShieldSpotIllustration, { height: 100, width: 177 }), ];
     let obj6 = { align: "center", justify: "center", spacing: 8, children: null };
     let obj7 = { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp5.header, children: null };
     const intl = tmp7(1115).intl;
@@ -146,9 +146,9 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
     obj8.children = intl2.string(trustedOrigin(3039)["5yWXmT"]);
     items2[1] = closure_9(tmp7(4832).Text, obj8);
     obj6.children = items2;
-    items1[1] = closure_10(tmp7(5279).Stack, obj6);
+    items1[1] = closure_10(tmp7(5445).Stack, obj6);
     obj5.children = items1;
-    const items3 = [closure_10(tmp7(5279).Stack, obj5), , ];
+    const items3 = [closure_10(tmp7(5445).Stack, obj5), , ];
     if (tmp6Result) {
       const obj9 = { variant: "text-sm/medium", color: "text-feedback-critical", style: tmp5.header, children: null };
       const intl3 = tmp7(1115).intl;
@@ -165,7 +165,7 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
     obj11.onPress = function onPress() {
       closure_4(VerificationMethod.FACIAL_AGE_ESTIMATION);
     };
-    const items4 = [closure_9(tmp7(5917).TableRow, obj11), ];
+    const items4 = [closure_9(tmp7(6083).TableRow, obj11), ];
     const obj12 = { arrow: true, label: null, subLabel: null, onPress: null };
     const intl6 = tmp7(1115).intl;
     obj12.label = intl6.string(trustedOrigin(3039)["NeVlw/"]);
@@ -174,11 +174,11 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
     obj12.onPress = function onPress() {
       closure_4(VerificationMethod.ID_VERIFICATION);
     };
-    items4[1] = closure_9(tmp7(5917).TableRow, obj12);
+    items4[1] = closure_9(tmp7(6083).TableRow, obj12);
     obj10.children = items4;
-    items3[2] = closure_10(tmp7(5999).TableRowGroup, obj10);
+    items3[2] = closure_10(tmp7(6165).TableRowGroup, obj10);
     obj4.children = items3;
-    obj2.children = closure_10(tmp7(5279).Stack, obj4);
+    obj2.children = closure_10(tmp7(5445).Stack, obj4);
     obj.children = closure_9(ModalContent, obj2);
     tmp11 = obj;
   }

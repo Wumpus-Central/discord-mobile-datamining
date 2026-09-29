@@ -1,25 +1,25 @@
-// === Module 14651: QuestBottomSheet ===
+// === Module 14826: QuestBottomSheet ===
 
-// Module 14651 (QuestBottomSheet)
+// Module 14826 (QuestBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import QuestTypes from "QuestTypes" /* 5759 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6571 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 7135 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7137 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7141 */;
-import WarningIcon from "WarningIcon" /* 8048 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 10681 */;
-import QuestActionCreators from "QuestActionCreators" /* 10683 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 10719 */;
-import QuestHooks from "QuestHooks" /* 14620 */;
-import QuestBottomSheetHeaderDefault from "QuestBottomSheetHeader" /* 14652 */;
-import QuestBottomSheetFooterDefault from "QuestBottomSheetFooter" /* 14653 */;
-import QuestBottomSheetProgressCard from "QuestBottomSheetProgressCard" /* 14689 */;
+import QuestTypes from "QuestTypes" /* 5926 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6737 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 7300 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7302 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7306 */;
+import WarningIcon from "WarningIcon" /* 8213 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 10850 */;
+import QuestActionCreators from "QuestActionCreators" /* 10852 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 10888 */;
+import QuestHooks from "QuestHooks" /* 14795 */;
+import QuestBottomSheetHeaderDefault from "QuestBottomSheetHeader" /* 14827 */;
+import QuestBottomSheetFooterDefault from "QuestBottomSheetFooter" /* 14828 */;
+import QuestBottomSheetProgressCard from "QuestBottomSheetProgressCard" /* 14864 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 7116 */;
+import QuestStore from "QuestStore" /* 7281 */;
 
 const require = globalThis.__r;
 
@@ -72,17 +72,17 @@ function QuestBottomSheet(initialStep) {
 function useEnrolledQuestContentProps(quest) {
   quest = quest.quest;
   ({ location: _location, sourceQuestContent: importDefault } = quest);
-  let obj = quest(10749);
+  let obj = quest(10918);
   dependencyMap = obj.useTrackQuestContentClickedWithImpression();
-  _slicedToArray = quest(10711).useQuestImpressionId();
-  let obj2 = quest(10711);
-  const questTaskDetails = quest(10681).useQuestTaskDetails(quest);
-  let obj3 = quest(10681);
-  const isQuestProgressing = quest(10681).useIsQuestProgressing(quest);
-  const obj4 = quest(10681);
-  let tmp6 = _slicedToArray(quest(10681).useTaskPlatformScreen(quest, questTaskDetails), 3);
+  _slicedToArray = quest(10880).useQuestImpressionId();
+  let obj2 = quest(10880);
+  const questTaskDetails = quest(10850).useQuestTaskDetails(quest);
+  let obj3 = quest(10850);
+  const isQuestProgressing = quest(10850).useIsQuestProgressing(quest);
+  const obj4 = quest(10850);
+  let tmp6 = _slicedToArray(quest(10850).useTaskPlatformScreen(quest, questTaskDetails), 3);
   noop = tmp6[2];
-  const obj5 = quest(10681);
+  const obj5 = quest(10850);
   closure_129_0 = quest;
   closure_129_1 = undefined;
   closure_129_2 = undefined;
@@ -105,24 +105,24 @@ function useEnrolledQuestContentProps(quest) {
   };
   const userStatus = quest.userStatus;
   let completedAt;
-  const hasWatchVideoOnMobileTasks = quest(14620).useHasWatchVideoOnMobileTasks(quest.config);
+  const hasWatchVideoOnMobileTasks = quest(14795).useHasWatchVideoOnMobileTasks(quest.config);
   if (userStatus != null) {
     completedAt = userStatus.completedAt;
   }
-  const obj6 = quest(14620);
-  const xboxAndPlaystationAccounts = quest(10681).useConnectedAccounts().xboxAndPlaystationAccounts;
+  const obj6 = quest(14795);
+  const xboxAndPlaystationAccounts = quest(10850).useConnectedAccounts().xboxAndPlaystationAccounts;
   closure_129_1 = xboxAndPlaystationAccounts;
   let items = [quest, xboxAndPlaystationAccounts];
   const memo = noop.useMemo(() => QuestPlatformUtils.supportedConsoles(quest).filter((item) => {
     closure_0 = item;
     return null != sourceQuestContent.find((type) => type.type === closure_0);
   }), items);
-  const tmpResult = quest(10681);
-  const questTaskDetails1 = quest(10681).useQuestTaskDetails(quest);
-  const tmpResult7 = quest(10681);
-  let isQuestProgressing1 = quest(10681).useIsQuestProgressing(quest);
-  const tmpResult8 = quest(10681);
-  const tmp5Result = _slicedToArray(quest(10681).useTaskPlatformScreen(quest, questTaskDetails1), 3);
+  const tmpResult = quest(10850);
+  const questTaskDetails1 = quest(10850).useQuestTaskDetails(quest);
+  const tmpResult7 = quest(10850);
+  let isQuestProgressing1 = quest(10850).useIsQuestProgressing(quest);
+  const tmpResult8 = quest(10850);
+  const tmp5Result = _slicedToArray(quest(10850).useTaskPlatformScreen(quest, questTaskDetails1), 3);
   const first = tmp5Result[0];
   closure_129_2 = first;
   closure_129_3 = tmp14;
@@ -132,7 +132,7 @@ function useEnrolledQuestContentProps(quest) {
     tmp16 = !tmp9;
   }
   if (tmp16) {
-    tmp16 = first === tmp(5759).TaskPlatformScreen.CONSOLE;
+    tmp16 = first === tmp(5926).TaskPlatformScreen.CONSOLE;
   }
   if (!tmp16) {
     tmp16 = quest.initialStep === obj.CONSOLE_CONNECT;
@@ -144,7 +144,7 @@ function useEnrolledQuestContentProps(quest) {
     isQuestProgressing1 = questTaskDetails1.progressSeconds > 0;
   }
   closure_129_7 = isQuestProgressing1;
-  const tmpResult9 = quest(10681);
+  const tmpResult9 = quest(10850);
   if (!tmp21) {
     tmp20(true);
   }
@@ -193,11 +193,11 @@ function useEnrolledQuestContentProps(quest) {
     return items;
   }, items3);
   closure_129_13 = memo3;
-  tmp21 = 0 !== memo.length || null != completedAt || first !== quest(5759).TaskPlatformScreen.CONSOLE || first1;
-  const hasWatchVideoOnMobileTasks1 = quest(14620).useHasWatchVideoOnMobileTasks(quest.config);
+  tmp21 = 0 !== memo.length || null != completedAt || first !== quest(5926).TaskPlatformScreen.CONSOLE || first1;
+  const hasWatchVideoOnMobileTasks1 = quest(14795).useHasWatchVideoOnMobileTasks(quest.config);
   closure_129_14 = hasWatchVideoOnMobileTasks1;
-  const tmpResult10 = quest(14620);
-  const isMobileActivityQuest = quest(14620).useMobileActivityQuest(quest).isMobileActivityQuest;
+  const tmpResult10 = quest(14795);
+  const isMobileActivityQuest = quest(14795).useMobileActivityQuest(quest).isMobileActivityQuest;
   closure_129_15 = isMobileActivityQuest;
   const items4 = [tmp5Result[1], memo3, memo1, memo2, hasWatchVideoOnMobileTasks1, isMobileActivityQuest];
   const memo4 = obj8.useMemo(() => {
@@ -238,11 +238,11 @@ function useEnrolledQuestContentProps(quest) {
   }
   obj7.onNext = onNext;
   items5[1] = obj7;
-  const tmpResult11 = quest(14620);
+  const tmpResult11 = quest(14795);
   closure_130_0 = quest;
   [tmp32, tmp33] = items5;
   const tmp5Result6 = _slicedToArray(items5, 2);
-  const questLogger = quest(7122).getQuestLogger({ quest, location: constants.QUEST_HOME_MOBILE });
+  const questLogger = quest(7287).getQuestLogger({ quest, location: constants.QUEST_HOME_MOBILE });
   closure_130_1 = questLogger;
   const tmp5Result7 = _slicedToArray(useState([]), 2);
   closure_130_2 = tmp36;
@@ -250,7 +250,7 @@ function useEnrolledQuestContentProps(quest) {
   closure_130_3 = tmp38;
   const items6 = [quest, questLogger, tmp5Result8[1], tmp5Result7[1]];
   const obj9 = { quest, location: constants.QUEST_HOME_MOBILE };
-  const tmpResult12 = quest(7122);
+  const tmpResult12 = quest(7287);
   const userStatus2 = quest.userStatus;
   let completedAt1;
   if (userStatus2 != null) {
@@ -269,18 +269,18 @@ function useEnrolledQuestContentProps(quest) {
         const obj2 = { key: "START_DEFIBRILLATOR_ERROR", content: null, icon: null };
         const intl = quest(1115).intl;
         obj2.content = intl.string(quest(1115).t.CKsXk3);
-        obj2.icon = sourceQuestContent(5909);
+        obj2.icon = sourceQuestContent(6075);
         sourceQuestContent(4528).open(obj2);
       }).finally(() => impressionId(false));
     }, items6)
   };
-  const tmp40 = null == completedAt1 && !isQuestProgressing && tmp6[0] === quest(5759).TaskPlatformScreen.CONSOLE && !hasWatchVideoOnMobileTasks;
+  const tmp40 = null == completedAt1 && !isQuestProgressing && tmp6[0] === quest(5926).TaskPlatformScreen.CONSOLE && !hasWatchVideoOnMobileTasks;
   return {
     quest,
     defibrillator: obj10,
     step: tmp32,
     stepActions: tmp33,
-    showMicrophone: null == completedAt1 && !isQuestProgressing && tmp6[0] === quest(5759).TaskPlatformScreen.CONSOLE && !hasWatchVideoOnMobileTasks,
+    showMicrophone: null == completedAt1 && !isQuestProgressing && tmp6[0] === quest(5926).TaskPlatformScreen.CONSOLE && !hasWatchVideoOnMobileTasks,
     handleTaskSelect(arg0) {
       if (arg0 === constants2.CONSOLE) {
         let DESELECT_PLATFORM = AnalyticsTypes.QuestContentCTA.SELECT_CONSOLE_PLATFORM;
@@ -292,16 +292,16 @@ function useEnrolledQuestContentProps(quest) {
         DESELECT_PLATFORM = AnalyticsTypes.QuestContentCTA.DESELECT_PLATFORM;
         tmp4 = require;
       }
-      if (tmp4Result.shouldMigrateToAdAnalyticsInterface(tmp4(7153).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_bottom_sheet")) {
-        const obj = { type: tmp4(7152).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp4(5763).AdCreativeType.QUEST, adCreativeId: quest.id, questContentCTA: DESELECT_PLATFORM, surfaceId: tmp4(5759).QuestContent.QUEST_BOTTOM_SHEET, sourceQuestContent, impressionId };
-        tmp4(7142).captureAdUserAction(obj);
-        const tmp4Result2 = tmp4(7142);
+      if (tmp4Result.shouldMigrateToAdAnalyticsInterface(tmp4(7318).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_bottom_sheet")) {
+        const obj = { type: tmp4(7317).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp4(5930).AdCreativeType.QUEST, adCreativeId: quest.id, questContentCTA: DESELECT_PLATFORM, surfaceId: tmp4(5926).QuestContent.QUEST_BOTTOM_SHEET, sourceQuestContent, impressionId };
+        tmp4(7307).captureAdUserAction(obj);
+        const tmp4Result2 = tmp4(7307);
       } else {
-        const obj2 = { questId: quest.id, questContent: tmp4(5759).QuestContent.QUEST_BOTTOM_SHEET, questContentCTA: DESELECT_PLATFORM, sourceQuestContent };
+        const obj2 = { questId: quest.id, questContent: tmp4(5926).QuestContent.QUEST_BOTTOM_SHEET, questContentCTA: DESELECT_PLATFORM, sourceQuestContent };
         closure_2(obj2);
       }
       closure_4(arg0);
-      tmp4Result = tmp4(7153);
+      tmp4Result = tmp4(7318);
     }
   };
 }
@@ -446,7 +446,7 @@ function MicrophoneUnit(arg0) {
 }
 const useState = fn(19).useState;
 const View = fn(17).View;
-const QuestConstants = fn(5756);
+const QuestConstants = fn(5923);
 ({ QuestsExperimentLocations: closure_8, QuestTaskPlatform: closure_9 } = QuestConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);

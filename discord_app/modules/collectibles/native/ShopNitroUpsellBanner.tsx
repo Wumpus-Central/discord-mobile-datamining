@@ -1,6 +1,6 @@
-// === Module 15426: ShopNitroUpsellBanner ===
+// === Module 15601: ShopNitroUpsellBanner ===
 
-// Module 15426 (ShopNitroUpsellBanner)
+// Module 15601 (ShopNitroUpsellBanner)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
@@ -8,13 +8,13 @@ import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import useToken from "useToken" /* 4531 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import Stack_Stack from "Stack/Stack" /* 5279 */;
-import components_Button_Button from "components/Button/Button" /* 5281 */;
-import LinearGradientDefault from "LinearGradient" /* 5293 */;
-import Card from "Card" /* 5919 */;
-import XSmallIcon from "XSmallIcon" /* 5992 */;
-import NitroUpsellButtonDefault from "NitroUpsellButton" /* 9425 */;
-import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment" /* 15425 */;
+import Stack_Stack from "Stack/Stack" /* 5445 */;
+import components_Button_Button from "components/Button/Button" /* 5447 */;
+import LinearGradientDefault from "LinearGradient" /* 5459 */;
+import Card from "Card" /* 6085 */;
+import XSmallIcon from "XSmallIcon" /* 6158 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 9592 */;
+import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment" /* 15600 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -2778,6 +2778,18 @@ const obj2 = {
         return 40;
       }
     }
+  },
+  toast: {
+    MAX_WIDTH: {
+      resolve() {
+        return 280;
+      }
+    },
+    TEXT_LINE_COUNT: {
+      resolve() {
+        return 2;
+      }
+    }
   }
 };
 const obj3 = {

@@ -1,10 +1,10 @@
-// === Module 8539: TwoWayLinkStepHeader ===
+// === Module 8704: TwoWayLinkStepHeader ===
 
-// Module 8539 (TwoWayLinkStepHeader)
+// Module 8704 (TwoWayLinkStepHeader)
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6400 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 8538 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6566 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 8703 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

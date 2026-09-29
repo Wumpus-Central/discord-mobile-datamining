@@ -1,6 +1,6 @@
-// === Module 14694: QuestOrbMultiplierPerkPill ===
+// === Module 14869: QuestOrbMultiplierPerkPill ===
 
-// Module 14694 (QuestOrbMultiplierPerkPill)
+// Module 14869 (QuestOrbMultiplierPerkPill)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useToken from "useToken" /* 4531 */;
@@ -8,11 +8,11 @@ import themes from "themes" /* 4538 */;
 import ColorUtils from "ColorUtils" /* 4683 */;
 import useTheme from "useTheme" /* 4767 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import Pressables from "Pressables" /* 5435 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8122 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 10681 */;
-import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 10697 */;
-import openQuestOrbMultiplierPerkInfoActionSheetDefault from "openQuestOrbMultiplierPerkInfoActionSheet" /* 14695 */;
+import Pressables from "Pressables" /* 5602 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8287 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 10850 */;
+import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 10866 */;
+import openQuestOrbMultiplierPerkInfoActionSheetDefault from "openQuestOrbMultiplierPerkInfoActionSheet" /* 14870 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -99,7 +99,7 @@ export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(qu
     obj16.style = items3;
     if (!tmp13) {
       const obj18 = { style: tmp.fullGradient, colors: items, start, end };
-      tmp21Result = tmp21(orbMultiplierEligibility(5293), obj18);
+      tmp21Result = tmp21(orbMultiplierEligibility(5459), obj18);
     }
     const items4 = [tmp21Result, ];
     const obj19 = { style: tmp.fullGradientContent, children: closure_8(closure_7, obj13) };

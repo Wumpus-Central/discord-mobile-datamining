@@ -1,29 +1,29 @@
-// === Module 17451: GuildSettingsModalTemplate ===
+// === Module 17640: GuildSettingsModalTemplate ===
 
-// Module 17451 (GuildSettingsModalTemplate)
+// Module 17640 (GuildSettingsModalTemplate)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import ToastUtils from "ToastUtils" /* 4527 */;
 import CopyIcon2 from "CopyIcon" /* 4779 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 4792 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import AlertModal from "AlertModal" /* 5209 */;
-import Stack_Stack from "Stack/Stack" /* 5279 */;
-import components_Button_Button from "components/Button/Button" /* 5281 */;
-import Card from "Card" /* 5919 */;
-import Input from "Input" /* 6025 */;
-import CircleXIcon2 from "CircleXIcon" /* 6034 */;
-import ClipboardUtils from "ClipboardUtils" /* 6610 */;
-import HeaderActionButton from "HeaderActionButton" /* 6795 */;
-import native from "native" /* 8370 */;
-import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 11270 */;
-import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 17452 */;
+import AlertModal from "AlertModal" /* 5375 */;
+import Stack_Stack from "Stack/Stack" /* 5445 */;
+import components_Button_Button from "components/Button/Button" /* 5447 */;
+import Card from "Card" /* 6085 */;
+import Input from "Input" /* 6191 */;
+import CircleXIcon2 from "CircleXIcon" /* 6200 */;
+import ClipboardUtils from "ClipboardUtils" /* 6776 */;
+import HeaderActionButton from "HeaderActionButton" /* 6961 */;
+import native from "native" /* 8535 */;
+import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 11439 */;
+import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 17641 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const SceneLoadingIndicator = Text(6460);
-const Form = Text(8053);
+const SceneLoadingIndicator = Text(6626);
+const Form = Text(8218);
 require = fn;
 function TemplateForm(guildId) {
   guildId = guildId.guildId;
@@ -126,7 +126,7 @@ function TemplateForm(guildId) {
         obj2.onCloseCallback = function onCloseCallback() {
           return closure_0(false);
         };
-        guildId(5209).showConfirmModal(obj2);
+        guildId(5375).showConfirmModal(obj2);
       });
     } else {
       _Promise1 = _Promise.resolve(true);
@@ -191,7 +191,7 @@ function TemplateForm(guildId) {
                 closure_1_7(null);
                 closure_1_9(true);
                 c3 = 1;
-                const obj2 = guildTemplate(11270);
+                const obj2 = guildTemplate(11439);
                 c4 = 2;
                 c5 = 1;
                 const obj5 = { value: obj2.updateGuildTemplate(closure_0, tmp7.code, str, str2), done: false };
@@ -467,7 +467,7 @@ let closure_14 = noop.memo(function TemplateControls(arg0) {
   };
   const tmp = _slicedToArray(noop.useState(false), 2);
   _slicedToArray = tmp[1];
-  const tmp3 = guildTemplate(17453)(guildTemplate.code);
+  const tmp3 = guildTemplate(17642)(guildTemplate.code);
   noop = tmp3;
   let obj = { spacing: guildTemplate(576).space.PX_12, children: null };
   let obj2 = { label: null, children: null };

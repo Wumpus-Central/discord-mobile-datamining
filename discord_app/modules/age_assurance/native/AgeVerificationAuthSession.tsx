@@ -1,6 +1,6 @@
-// === Module 7876: AgeVerificationAuthSession ===
+// === Module 8041: AgeVerificationAuthSession ===
 
-// Module 7876 (AgeVerificationAuthSession)
+// Module 8041 (AgeVerificationAuthSession)
 import LoggerDefault from "Logger" /* 3 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import NativeBrowserManagerModuleIOSDefault from "NativeBrowserManagerModuleIOS" /* 4799 */;

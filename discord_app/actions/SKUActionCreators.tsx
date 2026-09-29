@@ -1,16 +1,16 @@
-// === Module 10276: SKUActionCreators ===
+// === Module 10445: SKUActionCreators ===
 
-// Module 10276 (SKUActionCreators)
+// Module 10445 (SKUActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import BillingUtils from "BillingUtils" /* 4503 */;
-import StoreUtils from "StoreUtils" /* 5092 */;
-import PurchaseTokenUtils from "PurchaseTokenUtils" /* 5192 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7008 */;
-import TestModeUtils from "TestModeUtils" /* 8319 */;
+import StoreUtils from "StoreUtils" /* 5258 */;
+import PurchaseTokenUtils from "PurchaseTokenUtils" /* 5358 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7173 */;
+import TestModeUtils from "TestModeUtils" /* 8484 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 8248 */;
-import SKUStore from "SKUStore" /* 5822 */;
+import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 8413 */;
+import SKUStore from "SKUStore" /* 5989 */;
 
 require = fn;
 let closure_8 = async function _fetchSKU() {
@@ -553,8 +553,7 @@ let closure_14 = async function _orderSKU() {
           c8 = 0;
           closure_133_2 = closure_7;
           closure_134_1(closure_134_2[4]).dispatch({ type: "ORDER_CREATE_FAIL" });
-          const _HermesInternal = HermesInternal;
-          const billingError = new closure_134_0(closure_134_2[10]).BillingError("Failed to create order: " + closure_133_2);
+          const billingError = new closure_134_0(closure_134_2[10]).BillingError(closure_133_2);
           throw billingError;
         } else if (arg0 === 1) {
           c10 = 3;

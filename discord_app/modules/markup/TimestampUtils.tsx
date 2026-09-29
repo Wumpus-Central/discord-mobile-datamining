@@ -1,6 +1,6 @@
-// === Module 5330: TimestampUtils ===
+// === Module 5496: TimestampUtils ===
 
-// Module 5330 (TimestampUtils)
+// Module 5496 (TimestampUtils)
 import DurationsDefault from "Durations" /* 1091 */;
 import _modDef4421 from "module_4421" /* 4421 */;
 import DateUtils from "DateUtils" /* 4512 */;

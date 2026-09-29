@@ -1,8 +1,8 @@
-// === Module 13304: splitAgeRestrictedActivities ===
+// === Module 13474: splitAgeRestrictedActivities ===
 
-// Module 13304 (splitAgeRestrictedActivities)
-import ContentClassificationReference from "ContentClassificationReference" /* 8809 */;
-import ContentClassificationPresenceFilterExperiment2 from "ContentClassificationPresenceFilterExperiment" /* 13305 */;
+// Module 13474 (splitAgeRestrictedActivities)
+import ContentClassificationReference from "ContentClassificationReference" /* 8974 */;
+import ContentClassificationPresenceFilterExperiment2 from "ContentClassificationPresenceFilterExperiment" /* 13475 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/presence/splitAgeRestrictedActivities.tsx");

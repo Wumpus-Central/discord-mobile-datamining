@@ -1,15 +1,15 @@
-// === Module 16192: Elements ===
+// === Module 16368: Elements ===
 
-// Module 16192 (Elements)
+// Module 16368 (Elements)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import Pressables from "Pressables" /* 5435 */;
-import NativePaymentHooksDefault from "NativePaymentHooks" /* 8667 */;
-import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 8670 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 14772 */;
-import _modDef16193 from "module_16193" /* 16193 */;
+import Pressables from "Pressables" /* 5602 */;
+import NativePaymentHooksDefault from "NativePaymentHooks" /* 8832 */;
+import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 8835 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 14947 */;
+import _modDef16369 from "module_16369" /* 16369 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4493 */;
@@ -102,7 +102,7 @@ export const ArrowButton = function ArrowButton(arg0) {
   ({ text, onPress } = arg0);
   const tmp = closure_11();
   const obj = { accessibilityRole: "button", style: tmp.arrowButton, onPress, children: null };
-  const items = [React7(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", style: tmp.arrowButtonText, children: text }), React7(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef16193, style: tmp.arrowButtonIcon })];
+  const items = [React7(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", style: tmp.arrowButtonText, children: text }), React7(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef16369, style: tmp.arrowButtonIcon })];
   obj.children = items;
   return closure_1_10(Pressables.PressableOpacity, obj);
 };
@@ -116,8 +116,8 @@ export const useFormattedSubscriptionPlan = function useFormattedSubscriptionPla
   let str = "No Price Available";
   if (null != price) {
     const _HermesInternal = HermesInternal;
-    str = "" + tmp3(6655).formatPrice(price.amount, price.currency) + "/mo.";
-    const tmp3Result = tmp3(6655);
+    str = "" + tmp3(6821).formatPrice(price.amount, price.currency) + "/mo.";
+    const tmp3Result = tmp3(6821);
   }
   return str;
 };

@@ -1,12 +1,12 @@
-// === Module 15997: GuildsBarDragPreview ===
+// === Module 16173: GuildsBarDragPreview ===
 
-// Module 15997 (GuildsBarDragPreview)
+// Module 16173 (GuildsBarDragPreview)
 import _mod4452 from "module_4452" /* 4452 */;
 import native from "native" /* 4540 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
-import spring from "spring" /* 5280 */;
+import spring from "spring" /* 5446 */;
 import noop from "module_19" /* 19 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 15921 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16097 */;
 
 require = fn;
 function PreviewItem(dragRegion) {
@@ -132,7 +132,7 @@ function PreviewItem(dragRegion) {
   const memo = gestureState.useMemo(() => {
     if ("convert-after" === overState) {
       if (null != overNode) {
-        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "flex", name: "Array", color: "add", expanded: null, children: null };
+        const element = { type: GuildsNodeType.FOLDER, id: -1, parentId: "flex", name: "Array", color: "round", expanded: "Array", children: "enableFabricLogs" };
         const items = [tmp2];
         element.children = items;
         return element;
@@ -285,8 +285,8 @@ function AnimatedItemPreview(cleanUp) {
   obj5.children = tmp12Result;
   return jsx(cleanUp(sharedValue[9]), { style: items, children: null });
 }
-const GuildsNodeType = fn(5750).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(15918).GUILD_ITEM_INSET_LEFT;
+const GuildsNodeType = fn(5917).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(16094).GUILD_ITEM_INSET_LEFT;
 const jsx = fn(21).jsx;
 let createStyles = fn(4836);
 let closure_8 = createStyles.createStyles({ dragPreview: { position: "absolute", left: 0 }, animatedPreviewStyle: { position: "absolute" }, dragPreviewHome: { right: 0 } });
@@ -334,7 +334,7 @@ export default noop.memo(function GuildsBarDragPreview() {
       if (null != dragSpecs) {
         if (null != overSpecs) {
           const state = overSpecs.state;
-          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "v_tone4", scrollPosition: "getInitialScrollIndex", dragRegion: null, windowSize: "\u270C\u{1F3FF}", dropComplete: true, listInsets: null };
+          const obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: 24, scrollPosition: 24, dragRegion: "none", windowSize: "0 0 1512 510", dropComplete: "none", listInsets: "pop out" };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;
           let node;

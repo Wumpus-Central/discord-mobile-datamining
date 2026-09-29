@@ -1,6 +1,6 @@
-// === Module 7320: rules ===
+// === Module 7485: rules ===
 
-// Module 7320 (rules)
+// Module 7485 (rules)
 import _mod1187 from "module_1187" /* 1187 */;
 import wrappers from "wrappers" /* 1217 */;
 import _slicedToArray from "module_32" /* 32 */;

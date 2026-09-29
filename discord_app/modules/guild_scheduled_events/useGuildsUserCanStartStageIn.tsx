@@ -1,6 +1,6 @@
-// === Module 8990: useGuildsUserCanStartStageIn ===
+// === Module 9155: useGuildsUserCanStartStageIn ===
 
-// Module 8990 (useGuildsUserCanStartStageIn)
+// Module 9155 (useGuildsUserCanStartStageIn)
 import GuildChannelStore from "GuildChannelStore" /* 4467 */;
 import PermissionStore from "PermissionStore" /* 4469 */;
 

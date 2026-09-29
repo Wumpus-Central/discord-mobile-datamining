@@ -1,9 +1,9 @@
-// === Module 14039: definitions ===
+// === Module 14211: definitions ===
 
-// Module 14039 (definitions)
-import OAuth2Scopes from "OAuth2Scopes" /* 7787 */;
-import helpers from "helpers" /* 14040 */;
-import contextMenuIcons from "contextMenuIcons" /* 14041 */;
+// Module 14211 (definitions)
+import OAuth2Scopes from "OAuth2Scopes" /* 7952 */;
+import helpers from "helpers" /* 14212 */;
+import contextMenuIcons from "contextMenuIcons" /* 14213 */;
 import size from "module_2" /* 2 */;
 
 function VoiceCapabilities(boolean) {
@@ -858,7 +858,7 @@ export const RPCCommandSchemas = {
       obj.content = string.string().min(0).max(1024);
       return obj;
     },
-    response: "a"
+    response: "r"
   },
   [helpers.RPCCommand.GET_USER]: {
     request(string) {

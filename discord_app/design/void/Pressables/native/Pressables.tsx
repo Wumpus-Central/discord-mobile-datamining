@@ -1,9 +1,9 @@
-// === Module 5435: Pressables ===
+// === Module 5602: Pressables ===
 
-// Module 5435 (Pressables)
+// Module 5602 (Pressables)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import StyleSheetUtilsDefault from "StyleSheetUtils" /* 5436 */;
+import StyleSheetUtilsDefault from "StyleSheetUtils" /* 5603 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -90,7 +90,7 @@ function PressableBase(androidRippleConfig) {
   }, items1)} style={memo} ref={innerRef} />;
 }
 const Pressable = fn(17).Pressable;
-const IOS_POINTER_STYLE = fn(5290).IOS_POINTER_STYLE;
+const IOS_POINTER_STYLE = fn(5456).IOS_POINTER_STYLE;
 const getThemedRippleConfig = fn(1181).getThemedRippleConfig;
 const jsx = fn(21).jsx;
 const createStyles = fn(4836);

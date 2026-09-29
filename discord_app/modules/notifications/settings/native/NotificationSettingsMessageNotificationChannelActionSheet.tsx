@@ -1,9 +1,9 @@
-// === Module 9622: NotificationSettingsMessageNotificationChannelActionSheet ===
+// === Module 9789: NotificationSettingsMessageNotificationChannelActionSheet ===
 
-// Module 9622 (NotificationSettingsMessageNotificationChannelActionSheet)
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6535 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6540 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 9608 */;
+// Module 9789 (NotificationSettingsMessageNotificationChannelActionSheet)
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6701 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6706 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 9775 */;
 import noop from "module_19" /* 19 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5017 */;
 
@@ -46,5 +46,5 @@ export default function NotificationSettingsMessageNotificationChannelActionShee
     obj4.label = NotificationLabel.notifications(message_notifications);
     const result = NotificationSettingsModalActionCreatorsDefault.updateChannelOverrideSettings(obj4);
   };
-  return jsx(unread(9621), { context: "channel", value: notification, allMessagesSubLabel: null, onChange: null });
+  return jsx(unread(9788), { context: "channel", value: notification, allMessagesSubLabel: null, onChange: null });
 };

@@ -1,6 +1,6 @@
-// === Module 8325: useOrderSigning ===
+// === Module 8490: useOrderSigning ===
 
-// Module 8325 (useOrderSigning)
+// Module 8490 (useOrderSigning)
 import BillingUtils from "BillingUtils" /* 4503 */;
 import BillingErrorDefault from "BillingError" /* 4510 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

@@ -1,22 +1,22 @@
-// === Module 16406: VibegrationsDebugScene ===
+// === Module 16591: VibegrationsDebugScene ===
 
-// Module 16406 (VibegrationsDebugScene)
+// Module 16591 (VibegrationsDebugScene)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3715 from "module_3715" /* 3715 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4528 */;
 import CopyIcon from "CopyIcon" /* 4779 */;
-import ClipboardUtils from "ClipboardUtils" /* 6610 */;
-import VibegrationsDebugSnapshot from "VibegrationsDebugSnapshot" /* 16408 */;
+import ClipboardUtils from "ClipboardUtils" /* 6776 */;
+import VibegrationsDebugSnapshot from "VibegrationsDebugSnapshot" /* 16593 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7133 */;
-import VibegrationsDebugStore from "VibegrationsDebugStore" /* 16407 */;
+import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7298 */;
+import VibegrationsDebugStore from "VibegrationsDebugStore" /* 16592 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const requestDebugStatus = fn(12642).requestDebugStatus;
+const requestDebugStatus = fn(12812).requestDebugStatus;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(4836);

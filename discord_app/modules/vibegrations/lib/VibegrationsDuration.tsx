@@ -1,6 +1,6 @@
-// === Module 16350: VibegrationsDuration ===
+// === Module 16530: VibegrationsDuration ===
 
-// Module 16350 (VibegrationsDuration)
+// Module 16530 (VibegrationsDuration)
 import util from "util" /* 1115 */;
 import _modDef3715 from "module_3715" /* 3715 */;
 import size from "module_2" /* 2 */;

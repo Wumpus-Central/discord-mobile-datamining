@@ -1,6 +1,6 @@
-// === Module 12883: PremiumOrbsDeliveredModalExperiment ===
+// === Module 13053: PremiumOrbsDeliveredModalExperiment ===
 
-// Module 12883 (PremiumOrbsDeliveredModalExperiment)
+// Module 13053 (PremiumOrbsDeliveredModalExperiment)
 import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 

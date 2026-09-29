@@ -1,17 +1,17 @@
-// === Module 11446: TypingIndicator ===
+// === Module 11615: TypingIndicator ===
 
-// Module 11446 (TypingIndicator)
+// Module 11615 (TypingIndicator)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import native from "native" /* 4540 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4988 */;
-import spring from "spring" /* 5280 */;
-import springPresets from "springPresets" /* 5284 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 11453 */;
+import spring from "spring" /* 5446 */;
+import springPresets from "springPresets" /* 5450 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 11622 */;
 import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 4835 */;
-import RawGuildEmojiStore from "RawGuildEmojiStore" /* 5773 */;
-import TypingStore from "TypingStore" /* 11447 */;
+import RawGuildEmojiStore from "RawGuildEmojiStore" /* 5940 */;
+import TypingStore from "TypingStore" /* 11616 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -214,8 +214,8 @@ function renderTypingIndicator(arg0, arg1, transitionState, cleanUp) {
   return closure_1_12(TypingIndicatorInner, obj, arg0);
 }
 const View = fn(17).View;
-let closure_5 = fn(8843).useChatShowingAutoComplete;
-const SlowmodeType = fn(7100).SlowmodeType;
+let closure_5 = fn(9008).useChatShowingAutoComplete;
+const SlowmodeType = fn(7265).SlowmodeType;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);

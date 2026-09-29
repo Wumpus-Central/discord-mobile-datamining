@@ -1,6 +1,6 @@
-// === Module 14084: discordEnvironmentEvents ===
+// === Module 14256: discordEnvironmentEvents ===
 
-// Module 14084 (discordEnvironmentEvents)
+// Module 14256 (discordEnvironmentEvents)
 import _modDef12 from "module_12" /* 12 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import AccessibilityStore from "AccessibilityStore" /* 4825 */;

@@ -11,13 +11,13 @@ import Server from "Server" /* 1979 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 2074 */;
 import ReactionUtils from "ReactionUtils" /* 4481 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 5058 */;
-import ChannelMessagesDefault from "ChannelMessages" /* 5584 */;
-import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 5587 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5589 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7020 */;
-import MessageQueue from "MessageQueue" /* 7253 */;
-import canEditMessageDefault from "canEditMessage" /* 11246 */;
-import GuildAutomodMessageStoreUtils from "GuildAutomodMessageStoreUtils" /* 13306 */;
+import ChannelMessagesDefault from "ChannelMessages" /* 5751 */;
+import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 5754 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5756 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7185 */;
+import MessageQueue from "MessageQueue" /* 7418 */;
+import canEditMessageDefault from "canEditMessage" /* 11415 */;
+import GuildAutomodMessageStoreUtils from "GuildAutomodMessageStoreUtils" /* 13476 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ImpersonateStore from "ImpersonateStore" /* 2101 */;
@@ -25,7 +25,7 @@ import EphemeralMessageStore from "EphemeralMessageStore" /* 5057 */;
 import LocaleStore from "LocaleStore" /* 2112 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
-import DimensionStore from "DimensionStore" /* 5583 */;
+import DimensionStore from "DimensionStore" /* 5750 */;
 import GuildChannelStore from "GuildChannelStore" /* 4467 */;
 import GuildMemberStore from "GuildMemberStore" /* 2108 */;
 import GuildStore from "GuildStore" /* 2067 */;
@@ -955,7 +955,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(ids) {
     ids = ids.ids;
     let mutation;
-    const orCreate = mutation(5584).getOrCreate(ids.channelId);
+    const orCreate = mutation(5751).getOrCreate(ids.channelId);
     if (null == orCreate) {
       return false;
     } else {
@@ -1004,14 +1004,14 @@ const messageStore = new MessageStore(DispatcherDefault, {
           }
           tmpResult = tmp(12);
         }
-        tmp(5584).commit(tmp3);
+        tmp(5751).commit(tmp3);
         const item1 = ids.forEach((item) => {
           set.delete(item);
         });
-        const tmpResult2 = tmp(5584);
+        const tmpResult2 = tmp(5751);
       }
     }
-    let obj = mutation(5584);
+    let obj = mutation(5751);
   },
   MESSAGE_REVEAL: function handleMessageReveal(arg0) {
     ({ channelId, messageId } = arg0);

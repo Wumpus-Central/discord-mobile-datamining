@@ -1,6 +1,6 @@
-// === Module 6791: getCurrentVoiceChannel ===
+// === Module 6957: getCurrentVoiceChannel ===
 
-// Module 6791 (getCurrentVoiceChannel)
+// Module 6957 (getCurrentVoiceChannel)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import VoiceStateStore from "VoiceStateStore" /* 4855 */;

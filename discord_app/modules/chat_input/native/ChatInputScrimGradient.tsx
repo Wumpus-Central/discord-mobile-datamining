@@ -1,11 +1,11 @@
-// === Module 11743: ChatInputScrimGradient ===
+// === Module 11912: ChatInputScrimGradient ===
 
-// Module 11743 (ChatInputScrimGradient)
+// Module 11912 (ChatInputScrimGradient)
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
 import useToken from "useToken" /* 4531 */;
 import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4652 */;
-import LinearGradientDefault from "LinearGradient" /* 5293 */;
+import LinearGradientDefault from "LinearGradient" /* 5459 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,10 +1,10 @@
-// === Module 11326: TransferOwnership ===
+// === Module 11495: TransferOwnership ===
 
-// Module 11326 (TransferOwnership)
+// Module 11495 (TransferOwnership)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import GuildIcon from "GuildIcon" /* 5896 */;
+import GuildIcon from "GuildIcon" /* 6062 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -13,7 +13,7 @@ import UserStore from "UserStore" /* 1372 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Image: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const TransferOwnershipConstants = fn(11325);
+const TransferOwnershipConstants = fn(11494);
 ({ TransferOwnershipModalScenes: c10, TransferOwnershipVerificationTypes: closure_11 } = TransferOwnershipConstants);
 const NOOP = fn(1074).NOOP;
 const jsxProd = fn(21);
@@ -72,7 +72,7 @@ export default function TransferOwnership(guild) {
               if (null != mfaEnabled.email) {
                 v1 = 1;
                 dependencyMap = 1;
-                const obj6 = { value: v1(9048).sendTransferOwnershipPincode(user.id), done: false };
+                const obj6 = { value: v1(9213).sendTransferOwnershipPincode(user.id), done: false };
                 return obj6;
               }
             }
@@ -80,16 +80,16 @@ export default function TransferOwnership(guild) {
             if (mfaEnabled.mfaEnabled) {
               MFA = constants2.MFA;
             }
-            const obj4 = v1(9048);
-            v1(9048).transferOwnership(user.id, id.id, MFA).then(() => {
-              v1(11323).close();
-              const obj = v1(11323);
-              v1(9048).close();
-              const obj2 = v1(9048);
+            const obj4 = v1(9213);
+            v1(9213).transferOwnership(user.id, id.id, MFA).then(() => {
+              v1(11492).close();
+              const obj = v1(11492);
+              v1(9213).close();
+              const obj2 = v1(9213);
               const result = closure_1_0(4527).showTransferOwnershipSuccess();
             }, NOOP);
             dependencyMap = 3;
-            const transferOwnershipResult = v1(9048).transferOwnership(user.id, id.id, MFA);
+            const transferOwnershipResult = v1(9213).transferOwnership(user.id, id.id, MFA);
           }
         } else if (arg0 === 1) {
           dependencyMap = 3;
@@ -159,9 +159,9 @@ export default function TransferOwnership(guild) {
   obj6.style = { paddingTop: toUser(576).space.PX_16, paddingHorizontal: token };
   const obj8 = { style: tmp5.header, children: null };
   const obj7 = { paddingTop: toUser(576).space.PX_16, paddingHorizontal: token };
-  const items1 = [closure_13(c7, { source: toUser(11327), style: tmp5.arrow }), , , ];
+  const items1 = [closure_13(c7, { source: toUser(11496), style: tmp5.arrow }), , , ];
   const obj10 = { style: tmp5.avatarsWrapper, children: null };
-  const obj9 = { source: toUser(11327), style: tmp5.arrow };
+  const obj9 = { source: toUser(11496), style: tmp5.arrow };
   const items2 = [closure_13(guild(1177).Avatar, { user: stateFromStores, guildId: guild.id, size: guild(1177).AvatarSizes.XXLARGE }), ];
   const obj12 = { style: tmp5.avatarFauxBorder, children: null };
   const obj13 = { user: toUser, guildId: "r", size: guild(1177).AvatarSizes.XXLARGE, style: tmp5.otherUserAvatar };
@@ -220,8 +220,8 @@ export default function TransferOwnership(guild) {
     obj18.onPress = function handleConfirmToggle(arg0) {
       _undefined(arg0);
     };
-    obj17.children = closure_13(tmp(5916).TableCheckboxRow, obj18);
-    items3[1] = closure_13(tmp(5999).TableRowGroup, obj17);
+    obj17.children = closure_13(tmp(6082).TableCheckboxRow, obj18);
+    items3[1] = closure_13(tmp(6165).TableRowGroup, obj17);
     const obj20 = {
       onPress: function handleTransfer() {
           const self = this;
@@ -239,7 +239,7 @@ export default function TransferOwnership(guild) {
     const intl4 = tmp(1115).intl;
     obj20.text = intl4.string(tmp(1115).t.jqqLb6);
     obj20.disabled = !tmp8;
-    items3[2] = closure_13(tmp(5281).Button, obj20);
+    items3[2] = closure_13(tmp(5447).Button, obj20);
     obj6.children = items3;
     obj5.children = closure_15(tmp14, obj6);
     return closure_13(closure_8, obj5);

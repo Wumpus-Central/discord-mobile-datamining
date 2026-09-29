@@ -1,6 +1,6 @@
-// === Module 8963: VoicePanelUtils ===
+// === Module 9128: VoicePanelUtils ===
 
-// Module 8963 (VoicePanelUtils)
+// Module 9128 (VoicePanelUtils)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4859 */;

@@ -545,7 +545,7 @@ function handleLoadMessages(messages) {
   });
   return false;
 }
-function handleConversationFetchSuccess(messages) {
+function handleConversationMessagesFetchSuccess(messages) {
   messages = messages.messages;
   const combined = messages.concat(messages.messageReferences);
   const item = combined.forEach((item) => {
@@ -553,7 +553,7 @@ function handleConversationFetchSuccess(messages) {
   });
   return false;
 }
-function handleConversationsFetchSuccess(rawConversations) {
+function handleChannelConversationsFetchSuccess(rawConversations) {
   rawConversations = rawConversations.rawConversations;
   let item = rawConversations.forEach((messages) => {
     messages = messages.messages;
@@ -607,7 +607,7 @@ function handleLoadSearchResults(data) {
   });
   return false;
 }
-function handleIntelligenceSearchFetchSuccess(messages) {
+function handleSmartSearchFetchSuccess(messages) {
   messages = messages.messages;
   const item = messages.forEach((item) => {
     mergeUsersFromMessage(item, true);
@@ -1165,13 +1165,13 @@ class UserStore extends tmp2 {
       CURRENT_USER_UPDATE: handleCurrentUserUpdate,
       PRESENCE_UPDATES: handlePresenceUpdates,
       SEARCH_MESSAGES_SUCCESS: handleLoadSearchResults,
-      INTELLIGENCE_SEARCH_FETCH_SUCCESS: handleIntelligenceSearchFetchSuccess,
+      SMART_SEARCH_FETCH_SUCCESS: handleSmartSearchFetchSuccess,
       MOD_VIEW_SEARCH_MESSAGES_SUCCESS: handleLoadSearchResults,
       LOAD_MESSAGES_SUCCESS: handleLoadMessages,
       LOAD_MESSAGES_AROUND_SUCCESS: handleLoadMessages,
       LOAD_RECENT_MENTIONS_SUCCESS: handleLoadMessages,
-      CONVERSATION_FETCH_SUCCESS: handleConversationFetchSuccess,
-      CONVERSATIONS_FETCH_SUCCESS: handleConversationsFetchSuccess,
+      CONVERSATION_MESSAGES_FETCH_SUCCESS: handleConversationMessagesFetchSuccess,
+      CHANNEL_CONVERSATIONS_FETCH_SUCCESS: handleChannelConversationsFetchSuccess,
       LOAD_PINNED_MESSAGES_SUCCESS: handleLoadPinnedMessages,
       THREAD_LIST_SYNC: handleThreadListSync,
       MESSAGE_CREATE: handleIncomingMessage,
@@ -1224,7 +1224,7 @@ class UserStore extends tmp2 {
       CLOSE_AGE_VERIFICATION_MODAL: handleCloseAgeVerificationModal,
       INTERACTION_MODAL_CREATE: handleInteractionModalCreate
     };
-    tmp1 = new tmp(obj, handleIntelligenceSearchFetchSuccess, handleCloseAgeVerificationModal, new.target);
+    tmp1 = new tmp(obj, handleSmartSearchFetchSuccess, handleCloseAgeVerificationModal, new.target);
     closure_0 = tmp1;
     return tmp1;
   }

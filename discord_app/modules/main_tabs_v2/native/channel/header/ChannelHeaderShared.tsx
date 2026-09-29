@@ -1,6 +1,6 @@
-// === Module 12847: ChannelHeaderShared ===
+// === Module 13017: ChannelHeaderShared ===
 
-// Module 12847 (ChannelHeaderShared)
+// Module 13017 (ChannelHeaderShared)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
@@ -8,13 +8,13 @@ import PlatformUtils from "PlatformUtils" /* 1364 */;
 import useToken from "useToken" /* 4531 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import useChannelName from "useChannelName" /* 4989 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5335 */;
-import Pressables from "Pressables" /* 5435 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6401 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10357 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10371 */;
-import _modDef12848 from "module_12848" /* 12848 */;
-import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 12849 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5501 */;
+import Pressables from "Pressables" /* 5602 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6567 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10526 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10540 */;
+import _modDef13018 from "module_13018" /* 13018 */;
+import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 13019 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4479 */;
@@ -72,7 +72,7 @@ function ChannelTitle(guildId) {
   items[1] = tmp8;
   let tmp5Result = !disableArrow;
   if (!disableArrow) {
-    const obj6 = { source: _modDef12848, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+    const obj6 = { source: _modDef13018, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
     tmp5Result = tmp5(native.Icon, obj6);
   }
   items[2] = tmp5Result;

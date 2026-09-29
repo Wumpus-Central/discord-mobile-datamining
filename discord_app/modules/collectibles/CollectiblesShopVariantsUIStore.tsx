@@ -1,8 +1,8 @@
-// === Module 8291: CollectiblesShopVariantsUIStore ===
+// === Module 8456: CollectiblesShopVariantsUIStore ===
 
-// Module 8291 (CollectiblesShopVariantsUIStore)
+// Module 8456 (CollectiblesShopVariantsUIStore)
 import _mod4452 from "module_4452" /* 4452 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 6973 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7139 */;
 import identity from "module_1243" /* 1243 */;
 import size from "module_2" /* 2 */;
 

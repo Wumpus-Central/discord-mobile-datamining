@@ -1,9 +1,9 @@
-// === Module 16454: pages/ErrorScreen ===
+// === Module 16643: pages/ErrorScreen ===
 
-// Module 16454 (pages/ErrorScreen)
+// Module 16643 (pages/ErrorScreen)
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4541 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6402 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6568 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

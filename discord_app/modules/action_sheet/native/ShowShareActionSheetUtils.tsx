@@ -1,12 +1,12 @@
-// === Module 7811: ShowShareActionSheetUtils ===
+// === Module 7976: ShowShareActionSheetUtils ===
 
-// Module 7811 (ShowShareActionSheetUtils)
+// Module 7976 (ShowShareActionSheetUtils)
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import URLUtilsDefault from "URLUtils" /* 1366 */;
-import FileExtensionUtils from "FileExtensionUtils" /* 5880 */;
-import SharePreparingModalConstants from "SharePreparingModalConstants" /* 7812 */;
+import FileExtensionUtils from "FileExtensionUtils" /* 6046 */;
+import SharePreparingModalConstants from "SharePreparingModalConstants" /* 7977 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

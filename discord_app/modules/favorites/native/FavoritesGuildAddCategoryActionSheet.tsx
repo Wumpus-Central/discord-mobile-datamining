@@ -1,9 +1,9 @@
-// === Module 15785: FavoritesGuildAddCategoryActionSheet ===
+// === Module 15960: FavoritesGuildAddCategoryActionSheet ===
 
-// Module 15785 (FavoritesGuildAddCategoryActionSheet)
+// Module 15960 (FavoritesGuildAddCategoryActionSheet)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4800 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 9684 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 9851 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,7 +26,7 @@ function FavoritesGuildAddCategoryActionSheet() {
   const obj3 = { title: null };
   const intl = value(1115).intl;
   obj3.title = intl.string(value(1115).t["ISN+NM"]);
-  obj2.header = closure_6(value(6570).BottomSheetTitleHeader, obj3);
+  obj2.header = closure_6(value(6736).BottomSheetTitleHeader, obj3);
   const obj4 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, autoFocus: true, clearable: true, returnKeyType: "done", onSubmitEditing: null };
   const intl2 = value(1115).intl;
   obj4.label = intl2.string(value(1115).t.OCAkGP);
@@ -35,15 +35,15 @@ function FavoritesGuildAddCategoryActionSheet() {
   obj4.value = value;
   obj4.maxLength = maxLength;
   obj4.onSubmitEditing = callback;
-  const items1 = [closure_6(value(6024).TextInput, obj4), ];
+  const items1 = [closure_6(value(6190).TextInput, obj4), ];
   const obj5 = { text: null, onPress: null, disabled: null };
   const intl4 = value(1115).intl;
   obj5.text = intl4.string(value(1115).t.CumH4u);
   obj5.onPress = callback;
   obj5.disabled = !result;
-  items1[1] = closure_6(value(5281).Button, obj5);
+  items1[1] = closure_6(value(5447).Button, obj5);
   obj2.children = items1;
-  return closure_7(value(6571).BottomSheet, obj2);
+  return closure_7(value(6737).BottomSheet, obj2);
 }
 const maxLength = fn(2058).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
 const jsxProd = fn(21);

@@ -1,6 +1,6 @@
-// === Module 7525: PremiumGiftingUtils ===
+// === Module 7690: PremiumGiftingUtils ===
 
-// Module 7525 (PremiumGiftingUtils)
+// Module 7690 (PremiumGiftingUtils)
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4849 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 2045 */;

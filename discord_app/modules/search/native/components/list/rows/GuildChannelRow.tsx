@@ -1,12 +1,12 @@
-// === Module 16475: GuildChannelRow ===
+// === Module 16663: GuildChannelRow ===
 
-// Module 16475 (GuildChannelRow)
+// Module 16663 (GuildChannelRow)
 import nativeDefault from "native" /* 576 */;
 import useChannelNameDefault from "useChannelName" /* 4989 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5335 */;
-import SearchListRow from "SearchListRow" /* 16468 */;
-import ChannelContent from "ChannelContent" /* 16476 */;
-import renderChannelItem from "renderChannelItem" /* 16478 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5501 */;
+import SearchListRow from "SearchListRow" /* 16642 */;
+import ChannelContent from "ChannelContent" /* 16664 */;
+import renderChannelItem from "renderChannelItem" /* 16666 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ function GuildChannelLabel(channel) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
-const layout = fn(7303).CHANNEL_LIST_SEARCH_LAYOUT;
+const layout = fn(7468).CHANNEL_LIST_SEARCH_LAYOUT;
 const jsx = fn(21).jsx;
 const createStyles = fn(4836);
 let obj = { container: { paddingVertical: 10 }, content: { flexDirection: "row", alignItems: "center" }, iconContainer: { marginRight: 0 }, simpleIcon: null };

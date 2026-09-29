@@ -1,10 +1,10 @@
-// === Module 17381: guildSettingsStickerToasts ===
+// === Module 17570: guildSettingsStickerToasts ===
 
-// Module 17381 (guildSettingsStickerToasts)
+// Module 17570 (guildSettingsStickerToasts)
 import util from "util" /* 1115 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4528 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 4787 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 6028 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 6194 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/guildSettingsStickerToasts.tsx");

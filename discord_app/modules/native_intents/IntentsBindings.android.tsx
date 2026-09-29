@@ -1,6 +1,6 @@
-// === Module 17688: IntentsBindings ===
+// === Module 17877: IntentsBindings ===
 
-// Module 17688 (IntentsBindings)
+// Module 17877 (IntentsBindings)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/native_intents/IntentsBindings.android.tsx");

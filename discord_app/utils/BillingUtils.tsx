@@ -89,12 +89,12 @@ export const createGatewayCheckoutContext = function createGatewayCheckoutContex
   }
   return applyArgumentsResult;
 };
-export const captureBillingException = function captureBillingException(error, tags) {
+export const captureBillingException = function captureBillingException(error, merged) {
   const obj2 = {};
-  const merged = Object.assign(tags);
-  tags = undefined;
-  if (tags != null) {
-    tags = tags.tags;
+  merged = Object.assign(merged);
+  let tags;
+  if (merged != null) {
+    tags = merged.tags;
   }
   const obj3 = {};
   const merged1 = Object.assign(tags);

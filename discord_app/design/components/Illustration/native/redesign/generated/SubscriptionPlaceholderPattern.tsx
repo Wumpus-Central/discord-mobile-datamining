@@ -1,8 +1,8 @@
-// === Module 13042: SubscriptionPlaceholderPattern ===
+// === Module 13212: SubscriptionPlaceholderPattern ===
 
-// Module 13042 (SubscriptionPlaceholderPattern)
+// Module 13212 (SubscriptionPlaceholderPattern)
 import shared from "shared" /* 4685 */;
-import _mod7679 from "module_7679" /* 7679 */;
+import _mod7844 from "module_7844" /* 7844 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,44 +14,44 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/SubscriptionPlaceholderPattern.tsx");
 
 export const getSubscriptionPlaceholderPatternSource = function getSubscriptionPlaceholderPatternSource(theme) {
-  return _mod7679.getIllustrationSource(theme, {
+  return _mod7844.getIllustrationSource(theme, {
     dark() {
-      return require("module_13043");
+      return require("module_13213");
     },
     darker() {
-      return require("module_13044");
+      return require("module_13214");
     },
     light() {
-      return require("module_13045");
+      return require("module_13215");
     }
   });
 };
 export const useSubscriptionPlaceholderPatternSource = function useSubscriptionPlaceholderPatternSource() {
   const obj = shared;
-  return _mod7679.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod7844.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_13043");
+      return require("module_13213");
     },
     darker() {
-      return require("module_13044");
+      return require("module_13214");
     },
     light() {
-      return require("module_13045");
+      return require("module_13215");
     }
   });
 };
 export const SubscriptionPlaceholderPattern = function SubscriptionPlaceholderPattern(arg0) {
   const obj = shared;
   const obj4 = {};
-  const illustrationSource = _mod7679.getIllustrationSource(obj.useThemeContext().theme, {
+  const illustrationSource = _mod7844.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_13043");
+      return require("module_13213");
     },
     darker() {
-      return require("module_13044");
+      return require("module_13214");
     },
     light() {
-      return require("module_13045");
+      return require("module_13215");
     }
   });
   const merged = Object.assign(arg0);

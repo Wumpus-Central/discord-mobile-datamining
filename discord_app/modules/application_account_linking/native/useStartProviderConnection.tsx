@@ -1,6 +1,6 @@
-// === Module 6601: useStartProviderConnection ===
+// === Module 6767: useStartProviderConnection ===
 
-// Module 6601 (useStartProviderConnection)
+// Module 6767 (useStartProviderConnection)
 import LinkingDefault from "Linking" /* 4525 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;

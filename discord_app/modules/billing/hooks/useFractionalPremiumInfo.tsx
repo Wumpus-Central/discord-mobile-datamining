@@ -1,16 +1,16 @@
-// === Module 6813: useFractionalPremiumInfo ===
+// === Module 6979: useFractionalPremiumInfo ===
 
-// Module 6813 (useFractionalPremiumInfo)
+// Module 6979 (useFractionalPremiumInfo)
 import _modDef38 from "module_38" /* 38 */;
 import _modDef4421 from "module_4421" /* 4421 */;
 import PremiumUtils from "PremiumUtils" /* 4488 */;
 import BillingUtils from "BillingUtils" /* 4503 */;
-import EntitlementActionCreators from "EntitlementActionCreators" /* 6820 */;
+import EntitlementActionCreators from "EntitlementActionCreators" /* 6986 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 import SubscriptionStore from "SubscriptionStore" /* 4494 */;
-import EntitlementStore from "EntitlementStore" /* 6814 */;
+import EntitlementStore from "EntitlementStore" /* 6980 */;
 
 const require = globalThis.__r;
 

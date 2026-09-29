@@ -1,6 +1,6 @@
-// === Module 8962: useVoiceStateForRemoteSession ===
+// === Module 9127: useVoiceStateForRemoteSession ===
 
-// Module 8962 (useVoiceStateForRemoteSession)
+// Module 9127 (useVoiceStateForRemoteSession)
 import initialize from "initialize" /* 504 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import VoiceStateStore from "VoiceStateStore" /* 4855 */;

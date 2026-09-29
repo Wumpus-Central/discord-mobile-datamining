@@ -1,24 +1,31 @@
-// === Module 16314: vibegrationsFeedback ===
+// === Module 16483: vibegrationsFeedback ===
 
-// Module 16314 (vibegrationsFeedback)
+// Module 16483 (vibegrationsFeedback)
 import Storage3 from "Storage" /* 510 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import _modDef3715 from "module_3715" /* 3715 */;
-import FeedbackUtils from "FeedbackUtils" /* 11124 */;
-import VibegrationsChatStore from "VibegrationsChatStore" /* 12643 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8495 */;
+import FeedbackUtils from "FeedbackUtils" /* 11293 */;
+import VibegrationsChatStore from "VibegrationsChatStore" /* 12813 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8660 */;
 
 require = fn;
-const turnSettled = fn(12643).turnSettled;
+const turnSettled = fn(12813).turnSettled;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const Constants = fn(11121);
+const Constants = fn(11290);
 ({ FeedbackCategory: closure_7, FeedbackOptionVariant: closure_8, FeedbackType: closure_9, VibegrationsFeedbackOption: c10 } = Constants);
 const shownVibegrationsFeedbackProjectIds = "shownVibegrationsFeedbackProjectIds";
+const set = new Set();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/lib/vibegrationsFeedback.tsx");
 
 export const MINIMUM_SETTLED_TURNS_FOR_FEEDBACK = 3;
+export const skipNextFeedbackForProject = function skipNextFeedbackForProject(id) {
+  set.add(id);
+};
+export const consumeFeedbackSkipForProject = function consumeFeedbackSkipForProject(arg0) {
+  return set.delete(arg0);
+};
 export const hasShownFeedbackForProject = function hasShownFeedbackForProject(arg0) {
   const Storage = Storage3.Storage;
   let items = Storage.get(shownVibegrationsFeedbackProjectIds);

@@ -1,19 +1,19 @@
-// === Module 14740: QuestDockBountyHeader ===
+// === Module 14915: QuestDockBountyHeader ===
 
-// Module 14740 (QuestDockBountyHeader)
+// Module 14915 (QuestDockBountyHeader)
 import nativeDefault from "native" /* 576 */;
-import spring from "spring" /* 5280 */;
-import QuestTypes from "QuestTypes" /* 5759 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7141 */;
-import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 14642 */;
+import spring from "spring" /* 5446 */;
+import QuestTypes from "QuestTypes" /* 5926 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7306 */;
+import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 14817 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const QuestConstants = fn(5756);
+const QuestConstants = fn(5923);
 ({ QuestDockMode: hasOwnProperty, QuestsExperimentLocations: metroRequire } = QuestConstants);
-const QuestDockConstants = fn(14624);
+const QuestDockConstants = fn(14799);
 ({ QUEST_DOCK_COLLAPSED_HEADER_PADDING_LEFT, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_7 } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

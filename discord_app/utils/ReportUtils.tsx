@@ -1,6 +1,6 @@
-// === Module 6707: ReportUtils ===
+// === Module 6873: ReportUtils ===
 
-// Module 6707 (ReportUtils)
+// Module 6873 (ReportUtils)
 import ChannelStore from "ChannelStore" /* 2045 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 4754 */;
 import PermissionStore from "PermissionStore" /* 4469 */;

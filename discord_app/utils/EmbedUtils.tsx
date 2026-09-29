@@ -1,13 +1,13 @@
-// === Module 5196: EmbedUtils ===
+// === Module 5362: EmbedUtils ===
 
-// Module 5196 (EmbedUtils)
+// Module 5362 (EmbedUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
 import FlagUtils from "FlagUtils" /* 1385 */;
 import _modDef4421 from "module_4421" /* 4421 */;
 import InteractionComponentUtils from "InteractionComponentUtils" /* 5060 */;
-import EmbedConstants from "EmbedConstants" /* 5197 */;
+import EmbedConstants from "EmbedConstants" /* 5363 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

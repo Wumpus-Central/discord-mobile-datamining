@@ -1,17 +1,17 @@
-// === Module 5917: TableRow ===
+// === Module 6083: TableRow ===
 
-// Module 5917 (TableRow)
+// Module 6083 (TableRow)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import useToken from "useToken" /* 4531 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import useFontScale from "useFontScale" /* 5288 */;
-import TableRowDivider from "TableRowDivider" /* 5914 */;
-import TableRowGroupContext from "TableRowGroupContext" /* 5918 */;
-import Card from "Card" /* 5919 */;
-import TableRowArrow from "TableRowArrow" /* 5924 */;
-import TableRowTrailingText from "TableRowTrailingText" /* 5926 */;
-import DragIcon from "DragIcon" /* 5927 */;
+import useFontScale from "useFontScale" /* 5454 */;
+import TableRowDivider from "TableRowDivider" /* 6080 */;
+import TableRowGroupContext from "TableRowGroupContext" /* 6084 */;
+import Card from "Card" /* 6085 */;
+import TableRowArrow from "TableRowArrow" /* 6090 */;
+import TableRowTrailingText from "TableRowTrailingText" /* 6092 */;
+import DragIcon from "DragIcon" /* 6093 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -283,9 +283,9 @@ let closure_10 = createStyles.createStyles((arg0, arg1, arg2) => {
   obj2.dragHandle = { marginEnd: 8 };
   return obj2;
 });
-TableRow.Icon = fn(5923).TableRowIcon;
-TableRow.Arrow = fn(5924).TableRowArrow;
-TableRow.TrailingText = fn(5926).TableRowTrailingText;
+TableRow.Icon = fn(6089).TableRowIcon;
+TableRow.Arrow = fn(6090).TableRowArrow;
+TableRow.TrailingText = fn(6092).TableRowTrailingText;
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TableRow/native/TableRow.native.tsx");
 

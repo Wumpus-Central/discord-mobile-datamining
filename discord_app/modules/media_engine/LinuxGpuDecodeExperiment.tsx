@@ -1,6 +1,6 @@
-// === Module 13353: LinuxGpuDecodeExperiment ===
+// === Module 13522: LinuxGpuDecodeExperiment ===
 
-// Module 13353 (LinuxGpuDecodeExperiment)
+// Module 13522 (LinuxGpuDecodeExperiment)
 import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 

@@ -1,8 +1,8 @@
-// === Module 6672: useUnmountAbortSignal ===
+// === Module 6838: useUnmountAbortSignal ===
 
-// Module 6672 (useUnmountAbortSignal)
-import useMountEffect from "useMountEffect" /* 5298 */;
-import useInitialValueDefault from "useInitialValue" /* 5910 */;
+// Module 6838 (useUnmountAbortSignal)
+import useMountEffect from "useMountEffect" /* 5464 */;
+import useInitialValueDefault from "useInitialValue" /* 6076 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("hooks/useUnmountAbortSignal.tsx");

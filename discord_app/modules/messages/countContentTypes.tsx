@@ -1,6 +1,6 @@
-// === Module 11160: countContentTypes ===
+// === Module 11329: countContentTypes ===
 
-// Module 11160 (countContentTypes)
+// Module 11329 (countContentTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/countContentTypes.tsx");

@@ -1,6 +1,6 @@
-// === Module 11031: useMessagePreviewHeight ===
+// === Module 11200: useMessagePreviewHeight ===
 
-// Module 11031 (useMessagePreviewHeight)
+// Module 11200 (useMessagePreviewHeight)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

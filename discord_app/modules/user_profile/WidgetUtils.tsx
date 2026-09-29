@@ -1,22 +1,22 @@
-// === Module 7038: WidgetUtils ===
+// === Module 7203: WidgetUtils ===
 
-// Module 7038 (WidgetUtils)
+// Module 7203 (WidgetUtils)
 import util from "util" /* 1115 */;
 import dismissible_content from "dismissible_content" /* 2029 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4654 */;
-import GameWidgetLimits from "GameWidgetLimits" /* 5422 */;
-import utils from "utils" /* 5424 */;
-import useGame2 from "useGame" /* 6727 */;
-import WidgetType from "WidgetType" /* 7036 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7037 */;
-import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 7042 */;
-import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7043 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7044 */;
-import WidgetGameTag from "WidgetGameTag" /* 7046 */;
+import GameWidgetLimits from "GameWidgetLimits" /* 5589 */;
+import utils from "utils" /* 5591 */;
+import useGame2 from "useGame" /* 6893 */;
+import WidgetType from "WidgetType" /* 7201 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7202 */;
+import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 7207 */;
+import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7208 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7209 */;
+import WidgetGameTag from "WidgetGameTag" /* 7211 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1372 */;
-import UserProfileStore from "UserProfileStore" /* 7035 */;
-import WidgetStore from "WidgetStore" /* 7039 */;
+import UserProfileStore from "UserProfileStore" /* 7200 */;
+import WidgetStore from "WidgetStore" /* 7204 */;
 
 require = fn;
 function findGameWidget(widgetType) {
@@ -85,10 +85,10 @@ function replaceWidgetInList(clipsGalleryWidget) {
     return items1;
   }
 }
-const UserProfileWidgetConstants = fn(7040);
+const UserProfileWidgetConstants = fn(7205);
 ({ WIDGET_TITLES_BY_TYPE: closure_7, WIDGETS_SUPPORTING_COMMENT: closure_8, WIDGETS_SUPPORTING_TAGS: closure_9 } = UserProfileWidgetConstants);
 const ContentDismissActionType = fn(2042).ContentDismissActionType;
-let closure_11 = fn(7041).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
+let closure_11 = fn(7206).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
 

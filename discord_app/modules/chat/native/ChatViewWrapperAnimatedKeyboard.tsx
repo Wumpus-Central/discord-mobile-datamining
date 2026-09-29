@@ -1,9 +1,9 @@
-// === Module 10893: ChatViewWrapperAnimatedKeyboard ===
+// === Module 11062: ChatViewWrapperAnimatedKeyboard ===
 
-// Module 10893 (ChatViewWrapperAnimatedKeyboard)
+// Module 11062 (ChatViewWrapperAnimatedKeyboard)
 import timing from "timing" /* 4837 */;
-import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5891 */;
-import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 10899 */;
+import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 6057 */;
+import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 11068 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

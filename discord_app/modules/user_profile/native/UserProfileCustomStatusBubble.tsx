@@ -1,17 +1,17 @@
-// === Module 10574: UserProfileCustomStatusBubble ===
+// === Module 10743: UserProfileCustomStatusBubble ===
 
-// Module 10574 (UserProfileCustomStatusBubble)
+// Module 10743 (UserProfileCustomStatusBubble)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import UserSettings from "UserSettings" /* 2021 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import FastImageDefault from "FastImage" /* 5899 */;
-import EmojiDefault from "Emoji" /* 6551 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6603 */;
-import inlineStyles from "inlineStyles" /* 7909 */;
-import CustomStatusUtils from "CustomStatusUtils" /* 10575 */;
+import FastImageDefault from "FastImage" /* 6065 */;
+import EmojiDefault from "Emoji" /* 6717 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6769 */;
+import inlineStyles from "inlineStyles" /* 8074 */;
+import CustomStatusUtils from "CustomStatusUtils" /* 10744 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -172,7 +172,7 @@ let closure_12 = createStyles.createStyles((arg0) => {
   return obj;
 });
 let closure_14 = { textVariant: "text-md/normal", emojiOnlyEmojiSize: 32, textMinWidth: 42, statusBubblePaddingHorizontal: 12, statusBubblePaddingVertical: 7 };
-let closure_15 = { [fn(6629).UserProfileThemeTypes.PREVIEW]: { textVariant: "text-sm/normal", emojiOnlyEmojiSize: 26, textMinWidth: 53, statusBubblePaddingHorizontal: 10, statusBubblePaddingVertical: 6 } };
+let closure_15 = { [fn(6795).UserProfileThemeTypes.PREVIEW]: { textVariant: "text-sm/normal", emojiOnlyEmojiSize: 26, textMinWidth: 53, statusBubblePaddingHorizontal: 10, statusBubblePaddingVertical: 6 } };
 createStyles = fn(4836);
 let closure_18 = createStyles.createStyles(() => ({ container: { alignItems: "center" } }));
 let size = fn(2);

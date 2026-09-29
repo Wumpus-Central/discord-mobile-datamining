@@ -1,11 +1,11 @@
-// === Module 6989: CollectiblesPurchaseRecord ===
+// === Module 7155: CollectiblesPurchaseRecord ===
 
-// Module 6989 (CollectiblesPurchaseRecord)
-import getPricesFromServerDefault from "getPricesFromServer" /* 5825 */;
-import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 6965 */;
+// Module 7155 (CollectiblesPurchaseRecord)
+import getPricesFromServerDefault from "getPricesFromServer" /* 5992 */;
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7131 */;
 
-let closure_3 = fn(6966).createCollectiblesItemsFromServerResponse;
-const fromServer = fn(6964).CollectiblesVariantProductRecord;
+let closure_3 = fn(7132).createCollectiblesItemsFromServerResponse;
+const fromServer = fn(7130).CollectiblesVariantProductRecord;
 let closure_5 = fn(1076).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
 const PREMIUM_TYPE_NONE = fn(1074).PREMIUM_TYPE_NONE;
 const prototype = function CollectiblesPurchaseRecord(arg0) {

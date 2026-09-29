@@ -1,6 +1,6 @@
-// === Module 10586: DoubleTapEmojiUpdatedToast ===
+// === Module 10755: DoubleTapEmojiUpdatedToast ===
 
-// Module 10586 (DoubleTapEmojiUpdatedToast)
+// Module 10755 (DoubleTapEmojiUpdatedToast)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
@@ -101,5 +101,5 @@ export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdated
     };
     ToastActionCreatorsDefault.open(obj4);
   }
-  obj = emoji(5266);
+  obj = emoji(5432);
 };

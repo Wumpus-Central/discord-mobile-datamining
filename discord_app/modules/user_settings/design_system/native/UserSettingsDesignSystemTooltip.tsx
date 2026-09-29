@@ -1,10 +1,10 @@
-// === Module 15390: UserSettingsDesignSystemTooltip ===
+// === Module 15565: UserSettingsDesignSystemTooltip ===
 
-// Module 15390 (UserSettingsDesignSystemTooltip)
+// Module 15565 (UserSettingsDesignSystemTooltip)
 import Text_Text from "Text/Text" /* 4832 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6544 */;
-import LayerScope from "LayerScope" /* 6577 */;
-import DeviceOrientation from "DeviceOrientation" /* 7780 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6710 */;
+import LayerScope from "LayerScope" /* 6743 */;
+import DeviceOrientation from "DeviceOrientation" /* 7945 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -50,11 +50,11 @@ function Content() {
     };
   }, items1);
   const tmp8 = first2(items, 2);
-  const tooltip = first1(10590).useTooltip(ref, memo);
+  const tooltip = first1(10759).useTooltip(ref, memo);
   const obj3 = { children: null };
   const obj4 = {
     style: tmp.container,
-    children: closure_5(first1(5281).Button, {
+    children: closure_5(first1(5447).Button, {
       ref,
       onPress() {
         closure_1(!first1);
@@ -64,7 +64,7 @@ function Content() {
       size: "md"
     })
   };
-  const items2 = [closure_5(View, obj4), closure_5(first1(6621).TableSwitchRow, { label: "Unlock Orientation", value: tmp9, onValueChange: tmp10 }), closure_5(first1(6621).TableSwitchRow, { label: "Enable Bottom Position", value: first2, onValueChange: tmp11[1] }), closure_5(TooltipNote, {})];
+  const items2 = [closure_5(View, obj4), closure_5(first1(6787).TableSwitchRow, { label: "Unlock Orientation", value: tmp9, onValueChange: tmp10 }), closure_5(first1(6787).TableSwitchRow, { label: "Enable Bottom Position", value: first2, onValueChange: tmp11[1] }), closure_5(TooltipNote, {})];
   obj3.children = items2;
   return closure_7(closure_6, obj3);
 }

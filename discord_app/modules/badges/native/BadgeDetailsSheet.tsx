@@ -1,18 +1,18 @@
-// === Module 10663: BadgeDetailsSheet ===
+// === Module 10832: BadgeDetailsSheet ===
 
-// Module 10663 (BadgeDetailsSheet)
+// Module 10832 (BadgeDetailsSheet)
 import nativeDefault from "native" /* 576 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 4787 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7642 */;
-import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 10655 */;
-import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 10662 */;
-import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 10765 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7807 */;
+import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 10824 */;
+import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 10831 */;
+import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 10934 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4825 */;
 import UserStore from "UserStore" /* 1372 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7637 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7802 */;
 
 require = fn;
 function BadgeAccessoryLine(segments) {
@@ -317,7 +317,7 @@ function BadgeDetailsSheetContent(badge) {
 get_ActivityIndicator = fn(17);
 ({ Platform, View: closure_4 } = get_ActivityIndicator);
 const UserSettingsSections = fn(1074).UserSettingsSections;
-let closure_9 = fn(6572).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_9 = fn(6738).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const createStyles = fn(4836);

@@ -1,10 +1,10 @@
-// === Module 9499: RTCDebugActionCreators ===
+// === Module 9666: RTCDebugActionCreators ===
 
-// Module 9499 (RTCDebugActionCreators)
+// Module 9666 (RTCDebugActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DiscordNativeDefault from "DiscordNative" /* 4450 */;
-import trackVoiceAndVideoSettingsUpdateDefault from "trackVoiceAndVideoSettingsUpdate" /* 9109 */;
-import RTCDebugStore from "RTCDebugStore" /* 9498 */;
+import trackVoiceAndVideoSettingsUpdateDefault from "trackVoiceAndVideoSettingsUpdate" /* 9274 */;
+import RTCDebugStore from "RTCDebugStore" /* 9665 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/RTCDebugActionCreators.tsx");

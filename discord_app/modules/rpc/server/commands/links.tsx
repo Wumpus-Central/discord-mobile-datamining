@@ -1,20 +1,20 @@
-// === Module 14043: links ===
+// === Module 14215: links ===
 
-// Module 14043 (links)
+// Module 14215 (links)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4458 */;
 import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4830 */;
-import openUserSettings from "openUserSettings" /* 6800 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8321 */;
-import RPCErrorDefault from "RPCError" /* 8770 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8773 */;
-import RPCHelpers from "RPCHelpers" /* 8775 */;
-import ActivityPopoutUtils from "ActivityPopoutUtils" /* 8827 */;
-import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 14023 */;
-import internalDeepLinks from "internalDeepLinks" /* 14044 */;
-import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 14045 */;
-import openActivityShareLinkModal from "openActivityShareLinkModal" /* 14047 */;
+import openUserSettings from "openUserSettings" /* 6966 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8486 */;
+import RPCErrorDefault from "RPCError" /* 8935 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8938 */;
+import RPCHelpers from "RPCHelpers" /* 8940 */;
+import ActivityPopoutUtils from "ActivityPopoutUtils" /* 8992 */;
+import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 14195 */;
+import internalDeepLinks from "internalDeepLinks" /* 14216 */;
+import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 14217 */;
+import openActivityShareLinkModal from "openActivityShareLinkModal" /* 14219 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
 import ApplicationStore from "ApplicationStore" /* 5063 */;
@@ -146,7 +146,7 @@ let closure_13 = async function _openExternalLink(arg0) {
           } else {
             new Promise((arg0) => {
               closure_0 = arg0;
-              let obj = closure_1_0(7818);
+              let obj = closure_1_0(7983);
               const obj2 = {
                 href: dependencyMap,
                 shouldConfirm: true,
@@ -174,7 +174,7 @@ let closure_13 = async function _openExternalLink(arg0) {
                   closure_0({ opened: false });
                 }
               };
-              return obj.handleClick(obj2, undefined, undefined, closure_1_0(14046).getActivitiesModalContextKey({ application, channelId }));
+              return obj.handleClick(obj2, undefined, undefined, closure_1_0(14218).getActivitiesModalContextKey({ application, channelId }));
             });
           }
           c5 = 0;
@@ -338,7 +338,7 @@ obj3 = {
 };
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
-const CONTEXT_MENU_ICON_NAMES = fn(14038);
+const CONTEXT_MENU_ICON_NAMES = fn(14210);
 let obj5 = {
   scope: null,
   handler(arg0) {

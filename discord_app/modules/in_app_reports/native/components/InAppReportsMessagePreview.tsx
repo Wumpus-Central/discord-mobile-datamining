@@ -1,12 +1,12 @@
-// === Module 8111: InAppReportsMessagePreview ===
+// === Module 8276: InAppReportsMessagePreview ===
 
-// Module 8111 (InAppReportsMessagePreview)
+// Module 8276 (InAppReportsMessagePreview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import ColorUtils from "ColorUtils" /* 4683 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import RowGeneratorDefault from "RowGenerator" /* 7374 */;
-import ChatItemDefault from "ChatItem" /* 8112 */;
+import RowGeneratorDefault from "RowGenerator" /* 7539 */;
+import ChatItemDefault from "ChatItem" /* 8277 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

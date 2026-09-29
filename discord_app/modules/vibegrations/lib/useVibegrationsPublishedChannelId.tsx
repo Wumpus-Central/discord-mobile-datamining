@@ -1,7 +1,7 @@
-// === Module 16275: useVibegrationsPublishedChannelId ===
+// === Module 16455: useVibegrationsPublishedChannelId ===
 
-// Module 16275 (useVibegrationsPublishedChannelId)
-import VibegrationsUtils from "VibegrationsUtils" /* 5370 */;
+// Module 16455 (useVibegrationsPublishedChannelId)
+import VibegrationsUtils from "VibegrationsUtils" /* 5536 */;
 import GuildChannelStore from "GuildChannelStore" /* 4467 */;
 
 const require = globalThis.__r;

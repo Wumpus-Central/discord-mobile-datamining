@@ -1,9 +1,9 @@
-// === Module 16393: VibegrationsStatusLabels ===
+// === Module 16578: VibegrationsStatusLabels ===
 
-// Module 16393 (VibegrationsStatusLabels)
+// Module 16578 (VibegrationsStatusLabels)
 import util from "util" /* 1115 */;
 import _modDef3715 from "module_3715" /* 3715 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 5371 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 5537 */;
 
 require = fn;
 function thinkingLabel(restoring) {
@@ -61,14 +61,14 @@ export const isRecallingLine = function isRecallingLine(current) {
     return intl.string(item) === closure_0;
   });
 };
-export const connectionLabel = function connectionLabel(stateFromStores6) {
-  if ("connecting" === stateFromStores6) {
+export const connectionLabel = function connectionLabel(stateFromStores7) {
+  if ("connecting" === stateFromStores7) {
     const intl3 = util.intl;
     return intl3.string(_modDef3715.W7oyuf);
-  } else if ("closed" === stateFromStores6) {
+  } else if ("closed" === stateFromStores7) {
     const intl2 = util.intl;
     return intl2.string(_modDef3715["yBmS+I"]);
-  } else if ("failed" === stateFromStores6) {
+  } else if ("failed" === stateFromStores7) {
     const intl = util.intl;
     return intl.string(_modDef3715.eE60xI);
   }

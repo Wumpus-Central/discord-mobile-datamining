@@ -1,13 +1,13 @@
-// === Module 10369: UserNameplateRow ===
+// === Module 10538: UserNameplateRow ===
 
-// Module 10369 (UserNameplateRow)
+// Module 10538 (UserNameplateRow)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4531 */;
-import TableRowDivider from "TableRowDivider" /* 5914 */;
-import TableRow from "TableRow" /* 5917 */;
-import TableRowGroupContext from "TableRowGroupContext" /* 5918 */;
-import Card from "Card" /* 5919 */;
-import NameplateDefault from "Nameplate" /* 8281 */;
+import TableRowDivider from "TableRowDivider" /* 6080 */;
+import TableRow from "TableRow" /* 6083 */;
+import TableRowGroupContext from "TableRowGroupContext" /* 6084 */;
+import Card from "Card" /* 6085 */;
+import NameplateDefault from "Nameplate" /* 8446 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

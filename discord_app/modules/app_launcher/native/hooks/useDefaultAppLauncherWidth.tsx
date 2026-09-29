@@ -1,9 +1,9 @@
-// === Module 10786: useDefaultAppLauncherWidth ===
+// === Module 10955: useDefaultAppLauncherWidth ===
 
-// Module 10786 (useDefaultAppLauncherWidth)
+// Module 10955 (useDefaultAppLauncherWidth)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1479 */;
-import ActionSheetConstants from "ActionSheetConstants" /* 6572 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 8712 */;
+import ActionSheetConstants from "ActionSheetConstants" /* 6738 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 8877 */;
 import size from "module_2" /* 2 */;
 
 const ACTION_SHEET_MAX_WIDTH = ActionSheetConstants.ACTION_SHEET_MAX_WIDTH;

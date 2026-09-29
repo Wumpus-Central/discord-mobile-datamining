@@ -1,6 +1,6 @@
-// === Module 17632: clips/ClipsManager ===
+// === Module 17821: clips/ClipsManager ===
 
-// Module 17632 (clips/ClipsManager)
+// Module 17821 (clips/ClipsManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
@@ -8,22 +8,22 @@ import UserSettings from "UserSettings" /* 2021 */;
 import DiscordNativeDefault from "DiscordNative" /* 4450 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 4888 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4891 */;
-import isClipsEnabled from "isClipsEnabled" /* 13218 */;
-import ClipsExperiment from "ClipsExperiment" /* 13219 */;
-import isClientClipsCapableDefault from "isClientClipsCapable" /* 13220 */;
+import isClipsEnabled from "isClipsEnabled" /* 13388 */;
+import ClipsExperiment from "ClipsExperiment" /* 13389 */;
+import isClientClipsCapableDefault from "isClientClipsCapable" /* 13390 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1993 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4859 */;
 import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4875 */;
 import ClipsStore from "ClipsStore" /* 1999 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6539 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6705 */;
 
 const StreamKeyUtilsAll = StreamKeyUtils;
 
 require = fn;
 const getSystemAnalyticsInfo = fn(4881).getSystemAnalyticsInfo;
-const ClipsConstants = fn(5444);
+const ClipsConstants = fn(5611);
 ({ WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX: closure_11, WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: closure_12, CLIPS_HARDWARE_CLASSIFICATION_VERSION: map1, ClipsHardwareClassification: closure_14, CLIP_RUNTIME: closure_15 } = ClipsConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_16, RTCConnectionStates: closure_17 } = Constants);

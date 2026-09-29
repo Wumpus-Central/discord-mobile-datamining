@@ -1,14 +1,13 @@
-// === Module 16303: VibegrationsPublishNotesSheet ===
+// === Module 16418: VibegrationsPublishNotesSheet ===
 
-// Module 16303 (VibegrationsPublishNotesSheet)
+// Module 16418 (VibegrationsPublishNotesSheet)
 import nativeDefault from "native" /* 576 */;
-import router_utils from "router_utils" /* 1101 */;
 import util from "util" /* 1115 */;
 import _modDef3715 from "module_3715" /* 3715 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4800 */;
-import VibegrationsUtils from "VibegrationsUtils" /* 5370 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 10872 */;
-import VibegrationsPatchNotesChannel from "VibegrationsPatchNotesChannel" /* 16304 */;
+import VibegrationsUtils from "VibegrationsUtils" /* 5536 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11041 */;
+import VibegrationsPatchNotesChannel from "VibegrationsPatchNotesChannel" /* 16419 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -21,13 +20,12 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
 let closure_9 = fn(4467).GUILD_SELECTABLE_CHANNELS_KEY;
-const Routes = fn(1074).Routes;
 const MessageSendLocation = fn(4829).MessageSendLocation;
 const jsxProd = fn(21);
-({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
+({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const VibegrationsPublishNotesSheet = "VibegrationsPublishNotesSheet";
 const createStyles = fn(4836);
-let closure_18 = createStyles.createStyles((paddingBottom) => {
+let closure_17 = createStyles.createStyles((paddingBottom) => {
   const obj = { container: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom }, section: null, notesSection: null, statusRow: null, actions: null };
   const obj2 = { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom };
   obj.section = { gap: nativeDefault.space.PX_8 };
@@ -53,12 +51,13 @@ export default function VibegrationsPublishNotesSheet(guildId) {
   c12 = undefined;
   c13 = undefined;
   c14 = undefined;
+  let found;
   let trimmed;
   c19 = undefined;
   let callback2;
-  const tmp3 = trimmed(applicationId(publish[13])({ includeKeyboardHeight: true }).insets.bottom);
+  const tmp3 = found(applicationId(publish[12])({ includeKeyboardHeight: true }).insets.bottom);
   const items = [first];
-  const stateFromStores = guildId(publish[14]).useStateFromStores(items, () => {
+  const stateFromStores = guildId(publish[13]).useStateFromStores(items, () => {
     found = GuildChannelStore.getChannels(guildId)[closure_9].filter((channel) => {
       channel = channel.channel;
       const isGuildVocalResult = channel.isGuildVocal();
@@ -73,16 +72,16 @@ export default function VibegrationsPublishNotesSheet(guildId) {
     });
     return found.map((channel) => channel.channel);
   });
-  let obj = guildId(publish[14]);
+  let obj = guildId(publish[13]);
   const items1 = [first];
   const items2 = [guildId, applicationId];
-  const stateFromStores1 = guildId(publish[14]).useStateFromStores(items1, () => VibegrationsUtils.findVibegrationChannelId(guildId, applicationId), items2);
-  let obj2 = guildId(publish[14]);
-  const tmp6 = applicationId(publish[16])();
-  const diff = tmp6 - guildId(publish[17]).formatPlaySuffix(guildId(publish[17]).PLAY_LINE_CHANNEL_PLACEHOLDER).length;
+  const stateFromStores1 = guildId(publish[13]).useStateFromStores(items1, () => VibegrationsUtils.findVibegrationChannelId(guildId, applicationId), items2);
+  let obj2 = guildId(publish[13]);
+  const tmp6 = applicationId(publish[15])();
+  const diff = tmp6 - guildId(publish[16]).formatPlaySuffix(guildId(publish[16]).PLAY_LINE_CHANNEL_PLACEHOLDER).length;
   let ref = stateFromStores1.useRef(diff);
   ref.current = diff;
-  let obj3 = guildId(publish[17]);
+  let obj3 = guildId(publish[16]);
   [tmp10, c7] = stateFromStores(stateFromStores1.useState("publishing"), 2);
   const tmp11 = stateFromStores(stateFromStores1.useState(() => {
     const result = VibegrationsPatchNotesChannel.lastPatchNotesChannel(applicationId);
@@ -168,7 +167,7 @@ export default function VibegrationsPublishNotesSheet(guildId) {
       c0 = true;
     };
   }, items5);
-  let found = null;
+  found = null;
   const callback = stateFromStores1.useCallback((arg0) => {
     closure_15.current = true;
     _undefined2(false);
@@ -184,8 +183,8 @@ export default function VibegrationsPublishNotesSheet(guildId) {
   let formatPlaySuffixResult = null;
   if (null != stateFromStores1) {
     let _HermesInternal = HermesInternal;
-    formatPlaySuffixResult = tmp4(tmp2[17]).formatPlaySuffix("<#" + stateFromStores1 + ">");
-    const tmp4Result = tmp4(tmp2[17]);
+    formatPlaySuffixResult = tmp4(tmp2[16]).formatPlaySuffix("<#" + stateFromStores1 + ">");
+    const tmp4Result = tmp4(tmp2[16]);
   }
   c19 = formatPlaySuffixResult;
   const items6 = [stateFromStores, guildId, found];
@@ -204,24 +203,14 @@ export default function VibegrationsPublishNotesSheet(guildId) {
       ref.current = true;
       closure_1_9(id.id);
     };
-    obj2.content = __initData(ChannelPickerActionSheetDefault, obj3);
+    obj2.content = closure_2_14(ChannelPickerActionSheetDefault, obj3);
     obj.showActionSheet(obj2);
   }, items6);
   callback2 = obj4.useCallback(() => {
-    applicationId(publish[18]).hideActionSheet(found);
+    applicationId(publish[17]).hideActionSheet(closure_16);
   }, []);
-  const items7 = [stateFromStores1, guildId, callback2];
-  const callback3 = obj4.useCallback(() => {
-    if (null == stateFromStores1) {
-      let CHANNELResult = Routes.CHANNEL(guildId);
-    } else {
-      CHANNELResult = Routes.CHANNEL(guildId, tmp);
-    }
-    router_utils.transitionTo(CHANNELResult);
-    callback2();
-  }, items7);
-  const items8 = [found, trimmed, formatPlaySuffixResult, applicationId, callback2];
-  const callback4 = obj4.useCallback(initialDraft(function*() {
+  const items7 = [found, trimmed, formatPlaySuffixResult, applicationId, callback2];
+  const callback3 = obj4.useCallback(initialDraft(function*() {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -258,9 +247,9 @@ export default function VibegrationsPublishNotesSheet(guildId) {
                   const _HermesInternal = HermesInternal;
                   combined = "" + trimmed + tmp34;
                 }
-                const parsed = tmp3(7095).parse(found, combined);
-                const tmp31Result = tmp3(6876);
-                const obj5 = { location: _undefined2.VIBEGRATIONS_PATCH_NOTES };
+                const parsed = tmp3(7260).parse(found, combined);
+                const tmp31Result = tmp3(7042);
+                const obj5 = { location: _undefined.VIBEGRATIONS_PATCH_NOTES };
                 c3 = 2;
                 c4 = 1;
                 const obj6 = { value: tmp31Result.sendMessage(found.id, parsed, false, obj5), done: false };
@@ -288,10 +277,10 @@ export default function VibegrationsPublishNotesSheet(guildId) {
               ok = closure_128_0.ok;
             }
             if (false !== ok) {
-              const result = guildId(16304).rememberPatchNotesChannel(closure_129_1, closure_129_17.id);
+              const result = guildId(16419).rememberPatchNotesChannel(closure_129_1, closure_129_17.id);
               closure_129_20();
               dependencyMap = 0;
-              const obj = guildId(16304);
+              const obj = guildId(16419);
             }
           }
           const _Error = Error;
@@ -308,82 +297,79 @@ export default function VibegrationsPublishNotesSheet(guildId) {
         }
       }
     }
-  }), items8);
+  }), items7);
   let obj5 = { startExpanded: true, header: null, children: null };
   let obj6 = { title: null };
-  let intl = tmp4(tmp2[20]).intl;
-  obj6.title = intl.formatToPlainString(applicationId(publish[21]).gOv8LL, { projectName });
-  obj5.header = closure_15(guildId(publish[26]).BottomSheetTitleHeader, obj6);
+  let intl = tmp4(tmp2[19]).intl;
+  obj6.title = intl.formatToPlainString(applicationId(publish[20]).gOv8LL, { projectName });
+  obj5.header = c14(guildId(publish[24]).BottomSheetTitleHeader, obj6);
   let obj7 = { style: tmp3.container, children: null };
   const obj8 = { style: tmp3.section, children: null };
   const obj9 = { variant: "heading-md/semibold", color: "text-default", children: null };
-  const intl2 = tmp4(tmp2[20]).intl;
-  obj9.children = intl2.string(applicationId(publish[21]).tqtMyS);
-  const items9 = [closure_15(guildId(publish[27]).Text, obj9), ];
+  const intl2 = tmp4(tmp2[19]).intl;
+  obj9.children = intl2.string(applicationId(publish[20]).tqtMyS);
+  const items8 = [c14(guildId(publish[25]).Text, obj9), ];
   if ("publishing" === tmp10) {
     const obj10 = { style: tmp3.statusRow, children: null };
-    const items10 = [tmp32(ref, { size: "small" }), ];
+    const items9 = [tmp31(ref, { size: "small" }), ];
     const obj11 = { variant: "text-md/medium", color: "text-subtle", children: null };
-    const intl6 = tmp4(tmp2[20]).intl;
+    const intl5 = tmp4(tmp2[19]).intl;
     const obj12 = { projectName };
-    obj11.children = intl6.formatToPlainString(tmp(tmp2[21]).g5fncX, obj12);
-    items10[1] = tmp32(tmp4(tmp2[27]).Text, obj11);
-    obj10.children = items10;
-    let tmp32Result = tmp33(tmp34, obj10);
+    obj11.children = intl5.formatToPlainString(tmp(tmp2[20]).g5fncX, obj12);
+    items9[1] = tmp31(tmp4(tmp2[25]).Text, obj11);
+    obj10.children = items9;
+    let tmp31Result = tmp32(tmp33, obj10);
   } else {
     if ("succeeded" === tmp10) {
       const obj13 = { variant: "text-md/medium", color: "text-feedback-positive", children: null };
-      const intl4 = tmp4(tmp2[20]).intl;
-      const obj14 = { projectName, link: null, onNavigate: null };
-      const intl5 = tmp4(tmp2[20]).intl;
-      obj14.link = intl5.string(tmp4(tmp2[20]).t.jVcuVY);
-      obj14.onNavigate = callback3;
-      obj13.children = intl4.format(tmp(tmp2[21]).MsXuP8, obj14);
+      const intl4 = tmp4(tmp2[19]).intl;
+      const obj14 = { projectName };
+      obj13.children = intl4.formatToPlainString(tmp(tmp2[20]).CC69wK, obj14);
       let obj15 = obj13;
     } else {
       obj15 = { variant: "text-md/medium", color: "text-feedback-critical", children: null };
-      const intl3 = tmp4(tmp2[20]).intl;
-      obj15.children = intl3.string(tmp(tmp2[21]).fNP6Cd);
+      const intl3 = tmp4(tmp2[19]).intl;
+      obj15.children = intl3.string(tmp(tmp2[20]).fNP6Cd);
     }
-    tmp32Result = tmp32(tmp4(tmp2[27]).Text, obj15);
+    tmp31Result = tmp31(tmp4(tmp2[25]).Text, obj15);
   }
-  items9[1] = tmp32Result;
-  obj8.children = items9;
-  const items11 = [ref(c7, obj8), , ];
-  let tmp33Result2 = null;
+  items8[1] = tmp31Result;
+  obj8.children = items8;
+  const items10 = [closure_15(c7, obj8), , ];
+  let tmp32Result2 = null;
   if (stateFromStores.length > 0) {
     const obj16 = { style: tmp3.notesSection, children: null };
     const obj17 = { label: null, placeholder: null, description: null, errorMessage: null, maxLength: null, value: null, onChange: null, disabled: null };
-    const intl7 = tmp4(tmp2[20]).intl;
-    obj17.label = intl7.string(tmp(tmp2[21]).oouynk);
-    const intl8 = tmp4(tmp2[20]).intl;
-    const tmpResult = tmp(tmp2[21]);
-    obj17.placeholder = intl8.string(tmp14[0] ? tmpResult.VQhlkB : tmpResult.xkxDN1);
+    const intl6 = tmp4(tmp2[19]).intl;
+    obj17.label = intl6.string(tmp(tmp2[20]).oouynk);
+    const intl7 = tmp4(tmp2[19]).intl;
+    const tmpResult = tmp(tmp2[20]);
+    obj17.placeholder = intl7.string(tmp14[0] ? tmpResult.VQhlkB : tmpResult.xkxDN1);
     let stringResult;
     if (tmp16) {
-      const intl9 = tmp4(tmp2[20]).intl;
-      stringResult = intl9.string(tmp(tmp2[21]).PCST1n);
+      const intl8 = tmp4(tmp2[19]).intl;
+      stringResult = intl8.string(tmp(tmp2[20]).PCST1n);
     }
     obj17.description = stringResult;
     let stringResult1;
     if (tmp20) {
-      const intl10 = tmp4(tmp2[20]).intl;
-      stringResult1 = intl10.string(tmp(tmp2[21]).P6SoGm);
+      const intl9 = tmp4(tmp2[19]).intl;
+      stringResult1 = intl9.string(tmp(tmp2[20]).P6SoGm);
     }
     obj17.errorMessage = stringResult1;
     obj17.maxLength = diff;
     obj17.value = str;
     obj17.onChange = callback;
     obj17.disabled = tmp18;
-    const items12 = [tmp32(tmp4(tmp2[28]).TextArea, obj17), ];
-    const intl11 = tmp4(tmp2[20]).intl;
+    const items11 = [tmp31(tmp4(tmp2[26]).TextArea, obj17), ];
+    const intl10 = tmp4(tmp2[19]).intl;
     if (null != found) {
       const _HermesInternal2 = HermesInternal;
-      let combined = "#" + tmp4(tmp2[29]).computeChannelName(found, c12, closure_11);
-      const tmp4Result2 = tmp4(tmp2[29]);
+      let combined = "#" + tmp4(tmp2[27]).computeChannelName(found, c12, closure_11);
+      const tmp4Result2 = tmp4(tmp2[27]);
     } else {
-      const intl12 = tmp4(tmp2[20]).intl;
-      combined = intl12.string(tmp(tmp2[21])["8qO519"]);
+      const intl11 = tmp4(tmp2[19]).intl;
+      combined = intl11.string(tmp(tmp2[20])["8qO519"]);
     }
     const obj18 = { channel: combined, onPick: null };
     let fn = callback1;
@@ -394,32 +380,32 @@ export default function VibegrationsPublishNotesSheet(guildId) {
     }
     const obj19 = { variant: "text-md/medium", color: "text-subtle", children: null };
     obj18.onPick = fn;
-    obj19.children = intl11.format(tmp(tmp2[21]).unJ01l, obj18);
-    items12[1] = tmp32(tmp4(tmp2[27]).Text, obj19);
-    obj16.children = items12;
-    tmp33Result2 = tmp33(tmp34, obj16);
+    obj19.children = intl10.format(tmp(tmp2[20]).unJ01l, obj18);
+    items11[1] = tmp31(tmp4(tmp2[25]).Text, obj19);
+    obj16.children = items11;
+    tmp32Result2 = tmp32(tmp33, obj16);
   }
-  items11[1] = tmp33Result2;
+  items10[1] = tmp32Result2;
   const obj20 = { style: tmp3.actions, children: null };
-  const intl13 = tmp4(tmp2[20]).intl;
+  const intl12 = tmp4(tmp2[19]).intl;
   if ("failed" === tmp10) {
-    let NmaE9T = tmp4(tmp2[20]).t.cpT0Cq;
+    let NmaE9T = tmp4(tmp2[19]).t.cpT0Cq;
   } else {
-    NmaE9T = tmp(tmp2[21]).NmaE9T;
+    NmaE9T = tmp(tmp2[20]).NmaE9T;
   }
   const tmp19 = stateFromStores(stateFromStores1.useState(false), 2);
-  const items13 = [closure_15(guildId(publish[30]).Button, { variant: "tertiary", grow: true, text: intl13.string(NmaE9T), onPress: callback2 }), ];
+  const items12 = [c14(guildId(publish[28]).Button, { variant: "tertiary", grow: true, text: intl12.string(NmaE9T), onPress: callback2 }), ];
   const obj22 = { variant: "primary", grow: true, text: null, loading: null, disabled: null, onPress: null };
-  const intl14 = tmp4(tmp2[20]).intl;
-  obj22.text = intl14.string(applicationId(publish[21]).dx7eQG);
+  const intl13 = tmp4(tmp2[19]).intl;
+  obj22.text = intl13.string(applicationId(publish[20]).dx7eQG);
   obj22.loading = tmp18;
   obj22.disabled = "succeeded" !== tmp10 || "" === trimmed || trimmed.length > diff || null == found || tmp18;
-  obj22.onPress = callback4;
-  items13[1] = closure_15(guildId(publish[30]).Button, obj22);
-  obj20.children = items13;
-  items11[2] = ref(c7, obj20);
-  obj7.children = items11;
-  obj5.children = ref(c7, obj7);
-  return closure_15(guildId(publish[25]).ActionSheet, obj5);
+  obj22.onPress = callback3;
+  items12[1] = c14(guildId(publish[28]).Button, obj22);
+  obj20.children = items12;
+  items10[2] = closure_15(c7, obj20);
+  obj7.children = items10;
+  obj5.children = closure_15(c7, obj7);
+  return c14(guildId(publish[23]).ActionSheet, obj5);
 };
 export const VIBEGRATIONS_PUBLISH_NOTES_SHEET_KEY = "VibegrationsPublishNotesSheet";

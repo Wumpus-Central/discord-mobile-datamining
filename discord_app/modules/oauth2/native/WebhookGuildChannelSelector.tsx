@@ -1,6 +1,6 @@
-// === Module 8730: WebhookGuildChannelSelector ===
+// === Module 8895: WebhookGuildChannelSelector ===
 
-// Module 8730 (WebhookGuildChannelSelector)
+// Module 8895 (WebhookGuildChannelSelector)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
@@ -60,8 +60,8 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
         selectedChannelId(onChannelChange[10]).hideActionSheet(WebhookGuildChannelSelector);
       };
       obj2.selectedItem = selectedChannelId;
-      obj.openLazy(asyncRequireImpl(8729, dependencyMap.paths), WebhookGuildChannelSelector, obj2);
-      const tmp7 = asyncRequireImpl(8729, dependencyMap.paths);
+      obj.openLazy(asyncRequireImpl(8894, dependencyMap.paths), WebhookGuildChannelSelector, obj2);
+      const tmp7 = asyncRequireImpl(8894, dependencyMap.paths);
     }
   }, items);
   const effect = noop.useEffect(() => {

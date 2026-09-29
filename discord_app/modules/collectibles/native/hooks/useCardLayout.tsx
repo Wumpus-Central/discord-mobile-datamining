@@ -1,8 +1,8 @@
-// === Module 15442: useCardLayout ===
+// === Module 15617: useCardLayout ===
 
-// Module 15442 (useCardLayout)
+// Module 15617 (useCardLayout)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1479 */;
-import CollectiblesShopCardV2 from "CollectiblesShopCardV2" /* 8226 */;
+import CollectiblesShopCardV2 from "CollectiblesShopCardV2" /* 8391 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/collectibles/native/hooks/useCardLayout.tsx");
@@ -14,7 +14,7 @@ export const useCardLayout = function useCardLayout() {
     num = 2;
   }
   if (num < 2) {
-    const obj2 = { columns: num, cardWidth: "Array", rowWidth: "text" };
+    const obj2 = { columns: num, cardWidth: "Array", rowWidth: "channel" };
     return obj2;
   } else {
     let num2 = 2;
@@ -62,11 +62,11 @@ export const useCardLayout = function useCardLayout() {
     }
     const _Math2 = Math;
     const _Math3 = Math;
-    const bound1 = Math.max(tmp11, tmp14(8226).COLLECTIBLES_SHOP_CARD_WIDTH);
-    const bound2 = Math.min(bound1, tmp14(8226).COLLECTIBLES_SHOP_CARD_MAX_WIDTH);
+    const bound1 = Math.max(tmp11, tmp14(8391).COLLECTIBLES_SHOP_CARD_WIDTH);
+    const bound2 = Math.min(bound1, tmp14(8391).COLLECTIBLES_SHOP_CARD_MAX_WIDTH);
     const result3 = bound2 * tmp12;
     const diff2 = tmp12 - 1;
-    if (result3 + (bound + tmp10(8226).COLLECTIBLES_SHOP_CARD_GAP * diff2) > width) {
+    if (result3 + (bound + tmp10(8391).COLLECTIBLES_SHOP_CARD_GAP * diff2) > width) {
       if (1 < tmp12) {
         let obj = { columns: 1, cardWidth: "Array", rowWidth: "add" };
       }
@@ -74,6 +74,6 @@ export const useCardLayout = function useCardLayout() {
     }
     obj = { columns: tmp12, cardWidth: bound2, rowWidth: null };
     const result4 = bound2 * tmp12;
-    obj.rowWidth = result4 + tmp14(8226).COLLECTIBLES_SHOP_CARD_GAP * diff2;
+    obj.rowWidth = result4 + tmp14(8391).COLLECTIBLES_SHOP_CARD_GAP * diff2;
   }
 };

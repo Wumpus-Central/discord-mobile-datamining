@@ -1,6 +1,6 @@
-// === Module 15609: usePromoEmailOptInLabel ===
+// === Module 15784: usePromoEmailOptInLabel ===
 
-// Module 15609 (usePromoEmailOptInLabel)
+// Module 15784 (usePromoEmailOptInLabel)
 import util from "util" /* 1115 */;
 import size from "module_2" /* 2 */;
 

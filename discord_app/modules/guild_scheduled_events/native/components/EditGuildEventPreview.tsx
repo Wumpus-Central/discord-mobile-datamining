@@ -1,13 +1,13 @@
-// === Module 9058: EditGuildEventPreview ===
+// === Module 9223: EditGuildEventPreview ===
 
-// Module 9058 (EditGuildEventPreview)
+// Module 9223 (EditGuildEventPreview)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5204 */;
-import ScheduleUtils from "ScheduleUtils" /* 8946 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8982 */;
-import guildEventDetailsParser from "guildEventDetailsParser" /* 9061 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5370 */;
+import ScheduleUtils from "ScheduleUtils" /* 9111 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 9147 */;
+import guildEventDetailsParser from "guildEventDetailsParser" /* 9226 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 
@@ -44,7 +44,7 @@ function PreviewBody(event) {
     const intl2 = tmp2(1115).intl;
     const obj6 = { channelName: null };
     const obj7 = { channel: stateFromStores };
-    obj6.channelName = tmp5(9060)(obj7);
+    obj6.channelName = tmp5(9225)(obj7);
     formatToPlainStringResult = intl2.formatToPlainString(tmp2(1115).t.sxcQPE, obj6);
   }
   obj5.accessibilityLabel = formatToPlainStringResult;

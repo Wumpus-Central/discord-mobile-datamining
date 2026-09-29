@@ -1,6 +1,6 @@
-// === Module 9111: VideoBackgroundStore ===
+// === Module 9276: VideoBackgroundStore ===
 
-// Module 9111 (VideoBackgroundStore)
+// Module 9276 (VideoBackgroundStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4891 */;

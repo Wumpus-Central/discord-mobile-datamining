@@ -1,8 +1,8 @@
-// === Module 15842: NewMemberActionsProgress ===
+// === Module 16017: NewMemberActionsProgress ===
 
-// Module 15842 (NewMemberActionsProgress)
+// Module 16017 (NewMemberActionsProgress)
 import nativeDefault from "native" /* 576 */;
-import LinearGradientDefault from "LinearGradient" /* 5293 */;
+import LinearGradientDefault from "LinearGradient" /* 5459 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2108 */;
 import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 5023 */;

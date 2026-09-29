@@ -1,6 +1,6 @@
-// === Module 15566: createChatPanelNativeStackNavigator ===
+// === Module 15741: createChatPanelNativeStackNavigator ===
 
-// Module 15566 (createChatPanelNativeStackNavigator)
+// Module 15741 (createChatPanelNativeStackNavigator)
 import Link from "Link" /* 1486 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4692 */;
 import noop from "module_19" /* 19 */;

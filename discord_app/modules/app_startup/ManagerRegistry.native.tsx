@@ -1,7 +1,7 @@
-// === Module 17080: ManagerRegistry ===
+// === Module 17267: ManagerRegistry ===
 
-// Module 17080 (ManagerRegistry)
-import ManagerRegistryShared from "ManagerRegistryShared" /* 17720 */;
+// Module 17267 (ManagerRegistry)
+import ManagerRegistryShared from "ManagerRegistryShared" /* 17909 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -445,7 +445,7 @@ const obj = {
     loadAfterConnectionOpen: true
   },
   ParentalConsentManager: {
-    actions: ["CONNECTION_OPEN_SUPPLEMENTAL"],
+    actions: ["CONNECTION_OPEN_SUPPLEMENTAL", "APP_STATE_UPDATE"],
     inlineRequire() {
       return require("ParentalConsentManager").default;
     },

@@ -1,6 +1,6 @@
-// === Module 8672: ReferralTrialCtaExperiment ===
+// === Module 8837: ReferralTrialCtaExperiment ===
 
-// Module 8672 (ReferralTrialCtaExperiment)
+// Module 8837 (ReferralTrialCtaExperiment)
 import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 

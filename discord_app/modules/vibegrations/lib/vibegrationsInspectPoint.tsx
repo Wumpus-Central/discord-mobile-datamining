@@ -1,7 +1,7 @@
-// === Module 12445: vibegrationsInspectPoint ===
+// === Module 12616: vibegrationsInspectPoint ===
 
-// Module 12445 (vibegrationsInspectPoint)
-import vibegrationsPreviewCall from "vibegrationsPreviewCall" /* 8750 */;
+// Module 12616 (vibegrationsInspectPoint)
+import vibegrationsPreviewCall from "vibegrationsPreviewCall" /* 8915 */;
 import size from "module_2" /* 2 */;
 
 function targetFromPreviewElement(element) {

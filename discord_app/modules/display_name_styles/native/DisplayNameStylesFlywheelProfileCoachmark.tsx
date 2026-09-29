@@ -1,7 +1,7 @@
-// === Module 16621: DisplayNameStylesFlywheelProfileCoachmark ===
+// === Module 16809: DisplayNameStylesFlywheelProfileCoachmark ===
 
-// Module 16621 (DisplayNameStylesFlywheelProfileCoachmark)
-import DisplayNameLockeAbstractUI from "DisplayNameLockeAbstractUI" /* 16622 */;
+// Module 16809 (DisplayNameStylesFlywheelProfileCoachmark)
+import DisplayNameLockeAbstractUI from "DisplayNameLockeAbstractUI" /* 16810 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -62,6 +62,6 @@ export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
     }
   }), items2);
   const obj2 = markAsDismissed(4488);
-  const coachmark = visible(10589).useCoachmark(visible.targetRef, memo);
+  const coachmark = visible(10758).useCoachmark(visible.targetRef, memo);
   return null;
 };

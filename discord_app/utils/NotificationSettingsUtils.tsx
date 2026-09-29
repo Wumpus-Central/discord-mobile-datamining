@@ -1,10 +1,10 @@
-// === Module 6535: NotificationSettingsUtils ===
+// === Module 6701: NotificationSettingsUtils ===
 
-// Module 6535 (NotificationSettingsUtils)
+// Module 6701 (NotificationSettingsUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import FlagUtils from "FlagUtils" /* 1385 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5016 */;
-import LastMentionTimestampStore from "LastMentionTimestampStore" /* 6536 */;
+import LastMentionTimestampStore from "LastMentionTimestampStore" /* 6702 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import MessageStore from "MessageStore" /* 5056 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5017 */;

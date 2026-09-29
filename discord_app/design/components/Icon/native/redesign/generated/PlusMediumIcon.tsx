@@ -1,9 +1,9 @@
-// === Module 12269: PlusMediumIcon ===
+// === Module 12440: PlusMediumIcon ===
 
-// Module 12269 (PlusMediumIcon)
+// Module 12440 (PlusMediumIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4530 */;
-import _mod11681 from "module_11681" /* 11681 */;
+import _mod11850 from "module_11850" /* 11850 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const PlusMediumIcon = function PlusMediumIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11681, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11850, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

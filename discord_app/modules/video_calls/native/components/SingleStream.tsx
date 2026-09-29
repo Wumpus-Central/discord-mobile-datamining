@@ -1,12 +1,12 @@
-// === Module 9485: SingleStream ===
+// === Module 9652: SingleStream ===
 
-// Module 9485 (SingleStream)
+// Module 9652 (SingleStream)
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5037 */;
-import StreamTileDefault from "StreamTile" /* 8872 */;
+import StreamTileDefault from "StreamTile" /* 9037 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const ChannelCallStore = fn(8829);
+const ChannelCallStore = fn(8994);
 ({ toggleFocus: c3, resetFocus: closure_4 } = ChannelCallStore);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -16,7 +16,7 @@ export default function SingleStream(channel) {
   channel = channel.channel;
   const obj = {
     gestureEnabled: true,
-    resizeMode: channel(8880).ResizeMode.CONTAIN,
+    resizeMode: channel(9045).ResizeMode.CONTAIN,
     onSingleTap() {
       closure_1_3();
     },
@@ -29,7 +29,7 @@ export default function SingleStream(channel) {
   };
   return jsx(StreamTileDefault, {
     gestureEnabled: true,
-    resizeMode: channel(8880).ResizeMode.CONTAIN,
+    resizeMode: channel(9045).ResizeMode.CONTAIN,
     onSingleTap() {
       closure_1_3();
     },

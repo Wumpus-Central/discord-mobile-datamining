@@ -1,6 +1,6 @@
-// === Module 8757: getShelfItemData ===
+// === Module 8922: getShelfItemData ===
 
-// Module 8757 (getShelfItemData)
+// Module 8922 (getShelfItemData)
 import ApplicationStore from "ApplicationStore" /* 5063 */;
 
 const size = fn(2);

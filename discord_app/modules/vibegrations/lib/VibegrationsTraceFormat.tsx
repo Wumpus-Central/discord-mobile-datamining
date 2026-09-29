@@ -1,6 +1,6 @@
-// === Module 16417: vibegrations/VibegrationsTraceFormat ===
+// === Module 16602: vibegrations/VibegrationsTraceFormat ===
 
-// Module 16417 (vibegrations/VibegrationsTraceFormat)
+// Module 16602 (vibegrations/VibegrationsTraceFormat)
 import util from "util" /* 1115 */;
 import _modDef3715 from "module_3715" /* 3715 */;
 import size from "module_2" /* 2 */;

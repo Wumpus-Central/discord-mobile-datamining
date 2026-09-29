@@ -1,6 +1,6 @@
-// === Module 6968: ProfileEffectRecord ===
+// === Module 7134: ProfileEffectRecord ===
 
-// Module 6968 (ProfileEffectRecord)
+// Module 7134 (ProfileEffectRecord)
 import CollectiblesItemType from "CollectiblesItemType" /* 1974 */;
 import BaseCollectiblesItemRecord from "BaseCollectiblesItemRecord" /* 1973 */;
 

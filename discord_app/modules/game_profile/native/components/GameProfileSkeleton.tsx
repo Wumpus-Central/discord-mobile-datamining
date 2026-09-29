@@ -1,9 +1,9 @@
-// === Module 8195: GameProfileSkeleton ===
+// === Module 8360: GameProfileSkeleton ===
 
-// Module 8195 (GameProfileSkeleton)
+// Module 8360 (GameProfileSkeleton)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4566 */;
-import GameProfileSkeletonPulse from "GameProfileSkeletonPulse" /* 8196 */;
+import GameProfileSkeletonPulse from "GameProfileSkeletonPulse" /* 8361 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

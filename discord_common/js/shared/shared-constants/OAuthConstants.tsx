@@ -1,6 +1,6 @@
-// === Module 13426: OAuthConstants ===
+// === Module 13595: OAuthConstants ===
 
-// Module 13426 (OAuthConstants)
+// Module 13595 (OAuthConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/OAuthConstants.tsx");

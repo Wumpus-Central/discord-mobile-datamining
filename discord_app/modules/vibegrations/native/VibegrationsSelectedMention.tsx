@@ -1,6 +1,6 @@
-// === Module 16342: VibegrationsSelectedMention ===
+// === Module 16521: VibegrationsSelectedMention ===
 
-// Module 16342 (VibegrationsSelectedMention)
+// Module 16521 (VibegrationsSelectedMention)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import noop from "module_19" /* 19 */;

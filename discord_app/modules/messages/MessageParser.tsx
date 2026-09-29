@@ -1,6 +1,6 @@
-// === Module 7095: MessageParser ===
+// === Module 7260: MessageParser ===
 
-// Module 7095 (MessageParser)
+// Module 7260 (MessageParser)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 2021 */;
@@ -9,13 +9,13 @@ import EmojiUtilsDefault from "EmojiUtils" /* 4487 */;
 import UserUtilsDefault from "UserUtils" /* 4678 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4988 */;
 import useChannelName from "useChannelName" /* 4989 */;
-import MarkupRulesDefault from "MarkupRules" /* 5304 */;
-import MarkupTextRule2 from "MarkupTextRule" /* 5312 */;
-import AutocompleteBoundaryUtils from "AutocompleteBoundaryUtils" /* 7096 */;
-import parseContentForSuppressNotifications from "parseContentForSuppressNotifications" /* 7097 */;
-import IsolateString from "IsolateString" /* 7098 */;
-import EmojiStore from "EmojiStore" /* 5771 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5818 */;
+import MarkupRulesDefault from "MarkupRules" /* 5470 */;
+import MarkupTextRule2 from "MarkupTextRule" /* 5478 */;
+import AutocompleteBoundaryUtils from "AutocompleteBoundaryUtils" /* 7261 */;
+import parseContentForSuppressNotifications from "parseContentForSuppressNotifications" /* 7262 */;
+import IsolateString from "IsolateString" /* 7263 */;
+import EmojiStore from "EmojiStore" /* 5938 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5985 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import GuildChannelStore from "GuildChannelStore" /* 4467 */;
 import GuildMemberStore from "GuildMemberStore" /* 2108 */;
@@ -173,8 +173,8 @@ function createParserState(getGuildId, arr) {
   const mapped3 = _modDef12(GuildChannelStore.getTextChannelNameDisambiguations(guildId)).map((id) => ({ id: id.id, text: id.name }));
   if (null != guildId) {
     const tmp9Result3 = tmp9(12);
-    const found1 = tmp9(12)(guildId(5754).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS).filter((item) => item !== closure_1_7);
-    const tmp9Result1Result = tmp9(12)(guildId(5754).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS);
+    const found1 = tmp9(12)(guildId(5921).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS).filter((item) => item !== closure_1_7);
+    const tmp9Result1Result = tmp9(12)(guildId(5921).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS);
     const flatMapResult = found1.flatMap((item) => GuildChannelStore.getChannels(guildId)[item].map((channel) => {
       channel = channel.channel;
       if (!channel.isCategory()) {
@@ -350,7 +350,7 @@ function unparseWithMeta(content1, id, isNotification) {
 let closure_7 = fn(4467).GUILD_SELECTABLE_CHANNELS_KEY;
 const Constants = fn(1074);
 ({ Permissions: closure_15, MARKDOWN_SPOILER_REGEXP, MARKDOWN_STATIC_ROUTE_NAME_REGEXP } = Constants);
-const GAME_MENTION_SENTINEL = fn(5306).GAME_MENTION_SENTINEL;
+const GAME_MENTION_SENTINEL = fn(5472).GAME_MENTION_SENTINEL;
 const EmojiIntention = fn(1375).EmojiIntention;
 let tmp3 = /^<@!?(\d+)>/;
 const tmp4 = /^<@&(\d+)>/;
@@ -961,7 +961,7 @@ obj12.parse = function parse(arg0, arg1, guild) {
 obj8.emoji = obj12;
 const obj13 = { match: null, parse: null };
 let t = t_mod;
-obj13.match = t.anyScopeRegex(fn(5318).soundmojiRawFormatRegex);
+obj13.match = t.anyScopeRegex(fn(5484).soundmojiRawFormatRegex);
 obj13.parse = function parse(arg0) {
   [, tmp, tmp2] = arg0;
   return { content: "<sound:" + tmp + ":" + tmp2 + ">" };

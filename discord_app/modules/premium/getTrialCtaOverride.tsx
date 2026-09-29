@@ -1,8 +1,8 @@
-// === Module 8671: getTrialCtaOverride ===
+// === Module 8836: getTrialCtaOverride ===
 
-// Module 8671 (getTrialCtaOverride)
+// Module 8836 (getTrialCtaOverride)
 import PremiumUtils from "PremiumUtils" /* 4488 */;
-import ReferralTrialCtaExperiment from "ReferralTrialCtaExperiment" /* 8672 */;
+import ReferralTrialCtaExperiment from "ReferralTrialCtaExperiment" /* 8837 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/premium/getTrialCtaOverride.tsx");

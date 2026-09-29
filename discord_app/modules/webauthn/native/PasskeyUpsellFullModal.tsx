@@ -1,12 +1,12 @@
-// === Module 14222: PasskeyUpsellFullModal ===
+// === Module 14398: PasskeyUpsellFullModal ===
 
-// Module 14222 (PasskeyUpsellFullModal)
-import Modal from "Modal" /* 10769 */;
-import WebAuthnScreens2 from "WebAuthnScreens" /* 14218 */;
+// Module 14398 (PasskeyUpsellFullModal)
+import Modal from "Modal" /* 10938 */;
+import WebAuthnScreens2 from "WebAuthnScreens" /* 14394 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const WebAuthnScreens = fn(14215).WebAuthnScreens;
+const WebAuthnScreens = fn(14391).WebAuthnScreens;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/webauthn/native/PasskeyUpsellFullModal.tsx");

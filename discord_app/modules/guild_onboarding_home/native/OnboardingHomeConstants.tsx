@@ -1,6 +1,6 @@
-// === Module 16209: OnboardingHomeConstants ===
+// === Module 16385: OnboardingHomeConstants ===
 
-// Module 16209 (OnboardingHomeConstants)
+// Module 16385 (OnboardingHomeConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/native/OnboardingHomeConstants.tsx");

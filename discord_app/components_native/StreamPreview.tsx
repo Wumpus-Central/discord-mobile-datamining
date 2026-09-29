@@ -1,13 +1,13 @@
-// === Module 9519: StreamPreview ===
+// === Module 9686: StreamPreview ===
 
-// Module 9519 (StreamPreview)
+// Module 9686 (StreamPreview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Pressables from "Pressables" /* 5435 */;
-import _modDef9520 from "module_9520" /* 9520 */;
-import _modDef9521 from "module_9521" /* 9521 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 9522 */;
+import Pressables from "Pressables" /* 5602 */;
+import _modDef9687 from "module_9687" /* 9687 */;
+import _modDef9688 from "module_9688" /* 9688 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 9689 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 
@@ -36,9 +36,9 @@ DefaultFallback.prototype["render"] = function render() {
   const obj = { style: tmp.wrapper, children: null };
   const obj2 = { resizeMode: "contain", style: tmp.fallbackImage, source: null };
   if (obj3.isThemeDark(this.props.theme)) {
-    let tmp6Result = _modDef9520;
+    let tmp6Result = _modDef9687;
   } else {
-    tmp6Result = _modDef9521;
+    tmp6Result = _modDef9688;
   }
   obj2.source = tmp6Result;
   obj.children = timestampProducer(React3, obj2);

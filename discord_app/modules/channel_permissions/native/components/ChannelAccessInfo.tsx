@@ -1,11 +1,11 @@
-// === Module 11964: ChannelAccessInfo ===
+// === Module 12135: ChannelAccessInfo ===
 
-// Module 11964 (ChannelAccessInfo)
+// Module 12135 (ChannelAccessInfo)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 9016 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11103 */;
+import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 9181 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11272 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2108 */;
 import GuildRoleStore from "GuildRoleStore" /* 2102 */;
@@ -39,7 +39,7 @@ export default function ChannelAccessInfo(guild) {
   }
   const memberIds = GuildMemberStore.getMemberIds(id);
   let obj = guild(504);
-  const existingMembers = guild(9016).getExistingMembers(memberIds, channel, guild, channel.accessPermissions);
+  const existingMembers = guild(9181).getExistingMembers(memberIds, channel, guild, channel.accessPermissions);
   let tmp8 = 0 === stateFromStoresArray.length;
   if (tmp8) {
     tmp8 = 1 === existingMembers.length;
@@ -121,20 +121,20 @@ export default function ChannelAccessInfo(guild) {
     }
     obj9 = { children: null };
     const MEMBERS = constants.MEMBERS;
-    channel(11963);
-    const items5 = [renderCounts(MEMBERS, existingMembers.length, 0, tmp2(5403).GroupIcon), ];
+    channel(12134);
+    const items5 = [renderCounts(MEMBERS, existingMembers.length, 0, tmp2(5569).GroupIcon), ];
     const ROLES = constants.ROLES;
-    channel(9035);
-    items5[1] = renderCounts(ROLES, stateFromStoresArray.length, 0, tmp2(9033).ShieldUserIcon);
+    channel(9200);
+    items5[1] = renderCounts(ROLES, stateFromStoresArray.length, 0, tmp2(9198).ShieldUserIcon);
     obj9.children = items5;
   }
   const obj10 = { children: null };
   obj3.children = closure_9(closure_10, obj9);
   const items6 = [closure_8(View, obj3), ];
-  const tmp2Result = guild(9016);
-  items6[1] = closure_8(guild(1177).Icon, { source: channel(9396), size: guild(1177).Icon.Sizes.SMALL });
+  const tmp2Result = guild(9181);
+  items6[1] = closure_8(guild(1177).Icon, { source: channel(9563), size: guild(1177).Icon.Sizes.SMALL });
   obj2.children = items6;
-  items2[1] = closure_9(guild(5435).PressableOpacity, obj2);
+  items2[1] = closure_9(guild(5602).PressableOpacity, obj2);
   obj10.children = items2;
   return closure_9(closure_10, obj10);
 };

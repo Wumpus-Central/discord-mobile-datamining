@@ -1,6 +1,6 @@
-// === Module 7698: VideoBackgroundProfileFetchExperiment ===
+// === Module 7863: VideoBackgroundProfileFetchExperiment ===
 
-// Module 7698 (VideoBackgroundProfileFetchExperiment)
+// Module 7863 (VideoBackgroundProfileFetchExperiment)
 import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 

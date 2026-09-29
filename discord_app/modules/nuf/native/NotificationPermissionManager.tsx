@@ -1,18 +1,18 @@
-// === Module 17225: NotificationPermissionManager ===
+// === Module 17414: NotificationPermissionManager ===
 
-// Module 17225 (NotificationPermissionManager)
+// Module 17414 (NotificationPermissionManager)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
 import _modDef4421 from "module_4421" /* 4421 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 11905 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12076 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4471 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5017 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 11902 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6539 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12073 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6705 */;
 
 require = fn;
 function haveNotSeenPromptSince(arg0, arg1) {
@@ -90,7 +90,7 @@ function showPrompt(arg0, arg1, arg2) {
     obj3.impressionName = discord_common_AnalyticsUtils.ImpressionNames.PUSH_NOTIFICATION_REACTIVATION_PROMPT;
     obj3.impressionProperties = { action_location: location };
     obj3.location = location;
-    obj2.openLazy(asyncRequireImpl(17226, dependencyMap.paths), closure_2_11, obj3);
+    obj2.openLazy(asyncRequireImpl(17415, dependencyMap.paths), closure_2_11, obj3);
   }, arg2);
 }
 function _logNotificationPermissionStatus() {
@@ -167,8 +167,8 @@ let closure_26 = async function _logNotificationPermissionStatus2() {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const PermissionPromptType = fn(11902).PermissionPromptType;
-const NotificationPermissionConstants = fn(11903);
+const PermissionPromptType = fn(12073).PermissionPromptType;
+const NotificationPermissionConstants = fn(12074);
 ({ NOTIFICATION_REACTIVATION_ACTIONSHEET_KEY: closure_11, EventActionLocation: closure_12 } = NotificationPermissionConstants);
 const Constants = fn(1074);
 ({ RelationshipTypes: map1, GuildFeatures: closure_14, AnalyticEvents: closure_15 } = Constants);

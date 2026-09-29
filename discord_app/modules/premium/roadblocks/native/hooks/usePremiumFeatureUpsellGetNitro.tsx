@@ -1,15 +1,15 @@
-// === Module 9422: usePremiumFeatureUpsellGetNitro ===
+// === Module 9589: usePremiumFeatureUpsellGetNitro ===
 
-// Module 9422 (usePremiumFeatureUpsellGetNitro)
+// Module 9589 (usePremiumFeatureUpsellGetNitro)
 import ChatInputUtils from "ChatInputUtils" /* 4701 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5174 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6583 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 6842 */;
-import UserOfferActionCreators from "UserOfferActionCreators" /* 7506 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5340 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6749 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7008 */;
+import UserOfferActionCreators from "UserOfferActionCreators" /* 7671 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionStore from "SubscriptionStore" /* 4494 */;
-import UserOfferStore from "UserOfferStore" /* 6870 */;
+import UserOfferStore from "UserOfferStore" /* 7036 */;
 
 require = fn;
 const PremiumTypes = fn(1374).PremiumTypes;

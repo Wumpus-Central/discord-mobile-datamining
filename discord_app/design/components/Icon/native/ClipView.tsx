@@ -1,8 +1,8 @@
-// === Module 8276: ClipView ===
+// === Module 8441: ClipView ===
 
-// Module 8276 (ClipView)
-import CutoutBackgroundContext from "CutoutBackgroundContext" /* 8277 */;
-import ClipViewNativeComponentDefault from "ClipViewNativeComponent" /* 8279 */;
+// Module 8441 (ClipView)
+import CutoutBackgroundContext from "CutoutBackgroundContext" /* 8442 */;
+import ClipViewNativeComponentDefault from "ClipViewNativeComponent" /* 8444 */;
 import noop from "module_19" /* 19 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 

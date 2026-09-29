@@ -1,13 +1,13 @@
-// === Module 10428: ChannelVoiceChatModal ===
+// === Module 10597: ChannelVoiceChatModal ===
 
-// Module 10428 (ChannelVoiceChatModal)
+// Module 10597 (ChannelVoiceChatModal)
 import native from "native" /* 4540 */;
 import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4688 */;
 import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 4718 */;
 import useChannelNameDefault from "useChannelName" /* 4989 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5037 */;
-import ChannelVoiceChatDefault from "ChannelVoiceChat" /* 9536 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10385 */;
+import ChannelVoiceChatDefault from "ChannelVoiceChat" /* 9703 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10554 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,7 +33,7 @@ export default function ChannelVoiceChatModal(channel) {
   if (tmp2 == null) {
     str = "";
   }
-  return <tmp5 screenKey="StageVoiceChat" title={str} titleIcon={jsx(channel(5411).StageIcon, { size: "sm" })} render={function render() {
+  return <tmp5 screenKey="StageVoiceChat" title={str} titleIcon={jsx(channel(5577).StageIcon, { size: "sm" })} render={function render() {
     let guild_id = channel.guild_id;
     if (guild_id == null) {
       guild_id = null;

@@ -1,18 +1,18 @@
-// === Module 15288: PremiumTrialOfferActionSheetContent ===
+// === Module 15463: PremiumTrialOfferActionSheetContent ===
 
-// Module 15288 (PremiumTrialOfferActionSheetContent)
+// Module 15463 (PremiumTrialOfferActionSheetContent)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import PremiumUtils from "PremiumUtils" /* 4488 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import components_Button_Button from "components/Button/Button" /* 5281 */;
-import FolderIcon from "FolderIcon" /* 5388 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5442 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8122 */;
-import ChatSmileIcon from "ChatSmileIcon" /* 8724 */;
-import UserIcon from "UserIcon" /* 11303 */;
-import NitroWumpusFlightRight3dIllustration from "NitroWumpusFlightRight3dIllustration" /* 15289 */;
-import PremiumPerksListDefault from "PremiumPerksList" /* 15291 */;
+import components_Button_Button from "components/Button/Button" /* 5447 */;
+import FolderIcon from "FolderIcon" /* 5554 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5609 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8287 */;
+import ChatSmileIcon from "ChatSmileIcon" /* 8889 */;
+import UserIcon from "UserIcon" /* 11472 */;
+import NitroWumpusFlightRight3dIllustration from "NitroWumpusFlightRight3dIllustration" /* 15464 */;
+import PremiumPerksListDefault from "PremiumPerksList" /* 15466 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,20 +1,20 @@
-// === Module 14144: ProfileCustomizationSettingScreen ===
+// === Module 14316: ProfileCustomizationSettingScreen ===
 
-// Module 14144 (ProfileCustomizationSettingScreen)
+// Module 14316 (ProfileCustomizationSettingScreen)
 import util from "util" /* 1115 */;
 import ChatInputUtils from "ChatInputUtils" /* 4701 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5016 */;
-import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 6405 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9229 */;
-import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 10384 */;
-import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 14145 */;
-import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 14203 */;
+import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 6571 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9394 */;
+import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 10553 */;
+import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 14317 */;
+import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 14379 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9227 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 7605 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9392 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 7770 */;
 
 const require = globalThis.__r;
 

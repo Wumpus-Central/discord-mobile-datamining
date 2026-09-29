@@ -1,6 +1,6 @@
-// === Module 14263: UserSettingsChangeUsername ===
+// === Module 14439: UserSettingsChangeUsername ===
 
-// Module 14263 (UserSettingsChangeUsername)
+// Module 14439 (UserSettingsChangeUsername)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4832 */;
@@ -13,11 +13,11 @@ require = fn;
 function UsernameStatusMessage(showHint) {
   showHint = showHint.showHint;
   const match = showHint(5021).match(showHint.usernameStatus);
-  let obj = { type: showHint(14264).NameValidationState.ERROR, message: null };
+  let obj = { type: showHint(14440).NameValidationState.ERROR, message: null };
   const P = showHint(5021).P;
   obj.message = P.select();
   const str = showHint(5021);
-  const obj2 = { type: showHint(14264).NameValidationState.AVAILABLE, message: null };
+  const obj2 = { type: showHint(14440).NameValidationState.AVAILABLE, message: null };
   const P2 = showHint(5021).P;
   obj2.message = P2.select();
   const withResult = match.with(obj, (children) => closure_1_11(showHint(4832).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }));
@@ -138,7 +138,7 @@ export default function UserSettingsChangeUsername() {
           const tmp34 = first1;
         }
         user.discriminator = tmp34;
-        yield closure_2_2(6405).saveAccountChanges(user, { close: false });
+        yield closure_2_2(6571).saveAccountChanges(user, { close: false });
         closure_129_0 = value;
         if (!closure_129_0.ok) {
           const v6OrEarlierAPIError = new closure_0(1271).V6OrEarlierAPIError(closure_129_0);

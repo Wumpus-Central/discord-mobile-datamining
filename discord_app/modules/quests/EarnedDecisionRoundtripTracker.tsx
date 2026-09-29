@@ -1,10 +1,10 @@
-// === Module 10705: EarnedDecisionRoundtripTracker ===
+// === Module 10874: EarnedDecisionRoundtripTracker ===
 
-// Module 10705 (EarnedDecisionRoundtripTracker)
+// Module 10874 (EarnedDecisionRoundtripTracker)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import NetStats from "NetStats" /* 6879 */;
-import SessionForegroundUtils from "SessionForegroundUtils" /* 6882 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7090 */;
+import NetStats from "NetStats" /* 7045 */;
+import SessionForegroundUtils from "SessionForegroundUtils" /* 7048 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7255 */;
 import NetworkStore from "NetworkStore" /* 4885 */;
 
 require = fn;

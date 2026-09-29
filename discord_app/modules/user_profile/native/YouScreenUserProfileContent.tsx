@@ -1,32 +1,32 @@
-// === Module 16619: YouScreenUserProfileContent ===
+// === Module 16807: YouScreenUserProfileContent ===
 
-// Module 16619 (YouScreenUserProfileContent)
+// Module 16807 (YouScreenUserProfileContent)
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 7687 */;
-import UserProfileAvatarDefault from "UserProfileAvatar" /* 7702 */;
-import FormDividerDefault from "FormDivider" /* 8059 */;
-import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 8127 */;
-import getRandomCustomStatusPromptDefault from "getRandomCustomStatusPrompt" /* 10578 */;
-import UserProfileAboutMeCardDefault from "UserProfileAboutMeCard" /* 10777 */;
-import UserProfileActivityDefault from "UserProfileActivity" /* 12572 */;
-import UserProfileNoteDefault from "UserProfileNote" /* 12625 */;
-import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 12638 */;
-import VibegrationsCustomWidgetAddOptionDefault from "VibegrationsCustomWidgetAddOption" /* 12639 */;
-import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 12650 */;
-import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells" /* 12665 */;
-import UserProfileConnections from "UserProfileConnections" /* 12671 */;
-import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 12676 */;
-import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 12681 */;
-import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 15297 */;
-import showYouAccountActionSheet from "showYouAccountActionSheet" /* 16006 */;
-import you_tracking_Tracking from "you/tracking/Tracking" /* 16607 */;
-import YouExpiringTrialOfferCardDefault from "YouExpiringTrialOfferCard" /* 16626 */;
-import UserProfileYourFriendsCardDefault from "UserProfileYourFriendsCard" /* 16628 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 7852 */;
+import UserProfileAvatarDefault from "UserProfileAvatar" /* 7867 */;
+import FormDividerDefault from "FormDivider" /* 8224 */;
+import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 8292 */;
+import getRandomCustomStatusPromptDefault from "getRandomCustomStatusPrompt" /* 10747 */;
+import UserProfileAboutMeCardDefault from "UserProfileAboutMeCard" /* 10946 */;
+import UserProfileActivityDefault from "UserProfileActivity" /* 12742 */;
+import UserProfileNoteDefault from "UserProfileNote" /* 12795 */;
+import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 12808 */;
+import VibegrationsCustomWidgetAddOptionDefault from "VibegrationsCustomWidgetAddOption" /* 12809 */;
+import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 12820 */;
+import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells" /* 12835 */;
+import UserProfileConnections from "UserProfileConnections" /* 12841 */;
+import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 12846 */;
+import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 12851 */;
+import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 15472 */;
+import showYouAccountActionSheet from "showYouAccountActionSheet" /* 16182 */;
+import you_tracking_Tracking from "you/tracking/Tracking" /* 16792 */;
+import YouExpiringTrialOfferCardDefault from "YouExpiringTrialOfferCard" /* 16814 */;
+import UserProfileYourFriendsCardDefault from "UserProfileYourFriendsCard" /* 16816 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5591 */;
-import UserProfileStore from "UserProfileStore" /* 7035 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5758 */;
+import UserProfileStore from "UserProfileStore" /* 7200 */;
 
 const UserProfileWishlistGridDefault = UserProfileWishlistGrid;
 
@@ -154,10 +154,10 @@ function EditSection(navigateToProfileCustomization) {
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const useIsContentShown = fn(2035).useIsContentShown;
-let UserProfileSections = fn(7628).UserProfileSections;
-const UserProfileThemeTypes = fn(6629).UserProfileThemeTypes;
+let UserProfileSections = fn(7793).UserProfileSections;
+const UserProfileThemeTypes = fn(6795).UserProfileThemeTypes;
 const ContentDismissActionType = fn(2042).ContentDismissActionType;
-let closure_13 = fn(10658).UserProfileEditAutoFocusElement;
+let closure_13 = fn(10827).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 const size = fn(2);
@@ -220,14 +220,12 @@ export default function YouScreenUserProfileContent(user) {
   const obj10 = user(navigateToPremium[39]);
   const displayableBoardWidgets = user(navigateToPremium[44]).useDisplayableBoardWidgets(user.id);
   const obj11 = user(navigateToPremium[44]);
-  const isMobileGameCollectionExperimentEnabled = user(navigateToPremium[45]).useIsMobileGameCollectionExperimentEnabled("YouScreenUserProfileContent");
+  const tmp20 = displayableBoardWidgets.length > 0 || user(navigateToPremium[45]).useCanConjureVibegrationsCustomWidget("YouScreenUserProfileContent");
+  closure_17 = tmp20;
   const obj12 = user(navigateToPremium[45]);
-  const tmp21 = displayableBoardWidgets.length > 0 || user(navigateToPremium[46]).useCanConjureVibegrationsCustomWidget("YouScreenUserProfileContent", isMobileGameCollectionExperimentEnabled);
-  closure_17 = tmp21;
-  const obj13 = user(navigateToPremium[46]);
-  const isRecentActivityMobileEnabled = user(navigateToPremium[47]).useIsRecentActivityMobileEnabled("YouScreenUserProfileContent");
-  let tmp4Result = user(navigateToPremium[47]);
-  const profileTabIndices = user(navigateToPremium[48]).useProfileTabIndices(tmp21, isRecentActivityMobileEnabled, true);
+  const isRecentActivityMobileEnabled = user(navigateToPremium[46]).useIsRecentActivityMobileEnabled("YouScreenUserProfileContent");
+  let tmp4Result = user(navigateToPremium[46]);
+  const profileTabIndices = user(navigateToPremium[47]).useProfileTabIndices(tmp20, isRecentActivityMobileEnabled, true);
   const boardTabIndex = profileTabIndices.boardTabIndex;
   const activityTabIndex = profileTabIndices.activityTabIndex;
   const wishlistTabIndex = profileTabIndices.wishlistTabIndex;
@@ -237,19 +235,19 @@ export default function YouScreenUserProfileContent(user) {
   const callback1 = obj6.useCallback((nativeEvent) => {
     closure_23(nativeEvent.nativeEvent.layout.width);
   }, []);
-  const tmp4Result9 = user(navigateToPremium[48]);
-  const pageHeights = user(navigateToPremium[49]).usePageHeights();
+  const tmp4Result9 = user(navigateToPremium[47]);
+  const pageHeights = user(navigateToPremium[48]).usePageHeights();
   const handlePageContentSize = pageHeights.handlePageContentSize;
   const items3 = [trackUserProfileAction];
   const callback2 = obj6.useCallback((section) => {
     trackUserProfileAction({ action: "PRESS_SECTION", section });
   }, items3);
-  const tmp4Result10 = user(navigateToPremium[49]);
-  const profileSectionTabs = user(navigateToPremium[48]).useProfileSectionTabs({ initialUserProfileSection: initialTab, wishlistTabIndex, boardTabIndex, activityTabIndex, onTabChange: callback2 });
+  const tmp4Result10 = user(navigateToPremium[48]);
+  const profileSectionTabs = user(navigateToPremium[47]).useProfileSectionTabs({ initialUserProfileSection: initialTab, wishlistTabIndex, boardTabIndex, activityTabIndex, onTabChange: callback2 });
   const activeProfileTabSection = profileSectionTabs.activeProfileTabSection;
   const setActiveProfileTabSection = profileSectionTabs.setActiveProfileTabSection;
   const restoreActiveIndex = profileSectionTabs.restoreActiveIndex;
-  const isVisible = tmp30;
+  const isVisible = tmp29;
   const items4 = [customStatusActivity, tmp17];
   ({ handleTabChange, activeProfileTabSectionIndex } = profileSectionTabs);
   const callback3 = obj6.useCallback(() => {
@@ -326,7 +324,7 @@ export default function YouScreenUserProfileContent(user) {
     obj.children = items;
     return __initData(timestampProducer, obj);
   }, items7);
-  const items8 = [callback4, callback5, handlePageContentSize, tmp21, isRecentActivityMobileEnabled, boardTabIndex, activityTabIndex, wishlistTabIndex, user, activeProfileTabSection, containerBackground, containerBorderColor];
+  const items8 = [callback4, callback5, handlePageContentSize, tmp20, isRecentActivityMobileEnabled, boardTabIndex, activityTabIndex, wishlistTabIndex, user, activeProfileTabSection, containerBackground, containerBorderColor];
   const memo = obj6.useMemo(() => {
     const obj = { id: "main", label: null, page: null };
     const intl = util.intl;
@@ -391,24 +389,24 @@ export default function YouScreenUserProfileContent(user) {
     items.push(obj9);
     return items;
   }, items8);
-  const tmp4Result11 = user(navigateToPremium[48]);
-  const tmp4Result12 = user(navigateToPremium[62]);
+  const tmp4Result11 = user(navigateToPremium[47]);
+  const tmp4Result12 = user(navigateToPremium[61]);
   segmentedControlState = tmp4Result12.useSegmentedControlState({ pageWidth, defaultIndex: activeProfileTabSectionIndex, itemSpacing: navigateToFriends(navigateToPremium[30]).space.PX_24, items: memo, onPageChange: handleTabChange });
-  const obj14 = { pageWidth, defaultIndex: activeProfileTabSectionIndex, itemSpacing: navigateToFriends(navigateToPremium[30]).space.PX_24, items: memo, onPageChange: handleTabChange };
-  const pagerFillHeight = user(navigateToPremium[49]).usePagerFillHeight(scrollPosition);
+  const obj13 = { pageWidth, defaultIndex: activeProfileTabSectionIndex, itemSpacing: navigateToFriends(navigateToPremium[30]).space.PX_24, items: memo, onPageChange: handleTabChange };
+  const pagerFillHeight = user(navigateToPremium[48]).usePagerFillHeight(scrollPosition);
   const items9 = [segmentedControlState, restoreActiveIndex];
   ({ pagerRef, fillHeight, measureFill } = pagerFillHeight);
   const layoutEffect = obj6.useLayoutEffect(() => {
     restoreActiveIndex(segmentedControlState);
   }, items9);
-  const tmp4Result13 = user(navigateToPremium[49]);
-  const pagesHeightStyle = user(navigateToPremium[49]).usePagesHeightStyle(segmentedControlState, pageHeights.pageHeights, fillHeight);
+  const tmp4Result13 = user(navigateToPremium[48]);
+  const pagesHeightStyle = user(navigateToPremium[48]).usePagesHeightStyle(segmentedControlState, pageHeights.pageHeights, fillHeight);
   closure_33 = obj6.useRef(segmentedControlState.setActiveIndex);
   const items10 = [segmentedControlState];
   const effect1 = obj6.useEffect(() => {
     closure_33.current = segmentedControlState.setActiveIndex;
   }, items10);
-  const tmp4Result14 = user(navigateToPremium[49]);
+  const tmp4Result14 = user(navigateToPremium[48]);
   const items11 = [initialTab, navigation, wishlistTabIndex, setActiveProfileTabSection];
   const focusEffect = user(navigateToPremium[35]).useFocusEffect(obj6.useCallback(() => {
     if (undefined !== initialTab) {
@@ -437,60 +435,60 @@ export default function YouScreenUserProfileContent(user) {
       }
     };
   }, items11));
-  const obj15 = { style, children: null };
-  const obj16 = { style: null, children: null };
+  const obj14 = { style, children: null };
+  const obj15 = { style: null, children: null };
   const items12 = [tmp3.profileContentWrapper, { paddingTop: 0 }];
-  obj16.style = items12;
+  obj15.style = items12;
   const items13 = [c14(closure_17, { user, backgroundColor: avatarBackground, statusStyle: { backgroundColor: statusBackground }, animate: flag }), , , ];
-  const obj18 = { ref, customStatusActivity, hasCustomProfileTheme: null != primaryColor, style: null, emojiOnlyStyle: tmp3.emojiOnlyCustomStatusBubble, editEnabled: true, placeholderText: labelResult, prompt: obj8 };
+  const obj17 = { ref, customStatusActivity, hasCustomProfileTheme: null != primaryColor, style: null, emojiOnlyStyle: tmp3.emojiOnlyCustomStatusBubble, editEnabled: true, placeholderText: labelResult, prompt: obj8 };
   const items14 = [, ];
   ({ customStatusBubble: arr16[0], customStatusBubbleInset: arr16[1] } = tmp3);
-  obj18.style = items14;
-  items13[1] = c14(navigateToFriends(navigateToPremium[65]), obj18);
-  const obj19 = { style: null, children: null };
+  obj17.style = items14;
+  items13[1] = c14(navigateToFriends(navigateToPremium[64]), obj17);
+  const obj18 = { style: null, children: null };
   const items15 = [, ];
   ({ primaryInfo: arr17[0], profileContent: arr17[1] } = tmp3);
-  obj19.style = items15;
-  const obj20 = { user, pronouns: null, badges: null, badgeContainerBackground: null, onPressDisplayName: null, displayNameAccessibilityHint: null, themeType: null, showChevron: true, canOpenBadgeDirectory: true };
+  obj18.style = items15;
+  const obj19 = { user, pronouns: null, badges: null, badgeContainerBackground: null, onPressDisplayName: null, displayNameAccessibilityHint: null, themeType: null, showChevron: true, canOpenBadgeDirectory: true };
   let pronouns;
-  const obj17 = { user, backgroundColor: avatarBackground, statusStyle: { backgroundColor: statusBackground }, animate: flag };
+  const obj16 = { user, backgroundColor: avatarBackground, statusStyle: { backgroundColor: statusBackground }, animate: flag };
   const tmp4Result15 = user(navigateToPremium[35]);
   if (tmp6 != null) {
     pronouns = tmp6.pronouns;
   }
-  obj20.pronouns = pronouns;
-  obj20.badges = tmp8;
-  obj20.badgeContainerBackground = containerBackground;
-  obj20.onPressDisplayName = callback;
+  obj19.pronouns = pronouns;
+  obj19.badges = tmp8;
+  obj19.badgeContainerBackground = containerBackground;
+  obj19.onPressDisplayName = callback;
   let intl = tmp4(tmp2[31]).intl;
-  const obj21 = { status: null };
-  const tmpResult = navigateToFriends(navigateToPremium[66]);
-  obj21.status = user(navigateToPremium[67]).getStatusLabel(stateFromStores);
-  const tmp4Result16 = user(navigateToPremium[67]);
+  const obj20 = { status: null };
+  const tmpResult = navigateToFriends(navigateToPremium[65]);
+  obj20.status = user(navigateToPremium[66]).getStatusLabel(stateFromStores);
+  const tmp4Result16 = user(navigateToPremium[66]);
   let intl2 = tmp4(tmp2[31]).intl;
-  obj20.displayNameAccessibilityHint = "" + intl.formatToPlainString(user(navigateToPremium[31]).t["er+FRD"], obj21) + ", " + intl2.string(user(navigateToPremium[31]).t.C6COaT);
-  obj20.themeType = containerBackground.YOU_SCREEN;
-  const items16 = [c14(tmpResult, obj20), c14(activityTabIndex, { navigateToProfileCustomization, isProfileLoaded: null != tmp6 })];
-  obj19.children = items16;
-  items13[2] = shouldShowExpiringTrialOfferCard(navigation, obj19);
-  const obj23 = { style: { flex: 1 }, onLayout: callback1, children: null };
-  const obj24 = { style: tmp3.profileTablist, children: null };
-  const obj25 = { state: segmentedControlState, variant: null };
+  obj19.displayNameAccessibilityHint = "" + intl.formatToPlainString(user(navigateToPremium[31]).t["er+FRD"], obj20) + ", " + intl2.string(user(navigateToPremium[31]).t.C6COaT);
+  obj19.themeType = containerBackground.YOU_SCREEN;
+  const items16 = [c14(tmpResult, obj19), c14(activityTabIndex, { navigateToProfileCustomization, isProfileLoaded: null != tmp6 })];
+  obj18.children = items16;
+  items13[2] = shouldShowExpiringTrialOfferCard(navigation, obj18);
+  const obj22 = { style: { flex: 1 }, onLayout: callback1, children: null };
+  const obj23 = { style: tmp3.profileTablist, children: null };
+  const obj24 = { state: segmentedControlState, variant: null };
   let str;
   if (null != primaryColor) {
     str = "overlay";
   }
-  const obj26 = { zIndex: 1, children: null };
-  obj25.variant = str;
-  obj24.children = c14(user(navigateToPremium[68]).Tabs, obj25);
-  const items17 = [c14(navigation, obj24), ];
-  const formatToPlainStringResult = intl.formatToPlainString(user(navigateToPremium[31]).t["er+FRD"], obj21);
-  const obj22 = { navigateToProfileCustomization, isProfileLoaded: null != tmp6 };
-  items17[1] = c14(navigateToFriends(navigateToPremium[63]).View, { ref: pagerRef, onLayout: measureFill, style: pagesHeightStyle, children: c14(user(navigateToPremium[69]).SegmentedControlPages, { state: segmentedControlState }) });
-  obj23.children = items17;
-  items13[3] = shouldShowExpiringTrialOfferCard(navigation, obj23);
-  obj16.children = items13;
-  obj26.children = shouldShowExpiringTrialOfferCard(navigation, obj16);
-  obj15.children = c14(user(navigateToPremium[64]).LayerScope, obj26);
-  return c14(navigateToFriends(navigateToPremium[63]).View, obj15);
+  const obj25 = { zIndex: 1, children: null };
+  obj24.variant = str;
+  obj23.children = c14(user(navigateToPremium[67]).Tabs, obj24);
+  const items17 = [c14(navigation, obj23), ];
+  const formatToPlainStringResult = intl.formatToPlainString(user(navigateToPremium[31]).t["er+FRD"], obj20);
+  const obj21 = { navigateToProfileCustomization, isProfileLoaded: null != tmp6 };
+  items17[1] = c14(navigateToFriends(navigateToPremium[62]).View, { ref: pagerRef, onLayout: measureFill, style: pagesHeightStyle, children: c14(user(navigateToPremium[68]).SegmentedControlPages, { state: segmentedControlState }) });
+  obj22.children = items17;
+  items13[3] = shouldShowExpiringTrialOfferCard(navigation, obj22);
+  obj15.children = items13;
+  obj25.children = shouldShowExpiringTrialOfferCard(navigation, obj15);
+  obj14.children = c14(user(navigateToPremium[63]).LayerScope, obj25);
+  return c14(navigateToFriends(navigateToPremium[62]).View, obj14);
 };

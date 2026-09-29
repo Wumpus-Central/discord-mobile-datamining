@@ -1,16 +1,16 @@
-// === Module 16732: PictureInPictureGlobal ===
+// === Module 16920: PictureInPictureGlobal ===
 
-// Module 16732 (PictureInPictureGlobal)
+// Module 16920 (PictureInPictureGlobal)
 import nativeDefault from "native" /* 576 */;
 import native2 from "native" /* 1177 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import timing from "timing" /* 4837 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 5043 */;
-import NavigatorConstants from "NavigatorConstants" /* 5994 */;
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 8805 */;
-import transitionToActivityDefault from "transitionToActivity" /* 8828 */;
-import PictureInPictureDefault from "PictureInPicture" /* 8846 */;
-import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 16733 */;
+import NavigatorConstants from "NavigatorConstants" /* 6160 */;
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 8970 */;
+import transitionToActivityDefault from "transitionToActivity" /* 8993 */;
+import PictureInPictureDefault from "PictureInPicture" /* 9011 */;
+import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 16921 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
@@ -23,7 +23,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, TouchableOpacity: closure_7 } = get_ActivityIndicator);
-let closure_10 = fn(8843).useBestActiveChatInputContainerHeight;
+let closure_10 = fn(9008).useBestActiveChatInputContainerHeight;
 const PictureInPicturePositions = fn(1074).PictureInPicturePositions;
 const ParticipantTypes = fn(4857).ParticipantTypes;
 const jsxProd = fn(21);

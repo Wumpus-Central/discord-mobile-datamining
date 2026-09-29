@@ -1,8 +1,8 @@
-// === Module 12500: GuildProductLinkActionCreators ===
+// === Module 12670: GuildProductLinkActionCreators ===
 
-// Module 12500 (GuildProductLinkActionCreators)
+// Module 12670 (GuildProductLinkActionCreators)
 import util from "util" /* 1115 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5204 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5370 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_products/GuildProductLinkActionCreators.native.tsx");

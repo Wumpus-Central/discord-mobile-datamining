@@ -1,13 +1,13 @@
-// === Module 15663: MessagesItemChannel ===
+// === Module 15838: MessagesItemChannel ===
 
-// Module 15663 (MessagesItemChannel)
+// Module 15838 (MessagesItemChannel)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import _mod8179 from "module_8179" /* 8179 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 9578 */;
-import MessagesItemChannelBase from "MessagesItemChannelBase" /* 15664 */;
-import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 15673 */;
-import _mod15674 from "module_15674" /* 15674 */;
+import _mod8344 from "module_8344" /* 8344 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 9745 */;
+import MessagesItemChannelBase from "MessagesItemChannelBase" /* 15839 */;
+import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 15848 */;
+import _mod15849 from "module_15849" /* 15849 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
@@ -44,7 +44,7 @@ const memoResult = noop.memo((arg0) => {
 });
 const memoResult1 = noop.memo((channelId) => {
   const items = [channelId.channelId];
-  const tmp = _slicedToArray(_mod8179.useRecyclingState(false, items), 2);
+  const tmp = _slicedToArray(_mod8344.useRecyclingState(false, items), 2);
   closure_0 = tmp2;
   const items1 = [tmp[1]];
   const obj2 = {};
@@ -74,7 +74,7 @@ export const MessagesItemChannelFast = memoResult;
 export const MessagesItemChannelFlash = memoResult1;
 export const MessagesItemChannelLegend = noop.memo((arg0) => {
   const obj2 = {};
-  [tmp2, tmp3] = _mod15674.useRecyclingState(false);
+  [tmp2, tmp3] = _mod15849.useRecyclingState(false);
   const merged = Object.assign(arg0);
   obj2.isPressed = tmp2;
   obj2.setIsPressed = tmp3;

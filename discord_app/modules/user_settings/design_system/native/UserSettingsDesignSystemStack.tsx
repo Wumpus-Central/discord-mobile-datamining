@@ -1,10 +1,10 @@
-// === Module 15395: UserSettingsDesignSystemStack ===
+// === Module 15570: UserSettingsDesignSystemStack ===
 
-// Module 15395 (UserSettingsDesignSystemStack)
+// Module 15570 (UserSettingsDesignSystemStack)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import Stack_Stack from "Stack/Stack" /* 5279 */;
-import Card from "Card" /* 5919 */;
+import Stack_Stack from "Stack/Stack" /* 5445 */;
+import Card from "Card" /* 6085 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

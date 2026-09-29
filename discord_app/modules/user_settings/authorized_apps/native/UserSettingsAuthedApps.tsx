@@ -1,25 +1,25 @@
-// === Module 14474: UserSettingsAuthedApps ===
+// === Module 14649: UserSettingsAuthedApps ===
 
-// Module 14474 (UserSettingsAuthedApps)
+// Module 14649 (UserSettingsAuthedApps)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 4787 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import TableRowGroup from "TableRowGroup" /* 5999 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6411 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6416 */;
-import GlobeEarthIcon from "GlobeEarthIcon" /* 8354 */;
-import applications from "applications" /* 8520 */;
-import EmbedIcon from "EmbedIcon" /* 8734 */;
+import TableRowGroup from "TableRowGroup" /* 6165 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6577 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6582 */;
+import GlobeEarthIcon from "GlobeEarthIcon" /* 8519 */;
+import applications from "applications" /* 8685 */;
+import EmbedIcon from "EmbedIcon" /* 8899 */;
 import noop from "module_19" /* 19 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6528 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6694 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);
-const FetchState = fn(6528).FetchState;
+const FetchState = fn(6694).FetchState;
 const Constants = fn(1074);
 ({ AnalyticsPages: closure_9, UserSettingsSections: c10 } = Constants);
 const jsxProd = fn(21);

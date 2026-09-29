@@ -1,24 +1,24 @@
-// === Module 12680: EditWishlistActionSheet ===
+// === Module 12850: EditWishlistActionSheet ===
 
-// Module 12680 (EditWishlistActionSheet)
+// Module 12850 (EditWishlistActionSheet)
 import nativeDefault from "native" /* 576 */;
 import timing from "timing" /* 4837 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 7636 */;
-import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 8245 */;
-import WishlistVisibility2 from "WishlistVisibility" /* 12678 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 7801 */;
+import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 8410 */;
+import WishlistVisibility2 from "WishlistVisibility" /* 12848 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4825 */;
-import WishlistStore from "WishlistStore" /* 8239 */;
+import WishlistStore from "WishlistStore" /* 8404 */;
 import UserStore from "UserStore" /* 1372 */;
-import UserProfileStore from "UserProfileStore" /* 7035 */;
+import UserProfileStore from "UserProfileStore" /* 7200 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const getWishlistProductLines = fn(8240).getWishlistProductLines;
-let closure_12 = fn(7628).TrackUserProfileWishlistActions;
-const ACTION_SHEET_MAX_WIDTH = fn(6572).ACTION_SHEET_MAX_WIDTH;
+const getWishlistProductLines = fn(8405).getWishlistProductLines;
+let closure_12 = fn(7793).TrackUserProfileWishlistActions;
+const ACTION_SHEET_MAX_WIDTH = fn(6738).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const createStyles = fn(4836);
@@ -77,15 +77,15 @@ export default function EditWishlistActionSheet(wishlistId) {
   if (analyticsLocations1 == null) {
     analyticsLocations1 = [];
   }
-  analyticsLocations = analyticsContext(6583)(analyticsLocations1, tmp4(6603).USER_PROFILE_EDIT_WISHLIST_ACTION_SHEET).analyticsLocations;
+  analyticsLocations = analyticsContext(6749)(analyticsLocations1, tmp4(6769).USER_PROFILE_EDIT_WISHLIST_ACTION_SHEET).analyticsLocations;
   let obj2 = { maxWidth: ACTION_SHEET_MAX_WIDTH };
-  const tmp5 = analyticsContext(6583);
-  ({ cardWidth: c5, rowWidth } = analyticsContext(12560)({ maxWidth: ACTION_SHEET_MAX_WIDTH }));
+  const tmp5 = analyticsContext(6749);
+  ({ cardWidth: c5, rowWidth } = analyticsContext(12730)({ maxWidth: ACTION_SHEET_MAX_WIDTH }));
   if (null != rowWidth) {
     let obj3 = { width: rowWidth };
     let tmp7 = obj3;
   }
-  let tmp6 = analyticsContext(12560)({ maxWidth: ACTION_SHEET_MAX_WIDTH });
+  let tmp6 = analyticsContext(12730)({ maxWidth: ACTION_SHEET_MAX_WIDTH });
   const items1 = [value];
   stateFromStores = wishlistId(504).useStateFromStores(items1, () => WishlistStore.getWishlist(wishlistId));
   const tmp2Result = wishlistId(504);
@@ -165,8 +165,8 @@ export default function EditWishlistActionSheet(wishlistId) {
   obj10.subLabel = intl3.string(wishlistId(1115).t.dw58pE);
   obj10.value = value;
   obj10.onValueChange = callback;
-  obj9.children = closure_14(wishlistId(6621).TableSwitchRow, obj10);
-  obj8.children = closure_14(wishlistId(5999).TableRowGroup, obj9);
+  obj9.children = closure_14(wishlistId(6787).TableSwitchRow, obj10);
+  obj8.children = closure_14(wishlistId(6165).TableRowGroup, obj9);
   const items8 = [closure_14(stateFromStores, obj8), ];
   if (stateFromStores1) {
     if (null == stateFromStores) {
@@ -176,7 +176,7 @@ export default function EditWishlistActionSheet(wishlistId) {
     items8[1] = tmp16Result;
     obj6.children = items8;
     obj5.children = closure_15(tmp19, obj6);
-    obj4.children = closure_14(tmp2(6045).BottomSheetScrollView, obj5);
+    obj4.children = closure_14(tmp2(6211).BottomSheetScrollView, obj5);
     return closure_14(tmp4Result, obj4);
   }
   tmp16Result = null;
@@ -238,5 +238,5 @@ export default function EditWishlistActionSheet(wishlistId) {
     });
     tmp16Result = closure_14(tmp19, obj12);
   }
-  tmp4Result = analyticsContext(10613);
+  tmp4Result = analyticsContext(10782);
 };

@@ -1,6 +1,6 @@
-// === Module 5290: styleConstants ===
+// === Module 5456: styleConstants ===
 
-// Module 5290 (styleConstants)
+// Module 5456 (styleConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/components/Styles/native/styleConstants.tsx");

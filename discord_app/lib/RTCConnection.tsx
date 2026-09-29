@@ -21,41 +21,41 @@ import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4830 *
 import TimeUtils from "TimeUtils" /* 4865 */;
 import RTCConnectionEvent from "RTCConnectionEvent" /* 4890 */;
 import getFrontierTuningConfigIfEligibleDefault from "getFrontierTuningConfigIfEligible" /* 4974 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5203 */;
-import ProportionalVadIndicatorExperimentDefault from "ProportionalVadIndicatorExperiment" /* 5732 */;
-import RTCBandwidthMonitorDefault from "RTCBandwidthMonitor" /* 6894 */;
-import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 7085 */;
-import SystemResourcesDefault from "SystemResources" /* 7167 */;
-import ThermalUtilsDefault from "ThermalUtils" /* 8758 */;
-import AVError from "AVError" /* 8875 */;
-import SurfaceDirectRendererExperiment from "SurfaceDirectRendererExperiment" /* 8881 */;
-import WindowVisibilityVideoManager3 from "WindowVisibilityVideoManager" /* 8885 */;
-import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 9499 */;
-import RTCMediaSinkWantsManagerDefault from "RTCMediaSinkWantsManager" /* 13349 */;
-import GoLiveQualityManagerDefault from "GoLiveQualityManager" /* 13350 */;
-import BrowserTransceiverPaddingRemovalExperiment2 from "BrowserTransceiverPaddingRemovalExperiment" /* 13351 */;
-import VideoStabilizationExperimentDefault from "VideoStabilizationExperiment" /* 13352 */;
-import LinuxGpuDecodeExperiment from "LinuxGpuDecodeExperiment" /* 13353 */;
-import ServerLadderExperiment2 from "ServerLadderExperiment" /* 13357 */;
-import AV1BitrateTuningExperiment from "AV1BitrateTuningExperiment" /* 13358 */;
-import NativeMuteManagerDefault from "NativeMuteManager" /* 13360 */;
-import VoiceQuality from "VoiceQuality" /* 13361 */;
-import SystemResponsivenessDefault from "SystemResponsiveness" /* 13363 */;
-import VoiceDurationDefault from "VoiceDuration" /* 13364 */;
-import VideoQuality from "VideoQuality" /* 13365 */;
-import VideoHealthManager from "VideoHealthManager" /* 13366 */;
-import BandwidthEstimationExperimentDefault from "BandwidthEstimationExperiment" /* 13368 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5369 */;
+import ProportionalVadIndicatorExperimentDefault from "ProportionalVadIndicatorExperiment" /* 5899 */;
+import RTCBandwidthMonitorDefault from "RTCBandwidthMonitor" /* 7060 */;
+import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 7250 */;
+import SystemResourcesDefault from "SystemResources" /* 7332 */;
+import ThermalUtilsDefault from "ThermalUtils" /* 8923 */;
+import AVError from "AVError" /* 9040 */;
+import SurfaceDirectRendererExperiment from "SurfaceDirectRendererExperiment" /* 9046 */;
+import WindowVisibilityVideoManager3 from "WindowVisibilityVideoManager" /* 9050 */;
+import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 9666 */;
+import RTCMediaSinkWantsManagerDefault from "RTCMediaSinkWantsManager" /* 13518 */;
+import GoLiveQualityManagerDefault from "GoLiveQualityManager" /* 13519 */;
+import BrowserTransceiverPaddingRemovalExperiment2 from "BrowserTransceiverPaddingRemovalExperiment" /* 13520 */;
+import VideoStabilizationExperimentDefault from "VideoStabilizationExperiment" /* 13521 */;
+import LinuxGpuDecodeExperiment from "LinuxGpuDecodeExperiment" /* 13522 */;
+import ServerLadderExperiment2 from "ServerLadderExperiment" /* 13526 */;
+import AV1BitrateTuningExperiment from "AV1BitrateTuningExperiment" /* 13527 */;
+import NativeMuteManagerDefault from "NativeMuteManager" /* 13529 */;
+import VoiceQuality from "VoiceQuality" /* 13530 */;
+import SystemResponsivenessDefault from "SystemResponsiveness" /* 13532 */;
+import VoiceDurationDefault from "VoiceDuration" /* 13533 */;
+import VideoQuality from "VideoQuality" /* 13534 */;
+import VideoHealthManager from "VideoHealthManager" /* 13535 */;
+import BandwidthEstimationExperimentDefault from "BandwidthEstimationExperiment" /* 13537 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DeviceFrecencyStore from "DeviceFrecencyStore" /* 4864 */;
 import MediaEngineStatsStore from "MediaEngineStatsStore" /* 4874 */;
-import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 9164 */;
-import AudioRouteStore from "AudioRouteStore" /* 9098 */;
+import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 9329 */;
+import AudioRouteStore from "AudioRouteStore" /* 9263 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import GuildStore from "GuildStore" /* 2067 */;
 import MediaEngineStore from "MediaEngineStore" /* 1993 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4859 */;
-import RTCDebugStore from "RTCDebugStore" /* 9498 */;
+import RTCDebugStore from "RTCDebugStore" /* 9665 */;
 import RTCRegionStore from "RTCRegionStore" /* 4886 */;
 import UserStore from "UserStore" /* 1372 */;
 import TypedEventEmitter from "TypedEventEmitter" /* 4894 */;
@@ -80,7 +80,7 @@ let Constants = fn(1074);
 ({ AnalyticEvents: closure_17, ChannelTypes: closure_18, RTCConnectionStates: closure_19, RTCConnectionQuality: closure_20, BoostedGuildTiers: closure_21 } = Constants);
 const StreamSettingsConstants = fn(4883);
 ({ ApplicationStreamFPS: closure_22, ApplicationStreamResolutions: closure_23 } = StreamSettingsConstants);
-let closure_24 = fn(13346).BROWSER_SUPPORTS_UNIFIED_PLAN;
+let closure_24 = fn(13515).BROWSER_SUPPORTS_UNIFIED_PLAN;
 Constants = fn(4861);
 ({ Features: closure_25, MediaEngineContextTypes: closure_26, ConnectionStates: closure_27, Codecs: closure_28, MediaTypes: closure_29, SpeakingFlags: closure_30, DISABLED_DEVICE_ID: items } = Constants);
 let str = "ws:";
@@ -1826,7 +1826,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
     }
   }
   if (MediaEngineStore.supports(constants5.IMAGE_QUALITY_MEASUREMENT)) {
-    const SingleCpuCopyExperiment = tmp2(13359).SingleCpuCopyExperiment;
+    const SingleCpuCopyExperiment = tmp2(13528).SingleCpuCopyExperiment;
     const enabled = SingleCpuCopyExperiment.getConfig({ location: "RTCConnection" }).enabled;
     let str4 = "imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec";
     if (enabled) {
@@ -2520,26 +2520,7 @@ prototype["_handleClientDisconnect"] = function _handleClientDisconnect(sender_u
   }
   const _voiceQuality = self._voiceQuality;
   if (null != _voiceQuality) {
-    const inboundPacketsStats = _voiceQuality.getInboundPacketsStats(sender_user_id);
-    let num3 = inboundPacketsStats.num_packets;
-    if (num3 == null) {
-      num3 = 0;
-    }
-    if (tmp19) {
-      const obj5 = {};
-      const merged4 = Object.assign(self._getAnalyticsProperties());
-      obj5.media_session_id = self.getMediaSessionId();
-      obj5.parent_media_session_id = self.parentMediaSessionId;
-      obj5.sender_user_id = sender_user_id;
-      obj5.participant_type = "receiver";
-      const merged5 = Object.assign(inboundPacketsStats);
-      const merged6 = Object.assign(_voiceQuality.getInboundBytesStats(sender_user_id));
-      const merged7 = Object.assign(_voiceQuality.getInboundDurationStats(sender_user_id));
-      const merged8 = Object.assign(_voiceQuality.getInboundJitterStats(sender_user_id));
-      AnalyticsUtilsDefault.track(constants.VOICE_STREAM_ENDED, obj5);
-    }
-    _voiceQuality.destroyUser(sender_user_id);
-    tmp19 = num3 > 0 && self.shouldReport();
+    _voiceQuality.markUserDisconnected(sender_user_id);
   }
   const _connection = self._connection;
   if (null != _connection) {
@@ -2562,7 +2543,7 @@ prototype["_handleClientDisconnect"] = function _handleClientDisconnect(sender_u
   }
   if (1 === self._userIds.size) {
     self._secureFramesLastBecameAloneTime = TimeUtils.now();
-    const tmp39Result = TimeUtils;
+    const tmp23Result = TimeUtils;
   }
 };
 prototype["_handleCodecs"] = function _handleCodecs(OPUS, H264) {

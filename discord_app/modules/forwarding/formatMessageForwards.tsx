@@ -1,12 +1,12 @@
-// === Module 7396: formatMessageForwards ===
+// === Module 7561: formatMessageForwards ===
 
-// Module 7396 (formatMessageForwards)
+// Module 7561 (formatMessageForwards)
 import util from "util" /* 1115 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import DateUtils from "DateUtils" /* 4512 */;
 import useChannelName from "useChannelName" /* 4989 */;
-import isForwardMessageDefault from "isForwardMessage" /* 6720 */;
-import BasicGuildStore from "BasicGuildStore" /* 7397 */;
+import isForwardMessageDefault from "isForwardMessage" /* 6886 */;
+import BasicGuildStore from "BasicGuildStore" /* 7562 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import GuildStore from "GuildStore" /* 2067 */;
 import PermissionStore from "PermissionStore" /* 4469 */;

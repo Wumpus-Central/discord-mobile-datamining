@@ -1,11 +1,11 @@
-// === Module 8540: XboxLinkPreConnect ===
+// === Module 8705: XboxLinkPreConnect ===
 
-// Module 8540 (XboxLinkPreConnect)
-import _modDef8541 from "module_8541" /* 8541 */;
+// Module 8705 (XboxLinkPreConnect)
+import _modDef8706 from "module_8706" /* 8706 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const XboxLinkModalScenes = fn(8531).XboxLinkModalScenes;
+const XboxLinkModalScenes = fn(8696).XboxLinkModalScenes;
 const PlatformTypes = fn(1074).PlatformTypes;
 const jsx = fn(21).jsx;
 const createStyles = fn(4836);
@@ -24,11 +24,11 @@ export default function XboxLinkPreConnect() {
   const callback1 = noop.useCallback(() => {
     navigation.push(XboxLinkModalScenes.ERROR);
   }, items1);
-  const memo = noop.useMemo(() => ({ uri: _modDef8541 }), []);
+  const memo = noop.useMemo(() => ({ uri: _modDef8706 }), []);
   const obj2 = { platformType: PlatformTypes.XBOX, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null };
   const intl = navigation(1115).intl;
   obj2.title = intl.string(navigation(1115).t["e/z3na"]);
   const intl2 = navigation(1115).intl;
   obj2.body = intl2.string(navigation(1115).t["7tXu0i"]);
-  return jsx(navigation(8542).TwoWayLinkPreConnect, { platformType: PlatformTypes.XBOX, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null });
+  return jsx(navigation(8707).TwoWayLinkPreConnect, { platformType: PlatformTypes.XBOX, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null });
 };

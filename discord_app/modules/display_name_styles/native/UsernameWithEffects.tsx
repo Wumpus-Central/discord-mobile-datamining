@@ -1,6 +1,6 @@
-// === Module 10357: UsernameWithEffects ===
+// === Module 10526: UsernameWithEffects ===
 
-// Module 10357 (UsernameWithEffects)
+// Module 10526 (UsernameWithEffects)
 import nativeDefault from "native" /* 576 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1365 */;
 import DisplayNameEffect from "DisplayNameEffect" /* 1391 */;
@@ -102,7 +102,7 @@ export default noop.memo((userName) => {
   let STATIC = userName.effectDisplayType;
   ({ userId, guildId } = userName);
   if (STATIC === undefined) {
-    STATIC = userName(10358).EffectDisplayType.STATIC;
+    STATIC = userName(10527).EffectDisplayType.STATIC;
   }
   ({ defaultColor, containerStyle, ignoreDisabledStylesSetting, pendingDisplayNameStyles } = userName);
   if (ignoreDisabledStylesSetting === undefined) {
@@ -110,17 +110,17 @@ export default noop.memo((userName) => {
   }
   const merged = Object.assign(userName, Object.assign({ userId: 0, guildId: 0, userName: 0, effectDisplayType: 0, pendingDisplayNameStyles: 0, defaultColor: 0, containerStyle: 0, ignoreDisabledStylesSetting: 0 }));
   let num2;
-  const tmp6 = num2(5084)({ userId, guildId, pendingDisplayNameStyles, ignoreDisabledStylesSetting });
-  const isDisplayNameStylesFlywheelViewersEnabled = userName(9189).useIsDisplayNameStylesFlywheelViewersEnabled("UsernameWithEffects");
-  const obj = userName(9189);
+  const tmp6 = num2(5250)({ userId, guildId, pendingDisplayNameStyles, ignoreDisabledStylesSetting });
+  const isDisplayNameStylesFlywheelViewersEnabled = userName(9354).useIsDisplayNameStylesFlywheelViewersEnabled("UsernameWithEffects");
+  const obj = userName(9354);
   const result = userName(1389).applyFlywheelViewingFallback(tmp6, isDisplayNameStylesFlywheelViewersEnabled);
   const obj2 = userName(1389);
-  const displayNameStylesEnabled = userName(5085).useDisplayNameStylesEnabled({ location: "UsernameWithEffects" });
-  const obj3 = userName(5085);
-  const displayNameStylesFont = userName(9188).useDisplayNameStylesFont({ displayNameStyles: result, ignoreDisabledStylesSetting });
+  const displayNameStylesEnabled = userName(5251).useDisplayNameStylesEnabled({ location: "UsernameWithEffects" });
+  const obj3 = userName(5251);
+  const displayNameStylesFont = userName(9353).useDisplayNameStylesFont({ displayNameStyles: result, ignoreDisabledStylesSetting });
   let tmp12;
   if (null != displayNameStylesFont) {
-    const obj5 = { fontFamily: displayNameStylesFont, lineHeight: "a" };
+    const obj5 = { fontFamily: displayNameStylesFont, lineHeight: "r" };
     tmp12 = obj5;
   }
   let num = merged.lineClamp;
@@ -136,12 +136,12 @@ export default noop.memo((userName) => {
     }
     tmp13 = tmp14;
   }
-  const obj4 = userName(9188);
+  const obj4 = userName(9353);
   const token = userName(4531).useToken(tmp4(576).colors.BACKGROUND_BASE_LOW);
   const tmp7Result = userName(4531);
   const token1 = userName(4531).useToken(tmp4(576).colors.WHITE);
   const tmp7Result7 = userName(4531);
-  const displayNameStylesAccessibleColors = userName(10359).useDisplayNameStylesAccessibleColors({ displayNameStyles: result, backgroundColor: token });
+  const displayNameStylesAccessibleColors = userName(10528).useDisplayNameStylesAccessibleColors({ displayNameStyles: result, backgroundColor: token });
   let first;
   if (displayNameStylesAccessibleColors.length > 0) {
     first = displayNameStylesAccessibleColors[0];
@@ -214,14 +214,14 @@ export default noop.memo((userName) => {
   const tmp28Result = closure_12(str, num2);
   if (displayNameStylesEnabled) {
     if (null != tmp6) {
-      if (STATIC !== tmp7(10358).EffectDisplayType.PLAIN) {
+      if (STATIC !== tmp7(10527).EffectDisplayType.PLAIN) {
         if (null != colorVariants) {
           const items1 = [merged.style, tmp13];
           if (tmp7Result11.doesEffectImpactLayout(effectId)) {
             const layoutImpact = tmp28Result.layoutImpact;
           }
           if (effectId === tmp7(1391).DisplayNameEffect.GUMMY) {
-            const tmp4Result = tmp4(10362);
+            const tmp4Result = tmp4(10531);
             let str3 = tmp7(4534).getNodeText(userName);
             if (str3 == null) {
               str3 = "";

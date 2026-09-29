@@ -1,15 +1,15 @@
-// === Module 11745: DMMessageStickerGreeting ===
+// === Module 11914: DMMessageStickerGreeting ===
 
-// Module 11745 (DMMessageStickerGreeting)
+// Module 11914 (DMMessageStickerGreeting)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import timing from "timing" /* 4837 */;
-import StickersActionCreators from "StickersActionCreators" /* 9849 */;
+import StickersActionCreators from "StickersActionCreators" /* 10016 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 5814 */;
+import StickersStore from "StickersStore" /* 5981 */;
 import MessageStore from "MessageStore" /* 5056 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -126,8 +126,8 @@ export default function DMMessageStickerGreeting(channel) {
                 dependencyMap(content);
               }
               const obj = closure_1(4528);
-              obj.open({ key: "HANDLE_WAVE_PRESS_TOAST", content, icon: closure_1(11746) });
-              const obj2 = { key: "HANDLE_WAVE_PRESS_TOAST", content, icon: closure_1(11746) };
+              obj.open({ key: "HANDLE_WAVE_PRESS_TOAST", content, icon: closure_1(11915) });
+              const obj2 = { key: "HANDLE_WAVE_PRESS_TOAST", content, icon: closure_1(11915) };
             }
             closure_128_0 = showErrorToast;
             tmp7 = stateFromStores;

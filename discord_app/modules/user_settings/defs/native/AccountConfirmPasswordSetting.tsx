@@ -1,11 +1,11 @@
-// === Module 14313: AccountConfirmPasswordSetting ===
+// === Module 14488: AccountConfirmPasswordSetting ===
 
-// Module 14313 (AccountConfirmPasswordSetting)
+// Module 14488 (AccountConfirmPasswordSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
-import UserSettingsConfirmPassword from "UserSettingsConfirmPassword" /* 6414 */;
-import SettingsConstants from "SettingsConstants" /* 7417 */;
-import SettingBuilders from "SettingBuilders" /* 11006 */;
+import UserSettingsConfirmPassword from "UserSettingsConfirmPassword" /* 6580 */;
+import SettingsConstants from "SettingsConstants" /* 7582 */;
+import SettingBuilders from "SettingBuilders" /* 11175 */;
 import size from "module_2" /* 2 */;
 
 const route = SettingBuilders.createRoute({

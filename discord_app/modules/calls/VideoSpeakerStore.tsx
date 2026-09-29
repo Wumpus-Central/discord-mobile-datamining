@@ -1,13 +1,13 @@
-// === Module 8849: VideoSpeakerStore ===
+// === Module 9014: VideoSpeakerStore ===
 
-// Module 8849 (VideoSpeakerStore)
+// Module 9014 (VideoSpeakerStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 4888 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4858 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1993 */;
-import SpeakingStore from "SpeakingStore" /* 5731 */;
+import SpeakingStore from "SpeakingStore" /* 5898 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4852 */;
 import apply from "module_12" /* 12 */;
 

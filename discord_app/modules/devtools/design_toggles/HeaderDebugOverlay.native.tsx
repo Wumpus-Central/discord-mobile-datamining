@@ -1,9 +1,9 @@
-// === Module 5937: HeaderDebugOverlay ===
+// === Module 6103: HeaderDebugOverlay ===
 
-// Module 5937 (HeaderDebugOverlay)
+// Module 6103 (HeaderDebugOverlay)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import useDesignToggleDefault from "useDesignToggle" /* 5938 */;
+import useDesignToggleDefault from "useDesignToggle" /* 6104 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,10 +1,10 @@
-// === Module 14908: CustomTypingIndicatorAnimationPickerSheet ===
+// === Module 15083: CustomTypingIndicatorAnimationPickerSheet ===
 
-// Module 14908 (CustomTypingIndicatorAnimationPickerSheet)
+// Module 15083 (CustomTypingIndicatorAnimationPickerSheet)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import Stack_Stack from "Stack/Stack" /* 5279 */;
-import Card from "Card" /* 5919 */;
+import Stack_Stack from "Stack/Stack" /* 5445 */;
+import Card from "Card" /* 6085 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -73,7 +73,7 @@ export default function CustomTypingIndicatorAnimationPickerSheet(onChange) {
   const obj7 = { config: null, size: 54 };
   const obj8 = { emojis, animation, typingSuggestion: onChange(1380).TypingSuggestion.UNSPECIFIED };
   obj7.config = obj8;
-  obj6.children = closure_6(animation(11463), obj7);
+  obj6.children = closure_6(animation(11632), obj7);
   const items1 = [closure_6(View, obj6), ];
   const obj9 = { spacing: 8, children: null };
   const items2 = [items.slice(0, 2), items.slice(2, 4)];
@@ -90,7 +90,7 @@ export default function CustomTypingIndicatorAnimationPickerSheet(onChange) {
       }
     }, label.label))
   }, index));
-  items1[1] = closure_6(onChange(5279).Stack, obj9);
+  items1[1] = closure_6(onChange(5445).Stack, obj9);
   obj5.children = items1;
-  return closure_7(onChange(6618).ActionSheet, obj5);
+  return closure_7(onChange(6784).ActionSheet, obj5);
 };

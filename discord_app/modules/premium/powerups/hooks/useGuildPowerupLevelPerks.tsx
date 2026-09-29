@@ -1,6 +1,6 @@
-// === Module 12022: useGuildPowerupLevelPerks ===
+// === Module 12193: useGuildPowerupLevelPerks ===
 
-// Module 12022 (useGuildPowerupLevelPerks)
+// Module 12193 (useGuildPowerupLevelPerks)
 import util from "util" /* 1115 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import _modDef2519 from "module_2519" /* 2519 */;

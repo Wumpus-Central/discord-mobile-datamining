@@ -1,6 +1,6 @@
-// === Module 17692: types ===
+// === Module 17881: types ===
 
-// Module 17692 (types)
+// Module 17881 (types)
 import util from "util" /* 1115 */;
 import _modDef2781 from "module_2781" /* 2781 */;
 import size from "module_2" /* 2 */;

@@ -1,9 +1,9 @@
-// === Module 11922: ChatInputCharCounter ===
+// === Module 12093: ChatInputCharCounter ===
 
-// Module 11922 (ChatInputCharCounter)
+// Module 12093 (ChatInputCharCounter)
 import util from "util" /* 1115 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4528 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 8614 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 8779 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -23,7 +23,7 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
   const stateFromStores = analyticsLocations(504).useStateFromStores(items, () => stateFromStores(_undefined[8]).canUseIncreasedMessageLength(currentUser.getCurrentUser()));
   let obj = analyticsLocations(504);
   [tmp6, c2] = noop.useState(0);
-  const tmp7 = stateFromStores(8605)();
+  const tmp7 = stateFromStores(8770)();
   _slicedToArray = tmp7;
   const imperativeHandle = noop.useImperativeHandle(arg1, () => ({
     onMessageLengthChanged(length) {
@@ -37,9 +37,9 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
     let obj3 = { color: "text-feedback-critical", lineClamp: 1, variant: "text-xs/medium", children: null };
     const _HermesInternal = HermesInternal;
     obj3.children = "-" + tmp6;
-    const items2 = [closure_8(tmp2(4832).Text, obj3), closure_8(tmp2(8122).NitroWheelIcon, { size: "sm" })];
+    const items2 = [closure_8(tmp2(4832).Text, obj3), closure_8(tmp2(8287).NitroWheelIcon, { size: "sm" })];
     obj2.children = items2;
-    tmp10 = closure_9(tmp2(5435).PressableOpacity, obj2);
+    tmp10 = closure_9(tmp2(5602).PressableOpacity, obj2);
   }
   return tmp10;
 });

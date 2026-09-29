@@ -1,10 +1,10 @@
-// === Module 6393: AuthHeader ===
+// === Module 6559: AuthHeader ===
 
-// Module 6393 (AuthHeader)
+// Module 6559 (AuthHeader)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 5836 */;
+import TextStyles from "TextStyles" /* 6003 */;
 
 require = fn;
 const jsx = fn(21).jsx;

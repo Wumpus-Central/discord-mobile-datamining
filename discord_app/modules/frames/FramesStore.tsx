@@ -1,12 +1,12 @@
-// === Module 8499: FramesStore ===
+// === Module 8664: FramesStore ===
 
-// Module 8499 (FramesStore)
+// Module 8664 (FramesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1085 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 8502 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 8503 */;
-import FramesConstants from "FramesConstants" /* 8500 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 8667 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 8668 */;
+import FramesConstants from "FramesConstants" /* 8665 */;
 import size from "module_2" /* 2 */;
 
 ({ FrameIntent: c2, FrameLayoutModes: c3, getChannelIdForSurface: closure_4, getFrameIntentForSurface: hasOwnProperty, isLaunched: metroRequire, makeFrameId: closure_7 } = FramesConstants);

@@ -1,6 +1,6 @@
-// === Module 12666: UserProfilePrivacyNotice ===
+// === Module 12836: UserProfilePrivacyNotice ===
 
-// Module 12666 (UserProfilePrivacyNotice)
+// Module 12836 (UserProfilePrivacyNotice)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
@@ -8,11 +8,11 @@ import UserSettings from "UserSettings" /* 2021 */;
 import dismissible_content from "dismissible_content" /* 2029 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 4787 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import Pressables from "Pressables" /* 5435 */;
-import XSmallIcon from "XSmallIcon" /* 5992 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 6806 */;
-import useUserIsTeen from "useUserIsTeen" /* 8104 */;
-import PrivateProfilesExperiment from "PrivateProfilesExperiment" /* 12667 */;
+import Pressables from "Pressables" /* 5602 */;
+import XSmallIcon from "XSmallIcon" /* 6158 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 6972 */;
+import useUserIsTeen from "useUserIsTeen" /* 8269 */;
+import PrivateProfilesExperiment from "PrivateProfilesExperiment" /* 12837 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

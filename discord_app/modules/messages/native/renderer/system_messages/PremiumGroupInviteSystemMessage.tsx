@@ -1,11 +1,11 @@
-// === Module 7490: PremiumGroupInviteSystemMessage ===
+// === Module 7655: PremiumGroupInviteSystemMessage ===
 
-// Module 7490 (PremiumGroupInviteSystemMessage)
+// Module 7655 (PremiumGroupInviteSystemMessage)
 import nativeDefault from "native" /* 576 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7388 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7406 */;
-import PremiumGroupInviteEmbed from "PremiumGroupInviteEmbed" /* 7491 */;
-import _modDef7495 from "module_7495" /* 7495 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7553 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7571 */;
+import PremiumGroupInviteEmbed from "PremiumGroupInviteEmbed" /* 7656 */;
+import _modDef7660 from "module_7660" /* 7660 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 
@@ -27,7 +27,7 @@ export const createPremiumGroupInviteSystemMessage = function createPremiumGroup
     const merged = Object.assign(createCommonMessageDefault(message));
     obj3.premiumGroupInviteInfo = premiumGroupInviteEmbed;
     const tmp7 = closure_5(theme);
-    obj3.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7495);
+    obj3.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7660);
     ({ iconTintColor: obj2.iconTintColor, iconDividerColor: obj2.iconDividerColor } = tmp7);
     return obj3;
   }

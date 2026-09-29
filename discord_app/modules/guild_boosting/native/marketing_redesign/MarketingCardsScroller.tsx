@@ -1,6 +1,6 @@
-// === Module 12060: MarketingCardsScroller ===
+// === Module 12231: MarketingCardsScroller ===
 
-// Module 12060 (MarketingCardsScroller)
+// Module 12231 (MarketingCardsScroller)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _slicedToArray from "module_32" /* 32 */;

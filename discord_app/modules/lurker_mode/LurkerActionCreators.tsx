@@ -1,6 +1,6 @@
-// === Module 6740: LurkerActionCreators ===
+// === Module 6906: LurkerActionCreators ===
 
-// Module 6740 (LurkerActionCreators)
+// Module 6906 (LurkerActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4859 */;

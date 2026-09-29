@@ -1,8 +1,8 @@
-// === Module 12629: UserProfileEditNoteModal ===
+// === Module 12799: UserProfileEditNoteModal ===
 
-// Module 12629 (UserProfileEditNoteModal)
+// Module 12799 (UserProfileEditNoteModal)
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5039 */;
-import UserProfileEditNote from "UserProfileEditNote" /* 12630 */;
+import UserProfileEditNote from "UserProfileEditNote" /* 12800 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -49,11 +49,11 @@ export default function UserProfileEditNoteModal(arg0) {
     return jsx(navigation(4832).Text, { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null });
   };
   tmpResult = navigation(1365);
-  obj6.headerLeft = navigation(5936).getHeaderCloseButton(handleClose);
+  obj6.headerLeft = navigation(6102).getHeaderCloseButton(handleClose);
   obj6.render = function render() {
     return jsx(UserProfileEditNote.default, { userId: navigation, onSave, onClose: handleClose, shouldFocusInput });
   };
   obj5.root = obj6;
   obj3.screens = obj5;
-  return jsx(navigation(6421).Navigator, { initialRouteName: "root", headerStatusBarHeight: 12, headerStyle: null, screens: null });
+  return jsx(navigation(6587).Navigator, { initialRouteName: "root", headerStatusBarHeight: 12, headerStyle: null, screens: null });
 };

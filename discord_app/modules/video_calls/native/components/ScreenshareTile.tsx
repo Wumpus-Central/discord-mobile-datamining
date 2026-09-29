@@ -1,13 +1,13 @@
-// === Module 8869: ScreenshareTile ===
+// === Module 9034: ScreenshareTile ===
 
-// Module 8869 (ScreenshareTile)
+// Module 9034 (ScreenshareTile)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6073 */;
-import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 8870 */;
-import _modDef8871 from "module_8871" /* 8871 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6239 */;
+import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 9035 */;
+import _modDef9036 from "module_9036" /* 9036 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -37,7 +37,7 @@ export default function ScreenShareTile(onSingleTap) {
   const tmp2 = useParticipantTileTapGestureDefault({ onSingleTapStart: onSingleTap, onDoubleTapStart: onDoubleTap });
   const items = [timestampProducer(React3, { style: tmp.liveContainer, children: timestampProducer(native.LiveTag, {}) }), , ];
   const obj3 = { style: tmp.liveContainer, children: timestampProducer(native.LiveTag, {}) };
-  items[1] = timestampProducer(React4, { source: _modDef8871, style: tmp.image, resizeMode: "contain" });
+  items[1] = timestampProducer(React4, { source: _modDef9036, style: tmp.image, resizeMode: "contain" });
   const obj5 = { style: tmp.label, variant: "text-xs/bold", color: "text-overlay-light", children: null };
   const intl = util.intl;
   obj5.children = intl.string(util.t.G84gtR);

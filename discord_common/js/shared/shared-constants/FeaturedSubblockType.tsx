@@ -1,6 +1,6 @@
-// === Module 6995: FeaturedSubblockType ===
+// === Module 7161: FeaturedSubblockType ===
 
-// Module 6995 (FeaturedSubblockType)
+// Module 7161 (FeaturedSubblockType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/FeaturedSubblockType.tsx");

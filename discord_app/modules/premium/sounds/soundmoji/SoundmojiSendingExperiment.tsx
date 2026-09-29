@@ -1,6 +1,6 @@
-// === Module 9750: SoundmojiSendingExperiment ===
+// === Module 9917: SoundmojiSendingExperiment ===
 
-// Module 9750 (SoundmojiSendingExperiment)
+// Module 9917 (SoundmojiSendingExperiment)
 import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 

@@ -1,9 +1,9 @@
-// === Module 8045: ManualReviewPendingAlertModal ===
+// === Module 8210: ManualReviewPendingAlertModal ===
 
-// Module 8045 (ManualReviewPendingAlertModal)
+// Module 8210 (ManualReviewPendingAlertModal)
 import util from "util" /* 1115 */;
 import _modDef3103 from "module_3103" /* 3103 */;
-import AlertModal from "AlertModal" /* 5209 */;
+import AlertModal from "AlertModal" /* 5375 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

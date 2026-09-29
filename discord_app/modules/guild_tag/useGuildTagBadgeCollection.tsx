@@ -1,10 +1,10 @@
-// === Module 17391: useGuildTagBadgeCollection ===
+// === Module 17580: useGuildTagBadgeCollection ===
 
-// Module 17391 (useGuildTagBadgeCollection)
+// Module 17580 (useGuildTagBadgeCollection)
 import _mod19 from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9049 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9214 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 4723 */;
-import GuildTagConstants from "GuildTagConstants" /* 7386 */;
+import GuildTagConstants from "GuildTagConstants" /* 7551 */;
 import size from "module_2" /* 2 */;
 
 const useMemo = _mod19.useMemo;

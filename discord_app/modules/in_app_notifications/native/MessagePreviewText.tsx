@@ -1,20 +1,20 @@
-// === Module 9566: MessagePreviewText ===
+// === Module 9733: MessagePreviewText ===
 
-// Module 9566 (MessagePreviewText)
+// Module 9733 (MessagePreviewText)
 import nativeDefault from "native" /* 576 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1096 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import useMessageAuthor from "useMessageAuthor" /* 5083 */;
-import FastImageDefault from "FastImage" /* 5899 */;
-import isForwardMessageDefault from "isForwardMessage" /* 6720 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7304 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 9554 */;
-import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 9567 */;
-import ChannelRowPreview from "ChannelRowPreview" /* 9568 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 9590 */;
-import usePreviewableMediaText from "usePreviewableMediaText" /* 9595 */;
-import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 9596 */;
+import useMessageAuthor from "useMessageAuthor" /* 5249 */;
+import FastImageDefault from "FastImage" /* 6065 */;
+import isForwardMessageDefault from "isForwardMessage" /* 6886 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7469 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 9721 */;
+import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 9734 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 9735 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 9757 */;
+import usePreviewableMediaText from "usePreviewableMediaText" /* 9762 */;
+import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 9763 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 
@@ -133,7 +133,7 @@ function EmbedCard(embed) {
   return React7(View, obj);
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(9555);
+const InAppNotificationConstants = fn(9722);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } = InAppNotificationConstants);
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);

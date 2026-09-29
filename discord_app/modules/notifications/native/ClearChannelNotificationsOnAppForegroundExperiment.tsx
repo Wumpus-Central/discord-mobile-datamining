@@ -1,6 +1,6 @@
-// === Module 17635: ClearChannelNotificationsOnAppForegroundExperiment ===
+// === Module 17824: ClearChannelNotificationsOnAppForegroundExperiment ===
 
-// Module 17635 (ClearChannelNotificationsOnAppForegroundExperiment)
+// Module 17824 (ClearChannelNotificationsOnAppForegroundExperiment)
 import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 

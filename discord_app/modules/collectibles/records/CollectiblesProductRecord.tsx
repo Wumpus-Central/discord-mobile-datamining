@@ -1,13 +1,13 @@
-// === Module 6964: CollectiblesProductRecord ===
+// === Module 7130: CollectiblesProductRecord ===
 
-// Module 6964 (CollectiblesProductRecord)
-import getPricesFromServerDefault from "getPricesFromServer" /* 5825 */;
+// Module 7130 (CollectiblesProductRecord)
+import getPricesFromServerDefault from "getPricesFromServer" /* 5992 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 6965 */;
-import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 6971 */;
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7131 */;
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7137 */;
 
 const require = fn;
-const CollectiblesItemRecord = fn(6966);
+const CollectiblesItemRecord = fn(7132);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } = CollectiblesItemRecord);
 let closure_7 = fn(1076).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
 const Constants = fn(1074);
@@ -171,7 +171,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               }
               ({ items, item } = obj);
               first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
-              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "channel", items: "<string:24248130>", categorySkuId: "<string:46051328>", isCategoryReward: "<string:40128768>", prices: "<string:17248587>", previewAssets: "<string:36432128>", googleSkuIds: "<string:27526912>", eligibleOffers: "<string:36008448>", variants: "<string:25919488>", bundledProducts: "<string:22140928>", isFirstParty: "<string:20665344>" };
+              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "channelId", items: 1666320737, categorySkuId: 1376346436, isCategoryReward: 157369616, prices: 1632684370, previewAssets: 1390891273, googleSkuIds: 157372929, eligibleOffers: 1632414802, variants: 1031819785, bundledProducts: -1370355359, isFirstParty: 1376346551 };
               let str;
               if (first != null) {
                 str = first.optionValue;

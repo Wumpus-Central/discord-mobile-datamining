@@ -1,9 +1,9 @@
-// === Module 16717: MessageRequestsPreviewScreen ===
+// === Module 16905: MessageRequestsPreviewScreen ===
 
-// Module 16717 (MessageRequestsPreviewScreen)
-import MessageManagerDefault from "MessageManager" /* 9398 */;
-import ChatViewDefault from "ChatView" /* 10882 */;
-import RestrictedMessageRequestPreviewDefault from "RestrictedMessageRequestPreview" /* 16718 */;
+// Module 16905 (MessageRequestsPreviewScreen)
+import MessageManagerDefault from "MessageManager" /* 9565 */;
+import ChatViewDefault from "ChatView" /* 11051 */;
+import RestrictedMessageRequestPreviewDefault from "RestrictedMessageRequestPreview" /* 16906 */;
 import noop from "module_19" /* 19 */;
 import ReadStateStore from "ReadStateStore" /* 4851 */;
 
@@ -17,7 +17,7 @@ export default function MessageRequestsScreen(route) {
   const channelId = route.route.params.channelId;
   const ref = noop.useRef(null);
   const items = [channelId];
-  const isMessageRequestRestrictedViewer = channelId(11933).useIsMessageRequestRestrictedViewer("MessageRequestsPreviewScreen");
+  const isMessageRequestRestrictedViewer = channelId(12104).useIsMessageRequestRestrictedViewer("MessageRequestsPreviewScreen");
   const effect = noop.useEffect(() => {
     const obj = MessageManagerDefault;
     const messages = obj.fetchMessages({ channelId, messageId: ReadStateStore.lastMessageId(channelId) });
@@ -31,5 +31,5 @@ export default function MessageRequestsScreen(route) {
     tmp5Result = jsx(ChatViewDefault, { guildId: tmp6, channelId, chatInputRef: ref, HACK_fixModalInteraction: true, screenIndex: "message-request" });
   }
   obj2.children = tmp5Result;
-  return jsx(channelId(9537).ChannelContainer, { guildId: ME, channelId, children: null });
+  return jsx(channelId(9704).ChannelContainer, { guildId: ME, channelId, children: null });
 };

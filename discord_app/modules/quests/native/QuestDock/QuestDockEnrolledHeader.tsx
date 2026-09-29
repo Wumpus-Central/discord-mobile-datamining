@@ -1,12 +1,12 @@
-// === Module 14719: QuestDockEnrolledHeader ===
+// === Module 14894: QuestDockEnrolledHeader ===
 
-// Module 14719 (QuestDockEnrolledHeader)
+// Module 14894 (QuestDockEnrolledHeader)
 import Text_Text from "Text/Text" /* 4832 */;
-import QuestTypes from "QuestTypes" /* 5759 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 10681 */;
-import QuestCopyHooks from "QuestCopyHooks" /* 10750 */;
-import QuestDockCreativeContext from "QuestDockCreativeContext" /* 14631 */;
-import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 14662 */;
+import QuestTypes from "QuestTypes" /* 5926 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 10850 */;
+import QuestCopyHooks from "QuestCopyHooks" /* 10919 */;
+import QuestDockCreativeContext from "QuestDockCreativeContext" /* 14806 */;
+import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 14837 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

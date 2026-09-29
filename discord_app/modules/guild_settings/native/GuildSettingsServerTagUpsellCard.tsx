@@ -1,12 +1,12 @@
-// === Module 17387: GuildSettingsServerTagUpsellCard ===
+// === Module 17576: GuildSettingsServerTagUpsellCard ===
 
-// Module 17387 (GuildSettingsServerTagUpsellCard)
+// Module 17576 (GuildSettingsServerTagUpsellCard)
 import nativeDefault from "native" /* 576 */;
 import Powerups from "Powerups" /* 4727 */;
-import LinearGradientDefault from "LinearGradient" /* 5293 */;
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 11984 */;
-import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 12016 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 12019 */;
+import LinearGradientDefault from "LinearGradient" /* 5459 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12155 */;
+import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 12187 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 12190 */;
 import noop from "module_19" /* 19 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 4723 */;
 
@@ -73,15 +73,15 @@ export default function GuildSettingsServerTagUpsellCard(guildId) {
   obj11.children = intl2.string(guildId(1115).t.Tg0fDm);
   items6[1] = closure_6(guildId(4832).Text, obj11);
   obj9.children = items6;
-  items5[1] = closure_7(guildId(5279).Stack, obj9);
+  items5[1] = closure_7(guildId(5445).Stack, obj9);
   const obj12 = { variant: "primary", size: "lg", text: null, icon: null, iconPosition: "start", onPress: null };
   const intl3 = tmp2(1115).intl;
   obj12.text = intl3.string(guildId(1115).t.kMRDWs);
-  obj12.icon = closure_6(guildId(15850).BoostTier2Icon, { color: "white" });
+  obj12.icon = closure_6(guildId(16025).BoostTier2Icon, { color: "white" });
   obj12.onPress = guildId.onUnlockPress;
-  items5[2] = closure_6(guildId(5281).Button, obj12);
+  items5[2] = closure_6(guildId(5447).Button, obj12);
   obj6.children = items5;
-  items4[3] = closure_7(guildId(5279).Stack, obj6);
+  items4[3] = closure_7(guildId(5445).Stack, obj6);
   obj2.children = items4;
   return closure_7(closure_4, obj2);
 };

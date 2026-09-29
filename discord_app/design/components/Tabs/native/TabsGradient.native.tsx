@@ -1,8 +1,8 @@
-// === Module 12275: TabsGradient ===
+// === Module 12446: TabsGradient ===
 
-// Module 12275 (TabsGradient)
-import spring from "spring" /* 5280 */;
-import LinearGradientDefault from "LinearGradient" /* 5293 */;
+// Module 12446 (TabsGradient)
+import spring from "spring" /* 5446 */;
+import LinearGradientDefault from "LinearGradient" /* 5459 */;
 import noop from "module_19" /* 19 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 

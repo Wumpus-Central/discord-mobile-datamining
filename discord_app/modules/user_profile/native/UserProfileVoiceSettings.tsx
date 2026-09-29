@@ -1,12 +1,12 @@
-// === Module 12617: UserProfileVoiceSettings ===
+// === Module 12787: UserProfileVoiceSettings ===
 
-// Module 12617 (UserProfileVoiceSettings)
+// Module 12787 (UserProfileVoiceSettings)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9104 */;
-import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9167 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12117 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9269 */;
+import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9332 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12288 */;
 import noop from "module_19" /* 19 */;
-import SoundboardStore from "SoundboardStore" /* 5319 */;
+import SoundboardStore from "SoundboardStore" /* 5485 */;
 import MediaEngineStore from "MediaEngineStore" /* 1993 */;
 import PermissionStore from "PermissionStore" /* 4469 */;
 
@@ -178,8 +178,8 @@ function CurrentUserVoiceSettings(channel) {
   ({ user, style } = channel);
   const tmp = closure_11();
   let tmp9Result = dependencyMap;
-  const trackUserProfileAction = channel(7635).useUserProfileAnalyticsContext().trackUserProfileAction;
-  const obj = channel(7635);
+  const trackUserProfileAction = channel(7800).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const obj = channel(7800);
   const items = [MediaEngineStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => selfMute.isSelfMute());
   const obj2 = channel(504);
@@ -212,9 +212,9 @@ function CurrentUserVoiceSettings(channel) {
     }
     const obj5 = { label: stringResult, icon: null, onPress: null };
     if (stateFromStores) {
-      let MicrophoneIcon = tmp2(9140).MicrophoneSlashIcon;
+      let MicrophoneIcon = tmp2(9305).MicrophoneSlashIcon;
     } else {
-      MicrophoneIcon = tmp2(9465).MicrophoneIcon;
+      MicrophoneIcon = tmp2(9632).MicrophoneIcon;
     }
     const obj6 = { children: null };
     obj5.icon = MicrophoneIcon;
@@ -222,11 +222,11 @@ function CurrentUserVoiceSettings(channel) {
       trackUserProfileAction({ action: "MUTE" });
       AudioActionCreatorsDefault.toggleSelfMute();
     };
-    obj6.children = closure_9(tmp2(6628).UserProfileFormRow, obj5, "mute");
-    tmp9Result = closure_9(tmp2(6628).UserProfileCardRows, obj6);
+    obj6.children = closure_9(tmp2(6794).UserProfileFormRow, obj5, "mute");
+    tmp9Result = closure_9(tmp2(6794).UserProfileCardRows, obj6);
     obj4.children = tmp9Result;
-    closure_9(trackUserProfileAction(6628), obj4);
-    const tmp6Result = trackUserProfileAction(6628);
+    closure_9(trackUserProfileAction(6794), obj4);
+    const tmp6Result = trackUserProfileAction(6794);
   }
   return tmp8;
 }

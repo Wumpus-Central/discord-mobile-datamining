@@ -1,11 +1,11 @@
-// === Module 6570: BottomSheetTitleHeader ===
+// === Module 6736: BottomSheetTitleHeader ===
 
-// Module 6570 (BottomSheetTitleHeader)
+// Module 6736 (BottomSheetTitleHeader)
 import nativeDefault from "native" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1479 */;
 import useToken from "useToken" /* 4531 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 5937 */;
+import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 6103 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

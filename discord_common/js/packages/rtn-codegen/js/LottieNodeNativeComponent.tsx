@@ -1,6 +1,6 @@
-// === Module 7443: LottieNodeNativeComponent ===
+// === Module 7608: LottieNodeNativeComponent ===
 
-// Module 7443 (LottieNodeNativeComponent)
+// Module 7608 (LottieNodeNativeComponent)
 import renderElement from "renderElement" /* 114 */;
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;

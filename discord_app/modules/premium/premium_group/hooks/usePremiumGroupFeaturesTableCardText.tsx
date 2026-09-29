@@ -1,12 +1,12 @@
-// === Module 13025: usePremiumGroupFeaturesTableCardText ===
+// === Module 13195: usePremiumGroupFeaturesTableCardText ===
 
-// Module 13025 (usePremiumGroupFeaturesTableCardText)
+// Module 13195 (usePremiumGroupFeaturesTableCardText)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import user from "user" /* 1380 */;
 import _modDef3199 from "module_3199" /* 3199 */;
-import PremiumGroupUtils from "PremiumGroupUtils" /* 7493 */;
-import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName" /* 13026 */;
+import PremiumGroupUtils from "PremiumGroupUtils" /* 7658 */;
+import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName" /* 13196 */;
 import SubscriptionStore from "SubscriptionStore" /* 4494 */;
 
 require = fn;

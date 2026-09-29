@@ -1,12 +1,12 @@
-// === Module 12785: FriendInvite ===
+// === Module 12955: FriendInvite ===
 
-// Module 12785 (FriendInvite)
+// Module 12955 (FriendInvite)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1115 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import UserUtilsDefault from "UserUtils" /* 4678 */;
-import Constants from "Constants" /* 7155 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7387 */;
+import Constants from "Constants" /* 7320 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7552 */;
 import RelationshipStore from "RelationshipStore" /* 4479 */;
 import size from "module_2" /* 2 */;
 

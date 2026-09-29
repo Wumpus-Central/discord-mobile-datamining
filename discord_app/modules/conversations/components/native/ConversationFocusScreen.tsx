@@ -1,8 +1,8 @@
-// === Module 12823: ConversationFocusScreen ===
+// === Module 12993: ConversationFocusScreen ===
 
-// Module 12823 (ConversationFocusScreen)
+// Module 12993 (ConversationFocusScreen)
 import noop from "module_19" /* 19 */;
-import ConversationsStore from "ConversationsStore" /* 7018 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7179 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -14,14 +14,14 @@ export default function ConversationFocusScreen() {
   channelId = params.channelId;
   const conversationId = params.conversationId;
   const obj = channelId(1488);
-  const items = [ConversationsStore];
+  const items = [ChannelConversationsStore];
   const items1 = [channelId, conversationId];
-  const messages = channelId(504).useStateFromStores(items, () => ConversationsStore.getHydratedMessages(channelId, conversationId), items1);
+  const messages = channelId(504).useStateFromStores(items, () => ChannelConversationsStore.getHydratedMessages(channelId, conversationId), items1);
   let obj2 = channelId(504);
-  const items2 = [ConversationsStore];
+  const items2 = [ChannelConversationsStore];
   const items3 = [channelId, conversationId];
   const stateFromStoresObject = channelId(504).useStateFromStoresObject(items2, () => {
-    const conversationMetadata = ConversationsStore.getConversationMetadata(channelId, conversationId);
+    const conversationMetadata = ChannelConversationsStore.getConversationMetadata(channelId, conversationId);
     let flag;
     if (conversationMetadata != null) {
       flag = conversationMetadata.fullyHydrated;
@@ -29,7 +29,7 @@ export default function ConversationFocusScreen() {
     if (flag == null) {
       flag = false;
     }
-    const obj2 = { fullyHydrated: flag, isFullFetchPending: ConversationsStore.isConversationFetchPending(conversationId, true), startMessageId: null };
+    const obj2 = { fullyHydrated: flag, isFullFetchPending: ChannelConversationsStore.isConversationFetchPending(conversationId, true), startMessageId: null };
     let startMessageId;
     if (conversationMetadata != null) {
       startMessageId = conversationMetadata.conversation.startMessageId;
@@ -41,5 +41,5 @@ export default function ConversationFocusScreen() {
     return obj2;
   }, items3);
   ({ fullyHydrated, isFullFetchPending, startMessageId } = stateFromStoresObject);
-  return jsx(conversationId(12824), { channelId, conversationId, messages, fullyHydrated, isFullFetchPending, startMessageId });
+  return jsx(conversationId(12994), { channelId, conversationId, messages, fullyHydrated, isFullFetchPending, startMessageId });
 };

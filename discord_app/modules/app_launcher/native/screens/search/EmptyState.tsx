@@ -1,6 +1,6 @@
-// === Module 11591: search/EmptyState ===
+// === Module 11760: search/EmptyState ===
 
-// Module 11591 (search/EmptyState)
+// Module 11760 (search/EmptyState)
 import util from "util" /* 1115 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4541 */;
 import noop from "module_19" /* 19 */;
@@ -19,7 +19,7 @@ export default function EmptyState(showsGenericMessage) {
     flag = false;
   }
   const tmp = closure_5();
-  const logAppLauncherEmptyStateView = flag(11533).useLogAppLauncherEmptyStateView(flag(8712).AppLauncherEmptyStateType.SEARCH_EMPTY, showsGenericMessage.query);
+  const logAppLauncherEmptyStateView = flag(11702).useLogAppLauncherEmptyStateView(flag(8877).AppLauncherEmptyStateType.SEARCH_EMPTY, showsGenericMessage.query);
   const items = [flag];
   const effect = noop.useEffect(() => {
     const intl = util.intl;

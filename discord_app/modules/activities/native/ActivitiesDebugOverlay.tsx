@@ -1,10 +1,10 @@
-// === Module 16969: ActivitiesDebugOverlay ===
+// === Module 17156: ActivitiesDebugOverlay ===
 
-// Module 16969 (ActivitiesDebugOverlay)
+// Module 17156 (ActivitiesDebugOverlay)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import useThermalState from "useThermalState" /* 8781 */;
+import useThermalState from "useThermalState" /* 8946 */;
 import noop from "module_19" /* 19 */;
 
 const useThermalStateDefault = useThermalState;

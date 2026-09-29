@@ -1,8 +1,8 @@
-// === Module 6828: LinkButton ===
+// === Module 6994: LinkButton ===
 
-// Module 6828 (LinkButton)
+// Module 6994 (LinkButton)
 import Text_Text from "Text/Text" /* 4832 */;
-import Pressables from "Pressables" /* 5435 */;
+import Pressables from "Pressables" /* 5602 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

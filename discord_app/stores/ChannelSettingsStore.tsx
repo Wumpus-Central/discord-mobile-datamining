@@ -1,6 +1,6 @@
-// === Module 8086: ChannelSettingsStore ===
+// === Module 8251: ChannelSettingsStore ===
 
-// Module 8086 (ChannelSettingsStore)
+// Module 8251 (ChannelSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ThreadConstants from "ThreadConstants" /* 1114 */;
@@ -12,7 +12,7 @@ import GuildRecordUtils from "GuildRecordUtils" /* 2059 */;
 import _modDef4421 from "module_4421" /* 4421 */;
 import ReactionUtils from "ReactionUtils" /* 4481 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4483 */;
-import InviteRecord from "InviteRecord" /* 7828 */;
+import InviteRecord from "InviteRecord" /* 7993 */;
 import UserRecord from "UserRecord" /* 1386 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import Constants from "Constants" /* 1074 */;

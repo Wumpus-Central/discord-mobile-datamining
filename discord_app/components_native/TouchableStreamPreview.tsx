@@ -1,12 +1,12 @@
-// === Module 9518: TouchableStreamPreview ===
+// === Module 9685: TouchableStreamPreview ===
 
-// Module 9518 (TouchableStreamPreview)
+// Module 9685 (TouchableStreamPreview)
 import nativeDefault from "native" /* 576 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 4888 */;
 import StreamActionCreators from "StreamActionCreators" /* 4978 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5037 */;
 import transitionToStreamDefault from "transitionToStream" /* 5038 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5723 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5890 */;
 import noop from "module_19" /* 19 */;
 import GameConsoleStore from "GameConsoleStore" /* 4853 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4858 */;

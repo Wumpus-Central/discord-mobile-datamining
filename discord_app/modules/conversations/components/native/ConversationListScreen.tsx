@@ -1,15 +1,15 @@
-// === Module 7367: ConversationListScreen ===
+// === Module 7532: ConversationListScreen ===
 
-// Module 7367 (ConversationListScreen)
+// Module 7532 (ConversationListScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7335 */;
-import ConversationListItemDefault from "ConversationListItem" /* 7368 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7500 */;
+import ConversationListItemDefault from "ConversationListItem" /* 7533 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConversationsStore from "ConversationsStore" /* 7018 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7179 */;
 
 const require = globalThis.__r;
 
@@ -23,7 +23,7 @@ function keyExtractor(conversationId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const ConversationConstants = fn(7015);
+const ConversationConstants = fn(7181);
 ({ MAX_CONVERSATIONS_PER_CHANNEL: closure_9, MOBILE_FETCH_LIMIT: c10, MOBILE_PREVIEW_MESSAGE_COUNT: closure_11 } = ConversationConstants);
 const jsx = fn(21).jsx;
 const viewabilityConfig = { waitForInteraction: false, itemVisiblePercentThreshold: 50, minimumViewTime: 1000 };
@@ -71,7 +71,7 @@ export default function ConversationListScreen() {
   const items = [stateFromStores1];
   const items1 = [channelId];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
-    let channelConversations = ConversationsStore.getChannelConversations(closure_0);
+    let channelConversations = ChannelConversationsStore.getChannelConversations(closure_0);
     if (channelConversations == null) {
       channelConversations = [];
     }
@@ -86,11 +86,11 @@ export default function ConversationListScreen() {
   let obj4 = require("initialize");
   const items3 = [stateFromStores1];
   const items4 = [channelId];
-  let stateFromStores = require("initialize").useStateFromStores(items3, () => null == ConversationsStore.getEdgeMarker(closure_0, "before"), items4);
+  let stateFromStores = require("initialize").useStateFromStores(items3, () => null == ChannelConversationsStore.getEdgeMarker(closure_0, "before"), items4);
   let obj5 = require("initialize");
   const items5 = [stateFromStores1];
   const items6 = [channelId];
-  stateFromStores1 = require("initialize").useStateFromStores(items5, () => ConversationsStore.isPendingFetch(closure_0), items6);
+  stateFromStores1 = require("initialize").useStateFromStores(items5, () => ChannelConversationsStore.isPendingFetch(closure_0), items6);
   _handleEndReached = function _handleEndReached() {
     const self = this;
     const apply = closure_0.apply;
@@ -238,6 +238,6 @@ export default function ConversationListScreen() {
   obj8.ListFooterComponent = memo1;
   obj8.onViewableItemsChanged = callback1;
   obj8.viewabilityConfig = viewabilityConfig;
-  obj7.children = jsx(tmp(8179).FlashList, { data: memo, renderItem, keyExtractor, contentContainerStyle: tmp3.content, scrollIndicatorInsets: { bottom }, onEndReached: null, ListEmptyComponent: null, ListFooterComponent: null, onViewableItemsChanged: null, viewabilityConfig: null });
+  obj7.children = jsx(tmp(8344).FlashList, { data: memo, renderItem, keyExtractor, contentContainerStyle: tmp3.content, scrollIndicatorInsets: { bottom }, onEndReached: null, ListEmptyComponent: null, ListFooterComponent: null, onViewableItemsChanged: null, viewabilityConfig: null });
   return <memo style={tmp3.container}>{null}</memo>;
 };

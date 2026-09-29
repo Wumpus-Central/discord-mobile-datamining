@@ -1,6 +1,6 @@
-// === Module 7847: Constants ===
+// === Module 8012: Constants ===
 
-// Module 7847 (Constants)
+// Module 8012 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/safety_common/Constants.tsx");

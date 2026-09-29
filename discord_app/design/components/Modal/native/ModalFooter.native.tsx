@@ -1,6 +1,6 @@
-// === Module 11405: ModalFooter ===
+// === Module 11574: ModalFooter ===
 
-// Module 11405 (ModalFooter)
+// Module 11574 (ModalFooter)
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

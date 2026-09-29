@@ -1,6 +1,6 @@
-// === Module 9548: ThreadNotificationSettings ===
+// === Module 9715: ThreadNotificationSettings ===
 
-// Module 9548 (ThreadNotificationSettings)
+// Module 9715 (ThreadNotificationSettings)
 import FlagUtils from "FlagUtils" /* 1385 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5017 */;

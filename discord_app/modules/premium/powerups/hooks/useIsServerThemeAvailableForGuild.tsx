@@ -1,6 +1,6 @@
-// === Module 13456: useIsServerThemeAvailableForGuild ===
+// === Module 13625: useIsServerThemeAvailableForGuild ===
 
-// Module 13456 (useIsServerThemeAvailableForGuild)
+// Module 13625 (useIsServerThemeAvailableForGuild)
 import GuildThemeResolver from "GuildThemeResolver" /* 4719 */;
 import ServerThemeExperiment from "ServerThemeExperiment" /* 4761 */;
 import size from "module_2" /* 2 */;

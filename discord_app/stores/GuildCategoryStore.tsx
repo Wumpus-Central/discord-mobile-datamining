@@ -1,9 +1,9 @@
-// === Module 6532: GuildCategoryStore ===
+// === Module 6698: GuildCategoryStore ===
 
-// Module 6532 (GuildCategoryStore)
+// Module 6698 (GuildCategoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import getFlattedChannelListDefault from "getFlattedChannelList" /* 6533 */;
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 6699 */;
 import FavoriteStore from "FavoriteStore" /* 2048 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2045 */;

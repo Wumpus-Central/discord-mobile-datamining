@@ -1,12 +1,12 @@
-// === Module 8668: GPlayActionCreators ===
+// === Module 8833: GPlayActionCreators ===
 
-// Module 8668 (GPlayActionCreators)
+// Module 8833 (GPlayActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import IAPStore from "IAPStore" /* 6658 */;
+import IAPStore from "IAPStore" /* 6824 */;
 
 function getPlanIdForProduct(arg0, arg1) {
   if (arg1) {
@@ -113,7 +113,7 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0) {
           let _Set = Set;
           let tmp145 = new.target;
           let tmp146 = new.target;
-          let set = new Set();
+          set = new Set();
           closure_145_4 = set;
           closure_145_5 = {};
           closure_4 = closure_145_0;
@@ -374,26 +374,25 @@ let closure_33 = async function _subscribe(arg0) {
   if (1 === tmp7) {
     c9 = 0;
     closure_134_3 = closure_8;
-    const obj8 = { productId: closure_134_0, oldProductId: null };
+    const obj7 = { productId: closure_134_0, oldProductId: null };
     let oldProductId = closure_134_1;
     if (closure_134_1 == null) {
       oldProductId = "";
     }
-    const obj9 = { tags: null };
-    obj8.oldProductId = oldProductId;
-    obj9.tags = obj8;
-    const result = closure_135_0(closure_135_2[19]).captureBillingException(closure_134_3, obj9);
-    closure_135_0(closure_135_2[19]);
-    const obj10 = { title: null, body: null };
-    const intl = closure_135_0(closure_135_2[22]).intl;
-    obj10.title = intl.string(closure_135_0(closure_135_2[22]).t["U+H+kd"]);
-    const intl2 = closure_135_0(closure_135_2[22]).intl;
-    obj10.body = intl2.string(closure_135_0(closure_135_2[22]).t.LFFx5G);
-    closure_135_1(closure_135_2[21]).show(obj10);
-    closure_135_1(closure_135_2[21]);
-    closure_135_1(closure_135_2[20]).track(closure_135_13.GPLAY_PURCHASE_FAILED, { location: "subscribe", product_id: closure_134_0, offer_id: closure_134_2, error: closure_134_3.message });
-    c11 = 3;
+    const obj8 = { tags: null };
+    obj7.oldProductId = oldProductId;
+    obj8.tags = obj7;
+    closure_135_38(closure_134_3, obj8);
+    const obj9 = { title: null, body: null };
+    const intl = closure_135_0(closure_135_2[21]).intl;
+    obj9.title = intl.string(closure_135_0(closure_135_2[21]).t["U+H+kd"]);
+    const intl2 = closure_135_0(closure_135_2[21]).intl;
+    obj9.body = intl2.string(closure_135_0(closure_135_2[21]).t.LFFx5G);
+    closure_135_1(closure_135_2[20]).show(obj9);
     closure_135_1(closure_135_2[20]);
+    closure_135_1(closure_135_2[19]).track(closure_135_13.GPLAY_PURCHASE_FAILED, { location: "subscribe", product_id: closure_134_0, offer_id: closure_134_2, error: closure_134_3.message });
+    c11 = 3;
+    closure_135_1(closure_135_2[19]);
   } else if (arg0 === 1) {
     c11 = 3;
     throw value;
@@ -440,65 +439,65 @@ let closure_34 = async function _verifyPurchase(arg0) {
             closure_131_3 = undefined;
             closure_131_4 = undefined;
             closure_131_5 = undefined;
-            const tmp77 = state.getState().analyticsByProductId[closure_0.productId];
-            closure_131_1 = tmp77;
+            const tmp75 = state.getState().analyticsByProductId[closure_0.productId];
+            closure_131_1 = tmp75;
             id = id.getId();
-            const SubscriptionProductIds = closure_2_0(6661).SubscriptionProductIds;
+            const SubscriptionProductIds = closure_2_0(6827).SubscriptionProductIds;
             const hasItem = SubscriptionProductIds.includes(closure_0.productId);
-            let tmp54 = !hasItem;
-            closure_131_2 = tmp54;
+            let tmp53 = !hasItem;
+            closure_131_2 = tmp53;
             const productId = closure_0.productId;
             if (hasItem) {
-              let tmp52 = null;
-              let tmp53 = productId;
+              let tmp51 = null;
+              let tmp52 = productId;
             } else {
-              tmp52 = productId;
-              tmp53 = null;
+              tmp51 = productId;
+              tmp52 = null;
             }
             if (!hasItem) {
-              tmp54 = null != gift_info_options;
+              tmp53 = null != gift_info_options;
             }
-            if (tmp54) {
-              tmp54 = null == gift_info_options.gift_style;
+            if (tmp53) {
+              tmp53 = null == gift_info_options.gift_style;
             }
-            if (tmp54) {
-              const obj5 = { source: "verifyPurchase", sku_id: closure_0.productId };
-              _true(1241).track(constants.GIFT_INFO_OPTIONS_MISSING, obj5);
-              const obj9 = _true(1241);
+            if (tmp53) {
+              const obj4 = { source: "verifyPurchase", sku_id: closure_0.productId };
+              _true(1241).track(constants.GIFT_INFO_OPTIONS_MISSING, obj4);
+              const obj8 = _true(1241);
             }
             c6 = 1;
             const HTTP = closure_2_0(1271).HTTP;
             const request = { url: constants2.VERIFY_PURCHASE, body: null, rejectWithError: false };
-            const obj6 = { purchase_token: closure_0.purchaseToken, user_id: id, package_name: closure_0.packageName, subscription_sku_id: tmp53, one_time_purchase_sku_id: tmp52, gift_info_options, one_time_purchase_options: { consume_on_validate: true }, load_id: null };
+            const obj5 = { purchase_token: closure_0.purchaseToken, user_id: id, package_name: closure_0.packageName, subscription_sku_id: tmp52, one_time_purchase_sku_id: tmp51, gift_info_options, one_time_purchase_options: { consume_on_validate: true }, load_id: null };
             load_id = undefined;
-            if (tmp77 != null) {
-              load_id = tmp77.load_id;
+            if (tmp75 != null) {
+              load_id = tmp75.load_id;
             }
             if (load_id == null) {
               load_id = null;
             }
-            obj6.load_id = load_id;
-            request.body = obj6;
+            obj5.load_id = load_id;
+            request.body = obj5;
             c7 = 2;
             c8 = 1;
-            const obj8 = { value: HTTP.post(request), done: false };
-            return obj8;
+            const obj7 = { value: HTTP.post(request), done: false };
+            return obj7;
           }
         } else if (1 === tmp8) {
           c6 = 0;
           closure_131_6 = closure_5;
-          const obj10 = { tags: null };
-          const obj11 = { productId: closure_131_0.productId };
-          obj10.tags = obj11;
-          const result = closure_132_0(closure_132_2[19]).captureBillingException(closure_131_6, obj10);
+          const obj9 = { tags: null };
+          const obj10 = { productId: closure_131_0.productId };
+          obj9.tags = obj10;
+          closure_132_38(closure_131_6, obj9);
           if (null != closure_131_1) {
             const succeededOnlyFields2 = closure_131_1.succeededOnlyFields;
             closure_131_5 = closure_132_7(closure_131_1, closure_132_6);
-            const obj12 = {};
+            const obj11 = {};
             const merged = Object.assign(closure_131_5);
-            obj12.payment_gateway = closure_132_20.GOOGLE;
-            closure_132_1(closure_132_2[20]).track(closure_132_13.PAYMENT_FLOW_FAILED, obj12);
-            const obj7 = closure_132_1(closure_132_2[20]);
+            obj11.payment_gateway = closure_132_20.GOOGLE;
+            closure_132_1(closure_132_2[19]).track(closure_132_13.PAYMENT_FLOW_FAILED, obj11);
+            const obj6 = closure_132_1(closure_132_2[19]);
           }
           throw closure_131_6;
         } else if (arg0 === 1) {
@@ -507,29 +506,29 @@ let closure_34 = async function _verifyPurchase(arg0) {
         } else if (arg0 === 2) {
           c6 = 0;
           c8 = 3;
-          const obj13 = { value, done: true };
-          return obj13;
+          const obj12 = { value, done: true };
+          return obj12;
         } else {
           closure_131_3 = value;
           if (null != closure_131_1) {
             if (!closure_131_2) {
               const succeededOnlyFields = closure_131_1.succeededOnlyFields;
               closure_131_4 = closure_132_7(closure_131_1, closure_132_5);
-              closure_132_1(closure_132_2[20]).track(closure_132_13.PAYMENT_FLOW_COMPLETED, closure_131_4);
+              closure_132_1(closure_132_2[19]).track(closure_132_13.PAYMENT_FLOW_COMPLETED, closure_131_4);
               closure_132_9(closure_131_0.productId);
-              const obj = closure_132_1(closure_132_2[20]);
+              const obj = closure_132_1(closure_132_2[19]);
             }
           }
           c6 = 0;
           c8 = 3;
-          const obj14 = { value: closure_131_3.body, done: true };
-          return obj14;
+          const obj13 = { value: closure_131_3.body, done: true };
+          return obj13;
         }
-      } catch (tmp64) {
-        closure_5 = tmp64;
+      } catch (tmp62) {
+        closure_5 = tmp62;
         if (tmp4 === c6) {
           c8 = tmp2;
-          throw tmp64;
+          throw tmp62;
         } else {
           c7 = tmp;
         }
@@ -537,16 +536,72 @@ let closure_34 = async function _verifyPurchase(arg0) {
     }
   })();
 };
+function captureGPlayBillingException(code, merged) {
+  let tmp2 = null;
+  code = undefined;
+  if (code != null) {
+    code = code.code;
+  }
+  if (!set1.has(code)) {
+    let code1;
+    if (code != tmp2) {
+      code1 = code.code;
+    }
+    const hasItem = set.has(code1);
+    if (code != tmp2) {
+      const message = code.message;
+      if (message != tmp2) {
+        const hasItem1 = message.includes("max attempts exceeded");
+      }
+    }
+    if (code != tmp2) {
+      const message2 = code.message;
+      if (message2 != tmp2) {
+        const hasItem2 = message2.includes("returned null");
+      }
+    }
+    if (!hasItem) {
+      if (true !== hasItem1) {
+        if (true !== hasItem2) {
+          const result = closure_0(getUserCountry[23]).captureBillingException(code, merged);
+          const obj = closure_0(getUserCountry[23]);
+        }
+      }
+    }
+    let captureBillingException = globalThis;
+    const _Math = Math;
+    if (Math.random() < 0.01) {
+      if (hasItem) {
+        tmp2 = code == tmp2;
+        let code2;
+        if (!tmp2) {
+          code2 = code.code;
+        }
+        const items = ["gplay-billing-error", captureBillingException.String(code2)];
+        let fingerprint = items;
+      } else {
+        fingerprint = merged.fingerprint;
+      }
+      captureBillingException = closure_0(getUserCountry[23]).captureBillingException;
+      const obj2 = {};
+      merged = Object.assign(merged);
+      obj2.fingerprint = fingerprint;
+      const result1 = captureBillingException(code, obj2);
+      const tmp16 = closure_0(getUserCountry[23]);
+    }
+  }
+}
 let closure_3 = ["succeededOnlyFields"];
 let closure_4 = ["succeededOnlyFields"];
 let subscriptionId = ["succeededOnlyFields"];
 let closure_6 = ["succeededOnlyFields"];
-const GPlayAnalyticsStore = fn(8669);
+const GPlayAnalyticsStore = fn(8834);
 ({ deleteGPlayAnalytics: closure_9, useGPlayAnalyticsStore: c10 } = GPlayAnalyticsStore);
 let Constants = fn(1074);
 ({ AnalyticEvents: map1, Endpoints: closure_14, PriceSetAssignmentPurchaseTypes: closure_15 } = Constants);
-Constants = fn(6659);
-({ GPlayBillingResult: closure_16, GPlaySkusType: closure_17 } = Constants);
+Constants = fn(6825);
+const GPlayBillingResult = Constants.GPlayBillingResult;
+const GPlaySkusType = Constants.GPlaySkusType;
 const PremiumConstants = fn(1374);
 ({ PremiumSubscriptionSKUs: closure_18, SubscriptionPlanInfo: closure_19 } = PremiumConstants);
 const PaymentGateways = fn(1085).PaymentGateways;
@@ -680,7 +735,7 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
+    } else if (tmp7 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -701,17 +756,14 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            closure_1 = tmp7;
+            closure_2 = tmp3;
+            closure_1 = tmp5;
             closure_129_0 = closure_0;
-            closure_129_1 = undefined;
-            closure_129_2 = undefined;
-            closure_129_3 = undefined;
-            closure_129_4 = undefined;
             c5 = 1;
             c6 = 1;
             return { value: "flex", done: true };
           }
-        } else if (1 === tmp7) {
+        } else if (1 === tmp8) {
           if (arg0 === 1) {
             c6 = 3;
             throw value;
@@ -725,63 +777,24 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
             HermesBuiltin.arraySpread(closure_129_0, 0);
             c5 = 3;
             c6 = 1;
-            const obj6 = { value: HermesBuiltin.apply(items, undefined), done: false };
-            return obj6;
+            const obj5 = { value: HermesBuiltin.apply(items, undefined), done: false };
+            return obj5;
           }
-        } else if (2 === tmp7) {
+        } else if (2 === tmp8) {
           c4 = 0;
-          closure_129_5 = closure_3;
-          const items1 = [, , , , , ];
-          ({ SERVICE_DISCONNECTED: arr[0], SERVICE_TIMEOUT: arr[1], SERVICE_UNAVAILABLE: arr[2], BILLING_UNAVAILABLE: arr[3], FEATURE_NOT_SUPPORTED: arr[4], BILLING_CLIENT_NOT_READY: arr[5] } = closure_1_16);
-          const _String = String;
-          const mapped = items1.map(String);
-          let code;
-          if (closure_129_5 != null) {
-            code = closure_129_5.code;
-          }
-          closure_129_1 = mapped.includes(code);
-          let hasItem;
-          if (closure_129_5 != null) {
-            const message = closure_129_5.message;
-            if (message != null) {
-              hasItem = message.includes("max attempts exceeded");
-            }
-          }
-          closure_129_2 = true === hasItem;
-          let hasItem1;
-          if (closure_129_5 != null) {
-            const message2 = closure_129_5.message;
-            if (message2 != null) {
-              hasItem1 = message2.includes("returned null");
-            }
-          }
-          closure_129_3 = true === hasItem1;
-          let tmp21;
+          closure_129_1 = closure_3;
+          let tmp16;
           if (null != closure_130_2) {
-            const obj8 = { source: tmp20 };
-            tmp21 = obj8;
+            const obj6 = { source: tmp15 };
+            tmp16 = obj6;
           }
-          closure_129_4 = tmp21;
-          if (!closure_129_1) {
-            if (!closure_129_2) {
-              if (!closure_129_3) {
-                const obj9 = { tags: closure_129_4 };
-                const result = closure_0(tmp3[19]).captureBillingException(closure_129_5, obj9);
-                const obj5 = closure_0(tmp3[19]);
-              }
-              if (closure_130_1) {
-                throw closure_129_5;
-              } else {
-                c6 = 3;
-                return { value: "HermesInternal", done: null };
-              }
-            }
-          }
-          const _Math = Math;
-          if (Math.random() < 0.01) {
-            const obj10 = { tags: closure_129_4 };
-            const result1 = closure_0(tmp3[19]).captureBillingException(closure_129_5, obj10);
-            const obj7 = closure_0(tmp3[19]);
+          const obj7 = { tags: tmp16 };
+          captureGPlayBillingException(closure_129_1, obj7);
+          if (closure_130_1) {
+            throw closure_129_1;
+          } else {
+            c6 = 3;
+            return { value: "HermesInternal", done: null };
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -789,19 +802,19 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          const obj11 = { value, done: true };
-          return obj11;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
           c4 = 0;
           c6 = 3;
           const obj = { value, done: true };
           return obj;
         }
-      } catch (tmp50) {
-        closure_3 = tmp50;
+      } catch (tmp30) {
+        closure_3 = tmp30;
         if (tmp4 === c4) {
           c6 = tmp2;
-          throw tmp50;
+          throw tmp30;
         } else {
           c5 = tmp;
         }
@@ -961,7 +974,7 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
+    } else if (tmp7 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -982,17 +995,14 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            closure_1 = tmp7;
+            closure_2 = tmp3;
+            closure_1 = tmp5;
             closure_129_0 = closure_0;
-            closure_129_1 = undefined;
-            closure_129_2 = undefined;
-            closure_129_3 = undefined;
-            closure_129_4 = undefined;
             c5 = 1;
             c6 = 1;
             return { value: "flex", done: true };
           }
-        } else if (1 === tmp7) {
+        } else if (1 === tmp8) {
           if (arg0 === 1) {
             c6 = 3;
             throw value;
@@ -1006,63 +1016,24 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
             HermesBuiltin.arraySpread(closure_129_0, 0);
             c5 = 3;
             c6 = 1;
-            const obj6 = { value: HermesBuiltin.apply(items, undefined), done: false };
-            return obj6;
+            const obj5 = { value: HermesBuiltin.apply(items, undefined), done: false };
+            return obj5;
           }
-        } else if (2 === tmp7) {
+        } else if (2 === tmp8) {
           c4 = 0;
-          closure_129_5 = closure_3;
-          const items1 = [, , , , , ];
-          ({ SERVICE_DISCONNECTED: arr[0], SERVICE_TIMEOUT: arr[1], SERVICE_UNAVAILABLE: arr[2], BILLING_UNAVAILABLE: arr[3], FEATURE_NOT_SUPPORTED: arr[4], BILLING_CLIENT_NOT_READY: arr[5] } = closure_1_16);
-          const _String = String;
-          const mapped = items1.map(String);
-          let code;
-          if (closure_129_5 != null) {
-            code = closure_129_5.code;
-          }
-          closure_129_1 = mapped.includes(code);
-          let hasItem;
-          if (closure_129_5 != null) {
-            const message = closure_129_5.message;
-            if (message != null) {
-              hasItem = message.includes("max attempts exceeded");
-            }
-          }
-          closure_129_2 = true === hasItem;
-          let hasItem1;
-          if (closure_129_5 != null) {
-            const message2 = closure_129_5.message;
-            if (message2 != null) {
-              hasItem1 = message2.includes("returned null");
-            }
-          }
-          closure_129_3 = true === hasItem1;
-          let tmp21;
+          closure_129_1 = closure_3;
+          let tmp16;
           if (null != closure_130_2) {
-            const obj8 = { source: tmp20 };
-            tmp21 = obj8;
+            const obj6 = { source: tmp15 };
+            tmp16 = obj6;
           }
-          closure_129_4 = tmp21;
-          if (!closure_129_1) {
-            if (!closure_129_2) {
-              if (!closure_129_3) {
-                const obj9 = { tags: closure_129_4 };
-                const result = closure_0(tmp3[19]).captureBillingException(closure_129_5, obj9);
-                const obj5 = closure_0(tmp3[19]);
-              }
-              if (closure_130_1) {
-                throw closure_129_5;
-              } else {
-                c6 = 3;
-                return { value: "HermesInternal", done: null };
-              }
-            }
-          }
-          const _Math = Math;
-          if (Math.random() < 0.01) {
-            const obj10 = { tags: closure_129_4 };
-            const result1 = closure_0(tmp3[19]).captureBillingException(closure_129_5, obj10);
-            const obj7 = closure_0(tmp3[19]);
+          const obj7 = { tags: tmp16 };
+          captureGPlayBillingException(closure_129_1, obj7);
+          if (closure_130_1) {
+            throw closure_129_1;
+          } else {
+            c6 = 3;
+            return { value: "HermesInternal", done: null };
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -1070,19 +1041,19 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          const obj11 = { value, done: true };
-          return obj11;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
           c4 = 0;
           c6 = 3;
           const obj = { value, done: true };
           return obj;
         }
-      } catch (tmp50) {
-        closure_3 = tmp50;
+      } catch (tmp30) {
+        closure_3 = tmp30;
         if (tmp4 === c4) {
           c6 = tmp2;
-          throw tmp50;
+          throw tmp30;
         } else {
           c5 = tmp;
         }
@@ -1150,7 +1121,7 @@ const importDefaultResultResult2 = asyncGeneratorStep(async () => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
+    } else if (tmp7 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -1171,17 +1142,14 @@ const importDefaultResultResult2 = asyncGeneratorStep(async () => {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            closure_1 = tmp7;
+            closure_2 = tmp3;
+            closure_1 = tmp5;
             closure_129_0 = closure_0;
-            closure_129_1 = undefined;
-            closure_129_2 = undefined;
-            closure_129_3 = undefined;
-            closure_129_4 = undefined;
             c5 = 1;
             c6 = 1;
             return { value: "flex", done: true };
           }
-        } else if (1 === tmp7) {
+        } else if (1 === tmp8) {
           if (arg0 === 1) {
             c6 = 3;
             throw value;
@@ -1195,63 +1163,24 @@ const importDefaultResultResult2 = asyncGeneratorStep(async () => {
             HermesBuiltin.arraySpread(closure_129_0, 0);
             c5 = 3;
             c6 = 1;
-            const obj6 = { value: HermesBuiltin.apply(items, undefined), done: false };
-            return obj6;
+            const obj5 = { value: HermesBuiltin.apply(items, undefined), done: false };
+            return obj5;
           }
-        } else if (2 === tmp7) {
+        } else if (2 === tmp8) {
           c4 = 0;
-          closure_129_5 = closure_3;
-          const items1 = [, , , , , ];
-          ({ SERVICE_DISCONNECTED: arr[0], SERVICE_TIMEOUT: arr[1], SERVICE_UNAVAILABLE: arr[2], BILLING_UNAVAILABLE: arr[3], FEATURE_NOT_SUPPORTED: arr[4], BILLING_CLIENT_NOT_READY: arr[5] } = closure_1_16);
-          const _String = String;
-          const mapped = items1.map(String);
-          let code;
-          if (closure_129_5 != null) {
-            code = closure_129_5.code;
-          }
-          closure_129_1 = mapped.includes(code);
-          let hasItem;
-          if (closure_129_5 != null) {
-            const message = closure_129_5.message;
-            if (message != null) {
-              hasItem = message.includes("max attempts exceeded");
-            }
-          }
-          closure_129_2 = true === hasItem;
-          let hasItem1;
-          if (closure_129_5 != null) {
-            const message2 = closure_129_5.message;
-            if (message2 != null) {
-              hasItem1 = message2.includes("returned null");
-            }
-          }
-          closure_129_3 = true === hasItem1;
-          let tmp21;
+          closure_129_1 = closure_3;
+          let tmp16;
           if (null != closure_130_2) {
-            const obj8 = { source: tmp20 };
-            tmp21 = obj8;
+            const obj6 = { source: tmp15 };
+            tmp16 = obj6;
           }
-          closure_129_4 = tmp21;
-          if (!closure_129_1) {
-            if (!closure_129_2) {
-              if (!closure_129_3) {
-                const obj9 = { tags: closure_129_4 };
-                const result = closure_0(tmp3[19]).captureBillingException(closure_129_5, obj9);
-                const obj5 = closure_0(tmp3[19]);
-              }
-              if (closure_130_1) {
-                throw closure_129_5;
-              } else {
-                c6 = 3;
-                return { value: "HermesInternal", done: null };
-              }
-            }
-          }
-          const _Math = Math;
-          if (Math.random() < 0.01) {
-            const obj10 = { tags: closure_129_4 };
-            const result1 = closure_0(tmp3[19]).captureBillingException(closure_129_5, obj10);
-            const obj7 = closure_0(tmp3[19]);
+          const obj7 = { tags: tmp16 };
+          captureGPlayBillingException(closure_129_1, obj7);
+          if (closure_130_1) {
+            throw closure_129_1;
+          } else {
+            c6 = 3;
+            return { value: "HermesInternal", done: null };
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -1259,19 +1188,19 @@ const importDefaultResultResult2 = asyncGeneratorStep(async () => {
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          const obj11 = { value, done: true };
-          return obj11;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
           c4 = 0;
           c6 = 3;
           const obj = { value, done: true };
           return obj;
         }
-      } catch (tmp50) {
-        closure_3 = tmp50;
+      } catch (tmp30) {
+        closure_3 = tmp30;
         if (tmp4 === c4) {
           c6 = tmp2;
-          throw tmp50;
+          throw tmp30;
         } else {
           c5 = tmp;
         }
@@ -1293,8 +1222,8 @@ asyncGeneratorStep(async (arg0, arg1) => {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      const obj3 = { value, done: true };
-      return obj3;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -1307,8 +1236,8 @@ asyncGeneratorStep(async (arg0, arg1) => {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_4 = tmp3;
           closure_3 = tmp5;
@@ -1320,30 +1249,29 @@ asyncGeneratorStep(async (arg0, arg1) => {
           c6 = 1;
           v2 = 2;
           c8 = 1;
-          const obj6 = { value: BillingManager.purchase(closure_0, _true), done: false };
-          return obj6;
+          const obj5 = { value: BillingManager.purchase(closure_0, _true), done: false };
+          return obj5;
         }
       } else if (1 === tmp8) {
         c6 = 0;
         closure_131_4 = closure_5;
-        const obj7 = { tags: null };
-        const obj8 = { productId: closure_131_0 };
-        obj7.tags = obj8;
-        const result = closure_0(4503).captureBillingException(closure_131_4, obj7);
-        dependencyMap = closure_131_1;
+        const obj6 = { tags: null };
+        const obj7 = { productId: closure_131_0 };
+        obj6.tags = obj7;
+        captureGPlayBillingException(closure_131_4, obj6);
+        closure_2 = closure_131_1;
         if (closure_131_1 == null) {
-          dependencyMap = {};
+          closure_2 = {};
         }
-        closure_131_2 = dependencyMap;
+        closure_131_2 = closure_2;
         const succeededOnlyFields = closure_131_2.succeededOnlyFields;
         closure_131_3 = v2(closure_131_2, closure_3);
-        const obj2 = closure_0(4503);
-        const obj9 = {};
+        const obj8 = {};
         const merged = Object.assign(closure_131_3);
-        obj9.location = "purchase";
-        obj9.product_id = closure_131_0;
-        obj9.error = closure_131_4.message;
-        _true(1241).track(constants.GPLAY_PURCHASE_FAILED, obj9);
+        obj8.location = "purchase";
+        obj8.product_id = closure_131_0;
+        obj8.error = closure_131_4.message;
+        _true(closure_2[19]).track(constants.GPLAY_PURCHASE_FAILED, obj8);
         throw closure_131_4;
       } else if (arg0 === 1) {
         c8 = 3;
@@ -1358,11 +1286,11 @@ asyncGeneratorStep(async (arg0, arg1) => {
         c8 = 3;
         return { value: "HermesInternal", done: null };
       }
-    } catch (tmp40) {
-      closure_5 = tmp40;
+    } catch (tmp39) {
+      closure_5 = tmp39;
       if (tmp4 === c6) {
         c8 = tmp2;
-        throw tmp40;
+        throw tmp39;
       } else {
         v2 = tmp;
       }
@@ -1435,8 +1363,8 @@ let closure_0 = asyncGeneratorStep(async () => {
             }
             if (true !== hasItem1) {
               const obj6 = { tags: { source: "getUserCountry" } };
-              const result = closure_129_0(closure_129_2[19]).captureBillingException(closure_128_0, obj6);
-              const obj3 = closure_129_0(closure_129_2[19]);
+              const result = closure_129_0(closure_129_2[23]).captureBillingException(closure_128_0, obj6);
+              const obj3 = closure_129_0(closure_129_2[23]);
             }
             c5 = 3;
           }
@@ -1483,7 +1411,7 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
+    } else if (tmp7 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -1504,17 +1432,14 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            closure_1 = tmp7;
+            closure_2 = tmp3;
+            closure_1 = tmp5;
             closure_129_0 = closure_0;
-            closure_129_1 = undefined;
-            closure_129_2 = undefined;
-            closure_129_3 = undefined;
-            closure_129_4 = undefined;
             c5 = 1;
             c6 = 1;
             return { value: "flex", done: true };
           }
-        } else if (1 === tmp7) {
+        } else if (1 === tmp8) {
           if (arg0 === 1) {
             c6 = 3;
             throw value;
@@ -1528,63 +1453,24 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
             HermesBuiltin.arraySpread(closure_129_0, 0);
             c5 = 3;
             c6 = 1;
-            const obj6 = { value: HermesBuiltin.apply(items, undefined), done: false };
-            return obj6;
+            const obj5 = { value: HermesBuiltin.apply(items, undefined), done: false };
+            return obj5;
           }
-        } else if (2 === tmp7) {
+        } else if (2 === tmp8) {
           c4 = 0;
-          closure_129_5 = closure_3;
-          const items1 = [, , , , , ];
-          ({ SERVICE_DISCONNECTED: arr[0], SERVICE_TIMEOUT: arr[1], SERVICE_UNAVAILABLE: arr[2], BILLING_UNAVAILABLE: arr[3], FEATURE_NOT_SUPPORTED: arr[4], BILLING_CLIENT_NOT_READY: arr[5] } = closure_1_16);
-          const _String = String;
-          const mapped = items1.map(String);
-          let code;
-          if (closure_129_5 != null) {
-            code = closure_129_5.code;
-          }
-          closure_129_1 = mapped.includes(code);
-          let hasItem;
-          if (closure_129_5 != null) {
-            const message = closure_129_5.message;
-            if (message != null) {
-              hasItem = message.includes("max attempts exceeded");
-            }
-          }
-          closure_129_2 = true === hasItem;
-          let hasItem1;
-          if (closure_129_5 != null) {
-            const message2 = closure_129_5.message;
-            if (message2 != null) {
-              hasItem1 = message2.includes("returned null");
-            }
-          }
-          closure_129_3 = true === hasItem1;
-          let tmp21;
+          closure_129_1 = closure_3;
+          let tmp16;
           if (null != closure_130_2) {
-            const obj8 = { source: tmp20 };
-            tmp21 = obj8;
+            const obj6 = { source: tmp15 };
+            tmp16 = obj6;
           }
-          closure_129_4 = tmp21;
-          if (!closure_129_1) {
-            if (!closure_129_2) {
-              if (!closure_129_3) {
-                const obj9 = { tags: closure_129_4 };
-                const result = closure_0(tmp3[19]).captureBillingException(closure_129_5, obj9);
-                const obj5 = closure_0(tmp3[19]);
-              }
-              if (closure_130_1) {
-                throw closure_129_5;
-              } else {
-                c6 = 3;
-                return { value: "HermesInternal", done: null };
-              }
-            }
-          }
-          const _Math = Math;
-          if (Math.random() < 0.01) {
-            const obj10 = { tags: closure_129_4 };
-            const result1 = closure_0(tmp3[19]).captureBillingException(closure_129_5, obj10);
-            const obj7 = closure_0(tmp3[19]);
+          const obj7 = { tags: tmp16 };
+          captureGPlayBillingException(closure_129_1, obj7);
+          if (closure_130_1) {
+            throw closure_129_1;
+          } else {
+            c6 = 3;
+            return { value: "HermesInternal", done: null };
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -1592,19 +1478,19 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          const obj11 = { value, done: true };
-          return obj11;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
           c4 = 0;
           c6 = 3;
           const obj = { value, done: true };
           return obj;
         }
-      } catch (tmp50) {
-        closure_3 = tmp50;
+      } catch (tmp30) {
+        closure_3 = tmp30;
         if (tmp4 === c4) {
           c6 = tmp2;
-          throw tmp50;
+          throw tmp30;
         } else {
           c5 = tmp;
         }
@@ -1614,6 +1500,12 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
   iter.next();
   return iter;
 });
+let items = [, , , , ];
+({ SERVICE_DISCONNECTED: arr[0], SERVICE_TIMEOUT: arr[1], BILLING_UNAVAILABLE: arr[2], BILLING_CLIENT_NOT_READY: arr[3], DEVELOPER_ERROR: arr[4] } = GPlayBillingResult);
+let set = new Set(items.map(String));
+const items1 = [, , ];
+({ FEATURE_NOT_SUPPORTED: arr2[0], SERVICE_UNAVAILABLE: arr2[1], NETWORK_ERROR: arr2[2] } = GPlayBillingResult);
+const set1 = new Set(items1.map(String));
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/native/GPlayActionCreators.tsx");
 
@@ -1782,14 +1674,14 @@ export const sendPaymentCompleteAnalytics = function sendPaymentCompleteAnalytic
   if (null != tmp) {
     const succeededOnlyFields = tmp.succeededOnlyFields;
     const tmp4 = _objectWithoutProperties(tmp, closure_4);
-    _true(getUserCountry[20]).track(constants.PAYMENT_FLOW_COMPLETED, tmp4);
-    const obj = _true(getUserCountry[20]);
+    _true(getUserCountry[19]).track(constants.PAYMENT_FLOW_COMPLETED, tmp4);
+    const obj = _true(getUserCountry[19]);
     const obj3 = {};
     const merged = Object.assign(tmp4);
     const merged1 = Object.assign(succeededOnlyFields);
-    _true(getUserCountry[20]).track(constants.PAYMENT_FLOW_SUCCEEDED, obj3);
+    _true(getUserCountry[19]).track(constants.PAYMENT_FLOW_SUCCEEDED, obj3);
     React7(productId.productId);
-    const obj2 = _true(getUserCountry[20]);
+    const obj2 = _true(getUserCountry[19]);
   }
 };
 export const updatePendingDowngrade = function updatePendingDowngrade(arg0, c6, c7, c5) {
@@ -1801,7 +1693,7 @@ export const updatePendingDowngrade = function updatePendingDowngrade(arg0, c6, 
         if (null != tmp) {
           if (null != tmp2.billingPeriod) {
             if (null != tmp.billingPeriod) {
-              closure_0(getUserCountry[19]);
+              closure_0(getUserCountry[23]);
             }
           }
         }
@@ -1816,7 +1708,7 @@ export const updatePendingDowngrade = function updatePendingDowngrade(arg0, c6, 
 };
 export const downgradeSubscription = function downgradeSubscription(pendingDowngrade) {
   ({ purchaseToken, subscriptionId, newSubscriptionSkuId } = pendingDowngrade);
-  const HTTP = closure_0(getUserCountry[23]).HTTP;
+  const HTTP = closure_0(getUserCountry[22]).HTTP;
   const request = { url: constants2.DOWNGRADE_SUBSCRIPTION, body: { purchase_token: purchaseToken, subscription_id: subscriptionId, subscription_sku_id: newSubscriptionSkuId }, rejectWithError: false };
   return HTTP.post(request);
 };

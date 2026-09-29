@@ -1,18 +1,18 @@
-// === Module 9291: Autocompleter ===
+// === Module 9458: Autocompleter ===
 
-// Module 9291 (Autocompleter)
+// Module 9458 (Autocompleter)
 import _modDef12 from "module_12" /* 12 */;
 import URLUtilsDefault from "URLUtils" /* 1366 */;
 import _modDef1930 from "module_1930" /* 1930 */;
 import StringUtils from "StringUtils" /* 2011 */;
 import findCodedLinks from "findCodedLinks" /* 4816 */;
 import CodedLink from "CodedLink" /* 4821 */;
-import AutocompleteUtils from "AutocompleteUtils" /* 5754 */;
-import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 5830 */;
-import GuildUtilsDefault from "GuildUtils" /* 5831 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 9294 */;
-import ThreadMemberListStore from "ThreadMemberListStore" /* 9292 */;
-import LinkRecord from "LinkRecord" /* 9293 */;
+import AutocompleteUtils from "AutocompleteUtils" /* 5921 */;
+import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 5997 */;
+import GuildUtilsDefault from "GuildUtils" /* 5998 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 9461 */;
+import ThreadMemberListStore from "ThreadMemberListStore" /* 9459 */;
+import LinkRecord from "LinkRecord" /* 9460 */;
 import RelationshipStore from "RelationshipStore" /* 4479 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -28,7 +28,7 @@ function getAutocompleterBoosterMap(USER, options) {
   return boosterMap;
 }
 const GUILD_VOCAL_CHANNELS_KEY = fn(4467).GUILD_VOCAL_CHANNELS_KEY;
-fn(5827).AutocompleterResultTypes;
+fn(5994).AutocompleterResultTypes;
 const React7 = Object.freeze({});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/autocompleter/Autocompleter.tsx");

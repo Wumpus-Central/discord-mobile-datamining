@@ -1,13 +1,13 @@
-// === Module 11180: ForwardDestinationUtils ===
+// === Module 11349: ForwardDestinationUtils ===
 
-// Module 11180 (ForwardDestinationUtils)
+// Module 11349 (ForwardDestinationUtils)
 import ChannelTypes from "ChannelTypes" /* 1095 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import StickersUtils from "StickersUtils" /* 5198 */;
-import SlowmodeUtils from "SlowmodeUtils" /* 7101 */;
-import ForwardAgeRestrictedDestinationsExperimentDefault from "ForwardAgeRestrictedDestinationsExperiment" /* 11181 */;
+import StickersUtils from "StickersUtils" /* 5364 */;
+import SlowmodeUtils from "SlowmodeUtils" /* 7266 */;
+import ForwardAgeRestrictedDestinationsExperimentDefault from "ForwardAgeRestrictedDestinationsExperiment" /* 11350 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 5814 */;
+import StickersStore from "StickersStore" /* 5981 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import PermissionStore from "PermissionStore" /* 4469 */;
 import RelationshipStore from "RelationshipStore" /* 4479 */;
@@ -24,7 +24,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/forwarding/ForwardDestinationUtils.tsx");
 
 export const useSelectedDestinationChannel = function useSelectedDestinationChannel(selectedDestinations) {
-  const mapped = selectedDestinations.map(found(10444).getChannelIdFromDestinationId);
+  const mapped = selectedDestinations.map(found(10613).getChannelIdFromDestinationId);
   found = mapped.find(found(1370).isNotNullish);
   const items = [ChannelStore];
   const items1 = [found];
@@ -82,8 +82,8 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
           }
           let result = tmp12(5048).shouldShowTiggerPawtect();
           if (result) {
-            result = tmp12(5735).isFeatureAgeGated(tmp12(5736).AgeGatedFeature.AGE_GATED_SPACES);
-            const tmp12Result10 = tmp12(5735);
+            result = tmp12(5902).isFeatureAgeGated(tmp12(5903).AgeGatedFeature.AGE_GATED_SPACES);
+            const tmp12Result10 = tmp12(5902);
           }
           let tmp19 = !tmp18;
           if (false !== nsfwAllowed) {
@@ -123,9 +123,9 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
                 obj5.label = intl3.string(tmp12(1115).t.Wr4RIX);
                 return obj5;
               }
-              tmp12Result12 = tmp12(5196);
+              tmp12Result12 = tmp12(5362);
             }
-            tmp12Result11 = tmp12(5196);
+            tmp12Result11 = tmp12(5362);
           } else {
             const messageSnapshots2 = components.messageSnapshots;
           }
@@ -136,12 +136,12 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
               obj6.label = intl4.string(tmp12(1115).t.Wr4RIX);
               return obj6;
             }
-            tmp12Result13 = tmp12(5196);
+            tmp12Result13 = tmp12(5362);
           }
           const items = [];
           const messageSnapshots3 = components.messageSnapshots;
-          const tmp12Result14 = tmp12(5198);
-          HermesBuiltin.arraySpread(messageSnapshots3.flatMap((message) => type(dependencyMap[12]).getMessageStickers(message.message)), HermesBuiltin.arraySpread(tmp12(5198).getMessageStickers(components), 0));
+          const tmp12Result14 = tmp12(5364);
+          HermesBuiltin.arraySpread(messageSnapshots3.flatMap((message) => type(dependencyMap[12]).getMessageStickers(message.message)), HermesBuiltin.arraySpread(tmp12(5364).getMessageStickers(components), 0));
           if (items.length > 0) {
             if (!PermissionStore.can(constants2.USE_EXTERNAL_STICKERS, type)) {
               if (items.some((id) => {
@@ -173,7 +173,7 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
           } else {
             const messageSnapshots4 = components.messageSnapshots;
           }
-          const arraySpreadResult = HermesBuiltin.arraySpread(tmp12(5198).getMessageStickers(components), 0);
+          const arraySpreadResult = HermesBuiltin.arraySpread(tmp12(5364).getMessageStickers(components), 0);
         }
       }
       obj = require("AgeGateUtils");

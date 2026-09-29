@@ -1,12 +1,12 @@
-// === Module 15810: ServerPreviewBannerControls ===
+// === Module 15985: ServerPreviewBannerControls ===
 
-// Module 15810 (ServerPreviewBannerControls)
+// Module 15985 (ServerPreviewBannerControls)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import _modDef5941 from "module_5941" /* 5941 */;
-import transitionToGuild from "transitionToGuild" /* 6760 */;
-import IconButton from "IconButton" /* 7363 */;
-import ServerPreviewPillDefault from "ServerPreviewPill" /* 15811 */;
+import _modDef6107 from "module_6107" /* 6107 */;
+import transitionToGuild from "transitionToGuild" /* 6926 */;
+import IconButton from "IconButton" /* 7528 */;
+import ServerPreviewPillDefault from "ServerPreviewPill" /* 15986 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ export default function ServerPreviewBannerControls() {
   const callback = noop.useCallback(() => {
     transitionToGuild.transitionToGuild(MOBILE_GUILD_UPSELL_LIST);
   }, []);
-  const obj2 = { size: "md", variant: "secondary-overlay", icon: _modDef5941, onPress: callback, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
+  const obj2 = { size: "md", variant: "secondary-overlay", icon: _modDef6107, onPress: callback, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
   const intl = util.intl;
   obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
   const items = [timestampProducer(IconButton.IconButton, obj2), timestampProducer(ServerPreviewPillDefault, {})];

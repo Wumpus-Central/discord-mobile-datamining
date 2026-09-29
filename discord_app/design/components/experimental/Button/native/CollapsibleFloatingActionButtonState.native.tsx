@@ -1,6 +1,6 @@
-// === Module 8378: CollapsibleFloatingActionButtonState ===
+// === Module 8543: CollapsibleFloatingActionButtonState ===
 
-// Module 8378 (CollapsibleFloatingActionButtonState)
+// Module 8543 (CollapsibleFloatingActionButtonState)
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,7 +1,7 @@
-// === Module 12030: useCanGuildPowerupBeToggled ===
+// === Module 12201: useCanGuildPowerupBeToggled ===
 
-// Module 12030 (useCanGuildPowerupBeToggled)
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 11996 */;
+// Module 12201 (useCanGuildPowerupBeToggled)
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12167 */;
 import noop from "module_19" /* 19 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 4723 */;
 

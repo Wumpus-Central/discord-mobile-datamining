@@ -1,9 +1,9 @@
-// === Module 11721: ChatInputActionButton ===
+// === Module 11890: ChatInputActionButton ===
 
-// Module 11721 (ChatInputActionButton)
+// Module 11890 (ChatInputActionButton)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4531 */;
-import Pressables from "Pressables" /* 5435 */;
+import Pressables from "Pressables" /* 5602 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

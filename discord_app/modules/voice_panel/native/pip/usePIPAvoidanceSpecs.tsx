@@ -1,14 +1,14 @@
-// === Module 16907: usePIPAvoidanceSpecs ===
+// === Module 17094: usePIPAvoidanceSpecs ===
 
-// Module 16907 (usePIPAvoidanceSpecs)
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 8853 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10896 */;
-import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11753 */;
-import VoicePanelConstants from "VoicePanelConstants" /* 11755 */;
-import MorphablePanelConstants from "MorphablePanelConstants" /* 11756 */;
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11759 */;
-import getPIPBottomOffsetForPIPModeDefault from "getPIPBottomOffsetForPIPMode" /* 16733 */;
-import getAdjustedBottomOffsetsDefault from "getAdjustedBottomOffsets" /* 16836 */;
+// Module 17094 (usePIPAvoidanceSpecs)
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9018 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11065 */;
+import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11922 */;
+import VoicePanelConstants from "VoicePanelConstants" /* 11924 */;
+import MorphablePanelConstants from "MorphablePanelConstants" /* 11925 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11928 */;
+import getPIPBottomOffsetForPIPModeDefault from "getPIPBottomOffsetForPIPMode" /* 16921 */;
+import getAdjustedBottomOffsetsDefault from "getAdjustedBottomOffsets" /* 17023 */;
 import size from "module_2" /* 2 */;
 
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;

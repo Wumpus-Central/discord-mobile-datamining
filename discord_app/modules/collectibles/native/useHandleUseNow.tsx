@@ -1,13 +1,13 @@
-// === Module 10548: useHandleUseNow ===
+// === Module 10717: useHandleUseNow ===
 
-// Module 10548 (useHandleUseNow)
+// Module 10717 (useHandleUseNow)
 import RootNavigationRef from "RootNavigationRef" /* 4693 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5039 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const RootNavigatorScreen = fn(10549).RootNavigatorScreen;
+const RootNavigatorScreen = fn(10718).RootNavigatorScreen;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/useHandleUseNow.tsx");
 

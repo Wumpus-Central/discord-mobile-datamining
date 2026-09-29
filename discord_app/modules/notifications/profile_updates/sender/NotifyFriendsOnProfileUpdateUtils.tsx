@@ -1,6 +1,6 @@
-// === Module 15531: NotifyFriendsOnProfileUpdateUtils ===
+// === Module 15706: NotifyFriendsOnProfileUpdateUtils ===
 
-// Module 15531 (NotifyFriendsOnProfileUpdateUtils)
+// Module 15706 (NotifyFriendsOnProfileUpdateUtils)
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import UserSettings from "UserSettings" /* 2021 */;

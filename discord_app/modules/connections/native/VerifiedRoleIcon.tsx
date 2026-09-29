@@ -1,11 +1,11 @@
-// === Module 6624: VerifiedRoleIcon ===
+// === Module 6790: VerifiedRoleIcon ===
 
-// Module 6624 (VerifiedRoleIcon)
+// Module 6790 (VerifiedRoleIcon)
 import nativeDefault from "native" /* 576 */;
 import LinkIcon from "LinkIcon" /* 4775 */;
-import useRoleIconProps from "useRoleIconProps" /* 6607 */;
-import getHigherContrastColor from "getHigherContrastColor" /* 6625 */;
-import RoleIconDefault from "RoleIcon" /* 6626 */;
+import useRoleIconProps from "useRoleIconProps" /* 6773 */;
+import getHigherContrastColor from "getHigherContrastColor" /* 6791 */;
+import RoleIconDefault from "RoleIcon" /* 6792 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

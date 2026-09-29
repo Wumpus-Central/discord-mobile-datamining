@@ -1,7 +1,7 @@
-// === Module 16683: SearchNavigatorPreviewScreen ===
+// === Module 16871: SearchNavigatorPreviewScreen ===
 
-// Module 16683 (SearchNavigatorPreviewScreen)
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 11841 */;
+// Module 16871 (SearchNavigatorPreviewScreen)
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12010 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

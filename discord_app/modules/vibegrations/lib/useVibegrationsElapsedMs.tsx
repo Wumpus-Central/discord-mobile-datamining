@@ -1,6 +1,6 @@
-// === Module 16402: useVibegrationsElapsedMs ===
+// === Module 16587: useVibegrationsElapsedMs ===
 
-// Module 16402 (useVibegrationsElapsedMs)
+// Module 16587 (useVibegrationsElapsedMs)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

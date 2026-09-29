@@ -1,15 +1,15 @@
-// === Module 16338: VibegrationsMessageAuthor ===
+// === Module 16517: VibegrationsMessageAuthor ===
 
-// Module 16338 (VibegrationsMessageAuthor)
+// Module 16517 (VibegrationsMessageAuthor)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3715 from "module_3715" /* 3715 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import AppsIcon from "AppsIcon" /* 5374 */;
-import Pressables from "Pressables" /* 5435 */;
-import vibegrationsMessageAuthors from "vibegrationsMessageAuthors" /* 16339 */;
-import VibegrationsMessageTime from "VibegrationsMessageTime" /* 16340 */;
-import VibegrationsMessageActionSheet from "VibegrationsMessageActionSheet" /* 16341 */;
+import AppsIcon from "AppsIcon" /* 5540 */;
+import Pressables from "Pressables" /* 5602 */;
+import vibegrationsMessageAuthors from "vibegrationsMessageAuthors" /* 16518 */;
+import VibegrationsMessageTime from "VibegrationsMessageTime" /* 16519 */;
+import VibegrationsMessageActionSheet from "VibegrationsMessageActionSheet" /* 16520 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -63,7 +63,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4836);
 let obj2 = { header: { flexDirection: "row", alignItems: "baseline", gap: nativeDefault.space.PX_8 }, name: { flexShrink: 1 }, time: { flexShrink: 0 }, conjureTile: null };
-let size = { width: fn(16335).MESSAGE_AVATAR_SIZE, height: fn(16335).MESSAGE_AVATAR_SIZE, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_CODE, alignItems: "center", justifyContent: "center" };
+let size = { width: fn(16514).MESSAGE_AVATAR_SIZE, height: fn(16514).MESSAGE_AVATAR_SIZE, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_CODE, alignItems: "center", justifyContent: "center" };
 obj2.conjureTile = size;
 const React6 = createStyles.createStyles(obj2);
 size = fn(2);
@@ -148,9 +148,9 @@ export const VibegrationsUserAvatar = function VibegrationsUserAvatar(arg0) {
     const obj2 = { onPress: callback, onLongPress: callback, accessibilityRole: "button", accessibilityLabel: null, children: null };
     const intl = tmp4(1115).intl;
     obj2.accessibilityLabel = intl.string(tmp4(1115).t.iXAna6);
-    const obj3 = { size, user: stateFromStores, guildId: "Array" };
+    const obj3 = { size, user: stateFromStores, guildId: "r" };
     obj2.children = closure_6(tmp4(1177).Avatar, obj3);
-    tmp8 = closure_6(tmp4(5435).PressableOpacity, obj2);
+    tmp8 = closure_6(tmp4(5602).PressableOpacity, obj2);
   }
   return tmp8;
 };

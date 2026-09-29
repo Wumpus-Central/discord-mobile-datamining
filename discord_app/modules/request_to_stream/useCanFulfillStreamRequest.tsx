@@ -1,6 +1,6 @@
-// === Module 11266: useCanFulfillStreamRequest ===
+// === Module 11435: useCanFulfillStreamRequest ===
 
-// Module 11266 (useCanFulfillStreamRequest)
+// Module 11435 (useCanFulfillStreamRequest)
 import RunningGameStore from "RunningGameStore" /* 2000 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4858 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

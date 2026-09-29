@@ -1,12 +1,12 @@
-// === Module 11269: BundleUpdater ===
+// === Module 11438: BundleUpdater ===
 
-// Module 11269 (BundleUpdater)
+// Module 11438 (BundleUpdater)
 import LoggerDefault from "Logger" /* 3 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
 import _mod5021 from "module_5021" /* 5021 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 5179 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5345 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

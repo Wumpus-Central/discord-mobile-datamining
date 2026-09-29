@@ -1,6 +1,6 @@
-// === Module 6858: PremiumPill ===
+// === Module 7024: PremiumPill ===
 
-// Module 6858 (PremiumPill)
+// Module 7024 (PremiumPill)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import noop from "module_19" /* 19 */;

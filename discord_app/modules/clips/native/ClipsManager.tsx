@@ -1,10 +1,10 @@
-// === Module 17631: ClipsManager ===
+// === Module 17820: ClipsManager ===
 
-// Module 17631 (ClipsManager)
+// Module 17820 (ClipsManager)
 import util from "util" /* 1115 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4528 */;
-import ClipsConstants from "ClipsConstants" /* 5444 */;
-import ClipsManager from "clips/ClipsManager" /* 17632 */;
+import ClipsConstants from "ClipsConstants" /* 5611 */;
+import ClipsManager from "clips/ClipsManager" /* 17821 */;
 import size from "module_2" /* 2 */;
 
 const CLIPS_TOAST_DURATION = ClipsConstants.CLIPS_TOAST_DURATION;

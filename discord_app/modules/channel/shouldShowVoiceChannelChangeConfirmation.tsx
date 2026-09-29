@@ -1,6 +1,6 @@
-// === Module 12485: shouldShowVoiceChannelChangeConfirmation ===
+// === Module 12655: shouldShowVoiceChannelChangeConfirmation ===
 
-// Module 12485 (shouldShowVoiceChannelChangeConfirmation)
+// Module 12655 (shouldShowVoiceChannelChangeConfirmation)
 import GameConsoleStore from "GameConsoleStore" /* 4853 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1184 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

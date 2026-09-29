@@ -1,14 +1,14 @@
-// === Module 7893: AgeVerificationExpressiveV2Modal ===
+// === Module 8058: AgeVerificationExpressiveV2Modal ===
 
-// Module 7893 (AgeVerificationExpressiveV2Modal)
+// Module 8058 (AgeVerificationExpressiveV2Modal)
 import nativeDefault from "native" /* 576 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2111 */;
 import AgeVerificationUtils from "AgeVerificationUtils" /* 5048 */;
-import NavigatorHeader from "NavigatorHeader" /* 5936 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7859 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 7861 */;
-import AgeVerificationCustomTab from "AgeVerificationCustomTab" /* 7875 */;
-import AgeVerificationAuthSession from "AgeVerificationAuthSession" /* 7876 */;
+import NavigatorHeader from "NavigatorHeader" /* 6102 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8024 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8026 */;
+import AgeVerificationCustomTab from "AgeVerificationCustomTab" /* 8040 */;
+import AgeVerificationAuthSession from "AgeVerificationAuthSession" /* 8041 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -369,7 +369,7 @@ function MethodsScreen(onClose) {
   return tmp19Result;
 }
 const ActivityIndicator = fn(17).ActivityIndicator;
-const TRUSTED_PROVIDERS_URL = fn(7860).TRUSTED_PROVIDERS_URL;
+const TRUSTED_PROVIDERS_URL = fn(8025).TRUSTED_PROVIDERS_URL;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);

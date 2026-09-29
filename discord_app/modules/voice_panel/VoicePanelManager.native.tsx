@@ -1,10 +1,10 @@
-// === Module 17629: VoicePanelManager ===
+// === Module 17818: VoicePanelManager ===
 
-// Module 17629 (VoicePanelManager)
+// Module 17818 (VoicePanelManager)
 import ChannelStore from "ChannelStore" /* 2045 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4859 */;
 import VoicePanelStore from "VoicePanelStore" /* 5044 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6539 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6705 */;
 
 const prototype = function VoicePanelManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

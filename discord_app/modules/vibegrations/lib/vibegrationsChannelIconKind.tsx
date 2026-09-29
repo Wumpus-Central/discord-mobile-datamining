@@ -1,8 +1,8 @@
-// === Module 5369: vibegrationsChannelIconKind ===
+// === Module 5535: vibegrationsChannelIconKind ===
 
-// Module 5369 (vibegrationsChannelIconKind)
-import VibegrationsUtils from "VibegrationsUtils" /* 5370 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 5373 */;
+// Module 5535 (vibegrationsChannelIconKind)
+import VibegrationsUtils from "VibegrationsUtils" /* 5536 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 5539 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/vibegrations/lib/vibegrationsChannelIconKind.tsx");

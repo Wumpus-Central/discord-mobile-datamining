@@ -1,16 +1,16 @@
-// === Module 12788: EmbeddedActivityInviteEmbed ===
+// === Module 12958: EmbeddedActivityInviteEmbed ===
 
-// Module 12788 (EmbeddedActivityInviteEmbed)
+// Module 12958 (EmbeddedActivityInviteEmbed)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1115 */;
 import useChannelName from "useChannelName" /* 4989 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5335 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7387 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 7595 */;
-import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 12789 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5501 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7552 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 7760 */;
+import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 12959 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
-import ApplicationAssetsStore from "ApplicationAssetsStore" /* 7596 */;
+import ApplicationAssetsStore from "ApplicationAssetsStore" /* 7761 */;
 import ApplicationStore from "ApplicationStore" /* 5063 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
@@ -20,9 +20,9 @@ import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const Image = fn(17).Image;
-const FetchState = fn(7596).FetchState;
-const CodedLinkExtendedType = fn(10851).CodedLinkExtendedType;
-const InviteTargetTypes = fn(7155).InviteTargetTypes;
+const FetchState = fn(7761).FetchState;
+const CodedLinkExtendedType = fn(11020).CodedLinkExtendedType;
+const InviteTargetTypes = fn(7320).InviteTargetTypes;
 let closure_16 = ["embedded_cover"];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/EmbeddedActivityInviteEmbed.tsx");

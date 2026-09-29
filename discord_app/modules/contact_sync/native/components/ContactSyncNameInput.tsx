@@ -1,10 +1,10 @@
-// === Module 12194: ContactSyncNameInput ===
+// === Module 12365: ContactSyncNameInput ===
 
-// Module 12194 (ContactSyncNameInput)
+// Module 12365 (ContactSyncNameInput)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6402 */;
-import ContactSyncErrorDefault from "ContactSyncError" /* 12191 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6568 */;
+import ContactSyncErrorDefault from "ContactSyncError" /* 12362 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -88,7 +88,7 @@ export default function ContactSyncNameInput(prefilledFromContactBook) {
   if (null != onRemoveName) {
     str = "md";
   }
-  items2[1] = timestampProducer(tmp9(5281).Button, {
+  items2[1] = timestampProducer(tmp9(5447).Button, {
     variant: "primary",
     size: str,
     text: stringResult,
@@ -111,7 +111,7 @@ export default function ContactSyncNameInput(prefilledFromContactBook) {
       }
       return tmp;
     };
-    obj9.children = timestampProducer(tmp9(5281).Button, obj10);
+    obj9.children = timestampProducer(tmp9(5447).Button, obj10);
     tmp12Result2 = timestampProducer(View, obj9);
   }
   items2[2] = tmp12Result2;

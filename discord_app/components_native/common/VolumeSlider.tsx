@@ -1,14 +1,14 @@
-// === Module 9442: VolumeSlider ===
+// === Module 9609: VolumeSlider ===
 
-// Module 9442 (VolumeSlider)
+// Module 9609 (VolumeSlider)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import PlatformUtils2 from "PlatformUtils" /* 1364 */;
 import useToken from "useToken" /* 4531 */;
-import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5322 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 5415 */;
-import _modDef7726 from "module_7726" /* 7726 */;
-import VoiceXIcon from "VoiceXIcon" /* 9443 */;
+import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5488 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 5581 */;
+import _modDef7891 from "module_7891" /* 7891 */;
+import VoiceXIcon from "VoiceXIcon" /* 9610 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -49,7 +49,7 @@ export default function VolumeSlider(maxTrackTintColor) {
   const obj4 = { style: tmp4.volumerSliderNative, value: null, minimumValue: 0, maximumValue: null, minimumTrackTintColor: null, maximumTrackTintColor: null, accessibilityLabel: null, onValueChange: null, onResponderGrant: null };
   obj = useToken;
   const obj3 = { style: tmp4.leftIcon };
-  const tmp7Result = _modDef7726;
+  const tmp7Result = _modDef7891;
   obj4.value = PerceptualVolumeUtils.amplitudeToPerceptual(value);
   obj4.maximumValue = maxVolume;
   obj4.minimumTrackTintColor = minTrackColor;

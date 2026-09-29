@@ -1,6 +1,6 @@
-// === Module 7118: VideoQuestUIStore ===
+// === Module 7283: VideoQuestUIStore ===
 
-// Module 7118 (VideoQuestUIStore)
+// Module 7283 (VideoQuestUIStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 

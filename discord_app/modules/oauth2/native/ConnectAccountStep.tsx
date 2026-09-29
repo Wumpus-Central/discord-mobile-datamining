@@ -1,6 +1,6 @@
-// === Module 8527: ConnectAccountStep ===
+// === Module 8692: ConnectAccountStep ===
 
-// Module 8527 (ConnectAccountStep)
+// Module 8692 (ConnectAccountStep)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
@@ -9,9 +9,9 @@ import shared from "shared" /* 4685 */;
 import useThemeDefault from "useTheme" /* 4767 */;
 import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4783 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import PlatformsDefault from "Platforms" /* 5595 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6584 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 8528 */;
+import PlatformsDefault from "Platforms" /* 5762 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6750 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 8693 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 5063 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -55,7 +55,7 @@ export default function ConnectAccountStep(clientId) {
     return currentUser;
   });
   const obj2 = clientId(504);
-  value = platformType(5595).get(platformType);
+  value = platformType(5762).get(platformType);
   if (null == value) {
     let applicationIconSource;
     if (null != stateFromStores) {
@@ -86,7 +86,7 @@ export default function ConnectAccountStep(clientId) {
     const obj9 = { source: applicationIconSource, size: tmp5(1177).AvatarSizes.XLARGE };
     const items4 = [closure_8(tmp5(1177).Avatar, obj9), , ];
     const obj10 = { color: tmp2(576).colors.INTERACTIVE_TEXT_DEFAULT, size: "md" };
-    items4[1] = closure_8(tmp5(7365).MoreHorizontalIcon, obj10);
+    items4[1] = closure_8(tmp5(7530).MoreHorizontalIcon, obj10);
     const obj11 = { source: userAvatarSource, size: tmp5(1177).AvatarSizes.XLARGE };
     items4[2] = closure_8(tmp5(1177).Avatar, obj11);
     obj8.children = items4;
@@ -123,7 +123,7 @@ export default function ConnectAccountStep(clientId) {
     };
     const intl3 = tmp5(1115).intl;
     obj19.text = intl3.string(tmp5(1115).t.S0W8Z5);
-    items7[2] = closure_8(tmp5(5281).Button, obj19);
+    items7[2] = closure_8(tmp5(5447).Button, obj19);
     obj16.children = items7;
     items6[2] = closure_9(View, obj16);
     const obj20 = { style: tmp.infoNotice, children: null };
@@ -144,7 +144,7 @@ export default function ConnectAccountStep(clientId) {
     const source = tmp5Result.makeSource(tmp5(4685).isThemeLight(tmp4) ? icon.lightPNG : icon.darkPNG);
     const tmp5Result2 = tmp5(4685);
   }
-  const obj3 = platformType(5595);
+  const obj3 = platformType(5762);
 };
 export const ConnectedAccountCard = function ConnectedAccountCard(arg0) {
   ({ platformName, connectedAccount } = arg0);

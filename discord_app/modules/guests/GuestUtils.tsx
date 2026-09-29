@@ -1,9 +1,9 @@
-// === Module 10853: GuestUtils ===
+// === Module 11022: GuestUtils ===
 
-// Module 10853 (GuestUtils)
+// Module 11022 (GuestUtils)
 import FlagUtils from "FlagUtils" /* 1385 */;
 import GuildMemberConstants from "GuildMemberConstants" /* 4455 */;
-import GuildInviteFlags from "GuildInviteFlags" /* 7840 */;
+import GuildInviteFlags from "GuildInviteFlags" /* 8005 */;
 import size from "module_2" /* 2 */;
 
 const GuildMemberFlags = GuildMemberConstants.GuildMemberFlags;

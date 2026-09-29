@@ -1,13 +1,13 @@
-// === Module 17029: VoicePanelDrawerToggleButton ===
+// === Module 17216: VoicePanelDrawerToggleButton ===
 
-// Module 17029 (VoicePanelDrawerToggleButton)
+// Module 17216 (VoicePanelDrawerToggleButton)
 import nativeDefault from "native" /* 576 */;
-import NativeViewDefault from "NativeView" /* 5901 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10615 */;
-import ChevronSmallUpIcon2 from "ChevronSmallUpIcon" /* 13113 */;
-import useDrawerToggleDefault from "useDrawerToggle" /* 16994 */;
-import VoicePanelStyles from "VoicePanelStyles" /* 17008 */;
-import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 17009 */;
+import NativeViewDefault from "NativeView" /* 6067 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10784 */;
+import ChevronSmallUpIcon2 from "ChevronSmallUpIcon" /* 13283 */;
+import useDrawerToggleDefault from "useDrawerToggle" /* 17181 */;
+import VoicePanelStyles from "VoicePanelStyles" /* 17195 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 17196 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

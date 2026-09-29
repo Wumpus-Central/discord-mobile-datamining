@@ -1,10 +1,10 @@
-// === Module 9381: ChannelCallNavigatorIcon ===
+// === Module 9548: ChannelCallNavigatorIcon ===
 
-// Module 9381 (ChannelCallNavigatorIcon)
+// Module 9548 (ChannelCallNavigatorIcon)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5269 */;
-import Pressables from "Pressables" /* 5435 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5435 */;
+import Pressables from "Pressables" /* 5602 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
-const resetFocusTimer = fn(8829).resetFocusTimer;
+const resetFocusTimer = fn(8994).resetFocusTimer;
 const Constants = fn(1074);
 ({ ThemeTypes: metroRequire, Fonts } = Constants);
 const jsxProd = fn(21);

@@ -1,6 +1,6 @@
-// === Module 7711: MediaPlayerMuteManager ===
+// === Module 7876: MediaPlayerMuteManager ===
 
-// Module 7711 (MediaPlayerMuteManager)
+// Module 7876 (MediaPlayerMuteManager)
 import get_ActivityIndicator from "module_17" /* 17 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;

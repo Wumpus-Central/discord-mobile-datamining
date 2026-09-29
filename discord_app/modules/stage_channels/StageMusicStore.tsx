@@ -1,6 +1,6 @@
-// === Module 9354: StageMusicStore ===
+// === Module 9521: StageMusicStore ===
 
-// Module 9354 (StageMusicStore)
+// Module 9521 (StageMusicStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

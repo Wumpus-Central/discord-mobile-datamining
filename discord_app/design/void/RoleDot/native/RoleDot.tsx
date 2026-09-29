@@ -1,12 +1,12 @@
-// === Module 13665: RoleDot ===
+// === Module 13834: RoleDot ===
 
-// Module 13665 (RoleDot)
+// Module 13834 (RoleDot)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import useFontScale from "useFontScale" /* 5288 */;
-import LinearGradientDefault from "LinearGradient" /* 5293 */;
-import useHasEnhancedRoleColorsDefault from "useHasEnhancedRoleColors" /* 5310 */;
+import useFontScale from "useFontScale" /* 5454 */;
+import LinearGradientDefault from "LinearGradient" /* 5459 */;
+import useHasEnhancedRoleColorsDefault from "useHasEnhancedRoleColors" /* 5476 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

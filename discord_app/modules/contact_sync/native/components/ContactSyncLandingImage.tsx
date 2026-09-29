@@ -1,8 +1,8 @@
-// === Module 12186: ContactSyncLandingImage ===
+// === Module 12357: ContactSyncLandingImage ===
 
-// Module 12186 (ContactSyncLandingImage)
-import _modDef12187 from "module_12187" /* 12187 */;
-import _modDef12188 from "module_12188" /* 12188 */;
+// Module 12357 (ContactSyncLandingImage)
+import _modDef12358 from "module_12358" /* 12358 */;
+import _modDef12359 from "module_12359" /* 12359 */;
 import noop from "module_19" /* 19 */;
 
 get_ActivityIndicator = fn(17);
@@ -17,11 +17,11 @@ const result = size.fileFinishedImporting("modules/contact_sync/native/component
 export default function ContactSyncLandingImage() {
   const tmp = closure_7();
   const obj = { children: null };
-  const obj2 = { style: tmp.leftContainer, children: React4(React2, { resizeMode: "contain", style: tmp.landingImageLeft, source: _modDef12187 }) };
+  const obj2 = { style: tmp.leftContainer, children: React4(React2, { resizeMode: "contain", style: tmp.landingImageLeft, source: _modDef12358 }) };
   const items = [React4(React3, obj2), ];
   const obj4 = { style: tmp.rightContainer, children: null };
-  const obj3 = { resizeMode: "contain", style: tmp.landingImageLeft, source: _modDef12187 };
-  obj4.children = React4(React2, { resizeMode: "contain", style: tmp.landingImageRight, source: _modDef12188 });
+  const obj3 = { resizeMode: "contain", style: tmp.landingImageLeft, source: _modDef12358 };
+  obj4.children = React4(React2, { resizeMode: "contain", style: tmp.landingImageRight, source: _modDef12359 });
   items[1] = React4(React3, obj4);
   obj.children = items;
   return timestampProducer(hasOwnProperty, obj);

@@ -1,6 +1,6 @@
-// === Module 9755: useNativeAndroidEmojiPickerEnabled ===
+// === Module 9922: useNativeAndroidEmojiPickerEnabled ===
 
-// Module 9755 (useNativeAndroidEmojiPickerEnabled)
+// Module 9922 (useNativeAndroidEmojiPickerEnabled)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import DatabaseManagerDefault from "DatabaseManager" /* 2091 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

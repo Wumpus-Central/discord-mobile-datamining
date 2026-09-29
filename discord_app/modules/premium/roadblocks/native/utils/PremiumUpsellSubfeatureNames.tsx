@@ -1,6 +1,6 @@
-// === Module 7274: PremiumUpsellSubfeatureNames ===
+// === Module 7439: PremiumUpsellSubfeatureNames ===
 
-// Module 7274 (PremiumUpsellSubfeatureNames)
+// Module 7439 (PremiumUpsellSubfeatureNames)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/roadblocks/native/utils/PremiumUpsellSubfeatureNames.tsx");

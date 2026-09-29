@@ -251,17 +251,6 @@ export const navigateToChannel = function navigateToChannel(openChannel) {
   }
   return false;
 };
-export const navigateToMemberVerification = function navigateToMemberVerification(guildId, inviteCode) {
-  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
-  const tmp = null == rootNavigationRef || !rootNavigationRef.isReady();
-  let flag = !tmp;
-  if (!tmp) {
-    const obj2 = { guildId, inviteCode };
-    rootNavigationRef.navigate("member-verification", obj2);
-    flag = true;
-  }
-  return flag;
-};
 export const navigateToRootTab = function navigateToRootTab(drawerOpen) {
   const rootNavigationRef = icymiScreen(4693).getRootNavigationRef();
   ({ screen, forceNavigate } = drawerOpen);

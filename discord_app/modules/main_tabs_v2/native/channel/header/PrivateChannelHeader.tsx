@@ -1,8 +1,8 @@
-// === Module 12843: PrivateChannelHeader ===
+// === Module 13013: PrivateChannelHeader ===
 
-// Module 12843 (PrivateChannelHeader)
+// Module 13013 (PrivateChannelHeader)
 import nativeDefault from "native" /* 576 */;
-import ChannelHeader from "ChannelHeader" /* 12840 */;
+import ChannelHeader from "ChannelHeader" /* 13010 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import PresenceStore from "PresenceStore" /* 4876 */;

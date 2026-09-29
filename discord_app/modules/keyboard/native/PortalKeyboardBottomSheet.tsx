@@ -1,17 +1,17 @@
-// === Module 11561: PortalKeyboardBottomSheet ===
+// === Module 11730: PortalKeyboardBottomSheet ===
 
-// Module 11561 (PortalKeyboardBottomSheet)
+// Module 11730 (PortalKeyboardBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1876 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import HapticUtils from "HapticUtils" /* 4801 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5266 */;
-import BottomSheetModal from "BottomSheetModal" /* 6045 */;
-import native from "native" /* 8370 */;
-import isChannelFocused from "isChannelFocused" /* 9549 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5432 */;
+import BottomSheetModal from "BottomSheetModal" /* 6211 */;
+import native from "native" /* 8535 */;
+import isChannelFocused from "isChannelFocused" /* 9716 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 8966 */;
+import NativeMenuStore from "NativeMenuStore" /* 9131 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
@@ -44,7 +44,7 @@ const PlatformUtils = fn(1364);
 let closure_9 = PlatformUtils.isIOS();
 const createStyles = fn(4836);
 let obj = { container: { position: "absolute", top: 0, left: 0 }, background: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, overflow: "hidden" }, headerContainer: null, headerContainerScreenReaderEnabled: null, roundingView: null };
-let size = { borderTopLeftRadius: nativeDefault.radii.none, borderTopRightRadius: nativeDefault.radii.none, width: "100%", height: fn(8370).ACTION_SHEET_DRAG_HANDLE_HEIGHT, marginBottom: -fn(8370).ACTION_SHEET_DRAG_HANDLE_HEIGHT };
+let size = { borderTopLeftRadius: nativeDefault.radii.none, borderTopRightRadius: nativeDefault.radii.none, width: "100%", height: fn(8535).ACTION_SHEET_DRAG_HANDLE_HEIGHT, marginBottom: -fn(8535).ACTION_SHEET_DRAG_HANDLE_HEIGHT };
 obj.headerContainer = size;
 let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, overflow: "hidden" };
 obj.headerContainerScreenReaderEnabled = { marginBottom: -nativeDefault.space.PX_8 };

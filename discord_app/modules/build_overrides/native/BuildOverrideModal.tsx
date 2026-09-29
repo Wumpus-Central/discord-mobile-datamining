@@ -1,10 +1,10 @@
-// === Module 13414: BuildOverrideModal ===
+// === Module 13583: BuildOverrideModal ===
 
-// Module 13414 (BuildOverrideModal)
+// Module 13583 (BuildOverrideModal)
 import nativeDefault from "native" /* 576 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11267 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11436 */;
 import noop from "module_19" /* 19 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 10969 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11138 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -34,9 +34,9 @@ export default function BuildOverrideModal(overrideUrl) {
   const tmp = closure_9();
   const tmp4 = stateFromStores(4767)();
   if (obj.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(13415);
+    let tmp2Result = tmp2(13584);
   } else {
-    tmp2Result = tmp2(13416);
+    tmp2Result = tmp2(13585);
   }
   obj = str(4685);
   const items = [BuildOverrideStore];
@@ -47,7 +47,7 @@ export default function BuildOverrideModal(overrideUrl) {
   if (override != null) {
     const targetBuildOverride = override.targetBuildOverride;
     if (targetBuildOverride != null) {
-      const tmp9 = targetBuildOverride[tmp5(undefined, 11267).DEVICE_FIELD];
+      const tmp9 = targetBuildOverride[tmp5(undefined, 11436).DEVICE_FIELD];
       if (tmp9 != null) {
         id = tmp9.id;
       }
@@ -103,7 +103,7 @@ export default function BuildOverrideModal(overrideUrl) {
       }
       const result = build_overrides_BuildOverrideUtils.setBuildOverrideFromLink(str);
     };
-    obj13.children = closure_6(tmp5(5281).Button, obj14);
+    obj13.children = closure_6(tmp5(5447).Button, obj14);
     const items5 = [closure_6(closure_4, obj13), ];
     const obj15 = { text: null, variant: "secondary", grow: true, onPress: null };
     const intl6 = tmp5(1115).intl;
@@ -111,7 +111,7 @@ export default function BuildOverrideModal(overrideUrl) {
     obj15.onPress = function onPress() {
       return stateFromStores(5039).pop();
     };
-    items5[1] = closure_6(tmp5(5281).Button, obj15);
+    items5[1] = closure_6(tmp5(5447).Button, obj15);
     obj12.children = items5;
     let tmp12Result2 = closure_8(closure_7, obj12);
   } else {
@@ -121,10 +121,10 @@ export default function BuildOverrideModal(overrideUrl) {
     obj16.onPress = function onPress() {
       return stateFromStores(5039).pop();
     };
-    tmp12Result2 = closure_6(tmp5(5281).Button, obj16);
+    tmp12Result2 = closure_6(tmp5(5447).Button, obj16);
   }
   obj11.children = tmp12Result2;
   items4[1] = closure_6(closure_4, obj11);
   rect.children = items4;
-  return closure_8(str(6544).SafeAreaPaddingView, rect);
+  return closure_8(str(6710).SafeAreaPaddingView, rect);
 };

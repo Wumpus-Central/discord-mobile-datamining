@@ -1,21 +1,21 @@
-// === Module 11365: AppealIngestionModal ===
+// === Module 11534: AppealIngestionModal ===
 
-// Module 11365 (AppealIngestionModal)
+// Module 11534 (AppealIngestionModal)
 import nativeDefault from "native" /* 576 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import NavigatorHeader from "NavigatorHeader" /* 5936 */;
-import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 11364 */;
+import NavigatorHeader from "NavigatorHeader" /* 6102 */;
+import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 11533 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 7881 */;
+import SafetyHubStore from "SafetyHubStore" /* 8046 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(7868);
+const SafetyHubConstants = fn(8033);
 ({ APPEAL_INGESTION_IMPRESSION_PROPERTIES: closure_9, AppealIngestionSections: c10 } = SafetyHubConstants);
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
@@ -280,7 +280,7 @@ export const AppealIngestionModalScreen = function AppealIngestionModalScreen(ch
               v2("");
               v2 = 2;
               c5 = 1;
-              const obj6 = { value: tmp27(11360).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1), done: false };
+              const obj6 = { value: tmp27(11529).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1), done: false };
               return obj6;
             }
           }
@@ -293,8 +293,8 @@ export const AppealIngestionModalScreen = function AppealIngestionModalScreen(ch
             if (body != null) {
               code = body.code;
             }
-            closure_129_4(safetyHubAppealSignal(7867).getRequestReviewErrorFromCode(code));
-            const obj2 = safetyHubAppealSignal(7867);
+            closure_129_4(safetyHubAppealSignal(8032).getRequestReviewErrorFromCode(code));
+            const obj2 = safetyHubAppealSignal(8032);
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;

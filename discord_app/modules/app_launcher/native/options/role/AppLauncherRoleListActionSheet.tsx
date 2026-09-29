@@ -1,12 +1,12 @@
-// === Module 11663: AppLauncherRoleListActionSheet ===
+// === Module 11832: AppLauncherRoleListActionSheet ===
 
-// Module 11663 (AppLauncherRoleListActionSheet)
-import GuildRoleMemberActionCreatorsAll from "GuildRoleMemberActionCreators" /* 6550 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 9033 */;
-import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 11661 */;
+// Module 11832 (AppLauncherRoleListActionSheet)
+import GuildRoleMemberActionCreatorsAll from "GuildRoleMemberActionCreators" /* 6716 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 9198 */;
+import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 11830 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 6549 */;
+import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 6715 */;
 import GuildRoleStore from "GuildRoleStore" /* 2102 */;
 
 const require = globalThis.__r;

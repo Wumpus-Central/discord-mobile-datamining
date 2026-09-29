@@ -1,23 +1,23 @@
-// === Module 6961: CollectiblesActionCreators ===
+// === Module 7127: CollectiblesActionCreators ===
 
-// Module 6961 (CollectiblesActionCreators)
+// Module 7127 (CollectiblesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import RootNavigationRef from "RootNavigationRef" /* 4693 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 6974 */;
-import LayerActionCreators from "LayerActionCreators" /* 7006 */;
-import utils_CollectiblesUtils from "utils/CollectiblesUtils" /* 7007 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7008 */;
-import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7009 */;
-import CollectiblesMarketingReleaseType from "CollectiblesMarketingReleaseType" /* 7010 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7140 */;
+import LayerActionCreators from "LayerActionCreators" /* 7171 */;
+import utils_CollectiblesUtils from "utils/CollectiblesUtils" /* 7172 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7173 */;
+import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7174 */;
+import CollectiblesMarketingReleaseType from "CollectiblesMarketingReleaseType" /* 7175 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DevSettingsStore from "DevSettingsStore" /* 4835 */;
 import LocaleStore from "LocaleStore" /* 2112 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 6962 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 6977 */;
-import CollectiblesShopStore from "CollectiblesShopStore" /* 6978 */;
-import CollectiblesProductRecord from "CollectiblesProductRecord" /* 6964 */;
-import CollectiblesPurchaseRecord from "CollectiblesPurchaseRecord" /* 6989 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7128 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7143 */;
+import CollectiblesShopStore from "CollectiblesShopStore" /* 7144 */;
+import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7130 */;
+import CollectiblesPurchaseRecord from "CollectiblesPurchaseRecord" /* 7155 */;
 
 require = fn;
 function openCollectiblesShop(arg0) {
@@ -858,95 +858,7 @@ let closure_28 = async function _fetchCollectiblesShopHome() {
     return value;
   })();
 };
-let closure_29 = async function _claimCollectiblesCategoryReward() {
-  c6 = 0;
-  c7 = 0;
-  c5 = 0;
-  return (async (arg0, value) => {
-    if (c7 === 2) {
-      c7 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj3 = { value, done: true };
-        return obj3;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c7 = 2;
-        if (0 === c6) {
-          if (arg0 === 1) {
-            c7 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c7 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            closure_3 = tmp3;
-            closure_2 = tmp7;
-            closure_130_0 = skuId;
-            closure_130_1 = undefined;
-            closure_130_2 = undefined;
-            const obj5 = { type: "COLLECTIBLES_CLAIM", skuId };
-            DispatcherDefault.dispatch(obj5);
-            c5 = 1;
-            const HTTP = HTTPUtils.HTTP;
-            const request = { url: constants.COLLECTIBLES_CLAIM_CATEGORY_REWARD, body: null, rejectWithError: true };
-            const obj6 = { category_id };
-            request.body = obj6;
-            c6 = 2;
-            c7 = 1;
-            const obj8 = { value: HTTP.put(request), done: false };
-            return obj8;
-          }
-        } else if (1 === tmp7) {
-          c5 = 0;
-          closure_130_3 = closure_4;
-          const aPIError = new closure_131_0(closure_131_2[22]).APIError(closure_130_3);
-          closure_130_2 = aPIError;
-          const obj10 = { type: "COLLECTIBLES_CLAIM_FAILURE", skuId: closure_130_0, error: closure_130_2 };
-          closure_131_1(closure_131_2[17]).dispatch(obj10);
-          throw closure_130_2;
-        } else if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 0;
-          c7 = 3;
-          const obj = { value, done: true };
-          return obj;
-        } else {
-          closure_130_1 = value;
-          const obj11 = { type: "COLLECTIBLES_CLAIM_SUCCESS", skuId: closure_130_0, purchases: null };
-          const body = closure_130_1.body;
-          let mapped;
-          if (body != null) {
-            mapped = body.map(closure_131_13.fromServer);
-          }
-          obj11.purchases = mapped;
-          closure_131_1(closure_131_2[17]).dispatch(obj11);
-          c5 = 0;
-          c7 = 3;
-          return { value: "HermesInternal", done: null };
-        }
-      } catch (tmp29) {
-        closure_4 = tmp29;
-        if (tmp4 === c5) {
-          c7 = tmp2;
-          throw tmp29;
-        } else {
-          c6 = tmp;
-        }
-      }
-    }
-  })();
-};
-let closure_30 = async function _maybeFetchCollectiblesShopTabLayout(arg0) {
+let closure_29 = async function _maybeFetchCollectiblesShopTabLayout(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1053,15 +965,15 @@ let closure_30 = async function _maybeFetchCollectiblesShopTabLayout(arg0) {
     }
   }
 };
-const addDebugLog = fn(6976).addDebugLog;
-let closure_10 = fn(6979).CollectiblesCategoriesRecord;
-let closure_11 = fn(6983).CollectiblesMarketingsRecord;
-let closure_14 = fn(6990).CollectiblesShopHomeRecord;
+const addDebugLog = fn(7142).addDebugLog;
+let closure_10 = fn(7145).CollectiblesCategoriesRecord;
+let closure_11 = fn(7149).CollectiblesMarketingsRecord;
+let closure_14 = fn(7156).CollectiblesShopHomeRecord;
 const constants = fn(1076).CollectiblesMobileShopScreen;
 const Constants = fn(1074);
 ({ Endpoints: closure_16, Routes, UserSettingsSections: closure_17 } = Constants);
-const CollectiblesMarketingsStore = fn(7004);
-const CollectiblesShopHomeStore = fn(7005);
+const CollectiblesMarketingsStore = fn(7169);
+const CollectiblesShopHomeStore = fn(7170);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/CollectiblesActionCreators.tsx");
 
@@ -1324,19 +1236,9 @@ export const setShopLayoutUrlOverride = function setShopLayoutUrlOverride(shopLa
 export const setSkipNumCategories = function setSkipNumCategories(skipNumCategories) {
   DispatcherDefault.dispatch({ type: "COLLECTIBLES_SKIP_NUM_CATEGORIES", skipNumCategories });
 };
-export const claimCollectiblesCategoryReward = function claimCollectiblesCategoryReward() {
-  const self = this;
-  const apply = closure_29.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-};
 export const maybeFetchCollectiblesShopTabLayout = function maybeFetchCollectiblesShopTabLayout() {
   const self = this;
-  const apply = closure_30.apply;
+  const apply = closure_29.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

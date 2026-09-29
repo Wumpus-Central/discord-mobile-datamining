@@ -1,9 +1,9 @@
-// === Module 8066: FormText ===
+// === Module 8231: FormText ===
 
-// Module 8066 (FormText)
+// Module 8231 (FormText)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import LegacyTokens from "LegacyTokens" /* 5753 */;
+import LegacyTokens from "LegacyTokens" /* 5920 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

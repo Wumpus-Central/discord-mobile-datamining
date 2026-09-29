@@ -1,6 +1,6 @@
-// === Module 10111: MediaKeyboardItem ===
+// === Module 10278: MediaKeyboardItem ===
 
-// Module 10111 (MediaKeyboardItem)
+// Module 10278 (MediaKeyboardItem)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
@@ -8,12 +8,12 @@ import useWindowDimensionsDefault from "useWindowDimensions" /* 1479 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4566 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import timing from "timing" /* 4837 */;
-import ImageIcon from "ImageIcon" /* 5401 */;
-import AttachmentIcon from "AttachmentIcon" /* 9571 */;
-import _modDef9859 from "module_9859" /* 9859 */;
-import CameraIcon from "CameraIcon" /* 10116 */;
+import ImageIcon from "ImageIcon" /* 5567 */;
+import AttachmentIcon from "AttachmentIcon" /* 9738 */;
+import _modDef10026 from "module_10026" /* 10026 */;
+import CameraIcon from "CameraIcon" /* 10283 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 5199 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 5365 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
 
@@ -24,7 +24,7 @@ function NewCaption(arg0) {
   const obj = { style: null, children: null };
   const items = [tmp.labelContainer, style];
   obj.style = items;
-  const items1 = [React7(native.Icon, { source: _modDef9859, style: tmp.icon }), React7(Text_Text.Text, { style: textStyle, color: "text-overlay-light", variant: "text-xs/bold", children: label })];
+  const items1 = [React7(native.Icon, { source: _modDef10026, style: tmp.icon }), React7(Text_Text.Text, { style: textStyle, color: "text-overlay-light", variant: "text-xs/bold", children: label })];
   obj.children = items1;
   return closure_1_10(React4, obj);
 }
@@ -329,7 +329,7 @@ function MediaKeyboardSpecialButton(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable } = get_ActivityIndicator);
-const DeviceConstants = fn(10112);
+const DeviceConstants = fn(10279);
 ({ ALAssetsType: closure_7, DeviceMediaType: closure_8 } = DeviceConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);

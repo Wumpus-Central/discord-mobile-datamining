@@ -1,6 +1,6 @@
-// === Module 6837: BlockedPaymentsCountryExperiment ===
+// === Module 7003: BlockedPaymentsCountryExperiment ===
 
-// Module 6837 (BlockedPaymentsCountryExperiment)
+// Module 7003 (BlockedPaymentsCountryExperiment)
 import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 

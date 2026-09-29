@@ -1,6 +1,6 @@
-// === Module 9602: ChannelMuteUtils ===
+// === Module 9769: ChannelMuteUtils ===
 
-// Module 9602 (ChannelMuteUtils)
+// Module 9769 (ChannelMuteUtils)
 import _modDef4421 from "module_4421" /* 4421 */;
 import size from "module_2" /* 2 */;
 

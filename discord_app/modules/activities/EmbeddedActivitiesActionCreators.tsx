@@ -1,13 +1,13 @@
-// === Module 8782: EmbeddedActivitiesActionCreators ===
+// === Module 8947: EmbeddedActivitiesActionCreators ===
 
-// Module 8782 (EmbeddedActivitiesActionCreators)
+// Module 8947 (EmbeddedActivitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import dismissible_content from "dismissible_content" /* 2029 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 2031 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4458 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5037 */;
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 8805 */;
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 8970 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 5063 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4852 */;
@@ -275,9 +275,9 @@ let closure_27 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
                 }
                 let tmp2 = type === constants2.GUILD_VOICE;
                 application = application.getApplication(arg0);
-                const obj = closure_1_0(8321);
-                const hasApplicationFlagResult = closure_1_0(8321).hasApplicationFlag(application, constants.EMBEDDED);
-                const result = closure_1_0(8789).isActivityInTextSupportedForChannel(type);
+                const obj = closure_1_0(8486);
+                const hasApplicationFlagResult = closure_1_0(8486).hasApplicationFlag(application, constants.EMBEDDED);
+                const result = closure_1_0(8954).isActivityInTextSupportedForChannel(type);
                 if (tmp2) {
                   tmp2 = hasApplicationFlagResult;
                 }
@@ -597,7 +597,7 @@ let closure_29 = async function _maybeSendPrimaryAppCommand(arg0) {
                     };
                   }
                 };
-                nonce(8714)(obj);
+                nonce(8879)(obj);
               });
               c5 = 7;
               c6 = 1;
@@ -1307,10 +1307,10 @@ let closure_38 = async function _sendEmbeddedActivityInviteUser() {
     } else {
       let content;
       if (null != closure_1_5) {
-        content = closure_1(7095).parse(channel, tmp2).content;
-        const obj = closure_1(7095);
+        content = closure_1(7260).parse(channel, tmp2).content;
+        const obj = closure_1(7260);
       }
-      const obj2 = closure_1(6876);
+      const obj2 = closure_1(7042);
       obj2.sendInvite(result, code.code, closure_1_3, closure_1_4, content);
     }
   });
@@ -1537,14 +1537,14 @@ let closure_42 = async function _refreshProxyTicket() {
     }
   })();
 };
-let closure_4 = fn(8591).getOrFetchApplicationCommandIndexForTarget;
+let closure_4 = fn(8756).getOrFetchApplicationCommandIndexForTarget;
 let closure_16 = fn(2005).SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES;
-const ActivityPanelModes = fn(8502).ActivityPanelModes;
+const ActivityPanelModes = fn(8667).ActivityPanelModes;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_18, AnalyticsGameOpenTypes: closure_19, ApplicationFlags: closure_20, ChannelTypes: closure_21, Endpoints: closure_22, PopoutWindowKeys: closure_23 } = Constants);
 const INSTALL_LESS_APP_IDS = fn(1349).INSTALL_LESS_APP_IDS;
 const ContentDismissActionType = fn(2042).ContentDismissActionType;
-const InviteTargetTypes = fn(7155).InviteTargetTypes;
+const InviteTargetTypes = fn(7320).InviteTargetTypes;
 let closure_28 = { NO_PRIMARY_APP_COMMAND: 1, [1]: "NO_PRIMARY_APP_COMMAND", UNAUTHORIZED: 2, [2]: "UNAUTHORIZED", NO_CHANNEL: 3, [3]: "NO_CHANNEL", FAILED_ACTIVITY_LAUNCH_CHECKS: 4, [4]: "FAILED_ACTIVITY_LAUNCH_CHECKS" };
 let closure_30 = { OTHER: 0, [0]: "OTHER", NO_APPLICATION_ID: 1, [1]: "NO_APPLICATION_ID", UNKNOWN_USER_OR_APPLICATION: 2, [2]: "UNKNOWN_USER_OR_APPLICATION", INVALID_CHANNEL: 3, [3]: "INVALID_CHANNEL", LAUNCHABILITY_CHECK_FAILED_OTHER: 4, [4]: "LAUNCHABILITY_CHECK_FAILED_OTHER", NO_USE_EMBEDDED_ACTIVITIES_PERMISSION: 5, [5]: "NO_USE_EMBEDDED_ACTIVITIES_PERMISSION", ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS: 6, [6]: "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS", FAILED_ACTIVITY_LAUNCH_CHECKS: 7, [7]: "FAILED_ACTIVITY_LAUNCH_CHECKS", NOT_CONNECTED_TO_VOICE_CHANNEL: 8, [8]: "NOT_CONNECTED_TO_VOICE_CHANNEL", AIT_NOT_ENABLED_FOR_USER: 9, [9]: "AIT_NOT_ENABLED_FOR_USER" };
 const size = fn(2);

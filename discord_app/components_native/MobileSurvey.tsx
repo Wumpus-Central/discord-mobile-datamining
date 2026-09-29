@@ -1,11 +1,11 @@
-// === Module 16745: MobileSurvey ===
+// === Module 16933: MobileSurvey ===
 
-// Module 16745 (MobileSurvey)
+// Module 16933 (MobileSurvey)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import LinkingDefault from "Linking" /* 4525 */;
 import SurveyActionCreators from "SurveyActionCreators" /* 5028 */;
-import _modDef8552 from "module_8552" /* 8552 */;
+import _modDef8717 from "module_8717" /* 8717 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import SurveyStore from "SurveyStore" /* 5027 */;
@@ -102,10 +102,10 @@ export default function MobileSurvey() {
       return SurveyActionCreators.surveyHide(stateFromStores.key, true);
     };
     obj3.renderConfirmRightIcon = function renderConfirmRightIcon() {
-      return jsx(native.Icon, { style: confirmIcon.confirmIcon, color: nativeDefault.unsafe_rawColors.WHITE, size: native.Icon.Sizes.SMALL, source: _modDef8552 });
+      return jsx(native.Icon, { style: confirmIcon.confirmIcon, color: nativeDefault.unsafe_rawColors.WHITE, size: native.Icon.Sizes.SMALL, source: _modDef8717 });
     };
-    tmp5 = jsx(stateFromStores(5300), { body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, renderConfirmRightIcon: null });
-    const tmp8 = stateFromStores(5300);
+    tmp5 = jsx(stateFromStores(5466), { body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, renderConfirmRightIcon: null });
+    const tmp8 = stateFromStores(5466);
   }
   return tmp5;
 };

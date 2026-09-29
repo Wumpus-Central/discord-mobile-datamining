@@ -1,9 +1,9 @@
-// === Module 9620: NotificationSettingsMessageNotificationGuildActionSheet ===
+// === Module 9787: NotificationSettingsMessageNotificationGuildActionSheet ===
 
-// Module 9620 (NotificationSettingsMessageNotificationGuildActionSheet)
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6535 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6540 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 9608 */;
+// Module 9787 (NotificationSettingsMessageNotificationGuildActionSheet)
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6701 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6706 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 9775 */;
 import noop from "module_19" /* 19 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5017 */;
 
@@ -44,5 +44,5 @@ export default function NotificationSettingsMessageNotificationGuildActionSheet(
     const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
     const result = NotificationSettingsModalActionCreatorsDefault.updateGuildNotificationSettings(guildId.guildId, obj, NotificationLabel.notifications(message_notifications));
   };
-  return jsx(unread(9621), { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null });
+  return jsx(unread(9788), { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null });
 };

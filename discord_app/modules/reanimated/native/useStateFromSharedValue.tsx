@@ -1,6 +1,6 @@
-// === Module 7715: useStateFromSharedValue ===
+// === Module 7880: useStateFromSharedValue ===
 
-// Module 7715 (useStateFromSharedValue)
+// Module 7880 (useStateFromSharedValue)
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

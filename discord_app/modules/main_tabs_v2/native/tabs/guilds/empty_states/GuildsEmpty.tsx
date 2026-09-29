@@ -1,15 +1,15 @@
-// === Module 15905: GuildsEmpty ===
+// === Module 16082: GuildsEmpty ===
 
-// Module 15905 (GuildsEmpty)
+// Module 16082 (GuildsEmpty)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import FavoritesUtils from "FavoritesUtils" /* 2070 */;
 import getInitialNavigationState from "getInitialNavigationState" /* 4694 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import Stack_Stack from "Stack/Stack" /* 5279 */;
-import components_Button_Button from "components/Button/Button" /* 5281 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12205 */;
-import _modDef15906 from "module_15906" /* 15906 */;
+import Stack_Stack from "Stack/Stack" /* 5445 */;
+import components_Button_Button from "components/Button/Button" /* 5447 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12376 */;
+import _modDef16083 from "module_16083" /* 16083 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -127,7 +127,7 @@ export default noop.memo(function GuildsEmpty(arg0) {
   const obj2 = navigation(563);
   obj3.type = navigation(1249).ImpressionTypes.VIEW;
   obj3.name = navigation(1249).ImpressionNames.GUILDS_EMPTY_NUX;
-  selectedGuildId(8230)(obj3);
+  selectedGuildId(8395)(obj3);
   const items1 = [tmp6, navigation];
   const effect = noop.useEffect(() => {
     if (null != selectedGuildId) {
@@ -161,9 +161,9 @@ export default noop.memo(function GuildsEmpty(arg0) {
       }
     }
   }, items1);
-  const tmp7 = selectedGuildId(8230);
-  const isScreenLandscape = navigation(5438).useIsScreenLandscape();
-  navigation(14629);
+  const tmp7 = selectedGuildId(8395);
+  const isScreenLandscape = navigation(5605).useIsScreenLandscape();
+  navigation(14804);
   let tmp14Result = null;
   if (stateFromStores) {
     const obj4 = { style: null, children: null };

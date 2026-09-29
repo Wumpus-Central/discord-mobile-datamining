@@ -1,9 +1,9 @@
-// === Module 16844: getActivityContainerPIPStylesSpec ===
+// === Module 17031: getActivityContainerPIPStylesSpec ===
 
-// Module 16844 (getActivityContainerPIPStylesSpec)
+// Module 17031 (getActivityContainerPIPStylesSpec)
 import Constants from "Constants" /* 2005 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 8502 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 10456 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 8667 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 10625 */;
 import size from "module_2" /* 2 */;
 
 const OrientationLockState = Constants.OrientationLockState;

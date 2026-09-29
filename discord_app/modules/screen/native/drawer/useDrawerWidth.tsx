@@ -1,6 +1,6 @@
-// === Module 11021: useDrawerWidth ===
+// === Module 11190: useDrawerWidth ===
 
-// Module 11021 (useDrawerWidth)
+// Module 11190 (useDrawerWidth)
 import Constants from "Constants" /* 1074 */;
 import useChatLayout from "useChatLayout" /* 4695 */;
 import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4697 */;

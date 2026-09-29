@@ -1,7 +1,7 @@
-// === Module 5899: FastImage ===
+// === Module 6065: FastImage ===
 
-// Module 5899 (FastImage)
-import FastImageNativeComponentDefault from "FastImageNativeComponent" /* 5900 */;
+// Module 6065 (FastImage)
+import FastImageNativeComponentDefault from "FastImageNativeComponent" /* 6066 */;
 import noop from "module_19" /* 19 */;
 
 class FastImageAndroid {

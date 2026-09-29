@@ -1,8 +1,8 @@
-// === Module 10354: ActionButton ===
+// === Module 10523: ActionButton ===
 
-// Module 10354 (ActionButton)
-import ButtonHooks from "ButtonHooks" /* 5287 */;
-import IconButton from "IconButton" /* 7363 */;
+// Module 10523 (ActionButton)
+import ButtonHooks from "ButtonHooks" /* 5453 */;
+import IconButton from "IconButton" /* 7528 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

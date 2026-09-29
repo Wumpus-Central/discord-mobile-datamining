@@ -1,11 +1,11 @@
-// === Module 9725: autocompleter/AutocompleteUtils ===
+// === Module 9892: autocompleter/AutocompleteUtils ===
 
-// Module 9725 (autocompleter/AutocompleteUtils)
+// Module 9892 (autocompleter/AutocompleteUtils)
 import nativeDefault from "native" /* 576 */;
 import UserUtilsDefault from "UserUtils" /* 4678 */;
 import useChannelName from "useChannelName" /* 4989 */;
-import TimestampUtils from "TimestampUtils" /* 5330 */;
-import FormDividerDefault from "FormDivider" /* 8059 */;
+import TimestampUtils from "TimestampUtils" /* 5496 */;
+import FormDividerDefault from "FormDivider" /* 8224 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 4467 */;
 import RelationshipStore from "RelationshipStore" /* 4479 */;
@@ -19,9 +19,9 @@ function AutocompleteFormDivider() {
 let closure_3 = fn(2049).isGuildSelectableChannelType;
 const Constants = fn(1074);
 ({ AutoCompleteResultTypes: closure_7, WHITESPACE_RE: closure_8 } = Constants);
-const ApplicationCommandsConstants = fn(9726);
+const ApplicationCommandsConstants = fn(9893);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_9, AUTOCOMPLETE_ROW_HEIGHT: c10 } = ApplicationCommandsConstants);
-const ChannelAutocompleteConstants = fn(5306);
+const ChannelAutocompleteConstants = fn(5472);
 ({ CHANNEL_SENTINEL: closure_11, EMOJI_SENTINEL: closure_12, GAME_MENTION_SENTINEL: map1, MENTION_SENTINEL: closure_14 } = ChannelAutocompleteConstants);
 const jsx = fn(21).jsx;
 const hairlineWidth = fn(17).StyleSheet.hairlineWidth;

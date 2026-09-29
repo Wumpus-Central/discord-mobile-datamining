@@ -1,7 +1,7 @@
-// === Module 6829: PremiumBundledPlansUtils ===
+// === Module 6995: PremiumBundledPlansUtils ===
 
-// Module 6829 (PremiumBundledPlansUtils)
-import ProductIds from "ProductIds" /* 6661 */;
+// Module 6995 (PremiumBundledPlansUtils)
+import ProductIds from "ProductIds" /* 6827 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -233,8 +233,8 @@ export const excludeNitroOnlyPlansForActiveTrial = function excludeNitroOnlyPlan
 };
 export { getSubscriptionItemsForProduct };
 export const getModifySubscriptionItemsForProduct = function getModifySubscriptionItemsForProduct(productId, subscription) {
-  if (productId in found(6661).AppStorePremiumProductIdsToPremiumBundledItems) {
-    const tmp8 = tmp(6661).AppStorePremiumProductIdsToPremiumBundledItems[productId];
+  if (productId in found(6827).AppStorePremiumProductIdsToPremiumBundledItems) {
+    const tmp8 = tmp(6827).AppStorePremiumProductIdsToPremiumBundledItems[productId];
     if (null != tmp8.premiumTier) {
       if (tmpResult.isBoostOnlySubscription(subscription)) {
         const itemsWithUpsertedPremiumPlanId = tmp(4488).getItemsWithUpsertedPremiumPlanId(subscription, tmp8.basePlanId);

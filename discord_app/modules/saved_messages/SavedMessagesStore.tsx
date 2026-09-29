@@ -1,10 +1,10 @@
-// === Module 11155: SavedMessagesStore ===
+// === Module 11324: SavedMessagesStore ===
 
-// Module 11155 (SavedMessagesStore)
+// Module 11324 (SavedMessagesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 5058 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 7285 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 7450 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

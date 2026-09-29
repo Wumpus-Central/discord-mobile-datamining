@@ -1,6 +1,6 @@
-// === Module 9649: CompressLogsExperiment ===
+// === Module 9816: CompressLogsExperiment ===
 
-// Module 9649 (CompressLogsExperiment)
+// Module 9816 (CompressLogsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 6724: ThreadMessageStore ===
+// === Module 6890: ThreadMessageStore ===
 
-// Module 6724 (ThreadMessageStore)
+// Module 6890 (ThreadMessageStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;

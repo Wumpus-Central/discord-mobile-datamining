@@ -1,24 +1,24 @@
-// === Module 10882: ChatView ===
+// === Module 11051: ChatView ===
 
-// Module 10882 (ChatView)
+// Module 11051 (ChatView)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import ChatInputUtils from "ChatInputUtils" /* 4701 */;
-import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 6732 */;
-import SummaryActionCreators from "SummaryActionCreators" /* 10886 */;
-import ChatViewWrapperDefault from "ChatViewWrapper" /* 10891 */;
-import ChatViewStickyHeaderDefault from "ChatViewStickyHeader" /* 10904 */;
-import MessagesDefault from "Messages" /* 10968 */;
-import ChatInputDefault from "ChatInput" /* 11440 */;
-import JumpToPresentButtonDefault from "JumpToPresentButton" /* 11749 */;
-import ChatBeginningRowDefault from "ChatBeginningRow" /* 11961 */;
-import PortalKeyboardInlineComponentDefault from "PortalKeyboardInlineComponent" /* 12134 */;
-import ChatPlaceholderDefault from "ChatPlaceholder" /* 12135 */;
-import ChannelSafeAreaBottomDefault from "ChannelSafeAreaBottom" /* 12139 */;
-import VoiceMessageOverlayDefault from "VoiceMessageOverlay" /* 12142 */;
+import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 6898 */;
+import SummaryActionCreators from "SummaryActionCreators" /* 11055 */;
+import ChatViewWrapperDefault from "ChatViewWrapper" /* 11060 */;
+import ChatViewStickyHeaderDefault from "ChatViewStickyHeader" /* 11073 */;
+import MessagesDefault from "Messages" /* 11137 */;
+import ChatInputDefault from "ChatInput" /* 11609 */;
+import JumpToPresentButtonDefault from "JumpToPresentButton" /* 11918 */;
+import ChatBeginningRowDefault from "ChatBeginningRow" /* 12132 */;
+import PortalKeyboardInlineComponentDefault from "PortalKeyboardInlineComponent" /* 12305 */;
+import ChatPlaceholderDefault from "ChatPlaceholder" /* 12306 */;
+import ChannelSafeAreaBottomDefault from "ChannelSafeAreaBottom" /* 12310 */;
+import VoiceMessageOverlayDefault from "VoiceMessageOverlay" /* 12313 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5589 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5756 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import MessageStore from "MessageStore" /* 5056 */;
 

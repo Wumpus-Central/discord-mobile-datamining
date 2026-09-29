@@ -1,14 +1,14 @@
-// === Module 9729: ForumComposerHeader ===
+// === Module 9896: ForumComposerHeader ===
 
-// Module 9729 (ForumComposerHeader)
+// Module 9896 (ForumComposerHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import useChannelNameDefault from "useChannelName" /* 4989 */;
-import BookCheckIcon from "BookCheckIcon" /* 5389 */;
-import ForumIcon from "ForumIcon" /* 5402 */;
-import Pressables from "Pressables" /* 5435 */;
-import XSmallIcon from "XSmallIcon" /* 5992 */;
+import BookCheckIcon from "BookCheckIcon" /* 5555 */;
+import ForumIcon from "ForumIcon" /* 5568 */;
+import Pressables from "Pressables" /* 5602 */;
+import XSmallIcon from "XSmallIcon" /* 6158 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

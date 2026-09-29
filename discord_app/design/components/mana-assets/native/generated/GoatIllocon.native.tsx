@@ -1,9 +1,9 @@
-// === Module 16355: GoatIllocon ===
+// === Module 16535: GoatIllocon ===
 
-// Module 16355 (GoatIllocon)
+// Module 16535 (GoatIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5899 */;
-import _modDef16356 from "module_16356" /* 16356 */;
+import FastImageDefault from "FastImage" /* 6065 */;
+import _modDef16536 from "module_16536" /* 16536 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const GoatIllocon = function GoatIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef16356 };
+  const obj2 = { uri: _modDef16536 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

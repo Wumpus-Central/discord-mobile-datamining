@@ -1,12 +1,12 @@
-// === Module 7541: utils/ChangeLogUtils ===
+// === Module 7706: utils/ChangeLogUtils ===
 
-// Module 7541 (utils/ChangeLogUtils)
+// Module 7706 (utils/ChangeLogUtils)
 import nativeDefault from "native" /* 576 */;
 import _modDef1930 from "module_1930" /* 1930 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import MarkupRulesUtils from "MarkupRulesUtils" /* 7542 */;
+import MarkupRulesUtils from "MarkupRulesUtils" /* 7707 */;
 import noop from "module_19" /* 19 */;
-import CustomMarkup from "CustomMarkup" /* 5301 */;
+import CustomMarkup from "CustomMarkup" /* 5467 */;
 
 require = fn;
 function ChangeLogLink(arg0) {
@@ -115,8 +115,8 @@ const jsx = fn(21).jsx;
 const createStyles = fn(4836);
 let obj2 = { link: { color: nativeDefault.colors.TEXT_LINK }, list: { marginBottom: 10 }, image: { alignSelf: "center", flex: 1 }, container: null, text: null };
 const obj3 = { color: nativeDefault.colors.TEXT_LINK };
-obj2.container = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5753).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
-const obj4 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5753).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+obj2.container = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5920).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+const obj4 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5920).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
 obj2.text = { fontSize: 14, lineHeight: 18, marginBottom: 8, color: nativeDefault.colors.TEXT_MUTED };
 let closure_6 = createStyles.createStyles(obj2);
 const rules = CustomMarkup.createRules({});

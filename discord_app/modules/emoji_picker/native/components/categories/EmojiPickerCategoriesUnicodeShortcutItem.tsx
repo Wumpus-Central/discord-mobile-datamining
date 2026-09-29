@@ -1,8 +1,8 @@
-// === Module 9821: EmojiPickerCategoriesUnicodeShortcutItem ===
+// === Module 9988: EmojiPickerCategoriesUnicodeShortcutItem ===
 
-// Module 9821 (EmojiPickerCategoriesUnicodeShortcutItem)
+// Module 9988 (EmojiPickerCategoriesUnicodeShortcutItem)
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 8853 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9018 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

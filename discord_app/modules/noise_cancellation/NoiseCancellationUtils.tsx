@@ -1,8 +1,8 @@
-// === Module 9450: NoiseCancellationUtils ===
+// === Module 9617: NoiseCancellationUtils ===
 
-// Module 9450 (NoiseCancellationUtils)
+// Module 9617 (NoiseCancellationUtils)
 import initialize from "initialize" /* 504 */;
-import getEffectiveNoiseCancellationDefault from "getEffectiveNoiseCancellation" /* 9451 */;
+import getEffectiveNoiseCancellationDefault from "getEffectiveNoiseCancellation" /* 9618 */;
 import MediaEngineStore from "MediaEngineStore" /* 1993 */;
 
 require = fn;

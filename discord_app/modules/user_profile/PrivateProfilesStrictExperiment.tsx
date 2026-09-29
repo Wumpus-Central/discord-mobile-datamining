@@ -1,6 +1,6 @@
-// === Module 12668: PrivateProfilesStrictExperiment ===
+// === Module 12838: PrivateProfilesStrictExperiment ===
 
-// Module 12668 (PrivateProfilesStrictExperiment)
+// Module 12838 (PrivateProfilesStrictExperiment)
 import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 

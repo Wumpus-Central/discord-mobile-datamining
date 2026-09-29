@@ -1,9 +1,9 @@
-// === Module 14409: FamilyCenterParentalConsentNotice ===
+// === Module 14584: FamilyCenterParentalConsentNotice ===
 
-// Module 14409 (FamilyCenterParentalConsentNotice)
+// Module 14584 (FamilyCenterParentalConsentNotice)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import FamilyCenterInlineWarningNoticeDefault from "FamilyCenterInlineWarningNotice" /* 14410 */;
+import FamilyCenterInlineWarningNoticeDefault from "FamilyCenterInlineWarningNotice" /* 14585 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

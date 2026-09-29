@@ -1,6 +1,6 @@
-// === Module 8804: selectAndWaitForVoiceChannelJoin ===
+// === Module 8969: selectAndWaitForVoiceChannelJoin ===
 
-// Module 8804 (selectAndWaitForVoiceChannelJoin)
+// Module 8969 (selectAndWaitForVoiceChannelJoin)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
 

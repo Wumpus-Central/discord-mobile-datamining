@@ -1,17 +1,17 @@
-// === Module 6507: TextAreaField ===
+// === Module 6673: TextAreaField ===
 
-// Module 6507 (TextAreaField)
+// Module 6673 (TextAreaField)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 4533 */;
-import useTextField from "useTextField" /* 6032 */;
-import InputFieldContainer from "InputFieldContainer" /* 6039 */;
+import useTextField from "useTextField" /* 6198 */;
+import InputFieldContainer from "InputFieldContainer" /* 6205 */;
 import noop from "module_19" /* 19 */;
 
 const util = prop(1115);
 const Text_Text = prop(4832);
-const NativeTextInput = prop(6042);
-const propsForNativeTextInput = prop(6356);
-const useCharacterLimitAnnouncement = prop(6508);
+const NativeTextInput = prop(6208);
+const propsForNativeTextInput = prop(6522);
+const useCharacterLimitAnnouncement = prop(6674);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);

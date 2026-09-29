@@ -1,6 +1,6 @@
-// === Module 11497: ForumPostNewTag ===
+// === Module 11666: ForumPostNewTag ===
 
-// Module 11497 (ForumPostNewTag)
+// Module 11666 (ForumPostNewTag)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import noop from "module_19" /* 19 */;

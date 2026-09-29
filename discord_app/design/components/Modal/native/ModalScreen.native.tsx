@@ -1,8 +1,8 @@
-// === Module 7870: ModalScreen ===
+// === Module 8035: ModalScreen ===
 
-// Module 7870 (ModalScreen)
+// Module 8035 (ModalScreen)
 import nativeDefault from "native" /* 576 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6402 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6568 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

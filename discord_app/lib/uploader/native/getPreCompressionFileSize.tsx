@@ -1,7 +1,7 @@
-// === Module 7260: getPreCompressionFileSize ===
+// === Module 7425: getPreCompressionFileSize ===
 
-// Module 7260 (getPreCompressionFileSize)
-import utils_UploadUtils from "utils/UploadUtils" /* 5450 */;
+// Module 7425 (getPreCompressionFileSize)
+import utils_UploadUtils from "utils/UploadUtils" /* 5617 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

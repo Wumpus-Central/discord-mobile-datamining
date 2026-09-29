@@ -1,10 +1,10 @@
-// === Module 6643: OnboardingHomeUtils ===
+// === Module 6809: OnboardingHomeUtils ===
 
-// Module 6643 (OnboardingHomeUtils)
+// Module 6809 (OnboardingHomeUtils)
 import FavoritesUtils from "FavoritesUtils" /* 2070 */;
 import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 5025 */;
-import GuildOnboardingUtils from "GuildOnboardingUtils" /* 6527 */;
-import useIsNewMemberDefault from "useIsNewMember" /* 6644 */;
+import GuildOnboardingUtils from "GuildOnboardingUtils" /* 6693 */;
+import useIsNewMemberDefault from "useIsNewMember" /* 6810 */;
 import ImpersonateStore from "ImpersonateStore" /* 2101 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import GuildStore from "GuildStore" /* 2067 */;

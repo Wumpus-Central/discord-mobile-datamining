@@ -1,11 +1,11 @@
-// === Module 12728: OrbCheckoutModalContext ===
+// === Module 12898: OrbCheckoutModalContext ===
 
-// Module 12728 (OrbCheckoutModalContext)
+// Module 12898 (OrbCheckoutModalContext)
 import jsxProd from "jsxProd" /* 21 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 6973 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7139 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
-import SKUStore from "SKUStore" /* 5822 */;
+import SKUStore from "SKUStore" /* 5989 */;
 import v1 from "v1" /* 1255 */;
 import size from "module_2" /* 2 */;
 
@@ -63,9 +63,10 @@ function useOrbCheckoutModalContextProvider(skuId) {
     orbPriceAmount = tmp8.orbPriceAmount;
   }
   if (null == orbPriceAmount) {
-    let obj3 = { tags: null };
+    let obj3 = { tags: null, fingerprint: null };
     let obj4 = { sku_id: skuId };
     obj3.tags = obj4;
+    obj3.fingerprint = ["orb-price-not-found-for-product"];
     const result = tmp(tmp2[11]).captureBillingMessage("Orb price not found for product", obj3);
     const tmpResult7 = tmp(tmp2[11]);
   }

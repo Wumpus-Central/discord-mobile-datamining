@@ -1,6 +1,6 @@
-// === Module 12816: createMediaPostPreviewEmbedContent ===
+// === Module 12986: createMediaPostPreviewEmbedContent ===
 
-// Module 12816 (createMediaPostPreviewEmbedContent)
+// Module 12986 (createMediaPostPreviewEmbedContent)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import MediaPostEmbedUtils from "MediaPostEmbedUtils" /* 4984 */;
@@ -8,10 +8,10 @@ import MediaPostThumbnailUtils from "MediaPostThumbnailUtils" /* 4985 */;
 import MediaFormatTesters from "MediaFormatTesters" /* 4986 */;
 import LinkUtils from "LinkUtils" /* 4990 */;
 import AgeVerificationUtils from "AgeVerificationUtils" /* 5048 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7020 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7402 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7404 */;
-import MediaPostEmbedStore2 from "MediaPostEmbedStore" /* 10970 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7185 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7567 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7569 */;
+import MediaPostEmbedStore2 from "MediaPostEmbedStore" /* 11139 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import DevSettingsStore from "DevSettingsStore" /* 4835 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
@@ -91,7 +91,7 @@ export default function createMediaPostPreviewEmbedContent(message, roleStyle, u
             if (mediaPostEmbedCommonData.shouldShowBlurredThumbnailImage) {
               const obj5 = {};
               const merged = Object.assign(mediaPostEmbedCommonData);
-              obj5.blurredCoverImage = React3.resolveAssetSource(tmp10(12817)).uri;
+              obj5.blurredCoverImage = React3.resolveAssetSource(tmp10(12987)).uri;
               obj5.footer = formatToPartsResult;
               obj5.ctaButtonColor = tmp11;
               return obj5;

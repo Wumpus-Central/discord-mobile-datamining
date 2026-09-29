@@ -1,7 +1,7 @@
-// === Module 16240: VibegrationsHeaderIconButton ===
+// === Module 16420: VibegrationsHeaderIconButton ===
 
-// Module 16240 (VibegrationsHeaderIconButton)
-import Pressables from "Pressables" /* 5435 */;
+// Module 16420 (VibegrationsHeaderIconButton)
+import Pressables from "Pressables" /* 5602 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

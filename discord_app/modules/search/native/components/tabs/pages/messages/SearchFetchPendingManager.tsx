@@ -1,8 +1,8 @@
-// === Module 16528: SearchFetchPendingManager ===
+// === Module 16717: SearchFetchPendingManager ===
 
-// Module 16528 (SearchFetchPendingManager)
-import useInitialValueDefault from "useInitialValue" /* 5910 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11821 */;
+// Module 16717 (SearchFetchPendingManager)
+import useInitialValueDefault from "useInitialValue" /* 6076 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11990 */;
 import noop from "module_19" /* 19 */;
 
 let closure_3 = function SearchFetchPendingManager() {

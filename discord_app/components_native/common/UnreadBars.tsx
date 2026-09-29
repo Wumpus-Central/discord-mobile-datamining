@@ -1,16 +1,16 @@
-// === Module 15992: UnreadBars ===
+// === Module 16168: UnreadBars ===
 
-// Module 15992 (UnreadBars)
+// Module 16168 (UnreadBars)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import HapticUtils from "HapticUtils" /* 4801 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4802 */;
-import TransitionGroup from "TransitionGroup" /* 11916 */;
+import TransitionGroup from "TransitionGroup" /* 12087 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4825 */;
-import TextStyles from "TextStyles" /* 5836 */;
+import TextStyles from "TextStyles" /* 6003 */;
 
 const require = globalThis.__r;
 

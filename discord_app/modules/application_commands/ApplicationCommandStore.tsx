@@ -1,11 +1,11 @@
-// === Module 7199: ApplicationCommandStore ===
+// === Module 7364: ApplicationCommandStore ===
 
-// Module 7199 (ApplicationCommandStore)
+// Module 7364 (ApplicationCommandStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 6941 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7107 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 6698 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 6864 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 7641: types ===
+// === Module 7806: types ===
 
-// Module 7641 (types)
+// Module 7806 (types)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/virtual_currency/types.tsx");

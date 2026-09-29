@@ -1,12 +1,12 @@
-// === Module 10768: BadgeTierGrid ===
+// === Module 10937: BadgeTierGrid ===
 
-// Module 10768 (BadgeTierGrid)
+// Module 10937 (BadgeTierGrid)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import LockIcon from "LockIcon" /* 5409 */;
-import BadgeUtils from "BadgeUtils" /* 10659 */;
-import BadgeArtImageDefault from "BadgeArtImage" /* 10766 */;
+import LockIcon from "LockIcon" /* 5575 */;
+import BadgeUtils from "BadgeUtils" /* 10828 */;
+import BadgeArtImageDefault from "BadgeArtImage" /* 10935 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

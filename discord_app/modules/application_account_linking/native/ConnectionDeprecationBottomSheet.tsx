@@ -1,17 +1,17 @@
-// === Module 16764: ConnectionDeprecationBottomSheet ===
+// === Module 16951: ConnectionDeprecationBottomSheet ===
 
-// Module 16764 (ConnectionDeprecationBottomSheet)
+// Module 16951 (ConnectionDeprecationBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtils from "AvatarUtils" /* 1397 */;
 import themes from "themes" /* 4538 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
-import Icon from "Icon" /* 5283 */;
-import useStartAuthorizeDefault from "useStartAuthorize" /* 6586 */;
-import GameIcon from "GameIcon" /* 6593 */;
-import AccountLinkManager from "AccountLinkManager" /* 16765 */;
+import Icon from "Icon" /* 5449 */;
+import useStartAuthorizeDefault from "useStartAuthorize" /* 6752 */;
+import GameIcon from "GameIcon" /* 6759 */;
+import AccountLinkManager from "AccountLinkManager" /* 16952 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 5063 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5593 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5760 */;
 
 const require = globalThis.__r;
 const IconDefault = Icon;
@@ -197,7 +197,7 @@ export const useShouldShowConnectionDeprecationBottomSheet = function useShouldS
       replacedBy = migrationData.replacedBy;
     }
   }
-  const getOrFetchApplication = deprecatedPlatformTypes(6589).useGetOrFetchApplication(replacedBy);
+  const getOrFetchApplication = deprecatedPlatformTypes(6755).useGetOrFetchApplication(replacedBy);
   const tmp5 = useStartAuthorizeDefault(getOrFetchApplication);
   ({ hasAlreadyLinked, canStartAuthorization } = tmp5);
   if (!fetchingConnections) {

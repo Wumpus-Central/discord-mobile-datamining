@@ -1,6 +1,6 @@
-// === Module 9190: VoiceChannelGamesExperiment ===
+// === Module 9355: VoiceChannelGamesExperiment ===
 
-// Module 9190 (VoiceChannelGamesExperiment)
+// Module 9355 (VoiceChannelGamesExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1436 */;
 
 const tmp2 = apex_ApexExperimentDefault({ kind: "user", name: "2026-08-mobile-voice-channel-games", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

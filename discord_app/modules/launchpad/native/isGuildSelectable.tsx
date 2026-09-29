@@ -1,9 +1,9 @@
-// === Module 16805: isGuildSelectable ===
+// === Module 16992: isGuildSelectable ===
 
-// Module 16805 (isGuildSelectable)
+// Module 16992 (isGuildSelectable)
 import StageInstanceStore from "StageInstanceStore" /* 2050 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4858 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7050 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7215 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5017 */;
 
 const size = fn(2);

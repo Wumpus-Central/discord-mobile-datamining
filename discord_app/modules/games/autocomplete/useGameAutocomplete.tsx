@@ -1,31 +1,35 @@
-// === Module 8367: useGameAutocomplete ===
+// === Module 8532: useGameAutocomplete ===
 
-// Module 8367 (useGameAutocomplete)
-import GameAutocompleteUtils from "GameAutocompleteUtils" /* 5421 */;
-import GameAutocompleteActionCreators from "GameAutocompleteActionCreators" /* 8368 */;
+// Module 8532 (useGameAutocomplete)
+import GameAutocompleteTypes from "GameAutocompleteTypes" /* 5587 */;
+import GameAutocompleteUtils from "GameAutocompleteUtils" /* 5588 */;
+import GameAutocompleteActionCreators from "GameAutocompleteActionCreators" /* 8533 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 5420 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 5586 */;
 
 require = fn;
 const QueryIds = fn(1074).QueryIds;
 const initialize = fn(504);
 const fetchStore = initialize.createFetchStore(GameAutocompleteStore, {
   getQueryId(query) {
-    return QueryIds.GAME_AUTOCOMPLETE(GameAutocompleteUtils.normalizeGameAutocompleteQuery(query));
+    if (DEFAULT === undefined) {
+      DEFAULT = GameAutocompleteTypes.GameAutocompleteProfile.DEFAULT;
+    }
+    return QueryIds.GAME_AUTOCOMPLETE(GameAutocompleteUtils.normalizeGameAutocompleteQuery(query), DEFAULT);
   },
-  get(arg0) {
-    let results = GameAutocompleteStore.getResults(arg0);
+  get(arg0, arg1) {
+    let results = GameAutocompleteStore.getResults(arg0, arg1);
     if (results == null) {
       results = null;
     }
     return results;
   },
-  load(arg0) {
-    return GameAutocompleteActionCreators.fetchGameAutocomplete(arg0);
+  load(arg0, arg1) {
+    return GameAutocompleteActionCreators.fetchGameAutocomplete(arg0, arg1);
   },
-  getIsLoading(arg0) {
-    return GameAutocompleteStore.isFetching(arg0);
+  getIsLoading(arg0, arg1) {
+    return GameAutocompleteStore.isFetching(arg0, arg1);
   },
   retryConfig: {
     retryableErrors: function isRetryableError(status) {
@@ -55,11 +59,15 @@ export const GAME_AUTOCOMPLETE_DEBOUNCE_MS = 200;
 export const GAME_AUTOCOMPLETE_DEBOUNCE_MAX_WAIT_MS = 500;
 export const useGameAutocomplete = fetchStore;
 export const useDebouncedGameAutocomplete = function useDebouncedGameAutocomplete(query) {
+  let DEFAULT = arg1;
+  if (arg1 === undefined) {
+    DEFAULT = GameAutocompleteTypes.GameAutocompleteProfile.DEFAULT;
+  }
   const result = GameAutocompleteUtils.normalizeGameAutocompleteQuery(query);
   require = result;
   c1 = undefined;
-  [tmp3, c1] = noop.useState(result);
-  noop.useRef(tmp3);
+  [tmp5, c1] = noop.useState(result);
+  noop.useRef(tmp5);
   noop.useRef(0);
   const items = [result];
   const effect = noop.useEffect(() => {
@@ -87,35 +95,35 @@ export const useDebouncedGameAutocomplete = function useDebouncedGameAutocomplet
       _undefined(tmp);
     }
   }, items);
-  const tmp5 = fetchStore(tmp3);
-  ({ data, isLoading } = tmp5);
-  const tmp2 = _slicedToArray(noop.useState(result), 2);
-  [tmp7, tmp8] = noop.useState(null);
+  const tmp7 = fetchStore(tmp5, DEFAULT);
+  ({ data, isLoading } = tmp7);
+  const tmp4 = _slicedToArray(noop.useState(result), 2);
+  [tmp9, tmp10] = noop.useState(null);
   if (null == result) {
-    if (null != tmp7) {
-      tmp8(null);
+    if (null != tmp9) {
+      tmp10(null);
     }
   } else {
-    if (tmp9) {
-      tmp8(data);
+    if (tmp11) {
+      tmp10(data);
     }
-    tmp9 = null != data && data !== tmp7;
+    tmp11 = null != data && data !== tmp9;
   }
-  let tmp12 = null;
+  let tmp14 = null;
   if (null != result) {
     if (data == null) {
-      data = tmp7;
+      data = tmp9;
     }
-    tmp12 = data;
+    tmp14 = data;
   }
-  const obj2 = { results: tmp12, isLoading: null, error: null };
+  const obj2 = { results: tmp14, isLoading: null, error: null };
   if (!isLoading) {
-    isLoading = tmp3 !== result;
+    isLoading = tmp5 !== result;
   }
   obj2.isLoading = isLoading;
   let error = null;
-  if (tmp3 === result) {
-    error = tmp5.error;
+  if (tmp5 === result) {
+    error = tmp7.error;
   }
   obj2.error = error;
   return obj2;

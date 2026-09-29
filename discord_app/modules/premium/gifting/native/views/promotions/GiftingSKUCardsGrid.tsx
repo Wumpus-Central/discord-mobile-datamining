@@ -1,22 +1,22 @@
-// === Module 10507: GiftingSKUCardsGrid ===
+// === Module 10676: GiftingSKUCardsGrid ===
 
-// Module 10507 (GiftingSKUCardsGrid)
+// Module 10676 (GiftingSKUCardsGrid)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4548 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import Pressables from "Pressables" /* 5435 */;
-import useCurrentUser from "useCurrentUser" /* 7623 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8258 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8273 */;
-import NameplateCardPreviewDefault from "NameplateCardPreview" /* 8287 */;
-import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 10508 */;
+import Pressables from "Pressables" /* 5602 */;
+import useCurrentUser from "useCurrentUser" /* 7788 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8423 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8438 */;
+import NameplateCardPreviewDefault from "NameplateCardPreview" /* 8452 */;
+import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 10677 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const isAvatarDecorationRecord = fn(6967).isAvatarDecorationRecord;
+const isAvatarDecorationRecord = fn(7133).isAvatarDecorationRecord;
 const isNameplateRecord = fn(1972).isNameplateRecord;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);

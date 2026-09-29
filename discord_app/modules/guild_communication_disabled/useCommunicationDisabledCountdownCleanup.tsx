@@ -1,6 +1,6 @@
-// === Module 11955: useCommunicationDisabledCountdownCleanup ===
+// === Module 12126: useCommunicationDisabledCountdownCleanup ===
 
-// Module 11955 (useCommunicationDisabledCountdownCleanup)
+// Module 12126 (useCommunicationDisabledCountdownCleanup)
 import noop from "module_19" /* 19 */;
 import size from "module_2" /* 2 */;
 

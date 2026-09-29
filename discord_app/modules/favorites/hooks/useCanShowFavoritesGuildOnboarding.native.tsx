@@ -1,6 +1,6 @@
-// === Module 9702: useCanShowFavoritesGuildOnboarding ===
+// === Module 9869: useCanShowFavoritesGuildOnboarding ===
 
-// Module 9702 (useCanShowFavoritesGuildOnboarding)
+// Module 9869 (useCanShowFavoritesGuildOnboarding)
 import initialize from "initialize" /* 504 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4692 */;
 import ActionSheetStore from "ActionSheetStore" /* 4521 */;

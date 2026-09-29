@@ -1,12 +1,12 @@
-// === Module 15986: GuildsBarItemUnavailableGuilds ===
+// === Module 16162: GuildsBarItemUnavailableGuilds ===
 
-// Module 15986 (GuildsBarItemUnavailableGuilds)
+// Module 16162 (GuildsBarItemUnavailableGuilds)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5203 */;
-import _modDef15977 from "module_15977" /* 15977 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5369 */;
+import _modDef16153 from "module_16153" /* 16153 */;
 import noop from "module_19" /* 19 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5201 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5367 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -40,8 +40,8 @@ export default noop.memo(function GuildsBarItemUnavailableGuilds() {
       AlertActionCreatorsDefault.show(obj2);
     };
     obj2.style = tmp.unavailableGuilds;
-    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef15977 };
-    obj2.children = <closure_3 style={tmp.unavailableGuildsIcon} source={_modDef15977} />;
+    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef16153 };
+    obj2.children = <closure_3 style={tmp.unavailableGuildsIcon} source={_modDef16153} />;
     tmp5 = <closure_4 accessibilityRole="button" accessibilityLabel={null} onPress={null} style={null}>{null}</closure_4>;
   }
   return tmp5;

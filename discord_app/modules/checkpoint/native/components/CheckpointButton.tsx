@@ -1,9 +1,9 @@
-// === Module 15278: CheckpointButton ===
+// === Module 15453: CheckpointButton ===
 
-// Module 15278 (CheckpointButton)
+// Module 15453 (CheckpointButton)
 import nativeDefault from "native" /* 576 */;
-import CheckpointTextDefault from "CheckpointText" /* 15262 */;
-import CheckpointPressable from "CheckpointPressable" /* 15279 */;
+import CheckpointTextDefault from "CheckpointText" /* 15437 */;
+import CheckpointPressable from "CheckpointPressable" /* 15454 */;
 import CheckpointConstants from "CheckpointConstants" /* 5061 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4836 */;

@@ -1,17 +1,17 @@
-// === Module 15110: CopyClientInfoSetting ===
+// === Module 15285: CopyClientInfoSetting ===
 
-// Module 15110 (CopyClientInfoSetting)
+// Module 15285 (CopyClientInfoSetting)
 import util from "util" /* 1115 */;
 import ToastUtils from "ToastUtils" /* 4527 */;
 import CopyIcon from "CopyIcon" /* 4779 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
 import DeviceUtils from "DeviceUtils" /* 4812 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6570 */;
-import ClipboardUtils from "ClipboardUtils" /* 6610 */;
-import ActionSheet from "ActionSheet" /* 6618 */;
-import ActionSheetRow from "ActionSheetRow" /* 6620 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11267 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 10969 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6736 */;
+import ClipboardUtils from "ClipboardUtils" /* 6776 */;
+import ActionSheet from "ActionSheet" /* 6784 */;
+import ActionSheetRow from "ActionSheetRow" /* 6786 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11436 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11138 */;
 import ClientInfoUtils from "ClientInfoUtils" /* 1363 */;
 
 require = fn;
@@ -139,14 +139,14 @@ function ClientClientInfoActionSheet() {
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const Manifest = ClientInfoUtils.getConstants();
-const SettingBuilders = fn(11006);
+const SettingBuilders = fn(11175);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Na2lF9);
   },
   parent: null,
-  IconComponent: fn(5850).ClipboardListIcon,
+  IconComponent: fn(6016).ClipboardListIcon,
   onPress: function handleClientInfoPress() {
     ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: ClientClientInfoActionSheet }), "ClientClientInfoActionSheet");
   },

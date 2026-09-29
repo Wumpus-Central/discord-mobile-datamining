@@ -1,14 +1,14 @@
-// === Module 7368: ConversationListItem ===
+// === Module 7533: ConversationListItem ===
 
-// Module 7368 (ConversationListItem)
+// Module 7533 (ConversationListItem)
 import nativeDefault from "native" /* 576 */;
-import ConversationsActionCreators from "ConversationsActionCreators" /* 7333 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7335 */;
-import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 7351 */;
-import ConversationPreviewBlockedMessageDefault from "ConversationPreviewBlockedMessage" /* 7370 */;
-import ConversationPreviewMessageDefault from "ConversationPreviewMessage" /* 7373 */;
+import ConversationsActionCreators from "ConversationsActionCreators" /* 7498 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7500 */;
+import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 7516 */;
+import ConversationPreviewBlockedMessageDefault from "ConversationPreviewBlockedMessage" /* 7535 */;
+import ConversationPreviewMessageDefault from "ConversationPreviewMessage" /* 7538 */;
 import noop from "module_19" /* 19 */;
-import ConversationsStore from "ConversationsStore" /* 7018 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7179 */;
 
 require = fn;
 function ConversationListItemBase(conversation) {
@@ -18,10 +18,10 @@ function ConversationListItemBase(conversation) {
   const navigation = conversation(stateFromStores[8]).useNavigation();
   let obj = conversation(stateFromStores[8]);
   const tmp2 = stateFromStores;
-  const items = [ConversationsStore];
+  const items = [ChannelConversationsStore];
   const items1 = [, ];
   ({ channelId: arr2[0], id: arr2[1] } = conversation);
-  stateFromStores = conversation(stateFromStores[9]).useStateFromStores(items, () => ConversationsStore.getHydratedMessages(conversation.channelId, conversation.id), items1);
+  stateFromStores = conversation(stateFromStores[9]).useStateFromStores(items, () => ChannelConversationsStore.getHydratedMessages(conversation.channelId, conversation.id), items1);
   const items2 = [stateFromStores];
   const memo = noop.useMemo(() => {
     let substr;
@@ -87,7 +87,7 @@ function ConversationListItemBase(conversation) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(7015).MOBILE_PREVIEW_MESSAGE_COUNT;
+let closure_6 = fn(7181).MOBILE_PREVIEW_MESSAGE_COUNT;
 const VerticalGradient = fn(1074).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -115,10 +115,10 @@ let result = size.fileFinishedImporting("modules/conversations/components/native
 export default noop.memo(function ConversationListItem(channelId) {
   channelId = channelId.channelId;
   const conversationId = channelId.conversationId;
-  const items = [ConversationsStore];
+  const items = [ChannelConversationsStore];
   const items1 = [channelId, conversationId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => {
-    const conversationMetadata = ConversationsStore.getConversationMetadata(channelId, conversationId);
+    const conversationMetadata = ChannelConversationsStore.getConversationMetadata(channelId, conversationId);
     let conversation;
     if (conversationMetadata != null) {
       conversation = conversationMetadata.conversation;

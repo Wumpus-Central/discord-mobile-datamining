@@ -1,10 +1,10 @@
-// === Module 7531: GuildSpaceSystemMessage ===
+// === Module 7696: GuildSpaceSystemMessage ===
 
-// Module 7531 (GuildSpaceSystemMessage)
+// Module 7696 (GuildSpaceSystemMessage)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import _modDef2419 from "module_2419" /* 2419 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7404 */;
-import GuildSpaceLeaderboardSystemMessage from "GuildSpaceLeaderboardSystemMessage" /* 7532 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7569 */;
+import GuildSpaceLeaderboardSystemMessage from "GuildSpaceLeaderboardSystemMessage" /* 7697 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -33,9 +33,9 @@ export const createGuildSpaceSystemMessage = function createGuildSpaceSystemMess
         const channel = ChannelStore.getChannel(message.channel_id);
         [tmp18, tmp19] = substr;
         const tmp17 = _slicedToArray(substr, 2);
-        const userAuthorWithProcessedColor = string(7402).getUserAuthorWithProcessedColor(tmp18, channel);
-        const stringResult = string(7402);
-        const userAuthorWithProcessedColor1 = string(7402).getUserAuthorWithProcessedColor(tmp19, channel);
+        const userAuthorWithProcessedColor = string(7567).getUserAuthorWithProcessedColor(tmp18, channel);
+        const stringResult = string(7567);
+        const userAuthorWithProcessedColor1 = string(7567).getUserAuthorWithProcessedColor(tmp19, channel);
         const intl2 = string(1115).intl;
         let tmp11 = importDefault;
         const obj2 = { displayCount: substr.length, username: userAuthorWithProcessedColor.nick, usernameOnClick: null, username2: null, username2OnClick: null, additionalCount: null };
@@ -45,15 +45,15 @@ export const createGuildSpaceSystemMessage = function createGuildSpaceSystemMess
         let tmp8;
         if (null != tmp19) {
           const obj4 = { userId: tmp19.id, message, author: userAuthorWithProcessedColor1, roleStyle };
-          tmp8 = tmp11(7404)(obj4);
+          tmp8 = tmp11(7569)(obj4);
         }
         obj2.username2OnClick = tmp8;
         obj2.additionalCount = diff;
         let formatToPartsResult = intl2.formatToParts(_modDef2419.zUiZPF, obj2);
-        const stringResult1 = string(7402);
+        const stringResult1 = string(7567);
       }
       const obj5 = { content: formatToPartsResult };
-      merged = Object.assign(tmp11(7406)(message));
+      merged = Object.assign(tmp11(7571)(message));
     }
     const intl = string(1115).intl;
     string = intl.string;

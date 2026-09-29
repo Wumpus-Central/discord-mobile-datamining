@@ -1,9 +1,9 @@
-// === Module 14840: SettingsAppearanceActivityCardItem ===
+// === Module 15015: SettingsAppearanceActivityCardItem ===
 
-// Module 14840 (SettingsAppearanceActivityCardItem)
+// Module 15015 (SettingsAppearanceActivityCardItem)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import ClipView from "ClipView" /* 8276 */;
+import ClipView from "ClipView" /* 8441 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2112 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
@@ -14,7 +14,7 @@ const ClipViewDefault = ClipView;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const HappeningNowConstants = fn(14841);
+const HappeningNowConstants = fn(15016);
 ({ HAPPENING_NOW_BADGE_SIZE, HAPPENING_NOW_CONTENT_HEIGHT, HAPPENING_NOW_CARD_HEIGHT, HAPPENING_NOW_CARD_MARGIN_RIGHT, HAPPENING_NOW_CARD_PADDING, HAPPENING_NOW_CARD_PADDING_RIGHT } = HappeningNowConstants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);

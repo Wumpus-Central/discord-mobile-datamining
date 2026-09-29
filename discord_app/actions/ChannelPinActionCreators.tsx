@@ -1,12 +1,12 @@
-// === Module 11169: ChannelPinActionCreators ===
+// === Module 11338: ChannelPinActionCreators ===
 
-// Module 11169 (ChannelPinActionCreators)
+// Module 11338 (ChannelPinActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelPinsStore from "ChannelPinsStore" /* 11170 */;
+import ChannelPinsStore from "ChannelPinsStore" /* 11339 */;
 
 const require = fn;
-const FetchState = fn(11170).FetchState;
+const FetchState = fn(11339).FetchState;
 const Constants = fn(1074);
 ({ AbortCodes: metroRequire, Endpoints: closure_7, MAX_PINS_PER_CHANNEL: closure_8 } = Constants);
 let obj = {
@@ -43,7 +43,7 @@ let obj = {
               ({ id: closure_128_0, name: closure_128_1 } = tmp3);
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: tmp2(7184).unarchiveThreadIfNecessary(tmp3.id), done: false };
+              const obj5 = { value: tmp2(7349).unarchiveThreadIfNecessary(tmp3.id), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -119,8 +119,8 @@ let obj = {
               const obj2 = { title: stringResult3, body: stringResult1, confirmText: null };
               const intl17 = _private(1115).intl;
               obj2.confirmText = intl17.string(_private(1115).t.BddRzS);
-              channelName(5203).show(obj2);
-              const obj4 = channelName(5203);
+              channelName(5369).show(obj2);
+              const obj4 = channelName(5369);
             });
             c3 = 3;
             return { value: "HermesInternal", done: null };
@@ -162,7 +162,7 @@ let obj = {
               channel = tmp4;
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: id(7184).unarchiveThreadIfNecessary(channel.id), done: false };
+              const obj5 = { value: id(7349).unarchiveThreadIfNecessary(channel.id), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -187,7 +187,7 @@ let obj = {
               obj2.cancelText = intl4.string(closure_0(1115).t["ETE/oC"]);
               unpinMessage = unpinMessage.unpinMessage;
               obj2.onConfirm = unpinMessage.bind(unpinMessage, closure_1_0, closure_1_1);
-              return closure_1(5203).show(obj2);
+              return closure_1(5369).show(obj2);
             });
             c3 = 3;
             return { value: "HermesInternal", done: null };

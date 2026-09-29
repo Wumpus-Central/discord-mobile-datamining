@@ -1,16 +1,16 @@
-// === Module 16527: BaseMessagesScreen ===
+// === Module 16716: BaseMessagesScreen ===
 
-// Module 16527 (BaseMessagesScreen)
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11821 */;
-import SearchUtils from "SearchUtils" /* 11823 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 11841 */;
-import SearchHistoricalIndexingHeaderDefault from "SearchHistoricalIndexingHeader" /* 16529 */;
+// Module 16716 (BaseMessagesScreen)
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11990 */;
+import SearchUtils from "SearchUtils" /* 11992 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12010 */;
+import SearchHistoricalIndexingHeaderDefault from "SearchHistoricalIndexingHeader" /* 16718 */;
 import noop from "module_19" /* 19 */;
-import SearchMessageStore from "SearchMessageStore" /* 6699 */;
-import SearchQueryStore from "SearchQueryStore" /* 11822 */;
+import SearchMessageStore from "SearchMessageStore" /* 6865 */;
+import SearchQueryStore from "SearchQueryStore" /* 11991 */;
 
 require = fn;
-const constants = fn(7302).SearchResultContentEntityTypes;
+const constants = fn(7467).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/messages/BaseMessagesScreen.tsx");
@@ -19,10 +19,10 @@ export default function BaseMessagesScreen(tab) {
   ({ data, searchContext } = tab);
   tab = tab.tab;
   const isFocused = tab.isFocused;
-  ({ isFirstPageLoading, keywordResultCount, intelligenceStatus } = tab);
+  ({ isFirstPageLoading, keywordResultCount, smartSearchStatus } = tab);
   ({ isNextPageLoading, contentContainerStyle, ItemSeparatorComponent, numColumns } = tab);
-  if (intelligenceStatus === undefined) {
-    intelligenceStatus = null;
+  if (smartSearchStatus === undefined) {
+    smartSearchStatus = null;
   }
   isFirstPageLoading = undefined;
   keywordResultCount = undefined;
@@ -47,7 +47,6 @@ export default function BaseMessagesScreen(tab) {
   isHistoricalIndexing = stateFromStoresObject.isHistoricalIndexing;
   documentsIndexed = stateFromStoresObject.documentsIndexed;
   let obj = searchContext(isFocused[6]);
-  let tmp = searchContext;
   const messageSearchErrorScreen = searchContext(isFocused[8]).useMessageSearchErrorScreen({ searchContext, tab, hasListItems: keywordResultCount > 0 });
   hasError = messageSearchErrorScreen.hasError;
   isErrorToast = messageSearchErrorScreen.isErrorToast;
@@ -102,16 +101,16 @@ export default function BaseMessagesScreen(tab) {
   } else {
     if (isErrorFullscreen) {
       if (!isFirstPageLoading) {
-        if (!tmpResult.isIntelligenceSearchActive(intelligenceStatus)) {
+        if (!tmp10) {
           const obj6 = { text: errorText };
-          let tmp12 = hasError(tab(tmp2[14]), obj6);
+          let tmp13 = hasError(tab(tmp2[14]), obj6);
         }
-        return tmp12;
+        return tmp13;
       }
     }
     const obj7 = { contentContainerStyle, data, onEndReached: callback, ListHeaderComponent: tmp9, ItemSeparatorComponent, numColumns };
-    tmp12 = hasError(tab(tmp2[15]), obj7);
-    tmpResult = tmp(tmp2[13]);
+    tmp13 = hasError(tab(tmp2[15]), obj7);
+    tmp10 = smartSearchStatus === tmp(tmp2[13]).SmartSearchStatus.LOADING || smartSearchStatus === tmp(tmp2[13]).SmartSearchStatus.LOADED;
   }
 };
 export const trackMessageItemPress = function trackMessageItemPress(messageId) {

@@ -1,8 +1,8 @@
-// === Module 17008: VoicePanelStyles ===
+// === Module 17195: VoicePanelStyles ===
 
-// Module 17008 (VoicePanelStyles)
+// Module 17195 (VoicePanelStyles)
 import nativeDefault from "native" /* 576 */;
-import useStateFromSharedValue from "useStateFromSharedValue" /* 7715 */;
+import useStateFromSharedValue from "useStateFromSharedValue" /* 7880 */;
 import createStyles from "createStyles" /* 4836 */;
 import size from "module_2" /* 2 */;
 

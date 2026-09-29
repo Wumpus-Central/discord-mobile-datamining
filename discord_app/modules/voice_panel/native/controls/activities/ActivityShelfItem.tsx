@@ -1,6 +1,6 @@
-// === Module 16974: ActivityShelfItem ===
+// === Module 17161: ActivityShelfItem ===
 
-// Module 16974 (ActivityShelfItem)
+// Module 17161 (ActivityShelfItem)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
@@ -8,21 +8,21 @@ import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1880 */;
 import native2 from "native" /* 4540 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4988 */;
-import Pressables from "Pressables" /* 5435 */;
-import NativeViewDefault from "NativeView" /* 5901 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 6943 */;
-import TestModeUtils from "TestModeUtils" /* 8319 */;
-import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 8765 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 8933 */;
-import useActivityShelfItem from "useActivityShelfItem" /* 11539 */;
-import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 11568 */;
-import useLaunchingActivityButtonStateDefault from "useLaunchingActivityButtonState" /* 11623 */;
-import getItemSubtitleForMaxPlayers from "getItemSubtitleForMaxPlayers" /* 11628 */;
-import _modDef12294 from "module_12294" /* 12294 */;
-import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground" /* 16971 */;
-import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary" /* 16972 */;
-import useActivityUsersDefault from "useActivityUsers" /* 16973 */;
-import _modDef16975 from "module_16975" /* 16975 */;
+import Pressables from "Pressables" /* 5602 */;
+import NativeViewDefault from "NativeView" /* 6067 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7109 */;
+import TestModeUtils from "TestModeUtils" /* 8484 */;
+import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 8930 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9098 */;
+import useActivityShelfItem from "useActivityShelfItem" /* 11708 */;
+import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 11737 */;
+import useLaunchingActivityButtonStateDefault from "useLaunchingActivityButtonState" /* 11792 */;
+import getItemSubtitleForMaxPlayers from "getItemSubtitleForMaxPlayers" /* 11797 */;
+import _modDef12465 from "module_12465" /* 12465 */;
+import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground" /* 17158 */;
+import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary" /* 17159 */;
+import useActivityUsersDefault from "useActivityUsers" /* 17160 */;
+import _modDef17162 from "module_17162" /* 17162 */;
 import noop from "module_19" /* 19 */;
 
 const useActivityShelfItemDefault = useActivityShelfItem;
@@ -68,7 +68,7 @@ function ParticipantsText(arg0) {
   ({ participantsContainer: arr2[0], overlayBubble: arr2[1] } = tmp);
   obj2.style = items;
   const tmp2Result = NativeViewDefault;
-  const items1 = [timestampProducer(native.Icon, { source: _modDef12294, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" }), ];
+  const items1 = [timestampProducer(native.Icon, { source: _modDef12465, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" }), ];
   const obj4 = { lineClamp: 1, style: tmp.participantsText, variant: "text-xxs/medium", color: "text-overlay-light", children: null };
   if (action === useActivityShelfItem.ActivityAction.START) {
     let num2 = activityItem.application.maxParticipants;
@@ -163,7 +163,7 @@ export default function ActivityShelfItem(arg0) {
     tmp15Result3 = null;
     if (isTestModeForApplication) {
       const obj9 = { style: tmp.developerIconContainer, children: null };
-      const obj10 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef16975, color: tmp.developerIconColor.color };
+      const obj10 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef17162, color: tmp.developerIconColor.color };
       obj9.children = timestampProducer(native.Icon, obj10);
       tmp15Result3 = timestampProducer(NativeViewDefault, obj9);
       const tmp3Result4 = NativeViewDefault;

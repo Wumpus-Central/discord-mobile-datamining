@@ -1,7 +1,7 @@
-// === Module 16996: VoicePanelControlUtils ===
+// === Module 17183: VoicePanelControlUtils ===
 
-// Module 16996 (VoicePanelControlUtils)
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 10456 */;
+// Module 17183 (VoicePanelControlUtils)
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 10625 */;
 import size from "module_2" /* 2 */;
 
 function getDrawerSpec(height, top) {

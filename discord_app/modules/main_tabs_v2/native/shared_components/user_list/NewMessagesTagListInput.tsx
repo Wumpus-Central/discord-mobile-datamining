@@ -1,11 +1,11 @@
-// === Module 11854: NewMessagesTagListInput ===
+// === Module 12023: NewMessagesTagListInput ===
 
-// Module 11854 (NewMessagesTagListInput)
+// Module 12023 (NewMessagesTagListInput)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4541 */;
-import makeUserListPillDataDefault from "makeUserListPillData" /* 10323 */;
+import makeUserListPillDataDefault from "makeUserListPillData" /* 10492 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 

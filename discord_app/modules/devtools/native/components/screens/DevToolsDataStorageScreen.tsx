@@ -1,6 +1,6 @@
-// === Module 15169: DevToolsDataStorageScreen ===
+// === Module 15344: DevToolsDataStorageScreen ===
 
-// Module 15169 (DevToolsDataStorageScreen)
+// Module 15344 (DevToolsDataStorageScreen)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import Link from "Link" /* 1486 */;
@@ -9,7 +9,7 @@ import DatabaseManagerDefault from "DatabaseManager" /* 2091 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4528 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import TableRow from "TableRow" /* 5917 */;
+import TableRow from "TableRow" /* 6083 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -18,10 +18,10 @@ require = fn;
 function DevToolsPersistedStoresActionSheet(store) {
   store = store.store;
   const close = store.close;
-  const obj = { header: jsx(store(6570).BottomSheetTitleHeader, { title: store.getName() }), children: null };
+  const obj = { header: jsx(store(6736).BottomSheetTitleHeader, { title: store.getName() }), children: null };
   const obj3 = {
     hasIcons: false,
-    children: jsx(store(6620).ActionSheetRow, {
+    children: jsx(store(6786).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -32,9 +32,9 @@ function DevToolsPersistedStoresActionSheet(store) {
       }
     })
   };
-  obj.children = jsx(store(6620).ActionSheetRow.Group, {
+  obj.children = jsx(store(6786).ActionSheetRow.Group, {
     hasIcons: false,
-    children: jsx(store(6620).ActionSheetRow, {
+    children: jsx(store(6786).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -45,7 +45,7 @@ function DevToolsPersistedStoresActionSheet(store) {
       }
     })
   });
-  return jsx(store(6618).ActionSheet, { header: jsx(store(6570).BottomSheetTitleHeader, { title: store.getName() }), children: null });
+  return jsx(store(6784).ActionSheet, { header: jsx(store(6736).BottomSheetTitleHeader, { title: store.getName() }), children: null });
 }
 const View = fn(17).View;
 let PersistedStore = fn(505).PersistedStore;

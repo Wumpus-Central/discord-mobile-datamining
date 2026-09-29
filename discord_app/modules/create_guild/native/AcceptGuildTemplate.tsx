@@ -1,6 +1,6 @@
-// === Module 11273: AcceptGuildTemplate ===
+// === Module 11442: AcceptGuildTemplate ===
 
-// Module 11273 (AcceptGuildTemplate)
+// Module 11442 (AcceptGuildTemplate)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
@@ -9,16 +9,16 @@ import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
 import GuildRoleRecordUtilsAll from "GuildRoleRecordUtils" /* 2104 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5889 */;
-import FormDividerDefault from "FormDivider" /* 8059 */;
-import _modDef8991 from "module_8991" /* 8991 */;
-import RolePillDefault from "RolePill" /* 10409 */;
-import InvalidLink from "InvalidLink" /* 11274 */;
-import GuildIconUploaderDefault from "GuildIconUploader" /* 11276 */;
-import _modDef11281 from "module_11281" /* 11281 */;
-import _modDef11282 from "module_11282" /* 11282 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6055 */;
+import FormDividerDefault from "FormDivider" /* 8224 */;
+import _modDef9156 from "module_9156" /* 9156 */;
+import RolePillDefault from "RolePill" /* 10578 */;
+import InvalidLink from "InvalidLink" /* 11443 */;
+import GuildIconUploaderDefault from "GuildIconUploader" /* 11445 */;
+import _modDef11450 from "module_11450" /* 11450 */;
+import _modDef11451 from "module_11451" /* 11451 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 5836 */;
+import TextStyles_mod from "TextStyles" /* 6003 */;
 
 require = fn;
 function GuildTemplateResolving() {
@@ -29,7 +29,7 @@ function GuildTemplateResolved(guildTemplate) {
   const errors = guildTemplate.errors;
   ({ createServer, name, setName, icon, chooseIcon } = guildTemplate);
   const tmp = closure_14();
-  const typeConsolidationTextTransform = guildTemplate(6400).useTypeConsolidationTextTransform("AcceptGuildTemplate");
+  const typeConsolidationTextTransform = guildTemplate(6566).useTypeConsolidationTextTransform("AcceptGuildTemplate");
   _modDef38(null != guildTemplate, "guild template cannot be null");
   _modDef38(guildTemplate.state !== GuildTemplateStates.RESOLVING, "guild must be resolved");
   const roles = guildTemplate.serializedSourceGuild.roles;
@@ -52,7 +52,7 @@ function GuildTemplateResolved(guildTemplate) {
   obj6.errorMessage = name1;
   obj6.value = name;
   obj6.onChange = setName;
-  items1[3] = closure_11(guildTemplate(6024).TextInput, obj6);
+  items1[3] = closure_11(guildTemplate(6190).TextInput, obj6);
   const obj7 = { style: tmp.hint, variant: "text-xs/medium", color: "text-muted", children: null };
   const intl3 = tmp2(1115).intl;
   obj7.children = intl3.format(guildTemplate(1115).t["2bprXx"], { guidelinesURL: constants.GUIDELINES });
@@ -64,7 +64,7 @@ function GuildTemplateResolved(guildTemplate) {
   obj10.onPress = createServer;
   obj10.loading = guildTemplate.state === GuildTemplateStates.ACCEPTING;
   obj10.disabled = guildTemplate.state === GuildTemplateStates.ACCEPTING;
-  obj9.children = closure_11(guildTemplate(5281).Button, obj10);
+  obj9.children = closure_11(guildTemplate(5447).Button, obj10);
   items1[5] = closure_11(closure_4, obj9);
   items1[6] = closure_11(FormDividerDefault, { style: tmp.divider, outer: true });
   const obj12 = { style: tmp.sectionHeader, variant: "heading-md/extrabold", color: "mobile-text-heading-primary", children: null };
@@ -144,11 +144,11 @@ function Channels(channels) {
       items[1] = channelCategoryIcon;
       const type = children.type;
       if (isGuildVocalChannelType(type)) {
-        let tmp10Result = _modDef8991;
+        let tmp10Result = _modDef9156;
       } else if (type === constants2.GUILD_CATEGORY) {
-        tmp10Result = _modDef11281;
+        tmp10Result = _modDef11450;
       } else {
-        tmp10Result = _modDef11282;
+        tmp10Result = _modDef11451;
       }
       obj2.source = tmp10Result;
       const items1 = [closure_2_11(native.Icon, obj2), ];
@@ -195,7 +195,7 @@ const isGuildVocalChannelType = fn(2049).isGuildVocalChannelType;
 const isEveryoneRole = fn(2103).isEveryoneRole;
 const Constants = fn(1074);
 ({ MarketingURLs: closure_8, Fonts, ChannelTypes: closure_9 } = Constants);
-const GuildTemplateStates = fn(6744).GuildTemplateStates;
+const GuildTemplateStates = fn(6910).GuildTemplateStates;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const createStyles = fn(4836);

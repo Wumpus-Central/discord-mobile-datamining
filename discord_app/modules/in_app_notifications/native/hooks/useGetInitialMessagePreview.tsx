@@ -1,7 +1,7 @@
-// === Module 9596: useGetInitialMessagePreview ===
+// === Module 9763: useGetInitialMessagePreview ===
 
-// Module 9596 (useGetInitialMessagePreview)
-import isForwardMessageDefault from "isForwardMessage" /* 6720 */;
+// Module 9763 (useGetInitialMessagePreview)
+import isForwardMessageDefault from "isForwardMessage" /* 6886 */;
 import noop from "module_19" /* 19 */;
 import MessageRecord from "MessageRecord" /* 4480 */;
 

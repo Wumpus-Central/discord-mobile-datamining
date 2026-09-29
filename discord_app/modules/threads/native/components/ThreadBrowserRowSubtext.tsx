@@ -1,21 +1,21 @@
-// === Module 16538: ThreadBrowserRowSubtext ===
+// === Module 16727: ThreadBrowserRowSubtext ===
 
-// Module 16538 (ThreadBrowserRowSubtext)
+// Module 16727 (ThreadBrowserRowSubtext)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import UserUtilsDefault from "UserUtils" /* 4678 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import useMessageAuthorDefault from "useMessageAuthor" /* 5083 */;
-import useHasEnhancedRoleColorsDefault from "useHasEnhancedRoleColors" /* 5310 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5832 */;
-import renderMessageMarkupDefault from "renderMessageMarkup" /* 7313 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7403 */;
+import useMessageAuthorDefault from "useMessageAuthor" /* 5249 */;
+import useHasEnhancedRoleColorsDefault from "useHasEnhancedRoleColors" /* 5476 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5999 */;
+import renderMessageMarkupDefault from "renderMessageMarkup" /* 7478 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7568 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4825 */;
 import GuildMemberStore from "GuildMemberStore" /* 2108 */;
 import UserStore from "UserStore" /* 1372 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 6724 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 6890 */;
 
 require = fn;
 function MessageContent(arg0) {
@@ -26,8 +26,8 @@ function MessageContent(arg0) {
   let roleStyle;
   const tmp = closure_13();
   items = [message.author.id];
-  const subscribeGuildMembers = message(6729).useSubscribeGuildMembers({ [thread.guild_id]: items }, "ThreadBrowserRowSubtext");
-  let obj = message(6729);
+  const subscribeGuildMembers = message(6895).useSubscribeGuildMembers({ [thread.guild_id]: items }, "ThreadBrowserRowSubtext");
+  let obj = message(6895);
   const items1 = [UserStore];
   const stateFromStores = message(504).useStateFromStores(items1, () => {
     let author = UserStore.getUser(message.author.id);
@@ -43,9 +43,9 @@ function MessageContent(arg0) {
   ({ nick: c2, colorString: c3, colorStrings: c4 } = useMessageAuthorDefault(message));
   let tmp4 = useMessageAuthorDefault(message);
   const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(message.id);
-  const timestampString = message(7200).getTimestampString(extractTimestampResult);
-  const obj5 = message(7200);
-  const timestampAccessibilityLabel = message(7200).getTimestampAccessibilityLabel(extractTimestampResult);
+  const timestampString = message(7365).getTimestampString(extractTimestampResult);
+  const obj5 = message(7365);
+  const timestampAccessibilityLabel = message(7365).getTimestampAccessibilityLabel(extractTimestampResult);
   roleStyle = useHasEnhancedRoleColorsDefault(thread.guild_id, stateFromStores.id);
   const obj7 = { user: stateFromStores, timestamp: timestampString, accessibilityLabel: timestampAccessibilityLabel, children: null };
   const obj8 = { lineClamp: 1, ellipsizeMode: "tail", lineBreakMode: "tail", style: tmp.subtextContent, variant: "text-sm/medium", color: "text-default", children: null };
@@ -240,7 +240,7 @@ export const ThreadSubtext = function ThreadSubtext(thread) {
   const items1 = [id];
   const stateFromStores = id(504).useStateFromStores(items, () => ThreadMessageStore.getMostRecentMessage(id), items1);
   const obj = id(504);
-  const lastMessageTimestamp = id(7200).useLastMessageTimestamp(thread);
+  const lastMessageTimestamp = id(7365).useLastMessageTimestamp(thread);
   if (null != stateFromStores) {
     if (!items.includes(stateFromStores.type)) {
       if (!thread.isArchivedThread()) {
@@ -249,9 +249,9 @@ export const ThreadSubtext = function ThreadSubtext(thread) {
       }
     }
   }
-  const obj2 = id(7200);
-  const timestampString = id(7200).getTimestampString(lastMessageTimestamp);
-  const tmpResult = id(7200);
-  const tmpResult2 = id(7200);
-  return closure_9(closure_14, { thread, timestamp: timestampString, accessibilityLabel: id(7200).getTimestampAccessibilityLabel(lastMessageTimestamp) });
+  const obj2 = id(7365);
+  const timestampString = id(7365).getTimestampString(lastMessageTimestamp);
+  const tmpResult = id(7365);
+  const tmpResult2 = id(7365);
+  return closure_9(closure_14, { thread, timestamp: timestampString, accessibilityLabel: id(7365).getTimestampAccessibilityLabel(lastMessageTimestamp) });
 };

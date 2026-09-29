@@ -1,9 +1,9 @@
-// === Module 17011: VoicePanelNoJoinPermissionsAlert ===
+// === Module 17198: VoicePanelNoJoinPermissionsAlert ===
 
-// Module 17011 (VoicePanelNoJoinPermissionsAlert)
+// Module 17198 (VoicePanelNoJoinPermissionsAlert)
 import util from "util" /* 1115 */;
-import AlertModal from "AlertModal" /* 5209 */;
-import VoicePanelLockedIconDefault from "VoicePanelLockedIcon" /* 17012 */;
+import AlertModal from "AlertModal" /* 5375 */;
+import VoicePanelLockedIconDefault from "VoicePanelLockedIcon" /* 17199 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

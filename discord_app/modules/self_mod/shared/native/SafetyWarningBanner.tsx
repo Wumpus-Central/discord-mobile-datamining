@@ -1,8 +1,8 @@
-// === Module 10914: SafetyWarningBanner ===
+// === Module 11083: SafetyWarningBanner ===
 
-// Module 10914 (SafetyWarningBanner)
+// Module 11083 (SafetyWarningBanner)
 import nativeDefault from "native" /* 576 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 10912 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11081 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

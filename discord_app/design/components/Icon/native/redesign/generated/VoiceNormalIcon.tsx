@@ -1,9 +1,9 @@
-// === Module 5415: VoiceNormalIcon ===
+// === Module 5581: VoiceNormalIcon ===
 
-// Module 5415 (VoiceNormalIcon)
+// Module 5581 (VoiceNormalIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4530 */;
-import _mod5345 from "module_5345" /* 5345 */;
+import _mod5511 from "module_5511" /* 5511 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const VoiceNormalIcon = function VoiceNormalIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5345, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5511, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -1,21 +1,21 @@
-// === Module 12573: ContentInventoryActivityImageUtils ===
+// === Module 12743: ContentInventoryActivityImageUtils ===
 
-// Module 12573 (ContentInventoryActivityImageUtils)
+// Module 12743 (ContentInventoryActivityImageUtils)
 import _mod19 from "module_19" /* 19 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import Constants2 from "Constants" /* 2005 */;
-import PlatformsDefault from "Platforms" /* 5595 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6589 */;
-import useGame from "useGame" /* 6727 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 7595 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 7789 */;
-import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 7792 */;
-import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 8817 */;
-import useEntryActivityAndApplicationDefault from "useEntryActivityAndApplication" /* 12574 */;
-import isOnXboxDefault from "isOnXbox" /* 12576 */;
-import isOnPlayStationDefault from "isOnPlayStation" /* 12577 */;
+import PlatformsDefault from "Platforms" /* 5762 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6755 */;
+import useGame from "useGame" /* 6893 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 7760 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 7954 */;
+import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 7957 */;
+import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 8982 */;
+import useEntryActivityAndApplicationDefault from "useEntryActivityAndApplication" /* 12744 */;
+import isOnXboxDefault from "isOnXbox" /* 12746 */;
+import isOnPlayStationDefault from "isOnPlayStation" /* 12747 */;
 import ApplicationStore from "ApplicationStore" /* 5063 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
@@ -47,11 +47,11 @@ function useComputedImagesForActivity(activity, activityApplication) {
         const obj4 = { src: guildIconURL };
         tmp14 = obj4;
       }
-      const obj5 = { largeImage: tmp14, smallImage: "a" };
+      const obj5 = { largeImage: tmp14, smallImage: "r" };
       obj11 = obj5;
       const tmp15Result = StageChannelRichPresenceUtils;
     } else if (isOnXboxDefault(activity)) {
-      const obj6 = { largeImage: null, smallImage: "a" };
+      const obj6 = { largeImage: null, smallImage: "r" };
       const obj7 = { src: PlatformsDefault.get(constants2.XBOX).icon.customPNG, alt: null };
       const intl4 = util.intl;
       obj7.alt = intl4.string(util.t.Nfvo72);
@@ -61,7 +61,7 @@ function useComputedImagesForActivity(activity, activityApplication) {
     } else {
       if (null == smallImage) {
         if (isOnPlayStationDefault(activity)) {
-          const obj8 = { largeImage: null, smallImage: "a" };
+          const obj8 = { largeImage: null, smallImage: "r" };
           const obj9 = { src: PlatformsDefault.get(constants2.PLAYSTATION).icon.lightPNG, alt: null };
           const intl3 = util.intl;
           obj9.alt = intl3.string(util.t.fFl4jo);
@@ -82,7 +82,7 @@ function useComputedImagesForActivity(activity, activityApplication) {
           const obj10 = { largeImage: undefined, smallImage };
           obj11 = obj10;
         } else {
-          obj11 = { largeImage: smallImage, smallImage: "a" };
+          obj11 = { largeImage: smallImage, smallImage: "r" };
         }
       } else {
         const obj = { src: iconURL, alt: null };
@@ -190,7 +190,7 @@ function useRichImageForActivity(activity, activityApplication) {
     const application_id = activity.application_id;
   }
   if (null == activity) {
-    return { largeImage: "Array", smallImage: "paddingHorizontal" };
+    return { largeImage: "current", smallImage: "channel" };
   } else {
     let large_image;
     if (activity != null) {
@@ -343,18 +343,18 @@ export const useImageForContentEntry = function useImageForContentEntry(tracking
       const obj4 = { largeImage, smallImage: tmp3.smallImage };
       let obj8 = obj4;
     } else if (null != tmp7) {
-      const obj5 = { largeImage: tmp7, smallImage: "a" };
+      const obj5 = { largeImage: tmp7, smallImage: "r" };
       obj8 = obj5;
     } else {
       if (null != coverURL) {
         if (showCoverImage) {
-          const obj6 = { largeImage: null, smallImage: "a" };
+          const obj6 = { largeImage: null, smallImage: "r" };
           const obj7 = { src: coverURL };
           obj6.largeImage = obj7;
           obj8 = obj6;
         }
       }
-      obj8 = { largeImage: useComputedImagesForActivity(activity, obj).largeImage, smallImage: "a" };
+      obj8 = { largeImage: useComputedImagesForActivity(activity, obj).largeImage, smallImage: "r" };
     }
     const obj9 = { activity, application: null, largeImageSrc: null, trackingSource: null };
     if (fallbackApplication == null) {

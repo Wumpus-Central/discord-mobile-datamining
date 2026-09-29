@@ -1,6 +1,6 @@
-// === Module 8896: StreamQualityUtils ===
+// === Module 9061: StreamQualityUtils ===
 
-// Module 8896 (StreamQualityUtils)
+// Module 9061 (StreamQualityUtils)
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import getReportedStreamResolutionDefault from "getReportedStreamResolution" /* 4972 */;

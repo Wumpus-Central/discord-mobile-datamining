@@ -1,6 +1,6 @@
-// === Module 11191: ForwardPreview ===
+// === Module 11360: ForwardPreview ===
 
-// Module 11191 (ForwardPreview)
+// Module 11360 (ForwardPreview)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -8,17 +8,17 @@ import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1478 */;
 import useThemeDefault from "useTheme" /* 4767 */;
 import Text_Text from "Text/Text" /* 4832 */;
 import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 5081 */;
-import ImageIcon from "ImageIcon" /* 5401 */;
-import FastImageDefault from "FastImage" /* 5899 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 7583 */;
-import ChatItemDefault from "ChatItem" /* 8112 */;
-import CirclePlayIcon from "CirclePlayIcon" /* 8176 */;
-import ClipView from "ClipView" /* 8276 */;
-import AttachmentIcon2 from "AttachmentIcon" /* 9571 */;
-import ForwardPreviewUtils from "ForwardPreviewUtils" /* 11192 */;
-import MosaicMediaType from "MosaicMediaType" /* 11193 */;
-import ImagesIcon2 from "ImagesIcon" /* 11195 */;
-import CheckpointForwardPreviewDefault from "CheckpointForwardPreview" /* 11197 */;
+import ImageIcon from "ImageIcon" /* 5567 */;
+import FastImageDefault from "FastImage" /* 6065 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 7748 */;
+import ChatItemDefault from "ChatItem" /* 8277 */;
+import CirclePlayIcon from "CirclePlayIcon" /* 8341 */;
+import ClipView from "ClipView" /* 8441 */;
+import AttachmentIcon2 from "AttachmentIcon" /* 9738 */;
+import ForwardPreviewUtils from "ForwardPreviewUtils" /* 11361 */;
+import MosaicMediaType from "MosaicMediaType" /* 11362 */;
+import ImagesIcon2 from "ImagesIcon" /* 11364 */;
+import CheckpointForwardPreviewDefault from "CheckpointForwardPreview" /* 11366 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;

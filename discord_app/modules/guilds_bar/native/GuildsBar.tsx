@@ -1,14 +1,14 @@
-// === Module 15919: GuildsBar ===
+// === Module 16095: GuildsBar ===
 
-// Module 15919 (GuildsBar)
-import NativeViewDefault from "NativeView" /* 5901 */;
-import FastListDefault from "FastList" /* 6493 */;
-import FavoritesGuildIntroPopoverDefault from "FavoritesGuildIntroPopover" /* 9701 */;
-import StartupProfilerDefault from "StartupProfiler" /* 11027 */;
-import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 15812 */;
-import useGuildsBarGestureDefault from "useGuildsBarGesture" /* 15920 */;
-import useGuildsBarPropsDefault from "useGuildsBarProps" /* 15928 */;
-import GuildsBarDragPreviewDefault from "GuildsBarDragPreview" /* 15997 */;
+// Module 16095 (GuildsBar)
+import NativeViewDefault from "NativeView" /* 6067 */;
+import FastListDefault from "FastList" /* 6659 */;
+import FavoritesGuildIntroPopoverDefault from "FavoritesGuildIntroPopover" /* 9868 */;
+import StartupProfilerDefault from "StartupProfiler" /* 11196 */;
+import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 15987 */;
+import useGuildsBarGestureDefault from "useGuildsBarGesture" /* 16096 */;
+import useGuildsBarPropsDefault from "useGuildsBarProps" /* 16104 */;
+import GuildsBarDragPreviewDefault from "GuildsBarDragPreview" /* 16173 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -81,7 +81,7 @@ export default noop.memo(function GuildsBar(enableHome) {
   }, items1);
   let obj = { profile: null, children: null };
   const tmp5 = useGuildsBarPropsDefault(fastListRef);
-  obj.profile = fastListRef(11027).Profiles.Guilds;
+  obj.profile = fastListRef(11196).Profiles.Guilds;
   const obj2 = { gesture, children: null };
   const obj3 = { style: tmp.wrapper, collapsable: false, nativeID: "guilds-bar-view", children: null };
   const tmp10 = StartupProfilerDefault;
@@ -108,6 +108,6 @@ export default noop.memo(function GuildsBar(enableHome) {
   const items2 = [closure_4(FastListDefault, obj4), closure_4(GuildsBarDragPreviewDefault, {}), closure_4(FavoritesGuildIntroPopoverDefault, {})];
   obj3.children = items2;
   obj2.children = closure_5(tmp12, obj3);
-  obj.children = closure_4(fastListRef(6073).GestureDetector, obj2);
+  obj.children = closure_4(fastListRef(6239).GestureDetector, obj2);
   return closure_4(tmp10, obj);
 });

@@ -1,10 +1,10 @@
-// === Module 15951: FavoritesGuildCoachmarkGraphic ===
+// === Module 16127: FavoritesGuildCoachmarkGraphic ===
 
-// Module 15951 (FavoritesGuildCoachmarkGraphic)
+// Module 16127 (FavoritesGuildCoachmarkGraphic)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import FavoritesSpotIllustration from "FavoritesSpotIllustration" /* 9694 */;
+import FavoritesSpotIllustration from "FavoritesSpotIllustration" /* 9861 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4836 */;
 import size from "module_2" /* 2 */;

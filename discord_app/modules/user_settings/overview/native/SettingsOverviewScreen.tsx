@@ -1,14 +1,14 @@
-// === Module 16729: SettingsOverviewScreen ===
+// === Module 16917: SettingsOverviewScreen ===
 
-// Module 16729 (SettingsOverviewScreen)
+// Module 16917 (SettingsOverviewScreen)
 import util from "util" /* 1115 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import SettingBuilders from "SettingBuilders" /* 11006 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 15038 */;
+import SettingBuilders from "SettingBuilders" /* 11175 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 15213 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MobileUserSettings = fn(7417).MobileUserSettings;
+const MobileUserSettings = fn(7582).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/overview/native/SettingsOverviewScreen.tsx");
@@ -95,5 +95,5 @@ export default function SettingsOverviewScreen() {
     obj4.sections = items1;
     return SettingBuilders.createList(obj4);
   }, items);
-  return jsx(hasPremiumSubscriptionToDisplay(14248).SearchableSettingsList, { node });
+  return jsx(hasPremiumSubscriptionToDisplay(14424).SearchableSettingsList, { node });
 };

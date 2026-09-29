@@ -1,21 +1,22 @@
-// === Module 12643: VibegrationsChatStore ===
+// === Module 12813: VibegrationsChatStore ===
 
-// Module 12643 (VibegrationsChatStore)
+// Module 12813 (VibegrationsChatStore)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 2021 */;
 import _modDef3715 from "module_3715" /* 3715 */;
-import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 8498 */;
-import SoundUtils from "SoundUtils" /* 9357 */;
+import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 8663 */;
+import SoundUtils from "SoundUtils" /* 9524 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 6957 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 9541 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7123 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 9708 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4655 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5591 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8495 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5758 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8660 */;
 
 require = fn;
 function newMessage(assistant, content, arg2) {
@@ -58,6 +59,40 @@ function newMessage(assistant, content, arg2) {
 }
 function newMessageFromHistory(ts) {
   const tmp = newMessage(ts.role, ts.content, { ts: ts.ts, id: ts.id, userId: ts.user_id, attachments: ts.attachments });
+  const tmp2 = (function snowflakeTimeOf(id) {
+    let startsWithResult;
+    if (id != null) {
+      startsWithResult = id.startsWith(closure_1_30);
+    }
+    let substr = id;
+    if (true === startsWithResult) {
+      substr = id.slice(5);
+    }
+    if (null != substr) {
+      if (obj.test(substr)) {
+        const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(substr);
+        const _Number = Number;
+        let tmp8 = null;
+        if (Number.isFinite(extractTimestampResult)) {
+          tmp8 = null;
+          if (extractTimestampResult > 0) {
+            tmp8 = extractTimestampResult;
+          }
+        }
+        return tmp8;
+      }
+      obj = /^\d+$/;
+    }
+    return null;
+  })(ts.id);
+  let tmp3 = null == tmp2;
+  if (!tmp3) {
+    tmp3 = "assistant" !== ts.role && null != ts.ts;
+    const tmp4 = "assistant" !== ts.role && null != ts.ts;
+  }
+  if (!tmp3) {
+    tmp.created_at = tmp2;
+  }
   if (null != ts.kind) {
     tmp.kind = ts.kind;
   }
@@ -69,13 +104,25 @@ function newMessageFromHistory(ts) {
   if (null != ts.proposal) {
     tmp.proposal = ts.proposal;
   }
-  if (tmp2) {
+  if (tmp5) {
     tmp.ideas = ts.ideas;
   }
-  if (tmp3) {
+  if (null != ts.publish_cta) {
+    tmp.publishCta = ts.publish_cta;
+  }
+  if (null != ts.publish_notice) {
+    tmp.publishNotice = ts.publish_notice;
+  }
+  if (tmp6) {
     tmp.clarification = ts.clarification;
   }
-  if (tmp4) {
+  if (null != ts.restore_proposal) {
+    tmp.restoreProposal = ts.restore_proposal;
+  }
+  if (null != ts.source_sha) {
+    tmp.sourceSha = ts.source_sha;
+  }
+  if (tmp7) {
     tmp.todos = ts.todos;
   }
   if (null != ts.steps) {
@@ -93,13 +140,13 @@ function newMessageFromHistory(ts) {
       return items1;
     });
   }
-  if (tmp6) {
+  if (tmp9) {
     tmp.secretRequest = ts.secret_request;
   }
   if (null != ts.settings_request) {
     tmp.settingsRequest = ts.settings_request;
   }
-  if (tmp7) {
+  if (tmp10) {
     tmp.intake = ts.intake;
   }
   let steps = ts.steps;
@@ -109,14 +156,14 @@ function newMessageFromHistory(ts) {
   const iter = steps[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp9 = nextResult;
-    let tmp10 = "awaiting_user" === nextResult.kind;
-    if (tmp10) {
-      tmp10 = "secrets" === tmp9.action;
+    let tmp12 = nextResult;
+    let tmp13 = "awaiting_user" === nextResult.kind;
+    if (tmp13) {
+      tmp13 = "secrets" === tmp12.action;
     }
-    if (tmp10) {
+    if (tmp13) {
       let obj2 = { action: null };
-      obj2.action = tmp9.action;
+      obj2.action = tmp12.action;
       tmp.awaitingUser = obj2;
     }
     continue;
@@ -210,8 +257,9 @@ function hasOpenTurn(map) {
         let tmp = map[diff];
         let tmp4 = flag2;
         if ("assistant" === tmp.role) {
+          let tmp5 = "side_reply" === tmp.kind || "publish_notice" === tmp.kind;
           tmp4 = flag2;
-          if ("side_reply" !== tmp.kind) {
+          if (!tmp5) {
             let flag = flag2;
             if (!flag2) {
               let someResult = true === tmp.finished || true === tmp.continued || "" !== tmp.content || null != tmp.proposal || null != tmp.clarification || null != tmp.intake;
@@ -247,7 +295,7 @@ function hasOpenTurn(map) {
   }
 }
 function recordThinkingTransition(projectId) {
-  let tmp47;
+  let tmp51;
   let flag = map2.get(projectId);
   if (flag == null) {
     flag = false;
@@ -271,7 +319,9 @@ function recordThinkingTransition(projectId) {
         if (0 <= diff) {
           while (true) {
             if ("assistant" === value[diff].role) {
-              if ("side_reply" !== value[diff].kind) {
+              let tmp7 = value[diff];
+              let tmp8 = "side_reply" === tmp7.kind || "publish_notice" === tmp7.kind;
+              if (!tmp8) {
                 break;
               }
             }
@@ -281,8 +331,8 @@ function recordThinkingTransition(projectId) {
           tmp4 = value[diff];
         }
       }
-      let tmp7 = null != tmp4;
-      if (tmp7) {
+      let tmp9 = null != tmp4;
+      if (tmp9) {
         let someResult = "" !== tmp4.content.trim() || null != tmp4.proposal || null != tmp4.clarification || null != tmp4.intake;
         if (!someResult) {
           const steps = tmp4.steps;
@@ -294,9 +344,9 @@ function recordThinkingTransition(projectId) {
             return hasItem;
           });
         }
-        tmp7 = someResult;
+        tmp9 = someResult;
       }
-      if (tmp7) {
+      if (tmp9) {
         const _Date = Date;
         const result1 = map1.set(projectId, Date.now());
       } else {
@@ -310,28 +360,28 @@ function recordThinkingTransition(projectId) {
             diff1 = diff1 - 1;
           }
           if (null == value3[diff1].finished_at) {
-            let someResult1 = true === tmp13.finished || true === tmp13.continued;
+            let someResult1 = true === tmp15.finished || true === tmp15.continued;
             if (!someResult1) {
-              someResult1 = "" !== tmp13.content;
+              someResult1 = "" !== tmp15.content;
             }
             if (!someResult1) {
-              someResult1 = null != tmp13.proposal;
+              someResult1 = null != tmp15.proposal;
             }
             if (!someResult1) {
-              someResult1 = null != tmp13.clarification;
+              someResult1 = null != tmp15.clarification;
             }
             if (!someResult1) {
-              someResult1 = null != tmp13.intake;
+              someResult1 = null != tmp15.intake;
             }
             if (!someResult1) {
-              const steps2 = tmp13.steps;
+              const steps2 = tmp15.steps;
               someResult1 = steps2.some((kind) => set.has(kind.kind));
             }
             if (someResult1) {
               const items = [];
               const arraySpreadResult = HermesBuiltin.arraySpread(value3.slice(0, diff1), 0);
               const obj4 = {};
-              const merged = Object.assign(tmp13);
+              const merged = Object.assign(tmp15);
               const _Date2 = Date;
               obj4.finished_at = Date.now();
               items[arraySpreadResult] = obj4;
@@ -370,7 +420,7 @@ function recordThinkingTransition(projectId) {
           }
           if (isWindowFocusedResult) {
             isWindowFocusedResult = VibegrationsPlatformUtilsDefault.isWindowFocused();
-            const tmp70Result = VibegrationsPlatformUtilsDefault;
+            const tmp74Result = VibegrationsPlatformUtilsDefault;
           }
           if (guild_id == null) {
             guild_id = project.guild_id;
@@ -379,31 +429,33 @@ function recordThinkingTransition(projectId) {
             guild_id = project.preview_guild_id;
           }
           const value4 = map.get(projectId);
-          let tmp43 = null;
+          let tmp45 = null;
           if (null != value4) {
             let diff2 = value4.length - 1;
-            tmp43 = null;
+            tmp45 = null;
             if (0 <= diff2) {
               while (true) {
                 if ("assistant" === value4[diff2].role) {
-                  if ("side_reply" !== value4[diff2].kind) {
+                  let tmp48 = value4[diff2];
+                  let tmp49 = "side_reply" === tmp48.kind || "publish_notice" === tmp48.kind;
+                  if (!tmp49) {
                     break;
                   }
                 }
                 diff2 = diff2 - 1;
-                tmp43 = null;
+                tmp45 = null;
               }
-              tmp43 = value4[diff2];
+              tmp45 = value4[diff2];
             }
           }
           let content = null;
-          if (null != tmp43) {
-            if ("" !== str9.trim()) {
-              content = tmp43.content;
-            } else if (null != tmp43.proposal) {
-              content = tmp43.proposal.summary;
-            } else if (null != tmp43.clarification) {
-              const first = tmp43.clarification.questions[0];
+          if (null != tmp45) {
+            if ("" !== str11.trim()) {
+              content = tmp45.content;
+            } else if (null != tmp45.proposal) {
+              content = tmp45.proposal.summary;
+            } else if (null != tmp45.clarification) {
+              const first = tmp45.clarification.questions[0];
               let question;
               if (first != null) {
                 question = first.question;
@@ -412,17 +464,17 @@ function recordThinkingTransition(projectId) {
                 question = null;
               }
               content = question;
-            } else if (null != tmp43.intake) {
-              content = tmp43.intake.intro.lead;
+            } else if (null != tmp45.intake) {
+              content = tmp45.intake.intro.lead;
             } else {
-              let diff3 = tmp43.steps.length - 1;
+              let diff3 = tmp45.steps.length - 1;
               content = null;
               if (0 <= diff3) {
                 while (true) {
-                  tmp47 = tmp43.steps[diff3];
-                  if ("error" !== tmp47.kind) {
-                    if ("terminal_error" !== tmp47.kind) {
-                      if ("preview_ready" === tmp47.kind) {
+                  tmp51 = tmp45.steps[diff3];
+                  if ("error" !== tmp51.kind) {
+                    if ("terminal_error" !== tmp51.kind) {
+                      if ("preview_ready" === tmp51.kind) {
                         let intl = util.intl;
                         content = intl.string(_modDef3715["78YNh7"]);
                       } else {
@@ -431,16 +483,16 @@ function recordThinkingTransition(projectId) {
                       }
                     }
                   }
-                  if (null != tmp47.message) {
-                    if ("" !== tmp47.message) {
+                  if (null != tmp51.message) {
+                    if ("" !== tmp51.message) {
                       break;
                     }
                   }
                 }
-                content = tmp47.message;
+                content = tmp51.message;
               }
             }
-            str9 = tmp43.content;
+            str11 = tmp45.content;
           }
           if (null != content) {
             if (isWindowFocusedResult) {
@@ -460,11 +512,11 @@ function recordThinkingTransition(projectId) {
               obj6.title = project.name;
               obj6.body = content;
               obj6.route = CHANNELResult;
-              let tmp60;
+              let tmp64;
               if (!isSoundDisabledResult) {
-                tmp60 = bit_message1;
+                tmp64 = bit_message1;
               }
-              obj6.sound = tmp60;
+              obj6.sound = tmp64;
               const result3 = VibegrationsPlatformUtilsDefault.presentTurnNotification(obj6);
             }
           }
@@ -589,7 +641,11 @@ function replayTimeline(steps) {
 function stoppable(role) {
   let tmp = "assistant" === role.role;
   if (tmp) {
-    tmp = "side_reply" !== role.kind;
+    let tmp2 = "side_reply" === role.kind;
+    if (!tmp2) {
+      tmp2 = "publish_notice" === role.kind;
+    }
+    tmp = !tmp2;
   }
   if (tmp) {
     let someResult = true === role.finished || true === role.continued;
@@ -634,6 +690,7 @@ const set1 = new Set();
 let width = 0;
 let closure_27 = [];
 let c28 = 0;
+let c30 = "turn:";
 const Store = initializeDefault.Store;
 class VibegrationsChatStore extends Store {
 }
@@ -659,8 +716,8 @@ prototype["hasPendingSettingsRequest"] = function hasPendingSettingsRequest(arg0
   }
   return tmp2;
 };
-prototype["isThinking"] = function isThinking(item10008) {
-  return hasOpenTurn(map.get(item10008));
+prototype["isThinking"] = function isThinking(id) {
+  return hasOpenTurn(map.get(id));
 };
 prototype["hasLoadedHistory"] = function hasLoadedHistory(projectId) {
   return map5.has(projectId);
@@ -668,10 +725,10 @@ prototype["hasLoadedHistory"] = function hasLoadedHistory(projectId) {
 prototype["isHistoryUnavailable"] = function isHistoryUnavailable(projectId) {
   return set2.has(projectId);
 };
-prototype["getFinishedAt"] = function getFinishedAt(arg0) {
+prototype["getFinishedAt"] = function getFinishedAt(id) {
   let tmp = null;
-  if (!hasOpenTurn(map.get(arg0))) {
-    value = map1.get(arg0);
+  if (!hasOpenTurn(map.get(id))) {
+    value = map1.get(id);
     if (value == null) {
       value = null;
     }
@@ -946,6 +1003,25 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
       }
     }
   },
+  VIBEGRATIONS_CHAT_PUBLISH_NOTICE: function handleChatPublishNotice(arg0) {
+    ({ projectId, id } = arg0);
+    ({ content, timestamp, publishNotice } = arg0);
+    value = map.get(projectId);
+    if (null == value) {
+      return false;
+    } else if (value.some((id) => id.id === id)) {
+      return false;
+    } else {
+      const obj2 = { ts: timestamp, id };
+      const tmp2 = newMessage("assistant", content, obj2);
+      tmp2.kind = "publish_notice";
+      tmp2.publishNotice = publishNotice;
+      tmp2.finished = true;
+      const items = [];
+      items[HermesBuiltin.arraySpread(value, 0)] = tmp2;
+      const result = map.set(projectId, items);
+    }
+  },
   VIBEGRATIONS_CHAT_STEP_APPEND: function handleChatStepAppend(turnId) {
     ({ projectId, step: require } = turnId);
     patchTurn(projectId, turnId.turnId, (steps) => {
@@ -1071,6 +1147,38 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
       flag = flag2;
     }
     return flag ? undefined : false;
+  },
+  VIBEGRATIONS_CHAT_SOURCE_CHECKPOINT: function handleChatSourceCheckpoint(arg0) {
+    ({ projectId, turnId: require, sourceSha: importDefault } = arg0);
+    value = map.get(projectId);
+    c2 = value;
+    if (null == value) {
+      return false;
+    } else {
+      const mapped = value.map((role) => {
+        let tmp = role;
+        if ("assistant" === role.role) {
+          tmp = role;
+          if (role.sourceSha !== importDefault) {
+            if (role.turn_id === require) {
+              const obj = {};
+              const merged = Object.assign(role);
+              obj.sourceSha = tmp2;
+              tmp = obj;
+            } else {
+              const _HermesInternal = HermesInternal;
+              tmp = role;
+            }
+          }
+        }
+        return tmp;
+      });
+      if (mapped.every((item, index) => item === _undefined[index])) {
+        return false;
+      } else {
+        const result = map.set(projectId, mapped);
+      }
+    }
   },
   VIBEGRATIONS_CHAT_THINKING_SET: function handleChatThinkingSet(arg0) {
     ({ projectId, activity } = arg0);

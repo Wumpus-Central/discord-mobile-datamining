@@ -1,6 +1,6 @@
-// === Module 11562: useCustomKeyboardBottomSheetConfig ===
+// === Module 11731: useCustomKeyboardBottomSheetConfig ===
 
-// Module 11562 (useCustomKeyboardBottomSheetConfig)
+// Module 11731 (useCustomKeyboardBottomSheetConfig)
 import KeyboardTypes from "KeyboardTypes" /* 1611 */;
 import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 1879 */;
 import useKeyboardType from "useKeyboardType" /* 4703 */;

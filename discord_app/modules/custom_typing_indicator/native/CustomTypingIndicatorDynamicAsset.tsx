@@ -1,7 +1,7 @@
-// === Module 11452: CustomTypingIndicatorDynamicAsset ===
+// === Module 11621: CustomTypingIndicatorDynamicAsset ===
 
-// Module 11452 (CustomTypingIndicatorDynamicAsset)
-import FastImageDefault from "FastImage" /* 5899 */;
+// Module 11621 (CustomTypingIndicatorDynamicAsset)
+import FastImageDefault from "FastImage" /* 6065 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

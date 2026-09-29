@@ -1,7 +1,7 @@
-// === Module 16171: navigationTTIEnabled ===
+// === Module 16347: navigationTTIEnabled ===
 
-// Module 16171 (navigationTTIEnabled)
-import isTTITest from "isTTITest" /* 13881 */;
+// Module 16347 (navigationTTIEnabled)
+import isTTITest from "isTTITest" /* 14050 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/tti_analytics/native/navigation/navigationTTIEnabled.tsx");

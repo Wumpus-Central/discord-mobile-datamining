@@ -1,21 +1,21 @@
-// === Module 7569: ComponentStateContext ===
+// === Module 7734: ComponentStateContext ===
 
-// Module 7569 (ComponentStateContext)
+// Module 7734 (ComponentStateContext)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Server from "Server" /* 1979 */;
 import InteractionTypes from "InteractionTypes" /* 5065 */;
 import InteractionComponentTypes from "InteractionComponentTypes" /* 5067 */;
-import useMountEffectDefault from "useMountEffect" /* 5298 */;
-import InteractionUtils from "InteractionUtils" /* 7573 */;
+import useMountEffectDefault from "useMountEffect" /* 5464 */;
+import InteractionUtils from "InteractionUtils" /* 7738 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import InteractionStore from "InteractionStore" /* 7383 */;
+import InteractionStore from "InteractionStore" /* 7548 */;
 import LurkingStore from "LurkingStore" /* 4470 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import GuildMemberStore from "GuildMemberStore" /* 2108 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 5725 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 5892 */;
 import UserStore from "UserStore" /* 1372 */;
-import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 7570 */;
+import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 7735 */;
 
 require = fn;
 function isInteractionComponent(type) {
@@ -131,11 +131,11 @@ function useShouldDisableInteractiveComponents(channel_id) {
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const obj5 = channel(7419);
-  const isThreadModerator = channel(6687).useIsThreadModerator(channel);
-  const tmpResult = channel(6687);
+  const obj5 = channel(7584);
+  const isThreadModerator = channel(6853).useIsThreadModerator(channel);
+  const tmpResult = channel(6853);
   let tmp9 = !stateFromStores;
-  const canUnarchiveThread = channel(6687).useCanUnarchiveThread(channel);
+  const canUnarchiveThread = channel(6853).useCanUnarchiveThread(channel);
   if (stateFromStores) {
     tmp9 = stateFromStores1;
   }

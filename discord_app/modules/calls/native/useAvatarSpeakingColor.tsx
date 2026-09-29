@@ -1,6 +1,6 @@
-// === Module 8902: useAvatarSpeakingColor ===
+// === Module 9067: useAvatarSpeakingColor ===
 
-// Module 8902 (useAvatarSpeakingColor)
+// Module 9067 (useAvatarSpeakingColor)
 import _modDef672 from "module_672" /* 672 */;
 import ColorUtils from "ColorUtils" /* 4683 */;
 import noop from "module_19" /* 19 */;
@@ -9,7 +9,7 @@ import AccessibilityStore from "AccessibilityStore" /* 4825 */;
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(8903).VAD_COLOR_MIN_CONTRAST_RATIO;
+let closure_5 = fn(9068).VAD_COLOR_MIN_CONTRAST_RATIO;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/native/useAvatarSpeakingColor.tsx");
 

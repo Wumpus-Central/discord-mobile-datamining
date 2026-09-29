@@ -1,8 +1,8 @@
-// === Module 12563: openUserContextMenuCommands ===
+// === Module 12733: openUserContextMenuCommands ===
 
-// Module 12563 (openUserContextMenuCommands)
+// Module 12733 (openUserContextMenuCommands)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 7636 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 7801 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/user_profile/native/openUserContextMenuCommands.tsx");
@@ -10,8 +10,8 @@ let result = size.fileFinishedImporting("modules/user_profile/native/openUserCon
 export default function openUserContextMenuCommands(analyticsLocations) {
   analyticsLocations = analyticsLocations.analyticsLocations;
   ({ userId, selectedChannel, showUserProfile } = analyticsLocations);
-  const result = analyticsLocations(7636).trackUserProfileAction({ action: "PRESS_VIEW_APP_COMMANDS", analyticsLocations });
-  const obj = analyticsLocations(7636);
+  const result = analyticsLocations(7801).trackUserProfileAction({ action: "PRESS_VIEW_APP_COMMANDS", analyticsLocations });
+  const obj = analyticsLocations(7801);
   ActionSheetActionCreatorsDefault.hideAllActionSheets();
   const obj3 = analyticsLocations(4692);
   const result1 = obj3.navigateToContextMenuCommands({

@@ -1,22 +1,22 @@
-// === Module 17140: GuildPowerupsManager ===
+// === Module 17329: GuildPowerupsManager ===
 
-// Module 17140 (GuildPowerupsManager)
+// Module 17329 (GuildPowerupsManager)
 import FavoritesUtils from "FavoritesUtils" /* 2070 */;
 import BoostingActionCreators from "BoostingActionCreators" /* 4732 */;
 import GameServerExperiment2 from "GameServerExperiment" /* 4747 */;
 import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 4760 */;
 import ServerThemeExperiment2 from "ServerThemeExperiment" /* 4761 */;
 import ServerThemeApexShadowExperiment2 from "ServerThemeApexShadowExperiment" /* 4762 */;
-import shared_PlatformUtils from "shared/PlatformUtils" /* 5091 */;
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 11984 */;
-import GameServerPricingExperiment2 from "GameServerPricingExperiment" /* 12005 */;
-import useHasAllocateBoostPermission from "useHasAllocateBoostPermission" /* 12009 */;
-import useIsCurrentUserEligibleForPowerupUpsells from "useIsCurrentUserEligibleForPowerupUpsells" /* 15799 */;
+import shared_PlatformUtils from "shared/PlatformUtils" /* 5257 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12155 */;
+import GameServerPricingExperiment2 from "GameServerPricingExperiment" /* 12176 */;
+import useHasAllocateBoostPermission from "useHasAllocateBoostPermission" /* 12180 */;
+import useIsCurrentUserEligibleForPowerupUpsells from "useIsCurrentUserEligibleForPowerupUpsells" /* 15974 */;
 import GuildStore from "GuildStore" /* 2067 */;
 import PermissionStore from "PermissionStore" /* 4469 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4655 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 4723 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6539 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6705 */;
 
 require = fn;
 class GuildPowerupsManager extends tmp2 {

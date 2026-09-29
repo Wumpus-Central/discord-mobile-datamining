@@ -1,25 +1,25 @@
-// === Module 15420: CollectiblesShopV2 ===
+// === Module 15595: CollectiblesShopV2 ===
 
-// Module 15420 (CollectiblesShopV2)
+// Module 15595 (CollectiblesShopV2)
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import dismissible_content from "dismissible_content" /* 2029 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4654 */;
-import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7009 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7632 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8313 */;
-import NativePaymentHooksDefault from "NativePaymentHooks" /* 8667 */;
-import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment" /* 15425 */;
-import ShopNitroUpsellBanner from "ShopNitroUpsellBanner" /* 15426 */;
-import ShopCategory from "ShopCategory" /* 15427 */;
-import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 15429 */;
+import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7174 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7797 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8478 */;
+import NativePaymentHooksDefault from "NativePaymentHooks" /* 8832 */;
+import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment" /* 15600 */;
+import ShopNitroUpsellBanner from "ShopNitroUpsellBanner" /* 15601 */;
+import ShopCategory from "ShopCategory" /* 15602 */;
+import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 15604 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 4835 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 import UserStore from "UserStore" /* 1372 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 6962 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7128 */;
 
 const MobileNitroUpsellInShopFeedExperimentDefault = MobileNitroUpsellInShopFeedExperiment;
 

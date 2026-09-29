@@ -1,6 +1,6 @@
-// === Module 12886: purchaseExceptionAlerts ===
+// === Module 13056: purchaseExceptionAlerts ===
 
-// Module 12886 (purchaseExceptionAlerts)
+// Module 13056 (purchaseExceptionAlerts)
 import util from "util" /* 1115 */;
 import size from "module_2" /* 2 */;
 

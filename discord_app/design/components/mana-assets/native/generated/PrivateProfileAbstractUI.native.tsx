@@ -1,9 +1,9 @@
-// === Module 16003: PrivateProfileAbstractUI ===
+// === Module 16179: PrivateProfileAbstractUI ===
 
-// Module 16003 (PrivateProfileAbstractUI)
+// Module 16179 (PrivateProfileAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5899 */;
-import _modDef16004 from "module_16004" /* 16004 */;
+import FastImageDefault from "FastImage" /* 6065 */;
+import _modDef16180 from "module_16180" /* 16180 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const PrivateProfileAbstractUI = function PrivateProfileAbstractUI(width)
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef16004 };
+  const obj2 = { uri: _modDef16180 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

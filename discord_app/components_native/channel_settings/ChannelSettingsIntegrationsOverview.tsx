@@ -1,17 +1,17 @@
-// === Module 16660: ChannelSettingsIntegrationsOverview ===
+// === Module 16848: ChannelSettingsIntegrationsOverview ===
 
-// Module 16660 (ChannelSettingsIntegrationsOverview)
+// Module 16848 (ChannelSettingsIntegrationsOverview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useNavigation from "useNavigation" /* 1485 */;
-import Stack_Stack from "Stack/Stack" /* 5279 */;
-import TableRow from "TableRow" /* 5917 */;
-import TableRowGroup from "TableRowGroup" /* 5999 */;
-import Form from "Form" /* 8053 */;
-import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 9023 */;
-import WebhookIcon from "WebhookIcon" /* 16553 */;
-import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 16661 */;
+import Stack_Stack from "Stack/Stack" /* 5445 */;
+import TableRow from "TableRow" /* 6083 */;
+import TableRowGroup from "TableRowGroup" /* 6165 */;
+import Form from "Form" /* 8218 */;
+import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 9188 */;
+import WebhookIcon from "WebhookIcon" /* 16742 */;
+import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 16849 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 
@@ -25,7 +25,7 @@ function LinkedLobbyFormSection(channel) {
   if (linkedLobby != null) {
     application_id = linkedLobby.application_id;
   }
-  const getOrFetchApplication = channel(6589).useGetOrFetchApplication(application_id);
+  const getOrFetchApplication = channel(6755).useGetOrFetchApplication(application_id);
   let tmp5 = null;
   if (null != getOrFetchApplication) {
     const obj3 = { title: null, hasIcons: true, children: null };
@@ -37,8 +37,8 @@ function LinkedLobbyFormSection(channel) {
     obj4.onPress = function onPress() {
       closure_1.push(ChannelSettingsSections.EDIT_LINKED_LOBBY, { channel, numScreensToPop: 1 });
     };
-    obj3.children = closure_6(tmp(5917).TableRow, obj4);
-    tmp5 = closure_6(tmp(5999).TableRowGroup, obj3);
+    obj3.children = closure_6(tmp(6083).TableRow, obj4);
+    tmp5 = closure_6(tmp(6165).TableRowGroup, obj3);
   }
   return tmp5;
 }

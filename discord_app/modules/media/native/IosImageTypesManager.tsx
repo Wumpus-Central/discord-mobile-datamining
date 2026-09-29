@@ -1,6 +1,6 @@
-// === Module 5472: IosImageTypesManager ===
+// === Module 5639: IosImageTypesManager ===
 
-// Module 5472 (IosImageTypesManager)
+// Module 5639 (IosImageTypesManager)
 import LoggerDefault from "Logger" /* 3 */;
 import NativeMediaManagerModuleDefault from "NativeMediaManagerModule" /* 1427 */;
 import _slicedToArray from "module_32" /* 32 */;

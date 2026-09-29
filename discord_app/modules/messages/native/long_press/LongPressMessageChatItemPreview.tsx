@@ -1,10 +1,10 @@
-// === Module 11168: LongPressMessageChatItemPreview ===
+// === Module 11337: LongPressMessageChatItemPreview ===
 
-// Module 11168 (LongPressMessageChatItemPreview)
+// Module 11337 (LongPressMessageChatItemPreview)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
-import RowGeneratorDefault from "RowGenerator" /* 7374 */;
-import ChatItemDefault from "ChatItem" /* 8112 */;
+import RowGeneratorDefault from "RowGenerator" /* 7539 */;
+import ChatItemDefault from "ChatItem" /* 8277 */;
 import createStyles from "createStyles" /* 4836 */;
 import size from "module_2" /* 2 */;
 

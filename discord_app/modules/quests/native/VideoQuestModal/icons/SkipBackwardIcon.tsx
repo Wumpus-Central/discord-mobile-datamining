@@ -1,7 +1,7 @@
-// === Module 14570: SkipBackwardIcon ===
+// === Module 14745: SkipBackwardIcon ===
 
-// Module 14570 (SkipBackwardIcon)
-import inlineStyles from "inlineStyles" /* 7909 */;
+// Module 14745 (SkipBackwardIcon)
+import inlineStyles from "inlineStyles" /* 8074 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;

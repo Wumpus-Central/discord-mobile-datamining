@@ -1,23 +1,24 @@
-// === Module 16456: RecentScreen ===
+// === Module 16645: RecentScreen ===
 
-// Module 16456 (RecentScreen)
+// Module 16645 (RecentScreen)
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import Pressables from "Pressables" /* 5435 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7859 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 7861 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 11821 */;
-import SearchUtils from "SearchUtils" /* 11823 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 11841 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 11844 */;
-import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14362 */;
+import Pressables from "Pressables" /* 5602 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8024 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8026 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 11990 */;
+import SearchUtils from "SearchUtils" /* 11992 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12010 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12013 */;
+import SmartSearchUtils from "SmartSearchUtils" /* 12018 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14537 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SearchMessageStore from "SearchMessageStore" /* 6699 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 11850 */;
-import SearchHistoryStore from "SearchHistoryStore" /* 16457 */;
-import SearchQueryStore from "SearchQueryStore" /* 11822 */;
+import SearchMessageStore from "SearchMessageStore" /* 6865 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12019 */;
+import SearchHistoryStore from "SearchHistoryStore" /* 16646 */;
+import SearchQueryStore from "SearchQueryStore" /* 11991 */;
 
 require = fn;
 function ClearAllHistory(searchContext) {
@@ -37,7 +38,7 @@ function ClearAllHistory(searchContext) {
   const intl2 = searchContext(1115).intl;
   obj2.children = intl2.string(searchContext(1115).t.LFTAUp);
   obj.children = jsx(searchContext(4832).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
-  return jsx(searchContext(5435).PressableHighlight, {
+  return jsx(searchContext(5602).PressableHighlight, {
     onPress() {
       return SearchPlatformActionCreatorsDefault.clearSearchHistory(searchContext);
     },
@@ -57,9 +58,9 @@ function ViewAll(onJumpToMedia) {
   obj.children = jsx(Text_Text.Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
   return jsx(Pressables.PressableHighlight, { onPress: onJumpToMedia.onJumpToMedia, accessibilityRole: "button", unstable_pressDelay: 130, accessibilityLabel: null, children: null });
 }
-const SearchConstants = fn(7303);
+const SearchConstants = fn(7468);
 ({ EMPTY_SEARCH_QUERY_STRING: c10, MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_11, SearchListItemTypes: closure_12, SearchTabs: map1 } = SearchConstants);
-const EMPTY_MEDIA_RESULTS = fn(11836).EMPTY_MEDIA_RESULTS;
+const EMPTY_MEDIA_RESULTS = fn(12005).EMPTY_MEDIA_RESULTS;
 const SearchTypes = fn(1074).SearchTypes;
 const jsx = fn(21).jsx;
 let closure_19 = noop.memo((searchContext) => {
@@ -86,7 +87,7 @@ let closure_19 = noop.memo((searchContext) => {
   [tmp4, closure_129_1] = messages(isInitialSearchQuery.useState(() => SearchHistoryStore.getSearchHistory(searchContext)), 2);
   const tmp3 = messages(isInitialSearchQuery.useState(() => SearchHistoryStore.getSearchHistory(searchContext)), 2);
   let items1 = [searchContextId];
-  const focusEffect = searchContext(suggestedData[21]).useFocusEffect(isInitialSearchQuery.useCallback(() => {
+  const focusEffect = searchContext(suggestedData[23]).useFocusEffect(isInitialSearchQuery.useCallback(() => {
     function handleChange() {
       onJumpToMedia(memo.getSearchHistory(handleChange));
     }
@@ -97,7 +98,7 @@ let closure_19 = noop.memo((searchContext) => {
     };
   }, items1));
   c6 = tmp4;
-  const tmp6 = onJumpToMedia(suggestedData[22])(searchContext.width);
+  const tmp6 = onJumpToMedia(suggestedData[24])(searchContext.width);
   const mediaSize = tmp6;
   const items2 = [messages, searchContext];
   const memo = isInitialSearchQuery.useMemo(() => {
@@ -120,7 +121,7 @@ let closure_19 = noop.memo((searchContext) => {
     }
     return EMPTY_MEDIA_RESULTS;
   }, items2);
-  let obj3 = searchContext(suggestedData[21]);
+  let obj3 = searchContext(suggestedData[23]);
   onPressMediaItem = searchContext(suggestedData[16]).useOnPressMediaItem({ searchContext, allMediaResults: memo });
   const items3 = [messages, onPressMediaItem];
   const onPress = isInitialSearchQuery.useCallback((media) => {
@@ -138,7 +139,7 @@ let closure_19 = noop.memo((searchContext) => {
     obj = ExplicitMediaRedactionNativeUtils;
   }, items3);
   let obj4 = searchContext(suggestedData[16]);
-  fullscreenPlaceholderCount = searchContext(suggestedData[27]).useFullscreenPlaceholderCount({ placeholderHeight: fullscreenPlaceholderCount, numColumns: 1 });
+  fullscreenPlaceholderCount = searchContext(suggestedData[29]).useFullscreenPlaceholderCount({ placeholderHeight: fullscreenPlaceholderCount, numColumns: 1 });
   const items4 = [onPress, isInitialSearchQuery, memo, tmp6, onJumpToMedia, fullscreenPlaceholderCount, searchContext, tmp4, suggestedData];
   const items5 = [isLoadingMediaGrid, tmp6];
   const data = isInitialSearchQuery.useMemo(() => {
@@ -190,11 +191,11 @@ let closure_19 = noop.memo((searchContext) => {
   const ListFooterComponent = isInitialSearchQuery.useMemo(() => {
     let fn = null;
     if (isLoadingMediaGrid) {
-      fn = () => jsx(searchContext(suggestedData[28]).RecentsMediaGridPlaceholder, { numRows: 3, visible: true, size });
+      fn = () => jsx(searchContext(suggestedData[30]).RecentsMediaGridPlaceholder, { numRows: 3, visible: true, size });
     }
     return fn;
   }, items5);
-  return jsx(onJumpToMedia(suggestedData[29]), { data, ListFooterComponent });
+  return jsx(onJumpToMedia(suggestedData[31]), { data, ListFooterComponent });
 });
 let closure_20 = noop.memo((searchContext) => {
   searchContext = searchContext.searchContext;
@@ -304,40 +305,72 @@ let closure_20 = noop.memo((searchContext) => {
 let closure_21 = noop.memo((searchContext) => {
   searchContext = searchContext.searchContext;
   let stateFromStores;
-  let onPress;
+  let memo1;
+  let isLoadingSuggestedSearches;
   const searchContextId = searchContext(stateFromStores[19]).getSearchContextId(searchContext);
   let obj = searchContext(stateFromStores[19]);
-  let items = [SearchGuildChannelTabStore];
+  let items = [isLoadingSuggestedSearches];
   stateFromStores = searchContext(stateFromStores[20]).useStateFromStores(items, () => SearchGuildChannelTabStore.getTextChannels(closure_1));
-  const obj2 = searchContext(stateFromStores[20]);
+  let obj2 = searchContext(stateFromStores[20]);
   const onPressGuildTextChannel = searchContext(stateFromStores[16]).useOnPressGuildTextChannel({ searchContext });
   const items1 = [stateFromStores];
-  const memo = onPress.useMemo(() => stateFromStores.slice(0, 3), items1);
-  const items2 = [onPressGuildTextChannel, searchContext];
-  onPress = onPress.useCallback((channelId) => {
+  const memo = memo1.useMemo(() => stateFromStores.slice(0, 3), items1);
+  const items2 = [searchContext];
+  memo1 = memo1.useMemo(() => SmartSearchUtils.getSmartSearchQuery(searchContext, ""), items2);
+  const obj3 = searchContext(stateFromStores[16]);
+  const suggestedSearches1 = searchContext(stateFromStores[22]).useSuggestedSearches(memo1, "guild_suggestions");
+  const suggestedSearches = suggestedSearches1.suggestedSearches;
+  isLoadingSuggestedSearches = suggestedSearches1.isLoadingSuggestedSearches;
+  const items3 = [onPressGuildTextChannel, searchContext];
+  const onPress = memo1.useCallback((channelId) => {
     const result = search_tracking_TrackingDefault.trackSuggestedSearchClicked({ searchContext, channelId });
     onPressGuildTextChannel(channelId);
-  }, items2);
-  const items3 = [onPress, memo];
-  const obj4 = {};
-  const memo1 = onPress.useMemo(() => {
-    const items = [];
-    if (0 !== memo.length) {
-      let element = { type: constants.SECTION, props: null };
-      const obj = { title: null };
-      const intl = searchContext(stateFromStores[13]).intl;
-      obj.title = intl.string(searchContext(stateFromStores[13]).t.HbJ7eD);
-      element.props = obj;
-      items.push(element);
-      const item = memo.forEach((channel) => {
-        const element = { type: constants.GUILD_TEXT_CHANNEL, props: { channel: channel.channel, lastMessageId: channel.lastMessageId, onPress } };
-        items.push(element);
-      });
-    }
-    return items;
   }, items3);
+  const items4 = [onPress, memo1, memo, suggestedSearches, isLoadingSuggestedSearches];
+  const obj5 = {};
+  const memo2 = memo1.useMemo(() => {
+    const items = [];
+    if (0 === suggestedSearches.length) {
+      if (!isLoadingSuggestedSearches) {
+        if (0 === memo.length) {
+          return items;
+        }
+      }
+    }
+    let element = { type: constants.SECTION, props: null };
+    const obj = { title: null };
+    const intl = searchContext(stateFromStores[13]).intl;
+    obj.title = intl.string(searchContext(stateFromStores[13]).t.HbJ7eD);
+    element.props = obj;
+    items.push(element);
+    if (null != memo1) {
+      if (0 === suggestedSearches.length) {
+        let num3 = 0;
+        if (isLoadingSuggestedSearches) {
+          do {
+            let obj2 = { type: constants.SUGGESTED_SEARCH_PLACEHOLDER, key: null };
+            let _HermesInternal = HermesInternal;
+            obj2.key = "suggested-search-skeleton-" + num3;
+            let arr4 = items.push(obj2);
+            num3 = num3 + 1;
+          } while (num3 < 3);
+          return items;
+        }
+      } else {
+        const item = suggestedSearches.forEach((suggestedSearch) => {
+          const element = { type: constants.SUGGESTED_SEARCH, props: { suggestedSearch, smartSearchQuery: memo1, variant: "compact" } };
+          items.push(element);
+        });
+      }
+    }
+    const item1 = memo.forEach((channel) => {
+      const element = { type: constants.GUILD_TEXT_CHANNEL, props: { channel: channel.channel, lastMessageId: channel.lastMessageId, onPress } };
+      items.push(element);
+    });
+    return items.slice(0, 4);
+  }, items4);
   const merged = Object.assign(searchContext);
-  obj4.suggestedData = memo1;
+  obj5.suggestedData = memo2;
   return <closure_19 />;
 });
 const size = fn(2);

@@ -1,11 +1,11 @@
-// === Module 16628: UserProfileYourFriendsCard ===
+// === Module 16816: UserProfileYourFriendsCard ===
 
-// Module 16628 (UserProfileYourFriendsCard)
+// Module 16816 (UserProfileYourFriendsCard)
 import _modDef12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7072 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7237 */;
 import RelationshipStore from "RelationshipStore" /* 4479 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -40,7 +40,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
   let obj2 = require("initialize");
   const gameRelationshipsByType = require("GameRelationshipStoreHooks").useGameRelationshipsByType(RelationshipTypes.FRIEND);
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = closure_0(9303).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = closure_0(9470).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {
@@ -79,13 +79,13 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
         const items = [{ translateX: 4 * (first.length - 1 - index) }];
         obj2.transform = items;
         obj.style = obj2;
-        const obj4 = { user, guildId: "r", size: closure_0(1177).AvatarSizes.XSMALL, cutout: null };
+        const obj4 = { user, guildId: "r", size: closure_0(1177).AvatarSizes.XSMALL, cutout: -0.000000000000000000000000000000013096336421405486 };
         let tmp3;
         if (index < first.length - 1) {
           tmp3 = closure_2_11;
         }
         obj4.cutout = tmp3;
-        obj.children = jsx(closure_0(1177).CutoutableAvatarImage, { user, guildId: "r", size: closure_0(1177).AvatarSizes.XSMALL, cutout: null });
+        obj.children = jsx(closure_0(1177).CutoutableAvatarImage, { user, guildId: "r", size: closure_0(1177).AvatarSizes.XSMALL, cutout: -0.000000000000000000000000000000013096336421405486 });
         return <gameRelationshipsByType key={user.id} style={null}>{null}</gameRelationshipsByType>;
       })}</View>
     };
@@ -95,13 +95,13 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
       const items = [{ translateX: 4 * (first.length - 1 - index) }];
       obj2.transform = items;
       obj.style = obj2;
-      const obj4 = { user, guildId: "r", size: closure_0(1177).AvatarSizes.XSMALL, cutout: null };
+      const obj4 = { user, guildId: "r", size: closure_0(1177).AvatarSizes.XSMALL, cutout: -0.000000000000000000000000000000013096336421405486 };
       let tmp3;
       if (index < first.length - 1) {
         tmp3 = closure_2_11;
       }
       obj4.cutout = tmp3;
-      obj.children = jsx(closure_0(1177).CutoutableAvatarImage, { user, guildId: "r", size: closure_0(1177).AvatarSizes.XSMALL, cutout: null });
+      obj.children = jsx(closure_0(1177).CutoutableAvatarImage, { user, guildId: "r", size: closure_0(1177).AvatarSizes.XSMALL, cutout: -0.000000000000000000000000000000013096336421405486 });
       return <gameRelationshipsByType key={user.id} style={null}>{null}</gameRelationshipsByType>;
     })}</View></View>;
   }, items3);

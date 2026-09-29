@@ -1,6 +1,6 @@
-// === Module 13036: PremiumManagePlan ===
+// === Module 13206: PremiumManagePlan ===
 
-// Module 13036 (PremiumManagePlan)
+// Module 13206 (PremiumManagePlan)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
@@ -10,24 +10,24 @@ import useNavigation from "useNavigation" /* 1485 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2111 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5174 */;
-import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5268 */;
-import LinearGradientDefault from "LinearGradient" /* 5293 */;
-import useMountEffectDefault from "useMountEffect" /* 5298 */;
-import Pressables from "Pressables" /* 5435 */;
-import Card from "Card" /* 5919 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5940 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6411 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6416 */;
-import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 6813 */;
-import PremiumManagementUtils from "PremiumManagementUtils" /* 6824 */;
-import _modDef7495 from "module_7495" /* 7495 */;
-import PremiumFeaturesCardDefault from "PremiumFeaturesCard" /* 8664 */;
-import PremiumSubscriptionDetails from "PremiumSubscriptionDetails" /* 12891 */;
-import PremiumAccountCreditDefault from "PremiumAccountCredit" /* 12933 */;
-import PremiumNitroHomeUtils from "PremiumNitroHomeUtils" /* 12964 */;
-import useFPDurationLeftDefault from "useFPDurationLeft" /* 13001 */;
-import PremiumFeaturesTableDefault from "PremiumFeaturesTable" /* 13015 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5340 */;
+import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5434 */;
+import LinearGradientDefault from "LinearGradient" /* 5459 */;
+import useMountEffectDefault from "useMountEffect" /* 5464 */;
+import Pressables from "Pressables" /* 5602 */;
+import Card from "Card" /* 6085 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6106 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6577 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6582 */;
+import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 6979 */;
+import PremiumManagementUtils from "PremiumManagementUtils" /* 6990 */;
+import _modDef7660 from "module_7660" /* 7660 */;
+import PremiumFeaturesCardDefault from "PremiumFeaturesCard" /* 8829 */;
+import PremiumSubscriptionDetails from "PremiumSubscriptionDetails" /* 13061 */;
+import PremiumAccountCreditDefault from "PremiumAccountCredit" /* 13103 */;
+import PremiumNitroHomeUtils from "PremiumNitroHomeUtils" /* 13134 */;
+import useFPDurationLeftDefault from "useFPDurationLeft" /* 13171 */;
+import PremiumFeaturesTableDefault from "PremiumFeaturesTable" /* 13185 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -35,9 +35,9 @@ import UserStore from "UserStore" /* 1372 */;
 import BillingInfoStore from "BillingInfoStore" /* 4490 */;
 import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4493 */;
 import SubscriptionStore from "SubscriptionStore" /* 4494 */;
-import EntitlementStore from "EntitlementStore" /* 6814 */;
+import EntitlementStore from "EntitlementStore" /* 6980 */;
 import AppStateStore from "AppStateStore" /* 1980 */;
-import IAPStore from "IAPStore" /* 6658 */;
+import IAPStore from "IAPStore" /* 6824 */;
 
 require = fn;
 function ManagePlanHeader() {
@@ -467,7 +467,7 @@ function FractionalPremiumCredits(durationText) {
   obj10.colors = items2;
   const obj12 = { children: null };
   const tmp11 = LinearGradientDefault;
-  obj12.children = __initData7(native.Icon, { color: nativeDefault.unsafe_rawColors.WHITE, source: _modDef7495, size: native.IconSizes.LARGE });
+  obj12.children = __initData7(native.Icon, { color: nativeDefault.unsafe_rawColors.WHITE, source: _modDef7660, size: native.IconSizes.LARGE });
   obj10.children = __initData7(React6, obj12);
   obj9.children = __initData7(tmp11, obj10);
   const items3 = [__initData7(React6, obj9), ];
@@ -545,11 +545,11 @@ function FractionalPremiumCredits(durationText) {
   const intl4 = util.intl;
   obj31.children = intl4.string(util.t["B66Z+f"]);
   tmp8Result = __initData7(Text_Text.Text, obj31);
-  const obj13 = { color: nativeDefault.unsafe_rawColors.WHITE, source: _modDef7495, size: native.IconSizes.LARGE };
+  const obj13 = { color: nativeDefault.unsafe_rawColors.WHITE, source: _modDef7660, size: native.IconSizes.LARGE };
 }
 get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, ImageBackground: closure_7, View: closure_8, ScrollView: closure_9, ActivityIndicator: c10 } = get_ActivityIndicator);
-const TABLE_DIVIDER_WIDTH = fn(5915).TABLE_DIVIDER_WIDTH;
+const TABLE_DIVIDER_WIDTH = fn(6081).TABLE_DIVIDER_WIDTH;
 const isNoneSubscription = fn(4489).isNoneSubscription;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_20, HelpdeskArticles: closure_21, SubscriptionStatusTypes: closure_22, UserSettingsSections: closure_23 } = Constants);
@@ -623,8 +623,8 @@ export default function PremiumManagePlan() {
   const tmp = closure_32();
   const rect = useSafeAreaInsetsDefault();
   const top = rect.top;
-  const youBarSettingsOutsideSafeAreaTop = navigation(12999).useYouBarSettingsOutsideSafeAreaTop();
-  let obj = navigation(12999);
+  const youBarSettingsOutsideSafeAreaTop = navigation(13169).useYouBarSettingsOutsideSafeAreaTop();
+  let obj = navigation(13169);
   navigation = navigation(1485).useNavigation();
   let items = [navigation];
   const layoutEffect = noop.useLayoutEffect(() => {
@@ -653,19 +653,19 @@ export default function PremiumManagePlan() {
       isSubscriptionFetching = BillingInfoStore.isSubscriptionFetching;
     }
     if (!isSubscriptionFetching) {
-      const subscriptions = navigation(5174).fetchSubscriptions();
-      const obj = navigation(5174);
+      const subscriptions = navigation(5340).fetchSubscriptions();
+      const obj = navigation(5340);
     }
     if (!tmp5) {
-      const premiumSubscriptionPlans = navigation(6675).fetchPremiumSubscriptionPlans();
-      const obj3 = navigation(6675);
+      const premiumSubscriptionPlans = navigation(6841).fetchPremiumSubscriptionPlans();
+      const obj3 = navigation(6841);
     }
     tmp5 = SubscriptionPlanStore.isLoadedForPremiumSKUs() || SubscriptionPlanStore.isFetchingForPremiumSKUs();
   });
   const obj6 = navigation(504);
-  let isInReverseTrial = navigation(7509).useIsInReverseTrial();
-  const obj8 = navigation(7509);
-  const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(13001).CountDownMessageTypes.SHORT_TIME);
+  let isInReverseTrial = navigation(7674).useIsInReverseTrial();
+  const obj8 = navigation(7674);
+  const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(13171).CountDownMessageTypes.SHORT_TIME);
   const unactivatedFractionalPremiumDurationString = navigation(4488).getUnactivatedFractionalPremiumDurationString(tmp12);
   if (null !== tmp10) {
     if (!tmp10.isPurchasedExternally) {
@@ -741,7 +741,7 @@ export default function PremiumManagePlan() {
   const items9 = [tmp29Result, , , , , , ];
   if (isInReverseTrial) {
     const obj13 = { premiumType: closure_27.TIER_2, forFractionalPremium: true, hideButton: true };
-    isInReverseTrial = closure_29(tmp2(8664), obj13);
+    isInReverseTrial = closure_29(tmp2(8829), obj13);
   }
   items9[1] = isInReverseTrial;
   let tmp29Result3 = result;
@@ -750,7 +750,7 @@ export default function PremiumManagePlan() {
   }
   if (tmp29Result3) {
     const obj14 = { premiumType: closure_27.TIER_2, hideButton: true, hidePrice: true, isPremiumGroup: true, premiumGroupRole };
-    tmp29Result3 = closure_29(tmp2(8664), obj14);
+    tmp29Result3 = closure_29(tmp2(8829), obj14);
   }
   items9[2] = tmp29Result3;
   if (tmp29Result4) {
@@ -776,9 +776,9 @@ export default function PremiumManagePlan() {
         },
       subscription: tmp10
     };
-    const items10 = [closure_29(tmp2(12891), obj17), ];
+    const items10 = [closure_29(tmp2(13061), obj17), ];
     const obj18 = { style: tmp.billingInfo, subscription: tmp10 };
-    items10[1] = closure_29(tmp2(12931), obj18);
+    items10[1] = closure_29(tmp2(13101), obj18);
     obj16.children = items10;
     tmp27Result = closure_30(closure_8, obj16);
   }

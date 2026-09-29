@@ -1,6 +1,6 @@
-// === Module 6759: GuildDiscoveryUtils ===
+// === Module 6925: GuildDiscoveryUtils ===
 
-// Module 6759 (GuildDiscoveryUtils)
+// Module 6925 (GuildDiscoveryUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import _modDef1473 from "module_1473" /* 1473 */;

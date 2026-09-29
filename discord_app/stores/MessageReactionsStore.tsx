@@ -1,9 +1,9 @@
-// === Module 7181: MessageReactionsStore ===
+// === Module 7346: MessageReactionsStore ===
 
-// Module 7181 (MessageReactionsStore)
+// Module 7346 (MessageReactionsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ReactionActionCreatorsAll from "ReactionActionCreators" /* 7183 */;
+import ReactionActionCreatorsAll from "ReactionActionCreators" /* 7348 */;
 import LurkingStore from "LurkingStore" /* 4470 */;
 import UserRecord from "UserRecord" /* 1386 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
@@ -31,7 +31,7 @@ function handleReaction(userId) {
   }
 }
 const dependencyMap = {};
-const items = [fn(7182).ReactionTypes.NORMAL, fn(7182).ReactionTypes.BURST];
+const items = [fn(7347).ReactionTypes.NORMAL, fn(7347).ReactionTypes.BURST];
 const prototype = function Reaction() {
   const obj = Object.create(new.target.prototype);
   obj.fetched = false;

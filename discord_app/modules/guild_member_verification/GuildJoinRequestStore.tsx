@@ -1,6 +1,6 @@
-// === Module 5854: GuildJoinRequestStore ===
+// === Module 6020: GuildJoinRequestStore ===
 
-// Module 5854 (GuildJoinRequestStore)
+// Module 6020 (GuildJoinRequestStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;

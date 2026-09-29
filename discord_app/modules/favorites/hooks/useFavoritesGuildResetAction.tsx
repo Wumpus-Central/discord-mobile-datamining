@@ -1,12 +1,12 @@
-// === Module 15771: useFavoritesGuildResetAction ===
+// === Module 15946: useFavoritesGuildResetAction ===
 
-// Module 15771 (useFavoritesGuildResetAction)
+// Module 15946 (useFavoritesGuildResetAction)
 import router_utils from "router_utils" /* 1101 */;
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 2021 */;
 import FavoritesUtils from "FavoritesUtils" /* 2070 */;
 import _modDef3361 from "module_3361" /* 3361 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 9684 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 9851 */;
 import noop from "module_19" /* 19 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4655 */;
 

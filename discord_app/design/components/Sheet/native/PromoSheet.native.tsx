@@ -1,6 +1,6 @@
-// === Module 9691: PromoSheet ===
+// === Module 9858: PromoSheet ===
 
-// Module 9691 (PromoSheet)
+// Module 9858 (PromoSheet)
 import nativeDefault from "native" /* 576 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -24,7 +24,7 @@ export const PromoSheet = function PromoSheet(arg0) {
   const memo = noop.useMemo(() => null != gradientColor ? ((arg0) => {
     const obj = {};
     const merged = Object.assign(arg0);
-    obj.children = closure_2_7(gradientColor(9692).ExpressiveGradient, { offsetBottom: 0.25, color, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND });
+    obj.children = closure_2_7(gradientColor(9859).ExpressiveGradient, { offsetBottom: 0.25, color, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND });
     return closure_2_7(View, obj);
   }) : undefined, items);
   let obj = {};
@@ -36,7 +36,7 @@ export const PromoSheet = function PromoSheet(arg0) {
     const obj2 = {};
     const merged1 = Object.assign(graphic);
     obj2.style = tmp2.graphic;
-    let tmp4Result = closure_7(gradientColor(9693).Graphic, obj2);
+    let tmp4Result = closure_7(gradientColor(9860).Graphic, obj2);
   } else {
     tmp4Result = null;
     if (null != illustration) {
@@ -53,9 +53,9 @@ export const PromoSheet = function PromoSheet(arg0) {
   }
   const obj6 = { spacing: 24, children: null };
   items2[1] = tmp4Result2;
-  items1[1] = closure_8(gradientColor(5279).Stack, { children: items2 });
+  items1[1] = closure_8(gradientColor(5445).Stack, { children: items2 });
   items1[2] = actions;
   obj6.children = items1;
-  obj.children = closure_8(gradientColor(5279).Stack, obj6);
-  return closure_7(gradientColor(6571).BottomSheet, obj);
+  obj.children = closure_8(gradientColor(5445).Stack, obj6);
+  return closure_7(gradientColor(6737).BottomSheet, obj);
 };

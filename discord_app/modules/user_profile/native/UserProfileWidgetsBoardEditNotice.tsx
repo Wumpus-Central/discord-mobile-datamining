@@ -1,15 +1,15 @@
-// === Module 12638: UserProfileWidgetsBoardEditNotice ===
+// === Module 12808: UserProfileWidgetsBoardEditNotice ===
 
-// Module 12638 (UserProfileWidgetsBoardEditNotice)
+// Module 12808 (UserProfileWidgetsBoardEditNotice)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import dismissible_content from "dismissible_content" /* 2029 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 4787 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import Pressables from "Pressables" /* 5435 */;
-import XSmallIcon from "XSmallIcon" /* 5992 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 7687 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10088 */;
+import Pressables from "Pressables" /* 5602 */;
+import XSmallIcon from "XSmallIcon" /* 6158 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 7852 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10255 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

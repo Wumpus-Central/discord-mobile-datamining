@@ -1,8 +1,8 @@
-// === Module 11505: ForumPostMessageContent ===
+// === Module 11674: ForumPostMessageContent ===
 
-// Module 11505 (ForumPostMessageContent)
+// Module 11674 (ForumPostMessageContent)
 import Text_Text from "Text/Text" /* 4832 */;
-import useNativeForumPostContentDefault from "useNativeForumPostContent" /* 11506 */;
+import useNativeForumPostContentDefault from "useNativeForumPostContent" /* 11675 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

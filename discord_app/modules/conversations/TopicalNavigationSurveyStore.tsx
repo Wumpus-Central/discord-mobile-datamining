@@ -1,6 +1,6 @@
-// === Module 7334: TopicalNavigationSurveyStore ===
+// === Module 7499: TopicalNavigationSurveyStore ===
 
-// Module 7334 (TopicalNavigationSurveyStore)
+// Module 7499 (TopicalNavigationSurveyStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

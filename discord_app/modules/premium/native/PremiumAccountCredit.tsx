@@ -1,16 +1,16 @@
-// === Module 12933: PremiumAccountCredit ===
+// === Module 13103: PremiumAccountCredit ===
 
-// Module 12933 (PremiumAccountCredit)
+// Module 13103 (PremiumAccountCredit)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3199 from "module_3199" /* 3199 */;
 import PremiumUtils from "PremiumUtils" /* 4488 */;
 import Text_Text from "Text/Text" /* 4832 */;
-import GameIcon from "GameIcon" /* 6593 */;
-import BoostGemIcon from "BoostGemIcon" /* 8678 */;
+import GameIcon from "GameIcon" /* 6759 */;
+import BoostGemIcon from "BoostGemIcon" /* 8843 */;
 import noop from "module_19" /* 19 */;
-import EntitlementStore from "EntitlementStore" /* 6814 */;
+import EntitlementStore from "EntitlementStore" /* 6980 */;
 
 const PremiumUtilsDefault = PremiumUtils;
 const GameIconDefault = GameIcon;
@@ -108,7 +108,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4836);
 let obj2 = { title: { marginBottom: 12 }, creditList: { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, creditItem: { flexDirection: "row", alignItems: "center", padding: 16 }, boostIcon: null, textContainer: null, headerText: null, subText: null, timeText: null, divider: null, creditDescription: null };
-let size = { width: fn(6593).GameIconImageSize[fn(undefined, 6593).GameIconSizes.SMALL], height: fn(6593).GameIconImageSize[fn(undefined, 6593).GameIconSizes.SMALL], alignItems: "center", justifyContent: "center" };
+let size = { width: fn(6759).GameIconImageSize[fn(undefined, 6759).GameIconSizes.SMALL], height: fn(6759).GameIconImageSize[fn(undefined, 6759).GameIconSizes.SMALL], alignItems: "center", justifyContent: "center" };
 obj2.boostIcon = size;
 obj2.textContainer = { marginLeft: 16, marginRight: 16, flexDirection: "column", flex: 1 };
 obj2.headerText = { lineHeight: 20 };

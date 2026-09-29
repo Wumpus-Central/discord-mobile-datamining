@@ -1,6 +1,6 @@
-// === Module 14097: MediaPlayerManager ===
+// === Module 14269: MediaPlayerManager ===
 
-// Module 14097 (MediaPlayerManager)
+// Module 14269 (MediaPlayerManager)
 import LoggerDefault from "Logger" /* 3 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -9,8 +9,8 @@ import Constants2 from "Constants" /* 1085 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import RootNavigationRef from "RootNavigationRef" /* 4693 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 6876 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 8502 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7042 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 8667 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
 import VoicePanelStore from "VoicePanelStore" /* 5044 */;
@@ -18,7 +18,7 @@ import ChannelStore from "ChannelStore" /* 2045 */;
 import MessageStore from "MessageStore" /* 5056 */;
 import PermissionStore from "PermissionStore" /* 4469 */;
 import AppStateStore from "AppStateStore" /* 1980 */;
-import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 14098 */;
+import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 14270 */;
 import module_560 from "module_560" /* 560 */;
 import LifecycleManager from "LifecycleManager" /* 1983 */;
 import size from "module_2" /* 2 */;
@@ -41,12 +41,12 @@ const useMediaPlayerManagerStore = module_560.create((arg0) => {
     wasPipClosedByUser: null,
     progress: null,
     rate: "flex",
-    showPip: "face_with_hand_over_mouth",
+    showPip: "second_place",
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: "shushing_face"
+    currentlyDisplayedChannelId: false
   };
   return obj;
 });

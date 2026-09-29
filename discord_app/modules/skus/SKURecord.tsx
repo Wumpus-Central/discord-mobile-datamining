@@ -1,14 +1,14 @@
-// === Module 5823: SKURecord ===
+// === Module 5990: SKURecord ===
 
-// Module 5823 (SKURecord)
+// Module 5990 (SKURecord)
 import _modDef4421 from "module_4421" /* 4421 */;
-import getPricesFromServerDefault from "getPricesFromServer" /* 5825 */;
-import transformSKUTenantMetadataDefault from "transformSKUTenantMetadata" /* 5826 */;
+import getPricesFromServerDefault from "getPricesFromServer" /* 5992 */;
+import transformSKUTenantMetadataDefault from "transformSKUTenantMetadata" /* 5993 */;
 import Record from "Record" /* 1387 */;
 import ApplicationRecord from "ApplicationRecord" /* 2003 */;
 
 const require = fn;
-fn(5824).THE_GAME_AWARD_WINNER_SKUS;
+fn(5991).THE_GAME_AWARD_WINNER_SKUS;
 const Constants = fn(1074);
 ({ GIFTABLE_CURRENCIES: hasOwnProperty, OperatingSystems: metroRequire, SKUFlags: closure_7, SKUTypes: closure_8 } = Constants);
 let SKURecord;

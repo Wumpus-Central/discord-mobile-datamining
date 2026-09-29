@@ -1,10 +1,10 @@
-// === Module 11506: useNativeForumPostContent ===
+// === Module 11675: useNativeForumPostContent ===
 
-// Module 11506 (useNativeForumPostContent)
+// Module 11675 (useNativeForumPostContent)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
-import StickersUtils from "StickersUtils" /* 5198 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6688 */;
+import StickersUtils from "StickersUtils" /* 5364 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6854 */;
 import createStyles from "createStyles" /* 4836 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 6018: ConfirmEmailChangeStart ===
+// === Module 6184: ConfirmEmailChangeStart ===
 
-// Module 6018 (ConfirmEmailChangeStart)
+// Module 6184 (ConfirmEmailChangeStart)
 import Text_Text from "Text/Text" /* 4832 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -36,7 +36,7 @@ export default function ConfirmEmailChangeStart() {
     let obj3 = { oldEmail: stateFromStores.email };
     let obj4 = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
     const obj5 = { style: tmp.container, children: null };
-    let obj6 = { style: tmp.image, source: navigation(6020) };
+    let obj6 = { style: tmp.image, source: navigation(6186) };
     const items1 = [closure_10(closure_7, obj6), , , ];
     let obj7 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     const intl2 = tmp2(1115).intl;
@@ -49,7 +49,7 @@ export default function ConfirmEmailChangeStart() {
     obj9.text = intl3.string(tmp2(1115).t.rXV81H);
     obj9.onPress = tmp7;
     obj9.loading = tmp6[0];
-    obj8.children = closure_10(tmp2(5281).Button, obj9);
+    obj8.children = closure_10(tmp2(5447).Button, obj9);
     items1[3] = closure_10(closure_6, obj8);
     obj5.children = items1;
     obj4.children = closure_11(closure_6, obj5);

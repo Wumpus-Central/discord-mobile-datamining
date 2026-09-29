@@ -1,16 +1,16 @@
-// === Module 16478: renderChannelItem ===
+// === Module 16666: renderChannelItem ===
 
-// Module 16478 (renderChannelItem)
+// Module 16666 (renderChannelItem)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useChannelName from "useChannelName" /* 4989 */;
-import GuildIconDefault from "GuildIcon" /* 5896 */;
-import NotificationCenterUtils from "NotificationCenterUtils" /* 7055 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9060 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10371 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 16479 */;
-import renderChannelWrapperDefault from "renderChannelWrapper" /* 16480 */;
-import renderChannelContentDefault from "renderChannelContent" /* 16482 */;
+import GuildIconDefault from "GuildIcon" /* 6062 */;
+import NotificationCenterUtils from "NotificationCenterUtils" /* 7220 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9225 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10540 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 16667 */;
+import renderChannelWrapperDefault from "renderChannelWrapper" /* 16668 */;
+import renderChannelContentDefault from "renderChannelContent" /* 16670 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2067 */;
 import RelationshipStore from "RelationshipStore" /* 4479 */;
@@ -26,7 +26,7 @@ function LaunchpadChannelIcon(channel) {
   const obj3 = { style: tmp.guildBadgeIcon, children: null };
   const stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   obj3.children = closure_8(GuildIconDefault, { guild: stateFromStores, size: tmp2.icon.guildBadgeIconSize });
-  const items1 = [closure_8(View, obj3), closure_8(channel(11673).ChannelIcon, { channel, size: "sm", wrapperSize: 32 })];
+  const items1 = [closure_8(View, obj3), closure_8(channel(11842).ChannelIcon, { channel, size: "sm", wrapperSize: 32 })];
   obj2.children = items1;
   return closure_10(closure_9, obj2);
 }
