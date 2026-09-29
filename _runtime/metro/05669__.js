@@ -1,7 +1,53 @@
 // === Module 5669: ? ===
 
 // Module 5669
-import registerAsset from "module_1121" /* 1121 */;
+import _mod5665 from "module_5665" /* 5665 */;
+import _mod5666 from "module_5666" /* 5666 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "083817c43b3689d5baeb4ee0ef9714bc", name: "img_account_sync_epic_light", type: "png" });
+export const isAAC = function isAAC(fileChunk, excludeSimilarTypes) {
+  fileChunk = _mod5665.getFileChunk(fileChunk);
+  const FileTypes = _mod5666.FileTypes;
+  let checkByFileTypeResult1 = FileTypes.checkByFileType(fileChunk, "aac");
+  if (!checkByFileTypeResult1) {
+    excludeSimilarTypes = undefined;
+    if (null != excludeSimilarTypes) {
+      excludeSimilarTypes = excludeSimilarTypes.excludeSimilarTypes;
+    }
+    let checkByFileTypeResult = !excludeSimilarTypes;
+    if (!excludeSimilarTypes) {
+      const fileChunk1 = _mod5665.getFileChunk(fileChunk);
+      const FileTypes2 = _mod5666.FileTypes;
+      checkByFileTypeResult = FileTypes2.checkByFileType(fileChunk1, "m4a");
+    }
+    checkByFileTypeResult1 = checkByFileTypeResult;
+  }
+  return checkByFileTypeResult1;
+};
+export const isAMR = function isAMR(fileChunk) {
+  fileChunk = _mod5665.getFileChunk(fileChunk);
+  const FileTypes = _mod5666.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "amr");
+};
+export const isFLAC = function isFLAC(fileChunk) {
+  fileChunk = _mod5665.getFileChunk(fileChunk);
+  const FileTypes = _mod5666.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "flac");
+};
+export const isM4A = function isM4A(fileChunk) {
+  fileChunk = _mod5665.getFileChunk(fileChunk);
+  const FileTypes = _mod5666.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "m4a");
+};
+export const isMP3 = function isMP3(fileChunk) {
+  fileChunk = _mod5665.getFileChunk(fileChunk);
+  const FileTypes = _mod5666.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "mp3");
+};
+export const isWAV = function isWAV(fileChunk) {
+  fileChunk = _mod5665.getFileChunk(fileChunk);
+  const FileTypes = _mod5666.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "wav");
+};

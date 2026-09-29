@@ -1,18 +1,7 @@
 // === Module 6319: ? ===
 
 // Module 6319
-import noop from "module_19" /* 19 */;
 
-({ useRef: closure_0, useLayoutEffect: closure_1 } = noop);
+export function useNativeGestureRole(arg0, children) {
 
-export const useUnmountFlag = () => {
-  const tmp = React(false);
-  closure_0 = tmp;
-  framebus(() => {
-    closure_0.current = false;
-    return () => {
-      closure_1_0.current = true;
-    };
-  }, []);
-  return tmp;
-};
+}

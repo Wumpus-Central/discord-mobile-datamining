@@ -1,7 +1,50 @@
 // === Module 5383: ? ===
 
 // Module 5383
-import registerAsset from "module_1121" /* 1121 */;
+import get_synchronousScreenUpdatesEnabled from "get synchronousScreenUpdatesEnabled" /* 5384 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "9f19e3d7e93bc823e490a582e66b0758", name: "LockIcon", type: "png" });
+export const RNSLog = {
+  log(arg0) {
+    const substr = [...arguments].slice();
+    if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
+      const _console = console;
+      const items = [arg0];
+      HermesBuiltin.arraySpread(substr, 1);
+      const _console2 = console;
+      HermesBuiltin.apply(items, console);
+    }
+  },
+  warn(arg0) {
+    const substr = [...arguments].slice();
+    if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
+      const _console = console;
+      const items = [arg0];
+      HermesBuiltin.arraySpread(substr, 1);
+      const _console2 = console;
+      HermesBuiltin.apply(items, console);
+    }
+  },
+  error(arg0) {
+    const substr = [...arguments].slice();
+    if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
+      const _console = console;
+      const items = [arg0];
+      HermesBuiltin.arraySpread(substr, 1);
+      const _console2 = console;
+      HermesBuiltin.apply(items, console);
+    }
+  },
+  info(arg0) {
+    const substr = [...arguments].slice();
+    if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
+      const _console = console;
+      const items = [arg0];
+      HermesBuiltin.arraySpread(substr, 1);
+      const _console2 = console;
+      HermesBuiltin.apply(items, console);
+    }
+  }
+};

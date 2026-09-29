@@ -1,23 +1,7 @@
 // === Module 12332: ? ===
 
 // Module 12332
-import _mod12331 from "module_12331" /* 12331 */;
-import _mod12333 from "module_12333" /* 12333 */;
+import registerAsset from "module_1121" /* 1121 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export const getAsyncContextStrategy = function getAsyncContextStrategy(mainCarrier) {
-  const sentryCarrier = _mod12331.getSentryCarrier(mainCarrier);
-  if (sentryCarrier.acs) {
-    let acs = sentryCarrier.acs;
-  } else {
-    acs = _mod12333.getStackAsyncContextStrategy();
-    const tmpResult = _mod12333;
-  }
-  return acs;
-};
-export const setAsyncContextStrategy = function setAsyncContextStrategy(acs) {
-  const mainCarrier = _mod12331.getMainCarrier();
-  _mod12331.getSentryCarrier(mainCarrier).acs = acs;
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/age_gate/native/images", width: 274.5, height: 110, scales: [2, 3], hash: "43e5ff0d9ea5f04fe209ebfd15e2d439", name: "nsfw_gate_unavailable", type: "png" });

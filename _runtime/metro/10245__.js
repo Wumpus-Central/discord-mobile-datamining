@@ -1,121 +1,110 @@
 // === Module 10245: ? ===
 
 // Module 10245
-import _mod19 from "module_19" /* 19 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10062 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10069 */;
+import _mod10231 from "module_10231" /* 10231 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const useMemo = _mod19.useMemo;
-let closure_3 = { code: "function pnpm_usePanGestureProxyTs1(e){const{userDefinedConflictGestures}=this.__closure;if(userDefinedConflictGestures.onBegin)userDefinedConflictGestures.onBegin(e);}" };
-let closure_4 = { code: "function pnpm_usePanGestureProxyTs2(e){const{onGestureStart,userDefinedConflictGestures}=this.__closure;onGestureStart(e);if(userDefinedConflictGestures.onStart)userDefinedConflictGestures.onStart(e);}" };
-let closure_5 = { code: "function pnpm_usePanGestureProxyTs3(e){const{onGestureUpdate,userDefinedConflictGestures}=this.__closure;onGestureUpdate(e);if(userDefinedConflictGestures.onUpdate)userDefinedConflictGestures.onUpdate(e);}" };
-let closure_6 = { code: "function pnpm_usePanGestureProxyTs4(e,success){const{onGestureEnd,userDefinedConflictGestures}=this.__closure;onGestureEnd(e,success);if(userDefinedConflictGestures.onEnd)userDefinedConflictGestures.onEnd(e,success);}" };
-let closure_7 = { code: "function pnpm_usePanGestureProxyTs5(e,success){const{userDefinedConflictGestures}=this.__closure;if(userDefinedConflictGestures.onFinalize)userDefinedConflictGestures.onFinalize(e,success);}" };
-
-export const usePanGestureProxy = (onConfigurePanGesture) => {
-  onConfigurePanGesture = onConfigurePanGesture.onConfigurePanGesture;
-  const onGestureStart = onConfigurePanGesture.onGestureStart;
-  const onGestureUpdate = onConfigurePanGesture.onGestureUpdate;
-  const onGestureEnd = onConfigurePanGesture.onGestureEnd;
-  let options = onConfigurePanGesture.options;
-  if (undefined === options) {
-    options = {};
+const ITRelativeDateFormatParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  const items = [onGestureStart, onGestureUpdate, onGestureEnd, onConfigurePanGesture];
-  const tmp = onGestureUpdate(() => {
-    const Gesture = onConfigurePanGesture(onGestureStart[1]).Gesture;
-    const withTestIdResult = Gesture.Pan().withTestId("rnrc-gesture-handler");
-    onConfigurePanGesture = withTestIdResult;
-    const userDefinedConflictGestures = { onBegin: "Array", onStart: "channel", onUpdate: "d", onEnd: "variant", onFinalize: "sa" };
-    withTestIdResult.onBegin = (onBegin) => {
-      obj.onBegin = onBegin;
-      return withTestIdResult;
-    };
-    withTestIdResult.onStart = (onStart) => {
-      obj.onStart = onStart;
-      return withTestIdResult;
-    };
-    withTestIdResult.onUpdate = (onUpdate) => {
-      obj.onUpdate = onUpdate;
-      return withTestIdResult;
-    };
-    withTestIdResult.onEnd = (onEnd) => {
-      obj.onEnd = onEnd;
-      return withTestIdResult;
-    };
-    withTestIdResult.onFinalize = (onFinalize) => {
-      obj.onFinalize = onFinalize;
-      return withTestIdResult;
-    };
-    ({ onBegin, onStart, onUpdate, onEnd, onFinalize } = withTestIdResult);
-    if (onConfigurePanGesture) {
-      onConfigurePanGesture(withTestIdResult);
+}
+const regExp = new RegExp("(questo|ultimo|scorso|prossimo|dopo\\s*questo|questa|ultima|scorsa|prossima\\s*questa)\\s*(" + repeatedTimeunitPattern.matchAnyPattern(_mod10231.TIME_UNIT_DICTIONARY) + ")(?=\\s*)(?=\\W|$)", "i");
+class ITRelativeDateFormatParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, ITRelativeDateFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(ITRelativeDateFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    withTestIdResult.onBegin = onBegin;
-    withTestIdResult.onStart = onStart;
-    withTestIdResult.onUpdate = onUpdate;
-    withTestIdResult.onEnd = onEnd;
-    withTestIdResult.onFinalize = onFinalize;
-    class C {
-      constructor(arg0) {
-        obj = closure_1;
-        if (closure_1.onBegin) {
-          tmp = arg0;
-          onBeginResult = obj.onBegin(arg0);
-        }
-        return;
-      }
-    }
-    C.__closure = { userDefinedConflictGestures };
-    C.__workletHash = 7286111968229;
-    C.__initData = onGestureEnd;
-    const PanResult = Gesture.Pan();
-    class D {
-      constructor(arg0) {
-        tmp = onGestureStart(arg0);
-        obj = closure_1;
-        if (closure_1.onStart) {
-          onStartResult = obj.onStart(arg0);
-        }
-        return;
-      }
-    }
-    D.__closure = { onGestureStart: userDefinedConflictGestures, userDefinedConflictGestures };
-    D.__workletHash = 2969501037173;
-    D.__initData = __initData;
-    const obj2 = { onGestureStart: userDefinedConflictGestures, userDefinedConflictGestures };
-    const onBeginResult = withTestIdResult.onBegin(C);
-    const fn = function p(arg0) {
-      onGestureUpdate(arg0);
-      if (obj.onUpdate) {
-        obj.onUpdate(arg0);
-      }
-    };
-    fn.__closure = { onGestureUpdate, userDefinedConflictGestures };
-    fn.__workletHash = 14406733755860;
-    fn.__initData = __initData2;
-    const obj3 = { onGestureUpdate, userDefinedConflictGestures };
-    const onStartResult = withTestIdResult.onBegin(C).onStart(D);
-    const fn2 = function c(arg0, arg1) {
-      onGestureEnd(arg0, arg1);
-      if (obj.onEnd) {
-        obj.onEnd(arg0, arg1);
-      }
-    };
-    fn2.__closure = { onGestureEnd, userDefinedConflictGestures };
-    fn2.__workletHash = 3800149117372;
-    fn2.__initData = __initData3;
-    const obj4 = { onGestureEnd, userDefinedConflictGestures };
-    const onUpdateResult = withTestIdResult.onBegin(C).onStart(D).onUpdate(fn);
-    const fn3 = function e(arg0, arg1) {
-      if (obj.onFinalize) {
-        obj.onFinalize(arg0, arg1);
-      }
-    };
-    fn3.__closure = { userDefinedConflictGestures };
-    fn3.__workletHash = 16525776198753;
-    fn3.__initData = __initData4;
-    withTestIdResult.onBegin(C).onStart(D).onUpdate(fn).onEnd(fn2).onFinalize(fn3);
-    return withTestIdResult;
-  }, items);
-  const updateGestureConfig = onConfigurePanGesture(onGestureStart[2]).useUpdateGestureConfig(tmp, options);
-  return tmp;
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(ITRelativeDateFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const entry = {
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
+  }
 };
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(createParsingComponents, arg1) {
+      const formatted = arg1[1].toLowerCase();
+      const str3 = arg1[2].toLowerCase();
+      const tmp3 = ITRelativeDateFormatParser(10231).TIME_UNIT_DICTIONARY[str3];
+      if ("prossimo" != formatted) {
+        if (!formatted.startsWith("dopo")) {
+          if ("prima" != formatted) {
+            if ("precedente" != formatted) {
+              const parsingComponents = createParsingComponents.createParsingComponents();
+              const _Date = Date;
+              const instant = createParsingComponents.reference.instant;
+              const date = new Date(instant.getTime());
+              if (str3.match(/settimana/i)) {
+                date.setDate(date.getDate() - date.getDay());
+                parsingComponents.imply("day", date.getDate());
+                parsingComponents.imply("month", date.getMonth() + 1);
+                parsingComponents.imply("year", date.getFullYear());
+                const date1 = date.getDate();
+              } else if (str3.match(/mese/i)) {
+                date.setDate(1);
+                parsingComponents.imply("day", date.getDate());
+                parsingComponents.assign("year", date.getFullYear());
+                parsingComponents.assign("month", date.getMonth() + 1);
+              } else if (str3.match(/anno/i)) {
+                date.setDate(1);
+                date.setMonth(0);
+                parsingComponents.imply("day", date.getDate());
+                parsingComponents.imply("month", date.getMonth() + 1);
+                parsingComponents.assign("year", date.getFullYear());
+              }
+              return parsingComponents;
+            }
+          }
+          const obj4 = {};
+          obj4[tmp3] = -1;
+          const ParsingComponents = ITRelativeDateFormatParser(10065).ParsingComponents;
+          return ParsingComponents.createRelativeFromReference(createParsingComponents.reference, obj4);
+        }
+      }
+      const ParsingComponents2 = ITRelativeDateFormatParser(10065).ParsingComponents;
+      return ParsingComponents2.createRelativeFromReference(createParsingComponents.reference, { [tmp3]: 1 });
+    }
+  }
+];
+
+export default _createClass(ITRelativeDateFormatParser, items);

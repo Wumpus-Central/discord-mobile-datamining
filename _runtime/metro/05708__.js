@@ -1,7 +1,24 @@
 // === Module 5708: ? ===
 
 // Module 5708
-import registerAsset from "module_1121" /* 1121 */;
+import _mod5693 from "module_5693" /* 5693 */;
 
+require = arg1;
+const dependencyMap = arg6;
+let c2 = 0;
+let c3 = "<?xpacket begin";
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "7700e8b6e3143c87285472edb9723d43", name: "img_domain_dark", type: "png" });
+export default {
+  isXMLFile(dataView) {
+    let tmp = dataView;
+    if (tmp) {
+      tmp = _mod5693.getStringFromDataView(dataView, c2, length.length) === length;
+    }
+    return tmp;
+  },
+  findOffsets(byteLength) {
+    const xmpChunks = [];
+    xmpChunks.push({ dataOffset, length: byteLength.byteLength });
+    return { xmpChunks };
+  }
+};

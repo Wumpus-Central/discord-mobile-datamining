@@ -1,20 +1,32 @@
 // === Module 6447: ? ===
 
 // Module 6447
-import _mod17 from "module_17" /* 17 */;
+import _mod6448 from "module_6448" /* 6448 */;
 
-const constants = _mod17.Platform.constants;
-if (constants != null) {
-  const reactNativeVersion = constants.reactNativeVersion;
-}
-try {
-  let major;
-  if (reactNativeVersion != null) {
-    major = reactNativeVersion.major;
+
+export default function _objectWithoutProperties(arg0, arr) {
+  if (null == arg0) {
+    return {};
+  } else {
+    const tmp8 = _mod6448(arg0, arr);
+    const _Object2 = Object;
+    if (Object.getOwnPropertySymbols) {
+      const _Object = Object;
+      const ownPropertySymbols = Object.getOwnPropertySymbols(arg0);
+      let num = 0;
+      if (0 < ownPropertySymbols.length) {
+        const tmp2 = -1 === arr.indexOf(ownPropertySymbols[num]);
+        while (!tmp2) {
+          if (tmp2) {
+            tmp8[tmp] = arg0[tmp];
+          }
+          num = num + 1;
+        }
+        const propertyIsEnumerable = {}.propertyIsEnumerable;
+        const call = propertyIsEnumerable.call;
+        typeof call === "unknown" ? propertyIsEnumerable(ownPropertySymbols[num]) : call(arg0, ownPropertySymbols[num]);
+      }
+    }
+    return tmp8;
   }
-  if (0 !== major) {
-    const InteractionManager = _mod17.InteractionManager;
-  }
-  exports.InteractionManager = InteractionManager;
-} catch (err) {
-}
+};

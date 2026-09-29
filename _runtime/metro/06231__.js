@@ -1,51 +1,38 @@
 // === Module 6231: ? ===
 
 // Module 6231
-import _mod17 from "module_17" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import _mod6232 from "module_6232" /* 6232 */;
-import noop_mod from "module_19" /* 19 */;
+import cancelAnimation from "cancelAnimation" /* 1638 */;
 
-let noop = noop_mod;
-({ useMemo: c3, memo } = noop);
-let noop = noop_mod;
-const Platform = _mod17.Platform;
-const jsx = jsxProd.jsx;
-const __initData = { code: "function pnpm_BottomSheetBodyTsx1(){const{Platform,animatedIndex,animatedPosition}=this.__closure;return{opacity:Platform.OS==='android'&&animatedIndex.get()===-1?0:1,transform:[{translateY:animatedPosition.get()}]};}" };
-const memoResult = memo(function BottomSheetBodyComponent(children) {
-  const style = children.style;
-  let View = children.BodyComponent;
-  if (View === undefined) {
-    View = animatedIndex(animatedPosition[3]).View;
-  }
-  animatedPosition = undefined;
-  const bottomSheetInternal = style(animatedPosition[4]).useBottomSheetInternal();
-  animatedIndex = bottomSheetInternal.animatedIndex;
-  animatedPosition = bottomSheetInternal.animatedPosition;
-  let obj = style(animatedPosition[4]);
-  const fn = function y() {
-    let num = 1;
-    if (-1 === animatedIndex.get()) {
-      num = 0;
-    }
-    const obj = { opacity: num, transform: null };
-    const items = [{ translateY: animatedPosition.get() }];
-    obj.transform = items;
+require = fn;
+const dependencyMap = arg6;
+fn = function n(keyboard, value) {
+  if ("easeIn" === keyboard) {
+    const obj2 = { easing: null, duration: null };
+    const Easing3 = cancelAnimation.Easing;
+    obj2.easing = Easing3.in(cancelAnimation.Easing.ease);
+    obj2.duration = value;
+    return obj2;
+  } else if ("easeOut" === keyboard) {
+    const obj3 = { easing: null, duration: null };
+    const Easing2 = cancelAnimation.Easing;
+    obj3.easing = Easing2.out(cancelAnimation.Easing.ease);
+    obj3.duration = value;
+    return obj3;
+  } else if ("easeInEaseOut" === keyboard) {
+    const obj4 = { easing: null, duration: null };
+    const Easing = cancelAnimation.Easing;
+    obj4.easing = Easing.inOut(cancelAnimation.Easing.ease);
+    obj4.duration = value;
+    return obj4;
+  } else if ("linear" === keyboard) {
+    const obj = { easing: cancelAnimation.Easing.linear, duration: value };
     return obj;
-  };
-  fn.__closure = { Platform, animatedIndex, animatedPosition };
-  fn.__workletHash = 5915282482182;
-  fn.__initData = __initData;
-  let items = [animatedPosition, animatedIndex];
-  const animatedStyle = style(animatedPosition[3]).useAnimatedStyle(fn, items);
-  const items1 = [style, animatedStyle];
-  const obj2 = style(animatedPosition[3]);
-  const obj3 = { Platform, animatedIndex, animatedPosition };
-  return <View style={animatedStyle(() => {
-    const items = [style, _mod6232.styles.container, animatedStyle];
-    return items;
-  }, items1)} collapsable>{children.children}</View>;
-});
-memoResult.displayName = "BottomSheetBody";
+  } else if ("keyboard" === keyboard) {
+    return { damping: 500, stiffness: 1000, mass: 3, overshootClamping: true, restDisplacementThreshold: 10, restSpeedThreshold: 10 };
+  }
+};
+fn.__closure = { Easing: fn(1638).Easing };
+fn.__workletHash = 10639588577824;
+fn.__initData = { code: "function pnpm_getKeyboardAnimationConfigsTs1(easing,duration){const{Easing}=this.__closure;switch(easing){case'easeIn':return{easing:Easing.in(Easing.ease),duration:duration};case'easeOut':return{easing:Easing.out(Easing.ease),duration:duration};case'easeInEaseOut':return{easing:Easing.inOut(Easing.ease),duration:duration};case'linear':return{easing:Easing.linear,duration:duration};case'keyboard':return{damping:500,stiffness:1000,mass:3,overshootClamping:true,restDisplacementThreshold:10,restSpeedThreshold:10};}}" };
 
-export const BottomSheetBody = memoResult;
+export const getKeyboardAnimationConfigs = fn;

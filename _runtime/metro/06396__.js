@@ -1,7 +1,13 @@
 // === Module 6396: ? ===
 
 // Module 6396
-import registerAsset from "module_1121" /* 1121 */;
+import _mod17 from "module_17" /* 17 */;
 
+const StyleSheet = _mod17.StyleSheet;
+const obj = { container: null };
+const obj2 = {};
+const merged = Object.assign(StyleSheet.absoluteFillObject);
+obj2.pointerEvents = "box-none";
+obj.container = obj2;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/auth/native/images", width: 375, height: 413, scales: [2, 3], hash: "9dd921dedb90562e62ae59d45a63666c", name: "register-background-light", type: "png" });
+export const styles = StyleSheet.create(obj);

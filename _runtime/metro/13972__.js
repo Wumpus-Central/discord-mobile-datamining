@@ -1,7 +1,19 @@
 // === Module 13972: ? ===
 
 // Module 13972
-import registerAsset from "module_1121" /* 1121 */;
+import _mod13973 from "module_13973" /* 13973 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties", scales: [1], hash: "2c315f321285573a3e0f3421e17e59ea", name: "NitroGem24", type: "lottie" });
+export default (arg0, arg1) => {
+  let tmp3 = _mod13973[arg0];
+  if (!tmp3) {
+    let obj = arg1;
+    if (!arg1) {
+      obj = {};
+    }
+    _mod13973[arg0] = obj;
+    tmp3 = obj;
+    const tmpResult = _mod13973;
+  }
+  return tmp3;
+};

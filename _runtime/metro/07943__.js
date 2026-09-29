@@ -1,87 +1,42 @@
 // === Module 7943: ? ===
 
 // Module 7943
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef7933 from "module_7933" /* 7933 */;
-import _modDef7944 from "module_7944" /* 7944 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
+import colorPropType from "colorPropType" /* 7927 */;
+import _mod7934 from "module_7934" /* 7934 */;
+import emptyFunction_mod from "module_4663" /* 4663 */;
+import "module_4663";
 
-const Ellipse = fn;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class Ellipse {
-  constructor() {
-    self = this;
-    tmp = closure_3(this, Ellipse);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Ellipse);
-    tmp3 = closure_4;
-    if (closure_7()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-_inherits(Ellipse, _modDef7933);
-const entry = {
-  key: "render",
-  value: function render() {
-    const self = this;
-    const props = this.props;
-    const obj = {};
-    ({ cx, cy, rx, ry } = props);
-    const merged = Object.assign(Ellipse(7924).extract(this, props));
-    obj.cx = cx;
-    obj.cy = cy;
-    obj.rx = rx;
-    obj.ry = ry;
-    const obj2 = Ellipse(7924);
-    const obj3 = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const merged1 = Object.assign(obj);
-    return jsx(_modDef7944, {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
-  }
-};
-const items = [entry];
-const importDefaultResultResult = _createClass(Ellipse, items);
-importDefaultResultResult.displayName = "Ellipse";
-importDefaultResultResult.defaultProps = { cx: 0, cy: 0, rx: 0, ry: 0 };
+const obj = {};
+const module_7934 = Object.assign(_mod7934);
+obj.color = colorPropType;
+obj.fontFamily = emptyFunction.string;
+obj.fontSize = emptyFunction.number;
+let emptyFunction = emptyFunction_mod;
+obj.fontStyle = emptyFunction.oneOf(["normal", "italic"]);
+let emptyFunction = emptyFunction_mod;
+obj.fontWeight = emptyFunction.oneOf(["normal", "bold", "100", "200", "300", "400", "500", "600", "700", "800", "900"]);
+let emptyFunction = emptyFunction_mod;
+obj.fontVariant = emptyFunction.arrayOf(emptyFunction.oneOf(["small-caps", "oldstyle-nums", "lining-nums", "tabular-nums", "proportional-nums"]));
+let emptyFunction = emptyFunction_mod;
+const size = { width: emptyFunction.number, height: emptyFunction.number };
+obj.textShadowOffset = emptyFunction.shape(size);
+obj.textShadowRadius = emptyFunction.number;
+obj.textShadowColor = colorPropType;
+obj.letterSpacing = emptyFunction.number;
+obj.lineHeight = emptyFunction.number;
+let emptyFunction = emptyFunction_mod;
+obj.textAlign = emptyFunction.oneOf(["auto", "left", "right", "center", "justify"]);
+let emptyFunction = emptyFunction_mod;
+obj.textAlignVertical = emptyFunction.oneOf(["auto", "top", "bottom", "center"]);
+obj.includeFontPadding = emptyFunction.bool;
+let emptyFunction = emptyFunction_mod;
+obj.textDecorationLine = emptyFunction.oneOf(["none", "underline", "line-through", "underline line-through"]);
+let emptyFunction = emptyFunction_mod;
+obj.textDecorationStyle = emptyFunction.oneOf(["solid", "double", "dotted", "dashed"]);
+obj.textDecorationColor = colorPropType;
+let emptyFunction = emptyFunction_mod;
+obj.textTransform = emptyFunction.oneOf(["none", "capitalize", "uppercase", "lowercase"]);
+let emptyFunction = emptyFunction_mod;
+obj.writingDirection = emptyFunction.oneOf(["auto", "ltr", "rtl"]);
 
-export default importDefaultResultResult;
+export default obj;

@@ -1,43 +1,7 @@
 // === Module 6070: ? ===
 
 // Module 6070
-import normalizeSnapPoint from "normalizeSnapPoint" /* 6062 */;
-import noop from "module_19" /* 19 */;
+import registerAsset from "module_1121" /* 1121 */;
 
-const require = globalThis.__r;
 
-({ useCallback: c2, useEffect: c3 } = noop);
-
-export const useScrollableSetter = (scrollableRef, value, scrollableContentOffsetY, value2) => {
-  _require = scrollableRef;
-  dependencyMap = value;
-  let tmp = focusHook;
-  if (focusHook === undefined) {
-    tmp = value2;
-  }
-  const bottomSheetInternal = require("module_6053").useBottomSheetInternal();
-  const animatedScrollableType = bottomSheetInternal.animatedScrollableType;
-  const animatedScrollableContentOffsetY = bottomSheetInternal.animatedScrollableContentOffsetY;
-  const isContentHeightFixed = bottomSheetInternal.isContentHeightFixed;
-  const isScrollableRefreshable = bottomSheetInternal.isScrollableRefreshable;
-  const setScrollableRef = bottomSheetInternal.setScrollableRef;
-  const removeScrollableRef = bottomSheetInternal.removeScrollableRef;
-  const items = [scrollableRef, value, value2, animatedScrollableType, animatedScrollableContentOffsetY, scrollableContentOffsetY, isScrollableRefreshable, isContentHeightFixed, setScrollableRef, removeScrollableRef];
-  tmp(scrollableContentOffsetY(() => {
-    animatedScrollableContentOffsetY.value = scrollableContentOffsetY.value;
-    animatedScrollableType.value = value;
-    isScrollableRefreshable.value = value2;
-    isContentHeightFixed.value = false;
-    const findNodeHandleResult = normalizeSnapPoint.findNodeHandle(scrollableRef.current);
-    if (findNodeHandleResult) {
-      const obj2 = { id: findNodeHandleResult, node: scrollableRef };
-      setScrollableRef(obj2);
-    } else {
-      const _console = console;
-      console.warn("Couldn't find the scrollable node handle id!");
-    }
-    return () => {
-      removeScrollableRef(scrollableRef);
-    };
-  }, items));
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "fb8db2c451f0cd706524543233306348", name: "ic_partnered_guild_icon_blurple_24px", type: "png" });

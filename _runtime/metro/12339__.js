@@ -1,21 +1,7 @@
 // === Module 12339: ? ===
 
 // Module 12339
-import _mod12314 from "module_12314" /* 12314 */;
-import ScopeClass from "ScopeClass" /* 12334 */;
+import registerAsset from "module_1121" /* 1121 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export const getDefaultCurrentScope = function getDefaultCurrentScope() {
-  return _mod12314.getGlobalSingleton("defaultCurrentScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
-};
-export const getDefaultIsolationScope = function getDefaultIsolationScope() {
-  return _mod12314.getGlobalSingleton("defaultIsolationScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/directory_channels/native/images", width: 375, height: 300, scales: [2], hash: "ce796d5b5dedd403e327ddf7cc5530fc", name: "hub_header", type: "png" });

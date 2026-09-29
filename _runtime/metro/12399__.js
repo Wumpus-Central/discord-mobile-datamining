@@ -1,38 +1,7 @@
 // === Module 12399: ? ===
 
 // Module 12399
-import _mod12311 from "module_12311" /* 12311 */;
-import _mod12313 from "module_12313" /* 12313 */;
-import _mod12314 from "module_12314" /* 12314 */;
+import registerAsset from "module_1121" /* 1121 */;
 
-require = arg1;
-const dependencyMap = arg6;
-function instrumentConsole() {
-  if ("console" in _mod12314.GLOBAL_OBJ) {
-    const CONSOLE_LEVELS = _mod12313.CONSOLE_LEVELS;
-    const item = CONSOLE_LEVELS.forEach((item) => {
-      closure_0 = item;
-      if (item in closure_0(12314).GLOBAL_OBJ.console) {
-        tmp(12319).fill(tmp(12314).GLOBAL_OBJ.console, item, (arg0) => {
-          _mod12313.originalConsoleMethods[level] = arg0;
-          return () => {
-            const items = [...arguments];
-            level(12311).triggerHandlers("console", { args: items, level });
-            const obj3 = level(12313).originalConsoleMethods[level];
-            if (obj3) {
-              obj3.apply(level(12314).GLOBAL_OBJ.console, items);
-            }
-            const obj = { args: items, level };
-            const obj2 = level(12311);
-          };
-        });
-        const tmpResult = tmp(12319);
-      }
-    });
-  }
-}
 
-export const addConsoleInstrumentationHandler = function addConsoleInstrumentationHandler(errorCallback) {
-  _mod12311.addHandler("console", errorCallback);
-  _mod12311.maybeInstrument("console", instrumentConsole);
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/create_guild/native/images", width: 161, height: 105, scales: [1, 2, 3], hash: "15df55e98006c5e50dacb86d466b47d8", name: "invite-wumpus-ticket", type: "png" });

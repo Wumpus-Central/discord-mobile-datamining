@@ -1,70 +1,32 @@
 // === Module 7939: ? ===
 
 // Module 7939
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef7933 from "module_7933" /* 7933 */;
-import _modDef7940 from "module_7940" /* 7940 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
+import colorPropType from "colorPropType" /* 7927 */;
+import _mod7935 from "module_7935" /* 7935 */;
+import merged12 from "merged1" /* 7936 */;
+import merged22 from "merged2" /* 7937 */;
+import emptyFunction_mod from "module_4663" /* 4663 */;
 
-const ClipPath = fn;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class ClipPath {
-  constructor() {
-    self = this;
-    tmp = closure_3(this, ClipPath);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(ClipPath);
-    tmp3 = closure_4;
-    if (closure_7()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-_inherits(ClipPath, _modDef7933);
-const entry = {
-  key: "render",
-  value: function render() {
-    const props = this.props;
-    const obj = { ref: this.refMethod };
-    const merged = Object.assign(ClipPath(7924).extract(this, props));
-    obj.children = props.children;
-    return <tmp ref={this.refMethod} />;
-  }
-};
-const items = [entry];
-const importDefaultResultResult = _createClass(ClipPath, items);
-importDefaultResultResult.displayName = "ClipPath";
+const obj = {};
+const size = Object.assign(_mod7935);
+const merged1 = Object.assign(merged12);
+const merged2 = Object.assign(merged22);
+let emptyFunction = emptyFunction_mod;
+obj.resizeMode = emptyFunction.oneOf(["center", "contain", "cover", "repeat", "stretch"]);
+let emptyFunction = emptyFunction_mod;
+obj.backfaceVisibility = emptyFunction.oneOf(["visible", "hidden"]);
+obj.backgroundColor = colorPropType;
+obj.borderColor = colorPropType;
+obj.borderWidth = emptyFunction.number;
+obj.borderRadius = emptyFunction.number;
+let emptyFunction = emptyFunction_mod;
+obj.overflow = emptyFunction.oneOf(["visible", "hidden"]);
+obj.tintColor = colorPropType;
+obj.opacity = emptyFunction.number;
+obj.overlayColor = emptyFunction.string;
+obj.borderTopLeftRadius = emptyFunction.number;
+obj.borderTopRightRadius = emptyFunction.number;
+obj.borderBottomLeftRadius = emptyFunction.number;
+obj.borderBottomRightRadius = emptyFunction.number;
 
-export default importDefaultResultResult;
+export default obj;

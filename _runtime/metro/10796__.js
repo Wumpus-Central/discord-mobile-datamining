@@ -1,8 +1,7 @@
 // === Module 10796: ? ===
 
 // Module 10796
-import _mod17 from "module_17" /* 17 */;
+import registerAsset from "module_1121" /* 1121 */;
 
-const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 
-export const NativeDocumentPicker = TurboModuleRegistry.getEnforcing("RNDocumentPicker");
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/tiered_tenure_badging/native/images", width: 59.666666666666664, height: 59.666666666666664, scales: [3], hash: "98f28dd3128f04f38057757d2f825a42", name: "asset_gold_badge_small", type: "png" });

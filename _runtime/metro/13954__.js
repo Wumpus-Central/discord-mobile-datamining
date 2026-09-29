@@ -1,7 +1,8 @@
 // === Module 13954: ? ===
 
 // Module 13954
-import registerAsset from "module_1121" /* 1121 */;
+import _mod14023 from "module_14023" /* 14023 */;
+import module_13955 from "module_13955" /* 13955 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties", scales: [1], hash: "e2ea348445c8a662d796c112d980d074", name: "Microphone", type: "lottie" });
+export default _mod14023.Object.assign;

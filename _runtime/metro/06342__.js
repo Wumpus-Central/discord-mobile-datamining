@@ -1,21 +1,51 @@
 // === Module 6342: ? ===
 
 // Module 6342
-import _mod19 from "module_19" /* 19 */;
-import _mod6294 from "module_6294" /* 6294 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-_mod19.useCallback;
+const noop = fn(19);
+({ useEffect: c2, useState: c3 } = noop);
+const AccessibilityInfo = fn(17).AccessibilityInfo;
 
-export const useMappingHelper = () => {
-  const recyclerViewContext = _mod6294.useRecyclerViewContext();
-  const obj2 = { getMappingKey: null };
-  const items = [recyclerViewContext];
-  obj2.getMappingKey = useCallback((arg0, arg1) => {
-    let tmp = arg0;
-    if (recyclerViewContext) {
-      tmp = arg1;
-    }
-    return tmp;
-  }, items);
-  return obj2;
+export const useIsScreenReaderEnabled = function useIsScreenReaderEnabled() {
+  const tmp = _slicedToArray(closure_3(false), 2);
+  closure_0 = tmp[1];
+  closure_2(() => {
+    closure_129_0 = closure_0(function*() {
+      closure_1 = tmp3;
+      yield screenReaderEnabled.isScreenReaderEnabled();
+      if (1 === tmp7) {
+        c3 = 0;
+        const _console = console;
+        console.warn("Could not read accessibility info: defaulting to false");
+        c5 = 3;
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 !== 2) {
+        closure_128_0 = value;
+        closure_0(closure_128_0);
+        c3 = 0;
+      }
+      return value;
+    });
+    (function checkStatus() {
+      const self = this;
+      const apply = closure_0.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
+    })();
+    closure_0 = AccessibilityInfo.addEventListener("screenReaderChanged", (event) => {
+      closure_0(event);
+    });
+    return () => {
+      closure_0.remove();
+    };
+  }, []);
+  return tmp[0];
 };

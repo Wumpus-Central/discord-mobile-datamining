@@ -1,15 +1,7 @@
 // === Module 6112: ? ===
 
 // Module 6112
-import get_ActivityIndicator from "module_17" /* 17 */;
+import registerAsset from "module_1121" /* 1121 */;
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-let PlatformConstants;
-if (NativeModules != null) {
-  PlatformConstants = NativeModules.PlatformConstants;
-}
-if (PlatformConstants == null) {
-  PlatformConstants = get_ActivityIndicator.Platform.constants;
-}
 
-export default PlatformConstants;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../node_modules/.pnpm/@react-navigation+elements@2.9.34_ogrwmflqwrxbxbb3hpokpwnsgq/node_modules/@react-navigation/elements/lib/module/assets", width: 24, height: 24, scales: [1, 2, 3, 4], hash: "940453dc5cbfaa96cf907b3aa7791ece", name: "search-icon", type: "png" });

@@ -1,68 +1,72 @@
 // === Module 6322: ? ===
 
 // Module 6322
-import _mod6320 from "module_6320" /* 6320 */;
-import _slicedToArray from "module_6275" /* 6275 */;
+import handlerIDToTag from "handlerIDToTag" /* 6243 */;
+import transformIntoHandlerTags from "transformIntoHandlerTags" /* 6270 */;
+import _mod6283 from "module_6283" /* 6283 */;
+import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6307 */;
+import noop from "module_19" /* 19 */;
 
-require = fn;
-const noop = fn(19);
-({ useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty, useState: metroRequire } = noop);
-function useOnLoad(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  closure_2 = hasOwnProperty(false);
-  React3(() => {
-    isFirstLayoutComplete = isFirstLayoutComplete.getIsFirstLayoutComplete();
-    if (isFirstLayoutComplete) {
-      isFirstLayoutComplete = !ref.current;
-    }
-    if (isFirstLayoutComplete) {
-      ref.current = true;
-      f82049();
-    }
-  });
-}
+const require = globalThis.__r;
 
-export const useOnListLoad = (recyclerViewManager, onLoad) => {
-  let isFirstLayoutComplete = recyclerViewManager;
-  let f82049 = onLoad;
-  hasOwnProperty(Date.now());
-  [tmp3, closure_3] = timestampProducer(false);
-  const dataLength = recyclerViewManager.getDataLength();
-  const tmp2 = _slicedToArray(timestampProducer(false), 2);
-  const requestAnimationFrame = _mod6320.useUnmountAwareAnimationFrame().requestAnimationFrame;
-  const items = [dataLength];
-  React4(() => {
-    closure_2.current = Date.now();
-  }, items);
-  if (typeof useOnLoad === "function") {
-    isFirstLayoutComplete = recyclerViewManager;
-    f82049 = () => {
-      const elapsedTimeInMs = Date.now() - ref.current;
-      requestAnimationFrame(() => {
-        elapsedTimeInMs.isFirstPaintOnUiComplete = true;
-        if (f82049 != null) {
-          const obj = { elapsedTimeInMs };
-          tmp(obj);
-        }
-        closure_2_3(true);
-      });
-    };
-    hasOwnProperty(false);
-    React3(() => {
-      isFirstLayoutComplete = isFirstLayoutComplete.getIsFirstLayoutComplete();
-      if (isFirstLayoutComplete) {
-        isFirstLayoutComplete = !ref.current;
-      }
-      if (isFirstLayoutComplete) {
-        ref.current = true;
-        f82049();
-      }
-    });
-    const obj2 = { isLoaded: tmp3 };
-    return obj2;
+({ useEffect: c2, useMemo: c3 } = noop);
+
+export const useGesture = function useGesture(Fling, clonedAndRemappedConfig) {
+  _require = Fling;
+  dependencyMap = clonedAndRemappedConfig;
+  const tmp2 = jsEventHandler(() => type(config[1]).getNextHandlerTag(), []);
+  const handlerTag = tmp2;
+  if (clonedAndRemappedConfig.disableReanimated !== jsEventHandler(() => config.disableReanimated, [])) {
+    const _Error2 = Error;
+    const error = new Error(require("tagMessage").tagMessage("The \"disableReanimated\" property must not be changed after the handler is created."));
+    throw error;
   } else {
-    throw new TypeError("Trying to call a non-function");
+    const gestureCallbacks = require("module_6323").useGestureCallbacks(tmp2, clonedAndRemappedConfig);
+    jsEventHandler = gestureCallbacks.jsEventHandler;
+    const reanimatedEventHandler = gestureCallbacks.reanimatedEventHandler;
+    const animatedEventHandler = gestureCallbacks.animatedEventHandler;
+    if (clonedAndRemappedConfig.shouldUseReanimatedDetector) {
+      if (!reanimatedEventHandler) {
+        const _Error = Error;
+        const error1 = new Error(require("tagMessage").tagMessage("Failed to create reanimated event handlers."));
+        throw error1;
+      }
+    }
+    const items = [tmp2, , , ];
+    ({ simultaneousWith: arr[1], requireToFail: arr[2], block: arr[3] } = clonedAndRemappedConfig);
+    const tmpResult = tmp(() => DEFAULT_PROPS_TRANSFORMER.prepareRelations({ simultaneousWith: config.simultaneousWith, requireToFail: config.requireToFail, block: config.block }, closure_2), items);
+    const gestureRelations = tmpResult;
+    const items1 = [tmp2, Fling, clonedAndRemappedConfig, jsEventHandler, reanimatedEventHandler, animatedEventHandler, tmpResult];
+    const tmpResult2 = tmp(() => {
+      const obj = { handlerTag, type, config, detectorCallbacks: { jsEventHandler, animatedEventHandler, reanimatedEventHandler }, gestureRelations };
+      return obj;
+    }, items1);
+    closure_7 = tmpResult2;
+    const items2 = [Fling, tmp2];
+    handlerTag(() => {
+      let NativeProxy = _mod6283.NativeProxy;
+      NativeProxy.createGestureHandler(closure_0, closure_2, {});
+      let result = transformIntoHandlerTags.scheduleFlushOperations();
+      return () => {
+        const NativeProxy = closure_0(6283).NativeProxy;
+        NativeProxy.dropGestureHandler(handlerTag);
+        const result = closure_0(6270).scheduleFlushOperations();
+      };
+    }, items2);
+    const items3 = [tmp2, clonedAndRemappedConfig, Fling, tmpResult2];
+    handlerTag(() => {
+      const result = DEFAULT_PROPS_TRANSFORMER.prepareConfigForNativeSide(closure_0, dependencyMap);
+      const NativeProxy = _mod6283.NativeProxy;
+      const result1 = NativeProxy.setGestureHandlerConfig(closure_2, result);
+      const result2 = transformIntoHandlerTags.scheduleFlushOperations();
+      DEFAULT_PROPS_TRANSFORMER.bindSharedValues(dependencyMap, closure_2);
+      handlerIDToTag.registerGesture(closure_2, closure_7);
+      return () => {
+        closure_0(6307).unbindSharedValues(dependencyMap, handlerTag);
+        const obj = closure_0(6307);
+        closure_0(6243).unregisterGesture(handlerTag);
+      };
+    }, items3);
+    return tmpResult2;
   }
 };
-export { useOnLoad };

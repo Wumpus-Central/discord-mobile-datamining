@@ -1,23 +1,78 @@
 // === Module 10223: ? ===
 
 // Module 10223
-import _mod10224 from "module_10224" /* 10224 */;
-import _mod10227 from "module_10227" /* 10227 */;
-import _mod10231 from "module_10231" /* 10231 */;
-import _mod10232 from "module_10232" /* 10232 */;
-import CarouselLayout from "CarouselLayout" /* 10233 */;
-import noop from "module_19" /* 19 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _mod10083 from "module_10083" /* 10083 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-require = fn;
-const jsx = fn(21).jsx;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class UKMergeDateTimeRefiner {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, UKMergeDateTimeRefiner);
+    tmp2 = c2;
+    obj = c2(UKMergeDateTimeRefiner);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_classCallCheck = UKMergeDateTimeRefiner;
+_inherits(UKMergeDateTimeRefiner, fn(_mod10083).default);
+const entry = {
+  key: "patternBetween",
+  value: function patternBetween() {
+    const regExp = new RegExp("^\\s*(T|\u0432|\u0443|\u043E|,|-)?\\s*$");
+    return regExp;
+  }
+};
+const items = [entry];
 
-export default noop.forwardRef((defaultIndex, ref) => {
-  const initProps = _mod10224.useInitProps(defaultIndex);
-  const commonVariables = _mod10227.useCommonVariables(initProps);
-  const obj4 = {};
-  const merged = Object.assign(initProps);
-  obj4.dataLength = initProps.dataLength;
-  const propsErrorBoundary = _mod10231.usePropsErrorBoundary(obj4);
-  const obj5 = { value: { props: initProps, common: commonVariables }, children: jsx(CarouselLayout.CarouselLayout, { ref }) };
-  return jsx(_mod10232.GlobalStateProvider, { value: { props: initProps, common: commonVariables }, children: jsx(CarouselLayout.CarouselLayout, { ref }) });
-});
+export default _createClass(UKMergeDateTimeRefiner, items);

@@ -1,7 +1,32 @@
 // === Module 6473: ? ===
 
 // Module 6473
-import registerAsset from "module_1121" /* 1121 */;
+import _mod6471 from "module_6471" /* 6471 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "45c8ad8f30ca8563a8afaab90a692e66", name: "MagnifyingGlassIcon", type: "png" });
+export default function _superPropBase(arg0, key10009) {
+  hasOwnProperty = {}.hasOwnProperty;
+  const call = hasOwnProperty.call;
+  let tmp = arg0;
+  if (!(typeof call === "unknown" ? hasOwnProperty(key10009) : call(arg0, key10009))) {
+    let tmp4 = _mod6471(arg0);
+    tmp = tmp4;
+    if (null !== tmp4) {
+      while (true) {
+        let hasOwnProperty2 = {}.hasOwnProperty;
+        let call2 = hasOwnProperty2.call;
+        tmp = tmp4;
+        if (typeof call2 === "unknown" ? hasOwnProperty2(key10009) : call2(tmp4, key10009)) {
+          break;
+        } else {
+          tmp4 = _mod6471(tmp4);
+          tmp = tmp4;
+          if (null === tmp4) {
+            break;
+          }
+        }
+      }
+    }
+  }
+  return tmp;
+};

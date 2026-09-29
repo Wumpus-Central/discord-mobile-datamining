@@ -1,15 +1,7 @@
 // === Module 17486: ? ===
 
 // Module 17486
-import _mod17487 from "module_17487" /* 17487 */;
-import capitalize from "capitalize" /* 17495 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default _mod17487((arg0, str, arg2) => {
-  const formatted = str.toLowerCase();
-  let tmp2 = formatted;
-  if (arg2) {
-    tmp2 = capitalize(formatted);
-  }
-  return arg0 + tmp2;
-});
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images", width: 24, height: 24, scales: [2, 3], hash: "5d792e9e92a8795cc3d086a321f6344d", name: "ic_premium_tiers_24px", type: "png" });

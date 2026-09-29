@@ -1,7 +1,27 @@
 // === Module 13964: ? ===
 
 // Module 13964
-import registerAsset from "module_1121" /* 1121 */;
+import module_13965_mod from "module_13965" /* 13965 */;
 
+const call = prototype.call;
+let module_13965 = module_13965_mod;
+if (module_13965) {
+  const bind = prototype.bind;
+  module_13965 = bind.bind(call, call);
+}
+if (!module_13965) {
+  module_13965 = (arg0) => {
+    closure_0 = arg0;
+    return () => {
+      const apply = call.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(closure_0);
+      } else {
+        applyArgumentsResult = apply(closure_0, arguments);
+      }
+      return applyArgumentsResult;
+    };
+  };
+}
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties", scales: [1], hash: "3b38f8bf8ac6605b344df2f05c37673a", name: "NitroGem9", type: "lottie" });
+export default module_13965;

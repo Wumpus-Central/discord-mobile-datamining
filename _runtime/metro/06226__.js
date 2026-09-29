@@ -1,7 +1,17 @@
 // === Module 6226: ? ===
 
 // Module 6226
-import _modDef6227 from "module_6227" /* 6227 */;
+import _mod19 from "module_19" /* 19 */;
+import BottomSheetContext from "BottomSheetContext" /* 6222 */;
 
+const useContext = _mod19.useContext;
 
-export default _modDef6227;
+export const useBottomSheetModalInternal = function useBottomSheetModalInternal(arg0) {
+  const tmp = useContext(BottomSheetContext.BottomSheetModalInternalContext);
+  if (true !== arg0) {
+    if (null === tmp) {
+      throw "'BottomSheetModalInternalContext' cannot be null!";
+    }
+  }
+  return tmp;
+};

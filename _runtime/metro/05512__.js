@@ -1,47 +1,7 @@
 // === Module 5512: ? ===
 
 // Module 5512
-import _mod5513 from "module_5513" /* 5513 */;
-import _mod5515 from "module_5515" /* 5515 */;
+import registerAsset from "module_1121" /* 1121 */;
 
-const self = this;
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let fn = self;
-  if (self) {
-    fn = self.__exportStar;
-  }
-  if (!fn) {
-    fn = (obj, exports) => {
-      for (const key10007 in arg0) {
-        let tmp6 = "default" === key10007;
-        if (tmp6) {
-          if (tmp6) {
-            continue;
-          } else {
-            let tmp4 = self2(arg1, arg0, key10007);
-            continue;
-          }
-          continue;
-        } else {
-          let _Object = Object;
-          hasOwnProperty = Object.prototype.hasOwnProperty;
-          let call = hasOwnProperty.call;
-          if (typeof call === "unknown") {
-            let hasOwnPropertyResult = hasOwnProperty(key10007);
-          } else {
-            hasOwnPropertyResult = call(arg1, key10007);
-          }
-        }
-      }
-    };
-  }
-  const _Object2 = Object;
-  fn(_mod5513, exports);
-  fn(_mod5515, exports);
-} else {
-  let _Object = Object;
-}
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "e3a50d090de2ca1d8928677d5f100909", name: "HubIcon", type: "png" });

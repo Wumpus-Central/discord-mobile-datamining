@@ -1,14 +1,7 @@
 // === Module 13818: ? ===
 
 // Module 13818
-import _mod13799 from "module_13799" /* 13799 */;
-import _mod13819 from "module_13819" /* 13819 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default (arg0, arg1) => {
-  let tmp4;
-  if (!_mod13799(arg0[arg1])) {
-    tmp4 = _mod13819(tmp);
-  }
-  return tmp4;
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/status", width: 36, height: 24, scales: [2, 3], hash: "48a492306912f6e40271e3f606596ed0", name: "StatusVROnline", type: "png" });

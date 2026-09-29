@@ -1,10 +1,7 @@
 // === Module 13578: ? ===
 
 // Module 13578
-import _mod13576 from "module_13576" /* 13576 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default (arr, arg1) => {
-  closure_0 = arg1;
-  return arr.sort((arg0, arg1) => _mod13576(arg1, arg0, closure_0));
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/oauth2", width: 375, height: 812, scales: [2, 3], hash: "9f0466452ea774e0a27ad50f4f806303", name: "background", type: "png" });

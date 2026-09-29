@@ -1,7 +1,26 @@
 // === Module 8616: ? ===
 
 // Module 8616
-import registerAsset from "module_1121" /* 1121 */;
+import _mod8617 from "module_8617" /* 8617 */;
 
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+const mergeDefs = fn(_mod8617);
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/upsell", width: 120, height: 80, scales: [2, 3], hash: "8c6e7658ce5157dd6c415ee437c71c87", name: "img_nitro_animated_emoji", type: "png" });
+export default function default_1() {
+  return mergeDefs.default();
+};
+export default exports.default;

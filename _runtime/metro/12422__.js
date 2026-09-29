@@ -1,33 +1,7 @@
 // === Module 12422: ? ===
 
 // Module 12422
+import registerAsset from "module_1121" /* 1121 */;
 
-export const flatten = function flatten(arr) {
-  const items = [];
-  const item = arr.forEach((arr) => {
-    if (Array.isArray(arr)) {
-      let item = arr.forEach((arr) => {
-        if (Array.isArray(arr)) {
-          let item = arr.forEach((arr) => {
-            if (Array.isArray(arr)) {
-              let item = arr.forEach((arr) => {
-                if (Array.isArray(arr)) {
-                  let item = arr.forEach(() => { ... });
-                } else {
-                  arr = closure_1_0.push(arr);
-                }
-              });
-            } else {
-              arr = closure_1_0.push(arr);
-            }
-          });
-        } else {
-          arr = closure_1_0.push(arr);
-        }
-      });
-    } else {
-      arr = closure_1_0.push(arr);
-    }
-  });
-  return items;
-};
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/hub/native/images", width: 88, height: 80, scales: [2, 3], hash: "d719145f0510a722efd9724a4e3cf026", name: "verify-email", type: "png" });

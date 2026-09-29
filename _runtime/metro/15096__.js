@@ -1,13 +1,7 @@
 // === Module 15096: ? ===
 
 // Module 15096
-import _mod15101 from "module_15101" /* 15101 */;
-import module_7727 from "module_7727" /* 7727 */;
-
-const require = globalThis.__r;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export const getYoutubeMeta = require("module_15097").getYoutubeMeta;
-export const PLAYER_STATES = require("PLAY_MODE").PLAYER_STATES_NAMES;
-export const PLAYER_ERRORS = require("PLAY_MODE").PLAYER_ERROR_NAMES;
-export default module_7727(_mod15101).default;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "11800cac78ee381d38bd7d0b06eed7b0", name: "EmojiFaceVomitingIcon", type: "png" });

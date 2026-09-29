@@ -1,13 +1,15 @@
 // === Module 6151: ? ===
 
 // Module 6151
-import noop from "module_19" /* 19 */;
 
-const use = noop.use;
-const context = noop.createContext(null);
-
-export const InterceptingDetectorMode = { DEFAULT: 0, [0]: "DEFAULT", ANIMATED: 1, [1]: "ANIMATED", REANIMATED: 2, [2]: "REANIMATED" };
-export const InterceptingDetectorContext = context;
-export const useInterceptingDetectorContext = function useInterceptingDetectorContext() {
-  return use(context);
+export const getLabel = function getLabel(label, arg1) {
+  if (undefined !== label.label) {
+    let title = label.label;
+  } else {
+    title = arg1;
+    if (undefined !== label.title) {
+      title = label.title;
+    }
+  }
+  return title;
 };

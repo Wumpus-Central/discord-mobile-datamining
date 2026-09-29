@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "dc61f45d0cc4d873f94fb631a2db066a", name: "CircleCheckIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/auto_moderation", width: 16, height: 16, scales: [2, 3], hash: "9fc7a06bd709251a424bf9095d4f7ecf", name: "ic_auto_moderation_shield", type: "png" });

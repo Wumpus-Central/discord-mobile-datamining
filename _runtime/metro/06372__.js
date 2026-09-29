@@ -1,117 +1,296 @@
 // === Module 6372: ? ===
 
 // Module 6372
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-export const encode = (arg0) => {
-  let sum3;
-  let buffer = arg0;
-  if (!Buffer.isBuffer(arg0)) {
-    const _Buffer = Buffer;
-    buffer = new Buffer(arg0);
+const GenericTouchable = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  const rounded = Math.floor(buffer.length / 5);
-  let sum = rounded;
-  if (buffer.length % 5 !== 0) {
-    sum = rounded + 1;
-  }
-  const buffer1 = new Buffer(8 * sum);
-  let num2 = 0;
-  let num3 = 0;
-  let num4 = 0;
-  let num5 = 0;
-  if (0 < buffer.length) {
-    do {
-      let tmp6 = buffer[num4];
-      if (3 < num2) {
-        let sum1 = num4 + 1;
-        let num6 = 0;
-        let tmp16 = tmp6 & 255 >> num2;
-        if (sum1 < buffer.length) {
-          num6 = buffer[sum1];
-        }
-        let result = (num2 + 5) % 8;
-        let tmp13 = tmp16 << result | num6 >> 8 - result;
-        let tmp14 = result;
-        sum3 = sum1;
-      } else {
-        let sum2 = num2 + 5;
-        let tmp11 = tmp6 >> 8 - sum2 & 31;
-        let result1 = sum2 % 8;
-        tmp13 = tmp11;
-        tmp14 = result1;
-        sum3 = num4;
-        if (0 === result1) {
-          sum3 = num4 + 1;
-          tmp13 = tmp11;
-          tmp14 = result1;
-        }
-      }
-      let charCodeAt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567".charCodeAt;
-      buffer1[num3] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567".charCodeAt(tmp13);
-      num3 = num3 + 1;
-      num2 = tmp14;
-      num4 = sum3;
-      num5 = num3;
-    } while (sum3 < buffer.length);
-  }
-  if (num5 < buffer1.length) {
-    do {
-      buffer1[num5] = 61;
-      num5 = num5 + 1;
-      length = buffer1.length;
-    } while (num5 < length);
-  }
-  return buffer1;
-};
-export const decode = (arg0) => {
-  let buffer = arg0;
-  if (!Buffer.isBuffer(arg0)) {
-    const _Buffer = Buffer;
-    buffer = new Buffer(arg0);
-  }
-  const buffer1 = new Buffer(Math.ceil(5 * buffer.length / 8));
-  let num = 0;
-  if (0 < buffer.length) {
-    let num7 = 0;
-    let num8 = 0;
-    let num9 = 0;
-    num = 0;
-    if (61 !== buffer[0]) {
-      const diff = buffer[num7] - 48;
-      while (diff < length.length) {
-        let tmp14 = length[diff];
-        if (num9 <= 3) {
-          let result = (num9 + 5) % 8;
-          if (0 === result) {
-            buffer1[num8] = tmp4 | tmp14;
-            let sum = num8 + 1;
-            let result1 = result;
-            let num10 = 0;
-          } else {
-            num10 = tmp4 | 255 & tmp14 << 8 - result;
-            sum = num8;
-            result1 = result;
-          }
+}
+const Animated = fn(17).Animated;
+const jsx = fn(21).jsx;
+const TOUCHABLE_STATE = { UNDETERMINED: 0, BEGAN: 1, MOVED_OUTSIDE: 2 };
+class GenericTouchable {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = c2(this, GenericTouchable);
+    items1 = [...items];
+    tmp2 = closure_4;
+    obj = closure_4(GenericTouchable);
+    tmp3 = closure_3;
+    if (closure_7()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.longPressDetected = false;
+    tmp3Result.pointerInside = true;
+    tmp3Result.STATE = closure_8.UNDETERMINED;
+    tmp3Result.onGestureEvent = (nativeEvent) => {
+      const pointerInside = nativeEvent.nativeEvent.pointerInside;
+      if (closure_0.pointerInside !== pointerInside) {
+        if (pointerInside) {
+          closure_0.onMoveIn();
         } else {
-          result1 = (num9 + 5) % 8;
-          buffer1[num8] = tmp4 | 255 & tmp14 >>> result1;
-          sum = num8 + 1;
-          num10 = 255 & tmp14 << 8 - result1;
-        }
-        let sum1 = num7 + 1;
-        num = sum;
-        if (sum1 < buffer.length) {
-          num7 = sum1;
-          num8 = sum;
-          num9 = result1;
-          tmp4 = num10;
-          num = sum;
+          closure_0.onMoveOut();
         }
       }
-      const _Error = Error;
-      const error = new Error("Invalid input - it is not base32 encoded string");
-      throw error;
+      closure_0.pointerInside = pointerInside;
+    };
+    tmp3Result.onHandlerStateChange = (nativeEvent) => {
+      const state = nativeEvent.nativeEvent.state;
+      if (state !== GenericTouchable(6245).State.CANCELLED) {
+        if (state !== GenericTouchable(6245).State.FAILED) {
+          if (state === GenericTouchable(6245).State.BEGAN) {
+            if (closure_0.STATE === closure_0.UNDETERMINED) {
+              closure_0.handlePressIn();
+            }
+          }
+          if (state === GenericTouchable(6245).State.END) {
+            const longPressDetected = closure_0.longPressDetected;
+            let tmp5 = !longPressDetected;
+            if (!longPressDetected) {
+              tmp5 = closure_0.STATE !== closure_0.MOVED_OUTSIDE;
+            }
+            if (tmp5) {
+              tmp5 = undefined === closure_0.pressOutTimeout;
+            }
+            const result = closure_0.handleGoToUndetermined();
+            if (tmp5) {
+              const props = closure_0.props;
+              const onPress = props.onPress;
+              if (onPress != null) {
+                onPress();
+              }
+            }
+          }
+        }
+      }
+      closure_0.moveToState(closure_0.UNDETERMINED);
+    };
+    tmp3Result.onLongPressDetected = () => {
+      closure_0.longPressDetected = true;
+      const props = closure_0.props;
+      const onLongPress = props.onLongPress;
+      if (onLongPress != null) {
+        onLongPress();
+      }
+    };
+    return tmp3Result;
+  }
+}
+_inherits(GenericTouchable, fn(19).Component);
+const entry = {
+  key: "handlePressIn",
+  value: function handlePressIn() {
+    const self = this;
+    if (this.props.delayPressIn) {
+      const _setTimeout = setTimeout;
+      self.pressInTimeout = setTimeout(() => {
+        self.moveToState(obj.BEGAN);
+        self.pressInTimeout = undefined;
+      }, self.props.delayPressIn);
+    } else {
+      self.moveToState(obj.BEGAN);
+    }
+    if (self.props.onLongPress) {
+      const _setTimeout2 = setTimeout;
+      self.longPressTimeout = setTimeout(self.onLongPressDetected, (self.props.delayPressIn || 0) + (self.props.delayLongPress || 0));
+      const tmp4 = self.props.delayPressIn || 0;
+      const tmp5 = self.props.delayLongPress || 0;
     }
   }
-  return buffer1.slice(0, num);
 };
+let items = [
+  entry,
+  {
+    key: "handleMoveOutside",
+    value: function handleMoveOutside() {
+      const self = this;
+      if (this.props.delayPressOut) {
+        let pressOutTimeout = self.pressOutTimeout;
+        if (!pressOutTimeout) {
+          const _setTimeout = setTimeout;
+          pressOutTimeout = setTimeout(() => {
+            self.moveToState(obj.MOVED_OUTSIDE);
+            self.pressOutTimeout = undefined;
+          }, self.props.delayPressOut);
+        }
+        self.pressOutTimeout = pressOutTimeout;
+      } else {
+        self.moveToState(obj.MOVED_OUTSIDE);
+      }
+    }
+  },
+  {
+    key: "handleGoToUndetermined",
+    value: function handleGoToUndetermined() {
+      const self = this;
+      clearTimeout(this.pressOutTimeout);
+      if (this.props.delayPressOut) {
+        const _setTimeout = setTimeout;
+        self.pressOutTimeout = setTimeout(() => {
+          if (self.STATE === self.UNDETERMINED) {
+            self.moveToState(self.BEGAN);
+          }
+          self.moveToState(self.UNDETERMINED);
+          self.pressOutTimeout = undefined;
+        }, self.props.delayPressOut);
+      } else {
+        if (self.STATE === obj.UNDETERMINED) {
+          self.moveToState(obj.BEGAN);
+        }
+        self.moveToState(obj.UNDETERMINED);
+      }
+    }
+  },
+  {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.reset();
+    }
+  },
+  {
+    key: "reset",
+    value: function reset() {
+      const obj = { longPressDetected: false, pointerInside: true };
+      clearTimeout(obj.pressInTimeout);
+      clearTimeout(obj.pressOutTimeout);
+      clearTimeout(obj.longPressTimeout);
+      obj.pressOutTimeout = undefined;
+      obj.longPressTimeout = undefined;
+      obj.pressInTimeout = undefined;
+    }
+  },
+  {
+    key: "moveToState",
+    value: function moveToState(BEGAN) {
+      const self = this;
+      if (BEGAN !== this.STATE) {
+        if (BEGAN === obj.BEGAN) {
+          const props3 = self.props;
+          const onPressIn = props3.onPressIn;
+          if (onPressIn != null) {
+            onPressIn();
+          }
+        } else if (BEGAN === obj.MOVED_OUTSIDE) {
+          const props2 = self.props;
+          const onPressOut2 = props2.onPressOut;
+          if (onPressOut2 != null) {
+            onPressOut2();
+          }
+        } else if (BEGAN === obj.UNDETERMINED) {
+          self.reset();
+          if (self.STATE === obj.BEGAN) {
+            const props = self.props;
+            const onPressOut = props.onPressOut;
+            if (onPressOut != null) {
+              onPressOut();
+            }
+          }
+        }
+        const props4 = self.props;
+        const onStateChange = props4.onStateChange;
+        if (onStateChange != null) {
+          onStateChange(self.STATE, BEGAN);
+        }
+        self.STATE = BEGAN;
+      }
+    }
+  },
+  {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      this.reset();
+    }
+  },
+  {
+    key: "onMoveIn",
+    value: function onMoveIn() {
+      const self = this;
+      if (this.STATE === obj.MOVED_OUTSIDE) {
+        self.moveToState(tmp.BEGAN);
+      }
+    }
+  },
+  {
+    key: "onMoveOut",
+    value: function onMoveOut() {
+      const self = this;
+      clearTimeout(this.longPressTimeout);
+      this.longPressTimeout = undefined;
+      if (this.STATE === obj.BEGAN) {
+        self.handleMoveOutside();
+      }
+    }
+  },
+  {
+    key: "render",
+    value: function render() {
+      const self = this;
+      if (typeof this.props.hitSlop === "number") {
+        const rect = { top: self.props.hitSlop, left: self.props.hitSlop, bottom: self.props.hitSlop, right: self.props.hitSlop };
+        let hitSlop = rect;
+      } else {
+        hitSlop = self.props.hitSlop;
+      }
+      const obj2 = { style: self.props.containerStyle, onHandlerStateChange: null, onGestureEvent: null, hitSlop: null, userSelect: null, shouldActivateOnStart: null, disallowInterruption: null, testID: null, touchSoundDisabled: null, enabled: null };
+      let onHandlerStateChange;
+      if (!self.props.disabled) {
+        onHandlerStateChange = self.onHandlerStateChange;
+      }
+      obj2.onHandlerStateChange = onHandlerStateChange;
+      obj2.onGestureEvent = self.onGestureEvent;
+      obj2.hitSlop = hitSlop;
+      obj2.userSelect = self.props.userSelect;
+      obj2.shouldActivateOnStart = self.props.shouldActivateOnStart;
+      obj2.disallowInterruption = self.props.disallowInterruption;
+      obj2.testID = self.props.testID;
+      let flag = self.props.touchSoundDisabled;
+      if (flag == null) {
+        flag = false;
+      }
+      obj2.touchSoundDisabled = flag;
+      obj2.enabled = !self.props.disabled;
+      const merged = Object.assign(self.props.extraButtonProps);
+      const obj3 = {};
+      const merged1 = Object.assign({ accessible: false !== self.props.accessible, accessibilityLabel: self.props.accessibilityLabel, accessibilityHint: self.props.accessibilityHint, accessibilityRole: self.props.accessibilityRole, accessibilityState: self.props.accessibilityState, accessibilityActions: self.props.accessibilityActions, onAccessibilityAction: self.props.onAccessibilityAction, nativeID: self.props.nativeID, onLayout: self.props.onLayout });
+      obj3.style = self.props.style;
+      obj3.children = self.props.children;
+      obj2.children = <Animated.View />;
+      return jsx(GenericTouchable(6352).LegacyBaseButton, { style: self.props.containerStyle, onHandlerStateChange: null, onGestureEvent: null, hitSlop: null, userSelect: null, shouldActivateOnStart: null, disallowInterruption: null, testID: null, touchSoundDisabled: null, enabled: null });
+    }
+  }
+];
+const importDefaultResultResult = _createClass(GenericTouchable, items);
+importDefaultResultResult.defaultProps = { delayLongPress: 600, extraButtonProps: { rippleColor: "transparent", exclusive: true } };
+
+export default importDefaultResultResult;
+export { TOUCHABLE_STATE };

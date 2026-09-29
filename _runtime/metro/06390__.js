@@ -1,7 +1,30 @@
 // === Module 6390: ? ===
 
 // Module 6390
-import registerAsset from "module_1121" /* 1121 */;
+import _mod19 from "module_19" /* 19 */;
+import _mod6234 from "module_6234" /* 6234 */;
 
+const useLayoutEffect = _mod19.useLayoutEffect;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "1b06201c0ce237bba30c4db64f994263", name: "EyeIcon", type: "png" });
+export const useBoundingClientRect = function useBoundingClientRect(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  if (obj.isFabricInstalled()) {
+    useLayoutEffect(() => {
+      if (closure_0) {
+        if (closure_0.current) {
+          if (typeof closure_0.current.unstable_getBoundingClientRect !== "function") {
+            if (typeof closure_0.current.getBoundingClientRect === "function") {
+              const current2 = closure_0.current;
+              closure_1(current2.getBoundingClientRect());
+            }
+          } else {
+            const current = closure_0.current;
+            closure_1(current.unstable_getBoundingClientRect());
+          }
+        }
+      }
+    });
+  }
+  obj = _mod6234;
+};

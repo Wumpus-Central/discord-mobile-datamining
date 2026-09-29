@@ -1,8 +1,12 @@
 // === Module 6232: ? ===
 
 // Module 6232
-import _mod17 from "module_17" /* 17 */;
+function print() {
 
-const StyleSheet = _mod17.StyleSheet;
+}
+const frozen = Object.freeze(print);
 
-export const styles = StyleSheet.create({ container: { flexDirection: "column-reverse", position: "absolute", top: 0, left: 0, right: 0 } });
+export { print };
+export const enableLogging = (arg0) => {
+  console.warn("[BottomSheet] could not enable logging on production!");
+};

@@ -1,21 +1,10 @@
 // === Module 13742: ? ===
 
 // Module 13742
-import _mod13732 from "module_13732" /* 13732 */;
-import BestAvailableLocale from "BestAvailableLocale" /* 13735 */;
+import _mod13728 from "module_13728" /* 13728 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export const LookupSupportedLocales = function LookupSupportedLocales(arg0, arg1) {
-  const items = [];
-  for (let num = 0; num < arg1.length; num = num + 1) {
-    let str = arg1[num];
-    let replaced = str.replace(_mod13732.UNICODE_EXTENSION_SEQUENCE_REGEX, "");
-    let BestAvailableLocaleResult = BestAvailableLocale.BestAvailableLocale(arg0, replaced);
-    if (BestAvailableLocaleResult) {
-      let arr = items.push(BestAvailableLocaleResult);
-    }
-  }
-  return items;
+export default (arg0, arg1, arg2) => {
+  const obj = new _mod13728(arg0, arg2);
+  return obj.compare(new _mod13728(arg1, arg2));
 };

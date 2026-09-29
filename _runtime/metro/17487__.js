@@ -1,17 +1,7 @@
 // === Module 17487: ? ===
 
 // Module 17487
-import arrayReduce from "arrayReduce" /* 4958 */;
-import words from "words" /* 17488 */;
-import deburr from "deburr" /* 17492 */;
+import registerAsset from "module_1121" /* 1121 */;
 
-let closure_2 = RegExp("['\u2019]", "g");
 
-export default function createCompounder(arg0) {
-  closure_0 = arg0;
-  return (arg0) => {
-    const tmp = arrayReduce;
-    const tmp2 = words;
-    return tmp(tmp2(deburr(arg0).replace(closure_2, "")), closure_0, "");
-  };
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images", width: 24, height: 24, scales: [2, 3], hash: "0ad684cb154c8b73e2d19dd6933251ad", name: "ic_premium_perk_money_24px", type: "png" });

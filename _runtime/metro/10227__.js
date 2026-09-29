@@ -1,84 +1,115 @@
 // === Module 10227: ? ===
 
 // Module 10227
-import handlerOffsetDirection from "handlerOffsetDirection" /* 10228 */;
-import omitZero from "omitZero" /* 10229 */;
-import computeOffsetIfSizeChanged from "computeOffsetIfSizeChanged" /* 10230 */;
+import _mod10218 from "module_10218" /* 10218 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-require = arg1;
-const dependencyMap = arg6;
-let closure_2 = { code: "function pnpm_useCommonVariablesTs1(){const{prevDataLength,dataLength,loop}=this.__closure;const previousLength=prevDataLength.value;const currentLength=dataLength;const isLengthChanged=previousLength!==currentLength;const shouldComputed=isLengthChanged&&loop;if(shouldComputed)prevDataLength.value=dataLength;return{shouldComputed:shouldComputed,previousLength:previousLength,currentLength:currentLength};}" };
-let closure_3 = { code: "function pnpm_useCommonVariablesTs2({shouldComputed:shouldComputed,previousLength:previousLength,currentLength:currentLength}){const{handlerOffsetDirection,handlerOffset,computeOffsetIfDataChanged,size}=this.__closure;if(shouldComputed){const direction=handlerOffsetDirection(handlerOffset);handlerOffset.value=computeOffsetIfDataChanged({direction:direction,previousLength:previousLength,currentLength:currentLength,size:size,handlerOffset:handlerOffset.value});}}" };
-let closure_4 = { code: "function pnpm_useCommonVariablesTs3(){const{prevSize,size}=this.__closure;const previousSize=prevSize.value;const isSizeChanged=previousSize!==size;const shouldComputed=isSizeChanged;if(shouldComputed)prevSize.value=size;return{shouldComputed:shouldComputed,previousSize:previousSize,size:size};}" };
-let closure_5 = { code: "function pnpm_useCommonVariablesTs4({shouldComputed:shouldComputed,previousSize:previousSize,size:size}){const{handlerOffset,computeOffsetIfSizeChanged}=this.__closure;if(shouldComputed){handlerOffset.value=computeOffsetIfSizeChanged({handlerOffset:handlerOffset.value,prevSize:previousSize,size:size});}}" };
-
-export const useCommonVariables = function useCommonVariables(initProps) {
-  ({ width, dataLength } = initProps);
-  ({ defaultScrollOffsetValue, loop } = initProps);
-  if (initProps.vertical) {
-    width = initProps.height;
+const UKRelativeDateFormatParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  const tmp = -Math.abs(initProps.defaultIndex * width);
-  if (defaultScrollOffsetValue == null) {
-    defaultScrollOffsetValue = obj.useSharedValue(tmp);
+}
+class UKRelativeDateFormatParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, UKRelativeDateFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(UKRelativeDateFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
   }
-  obj = dataLength(loop[0]);
-  const sharedValue = dataLength(loop[0]).useSharedValue(dataLength);
-  const tmp2Result = dataLength(loop[0]);
-  const sharedValue1 = dataLength(loop[0]).useSharedValue(width);
-  const tmp2Result4 = dataLength(loop[0]);
-  const fn = function f() {
-    const previousLength = sharedValue.value;
-    const currentLength = dataLength;
-    let shouldComputed = previousLength !== dataLength;
-    if (shouldComputed) {
-      shouldComputed = loop;
-    }
-    if (shouldComputed) {
-      sharedValue.value = currentLength;
-    }
-    return { shouldComputed, previousLength, currentLength };
-  };
-  fn.__closure = { prevDataLength: sharedValue, dataLength, loop };
-  fn.__workletHash = 16900133248154;
-  fn.__initData = width;
-  const fn2 = function h(shouldComputed) {
-    if (shouldComputed.shouldComputed) {
-      const result = handlerOffsetDirection.handlerOffsetDirection(defaultScrollOffsetValue);
-      const obj3 = { direction: result, previousLength: tmp, currentLength: tmp2, size: width, handlerOffset: defaultScrollOffsetValue.value };
-      defaultScrollOffsetValue.value = omitZero.computeOffsetIfDataChanged(obj3);
-    }
-  };
-  const tmp2Result5 = dataLength(loop[0]);
-  fn2.__closure = { handlerOffsetDirection: dataLength(loop[1]).handlerOffsetDirection, handlerOffset: defaultScrollOffsetValue, computeOffsetIfDataChanged: dataLength(loop[2]).computeOffsetIfDataChanged, size: width };
-  fn2.__workletHash = 6990374823872;
-  fn2.__initData = defaultScrollOffsetValue;
-  const items = [dataLength, loop];
-  const animatedReaction = tmp2Result5.useAnimatedReaction(fn, fn2, items);
-  let obj2 = { handlerOffsetDirection: dataLength(loop[1]).handlerOffsetDirection, handlerOffset: defaultScrollOffsetValue, computeOffsetIfDataChanged: dataLength(loop[2]).computeOffsetIfDataChanged, size: width };
-  const fn3 = function c() {
-    const previousSize = sharedValue1.value;
-    const size = width;
-    const shouldComputed = previousSize !== width;
-    if (shouldComputed) {
-      sharedValue1.value = size;
-    }
-    return { shouldComputed, previousSize, size };
-  };
-  fn3.__closure = { prevSize: sharedValue1, size: width };
-  fn3.__workletHash = 10373775645111;
-  fn3.__initData = sharedValue;
-  const fn4 = function l(shouldComputed) {
-    if (shouldComputed.shouldComputed) {
-      const obj2 = { handlerOffset: defaultScrollOffsetValue.value, prevSize: tmp, size: tmp2 };
-      defaultScrollOffsetValue.value = computeOffsetIfSizeChanged.computeOffsetIfSizeChanged(obj2);
-    }
-  };
-  const tmp2Result6 = dataLength(loop[0]);
-  fn4.__closure = { handlerOffset: defaultScrollOffsetValue, computeOffsetIfSizeChanged: dataLength(loop[3]).computeOffsetIfSizeChanged };
-  fn4.__workletHash = 12618693189041;
-  fn4.__initData = sharedValue1;
-  const items1 = [width];
-  const animatedReaction1 = tmp2Result6.useAnimatedReaction(fn3, fn4, items1);
-  return { size: width, validLength: dataLength - 1, handlerOffset: defaultScrollOffsetValue };
+}
+_inherits(UKRelativeDateFormatParser, _mod10218.AbstractParserWithLeftRightBoundaryChecking);
+const entry = {
+  key: "innerPatternString",
+  value: function innerPatternString(arg0) {
+    return "(\u0432 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443|\u0443 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443|\u043D\u0430 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443|\u043C\u0438\u043D\u0443\u043B\u043E\u0433\u043E|\u043D\u0430 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443|\u0432 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443|\u0443 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u0433\u043E|\u043D\u0430 \u0446\u044C\u043E\u043C\u0443|\u0432 \u0446\u044C\u043E\u043C\u0443|\u0443 \u0446\u044C\u043E\u043C\u0443|\u0446\u044C\u043E\u0433\u043E)\\s*(" + UKRelativeDateFormatParser(10062).matchAnyPattern(UKRelativeDateFormatParser(10216).TIME_UNIT_DICTIONARY) + ")(?=\\s*)";
+  }
 };
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(createParsingComponents, arg1) {
+      const formatted = arg1[1].toLowerCase();
+      const formatted1 = arg1[2].toLowerCase();
+      const str3 = UKRelativeDateFormatParser(10216).TIME_UNIT_DICTIONARY[formatted1];
+      if ("\u043D\u0430 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443" != formatted) {
+        if ("\u0432 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443" != formatted) {
+          if ("\u0443 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443" != formatted) {
+            if ("\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u0433\u043E" != formatted) {
+              if ("\u043D\u0430 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443" != formatted) {
+                if ("\u0432 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443" != formatted) {
+                  if ("\u0443 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443" != formatted) {
+                    if ("\u043C\u0438\u043D\u0443\u043B\u043E\u0433\u043E" != formatted) {
+                      const parsingComponents = createParsingComponents.createParsingComponents();
+                      const _Date = Date;
+                      const instant = createParsingComponents.reference.instant;
+                      const date = new Date(instant.getTime());
+                      if (str3.match(/week/i)) {
+                        date.setDate(date.getDate() - date.getDay());
+                        parsingComponents.imply("day", date.getDate());
+                        parsingComponents.imply("month", date.getMonth() + 1);
+                        parsingComponents.imply("year", date.getFullYear());
+                        const date1 = date.getDate();
+                      } else if (str3.match(/month/i)) {
+                        date.setDate(1);
+                        parsingComponents.imply("day", date.getDate());
+                        parsingComponents.assign("year", date.getFullYear());
+                        parsingComponents.assign("month", date.getMonth() + 1);
+                      } else if (str3.match(/year/i)) {
+                        date.setDate(1);
+                        date.setMonth(0);
+                        parsingComponents.imply("day", date.getDate());
+                        parsingComponents.imply("month", date.getMonth() + 1);
+                        parsingComponents.assign("year", date.getFullYear());
+                      }
+                      return parsingComponents;
+                    }
+                  }
+                }
+              }
+              const obj = {};
+              obj[str3] = -1;
+              const ParsingComponents = UKRelativeDateFormatParser(10065).ParsingComponents;
+              return ParsingComponents.createRelativeFromReference(createParsingComponents.reference, obj);
+            }
+          }
+        }
+      }
+      const ParsingComponents2 = UKRelativeDateFormatParser(10065).ParsingComponents;
+      return ParsingComponents2.createRelativeFromReference(createParsingComponents.reference, { [str3]: 1 });
+    }
+  }
+];
+
+export default _createClass(UKRelativeDateFormatParser, items);

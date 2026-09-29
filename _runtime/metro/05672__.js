@@ -1,7 +1,84 @@
 // === Module 5672: ? ===
 
 // Module 5672
-import registerAsset from "module_1121" /* 1121 */;
+import _mod5665 from "module_5665" /* 5665 */;
+import _mod5666 from "module_5666" /* 5666 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "604528a3bb006839cd94a191736eec62", name: "img_account_sync_epic_dark_and_white", type: "svg" });
+export const isBLEND = function isBLEND(fileChunk) {
+  fileChunk = _mod5665.getFileChunk(fileChunk);
+  const FileTypes = _mod5666.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "blend");
+};
+export const isELF = function isELF(fileChunk) {
+  fileChunk = _mod5665.getFileChunk(fileChunk);
+  const FileTypes = _mod5666.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "elf");
+};
+export const isEXE = function isEXE(fileChunk) {
+  fileChunk = _mod5665.getFileChunk(fileChunk);
+  const FileTypes = _mod5666.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "exe");
+};
+export const isMACHO = function isMACHO(fileChunk) {
+  fileChunk = _mod5665.getFileChunk(fileChunk);
+  const FileTypes = _mod5666.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "macho");
+};
+export const isINDD = function isINDD(fileChunk) {
+  fileChunk = _mod5665.getFileChunk(fileChunk);
+  const FileTypes = _mod5666.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "indd");
+};
+export const isORC = function isORC(fileChunk) {
+  fileChunk = _mod5665.getFileChunk(fileChunk);
+  const FileTypes = _mod5666.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "orc");
+};
+export const isPARQUET = function isPARQUET(fileChunk) {
+  fileChunk = _mod5665.getFileChunk(fileChunk);
+  const FileTypes = _mod5666.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "parquet");
+};
+export const isPDF = function isPDF(fileChunk) {
+  fileChunk = _mod5665.getFileChunk(fileChunk);
+  const FileTypes = _mod5666.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "pdf");
+};
+export const isPS = function isPS(fileChunk) {
+  fileChunk = _mod5665.getFileChunk(fileChunk);
+  const FileTypes = _mod5666.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "ps");
+};
+export const isRTF = function isRTF(fileChunk) {
+  fileChunk = _mod5665.getFileChunk(fileChunk);
+  const FileTypes = _mod5666.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "rtf");
+};
+export const isSQLITE = function isSQLITE(fileChunk) {
+  fileChunk = _mod5665.getFileChunk(fileChunk);
+  const FileTypes = _mod5666.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "sqlite");
+};
+export const isSTL = function isSTL(fileChunk) {
+  fileChunk = _mod5665.getFileChunk(fileChunk);
+  const FileTypes = _mod5666.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "stl");
+};
+export const isTTF = function isTTF(fileChunk) {
+  fileChunk = _mod5665.getFileChunk(fileChunk);
+  const FileTypes = _mod5666.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "ttf");
+};
+export const isDOC = function isDOC(fileChunk) {
+  fileChunk = _mod5665.getFileChunk(fileChunk);
+  const FileTypes = _mod5666.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "doc");
+};
+export const isPCAP = function isPCAP(fileChunk) {
+  fileChunk = _mod5665.getFileChunk(fileChunk);
+  const FileTypes = _mod5666.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "pcap");
+};
