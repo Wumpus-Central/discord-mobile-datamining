@@ -10,7 +10,7 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10320).UserRowModes;
+const UserRowModes = fn(10489).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4836);

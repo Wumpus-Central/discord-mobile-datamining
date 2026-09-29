@@ -33,8 +33,8 @@ function dismissTopAlert() {
     if (first != null) {
       key = first.key;
     }
-    tmp(5205).dismissAlert(key);
-    const tmpResult = tmp(5205);
+    tmp(5371).dismissAlert(key);
+    const tmpResult = tmp(5371);
     tmp(1248).batchUpdates(() => {
       const useAlertStore = context(context2[10]).useAlertStore;
       return useAlertStore.setState({ alerts });
@@ -47,7 +47,7 @@ function AlertModalBackdrop() {
   const tmp2 = _slicedToArray(useSharedAnimationState(), 2);
   const sharedTransitionState = tmp2[0];
   dependencyMap = tmp4;
-  const alertStore = context(5205).useAlertStore((arg0) => {
+  const alertStore = context(5371).useAlertStore((arg0) => {
     const first = arg0.alerts[0];
     let dismissable;
     if (first != null) {
@@ -55,7 +55,7 @@ function AlertModalBackdrop() {
     }
     return false !== dismissable;
   });
-  let obj = context(5205);
+  let obj = context(5371);
   let fn = function t() {
     value = closure_2.get();
     if (typeof withAlertModalSpring === "function") {
@@ -101,7 +101,7 @@ function AlertModalBackdrop() {
   obj4.onDismiss = tmp10;
   const intl = tmp5(1115).intl;
   obj4.accessibilityLabel = intl.string(context(1115).t.Xkfav5);
-  return closure_10(context(5267).Backdrop, obj4);
+  return closure_10(context(5433).Backdrop, obj4);
 }
 class AlertModal {
   constructor(arg0) {
@@ -562,7 +562,7 @@ let __initData4 = {
 function withAlertModalSpring(value, fn) {
   return spring.withSpring(value, obj3, "animate-always", fn);
 }
-let obj4 = { withSpring: fn(5280).withSpring, MODAL_SPRING: obj3 };
+let obj4 = { withSpring: fn(5446).withSpring, MODAL_SPRING: obj3 };
 withAlertModalSpring.__closure = obj4;
 withAlertModalSpring.__workletHash = 15556562210180;
 withAlertModalSpring.__initData = {

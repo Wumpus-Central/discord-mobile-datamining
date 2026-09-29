@@ -53,7 +53,7 @@ function PasswordStrength(passwordScore) {
   return null;
 }
 let closure_3 = ["password"];
-const RegistrationUIStore = fn(15570);
+const RegistrationUIStore = fn(15745);
 ({ setRegistrationErrors: closure_8, useRegistrationUIStore: closure_9 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsxs: c10, jsx: closure_11, Fragment: closure_12 } = jsxProd);

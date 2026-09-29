@@ -5,7 +5,7 @@ import noop from "../../../../../../../../_runtime/metro/00019__.js";
 import SearchQueryStore from "../../../../stores/SearchQueryStore.tsx";
 
 require = fn;
-const SearchConstants = fn(7303);
+const SearchConstants = fn(7468);
 ({
   SEARCH_FILTERS_BY_TAB: hasOwnProperty,
   SearchFilter: metroRequire,
@@ -64,15 +64,20 @@ export default noop.memo(function MessagesScreen(isFocused) {
   }
   const obj5 = { searchContext, tab, placeholderHeight: item, numColumns: 1 };
   const tmpResult = searchContext(stateFromStores[9]);
-  const obj6 = { searchContext, hasKeywordResults: null, isKeywordFirstPageLoading: null };
+  const obj6 = {
+    searchContext,
+    searchQueryString: stateFromStores,
+    hasKeywordResults: null,
+    isKeywordFirstPageLoading: null,
+  };
   let num = length;
   if (length == null) {
     num = 0;
   }
   obj6.hasKeywordResults = num > 0;
   obj6.isKeywordFirstPageLoading = isFirstPageLoading;
-  const intelligenceSearchMessages = searchContext(stateFromStores[10]).useIntelligenceSearchMessages(obj6);
-  item = intelligenceSearchMessages.item;
+  const smartSearchMessages = searchContext(stateFromStores[10]).useSmartSearchMessages(obj6);
+  item = smartSearchMessages.item;
   const items4 = [callback, item, tmp6, searchMessages, memo, placeholderCount];
   const memo1 = obj4.useMemo(() => {
     const items = [];
@@ -121,14 +126,14 @@ export default noop.memo(function MessagesScreen(isFocused) {
     isFirstPageLoading: null,
     isNextPageLoading: null,
     keywordResultCount: null,
-    intelligenceStatus: null,
+    smartSearchStatus: null,
   };
   const tmpResult4 = searchContext(stateFromStores[12]);
   obj7.ItemSeparatorComponent = searchContext(stateFromStores[13]).MessageVerticalSeparator;
   obj7.isFirstPageLoading = isFirstPageLoading;
   obj7.isNextPageLoading = searchMessagesLoadingState.isNextPageLoading;
   obj7.keywordResultCount = length;
-  obj7.intelligenceStatus = intelligenceSearchMessages.status;
+  obj7.smartSearchStatus = smartSearchMessages.status;
   return jsx(searchMessages(stateFromStores[7]), {
     data: memo1,
     searchContext,
@@ -139,6 +144,6 @@ export default noop.memo(function MessagesScreen(isFocused) {
     isFirstPageLoading: null,
     isNextPageLoading: null,
     keywordResultCount: null,
-    intelligenceStatus: null,
+    smartSearchStatus: null,
   });
 });

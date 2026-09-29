@@ -7,9 +7,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const util = prop(1115);
 const Text_Text = prop(4832);
-const NativeTextInput = prop(6042);
-const propsForNativeTextInput = prop(6356);
-const useCharacterLimitAnnouncement = prop(6508);
+const NativeTextInput = prop(6208);
+const propsForNativeTextInput = prop(6522);
+const useCharacterLimitAnnouncement = prop(6674);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);

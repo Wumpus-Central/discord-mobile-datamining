@@ -14,14 +14,14 @@ import EmbeddedActivitiesNativeManagerDefault from "../../../activities/native/E
 import VoiceStateIcons from "../shared/VoiceStateIcons.tsx";
 import VoiceStateIconUtils from "../utils/VoiceStateIconUtils.tsx";
 import VoiceXIcon from "../../../../design/components/Icon/native/redesign/generated/VoiceXIcon.tsx";
-import _modDef9524 from "../../../../../_runtime/metro/09524__.js";
+import _modDef9691 from "../../../../../_runtime/metro/09691__.js";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import useStableParticipant from "../utils/useStableParticipant.tsx";
 import useVoicePanelCardUserStateIcons from "../hooks/useVoicePanelCardUserStateIcons.tsx";
-import _modDef16933 from "../../../../../_runtime/metro/16933__.js";
+import _modDef17120 from "../../../../../_runtime/metro/17120__.js";
 import getRandomNumberInRangeDefault from "../utils/getRandomNumberInRange.tsx";
-import _modDef16977 from "../../../../../_runtime/metro/16977__.js";
-import _modDef16978 from "../../../../../_runtime/metro/16978__.js";
+import _modDef17164 from "../../../../../_runtime/metro/17164__.js";
+import _modDef17165 from "../../../../../_runtime/metro/17165__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore.tsx";
@@ -52,13 +52,13 @@ function StreamIcon(voicePlatform) {
   fn.__workletHash = 3270040588948;
   fn.__initData = __initData;
   const animatedStyle = controlsSpecs(4566).useAnimatedStyle(fn);
-  let tmp2Result = _modDef16933;
+  let tmp2Result = _modDef17120;
   if (voicePlatform === constants2.XBOX) {
-    tmp2Result = _modDef16977;
+    tmp2Result = _modDef17164;
   } else if (voicePlatform === constants2.MOBILE) {
-    tmp2Result = _modDef9524;
+    tmp2Result = _modDef9691;
   } else if (voicePlatform === constants2.QUEST) {
-    tmp2Result = _modDef16978;
+    tmp2Result = _modDef17165;
   }
   const obj3 = { source: tmp2Result, style: null };
   const items = [tmp.iconWithoutBackground, animatedStyle];
@@ -147,10 +147,10 @@ function AnimatedLabelIcon(icon) {
 }
 get_ActivityIndicator = fn(17);
 ({ Platform, Pressable } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11755);
+const VoicePanelConstants = fn(11924);
 ({ MODE_CHANGE_PHYSICS: closure_9, VoicePanelModes: c10 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11753).VoicePanelControlsModes;
-const VOICE_PANEL_CARD_INNER_PADDING = fn(11758).VOICE_PANEL_CARD_INNER_PADDING;
+const VoicePanelControlsModes = fn(11922).VoicePanelControlsModes;
+const VOICE_PANEL_CARD_INNER_PADDING = fn(11927).VOICE_PANEL_CARD_INNER_PADDING;
 const ThemeTypes = fn(1074).ThemeTypes;
 const CallConstants = fn(4857);
 ({ ParticipantTypes: closure_14, VoicePlatforms: closure_15 } = CallConstants);
@@ -247,7 +247,7 @@ let closure_27 = noop.memo((participant) => {
   const controlsHidden = participant.controlsHidden;
   let guildId;
   ({ isSelf, layout } = participant);
-  guildId = noop.useContext(guildId(11754)).guildId;
+  guildId = noop.useContext(guildId(11923)).guildId;
   closure_129_0 = controlsHidden;
   const fn = function n() {
     value = participant.get();
@@ -269,7 +269,7 @@ let closure_27 = noop.memo((participant) => {
     controlsHidden,
     FLOATING_BAR_HEIGHT: v28,
     VOICE_PANEL_CARD_INNER_PADDING,
-    withSpring: participant(5280).withSpring,
+    withSpring: participant(5446).withSpring,
     MODE_CHANGE_PHYSICS,
   };
   fn.__workletHash = 4080439075039;
@@ -302,15 +302,15 @@ let closure_27 = noop.memo((participant) => {
     controlsHidden,
     FLOATING_BAR_HEIGHT: v28,
     VOICE_PANEL_CARD_INNER_PADDING,
-    withSpring: participant(5280).withSpring,
+    withSpring: participant(5446).withSpring,
     MODE_CHANGE_PHYSICS,
   };
-  obj3.icon = guildId(16979);
+  obj3.icon = guildId(17166);
   obj3.onPress = callback;
   obj3.style = animatedStyle;
   obj3.layout = layout;
-  const tmp4 = guildId(16859);
-  const result = participant(16929).isStableActivityParticipant(participant);
+  const tmp4 = guildId(17046);
+  const result = participant(17116).isStableActivityParticipant(participant);
   const intl = participant(1115).intl;
   const string = intl.string;
   const t = participant(1115).t;
@@ -544,10 +544,10 @@ let closure_39 = noop.memo((arg0) => {
   let gameRecord;
   dependencyMap = undefined;
   noop = undefined;
-  const showGameTag = gameRecord(16982).useConfig({ location: "VoicePanelCardFloatingControls" }).showGameTag;
-  const first = gameRecord(9191)(userId, arg0.guildId, showGameTag)[0];
+  const showGameTag = gameRecord(17169).useConfig({ location: "VoicePanelCardFloatingControls" }).showGameTag;
+  const first = gameRecord(9356)(userId, arg0.guildId, showGameTag)[0];
   let tmp5;
-  let obj = gameRecord(16982);
+  let obj = gameRecord(17169);
   if (showGameTag) {
     let application_id;
     if (first != null) {
@@ -555,8 +555,8 @@ let closure_39 = noop.memo((arg0) => {
     }
     tmp5 = application_id;
   }
-  gameRecord = gameRecord(8131)({ applicationId: tmp5 }).gameRecord;
-  const tmp8 = gameRecord(5423)(gameRecord);
+  gameRecord = gameRecord(8296)({ applicationId: tmp5 }).gameRecord;
+  const tmp8 = gameRecord(5590)(gameRecord);
   dependencyMap = tmp8;
   noop = noop.useRef(false);
   let items = [showGameTag, gameRecord, tmp8];
@@ -582,13 +582,13 @@ let closure_39 = noop.memo((arg0) => {
     if (null != gameRecord) {
       if (!tmp8) {
         const obj2 = { game: gameRecord, userId, textColor };
-        let tmp12 = closure_16(tmp(16983), obj2);
+        let tmp12 = closure_16(tmp(17170), obj2);
       }
       return tmp12;
     }
   }
-  tmp12 = closure_16(tmp(9205), { userId, textColor });
-  const tmp4 = gameRecord(8131);
+  tmp12 = closure_16(tmp(9370), { userId, textColor });
+  const tmp4 = gameRecord(8296);
 });
 const __initData8 = {
   code: "function VoicePanelCardFloatingControlsTsx10(){const{hasHiddenVisibleIcon,focused,connected,mode,VoicePanelModes,controlsHidden}=this.__closure;const showIcon=hasHiddenVisibleIcon&&focused.get()==null;return!connected.get()||mode.get()===VoicePanelModes.PIP||!showIcon&&controlsHidden.get();}",

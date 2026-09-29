@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../../../discord_common/js/packages/token
 import ReanimatedRexport from "../../../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../../../design/animation/reanimated/timing/timingPresets.tsx";
-import _modDef6473 from "../../../../../../../_runtime/metro/06473__.js";
+import _modDef6639 from "../../../../../../../_runtime/metro/06639__.js";
 import ChannelSettingsActionCreatorsDefault from "../../../../../../actions/ChannelSettingsActionCreators.tsx";
 import openChannelLongPressActionSheet from "../../../../../channel/native/openChannelLongPressActionSheet.tsx";
 import ChannelDetailsUtils from "../ChannelDetailsUtils.tsx";
@@ -47,8 +47,8 @@ function MuteButton(channelId) {
   obj5.onPress = callback;
   obj5.variant = token1;
   obj5.size = token;
-  obj5.icon = tmp5(stateFromStores ? 9614 : 7391);
-  return closure_15(channelId(7363).IconButton, obj5, constants.MUTE);
+  obj5.icon = tmp5(stateFromStores ? 9781 : 7556);
+  return closure_15(channelId(7528).IconButton, obj5, constants.MUTE);
 }
 function SearchButton(channelId) {
   channelId = channelId.channelId;
@@ -87,9 +87,9 @@ function SearchButton(channelId) {
   obj5.onPress = callback;
   obj5.variant = token1;
   obj5.size = token;
-  obj5.icon = _modDef6473;
+  obj5.icon = _modDef6639;
   obj5.disabled = shouldHideChannelContent;
-  return closure_15(channelId(7363).IconButton, obj5, constants.SEARCH);
+  return closure_15(channelId(7528).IconButton, obj5, constants.SEARCH);
 }
 function SettingsButton(channel) {
   channel = channel.channel;
@@ -128,8 +128,8 @@ function SettingsButton(channel) {
   obj4.onPress = callback;
   obj4.variant = token1;
   obj4.size = token;
-  obj4.icon = navigation(6799);
-  return closure_15(channel(7363).IconButton, obj4, constants.SETTINGS);
+  obj4.icon = navigation(6965);
+  return closure_15(channel(7528).IconButton, obj4, constants.SETTINGS);
 }
 function NavigationHeader(channel) {
   channel = channel.channel;
@@ -246,12 +246,12 @@ function getItemKey(arg0) {
   return arg0;
 }
 const View = fn(17).View;
-const ChannelDetailsStore = fn(7301);
+const ChannelDetailsStore = fn(7466);
 ({ setIsChannelDetailsSearchActive: closure_9, useIsChannelDetailsSearchActive: c10 } = ChannelDetailsStore);
-const ChannelDetailsConstants = fn(10377);
+const ChannelDetailsConstants = fn(10546);
 ({ ChannelDetailsButtonTypes: closure_11, ChannelDetailsNavigatorScreens: closure_12 } = ChannelDetailsConstants);
 const ChannelSettingsSections = fn(1074).ChannelSettingsSections;
-let closure_14 = fn(7302).SearchEntrypointAnalyticsLocations;
+let closure_14 = fn(7467).SearchEntrypointAnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const createStyles = fn(4836);
@@ -259,7 +259,7 @@ let obj = {
   container: {
     position: "relative",
     zIndex: 1,
-    height: fn(11859).SEARCH_BAR_HEIGHT,
+    height: fn(12030).SEARCH_BAR_HEIGHT,
     marginTop: nativeDefault.space.PX_8,
   },
   navigationHeader: null,
@@ -269,7 +269,7 @@ let obj = {
 let obj3 = {
   position: "relative",
   zIndex: 1,
-  height: fn(11859).SEARCH_BAR_HEIGHT,
+  height: fn(12030).SEARCH_BAR_HEIGHT,
   marginTop: nativeDefault.space.PX_8,
 };
 obj.navigationHeader = {
@@ -278,7 +278,7 @@ obj.navigationHeader = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: nativeDefault.space.PX_4,
   position: "absolute",
-  height: fn(11859).SEARCH_BAR_HEIGHT,
+  height: fn(12030).SEARCH_BAR_HEIGHT,
 };
 let obj4 = {
   flexDirection: "row",
@@ -286,7 +286,7 @@ let obj4 = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: nativeDefault.space.PX_4,
   position: "absolute",
-  height: fn(11859).SEARCH_BAR_HEIGHT,
+  height: fn(12030).SEARCH_BAR_HEIGHT,
 };
 obj.buttonsContainer = {
   flex: 1,
@@ -350,7 +350,7 @@ let closure_24 = noop.forwardRef((cleanUp, ref) => {
   const animatedStyle = obj.useAnimatedStyle(fn);
   let obj3 = {
     style: null,
-    children: closure_15(cleanUp(16440), {
+    children: closure_15(cleanUp(16625), {
       ref,
       channelId: channel.id,
       guildId: channel.guild_id,

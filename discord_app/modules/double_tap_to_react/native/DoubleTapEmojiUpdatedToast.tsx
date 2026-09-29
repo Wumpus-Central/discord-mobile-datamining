@@ -110,5 +110,5 @@ export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdated
     };
     ToastActionCreatorsDefault.open(obj4);
   }
-  obj = emoji(5266);
+  obj = emoji(5432);
 };

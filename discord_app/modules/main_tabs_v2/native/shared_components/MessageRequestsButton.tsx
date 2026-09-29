@@ -3,9 +3,9 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import util from "../../../../intl/index.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef9338 from "../../../../../_runtime/metro/09338__.js";
+import _modDef9505 from "../../../../../_runtime/metro/09505__.js";
 import IconActionButton from "IconActionButton.tsx";
-import _mod15662 from "../../../../design/components/LottieIcon/native/generated/index.tsx";
+import _mod15837 from "../../../../design/components/LottieIcon/native/generated/index.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MessageRequestStore from "../../../message_request/MessageRequestStore.tsx";
 import SpamMessageRequestStore from "../../../message_request/SpamMessageRequestStore.tsx";
@@ -30,7 +30,7 @@ function MessageRequestAnimation(color) {
       }
     }
   }, items2);
-  return React5(_mod15662.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
+  return React5(_mod15837.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -92,7 +92,7 @@ export default function MessageRequestsButton(alternateVariant) {
     return React6(View, obj3);
   } else {
     const obj6 = {
-      source: _modDef9338,
+      source: _modDef9505,
       IconComponent: MessageRequestAnimation,
       accessibilityLabel: null,
       buttonText: null,

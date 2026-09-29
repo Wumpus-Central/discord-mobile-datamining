@@ -125,11 +125,11 @@ export default function VibegrationsConjureShimmer(epoch) {
     items4[2] = animatedStyle;
     obj8.style = items4;
     const obj10 = { style: tmp.fill, start, end, colors: memo, locations };
-    obj8.children = closure_8(width(5293), obj10);
+    obj8.children = closure_8(width(5459), obj10);
     obj6.children = closure_8(width(4566).View, obj8);
-    obj5.children = closure_8(width(5976), obj6);
+    obj5.children = closure_8(width(6142), obj6);
     tmp14 = closure_8(closure_6, obj5);
-    const tmp18 = width(5976);
+    const tmp18 = width(6142);
   }
   items3[1] = tmp14;
   obj4.children = items3;

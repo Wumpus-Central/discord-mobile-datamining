@@ -78,7 +78,7 @@ prototype["checkAndFetchReferralsRemaining"] = function checkAndFetchReferralsRe
     const referralsRemaining = ReferralTrialActionCreators.fetchReferralsRemaining();
   }
 };
-prototype["getReferralsRemaining"] = function getReferralsRemaining(arg0) {
+prototype["getReferralsRemaining"] = function getReferralsRemaining() {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -138,8 +138,8 @@ const referralTrialStore = new ReferralTrialStore(DispatcherDefault, {
   BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function handleReferralTrialOfferUpdate(userTrialOfferId) {
     userTrialOfferId = userTrialOfferId.userTrialOfferId;
     if (!c8) {
-      const referralsRemaining = userTrialOfferId(6873).fetchReferralsRemaining();
-      const obj = userTrialOfferId(6873);
+      const referralsRemaining = userTrialOfferId(7039).fetchReferralsRemaining();
+      const obj = userTrialOfferId(7039);
     }
     if (!set1.has(userTrialOfferId)) {
       set1.add(userTrialOfferId);

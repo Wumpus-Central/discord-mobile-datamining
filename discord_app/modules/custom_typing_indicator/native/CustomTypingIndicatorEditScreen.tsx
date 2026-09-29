@@ -130,14 +130,14 @@ export default function CustomTypingIndicatorEditScreen() {
   const items5 = [memo, first3];
   const callback1 = first1.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(14907, dependencyMap.paths),
+      asyncRequireImpl(15082, dependencyMap.paths),
       "CustomTypingIndicatorTypingSuggestionPickerSheet",
       { initialValue: first2, onChange },
     );
   }, items4);
   const callback2 = first1.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(14908, dependencyMap.paths),
+      asyncRequireImpl(15083, dependencyMap.paths),
       "CustomTypingIndicatorAnimationPickerSheet",
       { emojis: memo, initialAnimation: first3, onChange: onChange2 },
     );

@@ -1,6 +1,6 @@
 // discord_app/design/components/LottieIcon/native/generated/MessagesTabLottie.tsx
 import LottieIcon from "../LottieIcon.tsx";
-import _mod13946 from "../../../../../../_runtime/metro/13946__.js";
+import _mod14115 from "../../../../../../_runtime/metro/14115__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -12,5 +12,5 @@ const result = size.fileFinishedImporting("design/components/LottieIcon/native/g
 
 export const MessagesTabLottie = noop.forwardRef((arg0, ref) => {
   const merged = Object.assign(arg0);
-  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod13946, animation: "all", ref, layers, markers: items });
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod14115, animation: "all", ref, layers, markers: items });
 });

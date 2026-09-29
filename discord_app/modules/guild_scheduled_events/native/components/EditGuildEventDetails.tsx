@@ -10,7 +10,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(6946).isGuildScheduledEventActive;
+let closure_6 = fn(7112).isGuildScheduledEventActive;
 let constants = fn(2051).GuildScheduledEventEntityTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);

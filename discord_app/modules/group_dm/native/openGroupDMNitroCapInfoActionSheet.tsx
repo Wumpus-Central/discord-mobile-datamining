@@ -7,7 +7,7 @@ const result = size.fileFinishedImporting("modules/group_dm/native/openGroupDMNi
 
 export default function openGroupDMNitroCapInfoActionSheet() {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(11671, dependencyMap.paths),
+    asyncRequireImpl(11840, dependencyMap.paths),
     "GroupDMNitroCapInfoActionSheet",
   );
 }

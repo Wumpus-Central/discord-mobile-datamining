@@ -15,7 +15,7 @@ const jsxProd = fn(21);
 let ReanimatedRexport = ReanimatedRexport_mod;
 let closure_8 = ReanimatedRexport.createAnimatedComponent(Pressable);
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(5281).Button);
+let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(5447).Button);
 const OPACITY_TIMING = { duration: 200 };
 const createStyles = fn(4836);
 let obj = { roundedCard: null, streamPreviewImage: null, ownStreamTextContainer: null, ownStreamText: null };
@@ -68,8 +68,8 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
   if (stream != null) {
     ownerId = stream.ownerId;
   }
-  const previewUrl = stream(9522)(guildId, channelId, ownerId).previewUrl;
-  const tmp4 = stream(9522);
+  const previewUrl = stream(9689)(guildId, channelId, ownerId).previewUrl;
+  const tmp4 = stream(9689);
   const items = [ApplicationStreamingStore, AuthenticationStore];
   const items1 = [stream];
   const stateFromStores = mode(504).useStateFromStores(
@@ -147,7 +147,7 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
     tmp16Result = closure_6(closure_9, obj10);
   }
   obj7.children = tmp16Result;
-  items2[1] = closure_6(stream(6494), obj7);
+  items2[1] = closure_6(stream(6660), obj7);
   obj4.children = items2;
   return closure_7(closure_8, obj4);
 };

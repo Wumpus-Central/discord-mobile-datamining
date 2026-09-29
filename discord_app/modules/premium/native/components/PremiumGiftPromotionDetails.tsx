@@ -11,13 +11,14 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 require = fn;
 function PremiumGiftPromotionDetailsBase(arg0) {
   ({ titleVariant, titleColor, subtitleVariant, subtitleColor } = arg0);
-  ({ style, graphic, title, subtitle } = arg0);
+  ({ style, graphic, topContent, title, subtitle } = arg0);
   const tmp = closure_10();
   const obj = { style: null, children: null };
   const items = [tmp.container, style];
   obj.style = items;
   const items1 = [graphic];
   const obj2 = { style: tmp.textContainer, children: null };
+  const items2 = [topContent, ,];
   if (titleVariant == null) {
     titleVariant = "text-md/semibold";
   }
@@ -27,7 +28,7 @@ function PremiumGiftPromotionDetailsBase(arg0) {
   }
   obj3.color = titleColor;
   obj3.children = title;
-  const items2 = [React5(Text_Text.Text, obj3)];
+  items2[1] = React5(Text_Text.Text, obj3);
   if (subtitleVariant == null) {
     subtitleVariant = "text-sm/medium";
   }
@@ -37,7 +38,7 @@ function PremiumGiftPromotionDetailsBase(arg0) {
   }
   obj4.color = subtitleColor;
   obj4.children = subtitle;
-  items2[1] = React5(Text_Text.Text, obj4);
+  items2[2] = React5(Text_Text.Text, obj4);
   obj2.children = items2;
   items1[1] = React6(View, obj2);
   obj.children = items1;
@@ -108,13 +109,13 @@ const PX_40 = nativeDefault.space.PX_40;
 let createStyles = fn(4836);
 let closure_10 = createStyles.createStyles(() => {
   const obj = {
-    container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 },
+    container: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_12 },
     image: null,
     textContainer: null,
   };
-  const size = { width: PX_40, height: PX_40, borderRadius: nativeDefault.radii.xs };
+  const size = { width: 64, height: 64, borderRadius: nativeDefault.radii.xs };
   obj.image = size;
-  obj.textContainer = { flex: 1 };
+  obj.textContainer = { flex: 1, alignSelf: "center" };
   return obj;
 });
 createStyles = fn(4836);

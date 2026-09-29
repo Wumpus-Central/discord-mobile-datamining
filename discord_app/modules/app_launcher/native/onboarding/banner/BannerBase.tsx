@@ -31,7 +31,7 @@ const rect = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: PX_12,
   flexDirection: "row",
-  minHeight: fn(11532).APP_ICON_SIZE + 2 * PX_12 + 4,
+  minHeight: fn(11701).APP_ICON_SIZE + 2 * PX_12 + 4,
   bottom: nativeDefault.space.PX_16,
   left: nativeDefault.space.PX_16,
 };
@@ -131,7 +131,7 @@ export default function BannerBase(arg0) {
   const obj8 = { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: items, style: null };
   const items3 = [tmp.bannerBackgroundGradient, { height: tmp3, width: diff }];
   obj8.style = items3;
-  const items4 = [closure_7(sharedValue(5293), obj8), ,];
+  const items4 = [closure_7(sharedValue(5459), obj8), ,];
   const obj9 = { style: tmp.imageContainer, children: null };
   const obj10 = { style: tmp.trinketsLottie, source: null, autoPlay: null };
   let obj6 = {
@@ -140,9 +140,9 @@ export default function BannerBase(arg0) {
     withSpring: require("spring").withSpring,
     SPRING_CONFIG,
   };
-  obj10.source = require("../../../../../../_runtime/metro/11544__.js");
+  obj10.source = require("../../../../../../_runtime/metro/11713__.js");
   obj10.autoPlay = !stateFromStores;
-  const items5 = [closure_7(sharedValue(5841), obj10), image];
+  const items5 = [closure_7(sharedValue(6007), obj10), image];
   obj9.children = items5;
   items4[1] = closure_8(View, obj9);
   const obj11 = {

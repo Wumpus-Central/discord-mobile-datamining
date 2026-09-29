@@ -50,9 +50,9 @@ export default function GuildEventsNoContent(guild) {
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { icon: null, IconComponent: null };
   const obj = guild(504);
-  obj3.icon = onClose(9074);
-  obj3.IconComponent = guild(9076).CalendarIcon;
-  const items2 = [closure_7(onClose(7855), obj3), , ,];
+  obj3.icon = onClose(9239);
+  obj3.IconComponent = guild(9241).CalendarIcon;
+  const items2 = [closure_7(onClose(8020), obj3), , ,];
   const obj4 = {
     style: tmp.title,
     accessibilityRole: "header",

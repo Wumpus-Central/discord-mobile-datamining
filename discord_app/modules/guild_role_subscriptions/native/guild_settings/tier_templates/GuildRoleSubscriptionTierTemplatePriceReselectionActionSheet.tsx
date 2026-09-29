@@ -28,7 +28,7 @@ function PriceOptionRow(selected) {
   items[1] = containerSelected;
   const obj3 = { style: tmp.rowStatusIcon, source: null };
   const tmp7 = TouchableHitBoxDefault;
-  obj3.source = importDefault(selected ? 17520 : 16214);
+  obj3.source = importDefault(selected ? 17709 : 16390);
   const items1 = [React7(FastImageDefault, obj3)];
   const obj4 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl = util.intl;

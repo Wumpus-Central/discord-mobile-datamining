@@ -96,11 +96,11 @@ export default function VibegrationsNativeControlOverlay(onOpenPublishedApp) {
   let vibegrationsControlPhase;
   ({ projectId, active } = onOpenPublishedApp);
   const tmp = closure_9();
-  vibegrationsControlPhase = vibegrationsControlPhase(16289).useVibegrationsControlPhase(active);
-  let obj = vibegrationsControlPhase(16289);
-  const vibegrationsControlStop = vibegrationsControlPhase(16289).useVibegrationsControlStop(projectId);
+  vibegrationsControlPhase = vibegrationsControlPhase(16469).useVibegrationsControlPhase(active);
+  let obj = vibegrationsControlPhase(16469);
+  const vibegrationsControlStop = vibegrationsControlPhase(16469).useVibegrationsControlStop(projectId);
   ({ stop, stopping } = vibegrationsControlStop);
-  let obj2 = vibegrationsControlPhase(16289);
+  let obj2 = vibegrationsControlPhase(16469);
   let items = [AccessibilityStore];
   const stateFromStores = vibegrationsControlPhase(504).useStateFromStores(
     items,
@@ -191,10 +191,10 @@ export default function VibegrationsNativeControlOverlay(onOpenPublishedApp) {
     obj12.style = items6;
     const obj13 = { style: tmp.status, children: null };
     const obj14 = { size: "sm", color: stateFromStores(576).colors.TEXT_OVERLAY_LIGHT };
-    const items7 = [closure_6(tmp2(16290).SparklesIcon, obj14), ,];
+    const items7 = [closure_6(tmp2(16470).SparklesIcon, obj14), ,];
     let tmp20Result = null;
     if (tmp7) {
-      tmp20Result = closure_6(tmp2(13935).AILoader, { size: 12, color: "text-overlay-light" });
+      tmp20Result = closure_6(tmp2(14104).AILoader, { size: 12, color: "text-overlay-light" });
     }
     items7[1] = tmp20Result;
     const obj15 = { style: tmp.copy, children: null };
@@ -227,7 +227,7 @@ export default function VibegrationsNativeControlOverlay(onOpenPublishedApp) {
         const intl3 = tmp2(1115).intl;
         obj19.text = intl3.string(tmp22(3715).kj5epw);
         obj19.onPress = onOpenPublishedApp;
-        tmp20Result5 = closure_6(tmp2(5281).Button, obj19);
+        tmp20Result5 = closure_6(tmp2(5447).Button, obj19);
       }
       const items10 = [tmp20Result5];
       let tmp20Result6 = null;
@@ -237,7 +237,7 @@ export default function VibegrationsNativeControlOverlay(onOpenPublishedApp) {
         obj20.text = intl4.string(tmp22(3715)["2HalWx"]);
         obj20.loading = stopping;
         obj20.onPress = stop;
-        tmp20Result6 = closure_6(tmp2(5281).Button, obj20);
+        tmp20Result6 = closure_6(tmp2(5447).Button, obj20);
       }
       items10[1] = tmp20Result6;
       obj18.children = items10;

@@ -12,7 +12,7 @@ import RegexUtilsDefault from "RegexUtils.tsx";
 import useChannelName from "../modules/channel/useChannelName.tsx";
 import isSoundValidDefault from "../modules/premium/sounds/soundmoji/utils/isSoundValid.tsx";
 import StickersTypes from "../modules/stickers/StickersTypes.tsx";
-import fuzzysearchDefault from "../../_runtime/05829_fuzzysearch.js";
+import fuzzysearchDefault from "../../_runtime/05996_fuzzysearch.js";
 import autocompleter_sortByMatchScoreDefault from "../modules/autocompleter/sortByMatchScore.tsx";
 import GuildUtilsDefault from "GuildUtils.tsx";
 import OnboardingHomeUtils from "../modules/guild_onboarding_home/OnboardingHomeUtils.tsx";
@@ -436,7 +436,7 @@ function getCategoryName(parent_id, arg1) {
     return tmp2;
   }
 }
-const InAppNavigationRecord = fn(5755);
+const InAppNavigationRecord = fn(5922);
 ({ InAppNavigationRecord: hasOwnProperty, InAppNavigationType: metroRequire } = InAppNavigationRecord);
 const ChannelRecord = fn(2049);
 ({
@@ -456,18 +456,18 @@ let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1074);
 ({ Permissions: closure_38, GuildFeatures: closure_39, ChannelTypes } = Constants);
 ({ SKUTypes: closure_41, MAX_AUTOCOMPLETE_RESULTS: closure_42 } = Constants);
-fn(5827).AutocompleterResultTypes;
+fn(5994).AutocompleterResultTypes;
 const StaticChannelId = fn(2052).StaticChannelId;
 const logger = new LoggerDefault("AutocompleteUtils");
 let c46 = 10;
 let tmp7 = /(\t|\s)/;
 const re48 = tmp7;
 let closure_49 = [];
-const MENTION_EVERYONE = fn(5828).default.MENTION_EVERYONE;
-const MENTION_HERE = fn(5828).default.MENTION_HERE;
-const MENTION_GAME = fn(5828).default.MENTION_GAME;
-const MENTION_TIMESTAMP = fn(5828).default.MENTION_TIMESTAMP;
-const LAUNCHABLE_APPLICATIONS = fn(5828).default.LAUNCHABLE_APPLICATIONS;
+const MENTION_EVERYONE = fn(5995).default.MENTION_EVERYONE;
+const MENTION_HERE = fn(5995).default.MENTION_HERE;
+const MENTION_GAME = fn(5995).default.MENTION_GAME;
+const MENTION_TIMESTAMP = fn(5995).default.MENTION_TIMESTAMP;
+const LAUNCHABLE_APPLICATIONS = fn(5995).default.LAUNCHABLE_APPLICATIONS;
 class AutocompleteBoostersCache {
   constructor() {
     merged = Object.assign({
@@ -1869,7 +1869,21 @@ export default {
       type,
       allowEmptyQueries: null,
     };
-    obj.channels = this.queryChannels(obj2).map((record) => record.record);
+    obj.channels = this.queryChannels({
+      query: channelTypes.query,
+      guildId: channel.getGuildId(),
+      limit: "r",
+      fuzzy: "HermesInternal",
+      filter(type) {
+        let hasItem = null == channelTypes;
+        if (!hasItem) {
+          hasItem = channelTypes.includes(type.type);
+        }
+        return hasItem;
+      },
+      type,
+      allowEmptyQueries: null,
+    }).map((record) => record.record);
     return obj;
   },
   queryApplicationCommandChannelResults(limit) {
@@ -2002,12 +2016,12 @@ export default {
                     } else if (regex.test(value)) {
                       num4 = 7 * tmp9;
                     } else {
-                      let tmp18 = tmp7 !== flag(5581).StickerMetadataTypes.GUILD_NAME;
+                      let tmp18 = tmp7 !== flag(5748).StickerMetadataTypes.GUILD_NAME;
                       if (tmp18) {
-                        tmp18 = tmp7 !== flag(5581).StickerMetadataTypes.PACK_NAME;
+                        tmp18 = tmp7 !== flag(5748).StickerMetadataTypes.PACK_NAME;
                       }
                       if (tmp18) {
-                        tmp18 = tmp7 !== flag(5581).StickerMetadataTypes.STICKER_NAME;
+                        tmp18 = tmp7 !== flag(5748).StickerMetadataTypes.STICKER_NAME;
                       }
                       if (!tmp18) {
                         tmp18 = !regex2.test(value);
@@ -2045,7 +2059,7 @@ export default {
                   closure_2_5.push(obj);
                 }
               }
-              obj2 = flag(6755);
+              obj2 = flag(6921);
             }
           });
         });

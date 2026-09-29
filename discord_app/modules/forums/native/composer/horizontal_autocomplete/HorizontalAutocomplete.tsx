@@ -10,7 +10,7 @@ import useMountEffectDefault from "../../../../../hooks/useMountEffect.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import RoleIconUtils from "../../../../guild_boosting/RoleIconUtils.tsx";
 import RoleIconDefault from "../../../../roles/native/RoleIcon.tsx";
-import _modDef7581 from "../../../../../../_runtime/metro/07581__.js";
+import _modDef7746 from "../../../../../../_runtime/metro/07746__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 import GuildRoleStore from "../../../../../stores/GuildRoleStore.tsx";
@@ -169,10 +169,10 @@ export default {
     channel(504);
     [][0] = channel;
     if (channel.type === constants.GUILD_CATEGORY) {
-      let channelIconWithGuild = _modDef7581;
+      let channelIconWithGuild = _modDef7746;
     } else {
-      channelIconWithGuild = tmp2(5335).getChannelIconWithGuild(channel, tmp5);
-      const tmp2Result = tmp2(5335);
+      channelIconWithGuild = tmp2(5501).getChannelIconWithGuild(channel, tmp5);
+      const tmp2Result = tmp2(5501);
     }
     const tmp = closure_13();
     const tmp8 = closure_11(channel(1177).Icon, { source: channelIconWithGuild });

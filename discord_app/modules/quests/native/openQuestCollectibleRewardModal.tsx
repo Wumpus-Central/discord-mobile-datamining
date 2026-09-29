@@ -32,7 +32,7 @@ function QuestCollectibleRewardModalMessages(quest) {
   obj4.children = items1;
   return React5(timestampProducer, obj4);
 }
-const QuestsExperimentLocations = fn(5756).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5923).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4836);

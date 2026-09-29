@@ -16,13 +16,13 @@ const result = size.fileFinishedImporting(
 );
 
 export const useBottomSheetFlashListBottomViewabilityInset = function useBottomSheetFlashListBottomViewabilityInset() {
-  const context = bottomVisibilityInsetRef.useContext(bottomSheetPosition(10785).AppLauncherContext);
+  const context = bottomVisibilityInsetRef.useContext(bottomSheetPosition(10954).AppLauncherContext);
   bottomSheetPosition = undefined;
   if (context != null) {
     bottomSheetPosition = context.bottomSheetPosition;
   }
   const flashListRef = obj.useRef(null);
-  const diff = flashListRef(1479)().height - flashListRef(10898)().maximum;
+  const diff = flashListRef(1479)().height - flashListRef(11067)().maximum;
   dependencyMap = diff;
   bottomVisibilityInsetRef = obj.useRef(9999);
   const memo = obj.useMemo(

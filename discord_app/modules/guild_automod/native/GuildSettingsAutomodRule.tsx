@@ -9,10 +9,10 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const useAutomodRulesList = fn(17306).useAutomodRulesList;
-const GuildSettingsAutomodRuleStore = fn(17308);
+const useAutomodRulesList = fn(17495).useAutomodRulesList;
+const GuildSettingsAutomodRuleStore = fn(17497);
 ({ useAutomodEditingRuleActions: closure_7, useAutomodEditingRuleState: closure_8 } = GuildSettingsAutomodRuleStore);
-const MAX_RULE_NAME_LENGTH = fn(11341).MAX_RULE_NAME_LENGTH;
+const MAX_RULE_NAME_LENGTH = fn(11510).MAX_RULE_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let c13 = "automod-delete-rule";
@@ -337,7 +337,7 @@ export default function GuildSettingsAutomodRule(guildId) {
                         let v0 = 1;
                         c5 = 2;
                         c6 = 1;
-                        const obj6 = { value: closure_0(11346).deleteAutomodRule(id, closure_0), done: false };
+                        const obj6 = { value: closure_0(11515).deleteAutomodRule(id, closure_0), done: false };
                         return obj6;
                       }
                     } else if (1 === tmp7) {

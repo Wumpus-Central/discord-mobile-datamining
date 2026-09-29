@@ -5,8 +5,8 @@ import privDefault from "../../../_runtime/01439_priv.js";
 import MessageRecordUtils from "../messages/MessageRecordUtils.tsx";
 import ExplicitMediaRedactionUtils from "../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import ChannelConversationsStore from "../conversations/ChannelConversationsStore.tsx";
 import ConversationPreviewStore from "../conversations/ConversationPreviewStore.tsx";
-import ConversationsStore from "../conversations/ConversationsStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import MessageStore from "../../stores/MessageStore.tsx";
 
@@ -45,7 +45,7 @@ function processMessage(message) {
       } else {
         message = MessageStore.getMessage(message_reference.channel_id, message_id);
         if (message == null) {
-          message = ConversationsStore.getMessage(message_reference.channel_id, message_id);
+          message = ChannelConversationsStore.getMessage(message_reference.channel_id, message_id);
         }
         if (message == null) {
           message = ConversationPreviewStore.getMessage(message_id);
@@ -273,7 +273,7 @@ const Store = initializeDefault.Store;
 class ReferencedMessageStore extends Store {}
 const prototype3 = ReferencedMessageStore.prototype;
 prototype3["initialize"] = function initialize() {
-  this.waitFor(MessageStore, ChannelStore, ConversationsStore, ConversationPreviewStore);
+  this.waitFor(MessageStore, ChannelStore, ChannelConversationsStore, ConversationPreviewStore);
 };
 prototype3["getMessageByReference"] = function getMessageByReference(messageReference) {
   value = undefined;
@@ -313,15 +313,15 @@ const referencedMessageStore = new ReferencedMessageStore(DispatcherDefault, {
   LOAD_MESSAGES_SUCCESS: handleLoadMessages,
   LOAD_MESSAGES_AROUND_SUCCESS: handleLoadMessages,
   SEARCH_MESSAGES_SUCCESS: handleSearchMessagesSuccess,
-  INTELLIGENCE_SEARCH_FETCH_SUCCESS: function handleIntelligenceSearchFetchSuccess(messages) {
+  SMART_SEARCH_FETCH_SUCCESS: function handleSmartSearchFetchSuccess(messages) {
     return anyChanged(messages.messages, (first_message) => processMessage(first_message));
   },
   MOD_VIEW_SEARCH_MESSAGES_SUCCESS: handleSearchMessagesSuccess,
-  CONVERSATION_FETCH_SUCCESS: function handleConversationFetchSuccess(messages) {
+  CONVERSATION_MESSAGES_FETCH_SUCCESS: function handleConversationMessagesFetchSuccess(messages) {
     messages = messages.messages;
     return anyChanged(messages.concat(messages.messageReferences), (first_message) => processMessage(first_message));
   },
-  CONVERSATIONS_FETCH_SUCCESS: function handleConversationsFetchSuccess(rawConversations) {
+  CHANNEL_CONVERSATIONS_FETCH_SUCCESS: function handleChannelConversationsFetchSuccess(rawConversations) {
     return anyChanged(rawConversations.rawConversations, (messages) => {
       messages = messages.messages;
       if (messages == null) {

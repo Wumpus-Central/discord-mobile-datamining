@@ -5,13 +5,13 @@ import _modDef4796 from "../../../../../_runtime/metro/04796__.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
-import _modDef6515 from "../../../../../_runtime/metro/06515__.js";
-import _modDef7408 from "../../../../../_runtime/metro/07408__.js";
-import _modDef10823 from "../../../../../_runtime/metro/10823__.js";
-import _modDef11059 from "../../../../../_runtime/metro/11059__.js";
-import _modDef12289 from "../../../../../_runtime/metro/12289__.js";
-import _modDef15383 from "../../../../../_runtime/metro/15383__.js";
-import _modDef15384 from "../../../../../_runtime/metro/15384__.js";
+import _modDef6681 from "../../../../../_runtime/metro/06681__.js";
+import _modDef7573 from "../../../../../_runtime/metro/07573__.js";
+import _modDef10992 from "../../../../../_runtime/metro/10992__.js";
+import _modDef11228 from "../../../../../_runtime/metro/11228__.js";
+import _modDef12460 from "../../../../../_runtime/metro/12460__.js";
+import _modDef15558 from "../../../../../_runtime/metro/15558__.js";
+import _modDef15559 from "../../../../../_runtime/metro/15559__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -50,8 +50,8 @@ function DemoContextMenu(align) {
             label: length[index % length.length],
             IconComponent: "a",
             iconSource: length2[index % length2.length],
-            variant: false,
-            action: false,
+            variant: true,
+            action: true,
           };
           let str = "default";
           if (index === closure_0 - 1) {
@@ -74,8 +74,8 @@ function DemoContextMenu(align) {
           label: length[index % length.length],
           IconComponent: "a",
           iconSource: length2[index % length2.length],
-          variant: false,
-          action: false,
+          variant: true,
+          action: true,
         };
         let str = "default";
         if (index === closure_0 - 1) {
@@ -110,14 +110,14 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let items = [
-  _modDef12289,
-  _modDef6515,
-  _modDef7408,
-  _modDef10823,
+  _modDef12460,
+  _modDef6681,
+  _modDef7573,
+  _modDef10992,
   _modDef4796,
-  _modDef15383,
-  _modDef15384,
-  _modDef11059,
+  _modDef15558,
+  _modDef15559,
+  _modDef11228,
 ];
 let closure_8 = [
   "Launch Probe!",

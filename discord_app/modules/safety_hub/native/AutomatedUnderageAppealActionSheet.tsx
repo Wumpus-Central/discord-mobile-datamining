@@ -12,7 +12,7 @@ import SafetyHubStore from "../SafetyHubStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(7868);
+const SafetyHubConstants = fn(8033);
 ({ AGE_APPEAL_ACTION_SHEET_NAME: metroRequire, SafetyHubLinks: closure_7 } = SafetyHubConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -129,7 +129,7 @@ export default function AutomatedUnderageAppealActionSheet(onClose) {
   const items6 = [closure_9(callback, obj7), , ,];
   const obj10 = { children: null };
   let obj2 = onClose(504);
-  obj10.children = closure_8(onClose(5999).TableRowGroup, {
+  obj10.children = closure_8(onClose(6165).TableRowGroup, {
     hasIcons: true,
     children: items.map((item, index) => {
       ({ title, description } = item);
@@ -155,8 +155,8 @@ export default function AutomatedUnderageAppealActionSheet(onClose) {
   obj14.onPress = function onPress() {
     return classificationId(number[19]).openURL(constants.AGE_VERIFICATION_LINK);
   };
-  obj13.children = closure_8(onClose(5917).TableRow, obj14);
-  obj12.children = closure_8(onClose(5999).TableRowGroup, obj13);
+  obj13.children = closure_8(onClose(6083).TableRow, obj14);
+  obj12.children = closure_8(onClose(6165).TableRowGroup, obj13);
   items6[2] = closure_8(callback, obj12);
   const obj15 = { style: tmp.footer, children: null };
   const obj16 = {
@@ -169,7 +169,7 @@ export default function AutomatedUnderageAppealActionSheet(onClose) {
   };
   const intl6 = onClose(1115).intl;
   obj16.text = intl6.string(onClose(1115).t["54b8V0"]);
-  const items7 = [closure_8(onClose(5281).Button, obj16)];
+  const items7 = [closure_8(onClose(5447).Button, obj16)];
   const obj17 = { variant: "heading-sm/medium", color: "text-subtle", style: tmp.learnMore, children: null };
   const intl7 = onClose(1115).intl;
   obj17.children = intl7.format(onClose(1115).t.ZbWsOF, { learnMoreLink: constants.LEARN_MORE_UU_APPEAL_LINK });
@@ -178,6 +178,6 @@ export default function AutomatedUnderageAppealActionSheet(onClose) {
   items6[3] = closure_9(callback, obj15);
   obj5.children = items6;
   obj4.children = closure_9(callback, obj5);
-  obj3.children = closure_8(onClose(6045).BottomSheetScrollView, obj4);
-  return closure_8(onClose(6571).BottomSheet, obj3);
+  obj3.children = closure_8(onClose(6211).BottomSheetScrollView, obj4);
+  return closure_8(onClose(6737).BottomSheet, obj3);
 }

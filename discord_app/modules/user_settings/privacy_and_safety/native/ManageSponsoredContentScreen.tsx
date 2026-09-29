@@ -32,7 +32,7 @@ function AdTopicRow(adTopic) {
     const items = [...set];
     AdTopicOptOuts2.updateSetting(items);
   };
-  return closure_5(adTopic(6621).TableSwitchRow, obj);
+  return closure_5(adTopic(6787).TableSwitchRow, obj);
 }
 const View = fn(17).View;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;

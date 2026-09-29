@@ -9,7 +9,7 @@ import TypingStore from "../../../../../../../stores/TypingStore.tsx";
 import UserStore from "../../../../../../../stores/UserStore.tsx";
 
 const require = fn;
-const MUTED_OPACITY_CONTENT = fn(9577).MUTED_OPACITY_CONTENT;
+const MUTED_OPACITY_CONTENT = fn(9744).MUTED_OPACITY_CONTENT;
 const jsx = fn(21).jsx;
 const createStyles = fn(4836);
 let closure_10 = createStyles.createStyles((arg0) => {
@@ -123,13 +123,13 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
         guildId: "e",
         isMobileOnline: stateFromStores3,
         isVROnline: stateFromStores4,
-        status: true,
-        streaming: true,
-        style: false,
-        size: true,
-        animate: true,
-        typing: "channel",
-        autoStatusCutout: 17082177,
+        status: null,
+        streaming: "b0f2d18e6d7a6837db7a0d021090104d",
+        style: "de.messages.b0f2d18e6d7a6837db7a0d021090104d.compiled.messages",
+        size: "jsona",
+        animate: "VOICE_CATEGORY_EXPAND",
+        typing: null,
+        autoStatusCutout: true,
       };
       let tmp12 = null;
       if (!stateFromStores2.isSystemUser()) {
@@ -147,13 +147,13 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
         guildId: "e",
         isMobileOnline: stateFromStores3,
         isVROnline: stateFromStores4,
-        status: true,
-        streaming: true,
-        style: false,
-        size: true,
-        animate: true,
-        typing: "channel",
-        autoStatusCutout: 17082177,
+        status: null,
+        streaming: "b0f2d18e6d7a6837db7a0d021090104d",
+        style: "de.messages.b0f2d18e6d7a6837db7a0d021090104d.compiled.messages",
+        size: "jsona",
+        animate: "VOICE_CATEGORY_EXPAND",
+        typing: null,
+        autoStatusCutout: true,
       });
     }
   }

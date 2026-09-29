@@ -198,7 +198,7 @@ function findNearestUnreadItem(fastList, guildChannels, headerHeight, youBarTota
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const getScaledChannelRowHeight = fn(9577).getScaledChannelRowHeight;
+const getScaledChannelRowHeight = fn(9744).getScaledChannelRowHeight;
 const UnreadSetting = fn(5018).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);

@@ -33,7 +33,7 @@ export default function usePreloadedAsset(arg0) {
   dependencyMap = tmp3;
   let tmp4 = !tmp3;
   if (tmp3) {
-    tmp4 = null != num(16782);
+    tmp4 = null != num(16969);
   }
   _slicedToArray = tmp4;
   let str = "image";
@@ -73,9 +73,9 @@ export default function usePreloadedAsset(arg0) {
           }
         }, timeout);
         if (dependencyMap) {
-          if (null != num(16782)) {
-            let preloadResult = num(16782).preload(tmp);
-            const obj2 = num(16782);
+          if (null != num(16969)) {
+            let preloadResult = num(16969).preload(tmp);
+            const obj2 = num(16969);
           }
           preloadResult.then(
             () => {
@@ -98,8 +98,8 @@ export default function usePreloadedAsset(arg0) {
             clearTimeout(closure_1);
           };
         }
-        preloadResult = num(5899).preload(tmp, timeout + 1000);
-        let obj = num(5899);
+        preloadResult = num(6065).preload(tmp, timeout + 1000);
+        let obj = num(6065);
       }
     }
   }, items1);

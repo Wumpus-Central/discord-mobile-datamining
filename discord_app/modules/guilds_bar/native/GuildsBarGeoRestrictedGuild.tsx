@@ -13,7 +13,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const GuildIconDefault = GuildIcon;
 
 require = fn;
-const GUILD_ITEM_BADGE_SIZE = fn(15918).GUILD_ITEM_BADGE_SIZE;
+const GUILD_ITEM_BADGE_SIZE = fn(16094).GUILD_ITEM_BADGE_SIZE;
 const jsx = fn(21).jsx;
 const createStyles = fn(4836);
 let obj = { guildIcon: null, geoRestrictedBadge: null };
@@ -38,7 +38,7 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
   restrictedGuild = restrictedGuild.restrictedGuild;
   const tmp = closure_5();
   let animatableSourceWithFallback = null;
-  let obj = restrictedGuild(15930);
+  let obj = restrictedGuild(16106);
   const tmp2 = restrictedGuild;
   if (null != restrictedGuild.icon) {
     animatableSourceWithFallback = AvatarUtilsDefault.getAnimatableSourceWithFallback(false, (canAnimate) => {
@@ -75,7 +75,7 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     selected: false,
     unread: false,
     circle: false,
-    styles: restrictedGuild(15930).useGuildsBarAnimatedWrapperStyles({
+    styles: restrictedGuild(16106).useGuildsBarAnimatedWrapperStyles({
       disableSelectedColor: true,
       disableBGColor: true,
     }),
@@ -84,11 +84,11 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     config: memo,
     cutouts: items,
     overState: "a",
-    externalChildren: "canap\u00E9",
-    expandedChildren: "canap\u00E9 avec une lampe",
-    children: "canap\u00E9 et lampe",
+    externalChildren: 40,
+    expandedChildren: 12,
+    children: "center",
   };
-  const guildsBarAnimatedWrapperStyles = restrictedGuild(15930).useGuildsBarAnimatedWrapperStyles({
+  const guildsBarAnimatedWrapperStyles = restrictedGuild(16106).useGuildsBarAnimatedWrapperStyles({
     disableSelectedColor: true,
     disableBGColor: true,
   });
@@ -106,13 +106,13 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
       value: restrictedGuild.name,
       selected: false,
       animate: false,
-      size: tmp2(5896).GuildIconSizes.LARGE,
+      size: tmp2(6062).GuildIconSizes.LARGE,
     };
     tmp8Result = jsx(GuildIconDefault, {
       value: restrictedGuild.name,
       selected: false,
       animate: false,
-      size: tmp2(5896).GuildIconSizes.LARGE,
+      size: tmp2(6062).GuildIconSizes.LARGE,
     });
     const tmp9Result = GuildIconDefault;
   }
@@ -121,7 +121,7 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     selected: false,
     unread: false,
     circle: false,
-    styles: restrictedGuild(15930).useGuildsBarAnimatedWrapperStyles({
+    styles: restrictedGuild(16106).useGuildsBarAnimatedWrapperStyles({
       disableSelectedColor: true,
       disableBGColor: true,
     }),
@@ -130,8 +130,8 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     config: memo,
     cutouts: items,
     overState: "a",
-    externalChildren: "canap\u00E9",
-    expandedChildren: "canap\u00E9 avec une lampe",
-    children: "canap\u00E9 et lampe",
+    externalChildren: 40,
+    expandedChildren: 12,
+    children: "center",
   });
 });

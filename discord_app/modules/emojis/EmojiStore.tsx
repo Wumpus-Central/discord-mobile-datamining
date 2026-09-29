@@ -94,7 +94,7 @@ let closure_37 = async function _loadSavedEmojis() {
               const obj6 = {
                 value: React(2094).tryLoadOrResetCacheGatewayAsync("EmojiStore.loadSavedEmojis", async () =>
                   closure_1(10).timeAsync("\u{1F4BE}", "loadSavedEmojis", async () =>
-                    closure_2_1(5777).getAsync(closure_1_0),
+                    closure_2_1(5944).getAsync(closure_1_0),
                   ),
                 ),
                 done: false,
@@ -149,7 +149,7 @@ function updateGuildEmoji(guildId) {
   if (null != guildEmojis) {
     const currentUser = UserStore.getCurrentUser();
     if (null != currentUser) {
-      let flag = closure_0(5811).canUseRoleSubscriptionIAP(guildId);
+      let flag = closure_0(5978).canUseRoleSubscriptionIAP(guildId);
       if (typeof GuildEmojis === "function") {
         if (flag === undefined) {
           flag = false;
@@ -169,7 +169,7 @@ function updateGuildEmoji(guildId) {
       } else {
         throw new TypeError("Trying to call a non-function");
       }
-      obj = closure_0(5811);
+      obj = closure_0(5978);
     }
   }
 }
@@ -335,7 +335,7 @@ function handleRoleUpdate(guildId) {
 const EmojiConstants = fn(1375);
 ({ EmojiDisabledReasons: closure_17, EmojiIntention: closure_18 } = EmojiConstants);
 const NULL_STRING_GUILD_ID = fn(1074).NULL_STRING_GUILD_ID;
-const EmojiCategories = fn(5775).EmojiCategories;
+const EmojiCategories = fn(5942).EmojiCategories;
 const UserSettingsTypes = fn(1084).UserSettingsTypes;
 let items = [
   EmojiCategories.TOP_GUILD_EMOJI.toString(),
@@ -394,7 +394,7 @@ prototype["isUsable"] = function isUsable(emoji) {
         return roles.includes(item);
       });
       if (!someResult) {
-        let result = emoji(5776).isPurchasableRoleSubscriptionEmoji(emoji);
+        let result = emoji(5943).isPurchasableRoleSubscriptionEmoji(emoji);
         if (result) {
           let _canSeeServerSubIAP = self._canSeeServerSubIAP;
           if (!_canSeeServerSubIAP) {
@@ -403,7 +403,7 @@ prototype["isUsable"] = function isUsable(emoji) {
           result = _canSeeServerSubIAP;
         }
         someResult = result;
-        obj = emoji(5776);
+        obj = emoji(5943);
       }
       tmp6 = someResult;
     }
@@ -461,6 +461,16 @@ Object.defineProperty(prototype, "usableEmojis", {
   },
   set: undefined,
 });
+prototype["hasUsableEmoji"] = function hasUsableEmoji() {
+  const self = this;
+  if (null != this._usableEmojis) {
+    let someResult = self._usableEmojis.length > 0;
+  } else {
+    const emojis = self.emojis;
+    someResult = emojis.some((item) => self.isUsable(item));
+  }
+  return someResult;
+};
 Object.defineProperty(prototype, "hiddenEmojiIds", {
   get: function hiddenEmojiIds() {
     const result = this._computeEmojiUsability();
@@ -970,7 +980,7 @@ let merged = Object.assign({
   afterCompute() {
     closure_0();
     const items = [...closure_2_22];
-    if (!obj.some(__initData10, (usableEmojis) => usableEmojis.usableEmojis.length > 0)) {
+    if (!obj.some(__initData10, (hasUsableEmoji) => hasUsableEmoji.hasUsableEmoji())) {
       items.splice(__initData2.indexOf(closure_2_20.CUSTOM), 1);
     }
     obj = _modDef12;
@@ -1004,7 +1014,7 @@ const merged1 = Object.assign({
   afterCompute() {
     closure_0();
     const items = [...closure_2_22];
-    if (!obj.some(__initData10, (usableEmojis) => usableEmojis.usableEmojis.length > 0)) {
+    if (!obj.some(__initData10, (hasUsableEmoji) => hasUsableEmoji.hasUsableEmoji())) {
       items.splice(__initData2.indexOf(closure_2_20.CUSTOM), 1);
     }
     obj = _modDef12;
@@ -1353,7 +1363,7 @@ prototype3["getTopEmojisMetadata"] = function getTopEmojisMetadata(guildId) {
 prototype3["hasUsableEmojiInAnyGuild"] = function hasUsableEmojiInAnyGuild() {
   loadSavedEmojis();
   const keys = SnowflakeUtils.keys(closure_32);
-  return keys.some((item) => dependencyMap2[item].usableEmojis.length > 0);
+  return keys.some((item) => dependencyMap2[item].hasUsableEmoji());
 };
 prototype3["hasFavoriteEmojis"] = function hasFavoriteEmojis(arg0) {
   value = EmojiDisambiguations.get(arg0);

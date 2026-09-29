@@ -4,9 +4,9 @@ import GuildBoostingUtils from "../../../utils/GuildBoostingUtils.tsx";
 import useGuildPowerupsBoostCountDefault from "../powerups/hooks/useGuildPowerupsBoostCount.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Tier048Px from "../../../design/components/Illustration/native/redesign/generated/Tier048Px.tsx";
-import _modDef13051 from "../../../../_runtime/metro/13051__.js";
-import _modDef13052 from "../../../../_runtime/metro/13052__.js";
-import _modDef13053 from "../../../../_runtime/metro/13053__.js";
+import _modDef13221 from "../../../../_runtime/metro/13221__.js";
+import _modDef13222 from "../../../../_runtime/metro/13222__.js";
+import _modDef13223 from "../../../../_runtime/metro/13223__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -76,11 +76,11 @@ export default function BoostedGuildTierProgressCircle(arg0) {
       if (guild.premiumTier !== constants.NONE) {
         const premiumTier = guild.premiumTier;
         if (constants.TIER_1 === premiumTier) {
-          let tier048PxSource = _modDef13051;
+          let tier048PxSource = _modDef13221;
         } else if (constants.TIER_2 === premiumTier) {
-          tier048PxSource = _modDef13052;
+          tier048PxSource = _modDef13222;
         } else if (constants.TIER_3 === premiumTier) {
-          tier048PxSource = _modDef13053;
+          tier048PxSource = _modDef13223;
         }
       }
       const obj5 = {

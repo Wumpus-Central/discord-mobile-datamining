@@ -2,14 +2,14 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
-import _modDef9491 from "../../../../_runtime/metro/09491__.js";
+import _modDef9658 from "../../../../_runtime/metro/09658__.js";
 import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(11088).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+let closure_6 = fn(11257).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const ContentDismissActionType = fn(2042).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const createStyles = fn(4836);
@@ -26,16 +26,16 @@ export default function GroupDMNitroCapCoachmark(channelId) {
   const tmp = closure_9();
   dependencyMap = tmp;
   const ref = noop.useRef(null);
-  const groupDMNitroAudience = channelId(11086).useGroupDMNitroAudience();
+  const groupDMNitroAudience = channelId(11255).useGroupDMNitroAudience();
   noop = tmp6;
   const obj3 = { audience: groupDMNitroAudience, location: _location, acquisitionStrategy: null };
   let obj = noop;
-  const obj2 = channelId(11086);
-  obj3.acquisitionStrategy = channelId(11086).GroupDMNitroAcquisitionStrategy.MARKETING;
-  const tmp7Result = _location(11093)(obj3);
+  const obj2 = channelId(11255);
+  obj3.acquisitionStrategy = channelId(11255).GroupDMNitroAcquisitionStrategy.MARKETING;
+  const tmp7Result = _location(11262)(obj3);
   closure_5 = tmp7Result;
-  let tmp7 = _location(11093);
-  channelId(6806);
+  let tmp7 = _location(11262);
+  channelId(6972);
   if (obj4.useConfig({ location: _location }).enabled) {
     if ("staff" !== groupDMNitroAudience) {
       const items = [tmp3(2029).DismissibleContent.NITRO_GDM_CAP_COACHMARK];
@@ -78,7 +78,7 @@ export default function GroupDMNitroCapCoachmark(channelId) {
       const intl3 = util.intl;
       obj.buttonLabel = intl3.string(GroupDMNitroUpsellModel.getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
       if (closure_4) {
-        let tmp7 = _modDef9491;
+        let tmp7 = _modDef9658;
       } else {
         const obj4 = {
           size: "custom",
@@ -100,7 +100,7 @@ export default function GroupDMNitroCapCoachmark(channelId) {
       obj.buttonShiny = !closure_4;
       obj.onButtonPress = function onButtonPress() {
         if (closure_1_4) {
-          _location(11085)(channelId, closure_1_1);
+          _location(11254)(channelId, closure_1_1);
         } else {
           closure_1_5();
         }
@@ -108,7 +108,7 @@ export default function GroupDMNitroCapCoachmark(channelId) {
       };
       return obj;
     }, items1);
-    const coachmark = tmp3(10589).useCoachmark(ref, memo);
+    const coachmark = tmp3(10758).useCoachmark(ref, memo);
     const obj5 = { ref, collapsable: false, children: channelId.children };
     return (
       <closure_5 ref={ref} collapsable={false}>
@@ -116,5 +116,5 @@ export default function GroupDMNitroCapCoachmark(channelId) {
       </closure_5>
     );
   }
-  obj4 = _location(11089);
+  obj4 = _location(11258);
 }

@@ -136,7 +136,7 @@ function FramePreviewOverrideSection() {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let closure_11 = fn(7648).useFramePreviewOverrideStore;
+let closure_11 = fn(7813).useFramePreviewOverrideStore;
 const application_id = fn(1074).COLLECTIBLES_APPLICATION_ID;
 const PremiumGiftStyles = fn(1374).PremiumGiftStyles;
 const jsxProd = fn(21);

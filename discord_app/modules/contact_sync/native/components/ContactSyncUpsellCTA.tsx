@@ -2,11 +2,11 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import ContactSyncModalActionCreators from "../ContactSyncModalActionCreators.tsx";
-import _modDef13403 from "../../../../../_runtime/metro/13403__.js";
+import _modDef13572 from "../../../../../_runtime/metro/13572__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const dismissUpsellCTA = fn(12176).dismissUpsellCTA;
+const dismissUpsellCTA = fn(12347).dismissUpsellCTA;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_4, AnalyticsSections: hasOwnProperty } = Constants);
 const jsx = fn(21).jsx;
@@ -54,10 +54,10 @@ export default noop.memo(function ContactSyncUpsellCTA(location) {
       };
       const items = [obj3];
       obj2.options = items;
-      const result = location(6615).showSimpleActionSheet(obj2);
+      const result = location(6781).showSimpleActionSheet(obj2);
     },
     style: null,
-    iconSource: _modDef13403,
+    iconSource: _modDef13572,
     title: null,
     subtitle: null,
   };
@@ -67,7 +67,7 @@ export default noop.memo(function ContactSyncUpsellCTA(location) {
   obj.title = intl.string(location(1115).t.T6Rfd9);
   const intl2 = location(1115).intl;
   obj.subtitle = intl2.string(location(1115).t.c6KIpg);
-  return jsx(location(8053).FormCTA, {
+  return jsx(location(8218).FormCTA, {
     onPress() {
       const obj2 = { type: constants2.CONTACT_SYNC_MODAL, location: null };
       let str = location;
@@ -92,10 +92,10 @@ export default noop.memo(function ContactSyncUpsellCTA(location) {
       };
       const items = [obj3];
       obj2.options = items;
-      const result = location(6615).showSimpleActionSheet(obj2);
+      const result = location(6781).showSimpleActionSheet(obj2);
     },
     style: null,
-    iconSource: _modDef13403,
+    iconSource: _modDef13572,
     title: null,
     subtitle: null,
   });

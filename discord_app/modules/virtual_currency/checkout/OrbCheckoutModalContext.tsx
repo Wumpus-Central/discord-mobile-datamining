@@ -63,9 +63,10 @@ function useOrbCheckoutModalContextProvider(skuId) {
     orbPriceAmount = tmp8.orbPriceAmount;
   }
   if (null == orbPriceAmount) {
-    let obj3 = { tags: null };
+    let obj3 = { tags: null, fingerprint: null };
     let obj4 = { sku_id: skuId };
     obj3.tags = obj4;
+    obj3.fingerprint = ["orb-price-not-found-for-product"];
     const result = tmp(tmp2[11]).captureBillingMessage("Orb price not found for product", obj3);
     const tmpResult7 = tmp(tmp2[11]);
   }

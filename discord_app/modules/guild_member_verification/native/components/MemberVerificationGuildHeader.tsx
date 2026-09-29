@@ -7,7 +7,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MemberVerificationFormConstants = fn(5885);
+const MemberVerificationFormConstants = fn(6051);
 ({ AVATAR_BORDER_WIDTH, AVATAR_SIZE } = MemberVerificationFormConstants);
 const useBannerHeight = MemberVerificationFormConstants.useBannerHeight;
 const jsxProd = fn(21);
@@ -78,7 +78,7 @@ export default function MemberVerificationGuildHeader(hasManualFormFields) {
     let obj = require("AvatarUtils");
   } else {
     tmp3 = top;
-    guildBannerSource = require("../../../../../_runtime/metro/05895__.js");
+    guildBannerSource = require("../../../../../_runtime/metro/06061__.js");
     tmp5 = importDefault;
   }
   const tmp8 = useBannerHeight();

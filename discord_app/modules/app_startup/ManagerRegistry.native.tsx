@@ -547,7 +547,7 @@ const obj = {
     loadAfterConnectionOpen: true,
   },
   ParentalConsentManager: {
-    actions: ["CONNECTION_OPEN_SUPPLEMENTAL"],
+    actions: ["CONNECTION_OPEN_SUPPLEMENTAL", "APP_STATE_UPDATE"],
     inlineRequire() {
       return require("ParentalConsentManager").default;
     },

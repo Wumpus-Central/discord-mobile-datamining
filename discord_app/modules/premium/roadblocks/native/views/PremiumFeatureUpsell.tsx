@@ -6,7 +6,7 @@ import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import PremiumUtils from "../../../../../utils/PremiumUtils.tsx";
 import spring from "../../../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05293_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05459_LinearGradient.js";
 import openPremiumUpsellActionSheetDefault from "../utils/openPremiumUpsellActionSheet.tsx";
 import EntitlementFeatureNames from "../../../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
 import NitroWheelIcon from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
@@ -21,39 +21,39 @@ function PremiumFeatureUpsellPill(featureName) {
     flag = true;
   }
   let loading;
-  let obj = featureName(8614);
-  const premiumUpsellConfig = obj.usePremiumUpsellConfig(featureName(9421).getUpsellType(featureName));
+  let obj = featureName(8779);
+  const premiumUpsellConfig = obj.usePremiumUpsellConfig(featureName(9588).getUpsellType(featureName));
   const useTier0UpsellContent = premiumUpsellConfig.useTier0UpsellContent;
   const tmp4 = closure_14(useTier0UpsellContent);
   dependencyMap = tmp4;
-  let obj2 = featureName(9421);
+  let obj2 = featureName(9588);
   let mobileEmojiPickerUpsellRestyleEnabledForFeature = featureName(
-    7277,
+    7442,
   ).getMobileEmojiPickerUpsellRestyleEnabledForFeature(featureName, "native.PremiumFeatureUpsell");
   if (!mobileEmojiPickerUpsellRestyleEnabledForFeature) {
-    mobileEmojiPickerUpsellRestyleEnabledForFeature = tmp(8622).getMobileStickerPickerUpsellRestyleEnabledForFeature(
+    mobileEmojiPickerUpsellRestyleEnabledForFeature = tmp(8787).getMobileStickerPickerUpsellRestyleEnabledForFeature(
       featureName,
       "native.PremiumFeatureUpsell",
     );
-    let tmpResult = tmp(8622);
+    let tmpResult = tmp(8787);
   }
   const tmp7 = useTier0UpsellContent ? closure_8.TIER_0 : closure_8.TIER_2;
   const fn = () => openPremiumUpsellActionSheetDefault(featureName);
-  const obj3 = featureName(7277);
+  const obj3 = featureName(7442);
   const premiumTypeDisplayName = featureName(4488).getPremiumTypeDisplayName(tmp7);
-  if (featureName(7273).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE === featureName) {
+  if (featureName(7438).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE === featureName) {
     const intl5 = tmp(1115).intl;
     const obj4 = { nitroTierName: premiumTypeDisplayName, onClick: fn };
     let formatResult = intl5.format(tmp(1115).t["tw/SSq"], obj4);
-  } else if (tmp(7273).EntitlementFeatureNames.EMOJIS_EVERYWHERE === featureName) {
+  } else if (tmp(7438).EntitlementFeatureNames.EMOJIS_EVERYWHERE === featureName) {
     const intl4 = tmp(1115).intl;
     const obj5 = { nitroTierName: premiumTypeDisplayName, onClick: fn };
     formatResult = intl4.format(tmp(1115).t.gMVjeS, obj5);
-  } else if (tmp(7273).EntitlementFeatureNames.STICKERS_EVERYWHERE === featureName) {
+  } else if (tmp(7438).EntitlementFeatureNames.STICKERS_EVERYWHERE === featureName) {
     const intl3 = tmp(1115).intl;
     const obj6 = { nitroTierName: premiumTypeDisplayName, onClick: fn };
     formatResult = intl3.format(tmp(1115).t.eontIh, obj6);
-  } else if (tmp(7273).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE === featureName) {
+  } else if (tmp(7438).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE === featureName) {
     const intl2 = tmp(1115).intl;
     const obj7 = {
       maxFileSize: tmp(4488).getMaxFileSizeForPremiumType(tmp7),
@@ -62,22 +62,22 @@ function PremiumFeatureUpsellPill(featureName) {
     };
     formatResult = intl2.format(tmp(1115).t.zzyLEK, obj7);
     const tmpResult5 = tmp(4488);
-  } else if (tmp(7273).EntitlementFeatureNames.STREAM_HIGH_QUALITY === featureName) {
+  } else if (tmp(7438).EntitlementFeatureNames.STREAM_HIGH_QUALITY === featureName) {
     const intl = tmp(1115).intl;
     const obj8 = { nitroTierName: premiumTypeDisplayName, onClick: fn };
     formatResult = intl.format(tmp(1115).t.lyxfbj, obj8);
-  } else if (tmp(7273).EntitlementFeatureNames.APP_ICONS === featureName) {
+  } else if (tmp(7438).EntitlementFeatureNames.APP_ICONS === featureName) {
     const intl7 = tmp(1115).intl;
     const obj9 = { onClick: fn };
     formatResult = intl7.format(tmp(1115).t.x2dQxN, obj9);
   }
   const tmp10 = useTier0UpsellContent;
   const tmpResult4 = featureName(4488);
-  const tmp11 = useTier0UpsellContent(9422);
+  const tmp11 = useTier0UpsellContent(9589);
   const tmp11Result = tmp11(
     useTier0UpsellContent,
     premiumUpsellConfig.onViewAllPerks,
-    featureName(9421).getAnalyticsPage(featureName),
+    featureName(9588).getAnalyticsPage(featureName),
   );
   loading = tmp11Result.loading;
   let items = [tmp4.container, ,];
@@ -152,17 +152,17 @@ function PremiumFeatureUpsellPill(featureName) {
     obj10.children = items2;
     return closure_13(closure_5, obj10);
   } else {
-    const obj14 = { source: tmp10(useTier0UpsellContent ? 9423 : 9419), style: tmp4.nitroWheel, disableColor: true };
+    const obj14 = { source: tmp10(useTier0UpsellContent ? 9590 : 9586), style: tmp4.nitroWheel, disableColor: true };
     closure_12(tmp(1177).Icon, obj14);
   }
-  const tmpResult6 = featureName(9421);
+  const tmpResult6 = featureName(9588);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const PremiumConstants = fn(1374);
 ({ PremiumSubscriptionSKUs: closure_7, PremiumTypes: closure_8, PremiumUpsellTypes: closure_9 } = PremiumConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const Gradients = fn(6852).Gradients;
+const Gradients = fn(7018).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const createStyles = fn(4836);
@@ -235,7 +235,7 @@ function animationEnterExit(value, cleanUp) {
   obj.opacity = spring.withSpring(value, springPresets.springStandard, "respect-motion-settings", fn);
   return obj;
 }
-animationEnterExit.__closure = { withSpring: fn(5280).withSpring, springStandard: fn(5284).springStandard };
+animationEnterExit.__closure = { withSpring: fn(5446).withSpring, springStandard: fn(5450).springStandard };
 animationEnterExit.__workletHash = 15470414797897;
 animationEnterExit.__initData = {
   code: "function animationEnterExit_PremiumFeatureUpsellTsx1(visible,cleanUp){const{withSpring,springStandard}=this.__closure;return{opacity:withSpring(visible,springStandard,'respect-motion-settings',function(finished){cleanUp===null||cleanUp===void 0||cleanUp(finished);})};}",

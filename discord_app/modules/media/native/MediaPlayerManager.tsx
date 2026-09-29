@@ -39,12 +39,12 @@ const useMediaPlayerManagerStore = module_560.create((arg0) => {
     wasPipClosedByUser: null,
     progress: null,
     rate: "flex",
-    showPip: "face_with_hand_over_mouth",
+    showPip: "second_place",
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: "shushing_face"
+    currentlyDisplayedChannelId: false
   };
   return obj;
 });

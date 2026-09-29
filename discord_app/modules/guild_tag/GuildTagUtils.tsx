@@ -7,7 +7,7 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GuildTagConstants = fn(7386);
+const GuildTagConstants = fn(7551);
 ({
   GuildTagBadgeMediaProxySizes,
   GuildTagBadgeMediaProxySizesMobile: hasOwnProperty,

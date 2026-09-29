@@ -80,7 +80,7 @@ export default function InstantInviteCode(invite) {
   const tmp = closure_10();
   items1[1] = closure_8(InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
   obj2.children = items1;
-  obj.children = closure_9(invite(5279).Stack, obj2);
+  obj.children = closure_9(invite(5445).Stack, obj2);
   return closure_8(View, obj);
 }
 export { InstantInviteDetails };

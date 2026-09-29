@@ -12,7 +12,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const UserSettingsSections = fn(1074).UserSettingsSections;
-const FamilyCenterSubPages = fn(6958).FamilyCenterSubPages;
+const FamilyCenterSubPages = fn(7124).FamilyCenterSubPages;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4836);
@@ -106,7 +106,7 @@ export default function FamilyCenterParentalControlsSettings() {
         stackNavigation.setOptions(obj);
       }
     }
-    stackNavigation.setOptions({ title: "Array", headerRight: "paddingHorizontal" });
+    stackNavigation.setOptions({ title: "current", headerRight: "channel" });
   }, items1);
   const obj4 = { label: null, id: null, page: null };
   let intl = tmp2(tmp3[14]).intl;

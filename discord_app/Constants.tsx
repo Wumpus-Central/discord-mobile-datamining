@@ -484,7 +484,6 @@ const frozen2 = Object.freeze({
   COLLECTIBLES_CATEGORIES_V2: "/collectibles-categories/v2",
   COLLECTIBLES_SEARCH: "/shop/search",
   COLLECTIBLES_CLAIM: "/users/@me/claim-premium-collectibles-product",
-  COLLECTIBLES_CLAIM_CATEGORY_REWARD: "/users/@me/claim-reward-category-product",
   COLLECTIBLES_PURCHASES: "/users/@me/collectibles-purchases",
   COLLECTIBLES_PRODUCTS(skuId) {
     return "/collectibles-products/" + skuId;
@@ -503,8 +502,11 @@ const frozen2 = Object.freeze({
     }
     return "/guilds/" + guildId + "/users/" + id + "/banners/" + banner + "." + str;
   },
-  INTELLIGENCE_LAYER_SEARCH(guildIdFromSearchContext) {
-    return "/guilds/" + guildIdFromSearchContext + "/intelligence/search";
+  SMART_SEARCH(guildId) {
+    return "/guilds/" + guildId + "/intelligence/search";
+  },
+  SUGGESTED_SEARCHES(arg0) {
+    return "/guilds/" + arg0 + "/intelligence/search/suggestions";
   },
   CHANNEL_CONVERSATIONS(arg0) {
     return "/channels/" + arg0 + "/conversations";
@@ -1882,6 +1884,9 @@ const frozen2 = Object.freeze({
   POLL_ANSWER_VOTERS(arg0, arg1, name) {
     return "/channels/" + arg0 + "/polls/" + arg1 + "/answers/" + name;
   },
+  CHECKPOINT: "/checkpoint",
+  CHECKPOINT_COMPLETE: "/checkpoint/complete",
+  CHECKPOINT_RESET: "/checkpoint/reset",
   QUESTS_CURRENT_QUESTS: "/quests/@me",
   QUESTS_CLAIMED_QUESTS: "/quests/@me/claimed",
   QUEST(arg0) {
@@ -2522,7 +2527,6 @@ const obj2 = {
   COLLECTIBLES_CATEGORIES_V2: "/collectibles-categories/v2",
   COLLECTIBLES_SEARCH: "/shop/search",
   COLLECTIBLES_CLAIM: "/users/@me/claim-premium-collectibles-product",
-  COLLECTIBLES_CLAIM_CATEGORY_REWARD: "/users/@me/claim-reward-category-product",
   COLLECTIBLES_PURCHASES: "/users/@me/collectibles-purchases",
   COLLECTIBLES_PRODUCTS(skuId) {
     return "/collectibles-products/" + skuId;
@@ -2541,8 +2545,11 @@ const obj2 = {
     }
     return "/guilds/" + guildId + "/users/" + id + "/banners/" + banner + "." + str;
   },
-  INTELLIGENCE_LAYER_SEARCH(guildIdFromSearchContext) {
-    return "/guilds/" + guildIdFromSearchContext + "/intelligence/search";
+  SMART_SEARCH(guildId) {
+    return "/guilds/" + guildId + "/intelligence/search";
+  },
+  SUGGESTED_SEARCHES(arg0) {
+    return "/guilds/" + arg0 + "/intelligence/search/suggestions";
   },
   CHANNEL_CONVERSATIONS(arg0) {
     return "/channels/" + arg0 + "/conversations";
@@ -3920,6 +3927,9 @@ const obj2 = {
   POLL_ANSWER_VOTERS(arg0, arg1, name) {
     return "/channels/" + arg0 + "/polls/" + arg1 + "/answers/" + name;
   },
+  CHECKPOINT: "/checkpoint",
+  CHECKPOINT_COMPLETE: "/checkpoint/complete",
+  CHECKPOINT_RESET: "/checkpoint/reset",
   QUESTS_CURRENT_QUESTS: "/quests/@me",
   QUESTS_CLAIMED_QUESTS: "/quests/@me/claimed",
   QUEST(arg0) {
@@ -5604,11 +5614,11 @@ const frozen16 = Object.freeze({
     }
     return combined;
   },
-  GAME_AUTOCOMPLETE(arg0) {
+  GAME_AUTOCOMPLETE(arg0, DEFAULT) {
     let combined = null;
     if (null != arg0) {
       const _HermesInternal = HermesInternal;
-      combined = "game-autocomplete/" + arg0;
+      combined = "game-autocomplete/" + DEFAULT + "/" + arg0;
     }
     return combined;
   },
@@ -9154,6 +9164,7 @@ export const AnalyticEvents = {
   FRIEND_REQUEST_NOTE_VIEWED: "friend_request_note_viewed",
   VIBEGRATION_TURN_RESULTED: "vibegration_turn_resulted",
   VIBEGRATION_DEPLOYED: "vibegration_deployed",
+  VIBEGRATION_PUBLISH_ACTION_CLICKED: "vibegration_publish_action_clicked",
   VIBEGRATION_ERRORED: "vibegration_errored",
 };
 export const PublicReleaseChannels = { CANARY: "canary", PTB: "ptb", STABLE: "stable" };
@@ -9176,7 +9187,6 @@ export const ChannelNoticeTypes = {
   ROLE_SUBSCRIPTION_MWEB_PURCHASE: "ROLE_SUBSCRIPTION_MWEB_PURCHASE",
   COMMANDS_MIGRATION: "COMMANDS_MIGRATION",
   APPLICATION_SUBSCRIPTION_EXPIRATION: "APPLICATION_SUBSCRIPTION_EXPIRATION",
-  HUB_STUDY_ROOM: "HUB_STUDY_ROOM",
   GUILD_ONBOARDING_UPSELL: "GUILD_ONBOARDING_UPSELL",
   CLIPS_EDUCATION: "CLIPS_EDUCATION",
   LINKED_ROLES_ADMIN: "LINKED_ROLES_ADMIN",

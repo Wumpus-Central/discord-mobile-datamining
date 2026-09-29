@@ -3,10 +3,10 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsRepliedMessage.tsx");
 
-export const repliedMessage = function repliedMessage(stateFromStores1, in_reply_to) {
+export const repliedMessage = function repliedMessage(memo, in_reply_to) {
   closure_0 = in_reply_to;
   if (null != in_reply_to) {
-    const found = stateFromStores1.find((id) => {
+    const found = memo.find((id) => {
       let tmp = id.id === closure_0;
       if (tmp) {
         tmp = "user" === id.role;

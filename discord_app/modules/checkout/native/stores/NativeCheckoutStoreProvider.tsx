@@ -20,7 +20,7 @@ function NativeCheckoutStoreProvider(children) {
     checkoutAnalyticsFields: View,
     analyticsInitialStep: closure_7,
   } = children);
-  const contextMetadata = order(5910)(() => {
+  const contextMetadata = order(6076)(() => {
     let id;
     if (order != null) {
       id = order.id;
@@ -33,7 +33,7 @@ function NativeCheckoutStoreProvider(children) {
     const obj3 = { message: "Checkout session ID: " + id };
     return { loadId: id, startTime: Date.now() };
   });
-  redux = order(5910)(() => {
+  redux = order(6076)(() => {
     const obj = {};
     const merged = Object.assign(View);
     obj.load_id = contextMetadata.loadId;
@@ -55,7 +55,7 @@ function NativeCheckoutStoreProvider(children) {
     ),
     1,
   )[0];
-  order(5298)(() => {
+  order(5464)(() => {
     if (null != View) {
       const result = PaymentFlowStartedTriggerPoint.trackPaymentFlowStartedAnalyticsAndCTP(closure_9);
       const obj3 = {};
@@ -100,8 +100,8 @@ function NativeCheckoutStoreProvider(children) {
         const obj2 = { checkoutSucceeded: tmp2, order: null };
         ({ id: obj3.id, status: obj3.status } = orderRecord);
         obj2.order = { id: null, status: null };
-        checkoutInitParameters(10272).discardDraftOrder(obj2);
-        const obj = checkoutInitParameters(10272);
+        checkoutInitParameters(10441).discardDraftOrder(obj2);
+        const obj = checkoutInitParameters(10441);
         const obj5 = { id: null, status: null };
       }
     },
@@ -114,7 +114,7 @@ function NativeCheckoutStoreProvider(children) {
   );
 }
 const View = fn(17).View;
-const NativeCheckoutStore = fn(6844);
+const NativeCheckoutStore = fn(7010);
 ({
   createNativeStore: closure_7,
   NativeCheckoutStoreContext: closure_8,

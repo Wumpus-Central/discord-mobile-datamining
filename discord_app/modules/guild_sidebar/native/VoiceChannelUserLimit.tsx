@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import _modDef13335 from "../../../../_runtime/metro/13335__.js";
+import _modDef13504 from "../../../../_runtime/metro/13504__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -94,7 +94,7 @@ export default noop.memo(function VoiceChannelUserLimit(videoLimit) {
   const obj2 = { style: rect.left, children: null };
   let tmp3 = null;
   if (videoLimit.videoLimit) {
-    const obj3 = { source: _modDef13335, size: native.Icon.Sizes.REFRESH_SMALL_16, style: rect.videoIcon };
+    const obj3 = { source: _modDef13504, size: native.Icon.Sizes.REFRESH_SMALL_16, style: rect.videoIcon };
     tmp3 = React4(native.Icon, obj3);
   }
   const items = [tmp3];

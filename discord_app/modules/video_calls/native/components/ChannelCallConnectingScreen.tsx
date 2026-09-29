@@ -1,18 +1,18 @@
 // discord_app/modules/video_calls/native/components/ChannelCallConnectingScreen.tsx
-import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import MetaQuestUtils from "../../../device/MetaQuestUtils.android.tsx";
+import KeyboardManagerUtils from "../../../../utils/native/KeyboardManagerUtils.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import SelectedChannelActionCreatorsDefault from "../../../../actions/SelectedChannelActionCreators.tsx";
-import BottomSheetModal from "../../../../../_runtime/06045_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/06211_BottomSheetModal.js";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import AudioActionCreatorsDefault from "../../../../actions/AudioActionCreators.tsx";
 import beginConsoleTransfer from "../../../game_console/native/beginConsoleTransfer.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import UserSettingsVoiceDefault from "../../../user_settings/voice/native/UserSettingsVoice.tsx";
 import VoiceChatHeaderIconDefault from "../../../voice_chat/native/components/VoiceChatHeaderIcon.tsx";
-import _modDef9461 from "../../../../../_runtime/metro/09461__.js";
+import _modDef9628 from "../../../../../_runtime/metro/09628__.js";
 import ChannelCallMicButton from "ChannelCallMicButton.tsx";
 import coercePlatformTypeToConsoleType from "../../../game_console/coercePlatformTypeToConsoleType.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -43,13 +43,13 @@ function JoinVoiceButton(channel) {
   let stateFromStores1;
   importDefault = require("useVoiceStateForRemoteSession")();
   const items = [GameConsoleStore];
-  const stateFromStores = channel(stateFromStores1[28]).useStateFromStores(
+  const stateFromStores = channel(stateFromStores1[29]).useStateFromStores(
     items,
     () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo(),
   );
-  let obj = channel(stateFromStores1[28]);
+  let obj = channel(stateFromStores1[29]);
   const items1 = [SessionsStore];
-  stateFromStores1 = channel(stateFromStores1[28]).useStateFromStores(items1, () => {
+  stateFromStores1 = channel(stateFromStores1[29]).useStateFromStores(items1, () => {
     let str;
     if (sessionId != null) {
       str = sessionId.sessionId;
@@ -77,19 +77,7 @@ function JoinVoiceButton(channel) {
       }
     }
     resetFocus();
-    const tmp8 = _mod17;
-    if (tmp8 != null) {
-      const NativeModules = tmp8.NativeModules;
-      if (NativeModules != null) {
-        const KeyboardManager = NativeModules.KeyboardManager;
-        if (KeyboardManager != null) {
-          const dismissGlobalKeyboard = KeyboardManager.dismissGlobalKeyboard;
-          if (dismissGlobalKeyboard != null) {
-            const result1 = dismissGlobalKeyboard();
-          }
-        }
-      }
-    }
+    const result1 = KeyboardManagerUtils.dismissGlobalKeyboard();
     if (closure_4) {
       if (!MediaEngineStore.getSettings().mute) {
         AudioActionCreatorsDefault.toggleSelfMute();
@@ -98,7 +86,7 @@ function JoinVoiceButton(channel) {
     const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(channel.id, false, false);
   }, items2);
   const tmp10 = require("useIsVoiceChannelFull")(channel);
-  let obj2 = channel(stateFromStores1[28]);
+  let obj2 = channel(stateFromStores1[29]);
   const isVoiceChannelLocked = channel(stateFromStores1[18]).useIsVoiceChannelLocked(channel);
   let tmp13 = tmp10;
   if (!tmp10) {
@@ -122,7 +110,7 @@ function JoinVoiceButton(channel) {
   const intl = tmp3(tmp2[22]).intl;
   obj3.accessibilityLabel = intl.string(channel(stateFromStores1[22]).t["96ANUN"]);
   obj3.source = importDefault(
-    tmp7.selfMute || tmp7.mute || tmp7.suppress ? stateFromStores1[35] : stateFromStores1[36],
+    tmp7.selfMute || tmp7.mute || tmp7.suppress ? stateFromStores1[36] : stateFromStores1[37],
   );
   obj3.onPress = callback;
   const intl2 = tmp3(tmp2[22]).intl;
@@ -138,11 +126,11 @@ function JoinVoiceButton(channel) {
     stringResult = string(t["96ANUN"]);
   }
   obj3.label = stringResult;
-  obj3.iconPosition = channel(stateFromStores1[33]).IconPosition.RIGHT;
-  return closure_12(channel(stateFromStores1[33]).LabeledActionButton, obj3);
+  obj3.iconPosition = channel(stateFromStores1[34]).IconPosition.RIGHT;
+  return closure_12(channel(stateFromStores1[34]).LabeledActionButton, obj3);
 }
 const View = fn(17).View;
-const resetFocus = fn(8829).resetFocus;
+const resetFocus = fn(8994).resetFocus;
 const InstantInviteSources = fn(1074).InstantInviteSources;
 const Permissions = fn(1085).Permissions;
 const jsxProd = fn(21);
@@ -156,7 +144,7 @@ let obj2 = {
     justifyContent: "center",
     alignItems: "flex-start",
     flexDirection: "row",
-    height: fn(8854).CALL_ACTION_BAR_HEIGHT,
+    height: fn(9019).CALL_ACTION_BAR_HEIGHT,
   },
 };
 let closure_15 = createStyles.createStyles(obj2);
@@ -172,7 +160,7 @@ export const ChannelCallConnectingHeader = function ChannelCallConnectingHeader(
   channel = channel.channel;
   const tmp = closure_15();
   const tmp4 = useChannelNameDefault(channel);
-  const isVoiceChannelLocked = channel(9394).useIsVoiceChannelLocked(channel);
+  const isVoiceChannelLocked = channel(9561).useIsVoiceChannelLocked(channel);
   let fn = null;
   if (PermissionStore.can(Permissions.CREATE_INSTANT_INVITE, channel)) {
     fn = null;
@@ -186,7 +174,7 @@ export const ChannelCallConnectingHeader = function ChannelCallConnectingHeader(
   const items = [closure_12(View, { style: { width: 4 } }), , ,];
   let tmp9Result = null;
   if (null != fn) {
-    const obj2 = { source: _modDef9461, onPress: fn, accessibilityLabel: null };
+    const obj2 = { source: _modDef9628, onPress: fn, accessibilityLabel: null };
     const intl = tmp5(1115).intl;
     const obj3 = { channelName: tmp4 };
     obj2.accessibilityLabel = intl.formatToPlainString(tmp5(1115).t["dHHb/2"], obj3);

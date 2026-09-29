@@ -170,7 +170,7 @@ function ChannelContent(arg0) {
   return React5(View, obj2);
 }
 const View = fn(17).View;
-const SUBTITLE_OPACITY_NORMAL = fn(9577).SUBTITLE_OPACITY_NORMAL;
+const SUBTITLE_OPACITY_NORMAL = fn(9744).SUBTITLE_OPACITY_NORMAL;
 const UnreadSetting = fn(5018).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);

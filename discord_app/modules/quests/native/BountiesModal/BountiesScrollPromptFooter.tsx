@@ -57,7 +57,7 @@ function BountiesScrollPromptFooterContent(zIndex) {
   return closure_8(ReanimatedRexportDefault.View, obj2);
 }
 const StyleSheet = fn(17).StyleSheet;
-const QuestsExperimentLocations = fn(5756).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5923).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4836);

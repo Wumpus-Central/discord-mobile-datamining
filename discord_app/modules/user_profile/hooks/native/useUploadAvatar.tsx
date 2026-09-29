@@ -76,7 +76,7 @@ export default function useUploadAvatar(guildId) {
               const obj6 = { size };
               dependencyMap = 1;
               c3 = 1;
-              const obj8 = { value: tmp22(5450).openImagePicker(obj6), done: false };
+              const obj8 = { value: tmp22(5617).openImagePicker(obj6), done: false };
               return obj8;
             }
           } else if (arg0 === 1) {
@@ -112,21 +112,21 @@ export default function useUploadAvatar(guildId) {
             }
             const obj10 = { imageUri: base64, description: null, originalMd5: null };
             tmp22 = tmp2;
-            const obj2 = tmp2(14150);
-            obj10.description = tmp2(7614).generateAvatarDescription();
+            const obj2 = tmp2(14322);
+            obj10.description = tmp2(7779).generateAvatarDescription();
             obj10.originalMd5 = originalMd5;
             closure_128_4 = obj2.createPendingImage(obj10);
             if (closure_129_1) {
-              tmp2(7612).setTryItOutAvatar(closure_128_4);
-              const tmp28Result = tmp2(7612);
+              tmp2(7777).setTryItOutAvatar(closure_128_4);
+              const tmp28Result = tmp2(7777);
             } else {
               const obj11 = { guildId: closure_129_0, avatar: closure_128_4 };
-              tmp2(7609).setPendingChanges(obj11);
-              const tmp28Result2 = tmp2(7609);
-              const result = tmp2(7611).announcePendingAvatarChange("set");
-              const obj7 = tmp2(7611);
+              tmp2(7774).setPendingChanges(obj11);
+              const tmp28Result2 = tmp2(7774);
+              const result = tmp2(7776).announcePendingAvatarChange("set");
+              const obj7 = tmp2(7776);
             }
-            const obj4 = tmp2(7614);
+            const obj4 = tmp2(7779);
           }
         } catch (tmp38) {
           c3 = tmp;

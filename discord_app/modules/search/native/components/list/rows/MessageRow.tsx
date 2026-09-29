@@ -11,8 +11,8 @@ import ChannelListLayoutTypes from "../../../../../main_tabs_v2/ChannelListLayou
 import enhanced_role_colors_EnhancedRoleColorUtils from "../../../../../premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx";
 import BotTagDefault from "../../../../../applications/native/BotTag.tsx";
 import ChannelRowPreview from "../../../../../main_tabs_v2/native/shared_components/ChannelRowPreview.tsx";
-import _modDef9603 from "../../../../../../../_runtime/metro/09603__.js";
-import _modDef9853 from "../../../../../../../_runtime/metro/09853__.js";
+import _modDef9770 from "../../../../../../../_runtime/metro/09770__.js";
+import _modDef10020 from "../../../../../../../_runtime/metro/10020__.js";
 import BellZIcon from "../../../../../../design/components/Icon/native/redesign/generated/BellZIcon.tsx";
 import SearchListRow from "../SearchListRow.tsx";
 import useSearchMessageTimestamp from "../../../hooks/useSearchMessageTimestamp.tsx";
@@ -39,9 +39,9 @@ function GuildChannelMessageRowHeader(channel) {
     return rulesChannelId;
   });
   const obj = channel(504);
-  const channelIcon = channel(5335).getChannelIcon(channel, { isRulesChannel: stateFromStores === channel.id });
+  const channelIcon = channel(5501).getChannelIcon(channel, { isRulesChannel: stateFromStores === channel.id });
   const obj4 = { style: tmp.header, children: null };
-  const obj2 = channel(5335);
+  const obj2 = channel(5501);
   const obj3 = { isRulesChannel: stateFromStores === channel.id };
   const tmp7 = useChannelNameDefault(channel);
   const items1 = [
@@ -60,12 +60,12 @@ function GuildChannelMessageRowHeader(channel) {
     ,
   ];
   if (muted) {
-    const obj6 = { source: _modDef9603, size: tmp2(1177).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
+    const obj6 = { source: _modDef9770, size: tmp2(1177).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
     muted = closure_11(tmp2(1177).Icon, obj6);
   }
   items1[2] = muted;
   if (isFavorite) {
-    const obj7 = { source: _modDef9853, size: tmp2(1177).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
+    const obj7 = { source: _modDef10020, size: tmp2(1177).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
     isFavorite = closure_11(tmp2(1177).Icon, obj7);
   }
   items1[3] = isFavorite;
@@ -103,7 +103,7 @@ function PrivateChannelMessageRowLabel(message) {
     }
     tmp = channel.isDM() || channel.isGroupDM();
   }, items1);
-  const searchMessageTimestamp = message(16491).useSearchMessageTimestamp(message, channel);
+  const searchMessageTimestamp = message(16679).useSearchMessageTimestamp(message, channel);
   const obj2 = { style: tmp.labelContainer, children: null };
   const obj3 = { style: tmp.authorRow, children: null };
   ({ timestamp, timestampAccessibilityLabel } = searchMessageTimestamp);
@@ -117,15 +117,15 @@ function PrivateChannelMessageRowLabel(message) {
     ,
   ];
   if (muted) {
-    const obj4 = { source: channel(9603), size: tmp4(1177).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
+    const obj4 = { source: channel(9770), size: tmp4(1177).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
     muted = closure_11(tmp4(1177).Icon, obj4);
   }
   items2[1] = muted;
   let isSystemDMResult = channel.isSystemDM();
   if (isSystemDMResult) {
-    const obj5 = { type: channel(8741).Types.SYSTEM_DM, verified: true };
-    isSystemDMResult = closure_11(channel(8741), obj5);
-    const tmp13 = channel(8741);
+    const obj5 = { type: channel(8906).Types.SYSTEM_DM, verified: true };
+    isSystemDMResult = closure_11(channel(8906), obj5);
+    const tmp13 = channel(8906);
   }
   items2[2] = isSystemDMResult;
   obj3.children = items2;
@@ -144,13 +144,13 @@ function PrivateChannelMessageRowLabel(message) {
   let tmp9Result = null;
   if (message.hasFlag(MessageFlags.SUPPRESS_NOTIFICATIONS)) {
     const obj7 = { size: "xs", style: tmp.suppressNotificationsIcon };
-    tmp9Result = closure_11(tmp4(12865).BellZIcon, obj7);
+    tmp9Result = closure_11(tmp4(13035).BellZIcon, obj7);
   }
   items3[2] = tmp9Result;
   let tmp9Result2 = null;
   if (message.isPoll()) {
     const obj8 = { style: tmp.pollBadge };
-    tmp9Result2 = closure_11(channel(16492), obj8);
+    tmp9Result2 = closure_11(channel(16680), obj8);
   }
   items3[3] = tmp9Result2;
   obj2.children = items3;
@@ -322,7 +322,7 @@ const memoResult = noop.memo((message) => {
   const stateFromStores2 = message(504).useStateFromStores(items2, () =>
     UserGuildSettingsStore.isChannelMuted(stateFromStores2, stateFromStores.channel_id),
   );
-  message(6747);
+  message(6913);
   let tmp10 = null;
   if (null != stateFromStores) {
     const obj2 = {};

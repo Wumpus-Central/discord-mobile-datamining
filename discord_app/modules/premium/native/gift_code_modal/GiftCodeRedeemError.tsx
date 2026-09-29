@@ -6,8 +6,8 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
-import _modDef10998 from "../../../../../_runtime/metro/10998__.js";
-import _modDef10999 from "../../../../../_runtime/metro/10999__.js";
+import _modDef11167 from "../../../../../_runtime/metro/11167__.js";
+import _modDef11168 from "../../../../../_runtime/metro/11168__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -40,9 +40,9 @@ export default function GiftCodeRedeemError(children) {
   const obj2 = { bottom: true, style: tmp.container, children: null };
   const obj3 = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
   if (theme.dark) {
-    let tmp9Result = _modDef10998;
+    let tmp9Result = _modDef11167;
   } else {
-    tmp9Result = _modDef10999;
+    tmp9Result = _modDef11168;
   }
   const items = [timestampProducer(React3, { source: tmp9Result }), ,];
   const obj4 = { variant: "heading-xl/bold", style: tmp.header, children: null };

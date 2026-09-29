@@ -21,8 +21,8 @@ export default function EmptyState(showsGenericMessage) {
     flag = false;
   }
   const tmp = closure_5();
-  const logAppLauncherEmptyStateView = flag(11533).useLogAppLauncherEmptyStateView(
-    flag(8712).AppLauncherEmptyStateType.SEARCH_EMPTY,
+  const logAppLauncherEmptyStateView = flag(11702).useLogAppLauncherEmptyStateView(
+    flag(8877).AppLauncherEmptyStateType.SEARCH_EMPTY,
     showsGenericMessage.query,
   );
   const items = [flag];

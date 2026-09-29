@@ -67,7 +67,7 @@ function ChannelsAndRolesScreen(guildId) {
   obj2 = segmentedControlState;
 }
 const View = fn(17).View;
-const GuildOnboardingTab = fn(6522).GuildOnboardingTab;
+const GuildOnboardingTab = fn(6688).GuildOnboardingTab;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4836);

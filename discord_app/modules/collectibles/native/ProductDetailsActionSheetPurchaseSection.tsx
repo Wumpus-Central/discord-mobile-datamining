@@ -54,31 +54,31 @@ function VCButton(balance) {
   let color;
   const tmp = closure_17();
   noop = tmp;
-  const virtualCurrencyData = balance(12724).useVirtualCurrencyData(product, flag);
+  const virtualCurrencyData = balance(12894).useVirtualCurrencyData(product, flag);
   ({ price, canAfford } = virtualCurrencyData);
-  let obj = balance(12724);
-  let isPartiallyOwnedBundle = balance(8334).useProductDisableState(product.skuId).isDisabled;
-  let obj2 = balance(8334);
+  let obj = balance(12894);
+  let isPartiallyOwnedBundle = balance(8499).useProductDisableState(product.skuId).isDisabled;
+  let obj2 = balance(8499);
   if (!isPartiallyOwnedBundle) {
     isPartiallyOwnedBundle = !canAfford;
   }
   if (!isPartiallyOwnedBundle) {
     isPartiallyOwnedBundle = obj3.useProductPurchaseState(product).isPartiallyOwnedBundle;
   }
-  obj3 = balance(8303);
+  obj3 = balance(8468);
   navigation = balance(1485).useNavigation();
   analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   const items = [navigation, product, balance, analyticsLocations, stageCollectibleChangeForEditProfile];
   closure_7 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideAllActionSheets();
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(12727, dependencyMap.paths),
+      asyncRequireImpl(12897, dependencyMap.paths),
       {
         skuId: product.skuId,
         analyticsLocations,
         onCheckoutSuccess(arg0) {
-          const collectiblesPurchases = balance(6961).fetchCollectiblesPurchases();
-          const obj = balance(6961);
+          const collectiblesPurchases = balance(7127).fetchCollectiblesPurchases();
+          const obj = balance(7127);
           product(5039).popWithKey(ORB_CHECKOUT_MODAL);
           if (product.skuId === constants.ORB_PROFILE_BADGE) {
             const obj3 = {
@@ -88,7 +88,7 @@ function VCButton(balance) {
               },
               orbBalancePriorToPurchase,
             };
-            product(5039).pushLazy(balance(1981)(12731, dependencyMap.paths), obj3, modalKey);
+            product(5039).pushLazy(balance(1981)(12901, dependencyMap.paths), obj3, modalKey);
             const tmp4Result = product(5039);
           } else {
             const ALL = balance(1077).FractionalPremiumSKUsSets.ALL;
@@ -118,11 +118,11 @@ function VCButton(balance) {
                 product(4800).hideActionSheet();
               };
               tmp4Result3.openLazy(
-                balance(1981)(12732, dependencyMap.paths),
+                balance(1981)(12902, dependencyMap.paths),
                 "FractionalNitroCollectedActionSheet",
                 obj4,
               );
-              const tmp10 = balance(1981)(12732, dependencyMap.paths);
+              const tmp10 = balance(1981)(12902, dependencyMap.paths);
             } else {
               const obj5 = {
                 product,
@@ -131,8 +131,8 @@ function VCButton(balance) {
                 orbBalancePriorToPurchase,
                 stageCollectibleChangeForEditProfile,
               };
-              product(10542).open(obj5);
-              const tmp4Result4 = product(10542);
+              product(10711).open(obj5);
+              const tmp4Result4 = product(10711);
             }
           }
           const obj2 = product(5039);
@@ -193,7 +193,7 @@ function VCButton(balance) {
       str2 = "secondary";
     }
     obj8.variant = str2;
-    obj7.children = closure_13(tmp2(5282).BaseTextButton, obj8);
+    obj7.children = closure_13(tmp2(5448).BaseTextButton, obj8);
     return closure_13(navigation, obj7);
   }
   const tmp2Result = balance(1485);
@@ -220,7 +220,7 @@ const CollectiblesShopConstants = fn(1076);
 ({ EXTERNAL_PRODUCT_SKU_IDS: closure_7, ShopCtaEnum: closure_8 } = CollectiblesShopConstants);
 const Constants = fn(1074);
 ({ MarketingURLs: closure_9, UserSettingsSections: c10 } = Constants);
-const RootNavigatorScreen = fn(10549).RootNavigatorScreen;
+const RootNavigatorScreen = fn(10718).RootNavigatorScreen;
 const PremiumTypes = fn(1374).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);

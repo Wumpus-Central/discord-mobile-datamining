@@ -34,7 +34,7 @@ const createStyles = fn(4836);
 let obj2 = {
   upsellSection: { position: "relative" },
   background: { position: "absolute", width: "100%" },
-  scroller: { flex: 1, backgroundColor: fn(5753).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 },
+  scroller: { flex: 1, backgroundColor: fn(5920).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 },
   subscriptionHeader: { paddingHorizontal: 16, paddingBottom: 32 },
   blurb: { lineHeight: 18 },
   blurbNotLast: { marginBottom: 8 },
@@ -176,12 +176,12 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
     flag = true;
   }
   let obj = require("useSubscriptionPlansLoaded");
-  ({ fractionalState: c2, endsAt } = flag(6813)({ forceFetch: true }));
-  const tmp3 = flag(6813)({ forceFetch: true });
+  ({ fractionalState: c2, endsAt } = flag(6979)({ forceFetch: true }));
+  const tmp3 = flag(6979)({ forceFetch: true });
   isInReverseTrial = require("ReverseTrialUtils").useIsInReverseTrial();
   const tmpResult = require("ReverseTrialUtils");
-  fpDurationText = flag(13001)(endsAt, tmp(13001).CountDownMessageTypes.LONG_TIME_LEFT);
-  const tmp4 = flag(13001);
+  fpDurationText = flag(13171)(endsAt, tmp(13171).CountDownMessageTypes.LONG_TIME_LEFT);
+  const tmp4 = flag(13171);
   const items = [GuildBoostSlotStore, BillingInfoStore, SubscriptionPlanStore, UserStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     const obj = {

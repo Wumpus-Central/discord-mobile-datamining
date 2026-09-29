@@ -26,8 +26,8 @@ let obj2 = {
   channelType: "isArray",
   numMediaItems: "Array",
   hasMediaOptions: "channel",
-  source: false,
-  incrementableActions: false,
+  source: "$ZodDate",
+  incrementableActions: "videoQualitySetting",
 };
 const values = Object.values(obj);
 obj2.incrementableActions = Object.fromEntries(

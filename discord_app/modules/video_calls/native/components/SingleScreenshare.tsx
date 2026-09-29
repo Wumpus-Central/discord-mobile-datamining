@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const ChannelCallStore = fn(8829);
+const ChannelCallStore = fn(8994);
 ({ resetFocus: c2, toggleFocus: c3 } = ChannelCallStore);
 const jsx = fn(21).jsx;
 const createStyles = fn(4836);
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/video_calls/native/components
 
 export default function SingleScreenshare(channel) {
   channel = channel.channel;
-  channel(5298)(() => {
+  channel(5464)(() => {
     closure_1_2();
   });
   const obj = {
@@ -34,7 +34,7 @@ export default function SingleScreenshare(channel) {
     stageStreamContainer = tmp.stageStreamContainer;
   }
   obj.containerStyle = stageStreamContainer;
-  return jsx(channel(9484), {
+  return jsx(channel(9651), {
     participant: channel.participant,
     onSingleTap() {
       closure_1_3();

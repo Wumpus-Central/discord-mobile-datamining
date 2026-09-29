@@ -24,7 +24,7 @@ function validateEmbeddedAppFrame(transport) {
           if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL !== type) {
             if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
               if (tmp35.applicationId === VibegrationsBuilderPreviewStore.getBuilderPreviewApplicationId()) {
-                let obj5 = { channelId: "Array", guildId: "paddingHorizontal" };
+                let obj5 = { channelId: "current", guildId: "channel" };
               } else {
                 obj5 = null;
               }
@@ -58,7 +58,7 @@ function validateEmbeddedAppFrame(transport) {
 const TransportTypes = fn(4739).TransportTypes;
 const Constants = fn(1074);
 ({ ApplicationFlags: metroRequire, RPCErrors: closure_7 } = Constants);
-const asLaunched = fn(8500).asLaunched;
+const asLaunched = fn(8665).asLaunched;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/helpers/validateEmbeddedAppFrame.tsx");
 

@@ -48,9 +48,9 @@ export default function GuildThemeMemberCoachmark(guildId) {
   const items2 = [guildPowerupBannerImage];
   const stateFromStores1 = guildId(504).useStateFromStores(items2, () => guildPowerupBannerImage.useReducedMotion);
   const obj2 = guildId(504);
-  guildPowerupBannerImage = guildId(12016).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
+  guildPowerupBannerImage = guildId(12187).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
   if (guildPowerupBannerImage == null) {
-    guildPowerupBannerImage = markAsDismissed(15802);
+    guildPowerupBannerImage = markAsDismissed(15977);
   }
   const diff = onDismiss - markAsDismissed(4743)(guildId).available;
   c5 = diff;
@@ -96,7 +96,7 @@ export default function GuildThemeMemberCoachmark(guildId) {
     obj.onButtonPress = callback1;
     return obj;
   }, items5);
-  const obj3 = guildId(12016);
-  const coachmark = tmp2(10589).useCoachmark(guildId.targetRef, memo);
+  const obj3 = guildId(12187);
+  const coachmark = tmp2(10758).useCoachmark(guildId.targetRef, memo);
   return null;
 }

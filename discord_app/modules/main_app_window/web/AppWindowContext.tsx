@@ -13,7 +13,7 @@ let obj = {
   windowDispatch: componentDispatcher,
   windowId: null,
 };
-const WindowIdUtils = fn(5867);
+const WindowIdUtils = fn(6033);
 obj.windowId = WindowIdUtils.getMainWindowId();
 const context = noop.createContext(obj);
 const map = new Map();

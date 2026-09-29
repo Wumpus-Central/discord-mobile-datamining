@@ -91,10 +91,10 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
     }
   }
 };
-const SearchConstants = fn(7303);
+const SearchConstants = fn(7468);
 ({ SearchMediaTypes: closure_8, SearchHistoryItemTypes: closure_9, SearchQueryTagTypes: c10 } = SearchConstants);
-const SearchNavigatorScreens = fn(16459).SearchNavigatorScreens;
-const SearchFilterAddLocations = fn(7302).SearchFilterAddLocations;
+const SearchNavigatorScreens = fn(16648).SearchNavigatorScreens;
+const SearchFilterAddLocations = fn(7467).SearchFilterAddLocations;
 const Constants = fn(1074);
 ({ Routes: map1, ComponentActions: closure_14, ME: closure_15, SearchTypes: closure_16 } = Constants);
 const StaticChannelRoute = fn(2052).StaticChannelRoute;
@@ -552,11 +552,11 @@ export const useOnPressSearchHistoryText = function useOnPressSearchHistoryText(
     searchContext = text;
     const type = searchContext.type;
     if (constants4.DMS === type) {
-      const result = searchContext(11821).delayUntilNavigationComplete(() => {
+      const result = searchContext(11990).delayUntilNavigationComplete(() => {
         obj = SearchPlatformActionCreatorsDefault;
         return obj.addSearchHistoryItem(closure_0, obj);
       });
-      let obj2 = searchContext(11821);
+      let obj2 = searchContext(11990);
     }
     SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
       if (null != obj) {

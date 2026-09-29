@@ -195,7 +195,7 @@ export const UserProfileEditFormSwitch = function UserProfileEditFormSwitch(arg0
     closure_2(value);
   }, items);
   if (isAndroidResult) {
-    let PressableHighlight = tmp2(5435).PressableHighlight;
+    let PressableHighlight = tmp2(5602).PressableHighlight;
   } else {
     PressableHighlight = React4;
   }

@@ -22,13 +22,13 @@ function BountiesScrollVideoItemInner(bounty) {
   if (flag === undefined) {
     flag = true;
   }
-  ({ softDownloadCapsEnabled, videoEndPeekScale } = bounty);
-  if (softDownloadCapsEnabled === undefined) {
-    softDownloadCapsEnabled = false;
-  }
-  let flag2 = bounty.isScrollIndicatorEnabled;
+  let flag2 = bounty.softDownloadCapsEnabled;
   if (flag2 === undefined) {
     flag2 = false;
+  }
+  let flag3 = bounty.isScrollIndicatorEnabled;
+  if (flag3 === undefined) {
+    flag3 = false;
   }
   closure_6 = undefined;
   VirtualCurrencyStore = undefined;
@@ -301,7 +301,7 @@ function BountiesScrollVideoItemInner(bounty) {
     bounty,
     sourceQuestContent,
     isCompleted: stateFromStores,
-    isScrollIndicatorEnabled: flag2,
+    isScrollIndicatorEnabled: flag3,
     isCtaVisible: null,
     isEndCardVisible: null,
     isProgressBarVisible: null,
@@ -329,7 +329,6 @@ function BountiesScrollVideoItemInner(bounty) {
     shouldLoadHls: null,
     width: null,
     height: null,
-    videoEndPeekScale: null,
     softDownloadCapsEnabled: null,
     renderEndCard: null,
   };
@@ -370,8 +369,7 @@ function BountiesScrollVideoItemInner(bounty) {
   size.shouldLoadHls = tmp7;
   size.width = width;
   size.height = height;
-  size.videoEndPeekScale = videoEndPeekScale;
-  size.softDownloadCapsEnabled = softDownloadCapsEnabled;
+  size.softDownloadCapsEnabled = flag2;
   size.renderEndCard = function renderEndCard() {
     return jsx(QuestContentImpressionTracker.QuestContentImpressionTrackerNative, {
       adContentId: bounty.id,
@@ -394,7 +392,7 @@ function BountiesScrollVideoItemInner(bounty) {
   return handleVideoProgressAnalytics(closure_6, obj6);
 }
 const View = fn(17).View;
-const BOUNTY_ORB_AMOUNT = fn(5756).BOUNTY_ORB_AMOUNT;
+const BOUNTY_ORB_AMOUNT = fn(5923).BOUNTY_ORB_AMOUNT;
 const jsx = fn(21).jsx;
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollVideoItem.tsx");
@@ -418,18 +416,18 @@ export const BountiesScrollVideoItem = function BountiesScrollVideoItem(bounty) 
   if (shouldLoadHls === undefined) {
     shouldLoadHls = true;
   }
-  ({ videoEndPeekScale: jsx, softDownloadCapsEnabled } = bounty);
-  if (softDownloadCapsEnabled === undefined) {
-    softDownloadCapsEnabled = false;
-  }
-  let flag3 = bounty.isScrollIndicatorEnabled;
+  let flag3 = bounty.softDownloadCapsEnabled;
   if (flag3 === undefined) {
     flag3 = false;
   }
-  return jsx(bounty(10753).BillableAdPlacementImpressionTrackerNative, {
+  let flag4 = bounty.isScrollIndicatorEnabled;
+  if (flag4 === undefined) {
+    flag4 = false;
+  }
+  return flag3(bounty(10922).BillableAdPlacementImpressionTrackerNative, {
     adContentId: bounty.id,
-    adCreativeType: bounty(5763).AdCreativeType.BOUNTY,
-    questContent: bounty(5761).QuestContent.VIDEO_MODAL_MOBILE,
+    adCreativeType: bounty(5930).AdCreativeType.BOUNTY,
+    questContent: bounty(5928).QuestContent.VIDEO_MODAL_MOBILE,
     sourceQuestContent,
     overrideVisibility: isActive,
     children() {
@@ -444,9 +442,8 @@ export const BountiesScrollVideoItem = function BountiesScrollVideoItem(bounty) 
         isRecapPageOnTop: flag2,
         isScrollingInBoundsSharedValue,
         shouldLoadHls,
-        videoEndPeekScale,
-        softDownloadCapsEnabled,
-        isScrollIndicatorEnabled: flag3,
+        softDownloadCapsEnabled: flag3,
+        isScrollIndicatorEnabled: flag4,
       };
       return (
         <BountiesScrollVideoItemInner
@@ -460,9 +457,8 @@ export const BountiesScrollVideoItem = function BountiesScrollVideoItem(bounty) 
           isRecapPageOnTop={flag2}
           isScrollingInBoundsSharedValue={isScrollingInBoundsSharedValue}
           shouldLoadHls={shouldLoadHls}
-          videoEndPeekScale={videoEndPeekScale}
-          softDownloadCapsEnabled={softDownloadCapsEnabled}
-          isScrollIndicatorEnabled={flag3}
+          softDownloadCapsEnabled={flag3}
+          isScrollIndicatorEnabled={flag4}
         />
       );
     },

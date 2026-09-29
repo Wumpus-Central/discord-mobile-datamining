@@ -13,7 +13,7 @@ import FamilyCenterControlledSettingsStore from "../FamilyCenterControlledSettin
 const require = globalThis.__r;
 
 require = fn;
-const SafetyToastType = fn(7847).SafetyToastType;
+const SafetyToastType = fn(8012).SafetyToastType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useParentalControlSettings.tsx");
 
@@ -117,8 +117,8 @@ export const useDefaultGuildsRestricted = function useDefaultGuildsRestricted() 
   return controlledSetting1;
 };
 export const useAllowFriendsFromMutualGuildsOnlyForTeen = function useAllowFriendsFromMutualGuildsOnlyForTeen() {
-  const selectedTeen = controlledSetting(8107).useSelectedTeen();
-  const ParentalControlledFriendSourceFlags = controlledSetting(14354).ParentalControlledFriendSourceFlags;
+  const selectedTeen = controlledSetting(8272).useSelectedTeen();
+  const ParentalControlledFriendSourceFlags = controlledSetting(14529).ParentalControlledFriendSourceFlags;
   let id;
   if (selectedTeen != null) {
     id = selectedTeen.id;
@@ -180,16 +180,16 @@ export const useParentalControlledConsent = function useParentalControlledConsen
               items2 = [closure_0];
             }
             c4 = 1;
-            tmp3(6959).updateTeenConsents(tmp28, items1, items2);
+            tmp3(7125).updateTeenConsents(tmp28, items1, items2);
             c2 = 2;
             c5 = 1;
-            const obj3 = tmp3(6959);
+            const obj3 = tmp3(7125);
           }
         } else {
           if (1 === tmp7) {
             c4 = 0;
-            tmp3(7852).showFailedToast(constants.GENERIC_ERROR);
-            const obj2 = tmp3(7852);
+            tmp3(8017).showFailedToast(constants.GENERIC_ERROR);
+            const obj2 = tmp3(8017);
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;

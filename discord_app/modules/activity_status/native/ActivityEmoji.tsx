@@ -61,7 +61,7 @@ export default function ActivityEmoji(emoji) {
     }
   }
   if (null == emoji) {
-    ReactionIcon = ReactionIcon(8219).ReactionIcon;
+    ReactionIcon = ReactionIcon(8384).ReactionIcon;
     const obj = { style, size: "sm" };
     <ReactionIcon style={style} size="sm" />;
   } else {

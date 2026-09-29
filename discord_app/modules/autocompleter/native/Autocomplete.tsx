@@ -12,7 +12,7 @@ import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowTrailingText from "../../../design/components/TableRow/native/TableRowTrailingText.native.tsx";
-import _modDef7581 from "../../../../_runtime/metro/07581__.js";
+import _modDef7746 from "../../../../_runtime/metro/07746__.js";
 import UnknownGameIcon from "../../../design/components/Icon/native/redesign/generated/UnknownGameIcon.tsx";
 import Form from "../../../design/void/Form/native/index.tsx";
 import StickerDefault from "../../stickers/native/Sticker.tsx";
@@ -38,7 +38,7 @@ const jsxProd = fn(21);
 const createStyles = fn(4836);
 let obj2 = {
   row: {
-    height: fn(9726).AUTOCOMPLETE_ROW_HEIGHT,
+    height: fn(9893).AUTOCOMPLETE_ROW_HEIGHT,
     paddingVertical: 0,
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   },
@@ -56,7 +56,7 @@ let obj2 = {
   labelRow: null,
 };
 let obj3 = {
-  height: fn(9726).AUTOCOMPLETE_ROW_HEIGHT,
+  height: fn(9893).AUTOCOMPLETE_ROW_HEIGHT,
   paddingVertical: 0,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
@@ -147,8 +147,8 @@ export default {
     const items1 = [,];
     ({ trailing: arr2[0], username: arr2[1] } = tmp);
     obj5.usernameStyle = items1;
-    obj2.trailing = closure_9(guildId(9094), obj5);
-    return closure_9(user(8053).FormRow, obj2);
+    obj2.trailing = closure_9(guildId(9259), obj5);
+    return closure_9(user(8218).FormRow, obj2);
   },
   Global(arg0) {
     ({ text, badge } = arg0);
@@ -193,7 +193,7 @@ export default {
     ({ channel, category } = onPress);
     const tmp = closure_11();
     if (channel.type === constants.GUILD_CATEGORY) {
-      let channelIconWithGuild = _modDef7581;
+      let channelIconWithGuild = _modDef7746;
     } else {
       channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, tmp2);
     }

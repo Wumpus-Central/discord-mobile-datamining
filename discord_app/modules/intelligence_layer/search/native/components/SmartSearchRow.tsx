@@ -1,84 +1,24 @@
 // discord_app/modules/intelligence_layer/search/native/components/SmartSearchRow.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import SmartSearchResultsStoreDefault from "../../SmartSearchResultsStore.tsx";
 import MessageSearchResultParserDefault from "../../../../search/native/message_parsers/MessageSearchResultParser.tsx";
-import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
-import IntelligenceSearchStore from "../../IntelligenceSearchStore.tsx";
 
 const require = fn;
-const View = fn(17).View;
-const IntelligenceSearchConstants = fn(11847);
-({ MAX_PRESENTED_CITATIONS: closure_9, COLLAPSED_FRAME_HEIGHT } = IntelligenceSearchConstants);
-let closure_10 = fn(7303).SEARCH_MESSAGES_DEFAULT_LINE_CLAMP;
-const jsxProd = fn(21);
-({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4836);
-let obj = {
-  collapsedFrame: { height: COLLAPSED_FRAME_HEIGHT },
-  content: { paddingBottom: nativeDefault.space.PX_40, overflow: "hidden" },
-  divider: null,
-};
-let obj3 = { paddingBottom: nativeDefault.space.PX_40, overflow: "hidden" };
-obj.divider = {
-  height: 1,
-  marginTop: nativeDefault.space.PX_16,
-  marginBottom: nativeDefault.space.PX_12,
-  marginHorizontal: nativeDefault.space.PX_16,
-  backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
-};
-let closure_13 = createStyles.createStyles(obj);
-let closure_14 = noop.memo((entry) => {
-  ({ searchContext, hasKeywordResults } = entry);
+function SmartSearchContent(entry) {
+  ({ smartSearchQuery, hasKeywordResults } = entry);
   _require = hasKeywordResults;
   entry = entry.entry;
-  let isExpanded;
-  let flashListContext;
-  let stateFromStores;
   let onPressMessageItem;
-  let onPressConversationCitation;
-  closure_8 = undefined;
+  asyncGeneratorStep = undefined;
   let memo;
-  let lineClamp;
-  ({ guildId, requestKey } = entry);
-  let tmp = closure_13();
-  const items = [requestKey];
-  const tmp4 = flashListContext(
-    require("../../../../../../discord_common/js/packages/flash-list/index.js").useRecyclingState(false, items),
-    2,
-  );
-  isExpanded = tmp4[0];
-  asyncGeneratorStep = tmp6;
-  let tmp7 = hasKeywordResults;
-  if (hasKeywordResults) {
-    tmp7 = !isExpanded;
-  }
-  let obj = require("../../../../../../discord_common/js/packages/flash-list/index.js");
-  flashListContext = require("../../../../../../discord_common/js/packages/flash-list/index.js").useFlashListContext();
-  const tmp2Result = require("../../../../../../discord_common/js/packages/flash-list/index.js");
-  const items1 = [onPressConversationCitation];
-  stateFromStores = require("initialize").useStateFromStores(
-    items1,
-    () => onPressConversationCitation.useReducedMotion,
-  );
-  const items2 = [flashListContext, isExpanded, tmp4[1], stateFromStores];
-  const callback = stateFromStores.useCallback(() => {
-    closure_3(!first);
-    if (first) {
-      if (flashListContext != null) {
-        const ref = flashListContext.getRef();
-        if (ref != null) {
-          const obj2 = { animated: !stateFromStores };
-          ref.scrollToTop(obj2);
-        }
-      }
-    }
-  }, items2);
-  const tmp2Result4 = require("initialize");
+  const searchContext = smartSearchQuery.searchContext;
   onPressMessageItem = require("useOnPressSearchItem").useOnPressMessageItem({ searchContext });
-  const tmp2Result5 = require("useOnPressSearchItem");
-  onPressConversationCitation = require("useOnPressSearchItem").useOnPressConversationCitation({ searchContext });
+  let obj = require("useOnPressSearchItem");
+  const onPressConversationCitation = require("useOnPressSearchItem").useOnPressConversationCitation({ searchContext });
   _require = asyncGeneratorStep(async (arg0) => {
     const sourceType = arg0;
     c4 = 0;
@@ -110,37 +50,36 @@ let closure_14 = noop.memo((entry) => {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              closure_2 = tmp3;
               closure_1 = tmp7;
               closure_129_0 = sourceType;
               if ("conversation" === sourceType.sourceType) {
-                c3 = 1;
+                v0 = 1;
                 c4 = 2;
                 c5 = 1;
-                const obj4 = { value: onPressConversationCitation(tmp20), done: false };
+                const obj4 = { value: v0(tmp20), done: false };
                 return obj4;
               }
             }
           } else if (1 === tmp7) {
-            c3 = 0;
+            v0 = 0;
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c3 = 0;
+            v0 = 0;
             c5 = 3;
             const obj5 = { value, done: true };
             return obj5;
           } else {
-            c3 = 0;
+            v0 = 0;
             c5 = 3;
             const obj = { value: undefined, done: true };
             return obj;
           }
-          tmp7 = onPressMessageItem(closure_129_0.channelId, closure_129_0.messageId);
+          tmp7 = tmp3(closure_129_0.channelId, closure_129_0.messageId);
           c5 = 3;
         } catch (tmp14) {
-          if (tmp4 === c3) {
+          if (tmp4 === v0) {
             c5 = tmp2;
             throw tmp14;
           } else {
@@ -150,8 +89,8 @@ let closure_14 = noop.memo((entry) => {
       }
     })();
   });
-  const items3 = [onPressMessageItem, onPressConversationCitation];
-  closure_8 = stateFromStores.useCallback(function () {
+  const items = [onPressMessageItem, onPressConversationCitation];
+  asyncGeneratorStep = memo.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -160,18 +99,18 @@ let closure_14 = noop.memo((entry) => {
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  }, items3);
-  const items4 = [entry.citations, hasKeywordResults];
-  memo = stateFromStores.useMemo(() => {
+  }, items);
+  const items1 = [entry.citations, hasKeywordResults];
+  memo = memo.useMemo(() => {
     const citations = entry.citations;
     let substr = citations;
     if (closure_0) {
-      substr = citations.slice(0, React7);
+      substr = citations.slice(0, MAX_PRESENTED_CITATIONS);
     }
     return substr;
-  }, items4);
-  const items5 = [memo];
-  const memo1 = stateFromStores.useMemo(() => {
+  }, items1);
+  const items2 = [memo];
+  const memo1 = memo.useMemo(() => {
     closure_0 = memo;
     return memo.map((citation, index) => {
       const obj = { citation, isChannelGroupStart: null };
@@ -182,45 +121,33 @@ let closure_14 = noop.memo((entry) => {
       obj.isChannelGroupStart = tmp;
       return obj;
     });
-  }, items5);
-  const items6 = [entry.queryText];
-  lineClamp = stateFromStores.useMemo(() => new MessageSearchResultParserDefault(entry.queryText, closure_10), items6);
-  if (entry.status !== require("IntelligenceSearchTypes").IntelligenceSearchStatus.LOADING) {
-    if (entry.status !== tmp2(tmp3[15]).IntelligenceSearchStatus.LOADED) {
-      return null;
-    }
-  }
-  let collapsedFrame = null;
-  if (tmp7) {
-    collapsedFrame = tmp.collapsedFrame;
-  }
-  const tmp17 = entry.status === require("IntelligenceSearchTypes").IntelligenceSearchStatus.LOADING;
-  let obj2 = { style: null, children: null };
-  const items7 = [collapsedFrame, tmp.content];
-  obj2.style = items7;
-  if (tmp17) {
-    let obj3 = { isCollapsed: tmp7 };
-    let tmp14Result = closure_11(tmp19(tmp3[16]), obj3);
-    let tmp21 = tmp19;
-    let tmp22 = closure_11;
-  } else {
+  }, items2);
+  const items3 = [entry.queryText];
+  closure_6 = memo.useMemo(() => new MessageSearchResultParserDefault(entry.queryText, closure_10), items3);
+  const status = entry.status;
+  if (require("SmartSearchTypes").SmartSearchStatus.NOT_QUALIFIED === status) {
+    return null;
+  } else if (tmp(tmp2[13]).SmartSearchStatus.LOADING === status) {
+    let obj3 = { isCollapsed: entry.isCollapsed };
+    return closure_11(entry(tmp2[14]), obj3);
+  } else if (tmp(tmp2[13]).SmartSearchStatus.LOADED === status) {
     let obj4 = { children: null };
-    let obj5 = { answerText: entry.answerText, citations: memo, guildId };
-    const items8 = [
-      closure_11(tmp19(tmp3[17]), obj5),
+    let obj5 = { answerText: entry.answerText, citations: memo, guildId: smartSearchQuery.guildId };
+    const items4 = [
+      closure_11(entry(tmp2[15]), obj5),
       memo1.map((citation) => {
         citation = citation.citation;
         if (citation.isChannelGroupStart) {
-          let HeaderlessMessageRow = entry(first[18]);
+          let HeaderlessMessageRow = entry(onPressMessageItem[16]);
         } else {
-          HeaderlessMessageRow = closure_0(first[18]).HeaderlessMessageRow;
+          HeaderlessMessageRow = closure_0(onPressMessageItem[16]).HeaderlessMessageRow;
         }
         return closure_1_11(
           HeaderlessMessageRow,
           {
-            message: lineClamp.parse(citation.message),
+            message: closure_6.parse(citation.message),
             onPress() {
-              return closure_8(citation);
+              return closure_4(citation);
             },
             lineClamp,
           },
@@ -228,58 +155,122 @@ let closure_14 = noop.memo((entry) => {
         );
       }),
     ];
-    obj4.children = items8;
-    tmp14Result = closure_12(tmp15, obj4);
-    tmp21 = tmp19;
-    tmp22 = closure_11;
-  }
-  const items9 = [tmp14Result, ,];
-  if (tmp7) {
-    let tmp22Result = tmp22(tmp21(tmp3[19]), { height: 72 });
+    obj4.children = items4;
+    return closure_12(closure_6, obj4);
   } else {
-    tmp22Result = null;
-    if (tmp17) {
-      tmp22Result = tmp22(tmp21(tmp3[19]), { height: 120 });
+    if (tmp(tmp2[13]).SmartSearchStatus.ERROR !== status) {
+      const EMPTY = tmp(tmp2[13]).SmartSearchStatus.EMPTY;
     }
+    const obj6 = { smartSearchQuery, source: "smart_search_row" };
+    return closure_11(entry(tmp2[17]), obj6);
   }
-  items9[1] = tmp22Result;
-  let tmp22Result2 = hasKeywordResults;
-  if (hasKeywordResults) {
-    tmp22Result2 = !tmp17;
+  let obj2 = require("useOnPressSearchItem");
+}
+const View = fn(17).View;
+SmartSearchResultsStoreDefault;
+const MAX_PRESENTED_CITATIONS = fn(12016).MAX_PRESENTED_CITATIONS;
+let closure_10 = fn(7468).SEARCH_MESSAGES_DEFAULT_LINE_CLAMP;
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(4836);
+let obj = {
+  collapsedFrame: { height: 217, overflow: "hidden" },
+  expandedContent: { paddingBottom: nativeDefault.space.PX_40 },
+  divider: null,
+};
+let obj3 = { paddingBottom: nativeDefault.space.PX_40 };
+obj.divider = {
+  height: 1,
+  marginTop: nativeDefault.space.PX_16,
+  marginBottom: nativeDefault.space.PX_12,
+  marginHorizontal: nativeDefault.space.PX_16,
+  backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
+};
+let closure_13 = createStyles.createStyles(obj);
+let closure_15 = noop.memo((arg0) => {
+  ({ smartSearchQuery, hasKeywordResults, entry } = arg0);
+  let isCollapsed;
+  let flashListContext;
+  const tmp = closure_13();
+  const items = [smartSearchQuery.requestKey];
+  const tmp4 = _slicedToArray(isCollapsed(flashListContext[18]).useRecyclingState(hasKeywordResults, items), 2);
+  isCollapsed = tmp4[0];
+  importDefault = tmp6;
+  const obj = isCollapsed(flashListContext[18]);
+  flashListContext = isCollapsed(flashListContext[18]).useFlashListContext();
+  const items1 = [flashListContext, isCollapsed, tmp4[1]];
+  const callback = noop.useCallback(() => {
+    closure_1(!first);
+    if (!first) {
+      if (flashListContext != null) {
+        const ref = flashListContext.getRef();
+        if (ref != null) {
+          const obj2 = { animated: !AccessibilityStore.useReducedMotion };
+          ref.scrollToTop(obj2);
+        }
+      }
+    }
+  }, items1);
+  let tmp19Result = null;
+  if (entry.status !== isCollapsed(flashListContext[13]).SmartSearchStatus.NOT_QUALIFIED) {
+    const obj3 = { style: null, children: null };
+    const items2 = [isCollapsed ? tmp.collapsedFrame : tmp.expandedContent];
+    obj3.style = items2;
+    const obj4 = { smartSearchQuery, hasKeywordResults, entry, isCollapsed };
+    const items3 = [closure_11(SmartSearchContent, obj4), ,];
+    if (isCollapsed) {
+      if (!tmp2Result.isSmartSearchEmptyOrErrored(entry.status)) {
+        let tmp10Result = closure_11(require("SmartSearchBottomFade"), { height: 72 });
+      }
+      items3[1] = tmp10Result;
+      let tmp10Result4 = hasKeywordResults;
+      if (hasKeywordResults) {
+        tmp10Result4 = entry.status === tmp2(tmp3[13]).SmartSearchStatus.LOADED;
+      }
+      if (tmp10Result4) {
+        const obj5 = { isCollapsed, onPress: callback };
+        tmp10Result4 = closure_11(require("SmartSearchExpandButton"), obj5);
+      }
+      items3[2] = tmp10Result4;
+      obj3.children = items3;
+      const items4 = [closure_12(View, obj3)];
+      let tmp10Result5 = hasKeywordResults;
+      if (hasKeywordResults) {
+        const obj6 = { style: tmp.divider };
+        tmp10Result5 = closure_11(View, obj6);
+      }
+      const obj7 = { children: null };
+      items4[1] = tmp10Result5;
+      obj7.children = items4;
+      tmp19Result = closure_12(View, obj7);
+      tmp2Result = tmp2(tmp3[19]);
+    }
+    let tmp10Result6 = null;
+    if (entry.status === tmp2(tmp3[13]).SmartSearchStatus.LOADING) {
+      tmp10Result6 = closure_11(require("SmartSearchBottomFade"), { height: 120 });
+    }
+    tmp10Result = tmp10Result6;
   }
-  if (tmp22Result2) {
-    const obj6 = { isExpanded, onPress: callback };
-    tmp22Result2 = tmp22(tmp21(tmp3[20]), obj6);
-  }
-  items9[2] = tmp22Result2;
-  obj2.children = items9;
-  const children = [closure_12(onPressMessageItem, obj2)];
-  if (hasKeywordResults) {
-    const obj7 = { style: tmp.divider };
-    hasKeywordResults = tmp22(tmp15, obj7);
-  }
-  children[1] = hasKeywordResults;
-  return closure_12(onPressMessageItem, { children });
+  return tmp19Result;
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/intelligence_layer/search/native/components/SmartSearchRow.tsx");
 
-export default function SmartSearchRow(guildId) {
-  guildId = guildId.guildId;
-  const requestKey = guildId.requestKey;
-  const items = [IntelligenceSearchStore];
-  const items1 = [guildId, requestKey];
-  const stateFromStores = guildId(504).useStateFromStores(
+export default function SmartSearchRowConnected(smartSearchQuery) {
+  smartSearchQuery = smartSearchQuery.smartSearchQuery;
+  const items = [SmartSearchResultsStore];
+  const items1 = [smartSearchQuery];
+  const stateFromStores = smartSearchQuery(504).useStateFromStores(
     items,
-    () => IntelligenceSearchStore.getAnswer(guildId, requestKey),
+    () => SmartSearchResultsStore.getAnswer(smartSearchQuery.guildId, smartSearchQuery.requestKey),
     items1,
   );
   let tmp2 = null;
   if (null != stateFromStores) {
     const obj2 = {};
-    const merged = Object.assign(guildId);
+    const merged = Object.assign(smartSearchQuery);
     obj2.entry = stateFromStores;
-    tmp2 = closure_11(closure_14, obj2);
+    tmp2 = closure_11(closure_15, obj2);
   }
   return tmp2;
 }

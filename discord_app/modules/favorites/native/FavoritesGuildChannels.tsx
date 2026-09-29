@@ -7,13 +7,13 @@ import useShouldRenderChannelList from "../../guild_sidebar/native/useShouldRend
 import FavoritesGuildChannelList from "../FavoritesGuildChannelList.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const ChannelListPanelBackdropDefault = tmp2(15684);
-const ChannelListStickyHeaderDefault = tmp2(15767);
-const FavoritesGuildSuggestedChannelsDefault = tmp2(15833);
-const FavoritesGuildSuggestionsLoaderDefault = tmp2(15909);
-const FavoritesGuildSidebarHeaderDefault = tmp2(15914);
+const ChannelListPanelBackdropDefault = tmp2(15859);
+const ChannelListStickyHeaderDefault = tmp2(15942);
+const FavoritesGuildSuggestedChannelsDefault = tmp2(16008);
+const FavoritesGuildSuggestionsLoaderDefault = tmp2(16086);
+const FavoritesGuildSidebarHeaderDefault = tmp2(16091);
 require = fn;
-let closure_3 = fn(15834).useFavoritesGuildSuggestionCount;
+let closure_3 = fn(16009).useFavoritesGuildSuggestionCount;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
 const size = fn(2);

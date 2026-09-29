@@ -32,20 +32,20 @@ let closure_10 = noop.memo((item) => {
   const obj = {
     start,
     end,
-    value: item(9647).getFeatureId(item),
+    value: item(9814).getFeatureId(item),
     label: item.name,
     legacyCompat_selected: null,
     legacyCompat_onPress: null,
   };
-  const obj2 = item(9647);
-  const featureId = item(9647).getFeatureId(item);
-  const obj3 = item(9647);
-  obj.legacyCompat_selected = featureId === item(9647).getFeatureId(feature);
+  const obj2 = item(9814);
+  const featureId = item(9814).getFeatureId(item);
+  const obj3 = item(9814);
+  obj.legacyCompat_selected = featureId === item(9814).getFeatureId(feature);
   obj.legacyCompat_onPress = function legacyCompat_onPress() {
     setFeature(item);
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  return closure_6(item(6000).TableRadioRow, obj);
+  return closure_6(item(6166).TableRadioRow, obj);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/bug_reporter/native/components/BugReporterFeatureActionSheet.tsx");

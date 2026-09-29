@@ -19,6 +19,7 @@ export const ChannelListGuildActionRow = {
   BROWSE_CHANNELS: "browse-channels",
   GUILD_DIRECTORY: "guild-directory",
   GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR: "guild-new-member-actions-progress-bar",
+  GUILD_ONBOARDING_SETUP_PROGRESS: "guild-onboarding-setup-progress",
   GUILD_MOD_DASH_MEMBER_SAFETY: "guild-mod-dash-member-safety",
   GUILD_BOOSTS: "guild-boosts",
   GAME_SERVERS: "game-servers",

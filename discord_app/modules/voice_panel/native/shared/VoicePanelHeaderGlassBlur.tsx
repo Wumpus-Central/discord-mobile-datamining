@@ -65,7 +65,7 @@ export default noop.memo(function HeaderGlassBlur(shown) {
     return { blurAmount: spring.withSpring(num) };
   };
   const obj3 = shown(4566);
-  fn2.__closure = { withSpring: shown(5280).withSpring, shown };
+  fn2.__closure = { withSpring: shown(5446).withSpring, shown };
   fn2.__workletHash = 5642055202507;
   fn2.__initData = __initData2;
   const animatedProps = obj3.useAnimatedProps(fn2);
@@ -73,7 +73,7 @@ export default noop.memo(function HeaderGlassBlur(shown) {
   const obj5 = { style: null, children: null };
   const items = [tmp.blur, style, animatedStyle];
   obj5.style = items;
-  const obj4 = { withSpring: shown(5280).withSpring, shown };
+  const obj4 = { withSpring: shown(5446).withSpring, shown };
   const tmp9 = ReanimatedNativeViewDefault;
   const tmp11 = VisualEffectViewAnimatedDefault;
   let str = "light";

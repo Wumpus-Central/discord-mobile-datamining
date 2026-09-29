@@ -23,8 +23,8 @@ function vibegrationsAppIdFromTopic(topic) {
   }
   return null;
 }
-function vibegrationsTextChannelsIn(guildId) {
-  return GuildChannelStore.getChannels(guildId)[React2].filter(
+function vibegrationsTextChannelsIn(guild_id) {
+  return GuildChannelStore.getChannels(guild_id)[React2].filter(
     (channel) => channel.channel.type === constants.GUILD_TEXT,
   );
 }
@@ -94,7 +94,7 @@ export const isVibegrationsProjectInGuild = function isVibegrationsProjectInGuil
   return tmp;
 };
 export { vibegrationsTextChannelsIn };
-export const findVibegrationChannelId = function findVibegrationChannelId(guildId, applicationId) {
+export const findVibegrationChannelId = function findVibegrationChannelId(guild_id, application_id) {
   for (const item10009 of tmp) {
     let channel = item10009.channel;
     if (vibegrationsAppIdFromTopic(channel.topic) === arg1) {

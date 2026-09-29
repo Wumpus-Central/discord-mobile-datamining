@@ -1,6 +1,6 @@
 // discord_app/design/components/Tabs/native/TabsGradient.native.tsx
 import spring from "../../../animation/reanimated/spring/spring.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05293_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05459_LinearGradient.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 

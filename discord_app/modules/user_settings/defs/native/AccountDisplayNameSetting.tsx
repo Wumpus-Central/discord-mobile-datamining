@@ -4,13 +4,13 @@ import util from "../../../../intl/index.native.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11006);
+const SettingBuilders = fn(11175);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["9AjdkD"]);
   },
-  parent: fn(7417).MobileUserSettings.ACCOUNT,
+  parent: fn(7582).MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountDisplayNameSettingTrailing() {
     const items = [UserStore];
     return initialize.useStateFromStores(items, () => {

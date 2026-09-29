@@ -28,7 +28,7 @@ function SettingsTabStrip(tabs) {
     items,
   );
   const tmp = _slicedToArray(noop.useState(0), 2);
-  obj = tabs(9083);
+  obj = tabs(9248);
   const segmentedControlState = obj.useSegmentedControlState({
     items: memo,
     pageWidth: tmp2,
@@ -42,16 +42,16 @@ function SettingsTabStrip(tabs) {
   const obj3 = { onLayout: callback, children: null };
   if (tabs.length > 3) {
     const obj4 = { state: segmentedControlState };
-    let tmp8Result = closure_10(tmp5(12111).Tabs, obj4);
+    let tmp8Result = closure_10(tmp5(12282).Tabs, obj4);
   } else {
     const obj5 = { state: segmentedControlState };
-    tmp8Result = closure_10(tmp5(9084).SegmentedControl, obj5);
+    tmp8Result = closure_10(tmp5(9249).SegmentedControl, obj5);
   }
   obj3.children = tmp8Result;
   return closure_10(View, obj3);
 }
 const View = fn(17).View;
-let isProjectOwner = fn(8495).isProjectOwner;
+let isProjectOwner = fn(8660).isProjectOwner;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const VibegrationsSettingsSheet = "VibegrationsSettingsSheet";
@@ -84,7 +84,7 @@ export default function VibegrationsSettingsSheet(projectId) {
   closure_11 = undefined;
   let canSave;
   ({ guildId, initialTab, scopeKeys, note, notifyAgent, isPreview } = projectId);
-  const tmp3 = closure_14(stateFromStores1(6402)({ includeKeyboardHeight: true }).insets.bottom);
+  const tmp3 = closure_14(stateFromStores1(6568)({ includeKeyboardHeight: true }).insets.bottom);
   let items = [memo];
   const items1 = [projectId];
   const stateFromStores = projectId(504).useStateFromStores(
@@ -128,9 +128,9 @@ export default function VibegrationsSettingsSheet(projectId) {
   if (guild_id == null) {
     guild_id = guildId;
   }
-  const tmpResultResult = stateFromStores1(16261)(projectId, guild_id);
+  const tmpResultResult = stateFromStores1(16441)(projectId, guild_id);
   asyncGeneratorStep = tmpResultResult;
-  const tmp13 = stateFromStores1(16263)({ projectId, scopeKeys, note, notifyAgent, isPreview });
+  const tmp13 = stateFromStores1(16443)({ projectId, scopeKeys, note, notifyAgent, isPreview });
   _slicedToArray = tmp13;
   isScoped = tmp13.isScoped;
   loaded = tmp13.loaded;
@@ -267,8 +267,8 @@ export default function VibegrationsSettingsSheet(projectId) {
   obj5.dismissAccessibilityLabel = intl.string(stateFromStores1(3715).Wzi4Jd);
   const intl2 = tmp4(1115).intl;
   const tmpResult2 = stateFromStores1(3715);
-  const tmpResult = stateFromStores1(16261);
-  obj5.header = found(projectId(6570).BottomSheetTitleHeader, {
+  const tmpResult = stateFromStores1(16441);
+  obj5.header = found(projectId(6736).BottomSheetTitleHeader, {
     title: intl2.string(isScoped ? tmpResult2.wgDhiQ : tmpResult2.cWmjzs),
   });
   const obj7 = { style: tmp3.container, children: null };
@@ -311,7 +311,7 @@ export default function VibegrationsSettingsSheet(projectId) {
     tmp21Result3 = null;
     if ("model" === found) {
       const obj9 = { projectId };
-      tmp21Result3 = tmp21(tmp4(16264).VibegrationsModelSettingsContent, obj9);
+      tmp21Result3 = tmp21(tmp4(16444).VibegrationsModelSettingsContent, obj9);
     }
   }
   items9[4] = tmp21Result3;
@@ -325,7 +325,7 @@ export default function VibegrationsSettingsSheet(projectId) {
         obj10.children = intl3.string(tmp(3715).URnN4B);
         let tmp21Result4 = tmp21(tmp4(4832).Text, obj10);
       } else {
-        tmp21Result4 = tmp21(tmp4(5889).ActivityIndicator, {});
+        tmp21Result4 = tmp21(tmp4(6055).ActivityIndicator, {});
       }
     }
   }
@@ -339,7 +339,7 @@ export default function VibegrationsSettingsSheet(projectId) {
   const obj6 = { title: intl2.string(isScoped ? tmpResult2.wgDhiQ : tmpResult2.cWmjzs) };
   const tmp23 = closure_11;
   const tmp24 = loaded;
-  items9[6] = found(projectId(5281).Button, {
+  items9[6] = found(projectId(5447).Button, {
     text: intl4.string(Tuz9vw),
     variant: "primary",
     loading: tmpResultResult.saving || tmp13.saving,
@@ -348,6 +348,6 @@ export default function VibegrationsSettingsSheet(projectId) {
   });
   obj7.children = items9;
   obj5.children = tmp23(tmp24, obj7);
-  return found(projectId(6618).ActionSheet, obj5);
+  return found(projectId(6784).ActionSheet, obj5);
 }
 export const VIBEGRATIONS_SETTINGS_SHEET_KEY = "VibegrationsSettingsSheet";

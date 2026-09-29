@@ -6,7 +6,7 @@ import SelfPresenceStore from "../../stores/SelfPresenceStore.tsx";
 
 const require = globalThis.__r;
 
-const AlertActionCreatorsDefault = tmp5(5203);
+const AlertActionCreatorsDefault = tmp5(5369);
 require = fn;
 const constants = fn(4482).NotificationSettingsUpdateType;
 const Constants = fn(1074);

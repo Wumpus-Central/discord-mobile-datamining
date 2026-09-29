@@ -7,7 +7,7 @@ const redux = noop.createContext({
   registerDismiss() {
     return NOOP;
   },
-  handleDismissCoachmarkOnScroll: "a",
+  handleDismissCoachmarkOnScroll: "r",
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesCoachmarkScrollDismissContext.tsx");

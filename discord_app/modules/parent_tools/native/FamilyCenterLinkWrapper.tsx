@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCen
 export default function FamilyCenterLinkRowWrapper(userId) {
   userId = userId.userId;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(6583)().analyticsLocations;
+  analyticsLocations = analyticsLocations(6749)().analyticsLocations;
   let tmp3 = null;
   if (undefined !== userId) {
     const obj = {
@@ -38,7 +38,7 @@ export default function FamilyCenterLinkRowWrapper(userId) {
       },
       children: userId.children,
     };
-    tmp3 = jsx(userId(5435).PressableOpacity, {
+    tmp3 = jsx(userId(5602).PressableOpacity, {
       style: tmp.container,
       onPress() {
         showUserProfileActionSheetDefault({

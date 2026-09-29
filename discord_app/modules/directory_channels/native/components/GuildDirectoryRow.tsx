@@ -257,8 +257,8 @@ export default noop.memo(function GuildDirectoryRow(entry) {
   }
   obj22.variant = str2;
   obj22.text = stringResult;
-  items7[3] = closure_10(entry(5281).Button, obj22);
+  items7[3] = closure_10(entry(5447).Button, obj22);
   obj5.children = items7;
   obj4.children = closure_12(View, obj5);
-  return closure_10(entry(5919).Card, obj4);
+  return closure_10(entry(6085).Card, obj4);
 });

@@ -40,11 +40,11 @@ export default function useGuildPowerupsNewBadge(guildId) {
       tmp6 = closure_8;
     }
   }
-  const tmp7 = _slicedToArray(tmp(6806).useSelectedVersionedDismissibleContent(tmp6, num), 2);
+  const tmp7 = _slicedToArray(tmp(6972).useSelectedVersionedDismissibleContent(tmp6, num), 2);
   _require = tmp8;
   importDefault = tmp9;
   const items1 = [tmp7[0] === closure_8, tmp7[1]];
-  const tmpResult = tmp(6806);
+  const tmpResult = tmp(6972);
   return {
     showNewBadgeOnRow: tmp7[0] === closure_8,
     dismissNewBadgeIfShown: noop.useCallback(() => {
@@ -66,7 +66,7 @@ export const useAutoDismissGuildPowerupsNewBadge = function useAutoDismissGuildP
     GuildPowerupsStore.getStateForGuild(closure_0),
   );
   let obj = require("initialize");
-  const tmp2Result = num(11999)(guildId, stateFromStores);
+  const tmp2Result = num(12170)(guildId, stateFromStores);
   num = 0;
   if (tmp2Result >= constants.GUILD_THEME) {
     num = tmp2Result;

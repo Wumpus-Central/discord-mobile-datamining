@@ -77,14 +77,14 @@ export default function DisplayNameStylesFontPickerSheet(displayName) {
   closure_5 = undefined;
   const tmp = closure_10();
   importDefault = tmp;
-  let obj = onSelectFont(7615);
-  const visibleFontOrder = onSelectFont(14884).useVisibleFontOrder();
-  let obj2 = onSelectFont(14884);
-  const displayNameStylesNewFonts = onSelectFont(14886).useDisplayNameStylesNewFonts(visibleFontOrder);
+  let obj = onSelectFont(7780);
+  const visibleFontOrder = onSelectFont(15059).useVisibleFontOrder();
+  let obj2 = onSelectFont(15059);
+  const displayNameStylesNewFonts = onSelectFont(15061).useDisplayNameStylesNewFonts(visibleFontOrder);
   ({ dotFontIds: c2, dismissFontDot: c3 } = displayNameStylesNewFonts);
   [first, closure_5] = first.useState(selectedFontId);
   let tmp15Result = first !== onSelectFont(1392).DisplayNameFont.DEFAULT;
-  let obj3 = onSelectFont(14886);
+  let obj3 = onSelectFont(15061);
   closure_6 = tmp9;
   let obj4 = onSelectFont(1389);
   constants = first.useCallback((arg0) => {
@@ -107,12 +107,12 @@ export default function DisplayNameStylesFontPickerSheet(displayName) {
   const intl2 = onSelectFont(1115).intl;
   obj7.text = intl2.string(onSelectFont(1115).t.XqMe3N);
   obj7.onPress = callback;
-  obj6.trailing = closure_8(onSelectFont(5281).Button, obj7);
+  obj6.trailing = closure_8(onSelectFont(5447).Button, obj7);
   obj5.header = closure_8(DisplayNameStylesSheetHeaderDefault, obj6);
   const obj8 = { style: tmp.container, children: null };
   const obj9 = { style: tmp.contentContainer, children: null };
   let items1 = [
-    closure_8(onSelectFont(5279).Stack, {
+    closure_8(onSelectFont(5445).Stack, {
       direction: "horizontal",
       align: "center",
       justify: "center",
@@ -185,5 +185,5 @@ export default function DisplayNameStylesFontPickerSheet(displayName) {
   obj9.children = items1;
   obj8.children = closure_9(closure_5, obj9);
   obj5.children = closure_8(closure_5, obj8);
-  return closure_8(onSelectFont(6571).BottomSheet, obj5);
+  return closure_8(onSelectFont(6737).BottomSheet, obj5);
 }

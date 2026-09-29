@@ -65,14 +65,14 @@ export const isRecallingLine = function isRecallingLine(current) {
     return intl.string(item) === closure_0;
   });
 };
-export const connectionLabel = function connectionLabel(stateFromStores6) {
-  if ("connecting" === stateFromStores6) {
+export const connectionLabel = function connectionLabel(stateFromStores7) {
+  if ("connecting" === stateFromStores7) {
     const intl3 = util.intl;
     return intl3.string(_modDef3715.W7oyuf);
-  } else if ("closed" === stateFromStores6) {
+  } else if ("closed" === stateFromStores7) {
     const intl2 = util.intl;
     return intl2.string(_modDef3715["yBmS+I"]);
-  } else if ("failed" === stateFromStores6) {
+  } else if ("failed" === stateFromStores7) {
     const intl = util.intl;
     return intl.string(_modDef3715.eE60xI);
   }

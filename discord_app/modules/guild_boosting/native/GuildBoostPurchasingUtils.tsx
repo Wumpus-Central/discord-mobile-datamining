@@ -73,8 +73,8 @@ let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0) {
                 const intl = closure_1_0(1115).intl;
                 obj2.title = intl.string(closure_1_0(1115).t["8P7MX0"]);
                 obj2.body = body;
-                closure_1_1(5204).show(obj2);
-                const obj = closure_1_1(5204);
+                closure_1_1(5370).show(obj2);
+                const obj = closure_1_1(5370);
                 closure_1_1(1241).track(constants.OPEN_MODAL, {
                   type: closure_1_6.IOS_CANNOT_MANAGE_SUBSCRIPTION,
                   source,

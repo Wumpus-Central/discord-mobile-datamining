@@ -10,6 +10,13 @@ const items = [
       "A Priority toggle arrives in the model picker: on models that offer it, replies come back sooner for more runes, and the Speedrun stop now runs it by default.",
   },
   {
+    date: "2026-09-28",
+    time: "19:34",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "A clone of another project, or one you link to another app, goes straight to building instead of asking you to approve a plan.",
+  },
+  {
     date: "2026-09-11",
     time: "00:00",
     platforms: ["desktop", "mobile"],
@@ -83,10 +90,29 @@ const items = [
     summary: "Apps you build can now use the phone's tilt and motion sensors, so gyroscope-driven play works.",
   },
   {
+    date: "2026-09-29",
+    time: "00:11",
+    platforms: ["desktop", "mobile"],
+    summary: "Apps you build now follow your Discord theme's colors, unless you ask for colors of their own.",
+  },
+  {
     date: "2026-08-28",
     time: "00:00",
     platforms: ["desktop", "mobile"],
     summary: "Apps you install just for yourself can hold an ordinary back-and-forth conversation with you in DMs.",
+  },
+  {
+    date: "2026-09-24",
+    time: "23:16",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Ask Conjure to undo a change, or open a reply\u2019s menu and pick Restore this version, to put your app back the way it was.",
+  },
+  {
+    date: "2026-09-28",
+    time: "01:26",
+    platforms: ["desktop", "mobile"],
+    summary: "Chat messages keep the time they were sent after you reload the builder.",
   },
   {
     date: "2026-09-01",
@@ -128,6 +154,13 @@ const items = [
       "Coding tools you connect to an app can now search and script its files, read the Mana docs, set its settings, public pages and icon, use your uploads, and bring in updates from the original, and a broken manifest edit is caught before it deploys.",
   },
   {
+    date: "2026-09-25",
+    time: "15:51",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Cloning an app shows your copy running in a few seconds, before Conjure has even finished looking it over.",
+  },
+  {
     date: "2026-09-06",
     time: "00:01",
     platforms: ["desktop"],
@@ -140,6 +173,12 @@ const items = [
     platforms: ["desktop"],
     summary:
       "Comment mode now picks whatever is under your pointer, not only buttons and headings, and outlines it so you can see what you are about to comment on. Each note is pinned to the exact spot you clicked, and its card opens out of that pin.",
+  },
+  {
+    date: "2026-09-28",
+    time: "01:59",
+    platforms: ["desktop", "mobile"],
+    summary: "Conjure can ask questions where you pick several answers at once, and add your own words alongside them.",
   },
   {
     date: "2026-09-27",
@@ -181,11 +220,23 @@ const items = [
     summary: "Conjuring has its own doorway in the desktop title bar, so it is one click away from anywhere.",
   },
   {
+    date: "2026-09-28",
+    time: "06:26",
+    platforms: ["desktop", "mobile"],
+    summary: "Deleting an app also removes the channel it was published in, so it no longer lingers in your server.",
+  },
+  {
     date: "2026-09-26",
     time: "01:44",
     platforms: ["desktop", "mobile"],
     summary:
       "Deleting an app closes the confirmation right away; the app shows as deleting in your list until it is gone.",
+  },
+  {
+    date: "2026-09-28",
+    time: "01:17",
+    platforms: ["desktop"],
+    summary: "Drop images and files anywhere on the chat to bring them along, not just onto the message box.",
   },
   {
     date: "2026-09-20",
@@ -477,6 +528,13 @@ const items = [
       "On phones, the strip above the composer now shows what Conjure is doing and the runes used, as on desktop; tap the indicator to read the model\u2019s reasoning as it streams.",
   },
   {
+    date: "2026-09-28",
+    time: "17:21",
+    platforms: ["mobile"],
+    summary:
+      "On phones, the wand at the start of your profile\u2019s bottom bar opens your projects from every server, as the title bar wand does on desktop.",
+  },
+  {
     date: "2026-09-18",
     time: "00:03",
     platforms: ["mobile"],
@@ -496,6 +554,13 @@ const items = [
     platforms: ["desktop", "mobile"],
     summary:
       "One Effort scale, from Speedrun to Big Brain, sets how much thinking goes into a run, instead of choosing models and thinking levels separately.",
+  },
+  {
+    date: "2026-09-28",
+    time: "19:00",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Paste an image into the chat box and it attaches like an upload. On desktop, pasting anywhere in the builder or into the box for a part of your Frame you picked works too.",
   },
   {
     date: "2026-09-22",
@@ -529,6 +594,13 @@ const items = [
     platforms: ["desktop", "mobile"],
     summary:
       "Plan cards have an Approve button that starts the build. To change the plan, type what you want different.",
+  },
+  {
+    date: "2026-09-28",
+    time: "20:30",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Plan cards now say Conjure it! on the button, with a reminder beside it that you can tell Conjure what to change.",
   },
   {
     date: "2026-08-31",
@@ -578,6 +650,13 @@ const items = [
       "Reopening an app shows what Conjure is recalling while your conversation loads, and a brand new app greets you straight away.",
   },
   {
+    date: "2026-09-25",
+    time: "23:27",
+    platforms: ["desktop"],
+    summary:
+      "Shared projects show the faces of the people who made and work on them beside the name; hover them to see who they are.",
+  },
+  {
     date: "2026-09-02",
     time: "00:01",
     platforms: ["desktop", "mobile"],
@@ -610,6 +689,13 @@ const items = [
     platforms: ["desktop", "mobile"],
     summary:
       "Task lists stop spinning once Conjure finishes or you press Stop, and an earlier list folds away with its unfinished tasks marked when a new one starts.",
+  },
+  {
+    date: "2026-09-28",
+    time: "19:37",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "The Conjuring MCP panel now gives you an Authorization header to add alongside the link, so the link itself no longer carries your key.",
   },
   {
     date: "2026-09-09",
@@ -650,6 +736,13 @@ const items = [
     time: "00:00",
     platforms: ["desktop"],
     summary: "The create screen greets you with a little more magic.",
+  },
+  {
+    date: "2026-09-28",
+    time: "17:34",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "The cursor Conjure moves while testing your app is now about the size of your own, still blue and easy to spot.",
   },
   {
     date: "2026-09-17",
@@ -743,6 +836,13 @@ const items = [
     platforms: ["desktop", "mobile"],
     summary:
       "When the app keeps crashing after a request, Conjure notices and fixes it on its own, even while you are away.",
+  },
+  {
+    date: "2026-09-27",
+    time: "21:19",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "When your app is done, one Publish button makes it live and takes you to it; after that the button opens it, and says Update when your latest changes are not live yet.",
   },
   {
     date: "2026-09-22",

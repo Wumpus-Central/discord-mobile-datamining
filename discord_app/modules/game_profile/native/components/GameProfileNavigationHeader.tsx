@@ -135,7 +135,7 @@ export default function GameProfileNavigationHeader(game) {
   if (null != name) {
     const obj3 = { style: tmp.headerContainer, children: null };
     const obj4 = { android_fallbackColor: token };
-    const items2 = [closure_7(tmp2(8370).BackgroundBlurFill, obj4)];
+    const items2 = [closure_7(tmp2(8535).BackgroundBlurFill, obj4)];
     const obj5 = { style: tmp.headerRow, children: null };
     let tmp17Result = null != memo;
     if (tmp17Result) {
@@ -162,12 +162,12 @@ export default function GameProfileNavigationHeader(game) {
     if (tmp15Result) {
       const obj10 = { style: tmp.rankPillContainer, children: null };
       const obj11 = { rank: game.l30Rank, compact: true };
-      const items5 = [closure_7(tmp4(8172), obj11)];
+      const items5 = [closure_7(tmp4(8337), obj11)];
       const obj12 = { style: null, children: null };
       const items6 = [StyleSheet.absoluteFill, animatedStyle1];
       obj12.style = items6;
       const obj13 = { rank: game.l30Rank };
-      obj12.children = closure_7(tmp4(8172), obj13);
+      obj12.children = closure_7(tmp4(8337), obj13);
       items5[1] = closure_7(tmp4(4566).View, obj12);
       obj10.children = items5;
       tmp15Result = closure_8(closure_5, obj10);

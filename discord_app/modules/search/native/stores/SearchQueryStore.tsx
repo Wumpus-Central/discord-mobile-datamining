@@ -8,9 +8,9 @@ import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const SearchConstants = fn(7303);
+const SearchConstants = fn(7468);
 ({ EMPTY_SEARCH_QUERY_STRING: metroRequire, SearchQueryTagTypes: closure_7 } = SearchConstants);
-const SearchFilterAddLocations = fn(7302).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(7467).SearchFilterAddLocations;
 const Constants = fn(1074);
 ({ SearchTokenTypes: closure_9, SearchTypes: c10 } = Constants);
 const prototype = function SearchQueryStateManager(type) {
@@ -37,12 +37,12 @@ const prototype = function SearchQueryStateManager(type) {
   obj.getTextInputValue = function getTextInputValue() {
     return obj.textInputValue;
   };
-  obj.setTextInputValue = function setTextInputValue(textInputValue, arg1) {
+  obj.setTextInputValue = function setTextInputValue(suggestedSearchText, arg1) {
     let flag = arg1;
     if (arg1 === undefined) {
       flag = false;
     }
-    obj.textInputValue = textInputValue;
+    obj.textInputValue = suggestedSearchText;
     obj.textInputChangedFromInput = flag;
     const result = obj.resetExplicitSearchSubmitted();
   };
@@ -187,11 +187,11 @@ const prototype = function SearchQueryStateManager(type) {
       const intl = obj(1115).intl;
       const stringResult = intl.string(obj(1115).t.WNpFHa);
       let _HermesInternal = HermesInternal;
-      obj3.text = "" + stringResult + ": " + obj(11823).quoteChannelName(channelName);
+      obj3.text = "" + stringResult + ": " + obj(11992).quoteChannelName(channelName);
       obj3.channelId = type.channelId;
       obj3.location = SearchFilterAddLocations.CLIENT_AUTO_ADD;
       items1 = [obj3];
-      const obj4 = obj(11823);
+      const obj4 = obj(11992);
     }
     items = items1;
   }

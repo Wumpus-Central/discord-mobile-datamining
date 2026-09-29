@@ -6,8 +6,8 @@ import SurveyActionTypes from "../../../discord_common/js/shared/shared-constant
 import MessageActionCreatorsDefault from "../../actions/MessageActionCreators.tsx";
 import ConversationsAnalytics2 from "ConversationsAnalytics.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import ChannelConversationsStore from "ChannelConversationsStore.tsx";
 import ConversationPreviewStore from "ConversationPreviewStore.tsx";
-import ConversationsStore from "ConversationsStore.tsx";
 import TopicalNavigationSurveyStore from "TopicalNavigationSurveyStore.tsx";
 
 require = fn;
@@ -28,9 +28,9 @@ let closure_9 = async function _fetchChannelConversations(arg0) {
         if (obj15.isTopicalNavEnabled(closure_132_1, "fetch_channel_conversations")) {
           const _HermesInternal = HermesInternal;
           closure_132_8 = "" + closure_132_2 + ":" + closure_132_3 + ":" + closure_132_4 + ":" + true === closure_132_5;
-          if (!closure_133_5.isListFetchPending(closure_132_0, closure_132_8)) {
+          if (!closure_133_4.isListFetchPending(closure_132_0, closure_132_8)) {
             const obj7 = {
-              type: "CONVERSATIONS_FETCH_START",
+              type: "CHANNEL_CONVERSATIONS_FETCH_START",
               channelId: closure_132_0,
               direction: closure_132_2,
               requestKey: closure_132_8,
@@ -79,7 +79,7 @@ let closure_9 = async function _fetchChannelConversations(arg0) {
     } else if (2 === tmp7) {
       c6 = 0;
       closure_133_1(closure_133_2[7]).dispatch({
-        type: "CONVERSATIONS_FETCH_FAILURE",
+        type: "CHANNEL_CONVERSATIONS_FETCH_FAILURE",
         channelId: closure_132_0,
         requestKey: closure_132_8,
       });
@@ -99,7 +99,7 @@ let closure_9 = async function _fetchChannelConversations(arg0) {
     } else {
       const conversations = value.body.conversations;
       const obj12 = {
-        type: "CONVERSATIONS_FETCH_SUCCESS",
+        type: "CHANNEL_CONVERSATIONS_FETCH_SUCCESS",
         channelId: closure_132_0,
         rawConversations: conversations,
         direction: closure_132_2,
@@ -199,7 +199,7 @@ let closure_10 = async function _fetchConversation(arg0) {
         } else if (arg0 !== 2) {
           closure_130_1 = value;
           const obj6 = {
-            type: "CONVERSATION_GET_SUCCESS",
+            type: "CONVERSATION_FETCH_SUCCESS",
             channelId: closure_130_0,
             rawConversation: closure_130_1.body,
           };
@@ -286,7 +286,7 @@ let closure_12 = async function _fetchConversationMessages() {
               if (tmp18) {
                 let isFullyHydratedResult = ConversationPreviewStore.isFullyHydrated(conversationId);
               } else {
-                isFullyHydratedResult = ConversationsStore.isFullyHydrated(channelId, conversationId);
+                isFullyHydratedResult = ChannelConversationsStore.isFullyHydrated(channelId, conversationId);
               }
               if (isFullyHydratedResult) {
                 c8 = 3;
@@ -296,7 +296,7 @@ let closure_12 = async function _fetchConversationMessages() {
               if (tmp18) {
                 let hydratedMessages = ConversationPreviewStore.getHydratedMessages(conversationId);
               } else {
-                hydratedMessages = ConversationsStore.getHydratedMessages(channelId, conversationId);
+                hydratedMessages = ChannelConversationsStore.getHydratedMessages(channelId, conversationId);
               }
               if (null != hydratedMessages) {
                 c8 = 3;
@@ -306,11 +306,11 @@ let closure_12 = async function _fetchConversationMessages() {
             if (tmp18) {
               let result = ConversationPreviewStore.isConversationFetchPending(conversationId, tmp19);
             } else {
-              result = ConversationsStore.isConversationFetchPending(conversationId, tmp19);
+              result = ChannelConversationsStore.isConversationFetchPending(conversationId, tmp19);
             }
             if (!result) {
               const obj6 = {
-                type: "CONVERSATION_FETCH_START",
+                type: "CONVERSATION_MESSAGES_FETCH_START",
                 channelId,
                 conversationId,
                 full: tmp19,
@@ -341,7 +341,7 @@ let closure_12 = async function _fetchConversationMessages() {
           if (1 === tmp7) {
             c6 = 0;
             const obj9 = {
-              type: "CONVERSATION_FETCH_FAILURE",
+              type: "CONVERSATION_MESSAGES_FETCH_FAILURE",
               channelId: closure_132_0,
               conversationId: closure_132_1,
               full: closure_132_3,
@@ -355,7 +355,7 @@ let closure_12 = async function _fetchConversationMessages() {
           } else if (arg0 !== 2) {
             closure_132_4 = value;
             const obj10 = {
-              type: "CONVERSATION_FETCH_SUCCESS",
+              type: "CONVERSATION_MESSAGES_FETCH_SUCCESS",
               channelId: closure_132_0,
               conversationId: closure_132_1,
               messages: closure_132_4.body.messages,
@@ -384,7 +384,7 @@ let closure_12 = async function _fetchConversationMessages() {
     }
   })();
 };
-const FETCH_LIMIT = fn(7015).FETCH_LIMIT;
+const FETCH_LIMIT = fn(7181).FETCH_LIMIT;
 const Endpoints = fn(1074).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/ConversationsActionCreators.tsx");
@@ -426,7 +426,7 @@ export const setSelectedConversation = function setSelectedConversation(channelI
     DispatcherDefault.dispatch(obj2);
     fetchConversationMessages(channelId, conversationId, { includeReactions: true, includeMessageReferences: true });
     if (flag) {
-      const conversationMetadata = ConversationsStore.getConversationMetadata(channelId, conversationId);
+      const conversationMetadata = ChannelConversationsStore.getConversationMetadata(channelId, conversationId);
       let startMessageId;
       if (conversationMetadata != null) {
         startMessageId = conversationMetadata.conversation.startMessageId;

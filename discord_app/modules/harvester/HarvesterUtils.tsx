@@ -6,7 +6,7 @@ import UserStore from "../../stores/UserStore.tsx";
 import DataHarvestStore from "DataHarvestStore.tsx";
 
 require = fn;
-const REQUEST_DATA_LIMIT_MS = fn(14396).REQUEST_DATA_LIMIT_MS;
+const REQUEST_DATA_LIMIT_MS = fn(14571).REQUEST_DATA_LIMIT_MS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/harvester/HarvesterUtils.tsx");
 

@@ -8,8 +8,8 @@ import DiceRollStore from "DiceRollStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const INITIAL_STATE = fn(11441).INITIAL_STATE;
-const DiceRollConstants = fn(8602);
+const INITIAL_STATE = fn(11610).INITIAL_STATE;
+const DiceRollConstants = fn(8767);
 ({
   AFTER_ROLL_DELAY_MS: closure_7,
   ALLOWED_DICE_SIDES_SET: closure_8,

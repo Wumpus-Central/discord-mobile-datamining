@@ -18,7 +18,7 @@ function GuildChannelLabel(channel) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
-const layout = fn(7303).CHANNEL_LIST_SEARCH_LAYOUT;
+const layout = fn(7468).CHANNEL_LIST_SEARCH_LAYOUT;
 const jsx = fn(21).jsx;
 const createStyles = fn(4836);
 let obj = {

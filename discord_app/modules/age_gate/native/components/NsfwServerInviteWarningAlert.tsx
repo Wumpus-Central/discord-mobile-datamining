@@ -9,46 +9,25 @@ class NsfwServerInviteWarningAlert {
   constructor(arg0) {
     onConfirm = global.onConfirm;
     closure_1 = undefined;
-    joins = undefined;
+    confirm = undefined;
     tmp = onConfirm;
-    tmp2 = joins;
-    obj = onConfirm(joins[4]);
+    tmp2 = confirm;
+    obj = onConfirm(confirm[2]);
     dismissModalCallback = obj.useDismissModalCallback();
     closure_1 = dismissModalCallback;
-    obj2 = onConfirm(joins[2]);
-    isVerifiedTeen = obj2.useIsVerifiedTeen();
-    tmp5 = onConfirm(joins[2]);
-    if (isVerifiedTeen) {
-      obj1 = { description: null, confirmText: null, joins: false, goBackIsPrimary: true };
-      intl5 = tmp(tmp2[3]).intl;
-      obj1.description = intl5.string(tmp(tmp2[3]).t.dqC1w2);
-      intl6 = tmp(tmp2[3]).intl;
-      obj1.confirmText = intl6.string(tmp(tmp2[3]).t.FDSSia);
-      obj9 = obj1;
-    } else if (tmp6) {
-      obj8 = { description: null, confirmText: null, joins: true, goBackIsPrimary: false };
-      intl3 = tmp(tmp2[3]).intl;
-      obj8.description = intl3.string(tmp(tmp2[3]).t.fp3xf5);
-      intl4 = tmp(tmp2[3]).intl;
-      obj8.confirmText = intl4.string(tmp(tmp2[3]).t.wVq7uo);
-      obj9 = obj8;
-    } else {
-      obj9 = { description: null, confirmText: null, joins: false, goBackIsPrimary: false };
-      intl = tmp(tmp2[3]).intl;
-      obj9.description = intl.string(tmp(tmp2[3]).t.qiLic6);
-      intl2 = tmp(tmp2[3]).intl;
-      obj9.confirmText = intl2.string(tmp(tmp2[3]).t.FDSSia);
-    }
-    joins = obj9.joins;
-    goBackIsPrimary = obj9.goBackIsPrimary;
+    obj2 = onConfirm(confirm[3]);
+    obj3 = onConfirm(confirm[3]);
+    nsfwServerInviteWarningVariant = obj2.getNsfwServerInviteWarningVariant(obj3.useGatedAgeGroup());
+    _confirm = nsfwServerInviteWarningVariant.confirm;
+    confirm = _confirm;
+    goBackIsPrimary = nsfwServerInviteWarningVariant.goBackIsPrimary;
     items = [, ,];
-    items[0] = dismissModalCallback;
-    items[1] = joins;
+    items[0] = _confirm.joins;
+    items[1] = dismissModalCallback;
     items[2] = onConfirm;
-    ({ description, confirmText } = obj9);
-    tmp8 = jsx;
+    tmp6 = jsx;
     callback = closure_3.useCallback(() => {
-      if (joins) {
+      if (_confirm.joins) {
         onConfirm();
       } else {
         dismissModalCallback();
@@ -60,35 +39,32 @@ class NsfwServerInviteWarningAlert {
     if (goBackIsPrimary) {
       str = "secondary";
     }
-    tmp8Result = tmp8(
-      tmp(tmp2[7]).AlertActionButton,
-      { variant: str, text: confirmText, onPress: callback },
-      "confirm",
-    );
+    obj1 = { variant: str, text: _confirm.text, onPress: callback };
+    tmp6Result = tmp6(onConfirm(confirm[6]).AlertActionButton, obj1, "confirm");
     str2 = "secondary";
     if (goBackIsPrimary) {
       str2 = "primary";
     }
-    obj10 = { variant: str2, text: null };
-    intl7 = tmp(tmp2[3]).intl;
-    obj10.text = intl7.string(tmp(tmp2[3]).t["/g10LC"]);
-    tmp8Result1 = tmp8(tmp(tmp2[7]).AlertActionButton, obj10, "go-back");
-    obj11 = { title: null, content: null, actions: null };
-    intl8 = tmp(tmp2[3]).intl;
-    obj11.title = intl8.string(tmp(tmp2[3]).t.xi46lg);
-    obj11.content = description;
+    obj7 = { variant: str2, text: null };
+    intl = tmp(tmp2[7]).intl;
+    obj7.text = intl.string(tmp(tmp2[7]).t["/g10LC"]);
+    tmp6Result1 = tmp6(tmp(tmp2[6]).AlertActionButton, obj7, "go-back");
+    obj8 = { title: null, content: null, actions: null };
+    intl2 = tmp(tmp2[7]).intl;
+    obj8.title = intl2.string(tmp(tmp2[7]).t.xi46lg);
+    obj8.content = nsfwServerInviteWarningVariant.description;
     items1 = [,];
     if (goBackIsPrimary) {
-      items1[0] = tmp8Result1;
-      items1[1] = tmp8Result;
-      tmp11 = items1;
+      items1[0] = tmp6Result1;
+      items1[1] = tmp6Result;
+      tmp9 = items1;
     } else {
-      items1[0] = tmp8Result;
-      items1[1] = tmp8Result1;
-      tmp11 = items1;
+      items1[0] = tmp6Result;
+      items1[1] = tmp6Result1;
+      tmp9 = items1;
     }
-    obj11.actions = tmp11;
-    return tmp8(tmp(tmp2[7]).AlertModal, obj11);
+    obj8.actions = tmp9;
+    return tmp6(tmp(tmp2[6]).AlertModal, obj8);
   }
 }
 const jsx = fn(21).jsx;

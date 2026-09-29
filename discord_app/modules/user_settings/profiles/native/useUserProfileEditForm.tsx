@@ -30,7 +30,7 @@ export default function useUserProfileEditForm() {
     }
     return isSubmitting;
   });
-  const effect = noop.useEffect(() => () => stateFromStores(573).wait(pendingChanges(6405).resetAllPending), []);
+  const effect = noop.useEffect(() => () => stateFromStores(573).wait(pendingChanges(6571).resetAllPending), []);
   const items2 = [stateFromStores, pendingChanges];
   const callback = noop.useCallback(
     asyncGeneratorStep(async () => {
@@ -81,14 +81,14 @@ export default function useUserProfileEditForm() {
                 return { value: "HermesInternal", done: null };
               } else {
                 const accountUpdateForUpdateRequest =
-                  pendingChanges(10551).getAccountUpdateForUpdateRequest(pendingChanges);
+                  pendingChanges(10720).getAccountUpdateForUpdateRequest(pendingChanges);
                 closure_131_0 = accountUpdateForUpdateRequest;
-                const obj26 = pendingChanges(10551);
+                const obj26 = pendingChanges(10720);
                 profileChangesForUpdateRequest =
-                  pendingChanges(10551).getProfileChangesForUpdateRequest(pendingChanges);
-                const obj27 = pendingChanges(10551);
+                  pendingChanges(10720).getProfileChangesForUpdateRequest(pendingChanges);
+                const obj27 = pendingChanges(10720);
                 primaryGuildChangesForUpdateRequest =
-                  pendingChanges(10551).getPrimaryGuildChangesForUpdateRequest(pendingChanges);
+                  pendingChanges(10720).getPrimaryGuildChangesForUpdateRequest(pendingChanges);
                 closure_131_3 = true;
                 closure_131_4 = false;
                 const _Object = Object;
@@ -96,7 +96,7 @@ export default function useUserProfileEditForm() {
                   c6 = 1;
                   c7 = 1;
                   const obj6 = {
-                    value: pendingChanges(6405).saveProfileAndAccountChanges(accountUpdateForUpdateRequest),
+                    value: pendingChanges(6571).saveProfileAndAccountChanges(accountUpdateForUpdateRequest),
                     done: false,
                   };
                   return obj6;
@@ -108,7 +108,7 @@ export default function useUserProfileEditForm() {
                     c6 = 2;
                     c7 = 1;
                     const obj8 = {
-                      value: pendingChanges(7612).saveProfileChanges(closure_131_8, undefined, bannerOriginalMd5),
+                      value: pendingChanges(7777).saveProfileChanges(closure_131_8, undefined, bannerOriginalMd5),
                       done: false,
                     };
                     return obj8;
@@ -152,11 +152,11 @@ export default function useUserProfileEditForm() {
                     };
                     c6 = 3;
                     c7 = 1;
-                    const obj13 = { value: pendingChanges(14163).updateBadgeSettings(obj11), done: false };
+                    const obj13 = { value: pendingChanges(14335).updateBadgeSettings(obj11), done: false };
                     return obj13;
                   }
                 }
-                const obj28 = pendingChanges(10551);
+                const obj28 = pendingChanges(10720);
               }
             }
           } else if (1 === tmp7) {
@@ -183,11 +183,11 @@ export default function useUserProfileEditForm() {
                     assetOrigin = pendingAvatar.assetOrigin;
                   }
                   obj16.avatarAssetOrigin = assetOrigin;
-                  const result = pendingChanges(6409).trackUserAvatarUpdated(obj16);
-                  const obj22 = pendingChanges(6409);
+                  const result = pendingChanges(6575).trackUserAvatarUpdated(obj16);
+                  const obj22 = pendingChanges(6575);
                 }
-                const result1 = pendingChanges(6405).resetPendingAccountChanges();
-                const obj24 = pendingChanges(6405);
+                const result1 = pendingChanges(6571).resetPendingAccountChanges();
+                const obj24 = pendingChanges(6571);
               } else {
                 let username;
                 if (closure_131_5 != null) {
@@ -197,9 +197,9 @@ export default function useUserProfileEditForm() {
                   }
                 }
                 if (null != username) {
-                  const result2 = pendingChanges(6412).showInvalidUsernameToast();
+                  const result2 = pendingChanges(6578).showInvalidUsernameToast();
                   closure_131_4 = true;
-                  const obj21 = pendingChanges(6412);
+                  const obj21 = pendingChanges(6578);
                 } else {
                   let avatar;
                   if (closure_131_5 != null) {
@@ -209,11 +209,11 @@ export default function useUserProfileEditForm() {
                     }
                   }
                   if (null != avatar) {
-                    const result3 = pendingChanges(14162).showGenericProfileUpdateFailureToast(
+                    const result3 = pendingChanges(14334).showGenericProfileUpdateFailureToast(
                       closure_131_5.body.avatar,
                     );
                     closure_131_4 = true;
-                    const obj44 = pendingChanges(14162);
+                    const obj44 = pendingChanges(14334);
                   }
                 }
               }
@@ -246,15 +246,15 @@ export default function useUserProfileEditForm() {
                 ok2 = closure_131_9.ok;
               }
               if (ok2) {
-                const result4 = pendingChanges(7612).resetPendingProfileChanges();
-                const obj19 = pendingChanges(7612);
+                const result4 = pendingChanges(7777).resetPendingProfileChanges();
+                const obj19 = pendingChanges(7777);
               } else {
                 const aPIError = new pendingChanges(4735).APIError(closure_131_9);
                 firstFieldErrorMessage = aPIError.getFirstFieldErrorMessage("banner");
                 if (null != firstFieldErrorMessage) {
-                  const result5 = pendingChanges(14162).showGenericProfileUpdateFailureToast(firstFieldErrorMessage);
+                  const result5 = pendingChanges(14334).showGenericProfileUpdateFailureToast(firstFieldErrorMessage);
                   closure_131_4 = true;
-                  const obj18 = pendingChanges(14162);
+                  const obj18 = pendingChanges(14334);
                 }
               }
               let tmp85 = closure_131_3;
@@ -290,7 +290,7 @@ export default function useUserProfileEditForm() {
                   }
                   closure_131_13 = id;
                   if (null != closure_131_13) {
-                    const profile = pendingChanges(7626).fetchProfile(closure_131_13);
+                    const profile = pendingChanges(7791).fetchProfile(closure_131_13);
                     c6 = 4;
                     c7 = 1;
                     const obj23 = {
@@ -333,8 +333,8 @@ export default function useUserProfileEditForm() {
                 const obj32 = { value, done: true };
                 return obj32;
               } else {
-                const result6 = pendingChanges(12658).resetPendingBadgeSettings();
-                const obj7 = pendingChanges(12658);
+                const result6 = pendingChanges(12828).resetPendingBadgeSettings();
+                const obj7 = pendingChanges(12828);
               }
             } else if (6 === tmp7) {
               c5 = 0;
@@ -350,9 +350,9 @@ export default function useUserProfileEditForm() {
                   const obj33 = { value, done: true };
                   return obj33;
                 } else {
-                  const result7 = pendingChanges(6405).resetPendingLegacyUsernameDisabled();
+                  const result7 = pendingChanges(6571).resetPendingLegacyUsernameDisabled();
                   c5 = 0;
-                  const obj5 = pendingChanges(6405);
+                  const obj5 = pendingChanges(6571);
                 }
               } else if (arg0 === 1) {
                 c7 = 3;
@@ -368,15 +368,15 @@ export default function useUserProfileEditForm() {
                   ok4 = closure_131_15.ok;
                 }
                 if (ok4) {
-                  const result8 = pendingChanges(6405).resetPendingPrimaryGuildChanges();
-                  const obj3 = pendingChanges(6405);
+                  const result8 = pendingChanges(6571).resetPendingPrimaryGuildChanges();
+                  const obj3 = pendingChanges(6571);
                 } else {
                   const aPIError1 = new pendingChanges(4735).APIError(closure_131_15);
                   firstFieldErrorMessage2 = aPIError1.getFirstFieldErrorMessage("banner");
                   if (null != firstFieldErrorMessage2) {
-                    const result9 = pendingChanges(14162).showGenericProfileUpdateFailureToast(firstFieldErrorMessage2);
+                    const result9 = pendingChanges(14334).showGenericProfileUpdateFailureToast(firstFieldErrorMessage2);
                     closure_131_4 = true;
-                    const obj2 = pendingChanges(14162);
+                    const obj2 = pendingChanges(14334);
                   }
                 }
                 let tmp29 = closure_131_3;
@@ -399,10 +399,10 @@ export default function useUserProfileEditForm() {
               }
               if (!tmp140) {
                 const intl = pendingChanges(1115).intl;
-                const result10 = pendingChanges(14162).showGenericProfileUpdateFailureToast(
+                const result10 = pendingChanges(14334).showGenericProfileUpdateFailureToast(
                   intl.string(pendingChanges(1115).t["84MExs"]),
                 );
-                const obj29 = pendingChanges(14162);
+                const obj29 = pendingChanges(14334);
               }
               c7 = 3;
               const obj37 = { value: closure_131_3, done: true };
@@ -410,7 +410,7 @@ export default function useUserProfileEditForm() {
             }
             c6 = 5;
             c7 = 1;
-            const obj39 = { value: pendingChanges(7642).fetchBadgeDirectory(), done: false };
+            const obj39 = { value: pendingChanges(7807).fetchBadgeDirectory(), done: false };
             return obj39;
           }
           const _Object3 = Object;
@@ -420,7 +420,7 @@ export default function useUserProfileEditForm() {
               c6 = 8;
               c7 = 1;
               const obj41 = {
-                value: pendingChanges(13459).adoptGuildIdentity(primaryGuildId, null !== primaryGuildId),
+                value: pendingChanges(13628).adoptGuildIdentity(primaryGuildId, null !== primaryGuildId),
                 done: false,
               };
               return obj41;
@@ -482,7 +482,7 @@ export default function useUserProfileEditForm() {
                   const obj5 = { avatarDecoration: pendingChanges.pendingAvatarDecoration };
                   dependencyMap = 1;
                   c3 = 1;
-                  const obj6 = { value: tmp5(6405).saveProfileAndAccountChanges(obj5), done: false };
+                  const obj6 = { value: tmp5(6571).saveProfileAndAccountChanges(obj5), done: false };
                   return obj6;
                 }
               }
@@ -496,8 +496,8 @@ export default function useUserProfileEditForm() {
                 ok = closure_128_0.ok;
               }
               if (ok) {
-                const result = tmp5(6405).resetPendingAccountChanges();
-                const obj = tmp5(6405);
+                const result = tmp5(6571).resetPendingAccountChanges();
+                const obj = tmp5(6571);
               }
             }
             c3 = 3;
@@ -511,6 +511,6 @@ export default function useUserProfileEditForm() {
       }),
       items3,
     ),
-    resetPending: pendingChanges(6405).resetAllPending,
+    resetPending: pendingChanges(6571).resetAllPending,
   };
 }

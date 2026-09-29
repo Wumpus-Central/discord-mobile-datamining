@@ -109,7 +109,7 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
     timingStandard: require("timingPresets").timingStandard,
   };
   obj10.children = tmp12(require("native").Avatar, {
-    source: sharedValue(9619),
+    source: sharedValue(9786),
     size: require("native").AvatarSizes.LARGE_48,
   });
   const items4 = [tmp12(View, obj10)];

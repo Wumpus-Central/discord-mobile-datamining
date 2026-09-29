@@ -39,8 +39,8 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
       description: null,
       onDismiss: null,
       renderImgComponent: "r",
-      buttonLabel: "M9 3H7v1h2V3ZM9 4H7v1h2V4Z",
-      onButtonPress: null,
+      buttonLabel: "M7 1H6v2h1V1ZM1 7H0v2h1V7ZM3 7V6H1v1h2ZM6 3H5v1h1V3Z",
+      onButtonPress: "#000",
     };
     const intl = util.intl;
     const tmp4 = _modDef3361;

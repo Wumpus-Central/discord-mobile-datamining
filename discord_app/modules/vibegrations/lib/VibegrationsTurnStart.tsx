@@ -4,10 +4,10 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsTurnStart.tsx");
 
-export const vibegrationsTurnStartedAt = function vibegrationsTurnStartedAt(stateFromStores1) {
-  let turn_id = stateFromStores1.turn_id;
+export const vibegrationsTurnStartedAt = function vibegrationsTurnStartedAt(memo) {
+  let turn_id = memo.turn_id;
   if (turn_id == null) {
-    const steps = stateFromStores1.steps;
+    const steps = memo.steps;
     let turn_id1;
     const found = steps.find((turn_id) => null != turn_id.turn_id);
     if (found != null) {
@@ -27,5 +27,5 @@ export const vibegrationsTurnStartedAt = function vibegrationsTurnStartedAt(stat
     }
     obj = /^\d+$/;
   }
-  return stateFromStores1.created_at;
+  return memo.created_at;
 };

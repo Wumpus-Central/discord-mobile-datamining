@@ -600,10 +600,7 @@ let closure_14 = async function _orderSKU() {
           c8 = 0;
           closure_133_2 = closure_7;
           closure_134_1(closure_134_2[4]).dispatch({ type: "ORDER_CREATE_FAIL" });
-          const _HermesInternal = HermesInternal;
-          const billingError = new closure_134_0(closure_134_2[10]).BillingError(
-            "Failed to create order: " + closure_133_2,
-          );
+          const billingError = new closure_134_0(closure_134_2[10]).BillingError(closure_133_2);
           throw billingError;
         } else if (arg0 === 1) {
           c10 = 3;

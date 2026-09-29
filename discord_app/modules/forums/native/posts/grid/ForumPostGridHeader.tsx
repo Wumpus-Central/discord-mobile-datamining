@@ -8,7 +8,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ForumTimestampFormats = fn(6691).ForumTimestampFormats;
+const ForumTimestampFormats = fn(6857).ForumTimestampFormats;
 const ChannelFlags = fn(2052).ChannelFlags;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);

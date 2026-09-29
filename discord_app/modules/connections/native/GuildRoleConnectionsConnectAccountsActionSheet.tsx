@@ -24,9 +24,9 @@ import getConnectionsRolesDefault from "../../channel/getConnectionsRoles.tsx";
 import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import BotTagDefault from "../../applications/native/BotTag.tsx";
-import _modDef10823 from "../../../../_runtime/metro/10823__.js";
-import _modDef11059 from "../../../../_runtime/metro/11059__.js";
-import _modDef11060 from "../../../../_runtime/metro/11060__.js";
+import _modDef10992 from "../../../../_runtime/metro/10992__.js";
+import _modDef11228 from "../../../../_runtime/metro/11228__.js";
+import _modDef11229 from "../../../../_runtime/metro/11229__.js";
 import OfficialConnectionIconDefault from "OfficialConnectionIcon.tsx";
 import ConnectionsRoleActionCreators from "../ConnectionsRoleActionCreators.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -451,7 +451,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
     if (null != bot) {
       tmp11 = new closure_11(application.bot);
     }
-    const officialApplicationIds = eligibilityStatesGroups(5719).officialApplicationIds;
+    const officialApplicationIds = eligibilityStatesGroups(5886).officialApplicationIds;
     let str;
     if (application != null) {
       str = application.id;
@@ -475,7 +475,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
       tmp20 = tmp19 <= c8;
     }
     if (tmp3) {
-      const obj3 = { source: _modDef11059, style: closure_5.connectionsChecksGroupCheckmark };
+      const obj3 = { source: _modDef11228, style: closure_5.connectionsChecksGroupCheckmark };
       let tmp22Result = closure_1_29(tmp15(1177).Icon, obj3);
       let tmp24 = closure_1_29;
     } else if (tmp20) {
@@ -485,7 +485,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
       tmp22Result = closure_1_29(tmp15(4832).Text, obj4);
       tmp24 = closure_1_29;
     } else if (tmp8) {
-      const obj5 = { source: _modDef11060, style: closure_5.connectionsChecksGroupCaret };
+      const obj5 = { source: _modDef11229, style: closure_5.connectionsChecksGroupCaret };
       tmp22Result = closure_1_29(tmp15(1177).Icon, obj5);
       tmp24 = closure_1_29;
     } else {
@@ -611,12 +611,12 @@ function ConnectionsChecks(eligibilityStatesGroups) {
         onPress() {
           _modDef38(null != stringResult, "tooltip is null");
           const obj = ToastActionCreatorsDefault;
-          obj.open({ key: "CONNECTIONS_STEAM_TOOLTIP", icon: _modDef10823, content: stringResult });
+          obj.open({ key: "CONNECTIONS_STEAM_TOOLTIP", icon: _modDef10992, content: stringResult });
         },
         children: null,
       };
       const obj17 = {
-        source: _modDef10823,
+        source: _modDef10992,
         size: tmp15(1177).Icon.Sizes.SMALL_20,
         style: closure_5.connectionsChecksGroupTextNameInfoIcon,
       };
@@ -679,7 +679,7 @@ function ConnectedUserAccountOptions(account) {
       _undefined(enabled);
       ConnectedAccountsActionCreatorsDefault.setFriendSync(account.type, account.id, enabled);
     };
-    tmp12 = closure_29(account(8053).FormSwitchRow, obj2);
+    tmp12 = closure_29(account(8218).FormSwitchRow, obj2);
   }
   let tmp15;
   if (set2.has(account.type)) {
@@ -692,7 +692,7 @@ function ConnectedUserAccountOptions(account) {
       closure_4(show_activity);
       ConnectedAccountsActionCreatorsDefault.setShowActivity(account.type, account.id, show_activity);
     };
-    tmp15 = closure_29(account(8053).FormSwitchRow, obj3);
+    tmp15 = closure_29(account(8218).FormSwitchRow, obj3);
   }
   let tmp18;
   if (true === value.hasMetadata) {
@@ -711,7 +711,7 @@ function ConnectedUserAccountOptions(account) {
       }
       const result = ConnectedAccountsActionCreatorsDefault.setMetadataVisibility(type, id, num);
     };
-    tmp18 = closure_29(account(8053).FormSwitchRow, obj5);
+    tmp18 = closure_29(account(8218).FormSwitchRow, obj5);
   }
   const obj6 = { style: tmp.accountConnectedPrivacyOptionsContainer, children: null };
   const obj7 = { label: null, value: null, onValueChange: null };
@@ -728,13 +728,13 @@ function ConnectedUserAccountOptions(account) {
     }
     ConnectedAccountsActionCreatorsDefault.setVisibility(type, id, num);
   };
-  const items = [closure_29(account(8053).FormSwitchRow, obj7), tmp18, tmp15, tmp12];
+  const items = [closure_29(account(8218).FormSwitchRow, obj7), tmp18, tmp15, tmp12];
   obj6.children = items;
   return closure_30(closure_8, obj6);
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, Pressable: closure_7, View: closure_8 } = get_ActivityIndicator);
-let Constants = fn(5720);
+let Constants = fn(5887);
 ({
   MetadataFields: closure_17,
   OperatorTypes: closure_18,
@@ -1268,7 +1268,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                 };
                 let tmp7 = null;
                 const guildRoleConnectionsConnectAccountsActionSheetKey = platformType(
-                  11064,
+                  11233,
                 ).makeGuildRoleConnectionsConnectAccountsActionSheetKey(role.id);
                 if (null != platformType) {
                   tmp7 = id;
@@ -1277,7 +1277,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                 obj4.overrideUrl = { overrideUrl: prop }.overrideUrl;
                 obj4.onCloseModal = onCloseModal;
                 obj.openLazy(resolved, guildRoleConnectionsConnectAccountsActionSheetKey, obj4);
-                const obj3 = platformType(11064);
+                const obj3 = platformType(11233);
               },
               overrideUrl: null,
             };

@@ -2284,7 +2284,7 @@ const frozen = Object.freeze({
       throw error;
     }
   },
-  getUserMaxFileSize: fn(8660).getUserMaxFileSize,
+  getUserMaxFileSize: fn(8825).getUserMaxFileSize,
   getSkuIdForPlan(planId) {
     if (null == dependencyMap2[planId]) {
       const _Error = Error;

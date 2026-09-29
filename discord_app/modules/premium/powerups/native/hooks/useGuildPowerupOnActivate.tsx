@@ -76,7 +76,7 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
               analyticsLocations,
               guildId: stateFromStores.id,
               onBack() {
-                return PERK(5039).popWithKey(diff(6832).PREMIUM_KEY);
+                return PERK(5039).popWithKey(diff(6998).PREMIUM_KEY);
               },
               onPaymentSuccess() {
                 const availableGuildBoostSlots = GuildBoostingUtils.getAvailableGuildBoostSlots(
@@ -98,7 +98,7 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
                 }
               },
               onPaymentDismiss() {
-                return PERK(5039).popWithKey(diff(6832).PREMIUM_KEY);
+                return PERK(5039).popWithKey(diff(6998).PREMIUM_KEY);
               },
             };
             const result = tmp17(onToggle[13]).launchGuildBoostFlowOrAlert(obj3);

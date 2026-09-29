@@ -26,19 +26,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useDisplayableBoardWidgets.tsx");
 
 export const useDisplayableBoardWidgets = function useDisplayableBoardWidgets(id) {
-  isMobileGameCollectionExperimentEnabled =
-    isMobileGameCollectionExperimentEnabled(12459).useIsMobileGameCollectionExperimentEnabled(
-      "UserProfileWidgetsBoard",
-    );
-  const tmp2 = useUserProfileWidgetsDefault(id);
-  importDefault = tmp2;
-  const items = [isMobileGameCollectionExperimentEnabled, tmp2];
-  return noop.useMemo(() => {
-    if (isMobileGameCollectionExperimentEnabled) {
-      let found = closure_1.filter(isNonEmptyBoardWidget);
-    } else {
-      found = [];
-    }
-    return found;
-  }, items);
+  const tmp = useUserProfileWidgetsDefault(id);
+  closure_0 = tmp;
+  const items = [tmp];
+  return noop.useMemo(() => closure_0.filter(isNonEmptyBoardWidget), items);
 };

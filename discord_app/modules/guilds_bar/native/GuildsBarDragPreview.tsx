@@ -147,9 +147,9 @@ function PreviewItem(dragRegion) {
           id: -1,
           parentId: "flex",
           name: "Array",
-          color: "add",
-          expanded: null,
-          children: null,
+          color: "round",
+          expanded: "Array",
+          children: "enableFabricLogs",
         };
         const items = [tmp2];
         element.children = items;
@@ -358,8 +358,8 @@ function AnimatedItemPreview(cleanUp) {
   obj5.children = tmp12Result;
   return jsx(cleanUp(sharedValue[9]), { style: items, children: null });
 }
-const GuildsNodeType = fn(5750).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(15918).GUILD_ITEM_INSET_LEFT;
+const GuildsNodeType = fn(5917).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(16094).GUILD_ITEM_INSET_LEFT;
 const jsx = fn(21).jsx;
 let createStyles = fn(4836);
 let closure_8 = createStyles.createStyles({
@@ -451,12 +451,12 @@ export default noop.memo(function GuildsBarDragPreview() {
             overState: null,
             overNode: null,
             dropPosition: "o",
-            gestureState: "v_tone4",
-            scrollPosition: "getInitialScrollIndex",
-            dragRegion: null,
-            windowSize: "\u270C\u{1F3FF}",
-            dropComplete: true,
-            listInsets: null,
+            gestureState: 24,
+            scrollPosition: 24,
+            dragRegion: "none",
+            windowSize: "0 0 1512 510",
+            dropComplete: "none",
+            listInsets: "pop out",
           };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;

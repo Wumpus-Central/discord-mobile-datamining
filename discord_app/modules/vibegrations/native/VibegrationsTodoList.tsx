@@ -94,7 +94,7 @@ function TodoMarker(status) {
   let tmp25 = null;
   if ("completed" === status) {
     const obj3 = { size: "xs", color: tmp11(576).colors.CHECKBOX_ICON_ACTIVE };
-    tmp25 = timestampProducer(tmp12(8742).CheckmarkSmallBoldIcon, obj3);
+    tmp25 = timestampProducer(tmp12(8907).CheckmarkSmallBoldIcon, obj3);
   }
   items1[1] = tmp25;
   obj.children = items1;
@@ -243,9 +243,9 @@ export default function VibegrationsTodoList(announceProgress) {
     total: todos.length,
   });
   if (flag4) {
-    let ChevronSmallRightIcon = agents(10615).ChevronSmallDownIcon;
+    let ChevronSmallRightIcon = agents(10784).ChevronSmallDownIcon;
   } else {
-    ChevronSmallRightIcon = agents(6630).ChevronSmallRightIcon;
+    ChevronSmallRightIcon = agents(6796).ChevronSmallRightIcon;
   }
   let obj = { style: tmp.root, children: null };
   let tmp8Result = null;
@@ -292,7 +292,7 @@ export default function VibegrationsTodoList(announceProgress) {
         const obj8 = { size: "xs", color: tmp5(576).colors.ICON_MUTED };
         onToggleExpanded = closure_6(ChevronSmallRightIcon, obj8);
         obj6.children = onToggleExpanded;
-        closure_6(agents(5435).PressableOpacity, obj6);
+        closure_6(agents(5602).PressableOpacity, obj6);
       }
     }
     items2[1] = tmp12;

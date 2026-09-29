@@ -26,14 +26,14 @@ export default noop.memo(function VideoQuestModalReward(style) {
     str = size;
   }
   ({ withRewardTileAnimation, onTextBlockLayout } = style);
-  quest = quest(14657).useVideoQuestModalContext().quest;
-  const obj = quest(14657);
+  quest = quest(14832).useVideoQuestModalContext().quest;
+  const obj = quest(14832);
   const items = [quest.id];
-  const questTaskDetails = quest(10681).useQuestTaskDetails(quest);
+  const questTaskDetails = quest(10850).useQuestTaskDetails(quest);
   const callback = noop.useCallback(() => {
     const result = QuestUtils.openRewardDetailsBottomSheet({ questId: quest.id });
   }, items);
-  const obj2 = quest(10681);
+  const obj2 = quest(10850);
   const obj3 = {
     justify: "center",
     align: "center",
@@ -68,7 +68,7 @@ export default noop.memo(function VideoQuestModalReward(style) {
   }
   items2[1] = tmp9Result;
   obj5.children = items2;
-  items1[1] = closure_5(quest(5279).Stack, obj5);
+  items1[1] = closure_5(quest(5445).Stack, obj5);
   obj3.children = items1;
-  return closure_5(quest(5279).Stack, obj3);
+  return closure_5(quest(5445).Stack, obj3);
 });

@@ -8,7 +8,7 @@ const BadgeDefault = Badge;
 
 require = fn;
 const View = fn(17).View;
-const MUTED_OPACITY_CONTENT = fn(9577).MUTED_OPACITY_CONTENT;
+const MUTED_OPACITY_CONTENT = fn(9744).MUTED_OPACITY_CONTENT;
 const UnreadSetting = fn(5018).UnreadSetting;
 const jsx = fn(21).jsx;
 const createStyles = fn(4836);

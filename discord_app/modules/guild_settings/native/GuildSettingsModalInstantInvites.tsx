@@ -5,7 +5,7 @@ import asyncRequireImpl from "../../../../_runtime/01981_asyncRequireImpl.js";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import _modDef5909 from "../../../../_runtime/metro/05909__.js";
+import _modDef6075 from "../../../../_runtime/metro/06075__.js";
 import TableCheckboxRow from "../../../design/components/TableRow/native/TableCheckboxRow.native.tsx";
 import TableRowIcon from "../../../design/components/TableRow/native/TableRowIcon.native.tsx";
 import GuildAntiRaidUtils from "../../guild_antiraid/GuildAntiRaidUtils.tsx";
@@ -168,7 +168,7 @@ function GuildSettingsModalInstantInvites(invites) {
         };
         const obj4 = { guild, analyticsData: obj };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(11307, dependencyMap.paths),
+          asyncRequireImpl(11476, dependencyMap.paths),
           "GuildIncidentActionsActionSheet",
           obj4,
         );
@@ -249,7 +249,7 @@ export default function ConnectedGuildSettingsModalInstantInvites(guildId) {
       contentContainerStyle: guildId.contentContainerStyle,
       showChannel: true,
     };
-    const items1 = [closure_12(GuildSettingsModalInstantInvites, obj3), closure_12(guildId(6461).NavScrim, {})];
+    const items1 = [closure_12(GuildSettingsModalInstantInvites, obj3), closure_12(guildId(6627).NavScrim, {})];
     obj2.children = items1;
     tmp6 = closure_14(closure_13, obj2);
   }

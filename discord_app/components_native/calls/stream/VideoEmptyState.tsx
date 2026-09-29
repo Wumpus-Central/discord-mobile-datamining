@@ -53,7 +53,7 @@ export default function VideoEmptyState(style) {
     let tmp10 = !removeSplashImage;
     if (!removeSplashImage) {
       let obj2 = { style: tmp2.placeholderImage };
-      tmp10 = closure_5(stream(8877).StreamEnded, obj2);
+      tmp10 = closure_5(stream(9042).StreamEnded, obj2);
     }
     let obj3 = { children: null };
     const items = [tmp10];
@@ -72,13 +72,13 @@ export default function VideoEmptyState(style) {
     tmp8Result = null;
   }
   if (null != avError) {
-    let errorCode = stream(8875).getErrorInfo(avError).errorCode;
-    const obj6 = stream(8875);
+    let errorCode = stream(9040).getErrorInfo(avError).errorCode;
+    const obj6 = stream(9040);
   } else {
     errorCode = null;
     if (type === tmp3.STREAM_FAILED) {
-      errorCode = stream(8875).getErrorInfo(stream(8875).AVError.STREAM_FAILED_TO_START).errorCode;
-      const obj5 = stream(8875);
+      errorCode = stream(9040).getErrorInfo(stream(9040).AVError.STREAM_FAILED_TO_START).errorCode;
+      const obj5 = stream(9040);
     }
   }
   const items1 = [ChannelStore];
@@ -118,7 +118,7 @@ export default function VideoEmptyState(style) {
       const obj = StreamActionCreators;
       obj.stopStream(StreamKeyUtils.encodeStreamKey(stream));
     };
-    obj11.children = closure_5(stream(5281).Button, obj12);
+    obj11.children = closure_5(stream(5447).Button, obj12);
     tmp30 = closure_5(View, obj11);
   }
   items4[2] = tmp30;

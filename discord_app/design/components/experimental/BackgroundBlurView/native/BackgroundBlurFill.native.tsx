@@ -32,8 +32,8 @@ const result = size.fileFinishedImporting(
   "design/components/experimental/BackgroundBlurView/native/BackgroundBlurFill.native.tsx",
 );
 
-export const BlurTheme = fn(5269).BlurTheme;
-export const BlurStyle = fn(5269).BlurStyle;
+export const BlurTheme = fn(5435).BlurTheme;
+export const BlurStyle = fn(5435).BlurStyle;
 export const BackgroundBlurFill = function BackgroundBlurFill(arg0) {
   ({ blurTheme, blurStyle, tintColor, android_fallbackColor } = arg0);
   ({ style, blurAmount, android_blurTargetViewNativeId } = arg0);
@@ -125,7 +125,7 @@ export const BackgroundBlurFillAnimated = function BackgroundBlurFillAnimated(ar
   const items2 = [StyleSheet.absoluteFill, style];
   obj3.style = items2;
   let tmp6 = null != animatedProps;
-  tmpResult2 = blurTheme(5269);
+  tmpResult2 = blurTheme(5435);
   if (tmp6) {
     const obj4 = { animatedProps };
     tmp6 = obj4;
@@ -162,21 +162,21 @@ export const BackgroundBlurFillWithPress = function BackgroundBlurFillWithPress(
     return str;
   }, items);
   obj = pressed(4540);
-  const normalizeBlurThemeResult = pressed(5269).normalizeBlurTheme(blurTheme);
-  const tmp2Result = pressed(5269);
-  const tmp6 = pressed(5269).isBlurThemeLight(blurTheme) ? closure_6 : closure_8;
+  const normalizeBlurThemeResult = pressed(5435).normalizeBlurTheme(blurTheme);
+  const tmp2Result = pressed(5435);
+  const tmp6 = pressed(5435).isBlurThemeLight(blurTheme) ? closure_6 : closure_8;
   importDefault = tmp6;
-  const tmp2Result8 = pressed(5269);
-  const tmp7 = pressed(5269).isBlurThemeLight(blurTheme) ? closure_7 : closure_9;
+  const tmp2Result8 = pressed(5435);
+  const tmp7 = pressed(5435).isBlurThemeLight(blurTheme) ? closure_7 : closure_9;
   dependencyMap = tmp7;
-  const tmp2Result9 = pressed(5269);
+  const tmp2Result9 = pressed(5435);
   token = pressed(4531).useToken(nativeDefault.colors.BACKGROUND_SCRIM, normalizeBlurThemeResult);
   const tmp2Result10 = pressed(4531);
   token1 = pressed(4531).useToken(nativeDefault.colors.BACKGROUND_SCRIM_LIGHTBOX, normalizeBlurThemeResult);
   const tmp2Result11 = pressed(4531);
-  const isBlurDisabledResult = pressed(5269).isBlurDisabled(merged);
+  const isBlurDisabledResult = pressed(5435).isBlurDisabled(merged);
   c5 = isBlurDisabledResult;
-  const tmp2Result12 = pressed(5269);
+  const tmp2Result12 = pressed(5435);
   const fn = function p() {
     const obj = { backgroundColor: null };
     const obj2 = spring;
@@ -190,23 +190,23 @@ export const BackgroundBlurFillWithPress = function BackgroundBlurFillWithPress(
   };
   const tmp2Result13 = pressed(4566);
   fn.__closure = {
-    withSpring: pressed(5280).withSpring,
+    withSpring: pressed(5446).withSpring,
     interpolateColor: pressed(4566).interpolateColor,
     pressed,
     fallbackColor: token,
     fallbackColorPressed: token1,
-    ON_PRESS_SPRING: pressed(5284).ON_PRESS_SPRING,
+    ON_PRESS_SPRING: pressed(5450).ON_PRESS_SPRING,
   };
   fn.__workletHash = 10497618157620;
   fn.__initData = __initData;
   let animatedStyle = tmp2Result13.useAnimatedStyle(fn);
   let obj2 = {
-    withSpring: pressed(5280).withSpring,
+    withSpring: pressed(5446).withSpring,
     interpolateColor: pressed(4566).interpolateColor,
     pressed,
     fallbackColor: token,
     fallbackColorPressed: token1,
-    ON_PRESS_SPRING: pressed(5284).ON_PRESS_SPRING,
+    ON_PRESS_SPRING: pressed(5450).ON_PRESS_SPRING,
   };
   class C {
     constructor() {
@@ -236,12 +236,12 @@ export const BackgroundBlurFillWithPress = function BackgroundBlurFillWithPress(
   const tmp2Result14 = pressed(4566);
   C.__closure = {
     shouldUseFallback: isBlurDisabledResult,
-    withSpring: pressed(5280).withSpring,
+    withSpring: pressed(5446).withSpring,
     interpolateColor: pressed(4566).interpolateColor,
     pressed,
     restingTint: tmp6,
     pressedTint: tmp7,
-    ON_PRESS_SPRING: pressed(5284).ON_PRESS_SPRING,
+    ON_PRESS_SPRING: pressed(5450).ON_PRESS_SPRING,
   };
   C.__workletHash = 11987567486157;
   C.__initData = __initData2;
@@ -250,12 +250,12 @@ export const BackgroundBlurFillWithPress = function BackgroundBlurFillWithPress(
   const items1 = [token1.absoluteFill, style.style];
   let obj3 = {
     shouldUseFallback: isBlurDisabledResult,
-    withSpring: pressed(5280).withSpring,
+    withSpring: pressed(5446).withSpring,
     interpolateColor: pressed(4566).interpolateColor,
     pressed,
     restingTint: tmp6,
     pressedTint: tmp7,
-    ON_PRESS_SPRING: pressed(5284).ON_PRESS_SPRING,
+    ON_PRESS_SPRING: pressed(5450).ON_PRESS_SPRING,
   };
   const tmp12 = c5;
   if (!isBlurDisabledResult) {

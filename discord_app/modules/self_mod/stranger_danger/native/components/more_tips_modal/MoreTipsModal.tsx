@@ -5,7 +5,7 @@ import native from "../../../../../../design/void/native.tsx";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import MonitoringAgentDefault from "../../../../../monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../../../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
-import _modDef6413 from "../../../../../../../_runtime/metro/06413__.js";
+import _modDef6579 from "../../../../../../../_runtime/metro/06579__.js";
 import HeaderActionButton from "../../../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import SafetyWarningUtils from "../../../../shared/SafetyWarningUtils.tsx";
 import SafetyTipsSectionDefault from "../../../../shared/native/SafetyTipsSection.tsx";
@@ -105,7 +105,7 @@ export default function MoreTipsModal(headerStyle) {
             onPress() {
               return warningId(senderId[12]).popWithKey(channelId);
             },
-            source: _modDef6413,
+            source: _modDef6579,
             iconSize: native.IconSizes.MEDIUM,
             accessibilityLabel: null,
           };

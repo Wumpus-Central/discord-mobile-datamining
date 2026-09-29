@@ -15,7 +15,7 @@ import UploadAttachmentActionCreatorsDefault from "../../actions/UploadAttachmen
 import AttachmentPreviewDefault from "../../modules/media/native/AttachmentPreview.tsx";
 import showUploadPreviewActionSheetDefault from "../../modules/media_uploads/native/showUploadPreviewActionSheet.tsx";
 import MediaKeyboardUtils from "../../modules/media_keyboard/native/MediaKeyboardUtils.tsx";
-import _modDef10815 from "../../../_runtime/metro/10815__.js";
+import _modDef10984 from "../../../_runtime/metro/10984__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import UploadAttachmentStore from "../../stores/UploadAttachmentStore.tsx";
 
@@ -170,7 +170,7 @@ function Tile(onEdit) {
     let tmp6Result = null;
     if (isThumbnail) {
       const obj2 = { style: tileContainer.footerRightContainer, children: null };
-      const obj3 = { source: _modDef10815, size: native.Icon.Sizes.SMALL_14 };
+      const obj3 = { source: _modDef10984, size: native.Icon.Sizes.SMALL_14 };
       obj2.children = closure_2_11(native.Icon, obj3);
       tmp6Result = closure_2_11(React4, obj2);
     }
@@ -328,8 +328,8 @@ function CustomScrollView(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const DraftType = fn(5200).DraftType;
-const ImageCarouselConstants = fn(10095);
+const DraftType = fn(5366).DraftType;
+const ImageCarouselConstants = fn(10262);
 const IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN = ImageCarouselConstants.IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN;
 const IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING;
 let closure_10 = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_HEIGHT;
@@ -546,7 +546,7 @@ export const useTileEntranceAnimatedStyle = function useTileEntranceAnimatedStyl
     withTiming: sharedValue(4837).withTiming,
     animatedStylePropValue: sharedValue,
     STANDARD_EASING: sharedValue(1177).STANDARD_EASING,
-    withSpring: sharedValue(5280).withSpring,
+    withSpring: sharedValue(5446).withSpring,
   };
   fn.__workletHash = 14458898683767;
   fn.__initData = __initData;

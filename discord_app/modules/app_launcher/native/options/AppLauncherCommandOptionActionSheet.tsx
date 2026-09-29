@@ -52,7 +52,7 @@ export const AppLauncherCommandOptionActionSheet = function AppLauncherCommandOp
   };
   const obj4 = {
     style: { alignSelf: "flex-start" },
-    children: jsx(merged(6619).ActionSheetCloseButton, {
+    children: jsx(merged(6785).ActionSheetCloseButton, {
       onPress() {
         ActionSheetActionCreatorsDefault.hideActionSheet();
         const onDismiss = merged.onDismiss;
@@ -64,7 +64,7 @@ export const AppLauncherCommandOptionActionSheet = function AppLauncherCommandOp
   };
   obj3.leading = (
     <View style={{ alignSelf: "flex-start" }}>
-      {jsx(merged(6619).ActionSheetCloseButton, {
+      {jsx(merged(6785).ActionSheetCloseButton, {
         onPress() {
           ActionSheetActionCreatorsDefault.hideActionSheet();
           const onDismiss = merged.onDismiss;
@@ -77,7 +77,7 @@ export const AppLauncherCommandOptionActionSheet = function AppLauncherCommandOp
   );
   ({ displayName: obj2.title, displayDescription: obj2.subtitle } = option);
   obj3.trailing = jsx(merged(1177).Spacer, { size: 24 });
-  obj.header = jsx(merged(6570).BottomSheetTitleHeader, {
+  obj.header = jsx(merged(6736).BottomSheetTitleHeader, {
     titleContainerStyle: tmp2.titleContainer,
     titleWrapperStyle: tmp2.titleWrapper,
     subtitleStyle: tmp2.subtitleWrapper,
@@ -90,5 +90,5 @@ export const AppLauncherCommandOptionActionSheet = function AppLauncherCommandOp
   const items = [tmp2.contentContainer, contentContainerStyles];
   obj9.style = items;
   obj.children = <View style={null}>{children}</View>;
-  return jsx(merged(6571).BottomSheet, {}, option.name);
+  return jsx(merged(6737).BottomSheet, {}, option.name);
 };

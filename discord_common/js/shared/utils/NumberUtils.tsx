@@ -2,27 +2,43 @@
 import index.native from "../i18n/index.native.tsx";
 
 let c1 = 1000000;
+const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/shared/utils/NumberUtils.tsx");
 
 export const shortenAndLocalizeNumber = function shortenAndLocalizeNumber(count) {
   if (count < c1) {
-    const _Intl = Intl;
-    const numberFormat = new Intl.NumberFormat(module_1883.getLocale());
-    return numberFormat.format(count);
+    locale = module_1883.getLocale();
+    const _HermesInternal = HermesInternal;
+    const combined = "" + locale + "|" + "";
+    value = map.get(combined);
+    if (null == value) {
+      const _Intl = Intl;
+      const numberFormat = new Intl.NumberFormat(locale, undefined);
+      const result = map.set(combined, numberFormat);
+      value = numberFormat;
+    }
+    return value.format(count);
   } else {
-    const result = count / tmp;
+    const result1 = count / tmp;
     const NUMBER_ABBREVIATIONS_MILLION = module_1883.Messages.NUMBER_ABBREVIATIONS_MILLION;
-    const obj = { num: result.toFixed(1) };
+    const obj = { num: result1.toFixed(1) };
     return NUMBER_ABBREVIATIONS_MILLION.format(obj);
   }
 };
 export const humanizeValue = function humanizeValue(newPostCount, stateFromStores) {
   if (newPostCount < 1000) {
-    const _Intl = Intl;
-    const numberFormat = new Intl.NumberFormat(stateFromStores);
+    const _HermesInternal = HermesInternal;
+    const combined = "" + stateFromStores + "|" + "";
+    value = map.get(combined);
+    if (null == value) {
+      const _Intl2 = Intl;
+      const numberFormat = new Intl.NumberFormat(stateFromStores, undefined);
+      const result = map.set(combined, numberFormat);
+      value = numberFormat;
+    }
     const _Math2 = Math;
-    return numberFormat.format(Math.floor(newPostCount));
+    return value.format(Math.floor(newPostCount));
   } else if (newPostCount < c1) {
     const NUMBER_ABBREVIATIONS_THOUSAND = module_1883.Messages.NUMBER_ABBREVIATIONS_THOUSAND;
     const obj = { num: null };
@@ -31,36 +47,57 @@ export const humanizeValue = function humanizeValue(newPostCount, stateFromStore
     return NUMBER_ABBREVIATIONS_THOUSAND.format(obj);
   } else {
     const _Math3 = Math;
-    const _Intl2 = Intl;
-    const result = Math.floor(10 * newPostCount / tmp8) / 10;
-    const numberFormat1 = new Intl.NumberFormat(stateFromStores, { maximumFractionDigits: 1 });
+    const _HermesInternal2 = HermesInternal;
+    const result1 = Math.floor(10 * newPostCount / tmp19) / 10;
+    const combined1 = "" + stateFromStores + "|" + 1;
+    value2 = map.get(combined1);
+    if (null == value2) {
+      const _Intl = Intl;
+      const numberFormat1 = new Intl.NumberFormat(stateFromStores, { maximumFractionDigits: 1 });
+      const result2 = map.set(combined1, numberFormat1);
+      value2 = numberFormat1;
+    }
     const NUMBER_ABBREVIATIONS_MILLION = module_1883.Messages.NUMBER_ABBREVIATIONS_MILLION;
-    const obj2 = { num: numberFormat1.format(result) };
+    const obj2 = { num: value2.format(result1) };
     return NUMBER_ABBREVIATIONS_MILLION.format(obj2);
   }
 };
 export const truncateAndLocalizeNumber = (communicators, stateFromStores) => {
   if (communicators < 1000000) {
-    const _Intl = Intl;
     let num2 = 1;
     if (tmp % 1 === 0) {
       num2 = 0;
     }
-    const obj2 = { maximumFractionDigits: num2 };
-    const numberFormat = new Intl.NumberFormat(stateFromStores, obj2);
-    return numberFormat.format(communicators);
+    const _HermesInternal2 = HermesInternal;
+    const combined = "" + stateFromStores + "|" + num2;
+    value = map.get(combined);
+    if (null == value) {
+      const _Intl2 = Intl;
+      const obj2 = { maximumFractionDigits: num2 };
+      const numberFormat = new Intl.NumberFormat(stateFromStores, obj2);
+      const result = map.set(combined, numberFormat);
+      value = numberFormat;
+    }
+    return value.format(communicators);
   } else {
     const _Math = Math;
-    const _Intl2 = Intl;
     let num = 1;
     if (Math.round(communicators / 1000000 * 10) / 10 % 1 === 0) {
       num = 0;
     }
-    const obj = { maximumFractionDigits: num };
-    const numberFormat1 = new Intl.NumberFormat(stateFromStores, obj);
+    const _HermesInternal = HermesInternal;
+    const combined1 = "" + stateFromStores + "|" + num;
+    value2 = map.get(combined1);
+    if (null == value2) {
+      const _Intl = Intl;
+      const obj3 = { maximumFractionDigits: num };
+      const numberFormat1 = new Intl.NumberFormat(stateFromStores, obj3);
+      const result1 = map.set(combined1, numberFormat1);
+      value2 = numberFormat1;
+    }
     const NUMBER_ABBREVIATIONS_MILLION = module_1883.Messages.NUMBER_ABBREVIATIONS_MILLION;
-    const obj3 = { num: numberFormat1.format(communicators / 1000000) };
-    return NUMBER_ABBREVIATIONS_MILLION.format(obj3);
+    const obj4 = { num: value2.format(communicators / 1000000) };
+    return NUMBER_ABBREVIATIONS_MILLION.format(obj4);
   }
 };
 export const parseInteger = function parseInteger(discriminator, arg1) {

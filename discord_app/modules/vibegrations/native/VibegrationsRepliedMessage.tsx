@@ -10,12 +10,12 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const diff = fn(16335).MESSAGE_EDGE_INSET + fn(16335).MESSAGE_AVATAR_SIZE / 2 - 1;
-const diff1 = fn(16335).MESSAGE_CONTENT_INSET - 4 - diff;
+const diff = fn(16514).MESSAGE_EDGE_INSET + fn(16514).MESSAGE_AVATAR_SIZE / 2 - 1;
+const diff1 = fn(16514).MESSAGE_CONTENT_INSET - 4 - diff;
 const createStyles = fn(4836);
 let obj2 = {
   root: {
-    marginLeft: diff - fn(16335).MESSAGE_CONTENT_INSET,
+    marginLeft: diff - fn(16514).MESSAGE_CONTENT_INSET,
     paddingLeft: diff1 + 4,
     height: 20,
     flexDirection: "row",
@@ -49,8 +49,8 @@ export default function VibegrationsRepliedMessage(replied) {
   replied = replied.replied;
   const onJump = replied.onJump;
   const tmp = closure_8();
-  const messageAuthorUser = replied(16338).useMessageAuthorUser(replied.userId);
-  const obj = replied(16338);
+  const messageAuthorUser = replied(16517).useMessageAuthorUser(replied.userId);
+  const obj = replied(16517);
   let str = replied(4678).useName(messageAuthorUser);
   if (str == null) {
     str = "";
@@ -81,7 +81,7 @@ export default function VibegrationsRepliedMessage(replied) {
   if (null != messageAuthorUser) {
     const obj5 = { style: tmp.avatar, children: null };
     const obj6 = { userId: replied.userId, size: tmp2(1177).AvatarSizes.SIZE_16 };
-    obj5.children = closure_6(tmp2(16338).VibegrationsUserAvatar, obj6);
+    obj5.children = closure_6(tmp2(16517).VibegrationsUserAvatar, obj6);
     tmp11Result = closure_6(closure_5, obj5);
   }
   items1[1] = tmp11Result;

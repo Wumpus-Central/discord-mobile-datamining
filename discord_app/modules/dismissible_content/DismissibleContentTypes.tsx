@@ -45,7 +45,6 @@ const items1 = [
   dismissible_content.DismissibleContent.RIOT_CONNECTION_DEPRECATION,
   dismissible_content.DismissibleContent.RIOT_CONNECTION_DEPRECATION_ADMIN,
   dismissible_content.DismissibleContent.NOTIFICATION_NUDGE_POST_CALL_DISCONNECT,
-  dismissible_content.DismissibleContent.REFERRAL_PROGRAM_ENTRYPOINT_NITRO_BUTTON_NOTIFICATION,
   dismissible_content.DismissibleContent.APP_WIDGET_V2_PROFILE_UPSELL_COACHMARK,
   dismissible_content.DismissibleContent.APP_WIDGET_V2_PROFILE_UPSELL_SUGGESTED,
   dismissible_content.DismissibleContent.PARENTAL_CONSENT_GRACE_WARNING,

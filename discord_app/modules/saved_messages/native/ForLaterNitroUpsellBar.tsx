@@ -4,7 +4,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const PremiumTypes = fn(1374).PremiumTypes;
-const SavedMessagesConstants = fn(7272);
+const SavedMessagesConstants = fn(7437);
 ({ SAVED_BOOKMARKS_MAX: hasOwnProperty, SAVED_REMINDERS_MAX: metroRequire } = SavedMessagesConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -14,10 +14,10 @@ export default function ForLaterNitroUpsellBar(isReminder) {
   isReminder = isReminder.isReminder;
   const isAtLimit = isReminder.isAtLimit;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(6583)().analyticsLocations;
+  analyticsLocations = analyticsLocations(6749)().analyticsLocations;
   const items = [isReminder, analyticsLocations];
   const callback = noop.useCallback(() => openForLaterLimitUpsellDefault(isReminder, analyticsLocations), items);
-  const tmp3 = analyticsLocations(11703);
+  const tmp3 = analyticsLocations(11872);
   const premiumTypeDisplayName = isReminder(4488).getPremiumTypeDisplayName(PremiumTypes.TIER_2);
   const intl = isReminder(1115).intl;
   const formatToPlainString = intl.formatToPlainString;

@@ -5,15 +5,15 @@ import size from "../../_runtime/metro/00002__.js";
 ({ useEffect: c2, useRef: c3 } = noop);
 const result = size.fileFinishedImporting("hooks/useInterval.tsx");
 
-export default function useInterval(current, arg1) {
-  closure_1 = arg1;
+export default function useInterval(current, SECOND) {
+  closure_1 = SECOND;
   closure_2 = ref(current);
   ref = ref(null);
   const items = [current];
   closure_2(() => {
     closure_2.current = current;
   }, items);
-  const items1 = [arg1];
+  const items1 = [SECOND];
   closure_2(() => {
     if (null !== closure_1) {
       const _setInterval = setInterval;

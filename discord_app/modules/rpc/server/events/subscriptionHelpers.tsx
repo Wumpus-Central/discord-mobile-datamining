@@ -12,7 +12,7 @@ const TransportTypes = fn(4739).TransportTypes;
 const RPCEvents = fn(1074).RPCEvents;
 const Constants = fn(2005);
 ({ ActivityLayoutMode: closure_7, ActivityScreenOrientation: closure_8 } = Constants);
-const asLaunched = fn(8500).asLaunched;
+const asLaunched = fn(8665).asLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/events/subscriptionHelpers.tsx");
 

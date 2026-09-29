@@ -9,5 +9,8 @@ export default function getGuildPowerupFormattedDateString(arg0) {
   if (arg1 === undefined) {
     date = { month: "numeric", day: "numeric" };
   }
-  return new Date(arg0).toLocaleDateString(LocaleStore.locale, date);
+  const obj = {};
+  const merged = Object.assign(date);
+  obj.timeZone = "UTC";
+  return new Date(arg0).toLocaleDateString(LocaleStore.locale, obj);
 }

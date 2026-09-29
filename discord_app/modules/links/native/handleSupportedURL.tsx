@@ -35,8 +35,8 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
 require = fn;
 let closure_4 = ["code", "state"];
-fn(5870).addPostConnectionCallback;
-let closure_9 = fn(6841).handleMobileWebCheckoutStatus;
+fn(6036).addPostConnectionCallback;
+let closure_9 = fn(7007).handleMobileWebCheckoutStatus;
 const Constants = fn(1074);
 ({
   AnalyticEvents: closure_12,
@@ -49,11 +49,11 @@ const Constants = fn(1074);
 const StaticChannelRoute = fn(2052).StaticChannelRoute;
 const StreamTypes = fn(4878).StreamTypes;
 const NativePermissionTypes = fn(5045).NativePermissionTypes;
-let closure_21 = fn(8507).OAUTH2_AUTHORIZE_MODAL_KEY;
-let closure_22 = fn(6958).FAMILY_CENTER_LINK_REQUEST_REGEX;
+let closure_21 = fn(8672).OAUTH2_AUTHORIZE_MODAL_KEY;
+let closure_22 = fn(7124).FAMILY_CENTER_LINK_REQUEST_REGEX;
 let closure_23 = fn(4815).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(13396).SHARE_SCREEN_MODAL_KEY;
-const MobileUserSettings = fn(7417).MobileUserSettings;
+const SHARE_SCREEN_MODAL_KEY = fn(13565).SHARE_SCREEN_MODAL_KEY;
+const MobileUserSettings = fn(7582).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
 
@@ -200,7 +200,7 @@ export default function handleSupportedURL(payload) {
     }
     if (flag2) {
       payload(inviteCode[28]).startDiceRoll(channelId2, diceCount, diceSides);
-      const obj22 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: "a" };
+      const obj22 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: true };
       const obj23 = { safe, navigationReplace, waitForConnection, skipMessageFetch };
       obj22.navigationSettings = obj23;
       rootNavigationRef1(inviteCode[29])(obj22);
@@ -291,7 +291,7 @@ export default function handleSupportedURL(payload) {
             null != remoteAuthFingerprint
               ? () => {
                   ModalActionCreatorsDefault.pushLazy(
-                    asyncRequireImpl(13408, dependencyMap.paths),
+                    asyncRequireImpl(13577, dependencyMap.paths),
                     { remoteAuthFingerprint },
                     "REMOTE_AUTH_MODAL",
                   );
@@ -666,11 +666,11 @@ export default function handleSupportedURL(payload) {
                         const obj5 = closure_1(5039);
                         tmp10 = tmp50;
                         const obj10 = { screen: constants.CONNECTIONS };
-                        dependencyMap(6800).openUserSettings(obj10);
-                        const obj6 = dependencyMap(6800);
+                        dependencyMap(6966).openUserSettings(obj10);
+                        const obj6 = dependencyMap(6966);
                         c7 = 1;
                         c8 = 1;
-                        const obj11 = { value: closure_1(5718).callback(payload.provider, obj7), done: false };
+                        const obj11 = { value: closure_1(5885).callback(payload.provider, obj7), done: false };
                         return obj11;
                       } else {
                         c8 = 3;

@@ -75,7 +75,7 @@ export default function GiftCardMobileConsumptionActionSheet(markAsDismissed) {
   const items3 = [
     closure_6(View, {
       style: tmp.illustration,
-      children: closure_6(markAsDismissed(6811).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }),
+      children: closure_6(markAsDismissed(6977).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }),
     }),
     ,
   ];
@@ -89,9 +89,9 @@ export default function GiftCardMobileConsumptionActionSheet(markAsDismissed) {
   obj6.onPress = function onPress() {
     return closure_3(ContentDismissActionType.USER_DISMISS);
   };
-  items3[2] = closure_6(markAsDismissed(5281).Button, obj6);
+  items3[2] = closure_6(markAsDismissed(5447).Button, obj6);
   obj3.children = items3;
-  obj2.children = closure_7(markAsDismissed(5279).Stack, obj3);
+  obj2.children = closure_7(markAsDismissed(5445).Stack, obj3);
   obj.children = closure_6(View, obj2);
-  return closure_6(markAsDismissed(6571).BottomSheet, obj);
+  return closure_6(markAsDismissed(6737).BottomSheet, obj);
 }

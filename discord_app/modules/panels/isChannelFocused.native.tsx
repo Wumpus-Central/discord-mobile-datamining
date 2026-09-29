@@ -141,7 +141,7 @@ function getFocusedChannelId() {
     }
   }
 }
-const CHANNEL_PREFIX = fn(6746).CHANNEL_PREFIX;
+const CHANNEL_PREFIX = fn(6912).CHANNEL_PREFIX;
 let c9 = null;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/panels/isChannelFocused.native.tsx");

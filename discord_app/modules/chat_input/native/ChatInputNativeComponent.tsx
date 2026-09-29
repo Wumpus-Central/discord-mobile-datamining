@@ -23,6 +23,7 @@ const forwardRefResult = noop.forwardRef((markAsSpoilerTitle, ref) => {
     const intl = util.intl;
     markAsSpoilerTitle = intl.string(util.t["gsI+xC"]);
   }
+  let maxHeight = markAsSpoilerTitle.maxHeight;
   ({
     setNoExtractUI,
     shouldShowCursor,
@@ -44,10 +45,8 @@ const forwardRefResult = noop.forwardRef((markAsSpoilerTitle, ref) => {
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   if (isThemeDarkResult) {
     let PRIMARY_500 = unsafe_rawColors.WHITE;
-    let tmp9 = importDefault;
   } else {
     PRIMARY_500 = unsafe_rawColors.PRIMARY_500;
-    tmp9 = importDefault;
   }
   let num = 0.6;
   if (null != ClientThemesBackgroundStore.gradientPreset) {
@@ -69,7 +68,56 @@ const forwardRefResult = noop.forwardRef((markAsSpoilerTitle, ref) => {
     num2 = 1;
   }
   tmp4Result3 = PlatformUtils;
-  const tmp13 = tmp9(11513)(onMaxHeightChanged);
+  const obj4 = {
+    accessible,
+    accessibilityLabel: tmp11,
+    children: tmp12,
+    editable,
+    keyboardAppearance: num2,
+    keyboardType: "default",
+    markAsSpoilerTitle,
+    maxHeight: null,
+    onBeginFocus: null,
+    onEndBlur: null,
+    onChangeContentSize: null,
+    onSelectionOrTextChange: null,
+    onTextFlushed: null,
+    onPasteImage: null,
+    onPasteCommand: null,
+    onTapAction: null,
+    onRequestSend: null,
+    placeholder: null,
+    placeholderColor: null,
+    ref: null,
+    selectionColor: null,
+    setNoExtractUI: null,
+    shouldShowCursor: null,
+    style: null,
+    textColor: null,
+    verticalInset: null,
+  };
+  if (maxHeight == null) {
+    maxHeight = tmp13;
+  }
+  obj4.maxHeight = maxHeight;
+  obj4.onBeginFocus = onBeginFocus;
+  obj4.onEndBlur = onEndBlur;
+  obj4.onChangeContentSize = onChangeContentSize;
+  obj4.onSelectionOrTextChange = onSelectionOrTextChange;
+  obj4.onTextFlushed = onTextFlushed;
+  obj4.onPasteImage = onPasteImage;
+  obj4.onPasteCommand = onPasteCommand;
+  obj4.onTapAction = onTapAction;
+  obj4.onRequestSend = onRequestSend;
+  obj4.placeholder = placeholder;
+  obj4.placeholderColor = tmp3.placeholderColor.color;
+  obj4.ref = ref;
+  obj4.selectionColor = hexWithOpacityResult;
+  obj4.setNoExtractUI = setNoExtractUI;
+  obj4.shouldShowCursor = shouldShowCursor;
+  obj4.style = tmp3.style;
+  obj4.textColor = tmp3.textColor.color;
+  obj4.verticalInset = verticalInset;
   return jsx(ChatInputNativeComponent.default, {
     accessible,
     accessibilityLabel: tmp11,
@@ -78,25 +126,25 @@ const forwardRefResult = noop.forwardRef((markAsSpoilerTitle, ref) => {
     keyboardAppearance: num2,
     keyboardType: "default",
     markAsSpoilerTitle,
-    maxHeight: tmp9(11513)(onMaxHeightChanged),
-    onBeginFocus,
-    onEndBlur,
-    onChangeContentSize,
-    onSelectionOrTextChange,
-    onTextFlushed,
-    onPasteImage,
-    onPasteCommand,
-    onTapAction,
-    onRequestSend,
-    placeholder,
-    placeholderColor: tmp3.placeholderColor.color,
-    ref,
-    selectionColor: hexWithOpacityResult,
-    setNoExtractUI,
-    shouldShowCursor,
-    style: tmp3.style,
-    textColor: tmp3.textColor.color,
-    verticalInset,
+    maxHeight: null,
+    onBeginFocus: null,
+    onEndBlur: null,
+    onChangeContentSize: null,
+    onSelectionOrTextChange: null,
+    onTextFlushed: null,
+    onPasteImage: null,
+    onPasteCommand: null,
+    onTapAction: null,
+    onRequestSend: null,
+    placeholder: null,
+    placeholderColor: null,
+    ref: null,
+    selectionColor: null,
+    setNoExtractUI: null,
+    shouldShowCursor: null,
+    style: null,
+    textColor: null,
+    verticalInset: null,
   });
 });
 forwardRefResult.displayName = "ChatInputNativeComponent";

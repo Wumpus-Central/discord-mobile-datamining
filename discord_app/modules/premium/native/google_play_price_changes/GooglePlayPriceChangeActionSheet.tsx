@@ -52,9 +52,9 @@ export default function GooglePlayPriceChangeActionSheet(markAsDismissed) {
   const tmp2Result5 = markAsDismissed(4488);
   const intervalStringAsNoun = markAsDismissed(4488).getIntervalStringAsNoun(tmp2Result5.getInterval(str).intervalType);
   const tmp2Result6 = markAsDismissed(4488);
-  const tmp2Result7 = markAsDismissed(6655);
-  const formatPriceResult = markAsDismissed(6655).formatPrice(stateFromStores.oldPrice, stateFromStores.oldCurrency);
-  const tmp2Result8 = markAsDismissed(6655);
+  const tmp2Result7 = markAsDismissed(6821);
+  const formatPriceResult = markAsDismissed(6821).formatPrice(stateFromStores.oldPrice, stateFromStores.oldCurrency);
+  const tmp2Result8 = markAsDismissed(6821);
   const obj3 = { children: null };
   const obj4 = { style: tmp.container, children: null };
   const obj5 = { style: tmp.textContainer, children: null };
@@ -72,7 +72,7 @@ export default function GooglePlayPriceChangeActionSheet(markAsDismissed) {
     oldPrice: null,
     hc_article_url: null,
   };
-  const formatPriceResult1 = markAsDismissed(6655).formatPrice(stateFromStores.newPrice, stateFromStores.newCurrency);
+  const formatPriceResult1 = markAsDismissed(6821).formatPrice(stateFromStores.newPrice, stateFromStores.newCurrency);
   obj8.changeDate = new Date(stateFromStores.expectedChargeTime);
   obj8.interval = intervalStringAsNoun;
   obj8.newPrice = formatPriceResult1;
@@ -89,8 +89,8 @@ export default function GooglePlayPriceChangeActionSheet(markAsDismissed) {
   obj9.onPress = function onPress() {
     markAsDismissed(ContentDismissActionType.USER_DISMISS);
   };
-  items3[1] = closure_8(markAsDismissed(5281).Button, obj9);
+  items3[1] = closure_8(markAsDismissed(5447).Button, obj9);
   obj4.children = items3;
   obj3.children = closure_9(View, obj4);
-  return closure_8(markAsDismissed(6571).BottomSheet, obj3);
+  return closure_8(markAsDismissed(6737).BottomSheet, obj3);
 }

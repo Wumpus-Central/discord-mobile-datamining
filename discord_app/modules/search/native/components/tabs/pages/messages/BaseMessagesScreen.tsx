@@ -8,7 +8,7 @@ import SearchMessageStore from "../../../../../SearchMessageStore.tsx";
 import SearchQueryStore from "../../../../stores/SearchQueryStore.tsx";
 
 require = fn;
-const constants = fn(7302).SearchResultContentEntityTypes;
+const constants = fn(7467).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/messages/BaseMessagesScreen.tsx");
@@ -17,10 +17,10 @@ export default function BaseMessagesScreen(tab) {
   ({ data, searchContext } = tab);
   tab = tab.tab;
   const isFocused = tab.isFocused;
-  ({ isFirstPageLoading, keywordResultCount, intelligenceStatus } = tab);
+  ({ isFirstPageLoading, keywordResultCount, smartSearchStatus } = tab);
   ({ isNextPageLoading, contentContainerStyle, ItemSeparatorComponent, numColumns } = tab);
-  if (intelligenceStatus === undefined) {
-    intelligenceStatus = null;
+  if (smartSearchStatus === undefined) {
+    smartSearchStatus = null;
   }
   isFirstPageLoading = undefined;
   keywordResultCount = undefined;
@@ -49,7 +49,6 @@ export default function BaseMessagesScreen(tab) {
   isHistoricalIndexing = stateFromStoresObject.isHistoricalIndexing;
   documentsIndexed = stateFromStoresObject.documentsIndexed;
   let obj = searchContext(isFocused[6]);
-  let tmp = searchContext;
   const messageSearchErrorScreen = searchContext(isFocused[8]).useMessageSearchErrorScreen({
     searchContext,
     tab,
@@ -116,11 +115,11 @@ export default function BaseMessagesScreen(tab) {
   } else {
     if (isErrorFullscreen) {
       if (!isFirstPageLoading) {
-        if (!tmpResult.isIntelligenceSearchActive(intelligenceStatus)) {
+        if (!tmp10) {
           const obj6 = { text: errorText };
-          let tmp12 = hasError(tab(tmp2[14]), obj6);
+          let tmp13 = hasError(tab(tmp2[14]), obj6);
         }
-        return tmp12;
+        return tmp13;
       }
     }
     const obj7 = {
@@ -131,8 +130,10 @@ export default function BaseMessagesScreen(tab) {
       ItemSeparatorComponent,
       numColumns,
     };
-    tmp12 = hasError(tab(tmp2[15]), obj7);
-    tmpResult = tmp(tmp2[13]);
+    tmp13 = hasError(tab(tmp2[15]), obj7);
+    tmp10 =
+      smartSearchStatus === tmp(tmp2[13]).SmartSearchStatus.LOADING ||
+      smartSearchStatus === tmp(tmp2[13]).SmartSearchStatus.LOADED;
   }
 }
 export const trackMessageItemPress = function trackMessageItemPress(messageId) {

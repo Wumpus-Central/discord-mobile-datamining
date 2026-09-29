@@ -7,7 +7,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const hasPermission = fn(2103).hasPermission;
-const constants = fn(14750).GuildRoleSubscriptionFormat;
+const constants = fn(14925).GuildRoleSubscriptionFormat;
 const Permissions = fn(1074).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionFormat.tsx");

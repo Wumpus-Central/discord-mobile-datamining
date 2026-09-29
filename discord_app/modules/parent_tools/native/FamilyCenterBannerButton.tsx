@@ -64,7 +64,7 @@ function FamilyCenterTeenQRCodeButtonInner() {
       const obj2 = { action: React7.ShowQRCodeModal };
       AnalyticsUtilsDefault.track(AnalyticEvents.FAMILY_CENTER_ACTION, obj2);
       const obj4 = { linkCode: stateFromStores1, expiresAt: stateFromStores2, onRefresh: getLinkCode2 };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14415, dependencyMap.paths), React5, obj4);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14590, dependencyMap.paths), React5, obj4);
     }
   }, items4);
   const obj8 = {
@@ -139,7 +139,7 @@ class FamilyCenterBannerButton {
   }
 }
 const View = fn(17).View;
-const FamilyCenterConstants = fn(6958);
+const FamilyCenterConstants = fn(7124);
 ({
   CONNECT_GUARDIAN_BOTTOM_SHEET_KEY: closure_7,
   FAMILY_CENTER_LINK_REQUEST_REGEX: closure_8,
@@ -219,6 +219,6 @@ export const FamilyCenterParentQRCodeButton = function FamilyCenterParentQRCodeB
     };
     return closure_12(FamilyCenterBannerButton, obj2);
   }
-  obj = handleQrCodeScanSucess(8105);
+  obj = handleQrCodeScanSucess(8270);
   tmp = handleQrCodeScanSucess;
 };

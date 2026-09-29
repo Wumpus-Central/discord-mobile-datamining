@@ -3,12 +3,12 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import ConstantsIOS from "../../../../ConstantsIOS.tsx";
 import native from "../../../../design/void/native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05293_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05459_LinearGradient.js";
 import SelectedDismissibleContentDefault from "../../../dismissible_content/native/SelectedDismissibleContent.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Gradients = fn(6852).Gradients;
+const Gradients = fn(7018).Gradients;
 const jsx = fn(21).jsx;
 const createStyles = fn(4836);
 let obj2 = {

@@ -11,7 +11,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const VerticalGradient = fn(1074).VerticalGradient;
-let closure_6 = fn(6572).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_6 = fn(6738).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(4836);
@@ -179,7 +179,7 @@ export const AppStoreOverlayFooter = function AppStoreOverlayFooter(arg0) {
   const obj2 = { style: tmp.footer, onLayout, children: null };
   const memo1 = noop.useMemo(() => ({ paddingBottom: Math.max(bottom, closure_6) }), items1);
   const items2 = [
-    closure_7(token(5293), {
+    closure_7(token(5459), {
       pointerEvents: "none",
       style: tmp.footerGradient,
       colors: memo,
@@ -192,7 +192,7 @@ export const AppStoreOverlayFooter = function AppStoreOverlayFooter(arg0) {
   const intl = bottom(1115).intl;
   obj5.text = intl.string(bottom(1115).t.lwQdjB);
   obj5.onPress = onInstallPress;
-  obj4.children = closure_7(bottom(5281).Button, obj5);
+  obj4.children = closure_7(bottom(5447).Button, obj5);
   items2[1] = closure_7(View, obj4);
   obj2.children = items2;
   return closure_8(View, obj2);

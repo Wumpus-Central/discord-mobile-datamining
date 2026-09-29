@@ -7,7 +7,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const Image = fn(17).Image;
-const BLUR_BACKGROUND_OPTION = fn(6408).BLUR_BACKGROUND_OPTION;
+const BLUR_BACKGROUND_OPTION = fn(6574).BLUR_BACKGROUND_OPTION;
 const jsx = fn(21).jsx;
 const none = "none";
 const createStyles = fn(4836);

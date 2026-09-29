@@ -1,7 +1,7 @@
 // discord_app/modules/premium/native/SubscriptionAccountHoldNotice.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
-import _modDef12285 from "../../../../_runtime/metro/12285__.js";
+import _modDef12456 from "../../../../_runtime/metro/12456__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -28,7 +28,7 @@ export default function SubscriptionAccountHoldNotice(subscription) {
   if (subscription.status === SubscriptionStatusTypes.ACCOUNT_HOLD) {
     const obj = { style: tmp.container, children: null };
     const obj2 = { style: tmp.textContainer, children: null };
-    const obj3 = { size: subscription(1177).IconSizes.MEDIUM, style: tmp.icon, source: _modDef12285 };
+    const obj3 = { size: subscription(1177).IconSizes.MEDIUM, style: tmp.icon, source: _modDef12456 };
     const items = [closure_6(subscription(1177).Icon, obj3)];
     const obj4 = { style: tmp.text, variant: "text-sm/medium", children: null };
     const intl = subscription(1115).intl;
@@ -48,7 +48,7 @@ export default function SubscriptionAccountHoldNotice(subscription) {
         PremiumUtils.getExternalSubscriptionMethodUrl(subscription.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT"),
       );
     };
-    items1[1] = closure_6(subscription(5281).Button, obj7);
+    items1[1] = closure_6(subscription(5447).Button, obj7);
     obj.children = items1;
     tmp2 = closure_7(closure_4, obj);
     const obj6 = subscription(4488);

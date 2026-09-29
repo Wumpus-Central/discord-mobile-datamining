@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting(
 export default function showGuildSettingsStickerCreateModal(merged) {
   ActionSheetActionCreatorsDefault.hideActionSheet();
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(17379, dependencyMap.paths),
+    asyncRequireImpl(17568, dependencyMap.paths),
     merged,
     "guild-settings-sticker-create",
     { presentation: "modal" },

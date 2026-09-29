@@ -65,24 +65,20 @@ let closure_3 = async function _repairVibegrationsGuildHints(arg0, arg1) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsInstallTarget.tsx");
 
-export const vibegrationsInstallGuildId = function vibegrationsInstallGuildId(
-  stateFromStores,
-  stateFromStores2,
-  guildId,
-) {
+export const vibegrationsInstallGuildId = function vibegrationsInstallGuildId(project, integrationStatus, guildId) {
   let prop;
-  if (stateFromStores2 != null) {
-    prop = stateFromStores2.integration_installed;
+  if (integrationStatus != null) {
+    prop = integrationStatus.integration_installed;
   }
   let guild_id = guildId;
   if (true === prop) {
     let guild_id1;
-    if (stateFromStores != null) {
-      guild_id1 = stateFromStores.guild_id;
+    if (project != null) {
+      guild_id1 = project.guild_id;
     }
     guild_id = guildId;
     if (null != guild_id1) {
-      guild_id = stateFromStores.guild_id;
+      guild_id = project.guild_id;
     }
   }
   return guild_id;

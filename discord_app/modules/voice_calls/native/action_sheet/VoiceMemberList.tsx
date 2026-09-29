@@ -5,7 +5,7 @@ import useAnalyticsLocationsDefault from "../../../app_analytics/useAnalyticsLoc
 import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
-import _modDef9491 from "../../../../../_runtime/metro/09491__.js";
+import _modDef9658 from "../../../../../_runtime/metro/09658__.js";
 import openGroupDMAddMembersDefault from "../../../group_dm/native/openGroupDMAddMembers.tsx";
 import GuildEventVoiceBannerDefault from "../../../guild_scheduled_events/native/components/GuildEventVoiceBanner.tsx";
 import VoiceMemberUser from "VoiceMemberUser.tsx";
@@ -64,7 +64,7 @@ function extractKey(id) {
 function VoiceSectionRow(arg0) {
   ({ item, isActionSheet } = arg0);
   ({ channelId, onPressUser } = arg0);
-  importDefault = isActionSheet(8895).useAnalyticsContext();
+  importDefault = isActionSheet(9060).useAnalyticsContext();
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   if (tmp3) {
     dependencyMap = async function _onItemPress(arg0) {
@@ -152,15 +152,15 @@ function VoiceSectionRow(arg0) {
       },
       isActionSheet,
     };
-    return closure_21(tmp2(13329), obj2);
+    return closure_21(tmp2(13498), obj2);
   } else {
     let obj3 = {};
     const merged = Object.assign(item);
     obj3.onPress = onPressUser;
     obj3.isActionSheet = isActionSheet;
-    return closure_21(tmp2(13330), obj3);
+    return closure_21(tmp2(13499), obj3);
   }
-  let obj = isActionSheet(8895);
+  let obj = isActionSheet(9060);
   tmp3 = undefined !== item.url && undefined !== item.applicationId;
 }
 get_ActivityIndicator = fn(17);
@@ -168,7 +168,7 @@ get_ActivityIndicator = fn(17);
 const Constants = fn(1074);
 ({ AnalyticsPages: closure_15, InstantInviteSources: closure_16, Permissions: closure_17 } = Constants);
 const FORM_ROW_VERTICAL_PADDING = fn(1181).FORM_ROW_VERTICAL_PADDING;
-const ACTION_SHEET_MAX_WIDTH = fn(6572).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(6738).ACTION_SHEET_MAX_WIDTH;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22, Fragment: closure_23 } = jsxProd);
@@ -196,9 +196,9 @@ let closure_26 = noop.memo((channel) => {
       const obj3 = { accessibilityLabel: null, accessibilityHidden: true, source: null, size: null };
       const intl = tmp4(1115).intl;
       obj3.accessibilityLabel = intl.string(tmp4(1115).t["6Qgrev"]);
-      obj3.source = _modDef9491;
-      obj3.size = tmp4(13006).CircularIconButton.Sizes.MEDIUM_32;
-      obj2.leading = closure_21(tmp4(13006).CircularIconButton, obj3);
+      obj3.source = _modDef9658;
+      obj3.size = tmp4(13176).CircularIconButton.Sizes.MEDIUM_32;
+      obj2.leading = closure_21(tmp4(13176).CircularIconButton, obj3);
       const intl2 = tmp4(1115).intl;
       obj2.label = intl2.string(tmp4(1115).t["6Qgrev"]);
       obj2.onPress = function onPress() {
@@ -209,7 +209,7 @@ let closure_26 = noop.memo((channel) => {
           const result = instant_invite_InstantInviteUtils.showInstantInviteActionSheet(channel, obj2);
         }
       };
-      items[1] = closure_21(tmp4(8053).FormRow, obj2);
+      items[1] = closure_21(tmp4(8218).FormRow, obj2);
       obj.children = items;
       tmp7 = closure_22(noop.Fragment, obj);
     }
@@ -396,7 +396,7 @@ export default noop.forwardRef(function VoiceMemberList(channel, ref) {
               return sum;
             } else {
               if (tmp) {
-                tmp4 = tmp4(13329);
+                tmp4 = tmp4(13498);
                 calculateActivityRowHeight = tmp4.calculateActivityRowHeight;
                 let result = calculateActivityRowHeight(closure_4);
               } else {

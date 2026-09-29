@@ -145,9 +145,9 @@ let result = size.fileFinishedImporting("modules/quests/native/QuestOrbMultiplie
 export default function QuestOrbMultiplierPerkInfoActionSheet(multiplier) {
   multiplier = multiplier.multiplier;
   const orbMultiplierEligibility = multiplier.orbMultiplierEligibility;
-  const result = multiplier(10697).shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
+  const result = multiplier(10866).shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
   dependencyMap = result;
-  let obj = multiplier(10697);
+  let obj = multiplier(10866);
   const items = [orbMultiplierEligibility];
   const items1 = [result, orbMultiplierEligibility, multiplier];
   const memo = noop.useMemo(() => {
@@ -182,14 +182,14 @@ export default function QuestOrbMultiplierPerkInfoActionSheet(multiplier) {
   let obj2 = { scrollable: false, handleDisabled: true, startExpanded: true, contentStyles, children: null };
   let obj3 = {
     visible:
-      orbMultiplierEligibility === multiplier(10697).QuestOrbMultiplierEligibilityType.NITRO ||
-      orbMultiplierEligibility === multiplier(10697).QuestOrbMultiplierEligibilityType.UPSELL,
+      orbMultiplierEligibility === multiplier(10866).QuestOrbMultiplierEligibilityType.NITRO ||
+      orbMultiplierEligibility === multiplier(10866).QuestOrbMultiplierEligibilityType.UPSELL,
     children: null,
   };
   const tmp4 =
-    orbMultiplierEligibility === multiplier(10697).QuestOrbMultiplierEligibilityType.NITRO ||
-    orbMultiplierEligibility === multiplier(10697).QuestOrbMultiplierEligibilityType.UPSELL;
+    orbMultiplierEligibility === multiplier(10866).QuestOrbMultiplierEligibilityType.NITRO ||
+    orbMultiplierEligibility === multiplier(10866).QuestOrbMultiplierEligibilityType.UPSELL;
   obj3.children = closure_8(SheetContent, { title: memo, body: memo1, eligibleToReceivePremiumRewards: result });
-  obj2.children = closure_8(orbMultiplierEligibility(14693), obj3);
-  return closure_8(multiplier(6571).BottomSheet, obj2);
+  obj2.children = closure_8(orbMultiplierEligibility(14868), obj3);
+  return closure_8(multiplier(6737).BottomSheet, obj2);
 }

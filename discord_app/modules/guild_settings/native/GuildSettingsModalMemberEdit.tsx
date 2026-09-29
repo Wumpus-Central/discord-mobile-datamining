@@ -410,8 +410,8 @@ prototype["updateNavigator"] = function updateNavigator(submitting) {
         return collapsedCategories(HeaderActionButton.HeaderActionButton, obj);
       };
     } else if (null != onClose) {
-      fn = self(5936).getHeaderCloseButton(onClose);
-      let obj = self(5936);
+      fn = self(6102).getHeaderCloseButton(onClose);
+      let obj = self(6102);
     }
     let obj2 = { headerLeft: fn, headerRight: null, headerTitle: null };
     if (submitting) {
@@ -620,7 +620,7 @@ export default function MemberModalEdit(onClose) {
   onClose = onClose.onClose;
   const onRemove = onClose.onRemove;
   ({ guildId, userId } = onClose);
-  const tmp = onRemove(5910)(guildId);
+  const tmp = onRemove(6076)(guildId);
   closure_2 = tmp;
   const items = [onClose, onRemove, tmp];
   const memo = noop.useMemo(() => {
@@ -645,7 +645,7 @@ export default function MemberModalEdit(onClose) {
           const merged = Object.assign(arg0);
           obj.guildId = guildId;
           obj.onKick = onKick;
-          return closure_2_18(onRemove(11328), obj);
+          return closure_2_18(onRemove(11497), obj);
         },
       },
       [closure_2_17.MEMBER_BAN]: {
@@ -657,7 +657,7 @@ export default function MemberModalEdit(onClose) {
           const merged = Object.assign(arg0);
           obj.guildId = guildId;
           obj.onBan = onBan;
-          return closure_2_18(onRemove(11330), obj);
+          return closure_2_18(onRemove(11499), obj);
         },
       },
     };
@@ -665,6 +665,6 @@ export default function MemberModalEdit(onClose) {
   let obj = { screens: memo, initialRouteName: constants3.MEMBER_EDIT, initialRouteStack: null };
   const items1 = [{ name: constants3.MEMBER_EDIT, params: { userId } }];
   obj.initialRouteStack = items1;
-  return closure_18(onClose(6421).Navigator, obj);
+  return closure_18(onClose(6587).Navigator, obj);
 }
 export { GuildSettingsModalMemberEditScene };

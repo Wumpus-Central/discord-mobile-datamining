@@ -47,7 +47,7 @@ function MusicMuteButton(channelId) {
       }
       const obj3 = {
         accessibilityLabel: stringResult,
-        icon: importDefault(stateFromStores ? 9365 : 9367),
+        icon: importDefault(stateFromStores ? 9532 : 9534),
         onPress() {
           return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
         },
@@ -60,15 +60,15 @@ function MusicMuteButton(channelId) {
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(11755);
+const VoicePanelConstants = fn(11924);
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
 ({
   UI_SHOW_HIDE_PHYSICS: closure_16,
   VoicePanelModes: closure_17,
   DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_18,
 } = VoicePanelConstants);
-const EDGE_GUTTER = fn(11758).EDGE_GUTTER;
-const VoicePanelControlsModes = fn(11753).VoicePanelControlsModes;
+const EDGE_GUTTER = fn(11927).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(11922).VoicePanelControlsModes;
 const ParticipantTypes = fn(4857).ParticipantTypes;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);

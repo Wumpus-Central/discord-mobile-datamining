@@ -8,7 +8,7 @@ import InAppNotificationUtils from "InAppNotificationUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const InAppNotificationConstants = fn(9555);
+const InAppNotificationConstants = fn(9722);
 ({
   MIN_SWIPE_VELOCITY: closure_4,
   STARTED_SWIPE_THRESHOLD: hasOwnProperty,

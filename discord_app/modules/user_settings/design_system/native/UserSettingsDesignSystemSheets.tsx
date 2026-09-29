@@ -10,7 +10,7 @@ import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/B
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import ActionSheetRow from "../../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
 import PromoSheet from "../../../../design/components/Sheet/native/PromoSheet.native.tsx";
-import _modDef15406 from "../../../../../discord_assets/assets/mana/asset-library/generated/BugSpotIllustration-2x.png.js";
+import _modDef15581 from "../../../../../discord_assets/assets/mana/asset-library/generated/BugSpotIllustration-2x.png.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -36,13 +36,13 @@ function DemoActionSheet() {
   let tmp14Result = first;
   if (first) {
     const obj2 = { onPress: NOOP, label: tmp12 };
-    tmp14Result = React5(tmp15(8996).ActionSheetHeaderPressableText, obj2);
+    tmp14Result = React5(tmp15(9161).ActionSheetHeaderPressableText, obj2);
   }
   obj.leading = tmp14Result;
   let tmp14Result2 = tmp2;
   if (tmp2) {
     const obj3 = { onPress: NOOP };
-    tmp14Result2 = React5(tmp15(6619).ActionSheetCloseButton, obj3);
+    tmp14Result2 = React5(tmp15(6785).ActionSheetCloseButton, obj3);
   }
   const obj4 = { header: React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj), children: null };
   obj.trailing = tmp14Result2;
@@ -106,7 +106,7 @@ function DemoPromoSheet() {
   };
   const obj3 = { type: "image", src: null, aspectRatio: "16/9" };
   const tmp = React5(components_Button_Button.Button, obj);
-  obj3.src = { uri: _modDef15406 };
+  obj3.src = { uri: _modDef15581 };
   obj2.graphic = obj3;
   obj2.actions = tmp;
   return React5(PromoSheet.PromoSheet, obj2);

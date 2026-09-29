@@ -2,10 +2,10 @@
 import util from "../../../../intl/index.native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06073_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06239_LegacyBaseButton.js";
 import KrispLogo2 from "KrispLogo.tsx";
-import _modDef9454 from "../../../../../_runtime/metro/09454__.js";
-import _modDef9455 from "../../../../../_runtime/metro/09455__.js";
+import _modDef9621 from "../../../../../_runtime/metro/09621__.js";
+import _modDef9622 from "../../../../../_runtime/metro/09622__.js";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -17,9 +17,9 @@ function KrispLogo() {
   const tmp = closure_13();
   const tmp4 = useThemeDefault();
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = _modDef9454;
+    let tmp2Result = _modDef9621;
   } else {
-    tmp2Result = _modDef9455;
+    tmp2Result = _modDef9622;
   }
   const obj2 = { style: tmp.krisp, children: null };
   const obj3 = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
@@ -56,7 +56,7 @@ function SystemProcessingSubLabel() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const MobileUserSettings = fn(7417).MobileUserSettings;
+const MobileUserSettings = fn(7582).MobileUserSettings;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);

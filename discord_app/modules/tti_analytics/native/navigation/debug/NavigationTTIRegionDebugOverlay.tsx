@@ -197,20 +197,20 @@ export const NavigationTTIRegionDebugOverlay = function NavigationTTIRegionDebug
   noop = undefined;
   closure_5 = undefined;
   const tmp = closure_10();
-  const navTTISurface = name(16177).useNavTTISurface();
-  let obj = name(16177);
+  const navTTISurface = name(16353).useNavTTISurface();
+  let obj = name(16353);
   const tmp2 = name;
   [tmp6, c2] = noop.useState(false);
   const syncExternalStore = noop.useSyncExternalStore(
-    name(16180).subscribeNavigationTTIDebugFreezeTarget,
-    name(16180).getNavigationTTIDebugFreezeTarget,
-    name(16180).getNavigationTTIDebugFreezeTarget,
+    name(16356).subscribeNavigationTTIDebugFreezeTarget,
+    name(16356).getNavigationTTIDebugFreezeTarget,
+    name(16356).getNavigationTTIDebugFreezeTarget,
   );
   closure_129_0 = name;
   closure_129_1 = regionId;
   closure_129_2 = tracking;
   const tmp5 = _slicedToArray(noop.useState(false), 2);
-  const navTTISurface1 = name(16177).useNavTTISurface();
+  const navTTISurface1 = name(16353).useNavTTISurface();
   closure_129_3 = navTTISurface1;
   const items = [name, regionId, navTTISurface1, tracking];
   const callback = noop.useCallback((arg0) => {
@@ -516,5 +516,5 @@ export const NavigationTTIRegionDebugOverlay = function NavigationTTIRegionDebug
     return closure_8(closure_6, obj3);
   }
   str21 = " \u00B7 " + combined;
-  let obj2 = name(16177);
+  let obj2 = name(16353);
 };

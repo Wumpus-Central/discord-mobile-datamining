@@ -4,7 +4,13 @@ import _mod4452 from "../../../../../_runtime/metro/04452__.js";
 import identity from "../../../../../_runtime/metro/01243__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-let closure_2 = Object.freeze({ name: "", emojiId: "alignItems", emojiName: "s", description: "Icon", refId: "Array" });
+let closure_2 = Object.freeze({
+  name: "",
+  emojiId: "alignItems",
+  emojiName: "useStateFromStores",
+  description: "mode",
+  refId: "Array",
+});
 let closure_3 = identity.createWithEqualityFn((arg0) => {
   closure_0 = arg0;
   const obj = {};

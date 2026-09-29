@@ -81,7 +81,7 @@ function resolveMediaPostEmbeds(embeds) {
     });
   }
 }
-const FetchState = fn(10970).FetchState;
+const FetchState = fn(11139).FetchState;
 const MessageFlags = fn(1074).MessageFlags;
 const set = new Set();
 class MediaPostEmbedManager extends tmp7 {

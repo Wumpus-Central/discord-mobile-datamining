@@ -3,8 +3,8 @@ import util from "../../../../../intl/index.native.tsx";
 import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
 import _modDef2519 from "../../GuildPowerups.messages.js";
 import GuildTagUtils from "../../../../guild_tag/GuildTagUtils.tsx";
-import _modDef12046 from "../../../../../../discord_assets/assets/powerups/badge-packs/group-static.png.js";
-import _modDef12047 from "../../../../../../discord_assets/assets/powerups/badge-packs/group-animated.png.js";
+import _modDef12217 from "../../../../../../discord_assets/assets/powerups/badge-packs/group-static.png.js";
+import _modDef12218 from "../../../../../../discord_assets/assets/powerups/badge-packs/group-animated.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
 
@@ -35,13 +35,13 @@ export default function usePowerupGroupConfig(arg0, arg1) {
         image: null,
         disabledReason: null,
         badge: "HermesInternal",
-        forceStaticImages: "HermesInternal",
+        forceStaticImages: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZl",
       };
       const intl = util.intl;
       obj2.title = intl.string(_modDef2519.KC9HRW);
       const intl2 = util.intl;
       obj2.description = intl2.string(_modDef2519.GJiSmP);
-      const obj3 = { staticUrl: _modDef12046, animatedUrl: _modDef12047 };
+      const obj3 = { staticUrl: _modDef12217, animatedUrl: _modDef12218 };
       obj2.image = obj3;
       let stringResult;
       if (!stateFromStores) {

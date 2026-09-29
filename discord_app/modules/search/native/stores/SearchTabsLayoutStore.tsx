@@ -2,9 +2,9 @@
 import initializeDefault from "../../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../../Dispatcher.tsx";
 import SearchUtils from "../../SearchUtils.tsx";
-import IntelligenceSearchTypes from "../../../intelligence_layer/search/IntelligenceSearchTypes.tsx";
-import IntelligenceSearchUtils from "../../../intelligence_layer/search/IntelligenceSearchUtils.tsx";
-import IntelligenceSearchStore from "../../../intelligence_layer/search/IntelligenceSearchStore.tsx";
+import SmartSearchResultsStoreDefault from "../../../intelligence_layer/search/SmartSearchResultsStore.tsx";
+import SmartSearchTypes from "../../../intelligence_layer/search/SmartSearchTypes.tsx";
+import SmartSearchUtils from "../../../intelligence_layer/search/SmartSearchUtils.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import SearchMessageStore from "../../SearchMessageStore.tsx";
 import SearchGuildChannelTabStore from "SearchGuildChannelTabStore.tsx";
@@ -99,12 +99,8 @@ function computeLayoutForState(value) {
         if (null != totalCount) {
           sum =
             totalCount +
-            IntelligenceSearchUtils.getIntelligenceSearchCitationsCount(
-              searchContext,
-              searchResultsQuery,
-              totalCount > 0,
-            );
-          const tmp8Result = IntelligenceSearchUtils;
+            SmartSearchUtils.getSmartSearchCitationsCount(searchContext, searchResultsQuery, totalCount > 0);
+          const tmp8Result = SmartSearchUtils;
         }
         acc[item] = sum;
       } else {
@@ -132,16 +128,21 @@ function computeLayoutForState(value) {
       } else if (found.every((item) => null != reduced[item])) {
         const found1 = found.filter((item) => {
           if (item === constants.MESSAGES) {
-            let tmp5 = 0 !== reduced[constants.MESSAGES];
-            if (!tmp5) {
-              const intelligenceSearchStatus = IntelligenceSearchUtils.getIntelligenceSearchStatus(tmp, tmp2);
-              tmp5 = intelligenceSearchStatus === IntelligenceSearchTypes.IntelligenceSearchStatus.LOADING;
+            flag = true;
+            if (0 === reduced[constants.MESSAGES]) {
+              const smartSearchQuery = SmartSearchUtils.getSmartSearchQuery(tmp, tmp2);
+              let tmp8 = null != smartSearchQuery;
+              if (tmp8) {
+                const smartSearchStatus = SmartSearchUtils.getSmartSearchStatus(smartSearchQuery);
+                tmp8 = smartSearchStatus === SmartSearchTypes.SmartSearchStatus.LOADING;
+                const tmp4Result = SmartSearchUtils;
+              }
+              flag = tmp8;
             }
-            let tmp4 = tmp5;
           } else {
-            tmp4 = 0 !== reduced[item];
+            flag = 0 !== reduced[item];
           }
-          return tmp4;
+          return flag;
         });
         flag2 = false;
         visibleTabCounts = reduced;
@@ -202,7 +203,8 @@ function computeLayoutForAll() {
   }
   return flag;
 }
-const SearchConstants = fn(7303);
+SmartSearchResultsStoreDefault;
+const SearchConstants = fn(7468);
 ({
   SearchTabs: c10,
   SEARCH_TYPE_TO_SEARCH_INITIAL_TABS: closure_11,
@@ -221,14 +223,14 @@ prototype["initialize"] = function initialize() {
     SearchGuildChannelTabStore,
     SearchPeopleTabStore,
     ChannelStore,
-    IntelligenceSearchStore,
+    SmartSearchResultsStore,
   );
   const items = [
     SearchMessageStore,
     SearchMemberTabStore,
     SearchGuildChannelTabStore,
     SearchPeopleTabStore,
-    IntelligenceSearchStore,
+    SmartSearchResultsStore,
   ];
   this.syncWith(items, computeLayoutForAll);
 };

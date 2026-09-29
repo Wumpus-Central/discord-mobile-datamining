@@ -11,9 +11,9 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const RegistrationUIStore = fn(15570);
+const RegistrationUIStore = fn(15745);
 ({ updateRegistrationOptions: closure_7, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
-const RegistrationConstants = fn(15571);
+const RegistrationConstants = fn(15746);
 ({ RegisterTransitionSteps: closure_9, RegistrationTransitionActionTypes: c10 } = RegistrationConstants);
 const AuthStates = fn(1074).AuthStates;
 const jsxProd = fn(21);

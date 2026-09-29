@@ -86,7 +86,7 @@ function BurstReactionAnimationContainerInner() {
       const items = [markAsDismissed.fill, closure_7];
       obj2.style = items;
       const obj3 = {
-        activeOpacity: closure_0(7203).BACKDROP_OPACITY,
+        activeOpacity: closure_0(7368).BACKDROP_OPACITY,
         onPress() {
           closure_4(false);
           closure_5.current = false;
@@ -115,7 +115,7 @@ function BurstReactionAnimationContainerInner() {
             ref.current = false;
           }
         };
-        tmpResult = closure_1_8(first(7245), obj7);
+        tmpResult = closure_1_8(first(7410), obj7);
       }
       obj5.children = tmpResult;
       items1[1] = closure_1_8(handleComponentFinish, obj5);
@@ -139,8 +139,8 @@ function BurstReactionAnimationContainerInner() {
       obj.children = closure_1_8(first(4566).View, obj2);
       return closure_1_8(closure_0(1177).OverlayView, obj);
     };
-    tmp8 = closure_8(animationData(10088), obj3);
-    let tmp11 = animationData(10088);
+    tmp8 = closure_8(animationData(10255), obj3);
+    let tmp11 = animationData(10255);
   }
   return tmp8;
 }
@@ -154,7 +154,7 @@ let obj2 = { background: null, fill: null, dismissTextContainer: null, dismissTe
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj3.backgroundColor = nativeDefault.colors.BLACK;
-obj3.opacity = fn(7203).BACKDROP_OPACITY;
+obj3.opacity = fn(7368).BACKDROP_OPACITY;
 obj2.background = obj3;
 let obj4 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);

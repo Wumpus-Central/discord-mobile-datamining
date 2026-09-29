@@ -23,7 +23,7 @@ export default function GuildDirectoryMoreMenu(entry) {
     let obj = { label: null, IconComponent: null, action: null };
     let intl = entry(1115).intl;
     obj.label = intl.string(entry(1115).t.XnuOvN);
-    obj.IconComponent = entry(9713).PencilIcon;
+    obj.IconComponent = entry(9880).PencilIcon;
     obj.action = function handleEdit() {
       GuildDirectoryEditDescriptionModalActionCreatorsDefault.open({ entry });
     };
@@ -68,7 +68,7 @@ export default function GuildDirectoryMoreMenu(entry) {
     const obj3 = { label: null, IconComponent: null, variant: "destructive", action: null };
     let intl3 = entry(1115).intl;
     obj3.label = intl3.string(entry(1115).t.Aen9eh);
-    obj3.IconComponent = entry(8124).FlagIcon;
+    obj3.IconComponent = entry(8289).FlagIcon;
     obj3.action = function handleReport() {
       const result = ReportModals.showReportModalForGuildDirectoryEntry(entry);
     };
@@ -86,11 +86,11 @@ export default function GuildDirectoryMoreMenu(entry) {
         obj.variant = "secondary";
         const intl = entry(1115).intl;
         obj.accessibilityLabel = intl.string(entry(1115).t.PdRCRg);
-        obj.icon = jsx(entry(7365).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
-        return jsx(entry(7363).IconButton, { ref: ref.ref });
+        obj.icon = jsx(entry(7530).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+        return jsx(entry(7528).IconButton, { ref: ref.ref });
       },
     };
-    tmp9 = jsx(entry(7358).ContextMenu, {
+    tmp9 = jsx(entry(7523).ContextMenu, {
       items,
       children(ref) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));
@@ -100,8 +100,8 @@ export default function GuildDirectoryMoreMenu(entry) {
         obj.variant = "secondary";
         const intl = entry(1115).intl;
         obj.accessibilityLabel = intl.string(entry(1115).t.PdRCRg);
-        obj.icon = jsx(entry(7365).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
-        return jsx(entry(7363).IconButton, { ref: ref.ref });
+        obj.icon = jsx(entry(7530).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+        return jsx(entry(7528).IconButton, { ref: ref.ref });
       },
     });
   }

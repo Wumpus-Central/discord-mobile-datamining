@@ -12,7 +12,7 @@ require = fn;
 function QuestDockBackgroundMediaFade(arg0) {
   let activeQuestDockMode;
   ({ children, style } = arg0);
-  activeQuestDockMode = noop.useContext(activeQuestDockMode(14625).QuestDockGestureContext).activeQuestDockMode;
+  activeQuestDockMode = noop.useContext(activeQuestDockMode(14800).QuestDockGestureContext).activeQuestDockMode;
   const tmp = closure_17();
   const fn = function n() {
     let num = 0;
@@ -23,7 +23,7 @@ function QuestDockBackgroundMediaFade(arg0) {
   };
   let obj = activeQuestDockMode(4566);
   fn.__closure = {
-    withSpring: activeQuestDockMode(5280).withSpring,
+    withSpring: activeQuestDockMode(5446).withSpring,
     activeQuestDockMode,
     QuestDockMode,
     QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,
@@ -38,8 +38,8 @@ function QuestDockBackgroundMediaFade(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ AppState: hasOwnProperty, StyleSheet, View: metroRequire } = get_ActivityIndicator);
-const QuestDockMode = fn(5756).QuestDockMode;
-const QuestDockConstants = fn(14624);
+const QuestDockMode = fn(5923).QuestDockMode;
+const QuestDockConstants = fn(14799);
 ({ QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_9, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: c10 } =
   QuestDockConstants);
 const VerticalGradient = fn(1074).VerticalGradient;

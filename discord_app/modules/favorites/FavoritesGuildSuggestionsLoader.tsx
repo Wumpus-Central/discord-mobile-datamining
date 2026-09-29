@@ -11,7 +11,7 @@ function FavoritesGuildSuggestionsLoaderInner() {
   }, items);
   return null;
 }
-const FavoritesGuildSuggestionsStore = fn(15834);
+const FavoritesGuildSuggestionsStore = fn(16009);
 ({
   NO_SUGGESTIONS: c3,
   setFavoritesGuildSuggestions: closure_4,

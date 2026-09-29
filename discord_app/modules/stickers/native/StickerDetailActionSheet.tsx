@@ -150,7 +150,7 @@ function UnavailableStickerDetail(arg0) {
     if (null != stickerAssetUrl) {
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { stickerUrl: tmp };
-      obj.openLazy(asyncRequireImpl(9867, dependencyMap.paths), "StickerOptionsActionSheet", obj2, "stack");
+      obj.openLazy(asyncRequireImpl(10034, dependencyMap.paths), "StickerOptionsActionSheet", obj2, "stack");
     }
   }, items1);
   const items2 = [closure_21(require("Sticker"), { sticker: renderableSticker, size: 48 }), ,];
@@ -203,7 +203,7 @@ function UnavailableStickerDetail(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ActivityIndicator: closure_7, Pressable: closure_8 } = get_ActivityIndicator);
-const StickerPickerConstants = fn(9736);
+const StickerPickerConstants = fn(9903);
 ({ PADDING_HORIZONTAL: closure_12, MIN_MARGIN: map1, STICKER_SIZE: closure_14 } = StickerPickerConstants);
 const Constants = fn(1074);
 ({
@@ -213,7 +213,7 @@ const Constants = fn(1074);
   GuildFeatures: closure_18,
   UserSettingsSections: closure_19,
 } = Constants);
-const ACTION_SHEET_MAX_WIDTH = fn(6572).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(6738).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_21, Fragment: closure_22, jsxs: closure_23 } = jsxProd);
 const createStyles = fn(4836);
@@ -368,7 +368,7 @@ function GuildStickerDetail(sticker) {
     if (null != stickerAssetUrl) {
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { stickerUrl: tmp };
-      obj.openLazy(asyncRequireImpl(9867, dependencyMap.paths), "StickerOptionsActionSheet", obj2, "stack");
+      obj.openLazy(asyncRequireImpl(10034, dependencyMap.paths), "StickerOptionsActionSheet", obj2, "stack");
     }
   }, items3);
   analyticsLocation = obj.useMemo(() => {

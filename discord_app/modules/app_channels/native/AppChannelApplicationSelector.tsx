@@ -51,7 +51,7 @@ export default function AppChannelApplicationSelector(guildId) {
     fn = () => {
       const obj = ActionSheetActionCreatorsDefault;
       obj.openLazy(
-        asyncRequireImpl(9024, dependencyMap.paths),
+        asyncRequireImpl(9189, dependencyMap.paths),
         AppChannelApplicationActionSheet.APP_CHANNEL_APPLICATION_ACTION_SHEET_KEY,
         { guildId, channelId, selectedApplicationId, onChange },
       );

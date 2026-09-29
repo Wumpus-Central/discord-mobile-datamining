@@ -1,6 +1,6 @@
 // discord_app/design/components/Icon/native/redesign/generated/XNeutralIcon.tsx
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod7544 from "../../../../../../../_runtime/metro/07544__.js";
+import _mod7709 from "../../../../../../../_runtime/metro/07709__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -15,5 +15,5 @@ export const XNeutralIcon = function XNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7544, color: str, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7709, color: str, style: color.style });
 };

@@ -57,7 +57,7 @@ function FocusedControlsExpanded(availableHeight) {
 function FocusedControlsBottomDrawerTooltip(positionY) {
   positionY = positionY.positionY;
   const tmp = closure_18();
-  const canShowTooltip = positionY(8970).useCanShowTooltip(
+  const canShowTooltip = positionY(9135).useCanShowTooltip(
     positionY(1094).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS,
     true,
   );
@@ -114,7 +114,7 @@ function FocusedControlsAboveActionBarView(positionY) {
   const animatedStyle = positionY(4566).useAnimatedStyle(fn);
   const items = [
     closure_13(FocusedControlsBottomDrawerTooltip, { positionY }),
-    closure_13(positionY(6575).ActionSheetHeaderBar, {}),
+    closure_13(positionY(6741).ActionSheetHeaderBar, {}),
   ];
   let tmp4Result = null != aboveActionBar;
   if (tmp4Result) {
@@ -702,9 +702,9 @@ get_ActivityIndicator = fn(17);
   ScrollView: closure_7,
   StyleSheet,
 } = get_ActivityIndicator);
-const ChannelCallStore = fn(8829);
+const ChannelCallStore = fn(8994);
 ({ clearFocusTimer: closure_8, resetFocusTimer: closure_9 } = ChannelCallStore);
-const ChannelCallConstants = fn(8830);
+const ChannelCallConstants = fn(8995);
 ({ BOX_MODE_THRESHOLD_WIDTH: c10, BOX_MODE_ACTIONSHEET_HEIGHT: closure_11 } = ChannelCallConstants);
 const Constants = fn(1074);
 ({ ComponentActions: closure_12, Fonts } = Constants);

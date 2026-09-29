@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(7847).SafetySettingsNoticeAction;
+let closure_4 = fn(8012).SafetySettingsNoticeAction;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4836);

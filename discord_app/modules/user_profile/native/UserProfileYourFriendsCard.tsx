@@ -43,7 +43,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
     RelationshipTypes.FRIEND,
   );
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = closure_0(9303).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = closure_0(9470).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {
@@ -87,7 +87,12 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
             const items = [{ translateX: 4 * (first.length - 1 - index) }];
             obj2.transform = items;
             obj.style = obj2;
-            const obj4 = { user, guildId: "r", size: closure_0(1177).AvatarSizes.XSMALL, cutout: null };
+            const obj4 = {
+              user,
+              guildId: "r",
+              size: closure_0(1177).AvatarSizes.XSMALL,
+              cutout: -0.000000000000000000000000000000013096336421405486,
+            };
             let tmp3;
             if (index < first.length - 1) {
               tmp3 = closure_2_11;
@@ -97,7 +102,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
               user,
               guildId: "r",
               size: closure_0(1177).AvatarSizes.XSMALL,
-              cutout: null,
+              cutout: -0.000000000000000000000000000000013096336421405486,
             });
             return (
               <gameRelationshipsByType key={user.id} style={null}>
@@ -117,7 +122,12 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
             const items = [{ translateX: 4 * (first.length - 1 - index) }];
             obj2.transform = items;
             obj.style = obj2;
-            const obj4 = { user, guildId: "r", size: closure_0(1177).AvatarSizes.XSMALL, cutout: null };
+            const obj4 = {
+              user,
+              guildId: "r",
+              size: closure_0(1177).AvatarSizes.XSMALL,
+              cutout: -0.000000000000000000000000000000013096336421405486,
+            };
             let tmp3;
             if (index < first.length - 1) {
               tmp3 = closure_2_11;
@@ -127,7 +137,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
               user,
               guildId: "r",
               size: closure_0(1177).AvatarSizes.XSMALL,
-              cutout: null,
+              cutout: -0.000000000000000000000000000000013096336421405486,
             });
             return (
               <gameRelationshipsByType key={user.id} style={null}>

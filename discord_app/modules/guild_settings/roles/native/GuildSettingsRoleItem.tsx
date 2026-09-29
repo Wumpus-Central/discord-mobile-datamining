@@ -178,7 +178,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
                     c1 = 1;
                     c2 = 1;
                     const obj6 = {
-                      value: tmp2(11068).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
+                      value: tmp2(11237).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
                       done: false,
                     };
                     return obj6;
@@ -319,7 +319,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
     if (null != prop) {
       const obj23 = {
         size: tmp5(onMoveUp[25]).Icon.Sizes.REFRESH_SMALL_16,
-        source: require("../../../../../_runtime/metro/09762__.js"),
+        source: require("../../../../../_runtime/metro/09929__.js"),
         "aria-label": null,
         style: null,
       };

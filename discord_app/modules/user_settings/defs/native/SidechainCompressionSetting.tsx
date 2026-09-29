@@ -6,13 +6,13 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
 const Features = fn(4861).Features;
-const SettingBuilders = fn(11006);
+const SettingBuilders = fn(11175);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["/jwMtn"]);
   },
-  parent: fn(7417).MobileUserSettings.VOICE,
+  parent: fn(7582).MobileUserSettings.VOICE,
   usePredicate() {
     return MediaEngineStore.supports(Features.SIDECHAIN_COMPRESSION);
   },

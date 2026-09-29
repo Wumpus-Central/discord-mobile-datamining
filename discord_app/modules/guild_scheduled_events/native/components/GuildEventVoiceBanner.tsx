@@ -8,7 +8,7 @@ import SelectedChannelStore from "../../../../stores/SelectedChannelStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(6946).isGuildScheduledEventActive;
+let closure_6 = fn(7112).isGuildScheduledEventActive;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4836);

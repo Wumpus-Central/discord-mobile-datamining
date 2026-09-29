@@ -7,11 +7,11 @@ import useWideAuthViewDefault from "../useWideAuthView.tsx";
 import WideAuthScrollContext from "WideAuthScrollContext.tsx";
 import BackgroundImageDefault from "atoms/BackgroundImage.tsx";
 import Navigator from "../../../../design/components/Navigator/native/Navigator.native.tsx";
-import StackNavigator from "../../../../../_runtime/06423_StackNavigator.js";
+import StackNavigator from "../../../../../_runtime/06589_StackNavigator.js";
 import RegistrationHandoff from "../RegistrationHandoff.tsx";
 import RegistrationUtils from "../RegistrationUtils.tsx";
 import useIsHCaptchaModalOpenTracking from "utils/useIsHCaptchaModalOpenTracking.tsx";
-import _mod15621 from "../../../../../_runtime/metro/15621__.js";
+import _mod15796 from "../../../../../_runtime/metro/15796__.js";
 import AuthManagerDefault from "../AuthManager.tsx";
 import useOrientationLockDefault from "../useOrientationLock.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -60,7 +60,7 @@ function NavigatorWithCaptchaHook() {
     closure_1(false);
   }, []);
   const obj3 = { backgroundImageSource: null, backgroundImageCover: true };
-  obj3.backgroundImageSource = _mod15621;
+  obj3.backgroundImageSource = _mod15796;
   const children = [closure_9(BackgroundImageDefault, obj3)];
   if (tmp5) {
     const obj5 = { value: tmp11, children: null };
@@ -157,7 +157,7 @@ get_ActivityIndicator = fn(17);
 const AuthStates = fn(1074).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-let RegistrationStepsUtils = fn(15569);
+let RegistrationStepsUtils = fn(15744);
 RegistrationStepsUtils = RegistrationStepsUtils.getAllAuthScreens();
 RegistrationStepsUtils = Object.entries(RegistrationStepsUtils);
 const screens = Object.fromEntries(
@@ -212,7 +212,7 @@ const screens = Object.fromEntries(
   }),
 );
 let num = 540;
-if (fn(6370).hasWebAuthn) {
+if (fn(6536).hasWebAuthn) {
   num = 600;
 }
 let obj = {};
@@ -260,7 +260,7 @@ export default noop.memo(function Auth() {
     AuthManagerDefault.initialize();
     return () => closure_1_1(dependencyMap[23]).terminate();
   }, []);
-  const layoutEffect = noop.useLayoutEffect(() => closure_0(6895).trackAppUIViewed(), []);
+  const layoutEffect = noop.useLayoutEffect(() => closure_0(7061).trackAppUIViewed(), []);
   useOrientationLockDefault();
   closure_0 = noop.useRef(undefined);
   return closure_9(context.Provider, {

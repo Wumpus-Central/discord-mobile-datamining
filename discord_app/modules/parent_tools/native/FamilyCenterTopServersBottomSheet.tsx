@@ -19,14 +19,14 @@ function GuildRow(guildActivity) {
   if (null == stateFromStores) {
     return null;
   } else {
-    const topUserOrGuildDescription = tmp2(7012).getTopUserOrGuildDescription(
+    const topUserOrGuildDescription = tmp2(7177).getTopUserOrGuildDescription(
       guildActivity.messages_sent,
       guildActivity.call_count,
     );
     const obj2 = { label: stateFromStores.name, subLabel: topUserOrGuildDescription, icon: null };
     const obj3 = { guild: stateFromStores, style: tmp.guildIcon };
     obj2.icon = closure_4(GuildIconDefault, obj3);
-    return closure_4(tmp2(5917).TableRow, obj2);
+    return closure_4(tmp2(6083).TableRow, obj2);
   }
   const obj = guildActivity(504);
 }

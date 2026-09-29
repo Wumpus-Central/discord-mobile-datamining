@@ -66,7 +66,13 @@ class FacepileGroupDMAvatar {
     }, items1);
     tmp9 = jsxs;
     tmp10 = View;
-    obj9 = { style: tmp.firstFace, size: pileSizeOverride, guildId: "r", cutout: 0, animate: "absolute" };
+    obj9 = {
+      style: tmp.firstFace,
+      size: pileSizeOverride,
+      guildId: "r",
+      cutout: "America/St_Kitts",
+      animate: "Asia/Pyongyang",
+    };
     obj9.cutout = memo1;
     obj9.animate = animate;
     if (null == users) {
@@ -87,7 +93,7 @@ class FacepileGroupDMAvatar {
       style: tmp.secondFace,
       size: pileSizeOverride,
       guildId: "Array",
-      animate: "Refresh Override",
+      animate: "Trigger Memory Warning",
     };
     obj12.animate = animate;
     if (null == users) {

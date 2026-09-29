@@ -84,7 +84,7 @@ let Constants = fn(1074);
 } = Constants);
 const StreamSettingsConstants = fn(4883);
 ({ ApplicationStreamFPS: closure_22, ApplicationStreamResolutions: closure_23 } = StreamSettingsConstants);
-let closure_24 = fn(13346).BROWSER_SUPPORTS_UNIFIED_PLAN;
+let closure_24 = fn(13515).BROWSER_SUPPORTS_UNIFIED_PLAN;
 Constants = fn(4861);
 ({
   Features: closure_25,
@@ -1991,7 +1991,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
     }
   }
   if (MediaEngineStore.supports(constants5.IMAGE_QUALITY_MEASUREMENT)) {
-    const SingleCpuCopyExperiment = tmp2(13359).SingleCpuCopyExperiment;
+    const SingleCpuCopyExperiment = tmp2(13528).SingleCpuCopyExperiment;
     const enabled = SingleCpuCopyExperiment.getConfig({ location: "RTCConnection" }).enabled;
     let str4 = "imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec";
     if (enabled) {
@@ -2806,26 +2806,7 @@ prototype["_handleClientDisconnect"] = function _handleClientDisconnect(sender_u
   }
   const _voiceQuality = self._voiceQuality;
   if (null != _voiceQuality) {
-    const inboundPacketsStats = _voiceQuality.getInboundPacketsStats(sender_user_id);
-    let num3 = inboundPacketsStats.num_packets;
-    if (num3 == null) {
-      num3 = 0;
-    }
-    if (tmp19) {
-      const obj5 = {};
-      const merged4 = Object.assign(self._getAnalyticsProperties());
-      obj5.media_session_id = self.getMediaSessionId();
-      obj5.parent_media_session_id = self.parentMediaSessionId;
-      obj5.sender_user_id = sender_user_id;
-      obj5.participant_type = "receiver";
-      const merged5 = Object.assign(inboundPacketsStats);
-      const merged6 = Object.assign(_voiceQuality.getInboundBytesStats(sender_user_id));
-      const merged7 = Object.assign(_voiceQuality.getInboundDurationStats(sender_user_id));
-      const merged8 = Object.assign(_voiceQuality.getInboundJitterStats(sender_user_id));
-      AnalyticsUtilsDefault.track(constants.VOICE_STREAM_ENDED, obj5);
-    }
-    _voiceQuality.destroyUser(sender_user_id);
-    tmp19 = num3 > 0 && self.shouldReport();
+    _voiceQuality.markUserDisconnected(sender_user_id);
   }
   const _connection = self._connection;
   if (null != _connection) {
@@ -2848,7 +2829,7 @@ prototype["_handleClientDisconnect"] = function _handleClientDisconnect(sender_u
   }
   if (1 === self._userIds.size) {
     self._secureFramesLastBecameAloneTime = TimeUtils.now();
-    const tmp39Result = TimeUtils;
+    const tmp23Result = TimeUtils;
   }
 };
 prototype["_handleCodecs"] = function _handleCodecs(OPUS, H264) {

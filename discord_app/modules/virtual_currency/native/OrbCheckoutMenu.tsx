@@ -28,13 +28,13 @@ export default function OrbCheckoutMenu() {
           });
         },
       };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12727, dependencyMap.paths), obj2);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12897, dependencyMap.paths), obj2);
     }
   }, items);
   let obj = { children: null };
   const items1 = [
     closure_5(value(4832).Text, { style: tmp.title, variant: "text-md/bold", children: "Redeem SKU for Orbs" }),
-    closure_5(value(6024).TextInput, {
+    closure_5(value(6190).TextInput, {
       containerStyle: tmp.textInput,
       label: "SKU ID",
       value,
@@ -48,7 +48,7 @@ export default function OrbCheckoutMenu() {
       variant: "text-md/bold",
       children: "Checkout will open with the orb price of the product, if it exists",
     }),
-    closure_5(value(5281).Button, {
+    closure_5(value(5447).Button, {
       text: "Open Orbs Checkout",
       variant: "primary",
       onPress: callback,
@@ -56,5 +56,5 @@ export default function OrbCheckoutMenu() {
     }),
   ];
   obj.children = items1;
-  return closure_6(value(5919).Card, obj);
+  return closure_6(value(6085).Card, obj);
 }

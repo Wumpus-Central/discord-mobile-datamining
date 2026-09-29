@@ -62,7 +62,7 @@ let obj6 = {
   paddingTop: nativeDefault.space.PX_8,
   paddingBottom: nativeDefault.space.PX_16,
 };
-obj2.purchaseButton = { height: fn(5286).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
+obj2.purchaseButton = { height: fn(5452).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
 let closure_7 = createStyles.createStyles(obj2);
 const __initData = {
   code: "function ProductDetailsActionSheetSkeletonTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}",

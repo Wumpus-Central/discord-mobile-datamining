@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import utils from "../utils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05293_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05459_LinearGradient.js";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import useShopProductItems from "../../hooks/useShopProductItems.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -52,8 +52,8 @@ function NameplateUser(arg0) {
       size: native.AvatarSizes.NORMAL,
       avatarDecoration,
       animate: !stateFromStores,
-      autoStatusCutout: "media_engine_connect",
-      "aria-hidden": "MEDIA_SESSION_JOINED",
+      autoStatusCutout: -1591115504,
+      "aria-hidden": -1422154049,
     };
     return timestampProducer(native.Avatar, obj);
   }, items1);

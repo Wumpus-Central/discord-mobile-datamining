@@ -9,7 +9,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ApplicationCommandConstants = fn(5305);
+const ApplicationCommandConstants = fn(5471);
 ({ CONTEXT_MENU_COMMANDS_QUERY_LIMIT: closure_8, BuiltInSectionId: closure_9 } = ApplicationCommandConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);

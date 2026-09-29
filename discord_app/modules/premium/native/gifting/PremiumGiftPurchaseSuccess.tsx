@@ -37,10 +37,10 @@ let result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumG
 export default function PremiumGiftSuccessBody(giftCodeRecord) {
   giftCodeRecord = giftCodeRecord.giftCodeRecord;
   const tmp = closure_11();
-  const nativeGiftContext = giftCodeRecord(10162).useNativeGiftContext();
+  const nativeGiftContext = giftCodeRecord(10329).useNativeGiftContext();
   ({ giftStyle, premiumType, planInterval } = nativeGiftContext);
-  let obj = giftCodeRecord(10162);
-  const giftCodeURL = giftCodeRecord(5089).getGiftCodeURL(giftCodeRecord.code);
+  let obj = giftCodeRecord(10329);
+  const giftCodeURL = giftCodeRecord(5255).getGiftCodeURL(giftCodeRecord.code);
   if (null != giftCodeRecord.giftStyle) {
     giftStyle = giftCodeRecord.giftStyle;
   }
@@ -50,7 +50,7 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
     subscriptionPlanId = tmp2(4488).getPlanIdForPremiumType(premiumType, planInterval);
     const tmp2Result = tmp2(4488);
   }
-  let obj2 = giftCodeRecord(5089);
+  let obj2 = giftCodeRecord(5255);
   const tmp6 = giftCodeURL;
   const tierDisplayNameByPlanId = giftCodeURL(4488).getTierDisplayNameByPlanId(subscriptionPlanId);
   const obj4 = giftCodeURL(4488);
@@ -64,7 +64,7 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
     ClipboardUtils.copy(giftCodeURL);
     const result = ToastUtils.presentCopiedToClipboard();
   }, items);
-  obj3.children = closure_8(giftCodeURL(10290), { giftStyle });
+  obj3.children = closure_8(giftCodeURL(10459), { giftStyle });
   const items1 = [closure_8(View, obj3), , , ,];
   const obj6 = { style: tmp.title, variant: "heading-lg/bold", children: null };
   const intl = tmp2(1115).intl;
@@ -86,7 +86,7 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
   obj10.children = intl3.string(giftCodeRecord(1115).t["qS+yMo"]);
   const items2 = [closure_8(giftCodeRecord(4832).Text, obj10)];
   obj5 = giftCodeURL(4488);
-  items2[1] = closure_8(giftCodeRecord(8370).InputButton, {
+  items2[1] = closure_8(giftCodeRecord(8535).InputButton, {
     text: giftCodeURL,
     icon: tmp6(4780),
     iconPosition: "end",

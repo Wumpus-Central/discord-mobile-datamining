@@ -3,8 +3,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import design_shared from "../../../../discord_common/js/packages/design/shared.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05293_LinearGradient.js";
-import _modDef5976 from "../../../../_runtime/metro/05976__.js";
+import LinearGradientDefault from "../../../../_runtime/05459_LinearGradient.js";
+import _modDef6142 from "../../../../_runtime/metro/06142__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -84,7 +84,7 @@ function PremiumRewardGlowGradient(arg0) {
     children: timestampProducer(LinearGradientDefault, { style: React4.absoluteFill, colors: memo, start, end }),
   };
   items2[1] = glowLight;
-  const items3 = [timestampProducer(_modDef5976, obj5), children];
+  const items3 = [timestampProducer(_modDef6142, obj5), children];
   obj4.children = items3;
   return React5(hasOwnProperty, obj4);
 }

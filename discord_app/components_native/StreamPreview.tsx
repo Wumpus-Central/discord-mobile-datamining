@@ -3,8 +3,8 @@ import initialize from "../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../discord_common/js/packages/tokens/native.tsx";
 import util from "../intl/index.native.tsx";
 import Pressables from "../design/void/Pressables/native/Pressables.tsx";
-import _modDef9520 from "../../_runtime/metro/09520__.js";
-import _modDef9521 from "../../_runtime/metro/09521__.js";
+import _modDef9687 from "../../_runtime/metro/09687__.js";
+import _modDef9688 from "../../_runtime/metro/09688__.js";
 import useFetchStreamPreviewDefault from "../modules/go_live/useFetchStreamPreview.tsx";
 import noop from "../../_runtime/metro/00019__.js";
 import ThemeStore from "../modules/user_settings/ThemeStore.tsx";
@@ -39,9 +39,9 @@ DefaultFallback.prototype["render"] = function render() {
   const obj = { style: tmp.wrapper, children: null };
   const obj2 = { resizeMode: "contain", style: tmp.fallbackImage, source: null };
   if (obj3.isThemeDark(this.props.theme)) {
-    let tmp6Result = _modDef9520;
+    let tmp6Result = _modDef9687;
   } else {
-    tmp6Result = _modDef9521;
+    tmp6Result = _modDef9688;
   }
   obj2.source = tmp6Result;
   obj.children = timestampProducer(React3, obj2);

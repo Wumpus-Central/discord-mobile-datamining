@@ -127,7 +127,7 @@ export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(qu
     obj16.style = items3;
     if (!tmp13) {
       const obj18 = { style: tmp.fullGradient, colors: items, start, end };
-      tmp21Result = tmp21(orbMultiplierEligibility(5293), obj18);
+      tmp21Result = tmp21(orbMultiplierEligibility(5459), obj18);
     }
     const items4 = [tmp21Result];
     const obj19 = { style: tmp.fullGradientContent, children: closure_8(closure_7, obj13) };

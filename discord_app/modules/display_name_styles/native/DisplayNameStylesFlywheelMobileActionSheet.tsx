@@ -65,8 +65,8 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   const tmp6 = closure_11();
   const obj2 = markAsDismissed(4685);
   const typeConsolidationTextTransform =
-    markAsDismissed(6400).useTypeConsolidationTextTransform("DisplayNameStylesFlywheel");
-  const obj3 = markAsDismissed(6400);
+    markAsDismissed(6566).useTypeConsolidationTextTransform("DisplayNameStylesFlywheel");
+  const obj3 = markAsDismissed(6566);
   const items = [UserStore];
   const stateFromStores = markAsDismissed(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj4 = markAsDismissed(504);
@@ -86,8 +86,8 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
     openUserSettings.openUserSettings(
       { screen: c2 ? timestampProducer.PROFILE_CUSTOMIZATION : timestampProducer.PROFILE_CUSTOMIZATION_TRY_IT_OUT },
       () => {
-        markAsDismissed(6459).runAfterInteractions(() => {
-          markAsDismissed(6800).openUserSettings({ screen: constants.DISPLAY_NAME_STYLES }, () => {
+        markAsDismissed(6625).runAfterInteractions(() => {
+          markAsDismissed(6966).openUserSettings({ screen: constants.DISPLAY_NAME_STYLES }, () => {
             closure_1_0(constants.TAKE_ACTION);
             const result = closure_2_0(4654).UNSAFE_markDismissibleContentAsDismissed(
               closure_2_0(2029).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_PROFILE_COACHMARK,
@@ -109,7 +109,7 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   const obj6 = { ref, onDismiss: callback2, startExpanded: true, handleDisabled: true, children: null };
   const obj7 = { style: tmp6.content, children: null };
   const items4 = [
-    closure_9(markAsDismissed(6575).ActionSheetHeaderBar, {
+    closure_9(markAsDismissed(6741).ActionSheetHeaderBar, {
       onPress() {
         const current = ref.current;
         if (current != null) {
@@ -125,7 +125,7 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   const obj9 = { style: tmp6.imageContainer, children: null };
   let tmp15Result = enabled;
   if (enabled) {
-    tmp15Result = closure_9(tmp2(16759).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
+    tmp15Result = closure_9(tmp2(16946).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
   }
   const items5 = [tmp15Result];
   if (enabled) {
@@ -157,30 +157,30 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
     const intl3 = tmp2(1115).intl;
     obj14.text = intl3.string(tmp2(1115).t["4P5I8V"]);
     obj14.onPress = callback;
-    const items7 = [closure_9(tmp2(5281).Button, obj14)];
+    const items7 = [closure_9(tmp2(5447).Button, obj14)];
     const obj15 = { text: null, variant: "secondary", size: "lg", onPress: null };
     const intl4 = tmp2(1115).intl;
     obj15.text = intl4.string(tmp2(1115).t.TulDPl);
     obj15.onPress = callback1;
-    items7[1] = closure_9(tmp2(5281).Button, obj15);
+    items7[1] = closure_9(tmp2(5447).Button, obj15);
     obj13.children = items7;
     items4[4] = closure_10(View, obj13);
     obj7.children = items4;
     obj12.children = closure_10(View, obj7);
-    obj6.children = closure_9(tmp2(6544).SafeAreaPaddingView, obj12);
-    return closure_9(tmp2(6571).BottomSheet, obj6);
+    obj6.children = closure_9(tmp2(6710).SafeAreaPaddingView, obj12);
+    return closure_9(tmp2(6737).BottomSheet, obj6);
   } else {
     if (tmp2Result.isIOS()) {
       const obj16 = { source: null, style: null, resizeMode: "contain", enableAnimation: null };
-      const obj17 = { uri: tmp4(16761) };
+      const obj17 = { uri: tmp4(16948) };
       obj16.source = obj17;
       obj16.style = tmp6.image;
       obj16.enableAnimation = !enabled;
-      let tmp15Result2 = closure_9(tmp4(5899), obj16);
-      const tmp4Result = tmp4(5899);
+      let tmp15Result2 = closure_9(tmp4(6065), obj16);
+      const tmp4Result = tmp4(6065);
     } else {
-      const obj18 = { url: tmp4(16761), style: tmp6.image, autoplay: true };
-      tmp15Result2 = closure_9(tmp2(8271).APNGPlayer, obj18);
+      const obj18 = { url: tmp4(16948), style: tmp6.image, autoplay: true };
+      tmp15Result2 = closure_9(tmp2(8436).APNGPlayer, obj18);
     }
     tmp2Result = tmp2(1364);
   }

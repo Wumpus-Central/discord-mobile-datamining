@@ -14,7 +14,7 @@ const jsxProd = fn(21);
 const createStyles = fn(4836);
 let obj2 = {
   container: {
-    minHeight: fn(5286).SMALL_BUTTON_HEIGHT,
+    minHeight: fn(5452).SMALL_BUTTON_HEIGHT,
     borderRadius: nativeDefault.radii.round,
     justifyContent: "center",
     alignItems: "center",

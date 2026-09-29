@@ -25,9 +25,9 @@ export const ErrorText = function ErrorText(children) {
   }, items);
   const obj2 = { direction: "horizontal", spacing: 4, align: "flex-start", style: children.style, children: null };
   const items1 = [
-    closure_3(nodeText(6028).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" }),
+    closure_3(nodeText(6194).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" }),
     closure_3(nodeText(4832).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }),
   ];
   obj2.children = items1;
-  return closure_4(nodeText(5279).Stack, obj2);
+  return closure_4(nodeText(5445).Stack, obj2);
 };

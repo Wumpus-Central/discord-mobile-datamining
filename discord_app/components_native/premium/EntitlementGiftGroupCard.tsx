@@ -8,21 +8,21 @@ import GameIconDefault from "../../modules/game_detection/native/GameIcon.tsx";
 import ChevronSmallRightIcon2 from "../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
 import SlayerStorefrontUtils from "../../modules/slayer_storefront/SlayerStorefrontUtils.tsx";
 import SlayerStorefrontItemCardDefault from "../../modules/slayer_storefront/native/SlayerStorefrontItemCard.tsx";
-import _modDef10488 from "../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
+import _modDef10657 from "../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
 import ChevronSmallDownIcon from "../../design/components/Icon/native/redesign/generated/ChevronSmallDownIcon.tsx";
 import GiftCodeActionCreatorsDefault from "../../actions/GiftCodeActionCreators.tsx";
 import SubscriptionUtils from "../../utils/SubscriptionUtils.tsx";
-import _modDef12766 from "../../../_runtime/metro/12766__.js";
-import _modDef12767 from "../../../_runtime/metro/12767__.js";
-import _modDef12768 from "../../../_runtime/metro/12768__.js";
-import _modDef12769 from "../../../_runtime/metro/12769__.js";
-import _modDef12770 from "../../../_runtime/metro/12770__.js";
-import _modDef12771 from "../../../_runtime/metro/12771__.js";
-import _modDef12772 from "../../../_runtime/metro/12772__.js";
-import _modDef12773 from "../../../_runtime/metro/12773__.js";
-import _modDef12774 from "../../../_runtime/metro/12774__.js";
-import _modDef12777 from "../../../_runtime/metro/12777__.js";
-import _modDef12778 from "../../../_runtime/metro/12778__.js";
+import _modDef12936 from "../../../_runtime/metro/12936__.js";
+import _modDef12937 from "../../../_runtime/metro/12937__.js";
+import _modDef12938 from "../../../_runtime/metro/12938__.js";
+import _modDef12939 from "../../../_runtime/metro/12939__.js";
+import _modDef12940 from "../../../_runtime/metro/12940__.js";
+import _modDef12941 from "../../../_runtime/metro/12941__.js";
+import _modDef12942 from "../../../_runtime/metro/12942__.js";
+import _modDef12943 from "../../../_runtime/metro/12943__.js";
+import _modDef12944 from "../../../_runtime/metro/12944__.js";
+import _modDef12947 from "../../../_runtime/metro/12947__.js";
+import _modDef12948 from "../../../_runtime/metro/12948__.js";
 import GiftCodeRowDefault from "GiftCodeRow.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import ApplicationStore from "../../modules/applications/ApplicationStore.tsx";
@@ -261,35 +261,35 @@ prototype["renderHeader"] = function renderHeader(source, children) {
 };
 prototype["getCardHeaderThumbnail"] = function getCardHeaderThumbnail(id, giftStyle) {
   if (constants2.STANDARD_BOX === giftStyle) {
-    return _modDef12766;
+    return _modDef12936;
   } else if (constants2.CAKE === giftStyle) {
-    return _modDef12768;
+    return _modDef12938;
   } else if (constants2.CHEST === giftStyle) {
-    return _modDef12769;
+    return _modDef12939;
   } else if (constants2.COFFEE === giftStyle) {
-    return _modDef12767;
+    return _modDef12937;
   } else if (constants2.SEASONAL_STANDARD_BOX === giftStyle) {
-    return _modDef12770;
+    return _modDef12940;
   } else if (constants2.SEASONAL_CAKE === giftStyle) {
-    return _modDef12771;
+    return _modDef12941;
   } else if (constants2.SEASONAL_CHEST === giftStyle) {
-    return _modDef12772;
+    return _modDef12942;
   } else if (constants2.SEASONAL_COFFEE === giftStyle) {
-    return _modDef12773;
+    return _modDef12943;
   } else if (constants2.NITROWEEN_STANDARD === giftStyle) {
-    const obj = { uri: _modDef10488 };
+    const obj = { uri: _modDef10657 };
     return obj;
   } else if (TIER_0.TIER_0 === id) {
-    return _modDef12774;
+    return _modDef12944;
   } else if (TIER_0.TIER_1 === id) {
-    return _modDef12777;
+    return _modDef12947;
   } else {
     if (TIER_0.TIER_2 !== id) {
       if (TIER_0.LEGACY !== id) {
         return null;
       }
     }
-    return _modDef12778;
+    return _modDef12948;
   }
 };
 prototype["renderCardHeader"] = function renderCardHeader(sku) {

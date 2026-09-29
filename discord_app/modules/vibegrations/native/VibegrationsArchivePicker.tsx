@@ -96,7 +96,7 @@ let closure_9 = async function _sendVibegrationsArchiveImport(arg0) {
     }
   }
 };
-const VibegrationsConnectionStore = fn(12642);
+const VibegrationsConnectionStore = fn(12812);
 ({
   ensureConnection: closure_4,
   sendUserMessage: hasOwnProperty,

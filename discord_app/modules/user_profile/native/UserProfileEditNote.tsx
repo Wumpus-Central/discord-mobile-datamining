@@ -56,7 +56,7 @@ export default function UserProfileEditNote(userId) {
             if (closure_5 == null) {
               str = "";
             }
-            const tmp2 = closure_1_1(10384);
+            const tmp2 = closure_1_1(10553);
             tmp2({
               hasEdits: str !== closure_6,
               onHasEdits: closure_1_0(4701).dismissKeyboard,

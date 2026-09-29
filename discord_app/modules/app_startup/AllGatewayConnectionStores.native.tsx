@@ -1,5 +1,6 @@
 // discord_app/modules/app_startup/AllGatewayConnectionStores.native.tsx
 import PostConnectionCallbackStore from "../gateway/PostConnectionCallbackStore.tsx";
+import SmartSearchResultsStore from "../intelligence_layer/search/SmartSearchResultsStore.tsx";
 import GlobalDiscoveryServersSearchResultsStore from "../global_discovery_servers/GlobalDiscoveryServersSearchResultsStore.tsx";
 import EmbeddedActivitiesStore from "../activities/EmbeddedActivitiesStore.tsx";
 import AdPersonalizationStore from "../ads/AdPersonalizationStore.tsx";
@@ -68,7 +69,7 @@ import GuildThemeRuntimeStore from "../guild_themes/GuildThemeRuntimeStore.tsx";
 import GuildMediaStateStore from "../guilds_bar/GuildMediaStateStore.tsx";
 import DataHarvestStore from "../harvester/DataHarvestStore.tsx";
 import RecentMentionsStore from "../inbox/RecentMentionsStore.tsx";
-import IntelligenceSearchStore from "../intelligence_layer/search/IntelligenceSearchStore.tsx";
+import SuggestedSearchStore from "../intelligence_layer/search/SuggestedSearchStore.tsx";
 import LocalAppDetectionStore from "../local_app_detection/native/LocalAppDetectionStore.tsx";
 import LocalPushNotificationStore from "../local_push_notification/native/LocalPushNotificationStore.tsx";
 import LocationMetadataStore from "../location_metadata/stores/LocationMetadataStore.tsx";
@@ -209,6 +210,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 PostConnectionCallbackStore;
 GlobalDiscoveryServersSearchResultsStore;
+SmartSearchResultsStore;
 const result = size.fileFinishedImporting("modules/app_startup/AllGatewayConnectionStores.native.tsx");
 
 export default function noop() {}

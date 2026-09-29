@@ -253,28 +253,28 @@ class VoiceQuality extends tmp2 {
               };
               let prop;
               if (num.inboundStats[closure_0] != null) {
-                prop = tmp29.bufferStats.audioJitterBufferHistogram;
+                prop = tmp33.bufferStats.audioJitterBufferHistogram;
               }
               if (prop == null) {
-                prop = new closure_0(7161).Histogram();
+                prop = new closure_0(7326).Histogram();
               }
               bufferStats.audioJitterBufferHistogram = prop;
               bufferStats.audioJitterTarget = type.audioJitterTarget;
               let prop1;
               if (num.inboundStats[closure_0] != null) {
-                prop1 = tmp29.bufferStats.audioJitterTargetHistogram;
+                prop1 = tmp33.bufferStats.audioJitterTargetHistogram;
               }
               if (prop1 == null) {
-                prop1 = new closure_0(7161).Histogram();
+                prop1 = new closure_0(7326).Histogram();
               }
               bufferStats.audioJitterTargetHistogram = prop1;
               bufferStats.audioJitterDelay = type.audioJitterDelay;
               let prop2;
               if (num.inboundStats[closure_0] != null) {
-                prop2 = tmp29.bufferStats.audioJitterDelayHistogram;
+                prop2 = tmp33.bufferStats.audioJitterDelayHistogram;
               }
               if (prop2 == null) {
-                prop2 = new closure_0(7161).Histogram();
+                prop2 = new closure_0(7326).Histogram();
               }
               bufferStats.audioJitterDelayHistogram = prop2;
               ({ relativeReceptionDelay: obj.relativeReceptionDelay, relativePlayoutDelay: obj.relativePlayoutDelay } =
@@ -359,19 +359,30 @@ class VoiceQuality extends tmp2 {
               }
               obj4.decryptInvalidNonceCount = num7;
               if (null != num.inboundStats[closure_0]) {
-                let decryptFailureBeforeSuccessCount = tmp29.decryptFailureBeforeSuccessCount;
-                if (decryptFailureBeforeSuccessCount == null) {
-                  let decryptFailureCount;
-                  if (obj4.decryptSuccessCount > 0) {
-                    decryptFailureCount = obj4.decryptFailureCount;
+                let tmp23;
+                if (packetsReceived >= tmp33.packetsReceived) {
+                  let decryptFailureBeforeSuccessCount = tmp33.decryptFailureBeforeSuccessCount;
+                  if (decryptFailureBeforeSuccessCount == null) {
+                    let decryptFailureCount;
+                    if (obj4.decryptSuccessCount > 0) {
+                      decryptFailureCount = obj4.decryptFailureCount;
+                    }
+                    decryptFailureBeforeSuccessCount = decryptFailureCount;
                   }
-                  decryptFailureBeforeSuccessCount = decryptFailureCount;
+                  tmp23 = decryptFailureBeforeSuccessCount;
+                }
+                if (packetsReceived < tmp33.packetsReceived) {
+                  const _performance3 = performance;
+                  let connectedAtMs = performance.now();
+                } else {
+                  connectedAtMs = tmp33.connectedAtMs;
                 }
                 const obj5 = {
-                  connectedAtMs: tmp29.connectedAtMs,
-                  packetsReceived,
-                  bytesReceived,
-                  packetsLost,
+                  connectedAtMs,
+                  disconnectedAtMs: null,
+                  packetsReceived: null,
+                  bytesReceived: null,
+                  packetsLost: null,
                   nackCount: null,
                   fecPacketsReceived: null,
                   fecPacketsDiscarded: null,
@@ -379,6 +390,14 @@ class VoiceQuality extends tmp2 {
                   frameOpStats: null,
                   decryptFailureBeforeSuccessCount: null,
                 };
+                let disconnectedAtMs;
+                if (packetsReceived >= tmp33.packetsReceived) {
+                  disconnectedAtMs = tmp33.disconnectedAtMs;
+                }
+                obj5.disconnectedAtMs = disconnectedAtMs;
+                obj5.packetsReceived = packetsReceived;
+                obj5.bytesReceived = bytesReceived;
+                obj5.packetsLost = packetsLost;
                 if (nackCount == null) {
                   nackCount = 0;
                 }
@@ -387,12 +406,12 @@ class VoiceQuality extends tmp2 {
                 obj5.fecPacketsDiscarded = num;
                 obj5.bufferStats = bufferStats;
                 obj5.frameOpStats = obj3;
-                obj5.decryptFailureBeforeSuccessCount = decryptFailureBeforeSuccessCount;
+                obj5.decryptFailureBeforeSuccessCount = tmp23;
                 const merged = Object.assign(obj4);
-                tmp27.inboundStats[closure_0] = obj5;
+                tmp31.inboundStats[closure_0] = obj5;
                 const obj6 = {
-                  previousTimestampMs: tmp27.periodicInboundStats[closure_0].previousTimestampMs,
-                  previous: tmp27.periodicInboundStats[closure_0].previous,
+                  previousTimestampMs: tmp31.periodicInboundStats[closure_0].previousTimestampMs,
+                  previous: tmp31.periodicInboundStats[closure_0].previous,
                   currentTimestampMs: null,
                   current: null,
                   accelerateRateSum: null,
@@ -401,31 +420,31 @@ class VoiceQuality extends tmp2 {
                   speechExpandRateSum: null,
                   numRateSamples: null,
                 };
-                const _performance3 = performance;
+                const _performance4 = performance;
                 obj6.currentTimestampMs = performance.now();
                 obj6.current = obj3;
                 let num14 = type.accelerateRate;
                 if (num14 == null) {
                   num14 = 0;
                 }
-                obj6.accelerateRateSum = tmp27.periodicInboundStats[closure_0].accelerateRateSum + num14;
+                obj6.accelerateRateSum = tmp31.periodicInboundStats[closure_0].accelerateRateSum + num14;
                 let num15 = type.expandRate;
                 if (num15 == null) {
                   num15 = 0;
                 }
-                obj6.expandRateSum = tmp27.periodicInboundStats[closure_0].expandRateSum + num15;
+                obj6.expandRateSum = tmp31.periodicInboundStats[closure_0].expandRateSum + num15;
                 let num16 = type.preemptiveExpandRate;
                 if (num16 == null) {
                   num16 = 0;
                 }
-                obj6.preemptiveExpandRateSum = tmp27.periodicInboundStats[closure_0].preemptiveExpandRateSum + num16;
+                obj6.preemptiveExpandRateSum = tmp31.periodicInboundStats[closure_0].preemptiveExpandRateSum + num16;
                 let num17 = type.speechExpandRate;
                 if (num17 == null) {
                   num17 = 0;
                 }
-                obj6.speechExpandRateSum = tmp27.periodicInboundStats[closure_0].speechExpandRateSum + num17;
-                obj6.numRateSamples = tmp27.periodicInboundStats[closure_0].numRateSamples + 1;
-                tmp27.periodicInboundStats[closure_0] = obj6;
+                obj6.speechExpandRateSum = tmp31.periodicInboundStats[closure_0].speechExpandRateSum + num17;
+                obj6.numRateSamples = tmp31.periodicInboundStats[closure_0].numRateSamples + 1;
+                tmp31.periodicInboundStats[closure_0] = obj6;
               } else {
                 const obj7 = {
                   connectedAtMs: null,
@@ -438,7 +457,7 @@ class VoiceQuality extends tmp2 {
                   bufferStats: null,
                   frameOpStats: null,
                 };
-                const _performance4 = performance;
+                const _performance5 = performance;
                 obj7.connectedAtMs = performance.now();
                 obj7.packetsReceived = packetsReceived;
                 obj7.bytesReceived = bytesReceived;
@@ -453,7 +472,7 @@ class VoiceQuality extends tmp2 {
                 obj7.bufferStats = bufferStats;
                 obj7.frameOpStats = obj3;
                 const merged1 = Object.assign(obj4);
-                tmp27.inboundStats[closure_0] = obj7;
+                tmp31.inboundStats[closure_0] = obj7;
                 const obj13 = {
                   previousTimestampMs: null,
                   previous: null,
@@ -491,7 +510,7 @@ class VoiceQuality extends tmp2 {
                   num12 = 0;
                 }
                 obj13.speechExpandRateSum = num12;
-                tmp27.periodicInboundStats[closure_0] = obj13;
+                tmp31.periodicInboundStats[closure_0] = obj13;
               }
             }
           });
@@ -616,10 +635,12 @@ prototype["getInboundDurationStats"] = function getInboundDurationStats(sender_u
   if (null == this.inboundStats[sender_user_id]) {
     obj = {};
   } else {
-    obj = { duration_connected_ms: null };
-    const _Math = Math;
-    const _performance = performance;
-    obj.duration_connected_ms = Math.round(performance.now() - tmp.connectedAtMs);
+    let disconnectedAtMs = tmp.disconnectedAtMs;
+    if (disconnectedAtMs == null) {
+      const _performance = performance;
+      disconnectedAtMs = performance.now();
+    }
+    obj = { duration_connected_ms: Math.round(disconnectedAtMs - tmp.connectedAtMs) };
   }
   return obj;
 };
@@ -1058,9 +1079,11 @@ prototype["getPeriodicStats"] = function getPeriodicStats() {
   }
   return items;
 };
-prototype["destroyUser"] = function destroyUser(arg0) {
-  delete tmp3[tmp2];
-  delete tmp[tmp2];
+prototype["markUserDisconnected"] = function markUserDisconnected(sender_user_id) {
+  if (null != this.inboundStats[sender_user_id]) {
+    const _performance = performance;
+    tmp.disconnectedAtMs = performance.now();
+  }
 };
 prototype["getInboundParticipants"] = function getInboundParticipants() {
   return SnowflakeUtilsDefault.keys(this.inboundStats);

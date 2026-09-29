@@ -112,7 +112,7 @@ export default function VibegrationsFloatingActivity(agents) {
     if (null != todos) {
       const obj4 = { style: tmp.panel, children: null };
       const obj5 = { todos, agents: agents.agents, live: todosLive, announceProgress: false };
-      obj4.children = closure_6(tmp11(16379), obj5);
+      obj4.children = closure_6(tmp11(16563), obj5);
       tmp12 = closure_6(View, obj4);
     }
   }
@@ -130,7 +130,7 @@ export default function VibegrationsFloatingActivity(agents) {
   obj7.accessibilityLabel = intl.formatToPlainString(_modDef3715.Sk4CzQ, { activity: line });
   obj7.onPress = onJumpToActivity;
   const tmp7 = _slicedToArray(noop.useState(false), 2);
-  const items3 = [closure_6(sharedValue(9611).MagicWandIcon, { size: "xs", color: nativeDefault.colors.TEXT_BRAND })];
+  const items3 = [closure_6(sharedValue(9778).MagicWandIcon, { size: "xs", color: nativeDefault.colors.TEXT_BRAND })];
   const obj8 = { size: "xs", color: nativeDefault.colors.TEXT_BRAND };
   items3[1] = closure_6(View, {
     style: tmp.label,
@@ -142,7 +142,7 @@ export default function VibegrationsFloatingActivity(agents) {
     }),
   });
   obj7.children = items3;
-  const items4 = [closure_7(sharedValue(5435).PressableOpacity, obj7)];
+  const items4 = [closure_7(sharedValue(5602).PressableOpacity, obj7)];
   if (null == todos) {
     items4[1] = null;
     obj6.children = items4;
@@ -166,9 +166,9 @@ export default function VibegrationsFloatingActivity(agents) {
     obj10.onPress = callback;
     let colors = tmp11(576).colors;
     const obj12 = { size: "xs", color: tmp8 ? colors.TEXT_BRAND : colors.TEXT_MUTED };
-    colors = closure_6(tmp2(5850).ClipboardListIcon, obj12);
+    colors = closure_6(tmp2(6016).ClipboardListIcon, obj12);
     obj10.children = colors;
-    closure_6(tmp2(5435).PressableOpacity, obj10);
+    closure_6(tmp2(5602).PressableOpacity, obj10);
   }
   const obj9 = {
     style: tmp.label,

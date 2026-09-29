@@ -20,9 +20,9 @@ function CreateThreadViewInner(screenIndex) {
   const items = [parentChannel.id];
   const effect = noop.useEffect(
     () => () => {
-      parentChannel(7196).clearDraft(user.id, DraftType.ThreadSettings);
-      const obj = parentChannel(7196);
-      parentChannel(7196).clearDraft(user.id, DraftType.FirstThreadMessage);
+      parentChannel(7361).clearDraft(user.id, DraftType.ThreadSettings);
+      const obj = parentChannel(7361);
+      parentChannel(7361).clearDraft(user.id, DraftType.FirstThreadMessage);
     },
     items,
   );
@@ -82,7 +82,7 @@ function CreateThreadViewInner(screenIndex) {
   }
   obj4.location = str;
   obj4.onThreadCreated = callback;
-  const tmp12Result = parentChannel(9718)(obj4);
+  const tmp12Result = parentChannel(9885)(obj4);
   closure_129_6 = tmp12Result;
   _require = asyncGeneratorStep(async (arg0, arg1) => {
     closure_0 = arg0;
@@ -123,8 +123,8 @@ function CreateThreadViewInner(screenIndex) {
                 current(null);
                 c5 = 1;
                 if (null == parentMessageId.parentMessageId) {
-                  current(closure_0(16433).makeEmptyTitleError());
-                  const obj8 = closure_0(16433);
+                  current(closure_0(16618).makeEmptyTitleError());
+                  const obj8 = closure_0(16618);
                   closure_0(4701).dismissKeyboard();
                   tmp60.current = false;
                   c5 = 0;
@@ -147,8 +147,8 @@ function CreateThreadViewInner(screenIndex) {
                 code = body.code;
               }
               if (code === constants.AUTOMOD_TITLE_BLOCKED) {
-                current(closure_0(16433).makeAutomodViolationError(closure_130_0.body, closure_0));
-                const obj5 = closure_0(16433);
+                current(closure_0(16618).makeAutomodViolationError(closure_130_0.body, closure_0));
+                const obj5 = closure_0(16618);
                 closure_0(4701).dismissKeyboard();
                 const obj6 = closure_0(4701);
               } else {
@@ -170,8 +170,8 @@ function CreateThreadViewInner(screenIndex) {
                   tmp23 = null != name;
                 }
                 if (tmp23) {
-                  current(closure_0(16433).makeApiNameRequiredError());
-                  const obj3 = closure_0(16433);
+                  current(closure_0(16618).makeApiNameRequiredError());
+                  const obj3 = closure_0(16618);
                   closure_0(4701).dismissKeyboard();
                   const obj4 = closure_0(4701);
                 }
@@ -185,9 +185,9 @@ function CreateThreadViewInner(screenIndex) {
               const obj11 = { value, done: true };
               return obj11;
             } else {
-              parentChannel(7196).saveDraft(closure_0.id, "", DraftType.FirstThreadMessage);
+              parentChannel(7361).saveDraft(closure_0.id, "", DraftType.FirstThreadMessage);
               c5 = 0;
-              const obj = parentChannel(7196);
+              const obj = parentChannel(7361);
             }
             current = tmp60;
             tmp60.current = false;
@@ -218,19 +218,19 @@ function CreateThreadViewInner(screenIndex) {
     }
     return applyArgumentsResult;
   }, items2);
-  const tmp12 = parentChannel(9718);
-  const tmp11Result = parentChannel(6583);
+  const tmp12 = parentChannel(9885);
+  const tmp11Result = parentChannel(6749);
   const tmp16 = parentChannel(1613)();
   const ref = noop.useRef(null);
   const ref1 = noop.useRef(null);
-  let obj5 = { value: tmp11Result(parentChannel(6603).CREATE_THREAD).analyticsLocations, children: null };
-  const items3 = [closure_13(parentChannel(5437), { absolute: true })];
+  let obj5 = { value: tmp11Result(parentChannel(6769).CREATE_THREAD).analyticsLocations, children: null };
+  const items3 = [closure_13(parentChannel(5604), { absolute: true })];
   let obj6 = { style: null, children: null };
   const items4 = [
     tmp.container,
     {
       marginBottom:
-        parentChannel(6402)({ isKeyboardAwareOnAndroid: false, includeKeyboardHeight: true }).insets.bottom -
+        parentChannel(6568)({ isKeyboardAwareOnAndroid: false, includeKeyboardHeight: true }).insets.bottom -
         tmp16.bottom,
     },
   ];
@@ -247,7 +247,7 @@ function CreateThreadViewInner(screenIndex) {
       style: tmp.threadIconContainer,
       children: closure_13(require("ThreadIcon").ThreadIcon, { size: "lg" }),
     }),
-    closure_13(parentChannel(16432), {
+    closure_13(parentChannel(16617), {
       ref: ref1,
       chatInputRef: ref,
       threadSettingsDraft,
@@ -260,12 +260,12 @@ function CreateThreadViewInner(screenIndex) {
     tmp22Result = null;
     if (null == threadSettingsDraft.parentMessageId) {
       tmp22Result = null;
-      if (privateThreadMode !== tmp2(8606).PrivateThreadMode.Disabled) {
+      if (privateThreadMode !== tmp2(8771).PrivateThreadMode.Disabled) {
         const obj12 = { style: tmp.optionPrivateThread, children: null };
         const obj13 = {
           start: true,
           end: true,
-          disabled: privateThreadMode !== tmp2(8606).PrivateThreadMode.Enabled,
+          disabled: privateThreadMode !== tmp2(8771).PrivateThreadMode.Enabled,
           label: null,
           subLabel: null,
           value: null,
@@ -275,7 +275,7 @@ function CreateThreadViewInner(screenIndex) {
         obj13.label = intl.string(tmp2(1115).t.F1zyvU);
         const intl2 = tmp2(1115).intl;
         obj13.subLabel = intl2.string(tmp2(1115).t.Wy5RIQ);
-        obj13.value = tmp2(8606).getIsPrivate(threadSettingsDraft, privateThreadMode);
+        obj13.value = tmp2(8771).getIsPrivate(threadSettingsDraft, privateThreadMode);
         obj13.onValueChange = function onValueChange(isPrivate) {
           const parentChannelId = closure_0.parentChannelId;
           if (null != parentChannelId) {
@@ -283,9 +283,9 @@ function CreateThreadViewInner(screenIndex) {
             DraftActionCreatorsDefault.changeThreadSettings(parentChannelId, obj2);
           }
         };
-        obj12.children = closure_13(tmp2(6621).TableSwitchRow, obj13);
+        obj12.children = closure_13(tmp2(6787).TableSwitchRow, obj13);
         tmp22Result = closure_13(closure_6, obj12);
-        const tmp2Result = tmp2(8606);
+        const tmp2Result = tmp2(8771);
       }
     }
   }
@@ -298,7 +298,7 @@ function CreateThreadViewInner(screenIndex) {
     const obj15 = { style: tmp.border };
     const items8 = [closure_13(closure_6, obj15)];
     const obj16 = { channelId: parentChannel.id, messageId: threadSettingsDraft.parentMessageId };
-    items8[1] = closure_13(tmp2(16434).ThreadCreationStarterMessage, obj16);
+    items8[1] = closure_13(tmp2(16619).ThreadCreationStarterMessage, obj16);
     obj14.children = items8;
     tmp21Result = closure_14(closure_6, obj14);
   }
@@ -310,11 +310,11 @@ function CreateThreadViewInner(screenIndex) {
   if (parentChannel.rateLimitPerUser > 0) {
     const obj17 = { style: tmp.typingWrapper, children: null };
     const obj18 = { channel: parentChannel, hasTypingText: false, slowmodeType: SlowmodeType.CreateThread };
-    obj17.children = closure_13(tmp11(11465), obj18);
+    obj17.children = closure_13(tmp11(11634), obj18);
     tmp22Result2 = closure_13(closure_6, obj17);
   }
   items5[2] = tmp22Result2;
-  items5[3] = closure_13(parentChannel(11440), {
+  items5[3] = closure_13(parentChannel(11609), {
     ref,
     channel: parentChannel,
     onJumpToPresent,
@@ -322,7 +322,7 @@ function CreateThreadViewInner(screenIndex) {
     secondaryTextFieldRef: ref1,
     threadCreationCallback: callback1,
   });
-  items5[4] = closure_13(parentChannel(12139), { channelId: parentChannel.id });
+  items5[4] = closure_13(parentChannel(12310), { channelId: parentChannel.id });
   obj6.children = items5;
   items3[1] = closure_14(closure_6, obj6);
   obj5.children = items3;
@@ -330,8 +330,8 @@ function CreateThreadViewInner(screenIndex) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
-const DraftType = fn(5200).DraftType;
-const SlowmodeType = fn(7100).SlowmodeType;
+const DraftType = fn(5366).DraftType;
+const SlowmodeType = fn(7265).SlowmodeType;
 const Constants = fn(1074);
 ({ AbortCodes: c10, AnalyticEvents: closure_11, NOOP: closure_12 } = Constants);
 const jsxProd = fn(21);

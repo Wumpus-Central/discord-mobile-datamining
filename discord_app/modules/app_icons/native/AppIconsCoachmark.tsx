@@ -2,9 +2,9 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef9419 from "../../../../_runtime/metro/09419__.js";
+import _modDef9586 from "../../../../_runtime/metro/09586__.js";
 import AppIconUtils from "AppIconUtils.tsx";
-import _modDef16749 from "../../../../_runtime/metro/16749__.js";
+import _modDef16937 from "../../../../_runtime/metro/16937__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -52,12 +52,12 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
   };
   const obj4 = { style: tmp.info, children: null };
   const isPremiumResult = PremiumUtilsDefault.isPremium(stateFromStores);
-  const items2 = [closure_8(closure_4, { source: _modDef16749, style: tmp.image }), ,];
+  const items2 = [closure_8(closure_4, { source: _modDef16937, style: tmp.image }), ,];
   const obj6 = { style: tmp.titleContainer, children: null };
-  const obj5 = { source: _modDef16749, style: tmp.image };
+  const obj5 = { source: _modDef16937, style: tmp.image };
   const items3 = [
     closure_8(markAsDismissed(1177).Icon, {
-      source: _modDef9419,
+      source: _modDef9586,
       size: markAsDismissed(1177).IconSizes.MEDIUM,
       style: tmp.nitroWheel,
       disableColor: true,
@@ -93,14 +93,14 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
     }
     const result = AppIconUtils.navigateToAppIconSettings();
   };
-  const items5 = [closure_8(markAsDismissed(5281).Button, obj11)];
+  const items5 = [closure_8(markAsDismissed(5447).Button, obj11)];
   const obj12 = { variant: "secondary", text: null, onPress: null };
   const intl4 = tmp2(1115).intl;
   obj12.text = intl4.string(markAsDismissed(1115).t.iSrIIZ);
   obj12.onPress = callback;
-  items5[1] = closure_8(markAsDismissed(5281).Button, obj12);
+  items5[1] = closure_8(markAsDismissed(5447).Button, obj12);
   obj10.children = items5;
   items4[1] = closure_9(closure_5, obj10);
   obj3.children = items4;
-  return closure_9(markAsDismissed(6571).BottomSheet, obj3);
+  return closure_9(markAsDismissed(6737).BottomSheet, obj3);
 }

@@ -8,7 +8,7 @@ import StageInstanceStore from "../../StageInstanceStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const StageChannelsConstants = fn(5726);
+const StageChannelsConstants = fn(5893);
 ({ MAX_STAGE_TOPIC_LENGTH: closure_9, START_STAGE_CHANNEL_EVENT_SHEET_KEY: c10 } = StageChannelsConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, Fonts } = Constants);
@@ -77,10 +77,10 @@ export default function StartStageChannelEventActionSheet(channel) {
               if (null != stateFromStores) {
                 c4 = 3;
                 c5 = 1;
-                const obj6 = { value: tmp45(7846).editStage(channel, importAll, constants.GUILD_ONLY), done: false };
+                const obj6 = { value: tmp45(8011).editStage(channel, importAll, constants.GUILD_ONLY), done: false };
                 return obj6;
               } else {
-                const tmp33Result2 = tmp45(7846);
+                const tmp33Result2 = tmp45(8011);
                 c4 = 2;
                 c5 = 1;
                 const obj7 = {
@@ -153,8 +153,8 @@ export default function StartStageChannelEventActionSheet(channel) {
   const tmp7 = _slicedToArray(noop.useState(false), 2);
   [obj3, c4] = _slicedToArray(noop.useState(null), 2);
   const tmp9 = _slicedToArray(noop.useState(null), 2);
-  const shouldAgeVerifyToSpeakForCurrentUser = channel(5734).useShouldAgeVerifyToSpeakForCurrentUser(channel.id);
-  stateFromStores(5298)(() => {
+  const shouldAgeVerifyToSpeakForCurrentUser = channel(5901).useShouldAgeVerifyToSpeakForCurrentUser(channel.id);
+  stateFromStores(5464)(() => {
     let id;
     if (stateFromStores != null) {
       id = stateFromStores.id;
@@ -166,7 +166,7 @@ export default function StartStageChannelEventActionSheet(channel) {
     });
   });
   let obj4 = { style: tmp.header, children: null };
-  const items1 = [closure_13(stateFromStores(7855), {}), ,];
+  const items1 = [closure_13(stateFromStores(8020), {}), ,];
   let obj5 = {
     style: tmp.headerTitle,
     accessibilityRole: "header",
@@ -196,7 +196,7 @@ export default function StartStageChannelEventActionSheet(channel) {
   obj4.children = items1;
   let stringResult2;
   const tmp11 = stateFromStores;
-  const tmp2Result = channel(5734);
+  const tmp2Result = channel(5901);
   if (null == stateFromStores) {
     const intl5 = tmp2(1115).intl;
     stringResult2 = intl5.string(tmp2(1115).t.gR66jX);
@@ -231,8 +231,8 @@ export default function StartStageChannelEventActionSheet(channel) {
   const intl7 = tmp2(1115).intl;
   obj8.placeholder = intl7.string(channel(1115).t.ZwWruY);
   obj8.onSubmitEditing = handleSave;
-  items2[1] = closure_13(channel(6024).TextInput, obj8);
-  items2[2] = closure_13(tmp11(7858), {
+  items2[1] = closure_13(channel(6190).TextInput, obj8);
+  items2[2] = closure_13(tmp11(8023), {
     onConfirmPress() {
       return stateFromStores(_undefined[17]).hideActionSheet(closure_1_10);
     },
@@ -258,7 +258,7 @@ export default function StartStageChannelEventActionSheet(channel) {
     const intl8 = tmp2(1115).intl;
     stringResult3 = intl8.string(tmp2(1115).t.K344S7);
   }
-  obj11.children = closure_13(channel(5281).Button, {
+  obj11.children = closure_13(channel(5447).Button, {
     text: stringResult3,
     onPress: handleSave,
     disabled: "" === value,
@@ -296,8 +296,8 @@ export default function StartStageChannelEventActionSheet(channel) {
   const tmp13Result = closure_14(View, obj4);
   items2[5] = tmp15Result2;
   obj7.children = items2;
-  return closure_13(channel(6571).BottomSheet, {
+  return closure_13(channel(6737).BottomSheet, {
     keyboardShouldPersistTaps: "always",
-    children: closure_14(channel(6544).SafeAreaPaddingView, obj7),
+    children: closure_14(channel(6710).SafeAreaPaddingView, obj7),
   });
 }

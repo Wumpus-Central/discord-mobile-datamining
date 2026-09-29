@@ -19,10 +19,10 @@ export default function PerLetterEffect(name) {
   const items1 = [closure_7().container, containerStyle];
   obj.style = items1;
   const memo = noop.useMemo(() => {
-    const regex = colors(10363)();
+    const regex = colors(10532)();
     closure_1 = 0;
-    let obj = name(10364);
-    return name(10364)
+    let obj = name(10533);
+    return name(10533)
       .splitGraphemes(regex)
       .map((children, index) => {
         regex.lastIndex = 0;

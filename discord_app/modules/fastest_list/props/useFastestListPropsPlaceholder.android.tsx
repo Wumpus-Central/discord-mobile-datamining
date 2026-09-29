@@ -39,10 +39,10 @@ function createNativePlaceholderConfig(listFooter) {
     placeholderFeedShape: "isArray",
     placeholderFeedShapeSize: "channel",
     placeholderType: NONE,
-    width: "flexDirection",
-    height: "e",
-    verticalAlignment: "isArray",
-    horizontalAlignment: "isArray",
+    width: "\u03B1\u03BD\u03B1\u03C0\u03BD\u03BF\u03AE",
+    height: "\u03B1\u03BD\u03AC\u03C3\u03B1",
+    verticalAlignment: "\u03B5\u03B9\u03C3\u03C0\u03BD\u03BF\u03AE",
+    horizontalAlignment: "\u03B5\u03BA\u03C0\u03BD\u03BF\u03AE",
   };
   if (null == listFooter) {
     return size;
@@ -161,7 +161,7 @@ function createNativePlaceholderConfig(listFooter) {
   }
 }
 const processColor = fn(17).processColor;
-const obj = { sectionItem: { type: fn(6483).FastestListPropsPlaceholderType.NONE } };
+const obj = { sectionItem: { type: fn(6649).FastestListPropsPlaceholderType.NONE } };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
 

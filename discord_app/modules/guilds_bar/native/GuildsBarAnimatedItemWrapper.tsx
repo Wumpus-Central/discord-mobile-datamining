@@ -151,8 +151,8 @@ function renderUnreadIndicator(arg0, sharedId, transitionState, cleanUp) {
     arg0,
   );
 }
-const IOS_POINTER_STYLE = fn(5290).IOS_POINTER_STYLE;
-const GuildsBarConstants = fn(15918);
+const IOS_POINTER_STYLE = fn(5456).IOS_POINTER_STYLE;
+const GuildsBarConstants = fn(16094);
 ({
   GUILD_ITEM_HIT_SLOP: hasOwnProperty,
   GUILD_ITEM_INSET_LEFT: metroRequire,

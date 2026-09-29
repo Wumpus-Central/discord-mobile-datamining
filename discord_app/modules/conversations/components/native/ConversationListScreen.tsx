@@ -7,7 +7,7 @@ import ConversationListItemDefault from "ConversationListItem.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
-import ConversationsStore from "../../ConversationsStore.tsx";
+import ChannelConversationsStore from "../../ChannelConversationsStore.tsx";
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ function keyExtractor(conversationId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const ConversationConstants = fn(7015);
+const ConversationConstants = fn(7181);
 ({
   MAX_CONVERSATIONS_PER_CHANNEL: closure_9,
   MOBILE_FETCH_LIMIT: c10,
@@ -84,7 +84,7 @@ export default function ConversationListScreen() {
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(
     items,
     () => {
-      let channelConversations = ConversationsStore.getChannelConversations(closure_0);
+      let channelConversations = ChannelConversationsStore.getChannelConversations(closure_0);
       if (channelConversations == null) {
         channelConversations = [];
       }
@@ -103,7 +103,7 @@ export default function ConversationListScreen() {
   const items4 = [channelId];
   let stateFromStores = require("initialize").useStateFromStores(
     items3,
-    () => null == ConversationsStore.getEdgeMarker(closure_0, "before"),
+    () => null == ChannelConversationsStore.getEdgeMarker(closure_0, "before"),
     items4,
   );
   let obj5 = require("initialize");
@@ -111,7 +111,7 @@ export default function ConversationListScreen() {
   const items6 = [channelId];
   stateFromStores1 = require("initialize").useStateFromStores(
     items5,
-    () => ConversationsStore.isPendingFetch(closure_0),
+    () => ChannelConversationsStore.isPendingFetch(closure_0),
     items6,
   );
   _handleEndReached = function _handleEndReached() {
@@ -280,7 +280,7 @@ export default function ConversationListScreen() {
   obj8.ListFooterComponent = memo1;
   obj8.onViewableItemsChanged = callback1;
   obj8.viewabilityConfig = viewabilityConfig;
-  obj7.children = jsx(tmp(8179).FlashList, {
+  obj7.children = jsx(tmp(8344).FlashList, {
     data: memo,
     renderItem,
     keyExtractor,

@@ -16,7 +16,7 @@ import GameProfileAnalyticUtils from "../../game_profile/GameProfileAnalyticUtil
 import ForumComposerModalActionCreators from "composer/ForumComposerModalActionCreators.tsx";
 import ForumPostDefault from "ForumPost.tsx";
 import ForumPostPlaceholderDefault from "ForumPostPlaceholder.tsx";
-import _modDef12285 from "../../../../_runtime/metro/12285__.js";
+import _modDef12456 from "../../../../_runtime/metro/12456__.js";
 import CreateGameInvitePostModalActionCreators from "../../game_invite_channels/native/CreateGameInvitePostModalActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import LurkingStore from "../../lurker_mode/LurkingStore.tsx";
@@ -145,7 +145,7 @@ function SortAndViewOptions(channel) {
   const items = [id];
   const callback = noop.useCallback(() => {
     const combined = "ForumDisplaySettingsActionSheet-" + id;
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12279, dependencyMap.paths), combined, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12450, dependencyMap.paths), combined, {
       channelId: id,
       onClose() {
         ActionSheetActionCreatorsDefault.hideActionSheet(combined);
@@ -161,12 +161,12 @@ function SortAndViewOptions(channel) {
     stringResult = string(t.xyYt8A);
   }
   isMediaChannelResult = channel.isMediaChannel();
-  return closure_14(id(5281).Button, {
+  return closure_14(id(5447).Button, {
     variant: "secondary",
     text: stringResult,
     onPress: callback,
     size: "sm",
-    icon: closure_14(id(11633).ArrowsUpDownIcon, { size: "xxs" }),
+    icon: closure_14(id(11802).ArrowsUpDownIcon, { size: "xxs" }),
   });
 }
 function TagFilter(channel) {
@@ -176,13 +176,13 @@ function TagFilter(channel) {
   obj.text = intl.string(channel(1115).t["112vVE"]);
   obj.onPress = function onPress() {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(12280, dependencyMap.paths),
+      asyncRequireImpl(12451, dependencyMap.paths),
       "ForumTagFilterActionSheet",
       { channel },
     );
   };
-  obj.icon = closure_14(channel(8327).TagIcon, { size: "xxs" });
-  return closure_14(channel(5281).Button, obj);
+  obj.icon = closure_14(channel(8492).TagIcon, { size: "xxs" });
+  return closure_14(channel(5447).Button, obj);
 }
 function getForumItemType(arg0) {
   let str = "thread";
@@ -467,11 +467,11 @@ function onCreatePostWithoutPermission() {
   const obj2 = { key: "FORUM_NO_POST_PERMISSION_HELP", content: null, icon: null };
   const intl = util.intl;
   obj2.content = intl.string(util.t.iyzwnD);
-  obj2.icon = _modDef12285;
+  obj2.icon = _modDef12456;
   ToastActionCreatorsDefault.open(obj2);
 }
 const View = fn(17).View;
-const useForumChannelStore = fn(11483).useForumChannelStore;
+const useForumChannelStore = fn(11652).useForumChannelStore;
 const Constants = fn(1074);
 ({ AnalyticsObjects: closure_11, AnalyticsPages: closure_12, AnalyticsSections: map1 } = Constants);
 const Fonts = fn(1085).Fonts;
@@ -729,7 +729,7 @@ export default function ForumChannel(channel) {
   };
   const intl = tmp2(tmp3[16]).intl;
   obj12.accessibilityLabel = intl.string(channel(analyticsLocations[16]).t.TyAuoT);
-  obj12.icon = require("../../../../_runtime/metro/12289__.js");
+  obj12.icon = require("../../../../_runtime/metro/12460__.js");
   obj12.disabled = tmp15;
   obj12.positionBottom = insets.bottom + require("native").space.PX_16;
   obj12.onPress = callback1;

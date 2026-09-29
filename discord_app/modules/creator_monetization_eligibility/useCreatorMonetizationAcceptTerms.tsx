@@ -79,12 +79,12 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
                 if (null != tmp4) {
                   c4 = 4;
                   c5 = 1;
-                  const obj6 = { value: tmp47(17513).acceptCreatorMonetizationTerms(tmp55, tmp42), done: false };
+                  const obj6 = { value: tmp47(17702).acceptCreatorMonetizationTerms(tmp55, tmp42), done: false };
                   return obj6;
                 } else {
                   c4 = 3;
                   c5 = 1;
-                  const obj7 = { value: tmp47(17513).acceptCreatorMonetizationTermsV2(tmp55), done: false };
+                  const obj7 = { value: tmp47(17702).acceptCreatorMonetizationTermsV2(tmp55), done: false };
                   return obj7;
                 }
               }

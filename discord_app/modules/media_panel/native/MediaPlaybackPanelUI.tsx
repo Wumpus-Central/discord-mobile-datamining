@@ -17,10 +17,10 @@ const require = globalThis.__r;
 
 require = fn;
 const useContext = fn(19).useContext;
-const MediaPlaybackPanelConstants = fn(14098);
+const MediaPlaybackPanelConstants = fn(14270);
 ({ MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: closure_7, MediaPlaybackPanelModes: closure_8 } = MediaPlaybackPanelConstants);
-const IS_IOS = fn(11756).IS_IOS;
-const BORDER_RADIUS_PHYSICS = fn(11755).BORDER_RADIUS_PHYSICS;
+const IS_IOS = fn(11925).IS_IOS;
+const BORDER_RADIUS_PHYSICS = fn(11924).BORDER_RADIUS_PHYSICS;
 const jsx = fn(21).jsx;
 const createStyles = fn(4836);
 let obj2 = {
@@ -365,7 +365,7 @@ export default function MediaPlaybackPanelUI() {
         wrapperOpacity: sharedValue2,
         timingFast: tmp6(4840).timingFast,
         animateWrapperTranslation: sharedValue3,
-        withSpring: tmp6(5280).withSpring,
+        withSpring: tmp6(5446).withSpring,
         wrapperTranslationX: sharedValue,
         MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS,
         wrapperTranslationY: sharedValue1,
@@ -390,7 +390,7 @@ export default function MediaPlaybackPanelUI() {
         }
       }
       const obj12 = {
-        withSpring: tmp6(5280).withSpring,
+        withSpring: tmp6(5446).withSpring,
         borderRadius: xl,
         BORDER_RADIUS_PHYSICS,
         maskElevationStyles: maskElevation,
@@ -432,26 +432,26 @@ export default function MediaPlaybackPanelUI() {
       fn4.__workletHash = 8557652955267;
       fn4.__initData = __initData7;
       const animatedStyle3 = tmp6(4566).useAnimatedStyle(fn4);
-      const context1 = noop.useContext(tmp2(17046));
+      const context1 = noop.useContext(tmp2(17233));
       ({ wrapperOffset: wrapperOffset2, pipState: pipState2 } = context1);
       const obj14 = { panGestureEnabled: true, mode: null, pipState: null, wrapperOffset: null };
       const tmp6Result4 = tmp6(4566);
-      obj14.mode = tmp6(16845).MorphablePanelModes.PIP;
+      obj14.mode = tmp6(17032).MorphablePanelModes.PIP;
       obj14.pipState = pipState2;
       obj14.wrapperOffset = wrapperOffset2;
-      const tmp2Result = tmp2(16845);
+      const tmp2Result = tmp2(17032);
       const obj15 = { children: null };
       const obj16 = { style: animatedStyle, pointerEvents: "box-none", children: null };
       const obj17 = { style: tmp30, children: null };
       const View = tmp2(4566).View;
       const obj18 = { style: tmp31, children: null };
-      const obj19 = { gesture: tmp2(16845)(obj14), children: null };
+      const obj19 = { gesture: tmp2(17032)(obj14), children: null };
       const obj20 = { style: null, children: null };
       const items3 = [tmp.content, animatedStyle3];
       obj20.style = items3;
-      obj20.children = jsx(tmp2(17048), {});
+      obj20.children = jsx(tmp2(17235), {});
       obj19.children = jsx(tmp2(4566).View, { style: null, children: null });
-      obj18.children = jsx(tmp6(6073).GestureDetector, { gesture: tmp2(16845)(obj14), children: null });
+      obj18.children = jsx(tmp6(6239).GestureDetector, { gesture: tmp2(17032)(obj14), children: null });
       obj17.children = jsx(tmp2(4566).View, { style: tmp31, children: null });
       class R {
         constructor() {
@@ -468,7 +468,7 @@ export default function MediaPlaybackPanelUI() {
         }
       }
       obj15.children = jsx(tmp2(4566).View, { style: animatedStyle, pointerEvents: "box-none", children: null });
-      return jsx(tmp6(6577).LayerScope, { children: null });
+      return jsx(tmp6(6743).LayerScope, { children: null });
     }
   }
   maskEmptyElevation = tmp8.maskEmptyElevation;

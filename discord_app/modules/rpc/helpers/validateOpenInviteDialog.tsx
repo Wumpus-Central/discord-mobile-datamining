@@ -11,7 +11,7 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 require = fn;
 const TransportTypes = fn(4739).TransportTypes;
 const RPCErrors = fn(1074).RPCErrors;
-const asLaunched = fn(8500).asLaunched;
+const asLaunched = fn(8665).asLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/validateOpenInviteDialog.tsx");
 
@@ -27,7 +27,7 @@ export const validateOpenInviteDialog = function validateOpenInviteDialog(socket
       const surface = tmp46.surface;
       const type = surface.type;
       if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
-        const obj3 = { frame: tmp46, channel: "Array", guild: "text" };
+        const obj3 = { frame: tmp46, channel: "Array", guild: "channel" };
         return obj3;
       } else {
         if (EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL !== type) {

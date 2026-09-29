@@ -3,8 +3,8 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import DispatcherDefault from "../../Dispatcher.tsx";
 import privDefault from "../../../_runtime/01439_priv.js";
 import MessageRecordUtils from "../messages/MessageRecordUtils.tsx";
-import ConversationsUtils from "ConversationsUtils.tsx";
 import ConversationMessageCacheUtils from "ConversationMessageCacheUtils.tsx";
+import ConversationsUtils from "ConversationsUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -111,8 +111,8 @@ function evictWhere(fn) {
   }
   return flag;
 }
-let obj = { max: fn(7015).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex };
-const navigation = new privDefault({ max: fn(7015).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex });
+let obj = { max: fn(7181).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex };
+const navigation = new privDefault({ max: fn(7181).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex });
 let map = new Map();
 const map1 = new Map();
 const Store = initializeDefault.Store;
@@ -188,7 +188,7 @@ prototype["isConversationFetchPending"] = function isConversationFetchPending(ar
 };
 ConversationPreviewStore.displayName = "ConversationPreviewStore";
 const conversationPreviewStore = new ConversationPreviewStore(DispatcherDefault, {
-  CONVERSATION_GET_SUCCESS: function handleConversationGetSuccess(rawConversation) {
+  CONVERSATION_FETCH_SUCCESS: function handleConversationFetchSuccess(rawConversation) {
     const mapConversationResult = ConversationsUtils.mapConversation(rawConversation.rawConversation);
     if (null == mapConversationResult) {
       return false;
@@ -211,7 +211,7 @@ const conversationPreviewStore = new ConversationPreviewStore(DispatcherDefault,
       return true;
     }
   },
-  CONVERSATION_FETCH_START: function handleConversationFetchStart(conversationId) {
+  CONVERSATION_MESSAGES_FETCH_START: function handleConversationMessagesFetchStart(conversationId) {
     conversationId = conversationId.conversationId;
     if (true !== conversationId.isStandalone) {
       return false;
@@ -231,7 +231,7 @@ const conversationPreviewStore = new ConversationPreviewStore(DispatcherDefault,
       }
     }
   },
-  CONVERSATION_FETCH_SUCCESS: function handleConversationFetchSuccess(isStandalone) {
+  CONVERSATION_MESSAGES_FETCH_SUCCESS: function handleConversationMessagesFetchSuccess(isStandalone) {
     ({ conversationId, fullyHydrated } = isStandalone);
     _require = undefined;
     if (true !== isStandalone.isStandalone) {
@@ -284,7 +284,7 @@ const conversationPreviewStore = new ConversationPreviewStore(DispatcherDefault,
       return true;
     }
   },
-  CONVERSATION_FETCH_FAILURE: function handleConversationFetchFailure(conversationId) {
+  CONVERSATION_MESSAGES_FETCH_FAILURE: function handleConversationMessagesFetchFailure(conversationId) {
     conversationId = conversationId.conversationId;
     if (true !== conversationId.isStandalone) {
       return false;

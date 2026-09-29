@@ -28,7 +28,7 @@ function EmojiConfetti(children) {
   const obj3 = top(4566);
   const sharedValue3 = top(4566).useSharedValue(0);
   let obj4 = top(4566);
-  const mountLayoutEffect = top(5298).useMountLayoutEffect(() => {
+  const mountLayoutEffect = top(5464).useMountLayoutEffect(() => {
     let num = 0;
     if (!dependencyMap) {
       const _Math = Math;
@@ -60,7 +60,7 @@ function EmojiConfetti(children) {
       obj17.withSequence(withTimingResult4, withTimingResult5, timing.withTiming(0, { duration: 240 })),
     );
   });
-  let obj5 = top(5298);
+  let obj5 = top(5464);
   const fn = function f() {
     const items = [{ scale: sharedValue2.get() }];
     let num = 1;
@@ -436,7 +436,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
             emoji_name: closure_129_2.name,
             emoji_animated: closure_129_2.animated,
             recommended: closure_129_4.current,
-            location: tmp22(6603).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
+            location: tmp22(6769).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
           };
           tmp22(1241).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj7);
           const _setTimeout = setTimeout;

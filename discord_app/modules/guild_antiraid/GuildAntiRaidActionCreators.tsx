@@ -252,7 +252,7 @@ let closure_12 = async function _handleReportRaid(arg0) {
     }
   }
 };
-const DEFAULT_LOCKDOWN_DURATION = fn(7459).DEFAULT_LOCKDOWN_DURATION;
+const DEFAULT_LOCKDOWN_DURATION = fn(7624).DEFAULT_LOCKDOWN_DURATION;
 const Constants = fn(1074);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7, GuildFeatures: closure_8 } = Constants);
 const size = fn(2);

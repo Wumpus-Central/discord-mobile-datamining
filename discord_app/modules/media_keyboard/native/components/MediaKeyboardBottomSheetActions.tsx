@@ -4,7 +4,7 @@ import _modDef672 from "../../../../../_runtime/metro/00672__.js";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05293_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05459_LinearGradient.js";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 

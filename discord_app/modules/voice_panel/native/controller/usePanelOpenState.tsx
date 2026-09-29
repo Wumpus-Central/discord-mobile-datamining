@@ -8,7 +8,7 @@ import VoicePanelStore from "../../VoicePanelStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11755).VoicePanelModes;
+const VoicePanelModes = fn(11924).VoicePanelModes;
 const Constants = fn(1074);
 ({ ComponentActions: closure_7, Routes: closure_8 } = Constants);
 const __initData = {
@@ -89,10 +89,10 @@ export default function usePanelOpenState(arg0, arg1, arg2, connected) {
       ComponentDispatch2.unsubscribe(constants.VOICE_PANEL_CLOSE, componentActionClose);
     };
   }, items);
-  [first, closure_6] = doCloseChannel.useState(() => closure_1(12305).getHistory().location.pathname);
+  [first, closure_6] = doCloseChannel.useState(() => closure_1(12476).getHistory().location.pathname);
   const items1 = [arg0, first];
   const effect1 = doCloseChannel.useEffect(() => {
-    closure_0 = closure_1(12305).addRouteChangeListener((pathname) => {
+    closure_0 = closure_1(12476).addRouteChangeListener((pathname) => {
       if (first !== pathname.pathname) {
         closure_1_6(tmp);
         const obj2 = { path: null };
@@ -108,10 +108,10 @@ export default function usePanelOpenState(arg0, arg1, arg2, connected) {
             tmp2 = matchPathResult.params.channelId === closure_0;
           }
           if (!tmp2) {
-            closure_1(8761)();
+            closure_1(8926)();
           }
         }
-        obj3 = closure_0(12298);
+        obj3 = closure_0(12469);
       }
     });
     return () => {

@@ -241,14 +241,14 @@ export default function GuildRoleConnectionsScreen(guildId) {
                 },
               };
               obj4.openLazy(
-                asyncRequireImpl(11067, dependencyMap.paths),
+                asyncRequireImpl(11236, dependencyMap.paths),
                 "LeaveConnectionRoleActionSheet-" + tmp.id,
                 obj3,
               );
-              const tmp20 = asyncRequireImpl(11067, dependencyMap.paths);
+              const tmp20 = asyncRequireImpl(11236, dependencyMap.paths);
             } else {
               let obj = ActionSheetActionCreatorsDefault;
-              const tmp9 = asyncRequireImpl(11057, dependencyMap.paths);
+              const tmp9 = asyncRequireImpl(11226, dependencyMap.paths);
               const obj5 = { role: tmp, guildId, onCloseModal };
               obj.openLazy(
                 tmp9,

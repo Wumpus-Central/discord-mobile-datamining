@@ -11,7 +11,7 @@ import BadgeDirectoryStore from "../../badges/BadgeDirectoryStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-let closure_5 = fn(7637).getSingleRequirementThreshold;
+let closure_5 = fn(7802).getSingleRequirementThreshold;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/gifting/GiftingBadgesUtils.tsx");
 
@@ -106,9 +106,9 @@ export const useGiftingBadgeCoachmarkVariant = function useGiftingBadgeCoachmark
   }
   let stateFromStores;
   closure_1 = undefined;
-  const GiftingBadgeExperiment = stateFromStores(10204).GiftingBadgeExperiment;
+  const GiftingBadgeExperiment = stateFromStores(10371).GiftingBadgeExperiment;
   const enabled2 = GiftingBadgeExperiment.useConfig({ location: _location }).enabled;
-  const GiftingBadgeDesktopExperiment = stateFromStores(10209).GiftingBadgeDesktopExperiment;
+  const GiftingBadgeDesktopExperiment = stateFromStores(10376).GiftingBadgeDesktopExperiment;
   let str = "-DISABLED";
   let str2 = "-DISABLED";
   if ("web" === platform.platform) {
@@ -122,7 +122,7 @@ export const useGiftingBadgeCoachmarkVariant = function useGiftingBadgeCoachmark
     }
     tmp4 = enabled3;
   }
-  const GiftingBadgeCoachmarkAudienceExperiment = tmp(10211).GiftingBadgeCoachmarkAudienceExperiment;
+  const GiftingBadgeCoachmarkAudienceExperiment = tmp(10378).GiftingBadgeCoachmarkAudienceExperiment;
   if (tmp4) {
     str = "";
   }

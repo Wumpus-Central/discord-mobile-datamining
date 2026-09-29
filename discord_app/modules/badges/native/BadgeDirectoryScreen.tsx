@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/badges/native/BadgeDirectoryS
 
 export default function BadgeDirectoryScreen(targetUserId) {
   targetUserId = targetUserId.targetUserId;
-  c1 = undefined;
+  dependencyMap = undefined;
   const items = [UserStore];
   const stateFromStores = targetUserId(504).useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
@@ -25,16 +25,21 @@ export default function BadgeDirectoryScreen(targetUserId) {
   let obj = targetUserId(504);
   const items1 = [UserStore];
   const stateFromStores1 = targetUserId(504).useStateFromStores(items1, () => {
-    let tmp2;
     if (null != targetUserId) {
       const user = UserStore.getUser(tmp);
-      let username;
+      let globalName;
       if (user != null) {
-        username = user.username;
+        globalName = user.globalName;
       }
-      tmp2 = username;
+      if (globalName == null) {
+        let username;
+        if (user != null) {
+          username = user.username;
+        }
+        globalName = username;
+      }
+      return globalName;
     }
-    return tmp2;
   });
   if (null != targetUserId) {
     if (targetUserId !== stateFromStores) {
@@ -43,22 +48,22 @@ export default function BadgeDirectoryScreen(targetUserId) {
         const obj3 = { username: stateFromStores1 };
         let formatToPlainStringResult = intl2.formatToPlainString(tmp(1115).t.EIcwoe, obj3);
       }
-      c1 = formatToPlainStringResult;
-      const items2 = [formatToPlainStringResult, targetUserId];
+      dependencyMap = formatToPlainStringResult;
+      const items2 = [formatToPlainStringResult, targetUserId, stateFromStores1];
       const memo = noop.useMemo(() => {
         const obj = {};
         const obj2 = {
           title,
           headerLeft: NavigatorHeader.getHeaderCloseButton(openBadgeDirectoryScreen.closeBadgeDirectoryScreen),
           render() {
-            return jsx(c1(dependencyMap[7]), { targetUserId });
+            return jsx(stateFromStores1(c2[7]), { targetUserId, targetUsername });
           },
         };
         obj[c6] = obj2;
         return obj;
       }, items2);
       const obj4 = { screens: memo, initialRouteName };
-      return jsx(tmp(10769).Modal, { screens: memo, initialRouteName });
+      return jsx(tmp(10938).Modal, { screens: memo, initialRouteName });
     }
   }
   const intl = tmp(1115).intl;

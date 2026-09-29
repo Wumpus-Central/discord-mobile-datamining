@@ -13,7 +13,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_9 = fn(6958).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
+let closure_9 = fn(7124).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = "https://support.discord.com/hc/articles/14155060633623";
@@ -197,7 +197,7 @@ export default function ParentalConsentConnectionScreen() {
     obj2.title = intl.string(_modDef2781.dMMSA0);
     const intl2 = util.intl;
     obj2.body = intl2.format(_modDef2781["6GaRTu"], { link });
-    obj.openLazy(asyncRequireImpl(14415, dependencyMap.paths), closure_9, obj2);
+    obj.openLazy(asyncRequireImpl(14590, dependencyMap.paths), closure_9, obj2);
   }, items7);
   let obj4 = {
     title: null,

@@ -2,7 +2,7 @@
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import asyncRequireImpl from "../../../../_runtime/01981_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import fuzzysearchDefault from "../../../../_runtime/05829_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../_runtime/05996_fuzzysearch.js";
 import InstantInviteActionCreatorsDefault from "../../../actions/InstantInviteActionCreators.tsx";
 import InstantInviteUtilsDefault from "../../../utils/InstantInviteUtils.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -72,8 +72,8 @@ let closure_16 = async function _sendGuildInvite(arg0) {
   }
   return value;
 };
-const setSendState = fn(12546).setSendState;
-const InviteSendStates = fn(7155).InviteSendStates;
+const setSendState = fn(12716).setSendState;
+const InviteSendStates = fn(7320).InviteSendStates;
 const Constants = fn(1074);
 ({ Permissions: closure_14, AnalyticEvents: closure_15 } = Constants);
 const size = fn(2);
@@ -83,7 +83,7 @@ export const showGuildInviteActionSheet = function showGuildInviteActionSheet(id
   AnalyticsUtilsDefault.track(constants2.OPEN_POPOUT, { type: "Invite to Guilds", source: newestAnalyticsLocation });
   const obj2 = { type: "Invite to Guilds", source: newestAnalyticsLocation };
   const obj3 = ActionSheetActionCreatorsDefault;
-  obj3.openLazy(asyncRequireImpl(12547, dependencyMap.paths), "invite-to-guilds-" + id, {
+  obj3.openLazy(asyncRequireImpl(12717, dependencyMap.paths), "invite-to-guilds-" + id, {
     recipientId: id,
     source: newestAnalyticsLocation,
   });

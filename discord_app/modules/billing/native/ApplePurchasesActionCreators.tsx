@@ -1,7 +1,7 @@
 // discord_app/modules/billing/native/ApplePurchasesActionCreators.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import BillingUtils from "../../../utils/BillingUtils.tsx";
-import _mod10514 from "../../../../_runtime/metro/10514__.js";
+import _mod10683 from "../../../../_runtime/metro/10683__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("modules/billing/native/ApplePurchasesActionCreators.tsx");
@@ -9,7 +9,7 @@ let result = size.fileFinishedImporting("modules/billing/native/ApplePurchasesAc
 export const fetchApplePurchases = function fetchApplePurchases() {
   if (null == cleanupPromise) {
     DispatcherDefault.dispatch({ type: "APPLE_PURCHASES_FETCH_START" });
-    const availablePurchases = _mod10514.getAvailablePurchases({ onlyIncludeActiveItems: false });
+    const availablePurchases = _mod10683.getAvailablePurchases({ onlyIncludeActiveItems: false });
     const nextPromise = availablePurchases.then((purchases) => {
       DispatcherDefault.dispatch({ type: "APPLE_PURCHASES_FETCH_SUCCESS", purchases });
       return true;

@@ -39,7 +39,7 @@ const NativeChatUtilsDefault = NativeChatUtils;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const RowGeneratorConstants = fn(7375);
+const RowGeneratorConstants = fn(7540);
 ({ Changeset: c10, RowType: closure_11, SeparatorType: closure_12 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
@@ -284,9 +284,9 @@ class ChatPreviewBase extends PureComponent {
           jumpTargetId,
           jumpType: "flexDirection",
           shouldInitialScroll: "Array",
-          animated: 0,
-          scrollPosition: 2,
-          focusTargetId: 0,
+          animated: "2025-12-windows-audio-effects",
+          scrollPosition: "user",
+          focusTargetId: null,
         };
         applyArgumentsResult.scrollData = computeScrollDataDefault(obj3);
         if (!tmp7) {
@@ -318,10 +318,10 @@ class ChatPreviewBase extends PureComponent {
       if (null != jumpTargetId) {
         const resolved = Promise.resolve();
         resolved.then(() => {
-          const result = applyArgumentsResult(7333).setSelectedConversation(closure_1_0, roleStyle, {
+          const result = applyArgumentsResult(7498).setSelectedConversation(closure_1_0, roleStyle, {
             shouldJump: false,
           });
-          const obj = applyArgumentsResult(7333);
+          const obj = applyArgumentsResult(7498);
           applyArgumentsResult(4847).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
         });
       }
@@ -360,9 +360,10 @@ class ChatPreviewBase extends PureComponent {
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: "asc",
-        selectedChannelId: "asc",
-        tapLinkData: "https://support.discord.com/hc/articles/14155060633623",
+        messageChannel: null,
+        selectedChannelId: "Directory Channel Header",
+        tapLinkData:
+          "M4 1H3v1h1V1ZM3 2H2v1h1V2ZM2 3H1v1h1V3ZM4 12H3v2h1v-2ZM3 11H2v1h1v-1ZM5 14H4v1h1v-1ZM2 10H1v1h1v-1Z",
       };
       channel = applyArgumentsResult.props.channel;
       obj2.messageChannel = channel;
@@ -652,8 +653,8 @@ export const ChatPreview = function ChatPreview(channelId) {
   const items1 = [ChannelStore];
   const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   const obj2 = channelId(504);
-  const isChannelSpoilerGated = channelId(6747).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(6747);
+  const isChannelSpoilerGated = channelId(6913).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(6913);
   const isChannelContentGated = channelId(5046).useIsChannelContentGated(stateFromStores1);
   const obj4 = channelId(5046);
   const items2 = [ActionSheetStore];

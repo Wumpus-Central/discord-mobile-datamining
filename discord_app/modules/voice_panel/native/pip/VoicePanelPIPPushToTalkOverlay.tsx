@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import ReanimatedRexport2 from "../../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import NativeViewDefault from "../../../core/native/NativeView.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06073_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06239_LegacyBaseButton.js";
 import MediaEngineActionCreators from "../../../media_engine/MediaEngineActionCreators.tsx";
 import VoicePanelPIPUtils from "VoicePanelPIPUtils.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -12,7 +12,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const ReanimatedRexport_mod = ReanimatedRexport2;
 
 require = fn;
-const PUSH_TO_TALK_PIP_PHYSICS = fn(11755).PUSH_TO_TALK_PIP_PHYSICS;
+const PUSH_TO_TALK_PIP_PHYSICS = fn(11924).PUSH_TO_TALK_PIP_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 let ReanimatedRexport = ReanimatedRexport_mod;
@@ -58,9 +58,9 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPPushToTalkOverlay.tsx");
 
 export default function VoicePanelPIPPushToTalkOverlay() {
-  pIPState = pIPState(16916).usePIPState();
+  pIPState = pIPState(17103).usePIPState();
   const tmp2 = closure_12();
-  let obj = pIPState(16916);
+  let obj = pIPState(17103);
   const sharedValue = pIPState(4566).useSharedValue(false);
   closure_129_0 = sharedValue;
   closure_129_1 = BLACK.useRef(false);
@@ -112,7 +112,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
     isPushingToTalk,
     EXPANDED_ICON_SIZE: 48,
     BASE_ICON_SIZE: 32,
-    withSpring: pIPState(5280).withSpring,
+    withSpring: pIPState(5446).withSpring,
     PUSH_TO_TALK_PIP_PHYSICS,
     white: WHITE,
   };
@@ -123,7 +123,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
     isPushingToTalk,
     EXPANDED_ICON_SIZE: 48,
     BASE_ICON_SIZE: 32,
-    withSpring: pIPState(5280).withSpring,
+    withSpring: pIPState(5446).withSpring,
     PUSH_TO_TALK_PIP_PHYSICS,
     white: WHITE,
   };
@@ -136,7 +136,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
   }
   let obj5 = pIPState(4566);
   P.__closure = {
-    withSpring: pIPState(5280).withSpring,
+    withSpring: pIPState(5446).withSpring,
     isPushingToTalk,
     black: BLACK,
     white: WHITE,
@@ -146,7 +146,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
   P.__initData = __initData2;
   const animatedStyle1 = obj5.useAnimatedStyle(P);
   const obj6 = {
-    withSpring: pIPState(5280).withSpring,
+    withSpring: pIPState(5446).withSpring,
     isPushingToTalk,
     black: BLACK,
     white: WHITE,
@@ -169,10 +169,10 @@ export default function VoicePanelPIPPushToTalkOverlay() {
   }
   const obj7 = pIPState(4566);
   H.__closure = {
-    withSpring: pIPState(5280).withSpring,
+    withSpring: pIPState(5446).withSpring,
     isPushingToTalk,
     PUSH_TO_TALK_PIP_PHYSICS,
-    getVoicePanelPIPBorderRadius: pIPState(16912).getVoicePanelPIPBorderRadius,
+    getVoicePanelPIPBorderRadius: pIPState(17099).getVoicePanelPIPBorderRadius,
     pipState: pIPState,
   };
   H.__workletHash = 450590017248;
@@ -225,20 +225,20 @@ export default function VoicePanelPIPPushToTalkOverlay() {
   const items5 = [tmp2.iconContainer, animatedStyle];
   obj12.style = items5;
   const obj8 = {
-    withSpring: pIPState(5280).withSpring,
+    withSpring: pIPState(5446).withSpring,
     isPushingToTalk,
     PUSH_TO_TALK_PIP_PHYSICS,
-    getVoicePanelPIPBorderRadius: pIPState(16912).getVoicePanelPIPBorderRadius,
+    getVoicePanelPIPBorderRadius: pIPState(17099).getVoicePanelPIPBorderRadius,
     pipState: pIPState,
   };
   obj12.children = closure_6(closure_10, {
     style: animatedStyle1,
     size: pIPState(1177).Icon.Sizes.SMALL_20,
-    source: isPushingToTalk(16992),
+    source: isPushingToTalk(17179),
     disableColor: true,
   });
   obj11.children = closure_6(NativeView, obj12);
-  items4[1] = closure_6(pIPState(6073).GestureDetector, obj11);
+  items4[1] = closure_6(pIPState(6239).GestureDetector, obj11);
   obj9.children = items4;
   return closure_8(closure_7, obj9);
 }

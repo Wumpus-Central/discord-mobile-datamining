@@ -1,10 +1,11 @@
 // discord_common/js/shared/utils/PriceUtils.tsx
-import addDefault from "../../../../_runtime/06657_add.js";
+import addDefault from "../../../../_runtime/06823_add.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 
 let closure_2 = ["convertToMajorUnits"];
 const CurrencyCodes = fn(1085).CurrencyCodes;
+const map = new Map();
 const CurrencyExponents = {
   [CurrencyCodes.AED]: 2,
   [CurrencyCodes.AFN]: 2,
@@ -447,7 +448,7 @@ let obj2 = {
   [fn(5053).CountryCodes.ZM]: CurrencyCodes.ZMW,
 };
 const size = fn(2);
-const result = size.fileFinishedImporting("../discord_common/js/shared/utils/PriceUtils.tsx");
+let result = size.fileFinishedImporting("../discord_common/js/shared/utils/PriceUtils.tsx");
 
 export const formatPrice = (result, currency, localeOverride, arg3) => {
   let obj = arg3;
@@ -458,27 +459,36 @@ export const formatPrice = (result, currency, localeOverride, arg3) => {
     return result.toString();
   } else {
     const convertToMajorUnits = obj.convertToMajorUnits;
-    const _Intl = Intl;
     obj2 = { style: "currency", currency };
     const merged = Object.assign(_objectWithoutProperties(obj, closure_2));
+    const _JSON = JSON;
+    const _HermesInternal = HermesInternal;
+    const combined = "" + localeOverride + "|" + JSON.stringify(obj2);
+    value = map.get(combined);
+    if (null == value) {
+      const _Intl = Intl;
+      const NumberFormatResult = Intl.NumberFormat(localeOverride, obj2);
+      result = map.set(combined, NumberFormatResult);
+      value = NumberFormatResult;
+    }
     let toNumberResult = result;
     if (tmp) {
       if (typeof convertToMajorCurrencyUnits === "function") {
         if (null == obj[currency]) {
           const _Error = Error;
-          const _HermesInternal = HermesInternal;
+          const _HermesInternal2 = HermesInternal;
           const error = new Error("Unexpected currency " + currency);
           throw error;
         } else {
-          const obj4 = new addDefault(result);
-          toNumberResult = obj4.dividedBy(10 ** tmp11).toNumber();
-          const dividedByResult = obj4.dividedBy(10 ** tmp11);
+          const obj5 = new addDefault(result);
+          toNumberResult = obj5.dividedBy(10 ** tmp15).toNumber();
+          const dividedByResult = obj5.dividedBy(10 ** tmp15);
         }
       } else {
         throw new TypeError("Trying to call a non-function");
       }
     }
-    return Intl.NumberFormat(localeOverride, obj2).format(toNumberResult);
+    return value.format(toNumberResult);
   }
 };
 export { CurrencyExponents };

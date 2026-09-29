@@ -46,7 +46,7 @@ class BaseChannelSubtitle {
   }
 }
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(9577);
+const RedesignChannelListConstants = fn(9744);
 ({ CHANNEL_SUBTITLE_TEXT_VARIANT: hasOwnProperty, CHANNEL_TITLE_LINE_HEIGHT: metroRequire } =
   RedesignChannelListConstants);
 const UnreadSetting = fn(5018).UnreadSetting;
@@ -170,9 +170,9 @@ export default function BaseChannelItem(mode) {
     items1[3] = channelInfo;
     obj.children = items1;
     if (flag) {
-      let AnimatedPressableHighlight = hideIcon(11869);
+      let AnimatedPressableHighlight = hideIcon(12040);
     } else {
-      AnimatedPressableHighlight = mode(8370).AnimatedPressableHighlight;
+      AnimatedPressableHighlight = mode(8535).AnimatedPressableHighlight;
     }
     obj2 = {};
     const merged1 = Object.assign(merged);
@@ -187,8 +187,8 @@ export default function BaseChannelItem(mode) {
       ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
     }
     obj3.resolvedUnreadSetting = ALL_MESSAGES;
-    closure_8(hideIcon(9625), obj3);
-    const tmp9 = hideIcon(9625);
+    closure_8(hideIcon(9792), obj3);
+    const tmp9 = hideIcon(9792);
   }
 }
 export const ChannelModes = obj2;

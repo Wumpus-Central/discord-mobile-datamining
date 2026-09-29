@@ -2,10 +2,10 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import MemberVerificationTypes from "../../guild_member_verification/MemberVerificationTypes.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef11772 from "../../../../_runtime/metro/11772__.js";
-import _modDef15936 from "../../../../_runtime/metro/15936__.js";
-import _modDef15937 from "../../../../_runtime/metro/15937__.js";
-import _modDef15938 from "../../../../_runtime/metro/15938__.js";
+import _modDef11941 from "../../../../_runtime/metro/11941__.js";
+import _modDef16112 from "../../../../_runtime/metro/16112__.js";
+import _modDef16113 from "../../../../_runtime/metro/16113__.js";
+import _modDef16114 from "../../../../_runtime/metro/16114__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -27,7 +27,7 @@ let size = {
   overflow: "hidden",
 };
 obj2.badgeImageContainer = size;
-const size1 = { height: 16, width: 16, opacity: fn(5753).DARK_1_LIGHT_08 };
+const size1 = { height: 16, width: 16, opacity: fn(5920).DARK_1_LIGHT_08 };
 obj2.badgeImage = size1;
 let closure_5 = createStyles.createStyles(obj2);
 size = fn(2);
@@ -37,15 +37,15 @@ export default function GuildsBarGuildJoinRequestBadge(joinRequestState) {
   joinRequestState = joinRequestState.joinRequestState;
   const tmp = closure_5();
   if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.REJECTED === joinRequestState) {
-    let tmp4 = _modDef15936;
+    let tmp4 = _modDef16112;
   } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED === joinRequestState) {
-    tmp4 = _modDef15937;
+    tmp4 = _modDef16113;
   } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.STARTED === joinRequestState) {
-    tmp4 = _modDef15938;
+    tmp4 = _modDef16114;
   } else {
     tmp4 = null;
     if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.APPROVED === joinRequestState) {
-      tmp4 = _modDef11772;
+      tmp4 = _modDef11941;
     }
   }
   let tmp9 = null;

@@ -6,12 +6,12 @@ import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx"
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
-import _modDef8550 from "../../../../../_runtime/metro/08550__.js";
-import _modDef9259 from "../../../../../_runtime/metro/09259__.js";
+import _modDef8715 from "../../../../../_runtime/metro/08715__.js";
+import _modDef9426 from "../../../../../_runtime/metro/09426__.js";
 import TouchableStreamPreviewDefault from "../../../../components_native/TouchableStreamPreview.tsx";
-import _modDef9523 from "../../../../../_runtime/metro/09523__.js";
-import _modDef9524 from "../../../../../_runtime/metro/09524__.js";
-import _modDef9525 from "../../../../../_runtime/metro/09525__.js";
+import _modDef9690 from "../../../../../_runtime/metro/09690__.js";
+import _modDef9691 from "../../../../../_runtime/metro/09691__.js";
+import _modDef9692 from "../../../../../_runtime/metro/09692__.js";
 import ParticipantTitleDefault from "ParticipantTitle.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
@@ -29,7 +29,7 @@ class StreamPreviewTile {
     obj1 = {
       guildId: participant.stream.guildId,
       userId: participant.user.id,
-      style: { aspectRatio: "disabled", borderRadius: false },
+      style: { aspectRatio: "disabled", borderRadius: null },
       disableTransition: true,
       onPress() {
         return closure_1_8();
@@ -42,17 +42,17 @@ class StreamPreviewTile {
 function ParticipantIcon(participant) {
   participant = participant.participant;
   if (participant.type === constants.STREAM) {
-    let tmp3 = _modDef9523;
+    let tmp3 = _modDef9690;
   } else if (participant.type === tmp2.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp3 = _modDef9524;
+      tmp3 = _modDef9691;
     } else if (constants2.XBOX === voicePlatform) {
-      tmp3 = _modDef8550;
+      tmp3 = _modDef8715;
     } else if (constants2.PLAYSTATION === voicePlatform) {
-      tmp3 = _modDef9259;
+      tmp3 = _modDef9426;
     } else if (constants2.QUEST === voicePlatform) {
-      tmp3 = _modDef9525;
+      tmp3 = _modDef9692;
     }
   }
   let tmp14 = null;
@@ -155,7 +155,7 @@ class TileOverlay {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(8829);
+const ChannelCallStore = fn(8994);
 ({ resetFocus: closure_8, toggleFocus: closure_9 } = ChannelCallStore);
 const CallConstants = fn(4857);
 ({ ParticipantTypes: c10, isStreamParticipant: closure_11, VoicePlatforms: closure_12 } = CallConstants);

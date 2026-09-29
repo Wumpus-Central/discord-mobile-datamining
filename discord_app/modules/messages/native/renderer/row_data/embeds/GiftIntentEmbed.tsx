@@ -5,8 +5,8 @@ import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
 import _modDef4768 from "../../../../../../../_runtime/metro/04768__.js";
 import renderer_EmbedUtils from "../../EmbedUtils.tsx";
 import PremiumGiftingUtils from "../../../../../premium/PremiumGiftingUtils.tsx";
-import _modDef7526 from "../../../../../../../_runtime/metro/07526__.js";
-import _modDef7527 from "../../../../../../../_runtime/metro/07527__.js";
+import _modDef7691 from "../../../../../../../_runtime/metro/07691__.js";
+import _modDef7692 from "../../../../../../../_runtime/metro/07692__.js";
 import PremiumGiftingIntentStore from "../../../../../premium/gifting/PremiumGiftingIntentStore.tsx";
 import UserStore from "../../../../../../stores/UserStore.tsx";
 
@@ -93,8 +93,8 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
         obj9.subHeaderIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef4768);
         const intl3 = util.intl;
         obj9.primaryCtaLabel = intl3.string(util.t.ilhtIa);
-        obj9.primaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7526);
-        obj9.secondaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7527);
+        obj9.primaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7691);
+        obj9.secondaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7692);
         const intl4 = util.intl;
         obj9.secondaryCtaAccessibilityLabel = intl4.string(util.t.I5gL2H);
         return obj9;

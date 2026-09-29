@@ -806,7 +806,7 @@ export default {
               obj6(573).dispatch(obj10);
               const obj = obj6(573);
             }
-            const result = obj6(6741).checkGuildTemplateDirty(closure_132_0);
+            const result = obj6(6907).checkGuildTemplateDirty(closure_132_0);
             c6 = 0;
             c8 = 3;
             const obj11 = { value: body, done: true };
@@ -850,7 +850,7 @@ export default {
       request.rejectWithError = tmp5(1271).rejectWithMigratedError();
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = tmp2(6741).checkGuildTemplateDirty(closure_129_0);
+      const result = tmp2(6907).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -886,7 +886,7 @@ export default {
       };
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = body(6741).checkGuildTemplateDirty(closure_129_0);
+      const result = body(6907).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -904,7 +904,7 @@ export default {
       };
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = body(6741).checkGuildTemplateDirty(closure_129_0);
+      const result = body(6907).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },

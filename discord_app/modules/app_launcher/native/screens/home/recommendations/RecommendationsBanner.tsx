@@ -20,8 +20,8 @@ let closure_9 = createStyles.createStyles({
 });
 let closure_10 = noop.memo((applicationId) => {
   let heroMediaDimensions;
-  let obj = heroMediaDimensions(10785);
-  heroMediaDimensions = heroMediaDimensions(11566).useHeroMediaDimensions({
+  let obj = heroMediaDimensions(10954);
+  heroMediaDimensions = heroMediaDimensions(11735).useHeroMediaDimensions({
     width: obj.useRequiredAppLauncherContext().width,
   });
   const tmp4 = useEmbeddedActivityBackgroundDefault({

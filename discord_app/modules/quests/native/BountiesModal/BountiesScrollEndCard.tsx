@@ -52,7 +52,7 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
   obj3.style = items;
   const items1 = [
     closure_8(closure_5, { style: tmp.backdropTint, pointerEvents: "none" }),
-    closure_8(isScrollingInBoundsSharedValue(5293), {
+    closure_8(isScrollingInBoundsSharedValue(5459), {
       colors: ["rgba(0, 0, 0, 0.48)", "rgba(0, 0, 0, 0.8)"],
       style: tmp.backdropGradient,
       pointerEvents: "none",
@@ -62,12 +62,12 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
   const items2 = [tmp.overlayContent, animatedStyle];
   obj6.style = items2;
   const items3 = [
-    closure_8(isScrollingInBoundsSharedValue(14581), { bounty, sourceQuestContent, disabled: !isActive }),
+    closure_8(isScrollingInBoundsSharedValue(14756), { bounty, sourceQuestContent, disabled: !isActive }),
   ];
   const obj8 = {
     style: tmp.endedCtaButtonsContainer,
     pointerEvents: "box-none",
-    children: closure_8(isScrollingInBoundsSharedValue(14583), {
+    children: closure_8(isScrollingInBoundsSharedValue(14758), {
       bounty,
       visible,
       sourceQuestContent,
@@ -84,7 +84,7 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(5756).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5923).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4836);

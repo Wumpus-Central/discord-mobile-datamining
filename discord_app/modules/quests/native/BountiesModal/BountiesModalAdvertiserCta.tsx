@@ -106,7 +106,7 @@ function BountiesModalAdvertiserCtaContent(bounty) {
 let closure_3 = ["style"];
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: metroRequire, View: closure_7, Pressable } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(5756).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5923).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let closure_12 = ReanimatedRexport.createAnimatedComponent(Pressable);
@@ -133,10 +133,7 @@ let closure_13 = createStyles.createStyles(() => {
   const obj2 = {};
   const merged = Object.assign(nativeDefault.shadows.SHADOW_TOP_HIGH);
   obj2.alignSelf = "stretch";
-  obj2.borderWidth = 1;
-  obj2.borderColor = "transparent";
   obj2.borderRadius = nativeDefault.radii.lg;
-  obj2.overflow = "hidden";
   obj.ctaPressable = obj2;
   obj.cta = {
     flexDirection: "row",
@@ -145,6 +142,8 @@ let closure_13 = createStyles.createStyles(() => {
     paddingRight: nativeDefault.space.PX_16,
     paddingVertical: nativeDefault.space.PX_12,
     gap: nativeDefault.space.PX_12,
+    borderRadius: nativeDefault.radii.lg,
+    overflow: "hidden",
   };
   const size = {
     width: 40,

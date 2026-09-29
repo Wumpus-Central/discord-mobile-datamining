@@ -40,7 +40,7 @@ function useHandleBuyNow(product) {
           } else {
             v1 = 1;
             dependencyMap = 1;
-            const obj6 = { value: tmp4(6961).fetchCollectiblesPurchases(), done: false };
+            const obj6 = { value: tmp4(7127).fetchCollectiblesPurchases(), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {
@@ -59,7 +59,7 @@ function useHandleBuyNow(product) {
             useCategoryImage: true,
             stageCollectibleChangeForEditProfile: closure_128_2,
           };
-          v1(10542).open(obj8);
+          v1(10711).open(obj8);
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -71,7 +71,7 @@ function useHandleBuyNow(product) {
   };
   ({ analyticsLocations, orderId } = product);
   [isBuying, _slicedToArray] = noop.useState(false);
-  const tmp3 = onBuySettled(10480)({
+  const tmp3 = onBuySettled(10649)({
     product,
     analyticsLocations,
     onPurchaseComplete() {
@@ -130,7 +130,7 @@ function useHandleBuyNow(product) {
                 c4 = 3;
                 c5 = 1;
                 const obj6 = {
-                  value: tmp4(tmp59[10]).redirectWithHandoffToken(combined, { forceExternalBrowser: true }),
+                  value: tmp4(tmp55[10]).redirectWithHandoffToken(combined, { forceExternalBrowser: true }),
                   done: false,
                 };
                 return obj6;
@@ -146,31 +146,31 @@ function useHandleBuyNow(product) {
                   return obj8;
                 }
               }
-              obj17 = product(tmp59[9]);
+              obj17 = product(tmp55[9]);
             }
           } else if (1 === tmp8) {
             c3 = 0;
-            closure_128_0 = tmp59;
+            closure_128_0 = tmp55;
             const _JSON2 = JSON;
             const _HermesInternal2 = HermesInternal;
             logger.error("Error performing web handoff: " + JSON.stringify(closure_128_0));
             const obj9 = { tags: null };
             const obj11 = { source: "useHandleBuyNow", skuId: closure_129_0.skuId };
             obj9.tags = obj11;
-            const result = product(tmp59[11]).captureBillingException(closure_128_0, obj9);
-            const obj7 = product(tmp59[11]);
+            const result = product(tmp55[11]).captureBillingException(closure_128_0, obj9);
+            const obj4 = product(tmp55[11]);
             const obj12 = { key: "SHOP_ITEM_HANDOFF_ERROR", content: null };
-            const intl = product(tmp59[13]).intl;
-            obj12.content = intl.string(product(tmp59[13]).t["rTU7/z"]);
-            tmp4(tmp59[12]).open(obj12);
+            const intl = product(tmp55[13]).intl;
+            obj12.content = intl.string(product(tmp55[13]).t["rTU7/z"]);
+            tmp4(tmp55[12]).open(obj12);
             if (closure_129_1 != null) {
               closure_129_1();
             }
-            const obj10 = tmp4(tmp59[12]);
+            const obj7 = tmp4(tmp55[12]);
           } else {
             if (2 === tmp8) {
               c3 = 0;
-              closure_128_1 = tmp59;
+              closure_128_1 = tmp55;
               closure_129_4(false);
               if (closure_129_1 != null) {
                 closure_129_1();
@@ -178,22 +178,28 @@ function useHandleBuyNow(product) {
               const _JSON = JSON;
               const _HermesInternal = HermesInternal;
               logger.error("Error running purchase: " + JSON.stringify(closure_128_1));
-              const obj14 = { tags: null };
-              const obj15 = { source: "useHandleBuyNow", skuId: closure_129_0.skuId };
-              obj14.tags = obj15;
-              const result1 = product(tmp59[11]).captureBillingException(closure_128_1, obj14);
-              const obj4 = product(tmp59[11]);
+              let message;
+              if (closure_128_1 != null) {
+                message = closure_128_1.message;
+              }
+              if ("Not ready to purchase" !== message) {
+                const obj13 = { tags: null };
+                const obj15 = { source: "useHandleBuyNow", skuId: closure_129_0.skuId };
+                obj13.tags = obj15;
+                const result1 = product(tmp55[11]).captureBillingException(closure_128_1, obj13);
+                const obj14 = product(tmp55[11]);
+              }
             } else if (3 === tmp8) {
               if (arg0 === 1) {
                 c5 = 3;
                 throw value;
               } else if (arg0 !== 2) {
-                tmp4(tmp59[7]).hideActionSheet();
+                tmp4(tmp55[7]).hideActionSheet();
                 if (closure_129_1 != null) {
                   closure_129_1();
                 }
                 c3 = 0;
-                const obj2 = tmp4(tmp59[7]);
+                const obj2 = tmp4(tmp55[7]);
               }
             } else if (arg0 === 1) {
               c5 = 3;
@@ -210,11 +216,11 @@ function useHandleBuyNow(product) {
             return obj16;
           }
           c5 = 3;
-        } catch (tmp59) {
+        } catch (tmp55) {
           if (tmp5 === c3) {
             c5 = tmp3;
-            throw tmp59;
-          } else if (tmp2 === tmp61) {
+            throw tmp55;
+          } else if (tmp2 === tmp57) {
             c4 = tmp2;
           } else {
             c4 = tmp;

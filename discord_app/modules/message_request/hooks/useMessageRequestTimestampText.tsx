@@ -51,8 +51,8 @@ export const useMessageRequestRelativeTimestampText = function useMessageRequest
     }
     let str = "";
     if (null != extractTimestampResult) {
-      str = tmp(7200).getTimestampString(extractTimestampResult);
-      const tmpResult = tmp(7200);
+      str = tmp(7365).getTimestampString(extractTimestampResult);
+      const tmpResult = tmp(7365);
     }
     return str;
   }

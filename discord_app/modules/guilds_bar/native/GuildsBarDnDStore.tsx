@@ -68,7 +68,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       );
       throw error;
     } else {
-      dropSpecs(1248).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "text" }));
+      dropSpecs(1248).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "channel" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;

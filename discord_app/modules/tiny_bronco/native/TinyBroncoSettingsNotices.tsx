@@ -7,8 +7,8 @@ import AgeVerificationActionCreatorsDefault from "../../age_assurance/AgeVerific
 import AgeVerificationAnalyticsUtils from "../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import useUserIsTeen from "../../self_mod/hooks/useUserIsTeen.tsx";
 import TinyBroncoExperiment from "../TinyBroncoExperiment.tsx";
-import SafetySettingsUtils from "../../safety_common/SafetySettingsUtils.tsx";
 import useAgeGroupPresentation from "../../age_assurance/useAgeGroupPresentation.tsx";
+import SafetySettingsUtils from "../../safety_common/SafetySettingsUtils.tsx";
 import handleOpenUnconfirmedAgeGroupSupportArticle from "../handleOpenUnconfirmedAgeGroupSupportArticle.tsx";
 import useParentalControlSettings from "../../parent_tools/hooks/useParentalControlSettings.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -46,7 +46,7 @@ function TeenNotice(noticeType) {
   const intl = noticeType(1115).intl;
   obj3.text = intl.string(noticeType(1115).t.hvVgAZ);
   obj3.onPress = callback;
-  obj2.button = jsx(noticeType(5281).Button, { variant: "secondary", size: "sm", text: null, onPress: null });
+  obj2.button = jsx(noticeType(5447).Button, { variant: "secondary", size: "sm", text: null, onPress: null });
   const intl2 = noticeType(1115).intl;
   obj2.children = intl2.format(noticeType.message, { handleOnConfirmAgeHook: callback1 });
   obj.children = jsx(noticeType(1177).HelpMessage, {
@@ -103,7 +103,7 @@ function UnconfirmedNotice(message) {
   const intl = AGE_CONFIRMATION_NOTICE(1115).intl;
   obj3.text = intl.string(AGE_CONFIRMATION_NOTICE(1115).t.FDSSia);
   obj3.onPress = callback1;
-  obj2.button = jsx(AGE_CONFIRMATION_NOTICE(5281).Button, {
+  obj2.button = jsx(AGE_CONFIRMATION_NOTICE(5447).Button, {
     variant: "secondary",
     size: "sm",
     text: null,
@@ -126,8 +126,8 @@ class MessageRequestsUnconfirmedNotice {
   }
 }
 const View = fn(17).View;
-let closure_6 = fn(9231).TINY_BRONCO_SETTINGS_LOCATION;
-const Constants = fn(7847);
+let closure_6 = fn(9396).TINY_BRONCO_SETTINGS_LOCATION;
+const Constants = fn(8012);
 ({ SafetySettingsNoticeAction: closure_7, SafetySettingsNoticeType: closure_8 } = Constants);
 const jsx = fn(21).jsx;
 const createStyles = fn(4836);

@@ -11,8 +11,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const DraftType = fn(5200).DraftType;
-const ACTION_SHEET_MAX_WIDTH = fn(6572).ACTION_SHEET_MAX_WIDTH;
+const DraftType = fn(5366).DraftType;
+const ACTION_SHEET_MAX_WIDTH = fn(6738).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4836);
@@ -132,7 +132,7 @@ export default function UploadPreviewActionSheet(onAdd) {
       })
       .catch((error) => {
         if ("E_PICKER_CANCELLED" !== error.code) {
-          const obj2 = { key: "CROP_ERROR", IconComponent: onAdd(6028).CircleErrorIcon, content: error.message };
+          const obj2 = { key: "CROP_ERROR", IconComponent: onAdd(6194).CircleErrorIcon, content: error.message };
           onEdit(4528).open(obj2);
           const obj = onEdit(4528);
         }

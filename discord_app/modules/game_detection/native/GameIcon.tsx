@@ -1,9 +1,9 @@
 // discord_app/modules/game_detection/native/GameIcon.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef6594 from "../../../../_runtime/metro/06594__.js";
-import _modDef6595 from "../../../../_runtime/metro/06595__.js";
-import _modDef6596 from "../../../../_runtime/metro/06596__.js";
-import _modDef6597 from "../../../../_runtime/metro/06597__.js";
+import _modDef6760 from "../../../../_runtime/metro/06760__.js";
+import _modDef6761 from "../../../../_runtime/metro/06761__.js";
+import _modDef6762 from "../../../../_runtime/metro/06762__.js";
+import _modDef6763 from "../../../../_runtime/metro/06763__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 class GameIcon {

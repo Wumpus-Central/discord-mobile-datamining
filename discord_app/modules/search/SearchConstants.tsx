@@ -167,7 +167,9 @@ export const SearchListItemTypes = {
   SECTION: "section",
   GUILD_CHANNEL_MEMBER_PLACEHOLDER: "guild_channel_member_placeholder",
   GUILD_CHANNEL_MEMBER: "guild_channel_member",
-  INTELLIGENCE_SMART_SEARCH: "intelligence_smart_search",
+  SMART_SEARCH: "smart_search",
+  SUGGESTED_SEARCH: "suggested_search",
+  SUGGESTED_SEARCH_PLACEHOLDER: "suggested_search_skeleton",
 };
 export const SEARCH_LIST_SECTION_TOP_PADDING = 16;
 export const SEARCH_LIST_HORIZONTAL_PADDING = 16;

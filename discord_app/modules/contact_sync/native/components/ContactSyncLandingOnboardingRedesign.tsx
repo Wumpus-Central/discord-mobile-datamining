@@ -1,7 +1,7 @@
 // discord_app/modules/contact_sync/native/components/ContactSyncLandingOnboardingRedesign.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter.tsx";
-import _modDef12190 from "../../../../../_runtime/metro/12190__.js";
+import _modDef12361 from "../../../../../_runtime/metro/12361__.js";
 import ContactSyncErrorDefault from "ContactSyncError.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -19,7 +19,7 @@ let obj3 = {
   justifyContent: "center",
   alignItems: "center",
   textAlign: "center",
-  marginTop: -nativeDefault.space.PX_32 - fn(5994).NAV_BAR_HEIGHT,
+  marginTop: -nativeDefault.space.PX_32 - fn(6160).NAV_BAR_HEIGHT,
 };
 obj2.content = obj3;
 let size = { height: 135, width: 216, marginBottom: nativeDefault.space.PX_24 };
@@ -104,7 +104,7 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
     }),
     items,
   );
-  obj3.source = _modDef12190;
+  obj3.source = _modDef12361;
   const items1 = [closure_8(closure_6, obj3), , , ,];
   let obj4 = { style: tmp.title, variant: "heading-xl/bold", children: null };
   const intl = onNext(1115).intl;
@@ -120,7 +120,7 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
   obj7.text = intl3.string(onNext(1115).t.LhlgY9);
   obj7.onPress = callback;
   obj7.loading = loading;
-  obj6.children = closure_8(onNext(5281).Button, obj7);
+  obj6.children = closure_8(onNext(5447).Button, obj7);
   items1[3] = closure_8(closure_5, obj6);
   items1[4] = closure_8(ContactSyncErrorDefault, { error });
   obj2.children = items1;

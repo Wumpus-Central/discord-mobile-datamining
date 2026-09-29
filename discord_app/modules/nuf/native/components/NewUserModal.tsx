@@ -10,7 +10,7 @@ require = fn;
 const NativeModules = fn(17).NativeModules;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const NativeStackNavigator = fn(7339);
+const NativeStackNavigator = fn(7504);
 const Navigator = NativeStackNavigator.createNativeStackNavigator();
 const createStyles = fn(4836);
 let obj3 = {
@@ -50,11 +50,11 @@ export default function NewUserModal(arg0) {
       closure_1_4(lastShownStepIndex);
       if (continueNavigation) {
         if (null != ref.current) {
-          closure_0(17216).continueToNextStep(onboardingStepIndex, tmp3.current);
-          const obj2 = closure_0(17216);
+          closure_0(17405).continueToNextStep(onboardingStepIndex, tmp3.current);
+          const obj2 = closure_0(17405);
         }
       }
-      first(5039).popWithKey(closure_0(17217).NEW_USER_MODAL_KEY);
+      first(5039).popWithKey(closure_0(17406).NEW_USER_MODAL_KEY);
       const obj = first(5039);
     });
   }, items);
@@ -101,14 +101,14 @@ export default function NewUserModal(arg0) {
     closure_6(Navigator.Screen, {
       name: "enable-notification",
       getComponent() {
-        return closure_0(15624).RedesignNotificationScreen;
+        return closure_0(15799).RedesignNotificationScreen;
       },
       initialParams: { onComplete },
     }),
     closure_6(Navigator.Screen, {
       name: "choose-avatar",
       getComponent() {
-        return closure_0(17220).default;
+        return closure_0(17409).default;
       },
       options() {
         return {
@@ -118,7 +118,7 @@ export default function NewUserModal(arg0) {
             obj.onPress = function onPress() {
               closure_0 = closure_1_7;
               const lazyResult = React.lazy(() => closure_0(paths[8])(paths[7], paths.paths));
-              closure_2_0(5205).openAlert(
+              closure_2_0(5371).openAlert(
                 "skip-avatar-upload",
                 closure_2_6(lazyResult, {
                   onConfirm() {
@@ -127,7 +127,7 @@ export default function NewUserModal(arg0) {
                 }),
               );
             };
-            return closure_6(first(12193), obj);
+            return closure_6(first(12364), obj);
           },
         };
       },
@@ -137,7 +137,7 @@ export default function NewUserModal(arg0) {
       name: "contact-sync",
       options: { headerShown: false },
       getComponent() {
-        return closure_0(12182).ContactSyncOnboardingModal;
+        return closure_0(12353).ContactSyncOnboardingModal;
       },
       initialParams: { onComplete },
     }),
@@ -145,14 +145,14 @@ export default function NewUserModal(arg0) {
       name: "discoverability",
       options: { headerShown: false },
       getComponent() {
-        return closure_0(17221).default;
+        return closure_0(17410).default;
       },
       initialParams: { onComplete },
     }),
     closure_6(Navigator.Screen, {
       name: "connect-guardian",
       getComponent() {
-        return closure_0(17223).default;
+        return closure_0(17412).default;
       },
       initialParams: { onComplete },
     }),

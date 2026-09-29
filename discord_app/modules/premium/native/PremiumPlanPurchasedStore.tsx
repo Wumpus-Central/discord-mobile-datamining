@@ -96,8 +96,8 @@ export const reset = function reset() {
       initiatedPurchaseFromNewFlow: false,
       isPaymentSuccess: false,
       mobileWebRedirectCheckoutStatus: str,
-      onPaymentSuccess: "paddingHorizontal",
-      onPaymentDismiss: "push",
+      onPaymentSuccess: "r",
+      onPaymentDismiss: "channel",
     });
   });
 };

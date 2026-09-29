@@ -1,7 +1,8 @@
 // discord_app/modules/search/native/components/list/SearchList.tsx
 import util from "../../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
-import _mod8179 from "../../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod8344 from "../../../../../../discord_common/js/packages/flash-list/index.js";
+import SuggestedSearchRowDefault from "../../../../intelligence_layer/search/native/components/SuggestedSearchRow.tsx";
 import pages_ErrorScreenDefault from "../tabs/pages/ErrorScreen.tsx";
 import MediaGridPlaceholderDefault from "../tabs/pages/placeholders/MediaGridPlaceholder.tsx";
 import DMRowDefault from "rows/DMRow.tsx";
@@ -21,6 +22,7 @@ import MemberRowPlaceholderDefault from "../tabs/pages/placeholders/MemberRowPla
 import GenericTextRowDefault from "rows/GenericTextRow.tsx";
 import SearchListSectionDefault from "SearchListSection.tsx";
 import SmartSearchRowDefault from "../../../../intelligence_layer/search/native/components/SmartSearchRow.tsx";
+import SuggestedSearchSkeletonDefault from "../../../../intelligence_layer/search/native/components/SuggestedSearchSkeleton.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -92,8 +94,12 @@ function keyExtractor(type) {
                   } else if (constants2.SECTION === type) {
                     const _HermesInternal = HermesInternal;
                     key = "" + type.props.title;
-                  } else if (constants2.INTELLIGENCE_SMART_SEARCH === type) {
-                    key = type.props.requestKey;
+                  } else if (constants2.SMART_SEARCH === type) {
+                    key = type.props.smartSearchQuery.requestKey;
+                  } else if (constants2.SUGGESTED_SEARCH === type) {
+                    key = type.props.suggestedSearch.suggestionId;
+                  } else if (constants2.SUGGESTED_SEARCH_PLACEHOLDER === type) {
+                    key = type.key;
                   }
                 }
               }
@@ -178,17 +184,23 @@ function renderItem(item) {
     const obj16 = {};
     const merged14 = Object.assign(item.props);
     return React6(SearchListSectionDefault, obj16);
-  } else if (constants2.INTELLIGENCE_SMART_SEARCH === type) {
-    const obj = {};
+  } else if (constants2.SMART_SEARCH === type) {
+    const obj17 = {};
     const merged15 = Object.assign(item.props);
-    return React6(SmartSearchRowDefault, obj);
+    return React6(SmartSearchRowDefault, obj17);
+  } else if (constants2.SUGGESTED_SEARCH === type) {
+    const obj = {};
+    const merged16 = Object.assign(item.props);
+    return React6(SuggestedSearchRowDefault, obj);
+  } else if (constants2.SUGGESTED_SEARCH_PLACEHOLDER === type) {
+    return React6(SuggestedSearchSkeletonDefault, {});
   } else {
     return null;
   }
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const SearchConstants = fn(7303);
+const SearchConstants = fn(7468);
 ({ SearchHistoryItemTypes: metroRequire, SearchListItemTypes: closure_7 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -261,7 +273,7 @@ export default noop.memo(function SearchList(arg0) {
   obj4.ListFooterComponent = ListFooterComponent;
   obj4.ItemSeparatorComponent = ItemSeparatorComponent;
   obj4.numColumns = numColumns;
-  items[1] = React6(_mod8179.AnimatedFlashList, obj4);
+  items[1] = React6(_mod8344.AnimatedFlashList, obj4);
   obj.children = items;
   return React7(React4, obj);
 });

@@ -35,7 +35,7 @@ function TabItemCount(arg0) {
   }
   let obj2 = sharedValue(4566);
   T.__closure = {
-    withSpring: sharedValue(5280).withSpring,
+    withSpring: sharedValue(5446).withSpring,
     countAnimationState: sharedValue,
     COUNT_SPRING_CONFIG,
     interpolate: sharedValue(4566).interpolate,
@@ -53,7 +53,7 @@ function TabItemCount(arg0) {
   }
   closure_129_3 = tmp7;
   let obj3 = {
-    withSpring: sharedValue(5280).withSpring,
+    withSpring: sharedValue(5446).withSpring,
     countAnimationState: sharedValue,
     COUNT_SPRING_CONFIG,
     interpolate: sharedValue(4566).interpolate,
@@ -79,7 +79,7 @@ function TabItemCount(arg0) {
     pressed,
     index,
     activeIndex,
-    withSpring: sharedValue(5280).withSpring,
+    withSpring: sharedValue(5446).withSpring,
     TEXT_SPRING_CONFIG,
   };
   fn.__workletHash = 11643476765161;

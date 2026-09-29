@@ -80,10 +80,10 @@ export default function RecommendationsBannerCard(application) {
   }
   const tmp = closure_8();
   if (!showsPromoted) {
-    showsPromoted = application(8590).isPromotedApplication(application);
-    const obj = application(8590);
+    showsPromoted = application(8755).isPromotedApplication(application);
+    const obj = application(8755);
   }
-  const shelfBadgeTypeIfActive = application(8590).getShelfBadgeTypeIfActive(application);
+  const shelfBadgeTypeIfActive = application(8755).getShelfBadgeTypeIfActive(application);
   let bot = application.bot;
   let id;
   if (bot != null) {
@@ -101,7 +101,7 @@ export default function RecommendationsBannerCard(application) {
     }
     maybeFetchUserProfileDefault(id);
   }, items);
-  const obj2 = application(8590);
+  const obj2 = application(8755);
   const applicationIconSource = AvatarUtilsDefault.getApplicationIconSource({
     id: application.id,
     icon: application.icon,
@@ -110,7 +110,7 @@ export default function RecommendationsBannerCard(application) {
   });
   if (isLandscape) {
     const obj5 = { application, iconSource: applicationIconSource, onPress, isFirstRow: isFirst, isLastRow: isLast };
-    let tmp12Result2 = closure_6(tmp4(11565).BaseAppRow, obj5);
+    let tmp12Result2 = closure_6(tmp4(11734).BaseAppRow, obj5);
   } else {
     const items1 = [tmp.container, ,];
     let num = 8;
@@ -137,7 +137,7 @@ export default function RecommendationsBannerCard(application) {
       overrideImageUrl: null,
     };
     const tmp10Result = RecommendationsBannerDefault;
-    obj10.applicationEmbedded = tmp4(8590).isEmbeddedApp(application);
+    obj10.applicationEmbedded = tmp4(8755).isEmbeddedApp(application);
     ({ id: obj8.applicationId, icon } = application);
     obj10.applicationIcon = icon;
     obj10.overrideImageUrl = application.overrideImageUrl;
@@ -182,12 +182,12 @@ export default function RecommendationsBannerCard(application) {
     items6[1] = closure_6(tmp4(4832).Text, obj19);
     obj17.children = items6;
     items5[1] = closure_7(View, obj17);
-    items5[2] = closure_6(tmp4(5924).TableRowArrow, {});
+    items5[2] = closure_6(tmp4(6090).TableRowArrow, {});
     obj15.children = items5;
     items4[1] = closure_7(View, obj15);
     obj7.children = items4;
-    tmp12Result2 = closure_7(tmp4(5435).PressableOpacity, obj7);
-    const tmp4Result = tmp4(8590);
+    tmp12Result2 = closure_7(tmp4(5602).PressableOpacity, obj7);
+    const tmp4Result = tmp4(8755);
   }
   return tmp12Result2;
 }

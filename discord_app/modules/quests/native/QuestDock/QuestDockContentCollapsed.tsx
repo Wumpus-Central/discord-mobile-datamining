@@ -3,8 +3,8 @@ import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestDockMode = fn(5756).QuestDockMode;
-const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(14624).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QuestDockMode = fn(5923).QuestDockMode;
+const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(14799).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
 const createStyles = fn(4836);
 let obj = { questDockContentCollapsed: null };
@@ -30,7 +30,7 @@ export default noop.memo(function QuestDockContentCollapsed(children) {
     tmp = hideOnExpand;
   }
   hideOnExpand = tmp;
-  const activeQuestDockMode = noop.useContext(hideOnExpand(14625).QuestDockGestureContext).activeQuestDockMode;
+  const activeQuestDockMode = noop.useContext(hideOnExpand(14800).QuestDockGestureContext).activeQuestDockMode;
   const tmp2 = closure_7();
   const fn = function l() {
     let num = 1;
@@ -44,7 +44,7 @@ export default noop.memo(function QuestDockContentCollapsed(children) {
   };
   let obj = hideOnExpand(4566);
   fn.__closure = {
-    withSpring: hideOnExpand(5280).withSpring,
+    withSpring: hideOnExpand(5446).withSpring,
     activeQuestDockMode,
     QuestDockMode,
     hideOnExpand: tmp,
@@ -54,7 +54,7 @@ export default noop.memo(function QuestDockContentCollapsed(children) {
   fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
   const obj2 = {
-    withSpring: hideOnExpand(5280).withSpring,
+    withSpring: hideOnExpand(5446).withSpring,
     activeQuestDockMode,
     QuestDockMode,
     hideOnExpand: tmp,
@@ -80,5 +80,5 @@ export default noop.memo(function QuestDockContentCollapsed(children) {
   const obj4 = { style: null, animatedProps, children: children.children };
   const items = [tmp2.questDockContentCollapsed, animatedStyle];
   obj4.style = items;
-  return jsx(activeQuestDockMode(6494), { style: null, animatedProps, children: children.children });
+  return jsx(activeQuestDockMode(6660), { style: null, animatedProps, children: children.children });
 });

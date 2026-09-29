@@ -76,10 +76,10 @@ export default function NotificationSettingsChannel(channel) {
     const obj5 = { style: { marginBottom: 16 }, title: null, subtitle: null, onPressUnmute: null };
     const intl2 = tmp(1115).intl;
     obj5.title = intl2.string(tmp(1115).t["6MCxAy"]);
-    obj5.subtitle = tmp(9609).getMuteBannerSubtitleFromConfig(stateFromStoresObject.config);
+    obj5.subtitle = tmp(9776).getMuteBannerSubtitleFromConfig(stateFromStoresObject.config);
     obj5.onPressUnmute = callback1;
-    muted = closure_6(tmp(9609).NotificationSettingsMuteBanner, obj5);
-    const tmpResult = tmp(9609);
+    muted = closure_6(tmp(9776).NotificationSettingsMuteBanner, obj5);
+    const tmpResult = tmp(9776);
   }
   const items3 = [
     muted,
@@ -98,7 +98,7 @@ export default function NotificationSettingsChannel(channel) {
   let isForumLikeChannelResult = channel.isForumLikeChannel();
   if (isForumLikeChannelResult) {
     const obj9 = { style: { marginTop: 24 }, channel: channel.channel };
-    isForumLikeChannelResult = closure_6(tmp(9629).NotificationSettingsChannelPost, obj9);
+    isForumLikeChannelResult = closure_6(tmp(9796).NotificationSettingsChannelPost, obj9);
   }
   items3[4] = isForumLikeChannelResult;
   const inherited = channelPresetInheritance.inherited;
@@ -108,7 +108,7 @@ export default function NotificationSettingsChannel(channel) {
     const obj11 = { variant: "secondary", onPress: callback, text: null };
     const intl3 = tmp(1115).intl;
     obj11.text = intl3.string(tmp(1115).t["3PBFN6"]);
-    obj10.children = closure_6(tmp(5281).Button, obj11);
+    obj10.children = closure_6(tmp(5447).Button, obj11);
     tmp11Result = closure_6(View, obj10);
   }
   items3[5] = tmp11Result;

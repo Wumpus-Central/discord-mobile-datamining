@@ -7,9 +7,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = fn;
 function renderActivityOrPIP(arg0, arg1, transitionState, transitionCleanUp) {
   if ("pip" === arg1) {
-    let tmp4 = 16841;
+    let tmp4 = 17028;
   } else {
-    tmp4 = 16847;
+    tmp4 = 17034;
   }
   return React5(importDefault(tmp4), { transitionState, transitionCleanUp }, arg0);
 }
@@ -50,7 +50,7 @@ class BaseActivityPanelUI {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const ActivityPanelModes = fn(8502).ActivityPanelModes;
+const ActivityPanelModes = fn(8667).ActivityPanelModes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let closure_12 = [];

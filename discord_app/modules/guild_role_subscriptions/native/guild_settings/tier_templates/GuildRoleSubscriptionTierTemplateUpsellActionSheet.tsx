@@ -89,7 +89,7 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
     paused: stateFromStores,
     ariaHidden: true,
   };
-  obj5.children = closure_10(markAsDismissed(7755), size);
+  obj5.children = closure_10(markAsDismissed(7920), size);
   const items2 = [closure_10(View, obj5), ,];
   const obj6 = { style: tmp.info, children: null };
   const obj7 = {

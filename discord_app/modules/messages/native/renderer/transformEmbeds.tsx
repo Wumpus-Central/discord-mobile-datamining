@@ -239,8 +239,8 @@ export default function transformEmbeds(arg0) {
                         const mapped1 = fields.map((rawName) => {
                           let result = null;
                           if (null != rawName.rawName) {
-                            result = channelId(7535).parseEmbedTitleMarkup(rawName.rawName, channelId);
-                            const obj = channelId(7535);
+                            result = channelId(7700).parseEmbedTitleMarkup(rawName.rawName, channelId);
+                            const obj = channelId(7700);
                           }
                           let result1 = null;
                           if (null != rawName.rawValue) {
@@ -253,8 +253,8 @@ export default function transformEmbeds(arg0) {
                               showListsAndHeaders,
                               showMaskedLinks,
                             };
-                            result1 = channelId(7535).parseEmbedDescriptionMarkup(obj3);
-                            const obj2 = channelId(7535);
+                            result1 = channelId(7700).parseEmbedDescriptionMarkup(obj3);
+                            const obj2 = channelId(7700);
                           }
                           const obj4 = {};
                           const merged = Object.assign(rawName);

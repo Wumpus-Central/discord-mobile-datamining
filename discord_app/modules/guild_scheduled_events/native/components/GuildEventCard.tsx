@@ -32,7 +32,7 @@ function GuildEventCardControls(onCloseAction) {
   return React6(ButtonGroup.ButtonGroup, obj2);
 }
 const View = fn(17).View;
-let closure_5 = fn(6946).isGuildScheduledEventActive;
+let closure_5 = fn(7112).isGuildScheduledEventActive;
 fn(2051).AGE_VERIFICATION_STAGE_CHANNEL_TYPES;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);

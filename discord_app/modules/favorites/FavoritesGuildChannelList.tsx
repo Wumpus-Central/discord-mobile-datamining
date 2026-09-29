@@ -273,7 +273,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
     },
     set: undefined,
   });
-  const favoritesCategories = favoriteChannels(9685).getFavoritesCategories(favoriteChannels);
+  const favoritesCategories = favoriteChannels(9852).getFavoritesCategories(favoriteChannels);
   let found = favoritesCategories.filter((id) => null != id.id);
   let mapped = found.map((id) => {
     id = id.id;
@@ -630,7 +630,7 @@ const ChannelRecord = fn(2049);
 let closure_19 = fn(4468).createFavoritesGuildChannelRecord;
 const FavoritesConstants = fn(2058);
 ({ FAVORITES_RAW_GUILD_ID: closure_20, MAX_FAVORITE_CHANNELS: closure_21 } = FavoritesConstants);
-const constants = fn(6954).ChannelListChannelNoticeRow;
+const constants = fn(7120).ChannelListChannelNoticeRow;
 const Permissions = fn(1085).Permissions;
 let items = [
   EmbeddedActivitiesStore,

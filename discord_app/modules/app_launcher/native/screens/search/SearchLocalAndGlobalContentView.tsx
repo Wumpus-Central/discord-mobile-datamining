@@ -37,20 +37,20 @@ function CommandRow(arg0) {
   let hasOptions;
   let onPressSend;
   ({ context, onPress, isFirstRow, isLastRow, beforeExecuteCommand, onExecuteCommand } = arg0);
-  const appLauncherIconSource = hasOptions(11533).getAppLauncherIconSource(application);
+  const appLauncherIconSource = hasOptions(11702).getAppLauncherIconSource(application);
   let tmp4 = null != appLauncherIconSource;
   if (tmp4) {
     const obj2 = { iconSource: appLauncherIconSource };
-    tmp4 = closure_10(onPressSend(11538), obj2);
+    tmp4 = closure_10(onPressSend(11707), obj2);
   }
-  obj = hasOptions(11533);
-  const tmpResult = hasOptions(11587);
+  obj = hasOptions(11702);
+  const tmpResult = hasOptions(11756);
   const commandRowSend = tmpResult.useCommandRowSend({
     command,
     context,
     beforeExecuteCommand,
     onExecuteCommand,
-    sectionName: hasOptions(8712).AppLauncherSectionName.SEARCH,
+    sectionName: hasOptions(8877).AppLauncherSectionName.SEARCH,
   });
   hasOptions = commandRowSend.hasOptions;
   onPressSend = commandRowSend.onPressSend;
@@ -89,16 +89,16 @@ function CommandRow(arg0) {
     context,
     beforeExecuteCommand,
     onExecuteCommand,
-    sectionName: hasOptions(8712).AppLauncherSectionName.SEARCH,
+    sectionName: hasOptions(8877).AppLauncherSectionName.SEARCH,
   };
-  obj4.subLabel = hasOptions(8590).getSectionName(application);
+  obj4.subLabel = hasOptions(8755).getSectionName(application);
   obj4.start = isFirstRow;
   obj4.end = isLastRow;
   obj4.onPress = onPress;
   obj4.accessibilityActions = memo;
   obj4.onAccessibilityAction = callback;
-  obj4.trailing = closure_10(onPressSend(11587), { hasOptions, sending: commandRowSend.sending, onPressSend });
-  return closure_10(hasOptions(5917).TableRow, obj4);
+  obj4.trailing = closure_10(onPressSend(11756), { hasOptions, sending: commandRowSend.sending, onPressSend });
+  return closure_10(hasOptions(6083).TableRow, obj4);
 }
 function PlaceholderCommandRow(isFirstRow) {
   let flag = isFirstRow.isFirstRow;
@@ -188,8 +188,8 @@ function CommandsExpandableList(expandedOverride) {
   });
 }
 const View = fn(17).View;
-const getSection = fn(8591).getSection;
-const FetchState = fn(11550).FetchState;
+const getSection = fn(8756).getSection;
+const FetchState = fn(11719).FetchState;
 const AppLauncherNativeConstants = fn(1484);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;

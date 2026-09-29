@@ -22,10 +22,10 @@ export const RootThemeContextProvider = function RootThemeContextProvider(childr
   const tmp4 = useColorThemeBackgroundDefault();
   const obj = manaTypeConsolidationExperiment(504);
   manaTypeConsolidationExperiment =
-    manaTypeConsolidationExperiment(6401).useManaTypeConsolidationExperiment("RootThemeContextProvider");
-  const obj2 = manaTypeConsolidationExperiment(6401);
+    manaTypeConsolidationExperiment(6567).useManaTypeConsolidationExperiment("RootThemeContextProvider");
+  const obj2 = manaTypeConsolidationExperiment(6567);
   [][0] = manaTypeConsolidationExperiment;
-  const plainTextExperiment = manaTypeConsolidationExperiment(14131).usePlainTextExperiment("RootThemeContextProvider");
+  const plainTextExperiment = manaTypeConsolidationExperiment(14303).usePlainTextExperiment("RootThemeContextProvider");
   if (null == tmp4) {
     let num2 = 0;
     if (1 !== saturation) {
@@ -46,7 +46,7 @@ export const RootThemeContextProvider = function RootThemeContextProvider(childr
         enabled: plainTextExperiment,
         children: children.children,
       });
-      return jsx(tmp(9535).RootThemeContextProvider, {
+      return jsx(tmp(9702).RootThemeContextProvider, {
         theme: stateFromStoresObject.theme,
         flags: num2,
         saturation,
@@ -73,5 +73,5 @@ export const RootThemeContextProvider = function RootThemeContextProvider(childr
     setThemeFlagResult1 = tmp(4540).setThemeFlag(0, tmp(4540).ThemeContextFlags.MOBILE_DARK_GRADIENT_THEME_ENABLED);
     const tmpResult6 = tmp(4540);
   }
-  const obj3 = manaTypeConsolidationExperiment(14131);
+  const obj3 = manaTypeConsolidationExperiment(14303);
 };

@@ -10,7 +10,7 @@ const AppLauncherNativeConstants = fn(1484);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const sum = fn(11613).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
+const sum = fn(11782).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
 const TOTAL_SCROLL_RANGE = sum - 56;
 const createStyles = fn(4836);
 let obj2 = {
@@ -179,10 +179,10 @@ export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeade
   if (str == null) {
     str = "";
   }
-  const tmp9 = section(7589);
+  const tmp9 = section(7754);
   if (null != memo) {
     const obj8 = { style: tmp.appIcon, source: memo };
-    let tmp15 = closure_6(tmp8(5899), obj8);
+    let tmp15 = closure_6(tmp8(6065), obj8);
     let tmp16 = closure_6;
   } else {
     const obj9 = { style: null };
@@ -203,7 +203,7 @@ export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeade
   const obj11 = { style: null };
   let items3 = [tmp.headerBannerOverlay, animatedStyle2];
   obj11.style = items3;
-  const items4 = [tmp16(section(4566).View, obj11), tmp16(section(11613), { onPress: onPress.onPressBack }), , ,];
+  const items4 = [tmp16(section(4566).View, obj11), tmp16(section(11782), { onPress: onPress.onPressBack }), , ,];
   const obj12 = {
     lineClamp: 1,
     animated: true,

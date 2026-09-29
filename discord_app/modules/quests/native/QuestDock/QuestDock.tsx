@@ -512,7 +512,7 @@ function QuestDockWithEntranceAnimation(arg0) {
     withAndroidOffscreenAlphaCompositingWorkaround: closure_9,
   } = arg0);
   ({ renderImpressionTracker, trackAssetLoadingFailure } = arg0);
-  const context = noop.useContext(identifierMetricTag(14711));
+  const context = noop.useContext(identifierMetricTag(14886));
   const isRendered = context.isRendered;
   let items = [mode];
   mode = initialize.useStateFromStores(items, () => mode.prevRestingQuestDockMode);
@@ -871,17 +871,17 @@ class QuestDockQuestContent {
 }
 function QuestDockBountyContent(bounty) {
   bounty = bounty.bounty;
-  const bountyPreviewImageUrl = bounty(14621).useBountyPreviewImageUrl(bounty);
-  let obj = bounty(14621);
-  const questDockAppThemedBackgroundColor = bounty(14621).useQuestDockAppThemedBackgroundColor();
-  const obj2 = bounty(14621);
-  const questDockBountySmokeCollapsedPlaceholderUrl = bounty(14733).useQuestDockBountySmokeCollapsedPlaceholderUrl();
-  const obj3 = bounty(14733);
+  const bountyPreviewImageUrl = bounty(14796).useBountyPreviewImageUrl(bounty);
+  let obj = bounty(14796);
+  const questDockAppThemedBackgroundColor = bounty(14796).useQuestDockAppThemedBackgroundColor();
+  const obj2 = bounty(14796);
+  const questDockBountySmokeCollapsedPlaceholderUrl = bounty(14908).useQuestDockBountySmokeCollapsedPlaceholderUrl();
+  const obj3 = bounty(14908);
   const isBountiesAndroidQuestBarSmokeAnimationEnabled = bounty(
-    14734,
+    14909,
   ).useIsBountiesAndroidQuestBarSmokeAnimationEnabled(constants.QUESTS_BAR_MOBILE);
   const obj5 = { bounty, children: null };
-  const obj4 = bounty(14734);
+  const obj4 = bounty(14909);
   obj5.children = closure_23(QuestDockWithEntranceAnimation, {
     identifierMetricTag: "ad_creative_id:" + bounty.id,
     backgroundImageUrl: questDockBountySmokeCollapsedPlaceholderUrl,
@@ -922,14 +922,14 @@ function QuestDockBountyContent(bounty) {
       });
     },
   });
-  return closure_23(bounty(14631).QuestDockBountyProvider, obj5);
+  return closure_23(bounty(14806).QuestDockBountyProvider, obj5);
 }
 let closure_3 = ["mode"];
 get_ActivityIndicator = fn(17);
 ({ View: closure_8, StyleSheet, Pressable: closure_9, Image: c10 } = get_ActivityIndicator);
-const QuestConstants = fn(5756);
+const QuestConstants = fn(5923);
 ({ QuestDockMode: closure_12, QuestsExperimentLocations: map1 } = QuestConstants);
-const QuestDockConstants = fn(14624);
+const QuestDockConstants = fn(14799);
 ({
   QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_14,
   QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_15,
@@ -1015,7 +1015,7 @@ let closure_38 = createStyles.createStyles(() => ({
   wrapperAnimated: { position: "absolute", bottom: 0, padding: 0, width: "100%" },
 }));
 let obj7 = {};
-const merged4 = Object.assign(fn(5284).SUBTLE_SPRING);
+const merged4 = Object.assign(fn(5450).SUBTLE_SPRING);
 obj7.overshootClamping = true;
 obj7.damping = 54;
 const constants2 = { PENDING: "pending", SUCCEEDED: "succeeded", FAILED: "failed" };

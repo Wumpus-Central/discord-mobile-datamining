@@ -95,7 +95,7 @@ let closure_9 = async function _remixVibegrationsProjectInto(arg0) {
               c5 = 0;
               closure_131_5(closure_130_1);
               const intl2 = closure_131_0(closure_131_2[4]).intl;
-              closure_131_7(closure_130_1, intl2.string(closure_131_1(closure_131_2[3]).so1WC7));
+              closure_131_7(closure_130_1, intl2.string(closure_131_1(closure_131_2[3]).so1WC7), undefined, { remix: true });
               const obj11 = { ok: true, projectId: closure_130_1 };
               c7 = 3;
               const obj12 = { value: obj11, done: true };
@@ -130,7 +130,7 @@ let closure_9 = async function _remixVibegrationsProjectInto(arg0) {
     }
   })();
 };
-const VibegrationsConnectionStore = fn(12642);
+const VibegrationsConnectionStore = fn(12812);
 ({ VibegrationsRemixError: closure_4, ensureConnection: hasOwnProperty, remixProjectWorkspace: metroRequire, sendUserMessage: closure_7 } = VibegrationsConnectionStore);
 let c8 = " (Remix)";
 const size = fn(2);

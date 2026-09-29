@@ -106,7 +106,7 @@ const guildMemberRequesterStore = new GuildMemberRequesterStore(DispatcherDefaul
     return false;
   },
   SEARCH_MESSAGES_SUCCESS: handleLoadSearchResults,
-  INTELLIGENCE_SEARCH_FETCH_SUCCESS: function handleIntelligenceSearchFetchSuccess(arg0) {
+  SMART_SEARCH_FETCH_SUCCESS: function handleSmartSearchFetchSuccess(arg0) {
     ({ messages, guildId: importDefault } = arg0);
     const item = messages.forEach((item) => {
       ({ author, mentions } = item);
@@ -150,7 +150,7 @@ const guildMemberRequesterStore = new GuildMemberRequesterStore(DispatcherDefaul
     }
     return flag;
   },
-  CONVERSATION_FETCH_SUCCESS: function handleConversationFetchSuccess(messages) {
+  CONVERSATION_MESSAGES_FETCH_SUCCESS: function handleConversationMessagesFetchSuccess(messages) {
     messages = messages.messages;
     const channel = ChannelStore.getChannel(messages.channelId);
     let flag = null != channel && null != channel.guild_id;
@@ -173,7 +173,7 @@ const guildMemberRequesterStore = new GuildMemberRequesterStore(DispatcherDefaul
     }
     return flag;
   },
-  CONVERSATIONS_FETCH_SUCCESS: function handleConversationsFetchSuccess(rawConversations) {
+  CHANNEL_CONVERSATIONS_FETCH_SUCCESS: function handleChannelConversationsFetchSuccess(rawConversations) {
     rawConversations = rawConversations.rawConversations;
     const channel = ChannelStore.getChannel(rawConversations.channelId);
     if (null != channel) {

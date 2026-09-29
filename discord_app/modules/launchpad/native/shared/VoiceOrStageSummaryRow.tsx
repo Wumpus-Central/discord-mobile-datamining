@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef16474 from "../../../../../_runtime/metro/16474__.js";
+import _modDef16662 from "../../../../../_runtime/metro/16662__.js";
 import getLayoutStylesDefault from "getLayoutStyles.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -126,7 +126,7 @@ export default noop.memo(function VoiceOrStageSummaryRow(arg0) {
     const items3 = [,];
     ({ badge: arr4[0], audienceBadge: arr4[1] } = tmp4);
     obj4.style = items3;
-    let obj5 = { size: max(1177).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: _modDef16474 };
+    let obj5 = { size: max(1177).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: _modDef16662 };
     const items4 = [closure_4(max(1177).Icon, obj5)];
     let obj6 = { variant: "text-sm/bold", style: { marginLeft: 4 }, children: audienceCount };
     items4[1] = closure_4(max(4832).Text, obj6);

@@ -8,7 +8,7 @@ import isRoleRequiredDefault from "../../../channel/isRoleRequired.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import useIsVoiceChannelFullDefault from "../../useIsVoiceChannelFull.tsx";
-import _modDef9491 from "../../../../../_runtime/metro/09491__.js";
+import _modDef9658 from "../../../../../_runtime/metro/09658__.js";
 import openGroupDMAddMembersDefault from "../../../group_dm/native/openGroupDMAddMembers.tsx";
 import CallStateHooks from "../CallStateHooks.tsx";
 import OngoingCallStatusLabelDefault from "../components/OngoingCallStatusLabel.tsx";
@@ -172,7 +172,7 @@ class VoiceChannelHeader {
 function AddMemberButton(onPress) {
   const obj = {
     onPress: onPress.onPress,
-    iconSource: _modDef9491,
+    iconSource: _modDef9658,
     iconStyle: closure_12().icons,
     accessibilityLabel: null,
   };

@@ -4,8 +4,8 @@ import util from "../../../intl/index.native.tsx";
 import user from "../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 import _modDef3717 from "../intl/CustomTypingIndicator.messages.js";
 import CustomTypingIndicatorDynamicAssetDefault from "CustomTypingIndicatorDynamicAsset.tsx";
-import _modDef11456 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiDuckSweatExample-1x.png.js";
-import _modDef11457 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiEzExample-1x.png.js";
+import _modDef11625 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiDuckSweatExample-1x.png.js";
+import _modDef11626 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiEzExample-1x.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -23,7 +23,7 @@ function CoachmarkPreview() {
     textStyle: tmp.typingText,
     emojiSource: null,
   };
-  const items = [_modDef11456, _modDef11457, _modDef11456];
+  const items = [_modDef11625, _modDef11626, _modDef11625];
   obj2.emojiSource = items;
   obj.children = jsx(CustomTypingIndicatorDynamicAssetDefault, {
     name: "Locke",

@@ -19,8 +19,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkout/native/useGiftCardMobileConsumptionHalfsheet.tsx");
 
 export const useGiftCardMobileConsumptionHalfsheet = function useGiftCardMobileConsumptionHalfsheet() {
-  enabled = enabled(6805).useGiftCardsExperimentConfig({ location: "useGiftCardMobileConsumptionHalfsheet" }).enabled;
-  obj = enabled(6805);
+  enabled = enabled(6971).useGiftCardsExperimentConfig({ location: "useGiftCardMobileConsumptionHalfsheet" }).enabled;
+  obj = enabled(6971);
   let tmp = enabled;
   let items = [markAsDismissed];
   let items1 = [enabled];
@@ -96,7 +96,7 @@ export const useGiftCardMobileConsumptionHalfsheet = function useGiftCardMobileC
     return items1;
   }, items6);
   const obj4 = enabled(504);
-  const tmp10 = first(tmp(6806).useSelectedDismissibleContent(memo, undefined, true), 2);
+  const tmp10 = first(tmp(6972).useSelectedDismissibleContent(memo, undefined, true), 2);
   first = tmp10[0];
   noop = tmp12;
   ref = noop.useRef(tmp10[1]);
@@ -136,7 +136,7 @@ export const useGiftCardMobileConsumptionHalfsheet = function useGiftCardMobileC
         c0 = false;
         obj = DispatcherDefault;
         const subscription = obj.subscribe("SHOW_ACTION_SHEET", handleShow);
-        const promise = asyncRequireImpl(6810, dependencyMap.paths);
+        const promise = asyncRequireImpl(6976, dependencyMap.paths);
         promise.catch(() => {
           let tmp = c0;
           if (!c0) {

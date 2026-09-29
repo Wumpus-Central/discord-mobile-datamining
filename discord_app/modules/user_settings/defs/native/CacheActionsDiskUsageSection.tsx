@@ -118,9 +118,9 @@ function DiskUsageResults(report) {
     const obj13 = { errors: null, unavailable: null };
   }
   items1[2] = tmp4Result;
-  items[2] = closure_7(obj(5279).Stack, { children: items1 });
+  items[2] = closure_7(obj(5445).Stack, { children: items1 });
   obj2.children = items;
-  return closure_7(obj(5279).Stack, obj2);
+  return closure_7(obj(5445).Stack, obj2);
 }
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);

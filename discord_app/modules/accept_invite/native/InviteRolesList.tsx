@@ -47,7 +47,7 @@ export default function InviteRolesList(invite) {
       };
       items1[1] = closure_5(View, obj3);
       obj.children = items1;
-      tmp2 = closure_6(guild(5279).Stack, obj);
+      tmp2 = closure_6(guild(5445).Stack, obj);
     }
   }
   return tmp2;

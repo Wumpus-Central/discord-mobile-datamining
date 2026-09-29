@@ -1,6 +1,6 @@
 // discord_app/modules/conversations/components/native/ConversationFocusScreen.tsx
 import noop from "../../../../../_runtime/metro/00019__.js";
-import ConversationsStore from "../../ConversationsStore.tsx";
+import ChannelConversationsStore from "../../ChannelConversationsStore.tsx";
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -12,20 +12,20 @@ export default function ConversationFocusScreen() {
   channelId = params.channelId;
   const conversationId = params.conversationId;
   const obj = channelId(1488);
-  const items = [ConversationsStore];
+  const items = [ChannelConversationsStore];
   const items1 = [channelId, conversationId];
   const messages = channelId(504).useStateFromStores(
     items,
-    () => ConversationsStore.getHydratedMessages(channelId, conversationId),
+    () => ChannelConversationsStore.getHydratedMessages(channelId, conversationId),
     items1,
   );
   let obj2 = channelId(504);
-  const items2 = [ConversationsStore];
+  const items2 = [ChannelConversationsStore];
   const items3 = [channelId, conversationId];
   const stateFromStoresObject = channelId(504).useStateFromStoresObject(
     items2,
     () => {
-      const conversationMetadata = ConversationsStore.getConversationMetadata(channelId, conversationId);
+      const conversationMetadata = ChannelConversationsStore.getConversationMetadata(channelId, conversationId);
       let flag;
       if (conversationMetadata != null) {
         flag = conversationMetadata.fullyHydrated;
@@ -35,7 +35,7 @@ export default function ConversationFocusScreen() {
       }
       const obj2 = {
         fullyHydrated: flag,
-        isFullFetchPending: ConversationsStore.isConversationFetchPending(conversationId, true),
+        isFullFetchPending: ChannelConversationsStore.isConversationFetchPending(conversationId, true),
         startMessageId: null,
       };
       let startMessageId;
@@ -51,7 +51,7 @@ export default function ConversationFocusScreen() {
     items3,
   );
   ({ fullyHydrated, isFullFetchPending, startMessageId } = stateFromStoresObject);
-  return jsx(conversationId(12824), {
+  return jsx(conversationId(12994), {
     channelId,
     conversationId,
     messages,

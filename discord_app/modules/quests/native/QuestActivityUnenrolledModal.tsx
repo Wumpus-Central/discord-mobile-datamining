@@ -5,7 +5,7 @@ import utils_PlatformUtils from "../../../../discord_common/js/shared/utils/Plat
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import QuestTypes from "../QuestTypes.tsx";
-import _modDef6413 from "../../../../_runtime/metro/06413__.js";
+import _modDef6579 from "../../../../_runtime/metro/06579__.js";
 import HeaderActionButton from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import AnalyticsTypes from "../lib/analytics/AnalyticsTypes.tsx";
 import QuestActionCreators from "../QuestActionCreators.tsx";
@@ -33,18 +33,18 @@ function QuestActivityUnenrolledModalInner(quest) {
   const checked = tmp5[0];
   dependencyMap = tmp5[1];
   let obj3 = quest(504);
-  let obj4 = quest(6589);
-  const getOrFetchApplication = obj4.useGetOrFetchApplication(quest(7137).getActivityApplicationId(quest));
-  const obj5 = quest(7137);
-  const questTaskDetails = quest(10681).useQuestTaskDetails(quest);
-  let obj6 = quest(10681);
-  const obj7 = quest(10750);
+  let obj4 = quest(6755);
+  const getOrFetchApplication = obj4.useGetOrFetchApplication(quest(7302).getActivityApplicationId(quest));
+  const obj5 = quest(7302);
+  const questTaskDetails = quest(10850).useQuestTaskDetails(quest);
+  let obj6 = quest(10850);
+  const obj7 = quest(10919);
   const items1 = [getOrFetchApplication];
   const questsInstructionsToWinReward = obj7.useQuestsInstructionsToWinReward({
     quest,
     taskDetails: questTaskDetails,
     location: QuestsExperimentLocations.QUEST_ACTIVITY_UNENROLLED_MODAL,
-    sourceQuestContent: quest(5759).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL,
+    sourceQuestContent: quest(5926).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL,
   });
   const memo = noop.useMemo(() => {
     let applicationIconURL = null;
@@ -83,13 +83,13 @@ function QuestActivityUnenrolledModalInner(quest) {
               return obj3;
             } else {
               const obj4 = {
-                questContent: tmp4(5759).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL,
-                questContentCTA: tmp4(7141).QuestContentCTA.START_QUEST,
-                sourceQuestContent: tmp4(5759).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL,
+                questContent: tmp4(5926).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL,
+                questContentCTA: tmp4(7306).QuestContentCTA.START_QUEST,
+                sourceQuestContent: tmp4(5926).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL,
               };
               v1 = 1;
               dependencyMap = 1;
-              const obj6 = { value: tmp4(10683).enrollInQuest(quest.id, obj4), done: false };
+              const obj6 = { value: tmp4(10852).enrollInQuest(quest.id, obj4), done: false };
               return obj6;
             }
           } else if (arg0 === 1) {
@@ -116,14 +116,14 @@ function QuestActivityUnenrolledModalInner(quest) {
     quest,
     taskDetails: questTaskDetails,
     location: QuestsExperimentLocations.QUEST_ACTIVITY_UNENROLLED_MODAL,
-    sourceQuestContent: quest(5759).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL,
+    sourceQuestContent: quest(5926).QuestContent.QUEST_ACTIVITY_UNENROLLED_MODAL,
   };
   const checkboxA11yNative = quest(4548).useCheckboxA11yNative({ checked });
   ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
   const obj9 = quest(4548);
-  const isQuestAccessSuspended = quest(10681).useIsQuestAccessSuspended();
-  const obj10 = quest(10681);
-  trackQuestContentClickedWithImpression = quest(10749).useTrackQuestContentClickedWithImpression();
+  const isQuestAccessSuspended = quest(10850).useIsQuestAccessSuspended();
+  const obj10 = quest(10850);
+  trackQuestContentClickedWithImpression = quest(10918).useTrackQuestContentClickedWithImpression();
   const items3 = [quest.id, trackQuestContentClickedWithImpression];
   const callback1 = noop.useCallback(() => {
     trackQuestContentClickedWithImpression({
@@ -145,13 +145,13 @@ function QuestActivityUnenrolledModalInner(quest) {
     const obj18 = { uri: memo };
     obj17.source = obj18;
     obj17.style = tmp4.appIcon;
-    obj16.children = closure_11(checked(5899), obj17);
+    obj16.children = closure_11(checked(6065), obj17);
     tmp18Result = closure_11(closure_7, obj16);
   }
   const items4 = [tmp18Result];
   const obj19 = { style: tmp4.rewardTileContainer, children: null };
   const size = { quest, height: 87, width: 87, style: tmp4.questRewardTile };
-  obj19.children = closure_11(checked(10745), size);
+  obj19.children = closure_11(checked(10914), size);
   items4[1] = closure_11(closure_7, obj19);
   obj15.children = items4;
   obj14.children = closure_12(closure_7, obj15);
@@ -191,7 +191,7 @@ function QuestActivityUnenrolledModalInner(quest) {
     tmp21 = callback1;
   }
   obj26.onPressDisabled = tmp21;
-  const items9 = [closure_11(quest(5281).Button, obj26)];
+  const items9 = [closure_11(quest(5447).Button, obj26)];
   const obj27 = { size: "lg", text: null, onPress: null, variant: "secondary" };
   const intl4 = tmp(1115).intl;
   obj27.text = intl4.string(quest(1115).t.fyT2ol);
@@ -199,7 +199,7 @@ function QuestActivityUnenrolledModalInner(quest) {
     const result = QuestActionCreators.dismissQuestActivityModal(quest.id);
     ModalActionCreatorsDefault.pop();
   };
-  items9[1] = closure_11(quest(5281).Button, obj27);
+  items9[1] = closure_11(quest(5447).Button, obj27);
   obj25.children = items9;
   const items10 = [closure_12(closure_7, obj25)];
   const obj28 = {
@@ -218,7 +218,7 @@ function QuestActivityUnenrolledModalInner(quest) {
     QuestActionCreators.setAutoEnroll(!first);
   };
   obj28.style = { alignSelf: "center", flexDirection: "row", alignItems: "center", gap: 8 };
-  const items11 = [closure_11(quest(5929).FormCheckbox, { checked })];
+  const items11 = [closure_11(quest(6095).FormCheckbox, { checked })];
   const obj29 = { variant: "text-sm/normal", color: "text-subtle", children: null };
   const intl6 = tmp(1115).intl;
   obj29.children = intl6.string(quest(1115).t["931n1T"]);
@@ -228,11 +228,11 @@ function QuestActivityUnenrolledModalInner(quest) {
   obj24.children = items10;
   items8[1] = closure_12(closure_7, obj24);
   obj12.children = items8;
-  return closure_12(quest(5279).Stack, obj12);
+  return closure_12(quest(5445).Stack, obj12);
 }
 function CloseButton() {
   const obj = {
-    source: _modDef6413,
+    source: _modDef6579,
     onPress() {
       return ModalActionCreatorsDefault.pop();
     },
@@ -244,7 +244,7 @@ function CloseButton() {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(5756).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5923).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const constants = { MAIN: "main" };
@@ -396,7 +396,7 @@ export default function QuestActivityUnenrolledModal(questId) {
     };
     obj2[constants.MAIN] = obj3;
     const obj4 = { screens: obj2, initialRouteName: constants.MAIN };
-    return closure_11(tmp(10769).Modal, obj4);
+    return closure_11(tmp(10938).Modal, obj4);
   }
   let obj = questId(504);
   tmp = questId;

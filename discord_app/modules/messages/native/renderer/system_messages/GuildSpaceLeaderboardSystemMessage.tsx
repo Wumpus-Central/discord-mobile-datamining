@@ -8,7 +8,7 @@ import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
 import GuildLeaderboardSystemMessageCopy from "../../../../guild_space/gaming_leaderboard/GuildLeaderboardSystemMessageCopy.tsx";
-import _modDef7533 from "../../../../../../_runtime/metro/07533__.js";
+import _modDef7698 from "../../../../../../_runtime/metro/07698__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
@@ -92,7 +92,7 @@ export const createGuildSpaceLeaderboardSystemMessage = function createGuildSpac
             const obj7 = { content: null, iconUrl: null, iconTintColor: null };
             obj4.previousUsernameOnClick = obj8;
             obj7.content = intl.formatToParts(mobileLeaderboardSystemMessage.message, obj4);
-            obj7.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7533);
+            obj7.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7698);
             obj7.iconTintColor = tmp13.iconTintColor;
             const merged1 = Object.assign(createCommonMessageDefault(theme));
             return obj7;

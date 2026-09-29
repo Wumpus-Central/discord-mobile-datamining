@@ -3,7 +3,7 @@ import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import MetaQuestUtils from "../../device/MetaQuestUtils.android.tsx";
 import _mod4661 from "../../../../_runtime/metro/04661__.js";
 import PaymentConstants from "../PaymentConstants.tsx";
-import keysSorter from "../../../../_runtime/05768_keysSorter.js";
+import keysSorter from "../../../../_runtime/05935_keysSorter.js";
 import Constants from "../../../Constants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 

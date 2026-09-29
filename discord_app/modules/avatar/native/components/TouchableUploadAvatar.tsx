@@ -4,8 +4,8 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef12289 from "../../../../../_runtime/metro/12289__.js";
-import _modDef13407 from "../../../../../_runtime/metro/13407__.js";
+import _modDef12460 from "../../../../../_runtime/metro/12460__.js";
+import _modDef13576 from "../../../../../_runtime/metro/13576__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -60,7 +60,7 @@ export default function TouchableUploadAvatar(onSelectAvatar) {
   }
   const tmp = closure_6();
   if (!showPendingAvatar) {
-    let tmp3 = _modDef13407;
+    let tmp3 = _modDef13576;
   } else {
     tmp3 = avatarSource;
   }
@@ -81,7 +81,7 @@ export default function TouchableUploadAvatar(onSelectAvatar) {
     const obj4 = { resizeMode: "contain", style: defaultLogoStyle, source: tmp3 };
     const items = [React4(FastImageDefault, obj4)];
     const obj5 = { style: tmp.uploadAvatarWrapper, children: null };
-    const obj6 = { size: native.Icon.Sizes.MEDIUM, source: _modDef12289, style: tmp.uploadAvatarIcon };
+    const obj6 = { size: native.Icon.Sizes.MEDIUM, source: _modDef12460, style: tmp.uploadAvatarIcon };
     obj5.children = React4(native.Icon, obj6);
     items[1] = React4(View, obj5);
     obj3.children = items;

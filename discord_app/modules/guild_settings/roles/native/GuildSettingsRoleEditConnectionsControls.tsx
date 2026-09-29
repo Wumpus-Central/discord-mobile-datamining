@@ -245,13 +245,13 @@ function AddConnectionButton(locked) {
     obj2.onCompleteIdentityApplication = function onCompleteIdentityApplication(arg0) {
       return closure_1_0(closure_2_9, arg0);
     };
-    obj.openLazy(asyncRequireImpl(17440, dependencyMap.paths), combined, obj2);
+    obj.openLazy(asyncRequireImpl(17629, dependencyMap.paths), combined, obj2);
   };
   return closure_10(components_Button_Button.Button, obj);
 }
 const View = fn(17).View;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
-const Constants = fn(5720);
+const Constants = fn(5887);
 ({
   GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: closure_8,
   GUILD_ROLE_CONNECTION_APPLICATION_IDENTITY_CONNECTION_TYPE: closure_9,
@@ -443,8 +443,8 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
         connectionType,
         connectionMetadataField: "Array",
         applicationId,
-        operator: "variant",
-        value: 1090584578,
+        operator: "resolve",
+        value: 75104258,
       };
       items.push(obj);
       if (AND === ConnectionsUtils.ConnectionConfigurationRuleOperator.AND) {

@@ -29,11 +29,8 @@ export default function _default(block) {
   const items2 = [block, stateFromStores.size, stateFromStores1.size];
   const memo = noop.useMemo(() => {
     if (block.type === ShopBlockType.ShopBlockType.HERO) {
-      const _HermesInternal3 = HermesInternal;
-      let combined = "hero-" + block.categoryStoreListingId;
-    } else if (block.type === ShopBlockType.ShopBlockType.REWARD_HERO) {
       const _HermesInternal2 = HermesInternal;
-      combined = "reward-hero-" + block.categoryStoreListingId;
+      let combined = "hero-" + block.categoryStoreListingId;
     } else {
       const _HermesInternal = HermesInternal;
       combined = "" + stateFromStores.size + "-" + stateFromStores1.size;

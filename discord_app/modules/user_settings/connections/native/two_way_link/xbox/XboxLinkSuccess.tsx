@@ -9,8 +9,8 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire, Linking: closure_7, Pressable: closure_8 } = get_ActivityIndicator);
-const XboxLinkModalScenes = fn(8531).XboxLinkModalScenes;
-const GameConsoleConstants = fn(8545);
+const XboxLinkModalScenes = fn(8696).XboxLinkModalScenes;
+const GameConsoleConstants = fn(8710);
 ({ XBOX_ANDROID_APP_LINK: c10, XBOX_IOS_APP_LINK: closure_11, XBOX_URL_BASE: closure_12 } = GameConsoleConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
@@ -89,7 +89,7 @@ export default function XboxLinkDiscordSuccess() {
   const callback1 = noop.useCallback(() => {
     navigation.push(XboxLinkModalScenes.EDUCATION);
   }, items1);
-  obj5.source = require("../../../../../../../_runtime/metro/08549__.js");
+  obj5.source = require("../../../../../../../_runtime/metro/08714__.js");
   obj5.style = tmp.image;
   const items2 = [closure_13(closure_5, obj5), , ,];
   const obj6 = {
@@ -109,7 +109,7 @@ export default function XboxLinkDiscordSuccess() {
   const obj9 = { style: tmp.appLogoBox, children: null };
   const obj2 = first(navigation[10]);
   obj9.children = closure_13(closure_5, {
-    source: require("../../../../../../../_runtime/metro/08550__.js"),
+    source: require("../../../../../../../_runtime/metro/08715__.js"),
     style: tmp.appLogo,
   });
   const items3 = [closure_13(closure_6, obj9), ,];

@@ -15,8 +15,8 @@ import ForwardDestinationUtils from "../ForwardDestinationUtils.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
+import ChannelConversationsStore from "../../conversations/ChannelConversationsStore.tsx";
 import ConversationPreviewStore from "../../conversations/ConversationPreviewStore.tsx";
-import ConversationsStore from "../../conversations/ConversationsStore.tsx";
 import ICYMIStore from "../../icymi/ICYMIStore.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import MessageStore from "../../../stores/MessageStore.tsx";
@@ -26,8 +26,8 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MAX_DESTINATION_COUNT = fn(11179).MAX_DESTINATION_COUNT;
-let UserRowModes = fn(10320).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(11348).MAX_DESTINATION_COUNT;
+let UserRowModes = fn(10489).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const createStyles = fn(4836);
@@ -71,7 +71,7 @@ export default function ForwardModal(message) {
   const memo = channel_id.useMemo(() => formatResults.getDestinationIdFromChannelId(channel_id), items);
   [tmp7, c7] = height(channel_id.useState(false), 2);
   const tmp6 = height(channel_id.useState(false), 2);
-  const items1 = [trackForwardAddRecipientOnce, stateFromStores1, trackForwardEditSearchOnce, stateFromStores, c7];
+  const items1 = [trackForwardAddRecipientOnce, stateFromStores1, trackForwardEditSearchOnce, c7, stateFromStores];
   const items2 = [channel_id, id, source, message];
   stateFromStores = require("initialize").useStateFromStores(
     items1,
@@ -87,7 +87,7 @@ export default function ForwardModal(message) {
           message = ICYMIStore.getMessage(id);
         }
         if (message == null) {
-          message = ConversationsStore.getMessage(channel_id, id);
+          message = ChannelConversationsStore.getMessage(channel_id, id);
         }
         if (message == null) {
           message = ConversationPreviewStore.getMessage(id);
@@ -261,9 +261,9 @@ export default function ForwardModal(message) {
                 if (forwardOptions(source[25])(message, closure_129_1)) {
                   const promise = new Promise((arg0) => {
                     closure_0 = arg0;
-                    closure_1_0(5205).openAlert(
+                    closure_1_0(5371).openAlert(
                       "staff-to-non-staff-forward",
-                      closure_1_15(forwardOptions(11183), {
+                      closure_1_15(forwardOptions(11352), {
                         onConfirm() {
                           return closure_0(true);
                         },

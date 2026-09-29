@@ -1,9 +1,9 @@
 // discord_app/modules/intelligence_layer/search/native/components/SmartSearchExpandButton.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import _modDef3877 from "../../IntelligenceSearch.messages.js";
-import ChevronSmallDownIcon2 from "../../../../../design/components/Icon/native/redesign/generated/ChevronSmallDownIcon.tsx";
-import ChevronSmallUpIcon from "../../../../../design/components/Icon/native/redesign/generated/ChevronSmallUpIcon.tsx";
+import _modDef3881 from "../../SmartSearch.messages.js";
+import ChevronSmallDownIcon from "../../../../../design/components/Icon/native/redesign/generated/ChevronSmallDownIcon.tsx";
+import ChevronSmallUpIcon2 from "../../../../../design/components/Icon/native/redesign/generated/ChevronSmallUpIcon.tsx";
 import useSearchHostSurface from "../useSearchHostSurface.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -41,13 +41,13 @@ const result = size.fileFinishedImporting(
   "modules/intelligence_layer/search/native/components/SmartSearchExpandButton.tsx",
 );
 
-export default noop.memo((isExpanded) => {
-  isExpanded = isExpanded.isExpanded;
+export default noop.memo((isCollapsed) => {
+  isCollapsed = isCollapsed.isCollapsed;
   const tmp3 = closure_9(useSearchHostSurface.useSearchHostSurfaceColor());
-  if (isExpanded) {
-    let ChevronSmallDownIcon = ChevronSmallUpIcon.ChevronSmallUpIcon;
+  if (isCollapsed) {
+    let ChevronSmallUpIcon = ChevronSmallDownIcon.ChevronSmallDownIcon;
   } else {
-    ChevronSmallDownIcon = ChevronSmallDownIcon2.ChevronSmallDownIcon;
+    ChevronSmallUpIcon = ChevronSmallUpIcon2.ChevronSmallUpIcon;
   }
   const obj2 = { style: tmp3.block, hitSlop: rect, children: null };
   const obj3 = {
@@ -59,19 +59,19 @@ export default noop.memo((isExpanded) => {
     children: null,
   };
   const intl = util.intl;
-  const tmp9 = _modDef3877;
-  if (isExpanded) {
-    let OLD0mz = tmp9.ih0v1g;
+  const tmp9 = _modDef3881;
+  if (isCollapsed) {
+    let FKLBbW = tmp9.NuTbB9;
     let tmp10 = importDefault;
   } else {
-    OLD0mz = tmp9.OLD0mz;
+    FKLBbW = tmp9.FKLBbW;
     tmp10 = importDefault;
   }
-  obj3.accessibilityLabel = intl.string(OLD0mz);
-  obj3.onPress = isExpanded.onPress;
+  obj3.accessibilityLabel = intl.string(FKLBbW);
+  obj3.onPress = isCollapsed.onPress;
   const items = [timestampProducer(hasOwnProperty, { style: tmp3.surface, pointerEvents: "none" })];
   const obj4 = { style: tmp3.surface, pointerEvents: "none" };
-  items[1] = timestampProducer(ChevronSmallDownIcon, { size: "sm", color: tmp10(576).colors.INTERACTIVE_ICON_DEFAULT });
+  items[1] = timestampProducer(ChevronSmallUpIcon, { size: "sm", color: tmp10(576).colors.INTERACTIVE_ICON_DEFAULT });
   obj3.children = items;
   obj2.children = React5(React3, obj3);
   return timestampProducer(hasOwnProperty, obj2);

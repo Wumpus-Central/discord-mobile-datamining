@@ -54,7 +54,7 @@ function ExternalPipViewVideoUser(userId) {
     }
     return guild_id;
   });
-  userId(8902);
+  userId(9067);
   const obj3 = { style: tmp.user, children: null };
   let tmp8Result = null;
   if (null != stateFromStores) {
@@ -77,7 +77,7 @@ function ExternalPipViewVideoStream(streamId) {
   first = 300;
   _slicedToArray = undefined;
   noop = undefined;
-  const surfaceDirectRendererExperiment = streamId(8881).useSurfaceDirectRendererExperiment(streamId.userId, {
+  const surfaceDirectRendererExperiment = streamId(9046).useSurfaceDirectRendererExperiment(streamId.userId, {
     location: "ExternalPipViewVideoStream",
   });
   [first, _slicedToArray] = noop.useState(undefined);
@@ -111,7 +111,7 @@ function ExternalPipViewVideoStream(streamId) {
     items[1] = { opacity: num };
     return items;
   }, items2);
-  let obj = streamId(8881);
+  let obj = streamId(9046);
   const token = streamId(4531).useToken(first(576).colors.TEXT_FEEDBACK_INFO);
   value = closure_7.get();
   _slicedToArray = value;
@@ -124,7 +124,7 @@ function ExternalPipViewVideoStream(streamId) {
     }
   }, items3);
   const children = [
-    closure_11(first(8892), {
+    closure_11(first(9057), {
       useSurfaceDirectRenderer: surfaceDirectRendererExperiment,
       style: memo,
       streamId,

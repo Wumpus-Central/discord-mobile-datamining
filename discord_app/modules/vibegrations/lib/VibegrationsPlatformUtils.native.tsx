@@ -612,13 +612,13 @@ let closure_21 = async function _relayPreviewControl(arg0) {
     }
   }
 };
-const FramesConstants = fn(8500);
+const FramesConstants = fn(8665);
 ({ isLaunched: closure_8, MAIN_SURFACE: closure_9, makeFrameId: c10 } = FramesConstants);
-const LocalNotificationTypes = fn(8504).LocalNotificationTypes;
-let items = [fn(7787).OAuth2Scopes.BOT, fn(7787).OAuth2Scopes.APPLICATIONS_COMMANDS];
+const LocalNotificationTypes = fn(8669).LocalNotificationTypes;
+let items = [fn(7952).OAuth2Scopes.BOT, fn(7952).OAuth2Scopes.APPLICATIONS_COMMANDS];
 let c19 = 0;
 let c22 = 0;
-const vibegrationsPreviewControlLease = fn(12446);
+const vibegrationsPreviewControlLease = fn(12617);
 let result = vibegrationsPreviewControlLease.subscribeVibegrationsControlReleased((arg0) => {
   const project = VibegrationsProjectStore.getProject(arg0);
   let prop;
@@ -721,7 +721,7 @@ let result = vibegrationsPreviewControlLease.subscribeVibegrationsControlRelease
     const obj6 = require("WebView");
   }
 });
-const vibegrationsPreviewOperationSurfaces = fn(12449);
+const vibegrationsPreviewOperationSurfaces = fn(12620);
 let closure_23 = vibegrationsPreviewOperationSurfaces.createPreviewOperationSurfaces((arg0) => {
   const project = VibegrationsProjectStore.getProject(arg0);
   let prop;

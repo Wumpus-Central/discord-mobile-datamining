@@ -1,13 +1,17 @@
 // discord_app/modules/vibegrations/native/VibegrationsVersionHistorySheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import _modDef3715 from "../intl/VibegrationsUntranslated.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import AlertModal from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import NotificationCenterUtils from "../../notification_center/NotificationCenterUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = fn;
+require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const fetchSourceHistory = fn(12642).fetchSourceHistory;
+const fetchSourceHistory = fn(12812).fetchSourceHistory;
 const jsx = fn(21).jsx;
 const VibegrationsVersionHistorySheet = "VibegrationsVersionHistorySheet";
 const createStyles = fn(4836);
@@ -52,17 +56,17 @@ export default function VibegrationsVersionHistorySheet(projectId) {
       confirmText: null,
       onConfirm: null,
     };
-    const intl = projectId(_undefined[10]).intl;
-    obj2.title = intl.string(onRestore(_undefined[11]).qOUOPE);
-    const intl2 = projectId(_undefined[10]).intl;
-    obj2.content = intl2.string(onRestore(_undefined[11]).k2JBj5);
-    const intl3 = projectId(_undefined[10]).intl;
-    obj2.confirmText = intl3.string(onRestore(_undefined[11])["+sRK16"]);
-    obj2.onConfirm = function onConfirm() {
+    const intl = projectId(_undefined[9]).intl;
+    obj2.title = intl.string(onRestore(_undefined[10]).qOUOPE);
+    const intl2 = projectId(_undefined[9]).intl;
+    obj2.content = intl2.string(onRestore(_undefined[10]).k2JBj5);
+    const intl3 = projectId(_undefined[9]).intl;
+    obj2.confirmText = intl3.string(onRestore(_undefined[10])["+sRK16"]);
+    obj2.onConfirm = () => {
       ActionSheetActionCreatorsDefault.hideActionSheet(VibegrationsVersionHistorySheet);
       onRestore(closure_0);
     };
-    projectId(_undefined[9]).showConfirmModal(obj2);
+    projectId(_undefined[8]).showConfirmModal(obj2);
   }, items1);
   if ("loading" === tmp5.status) {
     let obj2 = { style: tmp.state, children: <closure_5 /> };
@@ -115,18 +119,43 @@ export default function VibegrationsVersionHistorySheet(projectId) {
         subject.sha,
       );
     });
-    tmp9 = jsx(projectId(5999).TableRowGroup, { hasIcons: false, children: null });
+    tmp9 = jsx(projectId(6165).TableRowGroup, { hasIcons: false, children: null });
   }
   const obj7 = { scrollable: true, header: null, children: null };
   const obj8 = { title: null };
   let intl3 = projectId(1115).intl;
   obj8.title = intl3.string(onRestore(3715).jAWwzi);
-  obj7.header = tmp7(projectId(6570).BottomSheetTitleHeader, obj8);
+  obj7.header = tmp7(projectId(6736).BottomSheetTitleHeader, obj8);
   const tmp4 = _slicedToArray(noop.useState({ status: "loading" }), 2);
-  obj7.children = tmp7(projectId(6045).BottomSheetScrollView, {
+  obj7.children = tmp7(projectId(6211).BottomSheetScrollView, {
     contentContainerStyle: { paddingBottom: onRestore(1613)().bottom },
     children: tmp9,
   });
-  return tmp7(projectId(6618).ActionSheet, obj7);
+  return tmp7(projectId(6784).ActionSheet, obj7);
 }
 export const VIBEGRATIONS_VERSION_HISTORY_SHEET_KEY = "VibegrationsVersionHistorySheet";
+export const authoredAgo = function authoredAgo(authored_at) {
+  const parsed = Date.parse(authored_at);
+  let relativeTimestamp;
+  if (!Number.isNaN(parsed)) {
+    relativeTimestamp = NotificationCenterUtils.getRelativeTimestamp(parsed, false);
+  }
+  return relativeTimestamp;
+};
+export const confirmRestoreVersion = function confirmRestoreVersion(onConfirm) {
+  const obj2 = {
+    key: "VibegrationsVersionHistoryRestore",
+    title: null,
+    content: null,
+    confirmText: null,
+    onConfirm: null,
+  };
+  const intl = util.intl;
+  obj2.title = intl.string(_modDef3715.qOUOPE);
+  const intl2 = util.intl;
+  obj2.content = intl2.string(_modDef3715.k2JBj5);
+  const intl3 = util.intl;
+  obj2.confirmText = intl3.string(_modDef3715["+sRK16"]);
+  obj2.onConfirm = onConfirm;
+  AlertModal.showConfirmModal(obj2);
+};

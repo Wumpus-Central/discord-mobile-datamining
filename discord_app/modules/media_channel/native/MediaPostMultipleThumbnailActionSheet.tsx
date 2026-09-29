@@ -98,9 +98,9 @@ export default function MediaPostThumbnailActionSheet(markAsDismissed) {
   obj9.onPress = function onPress() {
     return markAsDismissed(ContentDismissActionType.UNKNOWN);
   };
-  items2[5] = closure_5(markAsDismissed(5281).Button, obj9);
+  items2[5] = closure_5(markAsDismissed(5447).Button, obj9);
   obj3.children = items2;
-  obj2.children = closure_6(markAsDismissed(6045).BottomSheetScrollView, obj3);
+  obj2.children = closure_6(markAsDismissed(6211).BottomSheetScrollView, obj3);
   obj.children = closure_5(View, obj2);
-  return closure_5(markAsDismissed(6571).BottomSheet, obj);
+  return closure_5(markAsDismissed(6737).BottomSheet, obj);
 }

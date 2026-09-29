@@ -60,7 +60,7 @@ function MaybeClearBuildOverride() {
       }
       return applyArgumentsResult;
     };
-    return closure_9(tmp2(5281).Button, obj2);
+    return closure_9(tmp2(5447).Button, obj2);
   }
   obj = require("initialize");
 }

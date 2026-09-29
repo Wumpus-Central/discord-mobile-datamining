@@ -45,10 +45,10 @@ export const useIsVibegrationsGuildEnabled = function useIsVibegrationsGuildEnab
 };
 export { isVibegrationsGuildEnabled };
 export { hasVibegrationsGuild };
-export const useHasVibegrationsGuild = function useHasVibegrationsGuild(arg0) {
-  _require = arg0;
+export const useHasVibegrationsGuild = function useHasVibegrationsGuild(YouBannerDecorations) {
+  _require = YouBannerDecorations;
   const items = [GuildStore, require("ApexExperiment").ApexExperimentStore];
-  const items1 = [arg0];
+  const items1 = [YouBannerDecorations];
   return require("initialize").useStateFromStores(
     items,
     () => hasVibegrationsGuild(Object.values(GuildStore.getGuilds()), closure_0),

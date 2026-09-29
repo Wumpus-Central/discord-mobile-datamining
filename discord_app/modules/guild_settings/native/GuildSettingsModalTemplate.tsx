@@ -20,8 +20,8 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const SceneLoadingIndicator = Text(6460);
-const Form = Text(8053);
+const SceneLoadingIndicator = Text(6626);
+const Form = Text(8218);
 require = fn;
 function TemplateForm(guildId) {
   guildId = guildId.guildId;
@@ -132,7 +132,7 @@ function TemplateForm(guildId) {
         obj2.onCloseCallback = function onCloseCallback() {
           return closure_0(false);
         };
-        guildId(5209).showConfirmModal(obj2);
+        guildId(5375).showConfirmModal(obj2);
       });
     } else {
       _Promise1 = _Promise.resolve(true);
@@ -197,7 +197,7 @@ function TemplateForm(guildId) {
                 closure_1_7(null);
                 closure_1_9(true);
                 c3 = 1;
-                const obj2 = guildTemplate(11270);
+                const obj2 = guildTemplate(11439);
                 c4 = 2;
                 c5 = 1;
                 const obj5 = { value: obj2.updateGuildTemplate(closure_0, tmp7.code, str, str2), done: false };
@@ -490,7 +490,7 @@ let closure_14 = noop.memo(function TemplateControls(arg0) {
   };
   const tmp = _slicedToArray(noop.useState(false), 2);
   _slicedToArray = tmp[1];
-  const tmp3 = guildTemplate(17453)(guildTemplate.code);
+  const tmp3 = guildTemplate(17642)(guildTemplate.code);
   noop = tmp3;
   let obj = { spacing: guildTemplate(576).space.PX_12, children: null };
   let obj2 = { label: null, children: null };

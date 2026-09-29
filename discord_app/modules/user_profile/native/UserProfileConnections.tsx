@@ -14,8 +14,8 @@ import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import UserProfileCardDefault from "UserProfileCard.tsx";
 import MaskedLinkUtils from "../../../utils/MaskedLinkUtils.tsx";
 import ConnectionMetadataVanityItems from "../../connections/native/ConnectionMetadataVanityItems.tsx";
-import _modDef11075 from "../../../../_runtime/metro/11075__.js";
-import _modDef11076 from "../../../../_runtime/metro/11076__.js";
+import _modDef11244 from "../../../../_runtime/metro/11244__.js";
+import _modDef11245 from "../../../../_runtime/metro/11245__.js";
 import useUserProfileApplicationRoleConnectionsDefault from "../hooks/useUserProfileApplicationRoleConnections.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
@@ -38,10 +38,10 @@ function VerifiedIcon(arg0) {
       let WHITE = nativeDefault.unsafe_rawColors.BLACK;
     }
     const obj3 = { style: tmp.verifiedIconContainer, children: null };
-    const obj4 = { source: _modDef11075, color: PLATFORM_TWITTER };
+    const obj4 = { source: _modDef11244, color: PLATFORM_TWITTER };
     const merged = Object.assign(obj);
     const items = [closure_1_12(native2.Icon, obj4)];
-    const obj5 = { source: _modDef11076, color: WHITE };
+    const obj5 = { source: _modDef11245, color: WHITE };
     const merged1 = Object.assign(obj);
     items[1] = closure_1_12(native2.Icon, obj5);
     obj3.children = items;
@@ -51,11 +51,11 @@ function VerifiedIcon(arg0) {
   tmp2Result = shared;
 }
 const View = fn(17).View;
-let Constants = fn(6629);
+let Constants = fn(6795);
 ({ CARD_ROWS_ICON_SIZE: closure_7, CARD_ROWS_ICON_SIZE_VARIANT: closure_8, CARD_PADDING } = Constants);
 Constants = fn(1074);
 ({ AnalyticEvents: closure_9, PlatformTypes: c10 } = Constants);
-const MetadataFields = fn(5720).MetadataFields;
+const MetadataFields = fn(5887).MetadataFields;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 const REFRESH_SMALL_16 = fn(1177).Icon.Sizes.REFRESH_SMALL_16;
@@ -453,7 +453,7 @@ export const UserProfileAccountConnectionsCard = function UserProfileAccountConn
   const stateFromStores = userId(504).useStateFromStores(items1, () => StreamerModeStore.hidePersonalInformation);
   const obj3 = userId(504);
   const tmp5 = theme;
-  ({ connections, appIdentities } = theme(12672)(userId));
+  ({ connections, appIdentities } = theme(12842)(userId));
   if (!stateFromStores) {
     const items2 = [];
     HermesBuiltin.arraySpread(
@@ -481,8 +481,8 @@ export const UserProfileAccountConnectionsCard = function UserProfileAccountConn
     obj4.title = intl.string(tmp2(1115).t["3fe7U5"]);
     obj4.titleStyle = tmp.refreshCardTitle;
     const obj5 = { hasIcons: true, children: items2 };
-    obj4.children = closure_12(tmp2(5999).TableRowGroup, obj5);
-    return closure_12(tmp5(6628), obj4);
+    obj4.children = closure_12(tmp2(6165).TableRowGroup, obj5);
+    return closure_12(tmp5(6794), obj4);
   }
   return null;
 };

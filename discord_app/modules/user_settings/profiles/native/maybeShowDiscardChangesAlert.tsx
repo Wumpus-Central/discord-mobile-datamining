@@ -38,8 +38,8 @@ export default function maybeShowDiscardChangesAlert(onHasEdits) {
     obj2.onCancel = function onCancel() {
       onConfirm(dependencyMap[0]).close();
     };
-    let showResult = onConfirm(5204).show(obj2);
-    const obj = onConfirm(5204);
+    let showResult = onConfirm(5370).show(obj2);
+    const obj = onConfirm(5370);
   } else {
     showResult = onConfirm();
   }

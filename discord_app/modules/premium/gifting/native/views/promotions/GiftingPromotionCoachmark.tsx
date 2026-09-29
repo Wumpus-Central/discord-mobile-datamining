@@ -22,7 +22,6 @@ let obj2 = {
   textContainer: null,
   text: null,
   countdownBadge: null,
-  countdownBadgeText: null,
   imageShared: null,
   imageWrapperAndroid: null,
 };
@@ -38,25 +37,7 @@ let obj4 = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: nativeDefault.space.PX_24,
 };
-obj2.countdownBadge = {
-  flexDirection: "row",
-  alignSelf: "center",
-  borderRadius: nativeDefault.radii.round,
-  paddingHorizontal: nativeDefault.space.PX_8,
-  marginTop: nativeDefault.space.PX_24,
-  backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
-};
-let PlatformUtils = fn(1364);
-PlatformUtils = PlatformUtils.isAndroid();
-const space = nativeDefault.space;
-let obj7 = { lineHeight: PlatformUtils ? space.PX_12 : space.PX_16, paddingVertical: null };
-PlatformUtils = fn(1364);
-let PX_4;
-if (PlatformUtils.isAndroid()) {
-  PX_4 = nativeDefault.space.PX_4;
-}
-obj7.paddingVertical = PX_4;
-obj2.countdownBadgeText = obj7;
+obj2.countdownBadge = { alignSelf: "center", marginTop: nativeDefault.space.PX_24 };
 let size = { height: 188, width: 335, borderRadius: nativeDefault.radii.sm };
 obj2.imageShared = size;
 obj2.imageWrapperAndroid = { overflow: "hidden" };
@@ -81,10 +62,10 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
   if (coachmarkComponent != null) {
     asset = coachmarkComponent.asset;
   }
-  const themeAndReducedMotionAwareAssetUrl = markAsDismissed(10218).useThemeAndReducedMotionAwareAssetUrl(asset);
-  const GiftPromotionReminderExperiment = markAsDismissed(10202).GiftPromotionReminderExperiment;
+  const themeAndReducedMotionAwareAssetUrl = markAsDismissed(10385).useThemeAndReducedMotionAwareAssetUrl(asset);
+  const GiftPromotionReminderExperiment = markAsDismissed(10369).GiftPromotionReminderExperiment;
   let enabled = GiftPromotionReminderExperiment.useConfig({ location: "GiftingPromotionCoachmarkActionSheet" }).enabled;
-  let obj2 = markAsDismissed(10218);
+  let obj2 = markAsDismissed(10385);
   const items1 = [PromotionsStore];
   const stateFromStores1 = markAsDismissed(504).useStateFromStores(items1, () => giftPromotion.getGiftPromotion());
   const tmp2Result = markAsDismissed(504);
@@ -92,14 +73,20 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
   if (stateFromStores1 != null) {
     endDate = stateFromStores1.endDate;
   }
-  const str = markAsDismissed(16751).useTickingFormattedLimitedOfferTimeLeft(endDate);
-  importDefault = tmp9;
-  const tmp11 = usePreviousDefault(null != stateFromStores1);
-  dependencyMap = tmp11;
-  noop = tmp12;
-  const tmp13 = usePreviousDefault(null != str);
-  closure_4 = tmp13;
-  const items2 = [tmp13, null != str, null != stateFromStores1, tmp11, markAsDismissed];
+  const tickingFormattedLimitedOfferTimeLeft = markAsDismissed(10386).useTickingFormattedLimitedOfferTimeLeft(endDate);
+  importDefault = tmp10;
+  const tmp12 = usePreviousDefault(null != stateFromStores1);
+  dependencyMap = tmp12;
+  noop = tmp13;
+  const tmp14 = usePreviousDefault(null != tickingFormattedLimitedOfferTimeLeft);
+  closure_4 = tmp14;
+  const items2 = [
+    tmp14,
+    null != tickingFormattedLimitedOfferTimeLeft,
+    null != stateFromStores1,
+    tmp12,
+    markAsDismissed,
+  ];
   const effect = noop.useEffect(() => {
     if (closure_2) {
       if (!closure_1) {
@@ -115,12 +102,12 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
       markAsDismissed(ContentDismissActionType.AUTO_DISMISS);
     }
   }, items2);
-  const tmp2Result3 = markAsDismissed(16751);
+  const tmp2Result3 = markAsDismissed(10386);
   analyticsLocations = useAnalyticsLocationsDefault(
     AnalyticsLocationDefault.GIFTING_PROMOTION_COACHMARK,
   ).analyticsLocations;
   const items3 = [analyticsLocations, markAsDismissed];
-  let tmp18Result = null;
+  let tmp19Result = null;
   if (null != coachmarkComponent) {
     let obj3 = {
       startExpanded: true,
@@ -131,68 +118,61 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
     };
     const obj4 = { style: tmp.container, children: null };
     if (null == themeAndReducedMotionAwareAssetUrl) {
-      const items4 = [tmp22, , ,];
+      const items4 = [tmp23, , ,];
       if (enabled) {
-        enabled = null != str;
+        enabled = null != tickingFormattedLimitedOfferTimeLeft;
       }
       if (enabled) {
-        const obj5 = { style: tmp.countdownBadge, children: null };
-        const obj6 = {
-          variant: "text-xs/bold",
-          color: "text-overlay-light",
-          style: tmp.countdownBadgeText,
-          children: str.toUpperCase(),
-        };
-        obj5.children = closure_11(markAsDismissed(4832).Text, obj6);
-        enabled = closure_11(tmp21, obj5);
+        const obj5 = { text: tickingFormattedLimitedOfferTimeLeft, style: tmp.countdownBadge };
+        enabled = closure_11(tmp11(10389), obj5);
       }
       items4[1] = enabled;
-      const obj7 = { style: tmp.textContainer, children: null };
-      const obj8 = {
+      const obj6 = { style: tmp.textContainer, children: null };
+      const obj7 = {
         style: tmp.text,
         variant: "heading-xl/extrabold",
         color: "mobile-text-heading-primary",
         children: coachmarkComponent.header,
       };
-      const items5 = [closure_11(markAsDismissed(4832).Heading, obj8)];
-      const obj9 = {
+      const items5 = [closure_11(markAsDismissed(4832).Heading, obj7)];
+      const obj8 = {
         style: tmp.text,
         variant: "text-md/normal",
         color: "text-default",
         children: coachmarkComponent.body,
       };
-      items5[1] = closure_11(markAsDismissed(4832).Text, obj9);
-      obj7.children = items5;
-      items4[2] = closure_12(tmp21, obj7);
-      const obj10 = { grow: true, icon: null, text: null, onPress: null };
-      const obj11 = { size: "sm", color: tmp10(576).colors.WHITE };
-      obj10.icon = closure_11(markAsDismissed(10496).GiftIcon, obj11);
+      items5[1] = closure_11(markAsDismissed(4832).Text, obj8);
+      obj6.children = items5;
+      items4[2] = closure_12(tmp22, obj6);
+      const obj9 = { grow: true, icon: null, text: null, onPress: null };
+      const obj10 = { size: "sm", color: tmp11(576).colors.WHITE };
+      obj9.icon = closure_11(markAsDismissed(10665).GiftIcon, obj10);
       const intl = markAsDismissed(1115).intl;
-      obj10.text = intl.string(markAsDismissed(1115).t.Ve9Ge6);
-      obj10.onPress = tmp16;
-      items4[3] = closure_11(markAsDismissed(5281).Button, obj10);
+      obj9.text = intl.string(markAsDismissed(1115).t.Ve9Ge6);
+      obj9.onPress = tmp17;
+      items4[3] = closure_11(markAsDismissed(5447).Button, obj9);
       obj4.children = items4;
-      obj3.children = closure_12(tmp21, obj4);
-      tmp18Result = closure_11(tmp19, obj3);
+      obj3.children = closure_12(tmp22, obj4);
+      tmp19Result = closure_11(tmp20, obj3);
     } else {
       if (tmp2Result4.isAndroid()) {
         if (!stateFromStores) {
-          const obj12 = { style: null, children: null };
+          const obj11 = { style: null, children: null };
           const items6 = [,];
           ({ imageShared: arr5[0], imageWrapperAndroid: arr5[1] } = tmp);
-          obj12.style = items6;
-          const obj13 = { url: themeAndReducedMotionAwareAssetUrl, style: tmp.imageShared, autoplay: true };
-          obj12.children = closure_11(markAsDismissed(8271).APNGPlayer, obj13);
-          let tmp18Result2 = closure_11(tmp21, obj12);
+          obj11.style = items6;
+          const obj12 = { url: themeAndReducedMotionAwareAssetUrl, style: tmp.imageShared, autoplay: true };
+          obj11.children = closure_11(markAsDismissed(8436).APNGPlayer, obj12);
+          let tmp19Result2 = closure_11(tmp22, obj11);
         }
       }
-      const obj14 = { source: null, style: null };
-      const obj15 = { uri: themeAndReducedMotionAwareAssetUrl };
-      obj14.source = obj15;
-      obj14.style = tmp.imageShared;
-      tmp18Result2 = closure_11(tmp10(5899), obj14);
+      const obj13 = { source: null, style: null };
+      const obj14 = { uri: themeAndReducedMotionAwareAssetUrl };
+      obj13.source = obj14;
+      obj13.style = tmp.imageShared;
+      tmp19Result2 = closure_11(tmp11(6065), obj13);
       tmp2Result4 = markAsDismissed(1364);
     }
   }
-  return tmp18Result;
+  return tmp19Result;
 }

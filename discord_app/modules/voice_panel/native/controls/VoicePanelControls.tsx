@@ -5,7 +5,7 @@ import native from "../../../../../discord_common/js/packages/design/native.tsx"
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06073_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06239_LegacyBaseButton.js";
 import native2 from "../../../../design/components/experimental/native.tsx";
 import cheapWorkletShallowEqual from "../../../reanimated/native/cheapWorkletShallowEqual.tsx";
 import roundToNearestPixelDefault from "../utils/roundToNearestPixel.tsx";
@@ -26,7 +26,7 @@ import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11755);
+const VoicePanelConstants = fn(11924);
 ({
   UI_SHOW_HIDE_PHYSICS: closure_7,
   MODE_CHANGE_PHYSICS: closure_8,
@@ -34,9 +34,9 @@ const VoicePanelConstants = fn(11755);
   PANEL_CONTROLS_HEIGHT_PHYSICS: c10,
   VoicePanelModes: closure_11,
 } = VoicePanelConstants);
-const VoicePanelCardConstants = fn(11758);
+const VoicePanelCardConstants = fn(11927);
 ({ CALL_TILE_GUTTER: closure_12, EDGE_GUTTER: map1 } = VoicePanelCardConstants);
-const VoicePanelControlsConstants = fn(11753);
+const VoicePanelControlsConstants = fn(11922);
 ({ CONTROLS_DRAWER_HEADER_EXPANDED_SIZE: closure_14, VoicePanelControlsModes: closure_15 } =
   VoicePanelControlsConstants);
 const Constants = fn(1074);

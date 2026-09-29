@@ -15,7 +15,7 @@ const jsxProd = fn(21);
 const createStyles = fn(4836);
 let obj2 = {
   flex: { flex: 1 },
-  safePadding: { marginTop: fn(5994).NAV_BAR_HEIGHT, flex: 1 },
+  safePadding: { marginTop: fn(6160).NAV_BAR_HEIGHT, flex: 1 },
   contentContainer: { paddingHorizontal: 16 },
   guildIcon: { alignSelf: "center" },
   guildName: { marginTop: 8, textAlign: "center" },

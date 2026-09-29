@@ -7,7 +7,7 @@ const require = globalThis.__r;
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const NativeStackNavigator = fn(7339);
+const NativeStackNavigator = fn(7504);
 let closure_5 = NativeStackNavigator.createNativeStackNavigator();
 const createStyles = fn(4836);
 const obj3 = { header: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
@@ -41,22 +41,22 @@ export default function ICYMICustomScoresModal() {
         const obj = { title: null, headerLeft: null };
         const intl = closure_0(1115).intl;
         obj.title = intl.string(closure_0(1115).t.jVshKt);
-        obj.headerLeft = closure_0(7288).getRenderModalCloseImage(navigation.navigation);
-        const merged = Object.assign(closure_1(10386)());
+        obj.headerLeft = closure_0(7453).getRenderModalCloseImage(navigation.navigation);
+        const merged = Object.assign(closure_1(10555)());
         return obj;
       },
       getComponent() {
-        return closure_0(16095).default;
+        return closure_0(16271).default;
       },
     }),
     closure_3(closure_5.Screen, {
       name: "guild",
       options(navigation) {
-        const obj = { headerLeft: closure_0(7288).getRenderModalBackImage(navigation.navigation) };
+        const obj = { headerLeft: closure_0(7453).getRenderModalBackImage(navigation.navigation) };
         return obj;
       },
       getComponent() {
-        return closure_0(16096).default;
+        return closure_0(16272).default;
       },
     }),
   ];

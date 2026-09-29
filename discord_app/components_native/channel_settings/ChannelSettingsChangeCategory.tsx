@@ -324,7 +324,7 @@ export default function ConnectedChannelSettingsChangeCategory(channelId) {
   const obj = channelId(504);
   const navigation = channelId(1485).useNavigation();
   const obj2 = channelId(1485);
-  const appChannelBotUserId = channelId(11105).useAppChannelBotUserId(channel);
+  const appChannelBotUserId = channelId(11274).useAppChannelBotUserId(channel);
   _modDef38(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
   return closure_13(ChannelSettingsChangeCategory, { channel, navigation, appChannelBotUserId });
 }

@@ -4,12 +4,12 @@ import ConversationsActionCreators from "../../ConversationsActionCreators.tsx";
 import PaperIcon from "../../../../design/components/Icon/native/redesign/generated/PaperIcon.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
-import ConversationsStore from "../../ConversationsStore.tsx";
+import ChannelConversationsStore from "../../ChannelConversationsStore.tsx";
 
 const require = globalThis.__r;
 
 require = fn;
-const ConversationConstants = fn(7015);
+const ConversationConstants = fn(7181);
 ({
   CONVERSATION_HAS_MORE_EXPIRATION_MS: hasOwnProperty,
   MOBILE_FETCH_LIMIT: metroRequire,
@@ -127,10 +127,10 @@ export const useConversationsHeaderButton = function useConversationsHeaderButto
   const effect = callback.useEffect(() => {
     let hasChannelDataResult = !fetchPage;
     if (fetchPage) {
-      hasChannelDataResult = ConversationsStore.hasChannelData(user.id);
+      hasChannelDataResult = ChannelConversationsStore.hasChannelData(user.id);
     }
     if (!hasChannelDataResult) {
-      hasChannelDataResult = ConversationsStore.isPendingFetch(user.id);
+      hasChannelDataResult = ChannelConversationsStore.isPendingFetch(user.id);
     }
     if (!hasChannelDataResult) {
       callback();
@@ -141,7 +141,7 @@ export const useConversationsHeaderButton = function useConversationsHeaderButto
   const items4 = [channel.id];
   stateFromStores = require("initialize").useStateFromStores(
     items3,
-    () => ConversationsStore.getEdgeMarker(user.id, "after"),
+    () => ChannelConversationsStore.getEdgeMarker(user.id, "after"),
     items4,
   );
   const items5 = [stateFromStores, isTopicalNavEnabled, callback];
@@ -167,7 +167,7 @@ export const useConversationsHeaderButton = function useConversationsHeaderButto
   const stateFromStores1 = require("initialize").useStateFromStores(
     items6,
     () => {
-      const channelConversations = ConversationsStore.getChannelConversations(user.id);
+      const channelConversations = ChannelConversationsStore.getChannelConversations(user.id);
       let num;
       if (channelConversations != null) {
         num = channelConversations.length;

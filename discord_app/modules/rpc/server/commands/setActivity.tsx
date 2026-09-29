@@ -22,8 +22,8 @@ let obj = {};
 let obj2 = { scope: null, validation: null, handler: null };
 let obj3 = {};
 let items = [
-  fn(7787).OAuth2Scopes.RPC,
-  fn(7787).OAuth2Scopes.RPC_ACTIVITIES_WRITE,
+  fn(7952).OAuth2Scopes.RPC,
+  fn(7952).OAuth2Scopes.RPC_ACTIVITIES_WRITE,
   RPC_LOCAL_SCOPE,
   RPC_EMBEDDED_APP_SCOPE,
 ];

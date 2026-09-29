@@ -8,9 +8,9 @@ import VibegrationsChatStore from "../stores/VibegrationsChatStore.tsx";
 import VibegrationsProjectStore from "../stores/VibegrationsProjectStore.tsx";
 
 require = fn;
-const turnSettled = fn(12643).turnSettled;
+const turnSettled = fn(12813).turnSettled;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const Constants = fn(11121);
+const Constants = fn(11290);
 ({
   FeedbackCategory: closure_7,
   FeedbackOptionVariant: closure_8,
@@ -18,10 +18,17 @@ const Constants = fn(11121);
   VibegrationsFeedbackOption: c10,
 } = Constants);
 const shownVibegrationsFeedbackProjectIds = "shownVibegrationsFeedbackProjectIds";
+const set = new Set();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/lib/vibegrationsFeedback.tsx");
 
 export const MINIMUM_SETTLED_TURNS_FOR_FEEDBACK = 3;
+export const skipNextFeedbackForProject = function skipNextFeedbackForProject(id) {
+  set.add(id);
+};
+export const consumeFeedbackSkipForProject = function consumeFeedbackSkipForProject(arg0) {
+  return set.delete(arg0);
+};
 export const hasShownFeedbackForProject = function hasShownFeedbackForProject(arg0) {
   const Storage = Storage3.Storage;
   let items = Storage.get(shownVibegrationsFeedbackProjectIds);

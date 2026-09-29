@@ -171,10 +171,9 @@ export default noop.memo((navigateToPremium) => {
   const tmpResult13 = navigateToSettings(gradientSecondaryBackground[11]);
   const isEligibleForQuests = navigateToSettings(gradientSecondaryBackground[21]).getIsEligibleForQuests();
   const tmpResult14 = navigateToSettings(gradientSecondaryBackground[21]);
-  const mobileReferralSubscriberProfileEntrypointButtonConfig = navigateToSettings(
-    gradientSecondaryBackground[22],
-  ).useMobileReferralSubscriberProfileEntrypointButtonConfig("YouBannerDecorations");
-  ({ enabled, showReferralNotificationDot } = mobileReferralSubscriberProfileEntrypointButtonConfig);
+  const hasVibegrationsGuild = navigateToSettings(gradientSecondaryBackground[22]).useHasVibegrationsGuild(
+    "YouBannerDecorations",
+  );
   const tmpResult15 = navigateToSettings(gradientSecondaryBackground[22]);
   const tmp21 = null != navigateToSettings(gradientSecondaryBackground[10]).useTrialOffer(closure_9);
   currentUser = tmp21;
@@ -198,54 +197,63 @@ export default noop.memo((navigateToPremium) => {
     }
     const obj2 = { isBadged };
   }, items2);
+  const items4 = [showBadge, dismissBadge];
   const callback1 = obj4.useCallback(() => {
     const result = you_tracking_Tracking.trackYouTabNitroIconPress();
     navigateToPremium();
   }, items3);
-  const items4 = [showBadge, dismissBadge];
-  let tmp25 = null;
+  const callback2 = obj4.useCallback(() => {
+    if (showBadge) {
+      dismissBadge(ContentDismissActionType.TAKE_ACTION);
+    }
+    const obj = QuestUtils;
+    obj.openQuestHome({ fromContent: QuestTypes.QuestContent.USER_PROFILE_HEADER });
+    const obj2 = { fromContent: QuestTypes.QuestContent.USER_PROFILE_HEADER };
+  }, items4);
+  let tmp26 = null;
+  if (hasVibegrationsGuild) {
+    let obj2 = { IconComponent: navigateToSettings(tmp2[30]).MagicWandIcon, accessibilityLabel: null, onPress: null };
+    const intl = navigateToSettings(tmp2[31]).intl;
+    obj2.accessibilityLabel = intl.string(tmp4(tmp2[32]).ZnvpQR);
+    obj2.onPress = tmp25;
+    tmp26 = closure_10(tmp4(tmp2[29]), obj2, "vibegrations");
+    const tmp4Result = tmp4(tmp2[29]);
+  }
+  const items5 = [tmp26, , , ,];
+  let tmp29 = null;
   if (isEligibleForQuests) {
-    let obj2 = {
-      IconComponent: navigateToSettings(tmp2[27]).QuestsIcon,
+    let obj3 = {
+      IconComponent: navigateToSettings(tmp2[33]).QuestsIcon,
       accessibilityLabel: null,
       onPress: null,
       showRedDot: null,
     };
-    const intl = navigateToSettings(tmp2[28]).intl;
-    obj2.accessibilityLabel = intl.string(navigateToSettings(tmp2[28]).t.JALI2K);
-    obj2.onPress = tmp24;
-    obj2.showRedDot = showBadge;
-    tmp25 = closure_10(tmp4(tmp2[26]), obj2, "quests");
-    const tmp4Result = tmp4(tmp2[26]);
+    const intl2 = navigateToSettings(tmp2[31]).intl;
+    obj3.accessibilityLabel = intl2.string(navigateToSettings(tmp2[31]).t.JALI2K);
+    obj3.onPress = callback2;
+    obj3.showRedDot = showBadge;
+    tmp29 = closure_10(tmp4(tmp2[29]), obj3, "quests");
+    const tmp4Result5 = tmp4(tmp2[29]);
   }
-  const items5 = [
-    tmp25,
-    closure_10(navigateToPremium(gradientSecondaryBackground[29]), { shopButtonRef, navigateToShop }, "shop"),
-    ,
-  ];
-  if (hasPremiumSubscriptionToDisplay) {
-    let tmp28Result = null;
-    if (enabled) {
-      let obj3 = { onPress: callback1, showReferralNotificationDot };
-      tmp28Result = closure_10(tmp4(tmp2[30]), obj3, "nitro-subscriber");
-    }
-    let tmp28Result2 = tmp28Result;
-  } else {
+  items5[1] = tmp29;
+  items5[2] = closure_10(navigateToPremium(gradientSecondaryBackground[34]), { shopButtonRef, navigateToShop }, "shop");
+  let tmp32Result = null;
+  if (!hasPremiumSubscriptionToDisplay) {
     const obj5 = {
-      IconComponent: navigateToSettings(tmp2[31]).NitroWheelIcon,
+      IconComponent: navigateToSettings(tmp2[35]).NitroWheelIcon,
       accessibilityLabel: null,
       label: null,
       onPress: null,
     };
-    const intl2 = navigateToSettings(tmp2[28]).intl;
-    obj5.accessibilityLabel = intl2.string(navigateToSettings(tmp2[28]).t.Ipxkog);
-    const intl3 = navigateToSettings(tmp2[28]).intl;
-    obj5.label = intl3.string(navigateToSettings(tmp2[28]).t.Ipxkog);
+    const intl3 = navigateToSettings(tmp2[31]).intl;
+    obj5.accessibilityLabel = intl3.string(navigateToSettings(tmp2[31]).t.Ipxkog);
+    const intl4 = navigateToSettings(tmp2[31]).intl;
+    obj5.label = intl4.string(navigateToSettings(tmp2[31]).t.Ipxkog);
     obj5.onPress = callback1;
-    tmp28Result2 = closure_10(tmp4(tmp2[26]), obj5, "nitro");
-    const tmp4Result4 = tmp4(tmp2[26]);
+    tmp32Result = closure_10(tmp4(tmp2[29]), obj5, "nitro");
+    const tmp4Result6 = tmp4(tmp2[29]);
   }
-  items5[2] = tmp28Result2;
+  items5[3] = tmp32Result;
   const obj6 = {
     ref: settingsButtonRef,
     IconComponent: null,
@@ -254,12 +262,12 @@ export default noop.memo((navigateToPremium) => {
     showRedDot: null,
   };
   const tmpResult16 = navigateToSettings(gradientSecondaryBackground[10]);
-  obj6.IconComponent = navigateToSettings(gradientSecondaryBackground[32]).SettingsIcon;
-  const intl4 = navigateToSettings(tmp2[28]).intl;
-  obj6.accessibilityLabel = intl4.string(navigateToSettings(gradientSecondaryBackground[28]).t["3D5yo/"]);
+  obj6.IconComponent = navigateToSettings(gradientSecondaryBackground[36]).SettingsIcon;
+  const intl5 = navigateToSettings(tmp2[31]).intl;
+  obj6.accessibilityLabel = intl5.string(navigateToSettings(gradientSecondaryBackground[31]).t["3D5yo/"]);
   obj6.onPress = callback;
   obj6.showRedDot = tmp13;
-  items5[3] = closure_10(navigateToPremium(gradientSecondaryBackground[26]), obj6, "settings");
+  items5[4] = closure_10(navigateToPremium(gradientSecondaryBackground[29]), obj6, "settings");
   const found = items5.filter((item) => null != item);
   if (isLoading) {
     const obj7 = { style: tmp11.loading, children: closure_10(showBadge, { size: "small" }) };
@@ -274,7 +282,7 @@ export default noop.memo((navigateToPremium) => {
   color = tmp11.containerFloatingGradient.color;
   const items7 = [color];
   const obj9 = { style: tmp11.buttonsFloating, pointerEvents: "box-none", children: found };
-  const tmp4Result5 = navigateToPremium(gradientSecondaryBackground[26]);
+  const tmp4Result7 = navigateToPremium(gradientSecondaryBackground[29]);
   const obj10 = { style: tmp11.containerFloatingWrap, pointerEvents: "box-none", children: null };
   const memo = obj4.useMemo(() => {
     const obj = { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: null };
@@ -287,12 +295,12 @@ export default noop.memo((navigateToPremium) => {
     return obj;
   }, items7);
   const obj11 = { style: tmp11.containerFloatingGradient };
-  const tmp34Result = closure_12(closure_11, obj8);
+  const tmp37Result = closure_12(closure_11, obj8);
   const merged = Object.assign(memo);
   obj11.pointerEvents = "none";
   const items8 = [
-    closure_10(navigateToPremium(gradientSecondaryBackground[33]), obj11),
-    closure_10(isBadged, { style: tmp11.containerFloating, children: tmp34Result }),
+    closure_10(navigateToPremium(gradientSecondaryBackground[37]), obj11),
+    closure_10(isBadged, { style: tmp11.containerFloating, children: tmp37Result }),
   ];
   obj10.children = items8;
   return closure_12(isBadged, obj10);

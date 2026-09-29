@@ -2,7 +2,7 @@
 import ReanimatedRexport2 from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06073_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06239_LegacyBaseButton.js";
 import cheapWorkletShallowEqual from "../../../reanimated/native/cheapWorkletShallowEqual.tsx";
 import DCDVideoRendererDefault from "../../../video_calls/native/components/DCDVideoRenderer.tsx";
 import updateSharedValueIfChangedDefault from "../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
@@ -14,12 +14,12 @@ const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 const PixelRatio = fn(17).PixelRatio;
-const VoicePanelConstants = fn(11755);
+const VoicePanelConstants = fn(11924);
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
-const VoicePanelControlsModes = fn(11753).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(16913).VoicePanelPIPModes;
-let SCALE_PHYSICS = fn(11756).SCALE_PHYSICS;
+const VoicePanelControlsModes = fn(11922).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17100).VoicePanelPIPModes;
+let SCALE_PHYSICS = fn(11925).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = 25;

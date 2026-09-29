@@ -201,11 +201,11 @@ function ShimmerLayers(pass) {
   const obj5 = pass(4566);
   fn.__closure = {
     animationProgress: animationProgress2,
-    bandEdgesAt: pass(13941).bandEdgesAt,
+    bandEdgesAt: pass(14110).bandEdgesAt,
     animationWidth: animationWidth2,
     overshoot: overshoot2,
-    glyphLayerOpacityAt: pass(13941).glyphLayerOpacityAt,
-    easeTail: pass(13941).easeTail,
+    glyphLayerOpacityAt: pass(14110).glyphLayerOpacityAt,
+    easeTail: pass(14110).easeTail,
   };
   fn.__workletHash = 5565898978148;
   fn.__initData = __initData9;
@@ -213,11 +213,11 @@ function ShimmerLayers(pass) {
   closure_129_5 = derivedValue;
   const obj6 = {
     animationProgress: animationProgress2,
-    bandEdgesAt: pass(13941).bandEdgesAt,
+    bandEdgesAt: pass(14110).bandEdgesAt,
     animationWidth: animationWidth2,
     overshoot: overshoot2,
-    glyphLayerOpacityAt: pass(13941).glyphLayerOpacityAt,
-    easeTail: pass(13941).easeTail,
+    glyphLayerOpacityAt: pass(14110).glyphLayerOpacityAt,
+    easeTail: pass(14110).easeTail,
   };
   class T {
     constructor() {

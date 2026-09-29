@@ -146,7 +146,7 @@ export default noop.memo((channelId) => {
           channelName = tmp3Result.computeChannelName(closure_0, UserStore, RelationshipStore, true);
         }
         obj.subtitle = channelName;
-        return closure_2_11(channelId(5936).NavigatorHeader, obj);
+        return closure_2_11(channelId(6102).NavigatorHeader, obj);
       },
       headerLeft: NavigatorHeader.getHeaderCloseButton(onClose),
       render() {
@@ -156,5 +156,5 @@ export default noop.memo((channelId) => {
     obj.IN_APP_NOTIFICATION_SETTINGS = obj2;
     return obj;
   }, items);
-  return closure_11(channelId(6421).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
+  return closure_11(channelId(6587).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
 });

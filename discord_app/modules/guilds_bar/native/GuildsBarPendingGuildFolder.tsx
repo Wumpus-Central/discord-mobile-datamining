@@ -14,9 +14,9 @@ let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarPend
 export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   id = id.id;
   ({ expanded, childNodes } = id);
-  let obj = id(15930);
+  let obj = id(16106);
   importDefault = usePendingFolderGuildIdsDefault();
-  const guildsBarAnimatedWrapperStyles = id(15930).useGuildsBarAnimatedWrapperStyles({
+  const guildsBarAnimatedWrapperStyles = id(16106).useGuildsBarAnimatedWrapperStyles({
     disableSelectedColor: true,
     disableBGColor: false,
   });
@@ -54,7 +54,7 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
       onPress() {
         const result = id(4801).triggerHapticFeedback(id(4801).HapticFeedbackTypes.IMPACT_LIGHT);
         const obj = id(4801);
-        const result1 = closure_1(5832).toggleGuildFolderExpand(closure_1_0);
+        const result1 = closure_1(5999).toggleGuildFolderExpand(closure_1_0);
       },
     }),
     items2,
@@ -70,10 +70,10 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
     label: null,
     sharedId: null,
     cutouts: "a",
-    overState: "apply",
-    config: "<string:4076863906>",
-    externalChildren: "<string:2113929792>",
-    children: "<string:33554987>",
+    overState: "channel",
+    config: null,
+    externalChildren: null,
+    children: null,
   };
   const obj3 = id(4566);
   obj4.id = "" + id;
@@ -88,10 +88,10 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   let tmp8Result = null;
   if (expanded) {
     const obj5 = { folderId: id, totalItems: childNodes.length };
-    tmp8Result = jsx(tmp(15929).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
+    tmp8Result = jsx(tmp(16105).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
   }
   obj4.externalChildren = tmp8Result;
-  obj4.children = jsx(id(12456).HourglassIcon, {});
+  obj4.children = jsx(id(12627).HourglassIcon, {});
   return jsx(GuildsBarAnimatedItemWrapperDefault, {
     id: null,
     accessibilityActions: null,
@@ -103,9 +103,9 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
     label: null,
     sharedId: null,
     cutouts: "a",
-    overState: "apply",
-    config: "<string:4076863906>",
-    externalChildren: "<string:2113929792>",
-    children: "<string:33554987>",
+    overState: "channel",
+    config: null,
+    externalChildren: null,
+    children: null,
   });
 });

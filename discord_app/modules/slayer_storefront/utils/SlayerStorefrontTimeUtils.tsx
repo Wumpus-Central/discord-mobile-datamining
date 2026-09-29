@@ -58,11 +58,32 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/utils/SlayerStorefrontTimeUtils.tsx");
 
 export { getLimitedOfferTimeLeft };
+export const useIsLimitedOfferExpired = function useIsLimitedOfferExpired(arg0) {
+  let tmp = null != arg0;
+  if (tmp) {
+    tmp = null == getLimitedOfferTimeLeft(arg0);
+  }
+  let SECOND = null;
+  if (null != arg0) {
+    SECOND = null;
+    if (!tmp) {
+      SECOND = DurationsDefault.Millis.SECOND;
+    }
+  }
+  useIntervalDefault(
+    _slicedToArray(
+      noop.useReducer((arg0) => arg0 + 1, 0),
+      2,
+    )[1],
+    SECOND,
+  );
+  return tmp;
+};
 export { formatLimitedOfferTimeLeft };
 export const useTickingFormattedLimitedOfferTimeLeft = function useTickingFormattedLimitedOfferTimeLeft(endDate) {
   closure_0 = endDate;
-  let flag = arg1;
-  if (arg1 === undefined) {
+  let flag = enabled;
+  if (enabled === undefined) {
     flag = true;
   }
   const tmp = _slicedToArray(

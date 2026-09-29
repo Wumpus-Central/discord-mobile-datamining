@@ -5,7 +5,7 @@ import native from "../../../../../discord_common/js/packages/design/native.tsx"
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import useIsScreenReaderEnabled from "../../../../modules/a11y/native/useIsScreenReaderEnabled.native.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06073_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06239_LegacyBaseButton.js";
 import ContextMenuState from "ContextMenuState.native.tsx";
 import ContextMenuConstants from "ContextMenuConstants.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -26,9 +26,9 @@ function ContextMenuBackdrop(onDismiss) {
   };
   let obj = visible(4566);
   fn.__closure = {
-    withSpring: visible(5280).withSpring,
+    withSpring: visible(5446).withSpring,
     visible,
-    CONTEXT_MENU_SPRING: visible(7360).CONTEXT_MENU_SPRING,
+    CONTEXT_MENU_SPRING: visible(7525).CONTEXT_MENU_SPRING,
   };
   fn.__workletHash = 6862317967896;
   fn.__initData = __initData2;
@@ -41,9 +41,9 @@ function ContextMenuBackdrop(onDismiss) {
     accessibilityLabel: null,
   };
   const obj2 = {
-    withSpring: visible(5280).withSpring,
+    withSpring: visible(5446).withSpring,
     visible,
-    CONTEXT_MENU_SPRING: visible(7360).CONTEXT_MENU_SPRING,
+    CONTEXT_MENU_SPRING: visible(7525).CONTEXT_MENU_SPRING,
   };
   const obj4 = visible(1364);
   const intl = visible(1115).intl;
@@ -55,7 +55,7 @@ function ContextMenuBackdrop(onDismiss) {
     stringResult = string(t.xs0juG);
   }
   obj3.accessibilityLabel = stringResult;
-  return closure_6(visible(5267).Backdrop, obj3);
+  return closure_6(visible(5433).Backdrop, obj3);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
@@ -70,7 +70,7 @@ obj2.container = {
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_SUBTLE,
   borderRadius: nativeDefault.radii.lg,
-  minWidth: fn(7360).CONTEXT_MENU_MIN_WIDTH,
+  minWidth: fn(7525).CONTEXT_MENU_MIN_WIDTH,
 };
 let obj3 = {
   position: "absolute",
@@ -78,12 +78,12 @@ let obj3 = {
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_SUBTLE,
   borderRadius: nativeDefault.radii.lg,
-  minWidth: fn(7360).CONTEXT_MENU_MIN_WIDTH,
+  minWidth: fn(7525).CONTEXT_MENU_MIN_WIDTH,
 };
-obj2.titleContainer = { padding: fn(7360).CONTEXT_MENU_ITEM_PADDING };
-let obj4 = { padding: fn(7360).CONTEXT_MENU_ITEM_PADDING };
+obj2.titleContainer = { padding: fn(7525).CONTEXT_MENU_ITEM_PADDING };
+let obj4 = { padding: fn(7525).CONTEXT_MENU_ITEM_PADDING };
 obj2.divider = {
-  borderBottomWidth: fn(7360).CONTEXT_MENU_DIVIDER_HEIGHT,
+  borderBottomWidth: fn(7525).CONTEXT_MENU_DIVIDER_HEIGHT,
   borderBottomColor: nativeDefault.colors.BORDER_SUBTLE,
 };
 let closure_9 = createStyles.createStyles(obj2);

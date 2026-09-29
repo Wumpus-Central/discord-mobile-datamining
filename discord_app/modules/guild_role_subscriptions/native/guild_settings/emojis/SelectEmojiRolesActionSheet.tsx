@@ -194,6 +194,6 @@ export default function SelectEmojiRolesActionSheet(arg0) {
   };
   const items1 = [subscriptionListingsForGuild.length];
   obj6.sections = items1;
-  obj5.children = closure_6(emoji(6493), obj6);
+  obj5.children = closure_6(emoji(6659), obj6);
   return closure_6(ActionSheet.ActionSheet, obj5);
 }

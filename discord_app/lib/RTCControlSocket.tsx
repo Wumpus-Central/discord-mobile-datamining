@@ -215,7 +215,7 @@ prototype["createWebSocket"] = function createWebSocket() {
     );
   }, closure_13);
   let obj = self(4865);
-  obj2 = self(13621);
+  obj2 = self(13790);
   const webSocket = new WebSocket(
     "" +
       self.url +
