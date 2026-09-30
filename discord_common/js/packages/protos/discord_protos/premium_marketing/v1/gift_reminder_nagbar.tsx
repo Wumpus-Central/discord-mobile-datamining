@@ -1,8 +1,8 @@
-// === Module 10314: gift_reminder_nagbar ===
+// === Module 10348: gift_reminder_nagbar ===
 
-// Module 10314 (gift_reminder_nagbar)
+// Module 10348 (gift_reminder_nagbar)
 import _mod1187 from "module_1187" /* 1187 */;
-import localized_string from "localized_string" /* 10300 */;
+import localized_string from "localized_string" /* 10334 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

@@ -1,10 +1,10 @@
-// === Module 10947: BioText ===
+// === Module 10983: BioText ===
 
-// Module 10947 (BioText)
+// Module 10983 (BioText)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import LinkingDefault from "Linking" /* 4525 */;
-import Text_Text from "Text/Text" /* 4832 */;
-import BioMarkupUtils from "BioMarkupUtils" /* 8887 */;
+import LinkingDefault from "Linking" /* 4555 */;
+import Text_Text from "Text/Text" /* 4862 */;
+import BioMarkupUtils from "BioMarkupUtils" /* 8921 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,7 +30,7 @@ const AnalyticEvents = fn(1074).AnalyticEvents;
 const CHANGELOG_URL = fn(2098).CHANGELOG_URL;
 const jsxProd = fn(21);
 ({ jsxs: closure_7, jsx: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let closure_10 = createStyles.createStyles({ text: { alignSelf: "stretch", textAlignVertical: "top", width: "100%", flexGrow: 1, paddingTop: 2, lineHeight: 24 }, span: { alignSelf: "stretch", textAlignVertical: "bottom", width: "100%", flexGrow: 1, display: "flex", paddingBottom: 2 }, link: { alignSelf: "stretch", textAlignVertical: "bottom", width: "100%", flexGrow: 1, bottom: -4, position: "relative" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/profile_customization/native/BioText.tsx");

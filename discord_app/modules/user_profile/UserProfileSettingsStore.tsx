@@ -1,12 +1,12 @@
-// === Module 7770: UserProfileSettingsStore ===
+// === Module 7800: UserProfileSettingsStore ===
 
-// Module 7770 (UserProfileSettingsStore)
+// Module 7800 (UserProfileSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import RouteConstants from "RouteConstants" /* 1075 */;
 import FavoritesConstants from "FavoritesConstants" /* 2058 */;
-import NotificationsInboxConstants from "NotificationsInboxConstants" /* 7771 */;
-import BioMaxLengthExperiment from "BioMaxLengthExperiment" /* 7772 */;
+import NotificationsInboxConstants from "NotificationsInboxConstants" /* 7801 */;
+import BioMaxLengthExperiment from "BioMaxLengthExperiment" /* 7802 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

@@ -1,18 +1,18 @@
-// === Module 14334: showInvalidProfileUpdateToastNative ===
+// === Module 14363: showInvalidProfileUpdateToastNative ===
 
-// Module 14334 (showInvalidProfileUpdateToastNative)
+// Module 14363 (showInvalidProfileUpdateToastNative)
 import nativeDefault from "native" /* 576 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4528 */;
-import _modDef6579 from "module_6579" /* 6579 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4558 */;
+import _modDef6609 from "module_6609" /* 6609 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/profiles/native/showInvalidProfileUpdateToastNative.tsx");
 
 export const showGenericProfileUpdateFailureToast = function showGenericProfileUpdateFailureToast(avatar) {
   const obj = ToastActionCreatorsDefault;
-  obj.open({ key: "USER_SETTINGS_UPDATE_FAILURE", content: avatar, icon: _modDef6579, iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, recolorLegacyIcon: true });
+  obj.open({ key: "USER_SETTINGS_UPDATE_FAILURE", content: avatar, icon: _modDef6609, iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, recolorLegacyIcon: true });
 };
 export const showGenericGuildProfileUpdateFailureToast = function showGenericGuildProfileUpdateFailureToast(avatar) {
   const obj = ToastActionCreatorsDefault;
-  obj.open({ key: "USER_SETTINGS_UPDATE_FAILURE", content: avatar, icon: _modDef6579, iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, recolorLegacyIcon: true });
+  obj.open({ key: "USER_SETTINGS_UPDATE_FAILURE", content: avatar, icon: _modDef6609, iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, recolorLegacyIcon: true });
 };

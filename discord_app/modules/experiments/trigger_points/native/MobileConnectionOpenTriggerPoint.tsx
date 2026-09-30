@@ -1,8 +1,8 @@
-// === Module 13408: MobileConnectionOpenTriggerPoint ===
+// === Module 13435: MobileConnectionOpenTriggerPoint ===
 
-// Module 13408 (MobileConnectionOpenTriggerPoint)
-import ExperimentConstants from "ExperimentConstants" /* 4751 */;
-import Helpers from "Helpers" /* 10440 */;
+// Module 13435 (MobileConnectionOpenTriggerPoint)
+import ExperimentConstants from "ExperimentConstants" /* 4781 */;
+import Helpers from "Helpers" /* 10474 */;
 import size from "module_2" /* 2 */;
 
 const commonTriggerPointConfiguration = new Helpers.CommonTriggerPointConfiguration([], ExperimentConstants.CommonTriggerPoints.CONNECTION_OPEN_MOBILE, { location: "app open mobile" });

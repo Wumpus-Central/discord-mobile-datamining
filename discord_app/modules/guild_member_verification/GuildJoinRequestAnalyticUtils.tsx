@@ -1,6 +1,6 @@
-// === Module 6021: GuildJoinRequestAnalyticUtils ===
+// === Module 6051: GuildJoinRequestAnalyticUtils ===
 
-// Module 6021 (GuildJoinRequestAnalyticUtils)
+// Module 6051 (GuildJoinRequestAnalyticUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2108 */;

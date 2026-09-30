@@ -1,6 +1,6 @@
-// === Module 16576: VibegrationsTurnStart ===
+// === Module 16612: VibegrationsTurnStart ===
 
-// Module 16576 (VibegrationsTurnStart)
+// Module 16612 (VibegrationsTurnStart)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import size from "module_2" /* 2 */;
 

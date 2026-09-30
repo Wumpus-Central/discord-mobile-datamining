@@ -1,13 +1,13 @@
-// === Module 6956: trackSoundPlayed ===
+// === Module 6986: trackSoundPlayed ===
 
-// Module 6956 (trackSoundPlayed)
+// Module 6986 (trackSoundPlayed)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import RunningGameStore from "RunningGameStore" /* 2000 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4859 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4889 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
 
-const DEFAULT_SOUND_GUILD_ID = fn(5487).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(5517).DEFAULT_SOUND_GUILD_ID;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const PremiumConstants = fn(1374);
 ({ AnalyticsPremiumFeatureNames: closure_8, AnalyticsPremiumFeatureTiers: closure_9 } = PremiumConstants);

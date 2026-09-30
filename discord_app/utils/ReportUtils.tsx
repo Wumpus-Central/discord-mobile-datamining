@@ -1,15 +1,14 @@
-// === Module 6873: ReportUtils ===
+// === Module 6903: ReportUtils ===
 
-// Module 6873 (ReportUtils)
+// Module 6903 (ReportUtils)
 import ChannelStore from "ChannelStore" /* 2045 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4754 */;
-import PermissionStore from "PermissionStore" /* 4469 */;
+import PermissionStore from "PermissionStore" /* 4499 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const Constants = fn(1074);
-({ ChannelTypes: closure_4, Permissions: hasOwnProperty, MessageTypesSets: metroRequire } = Constants);
+({ ChannelTypes: c3, Permissions: closure_4, MessageTypesSets: hasOwnProperty } = Constants);
 const size = fn(2);
-const result = size.fileFinishedImporting("utils/ReportUtils.tsx");
+let result = size.fileFinishedImporting("utils/ReportUtils.tsx");
 
 export const canReportUser = function canReportUser(user) {
   if (null == user) {
@@ -54,26 +53,16 @@ export const canReportMessage = function canReportMessage(message) {
 };
 export const canReportAndDeleteInChannel = function canReportAndDeleteInChannel(channelId) {
   const channel = ChannelStore.getChannel(channelId);
-  if (null == channel) {
-    return false;
-  } else {
-    if (channel.type !== constants.DM) {
-      if (channel.type !== tmp6.GROUP_DM) {
-        const obj = { channelId };
-        if (PermissionStore.canWithPartialContext(constants2.MANAGE_MESSAGES, obj)) {
-          const memberCount = GuildMemberCountStore.getMemberCount(channel.getGuildId());
-          let tmp5 = null != memberCount;
-          if (tmp5) {
-            tmp5 = memberCount >= 50;
-          }
-          return tmp5;
-        } else {
-          return false;
-        }
-      }
+  let tmp2 = null != channel;
+  if (tmp2) {
+    let result = channel.type === constants.DM || channel.type === tmp3.GROUP_DM;
+    if (!result) {
+      const obj = { channelId };
+      result = PermissionStore.canWithPartialContext(constants2.MANAGE_MESSAGES, obj);
     }
-    return true;
+    tmp2 = result;
   }
+  return tmp2;
 };
 export const canDeleteAndReportMessage = function canDeleteAndReportMessage(type) {
   let tmp = null != type;
@@ -105,26 +94,16 @@ export const canDeleteAndReportMessage = function canDeleteAndReportMessage(type
   if (tmp) {
     const channelId = type.getChannelId();
     const channel = ChannelStore.getChannel(channelId);
-    let flag3 = false;
-    if (null != channel) {
-      flag3 = true;
-      if (channel.type !== constants.DM) {
-        flag3 = true;
-        if (channel.type !== tmp10.GROUP_DM) {
-          const obj = { channelId };
-          flag3 = false;
-          if (PermissionStore.canWithPartialContext(constants2.MANAGE_MESSAGES, obj)) {
-            const memberCount = GuildMemberCountStore.getMemberCount(channel.getGuildId());
-            let tmp15 = null != memberCount;
-            if (tmp15) {
-              tmp15 = memberCount >= 50;
-            }
-            flag3 = tmp15;
-          }
-        }
+    let tmp11 = null != channel;
+    if (tmp11) {
+      let result = channel.type === constants.DM || channel.type === tmp12.GROUP_DM;
+      if (!result) {
+        const obj = { channelId };
+        result = PermissionStore.canWithPartialContext(constants2.MANAGE_MESSAGES, obj);
       }
+      tmp11 = result;
     }
-    tmp = flag3;
+    tmp = tmp11;
   }
   return tmp;
 };

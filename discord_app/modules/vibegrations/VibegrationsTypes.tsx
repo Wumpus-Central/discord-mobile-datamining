@@ -1,13 +1,13 @@
-// === Module 5537: VibegrationsTypes ===
+// === Module 5567: VibegrationsTypes ===
 
-// Module 5537 (VibegrationsTypes)
+// Module 5567 (VibegrationsTypes)
 import size from "module_2" /* 2 */;
 
-const frozen = Object.freeze({ PUBLIC: 1, SHAREABLE: 2 });
+const frozen = Object.freeze({ PUBLIC: 1, SHAREABLE: 2, NATIVE_APP_CHANNELS: 4 });
 const set = new Set(["image/png", "image/jpeg", "image/gif", "image/webp"]);
 let c2 = 5242880;
 let c3 = 52428800;
-const items = [{ id: "claude-fable-5-1", label: "Claude Fable 5.1", provider: "anthropic" }, { id: "claude-opus-5-5", label: "Claude Opus 5.5", provider: "anthropic" }, { id: "claude-sonnet-5-5", label: "Claude Sonnet 5.5", provider: "anthropic" }, { id: "claude-haiku-4-5", label: "Claude Haiku 4.5", provider: "anthropic" }, { id: "gpt-6-astra", label: "GPT-6 Astra", provider: "openai", supports_fast: true }, { id: "gpt-6-sol", label: "GPT-6 Sol", provider: "openai", supports_fast: true }, { id: "gpt-6-luna", label: "GPT-6 Luna", provider: "openai", supports_fast: true }, { id: "xai/grok-4.7", label: "Grok 4.7", provider: "xai" }];
+const items = [{ id: "claude-fable-5-1", label: "Claude Fable 5.1", provider: "anthropic" }, { id: "claude-opus-5-5", label: "Claude Opus 5.5", provider: "anthropic" }, { id: "claude-sonnet-5-5", label: "Claude Sonnet 5.5", provider: "anthropic" }, { id: "claude-haiku-4-5", label: "Claude Haiku 4.5", provider: "anthropic" }, { id: "gpt-6-astra", label: "GPT-6 Astra", provider: "openai", supports_fast: true }, { id: "gpt-6.1-sol", label: "GPT-6.1 Sol", provider: "openai", supports_fast: true }, { id: "gpt-6-luna", label: "GPT-6 Luna", provider: "openai", supports_fast: true }, { id: "xai/grok-4.7", label: "Grok 4.7", provider: "xai" }];
 let obj = { main: items, subagent: items, thinking: ["low", "medium", "high", "xhigh", "max"] };
 const items1 = [{ id: "deepseek/deepseek-flash", label: "DeepSeek V4.1 Flash", provider: "deepseek" }, { id: "moonshotai/kimi-k3", label: "Kimi K3", provider: "moonshotai" }];
 const result = size.fileFinishedImporting("modules/vibegrations/VibegrationsTypes.tsx");
@@ -28,6 +28,20 @@ export const isProjectShared = function isProjectShared(flags) {
     num = 0;
   }
   return num & frozen.SHAREABLE;
+};
+export const projectUsesNativeAppChannels = function projectUsesNativeAppChannels(flags) {
+  let num = flags.flags;
+  if (num == null) {
+    num = 0;
+  }
+  return num & frozen.NATIVE_APP_CHANNELS;
+};
+export const vibegrationsCreateFlags = function vibegrationsCreateFlags(c5) {
+  let num = 0;
+  if (c5) {
+    num = frozen.NATIVE_APP_CHANNELS;
+  }
+  return frozen.PUBLIC | num;
 };
 export const projectSupportsVisibility = function projectSupportsVisibility(stateFromStores) {
   return null != stateFromStores.flags;
@@ -80,4 +94,4 @@ export const VIBEGRATIONS_MODEL_TIERS = ["simple", "balanced", "complex"];
 export const VIBEGRATIONS_FALLBACK_MODEL_CHOICES = obj;
 export const VIBEGRATIONS_DEV_FALLBACK_MODEL_CHOICES = { main: items1, subagent: items1, thinking: obj.thinking };
 export const VIBEGRATIONS_DEFAULT_TIER_SETTINGS = { tier: "balanced", provider: "openai" };
-export const VIBEGRATIONS_LANDING_TIER_SEATS = { simple: { model: "gpt-6-luna", thinking: "high" }, balanced: { model: "gpt-6-sol", thinking: "high" }, complex: { model: "claude-opus-5-5", thinking: "high" } };
+export const VIBEGRATIONS_LANDING_TIER_SEATS = { simple: { model: "gpt-6-luna", thinking: "high" }, balanced: { model: "gpt-6.1-sol", thinking: "high" }, complex: { model: "claude-opus-5-5", thinking: "high" } };

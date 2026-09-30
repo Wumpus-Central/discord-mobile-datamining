@@ -1,8 +1,8 @@
-// === Module 16565: VibegrationsClarificationCard ===
+// === Module 16598: VibegrationsClarificationCard ===
 
-// Module 16565 (VibegrationsClarificationCard)
+// Module 16598 (VibegrationsClarificationCard)
 import nativeDefault from "native" /* 576 */;
-import VibegrationsClarification from "VibegrationsClarification" /* 16566 */;
+import VibegrationsClarification from "VibegrationsClarification" /* 16599 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = { card: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, optionHeader: null, footer: null, customField: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 obj2.optionHeader = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -53,7 +53,7 @@ export default function VibegrationsClarificationCard(clarification) {
   closure_11 = tmp11;
   let t = dependencyMap;
   const tmp4 = first(noop.useState({}), 2);
-  const accessibilityRole = clarification(4548).useCheckboxA11yNative({ checked: false }).accessibilityRole;
+  const accessibilityRole = clarification(4578).useCheckboxA11yNative({ checked: false }).accessibilityRole;
   let tmp13 = tmp6[0][tmp10.id];
   if (tmp13 == null) {
     tmp13 = bound;
@@ -121,8 +121,8 @@ export default function VibegrationsClarificationCard(clarification) {
   }
   let multiSelectAnswerResult = null;
   if (true === clarification.questions[bound].multi_select) {
-    multiSelectAnswerResult = tmp12(16566).multiSelectAnswer(tmp10, tmp13, str);
-    const tmp12Result = tmp12(16566);
+    multiSelectAnswerResult = tmp12(16599).multiSelectAnswer(tmp10, tmp13, str);
+    const tmp12Result = tmp12(16599);
   }
   c17 = multiSelectAnswerResult;
   const items3 = [str, multiSelectAnswerResult, callback];
@@ -153,7 +153,7 @@ export default function VibegrationsClarificationCard(clarification) {
     }
   }
   c18 = tmp18;
-  let obj2 = clarification(4548);
+  let obj2 = clarification(4578);
   if (null != tmp18) {
     let obj4 = {};
     let merged = Object.assign(first);
@@ -163,33 +163,33 @@ export default function VibegrationsClarificationCard(clarification) {
   let obj6 = { style: tmp.footer, children: null };
   let obj7 = { style: tmp.customField, children: null };
   let tmp27Result = null;
-  const tmp12Result2 = clarification(16566);
+  const tmp12Result2 = clarification(16599);
   if (clarification.questions.length > 1) {
     const obj8 = { variant: "text-xs/semibold", color: "text-muted", children: null };
     let intl = tmp12(1115).intl;
     let obj9 = { index: bound + 1, total: length };
     obj8.children = intl.formatToPlainString(onSubmit(3715)["7bypa+"], obj9);
-    tmp27Result = tmp27(tmp12(4832).Text, obj8);
+    tmp27Result = tmp27(tmp12(4862).Text, obj8);
   }
   obj7.children = tmp27Result;
   const items4 = [closure_6(c5, obj7), ];
   let tmp27Result4 = null;
   if (null != onDismiss) {
-    let obj10 = { IconComponent: tmp12(6158).XSmallIcon, onPress: onDismiss, accessibilityLabel: null };
+    let obj10 = { IconComponent: tmp12(6188).XSmallIcon, onPress: onDismiss, accessibilityLabel: null };
     let intl2 = tmp12(1115).intl;
     obj10.accessibilityLabel = intl2.string(onSubmit(3715).fMdUNR);
-    tmp27Result4 = tmp27(onSubmit(16420), obj10);
-    const tmp32 = onSubmit(16420);
+    tmp27Result4 = tmp27(onSubmit(16449), obj10);
+    const tmp32 = onSubmit(16449);
   }
   items4[1] = tmp27Result4;
   obj6.children = items4;
-  const items5 = [closure_7(c5, obj6), closure_6(clarification(4832).Text, { variant: "text-md/semibold", color: "text-default", children: clarification.questions[bound].question }), , , , ];
+  const items5 = [closure_7(c5, obj6), closure_6(clarification(4862).Text, { variant: "text-md/semibold", color: "text-default", children: clarification.questions[bound].question }), , , , ];
   let tmp27Result5 = null;
   if (true === clarification.questions[bound].multi_select) {
     const obj12 = { variant: "text-xs/normal", color: "text-muted", children: null };
     const intl3 = tmp12(1115).intl;
     obj12.children = intl3.string(onSubmit(3715).jt5JBA);
-    tmp27Result5 = tmp27(tmp12(4832).Text, obj12);
+    tmp27Result5 = tmp27(tmp12(4862).Text, obj12);
   }
   items5[2] = tmp27Result5;
   const options = tmp10.options;
@@ -270,7 +270,7 @@ export default function VibegrationsClarificationCard(clarification) {
     });
   };
   obj13.onSubmitEditing = callback2;
-  items5[4] = closure_6(clarification(6190).TextInput, obj13);
+  items5[4] = closure_6(clarification(6220).TextInput, obj13);
   if (clarification.questions.length <= 1) {
     if (!tmp11) {
       items5[5] = null;
@@ -287,7 +287,7 @@ export default function VibegrationsClarificationCard(clarification) {
       const intl6 = tmp12(1115).intl;
       obj16.text = intl6.string(tmp35(3715).yKdgqw);
       obj16.onPress = callback1;
-      tmp27Result6 = tmp27(tmp12(5447).Button, obj16);
+      tmp27Result6 = tmp27(tmp12(5477).Button, obj16);
     }
   }
   const items6 = [tmp27Result6, closure_6(c5, { style: tmp.customField }), ];
@@ -308,7 +308,7 @@ export default function VibegrationsClarificationCard(clarification) {
       callback(tmp);
     }
   };
-  obj18 = tmp27(tmp12(5447).Button, obj18);
+  obj18 = tmp27(tmp12(5477).Button, obj18);
   items6[2] = obj18;
   obj15.children = items6;
   closure_7(c5, obj15);

@@ -1,20 +1,20 @@
-// === Module 7118: NewChannelsStore ===
+// === Module 7148: NewChannelsStore ===
 
-// Module 7118 (NewChannelsStore)
+// Module 7148 (NewChannelsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 6697 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 6866 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 6727 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 6896 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
-import GuildChannelStore from "GuildChannelStore" /* 4467 */;
+import GuildChannelStore from "GuildChannelStore" /* 4497 */;
 import GuildMemberStore from "GuildMemberStore" /* 2108 */;
 import GuildStore from "GuildStore" /* 2067 */;
-import ReadStateStore from "ReadStateStore" /* 4851 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5017 */;
+import ReadStateStore from "ReadStateStore" /* 4881 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5047 */;
 
 require = fn;
 function guildHasCommunity(nextResult) {
@@ -127,7 +127,7 @@ function pruneNewChannels() {
     closure_16[item] = new Set(items.filter((item) => !channelOrParentOptedIn.isChannelOrParentOptedIn(closure_0, item)));
   });
 }
-let closure_7 = fn(4467).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_7 = fn(4497).GUILD_SELECTABLE_CHANNELS_KEY;
 const Constants = fn(1074);
 ({ AnalyticsObjects: closure_12, AnalyticsObjectTypes: map1, GuildFeatures: closure_14 } = Constants);
 let set = new Set();

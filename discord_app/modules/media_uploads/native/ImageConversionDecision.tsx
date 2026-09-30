@@ -1,8 +1,8 @@
-// === Module 5638: ImageConversionDecision ===
+// === Module 5668: ImageConversionDecision ===
 
-// Module 5638 (ImageConversionDecision)
+// Module 5668 (ImageConversionDecision)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import IosImageTypesManagerDefault from "IosImageTypesManager" /* 5639 */;
+import IosImageTypesManagerDefault from "IosImageTypesManager" /* 5669 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/media_uploads/native/ImageConversionDecision.tsx");

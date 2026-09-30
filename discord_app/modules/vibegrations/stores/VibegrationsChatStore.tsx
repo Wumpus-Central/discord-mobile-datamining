@@ -1,22 +1,22 @@
-// === Module 12813: VibegrationsChatStore ===
+// === Module 12843: VibegrationsChatStore ===
 
-// Module 12813 (VibegrationsChatStore)
+// Module 12843 (VibegrationsChatStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 2021 */;
 import _modDef3715 from "module_3715" /* 3715 */;
-import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 8663 */;
-import SoundUtils from "SoundUtils" /* 9524 */;
+import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 8697 */;
+import SoundUtils from "SoundUtils" /* 9558 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7123 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 9708 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7153 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 9742 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4655 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5758 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8660 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4685 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5788 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8694 */;
 
 require = fn;
 function newMessage(assistant, content, arg2) {
@@ -170,80 +170,46 @@ function newMessageFromHistory(ts) {
   }
   return tmp;
 }
-function patchTurn(projectId, turnId, fn) {
-  value = map.get(projectId);
-  if (null != value) {
-    let num3 = -1;
-    if (null != turnId) {
-      let diff = value.length - 1;
-      num3 = -1;
-      if (0 <= diff) {
-        num3 = diff;
-        while (value[diff].turn_id !== turnId) {
-          diff = diff - 1;
-          num3 = -1;
-          if (0 > diff) {
-            break;
-          }
+function resolveTurnIndex(value, turnId) {
+  let num = -1;
+  if (null != turnId) {
+    let diff = value.length - 1;
+    num = -1;
+    if (0 <= diff) {
+      num = diff;
+      while (value[diff].turn_id !== turnId) {
+        diff = diff - 1;
+        num = -1;
+        if (0 > diff) {
+          break;
         }
       }
     }
-    if (-1 === num3) {
-      let diff1 = value.length - 1;
-      num3 = -1;
-      if (0 <= diff1) {
-        while (true) {
-          let tmp3 = value[diff1];
-          if ("assistant" === tmp3.role) {
-            let someResult = true === tmp3.finished || true === tmp3.continued || "" !== tmp3.content || null != tmp3.proposal || null != tmp3.clarification || null != tmp3.intake;
-            if (!someResult) {
-              let steps = tmp3.steps;
-              someResult = steps.some((kind) => set.has(kind.kind));
+  }
+  if (-1 !== num) {
+    return num;
+  } else {
+    let diff1 = value.length - 1;
+    if (0 <= diff1) {
+      while (true) {
+        let tmp3 = value[diff1];
+        if ("assistant" === tmp3.role) {
+          let someResult = true === tmp3.finished || true === tmp3.continued || "" !== tmp3.content || null != tmp3.proposal || null != tmp3.clarification || null != tmp3.intake;
+          if (!someResult) {
+            let steps = tmp3.steps;
+            someResult = steps.some((kind) => set.has(kind.kind));
+          }
+          if (!someResult) {
+            if (null == tmp3.turn_id) {
+              break;
             }
-            if (!someResult) {
-              num3 = diff1;
-              if (null == tmp3.turn_id) {
-                break;
-              }
-            }
-            break;
-          }
-          diff1 = diff1 - 1;
-          num3 = -1;
-          if (0 > diff1) {
-            break;
           }
         }
+        diff1 = diff1 - 1;
       }
+      return diff1;
     }
-    if (-1 !== num3) {
-      let tmp14 = tmp13;
-      if (null != turnId) {
-        tmp14 = tmp13;
-        if (null == tmp13.turn_id) {
-          const obj2 = {};
-          const merged = Object.assign(tmp13);
-          obj2.turn_id = turnId;
-          tmp14 = obj2;
-        }
-      }
-      const items = [];
-      const arraySpreadResult = HermesBuiltin.arraySpread(value.slice(0, num3), 0);
-      items[arraySpreadResult] = fn(tmp14);
-      HermesBuiltin.arraySpread(value.slice(num3 + 1), arraySpreadResult + 1);
-      const result = map.set(projectId, items);
-    } else {
-      const items1 = [];
-      if (null != turnId) {
-        const obj3 = { turnId };
-        let obj4 = obj3;
-      } else {
-        obj4 = {};
-      }
-      items1[HermesBuiltin.arraySpread(value, 0)] = fn(newMessage("assistant", "", obj4));
-      const result1 = map.set(projectId, items1);
-      const arraySpreadResult4 = HermesBuiltin.arraySpread(value, 0);
-    }
+    return -1;
   }
 }
 function hasOpenTurn(map) {
@@ -595,36 +561,36 @@ function openTimeline() {
   obj.steps = items1;
   return obj;
 }
-function pushStep(todosAt, turn_seq) {
-  if (null == turn_seq.turn_seq) {
-    if ("todos" === turn_seq.kind) {
-      if (null == turn_seq.task_id) {
+function pushStep(todosAt, step) {
+  if (null == step.turn_seq) {
+    if ("todos" === step.kind) {
+      if (null == step.task_id) {
         if (-1 === todosAt.todosAt) {
           todosAt.todosAt = todosAt.steps.length;
           const steps = todosAt.steps;
-          steps.push(turn_seq);
-          if (null != turn_seq.turn_seq) {
+          steps.push(step);
+          if (null != step.turn_seq) {
             const seenSeq4 = todosAt.seenSeq;
-            seenSeq4.add(turn_seq.turn_seq);
+            seenSeq4.add(step.turn_seq);
           }
         } else {
           if (null != todosAt.steps[todosAt.todosAt].turn_seq) {
             const seenSeq2 = todosAt.seenSeq;
             seenSeq2.delete(tmp.turn_seq);
           }
-          todosAt.steps[todosAt.todosAt] = turn_seq;
-          if (null != turn_seq.turn_seq) {
+          todosAt.steps[todosAt.todosAt] = step;
+          if (null != step.turn_seq) {
             const seenSeq3 = todosAt.seenSeq;
-            seenSeq3.add(turn_seq.turn_seq);
+            seenSeq3.add(step.turn_seq);
           }
         }
       }
     }
     const steps1 = todosAt.steps;
-    steps1.push(turn_seq);
-    if (null != turn_seq.turn_seq) {
+    steps1.push(step);
+    if (null != step.turn_seq) {
       const seenSeq5 = todosAt.seenSeq;
-      seenSeq5.add(turn_seq.turn_seq);
+      seenSeq5.add(step.turn_seq);
     }
   } else {
     const seenSeq = todosAt.seenSeq;
@@ -943,31 +909,72 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
           }
           num4 = num5;
         }
-        if (-1 !== num4) {
-          if (num4 <= findIndexResult) {
-            const items1 = [, ];
-            const arraySpreadResult5 = HermesBuiltin.arraySpread(arr3.slice(0, num4), 0);
-            const obj3 = {};
-            const merged1 = Object.assign(arr3[num4]);
-            obj3.continued = true;
-            let finished_at = arr3[num4].finished_at;
+        let tmp10 = num4;
+        let arr4 = arr3;
+        if ("steered" === disposition) {
+          tmp10 = num4;
+          arr4 = arr3;
+          if (-1 === num4) {
+            tmp10 = num4;
+            arr4 = arr3;
+            if (null != activeTurnId) {
+              const tmp35 = resolveTurnIndex(arr3, activeTurnId);
+              tmp10 = num4;
+              arr4 = arr3;
+              if (-1 !== tmp35) {
+                tmp10 = num4;
+                arr4 = arr3;
+                if (tmp35 < findIndexResult) {
+                  const obj3 = {};
+                  const merged1 = Object.assign(arr3[tmp35]);
+                  obj3.turn_id = activeTurnId;
+                  if (0 === obj3.steps.length) {
+                    const items1 = [];
+                    const arraySpreadResult12 = HermesBuiltin.arraySpread(arr3.slice(tmp35 + 1, findIndexResult + 1), HermesBuiltin.arraySpread(arr3.slice(0, tmp35), 0));
+                    items1[arraySpreadResult12] = obj3;
+                    HermesBuiltin.arraySpread(arr3.slice(findIndexResult + 1), arraySpreadResult12 + 1);
+                    const result = map.set(projectId, items1);
+                    recordThinkingTransition(projectId);
+                    const arraySpreadResult11 = HermesBuiltin.arraySpread(arr3.slice(0, tmp35), 0);
+                  } else {
+                    const items2 = [];
+                    const arraySpreadResult14 = HermesBuiltin.arraySpread(arr3.slice(0, tmp35), 0);
+                    items2[arraySpreadResult14] = obj3;
+                    HermesBuiltin.arraySpread(arr3.slice(tmp35 + 1), arraySpreadResult14 + 1);
+                    tmp10 = tmp35;
+                    arr4 = items2;
+                  }
+                }
+              }
+            }
+          }
+        }
+        if (-1 !== tmp10) {
+          if (tmp10 <= findIndexResult) {
+            const items3 = [, ];
+            const arraySpreadResult16 = HermesBuiltin.arraySpread(arr4.slice(0, tmp10), 0);
+            const obj4 = {};
+            const merged2 = Object.assign(arr4[tmp10]);
+            obj4.continued = true;
+            let finished_at = arr4[tmp10].finished_at;
             if (finished_at == null) {
               const _Date = Date;
               finished_at = Date.now();
             }
-            obj3.finished_at = finished_at;
-            items1[arraySpreadResult5] = obj3;
-            const obj4 = { turnId: activeTurnId };
-            items1[HermesBuiltin.arraySpread(arr3.slice(num4 + 1), arraySpreadResult5 + 1)] = newMessage("assistant", "", obj4);
-            const result = map.set(projectId, items1);
+            obj4.finished_at = finished_at;
+            items3[arraySpreadResult16] = obj4;
+            const arraySpreadResult17 = HermesBuiltin.arraySpread(arr4.slice(tmp10 + 1, findIndexResult + 1), arraySpreadResult16 + 1);
+            const obj5 = { turnId: activeTurnId };
+            items3[arraySpreadResult17] = newMessage("assistant", "", obj5);
+            HermesBuiltin.arraySpread(arr4.slice(findIndexResult + 1), arraySpreadResult17 + 1);
+            const result1 = map.set(projectId, items3);
             recordThinkingTransition(projectId);
-            const arraySpreadResult6 = HermesBuiltin.arraySpread(arr3.slice(num4 + 1), arraySpreadResult5 + 1);
           }
         }
-        if (arr3 !== value) {
-          const result1 = map.set(projectId, arr3);
+        if (arr4 !== value) {
+          const result2 = map.set(projectId, arr4);
         }
-        return arr3 !== value;
+        return arr4 !== value;
       }
     }
   },
@@ -1022,20 +1029,55 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
       const result = map.set(projectId, items);
     }
   },
-  VIBEGRATIONS_CHAT_STEP_APPEND: function handleChatStepAppend(turnId) {
-    ({ projectId, step: require } = turnId);
-    patchTurn(projectId, turnId.turnId, (steps) => {
-      const obj = {};
-      const merged = Object.assign(steps);
-      const tmp2 = openTimeline(steps.steps);
-      pushStep(tmp2, require);
-      obj.steps = tmp2.steps;
-      return obj;
-    });
+  VIBEGRATIONS_CHAT_STEP_APPEND: function handleChatStepAppend(arg0) {
+    ({ projectId, step, turnId } = arg0);
+    value = map.get(projectId);
+    if (null != value) {
+      const tmp29 = resolveTurnIndex(value, turnId);
+      if (-1 !== tmp29) {
+        let tmp11 = tmp10;
+        if (null != turnId) {
+          tmp11 = tmp10;
+          if (null == tmp10.turn_id) {
+            const obj2 = {};
+            const merged = Object.assign(tmp10);
+            obj2.turn_id = turnId;
+            tmp11 = obj2;
+          }
+        }
+        const items = [];
+        const arraySpreadResult = HermesBuiltin.arraySpread(value.slice(0, tmp29), 0);
+        const obj3 = {};
+        const merged1 = Object.assign(tmp11);
+        const tmp21 = openTimeline(tmp11.steps);
+        pushStep(tmp21, step);
+        obj3.steps = tmp21.steps;
+        items[arraySpreadResult] = obj3;
+        HermesBuiltin.arraySpread(value.slice(tmp29 + 1), arraySpreadResult + 1);
+        const result = map.set(projectId, items);
+      } else {
+        const items1 = [];
+        if (null != turnId) {
+          const obj4 = { turnId };
+          let obj5 = obj4;
+        } else {
+          obj5 = {};
+        }
+        const tmp = newMessage("assistant", "", obj5);
+        const obj6 = {};
+        const merged2 = Object.assign(tmp);
+        const tmp6 = openTimeline(tmp.steps);
+        pushStep(tmp6, step);
+        obj6.steps = tmp6.steps;
+        items1[HermesBuiltin.arraySpread(value, 0)] = obj6;
+        const result1 = map.set(projectId, items1);
+        const arraySpreadResult4 = HermesBuiltin.arraySpread(value, 0);
+      }
+    }
     recordThinkingTransition(projectId);
   },
-  VIBEGRATIONS_CHAT_TURN_FINISHED: function handleChatTurnFinished(turnId) {
-    ({ projectId, summary: require } = turnId);
+  VIBEGRATIONS_CHAT_TURN_FINISHED: function handleChatTurnFinished(arg0) {
+    ({ projectId, summary, turnId } = arg0);
     value = map.get(projectId);
     let someResult = null != value;
     if (someResult) {
@@ -1051,23 +1093,68 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
         }
       }));
     }
-    patchTurn(projectId, turnId.turnId, (content) => {
-      const obj = {};
-      const merged = Object.assign(content);
-      obj.finished = true;
-      obj.finished_at = Date.now();
-      obj.provisionalTodo = undefined;
-      if ("" !== content.content) {
-        let str = content.content;
-      } else {
-        str = require;
-        if (require == null) {
-          str = "";
+    value2 = map.get(projectId);
+    if (null != value2) {
+      let sum = resolveTurnIndex(value2, turnId);
+      if (-1 !== sum) {
+        let tmp10 = tmp9;
+        if (null != turnId) {
+          tmp10 = tmp9;
+          if (null == tmp9.turn_id) {
+            const obj2 = {};
+            const merged = Object.assign(tmp9);
+            obj2.turn_id = turnId;
+            tmp10 = obj2;
+          }
         }
+        let items = [];
+        const arraySpreadResult = HermesBuiltin.arraySpread(value2.slice(0, sum), 0);
+        let obj3 = {};
+        const merged1 = Object.assign(tmp10);
+        obj3.finished = true;
+        const _Date2 = Date;
+        obj3.finished_at = Date.now();
+        obj3.provisionalTodo = undefined;
+        if ("" !== tmp10.content) {
+          summary = tmp10.content;
+        } else if (summary == null) {
+          summary = "";
+        }
+        obj3.content = summary;
+        items[arraySpreadResult] = obj3;
+        obj3 = value2.slice;
+        sum = sum + 1;
+        HermesBuiltin.arraySpread(obj3(sum), arraySpreadResult + 1);
+        items = map.set(projectId, items);
+      } else {
+        const items1 = [];
+        if (null != turnId) {
+          const obj4 = { turnId };
+          let obj5 = obj4;
+        } else {
+          obj5 = {};
+        }
+        const tmp3 = newMessage("assistant", "", obj5);
+        const obj6 = {};
+        const merged2 = Object.assign(tmp3);
+        obj6.finished = true;
+        const _Date = Date;
+        obj6.finished_at = Date.now();
+        obj6.provisionalTodo = undefined;
+        if ("" !== tmp3.content) {
+          let str3 = tmp3.content;
+        } else {
+          str3 = summary;
+          if (summary == null) {
+            str3 = "";
+          }
+        }
+        obj6.content = str3;
+        items1[HermesBuiltin.arraySpread(value2, 0)] = obj6;
+        const result1 = map.set(projectId, items1);
+        const arraySpreadResult4 = HermesBuiltin.arraySpread(value2, 0);
       }
-      obj.content = str;
-      return obj;
-    });
+    }
     if (!hasOpenTurn(map.get(projectId))) {
       map4.delete(projectId);
       set1.delete(projectId);
@@ -1215,17 +1302,52 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
       return false;
     }
   },
-  VIBEGRATIONS_CHAT_TURN_PATCH: function handleChatTurnPatch(turnId) {
-    ({ projectId, patch: require } = turnId);
-    patchTurn(projectId, turnId.turnId, (arg0) => {
-      const obj = {};
-      const merged = Object.assign(arg0);
-      const merged1 = Object.assign(require);
-      if ("todos" in require) {
-        obj.provisionalTodo = undefined;
+  VIBEGRATIONS_CHAT_TURN_PATCH: function handleChatTurnPatch(arg0) {
+    ({ projectId, patch, turnId } = arg0);
+    value = map.get(projectId);
+    if (null != value) {
+      const tmp29 = resolveTurnIndex(value, turnId);
+      if (-1 !== tmp29) {
+        let tmp12 = tmp11;
+        if (null != turnId) {
+          tmp12 = tmp11;
+          if (null == tmp11.turn_id) {
+            const obj2 = {};
+            const merged = Object.assign(tmp11);
+            obj2.turn_id = turnId;
+            tmp12 = obj2;
+          }
+        }
+        const items = [];
+        const arraySpreadResult = HermesBuiltin.arraySpread(value.slice(0, tmp29), 0);
+        const obj3 = {};
+        const merged1 = Object.assign(tmp12);
+        const merged2 = Object.assign(patch);
+        if ("todos" in patch) {
+          obj3.provisionalTodo = undefined;
+        }
+        items[arraySpreadResult] = obj3;
+        HermesBuiltin.arraySpread(value.slice(tmp29 + 1), arraySpreadResult + 1);
+        const result = map.set(projectId, items);
+      } else {
+        const items1 = [];
+        if (null != turnId) {
+          const obj4 = { turnId };
+          let obj5 = obj4;
+        } else {
+          obj5 = {};
+        }
+        const obj6 = {};
+        const merged3 = Object.assign(newMessage("assistant", "", obj5));
+        const merged4 = Object.assign(patch);
+        if ("todos" in patch) {
+          obj6.provisionalTodo = undefined;
+        }
+        items1[HermesBuiltin.arraySpread(value, 0)] = obj6;
+        const result1 = map.set(projectId, items1);
+        const arraySpreadResult4 = HermesBuiltin.arraySpread(value, 0);
       }
-      return obj;
-    });
+    }
     recordThinkingTransition(projectId);
   },
   VIBEGRATIONS_CHAT_CONN_STATE: function handleChatConnState(arg0) {
@@ -1349,22 +1471,22 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/stores/VibegrationsChatStore.tsx");
 
 export default vibegrationsChatStore;
-export const turnSettled = function turnSettled(message) {
-  let someResult = true === message.finished || true === message.continued;
+export const turnSettled = function turnSettled(finished) {
+  let someResult = true === finished.finished || true === finished.continued;
   if (!someResult) {
-    someResult = "" !== message.content;
+    someResult = "" !== finished.content;
   }
   if (!someResult) {
-    someResult = null != message.proposal;
+    someResult = null != finished.proposal;
   }
   if (!someResult) {
-    someResult = null != message.clarification;
+    someResult = null != finished.clarification;
   }
   if (!someResult) {
-    someResult = null != message.intake;
+    someResult = null != finished.intake;
   }
   if (!someResult) {
-    const steps = message.steps;
+    const steps = finished.steps;
     someResult = steps.some((kind) => set.has(kind.kind));
   }
   return someResult;

@@ -1,7 +1,7 @@
-// === Module 12298: useProvisionalAccountApplication ===
+// === Module 12328: useProvisionalAccountApplication ===
 
-// Module 12298 (useProvisionalAccountApplication)
-import GameRelationshipStore from "GameRelationshipStore" /* 7236 */;
+// Module 12328 (useProvisionalAccountApplication)
+import GameRelationshipStore from "GameRelationshipStore" /* 7266 */;
 
 const require = globalThis.__r;
 

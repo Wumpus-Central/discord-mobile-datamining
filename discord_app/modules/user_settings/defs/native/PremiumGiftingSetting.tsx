@@ -1,24 +1,24 @@
-// === Module 14704: PremiumGiftingSetting ===
+// === Module 14735: PremiumGiftingSetting ===
 
-// Module 14704 (PremiumGiftingSetting)
+// Module 14735 (PremiumGiftingSetting)
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import BillingPlatformUtils from "BillingPlatformUtils" /* 4501 */;
-import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7003 */;
-import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11146 */;
-import PromotionsHooks from "PromotionsHooks" /* 13266 */;
+import BillingPlatformUtils from "BillingPlatformUtils" /* 4531 */;
+import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7033 */;
+import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11182 */;
+import PromotionsHooks from "PromotionsHooks" /* 13293 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11175);
+const SettingBuilders = fn(11211);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["jcSP+g"]);
   },
   parent: null,
-  IconComponent: fn(10665).GiftIcon,
+  IconComponent: fn(10699).GiftIcon,
   usePredicate() {
     return BillingPlatformUtils.isPremiumGiftingSupported();
   },

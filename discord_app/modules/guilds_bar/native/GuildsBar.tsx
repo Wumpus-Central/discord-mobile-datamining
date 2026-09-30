@@ -1,20 +1,20 @@
-// === Module 16095: GuildsBar ===
+// === Module 16124: GuildsBar ===
 
-// Module 16095 (GuildsBar)
-import NativeViewDefault from "NativeView" /* 6067 */;
-import FastListDefault from "FastList" /* 6659 */;
-import FavoritesGuildIntroPopoverDefault from "FavoritesGuildIntroPopover" /* 9868 */;
-import StartupProfilerDefault from "StartupProfiler" /* 11196 */;
-import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 15987 */;
-import useGuildsBarGestureDefault from "useGuildsBarGesture" /* 16096 */;
-import useGuildsBarPropsDefault from "useGuildsBarProps" /* 16104 */;
-import GuildsBarDragPreviewDefault from "GuildsBarDragPreview" /* 16173 */;
+// Module 16124 (GuildsBar)
+import NativeViewDefault from "NativeView" /* 6097 */;
+import FastListDefault from "FastList" /* 6689 */;
+import FavoritesGuildIntroPopoverDefault from "FavoritesGuildIntroPopover" /* 9902 */;
+import StartupProfilerDefault from "StartupProfiler" /* 11232 */;
+import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 16012 */;
+import useGuildsBarGestureDefault from "useGuildsBarGesture" /* 16125 */;
+import useGuildsBarPropsDefault from "useGuildsBarProps" /* 16133 */;
+import GuildsBarDragPreviewDefault from "GuildsBarDragPreview" /* 16202 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let closure_6 = createStyles.createStyles({ wrapper: { position: "relative", overflow: "visible", flex: 1 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBar.tsx");
@@ -81,7 +81,7 @@ export default noop.memo(function GuildsBar(enableHome) {
   }, items1);
   let obj = { profile: null, children: null };
   const tmp5 = useGuildsBarPropsDefault(fastListRef);
-  obj.profile = fastListRef(11196).Profiles.Guilds;
+  obj.profile = fastListRef(11232).Profiles.Guilds;
   const obj2 = { gesture, children: null };
   const obj3 = { style: tmp.wrapper, collapsable: false, nativeID: "guilds-bar-view", children: null };
   const tmp10 = StartupProfilerDefault;
@@ -108,6 +108,6 @@ export default noop.memo(function GuildsBar(enableHome) {
   const items2 = [closure_4(FastListDefault, obj4), closure_4(GuildsBarDragPreviewDefault, {}), closure_4(FavoritesGuildIntroPopoverDefault, {})];
   obj3.children = items2;
   obj2.children = closure_5(tmp12, obj3);
-  obj.children = closure_4(fastListRef(6239).GestureDetector, obj2);
+  obj.children = closure_4(fastListRef(6269).GestureDetector, obj2);
   return closure_4(tmp10, obj);
 });

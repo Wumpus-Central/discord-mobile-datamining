@@ -1,6 +1,6 @@
-// === Module 5132: ? ===
+// === Module 5162: ? ===
 
-// Module 5132
+// Module 5162
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/outfit/baddie_violet.png.js");

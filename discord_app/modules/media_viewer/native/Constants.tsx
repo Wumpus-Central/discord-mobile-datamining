@@ -1,6 +1,6 @@
-// === Module 7905: Constants ===
+// === Module 7935: Constants ===
 
-// Module 7905 (Constants)
+// Module 7935 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/media_viewer/native/Constants.tsx");

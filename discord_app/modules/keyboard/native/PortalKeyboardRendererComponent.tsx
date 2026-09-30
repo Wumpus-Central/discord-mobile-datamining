@@ -1,7 +1,7 @@
-// === Module 16473: PortalKeyboardRendererComponent ===
+// === Module 16502: PortalKeyboardRendererComponent ===
 
-// Module 16473 (PortalKeyboardRendererComponent)
-import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 6808 */;
+// Module 16502 (PortalKeyboardRendererComponent)
+import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 6838 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 

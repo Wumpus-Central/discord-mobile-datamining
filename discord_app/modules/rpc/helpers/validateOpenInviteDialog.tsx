@@ -1,19 +1,19 @@
-// === Module 14214: validateOpenInviteDialog ===
+// === Module 14243: validateOpenInviteDialog ===
 
-// Module 14214 (validateOpenInviteDialog)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8666 */;
-import RPCErrorDefault from "RPCError" /* 8935 */;
-import canViewInviteModal from "canViewInviteModal" /* 9229 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14201 */;
-import FramesStore from "FramesStore" /* 8664 */;
+// Module 14243 (validateOpenInviteDialog)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8700 */;
+import RPCErrorDefault from "RPCError" /* 8969 */;
+import canViewInviteModal from "canViewInviteModal" /* 9263 */;
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14230 */;
+import FramesStore from "FramesStore" /* 8698 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import GuildStore from "GuildStore" /* 2067 */;
-import PermissionStore from "PermissionStore" /* 4469 */;
+import PermissionStore from "PermissionStore" /* 4499 */;
 
 require = fn;
-const TransportTypes = fn(4739).TransportTypes;
+const TransportTypes = fn(4769).TransportTypes;
 const RPCErrors = fn(1074).RPCErrors;
-const asLaunched = fn(8665).asLaunched;
+const asLaunched = fn(8699).asLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/validateOpenInviteDialog.tsx");
 
@@ -29,7 +29,7 @@ export const validateOpenInviteDialog = function validateOpenInviteDialog(socket
       const surface = tmp46.surface;
       const type = surface.type;
       if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
-        const obj3 = { frame: tmp46, channel: "Array", guild: "channel" };
+        const obj3 = { frame: tmp46, channel: "Array", guild: "isArray" };
         return obj3;
       } else {
         if (EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL !== type) {

@@ -1,9 +1,9 @@
-// === Module 7979: showSharePreparingModal ===
+// === Module 8009: showSharePreparingModal ===
 
-// Module 7979 (showSharePreparingModal)
+// Module 8009 (showSharePreparingModal)
 import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5039 */;
-import SharePreparingModalConstants from "SharePreparingModalConstants" /* 7977 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5069 */;
+import SharePreparingModalConstants from "SharePreparingModalConstants" /* 8007 */;
 import size from "module_2" /* 2 */;
 
 const SHARE_PREPARING_MODAL_KEY = SharePreparingModalConstants.SHARE_PREPARING_MODAL_KEY;
@@ -19,27 +19,27 @@ export const showSharePreparingModal = function showSharePreparingModal(onCancel
           _true = true;
           const _clearTimeout = clearTimeout;
           clearTimeout(dependencyMap);
-          _true(5039).popWithKey(SHARE_PREPARING_MODAL_KEY);
+          _true(5069).popWithKey(SHARE_PREPARING_MODAL_KEY);
           onCancel();
-          const obj = _true(5039);
+          const obj = _true(5069);
         }
       }
     };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(7980, dependencyMap.paths), {
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(8010, dependencyMap.paths), {
       onCancel() {
         if (!_true) {
           _true = true;
           const _clearTimeout = clearTimeout;
           clearTimeout(dependencyMap);
-          _true(5039).popWithKey(SHARE_PREPARING_MODAL_KEY);
+          _true(5069).popWithKey(SHARE_PREPARING_MODAL_KEY);
           onCancel();
-          const obj = _true(5039);
+          const obj = _true(5069);
         }
       }
     }, SHARE_PREPARING_MODAL_KEY, { animation: "fade", presentation: "transparentModal" }).then(() => {
       if (_true) {
-        _true(5039).popWithKey(SHARE_PREPARING_MODAL_KEY);
-        const obj = _true(5039);
+        _true(5069).popWithKey(SHARE_PREPARING_MODAL_KEY);
+        const obj = _true(5069);
       }
     });
   }, 1000);

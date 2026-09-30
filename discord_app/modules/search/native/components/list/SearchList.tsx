@@ -1,30 +1,30 @@
-// === Module 16655: SearchList ===
+// === Module 16690: SearchList ===
 
-// Module 16655 (SearchList)
+// Module 16690 (SearchList)
 import util from "util" /* 1115 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
-import _mod8344 from "module_8344" /* 8344 */;
-import SuggestedSearchRowDefault from "SuggestedSearchRow" /* 16641 */;
-import pages_ErrorScreenDefault from "pages/ErrorScreen" /* 16643 */;
-import MediaGridPlaceholderDefault from "MediaGridPlaceholder" /* 16652 */;
-import DMRowDefault from "DMRow" /* 16656 */;
-import rows_GroupDMRowDefault from "rows/GroupDMRow" /* 16657 */;
-import SearchHistoryRowDefault from "SearchHistoryRow" /* 16658 */;
-import GuildVoiceOrStageChannelRowDefault from "GuildVoiceOrStageChannelRow" /* 16659 */;
-import GuildTextChannelRowDefault from "GuildTextChannelRow" /* 16672 */;
-import MediaGridItemDefault from "MediaGridItem" /* 16673 */;
-import FileOrLinkGridPlaceholderDefault from "FileOrLinkGridPlaceholder" /* 16675 */;
-import MediaGridDefault from "MediaGrid" /* 16677 */;
-import MessageRowDefault from "MessageRow" /* 16678 */;
-import FormRowPlaceholderDefault from "FormRowPlaceholder" /* 16682 */;
-import LinkGridItemDefault from "LinkGridItem" /* 16683 */;
-import FileGridItemDefault from "FileGridItem" /* 16686 */;
-import GuildChannelMemberRowDefault from "GuildChannelMemberRow" /* 16687 */;
-import MemberRowPlaceholderDefault from "MemberRowPlaceholder" /* 16688 */;
-import GenericTextRowDefault from "GenericTextRow" /* 16689 */;
-import SearchListSectionDefault from "SearchListSection" /* 16690 */;
-import SmartSearchRowDefault from "SmartSearchRow" /* 16691 */;
-import SuggestedSearchSkeletonDefault from "SuggestedSearchSkeleton" /* 16703 */;
+import _mod8375 from "module_8375" /* 8375 */;
+import SuggestedSearchRowDefault from "SuggestedSearchRow" /* 16676 */;
+import pages_ErrorScreenDefault from "pages/ErrorScreen" /* 16678 */;
+import MediaGridPlaceholderDefault from "MediaGridPlaceholder" /* 16687 */;
+import DMRowDefault from "DMRow" /* 16691 */;
+import rows_GroupDMRowDefault from "rows/GroupDMRow" /* 16692 */;
+import SearchHistoryRowDefault from "SearchHistoryRow" /* 16693 */;
+import GuildVoiceOrStageChannelRowDefault from "GuildVoiceOrStageChannelRow" /* 16694 */;
+import GuildTextChannelRowDefault from "GuildTextChannelRow" /* 16707 */;
+import MediaGridItemDefault from "MediaGridItem" /* 16708 */;
+import FileOrLinkGridPlaceholderDefault from "FileOrLinkGridPlaceholder" /* 16710 */;
+import MediaGridDefault from "MediaGrid" /* 16712 */;
+import MessageRowDefault from "MessageRow" /* 16713 */;
+import FormRowPlaceholderDefault from "FormRowPlaceholder" /* 16717 */;
+import LinkGridItemDefault from "LinkGridItem" /* 16718 */;
+import FileGridItemDefault from "FileGridItem" /* 16721 */;
+import GuildChannelMemberRowDefault from "GuildChannelMemberRow" /* 16722 */;
+import MemberRowPlaceholderDefault from "MemberRowPlaceholder" /* 16723 */;
+import GenericTextRowDefault from "GenericTextRow" /* 16724 */;
+import SearchListSectionDefault from "SearchListSection" /* 16725 */;
+import SmartSearchRowDefault from "SmartSearchRow" /* 16726 */;
+import SuggestedSearchSkeletonDefault from "SuggestedSearchSkeleton" /* 16738 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -202,11 +202,11 @@ function renderItem(item) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const SearchConstants = fn(7468);
+const SearchConstants = fn(7499);
 ({ SearchHistoryItemTypes: metroRequire, SearchListItemTypes: closure_7 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let closure_10 = createStyles.createStyles({ container: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/SearchList.tsx");
@@ -258,7 +258,7 @@ export default noop.memo(function SearchList(arg0) {
   obj4.ListFooterComponent = ListFooterComponent;
   obj4.ItemSeparatorComponent = ItemSeparatorComponent;
   obj4.numColumns = numColumns;
-  items[1] = React6(_mod8344.AnimatedFlashList, obj4);
+  items[1] = React6(_mod8375.AnimatedFlashList, obj4);
   obj.children = items;
   return React7(React4, obj);
 });

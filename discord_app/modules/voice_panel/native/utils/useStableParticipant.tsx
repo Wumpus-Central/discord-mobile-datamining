@@ -1,11 +1,11 @@
-// === Module 17116: useStableParticipant ===
+// === Module 17151: useStableParticipant ===
 
-// Module 17116 (useStableParticipant)
+// Module 17151 (useStableParticipant)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
-import NicknameUtils from "NicknameUtils" /* 4988 */;
-import useAvatarDecoration from "useAvatarDecoration" /* 7826 */;
-import participantHasVideoDefault from "participantHasVideo" /* 9064 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4852 */;
+import NicknameUtils from "NicknameUtils" /* 5018 */;
+import useAvatarDecoration from "useAvatarDecoration" /* 7856 */;
+import participantHasVideoDefault from "participantHasVideo" /* 9098 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4882 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1993 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -24,7 +24,7 @@ function areStableParticipantsEqual(arg0, arg1) {
   }
   return tmp;
 }
-const ParticipantTypes = fn(4857).ParticipantTypes;
+const ParticipantTypes = fn(4887).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/utils/useStableParticipant.tsx");
 
@@ -40,7 +40,7 @@ export default function useStableParticipant(id, arg1, arg2) {
       if (null == participant) {
         const user = UserStore.getUser(id);
         if (null != user) {
-          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "flexDirection", ringing: null, hasVideo: "column", isSelf: 4 };
+          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "flexDirection", ringing: null, hasVideo: "absolute", isSelf: 16 };
           id = AuthenticationStore.getId();
           obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);
           obj3.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, closure_2);

@@ -1,14 +1,14 @@
-// === Module 12874: useCollectibleProfileOverrides ===
+// === Module 12901: useCollectibleProfileOverrides ===
 
-// Module 12874 (useCollectibleProfileOverrides)
+// Module 12901 (useCollectibleProfileOverrides)
 import CollectiblesItemType from "CollectiblesItemType" /* 1974 */;
-import useShopProductItems from "useShopProductItems" /* 7781 */;
+import useShopProductItems from "useShopProductItems" /* 7811 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const isAvatarDecorationRecord = fn(7133).isAvatarDecorationRecord;
-const isProfileEffectRecord = fn(7134).isProfileEffectRecord;
-const isProfileFrameRecord = fn(7135).isProfileFrameRecord;
+const isAvatarDecorationRecord = fn(7163).isAvatarDecorationRecord;
+const isProfileEffectRecord = fn(7164).isProfileEffectRecord;
+const isProfileFrameRecord = fn(7165).isProfileFrameRecord;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useCollectibleProfileOverrides.tsx");
 

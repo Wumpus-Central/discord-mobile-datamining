@@ -1,25 +1,25 @@
-// === Module 14737: BountyVideo ===
+// === Module 14768: BountyVideo ===
 
-// Module 14737 (BountyVideo)
+// Module 14768 (BountyVideo)
 import nativeDefault from "native" /* 576 */;
-import timing from "timing" /* 4837 */;
-import timingPresets from "timingPresets" /* 4840 */;
-import AssetUtils from "AssetUtils" /* 10858 */;
-import BountiesModalProgress from "BountiesModalProgress" /* 14738 */;
+import timing from "timing" /* 4867 */;
+import timingPresets from "timingPresets" /* 4870 */;
+import AssetUtils from "AssetUtils" /* 10893 */;
+import BountiesModalProgress from "BountiesModalProgress" /* 14769 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, ActivityIndicator: closure_7, Pressable: closure_8 } = get_ActivityIndicator);
-const BountiesModalConstants = fn(14718);
+const BountiesModalConstants = fn(14749);
 ({ getBountyVideoEndPeekClipHeight: closure_9, getBountyVideoEndPeekScale: c10 } = BountiesModalConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const PlatformUtils = fn(1365);
 let closure_15 = { top: 48, bottom: 16, left: 16, right: 16 };
 const lg = nativeDefault.radii.lg;
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let closure_17 = createStyles.createStyles(() => {
   const obj = { videoContainer: null, leftRow: null, progress: null, poster: null };
   const obj2 = {};

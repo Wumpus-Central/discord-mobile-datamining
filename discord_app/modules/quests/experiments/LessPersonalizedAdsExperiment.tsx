@@ -1,6 +1,6 @@
-// === Module 10855: LessPersonalizedAdsExperiment ===
+// === Module 10890: LessPersonalizedAdsExperiment ===
 
-// Module 10855 (LessPersonalizedAdsExperiment)
+// Module 10890 (LessPersonalizedAdsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 

@@ -1,7 +1,7 @@
-// === Module 7993: InviteRecord ===
+// === Module 8023: InviteRecord ===
 
-// Module 7993 (InviteRecord)
-import _modDef4421 from "module_4421" /* 4421 */;
+// Module 8023 (InviteRecord)
+import _modDef4451 from "module_4451" /* 4451 */;
 import Record from "Record" /* 1387 */;
 import UserRecord from "UserRecord" /* 1386 */;
 
@@ -54,19 +54,19 @@ InviteRecord["createFromServer"] = function createFromServer(created_at) {
   const merged = Object.assign(created_at);
   ({ max_uses: obj.maxUses, max_age: obj.maxAge } = created_at);
   created_at = created_at.created_at;
-  obj.createdAt = _modDef4421(created_at);
+  obj.createdAt = _modDef4451(created_at);
   ({ target_type: obj.targetType, target_user: obj.targetUser, target_application: obj.targetApplication } = created_at);
   return new InviteRecord(obj);
 };
 prototype["isExpired"] = function isExpired() {
   const maxAge = this.maxAge;
   if (maxAge > 0) {
-    const obj = _modDef4421(tmp.createdAt);
+    const obj = _modDef4451(tmp.createdAt);
     const _Date = Date;
     if (addResult.isBefore(Date.now())) {
       return true;
     }
-    addResult = _modDef4421(tmp.createdAt).add(maxAge, "seconds");
+    addResult = _modDef4451(tmp.createdAt).add(maxAge, "seconds");
   }
   return false;
 };
@@ -74,9 +74,9 @@ prototype["getExpiresAt"] = function getExpiresAt() {
   const self = this;
   let num = Infinity;
   if (this.maxAge > 0) {
-    const obj = _modDef4421(self.createdAt);
-    num = _modDef4421(self.createdAt).add(self.maxAge, "seconds").toDate();
-    const addResult = _modDef4421(self.createdAt).add(self.maxAge, "seconds");
+    const obj = _modDef4451(self.createdAt);
+    num = _modDef4451(self.createdAt).add(self.maxAge, "seconds").toDate();
+    const addResult = _modDef4451(self.createdAt).add(self.maxAge, "seconds");
   }
   return num;
 };

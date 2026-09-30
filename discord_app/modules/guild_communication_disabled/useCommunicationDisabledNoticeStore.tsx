@@ -2,7 +2,7 @@
 
 // Module 2109 (useCommunicationDisabledNoticeStore)
 import _mod1243 from "module_1243" /* 1243 */;
-import _mod4452 from "module_4452" /* 4452 */;
+import _mod4482 from "module_4482" /* 4482 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -54,7 +54,7 @@ export const useCommunicationDisabledNoticeStore = function useCommunicationDisa
     const items = [, ];
     ({ notificationDismissedInGuilds: arr[0], dismissNotification: arr[1] } = arg0);
     return items;
-  }, _mod4452.shallow), 2);
+  }, _mod4482.shallow), 2);
   const first = tmp[0];
   let items = [!first.has(arg0), tmp[1]];
   return items;

@@ -1,17 +1,17 @@
-// === Module 12996: VibegrationsAppChannelActions ===
+// === Module 13023: VibegrationsAppChannelActions ===
 
-// Module 12996 (VibegrationsAppChannelActions)
-import VibegrationsUtils from "VibegrationsUtils" /* 5536 */;
-import restartVibegrationsAppFramesDefault from "restartVibegrationsAppFrames" /* 12621 */;
-import VibegrationsAppChannelActionCreators from "VibegrationsAppChannelActionCreators" /* 13001 */;
+// Module 13023 (VibegrationsAppChannelActions)
+import VibegrationsUtils from "VibegrationsUtils" /* 5566 */;
+import restartVibegrationsAppFramesDefault from "restartVibegrationsAppFrames" /* 12651 */;
+import VibegrationsAppChannelActionCreators from "VibegrationsAppChannelActionCreators" /* 13028 */;
 import noop from "module_19" /* 19 */;
-import VibegrationsAppChannelsStore from "VibegrationsAppChannelsStore" /* 12997 */;
+import VibegrationsAppChannelsStore from "VibegrationsAppChannelsStore" /* 13024 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let closure_7 = createStyles.createStyles({ actionWrapper: { flexShrink: 0, flexDirection: "row", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/native/VibegrationsAppChannelActions.tsx");
@@ -23,8 +23,8 @@ export default function VibegrationsAppChannelActions(channel) {
   const items1 = [channel.id];
   const stateFromStores = channel(504).useStateFromStores(items, () => VibegrationsAppChannelsStore.isChatOpen(channel.id), items1);
   const obj = channel(504);
-  ({ mentionCount, badge } = stateFromStores(12998)(channel.id));
-  stateFromStores(12999)(channel, stateFromStores);
+  ({ mentionCount, badge } = stateFromStores(13025)(channel.id));
+  stateFromStores(13026)(channel, stateFromStores);
   let tmp8 = null;
   if (!stateFromStores) {
     tmp8 = badge;
@@ -45,7 +45,7 @@ export default function VibegrationsAppChannelActions(channel) {
   if (!stateFromStores) {
     const obj4 = {
       source: null,
-      IconComponent: tmp2(9807).RetryIcon,
+      IconComponent: tmp2(9841).RetryIcon,
       onPress() {
           const tmp = restartVibegrationsAppFramesDefault;
           return tmp(VibegrationsUtils.vibegrationsAppIdFromTopic(channel.topic));
@@ -54,15 +54,15 @@ export default function VibegrationsAppChannelActions(channel) {
     };
     const intl3 = tmp2(1115).intl;
     obj4.accessibilityLabel = intl3.string(tmp5(3715).xKexN1);
-    tmp14 = closure_5(tmp5(13000), obj4);
-    const tmp5Result3 = tmp5(13000);
+    tmp14 = closure_5(tmp5(13027), obj4);
+    const tmp5Result3 = tmp5(13027);
   }
   const items3 = [tmp14, ];
-  const tmp6 = stateFromStores(12998)(channel.id);
+  const tmp6 = stateFromStores(13025)(channel.id);
   if (stateFromStores) {
-    let ChatIcon = tmp2(5540).AppsIcon;
+    let ChatIcon = tmp2(5570).AppsIcon;
   } else {
-    ChatIcon = tmp2(5551).ChatIcon;
+    ChatIcon = tmp2(5581).ChatIcon;
   }
   const obj5 = {
     noMargin: true,
@@ -82,7 +82,7 @@ export default function VibegrationsAppChannelActions(channel) {
     StringResult = String(mentionCount);
   }
   obj5.buttonText = StringResult;
-  items3[1] = closure_5(stateFromStores(13000), obj5);
+  items3[1] = closure_5(stateFromStores(13027), obj5);
   obj3.children = items3;
   return closure_6(View, obj3);
 };

@@ -1,9 +1,9 @@
-// === Module 8041: AgeVerificationAuthSession ===
+// === Module 8071: AgeVerificationAuthSession ===
 
-// Module 8041 (AgeVerificationAuthSession)
+// Module 8071 (AgeVerificationAuthSession)
 import LoggerDefault from "Logger" /* 3 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import NativeBrowserManagerModuleIOSDefault from "NativeBrowserManagerModuleIOS" /* 4799 */;
+import NativeBrowserManagerModuleIOSDefault from "NativeBrowserManagerModuleIOS" /* 4829 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

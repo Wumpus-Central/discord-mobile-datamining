@@ -1,6 +1,6 @@
-// === Module 7804: Constants ===
+// === Module 7834: Constants ===
 
-// Module 7804 (Constants)
+// Module 7834 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/Constants.tsx");

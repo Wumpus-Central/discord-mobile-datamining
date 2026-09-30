@@ -1,14 +1,14 @@
-// === Module 15396: DevToolsBountyQaScreen ===
+// === Module 15429: DevToolsBountyQaScreen ===
 
-// Module 15396 (DevToolsBountyQaScreen)
+// Module 15429 (DevToolsBountyQaScreen)
 import nativeDefault from "native" /* 576 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4528 */;
-import AdCreativeType from "AdCreativeType" /* 5930 */;
-import QuestActionCreators from "QuestActionCreators" /* 10852 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4558 */;
+import AdCreativeType from "AdCreativeType" /* 5960 */;
+import QuestActionCreators from "QuestActionCreators" /* 10887 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 7278 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 7308 */;
 
 require = fn;
 function toast(content, key) {
@@ -18,7 +18,7 @@ const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let items = [{ value: "15", label: "Last 15 minutes" }, { value: "60", label: "Last hour" }, { value: "1440", label: "Last 24 hours" }];
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, content: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.content = { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
@@ -62,7 +62,7 @@ export default function DevToolsBountyQaScreen() {
               } else {
                 c1 = 3;
                 c3 = 1;
-                const obj7 = { value: tmp3(10913).resetCreativePreviewDeliveryState(tmp22, tmp3(5926).AdPlacement.MOBILE_HOME_DOCK_AREA), done: false };
+                const obj7 = { value: tmp3(10948).resetCreativePreviewDeliveryState(tmp22, tmp3(5956).AdPlacement.MOBILE_HOME_DOCK_AREA), done: false };
                 return obj7;
               }
             } else {
@@ -70,7 +70,7 @@ export default function DevToolsBountyQaScreen() {
               const NumberResult = Number(tmp37);
               c1 = 2;
               c3 = 1;
-              const obj8 = { value: tmp3(10913).resetPreviewDeliveryStateLookback(NumberResult), done: false };
+              const obj8 = { value: tmp3(10948).resetPreviewDeliveryStateLookback(NumberResult), done: false };
               return obj8;
             }
           }
@@ -94,10 +94,10 @@ export default function DevToolsBountyQaScreen() {
               const obj = { value, done: true };
               return obj;
             }
-            const questToDeliver = tmp3(10852).fetchQuestToDeliver(tmp3(5926).AdPlacement.MOBILE_HOME_DOCK_AREA, "devTools-bountyQa");
+            const questToDeliver = tmp3(10887).fetchQuestToDeliver(tmp3(5956).AdPlacement.MOBILE_HOME_DOCK_AREA, "devTools-bountyQa");
             toast("Reset delivery state and refreshing dock", "bounty-qa-reset-and-refresh");
             dependencyMap = 0;
-            const obj2 = tmp3(10852);
+            const obj2 = tmp3(10887);
           }
           dependencyMap = 0;
           c3 = 3;
@@ -119,12 +119,12 @@ export default function DevToolsBountyQaScreen() {
   items = [AdDeliveryStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => {
     const deliveryAdDecisionByPlacement = AdDeliveryStore.deliveryAdDecisionByPlacement;
-    value = deliveryAdDecisionByPlacement.get(stateFromStores(5926).AdPlacement.MOBILE_HOME_DOCK_AREA);
+    value = deliveryAdDecisionByPlacement.get(stateFromStores(5956).AdPlacement.MOBILE_HOME_DOCK_AREA);
     let creative;
     if (value != null) {
       creative = value.creative;
     }
-    const deliveredBounty = stateFromStores(7279).getDeliveredBounty(creative);
+    const deliveredBounty = stateFromStores(7309).getDeliveredBounty(creative);
     let id;
     if (deliveredBounty != null) {
       id = deliveredBounty.id;
@@ -162,9 +162,9 @@ export default function DevToolsBountyQaScreen() {
     const _HermesInternal2 = HermesInternal;
     str4 = "Last dock bounty still in memory: " + stateFromStores + ".";
   }
-  const items5 = [closure_8(stateFromStores(4832).Text, { variant: "text-sm/medium", color: "text-muted", children: str4 }), , ];
+  const items5 = [closure_8(stateFromStores(4862).Text, { variant: "text-sm/medium", color: "text-muted", children: str4 }), , ];
   let obj = stateFromStores(504);
-  items5[1] = closure_8(stateFromStores(6163).TableRadioGroup, {
+  items5[1] = closure_8(stateFromStores(6193).TableRadioGroup, {
     title: "Reset scope",
     description: "Used by Reset and re-serve. Refresh Organic Serve ignores this.",
     value: str,
@@ -173,7 +173,7 @@ export default function DevToolsBountyQaScreen() {
     children: items3.map((value) => {
       value = value.value;
       ({ label, subLabel } = value);
-      return closure_1_8(stateFromStores(6166).TableRadioRow, { value, label, subLabel }, value);
+      return closure_1_8(stateFromStores(6196).TableRadioRow, { value, label, subLabel }, value);
     })
   });
   const obj4 = {
@@ -185,14 +185,14 @@ export default function DevToolsBountyQaScreen() {
     children: items3.map((value) => {
       value = value.value;
       ({ label, subLabel } = value);
-      return closure_1_8(stateFromStores(6166).TableRadioRow, { value, label, subLabel }, value);
+      return closure_1_8(stateFromStores(6196).TableRadioRow, { value, label, subLabel }, value);
     })
   };
   const items6 = [
-    closure_8(stateFromStores(6083).TableRow, {
+    closure_8(stateFromStores(6113).TableRow, {
       label: "Reset and re-serve",
       subLabel: "Clears serve, dismiss, claim, and impression for the selected scope, then asks the dock for a new decision.",
-      icon: closure_8(stateFromStores(14813).UndoIcon, {}),
+      icon: closure_8(stateFromStores(14844).UndoIcon, {}),
       onPress: function handleResetAndRefresh() {
         const self = this;
         const apply = closure_2.apply;
@@ -210,7 +210,7 @@ export default function DevToolsBountyQaScreen() {
   let obj5 = {
     label: "Reset and re-serve",
     subLabel: "Clears serve, dismiss, claim, and impression for the selected scope, then asks the dock for a new decision.",
-    icon: closure_8(stateFromStores(14813).UndoIcon, {}),
+    icon: closure_8(stateFromStores(14844).UndoIcon, {}),
     onPress: function handleResetAndRefresh() {
       const self = this;
       const apply = closure_2.apply;
@@ -222,14 +222,14 @@ export default function DevToolsBountyQaScreen() {
       return applyArgumentsResult;
     }
   };
-  items6[1] = closure_8(stateFromStores(6083).TableRow, {
+  items6[1] = closure_8(stateFromStores(6113).TableRow, {
     label: "Refresh Organic Serve",
     subLabel: "Re-runs the dock decision without clearing delivery state. Use to confirm a cooldown still blocks.",
-    icon: closure_8(stateFromStores(14811).RedoIcon, {}),
+    icon: closure_8(stateFromStores(14842).RedoIcon, {}),
     onPress: function handleRefreshOrganicServe() {
-      const questToDeliver = stateFromStores(10852).fetchQuestToDeliver(stateFromStores(5926).AdPlacement.MOBILE_HOME_DOCK_AREA, "devTools-bountyQa");
-      const obj = stateFromStores(10852);
-      str(4528).open({ content: "Refreshing dock serve", key: "bounty-qa-refresh" });
+      const questToDeliver = stateFromStores(10887).fetchQuestToDeliver(stateFromStores(5956).AdPlacement.MOBILE_HOME_DOCK_AREA, "devTools-bountyQa");
+      const obj = stateFromStores(10887);
+      str(4558).open({ content: "Refreshing dock serve", key: "bounty-qa-refresh" });
     }
   });
   let tmp13Result = null;
@@ -237,7 +237,7 @@ export default function DevToolsBountyQaScreen() {
     let obj7 = {
       label: "Reset Seen",
       subLabel: "Clears the Quest Home NEW pill for the last dock bounty. Does not restore the dock.",
-      icon: closure_8(tmp4(6555).EyeIcon, {}),
+      icon: closure_8(tmp4(6585).EyeIcon, {}),
       onPress: function handleResetSeen() {
           if (null != stateFromStores) {
             items = [tmp];
@@ -248,10 +248,10 @@ export default function DevToolsBountyQaScreen() {
           }
         }
     };
-    tmp13Result = closure_8(tmp4(6083).TableRow, obj7);
+    tmp13Result = closure_8(tmp4(6113).TableRow, obj7);
   }
   items6[2] = tmp13Result;
-  items5[2] = closure_9(stateFromStores(6165).TableRowGroup, { title: "Dock QA", hasIcons: true, children: items6 });
+  items5[2] = closure_9(stateFromStores(6195).TableRowGroup, { title: "Dock QA", hasIcons: true, children: items6 });
   obj3.children = items5;
   return closure_9(ScrollView, obj3);
 };

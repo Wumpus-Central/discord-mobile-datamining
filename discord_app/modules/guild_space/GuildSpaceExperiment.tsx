@@ -1,6 +1,6 @@
-// === Module 6812: GuildSpaceExperiment ===
+// === Module 6842: GuildSpaceExperiment ===
 
-// Module 6812 (GuildSpaceExperiment)
+// Module 6842 (GuildSpaceExperiment)
 import Constants from "Constants" /* 1074 */;
 import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;

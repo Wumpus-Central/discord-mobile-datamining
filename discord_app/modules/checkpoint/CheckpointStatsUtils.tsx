@@ -1,6 +1,6 @@
-// === Module 15418: CheckpointStatsUtils ===
+// === Module 15451: CheckpointStatsUtils ===
 
-// Module 15418 (CheckpointStatsUtils)
+// Module 15451 (CheckpointStatsUtils)
 import GuildRecordUtils from "GuildRecordUtils" /* 2059 */;
 import UserRecord from "UserRecord" /* 1386 */;
 

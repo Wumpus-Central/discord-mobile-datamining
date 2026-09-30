@@ -1,9 +1,9 @@
-// === Module 14820: WumpusCouchSpotIllustration ===
+// === Module 14851: WumpusCouchSpotIllustration ===
 
-// Module 14820 (WumpusCouchSpotIllustration)
+// Module 14851 (WumpusCouchSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 6065 */;
-import _modDef14821 from "module_14821" /* 14821 */;
+import FastImageDefault from "FastImage" /* 6095 */;
+import _modDef14852 from "module_14852" /* 14852 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const WumpusCouchSpotIllustration = function WumpusCouchSpotIllustration(
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef14821 };
+  const obj2 = { uri: _modDef14852 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

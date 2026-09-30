@@ -1,29 +1,29 @@
-// === Module 4978: StreamActionCreators ===
+// === Module 5008: StreamActionCreators ===
 
-// Module 4978 (StreamActionCreators)
+// Module 5008 (StreamActionCreators)
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4849 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4888 */;
-import ChannelUtils from "ChannelUtils" /* 4981 */;
-import GuildRoomActionCreators from "GuildRoomActionCreators" /* 4992 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5029 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5037 */;
-import transitionToStreamDefault from "transitionToStream" /* 5038 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5890 */;
-import StreamQualityUtils from "StreamQualityUtils" /* 9061 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 9359 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4879 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4918 */;
+import ChannelUtils from "ChannelUtils" /* 5011 */;
+import GuildRoomActionCreators from "GuildRoomActionCreators" /* 5022 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5059 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5067 */;
+import transitionToStreamDefault from "transitionToStream" /* 5068 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5920 */;
+import StreamQualityUtils from "StreamQualityUtils" /* 9095 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 9393 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GameConsoleStore from "GameConsoleStore" /* 4853 */;
-import PopoutWindowStore from "PopoutWindowStore" /* 4979 */;
-import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 4980 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4858 */;
+import GameConsoleStore from "GameConsoleStore" /* 4883 */;
+import PopoutWindowStore from "PopoutWindowStore" /* 5009 */;
+import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 5010 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4888 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import GuildStore from "GuildStore" /* 2067 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
-import VoiceStateStore from "VoiceStateStore" /* 4855 */;
+import VoiceStateStore from "VoiceStateStore" /* 4885 */;
 
 const require = globalThis.__r;
 
@@ -195,7 +195,7 @@ let closure_20 = async function _notifyStreamStart(arg0) {
 };
 const Constants = fn(1074);
 ({ Endpoints: map1, AppContext: closure_14, PopoutWindowKeys: closure_15 } = Constants);
-const StreamTypes = fn(4878).StreamTypes;
+const StreamTypes = fn(4908).StreamTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/StreamActionCreators.tsx");
 
@@ -342,15 +342,15 @@ export const joinPrivateChannelAndWatchStream = function joinPrivateChannelAndWa
           windowOpen = voiceChannelId.getVoiceChannelId() === channelId;
         }
         if (!windowOpen) {
-          closure_1(5038)(closure_1_1);
+          closure_1(5068)(closure_1_1);
         }
       } else {
         channel = channel.getChannel(channelId);
         closure_1(38)(null != channel, "Cannot join a null voice channel");
         const isInChannelResult = inChannel.isInChannel(channelId);
         if (!isInChannelResult) {
-          closure_0(4981).isChannelFull(channel, inChannel, GuildStore);
-          const obj = closure_0(4981);
+          closure_0(5011).isChannelFull(channel, inChannel, GuildStore);
+          const obj = closure_0(5011);
         }
       }
     };

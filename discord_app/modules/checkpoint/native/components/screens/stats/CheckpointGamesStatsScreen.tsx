@@ -1,8 +1,8 @@
-// === Module 15444: CheckpointGamesStatsScreen ===
+// === Module 15477: CheckpointGamesStatsScreen ===
 
-// Module 15444 (CheckpointGamesStatsScreen)
+// Module 15477 (CheckpointGamesStatsScreen)
 import jsxProd from "jsxProd" /* 21 */;
-import CheckpointStatsScreenDefault from "CheckpointStatsScreen" /* 15440 */;
+import CheckpointStatsScreenDefault from "CheckpointStatsScreen" /* 15473 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;

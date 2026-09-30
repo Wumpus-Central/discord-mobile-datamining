@@ -1,19 +1,19 @@
-// === Module 10375: GiftingBadgesUtils ===
+// === Module 10409: GiftingBadgesUtils ===
 
-// Module 10375 (GiftingBadgesUtils)
+// Module 10409 (GiftingBadgesUtils)
 import util from "util" /* 1115 */;
 import _modDef2583 from "module_2583" /* 2583 */;
-import BadgeId from "BadgeId" /* 7794 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7807 */;
-import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 10371 */;
-import GiftingBadgeDesktopExperiment2 from "GiftingBadgeDesktopExperiment" /* 10376 */;
-import GiftingBadgeComplexArtExperiment2 from "GiftingBadgeComplexArtExperiment" /* 10377 */;
+import BadgeId from "BadgeId" /* 7824 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7837 */;
+import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 10405 */;
+import GiftingBadgeDesktopExperiment2 from "GiftingBadgeDesktopExperiment" /* 10410 */;
+import GiftingBadgeComplexArtExperiment2 from "GiftingBadgeComplexArtExperiment" /* 10411 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7802 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7832 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
-let closure_5 = fn(7802).getSingleRequirementThreshold;
+let closure_5 = fn(7832).getSingleRequirementThreshold;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/gifting/GiftingBadgesUtils.tsx");
 
@@ -99,9 +99,9 @@ export const useGiftingBadgeCoachmarkVariant = function useGiftingBadgeCoachmark
   }
   let stateFromStores;
   closure_1 = undefined;
-  const GiftingBadgeExperiment = stateFromStores(10371).GiftingBadgeExperiment;
+  const GiftingBadgeExperiment = stateFromStores(10405).GiftingBadgeExperiment;
   const enabled2 = GiftingBadgeExperiment.useConfig({ location: _location }).enabled;
-  const GiftingBadgeDesktopExperiment = stateFromStores(10376).GiftingBadgeDesktopExperiment;
+  const GiftingBadgeDesktopExperiment = stateFromStores(10410).GiftingBadgeDesktopExperiment;
   let str = "-DISABLED";
   let str2 = "-DISABLED";
   if ("web" === platform.platform) {
@@ -115,7 +115,7 @@ export const useGiftingBadgeCoachmarkVariant = function useGiftingBadgeCoachmark
     }
     tmp4 = enabled3;
   }
-  const GiftingBadgeCoachmarkAudienceExperiment = tmp(10378).GiftingBadgeCoachmarkAudienceExperiment;
+  const GiftingBadgeCoachmarkAudienceExperiment = tmp(10412).GiftingBadgeCoachmarkAudienceExperiment;
   if (tmp4) {
     str = "";
   }
@@ -135,8 +135,8 @@ export const useGiftingBadgeCoachmarkVariant = function useGiftingBadgeCoachmark
     return flag;
   });
   const tmpResult = stateFromStores(504);
-  const result = stateFromStores(4654).useIsDismissibleContentDismissed_UNSAFE(tmp(2029).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
-  const tmpResult3 = stateFromStores(4654);
+  const result = stateFromStores(4684).useIsDismissibleContentDismissed_UNSAFE(tmp(2029).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
+  const tmpResult3 = stateFromStores(4684);
   const items1 = [BadgeDirectoryStore];
   const stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () => badgeById.getBadgeById(stateFromStores(dependencyMap[12]).BadgeId.GIFTING));
   if (tmp4) {

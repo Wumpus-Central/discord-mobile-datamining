@@ -1,9 +1,9 @@
-// === Module 17914: BundleUpdaterActionCreators ===
+// === Module 17949: BundleUpdaterActionCreators ===
 
-// Module 17914 (BundleUpdaterActionCreators)
+// Module 17949 (BundleUpdaterActionCreators)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1115 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5369 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5399 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;

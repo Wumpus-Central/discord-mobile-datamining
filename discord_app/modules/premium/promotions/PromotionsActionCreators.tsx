@@ -1,14 +1,14 @@
-// === Module 13130: PromotionsActionCreators ===
+// === Module 13157: PromotionsActionCreators ===
 
-// Module 13130 (PromotionsActionCreators)
+// Module 13157 (PromotionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import wrappers from "wrappers" /* 1217 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import MarketingComponentPlatform from "MarketingComponentPlatform" /* 13131 */;
+import MarketingComponentPlatform from "MarketingComponentPlatform" /* 13158 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2112 */;
 import UserStore from "UserStore" /* 1372 */;
-import PromotionsStore from "PromotionsStore" /* 10295 */;
+import PromotionsStore from "PromotionsStore" /* 10329 */;
 
 require = fn;
 function fetchActivePromotions() {
@@ -100,26 +100,75 @@ function fetchClaimedOutboundPromotionCodes() {
   return applyArgumentsResult;
 }
 let closure_11 = async function _fetchClaimedOutboundPromotionCodes() {
-  closure_1 = tmp3;
-  const HTTP = HTTPUtils.HTTP;
-  const request = { url: constants.CLAIMED_OUTBOUND_PROMOTION_CODES, query: { locale: locale.locale }, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
-  await HTTP.get(request);
-  if (1 === tmp7) {
-    c2 = 0;
-    closure_129_1(closure_129_2[6]).dispatch({ type: "CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_FAIL" });
+  if (c4 === 2) {
     c4 = 3;
-    closure_129_1(closure_129_2[6]);
-  } else if (arg0 === 1) {
-    c4 = 3;
-    throw value;
-  } else if (arg0 !== 2) {
-    const body = value.body;
-    closure_128_0 = body.map(closure_129_0(closure_129_2[12]).claimedOutboundPromotionCodeFromServer);
-    closure_129_1(closure_129_2[6]).dispatch({ type: "CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_SUCCESS", claimedOutboundPromotionCodes: closure_128_0 });
-    c2 = 0;
-    closure_129_1(closure_129_2[6]);
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_1 = tmp3;
+          closure_0 = tmp7;
+          closure_128_0 = undefined;
+          c2 = 1;
+          const HTTP = HTTPUtils.HTTP;
+          const request = { url: constants.CLAIMED_OUTBOUND_PROMOTION_CODES, query: null, oldFormErrors: true, rejectWithError: null };
+          const obj5 = { locale: locale.locale };
+          request.query = obj5;
+          request.rejectWithError = HTTPUtils.rejectWithMigratedError();
+          c3 = 2;
+          c4 = 1;
+          const obj6 = { value: HTTP.get(request), done: false };
+          return obj6;
+        }
+      } else if (1 === tmp7) {
+        c2 = 0;
+        closure_129_1(closure_129_2[6]).dispatch({ type: "CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_FAIL" });
+        c4 = 3;
+        return { value: false, done: true };
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c2 = 0;
+        c4 = 3;
+        const obj7 = { value, done: true };
+        return obj7;
+      } else {
+        const body = value.body;
+        closure_128_0 = body.map(closure_129_0(closure_129_2[12]).claimedOutboundPromotionCodeFromServer);
+        const obj8 = { type: "CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_SUCCESS", claimedOutboundPromotionCodes: closure_128_0 };
+        closure_129_1(closure_129_2[6]).dispatch(obj8);
+        c2 = 0;
+        c4 = 3;
+        return { value: true, done: true };
+      }
+    } catch (tmp20) {
+      if (tmp4 === c2) {
+        c4 = tmp2;
+        throw tmp20;
+      } else {
+        c3 = tmp;
+      }
+    }
   }
-  return value;
 };
 function addClaimedOutboundPromotionCode(claimedOutboundPromotionCode) {
   DispatcherDefault.dispatch({ type: "CLAIMED_OUTBOUND_PROMOTION_CODE_ADD", claimedOutboundPromotionCode });

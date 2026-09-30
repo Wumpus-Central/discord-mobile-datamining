@@ -1,9 +1,9 @@
-// === Module 4550: AccessibilityPreferencesContext ===
+// === Module 4580: AccessibilityPreferencesContext ===
 
-// Module 4550 (AccessibilityPreferencesContext)
+// Module 4580 (AccessibilityPreferencesContext)
 import noop from "module_19" /* 19 */;
 
-const context = noop.createContext({ reducedMotion: { enabled: false, rawValue: "no-preference" }, prefersCrossfades: false, forcedColors: { enabled: false, rawValue: "none" }, alwaysShowLinkDecorations: false, highContrastModeEnabled: false, keyboardModeEnabled: true, switchIconsEnabled: false });
+const context = noop.createContext({ reducedMotion: { enabled: false, rawValue: "no-preference" }, prefersCrossfades: false, forcedColors: { enabled: false, rawValue: "none" }, alwaysShowLinkDecorations: false, highContrastModeEnabled: false, keyboardModeEnabled: true, switchIconsEnabled: false, minToastDurationMs: 0 });
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx");
 

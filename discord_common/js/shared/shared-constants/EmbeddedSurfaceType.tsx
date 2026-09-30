@@ -1,6 +1,6 @@
-// === Module 8666: EmbeddedSurfaceType ===
+// === Module 8700: EmbeddedSurfaceType ===
 
-// Module 8666 (EmbeddedSurfaceType)
+// Module 8700 (EmbeddedSurfaceType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx");

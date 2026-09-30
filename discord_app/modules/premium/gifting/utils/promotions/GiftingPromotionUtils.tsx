@@ -1,13 +1,13 @@
-// === Module 10364: GiftingPromotionUtils ===
+// === Module 10398: GiftingPromotionUtils ===
 
-// Module 10364 (GiftingPromotionUtils)
+// Module 10398 (GiftingPromotionUtils)
 import dismissible_content from "dismissible_content" /* 2029 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4654 */;
-import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10369 */;
-import MarketingComponentType from "MarketingComponentType" /* 10370 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4684 */;
+import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10403 */;
+import MarketingComponentType from "MarketingComponentType" /* 10404 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 10295 */;
+import PromotionsStore from "PromotionsStore" /* 10329 */;
 
 const require = globalThis.__r;
 

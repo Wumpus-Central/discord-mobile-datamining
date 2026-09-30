@@ -1,6 +1,6 @@
-// === Module 14672: ConnectionPlatformUtils ===
+// === Module 14703: ConnectionPlatformUtils ===
 
-// Module 14672 (ConnectionPlatformUtils)
+// Module 14703 (ConnectionPlatformUtils)
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;

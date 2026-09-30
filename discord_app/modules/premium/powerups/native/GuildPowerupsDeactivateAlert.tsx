@@ -1,14 +1,14 @@
-// === Module 12207: GuildPowerupsDeactivateAlert ===
+// === Module 12239: GuildPowerupsDeactivateAlert ===
 
-// Module 12207 (GuildPowerupsDeactivateAlert)
+// Module 12239 (GuildPowerupsDeactivateAlert)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import _modDef2519 from "module_2519" /* 2519 */;
-import Text_Text from "Text/Text" /* 4832 */;
-import useGuildPowerupOnDeactivateDefault from "useGuildPowerupOnDeactivate" /* 12208 */;
-import useDeactivateWarningTextDefault from "useDeactivateWarningText" /* 12209 */;
+import Text_Text from "Text/Text" /* 4862 */;
+import useGuildPowerupOnDeactivateDefault from "useGuildPowerupOnDeactivate" /* 12240 */;
+import useDeactivateWarningTextDefault from "useDeactivateWarningText" /* 12241 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4836 */;
+import createStyles from "createStyles" /* 4866 */;
 import size_mod from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -45,7 +45,7 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
   let tmp7Result = null != error;
   if (tmp7Result) {
     const obj7 = { style: tmp.warningText, variant: "text-xs/semibold", color: "text-feedback-critical", children: error };
-    tmp7Result = closure_4(tmp5(4832).Text, obj7);
+    tmp7Result = closure_4(tmp5(4862).Text, obj7);
   }
   const obj8 = { children: null };
   const items = [tmp7Result, , ];

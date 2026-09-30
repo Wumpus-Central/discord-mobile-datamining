@@ -1,12 +1,12 @@
-// === Module 4826: GameModeStore ===
+// === Module 4856: GameModeStore ===
 
-// Module 4826 (GameModeStore)
+// Module 4856 (GameModeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import RunningGameStore from "RunningGameStore" /* 2000 */;
 
 const require = fn;
-const DefaultGameModeSettings = fn(4827).DefaultGameModeSettings;
+const DefaultGameModeSettings = fn(4857).DefaultGameModeSettings;
 let obj = {};
 let merged = Object.assign(DefaultGameModeSettings);
 let c5 = false;

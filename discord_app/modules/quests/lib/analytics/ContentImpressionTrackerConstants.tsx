@@ -1,6 +1,6 @@
-// === Module 7311: ContentImpressionTrackerConstants ===
+// === Module 7341: ContentImpressionTrackerConstants ===
 
-// Module 7311 (ContentImpressionTrackerConstants)
+// Module 7341 (ContentImpressionTrackerConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/lib/analytics/ContentImpressionTrackerConstants.tsx");

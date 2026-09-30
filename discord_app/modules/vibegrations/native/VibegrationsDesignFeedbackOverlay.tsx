@@ -1,9 +1,9 @@
-// === Module 16466: VibegrationsDesignFeedbackOverlay ===
+// === Module 16495: VibegrationsDesignFeedbackOverlay ===
 
-// Module 16466 (VibegrationsDesignFeedbackOverlay)
+// Module 16495 (VibegrationsDesignFeedbackOverlay)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4800 */;
-import VibegrationsDesignRemarkSheet from "VibegrationsDesignRemarkSheet" /* 16467 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4830 */;
+import VibegrationsDesignRemarkSheet from "VibegrationsDesignRemarkSheet" /* 16496 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 24;
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = { surface: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }, highlight: { position: "absolute", borderWidth: 2, borderColor: nativeDefault.colors.TEXT_BRAND, borderRadius: nativeDefault.radii.xs }, marker: null, pending: null, hint: null, hintText: null };
 let size = { position: "absolute", width: 24, height: 24, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.TEXT_BRAND, borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.marker = size;
@@ -57,8 +57,8 @@ export default function VibegrationsDesignFeedbackOverlay(projectId) {
     return () => {
       closure_1_9.current = false;
       if (ref.current) {
-        size(4800).hideActionSheet(projectId(16467).VIBEGRATIONS_DESIGN_REMARK_SHEET_KEY);
-        const obj = size(4800);
+        size(4830).hideActionSheet(projectId(16496).VIBEGRATIONS_DESIGN_REMARK_SHEET_KEY);
+        const obj = size(4830);
       }
     };
   }, []);
@@ -102,7 +102,7 @@ export default function VibegrationsDesignFeedbackOverlay(projectId) {
         point.y = Math.round(nativeEvent.nativeEvent.locationY);
         closure_4(point);
         closure_8(false);
-        const result = projectId(8663).inspectVibegrationsPreviewPoint(point, point);
+        const result = projectId(8697).inspectVibegrationsPreviewPoint(point, point);
         result.then((status) => {
           if (ref.current) {
             closure_4(null);
@@ -131,7 +131,7 @@ export default function VibegrationsDesignFeedbackOverlay(projectId) {
             closure_8(true);
           }
         });
-        const obj2 = projectId(8663);
+        const obj2 = projectId(8697);
       }
     }
   }, items3);
@@ -175,7 +175,7 @@ export default function VibegrationsDesignFeedbackOverlay(projectId) {
     items5[1] = null;
     const obj5 = { style: tmp.hint, accessibilityLiveRegion: "polite", children: null };
     const obj6 = { variant: "text-sm/medium", color: "text-default", style: tmp.hintText, children: stringResult };
-    obj5.children = tmp23(tmp15(4832).Text, obj6);
+    obj5.children = tmp23(tmp15(4862).Text, obj6);
     items5[2] = tmp23(tmp26, obj5);
     obj2.children = items5;
     obj.children = closure_9(tmp26, obj2);

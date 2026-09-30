@@ -1,6 +1,6 @@
-// === Module 16794: openVibegrationsProject ===
+// === Module 16829: openVibegrationsProject ===
 
-// Module 16794 (openVibegrationsProject)
+// Module 16829 (openVibegrationsProject)
 import Constants from "Constants" /* 1074 */;
 import router_utils from "router_utils" /* 1101 */;
 import ChannelConstants from "ChannelConstants" /* 2052 */;

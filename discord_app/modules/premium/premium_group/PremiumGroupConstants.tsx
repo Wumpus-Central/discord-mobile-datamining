@@ -1,6 +1,6 @@
-// === Module 4502: PremiumGroupConstants ===
+// === Module 4532: PremiumGroupConstants ===
 
-// Module 4502 (PremiumGroupConstants)
+// Module 4532 (PremiumGroupConstants)
 import util from "util" /* 1115 */;
 import _modDef3199 from "module_3199" /* 3199 */;
 import Constants from "Constants" /* 1074 */;

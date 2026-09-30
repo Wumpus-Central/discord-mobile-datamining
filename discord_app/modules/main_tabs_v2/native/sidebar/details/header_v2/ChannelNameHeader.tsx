@@ -1,20 +1,20 @@
-// === Module 16746: ChannelNameHeader ===
+// === Module 16781: ChannelNameHeader ===
 
-// Module 16746 (ChannelNameHeader)
+// Module 16781 (ChannelNameHeader)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import _modDef3651 from "module_3651" /* 3651 */;
-import Text_Text from "Text/Text" /* 4832 */;
-import transitionToChannel from "transitionToChannel" /* 4847 */;
-import ChannelUtils from "ChannelUtils" /* 4981 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5501 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7789 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10540 */;
+import Text_Text from "Text/Text" /* 4862 */;
+import transitionToChannel from "transitionToChannel" /* 4877 */;
+import ChannelUtils from "ChannelUtils" /* 5011 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5531 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7819 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10574 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import GuildStore from "GuildStore" /* 2067 */;
-import PermissionStore from "PermissionStore" /* 4469 */;
-import PresenceStore from "PresenceStore" /* 4876 */;
+import PermissionStore from "PermissionStore" /* 4499 */;
+import PresenceStore from "PresenceStore" /* 4906 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -105,7 +105,7 @@ function ChannelSubtitle(channel) {
       tmp8 = null;
       if ("" !== stateFromStores) {
         const obj2 = { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, children: stateFromStores };
-        tmp8 = closure_12(tmp(4832).Text, obj2);
+        tmp8 = closure_12(tmp(4862).Text, obj2);
       }
     }
     return tmp8;
@@ -113,8 +113,8 @@ function ChannelSubtitle(channel) {
     const intl = tmp(1115).intl;
     let stringResult = intl.string(_modDef3651["D+2/QP"]);
   } else {
-    stringResult = tmp(4981).channelTypeString(channel);
-    const tmpResult = tmp(4981);
+    stringResult = tmp(5011).channelTypeString(channel);
+    const tmpResult = tmp(5011);
   }
   let obj = channel(504);
 }
@@ -218,7 +218,7 @@ function ChannelNameHeaderContent(channel) {
 function DMChannelNameHeader(channel) {
   channel = channel.channel;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(6749)().analyticsLocations;
+  analyticsLocations = analyticsLocations(6779)().analyticsLocations;
   const items = [channel, analyticsLocations];
   const callback = noop.useCallback(() => {
     const recipientId = channel.getRecipientId();
@@ -230,7 +230,7 @@ function DMChannelNameHeader(channel) {
   let obj = { style: null, onPress: callback, children: closure_12(ChannelNameHeaderContent, { channel }) };
   const items1 = [closure_15().container, channel.containerStyle];
   obj.style = items1;
-  return closure_12(channel(5602).PressableOpacity, obj);
+  return closure_12(channel(5632).PressableOpacity, obj);
 }
 function DefaultChannelNameHeader(arg0) {
   ({ channel, containerStyle } = arg0);
@@ -245,7 +245,7 @@ const Constants = fn(1074);
 ({ Permissions: c10, StatusTypes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj = { container: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" }, channelIcon: { height: 40, width: 40, justifyContent: "center", alignItems: "center" }, channelTypeBox: null, channelData: null, statusStyle: null };
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" };
 obj.channelTypeBox = { borderRadius: nativeDefault.modules.mobile.CHANNEL_NAME_CHANNEL_ICON_RADIUS, borderWidth: nativeDefault.modules.mobile.CHANNEL_NAME_CHANNEL_BORDER_WIDTH, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };

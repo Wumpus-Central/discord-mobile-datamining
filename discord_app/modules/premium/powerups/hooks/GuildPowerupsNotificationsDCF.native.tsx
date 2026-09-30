@@ -1,10 +1,10 @@
-// === Module 12168: GuildPowerupsNotificationsDCF ===
+// === Module 12202: GuildPowerupsNotificationsDCF ===
 
-// Module 12168 (GuildPowerupsNotificationsDCF)
+// Module 12202 (GuildPowerupsNotificationsDCF)
 import dismissible_content from "dismissible_content" /* 2029 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 6972 */;
-import GuildPowerupsNotification from "GuildPowerupsNotification" /* 12162 */;
-import BoostToUnlockMobileCoachmarkExperimentDefault from "BoostToUnlockMobileCoachmarkExperiment" /* 12169 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7002 */;
+import GuildPowerupsNotification from "GuildPowerupsNotification" /* 12196 */;
+import BoostToUnlockMobileCoachmarkExperimentDefault from "BoostToUnlockMobileCoachmarkExperiment" /* 12203 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/GuildPowerupsNotificationsDCF.native.tsx");
@@ -37,15 +37,6 @@ export const useGuildPowerupNotificationDCF = function useGuildPowerupNotificati
   return obj.useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: GuildPowerupsNotification.GUILD_POWERUP_NOTIFICATION_COOLDOWN });
 };
 export function useNewGamesCoachmarkDC() {
-  const items = [
-    null,
-    () => {
-
-    }
-  ];
-  return items;
-}
-export function useGameServerPricingCoachmarkDCF() {
   const items = [
     null,
     () => {

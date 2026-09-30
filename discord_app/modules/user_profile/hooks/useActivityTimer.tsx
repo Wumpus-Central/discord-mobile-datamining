@@ -1,8 +1,8 @@
-// === Module 12767: useActivityTimer ===
+// === Module 12797: useActivityTimer ===
 
-// Module 12767 (useActivityTimer)
+// Module 12797 (useActivityTimer)
 import DurationsDefault from "Durations" /* 1091 */;
-import utils from "utils" /* 7757 */;
+import utils from "utils" /* 7787 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

@@ -1,9 +1,9 @@
-// === Module 17417: ParentalConsentManager ===
+// === Module 17452: ParentalConsentManager ===
 
-// Module 17417 (ParentalConsentManager)
+// Module 17452 (ParentalConsentManager)
 import Constants from "Constants" /* 1074 */;
-import AppStoreAgeSignalReport from "AppStoreAgeSignalReport" /* 17418 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6705 */;
+import AppStoreAgeSignalReport from "AppStoreAgeSignalReport" /* 17453 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6735 */;
 import size from "module_2" /* 2 */;
 
 const AppStates = Constants.AppStates;

@@ -1,12 +1,12 @@
-// === Module 5081: checkpoint/CheckpointMessageComponentUtils ===
+// === Module 5111: checkpoint/CheckpointMessageComponentUtils ===
 
-// Module 5081 (checkpoint/CheckpointMessageComponentUtils)
+// Module 5111 (checkpoint/CheckpointMessageComponentUtils)
 import util from "util" /* 1115 */;
 import Server from "Server" /* 1979 */;
 import _modDef3005 from "module_3005" /* 3005 */;
-import CheckpointTrait from "CheckpointTrait" /* 5083 */;
-import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 5084 */;
-import CheckpointConstants from "CheckpointConstants" /* 5061 */;
+import CheckpointTrait from "CheckpointTrait" /* 5113 */;
+import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 5114 */;
+import CheckpointConstants from "CheckpointConstants" /* 5091 */;
 import size from "module_2" /* 2 */;
 
 ({ NATIVE_CHARACTER_LAYER_SIZE: c3, CheckpointVersions: closure_4 } = CheckpointConstants);

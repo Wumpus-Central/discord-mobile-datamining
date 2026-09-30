@@ -1,11 +1,11 @@
-// === Module 12758: getActivityHeader ===
+// === Module 12788: getActivityHeader ===
 
-// Module 12758 (getActivityHeader)
+// Module 12788 (getActivityHeader)
 import util from "util" /* 1115 */;
-import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 8982 */;
-import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId" /* 12759 */;
-import getActivityPlatformDefault from "getActivityPlatform" /* 12760 */;
-import getActivityPlatformDisplayNameDefault from "getActivityPlatformDisplayName" /* 12763 */;
+import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 9016 */;
+import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId" /* 12789 */;
+import getActivityPlatformDefault from "getActivityPlatform" /* 12790 */;
+import getActivityPlatformDisplayNameDefault from "getActivityPlatformDisplayName" /* 12793 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

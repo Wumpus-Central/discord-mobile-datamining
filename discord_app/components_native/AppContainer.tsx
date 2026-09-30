@@ -1,6 +1,6 @@
-// === Module 14287: AppContainer ===
+// === Module 14316: AppContainer ===
 
-// Module 14287 (AppContainer)
+// Module 14316 (AppContainer)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1101 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
@@ -10,31 +10,30 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import AppEntryKeyContext from "AppEntryKeyContext" /* 1482 */;
 import Link from "Link" /* 1486 */;
-import ManaContext from "ManaContext" /* 4611 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4692 */;
-import RootNavigationRef from "RootNavigationRef" /* 4693 */;
-import getInitialNavigationStateDefault from "getInitialNavigationState" /* 4694 */;
-import Portal from "Portal" /* 4708 */;
-import useThemeDefault from "useTheme" /* 4767 */;
-import ModalDispatchQueueDefault from "ModalDispatchQueue" /* 5042 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 5605 */;
-import useNavigationTheme from "useNavigationTheme" /* 6628 */;
-import WebViewContext from "WebViewContext" /* 9088 */;
-import StartupProfiler from "StartupProfiler" /* 11196 */;
-import MemoryRouter from "MemoryRouter" /* 12470 */;
-import RouteManagerDefault from "RouteManager" /* 12476 */;
-import DiscordGestureHandlerRootViewDefault from "DiscordGestureHandlerRootView" /* 14288 */;
-import getChannelDetailsFromRouteDefault from "getChannelDetailsFromRoute" /* 14291 */;
-import MainNavigationLoggerDefault from "MainNavigationLogger" /* 14292 */;
-import ReanimatedScreenProvider from "ReanimatedScreenProvider" /* 14294 */;
-import RootThemeContextProvider from "RootThemeContextProvider" /* 14302 */;
-import AccessibilityPreferencesContextProviderDefault from "AccessibilityPreferencesContextProvider" /* 14304 */;
-import ErrorBoundaryDefault from "ErrorBoundary" /* 14305 */;
-import AnimatedKeyboardProviderDefault from "AnimatedKeyboardProvider" /* 14306 */;
-import ThemedStatusBarDefault from "ThemedStatusBar" /* 14308 */;
-import SafeAreaProvider from "SafeAreaProvider" /* 14309 */;
-import DevToolsLazyDefault from "DevToolsLazy" /* 14310 */;
-import ScreenRecordingPipDefault from "ScreenRecordingPip" /* 15730 */;
+import ManaContext from "ManaContext" /* 4641 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4722 */;
+import RootNavigationRef from "RootNavigationRef" /* 4723 */;
+import getInitialNavigationStateDefault from "getInitialNavigationState" /* 4724 */;
+import Portal from "Portal" /* 4738 */;
+import useThemeDefault from "useTheme" /* 4797 */;
+import ModalDispatchQueueDefault from "ModalDispatchQueue" /* 5072 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 5635 */;
+import useNavigationTheme from "useNavigationTheme" /* 6658 */;
+import WebViewContext from "WebViewContext" /* 9122 */;
+import StartupProfiler from "StartupProfiler" /* 11232 */;
+import MemoryRouter from "MemoryRouter" /* 12500 */;
+import RouteManagerDefault from "RouteManager" /* 12506 */;
+import DiscordGestureHandlerRootViewDefault from "DiscordGestureHandlerRootView" /* 14317 */;
+import getChannelDetailsFromRouteDefault from "getChannelDetailsFromRoute" /* 14320 */;
+import MainNavigationLoggerDefault from "MainNavigationLogger" /* 14321 */;
+import ReanimatedScreenProvider from "ReanimatedScreenProvider" /* 14323 */;
+import RootThemeContextProvider from "RootThemeContextProvider" /* 14331 */;
+import AccessibilityPreferencesContextProviderDefault from "AccessibilityPreferencesContextProvider" /* 14333 */;
+import ErrorBoundaryDefault from "ErrorBoundary" /* 14334 */;
+import AnimatedKeyboardProviderDefault from "AnimatedKeyboardProvider" /* 14335 */;
+import ThemedStatusBarDefault from "ThemedStatusBar" /* 14337 */;
+import SafeAreaProvider from "SafeAreaProvider" /* 14338 */;
+import DevToolsLazyDefault from "DevToolsLazy" /* 14339 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
@@ -164,30 +163,30 @@ function AppNavigationContainerOrEmpty(arg0) {
   }
 }
 const NativeModules = fn(17).NativeModules;
-let closure_7 = fn(6912).handleHistoryStoreNavigationChange;
+let closure_7 = fn(6942).handleHistoryStoreNavigationChange;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, ComponentActions: closure_11, Routes: closure_12 } = Constants);
 const isStaticChannelRoute = fn(2052).isStaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = { flex: { flex: 1 }, rootBackgroundColor: { backgroundColor: nativeDefault.colors.ANDROID_NAVIGATION_BAR_BACKGROUND } };
 let closure_16 = createStyles.createStyles(obj2);
-const ReanimatedRexport = fn(4566);
+const ReanimatedRexport = fn(4596);
 let obj3 = { backgroundColor: nativeDefault.colors.ANDROID_NAVIGATION_BAR_BACKGROUND };
-let result = ReanimatedRexport.configureReanimatedLogger({ level: fn(4566).ReanimatedLogLevel.error, strict: false });
+let result = ReanimatedRexport.configureReanimatedLogger({ level: fn(4596).ReanimatedLogLevel.error, strict: false });
 try {
-  fn(5377).enableFreeze();
-  let obj6 = fn(5377);
-  let obj8 = { useTrackNavigatorScreenImpression: fn(14290).useTrackNavigatorScreenImpression };
-  fn(6623).setDesignConfig(obj8);
+  fn(5407).enableFreeze();
+  let obj6 = fn(5407);
+  let obj8 = { useTrackNavigatorScreenImpression: fn(14319).useTrackNavigatorScreenImpression };
+  fn(6653).setDesignConfig(obj8);
   let c22 = false;
   let closure_23 = { code: "function AppContainerTsx1(){const{RNScreensTurboModule}=this.__closure;global.RNScreensTurboModule=RNScreensTurboModule;}" };
-  let obj7 = fn(6623);
+  let obj7 = fn(6653);
   const result1 = SentryUtilsDefault.profiledRootComponent(function AppContainer(children) {
     children = children.children;
     const appEntryKey = children.appEntryKey;
-    const requestGatewaySocket = appEntryKey(14293).useRequestGatewaySocket("AppContainer:" + appEntryKey);
+    const requestGatewaySocket = appEntryKey(14322).useRequestGatewaySocket("AppContainer:" + appEntryKey);
     const effect = noop.useEffect(() => {
       if (!c22) {
         RNScreensTurboModule = RNScreensTurboModule.RNScreensTurboModule;
@@ -198,9 +197,9 @@ try {
         fn.__closure = obj2;
         fn.__workletHash = 8891274578898;
         fn.__initData = __initData;
-        appEntryKey(4566).runOnUI(fn)();
+        appEntryKey(4596).runOnUI(fn)();
         c22 = true;
-        const obj = appEntryKey(4566);
+        const obj = appEntryKey(4596);
       }
     }, []);
     const effect1 = noop.useEffect(() => {
@@ -214,8 +213,8 @@ try {
       }
       const obj = appEntryKey(1364);
     }, []);
-    let obj = appEntryKey(14293);
-    const riveAppStatePlaybackExperiment = appEntryKey(15738).useRiveAppStatePlaybackExperiment("AppContainer");
+    let obj = appEntryKey(14322);
+    const riveAppStatePlaybackExperiment = appEntryKey(15763).useRiveAppStatePlaybackExperiment("AppContainer");
     closure_129_0 = riveAppStatePlaybackExperiment;
     let items = [riveAppStatePlaybackExperiment];
     const memo = noop.useMemo(() => {
@@ -231,7 +230,7 @@ try {
       const obj = {
         experiments: { enabledExperiments: appEntryKey },
         captureException(arg0, tags) {
-          return memo1(dependencyMap[50]).captureException(arg0, { tags });
+          return memo1(dependencyMap[49]).captureException(arg0, { tags });
         }
       };
       return obj;
@@ -256,7 +255,7 @@ try {
       const obj14 = { children: null };
       const items = [closure_2_14(ThemedStatusBarDefault, {}), ];
       const obj15 = { children: null };
-      const items1 = [children, closure_2_14(SafeAreaProvider.SafeAreaReporter, {}), closure_2_14(DevToolsLazyDefault, {}), closure_2_14(ScreenRecordingPipDefault, {})];
+      const items1 = [children, closure_2_14(SafeAreaProvider.SafeAreaReporter, {}), closure_2_14(DevToolsLazyDefault, {})];
       obj15.children = items1;
       items[1] = __initData(SafeAreaProvider.SafeAreaProvider, obj15);
       obj14.children = items;

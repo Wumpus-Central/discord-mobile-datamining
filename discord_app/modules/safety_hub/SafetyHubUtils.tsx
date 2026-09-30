@@ -1,11 +1,11 @@
-// === Module 8032: SafetyHubUtils ===
+// === Module 8062: SafetyHubUtils ===
 
-// Module 8032 (SafetyHubUtils)
+// Module 8062 (SafetyHubUtils)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
-import _modDef4421 from "module_4421" /* 4421 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 4986 */;
-import SafetyHubModels from "SafetyHubModels" /* 8034 */;
+import _modDef4451 from "module_4451" /* 4451 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 5016 */;
+import SafetyHubModels from "SafetyHubModels" /* 8064 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -43,7 +43,7 @@ function parseMessageEmbedForProps(fields) {
     return obj;
   }
 }
-const SafetyHubConstants = fn(8033);
+const SafetyHubConstants = fn(8063);
 ({ AppealIngestionSignal: closure_4, SafetySystemNotificationCtaType: hasOwnProperty, SafetySystemNotificationEmbedKeys: metroRequire } = SafetyHubConstants);
 const Constants = fn(1074);
 ({ AbortCodes: closure_7, MessageAttachmentFlags: closure_8 } = Constants);
@@ -51,7 +51,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/SafetyHubUtils.tsx");
 
 export const getClassificationRelativeIncidentTime = function getClassificationRelativeIncidentTime(timestamp) {
-  return _modDef4421().to(_modDef4421(timestamp));
+  return _modDef4451().to(_modDef4451(timestamp));
 };
 export const getSpoilerFlagsForAttachment = function getSpoilerFlagsForAttachment(filename) {
   if (obj.isImageFile(filename.filename)) {

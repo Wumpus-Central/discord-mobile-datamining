@@ -1,8 +1,8 @@
-// === Module 11217: useSortedOnboardingPrompts ===
+// === Module 11253: useSortedOnboardingPrompts ===
 
-// Module 11217 (useSortedOnboardingPrompts)
+// Module 11253 (useSortedOnboardingPrompts)
 import noop from "module_19" /* 19 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6687 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6717 */;
 
 const require = globalThis.__r;
 

@@ -1,8 +1,8 @@
-// === Module 4630: CheckpointKnickKnacksRive ===
+// === Module 4660: CheckpointKnickKnacksRive ===
 
-// Module 4630 (CheckpointKnickKnacksRive)
-import BaseRive from "BaseRive" /* 4560 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 4615 */;
+// Module 4660 (CheckpointKnickKnacksRive)
+import BaseRive from "BaseRive" /* 4590 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 4645 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

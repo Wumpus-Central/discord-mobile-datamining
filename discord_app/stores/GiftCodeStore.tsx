@@ -1,12 +1,12 @@
-// === Module 11142: GiftCodeStore ===
+// === Module 11178: GiftCodeStore ===
 
-// Module 11142 (GiftCodeStore)
+// Module 11178 (GiftCodeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import _modDef4421 from "module_4421" /* 4421 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 5255 */;
-import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11143 */;
-import GiftCodeRecord from "GiftCodeRecord" /* 10330 */;
+import _modDef4451 from "module_4451" /* 4451 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 5285 */;
+import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11179 */;
+import GiftCodeRecord from "GiftCodeRecord" /* 10364 */;
 
 require = fn;
 function updateGiftCode(giftCode) {
@@ -25,7 +25,7 @@ function updateGiftCode(giftCode) {
         if (null != value2.expiresAt) {
           const expiresAt = value2.expiresAt;
           const valueOfResult = expiresAt.valueOf();
-          const diff = valueOfResult - _modDef4421().valueOf();
+          const diff = valueOfResult - _modDef4451().valueOf();
           if (diff <= 0) {
             map.delete(code);
             delete tmp2[tmp];
@@ -110,7 +110,7 @@ function updateGiftCode(giftCode) {
               }
             });
           }
-          const obj4 = _modDef4421();
+          const obj4 = _modDef4451();
         }
       }
     }

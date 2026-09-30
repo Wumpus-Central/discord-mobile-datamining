@@ -1,14 +1,14 @@
-// === Module 14609: FamilyCenterTopServersBottomSheet ===
+// === Module 14640: FamilyCenterTopServersBottomSheet ===
 
-// Module 14609 (FamilyCenterTopServersBottomSheet)
+// Module 14640 (FamilyCenterTopServersBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef2487 from "module_2487" /* 2487 */;
-import Text_Text from "Text/Text" /* 4832 */;
-import GuildIconDefault from "GuildIcon" /* 6062 */;
-import TableRowGroup from "TableRowGroup" /* 6165 */;
-import ActionSheet from "ActionSheet" /* 6784 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7123 */;
+import Text_Text from "Text/Text" /* 4862 */;
+import GuildIconDefault from "GuildIcon" /* 6092 */;
+import TableRowGroup from "TableRowGroup" /* 6195 */;
+import ActionSheet from "ActionSheet" /* 6814 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7153 */;
 
 require = fn;
 function GuildRow(guildActivity) {
@@ -19,17 +19,17 @@ function GuildRow(guildActivity) {
   if (null == stateFromStores) {
     return null;
   } else {
-    const topUserOrGuildDescription = tmp2(7177).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
+    const topUserOrGuildDescription = tmp2(7207).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
     const obj2 = { label: stateFromStores.name, subLabel: topUserOrGuildDescription, icon: null };
     const obj3 = { guild: stateFromStores, style: tmp.guildIcon };
     obj2.icon = closure_4(GuildIconDefault, obj3);
-    return closure_4(tmp2(6083).TableRow, obj2);
+    return closure_4(tmp2(6113).TableRow, obj2);
   }
   const obj = guildActivity(504);
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = { header: { textAlign: "center" }, guildIcon: { borderRadius: nativeDefault.radii.md, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

@@ -1,7 +1,7 @@
-// === Module 10630: useFavoritesGuildMoveToCategoryAction ===
+// === Module 10664: useFavoritesGuildMoveToCategoryAction ===
 
-// Module 10630 (useFavoritesGuildMoveToCategoryAction)
-import FavoritesActionCreators from "FavoritesActionCreators" /* 9851 */;
+// Module 10664 (useFavoritesGuildMoveToCategoryAction)
+import FavoritesActionCreators from "FavoritesActionCreators" /* 9885 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -9,10 +9,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildMoveToCategoryAction.tsx");
 
 export default function useFavoritesGuildMoveToCategoryAction(id) {
-  const isFavoritesGuildSelected = favorite(9852).useIsFavoritesGuildSelected();
-  let obj = favorite(9852);
-  favorite = favorite(9852).useFavorite(id.id);
-  const obj2 = favorite(9852);
+  const isFavoritesGuildSelected = favorite(9886).useIsFavoritesGuildSelected();
+  let obj = favorite(9886);
+  favorite = favorite(9886).useFavorite(id.id);
+  const obj2 = favorite(9886);
   id = undefined;
   if (favorite != null) {
     id = favorite.id;

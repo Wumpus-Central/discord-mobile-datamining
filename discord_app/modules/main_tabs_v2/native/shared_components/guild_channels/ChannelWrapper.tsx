@@ -1,7 +1,7 @@
-// === Module 16254: ChannelWrapper ===
+// === Module 16283: ChannelWrapper ===
 
-// Module 16254 (ChannelWrapper)
-import ChannelListLayout from "ChannelListLayout" /* 9747 */;
+// Module 16283 (ChannelWrapper)
+import ChannelListLayout from "ChannelListLayout" /* 9781 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 8957: confirmActivityLaunchChecks ===
+// === Module 8991: confirmActivityLaunchChecks ===
 
-// Module 8957 (confirmActivityLaunchChecks)
+// Module 8991 (confirmActivityLaunchChecks)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
@@ -170,20 +170,20 @@ let closure_9 = async function _confirmActivityChange(arg0) {
               if (value != null) {
                 _location = value.location;
               }
-              channel = channel.getChannel(closure_1_0(4458).getEmbeddedActivityLocationChannelId(_location));
+              channel = channel.getChannel(closure_1_0(4488).getEmbeddedActivityLocationChannelId(_location));
               if (null != value) {
                 if (null != channel) {
                   if (dependencyMap != null) {
                     dependencyMap();
                   }
-                  shouldClosePopout(8960)(tmp, channel, () => {
+                  shouldClosePopout(8994)(tmp, channel, () => {
                     value(c2[10])().leaveActivity({ location: value.location, applicationId: closure_2_0.id, shouldClosePopout });
                     closure_0(true);
                   }, () => closure_0(false));
                 }
               }
               fn(true);
-              const obj2 = closure_1_0(4458);
+              const obj2 = closure_1_0(4488);
             });
             c2 = 2;
             c3 = 1;

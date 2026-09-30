@@ -1,8 +1,8 @@
-// === Module 8959: ApplicationSubscriptionsHttpApi ===
+// === Module 8993: ApplicationSubscriptionsHttpApi ===
 
-// Module 8959 (ApplicationSubscriptionsHttpApi)
+// Module 8993 (ApplicationSubscriptionsHttpApi)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import APIErrorDefault from "APIError" /* 4736 */;
+import APIErrorDefault from "APIError" /* 4766 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;

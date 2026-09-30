@@ -1,10 +1,10 @@
-// === Module 8971: VideoStreamStore ===
+// === Module 9005: VideoStreamStore ===
 
-// Module 8971 (VideoStreamStore)
+// Module 9005 (VideoStreamStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
-import Constants2 from "Constants" /* 4861 */;
+import Constants2 from "Constants" /* 4891 */;
 import size from "module_2" /* 2 */;
 
 function makeTimeoutKey(arg0, arg1) {

@@ -1,6 +1,6 @@
-// === Module 11773: useAppsInThisServer ===
+// === Module 11807: useAppsInThisServer ===
 
-// Module 11773 (useAppsInThisServer)
+// Module 11807 (useAppsInThisServer)
 import _modDef12 from "module_12" /* 12 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -8,8 +8,8 @@ import UserStore from "UserStore" /* 1372 */;
 const require = globalThis.__r;
 
 const require = fn;
-const useGuildIndexState = fn(8756).useGuildIndexState;
-const limit = fn(5471).DISCOVERY_COMMANDS_QUERY_LIMIT;
+const useGuildIndexState = fn(8790).useGuildIndexState;
+const limit = fn(5501).DISCOVERY_COMMANDS_QUERY_LIMIT;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/hooks/useAppsInThisServer.tsx");
 

@@ -1,18 +1,18 @@
-// === Module 15687: ParentalControlsMessageRequests ===
+// === Module 15720: ParentalControlsMessageRequests ===
 
-// Module 15687 (ParentalControlsMessageRequests)
+// Module 15720 (ParentalControlsMessageRequests)
 import util from "util" /* 1115 */;
 import _modDef2487 from "module_2487" /* 2487 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8024 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8026 */;
-import useSelectedTeen from "useSelectedTeen" /* 8272 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14528 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14529 */;
-import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 15673 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7123 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8054 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8056 */;
+import useSelectedTeen from "useSelectedTeen" /* 8303 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14559 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14560 */;
+import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 15706 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7153 */;
 
 require = fn;
-const SettingBuilders = fn(11175);
+const SettingBuilders = fn(11211);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -22,7 +22,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(_modDef2487["7aYkh1"]);
   },
-  parent: fn(7582).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(7612).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue() {
     const defaultGuildsRestricted = useParentalControlSettings.useDefaultGuildsRestricted();
     const selectedTeenId = useSelectedTeen.useSelectedTeenId();

@@ -1,6 +1,6 @@
-// === Module 9447: InstantInviteConstants ===
+// === Module 9481: InstantInviteConstants ===
 
-// Module 9447 (InstantInviteConstants)
+// Module 9481 (InstantInviteConstants)
 import size from "module_2" /* 2 */;
 
 const obj = { TWITTER: "twitter", WHATSAPP: "whatsapp", GMAIL: "googlegmail", LINE: "line", MESSENGER: "fb-messenger", TELEGRAM: "tg" };

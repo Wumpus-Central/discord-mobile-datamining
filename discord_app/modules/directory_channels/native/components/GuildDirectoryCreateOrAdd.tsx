@@ -1,18 +1,18 @@
-// === Module 11963: GuildDirectoryCreateOrAdd ===
+// === Module 11997: GuildDirectoryCreateOrAdd ===
 
-// Module 11963 (GuildDirectoryCreateOrAdd)
+// Module 11997 (GuildDirectoryCreateOrAdd)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
-import Text_Text from "Text/Text" /* 4832 */;
-import components_Button_Button from "components/Button/Button" /* 5447 */;
-import GuildIconDefault from "GuildIcon" /* 6062 */;
-import TableRow from "TableRow" /* 6083 */;
-import SegmentedControlState from "SegmentedControlState" /* 9248 */;
-import SegmentedControl from "SegmentedControl" /* 9249 */;
+import Text_Text from "Text/Text" /* 4862 */;
+import components_Button_Button from "components/Button/Button" /* 5477 */;
+import GuildIconDefault from "GuildIcon" /* 6092 */;
+import TableRow from "TableRow" /* 6113 */;
+import SegmentedControlState from "SegmentedControlState" /* 9282 */;
+import SegmentedControl from "SegmentedControl" /* 9283 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildDirectoryStore from "GuildDirectoryStore" /* 11964 */;
+import GuildDirectoryStore from "GuildDirectoryStore" /* 11998 */;
 
 const require = globalThis.__r;
 
@@ -61,10 +61,10 @@ function GuildDirectoryCreateOrAddFooter(handleFooterPress) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, FlatList: closure_7 } = get_ActivityIndicator);
-const GuildDirectoryCreate = fn(11962).GuildDirectoryCreate;
+const GuildDirectoryCreate = fn(11996).GuildDirectoryCreate;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj = { loadingContainer: { flex: 1, alignItems: "center", justifyContent: "center" }, container: { flex: 1 }, guildIcon: { borderRadius: nativeDefault.radii.sm }, header: { padding: 16, alignItems: "center", justifyContent: "center" }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center" }, footerSafeAreaContainer: null, footerContainer: null, footerTitle: null, segmentedControl: null };
 let obj3 = { borderRadius: nativeDefault.radii.sm };
 obj.footerSafeAreaContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, position: "absolute", bottom: 0, width: "100%" };
@@ -80,8 +80,8 @@ let closure_13 = noop.memo((guild) => {
   const tmp = closure_12();
   const items = [GuildDirectoryStore];
   const stateFromStores = guild(504).useStateFromStores(items, () => GuildDirectoryStore.getDirectoryEntry(directoryChannelId, guild.id));
-  const obj2 = { label: guild.name, icon: closure_10(directoryChannelId(6062), { style: tmp.guildIcon, guild }), trailing: closure_10(directoryChannelId(11965), { entry: stateFromStores }), start, end };
-  return closure_10(guild(6083).TableRow, obj2);
+  const obj2 = { label: guild.name, icon: closure_10(directoryChannelId(6092), { style: tmp.guildIcon, guild }), trailing: closure_10(directoryChannelId(11999), { entry: stateFromStores }), start, end };
+  return closure_10(guild(6113).TableRow, obj2);
 });
 let closure_14 = noop.memo((guild) => {
   guild = guild.guild;

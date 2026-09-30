@@ -1,10 +1,10 @@
-// === Module 8786: shouldOpenPremiumUpsellActionSheet ===
+// === Module 8820: shouldOpenPremiumUpsellActionSheet ===
 
-// Module 8786 (shouldOpenPremiumUpsellActionSheet)
+// Module 8820 (shouldOpenPremiumUpsellActionSheet)
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
-import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 7435 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7438 */;
-import MobileStickerPickerUpsellRestyleExperiment from "MobileStickerPickerUpsellRestyleExperiment" /* 8787 */;
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 7466 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7469 */;
+import MobileStickerPickerUpsellRestyleExperiment from "MobileStickerPickerUpsellRestyleExperiment" /* 8821 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/roadblocks/native/utils/shouldOpenPremiumUpsellActionSheet.tsx");

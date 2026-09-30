@@ -1,7 +1,7 @@
-// === Module 6674: useCharacterLimitAnnouncement ===
+// === Module 6704: useCharacterLimitAnnouncement ===
 
-// Module 6674 (useCharacterLimitAnnouncement)
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4541 */;
+// Module 6704 (useCharacterLimitAnnouncement)
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4571 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

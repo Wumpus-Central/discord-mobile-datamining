@@ -1,12 +1,12 @@
-// === Module 9050: WindowVisibilityVideoManager ===
+// === Module 9084: WindowVisibilityVideoManager ===
 
-// Module 9050 (WindowVisibilityVideoManager)
+// Module 9084 (WindowVisibilityVideoManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
-import ExternalPipDefault from "ExternalPip" /* 9051 */;
-import WindowVisibilityUtilsDefault from "WindowVisibilityUtils" /* 9052 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 4894 */;
+import ExternalPipDefault from "ExternalPip" /* 9085 */;
+import WindowVisibilityUtilsDefault from "WindowVisibilityUtils" /* 9086 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 4924 */;
 
 const require = fn;
 const WindowVisibilityEvent = { WindowVisibilityChanged: "window-visibility-changed", IncomingVideoEnabledChanged: "incoming-video-enabled-changed" };

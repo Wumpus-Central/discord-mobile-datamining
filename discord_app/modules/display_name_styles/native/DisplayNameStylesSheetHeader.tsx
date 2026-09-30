@@ -1,14 +1,14 @@
-// === Module 15065: DisplayNameStylesSheetHeader ===
+// === Module 15096: DisplayNameStylesSheetHeader ===
 
-// Module 15065 (DisplayNameStylesSheetHeader)
+// Module 15096 (DisplayNameStylesSheetHeader)
 import nativeDefault from "native" /* 576 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6736 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6766 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = { trailingButtonClearance: { paddingTop: nativeDefault.space.PX_8 }, centeredAccessory: { justifyContent: "center", alignItems: "center" } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);

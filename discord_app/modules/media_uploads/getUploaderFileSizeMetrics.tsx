@@ -1,6 +1,6 @@
-// === Module 8778: getUploaderFileSizeMetrics ===
+// === Module 8812: getUploaderFileSizeMetrics ===
 
-// Module 8778 (getUploaderFileSizeMetrics)
+// Module 8812 (getUploaderFileSizeMetrics)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/media_uploads/getUploaderFileSizeMetrics.tsx");
@@ -26,11 +26,11 @@ export const getUploaderFileSizeMetrics = function getUploaderFileSizeMetrics(to
   }
   const mapped = items.map((preCompressionSize) => preCompressionSize.preCompressionSize);
   const mapped1 = items.map((postCompressionSize) => {
-    let preCompressionSize = postCompressionSize.postCompressionSize;
-    if (preCompressionSize == null) {
-      preCompressionSize = postCompressionSize.preCompressionSize;
+    let currentSize = postCompressionSize.postCompressionSize;
+    if (currentSize == null) {
+      currentSize = postCompressionSize.currentSize;
     }
-    return preCompressionSize;
+    return currentSize;
   });
   const obj = { preCompressionFileSizes: mapped, postCompressionFileSizes: mapped1, preCompressionAggregateSize: null, postCompressionAggregateSize: null, numAttachments: null };
   if (totalPreCompressionSize.totalPreCompressionSize > 0) {

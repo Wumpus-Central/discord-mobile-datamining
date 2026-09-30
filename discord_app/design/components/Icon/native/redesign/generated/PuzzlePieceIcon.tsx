@@ -1,9 +1,9 @@
-// === Module 14665: PuzzlePieceIcon ===
+// === Module 14696: PuzzlePieceIcon ===
 
-// Module 14665 (PuzzlePieceIcon)
+// Module 14696 (PuzzlePieceIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4530 */;
-import _mod14666 from "module_14666" /* 14666 */;
+import BaseIconImage from "BaseIconImage" /* 4560 */;
+import _mod14697 from "module_14697" /* 14697 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const PuzzlePieceIcon = function PuzzlePieceIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod14666, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod14697, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

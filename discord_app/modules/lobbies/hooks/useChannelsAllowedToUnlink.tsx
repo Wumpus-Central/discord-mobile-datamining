@@ -1,13 +1,13 @@
-// === Module 17483: useChannelsAllowedToUnlink ===
+// === Module 17518: useChannelsAllowedToUnlink ===
 
-// Module 17483 (useChannelsAllowedToUnlink)
-import GuildChannelStore from "GuildChannelStore" /* 4467 */;
-import PermissionStore from "PermissionStore" /* 4469 */;
+// Module 17518 (useChannelsAllowedToUnlink)
+import GuildChannelStore from "GuildChannelStore" /* 4497 */;
+import PermissionStore from "PermissionStore" /* 4499 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let closure_3 = fn(4467).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_3 = fn(4497).GUILD_SELECTABLE_CHANNELS_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/lobbies/hooks/useChannelsAllowedToUnlink.tsx");
 

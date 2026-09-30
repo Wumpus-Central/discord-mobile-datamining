@@ -1,6 +1,6 @@
-// === Module 12048: GameSearchRowExperiment ===
+// === Module 12082: GameSearchRowExperiment ===
 
-// Module 12048 (GameSearchRowExperiment)
+// Module 12082 (GameSearchRowExperiment)
 import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 

@@ -1,20 +1,20 @@
-// === Module 12752: Badges ===
+// === Module 12782: Badges ===
 
-// Module 12752 (Badges)
+// Module 12782 (Badges)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4832 */;
-import utils from "utils" /* 7757 */;
-import TrophyIcon from "TrophyIcon" /* 8338 */;
-import GameControllerIcon from "GameControllerIcon" /* 8700 */;
-import FireIcon from "FireIcon" /* 9382 */;
-import RetryIcon from "RetryIcon" /* 9807 */;
-import TimerIcon from "TimerIcon" /* 11269 */;
-import NewUserIcon from "NewUserIcon" /* 12753 */;
-import FlashIcon from "FlashIcon" /* 12755 */;
-import TrendingType from "TrendingType" /* 12757 */;
+import Text_Text from "Text/Text" /* 4862 */;
+import utils from "utils" /* 7787 */;
+import TrophyIcon from "TrophyIcon" /* 8369 */;
+import GameControllerIcon from "GameControllerIcon" /* 8734 */;
+import FireIcon from "FireIcon" /* 9416 */;
+import RetryIcon from "RetryIcon" /* 9841 */;
+import TimerIcon from "TimerIcon" /* 11305 */;
+import NewUserIcon from "NewUserIcon" /* 12783 */;
+import FlashIcon from "FlashIcon" /* 12785 */;
+import TrendingType from "TrendingType" /* 12787 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2112 */;
 
@@ -62,7 +62,7 @@ const jsxProd = fn(21);
 let obj = { overlay: { text: "content-inventory-overlay-text-secondary", icon: nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY }, "user-profile": null };
 let obj2 = { text: "content-inventory-overlay-text-secondary", icon: nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY };
 obj["user-profile"] = { text: "text-subtle", icon: nativeDefault.colors.TEXT_SUBTLE };
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let closure_10 = createStyles.createStyles((arg0) => {
   obj = { icon: { width: 16, height: 16 }, badgeContainer: null };
   let tmp = null;

@@ -1,14 +1,14 @@
-// === Module 9803: Sticker ===
+// === Module 9837: Sticker ===
 
-// Module 9803 (Sticker)
+// Module 9837 (Sticker)
 import util from "util" /* 1115 */;
-import StickersUtils from "StickersUtils" /* 5364 */;
-import StickersTypes from "StickersTypes" /* 5748 */;
-import FastImageDefault from "FastImage" /* 6065 */;
-import _modDef6718 from "module_6718" /* 6718 */;
-import _modDef6719 from "module_6719" /* 6719 */;
-import NativeLottieView from "NativeLottieView" /* 7607 */;
-import NativeAPNGViewDefault from "NativeAPNGView" /* 9804 */;
+import StickersUtils from "StickersUtils" /* 5394 */;
+import StickersTypes from "StickersTypes" /* 5778 */;
+import FastImageDefault from "FastImage" /* 6095 */;
+import _modDef6748 from "module_6748" /* 6748 */;
+import _modDef6749 from "module_6749" /* 6749 */;
+import NativeLottieView from "NativeLottieView" /* 7637 */;
+import NativeAPNGViewDefault from "NativeAPNGView" /* 9838 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 
@@ -85,9 +85,9 @@ export default function Sticker(opaque) {
     const size3 = { height: size, width: size, opacity: num };
     obj6.style = size3;
     if (tmpResult10.isThemeDark(ThemeStore.theme)) {
-      let tmp13Result = _modDef6718;
+      let tmp13Result = _modDef6748;
     } else {
-      tmp13Result = _modDef6719;
+      tmp13Result = _modDef6749;
     }
     obj6.placeholder = tmp13Result;
     const obj7 = { uri: str };

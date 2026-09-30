@@ -1,6 +1,6 @@
-// === Module 5240: ? ===
+// === Module 5270: ? ===
 
-// Module 5240
+// Module 5270
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/aura/bubbles.png.js");

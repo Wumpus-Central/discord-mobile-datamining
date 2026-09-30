@@ -1,7 +1,7 @@
-// === Module 14865: QuestDockBlurredContentBackground ===
+// === Module 14896: QuestDockBlurredContentBackground ===
 
-// Module 14865 (QuestDockBlurredContentBackground)
-import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5434 */;
+// Module 14896 (QuestDockBlurredContentBackground)
+import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5464 */;
 import noop from "module_19" /* 19 */;
 
 const StyleSheet = fn(17).StyleSheet;

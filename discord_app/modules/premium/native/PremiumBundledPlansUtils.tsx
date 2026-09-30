@@ -1,7 +1,7 @@
-// === Module 6995: PremiumBundledPlansUtils ===
+// === Module 7025: PremiumBundledPlansUtils ===
 
-// Module 6995 (PremiumBundledPlansUtils)
-import ProductIds from "ProductIds" /* 6827 */;
+// Module 7025 (PremiumBundledPlansUtils)
+import ProductIds from "ProductIds" /* 6857 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -233,11 +233,11 @@ export const excludeNitroOnlyPlansForActiveTrial = function excludeNitroOnlyPlan
 };
 export { getSubscriptionItemsForProduct };
 export const getModifySubscriptionItemsForProduct = function getModifySubscriptionItemsForProduct(productId, subscription) {
-  if (productId in found(6827).AppStorePremiumProductIdsToPremiumBundledItems) {
-    const tmp8 = tmp(6827).AppStorePremiumProductIdsToPremiumBundledItems[productId];
+  if (productId in found(6857).AppStorePremiumProductIdsToPremiumBundledItems) {
+    const tmp8 = tmp(6857).AppStorePremiumProductIdsToPremiumBundledItems[productId];
     if (null != tmp8.premiumTier) {
       if (tmpResult.isBoostOnlySubscription(subscription)) {
-        const itemsWithUpsertedPremiumPlanId = tmp(4488).getItemsWithUpsertedPremiumPlanId(subscription, tmp8.basePlanId);
+        const itemsWithUpsertedPremiumPlanId = tmp(4518).getItemsWithUpsertedPremiumPlanId(subscription, tmp8.basePlanId);
         const reversed = itemsWithUpsertedPremiumPlanId.reverse();
         const additionalPlans = tmp8.additionalPlans;
         found = additionalPlans.find((planId) => set.has(planId.planId));
@@ -256,7 +256,7 @@ export const getModifySubscriptionItemsForProduct = function getModifySubscripti
         }
         return mapped;
       }
-      tmpResult = tmp(4488);
+      tmpResult = tmp(4518);
     }
     return getSubscriptionItemsForProduct(productId);
   } else {

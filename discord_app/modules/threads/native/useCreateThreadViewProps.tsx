@@ -1,7 +1,7 @@
-// === Module 11069: useCreateThreadViewProps ===
+// === Module 11105: useCreateThreadViewProps ===
 
-// Module 11069 (useCreateThreadViewProps)
-import useGetThreadDraftSettingsDefault from "useGetThreadDraftSettings" /* 9883 */;
+// Module 11105 (useCreateThreadViewProps)
+import useGetThreadDraftSettingsDefault from "useGetThreadDraftSettings" /* 9917 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 
 const require = globalThis.__r;

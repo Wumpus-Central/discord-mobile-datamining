@@ -1,6 +1,6 @@
-// === Module 7485: rules ===
+// === Module 7516: rules ===
 
-// Module 7485 (rules)
+// Module 7516 (rules)
 import _mod1187 from "module_1187" /* 1187 */;
 import wrappers from "wrappers" /* 1217 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -567,7 +567,7 @@ class Filter$Type extends MessageType3 {
 }
 const prototype3 = Filter$Type.prototype;
 prototype3["create"] = function create(arr) {
-  obj = { filter: { oneofKind: "r" }, negate: false };
+  obj = { filter: { oneofKind: "Array" }, negate: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
@@ -1592,7 +1592,7 @@ class ClientLocation_Location$Type extends MessageType13 {
 }
 const prototype13 = ClientLocation_Location$Type.prototype;
 prototype13["create"] = function create(arr) {
-  obj = { location: { oneofKind: "r" } };
+  obj = { location: { oneofKind: "Array" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {

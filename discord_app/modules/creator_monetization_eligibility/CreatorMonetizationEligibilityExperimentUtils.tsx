@@ -1,9 +1,9 @@
-// === Module 6845: CreatorMonetizationEligibilityExperimentUtils ===
+// === Module 6875: CreatorMonetizationEligibilityExperimentUtils ===
 
-// Module 6845 (CreatorMonetizationEligibilityExperimentUtils)
+// Module 6875 (CreatorMonetizationEligibilityExperimentUtils)
 import initialize from "initialize" /* 504 */;
 import UserStore from "UserStore" /* 1372 */;
-import BillingInfoStore from "BillingInfoStore" /* 4490 */;
+import BillingInfoStore from "BillingInfoStore" /* 4520 */;
 
 require = fn;
 const GuildFeatures = fn(1074).GuildFeatures;

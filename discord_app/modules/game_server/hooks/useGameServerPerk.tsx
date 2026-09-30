@@ -1,17 +1,17 @@
-// === Module 12243: useGameServerPerk ===
+// === Module 12275: useGameServerPerk ===
 
-// Module 12243 (useGameServerPerk)
+// Module 12275 (useGameServerPerk)
 import util from "util" /* 1115 */;
 import _modDef2941 from "module_2941" /* 2941 */;
-import _modDef12245 from "module_12245" /* 12245 */;
+import _modDef12277 from "module_12277" /* 12277 */;
 import noop from "module_19" /* 19 */;
-import GameServerStore from "GameServerStore" /* 4744 */;
+import GameServerStore from "GameServerStore" /* 4774 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(4725).GAME_SERVER_POWERUP_SKU_ID;
-const GuildPowerupType = fn(4724).GuildPowerupType;
+let closure_5 = fn(4755).GAME_SERVER_POWERUP_SKU_ID;
+const GuildPowerupType = fn(4754).GuildPowerupType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_server/hooks/useGameServerPerk.tsx");
 
@@ -39,8 +39,8 @@ export default function useGameServerPerk(guildId) {
         obj.cost = tmp2;
         obj.dependencies = [];
         obj.type = GuildPowerupType.PERK;
-        obj.animatedImageUrl = _modDef12245;
-        obj.staticImageUrl = _modDef12245;
+        obj.animatedImageUrl = _modDef12277;
+        obj.staticImageUrl = _modDef12277;
         tmp = obj;
       }
     }

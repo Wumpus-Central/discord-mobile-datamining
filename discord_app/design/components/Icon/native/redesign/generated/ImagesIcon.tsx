@@ -1,9 +1,9 @@
-// === Module 11364: ImagesIcon ===
+// === Module 11400: ImagesIcon ===
 
-// Module 11364 (ImagesIcon)
+// Module 11400 (ImagesIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4530 */;
-import _mod11365 from "module_11365" /* 11365 */;
+import BaseIconImage from "BaseIconImage" /* 4560 */;
+import _mod11401 from "module_11401" /* 11401 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const ImagesIcon = function ImagesIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11365, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11401, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

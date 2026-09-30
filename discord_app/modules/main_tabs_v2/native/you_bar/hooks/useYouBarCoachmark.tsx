@@ -1,11 +1,11 @@
-// === Module 16177: useYouBarCoachmark ===
+// === Module 16206: useYouBarCoachmark ===
 
-// Module 16177 (useYouBarCoachmark)
+// Module 16206 (useYouBarCoachmark)
 import util from "util" /* 1115 */;
 import dismissible_content from "dismissible_content" /* 2029 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4655 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4685 */;
 
 require = fn;
 const ContentDismissActionType = fn(2042).ContentDismissActionType;
@@ -15,34 +15,29 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/h
 
 export const useYouBarCoachmark = function useYouBarCoachmark(isQuestRendered) {
   isQuestRendered = isQuestRendered.isQuestRendered;
-  let isInPrivateProfilesExperiment;
-  let stateFromStores;
-  const animatedRef = isQuestRendered(isInPrivateProfilesExperiment[6]).useAnimatedRef();
-  let obj = isQuestRendered(isInPrivateProfilesExperiment[6]);
-  isInPrivateProfilesExperiment = isQuestRendered(isInPrivateProfilesExperiment[7]).useIsInPrivateProfilesExperiment("PrivateProfileCoachmark");
-  let obj2 = isQuestRendered(isInPrivateProfilesExperiment[7]);
-  const isTinyBroncoEligible = isQuestRendered(isInPrivateProfilesExperiment[8]).useIsTinyBroncoEligible();
-  const obj3 = isQuestRendered(isInPrivateProfilesExperiment[8]);
-  const isFocused = isQuestRendered(isInPrivateProfilesExperiment[9]).useIsFocused();
-  const obj4 = isQuestRendered(isInPrivateProfilesExperiment[9]);
-  let items = [stateFromStores];
-  stateFromStores = isQuestRendered(isInPrivateProfilesExperiment[10]).useStateFromStores(items, () => {
-    const obj = isQuestRendered(isInPrivateProfilesExperiment[11]);
-    const obj2 = { from: "authed", unit: isQuestRendered(isInPrivateProfilesExperiment[12]).TimeUnits.DAYS };
-    const tmp = obj.getFirstInstallTimeElapsed({ from: "authed", unit: isQuestRendered(isInPrivateProfilesExperiment[12]).TimeUnits.DAYS }) >= 10;
-    return null != stateFromStores.getGuildId() && obj.getFirstInstallTimeElapsed({ from: "authed", unit: isQuestRendered(isInPrivateProfilesExperiment[12]).TimeUnits.DAYS }) >= 10;
+  let isTinyBroncoEligible;
+  const animatedRef = isQuestRendered(isTinyBroncoEligible[6]).useAnimatedRef();
+  let obj = isQuestRendered(isTinyBroncoEligible[6]);
+  isTinyBroncoEligible = isQuestRendered(isTinyBroncoEligible[7]).useIsTinyBroncoEligible();
+  let obj2 = isQuestRendered(isTinyBroncoEligible[7]);
+  const isFocused = isQuestRendered(isTinyBroncoEligible[8]).useIsFocused();
+  const obj3 = isQuestRendered(isTinyBroncoEligible[8]);
+  let items = [SelectedGuildStore];
+  const stateFromStores = isQuestRendered(isTinyBroncoEligible[9]).useStateFromStores(items, () => {
+    const obj = isQuestRendered(isTinyBroncoEligible[10]);
+    const obj2 = { from: "authed", unit: isQuestRendered(isTinyBroncoEligible[11]).TimeUnits.DAYS };
+    const tmp = obj.getFirstInstallTimeElapsed({ from: "authed", unit: isQuestRendered(isTinyBroncoEligible[11]).TimeUnits.DAYS }) >= 10;
+    return null != guildId.getGuildId() && obj.getFirstInstallTimeElapsed({ from: "authed", unit: isQuestRendered(isTinyBroncoEligible[11]).TimeUnits.DAYS }) >= 10;
   });
-  const items1 = [isInPrivateProfilesExperiment, isQuestRendered, stateFromStores, isTinyBroncoEligible, isFocused];
-  const memo = isFocused.useMemo(() => {
+  const items1 = [isQuestRendered, stateFromStores, isTinyBroncoEligible, isFocused];
+  const memo = stateFromStores.useMemo(() => {
     if (!isQuestRendered) {
       if (isFocused) {
         const items = [];
         if (stateFromStores) {
           items.push(dismissible_content.DismissibleContent.YOU_BAR_DM_SWIPE_COACHMARK);
         }
-        if (isInPrivateProfilesExperiment) {
-          items.push(dismissible_content.DismissibleContent.PRIVATE_PROFILE_COACHMARK);
-        }
+        items.push(dismissible_content.DismissibleContent.PRIVATE_PROFILE_COACHMARK);
         if (isTinyBroncoEligible) {
           items.push(dismissible_content.DismissibleContent.TINY_BRONCO);
         }
@@ -51,13 +46,13 @@ export const useYouBarCoachmark = function useYouBarCoachmark(isQuestRendered) {
     }
     return closure_6;
   }, items1);
-  const obj5 = isQuestRendered(isInPrivateProfilesExperiment[10]);
-  const obj6 = isQuestRendered(isInPrivateProfilesExperiment[13]);
-  [tmp8, tmp9] = isTinyBroncoEligible(isQuestRendered(isInPrivateProfilesExperiment[13]).useSelectedDismissibleContent(memo), 2);
+  const obj4 = isQuestRendered(isTinyBroncoEligible[9]);
+  const obj5 = isQuestRendered(isTinyBroncoEligible[12]);
+  [tmp7, tmp8] = isFocused(isQuestRendered(isTinyBroncoEligible[12]).useSelectedDismissibleContent(memo), 2);
   closure_129_0 = visibleContent;
   closure_129_1 = markAsDismissed;
   const items2 = [markAsDismissed, visibleContent];
-  const memo1 = isFocused.useMemo(() => {
+  const memo1 = stateFromStores.useMemo(() => {
     const obj = { title: null, description: null, position: "top", visible: null, onDismiss: null };
     const intl = util.intl;
     obj.title = intl.string(util.t.gMFchc);
@@ -65,15 +60,15 @@ export const useYouBarCoachmark = function useYouBarCoachmark(isQuestRendered) {
     obj.description = intl2.string(util.t["V3j11+"]);
     obj.visible = isQuestRendered === dismissible_content.DismissibleContent.YOU_BAR_DM_SWIPE_COACHMARK;
     obj.onDismiss = function onDismiss() {
-      return isInPrivateProfilesExperiment(constants.USER_DISMISS);
+      return isTinyBroncoEligible(constants.USER_DISMISS);
     };
     return obj;
   }, items2);
-  const tmp7 = isTinyBroncoEligible(isQuestRendered(isInPrivateProfilesExperiment[13]).useSelectedDismissibleContent(memo), 2);
-  const privateProfileCoachmarkProps = isQuestRendered(isInPrivateProfilesExperiment[14]).usePrivateProfileCoachmarkProps({ visibleContent, markAsDismissed });
-  const obj7 = isQuestRendered(isInPrivateProfilesExperiment[14]);
-  const coachmark = isQuestRendered(isInPrivateProfilesExperiment[15]).useCoachmark(animatedRef, privateProfileCoachmarkProps);
-  const obj8 = isQuestRendered(isInPrivateProfilesExperiment[15]);
-  const coachmark1 = isQuestRendered(isInPrivateProfilesExperiment[15]).useCoachmark(animatedRef, memo1);
+  const tmp6 = isFocused(isQuestRendered(isTinyBroncoEligible[12]).useSelectedDismissibleContent(memo), 2);
+  const privateProfileCoachmarkProps = isQuestRendered(isTinyBroncoEligible[13]).usePrivateProfileCoachmarkProps({ visibleContent, markAsDismissed });
+  const obj6 = isQuestRendered(isTinyBroncoEligible[13]);
+  const coachmark = isQuestRendered(isTinyBroncoEligible[14]).useCoachmark(animatedRef, privateProfileCoachmarkProps);
+  const obj7 = isQuestRendered(isTinyBroncoEligible[14]);
+  const coachmark1 = isQuestRendered(isTinyBroncoEligible[14]).useCoachmark(animatedRef, memo1);
   return { animatedRef, visibleContent, markAsDismissed };
 };

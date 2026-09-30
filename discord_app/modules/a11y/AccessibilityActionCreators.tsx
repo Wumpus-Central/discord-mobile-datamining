@@ -1,10 +1,10 @@
-// === Module 14170: AccessibilityActionCreators ===
+// === Module 14199: AccessibilityActionCreators ===
 
-// Module 14170 (AccessibilityActionCreators)
+// Module 14199 (AccessibilityActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 8824 */;
-import AccessibilityStore from "AccessibilityStore" /* 4825 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 8858 */;
+import AccessibilityStore from "AccessibilityStore" /* 4855 */;
 
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const StickerAnimationSettings = fn(2024).StickerAnimationSettings;
@@ -122,6 +122,9 @@ export const toggleSyncProfileThemeWithUserTheme = function toggleSyncProfileThe
 };
 export const setContrast = function setContrast(contrast) {
   DispatcherDefault.dispatch({ type: "ACCESSIBILITY_SET_CONTRAST", contrast });
+};
+export const setMinToastDuration = function setMinToastDuration(minToastDurationMs) {
+  DispatcherDefault.dispatch({ type: "ACCESSIBILITY_SET_MIN_TOAST_DURATION", minToastDurationMs });
 };
 export const setContrastMode = function setContrastMode(contrastMode) {
   DispatcherDefault.dispatch({ type: "ACCESSIBILITY_SET_CONTRAST_MODE", contrastMode });

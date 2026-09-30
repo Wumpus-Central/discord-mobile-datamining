@@ -1,14 +1,14 @@
-// === Module 9373: RestrictedGuildProfileView ===
+// === Module 9407: RestrictedGuildProfileView ===
 
-// Module 9373 (RestrictedGuildProfileView)
+// Module 9407 (RestrictedGuildProfileView)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import useToken from "useToken" /* 4531 */;
-import useThemeDefault from "useTheme" /* 4767 */;
-import Text_Text from "Text/Text" /* 4832 */;
-import LinearGradientDefault from "LinearGradient" /* 5459 */;
-import GuildIcon from "GuildIcon" /* 6062 */;
-import GuildProfileView from "GuildProfileView" /* 9374 */;
+import useToken from "useToken" /* 4561 */;
+import useThemeDefault from "useTheme" /* 4797 */;
+import Text_Text from "Text/Text" /* 4862 */;
+import LinearGradientDefault from "LinearGradient" /* 5489 */;
+import GuildIcon from "GuildIcon" /* 6092 */;
+import GuildProfileView from "GuildProfileView" /* 9408 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;

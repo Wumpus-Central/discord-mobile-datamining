@@ -1,17 +1,17 @@
-// === Module 15452: CheckpointNavigationControls ===
+// === Module 15485: CheckpointNavigationControls ===
 
-// Module 15452 (CheckpointNavigationControls)
+// Module 15485 (CheckpointNavigationControls)
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
 import _modDef3037 from "module_3037" /* 3037 */;
-import CheckpointConstants from "CheckpointConstants" /* 5061 */;
-import CheckpointTextDefault from "CheckpointText" /* 15437 */;
-import CheckpointButtonDefault from "CheckpointButton" /* 15453 */;
-import CheckpointPressableDefault from "CheckpointPressable" /* 15454 */;
+import CheckpointConstants from "CheckpointConstants" /* 5091 */;
+import CheckpointTextDefault from "CheckpointText" /* 15470 */;
+import CheckpointButtonDefault from "CheckpointButton" /* 15486 */;
+import CheckpointPressableDefault from "CheckpointPressable" /* 15487 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4836 */;
+import createStyles from "createStyles" /* 4866 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -58,7 +58,7 @@ export default function CheckpointNavigationControls(onNext) {
             variant: "text-sm/medium",
             style: link.link,
             onPress() {
-              const obj = closure_1_1(4525);
+              const obj = closure_1_1(4555);
               return obj.openURL(closure_1_1(2111).getArticleURL(constants.CHECKPOINT));
             },
             accessibilityRole: "link",

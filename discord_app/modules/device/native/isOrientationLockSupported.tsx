@@ -1,8 +1,8 @@
-// === Module 8999: isOrientationLockSupported ===
+// === Module 9033: isOrientationLockSupported ===
 
-// Module 8999 (isOrientationLockSupported)
+// Module 9033 (isOrientationLockSupported)
 import MetaQuestUtils from "MetaQuestUtils" /* 1610 */;
-import DeviceUtils from "DeviceUtils" /* 4812 */;
+import DeviceUtils from "DeviceUtils" /* 4842 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/device/native/isOrientationLockSupported.tsx");

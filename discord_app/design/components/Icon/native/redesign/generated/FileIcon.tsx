@@ -1,9 +1,9 @@
-// === Module 9760: FileIcon ===
+// === Module 9794: FileIcon ===
 
-// Module 9760 (FileIcon)
+// Module 9794 (FileIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4530 */;
-import _mod9761 from "module_9761" /* 9761 */;
+import BaseIconImage from "BaseIconImage" /* 4560 */;
+import _mod9795 from "module_9795" /* 9795 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const FileIcon = function FileIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9761, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9795, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

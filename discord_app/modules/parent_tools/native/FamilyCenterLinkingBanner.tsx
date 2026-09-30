@@ -1,14 +1,14 @@
-// === Module 14624: FamilyCenterLinkingBanner ===
+// === Module 14655: FamilyCenterLinkingBanner ===
 
-// Module 14624 (FamilyCenterLinkingBanner)
+// Module 14655 (FamilyCenterLinkingBanner)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef2487 from "module_2487" /* 2487 */;
-import Text_Text from "Text/Text" /* 4832 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8271 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 11567 */;
-import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 14587 */;
-import _modDef14625 from "module_14625" /* 14625 */;
+import Text_Text from "Text/Text" /* 4862 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8302 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 11603 */;
+import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 14618 */;
+import _modDef14656 from "module_14656" /* 14656 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -61,7 +61,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let createStyles = fn(4836);
+let createStyles = fn(4866);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: nativeDefault.space.PX_16, paddingTop: 0, paddingBottom: nativeDefault.space.PX_16, alignItems: "center", borderRadius: nativeDefault.radii.md, elevation: 2, overflow: "hidden" }, content: null, art: null, header: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: nativeDefault.space.PX_16, paddingTop: 0, paddingBottom: nativeDefault.space.PX_16, alignItems: "center", borderRadius: nativeDefault.radii.md, elevation: 2, overflow: "hidden" };
 obj2.content = { padding: nativeDefault.space.PX_16 };
@@ -70,17 +70,17 @@ obj2.art = size;
 let obj4 = { padding: nativeDefault.space.PX_16 };
 obj2.header = { marginBottom: nativeDefault.space.PX_8 };
 let closure_7 = createStyles.createStyles(obj2);
-createStyles = fn(4836);
+createStyles = fn(4866);
 const obj6 = { container: null };
 let obj5 = { marginBottom: nativeDefault.space.PX_8 };
 obj6.container = { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };
 let closure_8 = createStyles.createStyles(obj6);
-createStyles = fn(4836);
+createStyles = fn(4866);
 const obj9 = { container: null };
 const obj8 = { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };
 obj9.container = { width: "100%", paddingHorizontal: nativeDefault.space.PX_16 };
 let closure_10 = createStyles.createStyles(obj9);
-createStyles = fn(4836);
+createStyles = fn(4866);
 const obj12 = { row: { display: "flex", flexDirection: "row", alignItems: "flex-start" }, gap: { marginBottom: 12 }, circle: null, rowContent: null };
 const size1 = { display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", overflow: "hidden", width: 32, height: 32, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 obj12.circle = size1;
@@ -103,7 +103,7 @@ export default function FamilyCenterLinkingBanner() {
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { source: null, style: null, resizeMethod: "resize" };
   const ageSpecificText1 = obj2.useAgeSpecificText(intl3.format(_modDef2487.yMnoDl, { link: "https://support.discord.com/hc/articles/14155060633623" }), intl4.string(_modDef2487.JsAEDi));
-  obj4.source = _modDef14625;
+  obj4.source = _modDef14656;
   obj4.style = tmp.art;
   const items = [hasOwnProperty(React4, obj4), , ];
   const obj5 = { style: tmp.content, children: null };

@@ -1,16 +1,12 @@
-// === Module 10821: BadgeCatalogIcon ===
+// === Module 10855: BadgeCatalogIcon ===
 
-// Module 10821 (BadgeCatalogIcon)
-import FastImageDefault from "FastImage" /* 6065 */;
+// Module 10855 (BadgeCatalogIcon)
+import FastImageDefault from "FastImage" /* 6095 */;
+import BadgeArtImageDefault from "BadgeArtImage" /* 10856 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/badges/native/BadgeCatalogIcon.tsx");
-
-export default function BadgeCatalogIcon(style) {
+function BadgeCatalogRasterIcon(style) {
   ({ badge, size } = style);
   const items = [, , ];
   ({ simple_icon_raster_url: arr[0], complex_icon_static_url: arr[1], complex_icon_animated_url: arr[2] } = badge);
@@ -38,4 +34,20 @@ export default function BadgeCatalogIcon(style) {
     obj3.children = jsx(FastImageDefault, { source: null, style: null, onError: null });
   }
   return <View {...obj3} />;
+}
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/badges/native/BadgeCatalogIcon.tsx");
+
+export default function BadgeCatalogIcon(arg0) {
+  ({ badge, size, style } = arg0);
+  if (size > 24) {
+    if (null != badge.simple_icon_url) {
+      const obj = { url: badge.simple_icon_url, height: size, fallbackUrl: badge.simple_icon_raster_url, style };
+      let tmp2 = jsx(BadgeArtImageDefault, { url: badge.simple_icon_url, height: size, fallbackUrl: badge.simple_icon_raster_url, style });
+    }
+    return tmp2;
+  }
+  tmp2 = <BadgeCatalogRasterIcon badge={badge} size={size} style={style} />;
 };

@@ -1,6 +1,6 @@
-// === Module 12748: UserProfileActivityCardBadges ===
+// === Module 12778: UserProfileActivityCardBadges ===
 
-// Module 12748 (UserProfileActivityCardBadges)
+// Module 12778 (UserProfileActivityCardBadges)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -13,13 +13,13 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 export default function UserProfileActivityCardBadges(activity) {
   activity = activity.activity;
   if (activity.type === ActivityTypes.PLAYING) {
-    const items = [activity(12749).PartyBadge, activity(12749).TimestampBadge];
+    const items = [activity(12779).PartyBadge, activity(12779).TimestampBadge];
     let items3 = items;
   } else if (activity.type === ActivityTypes.LISTENING) {
-    const items1 = [activity(12749).TimestampBadge];
+    const items1 = [activity(12779).TimestampBadge];
     items3 = items1;
   } else if (activity.type === ActivityTypes.WATCHING) {
-    const items2 = [activity(12749).TimestampBadge, activity(12749).EpisodeBadge];
+    const items2 = [activity(12779).TimestampBadge, activity(12779).EpisodeBadge];
     items3 = items2;
   } else {
     items3 = [];

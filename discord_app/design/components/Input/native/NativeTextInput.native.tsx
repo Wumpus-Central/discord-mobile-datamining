@@ -1,6 +1,6 @@
-// === Module 6208: NativeTextInput ===
+// === Module 6238: NativeTextInput ===
 
-// Module 6208 (NativeTextInput)
+// Module 6238 (NativeTextInput)
 import noop from "module_19" /* 19 */;
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1481 */;
 
@@ -98,8 +98,8 @@ export const NativeTextInput = noop.forwardRef((value, ref2) => {
   ref(defaultValue[9]);
   if (null != value.keyboardAppearance) {
     const obj3 = {};
-    let merged = Object.assign(tmp6(tmp3[10]).mergeProps(value, tmp4, { value: "current", defaultValue: "channel" }));
-    const obj4 = { value: "current", defaultValue: "channel" };
+    let merged = Object.assign(tmp6(tmp3[10]).mergeProps(value, tmp4, { value: "Array", defaultValue: "add" }));
+    const obj4 = { value: "Array", defaultValue: "add" };
     const tmp6Result = tmp6(tmp3[10]);
     obj3.ref = tmp6(tmp3[10]).mergeRefs(ref, ref2);
     const tmp19 = closure_10(closure_5, obj3);

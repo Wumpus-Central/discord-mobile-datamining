@@ -1,9 +1,9 @@
-// === Module 8948: canLaunchFrame ===
+// === Module 8982: canLaunchFrame ===
 
-// Module 8948 (canLaunchFrame)
+// Module 8982 (canLaunchFrame)
 import Constants from "Constants" /* 1074 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8486 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 8755 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8517 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 8789 */;
 import size from "module_2" /* 2 */;
 
 const ApplicationFlags = Constants.ApplicationFlags;

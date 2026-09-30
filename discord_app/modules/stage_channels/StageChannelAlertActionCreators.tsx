@@ -1,7 +1,7 @@
-// === Module 12654: StageChannelAlertActionCreators ===
+// === Module 12684: StageChannelAlertActionCreators ===
 
-// Module 12654 (StageChannelAlertActionCreators)
-import StageChannelActionCreatorExtrasAll from "StageChannelActionCreatorExtras" /* 8007 */;
+// Module 12684 (StageChannelAlertActionCreators)
+import StageChannelActionCreatorExtrasAll from "StageChannelActionCreatorExtras" /* 8037 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/stage_channels/StageChannelAlertActionCreators.tsx");

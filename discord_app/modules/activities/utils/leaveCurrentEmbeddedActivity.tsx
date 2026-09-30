@@ -1,7 +1,7 @@
-// === Module 8928: leaveCurrentEmbeddedActivity ===
+// === Module 8962: leaveCurrentEmbeddedActivity ===
 
-// Module 8928 (leaveCurrentEmbeddedActivity)
-import getEmbeddedActivitiesManagerDefault from "getEmbeddedActivitiesManager" /* 8929 */;
+// Module 8962 (leaveCurrentEmbeddedActivity)
+import getEmbeddedActivitiesManagerDefault from "getEmbeddedActivitiesManager" /* 8963 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
 
 const size = fn(2);

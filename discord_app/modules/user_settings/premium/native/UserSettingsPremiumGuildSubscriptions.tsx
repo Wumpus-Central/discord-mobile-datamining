@@ -1,26 +1,26 @@
-// === Module 13209: UserSettingsPremiumGuildSubscriptions ===
+// === Module 13236: UserSettingsPremiumGuildSubscriptions ===
 
-// Module 13209 (UserSettingsPremiumGuildSubscriptions)
+// Module 13236 (UserSettingsPremiumGuildSubscriptions)
 import util from "util" /* 1115 */;
 import user from "user" /* 1380 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2111 */;
-import BoostingActionCreators from "BoostingActionCreators" /* 4732 */;
-import Text_Text from "Text/Text" /* 4832 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5340 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6577 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6582 */;
-import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 6841 */;
-import GuildBoostSlotsInventoryDefault from "GuildBoostSlotsInventory" /* 13210 */;
-import BoostingUnavailablePillDefault from "BoostingUnavailablePill" /* 13224 */;
-import BoostingCountDownPillDefault from "BoostingCountDownPill" /* 13226 */;
-import TopPattern from "TopPattern" /* 13228 */;
-import GuildBoostingUpsellDefault from "GuildBoostingUpsell" /* 13232 */;
+import BoostingActionCreators from "BoostingActionCreators" /* 4762 */;
+import Text_Text from "Text/Text" /* 4862 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5370 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6607 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6612 */;
+import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 6871 */;
+import GuildBoostSlotsInventoryDefault from "GuildBoostSlotsInventory" /* 13237 */;
+import BoostingUnavailablePillDefault from "BoostingUnavailablePill" /* 13251 */;
+import BoostingCountDownPillDefault from "BoostingCountDownPill" /* 13253 */;
+import TopPattern from "TopPattern" /* 13255 */;
+import GuildBoostingUpsellDefault from "GuildBoostingUpsell" /* 13259 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
-import BillingInfoStore from "BillingInfoStore" /* 4490 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 4729 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4493 */;
-import SubscriptionStore from "SubscriptionStore" /* 4494 */;
+import BillingInfoStore from "BillingInfoStore" /* 4520 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 4759 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4523 */;
+import SubscriptionStore from "SubscriptionStore" /* 4524 */;
 
 const require = globalThis.__r;
 
@@ -32,8 +32,8 @@ const Constants = fn(1074);
 const FractionalPremiumStates = fn(1374).FractionalPremiumStates;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4836);
-let obj2 = { upsellSection: { position: "relative" }, background: { position: "absolute", width: "100%" }, scroller: { flex: 1, backgroundColor: fn(5920).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 }, subscriptionHeader: { paddingHorizontal: 16, paddingBottom: 32 }, blurb: { lineHeight: 18 }, blurbNotLast: { marginBottom: 8 }, boostingUnavailablePill: { marginHorizontal: 16, alignContent: "center" }, externalManagement: { marginTop: 8 } };
+const createStyles = fn(4866);
+let obj2 = { upsellSection: { position: "relative" }, background: { position: "absolute", width: "100%" }, scroller: { flex: 1, backgroundColor: fn(5950).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 }, subscriptionHeader: { paddingHorizontal: 16, paddingBottom: 32 }, blurb: { lineHeight: 18 }, blurbNotLast: { marginBottom: 8 }, boostingUnavailablePill: { marginHorizontal: 16, alignContent: "center" }, externalManagement: { marginTop: 8 } };
 let closure_16 = createStyles.createLegacyClassComponentStyles(obj2);
 const PureComponent = noop.PureComponent;
 class UserSettingsPremiumGuildSubscriptions extends PureComponent {
@@ -135,7 +135,7 @@ prototype["render"] = function render() {
   obj3.children = items;
   return __initData(hasOwnProperty, obj3);
 };
-UserSettingsPremiumGuildSubscriptions.contextType = fn(4540).ThemeContext;
+UserSettingsPremiumGuildSubscriptions.contextType = fn(4570).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/premium/native/UserSettingsPremiumGuildSubscriptions.tsx");
 
@@ -157,12 +157,12 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
     flag = true;
   }
   let obj = require("useSubscriptionPlansLoaded");
-  ({ fractionalState: c2, endsAt } = flag(6979)({ forceFetch: true }));
-  const tmp3 = flag(6979)({ forceFetch: true });
+  ({ fractionalState: c2, endsAt } = flag(7009)({ forceFetch: true }));
+  const tmp3 = flag(7009)({ forceFetch: true });
   isInReverseTrial = require("ReverseTrialUtils").useIsInReverseTrial();
   const tmpResult = require("ReverseTrialUtils");
-  fpDurationText = flag(13171)(endsAt, tmp(13171).CountDownMessageTypes.LONG_TIME_LEFT);
-  const tmp4 = flag(13171);
+  fpDurationText = flag(13198)(endsAt, tmp(13198).CountDownMessageTypes.LONG_TIME_LEFT);
+  const tmp4 = flag(13198);
   const items = [GuildBoostSlotStore, BillingInfoStore, SubscriptionPlanStore, UserStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     const obj = { hasFetchedSlots: GuildBoostSlotStore.hasFetched, hasSlots: Object.keys(GuildBoostSlotStore.boostSlots).length > 0, hasAvailableSlots: null, hasFetchedSubscriptionPlans: null, isFetchingSubscriptionPlans: null, isFetchingPaymentSources: null, shouldFetchSubscriptionPlans: null, fractionalState: null, isInReverseTrial: null, fpDurationText: null, premiumGroupRole: null };

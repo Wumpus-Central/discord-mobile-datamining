@@ -1,10 +1,10 @@
-// === Module 15230: FriendOnlineNotificationUtils ===
+// === Module 15263: FriendOnlineNotificationUtils ===
 
-// Module 15230 (FriendOnlineNotificationUtils)
+// Module 15263 (FriendOnlineNotificationUtils)
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import UserSettings from "UserSettings" /* 2021 */;
-import NotificationConstants from "NotificationConstants" /* 4482 */;
+import NotificationConstants from "NotificationConstants" /* 4512 */;
 import size from "module_2" /* 2 */;
 
 const constants = NotificationConstants.NotificationSettingsUpdateType;

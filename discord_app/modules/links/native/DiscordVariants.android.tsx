@@ -1,8 +1,8 @@
-// === Module 16194: DiscordVariants ===
+// === Module 16223: DiscordVariants ===
 
-// Module 16194 (DiscordVariants)
-import NativeIntentsModuleDefault from "NativeIntentsModule" /* 4970 */;
-import DiscordVariantTypes from "DiscordVariantTypes" /* 16195 */;
+// Module 16223 (DiscordVariants)
+import NativeIntentsModuleDefault from "NativeIntentsModule" /* 5000 */;
+import DiscordVariantTypes from "DiscordVariantTypes" /* 16224 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/links/native/DiscordVariants.android.tsx");

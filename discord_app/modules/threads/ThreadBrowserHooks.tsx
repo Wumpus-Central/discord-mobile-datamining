@@ -1,23 +1,23 @@
-// === Module 12448: ThreadBrowserHooks ===
+// === Module 12478: ThreadBrowserHooks ===
 
-// Module 12448 (ThreadBrowserHooks)
+// Module 12478 (ThreadBrowserHooks)
 import _modDef12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7349 */;
-import ForumActionCreatorsDefault from "ForumActionCreators" /* 7489 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7379 */;
+import ForumActionCreatorsDefault from "ForumActionCreators" /* 7519 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
-import PermissionStore from "PermissionStore" /* 4469 */;
-import ReadStateStore from "ReadStateStore" /* 4851 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 5986 */;
-import ArchivedThreadsStore from "ArchivedThreadsStore" /* 7350 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4471 */;
+import PermissionStore from "PermissionStore" /* 4499 */;
+import ReadStateStore from "ReadStateStore" /* 4881 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 6016 */;
+import ArchivedThreadsStore from "ArchivedThreadsStore" /* 7380 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4501 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(12449).useShouldShowResolvedFlagsForChannel;
+let closure_5 = fn(12479).useShouldShowResolvedFlagsForChannel;
 const Permissions = fn(1085).Permissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadBrowserHooks.tsx");

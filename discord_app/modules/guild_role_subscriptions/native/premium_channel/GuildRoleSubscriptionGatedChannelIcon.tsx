@@ -1,8 +1,8 @@
-// === Module 15925: GuildRoleSubscriptionGatedChannelIcon ===
+// === Module 15950: GuildRoleSubscriptionGatedChannelIcon ===
 
-// Module 15925 (GuildRoleSubscriptionGatedChannelIcon)
+// Module 15950 (GuildRoleSubscriptionGatedChannelIcon)
 import native from "native" /* 1177 */;
-import _modDef9929 from "module_9929" /* 9929 */;
+import _modDef9963 from "module_9963" /* 9963 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,9 +12,9 @@ const result = size.fileFinishedImporting("modules/guild_role_subscriptions/nati
 
 export default function SubscriptionGatedChannelIcon(arg0) {
   ({ locked, isInMainTabsExperiment } = arg0);
-  const obj = { source: _modDef9929, size: null, disableColor: null };
+  const obj = { source: _modDef9963, size: null, disableColor: null };
   const Sizes = native.Icon.Sizes;
   obj.size = isInMainTabsExperiment ? Sizes.EXTRA_SMALL_10 : Sizes.SMALL;
   obj.disableColor = false !== locked;
-  return jsx(native.Icon, { source: _modDef9929, size: null, disableColor: null });
+  return jsx(native.Icon, { source: _modDef9963, size: null, disableColor: null });
 };

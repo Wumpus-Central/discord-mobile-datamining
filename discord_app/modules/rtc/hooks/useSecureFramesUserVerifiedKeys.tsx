@@ -1,8 +1,8 @@
-// === Module 15643: useSecureFramesUserVerifiedKeys ===
+// === Module 15676: useSecureFramesUserVerifiedKeys ===
 
-// Module 15643 (useSecureFramesUserVerifiedKeys)
+// Module 15676 (useSecureFramesUserVerifiedKeys)
 import _modDef12 from "module_12" /* 12 */;
-import VerifiedKeyStore from "VerifiedKeyStore" /* 9312 */;
+import VerifiedKeyStore from "VerifiedKeyStore" /* 9346 */;
 
 const require = globalThis.__r;
 

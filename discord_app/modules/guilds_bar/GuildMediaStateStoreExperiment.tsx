@@ -1,6 +1,6 @@
-// === Module 16145: GuildMediaStateStoreExperiment ===
+// === Module 16174: GuildMediaStateStoreExperiment ===
 
-// Module 16145 (GuildMediaStateStoreExperiment)
+// Module 16174 (GuildMediaStateStoreExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1436 */;
 
 const obj = { HOOK: "hook", STORE: "store", SHADOW: "shadow" };

@@ -1,8 +1,8 @@
-// === Module 17097: useSelfHasVideo ===
+// === Module 17132: useSelfHasVideo ===
 
-// Module 17097 (useSelfHasVideo)
-import participantHasVideo from "participantHasVideo" /* 9064 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4852 */;
+// Module 17132 (useSelfHasVideo)
+import participantHasVideo from "participantHasVideo" /* 9098 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4882 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1993 */;
 

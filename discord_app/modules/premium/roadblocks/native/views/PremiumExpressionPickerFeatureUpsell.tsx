@@ -1,16 +1,16 @@
-// === Module 9955: PremiumExpressionPickerFeatureUpsell ===
+// === Module 9989: PremiumExpressionPickerFeatureUpsell ===
 
-// Module 9955 (PremiumExpressionPickerFeatureUpsell)
+// Module 9989 (PremiumExpressionPickerFeatureUpsell)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
-import useKeyboardIsOpenDefault from "useKeyboardIsOpen" /* 6209 */;
-import PremiumFeatureUpsellDefault from "PremiumFeatureUpsell" /* 9587 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4596 */;
+import useKeyboardIsOpenDefault from "useKeyboardIsOpen" /* 6239 */;
+import PremiumFeatureUpsellDefault from "PremiumFeatureUpsell" /* 9621 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let closure_5 = createStyles.createStyles((arg0) => {
   const obj = { container: null };
   const rect = { position: "absolute", bottom: arg0 + nativeDefault.space.PX_12, left: 0, right: 0 };

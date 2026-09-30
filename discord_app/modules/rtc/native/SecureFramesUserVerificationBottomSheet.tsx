@@ -1,30 +1,30 @@
-// === Module 9347: SecureFramesUserVerificationBottomSheet ===
+// === Module 9381: SecureFramesUserVerificationBottomSheet ===
 
-// Module 9347 (SecureFramesUserVerificationBottomSheet)
+// Module 9381 (SecureFramesUserVerificationBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4528 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4792 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
-import UserActionCreators from "UserActionCreators" /* 7791 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8423 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9328 */;
-import SecureFramesTracking from "SecureFramesTracking" /* 9339 */;
-import XLargeBoldIcon from "XLargeBoldIcon" /* 9349 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4558 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4822 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4830 */;
+import UserActionCreators from "UserActionCreators" /* 7821 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8454 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9362 */;
+import SecureFramesTracking from "SecureFramesTracking" /* 9373 */;
+import XLargeBoldIcon from "XLargeBoldIcon" /* 9383 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4859 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4889 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SecureFramesConstants = fn(9330);
+const SecureFramesConstants = fn(9364);
 ({ AnalyticsSecureFramesUserVerification: closure_9, SECURE_FRAMES_PUBLIC_KEY_VERSION: c10, USER_VERIFIED_TOAST_KEY: closure_11 } = SecureFramesConstants);
 const AnalyticsLocations = fn(1074).AnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = { iconContainer: null, icon: null, content: null, subtitle: null, buttons: null, helpMessage: null };
 let size = { height: 80, width: 80, borderRadius: 40, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, marginBottom: 16 };
 obj2.iconContainer = size;

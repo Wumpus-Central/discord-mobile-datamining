@@ -1,25 +1,25 @@
-// === Module 15744: RegistrationStepsUtils ===
+// === Module 15769: RegistrationStepsUtils ===
 
-// Module 15744 (RegistrationStepsUtils)
+// Module 15769 (RegistrationStepsUtils)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
 import Link from "Link" /* 1486 */;
-import LoginDefault from "Login" /* 6527 */;
-import WelcomeDefault from "Welcome" /* 15747 */;
-import RegistrationUtils from "RegistrationUtils" /* 15753 */;
-import RegisterIdentity from "RegisterIdentity" /* 15754 */;
-import auth_register from "auth/register" /* 15756 */;
-import RegisterDisplayNameDefault from "RegisterDisplayName" /* 15765 */;
-import RegisterAccountInformationDefault from "RegisterAccountInformation" /* 15766 */;
-import components_VerifyPhoneDefault from "components/VerifyPhone" /* 15772 */;
-import components_MFADefault from "components/MFA" /* 15774 */;
-import AccountDisabledOrDeletionScheduledDefault from "AccountDisabledOrDeletionScheduled" /* 15775 */;
-import ExternalLinkDefault from "ExternalLink" /* 15779 */;
-import RegisterAgeGateDefault from "RegisterAgeGate" /* 15780 */;
-import AgeGateUnderageDefault from "AgeGateUnderage" /* 15786 */;
-import CompanionRemoteAuth from "CompanionRemoteAuth" /* 15787 */;
+import LoginDefault from "Login" /* 6557 */;
+import WelcomeDefault from "Welcome" /* 15772 */;
+import RegistrationUtils from "RegistrationUtils" /* 15778 */;
+import RegisterIdentity from "RegisterIdentity" /* 15779 */;
+import auth_register from "auth/register" /* 15781 */;
+import RegisterDisplayNameDefault from "RegisterDisplayName" /* 15790 */;
+import RegisterAccountInformationDefault from "RegisterAccountInformation" /* 15791 */;
+import components_VerifyPhoneDefault from "components/VerifyPhone" /* 15797 */;
+import components_MFADefault from "components/MFA" /* 15799 */;
+import AccountDisabledOrDeletionScheduledDefault from "AccountDisabledOrDeletionScheduled" /* 15800 */;
+import ExternalLinkDefault from "ExternalLink" /* 15804 */;
+import RegisterAgeGateDefault from "RegisterAgeGate" /* 15805 */;
+import AgeGateUnderageDefault from "AgeGateUnderage" /* 15811 */;
+import CompanionRemoteAuth from "CompanionRemoteAuth" /* 15812 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UniqueUsernamesStore from "UniqueUsernamesStore" /* 14443 */;
+import UniqueUsernamesStore from "UniqueUsernamesStore" /* 14474 */;
 
 require = fn;
 function headerTitle() {
@@ -148,10 +148,10 @@ let closure_21 = async function _handleRegistrationSubmit(arg0) {
   }
   return value;
 };
-const usePromoEmailConsentStore = fn(6177).usePromoEmailConsentStore;
-const RegistrationUIStore = fn(15745);
+const usePromoEmailConsentStore = fn(6207).usePromoEmailConsentStore;
+const RegistrationUIStore = fn(15770);
 ({ setRegistrationErrors: metroRequire, setSubmitting: closure_7, useRegistrationUIStore: closure_8, clearRegistrationErrorMessage: closure_9 } = RegistrationUIStore);
-const RegistrationConstants = fn(15746);
+const RegistrationConstants = fn(15771);
 ({ authStateToRegisterTransitionStep: c10, RegisterTransitionSteps: closure_11, RegistrationSteps: closure_12, RegistrationTransitionActionTypes: map1 } = RegistrationConstants);
 const AuthStates = fn(1074).AuthStates;
 const jsx = fn(21).jsx;
@@ -305,7 +305,7 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     headerTitle,
     render(arg0, arg1) {
       closure_0 = arg1;
-      return closure_15(closure_1(6635), {
+      return closure_15(closure_1(6665), {
         onClose() {
           return closure_0.pop();
         },

@@ -1,12 +1,12 @@
-// === Module 16702: SmartSearchExpandButton ===
+// === Module 16737: SmartSearchExpandButton ===
 
-// Module 16702 (SmartSearchExpandButton)
+// Module 16737 (SmartSearchExpandButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import _modDef3881 from "module_3881" /* 3881 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10784 */;
-import ChevronSmallUpIcon2 from "ChevronSmallUpIcon" /* 13283 */;
-import useSearchHostSurface from "useSearchHostSurface" /* 16701 */;
+import _modDef3911 from "module_3911" /* 3911 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10818 */;
+import ChevronSmallUpIcon2 from "ChevronSmallUpIcon" /* 13310 */;
+import useSearchHostSurface from "useSearchHostSurface" /* 16736 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const rect = { top: nativeDefault.space.PX_8, bottom: nativeDefault.space.PX_8 };
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let closure_9 = createStyles.createStyles((backgroundColor) => {
   const obj = { block: { position: "absolute", left: 0, right: 0, bottom: 0, alignItems: "center" }, pill: { height: nativeDefault.space.PX_32, paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.round, borderWidth: 1, borderColor: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT, backgroundColor, alignItems: "center", justifyContent: "center" }, surface: null };
   const obj3 = {};
@@ -39,7 +39,7 @@ export default noop.memo((isCollapsed) => {
   const obj2 = { style: tmp3.block, hitSlop: rect, children: null };
   const obj3 = { style: tmp3.pill, hitSlop: rect, accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
   const intl = util.intl;
-  const tmp9 = _modDef3881;
+  const tmp9 = _modDef3911;
   if (isCollapsed) {
     let FKLBbW = tmp9.NuTbB9;
     let tmp10 = importDefault;

@@ -1,15 +1,15 @@
-// === Module 4724: GuildPowerupsConstants ===
+// === Module 4754: GuildPowerupsConstants ===
 
-// Module 4724 (GuildPowerupsConstants)
+// Module 4754 (GuildPowerupsConstants)
 import util from "util" /* 1115 */;
 import PremiumConstants from "PremiumConstants" /* 1374 */;
 import dismissible_content from "dismissible_content" /* 2029 */;
-import GameServerConstants from "GameServerConstants" /* 4725 */;
-import Powerups from "Powerups" /* 4727 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 4728 */;
-import GameServerExperiment from "GameServerExperiment" /* 4747 */;
-import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 4760 */;
-import ServerThemeExperiment from "ServerThemeExperiment" /* 4761 */;
+import GameServerConstants from "GameServerConstants" /* 4755 */;
+import Powerups from "Powerups" /* 4757 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 4758 */;
+import GameServerExperiment from "GameServerExperiment" /* 4777 */;
+import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 4790 */;
+import ServerThemeExperiment from "ServerThemeExperiment" /* 4791 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -57,8 +57,8 @@ let obj5 = {
 };
 let obj6 = {
   boostPrice: 3,
-  isEnabled(id) {
-    return GameServerExperiment.getGameServerEnabled(id, "GuildPowerupsConstants");
+  isEnabled(guildId) {
+    return GameServerExperiment.getGameServerEnabled(guildId, "GuildPowerupsConstants");
   }
 };
 const set3 = new Set(items11);

@@ -1,13 +1,13 @@
-// === Module 9698: useStageChannelGridParticipants ===
+// === Module 9732: useStageChannelGridParticipants ===
 
-// Module 9698 (useStageChannelGridParticipants)
+// Module 9732 (useStageChannelGridParticipants)
 import _mod12 from "module_12" /* 12 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 5904 */;
-import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 5910 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 5934 */;
+import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 5940 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4852 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5897 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4882 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5927 */;
 
 const require = globalThis.__r;
 

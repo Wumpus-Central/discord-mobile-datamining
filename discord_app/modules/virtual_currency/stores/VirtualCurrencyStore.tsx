@@ -1,6 +1,6 @@
-// === Module 8482: VirtualCurrencyStore ===
+// === Module 8513: VirtualCurrencyStore ===
 
-// Module 8482 (VirtualCurrencyStore)
+// Module 8513 (VirtualCurrencyStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 
@@ -30,6 +30,15 @@ class VirtualCurrencyStore extends Store {
       VIRTUAL_CURRENCY_BALANCE_UPDATE(arg0) {
             return closure_0.handleBalanceUpdate(arg0);
           },
+      VIRTUAL_CURRENCY_TOTAL_REDEEMED_FETCH(arg0) {
+            return closure_0.handleTotalRedeemedFetch(arg0);
+          },
+      VIRTUAL_CURRENCY_TOTAL_REDEEMED_FETCH_SUCCESS(totalRedeemed) {
+            return closure_0.handleTotalRedeemedFetchSuccess(totalRedeemed);
+          },
+      VIRTUAL_CURRENCY_TOTAL_REDEEMED_FETCH_FAIL(error) {
+            return closure_0.handleTotalRedeemedFetchFail(error);
+          },
       VIRTUAL_CURRENCY_ONBOARDING_MODAL_OPEN(arg0) {
             return closure_0.handleOnboardingModalOpen(arg0);
           },
@@ -52,6 +61,9 @@ class VirtualCurrencyStore extends Store {
     tmp21._balance = null;
     tmp21._fetchBalanceError = null;
     tmp21._isFetchingBalance = false;
+    tmp21._totalRedeemed = null;
+    tmp21._fetchTotalRedeemedError = null;
+    tmp21._isFetchingTotalRedeemed = false;
     tmp21._onboardingModalOpenedPrior = false;
     tmp21._balancePillOverlay = false;
     return tmp21;
@@ -100,6 +112,24 @@ Object.defineProperty(prototype, "isFetchingBalance", {
   },
   set: undefined
 });
+Object.defineProperty(prototype, "totalRedeemed", {
+  get: function totalRedeemed() {
+    return this._totalRedeemed;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "fetchTotalRedeemedError", {
+  get: function fetchTotalRedeemedError() {
+    return this._fetchTotalRedeemedError;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "isFetchingTotalRedeemed", {
+  get: function isFetchingTotalRedeemed() {
+    return this._isFetchingTotalRedeemed;
+  },
+  set: undefined
+});
 Object.defineProperty(prototype, "onboardingModalOpenedPrior", {
   get: function onboardingModalOpenedPrior() {
     return this._onboardingModalOpenedPrior;
@@ -122,6 +152,9 @@ prototype["handleBalanceStateReset"] = function handleBalanceStateReset() {
   this._balance = null;
   this._fetchBalanceError = null;
   this._isFetchingBalance = false;
+  this._totalRedeemed = null;
+  this._fetchTotalRedeemedError = null;
+  this._isFetchingTotalRedeemed = false;
 };
 prototype["handleBalanceFetch"] = function handleBalanceFetch(arg0) {
   if (arg0 == null) {
@@ -140,8 +173,29 @@ prototype["handleBalanceFetchFail"] = function handleBalanceFetchFail(error) {
   this._isFetchingBalance = false;
   this._fetchBalanceError = error.error;
 };
-prototype["handleBalanceUpdate"] = function handleBalanceUpdate(balance) {
-  this._balance = balance.balance;
+prototype["handleBalanceUpdate"] = function handleBalanceUpdate(arg0) {
+  ({ totalRedeemed, balance: this._balance } = arg0);
+  if (null != totalRedeemed) {
+    this._totalRedeemed = totalRedeemed;
+  }
+};
+prototype["handleTotalRedeemedFetch"] = function handleTotalRedeemedFetch(arg0) {
+  if (arg0 == null) {
+    throw new TypeError("Cannot destructure 'undefined' or 'null'.");
+  } else {
+    const self = this;
+    this._isFetchingTotalRedeemed = true;
+    this._fetchTotalRedeemedError = null;
+  }
+};
+prototype["handleTotalRedeemedFetchSuccess"] = function handleTotalRedeemedFetchSuccess(totalRedeemed) {
+  this._isFetchingTotalRedeemed = false;
+  this._totalRedeemed = totalRedeemed.totalRedeemed;
+  this._fetchTotalRedeemedError = null;
+};
+prototype["handleTotalRedeemedFetchFail"] = function handleTotalRedeemedFetchFail(error) {
+  this._isFetchingTotalRedeemed = false;
+  this._fetchTotalRedeemedError = error.error;
 };
 prototype["handleRedeemVirtualCurrencyStart"] = function handleRedeemVirtualCurrencyStart(skuId) {
   this._entitlements = null;
@@ -168,62 +222,17 @@ prototype["handleOnboardingModalOpen"] = function handleOnboardingModalOpen(arg0
     this._onboardingModalOpenedPrior = true;
   }
 };
-function handleOnboardingModalReset(arg0) {
+prototype["handleOnboardingModalReset"] = function handleOnboardingModalReset(arg0) {
   if (arg0 == null) {
     throw new TypeError("Cannot destructure 'undefined' or 'null'.");
   } else {
     const self = this;
     this._onboardingModalOpenedPrior = false;
   }
-}
-prototype["handleOnboardingModalReset"] = handleOnboardingModalReset;
+};
 VirtualCurrencyStore.displayName = "VirtualCurrencyStore";
-const object = new Object(DispatcherDefault, {
-  VIRTUAL_CURRENCY_REDEEM_START(skuId) {
-    return closure_0.handleRedeemVirtualCurrencyStart(skuId);
-  },
-  VIRTUAL_CURRENCY_REDEEM_SUCCESS(entitlements) {
-    return closure_0.handleRedeemVirtualCurrencySuccess(entitlements);
-  },
-  VIRTUAL_CURRENCY_REDEEM_FAIL(error) {
-    return closure_0.handleRedeemVirtualCurrencyFail(error);
-  },
-  VIRTUAL_CURRENCY_BALANCE_FETCH(arg0) {
-    return closure_0.handleBalanceFetch(arg0);
-  },
-  VIRTUAL_CURRENCY_BALANCE_FETCH_SUCCESS(balance) {
-    return closure_0.handleBalanceFetchSuccess(balance);
-  },
-  VIRTUAL_CURRENCY_BALANCE_FETCH_FAIL(error) {
-    return closure_0.handleBalanceFetchFail(error);
-  },
-  VIRTUAL_CURRENCY_BALANCE_UPDATE(arg0) {
-    return closure_0.handleBalanceUpdate(arg0);
-  },
-  VIRTUAL_CURRENCY_ONBOARDING_MODAL_OPEN(arg0) {
-    return closure_0.handleOnboardingModalOpen(arg0);
-  },
-  VIRTUAL_CURRENCY_ONBOARDING_MODAL_RESET(arg0) {
-    return closure_0.handleOnboardingModalReset(arg0);
-  },
-  LOGIN_SUCCESS() {
-    return closure_0.handleBalanceStateReset();
-  },
-  VIRTUAL_CURRENCY_SET_BALANCE_PILL_OVERLAY(balancePillOverlay) {
-    const result = closure_0.setBalancePillOverlay(balancePillOverlay.balancePillOverlay);
-  }
-}, tmp, VirtualCurrencyStore, Object, prototype, new.target, undefined, handleOnboardingModalReset, dependencyMap);
-let closure_129_0 = object;
-object._entitlements = null;
-object._redeemingSkuId = null;
-object._isRedeemingVirtualCurrency = false;
-object._redeemVirtualCurrencyError = null;
-object._balance = null;
-object._fetchBalanceError = null;
-object._isFetchingBalance = false;
-object._onboardingModalOpenedPrior = false;
-object._balancePillOverlay = false;
+const virtualCurrencyStore = new VirtualCurrencyStore();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/virtual_currency/stores/VirtualCurrencyStore.tsx");
 
-export default object;
+export default virtualCurrencyStore;

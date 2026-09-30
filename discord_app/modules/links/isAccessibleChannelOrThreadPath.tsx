@@ -1,8 +1,8 @@
-// === Module 6833: isAccessibleChannelOrThreadPath ===
+// === Module 6863: isAccessibleChannelOrThreadPath ===
 
-// Module 6833 (isAccessibleChannelOrThreadPath)
+// Module 6863 (isAccessibleChannelOrThreadPath)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildOnboardingStore from "GuildOnboardingStore" /* 6683 */;
+import GuildOnboardingStore from "GuildOnboardingStore" /* 6713 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import GuildRoleStore from "GuildRoleStore" /* 2102 */;
 import GuildStore from "GuildStore" /* 2067 */;

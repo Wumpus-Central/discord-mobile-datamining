@@ -1,21 +1,21 @@
-// === Module 14528: useParentalControlSettings ===
+// === Module 14559: useParentalControlSettings ===
 
-// Module 14528 (useParentalControlSettings)
+// Module 14559 (useParentalControlSettings)
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6582 */;
-import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 6885 */;
-import useUserLinks from "useUserLinks" /* 8270 */;
-import useSelectedTeen from "useSelectedTeen" /* 8272 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14529 */;
-import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 14532 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6612 */;
+import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 6915 */;
+import useUserLinks from "useUserLinks" /* 8301 */;
+import useSelectedTeen from "useSelectedTeen" /* 8303 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14560 */;
+import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 14563 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7126 */;
+import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7156 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const SafetyToastType = fn(8012).SafetyToastType;
+const SafetyToastType = fn(8042).SafetyToastType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useParentalControlSettings.tsx");
 
@@ -110,8 +110,8 @@ export const useDefaultGuildsRestricted = function useDefaultGuildsRestricted() 
   return controlledSetting1;
 };
 export const useAllowFriendsFromMutualGuildsOnlyForTeen = function useAllowFriendsFromMutualGuildsOnlyForTeen() {
-  const selectedTeen = controlledSetting(8272).useSelectedTeen();
-  const ParentalControlledFriendSourceFlags = controlledSetting(14529).ParentalControlledFriendSourceFlags;
+  const selectedTeen = controlledSetting(8303).useSelectedTeen();
+  const ParentalControlledFriendSourceFlags = controlledSetting(14560).ParentalControlledFriendSourceFlags;
   let id;
   if (selectedTeen != null) {
     id = selectedTeen.id;
@@ -171,16 +171,16 @@ export const useParentalControlledConsent = function useParentalControlledConsen
               items2 = [closure_0];
             }
             c4 = 1;
-            tmp3(7125).updateTeenConsents(tmp28, items1, items2);
+            tmp3(7155).updateTeenConsents(tmp28, items1, items2);
             c2 = 2;
             c5 = 1;
-            const obj3 = tmp3(7125);
+            const obj3 = tmp3(7155);
           }
         } else {
           if (1 === tmp7) {
             c4 = 0;
-            tmp3(8017).showFailedToast(constants.GENERIC_ERROR);
-            const obj2 = tmp3(8017);
+            tmp3(8047).showFailedToast(constants.GENERIC_ERROR);
+            const obj2 = tmp3(8047);
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;

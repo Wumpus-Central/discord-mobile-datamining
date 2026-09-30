@@ -1,10 +1,10 @@
-// === Module 11987: GuildDirectoryRow ===
+// === Module 12021: GuildDirectoryRow ===
 
-// Module 11987 (GuildDirectoryRow)
+// Module 12021 (GuildDirectoryRow)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import GuildIconDefault from "GuildIcon" /* 6062 */;
-import GuildDirectoryMoreMenuDefault from "GuildDirectoryMoreMenu" /* 11965 */;
+import GuildIconDefault from "GuildIcon" /* 6092 */;
+import GuildDirectoryMoreMenuDefault from "GuildDirectoryMoreMenu" /* 11999 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const JoinGuildSources = fn(1074).JoinGuildSources;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj = { container: { flexDirection: "row", padding: 16, marginVertical: 6, marginHorizontal: 8 }, guildInfoContainer: { flexDirection: "column", flex: 1 }, guildIcon: { borderRadius: nativeDefault.radii.sm, marginRight: 16 }, guildWrapper: { flex: 1 }, guildDescription: { flexShrink: 1, marginBottom: 8 }, memberInfo: { flexDirection: "row", alignItems: "center", marginBottom: 8 }, dotOnline: null, dotOffline: null, headerContainer: null, titleContainer: null, flex: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.sm, marginRight: 4, backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
 obj.dotOnline = size;
@@ -147,7 +147,7 @@ export default noop.memo(function GuildDirectoryRow(entry) {
   obj8.guild = result;
   const items1 = [closure_10(GuildIconDefault, obj8), ];
   const obj9 = { style: tmp.guildInfoContainer, children: null };
-  const items2 = [closure_10(entry(4832).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: entry.name }), ];
+  const items2 = [closure_10(entry(4862).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: entry.name }), ];
   const obj10 = { style: tmp.memberInfo, children: null };
   let tmp10Result = null;
   if (null != approximatePresenceCount) {
@@ -158,7 +158,7 @@ export default noop.memo(function GuildDirectoryRow(entry) {
     const intl3 = tmp2(1115).intl;
     const obj14 = { membersOnline: approximatePresenceCount };
     obj13.children = intl3.format(tmp2(1115).t["LC+S+m"], obj14);
-    items3[1] = closure_10(tmp2(4832).Text, obj13);
+    items3[1] = closure_10(tmp2(4862).Text, obj13);
     obj11.children = items3;
     tmp10Result = closure_12(closure_11, obj11);
   }
@@ -172,7 +172,7 @@ export default noop.memo(function GuildDirectoryRow(entry) {
     const intl4 = tmp2(1115).intl;
     const obj18 = { count: approximateMemberCount };
     obj17.children = intl4.format(tmp2(1115).t.zRl6XR, obj18);
-    items5[1] = closure_10(tmp2(4832).Text, obj17);
+    items5[1] = closure_10(tmp2(4862).Text, obj17);
     obj15.children = items5;
     tmp10Result2 = closure_12(closure_11, obj15);
   }
@@ -193,7 +193,7 @@ export default noop.memo(function GuildDirectoryRow(entry) {
   }
   if (tmp9Result) {
     const obj20 = { lineClamp: 3, style: tmp.guildDescription, variant: "text-sm/medium", color: "text-default", children: description };
-    tmp9Result = closure_10(tmp2(4832).Text, obj20);
+    tmp9Result = closure_10(tmp2(4862).Text, obj20);
   }
   items7[1] = tmp9Result;
   items7[2] = closure_10(View, { style: tmp.flex });
@@ -218,8 +218,8 @@ export default noop.memo(function GuildDirectoryRow(entry) {
   }
   obj22.variant = str2;
   obj22.text = stringResult;
-  items7[3] = closure_10(entry(5447).Button, obj22);
+  items7[3] = closure_10(entry(5477).Button, obj22);
   obj5.children = items7;
   obj4.children = closure_12(View, obj5);
-  return closure_10(entry(6085).Card, obj4);
+  return closure_10(entry(6115).Card, obj4);
 });

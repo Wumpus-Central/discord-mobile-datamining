@@ -1,6 +1,6 @@
-// === Module 11389: PollLayoutTypes ===
+// === Module 11425: PollLayoutTypes ===
 
-// Module 11389 (PollLayoutTypes)
+// Module 11425 (PollLayoutTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx");

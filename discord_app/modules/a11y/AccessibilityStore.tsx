@@ -1,13 +1,13 @@
-// === Module 4825: AccessibilityStore ===
+// === Module 4855: AccessibilityStore ===
 
-// Module 4825 (AccessibilityStore)
+// Module 4855 (AccessibilityStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage7 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import shared from "shared" /* 4685 */;
-import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4830 */;
+import shared from "shared" /* 4715 */;
+import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4860 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import GameModeStore from "GameModeStore" /* 4826 */;
+import GameModeStore from "GameModeStore" /* 4856 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1183 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
@@ -94,11 +94,11 @@ let closure_3 = ["fontScale"];
 const Constants = fn(1074);
 const Accessibility = Constants.Accessibility;
 const ThemeTypes = Constants.ThemeTypes;
-const MessageConstants = fn(4829);
+const MessageConstants = fn(4859);
 ({ MESSAGE_GROUP_SPACING: closure_11, DEFAULT_COMPACT_SPACING: closure_12, DEFAULT_COZY_SPACING: map1 } = MessageConstants);
 let obj = { DEFAULT: "default", HIGH: "high" };
 let obj2 = { FLEXIBLE: "flexible", CONDENSED: "condensed", HIDDEN: "hidden" };
-let obj3 = { fontSize: Accessibility.FONT_SIZE_DEFAULT, zoom: Accessibility.ZOOM_DEFAULT, keyboardModeEnabled: false, contrastMode: obj.DEFAULT, colorblindMode: false, lowContrastMode: false, saturation: 1, contrast: 1, desaturateUserColors: false, forcedColorsModalSeen: false, keyboardNavigationExplainerModalSeen: false, messageGroupSpacing: null, systemPrefersReducedMotion: "no-preference", systemPrefersCrossfades: false, prefersReducedMotion: "auto", systemForcedColors: "none", syncForcedColors: true, systemPrefersContrast: "no-preference", alwaysShowLinkDecorations: false, roleStyle: "username", officialMessageStyle: "default", officialMessageStyleExplicitlySet: false, displayNameStylesEnabled: true, submitButtonEnabled: false, syncProfileThemeWithUserTheme: false, enableCustomCursor: true, switchIconsEnabled: false, appsButtonEnabled: true, expressionPickerFormat: obj2.FLEXIBLE, condensePickerWhenNarrow: true, emojiButtonEnabled: true, gifButtonEnabled: true, stickerButtonEnabled: true, youBarNameplateAnimation: "animate-never", youBarAvatarDecoAnimation: "animate-never" };
+let obj3 = { fontSize: Accessibility.FONT_SIZE_DEFAULT, zoom: Accessibility.ZOOM_DEFAULT, keyboardModeEnabled: false, contrastMode: obj.DEFAULT, colorblindMode: false, lowContrastMode: false, saturation: 1, contrast: 1, minToastDurationMs: Accessibility.TOAST_DURATION_DEFAULT_MS, desaturateUserColors: false, forcedColorsModalSeen: false, keyboardNavigationExplainerModalSeen: false, messageGroupSpacing: null, systemPrefersReducedMotion: "no-preference", systemPrefersCrossfades: false, prefersReducedMotion: "auto", systemForcedColors: "none", syncForcedColors: true, systemPrefersContrast: "no-preference", alwaysShowLinkDecorations: false, roleStyle: "username", officialMessageStyle: "default", officialMessageStyleExplicitlySet: false, displayNameStylesEnabled: true, submitButtonEnabled: false, syncProfileThemeWithUserTheme: false, enableCustomCursor: true, switchIconsEnabled: false, appsButtonEnabled: true, expressionPickerFormat: obj2.FLEXIBLE, condensePickerWhenNarrow: true, emojiButtonEnabled: true, gifButtonEnabled: true, stickerButtonEnabled: true, youBarNameplateAnimation: "animate-never", youBarAvatarDecoAnimation: "animate-never" };
 obj = obj3;
 let closure_18 = { 12: "font-size-12", 14: "font-size-14", 15: "font-size-15", 16: "font-size-16", 18: "font-size-18", 20: "font-size-20", 24: "font-size-24" };
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
@@ -118,11 +118,20 @@ prototype["initialize"] = function initialize(arg0) {
   if (isNaN(obj.fontSize)) {
     obj.fontSize = Accessibility.FONT_SIZE_DEFAULT;
   }
-  let num = -1;
-  if (null != obj.messageGroupSpacing) {
-    num = obj.messageGroupSpacing;
+  const minToastDurationMs = obj.minToastDurationMs;
+  if (Number.isFinite(minToastDurationMs)) {
+    const _Math = Math;
+    const _Math2 = Math;
+    let TOAST_DURATION_DEFAULT_MS = Math.min(Math.max(minToastDurationMs, 1000 * Accessibility.TOAST_DURATION_MIN_SECONDS), 1000 * Accessibility.TOAST_DURATION_MAX_SECONDS);
+  } else {
+    TOAST_DURATION_DEFAULT_MS = Accessibility.TOAST_DURATION_DEFAULT_MS;
   }
-  if (closure_11.indexOf(num) < 0) {
+  obj.minToastDurationMs = TOAST_DURATION_DEFAULT_MS;
+  let num2 = -1;
+  if (null != obj.messageGroupSpacing) {
+    num2 = obj.messageGroupSpacing;
+  }
+  if (closure_11.indexOf(num2) < 0) {
     obj.messageGroupSpacing = null;
   }
   const items = [UserSettingsProtoStore, SelectivelySyncedUserSettingsStore];
@@ -229,6 +238,12 @@ Object.defineProperty(prototype, "saturation", {
 Object.defineProperty(prototype, "contrast", {
   get: function contrast() {
     return obj.contrast;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "minToastDurationMs", {
+  get: function minToastDurationMs() {
+    return obj.minToastDurationMs;
   },
   set: undefined
 });
@@ -782,6 +797,19 @@ const accessibilityStore = new AccessibilityStore(DispatcherDefault, {
     obj = {};
     const merged = Object.assign(obj);
     obj.contrast = contrast.contrast;
+  },
+  ACCESSIBILITY_SET_MIN_TOAST_DURATION: function handleSetMinToastDuration(minToastDurationMs) {
+    obj = {};
+    const merged = Object.assign(obj);
+    minToastDurationMs = minToastDurationMs.minToastDurationMs;
+    if (Number.isFinite(minToastDurationMs)) {
+      const _Math = Math;
+      const _Math2 = Math;
+      let TOAST_DURATION_DEFAULT_MS = Math.min(Math.max(minToastDurationMs, 1000 * Accessibility.TOAST_DURATION_MIN_SECONDS), 1000 * Accessibility.TOAST_DURATION_MAX_SECONDS);
+    } else {
+      TOAST_DURATION_DEFAULT_MS = Accessibility.TOAST_DURATION_DEFAULT_MS;
+    }
+    obj.minToastDurationMs = TOAST_DURATION_DEFAULT_MS;
   },
   ACCESSIBILITY_SET_CONTRAST_MODE: function handleSetContrastMode(contrastMode) {
     obj = {};

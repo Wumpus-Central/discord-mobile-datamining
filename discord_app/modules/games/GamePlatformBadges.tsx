@@ -1,8 +1,8 @@
-// === Module 12051: GamePlatformBadges ===
+// === Module 12085: GamePlatformBadges ===
 
-// Module 12051 (GamePlatformBadges)
+// Module 12085 (GamePlatformBadges)
 import util from "util" /* 1115 */;
-import GamePlatformAvailability from "GamePlatformAvailability" /* 12050 */;
+import GamePlatformAvailability from "GamePlatformAvailability" /* 12084 */;
 import size from "module_2" /* 2 */;
 
 const items = [GamePlatformAvailability.GamePlatformAvailability.DESKTOP, GamePlatformAvailability.GamePlatformAvailability.MOBILE, GamePlatformAvailability.GamePlatformAvailability.CONSOLE];

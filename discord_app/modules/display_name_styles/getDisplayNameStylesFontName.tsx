@@ -1,6 +1,6 @@
-// === Module 14347: getDisplayNameStylesFontName ===
+// === Module 14376: getDisplayNameStylesFontName ===
 
-// Module 14347 (getDisplayNameStylesFontName)
+// Module 14376 (getDisplayNameStylesFontName)
 import _modDef2877 from "module_2877" /* 2877 */;
 
 const DISPLAY_NAME_STYLES_FONT_NAMES = {};

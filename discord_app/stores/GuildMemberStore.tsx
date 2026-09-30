@@ -13,10 +13,10 @@ import mappers from "mappers" /* 1967 */;
 import isActivityParticipantValidGuildMemberDefault from "isActivityParticipantValidGuildMember" /* 1978 */;
 import GuildRoleUtils from "GuildRoleUtils" /* 2106 */;
 import useCommunicationDisabledNoticeStore from "useCommunicationDisabledNoticeStore" /* 2109 */;
-import GuildMemberConstants from "GuildMemberConstants" /* 4455 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4456 */;
-import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4457 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4458 */;
+import GuildMemberConstants from "GuildMemberConstants" /* 4485 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4486 */;
+import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4487 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4488 */;
 import ImpersonateStore from "ImpersonateStore" /* 2101 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
@@ -89,7 +89,7 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
   let tmp3;
   let tmp4;
   if (0 === roles.length) {
-    return { colorString: null, colorStrings: null, colorRoleId: "children", hoistRoleId: "getCurrentUser", iconRoleId: "justifyContent", highestRoleId: "next" };
+    return { colorString: null, colorStrings: null, colorRoleId: "paddingHorizontal", hoistRoleId: "hasDiversityParent", iconRoleId: "__esModule", highestRoleId: "Array" };
   } else {
     const iter = roles[Symbol.iterator]();
     while (iter !== undefined) {

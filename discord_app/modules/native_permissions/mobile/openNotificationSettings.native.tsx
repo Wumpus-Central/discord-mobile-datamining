@@ -1,7 +1,7 @@
-// === Module 8914: openNotificationSettings ===
+// === Module 8948: openNotificationSettings ===
 
-// Module 8914 (openNotificationSettings)
-import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 5627 */;
+// Module 8948 (openNotificationSettings)
+import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 5657 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/native_permissions/mobile/openNotificationSettings.native.tsx");

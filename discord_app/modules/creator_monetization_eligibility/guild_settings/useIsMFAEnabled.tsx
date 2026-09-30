@@ -1,8 +1,8 @@
-// === Module 17705: useIsMFAEnabled ===
+// === Module 17740: useIsMFAEnabled ===
 
-// Module 17705 (useIsMFAEnabled)
+// Module 17740 (useIsMFAEnabled)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9214 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9248 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

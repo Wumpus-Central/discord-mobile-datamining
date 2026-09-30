@@ -1,8 +1,8 @@
-// === Module 9042: StreamEnded ===
+// === Module 9076: StreamEnded ===
 
-// Module 9042 (StreamEnded)
-import shared from "shared" /* 4685 */;
-import _mod7844 from "module_7844" /* 7844 */;
+// Module 9076 (StreamEnded)
+import shared from "shared" /* 4715 */;
+import _mod7874 from "module_7874" /* 7874 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,35 +14,35 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/StreamEnded.tsx");
 
 export const getStreamEndedSource = function getStreamEndedSource(theme) {
-  return _mod7844.getIllustrationSource(theme, {
+  return _mod7874.getIllustrationSource(theme, {
     dark() {
-      return require("module_9043");
+      return require("module_9077");
     },
     darker() {
-      return require("module_9044");
+      return require("module_9078");
     }
   });
 };
 export const useStreamEndedSource = function useStreamEndedSource() {
   const obj = shared;
-  return _mod7844.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod7874.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_9043");
+      return require("module_9077");
     },
     darker() {
-      return require("module_9044");
+      return require("module_9078");
     }
   });
 };
 export const StreamEnded = function StreamEnded(arg0) {
   const obj = shared;
   const obj4 = {};
-  const illustrationSource = _mod7844.getIllustrationSource(obj.useThemeContext().theme, {
+  const illustrationSource = _mod7874.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_9043");
+      return require("module_9077");
     },
     darker() {
-      return require("module_9044");
+      return require("module_9078");
     }
   });
   const merged = Object.assign(arg0);

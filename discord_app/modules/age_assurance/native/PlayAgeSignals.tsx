@@ -1,7 +1,7 @@
-// === Module 8194: PlayAgeSignals ===
+// === Module 8226: PlayAgeSignals ===
 
-// Module 8194 (PlayAgeSignals)
-import NativePlayAgeSignalsModuleDefault from "NativePlayAgeSignalsModule" /* 8195 */;
+// Module 8226 (PlayAgeSignals)
+import NativePlayAgeSignalsModuleDefault from "NativePlayAgeSignalsModule" /* 8227 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

@@ -1,20 +1,20 @@
-// === Module 14338: UserProfileUpsellCardV2 ===
+// === Module 14367: UserProfileUpsellCardV2 ===
 
-// Module 14338 (UserProfileUpsellCardV2)
+// Module 14367 (UserProfileUpsellCardV2)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
-import Text_Text from "Text/Text" /* 4832 */;
-import components_Button_Button from "components/Button/Button" /* 5447 */;
-import LinearGradientDefault from "LinearGradient" /* 5459 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8287 */;
+import Text_Text from "Text/Text" /* 4862 */;
+import components_Button_Button from "components/Button/Button" /* 5477 */;
+import LinearGradientDefault from "LinearGradient" /* 5489 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8318 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Gradients = fn(7018).Gradients;
+const Gradients = fn(7048).Gradients;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = { outer: { borderRadius: nativeDefault.radii.lg, padding: 1 }, inner: null, text: null, textCenter: null };
 let obj3 = { borderRadius: nativeDefault.radii.lg, padding: 1 };
 obj2.inner = { borderRadius: nativeDefault.radii.lg - 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: nativeDefault.space.PX_16 };
@@ -38,8 +38,11 @@ export default function UserProfileUpsellCardV2(children) {
   if (flag === undefined) {
     flag = false;
   }
-  const loading = children.loading;
-  ({ style, onLayout } = children);
+  let flag2 = children.loading;
+  if (flag2 === undefined) {
+    flag2 = false;
+  }
+  ({ children, style, onLayout } = children);
   const tmp = closure_7();
   const obj = { start: ConstantsIOS.HorizontalGradient.START, end: ConstantsIOS.HorizontalGradient.END, colors: Gradients.PREMIUM_TIER_2, style: null, onLayout, children: null };
   const items = [tmp.outer, style];
@@ -51,19 +54,20 @@ export default function UserProfileUpsellCardV2(children) {
     textCenter = tmp.textCenter;
   }
   items1[1] = textCenter;
-  const items2 = [hasOwnProperty(Text_Text.Text, { style: items1, variant: "text-md/normal", color: "text-default", maxFontSizeMultiplier: 2.5, children: children.text }), ];
+  const items2 = [hasOwnProperty(Text_Text.Text, { style: items1, variant: "text-md/normal", color: "text-default", maxFontSizeMultiplier: 2.5, children: children.text }), , ];
   const obj3 = { icon: null, text: null, onPress: null, variant: null, loading: null, disabled: null, grow: true };
   const tmp5 = LinearGradientDefault;
   obj3.icon = hasOwnProperty(NitroWheelIcon.NitroWheelIcon, { color: nativeDefault.colors.WHITE, size: "xs" });
   obj3.text = buttonText;
   obj3.onPress = onButtonPress;
   obj3.variant = buttonVariant;
-  obj3.loading = loading;
+  obj3.loading = flag2;
   if (!flag) {
-    flag = loading;
+    flag = flag2;
   }
   obj3.disabled = flag;
   items2[1] = hasOwnProperty(components_Button_Button.Button, obj3);
+  items2[2] = children;
   obj2.children = items2;
   obj.children = timestampProducer(View, obj2);
   return hasOwnProperty(tmp5, obj);

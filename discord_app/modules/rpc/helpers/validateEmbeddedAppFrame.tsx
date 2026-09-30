@@ -1,12 +1,12 @@
-// === Module 14195: validateEmbeddedAppFrame ===
+// === Module 14224: validateEmbeddedAppFrame ===
 
-// Module 14195 (validateEmbeddedAppFrame)
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8486 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8666 */;
-import RPCErrorDefault from "RPCError" /* 8935 */;
-import RPCHelpers from "RPCHelpers" /* 8940 */;
-import FramesStore from "FramesStore" /* 8664 */;
-import VibegrationsBuilderPreviewStore from "VibegrationsBuilderPreviewStore" /* 14196 */;
+// Module 14224 (validateEmbeddedAppFrame)
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8517 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8700 */;
+import RPCErrorDefault from "RPCError" /* 8969 */;
+import RPCHelpers from "RPCHelpers" /* 8974 */;
+import FramesStore from "FramesStore" /* 8698 */;
+import VibegrationsBuilderPreviewStore from "VibegrationsBuilderPreviewStore" /* 14225 */;
 
 require = fn;
 function validateEmbeddedAppFrame(transport) {
@@ -26,7 +26,7 @@ function validateEmbeddedAppFrame(transport) {
           if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL !== type) {
             if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
               if (tmp35.applicationId === VibegrationsBuilderPreviewStore.getBuilderPreviewApplicationId()) {
-                let obj5 = { channelId: "current", guildId: "channel" };
+                let obj5 = { channelId: "Array", guildId: "add" };
               } else {
                 obj5 = null;
               }
@@ -57,10 +57,10 @@ function validateEmbeddedAppFrame(transport) {
   }
   obj3 = ApplicationFlagUtils;
 }
-const TransportTypes = fn(4739).TransportTypes;
+const TransportTypes = fn(4769).TransportTypes;
 const Constants = fn(1074);
 ({ ApplicationFlags: metroRequire, RPCErrors: closure_7 } = Constants);
-const asLaunched = fn(8665).asLaunched;
+const asLaunched = fn(8699).asLaunched;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/helpers/validateEmbeddedAppFrame.tsx");
 

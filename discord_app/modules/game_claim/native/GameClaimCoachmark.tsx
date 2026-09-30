@@ -1,19 +1,19 @@
-// === Module 15997: GameClaimCoachmark ===
+// === Module 16022: GameClaimCoachmark ===
 
-// Module 15997 (GameClaimCoachmark)
+// Module 16022 (GameClaimCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4832 */;
-import components_Button_Button from "components/Button/Button" /* 5447 */;
-import ButtonConstants from "ButtonConstants" /* 5452 */;
-import Pressables from "Pressables" /* 5602 */;
-import Card from "Card" /* 6085 */;
-import XSmallIcon from "XSmallIcon" /* 6158 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8202 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 8549 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 9745 */;
-import GameClaimCardStack from "GameClaimCardStack" /* 15998 */;
-import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 15999 */;
+import Text_Text from "Text/Text" /* 4862 */;
+import components_Button_Button from "components/Button/Button" /* 5477 */;
+import ButtonConstants from "ButtonConstants" /* 5482 */;
+import Pressables from "Pressables" /* 5632 */;
+import Card from "Card" /* 6115 */;
+import XSmallIcon from "XSmallIcon" /* 6188 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8233 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 8583 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 9779 */;
+import GameClaimCardStack from "GameClaimCardStack" /* 16023 */;
+import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 16024 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -30,7 +30,7 @@ const jsxProd = fn(21);
 const PX_8 = nativeDefault.space.PX_8;
 const PX_82 = nativeDefault.space.PX_8;
 let closure_12 = 2 * nativeDefault.space.PX_12;
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj = { card: { padding: nativeDefault.space.PX_12 }, closeButton: null, centeredText: null, body: null, cta: null };
 let size = { position: "absolute", top: nativeDefault.space.PX_12, right: nativeDefault.space.PX_12, width: 24, height: 24, alignItems: "center", justifyContent: "center", zIndex: 1 };
 obj.closeButton = size;
@@ -122,7 +122,7 @@ export default noop.memo((arg0) => {
               require(constants2.TAKE_ACTION);
               v1 = 1;
               v3 = 1;
-              const obj5 = { value: v1(6901).redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(6905).LoginHandoffSource.GAME_CLAIM), done: false };
+              const obj5 = { value: v1(6931).redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(6935).LoginHandoffSource.GAME_CLAIM), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {

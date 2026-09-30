@@ -1,7 +1,7 @@
-// === Module 4464: SecondaryIndexMap ===
+// === Module 4494: SecondaryIndexMap ===
 
-// Module 4464 (SecondaryIndexMap)
-import sortedIndexByDefault from "sortedIndexBy" /* 4465 */;
+// Module 4494 (SecondaryIndexMap)
+import sortedIndexByDefault from "sortedIndexBy" /* 4495 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 let closure_3 = [];
@@ -197,11 +197,11 @@ prototype["set"] = function set(arg0, value) {
 prototype["delete"] = function delete(arg0) {
   return this.set(arg0, null);
 };
-prototype["getIndex"] = function getIndex(item) {
-  let tmp2 = this.valueIndexes[item];
+prototype["getIndex"] = function getIndex(arg0) {
+  let tmp2 = this.valueIndexes[arg0];
   if (null == tmp2) {
     const items = [];
-    tmp.valueIndexes[item] = items;
+    tmp.valueIndexes[arg0] = items;
     tmp2 = items;
   }
   return tmp2;

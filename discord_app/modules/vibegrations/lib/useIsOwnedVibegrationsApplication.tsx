@@ -1,17 +1,17 @@
-// === Module 8659: useIsOwnedVibegrationsApplication ===
+// === Module 8693: useIsOwnedVibegrationsApplication ===
 
-// Module 8659 (useIsOwnedVibegrationsApplication)
+// Module 8693 (useIsOwnedVibegrationsApplication)
 import BackoffDefault from "Backoff" /* 559 */;
-import VibegrationsUtils from "VibegrationsUtils" /* 5536 */;
-import VibegrationsActionCreators from "VibegrationsActionCreators" /* 8661 */;
+import VibegrationsUtils from "VibegrationsUtils" /* 5566 */;
+import VibegrationsActionCreators from "VibegrationsActionCreators" /* 8695 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2067 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8660 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8694 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const isProjectOwner = fn(8660).isProjectOwner;
+const isProjectOwner = fn(8694).isProjectOwner;
 let closure_6 = new BackoffDefault(30000, 300000);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/lib/useIsOwnedVibegrationsApplication.tsx");

@@ -1,7 +1,7 @@
-// === Module 14997: SynchronizeIconNative ===
+// === Module 15028: SynchronizeIconNative ===
 
-// Module 14997 (SynchronizeIconNative)
-import inlineStyles from "inlineStyles" /* 8074 */;
+// Module 15028 (SynchronizeIconNative)
+import inlineStyles from "inlineStyles" /* 8106 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;

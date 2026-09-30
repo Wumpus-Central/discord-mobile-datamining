@@ -1,15 +1,15 @@
-// === Module 7633: GuildProductPurchaseSystemMessage ===
+// === Module 7663: GuildProductPurchaseSystemMessage ===
 
-// Module 7633 (GuildProductPurchaseSystemMessage)
+// Module 7663 (GuildProductPurchaseSystemMessage)
 import util from "util" /* 1115 */;
 import AvatarUtils from "AvatarUtils" /* 1397 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1400 */;
-import useMessageAuthor from "useMessageAuthor" /* 5249 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7567 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7569 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7571 */;
-import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 7601 */;
-import MessageRecord from "MessageRecord" /* 4480 */;
+import useMessageAuthor from "useMessageAuthor" /* 5279 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7597 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7599 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7601 */;
+import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 7631 */;
+import MessageRecord from "MessageRecord" /* 4510 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 
 require = fn;

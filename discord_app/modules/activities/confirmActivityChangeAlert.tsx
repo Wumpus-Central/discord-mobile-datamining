@@ -1,11 +1,11 @@
-// === Module 8960: confirmActivityChangeAlert ===
+// === Module 8994: confirmActivityChangeAlert ===
 
-// Module 8960 (confirmActivityChangeAlert)
+// Module 8994 (confirmActivityChangeAlert)
 import util from "util" /* 1115 */;
 import StringUtils from "StringUtils" /* 2011 */;
-import useChannelName from "useChannelName" /* 4989 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5369 */;
-import RelationshipStore from "RelationshipStore" /* 4479 */;
+import useChannelName from "useChannelName" /* 5019 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5399 */;
+import RelationshipStore from "RelationshipStore" /* 4509 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

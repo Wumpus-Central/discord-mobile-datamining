@@ -1,6 +1,6 @@
-// === Module 16504: getActivityReportOptions ===
+// === Module 16534: getActivityReportOptions ===
 
-// Module 16504 (getActivityReportOptions)
+// Module 16534 (getActivityReportOptions)
 import util from "util" /* 1115 */;
 import Constants from "Constants" /* 2005 */;
 import size from "module_2" /* 2 */;

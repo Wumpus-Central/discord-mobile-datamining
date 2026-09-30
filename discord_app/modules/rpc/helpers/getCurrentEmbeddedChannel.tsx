@@ -1,13 +1,13 @@
-// === Module 14205: getCurrentEmbeddedChannel ===
+// === Module 14234: getCurrentEmbeddedChannel ===
 
-// Module 14205 (getCurrentEmbeddedChannel)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8666 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14201 */;
-import FramesStore from "FramesStore" /* 8664 */;
+// Module 14234 (getCurrentEmbeddedChannel)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8700 */;
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14230 */;
+import FramesStore from "FramesStore" /* 8698 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 
 require = fn;
-const TransportTypes = fn(4739).TransportTypes;
+const TransportTypes = fn(4769).TransportTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/getCurrentEmbeddedChannel.tsx");
 

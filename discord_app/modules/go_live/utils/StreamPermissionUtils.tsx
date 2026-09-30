@@ -1,13 +1,13 @@
-// === Module 7304: StreamPermissionUtils ===
+// === Module 7334: StreamPermissionUtils ===
 
-// Module 7304 (StreamPermissionUtils)
-import ChannelUtils from "ChannelUtils" /* 4981 */;
-import AgeGateUtils from "AgeGateUtils" /* 5046 */;
-import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 5895 */;
-import GameConsoleStore from "GameConsoleStore" /* 4853 */;
+// Module 7334 (StreamPermissionUtils)
+import ChannelUtils from "ChannelUtils" /* 5011 */;
+import AgeGateUtils from "AgeGateUtils" /* 5076 */;
+import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 5925 */;
+import GameConsoleStore from "GameConsoleStore" /* 4883 */;
 import GuildStore from "GuildStore" /* 2067 */;
-import PermissionStore from "PermissionStore" /* 4469 */;
-import VoiceStateStore from "VoiceStateStore" /* 4855 */;
+import PermissionStore from "PermissionStore" /* 4499 */;
+import VoiceStateStore from "VoiceStateStore" /* 4885 */;
 
 const require = globalThis.__r;
 
@@ -105,7 +105,7 @@ function canWatchStream(basicChannel1, VoiceStateStore, GuildStore, PermissionSt
   }
 }
 const ChannelRecordBase = fn(2049).ChannelRecordBase;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4467).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4497).GUILD_VOCAL_CHANNELS_KEY;
 const Permissions = fn(1074).Permissions;
 const StreamUnavailableReasons = { REMOTE_MODE: 0, [0]: "REMOTE_MODE", CHANNEL_FULL: 1, [1]: "CHANNEL_FULL", NO_PERMISSION: 2, [2]: "NO_PERMISSION", AGE_RESTRICTED: 3, [3]: "AGE_RESTRICTED" };
 const size = fn(2);

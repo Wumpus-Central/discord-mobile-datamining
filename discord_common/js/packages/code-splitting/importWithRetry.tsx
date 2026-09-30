@@ -1,6 +1,6 @@
-// === Module 4508: importWithRetry ===
+// === Module 4538: importWithRetry ===
 
-// Module 4508 (importWithRetry)
+// Module 4538 (importWithRetry)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

@@ -1,9 +1,9 @@
-// === Module 16077: MiniaturesSpotIllustration ===
+// === Module 16106: MiniaturesSpotIllustration ===
 
-// Module 16077 (MiniaturesSpotIllustration)
+// Module 16106 (MiniaturesSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 6065 */;
-import _modDef16078 from "module_16078" /* 16078 */;
+import FastImageDefault from "FastImage" /* 6095 */;
+import _modDef16107 from "module_16107" /* 16107 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const MiniaturesSpotIllustration = function MiniaturesSpotIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef16078 };
+  const obj2 = { uri: _modDef16107 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

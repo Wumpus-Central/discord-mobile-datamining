@@ -1,19 +1,19 @@
-// === Module 17281: AgeVerificationManager ===
+// === Module 17316: AgeVerificationManager ===
 
-// Module 17281 (AgeVerificationManager)
+// Module 17316 (AgeVerificationManager)
 import LoggerDefault from "Logger" /* 3 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1096 */;
 import Server from "Server" /* 1979 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 5048 */;
-import ChannelMessagesDefault from "ChannelMessages" /* 5751 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5902 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 5903 */;
-import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8212 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 5078 */;
+import ChannelMessagesDefault from "ChannelMessages" /* 5781 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5932 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 5933 */;
+import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8243 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
-import MessageStore from "MessageStore" /* 5056 */;
+import MessageStore from "MessageStore" /* 5086 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
 import UserStore from "UserStore" /* 1372 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6705 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6735 */;
 
 require = fn;
 function handleMessageCreate(channelId) {
@@ -55,7 +55,7 @@ function handleMessageCreate(channelId) {
 const transformUser = fn(1372).transformUser;
 const Constants = fn(1074);
 ({ ChannelTypes: closure_8, MAX_MESSAGES_PER_CHANNEL: closure_9 } = Constants);
-const SafetyToastType = fn(8012).SafetyToastType;
+const SafetyToastType = fn(8042).SafetyToastType;
 let closure_10 = new LoggerDefault("AgeVerificationManager");
 const prototype = function AgeVerificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -113,7 +113,7 @@ const prototype = function AgeVerificationManager() {
         }
         if (tmp20) {
           (function handleLoadChannelMessages(channelId) {
-            const messages = _true(7042).fetchMessages({ channelId, limit });
+            const messages = _true(7072).fetchMessages({ channelId, limit });
           })(tmp16);
           (function handleLoadForumPosts(arg0) {
             channel = channel.getChannel(arg0);
@@ -130,8 +130,8 @@ const prototype = function AgeVerificationManager() {
               tmp4 = type1 !== tmp3.GUILD_MEDIA;
             }
             if (!tmp4) {
-              channelId(6888).preloadForumThreads(channel);
-              const obj = channelId(6888);
+              channelId(6918).preloadForumThreads(channel);
+              const obj = channelId(6918);
             }
           })(tmp16);
         }

@@ -1,9 +1,9 @@
-// === Module 8386: useGameAnnouncements ===
+// === Module 8417: useGameAnnouncements ===
 
-// Module 8386 (useGameAnnouncements)
+// Module 8417 (useGameAnnouncements)
 import _mod19 from "module_19" /* 19 */;
-import GameProfileHttpUtils from "GameProfileHttpUtils" /* 8387 */;
-import GameProfileStore from "GameProfileStore" /* 8300 */;
+import GameProfileHttpUtils from "GameProfileHttpUtils" /* 8418 */;
+import GameProfileStore from "GameProfileStore" /* 8331 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

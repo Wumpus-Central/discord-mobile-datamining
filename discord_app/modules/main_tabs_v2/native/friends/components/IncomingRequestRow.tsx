@@ -1,13 +1,13 @@
-// === Module 16774: IncomingRequestRow ===
+// === Module 16809: IncomingRequestRow ===
 
-// Module 16774 (IncomingRequestRow)
+// Module 16809 (IncomingRequestRow)
 import util from "util" /* 1115 */;
-import UserUtilsDefault from "UserUtils" /* 4678 */;
-import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 12296 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 15852 */;
+import UserUtilsDefault from "UserUtils" /* 4708 */;
+import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 12326 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 15877 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4825 */;
-import ApplicationStore from "ApplicationStore" /* 5063 */;
+import AccessibilityStore from "AccessibilityStore" /* 4855 */;
+import ApplicationStore from "ApplicationStore" /* 5093 */;
 
 require = fn;
 function IncomingRequestRow(user) {
@@ -116,7 +116,7 @@ function IncomingGameFriendRequestRow(arg0) {
   const merged1 = Object.assign(merged);
   return <IncomingRequestRow user={user} applicationId={application.id} accessibilityLabel={null} acceptedRequestLabel={null} acceptedRequestAccessibilityLabel={null} acceptRequestAccessibilityLabel={null} ignoreRequestAccessibilityLabel={null} />;
 }
-const UserRowModes = fn(10489).UserRowModes;
+const UserRowModes = fn(10523).UserRowModes;
 const RelationshipTypes = fn(1074).RelationshipTypes;
 const jsx = fn(21).jsx;
 let closure_9 = { ACCEPT: "accept", DECLINE: "decline", WAVE: "wave" };

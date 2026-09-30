@@ -1,12 +1,12 @@
-// === Module 15945: useFavoritesGuildHideAction ===
+// === Module 15970: useFavoritesGuildHideAction ===
 
-// Module 15945 (useFavoritesGuildHideAction)
+// Module 15970 (useFavoritesGuildHideAction)
 import router_utils from "router_utils" /* 1101 */;
 import FavoritesUtils from "FavoritesUtils" /* 2070 */;
 import _modDef3361 from "module_3361" /* 3361 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 9851 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 9885 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4655 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4685 */;
 
 require = fn;
 const Routes = fn(1074).Routes;
@@ -14,7 +14,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHideAction.tsx");
 
 export default function useFavoritesGuildHideAction() {
-  hasAccess = hasAccess(9852).useFavoritesAccess().hasAccess;
+  hasAccess = hasAccess(9886).useFavoritesAccess().hasAccess;
   const items = [hasAccess];
   let obj2 = { isPreview: !hasAccess, label: null, subLabel: null, perform: null };
   const callback = noop.useCallback(() => {

@@ -1,6 +1,6 @@
-// === Module 11326: useShouldHideMediaOptions ===
+// === Module 11362: useShouldHideMediaOptions ===
 
-// Module 11326 (useShouldHideMediaOptions)
+// Module 11362 (useShouldHideMediaOptions)
 import ChannelStore from "ChannelStore" /* 2045 */;
 
 const require = globalThis.__r;

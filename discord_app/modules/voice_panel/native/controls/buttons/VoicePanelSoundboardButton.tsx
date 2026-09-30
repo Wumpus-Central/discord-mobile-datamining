@@ -1,14 +1,14 @@
-// === Module 17209: VoicePanelSoundboardButton ===
+// === Module 17244: VoicePanelSoundboardButton ===
 
-// Module 17209 (VoicePanelSoundboardButton)
+// Module 17244 (VoicePanelSoundboardButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import NativeViewDefault from "NativeView" /* 6067 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11923 */;
-import SoundboardIcon from "SoundboardIcon" /* 12195 */;
-import VoicePanelStyles from "VoicePanelStyles" /* 17195 */;
-import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 17196 */;
-import useSoundboardConfig from "useSoundboardConfig" /* 17210 */;
+import NativeViewDefault from "NativeView" /* 6097 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11957 */;
+import SoundboardIcon from "SoundboardIcon" /* 12227 */;
+import VoicePanelStyles from "VoicePanelStyles" /* 17230 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 17231 */;
+import useSoundboardConfig from "useSoundboardConfig" /* 17245 */;
 import noop from "module_19" /* 19 */;
 
 const useSoundboardConfigDefault = useSoundboardConfig;
@@ -16,7 +16,7 @@ const useSoundboardConfigDefault = useSoundboardConfig;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = { circle: null, iconContainer: null };
 let size = { width: "100%", height: "100%", borderRadius: nativeDefault.radii.round };
 obj2.circle = size;

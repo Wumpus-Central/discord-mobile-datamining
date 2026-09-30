@@ -1,9 +1,9 @@
-// === Module 4783: CheckmarkLargeIcon ===
+// === Module 4813: CheckmarkLargeIcon ===
 
-// Module 4783 (CheckmarkLargeIcon)
+// Module 4813 (CheckmarkLargeIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4530 */;
-import _mod4784 from "module_4784" /* 4784 */;
+import BaseIconImage from "BaseIconImage" /* 4560 */;
+import _mod4814 from "module_4814" /* 4814 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const CheckmarkLargeIcon = function CheckmarkLargeIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod4784, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod4814, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

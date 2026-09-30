@@ -1,12 +1,12 @@
-// === Module 8949: tryLaunchAsFrame ===
+// === Module 8983: tryLaunchAsFrame ===
 
-// Module 8949 (tryLaunchAsFrame)
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 8925 */;
-import canLaunchFrame from "canLaunchFrame" /* 8948 */;
-import ApplicationStore from "ApplicationStore" /* 5063 */;
+// Module 8983 (tryLaunchAsFrame)
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 8959 */;
+import canLaunchFrame from "canLaunchFrame" /* 8982 */;
+import ApplicationStore from "ApplicationStore" /* 5093 */;
 
 require = fn;
-const MAIN_SURFACE = fn(8665).MAIN_SURFACE;
+const MAIN_SURFACE = fn(8699).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/tryLaunchAsFrame.tsx");
 

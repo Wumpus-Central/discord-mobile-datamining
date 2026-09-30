@@ -1,6 +1,6 @@
-// === Module 4625: ? ===
+// === Module 4655: ? ===
 
-// Module 4625
+// Module 4655
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/rive/native/CheckpointCard.riv.js");

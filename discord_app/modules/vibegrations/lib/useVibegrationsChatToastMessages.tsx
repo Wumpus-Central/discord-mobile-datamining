@@ -1,13 +1,13 @@
-// === Module 16614: useVibegrationsChatToastMessages ===
+// === Module 16649: useVibegrationsChatToastMessages ===
 
-// Module 16614 (useVibegrationsChatToastMessages)
+// Module 16649 (useVibegrationsChatToastMessages)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5058 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5088 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CallChatToastsStore from "CallChatToastsStore" /* 16615 */;
-import MessageStore from "MessageStore" /* 5056 */;
+import CallChatToastsStore from "CallChatToastsStore" /* 16650 */;
+import MessageStore from "MessageStore" /* 5086 */;
 
 const require = globalThis.__r;
 

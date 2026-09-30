@@ -1,10 +1,10 @@
-// === Module 8344: ? ===
+// === Module 8375: ? ===
 
-// Module 8344
+// Module 8375
 import PlatformUtils2 from "PlatformUtils" /* 1364 */;
-import _mod6436 from "module_6436" /* 6436 */;
+import _mod6466 from "module_6466" /* 6466 */;
 import noop_mod from "module_19" /* 19 */;
-import ReanimatedRexport_mod from "ReanimatedRexport" /* 4566 */;
+import ReanimatedRexport_mod from "ReanimatedRexport" /* 4596 */;
 
 require = fn;
 let noop = noop_mod;
@@ -19,11 +19,11 @@ noop = function noop() {
 
 };
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_8 = ReanimatedRexport.createAnimatedComponent(fn(6436).FlashList);
+let closure_8 = ReanimatedRexport.createAnimatedComponent(fn(6466).FlashList);
 const forwardRefResult = noop.forwardRef((arg0, ref) => {
   maintainVisibleContentPosition = { maintainVisibleContentPosition, ref };
   const merged = Object.assign(arg0);
-  return jsx(_mod6436.FlashList, { maintainVisibleContentPosition, ref });
+  return jsx(_mod6466.FlashList, { maintainVisibleContentPosition, ref });
 });
 const forwardRefResult1 = noop.forwardRef((arg0, ref) => {
   maintainVisibleContentPosition = { maintainVisibleContentPosition, ref };
@@ -31,12 +31,12 @@ const forwardRefResult1 = noop.forwardRef((arg0, ref) => {
   return <closure_8 maintainVisibleContentPosition={maintainVisibleContentPosition} ref={ref} />;
 });
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(6436).FlashList);
+let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(6466).FlashList);
 const forwardRefResult2 = noop.forwardRef((arg0, ref) => {
   const merged = Object.assign(arg0, Object.assign({ preventNativeModalDismiss: 0 }));
   maintainVisibleContentPosition = { ref, maintainVisibleContentPosition, masonry: true };
   const merged1 = Object.assign(merged);
-  return jsx(_mod6436.FlashList, { ref, maintainVisibleContentPosition, masonry: true });
+  return jsx(_mod6466.FlashList, { ref, maintainVisibleContentPosition, masonry: true });
 });
 const forwardRefResult3 = noop.forwardRef((arg0, ref) => {
   ({ preventNativeModalDismiss, refreshControl } = arg0);
@@ -60,12 +60,12 @@ const forwardRefResult3 = noop.forwardRef((arg0, ref) => {
   maintainVisibleContentPosition = { ref, maintainVisibleContentPosition };
   const merged1 = Object.assign(merged);
   maintainVisibleContentPosition.refreshControl = memo;
-  return jsx(refreshControl(6435), { ref, maintainVisibleContentPosition });
+  return jsx(refreshControl(6465), { ref, maintainVisibleContentPosition });
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/flash-list/index.js");
-for (const key10063 in require("module_6436")) {
-  arg5[key10063] = require("module_6436")[key10063];
+for (const key10063 in require("module_6466")) {
+  arg5[key10063] = require("module_6466")[key10063];
   continue;
 }
 const forwardRefResult4 = noop.forwardRef((arg0, ref) => {
@@ -88,7 +88,7 @@ const forwardRefResult4 = noop.forwardRef((arg0, ref) => {
     }
     return tmp2;
   }, items);
-  maintainVisibleContentPosition.renderScrollComponent = preventNativeModalDismiss(6211).BottomSheetScrollView;
+  maintainVisibleContentPosition.renderScrollComponent = preventNativeModalDismiss(6241).BottomSheetScrollView;
   const merged1 = Object.assign(merged);
   maintainVisibleContentPosition.refreshControl = memo;
   return <closure_9 ref={ref} maintainVisibleContentPosition={maintainVisibleContentPosition} masonry renderScrollComponent={null} />;
@@ -119,7 +119,7 @@ export const BottomSheetMasonryFlashList = noop.forwardRef((arg0, ref) => {
     }
     return tmp2;
   }, items);
-  maintainVisibleContentPosition.renderScrollComponent = preventNativeModalDismiss(6211).BottomSheetScrollView;
+  maintainVisibleContentPosition.renderScrollComponent = preventNativeModalDismiss(6241).BottomSheetScrollView;
   const merged1 = Object.assign(merged);
   maintainVisibleContentPosition.refreshControl = memo;
   return <closure_9 ref={ref} maintainVisibleContentPosition={maintainVisibleContentPosition} masonry renderScrollComponent={null} />;

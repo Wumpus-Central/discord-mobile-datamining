@@ -1,9 +1,9 @@
-// === Module 13644: GuildBadgeForce ===
+// === Module 13671: GuildBadgeForce ===
 
-// Module 13644 (GuildBadgeForce)
+// Module 13671 (GuildBadgeForce)
 import v1 from "v1" /* 1255 */;
-import inlineStyles from "inlineStyles" /* 8074 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 13631 */;
+import inlineStyles from "inlineStyles" /* 8106 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 13658 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

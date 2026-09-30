@@ -1,24 +1,24 @@
-// === Module 16456: VibegrationsNativePreview ===
+// === Module 16485: VibegrationsNativePreview ===
 
-// Module 16456 (VibegrationsNativePreview)
+// Module 16485 (VibegrationsNativePreview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3715 from "module_3715" /* 3715 */;
-import Text_Text from "Text/Text" /* 4832 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4849 */;
-import components_Button_Button from "components/Button/Button" /* 5447 */;
-import Card from "Card" /* 6085 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 6697 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7212 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 8552 */;
-import FramesNativeManagerDefault from "FramesNativeManager" /* 8916 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 8925 */;
+import Text_Text from "Text/Text" /* 4862 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4879 */;
+import components_Button_Button from "components/Button/Button" /* 5477 */;
+import Card from "Card" /* 6115 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 6727 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7242 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 8586 */;
+import FramesNativeManagerDefault from "FramesNativeManager" /* 8950 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 8959 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 8664 */;
+import FramesStore from "FramesStore" /* 8698 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
-import ReadStateStore from "ReadStateStore" /* 4851 */;
+import ReadStateStore from "ReadStateStore" /* 4881 */;
 import AppStateStore from "AppStateStore" /* 1980 */;
 
 require = fn;
@@ -197,7 +197,7 @@ function PreviewBot(previewApplicationId) {
   let stateFromStores1;
   let stateFromStores2;
   let tmp = closure_26();
-  const application = id(6750).useApplication(previewApplicationId.previewApplicationId);
+  const application = id(6780).useApplication(previewApplicationId.previewApplicationId);
   const data = application.data;
   id = undefined;
   if (data != null) {
@@ -209,7 +209,7 @@ function PreviewBot(previewApplicationId) {
   if (id == null) {
     id = null;
   }
-  let obj = id(6750);
+  let obj = id(6780);
   const items = [ChannelStore];
   const items1 = [id];
   stateFromStores = id(504).useStateFromStores(items, () => {
@@ -236,8 +236,8 @@ function PreviewBot(previewApplicationId) {
         if (!closure_3) {
           c0 = false;
           const obj2 = { recipientIds: tmp, navigateToChannel: false };
-          const obj = stateFromStores(4849);
-          stateFromStores(4849).openPrivateChannel(obj2).catch(() => {
+          const obj = stateFromStores(4879);
+          stateFromStores(4879).openPrivateChannel(obj2).catch(() => {
             if (!c0) {
               closure_2(id);
             }
@@ -306,7 +306,7 @@ function PreviewBot(previewApplicationId) {
       const intl3 = tmp2(1115).intl;
       obj4.text = intl3.string(tmp2(1115).t["5911Lb"]);
       obj4.onPress = callback;
-      tmp19Result = closure_24(tmp2(5447).Button, obj4);
+      tmp19Result = closure_24(tmp2(5477).Button, obj4);
     }
     obj2.children = tmp19Result;
     return closure_24(StatusCard, obj2);
@@ -319,10 +319,10 @@ function PreviewBot(previewApplicationId) {
   } else {
     const obj6 = { style: tmp.dm, children: null };
     const obj7 = { guildId, channelId: stateFromStores.id, chatInputRef: ref, screenIndex: "vibegrations-preview", alwaysRespectKeyboard: true, disableGradient: true };
-    const items8 = [closure_24(stateFromStores(11051), obj7, stateFromStores.id), ];
+    const items8 = [closure_24(stateFromStores(11087), obj7, stateFromStores.id), ];
     let tmp29Result = null;
     if (tmp2Result6.isAndroid()) {
-      tmp29Result = closure_24(tmp2(16472).PortalKeyboardRenderer, { portal: true });
+      tmp29Result = closure_24(tmp2(16501).PortalKeyboardRenderer, { portal: true });
     }
     items8[1] = tmp29Result;
     obj6.children = items8;
@@ -333,15 +333,15 @@ function PreviewBot(previewApplicationId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const vibegrationsDesignFeedbackStore = fn(16413);
+const vibegrationsDesignFeedbackStore = fn(16442);
 ({ exitVibegrationsDesignFeedback: map1, useVibegrationsDesignFeedback: closure_14 } = vibegrationsDesignFeedbackStore);
 const Constants = fn(1074);
 ({ AnalyticsObjects: closure_15, AnalyticsObjectTypes: closure_16, AnalyticsSections: closure_17, AppStates: closure_18, ME: closure_19 } = Constants);
-const FramesConstants = fn(8665);
+const FramesConstants = fn(8699);
 ({ FrameLayoutModes: closure_20, isLaunched: closure_21, MAIN_SURFACE: closure_22, makeFrameId: closure_23 } = FramesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_24, jsxs: closure_25 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = { frame: { flex: 1 }, centered: { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24 }, card: { alignSelf: "stretch" }, cardBody: null, cardCopy: null, cardText: null, widget: null, dm: null };
 let obj3 = { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24 };
 obj2.cardBody = { padding: nativeDefault.space.PX_16, alignItems: "center", gap: nativeDefault.space.PX_12 };

@@ -1,6 +1,6 @@
-// === Module 10860: ? ===
+// === Module 10895: ? ===
 
-// Module 10860
+// Module 10895
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/orbs/tier2_rewardTile_animated.webm.js");

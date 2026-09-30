@@ -1,9 +1,9 @@
-// === Module 8360: GameProfileSkeleton ===
+// === Module 8391: GameProfileSkeleton ===
 
-// Module 8360 (GameProfileSkeleton)
+// Module 8391 (GameProfileSkeleton)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4566 */;
-import GameProfileSkeletonPulse from "GameProfileSkeletonPulse" /* 8361 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4596 */;
+import GameProfileSkeletonPulse from "GameProfileSkeletonPulse" /* 8392 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ class GameProfileSkeletonPlaceholder {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = { placeholder: { backgroundColor: nativeDefault.colors.ICON_MUTED }, button: null, buttonSm: null, buttonMd: null };
 const obj3 = { backgroundColor: nativeDefault.colors.ICON_MUTED };
 obj2.button = { borderRadius: nativeDefault.radii.sm };

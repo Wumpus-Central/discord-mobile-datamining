@@ -1,9 +1,9 @@
-// === Module 9580: canUseStreamSetting ===
+// === Module 9614: canUseStreamSetting ===
 
-// Module 9580 (canUseStreamSetting)
+// Module 9614 (canUseStreamSetting)
 import PremiumConstants from "PremiumConstants" /* 1374 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4488 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 4728 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4518 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 4758 */;
 import size from "module_2" /* 2 */;
 
 const StreamQualities = PremiumConstants.StreamQualities;

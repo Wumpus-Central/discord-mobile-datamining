@@ -1,9 +1,9 @@
-// === Module 17322: ForumManager ===
+// === Module 17357: ForumManager ===
 
-// Module 17322 (ForumManager)
-import ForumPostDataLoader from "ForumPostDataLoader" /* 6888 */;
+// Module 17357 (ForumManager)
+import ForumPostDataLoader from "ForumPostDataLoader" /* 6918 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6705 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6735 */;
 
 require = fn;
 const isStaticChannelRoute = fn(2052).isStaticChannelRoute;

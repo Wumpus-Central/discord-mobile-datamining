@@ -1,13 +1,13 @@
-// === Module 16446: VibegrationsChangelogSheet ===
+// === Module 16475: VibegrationsChangelogSheet ===
 
-// Module 16446 (VibegrationsChangelogSheet)
+// Module 16475 (VibegrationsChangelogSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
 import _modDef3715 from "module_3715" /* 3715 */;
-import _modDef4421 from "module_4421" /* 4421 */;
-import DateUtils from "DateUtils" /* 4512 */;
-import Text_Text from "Text/Text" /* 4832 */;
+import _modDef4451 from "module_4451" /* 4451 */;
+import DateUtils from "DateUtils" /* 4542 */;
+import Text_Text from "Text/Text" /* 4862 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = { entries: { gap: nativeDefault.space.PX_12 }, entry: null };
 let obj3 = { gap: nativeDefault.space.PX_12 };
 obj2.entry = { gap: nativeDefault.space.PX_4 };
@@ -42,7 +42,7 @@ export default function VibegrationsChangelogSheet() {
   obj4.scrollIndicatorInsets = { bottom };
   obj4.children = result.map((children) => {
     const obj = { style: entry.entry, children: null };
-    const items = [DateUtils.dateFormat(_modDef4421(children.date, "YYYY-MM-DD"), "LL"), ];
+    const items = [DateUtils.dateFormat(_modDef4451(children.date, "YYYY-MM-DD"), "LL"), ];
     let combined = null;
     if (obj3.isVibegrationsChangelogEntryExclusive(children)) {
       const intl = util.intl;

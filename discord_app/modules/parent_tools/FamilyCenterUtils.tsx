@@ -1,14 +1,14 @@
-// === Module 7177: FamilyCenterUtils ===
+// === Module 7207: FamilyCenterUtils ===
 
-// Module 7177 (FamilyCenterUtils)
+// Module 7207 (FamilyCenterUtils)
 import util from "util" /* 1115 */;
 import _modDef2487 from "module_2487" /* 2487 */;
-import _modDef4421 from "module_4421" /* 4421 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7125 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7123 */;
+import _modDef4451 from "module_4451" /* 4451 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7155 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7153 */;
 
 require = fn;
-const FamilyCenterConstants = fn(7124);
+const FamilyCenterConstants = fn(7154);
 ({ ACTION_TO_TEXT: closure_4, FAMILY_CENTER_ERROR_CODE_TO_FAILURE: hasOwnProperty, FamilyCenterFailureCode: metroRequire, TeenActionDisplayType: closure_7, UserLinkStatus: closure_8, UserLinkType: closure_9 } = FamilyCenterConstants);
 let c10 = 86400;
 let c11 = 172800;
@@ -45,10 +45,10 @@ export const getActivityWindowTimestampFormatter = function getActivityWindowTim
   return tmp5;
 };
 export const formatUserActivityTimestamp = function formatUserActivityTimestamp(time, timestampFormatter, arg2) {
-  const diffResult = _modDef4421().diff(_modDef4421(time), "s");
+  const diffResult = _modDef4451().diff(_modDef4451(time), "s");
   const tmp3 = timestampFormatter();
-  const obj = _modDef4421();
-  _modDef4421(time).format("LL");
+  const obj = _modDef4451();
+  _modDef4451(time).format("LL");
   if (diffResult < c10) {
     let yesterday = tmp3.today;
   } else if (diffResult < c11) {
@@ -67,9 +67,9 @@ export const formatUserActivityTimestamp = function formatUserActivityTimestamp(
   return yesterday;
 };
 export const formatLinkTimestamp = function formatLinkTimestamp(arg0, SENT_TIMESTAMP_FORMATTER) {
-  const diffResult = _modDef4421().diff(_modDef4421(arg0), "s");
+  const diffResult = _modDef4451().diff(_modDef4451(arg0), "s");
   const time = SENT_TIMESTAMP_FORMATTER();
-  _modDef4421(arg0);
+  _modDef4451(arg0);
   if (diffResult < 60) {
     let yesterday = time.seconds;
   } else if (diffResult < 3600) {

@@ -1,21 +1,21 @@
-// === Module 11193: createSocialLayerStorefrontProductDetailsEmbed ===
+// === Module 11229: createSocialLayerStorefrontProductDetailsEmbed ===
 
-// Module 11193 (createSocialLayerStorefrontProductDetailsEmbed)
+// Module 11229 (createSocialLayerStorefrontProductDetailsEmbed)
 import util from "util" /* 1115 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import _modDef3585 from "module_3585" /* 3585 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6813 */;
-import StorefrontUtils from "StorefrontUtils" /* 6818 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7552 */;
-import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 11194 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6843 */;
+import StorefrontUtils from "StorefrontUtils" /* 6848 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7582 */;
+import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 11230 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5063 */;
-import SKUStore from "SKUStore" /* 5989 */;
+import ApplicationStore from "ApplicationStore" /* 5093 */;
+import SKUStore from "SKUStore" /* 6019 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const InviteTypes = fn(7320).InviteTypes;
+const InviteTypes = fn(7350).InviteTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx");
 
@@ -133,5 +133,5 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedApplications = func
     const items = [...new Set(found.map((applicationId) => applicationId.applicationId))];
     return items;
   }, items2);
-  memo(6755)(stateFromStoresArray);
+  memo(6785)(stateFromStoresArray);
 };

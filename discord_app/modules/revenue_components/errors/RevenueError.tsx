@@ -1,6 +1,6 @@
-// === Module 11156: RevenueError ===
+// === Module 11192: RevenueError ===
 
-// Module 11156 (RevenueError)
+// Module 11192 (RevenueError)
 import size from "module_2" /* 2 */;
 
 const prototype = function RevenueError(errorHandlingBehavior) {

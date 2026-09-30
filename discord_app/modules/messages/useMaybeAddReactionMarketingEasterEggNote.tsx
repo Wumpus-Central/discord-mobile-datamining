@@ -1,7 +1,7 @@
-// === Module 9962: useMaybeAddReactionMarketingEasterEggNote ===
+// === Module 9996: useMaybeAddReactionMarketingEasterEggNote ===
 
-// Module 9962 (useMaybeAddReactionMarketingEasterEggNote)
-import useMaybeAddPollsMarketingEasterEggNoteDefault from "useMaybeAddPollsMarketingEasterEggNote" /* 9963 */;
+// Module 9996 (useMaybeAddReactionMarketingEasterEggNote)
+import useMaybeAddPollsMarketingEasterEggNoteDefault from "useMaybeAddPollsMarketingEasterEggNote" /* 9997 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/useMaybeAddReactionMarketingEasterEggNote.tsx");

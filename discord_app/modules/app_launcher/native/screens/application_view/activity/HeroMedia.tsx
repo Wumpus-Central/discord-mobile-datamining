@@ -1,19 +1,19 @@
-// === Module 11735: HeroMedia ===
+// === Module 11769: HeroMedia ===
 
-// Module 11735 (HeroMedia)
+// Module 11769 (HeroMedia)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6755 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9098 */;
-import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 10955 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11709 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6785 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9132 */;
+import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 10991 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11743 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4825 */;
+import AccessibilityStore from "AccessibilityStore" /* 4855 */;
 
 require = fn;
 const DEFAULT_CONTENT_PADDING = fn(1484).DEFAULT_CONTENT_PADDING;
 const jsx = fn(21).jsx;
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let closure_6 = createStyles.createStyles({ mediaBackground: { backgroundColor: "black" } });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/application_view/activity/HeroMedia.tsx");

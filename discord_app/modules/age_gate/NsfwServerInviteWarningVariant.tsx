@@ -1,10 +1,10 @@
-// === Module 9401: NsfwServerInviteWarningVariant ===
+// === Module 9435: NsfwServerInviteWarningVariant ===
 
-// Module 9401 (NsfwServerInviteWarningVariant)
+// Module 9435 (NsfwServerInviteWarningVariant)
 import util from "util" /* 1115 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 5048 */;
-import getTinyBroncoWarningDescriptions from "getTinyBroncoWarningDescriptions" /* 9402 */;
-import useAgeGroupPresentation from "useAgeGroupPresentation" /* 9403 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 5078 */;
+import getTinyBroncoWarningDescriptions from "getTinyBroncoWarningDescriptions" /* 9436 */;
+import useAgeGroupPresentation from "useAgeGroupPresentation" /* 9437 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/age_gate/NsfwServerInviteWarningVariant.tsx");

@@ -1,6 +1,6 @@
-// === Module 12161: GuildDismissibleContentUtils ===
+// === Module 12195: GuildDismissibleContentUtils ===
 
-// Module 12161 (GuildDismissibleContentUtils)
+// Module 12195 (GuildDismissibleContentUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import Uint8ArrayUtils from "Uint8ArrayUtils" /* 2028 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
@@ -14,8 +14,8 @@ const UserSettingsDelay = fn(1084).UserSettingsDelay;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_dismissible_content/GuildDismissibleContentUtils.tsx");
 
-export const isContentDismissed = function isContentDismissed(GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK, id) {
-  const dismissedGuildContent = UserSettingsProtoStore.getDismissedGuildContent(id);
+export const isContentDismissed = function isContentDismissed(GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK, guildId) {
+  const dismissedGuildContent = UserSettingsProtoStore.getDismissedGuildContent(guildId);
   let hasBitResult = null != dismissedGuildContent;
   if (hasBitResult) {
     hasBitResult = Uint8ArrayUtils.hasBit(dismissedGuildContent, GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK);

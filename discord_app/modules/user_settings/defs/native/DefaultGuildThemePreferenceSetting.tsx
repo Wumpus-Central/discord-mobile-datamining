@@ -1,20 +1,20 @@
-// === Module 15032: DefaultGuildThemePreferenceSetting ===
+// === Module 15063: DefaultGuildThemePreferenceSetting ===
 
-// Module 15032 (DefaultGuildThemePreferenceSetting)
+// Module 15063 (DefaultGuildThemePreferenceSetting)
 import util from "util" /* 1115 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
 import UserSettings from "UserSettings" /* 2021 */;
-import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 4760 */;
+import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 4790 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(11175);
+const SettingBuilders = fn(11211);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Q7mm4g);
   },
-  parent: fn(7582).MobileUserSettings.APPEARANCE,
+  parent: fn(7612).MobileUserSettings.APPEARANCE,
   useValue: fn(2021).DefaultGuildThemePreference.useSetting,
   onValueChange: function onDefaultGuildThemePreferenceChange(arg0) {
     const DefaultGuildThemePreference = UserSettings.DefaultGuildThemePreference;

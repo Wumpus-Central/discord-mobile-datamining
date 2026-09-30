@@ -1,14 +1,14 @@
-// === Module 8254: ReportModals ===
+// === Module 8285: ReportModals ===
 
-// Module 8254 (ReportModals)
+// Module 8285 (ReportModals)
 import GuildRecordUtils from "GuildRecordUtils" /* 2059 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5016 */;
-import MenuTypes from "MenuTypes" /* 8255 */;
-import showReportModal from "showReportModal" /* 8256 */;
-import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8258 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5046 */;
+import MenuTypes from "MenuTypes" /* 8286 */;
+import showReportModal from "showReportModal" /* 8287 */;
+import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8289 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import StageInstanceStore from "StageInstanceStore" /* 2050 */;
-import MessageRecord from "MessageRecord" /* 4480 */;
+import MessageRecord from "MessageRecord" /* 4510 */;
 import UserRecord from "UserRecord" /* 1386 */;
 
 require = fn;
@@ -87,14 +87,14 @@ export const showReportModalForGuildDirectoryEntry = function showReportModalFor
   const obj4 = showReportModal;
   obj4.showReportModal({ name: MenuTypes.ReportNames.GUILD_DIRECTORY_ENTRY, record: entry }, {}, { onSubmit });
 };
-export const showReportModalForMessage = function showReportModalForMessage(message, mobile_media_message_preview_action_sheet, onSubmit) {
+export const showReportModalForMessage = function showReportModalForMessage(message, mobile_media_message_preview_action_sheet, onSubmit, onClose) {
   const obj = { message_id: message.id, channel_id: message.channel_id };
   const obj2 = AppAnalyticsUtilsDefault;
   const merged = Object.assign(obj);
   obj2.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, { report_type: MenuTypes.ReportNames.MESSAGE });
   const obj3 = { report_type: MenuTypes.ReportNames.MESSAGE };
   const obj4 = showReportModal;
-  obj4.showReportModal({ name: MenuTypes.ReportNames.MESSAGE, record: message }, {}, { onSubmit });
+  obj4.showReportModal({ name: MenuTypes.ReportNames.MESSAGE, record: message }, {}, { onSubmit, onClose });
 };
 export const showStaffTestReportModalForMessage = function showStaffTestReportModalForMessage(id, arg1, onSubmit) {
   const obj = { message_id: id.id, channel_id: id.channel_id };
@@ -208,7 +208,7 @@ export const showUnauthenticatedReportModalForTida = function showUnauthenticate
 export const showUnauthenticatedReportModalForMessage = function showUnauthenticatedReportModalForMessage(emailToken, onClose) {
   const tmp = new MessageRecord({});
   const obj = AppAnalyticsUtilsDefault;
-  const merged = Object.assign({ message_id: "current", channel_id: "channel" });
+  const merged = Object.assign({ message_id: "Array", channel_id: "add" });
   obj.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, { report_type: MenuTypes.UnauthenticatedReportNames.MESSAGE });
   const obj2 = { report_type: MenuTypes.UnauthenticatedReportNames.MESSAGE };
   const obj3 = showReportModal;

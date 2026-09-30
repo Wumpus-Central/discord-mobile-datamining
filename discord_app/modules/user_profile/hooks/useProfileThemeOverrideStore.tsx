@@ -1,10 +1,10 @@
-// === Module 7839: useProfileThemeOverrideStore ===
+// === Module 7869: useProfileThemeOverrideStore ===
 
-// Module 7839 (useProfileThemeOverrideStore)
+// Module 7869 (useProfileThemeOverrideStore)
 import Constants from "Constants" /* 1074 */;
-import shared from "shared" /* 4685 */;
-import useThemeDefault from "useTheme" /* 4767 */;
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 7840 */;
+import shared from "shared" /* 4715 */;
+import useThemeDefault from "useTheme" /* 4797 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 7870 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

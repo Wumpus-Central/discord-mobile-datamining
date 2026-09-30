@@ -1,9 +1,9 @@
-// === Module 16543: CaterpillarIllocon ===
+// === Module 16573: CaterpillarIllocon ===
 
-// Module 16543 (CaterpillarIllocon)
+// Module 16573 (CaterpillarIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 6065 */;
-import _modDef16544 from "module_16544" /* 16544 */;
+import FastImageDefault from "FastImage" /* 6095 */;
+import _modDef16574 from "module_16574" /* 16574 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const CaterpillarIllocon = function CaterpillarIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef16544 };
+  const obj2 = { uri: _modDef16574 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

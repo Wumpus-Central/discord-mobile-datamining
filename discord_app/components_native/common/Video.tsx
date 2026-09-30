@@ -1,10 +1,10 @@
-// === Module 7920: common/Video ===
+// === Module 7950: common/Video ===
 
-// Module 7920 (common/Video)
+// Module 7950 (common/Video)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 6625 */;
-import openMediaModal from "openMediaModal" /* 7872 */;
+import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 6655 */;
+import openMediaModal from "openMediaModal" /* 7902 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ require = fn;
 class VideoComponent {
   constructor(arg0) {
     flag = global.paused;
-    ({ style, source, poster, onLoadStart, onLoad, onError, onEnd } = global);
+    ({ style, source, poster, onLoadStart, onLoad, onReadyForDisplay, onError, onEnd } = global);
     if (flag === undefined) {
       flag = false;
     }
@@ -56,7 +56,7 @@ class VideoComponent {
         };
       }
     }, items);
-    obj = { style, source, importantForAccessibility, poster, muted: flag2, paused: null, posterResizeMode: null, resizeMode: null, repeat: true, playInBackground: null, pictureInPicture: false, playWhenInactive: false, onLoadStart: null, onLoad: null, onError: null, onEnd: null, disableFocus: null, "aria-hidden": null, mixWithOthers: null, preventsDisplaySleepDuringVideoPlayback: null, httpEngine: null };
+    obj = { style, source, importantForAccessibility, poster, muted: flag2, paused: null, posterResizeMode: null, resizeMode: null, repeat: true, playInBackground: null, pictureInPicture: false, playWhenInactive: false, onLoadStart: null, onLoad: null, onReadyForDisplay: null, onError: null, onEnd: null, disableFocus: null, "aria-hidden": null, mixWithOthers: null, preventsDisplaySleepDuringVideoPlayback: null, httpEngine: null };
     tmp3 = jsx;
     if (!flag) {
       if (pauseWhileAppInactive) {
@@ -70,6 +70,7 @@ class VideoComponent {
     obj.playInBackground = flag3;
     obj.onLoadStart = onLoadStart;
     obj.onLoad = onLoad;
+    obj.onReadyForDisplay = onReadyForDisplay;
     obj.onError = onError;
     obj.onEnd = onEnd;
     obj.disableFocus = disableFocus;
@@ -88,7 +89,7 @@ class VideoComponent {
 get_ActivityIndicator = fn(17);
 ({ TouchableWithoutFeedback: closure_4, View: hasOwnProperty, Image: metroRequire, AppState: closure_7 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = { container: { flex: 1, shadowColor: nativeDefault.unsafe_rawColors.BLACK, shadowOpacity: 0.5, shadowOffset: { height: 1, width: 0 }, shadowRadius: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, video: null };
 let obj3 = { flex: 1, shadowColor: nativeDefault.unsafe_rawColors.BLACK, shadowOpacity: 0.5, shadowOffset: { height: 1, width: 0 }, shadowRadius: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.video = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
@@ -222,7 +223,7 @@ prototype["render"] = function render() {
     self.renderImage();
   }
 };
-Video.contextType = fn(4540).ThemeContext;
+Video.contextType = fn(4570).ThemeContext;
 let size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/Video.tsx");
 

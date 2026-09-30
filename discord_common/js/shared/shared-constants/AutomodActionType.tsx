@@ -1,6 +1,6 @@
-// === Module 11513: AutomodActionType ===
+// === Module 11549: AutomodActionType ===
 
-// Module 11513 (AutomodActionType)
+// Module 11549 (AutomodActionType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/AutomodActionType.tsx");

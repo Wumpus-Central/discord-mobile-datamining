@@ -1,9 +1,9 @@
-// === Module 10338: useIsEligibleForBogoOffer ===
+// === Module 10372: useIsEligibleForBogoOffer ===
 
-// Module 10338 (useIsEligibleForBogoOffer)
+// Module 10372 (useIsEligibleForBogoOffer)
 import noop from "module_19" /* 19 */;
-import SubscriptionStore from "SubscriptionStore" /* 4494 */;
-import PromotionsStore from "PromotionsStore" /* 10295 */;
+import SubscriptionStore from "SubscriptionStore" /* 4524 */;
+import PromotionsStore from "PromotionsStore" /* 10329 */;
 
 const require = fn;
 const PremiumTypes = fn(1374).PremiumTypes;
@@ -17,13 +17,13 @@ export const useIsEligibleForBogoOffer = function useIsEligibleForBogoOffer() {
   const items1 = [SubscriptionStore];
   const stateFromStores1 = forceUpdate(504).useStateFromStores(items1, () => premiumTypeSubscription.getPremiumTypeSubscription());
   const obj2 = forceUpdate(504);
-  const premiumTrialOffer = forceUpdate(7033).usePremiumTrialOffer();
-  const obj4 = forceUpdate(7033);
-  const premiumDiscountOffer = forceUpdate(10337).usePremiumDiscountOffer();
-  const obj5 = forceUpdate(10337);
-  const isPaymentsBlocked = forceUpdate(7003).useIsPaymentsBlocked();
-  const obj6 = forceUpdate(7003);
-  forceUpdate = forceUpdate(7026).useForceUpdate();
+  const premiumTrialOffer = forceUpdate(7063).usePremiumTrialOffer();
+  const obj4 = forceUpdate(7063);
+  const premiumDiscountOffer = forceUpdate(10371).usePremiumDiscountOffer();
+  const obj5 = forceUpdate(10371);
+  const isPaymentsBlocked = forceUpdate(7033).useIsPaymentsBlocked();
+  const obj6 = forceUpdate(7033);
+  forceUpdate = forceUpdate(7056).useForceUpdate();
   let valueOfResult = null;
   if (null != stateFromStores) {
     const endDate = stateFromStores.endDate;

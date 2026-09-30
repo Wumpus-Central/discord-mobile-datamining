@@ -1,13 +1,13 @@
-// === Module 7904: useMediaViewerSyncer ===
+// === Module 7934: useMediaViewerSyncer ===
 
-// Module 7904 (useMediaViewerSyncer)
-import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 7878 */;
+// Module 7934 (useMediaViewerSyncer)
+import ReanimatedRexport from "ReanimatedRexport" /* 4596 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 7908 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Constants = fn(7905);
+const Constants = fn(7935);
 ({ THUMBNAIL_MARGIN: hasOwnProperty, THUMBNAIL_HEIGHT: metroRequire, THUMBNAIL_MAX_WIDTH: closure_7, THUMBNAIL_MIN_WIDTH: closure_8, THUMBNAIL_WIDTH_MARGIN: closure_9 } = Constants);
 const PlatformUtils = fn(1364);
 let closure_10 = PlatformUtils.isAndroid();

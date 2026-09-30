@@ -1,21 +1,21 @@
-// === Module 10008: GIFPickerItemActionSheet ===
+// === Module 10042: GIFPickerItemActionSheet ===
 
-// Module 10008 (GIFPickerItemActionSheet)
+// Module 10042 (GIFPickerItemActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ToastUtils from "ToastUtils" /* 4527 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4528 */;
-import components_Button_Button from "components/Button/Button" /* 5447 */;
-import ClipboardUtils from "ClipboardUtils" /* 6776 */;
-import GIFPickerActionCreators from "GIFPickerActionCreators" /* 9994 */;
-import GifIcon from "GifIcon" /* 10009 */;
+import ToastUtils from "ToastUtils" /* 4557 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4558 */;
+import components_Button_Button from "components/Button/Button" /* 5477 */;
+import ClipboardUtils from "ClipboardUtils" /* 6806 */;
+import GIFPickerActionCreators from "GIFPickerActionCreators" /* 10028 */;
+import GifIcon from "GifIcon" /* 10043 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = { contentWrapper: { paddingHorizontal: nativeDefault.space.PX_16 }, gifContainer: { flexDirection: "column", alignItems: "center" }, gifImage: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.gifImage = { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };

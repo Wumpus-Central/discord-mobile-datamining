@@ -1,6 +1,6 @@
-// === Module 11140: PollsInteractionStore ===
+// === Module 11176: PollsInteractionStore ===
 
-// Module 11140 (PollsInteractionStore)
+// Module 11176 (PollsInteractionStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import identity from "module_1243" /* 1243 */;

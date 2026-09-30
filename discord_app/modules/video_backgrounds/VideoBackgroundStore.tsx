@@ -1,9 +1,9 @@
-// === Module 9276: VideoBackgroundStore ===
+// === Module 9310: VideoBackgroundStore ===
 
-// Module 9276 (VideoBackgroundStore)
+// Module 9310 (VideoBackgroundStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4891 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4921 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1184 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
 import MediaEngineStore from "MediaEngineStore" /* 1993 */;

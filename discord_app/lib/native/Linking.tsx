@@ -1,8 +1,8 @@
-// === Module 4525: Linking ===
+// === Module 4555: Linking ===
 
-// Module 4525 (Linking)
+// Module 4555 (Linking)
 import _mod17 from "module_17" /* 17 */;
-import handleURL from "handleURL" /* 4520 */;
+import handleURL from "handleURL" /* 4550 */;
 import size from "module_2" /* 2 */;
 
 const Linking = _mod17.Linking;

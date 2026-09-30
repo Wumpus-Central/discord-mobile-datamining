@@ -1,15 +1,15 @@
-// === Module 11714: AppsBanner ===
+// === Module 11748: AppsBanner ===
 
-// Module 11714 (AppsBanner)
+// Module 11748 (AppsBanner)
 import util from "util" /* 1115 */;
-import BannerBaseDefault from "BannerBase" /* 11712 */;
-import OnboardingAppsRocketDefault from "OnboardingAppsRocket" /* 11715 */;
+import BannerBaseDefault from "BannerBase" /* 11746 */;
+import OnboardingAppsRocketDefault from "OnboardingAppsRocket" /* 11749 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let closure_5 = createStyles.createStyles({ rocketIconContainer: { position: "absolute", top: -20 }, rocketIcon: { width: 90, height: 90 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/banner/AppsBanner.tsx");

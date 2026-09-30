@@ -1,6 +1,6 @@
-// === Module 9058: VideoRendererNativeComponent ===
+// === Module 9092: VideoRendererNativeComponent ===
 
-// Module 9058 (VideoRendererNativeComponent)
+// Module 9092 (VideoRendererNativeComponent)
 import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;

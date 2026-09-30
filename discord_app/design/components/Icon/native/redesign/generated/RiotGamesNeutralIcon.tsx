@@ -1,9 +1,9 @@
-// === Module 8320: RiotGamesNeutralIcon ===
+// === Module 8351: RiotGamesNeutralIcon ===
 
-// Module 8320 (RiotGamesNeutralIcon)
+// Module 8351 (RiotGamesNeutralIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4530 */;
-import _mod8321 from "module_8321" /* 8321 */;
+import BaseIconImage from "BaseIconImage" /* 4560 */;
+import _mod8352 from "module_8352" /* 8352 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const RiotGamesNeutralIcon = function RiotGamesNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8321, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8352, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

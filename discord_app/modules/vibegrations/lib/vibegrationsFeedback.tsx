@@ -1,18 +1,18 @@
-// === Module 16483: vibegrationsFeedback ===
+// === Module 16513: vibegrationsFeedback ===
 
-// Module 16483 (vibegrationsFeedback)
+// Module 16513 (vibegrationsFeedback)
 import Storage3 from "Storage" /* 510 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import _modDef3715 from "module_3715" /* 3715 */;
-import FeedbackUtils from "FeedbackUtils" /* 11293 */;
-import VibegrationsChatStore from "VibegrationsChatStore" /* 12813 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8660 */;
+import FeedbackUtils from "FeedbackUtils" /* 11329 */;
+import VibegrationsChatStore from "VibegrationsChatStore" /* 12843 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8694 */;
 
 require = fn;
-const turnSettled = fn(12813).turnSettled;
+const turnSettled = fn(12843).turnSettled;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const Constants = fn(11290);
+const Constants = fn(11326);
 ({ FeedbackCategory: closure_7, FeedbackOptionVariant: closure_8, FeedbackType: closure_9, VibegrationsFeedbackOption: c10 } = Constants);
 const shownVibegrationsFeedbackProjectIds = "shownVibegrationsFeedbackProjectIds";
 const set = new Set();

@@ -1,11 +1,11 @@
-// === Module 12922: transformUploaderAttachments ===
+// === Module 12949: transformUploaderAttachments ===
 
-// Module 12922 (transformUploaderAttachments)
+// Module 12949 (transformUploaderAttachments)
 import util from "util" /* 1115 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 4986 */;
-import CloudUpload from "CloudUpload" /* 5606 */;
-import RowGeneratorConstants from "RowGeneratorConstants" /* 7540 */;
-import ExplicitMediaUtils from "ExplicitMediaUtils" /* 7747 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 5016 */;
+import CloudUpload from "CloudUpload" /* 5636 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 7570 */;
+import ExplicitMediaUtils from "ExplicitMediaUtils" /* 7777 */;
 import size from "module_2" /* 2 */;
 
 const AttachmentType = RowGeneratorConstants.AttachmentType;

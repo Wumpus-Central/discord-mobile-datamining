@@ -1,16 +1,16 @@
-// === Module 17265: RestrictedHoursManager ===
+// === Module 17300: RestrictedHoursManager ===
 
-// Module 17265 (RestrictedHoursManager)
+// Module 17300 (RestrictedHoursManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1115 */;
 import FamilyCenterModels from "FamilyCenterModels" /* 1395 */;
 import _modDef2487 from "module_2487" /* 2487 */;
-import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils" /* 9710 */;
-import RestrictedHoursActionCreators from "RestrictedHoursActionCreators" /* 17260 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 9708 */;
+import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils" /* 9744 */;
+import RestrictedHoursActionCreators from "RestrictedHoursActionCreators" /* 17295 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 9742 */;
 import UserStore from "UserStore" /* 1372 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7123 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6705 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7153 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6735 */;
 
 require = fn;
 function scheduleUpcomingWarning() {

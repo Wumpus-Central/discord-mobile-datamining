@@ -1,25 +1,25 @@
-// === Module 15595: CollectiblesShopV2 ===
+// === Module 15628: CollectiblesShopV2 ===
 
-// Module 15595 (CollectiblesShopV2)
+// Module 15628 (CollectiblesShopV2)
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import dismissible_content from "dismissible_content" /* 2029 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4654 */;
-import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7174 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7797 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8478 */;
-import NativePaymentHooksDefault from "NativePaymentHooks" /* 8832 */;
-import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment" /* 15600 */;
-import ShopNitroUpsellBanner from "ShopNitroUpsellBanner" /* 15601 */;
-import ShopCategory from "ShopCategory" /* 15602 */;
-import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 15604 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4684 */;
+import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7204 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7827 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8509 */;
+import NativePaymentHooksDefault from "NativePaymentHooks" /* 8866 */;
+import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment" /* 15633 */;
+import ShopNitroUpsellBanner from "ShopNitroUpsellBanner" /* 15634 */;
+import ShopCategory from "ShopCategory" /* 15635 */;
+import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 15637 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 4835 */;
+import DevSettingsStore from "DevSettingsStore" /* 4865 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 import UserStore from "UserStore" /* 1372 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7128 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7158 */;
 
 const MobileNitroUpsellInShopFeedExperimentDefault = MobileNitroUpsellInShopFeedExperiment;
 
@@ -103,7 +103,7 @@ const Constants = fn(1074);
 const ContentDismissActionType = fn(2042).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let closure_19 = createStyles.createStyles({ rootContainer: { height: "100%", width: "100%" }, spinner: { position: "absolute", top: "50%", left: "50%", marginTop: -8, marginLeft: -8 } });
 let closure_20 = { CATEGORY: "category", NITRO_UPSELL: "nitro_upsell" };
 function CollectiblesShopInternal(analyticsSource) {

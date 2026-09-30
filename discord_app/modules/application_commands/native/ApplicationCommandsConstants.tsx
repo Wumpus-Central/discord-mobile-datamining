@@ -1,6 +1,6 @@
-// === Module 9893: ApplicationCommandsConstants ===
+// === Module 9927: ApplicationCommandsConstants ===
 
-// Module 9893 (ApplicationCommandsConstants)
+// Module 9927 (ApplicationCommandsConstants)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import size from "module_2" /* 2 */;
 

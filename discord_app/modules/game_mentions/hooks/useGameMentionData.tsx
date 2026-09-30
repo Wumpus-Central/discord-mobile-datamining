@@ -1,10 +1,10 @@
-// === Module 5585: useGameMentionData ===
+// === Module 5615: useGameMentionData ===
 
-// Module 5585 (useGameMentionData)
+// Module 5615 (useGameMentionData)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
-import useGameProfileObscured from "useGameProfileObscured" /* 5590 */;
+import useGameProfileObscured from "useGameProfileObscured" /* 5620 */;
 import GameStore from "GameStore" /* 2001 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 5586 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 5616 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;

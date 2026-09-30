@@ -1,11 +1,36 @@
-// === Module 16560: vibegrationsPublishCard ===
+// === Module 16590: vibegrationsPublishCard ===
 
-// Module 16560 (vibegrationsPublishCard)
+// Module 16590 (vibegrationsPublishCard)
 import _modDef3715 from "module_3715" /* 3715 */;
+import VibegrationsChatStore from "VibegrationsChatStore" /* 12843 */;
 import size from "module_2" /* 2 */;
 
+const turnSettled = VibegrationsChatStore.turnSettled;
 const result = size.fileFinishedImporting("modules/vibegrations/lib/vibegrationsPublishCard.tsx");
 
+export const isVibegrationsPublishCtaVisible = function isVibegrationsPublishCtaVisible(tmp3Result) {
+  let tmp = null != tmp3Result;
+  if (tmp) {
+    const status = tmp3Result.status;
+    let state;
+    if (status != null) {
+      state = status.state;
+    }
+    tmp = "unpublished" === state;
+  }
+  return tmp;
+};
+export const publishCardServerName = function publishCardServerName(name) {
+  let combined = name;
+  const arr = Array.from(name);
+  if (arr.length > 24) {
+    const substr = arr.slice(0, 23);
+    const joined = substr.join("");
+    const _HermesInternal = HermesInternal;
+    combined = "" + joined.trimEnd() + "\u2026";
+  }
+  return combined;
+};
 export const livePublishCardMessageId = function livePublishCardMessageId(arg0, arg1) {
   if ("unpublished" !== arg1) {
     return null;
@@ -19,6 +44,36 @@ export const livePublishCardMessageId = function livePublishCardMessageId(arg0, 
     }
     return null;
   }
+};
+export const outdatedNoticeRenderId = function outdatedNoticeRenderId(memo, stateFromStores2) {
+  let tmp3;
+  if ("changes" !== stateFromStores2) {
+    return null;
+  } else {
+    let diff = memo.length - 1;
+    if (0 <= diff) {
+      while (true) {
+        tmp3 = memo[diff];
+        if ("user" !== tmp3.role) {
+          if ("publish_notice" !== tmp3.kind) {
+            if (true !== tmp3.interrupted) {
+              break;
+            }
+          }
+        }
+        diff = diff - 1;
+      }
+      let render_id = null;
+      if (turnSettled(tmp3)) {
+        render_id = tmp3.render_id;
+      }
+      return render_id;
+    }
+    return null;
+  }
+};
+export const showsOutdatedNotice = function showsOutdatedNotice(isUpdate) {
+  return null != isUpdate && isUpdate.isUpdate && null == isUpdate.disabledReason;
 };
 export const publishNoticeMessage = function publishNoticeMessage(notice) {
   if (notice.update) {

@@ -1,6 +1,6 @@
-// === Module 10871: ? ===
+// === Module 10906: ? ===
 
-// Module 10871
+// Module 10906
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/orbs/reward_tile_v3.webm.js");

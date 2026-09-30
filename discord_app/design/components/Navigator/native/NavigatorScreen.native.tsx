@@ -1,8 +1,8 @@
-// === Module 6622: NavigatorScreen ===
+// === Module 6652: NavigatorScreen ===
 
-// Module 6622 (NavigatorScreen)
-import config from "config" /* 6623 */;
-import PostponeRender from "PostponeRender" /* 6624 */;
+// Module 6652 (NavigatorScreen)
+import config from "config" /* 6653 */;
+import PostponeRender from "PostponeRender" /* 6654 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

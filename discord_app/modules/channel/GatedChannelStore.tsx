@@ -3,9 +3,9 @@
 // Module 2100 (GatedChannelStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import PremiumRoleUtils from "PremiumRoleUtils" /* 4459 */;
-import RolePermissionUtils from "RolePermissionUtils" /* 4460 */;
-import CreatorMonetizationRestrictionsUtils from "CreatorMonetizationRestrictionsUtils" /* 4461 */;
+import PremiumRoleUtils from "PremiumRoleUtils" /* 4489 */;
+import RolePermissionUtils from "RolePermissionUtils" /* 4490 */;
+import CreatorMonetizationRestrictionsUtils from "CreatorMonetizationRestrictionsUtils" /* 4491 */;
 import ImpersonateStore from "ImpersonateStore" /* 2101 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import GuildMemberStore from "GuildMemberStore" /* 2108 */;

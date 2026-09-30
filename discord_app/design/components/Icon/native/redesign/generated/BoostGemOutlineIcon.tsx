@@ -1,9 +1,9 @@
-// === Module 17564: BoostGemOutlineIcon ===
+// === Module 17599: BoostGemOutlineIcon ===
 
-// Module 17564 (BoostGemOutlineIcon)
+// Module 17599 (BoostGemOutlineIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4530 */;
-import _mod17565 from "module_17565" /* 17565 */;
+import BaseIconImage from "BaseIconImage" /* 4560 */;
+import _mod17600 from "module_17600" /* 17600 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const BoostGemOutlineIcon = function BoostGemOutlineIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17565, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17600, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

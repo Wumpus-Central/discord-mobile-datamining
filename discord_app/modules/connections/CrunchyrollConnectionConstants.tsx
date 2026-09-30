@@ -1,7 +1,7 @@
-// === Module 7951: CrunchyrollConnectionConstants ===
+// === Module 7981: CrunchyrollConnectionConstants ===
 
-// Module 7951 (CrunchyrollConnectionConstants)
-import OAuth2Scopes from "OAuth2Scopes" /* 7952 */;
+// Module 7981 (CrunchyrollConnectionConstants)
+import OAuth2Scopes from "OAuth2Scopes" /* 7982 */;
 import size from "module_2" /* 2 */;
 
 const items = [OAuth2Scopes.OAuth2Scopes.ACTIVITIES_WRITE, OAuth2Scopes.OAuth2Scopes.EMAIL, OAuth2Scopes.OAuth2Scopes.IDENTIFY];

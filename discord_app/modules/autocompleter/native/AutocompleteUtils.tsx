@@ -1,14 +1,14 @@
-// === Module 9892: autocompleter/AutocompleteUtils ===
+// === Module 9926: autocompleter/AutocompleteUtils ===
 
-// Module 9892 (autocompleter/AutocompleteUtils)
+// Module 9926 (autocompleter/AutocompleteUtils)
 import nativeDefault from "native" /* 576 */;
-import UserUtilsDefault from "UserUtils" /* 4678 */;
-import useChannelName from "useChannelName" /* 4989 */;
-import TimestampUtils from "TimestampUtils" /* 5496 */;
-import FormDividerDefault from "FormDivider" /* 8224 */;
+import UserUtilsDefault from "UserUtils" /* 4708 */;
+import useChannelName from "useChannelName" /* 5019 */;
+import TimestampUtils from "TimestampUtils" /* 5526 */;
+import FormDividerDefault from "FormDivider" /* 8255 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4467 */;
-import RelationshipStore from "RelationshipStore" /* 4479 */;
+import GuildChannelStore from "GuildChannelStore" /* 4497 */;
+import RelationshipStore from "RelationshipStore" /* 4509 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -19,13 +19,13 @@ function AutocompleteFormDivider() {
 let closure_3 = fn(2049).isGuildSelectableChannelType;
 const Constants = fn(1074);
 ({ AutoCompleteResultTypes: closure_7, WHITESPACE_RE: closure_8 } = Constants);
-const ApplicationCommandsConstants = fn(9893);
+const ApplicationCommandsConstants = fn(9927);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_9, AUTOCOMPLETE_ROW_HEIGHT: c10 } = ApplicationCommandsConstants);
-const ChannelAutocompleteConstants = fn(5472);
+const ChannelAutocompleteConstants = fn(5502);
 ({ CHANNEL_SENTINEL: closure_11, EMOJI_SENTINEL: closure_12, GAME_MENTION_SENTINEL: map1, MENTION_SENTINEL: closure_14 } = ChannelAutocompleteConstants);
 const jsx = fn(21).jsx;
 const hairlineWidth = fn(17).StyleSheet.hairlineWidth;
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 const obj2 = { itemDivider: { marginLeft: 16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_17 = createStyles.createStyles(obj2);
 const re19 = /[\r\n]/;

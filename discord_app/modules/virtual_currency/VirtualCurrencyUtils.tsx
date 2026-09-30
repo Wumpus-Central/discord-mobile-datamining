@@ -1,11 +1,11 @@
-// === Module 10853: VirtualCurrencyUtils ===
+// === Module 10888: VirtualCurrencyUtils ===
 
-// Module 10853 (VirtualCurrencyUtils)
+// Module 10888 (VirtualCurrencyUtils)
 import Constants from "Constants" /* 1074 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1076 */;
 import PremiumConstants from "PremiumConstants" /* 1374 */;
 import dismissible_content from "dismissible_content" /* 2029 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4654 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4684 */;
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2042 */;
 import size from "module_2" /* 2 */;
 

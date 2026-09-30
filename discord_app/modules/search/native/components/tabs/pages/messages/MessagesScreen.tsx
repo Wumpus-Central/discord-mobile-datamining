@@ -1,13 +1,13 @@
-// === Module 16730: MessagesScreen ===
+// === Module 16765: MessagesScreen ===
 
-// Module 16730 (MessagesScreen)
-import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 16692 */;
-import BaseMessagesScreen from "BaseMessagesScreen" /* 16716 */;
+// Module 16765 (MessagesScreen)
+import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 16727 */;
+import BaseMessagesScreen from "BaseMessagesScreen" /* 16751 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 11991 */;
+import SearchQueryStore from "SearchQueryStore" /* 12025 */;
 
 require = fn;
-const SearchConstants = fn(7468);
+const SearchConstants = fn(7499);
 ({ SEARCH_FILTERS_BY_TAB: hasOwnProperty, SearchFilter: metroRequire, SEARCH_PINNED_MESSAGES_LINE_CLAMP: closure_7, SEARCH_MESSAGES_DEFAULT_LINE_CLAMP: closure_8, MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_9, SearchListItemTypes: c10 } = SearchConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);

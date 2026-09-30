@@ -1,9 +1,9 @@
-// === Module 10511: TvIcon ===
+// === Module 10545: TvIcon ===
 
-// Module 10511 (TvIcon)
+// Module 10545 (TvIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4530 */;
-import _mod10512 from "module_10512" /* 10512 */;
+import BaseIconImage from "BaseIconImage" /* 4560 */;
+import _mod10546 from "module_10546" /* 10546 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const TvIcon = function TvIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10512, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10546, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

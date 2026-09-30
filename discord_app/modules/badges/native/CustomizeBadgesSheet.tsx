@@ -1,35 +1,35 @@
-// === Module 14352: CustomizeBadgesSheet ===
+// === Module 14381: CustomizeBadgesSheet ===
 
-// Module 14352 (CustomizeBadgesSheet)
+// Module 14381 (CustomizeBadgesSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4528 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4541 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4787 */;
-import HapticUtils from "HapticUtils" /* 4801 */;
-import Text_Text from "Text/Text" /* 4832 */;
-import timing from "timing" /* 4837 */;
-import timingPresets from "timingPresets" /* 4840 */;
-import Card from "Card" /* 6085 */;
-import EyeSlashIcon from "EyeSlashIcon" /* 6553 */;
-import ContextMenu from "ContextMenu" /* 7523 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 7525 */;
-import IconButton from "IconButton" /* 7528 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 7801 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7807 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 8828 */;
-import openPremiumModalDefault from "openPremiumModal" /* 8860 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 10625 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 10821 */;
-import BadgeUtils from "BadgeUtils" /* 10828 */;
-import PendingBadgeSettings from "PendingBadgeSettings" /* 12828 */;
-import BadgeGrid from "BadgeGrid" /* 14353 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4558 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4571 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4596 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4817 */;
+import HapticUtils from "HapticUtils" /* 4831 */;
+import Text_Text from "Text/Text" /* 4862 */;
+import timing from "timing" /* 4867 */;
+import timingPresets from "timingPresets" /* 4870 */;
+import Card from "Card" /* 6115 */;
+import EyeSlashIcon from "EyeSlashIcon" /* 6583 */;
+import ContextMenu from "ContextMenu" /* 7553 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 7555 */;
+import IconButton from "IconButton" /* 7558 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 7831 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7837 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 8862 */;
+import openPremiumModalDefault from "openPremiumModal" /* 8894 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 10659 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 10855 */;
+import BadgeUtils from "BadgeUtils" /* 10863 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 12858 */;
+import BadgeGrid from "BadgeGrid" /* 14382 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 7770 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 7800 */;
 import UserStore from "UserStore" /* 1372 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7802 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7832 */;
 
 require = fn;
 function HideBadgeMenu(arg0) {
@@ -119,13 +119,13 @@ get_ActivityIndicator = fn(17);
 ({ Platform, Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, AnalyticsObjects: c10, AnalyticsPages: closure_11, AnalyticsSections: closure_12 } = Constants);
-let closure_13 = fn(6738).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_13 = fn(6768).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const PremiumUpsellTypes = fn(1374).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let c17 = 80;
 let c18 = 16.666666666666668;
-let createStyles = fn(4836);
+let createStyles = fn(4866);
 let obj = { gridInset: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, grid: null, upsell: null, upsellCard: null, upsellContent: null, upsellCta: null, upsellText: null, message: null, messageText: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj.grid = { position: "relative", width: "100%", marginTop: nativeDefault.space.PX_8 };
@@ -142,12 +142,12 @@ let obj8 = { marginTop: nativeDefault.space.PX_12, borderRadius: nativeDefault.r
 obj.message = { alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_32 };
 obj.messageText = { textAlign: "center" };
 let closure_19 = createStyles.createStyles(obj);
-createStyles = fn(4836);
-let obj10 = { position: { position: "absolute" }, fill: { flex: 1 }, card: { flex: 1, alignItems: "center", padding: 0 }, icon: null, name: null, indicator: null, indicatorButton: null, iconHidden: null };
+createStyles = fn(4866);
+let obj10 = { position: { position: "absolute" }, fill: { flex: 1 }, card: { flex: 1, alignItems: "center", justifyContent: "center", padding: 0 }, icon: null, name: null, indicator: null, indicatorButton: null, iconHidden: null };
 let obj9 = { alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_32 };
-obj10.icon = { marginTop: nativeDefault.space.PX_24 };
-let obj12 = { marginTop: nativeDefault.space.PX_24 };
-obj10.name = { position: "absolute", start: 0, end: 0, bottom: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_4, textAlign: "center" };
+obj10.icon = { marginBottom: nativeDefault.space.PX_12 };
+let obj12 = { marginBottom: nativeDefault.space.PX_12 };
+obj10.name = { position: "absolute", start: 0, end: 0, bottom: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_12, textAlign: "center" };
 let size = { position: "absolute", top: nativeDefault.space.PX_8, end: nativeDefault.space.PX_8, width: 32, height: 32, alignItems: "flex-end", justifyContent: "flex-start" };
 obj10.indicator = size;
 obj10.indicatorButton = { position: "absolute", top: 0, end: 0, width: 48, height: 48, alignItems: "center", justifyContent: "center" };
@@ -161,8 +161,8 @@ function getSlotOffset(arg0, arg1) {
   point.y = rounded * (arg1 + BadgeGrid.BADGE_GRID_GAP);
   return point;
 }
-let obj13 = { position: "absolute", start: 0, end: 0, bottom: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_4, textAlign: "center" };
-getSlotOffset.__closure = { BADGE_GRID_COLUMNS: fn(14353).BADGE_GRID_COLUMNS, BADGE_GRID_GAP: fn(14353).BADGE_GRID_GAP };
+let obj13 = { position: "absolute", start: 0, end: 0, bottom: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_12, textAlign: "center" };
+getSlotOffset.__closure = { BADGE_GRID_COLUMNS: fn(14382).BADGE_GRID_COLUMNS, BADGE_GRID_GAP: fn(14382).BADGE_GRID_GAP };
 getSlotOffset.__workletHash = 8647997879684;
 getSlotOffset.__initData = { code: "function getSlotOffset_CustomizeBadgesSheetTsx1(index,tileSize){const{BADGE_GRID_COLUMNS,BADGE_GRID_GAP}=this.__closure;const column=index%BADGE_GRID_COLUMNS;return{x:column*(tileSize+BADGE_GRID_GAP),y:Math.floor(index/BADGE_GRID_COLUMNS)*(tileSize+BADGE_GRID_GAP)};}" };
 let closure_24 = noop.memo((badge) => {

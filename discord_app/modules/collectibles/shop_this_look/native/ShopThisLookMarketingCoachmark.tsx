@@ -1,9 +1,9 @@
-// === Module 12734: ShopThisLookMarketingCoachmark ===
+// === Module 12764: ShopThisLookMarketingCoachmark ===
 
-// Module 12734 (ShopThisLookMarketingCoachmark)
+// Module 12764 (ShopThisLookMarketingCoachmark)
 import util from "util" /* 1115 */;
-import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 12729 */;
-import BumpingFistsSpotIllustration from "BumpingFistsSpotIllustration" /* 12735 */;
+import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 12759 */;
+import BumpingFistsSpotIllustration from "BumpingFistsSpotIllustration" /* 12765 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,9 +12,9 @@ function ShopThisLookMarketingCoachmarkImage() {
 }
 const View = fn(17).View;
 const ContentDismissActionType = fn(2042).ContentDismissActionType;
-const UserProfileThemeTypes = fn(6795).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(6825).UserProfileThemeTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let closure_7 = createStyles.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/shop_this_look/native/ShopThisLookMarketingCoachmark.tsx");

@@ -1,6 +1,6 @@
-// === Module 7140: CollectiblesUtils ===
+// === Module 7170: CollectiblesUtils ===
 
-// Module 7140 (CollectiblesUtils)
+// Module 7170 (CollectiblesUtils)
 import _mod12 from "module_12" /* 12 */;
 import Constants2 from "Constants" /* 1085 */;
 import util from "util" /* 1115 */;
@@ -9,13 +9,13 @@ import PerksStateUtils from "PerksStateUtils" /* 1378 */;
 import user from "user" /* 1380 */;
 import NameplateRecord from "NameplateRecord" /* 1972 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1974 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4488 */;
-import PriceUtils from "PriceUtils" /* 6821 */;
-import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7133 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 7134 */;
-import ProfileFrameRecord from "ProfileFrameRecord" /* 7135 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7139 */;
-import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 7141 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4518 */;
+import PriceUtils from "PriceUtils" /* 6851 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7163 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 7164 */;
+import ProfileFrameRecord from "ProfileFrameRecord" /* 7165 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7169 */;
+import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 7171 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1076 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;

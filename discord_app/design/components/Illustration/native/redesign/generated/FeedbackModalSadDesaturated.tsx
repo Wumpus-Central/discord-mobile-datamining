@@ -1,8 +1,8 @@
-// === Module 11296: FeedbackModalSadDesaturated ===
+// === Module 11332: FeedbackModalSadDesaturated ===
 
-// Module 11296 (FeedbackModalSadDesaturated)
-import shared from "shared" /* 4685 */;
-import _mod7844 from "module_7844" /* 7844 */;
+// Module 11332 (FeedbackModalSadDesaturated)
+import shared from "shared" /* 4715 */;
+import _mod7874 from "module_7874" /* 7874 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,44 +14,44 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/FeedbackModalSadDesaturated.tsx");
 
 export const getFeedbackModalSadDesaturatedSource = function getFeedbackModalSadDesaturatedSource(theme) {
-  return _mod7844.getIllustrationSource(theme, {
+  return _mod7874.getIllustrationSource(theme, {
     dark() {
-      return require("module_11297");
+      return require("module_11333");
     },
     darker() {
-      return require("module_11298");
+      return require("module_11334");
     },
     light() {
-      return require("module_11299");
+      return require("module_11335");
     }
   });
 };
 export const useFeedbackModalSadDesaturatedSource = function useFeedbackModalSadDesaturatedSource() {
   const obj = shared;
-  return _mod7844.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod7874.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_11297");
+      return require("module_11333");
     },
     darker() {
-      return require("module_11298");
+      return require("module_11334");
     },
     light() {
-      return require("module_11299");
+      return require("module_11335");
     }
   });
 };
 export const FeedbackModalSadDesaturated = function FeedbackModalSadDesaturated(arg0) {
   const obj = shared;
   const obj4 = {};
-  const illustrationSource = _mod7844.getIllustrationSource(obj.useThemeContext().theme, {
+  const illustrationSource = _mod7874.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_11297");
+      return require("module_11333");
     },
     darker() {
-      return require("module_11298");
+      return require("module_11334");
     },
     light() {
-      return require("module_11299");
+      return require("module_11335");
     }
   });
   const merged = Object.assign(arg0);

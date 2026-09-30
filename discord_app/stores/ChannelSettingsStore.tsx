@@ -1,6 +1,6 @@
-// === Module 8251: ChannelSettingsStore ===
+// === Module 8282: ChannelSettingsStore ===
 
-// Module 8251 (ChannelSettingsStore)
+// Module 8282 (ChannelSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ThreadConstants from "ThreadConstants" /* 1114 */;
@@ -9,10 +9,10 @@ import ChannelRecord from "ChannelRecord" /* 2049 */;
 import ThreadSortOrder from "ThreadSortOrder" /* 2054 */;
 import ForumLayout from "ForumLayout" /* 2055 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 2059 */;
-import _modDef4421 from "module_4421" /* 4421 */;
-import ReactionUtils from "ReactionUtils" /* 4481 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4483 */;
-import InviteRecord from "InviteRecord" /* 7993 */;
+import _modDef4451 from "module_4451" /* 4451 */;
+import ReactionUtils from "ReactionUtils" /* 4511 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4513 */;
+import InviteRecord from "InviteRecord" /* 8023 */;
 import UserRecord from "UserRecord" /* 1386 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import Constants from "Constants" /* 1074 */;
@@ -99,7 +99,7 @@ function _createInvite(code) {
   }
   obj.guild = fromInviteGuildResult;
   ({ uses: obj.uses, max_uses: obj.maxUses, max_age: obj.maxAge } = code);
-  obj.createdAt = _modDef4421(code.created_at);
+  obj.createdAt = _modDef4451(code.created_at);
   ({ type: obj.type, roles: obj.roles } = code);
   return new InviteRecord(obj);
 }

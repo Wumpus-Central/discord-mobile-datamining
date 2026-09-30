@@ -1,17 +1,17 @@
-// === Module 11649: AddMediaToOriginalForumPostActionSheet ===
+// === Module 11683: AddMediaToOriginalForumPostActionSheet ===
 
-// Module 11649 (AddMediaToOriginalForumPostActionSheet)
+// Module 11683 (AddMediaToOriginalForumPostActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4800 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 5617 */;
-import tracking_Tracking from "tracking/Tracking" /* 7351 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4830 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 5647 */;
+import tracking_Tracking from "tracking/Tracking" /* 7381 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import GuildStore from "GuildStore" /* 2067 */;
-import MessageStore from "MessageStore" /* 5056 */;
+import MessageStore from "MessageStore" /* 5086 */;
 
 require = fn;
 let closure_16 = async function _upload2(arg0) {
@@ -72,28 +72,28 @@ let closure_16 = async function _upload2(arg0) {
             dependencyMap(true);
           });
           closure_132_5.on("progress", (currentSize) => {
-            const maxFileSizeResult = closure_0(5613).maxFileSize(id.id);
-            const obj = closure_0(5613);
-            const effectiveUploadLimit = closure_0(5641).getEffectiveUploadLimit(maxFileSizeResult);
+            const maxFileSizeResult = closure_0(5643).maxFileSize(id.id);
+            const obj = closure_0(5643);
+            const effectiveUploadLimit = closure_0(5671).getEffectiveUploadLimit(maxFileSizeResult);
             if (currentSize.currentSize > effectiveUploadLimit) {
               closure_1_5.cancel();
               dependencyMap(false);
-              closure_1(4800).hideActionSheet();
+              closure_1(4830).hideActionSheet();
               const obj4 = { file: currentSize, maxSize: effectiveUploadLimit, baseMaxSize: maxFileSizeResult, guildId: id.id, analyticsLocations };
-              closure_1(8776)(obj4);
-              const obj3 = closure_1(4800);
+              closure_1(8810)(obj4);
+              const obj3 = closure_1(4830);
             }
-            const obj2 = closure_0(5641);
+            const obj2 = closure_0(5671);
           });
           closure_132_5.on("error", () => {
             dependencyMap(false);
-            closure_1(4800).hideActionSheet();
+            closure_1(4830).hideActionSheet();
           });
           closure_132_5.on("complete", () => {
             dependencyMap(false);
-            closure_1(8773).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
-            const obj = closure_1(8773);
-            closure_1(4800).hideActionSheet();
+            closure_1(8807).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
+            const obj = closure_1(8807);
+            closure_1(4830).hideActionSheet();
           });
           const messages = closure_133_10.getMessages(closure_132_0);
           closure_132_7 = messages.get(closure_133_1(closure_133_2[18]).castChannelIdAsMessageId(closure_132_0));
@@ -141,7 +141,7 @@ let closure_16 = async function _upload2(arg0) {
           closure_1 = 0;
           const items = [];
           closure_1 = HermesBuiltin.arraySpread(closure_132_8, 0);
-          const mapped = closure_132_9.map((item, index) => closure_1_0(5608).getAttachmentPayload(item, index));
+          const mapped = closure_132_9.map((item, index) => closure_1_0(5638).getAttachmentPayload(item, index));
           dependencyMap = mapped;
           if (mapped == null) {
             dependencyMap = [];
@@ -227,12 +227,12 @@ let closure_16 = async function _upload2(arg0) {
   }
 };
 const View = fn(17).View;
-const DraftType = fn(5366).DraftType;
+const DraftType = fn(5396).DraftType;
 const Constants = fn(1074);
 ({ AbortCodes: closure_11, Endpoints: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = { container: { paddingHorizontal: 16, paddingTop: 24 }, post: { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, marginBottom: 32, shadowColor: nativeDefault.colors.BLACK, shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.25, shadowRadius: 4, elevation: 4 }, postContent: { marginBottom: 0, padding: 8 }, title: { textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", marginBottom: 32 }, button: null, buttonMargin: null };
 let obj3 = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, marginBottom: 32, shadowColor: nativeDefault.colors.BLACK, shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.25, shadowRadius: 4, elevation: 4 };
 obj2.button = { borderRadius: nativeDefault.radii.sm };

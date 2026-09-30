@@ -1,6 +1,6 @@
-// === Module 14775: ? ===
+// === Module 14806: ? ===
 
-// Module 14775
+// Module 14806
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BountiesPosterSpotIllustration-2x.png.js");

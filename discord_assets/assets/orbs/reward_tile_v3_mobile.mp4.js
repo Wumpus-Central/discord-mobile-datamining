@@ -1,6 +1,6 @@
-// === Module 10870: ? ===
+// === Module 10905: ? ===
 
-// Module 10870
+// Module 10905
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/orbs/reward_tile_v3_mobile.mp4.js");

@@ -1,28 +1,28 @@
-// === Module 9735: ChannelRowPreview ===
+// === Module 9769: ChannelRowPreview ===
 
-// Module 9735 (ChannelRowPreview)
+// Module 9769 (ChannelRowPreview)
 import UserSettings from "UserSettings" /* 2021 */;
-import useToken from "useToken" /* 4531 */;
-import LinkIcon from "LinkIcon" /* 4775 */;
-import Text_Text from "Text/Text" /* 4832 */;
-import createStyles from "createStyles" /* 4836 */;
-import useFontScale from "useFontScale" /* 5454 */;
-import ImageIcon from "ImageIcon" /* 5567 */;
-import PhoneCallIcon from "PhoneCallIcon" /* 7470 */;
-import PhoneHangUpIcon from "PhoneHangUpIcon" /* 7472 */;
-import RowGeneratorDefault from "RowGenerator" /* 7539 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 7543 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 7748 */;
-import MusicIcon from "MusicIcon" /* 9533 */;
-import useFormattedMessagePreview from "useFormattedMessagePreview" /* 9720 */;
-import VideoIcon from "VideoIcon" /* 9736 */;
-import AttachmentIcon from "AttachmentIcon" /* 9738 */;
-import StickerIcon from "StickerIcon" /* 9740 */;
-import MessagePreviewMarkup from "MessagePreviewMarkup" /* 9742 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 9745 */;
-import ChannelListLayout from "ChannelListLayout" /* 9747 */;
+import useToken from "useToken" /* 4561 */;
+import LinkIcon from "LinkIcon" /* 4805 */;
+import Text_Text from "Text/Text" /* 4862 */;
+import createStyles from "createStyles" /* 4866 */;
+import useFontScale from "useFontScale" /* 5484 */;
+import ImageIcon from "ImageIcon" /* 5597 */;
+import PhoneCallIcon from "PhoneCallIcon" /* 7501 */;
+import PhoneHangUpIcon from "PhoneHangUpIcon" /* 7503 */;
+import RowGeneratorDefault from "RowGenerator" /* 7569 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 7573 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 7778 */;
+import MusicIcon from "MusicIcon" /* 9567 */;
+import useFormattedMessagePreview from "useFormattedMessagePreview" /* 9754 */;
+import VideoIcon from "VideoIcon" /* 9770 */;
+import AttachmentIcon from "AttachmentIcon" /* 9772 */;
+import StickerIcon from "StickerIcon" /* 9774 */;
+import MessagePreviewMarkup from "MessagePreviewMarkup" /* 9776 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 9779 */;
+import ChannelListLayout from "ChannelListLayout" /* 9781 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4479 */;
+import RelationshipStore from "RelationshipStore" /* 4509 */;
 
 const require = globalThis.__r;
 

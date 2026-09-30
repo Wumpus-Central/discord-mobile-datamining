@@ -1,12 +1,12 @@
-// === Module 16421: VibegrationsCreateSheet ===
+// === Module 16450: VibegrationsCreateSheet ===
 
-// Module 16421 (VibegrationsCreateSheet)
+// Module 16450 (VibegrationsCreateSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4800 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 5537 */;
-import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 6782 */;
-import VibegrationsEffortPicker from "VibegrationsEffortPicker" /* 16424 */;
-import VibegrationsTemplateWizardSheet from "VibegrationsTemplateWizardSheet" /* 16428 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4830 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 5567 */;
+import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 6812 */;
+import VibegrationsEffortPicker from "VibegrationsEffortPicker" /* 16453 */;
+import VibegrationsTemplateWizardSheet from "VibegrationsTemplateWizardSheet" /* 16457 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -17,12 +17,12 @@ const VibegrationsTemplateWizardSheetDefault = VibegrationsTemplateWizardSheet;
 
 require = fn;
 const View = fn(17).View;
-const VibegrationsConnectionStore = fn(12812);
+const VibegrationsConnectionStore = fn(12842);
 ({ ensureConnection: closure_7, sendUserMessage: closure_8, stageModelSettings: closure_9 } = VibegrationsConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const VibegrationsCreateSheet = "VibegrationsCreateSheet";
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, form: null, section: null, sectionHeading: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.form = { gap: nativeDefault.space.PX_8 };
@@ -40,33 +40,39 @@ export default function VibegrationsCreateSheet(guildId) {
   let onCreated = guildId.onCreated;
   str = undefined;
   _slicedToArray = undefined;
-  noop = undefined;
-  VIBEGRATIONS_DEFAULT_TIER_SETTINGS = undefined;
   let first1;
-  closure_8 = undefined;
-  c9 = undefined;
+  c6 = undefined;
+  VIBEGRATIONS_DEFAULT_TIER_SETTINGS = undefined;
+  let first2;
+  closure_9 = undefined;
+  c10 = undefined;
   let callback;
-  closure_11 = undefined;
   closure_12 = undefined;
-  c13 = undefined;
+  closure_13 = undefined;
+  c14 = undefined;
   let memo;
-  c15 = undefined;
+  c16 = undefined;
   let callback3;
-  closure_17 = undefined;
-  const tmp = c13();
-  [str, obj8.onChange] = noop.useState("");
-  const tmp4 = _slicedToArray(noop.useState("guild"), 2);
+  closure_18 = undefined;
+  const tmp = closure_13();
+  [str, obj8.onChange] = first1.useState("");
+  const tmp4 = _slicedToArray(first1.useState("guild"), 2);
   const first = tmp4[0];
   _slicedToArray = tmp4[1];
-  [VIBEGRATIONS_DEFAULT_TIER_SETTINGS, c5] = _slicedToArray(noop.useState(null), 2);
+  const tmp6 = _slicedToArray(first1.useState(false), 2);
+  first1 = tmp7;
+  if ("guild" === first) {
+    first1 = tmp6[0];
+  }
+  [VIBEGRATIONS_DEFAULT_TIER_SETTINGS, c6] = _slicedToArray(first1.useState(null), 2);
   if (VIBEGRATIONS_DEFAULT_TIER_SETTINGS == null) {
     VIBEGRATIONS_DEFAULT_TIER_SETTINGS = require("VibegrationsTypes").VIBEGRATIONS_DEFAULT_TIER_SETTINGS;
   }
-  const tmp2Result = _slicedToArray(noop.useState(false), 2);
-  first1 = tmp2Result[0];
-  closure_8 = tmp2Result[1];
-  const tmp6 = _slicedToArray(noop.useState(null), 2);
-  [tmp12, c9] = _slicedToArray(noop.useState(null), 2);
+  const tmp2Result3 = _slicedToArray(first1.useState(false), 2);
+  first2 = tmp2Result3[0];
+  closure_9 = tmp2Result3[1];
+  const tmp2Result = _slicedToArray(first1.useState(null), 2);
+  [tmp15, c10] = _slicedToArray(first1.useState(null), 2);
   first((guild_id) => {
     c5 = 0;
     c6 = 0;
@@ -100,18 +106,20 @@ export default function VibegrationsCreateSheet(guildId) {
               closure_1 = tmp8;
               closure_129_0 = guild_id;
               closure_129_1 = undefined;
-              closure_1_8(true);
+              closure_1_9(true);
               _undefined(null);
               c4 = 2;
-              const obj5 = { guild_id, install_scope };
+              const obj5 = { guild_id, install_scope, flags: null };
+              const obj7 = guild_id(str[9]);
+              obj5.flags = guild_id(str[8]).vibegrationsCreateFlags(c5);
               c5 = 3;
               c6 = 1;
-              const obj8 = { value: guild_id(str[9]).createProject(obj5), done: false };
+              const obj8 = { value: obj7.createProject(obj5), done: false };
               return obj8;
             }
           } else if (1 === tmp8) {
             c4 = 0;
-            closure_1_8(false);
+            closure_1_9(false);
             throw install_scope;
           } else {
             if (2 === tmp8) {
@@ -119,7 +127,7 @@ export default function VibegrationsCreateSheet(guildId) {
               closure_129_2 = install_scope;
               _undefined(guild_id(str[11]).getVibegrationsCreateErrorMessage(closure_129_2));
               c4 = 0;
-              closure_1_8(false);
+              closure_1_9(false);
               c6 = 3;
               const obj2 = guild_id(str[11]);
             } else if (arg0 === 1) {
@@ -127,8 +135,8 @@ export default function VibegrationsCreateSheet(guildId) {
               throw value;
             } else if (arg0 !== 2) {
               closure_129_1 = value;
-              first1(closure_129_1);
-              c9(closure_129_1, c6);
+              VIBEGRATIONS_DEFAULT_TIER_SETTINGS(closure_129_1);
+              closure_9(closure_129_1, closure_1_7);
               closure_129_0(closure_129_1);
               onCreated(str[10]).hideActionSheet(closure_12);
               closure_1(closure_129_1, guild_id);
@@ -136,7 +144,7 @@ export default function VibegrationsCreateSheet(guildId) {
               const obj6 = onCreated(str[10]);
             }
             c4 = 0;
-            closure_1_8(false);
+            closure_1_9(false);
             c6 = 3;
             const obj = { value, done: true };
             return obj;
@@ -155,7 +163,7 @@ export default function VibegrationsCreateSheet(guildId) {
       }
     })();
   });
-  let items = [guildId, first, VIBEGRATIONS_DEFAULT_TIER_SETTINGS, onCreated];
+  let items = [guildId, first, VIBEGRATIONS_DEFAULT_TIER_SETTINGS, first1, onCreated];
   callback = obj.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
@@ -198,12 +206,12 @@ export default function VibegrationsCreateSheet(guildId) {
             const trimmed = onCreated.trim();
             let tmp8 = "" === trimmed;
             if (!tmp8) {
-              tmp8 = first1;
+              tmp8 = first2;
             }
             if (!tmp8) {
               c3 = 1;
               c2 = 1;
-              const obj4 = { value: callback((arg0) => closure_2_8(arg0, trimmed)), done: false };
+              const obj4 = { value: callback((arg0) => first2(arg0, trimmed)), done: false };
               return obj4;
             }
           }
@@ -223,8 +231,8 @@ export default function VibegrationsCreateSheet(guildId) {
       }
     }
   });
-  const items1 = [callback, str, first1];
-  closure_11 = obj.useCallback(function() {
+  const items1 = [callback, str, first2];
+  closure_12 = obj.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -234,8 +242,8 @@ export default function VibegrationsCreateSheet(guildId) {
     }
     return applyArgumentsResult;
   }, items1);
-  const items2 = [guildId, first, VIBEGRATIONS_DEFAULT_TIER_SETTINGS, onCreated, first1];
-  closure_12 = obj.useCallback(first(function*() {
+  const items2 = [guildId, first, VIBEGRATIONS_DEFAULT_TIER_SETTINGS, first1, onCreated, first2];
+  closure_13 = obj.useCallback(first(function*() {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -264,18 +272,18 @@ export default function VibegrationsCreateSheet(guildId) {
             closure_128_0 = undefined;
             closure_128_1 = undefined;
             closure_128_2 = undefined;
-            if (!first1) {
+            if (!first2) {
               c3 = 1;
               c4 = 2;
               c5 = 1;
-              const obj5 = { value: guildId(tmp86[12]).pickVibegrationsArchive(), done: false };
+              const obj5 = { value: guildId(tmp89[12]).pickVibegrationsArchive(), done: false };
               return obj5;
             }
           }
         } else if (1 === tmp9) {
           c3 = 0;
-          const intl2 = guildId(tmp86[13]).intl;
-          closure_129_9(intl2.string(tmp4(tmp86[14])["02GpNr"]));
+          const intl2 = guildId(tmp89[13]).intl;
+          closure_129_10(intl2.string(tmp4(tmp89[14])["02GpNr"]));
           c5 = 3;
           const obj8 = { value: undefined, done: true };
           return obj8;
@@ -293,34 +301,36 @@ export default function VibegrationsCreateSheet(guildId) {
               closure_128_0 = value;
               c3 = 0;
               if (null != closure_128_0) {
-                closure_128_1 = guildId(tmp86[12]).describeVibegrationsArchiveRejection(closure_128_0);
+                closure_128_1 = guildId(tmp89[12]).describeVibegrationsArchiveRejection(closure_128_0);
                 if (null == closure_128_1) {
-                  closure_129_8(true);
-                  closure_129_9(null);
+                  closure_129_9(true);
+                  closure_129_10(null);
                   closure_128_2 = null;
                   c3 = 3;
-                  const obj11 = { guild_id: closure_129_0, install_scope: closure_129_3 };
+                  const obj12 = { guild_id: closure_129_0, install_scope: closure_129_3, flags: null };
+                  const obj9 = guildId(tmp89[9]);
+                  obj12.flags = guildId(tmp89[8]).vibegrationsCreateFlags(closure_129_5);
                   c4 = 5;
                   c5 = 1;
-                  const obj12 = { value: guildId(tmp86[9]).createProject(obj11), done: false };
-                  return obj12;
+                  const obj13 = { value: obj9.createProject(obj12), done: false };
+                  return obj13;
                 } else {
-                  closure_129_9(closure_128_1);
+                  closure_129_10(closure_128_1);
                 }
-                const obj19 = guildId(tmp86[12]);
+                const obj20 = guildId(tmp89[12]);
               }
             }
           } else if (3 === tmp9) {
             c3 = 0;
-            closure_129_8(false);
-            throw tmp86;
+            closure_129_9(false);
+            throw tmp89;
           } else {
             if (4 === tmp9) {
               c3 = 2;
-              closure_128_3 = tmp86;
+              closure_128_3 = tmp89;
               if (null == closure_128_2) {
-                closure_129_9(guildId(tmp86[11]).getVibegrationsCreateErrorMessage(closure_128_3));
-                const obj6 = guildId(tmp86[11]);
+                closure_129_10(guildId(tmp89[11]).getVibegrationsCreateErrorMessage(closure_128_3));
+                const obj6 = guildId(tmp89[11]);
               }
             } else if (5 === tmp9) {
               if (arg0 === 1) {
@@ -328,19 +338,19 @@ export default function VibegrationsCreateSheet(guildId) {
                 throw value;
               } else if (arg0 === 2) {
                 c3 = 0;
-                closure_129_8(false);
+                closure_129_9(false);
                 c5 = 3;
-                const obj13 = { value, done: true };
-                return obj13;
+                const obj14 = { value, done: true };
+                return obj14;
               } else {
                 closure_128_2 = value;
-                closure_1_7(closure_128_2);
-                _undefined(closure_128_2, closure_129_6);
-                const intl3 = guildId(tmp86[13]).intl;
+                VIBEGRATIONS_DEFAULT_TIER_SETTINGS(closure_128_2);
+                closure_1_9(closure_128_2, closure_129_7);
+                const intl3 = guildId(tmp89[13]).intl;
                 c4 = 6;
                 c5 = 1;
-                const obj15 = { value: guildId(tmp86[12]).sendVibegrationsArchiveImport(closure_128_2, closure_128_0, intl3.string(tmp4(tmp86[14]).KjEtrZ)), done: false };
-                return obj15;
+                const obj16 = { value: guildId(tmp89[12]).sendVibegrationsArchiveImport(closure_128_2, closure_128_0, intl3.string(tmp4(tmp89[14]).KjEtrZ)), done: false };
+                return obj16;
               }
             } else if (6 === tmp9) {
               if (arg0 === 1) {
@@ -348,51 +358,51 @@ export default function VibegrationsCreateSheet(guildId) {
                 throw value;
               } else if (arg0 === 2) {
                 c3 = 0;
-                closure_129_8(false);
+                closure_129_9(false);
                 c5 = 3;
-                const obj16 = { value, done: true };
-                return obj16;
+                const obj17 = { value, done: true };
+                return obj17;
               } else {
-                tmp4(tmp86[10]).hideActionSheet(closure_1_12);
+                tmp4(tmp89[10]).hideActionSheet(closure_1_12);
                 closure_129_1(closure_128_2, closure_129_0);
                 c3 = 2;
-                const obj2 = tmp4(tmp86[10]);
+                const obj2 = tmp4(tmp89[10]);
               }
             } else if (arg0 === 1) {
               c5 = 3;
               throw value;
             } else if (arg0 === 2) {
               c3 = 0;
-              closure_129_8(false);
+              closure_129_9(false);
               c5 = 3;
               const obj = { value, done: true };
               return obj;
             } else {
-              const intl = guildId(tmp86[13]).intl;
-              closure_129_9(intl.string(tmp4(tmp86[14])["02GpNr"]));
+              const intl = guildId(tmp89[13]).intl;
+              closure_129_10(intl.string(tmp4(tmp89[14])["02GpNr"]));
             }
             c3 = 0;
-            closure_129_8(false);
+            closure_129_9(false);
           }
-          const obj7 = guildId(tmp86[9]);
+          const obj7 = guildId(tmp89[9]);
           c4 = 7;
           c5 = 1;
-          const obj17 = {
-            value: guildId(tmp86[9]).deleteProject(closure_128_2).catch(() => {
+          const obj18 = {
+            value: guildId(tmp89[9]).deleteProject(closure_128_2).catch(() => {
 
                   }),
             done: false
           };
-          return obj17;
+          return obj18;
         }
         c5 = 3;
-      } catch (tmp86) {
+      } catch (tmp89) {
         if (tmp5 === c3) {
           c5 = tmp3;
-          throw tmp86;
-        } else if (tmp2 === tmp88) {
+          throw tmp89;
+        } else if (tmp2 === tmp91) {
           c4 = tmp2;
-        } else if (tmp === tmp88) {
+        } else if (tmp === tmp91) {
           c4 = tmp3;
         } else {
           c4 = tmp6;
@@ -402,7 +412,7 @@ export default function VibegrationsCreateSheet(guildId) {
   }), items2);
   let intl = require("util").intl;
   const stringResult = intl.string(onCreated(str[14]).MLg0S8);
-  c13 = stringResult;
+  c14 = stringResult;
   memo = obj.useMemo(() => {
     const obj = { guild: null, user: null };
     const intl = guildId(str[13]).intl;
@@ -418,7 +428,7 @@ export default function VibegrationsCreateSheet(guildId) {
     obj2.options = items.map((item) => {
       closure_0 = item;
       return {
-        label: closure_14[item],
+        label: closure_15[item],
         onPress() {
           return closure_2_4(closure_0);
         }
@@ -426,9 +436,9 @@ export default function VibegrationsCreateSheet(guildId) {
     });
     const result = Sheet_showSimpleActionSheet.showSimpleActionSheet(obj2);
   }, items3);
-  const tmp2Result2 = _slicedToArray(noop.useState(null), 2);
+  const tmp2Result4 = _slicedToArray(first1.useState(null), 2);
   const landingModelChoicesResult = require("VibegrationsLandingModelChoices").landingModelChoices();
-  c15 = landingModelChoicesResult;
+  c16 = landingModelChoicesResult;
   const items4 = [landingModelChoicesResult, VIBEGRATIONS_DEFAULT_TIER_SETTINGS];
   const callback2 = obj.useCallback(() => {
     const obj2 = { key: VibegrationsEffortPicker.VIBEGRATIONS_EFFORT_PICKER_SHEET_KEY, stackingBehavior: "stack", content: null };
@@ -443,11 +453,11 @@ export default function VibegrationsCreateSheet(guildId) {
     ActionSheetActionCreatorsDefault.hideActionSheet(VibegrationsCreateSheet);
     onCreated(arg0, arg1);
   }, items5);
-  const items6 = [callback, guildId, callback3, VIBEGRATIONS_DEFAULT_TIER_SETTINGS, first1];
-  closure_17 = obj.useCallback((wizard) => {
+  const items6 = [callback, guildId, callback3, VIBEGRATIONS_DEFAULT_TIER_SETTINGS, first1, first2];
+  closure_18 = obj.useCallback((wizard) => {
     guildId = wizard;
     if (null == wizard.wizard) {
-      if (!first1) {
+      if (!first2) {
         callback((arg0) => wizard(str[18]).startVibegrationsTemplateProject(arg0, wizard)).catch(() => {
 
         });
@@ -455,7 +465,7 @@ export default function VibegrationsCreateSheet(guildId) {
       }
     } else {
       const obj2 = { key: VibegrationsTemplateWizardSheet.VIBEGRATIONS_TEMPLATE_WIZARD_SHEET_KEY, stackingBehavior: "stack", content: null };
-      const obj3 = { template: wizard, guildId, modelSettings: VIBEGRATIONS_DEFAULT_TIER_SETTINGS, onCreated: callback3 };
+      const obj3 = { template: wizard, guildId, modelSettings: VIBEGRATIONS_DEFAULT_TIER_SETTINGS, nativeAppChannels: first1, onCreated: callback3 };
       obj2.content = closure_2_10(VibegrationsTemplateWizardSheetDefault, obj3);
       ActionSheetActionCreators.showActionSheet(obj2);
     }
@@ -470,146 +480,161 @@ export default function VibegrationsCreateSheet(guildId) {
   let obj5 = { title: null };
   const intl5 = require("util").intl;
   obj5.title = intl5.string(onCreated(str[14])["2tYpRK"]);
-  obj4.header = callback(require("BottomSheetTitleHeader").BottomSheetTitleHeader, obj5);
+  obj4.header = c10(require("BottomSheetTitleHeader").BottomSheetTitleHeader, obj5);
   let obj6 = { style: tmp.content, children: null };
   let obj7 = { style: tmp.form, children: null };
   let obj8 = { placeholder: null, autoComplete: "off", value: null, onChange: null, disabled: null };
   const intl6 = require("util").intl;
   obj8.placeholder = intl6.string(onCreated(str[14]).TU9IGR);
   obj8.value = str;
-  obj8.disabled = first1;
-  const items8 = [callback(require("TextArea").TextArea, obj8), , , , ];
-  const obj9 = { hasIcons: false, children: null };
-  let obj10 = { label: stringResult, trailing: callback(require("Text/Text").Text, { variant: "text-md/normal", color: "text-muted", children: memo[first] }), arrow: true, disabled: first1, onPress: callback1 };
-  obj9.children = callback(require("TableRow").TableRow, obj10);
-  items8[1] = callback(require("TableRowGroup").TableRowGroup, obj9);
-  let obj12 = { hasIcons: false, children: null };
-  let obj13 = { label: null, trailing: null, arrow: true, disabled: null, onPress: null };
-  const intl7 = require("util").intl;
-  obj13.label = intl7.string(onCreated(str[14]).GDs9Vq);
-  const obj14 = { variant: "text-md/normal", color: "text-muted", children: null };
-  let obj11 = { variant: "text-md/normal", color: "text-muted", children: memo[first] };
-  let obj3 = require("VibegrationsTemplates");
-  obj14.children = require("VibegrationsEffortTiers").vibegrationsTierDescription(VIBEGRATIONS_DEFAULT_TIER_SETTINGS.tier);
-  obj13.trailing = callback(require("Text/Text").Text, obj14);
-  obj13.disabled = first1;
-  obj13.onPress = callback2;
-  obj12.children = callback(require("TableRow").TableRow, obj13);
-  items8[2] = callback(require("TableRowGroup").TableRowGroup, obj12);
-  let tmp23Result = null;
-  if (null != tmp12) {
-    let obj16 = { variant: "text-xs/normal", color: "text-feedback-critical", children: tmp12 };
-    tmp23Result = tmp23(tmp14(tmp15[25]).Text, obj16);
+  obj8.disabled = first2;
+  const items8 = [c10(require("TextArea").TextArea, obj8), , , , , ];
+  let obj9 = { hasIcons: false, children: null };
+  let obj10 = { label: stringResult, trailing: c10(require("Text/Text").Text, { variant: "text-md/normal", color: "text-muted", children: memo[first] }), arrow: true, disabled: first2, onPress: callback1 };
+  obj9.children = c10(require("TableRow").TableRow, obj10);
+  items8[1] = c10(require("TableRowGroup").TableRowGroup, obj9);
+  let tmp26Result = null;
+  if ("guild" === first) {
+    let obj12 = { hasIcons: false, children: null };
+    let obj13 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
+    const intl7 = tmp17(tmp18[13]).intl;
+    obj13.label = intl7.string(tmp19(tmp18[14]).nyY2CS);
+    const intl8 = tmp17(tmp18[13]).intl;
+    obj13.subLabel = intl8.string(tmp19(tmp18[14]).EwshDz);
+    obj13.checked = first1;
+    obj13.disabled = first2;
+    obj13.onPress = tmp6[1];
+    obj12.children = tmp26(tmp17(tmp18[26]).TableCheckboxRow, obj13);
+    tmp26Result = tmp26(tmp17(tmp18[23]).TableRowGroup, obj12);
   }
-  items8[3] = tmp23Result;
-  let obj17 = { variant: "primary", text: null, disabled: null, loading: null, onPress: null };
-  const intl8 = tmp14(tmp15[13]).intl;
-  obj17.text = intl8.string(require("util").t.CumH4u);
-  obj17.disabled = "" === str.trim();
-  obj17.loading = first1;
-  obj17.onPress = function onPress() {
-    return closure_11();
+  items8[2] = tmp26Result;
+  let obj14 = { hasIcons: false, children: null };
+  const obj15 = { label: null, trailing: null, arrow: true, disabled: null, onPress: null };
+  const intl9 = tmp17(tmp18[13]).intl;
+  obj15.label = intl9.string(onCreated(str[14]).GDs9Vq);
+  let obj16 = { variant: "text-md/normal", color: "text-muted", children: null };
+  const obj11 = { variant: "text-md/normal", color: "text-muted", children: memo[first] };
+  let obj3 = require("VibegrationsTemplates");
+  obj16.children = require("VibegrationsEffortTiers").vibegrationsTierDescription(VIBEGRATIONS_DEFAULT_TIER_SETTINGS.tier);
+  obj15.trailing = c10(require("Text/Text").Text, obj16);
+  obj15.disabled = first2;
+  obj15.onPress = callback2;
+  obj14.children = c10(require("TableRow").TableRow, obj15);
+  items8[3] = c10(require("TableRowGroup").TableRowGroup, obj14);
+  let tmp26Result2 = null;
+  if (null != tmp15) {
+    let obj17 = { variant: "text-xs/normal", color: "text-feedback-critical", children: tmp15 };
+    tmp26Result2 = tmp26(tmp17(tmp18[25]).Text, obj17);
+  }
+  items8[4] = tmp26Result2;
+  let obj18 = { variant: "primary", text: null, disabled: null, loading: null, onPress: null };
+  const intl10 = tmp17(tmp18[13]).intl;
+  obj18.text = intl10.string(require("util").t.CumH4u);
+  obj18.disabled = "" === str.trim();
+  obj18.loading = first2;
+  obj18.onPress = function onPress() {
+    return closure_12();
   };
-  items8[4] = callback(require("components/Button/Button").Button, obj17);
+  items8[5] = c10(require("components/Button/Button").Button, obj18);
   obj7.children = items8;
-  const items9 = [closure_11(VIBEGRATIONS_DEFAULT_TIER_SETTINGS, obj7), , , ];
-  const obj18 = { style: tmp.section, children: null };
-  let obj19 = { style: tmp.sectionHeading, children: null };
-  const obj20 = { variant: "text-md/medium", color: "text-default", children: null };
-  const intl9 = tmp14(tmp15[13]).intl;
-  obj20.children = intl9.string(onCreated(str[14]).NRqfBN);
-  const items10 = [callback(require("Text/Text").Text, obj20), ];
-  const obj21 = { variant: "text-sm/normal", color: "text-muted", children: null };
-  const intl10 = tmp14(tmp15[13]).intl;
-  obj21.children = intl10.string(onCreated(str[14]).ROtSe7);
-  items10[1] = callback(require("Text/Text").Text, obj21);
-  obj19.children = items10;
-  const items11 = [closure_11(VIBEGRATIONS_DEFAULT_TIER_SETTINGS, obj19), ];
-  const obj22 = { hasIcons: false, children: null };
-  const obj23 = { label: null, arrow: true, disabled: null, onPress: null };
-  const intl11 = tmp14(tmp15[13]).intl;
-  obj23.label = intl11.string(onCreated(str[14])["bxn/qp"]);
-  obj23.disabled = first1;
-  obj23.onPress = function onPress() {
-    closure_12().catch(() => {
+  const items9 = [callback(c6, obj7), , , ];
+  const obj19 = { style: tmp.section, children: null };
+  let obj20 = { style: tmp.sectionHeading, children: null };
+  const obj21 = { variant: "text-md/medium", color: "text-default", children: null };
+  const intl11 = tmp17(tmp18[13]).intl;
+  obj21.children = intl11.string(onCreated(str[14]).NRqfBN);
+  const items10 = [c10(require("Text/Text").Text, obj21), ];
+  const obj22 = { variant: "text-sm/normal", color: "text-muted", children: null };
+  const intl12 = tmp17(tmp18[13]).intl;
+  obj22.children = intl12.string(onCreated(str[14]).ROtSe7);
+  items10[1] = c10(require("Text/Text").Text, obj22);
+  obj20.children = items10;
+  const items11 = [callback(c6, obj20), ];
+  const obj23 = { hasIcons: false, children: null };
+  const obj24 = { label: null, arrow: true, disabled: null, onPress: null };
+  const intl13 = tmp17(tmp18[13]).intl;
+  obj24.label = intl13.string(onCreated(str[14])["bxn/qp"]);
+  obj24.disabled = first2;
+  obj24.onPress = function onPress() {
+    closure_13().catch(() => {
 
     });
   };
-  obj22.children = callback(require("TableRow").TableRow, obj23);
-  items11[1] = callback(require("TableRowGroup").TableRowGroup, obj22);
-  obj18.children = items11;
-  items9[1] = closure_11(VIBEGRATIONS_DEFAULT_TIER_SETTINGS, obj18);
-  const obj24 = { style: tmp.section, children: null };
-  const obj25 = { style: tmp.sectionHeading, children: null };
-  const obj26 = { variant: "text-md/medium", color: "text-default", children: null };
-  const intl12 = tmp14(tmp15[13]).intl;
-  obj26.children = intl12.string(onCreated(str[14]).FYK2xQ);
-  const items12 = [callback(require("Text/Text").Text, obj26), ];
-  const obj27 = { variant: "text-sm/normal", color: "text-muted", children: null };
-  const intl13 = tmp14(tmp15[13]).intl;
-  obj27.children = intl13.string(onCreated(str[14]).BTNdyX);
-  items12[1] = callback(require("Text/Text").Text, obj27);
-  obj25.children = items12;
-  const items13 = [closure_11(VIBEGRATIONS_DEFAULT_TIER_SETTINGS, obj25), ];
-  let obj15 = require("VibegrationsEffortTiers");
-  items13[1] = callback(require("TableRowGroup").TableRowGroup, {
+  obj23.children = c10(require("TableRow").TableRow, obj24);
+  items11[1] = c10(require("TableRowGroup").TableRowGroup, obj23);
+  obj19.children = items11;
+  items9[1] = callback(c6, obj19);
+  const obj25 = { style: tmp.section, children: null };
+  const obj26 = { style: tmp.sectionHeading, children: null };
+  const obj27 = { variant: "text-md/medium", color: "text-default", children: null };
+  const intl14 = tmp17(tmp18[13]).intl;
+  obj27.children = intl14.string(onCreated(str[14]).FYK2xQ);
+  const items12 = [c10(require("Text/Text").Text, obj27), ];
+  const obj28 = { variant: "text-sm/normal", color: "text-muted", children: null };
+  const intl15 = tmp17(tmp18[13]).intl;
+  obj28.children = intl15.string(onCreated(str[14]).BTNdyX);
+  items12[1] = c10(require("Text/Text").Text, obj28);
+  obj26.children = items12;
+  const items13 = [callback(c6, obj26), ];
+  const tmp17Result = require("VibegrationsEffortTiers");
+  items13[1] = c10(require("TableRowGroup").TableRowGroup, {
     hasIcons: false,
     children: result.map((name) => {
       guildId = name;
-      const obj = { label: name.name, subLabel: name.description, arrow: true, disabled: first1, accessibilityLabel: null, onPress: null };
+      const obj = { label: name.name, subLabel: name.description, arrow: true, disabled: first2, accessibilityLabel: null, onPress: null };
       const intl = guildId(str[13]).intl;
       obj.accessibilityLabel = intl.formatToPlainString(onCreated(str[14]).ER1uQ4, { name: name.name });
       obj.onPress = function onPress() {
-        return closure_17(closure_0);
+        return closure_18(closure_0);
       };
-      return callback(guildId(str[24]).TableRow, obj, name.id);
+      return _undefined(guildId(str[24]).TableRow, obj, name.id);
     })
   });
-  obj24.children = items13;
-  items9[2] = closure_11(VIBEGRATIONS_DEFAULT_TIER_SETTINGS, obj24);
-  const obj29 = { style: tmp.section, children: null };
-  const obj30 = { style: tmp.sectionHeading, children: null };
-  const obj31 = { variant: "text-md/medium", color: "text-default", children: null };
-  const intl14 = tmp14(tmp15[13]).intl;
-  obj31.children = intl14.string(onCreated(str[14])["/SUK82"]);
-  const items14 = [callback(require("Text/Text").Text, obj31), ];
-  const obj32 = { variant: "text-sm/normal", color: "text-muted", children: null };
-  const intl15 = tmp14(tmp15[13]).intl;
-  obj32.children = intl15.string(onCreated(str[14])["+aBXyx"]);
-  items14[1] = callback(require("Text/Text").Text, obj32);
-  obj30.children = items14;
-  const items15 = [closure_11(VIBEGRATIONS_DEFAULT_TIER_SETTINGS, obj30), ];
-  const obj28 = {
+  obj25.children = items13;
+  items9[2] = callback(c6, obj25);
+  const obj30 = { style: tmp.section, children: null };
+  const obj31 = { style: tmp.sectionHeading, children: null };
+  const obj32 = { variant: "text-md/medium", color: "text-default", children: null };
+  const intl16 = tmp17(tmp18[13]).intl;
+  obj32.children = intl16.string(onCreated(str[14])["/SUK82"]);
+  const items14 = [c10(require("Text/Text").Text, obj32), ];
+  const obj33 = { variant: "text-sm/normal", color: "text-muted", children: null };
+  const intl17 = tmp17(tmp18[13]).intl;
+  obj33.children = intl17.string(onCreated(str[14])["+aBXyx"]);
+  items14[1] = c10(require("Text/Text").Text, obj33);
+  obj31.children = items14;
+  const items15 = [callback(c6, obj31), ];
+  const obj29 = {
     hasIcons: false,
     children: result.map((name) => {
       guildId = name;
-      const obj = { label: name.name, subLabel: name.description, arrow: true, disabled: first1, accessibilityLabel: null, onPress: null };
+      const obj = { label: name.name, subLabel: name.description, arrow: true, disabled: first2, accessibilityLabel: null, onPress: null };
       const intl = guildId(str[13]).intl;
       obj.accessibilityLabel = intl.formatToPlainString(onCreated(str[14]).ER1uQ4, { name: name.name });
       obj.onPress = function onPress() {
-        return closure_17(closure_0);
+        return closure_18(closure_0);
       };
-      return callback(guildId(str[24]).TableRow, obj, name.id);
+      return _undefined(guildId(str[24]).TableRow, obj, name.id);
     })
   };
-  items15[1] = callback(require("TableRowGroup").TableRowGroup, {
+  items15[1] = c10(require("TableRowGroup").TableRowGroup, {
     hasIcons: false,
     children: items7.map((label) => {
       guildId = label;
-      return callback(guildId(str[24]).TableRow, {
+      return _undefined(guildId(str[24]).TableRow, {
         label,
         arrow: true,
-        disabled: first1,
+        disabled: first2,
         onPress() {
-          return closure_11(closure_0);
+          return closure_12(closure_0);
         }
       }, label);
     })
   });
-  obj29.children = items15;
-  items9[3] = closure_11(VIBEGRATIONS_DEFAULT_TIER_SETTINGS, obj29);
+  obj30.children = items15;
+  items9[3] = callback(c6, obj30);
   obj6.children = items9;
-  obj4.children = closure_11(VIBEGRATIONS_DEFAULT_TIER_SETTINGS, obj6);
-  return callback(require("ActionSheet").ActionSheet, obj4);
+  obj4.children = callback(c6, obj6);
+  return c10(require("ActionSheet").ActionSheet, obj4);
 };
 export const VIBEGRATIONS_CREATE_SHEET_KEY = "VibegrationsCreateSheet";

@@ -1,6 +1,6 @@
-// === Module 6894: GameActionCreators ===
+// === Module 6924: GameActionCreators ===
 
-// Module 6894 (GameActionCreators)
+// Module 6924 (GameActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GameStore from "GameStore" /* 2001 */;

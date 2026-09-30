@@ -1,10 +1,10 @@
-// === Module 9128: VoicePanelUtils ===
+// === Module 9162: VoicePanelUtils ===
 
-// Module 9128 (VoicePanelUtils)
+// Module 9162 (VoicePanelUtils)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4859 */;
-import VoicePanelStore from "VoicePanelStore" /* 5044 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4889 */;
+import VoicePanelStore from "VoicePanelStore" /* 5074 */;
 
 require = fn;
 const size = fn(2);

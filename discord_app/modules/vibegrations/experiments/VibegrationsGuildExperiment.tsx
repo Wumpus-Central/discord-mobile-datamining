@@ -1,6 +1,6 @@
-// === Module 5538: VibegrationsGuildExperiment ===
+// === Module 5568: VibegrationsGuildExperiment ===
 
-// Module 5538 (VibegrationsGuildExperiment)
+// Module 5568 (VibegrationsGuildExperiment)
 import GuildStore from "GuildStore" /* 2067 */;
 
 const require = globalThis.__r;

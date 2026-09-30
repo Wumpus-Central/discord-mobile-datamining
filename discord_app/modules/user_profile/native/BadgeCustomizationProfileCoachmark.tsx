@@ -1,9 +1,9 @@
-// === Module 16812: BadgeCustomizationProfileCoachmark ===
+// === Module 16847: BadgeCustomizationProfileCoachmark ===
 
-// Module 16812 (BadgeCustomizationProfileCoachmark)
+// Module 16847 (BadgeCustomizationProfileCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import BadgesCoachmarkRive from "BadgesCoachmarkRive" /* 4559 */;
+import BadgesCoachmarkRive from "BadgesCoachmarkRive" /* 4589 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -24,7 +24,7 @@ export default function BadgeCustomizationProfileCoachmark(markAsDismissed) {
   let str2;
   const items = [str2];
   const stateFromStores = targetRef(504).useStateFromStores(items, () => visible(_undefined[9]).canUsePremiumProfileCustomization(str2.getCurrentUser()));
-  reducedMotion = reducedMotion.useContext(targetRef(4550).AccessibilityPreferencesContext).reducedMotion;
+  reducedMotion = reducedMotion.useContext(targetRef(4580).AccessibilityPreferencesContext).reducedMotion;
   dependencyMap = undefined;
   const height = visible(1479)().height;
   let rect = visible(1613)();
@@ -52,7 +52,7 @@ export default function BadgeCustomizationProfileCoachmark(markAsDismissed) {
       str = "top";
     }
     str2 = str;
-    tmpResult = tmp(16790);
+    tmpResult = tmp(16825);
   }
   const items2 = [stateFromStores, visible, str2, markAsDismissed, onTryItOut, reducedMotion.enabled];
   const memo = obj2.useMemo(() => {
@@ -80,6 +80,6 @@ export default function BadgeCustomizationProfileCoachmark(markAsDismissed) {
     return obj;
   }, items2);
   const tmp4 = stateFromStores(reducedMotion.useState(null), 2);
-  const coachmark = targetRef(10758).useCoachmark(targetRef, memo);
+  const coachmark = targetRef(10792).useCoachmark(targetRef, memo);
   return null;
 };

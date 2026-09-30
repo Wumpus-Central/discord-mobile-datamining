@@ -1,11 +1,11 @@
-// === Module 15699: ActivityPrivacyShareMyActivitySetting ===
+// === Module 15732: ActivityPrivacyShareMyActivitySetting ===
 
-// Module 15699 (ActivityPrivacyShareMyActivitySetting)
+// Module 15732 (ActivityPrivacyShareMyActivitySetting)
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 2021 */;
 import _modDef2653 from "module_2653" /* 2653 */;
-import SettingsConstants from "SettingsConstants" /* 7582 */;
-import SettingBuilders from "SettingBuilders" /* 11175 */;
+import SettingsConstants from "SettingsConstants" /* 7612 */;
+import SettingBuilders from "SettingBuilders" /* 11211 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

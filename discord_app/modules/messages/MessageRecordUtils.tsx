@@ -1,20 +1,20 @@
-// === Module 5058: MessageRecordUtils ===
+// === Module 5088: MessageRecordUtils ===
 
-// Module 5058 (MessageRecordUtils)
+// Module 5088 (MessageRecordUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import _modDef4421 from "module_4421" /* 4421 */;
-import findCodedLinksDefault from "findCodedLinks" /* 4816 */;
-import useMessageAuthor from "useMessageAuthor" /* 5249 */;
-import isMessageMentioned from "isMessageMentioned" /* 5254 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 5255 */;
-import transformMessagPollDefault from "transformMessagPoll" /* 5361 */;
-import EmbedUtils from "EmbedUtils" /* 5362 */;
-import StickersUtils from "StickersUtils" /* 5364 */;
-import InteractionRecord from "InteractionRecord" /* 5059 */;
-import MessageRecord_mod from "MessageRecord" /* 4480 */;
+import _modDef4451 from "module_4451" /* 4451 */;
+import findCodedLinksDefault from "findCodedLinks" /* 4846 */;
+import useMessageAuthor from "useMessageAuthor" /* 5279 */;
+import isMessageMentioned from "isMessageMentioned" /* 5284 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 5285 */;
+import transformMessagPollDefault from "transformMessagPoll" /* 5391 */;
+import EmbedUtils from "EmbedUtils" /* 5392 */;
+import StickersUtils from "StickersUtils" /* 5394 */;
+import InteractionRecord from "InteractionRecord" /* 5089 */;
+import MessageRecord_mod from "MessageRecord" /* 4510 */;
 import UserRecord from "UserRecord" /* 1386 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RelationshipStore from "RelationshipStore" /* 4479 */;
+import RelationshipStore from "RelationshipStore" /* 4509 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
@@ -191,11 +191,11 @@ function createMessageRecord(message, arg1) {
     if (null != call.ended_timestamp) {
       const _Date = Date;
       const date = new Date(call.ended_timestamp);
-      tmp39Result = _modDef4421(date);
+      tmp39Result = _modDef4451(date);
     }
     let durationResult = null;
     if (null != tmp39Result) {
-      durationResult = _modDef4421.duration(tmp39Result.diff(tmp35));
+      durationResult = _modDef4451.duration(tmp39Result.diff(tmp35));
     }
     const obj11 = { participants: call.participants, endedTimestamp: tmp39Result, duration: durationResult };
     tmp36 = obj11;
@@ -293,7 +293,7 @@ function createMessageRecord(message, arg1) {
   });
   const tmp9Result4 = GiftCodeUtils;
 }
-let MessageRecord = fn(4480);
+let MessageRecord = fn(4510);
 ({ MessageSnapshotRecord: closure_4, MinimalMessageRecord: hasOwnProperty } = MessageRecord);
 let MessageRecord = MessageRecord_mod;
 const Constants = fn(1074);
@@ -330,11 +330,11 @@ export const updateMessageRecord = function updateMessageRecord(message, message
         if (null != call.ended_timestamp) {
           const _Date = Date;
           const date = new Date(call.ended_timestamp);
-          tmp = _modDef4421(date);
+          tmp = _modDef4451(date);
         }
         let durationResult = null;
         if (null != tmp) {
-          durationResult = _modDef4421.duration(tmp.diff(tmp46));
+          durationResult = _modDef4451.duration(tmp.diff(tmp46));
         }
         const obj3 = { participants: call.participants, endedTimestamp: tmp, duration: durationResult };
         tmp13 = obj3;

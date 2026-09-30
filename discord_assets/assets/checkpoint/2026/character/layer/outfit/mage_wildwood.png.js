@@ -1,6 +1,6 @@
-// === Module 5173: ? ===
+// === Module 5203: ? ===
 
-// Module 5173
+// Module 5203
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/outfit/mage_wildwood.png.js");

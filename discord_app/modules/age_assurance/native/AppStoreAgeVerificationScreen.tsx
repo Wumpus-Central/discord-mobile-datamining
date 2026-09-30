@@ -1,9 +1,9 @@
-// === Module 8188: AppStoreAgeVerificationScreen ===
+// === Module 8220: AppStoreAgeVerificationScreen ===
 
-// Module 8188 (AppStoreAgeVerificationScreen)
-import MonitoringAgentDefault from "MonitoringAgent" /* 5345 */;
-import MetricEvents from "MetricEvents" /* 5350 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8026 */;
+// Module 8220 (AppStoreAgeVerificationScreen)
+import MonitoringAgentDefault from "MonitoringAgent" /* 5375 */;
+import MetricEvents from "MetricEvents" /* 5380 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8056 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -30,7 +30,7 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
   let obj = modalSessionId(1485);
   [tmp5, c2] = callback1(noop.useState({ type: "loading" }), 2);
   const tmp4 = callback1(noop.useState({ type: "loading" }), 2);
-  const watchAgeVerificationStatusChange = modalSessionId(5048).useWatchAgeVerificationStatusChange(modalSessionId.onClose);
+  const watchAgeVerificationStatusChange = modalSessionId(5078).useWatchAgeVerificationStatusChange(modalSessionId.onClose);
   let items = [navigation];
   const callback = noop.useCallback(() => {
     navigation.goBack();
@@ -206,7 +206,7 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
     let obj4 = { variant: "text-md/medium", color: "text-strong", children: null };
     const intl = tmp(1115).intl;
     obj4.children = intl.string(navigation(3039).MN6I4Y);
-    items3[1] = closure_7(tmp(4832).Text, obj4);
+    items3[1] = closure_7(tmp(4862).Text, obj4);
     obj3.children = items3;
     let tmp15 = closure_9(closure_8, obj3);
   } else {
@@ -214,7 +214,7 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
     let obj6 = { variant: "text-md/medium", color: "text-strong", accessibilityRole: "alert", children: null };
     const intl2 = tmp(1115).intl;
     obj6.children = intl2.string(navigation(3039).tBwanH);
-    const items4 = [closure_7(tmp(4832).Text, obj6), ];
+    const items4 = [closure_7(tmp(4862).Text, obj6), ];
     let obj7 = { children: null };
     let obj8 = { variant: "primary", size: "lg", text: null, onPress: null };
     const intl3 = tmp(1115).intl;
@@ -223,13 +223,13 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
       const result = AgeVerificationAnalyticsUtils.trackAgeVerificationModalClicked(modalSessionId, AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_V2, AgeVerificationAnalyticsUtils.AgeVerificationModalCta.METHOD_SELECT);
       callback();
     };
-    obj7.children = closure_7(tmp(5447).Button, obj8);
-    items4[1] = closure_7(tmp(5912).ButtonGroup, obj7);
+    obj7.children = closure_7(tmp(5477).Button, obj8);
+    items4[1] = closure_7(tmp(5942).ButtonGroup, obj7);
     obj5.children = items4;
     tmp15 = closure_9(closure_8, obj5);
   }
   let obj9 = { children: null };
-  let obj2 = modalSessionId(5048);
-  obj9.children = closure_7(modalSessionId(8036).ModalContent, { children: closure_7(modalSessionId(5445).Stack, { align: "center", justify: "center", spacing: 16, children: tmp15 }) });
-  return closure_7(modalSessionId(8035).ModalScreen, obj9);
+  let obj2 = modalSessionId(5078);
+  obj9.children = closure_7(modalSessionId(8066).ModalContent, { children: closure_7(modalSessionId(5475).Stack, { align: "center", justify: "center", spacing: 16, children: tmp15 }) });
+  return closure_7(modalSessionId(8065).ModalScreen, obj9);
 };

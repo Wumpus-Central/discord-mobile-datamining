@@ -1,13 +1,13 @@
-// === Module 9870: FavoritesDismissibleContent ===
+// === Module 9904: FavoritesDismissibleContent ===
 
-// Module 9870 (FavoritesDismissibleContent)
+// Module 9904 (FavoritesDismissibleContent)
 import dismissible_content from "dismissible_content" /* 2029 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 6972 */;
-import useGetDismissibleContent from "useGetDismissibleContent" /* 6973 */;
-import FavoritesHooks from "FavoritesHooks" /* 9852 */;
-import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 9854 */;
-import FavoritesGuildIntroPopover from "FavoritesGuildIntroPopover" /* 9868 */;
-import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 9869 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7002 */;
+import useGetDismissibleContent from "useGetDismissibleContent" /* 7003 */;
+import FavoritesHooks from "FavoritesHooks" /* 9886 */;
+import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 9888 */;
+import FavoritesGuildIntroPopover from "FavoritesGuildIntroPopover" /* 9902 */;
+import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 9903 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

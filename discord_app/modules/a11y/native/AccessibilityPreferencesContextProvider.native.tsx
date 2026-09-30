@@ -1,8 +1,8 @@
-// === Module 14304: AccessibilityPreferencesContextProvider ===
+// === Module 14333: AccessibilityPreferencesContextProvider ===
 
-// Module 14304 (AccessibilityPreferencesContextProvider)
+// Module 14333 (AccessibilityPreferencesContextProvider)
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4825 */;
+import AccessibilityStore from "AccessibilityStore" /* 4855 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -30,7 +30,10 @@ export default function AccessibilityPreferencesContextProvider(children) {
   const obj5 = stateFromStoresObject(stateFromStores[3]);
   const items5 = [stateFromStores1];
   const stateFromStores3 = stateFromStoresObject(stateFromStores[3]).useStateFromStores(items5, () => stateFromStores1.isSwitchIconsEnabled);
-  const items6 = [stateFromStoresObject, stateFromStores, stateFromStoresObject1, stateFromStores1, stateFromStores2, stateFromStores3];
-  value = stateFromStoresObject1.useMemo(() => ({ reducedMotion: stateFromStoresObject, prefersCrossfades: stateFromStores, forcedColors: stateFromStoresObject1, alwaysShowLinkDecorations: stateFromStores1, highContrastModeEnabled: false, keyboardModeEnabled: stateFromStores2, switchIconsEnabled: stateFromStores3 }), items6);
+  const obj6 = stateFromStoresObject(stateFromStores[3]);
+  const items6 = [stateFromStores1];
+  const stateFromStores4 = stateFromStoresObject(stateFromStores[3]).useStateFromStores(items6, () => stateFromStores1.minToastDurationMs);
+  const items7 = [stateFromStoresObject, stateFromStores, stateFromStoresObject1, stateFromStores1, stateFromStores2, stateFromStores3, stateFromStores4];
+  value = stateFromStoresObject1.useMemo(() => ({ reducedMotion: stateFromStoresObject, prefersCrossfades: stateFromStores, forcedColors: stateFromStoresObject1, alwaysShowLinkDecorations: stateFromStores1, highContrastModeEnabled: false, keyboardModeEnabled: stateFromStores2, switchIconsEnabled: stateFromStores3, minToastDurationMs: stateFromStores4 }), items7);
   return stateFromStores2(stateFromStoresObject(stateFromStores[4]).AccessibilityPreferencesContext.Provider, { value, children: children.children });
 };

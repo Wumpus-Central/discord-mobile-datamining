@@ -1,6 +1,6 @@
-// === Module 11813: useAwaitAnimationComplete ===
+// === Module 11847: useAwaitAnimationComplete ===
 
-// Module 11813 (useAwaitAnimationComplete)
+// Module 11847 (useAwaitAnimationComplete)
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

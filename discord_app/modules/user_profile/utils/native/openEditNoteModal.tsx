@@ -1,12 +1,12 @@
-// === Module 12798: openEditNoteModal ===
+// === Module 12828: openEditNoteModal ===
 
-// Module 12798 (openEditNoteModal)
+// Module 12828 (openEditNoteModal)
 import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5039 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5069 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_profile/utils/native/openEditNoteModal.tsx");
 
 export default function openEditNoteModal(merged) {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12799, dependencyMap.paths), merged, undefined, { presentation: "modal" });
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12829, dependencyMap.paths), merged, undefined, { presentation: "modal" });
 };

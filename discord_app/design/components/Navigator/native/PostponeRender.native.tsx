@@ -1,10 +1,10 @@
-// === Module 6624: PostponeRender ===
+// === Module 6654: PostponeRender ===
 
-// Module 6624 (PostponeRender)
+// Module 6654 (PostponeRender)
 import nativeDefault from "native" /* 576 */;
-import useMountEffectDefault from "useMountEffect" /* 5464 */;
-import KeyboardAwareViewDefault from "KeyboardAwareView" /* 6056 */;
-import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 6625 */;
+import useMountEffectDefault from "useMountEffect" /* 5494 */;
+import KeyboardAwareViewDefault from "KeyboardAwareView" /* 6086 */;
+import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 6655 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 const obj2 = { view: null };
 const obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -43,7 +43,7 @@ export const PostponeRender = function PostponeRender(children) {
     }
   });
   if (first) {
-    children = jsx(first(6626).SceneLoadingIndicator, {});
+    children = jsx(first(6656).SceneLoadingIndicator, {});
   }
   if (ignoreKeyboard) {
     let tmp4Result = closure_5;

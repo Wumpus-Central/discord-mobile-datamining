@@ -1,9 +1,9 @@
-// === Module 11575: EnvelopeSpotIllustration ===
+// === Module 11609: EnvelopeSpotIllustration ===
 
-// Module 11575 (EnvelopeSpotIllustration)
+// Module 11609 (EnvelopeSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 6065 */;
-import _modDef11576 from "module_11576" /* 11576 */;
+import FastImageDefault from "FastImage" /* 6095 */;
+import _modDef11610 from "module_11610" /* 11610 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const EnvelopeSpotIllustration = function EnvelopeSpotIllustration(width)
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef11576 };
+  const obj2 = { uri: _modDef11610 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

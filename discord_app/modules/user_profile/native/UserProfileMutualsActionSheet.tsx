@@ -1,20 +1,20 @@
-// === Module 12276: UserProfileMutualsActionSheet ===
+// === Module 12308: UserProfileMutualsActionSheet ===
 
-// Module 12276 (UserProfileMutualsActionSheet)
+// Module 12308 (UserProfileMutualsActionSheet)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4832 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4988 */;
-import GuildIcon from "GuildIcon" /* 6062 */;
-import TableRow from "TableRow" /* 6083 */;
-import ActivityStatusDefault from "ActivityStatus" /* 10504 */;
-import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 10782 */;
-import useUserProfileMutualsDefault from "useUserProfileMutuals" /* 12270 */;
-import getMutualGuildsLabelDefault from "getMutualGuildsLabel" /* 12271 */;
-import getMutualFriendsLabelDefault from "getMutualFriendsLabel" /* 12277 */;
+import Text_Text from "Text/Text" /* 4862 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5018 */;
+import GuildIcon from "GuildIcon" /* 6092 */;
+import TableRow from "TableRow" /* 6113 */;
+import ActivityStatusDefault from "ActivityStatus" /* 10538 */;
+import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 10816 */;
+import useUserProfileMutualsDefault from "useUserProfileMutuals" /* 12302 */;
+import getMutualGuildsLabelDefault from "getMutualGuildsLabel" /* 12303 */;
+import getMutualFriendsLabelDefault from "getMutualFriendsLabel" /* 12309 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 4876 */;
+import PresenceStore from "PresenceStore" /* 4906 */;
 
 require = fn;
 function MutualFriendRow(mutualFriend) {
@@ -22,8 +22,8 @@ function MutualFriendRow(mutualFriend) {
   const guildId = mutualFriend.guildId;
   ({ onPress, start, end } = mutualFriend);
   const tmp = closure_11();
-  const avatarDecoration = user(7826).useAvatarDecoration(user);
-  const obj = user(7826);
+  const avatarDecoration = user(7856).useAvatarDecoration(user);
+  const obj = user(7856);
   const items = [PresenceStore];
   const stateFromStoresObject = user(504).useStateFromStoresObject(items, () => ({ status: PresenceStore.getStatus(user.id), isMobileOnline: PresenceStore.isMobileOnline(user.id), isVROnline: PresenceStore.isVROnline(user.id) }));
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
@@ -35,7 +35,7 @@ function MutualFriendRow(mutualFriend) {
   obj3.subLabel = closure_9(ActivityStatusDefault, { userId: user.id, guildId, textStyle: tmp.activityStatusText });
   obj3.start = start;
   obj3.end = end;
-  return closure_9(user(6083).TableRow, obj3, user.id);
+  return closure_9(user(6113).TableRow, obj3, user.id);
 }
 class MutualGuildRow {
   constructor(arg0) {
@@ -89,10 +89,10 @@ class MutualGuildRow {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire } = get_ActivityIndicator);
-const UserProfileSections = fn(7793).UserProfileSections;
+const UserProfileSections = fn(7823).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = { container: { flex: 1, gap: 20, paddingTop: nativeDefault.space.PX_8 }, loadingState: null, emptyState: null, activityStatusText: null, mutualGuildSubLabel: null };
 let obj3 = { flex: 1, gap: 20, paddingTop: nativeDefault.space.PX_8 };
 obj2.loadingState = { paddingTop: nativeDefault.space.PX_8, alignItems: "center" };
@@ -122,7 +122,7 @@ export default function UserProfileMutualsActionSheet(user) {
   }
   obj3.defaultIndex = num;
   let length;
-  const obj2 = user(9248);
+  const obj2 = user(9282);
   if (mutualFriends != null) {
     length = mutualFriends.length;
   }
@@ -132,7 +132,7 @@ export default function UserProfileMutualsActionSheet(user) {
     let tmp10 = closure_9(closure_5, obj5);
     let tmp9 = closure_9;
   } else if (0 === mutualFriends.length) {
-    const obj6 = { style: tmp.emptyState, children: closure_9(tmp6(12278).NoMutualFriends, {}) };
+    const obj6 = { style: tmp.emptyState, children: closure_9(tmp6(12310).NoMutualFriends, {}) };
     tmp10 = closure_9(closure_5, obj6);
     tmp9 = closure_9;
   } else {
@@ -155,7 +155,7 @@ export default function UserProfileMutualsActionSheet(user) {
           });
         }
     };
-    tmp10 = closure_9(tmp6(10782).UserProfileStackedActionSheetList, obj7);
+    tmp10 = closure_9(tmp6(10816).UserProfileStackedActionSheetList, obj7);
   }
   obj4.page = tmp10;
   const items = [obj4, ];
@@ -169,7 +169,7 @@ export default function UserProfileMutualsActionSheet(user) {
     const obj9 = { style: tmp.loadingState, children: tmp9(closure_6, {}) };
     let tmp9Result = tmp9(closure_5, obj9);
   } else if (0 === mutualGuilds.length) {
-    const obj10 = { style: tmp.emptyState, children: tmp9(tmp6(12272).NoMutualServers, {}) };
+    const obj10 = { style: tmp.emptyState, children: tmp9(tmp6(12304).NoMutualServers, {}) };
     tmp9Result = tmp9(closure_5, obj10);
   } else {
     const obj11 = {
@@ -190,7 +190,7 @@ export default function UserProfileMutualsActionSheet(user) {
           });
         }
     };
-    tmp9Result = tmp9(tmp6(10782).UserProfileStackedActionSheetList, obj11);
+    tmp9Result = tmp9(tmp6(10816).UserProfileStackedActionSheetList, obj11);
   }
   obj8.page = tmp9Result;
   items[1] = obj8;
@@ -205,7 +205,7 @@ export default function UserProfileMutualsActionSheet(user) {
   obj12.title = intl.string(user(1115).t["l2/aLi"]);
   const obj13 = { style: tmp.container, onLayout: callback, children: null };
   const tmp3Result4 = UserProfileStackedActionSheetDefault;
-  const items1 = [tmp9(closure_5, { children: tmp9(user(12282).Tabs, { state: segmentedControlState }) }), tmp9(user(12284).SegmentedControlPages, { state: segmentedControlState })];
+  const items1 = [tmp9(closure_5, { children: tmp9(user(12314).Tabs, { state: segmentedControlState }) }), tmp9(user(10972).SegmentedControlPages, { state: segmentedControlState })];
   obj13.children = items1;
   obj12.children = closure_10(closure_5, obj13);
   return tmp9(tmp3Result4, obj12);

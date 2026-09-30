@@ -1,30 +1,30 @@
-// === Module 9132: GlobalStatusContent ===
+// === Module 9166: GlobalStatusContent ===
 
-// Module 9132 (GlobalStatusContent)
+// Module 9166 (GlobalStatusContent)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
-import useThemeDefault from "useTheme" /* 4767 */;
-import ChannelCallModalDefault from "ChannelCallModal" /* 9000 */;
-import StatusBarDefault from "StatusBar" /* 9004 */;
-import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 9026 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 9124 */;
-import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 9127 */;
-import GlobalStageChannelStatusDefault from "GlobalStageChannelStatus" /* 9133 */;
+import useThemeDefault from "useTheme" /* 4797 */;
+import ChannelCallModalDefault from "ChannelCallModal" /* 9034 */;
+import StatusBarDefault from "StatusBar" /* 9038 */;
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 9060 */;
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 9158 */;
+import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 9161 */;
+import GlobalStageChannelStatusDefault from "GlobalStageChannelStatus" /* 9167 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 import GuildStore from "GuildStore" /* 2067 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4859 */;
-import SessionsStore from "SessionsStore" /* 4854 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4889 */;
+import SessionsStore from "SessionsStore" /* 4884 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const RTC_PANEL_HEIGHT = fn(9126).RTC_PANEL_HEIGHT;
+const RTC_PANEL_HEIGHT = fn(9160).RTC_PANEL_HEIGHT;
 const RTCConnectionStates = fn(1074).RTCConnectionStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = { bgNeutral: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, bg: null, container: null };
 const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.bg = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
@@ -105,8 +105,8 @@ export default function ConnectivityGlobalStatusContent() {
   const isThemeDarkResult = require("shared").isThemeDark(useThemeDefault());
   let isScreenLandscape = require("useIsScreenLandscape").useIsScreenLandscape();
   if (isScreenLandscape) {
-    isScreenLandscape = tmp5(4692).isModalOpen(ChannelCallModalDefault);
-    const tmp5Result5 = tmp5(4692);
+    isScreenLandscape = tmp5(4722).isModalOpen(ChannelCallModalDefault);
+    const tmp5Result5 = tmp5(4722);
   }
   if (isScreenLandscape) {
     isScreenLandscape = tmp5(1364).isAndroid();

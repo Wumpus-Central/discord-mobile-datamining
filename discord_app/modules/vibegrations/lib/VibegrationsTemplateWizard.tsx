@@ -1,9 +1,9 @@
-// === Module 16431: VibegrationsTemplateWizard ===
+// === Module 16460: VibegrationsTemplateWizard ===
 
-// Module 16431 (VibegrationsTemplateWizard)
+// Module 16460 (VibegrationsTemplateWizard)
 import util from "util" /* 1115 */;
 import _modDef3715 from "module_3715" /* 3715 */;
-import VibegrationsUtils from "VibegrationsUtils" /* 5536 */;
+import VibegrationsUtils from "VibegrationsUtils" /* 5566 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsTemplateWizard.tsx");

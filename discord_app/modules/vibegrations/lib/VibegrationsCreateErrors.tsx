@@ -1,6 +1,6 @@
-// === Module 12622: VibegrationsCreateErrors ===
+// === Module 12652: VibegrationsCreateErrors ===
 
-// Module 12622 (VibegrationsCreateErrors)
+// Module 12652 (VibegrationsCreateErrors)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
 import _modDef3715 from "module_3715" /* 3715 */;

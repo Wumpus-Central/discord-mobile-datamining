@@ -1,25 +1,17 @@
-// === Module 15701: ActivityPrivacyMatchingExperiment ===
+// === Module 15734: ActivityPrivacyMatchingExperiment ===
 
-// Module 15701 (ActivityPrivacyMatchingExperiment)
-import PrivateProfilesExperiment from "PrivateProfilesExperiment" /* 12837 */;
+// Module 15734 (ActivityPrivacyMatchingExperiment)
 import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 
-let closure_2 = ApexExperiment.createApexExperiment({ name: "2026-02-activity-privacy-matching", kind: "user", defaultConfig: { copyChanges: false, upsell: false }, variations: { 0: { copyChanges: false, upsell: false }, 1: { copyChanges: true, upsell: false }, 2: { copyChanges: true, upsell: true } } });
+let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-02-activity-privacy-matching", kind: "user", defaultConfig: { copyChanges: false, upsell: false }, variations: { 0: { copyChanges: false, upsell: false }, 1: { copyChanges: true, upsell: false }, 2: { copyChanges: true, upsell: true } } });
 const result = size.fileFinishedImporting("modules/activity_privacy/ActivityPrivacyMatchingExperiment.tsx");
 
 export const useIsInActivityPrivacyCopyExperiment = function useIsInActivityPrivacyCopyExperiment(ActivityPrivacyDefaultSharingSetting) {
-  let copyChanges = PrivateProfilesExperiment.useIsInPrivateProfilesExperiment(ActivityPrivacyDefaultSharingSetting);
-  if (!copyChanges) {
-    copyChanges = closure_2.useConfig(obj2).copyChanges;
-  }
-  return copyChanges;
+  const config = closure_0.useConfig({ location: ActivityPrivacyDefaultSharingSetting });
+  return true;
 };
 export const getIsInActivityPrivacyUpsellExperiment = function getIsInActivityPrivacyUpsellExperiment(ActivityPrivacyDefaultSharingSetting) {
-  let upsell = PrivateProfilesExperiment.getIsInPrivateProfilesExperiment(ActivityPrivacyDefaultSharingSetting);
-  if (!upsell) {
-    const obj2 = { location: ActivityPrivacyDefaultSharingSetting };
-    upsell = closure_2.getConfig(obj2).upsell;
-  }
-  return upsell;
+  const config = closure_0.getConfig({ location: ActivityPrivacyDefaultSharingSetting });
+  return true;
 };

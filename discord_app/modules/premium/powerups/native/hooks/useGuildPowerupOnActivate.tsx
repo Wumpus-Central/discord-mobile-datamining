@@ -1,16 +1,16 @@
-// === Module 12202: useGuildPowerupOnActivate ===
+// === Module 12234: useGuildPowerupOnActivate ===
 
-// Module 12202 (useGuildPowerupOnActivate)
-import GuildBoostingUtils from "GuildBoostingUtils" /* 4728 */;
-import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 5913 */;
+// Module 12234 (useGuildPowerupOnActivate)
+import GuildBoostingUtils from "GuildBoostingUtils" /* 4758 */;
+import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 5943 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2067 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 4729 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 4759 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(4724);
+const GuildPowerupsConstants = fn(4754);
 ({ BoostPurchaseIntent: metroRequire, GuildPowerupType: closure_7 } = GuildPowerupsConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnActivate.tsx");
@@ -68,7 +68,7 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
               analyticsLocations,
               guildId: stateFromStores.id,
               onBack() {
-                        return PERK(5039).popWithKey(diff(6998).PREMIUM_KEY);
+                        return PERK(5069).popWithKey(diff(7028).PREMIUM_KEY);
                       },
               onPaymentSuccess() {
                         const availableGuildBoostSlots = GuildBoostingUtils.getAvailableGuildBoostSlots(GuildBoostSlotStore.boostSlots);
@@ -88,7 +88,7 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
                         }
                       },
               onPaymentDismiss() {
-                        return PERK(5039).popWithKey(diff(6998).PREMIUM_KEY);
+                        return PERK(5069).popWithKey(diff(7028).PREMIUM_KEY);
                       }
             };
             const result = tmp17(onToggle[13]).launchGuildBoostFlowOrAlert(obj3);

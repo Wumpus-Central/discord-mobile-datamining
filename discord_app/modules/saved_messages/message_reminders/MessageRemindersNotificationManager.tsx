@@ -1,11 +1,11 @@
-// === Module 17440: MessageRemindersNotificationManager ===
+// === Module 17475: MessageRemindersNotificationManager ===
 
-// Module 17440 (MessageRemindersNotificationManager)
+// Module 17475 (MessageRemindersNotificationManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
-import ForLaterExperiment from "ForLaterExperiment" /* 7440 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 11324 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6705 */;
+import ForLaterExperiment from "ForLaterExperiment" /* 7471 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11360 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6735 */;
 
 require = fn;
 function scheduleNextNotification() {
@@ -54,7 +54,7 @@ function scheduleNextNotification() {
       timeout = null;
     }
   }
-  obj = found(7440);
+  obj = found(7471);
 }
 let c4 = null;
 const prototype = function MessageRemindersNotificationManager() {

@@ -1,23 +1,23 @@
-// === Module 4902: Connection ===
+// === Module 4932: Connection ===
 
-// Module 4902 (Connection)
+// Module 4932 (Connection)
 import inject from "inject" /* 1995 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4891 */;
-import VideoQualityManager from "VideoQualityManager" /* 4904 */;
-import cloneDeepDefault from "cloneDeep" /* 4908 */;
-import VideoCodecUtils from "VideoCodecUtils" /* 4951 */;
-import transformStatsDefault from "transformStats" /* 4953 */;
-import _modDef4955 from "module_4955" /* 4955 */;
-import discord_common_VoiceEngine from "discord_common/VoiceEngine" /* 4956 */;
-import reduceDefault from "reduce" /* 4957 */;
-import _modDef4960 from "module_4960" /* 4960 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4921 */;
+import VideoQualityManager from "VideoQualityManager" /* 4934 */;
+import cloneDeepDefault from "cloneDeep" /* 4938 */;
+import VideoCodecUtils from "VideoCodecUtils" /* 4981 */;
+import transformStatsDefault from "transformStats" /* 4983 */;
+import _modDef4985 from "module_4985" /* 4985 */;
+import discord_common_VoiceEngine from "discord_common/VoiceEngine" /* 4986 */;
+import reduceDefault from "reduce" /* 4987 */;
+import _modDef4990 from "module_4990" /* 4990 */;
 import _slicedToArray from "module_32" /* 32 */;
-import BaseConnection from "BaseConnection" /* 4903 */;
+import BaseConnection from "BaseConnection" /* 4933 */;
 
 require = fn;
-let Constants = fn(4861);
+let Constants = fn(4891);
 ({ StatsFilter: closure_4, ExperimentFlags: hasOwnProperty, DESKTOP_BITRATE_ENHANCED: metroRequire, DESKTOP_BITRATE: closure_7, MEDIA_SINK_WANTS_PROPERTIES: closure_8, MediaTypes: closure_9, SIMULCAST_HQ_QUALITY: c10 } = Constants);
-Constants = fn(4893);
+Constants = fn(4923);
 ({ NATIVE_MODE_VALUES: closure_11, InputModes: closure_12, ConnectionStates: map1, Codecs: closure_14, MediaEngineContextTypes: closure_15, SpeakingFlags: closure_16, ResolutionTypes: closure_17, NativeFeatures: closure_18, NoiseCancellerError: closure_19, DEFAULT_VOLUME: closure_20, DEFAULT_STREAM_VOLUME: closure_21, DEFAULT_SOUNDSHARE_VOICE_BITRATE: closure_22, DEFAULT_CALL_BITRATE: closure_23, DEFAULT_CALL_MIN_BITRATE: closure_24, DEFAULT_CALL_MAX_BITRATE: closure_25, DEFAULT_PRIORITY_SPEAKER_DUCKING: closure_26, PING_INTERVAL: closure_27 } = Constants);
 let c28 = 0;
 let Connection;
@@ -364,8 +364,8 @@ class Connection extends tmp4 {
               closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate, 0);
             } else if (diff > 0) {
               if (diff1 >= 0) {
-                closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate, 100 * _modDef4960(diff1 / (diff + diff1), 0, 1));
-                const tmp6 = _modDef4960(diff1 / (diff + diff1), 0, 1);
+                closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate, 100 * _modDef4990(diff1 / (diff + diff1), 0, 1));
+                const tmp6 = _modDef4990(diff1 / (diff + diff1), 0, 1);
               }
             }
             const outbound = rtp.rtp.outbound;
@@ -783,13 +783,13 @@ prototype["getStats"] = function getStats() {
         const obj = self(1995);
       }
     });
-    let obj = self(4952);
-    resolved = self(4952).timeout(promise, self(4901).STATS_INTERVAL).catch((error) => {
-      if (!(error instanceof self(4952).TimeoutError)) {
+    let obj = self(4982);
+    resolved = self(4982).timeout(promise, self(4931).STATS_INTERVAL).catch((error) => {
+      if (!(error instanceof self(4982).TimeoutError)) {
         throw error;
       }
     });
-    const timeoutResult = self(4952).timeout(promise, self(4901).STATS_INTERVAL);
+    const timeoutResult = self(4982).timeout(promise, self(4931).STATS_INTERVAL);
   }
   return resolved;
 };
@@ -820,7 +820,7 @@ prototype["createUser"] = function createUser(id, ssrc, arg2) {
     HermesBuiltin.arraySpread(arg2, 0);
     sorted1 = items2.sort();
   }
-  _modDef4955(sorted, sorted1);
+  _modDef4985(sorted, sorted1);
   self.remoteAudioSSRCs[id] = ssrc;
   let items3 = sorted1;
   if (sorted1 == null) {
@@ -1604,10 +1604,10 @@ prototype["setStreamParameters"] = function setStreamParameters(arg0) {
         const _Error = Error;
         const error = new Error("Invalid rid");
         iter(error);
-        return { v: "r" };
+        return { v: "Array" };
       } else {
         const items = [];
-        if (!_modDef4955(self.videoStreamParameters[findIndexResult], closure_1[findIndexResult])) {
+        if (!_modDef4985(self.videoStreamParameters[findIndexResult], closure_1[findIndexResult])) {
           const obj = {};
           const merged = Object.assign(closure_1[findIndexResult]);
           self.videoStreamParameters[findIndexResult] = obj;

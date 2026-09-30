@@ -1,20 +1,20 @@
-// === Module 17808: GuildSettingsModalGuildSpace ===
+// === Module 17843: GuildSettingsModalGuildSpace ===
 
-// Module 17808 (GuildSettingsModalGuildSpace)
+// Module 17843 (GuildSettingsModalGuildSpace)
 import nativeDefault from "native" /* 576 */;
 import FlagUtils from "FlagUtils" /* 1385 */;
 import _modDef2419 from "module_2419" /* 2419 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9213 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9247 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4469 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9214 */;
+import PermissionStore from "PermissionStore" /* 4499 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9248 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ Permissions: metroRequire, SystemChannelFlags: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = { container: { flex: 1 }, content: { paddingTop: nativeDefault.space.PX_16 }, stackPadding: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16 };
 obj2.stackPadding = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
@@ -58,7 +58,7 @@ export default function GuildSettingsModalGuildSpace(contentContainerStyle) {
     obj7.disabled = !stateFromStores1;
     obj7.value = !tmp2(1385).hasFlag(stateFromStores.systemChannelFlags, constants2.SUPPRESS_GAMING_LEADERBOARD_NOTIFICATIONS);
     obj7.onValueChange = tmp7;
-    const items5 = [closure_8(tmp2(6787).TableSwitchRow, obj7), ];
+    const items5 = [closure_8(tmp2(6817).TableSwitchRow, obj7), ];
     const obj8 = { label: null, disabled: null, value: null, onValueChange: null };
     const intl4 = tmp2(1115).intl;
     obj8.label = intl4.string(tmp2(1115).t.YZqqTX);
@@ -66,11 +66,11 @@ export default function GuildSettingsModalGuildSpace(contentContainerStyle) {
     const tmp2Result = tmp2(1385);
     obj8.value = !tmp2(1385).hasFlag(stateFromStores.systemChannelFlags, constants2.SUPPRESS_GUILD_SPACE_WHITEBOARD_NOTIFICATIONS);
     obj8.onValueChange = callback;
-    items5[1] = closure_8(tmp2(6787).TableSwitchRow, obj8);
+    items5[1] = closure_8(tmp2(6817).TableSwitchRow, obj8);
     obj6.children = items5;
-    obj5.children = closure_9(tmp2(6165).TableRowGroup, obj6);
-    obj4.children = closure_8(tmp2(5445).Stack, obj5);
-    const items6 = [closure_8(tmp2(8218).Form, obj4), closure_8(tmp2(6627).NavScrim, {})];
+    obj5.children = closure_9(tmp2(6195).TableRowGroup, obj6);
+    obj4.children = closure_8(tmp2(5475).Stack, obj5);
+    const items6 = [closure_8(tmp2(8249).Form, obj4), closure_8(tmp2(6657).NavScrim, {})];
     obj3.children = items6;
     tmp8 = closure_9(closure_10, obj3);
     const tmp2Result2 = tmp2(1385);

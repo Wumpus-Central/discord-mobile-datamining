@@ -1,29 +1,29 @@
-// === Module 11322: LongPressMessageActionSheet ===
+// === Module 11358: LongPressMessageActionSheet ===
 
-// Module 11322 (LongPressMessageActionSheet)
+// Module 11358 (LongPressMessageActionSheet)
 import FlagUtils from "FlagUtils" /* 1385 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1610 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5016 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 6749 */;
-import ActionSheet from "ActionSheet" /* 6784 */;
-import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 11321 */;
-import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 11331 */;
-import EmojiRowUtils from "EmojiRowUtils" /* 11398 */;
-import EmojiRowDefault from "EmojiRow" /* 11399 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5046 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 6779 */;
+import ActionSheet from "ActionSheet" /* 6814 */;
+import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 11357 */;
+import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 11367 */;
+import EmojiRowUtils from "EmojiRowUtils" /* 11434 */;
+import EmojiRowDefault from "EmojiRow" /* 11435 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 7545 */;
-import ReportToModStore from "ReportToModStore" /* 11323 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 11324 */;
+import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 7575 */;
+import ReportToModStore from "ReportToModStore" /* 11359 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11360 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 2067 */;
-import PermissionStore from "PermissionStore" /* 4469 */;
+import PermissionStore from "PermissionStore" /* 4499 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let isMessageComponentsV2 = fn(4480).isMessageComponentsV2;
-const FileUploadErrorTypes = fn(4829).FileUploadErrorTypes;
+let isMessageComponentsV2 = fn(4510).isMessageComponentsV2;
+const FileUploadErrorTypes = fn(4859).FileUploadErrorTypes;
 const Constants = fn(1074);
 ({ AnalyticEvents: map1, AnalyticsPages: closure_14, ChannelTypes: closure_15, GuildFeatures: closure_16, LOCAL_BOT_ID: closure_17, MessageAttachmentFlags: closure_18, MessageFlags: closure_19, MessageStates: closure_20, MessageTypes: closure_21, MessageTypesSets: closure_22, Permissions: closure_23 } = Constants);
 const jsx = fn(21).jsx;

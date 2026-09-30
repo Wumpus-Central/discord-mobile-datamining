@@ -1,26 +1,26 @@
-// === Module 13282: UserSettingsGiftingBadgeProgress ===
+// === Module 13309: UserSettingsGiftingBadgeProgress ===
 
-// Module 13282 (UserSettingsGiftingBadgeProgress)
+// Module 13309 (UserSettingsGiftingBadgeProgress)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef2583 from "module_2583" /* 2583 */;
-import Text_Text from "Text/Text" /* 4832 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6749 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6769 */;
-import utils_openGiftModal from "utils/openGiftModal" /* 10291 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10375 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10381 */;
+import Text_Text from "Text/Text" /* 4862 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6779 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6799 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 10325 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10409 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10415 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7802 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7832 */;
 
 require = fn;
 function GiftingBadgeIntro(analyticsLocation) {
   analyticsLocation = analyticsLocation.analyticsLocation;
   const tmp = closure_13();
   importDefault = tmp;
-  dependencyMap = analyticsLocation(10375).useIsGiftingBadgeComplexArtEnabled(UserSettingsGiftingBadgeProgress);
-  let obj = analyticsLocation(10375);
+  dependencyMap = analyticsLocation(10409).useIsGiftingBadgeComplexArtEnabled(UserSettingsGiftingBadgeProgress);
+  let obj = analyticsLocation(10409);
   const analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.USER_SETTINGS_GIFT_INVENTORY).analyticsLocations;
   let items = [BadgeDirectoryStore];
   const stateFromStores = analyticsLocation(504).useStateFromStores(items, () => {
@@ -38,7 +38,7 @@ function GiftingBadgeIntro(analyticsLocation) {
     let obj5 = { variant: "text-xs/normal", color: "text-muted", children: null };
     let intl = tmp2(1115).intl;
     obj5.children = intl.string(tmp4(2583)["4Yp0mI"]);
-    obj4.children = closure_9(tmp2(4832).Text, obj5);
+    obj4.children = closure_9(tmp2(4862).Text, obj5);
     let items1 = [closure_9(closure_6, obj4), , ];
     const obj6 = {
       style: tmp.introGrid,
@@ -72,13 +72,13 @@ function GiftingBadgeIntro(analyticsLocation) {
     items1[1] = closure_9(closure_6, obj6);
     const obj7 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
     const obj8 = { size: "sm", color: tmp4(576).unsafe_rawColors.WHITE };
-    obj7.icon = closure_9(tmp2(10665).GiftIcon, obj8);
+    obj7.icon = closure_9(tmp2(10699).GiftIcon, obj8);
     const intl2 = tmp2(1115).intl;
     obj7.text = intl2.string(tmp4(2583).DZnomS);
     obj7.onPress = function onPress() {
       utils_openGiftModal.openGiftModal({ analyticsLocation, analyticsLocations });
     };
-    items1[2] = closure_9(tmp2(5447).Button, obj7);
+    items1[2] = closure_9(tmp2(5477).Button, obj7);
     obj3.children = items1;
     tmp6 = closure_10(closure_6, obj3);
   }
@@ -86,11 +86,11 @@ function GiftingBadgeIntro(analyticsLocation) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let closure_8 = fn(7802).getSingleRequirementThreshold;
+let closure_8 = fn(7832).getSingleRequirementThreshold;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 const UserSettingsGiftingBadgeProgress = "UserSettingsGiftingBadgeProgress";
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let closure_13 = createStyles.createStyles(() => {
   const obj = { wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 }, progressContainer: null, progressRow: null, progressTitleText: null, progressBarContainer: null, progressBarTrack: null, progressBarFill: null, progressLabels: null, divider: null, dropdownRow: null, badgesRow: null, badgeItem: null, badgeItemActive: null, badgeCopy: null, footerText: null, introContent: null, introGrid: null, introGridItem: null };
   const obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
@@ -164,18 +164,18 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
   ({ badgeProgress, currentTier } = stateFromStoresObject);
   ({ nextTier, tiers, giftsRemaining } = stateFromStoresObject);
   let obj = analyticsLocation(504);
-  const isGiftingBadgeComplexArtEnabled = analyticsLocation(10375).useIsGiftingBadgeComplexArtEnabled(UserSettingsGiftingBadgeProgress);
+  const isGiftingBadgeComplexArtEnabled = analyticsLocation(10409).useIsGiftingBadgeComplexArtEnabled(UserSettingsGiftingBadgeProgress);
   if (0 === badgeProgress) {
     let obj3 = { analyticsLocation };
     return closure_9(GiftingBadgeIntro, obj3);
   } else {
     let tmp19 = closure_8(currentTier);
     const tmp25 = closure_8(nextTier);
-    const giftingBadgeProgressPercent = tmp7(10375).getGiftingBadgeProgressPercent(badgeProgress, currentTier, nextTier);
-    const tmp7Result = tmp7(10375);
-    let giftingBadgeTierIconUrl = tmp7(10375).getGiftingBadgeTierIconUrl(currentTier, isGiftingBadgeComplexArtEnabled);
-    const tmp7Result3 = tmp7(10375);
-    const giftingBadgeTierIconUrl1 = tmp7(10375).getGiftingBadgeTierIconUrl(nextTier, isGiftingBadgeComplexArtEnabled);
+    const giftingBadgeProgressPercent = tmp7(10409).getGiftingBadgeProgressPercent(badgeProgress, currentTier, nextTier);
+    const tmp7Result = tmp7(10409);
+    let giftingBadgeTierIconUrl = tmp7(10409).getGiftingBadgeTierIconUrl(currentTier, isGiftingBadgeComplexArtEnabled);
+    const tmp7Result3 = tmp7(10409);
+    const giftingBadgeTierIconUrl1 = tmp7(10409).getGiftingBadgeTierIconUrl(nextTier, isGiftingBadgeComplexArtEnabled);
     if (null != nextTier) {
       const intl2 = tmp7(1115).intl;
       let obj4 = { count: giftsRemaining, nextTier: null };
@@ -206,15 +206,15 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
     let tmp13 = null != giftingBadgeTierIconUrl;
     if (tmp13) {
       const obj9 = { icon: giftingBadgeTierIconUrl, size: 36, style: { margin: 4 } };
-      tmp13 = closure_9(tmp4(10381), obj9);
+      tmp13 = closure_9(tmp4(10415), obj9);
     }
     let items1 = [tmp13, , ];
     const obj10 = { style: tmp.progressTitleText, variant: "text-md/medium", color: "text-strong", children: formatToPlainStringResult };
-    items1[1] = closure_9(tmp7(4832).Text, obj10);
+    items1[1] = closure_9(tmp7(4862).Text, obj10);
     let tmp15Result = null != giftingBadgeTierIconUrl1;
     if (tmp15Result) {
       const obj11 = { icon: giftingBadgeTierIconUrl1, size: 36, style: { margin: 4 } };
-      tmp15Result = closure_9(tmp4(10381), obj11);
+      tmp15Result = closure_9(tmp4(10415), obj11);
     }
     items1[2] = tmp15Result;
     obj8.children = items1;
@@ -243,7 +243,7 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
     const obj18 = { variant: "text-xs/normal", color: "text-subtle", children: null };
     obj17.count = tmp19;
     obj18.children = intl3.format(tmp4(2583).iIpfQe, obj17);
-    obj16.children = closure_9(tmp7(4832).Text, obj18);
+    obj16.children = closure_9(tmp7(4862).Text, obj18);
     items4[1] = closure_9(closure_6, obj16);
     obj12.children = items4;
     items2[1] = closure_10(closure_6, obj12);
@@ -251,13 +251,13 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
     const items5 = [closure_10(closure_6, obj7), , , , ];
     const obj19 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
     const obj20 = { size: "sm", color: tmp4(576).unsafe_rawColors.WHITE };
-    obj19.icon = closure_9(tmp7(10665).GiftIcon, obj20);
+    obj19.icon = closure_9(tmp7(10699).GiftIcon, obj20);
     const intl4 = tmp7(1115).intl;
     obj19.text = intl4.string(tmp4(2583).DZnomS);
     obj19.onPress = function onPress() {
       utils_openGiftModal.openGiftModal({ analyticsLocation, analyticsLocations });
     };
-    items5[1] = closure_9(tmp7(5447).Button, obj19);
+    items5[1] = closure_9(tmp7(5477).Button, obj19);
     const obj21 = { style: tmp.divider };
     items5[2] = closure_9(closure_6, obj21);
     const obj22 = {
@@ -270,11 +270,11 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
     const obj23 = { variant: "text-sm/medium", color: "text-strong", children: null };
     const intl5 = tmp7(1115).intl;
     obj23.children = intl5.string(tmp4(2583).WZ4cXA);
-    const items6 = [closure_9(tmp7(4832).Text, obj23), ];
+    const items6 = [closure_9(tmp7(4862).Text, obj23), ];
     if (tmp11Result) {
-      let ChevronSmallDownIcon = tmp7(13283).ChevronSmallUpIcon;
+      let ChevronSmallDownIcon = tmp7(13310).ChevronSmallUpIcon;
     } else {
-      ChevronSmallDownIcon = tmp7(10784).ChevronSmallDownIcon;
+      ChevronSmallDownIcon = tmp7(10818).ChevronSmallDownIcon;
     }
     const obj24 = { color: tmp4(576).colors.INTERACTIVE_ICON_DEFAULT };
     items6[1] = closure_9(ChevronSmallDownIcon, obj24);
@@ -322,7 +322,7 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
       const obj27 = { style: tmp.footerText, variant: "text-xs/normal", color: "text-muted", children: null };
       const intl6 = tmp7(1115).intl;
       obj27.children = intl6.string(tmp4(2583)["4Yp0mI"]);
-      items7[1] = closure_9(tmp7(4832).Text, obj27);
+      items7[1] = closure_9(tmp7(4862).Text, obj27);
       obj25.children = items7;
       tmp11Result = closure_10(closure_11, obj25);
     }
@@ -330,5 +330,5 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
     obj6.children = items5;
     return closure_10(closure_6, obj6);
   }
-  let obj2 = analyticsLocation(10375);
+  let obj2 = analyticsLocation(10409);
 };

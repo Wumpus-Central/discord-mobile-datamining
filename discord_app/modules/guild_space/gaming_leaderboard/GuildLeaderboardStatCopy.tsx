@@ -1,9 +1,9 @@
-// === Module 10537: GuildLeaderboardStatCopy ===
+// === Module 10571: GuildLeaderboardStatCopy ===
 
-// Module 10537 (GuildLeaderboardStatCopy)
+// Module 10571 (GuildLeaderboardStatCopy)
 import util from "util" /* 1115 */;
 import _modDef2419 from "module_2419" /* 2419 */;
-import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4457 */;
+import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4487 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_space/gaming_leaderboard/GuildLeaderboardStatCopy.tsx");

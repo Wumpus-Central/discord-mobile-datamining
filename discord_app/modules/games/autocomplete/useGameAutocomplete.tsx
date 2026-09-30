@@ -1,12 +1,12 @@
-// === Module 8532: useGameAutocomplete ===
+// === Module 8566: useGameAutocomplete ===
 
-// Module 8532 (useGameAutocomplete)
-import GameAutocompleteTypes from "GameAutocompleteTypes" /* 5587 */;
-import GameAutocompleteUtils from "GameAutocompleteUtils" /* 5588 */;
-import GameAutocompleteActionCreators from "GameAutocompleteActionCreators" /* 8533 */;
+// Module 8566 (useGameAutocomplete)
+import GameAutocompleteTypes from "GameAutocompleteTypes" /* 5617 */;
+import GameAutocompleteUtils from "GameAutocompleteUtils" /* 5618 */;
+import GameAutocompleteActionCreators from "GameAutocompleteActionCreators" /* 8567 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 5586 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 5616 */;
 
 require = fn;
 const QueryIds = fn(1074).QueryIds;

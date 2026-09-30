@@ -1,6 +1,6 @@
-// === Module 12830: UserProfileRecentActivityMobileExperiment ===
+// === Module 12860: UserProfileRecentActivityMobileExperiment ===
 
-// Module 12830 (UserProfileRecentActivityMobileExperiment)
+// Module 12860 (UserProfileRecentActivityMobileExperiment)
 import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 

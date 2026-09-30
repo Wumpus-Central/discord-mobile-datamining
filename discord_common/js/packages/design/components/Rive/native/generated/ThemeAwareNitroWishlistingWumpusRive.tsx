@@ -1,8 +1,8 @@
-// === Module 4648: ThemeAwareNitroWishlistingWumpusRive ===
+// === Module 4678: ThemeAwareNitroWishlistingWumpusRive ===
 
-// Module 4648 (ThemeAwareNitroWishlistingWumpusRive)
-import BaseRive from "BaseRive" /* 4560 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 4615 */;
+// Module 4678 (ThemeAwareNitroWishlistingWumpusRive)
+import BaseRive from "BaseRive" /* 4590 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 4645 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

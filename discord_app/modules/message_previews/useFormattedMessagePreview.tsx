@@ -1,16 +1,16 @@
-// === Module 9720: useFormattedMessagePreview ===
+// === Module 9754: useFormattedMessagePreview ===
 
-// Module 9720 (useFormattedMessagePreview)
+// Module 9754 (useFormattedMessagePreview)
 import _mod12 from "module_12" /* 12 */;
 import MessageTypes from "MessageTypes" /* 1090 */;
 import util from "util" /* 1115 */;
-import useMessageAuthorDefault from "useMessageAuthor" /* 5249 */;
-import isForwardMessageDefault from "isForwardMessage" /* 6886 */;
-import useIsCallActiveDefault from "useIsCallActive" /* 7588 */;
-import SystemMessageUtilsDefault from "SystemMessageUtils" /* 7593 */;
-import VoiceSessionUtils from "VoiceSessionUtils" /* 7679 */;
+import useMessageAuthorDefault from "useMessageAuthor" /* 5279 */;
+import isForwardMessageDefault from "isForwardMessage" /* 6916 */;
+import useIsCallActiveDefault from "useIsCallActive" /* 7618 */;
+import SystemMessageUtilsDefault from "SystemMessageUtils" /* 7623 */;
+import VoiceSessionUtils from "VoiceSessionUtils" /* 7709 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RelationshipStore from "RelationshipStore" /* 4479 */;
+import RelationshipStore from "RelationshipStore" /* 4509 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;

@@ -1,7 +1,7 @@
-// === Module 15978: GuildPowerupsBoostToUnlockCoachmark ===
+// === Module 16002: GuildPowerupsBoostToUnlockCoachmark ===
 
-// Module 15978 (GuildPowerupsBoostToUnlockCoachmark)
-import GuildPowerupsNotification from "GuildPowerupsNotification" /* 12162 */;
+// Module 16002 (GuildPowerupsBoostToUnlockCoachmark)
+import GuildPowerupsNotification from "GuildPowerupsNotification" /* 12196 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,6 +14,6 @@ export default function GuildPowerupsBoostToUnlockCoachmark(powerup) {
   const items = [powerup, markAsDismissed];
   ({ guildId, targetRef } = powerup);
   const memo = noop.useMemo(() => ({ type: GuildPowerupsNotification.GuildPowerupNotificationPopoutType.BOOST_TO_UNLOCK, powerup, markAsDismissed }), items);
-  markAsDismissed(15979)(targetRef, guildId, memo);
+  markAsDismissed(16003)(targetRef, guildId, memo);
   return null;
 };

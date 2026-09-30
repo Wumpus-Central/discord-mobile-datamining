@@ -1,19 +1,19 @@
-// === Module 9458: Autocompleter ===
+// === Module 9492: Autocompleter ===
 
-// Module 9458 (Autocompleter)
+// Module 9492 (Autocompleter)
 import _modDef12 from "module_12" /* 12 */;
 import URLUtilsDefault from "URLUtils" /* 1366 */;
 import _modDef1930 from "module_1930" /* 1930 */;
 import StringUtils from "StringUtils" /* 2011 */;
-import findCodedLinks from "findCodedLinks" /* 4816 */;
-import CodedLink from "CodedLink" /* 4821 */;
-import AutocompleteUtils from "AutocompleteUtils" /* 5921 */;
-import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 5997 */;
-import GuildUtilsDefault from "GuildUtils" /* 5998 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 9461 */;
-import ThreadMemberListStore from "ThreadMemberListStore" /* 9459 */;
-import LinkRecord from "LinkRecord" /* 9460 */;
-import RelationshipStore from "RelationshipStore" /* 4479 */;
+import findCodedLinks from "findCodedLinks" /* 4846 */;
+import CodedLink from "CodedLink" /* 4851 */;
+import AutocompleteUtils from "AutocompleteUtils" /* 5951 */;
+import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 6027 */;
+import GuildUtilsDefault from "GuildUtils" /* 6028 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 9495 */;
+import ThreadMemberListStore from "ThreadMemberListStore" /* 9493 */;
+import LinkRecord from "LinkRecord" /* 9494 */;
+import RelationshipStore from "RelationshipStore" /* 4509 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const AutocompleteUtilsDefault = AutocompleteUtils;
@@ -27,8 +27,8 @@ function getAutocompleterBoosterMap(USER, options) {
   }
   return boosterMap;
 }
-const GUILD_VOCAL_CHANNELS_KEY = fn(4467).GUILD_VOCAL_CHANNELS_KEY;
-fn(5994).AutocompleterResultTypes;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4497).GUILD_VOCAL_CHANNELS_KEY;
+fn(6024).AutocompleterResultTypes;
 const React7 = Object.freeze({});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/autocompleter/Autocompleter.tsx");

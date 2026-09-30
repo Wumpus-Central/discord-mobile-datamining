@@ -1,12 +1,12 @@
-// === Module 12216: usePowerupGroupConfig ===
+// === Module 12248: usePowerupGroupConfig ===
 
-// Module 12216 (usePowerupGroupConfig)
+// Module 12248 (usePowerupGroupConfig)
 import util from "util" /* 1115 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import _modDef2519 from "module_2519" /* 2519 */;
-import GuildTagUtils from "GuildTagUtils" /* 7775 */;
-import _modDef12217 from "module_12217" /* 12217 */;
-import _modDef12218 from "module_12218" /* 12218 */;
+import GuildTagUtils from "GuildTagUtils" /* 7805 */;
+import _modDef12249 from "module_12249" /* 12249 */;
+import _modDef12250 from "module_12250" /* 12250 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2067 */;
 
@@ -31,12 +31,12 @@ export default function usePowerupGroupConfig(arg0, arg1) {
   const items1 = [arg1, stateFromStores];
   return noop.useMemo(() => {
     if ("guildTagsBadgePacks" === group.group) {
-      const obj2 = { title: null, description: null, image: null, disabledReason: null, badge: "HermesInternal", forceStaticImages: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZl" };
+      const obj2 = { title: null, description: null, image: null, disabledReason: null, badge: "HermesInternal", forceStaticImages: "HermesInternal" };
       const intl = util.intl;
       obj2.title = intl.string(_modDef2519.KC9HRW);
       const intl2 = util.intl;
       obj2.description = intl2.string(_modDef2519.GJiSmP);
-      const obj3 = { staticUrl: _modDef12217, animatedUrl: _modDef12218 };
+      const obj3 = { staticUrl: _modDef12249, animatedUrl: _modDef12250 };
       obj2.image = obj3;
       let stringResult;
       if (!stateFromStores) {

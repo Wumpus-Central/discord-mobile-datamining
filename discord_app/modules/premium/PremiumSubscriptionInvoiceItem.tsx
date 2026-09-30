@@ -1,6 +1,6 @@
-// === Module 4498: PremiumSubscriptionInvoiceItem ===
+// === Module 4528: PremiumSubscriptionInvoiceItem ===
 
-// Module 4498 (PremiumSubscriptionInvoiceItem)
+// Module 4528 (PremiumSubscriptionInvoiceItem)
 import _modDef12 from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 

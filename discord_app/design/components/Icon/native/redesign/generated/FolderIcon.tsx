@@ -1,9 +1,9 @@
-// === Module 5554: FolderIcon ===
+// === Module 5584: FolderIcon ===
 
-// Module 5554 (FolderIcon)
+// Module 5584 (FolderIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4530 */;
-import _mod5504 from "module_5504" /* 5504 */;
+import BaseIconImage from "BaseIconImage" /* 4560 */;
+import _mod5534 from "module_5534" /* 5534 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const FolderIcon = function FolderIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5504, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5534, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

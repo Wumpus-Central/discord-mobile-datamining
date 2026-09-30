@@ -1,19 +1,19 @@
-// === Module 17890: SafetyFlowTaskScreen ===
+// === Module 17925: SafetyFlowTaskScreen ===
 
-// Module 17890 (SafetyFlowTaskScreen)
-import Text_Text from "Text/Text" /* 4832 */;
-import Stack_Stack from "Stack/Stack" /* 5445 */;
-import ModalScreen from "ModalScreen" /* 8035 */;
-import ModalContent from "ModalContent" /* 8036 */;
-import ModalActionButton from "ModalActionButton" /* 10628 */;
-import ModalFooter from "ModalFooter" /* 11574 */;
-import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 17888 */;
+// Module 17925 (SafetyFlowTaskScreen)
+import Text_Text from "Text/Text" /* 4862 */;
+import Stack_Stack from "Stack/Stack" /* 5475 */;
+import ModalScreen from "ModalScreen" /* 8065 */;
+import ModalContent from "ModalContent" /* 8066 */;
+import ModalActionButton from "ModalActionButton" /* 10662 */;
+import ModalFooter from "ModalFooter" /* 11608 */;
+import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 17923 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let closure_5 = createStyles.createStyles({ header: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_flows/native/SafetyFlowTaskScreen.tsx");

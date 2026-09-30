@@ -1,12 +1,12 @@
-// === Module 12905: useCanGiftProduct ===
+// === Module 12932: useCanGiftProduct ===
 
-// Module 12905 (useCanGiftProduct)
+// Module 12932 (useCanGiftProduct)
 import CollectiblesItemType from "CollectiblesItemType" /* 1974 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4488 */;
-import BillingPlatformUtils from "BillingPlatformUtils" /* 4501 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7139 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7140 */;
-import useCurrentUser from "useCurrentUser" /* 7788 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4518 */;
+import BillingPlatformUtils from "BillingPlatformUtils" /* 4531 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7169 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7170 */;
+import useCurrentUser from "useCurrentUser" /* 7818 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/collectibles/hooks/useCanGiftProduct.tsx");

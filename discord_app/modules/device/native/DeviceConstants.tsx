@@ -1,6 +1,6 @@
-// === Module 10279: DeviceConstants ===
+// === Module 10313: DeviceConstants ===
 
-// Module 10279 (DeviceConstants)
+// Module 10313 (DeviceConstants)
 import size from "module_2" /* 2 */;
 
 const frozen = Object.freeze({ VIDEO: "ALAssetTypeVideo", PHOTO: "ALAssetTypePhoto" });

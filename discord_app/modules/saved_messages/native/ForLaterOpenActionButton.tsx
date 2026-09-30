@@ -1,20 +1,20 @@
-// === Module 16217: ForLaterOpenActionButton ===
+// === Module 16246: ForLaterOpenActionButton ===
 
-// Module 16217 (ForLaterOpenActionButton)
+// Module 16246 (ForLaterOpenActionButton)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4531 */;
-import useThemeDefault from "useTheme" /* 4767 */;
-import ClockIcon from "ClockIcon" /* 4795 */;
-import ButtonHooks from "ButtonHooks" /* 5453 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6769 */;
-import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 7435 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7438 */;
-import showForLaterModal from "showForLaterModal" /* 7449 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 7450 */;
-import ClipViewDefault from "ClipView" /* 8441 */;
-import BookmarkIcon2 from "BookmarkIcon" /* 11376 */;
+import useToken from "useToken" /* 4561 */;
+import useThemeDefault from "useTheme" /* 4797 */;
+import ClockIcon from "ClockIcon" /* 4825 */;
+import ButtonHooks from "ButtonHooks" /* 5483 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6799 */;
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 7466 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7469 */;
+import showForLaterModal from "showForLaterModal" /* 7480 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 7481 */;
+import ClipViewDefault from "ClipView" /* 8472 */;
+import BookmarkIcon2 from "BookmarkIcon" /* 11412 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 11324 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11360 */;
 
 require = fn;
 function BadgedIcon(arg0) {
@@ -54,10 +54,10 @@ function BadgedIcon(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const point = { shape: fn(8441).CutoutShape.Circle, x: fn(16218).ICON_SIZE.sm - 7, y: fn(16218).ICON_SIZE.sm - 8, size: 10 };
-const createStyles = fn(4836);
+const point = { shape: fn(8472).CutoutShape.Circle, x: fn(16247).ICON_SIZE.sm - 7, y: fn(16247).ICON_SIZE.sm - 8, size: 10 };
+const createStyles = fn(4866);
 let obj = { container: { aspectRatio: 1, alignItems: "center", justifyContent: "center", position: "relative" }, iconAnchor: null, dot: null };
-let size = { width: fn(16218).ICON_SIZE.sm, height: fn(16218).ICON_SIZE.sm, position: "relative" };
+let size = { width: fn(16247).ICON_SIZE.sm, height: fn(16247).ICON_SIZE.sm, position: "relative" };
 obj.iconAnchor = size;
 const size1 = { position: "absolute", height: 6.5, width: 6.5, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION, borderRadius: nativeDefault.radii.lg, right: -2, bottom: -0.5 };
 obj.dot = size1;

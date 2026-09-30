@@ -1,9 +1,9 @@
-// === Module 17901: PlaneIllocon ===
+// === Module 17936: PlaneIllocon ===
 
-// Module 17901 (PlaneIllocon)
+// Module 17936 (PlaneIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 6065 */;
-import _modDef12145 from "module_12145" /* 12145 */;
+import FastImageDefault from "FastImage" /* 6095 */;
+import _modDef12179 from "module_12179" /* 12179 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const PlaneIllocon = function PlaneIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef12145 };
+  const obj2 = { uri: _modDef12179 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

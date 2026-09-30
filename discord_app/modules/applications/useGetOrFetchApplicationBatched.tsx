@@ -1,9 +1,9 @@
-// === Module 11227: useGetOrFetchApplicationBatched ===
+// === Module 11263: useGetOrFetchApplicationBatched ===
 
-// Module 11227 (useGetOrFetchApplicationBatched)
+// Module 11263 (useGetOrFetchApplicationBatched)
 import Timers from "Timers" /* 2040 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5063 */;
+import ApplicationStore from "ApplicationStore" /* 5093 */;
 
 const require = globalThis.__r;
 

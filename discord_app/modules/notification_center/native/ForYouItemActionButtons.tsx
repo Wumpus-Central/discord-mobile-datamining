@@ -1,18 +1,18 @@
-// === Module 16236: ForYouItemActionButtons ===
+// === Module 16265: ForYouItemActionButtons ===
 
-// Module 16236 (ForYouItemActionButtons)
+// Module 16265 (ForYouItemActionButtons)
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4528 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4566 */;
-import parseURLDefault from "parseURL" /* 4813 */;
-import timing from "timing" /* 4837 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4849 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7219 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9360 */;
-import PeopleUtilsDefault from "PeopleUtils" /* 10499 */;
-import handleSupportedURLDefault from "handleSupportedURL" /* 13564 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 15852 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4558 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4596 */;
+import parseURLDefault from "parseURL" /* 4843 */;
+import timing from "timing" /* 4867 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4879 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7249 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9394 */;
+import PeopleUtilsDefault from "PeopleUtils" /* 10533 */;
+import handleSupportedURLDefault from "handleSupportedURL" /* 13591 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 15877 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
@@ -253,7 +253,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, ComponentActions: closure_9, EMPTY_STRING_SNOWFLAKE_ID: c10, MessageTypes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let value = createStyles.createStyles({ buttonsContainer: { flexDirection: "row", marginTop: 8 }, actionButtonsContainer: { flexDirection: "row", position: "absolute", left: 0 } });
 const constants2 = { ACCEPT: "accept", IGNORE: "ignore", WAVE: "wave", ACTION: "action" };
 let __initData = { code: "function ForYouItemActionButtonsTsx1(){const{withTiming,pressed}=this.__closure;return{opacity:withTiming(!pressed.get()?1:0,{duration:150}),pointerEvents:!pressed.get()?'auto':'none'};}" };
@@ -309,7 +309,7 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(ot
     onSoftAckItem(closure_0);
   }, items1);
   let obj2 = require("canReplyToMessage");
-  sharedValue = tmp2(4566).useSharedValue(false);
+  sharedValue = tmp2(4596).useSharedValue(false);
   const items2 = [forceHoistItem, sharedValue, other_user, id, arg6];
   const callback1 = noop.useCallback(() => {
     const obj2 = { userId: id, applicationId: null, location: null, onConfirm: null };
@@ -359,7 +359,7 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(ot
   const callback4 = noop.useCallback(() => {
     const dMChannel = ChannelActionCreatorsDefault.getDMChannel(id);
     dMChannel.then((channelId) => {
-      closure_1(13564)({ payload: closure_1(4813)("https://discord.com/channels/@me/" + channelId).payload, safe: true, navigationReplace: false });
+      closure_1(13591)({ payload: closure_1(4843)("https://discord.com/channels/@me/" + channelId).payload, safe: true, navigationReplace: false });
       let obj;
       let tmp3;
       if (null != channelId) {
@@ -460,10 +460,10 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(ot
     let obj3 = { actionButtons: [] };
     return obj3;
   } else {
-    if (other_user.type !== tmp2(7219).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS) {
-      if (other_user.type !== tmp2(7219).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
-        if (other_user.type !== tmp2(7219).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS) {
-          if (other_user.type === tmp2(7219).NotificationCenterLocalItems.FRIEND_REQUESTS_GROUPED) {
+    if (other_user.type !== tmp2(7249).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS) {
+      if (other_user.type !== tmp2(7249).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
+        if (other_user.type !== tmp2(7249).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS) {
+          if (other_user.type === tmp2(7249).NotificationCenterLocalItems.FRIEND_REQUESTS_GROUPED) {
             let obj4 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
             let obj5 = { id: "view_friend_requests", text: null, variant: "secondary", size: "md", onPress: null };
             const intl14 = tmp2(1115).intl;
@@ -478,7 +478,7 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(ot
             obj4.accessibilityActions = items10;
             obj4.onAccessibilityAction = callback3;
             return obj4;
-          } else if (other_user.type === tmp2(7219).NotificationCenterItems.GO_LIVE_PUSH) {
+          } else if (other_user.type === tmp2(7249).NotificationCenterItems.GO_LIVE_PUSH) {
             const obj7 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
             const obj8 = { id: "join_stream", text: null, variant: "secondary", size: "md", onPress: null };
             const intl12 = tmp2(1115).intl;
@@ -494,11 +494,11 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(ot
             obj7.onAccessibilityAction = callback;
             return obj7;
           } else {
-            if (other_user.type !== tmp2(7219).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
-              if (other_user.type !== tmp2(7219).NotificationCenterItems.DM_FRIEND_NUDGE) {
-                if (other_user.type !== tmp2(7219).NotificationCenterItems.FRIEND_REQUEST_ACCEPTED) {
-                  if (other_user.type !== tmp2(7219).NotificationCenterItems.GAME_FRIEND_REQUEST_ACCEPTED) {
-                    if (other_user.type === tmp2(7219).NotificationCenterItems.FRIEND_SUGGESTION_CREATED) {
+            if (other_user.type !== tmp2(7249).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
+              if (other_user.type !== tmp2(7249).NotificationCenterItems.DM_FRIEND_NUDGE) {
+                if (other_user.type !== tmp2(7249).NotificationCenterItems.FRIEND_REQUEST_ACCEPTED) {
+                  if (other_user.type !== tmp2(7249).NotificationCenterItems.GAME_FRIEND_REQUEST_ACCEPTED) {
+                    if (other_user.type === tmp2(7249).NotificationCenterItems.FRIEND_SUGGESTION_CREATED) {
                       const obj10 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
                       const obj11 = { id: "add_friend", text: null, variant: "secondary", size: "md", onPress: null };
                       const intl8 = tmp2(1115).intl;
@@ -513,7 +513,7 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(ot
                       obj10.accessibilityActions = items14;
                       obj10.onAccessibilityAction = callback5;
                       return obj10;
-                    } else if (other_user.type === tmp2(7219).NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED) {
+                    } else if (other_user.type === tmp2(7249).NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED) {
                       const obj13 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
                       const obj14 = { id: "join_event", text: null, variant: "secondary", size: "md", onPress: null };
                       const intl6 = tmp2(1115).intl;
@@ -528,24 +528,24 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(ot
                       obj13.accessibilityActions = items16;
                       obj13.onAccessibilityAction = callback;
                       return obj13;
-                    } else if (other_user.type === tmp2(7219).NotificationCenterItems.LIFECYCLE_ITEM) {
+                    } else if (other_user.type === tmp2(7249).NotificationCenterItems.LIFECYCLE_ITEM) {
                       const item_enum = other_user.item_enum;
-                      if (tmp2(7219).ItemEnum.UPDATE_PROFILE === item_enum) {
+                      if (tmp2(7249).ItemEnum.UPDATE_PROFILE === item_enum) {
                         const intl5 = tmp2(1115).intl;
                         let stringResult = intl5.string(tmp2(1115).t.zMRcWL);
                         let str = "update_profile";
-                      } else if (tmp2(7219).ItemEnum.FIND_FRIENDS === item_enum) {
+                      } else if (tmp2(7249).ItemEnum.FIND_FRIENDS === item_enum) {
                         const intl4 = tmp2(1115).intl;
                         stringResult = intl4.string(tmp2(1115).t["vwL/4s"]);
                         str = "find_friends";
-                      } else if (tmp2(7219).ItemEnum.ADD_FRIEND === item_enum) {
+                      } else if (tmp2(7249).ItemEnum.ADD_FRIEND === item_enum) {
                         const intl3 = tmp2(1115).intl;
                         stringResult = intl3.string(tmp2(1115).t["boL/YX"]);
                         str = "add_friend";
                       } else {
                         str = null;
                         stringResult = null;
-                        if (tmp2(7219).ItemEnum.FIRST_MESSAGE === item_enum) {
+                        if (tmp2(7249).ItemEnum.FIRST_MESSAGE === item_enum) {
                           const intl19 = tmp2(1115).intl;
                           stringResult = intl19.string(tmp2(1115).t["GuUH7/"]);
                           str = "send_message";
@@ -567,9 +567,9 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(ot
                       const obj19 = { actionButtons: [] };
                       obj16 = obj19;
                     } else {
-                      if (other_user.type !== tmp2(7219).NotificationCenterItems.RECENT_MENTION) {
-                        if (other_user.type !== tmp2(7219).NotificationCenterItems.REPLY_MENTION) {
-                          if (other_user.type === tmp2(7219).NotificationCenterItems.TRENDING_CONTENT) {
+                      if (other_user.type !== tmp2(7249).NotificationCenterItems.RECENT_MENTION) {
+                        if (other_user.type !== tmp2(7249).NotificationCenterItems.REPLY_MENTION) {
+                          if (other_user.type === tmp2(7249).NotificationCenterItems.TRENDING_CONTENT) {
                             const obj20 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
                             const obj21 = { id: "read_summary", text: null, variant: "secondary", size: "md", onPress: null };
                             let intl = tmp2(1115).intl;
@@ -635,7 +635,7 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(ot
     const obj31 = { actionsNode: null, accessibilityActions: null, onAccessibilityAction: null };
     const obj32 = { onWavePress: callback, onAccept: callback1, onIgnore: callback2, pressed: sharedValue, compactMode };
     obj31.actionsNode = callback2(IncomingFriendRequestActions, obj32);
-    if (other_user.type === tmp2(7219).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
+    if (other_user.type === tmp2(7249).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
       const obj33 = { name: constants2.WAVE, label: null };
       const intl16 = tmp2(1115).intl;
       obj33.label = intl16.string(tmp2(1115).t.n8nU4W);
@@ -664,7 +664,7 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(ot
     };
     return obj31;
   }
-  const tmp2Result = tmp2(4566);
+  const tmp2Result = tmp2(4596);
 };
 export const ForYouItemActionButtons = function ForYouItemActionButtons(arg0) {
   ({ item: require, rowIndex: importDefault, onSoftAckItem: dependencyMap, actionButtons, actionsNode, compactMode } = arg0);

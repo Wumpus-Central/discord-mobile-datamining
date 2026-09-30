@@ -1,6 +1,6 @@
-// === Module 7500: ConversationsAnalytics ===
+// === Module 7530: ConversationsAnalytics ===
 
-// Module 7500 (ConversationsAnalytics)
+// Module 7530 (ConversationsAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import ChannelStore from "ChannelStore" /* 2045 */;
 

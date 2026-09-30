@@ -1,14 +1,14 @@
-// === Module 13695: ProductCatalog ===
+// === Module 13722: ProductCatalog ===
 
-// Module 13695 (ProductCatalog)
+// Module 13722 (ProductCatalog)
 import LoggerDefault from "Logger" /* 3 */;
 import user from "user" /* 1380 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7438 */;
-import PremiumFeatureUtils from "PremiumFeatureUtils" /* 8825 */;
-import SKUListingDefault from "SKUListing" /* 13697 */;
-import DenormalizedPerksReadExperimentDefault from "DenormalizedPerksReadExperiment" /* 13698 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7469 */;
+import PremiumFeatureUtils from "PremiumFeatureUtils" /* 8859 */;
+import SKUListingDefault from "SKUListing" /* 13724 */;
+import DenormalizedPerksReadExperimentDefault from "DenormalizedPerksReadExperiment" /* 13725 */;
 import PremiumConstants from "PremiumConstants" /* 1374 */;
-import PremiumSKUFeature_mod from "PremiumSKUFeature" /* 13696 */;
+import PremiumSKUFeature_mod from "PremiumSKUFeature" /* 13723 */;
 import size from "module_2" /* 2 */;
 
 let closure_0 = require;
@@ -1105,14 +1105,14 @@ export const canUserUse = function canUserUse(COLLECTIBLES, isPremiumWithFractio
     }
     if (null != perks) {
       const config = DenormalizedPerksReadExperimentDefault.getConfig({ location: "product_catalog_can_user_use" });
-      if (config !== closure_0(13698).DenormalizedPerksReadConfig.CONTROL) {
+      if (config !== closure_0(13725).DenormalizedPerksReadConfig.CONTROL) {
         let featureValue = COLLECTIBLES.getFeatureValue(isPremiumWithFractionalPremiumOnly);
         let perks1;
         if (isPremiumWithFractionalPremiumOnly != null) {
           perks1 = isPremiumWithFractionalPremiumOnly.perks;
         }
         const tmp9Result = closure_0(1378);
-        if (config === closure_0(13698).DenormalizedPerksReadConfig.DUAL_READ_RETURN_NEW) {
+        if (config === closure_0(13725).DenormalizedPerksReadConfig.DUAL_READ_RETURN_NEW) {
           featureValue = hasPerkResult;
         }
         return featureValue;
